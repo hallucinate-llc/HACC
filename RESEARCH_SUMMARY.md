@@ -1,0 +1,218 @@
+# Oregon DEI Requirements Research
+## Housing Authority of Clackamas County
+
+**Research Completed:** December 30, 2025  
+**Documents Collected:** 48  
+**Relevant Documents Identified:** 17  
+**Total DEI Term Occurrences:** 703
+
+---
+
+## Executive Summary
+
+This research identified Oregon state statutes, administrative rules, executive orders, and federal requirements that reference diversity, equity, inclusion (DEI) and related terms that may bind the Housing Authority of Clackamas County (HACC) in employment, contracting, leasing, and business decisions.
+
+### Key Findings
+
+**Most Relevant Legal Sources (by relevance score):**
+
+1. **ORS Chapter 456 (Housing Authorities)** - Score: 169
+   - Directly governs housing authorities in Oregon
+   - Contains provisions on equal opportunity and non-discrimination
+
+2. **ORS Chapter 659A (Discrimination)** - Score: 119
+   - Oregon's primary anti-discrimination statute
+   - Applies to employment, housing, and public accommodations
+
+3. **ORS Chapter 659 (Unlawful Discrimination)** - Score: 102
+   - Protected classes and enforcement
+
+4. **ORS Chapter 279C (Public Contracting - Construction)** - Score: 101
+   - MWESB (Minority/Women/Emerging Small Business) requirements
+   - Disadvantaged Business Enterprise provisions
+
+5. **ORS Chapter 183 (Administrative Procedures)** - Score: 75
+   - Procedural requirements for agency actions
+
+---
+
+## Search Terms Used
+
+The research monitored 50+ terms including:
+- diversity, equity, inclusion (DEI)
+- underrepresented minority
+- underserved communities  
+- disadvantaged business enterprise (DBE)
+- minority-owned business (MBE)
+- women-owned business (WBE)
+- MWESB
+- affirmative action
+- protected classes
+- disparate impact
+- cultural competency
+- implicit bias
+- racial equity / social equity
+- environmental justice
+- historically underrepresented
+- marginalized communities
+- BIPOC
+- equal opportunity
+- fair housing
+- Section 3
+- community benefits
+
+---
+
+## Compliance Assessment
+
+### LIKELY BINDING (Oregon Statutes & Rules)
+
+**High Priority:**
+- **ORS 456** - Housing Authorities Act
+- **ORS 659A** - Discrimination in Employment, Housing, Public Accommodations
+- **ORS 279A, 279B, 279C** - Public Contracting (includes MWESB requirements)
+
+**Medium Priority:**
+- **ORS 183** - Administrative Procedures
+- **OAR Chapter 813** - Housing and Community Services rules
+
+### FEDERAL BINDING
+
+- **Fair Housing Act** - Applies through HUD oversight
+- **Section 3** - Economic opportunities for low-income persons (if receiving HUD funds)
+
+### REVIEW FOR APPLICABILITY
+
+- Governor's Executive Orders
+- OHCS (Oregon Housing & Community Services) guidance
+- BOLI (Bureau of Labor & Industries) guidance  
+- DAS (Department of Administrative Services) procurement guidance
+
+---
+
+## Critical Statutory Provisions
+
+### ORS Chapter 456 - Housing Authorities
+
+**59 specific provisions extracted** containing DEI-related terms, including:
+
+- Equal opportunity requirements
+- Non-discrimination in housing provision
+- Powers and duties of housing authorities
+- Public contracting obligations
+
+### ORS Chapter 659A - Discrimination
+
+**15 specific provisions extracted** including:
+
+- Protected class definitions
+- Unlawful discrimination in employment
+- Unlawful discrimination in housing
+- Enforcement mechanisms through BOLI
+
+### ORS Chapters 279A/279C - Public Contracting
+
+**27 specific provisions extracted** including:
+
+- MWESB certification and goals
+- Disadvantaged Business Enterprise (DBE) requirements
+- Public contract bidding requirements
+- Good faith effort standards
+
+---
+
+## Research Methodology
+
+### Data Collection
+1. **Oregon Revised Statutes (ORS)** - Downloaded full text of relevant chapters
+2. **Oregon Administrative Rules (OAR)** - Downloaded applicable rules
+3. **Executive Orders** - Downloaded and extracted text from 30 recent orders
+4. **State Agency Websites** - Scraped OHCS, BOLI, and DAS resources
+5. **Federal Requirements** - Downloaded HUD guidance documents
+
+### Analysis
+1. **Term Frequency Analysis** - Counted occurrences of 50+ DEI-related terms
+2. **Contextual Extraction** - Extracted specific statutory provisions with context
+3. **Relevance Scoring** - Ranked documents by total term occurrences
+4. **Compliance Mapping** - Identified likely binding vs. advisory sources
+
+---
+
+## Generated Research Files
+
+All research files are located in: `/home/barberb/Housing Authority of Clackamas County/research_data/`
+
+### Primary Reports
+- `analysis/comprehensive_report.txt` - Full research findings
+- `analysis/extracts/statutory_provisions_report.txt` - Specific provisions with context
+- `analysis/extracts/compliance_matrix.txt` - Compliance assessment matrix
+
+### Data Files
+- `analysis/dei_findings.json` - Structured data on all findings
+- `analysis/findings_summary.csv` - Spreadsheet format for analysis
+- `analysis/extracts/statutory_provisions.json` - Extracted provisions in JSON
+
+### Source Documents (48 files)
+- `raw_documents/*.html` - Downloaded statutes, rules, and web pages
+- `raw_documents/pdfs/*.pdf` - Executive order PDFs
+- `raw_documents/*.txt` - Extracted text from PDFs
+
+### Logs
+- `analysis/research_log.txt` - Detailed activity log
+
+---
+
+## Recommended Next Steps
+
+### Immediate Actions
+1. **Review High-Priority Statutes** - Focus on ORS 456, 659A, and 279A/C
+2. **Legal Consultation** - Engage counsel to analyze binding obligations
+3. **Policy Audit** - Review current HACC policies against identified requirements
+
+### Short-Term
+4. **Gap Analysis** - Identify compliance gaps in current operations
+5. **Training Assessment** - Determine if staff training is required
+6. **Documentation Review** - Ensure contracting documents comply with MWESB requirements
+
+### Long-Term
+7. **Compliance Program** - Develop systematic compliance monitoring
+8. **Record Keeping** - Maintain documentation of good faith efforts
+9. **Monitoring** - Track legislative changes affecting requirements
+
+---
+
+## Important Disclaimers
+
+1. **Not Legal Advice** - This is research only, not legal counsel
+2. **Snapshot in Time** - Laws and regulations may have changed since research date
+3. **Interpretation Required** - Statutory language requires legal interpretation
+4. **Context Matters** - Application depends on specific HACC circumstances
+5. **Consult Counsel** - Engage qualified legal counsel before taking action
+
+---
+
+## Technical Details
+
+**Research Environment:**
+- Python 3.12 with Playwright, BeautifulSoup4, Requests
+- Automated web scraping and PDF text extraction
+- Pattern matching and statistical analysis
+
+**Quality Assurance:**
+- Cross-referenced multiple official sources
+- Validated statutory citations
+- Documented data collection timestamps
+
+---
+
+## Contact & Questions
+
+For questions about this research or to request additional analysis:
+- Review the detailed reports in `research_data/analysis/`
+- Examine specific statute text in `research_data/raw_documents/`
+- Consult the activity log at `research_data/analysis/research_log.txt`
+
+---
+
+*Research completed by automated research system*  
+*December 30, 2025*
