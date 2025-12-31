@@ -1,0 +1,647 @@
+{
+  "common": {
+    "edit": "Edit",
+    "close": "Close",
+    "closeSymbol": "×",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "submit": "Submit",
+    "reset": "Reset",
+    "clear": "Clear",
+    "copy": "Copy",
+    "apply": "Apply",
+    "confirm": "Confirm",
+    "ok": "OK",
+    "yes": "Yes",
+    "no": "No",
+    "learnMore": "Learn more",
+    "yesLower": "yes",
+    "noLower": "no",
+    "loading": "Loading...",
+    "loaded": "Loaded",
+    "submitting": "Submitting...",
+    "deleting": "Deleting...",
+    "saving": "Saving...",
+    "adding": "Adding...",
+    "rename": "Rename",
+    "renaming": "Renaming...",
+    "success": "Success",
+    "error": "Error",
+    "warning": "Warning",
+    "next": "Next",
+    "previous": "Previous",
+    "back": "Back",
+    "home": "Home",
+    "select": "Select",
+    "expired": "Expired",
+    "expires": "Expires",
+    "cancelled": "Cancelled",
+    "remove": "Remove",
+    "today": "today",
+    "errorOccurred": "An error has occurred",
+    "sortBy": "Sort By:",
+    "oneEntry": "1 entry",
+    "entries": "{{count}} entries",
+    "oneReply": "1 Reply",
+    "replies": "{{count}} Replies",
+    "sources": "Sources",
+    "oneSource": "1 Source",
+    "was": "was",
+    "were": "were",
+    "is": "is",
+    "are": "are",
+    "entryCount": "{{count}} entry",
+    "entryCount_other": "{{count}} entries",
+    "isCount": "is",
+    "isCount_other": "are",
+    "fileCount": "{{count}} file",
+    "fileCount_other": "{{count}} files",
+    "secretCount": "{{count}} secret",
+    "secretCount_other": "{{count}} secrets",
+    "dayCount": "{{count}} day",
+    "dayCount_other": "{{count}} days",
+    "commentCount": "{{count}} comment",
+    "commentCount_other": "{{count}} comments",
+    "replyCount": "{{count}} reply",
+    "replyCount_other": "{{count}} replies",
+    "answerCount": "{{count}} answer",
+    "answerCount_other": "{{count}} answers",
+    "hourCount": "{{count}} hour",
+    "hourCount_other": "{{count}} hours",
+    "minuteCount": "{{count}} minute",
+    "minuteCount_other": "{{count}} minutes",
+    "secondCount": "{{count}} second",
+    "secondCount_other": "{{count}} seconds",
+    "months": "months",
+    "beforeEnd": "before end",
+    "courseWebinar": "Course/Webinar",
+    "event": "Event",
+    "idea": "Idea",
+    "libraryEntry": "Library Entry",
+    "discussion": "Discussion",
+    "webPage": "Web Page",
+    "question": "Question",
+    "volunteerOpportunity": "Volunteer Opportunity",
+    "jobOpportunity": "Job Opportunity",
+    "other": "Other",
+    "showAll": "Show All",
+    "post": "Post",
+    "send": "Send",
+    "sending": "Sending...",
+    "sendMessage": "Send Message",
+    "fieldRequired": "{{field}} is required.",
+    "loadError": "Failed to load {{item}}. Please try again.",
+    "message": "Message",
+    "subject": "Subject",
+    "any": "Any",
+    "add": "Add",
+    "addBlogPost": "Add Blog Post",
+    "logIn": "Log in",
+    "create": "Create",
+    "downloadAll": "Download all",
+    "follow": "Follow",
+    "unfollow": "Unfollow",
+    "upvote": "Upvote",
+    "download": "Download",
+    "downloadAllCapitalized": "Download All",
+    "skip": "Skip",
+    "reject": "Reject",
+    "approve": "Approve",
+    "publish": "Publish",
+    "move": "Move",
+    "like": "Like",
+    "zero": "0",
+    "showMore": "Show more"
+  },
+  "errors": {
+    "networkError": "Not connected.\n Verify Network.",
+    "parseError": "Requested JSON parse failed.",
+    "timeoutError": "Time out error.",
+    "requestAborted": "Ajax request aborted.",
+    "message": "Message",
+    "formValidation": {
+      "required": "This field is required",
+      "min": "Minimum value is {{value}}",
+      "max": "Maximum value is {{value}}",
+      "minLength": "Minimum length is {{length}}",
+      "maxLength": "Maximum length is {{length}}",
+      "pattern": "Input must match the pattern: {{pattern}}",
+      "invalid": "Invalid value"
+    }
+  },
+  "desktop": {
+    "ajaxSetup": {
+      "notConnected": "Not connected.\n Verify Network.",
+      "errorMessage": "Message: {{message}}\nError Code:{{errorCode}}",
+      "parseError": "Requested JSON parse failed.",
+      "timeoutError": "Time out error.",
+      "abortError": "Ajax request aborted.",
+      "close": "Close",
+      "sessionExpired": "Your session has expired. Please login."
+    },
+    "ready": {
+      "hiddenContentMessage": "Utility: this area has been automatically hidden b/c no content exists",
+      "removeReferenceTitle": "Remove Reference",
+      "profileAssociationLabel": "You and your profile are associated with this content",
+      "removeReferenceButton": "Remove Reference",
+      "volunteerApplicationTitle": "Volunteer Opportunity Application"
+    },
+    "FilestackExt": {
+      "cannotUploadSvgs": "Cannot upload SVGs",
+      "okButton": "Ok",
+      "errorUploadingFileTitle": "Error Uploading File",
+      "failedToUploadMessage": "Failed to upload: {{filenames}}",
+      "originalImageMinimizedMessage": "The original image ({{baseWidth}} X {{baseHeight}}) has been minimized to fit the current display."
+    },
+    "hl_common_ui_tinymce": {
+      "confirmLeaveMessage": "The changes you made will be lost if you navigate away from this page.\n\nClick OK to leave.\n\nClick Cancel to stay on this page.",
+      "editImage": "Edit Image",
+      "saveImage": "Save Image",
+      "close": "Close",
+      "expandPlusEditor": "Expand Plus Editor",
+      "imageRequired": "Image is required",
+      "titleRequired": "Title is required",
+      "defaultImageAlt": "image",
+      "insertImage": "Insert Image",
+      "insert": "Insert",
+      "imageResizeAlert": "The original image ({{width}} X {{height}}) has been minimized to fit the current display."
+    },
+    "hl_common_ui_tinymce_embedly": {
+      "removePreview": "remove preview",
+      "viewOnProvider": " View this on {{providerName}} >",
+      "insertContentPreview": "Insert content preview",
+      "linkLabel": "Link",
+      "insertLinkWithPreview": "Insert link with content preview"
+    },
+    "hl_common_ui_tinymce_hashtag": {
+      "createTag": "Create tag: {{pattern}}",
+      "tagGroup": "Tag Group: {{groupName}}"
+    },
+    "hl_common_ui_tinymce_mention": {
+      "noResultsFound": "No results found",
+      "profileImageAlt": "{{displayName}}' profile image",
+      "previouslyRemoved": "previously removed"
+    },
+    "hl_common_util": {
+      "fileSizeGB": " GB",
+      "fileSizeMB": " MB",
+      "fileSizeKB": " KB",
+      "fileSizeBytes": " Bytes"
+    },
+    "jquery_hl_ko_confirmSaveOnDirtyForm": {
+      "unsavedChangesMessage": "You've made changes that require saving before leaving this page.",
+      "saveAndContinue": "Save & continue",
+      "continueWithoutSaving": "Continue without saving",
+      "saveAndContinueTitle": "Save & Continue"
+    },
+    "hl_ui_bioBubble": {
+      "close": "Close",
+      "requestPending": "Request pending <br />sent on  ",
+      "unknown": "Unknown",
+      "cancelRequest": "Cancel Request",
+      "contactRequest": "Contact Request"
+    },
+    "hl_ui_common_fileuploadstatus": {
+      "failedMalwareScan": "Failed malware scan, could not be uploaded.",
+      "failedUpload": "File failed to upload. You may try again or contact support.",
+      "processing": "Processing...",
+      "successfullyUploaded": "Successfully uploaded!",
+      "scanning": "Scanning..."
+    },
+    "hl_ui_common_requiredTextInput": {
+      "error": "(error)"
+    },
+    "Ui": {
+      "submit": "Submit",
+      "cancel": "Cancel"
+    },
+    "hl_community": {
+      "hideAll": "hide all",
+      "showAllDetails": "show all details",
+      "cancel": "Cancel",
+      "close": "Close",
+      "processingError": "There was a problem processing your request, please try again.",
+      "eventTitleRequired": "Event title is required",
+      "startDateRequired": "Start date is required",
+      "startTimeRequired": "Start time is required"
+    },
+    "hl_community_registrantLists": {
+      "attended": "Attended",
+      "unattended": "Unattended",
+      "markAsAttended": "Mark as Attended",
+      "markAsUnattended": "Mark as Unattended",
+      "markedAsAttended": "Marked as Attended",
+      "markedAsUnattended": "Marked as Unattended",
+      "unableToUpdateAttendance": "Unable to update registrant attendance"
+    },
+    "hl_directory_ams": {
+      "cancel": "Cancel",
+      "done": "done",
+      "findMembers": "Find Members",
+      "ok": "Ok"
+    },
+    "hl_ui_volunteer_awardpointsmodal": {
+      "required": " (Required)",
+      "pleaseEnterPositiveNumber": " (Please enter a positive number)"
+    },
+    "hl_ui_volunteer_profile_importHistory": {
+      "browserNotSupportFormData": "This browser does not support FormData."
+    },
+    "hl_ui_volunteerAdmin_ManageApprovals": {
+      "enterNameOrCompany": "Enter a Name or Company"
+    },
+    "hl_ui_volunteerAdmin_ManageApprovalsAwaitingRating": {
+      "enterNameOrCompany": "Enter a Name or Company"
+    },
+    "hl_ui_volunteerAdmin_ManageAwaiting": {
+      "volunteerOpportunityApplication": "Volunteer Opportunity Application",
+      "assignRoleApproveConfirm": "Assign Role, Approve and Confirm",
+      "enterNameOrCompany": "Enter a Name or Company"
+    },
+    "hl_ui_volunteerAdmin_ManageCompleted": {
+      "enterNameOrCompany": "Enter a Name or Company"
+    },
+    "hl_ui_volunteerAdmin_ManageInvitations": {
+      "inviteSelected": "Invite Selected",
+      "enterNameOrCompany": "Enter a Name or Company",
+      "nameNotFoundInDirectory": "Name not found in the directory.",
+      "enterNameOrEmail": "Enter a Name or Email"
+    },
+    "hl_ui_volunteerAdmin_ManageRejected": {
+      "enterNameOrCompany": "Enter a Name or Company"
+    },
+    "hl_directory_volunteer_opportunity_volunteer": {
+      "enterNameOrEmail": "Enter a Name or Email",
+      "nameNotFoundInDirectory": "Name not found in the directory.",
+      "yesWithdrawApplication": "Yes, withdraw my application.",
+      "withdrawVolunteerApplication": "Withdraw Volunteer Application",
+      "withdrawConfirmationMessage": "We hope that you will consider applying for other opportunities in the future.<br> Are you sure you'd like to withdraw?",
+      "unableToSaveApplicationFormData": "Unable to save application form data."
+    },
+    "hl_egroups_all": {
+      "errorUpdatingWeeklyDigest": "Error updating the weekly consolidated digest subscription type.",
+      "selectOneOrMore": "Select one or more",
+      "errorGettingLists": "Error getting the lists.",
+      "errorUpdatingSubscription": "Error updating subscription.",
+      "errorUpdatingConsolidatedDigest": "Error updating consolidated digest subscription."
+    },
+    "hl_directory_mvc": {
+      "deleteConfirmation": "Delete \"{{name}}\"?",
+      "errorGeneric": "Error: {{error}}",
+      "skillsMultiplierMustBeNumber": "Skills multiplier must be a number.",
+      "skillsMultiplierCannotExceed": "Skills multiplier cannot exceed 99.99",
+      "skillsMultiplierDecimalPlaces": "Skills multiplier cannot exceed 2 decimal places",
+      "hourlyRateMustBeNumber": "Hourly rate must be a number.",
+      "hourlyRateCannotExceed": "Hourly rate cannot exceed 9999999999.99",
+      "hourlyRateDecimalPlaces": "Hourly rate cannot exceed 2 decimal places",
+      "distanceMustBeValid": "Error: Distance must be 0 or greater and a whole number.",
+      "hoursEndMustBeHigher": "Error: Hours end must be higher than 0.",
+      "hoursEndMustBeHigherThanStart": "Error: Hours end must be higher than the hours start.",
+      "pointsMustBeValid": "Error: Points must be 0 or greater and a whole number."
+    },
+    "hl_directory_profile": {
+      "pleaseSelectAtLeastOneItem": "Please select at least 1 item."
+    },
+    "hl_directory_volunteer_common": {
+      "enterNameOrEmail": "Enter a Name or Email",
+      "nameNotFoundInDirectory": "Name not found in the directory."
+    },
+    "hl_ui_directory_manageSettings": {
+      "proceedButton": "Proceed",
+      "cancelButton": "Cancel",
+      "unsavedChangesTitle": "Warning: Unsaved Changes!",
+      "unsavedChangesMessage": "You have changed form data without saving. All of your changes will be lost.<p>Are you sure you want to proceed?</p>"
+    },
+    "hl_eventInvite": {
+      "enterNameOrEmail": "Enter a Name or Email",
+      "invitationError": "Invitation could not be sent. Unexpected error has occured."
+    },
+    "hl_eventShare": {
+      "enterNameOrEmail": "Enter a Name or Email",
+      "invitationError": "Invitation could not be sent. Unexpected error has occured."
+    },
+    "hl_microsites_siteList": {
+      "copied": "Copied!",
+      "cannotDeleteModelSite": "You cannot delete your model site",
+      "confirmDeleteSite": "Are you sure you want to delete this site?",
+      "deleteCurrentSiteMessage": "Clicking 'OK' will permanently delete this site. Since this is the site you're currently working on, you will be redirected to Model Site '{{modelSiteTitle}}'",
+      "createNewSite": "Create New Site",
+      "copySite": "Copy Site",
+      "createSite": "Create Site",
+      "name": "Name",
+      "siteNameRequired": "Site Name is required.",
+      "siteNameExists": "Site Name already exists.",
+      "unableToCreateSite": "Unable to create new site."
+    },
+    "hl_microsites_master": {
+      "siteList": "Site List",
+      "themeManager": "Theme Manager",
+      "siteSetup": "Site Setup",
+      "ads": "Ads",
+      "traffic": "Traffic",
+      "navigation": "Navigation",
+      "saveAndContinue": "Save and continue",
+      "continueWithoutSaving": "Continue without saving",
+      "unsavedChangesMessage": "There are unsaved changes on this page. \nHow would you like to proceed?"
+    },
+    "hl_provisioning_integrationConfig_providerTypeConfigParameterList": {
+      "loading": "ing...",
+      "boolean": "Boolean",
+      "integer": "Integer",
+      "double": "Double",
+      "guid": "Guid",
+      "string": "String"
+    },
+    "hl_provisioning_integrationConfig_providerTypeConfigStepList": {
+      "selecting": "Selecting...",
+      "deselecting": "Deselecting...",
+      "select": "Select",
+      "deselect": "Deselect"
+    },
+    "hl_provisioning_integrationConfig_providerTypeConfig": {
+      "selectFromSharedList": "or select one from the list of shared",
+      "typeNewName": "or type in a new name"
+    },
+    "hl_provisioning_ImpexiumUserIntegrationSetup": {
+      "saving": "Saving..."
+    },
+    "hl_provisioning_ImpexiumMembershipIntegrationSetup": {
+      "saving": "Saving..."
+    },
+    "hl_provisioning_EuclidUserIntegrationSetup": {
+      "saving": "Saving...",
+      "saveAndContinue": "Save and Continue"
+    },
+    "hl_provisioning_EuclidMembershipIntegrationSetup": {
+      "saving": "Saving...",
+      "euclidFieldName": "Euclid Field Name",
+      "hlDisplayName": "HL Display Name"
+    },
+    "hl_eventadmin_eventoptioncategories": {
+      "confirmDeleteMessage": "Are you sure you want to delete this record?",
+      "unexpectedErrorMessage": "Unexpected error has occured. Please try again later and notify the site administrator if this problem persists."
+    },
+    "hl_simpleRegistration": {
+      "welcomeText": "Welcome,",
+      "registrantPriceRequiredText": "Choose registrant price",
+      "createContactAndRegisterText": "Create contact and register?",
+      "youAreText": "You are",
+      "alreadyRegisteredText": "and are already registered for this event",
+      "alreadyInCartText": "Your registration is in the cart. Enter name to register others. Checkout to finish registration.",
+      "registerYourselfAndOthersText": "Register yourself by adding registration to the cart or \"clear\" and register others.",
+      "emailInvalidText": "Invalid Email Address.",
+      "emailRequiredText": "Email Address required. Please enter an Email Address.",
+      "firstNameRequiredText": "First Name required. Please enter a First Name.",
+      "lastNameRequiredText": "Last Name required. Please enter a Last Name.",
+      "companyNameRequiredText": "Company Name required. Please enter a Company Name",
+      "cartSummaryText": "registration(s) in the cart",
+      "registrationHeaderText": "Registration",
+      "registrationOthersText": "Registration - Register Others",
+      "suggestions": "Suggestions",
+      "existingContacts": "Existing Contacts",
+      "newContact": "New Contact?",
+      "emailAlreadyTakenText": "This email address is already taken.",
+      "contactExistsText": "is already a contact.",
+      "selectAndAddPriceText": "Select the price and add to cart.",
+      "createAddToCartText": "Create Contact and Add To Cart",
+      "addToCartText": "Add To Cart"
+    },
+    "hl_resourcelibrary": {
+      "errorUpdatingSettings": "Error updating notification settings.",
+      "successfullyUploaded": "Successfully uploaded!",
+      "failedMalwareScan": "Failed malware scan, could not be uploaded.",
+      "fileFailedUpload": "File failed to upload. You may try again or contact support."
+    },
+    "hl_ui_cms_content": {
+      "editorialHistory": "Editorial History",
+      "copied": "Copied!",
+      "copyInstructions": "Please use Ctrl+C/Cmd+C to copy",
+      "chooseFolder": "Choose a {{format}} folder",
+      "onlyDefaultFolder": "Only default folder exist."
+    },
+    "hl_ui_cms_navigation": {
+      "editorialHistory": "Editorial History"
+    },
+    "hl_ui_event_admininvite": {
+      "addressGeocodeError": "Address could not be geocoded. Please try again later.",
+      "invitationSendError": "Invitation could not be sent. Unexpected error has occured."
+    },
+    "hl_ui_event_ManageRegistrant_email": {
+      "emailSendError": "Email could not be sent. Unexpected error has occured."
+    },
+    "hl_ui_event_ManageRegistrant_refund": {
+      "refundSaveError": "Refund could not be saved. Unexpected error has occured."
+    },
+    "hl_ui_event_ManageRegistrant_sendconfirmation": {
+      "confirmationSendError": "Confirmation could not be sent. Unexpected error has occured."
+    },
+    "hl_ui_event_ManageRegistrant_specialpricing": {
+      "specialPricingSaveError": "Special pricing could not be saved. Unexpected error has occured."
+    },
+    "hl_ui_event_ManageRegistrant_substitute": {
+      "registrantSubstituteError": "Registrant could not be substituted. Unexpected error has occured."
+    },
+    "hl_ui_event_ManageRegistrantRoster": {
+      "attendanceMarkError": "Could not mark attendance for registrant. Unexpected error has occured."
+    },
+    "hl_ui_event_ManageRegistration_payment": {
+      "paymentSaveError": "Payment information could not be saved. Unexpected error has occured."
+    },
+    "hl_ui_event_ManageRegistration": {
+      "registrantDeleteError": "Could not delete the registrant. Unexpected error has occured.",
+      "attendanceMarkError": "Could not mark attendance for registrant. Unexpected error has occured.",
+      "itemSaveError": "Item could not be saved, there was an unexpected error"
+    },
+    "hl_ui_manageEvents_addEditOptionModal": {
+      "negativeNumberError": "Cannot be a negative number."
+    },
+    "hl_ui_manageEvents_addEditSessionModal": {
+      "createNewText": "\" - Create New",
+      "startDatePastError": "The start date cannot be in the past.",
+      "invalidDateFormatError": "Invalid date format. Must be {{dateFormat}}",
+      "invalidTimeFormatError": "Invalid time format. Must be {{timeFormat}}",
+      "endDatePastError": "The end date cannot be in the past.",
+      "startDatePrecedeError": "The start date must precede the end date."
+    },
+    "hl_ui_manageEvents_additionalDetails": {
+      "negativeNumberError": "Cannot be a negative number.",
+      "creditsRangeError": "The number must be between 0 and 99.99 and cannot exceed 2 decimal places."
+    },
+    "hl_ui_manageEvents_eventDates": {
+      "isRequired": "Is required.",
+      "invalidStartDateFormat": "Invalid start date format. Must be {{dateFormat}}",
+      "invalidStartTimeFormat": "Invalid start time format. Must be {{timeFormat}}",
+      "startDateRequired": "Start date is required",
+      "startDatePrecedeEndDate": "The start date must precede the end date.",
+      "startTimePrecedeEndTime": "The start time must precede the end time.",
+      "invalidEndDateFormat": "Invalid end date format. Must be {{dateFormat}}",
+      "invalidEndTimeFormat": "Invalid end time format. Must be {{timeFormat}}",
+      "endDateRequired": "End date is required"
+    },
+    "hl_ui_manageEvents_eventFilters": {
+      "upcoming": "Upcoming",
+      "all": "All",
+      "unassociated": "Unassociated"
+    },
+    "hl_ui_manageEvents_eventLocation": {
+      "countryRequired": "Country<sup>*</sup>",
+      "country": "Country",
+      "isRequired": "Is required.",
+      "invalidUrl": "Invalid URL."
+    },
+    "hl_ui_manageEvents_eventPresenters": {
+      "createNewText": "\" - Create New"
+    },
+    "hl_ui_manageEvents_eventPricingOptions": {
+      "saveEventSeriesPricing": "Save Event Series Pricing",
+      "ok": "OK",
+      "isRequired": "Is required.",
+      "isRequiredShort": "Is required",
+      "invalidUrl": "Invalid URL.",
+      "invalidDateFormat": "Invalid date format. Must be {{dateFormat}}",
+      "regularBeginPrecedeError": "The regular registration begin date cannot precede or equal the early registration begin date.",
+      "regularEndPrecedeError": "The regular registration end date cannot precede or equal the regular registration begin date.",
+      "lateEndPrecedeError": "The late registration end date cannot precede or equal the regular registration end date."
+    },
+    "hl_ui_manageEvents_eventRows": {
+      "eventOnHoldTitle": "Event On Hold",
+      "eventOnHoldMessage": "This event has been put on hold. You cannot navigate to this event.",
+      "ok": "OK",
+      "cancelEventTitle": "Cancel Event",
+      "cancelEventMessage": "Are you sure you want to cancel this event?",
+      "yes": "Yes",
+      "no": "No",
+      "cancelSeriesTitle": "Cancel Series",
+      "cancelSeriesMessage": "Cancelling the first event in the series will cancel the entire series, do you wish to proceed?",
+      "registrantNotification": "Registrants will be notified via email that the event is canceled."
+    },
+    "hl_ui_manageEvents_optionSessionActions": {
+      "registrantIs": "registrant is",
+      "registrantsAre": "registrants are",
+      "registeredForChoice": " registered for this registration choice. <br>",
+      "registeredForSession": " registered for this session. <br>",
+      "rulesConfiguredChoice": "Registration rules are configured for this registration choice.",
+      "rulesConfiguredSession": "Registration rules are configured for this session.",
+      "cannotDeleteChoice": "Cannot Delete <span style='font-weight:bold;'>{{name}}</span>",
+      "cannotDeleteSession": "Cannot Delete <span style='font-weight:bold;'>{{name}}</span>",
+      "ok": "OK"
+    },
+    "hl_ui_manageEvents_pricingInputs": {
+      "isRequired": "Is required.",
+      "negativeNumberError": "Cannot be a negative number."
+    },
+    "hl_ui_manageEvents_specialpricing": {
+      "saveError": "Special pricing could not be saved. Unexpected error has occured.",
+      "deleteError": "Special pricing could not be deleted. Unexpected error has occured."
+    },
+    "hl_webapi_registration": {
+      "errorDuringRequest": "Error during request",
+      "invalidRequest": "Invalid Request",
+      "yes": "Yes",
+      "no": "No",
+      "cancelRegistration": "Cancel Registration",
+      "confirmCancelRegistration": "Are you sure you want to cancel this registration?"
+    },
+    "hl_microsites_siteSetup": {
+      "saveAndContinue": "Save and Continue",
+      "continueWithoutSaving": "Continue without Saving",
+      "warning": "Warning",
+      "unsavedChangesMessage": "There are unsaved changes on this page. \\nHow would you like to proceed?",
+      "ok": "Ok",
+      "alert": "Alert",
+      "siteNameExistsMessage": "Site Name '{{currentName}}' already exists",
+      "cancelKeepCurrentSetting": "Cancel and keep current setting",
+      "selectThemeForSite": "Select a theme for this site",
+      "localDesignCurrentlyUsed": "A Local Design is currently used for this site.",
+      "syncContactInformation": "Sync Contact Information",
+      "cancel": "Cancel",
+      "newsletterSyncMessage": "The contact information in the footer of the Smart Newsletter is no <br/>longer in sync with the contact information configured in the <strong>Contact Us</strong> section of Site Setup. <br><br>Would you like to sync the Smart Newsletter's information to match the site setup?"
+    },
+    "hl_microsites_themeEditor": {
+      "load": "Load",
+      "cancel": "Cancel",
+      "save": "Save",
+      "themeRequired": "Theme is required.",
+      "unableToLoadTheme": "Unable to load theme.",
+      "sitesUsingTheme": "Sites currently using this theme",
+      "yesChooseTheme": "Yes, let me choose a theme to copy",
+      "close": "Close",
+      "closeButton": "close"
+    },
+    "hl_microsites_themeManager": {
+      "themeSuccessfullyCreated": "Theme successfully created!",
+      "themeSuccessfullyCopied": "Theme successfully copied!",
+      "sitesUsingThemeCannotDelete": "{{count}} site(s) using this theme. Themes associated with sites cannot be deleted.",
+      "ok": "Ok",
+      "alert": "Alert",
+      "yes": "Yes",
+      "no": "No",
+      "warning": "Warning",
+      "confirmDeleteTheme": "Are you sure you want to delete this theme?",
+      "themeNameRequired": "Theme Name is required.",
+      "unableToRenameTheme": "Unable to rename theme.",
+      "themeNameAlreadyExists": "Theme Name already exists.",
+      "cancel": "Cancel",
+      "renameTheme": "Rename Theme: ",
+      "themeSuccessfullyRenamed": "Theme successfully renamed!",
+      "editCssForTheme": "Edit CSS For Theme: ",
+      "save": "Save",
+      "createNewTheme": "Create New Theme",
+      "copyTheme": "Copy Theme: ",
+      "name": "Name: ",
+      "createTheme": "Create Theme",
+      "unableToCreateNewTheme": "Unable to create new theme.",
+      "unableToCopyTheme": "Unable to copy theme.",
+      "closeButton": "close"
+    },
+    "hl_provisioning_YourMembershipMembershipIntegrationSetup": {
+      "yes": "Yes",
+      "no": "No",
+      "saving": "Saving...",
+      "checkMemberTypes": "Check MemberTypes",
+      "saveAndContinue": "Save and Continue",
+      "noMemberType": "No MemberType",
+      "actualMemberTypeCode": "Acutal MemberTypeCode: {{memberType}}",
+      "pickList": "PL",
+      "freeForm": "FF",
+      "pickListDemographicCreated": "The Pick List Demographic {{demographic}} Was Successfully Created",
+      "freeFormDemographicCreated": "The Free Form Demographic {{demographic}} Was Successfully Created",
+      "checkDemographics": "Check Demographics",
+      "checkGroups": "Check Groups",
+      "errorCreatingGroupType": "Error Creating new Group Type"
+    },
+    "hl_provisioning_netFORUMProUserIntegrationSetup": {
+      "fixing": "Fixing...",
+      "fixCmsSetup": "Fix CMS setup"
+    },
+    "hl_provisioning_netFORUMProMembershipIntegrationSetup": {
+      "yes": "Yes",
+      "no": "No",
+      "saving": "Saving...",
+      "saveAndContinue": "Save and Continue",
+      "searching": "Searching...",
+      "search": "Search",
+      "freeForm": "FF",
+      "pickList": "PL"
+    },
+    "hl_provisioning_MemberClicksMembershipIntegrationSetup": {
+      "errorOccurred": "An error has occurred.",
+      "updating": "Updating...",
+      "updateParameters": "Update Parameters",
+      "saveSuccessful": "The save was successful.",
+      "searching": "Searching...",
+      "search": "Search",
+      "save": "Save",
+      "cancel": "Cancel",
+      "profileIdRequired": "Profile ID Required.",
+      "memberTypeRequired": "Member Type Required.",
+      "memberTypeDoesNotMatch": "Member Type does not match actual: {{actualType}}",
+      "invalidProfileId": "Invalid Profile ID. Try looking it up!",
+      "selectField": "Select a Field"
+    },
+    "hl_provisioning_YourMembershipUserIntegrationSetup": {
+      "saving": "Saving..."
+    }
+  }
+}

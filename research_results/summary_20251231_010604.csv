@@ -1,0 +1,62 @@
+document_id,file_path,risk_score,dei_keywords,proxy_keywords,binding_keywords,applicability_tags,text_length
+74c6bb8d3aa480a95207e0085fc1c4c0,research_results/documents/parsed/74c6bb8d3aa480a95207e0085fc1c4c0.txt,3,underserved; underrepresented; equity; inclusion; dei; diversity,bipoc,agreement; must; policy; standard; statewide; mandatory; shall; required; contract,hiring; procurement; training; housing,59426
+e074d302eac8c1251ce84c7611f87a01,research_results/documents/parsed/e074d302eac8c1251ce84c7611f87a01.txt,3,underserved; underrepresented; equity; inclusion; dei; diversity,safe space; bipoc,agreement; must; policy; standard; applicability; statewide; required; contract,hiring; procurement; training; housing,108807
+2cb743c45485324adc632bb0642bc614,research_results/documents/parsed/2cb743c45485324adc632bb0642bc614.txt,3,underserved; underrepresented; equity; inclusion; dei; diversity,lived experience; equity plan,agreement; must; policy; standard; statewide; mandatory; shall; required; contract,hiring; procurement; training; housing,141010
+07a1076fa131f26b2cdcc68681afddbb,research_results/documents/parsed/07a1076fa131f26b2cdcc68681afddbb.txt,3,underserved; underrepresented; equity; inclusion; dei; diversity,safe space; equity plan,must; policy; statewide; mandatory; shall; contract,hiring; procurement; training; housing,49914
+544d76b9a259616a1c691b4f98098735,research_results/documents/parsed/544d76b9a259616a1c691b4f98098735.txt,3,underserved; underrepresented; equity; inclusion; dei; diversity,safe space; equity plan,must; policy; statewide; mandatory; shall; contract,hiring; procurement; training; housing,49914
+6431de02c3af80fab467e7aebdc1d17c,research_results/documents/parsed/6431de02c3af80fab467e7aebdc1d17c.txt,3,underserved; equity; inclusion; dei; diversity,bipoc,agreement; must; policy; standard; statewide; shall; required; contract,hiring; procurement; training; housing,76622
+a2f08c4c1146471bbf56e2808875d0b6,research_results/documents/parsed/a2f08c4c1146471bbf56e2808875d0b6.txt,3,underserved; underrepresented; equity; inclusion; dei; diversity,lived experience; bipoc,agreement; must; policy; standard; statewide; shall; required; contract,hiring; procurement; training; housing,147683
+bbfc77a24628ff8e29dd977ba4c66095,research_results/documents/parsed/bbfc77a24628ff8e29dd977ba4c66095.txt,3,underserved; underrepresented; equity; inclusion; dei; diversity,bipoc,agreement; must; policy; standard; statewide; required; contract,hiring; procurement; training; housing,69963
+f05cefc6c4eb4225c881409d8daadc29,research_results/documents/parsed/f05cefc6c4eb4225c881409d8daadc29.txt,3,underserved; equity; inclusion; dei; diversity,bipoc,agreement; policy; standard; statewide; shall; required; contract,hiring; procurement; training; housing,85456
+0a3c2fb7aaa8fce1b2fcc321ae18e5b9,research_results/documents/parsed/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.txt,3,underserved; equity; inclusion; dei; diversity,lived experience; cultural competence,must; policy; standard; statewide; shall; required; contract,hiring; procurement; training; housing,31368
+b3b027941a48b0372a0fe52293173996,research_results/documents/parsed/b3b027941a48b0372a0fe52293173996.txt,3,underserved; underrepresented; equity; inclusion; dei; diversity,safe space; bipoc,agreement; must; policy; standard; applicability; statewide; required; contract,hiring; procurement; training; housing,186852
+ffb8b3c67a74866bc9b85c48b68e4bf0,research_results/documents/parsed/ffb8b3c67a74866bc9b85c48b68e4bf0.txt,3,diversity; equity; inclusion,equity plan,policy; must; required,,8057
+4260e59b296ab49cb9ae241fbba37c68,research_results/documents/parsed/4260e59b296ab49cb9ae241fbba37c68.txt,3,underrepresented; equity; inclusion; dei; diversity,cultural competence,agreement; policy; statewide; shall; required; contract,hiring; procurement; training; housing,38034
+1d20c2a61ee7a30f077fe8e8eeba2667,research_results/documents/parsed/1d20c2a61ee7a30f077fe8e8eeba2667.txt,3,underrepresented; equity; inclusion; deib; dei; diversity,lived experience; bipoc,policy; must; agreement,hiring; training; housing,18877
+592594abd4eb6a8bad89ce62855bb42e,research_results/documents/parsed/592594abd4eb6a8bad89ce62855bb42e.txt,2,underserved; equity; inclusion; dei; diversity,,must; applicability; standard; required; contract,hiring; procurement; housing,21859
+bf83699c0a4f2001dd2920dd6d60b502,research_results/documents/parsed/bf83699c0a4f2001dd2920dd6d60b502.txt,2,equity,,policy,training,5202
+645b1f978c1291384280119d20b07e77,research_results/documents/parsed/645b1f978c1291384280119d20b07e77.txt,2,underrepresented; equity; inclusion; dei; diversity,,agreement; must; policy; standard; statewide; mandatory; shall; required; contract,hiring; procurement; training; housing,67969
+39aacc6287ece4d98183827562496c5e,research_results/documents/parsed/39aacc6287ece4d98183827562496c5e.txt,2,diversity; dei; equity; inclusion,,mandatory; shall; contract; statewide,procurement; housing,13084
+f17c22e859e2c48b5a346d23fc10a3c0,research_results/documents/parsed/f17c22e859e2c48b5a346d23fc10a3c0.txt,2,diversity; equity; inclusion; underserved,,policy; standard; must; statewide,hiring; housing,15914
+0605239e9e394ac73f36ee2d115a566f,research_results/documents/parsed/0605239e9e394ac73f36ee2d115a566f.txt,2,diversity; dei; equity; inclusion,,must; standard; statewide; shall; required,hiring; training; housing,11831
+07815e32e695fa0202bb1b593746c401,research_results/documents/parsed/07815e32e695fa0202bb1b593746c401.txt,2,equity,,policy; required,hiring; procurement; training; housing,10560
+e1ab2e335f7e813fd3cfbd5c10ab62b6,research_results/documents/parsed/e1ab2e335f7e813fd3cfbd5c10ab62b6.txt,2,diversity; equity,,policy,hiring; training; housing,17516
+c03fa557fce41394cb3254c013c5736b,research_results/documents/parsed/c03fa557fce41394cb3254c013c5736b.txt,2,equity,,policy,,913
+ffb8613e7bb63a09a1349a4f4cd7e90b,research_results/documents/parsed/ffb8613e7bb63a09a1349a4f4cd7e90b.txt,2,underserved; underrepresented; equity; inclusion; dei; diversity,,policy; standard; must; required,training; housing,22565
+57a271a61cfdda6b8b76a264c5c1a897,research_results/documents/parsed/57a271a61cfdda6b8b76a264c5c1a897.txt,2,underserved; underrepresented; equity; inclusion; dei; diversity,,agreement; must; ordinance; policy; standard; statewide; shall; required; applicable to; contract,hiring; procurement; training; housing,114632
+6edb45aeefba069c869f50585373f1c6,research_results/documents/parsed/6edb45aeefba069c869f50585373f1c6.txt,2,equity,,policy,procurement; training; housing,5019
+c441d095b5efadcac83eadd5ad604240,research_results/documents/parsed/c441d095b5efadcac83eadd5ad604240.txt,2,diversity; equity; inclusion,,must; policy; standard; statewide; contract,hiring; procurement; training; housing,53834
+0e1e03d72717fb6325339c86021d7ea8,research_results/documents/parsed/0e1e03d72717fb6325339c86021d7ea8.txt,2,equity,,policy,housing,4359
+6e6c69b294212c64d1c617f261e70841,research_results/documents/parsed/6e6c69b294212c64d1c617f261e70841.txt,2,underserved; underrepresented; equity; inclusion; dei; diversity,,policy; must,hiring; procurement; training; housing,36369
+a190e1e7829daedea88c07cffb922811,research_results/documents/parsed/a190e1e7829daedea88c07cffb922811.txt,2,equity,,policy; applicable to; must,hiring; training; housing,10278
+301c581abbfcce15c8336a36b2946da3,research_results/documents/parsed/301c581abbfcce15c8336a36b2946da3.txt,2,diversity; dei; equity; inclusion,,policy; shall,hiring; training,6892
+13a8dbfefb0e62ac8f3861aa3b6c4758,research_results/documents/parsed/13a8dbfefb0e62ac8f3861aa3b6c4758.txt,2,equity,,policy,procurement; training; housing,5019
+f6741790087ba13efcf09ff18aaee9d6,research_results/documents/parsed/f6741790087ba13efcf09ff18aaee9d6.txt,2,diversity; inclusion,,shall; required; contract,procurement; housing,7916
+60ff12d7e79e6a9763b86f62b24ac6f4,research_results/documents/parsed/60ff12d7e79e6a9763b86f62b24ac6f4.txt,2,underrepresented; equity; inclusion; deib; dei; diversity,,must; standard; statewide; required; contract,hiring; procurement; training; housing,82412
+f220833a1ebb227c820ffdcc641e2779,research_results/documents/parsed/f220833a1ebb227c820ffdcc641e2779.txt,2,diversity; equity; inclusion,,policy; must,procurement; training; housing,13772
+9992a1019c1a850d63d4e6c5f0ef450b,research_results/documents/parsed/9992a1019c1a850d63d4e6c5f0ef450b.txt,1,diversity; dei; equity; inclusion,,,training,8230
+95c63fdf066dde780c9aa043c6292579,research_results/documents/parsed/95c63fdf066dde780c9aa043c6292579.txt,0,,,policy,,172
+24317d7e02e5e73e45cc19e5b4bc8182,research_results/documents/parsed/24317d7e02e5e73e45cc19e5b4bc8182.txt,0,,,,,1089
+c6a05a0f4e6c2b828b90061d477fc6c0,research_results/documents/parsed/c6a05a0f4e6c2b828b90061d477fc6c0.txt,0,,,must; agreement,hiring; housing,41601
+de030a0d5975e90c1b9a84e6bf00f918,research_results/documents/parsed/de030a0d5975e90c1b9a84e6bf00f918.txt,0,,,policy; must,housing,62411
+24cbe0113967a4f6725bb7683d5ad024,research_results/documents/parsed/24cbe0113967a4f6725bb7683d5ad024.txt,0,,,,,0
+9c5b986feef96c0eff29c2fb4d2f4aeb,research_results/documents/parsed/9c5b986feef96c0eff29c2fb4d2f4aeb.txt,0,,,policy,training,205
+a11f4770e29e1aa6db299b300fe149aa,research_results/documents/parsed/a11f4770e29e1aa6db299b300fe149aa.txt,0,,,standard,procurement,1352
+ff90821feeb2b02a33a6f9fc8e5f3fcd,research_results/documents/parsed/ff90821feeb2b02a33a6f9fc8e5f3fcd.txt,0,,,,,278
+d75277cdffef995a46ae59bdaef1db86,research_results/documents/parsed/d75277cdffef995a46ae59bdaef1db86.txt,0,,,,,278
+dfb92c0fbce43f49713c9bdee73a921b,research_results/documents/parsed/dfb92c0fbce43f49713c9bdee73a921b.txt,0,,,,housing,644
+8c21469e1d654a8bbc0bf84492c7aa71,research_results/documents/parsed/8c21469e1d654a8bbc0bf84492c7aa71.txt,0,,,policy,housing,15740
+bcb680272f5d9ea076d621ded3061763,research_results/documents/parsed/bcb680272f5d9ea076d621ded3061763.txt,0,,,,,1617
+b8db36676c4c140396b695f791f8e0b9,research_results/documents/parsed/b8db36676c4c140396b695f791f8e0b9.txt,0,,,policy; standard,hiring; procurement; training; housing,6458
+72452bef644dc6379e166efa8730a402,research_results/documents/parsed/72452bef644dc6379e166efa8730a402.txt,0,,,policy,training,207
+5b94e8a5df0af6d0ee9bdeaa10261e5e,research_results/documents/parsed/5b94e8a5df0af6d0ee9bdeaa10261e5e.txt,0,,,policy,hiring; procurement; training; housing,4140
+8541f98a9197bcf1a78f11abacb062b9,research_results/documents/parsed/8541f98a9197bcf1a78f11abacb062b9.txt,0,,,,,1132
+121df9a7bd9e7fb132e4cbd006e418fd,research_results/documents/parsed/121df9a7bd9e7fb132e4cbd006e418fd.txt,0,,,must; policy; statewide; required; contract,hiring; procurement; training; housing,36892
+e1107f33d362b88c5757c2d7d4f1abea,research_results/documents/parsed/e1107f33d362b88c5757c2d7d4f1abea.txt,0,,,statewide,,733
+11925ba57cc06a39fad9a6dc5a8cc1f0,research_results/documents/parsed/11925ba57cc06a39fad9a6dc5a8cc1f0.txt,0,,,,,0
+3d5bde53de69554f6a3a0fffa1a0ca00,research_results/documents/parsed/3d5bde53de69554f6a3a0fffa1a0ca00.txt,0,,,,training,6539
+3c72cd8d521a53f9c2171552b3686808,research_results/documents/parsed/3c72cd8d521a53f9c2171552b3686808.txt,0,,,policy,,231
+99dcf3d5449817538f56e3cd23ec5fc1,research_results/documents/parsed/99dcf3d5449817538f56e3cd23ec5fc1.txt,0,,,agreement; standard; shall; required; contract,hiring; procurement,3553
+c79073ad28f6e6b357996a771378cc0c,research_results/documents/parsed/c79073ad28f6e6b357996a771378cc0c.txt,0,,,agreement; required,housing,13072
+937374b235c61ee1f6081afde70f0ce0,research_results/documents/parsed/937374b235c61ee1f6081afde70f0ce0.txt,0,,,policy,procurement; training; housing,6874
+ce1173050faddc89621200959d54906c,research_results/documents/parsed/ce1173050faddc89621200959d54906c.txt,0,,,,,2586

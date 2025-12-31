@@ -1,0 +1,102 @@
+Third-party high-risk documents (from research_results/document_index_20251231_010736.json)
+Total third-party docs in index: 37
+
+01. risk=3 domain=www.raceforward.org
+    url: https://www.raceforward.org/sites/default/files/RacialJusticeImpactAssessment_v5.pdf
+    parsed_file: research_results/documents/parsed/ffb8b3c67a74866bc9b85c48b68e4bf0.txt
+    hits: inclusion, diversity, equity, equity plan, must, policy, required
+
+02. risk=2 domain=www.raceforward.org
+    url: https://www.raceforward.org/sites/default/files/Race%20Reporting%20Guide%20by%20Race%20Forward_V1.1.pdf
+    parsed_file: research_results/documents/parsed/c441d095b5efadcac83eadd5ad604240.txt
+    hits: inclusion, diversity, equity, statewide, standard, contract, must, policy, hiring, procurement, training, housing
+
+03. risk=2 domain=belonging.berkeley.edu
+    url: https://belonging.berkeley.edu/targeted-universalism
+    parsed_file: research_results/documents/parsed/f220833a1ebb227c820ffdcc641e2779.txt
+    hits: inclusion, diversity, equity, must, policy, procurement, training, housing
+
+04. risk=2 domain=www.osba.org
+    url: https://www.osba.org/
+    parsed_file: research_results/documents/parsed/07815e32e695fa0202bb1b593746c401.txt
+    hits: equity, policy, required, hiring, procurement, training, housing
+
+05. risk=2 domain=www.raceforward.org
+    url: https://www.raceforward.org/what-racial-equity
+    parsed_file: research_results/documents/parsed/a190e1e7829daedea88c07cffb922811.txt
+    hits: equity, must, policy, applicable to, hiring, training, housing
+
+06. risk=2 domain=oregonbuys.gov
+    url: https://oregonbuys.gov:443/bso/
+    parsed_file: research_results/documents/parsed/f6741790087ba13efcf09ff18aaee9d6.txt
+    hits: inclusion, diversity, shall, required, contract, procurement, housing
+
+07. risk=2 domain=belonging.berkeley.edu
+    url: https://belonging.berkeley.edu/
+    parsed_file: research_results/documents/parsed/e1ab2e335f7e813fd3cfbd5c10ab62b6.txt
+    hits: diversity, equity, policy, hiring, training, housing
+
+08. risk=2 domain=www.raceforward.org
+    url: https://www.raceforward.org/
+    parsed_file: research_results/documents/parsed/6edb45aeefba069c869f50585373f1c6.txt
+    hits: equity, policy, procurement, training, housing
+
+09. risk=2 domain=www.raceforward.org
+    url: http://www.raceforward.org/
+    parsed_file: research_results/documents/parsed/13a8dbfefb0e62ac8f3861aa3b6c4758.txt
+    hits: equity, policy, procurement, training, housing
+
+10. risk=2 domain=www.opportunityagenda.org
+    url: https://opportunityagenda.org/
+    parsed_file: research_results/documents/parsed/bf83699c0a4f2001dd2920dd6d60b502.txt
+    hits: equity, policy, training
+
+11. risk=2 domain=www.racialequityalliance.org
+    url: https://www.racialequityalliance.org/home
+    parsed_file: research_results/documents/parsed/0e1e03d72717fb6325339c86021d7ea8.txt
+    hits: equity, policy, housing
+
+12. risk=2 domain=www.racialequityalliance.org
+    url: https://www.racialequityalliance.org/wp-content/uploads/2015/10/gare-racial_equity_toolkit.pdf
+    parsed_file: research_results/documents/parsed/24cbe0113967a4f6725bb7683d5ad024.txt
+    hits: equity, policy
+
+13. risk=2 domain=www.racialequityalliance.org
+    url: https://www.racialequityalliance.org/resources/public-sector-jobs-
+    parsed_file: research_results/documents/parsed/c03fa557fce41394cb3254c013c5736b.txt
+    hits: equity, policy
+
+14. risk=2 domain=www.racialequityalliance.org
+    url: https://www.racialequityalliance.org/wp-content/uploads/2016/11/gare-racial-equity-action-plans.pdf
+    parsed_file: research_results/documents/parsed/11925ba57cc06a39fad9a6dc5a8cc1f0.txt
+    hits: equity, policy
+
+15. risk=0 domain=oregonencyclopedia.org
+    url: https://www.oregonencyclopedia.org/articles/blacks_in_oregon/
+    parsed_file: research_results/documents/parsed/121df9a7bd9e7fb132e4cbd006e418fd.txt
+    hits: statewide, contract, must, policy, required, hiring, procurement, training, housing
+
+16. risk=0 domain=immigrationhistory.org
+    url: https://immigrationhistory.org/item/page-act/
+    parsed_file: research_results/documents/parsed/99dcf3d5449817538f56e3cd23ec5fc1.txt
+    hits: agreement, shall, standard, contract, required, hiring, procurement
+
+17. risk=0 domain=www.hudexchange.info
+    url: https://www.hudexchange.info/homelessness-assistance/
+    parsed_file: research_results/documents/parsed/b8db36676c4c140396b695f791f8e0b9.txt
+    hits: policy, standard, hiring, procurement, training, housing
+
+18. risk=0 domain=www.hudexchange.info
+    url: https://www.hudexchange.info/
+    parsed_file: research_results/documents/parsed/5b94e8a5df0af6d0ee9bdeaa10261e5e.txt
+    hits: policy, hiring, procurement, training, housing
+
+19. risk=0 domain=www.hudexchange.info
+    url: https://files.hudexchange.info/resources/documents/HomelessDefinition_RecordkeepingRequirementsandCriteria.pdf
+    parsed_file: research_results/documents/parsed/c6a05a0f4e6c2b828b90061d477fc6c0.txt
+    hits: must, agreement, hiring, housing
+
+20. risk=0 domain=www.aiim.org
+    url: https://www.aiim.org/
+    parsed_file: research_results/documents/parsed/937374b235c61ee1f6081afde70f0ce0.txt
+    hits: policy, procurement, training, housing

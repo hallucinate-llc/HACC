@@ -1,0 +1,416 @@
+document_id,file_path,risk_score,dei_keywords,proxy_keywords,binding_keywords,applicability_tags,text_length
+74c6bb8d3aa480a95207e0085fc1c4c0,research_results/documents/parsed/74c6bb8d3aa480a95207e0085fc1c4c0.txt,3,inclusion; underrepresented; diversity; dei; equity; underserved,bipoc,agreement; statewide; policy; mandatory; standard; contract; must; required; shall,hiring; procurement; training; housing,59426
+e074d302eac8c1251ce84c7611f87a01,research_results/documents/parsed/e074d302eac8c1251ce84c7611f87a01.txt,3,inclusion; underrepresented; diversity; dei; equity; underserved,bipoc; safe space,applicability; agreement; statewide; policy; standard; contract; must; required,hiring; procurement; training; housing,108807
+2cb743c45485324adc632bb0642bc614,research_results/documents/parsed/2cb743c45485324adc632bb0642bc614.txt,3,inclusion; underrepresented; diversity; dei; equity; underserved,lived experience; equity plan,agreement; statewide; policy; mandatory; standard; contract; must; required; shall,hiring; procurement; training; housing,141010
+0907648c5876f269eb95f4122bbe6150,research_results/documents/parsed/0907648c5876f269eb95f4122bbe6150.txt,3,inclusion; equity,lived experience,must; statewide; policy; contract,procurement; housing,12324
+07a1076fa131f26b2cdcc68681afddbb,research_results/documents/parsed/07a1076fa131f26b2cdcc68681afddbb.txt,3,inclusion; underrepresented; diversity; dei; equity; underserved,safe space; equity plan,statewide; policy; mandatory; contract; must; shall,hiring; procurement; training; housing,49914
+544d76b9a259616a1c691b4f98098735,research_results/documents/parsed/544d76b9a259616a1c691b4f98098735.txt,3,inclusion; underrepresented; diversity; dei; equity; underserved,safe space; equity plan,statewide; policy; mandatory; contract; must; shall,hiring; procurement; training; housing,49914
+6431de02c3af80fab467e7aebdc1d17c,research_results/documents/parsed/6431de02c3af80fab467e7aebdc1d17c.txt,3,inclusion; diversity; dei; equity; underserved,bipoc,agreement; statewide; policy; standard; contract; must; required; shall,hiring; procurement; training; housing,76622
+dc398148018f34aaa217529c5dbcce3b,research_results/documents/parsed/dc398148018f34aaa217529c5dbcce3b.txt,3,inclusion; equity; diversity,lived experience; equity plan,agreement; statewide; policy; contract; shall,hiring; procurement; training; housing,32626
+b7387a8f638b7ddd0b6a497e0d8d3e49,research_results/documents/parsed/b7387a8f638b7ddd0b6a497e0d8d3e49.txt,3,inclusion; underrepresented; diversity; dei; equity; underserved,bipoc,agreement; policy; standard; contract; required,hiring; procurement; training; housing,245274
+65855a9e72d39c381c793fccf7e2afd0,research_results/documents/parsed/65855a9e72d39c381c793fccf7e2afd0.txt,3,inclusion; equity; diversity,lived experience; equity plan,agreement; statewide; policy; contract; shall,hiring; procurement; training; housing,32684
+a2f08c4c1146471bbf56e2808875d0b6,research_results/documents/parsed/a2f08c4c1146471bbf56e2808875d0b6.txt,3,inclusion; underrepresented; diversity; dei; equity; underserved,lived experience; bipoc,agreement; statewide; policy; standard; contract; must; required; shall,hiring; procurement; training; housing,147683
+bbfc77a24628ff8e29dd977ba4c66095,research_results/documents/parsed/bbfc77a24628ff8e29dd977ba4c66095.txt,3,inclusion; underrepresented; diversity; dei; equity; underserved,bipoc,agreement; statewide; policy; standard; contract; must; required,hiring; procurement; training; housing,69963
+f05cefc6c4eb4225c881409d8daadc29,research_results/documents/parsed/f05cefc6c4eb4225c881409d8daadc29.txt,3,inclusion; diversity; dei; equity; underserved,bipoc,agreement; statewide; policy; standard; contract; required; shall,hiring; procurement; training; housing,85456
+0a3c2fb7aaa8fce1b2fcc321ae18e5b9,research_results/documents/parsed/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.txt,3,inclusion; diversity; dei; equity; underserved,cultural competence; lived experience,statewide; policy; standard; contract; must; required; shall,hiring; procurement; training; housing,31368
+b3b027941a48b0372a0fe52293173996,research_results/documents/parsed/b3b027941a48b0372a0fe52293173996.txt,3,inclusion; underrepresented; diversity; dei; equity; underserved,bipoc; safe space,applicability; agreement; statewide; policy; standard; contract; must; required,hiring; procurement; training; housing,186852
+ffb8b3c67a74866bc9b85c48b68e4bf0,research_results/documents/parsed/ffb8b3c67a74866bc9b85c48b68e4bf0.txt,3,inclusion; equity; diversity,equity plan,must; policy; required,,8057
+4260e59b296ab49cb9ae241fbba37c68,research_results/documents/parsed/4260e59b296ab49cb9ae241fbba37c68.txt,3,inclusion; underrepresented; diversity; dei; equity,cultural competence,agreement; statewide; policy; contract; required; shall,hiring; procurement; training; housing,38034
+1d20c2a61ee7a30f077fe8e8eeba2667,research_results/documents/parsed/1d20c2a61ee7a30f077fe8e8eeba2667.txt,3,inclusion; underrepresented; diversity; deib; dei; equity,lived experience; bipoc,must; policy; agreement,hiring; training; housing,18877
+d000a9697b5ecd1908fdc47f91470b1e,research_results/documents/parsed/d000a9697b5ecd1908fdc47f91470b1e.txt,3,equity; diversity,lived experience,must; policy; required,hiring; training; housing,12664
+d222d253ff69a82ff3faca1b694d631e,research_results/documents/parsed/d222d253ff69a82ff3faca1b694d631e.txt,3,inclusion; equity; diversity,lived experience; equity plan,agreement; statewide; policy; contract; shall,hiring; procurement; training; housing,32531
+cd4a2c72e4d00cf7d614ababe9e73779,research_results/documents/parsed/cd4a2c72e4d00cf7d614ababe9e73779.txt,3,inclusion; equity; diversity; dei,equity plan,ordinance; policy,hiring; housing,15121
+0fa504280ae86dd4e5ccf8c473b7d22c,research_results/documents/parsed/0fa504280ae86dd4e5ccf8c473b7d22c.txt,3,equity,equity plan,policy; contract,hiring; procurement; training; housing,5449
+ac8b3b54df4124a34387d7e8da8f3838,research_results/documents/parsed/ac8b3b54df4124a34387d7e8da8f3838.txt,2,dei,,standard; policy,training; housing,12337
+592594abd4eb6a8bad89ce62855bb42e,research_results/documents/parsed/592594abd4eb6a8bad89ce62855bb42e.txt,2,inclusion; diversity; dei; equity; underserved,,applicability; standard; contract; must; required,hiring; procurement; housing,21859
+9e33ebe3140361da05a5258ac1ccdc88,research_results/documents/parsed/9e33ebe3140361da05a5258ac1ccdc88.txt,2,equity,,standard; policy,training; housing,2931
+d99adba5f859153dc055e701f3b00cc8,research_results/documents/parsed/d99adba5f859153dc055e701f3b00cc8.txt,2,equity,,mandatory; standard; policy,hiring; training,10069
+173fee7c4d1bd41609fa6be5bfb8d359,research_results/documents/parsed/173fee7c4d1bd41609fa6be5bfb8d359.txt,2,inclusion; equity; diversity,,policy,housing,6660
+bf83699c0a4f2001dd2920dd6d60b502,research_results/documents/parsed/bf83699c0a4f2001dd2920dd6d60b502.txt,2,equity,,policy,training,5202
+b5954653ff0f6fe3eeb0aa5b63479bda,research_results/documents/parsed/b5954653ff0f6fe3eeb0aa5b63479bda.txt,2,equity,,policy,housing,2803
+645b1f978c1291384280119d20b07e77,research_results/documents/parsed/645b1f978c1291384280119d20b07e77.txt,2,inclusion; underrepresented; diversity; dei; equity,,agreement; statewide; policy; mandatory; standard; contract; must; required; shall,hiring; procurement; training; housing,67969
+adcf7235f7f3bbc0db58cf35869d2d55,research_results/documents/parsed/adcf7235f7f3bbc0db58cf35869d2d55.txt,2,inclusion; equity; diversity,,applicable to; policy; agreement,hiring; training; housing,21062
+0033be02ec78316625017000c92e110e,research_results/documents/parsed/0033be02ec78316625017000c92e110e.txt,2,inclusion; diversity; deib; dei; equity,,standard; must; agreement; required,hiring; procurement; housing,5340
+0da0d7eead05f008d7561470a796b471,research_results/documents/parsed/0da0d7eead05f008d7561470a796b471.txt,2,dei,,standard,procurement,737842
+4aacabcdbcf635327d725f4d380c2cc3,research_results/documents/parsed/4aacabcdbcf635327d725f4d380c2cc3.txt,2,dei,,standard; must; required,training; housing,57087
+78c1b6400b5d5a077a730e1abdd3a397,research_results/documents/parsed/78c1b6400b5d5a077a730e1abdd3a397.txt,2,equity,,contract,hiring; procurement; training; housing,4421
+9fd5bea8a1a6cb3ee89674f6d06a3d6c,research_results/documents/parsed/9fd5bea8a1a6cb3ee89674f6d06a3d6c.txt,2,diversity,,standard; policy; contract,hiring; procurement; training; housing,20868
+592c84071aa2e1e2c199fe14a36d610c,research_results/documents/parsed/592c84071aa2e1e2c199fe14a36d610c.txt,2,equity; diversity; underserved,,statewide; policy; contract; must; required,hiring; procurement; training; housing,51615
+39aacc6287ece4d98183827562496c5e,research_results/documents/parsed/39aacc6287ece4d98183827562496c5e.txt,2,inclusion; equity; diversity; dei,,statewide; mandatory; contract; shall,procurement; housing,13084
+f17c22e859e2c48b5a346d23fc10a3c0,research_results/documents/parsed/f17c22e859e2c48b5a346d23fc10a3c0.txt,2,inclusion; equity; diversity; underserved,,must; standard; statewide; policy,hiring; housing,15914
+0605239e9e394ac73f36ee2d115a566f,research_results/documents/parsed/0605239e9e394ac73f36ee2d115a566f.txt,2,inclusion; equity; diversity; dei,,statewide; standard; must; required; shall,hiring; training; housing,11831
+a626e07c5852ed3bdb811988165371fe,research_results/documents/parsed/a626e07c5852ed3bdb811988165371fe.txt,2,inclusion; equity; diversity,,statewide; policy; contract; shall,procurement; training; housing,12584
+07815e32e695fa0202bb1b593746c401,research_results/documents/parsed/07815e32e695fa0202bb1b593746c401.txt,2,equity,,policy; required,hiring; procurement; training; housing,10560
+24cbe0113967a4f6725bb7683d5ad024,research_results/documents/parsed/24cbe0113967a4f6725bb7683d5ad024.txt,2,equity,,policy,,913
+7a83b025fa586877c6a5ea8493dc7719,research_results/documents/parsed/7a83b025fa586877c6a5ea8493dc7719.txt,2,dei,,standard; required,hiring; training; housing,65489
+244dee6f75bb503ebdcf3d3df5729d4a,research_results/documents/parsed/244dee6f75bb503ebdcf3d3df5729d4a.txt,2,diversity,,standard; policy; required,training,17140
+9762a3533714a36fd929ab1e2fc68393,research_results/documents/parsed/9762a3533714a36fd929ab1e2fc68393.txt,2,dei,,must,procurement,732660
+3118d8dcd1c708d5160b1108a9b231ea,research_results/documents/parsed/3118d8dcd1c708d5160b1108a9b231ea.txt,2,inclusion; equity; diversity; dei,,statewide; policy; contract; shall,hiring; procurement; training; housing,35957
+c03fa557fce41394cb3254c013c5736b,research_results/documents/parsed/c03fa557fce41394cb3254c013c5736b.txt,2,equity,,policy,,913
+181bd6ec8cfef085a9c88f92bf6a1ca5,research_results/documents/parsed/181bd6ec8cfef085a9c88f92bf6a1ca5.txt,2,equity; diversity,,ordinance; policy; agreement,hiring; housing,6942
+ffb8613e7bb63a09a1349a4f4cd7e90b,research_results/documents/parsed/ffb8613e7bb63a09a1349a4f4cd7e90b.txt,2,inclusion; underrepresented; diversity; dei; equity; underserved,,standard; must; policy; required,training; housing,22565
+19fe65d220983b78d9b82406f68a7436,research_results/documents/parsed/19fe65d220983b78d9b82406f68a7436.txt,2,inclusion; equity; diversity,,policy,training; housing,2946
+57a271a61cfdda6b8b76a264c5c1a897,research_results/documents/parsed/57a271a61cfdda6b8b76a264c5c1a897.txt,2,inclusion; underrepresented; diversity; dei; equity; underserved,,agreement; ordinance; policy; statewide; standard; contract; applicable to; must; required; shall,hiring; procurement; training; housing,114632
+a1550d1abc15f930d2e7861bcdf06840,research_results/documents/parsed/a1550d1abc15f930d2e7861bcdf06840.txt,2,equity,,policy; required,hiring; procurement; training; housing,6177
+942ef0696af0624037562a90533f3a2f,research_results/documents/parsed/942ef0696af0624037562a90533f3a2f.txt,2,equity,,standard,,961
+3280f67cdb07a327ce492b515521ebce,research_results/documents/parsed/3280f67cdb07a327ce492b515521ebce.txt,2,equity,,policy,training; housing,2434
+4b919881b559c56832bdfb54da9e035e,research_results/documents/parsed/4b919881b559c56832bdfb54da9e035e.txt,2,inclusion; equity; diversity,,policy,hiring; training; housing,7187
+6edb45aeefba069c869f50585373f1c6,research_results/documents/parsed/6edb45aeefba069c869f50585373f1c6.txt,2,equity,,policy,procurement; training; housing,5019
+17d6cf0baacf85a5dc3bdc2d4e886207,research_results/documents/parsed/17d6cf0baacf85a5dc3bdc2d4e886207.txt,2,diversity,,standard; policy,hiring; housing,19229
+d1b57d035c043d274245fea7ac99f95a,research_results/documents/parsed/d1b57d035c043d274245fea7ac99f95a.txt,2,inclusion; underrepresented; equity; diversity,,must; policy; contract; required,hiring; procurement; training; housing,7525
+c441d095b5efadcac83eadd5ad604240,research_results/documents/parsed/c441d095b5efadcac83eadd5ad604240.txt,2,inclusion; equity; diversity,,statewide; policy; standard; contract; must,hiring; procurement; training; housing,53834
+0e1e03d72717fb6325339c86021d7ea8,research_results/documents/parsed/0e1e03d72717fb6325339c86021d7ea8.txt,2,equity,,policy,housing,4359
+db13e23918ccc7cc83dae317c32a5d58,research_results/documents/parsed/db13e23918ccc7cc83dae317c32a5d58.txt,2,inclusion,,agreement; policy; standard; must; required; shall,hiring; housing,53382
+2195e7212f1c4ad1e4ee1c0bb15a46b1,research_results/documents/parsed/2195e7212f1c4ad1e4ee1c0bb15a46b1.txt,2,diversity,,applicable to; standard; required,hiring; procurement; training; housing,37079
+c2c9284f53c491b8423127ffa00215af,research_results/documents/parsed/c2c9284f53c491b8423127ffa00215af.txt,2,equity,,policy; contract; required,procurement; housing,4055
+385a88a7fe2da014385f69da14fe3381,research_results/documents/parsed/385a88a7fe2da014385f69da14fe3381.txt,2,inclusion; equity; diversity,,agreement; statewide; policy; contract; shall,hiring; procurement; training; housing,22905
+6e6c69b294212c64d1c617f261e70841,research_results/documents/parsed/6e6c69b294212c64d1c617f261e70841.txt,2,inclusion; underrepresented; diversity; dei; equity; underserved,,must; policy,hiring; procurement; training; housing,36369
+ee02c83be8b5d732d469696cbae371d2,research_results/documents/parsed/ee02c83be8b5d732d469696cbae371d2.txt,2,diversity,,standard; policy,hiring; housing,19110
+1bb15fecc239f35d9ee2fc03e86de86b,research_results/documents/parsed/1bb15fecc239f35d9ee2fc03e86de86b.txt,2,equity; diversity,,statewide; policy,hiring; procurement,9213
+a190e1e7829daedea88c07cffb922811,research_results/documents/parsed/a190e1e7829daedea88c07cffb922811.txt,2,equity,,applicable to; must; policy,hiring; training; housing,10278
+5184c7c35874f7f32dd9b11fd5c0851e,research_results/documents/parsed/5184c7c35874f7f32dd9b11fd5c0851e.txt,2,diversity,,applicable to; standard; required,hiring; procurement; training; housing,50333
+18a4457561e7c756d769d5af38c56b27,research_results/documents/parsed/18a4457561e7c756d769d5af38c56b27.txt,2,dei,,standard; required,procurement; training,63193
+ebc99fc1209f8c2c5f749b2004124f65,research_results/documents/parsed/ebc99fc1209f8c2c5f749b2004124f65.txt,2,inclusion; equity,,policy; contract,hiring; procurement; training; housing,5075
+5148e0039f816c8b620f360dfaa24d24,research_results/documents/parsed/5148e0039f816c8b620f360dfaa24d24.txt,2,inclusion; diversity,,policy,training,5390
+1171b9007c447304c2078fde38778fb3,research_results/documents/parsed/1171b9007c447304c2078fde38778fb3.txt,2,dei,,policy; contract,procurement; housing,4636
+301c581abbfcce15c8336a36b2946da3,research_results/documents/parsed/301c581abbfcce15c8336a36b2946da3.txt,2,inclusion; equity; diversity; dei,,policy; shall,hiring; training,6892
+98c9506cf4fdebe9ad866266418748db,research_results/documents/parsed/98c9506cf4fdebe9ad866266418748db.txt,2,diversity,,policy,hiring; procurement; housing,2035
+13a8dbfefb0e62ac8f3861aa3b6c4758,research_results/documents/parsed/13a8dbfefb0e62ac8f3861aa3b6c4758.txt,2,equity,,policy,procurement; training; housing,5019
+cb1ac965894e26608da47802bbcd2ed2,research_results/documents/parsed/cb1ac965894e26608da47802bbcd2ed2.txt,2,dei,,policy; mandatory; standard; contract; must; required; shall,hiring; procurement; training; housing,6051301
+b03119e6b8cde2b7df224e42d8cdd827,research_results/documents/parsed/b03119e6b8cde2b7df224e42d8cdd827.txt,2,equity,,must,training; housing,7547
+07191d2e982a998b5c108d04213e94bb,research_results/documents/parsed/07191d2e982a998b5c108d04213e94bb.txt,2,dei,,agreement; must; contract,hiring; procurement; housing,18226
+f6741790087ba13efcf09ff18aaee9d6,research_results/documents/parsed/f6741790087ba13efcf09ff18aaee9d6.txt,2,inclusion; diversity,,contract; required; shall,procurement; housing,7916
+3d2f61921dcdc94801c90a0fee237047,research_results/documents/parsed/3d2f61921dcdc94801c90a0fee237047.txt,2,equity,,policy,housing,1358
+11925ba57cc06a39fad9a6dc5a8cc1f0,research_results/documents/parsed/11925ba57cc06a39fad9a6dc5a8cc1f0.txt,2,equity,,policy,,913
+9e9cb48c1174c31afed273d1a674e5ba,research_results/documents/parsed/9e9cb48c1174c31afed273d1a674e5ba.txt,2,diversity,,standard; required,hiring; procurement; training; housing,67813
+60ff12d7e79e6a9763b86f62b24ac6f4,research_results/documents/parsed/60ff12d7e79e6a9763b86f62b24ac6f4.txt,2,inclusion; underrepresented; diversity; deib; dei; equity,,statewide; standard; contract; must; required,hiring; procurement; training; housing,82412
+9613353fa3a8e6ccd6e9a982d4da3ddc,research_results/documents/parsed/9613353fa3a8e6ccd6e9a982d4da3ddc.txt,2,equity,,policy,,913
+d1dfa8ffa6c838ec2140e5832a73076b,research_results/documents/parsed/d1dfa8ffa6c838ec2140e5832a73076b.txt,2,equity,,policy,housing,2708
+008ec4453ff31513f43893cba7aa31c8,research_results/documents/parsed/008ec4453ff31513f43893cba7aa31c8.txt,2,inclusion,,standard; required,training,8254
+097f2f6b250b065a6a9eb2d97f44d074,research_results/documents/parsed/097f2f6b250b065a6a9eb2d97f44d074.txt,2,inclusion,,agreement; policy; standard; must; required; shall,procurement,54745
+38ac588a6bec834ba78cc6cae5c70a74,research_results/documents/parsed/38ac588a6bec834ba78cc6cae5c70a74.txt,1,dei,,,procurement,408972
+ad2b900e9e6b2794a9e941a26b1f23f4,research_results/documents/parsed/ad2b900e9e6b2794a9e941a26b1f23f4.txt,1,dei,,,,348626
+17558c5b4af4dd2223bdf8571ca4e02c,research_results/documents/parsed/17558c5b4af4dd2223bdf8571ca4e02c.txt,1,dei,,,procurement,101514
+37a520be03aab98f54637f6cc732ce34,research_results/documents/parsed/37a520be03aab98f54637f6cc732ce34.txt,1,dei,,,procurement,461079
+cbc67a52937563f12660c2f2de32b909,research_results/documents/parsed/cbc67a52937563f12660c2f2de32b909.txt,1,dei,,,procurement,551594
+1a4f8e8e700177433560dc025b06ca8c,research_results/documents/parsed/1a4f8e8e700177433560dc025b06ca8c.txt,1,dei,,,procurement,1113108
+9a1b693c35e973d60d177549b5e67ed7,research_results/documents/parsed/9a1b693c35e973d60d177549b5e67ed7.txt,1,dei,,,procurement,1389590
+751feb8e88cecc6720a3587a09c346eb,research_results/documents/parsed/751feb8e88cecc6720a3587a09c346eb.txt,1,dei,,,procurement,2054911
+d551ea3095e7b1990354a7dc3c2b63f6,research_results/documents/parsed/d551ea3095e7b1990354a7dc3c2b63f6.txt,1,deib; dei; deia,,,procurement,2591322
+266eb08420b3a62fa0177cd9470150d9,research_results/documents/parsed/266eb08420b3a62fa0177cd9470150d9.txt,1,dei,,,procurement,111921
+6693d1ba8b8aa1dc9e3bc370bc2507af,research_results/documents/parsed/6693d1ba8b8aa1dc9e3bc370bc2507af.txt,1,dei,,,procurement,70429
+514be1febd22e7f3b3583b75312a8354,research_results/documents/parsed/514be1febd22e7f3b3583b75312a8354.txt,1,dei,,,procurement,121300
+f84adf206a341ddc48ca30663aa22ce6,research_results/documents/parsed/f84adf206a341ddc48ca30663aa22ce6.txt,1,dei; deia,,,procurement,277918
+3ab0972aa46f257cd03b2af722485308,research_results/documents/parsed/3ab0972aa46f257cd03b2af722485308.txt,1,underserved,,,procurement; training; housing,4110
+a54473fd37623b5766de7f14723e4b8c,research_results/documents/parsed/a54473fd37623b5766de7f14723e4b8c.txt,1,dei,,,procurement,194170
+b9d1f115b4f6141d122e42cec38fd468,research_results/documents/parsed/b9d1f115b4f6141d122e42cec38fd468.txt,1,dei,,,procurement,566144
+84986f213b75f252291b607d97de07ec,research_results/documents/parsed/84986f213b75f252291b607d97de07ec.txt,1,dei,,,procurement,193858
+85a98c348b7383018be12a42e1b6b262,research_results/documents/parsed/85a98c348b7383018be12a42e1b6b262.txt,1,dei,,,procurement,71023
+bf752ec19c223c3466f451d8254827ef,research_results/documents/parsed/bf752ec19c223c3466f451d8254827ef.txt,1,dei,,,,222804
+62d67ef2e126d40189cd5ac2bfa1931e,research_results/documents/parsed/62d67ef2e126d40189cd5ac2bfa1931e.txt,1,dei,,,,39725
+51ef5542e55870e4099d3d91ecd0d789,research_results/documents/parsed/51ef5542e55870e4099d3d91ecd0d789.txt,1,dei,,,procurement,374535
+2adca19a968eeeb581271ef2189aca0c,research_results/documents/parsed/2adca19a968eeeb581271ef2189aca0c.txt,1,dei,,,procurement,135560
+45340a0385c6ac4ca312a1195bb8eef5,research_results/documents/parsed/45340a0385c6ac4ca312a1195bb8eef5.txt,1,dei,,,hiring; procurement,87326
+68fd30a0146a306c3289e900d82bf009,research_results/documents/parsed/68fd30a0146a306c3289e900d82bf009.txt,1,dei,,,,33487
+b3407df24592b8f42de0fdb218d1994d,research_results/documents/parsed/b3407df24592b8f42de0fdb218d1994d.txt,1,dei,,,procurement,1927147
+14926c8739ba0f5691225319d546bf08,research_results/documents/parsed/14926c8739ba0f5691225319d546bf08.txt,1,dei,,,procurement,439364
+e9bdcd555e2ebff222e8f25e7da77190,research_results/documents/parsed/e9bdcd555e2ebff222e8f25e7da77190.txt,1,dei,,,procurement,61704
+9992a1019c1a850d63d4e6c5f0ef450b,research_results/documents/parsed/9992a1019c1a850d63d4e6c5f0ef450b.txt,1,inclusion; equity; diversity; dei,,,training,8230
+219f9b0f06283ae87f11e3f3ca83e3dd,research_results/documents/parsed/219f9b0f06283ae87f11e3f3ca83e3dd.txt,1,dei,,,procurement,484750
+2ea032c46776252e52fbfd33edbed358,research_results/documents/parsed/2ea032c46776252e52fbfd33edbed358.txt,1,dei,,,procurement,792516
+95c63fdf066dde780c9aa043c6292579,research_results/documents/parsed/95c63fdf066dde780c9aa043c6292579.txt,0,,,policy,,172
+007b03ee41b89c9bfb655c2f066db43b,research_results/documents/parsed/007b03ee41b89c9bfb655c2f066db43b.txt,0,,,agreement; policy; standard; must; required,hiring; procurement; training; housing,20044
+70cd1c5a92bcf53af2ccfbe1bb03108d,research_results/documents/parsed/70cd1c5a92bcf53af2ccfbe1bb03108d.txt,0,,,standard; policy; required,hiring; housing,22250
+b1177a5a57d5439e7ec2c74f50af9821,research_results/documents/parsed/b1177a5a57d5439e7ec2c74f50af9821.txt,0,,,,,269494
+c71d3f7b11a21d518fec899ab0e40020,research_results/documents/parsed/c71d3f7b11a21d518fec899ab0e40020.txt,0,,,,,13189
+7f0586533f4c87d7768eb727c2c3f188,research_results/documents/parsed/7f0586533f4c87d7768eb727c2c3f188.txt,0,,,agreement; policy; standard; must; required,hiring; procurement; training; housing,20044
+0034e235b9015f1e70670ff8e44995a7,research_results/documents/parsed/0034e235b9015f1e70670ff8e44995a7.txt,0,,,policy,housing,424
+154c4988defec1ded443cde2fcf7f5df,research_results/documents/parsed/154c4988defec1ded443cde2fcf7f5df.txt,0,,,policy,housing,425
+41cd297c4c4771fffe814705e9bd37fd,research_results/documents/parsed/41cd297c4c4771fffe814705e9bd37fd.txt,0,,,,,1083
+d669a83397f9f0a04c2b8a8a2274b20d,research_results/documents/parsed/d669a83397f9f0a04c2b8a8a2274b20d.txt,0,,,policy; required,hiring,9938
+9e8d6e724a2858f034bb8ece33ac6da2,research_results/documents/parsed/9e8d6e724a2858f034bb8ece33ac6da2.txt,0,,,,,30447
+8610c4dc77892503bd744a25c11b07d1,research_results/documents/parsed/8610c4dc77892503bd744a25c11b07d1.txt,0,,,,,990
+a8e9b1c172c480ab56bd7001e3a0291a,research_results/documents/parsed/a8e9b1c172c480ab56bd7001e3a0291a.txt,0,,,standard; must; contract; shall,procurement; housing,7536
+7ab1c698e9aca12f84f98488520ed0a0,research_results/documents/parsed/7ab1c698e9aca12f84f98488520ed0a0.txt,0,,,standard; must; required,hiring; housing,505468
+b051c60757a24028c95a5c4866047292,research_results/documents/parsed/b051c60757a24028c95a5c4866047292.txt,0,,,,,29002
+2b53c5b30b5d4639a8519f7ac61f183d,research_results/documents/parsed/2b53c5b30b5d4639a8519f7ac61f183d.txt,0,,,,housing,170
+a7b3e33d6c1cfac43e5d548113f4fbfa,research_results/documents/parsed/a7b3e33d6c1cfac43e5d548113f4fbfa.txt,0,,,,housing,170
+d9e5ecf138db41fdef26558aa6280d17,research_results/documents/parsed/d9e5ecf138db41fdef26558aa6280d17.txt,0,,,standard; must; required,hiring,234851
+9821e343b0dd45bd7592869a81398b03,research_results/documents/parsed/9821e343b0dd45bd7592869a81398b03.txt,0,,,required,hiring,5313
+3be24f26bfe440fc86a5d97d76999016,research_results/documents/parsed/3be24f26bfe440fc86a5d97d76999016.txt,0,,,required,hiring,15131
+57bc4c0b92be846af1bffc624c286b72,research_results/documents/parsed/57bc4c0b92be846af1bffc624c286b72.txt,0,,,must; policy,housing,602
+d2df65c0cf32d89327606df73674d13b,research_results/documents/parsed/d2df65c0cf32d89327606df73674d13b.txt,0,,,,,183975
+0150e4fecaecd60497625c1c8420694b,research_results/documents/parsed/0150e4fecaecd60497625c1c8420694b.txt,0,,,standard; must; policy; required,hiring; procurement; training,53561
+6f232df7b455731acded00e409d68b90,research_results/documents/parsed/6f232df7b455731acded00e409d68b90.txt,0,,,policy,housing,438
+313386829217558dbd9653c43ea9faa9,research_results/documents/parsed/313386829217558dbd9653c43ea9faa9.txt,0,,,,,630
+c10680c1c36c265aeea4755339787a19,research_results/documents/parsed/c10680c1c36c265aeea4755339787a19.txt,0,,,policy,procurement; housing,1248
+049a09731baae3d3cf7f2d9e3597c40a,research_results/documents/parsed/049a09731baae3d3cf7f2d9e3597c40a.txt,0,,,must; policy,housing,638
+ebd34508ab517ed00ccb36ea0e14fe3c,research_results/documents/parsed/ebd34508ab517ed00ccb36ea0e14fe3c.txt,0,,,policy,housing,447
+242331265137b9dca99f1446aee013ad,research_results/documents/parsed/242331265137b9dca99f1446aee013ad.txt,0,,,policy,housing,446
+315736b2585623649430c745d4cfe4be,research_results/documents/parsed/315736b2585623649430c745d4cfe4be.txt,0,,,policy,housing,435
+030ff6c85bb04d7c6e9e6e041b5127b8,research_results/documents/parsed/030ff6c85bb04d7c6e9e6e041b5127b8.txt,0,,,,training,850
+de0bd9dacf387e345ffe54f8d3f0866b,research_results/documents/parsed/de0bd9dacf387e345ffe54f8d3f0866b.txt,0,,,policy,housing,428
+8a28ce43c4675c2d51240f61a8b93051,research_results/documents/parsed/8a28ce43c4675c2d51240f61a8b93051.txt,0,,,,hiring; procurement; housing,185964
+589e61abc9e5b7f4f2db0a26b0c094fc,research_results/documents/parsed/589e61abc9e5b7f4f2db0a26b0c094fc.txt,0,,,standard,training,6554
+15b2fbd59e779bb261aa99a201a7ec54,research_results/documents/parsed/15b2fbd59e779bb261aa99a201a7ec54.txt,0,,,,procurement,304449
+22c55d03014adf35618543ab6f48567f,research_results/documents/parsed/22c55d03014adf35618543ab6f48567f.txt,0,,,policy,housing,439
+3795ffb1185bd224dd9673f76807480e,research_results/documents/parsed/3795ffb1185bd224dd9673f76807480e.txt,0,,,,,47661
+457312611cef31a2cfe6e349011f468e,research_results/documents/parsed/457312611cef31a2cfe6e349011f468e.txt,0,,,,,860
+29661131760fa5f575c2a7abd4c91a0a,research_results/documents/parsed/29661131760fa5f575c2a7abd4c91a0a.txt,0,,,,procurement,186535
+2937528ed49e9ee9bf3867954810d25a,research_results/documents/parsed/2937528ed49e9ee9bf3867954810d25a.txt,0,,,policy,housing,436
+24317d7e02e5e73e45cc19e5b4bc8182,research_results/documents/parsed/24317d7e02e5e73e45cc19e5b4bc8182.txt,0,,,,,1089
+26d474e25502f88475b11d1da6ee9a6e,research_results/documents/parsed/26d474e25502f88475b11d1da6ee9a6e.txt,0,,,,,9655
+99198c9f1d217ba9f092b89e4231eb41,research_results/documents/parsed/99198c9f1d217ba9f092b89e4231eb41.txt,0,,,must; policy,housing,673
+83d870ea8ea571d07afe27781affea49,research_results/documents/parsed/83d870ea8ea571d07afe27781affea49.txt,0,,,policy,housing,421
+62ac4d46556c5e1dd1f98064acd5318a,research_results/documents/parsed/62ac4d46556c5e1dd1f98064acd5318a.txt,0,,,policy,housing,436
+cd5a6f658ca495af6aeb2a30d8cbb3ec,research_results/documents/parsed/cd5a6f658ca495af6aeb2a30d8cbb3ec.txt,0,,,policy,housing,433
+8e6598328ec32041913a46b619bda2a3,research_results/documents/parsed/8e6598328ec32041913a46b619bda2a3.txt,0,,,policy,housing,430
+480ba47b21000a1a38c28f982c087338,research_results/documents/parsed/480ba47b21000a1a38c28f982c087338.txt,0,,,policy,housing,430
+f4652be053f6312a37effb96ce963e5e,research_results/documents/parsed/f4652be053f6312a37effb96ce963e5e.txt,0,,,,procurement,28542
+456b6c834a63fd69a93b556c23ed1a0c,research_results/documents/parsed/456b6c834a63fd69a93b556c23ed1a0c.txt,0,,,policy,housing,426
+b96f93f6490b6801cde10a716c8c1b71,research_results/documents/parsed/b96f93f6490b6801cde10a716c8c1b71.txt,0,,,,housing,777
+c6a05a0f4e6c2b828b90061d477fc6c0,research_results/documents/parsed/c6a05a0f4e6c2b828b90061d477fc6c0.txt,0,,,must; agreement,hiring; housing,41601
+a64828afdc68c013760260abd9c28250,research_results/documents/parsed/a64828afdc68c013760260abd9c28250.txt,0,,,policy,hiring; housing,3651
+7b7181bf17f752fb48373c00df76923d,research_results/documents/parsed/7b7181bf17f752fb48373c00df76923d.txt,0,,,,hiring,1748
+7a303e3155bc803621b77ec1cbf20929,research_results/documents/parsed/7a303e3155bc803621b77ec1cbf20929.txt,0,,,policy,hiring; procurement; training,3751
+d496072691c88d64786a02a5bed451ac,research_results/documents/parsed/d496072691c88d64786a02a5bed451ac.txt,0,,,policy,housing,436
+62e2d252e7db1124904d1653226c1fad,research_results/documents/parsed/62e2d252e7db1124904d1653226c1fad.txt,0,,,,hiring; housing,1310
+2222a6aff44ac46ed8a3fa6f01a1c641,research_results/documents/parsed/2222a6aff44ac46ed8a3fa6f01a1c641.txt,0,,,must,housing,2997
+2e585e0d0df836ab9f92388391140acf,research_results/documents/parsed/2e585e0d0df836ab9f92388391140acf.txt,0,,,policy,housing,3881
+5690767b4beedb96f1ce1d614a4db078,research_results/documents/parsed/5690767b4beedb96f1ce1d614a4db078.txt,0,,,policy,housing,430
+eb99dab6339ad402904aefa560bb825a,research_results/documents/parsed/eb99dab6339ad402904aefa560bb825a.txt,0,,,policy,,2505
+46b383e71dafa3dc6638d1628246acfe,research_results/documents/parsed/46b383e71dafa3dc6638d1628246acfe.txt,0,,,must; policy; required,procurement; training; housing,5071
+ee4569fbadb3c86dfbd3633503f7fb16,research_results/documents/parsed/ee4569fbadb3c86dfbd3633503f7fb16.txt,0,,,standard; policy,hiring; training; housing,2797
+022621fee8894629a4293f7bcd169817,research_results/documents/parsed/022621fee8894629a4293f7bcd169817.txt,0,,,standard; policy; required,hiring; procurement; training; housing,5187
+4fada016a1e7290916d8640a92a5bb4b,research_results/documents/parsed/4fada016a1e7290916d8640a92a5bb4b.txt,0,,,agreement; policy; standard; must; shall,hiring; procurement; training; housing,21400
+de030a0d5975e90c1b9a84e6bf00f918,research_results/documents/parsed/de030a0d5975e90c1b9a84e6bf00f918.txt,0,,,must; policy,housing,62411
+5fb771bda582a108438cf2f86fe537ff,research_results/documents/parsed/5fb771bda582a108438cf2f86fe537ff.txt,0,,,standard; must; policy,training; housing,6249
+f49f55984bccbb46311471f4b2b2a92f,research_results/documents/parsed/f49f55984bccbb46311471f4b2b2a92f.txt,0,,,,,105450
+89c273256a8b0aead5ccaf3327ce630a,research_results/documents/parsed/89c273256a8b0aead5ccaf3327ce630a.txt,0,,,policy,housing,436
+0513d540a51a43abd8dabc01538eb76a,research_results/documents/parsed/0513d540a51a43abd8dabc01538eb76a.txt,0,,,policy,housing,436
+5769efe2043ff29c0e1d0ae2a75eaccd,research_results/documents/parsed/5769efe2043ff29c0e1d0ae2a75eaccd.txt,0,,,policy,housing,436
+dc5029a90f39b84cde19344393aeb98e,research_results/documents/parsed/dc5029a90f39b84cde19344393aeb98e.txt,0,,,policy,housing,392
+bb1b99d2e6de9e140eecf7895254af39,research_results/documents/parsed/bb1b99d2e6de9e140eecf7895254af39.txt,0,,,policy; required,procurement; training; housing,6006
+f60666507eede8575d5d63ebee6db9ee,research_results/documents/parsed/f60666507eede8575d5d63ebee6db9ee.txt,0,,,policy,housing,418
+feeb87b01526b785102182a78507f65f,research_results/documents/parsed/feeb87b01526b785102182a78507f65f.txt,0,,,policy; contract,procurement; training,2087
+3624845de3c2316d6c0dbf0f2893e487,research_results/documents/parsed/3624845de3c2316d6c0dbf0f2893e487.txt,0,,,standard; policy; contract; shall,procurement; training; housing,15904
+814b27f4a4ddfd453a23e1887769f8c3,research_results/documents/parsed/814b27f4a4ddfd453a23e1887769f8c3.txt,0,,,policy,housing,6945
+4d975cdf368929264ccdfe1c61f4409c,research_results/documents/parsed/4d975cdf368929264ccdfe1c61f4409c.txt,0,,,policy,housing,428
+8c075912f2cca780ba33cfe57ebd2b0e,research_results/documents/parsed/8c075912f2cca780ba33cfe57ebd2b0e.txt,0,,,policy,procurement; housing,1280
+4af1fa6c12b3a2f7df00a1a6d8442669,research_results/documents/parsed/4af1fa6c12b3a2f7df00a1a6d8442669.txt,0,,,policy,housing,428
+bc98e22e379689505fc99ef95502deb2,research_results/documents/parsed/bc98e22e379689505fc99ef95502deb2.txt,0,,,,procurement,110201
+0626db2d35dc593351e86353787f097c,research_results/documents/parsed/0626db2d35dc593351e86353787f097c.txt,0,,,must; required,housing,4397
+c00f38fd109cfc85436d597003a69b2a,research_results/documents/parsed/c00f38fd109cfc85436d597003a69b2a.txt,0,,,policy,procurement; training,2763
+8325d951675fa2cd11a50e5f4336a038,research_results/documents/parsed/8325d951675fa2cd11a50e5f4336a038.txt,0,,,,training,2392
+74cccdd8ca38bd843ce2fcc0061f3c8d,research_results/documents/parsed/74cccdd8ca38bd843ce2fcc0061f3c8d.txt,0,,,,housing,1464
+1ae75bfed2ac7bf8303889da12a31036,research_results/documents/parsed/1ae75bfed2ac7bf8303889da12a31036.txt,0,,,,,12784
+1e185c1c21e0305ab3e4bf71cf7da1c9,research_results/documents/parsed/1e185c1c21e0305ab3e4bf71cf7da1c9.txt,0,,,policy,hiring; housing,2178
+046fe192b96a2c01f29b34ebb211503c,research_results/documents/parsed/046fe192b96a2c01f29b34ebb211503c.txt,0,,,policy,housing,427
+a627326f8652982104a660d689f01aa9,research_results/documents/parsed/a627326f8652982104a660d689f01aa9.txt,0,,,,training,1353
+a5c1a0dbdb584efb73c07034aab5339e,research_results/documents/parsed/a5c1a0dbdb584efb73c07034aab5339e.txt,0,,,policy,housing,421
+a199e6fa5b0f89476c0da782645ee20e,research_results/documents/parsed/a199e6fa5b0f89476c0da782645ee20e.txt,0,,,policy,housing,448
+369cafaf2b2ef8d03cbf252578667d61,research_results/documents/parsed/369cafaf2b2ef8d03cbf252578667d61.txt,0,,,,,23
+eb69fac6114a72c57ddbfa1738a42b91,research_results/documents/parsed/eb69fac6114a72c57ddbfa1738a42b91.txt,0,,,policy,housing,428
+05500c5d3391d0954816e6483cfd6341,research_results/documents/parsed/05500c5d3391d0954816e6483cfd6341.txt,0,,,must; policy,housing,596
+56088c7829292a0e622474fba2519cbf,research_results/documents/parsed/56088c7829292a0e622474fba2519cbf.txt,0,,,,,96752
+299048dd9e792f786bd209f6a853333c,research_results/documents/parsed/299048dd9e792f786bd209f6a853333c.txt,0,,,policy,procurement; training,1913
+9524f1452396b6af820c3ab979e5fd58,research_results/documents/parsed/9524f1452396b6af820c3ab979e5fd58.txt,0,,,,,120363
+48fe88b3a030743ae5a065b7299e9ecf,research_results/documents/parsed/48fe88b3a030743ae5a065b7299e9ecf.txt,0,,,must,housing,3410
+a6118b290fad4b795a070b61557b3182,research_results/documents/parsed/a6118b290fad4b795a070b61557b3182.txt,0,,,,,1200
+29e330b6d69e896317cdab57e02306a2,research_results/documents/parsed/29e330b6d69e896317cdab57e02306a2.txt,0,,,required,housing,2334
+2200e43a2542909f881e1d251c2ff5f3,research_results/documents/parsed/2200e43a2542909f881e1d251c2ff5f3.txt,0,,,,hiring,6075
+e130f1a4dac5d4a5a43706ec4ef97210,research_results/documents/parsed/e130f1a4dac5d4a5a43706ec4ef97210.txt,0,,,policy,housing,438
+45066aa6b5650f5656f636cc2de68968,research_results/documents/parsed/45066aa6b5650f5656f636cc2de68968.txt,0,,,,housing,170
+1af62bf32113c269dca3aea29daec2db,research_results/documents/parsed/1af62bf32113c269dca3aea29daec2db.txt,0,,,,procurement,106308
+12e72f09e508d2aa0c59c8bcd068279f,research_results/documents/parsed/12e72f09e508d2aa0c59c8bcd068279f.txt,0,,,policy,housing,432
+a11d40eabea0cda851bdaf79616cf1f0,research_results/documents/parsed/a11d40eabea0cda851bdaf79616cf1f0.txt,0,,,,,250775
+8444b9d83856f5d89ff54709a5e8a7f1,research_results/documents/parsed/8444b9d83856f5d89ff54709a5e8a7f1.txt,0,,,policy,hiring; procurement; training; housing,11668
+9c5b986feef96c0eff29c2fb4d2f4aeb,research_results/documents/parsed/9c5b986feef96c0eff29c2fb4d2f4aeb.txt,0,,,policy,training,205
+ee0d8a60f5436c579cd02f69a96372ed,research_results/documents/parsed/ee0d8a60f5436c579cd02f69a96372ed.txt,0,,,policy,housing,450
+79dfc6a9fd8318ab4becc87831dd4b45,research_results/documents/parsed/79dfc6a9fd8318ab4becc87831dd4b45.txt,0,,,policy,housing,784
+ac30190796032716b09079d00eb63ec3,research_results/documents/parsed/ac30190796032716b09079d00eb63ec3.txt,0,,,,housing,170
+972bda881aba9bfa808ac72f05f49b1d,research_results/documents/parsed/972bda881aba9bfa808ac72f05f49b1d.txt,0,,,,,175
+a09ff4988494c9ad07851a4452e767a0,research_results/documents/parsed/a09ff4988494c9ad07851a4452e767a0.txt,0,,,,procurement,49802
+c43cf89f734f0d7ea88c5493a738f00e,research_results/documents/parsed/c43cf89f734f0d7ea88c5493a738f00e.txt,0,,,,,40997
+a11f4770e29e1aa6db299b300fe149aa,research_results/documents/parsed/a11f4770e29e1aa6db299b300fe149aa.txt,0,,,standard,procurement,1352
+ff90821feeb2b02a33a6f9fc8e5f3fcd,research_results/documents/parsed/ff90821feeb2b02a33a6f9fc8e5f3fcd.txt,0,,,,,278
+fafa1d57b248bdff2c9cd0c572604a72,research_results/documents/parsed/fafa1d57b248bdff2c9cd0c572604a72.txt,0,,,must; policy,housing,704
+d75277cdffef995a46ae59bdaef1db86,research_results/documents/parsed/d75277cdffef995a46ae59bdaef1db86.txt,0,,,,,278
+796a28669db69fd98e103d94cbfc3d73,research_results/documents/parsed/796a28669db69fd98e103d94cbfc3d73.txt,0,,,,,1201
+2951884dd69327adcbaa55f42aa21643,research_results/documents/parsed/2951884dd69327adcbaa55f42aa21643.txt,0,,,policy,housing,441
+54566d91dba9e78922e9974ab72e0edd,research_results/documents/parsed/54566d91dba9e78922e9974ab72e0edd.txt,0,,,policy,training; housing,2045
+abfdabfdf149edb5964b1052cde07d4b,research_results/documents/parsed/abfdabfdf149edb5964b1052cde07d4b.txt,0,,,,,443
+7c609bec3dc012696d3ba11191567f46,research_results/documents/parsed/7c609bec3dc012696d3ba11191567f46.txt,0,,,standard; policy,hiring; procurement; training; housing,8531
+3ea8e42cb0d132d6e74b06ac6acdd312,research_results/documents/parsed/3ea8e42cb0d132d6e74b06ac6acdd312.txt,0,,,policy,housing,431
+5de08b390c6c80f3de8080dd2313f2e6,research_results/documents/parsed/5de08b390c6c80f3de8080dd2313f2e6.txt,0,,,must; policy; agreement,hiring; procurement; training; housing,4977
+75b41329167fc0cc9fab998b432bd6ae,research_results/documents/parsed/75b41329167fc0cc9fab998b432bd6ae.txt,0,,,policy,housing,426
+7b3e4cf8d5330e4f28f189381dfd8776,research_results/documents/parsed/7b3e4cf8d5330e4f28f189381dfd8776.txt,0,,,policy,,2505
+6d20c695771052feb358089566c594da,research_results/documents/parsed/6d20c695771052feb358089566c594da.txt,0,,,,procurement,37752
+a9bb4ad5be9d1af64a8b024132fbdfe9,research_results/documents/parsed/a9bb4ad5be9d1af64a8b024132fbdfe9.txt,0,,,policy,housing,430
+b101c45a4a4dc08aee5d90f6e6e5d9df,research_results/documents/parsed/b101c45a4a4dc08aee5d90f6e6e5d9df.txt,0,,,,,56305
+22b1da9a7c55eacf8ea1ea9e880079e4,research_results/documents/parsed/22b1da9a7c55eacf8ea1ea9e880079e4.txt,0,,,policy,housing,429
+82a169d067d1919ef2b552faafb4d3da,research_results/documents/parsed/82a169d067d1919ef2b552faafb4d3da.txt,0,,,policy,housing,430
+9b1e6456d44a5767911238ca150b39a9,research_results/documents/parsed/9b1e6456d44a5767911238ca150b39a9.txt,0,,,policy,housing,438
+7fe32e915e7477e3458140fd6cd41512,research_results/documents/parsed/7fe32e915e7477e3458140fd6cd41512.txt,0,,,policy,housing,397
+a4e21d371f5975dc4346ff3bf91455e0,research_results/documents/parsed/a4e21d371f5975dc4346ff3bf91455e0.txt,0,,,,,97436
+43a842a53cfa511e1bc88276a0352d1c,research_results/documents/parsed/43a842a53cfa511e1bc88276a0352d1c.txt,0,,,,hiring; housing,720
+f1cb88bb7347b4fc00550933ef9e5234,research_results/documents/parsed/f1cb88bb7347b4fc00550933ef9e5234.txt,0,,,policy,housing,440
+60836bb392b2f12f39e28102c4ae36fa,research_results/documents/parsed/60836bb392b2f12f39e28102c4ae36fa.txt,0,,,,housing,5840
+79db51034d71903c40f75abd5dbd8cb7,research_results/documents/parsed/79db51034d71903c40f75abd5dbd8cb7.txt,0,,,policy,housing,442
+1b6cfd44da90cbca2fcac8d727414e90,research_results/documents/parsed/1b6cfd44da90cbca2fcac8d727414e90.txt,0,,,policy,housing,446
+9e84d57a57ab78f6a7b6d656f90c2485,research_results/documents/parsed/9e84d57a57ab78f6a7b6d656f90c2485.txt,0,,,,,20791
+1077d8833cbf55cbff6be0b319b5f995,research_results/documents/parsed/1077d8833cbf55cbff6be0b319b5f995.txt,0,,,,,327
+bd21594fde83a117cb3536cf0d64f4ec,research_results/documents/parsed/bd21594fde83a117cb3536cf0d64f4ec.txt,0,,,standard; must; policy; agreement,hiring; procurement; housing,16781
+20dbf5594df31c18d255f26622a5b899,research_results/documents/parsed/20dbf5594df31c18d255f26622a5b899.txt,0,,,required,hiring; training,7976
+92a1ba04f1c1df106306c0772aedc362,research_results/documents/parsed/92a1ba04f1c1df106306c0772aedc362.txt,0,,,must; required,procurement; training; housing,27360
+dfb92c0fbce43f49713c9bdee73a921b,research_results/documents/parsed/dfb92c0fbce43f49713c9bdee73a921b.txt,0,,,,housing,644
+ab209b48772a5d8df903743533411a90,research_results/documents/parsed/ab209b48772a5d8df903743533411a90.txt,0,,,policy,hiring; training; housing,5298
+e2e2b8c74d0a012ca0a5dd20933a6855,research_results/documents/parsed/e2e2b8c74d0a012ca0a5dd20933a6855.txt,0,,,,procurement,195703
+73a13e832e4c3a43e78c16e65bb446e2,research_results/documents/parsed/73a13e832e4c3a43e78c16e65bb446e2.txt,0,,,,,52486
+d68b7e9473f232d7ccb6070e61c27130,research_results/documents/parsed/d68b7e9473f232d7ccb6070e61c27130.txt,0,,,policy,housing,456
+ba6fbaa916d44f6b08f4195c3bb6104b,research_results/documents/parsed/ba6fbaa916d44f6b08f4195c3bb6104b.txt,0,,,standard,,1070
+d4019521ed7005fe301d668e732fa749,research_results/documents/parsed/d4019521ed7005fe301d668e732fa749.txt,0,,,,training,850
+51d90af8d1218c1a62fb807c8ad6a733,research_results/documents/parsed/51d90af8d1218c1a62fb807c8ad6a733.txt,0,,,,procurement,65717
+24dcb622c57bda6457f4f83cc0c1480c,research_results/documents/parsed/24dcb622c57bda6457f4f83cc0c1480c.txt,0,,,,hiring,1275
+cba56a677895f4e30682c991c18933de,research_results/documents/parsed/cba56a677895f4e30682c991c18933de.txt,0,,,,,15
+934636228c686219a719cb257b19444a,research_results/documents/parsed/934636228c686219a719cb257b19444a.txt,0,,,,,78353
+4b5f341a2413a3b906e7ea005c6861bc,research_results/documents/parsed/4b5f341a2413a3b906e7ea005c6861bc.txt,0,,,,,190124
+12620e5adbdb6984d21cd280fc0d0850,research_results/documents/parsed/12620e5adbdb6984d21cd280fc0d0850.txt,0,,,,housing,4866
+ce61429f7a2184a4678907a98c463d66,research_results/documents/parsed/ce61429f7a2184a4678907a98c463d66.txt,0,,,,hiring; housing,3077
+b6a353691165e369168a87344c2bb225,research_results/documents/parsed/b6a353691165e369168a87344c2bb225.txt,0,,,,procurement,48434
+fcab1ae542d5995634e90db77b45681a,research_results/documents/parsed/fcab1ae542d5995634e90db77b45681a.txt,0,,,,procurement,85242
+8c21469e1d654a8bbc0bf84492c7aa71,research_results/documents/parsed/8c21469e1d654a8bbc0bf84492c7aa71.txt,0,,,policy,housing,15740
+40e9f3d15abe64494e64b08c6da22f7d,research_results/documents/parsed/40e9f3d15abe64494e64b08c6da22f7d.txt,0,,,,hiring; procurement,94940
+bcb680272f5d9ea076d621ded3061763,research_results/documents/parsed/bcb680272f5d9ea076d621ded3061763.txt,0,,,,,1617
+307c33a3609468c1998ad428c5063505,research_results/documents/parsed/307c33a3609468c1998ad428c5063505.txt,0,,,policy,procurement; training; housing,3465
+9a560738ebc5d9262fb2e59c11d697ba,research_results/documents/parsed/9a560738ebc5d9262fb2e59c11d697ba.txt,0,,,policy,housing,428
+4bce2acdfd684ec902fbbdce86ade903,research_results/documents/parsed/4bce2acdfd684ec902fbbdce86ade903.txt,0,,,policy,housing,440
+8733c058ce6044d1fe2704c7051b21c6,research_results/documents/parsed/8733c058ce6044d1fe2704c7051b21c6.txt,0,,,policy,housing,432
+35ba445cb940baf4ac3aa8980e0a2cdb,research_results/documents/parsed/35ba445cb940baf4ac3aa8980e0a2cdb.txt,0,,,,procurement,201202
+a6bf1757fff057f266b697df9cf176fd,research_results/documents/parsed/a6bf1757fff057f266b697df9cf176fd.txt,0,,,,,142
+3a84823850b16fc1941f38a8feadd672,research_results/documents/parsed/3a84823850b16fc1941f38a8feadd672.txt,0,,,policy,housing,430
+182ccedb33a9e03fbf1079b209da1a31,research_results/documents/parsed/182ccedb33a9e03fbf1079b209da1a31.txt,0,,,,,142
+2ffdb12bb926fd666af07bd2ee129f46,research_results/documents/parsed/2ffdb12bb926fd666af07bd2ee129f46.txt,0,,,,procurement,172211
+b7bc84cd8e9c0eded2bda5dc03fb38e8,research_results/documents/parsed/b7bc84cd8e9c0eded2bda5dc03fb38e8.txt,0,,,,,45180
+b8db36676c4c140396b695f791f8e0b9,research_results/documents/parsed/b8db36676c4c140396b695f791f8e0b9.txt,0,,,standard; policy,hiring; procurement; training; housing,6458
+771c7d7a5f6fdc434ec6ec3c289c329d,research_results/documents/parsed/771c7d7a5f6fdc434ec6ec3c289c329d.txt,0,,,must; policy,procurement; training,2590
+cb654d4e33715e982c2e6364a90d0f6b,research_results/documents/parsed/cb654d4e33715e982c2e6364a90d0f6b.txt,0,,,standard; must; required,hiring,276279
+ca6b38c260448c149dab755abda2b725,research_results/documents/parsed/ca6b38c260448c149dab755abda2b725.txt,0,,,contract,hiring; procurement; housing,9383
+6ac981793fb50a869dae752f66cd1011,research_results/documents/parsed/6ac981793fb50a869dae752f66cd1011.txt,0,,,,,2419
+817f094f1edc95fbe71646bee78dc75c,research_results/documents/parsed/817f094f1edc95fbe71646bee78dc75c.txt,0,,,,,56580
+ad180d986bc21dbc9330ab4c99ed5a39,research_results/documents/parsed/ad180d986bc21dbc9330ab4c99ed5a39.txt,0,,,policy,housing,447
+9201a6fe3d8aa4e2c70a4695f82fdbe0,research_results/documents/parsed/9201a6fe3d8aa4e2c70a4695f82fdbe0.txt,0,,,policy,hiring; housing,3743
+551b53d89b7a0efb15b7be9b123dd3ba,research_results/documents/parsed/551b53d89b7a0efb15b7be9b123dd3ba.txt,0,,,policy,housing,442
+11f8c5e1123008295d7e64cc85216997,research_results/documents/parsed/11f8c5e1123008295d7e64cc85216997.txt,0,,,standard; policy; required,procurement; training; housing,8229
+b2f6f3b8f187792bcee0bde2bd304fcb,research_results/documents/parsed/b2f6f3b8f187792bcee0bde2bd304fcb.txt,0,,,,,64479
+4681d1e892cb8479507b607dd2612385,research_results/documents/parsed/4681d1e892cb8479507b607dd2612385.txt,0,,,,training,2392
+e09418552bffc631d834012946662292,research_results/documents/parsed/e09418552bffc631d834012946662292.txt,0,,,standard; policy,housing,4769
+e7bd4f4dc934f4c724bb175e0a2cc9fd,research_results/documents/parsed/e7bd4f4dc934f4c724bb175e0a2cc9fd.txt,0,,,policy,housing,432
+e8e523e92fbd99969a6dcda98a9f5dd8,research_results/documents/parsed/e8e523e92fbd99969a6dcda98a9f5dd8.txt,0,,,,hiring; training; housing,5163
+3af30c01b129847bd0bfabd7279c39f9,research_results/documents/parsed/3af30c01b129847bd0bfabd7279c39f9.txt,0,,,,housing,170
+443e9ac68a226291083e9a6760c5a870,research_results/documents/parsed/443e9ac68a226291083e9a6760c5a870.txt,0,,,,training,850
+c053d274f88d76dc1114739758d0cb14,research_results/documents/parsed/c053d274f88d76dc1114739758d0cb14.txt,0,,,policy,housing,422
+71a7765c3d553e44aaa308159b5a2ba6,research_results/documents/parsed/71a7765c3d553e44aaa308159b5a2ba6.txt,0,,,,training,3508
+63c519771fc2e053851940d9b303216a,research_results/documents/parsed/63c519771fc2e053851940d9b303216a.txt,0,,,,,31879
+72452bef644dc6379e166efa8730a402,research_results/documents/parsed/72452bef644dc6379e166efa8730a402.txt,0,,,policy,training,207
+689235eda9bbbeb13d80079a5a124a2a,research_results/documents/parsed/689235eda9bbbeb13d80079a5a124a2a.txt,0,,,,,56
+03aa87139e5a69d6c46b83c7fa48d744,research_results/documents/parsed/03aa87139e5a69d6c46b83c7fa48d744.txt,0,,,policy,housing,436
+3104a975296d67a4eaa7834fca1ac216,research_results/documents/parsed/3104a975296d67a4eaa7834fca1ac216.txt,0,,,policy,housing,424
+d4ae5b96320d13cc1a27493d5cfadd20,research_results/documents/parsed/d4ae5b96320d13cc1a27493d5cfadd20.txt,0,,,,,64921
+89752d40428674dec5da6ea90a9383da,research_results/documents/parsed/89752d40428674dec5da6ea90a9383da.txt,0,,,,,8261
+5b94e8a5df0af6d0ee9bdeaa10261e5e,research_results/documents/parsed/5b94e8a5df0af6d0ee9bdeaa10261e5e.txt,0,,,policy,hiring; procurement; training; housing,4140
+d7e37c7dce04e9bfe1616df0c27a058a,research_results/documents/parsed/d7e37c7dce04e9bfe1616df0c27a058a.txt,0,,,,,18204
+0e36dad6d4f32a9fb70093a60cd05fca,research_results/documents/parsed/0e36dad6d4f32a9fb70093a60cd05fca.txt,0,,,,,74966
+729a17653b6d3d5379132be435852f0e,research_results/documents/parsed/729a17653b6d3d5379132be435852f0e.txt,0,,,,,716
+a4e66d97429661c8056dc56ed35bb2ff,research_results/documents/parsed/a4e66d97429661c8056dc56ed35bb2ff.txt,0,,,,,130378
+b38e3d183f71c799cdc5c8440266707e,research_results/documents/parsed/b38e3d183f71c799cdc5c8440266707e.txt,0,,,standard; must,training; housing,29479
+ad2839f107e9dcaeb5a400c5b880d2b0,research_results/documents/parsed/ad2839f107e9dcaeb5a400c5b880d2b0.txt,0,,,,housing,170
+d687e6a52acf594964576c6a768bbe46,research_results/documents/parsed/d687e6a52acf594964576c6a768bbe46.txt,0,,,,,150843
+96552487b3fd2421596ff7a9cc6c769c,research_results/documents/parsed/96552487b3fd2421596ff7a9cc6c769c.txt,0,,,policy,housing,434
+f304e48a8327218e3fec9d22f84c7cf1,research_results/documents/parsed/f304e48a8327218e3fec9d22f84c7cf1.txt,0,,,must; policy,hiring; housing,3780
+c78a080e1a60024fbe81fe72c5b2af54,research_results/documents/parsed/c78a080e1a60024fbe81fe72c5b2af54.txt,0,,,policy; agreement; required,procurement; housing,3847
+de6bba496869a4990072aaf442de5193,research_results/documents/parsed/de6bba496869a4990072aaf442de5193.txt,0,,,standard; must; required,hiring,492342
+15dff37950a2434967604af27b66196f,research_results/documents/parsed/15dff37950a2434967604af27b66196f.txt,0,,,policy,housing,625
+0e651fd1dab929d765942f99d9b1aaad,research_results/documents/parsed/0e651fd1dab929d765942f99d9b1aaad.txt,0,,,policy,training; housing,803
+6dec9fcb5f4af0ab32993f31d3feb7cb,research_results/documents/parsed/6dec9fcb5f4af0ab32993f31d3feb7cb.txt,0,,,policy,housing,427
+8541f98a9197bcf1a78f11abacb062b9,research_results/documents/parsed/8541f98a9197bcf1a78f11abacb062b9.txt,0,,,,,1132
+d52f1652fdaadbbd2c96cafcda269dad,research_results/documents/parsed/d52f1652fdaadbbd2c96cafcda269dad.txt,0,,,policy,housing,442
+f8bacdd98653eadcf2642f464b397291,research_results/documents/parsed/f8bacdd98653eadcf2642f464b397291.txt,0,,,,procurement,226602
+94b7f062d309a0320a1b3a018423736c,research_results/documents/parsed/94b7f062d309a0320a1b3a018423736c.txt,0,,,standard; must,housing,8318
+121df9a7bd9e7fb132e4cbd006e418fd,research_results/documents/parsed/121df9a7bd9e7fb132e4cbd006e418fd.txt,0,,,statewide; policy; contract; must; required,hiring; procurement; training; housing,36892
+21a72f9e3ac084fe09876868195c527d,research_results/documents/parsed/21a72f9e3ac084fe09876868195c527d.txt,0,,,,,53260
+5f5d27b736323efc8d0096d768dea7aa,research_results/documents/parsed/5f5d27b736323efc8d0096d768dea7aa.txt,0,,,,,15
+52cd97168f3abd20d0c66d36582aacf7,research_results/documents/parsed/52cd97168f3abd20d0c66d36582aacf7.txt,0,,,must,,52444
+d40281c1d88106917c746ba40cb1f4a8,research_results/documents/parsed/d40281c1d88106917c746ba40cb1f4a8.txt,0,,,policy; required,procurement; training,2730
+4c717d1e18b22c909bacab73677e3c47,research_results/documents/parsed/4c717d1e18b22c909bacab73677e3c47.txt,0,,,,procurement,46524
+b1005135d715d53944e1cf08e586aaa4,research_results/documents/parsed/b1005135d715d53944e1cf08e586aaa4.txt,0,,,,,630
+9d90fb89d1037c136652af2b11338c52,research_results/documents/parsed/9d90fb89d1037c136652af2b11338c52.txt,0,,,,,630
+544a3c89ee2126143e425c5c99a830ea,research_results/documents/parsed/544a3c89ee2126143e425c5c99a830ea.txt,0,,,,housing,170
+795dec8abbe440a208ee94e0d5e18ec2,research_results/documents/parsed/795dec8abbe440a208ee94e0d5e18ec2.txt,0,,,policy,housing,420
+fb2592286aeb6931ac11516d44edb66b,research_results/documents/parsed/fb2592286aeb6931ac11516d44edb66b.txt,0,,,,,56308
+3b84d45df488922a79c1fb8761c9a967,research_results/documents/parsed/3b84d45df488922a79c1fb8761c9a967.txt,0,,,policy,housing,444
+73e87240bf915cd9c341617549bb102b,research_results/documents/parsed/73e87240bf915cd9c341617549bb102b.txt,0,,,policy,housing,416
+89c94b9ecc7d135aae35bb0d25a8097e,research_results/documents/parsed/89c94b9ecc7d135aae35bb0d25a8097e.txt,0,,,,hiring,7308
+c657ab54aaf559d6d7d8d353e3b04c82,research_results/documents/parsed/c657ab54aaf559d6d7d8d353e3b04c82.txt,0,,,,procurement,119009
+b01800f62e710f0032fd482bc3377f92,research_results/documents/parsed/b01800f62e710f0032fd482bc3377f92.txt,0,,,policy,housing,432
+e1107f33d362b88c5757c2d7d4f1abea,research_results/documents/parsed/e1107f33d362b88c5757c2d7d4f1abea.txt,0,,,statewide,,733
+3c86c7ce8800d3f2a04e16451a614279,research_results/documents/parsed/3c86c7ce8800d3f2a04e16451a614279.txt,0,,,must; policy,housing,531
+d020bd14c432669860a542bbc6562d36,research_results/documents/parsed/d020bd14c432669860a542bbc6562d36.txt,0,,,,training,850
+2134d4899f0afe01b1998a8f568b8843,research_results/documents/parsed/2134d4899f0afe01b1998a8f568b8843.txt,0,,,,,9
+3dcd79a7c97b7305f20489d1ca17593d,research_results/documents/parsed/3dcd79a7c97b7305f20489d1ca17593d.txt,0,,,policy,housing,436
+fb20149c161f61c6e56648540d55642a,research_results/documents/parsed/fb20149c161f61c6e56648540d55642a.txt,0,,,policy,housing,428
+6185adc92a3ec2f6c27b5e923c49eb37,research_results/documents/parsed/6185adc92a3ec2f6c27b5e923c49eb37.txt,0,,,,,170408
+7a0e3687dbde4dbb84316137cb07e7fd,research_results/documents/parsed/7a0e3687dbde4dbb84316137cb07e7fd.txt,0,,,,,98455
+320e264882ee60232e379133741e0f09,research_results/documents/parsed/320e264882ee60232e379133741e0f09.txt,0,,,policy,housing,432
+6fc8734ce6361c22c4c17f240dec2ab6,research_results/documents/parsed/6fc8734ce6361c22c4c17f240dec2ab6.txt,0,,,policy,housing,432
+ad56856495b1aa7508d716ac5b5c388c,research_results/documents/parsed/ad56856495b1aa7508d716ac5b5c388c.txt,0,,,standard; must; policy; required,hiring; training; housing,21820
+bbe7acb45f264f9ce93960d30c429eec,research_results/documents/parsed/bbe7acb45f264f9ce93960d30c429eec.txt,0,,,,,657
+ec83054cd49d52c62bcde89d810df8c5,research_results/documents/parsed/ec83054cd49d52c62bcde89d810df8c5.txt,0,,,policy,housing,427
+281b82cc954e80498b9a7927d7fc2b9f,research_results/documents/parsed/281b82cc954e80498b9a7927d7fc2b9f.txt,0,,,policy,housing,3867
+b5e5c57abbc15a6401f64b894a335573,research_results/documents/parsed/b5e5c57abbc15a6401f64b894a335573.txt,0,,,,,197
+058c9dca17f59838809b1b9b8f67c627,research_results/documents/parsed/058c9dca17f59838809b1b9b8f67c627.txt,0,,,,housing,170
+145866c4ce0b8dca656afb315101eaff,research_results/documents/parsed/145866c4ce0b8dca656afb315101eaff.txt,0,,,,procurement,70119
+dd47bf4ddfc9e60d43703796b2a597a4,research_results/documents/parsed/dd47bf4ddfc9e60d43703796b2a597a4.txt,0,,,policy,training; housing,1885
+21840f404f8b44e614dfb82fccd3ca59,research_results/documents/parsed/21840f404f8b44e614dfb82fccd3ca59.txt,0,,,,,195609
+6c639748ad9d843e01a607630ea75c81,research_results/documents/parsed/6c639748ad9d843e01a607630ea75c81.txt,0,,,,,1048
+21640fd97c0aaddf50fc57c1eecc0182,research_results/documents/parsed/21640fd97c0aaddf50fc57c1eecc0182.txt,0,,,policy,housing,436
+a25ed6fc41cab3e231809c92d5514728,research_results/documents/parsed/a25ed6fc41cab3e231809c92d5514728.txt,0,,,,,628
+fddc0913ff96354c00e3c7d910d2c06d,research_results/documents/parsed/fddc0913ff96354c00e3c7d910d2c06d.txt,0,,,must; required,procurement; training; housing,26579
+9106077f707a7e2e22dc5cdc87ce5b54,research_results/documents/parsed/9106077f707a7e2e22dc5cdc87ce5b54.txt,0,,,policy,housing,422
+3ad67ed18af7d44d652d71c7366010f6,research_results/documents/parsed/3ad67ed18af7d44d652d71c7366010f6.txt,0,,,,,211
+d32fc94549e147301f42fb900fc68895,research_results/documents/parsed/d32fc94549e147301f42fb900fc68895.txt,0,,,,,77897
+3369a563b039e0382d61a118eacc3ecb,research_results/documents/parsed/3369a563b039e0382d61a118eacc3ecb.txt,0,,,,procurement,111847
+3d5bde53de69554f6a3a0fffa1a0ca00,research_results/documents/parsed/3d5bde53de69554f6a3a0fffa1a0ca00.txt,0,,,,training,6539
+bc0a9ea0ac5fa4ebb39b2b6bbf3c4fd3,research_results/documents/parsed/bc0a9ea0ac5fa4ebb39b2b6bbf3c4fd3.txt,0,,,standard; policy,hiring; procurement; housing,3188
+9afc03806c436d495f9b35661514a4c4,research_results/documents/parsed/9afc03806c436d495f9b35661514a4c4.txt,0,,,standard; policy,hiring; training; housing,5876
+b7583606c414576514188fbc1e00eefd,research_results/documents/parsed/b7583606c414576514188fbc1e00eefd.txt,0,,,,,2419
+59f28cd4fb73ebad6244cbf8d16af10e,research_results/documents/parsed/59f28cd4fb73ebad6244cbf8d16af10e.txt,0,,,,,79414
+bc4b20b7a408aa10b396dad51b6510fe,research_results/documents/parsed/bc4b20b7a408aa10b396dad51b6510fe.txt,0,,,,,33440
+869b6f428967eea94701f045f94a18ce,research_results/documents/parsed/869b6f428967eea94701f045f94a18ce.txt,0,,,,procurement,33351
+3416780756f5d7e1313cf86dba6632bb,research_results/documents/parsed/3416780756f5d7e1313cf86dba6632bb.txt,0,,,,,52549
+a8f97cbea18bcddce2649fc653868507,research_results/documents/parsed/a8f97cbea18bcddce2649fc653868507.txt,0,,,policy,housing,418
+d425aae83eb9992a7dea44f66cd97d98,research_results/documents/parsed/d425aae83eb9992a7dea44f66cd97d98.txt,0,,,policy,housing,439
+c7c901f58ee7d43a1c0d01c04204467e,research_results/documents/parsed/c7c901f58ee7d43a1c0d01c04204467e.txt,0,,,policy,housing,436
+71cb6ca8688b19f1498fb5bc6321884d,research_results/documents/parsed/71cb6ca8688b19f1498fb5bc6321884d.txt,0,,,,training,685
+ae40f76283201c7080fe191d3b1908c1,research_results/documents/parsed/ae40f76283201c7080fe191d3b1908c1.txt,0,,,,,60620
+03f0b1ced9a67059ca7c1c803601a4f1,research_results/documents/parsed/03f0b1ced9a67059ca7c1c803601a4f1.txt,0,,,policy,hiring; procurement; training; housing,8895
+fe89e6f80307f48d51b3e28812eb84f3,research_results/documents/parsed/fe89e6f80307f48d51b3e28812eb84f3.txt,0,,,,,1029
+3ff3fab2843802890ba91ea847ecf29f,research_results/documents/parsed/3ff3fab2843802890ba91ea847ecf29f.txt,0,,,policy,housing,426
+2a22f3175e119ae7fa7db7468434a6a6,research_results/documents/parsed/2a22f3175e119ae7fa7db7468434a6a6.txt,0,,,,hiring,6737
+998a3a873966d113ad99d1124b7005c8,research_results/documents/parsed/998a3a873966d113ad99d1124b7005c8.txt,0,,,,,990
+d424b8ed261abd1e0e0c7399b7986342,research_results/documents/parsed/d424b8ed261abd1e0e0c7399b7986342.txt,0,,,policy,housing,426
+3c72cd8d521a53f9c2171552b3686808,research_results/documents/parsed/3c72cd8d521a53f9c2171552b3686808.txt,0,,,policy,,231
+70ff4c0fce8f25eaa35a3e214f7d01c3,research_results/documents/parsed/70ff4c0fce8f25eaa35a3e214f7d01c3.txt,0,,,,,630
+22adfaf76948415ff7e20b296b46cc29,research_results/documents/parsed/22adfaf76948415ff7e20b296b46cc29.txt,0,,,,procurement,418240
+a597ff3bd791b104b3ef5b5df7d3bd9f,research_results/documents/parsed/a597ff3bd791b104b3ef5b5df7d3bd9f.txt,0,,,must; policy,housing,684
+99dcf3d5449817538f56e3cd23ec5fc1,research_results/documents/parsed/99dcf3d5449817538f56e3cd23ec5fc1.txt,0,,,agreement; standard; contract; required; shall,hiring; procurement,3553
+1379b96eccb96b971f4f95e0931f18c9,research_results/documents/parsed/1379b96eccb96b971f4f95e0931f18c9.txt,0,,,,,630
+f178e5445a00ca0f4f060af69716886a,research_results/documents/parsed/f178e5445a00ca0f4f060af69716886a.txt,0,,,must; policy,housing,4310
+06d4b02111db91eda1c6e9f72c5bf28e,research_results/documents/parsed/06d4b02111db91eda1c6e9f72c5bf28e.txt,0,,,must; required,procurement; training; housing,24538
+c79073ad28f6e6b357996a771378cc0c,research_results/documents/parsed/c79073ad28f6e6b357996a771378cc0c.txt,0,,,agreement; required,housing,13072
+937374b235c61ee1f6081afde70f0ce0,research_results/documents/parsed/937374b235c61ee1f6081afde70f0ce0.txt,0,,,policy,procurement; training; housing,6874
+ce1173050faddc89621200959d54906c,research_results/documents/parsed/ce1173050faddc89621200959d54906c.txt,0,,,,,2586
+3f49cd22b9d9362dcc848805ce676b9c,research_results/documents/parsed/3f49cd22b9d9362dcc848805ce676b9c.txt,0,,,policy,housing,424
+65616e541202b66391af16d86747fd03,research_results/documents/parsed/65616e541202b66391af16d86747fd03.txt,0,,,,,10
+a55e1dd2c5c472da651b0e1ee474094f,research_results/documents/parsed/a55e1dd2c5c472da651b0e1ee474094f.txt,0,,,policy,housing,424
+3caa182b33f256eb6252f5981f2d2f80,research_results/documents/parsed/3caa182b33f256eb6252f5981f2d2f80.txt,0,,,required,hiring; housing,3024

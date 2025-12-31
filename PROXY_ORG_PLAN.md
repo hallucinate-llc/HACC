@@ -1,0 +1,118 @@
+# Plan: Identify Third-Party / “Proxy” Organizations in HACC + Oregon Housing/DEI Context
+
+This plan is designed for **due diligence and compliance analysis**: identify third-party organizations (nonprofits, associations, vendors, contractors, grantees/subrecipients, training providers, portals) that may **implement, shape, or operationalize** policies and programs tied to housing, procurement, hiring, or civil-rights compliance.
+
+It does **not** assume wrongdoing. It focuses on locating the entities, the documents governing their relationships, and the policy language that may affect outcomes.
+
+## 1) Scope & Working Definition
+
+**“Third-party / proxy organization”** (for this project) = any non-government entity (and sometimes quasi-government portals) that:
+
+- Delivers services on behalf of HACC / county / state programs (service provider, operator, contractor)
+- Receives pass-through funding (subrecipient, grantee)
+- Influences procurement/hiring/training requirements (training vendor, consultant)
+- Hosts operational systems (application portals, screening vendors)
+- Publishes guidance adopted or incorporated by reference into local policy (industry associations)
+
+**Out of scope**: purely technical assets (CDNs, analytics scripts) unless they host relevant policy content.
+
+## 2) Primary Evidence Sources (in this workspace)
+
+Prioritize sources that tend to name outside entities:
+
+- HACC site snapshots in `research_results/hacc_documents/` and `research_results/https___www_clackamas_us_housingauthority_*.html`
+- Oregon pages in `research_results/oregon_documents/` and P1/P2 downloads in `research_results/oregon_p1p2_downloads/`
+- Parsed text corpus in `research_results/documents/parsed/` (policy PDFs converted to text)
+- Existing discovery indexes:
+  - `research_results/*document_index*.json`
+  - `research_results/*workflow_results*.json`
+  - `research_results/*search_results*.json`
+
+## 3) High-Yield Places to Look (what to search for)
+
+### 3.1 Relationship signals (phrases)
+Search within documents for:
+
+- “in partnership with”, “partner(s)”, “in coordination with”
+- “administered by”, “managed by”, “operated by”
+- “contractor”, “vendor”, “consultant”, “provider”
+- “subrecipient”, “sub-award”, “subaward”, “pass-through”
+- “grant agreement”, “MOU”, “memorandum of understanding”
+- “training vendor”, “curriculum”, “facilitated by”
+- “application portal”, “intake”, “screening”, “background check”
+
+### 3.2 Document types
+- RFPs/RFQs, bid tabs, award notices, contract templates
+- Grant agreements and subaward monitoring
+- Program manuals and eligibility/selection rules
+- Complaints/appeals procedures and referral lists
+
+## 4) Identification Methods (how we build the candidate list)
+
+We use **two parallel passes**:
+
+### Pass A — Outbound link/domain extraction
+- Extract all outbound URLs from HTML/text
+- Normalize domains and filter out obvious assets (JS/CSS/images) and analytics
+- Flag domains that recur on high-relevance pages (housing programs, procurement, civil rights)
+
+### Pass B — Name/entity extraction in text
+- Heuristically extract organization names from:
+  - Anchor text (link labels)
+  - Capitalized entity strings with org suffixes (e.g., “Inc”, “LLC”, “Foundation”, “Association”, “Coalition”, “Council”, “Services”)
+  - Near-relationship phrases (partner/vendor/subrecipient/etc.)
+
+### Scoring / ranking
+Rank candidates by:
+- Frequency of mention across sources
+- Proximity to relationship signals
+- Presence in procurement/grant context vs general references
+- Cross-linking: domain appears + org name appears
+
+Output should include **evidence**: source file + context snippet for each mention.
+
+## 5) Triage Rules (what’s “likely relevant”)
+
+Keep (high priority):
+- Entities tied to **procurement, contracting, training**, or **program operations**
+- Entities that host **application portals**, screening, waitlist management
+- Entities mentioned in **grant/subrecipient** contexts
+
+Keep (medium priority):
+- Advocacy/association guidance cited as program basis
+- Newsletters or outreach partners if they distribute program requirements
+
+Deprioritize:
+- Pure technical vendors without policy/process control evidence
+- CDNs/analytics scripts
+
+## 6) What to Download / Collect for Each Candidate
+
+For each candidate domain/entity, collect:
+- “About”, “Programs”, “Policies”, “Fair housing / nondiscrimination”, “Eligibility”, “Client rights” pages
+- Any RFP/contract/grant documents referencing them
+- Publicly posted program manuals, handbooks, forms, scoring criteria
+
+Store downloads under a dedicated directory and keep a machine-readable index linking:
+- entity → url → local file → source page(s) where discovered
+
+## 7) Validation: Avoid False Positives
+
+Before labeling an entity as operationally relevant:
+- Require **at least one** of:
+  - explicit “vendor/contractor/subrecipient/operated by” language
+  - presence in a contract/procurement artifact
+  - repeated mentions across multiple sources
+
+## 8) Outputs / Deliverables
+
+1. Candidate list with ranking and evidence (JSON + CSV)
+2. Download queue per candidate domain (JSON)
+3. Updated corpus of downloaded candidate pages/docs
+4. Summary report: top candidates, why they matter, and what documents were collected
+
+## 9) Ethics / Accuracy Notes
+
+- Treat outputs as **leads**, not conclusions.
+- Use neutral language (“third-party service provider”, “partner organization”).
+- Confirm facts by quoting source language and retaining source files.

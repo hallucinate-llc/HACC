@@ -1,0 +1,576 @@
+{
+  "parsed_documents": [
+    {
+      "pdf_path": "research_results/documents/raw/bbfc77a24628ff8e29dd977ba4c66095.pdf",
+      "parsed_text_path": "research_results/documents/parsed/bbfc77a24628ff8e29dd977ba4c66095.txt",
+      "parse_date": "2025-12-31T00:09:02.765958",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/bbfc77a24628ff8e29dd977ba4c66095.pdf",
+      "text_length": 69963,
+      "checksum": "97466b4ff5b998bea81374d60bc2764ce0f937d0363204c60318deddd9fef8fe"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/2cb743c45485324adc632bb0642bc614.pdf",
+      "parsed_text_path": "research_results/documents/parsed/2cb743c45485324adc632bb0642bc614.txt",
+      "parse_date": "2025-12-31T00:09:02.926704",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/2cb743c45485324adc632bb0642bc614.pdf",
+      "text_length": 141010,
+      "checksum": "2b1ab700d4dd995e610f9b36c1a690dd89899cd4146233b3d995f2dccafd0b63"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/ffb8613e7bb63a09a1349a4f4cd7e90b.pdf",
+      "parsed_text_path": "research_results/documents/parsed/ffb8613e7bb63a09a1349a4f4cd7e90b.txt",
+      "parse_date": "2025-12-31T00:09:02.949723",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/ffb8613e7bb63a09a1349a4f4cd7e90b.pdf",
+      "text_length": 22565,
+      "checksum": "2d3070c7d801e215c4e6d50132cbfa73f1e40d86696503108e644281bd9fc546"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/0605239e9e394ac73f36ee2d115a566f.pdf",
+      "parsed_text_path": "research_results/documents/parsed/0605239e9e394ac73f36ee2d115a566f.txt",
+      "parse_date": "2025-12-31T00:09:02.965691",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/0605239e9e394ac73f36ee2d115a566f.pdf",
+      "text_length": 11831,
+      "checksum": "8251eb94766c30fbd5fe9b3a55a98a922c22d699523a9884208e3a36d0005c2e"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/6e6c69b294212c64d1c617f261e70841.pdf",
+      "parsed_text_path": "research_results/documents/parsed/6e6c69b294212c64d1c617f261e70841.txt",
+      "parse_date": "2025-12-31T00:09:03.027293",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/6e6c69b294212c64d1c617f261e70841.pdf",
+      "text_length": 36369,
+      "checksum": "92af8286f58bf54636ba494bb5b70c7c183e164b38e31162d3b463fb521e8122"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/9992a1019c1a850d63d4e6c5f0ef450b.pdf",
+      "parsed_text_path": "research_results/documents/parsed/9992a1019c1a850d63d4e6c5f0ef450b.txt",
+      "parse_date": "2025-12-31T00:09:03.037356",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/9992a1019c1a850d63d4e6c5f0ef450b.pdf",
+      "text_length": 8230,
+      "checksum": "3cf283ef7067abf03f63d6cba492fb6dafb41b1162643bf370d064a6ecffeb90"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/544d76b9a259616a1c691b4f98098735.pdf",
+      "parsed_text_path": "research_results/documents/parsed/544d76b9a259616a1c691b4f98098735.txt",
+      "parse_date": "2025-12-31T00:09:03.113935",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/544d76b9a259616a1c691b4f98098735.pdf",
+      "text_length": 49914,
+      "checksum": "5c5e9bb64d2f1e2b3724de97d691eb04a6ce959bfa1ad216bed6847cd44eff36"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/301c581abbfcce15c8336a36b2946da3.pdf",
+      "parsed_text_path": "research_results/documents/parsed/301c581abbfcce15c8336a36b2946da3.txt",
+      "parse_date": "2025-12-31T00:09:03.122293",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/301c581abbfcce15c8336a36b2946da3.pdf",
+      "text_length": 6892,
+      "checksum": "ad45910b47286ca2ffe025ffcbc097d56b11008dfe5a5603667becb2a482026e"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/60ff12d7e79e6a9763b86f62b24ac6f4.pdf",
+      "parsed_text_path": "research_results/documents/parsed/60ff12d7e79e6a9763b86f62b24ac6f4.txt",
+      "parse_date": "2025-12-31T00:09:03.162705",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/60ff12d7e79e6a9763b86f62b24ac6f4.pdf",
+      "text_length": 82412,
+      "checksum": "866cbd98850b05e981647683e5f7524e50069fe8f7fec0ad95e757ef20ff6a4f"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/1d20c2a61ee7a30f077fe8e8eeba2667.pdf",
+      "parsed_text_path": "research_results/documents/parsed/1d20c2a61ee7a30f077fe8e8eeba2667.txt",
+      "parse_date": "2025-12-31T00:09:03.180182",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/1d20c2a61ee7a30f077fe8e8eeba2667.pdf",
+      "text_length": 18877,
+      "checksum": "535781fd4fa2ce3f00526232ac423b76ccb8be90da2487e00a3b177fe34e63d5"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.pdf",
+      "parsed_text_path": "research_results/documents/parsed/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.txt",
+      "parse_date": "2025-12-31T00:09:03.205839",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.pdf",
+      "text_length": 31368,
+      "checksum": "10272c81ac1f78e6941a99757b911e240022a32496f8b0b8176b65a7819f9f5e"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/b3b027941a48b0372a0fe52293173996.pdf",
+      "parsed_text_path": "research_results/documents/parsed/b3b027941a48b0372a0fe52293173996.txt",
+      "parse_date": "2025-12-31T00:09:03.262510",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/b3b027941a48b0372a0fe52293173996.pdf",
+      "text_length": 186852,
+      "checksum": "752645670521d59225fe9de7811d99104386733422078b2b7a62f7326eb75644"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/645b1f978c1291384280119d20b07e77.pdf",
+      "parsed_text_path": "research_results/documents/parsed/645b1f978c1291384280119d20b07e77.txt",
+      "parse_date": "2025-12-31T00:09:03.298711",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/645b1f978c1291384280119d20b07e77.pdf",
+      "text_length": 67969,
+      "checksum": "0cc8a10483ad5ba24ad11e5efa115e9281618616d668f8be97ab482edbab2c5e"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/57a271a61cfdda6b8b76a264c5c1a897.pdf",
+      "parsed_text_path": "research_results/documents/parsed/57a271a61cfdda6b8b76a264c5c1a897.txt",
+      "parse_date": "2025-12-31T00:09:03.564326",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/57a271a61cfdda6b8b76a264c5c1a897.pdf",
+      "text_length": 114632,
+      "checksum": "a78d44d591134ae1a193af7dca783eb4fe9698e4f23af0bef3a38c1e7b2f4a86"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/4260e59b296ab49cb9ae241fbba37c68.pdf",
+      "parsed_text_path": "research_results/documents/parsed/4260e59b296ab49cb9ae241fbba37c68.txt",
+      "parse_date": "2025-12-31T00:09:03.596934",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/4260e59b296ab49cb9ae241fbba37c68.pdf",
+      "text_length": 38034,
+      "checksum": "01e509fe53473d7d01c926d7b1a4bbeeae5f00497217159225fcb8b9f134de74"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/e074d302eac8c1251ce84c7611f87a01.pdf",
+      "parsed_text_path": "research_results/documents/parsed/e074d302eac8c1251ce84c7611f87a01.txt",
+      "parse_date": "2025-12-31T00:09:03.634388",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/e074d302eac8c1251ce84c7611f87a01.pdf",
+      "text_length": 108807,
+      "checksum": "613c1a161cd5c57883e76dc59c80a4bb3b3bc0160b602d5ecb12206f7736b6f6"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/bbfc77a24628ff8e29dd977ba4c66095.pdf",
+      "parsed_text_path": "research_results/documents/parsed/bbfc77a24628ff8e29dd977ba4c66095.txt",
+      "parse_date": "2025-12-31T00:09:12.469448",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/bbfc77a24628ff8e29dd977ba4c66095.pdf",
+      "text_length": 69963,
+      "checksum": "97466b4ff5b998bea81374d60bc2764ce0f937d0363204c60318deddd9fef8fe"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/2cb743c45485324adc632bb0642bc614.pdf",
+      "parsed_text_path": "research_results/documents/parsed/2cb743c45485324adc632bb0642bc614.txt",
+      "parse_date": "2025-12-31T00:09:12.631694",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/2cb743c45485324adc632bb0642bc614.pdf",
+      "text_length": 141010,
+      "checksum": "2b1ab700d4dd995e610f9b36c1a690dd89899cd4146233b3d995f2dccafd0b63"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/ffb8613e7bb63a09a1349a4f4cd7e90b.pdf",
+      "parsed_text_path": "research_results/documents/parsed/ffb8613e7bb63a09a1349a4f4cd7e90b.txt",
+      "parse_date": "2025-12-31T00:09:12.655824",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/ffb8613e7bb63a09a1349a4f4cd7e90b.pdf",
+      "text_length": 22565,
+      "checksum": "2d3070c7d801e215c4e6d50132cbfa73f1e40d86696503108e644281bd9fc546"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/0605239e9e394ac73f36ee2d115a566f.pdf",
+      "parsed_text_path": "research_results/documents/parsed/0605239e9e394ac73f36ee2d115a566f.txt",
+      "parse_date": "2025-12-31T00:09:12.666819",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/0605239e9e394ac73f36ee2d115a566f.pdf",
+      "text_length": 11831,
+      "checksum": "8251eb94766c30fbd5fe9b3a55a98a922c22d699523a9884208e3a36d0005c2e"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/6e6c69b294212c64d1c617f261e70841.pdf",
+      "parsed_text_path": "research_results/documents/parsed/6e6c69b294212c64d1c617f261e70841.txt",
+      "parse_date": "2025-12-31T00:09:12.728682",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/6e6c69b294212c64d1c617f261e70841.pdf",
+      "text_length": 36369,
+      "checksum": "92af8286f58bf54636ba494bb5b70c7c183e164b38e31162d3b463fb521e8122"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/9992a1019c1a850d63d4e6c5f0ef450b.pdf",
+      "parsed_text_path": "research_results/documents/parsed/9992a1019c1a850d63d4e6c5f0ef450b.txt",
+      "parse_date": "2025-12-31T00:09:12.746757",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/9992a1019c1a850d63d4e6c5f0ef450b.pdf",
+      "text_length": 8230,
+      "checksum": "3cf283ef7067abf03f63d6cba492fb6dafb41b1162643bf370d064a6ecffeb90"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/544d76b9a259616a1c691b4f98098735.pdf",
+      "parsed_text_path": "research_results/documents/parsed/544d76b9a259616a1c691b4f98098735.txt",
+      "parse_date": "2025-12-31T00:09:12.824391",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/544d76b9a259616a1c691b4f98098735.pdf",
+      "text_length": 49914,
+      "checksum": "5c5e9bb64d2f1e2b3724de97d691eb04a6ce959bfa1ad216bed6847cd44eff36"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/301c581abbfcce15c8336a36b2946da3.pdf",
+      "parsed_text_path": "research_results/documents/parsed/301c581abbfcce15c8336a36b2946da3.txt",
+      "parse_date": "2025-12-31T00:09:12.838817",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/301c581abbfcce15c8336a36b2946da3.pdf",
+      "text_length": 6892,
+      "checksum": "ad45910b47286ca2ffe025ffcbc097d56b11008dfe5a5603667becb2a482026e"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/60ff12d7e79e6a9763b86f62b24ac6f4.pdf",
+      "parsed_text_path": "research_results/documents/parsed/60ff12d7e79e6a9763b86f62b24ac6f4.txt",
+      "parse_date": "2025-12-31T00:09:12.878381",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/60ff12d7e79e6a9763b86f62b24ac6f4.pdf",
+      "text_length": 82412,
+      "checksum": "866cbd98850b05e981647683e5f7524e50069fe8f7fec0ad95e757ef20ff6a4f"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/1d20c2a61ee7a30f077fe8e8eeba2667.pdf",
+      "parsed_text_path": "research_results/documents/parsed/1d20c2a61ee7a30f077fe8e8eeba2667.txt",
+      "parse_date": "2025-12-31T00:09:12.896013",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/1d20c2a61ee7a30f077fe8e8eeba2667.pdf",
+      "text_length": 18877,
+      "checksum": "535781fd4fa2ce3f00526232ac423b76ccb8be90da2487e00a3b177fe34e63d5"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.pdf",
+      "parsed_text_path": "research_results/documents/parsed/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.txt",
+      "parse_date": "2025-12-31T00:09:12.919875",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.pdf",
+      "text_length": 31368,
+      "checksum": "10272c81ac1f78e6941a99757b911e240022a32496f8b0b8176b65a7819f9f5e"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/b3b027941a48b0372a0fe52293173996.pdf",
+      "parsed_text_path": "research_results/documents/parsed/b3b027941a48b0372a0fe52293173996.txt",
+      "parse_date": "2025-12-31T00:09:12.976582",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/b3b027941a48b0372a0fe52293173996.pdf",
+      "text_length": 186852,
+      "checksum": "752645670521d59225fe9de7811d99104386733422078b2b7a62f7326eb75644"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/645b1f978c1291384280119d20b07e77.pdf",
+      "parsed_text_path": "research_results/documents/parsed/645b1f978c1291384280119d20b07e77.txt",
+      "parse_date": "2025-12-31T00:09:13.025452",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/645b1f978c1291384280119d20b07e77.pdf",
+      "text_length": 67969,
+      "checksum": "0cc8a10483ad5ba24ad11e5efa115e9281618616d668f8be97ab482edbab2c5e"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/57a271a61cfdda6b8b76a264c5c1a897.pdf",
+      "parsed_text_path": "research_results/documents/parsed/57a271a61cfdda6b8b76a264c5c1a897.txt",
+      "parse_date": "2025-12-31T00:09:13.304542",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/57a271a61cfdda6b8b76a264c5c1a897.pdf",
+      "text_length": 114632,
+      "checksum": "a78d44d591134ae1a193af7dca783eb4fe9698e4f23af0bef3a38c1e7b2f4a86"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/4260e59b296ab49cb9ae241fbba37c68.pdf",
+      "parsed_text_path": "research_results/documents/parsed/4260e59b296ab49cb9ae241fbba37c68.txt",
+      "parse_date": "2025-12-31T00:09:13.329248",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/4260e59b296ab49cb9ae241fbba37c68.pdf",
+      "text_length": 38034,
+      "checksum": "01e509fe53473d7d01c926d7b1a4bbeeae5f00497217159225fcb8b9f134de74"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/e074d302eac8c1251ce84c7611f87a01.pdf",
+      "parsed_text_path": "research_results/documents/parsed/e074d302eac8c1251ce84c7611f87a01.txt",
+      "parse_date": "2025-12-31T00:09:13.384217",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/e074d302eac8c1251ce84c7611f87a01.pdf",
+      "text_length": 108807,
+      "checksum": "613c1a161cd5c57883e76dc59c80a4bb3b3bc0160b602d5ecb12206f7736b6f6"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/ffb8613e7bb63a09a1349a4f4cd7e90b.pdf",
+      "parsed_text_path": "research_results/documents/parsed/ffb8613e7bb63a09a1349a4f4cd7e90b.txt",
+      "parse_date": "2025-12-31T00:12:51.806337",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/ffb8613e7bb63a09a1349a4f4cd7e90b.pdf",
+      "text_length": 22565,
+      "checksum": "2d3070c7d801e215c4e6d50132cbfa73f1e40d86696503108e644281bd9fc546"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/2cb743c45485324adc632bb0642bc614.pdf",
+      "parsed_text_path": "research_results/documents/parsed/2cb743c45485324adc632bb0642bc614.txt",
+      "parse_date": "2025-12-31T00:12:51.966650",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/2cb743c45485324adc632bb0642bc614.pdf",
+      "text_length": 141010,
+      "checksum": "2b1ab700d4dd995e610f9b36c1a690dd89899cd4146233b3d995f2dccafd0b63"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/f05cefc6c4eb4225c881409d8daadc29.pdf",
+      "parsed_text_path": "research_results/documents/parsed/f05cefc6c4eb4225c881409d8daadc29.txt",
+      "parse_date": "2025-12-31T00:12:52.008334",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/f05cefc6c4eb4225c881409d8daadc29.pdf",
+      "text_length": 85456,
+      "checksum": "b6d9444b2c19c0ca30c25a3a60346c079585dd1af516873d4bf81c287bab68e2"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/bbfc77a24628ff8e29dd977ba4c66095.pdf",
+      "parsed_text_path": "research_results/documents/parsed/bbfc77a24628ff8e29dd977ba4c66095.txt",
+      "parse_date": "2025-12-31T00:12:52.031792",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/bbfc77a24628ff8e29dd977ba4c66095.pdf",
+      "text_length": 69963,
+      "checksum": "97466b4ff5b998bea81374d60bc2764ce0f937d0363204c60318deddd9fef8fe"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/592594abd4eb6a8bad89ce62855bb42e.pdf",
+      "parsed_text_path": "research_results/documents/parsed/592594abd4eb6a8bad89ce62855bb42e.txt",
+      "parse_date": "2025-12-31T00:12:52.052277",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/592594abd4eb6a8bad89ce62855bb42e.pdf",
+      "text_length": 21859,
+      "checksum": "f7e5a71df3a106d51200c5ccad107c46977bd332f9f8747285c4630943d33d8e"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/39aacc6287ece4d98183827562496c5e.pdf",
+      "parsed_text_path": "research_results/documents/parsed/39aacc6287ece4d98183827562496c5e.txt",
+      "parse_date": "2025-12-31T00:12:52.080024",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/39aacc6287ece4d98183827562496c5e.pdf",
+      "text_length": 13084,
+      "checksum": "7c97fb698b233b82cbc5e4c34fc0a6a13401b3e1758d31540cfdfa0af1c31814"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/07a1076fa131f26b2cdcc68681afddbb.pdf",
+      "parsed_text_path": "research_results/documents/parsed/07a1076fa131f26b2cdcc68681afddbb.txt",
+      "parse_date": "2025-12-31T00:12:52.178849",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/07a1076fa131f26b2cdcc68681afddbb.pdf",
+      "text_length": 49914,
+      "checksum": "5c5e9bb64d2f1e2b3724de97d691eb04a6ce959bfa1ad216bed6847cd44eff36"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/a2f08c4c1146471bbf56e2808875d0b6.pdf",
+      "parsed_text_path": "research_results/documents/parsed/a2f08c4c1146471bbf56e2808875d0b6.txt",
+      "parse_date": "2025-12-31T00:12:52.244637",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/a2f08c4c1146471bbf56e2808875d0b6.pdf",
+      "text_length": 147683,
+      "checksum": "291fae959eed1acfecde75edf1f4e6f3e146af5575558f1fafd9f92e2a1fd81f"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/6431de02c3af80fab467e7aebdc1d17c.pdf",
+      "parsed_text_path": "research_results/documents/parsed/6431de02c3af80fab467e7aebdc1d17c.txt",
+      "parse_date": "2025-12-31T00:12:52.490205",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/6431de02c3af80fab467e7aebdc1d17c.pdf",
+      "text_length": 76622,
+      "checksum": "0a698137b426a85f75699fc8f9bed1f11dd0293c45a40db66412f250f229a9be"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/0605239e9e394ac73f36ee2d115a566f.pdf",
+      "parsed_text_path": "research_results/documents/parsed/0605239e9e394ac73f36ee2d115a566f.txt",
+      "parse_date": "2025-12-31T00:12:52.500472",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/0605239e9e394ac73f36ee2d115a566f.pdf",
+      "text_length": 11831,
+      "checksum": "8251eb94766c30fbd5fe9b3a55a98a922c22d699523a9884208e3a36d0005c2e"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/6e6c69b294212c64d1c617f261e70841.pdf",
+      "parsed_text_path": "research_results/documents/parsed/6e6c69b294212c64d1c617f261e70841.txt",
+      "parse_date": "2025-12-31T00:12:52.561850",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/6e6c69b294212c64d1c617f261e70841.pdf",
+      "text_length": 36369,
+      "checksum": "92af8286f58bf54636ba494bb5b70c7c183e164b38e31162d3b463fb521e8122"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/74c6bb8d3aa480a95207e0085fc1c4c0.pdf",
+      "parsed_text_path": "research_results/documents/parsed/74c6bb8d3aa480a95207e0085fc1c4c0.txt",
+      "parse_date": "2025-12-31T00:12:52.597466",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/74c6bb8d3aa480a95207e0085fc1c4c0.pdf",
+      "text_length": 59426,
+      "checksum": "87f938b2988fb27113ed2a0b5ebd5ed5b6e3b785210cc9a06a5fe0bc8b3f6b28"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/301c581abbfcce15c8336a36b2946da3.pdf",
+      "parsed_text_path": "research_results/documents/parsed/301c581abbfcce15c8336a36b2946da3.txt",
+      "parse_date": "2025-12-31T00:12:52.606013",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/301c581abbfcce15c8336a36b2946da3.pdf",
+      "text_length": 6892,
+      "checksum": "ad45910b47286ca2ffe025ffcbc097d56b11008dfe5a5603667becb2a482026e"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/4260e59b296ab49cb9ae241fbba37c68.pdf",
+      "parsed_text_path": "research_results/documents/parsed/4260e59b296ab49cb9ae241fbba37c68.txt",
+      "parse_date": "2025-12-31T00:12:52.630421",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/4260e59b296ab49cb9ae241fbba37c68.pdf",
+      "text_length": 38034,
+      "checksum": "01e509fe53473d7d01c926d7b1a4bbeeae5f00497217159225fcb8b9f134de74"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/f17c22e859e2c48b5a346d23fc10a3c0.pdf",
+      "parsed_text_path": "research_results/documents/parsed/f17c22e859e2c48b5a346d23fc10a3c0.txt",
+      "parse_date": "2025-12-31T00:12:52.662370",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/f17c22e859e2c48b5a346d23fc10a3c0.pdf",
+      "text_length": 15914,
+      "checksum": "84be56f348d8e1b8b825328de18f98947acf0fab1bbca080945225df23aa939b"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/c441d095b5efadcac83eadd5ad604240.pdf",
+      "parsed_text_path": "research_results/documents/parsed/c441d095b5efadcac83eadd5ad604240.txt",
+      "parse_date": "2025-12-31T01:06:04.259178",
+      "source": "third_party:www.raceforward.org",
+      "url": "https://www.raceforward.org/sites/default/files/Race%20Reporting%20Guide%20by%20Race%20Forward_V1.1.pdf",
+      "text_length": 53834,
+      "checksum": "d23f050319c10a81f3a05d55a435eb6533919674393b9b307768f4751086d630"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/ffb8b3c67a74866bc9b85c48b68e4bf0.pdf",
+      "parsed_text_path": "research_results/documents/parsed/ffb8b3c67a74866bc9b85c48b68e4bf0.txt",
+      "parse_date": "2025-12-31T01:06:04.270329",
+      "source": "third_party:www.raceforward.org",
+      "url": "https://www.raceforward.org/sites/default/files/RacialJusticeImpactAssessment_v5.pdf",
+      "text_length": 8057,
+      "checksum": "a251a4930ef1476cf6053481cc2df4da6374465127668b6f537ff66089d3aea7"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/c6a05a0f4e6c2b828b90061d477fc6c0.pdf",
+      "parsed_text_path": "research_results/documents/parsed/c6a05a0f4e6c2b828b90061d477fc6c0.txt",
+      "parse_date": "2025-12-31T01:06:04.430718",
+      "source": "third_party:www.hudexchange.info",
+      "url": "https://files.hudexchange.info/resources/documents/HomelessDefinition_RecordkeepingRequirementsandCriteria.pdf",
+      "text_length": 41601,
+      "checksum": "c1c4c6c2f3f615905c18a1501b9fb1a78dad30b1b102174e4fcac0b703dbf065"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/c2c9284f53c491b8423127ffa00215af.pdf",
+      "parsed_text_path": "research_results/documents/parsed/c2c9284f53c491b8423127ffa00215af.txt",
+      "parse_date": "2025-12-31T01:24:45.392144",
+      "source": "third_party:tinyurl.com",
+      "url": "https://www.oregon.gov/das/ORBuys/Documents/Demographic-Data.pdf",
+      "text_length": 4055,
+      "checksum": "6ccb2f08dd96663267a7b6b883253d40ecaae11110f68aff244fa79b63e494f6"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/ad56856495b1aa7508d716ac5b5c388c.pdf",
+      "parsed_text_path": "research_results/documents/parsed/ad56856495b1aa7508d716ac5b5c388c.txt",
+      "parse_date": "2025-12-31T01:51:06.394710",
+      "source": "third_party:ojd.contentdm.oclc.org",
+      "url": "https://ojd.contentdm.oclc.org/digital/api/collection/p17027coll8/id/16376/download",
+      "text_length": 21820,
+      "checksum": "e5f7ca27c30ddd16e802dbc6d5c47136879d1a91034995af53f3d852e7831ca6"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/b7387a8f638b7ddd0b6a497e0d8d3e49.pdf",
+      "parsed_text_path": "research_results/documents/parsed/b7387a8f638b7ddd0b6a497e0d8d3e49.txt",
+      "parse_date": "2025-12-31T02:09:48.107508",
+      "source": "third_party:www.oregonmetro.gov",
+      "url": "https://www.oregonmetro.gov/sites/default/files/2025-10/affordable-housing-bond-oversight-committee-meeting-packet-20250317.pdf",
+      "text_length": 245274,
+      "checksum": "4a36f8146640f2d7653e878e66b8a5e0c865a41f57f713e49c19599505edf19c"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/e0e77cae191a75355e4664ccf427a3f2.pdf",
+      "parsed_text_path": "research_results/documents/parsed/e0e77cae191a75355e4664ccf427a3f2.txt",
+      "parse_date": "2025-12-31T02:48:19.429357",
+      "source": "third_party:acousticalsociety.org",
+      "url": "https://acousticalsociety.org/wp-content/uploads/2025/03/ASA-Briefing.pdf",
+      "text_length": 277442,
+      "checksum": "f67d1f542eb9fb5d8d2fe1819ac9ebae0ab34e150815a172489f2552f99332a2"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/1f3072ad9703ad0bed2e0dcd0a8d2d5c.pdf",
+      "parsed_text_path": "research_results/documents/parsed/1f3072ad9703ad0bed2e0dcd0a8d2d5c.txt",
+      "parse_date": "2025-12-31T02:48:19.475815",
+      "source": "third_party:d1u7huky9c51vj.cloudfront.net",
+      "url": "https://d1u7huky9c51vj.cloudfront.net/wp-content/uploads/2024/06/04213626/Impact-Statements-2022-Revised-reduced.pdf",
+      "text_length": 69299,
+      "checksum": "565a7a16423d0b8c040fa94f9fc80b3a2a331b0583f96f4ce5cb03aa0fc02cc9"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/7994a276120954c3d9f90e5633d232c8.pdf",
+      "parsed_text_path": "research_results/documents/parsed/7994a276120954c3d9f90e5633d232c8.txt",
+      "parse_date": "2025-12-31T02:48:19.528563",
+      "source": "third_party:democrats-science.house.gov",
+      "url": "https://democrats-science.house.gov/imo/media/doc/democratic_staff_report-defending_hidden_figures.pdf",
+      "text_length": 156144,
+      "checksum": "ae05c4efb65abadd163a2bfcdbf7c9450313d02cdcb1851512a51b9840874ef9"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/77aef0247eed912205987be720f44eb3.pdf",
+      "parsed_text_path": "research_results/documents/parsed/77aef0247eed912205987be720f44eb3.txt",
+      "parse_date": "2025-12-31T02:48:19.710067",
+      "source": "third_party:futurumcareers.com",
+      "url": "https://futurumcareers.com/Issue-09.pdf",
+      "text_length": 549120,
+      "checksum": "7abed0b75ee15748b61d37fe2b9834a1b513bb54220ee13068a169c72e310c78"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/a13956024790bc87e0defbaf2e9aaa63.pdf",
+      "parsed_text_path": "research_results/documents/parsed/a13956024790bc87e0defbaf2e9aaa63.txt",
+      "parse_date": "2025-12-31T02:48:19.900258",
+      "source": "third_party:nsf-gov-resources.nsf.gov",
+      "url": "https://nsf-gov-resources.nsf.gov/2021-12/Reimagining%20Advanced%20Research%20for%20Human%20Good%20through%20Industry%20and%20Educational%20Partnerships_2119846_June%202021_Final_508.pdf",
+      "text_length": 408832,
+      "checksum": "c1aab8f567741eff16fe0e6b1601f4c83405ea646bf4d8919525ac68bebfcb9d"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/6cad6cbee43b93f7350950e1b0504222.pdf",
+      "parsed_text_path": "research_results/documents/parsed/6cad6cbee43b93f7350950e1b0504222.txt",
+      "parse_date": "2025-12-31T02:48:20.000108",
+      "source": "third_party:wshfc.org",
+      "url": "https://wshfc.org/managers/Reports/TCReports/2025%20TC%20ReportTypesbyPropertyName.pdf",
+      "text_length": 254507,
+      "checksum": "7d27e51541c4ca53f7895f6c43cd490ec1043ee33b1b3d801fe26797db80ca0a"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/97f0f95c56f056ebadd400ac0b6d84b1.pdf",
+      "parsed_text_path": "research_results/documents/parsed/97f0f95c56f056ebadd400ac0b6d84b1.txt",
+      "parse_date": "2025-12-31T02:48:20.013380",
+      "source": "third_party:www.kiscolawfirm.com",
+      "url": "https://www.kiscolawfirm.com/wp-content/uploads/sites/1504051/2020/03/Sorblum-vs-Carrollwood-Condominum-I.pdf",
+      "text_length": 9,
+      "checksum": "72babeb35d543219be557f8a5a73974b98a74a4a417117e9834d70f1384497c8"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/c0a1fde5f3c0e6ae0a289cda132cc407.pdf",
+      "parsed_text_path": "research_results/documents/parsed/c0a1fde5f3c0e6ae0a289cda132cc407.txt",
+      "parse_date": "2025-12-31T02:48:20.027871",
+      "source": "third_party:www.lse.ac.uk",
+      "url": "https://www.lse.ac.uk/tii/assets/documents/The-City-Quantum-Summit-TII-Report.pdf",
+      "text_length": 19174,
+      "checksum": "44b7d31143c6958d4add81c417a721d7fec7462b61618d44e1b5d757ff0dc848"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/003c0bf391f9060e15360bb52c763605.pdf",
+      "parsed_text_path": "research_results/documents/parsed/003c0bf391f9060e15360bb52c763605.txt",
+      "parse_date": "2025-12-31T02:48:20.424781",
+      "source": "third_party:www.oregon.gov",
+      "url": "https://www.oregon.gov/biz/Publications/Broadband/ORDigitalEquityPlan.pdf",
+      "text_length": 1108804,
+      "checksum": "89d169a386674b4a2d6d7b8e8eb2a8522d48f519c4da9879a6135b725fbcc834"
+    },
+    {
+      "pdf_path": "research_results/documents/raw/97f0f95c56f056ebadd400ac0b6d84b1.pdf",
+      "parsed_text_path": "research_results/documents/parsed/97f0f95c56f056ebadd400ac0b6d84b1.txt",
+      "parse_date": "2025-12-31T03:04:18.822698",
+      "source": "third_party:www.kiscolawfirm.com",
+      "url": "https://www.kiscolawfirm.com/wp-content/uploads/sites/1504051/2020/03/Sorblum-vs-Carrollwood-Condominum-I.pdf",
+      "text_length": 30547,
+      "checksum": "cb5648f5c4cef0d528b6949c96c008ca203a510e49f75cd962cc00ecad80c39d",
+      "extraction_method": "ocrmypdf+pdftotext",
+      "ocr_available": true,
+      "ocr_attempted": true,
+      "ocr_used": true,
+      "needs_ocr": false
+    }
+  ]
+}

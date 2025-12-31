@@ -1,0 +1,233 @@
+[
+  {
+    "domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+    "url": "https://portal-applicant-tracking.us-cent.paycomonline.net/career-portal/sprawl.json",
+    "final_url": "https://portal-applicant-tracking.us-cent.paycomonline.net/career-portal/sprawl.json",
+    "status": "ok",
+    "http_status": 200,
+    "content_type": "application/json",
+    "bytes": 259,
+    "saved_path": "research_results/third_party_downloads/portal-applicant-tracking.us-cent.paycomonline.net/portal-applicant-tracking.us-cent.paycomonline.net_career-portal_sprawl_ef519309e7.json",
+    "error": ""
+  },
+  {
+    "domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+    "url": "https://portal-applicant-tracking.us-cent.paycomonline.net/career-portal/main/index-sprawl-6ETZXKZJ.js",
+    "final_url": "https://portal-applicant-tracking.us-cent.paycomonline.net/career-portal/main/index-sprawl-6ETZXKZJ.js",
+    "status": "ok",
+    "http_status": 200,
+    "content_type": "text/javascript; charset=utf-8",
+    "bytes": 6063668,
+    "saved_path": "research_results/third_party_downloads/portal-applicant-tracking.us-cent.paycomonline.net/portal-applicant-tracking.us-cent.paycomonline.net_career-portal_main_index-sprawl-6ETZXKZJ_66dbb18a96.js",
+    "error": ""
+  },
+  {
+    "domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+    "url": "https://portal-applicant-tracking.us-cent.paycomonline.net/api/ats/candidate-exists",
+    "final_url": "https://portal-applicant-tracking.us-cent.paycomonline.net/api/ats/candidate-exists",
+    "status": "error",
+    "http_status": 401,
+    "content_type": "",
+    "bytes": 0,
+    "saved_path": "",
+    "error": "http_401"
+  },
+  {
+    "domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+    "url": "https://portal-applicant-tracking.us-cent.paycomonline.net/api/password-setup",
+    "final_url": "https://portal-applicant-tracking.us-cent.paycomonline.net/api/password-setup",
+    "status": "error",
+    "http_status": 404,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 0,
+    "saved_path": "",
+    "error": "http_404"
+  },
+  {
+    "domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+    "url": "https://portal-applicant-tracking.us-cent.paycomonline.net/api/portal-session-jwt",
+    "final_url": "https://portal-applicant-tracking.us-cent.paycomonline.net/api/portal-session-jwt",
+    "status": "error",
+    "http_status": 404,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 0,
+    "saved_path": "",
+    "error": "http_404"
+  },
+  {
+    "domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+    "url": "https://portal-applicant-tracking.us-cent.paycomonline.net/api/protected-session-jwt",
+    "final_url": "https://portal-applicant-tracking.us-cent.paycomonline.net/api/protected-session-jwt",
+    "status": "error",
+    "http_status": 404,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 0,
+    "saved_path": "",
+    "error": "http_404"
+  },
+  {
+    "domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+    "url": "https://portal-applicant-tracking.us-cent.paycomonline.net/api/request-password-reset",
+    "final_url": "https://portal-applicant-tracking.us-cent.paycomonline.net/api/request-password-reset",
+    "status": "error",
+    "http_status": 404,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 0,
+    "saved_path": "",
+    "error": "http_404"
+  },
+  {
+    "domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+    "url": "https://portal-applicant-tracking.us-cent.paycomonline.net/api/reset-password",
+    "final_url": "https://portal-applicant-tracking.us-cent.paycomonline.net/api/reset-password",
+    "status": "error",
+    "http_status": 404,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 0,
+    "saved_path": "",
+    "error": "http_404"
+  },
+  {
+    "domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+    "url": "https://portal-applicant-tracking.us-cent.paycomonline.net/api/set-password",
+    "final_url": "https://portal-applicant-tracking.us-cent.paycomonline.net/api/set-password",
+    "status": "error",
+    "http_status": 404,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 0,
+    "saved_path": "",
+    "error": "http_404"
+  },
+  {
+    "domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+    "url": "https://portal-applicant-tracking.us-cent.paycomonline.net/api/smarty",
+    "final_url": "https://portal-applicant-tracking.us-cent.paycomonline.net/api/smarty",
+    "status": "error",
+    "http_status": 404,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 0,
+    "saved_path": "",
+    "error": "http_404"
+  },
+  {
+    "domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+    "url": "https://portal-applicant-tracking.us-cent.paycomonline.net/v4/ats/",
+    "final_url": "https://portal-applicant-tracking.us-cent.paycomonline.net/v4/ats/",
+    "status": "error",
+    "http_status": 404,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 0,
+    "saved_path": "",
+    "error": "http_404"
+  },
+  {
+    "domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+    "url": "https://portal-applicant-tracking.us-cent.paycomonline.net/v4/ats/web.php",
+    "final_url": "https://portal-applicant-tracking.us-cent.paycomonline.net/v4/ats/web.php",
+    "status": "error",
+    "http_status": 404,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 0,
+    "saved_path": "",
+    "error": "http_404"
+  },
+  {
+    "domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+    "url": "https://portal-applicant-tracking.us-cent.paycomonline.net/v4/ats/web.php/portal",
+    "final_url": "https://portal-applicant-tracking.us-cent.paycomonline.net/v4/ats/web.php/portal",
+    "status": "error",
+    "http_status": 404,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 0,
+    "saved_path": "",
+    "error": "http_404"
+  },
+  {
+    "domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+    "url": "https://portal-applicant-tracking.us-cent.paycomonline.net/v4/ats/web.php/smarty",
+    "final_url": "https://portal-applicant-tracking.us-cent.paycomonline.net/v4/ats/web.php/smarty",
+    "status": "error",
+    "http_status": 404,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 0,
+    "saved_path": "",
+    "error": "http_404"
+  },
+  {
+    "domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+    "url": "https://portal-applicant-tracking.us-cent.paycomonline.net/v4/cl/web.php/ats/api/validator-data",
+    "final_url": "https://portal-applicant-tracking.us-cent.paycomonline.net/v4/cl/web.php/ats/api/validator-data",
+    "status": "error",
+    "http_status": 404,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 0,
+    "saved_path": "",
+    "error": "http_404"
+  },
+  {
+    "domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+    "url": "https://portal-applicant-tracking.us-cent.paycomonline.net/v4/cl/web.php/employee-forms-api/smarty",
+    "final_url": "https://portal-applicant-tracking.us-cent.paycomonline.net/v4/cl/web.php/employee-forms-api/smarty",
+    "status": "error",
+    "http_status": 404,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 0,
+    "saved_path": "",
+    "error": "http_404"
+  },
+  {
+    "domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+    "url": "https://portal-applicant-tracking.us-cent.paycomonline.net/v4/ee/web.php/employee/smarty",
+    "final_url": "https://portal-applicant-tracking.us-cent.paycomonline.net/v4/ee/web.php/employee/smarty",
+    "status": "error",
+    "http_status": 404,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 0,
+    "saved_path": "",
+    "error": "http_404"
+  },
+  {
+    "domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+    "url": "https://portal-applicant-tracking.us-cent.paycomonline.net/v4/assets/generated/paycom-ckeditor/ckeditor.js",
+    "final_url": "https://portal-applicant-tracking.us-cent.paycomonline.net/v4/assets/generated/paycom-ckeditor/ckeditor.js",
+    "status": "error",
+    "http_status": 404,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 0,
+    "saved_path": "",
+    "error": "http_404"
+  },
+  {
+    "domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+    "url": "https://portal-applicant-tracking.us-cent.paycomonline.net/v4/assets/react-pdf/pdf.worker.lts.3.6.172.js",
+    "final_url": "https://portal-applicant-tracking.us-cent.paycomonline.net/v4/assets/react-pdf/pdf.worker.lts.3.6.172.js",
+    "status": "error",
+    "http_status": 404,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 0,
+    "saved_path": "",
+    "error": "http_404"
+  },
+  {
+    "domain": "paycom.com",
+    "url": "https://paycom.com/privacy/",
+    "final_url": "https://www.paycom.com/privacy/",
+    "status": "ok",
+    "http_status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 113196,
+    "saved_path": "research_results/third_party_downloads/paycom.com/www.paycom.com_privacy.html",
+    "error": ""
+  },
+  {
+    "domain": "paycom.com",
+    "url": "https://paycom.com/terms-of-use/",
+    "final_url": "https://www.paycom.com/terms-of-use/",
+    "status": "ok",
+    "http_status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "bytes": 125250,
+    "saved_path": "research_results/third_party_downloads/paycom.com/www.paycom.com_terms-of-use.html",
+    "error": ""
+  }
+]

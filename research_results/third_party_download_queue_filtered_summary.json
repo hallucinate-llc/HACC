@@ -1,0 +1,67 @@
+{
+  "input": "research_results/third_party_download_queue.json",
+  "input_domain_count": 843,
+  "output": "research_results/third_party_download_queue_filtered.json",
+  "output_domain_count": 814,
+  "dropped_domain_count": 29,
+  "dropped_by_reason": {
+    "noise:tiktok.com": 10,
+    "noise:cdn.": 7,
+    "noise:assets.": 6,
+    "noise:xmlns.com": 1,
+    "noise:threads.net": 1,
+    "noise:twimg.com": 1,
+    "gov_filtered": 1,
+    "noise:doubleclick.net": 1,
+    "noise:static.": 1
+  },
+  "dropped_examples": {
+    "noise:tiktok.com": [
+      "www.tiktok.com",
+      "im-api.tiktok.com",
+      "webcast.us.tiktok.com",
+      "newsroom.tiktok.com",
+      "lifeattiktok.com",
+      "shop.tiktok.com",
+      "developers.tiktok.com",
+      "effecthouse.tiktok.com",
+      "ads.tiktok.com",
+      "support.tiktok.com"
+    ],
+    "noise:xmlns.com": [
+      "xmlns.com"
+    ],
+    "noise:threads.net": [
+      "www.threads.net"
+    ],
+    "noise:twimg.com": [
+      "abs.twimg.com"
+    ],
+    "noise:assets.": [
+      "github.githubassets.com",
+      "cmsv2-assets.apptegy.net",
+      "opengraph.githubassets.com",
+      "assets.adobedtm.com",
+      "assets.adida.net",
+      "assets.raceforward.org"
+    ],
+    "gov_filtered": [
+      "www.hud.gov"
+    ],
+    "noise:cdn.": [
+      "cdn.restorativejustice.org",
+      "cdn.mouseflow.com",
+      "snap.licdn.com",
+      "cdn.jsdelivr.net",
+      "cdn.heapanalytics.com",
+      "cdn.confiant-integrations.net",
+      "cdn.knightlab.com"
+    ],
+    "noise:doubleclick.net": [
+      "ad.doubleclick.net"
+    ],
+    "noise:static.": [
+      "www.gstatic.cn"
+    ]
+  }
+}

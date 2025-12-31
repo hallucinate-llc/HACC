@@ -1,0 +1,211 @@
+# Quick Start Guide — DEI Compliance Audit
+
+**Last Updated:** December 31, 2025
+
+## What Was Created
+
+You now have a complete audit toolkit comprising:
+
+1. **`agent.md`** — Structured audit guide with strategy, checklist, and search/collection approach
+2. **`EVIDENCE_REQUEST_TEMPLATE.md`** — Email-ready template to request documents from organizations
+3. **Collection & Analysis Scripts** (`research_data/scripts/`):
+   - `download_manager.py` — Download and deduplicate PDFs
+   - `parse_pdfs.py` — Extract text from PDFs (with OCR fallback)
+   - `index_and_tag.py` — Index documents and tag with keywords/risk scores
+   - `report_generator.py` — Generate executive summaries and detailed reports
+   - `collect_brave.py` — Search via Brave Search API (requires API key)
+   - `run_collection.py` — Main orchestration script (full workflow)
+   - `README.md` — Comprehensive toolkit documentation
+
+## How to Get Started
+
+### Option A: Manual Evidence Collection (No API Keys Required)
+
+**Best for:** Immediate audit with documents you already have or can request.
+
+```bash
+# 1. Use the evidence request template to ask organizations for policies
+cat EVIDENCE_REQUEST_TEMPLATE.md
+
+# 2. Collect PDFs into research_results/documents/raw/
+mkdir -p research_results/documents/raw/
+# (Copy PDFs here)
+
+# 3. Run the analysis pipeline
+cd /path/to/project
+python3 research_data/scripts/run_collection.py --pdf-dir research_results/documents/raw/
+
+# 4. Read the findings
+cat research_results/FINDINGS_*.txt
+```
+
+### Option B: Automated Web Collection + API (Requires Brave API Key)
+
+**Best for:** Discovering all Oregon.gov references to DEI/proxies.
+
+```bash
+# 1. Get a Brave API key (free tier at https://api.search.brave.com)
+
+# 2. Set the API key
+export BRAVE_API_KEY="your_api_key_here"
+
+# 3. Run the full workflow
+python3 research_data/scripts/run_collection.py
+
+# 4. Review results
+cat research_results/FINDINGS_*.txt
+cat research_results/summary_*.csv
+```
+
+### Option C: Hybrid (Combine Manual + API)
+
+```bash
+# 1. Copy any existing PDFs to research_results/documents/raw/
+
+# 2. Run with API to discover more
+export BRAVE_API_KEY="your_key"
+python3 research_data/scripts/run_collection.py --pdf-dir research_results/documents/raw/
+```
+
+## Understanding the Output
+
+After running the workflow, check these files:
+
+| File | Purpose | Who Reads It |
+|------|---------|-------------|
+| `FINDINGS_YYYYMMDD.txt` | One-page summary (high-risk docs) | Executives, decision-makers |
+| `DETAILED_REPORT_YYYYMMDD.txt` | Full technical analysis | Compliance officers, lawyers |
+| `summary_YYYYMMDD.csv` | Spreadsheet (all documents, scores) | Analysts, spreadsheet review |
+| `document_index_YYYYMMDD.json` | Machine-readable index | Scripts, automation |
+
+## Key Audit Concepts
+
+### Risk Scoring (0–3)
+
+- **Score 0**: No DEI/proxy language → Compliant
+- **Score 1**: DEI/proxy present → Possible issue, review context
+- **Score 2**: DEI/proxy + mandatory language → Probable issue, review detail
+- **Score 3**: Explicit DEI policy + binding language → Clear violation, immediate action
+
+### Red Flag Keywords to Watch
+
+- Explicit: `diversity statement`, `BIPOC-only`, `underrepresented`, `minority-only`
+- Proxies: `cultural competence`, `lived experience`, `safe space`, `equity plan`
+- Binding: `policy`, `shall`, `must`, `required`, `mandatory`, `applicable to`
+
+### Applicability Areas
+
+Which HA decisions are affected by Oregon policies?
+- **Hiring** — Employment decisions
+- **Procurement** — Vendor/contractor selection
+- **Training** — Mandatory trainings
+- **Housing** — Program eligibility, lease, operations
+
+## What to Do With Findings
+
+1. **High-Risk Documents (Score ≥ 2)**
+   - Read in full
+   - Check if they apply to housing authorities
+   - Assess how they conflict with Bondi memo guidance
+   - Flag for legal review
+
+2. **Collect HA Evidence**
+   - Use `EVIDENCE_REQUEST_TEMPLATE.md` to ask HA for current policies
+   - Compare against Oregon requirements
+   - Identify gaps and conflicts
+
+3. **Develop Remediation Plan**
+   - Use `agent.md` checklist
+   - Prioritize by risk score
+   - Set implementation timeline
+   - Assign ownership
+
+## Next Steps (In Order)
+
+### This Week
+- [ ] Read `agent.md` (audit strategy overview)
+- [ ] Collect initial PDF evidence (manual or API)
+- [ ] Run `run_collection.py` to generate findings
+- [ ] Review `FINDINGS_*.txt` and `summary_*.csv`
+
+### Next Week
+- [ ] Send `EVIDENCE_REQUEST_TEMPLATE.md` to HA, Clackamas County, and state agencies
+- [ ] Perform detailed review of high-risk documents (Score ≥ 2)
+- [ ] Interview stakeholders (HR, procurement, program managers)
+- [ ] Compile list of HA policies that need review
+
+### Following Weeks
+- [ ] Cross-reference Oregon policies with HA policies
+- [ ] Identify conflicts with Bondi memo guidance
+- [ ] Draft remediation plan
+- [ ] Present findings to leadership
+
+## Examples: Quick Queries
+
+Want to search for something specific? Use the scripts individually:
+
+```python
+# Search for a single term in parsed documents
+from pathlib import Path
+import json
+
+search_term = "underrepresented"
+parsed_dir = Path("research_results/documents/parsed")
+
+for txt_file in parsed_dir.glob("*.txt"):
+    with open(txt_file, 'r') as f:
+        text = f.read()
+        if search_term.lower() in text.lower():
+            print(f"Found in: {txt_file.name}")
+```
+
+## Common Questions
+
+**Q: Do I need API keys?**
+A: No. You can use manual file upload (Option A). API keys (Brave, Google) are optional for automated discovery.
+
+**Q: How many documents will I find?**
+A: Depends on Oregon's publications. Likely 50–200 relevant policy documents across state agencies.
+
+**Q: What if PDFs are scanned (images)?**
+A: The `parse_pdfs.py` script will auto-detect and run OCR (requires `ocrmypdf` installed).
+
+**Q: How do I update the toolkit?**
+A: All scripts are modular. Edit `index_and_tag.py` to add new keywords, or modify `report_generator.py` for different report formats.
+
+**Q: Can I automate periodic re-scans?**
+A: Yes. Wrap `run_collection.py` in a cron job or scheduled task. Results are timestamped and deduplicated.
+
+## Troubleshooting
+
+**Script import errors?**
+```bash
+cd /path/to/project
+export PYTHONPATH="${PYTHONPATH}:$(pwd)/research_data/scripts"
+```
+
+**`pdftotext` not found?**
+```bash
+sudo apt-get install poppler-utils
+```
+
+**Out of disk space?**
+- Parsed text files are much smaller than PDFs. Delete raw PDFs after parsing if needed.
+- `git` the important outputs (index JSON, CSV, findings) and archive raw PDFs.
+
+## References
+
+- **Agent Audit Guide**: `agent.md`
+- **Evidence Request**: `EVIDENCE_REQUEST_TEMPLATE.md`
+- **Toolkit README**: `research_data/scripts/README.md`
+- **Source Memo**: Attorney General Bondi, "Guidance for Recipients of Federal Funding Regarding Unlawful Discrimination" (July 29, 2025)
+
+---
+
+**Ready to start?** Run:
+
+```bash
+python3 research_data/scripts/run_collection.py --help
+```
+
+Then follow Option A, B, or C above.

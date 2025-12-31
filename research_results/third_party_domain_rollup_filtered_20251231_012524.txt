@@ -1,0 +1,101 @@
+Filtered third-party domain rollup (from research_results/document_index_20251231_012445.json)
+Ignores berkeley.edu and obvious tech/noise domains (schema/ogp/w.org/etc).
+Domains: 25; Docs: 121
+
+01. max_risk=3 docs=11 domain=www.racialequityalliance.org
+    top_urls: https://www.racialequityalliance.org/blogs/gare-team/2025/12/16/government-at-just-narratives | https://www.racialequityalliance.org/blogs/gare-team/2025/12/11/navigating-racial-equity-work-when-leaderships-sup | https://www.racialequityalliance.org/resources/state-of-the-field-25
+    top_hits: inclusion; equity; lived experience; policy; contract; statewide; must; procurement; housing
+
+02. max_risk=3 docs=8 domain=www.raceforward.org
+    top_urls: https://www.raceforward.org/training-and-events/just-narratives | https://www.raceforward.org/sites/default/files/RacialJusticeImpactAssessment_v5.pdf | https://www.raceforward.org/sites/default/files/Race%20Reporting%20Guide%20by%20Race%20Forward_V1.1.pdf
+    top_hits: diversity; equity; lived experience; policy; required; must; hiring; training; housing
+
+03. max_risk=3 docs=6 domain=obiu.org
+    top_urls: https://obiu.org/course/stages-of-targeted-univeralism-part2 | https://obiu.org/course/what-is-targeted-universalism | https://obiu.org/course/stages-of-targeted-universalism-part1
+    top_hits: diversity; inclusion; equity; equity plan; lived experience; contract; shall; statewide; policy; agreement; hiring; procurement; training; housing
+
+04. max_risk=2 docs=8 domain=www.osba.org
+    top_urls: https://www.osba.org/feed/ | https://www.osba.org/ | https://www.osba.org/?s=%7Bsearch_term_string
+    top_hits: diversity; underserved; equity; contract; required; must; statewide; policy; hiring; procurement; training; housing
+
+05. max_risk=2 docs=7 domain=opportunityagenda.org
+    top_urls: https://opportunityagenda.org/?s=%7Bsearch_term_string | https://opportunityagenda.org/events/?ical=1 | https://opportunityagenda.org/wp-json/
+    top_hits: equity; policy; housing
+
+06. max_risk=2 docs=5 domain=www.hud.gov
+    top_urls: https://www.hud.gov/news | https://www.hud.gov/ | https://www.hud.gov/no-fear-act
+    top_hits: dei; contract; agreement; must; hiring; procurement; housing
+
+07. max_risk=2 docs=4 domain=www.charitynavigator.org
+    top_urls: https://www.charitynavigator.org/about-us | https://www.charitynavigator.org/ein/942759879 | https://www.charitynavigator.org/ein/843935514
+    top_hits: diversity; inclusion; equity; policy; housing
+
+08. max_risk=2 docs=4 domain=www.colorlines.com
+    top_urls: https://colorlines.com/ | https://colorlines.com/categories/media | https://colorlines.com/categories/schools-youth
+    top_hits: equity; must; training; housing
+
+09. max_risk=2 docs=2 domain=raceforward.org
+    top_urls: https://www.raceforward.org/projects-programs-%26-initiatives/cultural-week-of-action | https://www.raceforward.org/reporting-guide
+    top_hits: diversity; inclusion; equity; policy; hiring; training; housing
+
+10. max_risk=2 docs=2 domain=oregonbuys.gov
+    top_urls: https://oregonbuys.gov:443/bso/ | https://www.periscopeholdings.com/who-we-are?p=who-we-are
+    top_hits: diversity; inclusion; contract; shall; required; procurement; housing
+
+11. max_risk=2 docs=1 domain=www.opportunityagenda.org
+    top_urls: https://opportunityagenda.org/
+    top_hits: equity; policy; training
+
+12. max_risk=0 docs=9 domain=immigrationhistory.org
+    top_urls: https://immigrationhistory.org/item/page-act/ | https://immigrationhistory.org/wp-json/ | https://immigrationhistory.org/wp-json/wp/v2/pages/564
+    top_hits: contract; standard; required; shall; agreement; hiring; procurement
+
+13. max_risk=0 docs=8 domain=cdn.restorativejustice.org
+    top_urls: https://cdn.restorativejustice.org/wp-content/uploads/2022/02/17163833/PRISON_CO-Punishment-Tshirt-1324x730-1-730x400.webp | https://cdn.restorativejustice.org/wp-content/uploads/2022/02/17163830/Bolivia-aduls-eating-dinner-no-face-showing-228x228.webp | https://cdn.restorativejustice.org/wp-content/uploads/2022/02/17163832/Benin-shirtless-man-grabbing-bars-228x228.webp
+    top_hits: procurement
+
+14. max_risk=0 docs=8 domain=community.aiim.org
+    top_urls: https://community.aiim.org/about | https://community.aiim.org/communities/all-chapters | https://community.aiim.org/who-we-are
+
+15. max_risk=0 docs=8 domain=sos.oregon.gov
+    top_urls: https://sos.oregon.gov/about | https://sos.oregon.gov/audits/Pages/stateaudits.aspx | https://sos.oregon.gov/who-we-are
+    top_hits: training
+
+16. max_risk=0 docs=7 domain=restorativejustice.org
+    top_urls: https://restorativejustice.org/wp-json/ | https://restorativejustice.org/wp-json/wp/v2/pages/9 | https://restorativejustice.org/?s=%7Bsearch_term_string
+    top_hits: standard; required; must; hiring
+
+17. max_risk=0 docs=7 domain=info.aiim.org
+    top_urls: https://info.aiim.org/aiim-blog | https://info.aiim.org/state-of-the-intelligent-information-management-industry-2025 | https://info.aiim.org/demystifying-document-management-content-management-information-management-and-content-services
+    top_hits: policy; required; procurement; training; housing
+
+18. max_risk=0 docs=6 domain=www.hudexchange.info
+    top_urls: https://www.hudexchange.info/resource/3824/hmis-data-dictionary/ | https://www.hudexchange.info/homelessness-assistance/ | https://www.hudexchange.info/
+    top_hits: policy; standard; required; hiring; procurement; training; housing
+
+19. max_risk=0 docs=3 domain=quantumresidential.com
+    top_urls: https://www.quantumresidential.com/about/ | https://www.quantumresidential.com/services/ | https://www.quantumresidential.com/
+    top_hits: policy; standard; hiring; training; housing
+
+20. max_risk=0 docs=2 domain=www.aiim.org
+    top_urls: https://www.aiim.org/about-section/about-us | https://www.aiim.org/
+    top_hits: policy; required; must; procurement; training; housing
+
+21. max_risk=0 docs=1 domain=colorlines.com
+    top_urls: https://colorlines.com/about-us
+    top_hits: hiring
+
+22. max_risk=0 docs=1 domain=www.hudhre.info
+    top_urls: https://www.sttimothyswilson.org/worship
+    top_hits: policy; housing
+
+23. max_risk=0 docs=1 domain=oregonencyclopedia.org
+    top_urls: https://www.oregonencyclopedia.org/articles/blacks_in_oregon/
+    top_hits: contract; required; must; statewide; policy; hiring; procurement; training; housing
+
+24. max_risk=0 docs=1 domain=metrics.raceforward.org
+    top_urls: https://metrics.raceforward.org/
+
+25. max_risk=0 docs=1 domain=www.oregonencyclopedia.org
+    top_urls: https://www.oregonencyclopedia.org/
+    top_hits: training

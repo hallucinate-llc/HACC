@@ -1,0 +1,1913 @@
+[
+  {
+    "id": "95c63fdf066dde780c9aa043c6292579",
+    "file_path": "research_results/documents/parsed/95c63fdf066dde780c9aa043c6292579.txt",
+    "metadata": {
+      "source": "third_party:youtu.be",
+      "url": "https://www.youtube.com/?feature=youtu.be",
+      "domain": "youtu.be",
+      "ingest_date": "2025-12-31T01:06:04.359584",
+      "content_type": "text/html; charset=utf-8",
+      "original_saved_path": "research_results/third_party_downloads/youtu.be/www.youtube.com.html",
+      "text_length": 172,
+      "checksum": "3e20c31e9b92dbb2cbe88bc6d728cd63bc8e5d0f08ece3595d7d19fd0e0ff10a"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "policy"
+    ],
+    "applicability_tags": [],
+    "risk_score": 0,
+    "text_length": 172,
+    "indexed_date": "2025-12-31T01:06:04.471112"
+  },
+  {
+    "id": "592594abd4eb6a8bad89ce62855bb42e",
+    "file_path": "research_results/documents/parsed/592594abd4eb6a8bad89ce62855bb42e.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/592594abd4eb6a8bad89ce62855bb42e.pdf",
+      "parsed_text_path": "research_results/documents/parsed/592594abd4eb6a8bad89ce62855bb42e.txt",
+      "parse_date": "2025-12-31T00:12:52.052277",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/592594abd4eb6a8bad89ce62855bb42e.pdf",
+      "text_length": 21859,
+      "checksum": "f7e5a71df3a106d51200c5ccad107c46977bd332f9f8747285c4630943d33d8e"
+    },
+    "dei_keywords": [
+      "underserved",
+      "equity",
+      "inclusion",
+      "dei",
+      "diversity"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "must",
+      "applicability",
+      "standard",
+      "required",
+      "contract"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 21859,
+    "indexed_date": "2025-12-31T01:06:04.471809"
+  },
+  {
+    "id": "bf83699c0a4f2001dd2920dd6d60b502",
+    "file_path": "research_results/documents/parsed/bf83699c0a4f2001dd2920dd6d60b502.txt",
+    "metadata": {
+      "source": "third_party:www.opportunityagenda.org",
+      "url": "https://opportunityagenda.org/",
+      "domain": "www.opportunityagenda.org",
+      "ingest_date": "2025-12-31T01:06:04.338897",
+      "content_type": "text/html; charset=UTF-8",
+      "original_saved_path": "research_results/third_party_downloads/www.opportunityagenda.org/opportunityagenda.org.html",
+      "text_length": 5202,
+      "checksum": "9c006359d6a628aa13211abeb5141d002f7f5d51f7a6a69d91c3d7637f86c464"
+    },
+    "dei_keywords": [
+      "equity"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "policy"
+    ],
+    "applicability_tags": [
+      "training"
+    ],
+    "risk_score": 2,
+    "text_length": 5202,
+    "indexed_date": "2025-12-31T01:06:04.472032"
+  },
+  {
+    "id": "74c6bb8d3aa480a95207e0085fc1c4c0",
+    "file_path": "research_results/documents/parsed/74c6bb8d3aa480a95207e0085fc1c4c0.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/74c6bb8d3aa480a95207e0085fc1c4c0.pdf",
+      "parsed_text_path": "research_results/documents/parsed/74c6bb8d3aa480a95207e0085fc1c4c0.txt",
+      "parse_date": "2025-12-31T00:12:52.597466",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/74c6bb8d3aa480a95207e0085fc1c4c0.pdf",
+      "text_length": 59426,
+      "checksum": "87f938b2988fb27113ed2a0b5ebd5ed5b6e3b785210cc9a06a5fe0bc8b3f6b28"
+    },
+    "dei_keywords": [
+      "underserved",
+      "underrepresented",
+      "equity",
+      "inclusion",
+      "dei",
+      "diversity"
+    ],
+    "proxy_keywords": [
+      "bipoc"
+    ],
+    "binding_keywords": [
+      "agreement",
+      "must",
+      "policy",
+      "standard",
+      "statewide",
+      "mandatory",
+      "shall",
+      "required",
+      "contract"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 59426,
+    "indexed_date": "2025-12-31T01:06:04.473188"
+  },
+  {
+    "id": "e074d302eac8c1251ce84c7611f87a01",
+    "file_path": "research_results/documents/parsed/e074d302eac8c1251ce84c7611f87a01.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/e074d302eac8c1251ce84c7611f87a01.pdf",
+      "parsed_text_path": "research_results/documents/parsed/e074d302eac8c1251ce84c7611f87a01.txt",
+      "parse_date": "2025-12-31T00:09:13.384217",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/e074d302eac8c1251ce84c7611f87a01.pdf",
+      "text_length": 108807,
+      "checksum": "613c1a161cd5c57883e76dc59c80a4bb3b3bc0160b602d5ecb12206f7736b6f6"
+    },
+    "dei_keywords": [
+      "underserved",
+      "underrepresented",
+      "equity",
+      "inclusion",
+      "dei",
+      "diversity"
+    ],
+    "proxy_keywords": [
+      "safe space",
+      "bipoc"
+    ],
+    "binding_keywords": [
+      "agreement",
+      "must",
+      "policy",
+      "standard",
+      "applicability",
+      "statewide",
+      "required",
+      "contract"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 108807,
+    "indexed_date": "2025-12-31T01:06:04.475211"
+  },
+  {
+    "id": "24317d7e02e5e73e45cc19e5b4bc8182",
+    "file_path": "research_results/documents/parsed/24317d7e02e5e73e45cc19e5b4bc8182.txt",
+    "metadata": {
+      "source": "third_party:sos.oregon.gov",
+      "url": "https://sos.oregon.gov/business/Pages/apostille.aspx",
+      "domain": "sos.oregon.gov",
+      "ingest_date": "2025-12-31T01:06:04.297866",
+      "content_type": "text/html; charset=utf-8",
+      "original_saved_path": "research_results/third_party_downloads/sos.oregon.gov/sos.oregon.gov_business_Pages_apostille_c305e7f41c.aspx",
+      "text_length": 1089,
+      "checksum": "c99d5be82ac7a29b2b2055fdfac785139c4af0563b4dcd3de203c5036b743e13"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [],
+    "applicability_tags": [],
+    "risk_score": 0,
+    "text_length": 1089,
+    "indexed_date": "2025-12-31T01:06:04.475316"
+  },
+  {
+    "id": "2cb743c45485324adc632bb0642bc614",
+    "file_path": "research_results/documents/parsed/2cb743c45485324adc632bb0642bc614.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/2cb743c45485324adc632bb0642bc614.pdf",
+      "parsed_text_path": "research_results/documents/parsed/2cb743c45485324adc632bb0642bc614.txt",
+      "parse_date": "2025-12-31T00:12:51.966650",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/2cb743c45485324adc632bb0642bc614.pdf",
+      "text_length": 141010,
+      "checksum": "2b1ab700d4dd995e610f9b36c1a690dd89899cd4146233b3d995f2dccafd0b63"
+    },
+    "dei_keywords": [
+      "underserved",
+      "underrepresented",
+      "equity",
+      "inclusion",
+      "dei",
+      "diversity"
+    ],
+    "proxy_keywords": [
+      "lived experience",
+      "equity plan"
+    ],
+    "binding_keywords": [
+      "agreement",
+      "must",
+      "policy",
+      "standard",
+      "statewide",
+      "mandatory",
+      "shall",
+      "required",
+      "contract"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 141010,
+    "indexed_date": "2025-12-31T01:06:04.477661"
+  },
+  {
+    "id": "645b1f978c1291384280119d20b07e77",
+    "file_path": "research_results/documents/parsed/645b1f978c1291384280119d20b07e77.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/645b1f978c1291384280119d20b07e77.pdf",
+      "parsed_text_path": "research_results/documents/parsed/645b1f978c1291384280119d20b07e77.txt",
+      "parse_date": "2025-12-31T00:09:13.025452",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/645b1f978c1291384280119d20b07e77.pdf",
+      "text_length": 67969,
+      "checksum": "0cc8a10483ad5ba24ad11e5efa115e9281618616d668f8be97ab482edbab2c5e"
+    },
+    "dei_keywords": [
+      "underrepresented",
+      "equity",
+      "inclusion",
+      "dei",
+      "diversity"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "agreement",
+      "must",
+      "policy",
+      "standard",
+      "statewide",
+      "mandatory",
+      "shall",
+      "required",
+      "contract"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 67969,
+    "indexed_date": "2025-12-31T01:06:04.478957"
+  },
+  {
+    "id": "c6a05a0f4e6c2b828b90061d477fc6c0",
+    "file_path": "research_results/documents/parsed/c6a05a0f4e6c2b828b90061d477fc6c0.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/c6a05a0f4e6c2b828b90061d477fc6c0.pdf",
+      "parsed_text_path": "research_results/documents/parsed/c6a05a0f4e6c2b828b90061d477fc6c0.txt",
+      "parse_date": "2025-12-31T01:06:04.430718",
+      "source": "third_party:www.hudexchange.info",
+      "url": "https://files.hudexchange.info/resources/documents/HomelessDefinition_RecordkeepingRequirementsandCriteria.pdf",
+      "text_length": 41601,
+      "checksum": "c1c4c6c2f3f615905c18a1501b9fb1a78dad30b1b102174e4fcac0b703dbf065",
+      "domain": "www.hudexchange.info",
+      "ingest_date": "2025-12-31T01:06:04.380813",
+      "content_type": "application/pdf",
+      "original_saved_path": "research_results/third_party_downloads/www.hudexchange.info/files.hudexchange.info_resources_documents_HomelessDefinition_RecordkeepingRequirementsandCriteria.pdf"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "must",
+      "agreement"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "housing"
+    ],
+    "risk_score": 0,
+    "text_length": 41601,
+    "indexed_date": "2025-12-31T01:06:04.480141"
+  },
+  {
+    "id": "de030a0d5975e90c1b9a84e6bf00f918",
+    "file_path": "research_results/documents/parsed/de030a0d5975e90c1b9a84e6bf00f918.txt",
+    "metadata": {
+      "source": "third_party:www.google.com",
+      "url": "https://www.gstatic.com/charts/loader.js",
+      "domain": "www.google.com",
+      "ingest_date": "2025-12-31T01:06:04.301047",
+      "content_type": "text/javascript",
+      "original_saved_path": "research_results/third_party_downloads/www.google.com/www.gstatic.com_charts_loader_e0772e5935.js",
+      "text_length": 62411,
+      "checksum": "fb01e2bf6eeeb4c1eccebff41c024cc7e70ca4a0a04e63b4fb9b5cb4bb56e304"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "policy",
+      "must"
+    ],
+    "applicability_tags": [
+      "housing"
+    ],
+    "risk_score": 0,
+    "text_length": 62411,
+    "indexed_date": "2025-12-31T01:06:04.481664"
+  },
+  {
+    "id": "39aacc6287ece4d98183827562496c5e",
+    "file_path": "research_results/documents/parsed/39aacc6287ece4d98183827562496c5e.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/39aacc6287ece4d98183827562496c5e.pdf",
+      "parsed_text_path": "research_results/documents/parsed/39aacc6287ece4d98183827562496c5e.txt",
+      "parse_date": "2025-12-31T00:12:52.080024",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/39aacc6287ece4d98183827562496c5e.pdf",
+      "text_length": 13084,
+      "checksum": "7c97fb698b233b82cbc5e4c34fc0a6a13401b3e1758d31540cfdfa0af1c31814"
+    },
+    "dei_keywords": [
+      "diversity",
+      "dei",
+      "equity",
+      "inclusion"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "mandatory",
+      "shall",
+      "contract",
+      "statewide"
+    ],
+    "applicability_tags": [
+      "procurement",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 13084,
+    "indexed_date": "2025-12-31T01:06:04.482067"
+  },
+  {
+    "id": "07a1076fa131f26b2cdcc68681afddbb",
+    "file_path": "research_results/documents/parsed/07a1076fa131f26b2cdcc68681afddbb.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/07a1076fa131f26b2cdcc68681afddbb.pdf",
+      "parsed_text_path": "research_results/documents/parsed/07a1076fa131f26b2cdcc68681afddbb.txt",
+      "parse_date": "2025-12-31T00:12:52.178849",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/07a1076fa131f26b2cdcc68681afddbb.pdf",
+      "text_length": 49914,
+      "checksum": "5c5e9bb64d2f1e2b3724de97d691eb04a6ce959bfa1ad216bed6847cd44eff36"
+    },
+    "dei_keywords": [
+      "underserved",
+      "underrepresented",
+      "equity",
+      "inclusion",
+      "dei",
+      "diversity"
+    ],
+    "proxy_keywords": [
+      "safe space",
+      "equity plan"
+    ],
+    "binding_keywords": [
+      "must",
+      "policy",
+      "statewide",
+      "mandatory",
+      "shall",
+      "contract"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 49914,
+    "indexed_date": "2025-12-31T01:06:04.482999"
+  },
+  {
+    "id": "f17c22e859e2c48b5a346d23fc10a3c0",
+    "file_path": "research_results/documents/parsed/f17c22e859e2c48b5a346d23fc10a3c0.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/f17c22e859e2c48b5a346d23fc10a3c0.pdf",
+      "parsed_text_path": "research_results/documents/parsed/f17c22e859e2c48b5a346d23fc10a3c0.txt",
+      "parse_date": "2025-12-31T00:12:52.662370",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/f17c22e859e2c48b5a346d23fc10a3c0.pdf",
+      "text_length": 15914,
+      "checksum": "84be56f348d8e1b8b825328de18f98947acf0fab1bbca080945225df23aa939b"
+    },
+    "dei_keywords": [
+      "diversity",
+      "equity",
+      "inclusion",
+      "underserved"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "policy",
+      "standard",
+      "must",
+      "statewide"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 15914,
+    "indexed_date": "2025-12-31T01:06:04.483531"
+  },
+  {
+    "id": "0605239e9e394ac73f36ee2d115a566f",
+    "file_path": "research_results/documents/parsed/0605239e9e394ac73f36ee2d115a566f.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/0605239e9e394ac73f36ee2d115a566f.pdf",
+      "parsed_text_path": "research_results/documents/parsed/0605239e9e394ac73f36ee2d115a566f.txt",
+      "parse_date": "2025-12-31T00:12:52.500472",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/0605239e9e394ac73f36ee2d115a566f.pdf",
+      "text_length": 11831,
+      "checksum": "8251eb94766c30fbd5fe9b3a55a98a922c22d699523a9884208e3a36d0005c2e"
+    },
+    "dei_keywords": [
+      "diversity",
+      "dei",
+      "equity",
+      "inclusion"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "must",
+      "standard",
+      "statewide",
+      "shall",
+      "required"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "training",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 11831,
+    "indexed_date": "2025-12-31T01:06:04.483931"
+  },
+  {
+    "id": "07815e32e695fa0202bb1b593746c401",
+    "file_path": "research_results/documents/parsed/07815e32e695fa0202bb1b593746c401.txt",
+    "metadata": {
+      "source": "third_party:www.osba.org",
+      "url": "https://www.osba.org/",
+      "domain": "www.osba.org",
+      "ingest_date": "2025-12-31T01:06:04.454036",
+      "content_type": "text/html; charset=UTF-8",
+      "original_saved_path": "research_results/third_party_downloads/www.osba.org/www.osba.org.html",
+      "text_length": 10560,
+      "checksum": "27c9a8e9fe16e02d56fbc354609fc3e802399f142590dc8830838f639bf984f3"
+    },
+    "dei_keywords": [
+      "equity"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "policy",
+      "required"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 10560,
+    "indexed_date": "2025-12-31T01:06:04.484259"
+  },
+  {
+    "id": "24cbe0113967a4f6725bb7683d5ad024",
+    "file_path": "research_results/documents/parsed/24cbe0113967a4f6725bb7683d5ad024.txt",
+    "metadata": {
+      "source": "third_party:www.racialequityalliance.org",
+      "url": "https://www.racialequityalliance.org/wp-content/uploads/2015/10/gare-racial_equity_toolkit.pdf",
+      "domain": "www.racialequityalliance.org",
+      "ingest_date": "2025-12-31T01:06:04.316126",
+      "content_type": "text/html; charset=utf-8",
+      "original_saved_path": "research_results/third_party_downloads/www.racialequityalliance.org/www.racialequityalliance.org_wp-content_uploads_2015_10_gare-racial_equity_toolkit_3e1716036c.pdf",
+      "parse_error": "pdf_text_extraction_failed"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [],
+    "applicability_tags": [],
+    "risk_score": 0,
+    "text_length": 0,
+    "indexed_date": "2025-12-31T01:06:04.484302"
+  },
+  {
+    "id": "e1ab2e335f7e813fd3cfbd5c10ab62b6",
+    "file_path": "research_results/documents/parsed/e1ab2e335f7e813fd3cfbd5c10ab62b6.txt",
+    "metadata": {
+      "source": "third_party:belonging.berkeley.edu",
+      "url": "https://belonging.berkeley.edu/",
+      "domain": "belonging.berkeley.edu",
+      "ingest_date": "2025-12-31T01:06:04.371465",
+      "content_type": "text/html; charset=UTF-8",
+      "original_saved_path": "research_results/third_party_downloads/belonging.berkeley.edu/belonging.berkeley.edu.html",
+      "text_length": 17516,
+      "checksum": "d31de31d4974d71a6147372a4d1e673d1ba6243c814b79effaccfee102beb26b"
+    },
+    "dei_keywords": [
+      "diversity",
+      "equity"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "policy"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "training",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 17516,
+    "indexed_date": "2025-12-31T01:06:04.484836"
+  },
+  {
+    "id": "9c5b986feef96c0eff29c2fb4d2f4aeb",
+    "file_path": "research_results/documents/parsed/9c5b986feef96c0eff29c2fb4d2f4aeb.txt",
+    "metadata": {
+      "source": "third_party:youtu.be",
+      "url": "https://www.youtube.com/watch?v=hDXQdcQ0InU&feature=youtu.be",
+      "domain": "youtu.be",
+      "ingest_date": "2025-12-31T01:06:04.349592",
+      "content_type": "text/html; charset=utf-8",
+      "original_saved_path": "research_results/third_party_downloads/youtu.be/www.youtube.com_watch_a11e8d949b.html",
+      "text_length": 205,
+      "checksum": "bc11f20c012a33bd390683e75906aa3b559461c6e4d31ff9e95662aa23db8ada"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "policy"
+    ],
+    "applicability_tags": [
+      "training"
+    ],
+    "risk_score": 0,
+    "text_length": 205,
+    "indexed_date": "2025-12-31T01:06:04.484884"
+  },
+  {
+    "id": "544d76b9a259616a1c691b4f98098735",
+    "file_path": "research_results/documents/parsed/544d76b9a259616a1c691b4f98098735.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/544d76b9a259616a1c691b4f98098735.pdf",
+      "parsed_text_path": "research_results/documents/parsed/544d76b9a259616a1c691b4f98098735.txt",
+      "parse_date": "2025-12-31T00:09:12.824391",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/544d76b9a259616a1c691b4f98098735.pdf",
+      "text_length": 49914,
+      "checksum": "5c5e9bb64d2f1e2b3724de97d691eb04a6ce959bfa1ad216bed6847cd44eff36"
+    },
+    "dei_keywords": [
+      "underserved",
+      "underrepresented",
+      "equity",
+      "inclusion",
+      "dei",
+      "diversity"
+    ],
+    "proxy_keywords": [
+      "safe space",
+      "equity plan"
+    ],
+    "binding_keywords": [
+      "must",
+      "policy",
+      "statewide",
+      "mandatory",
+      "shall",
+      "contract"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 49914,
+    "indexed_date": "2025-12-31T01:06:04.485815"
+  },
+  {
+    "id": "6431de02c3af80fab467e7aebdc1d17c",
+    "file_path": "research_results/documents/parsed/6431de02c3af80fab467e7aebdc1d17c.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/6431de02c3af80fab467e7aebdc1d17c.pdf",
+      "parsed_text_path": "research_results/documents/parsed/6431de02c3af80fab467e7aebdc1d17c.txt",
+      "parse_date": "2025-12-31T00:12:52.490205",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/6431de02c3af80fab467e7aebdc1d17c.pdf",
+      "text_length": 76622,
+      "checksum": "0a698137b426a85f75699fc8f9bed1f11dd0293c45a40db66412f250f229a9be"
+    },
+    "dei_keywords": [
+      "underserved",
+      "equity",
+      "inclusion",
+      "dei",
+      "diversity"
+    ],
+    "proxy_keywords": [
+      "bipoc"
+    ],
+    "binding_keywords": [
+      "agreement",
+      "must",
+      "policy",
+      "standard",
+      "statewide",
+      "shall",
+      "required",
+      "contract"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 76622,
+    "indexed_date": "2025-12-31T01:06:04.487277"
+  },
+  {
+    "id": "a11f4770e29e1aa6db299b300fe149aa",
+    "file_path": "research_results/documents/parsed/a11f4770e29e1aa6db299b300fe149aa.txt",
+    "metadata": {
+      "source": "third_party:immigrationhistory.org",
+      "url": "https://immigrationhistory.org/",
+      "domain": "immigrationhistory.org",
+      "ingest_date": "2025-12-31T01:06:04.469626",
+      "content_type": "text/html; charset=UTF-8",
+      "original_saved_path": "research_results/third_party_downloads/immigrationhistory.org/immigrationhistory.org.html",
+      "text_length": 1352,
+      "checksum": "e7b9e4c44a4b5a011769c67f5bbc30cd219652f251610819d4439c4bf433745f"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "standard"
+    ],
+    "applicability_tags": [
+      "procurement"
+    ],
+    "risk_score": 0,
+    "text_length": 1352,
+    "indexed_date": "2025-12-31T01:06:04.487374"
+  },
+  {
+    "id": "ff90821feeb2b02a33a6f9fc8e5f3fcd",
+    "file_path": "research_results/documents/parsed/ff90821feeb2b02a33a6f9fc8e5f3fcd.txt",
+    "metadata": {
+      "source": "third_party:www.google.com",
+      "url": "http://www.google.com/",
+      "domain": "www.google.com",
+      "ingest_date": "2025-12-31T01:06:04.304146",
+      "content_type": "text/html; charset=UTF-8",
+      "original_saved_path": "research_results/third_party_downloads/www.google.com/www.google.com_d111175e02.html",
+      "text_length": 278,
+      "checksum": "58c2387b6ac47e25d4f8d1d40d0c20fd7563afbb1806d52188985382a84cb3f1"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [],
+    "applicability_tags": [],
+    "risk_score": 0,
+    "text_length": 278,
+    "indexed_date": "2025-12-31T01:06:04.487425"
+  },
+  {
+    "id": "d75277cdffef995a46ae59bdaef1db86",
+    "file_path": "research_results/documents/parsed/d75277cdffef995a46ae59bdaef1db86.txt",
+    "metadata": {
+      "source": "third_party:www.google.com",
+      "url": "https://www.google.com/",
+      "domain": "www.google.com",
+      "ingest_date": "2025-12-31T01:06:04.302468",
+      "content_type": "text/html; charset=UTF-8",
+      "original_saved_path": "research_results/third_party_downloads/www.google.com/www.google.com_595c3cce24.html",
+      "text_length": 278,
+      "checksum": "58c2387b6ac47e25d4f8d1d40d0c20fd7563afbb1806d52188985382a84cb3f1"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [],
+    "applicability_tags": [],
+    "risk_score": 0,
+    "text_length": 278,
+    "indexed_date": "2025-12-31T01:06:04.487473"
+  },
+  {
+    "id": "c03fa557fce41394cb3254c013c5736b",
+    "file_path": "research_results/documents/parsed/c03fa557fce41394cb3254c013c5736b.txt",
+    "metadata": {
+      "source": "third_party:www.racialequityalliance.org",
+      "url": "https://www.racialequityalliance.org/resources/public-sector-jobs-",
+      "domain": "www.racialequityalliance.org",
+      "ingest_date": "2025-12-31T01:06:04.327876",
+      "content_type": "text/html; charset=utf-8",
+      "original_saved_path": "research_results/third_party_downloads/www.racialequityalliance.org/www.racialequityalliance.org_resources_public-sector-jobs-_e5e9ac41f7.html",
+      "text_length": 913,
+      "checksum": "d471fac661a88335be67f6a5a84e42c65fa571d57c9b85e1692691168c4da7b7"
+    },
+    "dei_keywords": [
+      "equity"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "policy"
+    ],
+    "applicability_tags": [],
+    "risk_score": 2,
+    "text_length": 913,
+    "indexed_date": "2025-12-31T01:06:04.487544"
+  },
+  {
+    "id": "ffb8613e7bb63a09a1349a4f4cd7e90b",
+    "file_path": "research_results/documents/parsed/ffb8613e7bb63a09a1349a4f4cd7e90b.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/ffb8613e7bb63a09a1349a4f4cd7e90b.pdf",
+      "parsed_text_path": "research_results/documents/parsed/ffb8613e7bb63a09a1349a4f4cd7e90b.txt",
+      "parse_date": "2025-12-31T00:12:51.806337",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/ffb8613e7bb63a09a1349a4f4cd7e90b.pdf",
+      "text_length": 22565,
+      "checksum": "2d3070c7d801e215c4e6d50132cbfa73f1e40d86696503108e644281bd9fc546"
+    },
+    "dei_keywords": [
+      "underserved",
+      "underrepresented",
+      "equity",
+      "inclusion",
+      "dei",
+      "diversity"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "policy",
+      "standard",
+      "must",
+      "required"
+    ],
+    "applicability_tags": [
+      "training",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 22565,
+    "indexed_date": "2025-12-31T01:06:04.488311"
+  },
+  {
+    "id": "57a271a61cfdda6b8b76a264c5c1a897",
+    "file_path": "research_results/documents/parsed/57a271a61cfdda6b8b76a264c5c1a897.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/57a271a61cfdda6b8b76a264c5c1a897.pdf",
+      "parsed_text_path": "research_results/documents/parsed/57a271a61cfdda6b8b76a264c5c1a897.txt",
+      "parse_date": "2025-12-31T00:09:13.304542",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/57a271a61cfdda6b8b76a264c5c1a897.pdf",
+      "text_length": 114632,
+      "checksum": "a78d44d591134ae1a193af7dca783eb4fe9698e4f23af0bef3a38c1e7b2f4a86"
+    },
+    "dei_keywords": [
+      "underserved",
+      "underrepresented",
+      "equity",
+      "inclusion",
+      "dei",
+      "diversity"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "agreement",
+      "must",
+      "ordinance",
+      "policy",
+      "standard",
+      "statewide",
+      "shall",
+      "required",
+      "applicable to",
+      "contract"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 114632,
+    "indexed_date": "2025-12-31T01:06:04.490430"
+  },
+  {
+    "id": "dfb92c0fbce43f49713c9bdee73a921b",
+    "file_path": "research_results/documents/parsed/dfb92c0fbce43f49713c9bdee73a921b.txt",
+    "metadata": {
+      "source": "third_party:sos.oregon.gov",
+      "url": "https://sos.oregon.gov/audits/Pages/stateaudits.aspx",
+      "domain": "sos.oregon.gov",
+      "ingest_date": "2025-12-31T01:06:04.292432",
+      "content_type": "text/html; charset=utf-8",
+      "original_saved_path": "research_results/third_party_downloads/sos.oregon.gov/sos.oregon.gov_audits_Pages_stateaudits_9c5442d3a9.aspx",
+      "text_length": 644,
+      "checksum": "3926aa3a42e6202899b7995b156831e3321b1894d59d10cf47e1daa348ad3f0e"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [],
+    "applicability_tags": [
+      "housing"
+    ],
+    "risk_score": 0,
+    "text_length": 644,
+    "indexed_date": "2025-12-31T01:06:04.490505"
+  },
+  {
+    "id": "a2f08c4c1146471bbf56e2808875d0b6",
+    "file_path": "research_results/documents/parsed/a2f08c4c1146471bbf56e2808875d0b6.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/a2f08c4c1146471bbf56e2808875d0b6.pdf",
+      "parsed_text_path": "research_results/documents/parsed/a2f08c4c1146471bbf56e2808875d0b6.txt",
+      "parse_date": "2025-12-31T00:12:52.244637",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/a2f08c4c1146471bbf56e2808875d0b6.pdf",
+      "text_length": 147683,
+      "checksum": "291fae959eed1acfecde75edf1f4e6f3e146af5575558f1fafd9f92e2a1fd81f"
+    },
+    "dei_keywords": [
+      "underserved",
+      "underrepresented",
+      "equity",
+      "inclusion",
+      "dei",
+      "diversity"
+    ],
+    "proxy_keywords": [
+      "lived experience",
+      "bipoc"
+    ],
+    "binding_keywords": [
+      "agreement",
+      "must",
+      "policy",
+      "standard",
+      "statewide",
+      "shall",
+      "required",
+      "contract"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 147683,
+    "indexed_date": "2025-12-31T01:06:04.493044"
+  },
+  {
+    "id": "6edb45aeefba069c869f50585373f1c6",
+    "file_path": "research_results/documents/parsed/6edb45aeefba069c869f50585373f1c6.txt",
+    "metadata": {
+      "source": "third_party:www.raceforward.org",
+      "url": "https://www.raceforward.org/",
+      "domain": "www.raceforward.org",
+      "ingest_date": "2025-12-31T01:06:04.271430",
+      "content_type": "text/html; charset=UTF-8",
+      "original_saved_path": "research_results/third_party_downloads/www.raceforward.org/www.raceforward.org_641110ad5f.html",
+      "text_length": 5019,
+      "checksum": "0ccc331825c97e6657e3dbb20119e77ce49cffee5941db5fedb557682d482074"
+    },
+    "dei_keywords": [
+      "equity"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "policy"
+    ],
+    "applicability_tags": [
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 5019,
+    "indexed_date": "2025-12-31T01:06:04.493245"
+  },
+  {
+    "id": "bbfc77a24628ff8e29dd977ba4c66095",
+    "file_path": "research_results/documents/parsed/bbfc77a24628ff8e29dd977ba4c66095.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/bbfc77a24628ff8e29dd977ba4c66095.pdf",
+      "parsed_text_path": "research_results/documents/parsed/bbfc77a24628ff8e29dd977ba4c66095.txt",
+      "parse_date": "2025-12-31T00:12:52.031792",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/bbfc77a24628ff8e29dd977ba4c66095.pdf",
+      "text_length": 69963,
+      "checksum": "97466b4ff5b998bea81374d60bc2764ce0f937d0363204c60318deddd9fef8fe"
+    },
+    "dei_keywords": [
+      "underserved",
+      "underrepresented",
+      "equity",
+      "inclusion",
+      "dei",
+      "diversity"
+    ],
+    "proxy_keywords": [
+      "bipoc"
+    ],
+    "binding_keywords": [
+      "agreement",
+      "must",
+      "policy",
+      "standard",
+      "statewide",
+      "required",
+      "contract"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 69963,
+    "indexed_date": "2025-12-31T01:06:04.494533"
+  },
+  {
+    "id": "c441d095b5efadcac83eadd5ad604240",
+    "file_path": "research_results/documents/parsed/c441d095b5efadcac83eadd5ad604240.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/c441d095b5efadcac83eadd5ad604240.pdf",
+      "parsed_text_path": "research_results/documents/parsed/c441d095b5efadcac83eadd5ad604240.txt",
+      "parse_date": "2025-12-31T01:06:04.259178",
+      "source": "third_party:www.raceforward.org",
+      "url": "https://www.raceforward.org/sites/default/files/Race%20Reporting%20Guide%20by%20Race%20Forward_V1.1.pdf",
+      "text_length": 53834,
+      "checksum": "d23f050319c10a81f3a05d55a435eb6533919674393b9b307768f4751086d630",
+      "domain": "www.raceforward.org",
+      "ingest_date": "2025-12-31T01:06:04.225475",
+      "content_type": "application/pdf",
+      "original_saved_path": "research_results/third_party_downloads/www.raceforward.org/www.raceforward.org_sites_default_files_Race_20Reporting_20Guide_20by_20Race_20Forward_V1.1_dd3a577012.pdf"
+    },
+    "dei_keywords": [
+      "diversity",
+      "equity",
+      "inclusion"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "must",
+      "policy",
+      "standard",
+      "statewide",
+      "contract"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 53834,
+    "indexed_date": "2025-12-31T01:06:04.495754"
+  },
+  {
+    "id": "0e1e03d72717fb6325339c86021d7ea8",
+    "file_path": "research_results/documents/parsed/0e1e03d72717fb6325339c86021d7ea8.txt",
+    "metadata": {
+      "source": "third_party:www.racialequityalliance.org",
+      "url": "https://www.racialequityalliance.org/home",
+      "domain": "www.racialequityalliance.org",
+      "ingest_date": "2025-12-31T01:06:04.331947",
+      "content_type": "text/html; charset=utf-8",
+      "original_saved_path": "research_results/third_party_downloads/www.racialequityalliance.org/www.racialequityalliance.org_home_7f6b5e38d7.html",
+      "text_length": 4359,
+      "checksum": "e649bc3adf8b25602cd9dcef3bdb82f306ff776a080e6f72cd0987b8c648667e"
+    },
+    "dei_keywords": [
+      "equity"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "policy"
+    ],
+    "applicability_tags": [
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 4359,
+    "indexed_date": "2025-12-31T01:06:04.495941"
+  },
+  {
+    "id": "8c21469e1d654a8bbc0bf84492c7aa71",
+    "file_path": "research_results/documents/parsed/8c21469e1d654a8bbc0bf84492c7aa71.txt",
+    "metadata": {
+      "source": "third_party:www.hudhre.info",
+      "url": "https://www.sttimothyswilson.org/worship",
+      "domain": "www.hudhre.info",
+      "ingest_date": "2025-12-31T01:06:04.437712",
+      "content_type": "text/html",
+      "original_saved_path": "research_results/third_party_downloads/www.hudhre.info/www.sttimothyswilson.org_worship.html",
+      "text_length": 15740,
+      "checksum": "6379eedfb036154d864f04e66ec0e67d8ce4b0ac492fad2995716e878e34b7c7"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "policy"
+    ],
+    "applicability_tags": [
+      "housing"
+    ],
+    "risk_score": 0,
+    "text_length": 15740,
+    "indexed_date": "2025-12-31T01:06:04.496468"
+  },
+  {
+    "id": "bcb680272f5d9ea076d621ded3061763",
+    "file_path": "research_results/documents/parsed/bcb680272f5d9ea076d621ded3061763.txt",
+    "metadata": {
+      "source": "third_party:restorativejustice.org",
+      "url": "https://restorativejustice.org/what-is-restorative-justice/",
+      "domain": "restorativejustice.org",
+      "ingest_date": "2025-12-31T01:06:04.451664",
+      "content_type": "text/html; charset=UTF-8",
+      "original_saved_path": "research_results/third_party_downloads/restorativejustice.org/restorativejustice.org_what-is-restorative-justice.html",
+      "text_length": 1617,
+      "checksum": "42e98c38584dfd25f4a9983bd4e5aece67b1719114ef5110d0c0ede15721e686"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [],
+    "applicability_tags": [],
+    "risk_score": 0,
+    "text_length": 1617,
+    "indexed_date": "2025-12-31T01:06:04.496561"
+  },
+  {
+    "id": "b8db36676c4c140396b695f791f8e0b9",
+    "file_path": "research_results/documents/parsed/b8db36676c4c140396b695f791f8e0b9.txt",
+    "metadata": {
+      "source": "third_party:www.hudexchange.info",
+      "url": "https://www.hudexchange.info/homelessness-assistance/",
+      "domain": "www.hudexchange.info",
+      "ingest_date": "2025-12-31T01:06:04.431381",
+      "content_type": "text/html;charset=UTF-8",
+      "original_saved_path": "research_results/third_party_downloads/www.hudexchange.info/www.hudexchange.info_homelessness-assistance.html",
+      "text_length": 6458,
+      "checksum": "0a15e14ed898c6e18873202c374199b04efaaf5a1ff72298e18c484f97dfc517"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "policy",
+      "standard"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 0,
+    "text_length": 6458,
+    "indexed_date": "2025-12-31T01:06:04.496769"
+  },
+  {
+    "id": "6e6c69b294212c64d1c617f261e70841",
+    "file_path": "research_results/documents/parsed/6e6c69b294212c64d1c617f261e70841.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/6e6c69b294212c64d1c617f261e70841.pdf",
+      "parsed_text_path": "research_results/documents/parsed/6e6c69b294212c64d1c617f261e70841.txt",
+      "parse_date": "2025-12-31T00:12:52.561850",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/6e6c69b294212c64d1c617f261e70841.pdf",
+      "text_length": 36369,
+      "checksum": "92af8286f58bf54636ba494bb5b70c7c183e164b38e31162d3b463fb521e8122"
+    },
+    "dei_keywords": [
+      "underserved",
+      "underrepresented",
+      "equity",
+      "inclusion",
+      "dei",
+      "diversity"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "policy",
+      "must"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 36369,
+    "indexed_date": "2025-12-31T01:06:04.497520"
+  },
+  {
+    "id": "a190e1e7829daedea88c07cffb922811",
+    "file_path": "research_results/documents/parsed/a190e1e7829daedea88c07cffb922811.txt",
+    "metadata": {
+      "source": "third_party:www.raceforward.org",
+      "url": "https://www.raceforward.org/what-racial-equity",
+      "domain": "www.raceforward.org",
+      "ingest_date": "2025-12-31T01:06:04.259800",
+      "content_type": "text/html; charset=UTF-8",
+      "original_saved_path": "research_results/third_party_downloads/www.raceforward.org/www.raceforward.org_what-racial-equity_259c654ae6.html",
+      "text_length": 10278,
+      "checksum": "39d1527dc9e548a42b3b1ae10420e6ac706085d49cacbd6f82e39b0d2a268582"
+    },
+    "dei_keywords": [
+      "equity"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "policy",
+      "applicable to",
+      "must"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "training",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 10278,
+    "indexed_date": "2025-12-31T01:06:04.497842"
+  },
+  {
+    "id": "f05cefc6c4eb4225c881409d8daadc29",
+    "file_path": "research_results/documents/parsed/f05cefc6c4eb4225c881409d8daadc29.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/f05cefc6c4eb4225c881409d8daadc29.pdf",
+      "parsed_text_path": "research_results/documents/parsed/f05cefc6c4eb4225c881409d8daadc29.txt",
+      "parse_date": "2025-12-31T00:12:52.008334",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/f05cefc6c4eb4225c881409d8daadc29.pdf",
+      "text_length": 85456,
+      "checksum": "b6d9444b2c19c0ca30c25a3a60346c079585dd1af516873d4bf81c287bab68e2"
+    },
+    "dei_keywords": [
+      "underserved",
+      "equity",
+      "inclusion",
+      "dei",
+      "diversity"
+    ],
+    "proxy_keywords": [
+      "bipoc"
+    ],
+    "binding_keywords": [
+      "agreement",
+      "policy",
+      "standard",
+      "statewide",
+      "shall",
+      "required",
+      "contract"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 85456,
+    "indexed_date": "2025-12-31T01:06:04.499353"
+  },
+  {
+    "id": "72452bef644dc6379e166efa8730a402",
+    "file_path": "research_results/documents/parsed/72452bef644dc6379e166efa8730a402.txt",
+    "metadata": {
+      "source": "third_party:youtu.be",
+      "url": "https://www.youtube.com/watch?v=AcX7vmL6pPc&feature=youtu.be",
+      "domain": "youtu.be",
+      "ingest_date": "2025-12-31T01:06:04.354538",
+      "content_type": "text/html; charset=utf-8",
+      "original_saved_path": "research_results/third_party_downloads/youtu.be/www.youtube.com_watch_c6af67a01c.html",
+      "text_length": 207,
+      "checksum": "3567075dc987f1b199ac0ba741222eafd84a6b6821fcded3bf0835192ce58ac7"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "policy"
+    ],
+    "applicability_tags": [
+      "training"
+    ],
+    "risk_score": 0,
+    "text_length": 207,
+    "indexed_date": "2025-12-31T01:06:04.499405"
+  },
+  {
+    "id": "0a3c2fb7aaa8fce1b2fcc321ae18e5b9",
+    "file_path": "research_results/documents/parsed/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.pdf",
+      "parsed_text_path": "research_results/documents/parsed/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.txt",
+      "parse_date": "2025-12-31T00:09:12.919875",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.pdf",
+      "text_length": 31368,
+      "checksum": "10272c81ac1f78e6941a99757b911e240022a32496f8b0b8176b65a7819f9f5e"
+    },
+    "dei_keywords": [
+      "underserved",
+      "equity",
+      "inclusion",
+      "dei",
+      "diversity"
+    ],
+    "proxy_keywords": [
+      "lived experience",
+      "cultural competence"
+    ],
+    "binding_keywords": [
+      "must",
+      "policy",
+      "standard",
+      "statewide",
+      "shall",
+      "required",
+      "contract"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 31368,
+    "indexed_date": "2025-12-31T01:06:04.500004"
+  },
+  {
+    "id": "5b94e8a5df0af6d0ee9bdeaa10261e5e",
+    "file_path": "research_results/documents/parsed/5b94e8a5df0af6d0ee9bdeaa10261e5e.txt",
+    "metadata": {
+      "source": "third_party:www.hudexchange.info",
+      "url": "https://www.hudexchange.info/",
+      "domain": "www.hudexchange.info",
+      "ingest_date": "2025-12-31T01:06:04.435602",
+      "content_type": "text/html;charset=UTF-8",
+      "original_saved_path": "research_results/third_party_downloads/www.hudexchange.info/www.hudexchange.info.html",
+      "text_length": 4140,
+      "checksum": "e166662d121a749744db2c12dd9b966f7c2473a961103adbc08aec1b2dfac826"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "policy"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 0,
+    "text_length": 4140,
+    "indexed_date": "2025-12-31T01:06:04.500154"
+  },
+  {
+    "id": "b3b027941a48b0372a0fe52293173996",
+    "file_path": "research_results/documents/parsed/b3b027941a48b0372a0fe52293173996.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/b3b027941a48b0372a0fe52293173996.pdf",
+      "parsed_text_path": "research_results/documents/parsed/b3b027941a48b0372a0fe52293173996.txt",
+      "parse_date": "2025-12-31T00:09:12.976582",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/b3b027941a48b0372a0fe52293173996.pdf",
+      "text_length": 186852,
+      "checksum": "752645670521d59225fe9de7811d99104386733422078b2b7a62f7326eb75644"
+    },
+    "dei_keywords": [
+      "underserved",
+      "underrepresented",
+      "equity",
+      "inclusion",
+      "dei",
+      "diversity"
+    ],
+    "proxy_keywords": [
+      "safe space",
+      "bipoc"
+    ],
+    "binding_keywords": [
+      "agreement",
+      "must",
+      "policy",
+      "standard",
+      "applicability",
+      "statewide",
+      "required",
+      "contract"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 186852,
+    "indexed_date": "2025-12-31T01:06:04.503348"
+  },
+  {
+    "id": "8541f98a9197bcf1a78f11abacb062b9",
+    "file_path": "research_results/documents/parsed/8541f98a9197bcf1a78f11abacb062b9.txt",
+    "metadata": {
+      "source": "third_party:sos.oregon.gov",
+      "url": "https://sos.oregon.gov/Pages/index.aspx",
+      "domain": "sos.oregon.gov",
+      "ingest_date": "2025-12-31T01:06:04.289108",
+      "content_type": "text/html; charset=utf-8",
+      "original_saved_path": "research_results/third_party_downloads/sos.oregon.gov/sos.oregon.gov_Pages_index_4da88a085b.aspx",
+      "text_length": 1132,
+      "checksum": "a33ea866c7c3cbc60c89c97120bf1e44c76e7cd9c7773327f210a585432bb2e6"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [],
+    "applicability_tags": [],
+    "risk_score": 0,
+    "text_length": 1132,
+    "indexed_date": "2025-12-31T01:06:04.503454"
+  },
+  {
+    "id": "121df9a7bd9e7fb132e4cbd006e418fd",
+    "file_path": "research_results/documents/parsed/121df9a7bd9e7fb132e4cbd006e418fd.txt",
+    "metadata": {
+      "source": "third_party:oregonencyclopedia.org",
+      "url": "https://www.oregonencyclopedia.org/articles/blacks_in_oregon/",
+      "domain": "oregonencyclopedia.org",
+      "ingest_date": "2025-12-31T01:06:04.463335",
+      "content_type": "text/html; charset=utf-8",
+      "original_saved_path": "research_results/third_party_downloads/oregonencyclopedia.org/www.oregonencyclopedia.org_articles_blacks_in_oregon.html",
+      "text_length": 36892,
+      "checksum": "5929c10f1a8dc5c7d3c2be284994642dd1a3b2a6822c0066f89c70353f759015"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "must",
+      "policy",
+      "statewide",
+      "required",
+      "contract"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 0,
+    "text_length": 36892,
+    "indexed_date": "2025-12-31T01:06:04.504351"
+  },
+  {
+    "id": "ffb8b3c67a74866bc9b85c48b68e4bf0",
+    "file_path": "research_results/documents/parsed/ffb8b3c67a74866bc9b85c48b68e4bf0.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/ffb8b3c67a74866bc9b85c48b68e4bf0.pdf",
+      "parsed_text_path": "research_results/documents/parsed/ffb8b3c67a74866bc9b85c48b68e4bf0.txt",
+      "parse_date": "2025-12-31T01:06:04.270329",
+      "source": "third_party:www.raceforward.org",
+      "url": "https://www.raceforward.org/sites/default/files/RacialJusticeImpactAssessment_v5.pdf",
+      "text_length": 8057,
+      "checksum": "a251a4930ef1476cf6053481cc2df4da6374465127668b6f537ff66089d3aea7",
+      "domain": "www.raceforward.org",
+      "ingest_date": "2025-12-31T01:06:04.261451",
+      "content_type": "application/pdf",
+      "original_saved_path": "research_results/third_party_downloads/www.raceforward.org/www.raceforward.org_sites_default_files_RacialJusticeImpactAssessment_v5_24d36ef0f6.pdf"
+    },
+    "dei_keywords": [
+      "diversity",
+      "equity",
+      "inclusion"
+    ],
+    "proxy_keywords": [
+      "equity plan"
+    ],
+    "binding_keywords": [
+      "policy",
+      "must",
+      "required"
+    ],
+    "applicability_tags": [],
+    "risk_score": 3,
+    "text_length": 8057,
+    "indexed_date": "2025-12-31T01:06:04.504692"
+  },
+  {
+    "id": "301c581abbfcce15c8336a36b2946da3",
+    "file_path": "research_results/documents/parsed/301c581abbfcce15c8336a36b2946da3.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/301c581abbfcce15c8336a36b2946da3.pdf",
+      "parsed_text_path": "research_results/documents/parsed/301c581abbfcce15c8336a36b2946da3.txt",
+      "parse_date": "2025-12-31T00:12:52.606013",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/301c581abbfcce15c8336a36b2946da3.pdf",
+      "text_length": 6892,
+      "checksum": "ad45910b47286ca2ffe025ffcbc097d56b11008dfe5a5603667becb2a482026e"
+    },
+    "dei_keywords": [
+      "diversity",
+      "dei",
+      "equity",
+      "inclusion"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "policy",
+      "shall"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "training"
+    ],
+    "risk_score": 2,
+    "text_length": 6892,
+    "indexed_date": "2025-12-31T01:06:04.504939"
+  },
+  {
+    "id": "4260e59b296ab49cb9ae241fbba37c68",
+    "file_path": "research_results/documents/parsed/4260e59b296ab49cb9ae241fbba37c68.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/4260e59b296ab49cb9ae241fbba37c68.pdf",
+      "parsed_text_path": "research_results/documents/parsed/4260e59b296ab49cb9ae241fbba37c68.txt",
+      "parse_date": "2025-12-31T00:12:52.630421",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/4260e59b296ab49cb9ae241fbba37c68.pdf",
+      "text_length": 38034,
+      "checksum": "01e509fe53473d7d01c926d7b1a4bbeeae5f00497217159225fcb8b9f134de74"
+    },
+    "dei_keywords": [
+      "underrepresented",
+      "equity",
+      "inclusion",
+      "dei",
+      "diversity"
+    ],
+    "proxy_keywords": [
+      "cultural competence"
+    ],
+    "binding_keywords": [
+      "agreement",
+      "policy",
+      "statewide",
+      "shall",
+      "required",
+      "contract"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 38034,
+    "indexed_date": "2025-12-31T01:06:04.505791"
+  },
+  {
+    "id": "1d20c2a61ee7a30f077fe8e8eeba2667",
+    "file_path": "research_results/documents/parsed/1d20c2a61ee7a30f077fe8e8eeba2667.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/1d20c2a61ee7a30f077fe8e8eeba2667.pdf",
+      "parsed_text_path": "research_results/documents/parsed/1d20c2a61ee7a30f077fe8e8eeba2667.txt",
+      "parse_date": "2025-12-31T00:09:12.896013",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/1d20c2a61ee7a30f077fe8e8eeba2667.pdf",
+      "text_length": 18877,
+      "checksum": "535781fd4fa2ce3f00526232ac423b76ccb8be90da2487e00a3b177fe34e63d5"
+    },
+    "dei_keywords": [
+      "underrepresented",
+      "equity",
+      "inclusion",
+      "deib",
+      "dei",
+      "diversity"
+    ],
+    "proxy_keywords": [
+      "lived experience",
+      "bipoc"
+    ],
+    "binding_keywords": [
+      "policy",
+      "must",
+      "agreement"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 18877,
+    "indexed_date": "2025-12-31T01:06:04.506304"
+  },
+  {
+    "id": "e1107f33d362b88c5757c2d7d4f1abea",
+    "file_path": "research_results/documents/parsed/e1107f33d362b88c5757c2d7d4f1abea.txt",
+    "metadata": {
+      "source": "third_party:sos.oregon.gov",
+      "url": "https://sos.oregon.gov/voting/Pages/drop-box-locator.aspx",
+      "domain": "sos.oregon.gov",
+      "ingest_date": "2025-12-31T01:06:04.295332",
+      "content_type": "text/html; charset=utf-8",
+      "original_saved_path": "research_results/third_party_downloads/sos.oregon.gov/sos.oregon.gov_voting_Pages_drop-box-locator_9980475377.aspx",
+      "text_length": 733,
+      "checksum": "97252dc467377ec49f103cd664d77eda47144826d727f8f08bcf66fbc3fce9be"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "statewide"
+    ],
+    "applicability_tags": [],
+    "risk_score": 0,
+    "text_length": 733,
+    "indexed_date": "2025-12-31T01:06:04.506370"
+  },
+  {
+    "id": "13a8dbfefb0e62ac8f3861aa3b6c4758",
+    "file_path": "research_results/documents/parsed/13a8dbfefb0e62ac8f3861aa3b6c4758.txt",
+    "metadata": {
+      "source": "third_party:www.raceforward.org",
+      "url": "http://www.raceforward.org/",
+      "domain": "www.raceforward.org",
+      "ingest_date": "2025-12-31T01:06:04.276573",
+      "content_type": "text/html; charset=UTF-8",
+      "original_saved_path": "research_results/third_party_downloads/www.raceforward.org/www.raceforward.org_7c1e044e34.html",
+      "text_length": 5019,
+      "checksum": "0ccc331825c97e6657e3dbb20119e77ce49cffee5941db5fedb557682d482074"
+    },
+    "dei_keywords": [
+      "equity"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "policy"
+    ],
+    "applicability_tags": [
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 5019,
+    "indexed_date": "2025-12-31T01:06:04.506630"
+  },
+  {
+    "id": "f6741790087ba13efcf09ff18aaee9d6",
+    "file_path": "research_results/documents/parsed/f6741790087ba13efcf09ff18aaee9d6.txt",
+    "metadata": {
+      "source": "third_party:oregonbuys.gov",
+      "url": "https://oregonbuys.gov:443/bso/",
+      "domain": "oregonbuys.gov",
+      "ingest_date": "2025-12-31T01:06:04.221413",
+      "content_type": "text/html;charset=UTF-8",
+      "original_saved_path": "research_results/third_party_downloads/oregonbuys.gov/oregonbuys.gov:443_bso_9d8a314bfc.html",
+      "text_length": 7916,
+      "checksum": "ab3e093290d19408173a5cd71ad5ab57d4a97b45c76ff4fae32b8a943893e3a2"
+    },
+    "dei_keywords": [
+      "diversity",
+      "inclusion"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "shall",
+      "required",
+      "contract"
+    ],
+    "applicability_tags": [
+      "procurement",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 7916,
+    "indexed_date": "2025-12-31T01:06:04.506830"
+  },
+  {
+    "id": "11925ba57cc06a39fad9a6dc5a8cc1f0",
+    "file_path": "research_results/documents/parsed/11925ba57cc06a39fad9a6dc5a8cc1f0.txt",
+    "metadata": {
+      "source": "third_party:www.racialequityalliance.org",
+      "url": "https://www.racialequityalliance.org/wp-content/uploads/2016/11/gare-racial-equity-action-plans.pdf",
+      "domain": "www.racialequityalliance.org",
+      "ingest_date": "2025-12-31T01:06:04.304915",
+      "content_type": "text/html; charset=utf-8",
+      "original_saved_path": "research_results/third_party_downloads/www.racialequityalliance.org/www.racialequityalliance.org_wp-content_uploads_2016_11_gare-racial-equity-action-plans_c15bcdb789.pdf",
+      "parse_error": "pdf_text_extraction_failed"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [],
+    "applicability_tags": [],
+    "risk_score": 0,
+    "text_length": 0,
+    "indexed_date": "2025-12-31T01:06:04.506870"
+  },
+  {
+    "id": "9992a1019c1a850d63d4e6c5f0ef450b",
+    "file_path": "research_results/documents/parsed/9992a1019c1a850d63d4e6c5f0ef450b.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/9992a1019c1a850d63d4e6c5f0ef450b.pdf",
+      "parsed_text_path": "research_results/documents/parsed/9992a1019c1a850d63d4e6c5f0ef450b.txt",
+      "parse_date": "2025-12-31T00:09:12.746757",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/9992a1019c1a850d63d4e6c5f0ef450b.pdf",
+      "text_length": 8230,
+      "checksum": "3cf283ef7067abf03f63d6cba492fb6dafb41b1162643bf370d064a6ecffeb90"
+    },
+    "dei_keywords": [
+      "diversity",
+      "dei",
+      "equity",
+      "inclusion"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [],
+    "applicability_tags": [
+      "training"
+    ],
+    "risk_score": 1,
+    "text_length": 8230,
+    "indexed_date": "2025-12-31T01:06:04.507188"
+  },
+  {
+    "id": "60ff12d7e79e6a9763b86f62b24ac6f4",
+    "file_path": "research_results/documents/parsed/60ff12d7e79e6a9763b86f62b24ac6f4.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/60ff12d7e79e6a9763b86f62b24ac6f4.pdf",
+      "parsed_text_path": "research_results/documents/parsed/60ff12d7e79e6a9763b86f62b24ac6f4.txt",
+      "parse_date": "2025-12-31T00:09:12.878381",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/60ff12d7e79e6a9763b86f62b24ac6f4.pdf",
+      "text_length": 82412,
+      "checksum": "866cbd98850b05e981647683e5f7524e50069fe8f7fec0ad95e757ef20ff6a4f"
+    },
+    "dei_keywords": [
+      "underrepresented",
+      "equity",
+      "inclusion",
+      "deib",
+      "dei",
+      "diversity"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "must",
+      "standard",
+      "statewide",
+      "required",
+      "contract"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 82412,
+    "indexed_date": "2025-12-31T01:06:04.508715"
+  },
+  {
+    "id": "3d5bde53de69554f6a3a0fffa1a0ca00",
+    "file_path": "research_results/documents/parsed/3d5bde53de69554f6a3a0fffa1a0ca00.txt",
+    "metadata": {
+      "source": "third_party:www.oregonencyclopedia.org",
+      "url": "https://www.oregonencyclopedia.org/",
+      "domain": "www.oregonencyclopedia.org",
+      "ingest_date": "2025-12-31T01:06:04.459599",
+      "content_type": "text/html; charset=utf-8",
+      "original_saved_path": "research_results/third_party_downloads/www.oregonencyclopedia.org/www.oregonencyclopedia.org.html",
+      "text_length": 6539,
+      "checksum": "9cfdac972f2aa0002939cc915c3f955932cec8c66a11d51a201aa7889251b083"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [],
+    "applicability_tags": [
+      "training"
+    ],
+    "risk_score": 0,
+    "text_length": 6539,
+    "indexed_date": "2025-12-31T01:06:04.508984"
+  },
+  {
+    "id": "3c72cd8d521a53f9c2171552b3686808",
+    "file_path": "research_results/documents/parsed/3c72cd8d521a53f9c2171552b3686808.txt",
+    "metadata": {
+      "source": "third_party:youtu.be",
+      "url": "https://www.youtube.com/watch?v=emQCMJHMDVQ&feature=youtu.be",
+      "domain": "youtu.be",
+      "ingest_date": "2025-12-31T01:06:04.343548",
+      "content_type": "text/html; charset=utf-8",
+      "original_saved_path": "research_results/third_party_downloads/youtu.be/www.youtube.com_watch.html",
+      "text_length": 231,
+      "checksum": "3f02743859772d8baccddc713761c642628aa52a7980a11b70d57a67c9f0ea2f"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "policy"
+    ],
+    "applicability_tags": [],
+    "risk_score": 0,
+    "text_length": 231,
+    "indexed_date": "2025-12-31T01:06:04.509033"
+  },
+  {
+    "id": "99dcf3d5449817538f56e3cd23ec5fc1",
+    "file_path": "research_results/documents/parsed/99dcf3d5449817538f56e3cd23ec5fc1.txt",
+    "metadata": {
+      "source": "third_party:immigrationhistory.org",
+      "url": "https://immigrationhistory.org/item/page-act/",
+      "domain": "immigrationhistory.org",
+      "ingest_date": "2025-12-31T01:06:04.468542",
+      "content_type": "text/html; charset=UTF-8",
+      "original_saved_path": "research_results/third_party_downloads/immigrationhistory.org/immigrationhistory.org_item_page-act.html",
+      "text_length": 3553,
+      "checksum": "0137c1e669640658d6780bfc30da47244b9e86cabb9a7548c2e388102b490ac6"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "agreement",
+      "standard",
+      "shall",
+      "required",
+      "contract"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement"
+    ],
+    "risk_score": 0,
+    "text_length": 3553,
+    "indexed_date": "2025-12-31T01:06:04.509175"
+  },
+  {
+    "id": "c79073ad28f6e6b357996a771378cc0c",
+    "file_path": "research_results/documents/parsed/c79073ad28f6e6b357996a771378cc0c.txt",
+    "metadata": {
+      "source": "third_party:ogp.me",
+      "url": "https://ogp.me/",
+      "domain": "ogp.me",
+      "ingest_date": "2025-12-31T01:06:04.362395",
+      "content_type": "text/html; charset=utf-8",
+      "original_saved_path": "research_results/third_party_downloads/ogp.me/ogp.me.html",
+      "text_length": 13072,
+      "checksum": "8369148db254a5e894e86380d9eb39aaa317ece52651b53562b307208891db5c"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "agreement",
+      "required"
+    ],
+    "applicability_tags": [
+      "housing"
+    ],
+    "risk_score": 0,
+    "text_length": 13072,
+    "indexed_date": "2025-12-31T01:06:04.509642"
+  },
+  {
+    "id": "f220833a1ebb227c820ffdcc641e2779",
+    "file_path": "research_results/documents/parsed/f220833a1ebb227c820ffdcc641e2779.txt",
+    "metadata": {
+      "source": "third_party:belonging.berkeley.edu",
+      "url": "https://belonging.berkeley.edu/targeted-universalism",
+      "domain": "belonging.berkeley.edu",
+      "ingest_date": "2025-12-31T01:06:04.364356",
+      "content_type": "text/html; charset=UTF-8",
+      "original_saved_path": "research_results/third_party_downloads/belonging.berkeley.edu/belonging.berkeley.edu_targeted-universalism.html",
+      "text_length": 13772,
+      "checksum": "dc62ec151c57a8381496bd974359287109ff4ee8b0ed259ec22b2898db3e3ea2"
+    },
+    "dei_keywords": [
+      "diversity",
+      "equity",
+      "inclusion"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "policy",
+      "must"
+    ],
+    "applicability_tags": [
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 13772,
+    "indexed_date": "2025-12-31T01:06:04.510070"
+  },
+  {
+    "id": "937374b235c61ee1f6081afde70f0ce0",
+    "file_path": "research_results/documents/parsed/937374b235c61ee1f6081afde70f0ce0.txt",
+    "metadata": {
+      "source": "third_party:www.aiim.org",
+      "url": "https://www.aiim.org/",
+      "domain": "www.aiim.org",
+      "ingest_date": "2025-12-31T01:06:04.281527",
+      "content_type": "text/html; charset=UTF-8",
+      "original_saved_path": "research_results/third_party_downloads/www.aiim.org/www.aiim.org_e0ea4b3494.html",
+      "text_length": 6874,
+      "checksum": "3f7469db3b8f48cab604189f2f4897322f7e613baf938ec51dbf258d26b20481"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "policy"
+    ],
+    "applicability_tags": [
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 0,
+    "text_length": 6874,
+    "indexed_date": "2025-12-31T01:06:04.510306"
+  },
+  {
+    "id": "ce1173050faddc89621200959d54906c",
+    "file_path": "research_results/documents/parsed/ce1173050faddc89621200959d54906c.txt",
+    "metadata": {
+      "source": "third_party:restorativejustice.org",
+      "url": "https://restorativejustice.org/",
+      "domain": "restorativejustice.org",
+      "ingest_date": "2025-12-31T01:06:04.452572",
+      "content_type": "text/html; charset=UTF-8",
+      "original_saved_path": "research_results/third_party_downloads/restorativejustice.org/restorativejustice.org.html",
+      "text_length": 2586,
+      "checksum": "40809453ffa32d490b5ff36b490a8ef31011dfe1e6e33c8387dd25576ae120f5"
+    },
+    "dei_keywords": [],
+    "proxy_keywords": [],
+    "binding_keywords": [],
+    "applicability_tags": [],
+    "risk_score": 0,
+    "text_length": 2586,
+    "indexed_date": "2025-12-31T01:06:04.510436"
+  }
+]

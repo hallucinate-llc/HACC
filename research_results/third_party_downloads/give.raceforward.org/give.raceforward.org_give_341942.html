@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  id="ng-app"
+  xmlns:ng="http://angularjs.org"
+  data-ng-app="classy.frs.donation"
+  data-ng-strict-di
+>
+  <head>
+     
+    <script type="38a7068f0cd85bb2e7011184-text/javascript" src="https://pg.feroot.com/v1/bundle/fa8863fe-d29e-4098-a40d-114696c74ec4"></script>
+     
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <!--[if lte IE 7]>
+      <script src="/path/to/json2.js"></script>
+    <![endif]-->
+
+    <!--[if lte IE 9]>
+      <base href="/donation/" />
+    <![endif]-->
+    <base href="/" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=2.0" />
+
+    <!-- Prefetch DNS for external assets -->
+    <!-- DNS prefetch is also supported by all major browsers except for iOS Safari, Opera Mini, and Android Browser. -->
+    <link rel="dns-prefetch" href="//maps.googleapis.com" />
+    <link rel="dns-prefetch" href="//www.google-analytics.com" />
+    <link rel="dns-prefetch" href="//www.youtube.com" />
+    <link rel="dns-prefetch" href="//platform.twitter.com" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//ajax.googleapis.com" />
+    <link rel="dns-prefetch" href="//code.jquery.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <!-- <link rel="dns-prefetch" href="//cdn.heapanalytics.com"> -->
+    <link rel="dns-prefetch" href="//syndication.twitter.com" />
+    <!-- <link rel="dns-prefetch" href="//heapanalytics.com"> -->
+    <link rel="dns-prefetch" href="//cdn.rum-ingress-coralogix.com" />
+
+    <!-- Meta and open graph tags -->
+    <title ng-bind="MetaTags.title">Colorlines</title>
+    <meta name="description" content="{{MetaTags.description}}" />
+    <meta name="fragment" content="!" />
+    <meta
+      ng-repeat="(key, value) in MetaTags.properties"
+      property="{{key}}"
+      content="{{value}}"
+    />
+    <meta name="prerender-status-code" content="200" />
+    <meta
+      name="prerender-header"
+      ng-if="MetaTags.prerender.header"
+      content=""
+    />
+
+
+    
+<!-- Stylesheet for IE9 that doesn't have as many selectors -->
+<!--[if lte IE 9]>
+  <link
+    href="https://prod-frs.content.classy.org/prod/b2b90989ecbf193aa2c9cf6a2cab18c244a90fa2/static/frs/checkout.css"
+    type="text/css"
+    rel="stylesheet"
+    id="classy-css-frs"
+  />
+<![endif]-->
+
+<link
+  href="https://prod-frs.content.classy.org/prod/b2b90989ecbf193aa2c9cf6a2cab18c244a90fa2/static/frs/main.css"
+  type="text/css"
+  rel="stylesheet"
+  rel="preload"
+  as="style"
+  id="classy-css-frs"
+/>
+
+<!-- Google Tag Manager -->
+<script type="38a7068f0cd85bb2e7011184-text/javascript" async defer>
+    dataLayer = [
+      {
+        'campaign': {
+          'id': 341942,
+          'name': 'Colorlines',
+          'country': 'US',
+          'created_at': '2021-05-25T22:35:46+0000',
+          'normalized_currency_code': 'USD',
+          'designation_id': 163737,
+          'normalized_goal': 100000,
+          'raw_goal': '100000.000',
+          'raw_currency_code': 'USD',
+          'type': 'donation'
+        },
+        'organization': {
+          'id': 73788,
+          'name': 'Race Forward'
+        }
+      },
+      {
+        'event': 'optimize.activate'
+      }
+  ];
+
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WGKK4PM');
+</script>
+<!-- End Google Tag Manager -->
+
+<!-- Classy Custom JS (CL-1270)-->
+ 
+<script src="https://files.doublethedonation.com/app/ddplugin.js" async defer type="38a7068f0cd85bb2e7011184-text/javascript"></script>
+<link
+  href="https://files.doublethedonation.com/app/ddplugin.css"
+  rel="stylesheet"
+  rel="preload"
+  as="style"
+/>
+ 
+<!-- End Classy Custom JS -->
+
+ 
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://assets.classy.org/15831672/b9b320ee-5809-11ee-a384-0ab5f022c8b7.png"
+    />
+       
+    <!-- <script
+      data-cfasync="false"
+      data-tamper-resist="off"
+      data-sync="off"
+      src="https://transcend-cdn.com/cm/d1a4d701-2ca2-487c-9b90-59558395eb44/airgap.js"
+    ></script> -->
+    <script
+      data-cfasync="false"
+      data-tamper-resist="off"
+      src="https://transcend-cdn.com/cm/d1a4d701-2ca2-487c-9b90-59558395eb44/airgap.js"
+    ></script>
+   
+    <!-- GTAG SCRIPT FOR GOOGLE ANALYTICS 4 -->
+
+    <!-- STRIPE: LOAD ON ALL PAGES FOR FRAUD DETECTION -->
+    <script src="https://js.stripe.com/v3/" async type="38a7068f0cd85bb2e7011184-text/javascript"></script>
+    <!-- END STRIPE -->
+
+    <!-- CLASSY OPTIMIZELY -->
+    <script src="https://cdn.optimizely.com/js/4753700085301248.js" type="38a7068f0cd85bb2e7011184-text/javascript"></script>
+    <!-- END CLASSY OPTIMIZELY -->
+
+    <script type="38a7068f0cd85bb2e7011184-text/javascript">
+      function isCookiePresentWithGivenNamePattern(pattern) {
+        const match = document.cookie.match(new RegExp('(^| )' + '[a-zA-Z_]*' + pattern + '=([^;]+)'));
+        return match;
+      }
+
+      // Use Classy Login
+      var ucl =
+        document.cookie
+          .split('; ')
+          .find((row) => row.startsWith('ucl='))
+          ?.split('=')[1] === 'true'
+          ? true
+          : false;
+
+      // AI-5149: If no access token cookie exists, do not use Classy Login    
+      if (!isCookiePresentWithGivenNamePattern('_accessToken')) {
+        ucl = false;
+      }   
+    </script>
+  </head>
+
+  <body class="event preload" ng-class="activeAppClass">
+    <div sc-status-banner></div>
+
+    <script type="38a7068f0cd85bb2e7011184-text/javascript">
+  localStorage['heap-id'] = '1566116007';
+
+  /**
+   * Generates a RFC4122 version 4 compliant UUID
+   * @returns {string}
+   */
+  const generateUuid4 = function () {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+      // eslint-disable-next-line no-bitwise
+      const r = (Math.random() * 16) | 0;
+      // eslint-disable-next-line no-bitwise
+      const v = c === 'x' ? r : (r & 0x3) | 0x8;
+      return `${v.toString(16)}`;
+    });
+  };
+
+  /**
+   * Extracts a value from a cookie
+   * @param {string} cookieName
+   * @returns {undefined | string}
+   */
+  const getValueFromCookie = function (cookieName) {
+    const cookies = document.cookie.split(';');
+
+    for (let i = 0; i < cookies.length; i += 1) {
+      const cookie = cookies[i].trim();
+      if (cookie.startsWith(`${cookieName}=`)) {
+        return cookie.substring(`${cookieName}=`.length, cookie.length);
+      }
+    }
+    return undefined;
+  };
+
+  /**
+   * @param {string} cookieName
+   * @param {string} value
+   */
+  const setCookie = function (cookieName, value) {
+    const secure = window.location.protocol === 'https:' ? '; Secure' : '';
+    document.cookie = `${cookieName}=${value}; path=/; SameSite=Lax${secure}`;
+  };
+
+  /**
+   * Gets a UUID from cookie or generates a new one if not found
+   * @param {string} cookieName - Name of the cookie to check
+   * @returns {string} UUID from cookie or newly generated
+   */
+  const getOrCreateSessionId = function (cookieName) {
+    const cookieValue = getValueFromCookie(cookieName)
+    if (cookieValue) {
+      return cookieValue
+    } else {
+      const newSessionId = generateUuid4();
+      setCookie(cookieName, newSessionId);
+      return newSessionId;
+    }
+  };
+  localStorage['classy-session-id'] = getOrCreateSessionId('classy-session-id');
+
+</script>
+
+<!-- Main View -->
+<div data-ui-view></div>
+
+    <script type="38a7068f0cd85bb2e7011184-text/javascript">
+      var SC = {"assetsCDNUrl":"https:\x2F\x2Fprod-frs.content.classy.org\x2Fprod\x2Fb2b90989ecbf193aa2c9cf6a2cab18c244a90fa2","sso":{"redirect_uri":"https:\x2F\x2Fwww.classy.org","redirect_path":"\x2Foauth2\x2Fsso_callback","url":"","prefix":"\x2Fsso","scope":"read_profile","clientId":"hkDllBPffAW7sKhdYbpNc5PrwMIVbh"},"classyLogin":{"client_id":"0oa1r79c5bwo6JCjP0h8","okta_host":"https:\x2F\x2Fokta.classy.org","prefix":"\x2Fauth","redirect_uri":"https:\x2F\x2Fwww.classy.org","redirect_path":"\x2Foauth2\x2Fsso_callback","url":"https:\x2F\x2Fwww.classy.org","app_cookie_name":"frs","scope":"organization:read,organization:write,member:read,member:write,api-app:read,me,offline_access,openid,asset:read,asset:write"},"paypal":{"paypal_platform_fee_account_id":"A9Y286U468UZJ"},"organization":{"contact_phone":"5103384932","privacy_policy_url":"https:\x2F\x2Fwww.raceforward.org\x2Fprivacy","status":"active","plan_type":"PAID","updated_at":"2025-12-30T21:02:49\x2B0000","is_gift_aid_available":false,"logo_id":7008745,"signature_id":6898127,"fixed_fot_percent":"5.00","opt_in_wording":"It\x27s\x20okay\x20to\x20contact\x20me\x20in\x20the\x20future.","timezone_identifier":"America\x2FNew_York","canceled_at":null,"resend_receipt_flag":true,"flex_rate_percent":null,"show_donation_stats_on_home_page":true,"show_donation_stats_on_rgp":false,"welcome_message":"Thank\x20you\x20for\x20all\x20you\x20do\x20to\x20make\x20our\x20mission\x20possible","allow_download_annual_receipts":true,"gfm_charity_community_id":12984,"is_gfm_npo_page_claimed":true,"has_gfm_npo_transactions":false,"gfm_connect_banner_count":0,"gfm_connect_banner_dismissed_at":null,"gfm_npo_page_slug":"race-forward-race-forward","is_gfm_npo_page_verified":true,"customer_tier":null,"id":73788,"tax_identifier":"94-2759879","name":"Race\x20Forward","contact_first_name":"Glenn","contact_last_name":"Harris","address":"PO\x20Box\x2096353","city":"Washington","state":"DC","postal_code":"20090-6353","country":"US","url":"https:\x2F\x2Fwww.raceforward.org\x2F","description":"","mission":"","thumbnail":"https:\x2F\x2Fassets.classy.org\x2F18879168\x2F6e5144ac-bd8b-11eb-a82e-0e8cb3dfd4c3.png","email_address":"development\x40raceforward.org","twitter":"\x40raceforward","facebook":"https:\x2F\x2Ffacebook.com\x2FRaceForward","are_activity_feeds_disabled":false,"created_at":"2021-03-31T22:26:37\x2B0000","past_due_at":null,"currency_code":"USD","has_employer_match":false,"type":null,"signature_url":"https:\x2F\x2Fassets.classy.org\x2F18879168\x2F58207992-a93f-11eb-99d0-0a58a9feac02.png","signature_name":"Glenn\x20Harris","signature_title":"President,\x20Race\x20Forward\x20\x26\x20Publisher,\x20Colorlines","currency":"USD","ein":"94-2759879","has_double_the_donation_employer_match":true,"payment_provider_id":null,"payment_provider_name":null,"restricted_country_information":null,"resource_urn":"organization.73788","mgive_settings":null,"branding":{"header_url":"https:\x2F\x2Fwww.raceforward.org\x2F","header_image":"https:\x2F\x2Fassets.classy.org\x2F18879168\x2F1213ab2c-8878-11ec-9ded-0a58a9feac03.png","header_image_style":null,"header_image_height":0,"header_footer_color":"","header_color":null,"background_image":null,"background_image_style":"","background_color":"","hide_classy_logo":true,"background_image_asset_id":null,"favicon_asset_id":null,"header_background_image_asset_id":null,"header_image_asset_id":8265383,"hero_image_asset_id":7008744,"font_family":"var\x28--classy-font__font-family--poppins\x29","organization_id":73788,"header_background_image":null,"custom_script":null,"primary_color":"rgb\x2812,\x2012,\x2012\x29","secondary_color":null,"background_image_asset_url":null,"header_background_image_asset_url":null,"header_image_asset_url":"https:\x2F\x2Fassets.classy.org\x2F18879168\x2F1213ab2c-8878-11ec-9ded-0a58a9feac03.png","hero_image_asset_url":"https:\x2F\x2Fassets.classy.org\x2F18879168\x2F6e4ea81e-bd8b-11eb-997d-0e0b8508229d.jpg","favicon":"https:\x2F\x2Fassets.classy.org\x2F15831672\x2Fb9b320ee-5809-11ee-a384-0ab5f022c8b7.png","favicon_asset_url":null,"resource_urn":"organization.73788\x2Fbranding.97407"},"tags":["classy-pay-application-id:16123","early-access:password-reset-flow-improvements","early-access:crypto-giving","early-access:embedded-giving-v2","early-access:recurring_card_expiring","early-access:asr-2022","early-access:asr-2024","studio-quickstart","fullstory","noindex:campaigns:\x2A","npo-checkout-feroot","early-access:gfm-payments","intelligent-asks","quick_start_template_gallery","enable_full_address_checkout","early-access:donation-sticky-skinny-buttons","early-access:checkout-single-column-layout","early-access:checkout-reordered-steps","experiment:npo_easy_cancel","frs-share-update","early-access:list-past-donnors"],"providers":["Classy\x20Pay"],"domain_mask":{"okta_trusted_origin_id":null,"created_at":null,"updated_at":"2023-09-20T23:03:50\x2B0000","id":3170,"value":"give.raceforward.org","favicon":"https:\x2F\x2Fassets.classy.org\x2F15831672\x2Fb9b320ee-5809-11ee-a384-0ab5f022c8b7.png","facebook_app_id":"","is_primary":true,"redirect_url":"https:\x2F\x2Fwww.raceforward.org\x2F","resource_urn":"organization.73788\x2Fdomain.3170","parent_domain":"raceforward.org"},"hasProcessor":false,"facebookChannel":{"status":false},"doubleTheDonationChannel":{"publicKey":"SDNc3a66OxJMl5dQ"},"metaCapiChannel":{"pixelID":"1615565713153452"},"chariotIntegration":{"active":false,"chariot_connect_id":null},"achAccountRoutingEnabled":false,"isIAAPlanEnabled":true,"hasEarlyAccessToABTesting":false,"skipOptimizely":false,"includeDafPayment":false,"ferootEnabled":true},"currencies":{"data":[{"currency":"AED","name":"United\x20Arab\x20Emirates\x20dirham","decimals":2},{"currency":"AFN","name":"Afghan\x20afghani","decimals":2},{"currency":"ALL","name":"Albanian\x20lek","decimals":2},{"currency":"AMD","name":"Armenian\x20dram","decimals":2},{"currency":"ANG","name":"Netherlands\x20Antillean\x20guilder","decimals":2},{"currency":"AOA","name":"Angolan\x20kwanza","decimals":2},{"currency":"ARS","name":"Argentine\x20peso","decimals":2},{"currency":"AUD","name":"Australian\x20dollar","decimals":2},{"currency":"AWG","name":"Aruban\x20florin","decimals":2},{"currency":"AZN","name":"Azerbaijani\x20manat","decimals":2},{"currency":"BAM","name":"Bosnia\x20and\x20Herzegovina\x20convertible\x20mark","decimals":2},{"currency":"BBD","name":"Barbados\x20dollar","decimals":2},{"currency":"BDT","name":"Bangladeshi\x20taka","decimals":2},{"currency":"BGN","name":"Bulgarian\x20lev","decimals":2},{"currency":"BHD","name":"Bahraini\x20dinar","decimals":3},{"currency":"BIF","name":"Burundian\x20franc","decimals":0},{"currency":"BMD","name":"Bermudian\x20dollar\x20\x28customarily\x20known\x20as\x20Bermuda\x20dollar\x29","decimals":2},{"currency":"BND","name":"Brunei\x20dollar","decimals":2},{"currency":"BOB","name":"Boliviano","decimals":2},{"currency":"BRL","name":"Brazilian\x20real","decimals":2},{"currency":"BSD","name":"Bahamian\x20dollar","decimals":2},{"currency":"BTN","name":"Bhutanese\x20ngultrum","decimals":2},{"currency":"BWP","name":"Botswana\x20pula","decimals":2},{"currency":"BZD","name":"Belize\x20dollar","decimals":2},{"currency":"CAD","name":"Canadian\x20dollar","decimals":2},{"currency":"CDF","name":"Congolese\x20franc","decimals":2},{"currency":"CHF","name":"Swiss\x20franc","decimals":2},{"currency":"CLF","name":"Unidad\x20de\x20Fomento\x20\x28funds\x20code\x29","decimals":0},{"currency":"CLP","name":"Chilean\x20peso","decimals":0},{"currency":"CNY","name":"Chinese\x20yuan","decimals":2},{"currency":"COP","name":"Colombian\x20peso","decimals":2},{"currency":"CRC","name":"Costa\x20Rican\x20colon","decimals":2},{"currency":"CUC","name":"Cuban\x20convertible\x20peso","decimals":2},{"currency":"CUP","name":"Cuban\x20peso","decimals":2},{"currency":"CVE","name":"Cape\x20Verde\x20escudo","decimals":0},{"currency":"CZK","name":"Czech\x20koruna","decimals":2},{"currency":"DJF","name":"Djiboutian\x20franc","decimals":0},{"currency":"DKK","name":"Danish\x20krone","decimals":2},{"currency":"DOP","name":"Dominican\x20peso","decimals":2},{"currency":"DZD","name":"Algerian\x20dinar","decimals":2},{"currency":"EGP","name":"Egyptian\x20pound","decimals":2},{"currency":"ERN","name":"Eritrean\x20nakfa","decimals":2},{"currency":"ETB","name":"Ethiopian\x20birr","decimals":2},{"currency":"EUR","name":"Euro","decimals":2},{"currency":"FJD","name":"Fiji\x20dollar","decimals":2},{"currency":"FKP","name":"Falkland\x20Islands\x20pound","decimals":2},{"currency":"GBP","name":"Pound\x20sterling","decimals":2},{"currency":"GEL","name":"Georgian\x20lari","decimals":2},{"currency":"GHS","name":"Ghanaian\x20cedi","decimals":2},{"currency":"GIP","name":"Gibraltar\x20pound","decimals":2},{"currency":"GMD","name":"Gambian\x20dalasi","decimals":2},{"currency":"GNF","name":"Guinean\x20franc","decimals":0},{"currency":"GTQ","name":"Guatemalan\x20quetzal","decimals":2},{"currency":"GYD","name":"Guyanese\x20dollar","decimals":2},{"currency":"HKD","name":"Hong\x20Kong\x20dollar","decimals":2},{"currency":"HNL","name":"Honduran\x20lempira","decimals":2},{"currency":"HTG","name":"Haitian\x20gourde","decimals":2},{"currency":"HUF","name":"Hungarian\x20forint","decimals":2},{"currency":"IDR","name":"Indonesian\x20rupiah","decimals":2},{"currency":"ILS","name":"Israeli\x20new\x20shekel","decimals":2},{"currency":"INR","name":"Indian\x20rupee","decimals":2},{"currency":"IQD","name":"Iraqi\x20dinar","decimals":3},{"currency":"IRR","name":"Iranian\x20rial","decimals":0},{"currency":"ISK","name":"Icelandic\x20kr\u00F3na","decimals":0},{"currency":"JMD","name":"Jamaican\x20dollar","decimals":2},{"currency":"JOD","name":"Jordanian\x20dinar","decimals":3},{"currency":"JPY","name":"Japanese\x20yen","decimals":0},{"currency":"KES","name":"Kenyan\x20shilling","decimals":2},{"currency":"KGS","name":"Kyrgyzstani\x20som","decimals":2},{"currency":"KHR","name":"Cambodian\x20riel","decimals":2},{"currency":"KMF","name":"Comoro\x20franc","decimals":0},{"currency":"KPW","name":"North\x20Korean\x20won","decimals":0},{"currency":"KRW","name":"South\x20Korean\x20won","decimals":0},{"currency":"KWD","name":"Kuwaiti\x20dinar","decimals":3},{"currency":"KYD","name":"Cayman\x20Islands\x20dollar","decimals":2},{"currency":"KZT","name":"Kazakhstani\x20tenge","decimals":2},{"currency":"LAK","name":"Lao\x20kip","decimals":0},{"currency":"LBP","name":"Lebanese\x20pound","decimals":0},{"currency":"LKR","name":"Sri\x20Lankan\x20rupee","decimals":2},{"currency":"LRD","name":"Liberian\x20dollar","decimals":2},{"currency":"LSL","name":"Lesotho\x20loti","decimals":2},{"currency":"LYD","name":"Libyan\x20dinar","decimals":3},{"currency":"MAD","name":"Moroccan\x20dirham","decimals":2},{"currency":"MDL","name":"Moldovan\x20leu","decimals":2},{"currency":"MGA","name":"Malagasy\x20ariary","decimals":0},{"currency":"MKD","name":"Macedonian\x20denar","decimals":0},{"currency":"MMK","name":"Myanma\x20kyat","decimals":0},{"currency":"MNT","name":"Mongolian\x20tugrik","decimals":2},{"currency":"MOP","name":"Macanese\x20pataca","decimals":2},{"currency":"MUR","name":"Mauritian\x20rupee","decimals":2},{"currency":"MVR","name":"Maldivian\x20rufiyaa","decimals":2},{"currency":"MWK","name":"Malawian\x20kwacha","decimals":2},{"currency":"MXN","name":"Mexican\x20peso","decimals":2},{"currency":"MYR","name":"Malaysian\x20ringgit","decimals":2},{"currency":"MZN","name":"Mozambican\x20metical","decimals":2},{"currency":"NAD","name":"Namibian\x20dollar","decimals":2},{"currency":"NGN","name":"Nigerian\x20naira","decimals":2},{"currency":"NIO","name":"Nicaraguan\x20c\u00F3rdoba","decimals":2},{"currency":"NOK","name":"Norwegian\x20krone","decimals":2},{"currency":"NPR","name":"Nepalese\x20rupee","decimals":2},{"currency":"NZD","name":"New\x20Zealand\x20dollar","decimals":2},{"currency":"OMR","name":"Omani\x20rial","decimals":3},{"currency":"PAB","name":"Panamanian\x20balboa","decimals":2},{"currency":"PEN","name":"Peruvian\x20nuevo\x20sol","decimals":2},{"currency":"PGK","name":"Papua\x20New\x20Guinean\x20kina","decimals":2},{"currency":"PHP","name":"Philippine\x20peso","decimals":2},{"currency":"PKR","name":"Pakistani\x20rupee","decimals":2},{"currency":"PLN","name":"Polish\x20z\u0142oty","decimals":2},{"currency":"PYG","name":"Paraguayan\x20guaran\u00ED","decimals":0},{"currency":"QAR","name":"Qatari\x20riyal","decimals":2},{"currency":"RON","name":"Romanian\x20new\x20leu","decimals":2},{"currency":"RSD","name":"Serbian\x20dinar","decimals":2},{"currency":"RUB","name":"Russian\x20rouble","decimals":2},{"currency":"RWF","name":"Rwandan\x20franc","decimals":0},{"currency":"SAR","name":"Saudi\x20riyal","decimals":2},{"currency":"SBD","name":"Solomon\x20Islands\x20dollar","decimals":2},{"currency":"SCR","name":"Seychelles\x20rupee","decimals":2},{"currency":"SDG","name":"Sudanese\x20pound","decimals":2},{"currency":"SEK","name":"Swedish\x20krona\x2Fkronor","decimals":2},{"currency":"SGD","name":"Singapore\x20dollar","decimals":2},{"currency":"SHP","name":"Saint\x20Helena\x20pound","decimals":2},{"currency":"SLL","name":"Sierra\x20Leonean\x20leone","decimals":0},{"currency":"SOS","name":"Somali\x20shilling","decimals":2},{"currency":"SRD","name":"Surinamese\x20dollar","decimals":2},{"currency":"SSP","name":"South\x20Sudanese\x20pound","decimals":2},{"currency":"STD","name":"S\u00E3o\x20Tom\u00E9\x20and\x20Pr\u00EDncipe\x20dobra","decimals":0},{"currency":"SYP","name":"Syrian\x20pound","decimals":2},{"currency":"SZL","name":"Swazi\x20lilangeni","decimals":2},{"currency":"THB","name":"Thai\x20baht","decimals":2},{"currency":"TJS","name":"Tajikistani\x20somoni","decimals":2},{"currency":"TMT","name":"Turkmenistani\x20manat","decimals":2},{"currency":"TND","name":"Tunisian\x20dinar","decimals":3},{"currency":"TOP","name":"Tongan\x20pa\u02BBanga","decimals":2},{"currency":"TRY","name":"Turkish\x20lira","decimals":2},{"currency":"TTD","name":"Trinidad\x20and\x20Tobago\x20dollar","decimals":2},{"currency":"TWD","name":"New\x20Taiwan\x20dollar","decimals":2},{"currency":"TZS","name":"Tanzanian\x20shilling","decimals":2},{"currency":"UAH","name":"Ukrainian\x20hryvnia","decimals":2},{"currency":"UGX","name":"Ugandan\x20shilling","decimals":2},{"currency":"USD","name":"United\x20States\x20dollar","decimals":2},{"currency":"UYU","name":"Uruguayan\x20peso","decimals":2},{"currency":"UZS","name":"Uzbekistan\x20som","decimals":2},{"currency":"VND","name":"Vietnamese\x20dong","decimals":0},{"currency":"VUV","name":"Vanuatu\x20vatu","decimals":0},{"currency":"WST","name":"Samoan\x20tala","decimals":2},{"currency":"XAF","name":"CFA\x20franc\x20BEAC","decimals":0},{"currency":"XCD","name":"East\x20Caribbean\x20dollar","decimals":2},{"currency":"XDR","name":"Special\x20drawing\x20rights","decimals":null},{"currency":"XOF","name":"CFA\x20franc\x20BCEAO","decimals":0},{"currency":"XPF","name":"CFP\x20franc","decimals":0},{"currency":"YER","name":"Yemeni\x20rial","decimals":2},{"currency":"ZAR","name":"South\x20African\x20rand","decimals":2}]},"analyticsServiceSettings":{"campaign":{},"organization":{"google_tag_manager":{"id":15885,"trackable_id":73788,"trackable_type":"organization","service_name":"google_tag_manager","parameters":{"container_id":"GTM-WGKK4PM"},"tracked_events":[],"resource_urn":"settings.15885"}}},"donationContext":"campaign","processors":{"PayPal_Commerce":{"id":"35074","name":"PAYPAL_COMMERCE","status":"ACTIVE","currency":"USD"},"Venmo":{"id":"35074","name":"PAYPAL_COMMERCE","status":"ACTIVE","currency":"USD"},"Stripe":{"id":"25917","name":"STRIPE","status":"ACTIVE","currency":"USD"},"ACH":{"id":"25917","name":"STRIPE","status":"ACTIVE","currency":"USD"},"DW":{"id":"25917","name":"STRIPE","status":"ACTIVE","currency":"USD"}},"campaign":{"internal_name":"Colorlines\x20Main\x20Donation\x20Page","default_team_appeal_email":null,"default_team_thank_you_email":null,"status":"active","redirect_url":null,"channel_id":null,"category_id":null,"channel_keywords":null,"timezone_identifier":"America\x2FLos_Angeles","created_with":"api","contact_phone":"510-338-4932","default_page_goal":500,"default_team_goal":500,"location_details":"","raw_currency_code":"USD","raw_goal":"100000.000","sort_designation_by":"A-Z","display_group_name":false,"campaign_template_id":null,"classy_live_event_id":null,"id":341942,"name":"Colorlines","started_at":"2021-05-25T22:34:13\x2B0000","ended_at":null,"default_page_appeal_email":null,"default_page_thank_you_email":null,"venue":null,"created_at":"2021-05-25T22:35:46\x2B0000","updated_at":"2024-09-12T17:31:30\x2B0000","postal_code":null,"address1":null,"city":null,"state":null,"country":"US","hide_from_profile":false,"goal":100000,"external_url":"","contact_email":"donations\x40raceforward.org","designation_id":163737,"type":"donation","is_general":0,"external_id":null,"organization_id":73788,"is_fees_free":false,"canonical_url":"https:\x2F\x2Fwww.classy.org\x2Fgive\x2F341942\x2F\x23\x21\x2Fdonation\x2Fcheckout","currency_code":"USD","effective_fixed_fot_percent":"5.00","effective_flex_rate_percent":null,"effective_recaptcha_settings":"DISABLED","logo_id":9800946,"logo_url":"https:\x2F\x2Fassets.classy.org\x2F18697833\x2Feb1fb0b4-726a-11ed-baa0-0a58a9feac02.png","team_cover_photo_id":null,"team_cover_photo_url":null,"add_registration_fee":false,"allow_duplicate_fundraisers":false,"allow_fundraising_pages":false,"allow_team_fundraising":false,"crypto_giving":"disabled","default_page_appeal":null,"default_page_post_asset_id":null,"default_page_post_body":null,"default_page_post_title":null,"default_team_appeal":null,"default_team_post_asset_id":null,"default_team_post_body":null,"default_team_post_title":null,"default_thank_you_text":null,"embedded_giving":"disabled","exit_modal":true,"fixed_fot_percent":"5.00","flex_rate_percent":null,"is_billing_address_required":false,"is_ended_at_hidden":false,"is_started_at_hidden":false,"pages_can_set_appeal":true,"pages_can_set_goal":true,"team_membership_policy":"optional","teams_can_set_appeal":true,"teams_can_set_goal":true,"ticket_pass_on_fees":false,"use_intelligent_ask_onetime":true,"use_intelligent_ask_recurring":true,"whitelist_url":null,"allow_ecards":false,"classy_mode_appeal":"\x3Cp\x3EI\u2019d\x20like\x20to\x20cover\x20the\x20fees\x20associated\x20with\x20my\x20donation\x20so\x20more\x20of\x20my\x20donation\x20goes\x20directly\x20to\x20Colorlines.\x3C\x2Fp\x3E","classy_mode_checked_by_default":true,"classy_mode_enabled":true,"corporate_donation_enabled":true,"custom_url":null,"daf_enabled":false,"dcf_allowed":false,"dcf_enabled":false,"disable_donation_attribution":false,"hide_anonymous_donations":false,"hide_contact_opt_in":false,"hide_donation_amounts":false,"hide_dedications":false,"hide_donation_comments":false,"hide_recurring_end_date":false,"minimum_donation_amount":1,"offer_dedication_postal_notifications":false,"opt_in_checked_by_default":true,"return_url":null,"send_dedication_emails":true,"fundraising_tracking_code":null,"is_golden_campaign":false,"resource_urn":"organization.73788\x2Fcampaign.341942","faqs":{"current_page":1,"data":[{"question":"Is\x20this\x20donation\x20tax\x20deductible\x3F","answer":"Colorlines\x20is\x20published\x20by\x20Race\x20Forward.\x20Race\x20Forward\x20is\x20a\x20501\x28c\x293\x20tax-exempt\x20organization\x20\x28tax\x20ID\x2094-2759879\x29\x20and\x20your\x20donation\x20is\x20tax-deductible\x20within\x20the\x20guidelines\x20of\x20U.S.\x20law.\x20To\x20claim\x20a\x20donation\x20as\x20a\x20deduction\x20on\x20your\x20U.S.\x20taxes,\x20please\x20keep\x20your\x20email\x20receipt\x20as\x20your\x20official\x20donation\x20documentation.","tag":"tax","weight":0,"updated_at":"2021-06-01T17:14:39\x2B0000","id":358363,"organization_id":73788,"campaign_id":341942,"created_at":"2021-05-25T22:35:47\x2B0000","resource_urn":"organization.73788\x2Fcampaign.341942\x2Ffaq.358363"},{"question":"Is\x20my\x20donation\x20secure\x3F","answer":"Yes.\x20The\x20security\x20and\x20confidentiality\x20of\x20your\x20information\x20is\x20our\x20highest\x20priority.\x20We\x20use\x20industry-standard\x20SSL\x20\x28secure\x20socket\x20layer\x29\x20technology\x20to\x20protect\x20your\x20information\x20and\x20provide\x20a\x20safe\x20and\x20secure\x20environment\x20for\x20online\x20donations.\x20We\x20will\x20not\x20sell,\x20trade\x20or\x20share\x20your\x20personal\x20information\x20with\x20any\x20person\x20or\x20entity\x20outside\x20of\x20our\x20organization\x20without\x20receiving\x20your\x20specific\x20permission\x20to\x20do\x20so.","tag":"other","weight":2,"updated_at":"2021-06-01T17:14:39\x2B0000","id":359429,"organization_id":73788,"campaign_id":341942,"created_at":"2021-06-01T17:14:39\x2B0000","resource_urn":"organization.73788\x2Fcampaign.341942\x2Ffaq.359429"},{"question":"Can\x20I\x20give\x20using\x20stock\x20or\x20other\x20appreciated\x20securities\x3F","answer":"Yes\x21\x20Please\x20email\x20us\x20for\x20details\x20and\x20instructions\x20on\x20making\x20a\x20gift\x20of\x20appreciated\x20stocks,\x20bonds,\x20or\x20mutual\x20fund\x20shares:\x20donations\x40raceforward.org","tag":"other","weight":7,"updated_at":"2021-06-01T17:14:39\x2B0000","id":359430,"organization_id":73788,"campaign_id":341942,"created_at":"2021-06-01T17:14:39\x2B0000","resource_urn":"organization.73788\x2Fcampaign.341942\x2Ffaq.359430"},{"question":"How\x20can\x20I\x20have\x20my\x20gift\x20matched\x20by\x20my\x20employer\x3F","answer":"After\x20completing\x20your\x20donation\x20with\x20Race\x20Forward,\x20contact\x20your\x20Human\x20Resources\x20department\x20about\x20your\x20company\x27s\x20matching\x20gift\x20policy.\x20Then,\x20email\x20us\x20your\x20matching\x20gift\x20form\x20to\x20complete\x20and\x20return,\x20along\x20with\x20any\x20pertinent\x20details\x20or\x20instructions:\x20donations\x40raceforward.org","tag":"other","weight":3,"updated_at":"2021-06-01T17:14:39\x2B0000","id":359431,"organization_id":73788,"campaign_id":341942,"created_at":"2021-06-01T17:14:39\x2B0000","resource_urn":"organization.73788\x2Fcampaign.341942\x2Ffaq.359431"},{"question":"Can\x20I\x20mail\x20in\x20a\x20donation\x20with\x20a\x20check\x3F","answer":"Yes\x21\x20Please\x20send\x20your\x20donation\x20to:\x20\nRace\x20Forward\x20\nPO\x20Box\x2096353\nWashington,\x20DC\x2020090-6353","tag":"other","weight":4,"updated_at":"2024-02-12T14:47:13\x2B0000","id":359432,"organization_id":73788,"campaign_id":341942,"created_at":"2021-06-01T17:14:39\x2B0000","resource_urn":"organization.73788\x2Fcampaign.341942\x2Ffaq.359432"},{"question":"Can\x20I\x20donate\x20over\x20the\x20phone\x3F","answer":"Yes\x21\x20Please\x20call\x20\x28332\x29\x20203-0975\x20to\x20connect\x20with\x20one\x20of\x20our\x20team\x20members\x20directly.","tag":"other","weight":5,"updated_at":"2021-06-01T17:14:39\x2B0000","id":359433,"organization_id":73788,"campaign_id":341942,"created_at":"2021-06-01T17:14:39\x2B0000","resource_urn":"organization.73788\x2Fcampaign.341942\x2Ffaq.359433"},{"question":"Can\x20I\x20give\x20to\x20Race\x20Forward\x20through\x20a\x20Donor-Advised-Fund\x20\x28DAF\x29\x3F","answer":"Race\x20Forward\x20is\x20a\x20qualified\x20recipient\x20of\x20grants\x20from\x20donor-advised\x20funds\x20held\x20at\x20a\x20community\x20organizations\x20or\x20financial\x20institutions.\x20You\x20will\x20receive\x20an\x20acknowledgment\x20for\x20your\x20grant,\x20but\x20Race\x20Forward\x20must\x20receipt\x20the\x20institution\x20where\x20your\x20donor-advised\x20fund\x20is\x20held.\x20If\x20your\x20donor-advised\x20fund\x20has\x20an\x20anonymous\x20name,\x20please\x20contact\x20our\x20office\x20to\x20inform\x20us\x20of\x20your\x20gift.\x20We\x20respect\x20your\x20wish\x20to\x20remain\x20anonymous,\x20but\x20would\x20like\x20the\x20opportunity\x20to\x20share\x20our\x20gratitude:\x20donations\x40raceforward.org","tag":"other","weight":9,"updated_at":"2021-06-01T17:14:39\x2B0000","id":359434,"organization_id":73788,"campaign_id":341942,"created_at":"2021-06-01T17:14:39\x2B0000","resource_urn":"organization.73788\x2Fcampaign.341942\x2Ffaq.359434"},{"question":"Will\x20I\x20receive\x20a\x20receipt","answer":"A\x20donation\x20receipt\x20will\x20be\x20sent\x20to\x20you\x20at\x20the\x20email\x20address\x20you\x20provide\x20on\x20this\x20form.\x20If\x20you\x20have\x20not\x20received\x20a\x20receipt,\x20please\x20be\x20sure\x20to\x20check\x20your\x20spam\x20or\x20junk\x20folder.\x20Please\x20be\x20sure\x20to\x20keep\x20a\x20copy\x20of\x20your\x20receipt\x20for\x20tax\x20purposes.","tag":"other","weight":1,"updated_at":"2021-06-01T17:14:39\x2B0000","id":359435,"organization_id":73788,"campaign_id":341942,"created_at":"2021-06-01T17:14:39\x2B0000","resource_urn":"organization.73788\x2Fcampaign.341942\x2Ffaq.359435"},{"question":"Can\x20I\x20give\x20via\x20ACH\x20or\x20wire\x20transfer\x3F","answer":"Yes\x21\x20Please\x20email\x20us\x20for\x20details\x20and\x20instructions\x20on\x20giving\x20via\x20ACH\x20or\x20wire\x20transfer:\x20donations\x40raceforward.org","tag":"other","weight":6,"updated_at":"2021-06-01T17:14:39\x2B0000","id":359436,"organization_id":73788,"campaign_id":341942,"created_at":"2021-06-01T17:14:39\x2B0000","resource_urn":"organization.73788\x2Fcampaign.341942\x2Ffaq.359436"},{"question":"Can\x20I\x20give\x20a\x20gift\x20from\x20my\x20IRA\x3F","answer":"Yes\x21\x20While\x20Required\x20Minimum\x20Distributions\x20\x28RMDs\x29\x20from\x20retirement\x20accounts\x20were\x20waived\x20for\x20the\x20year\x202020,\x20they\x20resume\x20in\x202021.\x20Individuals\x20who\x20are\x20at\x20least\x2070\u00BD\x20years\x20old\x20may\x20transfer\x20a\x20gift\x20up\x20to\x20\x24100,000\x20a\x20year\x20from\x20their\x20qualifying\x20IRA\x20account\x20to\x20Race\x20Forward.\x20To\x20initiate\x20your\x20charitable\x20IRA\x20rollover\x20gift,\x20first\x20contact\x20your\x20IRA\x20administrator\x20to\x20learn\x20if\x20your\x20IRA\x20qualifies.\x20Then\x20send\x20an\x20email\x20to\x20notify\x20us\x20of\x20your\x20gift\x20intentions:\x20donations\x40raceforward.org","tag":"other","weight":8,"updated_at":"2021-06-01T17:14:39\x2B0000","id":359437,"organization_id":73788,"campaign_id":341942,"created_at":"2021-06-01T17:14:39\x2B0000","resource_urn":"organization.73788\x2Fcampaign.341942\x2Ffaq.359437"}],"first_page_url":"https:\x2F\x2Fapi.classy.org\x2F2.0\x2Fcampaigns\x2F341942\x2Ffaqs\x3Fpage\x3D1","from":1,"last_page":1,"last_page_url":"https:\x2F\x2Fapi.classy.org\x2F2.0\x2Fcampaigns\x2F341942\x2Ffaqs\x3Fpage\x3D1","links":[{"url":null,"label":"\x26laquo\x3B\x20Previous","active":false},{"url":"https:\x2F\x2Fapi.classy.org\x2F2.0\x2Fcampaigns\x2F341942\x2Ffaqs\x3Fpage\x3D1","label":"1","active":true},{"url":null,"label":"Next\x20\x26raquo\x3B","active":false}],"next_page_url":null,"path":"https:\x2F\x2Fapi.classy.org\x2F2.0\x2Fcampaigns\x2F341942\x2Ffaqs","per_page":20,"prev_page_url":null,"to":10,"total":10},"questions":{"custom":[],"optional":[]},"promo_codes_available":false,"ticketTypes":[],"ecards":[],"appealSet":{"id":115788,"campaign_id":341942,"facebook_asset_id":9862075,"facebook_video_url":null,"facebook_text":"Founded\x20in\x201989\x20as\x20a\x20quarterly\x20publication,\x20Colorlines\x20is\x20an\x20award-winning\x20nonprofit\x20digital\x20media\x20platform\x20that\u2019s\x20forging\x20a\x20new\x20learning\x20community\x20and\x20political\x20home\x20for\x20racial\x20justice\x20journalism.\x20Join\x20me\x20in\x20subscribing\x20and\x20supporting\x20their\x20work\x21","twitter_text":"Founded\x20in\x201989\x20as\x20a\x20quarterly\x20publication,\x20Colorlines\x20is\x20an\x20award-winning\x20nonprofit\x20digital\x20media\x20platform\x20that\u2019s\x20forging\x20a\x20new\x20learning\x20community\x20and\x20political\x20home\x20for\x20racial\x20justice\x20journalism\x20https:\x2F\x2Fwww.classy.org\x2Fcampaign\x2Fc341942","sms_text":"Colorlines\x20is\x20a\x20nonprofit\x20digital\x20media\x20platform\x20that\u2019s\x20a\x20home\x20for\x20racial\x20justice\x20journalism\x20https:\x2F\x2Fwww.classy.org\x2Fgive\x2F341942\x2F\x23\x21\x2Fdonation\x2Fcheckout","email_subject":"Join\x20me\x21\x20Support\x20and\x20Subscribe\x20to\x20Colorlines\x20today\x21","email_body":"Founded\x20in\x201989\x20as\x20a\x20quarterly\x20publication,\x20Colorlines\x20is\x20an\x20award-winning\x20nonprofit\x20digital\x20media\x20platform\x20that\u2019s\x20forging\x20a\x20new\x20learning\x20community\x20and\x20political\x20home\x20for\x20racial\x20justice\x20journalism.\x20Being\x20reliant\x20on\x20community\x20support\x20means\x20that\x20tax-deductible\x20donations\x20are\x20an\x20investment\x20in\x20their\x20ability\x20to\x20deliver\x20the\x20art,\x20writing,\x20audio,\x20video\x20series,\x20and\x20virtual\x20events\x20that\x20reshape\x20the\x20narratives\x20that\x20divide\x20us\x20and\x20move\x20equity\x20and\x20justice\x20conversations\x20forward.\x20Join\x20me\x20in\x20subscribing\x20and\x20supporting\x20their\x20work\x21\nhttps:\x2F\x2Fwww.classy.org\x2Fgive\x2F341942\x2F\x23\x21\x2Fdonation\x2Fcheckout","facebook_image_url":"https:\x2F\x2Fassets.classy.org\x2F18879168\x2Fd3d890aa-7d92-11ed-b17d-0a58a9feac02.jpg","resource_urn":"organization.73788\x2Fcampaign.341942\x2Fappeal-set.115788"},"designation":{"city":null,"state":null,"is_active":true,"is_complete":false,"external_reference_id":null,"id":163737,"organization_id":73788,"name":"General\x20Support","description":"a\x20designation\x20for\x20general\x20operating\x20support,\x20using\x20a\x20program\x20designation\x20name\x20that\x20is\x20clear\x20to\x20our\x20donors","postal_code":null,"goal":"999999.99","start_time":"1970-01-01\x2008:00:00","end_time":"2970-01-01\x2008:00:00","created_at":"2021-06-29T23:01:27\x2B0000","is_default":false,"updated_at":"2021-06-29T23:01:27\x2B0000","is_display_default":true,"designation_group_id":335166,"is_display_default_updated_at":"2021-08-09T16:52:01\x2B00:00","associated_at":"2021-08-09T16:51:46\x2B00:00","campaign_designation_is_display_default":true,"campaign_designation_is_active":true,"resource_urn":"organization.73788\x2Fdesignation.163737"},"designations_count":1,"campaignTemplateData":null,"tags":[{"id":3195,"name":"email-theme-active","resource_urn":"tag.3195"},{"id":3194,"name":"receipt-active","resource_urn":"tag.3194"}]},"theme":{"type":"donation","start":{"date":"2021-05-25T22:34:12.596Z","time":"2021-05-25T22:34:12.596Z"},"styles":{"headerLogo":{"__media":"image","origin":"upload","assetId":9800946,"title":"Colorlines_Logotype_Full_Black","alt":"Colorlines_Logotype_Full_Black","width":6567,"height":1128,"options":[],"meta":[],"cropData":null,"asset":{"parent_id":null,"state":"uploaded","type":"original","content_type":"image\x2Fpng","size":59611,"alt_text":null,"created_by":18697833,"created_at":"2022-12-02T17:58:25\x2B0000","updated_at":"2022-12-02T17:58:26\x2B0000","cdn_url":"https:\x2F\x2Fassets.classy.org\x2F18697833\x2Feb1fb0b4-726a-11ed-baa0-0a58a9feac02.png","resource_urn":"asset."}},"primaryColor":"rgb\x285,\x20175,\x20151\x29","background":{"preset":"adaptive","color":"rgba\x2864,\x2072,\x2078,\x201\x29","image":null,"repeat":"no-repeat","imageOpacity":100,"colorOpacity":100,"blur":0,"position":"center\x20center","size":"initial","fixed":false},"registerBtnText":"Reserve","scss":null,"css":null,"footerBgColor":"rgb\x2853,\x20186,\x20181\x29","aboutBgColor":"rgb\x2853,\x20186,\x20181\x29","donateButtonColor":"rgb\x2853,\x20186,\x20181\x29","locationBgColor":"rgb\x2853,\x20186,\x20181\x29","aboutContentColor":"rgba\x28255,255,255,1\x29","headlineColor":null},"pages":{"donation":{"background":{"color":null,"image":null,"position":"top\x20center","size":"cover","repeat":"no-repeat","imageOpacity":100,"colorOpacity":100,"blur":0},"block_sections":[{"blocks":[{"type":"header","background":{"color":"rgb\x28255,\x20255,\x20255\x29","image":null,"colorOpacity":100,"imageOpacity":100,"blur":0,"position":"top\x20left","size":"auto\x20auto","repeat":"repeat","fixed":false,"preset":"tile"},"title":"Header","textColor":"rgb\x2844,\x2052,\x2059\x29","logo":{"__media":"image","origin":"upload","assetId":9801100,"title":"Colorlines_Logotype_Full_Black\x20\x281\x29","alt":"Colorlines_Logotype_Full_Black\x20\x281\x29","width":6567,"height":1128,"options":[],"meta":[],"cropData":null,"asset":{"parent_id":null,"state":"uploaded","type":"original","content_type":"image\x2Fpng","size":59611,"alt_text":null,"created_by":18697833,"created_at":"2022-12-02T18:17:11\x2B0000","updated_at":"2022-12-02T18:17:12\x2B0000","cdn_url":"https:\x2F\x2Fassets.classy.org\x2F18697833\x2F8a023506-726d-11ed-b00b-0af414f8c66f.png","resource_urn":"asset."}},"remove":false,"unsortable":true,"updated_at":"2022-12-02T18:17:22.251000Z","created_at":"2021-05-25T22:35:47.000000Z","theme_id":"60ad7bc3cf47911e88310b76","resource_urn":"block.60ad7bc3646eaa1292593476","theme":null,"template":"desktop","logoLink":"donation","id":"60ad7bc3646eaa1292593476"}],"name":"header","position":"top"},{"blocks":[{"type":"donation","background":{"preset":"coverfixed","color":"rgb\x280,\x200,\x200\x29","image":null,"colorOpacity":100,"imageOpacity":100,"blur":0,"position":"center\x20center","size":"cover","repeat":"no-repeat","fixed":true},"title":"Body","loaded":true,"headline":"\x3Cp\x20style\x3D\"font-size:\x2040px\x3B\"\x3E\x3Cstrong\x3E\x3Cspan\x20style\x3D\"font-size:\x2036px\x3B\"\x3EYour\x20support\x20makes\x20an\x20impact.\x26nbsp\x3B\x3C\x2Fspan\x3E\x3C\x2Fstrong\x3E\x3Cstrong\x3E\x3Cspan\x20style\x3D\"font-size:\x2036px\x3B\"\x3EDonate\x20today.\x3C\x2Fspan\x3E\x3C\x2Fstrong\x3E\x3C\x2Fp\x3E","description":"\x3Cp\x20dir\x3D\"ltr\"\x3EToday,\x20thousands\x20of\x20Colorlines\x20visitors\x20are\x20forging\x20a\x20new\x20learning\x20community\x20and\x20political\x20home.\x20Together,\x20we\x20are\x20sharpening\x20our\x20analysis,\x20expanding\x20our\x20paths\x20to\x20connection,\x20and\x20developing\x20online\x20and\x20offline\x20opportunities\x20to\x20take\x20action\x20against\x20injustices\x20and\x20ideologies\x20that\x20fragment\x20our\x20communities.\x20\x26nbsp\x3B\x3C\x2Fp\x3E\x3Cp\x20dir\x3D\"ltr\"\x3EFounded\x20in\x201989\x20as\x20a\x20quarterly\x20publication,\x20Colorlines\x20is\x20an\x20award-winning\x20nonprofit\x20digital\x20media\x20platform\x20that\x20relies\x20on\x20community\x20support.\x20Your\x20tax-deductible\x20contribution\x20provides\x20us\x20resources\x20to\x20deliver\x20the\x20art,\x20writing,\x20audio,\x20video\x20series,\x20and\x20virtual\x20events\x20that\x20are\x20reshaping\x20the\x20narratives\x20that\x20divide\x20us\x20and\x20moving\x20meaningful\x20conversations\x20forward.\x26nbsp\x3B\x3C\x2Fp\x3E\x3Cp\x20dir\x3D\"ltr\"\x3E\x3Cstrong\x3EThe\x20work\x20we\x20do\x20together\x20matters.\x3C\x2Fstrong\x3E\x3C\x2Fp\x3E","donation_amount_appeal":"","questions":[],"recurring-level":[{"type":"one-time","name":"One-time","display_on_page":true},{"type":"monthly","name":"Monthly","display_on_page":true},{"type":"quarterly","name":"Quarterly\x20\x28every\x203\x20months\x29","display_on_page":false},{"type":"semi-annually","name":"Semi\x20Annually\x20\x28every\x206\x20months\x29","display_on_page":false},{"type":"yearly","name":"Yearly\x20\x28once\x20a\x20year\x29","display_on_page":false}],"recurring-default":"monthly","recurring-type":"default","donation-levels":[{"amount":500,"display_on_page":true},{"amount":100,"display_on_page":true},{"amount":50,"display_on_page":true},{"amount":25,"display_on_page":true},{"amount":"Custom","display_on_page":true}],"donation-default":null,"submit-button-text":"Give\x20now\x21","billing_address_autocomplete":true,"unsortable":true,"recurring_donation_experiment":true,"updated_at":"2023-11-03T18:14:41.491000Z","created_at":"2021-05-25T22:35:47.000000Z","theme_id":"60ad7bc3cf47911e88310b76","resource_urn":"block.60ad7bc3226f952bda3db971","theme":null,"template":"desktop","recurring-donation-levels":[{"amount":150,"display_on_page":true,"displayAmount":150},{"amount":75,"display_on_page":true,"displayAmount":75},{"amount":25,"display_on_page":true,"displayAmount":25},{"amount":10,"display_on_page":true,"displayAmount":10},{"amount":"Custom","display_on_page":true}],"recurring-donation-default":10,"id":"60ad7bc3226f952bda3db971"}],"name":"body"},{"blocks":[{"type":"footer","background":{"color":"rgb\x28255,\x20255,\x20255\x29","image":null,"colorOpacity":100,"imageOpacity":100,"blur":0,"position":"center\x20center","size":"cover","repeat":"no-repeat","fixed":false,"preset":"stretch"},"title":"Footer","disable":false,"top":{"text":{"color":"rgb\x280,\x200,\x200\x29"}},"bottom":{"text":{"color":"rgb\x28255,255,255\x29"}},"poweredByClassy":true,"backToTop":true,"remove":false,"unsortable":true,"updated_at":"2022-12-05T18:44:48.343000Z","created_at":"2021-05-25T22:35:47.000000Z","theme_id":"60ad7bc3cf47911e88310b76","resource_urn":"block.60ad7bc330d42a4e1f6f1330","theme":null,"template":"desktop","logo":{"__media":"image","origin":"upload","assetId":9808826,"title":"Colorlines_Logotype_Full_Black\x20\x281\x29","alt":"Colorlines_Logotype_Full_Black\x20\x281\x29","width":6567,"height":1128,"options":[],"meta":[],"cropData":null,"asset":{"parent_id":null,"state":"uploaded","type":"original","content_type":"image\x2Fpng","size":59611,"alt_text":null,"created_by":18697833,"created_at":"2022-12-05T18:42:24\x2B0000","updated_at":"2022-12-05T18:42:26\x2B0000","cdn_url":"https:\x2F\x2Fassets.classy.org\x2F18697833\x2F8f6f74e8-74cc-11ed-9545-0a58a9feac02.png","resource_urn":"asset."}},"id":"60ad7bc330d42a4e1f6f1330"}],"name":"footer","position":"bottom"}]},"thank-you":{"background":{"color":null,"image":null,"position":"top\x20center","size":"cover","repeat":"no-repeat","imageOpacity":100,"colorOpacity":100,"blur":0},"block_sections":[{"blocks":[{"type":"header","background":{"color":"rgb\x28255,\x20255,\x20255\x29","image":null,"colorOpacity":100,"imageOpacity":100,"blur":0,"position":"top\x20left","size":"auto\x20auto","repeat":"repeat","fixed":false,"preset":"tile"},"title":"Header","textColor":"rgb\x2844,\x2052,\x2059\x29","logo":{"__media":"image","origin":"upload","assetId":9801100,"title":"Colorlines_Logotype_Full_Black\x20\x281\x29","alt":"Colorlines_Logotype_Full_Black\x20\x281\x29","width":6567,"height":1128,"options":[],"meta":[],"cropData":null,"asset":{"parent_id":null,"state":"uploaded","type":"original","content_type":"image\x2Fpng","size":59611,"alt_text":null,"created_by":18697833,"created_at":"2022-12-02T18:17:11\x2B0000","updated_at":"2022-12-02T18:17:12\x2B0000","cdn_url":"https:\x2F\x2Fassets.classy.org\x2F18697833\x2F8a023506-726d-11ed-b00b-0af414f8c66f.png","resource_urn":"asset."}},"remove":false,"unsortable":true,"updated_at":"2022-12-02T18:17:22.251000Z","created_at":"2021-05-25T22:35:47.000000Z","theme_id":"60ad7bc3cf47911e88310b76","resource_urn":"block.60ad7bc3646eaa1292593476","theme":null,"template":"desktop","logoLink":"donation","id":"60ad7bc3646eaa1292593476"}],"name":"header","position":"top"},{"blocks":[{"type":"thank-you","background":{"preset":"coverfixed","color":"rgb\x280,\x200,\x200\x29","image":null,"colorOpacity":100,"imageOpacity":100,"blur":0,"position":"center\x20center","size":"cover","repeat":"no-repeat","fixed":true},"title":"Body","headline":"\x3Cp\x20style\x3D\"font-size:\x2040px\x3B\"\x3E\x3Cspan\x20style\x3D\"font-size:\x2040px\x3B\"\x3EThank\x20you\x20for\x20giving\x21\x3C\x2Fspan\x3E\x3C\x2Fp\x3E","supporting-message":"\x3Cp\x20dir\x3D\"ltr\"\x3EThank\x20you\x20for\x20your\x20donation\x20in\x20support\x20of\x20Colorlines,\x20where\x20we\x27re\x20forging\x20new\x20ground\x20as\x20a\x20digital\x20multimedia\x20platform\x20and\x20political\x20home\x20for\x20everyday\x20people\x20committed\x20to\x20justice\x20and\x20freedom.\x26nbsp\x3B\x3C\x2Fp\x3E\x3Cp\x20dir\x3D\"ltr\"\x3EColorlines\x20is\x20published\x20by\x20Race\x20Forward\x20-\x20a\x20nationwide\x20leader\x20in\x20the\x20fight\x20for\x20a\x20just,\x20multi-racial\x20democracy.\x20For\x20over\x2040\x20years,\x20Race\x20Forward\x20has\x20worked\x20across\x20the\x20nation\x20to\x20alter\x20our\x20country\u2019s\x20course\x20by\x20addressing\x20structural\x20racism\x20in\x20all\x20its\x20manifestations.\x20Our\x20work\x20has\x20never\x20been\x20easy,\x20but\x20it\x20is\x20a\x20calling\x20which\x20we\x20answer\x20with\x20integrity\x20and\x20love.\x26nbsp\x3B\x3C\x2Fp\x3E\x3Cp\x20dir\x3D\"ltr\"\x3EThank\x20you\x20for\x20sharing\x20that\x20passion\x20and\x20commitment\x20to\x20a\x20future\x20absent\x20of\x20oppression\x20and\x20exploitation.\x20Together,\x20we\x20are\x20building\x20a\x20multi-racial\x20democracy\x20that\x20is\x20truly\x20free.\x3C\x2Fp\x3E","unsortable":true,"updated_at":"2022-12-21T00:35:58.801000Z","created_at":"2021-05-25T22:35:47.000000Z","theme_id":"60ad7bc3cf47911e88310b76","resource_urn":"block.60ad7bc3935cf059e94f35e1","template":"desktop","id":"60ad7bc3935cf059e94f35e1"}],"name":"body"},{"blocks":[{"type":"footer","background":{"color":"rgb\x28255,\x20255,\x20255\x29","image":null,"colorOpacity":100,"imageOpacity":100,"blur":0,"position":"center\x20center","size":"cover","repeat":"no-repeat","fixed":false,"preset":"stretch"},"title":"Footer","disable":false,"top":{"text":{"color":"rgb\x280,\x200,\x200\x29"}},"bottom":{"text":{"color":"rgb\x28255,255,255\x29"}},"poweredByClassy":true,"backToTop":true,"remove":false,"unsortable":true,"updated_at":"2022-12-05T18:44:48.343000Z","created_at":"2021-05-25T22:35:47.000000Z","theme_id":"60ad7bc3cf47911e88310b76","resource_urn":"block.60ad7bc330d42a4e1f6f1330","theme":null,"template":"desktop","logo":{"__media":"image","origin":"upload","assetId":9808826,"title":"Colorlines_Logotype_Full_Black\x20\x281\x29","alt":"Colorlines_Logotype_Full_Black\x20\x281\x29","width":6567,"height":1128,"options":[],"meta":[],"cropData":null,"asset":{"parent_id":null,"state":"uploaded","type":"original","content_type":"image\x2Fpng","size":59611,"alt_text":null,"created_by":18697833,"created_at":"2022-12-05T18:42:24\x2B0000","updated_at":"2022-12-05T18:42:26\x2B0000","cdn_url":"https:\x2F\x2Fassets.classy.org\x2F18697833\x2F8f6f74e8-74cc-11ed-9545-0a58a9feac02.png","resource_urn":"asset."}},"id":"60ad7bc330d42a4e1f6f1330"}],"name":"footer","position":"bottom"}]}},"campaign_id":341942,"updated_at":"2023-11-03T19:27:31.260000Z","created_at":"2021-05-25T22:35:47.000000Z","resource_urn":"organization.73788\x2Fcampaign.341942\x2Ftheme.60ad7bc3cf47911e88310b76","headerLogo":{"__media":"image","origin":"upload","assetId":7010371,"title":null,"alt":null,"width":null,"height":null,"options":[],"meta":[],"cropData":null,"asset":{"parent_id":7010370,"state":"processed","type":"cropped","content_type":"image\x2Fpng","size":null,"alt_text":null,"created_by":18879168,"created_at":"2021-05-25T23:03:14\x2B0000","updated_at":"2021-05-25T23:03:14\x2B0000","cdn_url":"https:\x2F\x2Fassets.classy.org\x2F18879168\x2F62afc9da-bdad-11eb-a1cb-0ee1081ebc5f.png","resource_urn":"asset."}},"id":"60ad7bc3cf47911e88310b76"},"blocks":{"60ad7bc3646eaa1292593476":{"type":"header","background":{"color":"rgb\x28255,\x20255,\x20255\x29","image":null,"colorOpacity":100,"imageOpacity":100,"blur":0,"position":"top\x20left","size":"auto\x20auto","repeat":"repeat","fixed":false,"preset":"tile"},"title":"Header","textColor":"rgb\x2844,\x2052,\x2059\x29","logo":{"__media":"image","origin":"upload","assetId":9801100,"title":"Colorlines_Logotype_Full_Black\x20\x281\x29","alt":"Colorlines_Logotype_Full_Black\x20\x281\x29","width":6567,"height":1128,"options":[],"meta":[],"cropData":null,"asset":{"parent_id":null,"state":"uploaded","type":"original","content_type":"image\x2Fpng","size":59611,"alt_text":null,"created_by":18697833,"created_at":"2022-12-02T18:17:11\x2B0000","updated_at":"2022-12-02T18:17:12\x2B0000","cdn_url":"https:\x2F\x2Fassets.classy.org\x2F18697833\x2F8a023506-726d-11ed-b00b-0af414f8c66f.png","resource_urn":"asset."}},"remove":false,"unsortable":true,"updated_at":"2022-12-02T18:17:22.251000Z","created_at":"2021-05-25T22:35:47.000000Z","theme_id":"60ad7bc3cf47911e88310b76","resource_urn":"block.60ad7bc3646eaa1292593476","theme":null,"template":"desktop","logoLink":"donation","id":"60ad7bc3646eaa1292593476"},"60ad7bc3226f952bda3db971":{"type":"donation","background":{"preset":"coverfixed","color":"rgb\x280,\x200,\x200\x29","image":null,"colorOpacity":100,"imageOpacity":100,"blur":0,"position":"center\x20center","size":"cover","repeat":"no-repeat","fixed":true},"title":"Body","loaded":true,"headline":"\x3Cp\x20style\x3D\"font-size:\x2040px\x3B\"\x3E\x3Cstrong\x3E\x3Cspan\x20style\x3D\"font-size:\x2036px\x3B\"\x3EYour\x20support\x20makes\x20an\x20impact.\x26nbsp\x3B\x3C\x2Fspan\x3E\x3C\x2Fstrong\x3E\x3Cstrong\x3E\x3Cspan\x20style\x3D\"font-size:\x2036px\x3B\"\x3EDonate\x20today.\x3C\x2Fspan\x3E\x3C\x2Fstrong\x3E\x3C\x2Fp\x3E","description":"\x3Cp\x20dir\x3D\"ltr\"\x3EToday,\x20thousands\x20of\x20Colorlines\x20visitors\x20are\x20forging\x20a\x20new\x20learning\x20community\x20and\x20political\x20home.\x20Together,\x20we\x20are\x20sharpening\x20our\x20analysis,\x20expanding\x20our\x20paths\x20to\x20connection,\x20and\x20developing\x20online\x20and\x20offline\x20opportunities\x20to\x20take\x20action\x20against\x20injustices\x20and\x20ideologies\x20that\x20fragment\x20our\x20communities.\x20\x26nbsp\x3B\x3C\x2Fp\x3E\x3Cp\x20dir\x3D\"ltr\"\x3EFounded\x20in\x201989\x20as\x20a\x20quarterly\x20publication,\x20Colorlines\x20is\x20an\x20award-winning\x20nonprofit\x20digital\x20media\x20platform\x20that\x20relies\x20on\x20community\x20support.\x20Your\x20tax-deductible\x20contribution\x20provides\x20us\x20resources\x20to\x20deliver\x20the\x20art,\x20writing,\x20audio,\x20video\x20series,\x20and\x20virtual\x20events\x20that\x20are\x20reshaping\x20the\x20narratives\x20that\x20divide\x20us\x20and\x20moving\x20meaningful\x20conversations\x20forward.\x26nbsp\x3B\x3C\x2Fp\x3E\x3Cp\x20dir\x3D\"ltr\"\x3E\x3Cstrong\x3EThe\x20work\x20we\x20do\x20together\x20matters.\x3C\x2Fstrong\x3E\x3C\x2Fp\x3E","donation_amount_appeal":"","questions":[],"recurring-level":[{"type":"one-time","name":"One-time","display_on_page":true},{"type":"monthly","name":"Monthly","display_on_page":true},{"type":"quarterly","name":"Quarterly\x20\x28every\x203\x20months\x29","display_on_page":false},{"type":"semi-annually","name":"Semi\x20Annually\x20\x28every\x206\x20months\x29","display_on_page":false},{"type":"yearly","name":"Yearly\x20\x28once\x20a\x20year\x29","display_on_page":false}],"recurring-default":"monthly","recurring-type":"default","donation-levels":[{"amount":500,"display_on_page":true},{"amount":100,"display_on_page":true},{"amount":50,"display_on_page":true},{"amount":25,"display_on_page":true},{"amount":"Custom","display_on_page":true}],"donation-default":null,"submit-button-text":"Give\x20now\x21","billing_address_autocomplete":true,"unsortable":true,"recurring_donation_experiment":true,"updated_at":"2023-11-03T18:14:41.491000Z","created_at":"2021-05-25T22:35:47.000000Z","theme_id":"60ad7bc3cf47911e88310b76","resource_urn":"block.60ad7bc3226f952bda3db971","theme":null,"template":"desktop","recurring-donation-levels":[{"amount":150,"display_on_page":true,"displayAmount":150},{"amount":75,"display_on_page":true,"displayAmount":75},{"amount":25,"display_on_page":true,"displayAmount":25},{"amount":10,"display_on_page":true,"displayAmount":10},{"amount":"Custom","display_on_page":true}],"recurring-donation-default":10,"id":"60ad7bc3226f952bda3db971"},"60ad7bc330d42a4e1f6f1330":{"type":"footer","background":{"color":"rgb\x28255,\x20255,\x20255\x29","image":null,"colorOpacity":100,"imageOpacity":100,"blur":0,"position":"center\x20center","size":"cover","repeat":"no-repeat","fixed":false,"preset":"stretch"},"title":"Footer","disable":false,"top":{"text":{"color":"rgb\x280,\x200,\x200\x29"}},"bottom":{"text":{"color":"rgb\x28255,255,255\x29"}},"poweredByClassy":true,"backToTop":true,"remove":false,"unsortable":true,"updated_at":"2022-12-05T18:44:48.343000Z","created_at":"2021-05-25T22:35:47.000000Z","theme_id":"60ad7bc3cf47911e88310b76","resource_urn":"block.60ad7bc330d42a4e1f6f1330","theme":null,"template":"desktop","logo":{"__media":"image","origin":"upload","assetId":9808826,"title":"Colorlines_Logotype_Full_Black\x20\x281\x29","alt":"Colorlines_Logotype_Full_Black\x20\x281\x29","width":6567,"height":1128,"options":[],"meta":[],"cropData":null,"asset":{"parent_id":null,"state":"uploaded","type":"original","content_type":"image\x2Fpng","size":59611,"alt_text":null,"created_by":18697833,"created_at":"2022-12-05T18:42:24\x2B0000","updated_at":"2022-12-05T18:42:26\x2B0000","cdn_url":"https:\x2F\x2Fassets.classy.org\x2F18697833\x2F8f6f74e8-74cc-11ed-9545-0a58a9feac02.png","resource_urn":"asset."}},"id":"60ad7bc330d42a4e1f6f1330"},"60ad7bc3935cf059e94f35e1":{"type":"thank-you","background":{"preset":"coverfixed","color":"rgb\x280,\x200,\x200\x29","image":null,"colorOpacity":100,"imageOpacity":100,"blur":0,"position":"center\x20center","size":"cover","repeat":"no-repeat","fixed":true},"title":"Body","headline":"\x3Cp\x20style\x3D\"font-size:\x2040px\x3B\"\x3E\x3Cspan\x20style\x3D\"font-size:\x2040px\x3B\"\x3EThank\x20you\x20for\x20giving\x21\x3C\x2Fspan\x3E\x3C\x2Fp\x3E","supporting-message":"\x3Cp\x20dir\x3D\"ltr\"\x3EThank\x20you\x20for\x20your\x20donation\x20in\x20support\x20of\x20Colorlines,\x20where\x20we\x27re\x20forging\x20new\x20ground\x20as\x20a\x20digital\x20multimedia\x20platform\x20and\x20political\x20home\x20for\x20everyday\x20people\x20committed\x20to\x20justice\x20and\x20freedom.\x26nbsp\x3B\x3C\x2Fp\x3E\x3Cp\x20dir\x3D\"ltr\"\x3EColorlines\x20is\x20published\x20by\x20Race\x20Forward\x20-\x20a\x20nationwide\x20leader\x20in\x20the\x20fight\x20for\x20a\x20just,\x20multi-racial\x20democracy.\x20For\x20over\x2040\x20years,\x20Race\x20Forward\x20has\x20worked\x20across\x20the\x20nation\x20to\x20alter\x20our\x20country\u2019s\x20course\x20by\x20addressing\x20structural\x20racism\x20in\x20all\x20its\x20manifestations.\x20Our\x20work\x20has\x20never\x20been\x20easy,\x20but\x20it\x20is\x20a\x20calling\x20which\x20we\x20answer\x20with\x20integrity\x20and\x20love.\x26nbsp\x3B\x3C\x2Fp\x3E\x3Cp\x20dir\x3D\"ltr\"\x3EThank\x20you\x20for\x20sharing\x20that\x20passion\x20and\x20commitment\x20to\x20a\x20future\x20absent\x20of\x20oppression\x20and\x20exploitation.\x20Together,\x20we\x20are\x20building\x20a\x20multi-racial\x20democracy\x20that\x20is\x20truly\x20free.\x3C\x2Fp\x3E","unsortable":true,"updated_at":"2022-12-21T00:35:58.801000Z","created_at":"2021-05-25T22:35:47.000000Z","theme_id":"60ad7bc3cf47911e88310b76","resource_urn":"block.60ad7bc3935cf059e94f35e1","template":"desktop","id":"60ad7bc3935cf059e94f35e1"}},"assets":[{"id":7010371,"parent_id":7010370,"state":"processed","type":"cropped","content_type":"image\x2Fpng","size":null,"alt_text":null,"created_by":18879168,"created_at":"2021-05-25T23:03:14\x2B0000","updated_at":"2021-05-25T23:03:14\x2B0000","cdn_url":"https:\x2F\x2Fassets.classy.org\x2F18879168\x2F62afc9da-bdad-11eb-a1cb-0ee1081ebc5f.png","resource_urn":"asset.7010371","sizes":{"100":"https:\x2F\x2Fassets.classy.org\x2F18879168\x2F63b23480-bdad-11eb-85fc-0ea1048b5dfb.png","full":"https:\x2F\x2Fassets.classy.org\x2F18879168\x2F62afc9da-bdad-11eb-a1cb-0ee1081ebc5f.png"}},{"id":9800946,"parent_id":null,"state":"uploaded","type":"original","content_type":"image\x2Fpng","size":59611,"alt_text":null,"created_by":18697833,"created_at":"2022-12-02T17:58:25\x2B0000","updated_at":"2022-12-02T17:58:26\x2B0000","cdn_url":"https:\x2F\x2Fassets.classy.org\x2F18697833\x2Feb1fb0b4-726a-11ed-baa0-0a58a9feac02.png","resource_urn":"asset.9800946","sizes":{"200":"https:\x2F\x2Fassets.classy.org\x2F18697833\x2F53b24d94-726b-11ed-b65c-0a58a9feac03.png","550":"https:\x2F\x2Fassets.classy.org\x2F18697833\x2Fecf4a67e-726a-11ed-b1d0-0a58a9feac02.png","full":"https:\x2F\x2Fassets.classy.org\x2F18697833\x2Feb1fb0b4-726a-11ed-baa0-0a58a9feac02.png"}},{"id":9801100,"parent_id":null,"state":"uploaded","type":"original","content_type":"image\x2Fpng","size":59611,"alt_text":null,"created_by":18697833,"created_at":"2022-12-02T18:17:11\x2B0000","updated_at":"2022-12-02T18:17:12\x2B0000","cdn_url":"https:\x2F\x2Fassets.classy.org\x2F18697833\x2F8a023506-726d-11ed-b00b-0af414f8c66f.png","resource_urn":"asset.9801100","sizes":{"550":"https:\x2F\x2Fassets.classy.org\x2F18697833\x2F8b9df882-726d-11ed-b267-0efe86607aeb.png","full":"https:\x2F\x2Fassets.classy.org\x2F18697833\x2F8a023506-726d-11ed-b00b-0af414f8c66f.png"}},{"id":9808826,"parent_id":null,"state":"uploaded","type":"original","content_type":"image\x2Fpng","size":59611,"alt_text":null,"created_by":18697833,"created_at":"2022-12-05T18:42:24\x2B0000","updated_at":"2022-12-05T18:42:26\x2B0000","cdn_url":"https:\x2F\x2Fassets.classy.org\x2F18697833\x2F8f6f74e8-74cc-11ed-9545-0a58a9feac02.png","resource_urn":"asset.9808826","sizes":{"550":"https:\x2F\x2Fassets.classy.org\x2F18697833\x2F91667058-74cc-11ed-b70f-0a58a9feac02.png","full":"https:\x2F\x2Fassets.classy.org\x2F18697833\x2F8f6f74e8-74cc-11ed-9545-0a58a9feac02.png"}}],"fbid":"346591576229","gapi":"AIzaSyCZ7iyAWI8zgXnUXhz3cRcrSozpxreU3i0","recaptcha":"6LcwtHkpAAAAABHUXtvKCZQ645083zUdeimy8NlP","pay":"https:\x2F\x2Fpay.classy.org","tokenex":{"tokenex_url":"https:\x2F\x2Fhtp.tokenex.com"},"stripe":{"stripe_publishable_key":"pk_live_h5ocNWNpicLCfBJvLialXsb900SaJnJscz"},"ab_testing":{"cid":341942,"oid":73788,"donation_type":"legacy","campaign_type":"standard"},"preview":null,"debug":false,"isPublicPage":true,"clientGA4Id":false,"heapId":"1566116007","public":true} || {};
+      SC.env = "prod";
+      // Coralogix RUM configuration
+      SC.coralogixRumKey = 'cxtp_pxN4fGt55Y5qCH9adMe2IH2QY3gTeb';
+      SC.appVersion = 'b2b90989ecbf193aa2c9cf6a2cab18c244a90fa2';
+      SC.coralogixRumSessionSampleRate = '20';
+      SC.coralogixRumApplicationName = SC.public === false ? 'frs-admin' : 'frs';
+    </script>
+
+    <!-- Coralogix RUM SDK -->
+    <script src="https://cdn.rum-ingress-coralogix.com/coralogix/browser/2.8.9/coralogix-browser-sdk.js" type="38a7068f0cd85bb2e7011184-text/javascript"></script>
+
+    <!-- GOOGLE ANALYTICS 4 CONFIG-->
+    <script type="38a7068f0cd85bb2e7011184-text/javascript">
+      // This is called in the gaService to make sure any tracking
+      // is done only when the GA4 script and configs exists
+      // Universal Analytics does the same
+      var ga4Callbacks = [];
+      SC.onGA4Loaded = function(cb) {
+        ga4Callbacks.push(cb);
+        triggerGA4Callbacks();
+      };
+
+      function triggerGA4Callbacks() {
+        // Same async structure as Universal Analytics
+        setTimeout(function() {
+          if (window.gtag) { // Check if gtag is loaded
+            ga4Callbacks.forEach(function (cb) { cb() });
+            ga4Callbacks = [];
+          }
+        }, 0);
+      }
+
+      function initializeGA4(debug) {
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function() {
+          dataLayer.push(arguments);
+        };
+
+        window.gtag('js', new Date());
+
+        if (debug) {
+          window['ga-disable-false'] = true;
+        }
+
+        window.gtag('config', 'false', {
+          allowLinker: true,
+          send_page_view: false,
+          name: 'clientTrack',
+          groups: 'default',
+        });
+
+        window.gtag('event', 'appv2_default2');
+
+          window.gtag('set', 'linker', {
+            'domains': ['raceforward.org']
+          });
+
+        triggerGA4Callbacks();
+      }
+
+      // Set this to true to enable Google Analytics 4 debug mode
+      var ga4Debug = false;
+    </script>
+    <!-- GOOGLE ANALYTICS 4 CONFIG -->
+
+    <script type="38a7068f0cd85bb2e7011184-text/javascript" async defer>
+      var params = {
+        client_id: 'hkDllBPffAW7sKhdYbpNc5PrwMIVbh',
+        okta_client_id: '0oa1r79c5bwo6JCjP0h8',
+        app_cookie_name: 'frs',
+        scope: 'read_profile',
+        /* 
+        Replaces all occurrences of commas with a space. This is equivalent to "replaceAll(',', ' ')" but is more widely supported.
+        /,/g is a global regular expression that matches every comma in the string.
+        */
+        okta_scope: 'organization:read,organization:write,member:read,member:write,api-app:read,me,offline_access,openid,asset:read,asset:write'.replace(/,/g, ' '),
+      };
+      if (ucl) {
+        params.override_base_url = 'https://www.classy.org';
+        params.override_base_prefix = '/auth';
+        params.okta_host = 'https://okta.classy.org';
+        params.redirect_uri = 'https://www.classy.org/oauth2/sso_callback';
+        params.isPublicPage = 'true';
+      } else {
+        params.override_base_url = '';
+        params.override_base_prefix = '/sso';
+        params.redirect_uri = 'https://www.classy.org/oauth2/sso_callback';
+      }
+      (function (s, d, i, w, p, n) {
+        w['ClassyObjectName'] = n;
+        w[n] =
+          w[n] ||
+          (function () {
+            var o = {};
+            o.params = p;
+            o.ready = function (c) {
+              (this.onReady = this.onReady || []).push(c);
+            };
+            return o;
+          })();
+        var b,
+          a = d.getElementsByTagName(s)[0];
+        b = d.createElement(s);
+        b.id = i;
+        b.async = true;
+        b.src = ucl ? '/auth/sdk.js' : '/sso/sdk.js';
+        a.parentNode.insertBefore(b, a);
+      })('script', document, 'classy-js-sdk', window, params, 'Classy');
+    </script>
+
+    <!-- Plaid -->
+    <script src="//cdn.plaid.com/link/v2/stable/link-initialize.js" async defer type="38a7068f0cd85bb2e7011184-text/javascript"></script>
+    <!-- End Plaid -->
+
+    <!-- BrainTree/PayPal -->
+    <!-- End BranTree/PayPal -->
+
+
+    <script src="https://prod-frs.content.classy.org/prod/b2b90989ecbf193aa2c9cf6a2cab18c244a90fa2/static/global/libs.min.js" type="38a7068f0cd85bb2e7011184-text/javascript"></script>
+    <script src="https://prod-frs.content.classy.org/prod/b2b90989ecbf193aa2c9cf6a2cab18c244a90fa2/static/global/module.min.js" type="38a7068f0cd85bb2e7011184-text/javascript"></script>
+
+    <script type="38a7068f0cd85bb2e7011184-text/javascript">
+      var bugsnagTokenClient = 'ed2f4223afa43ef4870a151ab82d1ac6';
+      if (bugsnagTokenClient) {
+        // configure appv2 Bugsnag
+        var bugsnagClient = bugsnag(bugsnagTokenClient);
+
+        // Bugsnag won't automatically detect staging -- use SC env if available
+        bugsnagClient.app.releaseStage = SC.env || 'production';
+
+        bugsnagClient.user = {
+          classy: {
+            member: {
+              id: SC.member ? SC.member.id : 'unknown',
+              email_addess: SC.member ? SC.member.email_address : 'unknown',
+            },
+            campaign: {
+              id: SC.campaign ? SC.campaign.id : 'unknown',
+            },
+            organization: {
+              id: SC.organization ? SC.organization.id : 'unknown',
+            },
+          },
+        };
+      }
+    </script>
+
+    
+<!-- Section scripts -->
+
+<script src="https://prod-frs.content.classy.org/prod/b2b90989ecbf193aa2c9cf6a2cab18c244a90fa2/static/frs/donation/module.min.js" type="38a7068f0cd85bb2e7011184-text/javascript"></script>
+<script src="https://unpkg.com/@paypal/paypal-js@4.0.8/dist/iife/paypal-js.legacy.min.js" async defer type="38a7068f0cd85bb2e7011184-text/javascript"></script>
+  
+<!-- Client analytics  -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript
+  ><iframe
+    src="https://www.googletagmanager.com/ns.html?id=GTM-WGKK4PM"
+    height="0"
+    width="0"
+    style="display: none; visibility: hidden"
+  ></iframe
+></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="38a7068f0cd85bb2e7011184-|49" defer></script></body>
+</html>

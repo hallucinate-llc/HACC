@@ -1,0 +1,24 @@
+{
+  "generated_at": "2025-12-31T00:00:00Z",
+  "source": {
+    "notes": "Fetch Quantum Residential Yoast subsitemaps referenced by sitemap_index.xml"
+  },
+  "items": [
+    {
+      "domain": "www.quantumresidential.com",
+      "score": 100,
+      "evidence_urls": [
+        "https://www.quantumresidential.com/post-sitemap.xml",
+        "https://www.quantumresidential.com/page-sitemap.xml",
+        "https://www.quantumresidential.com/property-sitemap.xml",
+        "https://www.quantumresidential.com/service-sitemap.xml",
+        "https://www.quantumresidential.com/career-sitemap.xml",
+        "https://www.quantumresidential.com/category-sitemap.xml",
+        "https://www.quantumresidential.com/author-sitemap.xml"
+      ],
+      "seed_urls": [],
+      "guessed_urls": [],
+      "notes": "Yoast subsitemaps"
+    }
+  ]
+}

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script src="/sites/onecpd/themes/hudexchange/js/google_tag_manager.js?v=d20251120b780&container_id=GTM-TPMSVB" id="query"></script>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Poppins:600" rel="stylesheet" type='text/css'>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+<meta property="og:title" content="HMIS Data Standards" />
+<meta property="og:url" content="https://www.hudexchange.info/resource/3824/hmis-data-dictionary" />
+<meta name="HUDX_ct" content="Resources">
+<meta name="HUDX_dp" content="2025-12-16T00:00:00-06:00">
+<meta name="HUDX_dc" content="2014-05-01T09:17:14-05:00">
+<meta name="HUDX_dm" content="2025-12-16T14:30:47-06:00">
+<meta name="HUDX_dr" content="2025-12-16T00:00:00-06:00">
+<meta name="HUDX_cs" content="CoC|ESG|HMIS">
+<meta name="HUDX_cl" content="CoC: Continuum of Care Program|ESG: Emergency Solutions Grants Program|HMIS: Homeless Management Information System">
+<meta name="HUDX_dsp" content="CoC: Continuum of Care Program|ESG: Emergency Solutions Grants Program|HMIS: Homeless Management Information System">
+<meta name="HUDX_pop" content="1.1">
+<title>HMIS Data Standards - HUD Exchange</title>
+<link rel="icon" href="/sites/onecpd/themes/hudexchange/images/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/sites/onecpd/themes/hudexchange/images/favicon.ico" type="image/x-icon" />
+<!-- jQuery-UI -->
+<link rel="stylesheet" type="text/css" href="/sites/onecpd/themes/hudexchange/css/ui/jquery-ui-1.12.1.min.css" />
+<!-- special animation library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<!-- Bootstrap core CSS -->
+<link href="/sites/onecpd/themes/hudexchange/css/bootstrap.css?v=d20251120b780" rel="stylesheet">
+<!-- MailChimp Integration -->
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/87d7c8afc03ba69ee70d865b9/6727c10fa25f8da0931b2ef58.js");</script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript">
+<!--
+!window.jQuery && document.write(unescape('%3Cscript type="text/javascript" src="/core/vendor/jquery/jquery.min.js"%3E%3C/script%3E'))
+//-->
+</script>
+<script type="text/javascript" src="/core/modules/v1/core_assets/js/mura.min.js?v=10.1.3"></script>
+<script>
+Mura.init({
+loginURL:"?display=login",
+siteid:"onecpd",
+contentid:"3176ADC2-C185-752E-8AD52CB1599C8120",
+contenthistid:"25AC8AC1-8704-4014-BF04BE9CF8ACC8C6",
+changesetid:"",
+parentid:"00000000000000000000000000000000END",
+context:"",
+indexfileinapi:true,
+nocache:0,
+assetpath:"/sites/onecpd",
+corepath:"/core",
+fileassetpath:"/sites/onecpd",
+themepath:"/sites/onecpd/themes/hudexchange",
+reCAPTCHALanguage:"en",
+preloaderMarkup: "",
+mobileformat: false,
+windowdocumentdomain: "",
+layoutmanager:true,
+type:"Page",
+subtype:"Resource",
+queueObjects: true,
+keycmdcheck:true,
+rb:{"formrequiredwrapperclass":"","formradiolabelclass":"radio","formresponsewrapperclass":"","formwrapperclass":"well","formbuttoncancellabel":"Cancel","formselectclass":"form-control","formbuttonclass":"btn btn-default","formfileclass":"form-control","formfileplaceholder":"Select File","formbuttonwrapperclass":"btn-group","formbuttoninnerclass":"","formcheckboxwrapperclass":"","formradiowrapperclass":"","formcheckboxlabelclass":"checkbox","forminputclass":"form-control","formradioclass":"","formcheckboxclass":"","formfieldlabelclass":"control-label","formtextareaclass":"form-control","formbuttonbacklabel":"Back","formbuttonsubmitclass":"form-submit btn-primary","formbuttonnextclass":"form-nav","formbuttonsubmitlabel":"Submit","formrequiredlabel":"Required","generalwrapperclass":"well","formbuttonnextlabel":"Next","generalwrapperbodyclass":"","formbuttomsubmitclass":"form-submit btn-primary","formbuttonbackclass":"form-nav","formerrorwrapperclass":"","formbuttoncancelclass":"form-cancel btn-primary pull-right","formwrapperbodyclass":"","formbuttonsubmitwaitlabel":"Please Wait...","formgeneralcontrolclass":"form-control","formfieldwrapperclass":"control-group"},
+dtExample:"11/10/2024",
+dtCh:"/",
+dtFormat:[0,1,2],
+dtLocale:"en-US"
+});
+</script>
+</head>
+<body>
+<!--googleoff: snippet-->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPMSVB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="overlay"></div>
+<header>
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top yamm" id="mainNav">
+<noscript>
+<div class="alert alert-danger" style="position: relative; top: 0; width: 100%; display: inline-block; border-radius: 0;">
+To access the full functionality of this website, please enable JavaScript in your web browser.
+<a href="https://www.computerhope.com/issues/ch000891.htm" target="_blank">
+View instructions to enable JavaScript</a>.
+</div>
+</noscript>
+<div class="resourcesHeader col-md-12">
+<div class="fluid-container">
+<a href="#mainContent" class="focusable skip-link sr-only sr-only-focusable">Skip to main content</a>
+<ul class="list-unstyled end">
+<li class="active"><a href="/homelessness-assistance/resources-for-homeless-persons/">NEED HOUSING ASSISTANCE?</a></li>
+<li><a href="/mailinglist/" class="line">Email Updates</a>
+<span id="login-or-greeting-area">
+<a href="/hudexchange-portal/" id="login">Log In</a></li>
+</span>
+</ul>
+</div><!-- end container -->
+</div>
+<div class="fluid-container">
+<div class="navbar-header">
+<!-- former location of button -->
+<a class="navbar-brand" href="/">
+<img src="/sites/onecpd/themes/hudexchange/images/hudLogo.png?v=d20251120b780" alt="HUD Exchange" class="img-responsive" />
+<p>HUD Exchange</p>
+</a>
+<div class="mholder">
+<a href="#" data-toggle="dropdown" class="dropdown-toggle searchLink mobile" data-target="#searchSection" aria-expanded="false" aria-controls="navbar" aria-label="search" role="button">
+<span class="hidden">Search</span>
+<span class="search-ico"></span>
+</a>
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-mobile" aria-expanded="false" aria-controls="navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar top-bar"></span>
+<span class="icon-bar middle-bar"></span>
+<span class="icon-bar bottom-bar"></span>
+</button>
+</div>
+</div>
+<ul id="searchSection" class="searchSection nav navbar-nav">
+<li class="dropdown yamm-fw searchNav">
+<a href="#" data-toggle="dropdown" class="dropdown-toggle searchLink" aria-label="search" role="button">
+<span class="hidden">Search</span>
+<span class="search-ico"></span>
+<span class="ico-remove"></span>
+</a>
+<ul class="dropdown-menu" style="display:none;">
+<li>
+<div class="row">
+<div class="col-sm-12 eee">
+<form action="/search/?searchaction=s2" method="get" >
+<input id="navSearch_km" name="km" value="10" type="hidden">
+<input id="navSearch_ct" name="ct" value="" type="hidden">
+<input id="navSearch_dsp" name="dsp" value="" type="hidden">
+<span class="sr-only">Form title</span>
+<div class="mainSearchContainer col-xs-9 col-md-10 col-lg-11 m-2">
+<label for="navSearch" class="sr-only">Search</label>
+<div class="right-inner-addon ">
+<input type="text" class="form-control" name="q" id="navSearch" placeholder="Search HUDExchange.info">
+<input type="submit" class="submit search-ico-gray" value="Go">
+</div><!-- end right-inner-addon -->
+<!-- add next div if search x is needed -->
+<div class="mega-close-box"><span class="ico-mega-close" aria-label="Close search" role="button" tabindex="0"></span></div>
+</div>
+</form>
+</div>
+</div>
+</li>
+</ul>
+</li>
+</ul><!-- search navigation -->
+<div id="navbar" class="navbar-right navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="dropdown yamm-fw visible-md visible-sm visible-xs"><a href="/hudexchange-portal/">Log In</a></li>
+<li class="targetValue dropdown yamm-fw " tabindex="0" data-location="/programs/" aria-expanded=
+"false" role="button">
+<span class="movingTarget">Programs<span class="more-arrow"></span></span><ul class="dropdown-menu programs">
+<li class="yamm-content container">
+<div class="row">
+<div class="col-lg-4 col-md-12">
+<div class="like--h3">Programs &amp; Related Topics</div>
+<div class="col-md-12">
+<ul class="mega-check">
+<li><a href="/programs/cdbg/">CDBG Program</a></li>
+<li><a href="/programs/coc/">Continuum of Care Program</a></li>
+<li><a href="/programs/cpf/">Community Project Funding</a></li>
+<li><a href="/programs/esg/">Emergency Solutions Grants Program</a></li>
+<li><a href="/programs/environmental-review/">Environmental Review</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-8 col-md-12">
+<div class="like--h3">&nbsp;</div>
+<div class="col-md-6">
+<ul class="mega-check">
+<li><a href="/programs/fair-housing/">Fair Housing and Civil Rights</a></li>
+<li><a href="/programs/home/">HOME Program</a></li>
+<li><a href="/programs/hopwa/">HOPWA Program</a></li>
+<li><a href="/programs/housing-counseling/">Housing Counseling Program</a></li>
+<li><a href="/programs/public-housing/">Public Housing and Voucher Programs</a></li>
+</ul>
+</div>
+<div class="col-md-6">
+<ul class="mega-check third">
+<li><a href="/programs/drgr/">DRGR</a><a class="btn btn-secondary mega-btn" href="https://drgr.hud.gov/DRGRWeb/">Log In</a></li>
+<li><a href="/programs/e-snaps/"><em>e-snap</em>s</a><a class="btn btn-secondary mega-btn" href="https://esnaps.hud.gov/grantium/frontOffice.jsf">Log In</a></li>
+<li><a href="/programs/housing-counseling/hcs/">Housing Counseling System</a><a class="btn btn-secondary mega-btn" href="https://entp.hud.gov/hud-9902/cfm/">Log In</a></li>
+<li><a href="/programs/idis/">IDIS</a><a class="btn btn-secondary mega-btn" href="https://idis.hud.gov/">Log In</a></li>
+<li><a href="/programs/sage/">Sage</a><a class="btn btn-secondary mega-btn" href="https://www.sagehmis.info/">Log In</a></li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li><a class="btn btn-primary mega col-sm-12 text-center" href="/programs/">View All Programs &amp; Related Topics</a></li>
+</ul></li>
+<li class="targetValue dropdown yamm-fw active" tabindex="0" data-location="/resources/" aria-expanded=
+"false" role="button">
+<span class="movingTarget">Resources<span class="more-arrow"></span></span><ul class="dropdown-menu">
+<li class="yamm-content container">
+<div class="row">
+<div class="col-md-6 vertical-container">
+<div class="like--h3"><a href="/resources/">Resource Library</a></div>
+<a href="/resources/"><img alt="Books on a shelf" src="/sites/onecpd/assets/Image/Books-On-Shelf-small.webp" style="height:193px; width:470px" /></a>
+<p><a href="/resources/">Explore featured publications and browse regulations, policy guidance, toolkits, and other resources.</a></p>
+</div>
+<!-- end col-md-6 -->
+<div class="col-md-6 vertical-container">
+<div class="like--h3"><a href="/faqs">FAQ Collections</a></div>
+<a href="/faqs/"><img alt="Hand Point to an FAQ sign" src="/sites/onecpd/assets/Image/FAQ-Hand-Pointing-small.webp" style="height:193px; width:470px" /></a>
+<p><a href="/faqs/">Find answers to frequently asked questions.</a></p>
+</div>
+<!-- end col-md-6 --></div>
+<!-- end row --></li>
+</ul></li>
+<li class="targetValue dropdown yamm-fw " tabindex="0" data-location="/trainings/" aria-expanded=
+"false" role="button">
+<span class="movingTarget">Trainings<span class="more-arrow"></span></span><ul class="dropdown-menu">
+<li class="yamm-content container">
+<div class="row">
+<div class="col-md-4 vertical-container">
+<div class="like--h3"><a href="/trainings/upcoming/">Upcoming Training</a></div>
+<a href="/trainings/upcoming"><img alt="/trainings/upcoming/" src="/sites/onecpd/assets/Image/Training-Menu-Upcoming-Training.webp" style="width:325px" /></a>
+<p><a href="/trainings/upcoming/">Register for upcoming training, webinars, conferences, and more.</a></p>
+</div>
+<div class="col-md-4 vertical-container">
+<div class="like--h3"><a href="/trainings/learning-pathways/">Learning Pathways</a></div>
+<a href="/trainings/learning-pathways/"><img alt="/trainings/learning-pathways/" src="/sites/onecpd/assets/Image/LP-Collection-Featured-Image.webp" style="width:325px" /></a>
+<p><a href="/trainings/learning-pathways/">Explore collections of guided learning opportunities on a variety of topics.</a></p>
+</div>
+<div class="col-md-4 vertical-container">
+<div class="like--h3"><a href="/trainings/online/">On-Demand Training</a></div>
+<a href="/trainings/online/"><img alt="/trainings/online/" src="/sites/onecpd/assets/Image/Training-Menu-On-Demand.webp" style="width:325px" /></a>
+<p><a href="/trainings/online/">Learn through self-paced online trainings, recorded webinars, and more.</a></p>
+</div>
+</div>
+</li>
+<li><a class="btn btn-primary mega col-sm-12 text-center" href="/trainings/">View All Trainings</a></li>
+</ul></li>
+<li class="targetValue dropdown yamm-fw " tabindex="0" data-location="/program-support/" aria-expanded=
+"false" role="button">
+<span class="movingTarget">Program Support<span class="more-arrow"></span></span><ul class="dropdown-menu">
+<li class="yamm-content container">
+<div class="row">
+<div class="col-md-6 vertical-container">
+<div class="like--h3"><a href="/program-support/my-question/">Ask a Question</a></div>
+<a href="/program-support/my-question/"><img alt="Books on a shelf" src="/sites/onecpd/assets/Image/Woman-Question-Marks-small.jpg" style="height:193px; width:470px" /></a>
+<p><a href="/program-support/my-question/">Ask a basic policy or reporting system question.</a></p>
+</div>
+<div class="col-md-6 vertical-container">
+<div class="like--h3"><a href="/program-support/technical-assistance/">Request In-Depth Assistance</a></div>
+<a href="/program-support/technical-assistance/"><img alt="Hand Point to an FAQ sign" src="/sites/onecpd/assets/Image/People-Meeting-Around-Table-small.jpg" style="height:193px; width:470px" /></a>
+<p><a href="/program-support/technical-assistance/">Request in-depth assistance with implementing a HUD-funded program.</a></p>
+</div>
+</div>
+</li>
+<li><a class="btn btn-primary mega col-sm-12 text-center" href="/program-support/">View All Program Support</a></li>
+</ul></li>
+<li class="targetValue dropdown yamm-fw " tabindex="0" data-location="/grantees/" aria-expanded=
+"false" role="button">
+<span class="movingTarget">Grantees<span class="more-arrow"></span></span><ul class="dropdown-menu">
+<li class="yamm-content container">
+<div class="row">
+<div class="col-lg-4 col-md-12 vertical-container">
+<div class="like--h3"><a href="/grantees/find-a-grantee/">Find a Grantee Page</a></div>
+<a href="/grantees/find-a-grantee/"><img alt="Find Grantee Profiles" class="img-responsive" src="/sites/onecpd/assets/Image/Pin-On-Map-small.jpg" style="height:154px; width:375px" /></a>
+<p><a href="/grantees/find-a-grantee/">Search for a specific grantee and view its&nbsp;awards, contact information, and reports, and more.</a></p>
+</div>
+<div class="col-lg-4 col-md-12 vertical-container">
+<div class="like--h3"><a href="/grantees/allocations-awards/">Awards &amp; Allocations</a></div>
+<p><a href="/grantees/allocations-awards/">Find award and allocation amounts for grantees by year, program, and state.</a></p>
+<div class="like--h3"><a href="/grantees/contacts/">Contact Information</a></div>
+<p><a href="/grantees/contacts/">Find point of contact information for HUD's grantees.</a></p>
+<div class="like--h3"><a href="/grantees/reports/">Reports &amp; Plans</a></div>
+<p><a href="/grantees/reports/">Browse the library of grantee reports and plans, organized by program.</a></p>
+</div>
+<div class="col-lg-4 col-md-12 vertical-container">
+<div class="like--h3"><a href="/grantees/projects/">Project Descriptions</a></div>
+<a href="/grantees/projects/"><img alt="Project Highlights" class="img-responsive" src="/sites/onecpd/assets/Image/hands-holding-paper-house-small.jpg" style="height:154px; width:375px" /></a>
+<p><a href="/grantees/projects/">Learn about what HUD grantees are doing across the nation.</a></p>
+</div>
+</div>
+</li>
+<li><a class="btn btn-primary mega col-sm-12 text-center" href="/grantees/">Find Information About HUD Grantees</a></li>
+</ul></li>
+<li class=""><a href="/news/">News</a></li>
+</ul>
+</div><!--/.nav-collapse -->
+</div><!-- /.fluid-container -->
+</nav>
+<!-- alternate mobile nav -->
+<div id="navbar-mobile" class="animated slideInDown container">
+<div class="home in out">
+<a href="/">Home</a>
+<a href="/hudexchange-portal/">Log-in</a>
+</div>
+<ul class="list-unstyled">
+<li><a href="/programs/">Programs</a></li>
+<li><a href="/resources/">Resources</a>
+<ul class="list-unstyled">
+<li><a href="/resources/">Resource Library</a></li>
+<li><a href="/faqs/">FAQ Collections</a></li>
+</ul>
+</li>
+<li>
+<a href="/trainings/">Trainings</a>
+<ul class="list-unstyled">
+<li><a href="/trainings/upcoming/">Upcoming Training</a></li>
+<li><a href="/trainings/learning-pathways/">Learning Pathways</a></li>
+<li><a href="/trainings/online/">On-Demand Training</a></li>
+</ul>
+</li>
+<li><a href="/program-support/">Program Support</a>
+<ul class="list-unstyled">
+<li><a href="/program-support/my-question/">Ask a Question</a></li>
+<li><a href="/program-support/technical-assistance/">Request In-Depth Assistance</a></li>
+</ul>
+</li>
+<li><a href="/grantees/">Grantees</a>
+<ul class="list-unstyled">
+<li><a href=" /grantees/find-a-grantee/">Find a Grantee</a></li>
+<li><a href="/grantees/allocations-awards/">Awards and Allocations</a></li>
+<li><a href="/grantees/contacts/">Contact Information</a></li>
+<li><a href="/grantees/reports/">Reports & Plans</a></li>
+<li><a href="/grantees/projects/">Project Descriptions</a></li>
+</ul>
+</li>
+<li><a href="/news/">News</a>
+<ul class="list-unstyled">
+<li><a href="/mailinglist/">Email Updates</a></li>
+</ul>
+</li>
+</ul>
+<a href="/housing-and-homeless-assistance/" class="btn btn-brand-secondary btn-block">Need Housing Assistance?</a>
+</div>
+</header>
+<script>
+$(document).ready(function(){
+$("[data-toggle=popover-login]").popover({
+html: true,
+content: function() {
+return $('#popover-login').html();
+}
+});
+$(document).on('click', function (e) {
+$('[data-toggle="popover-login"]').each(function () {
+//the 'is' for buttons that trigger popups
+//the 'has' for icons within a button that triggers a popup
+if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+(($(this).popover('hide').data('bs.popover')||{}).inState||{}).click = false // fix for BS 3.3.6
+}
+});
+});
+});
+// create a clickable span or keypress
+const mainLink = document.querySelectorAll('.targetValue')
+mainLink.forEach((item, index) =>{
+item.addEventListener('click', ()=>{
+window.location.href = item.dataset.location
+})
+item.addEventListener('keypress', (event)=>{
+if (event.key ==='Enter'){
+window.location.href = item.dataset.location
+}
+})
+})
+</script>
+<!--googleon: snippet-->
+<div class="expand-control">
+<div class="container">
+<!-- breadcrumbs -->
+<div class="row">
+<div class="col-md-12">
+<!--googleoff: snippet-->
+<ol class="breadcrumb" aria-label="Breadcrumb"><li><a href="/">Home</a></li><li><a href="/resources/">Resources</a></li><li class="active">HMIS Data Standards</li></ol>
+<!--googleon: snippet-->
+</div>
+</div>
+<div class="row">
+<div class="col-md-12" id="mainContent">
+<a name="skip" tabindex="-1"> </a>
+<ul class="list-inline ml-0">
+<li class="label label-default mb-h mr-1">Guides and Training Manuals</li>
+<li class="label label-default mb-h mr-1">HUD Guidance</li>
+</ul>
+</div>
+</div>
+<div class="block-flex block-flex-space-between block-flex-align-center">
+<h1>HMIS Data Standards</h1>
+<div class="col-md-4">
+<div class="block-flex block-flex-end block-flex-align-center" style="width:210px;">
+<a href='javascript:window.print();' title='Print this page' class="btn btn-primary-inverted">
+<i class="glyphicon print-default"></i> Print
+</a>
+<div>
+<span class="st_sharethis_large ml-1" displayText="ShareThis"><span class="pull-right m-hf" style="cursor:pointer;">ShareThis</span></span>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<!--googleoff: snippet-->
+<div class="mt-1 mb-1">
+<div class="col-sm-12 col-md-4">
+<p class="date">Date Published: December 2025</p>
+</div>
+</div>
+<!--googleon: snippet-->
+</div>
+<div class="row">
+<div class="col-md-9 col-sm-12">
+<h3>Description</h3>
+<p>HMIS data standards are established by HUD, the U.S. Department of Health and Human Services (HHS), and the U.S. Department of Veterans Affairs (VA) to allow for standardized data collection across systems about individuals and families experiencing homelessness. The HMIS Data Dictionary and the HMIS Data Standards Manual are the documentation of requirements for the programming and use of all HMIS and comparable database software.</p>
+<p>The HMIS Data Standards Manual supports data collection and reporting efforts of HMIS Leads/System Administrators, Continuums of Care (CoCs), and HMIS end users to help them understand the data elements that are required in HMIS to meet participation and reporting requirements established by HUD and the federal partners. The HMIS Data Dictionary is designed for HMIS vendors and HMIS Leads/System Administrators to identify the data elements required in HMIS and understand the function and specific use of each element by the appropriate federal partner. The Interactive HMIS Data Standards Tool is an interactive, web-based combination of the guidance from both the HMIS Data Manual and the HMIS Data Dictionary.</p>
+<p><strong>Note: The FY 2026 HMIS Data Standards are effective as of October 1, 2025</strong>.</p>
+<h3>FY 2026 Resource Links</h3>
+<ul>
+<li><a href="https://www.hudexchange.info/programs/hmis/hmis-data-standards/">FY 2026 Interactive HMIS Data Standards Tool</a> - <em>Updated October 2025</em></li>
+<li>FY 2026 HMIS Data Dictionary (PDF) - <em>Coming Soon</em></li>
+<li><a href="https://files.hudexchange.info/resources/documents/HMIS-Data-Standards.pdf">FY 2026 HMIS Data Standards Manual</a> (PDF)</li>
+<li><a href="https://files.hudexchange.info/resources/documents/HMIS-Data-Standards-Mapping-Instructions.xlsx ">FY 2026 HMIS Mapping Instructions</a> (XLSX)</li>
+<li><a href="https://files.hudexchange.info/resources/documents/HMIS-Data-Collection-Requirements-for-Transition.pdf">Data Collection Requirements for Transition to FY 2026 Data Standards</a> (PDF)</li>
+<li><a href=" https://files.hudexchange.info/resources/documents/Zip-Code-to-Geography-Crosswalk.xlsx">FY 2026 Zip Code to Geography Crosswalk</a> (XLSX)</li>
+<li><a href="https://www.hudexchange.info/programs/hmis/federal-partner-participation/">Federal Partner Participation</a> (HTML) - <em>Coming Soon</em></li>
+</ul>
+<hr class="mt-2" />
+<div class="mb-1">
+<span class="mr-1"><strong>Tags:</strong></span>
+<span class="label label-default badge">CoC</span>
+<span class="label label-default badge">ESG</span>
+<span class="label label-default badge">HMIS</span>
+</div>
+</div> <!-- end col-md-9 -->
+<div class="col-sm-12 col-md-3 pull-right mobile">
+<div class="mura-region"><div class="mura-region-local"></div></div>
+<div class="panel panel-banner text-left col-md-12">
+<div class="panel-body">
+<span><strong>Author Organization</strong></span>
+<ul class="list-unstyled">
+<li class="mb-h">HUD TA Providers</li>
+</ul>
+<span><strong>Resource Approver</strong></span>
+<ul class="list-unstyled">
+<li>HUD Approved</li>
+</ul>
+</div>
+</div>
+</div> <!-- end col-md-3 -->
+</div><!-- end row -->
+</div><!-- container -->
+</div>
+<!--googleoff: snippet-->
+<div> <!-- class="wrapper footer mt-2" -->
+<footer class="footer">
+<div class="container">
+<div class="footer-content">
+<div class="footer-logo">
+<a class="logo-icon" href="/">
+<img src="/sites/onecpd/assets/File/social/hud-logo-sm.svg" alt="">
+<h4>HUD EXCHANGE</h4>
+</a>
+<p class="footer-text">Program delivery support for HUD's local partners</p>
+</div>
+<div class="connect-section">
+<h3>Connect with Us</h3>
+<div class="social-icons">
+<a href="https://www.linkedin.com/company/hud" class="social-icon">
+<img src="/sites/onecpd/assets/File/social/icon-linkedin.svg" alt="">
+</a>
+<a href="https://x.com/HUDExchangeInfo" class="social-icon">
+<img src="/sites/onecpd/assets/File/social/icon-x.svg" alt="">
+</a>
+<a href="https://www.facebook.com/HUD" class="social-icon">
+<img src="/sites/onecpd/assets/File/social/icon-facebook.svg" alt="">
+</a>
+<a href="https://www.instagram.com/hudgov/" class="social-icon">
+<img src="/sites/onecpd/assets/File/social/icon-instagram.svg" alt="">
+</a>
+<a href="https://www.flickr.com/photos/hudexchange/" class="social-icon">
+<img src="/sites/onecpd/assets/File/social/icon-flicker.svg" alt="">
+</a>
+<a href="https://www.youtube.com/user/HUDexchange" class="social-icon">
+<img src="/sites/onecpd/assets/File/social/icon-youtube.svg" alt="">
+</a>
+</div>
+</div>
+</div>
+<div class="footer-links">
+<div class="left-side">
+<a href="https://www.hud.gov/">HUD.gov</a>
+<a href="https://www.hud.gov/no-fear-act">No Fear Act</a>
+<a href="https://www.hud.gov/foia">FOIA</a>
+<a href="/website-privacy-policies/">Privacy</a>
+<a href="/accessibility/">Accessibility</a>
+<a href="/website-privacy-policies/">Web Policies</a>
+</div>
+<div class="right">
+<a href="/contact-us/" class="contact-link">Contact Us</a>
+</div>
+</div>
+<div class="footer-bottom">
+<div>&copy; 2025 U.S. Department of Housing and Urban Development. All Rights Reserved.</div>
+<div class="accordion">
+<button class="accordion-toggle" aria-expanded="false" aria-controls="disclaimer-content">Website Disclaimer <span class="arrow"><img src="/sites/onecpd/assets/File/icon-greater-down.svg" alt=""></span></button>
+</div>
+</div>
+<div class="accordion-content" id="disclaimer-content" style="display: none;">
+<p>Note: This material is based upon work supported by funding under an award with the U.S. Department of Housing and Urban Development. The substance and findings of the work are dedicated to the public. Neither the United States Government, nor any of its employees, makes any warranty, express or implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness of any information, apparatus, product, or process disclosed, or represents that its use would not infringe privately-owned rights. Reference herein to any specific commercial product, process, or service by trade name, trademark, manufacturer, or otherwise does not necessarily constitute or imply its endorsement, recommendation, or favoring by the U.S. Government or any agency thereof. Opinions expressed on the HUD Exchange are those of the authors and do not necessarily reflect the official position of, or a position that is endorsed by, HUD or by any HUD program.</p>
+</div>
+</div>
+<script type="text/javascript" async src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=HUD" id="_fed_an_ua_tag"></script>
+</footer>
+<a id="os_hp_login" tabindex="-1" href="/login">Login</a>
+</div>
+<!--googleon: snippet-->
+<!-- Bootstrap core JavaScript ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/sites/onecpd/themes/hudexchange/js/bootstrap.min.js?v=d20251120b780"></script>
+<script src="/sites/onecpd/themes/hudexchange/js/jquery/jquery-ui-1.12.1.min.js"></script>
+<script src="/sites/onecpd/themes/hudexchange/js/jquery/jquery.form.js"></script>
+<script src="/sites/onecpd/themes/hudexchange/js/hudexchange.analytics.js?v=d20251120b780&isUserLoggedIn=false&gmtPropertyID=249659554"></script>
+<script src="/sites/onecpd/themes/hudexchange/js/bootstrap-toggle.min.js"></script>
+<script src="/sites/onecpd/themes/hudexchange/js/textchange.js"></script>
+<script src="/sites/onecpd/themes/hudexchange/js/min/hudexchange.functions.min.js?v=d20251120b780"></script>
+<script src="/sites/onecpd/themes/hudexchange/js/jquery/jquery.tablesorter.min.js"></script>
+<script src="/sites/onecpd/themes/hudexchange/js/jquery/jquery.tablesorter.pager.min.js"></script>
+<script src="/sites/onecpd/themes/hudexchange/js/validate.functions.js?v=d20251120b780"></script>
+<script>
+var highContrastURL = "/sites/onecpd/themes/hudexchange/css/bootstrap_highcontrast.css"
+</script>
+<script src="/sites/onecpd/themes/hudexchange/js/highcontrast.js?v=d20251120b780"></script>
+<script>
+$( document ).ready(function() {
+// Initialize affix and add an offset to add affix class on scroll
+$('#mainNav').affix({
+offset: {
+top: 230
+}
+});
+$('#heroCarousel').carousel({
+interval: false
+});
+// when dropdown hits bottom
+$('#navbar').on('shown.bs.dropdown', function (){
+// $(".overlay").toggle();
+$(this).find('#mainSearch').focus();
+});
+$('#navbar').on('hide.bs.dropdown', function (){
+// $(".overlay").toggle();
+$(this).find('#mainSearch').blur();
+});
+// intro js. This is running on a limited sched. 9.28.2016
+$(".introductionbox .close, .overlay-introductionbox").click(function(){
+$(".introductionbox").addClass('fadeOutDownBig');
+$(".overlay-introductionbox").fadeOut();
+});
+// nav in the mobile function
+function CloseNav() {
+$(".navbar-collapse").stop().css({ 'height': '1px' }).removeClass('in').addClass("collapse");
+$(".navbar-toggle").stop().removeClass('collapsed');
+}
+});
+</script>
+<script>
+// Simple accordion toggle
+const accordionToggle = document.querySelector('.accordion-toggle');
+const accordionContent = document.querySelector('.accordion-content');
+accordionToggle?.addEventListener('click', function() {
+const expanded = accordionToggle.getAttribute('aria-expanded') === 'true';
+accordionToggle.setAttribute('aria-expanded', !expanded);
+accordionContent.style.display = expanded ? 'none' : 'block';
+});
+</script>
+<script src="//www.hudexchange.info/core/modules/v1/cta/js/mura.displayobject.cta.min.js" ></script>
+<script src="//www.hudexchange.info/core/modules/v1/pdfviewer/dist/main.bundle.js" ></script>
+<link rel="stylesheet" href="//www.hudexchange.info/core/modules/v1/resource_hub/assets/css/resource_hub.css">
+<script>var switchTo5x=false;</script>
+<script src="https://ws.sharethis.com/button/buttons.js"></script>
+<script>stLight.options({
+publisher:'12345',
+onhover:false,
+headerTitle:'ShareThis'
+});
+</script></body>
+</html>

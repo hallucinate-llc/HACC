@@ -1,0 +1,19 @@
+{
+  "generated_at": "2025-12-31T00:00:00Z",
+  "source": {
+    "note": "Retry queue for external Quantum-linked document downloads that failed due to size limits"
+  },
+  "stats": {},
+  "items": [
+    {
+      "domain": "www.oregonmetro.gov",
+      "score": 100,
+      "evidence_urls": [
+        "https://www.oregonmetro.gov/sites/default/files/2025-10/affordable-housing-bond-oversight-committee-meeting-packet-20250317.pdf"
+      ],
+      "seed_urls": [],
+      "guessed_urls": [],
+      "notes": "Retry oversized PDF with higher max-bytes"
+    }
+  ]
+}

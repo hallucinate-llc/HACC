@@ -1,0 +1,20 @@
+{
+  "generated_at": "2025-12-31T00:00:00Z",
+  "source": {
+    "notes": "Follow-on endpoint referenced by Paycom career portal page"
+  },
+  "items": [
+    {
+      "domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+      "score": 100,
+      "evidence_urls": [
+        "https://portal-applicant-tracking.us-cent.paycomonline.net/career-portal/sprawl.json"
+      ],
+      "seed_urls": [
+        "https://www.paycomonline.net/v4/ats/web.php/portal/BC8C4A60F87D82E71EF353A71CF59EEA/career-page"
+      ],
+      "guessed_urls": [],
+      "notes": "sprawl.json referenced in portal HTML"
+    }
+  ]
+}

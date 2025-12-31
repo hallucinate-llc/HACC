@@ -1,0 +1,219 @@
+
+================================================================================
+DETAILED TECHNICAL REPORT — Oregon DEI References Audit
+Generated: 20251231_001727
+================================================================================
+
+METHODOLOGY
+- Parsed 24 documents from Oregon state and local government sources.
+- Applied keyword matching for DEI terms (e.g., "diversity", "equity") and proxies
+  (e.g., "cultural competence", "lived experience").
+- Scored based on presence of binding indicators ("policy", "shall", "required").
+- Tagged by applicability area: hiring, procurement, training, housing.
+
+SCORING RUBRIC
+- Score 0: No DEI/proxy language detected (compliant).
+- Score 1: DEI/proxy present but weak binding indicators (possible issue).
+- Score 2: DEI/proxy + multiple binding indicators (probable issue).
+- Score 3: Explicit DEI policy with mandatory language (clear violation).
+
+DOCUMENT BREAKDOWN
+
+Total Documents: 24
+  Score 3: 13 document(s)
+  Score 2: 10 document(s)
+  Score 1: 1 document(s)
+
+
+APPLICABILITY BY AREA
+  Hiring: 21 document(s)
+  Housing: 22 document(s)
+  Procurement: 18 document(s)
+  Training: 21 document(s)
+
+
+HIGH-RISK DOCUMENTS (DETAILED)
+
+  [592594abd4eb6a8bad89ce62855bb42e]
+    File: research_results/documents/parsed/592594abd4eb6a8bad89ce62855bb42e.txt
+    Risk Score: 2
+    DEI Keywords: inclusion, equity, diversity, dei, underserved
+    Proxy Keywords: 
+    Binding Indicators: contract, applicability, must, required, standard
+    Applicability: hiring, procurement, housing
+    Text Length: 21859 chars
+
+  [74c6bb8d3aa480a95207e0085fc1c4c0]
+    File: research_results/documents/parsed/74c6bb8d3aa480a95207e0085fc1c4c0.txt
+    Risk Score: 3
+    DEI Keywords: inclusion, equity, diversity, dei, underrepresented, underserved
+    Proxy Keywords: bipoc
+    Binding Indicators: contract, must, required, agreement, statewide, policy, standard, mandatory, shall
+    Applicability: hiring, procurement, training, housing
+    Text Length: 59426 chars
+
+  [e074d302eac8c1251ce84c7611f87a01]
+    File: research_results/documents/parsed/e074d302eac8c1251ce84c7611f87a01.txt
+    Risk Score: 3
+    DEI Keywords: inclusion, equity, diversity, dei, underrepresented, underserved
+    Proxy Keywords: safe space, bipoc
+    Binding Indicators: contract, applicability, must, required, agreement, statewide, policy, standard
+    Applicability: hiring, procurement, training, housing
+    Text Length: 108807 chars
+
+  [2cb743c45485324adc632bb0642bc614]
+    File: research_results/documents/parsed/2cb743c45485324adc632bb0642bc614.txt
+    Risk Score: 3
+    DEI Keywords: inclusion, equity, diversity, dei, underrepresented, underserved
+    Proxy Keywords: lived experience, equity plan
+    Binding Indicators: contract, must, required, agreement, statewide, policy, standard, mandatory, shall
+    Applicability: hiring, procurement, training, housing
+    Text Length: 141010 chars
+
+  [645b1f978c1291384280119d20b07e77]
+    File: research_results/documents/parsed/645b1f978c1291384280119d20b07e77.txt
+    Risk Score: 2
+    DEI Keywords: inclusion, equity, diversity, dei, underrepresented
+    Proxy Keywords: 
+    Binding Indicators: contract, must, required, agreement, statewide, policy, standard, mandatory, shall
+    Applicability: hiring, procurement, training, housing
+    Text Length: 67969 chars
+
+  [39aacc6287ece4d98183827562496c5e]
+    File: research_results/documents/parsed/39aacc6287ece4d98183827562496c5e.txt
+    Risk Score: 2
+    DEI Keywords: inclusion, equity, diversity, dei
+    Proxy Keywords: 
+    Binding Indicators: statewide, contract, mandatory, shall
+    Applicability: procurement, housing
+    Text Length: 13084 chars
+
+  [07a1076fa131f26b2cdcc68681afddbb]
+    File: research_results/documents/parsed/07a1076fa131f26b2cdcc68681afddbb.txt
+    Risk Score: 3
+    DEI Keywords: inclusion, equity, diversity, dei, underrepresented, underserved
+    Proxy Keywords: safe space, equity plan
+    Binding Indicators: contract, must, statewide, policy, mandatory, shall
+    Applicability: hiring, procurement, training, housing
+    Text Length: 49914 chars
+
+  [f17c22e859e2c48b5a346d23fc10a3c0]
+    File: research_results/documents/parsed/f17c22e859e2c48b5a346d23fc10a3c0.txt
+    Risk Score: 2
+    DEI Keywords: underserved, inclusion, equity, diversity
+    Proxy Keywords: 
+    Binding Indicators: must, statewide, policy, standard
+    Applicability: hiring, housing
+    Text Length: 15914 chars
+
+  [0605239e9e394ac73f36ee2d115a566f]
+    File: research_results/documents/parsed/0605239e9e394ac73f36ee2d115a566f.txt
+    Risk Score: 2
+    DEI Keywords: inclusion, equity, diversity, dei
+    Proxy Keywords: 
+    Binding Indicators: must, required, statewide, standard, shall
+    Applicability: hiring, training, housing
+    Text Length: 11831 chars
+
+  [544d76b9a259616a1c691b4f98098735]
+    File: research_results/documents/parsed/544d76b9a259616a1c691b4f98098735.txt
+    Risk Score: 3
+    DEI Keywords: inclusion, equity, diversity, dei, underrepresented, underserved
+    Proxy Keywords: safe space, equity plan
+    Binding Indicators: contract, must, statewide, policy, mandatory, shall
+    Applicability: hiring, procurement, training, housing
+    Text Length: 49914 chars
+
+  [6431de02c3af80fab467e7aebdc1d17c]
+    File: research_results/documents/parsed/6431de02c3af80fab467e7aebdc1d17c.txt
+    Risk Score: 3
+    DEI Keywords: inclusion, equity, diversity, dei, underserved
+    Proxy Keywords: bipoc
+    Binding Indicators: contract, must, required, agreement, statewide, policy, standard, shall
+    Applicability: hiring, procurement, training, housing
+    Text Length: 76622 chars
+
+  [ffb8613e7bb63a09a1349a4f4cd7e90b]
+    File: research_results/documents/parsed/ffb8613e7bb63a09a1349a4f4cd7e90b.txt
+    Risk Score: 2
+    DEI Keywords: inclusion, equity, diversity, dei, underrepresented, underserved
+    Proxy Keywords: 
+    Binding Indicators: must, policy, standard, required
+    Applicability: training, housing
+    Text Length: 22565 chars
+
+  [57a271a61cfdda6b8b76a264c5c1a897]
+    File: research_results/documents/parsed/57a271a61cfdda6b8b76a264c5c1a897.txt
+    Risk Score: 2
+    DEI Keywords: inclusion, equity, diversity, dei, underrepresented, underserved
+    Proxy Keywords: 
+    Binding Indicators: contract, must, required, agreement, statewide, ordinance, policy, standard, applicable to, shall
+    Applicability: hiring, procurement, training, housing
+    Text Length: 114632 chars
+
+  [a2f08c4c1146471bbf56e2808875d0b6]
+    File: research_results/documents/parsed/a2f08c4c1146471bbf56e2808875d0b6.txt
+    Risk Score: 3
+    DEI Keywords: inclusion, equity, diversity, dei, underrepresented, underserved
+    Proxy Keywords: lived experience, bipoc
+    Binding Indicators: contract, must, required, agreement, statewide, policy, standard, shall
+    Applicability: hiring, procurement, training, housing
+    Text Length: 147683 chars
+
+  [bbfc77a24628ff8e29dd977ba4c66095]
+    File: research_results/documents/parsed/bbfc77a24628ff8e29dd977ba4c66095.txt
+    Risk Score: 3
+    DEI Keywords: inclusion, equity, diversity, dei, underrepresented, underserved
+    Proxy Keywords: bipoc
+    Binding Indicators: contract, must, required, agreement, statewide, policy, standard
+    Applicability: hiring, procurement, training, housing
+    Text Length: 69963 chars
+
+  [6e6c69b294212c64d1c617f261e70841]
+    File: research_results/documents/parsed/6e6c69b294212c64d1c617f261e70841.txt
+    Risk Score: 2
+    DEI Keywords: inclusion, equity, diversity, dei, underrepresented, underserved
+    Proxy Keywords: 
+    Binding Indicators: must, policy
+    Applicability: hiring, procurement, training, housing
+    Text Length: 36369 chars
+
+  [f05cefc6c4eb4225c881409d8daadc29]
+    File: research_results/documents/parsed/f05cefc6c4eb4225c881409d8daadc29.txt
+    Risk Score: 3
+    DEI Keywords: inclusion, equity, diversity, dei, underserved
+    Proxy Keywords: bipoc
+    Binding Indicators: contract, required, agreement, statewide, policy, standard, shall
+    Applicability: hiring, procurement, training, housing
+    Text Length: 85456 chars
+
+  [0a3c2fb7aaa8fce1b2fcc321ae18e5b9]
+    File: research_results/documents/parsed/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.txt
+    Risk Score: 3
+    DEI Keywords: inclusion, equity, diversity, dei, underserved
+    Proxy Keywords: cultural competence, lived experience
+    Binding Indicators: contract, must, required, statewide, policy, standard, shall
+    Applicability: hiring, procurement, training, housing
+    Text Length: 31368 chars
+
+  [b3b027941a48b0372a0fe52293173996]
+    File: research_results/documents/parsed/b3b027941a48b0372a0fe52293173996.txt
+    Risk Score: 3
+    DEI Keywords: inclusion, equity, diversity, dei, underrepresented, underserved
+    Proxy Keywords: safe space, bipoc
+    Binding Indicators: contract, applicability, must, required, agreement, statewide, policy, standard
+    Applicability: hiring, procurement, training, housing
+    Text Length: 186852 chars
+
+  [301c581abbfcce15c8336a36b2946da3]
+    File: research_results/documents/parsed/301c581abbfcce15c8336a36b2946da3.txt
+    Risk Score: 2
+    DEI Keywords: inclusion, equity, diversity, dei
+    Proxy Keywords: 
+    Binding Indicators: policy, shall
+    Applicability: hiring, training
+    Text Length: 6892 chars
+
+================================================================================
+END OF REPORT
+================================================================================

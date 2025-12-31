@@ -1,0 +1,939 @@
+[
+  {
+    "id": "592594abd4eb6a8bad89ce62855bb42e",
+    "file_path": "research_results/documents/parsed/592594abd4eb6a8bad89ce62855bb42e.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/592594abd4eb6a8bad89ce62855bb42e.pdf",
+      "parsed_text_path": "research_results/documents/parsed/592594abd4eb6a8bad89ce62855bb42e.txt",
+      "parse_date": "2025-12-31T00:12:52.052277",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/592594abd4eb6a8bad89ce62855bb42e.pdf",
+      "text_length": 21859,
+      "checksum": "f7e5a71df3a106d51200c5ccad107c46977bd332f9f8747285c4630943d33d8e"
+    },
+    "dei_keywords": [
+      "diversity",
+      "underserved",
+      "equity",
+      "inclusion",
+      "dei"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "must",
+      "applicability",
+      "standard",
+      "contract",
+      "required"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 21859,
+    "indexed_date": "2025-12-31T00:19:34.043022"
+  },
+  {
+    "id": "74c6bb8d3aa480a95207e0085fc1c4c0",
+    "file_path": "research_results/documents/parsed/74c6bb8d3aa480a95207e0085fc1c4c0.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/74c6bb8d3aa480a95207e0085fc1c4c0.pdf",
+      "parsed_text_path": "research_results/documents/parsed/74c6bb8d3aa480a95207e0085fc1c4c0.txt",
+      "parse_date": "2025-12-31T00:12:52.597466",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/74c6bb8d3aa480a95207e0085fc1c4c0.pdf",
+      "text_length": 59426,
+      "checksum": "87f938b2988fb27113ed2a0b5ebd5ed5b6e3b785210cc9a06a5fe0bc8b3f6b28"
+    },
+    "dei_keywords": [
+      "diversity",
+      "underserved",
+      "equity",
+      "inclusion",
+      "dei",
+      "underrepresented"
+    ],
+    "proxy_keywords": [
+      "bipoc"
+    ],
+    "binding_keywords": [
+      "required",
+      "must",
+      "shall",
+      "mandatory",
+      "policy",
+      "statewide",
+      "contract",
+      "standard",
+      "agreement"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 59426,
+    "indexed_date": "2025-12-31T00:19:34.044358"
+  },
+  {
+    "id": "e074d302eac8c1251ce84c7611f87a01",
+    "file_path": "research_results/documents/parsed/e074d302eac8c1251ce84c7611f87a01.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/e074d302eac8c1251ce84c7611f87a01.pdf",
+      "parsed_text_path": "research_results/documents/parsed/e074d302eac8c1251ce84c7611f87a01.txt",
+      "parse_date": "2025-12-31T00:09:13.384217",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/e074d302eac8c1251ce84c7611f87a01.pdf",
+      "text_length": 108807,
+      "checksum": "613c1a161cd5c57883e76dc59c80a4bb3b3bc0160b602d5ecb12206f7736b6f6"
+    },
+    "dei_keywords": [
+      "diversity",
+      "underserved",
+      "equity",
+      "inclusion",
+      "dei",
+      "underrepresented"
+    ],
+    "proxy_keywords": [
+      "bipoc",
+      "safe space"
+    ],
+    "binding_keywords": [
+      "required",
+      "must",
+      "policy",
+      "applicability",
+      "statewide",
+      "contract",
+      "standard",
+      "agreement"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 108807,
+    "indexed_date": "2025-12-31T00:19:34.046695"
+  },
+  {
+    "id": "2cb743c45485324adc632bb0642bc614",
+    "file_path": "research_results/documents/parsed/2cb743c45485324adc632bb0642bc614.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/2cb743c45485324adc632bb0642bc614.pdf",
+      "parsed_text_path": "research_results/documents/parsed/2cb743c45485324adc632bb0642bc614.txt",
+      "parse_date": "2025-12-31T00:12:51.966650",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/2cb743c45485324adc632bb0642bc614.pdf",
+      "text_length": 141010,
+      "checksum": "2b1ab700d4dd995e610f9b36c1a690dd89899cd4146233b3d995f2dccafd0b63"
+    },
+    "dei_keywords": [
+      "diversity",
+      "underserved",
+      "equity",
+      "inclusion",
+      "dei",
+      "underrepresented"
+    ],
+    "proxy_keywords": [
+      "equity plan",
+      "lived experience"
+    ],
+    "binding_keywords": [
+      "required",
+      "must",
+      "shall",
+      "mandatory",
+      "policy",
+      "statewide",
+      "contract",
+      "standard",
+      "agreement"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 141010,
+    "indexed_date": "2025-12-31T00:19:34.049421"
+  },
+  {
+    "id": "645b1f978c1291384280119d20b07e77",
+    "file_path": "research_results/documents/parsed/645b1f978c1291384280119d20b07e77.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/645b1f978c1291384280119d20b07e77.pdf",
+      "parsed_text_path": "research_results/documents/parsed/645b1f978c1291384280119d20b07e77.txt",
+      "parse_date": "2025-12-31T00:09:13.025452",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/645b1f978c1291384280119d20b07e77.pdf",
+      "text_length": 67969,
+      "checksum": "0cc8a10483ad5ba24ad11e5efa115e9281618616d668f8be97ab482edbab2c5e"
+    },
+    "dei_keywords": [
+      "diversity",
+      "equity",
+      "inclusion",
+      "dei",
+      "underrepresented"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "required",
+      "must",
+      "shall",
+      "mandatory",
+      "policy",
+      "statewide",
+      "contract",
+      "standard",
+      "agreement"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 67969,
+    "indexed_date": "2025-12-31T00:19:34.050718"
+  },
+  {
+    "id": "39aacc6287ece4d98183827562496c5e",
+    "file_path": "research_results/documents/parsed/39aacc6287ece4d98183827562496c5e.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/39aacc6287ece4d98183827562496c5e.pdf",
+      "parsed_text_path": "research_results/documents/parsed/39aacc6287ece4d98183827562496c5e.txt",
+      "parse_date": "2025-12-31T00:12:52.080024",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/39aacc6287ece4d98183827562496c5e.pdf",
+      "text_length": 13084,
+      "checksum": "7c97fb698b233b82cbc5e4c34fc0a6a13401b3e1758d31540cfdfa0af1c31814"
+    },
+    "dei_keywords": [
+      "diversity",
+      "dei",
+      "inclusion",
+      "equity"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "contract",
+      "mandatory",
+      "statewide",
+      "shall"
+    ],
+    "applicability_tags": [
+      "procurement",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 13084,
+    "indexed_date": "2025-12-31T00:19:34.051131"
+  },
+  {
+    "id": "07a1076fa131f26b2cdcc68681afddbb",
+    "file_path": "research_results/documents/parsed/07a1076fa131f26b2cdcc68681afddbb.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/07a1076fa131f26b2cdcc68681afddbb.pdf",
+      "parsed_text_path": "research_results/documents/parsed/07a1076fa131f26b2cdcc68681afddbb.txt",
+      "parse_date": "2025-12-31T00:12:52.178849",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/07a1076fa131f26b2cdcc68681afddbb.pdf",
+      "text_length": 49914,
+      "checksum": "5c5e9bb64d2f1e2b3724de97d691eb04a6ce959bfa1ad216bed6847cd44eff36"
+    },
+    "dei_keywords": [
+      "diversity",
+      "underserved",
+      "equity",
+      "inclusion",
+      "dei",
+      "underrepresented"
+    ],
+    "proxy_keywords": [
+      "equity plan",
+      "safe space"
+    ],
+    "binding_keywords": [
+      "must",
+      "shall",
+      "mandatory",
+      "statewide",
+      "contract",
+      "policy"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 49914,
+    "indexed_date": "2025-12-31T00:19:34.052063"
+  },
+  {
+    "id": "f17c22e859e2c48b5a346d23fc10a3c0",
+    "file_path": "research_results/documents/parsed/f17c22e859e2c48b5a346d23fc10a3c0.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/f17c22e859e2c48b5a346d23fc10a3c0.pdf",
+      "parsed_text_path": "research_results/documents/parsed/f17c22e859e2c48b5a346d23fc10a3c0.txt",
+      "parse_date": "2025-12-31T00:12:52.662370",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/f17c22e859e2c48b5a346d23fc10a3c0.pdf",
+      "text_length": 15914,
+      "checksum": "84be56f348d8e1b8b825328de18f98947acf0fab1bbca080945225df23aa939b"
+    },
+    "dei_keywords": [
+      "diversity",
+      "inclusion",
+      "equity",
+      "underserved"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "must",
+      "statewide",
+      "standard",
+      "policy"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 15914,
+    "indexed_date": "2025-12-31T00:19:34.052594"
+  },
+  {
+    "id": "0605239e9e394ac73f36ee2d115a566f",
+    "file_path": "research_results/documents/parsed/0605239e9e394ac73f36ee2d115a566f.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/0605239e9e394ac73f36ee2d115a566f.pdf",
+      "parsed_text_path": "research_results/documents/parsed/0605239e9e394ac73f36ee2d115a566f.txt",
+      "parse_date": "2025-12-31T00:12:52.500472",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/0605239e9e394ac73f36ee2d115a566f.pdf",
+      "text_length": 11831,
+      "checksum": "8251eb94766c30fbd5fe9b3a55a98a922c22d699523a9884208e3a36d0005c2e"
+    },
+    "dei_keywords": [
+      "diversity",
+      "dei",
+      "inclusion",
+      "equity"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "must",
+      "shall",
+      "standard",
+      "statewide",
+      "required"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "training",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 11831,
+    "indexed_date": "2025-12-31T00:19:34.052993"
+  },
+  {
+    "id": "544d76b9a259616a1c691b4f98098735",
+    "file_path": "research_results/documents/parsed/544d76b9a259616a1c691b4f98098735.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/544d76b9a259616a1c691b4f98098735.pdf",
+      "parsed_text_path": "research_results/documents/parsed/544d76b9a259616a1c691b4f98098735.txt",
+      "parse_date": "2025-12-31T00:09:12.824391",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/544d76b9a259616a1c691b4f98098735.pdf",
+      "text_length": 49914,
+      "checksum": "5c5e9bb64d2f1e2b3724de97d691eb04a6ce959bfa1ad216bed6847cd44eff36"
+    },
+    "dei_keywords": [
+      "diversity",
+      "underserved",
+      "equity",
+      "inclusion",
+      "dei",
+      "underrepresented"
+    ],
+    "proxy_keywords": [
+      "equity plan",
+      "safe space"
+    ],
+    "binding_keywords": [
+      "must",
+      "shall",
+      "mandatory",
+      "statewide",
+      "contract",
+      "policy"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 49914,
+    "indexed_date": "2025-12-31T00:19:34.053923"
+  },
+  {
+    "id": "6431de02c3af80fab467e7aebdc1d17c",
+    "file_path": "research_results/documents/parsed/6431de02c3af80fab467e7aebdc1d17c.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/6431de02c3af80fab467e7aebdc1d17c.pdf",
+      "parsed_text_path": "research_results/documents/parsed/6431de02c3af80fab467e7aebdc1d17c.txt",
+      "parse_date": "2025-12-31T00:12:52.490205",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/6431de02c3af80fab467e7aebdc1d17c.pdf",
+      "text_length": 76622,
+      "checksum": "0a698137b426a85f75699fc8f9bed1f11dd0293c45a40db66412f250f229a9be"
+    },
+    "dei_keywords": [
+      "diversity",
+      "underserved",
+      "equity",
+      "inclusion",
+      "dei"
+    ],
+    "proxy_keywords": [
+      "bipoc"
+    ],
+    "binding_keywords": [
+      "required",
+      "must",
+      "shall",
+      "policy",
+      "statewide",
+      "contract",
+      "standard",
+      "agreement"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 76622,
+    "indexed_date": "2025-12-31T00:19:34.055438"
+  },
+  {
+    "id": "ffb8613e7bb63a09a1349a4f4cd7e90b",
+    "file_path": "research_results/documents/parsed/ffb8613e7bb63a09a1349a4f4cd7e90b.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/ffb8613e7bb63a09a1349a4f4cd7e90b.pdf",
+      "parsed_text_path": "research_results/documents/parsed/ffb8613e7bb63a09a1349a4f4cd7e90b.txt",
+      "parse_date": "2025-12-31T00:12:51.806337",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/ffb8613e7bb63a09a1349a4f4cd7e90b.pdf",
+      "text_length": 22565,
+      "checksum": "2d3070c7d801e215c4e6d50132cbfa73f1e40d86696503108e644281bd9fc546"
+    },
+    "dei_keywords": [
+      "diversity",
+      "underserved",
+      "equity",
+      "inclusion",
+      "dei",
+      "underrepresented"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "required",
+      "must",
+      "standard",
+      "policy"
+    ],
+    "applicability_tags": [
+      "training",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 22565,
+    "indexed_date": "2025-12-31T00:19:34.056211"
+  },
+  {
+    "id": "57a271a61cfdda6b8b76a264c5c1a897",
+    "file_path": "research_results/documents/parsed/57a271a61cfdda6b8b76a264c5c1a897.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/57a271a61cfdda6b8b76a264c5c1a897.pdf",
+      "parsed_text_path": "research_results/documents/parsed/57a271a61cfdda6b8b76a264c5c1a897.txt",
+      "parse_date": "2025-12-31T00:09:13.304542",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/57a271a61cfdda6b8b76a264c5c1a897.pdf",
+      "text_length": 114632,
+      "checksum": "a78d44d591134ae1a193af7dca783eb4fe9698e4f23af0bef3a38c1e7b2f4a86"
+    },
+    "dei_keywords": [
+      "diversity",
+      "underserved",
+      "equity",
+      "inclusion",
+      "dei",
+      "underrepresented"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "required",
+      "must",
+      "shall",
+      "ordinance",
+      "standard",
+      "statewide",
+      "contract",
+      "applicable to",
+      "policy",
+      "agreement"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 114632,
+    "indexed_date": "2025-12-31T00:19:34.058407"
+  },
+  {
+    "id": "a2f08c4c1146471bbf56e2808875d0b6",
+    "file_path": "research_results/documents/parsed/a2f08c4c1146471bbf56e2808875d0b6.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/a2f08c4c1146471bbf56e2808875d0b6.pdf",
+      "parsed_text_path": "research_results/documents/parsed/a2f08c4c1146471bbf56e2808875d0b6.txt",
+      "parse_date": "2025-12-31T00:12:52.244637",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/a2f08c4c1146471bbf56e2808875d0b6.pdf",
+      "text_length": 147683,
+      "checksum": "291fae959eed1acfecde75edf1f4e6f3e146af5575558f1fafd9f92e2a1fd81f"
+    },
+    "dei_keywords": [
+      "diversity",
+      "underserved",
+      "equity",
+      "inclusion",
+      "dei",
+      "underrepresented"
+    ],
+    "proxy_keywords": [
+      "bipoc",
+      "lived experience"
+    ],
+    "binding_keywords": [
+      "required",
+      "must",
+      "shall",
+      "policy",
+      "statewide",
+      "contract",
+      "standard",
+      "agreement"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 147683,
+    "indexed_date": "2025-12-31T00:19:34.060991"
+  },
+  {
+    "id": "bbfc77a24628ff8e29dd977ba4c66095",
+    "file_path": "research_results/documents/parsed/bbfc77a24628ff8e29dd977ba4c66095.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/bbfc77a24628ff8e29dd977ba4c66095.pdf",
+      "parsed_text_path": "research_results/documents/parsed/bbfc77a24628ff8e29dd977ba4c66095.txt",
+      "parse_date": "2025-12-31T00:12:52.031792",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/bbfc77a24628ff8e29dd977ba4c66095.pdf",
+      "text_length": 69963,
+      "checksum": "97466b4ff5b998bea81374d60bc2764ce0f937d0363204c60318deddd9fef8fe"
+    },
+    "dei_keywords": [
+      "diversity",
+      "underserved",
+      "equity",
+      "inclusion",
+      "dei",
+      "underrepresented"
+    ],
+    "proxy_keywords": [
+      "bipoc"
+    ],
+    "binding_keywords": [
+      "required",
+      "must",
+      "policy",
+      "statewide",
+      "contract",
+      "standard",
+      "agreement"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 69963,
+    "indexed_date": "2025-12-31T00:19:34.062293"
+  },
+  {
+    "id": "6e6c69b294212c64d1c617f261e70841",
+    "file_path": "research_results/documents/parsed/6e6c69b294212c64d1c617f261e70841.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/6e6c69b294212c64d1c617f261e70841.pdf",
+      "parsed_text_path": "research_results/documents/parsed/6e6c69b294212c64d1c617f261e70841.txt",
+      "parse_date": "2025-12-31T00:12:52.561850",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/6e6c69b294212c64d1c617f261e70841.pdf",
+      "text_length": 36369,
+      "checksum": "92af8286f58bf54636ba494bb5b70c7c183e164b38e31162d3b463fb521e8122"
+    },
+    "dei_keywords": [
+      "diversity",
+      "underserved",
+      "equity",
+      "inclusion",
+      "dei",
+      "underrepresented"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "must",
+      "policy"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 36369,
+    "indexed_date": "2025-12-31T00:19:34.063055"
+  },
+  {
+    "id": "f05cefc6c4eb4225c881409d8daadc29",
+    "file_path": "research_results/documents/parsed/f05cefc6c4eb4225c881409d8daadc29.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/f05cefc6c4eb4225c881409d8daadc29.pdf",
+      "parsed_text_path": "research_results/documents/parsed/f05cefc6c4eb4225c881409d8daadc29.txt",
+      "parse_date": "2025-12-31T00:12:52.008334",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/f05cefc6c4eb4225c881409d8daadc29.pdf",
+      "text_length": 85456,
+      "checksum": "b6d9444b2c19c0ca30c25a3a60346c079585dd1af516873d4bf81c287bab68e2"
+    },
+    "dei_keywords": [
+      "diversity",
+      "underserved",
+      "equity",
+      "inclusion",
+      "dei"
+    ],
+    "proxy_keywords": [
+      "bipoc"
+    ],
+    "binding_keywords": [
+      "required",
+      "shall",
+      "policy",
+      "statewide",
+      "contract",
+      "standard",
+      "agreement"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 85456,
+    "indexed_date": "2025-12-31T00:19:34.064635"
+  },
+  {
+    "id": "0a3c2fb7aaa8fce1b2fcc321ae18e5b9",
+    "file_path": "research_results/documents/parsed/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.pdf",
+      "parsed_text_path": "research_results/documents/parsed/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.txt",
+      "parse_date": "2025-12-31T00:09:12.919875",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.pdf",
+      "text_length": 31368,
+      "checksum": "10272c81ac1f78e6941a99757b911e240022a32496f8b0b8176b65a7819f9f5e"
+    },
+    "dei_keywords": [
+      "diversity",
+      "underserved",
+      "equity",
+      "inclusion",
+      "dei"
+    ],
+    "proxy_keywords": [
+      "lived experience",
+      "cultural competence"
+    ],
+    "binding_keywords": [
+      "must",
+      "shall",
+      "policy",
+      "standard",
+      "statewide",
+      "contract",
+      "required"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 31368,
+    "indexed_date": "2025-12-31T00:19:34.065246"
+  },
+  {
+    "id": "b3b027941a48b0372a0fe52293173996",
+    "file_path": "research_results/documents/parsed/b3b027941a48b0372a0fe52293173996.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/b3b027941a48b0372a0fe52293173996.pdf",
+      "parsed_text_path": "research_results/documents/parsed/b3b027941a48b0372a0fe52293173996.txt",
+      "parse_date": "2025-12-31T00:09:12.976582",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/b3b027941a48b0372a0fe52293173996.pdf",
+      "text_length": 186852,
+      "checksum": "752645670521d59225fe9de7811d99104386733422078b2b7a62f7326eb75644"
+    },
+    "dei_keywords": [
+      "diversity",
+      "underserved",
+      "equity",
+      "inclusion",
+      "dei",
+      "underrepresented"
+    ],
+    "proxy_keywords": [
+      "bipoc",
+      "safe space"
+    ],
+    "binding_keywords": [
+      "required",
+      "must",
+      "policy",
+      "applicability",
+      "statewide",
+      "contract",
+      "standard",
+      "agreement"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 186852,
+    "indexed_date": "2025-12-31T00:19:34.068875"
+  },
+  {
+    "id": "301c581abbfcce15c8336a36b2946da3",
+    "file_path": "research_results/documents/parsed/301c581abbfcce15c8336a36b2946da3.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/301c581abbfcce15c8336a36b2946da3.pdf",
+      "parsed_text_path": "research_results/documents/parsed/301c581abbfcce15c8336a36b2946da3.txt",
+      "parse_date": "2025-12-31T00:12:52.606013",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/301c581abbfcce15c8336a36b2946da3.pdf",
+      "text_length": 6892,
+      "checksum": "ad45910b47286ca2ffe025ffcbc097d56b11008dfe5a5603667becb2a482026e"
+    },
+    "dei_keywords": [
+      "diversity",
+      "dei",
+      "inclusion",
+      "equity"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "policy",
+      "shall"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "training"
+    ],
+    "risk_score": 2,
+    "text_length": 6892,
+    "indexed_date": "2025-12-31T00:19:34.069142"
+  },
+  {
+    "id": "4260e59b296ab49cb9ae241fbba37c68",
+    "file_path": "research_results/documents/parsed/4260e59b296ab49cb9ae241fbba37c68.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/4260e59b296ab49cb9ae241fbba37c68.pdf",
+      "parsed_text_path": "research_results/documents/parsed/4260e59b296ab49cb9ae241fbba37c68.txt",
+      "parse_date": "2025-12-31T00:12:52.630421",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/4260e59b296ab49cb9ae241fbba37c68.pdf",
+      "text_length": 38034,
+      "checksum": "01e509fe53473d7d01c926d7b1a4bbeeae5f00497217159225fcb8b9f134de74"
+    },
+    "dei_keywords": [
+      "diversity",
+      "equity",
+      "inclusion",
+      "dei",
+      "underrepresented"
+    ],
+    "proxy_keywords": [
+      "cultural competence"
+    ],
+    "binding_keywords": [
+      "shall",
+      "policy",
+      "statewide",
+      "contract",
+      "required",
+      "agreement"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 38034,
+    "indexed_date": "2025-12-31T00:19:34.070002"
+  },
+  {
+    "id": "1d20c2a61ee7a30f077fe8e8eeba2667",
+    "file_path": "research_results/documents/parsed/1d20c2a61ee7a30f077fe8e8eeba2667.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/1d20c2a61ee7a30f077fe8e8eeba2667.pdf",
+      "parsed_text_path": "research_results/documents/parsed/1d20c2a61ee7a30f077fe8e8eeba2667.txt",
+      "parse_date": "2025-12-31T00:09:12.896013",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/1d20c2a61ee7a30f077fe8e8eeba2667.pdf",
+      "text_length": 18877,
+      "checksum": "535781fd4fa2ce3f00526232ac423b76ccb8be90da2487e00a3b177fe34e63d5"
+    },
+    "dei_keywords": [
+      "deib",
+      "diversity",
+      "equity",
+      "inclusion",
+      "dei",
+      "underrepresented"
+    ],
+    "proxy_keywords": [
+      "bipoc",
+      "lived experience"
+    ],
+    "binding_keywords": [
+      "must",
+      "policy",
+      "agreement"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "training",
+      "housing"
+    ],
+    "risk_score": 3,
+    "text_length": 18877,
+    "indexed_date": "2025-12-31T00:19:34.070516"
+  },
+  {
+    "id": "9992a1019c1a850d63d4e6c5f0ef450b",
+    "file_path": "research_results/documents/parsed/9992a1019c1a850d63d4e6c5f0ef450b.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/9992a1019c1a850d63d4e6c5f0ef450b.pdf",
+      "parsed_text_path": "research_results/documents/parsed/9992a1019c1a850d63d4e6c5f0ef450b.txt",
+      "parse_date": "2025-12-31T00:09:12.746757",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/9992a1019c1a850d63d4e6c5f0ef450b.pdf",
+      "text_length": 8230,
+      "checksum": "3cf283ef7067abf03f63d6cba492fb6dafb41b1162643bf370d064a6ecffeb90"
+    },
+    "dei_keywords": [
+      "diversity",
+      "dei",
+      "inclusion",
+      "equity"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [],
+    "applicability_tags": [
+      "training"
+    ],
+    "risk_score": 1,
+    "text_length": 8230,
+    "indexed_date": "2025-12-31T00:19:34.070841"
+  },
+  {
+    "id": "60ff12d7e79e6a9763b86f62b24ac6f4",
+    "file_path": "research_results/documents/parsed/60ff12d7e79e6a9763b86f62b24ac6f4.txt",
+    "metadata": {
+      "pdf_path": "research_results/documents/raw/60ff12d7e79e6a9763b86f62b24ac6f4.pdf",
+      "parsed_text_path": "research_results/documents/parsed/60ff12d7e79e6a9763b86f62b24ac6f4.txt",
+      "parse_date": "2025-12-31T00:09:12.878381",
+      "source": "local_file",
+      "url": "file://research_results/documents/raw/60ff12d7e79e6a9763b86f62b24ac6f4.pdf",
+      "text_length": 82412,
+      "checksum": "866cbd98850b05e981647683e5f7524e50069fe8f7fec0ad95e757ef20ff6a4f"
+    },
+    "dei_keywords": [
+      "deib",
+      "diversity",
+      "equity",
+      "inclusion",
+      "dei",
+      "underrepresented"
+    ],
+    "proxy_keywords": [],
+    "binding_keywords": [
+      "must",
+      "standard",
+      "contract",
+      "statewide",
+      "required"
+    ],
+    "applicability_tags": [
+      "hiring",
+      "procurement",
+      "training",
+      "housing"
+    ],
+    "risk_score": 2,
+    "text_length": 82412,
+    "indexed_date": "2025-12-31T00:19:34.072372"
+  }
+]

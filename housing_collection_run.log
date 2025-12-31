@@ -1,0 +1,507 @@
+2025-12-31 00:12:30,313 - INFO - ================================================================================
+2025-12-31 00:12:30,313 - INFO - Starting DEI Compliance Collection & Analysis Workflow
+2025-12-31 00:12:30,313 - INFO - ================================================================================
+2025-12-31 00:12:30,313 - INFO - 
+[STEP 1] Identifying documents to collect...
+2025-12-31 00:12:30,313 - INFO - Starting Brave Search API collection...
+2025-12-31 00:12:30,313 - INFO - Brave Search: site:oregon.gov filetype:pdf "housing" AND ("diversity" OR "...
+2025-12-31 00:12:30,787 - INFO -   Found 20 results
+2025-12-31 00:12:30,787 - INFO -     -> https://www.oregon.gov/lcd/Housing/Documents/2021_DAS_DEI_Action_Plan-
+2025-12-31 00:12:30,787 - INFO -     -> https://www.oregon.gov/das/Docs/DEI_Action_Plan_2021.pdf
+2025-12-31 00:12:30,787 - INFO -     -> https://www.oregon.gov/ohcs/hsc/Documents/meetings/2025/2025-DEC-05-HS
+2025-12-31 00:12:30,787 - INFO -     -> https://www.oregon.gov/deq/about-us/Documents/deiPlan2426.pdf
+2025-12-31 00:12:30,787 - INFO -     -> https://oregon.gov/ohcs/homeownership/Documents/HOD OHCS EIC Program M
+2025-12-31 00:12:30,787 - INFO -     -> https://www.oregon.gov/ohcs/development/Documents/admin/09-02-2021-det
+2025-12-31 00:12:30,787 - INFO -     -> https://www.oregon.gov/lcd/Housing/Documents/2021_DAS_DEI_Action_Plan-
+2025-12-31 00:12:30,787 - INFO -     -> https://www.oregon.gov/ohcs/rental-housing/housing-development/oregon-
+2025-12-31 00:12:30,787 - INFO -     -> https://www.oregon.gov/dor/Documents/FINAL%20DOR%202023-2027%20Updated
+2025-12-31 00:12:30,787 - INFO -     -> https://www.oregon.gov/ohcs/hsc/Documents/meetings/2025/2025-NOV-07-HS
+2025-12-31 00:12:30,787 - INFO -     -> https://www.oregon.gov/ohcs/hsc/Documents/2024-June-07-HSC-Meeting-Pac
+2025-12-31 00:12:30,787 - INFO -     -> https://oregon.gov/ogec/about-us/Documents/Affirmative Action Plans/20
+2025-12-31 00:12:30,787 - INFO -     -> https://www.oregon.gov/DCBS/DCBSPubs/DEI/5782-DEI-strategic-plan-23-25
+2025-12-31 00:12:30,787 - INFO -     -> https://www.oregon.gov/ohcs/hsc/Documents/meetings/2025/2025-jan-10-hs
+2025-12-31 00:12:30,787 - INFO -     -> https://www.oregon.gov/lcd/About/Documents/2020.01.30_DEI_Charter_FINA
+2025-12-31 00:12:30,787 - INFO -     -> https://www.oregon.gov/rea/about-us/Documents/OREA-AA-DEI-Plan-2025-20
+2025-12-31 00:12:30,787 - INFO -     -> https://www.oregon.gov/ohcs/development/Documents/admin/09-16-2021-DEI
+2025-12-31 00:12:30,787 - INFO -     -> https://oregon.gov/lcd/LAR/Documents/Final_20250818[]_OHNA-REIS.pdf
+2025-12-31 00:12:30,787 - INFO - Brave Search: site:oregon.gov filetype:pdf "affordable housing" AND ("equi...
+2025-12-31 00:12:30,822 - ERROR - Brave API error: 429 Client Error: Too Many Requests for url: https://api.search.brave.com/res/v1/web/search?q=site%3Aoregon.gov+filetype%3Apdf+%22affordable+housing%22+AND+%28%22equity%22+OR+%22diversity%22%29&count=20
+2025-12-31 00:12:30,822 - INFO - Brave Search: site:oregon.gov/biz/dsc filetype:pdf "diversity" OR "equity"...
+2025-12-31 00:12:30,855 - ERROR - Brave API error: 429 Client Error: Too Many Requests for url: https://api.search.brave.com/res/v1/web/search?q=site%3Aoregon.gov%2Fbiz%2Fdsc+filetype%3Apdf+%22diversity%22+OR+%22equity%22&count=20
+2025-12-31 00:12:30,855 - INFO - Brave Search: site:oregon.gov/lcd filetype:pdf "housing" AND ("diversity" ...
+2025-12-31 00:12:30,888 - ERROR - Brave API error: 429 Client Error: Too Many Requests for url: https://api.search.brave.com/res/v1/web/search?q=site%3Aoregon.gov%2Flcd+filetype%3Apdf+%22housing%22+AND+%28%22diversity%22+OR+%22equity%22%29&count=20
+2025-12-31 00:12:30,888 - INFO - Brave Search: site:oregon.gov filetype:pdf "fair housing" AND ("equity" OR...
+2025-12-31 00:12:30,923 - ERROR - Brave API error: 429 Client Error: Too Many Requests for url: https://api.search.brave.com/res/v1/web/search?q=site%3Aoregon.gov+filetype%3Apdf+%22fair+housing%22+AND+%28%22equity%22+OR+%22diversity%22%29&count=20
+2025-12-31 00:12:30,924 - INFO - Brave Search: site:clackamas.us filetype:pdf "housing" AND ("diversity" OR...
+2025-12-31 00:12:30,961 - ERROR - Brave API error: 429 Client Error: Too Many Requests for url: https://api.search.brave.com/res/v1/web/search?q=site%3Aclackamas.us+filetype%3Apdf+%22housing%22+AND+%28%22diversity%22+OR+%22equity%22%29&count=20
+2025-12-31 00:12:30,961 - INFO - Brave Search: site:clackamas.us/housing filetype:pdf "diversity" OR "equit...
+2025-12-31 00:12:30,997 - ERROR - Brave API error: 429 Client Error: Too Many Requests for url: https://api.search.brave.com/res/v1/web/search?q=site%3Aclackamas.us%2Fhousing+filetype%3Apdf+%22diversity%22+OR+%22equity%22+OR+%22DEI%22&count=20
+2025-12-31 00:12:30,997 - INFO - Brave Search: site:clackamas.us filetype:pdf "fair housing" OR "housing au...
+2025-12-31 00:12:31,034 - ERROR - Brave API error: 429 Client Error: Too Many Requests for url: https://api.search.brave.com/res/v1/web/search?q=site%3Aclackamas.us+filetype%3Apdf+%22fair+housing%22+OR+%22housing+authority%22&count=20
+2025-12-31 00:12:31,035 - INFO - Brave Search: site:clackamas.us filetype:pdf "procurement" AND ("diversity...
+2025-12-31 00:12:31,070 - ERROR - Brave API error: 429 Client Error: Too Many Requests for url: https://api.search.brave.com/res/v1/web/search?q=site%3Aclackamas.us+filetype%3Apdf+%22procurement%22+AND+%28%22diversity%22+OR+%22minority%22+OR+%22women%22%29&count=20
+2025-12-31 00:12:31,070 - INFO - Brave Search: site:clackamas.us filetype:pdf "diversity" AND ("policy" OR ...
+2025-12-31 00:12:31,104 - ERROR - Brave API error: 429 Client Error: Too Many Requests for url: https://api.search.brave.com/res/v1/web/search?q=site%3Aclackamas.us+filetype%3Apdf+%22diversity%22+AND+%28%22policy%22+OR+%22plan%22+OR+%22action+plan%22%29&count=20
+2025-12-31 00:12:31,104 - INFO - Identified 18 PDF URLs from Brave Search
+2025-12-31 00:12:31,104 - INFO - 
+[STEP 2] Downloading PDFs...
+2025-12-31 00:12:31,104 - INFO - Already downloaded: https://www.oregon.gov/lcd/Housing/Documents/2021_DAS_DEI_Action_Plan-Glossary_Only.pdf -> research_results/documents/raw/ffb8613e7bb63a09a1349a4f4cd7e90b.pdf
+2025-12-31 00:12:31,104 - INFO - Already downloaded: https://www.oregon.gov/das/Docs/DEI_Action_Plan_2021.pdf -> research_results/documents/raw/2cb743c45485324adc632bb0642bc614.pdf
+2025-12-31 00:12:31,104 - INFO - Downloading: https://www.oregon.gov/ohcs/hsc/Documents/meetings/2025/2025-DEC-05-HSC-Meeting-Packet.pdf
+2025-12-31 00:12:34,051 - INFO - Downloaded to: research_results/documents/raw/f05cefc6c4eb4225c881409d8daadc29.pdf
+2025-12-31 00:12:34,051 - INFO - Already downloaded: https://www.oregon.gov/deq/about-us/Documents/deiPlan2426.pdf -> research_results/documents/raw/bbfc77a24628ff8e29dd977ba4c66095.pdf
+2025-12-31 00:12:34,051 - INFO - Downloading: https://oregon.gov/ohcs/homeownership/Documents/HOD OHCS EIC Program Manual 5.2025.pdf
+2025-12-31 00:12:35,419 - INFO - Downloaded to: research_results/documents/raw/592594abd4eb6a8bad89ce62855bb42e.pdf
+2025-12-31 00:12:35,419 - INFO - Downloading: https://www.oregon.gov/ohcs/development/Documents/admin/09-02-2021-detailed-survey-report.pdf
+2025-12-31 00:12:35,874 - WARNING - Unexpected content-type for https://www.oregon.gov/ohcs/development/Documents/admin/09-02-2021-detailed-survey-report.pdf: text/html; charset=utf-8
+2025-12-31 00:12:35,875 - INFO - Downloaded to: research_results/documents/raw/4e61daf9249f61c5361c07e4550f5841.pdf
+2025-12-31 00:12:35,875 - INFO - Downloading: https://www.oregon.gov/lcd/Housing/Documents/2021_DAS_DEI_Action_Plan-History_Only.pdf
+2025-12-31 00:12:36,480 - INFO - Downloaded to: research_results/documents/raw/39aacc6287ece4d98183827562496c5e.pdf
+2025-12-31 00:12:36,480 - INFO - Downloading: https://www.oregon.gov/ohcs/rental-housing/housing-development/oregon-centralized-application-orca/Documents/DEI/DEI%20Agreement%20Survey.pdf
+2025-12-31 00:12:36,753 - ERROR - Failed to download https://www.oregon.gov/ohcs/rental-housing/housing-development/oregon-centralized-application-orca/Documents/DEI/DEI%20Agreement%20Survey.pdf: 404 Client Error: Not Found for url: https://www.oregon.gov/ohcs/rental-housing/housing-development/oregon-centralized-application-orca/Documents/DEI/DEI%20Agreement%20Survey.pdf
+2025-12-31 00:12:36,754 - INFO - Downloading: https://www.oregon.gov/dor/Documents/FINAL%20DOR%202023-2027%20Updated%20DEI%20Plan.pdf
+2025-12-31 00:12:42,834 - INFO - Downloaded to: research_results/documents/raw/07a1076fa131f26b2cdcc68681afddbb.pdf
+2025-12-31 00:12:42,834 - INFO - Downloading: https://www.oregon.gov/ohcs/hsc/Documents/meetings/2025/2025-NOV-07-HSC-Meeting-Packet.pdf
+2025-12-31 00:12:47,002 - INFO - Downloaded to: research_results/documents/raw/a2f08c4c1146471bbf56e2808875d0b6.pdf
+2025-12-31 00:12:47,002 - INFO - Downloading: https://www.oregon.gov/ohcs/hsc/Documents/2024-June-07-HSC-Meeting-Packet.pdf
+2025-12-31 00:12:49,681 - INFO - Downloaded to: research_results/documents/raw/6431de02c3af80fab467e7aebdc1d17c.pdf
+2025-12-31 00:12:49,681 - INFO - Already downloaded: https://oregon.gov/ogec/about-us/Documents/Affirmative Action Plans/2024 OGEC DEI Plan.pdf -> research_results/documents/raw/0605239e9e394ac73f36ee2d115a566f.pdf
+2025-12-31 00:12:49,681 - INFO - Already downloaded: https://www.oregon.gov/DCBS/DCBSPubs/DEI/5782-DEI-strategic-plan-23-25.pdf -> research_results/documents/raw/6e6c69b294212c64d1c617f261e70841.pdf
+2025-12-31 00:12:49,681 - INFO - Downloading: https://www.oregon.gov/ohcs/hsc/Documents/meetings/2025/2025-jan-10-hsc-meeting-materials.pdf
+2025-12-31 00:12:51,260 - INFO - Downloaded to: research_results/documents/raw/74c6bb8d3aa480a95207e0085fc1c4c0.pdf
+2025-12-31 00:12:51,260 - INFO - Already downloaded: https://www.oregon.gov/lcd/About/Documents/2020.01.30_DEI_Charter_FINAL.pdf -> research_results/documents/raw/301c581abbfcce15c8336a36b2946da3.pdf
+2025-12-31 00:12:51,260 - INFO - Already downloaded: https://www.oregon.gov/rea/about-us/Documents/OREA-AA-DEI-Plan-2025-2027.pdf -> research_results/documents/raw/4260e59b296ab49cb9ae241fbba37c68.pdf
+2025-12-31 00:12:51,260 - INFO - Already downloaded: https://www.oregon.gov/ohcs/development/Documents/admin/09-16-2021-DEI-Agreement.pdf -> research_results/documents/raw/36569dd9f987a996afefc9d54375067e.pdf
+2025-12-31 00:12:51,260 - INFO - Downloading: https://oregon.gov/lcd/LAR/Documents/Final_20250818[]_OHNA-REIS.pdf
+2025-12-31 00:12:51,792 - INFO - Downloaded to: research_results/documents/raw/f17c22e859e2c48b5a346d23fc10a3c0.pdf
+2025-12-31 00:12:51,792 - INFO - Downloaded/available: 17 PDF(s)
+2025-12-31 00:12:51,792 - INFO - 
+[STEP 3] Parsing PDFs...
+2025-12-31 00:12:51,792 - INFO - Parsing: research_results/documents/raw/ffb8613e7bb63a09a1349a4f4cd7e90b.pdf
+2025-12-31 00:12:51,806 - INFO - Parsed to: research_results/documents/parsed/ffb8613e7bb63a09a1349a4f4cd7e90b.txt
+2025-12-31 00:12:51,806 - INFO - Parsing: research_results/documents/raw/2cb743c45485324adc632bb0642bc614.pdf
+2025-12-31 00:12:51,967 - INFO - Parsed to: research_results/documents/parsed/2cb743c45485324adc632bb0642bc614.txt
+2025-12-31 00:12:51,967 - INFO - Parsing: research_results/documents/raw/f05cefc6c4eb4225c881409d8daadc29.pdf
+2025-12-31 00:12:52,008 - INFO - Parsed to: research_results/documents/parsed/f05cefc6c4eb4225c881409d8daadc29.txt
+2025-12-31 00:12:52,008 - INFO - Parsing: research_results/documents/raw/bbfc77a24628ff8e29dd977ba4c66095.pdf
+2025-12-31 00:12:52,032 - INFO - Parsed to: research_results/documents/parsed/bbfc77a24628ff8e29dd977ba4c66095.txt
+2025-12-31 00:12:52,032 - INFO - Parsing: research_results/documents/raw/592594abd4eb6a8bad89ce62855bb42e.pdf
+2025-12-31 00:12:52,052 - INFO - Parsed to: research_results/documents/parsed/592594abd4eb6a8bad89ce62855bb42e.txt
+2025-12-31 00:12:52,052 - INFO - Parsing: research_results/documents/raw/4e61daf9249f61c5361c07e4550f5841.pdf
+2025-12-31 00:12:52,062 - WARNING - pdftotext failed for research_results/documents/raw/4e61daf9249f61c5361c07e4550f5841.pdf: Syntax Warning: May not be a PDF file (continuing anyway)
+Syntax Error (2): Illegal character <21> in hex string
+Syntax Error (4): Illegal character <4f> in hex string
+Syntax Error (6): Illegal character <54> in hex string
+Syntax Error (7): Illegal character <59> in hex string
+Syntax Error (8): Illegal character <50> in hex string
+Syntax Error (11): Illegal character <68> in hex string
+Syntax Error (12): Illegal character <74> in hex string
+Syntax Error (13): Illegal character <6d> in hex string
+Syntax Error (14): Illegal character <6c> in hex string
+Syntax Error (19): Illegal character <21> in hex string
+Syntax Error (20): Illegal character <2d> in hex string
+Syntax Error (21): Illegal character <2d> in hex string
+Syntax Error (24): Illegal character <4f> in hex string
+Syntax Error (26): Illegal character <4e> in hex string
+Syntax Error (27): Illegal character <4f> in hex string
+Syntax Error (28): Illegal character <54> in hex string
+Syntax Error (31): Illegal character <4c> in hex string
+Syntax Error (32): Illegal character <54> in hex string
+Syntax Error (34): Illegal character <52> in hex string
+Syntax Error (36): Illegal character <4f> in hex string
+Syntax Error (37): Illegal character <52> in hex string
+Syntax Error (41): Illegal character <54> in hex string
+Syntax Error (44): Illegal character <48> in hex string
+Syntax Error (47): Illegal character <52> in hex string
+Syntax Error (48): Illegal character <4f> in hex string
+Syntax Error (49): Illegal character <4d> in hex string
+Syntax Error (51): Illegal character <53> in hex string
+Syntax Error (52): Illegal character <49> in hex string
+Syntax Error (53): Illegal character <54> in hex string
+Syntax Error (59): Illegal character <49> in hex string
+Syntax Error (60): Illegal character <4e> in hex string
+Syntax Error (61): Illegal character <49> in hex string
+Syntax Error (62): Illegal character <54> in hex string
+Syntax Error (63): Illegal character <49> in hex string
+Syntax Error (64): Illegal character <4f> in hex string
+Syntax Error (65): Illegal character <4e> in hex string
+Syntax Error (67): Illegal character <57> in hex string
+Syntax Error (68): Illegal character <49> in hex string
+Syntax Error (69): Illegal character <54> in hex string
+Syntax Error (70): Illegal character <48> in hex string
+Syntax Error (71): Illegal character <4f> in hex string
+Syntax Error (72): Illegal character <55> in hex string
+Syntax Error (73): Illegal character <54> in hex string
+Syntax Error (76): Illegal character <4f> in hex string
+Syntax Error (77): Illegal character <4e> in hex string
+Syntax Error (78): Illegal character <53> in hex string
+Syntax Error (79): Illegal character <55> in hex string
+Syntax Error (80): Illegal character <4c> in hex string
+Syntax Error (81): Illegal character <54> in hex string
+Syntax Error (82): Illegal character <49> in hex string
+Syntax Error (83): Illegal character <4e> in hex string
+Syntax Error (84): Illegal character <47> in hex string
+Syntax Error (86): Illegal character <4e> in hex string
+Syntax Error (87): Illegal character <49> in hex string
+Syntax Error (91): Illegal character <52> in hex string
+Syntax Error (94): Illegal character <54> in hex string
+Syntax Error (95): Illegal character <49> in hex string
+Syntax Error (96): Illegal character <56> in hex string
+Syntax Error (99): Illegal character <53> in hex string
+Syntax Error (101): Illegal character <52> in hex string
+Syntax Error (102): Illegal character <56> in hex string
+Syntax Error (103): Illegal character <49> in hex string
+Syntax Error (106): Illegal character <53> in hex string
+Syntax Error (108): Illegal character <2d> in hex string
+Syntax Error (109): Illegal character <2d> in hex string
+Syntax Error (118): Illegal character <21> in hex string
+Syntax Error (119): Illegal character <2d> in hex string
+Syntax Error (120): Illegal character <2d> in hex string
+Syntax Error (122): Illegal character <4c> in hex string
+Syntax Error (124): Illegal character <67> in hex string
+Syntax Error (127): Illegal character <79> in hex string
+Syntax Error (130): Illegal character <6f> in hex string
+Syntax Error (131): Illegal character <6e> in hex string
+Syntax Error (132): Illegal character <74> in hex string
+Syntax Error (133): Illegal character <72> in hex string
+Syntax Error (134): Illegal character <6f> in hex string
+Syntax Error (135): Illegal character <6c> in hex string
+Syntax Error (136): Illegal character <73> in hex string
+Syntax Error (138): Illegal character <2d> in hex string
+Syntax Error (139): Illegal character <2d> in hex string
+Syntax Error (146): Illegal character <21> in hex string
+Syntax Error (147): Illegal character <2d> in hex string
+Syntax Error (148): Illegal character <2d> in hex string
+Syntax Error (150): Illegal character <4e> in hex string
+Syntax Error (154): Illegal character <73> in hex string
+Syntax Error (155): Illegal character <73> in hex string
+Syntax Error (157): Illegal character <72> in hex string
+Syntax Error (158): Illegal character <79> in hex string
+Syntax Error (160): Illegal character <74> in hex string
+Syntax Error (161): Illegal character <6f> in hex string
+Syntax Error (163): Illegal character <75> in hex string
+Syntax Error (164): Illegal character <73> in hex string
+Syntax Error (167): Illegal character <54> in hex string
+Syntax Error (169): Illegal character <6d> in hex string
+Syntax Error (170): Illegal character <70> in hex string
+Syntax Error (171): Illegal character <6c> in hex string
+Syntax Error (173): Illegal character <74> in hex string
+Syntax Error (175): Illegal character <53> in hex string
+Syntax Error (177): Illegal character <74> in hex string
+Syntax Error (178): Illegal character <74> in hex string
+Syntax Error (179): Illegal character <69> in hex string
+Syntax Error (180): Illegal character <6e> in hex string
+Syntax Error (181): Illegal character <67> in hex string
+Syntax Error (182): Illegal character <73> in hex string
+Syntax Error (184): Illegal character <2d> in hex string
+Syntax Error (185): Illegal character <2d> in hex string
+Syntax Error (192): Illegal character <21> in hex string
+Syntax Error (193): Illegal character <2d> in hex string
+Syntax Error (194): Illegal character <2d> in hex string
+Syntax Error (196): Illegal character <48> in hex string
+Syntax Error (197): Illegal character <54> in hex string
+Syntax Error (198): Illegal character <4d> in hex string
+Syntax Error (199): Illegal character <4c> in hex string
+Syntax Error (201): Illegal character <2d> in hex string
+Syntax Error (202): Illegal character <2d> in hex string
+Syntax Error (209): Illegal character <68> in hex string
+Syntax Error (210): Illegal character <74> in hex string
+Syntax Error (211): Illegal character <6d> in hex string
+Syntax Error (212): Illegal character <6c> in hex string
+Syntax Error (214): Illegal character <6c> in hex string
+Syntax Error (216): Illegal character <6e> in hex string
+Syntax Error (217): Illegal character <67> in hex string
+Syntax Error (218): Illegal character <3d> in hex string
+Syntax Error (219): Illegal character <27> in hex string
+Syntax Error (221): Illegal character <6e> in hex string
+Syntax Error (222): Illegal character <2d> in hex string
+Syntax Error (223): Illegal character <75> in hex string
+Syntax Error (224): Illegal character <73> in hex string
+Syntax Error (225): Illegal character <27> in hex string
+Syntax Error: Couldn't find trailer dictionary
+Syntax Error: Couldn't find trailer dictionary
+Syntax Error: Couldn't read xref table
+
+2025-12-31 00:12:52,063 - ERROR - Could not extract text from research_results/documents/raw/4e61daf9249f61c5361c07e4550f5841.pdf
+2025-12-31 00:12:52,063 - INFO - Parsing: research_results/documents/raw/39aacc6287ece4d98183827562496c5e.pdf
+2025-12-31 00:12:52,080 - INFO - Parsed to: research_results/documents/parsed/39aacc6287ece4d98183827562496c5e.txt
+2025-12-31 00:12:52,080 - INFO - Parsing: research_results/documents/raw/07a1076fa131f26b2cdcc68681afddbb.pdf
+2025-12-31 00:12:52,179 - INFO - Parsed to: research_results/documents/parsed/07a1076fa131f26b2cdcc68681afddbb.txt
+2025-12-31 00:12:52,179 - INFO - Parsing: research_results/documents/raw/a2f08c4c1146471bbf56e2808875d0b6.pdf
+2025-12-31 00:12:52,245 - INFO - Parsed to: research_results/documents/parsed/a2f08c4c1146471bbf56e2808875d0b6.txt
+2025-12-31 00:12:52,245 - INFO - Parsing: research_results/documents/raw/6431de02c3af80fab467e7aebdc1d17c.pdf
+2025-12-31 00:12:52,490 - INFO - Parsed to: research_results/documents/parsed/6431de02c3af80fab467e7aebdc1d17c.txt
+2025-12-31 00:12:52,490 - INFO - Parsing: research_results/documents/raw/0605239e9e394ac73f36ee2d115a566f.pdf
+2025-12-31 00:12:52,500 - INFO - Parsed to: research_results/documents/parsed/0605239e9e394ac73f36ee2d115a566f.txt
+2025-12-31 00:12:52,500 - INFO - Parsing: research_results/documents/raw/6e6c69b294212c64d1c617f261e70841.pdf
+2025-12-31 00:12:52,562 - INFO - Parsed to: research_results/documents/parsed/6e6c69b294212c64d1c617f261e70841.txt
+2025-12-31 00:12:52,562 - INFO - Parsing: research_results/documents/raw/74c6bb8d3aa480a95207e0085fc1c4c0.pdf
+2025-12-31 00:12:52,597 - INFO - Parsed to: research_results/documents/parsed/74c6bb8d3aa480a95207e0085fc1c4c0.txt
+2025-12-31 00:12:52,597 - INFO - Parsing: research_results/documents/raw/301c581abbfcce15c8336a36b2946da3.pdf
+2025-12-31 00:12:52,606 - INFO - Parsed to: research_results/documents/parsed/301c581abbfcce15c8336a36b2946da3.txt
+2025-12-31 00:12:52,606 - INFO - Parsing: research_results/documents/raw/4260e59b296ab49cb9ae241fbba37c68.pdf
+2025-12-31 00:12:52,631 - INFO - Parsed to: research_results/documents/parsed/4260e59b296ab49cb9ae241fbba37c68.txt
+2025-12-31 00:12:52,631 - INFO - Parsing: research_results/documents/raw/36569dd9f987a996afefc9d54375067e.pdf
+2025-12-31 00:12:52,641 - WARNING - pdftotext failed for research_results/documents/raw/36569dd9f987a996afefc9d54375067e.pdf: Syntax Warning: May not be a PDF file (continuing anyway)
+Syntax Error (2): Illegal character <21> in hex string
+Syntax Error (4): Illegal character <4f> in hex string
+Syntax Error (6): Illegal character <54> in hex string
+Syntax Error (7): Illegal character <59> in hex string
+Syntax Error (8): Illegal character <50> in hex string
+Syntax Error (11): Illegal character <68> in hex string
+Syntax Error (12): Illegal character <74> in hex string
+Syntax Error (13): Illegal character <6d> in hex string
+Syntax Error (14): Illegal character <6c> in hex string
+Syntax Error (19): Illegal character <21> in hex string
+Syntax Error (20): Illegal character <2d> in hex string
+Syntax Error (21): Illegal character <2d> in hex string
+Syntax Error (24): Illegal character <4f> in hex string
+Syntax Error (26): Illegal character <4e> in hex string
+Syntax Error (27): Illegal character <4f> in hex string
+Syntax Error (28): Illegal character <54> in hex string
+Syntax Error (31): Illegal character <4c> in hex string
+Syntax Error (32): Illegal character <54> in hex string
+Syntax Error (34): Illegal character <52> in hex string
+Syntax Error (36): Illegal character <4f> in hex string
+Syntax Error (37): Illegal character <52> in hex string
+Syntax Error (41): Illegal character <54> in hex string
+Syntax Error (44): Illegal character <48> in hex string
+Syntax Error (47): Illegal character <52> in hex string
+Syntax Error (48): Illegal character <4f> in hex string
+Syntax Error (49): Illegal character <4d> in hex string
+Syntax Error (51): Illegal character <53> in hex string
+Syntax Error (52): Illegal character <49> in hex string
+Syntax Error (53): Illegal character <54> in hex string
+Syntax Error (59): Illegal character <49> in hex string
+Syntax Error (60): Illegal character <4e> in hex string
+Syntax Error (61): Illegal character <49> in hex string
+Syntax Error (62): Illegal character <54> in hex string
+Syntax Error (63): Illegal character <49> in hex string
+Syntax Error (64): Illegal character <4f> in hex string
+Syntax Error (65): Illegal character <4e> in hex string
+Syntax Error (67): Illegal character <57> in hex string
+Syntax Error (68): Illegal character <49> in hex string
+Syntax Error (69): Illegal character <54> in hex string
+Syntax Error (70): Illegal character <48> in hex string
+Syntax Error (71): Illegal character <4f> in hex string
+Syntax Error (72): Illegal character <55> in hex string
+Syntax Error (73): Illegal character <54> in hex string
+Syntax Error (76): Illegal character <4f> in hex string
+Syntax Error (77): Illegal character <4e> in hex string
+Syntax Error (78): Illegal character <53> in hex string
+Syntax Error (79): Illegal character <55> in hex string
+Syntax Error (80): Illegal character <4c> in hex string
+Syntax Error (81): Illegal character <54> in hex string
+Syntax Error (82): Illegal character <49> in hex string
+Syntax Error (83): Illegal character <4e> in hex string
+Syntax Error (84): Illegal character <47> in hex string
+Syntax Error (86): Illegal character <4e> in hex string
+Syntax Error (87): Illegal character <49> in hex string
+Syntax Error (91): Illegal character <52> in hex string
+Syntax Error (94): Illegal character <54> in hex string
+Syntax Error (95): Illegal character <49> in hex string
+Syntax Error (96): Illegal character <56> in hex string
+Syntax Error (99): Illegal character <53> in hex string
+Syntax Error (101): Illegal character <52> in hex string
+Syntax Error (102): Illegal character <56> in hex string
+Syntax Error (103): Illegal character <49> in hex string
+Syntax Error (106): Illegal character <53> in hex string
+Syntax Error (108): Illegal character <2d> in hex string
+Syntax Error (109): Illegal character <2d> in hex string
+Syntax Error (118): Illegal character <21> in hex string
+Syntax Error (119): Illegal character <2d> in hex string
+Syntax Error (120): Illegal character <2d> in hex string
+Syntax Error (122): Illegal character <4c> in hex string
+Syntax Error (124): Illegal character <67> in hex string
+Syntax Error (127): Illegal character <79> in hex string
+Syntax Error (130): Illegal character <6f> in hex string
+Syntax Error (131): Illegal character <6e> in hex string
+Syntax Error (132): Illegal character <74> in hex string
+Syntax Error (133): Illegal character <72> in hex string
+Syntax Error (134): Illegal character <6f> in hex string
+Syntax Error (135): Illegal character <6c> in hex string
+Syntax Error (136): Illegal character <73> in hex string
+Syntax Error (138): Illegal character <2d> in hex string
+Syntax Error (139): Illegal character <2d> in hex string
+Syntax Error (146): Illegal character <21> in hex string
+Syntax Error (147): Illegal character <2d> in hex string
+Syntax Error (148): Illegal character <2d> in hex string
+Syntax Error (150): Illegal character <4e> in hex string
+Syntax Error (154): Illegal character <73> in hex string
+Syntax Error (155): Illegal character <73> in hex string
+Syntax Error (157): Illegal character <72> in hex string
+Syntax Error (158): Illegal character <79> in hex string
+Syntax Error (160): Illegal character <74> in hex string
+Syntax Error (161): Illegal character <6f> in hex string
+Syntax Error (163): Illegal character <75> in hex string
+Syntax Error (164): Illegal character <73> in hex string
+Syntax Error (167): Illegal character <54> in hex string
+Syntax Error (169): Illegal character <6d> in hex string
+Syntax Error (170): Illegal character <70> in hex string
+Syntax Error (171): Illegal character <6c> in hex string
+Syntax Error (173): Illegal character <74> in hex string
+Syntax Error (175): Illegal character <53> in hex string
+Syntax Error (177): Illegal character <74> in hex string
+Syntax Error (178): Illegal character <74> in hex string
+Syntax Error (179): Illegal character <69> in hex string
+Syntax Error (180): Illegal character <6e> in hex string
+Syntax Error (181): Illegal character <67> in hex string
+Syntax Error (182): Illegal character <73> in hex string
+Syntax Error (184): Illegal character <2d> in hex string
+Syntax Error (185): Illegal character <2d> in hex string
+Syntax Error (192): Illegal character <21> in hex string
+Syntax Error (193): Illegal character <2d> in hex string
+Syntax Error (194): Illegal character <2d> in hex string
+Syntax Error (196): Illegal character <48> in hex string
+Syntax Error (197): Illegal character <54> in hex string
+Syntax Error (198): Illegal character <4d> in hex string
+Syntax Error (199): Illegal character <4c> in hex string
+Syntax Error (201): Illegal character <2d> in hex string
+Syntax Error (202): Illegal character <2d> in hex string
+Syntax Error (209): Illegal character <68> in hex string
+Syntax Error (210): Illegal character <74> in hex string
+Syntax Error (211): Illegal character <6d> in hex string
+Syntax Error (212): Illegal character <6c> in hex string
+Syntax Error (214): Illegal character <6c> in hex string
+Syntax Error (216): Illegal character <6e> in hex string
+Syntax Error (217): Illegal character <67> in hex string
+Syntax Error (218): Illegal character <3d> in hex string
+Syntax Error (219): Illegal character <27> in hex string
+Syntax Error (221): Illegal character <6e> in hex string
+Syntax Error (222): Illegal character <2d> in hex string
+Syntax Error (223): Illegal character <75> in hex string
+Syntax Error (224): Illegal character <73> in hex string
+Syntax Error (225): Illegal character <27> in hex string
+Syntax Error: Couldn't find trailer dictionary
+Syntax Error: Couldn't find trailer dictionary
+Syntax Error: Couldn't read xref table
+
+2025-12-31 00:12:52,641 - ERROR - Could not extract text from research_results/documents/raw/36569dd9f987a996afefc9d54375067e.pdf
+2025-12-31 00:12:52,641 - INFO - Parsing: research_results/documents/raw/f17c22e859e2c48b5a346d23fc10a3c0.pdf
+2025-12-31 00:12:52,662 - INFO - Parsed to: research_results/documents/parsed/f17c22e859e2c48b5a346d23fc10a3c0.txt
+2025-12-31 00:12:52,662 - INFO - Parsed 17 PDFs
+2025-12-31 00:12:52,662 - INFO - 
+[STEP 4] Indexing and tagging documents...
+2025-12-31 00:12:52,663 - INFO - Found 24 text files to index
+2025-12-31 00:12:52,663 - INFO - Indexed: 592594abd4eb6a8bad89ce62855bb42e.txt (risk_score=2)
+2025-12-31 00:12:52,665 - INFO - Indexed: 74c6bb8d3aa480a95207e0085fc1c4c0.txt (risk_score=3)
+2025-12-31 00:12:52,667 - INFO - Indexed: e074d302eac8c1251ce84c7611f87a01.txt (risk_score=3)
+2025-12-31 00:12:52,669 - INFO - Indexed: 2cb743c45485324adc632bb0642bc614.txt (risk_score=3)
+2025-12-31 00:12:52,670 - INFO - Indexed: 645b1f978c1291384280119d20b07e77.txt (risk_score=2)
+2025-12-31 00:12:52,671 - INFO - Indexed: 39aacc6287ece4d98183827562496c5e.txt (risk_score=2)
+2025-12-31 00:12:52,672 - INFO - Indexed: 07a1076fa131f26b2cdcc68681afddbb.txt (risk_score=3)
+2025-12-31 00:12:52,672 - INFO - Indexed: f17c22e859e2c48b5a346d23fc10a3c0.txt (risk_score=2)
+2025-12-31 00:12:52,673 - INFO - Indexed: 0605239e9e394ac73f36ee2d115a566f.txt (risk_score=2)
+2025-12-31 00:12:52,674 - INFO - Indexed: 544d76b9a259616a1c691b4f98098735.txt (risk_score=3)
+2025-12-31 00:12:52,675 - INFO - Indexed: 6431de02c3af80fab467e7aebdc1d17c.txt (risk_score=3)
+2025-12-31 00:12:52,676 - INFO - Indexed: ffb8613e7bb63a09a1349a4f4cd7e90b.txt (risk_score=2)
+2025-12-31 00:12:52,678 - INFO - Indexed: 57a271a61cfdda6b8b76a264c5c1a897.txt (risk_score=2)
+2025-12-31 00:12:52,680 - INFO - Indexed: a2f08c4c1146471bbf56e2808875d0b6.txt (risk_score=3)
+2025-12-31 00:12:52,682 - INFO - Indexed: bbfc77a24628ff8e29dd977ba4c66095.txt (risk_score=3)
+2025-12-31 00:12:52,683 - INFO - Indexed: 6e6c69b294212c64d1c617f261e70841.txt (risk_score=2)
+2025-12-31 00:12:52,684 - INFO - Indexed: f05cefc6c4eb4225c881409d8daadc29.txt (risk_score=3)
+2025-12-31 00:12:52,685 - INFO - Indexed: 0a3c2fb7aaa8fce1b2fcc321ae18e5b9.txt (risk_score=3)
+2025-12-31 00:12:52,688 - INFO - Indexed: b3b027941a48b0372a0fe52293173996.txt (risk_score=3)
+2025-12-31 00:12:52,688 - INFO - Indexed: 301c581abbfcce15c8336a36b2946da3.txt (risk_score=2)
+2025-12-31 00:12:52,689 - INFO - Indexed: 4260e59b296ab49cb9ae241fbba37c68.txt (risk_score=3)
+2025-12-31 00:12:52,690 - INFO - Indexed: 1d20c2a61ee7a30f077fe8e8eeba2667.txt (risk_score=3)
+2025-12-31 00:12:52,690 - INFO - Indexed: 9992a1019c1a850d63d4e6c5f0ef450b.txt (risk_score=1)
+2025-12-31 00:12:52,691 - INFO - Indexed: 60ff12d7e79e6a9763b86f62b24ac6f4.txt (risk_score=2)
+2025-12-31 00:12:52,692 - INFO - Saved index to research_results/document_index_20251231_001230.json
+2025-12-31 00:12:52,692 - INFO - Saved CSV summary to research_results/summary_20251231_001230.csv
+2025-12-31 00:12:52,692 - INFO - Index saved to research_results/document_index_20251231_001230.json
+2025-12-31 00:12:52,692 - INFO - CSV summary saved to research_results/summary_20251231_001230.csv
+2025-12-31 00:12:52,692 - INFO - 
+[STEP 5] Generating reports...
+2025-12-31 00:12:52,692 - INFO - Loaded 24 documents from research_results/document_index_20251231_001230.json
+2025-12-31 00:12:52,692 - INFO - Saved summary to research_results/FINDINGS_20251231_001230.txt
+2025-12-31 00:12:52,692 - INFO - Saved detailed report to research_results/DETAILED_REPORT_20251231_001230.txt
+2025-12-31 00:12:52,692 - INFO - 
+================================================================================
+2025-12-31 00:12:52,692 - INFO - SUMMARY REPORT
+2025-12-31 00:12:52,692 - INFO - ================================================================================
+2025-12-31 00:12:52,692 - INFO - ================================================================================
+FINDINGS SUMMARY — Oregon DEI References Audit
+Generated: 20251231_001230
+================================================================================
+
+SCOPE
+- Search for State of Oregon policies and rules referencing DEI, equity, diversity,
+  or proxies/euphemisms (cultural competence, lived experience, etc.) that could
+  be binding on the Housing Authority of Clackamas County.
+- Source: oregon.gov, clackamas.us, and partner domains.
+- Analysis: Keyword matching + risk scoring (0-3 scale).
+
+HIGH-RISK DOCUMENTS (Score >= 2, 23 found)
+- These documents contain both DEI/proxy language AND binding indicators
+  ("policy", "shall", "required", "contract", etc.)
+  [2] 592594abd4eb6a8bad89ce62855bb42e
+      DEI: dei, equity, diversity
+      Areas: hiring, procurement, housing
+  [3] 74c6bb8d3aa480a95207e0085fc1c4c0
+      DEI: dei, underrepresented, equity
+      Areas: hiring, procurement, training, housing
+  [3] e074d302eac8c1251ce84c7611f87a01
+      DEI: dei, underrepresented, equity
+      Areas: hiring, procurement, training, housing
+  [3] 2cb743c45485324adc632bb0642bc614
+      DEI: dei, underrepresented, equity
+      Areas: hiring, procurement, training, housing
+  [2] 645b1f978c1291384280119d20b07e77
+      DEI: dei, underrepresented, equity
+      Areas: hiring, procurement, training, housing
+  [2] 39aacc6287ece4d98183827562496c5e
+      DEI: equity, inclusion, dei
+      Areas: procurement, housing
+  [3] 07a1076fa131f26b2cdcc68681afddbb
+      DEI: dei, underrepresented, equity
+      Areas: hiring, procurement, training, housing
+  [2] f17c22e859e2c48b5a346d23fc10a3c0
+      DEI: equity, inclusion, diversity
+      Areas: hiring, housing
+  [2] 0605239e9e394ac73f36ee2d115a566f
+      DEI: equity, inclusion, dei
+      Areas: hiring, training, housing
+  [3] 544d76b9a259616a1c691b4f98098735
+      DEI: dei, underrepresented, equity
+      Areas: hiring, procurement, training, housing
+
+MEDIUM-RISK DOCUMENTS (Score = 1, 1 found)
+- These contain DEI/proxy language but may lack explicit binding indicators.
+- Review to assess applicability and intent.
+  [1] 9992a1019c1a850d63d4e6c5f0ef450b
+      DEI: equity, inclusion, dei
+      Areas: training
+
+KEY APPLICABILITY AREAS IDENTIFIED
+  - Housing: 22 document(s)
+  - Hiring: 21 document(s)
+  - Training: 21 document(s)
+  - Procurement: 18 document(s)
+
+NEXT STEPS
+1. Review high-risk documents in detail; prioritize those tagged "hiring" or "procurement".
+2. Check if Oregon policies explicitly apply to local housing authorities.
+3. Collect evidence of current HA policies to compare against findings.
+4. Assess risk and draft remediation plan.
+
+For detailed analysis, see:
+  - Full index: research_results/document_index_20251231_001230.json
+  - CSV summary: research_results/summary_20251231_001230.csv
+================================================================================
+2025-12-31 00:12:52,692 - INFO - 
+================================================================================
+2025-12-31 00:12:52,692 - INFO - WORKFLOW COMPLETE
+2025-12-31 00:12:52,692 - INFO - ================================================================================
+2025-12-31 00:12:52,692 - INFO - Results: {
+  "queries_identified": 18,
+  "pdfs_parsed": 17,
+  "documents_indexed": 24,
+  "index_file": "research_results/document_index_20251231_001230.json",
+  "csv_file": "research_results/summary_20251231_001230.csv",
+  "summary_file": "research_results/FINDINGS_20251231_001230.txt",
+  "detailed_report_file": "research_results/DETAILED_REPORT_20251231_001230.txt",
+  "timestamp": "2025-12-31T00:12:52.692799"
+}
+2025-12-31 00:12:52,692 - INFO - 
+Results saved to research_results/workflow_results_20251231_001252.json
