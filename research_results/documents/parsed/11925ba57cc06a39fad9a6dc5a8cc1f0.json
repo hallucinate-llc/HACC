@@ -1,10 +1,14 @@
 {
-  "source": "third_party:www.racialequityalliance.org",
-  "url": "https://www.racialequityalliance.org/wp-content/uploads/2016/11/gare-racial-equity-action-plans.pdf",
-  "domain": "www.racialequityalliance.org",
-  "ingest_date": "2025-12-31T01:07:36.219845",
-  "content_type": "text/html; charset=utf-8",
-  "original_saved_path": "research_results/third_party_downloads/www.racialequityalliance.org/www.racialequityalliance.org_wp-content_uploads_2016_11_gare-racial-equity-action-plans_c15bcdb789.pdf",
-  "text_length": 913,
-  "checksum": "d471fac661a88335be67f6a5a84e42c65fa571d57c9b85e1692691168c4da7b7"
+  "pdf_path": "research_results/documents/raw/11925ba57cc06a39fad9a6dc5a8cc1f0.pdf",
+  "parsed_text_path": "research_results/documents/parsed/11925ba57cc06a39fad9a6dc5a8cc1f0.txt",
+  "parse_date": "2025-12-31T13:59:03.366189",
+  "source": "third_party:batch_parallel",
+  "url": "file://research_results/documents/raw/11925ba57cc06a39fad9a6dc5a8cc1f0.pdf",
+  "text_length": 89868,
+  "checksum": "748a6eade7580c31791d0249b3cd8868e6e8aec5ea519431ee5742c1728c79d5",
+  "extraction_method": "ocrmypdf_force+pdftotext",
+  "ocr_available": true,
+  "ocr_attempted": true,
+  "ocr_used": true,
+  "needs_ocr": false
 }

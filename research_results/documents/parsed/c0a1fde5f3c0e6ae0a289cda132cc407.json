@@ -1,13 +1,14 @@
 {
   "pdf_path": "research_results/documents/raw/c0a1fde5f3c0e6ae0a289cda132cc407.pdf",
   "parsed_text_path": "research_results/documents/parsed/c0a1fde5f3c0e6ae0a289cda132cc407.txt",
-  "parse_date": "2025-12-31T02:48:20.027871",
-  "source": "third_party:www.lse.ac.uk",
-  "url": "https://www.lse.ac.uk/tii/assets/documents/The-City-Quantum-Summit-TII-Report.pdf",
-  "text_length": 19174,
-  "checksum": "44b7d31143c6958d4add81c417a721d7fec7462b61618d44e1b5d757ff0dc848",
-  "domain": "www.lse.ac.uk",
-  "ingest_date": "2025-12-31T02:48:20.014444",
-  "content_type": "application/pdf",
-  "original_saved_path": "research_results/third_party_downloads/www.lse.ac.uk/www.lse.ac.uk_tii_assets_documents_The-City-Quantum-Summit-TII-Report.pdf"
+  "parse_date": "2025-12-31T03:31:52.575146",
+  "source": "third_party:batch_parallel",
+  "url": "file://research_results/documents/raw/c0a1fde5f3c0e6ae0a289cda132cc407.pdf",
+  "text_length": 19371,
+  "checksum": "9a5da3a09a4749a0035a90d43652d75f9bbcef4f744d5dcba25d5b72f28b814e",
+  "extraction_method": "ocrmypdf_force+pdftotext",
+  "ocr_available": true,
+  "ocr_attempted": true,
+  "ocr_used": true,
+  "needs_ocr": false
 }

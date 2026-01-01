@@ -1,13 +1,14 @@
 {
   "pdf_path": "research_results/documents/raw/7994a276120954c3d9f90e5633d232c8.pdf",
   "parsed_text_path": "research_results/documents/parsed/7994a276120954c3d9f90e5633d232c8.txt",
-  "parse_date": "2025-12-31T02:48:19.528563",
-  "source": "third_party:democrats-science.house.gov",
-  "url": "https://democrats-science.house.gov/imo/media/doc/democratic_staff_report-defending_hidden_figures.pdf",
-  "text_length": 156144,
-  "checksum": "ae05c4efb65abadd163a2bfcdbf7c9450313d02cdcb1851512a51b9840874ef9",
-  "domain": "democrats-science.house.gov",
-  "ingest_date": "2025-12-31T02:48:19.477163",
-  "content_type": "application/pdf",
-  "original_saved_path": "research_results/third_party_downloads/democrats-science.house.gov/democrats-science.house.gov_imo_media_doc_democratic_staff_report-defending_hidden_figures.pdf"
+  "parse_date": "2025-12-31T03:37:32.057722",
+  "source": "third_party:batch_retry",
+  "url": "file://research_results/documents/raw/7994a276120954c3d9f90e5633d232c8.pdf",
+  "text_length": 156561,
+  "checksum": "8eb07af94d665ac3f7bc882edf8415f5690f9090e8440c3e16f2482005ee0c65",
+  "extraction_method": "ocrmypdf_force+pdftotext",
+  "ocr_available": true,
+  "ocr_attempted": true,
+  "ocr_used": true,
+  "needs_ocr": false
 }

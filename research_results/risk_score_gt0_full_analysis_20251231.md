@@ -1,0 +1,6334 @@
+# Full analysis: all documents with risk_score > 0 (QuantumResidential included)
+
+Generated: 2025-12-31T11:14:47
+
+Total docs: 253
+
+## Rollups
+- Risk score histogram: 1=33, 2=184, 3=36
+- Classifications:
+  - quantumresidential:page: 101
+  - third-party:content: 47
+  - document:local-pdf: 35
+  - quantumresidential:asset-image: 30
+  - infrastructure/reference: 17
+  - government:site: 16
+  - quantumresidential:asset-js: 6
+  - quantumresidential:asset-css: 1
+- Top domains (by max risk, then count):
+  - (no-domain): max_risk=3 docs=35
+  - www.racialequityalliance.org: max_risk=3 docs=9
+  - obiu.org: max_risk=3 docs=6
+  - www.raceforward.org: max_risk=3 docs=6
+  - www.oregonmetro.gov: max_risk=3 docs=4
+  - www.quantumresidential.com: max_risk=2 docs=135
+  - en.wikipedia.org: max_risk=2 docs=6
+  - opportunityagenda.org: max_risk=2 docs=5
+  - www.drupal.org: max_risk=2 docs=4
+  - www.hud.gov: max_risk=2 docs=4
+  - www.hudexchange.info: max_risk=2 docs=4
+  - schema.org: max_risk=2 docs=3
+  - d3uf7shreuzboy.cloudfront.net: max_risk=2 docs=3
+  - www.osba.org: max_risk=2 docs=3
+  - www.charitynavigator.org: max_risk=2 docs=3
+  - quantumresidential.com: max_risk=2 docs=3
+  - paycom.com: max_risk=2 docs=2
+  - belonging.berkeley.edu: max_risk=2 docs=2
+  - tinyurl.com: max_risk=2 docs=2
+  - github.com: max_risk=2 docs=2
+  - oregonbuys.gov: max_risk=2 docs=2
+  - raceforward.org: max_risk=2 docs=2
+  - www.oregon.gov: max_risk=2 docs=2
+  - portal-applicant-tracking.us-cent.paycomonline.net: max_risk=2 docs=1
+  - dockets.justia.com: max_risk=2 docs=1
+- Top content types:
+  - text/html; charset=UTF-8: 135
+  - (none): 35
+  - image/jpeg: 24
+  - text/html; charset=utf-8: 20
+  - text/html;charset=UTF-8: 11
+  - application/javascript: 6
+  - image/png: 4
+  - text/html: 4
+  - application/json: 3
+  - application/rss+xml; charset=UTF-8: 3
+  - text/html;charset=utf-8: 2
+  - image/webp: 2
+  - text/javascript; charset=utf-8: 1
+  - application/json; charset=UTF-8: 1
+  - text/css: 1
+
+## Per-document analysis
+
+### 003c0bf391f9060e15360bb52c763605 (risk=3)
+- Classification: document:local-pdf
+- Title guess: busin Ss
+- URL: file://research_results/documents/raw/003c0bf391f9060e15360bb52c763605.pdf
+- Parsed text: research_results/documents/parsed/003c0bf391f9060e15360bb52c763605.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:43:00.126566)
+- Text length: 1288890
+- Why it likely scored > 0:
+  - DEI terms: equity(174); inclusion(25); equitable(13); minority(13); underserved(10); accessibility(7)
+  - Proxy terms: equity lens(5); equity framework(1); lived experience(1)
+  - Binding terms: privacy(20); statewide(17); policy(13); regulation(7); rule(7); requirement(4)
+- Summary:
+  - busin Ss ore al STATE OF OREGON DIGITAL EQUITY PLAN April 2024 The State of Oregon Digital Equity Plan was released for public comment from November 1 to December 16, 2023, in advance of its submission by the Oregon Broadband Office (OBO), an office within the
+  - The fulfillment of this Plan is contingent upon the State of Oregon’s receipt of its NTIA Digital Equity Capacity Grant Program allocation.
+  - ccc cesesesssestesessseseetessseseeseeeeeeeeees 1 1.2 Current state of digital equity: Assets and balTiePS...........ccccsceeceeeeeteteeeeeen 3 1.3 Need ASSESSMENL ......eeeesccsesesesssssescssescsesesescscsesescsssescecseseseseseseseeeseaeasasasasesacanesesan
+  - cece cseseeceseeeeeeeeeeees 8 15 Im plementation Plan ........ccccccccsssssssssecssscssscssscsesesesesesssesescssecsescsesesesesessesasasesessesenees 10 2 Introduction and vision for digital equity .....................:::csscsssssssssssscesssessssesseseeerens
+- Binding-language context snippets:
+  - ….........:.scsscesceeceeseeessessesseesceseencescescesoesneneeseeneescesesecescescesoesees 228 Figure 14: Response to “I can use and adjust privacy settings on social media” by household INCOME ..................:.sc2scescssessesssesseseescescesoesecnseneescencesseeecencescescesses…
+  - …Information Administration (NTIA) of the US. Department of Commerce this Statewide Digital Equity Plan (the Plan). OBO is an office within the Oregon Business Development Department (Business Oregon) and is designated by…
+- DEI-language context snippets:
+  - …ore al STATE OF OREGON DIGITAL EQUITY PLAN April 2024 The State of Oregon Digital Equity Plan was released for public comment…
+  - …ssssssesssescscsescssscssesssesesesescscscscssacscssauaseseuesesessseecseasacasasasesavanesasaeees 60 3.11 Digital inclusion assets by covered population ..........ccccccsssesseseeseseseseees 60 3.12 Existing digital equity plans... cccccs…
+
+### 77aef0247eed912205987be720f44eb3 (risk=3)
+- Classification: document:local-pdf
+- Title guess: A SCIENCE, RESEARCH AND TECH MAG
+- URL: file://research_results/documents/raw/77aef0247eed912205987be720f44eb3.pdf
+- Parsed text: research_results/documents/parsed/77aef0247eed912205987be720f44eb3.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:39:52.210396)
+- Text length: 540637
+- Why it likely scored > 0:
+  - DEI terms: underserved(11); diversity(5); equity(3); dei(2); inclusion(1); underrepresented(1)
+  - Binding terms: must(10); privacy(4); rule(3); standard(3); requirement(1); requirements(1)
+- Summary:
+  - We won't swamp your inbox To sign up for free, visit: www.futurumcareers.com/sign-up um) A NOTE ABOUT YOUR PRIVACY Your privacy is very important to us.
+  - Our full privacy policy can be found on the Futurum Careers website: www.futurumcareers.com/privacy OUR WRITERS JOIN US Jacob Ashton, MA @FUTURUMCareers Rebecca Ingle, PhD (@Futurumcareers Sam Jarman, MSc Futurum Careers Paul Redmond, MA @futurumcareers Alex R
+  - What Despite being an inspiration to many herself, Shrouk now has a role kind of amazing engineers would we have had by now?” model: Yewande Akinola, a chartered engineer who specialises in sustainable water supplies and was recognised as IET Young Woman Engin
+  - Growing up,
+  - was always aware of the disparities that exist in this world, in WHY ARE YOU SO PASSIONATE ABOUT SUPPORTING terms of resources and opportunities for the underserved.
+- Binding-language context snippets:
+  - …access these dwarf. Many of the new variables have yet to Gaia spacecraft records a star’s brightness, observations must compete against each be classified. the associated error can indicate whether other, making a case for why the dat…
+  - …ee, visit: www.futurumcareers.com/sign-up um) A NOTE ABOUT YOUR PRIVACY Your privacy is very important to us. We will not share, sell, reveal, publicise or market your details in any way, shape or form. Our fu…
+- DEI-language context snippets:
+  - …IC- AIMS TO ‘EMPOWER, EDUCATE AND STAKEHOLDERS TOGETHER EATING ENZYMES ENABLE’ UNDERSERVED STUDENTS BE PART OF A SCIENCE EDUCATION COMMUNITY Want more articles like these from researc…
+  - …le water supplies and was recognised as IET Young Woman Engineer of the Year in 2012 and awarded an MBE for her services to engineering and diversity in STEM design and innovation in 2020. TO FIND OUT MORE ABOUT SHROUK,…
+
+### a13956024790bc87e0defbaf2e9aaa63 (risk=3)
+- Classification: document:local-pdf
+- Title guess: NSF-Funded Convergence
+- URL: file://research_results/documents/raw/a13956024790bc87e0defbaf2e9aaa63.pdf
+- Parsed text: research_results/documents/parsed/a13956024790bc87e0defbaf2e9aaa63.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:32:27.659405)
+- Text length: 405875
+- Why it likely scored > 0:
+  - DEI terms: diversity(34); equity(25); social justice(22); underrepresented(16); equitable(15); inclusion(12)
+  - Proxy terms: lived experience(3); cultural competence(1)
+  - Binding terms: must(20); standard(8); requirement(5); requirements(5); rule(3); privacy(3)
+- Summary:
+  - Jackson, MBA Founder and Principal Consultant Training Coordinator The PEER Group, LLC The PEER Group, LLC Reimagining Innovation in STEM Education (RISE) for Human and Social Good
+  - Hosted by a ay, NS As part of the National Science Foundation’s (NSF's) Conve
+  - We branded it “Reimag- and influence in the technology and policy spaces have equal ining Innovation in STEM Education for Human and Social footing with recognized leaders in this space.
+  - This was represented in the munity-led nonprofits; diversity, equity, and inclusion-focused ASF} NSF-Funded Convergence Accelerator Workshop Award No.
+  - quires the selection and training of caretakers with princi- * Prioritize project-based learning that is centered on equity ples of asset building and anti-assimilation at the core of and student voices.
+- Binding-language context snippets:
+  - …ways that have direct meaning in ation phase is “to accelerate solutions toward societal impact” their lives. These efforts must be focused on reducing bar- with a focus on deliverables. Through this workshop experi- riers to access by making STEM e…
+  - …arding 25,000 science and engineering good topics is the motivation for STEM endeavors, intended to doctorates a year. The standard pathway to careers in comput- prioritize issues that spark passion in learners and emphasize ing, artificial intelligence…
+- DEI-language context snippets:
+  - …y, geographic, organizational, and personal demo- gence Accelerator program, IBM was funded to host a virtual graphic diversity represented along with the equitable engage- workshop series titled “Reimagining Advanced Research for ment of ever…
+  - …ommunity-based and com- inclusive, human-focused future. This was represented in the munity-led nonprofits; diversity, equity, and inclusion-focused ASF} NSF-Funded Convergence Accelerator Workshop Award No. OIA-2119846 consulting firms; and social scie…
+
+### b7387a8f638b7ddd0b6a497e0d8d3e49 (risk=3)
+- Classification: document:local-pdf
+- Title guess: Agenda
+- URL: file://research_results/documents/raw/b7387a8f638b7ddd0b6a497e0d8d3e49.pdf
+- Parsed text: research_results/documents/parsed/b7387a8f638b7ddd0b6a497e0d8d3e49.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:33:34.190961)
+- Text length: 310529
+- Why it likely scored > 0:
+  - DEI terms: equitable(25); equity(23); diversity(14); accessibility(14); marginalized(9); minority(8)
+  - Proxy terms: community engagement(29)
+  - Binding terms: contract(138); requirement(11); requirements(10); required(6); regulation(6); standard(4)
+- Summary:
+  - Table of contents Agenda Metro respects civil rights Clackamas county 2024 annual progress report Washington county 2024 annual progress report City of beaverton 2024 annual progress report City of Hillsboro 2024 annual progress report Housing communications r
+  - Portland, OR 97232-2736 Meeting: Housing Bond Oversight Committee Meeting Date: Monday, March 17, 2025 Time: 3:00 p.m.
+  - ADA: For questions about accessibility or accommodations for person with disabilities, or to request a translator, interpreter, or other communication aids, please contact Sandi Saunders at housing@oregonmetro.gov 3:00 p.m.
+  - Adjourn Metro respects civil rights Metro fully complies with Title VI of the Civil Rights Act of 1964 and related statutes that ban discrimination.
+- Binding-language context snippets:
+  - …t and supportive services are provided by Catholic Charities of Oregon. The development team consisted of WALSH Construction as the general contractor, MWA Architects providing architectural services, and the Housing Development Center providing development consulting. Funding Sources l…
+  - …ment project, which includes new utilities and the realignment of the street grid, are significant infrastructure upgrades and requirements. Hillside Park Buildings D &E includes infrastructure costs estimated at nearly $10 million. This is on top of the costs…
+- DEI-language context snippets:
+  - …onstruction of Metro bond projects. Please review and confirm the information in Figures 3 and 4 and let us know of any changes. Figure 3. Equitable contracting goals and outcomes…
+  - …n the remaining seven acres. As the affordable housing arm of CCO, Caritas Community Housing Corporation (Caritas Housing) works to advance equity for immigrants, refugees, and people who are houseless and vulnerable, with a special emphasis on those who are not served…
+
+### e074d302eac8c1251ce84c7611f87a01 (risk=3)
+- Classification: document:local-pdf
+- Title guess: State of Oregon
+- URL: file://research_results/documents/raw/e074d302eac8c1251ce84c7611f87a01.pdf
+- Parsed text: research_results/documents/parsed/e074d302eac8c1251ce84c7611f87a01.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:31:10.749173)
+- Text length: 245854
+- Why it likely scored > 0:
+  - DEI terms: equity(180); inclusion(127); diversity(29); accessibility(18); underserved(15); equitable(12)
+  - Proxy terms: equity framework(9); community engagement(5); safe space(2); inclusive environment(1)
+  - Binding terms: contract(19); required(18); policy(15); agreement(6); rule(6); standard(5)
+- Summary:
+  - State of Oregon Employment Department Diversity, Equity, and Inclusion Plan May 2023 we: on I d iar = = a SCOP aan ‘om “> v" Ta]
+  - ‘ 7 hah ~ F} =.
+  - So oe ih jamais < - va < —— — = 2) Vaca -, —— = We believe that Diversity, Equity, and Inclusion is necessary to ensure Oregon's diverse people and businesses can do meaningful work and reach their full potential.
+  - Employment Department 875 Union Street NE Salem, Oregon 97311 503-947-1394 May 22, 2023 employment.oregon.gov State of Oregon Employment Department At the Oregon Employment Department, we believe that a Diversity, Equity, and Inclusion Action Plan is necessary
+  - | want to personally thank our dedicated employees, including our Equity and Inclusion Council, Equity and Inclusion Office, and Executive Team for putting in the effort to create these goals together.
+- Binding-language context snippets:
+  - …sponsibilities, and resources for providing an inclusive and respectful environment for our customers, employees, and contractors of all gender identities ¢ Required for all new employees ¢ Alive, 45-minu…
+  - …ities aimed to help them value diversity, promote inclusion, and achieve equitable outcomes in their work. We provide a robust selection of required and optional material focused on equity, diversity, and inclusion with our employees. pe ze…
+- DEI-language context snippets:
+  - …State of Oregon Employment Department Diversity, Equity, and Inclusion Plan…
+  - …State of Oregon Employment Department Diversity, Equity, and Inclusion Plan…
+
+### a2f08c4c1146471bbf56e2808875d0b6 (risk=3)
+- Classification: document:local-pdf
+- Title guess: Housing Stability Council
+- URL: file://research_results/documents/raw/a2f08c4c1146471bbf56e2808875d0b6.pdf
+- Parsed text: research_results/documents/parsed/a2f08c4c1146471bbf56e2808875d0b6.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:32:26.871686)
+- Text length: 210365
+- Why it likely scored > 0:
+  - DEI terms: equity(17); accessibility(8); underserved(7); dei(6); bipoc(6); diversity(5)
+  - Proxy terms: community engagement(4); lived experience(3)
+  - Binding terms: requirement(23); requirements(23); standard(18); required(11); policy(8); agreement(6)
+- Summary:
+  - Housing Stability Council MEETING MATERIALS PACKET
+  - a
+  - US Blazer Industries Modular Factory Aumsville, Or.
+  - Oregon Housing & Community Services Webinar AGENDA Council Members: November 07, 2025 9:00 a.m.
+  - Claire Hall, Chair Oregon Housing and Community Services sami Jo Difuntorum 725 Summer St NE, Salem OR 97301 Mary Ferrell Maggie Harris Mary Li Webinar Mtg Only OREGON HOUSING & Erin Meechan Public register in advance for this webinar COMMUNITY SERVICES Javier
+  - 04) Natasha Detweiler-Daby, Director of Affordable Rental Housing Division e Public Hearing Comments in accordance with ORS 456.561 e Transactions: [ai Dunson-Strane, Assistant Director Production; Roberto Franco, Deputy Director Development o Avenue Plaza o G
+- Binding-language context snippets:
+  - …ability Council resolution. All applications are subject to underwriting and programmatic requirements and goals established under the Qualified Allocation Plan, General Policy and Guideline M…
+  - …ability Council resolution. All applications are subject to underwriting and programmatic requirements and goals established under the Qualified Allocation Plan, General Policy and Guideline Ma…
+- DEI-language context snippets:
+  - …220 ‘W = Equity & Racial Justice Homelessness F…
+  - …community-building activities. Services will be available in multiple languages, ensuring accessibility for diverse populations. Gresham Civic Station will ensure a focus on serving BIPOC communities, includi…
+
+### b3b027941a48b0372a0fe52293173996 (risk=3)
+- Classification: document:local-pdf
+- Title guess: Inclusion PLAN
+- URL: file://research_results/documents/raw/b3b027941a48b0372a0fe52293173996.pdf
+- Parsed text: research_results/documents/parsed/b3b027941a48b0372a0fe52293173996.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:33:00.895323)
+- Text length: 194354
+- Why it likely scored > 0:
+  - DEI terms: equity(271); inclusion(200); accessibility(37); diversity(36); dei(27); equitable(22)
+  - Proxy terms: equity framework(21); community engagement(9); safe space(3); inclusive environment(1)
+  - Binding terms: contract(29); policy(24); rule(16); required(11); standard(7); agreement(6)
+- Summary:
+  - Inclusion PLAN We believe that Diversity, Equity, and Inclusion are necessary to ensure Oregon's diverse people and businesses can do meaningful work and reach their full potential.
+  - State of Oregon Employment Department "SUPPORT BUSINESS
+  - PROMOTE EMPLOYMENT Table of Contents VISION AN MISSION .........ccccscsccssssscssscsscsssccecsssecscsesscessececessesesscsecesseseseceecessesesasaesesaseesesseeasasateases 3 Values, Operating Principles
+  - .cecccccccssssccccssscsceccscsssssenscscesacseusesecsesesesesesaceesecevasaesesevesacaesesesasacaesesesaseseesesasaneseasesases 20 Decision-Making and Budgets ............ccccccssssceccssssseessssssessscssssssessseseseseessseseseseesssesesaeeess 30 Contracting
+  - Diversity, Equity, and Inclusion Development Activities We give all our employees, including managers and represented workers, training, education, and development activities aimed to help them value diversity, promote inclusion, and achieve equitable outcomes
+- Binding-language context snippets:
+  - …neseasesases 20 Decision-Making and Budgets ............ccccccssssceccssssseessssssessscssssssessseseseseessseseseseesssesesaeeess 30 Contracting and ProcureMent............ccccseecscsscscessssssssessssessessssseseeesesesseiesesessteesssesreten 31 Diversifying workforce and inte…
+  - …e Disability Awareness, Accessibility, Communication, and Customer Service e Language Assistance e ADA Reasonable Accommodation Policy for Employees e Reasonable Accommodations for Customers e Gender Identity and Expression Procedure e Equity and Inclusion Ov…
+- DEI-language context snippets:
+  - …Inclusion PLAN We believe that Diversity, Equity, and Inclusion are necessary to ensure Oregon's diverse people and businesses can do meaningful work and reach their full potential.…
+  - …Inclusion PLAN We believe that Diversity, Equity, and Inclusion are necessary to ensure Oregon's diverse people and businesses can do meaningful work…
+
+### 2cb743c45485324adc632bb0642bc614 (risk=3)
+- Classification: document:local-pdf
+- Title guess: Si LM awa
+- URL: file://research_results/documents/raw/2cb743c45485324adc632bb0642bc614.pdf
+- Parsed text: research_results/documents/parsed/2cb743c45485324adc632bb0642bc614.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:37:42.750710)
+- Text length: 178688
+- Why it likely scored > 0:
+  - DEI terms: equity(192); diversity(52); inclusion(51); dei(35); equitable(23); people of color(15)
+  - Proxy terms: community engagement(10); equity lens(3); lived experience(1)
+  - Binding terms: policy(29); contract(20); must(19); standard(5); shall(4); required(4)
+- Summary:
+  - Si LM awa OP OAR NAS = IW 2 Afr Wi £1 at ts AES Nolen aes) ', |" / Ee Be; State of Oregon Diversity, Equity, and Inclusion Action Plan A Roadmap to Racial Equity and Belonging 8 ee > a.
+  - Over the past year, our most vital needs — health, safety, education, housing, and economic security — have been challenged to the core.
+  - As Oregon continues to recover from the historic year of a global pandemic, worst-in-a-century wildfires, unprecedented ice storms, and racial reckoning across our nation, we must put racial equity at the forefront of all of our recovery efforts and strategies
+  - This plan seeks to provide you with the racial equity roadmap and diversity, equity, and inclusion strategies to incorporate across all aspects of state government.
+- Binding-language context snippets:
+  - …in a stark binary of rural versus urban precludes us from recognizing policy Across the U.S., there is an uneven focus solutions that could benefi…
+  - …Strategy 6 — Equitable Budget, Inclusive Budget Process, and Investing in Target Communities............. 20 Strategy 7 — Contract Equity and Improving State Procurement ProceSSes o...ccccccccsesss…
+- DEI-language context snippets:
+  - …|" / Ee Be; State of Oregon Diversity, Equity, and Inclusion Action Plan A Roadmap to Racial Equity and Belonging…
+  - …|" / Ee Be; State of Oregon Diversity, Equity, and Inclusion Action Plan A Roadmap to Racial Equity and Belonging…
+
+### 7994a276120954c3d9f90e5633d232c8 (risk=3)
+- Classification: document:local-pdf
+- Title guess: Defending the Hidden Figures:
+- URL: file://research_results/documents/raw/7994a276120954c3d9f90e5633d232c8.pdf
+- Parsed text: research_results/documents/parsed/7994a276120954c3d9f90e5633d232c8.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:37:32.057722)
+- Text length: 156561
+- Why it likely scored > 0:
+  - DEI terms: dei(69); diversity(62); minority(29); equity(23); underrepresented(22); inclusion(15)
+  - Proxy terms: safe space(2)
+  - Binding terms: policy(12); mandatory(9); comply(6); standard(4); must(2); required(2)
+- Summary:
+  - eccesssssnnncececceccesessenaaeeeeceeeeesesneaeeeeeeeeeseeaaeeeeceeeceeeeseaaaeeeeceeseeeeesaaas 27 Cruz Report Authors Frequently Misunderstand Simple Scientific Terms «0.0.0.0...
+  - The authors lack a basic understanding of how National Science Foundation (NSF) awards are selected, the scientific literacy to discern technical terms with multiple meanings, and an understanding of laws, even those supported by Senator Cruz himself, that pro
+  - This resulted in a slew of embarrassing mistakes — for example, the authors’ seeming failure to review their own database resulted in grants being flagged for using terms related to biodiversity or focusing on “female” leopard seals.
+  - Approximately 5% of NSF’s budget supports agency operations (staff, IT, etc.); the remainder is awarded primarily in the form of grants and cooperative agreements to academic institutions and other nonprofit research and STEM education organizations.
+- Binding-language context snippets:
+  - …oval of the Document Library, which was an archive that preserved NSF documents to provide transparency into any changes in agency policy, descriptions, or programs to the scientific community.”* The removal of this resource effectively hid several of the act…
+  - …grant, per the Daily Wire’s publication of the database, sourced by the authors of the Cruz Report. CAREER: The Efficacy of Sexual Assault Mandatory Reporting Policies. Sexual assault is a serious threat to safety and educational access within institutions of higher education, especially…
+- DEI-language context snippets:
+  - …F grants awarded during the Biden-Harris administration—totaling more than $2.05 billion [that] went to questionable projects that promoted DEI or pushed neo-Marxist perspectives about enduring class struggle.” These so-called findings were presented in a report, Diversion. Extremis…
+  - …kes — for example, the authors’ seeming failure to review their own database resulted in grants being flagged for using terms related to biodiversity or focusing on “female” leopard seals. At best, the Cruz Report is a sloppy mess that should be viewed as nothing more than the political h…
+
+### 36569dd9f987a996afefc9d54375067e (risk=3)
+- Classification: document:local-pdf
+- Title guess: Oregon Housing and Community Services
+- URL: https://www.oregon.gov/ohcs/rental-housing/housing-development/oregon-centralized-application-orca/Documents/how-to-apply/orca-manual-2025-july.pdf
+- Parsed text: research_results/documents/parsed/36569dd9f987a996afefc9d54375067e.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T10:04:35.423708)
+- Text length: 148125
+- Why it likely scored > 0:
+  - DEI terms: equity(30); dei(8); minority(5); inclusion(4); equitable(3); bipoc(3)
+  - Proxy terms: community engagement(2)
+  - Binding terms: standard(112); must(90); requirement(88); contract(43); required(41); requirements(41)
+- Summary:
+  - Oregon Housing and Community Services Oregon Centralized Application (ORCA) July 25, 2025 Affordable Rental Housing Division 725 NE Summer St NE Suite B Salem, OR 97301 Phone (503) 986-2000
+  - Fax (503) 986-2020 www.oregon.gov/oncs Version 2.1- July 25, 2025 Ve
+  - eee cccseceecesseseeeeceeeeeeeaaeeeeeeeeeaaeeeeeeeeeseaeaeeeeeeeseaaaeeeeeeeseaaeeceeeeseaaaeceeeeseeaaaeceseeseeeeaaaeeees 2 Welcome to the Oregon Centralized Application (ORCA) ...........ccscsssscccccccceceecesssesesessenaeaeeeeeeeeeeeeeseseeseeeees 3 Fundi
+  - eee ec ccecceeceeeeesneceeeeceeeeseaeeeeeeeeeeeeeaeeeeeeeeeeaaeeeeeeeeeeeaaeeeeeeeeesaaeaeeeeeeeseaaaeeceesesesaaeeceeeeseeaaaeeeeseneeaaas 44 General Terms and Conditions ............ccessscscccceceeceeeeeeeeeeseeeeeaaaaaaeaeeceeeeeeeeeeeeeseeeaaaaaaeaeeceeee
+  - The ORCA provides applicable review for investment requests against adopted standards on a first-come, first-reviewed basis with the goal of ensuring project readiness before a final commitment of funds is awarded.
+- Binding-language context snippets:
+  - ….......cceccececcceceeceeneeaeeeneeeseeeeseesseeseeeeeeeeeeeeeeeeeeeeeseeeeeeeeceeceeseeaeeaaeaaeaaeaees 18 Impact Assessment evaluation Standards. ...........:cccccsssssssseseeeeeeceeceeceeeeeeeeeeeeeeceeaeeseeaaeeeesaaeaeseeeeseeeseeeeeeees 19 Supplemental documents for Impact A…
+  - …standards are completed, and the project is within 6 to 9 months from the start of construction. Upon funding approval, the project must financially close by the agreed- upon financial closing date (within six months of reservation). Funding sources available from O…
+- DEI-language context snippets:
+  - …w, applicants can submit an Impact Assessment application focusing on non-financial requirements and policy objectives like equity, racial justice, community engagement, and partnerships. Depending on project readiness, this typically happens one to two years be…
+  - …teria outlined in Section 1.11 of the General Terms and Conditions. Diversity, Equity, and Inclusion Organizational Commitments (DEI Agreement) OHCS has developed a web-based registry for sponsors to submit their organizational DEI Agreement. Applicants must register a li…
+
+### f05cefc6c4eb4225c881409d8daadc29 (risk=3)
+- Classification: document:local-pdf
+- Title guess: Housing Stability Council
+- URL: file://research_results/documents/raw/f05cefc6c4eb4225c881409d8daadc29.pdf
+- Parsed text: research_results/documents/parsed/f05cefc6c4eb4225c881409d8daadc29.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:32:08.574657)
+- Text length: 104349
+- Why it likely scored > 0:
+  - DEI terms: equity(12); racial justice(3); dei(2); bipoc(2); diversity(1); inclusion(1)
+  - Proxy terms: equity lens(1); community engagement(1)
+  - Binding terms: requirement(11); requirements(11); standard(7); policy(6); compliance(3); shall(2)
+- Summary:
+  - Housing Stability Council MEETING MATERIALS PACKET 1 a .
+  - Oregon Housing & Community Services Webinar AGENDA Council Members: Dec 05, 2025 9:00 a.m.
+  - Claire Hall, Chair Oregon Housing and Community Services sami Jo Difuntorum 725 Summer St NE, Salem OR 97301 Mary Ferrell Maaaie Ham ; Many Li .
+  - Webinar Mtg Only OREGON HOUSING & Erin Meechan Public register in advance for this webinar COMMUNITY SERVICES Javier Mena * .
+- Binding-language context snippets:
+  - …e Equity and Racial Justice strategy e Financial proforma for Impact Assessment e HUD requirements review = Dec 5, 2025 HSC Materials…
+  - …e Equity and Racial Justice strategy e Financial proforma for Impact Assessment e HUD requirements review = Dec 5, 2025 HSC Materials…
+- DEI-language context snippets:
+  - …220 ‘W = Equity & Racial Justice Homelessness…
+  - …220 ‘W = Equity & Racial Justice Homelessness…
+
+### 11925ba57cc06a39fad9a6dc5a8cc1f0 (risk=3)
+- Classification: document:local-pdf
+- Title guess: »e “0%. LOCAL AND REGIONAL
+- URL: https://www.racialequityalliance.org/HigherLogic/System/DownloadDocumentFile.ashx?DocumentFileKey=a1780a0b-4314-ff6c-e82a-824973972b52&forceDialog=1
+- Parsed text: research_results/documents/parsed/11925ba57cc06a39fad9a6dc5a8cc1f0.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T10:08:56.314470)
+- Text length: 89868
+- Why it likely scored > 0:
+  - DEI terms: equity(261); diversity(8); people of color(7); equitable(4); social justice(3); inclusion(1)
+  - Proxy terms: community engagement(7); equity lens(2); equity framework(2); lived experience(2)
+  - Binding terms: contract(21); must(10); policy(7); required(2); requirement(1); requirements(1)
+- Summary:
+  - GOVERNMENT ALLIANCE ON ~ - RACE & EQUITY Racia ul Aation Plans A How-to Manual by Ryan Curren, Julie Nelson, Dwayne S.
+  - RACE & EQUITY This toolkit is published by the Government Alliance on Race and Equity, a national network of government working to achieve racial equity and advance opportunities for all.
+  - "Racial Equity Action Plans, A How-to Manual”: Haas Institute for a Fair and Inclusive Society, University of California, Berkeley, 2016 GARE is a joint project of sv naas institute ( A j CENTER FOR SOCIAL INCLUSION Ss FOR A FAIR AND INCLUSIVE IETY 7] RACIALEQ
+  - eects eeeeeeeeeeen 6 Action Planning PIoCesS ......cccccccceeeccee 9 PTL@PaLAatlON ...........c22:ccceesssseeeeesssceeeensssceeeesssaeeseessaes 10 Staffing Leads and Racial Equity ACTION TCAMS 0o.cccccccccccccccesesessetesestetesetereaeseen 10 Organizational S
+- Binding-language context snippets:
+  - …olid foundation to inform your plan. Areas to analyze include: workforce demographics, hiring, retention, and promotion; contracting practices; jurisdiction commitment, leadership, and management; community access and partnership; and data, m…
+  - …lor, even with years of effort. Because local governments have a unique responsibility to all residents, these racial ineq- uities can and must be addressed. The public sector must be for the public good; current racial inequities are destructive. We must go beyond individ- ual, int…
+- DEI-language context snippets:
+  - …»e “0%. LOCAL AND REGIONAL .° e@e *. GOVERNMENT ALLIANCE ON ~ - RACE & EQUITY Racia ul Aation Plans A How-to Manual by Ryan Curren, Julie N…
+  - …s have the advantage of existing strategic plans with committed goals, objectives, strategies, and actions, some of which may be related to diversity, inclu- sion or racial equity. You can use those as a foundation from which to build upon. Addi- tional content can then be added to you Ra…
+
+### 6431de02c3af80fab467e7aebdc1d17c (risk=3)
+- Classification: document:local-pdf
+- Title guess: Housing Stability Council
+- URL: file://research_results/documents/raw/6431de02c3af80fab467e7aebdc1d17c.pdf
+- Parsed text: research_results/documents/parsed/6431de02c3af80fab467e7aebdc1d17c.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:30:04.073964)
+- Text length: 89754
+- Why it likely scored > 0:
+  - DEI terms: equity(26); racial justice(9); equitable(6); diversity(5); inclusion(4); dei(3)
+  - Proxy terms: equity lens(1); community engagement(1)
+  - Binding terms: requirement(18); requirements(17); policy(16); must(11); statewide(10); required(8)
+- Summary:
+  - Housing Stability Council MEETING MATERIALS PACKET a ne — —— : — mary B 7 ers — i
+  - = et > —s — zit = : = = iL Ri a oa ai Ss Lois i: ig eh ue.
+  - Oregon Housing & Community Services Webinar AGENDA council Members: June 07, 2024 9:00 a.m.
+  - y- « Claire Hall, Chair Oregon Housing and Community Services sami Jo Difuntorum 725 Summer St NE, Salem OR 97301 Mary Ferrell Mary Li .
+  - Webinar ; Mtg Only ; ; OREGON HOUSING & Erin Meechan Public register in advance for this webinar COMMUNITY SERVICES Javier Mena * , .
+- Binding-language context snippets:
+  - …ebuyer Outreach: OHCS evaluates methods of reaching out to and selecting homebuyers that is both equitable and follows fair housing requirements. Scorers look June 7, 2024 HSC Material 5 OREGON…
+  - …ebuyer Outreach: OHCS evaluates methods of reaching out to and selecting homebuyers that is both equitable and follows fair housing requirements. Scorers look June 7, 2024 HSC Material 5 OREGON…
+- DEI-language context snippets:
+  - …Od ~~ Equity & Racial Justice “= Homelessness…
+  - …Od ~~ Equity & Racial Justice “= Homelessness…
+
+### 74c6bb8d3aa480a95207e0085fc1c4c0 (risk=3)
+- Classification: document:local-pdf
+- Title guess: Housing Stability Council
+- URL: file://research_results/documents/raw/74c6bb8d3aa480a95207e0085fc1c4c0.pdf
+- Parsed text: research_results/documents/parsed/74c6bb8d3aa480a95207e0085fc1c4c0.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:37:13.269363)
+- Text length: 75911
+- Why it likely scored > 0:
+  - DEI terms: equity(11); racial justice(5); dei(3); diversity(3); inclusion(3); underserved(3)
+  - Binding terms: requirement(16); requirements(15); standard(10); policy(9); shall(4); compliance(4)
+- Summary:
+  - Housing Stability Council MEETING MATERIALS PACKET c+ The Gloria Center The Dalles, Or.
+  - Oregon Housing & Community Services Webinar AGENDA Council Members: January 10, 2025 9:00 a.m.
+  - ae Claire Hall, Chair Oregon Housing and Community Services Sami Mary JoFerrell Difuntorum 725 Summer & NE, Salem OR97301 ad Mag l rams Webinar Mtg Only OREGON HOUSING & Erin Meechan Public register in advance for thiswebinar COMMUNITY SERVICES Javier Mena ‘ ;
+  - 04) Natasha Detweiler-Daby, Directorof Affordable Rental Housing Division e Public Hearing Comments in accordance with ORS 456.561 e Transactions: Tai Dunson-Strane, Assistant Director Production; Roberto Franco, Deputy Director Development o M CarterCommons ;
+- Binding-language context snippets:
+  - …can be found in the individual project summaries. All projects are subject to underwriting and programmatic requirements established under the Qualified Allocation Plan, General Policy and Guideline Manual (GPGM) and MWESB/SDVBE Compliance Manual…
+  - …can be found in the individual project summaries. All projects are subject to underwriting and programmatic requirements established under the Qualified Allocation Plan, General Policy and Guideline Manual (GPGM) and MWESB/SDVBE Compliance Manual a…
+- DEI-language context snippets:
+  - …rtunity to BEX pursue prosperity and live from poverty. Srrh Equity & Racial Justice Homelessness…
+  - …o BEX pursue prosperity and live from poverty. Srrh Equity & Racial Justice Homelessness…
+
+### bbfc77a24628ff8e29dd977ba4c66095 (risk=3)
+- Classification: document:local-pdf
+- Title guess: Diversity, Equity, and
+- URL: file://research_results/documents/raw/bbfc77a24628ff8e29dd977ba4c66095.pdf
+- Parsed text: research_results/documents/parsed/bbfc77a24628ff8e29dd977ba4c66095.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:31:39.727595)
+- Text length: 72989
+- Why it likely scored > 0:
+  - DEI terms: dei(93); equity(51); diversity(25); equitable(23); bipoc(18); inclusion(17)
+  - Proxy terms: community engagement(9); equity framework(1)
+  - Binding terms: standard(11); contract(10); statewide(10); must(9); policy(8); agreement(4)
+- Summary:
+  - Diversity, Equity, and Inclusion Plan 2024-2026 Oregon Department of Environmental Quality This document was prepared by Oregon Department of Environmental Quality 700 NE Multnomah Street, Portland Oregon, 97232 State of Oregon Department of Environmental Qual
+  - Visit DEQ’s Civil Rights and Environmental Justice page.
+  - BIPOC affinity group DEI Council DEQ Support Staff Veterans affinity group DEQ Pride Disability engagement group Vehicle Inspection Program Communications Human Resources Wellness Committee Recruitment and Retention Committee Environmental Justice Working Grou
+  - The Leadership Team crafted and shared our individual visions for equity and inclusion.
+- Binding-language context snippets:
+  - …scribed that it was unclear who was responsible for DE! decision-making and outcomes, and this challenge remains persistent. The absence of standards for handling microaggressions was also called to attention, and as of May 2024 a racial harm policy has not been put into place. In June…
+  - …n and affirmative action plan. The key focus areas required in the DEI Plan are communication, community engagement, data, decision making, contracts and procurement, budgeting, workforce development, workplace culture and no tolerance for racism, hate and discrimination. Agencies were e…
+- DEI-language context snippets:
+  - …he time, vulnerability and experiences shared by individuals and groups across DEQ. To the folks who joined in engagement sessions with the DEI Planning team, the Strategic planning team and Engaged to Change (ETC), we are grateful for you. BIPOC affinity group DEI Council DEQ Supp…
+  - …Diversity, Equity, and Inclusion Plan 2024-2026 Oregon Department of Environmental Quality This document was prepared…
+
+### 1f3072ad9703ad0bed2e0dcd0a8d2d5c (risk=3)
+- Classification: document:local-pdf
+- Title guess: Developing the Processes and Potential to Engage Historically
+- URL: file://research_results/documents/raw/1f3072ad9703ad0bed2e0dcd0a8d2d5c.pdf
+- Parsed text: research_results/documents/parsed/1f3072ad9703ad0bed2e0dcd0a8d2d5c.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:37:16.992128)
+- Text length: 69627
+- Why it likely scored > 0:
+  - DEI terms: equity(36); diversity(34); inclusion(23); equitable(13); dei(12); marginalized(6)
+  - Proxy terms: lived experience(4); safe space(1); community engagement(1)
+  - Binding terms: must(6); agreement(6); required(1); rule(1); standard(1)
+- Summary:
+  - There is no doubt in my mind that each one of us will go on to have bigger, brighter, and greater impact by centering justice, equity, diversity, and inclusion within the communities thet we serve.
+  - This question centers on equity and continues to be at the heart of moving this great nation forward.
+  - The candle that centers on equity has been lit.
+  - Illustration by Fay Williams l é< The candle that centers on equity has been lit...” MAKEDA CHEATOM, Co-PI I’ve been on this journey for 8 years ago with my colleagues, the ICBOs from different parts of the nation working for their communities to have a more l
+- Binding-language context snippets:
+  - …as done ~ the research shines a light on many issues of inequities between collaborations, the reasons they exist, and truly highlight what must be overcome in order to advance science in ways that are truly equitable and invalve all communities. it has not been an easy road. As o…
+  - …r, and Tonglo communities in Ghana. The goals of the project are to use equity-based processes, co-creation, non-negotiables, and agreements to work with the community to bring a great connection with birds. The noise pollution research did not only teach me many thi…
+- DEI-language context snippets:
+  - …be alright. There is no doubt in my mind that each one of us will go on to have bigger, brighter, and greater impact by centering justice, equity, diversity, and inclusion within the communities thet we serve. Why? Because of the NOISE Project, each of us has benefited from the exposu…
+  - …ght. There is no doubt in my mind that each one of us will go on to have bigger, brighter, and greater impact by centering justice, equity, diversity, and inclusion within the communities thet we serve. Why? Because of the NOISE Project, each of us has benefited from the exposure to and l…
+
+### 07a1076fa131f26b2cdcc68681afddbb (risk=3)
+- Classification: document:local-pdf
+- Title guess: DIVERSITY, EQUITY, AND
+- URL: file://research_results/documents/raw/07a1076fa131f26b2cdcc68681afddbb.pdf
+- Parsed text: research_results/documents/parsed/07a1076fa131f26b2cdcc68681afddbb.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:28:00.770995)
+- Text length: 51150
+- Why it likely scored > 0:
+  - DEI terms: dei(37); equity(36); diversity(26); inclusion(23); equitable(6); accessibility(4)
+  - Proxy terms: community engagement(10); safe space(2); inclusive environment(1)
+  - Binding terms: policy(11); contract(5); shall(3); must(3); requirement(2); requirements(1)
+- Summary:
+  - DIVERSITY, EQUITY, AND INCLUSION PLAN ADOPTED
+  - 2023-2027 Oregon Department of Revenue Updated January 2025 OREGON DEPARTMENT Dayo: REVENUE Contact us for ADA accommodations or assistance in other languages.
+  - It is our policy to promote positive government to government relations through consultation with the tribes in areas where the development, implementation, and administration of agency programs may affect tribal members, lands, activities, or interests.
+  - Fulfilling this mission requires us to ensure dignity and inclusion for all.
+  - We value the diversity of our employees and the communities we serve.
+- Binding-language context snippets:
+  - …e sovereign status of Oregon’s nine federally recognized tribes and their respective authorities on tribal lands. It is our policy to promote positive government to government relations through consultation with the tribes in areas where the development, implementation…
+  - …egon constitution, adopted in 1857, banned slavery but also excluded Blacks from legal residence, owning property, making contracts, voting, or using the legal system. 1859 Like earlier exclusion laws, the constitutional slavery ban adopt…
+- DEI-language context snippets:
+  - …ades) o asistencia en otros idiomas. www.oregon.gov/dor 503-378-4988 o 800-356-4222 preguntas.dor@oregon.gov 2023-2027 DEI PLAN - 2 How We Partner with Sovereign Nations Native American tribes hold…
+  - …DIVERSITY, EQUITY, AND INCLUSION PLAN ADOPTED
+  - 2023-2027 Oregon Department of Revenue Updated January 2025 OREGON…
+
+### 544d76b9a259616a1c691b4f98098735 (risk=3)
+- Classification: document:local-pdf
+- Title guess: DIVERSITY, EQUITY, AND
+- URL: file://research_results/documents/raw/544d76b9a259616a1c691b4f98098735.pdf
+- Parsed text: research_results/documents/parsed/544d76b9a259616a1c691b4f98098735.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:28:34.934733)
+- Text length: 51150
+- Why it likely scored > 0:
+  - DEI terms: dei(37); equity(36); diversity(26); inclusion(23); equitable(6); accessibility(4)
+  - Proxy terms: community engagement(10); safe space(2); inclusive environment(1)
+  - Binding terms: policy(11); contract(5); shall(3); must(3); requirement(2); requirements(1)
+- Summary:
+  - DIVERSITY, EQUITY, AND INCLUSION PLAN ADOPTED
+  - 2023-2027 Oregon Department of Revenue Updated January 2025 OREGON DEPARTMENT Dayo: REVENUE Contact us for ADA accommodations or assistance in other languages.
+  - It is our policy to promote positive government to government relations through consultation with the tribes in areas where the development, implementation, and administration of agency programs may affect tribal members, lands, activities, or interests.
+  - Fulfilling this mission requires us to ensure dignity and inclusion for all.
+  - We value the diversity of our employees and the communities we serve.
+- Binding-language context snippets:
+  - …e sovereign status of Oregon’s nine federally recognized tribes and their respective authorities on tribal lands. It is our policy to promote positive government to government relations through consultation with the tribes in areas where the development, implementation…
+  - …egon constitution, adopted in 1857, banned slavery but also excluded Blacks from legal residence, owning property, making contracts, voting, or using the legal system. 1859 Like earlier exclusion laws, the constitutional slavery ban adopt…
+- DEI-language context snippets:
+  - …ades) o asistencia en otros idiomas. www.oregon.gov/dor 503-378-4988 o 800-356-4222 preguntas.dor@oregon.gov 2023-2027 DEI PLAN - 2 How We Partner with Sovereign Nations Native American tribes hold…
+  - …DIVERSITY, EQUITY, AND INCLUSION PLAN ADOPTED
+  - 2023-2027 Oregon Department of Revenue Updated January 2025 OREGON…
+
+### 4260e59b296ab49cb9ae241fbba37c68 (risk=3)
+- Classification: document:local-pdf
+- Title guess: OREGON REAL ESTATE AGENCY
+- URL: file://research_results/documents/raw/4260e59b296ab49cb9ae241fbba37c68.pdf
+- Parsed text: research_results/documents/parsed/4260e59b296ab49cb9ae241fbba37c68.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:29:11.395449)
+- Text length: 46832
+- Why it likely scored > 0:
+  - DEI terms: diversity(44); inclusion(37); dei(25); equity(22); minority(6); equitable(5)
+  - Proxy terms: inclusive environment(3); cultural competence(1)
+  - Binding terms: contract(17); policy(16); statewide(5); requirement(3); compliance(3); rule(3)
+- Summary:
+  - OREGON REAL ESTATE AGENCY AFFIRMATIVE ACTION /DIVERSITY, EQUITY, AND INCLUSION PLAN 2025-2027 Oregon Tina Kotek, Governor a 530 Center St.
+  - NE, Suite 100 Salem, Oregon 97301-2505 Phone: (503)378-4170 www.oregon.gov/rea July 31, 2024 Juliet Valdez Affirmative Action Manager Office of Cultural Change juliet.o.valdez@das.oregon.gov RE: 2025-2027 Affirmative Action Plan The Oregon Real Estate Agency (
+  - OREA is committed to diversity and continuing our efforts of creating and maintaining a workforce that parallels the diverse population of Oregon.
+  - In addition, we are committed to integrating diversity and inclusion into how we conduct business to better serve the diverse citizens of Oregon.
+- Binding-language context snippets:
+  - …sssssccsscssacsnsassees 12 Executive Order 22-11............ccsccssssccssscccsssscnssssccsssecnsssccassseoesssonessecassseoesseenneeen 13 ContractOrs/VENCOSS .........scccsccocsccssccccscccsscccsceccsccescecnscenccccnesenscenesscscencseeenseees 14 Status of Contracts to Minority Bu…
+  - …ate COMMISSIONED ........sscssssssssssssssssssssssssnsseesseescesecessecscesanesenassnsaaaanaasaaaaanaaaaaaaaagaaaages 2 Governor's POlicy ACVISOS ....ccccccccccessssesesnsnsnseaneeeeesecessssesssessaaaeeeeeeeseseecesssseseasuasasaaeessesesseeseseaeseeseaaaaaas 2 Affirma…
+- DEI-language context snippets:
+  - …OREGON REAL ESTATE AGENCY AFFIRMATIVE ACTION /DIVERSITY, EQUITY, AND INCLUSION PLAN 2025-2027 Oregon Tina Kotek, Governor…
+  - …OREGON REAL ESTATE AGENCY AFFIRMATIVE ACTION /DIVERSITY, EQUITY, AND INCLUSION PLAN 2025-2027 Oregon Tina Kotek, Governor…
+
+### 6e6c69b294212c64d1c617f261e70841 (risk=3)
+- Classification: document:local-pdf
+- Title guess: Diversity, Equity, and Inclusion
+- URL: file://research_results/documents/raw/6e6c69b294212c64d1c617f261e70841.pdf
+- Parsed text: research_results/documents/parsed/6e6c69b294212c64d1c617f261e70841.txt
+- Extraction: pdftotext_only (2025-12-31T03:35:56.750631)
+- Text length: 36369
+- Why it likely scored > 0:
+  - DEI terms: dei(38); diversity(29); inclusion(26); equity(20); underserved(10); underrepresented(9)
+  - Proxy terms: community engagement(5); equity lens(2)
+  - Binding terms: must(2); policy(2); regulation(2); rule(2)
+- Summary:
+  - Diversity, Equity, and Inclusion Strategic Plan 2023 - 2025 Adopted December 2022, Revised May 2023 Oregon Tina Kotek, Governor May 2023 To all Department of Consumer and Business Services employees, stakeholders, and community partners, Equity is a core value
+  - We strongly believe every employee on our team enhances our diversity by exposing us to a broad range of ways to understand and engage with the community, identify challenges, and to discover, design, and deliver solutions.
+  - Together, with the members of the Diversity Equity, and Inclusion Council and all DCBS employees, we have created and continue to work in sustaining an inclusive workplace.
+  - We take actions to improve retention of women, racial/ethnic minorities, people with disabilities, and veterans; remove barriers to hiring and mentoring; enhance specific educational opportunities for managers and employees; announce training and job opportuni
+- Binding-language context snippets:
+  - …To give our employees a memorable experience, we » Access to employee resource groups and must have actionable priorities of onboarding, inclusive professional networks. internship, training a…
+  - …monthly heritage celebration and lobby display.  DEI policy and DEI Council policy adopted. Milestone 2 2…
+- DEI-language context snippets:
+  - …itted, to working to build a more diverse and inclusive workforce with everyone working together. Sincerely, A. Veronica Murray AA/EEO/DEI Manager 350 Winter St. NE 503-378-4100 diversityandinclusion.dcbs@dcbs.oregon.gov oregon.gov/dcbs/dei P.O. Box 14480…
+  - …Diversity, Equity, and Inclusion Strategic Plan 2023 - 2025 Adopted December 2022, Revised May 2023 Oregon Tina Ko…
+
+### 0a3c2fb7aaa8fce1b2fcc321ae18e5b9 (risk=3)
+- Classification: document:local-pdf
+- Title guess: Oregon Department of Land Conservation
+- URL: file://research_results/documents/raw/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.pdf
+- Parsed text: research_results/documents/parsed/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:27:50.679519)
+- Text length: 36176
+- Why it likely scored > 0:
+  - DEI terms: diversity(30); dei(26); equity(25); inclusion(24); equitable(7); people of color(4)
+  - Proxy terms: lived experience(1); inclusive environment(1); cultural competence(1)
+  - Binding terms: policy(18); statewide(12); contract(8); compliance(3); must(2); required(2)
+- Summary:
+  - Information concerning DLCD’s awards of construction, services, and personal service contracts awarded to minority businesses.
+  - This plan serves to enhance DLCD’s commitment to Diversity, Equity, and Inclusion (DEI) and support the agency strategic plan, which also serves as the agency’s DEI Plan.
+  - 0.0 ccc cece cc cee ee cee cee cee ee cee cee cee eee eee ee cee eee eee aee cee eeeeeeeeeeeeeea es Diversity and Inclusion StateMent .........
+  - The Land Conservation and Development Commission (LCDC) provides policy direction for the land use planning program and oversees DLCD operations.
+- Binding-language context snippets:
+  - …ess the land use needs of the public, communities, regions, and the state. The Land Conservation and Development Commission (LCDC) provides policy direction for the land use planning program and oversees DLCD operations. The department is organized into four program divisions, with reg…
+  - …eas, and natural resource lands; and providing for safe, livable communities in concert with the vision of the local communities. Under the statewide land use planning program, each city and county is called upon to adopt and maintain a comprehensive plan and an implementing zoning code c…
+- DEI-language context snippets:
+  - …ruction, services, and personal service contracts awarded to minority businesses. This plan serves to enhance DLCD’s commitment to Diversity, Equity, and Inclusion (DEI) and support the agency strategic plan, which also serves as the agency’s DEI Plan. Lirsnde. 20 Dottinen…
+  - …service contracts awarded to minority businesses. This plan serves to enhance DLCD’s commitment to Diversity, Equity, and Inclusion (DEI) and support the agency strategic plan, which also serves as the agency’s DEI Plan. Lirsnde. 20 Dottinen…
+
+### 3118d8dcd1c708d5160b1108a9b231ea (risk=3)
+- Classification: third-party:content
+- Domain: obiu.org
+- Content-Type: text/html;charset=UTF-8
+- Title guess: OBI University Home Courses About How to Use OBI University What is OBI Contact Us OBI Home SIGN UP SIGN IN Explore our new courses on targeted universalism! Show me more Learn to 
+- URL: https://obiu.org/
+- Parsed text: research_results/documents/parsed/3118d8dcd1c708d5160b1108a9b231ea.txt
+- Text length: 35957
+- Why it likely scored > 0:
+  - DEI terms: equity(11); social justice(6); diversity(5); inclusion(5); equitable(5); dei(1)
+  - Proxy terms: community engagement(1)
+  - Binding terms: policy(6); shall(1); contract(1); statewide(1); privacy(1)
+- Summary:
+  - Beyond a call for inclusion into pre-existing structures built to serve only some of us, belonging asks each of us to commit to co-creating new structures built for everyone.
+  - Othering Exclusion Bridging Belonging Equity Inclusion Marginality What is OBI University?
+  - We strongly believe that everyone can benefit from the Othering & Belonging framework — artists, educators, policymakers, activists, administrators, DEI professionals, businesses, parents, students, and beyond.
+  - REGISTER FOR FREE The Othering & Belonging Institute at UC Berkeley brings together researchers, organizers, stakeholders, communicators, and policymakers to identify and eliminate the barriers to an inclusive, just, and sustainable society in order to create
+- Binding-language context snippets:
+  - …roll in OBI University? Anyone! We strongly believe that everyone can benefit from the Othering & Belonging framework — artists, educators, policymakers, activists, administrators, DEI professionals, businesses, parents, students, and beyond. Courses are all free, so if you’re curious…
+  - …Libya Liechtenstein Lithuania Luxembourg Macao Macedonia, the former Yugoslav Republic of Madagascar Malawi Malaysia Maldives Mali Malta Marshall Islands Martinique Mauritania Mauritius Mayotte Mexico Micronesia, Federated States of Moldova, Republic of Monaco Mongolia Montenegro Mont…
+- DEI-language context snippets:
+  - …nly some of us, belonging asks each of us to commit to co-creating new structures built for everyone. Othering Exclusion Bridging Belonging Equity Inclusion Marginality What is OBI University? Our online university is a free hub of learning and community for people committed to buildin…
+  - …ert instructors guide you through a transformative learning experience, providing the tools and resources you need to turn your passion for social justice into action. Programs are designed to be accessible and flexible, so you can learn at your own pace and fit education into your busy life.…
+
+### 65855a9e72d39c381c793fccf7e2afd0 (risk=3)
+- Classification: third-party:content
+- Domain: obiu.org
+- Content-Type: text/html;charset=UTF-8
+- Title guess: Targeted Univeralism 1: What is TU? Home Courses About How to Use OBI University What is OBI Contact Us OBI Home SIGN UP SIGN IN What is Targeted Universalism? Level All Levels Vid
+- URL: https://obiu.org/course/what-is-targeted-universalism
+- Parsed text: research_results/documents/parsed/65855a9e72d39c381c793fccf7e2afd0.txt
+- Text length: 32684
+- Why it likely scored > 0:
+  - DEI terms: equity(23); diversity(8); inclusion(8); social justice(5); equitable(4); racial justice(1)
+  - Proxy terms: lived experience(1); community engagement(1)
+  - Binding terms: policy(7); shall(1); contract(1); agreement(1); statewide(1); privacy(1)
+- Summary:
+  - is a framework developed by OBI that goes beyond a call for inclusion in existing structures that serve only some of us .
+  - The Othering & Belonging Institute at UC Berkeley brings together researchers, organizers, stakeholders, communicators, and policymakers to identify and eliminate the barriers to an inclusive, just, and sustainable society in order to create transformative cha
+  - Privacy Policy Cookie Policy Terms & Conditions Accessibility Statement Contact Us Othering & Belonging Institute Ashlin Malouf-Gashaw is the Deputy Director of Strategy and Program at the Othering and Belonging Institute.
+  - During her tenure in organizing, she worked on countless campaigns including healthcare access, community benefits agreements, reinvestment of public funds, moving from punitive to restorative practices, immigration reform, and affordable housing, to name a fe
+- Binding-language context snippets:
+  - …y line of work? The Othering & Belonging Institute at UC Berkeley brings together researchers, organizers, stakeholders, communicators, and policymakers to identify and eliminate the barriers to an inclusive, just, and sustainable society in order to create transformative change. Copyr…
+  - …Libya Liechtenstein Lithuania Luxembourg Macao Macedonia, the former Yugoslav Republic of Madagascar Malawi Malaysia Maldives Mali Malta Marshall Islands Martinique Mauritania Mauritius Mayotte Mexico Micronesia, Federated States of Moldova, Republic of Monaco Mongolia Montenegro Mont…
+- DEI-language context snippets:
+  - …sustainable society and to create transformative change toward a more equitable world. john holds the Robert D. Haas Chancellor’s Chair in Equity and Inclusion and is a Professor of Law , African American Studies, and Ethnic Studies at UC Berkeley . Previously, he was the Executive Di…
+  - …formed by data including the lived experience of those most impacted, support consensus building for strategies and actions towards greater diversity, equity, inclusion, and belonging. Evan holds a Bachelor of Arts in Rhetoric, Public Discourses with a minor in African American Studies fr…
+
+### dc398148018f34aaa217529c5dbcce3b (risk=3)
+- Classification: third-party:content
+- Domain: obiu.org
+- Content-Type: text/html;charset=UTF-8
+- Title guess: Targeted Universalism 3: Stages of TU, part two Home Courses About How to Use OBI University What is OBI Contact Us OBI Home SIGN UP SIGN IN Stages of Targeted Universalism part 2 
+- URL: https://obiu.org/course/stages-of-targeted-univeralism-part2
+- Parsed text: research_results/documents/parsed/dc398148018f34aaa217529c5dbcce3b.txt
+- Text length: 32626
+- Why it likely scored > 0:
+  - DEI terms: equity(23); diversity(8); inclusion(7); social justice(5); equitable(4); racial justice(1)
+  - Proxy terms: lived experience(1); community engagement(1)
+  - Binding terms: policy(7); shall(1); contract(1); agreement(1); statewide(1); privacy(1)
+- Summary:
+  - The Othering & Belonging Institute at UC Berkeley brings together researchers, organizers, stakeholders, communicators, and policymakers to identify and eliminate the barriers to an inclusive, just, and sustainable society in order to create transformative cha
+  - Privacy Policy Cookie Policy Terms & Conditions Accessibility Statement Contact Us Othering & Belonging Institute Ashlin Malouf-Gashaw is the Deputy Director of Strategy and Program at the Othering and Belonging Institute.
+  - During her tenure in organizing, she worked on countless campaigns including healthcare access, community benefits agreements, reinvestment of public funds, moving from punitive to restorative practices, immigration reform, and affordable housing, to name a fe
+  - powell (who spells his name in lowercase in the belief that we should be "part of the universe, not over it, as capitals signify") is an internationally recognized expert in the areas of civil rights, civil liberties, structural racism, housing, poverty, and d
+- Binding-language context snippets:
+  - …in iterations? The Othering & Belonging Institute at UC Berkeley brings together researchers, organizers, stakeholders, communicators, and policymakers to identify and eliminate the barriers to an inclusive, just, and sustainable society in order to create transformative change. Copyr…
+  - …Libya Liechtenstein Lithuania Luxembourg Macao Macedonia, the former Yugoslav Republic of Madagascar Malawi Malaysia Maldives Mali Malta Marshall Islands Martinique Mauritania Mauritius Mayotte Mexico Micronesia, Federated States of Moldova, Republic of Monaco Mongolia Montenegro Mont…
+- DEI-language context snippets:
+  - …sustainable society and to create transformative change toward a more equitable world. john holds the Robert D. Haas Chancellor’s Chair in Equity and Inclusion and is a Professor of Law , African American Studies, and Ethnic Studies at UC Berkeley . Previously, he was the Executive Di…
+  - …formed by data including the lived experience of those most impacted, support consensus building for strategies and actions towards greater diversity, equity, inclusion, and belonging. Evan holds a Bachelor of Arts in Rhetoric, Public Discourses with a minor in African American Studies fr…
+
+### d222d253ff69a82ff3faca1b694d631e (risk=3)
+- Classification: third-party:content
+- Domain: obiu.org
+- Content-Type: text/html;charset=UTF-8
+- Title guess: Targeted Universalism 2: Stages of TU, part one Home Courses About How to Use OBI University What is OBI Contact Us OBI Home SIGN UP SIGN IN Stages of Targeted Universalism part 1 
+- URL: https://obiu.org/course/stages-of-targeted-universalism-part1
+- Parsed text: research_results/documents/parsed/d222d253ff69a82ff3faca1b694d631e.txt
+- Text length: 32531
+- Why it likely scored > 0:
+  - DEI terms: equity(23); diversity(8); inclusion(7); social justice(5); equitable(4); racial justice(1)
+  - Proxy terms: lived experience(1); community engagement(1)
+  - Binding terms: policy(7); shall(1); contract(1); agreement(1); statewide(1); privacy(1)
+- Summary:
+  - The Othering & Belonging Institute at UC Berkeley brings together researchers, organizers, stakeholders, communicators, and policymakers to identify and eliminate the barriers to an inclusive, just, and sustainable society in order to create transformative cha
+  - Privacy Policy Cookie Policy Terms & Conditions Accessibility Statement Contact Us Othering & Belonging Institute Ashlin Malouf-Gashaw is the Deputy Director of Strategy and Program at the Othering and Belonging Institute.
+  - During her tenure in organizing, she worked on countless campaigns including healthcare access, community benefits agreements, reinvestment of public funds, moving from punitive to restorative practices, immigration reform, and affordable housing, to name a fe
+  - powell (who spells his name in lowercase in the belief that we should be "part of the universe, not over it, as capitals signify") is an internationally recognized expert in the areas of civil rights, civil liberties, structural racism, housing, poverty, and d
+- Binding-language context snippets:
+  - …for this work? The Othering & Belonging Institute at UC Berkeley brings together researchers, organizers, stakeholders, communicators, and policymakers to identify and eliminate the barriers to an inclusive, just, and sustainable society in order to create transformative change. Copyr…
+  - …Libya Liechtenstein Lithuania Luxembourg Macao Macedonia, the former Yugoslav Republic of Madagascar Malawi Malaysia Maldives Mali Malta Marshall Islands Martinique Mauritania Mauritius Mayotte Mexico Micronesia, Federated States of Moldova, Republic of Monaco Mongolia Montenegro Mont…
+- DEI-language context snippets:
+  - …sustainable society and to create transformative change toward a more equitable world. john holds the Robert D. Haas Chancellor’s Chair in Equity and Inclusion and is a Professor of Law , African American Studies, and Ethnic Studies at UC Berkeley . Previously, he was the Executive Di…
+  - …formed by data including the lived experience of those most impacted, support consensus building for strategies and actions towards greater diversity, equity, inclusion, and belonging. Evan holds a Bachelor of Arts in Rhetoric, Public Discourses with a minor in African American Studies fr…
+
+### 385a88a7fe2da014385f69da14fe3381 (risk=3)
+- Classification: third-party:content
+- Domain: obiu.org
+- Content-Type: text/html;charset=UTF-8
+- Title guess: Courses | OBI University Home Courses About How to Use OBI University What is OBI Contact Us OBI Home SIGN UP SIGN IN OBIU Courses Explore all of the classes that OBI University ha
+- URL: https://obiu.org/courses
+- Parsed text: research_results/documents/parsed/385a88a7fe2da014385f69da14fe3381.txt
+- Text length: 22905
+- Why it likely scored > 0:
+  - DEI terms: equity(13); diversity(5); social justice(4); inclusion(3); equitable(3); racial justice(1)
+  - Proxy terms: community engagement(1)
+  - Binding terms: policy(4); shall(1); contract(1); agreement(1); statewide(1); privacy(1)
+- Summary:
+  - powell The Othering & Belonging Institute at UC Berkeley brings together researchers, organizers, stakeholders, communicators, and policymakers to identify and eliminate the barriers to an inclusive, just, and sustainable society in order to create transformat
+  - Privacy Policy Cookie Policy Terms & Conditions Accessibility Statement Contact Us Othering & Belonging Institute Ashlin Malouf-Gashaw is the Deputy Director of Strategy and Program at the Othering and Belonging Institute.
+  - During her tenure in organizing, she worked on countless campaigns including healthcare access, community benefits agreements, reinvestment of public funds, moving from punitive to restorative practices, immigration reform, and affordable housing, to name a fe
+  - powell (who spells his name in lowercase in the belief that we should be "part of the universe, not over it, as capitals signify") is an internationally recognized expert in the areas of civil rights, civil liberties, structural racism, housing, poverty, and d
+- Binding-language context snippets:
+  - …john a. powell The Othering & Belonging Institute at UC Berkeley brings together researchers, organizers, stakeholders, communicators, and policymakers to identify and eliminate the barriers to an inclusive, just, and sustainable society in order to create transformative change. Copyr…
+  - …Libya Liechtenstein Lithuania Luxembourg Macao Macedonia, the former Yugoslav Republic of Madagascar Malawi Malaysia Maldives Mali Malta Marshall Islands Martinique Mauritania Mauritius Mayotte Mexico Micronesia, Federated States of Moldova, Republic of Monaco Mongolia Montenegro Mont…
+- DEI-language context snippets:
+  - …sustainable society and to create transformative change toward a more equitable world. john holds the Robert D. Haas Chancellor’s Chair in Equity and Inclusion and is a Professor of Law , African American Studies, and Ethnic Studies at UC Berkeley . Previously, he was the Executive Di…
+  - …ides government agencies, non-profits, and schools on change-management, creative collaboration, program creation, equitable arts policies, diversity, and organizational cultural competency. Mc Neal has over 30 years of senior leadership experience and flexibly negotiates the intersection…
+
+### 1d20c2a61ee7a30f077fe8e8eeba2667 (risk=3)
+- Classification: document:local-pdf
+- Title guess: Workbook
+- URL: file://research_results/documents/raw/1d20c2a61ee7a30f077fe8e8eeba2667.pdf
+- Parsed text: research_results/documents/parsed/1d20c2a61ee7a30f077fe8e8eeba2667.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:27:28.127528)
+- Text length: 20402
+- Why it likely scored > 0:
+  - DEI terms: dei(33); diversity(18); equity(7); inclusion(6); equitable(1); bipoc(1)
+  - Proxy terms: equity lens(1); lived experience(1)
+  - Binding terms: agreement(5); rule(4); policy(2); must(1)
+- Summary:
+  - Getting Started Checklist for Forming & Sustaining a Diversity, Equity and Inclusion Committee Exercise Instructions: Check off the items and sub items that you're considering, are currently working on or already completed.
+  - Oo Yes Oh No O) Don’t know TsaiComms LLC © All Rights Reserved - State of Oregon Diversity Conference — 9-17-21 Publish or distribute only with TsaiComms’ consent.
+  - O Yes O No O Don’t know We have agreed upon individual roles and responsibilities for our members: () Each member understands their own personal motivation and comfort level to do DEI work We understand the expectations of each member of this committee OOOOO0O
+  - long term OOOOO00O How will we measure what we accomplish How we will maintain focus What will derail/sabotage us What barriers we might face from the get-go and how will we sustain ourselves What impact we want to make TsaiComms LLC © All Rights Reserved - St
+- Binding-language context snippets:
+  - …ve agreed on how we will handle attrition and succession planning We have set criteria for membership We have established joint agreements and values (aka ground rules) for engagement and commitment, e.g. e Listen actively to understand. e Challenge ourselves to cou…
+  - …trition and succession planning We have set criteria for membership We have established joint agreements and values (aka ground rules) for engagement and commitment, e.g. e Listen actively to understand. e Challenge ourselves to courageously engage in inclusive…
+- DEI-language context snippets:
+  - …e 021 Confer September 17, 2021 Workshop Goals = To understand the process of forming and sustaining a DEI Committee with accountability and transparency. » Identify and clarify the motivations, roles, responsibilities and expectations of m…
+  - …t examples =» Measurable Goals and Action Plan A. Getting Started Checklist for Forming & Sustaining a Diversity, Equity and Inclusion Committee Exercise Instructions: Check off the items and sub items that you're considering, ar…
+
+### f17c22e859e2c48b5a346d23fc10a3c0 (risk=3)
+- Classification: document:local-pdf
+- Title guess: TO: Ethan Stuckmayer, Housing Division Manager
+- URL: file://research_results/documents/raw/f17c22e859e2c48b5a346d23fc10a3c0.pdf
+- Parsed text: research_results/documents/parsed/f17c22e859e2c48b5a346d23fc10a3c0.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:32:01.833201)
+- Text length: 16147
+- Why it likely scored > 0:
+  - DEI terms: equity(34); equitable(4); accessibility(4); diversity(2); inclusion(1); marginalized(1)
+  - Proxy terms: equity framework(1); community engagement(1)
+  - Binding terms: rule(25); policy(4); standard(4); statewide(4); compliance(2); must(1)
+- Summary:
+  - TO: Ethan Stuckmayer, Housing Division Manager Oregon Department of Land Conservation and Development FROM: Anita Kea’lani Yap, MultiCultural Collaborative DATE: August 20, 2025 MultiCultural Collaborative Subject: Racial Equity Impact Statement for Oregon Hou
+  - In 2023, the Land Conservation and Development Commission (LCDC) adopted a Racial Equity Framework for Decision Making.
+  - As part of the Oregon Housing Needs Analysis (OHNA) Rulemaking, department staff have used this framework by highlighting relevant categories and questions based on meeting topics.
+  - For the upcoming OHNA RAC meeting on August 27, 2025, department staff have prepared a document titled “Racial Equity Framework for Decision Making Memo”.
+- Binding-language context snippets:
+  - …Collaborative Subject: Racial Equity Impact Statement for Oregon Housing Needs Analysis Rule Amendments: OAR 660-007/008/021/024 Background and Foundations for Racial Equity Policy This statement is provided in compliance with H…
+  - …for Oregon Housing Needs Analysis Rule Amendments: OAR 660-007/008/021/024 Background and Foundations for Racial Equity Policy This statement is provided in compliance with House Bill 2993 (2021), section 2, which amends ORS 183.335(2)(a) to require a notice statem…
+- DEI-language context snippets:
+  - …MultiCultural Collaborative Subject: Racial Equity Impact Statement for Oregon Housing Needs Analysis Rule Amendments: OAR 660-007/008/021/024 Background and Foundations…
+  - …affordable housing in the community of their choice due to unfair historic policies and practices. The Housing Division focuses on creating equitable housing outcomes by facilitating housing production, affordability, and choice. This aligns with the Goal 10, principles of fair housing, a…
+
+### cd4a2c72e4d00cf7d614ababe9e73779 (risk=3)
+- Classification: third-party:content
+- Domain: www.racialequityalliance.org
+- Content-Type: text/html; charset=utf-8
+- Title guess: Navigating Racial Equity Work When Leadership's Support Is Only Symbolic Skip main navigation (Press Enter). Log in Toggle navigation Who We Are About Us Our Approach Our Impact Ca
+- URL: https://www.racialequityalliance.org/blogs/gare-team/2025/12/11/navigating-racial-equity-work-when-leaderships-sup
+- Parsed text: research_results/documents/parsed/cd4a2c72e4d00cf7d614ababe9e73779.txt
+- Text length: 15121
+- Why it likely scored > 0:
+  - DEI terms: equity(61); dei(1); diversity(1); inclusion(1); racial justice(1); social justice(1)
+  - Binding terms: policy(5); ordinance(2); compliance(1); privacy(1); terms of use(1)
+- Summary:
+  - Navigating Racial Equity Work When Leadership's Support Is Only Symbolic Skip main navigation (Press Enter).
+  - Log in Toggle navigation Who We Are About Us Our Approach Our Impact Careers at GARE Join Us Membership Connecting to Your Membership Strategic Partnerships Resources GARE Resources Topic Guides State of the Field GARE Online Community GARE Learning Center New
+  - Officially, leadership says all the right things about supporting racial equity.
+  - Many equity practitioners find themselves walking this tightrope, trying to drive meaningful change with only cautious, lukewarm backing from the top.
+- Binding-language context snippets:
+  - …ciple of our work is about being accountable to the community – those most directly impacted by inequities." Codify Equity Commitments into Policy Another powerful strategy in an era of symbolic support is to formalize and codify your equity efforts into lasting policy. If you sense th…
+  - …lasting policy. If you sense that verbal support from leadership is fickle, push to get those commitments written down as official policy, ordinance, charters or integrated into departmental plans. Once something is codified, it's harder to simply sweep under the rug when the political w…
+- DEI-language context snippets:
+  - …Navigating Racial Equity Work When Leadership's Support Is Only Symbolic Skip main navigation (Press Enter). Log in Toggle navigation Who We Are About Us Our Approa…
+  - …years. Equity initiatives that were embraced a few years ago now face overt political hostility. Nationally, we’ve seen attempts to defund DEI work, pressure from federal agencies like the Department of Justice to abandon race-conscious programming, and threats to withhold federal…
+
+### d000a9697b5ecd1908fdc47f91470b1e (risk=3)
+- Classification: third-party:content
+- Domain: www.raceforward.org
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Just Narratives for Multiracial Solidarity | Race Forward Skip to main content Main navigation Learn About Us Our Story Our Mission, Vision, and Values Our Strategic Plan Annual Re
+- URL: https://www.raceforward.org/training-and-events/just-narratives
+- Parsed text: research_results/documents/parsed/d000a9697b5ecd1908fdc47f91470b1e.txt
+- Text length: 12664
+- Why it likely scored > 0:
+  - DEI terms: racial justice(18); equity(3); diversity(1); equitable(1); people of color(1); marginalized(1)
+  - Proxy terms: lived experience(1)
+  - Binding terms: policy(5); must(3); required(2); privacy(2)
+- Summary:
+  - (Honest Education Action and Leadership) Together Housing and Land Justice Narrative Place-Based Strategies (Co-governance) Policy Innovation Lab Services for Organizations Our Board Our Team Get Tools and Resources Understanding Racial Equity Events Cultural
+  - For us to succeed in this moment, we need to grow and strengthen our narrative ecosystem, a network of connected individuals and organizations that can share knowledge, expertise, skills, ideas, capacities, and work to advance a narrative system across a diver
+  - For information about how Race Forward handles your data, read our privacy policy.
+  - View Our Partnership Deck (PDF) COVID-19 Policy At Race Forward, we are committed to creating an accessible and inclusive space that prioritizes the well-being of our entire community, especially those most vulnerable.
+- Binding-language context snippets:
+  - …Equity H.E.A.L. (Honest Education Action and Leadership) Together Housing and Land Justice Narrative Place-Based Strategies (Co-governance) Policy Innovation Lab Services for Organizations Our Board Our Team Get Tools and Resources Understanding Racial Equity Events Cultural Week of Ac…
+  - …s and Congress as well as dismantle key policies and practices, such as Roe v. Wade, affirmative action, and the Chevron doctrine. Not only must we fight back, we must produce and amplify narratives rooted in racial justice and collective liberation that unites us and drowns out the…
+- DEI-language context snippets:
+  - …s Partners A Race Forward Convening November 13th-15th, 2025
+  - St. Louis, MO Race Forward, producer of Facing Race, the largest multiracial racial justice conference in the country, is thrilled to announce the Just Narratives for Multiracial Solidarity 2025. Just Narratives is a multi-day conv…
+  - …s Our Strategic Plan Annual Reports 2024 2022-23 Projects, Programs, & Initiatives Butterfly Lab Colorlines Government Alliance on Race and Equity H.E.A.L. (Honest Education Action and Leadership) Together Housing and Land Justice Narrative Place-Based Strategies (Co-governance) Policy…
+
+### a626e07c5852ed3bdb811988165371fe (risk=3)
+- Classification: third-party:content
+- Domain: obiu.org
+- Content-Type: text/html;charset=UTF-8
+- Title guess: About | OBI University Home Courses About How to Use OBI University What is OBI Contact Us OBI Home SIGN UP SIGN IN What is the Othering & Belonging Institute? The Othering & Belon
+- URL: https://obiu.org/about
+- Parsed text: research_results/documents/parsed/a626e07c5852ed3bdb811988165371fe.txt
+- Text length: 12584
+- Why it likely scored > 0:
+  - DEI terms: equity(8); diversity(5); social justice(4); equitable(2); inclusion(1); racial justice(1)
+  - Proxy terms: community engagement(1)
+  - Binding terms: policy(8); shall(1); contract(1); statewide(1); privacy(1)
+- Summary:
+  - The Othering & Belonging Institute (OBI) at UC Berkeley brings together researchers, organizers, stakeholders, communicators, and policymakers to identify and eliminate the barriers to an inclusive, just, and sustainable society in order to create transformati
+  - Our work is guided by these main goals Advance multi-disciplinary research, analysis, policy, and strategic narrative Build relationships among diverse groups and across disciplines towards larger community- and coalition-building Utilize communications and cu
+  - powell is an internationally recognized expert in the areas of civil rights, civil liberties, structural racism, housing, poverty, and democracy.
+  - john has written extensively on a number of issues including structural racism, racial justice, concentrated poverty, opportunity-based housing, voting rights, affirmative action in the United States, South Africa and Brazil, racial and ethnic identity, spirit
+- Binding-language context snippets:
+  - …nstitute? The Othering & Belonging Institute (OBI) at UC Berkeley brings together researchers, organizers, stakeholders, communicators, and policymakers to identify and eliminate the barriers to an inclusive, just, and sustainable society in order to create transformative change. We ar…
+  - …Libya Liechtenstein Lithuania Luxembourg Macao Macedonia, the former Yugoslav Republic of Madagascar Malawi Malaysia Maldives Mali Malta Marshall Islands Martinique Mauritania Mauritius Mayotte Mexico Micronesia, Federated States of Moldova, Republic of Monaco Mongolia Montenegro Mont…
+- DEI-language context snippets:
+  - …researcher, civic leader & activist – engaging in transdisciplinary practice across art-forms and genres, with a focus on arts, educational equity, social justice, community engagement, and cultural competency. He guides government agencies, non-profits, and schools on change-managemen…
+  - …ides government agencies, non-profits, and schools on change-management, creative collaboration, program creation, equitable arts policies, diversity, and organizational cultural competency. Mc Neal has over 30 years of senior leadership experience and flexibly negotiates the intersection…
+
+### 0907648c5876f269eb95f4122bbe6150 (risk=3)
+- Classification: third-party:content
+- Domain: www.racialequityalliance.org
+- Content-Type: text/html; charset=utf-8
+- Title guess: Local, Regional, & State Government Practitioners Gain New Skills, Insights, and Connections at the Inaugural Just Narratives Convening Skip main navigation (Press Enter). Log in T
+- URL: https://www.racialequityalliance.org/blogs/gare-team/2025/12/16/government-at-just-narratives
+- Parsed text: research_results/documents/parsed/0907648c5876f269eb95f4122bbe6150.txt
+- Text length: 12324
+- Why it likely scored > 0:
+  - DEI terms: equity(17); racial justice(2); inclusion(1)
+  - Proxy terms: lived experience(1)
+  - Binding terms: must(1); policy(1); contract(1); statewide(1); privacy(1); terms of use(1)
+- Summary:
+  - Local, regional, and state government racial equity practitioners were among the advocates and movement builders present.
+  - States Advancing Racial Equity (SARE) , a joint project of State of Equity and GARE to support a community of state government racial equity practitioners, brought together eleven practitioners from seven states for a pre-conference to explore core concepts in
+  - Elana Needle, SARE Co-lead at State of Equity, reflected, “States are one of the last bulwarks to stem the tide of the federal government’s plans for changing our country to their will.
+  - Every chance SARE practitioners and staff get to be together is another chance for strengthening the work we want to do together across states.” SARE gathered practitioners from AZ, CA, MA, ME, MN, NY, and RI to do deep, interstate work together that advances
+- Binding-language context snippets:
+  - …es spacious energy.” Rinku Sen called on us to lean into the power of the collective: “community generates courage.” She emphasized that we must be willing to experiment and experimentation means being willing to get it wrong from time to time. The conference’s People’s Assembly mode…
+  - …ck Links GARE Learning Center Membership Contact Us Online Community Log In © COPYRIGHT YEAR PLACEHOLDER GARE. All rights reserved. Privacy Policy Terms of Use Copyright 2024. All rights reserved. Powered by Higher Logic…
+- DEI-language context snippets:
+  - …ists, communicators, creatives, storytellers, racial justice advocates, and movement builders. Local, regional, and state government racial equity practitioners were among the advocates and movement builders present. States Advancing Racial Equity (SARE) , a joint project of State of E…
+  - …and GARE staff at Just Narratives. By Nadia Mohamed, GARE Director of Narrative and Communications From November 13-15, 2025, more than 450 racial justice practitioners convened in St. Louis, MO, for Race Forward’s inaugural Just Narratives Convening, which brought together narrative strategis…
+
+### a190e1e7829daedea88c07cffb922811 (risk=3)
+- Classification: third-party:content
+- Domain: www.raceforward.org
+- Content-Type: text/html; charset=UTF-8
+- Title guess: What is Racial Equity? | Race Forward Skip to main content Main navigation Learn About Us Our Story Our Mission, Vision, and Values Our Strategic Plan Annual Reports 2024 2022-23 P
+- URL: https://www.raceforward.org/what-racial-equity
+- Parsed text: research_results/documents/parsed/a190e1e7829daedea88c07cffb922811.txt
+- Text length: 10278
+- Why it likely scored > 0:
+  - DEI terms: equity(34); people of color(5); equitable(2)
+  - Proxy terms: equity framework(2); community engagement(1)
+  - Binding terms: policy(13); must(8); applicable to(1); privacy(1)
+- Summary:
+  - (Honest Education Action and Leadership) Together Housing and Land Justice Narrative Place-Based Strategies (Co-governance) Policy Innovation Lab Services for Organizations Our Board Our Team Get Tools and Resources Understanding Racial Equity Events Cultural
+  - Together Training Government Webinars (#RaceAnd) Podcasts Toolkits Reports Ways to Give Open Search Donate Now Submit Close Search Breadcrumb What Is Racial Equity?
+  - "Racial equity is about applying justice and a little bit of common sense to a system that's been out of balance.
+  - When a system is out of balance, people of color feel the impacts most acutely, but, to be clear, an imbalanced system makes all of us pay." ~ Glenn Harris, President, Race Forward and Publisher, Colorlines At Race Forward, we define racial equity as both an o
+- Binding-language context snippets:
+  - …Equity H.E.A.L. (Honest Education Action and Leadership) Together Housing and Land Justice Narrative Place-Based Strategies (Co-governance) Policy Innovation Lab Services for Organizations Our Board Our Team Get Tools and Resources Understanding Racial Equity Events Cultural Week of Ac…
+  - …y indicator for success—including health, criminal justice, education, jobs, housing, and beyond. Our goal goes beyond closing the gaps; we must improve overall outcomes, focusing efforts on those who are faring worst. Deeply racialized systems are costly for us collectively and depr…
+- DEI-language context snippets:
+  - …What is Racial Equity?
+  - Race Forward Skip to main content Main navigation Learn About Us Our Story Our Mission, Vision, and Values Our Strategic Plan Annual Rep…
+  - …equity is about applying justice and a little bit of common sense to a system that's been out of balance. When a system is out of balance, people of color feel the impacts most acutely, but, to be clear, an imbalanced system makes all of us pay." ~ Glenn Harris, President, Race Forward and Pub…
+
+### ffb8b3c67a74866bc9b85c48b68e4bf0 (risk=3)
+- Classification: document:local-pdf
+- Title guess: THE CENTER FOR RACIAL JUSTICE arc,
+- URL: file://research_results/documents/raw/ffb8b3c67a74866bc9b85c48b68e4bf0.pdf
+- Parsed text: research_results/documents/parsed/ffb8b3c67a74866bc9b85c48b68e4bf0.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:32:01.553600)
+- Text length: 7836
+- Why it likely scored > 0:
+  - DEI terms: equity(16); equitable(3); inclusion(2); social justice(2); diversity(1); racial justice(1)
+  - Binding terms: policy(4); must(1); required(1)
+- Summary:
+  - THE CENTER FOR RACIAL JUSTICE arc, Racial Equity Impact Assessment What are Racial Equity Impact Assessments?
+  - EXAMPLES OF RACIAL JUSTICE EQUITY A Racial Equity Impact Assessment (REIA) is a IMPACTS systematic examination of how different racial and ethnic Equity and Social Justice Initiative groups will likely be affected by a proposed action or decision.
+  - REIAs are used to minimize unanticipated adverse consequences in a variety of contexts, including the analysis The county government is using an Equity Impact Review Tool to intentionally consider the promotion of equity in the of proposed policies, institutio
+  - City Departments are using a set of Racial Equity REIAs are used to reduce, eliminate and prevent racial Analysis questions as filters for policy development and discrimination and inequities.
+- Binding-language context snippets:
+  - …to reduce, eliminate and prevent racial Analysis questions as filters for policy development and discrimination and inequities. The persistence of deep budget making. racial disparities and divisions across soc…
+  - …, all public authorities required to develop and publish race equity plans must assess proposed policies using a Race Equality Impact Assessment, a system…
+- DEI-language context snippets:
+  - …THE CENTER FOR RACIAL JUSTICE arc, Racial Equity Impact Assessment What are Racial Equity Impact Assessments? EXAMPLES OF RACIAL JUSTICE EQUITY A Racial Equity Impac…
+  - …en invisible and Minority Impact Statements unintentional, production of inequitable social opportunities and outcomes. When racial equity is not consciously addressed, racial inequality is often unconsciously B…
+
+### 181bd6ec8cfef085a9c88f92bf6a1ca5 (risk=3)
+- Classification: third-party:content
+- Domain: www.racialequityalliance.org
+- Content-Type: text/html; charset=utf-8
+- Title guess: State of the Field - GARE Online Community Skip main navigation (Press Enter). Log in Toggle navigation Who We Are About Us Our Approach Our Impact Careers at GARE Join Us Membersh
+- URL: https://www.racialequityalliance.org/resources/state-of-the-field-25
+- Parsed text: research_results/documents/parsed/181bd6ec8cfef085a9c88f92bf6a1ca5.txt
+- Text length: 6942
+- Why it likely scored > 0:
+  - DEI terms: equity(30); diversity(1)
+  - Proxy terms: community engagement(3)
+  - Binding terms: requirement(1); requirements(1); compliance(1); policy(1); agreement(1); regulation(1)
+- Summary:
+  - Log in Toggle navigation Who We Are About Us Our Approach Our Impact Careers at GARE Join Us Membership Connecting to Your Membership Strategic Partnerships Resources GARE Resources Topic Guides State of the Field GARE Online Community GARE Learning Center New
+  - GARE's latest release, State of the Field: A Snapshot of Racial Equity in Government offers a comprehensive view of the current landscape of racial equity work in government, grounded in the experiences of practitioners across the country.
+  - Drawing on survey data from 169 government staff and interviews with 20 frontline equity leaders, this resource examines what’s working, what’s changing, and where targeted support is most needed.
+  - Designed to meet the needs of practitioners in operationalizing equity, the report includes: Detailed survey analysis on resource allocation, political will, and implementation challenges.
+- Binding-language context snippets:
+  - …re harder to undermine, " moving equity from aspirational statements into the fabric of government operations. “When we codified our equity requirements in city ordinances and administrative regulations, we created guardrails that protect the work through leadership transitions. Even when w…
+  - …re harder to undermine, " moving equity from aspirational statements into the fabric of government operations. “When we codified our equity requirements in city ordinances and administrative regulations, we created guardrails that protect the work through leadership transitions. Even when we…
+- DEI-language context snippets:
+  - …letter Blogs Events Upcoming Events FAQs Log in Newsletter Signup State of the Field × State of the Field What does it take to embed racial equity into the daily work of government - and sustain it? GARE's latest release, State of the Field: A Snapshot of Racial Equity in Government of…
+  - …ransformative impact has never been greater. - Equity Director, Western Region Key Findings Governments are moving beyond compliance-driven diversity efforts toward embedding racial equity in decision-making. The survey found that 45% of jurisdictions have codified racial equity policies,…
+
+### 0fa504280ae86dd4e5ccf8c473b7d22c (risk=3)
+- Classification: government:site
+- Domain: www.oregonmetro.gov
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Projects | Metro Skip to main content collapse all Events News and stories Tools and data Contact Language hub Metro logo, to the homepage Open menu Close menu What Metro does show
+- URL: https://www.oregonmetro.gov/projects
+- Parsed text: research_results/documents/parsed/0fa504280ae86dd4e5ccf8c473b7d22c.txt
+- Text length: 5449
+- Why it likely scored > 0:
+  - DEI terms: equity(4); accessibility(1)
+  - Binding terms: contract(2); policy(1)
+- Summary:
+  - Healthy living and waste reduction Report dumped garbage Education resources Parks and cemeteries show menu hide menu Parks and cemeteries Parks Boat ramps Cemeteries Reservations and services Safety and policies About Metro show menu hide menu About Metro Met
+  - Search Submit Filters Filter results Project type Improvement (6) Investment (1) Plan (8) Policy (1) Study (1) Initiatives Economy (1) Environment (1) Equity (2) Garbage and recycling (2) Housing and homelessness (1) Land and transportation (6) Parks and natur
+  - Equity Plan Regional housing coordination strategy Metro is collaborating with cities, counties and the State of Oregon to promote housing production and access in the region.
+  - Housing and homelessness Study Community connector transit study Metro is exploring how smaller, more flexible solutions could make transit easier to access and more convenient.
+- Binding-language context snippets:
+  - …se issues. Visitor venues, Equity, Economy Pagination Current page 1 Last page 2 Next Opportunities Give your input Jobs Grants and funding Contracts Services Ask a garbage and recycling expert Apply for a contractor's business license Buy a parks pass Buy a cemetery plot Pay my SHS tax…
+  - …e into details, updates and ways to get involved. Search Submit Filters Filter results Project type Improvement (6) Investment (1) Plan (8) Policy (1) Study (1) Initiatives Economy (1) Environment (1) Equity (2) Garbage and recycling (2) Housing and homelessness (1) Land and transporta…
+- DEI-language context snippets:
+  - …etro show menu hide menu About Metro Metro Council Metro Auditor MERC Structure and operations Civil rights at Metro Accessibility at Metro Equity at Metro Doing business with Metro Public records Jobs Events News and stories Tools and data Contact Language hub Search Search Open searc…
+  - …ty and policies About Metro show menu hide menu About Metro Metro Council Metro Auditor MERC Structure and operations Civil rights at Metro Accessibility at Metro Equity at Metro Doing business with Metro Public records Jobs Events News and stories Tools and data Contact Language hub Search S…
+
+### cb1ac965894e26608da47802bbcd2ed2 (risk=2)
+- Classification: third-party:content
+- Domain: portal-applicant-tracking.us-cent.paycomonline.net
+- Content-Type: text/javascript; charset=utf-8
+- Title guess: var qxr=Object.create;var oU=Object.defineProperty;var Sxr=Object.getOwnPropertyDescriptor;var Ixr=Object.getOwnPropertyNames;var Rxr=Object.getPrototypeOf,Pxr=Object.prototype.has
+- URL: https://portal-applicant-tracking.us-cent.paycomonline.net/career-portal/main/index-sprawl-6ETZXKZJ.js
+- Parsed text: research_results/documents/parsed/cb1ac965894e26608da47802bbcd2ed2.txt
+- Text length: 6051301
+- Why it likely scored > 0:
+  - Binding terms: rule(125); required(7); must(4); standard(2); policy(1)
+- Summary:
+  - If you meant to render a collection of children, use an array instead.");return i}function Tue(e,t,r){if(e==null)return e;var n=[],o=0;return Eue(e,n,"","",function(a){return t.call(r,a,o++)}),n}function Gxr(e){if(e._status===-1){var t=e._result;t=t(),t.then(f
+- Binding-language context snippets:
+  - …]([a-z])/g;function gxe(e){return e[1].toUpperCase()}"accent-height alignment-baseline arabic-form baseline-shift cap-height clip-path clip-rule color-interpolation color-interpolation-filters color-profile color-rendering dominant-baseline enable-background fill-opacity fill-rule fl…
+  - …e","draggable","spellCheck","value"].forEach(function(e){ds[e]=new $l(e,2,!1,e.toLowerCase(),null,!1,!1)});["autoReverse","externalResourcesRequired","focusable","preserveAlpha"].forEach(function(e){ds[e]=new $l(e,2,!1,e,null,!1,!1)});"allowFullScreen async autoFocus autoPlay controls de…
+
+### 0da0d7eead05f008d7561470a796b471 (risk=2)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess:  JFIF     Q5Exif  II*         n                         (       1        2       i         NIKON CORPORATION NIKON D4S             Adobe Lightroo
+- URL: https://www.quantumresidential.com/wp-content/uploads/2023/03/NHP_0392-scaled.jpg
+- Parsed text: research_results/documents/parsed/0da0d7eead05f008d7561470a796b471.txt
+- Text length: 737842
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+  - Binding terms: standard(2)
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2023/03/NHP_0392-scaled.jpg
+- Binding-language context snippets:
+  - …uration="0" crs:BlueHue="0" crs:BlueSaturation="0" crs:OverrideLookVignette="False" crs:ToneCurveName2012="Linear" crs:CameraProfile="Adobe Standard" crs:CameraProfileDigest="939B4E1427152B8FC65E6BBE46CF1813" crs:HasSettings="True" crs:CropTop="0" crs:CropLeft="0" crs:CropBottom="1" crs:…
+- DEI-language context snippets:
+  - …lB5JLpg|S 6>y4BH; ~V+M0JsbxQKhzQ@(q¡A9  D$2|M=)Z-HPgZR/8 $Hm2+ ?Vc*RT P궓D WqGJ"VIW' 'ujǀȧ@rY)8v5qc#/>JŹĶƒw[$'dDEI|h\HDx(H \V A ^k9$i ~'z:obLG/U[GO1r 7Wb<ɊFJsZ}Y2vcå/TvP x[YK h {+}M< ޞ8٢" 3egO/ҞA x~ڨu^!z1n}FP@3Eɓo,:LˁQ jcF Q#yP3H(Z,= h}…
+
+### 9762a3533714a36fd929ab1e2fc68393 (risk=2)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/png
+- Title guess: PNG      IHDR        (G    IDATx^ggwf|` `r6694 s9 iD09g㙹s_o֮g=.7ƞ3/O*J%mom#;쮸h+q_T_ '{kl/;p71a|o5*vW^1wwqp;Fa 7MOu쪸bdO 쫻e;fr&^{ΩuZx/ +QQy)o0Z|ĴC|# -469zH u>юm
+- URL: https://www.quantumresidential.com/wp-content/uploads/2022/05/wynne_watts.png
+- Parsed text: research_results/documents/parsed/9762a3533714a36fd929ab1e2fc68393.txt
+- Text length: 732660
+- Why it likely scored > 0:
+  - Binding terms: must(1)
+- Summary:
+  - Image asset (png). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2022/05/wynne_watts.png
+- Binding-language context snippets:
+  - …(e]W[}*4c bfP03333R!-[ ,cUwvWyט+vfgLgszϘcFIAaWyQEsb3(| Ea! QSP%i ajiLA[^DU t))ː@NA&m}q!TZ||e붍π"!U .IRT+TK(42.-MuST&Ye " BzZfePYfe̬=.*>'jꝕ~ /k x1r>CfF6(FEV|(WqƗH`Rb苧(}Ev aϣJtKFLM4qwaG vb)fG`vu  fv^l?m; f uLg ^Y0E??B2'ZC'(BK׈…
+
+### 4e61daf9249f61c5361c07e4550f5841 (risk=2)
+- Classification: document:local-pdf
+- Title guess: OREGON SYSTEM DEVELOPMENT
+- URL: https://www.oregon.gov/ohcs/development/Documents/Oregon%20SDC%20Study_FinalReport_121422.pdf
+- Parsed text: research_results/documents/parsed/4e61daf9249f61c5361c07e4550f5841.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T10:08:23.046887)
+- Text length: 695867
+- Why it likely scored > 0:
+  - DEI terms: equitable(9); equity(7); inclusion(4)
+  - Binding terms: requirement(33); must(24); required(23); requirements(23); policy(21); standard(18)
+- Summary:
+  - OREGON SYSTEM DEVELOPMENT CHARGES STUDY: WHY SDCs MAT TER AND aa THEY AFFEC T HOUSING Prepared for Oregon Housing and December 2022 Community Services (OHCS) Acknowledgements This report was prepared by ECONorthwest on behalf of Oregon Housing and Community Se
+  - Staff and project team members are grateful to the many cities, counties, special districts, and housing developers who participated in focus groups and interviews and/or provided written commentary to inform this study.
+  - OREGON HOUSING AND COMMUNITY SERVICES " Elise Cordle Kennedy, Project Lead " Kim Travis, Engagement Support ECONORTHWEST " Becky Hewitt, Senior Project Manager " Tyler Bump, Project Director and Senior Advisor " Lorelei Juntunen, President and Senior Advisor "
+  - eee eeccscccceeeesnseeeeeceeeesnnaaeceeeesseaeeeeeeeceesnaaeeeeeeseeseneeeeees 60 3.2.4 Underlying Cost Drivers.........cccsccccccsssssssececccccssnneeeeeeeseeesneeeeeeeeeseaneeeeeceseeeenaaeeeeeeseesaaeeeeseeeesaaaaaaeeeeseeeeeeeeeees 62 Part 4: SDCs ANd HOUS
+- Binding-language context snippets:
+  - …5.1 Timing of SDC Assessment and Collection ............csssscsssscssscsssscssscssscsssscssssssssssssessssssssessssessees 112 5.1.1 Requirements and Current Practices .0.........ccccsscccccessssssecececeeeeseneeeeeeccsseenaaeeceeseeecenseeeeseeseaaeeeeeeeeeeeenaaeeees 112 5.1.…
+  - …implemented SDC measures to support affordability, but broader adoption is hindered by administrative, legal, and financial concerns. SDCs must remain rooted in recovering an equitable share of costs based on the impacts of the development, but jurisdictions have discretion over man…
+- DEI-language context snippets:
+  - …cost factors, and priorities. Oregon’s SDC Act and the broader legal context provide guardrails to ensure SDCs recover an equitable share of costs of capacity, while also providing flexibility to tailor the approach to community values and local circums…
+  - …contributions to growth- related costs, and they can support housing production by funding capital projects needed for growth. However, the equity implications of relying on SDCs to fund eligible infrastructure projects are mixed. Residential SDCs can be regressive, with higher impacts…
+
+### 7ab1c698e9aca12f84f98488520ed0a0 (risk=2)
+- Classification: third-party:content
+- Domain: opportunityagenda.org
+- Content-Type: application/json; charset=UTF-8
+- Title guess: {"name":"The Opportunity Agenda","description":"narrative, long-term narrative shift, storytelling, social justice, racial justice, economic justice, immigration, human rights, gen
+- URL: https://opportunityagenda.org/wp-json/
+- Parsed text: research_results/documents/parsed/7ab1c698e9aca12f84f98488520ed0a0.txt
+- Text length: 505468
+- Why it likely scored > 0:
+  - DEI terms: racial justice(1); social justice(1)
+  - Binding terms: required(1411); must(12); standard(4)
+- Summary:
+  - {"name":"The Opportunity Agenda","description":"narrative, long-term narrative shift, storytelling, social justice, racial justice, economic justice, immigration, human rights, gender justice","url":"https:\/\/opportunityagenda.org","home":"https:\/\/opportuni
+  - Events should be filtered by their venue longitude location, must also provide geoloc_lat","required":false},"include":{"description":"Include events with one of the post IDs specified in the array of CSV list, date filters will be ignored.","items":{"type":"i
+  - Ignored when debug mode is enabled.","type":"boolean","required":false}}}],"_links":{"self":[{"href":"https:\/\/opportunityagenda.org\/wp-json\/objectcache\/v1\/options"}]}},"\/tec\/v1\/events\/calendar-embed":{"namespace":"tec\/v1","methods":["GET"],"endpoint
+  - DEPRECATED: Use `modifiers` instead.","type":"number","minimum":0,"maximum":100,"required":false},"caption":{"description":"The attachment caption.","type":"object","properties":{"raw":{"description":"Caption for the attachment, as it exists in the database.",
+- Binding-language context snippets:
+  - …e-application.php"}}},"routes":{"\/":{"namespace":"","methods":["GET"],"endpoints":[{"methods":["GET"],"args":{"context":{"default":"view","required":false}}}],"_links":{"self":[{"href":"https:\/\/opportunityagenda.org\/wp-json\/"}]}},"\/batch\/v1":{"namespace":"","methods":["POST"],"end…
+  - …e},"geoloc_lat":{"format":"double","description":"Requires Events Calendar Pro. Events should be filtered by their venue latitude location, must also provide geoloc_lng","required":false},"geoloc_lng":{"format":"double","description":"Requires Events Calendar Pro. Events should be fi…
+- DEI-language context snippets:
+  - …{"name":"The Opportunity Agenda","description":"narrative, long-term narrative shift, storytelling, social justice, racial justice, economic justice, immigration, human rights, gender justice","url":"https:\/\/opportunityagenda.org","home":"https:\/\/opportunityagenda.o…
+  - …{"name":"The Opportunity Agenda","description":"narrative, long-term narrative shift, storytelling, social justice, racial justice, economic justice, immigration, human rights, gender justice","url":"https:\/\/opportunityagenda.org","home":"https:\/\/opp…
+
+### 5cc318669da57c3750ad6d7c07789a7b (risk=2)
+- Classification: quantumresidential:asset-js
+- Domain: www.quantumresidential.com
+- Content-Type: application/javascript
+- Title guess: !function(){"use strict";var globals="undefined"==typeof global?self:global;if("function"!=typeof globals.require){var modules={},cache={},aliases={},has={}.hasOwnProperty,expRe=/^
+- URL: https://www.quantumresidential.com/wp-content/plugins/corporate-property-management/dist/app.js?ver=1.0.5
+- Parsed text: research_results/documents/parsed/5cc318669da57c3750ad6d7c07789a7b.txt
+- Text length: 397383
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+  - Binding terms: shall(11); must(4); binding(4); required(2); rule(2)
+- Summary:
+  - JavaScript asset likely related to app.js / front-end behavior: https://www.quantumresidential.com/wp-content/plugins/corporate-property-management/dist/app.js?ver=1.0.5
+- Binding-language context snippets:
+  - …pe))return{};if(nativeCreate)return nativeCreate(prototype);Ctor.prototype=prototype;var result=new Ctor;return Ctor.prototype=null,result},shallowProperty=function(key){return function(obj){return null==obj?void 0:obj[key]}},deepGet=function(obj,path){for(var length=path.length,i=0;i…
+  - …s);return _.isObject(result)?result:self};_.bind=restArguments(function(func,context,args){if(!_.isFunction(func))throw new TypeError("Bind must be called on a function");var bound=restArguments(function(callArgs){return executeBound(func,bound,context,this,args.concat(callArgs))});r…
+- DEI-language context snippets:
+  - …n,Object],required:!0},params:null,value:null,sync:null,trigger:Boolean,onlyIf:{type:Boolean,"default":!0},effect:{type:String,"default":"fadeIn"},resp:{type:String,"default":"."},spinner:{type:String,"default":"ClipLoader"},spinnerColor:{type:String,"default":"#42b983"},spinnerPadd…
+
+### e0e77cae191a75355e4664ccf427a3f2 (risk=2)
+- Classification: document:local-pdf
+- Title guess: OF AMERICA
+- URL: file://research_results/documents/raw/e0e77cae191a75355e4664ccf427a3f2.pdf
+- Parsed text: research_results/documents/parsed/e0e77cae191a75355e4664ccf427a3f2.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:33:12.776592)
+- Text length: 359021
+- Why it likely scored > 0:
+  - DEI terms: diversity(50); inclusion(23); equity(10); underrepresented(7); accessibility(7); dei(1)
+  - Binding terms: standard(47); policy(17); agreement(6); required(4); regulation(3); requirement(2)
+- Summary:
+  - members from the various technical areas such as National Council of Acoustical Consultants, American Physical Society, American Auditory Society, Linguistic Society of America, American Inst.
+  - Organization ASA INCE IEEE Oceanic ARO ASA Name: Degree in Acoustics or A member must meet
+  - IEEE members in Individuals with Related Field certain specific criteria
+  - any grade having a
+  - established Interest in Acoustics in terms of professional competence i
+  - agencies, consultants, Dues Dues Annual Dues Dues Journal Subscriptions Meeting Registration Registration Fees Meeting Open Access Fees Publishing Registration Diversity of Royalties Publications Funding Meeting Registration Contributions AIPP Agreement and re
+  - Key Terms: Socio-Demographic: Analysis of population groups and their changing characteristics like age, ethnicity, and education.
+- Binding-language context snippets:
+  - …ogy Regional Chapters Control Engineering # Members Standards Program Noise Control Unknown Biannual Meetings in US Engineering…
+  - …ich influence organization decisions. Political: Considers the influence of government actions, law, political stability, and policy on organizational strategy and operations. Industry: Looks at trends and challenges within a specific sector, incl…
+- DEI-language context snippets:
+  - …Registration Fees Meeting Open Access Fees Publishing Registration Diversity of Royalties Publications Funding Meeting Registratio…
+  - …o Enhancing the sense of belonging for underrepresented members. o Expanding inclusion to younger and more diverse members. o Retaining students in the field and recruiting new talent.…
+
+### 7ce412788b5e96357a2f81150c1692f3 (risk=2)
+- Classification: quantumresidential:asset-js
+- Domain: www.quantumresidential.com
+- Content-Type: application/javascript
+- Title guess: "use strict";var _typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===S
+- URL: https://www.quantumresidential.com/wp-content/themes/razzinteractive/dist/js/razz-theme.min.js?ver=1
+- Parsed text: research_results/documents/parsed/7ce412788b5e96357a2f81150c1692f3.txt
+- Text length: 292423
+- Why it likely scored > 0:
+  - DEI terms: dei(4)
+  - Binding terms: binding(2)
+- Summary:
+  - JavaScript asset (front-end code / dependency): https://www.quantumresidential.com/wp-content/themes/razzinteractive/dist/js/razz-theme.min.js?ver=1
+- Binding-language context snippets:
+  - …ed"==typeof module?"undefined":_typeof(module))&&module&&!module.nodeType&&module,$e=He&&He.exports===Re,Ne=$e&&Oe.process;e:{try{je=Ne&&Ne.binding&&Ne.binding("util");break e}catch(e){}je=void 0}var Ye=je&&je.isArrayBuffer,Ge=je&&je.isDate,Xe=je&&je.isMap,qe=je&&je.isRegExp,Fe=je&&je.i…
+- DEI-language context snippets:
+  - …s:!0,updateOnImagesReady:!0,loop:!1,loopAdditionalSlides:0,loopedSlides:null,control:void 0,controlInverse:!1,controlBy:"slide",normalizeSlideIndex:!0,allowSwipeToPrev:!0,allowSwipeToNext:!0,swipeHandler:null,noSwiping:!0,noSwipingClass:"swiper-no-swiping",passiveListeners:!0,contai…
+
+### 14f7d463c532e2e8b4b1782518f31f83 (risk=2)
+- Classification: quantumresidential:asset-css
+- Domain: www.quantumresidential.com
+- Content-Type: text/css
+- Title guess: @charset "UTF-8";.lg-outer *,html{-webkit-box-sizing:border-box}.button,html{-webkit-backface-visibility:hidden}body,html,img{max-width:100%}.button.actionButton svg,.button.play s
+- URL: https://www.quantumresidential.com/wp-content/themes/razzinteractive/dist/css/razz-theme.min.css?ver=1
+- Parsed text: research_results/documents/parsed/14f7d463c532e2e8b4b1782518f31f83.txt
+- Text length: 218786
+- Why it likely scored > 0:
+  - DEI terms: dei(20)
+  - Binding terms: required(1)
+- Summary:
+  - CSS stylesheet asset (site styling): https://www.quantumresidential.com/wp-content/themes/razzinteractive/dist/css/razz-theme.min.css?ver=1
+- Binding-language context snippets:
+  - …eight:300;color:inherit!important;width:100%;max-width:100%!important}.slide .gform_wrapper ul.gform_fields li.gfield .gfield_label .gfield_required{color:inherit!important}.slide .gform_wrapper ul.gform_fields li.gfield input[type=email],.slide .gform_wrapper ul.gform_fields li.gfield i…
+- DEI-language context snippets:
+  - …translate3d(0,0,0)}.popup:not([class*=fade]){background:rgba(17,17,17,.9)}.popupShown .popup.visible{display:block;-webkit-animation:popupFadeIn .75s;animation:popupFadeIn .75s}.popupShown .popup.visible:not(.animated) .popupContent{-webkit-animation:zoomOut .5s .25s backwards;anima…
+
+### 24cbe0113967a4f6725bb7683d5ad024 (risk=2)
+- Classification: document:local-pdf
+- Title guess: ' TOOLKIT 2
+- URL: https://belonging.berkeley.edu/sites/default/files/gare-racial_equity_toolkit.pdf
+- Parsed text: research_results/documents/parsed/24cbe0113967a4f6725bb7683d5ad024.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T10:09:18.762786)
+- Text length: 125874
+- Why it likely scored > 0:
+  - DEI terms: equity(216); inclusion(7); equitable(7); social justice(3); underrepresented(2); marginalized(2)
+  - Proxy terms: community engagement(4)
+  - Binding terms: policy(30); must(8); contract(4); requirement(2); requirements(2); agreement(1)
+- Summary:
+  - ' TOOLKIT 2 —_'s oe Aum «
+  - | Racial Equity Toolkit An Opportunity to Operationalize Equity »@ °°.
+  - GOVERNMENT ALLIANCE ON “eSere- RACE & EQUITY RACIALEQUITYALLIANCE.ORG -@ °o°e LOCAL AND REGIONAL @c °.
+  - RACE & EQUITY This toolkit is published by the Government Alliance on Race and Equity, a national network of government working to achieve racial equity and advance opportunities for all.
+  - AUTHOR Julie Nelson Director, Government Alliance on Race and Equity COPYEDITING Ebonye Gussine Wilkins, Haas Institute LAYOUT/PRODUCTION Ebonye Gussine Wilkins and Rachelle Galloway-Popotas, Haas Institute for a Fair and Inclusive Society CONTACT INFO Julie N
+- Binding-language context snippets:
+  - …ntentional intervention, institutions and structures will continue to perpetuate racial inequities. Government has the ability to implement policy change at multiple levels and across mudtiple sectors to drive larger…
+  - …LLP EEE sufficient by itself, We must have a much broader vision of the transformation of government…
+- DEI-language context snippets:
+  - …—_'s oe Aum «
+  - | Racial Equity Toolkit An Opportunity to Operationalize Equity »@ °°. LOCAL AND REGIONAL .° e ° °". GOVERNMENT ALLI…
+  - …104 GARE IS A JOINT PROJECT OF xv —S ha as
+  - nstitute ( f, \ r CENTER FOR SOCIAL INCLUSION FF) RACIALEQUITYALLIANCE.ORG ABOUT THE GOVERNMENT ALLIANCE ON RACE & EQUITY The Government Alliance on Race a…
+
+### 57a271a61cfdda6b8b76a264c5c1a897 (risk=2)
+- Classification: document:local-pdf
+- Title guess: Submitted to the
+- URL: file://research_results/documents/raw/57a271a61cfdda6b8b76a264c5c1a897.pdf
+- Parsed text: research_results/documents/parsed/57a271a61cfdda6b8b76a264c5c1a897.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:29:51.225479)
+- Text length: 118329
+- Why it likely scored > 0:
+  - DEI terms: equity(49); inclusion(38); diversity(25); equitable(21); underserved(13); dei(12)
+  - Proxy terms: community engagement(1)
+  - Binding terms: requirement(26); standard(22); requirements(20); policy(19); must(15); required(10)
+- Summary:
+  - Submitted to the Environmental Justice Council by the OREGON DEPARTMENT OF ENERGY 2 ee "A Al Nercecntl SCE f\ OREGON SS ENERGY January 2024 ANNUAL ENVIRONMENTAL JUSTICE COUNCIL REPORT —- 2023 EXECUTIVE SUMMARY The Oregon Department of Energy (ODOE) is in a per
+  - The Strategic Plan led to ODOE’s Diversity, Equity, and Inclusion ODOE recognizes the Implementation Plan and Strategic Approach in June 2023 — a guiding institutional power we document to ensure diversity, equity, and inclusion (DEI) is embedded have and the
+  - ODOE continues to build DEI capacity and has created a Community Navigator Program and established a Community Equity and Inclusion Analyst in support of this effort.
+  - We appreciate that the Environmental Justice Council can provide an invaluable perspective and tools that will be a part of shaping ODOE’s progress.
+- Binding-language context snippets:
+  - …IL REPORT —- 2023 As a beneficiary of federal funds, ODOE must ensure that 40 percent of all federal funding meets these requirements. This federal requirement is consistent with ODOE’s commitment in our strategic plan to build practices and processes to achieve more incl…
+  - …combat climate change. The division includes two sections: Energy Efficiency and Conservation supports the advancement of energy efficiency standards and codes and also provides analysis and technical assistance to improve energy efficiency in the public, residential, commercial, industr…
+- DEI-language context snippets:
+  - …ip, it set the foundation for meaningful engagement throughout the process and implementation. The Strategic Plan led to ODOE’s Diversity, Equity, and Inclusion ODOE recognizes the Implementation Pla…
+  - …he foundation for meaningful engagement throughout the process and implementation. The Strategic Plan led to ODOE’s Diversity, Equity, and Inclusion ODOE recognizes the Implementation Plan and Strategic…
+
+### 50934df3911c3dcf347d9b4054324670 (risk=2)
+- Classification: quantumresidential:asset-js
+- Domain: www.quantumresidential.com
+- Content-Type: application/javascript
+- Title guess: // _____ _ _ // | __ \| | (_) // | |__) | |_ _ __ _ _ _ __ ___ // | ___/| | | | |/ _` | | '_ \/ __| v 3.1 // | | | | |_| | (_| | | | | \__ \ // |_| |_|\__,_|\__, |_|_| |_|___/ // _
+- URL: https://www.quantumresidential.com/wp-content/themes/razzinteractive/slides/js/plugins.js?ver=1
+- Parsed text: research_results/documents/parsed/50934df3911c3dcf347d9b4054324670.txt
+- Text length: 116245
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+  - Binding terms: required(3); rule(2); standard(1)
+- Summary:
+  - JavaScript asset (front-end code / dependency): https://www.quantumresidential.com/wp-content/themes/razzinteractive/slides/js/plugins.js?ver=1
+- Binding-language context snippets:
+  - …__ //
+  - ___/|
+  - |
+  - |/ _`
+  - | '_ \/ __| v 3.1 //
+  - |
+  - | |_|
+  - (_|
+  - |
+  - | \__ \ // |_| |_|\__,_|\__, |_|_| |_|___/ // __/
+  - // |___/ // // Required plugins for Slides JS // https://designmodo.com/slides/ if (window.pluginsAttached){alert("Attention! Script plugins.js library is connecte…
+  - …t.createElement("div"),s.className="mediaQueryBinarySearch",s.style.display="none",document.body.appendChild(s),u=function(e){c.sheet.insertRule("@media "+e+"{.mediaQueryBinarySearch {text-decoration: underline} }",0);var n="underline"==getComputedStyle(s,null).textDecoration;return…
+- DEI-language context snippets:
+  - …ength,c=0;b&&b>c;c++){var d=a[c];d.hide()}},g.prototype.revealItemElements=function(a){var b=this.getItems(a);this.reveal(b)},g.prototype.hideItemElements=function(a){var b=this.getItems(a);this.hide(b)},g.prototype.getItem=function(a){for(var b=0,c=this.items.length;c>b;b++){var d=…
+
+### 60ff12d7e79e6a9763b86f62b24ac6f4 (risk=2)
+- Classification: document:local-pdf
+- Title guess: DEPARTMENT OF
+- URL: file://research_results/documents/raw/60ff12d7e79e6a9763b86f62b24ac6f4.pdf
+- Parsed text: research_results/documents/parsed/60ff12d7e79e6a9763b86f62b24ac6f4.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:30:04.854550)
+- Text length: 94585
+- Why it likely scored > 0:
+  - DEI terms: dei(26); equity(11); diversity(10); inclusion(10); underrepresented(1)
+  - Binding terms: required(26); standard(15); compliance(8); contract(8); statewide(7); must(6)
+- Summary:
+  - ccc cccccccessecessseeeeceseeecesseeceseseseseseeesseeeeecesseeenseeeeenaes 4 PANTTe[hap -Xexexe] 0/0] F-]0)| [15 ee eee ce 5 Supporting Strategic Planning and Measuring Agency Performance ................ccccccceseeeees 6 State Government Commitment to Divers
+  - ccc eccsscccsssecessseeeeeeceeseseeecesaeeensaeesesesesesseeeeesaes 20 Appendix C: Agency Diversity, Equity and Inclusion Plans ..............cccccccsssseceeeseseeeseeeeseaes 21 Appendix D: Agency Information Technology Plans ..............ccccccccccssscceseee
+  - sy) Agencies reporting diversity, equity (DEI) and inclusion plan progress in alignment with agency strategic plans: 67 of 71 agencies reported their progress in DEI initiatives.
+  - State Government Commitment to Diversity, Equity and Inclusion All agencies will develop and submit a diversity, equity and inclusion plan updated every two years.
+- Binding-language context snippets:
+  - …Agencies delivering information technology (IT) strategic plans declines: 63 of 71 le agencies completed their required new or revised agency IT strategic plans on time. Performance reviews for agency directors are on track: 27 of 29 agency dire…
+  - …gencies with 75 or more employees use a statewide contract with Gallup to administer director evaluations, while smaller agencies may use a standardized, alternate process implemented in fall 2024. Percentage of 360 performance reviews for agency directors scheduled that occurred (July 1…
+- DEI-language context snippets:
+  - …average to be around 60% of the way to achieving agency goals set forth in their plans. sy) Agencies reporting diversity, equity (DEI) and inclusion plan progress in alignment with agency strategic plans: 67 of 71 agencies reported their progress in DEI initiat…
+  - …Supporting Strategic Planning and Measuring Agency Performance ................ccccccceseeeees 6 State Government Commitment to Diversity, Equity and Inclusion ................ccceeeeeneeeee 7 Managing Information Technology Progress ...........cccccccccssscesssccssceeeseeessecessecc…
+
+### 645b1f978c1291384280119d20b07e77 (risk=2)
+- Classification: document:local-pdf
+- Title guess: DEPARTMENT OF
+- URL: file://research_results/documents/raw/645b1f978c1291384280119d20b07e77.pdf
+- Parsed text: research_results/documents/parsed/645b1f978c1291384280119d20b07e77.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:29:40.698842)
+- Text length: 88007
+- Why it likely scored > 0:
+  - DEI terms: dei(54); equity(13); inclusion(13); diversity(12); equitable(1); underrepresented(1)
+  - Binding terms: required(16); compliance(16); standard(10); must(6); requirement(4); comply(4)
+- Summary:
+  - e All Agencies Assigned to a DEI Cohort — Starting in September, under the leadership of the Office of Cultural Change, every agency will join a cohort of peer agencies to provide a structure of support to develop and implement Diversity, Equity and Inclusion
+  - Overview of the Measures Covered in this Report Overview of the strategic initiatives covered in this report: Performance Feedback for Employees a kRwWN> Managing Information Technology Progress State Government Commitment to Diversity, Equity and Inclusion Ag
+  - State Government Commitment to Diversity, Equity and Inclusion Oregon state government is committed to advancing diversity, equity and inclusion, with a vision for racial equity that: e Dismantles institutional and structural racism in state agencies, and by d
+  - e Ensures an inclusive and welcoming Oregon for all persons, by celebrating our collective diversity of race, ethnicity, culture, color, disability, gender, gender identity, marital status, national origin, age, religion, sex, sexual orientation, socio- econom
+- Binding-language context snippets:
+  - …ut of 63 agencies achieved 90% or higher. e Increased Rate of Agency IT Strategic Planning — This quarter, roughly 70% of the required reporting agencies, boards and commissions are in active development of IT strategic planning activities, which is a 26% improvemen…
+  - …made remarkable progress since June: e Increased Rate of Employee Performance Feedback — In June, the enterprise was at 87% compliance with employee performance feedback. Last quarter, this rose to 92%, and 50 out of 63 agencies achieved 90% or higher. e Incre…
+- DEI-language context snippets:
+  - …of IT strategic planning activities, which is a 26% improvement over the last reporting period. e All Agencies Assigned to a DEI Cohort — Starting in September, under the leadership of the Office of Cultural Change, every agency will join a cohort of peer agen…
+  - …ural Change, every agency will join a cohort of peer agencies to provide a structure of support to develop and implement Diversity, Equity and Inclusion plans. e Decreased Days to Fill Vacancies — The average time it took to fill vacant positions has dropp…
+
+### ffecba514c0afa1910c523118e17c524 (risk=2)
+- Classification: quantumresidential:asset-js
+- Domain: www.quantumresidential.com
+- Content-Type: application/javascript
+- Title guess: /*! jQuery v3.7.1 | (c) OpenJS Foundation and other contributors | jquery.org/license */ !function(e,t){"use strict";"object"==typeof module&&"object"==typeof module.exports?module
+- URL: https://www.quantumresidential.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1
+- Parsed text: research_results/documents/parsed/ffecba514c0afa1910c523118e17c524.txt
+- Text length: 87553
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+  - Binding terms: required(1)
+- Summary:
+  - JavaScript asset likely related to jquery / front-end behavior: https://www.quantumresidential.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1
+- Binding-language context snippets:
+  - …(e,t){return e===t&&(a=!0),0},f="checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",t="(?:\\\\[\\da-fA-F]{1,6}"+ge+"?|\\\\[^\\r\\n\\f]|[\\w-]|[^\0-\\x7f])+",p="\\["+ge+"*("+t+")(?:"+ge+"*([*^$|!~]?=)"+ge+"*(?:'((?:\…
+- DEI-language context snippets:
+  - …ypeof e?i.apply(this,arguments):this.animate(gt(r,!0),e,t,n)}}),ce.each({slideDown:gt("show"),slideUp:gt("hide"),slideToggle:gt("toggle"),fadeIn:{opacity:"show"},fadeOut:{opacity:"hide"},fadeToggle:{opacity:"toggle"}},function(e,r){ce.fn[e]=function(e,t,n){return this.animate(r,e,t,…
+
+### fcee72cf47555235e999018443690625 (risk=2)
+- Classification: quantumresidential:asset-js
+- Domain: www.quantumresidential.com
+- Content-Type: application/javascript
+- Title guess: /*! lightgallery - v1.6.4 - 2017-10-29 * http://sachinchoolur.github.io/lightGallery/ * Copyright (c) 2017 Sachin N; Licensed GPLv3 */ /*! lightgallery - v1.6.4 - 2017-10-29 * http
+- URL: https://www.quantumresidential.com/wp-content/themes/razzinteractive/assets/lib/lightGallery/dist/js/lightgallery-all.js?ver=1
+- Parsed text: research_results/documents/parsed/fcee72cf47555235e999018443690625.txt
+- Text length: 80467
+- Why it likely scored > 0:
+  - DEI terms: dei(3)
+  - Binding terms: required(2); must(1)
+- Summary:
+  - JavaScript asset (front-end code / dependency): https://www.quantumresidential.com/wp-content/themes/razzinteractive/assets/lib/lightGallery/dist/js/lightgallery-all.js?ver=1
+- Binding-language context snippets:
+  - …ion() { // For first time add some delay for displaying the start animation. var _speed = 0; // Do not change the delay value because it is required for zoom plugin. // If gallery opened from direct url (hash) speed value should be 0 if (delay && !$('body').hasClass('lg-from-hash')) { _s…
+  - …s.s.dynamicEl !== 'undefined' && this.s.dynamicEl.constructor === Array && !this.s.dynamicEl.length) { throw ('When using dynamic mode, you must also define dynamicEl as an Array.'); } // lightGallery modules this.modules = {}; // false when lightgallery complete first slide; this.lG…
+- DEI-language context snippets:
+  - …sClass('lg-from-hash')) { _speed = delay; } setTimeout(function() { _this.$slide.eq(index).addClass('lg-complete'); _this.$el.trigger('onSlideItemLoad.lg', [index, delay || 0]); }, _speed); }); // @todo check load state for html5 videos if (_isVideo && _isVideo.html5 && !_hasPoster)…
+
+### 6693d1ba8b8aa1dc9e3bc370bc2507af (risk=2)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess:  Exif  II*         V       ^   (       1 -   f   2       i           H      H      Adobe Photoshop Express Windows 10 (Windows)  2019:10:09 12:32:29      
+- URL: https://www.quantumresidential.com/wp-content/uploads/2019/10/MM-2_.jpg
+- Parsed text: research_results/documents/parsed/6693d1ba8b8aa1dc9e3bc370bc2507af.txt
+- Text length: 70429
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+  - Binding terms: rule(1)
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2019/10/MM-2_.jpg
+- Binding-language context snippets:
+  - …g݁.>NrT#+ sᔎ<au-A%'ӞKczMdZd& NI Ϡ9! $p=7K 4/f:uXzkZ9nƝ'~ʲ3<B" Rpe0 O8rʇM󾟭j~P/RDfAHtX~ Vo <@?Kxcs*WOP/-M6^me/m Pz[41}F jRuLe8vڷ嵟}l9b{l:=gO/5koƝmyм4+  rD9 "wRJL#u v?c0s\rIO<c)l[^#iu[+r]$hI!pk^@ 'W x9˯lBpoH[ȿ\ynk=6{ky %k =5RB T }gG=eq m6IEo*5g:fVUީk 7+…
+- DEI-language context snippets:
+  - …#TY^; JCrf'9NϖMg*;svL,3L/Kmͥ?˦}7Ꚅ ߘ8PsI@D0 W3sc )[0Ѯ2Bʴ~IV m7PňkO9y{d5 E7$Kq8Büm;~C$N_8ha<q56K%RU HA GH4ᅊyQϕysaxv/6>}?l%9΍im-Q  deI"S5[ӌ?O=׺e<-7W^k˾T>iG.%)hmL_ siqpԏ-{ⲕ/W 1i  UtC-TT)qC,YcG~YkePӭmA=5xѣSY@`$́bM?5 HC-V=*1i:Tބem~\y I X. n8n Go/ߜ֗LZ"ӵ?ON@>* n9…
+
+### 9e9cb48c1174c31afed273d1a674e5ba (risk=2)
+- Classification: infrastructure/reference
+- Domain: schema.org
+- Content-Type: text/html
+- Title guess: Person - Schema.org Type Note : You are viewing the development version of Schema.org . See how we work for more details. Schema.org Docs Schemas Validate About Person A Schema.org
+- URL: https://schema.org/Person
+- Parsed text: research_results/documents/parsed/9e9cb48c1174c31afed273d1a674e5ba.txt
+- Text length: 67813
+- Why it likely scored > 0:
+  - DEI terms: diversity(1)
+  - Binding terms: requirement(5); requirements(5); standard(2); required(1); rule(1)
+- Summary:
+  - If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.
+  - Other", "jobTitle": { "@type": "DefinedTerm", "inDefinedTermSet": "https://targetjobs.co.uk/careers-advice/job-descriptions", "termCode": "277133-aid-workerhumanitarian-worker-job-description", "name": "Aid worker/humanitarian worker", "url": "https://targetjo
+  - Other", "jobTitle": { "@type": "DefinedTerm", "inDefinedTermSet": "https://targetjobs.co.uk/careers-advice/job-descriptions", "termCode": "277133-aid-workerhumanitarian-worker-job-description", "name": "Aid worker/humanitarian worker", "url": "https://targetjo
+  - Below it, Magritte...", "creator": [ { "@type": "Person", "name": "René Magritte", "sameAs": "https://www.freebase.com/m/06h88" } ], "width": [ { "@type": "Distance", "name": "940 mm" } ], "height": [ { "@type": "Distance", "name": "635 mm" } ], "artMedium": "
+- Binding-language context snippets:
+  - …anslator CreativeWork or Event Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event. underName Reservation or Ticket The person or organization the reservation or ti…
+  - …anslator CreativeWork or Event Organization or person who adapts a creative work to different languages, regional differences and technical requirements of a target market, or that translates during some event. underName Reservation or Ticket The person or organization the reservation or tic…
+- DEI-language context snippets:
+  - …principles of an Organization (or individual, e.g. a Person writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a CreativeWork (e.g. NewsArticle ) the principles are those of the party primarily responsible for the creation o…
+
+### 7a83b025fa586877c6a5ea8493dc7719 (risk=2)
+- Classification: third-party:content
+- Domain: d3uf7shreuzboy.cloudfront.net
+- Content-Type: application/json
+- Title guess: { "common": { "edit": "Modifier", "close": "Fermer", "closeSymbol": "×", "cancel": "Annuler", "insert": "Insérer", "selectTimezone": "Sélectionner un fuseau horaire", "confirmation
+- URL: https://d3uf7shreuzboy.cloudfront.net/WebRoot/stable/i18n/react-fr.c24098db.json
+- Parsed text: research_results/documents/parsed/7a83b025fa586877c6a5ea8493dc7719.txt
+- Text length: 65489
+- Why it likely scored > 0:
+  - DEI terms: dei(1); accessibility(1)
+  - Binding terms: required(16); standard(2); requirement(1)
+- Summary:
+  - Ici vous trouverez tous les événements à l'horizon dans et autour de votre communauté.", "online": "En ligne", "conferenceCall": "Conférence téléphonique", "pastEvents": "Événements passés" }, "feed": { "contentType": "Type de contenu", "jumpToLatest": "Aller
+- Binding-language context snippets:
+  - …showAll": "Afficher tout", "post": "Publier", "send": "Envoyer", "sending": "Envoi en cours...", "sendMessage": "Envoyer un message", "fieldRequired": "{{field}} est requis.", "loadError": "Échec du chargement de {{item}}. Veuillez réessayer.", "message": "Message", "subject": "Sujet", "…
+  - …hForAI": "Longueur de titre pour le contenu IA", "descriptionLengthForAI": "Longueur de description pour le contenu IA", "short": "court", "standard": "standard", "long": "long", "inModeration": "En modération", "pendingAdminReview": "En attente de révision administrative", "itemApproved…
+- DEI-language context snippets:
+  - …t plus de plans d'adhésion", "selectMembership": "Sélectionner {{name}}", "membershipPlanDetails": "Détails du plan d'adhésion", "discountCodeInput": "champ de saisie du code de réduction", "goToProfile": "Aller au profil de {{name}}", "profilePicture": "profil de {{name}}", "closeF…
+  - …té. Comment puis-je vous aider aujourd'hui ?", "postDiscussionThread": "Publier un fil de discussion", "clearChat": "Effacer le chat" } }, "accessibility": { "hide": "Masquer", "show": "Afficher", "messageSources": "Sources de messages", "feedItemsCount": "Affichage de {{count}} éléments dans…
+
+### 18a4457561e7c756d769d5af38c56b27 (risk=2)
+- Classification: third-party:content
+- Domain: d3uf7shreuzboy.cloudfront.net
+- Content-Type: application/json
+- Title guess: { "common": { "edit": "Editar", "close": "Cerrar", "closeSymbol": "×", "cancel": "Cancelar", "insert": "Insertar", "selectTimezone": "Seleccionar una zona horaria", "confirmation":
+- URL: https://d3uf7shreuzboy.cloudfront.net/WebRoot/stable/i18n/react-es.5f80097a.json
+- Parsed text: research_results/documents/parsed/18a4457561e7c756d769d5af38c56b27.txt
+- Text length: 63193
+- Why it likely scored > 0:
+  - DEI terms: dei(1); accessibility(1)
+  - Binding terms: required(16); requirement(1); standard(1)
+- Summary:
+  - Aquí encontrarán cualquier evento en el horizonte dentro y alrededor de su comunidad.", "online": "En línea", "conferenceCall": "Llamada de conferencia", "pastEvents": "Eventos pasados" }, "feed": { "contentType": "Tipo de contenido", "jumpToLatest": "Ir al co
+- Binding-language context snippets:
+  - …: "Otro", "showAll": "Mostrar todo", "post": "Publicar", "send": "Enviar", "sending": "Enviando...", "sendMessage": "Enviar mensaje", "fieldRequired": "{{field}} es requerido.", "loadError": "Error al cargar {{item}}. Por favor, inténtelo de nuevo.", "message": "Mensaje", "subject": "Asu…
+  - …sía. <exploreLink>Explore los planes de membresía</exploreLink> para obtener más beneficios.", "selectFile": "Seleccionar archivo", "csvFileRequirement": "Solo un archivo csv de direcciones de correo electrónico es aceptable", "addExistingMembers": "Agregar miembros existentes de la comunid…
+- DEI-language context snippets:
+  - …más planes de membresía", "selectMembership": "Seleccionar {{name}}", "membershipPlanDetails": "Detalles del plan de membresía", "discountCodeInput": "campo de entrada del código de descuento", "goToProfile": "Ir al perfil de {{name}}", "profilePicture": "perfil de {{name}}", "close…
+  - …scar en la comunidad. ¿Cómo puedo ayudarte hoy?", "postDiscussionThread": "Publicar un hilo de discusión", "clearChat": "Borrar chat" } }, "accessibility": { "hide": "Ocultar", "show": "Mostrar", "messageSources": "Fuentes de mensajes", "feedItemsCount": "Mostrando {{count}} elementos en el f…
+
+### c441d095b5efadcac83eadd5ad604240 (risk=2)
+- Classification: document:local-pdf
+- Title guess: race forward »
+- URL: file://research_results/documents/raw/c441d095b5efadcac83eadd5ad604240.pdf
+- Parsed text: research_results/documents/parsed/c441d095b5efadcac83eadd5ad604240.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:31:06.925466)
+- Text length: 57355
+- Why it likely scored > 0:
+  - DEI terms: equity(21); people of color(19); racial justice(10); diversity(6); minority(6); inclusion(3)
+  - Binding terms: policy(7); must(4); standard(3); contract(2); rule(1); statewide(1)
+- Summary:
+  - in addition, shifting demographics make even more urgent our need to speak openly about racial bias and inequity, and their deep roots in our history, culture, and institu- tions.
+  - THE GUIDE INCLUDES: Covering Key Issues With a Racial Lens Seven Harmful Racial Discourse Practices Key Terms & 31 Concepts Online Resources 35 Appendix W Covering Key Issues With a Racial Lens It is critical that media coverage on race bring an explicit racia
+  - « Beware of using terms like “majority-minority” as they do not give a nuanced or accurate picture of the demograph- ic changes occurring ina particular community.
+  - e Avoid terms that may subtly, yet profoundly, evoke and reinforce racial stereotypes, such as “urban,” “lazy,” “hard- working,” “entitlement,” and others, « Consider barriers to mobility, including practices that appear race neutral in intent, but have racial
+- Binding-language context snippets:
+  - …children of color being subject te more extreme disciplinary measures. ¢ Speak in depth with all players, beyond politicians, policy makers, and paid experts. « ‘Talk to parents and students, teachers, advocates on the ground who have been working on t…
+  - …titu- tions. This system of racialization—which routinely confers advantage and disadvantage based on skin color and other characteristics ~must be clearly understood, However, when race enters our public conversations about these important national issues, the dialogue is too often…
+- DEI-language context snippets:
+  - …ctory, experiences, and outcomes. in addition, shifting demographics make even more urgent our need to speak openly about racial bias and inequity, and their deep roots in our history, culture, and institu- tions. This system of racialization—which routinely confers advantage and disad…
+  - …ens up new avenues of inquiry and storytelling. This section highlights pressing, and often under- reported, issues that disparately impact people of color, and provides tips and guidelines to help avoid pitfalls often found in media coverage. Be explicit about race. Avoid stereotypes. Use a…
+
+### 4aacabcdbcf635327d725f4d380c2cc3 (risk=2)
+- Classification: third-party:content
+- Domain: d3uf7shreuzboy.cloudfront.net
+- Content-Type: application/json
+- Title guess: { "common": { "edit": "Edit", "close": "Close", "closeSymbol": "×", "cancel": "Cancel", "insert": "Insert", "selectTimezone": "Select a timezone", "confirmation": "Confirmation", "
+- URL: https://d3uf7shreuzboy.cloudfront.net/WebRoot/stable/i18n/react-en.d711bacb.json
+- Parsed text: research_results/documents/parsed/4aacabcdbcf635327d725f4d380c2cc3.txt
+- Text length: 57087
+- Why it likely scored > 0:
+  - DEI terms: dei(1); accessibility(1)
+  - Binding terms: required(25); must(11); rule(2); standard(2); requirement(1)
+- Summary:
+  - Here you'll find any events on the horizon in and around your community.", "online": "Online", "conferenceCall": "Conference Call", "pastEvents": "Past Events" }, "feed": { "contentType": "Content Type", "jumpToLatest": "Jump to latest content", "showMore": "S
+- Binding-language context snippets:
+  - …er", "other": "Other", "showAll": "Show All", "post": "Post", "send": "Send", "sending": "Sending...", "sendMessage": "Send Message", "fieldRequired": "{{field}} is required.", "loadError": "Failed to load {{item}}. Please try again.", "message": "Message", "subject": "Subject", "any": "…
+  - …ps", "groupSizeExceeded": "Your group, {{groupName}}, has more members than this plan allows. If you would like to switch to this plan, you must first remove {{count}} members from the group on your <membershipPageLink>Membership page</membershipPageLink>.", "membershipPage": "Member…
+- DEI-language context snippets:
+  - …Visually show more membership plans", "selectMembership": "Select {{name}}", "membershipPlanDetails": "Membership Plan Details", "discountCodeInput": "discount code input field", "goToProfile": "Go to {{name}}'s profile", "profilePicture": "{{name}}'s profile", "loadingRelatedLinks"…
+  - …you search the community. How can I assist you today?", "postDiscussionThread": "Post a Discussion Thread", "clearChat": "Clear Chat" } }, "accessibility": { "hide": "Hide", "show": "Show", "messageSources": "Message sources", "feedItemsCount": "Showing {{count}} items in feed", "closeViewAtt…
+
+### 097f2f6b250b065a6a9eb2d97f44d074 (risk=2)
+- Classification: infrastructure/reference
+- Domain: en.wikipedia.org
+- Content-Type: text/html; charset=UTF-8
+- Title guess: ISO 8601 - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help
+- URL: https://en.wikipedia.org/wiki/ISO_8601
+- Parsed text: research_results/documents/parsed/097f2f6b250b065a6a9eb2d97f44d074.txt
+- Text length: 54745
+- Why it likely scored > 0:
+  - DEI terms: inclusion(2)
+  - Binding terms: standard(70); agreement(9); must(8); rule(8); shall(3); required(2)
+- Summary:
+  - For earlier (pre-Gregorian) dates, the calendar may be extended before its introduction (the proleptic Gregorian calendar ) by explicit agreement of the parties involved.
+  - Instead, the standard states that "values in the range [0000] through [1582] shall only be used by mutual agreement of the partners in information interchange".
+  - [ 19 ] To represent years before 0000 or after 9999, the standard also permits the expansion of the year representation but only by prior agreement between the sender and the receiver.
+  - In ISO 8601:2004 it was permitted to omit the "T" character by mutual agreement as in "200704051430" , [ 37 ] but this provision was removed in ISO 8601-1:2019.
+- Binding-language context snippets:
+  - …sentations 6 Durations 7 Time intervals Toggle Time intervals subsection 7.1 Repeating intervals 8 Truncated representations (deprecated) 9 Standardised extensions Toggle Standardised extensions subsection 9.1 Extended Date/Time Format (EDTF) 9.2 Repeat rules for recurring time intervals…
+  - …82. For earlier (pre-Gregorian) dates, the calendar may be extended before its introduction (the proleptic Gregorian calendar ) by explicit agreement of the parties involved. Such proleptic dates may not be adjusted to reconcile them with Julian dates. Years [ edit ] YYYY ISO 8601 prescri…
+- DEI-language context snippets:
+  - …communicating partners", and previous versions used notations like "2000--2002". [ 44 ] Use of a double hyphen instead of a solidus allows inclusion in computer filenames ; [ 45 ] in common operating systems, a solidus is a reserved character and is not allowed in a filename. For <start>…
+
+### db13e23918ccc7cc83dae317c32a5d58 (risk=2)
+- Classification: infrastructure/reference
+- Domain: en.wikipedia.org
+- Content-Type: text/html; charset=UTF-8
+- Title guess: ISO 4217 - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help
+- URL: https://en.wikipedia.org/wiki/ISO_4217
+- Parsed text: research_results/documents/parsed/db13e23918ccc7cc83dae317c32a5d58.txt
+- Text length: 53382
+- Why it likely scored > 0:
+  - DEI terms: inclusion(1)
+  - Binding terms: standard(29); rule(3); must(2); policy(2); privacy(2); shall(1)
+- Summary:
+  - The inclusion of the EU (denoting the European Union ) in the ISO 3166-1 reserved codes list allows the euro to be coded as EUR rather than assigned a code beginning with X, even though it is a supranational currency.
+  - RINET funds code [ 45 ] YDD 720 South Yemeni dinar 1965 1996-06-11 YER YUD 890 2 Yugoslav dinar 1966-01-01 1989-12-31 YUN (MKD / RSD / EUR / HRK / BAM) YUM 891 2 Yugoslav dinar 1994-01-24 2003-07-02 CSD (RSD / EUR) YUN 890 2 Yugoslav dinar 1990-01-01 1992-06-3
+  - ^ a b c d Not part of the European Union, but uses euro via monetary agreement .
+  - Dictionary of International Trade Finance Terms .
+- Binding-language context snippets:
+  - …S currency codes 5 Non ISO 4217 currencies Toggle Non ISO 4217 currencies subsection 5.1 Currencies without ISO 4217 currency codes 5.2 Non-standard codes 5.3 Unofficial codes for minor units of currency 5.4 Cryptocurrencies 6 See also 7 Notes 8 References 9 External links Toggle the tab…
+  - …ro, the European Currency Unit (ECU), had the code XEU. The use of the initial letter "X" for these purposes is facilitated by the ISO 3166 rule that no official country code beginning with X will ever be assigned. The inclusion of the EU (denoting the European Union ) in the ISO 316…
+- DEI-language context snippets:
+  - …letter "X" for these purposes is facilitated by the ISO 3166 rule that no official country code beginning with X will ever be assigned. The inclusion of the EU (denoting the European Union ) in the ISO 3166-1 reserved codes list allows the euro to be coded as EUR rather than assigned a co…
+
+### 592c84071aa2e1e2c199fe14a36d610c (risk=2)
+- Classification: third-party:content
+- Domain: www.osba.org
+- Content-Type: application/rss+xml; charset=UTF-8
+- Title guess: <?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://
+- URL: https://www.osba.org/feed/
+- Parsed text: research_results/documents/parsed/592c84071aa2e1e2c199fe14a36d610c.txt
+- Text length: 51615
+- Why it likely scored > 0:
+  - DEI terms: equity(12); diversity(1); underserved(1)
+  - Proxy terms: community engagement(2)
+  - Binding terms: rule(24); policy(6); statewide(5); must(3); required(3); requirement(3)
+- Summary:
+  - If the district hasn’t met targets by the fifth year, ODE will be able to control up to 25% of a district’s funding.</p> <p>ODE taking control of a quarter of district’s spending raises complicated budget questions considering that more than 80% of most distri
+  - More than three dozen Thursday and Friday sessions included immediately relevant topics such as policies for artificial intelligence in education, serving students in the wake of equity-related federal actions, Oregon legislative updates, special education and
+  - &nbsp;</p> <p>This year, the conference offered six “essential learning strands” so school leaders could concentrate their understanding in areas including student rights, policy and legislation, and governance and leadership.</p> <p>OSBA attorneys from multip
+  - “Knowing the requirements and the limits the law places on schools helps school boards make better decisions and policy,”</p> <p>&#8211; Jake Arnold, OSBA<br><a href="mailto:jarnold@osba.org">jarnold@osba.org</a></p> <p>The post <a href="https://www.osba.org/e
+- Binding-language context snippets:
+  - …for school accountability with Senate Bill 141. The State Board of Education will likely vote Thursday, Dec. 11, on the first major set of rules...</p> <p>The post <a href="https://www.osba.org/state-board-of-education-takes-measure-of-what-accountability-means/">State Board of Educ…
+  - …ference offered six “essential learning strands” so school leaders could concentrate their understanding in areas including student rights, policy and legislation, and governance and leadership.</p> <p>OSBA attorneys from multiple departments were presenters in different strands. OSBA,…
+- DEI-language context snippets:
+  - …ay sessions included immediately relevant topics such as policies for artificial intelligence in education, serving students in the wake of equity-related federal actions, Oregon legislative updates, special education and immigration enforcement relating to schools.</p> <p>Krista Paren…
+  - …elp students stay in school and graduate. He created a regional board training and mentorship program and has promoted greater school board diversity. He is deeply involved with the Oregon Association of Education Service Districts and hosts a monthly radio show with Mulvihill.</p> <p>In…
+
+### 5184c7c35874f7f32dd9b11fd5c0851e (risk=2)
+- Classification: infrastructure/reference
+- Domain: schema.org
+- Content-Type: text/html
+- Title guess: VideoObject - Schema.org Type Note : You are viewing the development version of Schema.org . See how we work for more details. Schema.org Docs Schemas Validate About VideoObject A 
+- URL: https://schema.org/VideoObject
+- Parsed text: research_results/documents/parsed/5184c7c35874f7f32dd9b11fd5c0851e.txt
+- Text length: 50333
+- Why it likely scored > 0:
+  - DEI terms: accessibility(9); diversity(1)
+  - Binding terms: required(2); applicable to(2); standard(2); requirement(1); requirements(1)
+- Summary:
+  - creativeWorkStatus DefinedTerm or Text The status of a creative work in terms of its stage in a lifecycle.
+  - Example terms include Incomplete, Draft, Published, Obsolete.
+  - Some organizations define a set of terms for the stages of their publication lifecycle.
+  - educationalLevel DefinedTerm or Text or URL The level in terms of progression through an educational or training context.
+- Binding-language context snippets:
+  - …ntent of a MediaObject or other CreativeWork . The interpreting party can be indicated using claimInterpreter . playerType Text Player type required—for example, Flash or Silverlight. productionCompany Organization The production company or studio responsible for the item, e.g. series, v…
+  - …lly from users. commentCount Integer The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere. conditionsOfAccess Text Conditions that affec…
+- DEI-language context snippets:
+  - …ssModes that are sufficient to understand all the intellectual content of a resource. Values should be drawn from the approved vocabulary . accessibilityAPI Text Indicates that the resource is compatible with the referenced accessibility API. Values should be drawn from the approved vocabular…
+  - …principles of an Organization (or individual, e.g. a Person writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a CreativeWork (e.g. NewsArticle ) the principles are those of the party primarily responsible for the creation o…
+
+### 739406157105afecd59d440e6e7a0278 (risk=2)
+- Classification: quantumresidential:asset-js
+- Domain: www.quantumresidential.com
+- Content-Type: application/javascript
+- Title guess: !function(){"use strict";var t={d:function(e,n){for(var r in n)t.o(n,r)&&!t.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:n[r]})},o:function(t,e){return Object.prototype.has
+- URL: https://www.quantumresidential.com/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=2d19baeb93e2a0395e435793e50c082b
+- Parsed text: research_results/documents/parsed/739406157105afecd59d440e6e7a0278.txt
+- Text length: 38823
+- Why it likely scored > 0:
+  - DEI terms: dei(2)
+  - Binding terms: must(3)
+- Summary:
+  - JavaScript asset (front-end code / dependency): https://www.quantumresidential.com/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=2d19baeb93e2a0395e435793e50c082b
+- Binding-language context snippets:
+  - …0}}(t,e)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function d(){for(var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:[],e=[],n=t.length;n-…
+- DEI-language context snippets:
+  - …pacityTo:v,m=e.types;return(void 0===m?(null===(a=t.dataset)||void 0===a?void 0:a.animationTypes)||"":m).split(" ").forEach((function(t){"fadeIn"===t&&(c.opacity=g||0,u.opacity=h||1),"fadeOut"===t&&(c.opacity=g||1,u.opacity=h||0),"translateY"===t&&(c.transform="translateY(".concat(s…
+
+### 2195e7212f1c4ad1e4ee1c0bb15a46b1 (risk=2)
+- Classification: infrastructure/reference
+- Domain: schema.org
+- Content-Type: text/html
+- Title guess: ImageObject - Schema.org Type Note : You are viewing the development version of Schema.org . See how we work for more details. Schema.org Docs Schemas Validate About ImageObject A 
+- URL: https://schema.org/ImageObject
+- Parsed text: research_results/documents/parsed/2195e7212f1c4ad1e4ee1c0bb15a46b1.txt
+- Text length: 37079
+- Why it likely scored > 0:
+  - DEI terms: accessibility(9); diversity(1)
+  - Binding terms: required(2); applicable to(2); standard(2); requirement(1); requirements(1)
+- Summary:
+  - creativeWorkStatus DefinedTerm or Text The status of a creative work in terms of its stage in a lifecycle.
+  - Example terms include Incomplete, Draft, Published, Obsolete.
+  - Some organizations define a set of terms for the stages of their publication lifecycle.
+  - educationalLevel DefinedTerm or Text or URL The level in terms of progression through an educational or training context.
+- Binding-language context snippets:
+  - …ntent of a MediaObject or other CreativeWork . The interpreting party can be indicated using claimInterpreter . playerType Text Player type required—for example, Flash or Silverlight. productionCompany Organization The production company or studio responsible for the item, e.g. series, v…
+  - …lly from users. commentCount Integer The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere. conditionsOfAccess Text Conditions that affec…
+- DEI-language context snippets:
+  - …ssModes that are sufficient to understand all the intellectual content of a resource. Values should be drawn from the approved vocabulary . accessibilityAPI Text Indicates that the resource is compatible with the referenced accessibility API. Values should be drawn from the approved vocabular…
+  - …principles of an Organization (or individual, e.g. a Person writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a CreativeWork (e.g. NewsArticle ) the principles are those of the party primarily responsible for the creation o…
+
+### ffb8613e7bb63a09a1349a4f4cd7e90b (risk=2)
+- Classification: document:local-pdf
+- Title guess: NOTE: This PDF is an excerpt from the Oregon Department of Administrative Services' 2021 DEI Action
+- URL: file://research_results/documents/raw/ffb8613e7bb63a09a1349a4f4cd7e90b.pdf
+- Parsed text: research_results/documents/parsed/ffb8613e7bb63a09a1349a4f4cd7e90b.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:32:04.875183)
+- Text length: 26474
+- Why it likely scored > 0:
+  - DEI terms: equity(17); inclusion(7); equitable(7); diversity(6); people of color(4); minority(3)
+  - Binding terms: policy(3); must(1); required(1); standard(1)
+- Summary:
+  - NOTE: This PDF is an excerpt from the Oregon Department of Administrative Services' 2021 DEI Action Plan which can be found in full here: https://www.oregon.gov/das/Docs/DEI_Action_Plan_2021.pdf Appendix II: Diversity, Equity, and Inclusion Glossary of Concept
+  - e Digital space, such as a website Discrimination: The unequal treatment Anti-Black Racism: Any attitude, behavior, of members of various groups based on practice, or policy that explicitly or implicitly race, ethnicity, gender, gender expression, reflects the
+  - Anti-Racism: Active process of identifying Diversity: Honoring and including people and challenging racism, by changing systems, of different backgrounds, identities, and organizational structures, policies and practices, experiences collectively and as indivi
+  - While a color-blind racial ideology factors that benefit some social groups and may seem to be a pathway to achieve equity, in disadvantages other social groups in ways that reality it ignores the manifestations of racist and create differential starting point
+- Binding-language context snippets:
+  - …equal treatment Anti-Black Racism: Any attitude, behavior, of members of various groups based on practice, or policy that explicitly or implicitly race, ethnicity, gender, gender expression, reflects the belief that Black people are infer…
+  - …injustice; (3) empowers all people to exercise achieve racial equity, we must transform our self-determination and realize their full potent…
+- DEI-language context snippets:
+  - …es' 2021 DEI Action Plan which can be found in full here: https://www.oregon.gov/das/Docs/DEI_Action_Plan_2021.pdf Appendix II: Diversity, Equity, and Inclusion Glossary of Concepts Accessibility: The extent to which a space is Cultural Humility: When one maintai…
+  - …Action Plan which can be found in full here: https://www.oregon.gov/das/Docs/DEI_Action_Plan_2021.pdf Appendix II: Diversity, Equity, and Inclusion Glossary of Concepts Accessibility: The extent to which a space is Cultural Humility: When one maintains an readily a…
+
+### 70cd1c5a92bcf53af2ccfbe1bb03108d (risk=2)
+- Classification: infrastructure/reference
+- Domain: en.wikipedia.org
+- Content-Type: text/html; charset=UTF-8
+- Title guess: RDFa - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Lea
+- URL: https://en.wikipedia.org/wiki/RDFa
+- Parsed text: research_results/documents/parsed/70cd1c5a92bcf53af2ccfbe1bb03108d.txt
+- Text length: 22250
+- Why it likely scored > 0:
+  - DEI terms: accessibility(3)
+  - Binding terms: standard(17); rule(11); policy(2); privacy(2); required(1); terms of use(1)
+- Summary:
+  - Although described as not representing an intended direction in terms of a formal markup language from the W3C, limited use of the XHTML+RDFa 1.0 DTD did subsequently appear on the public Web.
+  - Text is available under the Creative Commons Attribution-ShareAlike 4.0 License ; additional terms may apply.
+  - By using this site, you agree to the Terms of Use and Privacy Policy .
+  - Privacy policy About Wikipedia Disclaimers Contact Wikipedia Legal & safety contacts Code of Conduct Developers Statistics Cookie statement Mobile view Search Search Toggle the table of contents RDFa 9 languages Add topic
+- Binding-language context snippets:
+  - …DF statements in HTML documents RDF in Attributes Abbreviation RDFa Status Published Year started 2004 Editors Ben Adida, Mark Birbeck Base standards RDF Related standards RDF Schema , OWL Domain Semantic Web Website www .w3 .org /TR /rdfa-primer / RDFa or Resource Description Framework…
+  - …Draft of a document entitled RDFa in XHTML: Syntax and Processing . [ 11 ] This superseded and expanded upon the April draft; it contained rules for creating an RDFa parser, as well as guidelines for organizations wishing to make practical use of the technology. In October 2008 RDFa…
+- DEI-language context snippets:
+  - …nt. Self Containment – the HTML and the RDF are separated Schema Modularity – the attributes are reusable Additionally RDFa may benefit web accessibility as more information is available to assistive technology . [ 24 ] Usage [ edit ] There is a growing number of tools for better usage of RDF…
+
+### 4fada016a1e7290916d8640a92a5bb4b (risk=2)
+- Classification: third-party:content
+- Domain: paycom.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Terms of use | Paycom Skip to Main Content Client Employee Accountant Paycom® Logo Login careers investors contact Request meeting Our Solution Overview Payroll Suite Overview Beti
+- URL: https://www.paycom.com/terms-of-use/
+- Parsed text: research_results/documents/parsed/4fada016a1e7290916d8640a92a5bb4b.txt
+- Text length: 21400
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: privacy(9); must(7); standard(7); compliance(6); shall(4); policy(4)
+- Summary:
+  - By accessing and/or using the Site, you, and to the extent applicable, the entity on behalf of which you are using the Site (“you”, “your”, or “user(s)”), indicate your acceptance of these terms and conditions.
+  - We may update these terms and conditions from time to time, and your continued use of the Site after we post any changes constitutes your acceptance of such changes.
+  - These terms and conditions permit you to use the Site for your personal, non-commercial use only, unless otherwise permitted via a written agreement between you and Paycom.
+  - You may print or download one copy of a reasonable number of pages of the Site for your own personal, non-commercial use and not for further reproduction, publication, or distribution If we provide desktop, mobile, or other applications for download, you may d
+- Binding-language context snippets:
+  - …CURITY ASSOCIATED WITH THE TRANSMISSION OF INFORMATION THROUGH THE INTERNET, EVEN IF PAYCOM WAS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. PRIVACY – Protecting the privacy of our clients and Site users is important to Paycom. For more information on how we protect your privacy, please…
+  - …to use the Site for your personal, non-commercial use only, unless otherwise permitted via a written agreement between you and Paycom. You must not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit…
+- DEI-language context snippets:
+  - …ds Implementation Dedicated Service Security Automation Mobile App Terms of Use Privacy Policy Do Not Sell Or Share My Personal Information Accessibility Site Map © 2025 Paycom Payroll LLC. All rights reserved.…
+
+### adcf7235f7f3bbc0db58cf35869d2d55 (risk=2)
+- Classification: infrastructure/reference
+- Domain: www.drupal.org
+- Content-Type: text/html; charset=utf-8
+- Title guess: Values & Principles | Drupal.org Skip to main content Skip to search Can we use first and third party cookies and web beacons to understand our audience, and to tailor promotions y
+- URL: https://www.drupal.org/about/values-and-principles
+- Parsed text: research_results/documents/parsed/adcf7235f7f3bbc0db58cf35869d2d55.txt
+- Text length: 21062
+- Why it likely scored > 0:
+  - DEI terms: diversity(4); accessibility(4); equity(2); inclusion(2)
+  - Binding terms: agreement(3); privacy(2); policy(1); applicable to(1)
+- Summary:
+  - Making security, privacy, accessibility, multilingual capability, and usability top priorities is hard work, but it’s worth it.
+  - The first step in making a collaborative decision, particularly if there is disagreement, is to take time to understand every aspect of the problem you are aiming to solve.
+  - When decision-making is transparent, four important advantages emerge: (1) people who care about the decision can get involved, which makes the decision more thoughtful and increases the probability of the decision being right, (2) space is created for a diver
+  - Supporting diversity, equity, and inclusion is important not just because it is the right thing to do but because it is essential to the health and success of the project.
+- Binding-language context snippets:
+  - …ency to make decisions that go against the group's opinions. The first step in making a collaborative decision, particularly if there is disagreement, is to take time to understand every aspect of the problem you are aiming to solve. Find people with alternative points of view, and listen…
+  - …harm. Our community needs to ensure that everyone has access to Drupal and that everyone can use Drupal easily and safely. Making security, privacy, accessibility, multilingual capability, and usability top priorities is hard work, but it’s worth it. We want to build "good software." Be…
+- DEI-language context snippets:
+  - …et involved, which makes the decision more thoughtful and increases the probability of the decision being right, (2) space is created for a diversity of perspective, which increases the potential to hear from voices that can be overlooked, (3) people with varying levels of experience can…
+  - …alues & Principles About Overview Drupal 11 Drupal 7 (legacy) Industries Our history Social media directory Values & Principles Drupal Core Accessibility Licensing FAQ - General Media Kit Drupal blog In the news Drupal Code of Conduct Support Sustainability The Drupal Values and Principles de…
+
+### 9fd5bea8a1a6cb3ee89674f6d06a3d6c (risk=2)
+- Classification: third-party:content
+- Domain: dockets.justia.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: U.S. District Court and U.S. Court of Appeals Cases, Dockets and Filings | Justia Dockets & Filings Log In Sign Up Find a Lawyer Ask a Lawyer Research the Law Law Schools Laws & Re
+- URL: https://dockets.justia.com/
+- Parsed text: research_results/documents/parsed/9fd5bea8a1a6cb3ee89674f6d06a3d6c.txt
+- Text length: 20868
+- Why it likely scored > 0:
+  - DEI terms: diversity(4)
+  - Binding terms: contract(4); regulation(2); policy(1); standard(1); privacy(1)
+- Summary:
+  - Bankruptcy Appellate Panel for the First Circuit ---- Alaska Bankruptcy Court Alabama Bankruptcy Courts - All - Alabama Middle Bankruptcy Court - Alabama Northern Bankruptcy Court - Alabama Southern Bankruptcy Court Arkansas Bankruptcy Courts - All - Arkansas
+  - Veterans) - Recovery of Overpayment and Enforcement of Judgment - Recovery of Overpayment of Veteran's Benefits - Stockholders Suits Federal Tax Suits - IRS-Third Party - Taxes (US Plaintiff or Defendant) Forfeiture / Penalty - Agriculture - Airline Regulation
+  - Territories Guam Mariana Islands Puerto Rico Cases by Type of Lawsuit Contract Real Property Torts - Injury Torts - Property Civil Rights Prisoner Petitions Forfeiture / Penalty Labor Bankruptcy Intellectual Property Social Security Federal Tax Suits Other Sta
+  - § 1983 Civil Rights Act Court: Ninth Circuit › Arizona › U.S.
+- Binding-language context snippets:
+  - …Americans with Disabilities - Other - Civil Rights: Education - Employment - Housing/Accommodations - Other Civil Rights - Voting - Welfare Contract - Contract Product Liability - Franchise - Insurance - Marine - Medicare Act - Miller Act - Negotiable Instrument - Other Contract - Recove…
+  - …s - Stockholders Suits Federal Tax Suits - IRS-Third Party - Taxes (US Plaintiff or Defendant) Forfeiture / Penalty - Agriculture - Airline Regulations - Drug Related Seizure of Property - Liquor Laws - Occupational Safety/Health - Other - Other Food & Drug - RR & Truck Immigration - Habea…
+- DEI-language context snippets:
+  - …2025 as 3:2025cv11022 Plaintiff: Je.J. Defendant: Uber Technologies, Inc., Rasier, LLC and Rasier CA, LLC Cause Of Action: 28 U.S.C. § 1332 Diversity-Libel,Assault,Slander Court: Ninth Circuit › California › U.S. District Court for the Northern District of California Type: Torts - Injury…
+
+### 007b03ee41b89c9bfb655c2f066db43b (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Uncategorized Archives - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us You a
+- URL: https://www.quantumresidential.com/category/uncategorized/
+- Parsed text: research_results/documents/parsed/007b03ee41b89c9bfb655c2f066db43b.txt
+- Text length: 20044
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: must(4); agreement(3); regulation(3); required(2); requirement(2); requirements(2)
+- Summary:
+  - A good property manager should keenly understand the housing market demands, forecasted trends, and real estate laws that dictate housing market behavior in your area and have a direct impact on your property’s return on investment.
+  - Multi-family housing is technically considered commercial real estate.
+  - Commercial rental agreements can be done on a month-to-month basis or annually and are easily renewable.
+  - They must ensure residents are well aware of building rules and regulations, as well as the terms of their lease agreement.
+- Binding-language context snippets:
+  - …ther the applicant can manage difficult situations without affecting occupancy or budget. As a property manager, communication is key. They must ensure residents are well aware of building rules and regulations, as well as the terms of their lease agreement. They must be able to bala…
+  - …more complex and contain a greater number of variables and an assortment of termination clauses than residential leases. Commercial rental agreements can be done on a month-to-month basis or annually and are easily renewable. In contrast, commercial real estate properties have far fewer…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 7f0586533f4c87d7768eb727c2c3f188 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Crystal Temple, Author at Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us You 
+- URL: https://www.quantumresidential.com/author/quantum-residential/
+- Parsed text: research_results/documents/parsed/7f0586533f4c87d7768eb727c2c3f188.txt
+- Text length: 20044
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: must(4); agreement(3); regulation(3); required(2); requirement(2); requirements(2)
+- Summary:
+  - A good property manager should keenly understand the housing market demands, forecasted trends, and real estate laws that dictate housing market behavior in your area and have a direct impact on your property’s return on investment.
+  - Multi-family housing is technically considered commercial real estate.
+  - Commercial rental agreements can be done on a month-to-month basis or annually and are easily renewable.
+  - They must ensure residents are well aware of building rules and regulations, as well as the terms of their lease agreement.
+- Binding-language context snippets:
+  - …ther the applicant can manage difficult situations without affecting occupancy or budget. As a property manager, communication is key. They must ensure residents are well aware of building rules and regulations, as well as the terms of their lease agreement. They must be able to bala…
+  - …more complex and contain a greater number of variables and an assortment of termination clauses than residential leases. Commercial rental agreements can be done on a month-to-month basis or annually and are easily renewable. In contrast, commercial real estate properties have far fewer…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### c0a1fde5f3c0e6ae0a289cda132cc407 (risk=2)
+- Classification: document:local-pdf
+- Title guess: | SE The Inclusion
+- URL: file://research_results/documents/raw/c0a1fde5f3c0e6ae0a289cda132cc407.pdf
+- Parsed text: research_results/documents/parsed/c0a1fde5f3c0e6ae0a289cda132cc407.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:31:52.575146)
+- Text length: 19371
+- Why it likely scored > 0:
+  - DEI terms: inclusion(35); diversity(20); dei(3); equity(3)
+  - Binding terms: must(1)
+- Summary:
+  - | SE The Inclusion Initiative Tne City Quantum Summit A briefing on Diversity and Inclusion in the Quantum Sector 2S SONY Be (WM : [li
+  - ;
+  - Il ee, Fl = NSO Ws Mp iil SSW ANY J WS Ws gy i: i Ell WAS a WN VM boob IETT 1 A\\ WO By Cecily Josten, Grace Lordan and
+  - Improving diversity means a multi-year, multi- layered approach it requires systematic change and taking on a system that has worked very well for some, but excludes others.
+  - Denise Wilson Quantum computing Is opening up new opportunities for innovation, and more importantly for diversity and inclusion.
+  - whurley The City Quantum Summit Briefing Workplaces are changing rapidly, with an increasingly diverse workforce and a lack of talent to fill all the roles, which is why companies across all industries are tackling Diversity & Inclusion within their organisati
+- Binding-language context snippets:
+  - …up and culture of an organisation. on FTSE 350 boards and is now also focused on senior leadership positions. She argued D&I must be owned and held accountable at that organisations that make most progress the Board level. It needs to be talked about are rob…
+- DEI-language context snippets:
+  - …| SE The Inclusion Initiative Tne City Quantum Summit A briefing on Diversity and Inclusion in the Quantum Sector…
+  - …| SE The Inclusion Initiative Tne City Quantum Summit A briefing on Diversity and Inclusion in the Quantum Sector 2S SONY…
+
+### 17d6cf0baacf85a5dc3bdc2d4e886207 (risk=2)
+- Classification: third-party:content
+- Domain: www.charitynavigator.org
+- Content-Type: text/html; charset=utf-8
+- Title guess: Charity Navigator - Rating for Race Forward Sign in/Create an account Sign Out Nonprofit Resources Support Charity Navigator Discover Charities Best Charities Animal Rescue Chariti
+- URL: https://www.charitynavigator.org/ein/942759879
+- Parsed text: research_results/documents/parsed/17d6cf0baacf85a5dc3bdc2d4e886207.txt
+- Text length: 19229
+- Why it likely scored > 0:
+  - DEI terms: diversity(2); marginalized(1)
+  - Binding terms: policy(9); standard(2); privacy(1); terms of use(1)
+- Summary:
+  - Learn more Key Accountability Metrics Full Credit Partial Credit No Credit Majority Independent Board Members - 100% independent members 10 out of 10 points Industry professionals strongly recommend an independent governing body to allow for full deliberation
+  - Source: IRS Form 990 Independent Board Size - 14 independent members 10 out of 10 points Industry professionals strongly recommend an independent governing body to allow for full deliberation and diversity of thinking on governance and other organizational mat
+  - Source: IRS Form 990 Conflict of Interest Policy - Listed 5 out of 5 points Charity Navigator looks for the existence of a conflict of interest policy on the IRS Form 990 as an accountability and transparency measure.
+  - This policy protects the organization and by extension those it serves, when it is considering entering into a transaction that may benefit the private interest of an officer, director and/or key employee of the organization.
+- Binding-language context snippets:
+  - …onprofits act in the public trust and reporting publicly on activities is an important component. Source: IRS Form 990 Conflict of Interest Policy - Listed 5 out of 5 points Charity Navigator looks for the existence of a conflict of interest policy on the IRS Form 990 as an accountabil…
+  - …ice. Loans to/from Officers - None 5 out of 5 points Making loans to related parties, such as key officers, staff, or Board members, is not standard practice in the sector as it diverts the charity's funds away from its charitable mission and can lead to real and perceived conflict-of-in…
+- DEI-language context snippets:
+  - …dent members 10 out of 10 points Industry professionals strongly recommend an independent governing body to allow for full deliberation and diversity of thinking on governance and other organizational matters. We check to see that a majority of board members are identified as independent…
+  - …es your organization routinely carry out? We collect feedback from the people we serve at least annually We take steps to get feedback from marginalized or under-represented people We aim to collect feedback from as many people we serve as possible We take steps to ensure people feel comfort…
+
+### 592594abd4eb6a8bad89ce62855bb42e (risk=2)
+- Classification: document:local-pdf
+- Title guess: Oregon Housing and Community Services
+- URL: file://research_results/documents/raw/592594abd4eb6a8bad89ce62855bb42e.pdf
+- Parsed text: research_results/documents/parsed/592594abd4eb6a8bad89ce62855bb42e.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:29:38.824586)
+- Text length: 19177
+- Why it likely scored > 0:
+  - DEI terms: equity(12); minority(7); diversity(6); inclusion(6); racial justice(5); dei(3)
+  - Binding terms: contract(29); requirement(7); requirements(7); must(5); required(4); compliance(3)
+- Summary:
+  - Oregon Housing and Community Services Homeownership Division Equity in Contracting (EIC) Program Manual May 2025 - <s
+  - {[ —
+  - OREGON HOUSING & COMMUNITY SERVICES HOMEOWNERSHIP Updated 202505 Oregon Housing and Community Service Homeownership Division Equity i
+  - The Homeownership Development Division (HOD) at OHCS is charged with the implementation of state and federal funding programs and the distribution of financial resources to build affordable housing for homeownership in the state.
+  - With that charge, HOD plays an important role in the implementation of the agency’s commitments to equity and racial justice from the perspective of a funder and affordable housing compliance regulatory agency.
+  - The housing and construction industry employs, from design to home sale, a wide spectrum of trade and business sectors.
+- Binding-language context snippets:
+  - …Oregon Housing and Community Services Homeownership Division Equity in Contracting (EIC) Program Manual May 2025 - <s…
+  - …Equity and Inclusion (DEI) and Equity and Racial Justice (ERJ) goals of OHCS. This Manual addresses marketing and outreach requirements for OHCS- financed developments. OHCS EIC Engagement Summary All Partners applying…
+- DEI-language context snippets:
+  - …Oregon Housing and Community Services Homeownership Division Equity in Contracting (EIC) Program Manual May 2025 - <s…
+  - …sale, a wide spectrum of trade and business sectors. However, the participation of Minority Business Enterprises (MBE), Women- owned Business Enterprises (WBE), and Emerging Small Businesses (ESB) - co…
+
+### ee02c83be8b5d732d469696cbae371d2 (risk=2)
+- Classification: third-party:content
+- Domain: www.charitynavigator.org
+- Content-Type: text/html; charset=utf-8
+- Title guess: Charity Navigator - Rating for Opportunity Agenda Inc. Sign in/Create an account Sign Out Nonprofit Resources Support Charity Navigator Discover Charities Best Charities Animal Res
+- URL: https://www.charitynavigator.org/ein/843935514
+- Parsed text: research_results/documents/parsed/ee02c83be8b5d732d469696cbae371d2.txt
+- Text length: 19110
+- Why it likely scored > 0:
+  - DEI terms: diversity(2); marginalized(1)
+  - Binding terms: policy(9); standard(2); privacy(1); terms of use(1)
+- Summary:
+  - Learn more Key Accountability Metrics Full Credit Partial Credit No Credit Majority Independent Board Members - 100% independent members 10 out of 10 points Industry professionals strongly recommend an independent governing body to allow for full deliberation
+  - Source: IRS Form 990 Independent Board Size - 9 independent members 10 out of 10 points Industry professionals strongly recommend an independent governing body to allow for full deliberation and diversity of thinking on governance and other organizational matt
+  - Source: IRS Form 990 Conflict of Interest Policy - Listed 5 out of 5 points Charity Navigator looks for the existence of a conflict of interest policy on the IRS Form 990 as an accountability and transparency measure.
+  - This policy protects the organization and by extension those it serves, when it is considering entering into a transaction that may benefit the private interest of an officer, director and/or key employee of the organization.
+- Binding-language context snippets:
+  - …onprofits act in the public trust and reporting publicly on activities is an important component. Source: IRS Form 990 Conflict of Interest Policy - Listed 5 out of 5 points Charity Navigator looks for the existence of a conflict of interest policy on the IRS Form 990 as an accountabil…
+  - …ice. Loans to/from Officers - None 5 out of 5 points Making loans to related parties, such as key officers, staff, or Board members, is not standard practice in the sector as it diverts the charity's funds away from its charitable mission and can lead to real and perceived conflict-of-in…
+- DEI-language context snippets:
+  - …dent members 10 out of 10 points Industry professionals strongly recommend an independent governing body to allow for full deliberation and diversity of thinking on governance and other organizational matters. We check to see that a majority of board members are identified as independent…
+  - …5 out of 25 points Which of the following feedback practices does your organization routinely carry out? We take steps to get feedback from marginalized or under-represented people We aim to collect feedback from as many people we serve as possible We take steps to ensure people feel comfort…
+
+### 07191d2e982a998b5c108d04213e94bb (risk=2)
+- Classification: government:site
+- Domain: www.hud.gov
+- Content-Type: text/html; charset=UTF-8
+- Title guess: News | HUD.gov / U.S. Department of Housing and Urban Development (HUD) Skip to main content An official website of the United States Government Here’s how you know Official websit
+- URL: https://www.hud.gov/news
+- Parsed text: research_results/documents/parsed/07191d2e982a998b5c108d04213e94bb.txt
+- Text length: 18226
+- Why it likely scored > 0:
+  - DEI terms: dei(3); accessibility(1)
+  - Binding terms: rule(3); privacy(2); must(1); contract(1); agreement(1); regulation(1)
+- Summary:
+  - Helping Americans Help with Homeownership Find Affordable Places to Live Find a HUD-certified counselor Housing Choice Voucher Experiencing Homelessness Report an Issue Current HUD Residents Experiencing a Natural Disaster Find State Resources HUD Partners FHA
+  - Department of Housing and Urban Development Helping Americans HUD Partners Data & Research News About Contact News On This Page Press Releases Join the HUD News Mailing List Media Interview Requests Press Releases December Tuesday, December 30, 2025 HUD Financ
+  - Steel and Faith-Based Shelter Friday, July 25, 2025 ICYMI: Secretary Turner Takes Action to Hold the Atlantic City Housing Authority Accountable After Years of Mismanagement Friday, July 25, 2025 HUD Secretary Scott Turner Applauds President Trump’s Action on
+  - Banks as New England Regional Administrator Wednesday, July 23, 2025 HUD Announces Joseph J.
+- Binding-language context snippets:
+  - …icans Impacted by Recent Hurricanes and Severe Storms Wednesday, February 26, 2025 Secretary Scott Turner Cuts Red Tape by Terminating AFFH Rule Monday, February 24, 2025 ICYMI
+  - Secretary Scott Turner on Fox & Friends - “DEI is dead at HUD.” Thursday, February 20, 2025 ICYMI
+  - HUD a…
+  - …ck to Top ↑ Connect with HUD Join the HUD News Mailing List Sign up for the HUD News mailing list by leaving your email address (review our privacy statement). You'll receive an email message shortly, asking you to confirm your registration. Once you confirm, you'll receive periodic ema…
+- DEI-language context snippets:
+  - …025 ICYMI
+  - Secretary Scott Turner Visits North Carolinians Impacted by Hurricane Helene Tuesday, March 11, 2025 Secretary Turner Denounces DEI Criteria in Asheville’s Draft Disaster Plan Monday, March 10, 2025 HUD’s Innovative Housing Showcase “The American Home is the American Dre…
+  - …treet, S.W., Washington, DC 20410 T: (202) 402-3815 Find a HUD office near you Office of Inspector General
+  - No Fear Act
+  - FOIA
+  - Privacy
+  - Accessibility
+  - Web Policies
+  - Sitemap Website Feedback…
+
+### e1ab2e335f7e813fd3cfbd5c10ab62b6 (risk=2)
+- Classification: third-party:content
+- Domain: belonging.berkeley.edu
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Home | Othering & Belonging Institute Skip to main content Sign up for our new, free courses on Targeted Universalism at OBI University. Start Now Othering & Belonging Institute Ab
+- URL: https://belonging.berkeley.edu/
+- Parsed text: research_results/documents/parsed/e1ab2e335f7e813fd3cfbd5c10ab62b6.txt
+- Text length: 17516
+- Why it likely scored > 0:
+  - DEI terms: diversity(8); equity(5); equitable(1); accessibility(1)
+  - Binding terms: policy(14)
+- Summary:
+  - The Problem of Othering OBI University Impact Stories Annual Reports Work With Us Contact Us Media Merch Store FEATURE The Vision of the Othering & Belonging Institute The Othering & Belonging Institute at UC Berkeley brings together researchers, organizers, s
+  - The Problem of Othering OBI University Impact Stories Annual Reports Work With Us Contact Us Media Merch Store Areas of Work Authoritarianism & Democracy Arts & Cultural Strategy Bridging Climate Justice Disability Economic Inequality Food Systems Health Housi
+  - Community Power and Policy Partnerships Equity Metrics Global Justice Network for Transformative Change O&B Conference Democracy & Belonging Forum Summer Fellowship Places of Belonging Communications Faculty Cluster Initiative Disability Studies Diversity & De
+  - Program Community Power and Policy Partnerships Equity Metrics Global Justice Network for Transformative Change O&B Conference Democracy & Belonging Forum Summer Fellowship Places of Belonging Communications Faculty Clusters Disability Studies Diversity & Demo
+- Binding-language context snippets:
+  - …nging Institute The Othering & Belonging Institute at UC Berkeley brings together researchers, organizers, stakeholders, communicators, and policymakers to identify and eliminate the barriers to an inclusive, just, and sustainable society in order to create transformative change. Our S…
+- DEI-language context snippets:
+  - …B Conference Democracy & Belonging Forum Summer Fellowship Places of Belonging Communications Faculty Cluster Initiative Disability Studies Diversity & Democracy Diversity & Health Disparities Economic Disparities LGBTQ Citizenship Race, Diversity, and Educational Policy Religious Diversi…
+  - …ia Just Public Finance LGBTQ Narrative Strategy Policing Race Targeted Universalism Explore More... Community Power and Policy Partnerships Equity Metrics Global Justice Network for Transformative Change O&B Conference Democracy & Belonging Forum Summer Fellowship Places of Belonging C…
+
+### 244dee6f75bb503ebdcf3d3df5729d4a (risk=2)
+- Classification: infrastructure/reference
+- Domain: en.wikipedia.org
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Dublin Core - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute H
+- URL: https://en.wikipedia.org/wiki/Dublin_Core
+- Parsed text: research_results/documents/parsed/244dee6f75bb503ebdcf3d3df5729d4a.txt
+- Text length: 17140
+- Why it likely scored > 0:
+  - DEI terms: diversity(1)
+  - Binding terms: standard(20); policy(7); rule(5); required(3); privacy(2); terms of use(1)
+- Summary:
+  - Dublin Core - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Sear
+  - Initially developed as fifteen terms in 1998 the set of elements has grown over time and in 2008 was redefined as a Resource Description Framework (RDF) vocabulary.
+  - [ 4 ] 2008 - Publication of Dublin Core Metadata Initiative Terms in RDF .
+  - [ 11 ] In 2012, the DCMI Metadata Terms was created using a RDF data model.
+- Binding-language context snippets:
+  - …s 2 Evolution of vocabulary Toggle Evolution of vocabulary subsection 2.1 Core elements 2.2 Qualified Dublin Core 2.3 DCMI Metadata Terms 3 Standardization Toggle Standardization subsection 3.1 Maintenance 4 Syntax 5 Applications 6 See also 7 References 8 External links Toggle the table…
+  - …e namespace http://purl.org/dc/terms , and all are defined as RDF properties. abstract accessRights accrualMethod accrualPeriodicity accrualPolicy alternative audience available bibliographicCitation conformsTo contributor coverage created creator date dateAccepted dateCopyrighted date…
+- DEI-language context snippets:
+  - …gy (information science) Open Archives Initiative (OAI) Controlled vocabulary Interoperability Darwin Core , a Dublin Core extension for biodiversity informatics References [ edit ] ^ "Dublin Core" . Dublin Core Metadata Initiative . 22 December 2011. ^ "DCMI: The OCLC/NCSA Metadata Works…
+
+### 3624845de3c2316d6c0dbf0f2893e487 (risk=2)
+- Classification: infrastructure/reference
+- Domain: www.drupal.org
+- Content-Type: text/html; charset=utf-8
+- Title guess: Drupal Certified Partners | Drupal.org Skip to main content Skip to search Can we use first and third party cookies and web beacons to understand our audience, and to tailor promot
+- URL: https://www.drupal.org/drupal-services
+- Parsed text: research_results/documents/parsed/3624845de3c2316d6c0dbf0f2893e487.txt
+- Text length: 15904
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: shall(1); policy(1); contract(1); standard(1); privacy(1)
+- Summary:
+  - 3,762 weighted credits last 12 months across all categories Pages 1 2 3 4 5 next › last » While the Drupal Association assists clients to evaluate Drupal Certified Partners via Drupal.org and other means, the selection of a Drupal Certified Partner and any sub
+  - All organizations on Drupal.org News items News Planet Drupal Social media Sign up for Drupal news Security advisories Jobs Our community Community Services , Training & Hosting Contributor guide Groups & meetups DrupalCon Code of conduct Documentation Documen
+- Binding-language context snippets:
+  - …on Lesotho Liberia Libya Liechtenstein Lithuania Luxembourg Macao S.A.R., China Macedonia Madagascar Malawi Malaysia Maldives Mali Malta Marshall Islands Martinique Mauritania Mauritius Mayotte Mexico Micronesia Moldova Monaco Mongolia Montenegro Montserrat Morocco Mozambique Myanmar…
+  - …e Modules Themes Distributions Governance of community About Web accessibility Drupal Association About Drupal.org Terms of service Privacy policy Drupal is a registered trademark of Dries Buytaert .…
+- DEI-language context snippets:
+  - …Developer docs API.Drupal.org Drupal code base Download & Extend Drupal core Modules Themes Distributions Governance of community About Web accessibility Drupal Association About Drupal.org Terms of service Privacy policy Drupal is a registered trademark of Dries Buytaert .…
+
+### f220833a1ebb227c820ffdcc641e2779 (risk=2)
+- Classification: third-party:content
+- Domain: belonging.berkeley.edu
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Targeted Universalism | Othering & Belonging Institute Skip to main content Sign up for our new, free courses on Targeted Universalism at OBI University. Start Now Othering & Belon
+- URL: https://belonging.berkeley.edu/targeted-universalism
+- Parsed text: research_results/documents/parsed/f220833a1ebb227c820ffdcc641e2779.txt
+- Text length: 13772
+- Why it likely scored > 0:
+  - DEI terms: equity(12); diversity(10); inclusion(1); equitable(1); marginalized(1); accessibility(1)
+  - Binding terms: policy(20); must(1)
+- Summary:
+  - The Problem of Othering OBI University Impact Stories Annual Reports Work With Us Contact Us Media Merch Store FEATURE The Vision of the Othering & Belonging Institute The Othering & Belonging Institute at UC Berkeley brings together researchers, organizers, s
+  - The Problem of Othering OBI University Impact Stories Annual Reports Work With Us Contact Us Media Merch Store Areas of Work Authoritarianism & Democracy Arts & Cultural Strategy Bridging Climate Justice Disability Economic Inequality Food Systems Health Housi
+  - Community Power and Policy Partnerships Equity Metrics Global Justice Network for Transformative Change O&B Conference Democracy & Belonging Forum Summer Fellowship Places of Belonging Communications Faculty Cluster Initiative Disability Studies Diversity & De
+  - Program Community Power and Policy Partnerships Equity Metrics Global Justice Network for Transformative Change O&B Conference Democracy & Belonging Forum Summer Fellowship Places of Belonging Communications Faculty Clusters Disability Studies Diversity & Demo
+- Binding-language context snippets:
+  - …nging Institute The Othering & Belonging Institute at UC Berkeley brings together researchers, organizers, stakeholders, communicators, and policymakers to identify and eliminate the barriers to an inclusive, just, and sustainable society in order to create transformative change. Our S…
+  - …s on policy and program design... Publication July 11, 2022 Cash for Californians Introduction To meaningfully advance economic justice, we must enhance existing government systems and create new supports targeted to residents most impacted by inequality. In 2019, more than one in th…
+- DEI-language context snippets:
+  - …ia Just Public Finance LGBTQ Narrative Strategy Policing Race Targeted Universalism Explore More... Community Power and Policy Partnerships Equity Metrics Global Justice Network for Transformative Change O&B Conference Democracy & Belonging Forum Summer Fellowship Places of Belonging C…
+  - …B Conference Democracy & Belonging Forum Summer Fellowship Places of Belonging Communications Faculty Cluster Initiative Disability Studies Diversity & Democracy Diversity & Health Disparities Economic Disparities LGBTQ Citizenship Race, Diversity, and Educational Policy Religious Diversi…
+
+### ac8b3b54df4124a34387d7e8da8f3838 (risk=2)
+- Classification: infrastructure/reference
+- Domain: en.wikipedia.org
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Wikipedia, the free encyclopedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Con
+- URL: https://en.wikipedia.org/wiki/Main_Page
+- Parsed text: research_results/documents/parsed/ac8b3b54df4124a34387d7e8da8f3838.txt
+- Text length: 12337
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+  - Binding terms: policy(2); privacy(2); standard(1); terms of use(1)
+- Summary:
+  - Text is available under the Creative Commons Attribution-ShareAlike 4.0 License ; additional terms may apply.
+  - By using this site, you agree to the Terms of Use and Privacy Policy .
+  - Privacy policy About Wikipedia Disclaimers Contact Wikipedia Legal & safety contacts Code of Conduct Developers Statistics Cookie statement Mobile view Search Search Main Page 343 languages Add topic
+- Binding-language context snippets:
+  - …tive Commons Attribution-ShareAlike 4.0 License ; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy . Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc. , a non-profit organization. Privacy policy About Wikipedia Discla…
+  - …the Creative Commons Attribution-ShareAlike 4.0 License ; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy . Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc. , a non-profit organization. Privacy policy About Wikipedia…
+- DEI-language context snippets:
+  - …à Чӑвашла Cebuano Čeština Chamoru Chavacano de Zamboanga Chi-Chewa ChiShona ChiTumbuka Corsu Cymraeg Dagbanli Dansk الدارجة Davvisámegiella Deitsch Deutsch ދިވެހިބަސް Diné bizaad Dolnoserbski डोटेली ཇོང་ཁ Eesti Ελληνικά Emiliàn e rumagnòl Эрзянь Español Esperanto Estremeñu Euskara E…
+
+### 8444b9d83856f5d89ff54709a5e8a7f1 (risk=2)
+- Classification: third-party:content
+- Domain: relatednorthwest.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Related Northwest | Related California Skip to main Related California Related Northwest Luxury Rentals Related Corporate Related Beal Related Midwest Related Argent Related Ross R
+- URL: https://www.relatedcalifornia.com/our-company/related-northwest
+- Parsed text: research_results/documents/parsed/8444b9d83856f5d89ff54709a5e8a7f1.txt
+- Text length: 11668
+- Why it likely scored > 0:
+  - DEI terms: equitable(1)
+  - Binding terms: privacy(4); policy(3); terms of use(1)
+- Summary:
+  - Related Northwest
+  - Related California Skip to main Related California Related Northwest Luxury Rentals Related Corporate Related Beal Related Midwest Related Argent Related Ross Related California Related Northwest Luxury Rentals Related Corporate Related Bea
+  - VIEW BIO Our Portfolio Beacon at Glisan Landing Portland Located in the Montavilla neighborhood of Portland, on a site originally purchased by Metro, Glisan Landing is 137 units of affordable family and permanent supportive housing across two buildings.
+  - A public-private partnership with Related Northwest, Immigrant and Refugee Community Organization (IRCO), Metro and Catholic Charities of Oregon, Glisan Landing provides affordable and supportive housing for low-income households with a range of incomes from 3
+  - View This Property Aldea at Glisan Landing Portland Located in the Montavilla neighborhood of Portland, on a 1.65-acre site originally purchased by Metro, Glisan Landing is 137 units of affordable family and permanent supportive housing across two buildings.
+- Binding-language context snippets:
+  - …etion of 144 units of affordable housing in SW Portland Portland Tribune June 30, 2023 Read More Press News Careers Contact Us Terms Of Use Privacy Policy Do Not Sell Privacy Settings Ⓒ 2025 Related Close Contact Us First and last name First Name* Last Name* Contact Us Container Company…
+  - …144 units of affordable housing in SW Portland Portland Tribune June 30, 2023 Read More Press News Careers Contact Us Terms Of Use Privacy Policy Do Not Sell Privacy Settings Ⓒ 2025 Related Close Contact Us First and last name First Name* Last Name* Contact Us Container Company Email…
+- DEI-language context snippets:
+  - …and neighborhood of St. Johns, Cathedral Village Apartments is a 4-story affordable, permanent supportive housing development that provides equitable access to families experiencing houselessness or at risk of houselessness. View This Property Crescent Court Apartments Portland Located on…
+
+### 07815e32e695fa0202bb1b593746c401 (risk=2)
+- Classification: third-party:content
+- Domain: www.osba.org
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Welcome | Oregon School Boards Association The Oregon School Boards Association empowers all public-school boards with the knowledge, skills, tools, and resources to govern, lead, 
+- URL: https://www.osba.org/
+- Parsed text: research_results/documents/parsed/07815e32e695fa0202bb1b593746c401.txt
+- Text length: 10560
+- Why it likely scored > 0:
+  - DEI terms: equity(3)
+  - Proxy terms: community engagement(1)
+  - Binding terms: policy(4); required(1)
+- Summary:
+  - Search for: My OSBA / Login 1-800-578-OSBA Search for: My OSBA / Login My OSBA / Login 1-800-578-OSBA Search for: My OSBA / Login About About OSBA Our Team Board of Directors Council of School Attorneys (COSA) Legal Assistance Trust (LAT) Legislative Policy Co
+  - Learn More Student Achievement It’s why we do what we do, and we share resources and support to help every student succeed Learn More Leadership Development Become a more effective board member by attending OSBA trainings and events Learn More Policy Services
+  - See More See Less Photo View on Facebook · Share Share on Facebook Share on Twitter Share on Linked In Share by Email X OSBA Follow Oregon School Boards Association: dedicated to improving student success and education equity through advocacy, leadership and s
+- Binding-language context snippets:
+  - …r: My OSBA / Login About About OSBA Our Team Board of Directors Council of School Attorneys (COSA) Legal Assistance Trust (LAT) Legislative Policy Committee Oregon School Board Members of Color Caucus Oregon Rural School Board Members Caucus Oregon LGBTQIA2S+ School Board Members Advis…
+  - …-588-2800 About Articles Careers Contact Us Departments News Center Public Meetings Training & Events Sign up for OREdNews! " * " indicates required fields Email This field is for validation purposes and should be left unchanged. Name * First Last Email * CAPTCHA © Oregon School Boards A…
+- DEI-language context snippets:
+  - …hip Benefits Articles Ask OSBA Board Operations Bonds and Local Option Elections Budget and Finance Business and Labor Community Engagement Equity365 Immigration Legislative and Advocacy Policy Public Meetings and Records Student Safety & Achievement Student Success Act Careers Contact…
+
+### d99adba5f859153dc055e701f3b00cc8 (risk=2)
+- Classification: infrastructure/reference
+- Domain: tinyurl.com
+- Content-Type: text/html; charset=utf-8
+- Title guess: Default Board Post Page - Douglas Education Service District Skip To Main Content Close Menu Search Clear Search About Douglas ESD Board of Directors Contact Us Staff Directory Dis
+- URL: https://www.douglasesd.k12.or.us/about-douglas-esd/news/default-board-post-page/~board/news/post/american-education-week
+- Parsed text: research_results/documents/parsed/d99adba5f859153dc055e701f3b00cc8.txt
+- Text length: 10069
+- Why it likely scored > 0:
+  - DEI terms: equity(1); equitable(1); accessibility(1)
+  - Binding terms: mandatory(2); policy(1); rule(1); standard(1); privacy(1)
+- Summary:
+  - Orange Frog Substitutes Wellness Current Activities Employee Assistance Program Mental Health Physical Health Wellness Resources Volunteers Inter-District Transfers Nursing Print Services School Safety Speech Services Special Education Partner Sports Camp Regi
+  - Between honor choir, volleyball, basketball, track, student council and Travel Club, Jaiden said, “It never ends.” This spring, Travel Club is planning a trip to San Antonio, Texas, with past educational travel including Washington, D.C.
+  - Suite 110 Roseburg OR 97470 541-440-4777 Facebook (opens in new window/tab) YouTube (opens in new window/tab) LinkedIn (opens in new window/tab) About Locations Staff Directory Equity Vision Statement Nondiscrimination Public Complaint Process (opens in new wi
+  - Privacy Policy Site Map Accessibility Powered by Finalsite
+- Binding-language context snippets:
+  - …Calendar Public Reports School Districts Substitutes Staff Resources Employee Assistance Program Frontline Login (opens in new window/tab) Mandatory Reporter Office 365 Login (opens in new window/tab) Orange Frog Sharepoint (opens in new window/tab) Wellness Employment (opens in new wind…
+  - …Feedback Staff Login Provides collaborative, high-quality, equitable and locally responsive educational services to the community. Privacy Policy Site Map Accessibility Powered by Finalsite…
+- DEI-language context snippets:
+  - …777 Facebook (opens in new window/tab) YouTube (opens in new window/tab) LinkedIn (opens in new window/tab) About Locations Staff Directory Equity Vision Statement Nondiscrimination Public Complaint Process (opens in new window/tab) Website Feedback Staff Login Provides collaborative,…
+  - …ent Nondiscrimination Public Complaint Process (opens in new window/tab) Website Feedback Staff Login Provides collaborative, high-quality, equitable and locally responsive educational services to the community. Privacy Policy Site Map Accessibility Powered by Finalsite…
+
+### 1bb15fecc239f35d9ee2fc03e86de86b (risk=2)
+- Classification: third-party:content
+- Domain: www.racialequityalliance.org
+- Content-Type: text/html; charset=utf-8
+- Title guess: Seasons of Change: Reflections from Ithaca and the 2025 GARE Local Meeting Skip main navigation (Press Enter). Log in Toggle navigation Who We Are About Us Our Approach Our Impact 
+- URL: https://www.racialequityalliance.org/blogs/gare-team/2025/12/09/ithaca-local-meeting
+- Parsed text: research_results/documents/parsed/1bb15fecc239f35d9ee2fc03e86de86b.txt
+- Text length: 9213
+- Why it likely scored > 0:
+  - DEI terms: equity(13); diversity(2); equitable(1)
+  - Binding terms: policy(1); statewide(1); privacy(1); terms of use(1)
+- Summary:
+  - In “Forging Right Relationships with Indigenous Nations”, Michèle Hamel, Program Director for the First Nations Health and Wellness Program at NYS Department of Health, reminded us that equity work requires humility, listening, and respect for the sovereignty
+  - In the panel “Leading with Community: How Local Government Can Learn from and Lean into Community-Based Strategies”, moderator Charlene Holmes, Chief Equity and Diversity Officer (former), Tompkins County, NY asserted, "We are going to have a real conversation
+  - We are going to be talking about individuals and communities working to shift how we do this work from transactional to transformational long before government was helping to challenge injustice.” The session “Advancing Racial Equity, No Matter How: Strategies
+  - Moderated by Cathy Albisa, Co-Executive Director for Field-Building and Organizational Strategy at Branch 4, the conversation featured Linda Tigani, Executive Director of the NYC Commission on Racial Equity, and New York Assemblymember Anna Kelles.
+- Binding-language context snippets:
+  - …ck Links GARE Learning Center Membership Contact Us Online Community Log In © COPYRIGHT YEAR PLACEHOLDER GARE. All rights reserved. Privacy Policy Terms of Use Copyright 2024. All rights reserved. Powered by Higher Logic…
+  - …of Place: Boulder Local Meeting Recap GARE Team Added 06-17-2025 Blog Entry California Racial Equity Practitioners Strengthen Ties at GARE Statewide Convening Nadia Mohamed Added 06-20-2023 Blog Entry Permalink https://www.racialequityalliance.org/blogs/gare-team/2025/12/09/ithaca-local-…
+- DEI-language context snippets:
+  - …s Nations”, Michèle Hamel, Program Director for the First Nations Health and Wellness Program at NYS Department of Health, reminded us that equity work requires humility, listening, and respect for the sovereignty and expertise of Indigenous communities. In the panel “Leading with Comm…
+  - …with Community: How Local Government Can Learn from and Lean into Community-Based Strategies”, moderator Charlene Holmes, Chief Equity and Diversity Officer (former), Tompkins County, NY asserted, "We are going to have a real conversation where feathers are going to be ruffled because it…
+
+### 03f0b1ced9a67059ca7c1c803601a4f1 (risk=2)
+- Classification: government:site
+- Domain: www.hudexchange.info
+- Content-Type: text/html;charset=UTF-8
+- Title guess: About - HUD Exchange Skip to main content NEED HOUSING ASSISTANCE? Email Updates Log In HUD Exchange Search Toggle navigation Search Form title Search Log In Programs Programs & Re
+- URL: https://www.hudexchange.info/about/
+- Parsed text: research_results/documents/parsed/03f0b1ced9a67059ca7c1c803601a4f1.txt
+- Text length: 8895
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(10); regulation(2); privacy(1)
+- Summary:
+  - Email Updates Log In HUD Exchange Search Toggle navigation Search Form title Search Log In Programs Programs & Related Topics CDBG Program Continuum of Care Program Community Project Funding Emergency Solutions Grants Program Environmental Review Fair Housing
+  - View All Trainings Program Support Ask a Question Ask a basic policy or reporting system question.
+  - Request In-Depth Assistance Request in-depth assistance with implementing a HUD-funded program.
+  - Contact Information Find point of contact information for HUD's grantees.
+- Binding-language context snippets:
+  - …IDIS Log In Sage Log In View All Programs & Related Topics Resources Resource Library Explore featured publications and browse regulations, policy guidance, toolkits, and other resources. FAQ Collections Find answers to frequently asked questions. Trainings Upcoming Training Register f…
+  - …ystem Log In IDIS Log In Sage Log In View All Programs & Related Topics Resources Resource Library Explore featured publications and browse regulations, policy guidance, toolkits, and other resources. FAQ Collections Find answers to frequently asked questions. Trainings Upcoming Training R…
+- DEI-language context snippets:
+  - …HUD or by any HUD program. HUD EXCHANGE Program delivery support for HUD's local partners Connect with Us HUD.gov No Fear Act FOIA Privacy Accessibility Web Policies Contact Us © 2025 U.S. Department of Housing and Urban Development. All Rights Reserved. Website Disclaimer Note: This materia…
+
+### 7c609bec3dc012696d3ba11191567f46 (risk=2)
+- Classification: third-party:content
+- Domain: paycom.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Paycom Privacy Policies Skip to Main Content Client Employee Accountant Paycom® Logo Login careers investors contact Request meeting Our Solution Overview Payroll Suite Overview Be
+- URL: https://www.paycom.com/privacy/
+- Parsed text: research_results/documents/parsed/7c609bec3dc012696d3ba11191567f46.txt
+- Text length: 8531
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: compliance(5); standard(5); privacy(2); policy(1); terms of use(1)
+- Summary:
+  - Subscribe Payroll Payroll Software Beti ® Vault Everyday ® Paycom Pay ® GL Concierge Garnishment Administration Expense Management Software Payroll Tax Management Client Action Center Talent Acquisition Talent Acquisition Software Applicant Tracking Software O
+- Binding-language context snippets:
+  - …cuments and Checklists Global HCM ™ Benefits Administration Enhanced ACA Ask Here MyCom Report Center Personnel Action Forms Government and Compliance Clue ® COBRA Administration Paycom Surveys 401(k) Reporting Time and Labor Management Suite Overview Time and Attendance Time-Off Requests…
+  - …gers IT Decision Makers By Industry Education Health Care Hospitality Manufacturing Nonprofits Retail Transportation Why Paycom Overview AI Standards Implementation Dedicated Service Security Automation Mobile App About Us Overview Careers Overview Job Categories Overview Sales Technolog…
+- DEI-language context snippets:
+  - …ds Implementation Dedicated Service Security Automation Mobile App Terms of Use Privacy Policy Do Not Sell Or Share My Personal Information Accessibility Site Map © 2025 Paycom Payroll LLC. All rights reserved.…
+
+### 008ec4453ff31513f43893cba7aa31c8 (risk=2)
+- Classification: infrastructure/reference
+- Domain: github.com
+- Content-Type: text/html; charset=utf-8
+- Title guess: GitHub · Change is constant. GitHub keeps you ahead. · GitHub Skip to content Navigation Menu Toggle navigation Sign in Platform AI CODE CREATION GitHub Copilot Write better code w
+- URL: https://github.com/
+- Parsed text: research_results/documents/parsed/008ec4453ff31513f43893cba7aa31c8.txt
+- Text length: 8254
+- Why it likely scored > 0:
+  - DEI terms: inclusion(1)
+  - Binding terms: required(1); standard(1); privacy(1)
+- Summary:
+  - Subscribe Platform Features Enterprise Copilot AI Security Pricing Team Resources Roadmap Compare GitHub Ecosystem Developer API Partners Education GitHub CLI GitHub Desktop GitHub Mobile GitHub Marketplace MCP Registry Support Docs Community Forum Professiona
+  - Terms Privacy (Updated 02/2024) 02/2024 Sitemap What is Git?
+- Binding-language context snippets:
+  - …, then sends the prompt 'Update the website to allow searching for running races by name.' Copilot analyzes the codebase, then explains the required edits for three files before generating them. Copilot then confirms completion and summarizes the implemented changes for the new functiona…
+  - …size By use case By industry Technology Figma streamlines development and strengthens security Read customer story Automotive Mercedes-Benz standardizes source code and automates onboarding Read customer story Financial services Mercado Libre cuts coding time by 50% Read customer story E…
+- DEI-language context snippets:
+  - …al Services Premium Support Skills Status Contact GitHub Company About Why GitHub Customer stories Blog The ReadME Project Careers Newsroom Inclusion Social Impact Shop © 2025 GitHub, Inc. Terms Privacy (Updated 02/2024) 02/2024 Sitemap What is Git? Manage cookies Do not share my personal…
+
+### 11f8c5e1123008295d7e64cc85216997 (risk=2)
+- Classification: infrastructure/reference
+- Domain: www.drupal.org
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Drupal.org | The Open Source CMS for Digital Innovation Skip to main content Can we use first and third party cookies and web beacons to understand our audience, and to tailor prom
+- URL: https://new.drupal.org/home
+- Parsed text: research_results/documents/parsed/11f8c5e1123008295d7e64cc85216997.txt
+- Text length: 8229
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: standard(3); privacy(2); required(1); policy(1)
+- Summary:
+  - It adheres to industry standard privacy and security standards and checks all the boxes for your IT team.
+  - Try Drupal core Download Drupal core Open Source means no vendor lock-in 100+ Drupal Certified Partners provide global support 10k+ experienced Drupal professionals 400k+ websites using Drupal today Drupal.org About Drupal Code of Conduct News Planet Drupal Pr
+- Binding-language context snippets:
+  - …lobal network of contributors. Image Enterprise-grade tooling The most accessible, secure open source DXP available. It adheres to industry standard privacy and security standards and checks all the boxes for your IT team. "Drupal's flexibility and extensibility allow us to tailor the co…
+  - …work of contributors. Image Enterprise-grade tooling The most accessible, secure open source DXP available. It adheres to industry standard privacy and security standards and checks all the boxes for your IT team. "Drupal's flexibility and extensibility allow us to tailor the content ma…
+- DEI-language context snippets:
+  - …es using Drupal today Drupal.org About Drupal Code of Conduct News Planet Drupal Privacy Policy Signup for Drupal News Terms of Service Web Accessibility facebook instagram linkedin mastodon slack youtube Tag1 provides infrastructure management for Drupal.org Need a Drupal 7 extended support…
+
+### f6741790087ba13efcf09ff18aaee9d6 (risk=2)
+- Classification: government:site
+- Domain: oregonbuys.gov
+- Content-Type: text/html;charset=UTF-8
+- Title guess: OregonBuys - /view/login/login.xhtml skip to main content User ID Please enter the login id. Password Please enter the password. Forgot User ID Forgot Password Sign In or continue 
+- URL: https://oregonbuys.gov:443/bso/
+- Parsed text: research_results/documents/parsed/f6741790087ba13efcf09ff18aaee9d6.txt
+- Text length: 7916
+- Why it likely scored > 0:
+  - DEI terms: diversity(1); inclusion(1)
+  - Binding terms: shall(1); required(1); contract(1); terms of use(1)
+- Summary:
+  - Try our latest look on the following sections of ePro: Main Menu Navigation Contracts You can use the toggle on the header of the site at any moment to switch the look.
+  - This new web-based eProcurement system will automate the state of Oregon's procurement process.
+  - For additional information see our Terms of Use document.
+  - Important Links Certification Office for Business Inclusion and Diversity Recently Posted Bids Oregon Cooperative Procurement Program (ORCPP) Oregon Procurement Information Network (ORPIN) Oregon Corrections Enterprises Oregon Forward Procurement List Oregon S
+- Binding-language context snippets:
+  - …Lithuania Luxembourg Latvia Macao, Special Administrative Region of China Saint Martin Morocco Monaco Moldova Madagascar Maldives Mexico Marshall Islands Macedonia, Republic of Mali Malta Myanmar Montenegro Mongolia Northern Mariana Islands Mozambique Mauritania Montserrat Martinique…
+  - …pe S2G. We notice that you have an older version of Periscope S2G account associated with email address A newer version of Periscope S2G is required to manage your catalogs. Please contact this number for assistance 1-855-800-5046 We notice that you have an incomplete Periscope S2G accou…
+- DEI-language context snippets:
+  - …wWillMyDataBeUsed to learn more about how Oregon will use this information. Important Links Certification Office for Business Inclusion and Diversity Recently Posted Bids Oregon Cooperative Procurement Program (ORCPP) Oregon Procurement Information Network (ORPIN) Oregon Corrections Enter…
+  - …tinyurl.com/HowWillMyDataBeUsed to learn more about how Oregon will use this information. Important Links Certification Office for Business Inclusion and Diversity Recently Posted Bids Oregon Cooperative Procurement Program (ORCPP) Oregon Procurement Information Network (ORPIN) Oregon Cor…
+
+### b03119e6b8cde2b7df224e42d8cdd827 (risk=2)
+- Classification: third-party:content
+- Domain: www.colorlines.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Colorlines Skip to main content Search Donate Search Main menu About Us Our History Community Conversations Explainers Organizing Stories Published By Race Forward Archive Check ou
+- URL: https://colorlines.com/
+- Parsed text: research_results/documents/parsed/b03119e6b8cde2b7df224e42d8cdd827.txt
+- Text length: 7547
+- Why it likely scored > 0:
+  - DEI terms: racial justice(7); equity(1); equitable(1)
+  - Binding terms: must(2); privacy(1); terms of use(1)
+- Summary:
+  - How Government Can Deliver Lasting Racial Justice Wins Members of Race Forward’s Government Alliance on Race and Equity (G.A.R.E.) discuss participatory democracy and co-governance: how structures of government are strategically necessary for translating power
+  - Footer About Us Archives Community Conversations Explainers Organizing Stories Additional Links Donate Contact Privacy Terms of Use Join Colorlines © COLORLINES 2025 Site Credits Madeo
+- Binding-language context snippets:
+  - …Celebration band, June 19, 1900. Watch Video In what ways can memory, history, and collective vision inform the necessary pathways that we must create in order to build multiracial democratic power? In “The Long History of Juneteenth,” we ground ourselves within analyses of the hist…
+  - …lding moments and movements. Footer About Us Archives Community Conversations Explainers Organizing Stories Additional Links Donate Contact Privacy Terms of Use Join Colorlines © COLORLINES 2025 Site Credits Madeo…
+- DEI-language context snippets:
+  - …ar history Colorlines Community Join the Colorlines community and stay up to date on events, actions, and news Follow Us Housing Justice is Racial Justice A video to help you start a conversation with your neighbors and colleagues about how important it is to use a racial justice frame to achi…
+  - …yond the vote. Watch no w. How Government Can Deliver Lasting Racial Justice Wins Members of Race Forward’s Government Alliance on Race and Equity (G.A.R.E.) discuss participatory democracy and co-governance: how structures of government are strategically necessary for translating powe…
+
+### d1b57d035c043d274245fea7ac99f95a (risk=2)
+- Classification: government:site
+- Domain: www.oregonmetro.gov
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Racial equity and housing | Metro Skip to main content collapse all Events News and stories Tools and data Contact Language hub Metro logo, to the homepage Open menu Close menu Wha
+- URL: https://www.oregonmetro.gov/what-metro-does/housing-and-homelessness/affordable-housing-bond/racial-equity
+- Parsed text: research_results/documents/parsed/d1b57d035c043d274245fea7ac99f95a.txt
+- Text length: 7525
+- Why it likely scored > 0:
+  - DEI terms: equity(11); people of color(5); diversity(4); inclusion(2); equitable(1); underrepresented(1)
+  - Proxy terms: community engagement(1)
+  - Binding terms: contract(6); policy(2); must(1); required(1); regulation(1); binding(1)
+- Summary:
+  - Healthy living and waste reduction Report dumped garbage Education resources Parks and cemeteries show menu hide menu Parks and cemeteries Parks Boat ramps Cemeteries Reservations and services Safety and policies About Metro show menu hide menu About Metro Met
+  - That’s why advancing racial equity is a core value of Metro’s affordable housing bond program.
+  - Increasing the stock of affordable housing, gathering community input in the pre-development process, and ensuring this new housing is equitably distributed to those who need it most, is crucial to remedying the history of harm to Black, Indigenous and other c
+  - Metro advances racial equity in the following key areas.
+- Binding-language context snippets:
+  - …t serve a particular community of color, where the majority of staff and members/clients are from the community being served. Bond partners contract with organizations that have a track record of successful community engagement and involvement with the community being served. Geographic…
+  - …le homes Common questions Oversight Progress Racial equity Site acquisition program Racial equity and housing Due to many decades of racist policy and practice, Black and Indigenous and other people of color have long faced unequal access to quality, affordable housing. Due to these in…
+- DEI-language context snippets:
+  - …Racial equity and housing
+  - Metro Skip to main content collapse all Events News and stories Tools and data Contact Language hub Metro logo, to the homepa…
+  - …equity Site acquisition program Racial equity and housing Due to many decades of racist policy and practice, Black and Indigenous and other people of color have long faced unequal access to quality, affordable housing. Due to these inequities, thousands of people throughout the region have not…
+
+### 4b919881b559c56832bdfb54da9e035e (risk=2)
+- Classification: third-party:content
+- Domain: raceforward.org
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Cultural Week of Action on Race and Democracy | Race Forward Skip to main content Main navigation Learn About Us Our Story Our Mission, Vision, and Values Our Strategic Plan Annual
+- URL: https://www.raceforward.org/projects-programs-%26-initiatives/cultural-week-of-action
+- Parsed text: research_results/documents/parsed/4b919881b559c56832bdfb54da9e035e.txt
+- Text length: 7187
+- Why it likely scored > 0:
+  - DEI terms: equity(5); racial justice(3); diversity(1); inclusion(1)
+  - Binding terms: policy(4); privacy(1)
+- Summary:
+  - (Honest Education Action and Leadership) Together Housing and Land Justice Narrative Place-Based Strategies (Co-governance) Policy Innovation Lab Services for Organizations Our Board Our Team Get Tools and Resources Understanding Racial Equity Events Cultural
+  - Reclaim the Narrative Reframe the public conversation : The culture wars and the resulting polarization often distort terms like “racial equity” or “democracy.” A week of action will center real stories and definitions—rooted in justice, community, and truth.
+  - Counter disinformation : By promoting accurate narratives in schools, workplaces, and community spaces, it disrupts the spread of fear-based distortions about Diversity, Equity, and Inclusion; Critical Race Theory, and “wokeness.” Connect Culture to Policy Bri
+  - Footer Careers Contact Us Press Privacy Policy ©1999–2025 Race Forward.
+- Binding-language context snippets:
+  - …Equity H.E.A.L. (Honest Education Action and Leadership) Together Housing and Land Justice Narrative Place-Based Strategies (Co-governance) Policy Innovation Lab Services for Organizations Our Board Our Team Get Tools and Resources Understanding Racial Equity Events Cultural Week of Ac…
+  - …inds people that racial justice isn’t just about struggle—it’s about possibility, love, joy, and belonging. Footer Careers Contact Us Press Privacy Policy ©1999–2025 Race Forward. All rights reserved. Donate Now Sign Up For Our Newsletter Charity Navigator Candid Youtube Instagram Linke…
+- DEI-language context snippets:
+  - …s Our Strategic Plan Annual Reports 2024 2022-23 Projects, Programs, & Initiatives Butterfly Lab Colorlines Government Alliance on Race and Equity H.E.A.L. (Honest Education Action and Leadership) Together Housing and Land Justice Narrative Place-Based Strategies (Co-governance) Policy…
+  - …nd Support Create momentum : Through coordinated events, art, storytelling, and media, the week will generate visibility and urgency around racial justice and democratic participation. Involve unlikely allies : A public-facing week of action will draw in every day people, colleagues, friends,…
+
+### 173fee7c4d1bd41609fa6be5bfb8d359 (risk=2)
+- Classification: third-party:content
+- Domain: www.charitynavigator.org
+- Content-Type: text/html;charset=utf-8
+- Title guess: About Charity Navigator | Charity Navigator Sign in/Create an account Sign Out Nonprofit Resources Support Charity Navigator Discover Charities Best Charities Animal Rescue Chariti
+- URL: https://www.charitynavigator.org/about-us
+- Parsed text: research_results/documents/parsed/173fee7c4d1bd41609fa6be5bfb8d359.txt
+- Text length: 6660
+- Why it likely scored > 0:
+  - DEI terms: equity(2); diversity(1); inclusion(1)
+  - Binding terms: policy(1); privacy(1); terms of use(1)
+- Summary:
+  - Equity We stand for equity, diversity, and inclusion within our organization and through our evaluations and guidance.
+  - Press Room Financials and Policies Privacy Policy Terms of Use FAQs/Contact Us Our Team Careers Business Resources Copyright ©2025
+  - EIN 13-4148824
+  - Bridge ID 3108588923
+- Binding-language context snippets:
+  - …t of other nonprofits. Use our Giving Basket to support other organizations through our website. Press Room Financials and Policies Privacy Policy Terms of Use FAQs/Contact Us Our Team Careers Business Resources Copyright ©2025
+  - EIN 13-4148824
+  - Bridge ID 3108588923…
+  - …n support of other nonprofits. Use our Giving Basket to support other organizations through our website. Press Room Financials and Policies Privacy Policy Terms of Use FAQs/Contact Us Our Team Careers Business Resources Copyright ©2025
+  - EIN 13-4148824
+  - Bridge ID 3108588923…
+- DEI-language context snippets:
+  - …ible, lifting the sector as we go. Collaboration We collaborate internally and externally to accelerate our work and achieve more together. Equity We stand for equity, diversity, and inclusion within our organization and through our evaluations and guidance. Fairness We assume good int…
+  - …we go. Collaboration We collaborate internally and externally to accelerate our work and achieve more together. Equity We stand for equity, diversity, and inclusion within our organization and through our evaluations and guidance. Fairness We assume good intent, leading with trust within…
+
+### b8db36676c4c140396b695f791f8e0b9 (risk=2)
+- Classification: government:site
+- Domain: www.hudexchange.info
+- Content-Type: text/html;charset=UTF-8
+- Title guess: Homelessness Assistance Programs - HUD Exchange Skip to main content NEED HOUSING ASSISTANCE? Email Updates Log In HUD Exchange Search Toggle navigation Search Form title Search Lo
+- URL: https://www.hudexchange.info/homelessness-assistance/
+- Parsed text: research_results/documents/parsed/b8db36676c4c140396b695f791f8e0b9.txt
+- Text length: 6458
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(3); regulation(1); standard(1); privacy(1)
+- Summary:
+  - Email Updates Log In HUD Exchange Search Toggle navigation Search Form title Search Log In Programs Programs & Related Topics CDBG Program Continuum of Care Program Community Project Funding Emergency Solutions Grants Program Environmental Review Fair Housing
+  - View All Trainings Program Support Ask a Question Ask a basic policy or reporting system question.
+  - Request In-Depth Assistance Request in-depth assistance with implementing a HUD-funded program.
+  - Contact Information Find point of contact information for HUD's grantees.
+- Binding-language context snippets:
+  - …IDIS Log In Sage Log In View All Programs & Related Topics Resources Resource Library Explore featured publications and browse regulations, policy guidance, toolkits, and other resources. FAQ Collections Find answers to frequently asked questions. Trainings Upcoming Training Register f…
+  - …ystem Log In IDIS Log In Sage Log In View All Programs & Related Topics Resources Resource Library Explore featured publications and browse regulations, policy guidance, toolkits, and other resources. FAQ Collections Find answers to frequently asked questions. Trainings Upcoming Training R…
+- DEI-language context snippets:
+  - …erview Videos Previous Next HUD EXCHANGE Program delivery support for HUD's local partners Connect with Us HUD.gov No Fear Act FOIA Privacy Accessibility Web Policies Contact Us © 2025 U.S. Department of Housing and Urban Development. All Rights Reserved. Website Disclaimer Note: This materia…
+
+### a1550d1abc15f930d2e7861bcdf06840 (risk=2)
+- Classification: third-party:content
+- Domain: www.osba.org
+- Content-Type: text/html; charset=UTF-8
+- Title guess: You searched for {search_term_string - osba.org Search for: My OSBA / Login 1-800-578-OSBA Search for: My OSBA / Login My OSBA / Login 1-800-578-OSBA Search for: My OSBA / Login Ab
+- URL: https://www.osba.org/?s=%7Bsearch_term_string
+- Parsed text: research_results/documents/parsed/a1550d1abc15f930d2e7861bcdf06840.txt
+- Text length: 6177
+- Why it likely scored > 0:
+  - DEI terms: equity(2)
+  - Proxy terms: community engagement(1)
+  - Binding terms: policy(3); required(1)
+- Summary:
+  - You searched for {search_term_string - osba.org Search for: My OSBA / Login 1-800-578-OSBA Search for: My OSBA / Login My OSBA / Login 1-800-578-OSBA Search for: My OSBA / Login About About OSBA Our Team Board of Directors Council of School Attorneys (COSA) Le
+  - See More See Less Photo View on Facebook · Share Share on Facebook Share on Twitter Share on Linked In Share by Email X OSBA Follow Oregon School Boards Association: dedicated to improving student success and education equity through advocacy, leadership and s
+- Binding-language context snippets:
+  - …r: My OSBA / Login About About OSBA Our Team Board of Directors Council of School Attorneys (COSA) Legal Assistance Trust (LAT) Legislative Policy Committee Oregon School Board Members of Color Caucus Oregon Rural School Board Members Caucus Oregon LGBTQIA2S+ School Board Members Advis…
+  - …-588-2800 About Articles Careers Contact Us Departments News Center Public Meetings Training & Events Sign up for OREdNews! " * " indicates required fields URL This field is for validation purposes and should be left unchanged. Name * First Last Email * CAPTCHA © Oregon School Boards Ass…
+- DEI-language context snippets:
+  - …hip Benefits Articles Ask OSBA Board Operations Bonds and Local Option Elections Budget and Finance Business and Labor Community Engagement Equity365 Immigration Legislative and Advocacy Policy Public Meetings and Records Student Safety & Achievement Student Success Act Careers Contact…
+
+### 9afc03806c436d495f9b35661514a4c4 (risk=2)
+- Classification: infrastructure/reference
+- Domain: www.drupal.org
+- Content-Type: text/html; charset=utf-8
+- Title guess: About | Drupal.org Skip to main content Skip to search Can we use first and third party cookies and web beacons to understand our audience, and to tailor promotions you see ? Yes, 
+- URL: https://www.drupal.org/about
+- Parsed text: research_results/documents/parsed/9afc03806c436d495f9b35661514a4c4.txt
+- Text length: 5876
+- Why it likely scored > 0:
+  - DEI terms: accessibility(2)
+  - Binding terms: requirement(1); requirements(1); policy(1); standard(1); privacy(1)
+- Summary:
+  - It's distributed under the terms of the GNU General Public License (GPL).
+  - News items News Planet Drupal Social media Sign up for Drupal news Security advisories Jobs Our community Community Services , Training & Hosting Contributor guide Groups & meetups DrupalCon Code of conduct Documentation Documentation Drupal Guide Drupal User
+- Binding-language context snippets:
+  - …Drupal.org . Get started Ready to build something amazing? Get started with an overview of working with Drupal and read about its technical requirements. Next, check out a pre-built Drupal distribution or download Drupal core . You can then expand and enhance your work with modules , themes…
+  - …Drupal.org . Get started Ready to build something amazing? Get started with an overview of working with Drupal and read about its technical requirements. Next, check out a pre-built Drupal distribution or download Drupal core . You can then expand and enhance your work with modules , themes…
+- DEI-language context snippets:
+  - …ter Platform About About Overview Drupal 11 Drupal 7 (legacy) Industries Our history Social media directory Values & Principles Drupal Core Accessibility Licensing FAQ - General Media Kit Drupal blog In the news Drupal Code of Conduct Support Sustainability Recent posts Drupal 11.3.0 is now a…
+
+### 5148e0039f816c8b620f360dfaa24d24 (risk=2)
+- Classification: infrastructure/reference
+- Domain: github.com
+- Content-Type: text/html; charset=utf-8
+- Title guess: About GitHub · GitHub Skip to content Navigation Menu Toggle navigation Sign in Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Spark Build and deploy int
+- URL: https://github.com/about
+- Parsed text: research_results/documents/parsed/5148e0039f816c8b620f360dfaa24d24.txt
+- Text length: 5390
+- Why it likely scored > 0:
+  - DEI terms: inclusion(2); diversity(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - Learn more Diversity, Inclusions & Belonging We are dedicated to building a community and team that reflects the world we live in and pushes the boundaries of software innovation.
+  - Learn more Policy We’re focused on fighting for developer rights by shaping the policies that promote their interests and the future of software.
+  - Subscribe Platform Features Enterprise Copilot AI Security Pricing Team Resources Roadmap Compare GitHub Ecosystem Developer API Partners Education GitHub CLI GitHub Desktop GitHub Mobile GitHub Marketplace MCP Registry Support Docs Community Forum Professiona
+  - Terms Privacy (Updated 02/2024) 02/2024 Sitemap What is Git?
+- Binding-language context snippets:
+  - …th our annual State of the Octoverse report looking at the trends and patterns in the code and communities that build on GitHub. Learn more Policy We’re focused on fighting for developer rights by shaping the policies that promote their interests and the future of software. Learn more…
+  - …b Company About Why GitHub Customer stories Blog The ReadME Project Careers Newsroom Inclusion Social Impact Shop © 2025 GitHub, Inc. Terms Privacy (Updated 02/2024) 02/2024 Sitemap What is Git? Manage cookies Do not share my personal information GitHub on LinkedIn Instagram GitHub on I…
+- DEI-language context snippets:
+  - …all developers. We’re a passionate group of people dedicated to software development and collaboration. Come join us! Learn more Diversity, Inclusions & Belonging We are dedicated to building a community and team that reflects the world we live in and pushes the boundaries of software inn…
+  - …e home for all developers. We’re a passionate group of people dedicated to software development and collaboration. Come join us! Learn more Diversity, Inclusions & Belonging We are dedicated to building a community and team that reflects the world we live in and pushes the boundaries of s…
+
+### 0033be02ec78316625017000c92e110e (risk=2)
+- Classification: government:site
+- Domain: www.oregon.gov
+- Content-Type: text/html; charset=utf-8
+- Title guess: Oregon Housing and Community Services : ORCA DEI Agreement : Oregon Centralized Application : State of Oregon Skip to main content An official website of the State of Oregon Learn 
+- URL: https://www.oregon.gov/ohcs/rental-housing/housing-development/oregon-centralized-application-orca/pages/orca-diversity-equity-inclusion-agreement.aspx
+- Parsed text: research_results/documents/parsed/0033be02ec78316625017000c92e110e.txt
+- Text length: 5340
+- Why it likely scored > 0:
+  - DEI terms: dei(26); equity(5); inclusion(5); diversity(4); racial justice(1)
+  - Binding terms: agreement(5); must(2); required(2); compliance(1); comply(1); standard(1)
+- Summary:
+  - Proposed Federal Budgets for Housing and Homelessness Search this site Submit close Back to Home Oregon Centralized Application You are here: Oregon Housing and Community Services Rental Housing Housing Development Oregon Centralized Application ORCA DEI Agree
+  - Applicants must submit a DEI Agreement during Impact Assessment.
+  - Partners will self-report progress on their goals annually by renewing their agreement.
+  - Global Diversity, Equity, and Inclusion Benchmarks (GDEIB) Derived from insights from a distinguished panel of 112 experts, the Global Diversity, Equity, and Inclusion Benchmarks (GDEIB) comprise 275 benchmarks that encapsulate proven strategies for elevating
+- Binding-language context snippets:
+  - …Oregon Housing and Community Services : ORCA DEI Agreement : Oregon Centralized Application : State of Oregon Skip to main content An official website of the State of Oregon Learn How you know » (ho…
+  - …y Get Help with ORCA ORCA’s Affordable Housing Pipeline ORCA Outcomes and Key Impacts Project owners, developers, and developer consultants must complete a short survey to select four out of 15 diversity, equity, and inclusion (DEI) goals. Applicants must submit a DEI Agreement durin…
+- DEI-language context snippets:
+  - …Oregon Housing and Community Services : ORCA DEI Agreement : Oregon Centralized Application : State of Oregon Skip to main content An official website of the State of Oregon Learn How you…
+  - …omes and Key Impacts Project owners, developers, and developer consultants must complete a short survey to select four out of 15 diversity, equity, and inclusion (DEI) goals. Applicants must submit a DEI Agreement during Impact Assessment. Partners will self-report progress on their go…
+
+### bf83699c0a4f2001dd2920dd6d60b502 (risk=2)
+- Classification: third-party:content
+- Domain: www.opportunityagenda.org
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Home - The Opportunity Agenda Skip to content Search What We’ve Achieved Fellowship Programs Creative Change Retreat Narrative Research Lab Immigrant Narrative Strategy Table Helve
+- URL: https://opportunityagenda.org/
+- Parsed text: research_results/documents/parsed/bf83699c0a4f2001dd2920dd6d60b502.txt
+- Text length: 5202
+- Why it likely scored > 0:
+  - DEI terms: equity(3); equitable(1); social justice(1)
+  - Binding terms: privacy(3); policy(2); compliance(1)
+- Summary:
+  - Home - The Opportunity Agenda Skip to content Search What We’ve Achieved Fellowship Programs Creative Change Retreat Narrative Research Lab Immigrant Narrative Strategy Table Helvetika Bold Power of Pop Health Equity Works Issue Areas Future Over Fear Messagin
+  - Alongside our partners, we have built and amplified narratives focused on justice, equity, and opportunity—from grassroots labor movements to civic engagement and legal advocacy—and have reached millions with our values-based messaging.
+  - For two decades, TOA conducted innovative research on the stories and values shaping public opinion, published narrative guidance to support policy wins, trained advocates and movement leaders, convened artists and changemakers across sectors, and developed gr
+  - When rooted in fear and exclusion, they divide us; when grounded in shared values like voice, equity, and opportunity, they bring people together and expand what is possible.
+- Binding-language context snippets:
+  - …tor to combat fear. Get the Guide Search What We've Achieved Issue Areas Future Over Fear Messaging & Reports © 2025 The Opportunity Agenda Privacy Policy We are using cookies to give you the best experience on our website. You can find out more about which cookies we are using or switc…
+  - …or two decades, TOA conducted innovative research on the stories and values shaping public opinion, published narrative guidance to support policy wins, trained advocates and movement leaders, convened artists and changemakers across sectors, and developed groundbreaking programs that…
+- DEI-language context snippets:
+  - …ed Fellowship Programs Creative Change Retreat Narrative Research Lab Immigrant Narrative Strategy Table Helvetika Bold Power of Pop Health Equity Works Issue Areas Future Over Fear Messaging & Reports 20 years of Building Narrative Power In 2006, a visionary team of Alan Jenkins, Dr.…
+  - …and impact of narrative change. Through values-based communication strategies, The Opportunity Agenda helped build cultural acceptance for equitable and just policies across the country. Messaging & Reports What is Narrative Change? Narrative change is about more than messaging—it’s the…
+
+### 022621fee8894629a4293f7bcd169817 (risk=2)
+- Classification: government:site
+- Domain: www.hudexchange.info
+- Content-Type: text/html;charset=UTF-8
+- Title guess: HMIS Data Standards - HUD Exchange Skip to main content NEED HOUSING ASSISTANCE? Email Updates Log In HUD Exchange Search Toggle navigation Search Form title Search Log In Programs
+- URL: https://www.hudexchange.info/resource/3824/hmis-data-dictionary/
+- Parsed text: research_results/documents/parsed/022621fee8894629a4293f7bcd169817.txt
+- Text length: 5187
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: standard(12); requirement(3); requirements(3); required(2); policy(2); regulation(1)
+- Summary:
+  - Email Updates Log In HUD Exchange Search Toggle navigation Search Form title Search Log In Programs Programs & Related Topics CDBG Program Continuum of Care Program Community Project Funding Emergency Solutions Grants Program Environmental Review Fair Housing
+  - View All Trainings Program Support Ask a Question Ask a basic policy or reporting system question.
+  - Request In-Depth Assistance Request in-depth assistance with implementing a HUD-funded program.
+  - Contact Information Find point of contact information for HUD's grantees.
+- Binding-language context snippets:
+  - …HMIS Data Standards - HUD Exchange Skip to main content NEED HOUSING ASSISTANCE? Email Updates Log In HUD Exchange Search Toggle navigation Search Form title…
+  - …ut individuals and families experiencing homelessness. The HMIS Data Dictionary and the HMIS Data Standards Manual are the documentation of requirements for the programming and use of all HMIS and comparable database software. The HMIS Data Standards Manual supports data collection and repo…
+- DEI-language context snippets:
+  - …ource Approver HUD Approved HUD EXCHANGE Program delivery support for HUD's local partners Connect with Us HUD.gov No Fear Act FOIA Privacy Accessibility Web Policies Contact Us © 2025 U.S. Department of Housing and Urban Development. All Rights Reserved. Website Disclaimer Note: This materia…
+
+### ebc99fc1209f8c2c5f749b2004124f65 (risk=2)
+- Classification: government:site
+- Domain: www.oregonmetro.gov
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Committees | Metro Skip to main content collapse all Events News and stories Tools and data Contact Language hub Metro logo, to the homepage Open menu Close menu What Metro does sh
+- URL: https://www.oregonmetro.gov/committees
+- Parsed text: research_results/documents/parsed/ebc99fc1209f8c2c5f749b2004124f65.txt
+- Text length: 5075
+- Why it likely scored > 0:
+  - DEI terms: equity(8); inclusion(2); accessibility(2)
+  - Binding terms: policy(5); contract(2)
+- Summary:
+  - Healthy living and waste reduction Report dumped garbage Education resources Parks and cemeteries show menu hide menu Parks and cemeteries Parks Boat ramps Cemeteries Reservations and services Safety and policies About Metro show menu hide menu About Metro Met
+  - Search Submit Filters Filter results Initiatives Economy (2) Environment (0) Equity (3) Garbage and recycling (1) Housing and homelessness (3) Land and transportation (6) Parks and nature (2) Visitor venues (1) Zoo (1) Apply filters 1 - 12 of 19 results found
+  - Housing and homelessness Metro Investment Advisory Board The Investment Advisory Board advises Metro on investment strategies, banking relationships, the legality and probity of investment activities and the establishment of written procedures for the investme
+  - Economy Supportive Housing Services Oversight Committee The Supportive Housing Services Oversight Committee is made up of volunteers who provide independent and transparent oversight of the SHS fund.
+- Binding-language context snippets:
+  - …earch Search Search Committees Metro convenes a variety of advisory, technical and community-focused committees to guide regional planning, policy, funding and oversight. Each brings diverse perspectives to help shape decisions for the Portland metropolitan region. Search Submit Filter…
+  - …essful public engagement processes. Equity Pagination Current page 1 Last page 2 Next Opportunities Give your input Jobs Grants and funding Contracts Services Ask a garbage and recycling expert Apply for a contractor's business license Buy a parks pass Buy a cemetery plot Pay my SHS tax…
+- DEI-language context snippets:
+  - …etro show menu hide menu About Metro Metro Council Metro Auditor MERC Structure and operations Civil rights at Metro Accessibility at Metro Equity at Metro Doing business with Metro Public records Jobs Events News and stories Tools and data Contact Language hub Search Search Open searc…
+  - …ccounting policies and reporting practices as they relate to Metro’s annual comprehensive financial report. Economy Committee on Disability Inclusion The Committee on Disability Inclusion helps Metro apply an intersectional accessibility lens to its work. Equity Committee on Racial Equity…
+
+### 6edb45aeefba069c869f50585373f1c6 (risk=2)
+- Classification: third-party:content
+- Domain: www.raceforward.org
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Advancing racial justice in our policies, institutions and culture. | Race Forward Skip to main content Main navigation Learn About Us Our Story Our Mission, Vision, and Values Our
+- URL: https://www.raceforward.org/
+- Parsed text: research_results/documents/parsed/6edb45aeefba069c869f50585373f1c6.txt
+- Text length: 5019
+- Why it likely scored > 0:
+  - DEI terms: equity(15); racial justice(6); equitable(1)
+  - Binding terms: policy(4); privacy(1)
+- Summary:
+  - (Honest Education Action and Leadership) Together Housing and Land Justice Narrative Place-Based Strategies (Co-governance) Policy Innovation Lab Services for Organizations Our Board Our Team Get Tools and Resources Understanding Racial Equity Events Cultural
+  - Take Action Messages to Grow and Uproot Race Forward's new guide equips organizations with the tools to develop and strengthen messages that advance racial equity and justice.
+  - Learn more Tools We develop toolkits to provide guidance for building collaborative racial equity strategies, cultures, and practices.
+  - View Reports We Work with Government to Transform Institutions and Sectors Deepening the ability of local, regional, and federal government to eliminate racial inequity drives larger systemic and institutional change across multiple levels of society.
+- Binding-language context snippets:
+  - …Equity H.E.A.L. (Honest Education Action and Leadership) Together Housing and Land Justice Narrative Place-Based Strategies (Co-governance) Policy Innovation Lab Services for Organizations Our Board Our Team Get Tools and Resources Understanding Racial Equity Events Cultural Week of Ac…
+  - …o talk about President Biden’s commitment to racial equity across the federal government. Watch the episode Footer Careers Contact Us Press Privacy Policy ©1999–2025 Race Forward. All rights reserved. Donate Now Sign Up For Our Newsletter Charity Navigator Candid Youtube Instagram Linke…
+- DEI-language context snippets:
+  - …s Our Strategic Plan Annual Reports 2024 2022-23 Projects, Programs, & Initiatives Butterfly Lab Colorlines Government Alliance on Race and Equity H.E.A.L. (Honest Education Action and Leadership) Together Housing and Land Justice Narrative Place-Based Strategies (Co-governance) Policy…
+  - …Advancing racial justice in our policies, institutions and culture.
+  - Race Forward Skip to main content Main navigation Learn About Us Our Story Our Mission, Vision…
+
+### 13a8dbfefb0e62ac8f3861aa3b6c4758 (risk=2)
+- Classification: third-party:content
+- Domain: www.raceforward.org
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Advancing racial justice in our policies, institutions and culture. | Race Forward Skip to main content Main navigation Learn About Us Our Story Our Mission, Vision, and Values Our
+- URL: http://www.raceforward.org/
+- Parsed text: research_results/documents/parsed/13a8dbfefb0e62ac8f3861aa3b6c4758.txt
+- Text length: 5019
+- Why it likely scored > 0:
+  - DEI terms: equity(15); racial justice(6); equitable(1)
+  - Binding terms: policy(4); privacy(1)
+- Summary:
+  - (Honest Education Action and Leadership) Together Housing and Land Justice Narrative Place-Based Strategies (Co-governance) Policy Innovation Lab Services for Organizations Our Board Our Team Get Tools and Resources Understanding Racial Equity Events Cultural
+  - Take Action Messages to Grow and Uproot Race Forward's new guide equips organizations with the tools to develop and strengthen messages that advance racial equity and justice.
+  - Learn more Tools We develop toolkits to provide guidance for building collaborative racial equity strategies, cultures, and practices.
+  - View Reports We Work with Government to Transform Institutions and Sectors Deepening the ability of local, regional, and federal government to eliminate racial inequity drives larger systemic and institutional change across multiple levels of society.
+- Binding-language context snippets:
+  - …Equity H.E.A.L. (Honest Education Action and Leadership) Together Housing and Land Justice Narrative Place-Based Strategies (Co-governance) Policy Innovation Lab Services for Organizations Our Board Our Team Get Tools and Resources Understanding Racial Equity Events Cultural Week of Ac…
+  - …o talk about President Biden’s commitment to racial equity across the federal government. Watch the episode Footer Careers Contact Us Press Privacy Policy ©1999–2025 Race Forward. All rights reserved. Donate Now Sign Up For Our Newsletter Charity Navigator Candid Youtube Instagram Linke…
+- DEI-language context snippets:
+  - …s Our Strategic Plan Annual Reports 2024 2022-23 Projects, Programs, & Initiatives Butterfly Lab Colorlines Government Alliance on Race and Equity H.E.A.L. (Honest Education Action and Leadership) Together Housing and Land Justice Narrative Place-Based Strategies (Co-governance) Policy…
+  - …Advancing racial justice in our policies, institutions and culture.
+  - Race Forward Skip to main content Main navigation Learn About Us Our Story Our Mission, Vision…
+
+### 5de08b390c6c80f3de8080dd2313f2e6 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: 5 Questions to Ask a Residential Property Manager During an Interview - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Pro
+- URL: https://www.quantumresidential.com/2022/02/24/questions-to-ask-residential-property-manager/
+- Parsed text: research_results/documents/parsed/5de08b390c6c80f3de8080dd2313f2e6.txt
+- Text length: 4977
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: must(4); regulation(3); requirement(2); requirements(2); agreement(2); policy(1)
+- Summary:
+  - They must ensure residents are well aware of building rules and regulations, as well as the terms of their lease agreement.
+  - Reiterating the terms of the lease agreement and providing resources and recommendations should resolve the issue.” 3.
+  - Are you familiar with local building codes and the fair housing laws of our state?
+  - Sample Answer: “My training helped me to familiarize myself well with the state and local housing laws.
+- Binding-language context snippets:
+  - …ther the applicant can manage difficult situations without affecting occupancy or budget. As a property manager, communication is key. They must ensure residents are well aware of building rules and regulations, as well as the terms of their lease agreement. They must be able to bala…
+  - …affecting occupancy or budget. As a property manager, communication is key. They must ensure residents are well aware of building rules and regulations, as well as the terms of their lease agreement. They must be able to balance their firmness and address concerns appropriately with a cert…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### e09418552bffc631d834012946662292 (risk=2)
+- Classification: infrastructure/reference
+- Domain: en.wikipedia.org
+- Content-Type: text/html; charset=UTF-8
+- Title guess: CURIE - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Le
+- URL: https://en.wikipedia.org/wiki/CURIE
+- Parsed text: research_results/documents/parsed/e09418552bffc631d834012946662292.txt
+- Text length: 4769
+- Why it likely scored > 0:
+  - DEI terms: accessibility(2)
+  - Binding terms: policy(2); standard(2); privacy(2); rule(1); terms of use(1)
+- Summary:
+  - Text is available under the Creative Commons Attribution-ShareAlike 4.0 License ; additional terms may apply.
+  - By using this site, you agree to the Terms of Use and Privacy Policy .
+  - Privacy policy About Wikipedia Disclaimers Contact Wikipedia Legal & safety contacts Code of Conduct Developers Statistics Cookie statement Mobile view Search Search Toggle the table of contents CURIE 4 languages Add topic
+- Binding-language context snippets:
+  - …tive Commons Attribution-ShareAlike 4.0 License ; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy . Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc. , a non-profit organization. Privacy policy About Wikipedia Discla…
+  - …7 March 2007. ^ "CURIE Syntax 1.0 Final Recommendation" . w3.org . W3C . 16 December 2010. v t e World Wide Web Consortium (W3C) Products, standards Recommendations ActivityPub Activity Streams ARIA Canonical XML CDF CSS Animations Flexbox Grid DOM EXI EmotionML Geolocation API HTML HTM…
+- DEI-language context snippets:
+  - …+SMIL XUP Working drafts CCXML CURIE EME InkML MSE RIF SMIL Timesheets sXBL WebGPU WebXR XFDL XFrames XMLHttpRequest Guidelines Web Content Accessibility Guidelines Initiative Markup Validation Service Web Accessibility Initiative Web Components Deprecated C-HTML HDML JSSS PGML VML WebPlatfor…
+
+### 1171b9007c447304c2078fde38778fb3 (risk=2)
+- Classification: government:site
+- Domain: www.hud.gov
+- Content-Type: text/html; charset=UTF-8
+- Title guess: HUD Home | HUD.gov / U.S. Department of Housing and Urban Development (HUD) Skip to main content An official website of the United States Government Here’s how you know Official we
+- URL: https://www.hud.gov/
+- Parsed text: research_results/documents/parsed/1171b9007c447304c2078fde38778fb3.txt
+- Text length: 4636
+- Why it likely scored > 0:
+  - DEI terms: dei(2); accessibility(1)
+  - Binding terms: policy(1); contract(1); privacy(1)
+- Summary:
+  - Helping Americans Help with Homeownership Find Affordable Places to Live Find a HUD-certified counselor Housing Choice Voucher Experiencing Homelessness Report an Issue Current HUD Residents Experiencing a Natural Disaster Find State Resources HUD Partners FHA
+  - Department of Housing and Urban Development Helping Americans HUD Partners Data & Research News About Contact Home HUD Home Submitted by C53399 on Tue, 03/11/2025 - 14:18 Learn More About HUD HUD is Implementing President Trump’s Agenda: 11 Wins in 11 Months 1
+  - Making Housing Affordable Again On Day 1, President Trump signed an Executive Order to lower the cost and expand the supply of housing.
+  - Since then, HUD has helped make housing more affordable for more than one million Americans, including more than half a million first homebuyers.
+- Binding-language context snippets:
+  - …partners in combating homelessness and increasing self-sufficiency. 8. Restoring Biological Truth HUD restored biological truth to housing policy by recognizing all Americans by their sex at birth—MALE or FEMALE. 9. Responding to Natural Disasters Secretary Turner visited Californians…
+  - …te and Fraud Immediately upon President Trump taking office, HUD uncovered $1.9 billion in misplaced funds and cut $250 million in wasteful contracts, stewarding taxpayer dollars as promised. Learn More About HUD Helping Americans HUD Partners Researchers News About Contact U.S. Departme…
+- DEI-language context snippets:
+  - …and Texans affected by catastrophic floods. HUD has provided $12 billion in disaster recovery to communities across the country. 10. Ending DEI at HUD DEI is dead at HUD, putting all Americans back on a level playing field. HUD disbanded the woke PAVE task force and held local leade…
+  - …treet, S.W., Washington, DC 20410 T: (202) 402-3815 Find a HUD office near you Office of Inspector General
+  - No Fear Act
+  - FOIA
+  - Privacy
+  - Accessibility
+  - Web Policies
+  - Sitemap Website Feedback…
+
+### 78c1b6400b5d5a077a730e1abdd3a397 (risk=2)
+- Classification: government:site
+- Domain: www.oregonmetro.gov
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Metro Skip to main content collapse all Events News and stories Tools and data Contact Language hub Metro logo, to the homepage Open menu Close menu What Metro does show menu hide 
+- URL: https://www.oregonmetro.gov/
+- Parsed text: research_results/documents/parsed/78c1b6400b5d5a077a730e1abdd3a397.txt
+- Text length: 4421
+- Why it likely scored > 0:
+  - DEI terms: equity(2); accessibility(1)
+  - Binding terms: contract(2)
+- Summary:
+  - Healthy living and waste reduction Report dumped garbage Education resources Parks and cemeteries show menu hide menu Parks and cemeteries Parks Boat ramps Cemeteries Reservations and services Safety and policies About Metro show menu hide menu About Metro Met
+  - Blue Lake Regional Park improvements Metro Council The Metro Council consists of a president, elected regionwide, and six councilors who are elected by district every four years in nonpartisan races.
+  - Meet the council Council priorities Whether your roots in the region run generations deep or you moved to Oregon last week, you have your own reasons for loving this place – and Metro wants to keep it that way.
+  - Advancing equity When everyone has what they need to succeed, we all do better.
+- Binding-language context snippets:
+  - …12:30 to 2:30 p.m. Event meeting format Online and In Person Oregon Convention Center Opportunities Give your input Jobs Grants and funding Contracts Services Ask a garbage and recycling expert Apply for a contractor's business license Buy a parks pass Buy a cemetery plot Pay my SHS tax…
+- DEI-language context snippets:
+  - …etro show menu hide menu About Metro Metro Council Metro Auditor MERC Structure and operations Civil rights at Metro Accessibility at Metro Equity at Metro Doing business with Metro Public records Jobs Events News and stories Tools and data Contact Language hub Search Search Open searc…
+  - …ty and policies About Metro show menu hide menu About Metro Metro Council Metro Auditor MERC Structure and operations Civil rights at Metro Accessibility at Metro Equity at Metro Doing business with Metro Public records Jobs Events News and stories Tools and data Contact Language hub Search S…
+
+### 0e1e03d72717fb6325339c86021d7ea8 (risk=2)
+- Classification: third-party:content
+- Domain: www.racialequityalliance.org
+- Content-Type: text/html; charset=utf-8
+- Title guess: Home - GARE Online Community Skip main navigation (Press Enter). Log in Toggle navigation Who We Are About Us Our Approach Our Impact Careers at GARE Join Us Membership Connecting 
+- URL: https://www.racialequityalliance.org/home
+- Parsed text: research_results/documents/parsed/0e1e03d72717fb6325339c86021d7ea8.txt
+- Text length: 4359
+- Why it likely scored > 0:
+  - DEI terms: equity(14); racial justice(1); social justice(1)
+  - Binding terms: policy(3); privacy(1); terms of use(1)
+- Summary:
+  - Discover More Featured Posts Local, Regional, & State Government Practitioners Gain New Skills, Insights, and Connections at the Inaugural Just Narratives Convening Navigating Racial Equity Work When Leadership's Support Is Only Symbolic Seasons of Change: Ref
+  - Whether you are implementing racial equity work inside government, supporting it from the outside, or investing in its future, this report offers key trends, strategic insights, and practical recommendations to inform your next steps - and drive our collective
+  - Read more Resource New Southern Strategies Playbook The New Southern Strategies Playbook is a bold, hands-on guide for government practitioners committed to advancing racial equity in the South and anywhere injustice shows up in systems and structures.
+  - Developed by and for racial equity practitioners in government, it offers adaptive tools, strategies, case studies, and reflection prompts to help practitioners embed racial equity in policy, practice, and culture.
+- Binding-language context snippets:
+  - …ners in government, it offers adaptive tools, strategies, case studies, and reflection prompts to help practitioners embed racial equity in policy, practice, and culture. Download Resource Democracy Resilience Toolkit GARE's latest interactive resource helps public sector leaders prote…
+  - …uity Quick Links GARE Learning Center Membership Contact Us Online Community Log In © COPYRIGHT YEAR PLACEHOLDER GARE. All rights reserved. Privacy Policy Terms of Use Copyright 2024. All rights reserved. Powered by Higher Logic…
+- DEI-language context snippets:
+  - …l, & State Government Practitioners Gain New Skills, Insights, and Connections at the Inaugural Just Narratives Convening Navigating Racial Equity Work When Leadership's Support Is Only Symbolic Seasons of Change: Reflections from Ithaca and the 2025 GARE Local Meeting All posts Resour…
+  - …zations embed racial equity into everyday operations and decision-making, transforming their roles and impact. Download Event Governing for Racial Justice From November 20-22, we gathered 600+ racial equity practitioners for the GARE Membership Meeting at the biennial Facing Race conference. W…
+
+### c2c9284f53c491b8423127ffa00215af (risk=2)
+- Classification: document:local-pdf
+- Title guess: Oregon Buys
+- URL: file://research_results/documents/raw/c2c9284f53c491b8423127ffa00215af.pdf
+- Parsed text: research_results/documents/parsed/c2c9284f53c491b8423127ffa00215af.txt
+- Extraction: ocrmypdf_force+pdftotext (2025-12-31T03:32:01.156498)
+- Text length: 4171
+- Why it likely scored > 0:
+  - DEI terms: equity(3)
+  - Binding terms: contract(3); required(2); policy(1)
+- Summary:
+  - Black or African American This information is being collected to measure engagement with each business persons having origins in any of the Black audience and identify gaps in registration and contract awards for specific racial groups of Africa demographics.
+  - Dominican, Central or South American, or other Spanish or Portuguese culture or origin, By Executive Order 22-15, the Governor directed the Department of Administrative regardless of race Services to electronically collect race and gender data for all contract
+  - Through vendor registration in Oregon Buys, the Department of Administrative Subcontinent Services will electronically collect race and gender data for all prime and Asian American persons whose origins are from India, subcontractors.
+  - Office of Procurement Equity Oregon Department of Administrative Services Enterprise Goods and Services Email: DAS.ProcurementEquity@das.oregon.gov
+- Binding-language context snippets:
+  - …rsons having origins in any of the Black audience and identify gaps in registration and contract awards for specific racial groups of Africa demographics.…
+  - …Oregon Buys Demographic Data Collection Category Definitions Am I required to provide this data? Asian Pacific Islander American No, vendors are not required to self-identify by race, gender, or…
+- DEI-language context snippets:
+  - …accountability, improve transparency, and advance economic and entrepreneurial Native American, Alaskan equity policy. Native or Hawaiian American Indians, Alaska Natives, Aleuts, or Native Hawaiians…
+
+### 5b94e8a5df0af6d0ee9bdeaa10261e5e (risk=2)
+- Classification: government:site
+- Domain: www.hudexchange.info
+- Content-Type: text/html;charset=UTF-8
+- Title guess: Welcome to HUD Exchange - HUD Exchange Skip to main content NEED HOUSING ASSISTANCE? Email Updates Log In HUD Exchange Search Toggle navigation Search Form title Search Log In Prog
+- URL: https://www.hudexchange.info/
+- Parsed text: research_results/documents/parsed/5b94e8a5df0af6d0ee9bdeaa10261e5e.txt
+- Text length: 4140
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(2); requirement(1); requirements(1); regulation(1); privacy(1)
+- Summary:
+  - Email Updates Log In HUD Exchange Search Toggle navigation Search Form title Search Log In Programs Programs & Related Topics CDBG Program Continuum of Care Program Community Project Funding Emergency Solutions Grants Program Environmental Review Fair Housing
+  - View All Trainings Program Support Ask a Question Ask a basic policy or reporting system question.
+  - Request In-Depth Assistance Request in-depth assistance with implementing a HUD-funded program.
+  - Contact Information Find point of contact information for HUD's grantees.
+- Binding-language context snippets:
+  - …IDIS Log In Sage Log In View All Programs & Related Topics Resources Resource Library Explore featured publications and browse regulations, policy guidance, toolkits, and other resources. FAQ Collections Find answers to frequently asked questions. Trainings Upcoming Training Register f…
+  - …Choices Self-Sufficiency: Opening Doors Quick Links Training Ask a Question Technical Assistance Request Programs, Systems, & Cross Cutting Requirements Income Eligibility Calculator BABA: Build America, Buy America Act Disaster Recovery Housing Counseling Public Housing and Vouchers Health…
+- DEI-language context snippets:
+  - …es, and more. Sign Up Today HUD EXCHANGE Program delivery support for HUD's local partners Connect with Us HUD.gov No Fear Act FOIA Privacy Accessibility Web Policies Contact Us © 2025 U.S. Department of Housing and Urban Development. All Rights Reserved. Website Disclaimer Note: This materia…
+
+### 2e585e0d0df836ab9f92388391140acf (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Privacy Policy - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Who we are Ou
+- URL: https://www.quantumresidential.com/privacy-policy/
+- Parsed text: research_results/documents/parsed/2e585e0d0df836ab9f92388391140acf.txt
+- Text length: 3881
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: privacy(4); policy(3)
+- Summary:
+  - Privacy Policy - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Who we are Our website address is: https://www.quantumresidential.com.
+  - The Gravatar service privacy policy is available here: https://automattic.com/privacy/.
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …Privacy Policy - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers R…
+  - …Privacy Policy - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Resident…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 281b82cc954e80498b9a7927d7fc2b9f (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Property Maintenance: What Is It and Why Is It Important for Property Owners? - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Serv
+- URL: https://www.quantumresidential.com/2022/04/14/what-is-property-maintenance/
+- Parsed text: research_results/documents/parsed/281b82cc954e80498b9a7927d7fc2b9f.txt
+- Text length: 3867
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### c78a080e1a60024fbe81fe72c5b2af54 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: What Is the Difference Between Residential and Commercial Property Management? - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Ser
+- URL: https://www.quantumresidential.com/2022/03/10/difference-between-residential-and-commercial-property-management/
+- Parsed text: research_results/documents/parsed/c78a080e1a60024fbe81fe72c5b2af54.txt
+- Text length: 3847
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: required(2); policy(1); agreement(1); privacy(1)
+- Summary:
+  - Multi-family housing is technically considered commercial real estate.
+  - Commercial rental agreements can be done on a month-to-month basis or annually and are easily renewable.
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …ties have far fewer legal restrictions than residential real estate properties. On-Site Management Though residential property managers are required to be available to your tenants, you don’t have to be on-site. However, in most U.S. states, commercial property managers are required to b…
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### f304e48a8327218e3fec9d22f84c7cf1 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: What Does a Multifamily Manager Do? - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Con
+- URL: https://www.quantumresidential.com/2022/02/10/what-does-multifamily-manager-do/
+- Parsed text: research_results/documents/parsed/f304e48a8327218e3fec9d22f84c7cf1.txt
+- Text length: 3780
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: must(1); requirement(1); requirements(1); policy(1); privacy(1)
+- Summary:
+  - In terms of filling vacant units, employing different apartment marketing strategies is usually the best approach.
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …eviction, and rental history as well as criminal background. After locating a candidate that meets all the requirements, a property manager must maintain satisfactory communications with all tenants. Tenant Communication One of the most important job duties a property manager is resp…
+  - …look for include credit, income, eviction, and rental history as well as criminal background. After locating a candidate that meets all the requirements, a property manager must maintain satisfactory communications with all tenants. Tenant Communication One of the most important job duties…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 9201a6fe3d8aa4e2c70a4695f82fdbe0 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: What Is Resident Retention (and How Can It Be Improved)? - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search 
+- URL: https://www.quantumresidential.com/2022/04/28/what-is-resident-retention/
+- Parsed text: research_results/documents/parsed/9201a6fe3d8aa4e2c70a4695f82fdbe0.txt
+- Text length: 3743
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### a64828afdc68c013760260abd9c28250 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: 4 Personal Attributes a Good Property Manager Should Possess - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Sea
+- URL: https://www.quantumresidential.com/2022/04/13/attributes-good-property-manager-possess/
+- Parsed text: research_results/documents/parsed/a64828afdc68c013760260abd9c28250.txt
+- Text length: 3651
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - A good property manager should keenly understand the housing market demands, forecasted trends, and real estate laws that dictate housing market behavior in your area and have a direct impact on your property’s return on investment.
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 307c33a3609468c1998ad428c5063505 (risk=2)
+- Classification: quantumresidential:page
+- Domain: quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Services We Provide at Quantum Residential To Maximize Your Profits Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Res
+- URL: https://www.quantumresidential.com/services/
+- Parsed text: research_results/documents/parsed/307c33a3609468c1998ad428c5063505.txt
+- Text length: 3465
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: compliance(2); policy(1); privacy(1)
+- Summary:
+  - Quantum has been maximizing profit for clients in the Pacific Northwest for over 50 years, specializing in large conventional and affordable housing.
+  - – Better than Market Occupancy Rates – Accurate and Timely Accounting – Project Management – Resident Screening – Resident Utility Billback – Better than Market Collections – Market Analytics – Group Insurance – Bulk Discount Vendor Savings – Fair Housing Comp
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …sident Utility Billback – Better than Market Collections – Market Analytics – Group Insurance – Bulk Discount Vendor Savings – Fair Housing Compliance – Preventative Maintenance – Tailored Marketing Strategies – Industry Leading Training – Resident Retention Programs – Affordable Housing C…
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### bc0a9ea0ac5fa4ebb39b2b6bbf3c4fd3 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: What is Multifamily Property Management? - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Resident
+- URL: https://www.quantumresidential.com/2022/01/27/what-is-multifamily-property-management/
+- Parsed text: research_results/documents/parsed/bc0a9ea0ac5fa4ebb39b2b6bbf3c4fd3.txt
+- Text length: 3188
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); standard(1); privacy(1)
+- Summary:
+  - In terms of preserving resident interests, property management companies take care of maintenance work, on-site management, resident requests, and screening future tenants.
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …ent and client satisfaction. In other words, a multifamily property management company ensures that an apartment community is maintained to standards, occupied by residents, and profitable for property owners. In terms of preserving resident interests, property management companies take…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 19fe65d220983b78d9b82406f68a7436 (risk=2)
+- Classification: third-party:content
+- Domain: www.raceforward.org
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Messages to Grow and Uproot: Narrative Strategy Amid Attacks on Diversity, Equity, Inclusion, and Racial Justice | Race Forward Skip to main content Main navigation Learn About Us 
+- URL: https://www.raceforward.org/resources/toolkits/messages-grow-and-uproot-narrative-strategy-amid-attacks-diversity-equity
+- Parsed text: research_results/documents/parsed/19fe65d220983b78d9b82406f68a7436.txt
+- Text length: 2946
+- Why it likely scored > 0:
+  - DEI terms: equity(11); diversity(4); inclusion(4); racial justice(4)
+  - Binding terms: policy(3); privacy(1)
+- Summary:
+  - (Honest Education Action and Leadership) Together Housing and Land Justice Narrative Place-Based Strategies (Co-governance) Policy Innovation Lab Services for Organizations Our Board Our Team Get Tools and Resources Understanding Racial Equity Events Cultural
+  - Together Training Government Webinars (#RaceAnd) Podcasts Toolkits Reports Ways to Give Open Search Donate Now Submit Close Search Breadcrumb Resources Toolkits Messages To Grow and Uproot: Narrative Strategy Amid Attacks On Diversity, Equity, Inclusion, and R
+  - The stories and messages we repeat over time shape policies, outcomes, culture and material conditions." — Race Forward Race Forward's new guide equips organizations with the tools to counter harmful narratives while strengthening messages that advance racial
+  - It’s perfect for diversity, equity and inclusion practitioners, communications professionals, organizational leaders, community advocates, and anyone defending equity work in their organization or community.
+- Binding-language context snippets:
+  - …Equity H.E.A.L. (Honest Education Action and Leadership) Together Housing and Land Justice Narrative Place-Based Strategies (Co-governance) Policy Innovation Lab Services for Organizations Our Board Our Team Get Tools and Resources Understanding Racial Equity Events Cultural Week of Ac…
+  - …ting high-risk environments Real examples of how Race Forward applies narrative strategy Download the Guide Footer Careers Contact Us Press Privacy Policy ©1999–2025 Race Forward. All rights reserved. Donate Now Sign Up For Our Newsletter Charity Navigator Candid Youtube Instagram Linke…
+- DEI-language context snippets:
+  - …Messages to Grow and Uproot: Narrative Strategy Amid Attacks on Diversity, Equity, Inclusion, and Racial Justice
+  - Race Forward Skip to main content Main navigation Learn About Us Our Story Our Mission, Vision, and Values…
+  - …Messages to Grow and Uproot: Narrative Strategy Amid Attacks on Diversity, Equity, Inclusion, and Racial Justice
+  - Race Forward Skip to main content Main navigation Learn About Us Our Story Our Mission, Vision, an…
+
+### 9e33ebe3140361da05a5258ac1ccdc88 (risk=2)
+- Classification: third-party:content
+- Domain: raceforward.org
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Race Reporting Guide | Race Forward Skip to main content Main navigation Learn About Us Our Story Our Mission, Vision, and Values Our Strategic Plan Annual Reports 2024 2022-23 Pro
+- URL: https://www.raceforward.org/reporting-guide
+- Parsed text: research_results/documents/parsed/9e33ebe3140361da05a5258ac1ccdc88.txt
+- Text length: 2931
+- Why it likely scored > 0:
+  - DEI terms: equity(4); equitable(1); racial justice(1)
+  - Binding terms: policy(2); standard(1); privacy(1)
+- Summary:
+  - (Honest Education Action and Leadership) Together Housing and Land Justice Narrative Place-Based Strategies (Co-governance) Policy Innovation Lab Services for Organizations Our Board Our Team Get Tools and Resources Understanding Racial Equity Events Cultural
+  - Shifting demographics make even more urgent our need to speak openly about racial bias and inequity, and their deep roots in our history, culture and institutions.
+  - Download a PDF of the Race Reporting Guide The Guide includes: ● Covering Key Issues With a Racial Lens ● Seven Harmful Racial Discourse Practices ● Key Terms & Concepts ● Online Resources Questions and suggestions related to this guide are welcome, and we inv
+  - Footer Careers Contact Us Press Privacy Policy ©1999–2025 Race Forward.
+- Binding-language context snippets:
+  - …Equity H.E.A.L. (Honest Education Action and Leadership) Together Housing and Land Justice Narrative Place-Based Strategies (Co-governance) Policy Innovation Lab Services for Organizations Our Board Our Team Get Tools and Resources Understanding Racial Equity Events Cultural Week of Ac…
+  - …uide aims to provide critical support for the use of responsible language and story framing that reflects ethical and rigorous journalistic standards and affirms the dignity and human rights of people of all races. This is not meant to be comprehensive, or to reflect all perspectives and…
+- DEI-language context snippets:
+  - …s Our Strategic Plan Annual Reports 2024 2022-23 Projects, Programs, & Initiatives Butterfly Lab Colorlines Government Alliance on Race and Equity H.E.A.L. (Honest Education Action and Leadership) Together Housing and Land Justice Narrative Place-Based Strategies (Co-governance) Policy…
+  - …e past tense. This kind of reporting leaves out important contextual information such as the role of history, institutional policies, and inequitable practices, and it very rarely features prominent, robust coverage of solutions. We need more tools to move our race conversations forward i…
+
+### b5954653ff0f6fe3eeb0aa5b63479bda (risk=2)
+- Classification: third-party:content
+- Domain: www.racialequityalliance.org
+- Content-Type: text/html; charset=utf-8
+- Title guess: GARE Public Resources - GARE Online Community Skip main navigation (Press Enter). Log in Toggle navigation Who We Are About Us Our Approach Our Impact Careers at GARE Join Us Membe
+- URL: https://www.racialequityalliance.org/viewdocument/democracy-resilience-toolkit-promp
+- Parsed text: research_results/documents/parsed/b5954653ff0f6fe3eeb0aa5b63479bda.txt
+- Text length: 2803
+- Why it likely scored > 0:
+  - DEI terms: equity(5); equitable(1); racial justice(1); marginalized(1)
+  - Binding terms: policy(1); privacy(1); terms of use(1)
+- Summary:
+  - We have come a long way in this work, and our hope is that the Democracy Resilience Toolkit will aid practitioners in sustaining systems that prioritize racial equity, bolster democracy, and secure progress for future generations.
+  - Divided into two parts, the Democracy Resilience Toolkit is designed to prompt discussion and action on protecting racial equity in the face of political disruption.
+  - Your contributions and reflections will help to build a cornerstone repository for advancing the movement of racial equity with resilient processes leading the way.
+  - #CommunicationsandNarrative #CommunityandPublicEngagement #DemocracyResilience #OrganizingStrategy #RacialEquityToolsActionPlansandReports #Toolkits #Transforming Statistics 0 Favorited 2942 Views 1 Files 0 Shares 568 Downloads Attachment(s) Democracy Resilien
+- Binding-language context snippets:
+  - …ck Links GARE Learning Center Membership Contact Us Online Community Log In © COPYRIGHT YEAR PLACEHOLDER GARE. All rights reserved. Privacy Policy Terms of Use Copyright 2024. All rights reserved. Powered by Higher Logic…
+  - …uity Quick Links GARE Learning Center Membership Contact Us Online Community Log In © COPYRIGHT YEAR PLACEHOLDER GARE. All rights reserved. Privacy Policy Terms of Use Copyright 2024. All rights reserved. Powered by Higher Logic…
+- DEI-language context snippets:
+  - …way in this work, and our hope is that the Democracy Resilience Toolkit will aid practitioners in sustaining systems that prioritize racial equity, bolster democracy, and secure progress for future generations. Divided into two parts, the Democracy Resilience Toolkit is designed to pro…
+  - …and Actions Pocket Guide Like 02-10-2025 12:49 PM GARE Team As a network of racial justice advocates, builders and believers, we know that equitable systems benefit everyone. Democratic values safeguard the rights and governing power of marginalized communities. We have come a long way i…
+
+### ee4569fbadb3c86dfbd3633503f7fb16 (risk=2)
+- Classification: quantumresidential:page
+- Domain: quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: About Quantum Residential Property Management Services Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contac
+- URL: https://www.quantumresidential.com/about/
+- Parsed text: research_results/documents/parsed/ee4569fbadb3c86dfbd3633503f7fb16.txt
+- Text length: 2797
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: compliance(1); policy(1); standard(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …e about property management. Executive Team Kalib Locke President Read More Janelle Bell Director of Operations Read More Margaret Campbell Compliance Director Read More Matt DeVore HR Director Read More Emma Warner Property Controller Read More Joe Veno Regional Maintenance Supervisor Rea…
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### d1dfa8ffa6c838ec2140e5832a73076b (risk=2)
+- Classification: third-party:content
+- Domain: www.racialequityalliance.org
+- Content-Type: text/html; charset=utf-8
+- Title guess: GARE Public Resources - GARE Online Community Skip main navigation (Press Enter). Log in Toggle navigation Who We Are About Us Our Approach Our Impact Careers at GARE Join Us Membe
+- URL: https://www.racialequityalliance.org/viewdocument/pending-ai-new-southern-strategie-13
+- Parsed text: research_results/documents/parsed/d1dfa8ffa6c838ec2140e5832a73076b.txt
+- Text length: 2708
+- Why it likely scored > 0:
+  - DEI terms: equity(5)
+  - Binding terms: policy(2); privacy(1); terms of use(1)
+- Summary:
+  - Log in Toggle navigation Who We Are About Us Our Approach Our Impact Careers at GARE Join Us Membership Connecting to Your Membership Strategic Partnerships Resources GARE Resources Topic Guides State of the Field GARE Online Community GARE Learning Center New
+  - Developed by and for racial equity practitioners in government, it offers adaptive tools, strategies, case studies, and reflection prompts to help practitioners embed racial equity in policy, practice, and culture.
+  - #Resource-Guides Statistics 0 Favorited 1597 Views 2 Files 0 Shares 107 Downloads Attachment(s) Download All New-Southern-Strategies-Playbook PUBLIC v5.pdf 1.04 MB 1 version Uploaded - 05-19-2025 Download APPENDIX - New Southern Strategies Playbook 2.31 MB 1 v
+  - Government Alliance on Race and Equity Quick Links GARE Learning Center Membership Contact Us Online Community Log In © COPYRIGHT YEAR PLACEHOLDER GARE.
+- Binding-language context snippets:
+  - …ners in government, it offers adaptive tools, strategies, case studies, and reflection prompts to help practitioners embed racial equity in policy, practice, and culture. R ooted in the Southern experience, the New Southern Strategies P laybook’s lessons resonate far beyond state lines…
+  - …uity Quick Links GARE Learning Center Membership Contact Us Online Community Log In © COPYRIGHT YEAR PLACEHOLDER GARE. All rights reserved. Privacy Policy Terms of Use Copyright 2024. All rights reserved. Powered by Higher Logic…
+- DEI-language context snippets:
+  - …coming Events FAQs Log in Newsletter Signup GARE Public Resources × Back to Library New Southern Strategies Playbook: Innovation for Racial Equity in Government [2025] Like 05-01-2025 03:47 PM GARE Team The New Southern Strategies Playbook is a bold, hands-on guide for government pract…
+
+### 3280f67cdb07a327ce492b515521ebce (risk=2)
+- Classification: third-party:content
+- Domain: www.raceforward.org
+- Content-Type: text/html; charset=UTF-8
+- Title guess: 2024 Annual Report | Race Forward Skip to main content Main navigation Learn About Us Our Story Our Mission, Vision, and Values Our Strategic Plan Annual Reports 2024 2022-23 Proje
+- URL: https://www.raceforward.org/2024-annual-report
+- Parsed text: research_results/documents/parsed/3280f67cdb07a327ce492b515521ebce.txt
+- Text length: 2434
+- Why it likely scored > 0:
+  - DEI terms: equity(8); equitable(1)
+  - Binding terms: policy(2); privacy(1)
+- Summary:
+  - (Honest Education Action and Leadership) Together Housing and Land Justice Narrative Place-Based Strategies (Co-governance) Policy Innovation Lab Services for Organizations Our Board Our Team Get Tools and Resources Understanding Racial Equity Events Cultural
+  - Together Training Government Webinars (#RaceAnd) Podcasts Toolkits Reports Ways to Give Open Search Donate Now Submit Close Search Breadcrumb 2024 Annual Report 2024 Annual Report 2024 Annual Report Race Forward’s commitment to advancing racial equity and a ju
+  - For instance: More than 1,100 people attended one of our racial equity training sessions to build their skills in talking about and using racial equity in their practices.
+  - More than 4,000 civil servants across all government levels (federal, regional, state, and local) engaged with our Government Alliance on Race and Equity network and our Federal Initiative to Govern for Racial Equity to work toward transforming our public inst
+- Binding-language context snippets:
+  - …Equity H.E.A.L. (Honest Education Action and Leadership) Together Housing and Land Justice Narrative Place-Based Strategies (Co-governance) Policy Innovation Lab Services for Organizations Our Board Our Team Get Tools and Resources Understanding Racial Equity Events Cultural Week of Ac…
+  - …podcast for analysis and to make meaning of current issues from leaders across sectors. See the Full Report Footer Careers Contact Us Press Privacy Policy ©1999–2025 Race Forward. All rights reserved. Donate Now Sign Up For Our Newsletter Charity Navigator Candid Youtube Instagram Linke…
+- DEI-language context snippets:
+  - …s Our Strategic Plan Annual Reports 2024 2022-23 Projects, Programs, & Initiatives Butterfly Lab Colorlines Government Alliance on Race and Equity H.E.A.L. (Honest Education Action and Leadership) Together Housing and Land Justice Narrative Place-Based Strategies (Co-governance) Policy…
+  - …udents, and educators engaged with our HEAL (Honest Education Action and Leadership) Together initiative Public Schools Strong to fight for equitable, fully-funded public education. More than 4,000 civil servants across all government levels (federal, regional, state, and local) engaged w…
+
+### 1e185c1c21e0305ab3e4bf71cf7da1c9 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Contact - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Contact Us Intereste
+- URL: https://www.quantumresidential.com/contact/
+- Parsed text: research_results/documents/parsed/1e185c1c21e0305ab3e4bf71cf7da1c9.txt
+- Text length: 2178
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 54566d91dba9e78922e9974ab72e0edd (risk=2)
+- Classification: quantumresidential:page
+- Domain: quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Quantum Residential | Accredited Management Organization (AMO) Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Resident
+- URL: https://www.quantumresidential.com/
+- Parsed text: research_results/documents/parsed/54566d91dba9e78922e9974ab72e0edd.txt
+- Text length: 2045
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 98c9506cf4fdebe9ad866266418748db (risk=2)
+- Classification: government:site
+- Domain: oregonbuys.gov
+- Content-Type: text/html; charset=utf-8
+- Title guess: We Provide Procurement Transformation Solutions | Periscope Holdings Menu For Buyers NIGP Solutions For Suppliers Contact Us For Buyers NIGP Solutions Who We Are Periscope, powered
+- URL: https://www.periscopeholdings.com/who-we-are?p=who-we-are
+- Parsed text: research_results/documents/parsed/98c9506cf4fdebe9ad866266418748db.txt
+- Text length: 2035
+- Why it likely scored > 0:
+  - DEI terms: diversity(1)
+  - Binding terms: policy(2); privacy(2); compliance(1)
+- Summary:
+  - We Provide Procurement Transformation Solutions
+  - Periscope Holdings Menu For Buyers NIGP Solutions For Suppliers Contact Us For Buyers NIGP Solutions Who We Are Periscope, powered by mdf commerce (formerly Periscope Holdings) was founded in 2001 in Austin Tex
+  - As a part of the mdf commerce eprocurement division, Periscope solutions help state and local organizations better manage spend and federal funds, boost competition, improve supplier diversity, increase efficiency and achieve transparency and compliance.
+  - Read More > Connect with us Find out more (877) 472-9062 Contact Privacy Policy We use cookies and other similar technology to deliver our online services.
+  - For more information on how we use cookies, please consult our Privacy Policy .
+- Binding-language context snippets:
+  - …rs We are looking for purpose-driven individuals to join our team. Read More > Connect with us Find out more (877) 472-9062 Contact Privacy Policy We use cookies and other similar technology to deliver our online services. Essential cookies are used to enable you to access and navigate…
+  - …pe Careers We are looking for purpose-driven individuals to join our team. Read More > Connect with us Find out more (877) 472-9062 Contact Privacy Policy We use cookies and other similar technology to deliver our online services. Essential cookies are used to enable you to access and n…
+- DEI-language context snippets:
+  - …division, Periscope solutions help state and local organizations better manage spend and federal funds, boost competition, improve supplier diversity, increase efficiency and achieve transparency and compliance. Our Values People We may be a technology-related company, but technology is n…
+
+### dd47bf4ddfc9e60d43703796b2a597a4 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Join the Quantum Residential Team Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Careers Join the
+- URL: https://www.quantumresidential.com/careers/
+- Parsed text: research_results/documents/parsed/dd47bf4ddfc9e60d43703796b2a597a4.txt
+- Text length: 1885
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 3d2f61921dcdc94801c90a0fee237047 (risk=2)
+- Classification: third-party:content
+- Domain: opportunityagenda.org
+- Content-Type: text/html; charset=UTF-8
+- Title guess: You searched for {search_term_string - The Opportunity Agenda Skip to content Search What We’ve Achieved Fellowship Programs Creative Change Retreat Narrative Research Lab Immigran
+- URL: https://opportunityagenda.org/?s=%7Bsearch_term_string
+- Parsed text: research_results/documents/parsed/3d2f61921dcdc94801c90a0fee237047.txt
+- Text length: 1358
+- Why it likely scored > 0:
+  - DEI terms: equity(1)
+  - Binding terms: privacy(3); compliance(1); policy(1)
+- Summary:
+  - You searched for {search_term_string - The Opportunity Agenda Skip to content Search What We’ve Achieved Fellowship Programs Creative Change Retreat Narrative Research Lab Immigrant Narrative Strategy Table Helvetika Bold Power of Pop Health Equity Works Issue
+  - Search for: Search What We've Achieved Issue Areas Future Over Fear Messaging & Reports © 2025 The Opportunity Agenda Privacy Policy We are using cookies to give you the best experience on our website.
+  - Accept Close GDPR Cookie Settings Privacy Overview Strictly Necessary Cookies Powered by GDPR Cookie Compliance Privacy Overview This website uses cookies so that we can provide you with the best user experience possible.
+- Binding-language context snippets:
+  - …e different keywords. Search for: Search What We've Achieved Issue Areas Future Over Fear Messaging & Reports © 2025 The Opportunity Agenda Privacy Policy We are using cookies to give you the best experience on our website. You can find out more about which cookies we are using or switc…
+  - …using or switch them off in settings . Accept Close GDPR Cookie Settings Privacy Overview Strictly Necessary Cookies Powered by GDPR Cookie Compliance Privacy Overview This website uses cookies so that we can provide you with the best user experience possible. Cookie information is stored…
+- DEI-language context snippets:
+  - …ed Fellowship Programs Creative Change Retreat Narrative Research Lab Immigrant Narrative Strategy Table Helvetika Bold Power of Pop Health Equity Works Issue Areas Future Over Fear Messaging & Reports Nothing Found Sorry, but nothing matched your search terms. Please try again with so…
+
+### 8c075912f2cca780ba33cfe57ebd2b0e (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Accessibility - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Accessibility 
+- URL: https://www.quantumresidential.com/accessiblity/
+- Parsed text: research_results/documents/parsed/8c075912f2cca780ba33cfe57ebd2b0e.txt
+- Text length: 1280
+- Why it likely scored > 0:
+  - DEI terms: accessibility(7)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - Accessibility - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Accessibility Statement Quantum Residential is committed to ensuring equal housing opportuniti
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …Accessibility - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Resident…
+
+### c10680c1c36c265aeea4755339787a19 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Maximization of Return on Investment - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Co
+- URL: https://www.quantumresidential.com/service/service-1/
+- Parsed text: research_results/documents/parsed/c10680c1c36c265aeea4755339787a19.txt
+- Text length: 1248
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 41cd297c4c4771fffe814705e9bd37fd (risk=2)
+- Classification: third-party:content
+- Domain: x.com
+- Content-Type: text/html
+- Title guess: About X | Our company and priorities Skip to main content About X platform X.com Status Accessibility Embed a post Privacy Center Transparency Center Download the X app Try Grok.co
+- URL: https://about.x.com/en
+- Parsed text: research_results/documents/parsed/41cd297c4c4771fffe814705e9bd37fd.txt
+- Text length: 1083
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: privacy(2); rule(1)
+- Summary:
+  - About the company Company news Brand toolkit Jobs and internships Investors Help Help Center Using X X for creators Ads Help Center Managing your account Email Preference Center Rules and policies Contact us Developer resources Developer home Documentation For
+  - Cookies Privacy Terms and conditions English About English Español Français 日本語 ‎Português Türkçe Did someone say … cookies?
+- Binding-language context snippets:
+  - …About X
+  - Our company and priorities Skip to main content About X platform X.com Status Accessibility Embed a post Privacy Center Transparency Center Download the X app Try Grok.com X Corp. About the company Company news Brand toolkit Jobs and internships Invest…
+  - …oolkit Jobs and internships Investors Help Help Center Using X X for creators Ads Help Center Managing your account Email Preference Center Rules and policies Contact us Developer resources Developer home Documentation Forums Communities Developer blog Engineering blog Developer term…
+- DEI-language context snippets:
+  - …About X
+  - Our company and priorities Skip to main content About X platform X.com Status Accessibility Embed a post Privacy Center Transparency Center Download the X app Try Grok.com X Corp. About the company Company news Brand toolkit Jobs a…
+
+### 942ef0696af0624037562a90533f3a2f (risk=2)
+- Classification: third-party:content
+- Domain: opportunityagenda.org
+- Content-Type: text/calendar; charset=UTF-8
+- Title guess: BEGIN:VCALENDAR VERSION:2.0 PRODID:-//The Opportunity Agenda - ECPv6.15.0.1//NONSGML v1.0//EN CALSCALE:GREGORIAN METHOD:PUBLISH X-WR-CALNAME:The Opportunity Agenda X-ORIGINAL-URL:h
+- URL: https://opportunityagenda.org/events/?ical=1
+- Parsed text: research_results/documents/parsed/942ef0696af0624037562a90533f3a2f.txt
+- Text length: 961
+- Why it likely scored > 0:
+  - DEI terms: equity(1)
+  - Binding terms: standard(2)
+- Summary:
+  - Refer to values of equity\, voice\, and community.
+- Binding-language context snippets:
+  - …ts for The Opportunity Agenda REFRESH-INTERVAL;VALUE=DURATION:PT1H X-Robots-Tag:noindex X-PUBLISHED-TTL:PT1H BEGIN:VTIMEZONE TZID:UTC BEGIN:STANDARD TZOFFSETFROM:+0000 TZOFFSETTO:+0000 TZNAME:UTC DTSTART:20250101T000000 END:STANDARD END:VTIMEZONE BEGIN:VEVENT DTSTART;VALUE=DATE:20251226…
+- DEI-language context snippets:
+  - …As you prepare for the holiday season\, help your audiences get ready for effective and meaningful family conversations. Refer to values of equity\, voice\, and community. URL:https://opportunityagenda.org/event/kwanzaa/2025-12-26/ END:VEVENT END:VCALENDAR…
+
+### c03fa557fce41394cb3254c013c5736b (risk=2)
+- Classification: third-party:content
+- Domain: www.racialequityalliance.org
+- Content-Type: text/html; charset=utf-8
+- Title guess: - GARE Online Community Skip main navigation (Press Enter). Log in Toggle navigation Who We Are About Us Our Approach Our Impact Careers at GARE Join Us Membership Connecting to Yo
+- URL: https://www.racialequityalliance.org/resources/public-sector-jobs-
+- Parsed text: research_results/documents/parsed/c03fa557fce41394cb3254c013c5736b.txt
+- Text length: 913
+- Why it likely scored > 0:
+  - DEI terms: equity(1)
+  - Binding terms: policy(1); privacy(1); terms of use(1)
+- Summary:
+  - Government Alliance on Race and Equity Quick Links GARE Learning Center Membership Contact Us Online Community Log In © COPYRIGHT YEAR PLACEHOLDER GARE.
+  - Privacy Policy Terms of Use Copyright 2024.
+- Binding-language context snippets:
+  - …ck Links GARE Learning Center Membership Contact Us Online Community Log In © COPYRIGHT YEAR PLACEHOLDER GARE. All rights reserved. Privacy Policy Terms of Use Copyright 2024. All rights reserved. Powered by Higher Logic…
+  - …uity Quick Links GARE Learning Center Membership Contact Us Online Community Log In © COPYRIGHT YEAR PLACEHOLDER GARE. All rights reserved. Privacy Policy Terms of Use Copyright 2024. All rights reserved. Powered by Higher Logic…
+- DEI-language context snippets:
+  - …Subscribe Join our newsletter to stay up to date on news from the GARE network, upcoming events, and more. Government Alliance on Race and Equity Quick Links GARE Learning Center Membership Contact Us Online Community Log In © COPYRIGHT YEAR PLACEHOLDER GARE. All rights reserved. Priv…
+
+### 9613353fa3a8e6ccd6e9a982d4da3ddc (risk=2)
+- Classification: third-party:content
+- Domain: www.racialequityalliance.org
+- Content-Type: text/html; charset=utf-8
+- Title guess: - GARE Online Community Skip main navigation (Press Enter). Log in Toggle navigation Who We Are About Us Our Approach Our Impact Careers at GARE Join Us Membership Connecting to Yo
+- URL: https://www.racialequityalliance.org/about
+- Parsed text: research_results/documents/parsed/9613353fa3a8e6ccd6e9a982d4da3ddc.txt
+- Text length: 913
+- Why it likely scored > 0:
+  - DEI terms: equity(1)
+  - Binding terms: policy(1); privacy(1); terms of use(1)
+- Summary:
+  - Government Alliance on Race and Equity Quick Links GARE Learning Center Membership Contact Us Online Community Log In © COPYRIGHT YEAR PLACEHOLDER GARE.
+  - Privacy Policy Terms of Use Copyright 2024.
+- Binding-language context snippets:
+  - …ck Links GARE Learning Center Membership Contact Us Online Community Log In © COPYRIGHT YEAR PLACEHOLDER GARE. All rights reserved. Privacy Policy Terms of Use Copyright 2024. All rights reserved. Powered by Higher Logic…
+  - …uity Quick Links GARE Learning Center Membership Contact Us Online Community Log In © COPYRIGHT YEAR PLACEHOLDER GARE. All rights reserved. Privacy Policy Terms of Use Copyright 2024. All rights reserved. Powered by Higher Logic…
+- DEI-language context snippets:
+  - …Subscribe Join our newsletter to stay up to date on news from the GARE network, upcoming events, and more. Government Alliance on Race and Equity Quick Links GARE Learning Center Membership Contact Us Online Community Log In © COPYRIGHT YEAR PLACEHOLDER GARE. All rights reserved. Priv…
+
+### 0e651fd1dab929d765942f99d9b1aaad (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Asset Preservation - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Asset Pre
+- URL: https://www.quantumresidential.com/service/service-2/
+- Parsed text: research_results/documents/parsed/0e651fd1dab929d765942f99d9b1aaad.txt
+- Text length: 803
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 79dfc6a9fd8318ab4becc87831dd4b45 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Industry Leading Accounting - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us 
+- URL: https://www.quantumresidential.com/service/service-3/
+- Parsed text: research_results/documents/parsed/79dfc6a9fd8318ab4becc87831dd4b45.txt
+- Text length: 784
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### fafa1d57b248bdff2c9cd0c572604a72 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Full-Time Maintenance Tech (Floating) - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents C
+- URL: https://www.quantumresidential.com/career/full-time-maintenance-tech-vancouver/
+- Parsed text: research_results/documents/parsed/fafa1d57b248bdff2c9cd0c572604a72.txt
+- Text length: 704
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: must(1); policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …g) 4.17.18 Quantum Residential is taking applications for full-time Maintenance Tech in Vancouver, WA. Hours will be 40 per week. Applicant must have experience in basic plumbing, electrical, groundskeeping, drywall repair and painting. Previous All Next Make the Move! Find Your New…
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### a597ff3bd791b104b3ef5b5df7d3bd9f (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Full-Time Property Manager/Maintenance Specialist - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers
+- URL: https://www.quantumresidential.com/career/full-time-property-manager-maintenance-specialist/
+- Parsed text: research_results/documents/parsed/a597ff3bd791b104b3ef5b5df7d3bd9f.txt
+- Text length: 684
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: must(1); policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …idential is taking applications for full-time Property Manager/Maintenance Specialist in Portland, OR. Hours will be 40 per week. Applicant must have relevant experience. Previous All Next Make the Move! Find Your New Home. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresi…
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 99198c9f1d217ba9f092b89e4231eb41 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Full-Time Maintenance Tech - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us F
+- URL: https://www.quantumresidential.com/career/full-time-maintenance-tech-portland/
+- Parsed text: research_results/documents/parsed/99198c9f1d217ba9f092b89e4231eb41.txt
+- Text length: 673
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: must(1); policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …ech 4.17.18 Quantum Residential is taking applications for full-time Maintenance Tech in Fairview, OR. Hours will be 40 per week. Applicant must have experience in basic plumbing, electrical, grounds keeping, drywall repair and painting. All Next Make the Move! Find Your New Home. (3…
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 049a09731baae3d3cf7f2d9e3597c40a (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Part-Time LIHTC Assistant Manager - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Conta
+- URL: https://www.quantumresidential.com/career/part-time-lihtc-assistant-manager/
+- Parsed text: research_results/documents/parsed/049a09731baae3d3cf7f2d9e3597c40a.txt
+- Text length: 638
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: must(1); policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …19 Quantum Residential is taking applications for a part-time LIHTC Assistant Manager in Florence, OR. Hours will be 40 per week. Applicant must have relevant experience. Previous All Next Make the Move! Find Your New Home. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresi…
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 15dff37950a2434967604af27b66196f (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Thank You for Contacting Us at Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us
+- URL: https://www.quantumresidential.com/thank-you/
+- Parsed text: research_results/documents/parsed/15dff37950a2434967604af27b66196f.txt
+- Text length: 625
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 57bc4c0b92be846af1bffc624c286b72 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Tax Credit Manager - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Tax Credi
+- URL: https://www.quantumresidential.com/career/tax-credit-manager/
+- Parsed text: research_results/documents/parsed/57bc4c0b92be846af1bffc624c286b72.txt
+- Text length: 602
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: must(1); policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …2.21.19 Quantum Residential is taking applications for full-time Tax Credit Manager in Vancouver, WA. Hours will be 40 per week. Applicant must have relevant experience. Previous All Next Make the Move! Find Your New Home. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresi…
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 05500c5d3391d0954816e6483cfd6341 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Tax Credit Manager - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Tax Credi
+- URL: https://www.quantumresidential.com/career/tax-credit-manager-2/
+- Parsed text: research_results/documents/parsed/05500c5d3391d0954816e6483cfd6341.txt
+- Text length: 596
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: must(1); policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …r 3.01.19 Quantum Residential is taking applications for full-time Tax Credit Manager in Kirkland, WA. Hours will be 40 per week. Applicant must have relevant experience. Previous All Make the Move! Find Your New Home. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.co…
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 3c86c7ce8800d3f2a04e16451a614279 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Porter - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Porter 2.21.19 Quantu
+- URL: https://www.quantumresidential.com/career/porter/
+- Parsed text: research_results/documents/parsed/3c86c7ce8800d3f2a04e16451a614279.txt
+- Text length: 531
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: must(1); policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …erty Search Careers Residents Contact Us Porter 2.21.19 Quantum Residential is taking applications for a Porter in Beaverton, OR. Applicant must have relevant experience. Previous All Next Make the Move! Find Your New Home. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresi…
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### d68b7e9473f232d7ccb6070e61c27130 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Fruit Valley Commons South - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us F
+- URL: https://www.quantumresidential.com/property/fruit-valley-commons-south/
+- Parsed text: research_results/documents/parsed/d68b7e9473f232d7ccb6070e61c27130.txt
+- Text length: 456
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### ee0d8a60f5436c579cd02f69a96372ed (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Market District Commons - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Mark
+- URL: https://www.quantumresidential.com/property/market-district-commons/
+- Parsed text: research_results/documents/parsed/ee0d8a60f5436c579cd02f69a96372ed.txt
+- Text length: 450
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### a199e6fa5b0f89476c0da782645ee20e (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Hawthorn at 29th Place - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Hawth
+- URL: https://www.quantumresidential.com/property/hawthorn-29th-place/
+- Parsed text: research_results/documents/parsed/a199e6fa5b0f89476c0da782645ee20e.txt
+- Text length: 448
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### ebd34508ab517ed00ccb36ea0e14fe3c (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Johnson Creek Commons - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Johnso
+- URL: https://www.quantumresidential.com/property/johnson-creek-commons/
+- Parsed text: research_results/documents/parsed/ebd34508ab517ed00ccb36ea0e14fe3c.txt
+- Text length: 447
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### ad180d986bc21dbc9330ab4c99ed5a39 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Victorian Olive Court - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Victor
+- URL: https://www.quantumresidential.com/property/victorian-olive-court/
+- Parsed text: research_results/documents/parsed/ad180d986bc21dbc9330ab4c99ed5a39.txt
+- Text length: 447
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 242331265137b9dca99f1446aee013ad (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Hayden Bridge Landing - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Hayden
+- URL: https://www.quantumresidential.com/property/hayden-bridge-landing/
+- Parsed text: research_results/documents/parsed/242331265137b9dca99f1446aee013ad.txt
+- Text length: 446
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 1b6cfd44da90cbca2fcac8d727414e90 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Lewis and Clark Plaza - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Lewis 
+- URL: https://www.quantumresidential.com/property/lewis-clark-plaza/
+- Parsed text: research_results/documents/parsed/1b6cfd44da90cbca2fcac8d727414e90.txt
+- Text length: 446
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 3b84d45df488922a79c1fb8761c9a967 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Jim and Salles Place - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Jim and
+- URL: https://www.quantumresidential.com/property/jim-and-salles-place/
+- Parsed text: research_results/documents/parsed/3b84d45df488922a79c1fb8761c9a967.txt
+- Text length: 444
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 79db51034d71903c40f75abd5dbd8cb7 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: East County Project - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us East Cou
+- URL: https://www.quantumresidential.com/property/east-county-project/
+- Parsed text: research_results/documents/parsed/79db51034d71903c40f75abd5dbd8cb7.txt
+- Text length: 442
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 551b53d89b7a0efb15b7be9b123dd3ba (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Woody Guthrie Place - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Woody Gu
+- URL: https://www.quantumresidential.com/property/woody-guthrie/
+- Parsed text: research_results/documents/parsed/551b53d89b7a0efb15b7be9b123dd3ba.txt
+- Text length: 442
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### d52f1652fdaadbbd2c96cafcda269dad (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Wynne Watts Commons - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Wynne Wa
+- URL: https://www.quantumresidential.com/property/wynne-watts/
+- Parsed text: research_results/documents/parsed/d52f1652fdaadbbd2c96cafcda269dad.txt
+- Text length: 442
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 2951884dd69327adcbaa55f42aa21643 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Firland Apartments - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Firland A
+- URL: https://www.quantumresidential.com/property/firland-apartments/
+- Parsed text: research_results/documents/parsed/2951884dd69327adcbaa55f42aa21643.txt
+- Text length: 441
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### f1cb88bb7347b4fc00550933ef9e5234 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: The Commons on MLK - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us The Commo
+- URL: https://www.quantumresidential.com/property/the-commons-on-mlk/
+- Parsed text: research_results/documents/parsed/f1cb88bb7347b4fc00550933ef9e5234.txt
+- Text length: 440
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 4bce2acdfd684ec902fbbdce86ade903 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Pennsylvania Place - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Pennsylva
+- URL: https://www.quantumresidential.com/property/pennsylvania-place/
+- Parsed text: research_results/documents/parsed/4bce2acdfd684ec902fbbdce86ade903.txt
+- Text length: 440
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 22c55d03014adf35618543ab6f48567f (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Blue Heron Hollow - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Blue Heron
+- URL: https://www.quantumresidential.com/property/blue-heron-hollow/
+- Parsed text: research_results/documents/parsed/22c55d03014adf35618543ab6f48567f.txt
+- Text length: 439
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### d425aae83eb9992a7dea44f66cd97d98 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Elk Creek Terrace - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Elk Creek 
+- URL: https://www.quantumresidential.com/property/elk-creek-terrace/
+- Parsed text: research_results/documents/parsed/d425aae83eb9992a7dea44f66cd97d98.txt
+- Text length: 439
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 6f232df7b455731acded00e409d68b90 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Greenview Terrace - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Greenview 
+- URL: https://www.quantumresidential.com/property/greenview-terrace/
+- Parsed text: research_results/documents/parsed/6f232df7b455731acded00e409d68b90.txt
+- Text length: 438
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### e130f1a4dac5d4a5a43706ec4ef97210 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Richardson Bridge - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Richardson
+- URL: https://www.quantumresidential.com/property/richardson-bridge/
+- Parsed text: research_results/documents/parsed/e130f1a4dac5d4a5a43706ec4ef97210.txt
+- Text length: 438
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 9b1e6456d44a5767911238ca150b39a9 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Valley Commons II - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Valley Com
+- URL: https://www.quantumresidential.com/property/valley-commons-ii/
+- Parsed text: research_results/documents/parsed/9b1e6456d44a5767911238ca150b39a9.txt
+- Text length: 438
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 2937528ed49e9ee9bf3867954810d25a (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Bellrose Station - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Bellrose St
+- URL: https://www.quantumresidential.com/property/bellrose-station/
+- Parsed text: research_results/documents/parsed/2937528ed49e9ee9bf3867954810d25a.txt
+- Text length: 436
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 62ac4d46556c5e1dd1f98064acd5318a (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: The Oaks at 14th - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us The Oaks at
+- URL: https://www.quantumresidential.com/property/oaks-14th/
+- Parsed text: research_results/documents/parsed/62ac4d46556c5e1dd1f98064acd5318a.txt
+- Text length: 436
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### d496072691c88d64786a02a5bed451ac (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Pinewood Terrace - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Pinewood Te
+- URL: https://www.quantumresidential.com/property/pinewood-terrace/
+- Parsed text: research_results/documents/parsed/d496072691c88d64786a02a5bed451ac.txt
+- Text length: 436
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 89c273256a8b0aead5ccaf3327ce630a (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Orchards of 82nd - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Orchards of
+- URL: https://www.quantumresidential.com/property/orchards-of-82nd/
+- Parsed text: research_results/documents/parsed/89c273256a8b0aead5ccaf3327ce630a.txt
+- Text length: 436
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 0513d540a51a43abd8dabc01538eb76a (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Eastgate Station - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Eastgate St
+- URL: https://www.quantumresidential.com/property/eastgate-station/
+- Parsed text: research_results/documents/parsed/0513d540a51a43abd8dabc01538eb76a.txt
+- Text length: 436
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 5769efe2043ff29c0e1d0ae2a75eaccd (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Huntington Court - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Huntington 
+- URL: https://www.quantumresidential.com/property/huntington-court/
+- Parsed text: research_results/documents/parsed/5769efe2043ff29c0e1d0ae2a75eaccd.txt
+- Text length: 436
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 03aa87139e5a69d6c46b83c7fa48d744 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Valley Commons I - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Valley Comm
+- URL: https://www.quantumresidential.com/property/valley-commons-i/
+- Parsed text: research_results/documents/parsed/03aa87139e5a69d6c46b83c7fa48d744.txt
+- Text length: 436
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 3dcd79a7c97b7305f20489d1ca17593d (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Camas Apartments - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Camas Apart
+- URL: https://www.quantumresidential.com/property/camas-apartments/
+- Parsed text: research_results/documents/parsed/3dcd79a7c97b7305f20489d1ca17593d.txt
+- Text length: 436
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 21640fd97c0aaddf50fc57c1eecc0182 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Casey Apartments - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Casey Apart
+- URL: https://www.quantumresidential.com/property/casey-apartments/
+- Parsed text: research_results/documents/parsed/21640fd97c0aaddf50fc57c1eecc0182.txt
+- Text length: 436
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### c7c901f58ee7d43a1c0d01c04204467e (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Norsemen Village - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Norsemen Vi
+- URL: https://www.quantumresidential.com/property/norseman-village/
+- Parsed text: research_results/documents/parsed/c7c901f58ee7d43a1c0d01c04204467e.txt
+- Text length: 436
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 315736b2585623649430c745d4cfe4be (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Terracina Vista - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Terracina Vi
+- URL: https://www.quantumresidential.com/property/terracina-vista/
+- Parsed text: research_results/documents/parsed/315736b2585623649430c745d4cfe4be.txt
+- Text length: 435
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 96552487b3fd2421596ff7a9cc6c769c (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Holgate Project - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Holgate Proj
+- URL: https://www.quantumresidential.com/property/holgate-project/
+- Parsed text: research_results/documents/parsed/96552487b3fd2421596ff7a9cc6c769c.txt
+- Text length: 434
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### cd5a6f658ca495af6aeb2a30d8cbb3ec (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Country Squire - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Country Squir
+- URL: https://www.quantumresidential.com/property/country-squire/
+- Parsed text: research_results/documents/parsed/cd5a6f658ca495af6aeb2a30d8cbb3ec.txt
+- Text length: 433
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 12e72f09e508d2aa0c59c8bcd068279f (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Crescent Court - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Crescent Cour
+- URL: https://www.quantumresidential.com/property/crescent-court-apartments/
+- Parsed text: research_results/documents/parsed/12e72f09e508d2aa0c59c8bcd068279f.txt
+- Text length: 432
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 8733c058ce6044d1fe2704c7051b21c6 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Canopy at Powell - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Canopy at P
+- URL: https://www.quantumresidential.com/property/canopy-at-powell/
+- Parsed text: research_results/documents/parsed/8733c058ce6044d1fe2704c7051b21c6.txt
+- Text length: 432
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### e7bd4f4dc934f4c724bb175e0a2cc9fd (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Hillside Manor - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Hillside Mano
+- URL: https://www.quantumresidential.com/property/hillside-manor/
+- Parsed text: research_results/documents/parsed/e7bd4f4dc934f4c724bb175e0a2cc9fd.txt
+- Text length: 432
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### b01800f62e710f0032fd482bc3377f92 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Westview Villa - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Westview Vill
+- URL: https://www.quantumresidential.com/property/westview-villa/
+- Parsed text: research_results/documents/parsed/b01800f62e710f0032fd482bc3377f92.txt
+- Text length: 432
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 320e264882ee60232e379133741e0f09 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Chestnut Grove - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Chestnut Grov
+- URL: https://www.quantumresidential.com/property/chestnut-grove/
+- Parsed text: research_results/documents/parsed/320e264882ee60232e379133741e0f09.txt
+- Text length: 432
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 6fc8734ce6361c22c4c17f240dec2ab6 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Spurling Court - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Spurling Cour
+- URL: https://www.quantumresidential.com/property/spurling-court/
+- Parsed text: research_results/documents/parsed/6fc8734ce6361c22c4c17f240dec2ab6.txt
+- Text length: 432
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 3ea8e42cb0d132d6e74b06ac6acdd312 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Leander Court - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Leander Court 
+- URL: https://www.quantumresidential.com/property/leander-court/
+- Parsed text: research_results/documents/parsed/3ea8e42cb0d132d6e74b06ac6acdd312.txt
+- Text length: 431
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 8e6598328ec32041913a46b619bda2a3 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Lents Village - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Lents Village 
+- URL: https://www.quantumresidential.com/property/lents-village/
+- Parsed text: research_results/documents/parsed/8e6598328ec32041913a46b619bda2a3.txt
+- Text length: 430
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 480ba47b21000a1a38c28f982c087338 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Cascade Manor - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Cascade Manor 
+- URL: https://www.quantumresidential.com/property/cascade-manor/
+- Parsed text: research_results/documents/parsed/480ba47b21000a1a38c28f982c087338.txt
+- Text length: 430
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 5690767b4beedb96f1ce1d614a4db078 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Aloha Project - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Aloha Project 
+- URL: https://www.quantumresidential.com/property/aloha-project/
+- Parsed text: research_results/documents/parsed/5690767b4beedb96f1ce1d614a4db078.txt
+- Text length: 430
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### a9bb4ad5be9d1af64a8b024132fbdfe9 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Cashmere Park - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Cashmere Park 
+- URL: https://www.quantumresidential.com/property/cashmere-park/
+- Parsed text: research_results/documents/parsed/a9bb4ad5be9d1af64a8b024132fbdfe9.txt
+- Text length: 430
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 82a169d067d1919ef2b552faafb4d3da (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Hampton Court - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Hampton Court 
+- URL: https://www.quantumresidential.com/property/hampton-court/
+- Parsed text: research_results/documents/parsed/82a169d067d1919ef2b552faafb4d3da.txt
+- Text length: 430
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 3a84823850b16fc1941f38a8feadd672 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Village Place - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Village Place 
+- URL: https://www.quantumresidential.com/property/village-place/
+- Parsed text: research_results/documents/parsed/3a84823850b16fc1941f38a8feadd672.txt
+- Text length: 430
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 22b1da9a7c55eacf8ea1ea9e880079e4 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Bascom Village II - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Bascom Vil
+- URL: https://www.quantumresidential.com/property/bascom-village-ii/
+- Parsed text: research_results/documents/parsed/22b1da9a7c55eacf8ea1ea9e880079e4.txt
+- Text length: 429
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### de0bd9dacf387e345ffe54f8d3f0866b (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Terrace Glen - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Terrace Glen 3.
+- URL: https://www.quantumresidential.com/property/terrace-glen-apartments/
+- Parsed text: research_results/documents/parsed/de0bd9dacf387e345ffe54f8d3f0866b.txt
+- Text length: 428
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 4d975cdf368929264ccdfe1c61f4409c (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: The Keystone - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us The Keystone 4.
+- URL: https://www.quantumresidential.com/property/the-keystone/
+- Parsed text: research_results/documents/parsed/4d975cdf368929264ccdfe1c61f4409c.txt
+- Text length: 428
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 4af1fa6c12b3a2f7df00a1a6d8442669 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Windsor Park - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Windsor Park 3.
+- URL: https://www.quantumresidential.com/property/windsor-park/
+- Parsed text: research_results/documents/parsed/4af1fa6c12b3a2f7df00a1a6d8442669.txt
+- Text length: 428
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### eb69fac6114a72c57ddbfa1738a42b91 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Easton Ridge - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Easton Ridge 4.
+- URL: https://www.quantumresidential.com/property/easton-ridge/
+- Parsed text: research_results/documents/parsed/eb69fac6114a72c57ddbfa1738a42b91.txt
+- Text length: 428
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 9a560738ebc5d9262fb2e59c11d697ba (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Joice Taylor - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Joice Taylor 9.
+- URL: https://www.quantumresidential.com/property/joice-taylor/
+- Parsed text: research_results/documents/parsed/9a560738ebc5d9262fb2e59c11d697ba.txt
+- Text length: 428
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### fb20149c161f61c6e56648540d55642a (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Park Village - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Park Village 3.
+- URL: https://www.quantumresidential.com/property/park-village/
+- Parsed text: research_results/documents/parsed/fb20149c161f61c6e56648540d55642a.txt
+- Text length: 428
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 046fe192b96a2c01f29b34ebb211503c (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Forest Park - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Forest Park 10.2
+- URL: https://www.quantumresidential.com/property/forest-park-apartments/
+- Parsed text: research_results/documents/parsed/046fe192b96a2c01f29b34ebb211503c.txt
+- Text length: 427
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 6dec9fcb5f4af0ab32993f31d3feb7cb (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: 18th Street - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us 18th Street 10.2
+- URL: https://www.quantumresidential.com/property/18th-street-apartments/
+- Parsed text: research_results/documents/parsed/6dec9fcb5f4af0ab32993f31d3feb7cb.txt
+- Text length: 427
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### ec83054cd49d52c62bcde89d810df8c5 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Marla Manor - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Marla Manor 10.0
+- URL: https://www.quantumresidential.com/property/marla-manor/
+- Parsed text: research_results/documents/parsed/ec83054cd49d52c62bcde89d810df8c5.txt
+- Text length: 427
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 456b6c834a63fd69a93b556c23ed1a0c (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Beyer Court - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Beyer Court 7.15
+- URL: https://www.quantumresidential.com/property/beyer-court-apartments/
+- Parsed text: research_results/documents/parsed/456b6c834a63fd69a93b556c23ed1a0c.txt
+- Text length: 426
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 75b41329167fc0cc9fab998b432bd6ae (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Munsel Park - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Munsel Park 7.12
+- URL: https://www.quantumresidential.com/property/munsel-park/
+- Parsed text: research_results/documents/parsed/75b41329167fc0cc9fab998b432bd6ae.txt
+- Text length: 426
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 3ff3fab2843802890ba91ea847ecf29f (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Vineyard II - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Vineyard II 3.12
+- URL: https://www.quantumresidential.com/property/vineyard-ii/
+- Parsed text: research_results/documents/parsed/3ff3fab2843802890ba91ea847ecf29f.txt
+- Text length: 426
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### d424b8ed261abd1e0e0c7399b7986342 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Edison Park - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Edison Park 3.12
+- URL: https://www.quantumresidential.com/property/edison-park/
+- Parsed text: research_results/documents/parsed/d424b8ed261abd1e0e0c7399b7986342.txt
+- Text length: 426
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 154c4988defec1ded443cde2fcf7f5df (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Lents 2000 - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Lents 2000 10.09.
+- URL: https://www.quantumresidential.com/property/lents-2000/
+- Parsed text: research_results/documents/parsed/154c4988defec1ded443cde2fcf7f5df.txt
+- Text length: 425
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 0034e235b9015f1e70670ff8e44995a7 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Vineyard I - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Vineyard I 3.12.2
+- URL: https://www.quantumresidential.com/property/vineyard-i/
+- Parsed text: research_results/documents/parsed/0034e235b9015f1e70670ff8e44995a7.txt
+- Text length: 424
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 3104a975296d67a4eaa7834fca1ac216 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Pine Point - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Pine Point 5.24.2
+- URL: https://www.quantumresidential.com/property/pine-point/
+- Parsed text: research_results/documents/parsed/3104a975296d67a4eaa7834fca1ac216.txt
+- Text length: 424
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 3f49cd22b9d9362dcc848805ce676b9c (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Selah Park - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Selah Park 3.08.2
+- URL: https://www.quantumresidential.com/property/selah-park/
+- Parsed text: research_results/documents/parsed/3f49cd22b9d9362dcc848805ce676b9c.txt
+- Text length: 424
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### a55e1dd2c5c472da651b0e1ee474094f (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Albina One - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Albina One 8.29.2
+- URL: https://www.quantumresidential.com/property/albina-one/
+- Parsed text: research_results/documents/parsed/a55e1dd2c5c472da651b0e1ee474094f.txt
+- Text length: 424
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### c053d274f88d76dc1114739758d0cb14 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Berg Rose - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Berg Rose 3.05.24 
+- URL: https://www.quantumresidential.com/property/berg-rose/
+- Parsed text: research_results/documents/parsed/c053d274f88d76dc1114739758d0cb14.txt
+- Text length: 422
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 9106077f707a7e2e22dc5cdc87ce5b54 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: New Winds - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us New Winds 7.12.18 
+- URL: https://www.quantumresidential.com/property/new-winds/
+- Parsed text: research_results/documents/parsed/9106077f707a7e2e22dc5cdc87ce5b54.txt
+- Text length: 422
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 83d870ea8ea571d07afe27781affea49 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Westcott - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Westcott 11.04.21 P
+- URL: https://www.quantumresidential.com/property/westcott/
+- Parsed text: research_results/documents/parsed/83d870ea8ea571d07afe27781affea49.txt
+- Text length: 421
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### a5c1a0dbdb584efb73c07034aab5339e (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Residence Search | Quantum Property Search for Residents Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Cont
+- URL: https://www.quantumresidential.com/residents/
+- Parsed text: research_results/documents/parsed/a5c1a0dbdb584efb73c07034aab5339e.txt
+- Text length: 421
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 795dec8abbe440a208ee94e0d5e18ec2 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Rose SFR - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Rose SFR 8.07.23 Pr
+- URL: https://www.quantumresidential.com/property/rose-sfr/
+- Parsed text: research_results/documents/parsed/795dec8abbe440a208ee94e0d5e18ec2.txt
+- Text length: 420
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### f60666507eede8575d5d63ebee6db9ee (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Paragon - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Paragon 3.12.24 Prev
+- URL: https://www.quantumresidential.com/property/paragon/
+- Parsed text: research_results/documents/parsed/f60666507eede8575d5d63ebee6db9ee.txt
+- Text length: 418
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### a8f97cbea18bcddce2649fc653868507 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: The Nel - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us The Nel 3.07.23 Prev
+- URL: https://www.quantumresidential.com/property/the-nel/
+- Parsed text: research_results/documents/parsed/a8f97cbea18bcddce2649fc653868507.txt
+- Text length: 418
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 73e87240bf915cd9c341617549bb102b (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Sarang - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Sarang 5.27.21 Previo
+- URL: https://www.quantumresidential.com/property/sarang/
+- Parsed text: research_results/documents/parsed/73e87240bf915cd9c341617549bb102b.txt
+- Text length: 416
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### 7fe32e915e7477e3458140fd6cd41512 (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Terms and Conditions - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Make th
+- URL: https://www.quantumresidential.com/terms-and-conditions/
+- Parsed text: research_results/documents/parsed/7fe32e915e7477e3458140fd6cd41512.txt
+- Text length: 397
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - Terms and Conditions - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Make the Move!
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### dc5029a90f39b84cde19344393aeb98e (risk=2)
+- Classification: quantumresidential:page
+- Domain: www.quantumresidential.com
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Property Search - Quantum Residential Home About Services Property Search Careers Residents Contact Us Home About Services Property Search Careers Residents Contact Us Make the Mov
+- URL: https://www.quantumresidential.com/property-search/
+- Parsed text: research_results/documents/parsed/dc5029a90f39b84cde19344393aeb98e.txt
+- Text length: 392
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: policy(1); privacy(1)
+- Summary:
+  - (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name
+- Binding-language context snippets:
+  - …696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+  - …e. (360) 696-9000 601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+- DEI-language context snippets:
+  - …601 E 16th St, Vancouver, WA 98663 info@Qresinc.com Team Member Portal 2024 © Quantum Residential
+  - All Rights Reserved
+  - Privacy Policy
+  - Accessibility Brand Name Brand Name…
+
+### d551ea3095e7b1990354a7dc3c2b63f6 (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess:  JFIF  H H   XICC_PROFILE    HLino  mntrRGB XYZ      1  acspMSFT    IEC sRGB                   -HP                                                cprt  P   3desc    
+- URL: https://www.quantumresidential.com/wp-content/uploads/2021/05/taylor-hernandez-401953.jpg
+- Parsed text: research_results/documents/parsed/d551ea3095e7b1990354a7dc3c2b63f6.txt
+- Text length: 2591322
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2021/05/taylor-hernandez-401953.jpg
+- DEI-language context snippets:
+  - …xc@r2O< Lm2N>lhRK1;H r' 2[<GD 1!rGn*PC;Ƨp ~%j;<sd@U#=N> l nܪoYF~BΪ݁< z  +ʮBoƥ0.̒I< > )Hf s2jH@g]s ' deIh̒e u *Q0.Hg ib<n >\<6EI<M )vь v 7o,su <HWH&%A*gI#@F R}OZp|Q$9fGMJy%D 9 LWw,@>w D9bXq27L 9!oozSP;zBϘ>FFg1v9Ϸ V(  |ÎQw…
+
+### 751feb8e88cecc6720a3587a09c346eb (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess:  JFIF ,,  'Exif  MM *                  b       j(       1       r2       i            ,     ,   Adobe Photoshop 7.0 2018:12:12 20:14:07     
+- URL: https://www.quantumresidential.com/wp-content/uploads/2021/05/3-D-Sarang-High-Res-Aerial-Rendering.jpg
+- Parsed text: research_results/documents/parsed/751feb8e88cecc6720a3587a09c346eb.txt
+- Text length: 2054911
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2021/05/3-D-Sarang-High-Res-Aerial-Rendering.jpg
+- DEI-language context snippets:
+  - …^׽u~{ߺ^׽u~{ߺ^׽u~{ߺ^׽u~{ߺ^׽u~_>wKsmJY tQmɞ z% C*E%TQhfotjrdR l}oU@޹5ً /Gk{ ِ a+8a#K h@eET{{^׺F=YQOe(2t x% uC0>//nw5=] }dei| Xj()^P 6!C]-2~  ~հ,^+ 7eu͗\>%gmJJCK \e(\Afw v'va:BW 2ҍ'>hIUtHt׽u~{ߺ^׽u~6s8#3y\n6 Z\}"3~zDo~Lm&*,~? A+a#J=gg[ Gu[= yҝ*$؀nYzt…
+
+### b3407df24592b8f42de0fdb218d1994d (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess:  JFIF  ` `   C  C  %"       
+- URL: https://www.quantumresidential.com/wp-content/uploads/2021/05/Hayden-Site-High-Res-Updated_3-10-2020.jpg
+- Parsed text: research_results/documents/parsed/b3407df24592b8f42de0fdb218d1994d.txt
+- Text length: 1927147
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2021/05/Hayden-Site-High-Res-Updated_3-10-2020.jpg
+
+### 9a1b693c35e973d60d177549b5e67ed7 (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess:  JFIF  H H   "Exif  MM *                XICC_PROFILE    HLino  mntrRGB XYZ      1  acspMSFT    IEC sRGB                   -HP                                    
+- URL: https://www.quantumresidential.com/wp-content/uploads/2021/05/bed-bedroom-chair-707581.jpg
+- Parsed text: research_results/documents/parsed/9a1b693c35e973d60d177549b5e67ed7.txt
+- Text length: 1389590
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2021/05/bed-bedroom-chair-707581.jpg
+
+### 1a4f8e8e700177433560dc025b06ca8c (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/png
+- Title guess: PNG      IHDR       <z   sRGB     gAMA   a    pHYs    od  IDATx^Y,; !="<!+9Wew'["5kk(Z^w2{m؀=s=owӱ5~[m)̓ZZ\<"6*r[ms=qKcF[Ί ںH\mfs4l[|E` ^˟YWhWc$,J HMX𲹢
+- URL: https://www.quantumresidential.com/wp-content/uploads/2023/03/Casey-FeatureIMG.png
+- Parsed text: research_results/documents/parsed/1a4f8e8e700177433560dc025b06ca8c.txt
+- Text length: 1113108
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+- Summary:
+  - Image asset (png). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2023/03/Casey-FeatureIMG.png
+- DEI-language context snippets:
+  - …> 8NiK[v- 1c t=6q̝|Fv e_e%H .6ONJS,ƆjSӧ$K\S^Oc-;_l @X⫅NQOT]w; R5h}NtE[j'sm yO'9E~ ޞ@#XۦOPYӍ #6fp lA7V)HRm%HD-8_G#ibDeiHy_qrΓL2 OVU}!X1[?T6:_"%k|<8#1Ċ,, 'h:3` \Kp5ex, #cW¯qhsc-lў]vwGa> ;[ƺVYj9!:oir,}*dx *T6#UkIVgS1@m i:]oFETJ*cB Mu |m@ʋeQ7…
+
+### 2ea032c46776252e52fbfd33edbed358 (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess: Exif  II*                                                                            (       1        2       i        
+- URL: https://www.quantumresidential.com/wp-content/uploads/2025/10/terracina-vista-exterior-9.jpg
+- Parsed text: research_results/documents/parsed/2ea032c46776252e52fbfd33edbed358.txt
+- Text length: 792516
+- Why it likely scored > 0:
+  - DEI terms: dei(2)
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2025/10/terracina-vista-exterior-9.jpg
+- DEI-language context snippets:
+  - …ʹڥGK 8~[~>Mr?E/ԶZ+QIi{w/ oJr{ 4ya + ikR_wsO#^g%4H^pʳ[OF xP!ኯ>P)ZBoD_h}#PpwmeߺWc~ F N6`=m2UB}[  y|6y]25oQs ~q /y{^a&#CT*} DeIH ˚. ?d,>o,.G#[.+Mm<CO 6 _9p -ڀɘۑYmJMojqO]5ʷ_ lt> DF[h(; ~zW:XOV:=<wF\qJ3!~g~Py{\ ǧMFx/ah4C$R@ء V~*D2 ֬zH:mr>{t?Tw:Y[1 !rnd0lDg(…
+
+### b9d1f115b4f6141d122e42cec38fd468 (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess:  Exif  II*         V       ^   (       1 -   f   2       i           H      H      Adobe Photoshop Express Windows 10 (Windows)  2021:02:09 12:06:00      
+- URL: https://www.quantumresidential.com/wp-content/uploads/2021/02/WG-18.jpg
+- Parsed text: research_results/documents/parsed/b9d1f115b4f6141d122e42cec38fd468.txt
+- Text length: 566144
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2021/02/WG-18.jpg
+- DEI-language context snippets:
+  - …|}N-_RȰ/D 6y|Kx.M\Cxg*u 5 >ّ-\dN0w8dA߿_ڙMY/f{ /[w$SrĪGfhL w]F~o/FѣZeؗ i^[1 D~.0$ @߯  ~S$%Ҭ]f  "+DWLh~GVG4L>Rӡ^" kLh$ dEiX#<Eb}6ߢ% {snjG5d҂j {s҈t5W?\~#6 _;s v9#,>A KuXzQ19frϭ {}+@'Yj BJVv/m }Ä́>^: j ڜ¹pQӎB6 B=TEiC9$ J 4.=Vp[m5?x`n&G!"d~…
+
+### cbc67a52937563f12660c2f2de32b909 (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess:  JFIF      C       C      !                 
+- URL: https://www.quantumresidential.com/wp-content/uploads/2024/02/park-villlage-apartments-i-ii-selah-wa-primary-photo.jpg
+- Parsed text: research_results/documents/parsed/cbc67a52937563f12660c2f2de32b909.txt
+- Text length: 551594
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2024/02/park-villlage-apartments-i-ii-selah-wa-primary-photo.jpg
+- DEI-language context snippets:
+  - …Lzˌ:śF]a]8H JHIXdoO?Ÿ专>ͳ%|]mԢUҔ` Z;n๰(XE |Bj.DǴn[Ӑ5V9qQtJUoæ%i|p)=K \Jcq5?M V+6B44%tnɐۈRY CgL~ѵ"#5ddpnGo/T忆Y)mJL~Ŷ !=)`RDEiJ/cM1qwvMC<1 pԿˌ6<Rq1 J"ㅠ  jBح  !;B" QBSBPz B|P*-((Bc] Q ;C@'ځ@P`P@W@ 5ߥAG<A]K7   aJ{{%m7[ h\"d;(]OB{> _z UL…
+
+### 219f9b0f06283ae87f11e3f3ca83e3dd (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess:  JFIF    C       C    U                 
+- URL: https://www.quantumresidential.com/wp-content/uploads/2024/03/edison-park-apartments-sunnyside-wa-building-photo-1.jpg
+- Parsed text: research_results/documents/parsed/219f9b0f06283ae87f11e3f3ca83e3dd.txt
+- Text length: 484750
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2024/03/edison-park-apartments-sunnyside-wa-building-photo-1.jpg
+
+### 37a520be03aab98f54637f6cc732ce34 (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess:  JFIF  H H   ICC_PROFILE    lcms  mntrRGB XYZ     ) 9acspAPPL                               -lcms                                                desc      ^cprt  \ 
+- URL: https://www.quantumresidential.com/wp-content/uploads/2022/05/stephanie-harvey-PPA6wsuedeM-unsplash-scaled.jpg
+- Parsed text: research_results/documents/parsed/37a520be03aab98f54637f6cc732ce34.txt
+- Text length: 461079
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2022/05/stephanie-harvey-PPA6wsuedeM-unsplash-scaled.jpg
+- DEI-language context snippets:
+  - …K9Ց XҊl3K< {U{l`PQ=8$eۭI@$<qU@ #LE|M9pqg Xg!ӀTxh 9c:R\sҀXeq돽 O[$ tc@>Nj DDT sւdHRPBHT 4l *s`HM ](PЩ%$# gp <deI\)g5csݡS ?XLe`sO6K zi>ӆ]ݪ 3= /N\1BrrHk=}8?Ւ˹NN\ː0r^ci$<SWb7F x2s޽-`Alzy<=N[ӐsT.U% XuX.Y nQ].Nso͝q MrëFD#}U.&Lt>ΖJ1^L{zXj28v^s…
+
+### 14926c8739ba0f5691225319d546bf08 (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess:  JFIF  H H   XICC_PROFILE    HLino  mntrRGB XYZ      1  acspMSFT    IEC sRGB                   -HP                                                cprt  P   3desc    
+- URL: https://www.quantumresidential.com/wp-content/uploads/2022/02/what-does-a-multifamily-manager-do-scaled.jpg
+- Parsed text: research_results/documents/parsed/14926c8739ba0f5691225319d546bf08.txt
+- Text length: 439364
+- Why it likely scored > 0:
+  - DEI terms: dei(2)
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2022/02/what-does-a-multifamily-manager-do-scaled.jpg
+- DEI-language context snippets:
+  - …2 `E-mBPIR0#GS .u`NZOuMQ  *$[O14XQ\")qjVI˶$E[ e&55b2O:f ONU); ULF(G#ʩZҬC#Z{TL&jv|#˕wH٠ps݀M+YZ v e*VYb$AW Fr,p "KِDEi `mdu Jxn@HxʓCLI4tf5cw )A#[P']ֹIC4YZ:U"f=:)$xuIYtc v2GVbyjA1]Ѓ)$фq`g EQ%#"}N:7U54%oh|mNZ\XJkY٭A#@ c4oSbL&eTOXZ[*25* ZFҌB̀J…
+
+### 38ac588a6bec834ba78cc6cae5c70a74 (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess:  JFIF  H H   ICC_PROFILE    lcms  mntrRGB XYZ     ) 9acspAPPL                               -lcms                                                desc      ^cprt  \ 
+- URL: https://www.quantumresidential.com/wp-content/uploads/2022/03/property-owners-property-management.jpg
+- Parsed text: research_results/documents/parsed/38ac588a6bec834ba78cc6cae5c70a74.txt
+- Text length: 408972
+- Why it likely scored > 0:
+  - DEI terms: dei(4)
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2022/03/property-owners-property-management.jpg
+- DEI-language context snippets:
+  - …vZIHi5cx۔3)Y(OYfٽ{֪q z_V:>7Xmg ,ݙSgx_v1fOer.W(]MK|<KFE6<HO j9"|v ` 0bY# O|;}.V  o e|6<Q܉ )w9ڥodk2vε \v.!CRxVzu%o \AG Ug*-JJY*-N9dEI 7H;OUIQWI vE1+ͤYysOhn@/N-I|И! M5 ݍ?'ÏA/~|ZUT/tI E5[  y}{E /G1HGOQ O]_['dk+Zp)((@:(>9v#tf}[} >qO5_D9ʜF;: _­l%W>wp i}(_K}vt;gu…
+
+### 51ef5542e55870e4099d3d91ecd0d789 (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/png
+- Title guess: PNG      IHDR        ?~m   sRGB     gAMA   a    pHYs    od  IDATx^%uOyozZVK4Itf^[ꖣHJH$")RDo` @ݭޟsw{Su  ߎؙy\S(@ Z̈Hgǎ|HR Eґ*t~S1eZZ jO[q P?fd(LRl>F4::B}}}L5UW܋g'~
+- URL: https://www.quantumresidential.com/wp-content/uploads/2023/04/24.png
+- Parsed text: research_results/documents/parsed/51ef5542e55870e4099d3d91ecd0d789.txt
+- Text length: 374535
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+- Summary:
+  - Image asset (png). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2023/04/24.png
+- DEI-language context snippets:
+  - …' LC!AC=! a^ MɆGXYS3 QɠaJ!$ U< :l^}iz Z` lN( j[ AR+΍TA A}-ƌ fVsz xķ 6jXi @N6+M) @ QOE[ 8Gxf:R DeI߻ :ӳ;(!MM͹r aK@4k[Ä< !&݊PS7  #L%d:ӻ sU<Iyh1t-r ^6( 4(Ź)U) B,>4++9VaAI tS 8+P, n{7_=cXlP^ :{{@鼽w>{S~[SJX ܫJ@&${  @݃ }suJ,}…
+
+### ad2b900e9e6b2794a9e941a26b1f23f4 (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess:  Exif  II*         V       ^   (       1 -   f   2       i           H      H      Adobe Photoshop Express Windows 10 (Windows)  2021:06:25 15:05:18      
+- URL: https://www.quantumresidential.com/wp-content/uploads/2021/08/IMG_0177_.jpg
+- Parsed text: research_results/documents/parsed/ad2b900e9e6b2794a9e941a26b1f23f4.txt
+- Text length: 348626
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2021/08/IMG_0177_.jpg
+
+### f84adf206a341ddc48ca30663aa22ce6 (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/png
+- Title guess: PNG      IHDR       ;cռ   sRGB     sBIT|d    IDATxr$~GD ڻ4!)lllټ.dz=t18&!On*@3@&2H f0  9ZkbX,bX,sn/8έmX,bX,q:kRr mgojgbnNu '+ڿ.mak %)󞽫N֮[xm/\[G,y|7Yˮb?(Y
+- URL: https://www.quantumresidential.com/wp-content/uploads/2022/06/Cathedral-Village.PNG-1.png
+- Parsed text: research_results/documents/parsed/f84adf206a341ddc48ca30663aa22ce6.txt
+- Text length: 277918
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+- Summary:
+  - Image asset (png). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2022/06/Cathedral-Village.PNG-1.png
+- DEI-language context snippets:
+  - …I㔶TA@)\-@UL<U$A-da$rw,d!16ch,,-q= M"y)"p _KƬt |N_tl0biɍW_`sgbȢWI:@wv* JBFxVTX\S9BͤFE`F,4GN $O慅*E1+OSBz> Fm1u\[Me#؝deIɀD>Uqp]m'BTkKnZDME9XA/q>&4E{20o/~6o6 pm:&5н*Ac qU #;0C!;-:&㬲,ωY?`iC?KsDFiZƺ.Kֵ4-ZN,6e J4;c m dBc8 3C}A\^g;]QIFlN1B`@…
+
+### bf752ec19c223c3466f451d8254827ef (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess:  JFIF  ` `   C       C    _"             
+- URL: https://www.quantumresidential.com/wp-content/uploads/2022/06/Crescent-Court-Rendering.jpg
+- Parsed text: research_results/documents/parsed/bf752ec19c223c3466f451d8254827ef.txt
+- Text length: 222804
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2022/06/Crescent-Court-Rendering.jpg
+- DEI-language context snippets:
+  - …j ;<m똫!ls  V[s _ AZx?$-u~  r% -uMkm5S>!k'H-JkV*A89?m\W] u x.epse?ֹMHoyf@I=j{ȏ=/%& MpHҰ>D |f#{I_֑Q%[C&pwN(sY<g10 fNE[X']6[DeI e\ wZjI  /n X  k!kESq1B *1Rf} sYhp+xr1 TڪIfڽM,2+>]zc8Fdv[|$N;40z-fhZF@H-TE}'O.u묵k|-kFnD8=+^KRRE]'+嬦=c`0+3T6nq r&͡ 5wK׵]--…
+
+### a54473fd37623b5766de7f14723e4b8c (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess:  JFIF  H H   ICC_PROFILE    lcms  mntrRGB XYZ     ) 9acspAPPL                               -lcms                                                desc      ^cprt  \ 
+- URL: https://www.quantumresidential.com/wp-content/uploads/2022/04/what-is-resident-retention-1-scaled.jpg
+- Parsed text: research_results/documents/parsed/a54473fd37623b5766de7f14723e4b8c.txt
+- Text length: 194170
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2022/04/what-is-resident-retention-1-scaled.jpg
+- DEI-language context snippets:
+  - …x :_p'ɳ%eQ,3 LQ{7XOe,yEdPERM*- vUUu6Y! aWPS|>o9Al.MD S"BH $T{ F 4+bH.d[*V@(J S R;r$&{FH_GY 0bQ'#u tEEeIɲɏtZ.P$(>EìTU*IDei/[}! 1iI3,7 \ ^2 Бa2&VΜI[F#<å NMlYb29Qmk6h0Lt\w|.C" E]{N:] NLID:/ A#:m\~R ltlo; ce^A ! n\&Dq+KI7Z0: dxWW+77hTJQ**EF…
+
+### 84986f213b75f252291b607d97de07ec (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess:  JFIF  H H   ICC_PROFILE    lcms  mntrRGB XYZ     ) 9acspAPPL                               -lcms                                                desc      ^cprt  \ 
+- URL: https://www.quantumresidential.com/wp-content/uploads/2022/05/eea-ikeda-L6OoL86ut-k-unsplash-scaled.jpg
+- Parsed text: research_results/documents/parsed/84986f213b75f252291b607d97de07ec.txt
+- Text length: 193858
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2022/05/eea-ikeda-L6OoL86ut-k-unsplash-scaled.jpg
+- DEI-language context snippets:
+  - …u֧x8]#ԝn::SĔSRwҾjr=:2jʄܵ[  ʛ:̽G_Ծ=x1`zu 1q)[ (8dzRRƌ߶^Ybn=.:ЮDL}*ȌVt'-ԶMc|=RP/Y ޝOdu%J4.=ֈ]T ?Z~%\Rܚ( u>sU3E\E7䚎JiG%=-O 4`٩Gjr~4IgdEIʈҭ WPmK i Sbߍwy5$IN KN$5Ʃ6U;e( keJ+M|79ǎ֢Y}Mإh /|xϺ|GSZKr~"YIſfu=> R٨KF&9kڏrcְ7֣$t?_:?Y²nT9IzCя3 f Y%^azgv>|D&U$5 ^p*1I$%m…
+
+### 2adca19a968eeeb581271ef2189aca0c (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess:  JFIF  H H   XICC_PROFILE    HLino  mntrRGB XYZ      1  acspMSFT    IEC sRGB                   -HP                                                cprt  P   3desc    
+- URL: https://www.quantumresidential.com/wp-content/uploads/2022/04/attributes-a-good-property-manager-should-possess-scaled.jpg
+- Parsed text: research_results/documents/parsed/2adca19a968eeeb581271ef2189aca0c.txt
+- Text length: 135560
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2022/04/attributes-a-good-property-manager-should-possess-scaled.jpg
+- DEI-language context snippets:
+  - …A>9)-ڊ&e[ Y"2,.[ˡ==j7y[MdϤƲŧ^KY17,t4vvJps *vग़S w&jN̙# if(6qN&6!tsM .Afǻޯu<n NT}[J\_'rpn.=.-Lr+[^ss\1黡jk4SW,\W<Yu;zo<% u|_+[>y5݆nX[dei2KoK4ܺ[)ɘoȗunt/~L8a[I1VdWx Ox' 4\Wt]s kE}= nQܩ\jlnnQYi>nn6m'w~Hua+ =s3]29oj-}xOY TW=Ӵ߃մgko\{dyjV'vEo`9#aZ8w/OUy{m c[J<2 N…
+
+### 514be1febd22e7f3b3583b75312a8354 (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess:  JFIF      (ICC_PROFILE         mntrRGB XYZ             acsp                                  -                                                    desc      trXYZ  d
+- URL: https://www.quantumresidential.com/wp-content/uploads/2023/10/18thStreet.jpg
+- Parsed text: research_results/documents/parsed/514be1febd22e7f3b3583b75312a8354.txt
+- Text length: 121300
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2023/10/18thStreet.jpg
+- DEI-language context snippets:
+  - …hAvy ^C+@bML;m%8u ɅaNqyx b,Y ^GK. Ƅ>#4JUHo[;84+ ; ;2AVpF4<uʶ%9xaI7 :;RY7SF%岒̧⳺A`zI+Ө$n ,HH 2itKiadk!QI E (]edeIr) q ͰUn؈j@"'}WO  !C w=#B7_K&a#q***Q@bM8%")-w#>?$^!?3˷~l#'ؑ>Dg` ptǁ=atWzGzOdXjF¶#8WV!OLML/=i ..(ٛ?H*L"QNh#>⸗[% _ urvH lo0$uI k'…
+
+### 266eb08420b3a62fa0177cd9470150d9 (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess:  JFIF       C     % #  , #&')*) -0-(0%()( C   ((((((((((((((((((((((((((((((((((((((((((((((((((( "             
+- URL: https://www.quantumresidential.com/wp-content/uploads/2024/02/2b38975809035d5ff115c0ee31c2cec2-cc_ft_960.jpg
+- Parsed text: research_results/documents/parsed/266eb08420b3a62fa0177cd9470150d9.txt
+- Text length: 111921
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2024/02/2b38975809035d5ff115c0ee31c2cec2-cc_ft_960.jpg
+- DEI-language context snippets:
+  - …rmX[d+qRbE gЌԘ  z}2YmFFz'vyե0 Q < P 1  YmFTvh!hL1<@*rӊ6 ʍ8# 2@@ y4ܤ 4rFqCPy*T9' Fgsd.zc/e{1D/mpѠ;FHt,7#yz[F'}!`On;G<ȑ <Dei b'boNBb\a>bz`g<Wl&e+- I q̀rP ;sEP].Z|mwy1Icq?Z蘝A< >Eke n &f|D]9$ 1y9=M?c&ПSJVt9bJiӈݓZ0k?nqV :)תgcI%vcP+Kso0ͻI# ^H el…
+
+### 17558c5b4af4dd2223bdf8571ca4e02c (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess:  JFIF           !!1&""&18/-/8D==DVQVpp   !!1&""&18/-/8D==DVQVpp V"  5                  
+- URL: https://www.quantumresidential.com/wp-content/uploads/2023/10/ForestPark.jpg
+- Parsed text: research_results/documents/parsed/17558c5b4af4dd2223bdf8571ca4e02c.txt
+- Text length: 101514
+- Why it likely scored > 0:
+  - DEI terms: dei(2)
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2023/10/ForestPark.jpg
+- DEI-language context snippets:
+  - …Noy'Yb; %\p V5o*Eni %NWY:gԓu Bv e[iЅj7KR9} R#Ӷn+cTq\%ӝ7E|qZ`$ : t VES_Yl Q3&S-ܦk@?,=ι =*1 ȾէgϢiiHvYh L fb3U3z? َrGbF-KjQ:ϟǷ Dei°kL Ð u][5ngɩv<{<G,w{X. I&}|M)q ?z bm4 n? pd#R`bا :#"MޕN6,u Lf> "OO6 AGgG~Cd:i X1=b2115 T0 Yb;`UxdlnKEylQչcMv,h_?…
+
+### 45340a0385c6ac4ca312a1195bb8eef5 (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/webp
+- Title guess: RIFF\ WEBPVP8X    ,   W  ICCPH      HLino  mntrRGB XYZ      1  acspMSFT    IEC sRGB                   -HP                                                cprt  P   3desc 
+- URL: https://www.quantumresidential.com/wp-content/uploads/2023/03/TheNel-FeatureIMG.webp
+- Parsed text: research_results/documents/parsed/45340a0385c6ac4ca312a1195bb8eef5.txt
+- Text length: 87326
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+- Summary:
+  - Image asset (webp). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2023/03/TheNel-FeatureIMG.webp
+- DEI-language context snippets:
+  - …TXv2]WǍxV `3^ѓ[\BByG*CN 1,3;cqvt&XUF ŀH07A ד7uu&USocd7lNtm6`Z{U.&QR   l,|8R.}(̝*~ w%en˶,@7̸i V]d̲*y^SueU6bGobXb !<_i:mXdEiH mÑeXO&F\ܘu^gև 1@*zҙWgzrYQe)F6%@EF#L.4E.8}b B: 4zn(_Xi[Tu6"({qP69Wy Ӌ9>+r6M(Ѹ#aTPr'aA*x@Ta**ܕEXr S[&" Tt_X}ȱ <:,y%&…
+
+### 85a98c348b7383018be12a42e1b6b262 (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess:  Exif  II*         V       ^   (       1 -   f   2       i           H      H      Adobe Photoshop Express Windows 10 (Windows)  2019:10:09 13:21:20      
+- URL: https://www.quantumresidential.com/wp-content/uploads/2019/10/F2_.jpg
+- Parsed text: research_results/documents/parsed/85a98c348b7383018be12a42e1b6b262.txt
+- Text length: 71023
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2019/10/F2_.jpg
+- DEI-language context snippets:
+  - …o4A?*:jR_ '1 \<zµ$4I*VJ7Z&"M ^2 Os~?^W R9^urq,ŮF [>|qrey96C$[~pO(['?/ J[[P}fcX (w{8 -~Ӈ<eya ey§*~7كq i ܾ/|m-v:]ֲ]Dei~O <Ę46- ^<O@ \i  ٿޟqS ~av-J 3I0]O%EB vl )2_i$` LEGӔ>bZD&q$5uN^s~~I ̥[Ѯ;ك~7G?0im]jKN!l%fT&6Ike ݥafWt1hQ q!Ǆ~CIp 5z Ư|N_I(q%A…
+
+### e9bdcd555e2ebff222e8f25e7da77190 (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess:  JFIF  ` `   C  C Q"       
+- URL: https://www.quantumresidential.com/wp-content/uploads/2024/02/vineyards-ii-grandview-wa-primary-photo.jpg
+- Parsed text: research_results/documents/parsed/e9bdcd555e2ebff222e8f25e7da77190.txt
+- Text length: 61704
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2024/02/vineyards-ii-grandview-wa-primary-photo.jpg
+- DEI-language context snippets:
+  - …iֈX;IM CR# c#}3[j05+1rrY%'m<7<Cg]jkX$\KjwM Xg]YWRߖe5()͸%yb/-#{%ww#V\W+\Eq4XpZM<OF[ưyOJ> uW&h 冘&RIY V{Ļ1If.3lgci:qF, ujuDeIzw8",,a^P~ xOM,ͅ6C/$0F 0,5ʼS<фa'&+Rn5PS]v[ζ i6l任]1no$@ &vǙ. Fѵzo!ү4@񥰾y hgopY"XGєLw~4sfմ:TkkOH^&_􉕰Fs 22` :O .8$`=N\= dFbUW ^z'…
+
+### 62d67ef2e126d40189cd5ac2bfa1931e (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/webp
+- Title guess: RIFF& WEBPVP8 & 7*9>a.G"&'#V gm_/P*2C/YЏ~_S?Q3_0xo`* }QpsCݝ޴PϘޠէ]ЧOO}})>iCտ__ ? w͇xu  ~o O? ~?zw{o_:x^ gkg<}~Fie@sWH0s%,{!3Zi`EjnUn,j X3SY|H
+- URL: https://www.quantumresidential.com/wp-content/uploads/2025/09/joice-taylor.webp
+- Parsed text: research_results/documents/parsed/62d67ef2e126d40189cd5ac2bfa1931e.txt
+- Text length: 39725
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+- Summary:
+  - Image asset (webp). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2025/09/joice-taylor.webp
+- DEI-language context snippets:
+  - …'4i1Ƨq?% M)& NaIn `tBƶ 2U:]^2I&;MR2(]lcrqb@9 PW%c4j7: $[WFW` =~`NN ϼ0vs:^VcAk%8Q:ROp5R\#Ǜ]uv PJ:US8d-DeiG 6_q:M덲?njܡRKŸ5<Swt^+HC2kP#}޳,! Tr|~v!~`I*⇜9A^SK % |]'Ø t21%(sax< a45ݿ#e<بȖ4%Բ+u<|f4X͋*eJ$v%uj"R $p]Zoki )$z, lRD_ԍ*…
+
+### 68fd30a0146a306c3289e900d82bf009 (risk=1)
+- Classification: quantumresidential:asset-image
+- Domain: www.quantumresidential.com
+- Content-Type: image/jpeg
+- Title guess:  Exif  II*         V       ^   (       1 -   f   2       i           H      H      Adobe Photoshop Express Windows 10 (Windows)  2019:10:08 16:47:08      
+- URL: https://www.quantumresidential.com/wp-content/uploads/2019/10/JCC-1_SQ.jpg
+- Parsed text: research_results/documents/parsed/68fd30a0146a306c3289e900d82bf009.txt
+- Text length: 33487
+- Why it likely scored > 0:
+  - DEI terms: dei(1)
+- Summary:
+  - Image asset (jpg). File appears to be a site image used in page content or layout: https://www.quantumresidential.com/wp-content/uploads/2019/10/JCC-1_SQ.jpg
+- DEI-language context snippets:
+  - …/0A/֛\j7"(`_QAG7sWCD ÓG˝?ecdO ;ϑ?R0_21ծ 'w{  1Ge7tN:->~ӛ-6 s I'S|'r̀qOϛ/?%~5tێ[oG}x|Rw-(V$k r7 |L~ c6j[}RiAmٛv_ٿ9ʤLTѣ.i&?R"dei\KNXݝn'̋YY}6m?نW㐴!侼jгC #dcH| 9,4mYa qH~Ҫ}<N4EEDKi#S#WwZ#[sqՅUI:ajPT<x'/ˡc\ٚO5UCnL~183B]֥aYuKŖ؏'I$߭+I d? %ABI,$ϓH:Mֿ5E*zK…
+
+### 60836bb392b2f12f39e28102c4ae36fa (risk=1)
+- Classification: government:site
+- Domain: www.hud.gov
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Contact information for FHEO Offices | HUD.gov / U.S. Department of Housing and Urban Development (HUD) Skip to main content An official website of the United States Government Her
+- URL: https://www.hud.gov/contactus/fairhousing
+- Parsed text: research_results/documents/parsed/60836bb392b2f12f39e28102c4ae36fa.txt
+- Text length: 5840
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: privacy(1)
+- Summary:
+  - Contact information for FHEO Offices
+  - HUD.gov / U.S.
+  - Helping Americans Help with Homeownership Find Affordable Places to Live Find a HUD-certified counselor Housing Choice Voucher Experiencing Homelessness Report an Issue Current HUD Residents Experiencing a Natural Disaster Find State Resources HUD Partners FHA
+  - Department of Housing and Urban Development Helping Americans HUD Partners Data & Research News About Contact Contact Us Contact information for FHEO Offices Contact FHEO On This Page Report Housing Discrimination Assistance for Persons with Disabilities Conta
+  - Department of Housing and Urban Development Thomas P.
+- Binding-language context snippets:
+  - …451 7th Street, S.W., Washington, DC 20410 T: (202) 402-3815 Find a HUD office near you Office of Inspector General
+  - No Fear Act
+  - FOIA
+  - Privacy
+  - Accessibility
+  - Web Policies
+  - Sitemap Website Feedback…
+- DEI-language context snippets:
+  - …treet, S.W., Washington, DC 20410 T: (202) 402-3815 Find a HUD office near you Office of Inspector General
+  - No Fear Act
+  - FOIA
+  - Privacy
+  - Accessibility
+  - Web Policies
+  - Sitemap Website Feedback…
+
+### 3ab0972aa46f257cd03b2af722485308 (risk=1)
+- Classification: infrastructure/reference
+- Domain: tinyurl.com
+- Content-Type: text/html;charset=utf-8
+- Title guess: Umatilla Superintendent Heidi Sipe Selected for COSA Colt Gill Leadership Award | Umatilla School District Skip to content Umatilla School District Building Bridges to Successful F
+- URL: https://www.umatilla.k12.or.us/article/2583213
+- Parsed text: research_results/documents/parsed/3ab0972aa46f257cd03b2af722485308.txt
+- Text length: 4110
+- Why it likely scored > 0:
+  - DEI terms: underserved(1)
+- Summary:
+  - Umatilla Superintendent Heidi Sipe Selected for COSA Colt Gill Leadership Award
+  - Umatilla School District Skip to content Umatilla School District Building Bridges to Successful Futures Menu Schools Translate Search Site Sign in Umatilla School District News
+  - Superintendent Sipe was presented with the award on December 4th in Eugene at the Oregon School Law Conference.
+  - The award honors leaders who demonstrate extraordinary impact in K-12 education, tireless work ethic, strong advocacy for public schools, and continuous, steady leadership through challenging circumstances.
+  - Umatilla school board chair Lesly Claustro-Sanguino shared her appreciation for Sipe’s leadership stating, “Not only is Heidi an exceptional leader in our district but in our state, and nationwide.
+- DEI-language context snippets:
+  - …g commitment to strengthening educational opportunities in rural communities. The nomination letter also highlighted her efforts to support underserved students, including her work in Washington, D.C., and her role in strengthening regional partnerships that help neighboring districts acces…
+
+### ce61429f7a2184a4678907a98c463d66 (risk=1)
+- Classification: government:site
+- Domain: www.hud.gov
+- Content-Type: text/html; charset=UTF-8
+- Title guess: Office of Equal Employment Opportunity: No Fear Act | HUD.gov / U.S. Department of Housing and Urban Development (HUD) Skip to main content An official website of the United States
+- URL: https://www.hud.gov/no-fear-act
+- Parsed text: research_results/documents/parsed/ce61429f7a2184a4678907a98c463d66.txt
+- Text length: 3077
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+  - Binding terms: privacy(1)
+- Summary:
+  - Office of Equal Employment Opportunity: No Fear Act
+  - HUD.gov / U.S.
+  - Helping Americans Help with Homeownership Find Affordable Places to Live Find a HUD-certified counselor Housing Choice Voucher Experiencing Homelessness Report an Issue Current HUD Residents Experiencing a Natural Disaster Find State Resources HUD Partners FHA
+  - Department of Housing and Urban Development Helping Americans HUD Partners Data & Research News About Contact Equal Employment Opportunity: No Fear Act Equal employment opportunity data posted pursuant to the No Fear Act Pursuant to the Notification and Federa
+  - 107-174, HUD is posting statistical data pertaining to complaints of employment discrimination filed by employees, former employees, and applicants for employment under 29 CFR Part 1614.
+- Binding-language context snippets:
+  - …451 7th Street, S.W., Washington, DC 20410 T: (202) 402-3815 Find a HUD office near you Office of Inspector General
+  - No Fear Act
+  - FOIA
+  - Privacy
+  - Accessibility
+  - Web Policies
+  - Sitemap Website Feedback…
+- DEI-language context snippets:
+  - …treet, S.W., Washington, DC 20410 T: (202) 402-3815 Find a HUD office near you Office of Inspector General
+  - No Fear Act
+  - FOIA
+  - Privacy
+  - Accessibility
+  - Web Policies
+  - Sitemap Website Feedback…
+
+### a6118b290fad4b795a070b61557b3182 (risk=1)
+- Classification: third-party:content
+- Domain: opportunityagenda.org
+- Content-Type: application/rss+xml; charset=UTF-8
+- Title guess: <?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://
+- URL: https://opportunityagenda.org/feed/
+- Parsed text: research_results/documents/parsed/a6118b290fad4b795a070b61557b3182.txt
+- Text length: 1200
+- Why it likely scored > 0:
+  - DEI terms: racial justice(1); social justice(1)
+- Summary:
+  - <?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="ht
+- DEI-language context snippets:
+  - …on/rss+xml" /> <link>https://opportunityagenda.org/</link> <description>narrative, long-term narrative shift, storytelling, social justice, racial justice, economic justice, immigration, human rights, gender justice</description> <lastBuildDate>Thu, 18 Dec 2025 18:37:36 +0000</lastBuildDate> <…
+  - …type="application/rss+xml" /> <link>https://opportunityagenda.org/</link> <description>narrative, long-term narrative shift, storytelling, social justice, racial justice, economic justice, immigration, human rights, gender justice</description> <lastBuildDate>Thu, 18 Dec 2025 18:37:36 +0000</…
+
+### 457312611cef31a2cfe6e349011f468e (risk=1)
+- Classification: third-party:content
+- Domain: opportunityagenda.org
+- Content-Type: application/rss+xml; charset=UTF-8
+- Title guess: <?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www
+- URL: https://opportunityagenda.org/comments/feed/
+- Parsed text: research_results/documents/parsed/457312611cef31a2cfe6e349011f468e.txt
+- Text length: 860
+- Why it likely scored > 0:
+  - DEI terms: racial justice(1); social justice(1)
+- Summary:
+  - <?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" > <ch
+- DEI-language context snippets:
+  - …on/rss+xml" /> <link>https://opportunityagenda.org/</link> <description>narrative, long-term narrative shift, storytelling, social justice, racial justice, economic justice, immigration, human rights, gender justice</description> <lastBuildDate>Thu, 18 Dec 2025 18:37:36 +0000</lastBuildDate> <…
+  - …type="application/rss+xml" /> <link>https://opportunityagenda.org/</link> <description>narrative, long-term narrative shift, storytelling, social justice, racial justice, economic justice, immigration, human rights, gender justice</description> <lastBuildDate>Thu, 18 Dec 2025 18:37:36 +0000</…
+
+### 43a842a53cfa511e1bc88276a0352d1c (risk=1)
+- Classification: government:site
+- Domain: www.oregon.gov
+- Content-Type: text/html; charset=utf-8
+- Title guess: Oregon.gov : State of Oregon Oregon.gov Top Services Top Links Looking for a State Agency? Search Agencies Looking for an Online Service? Search Services Featured News & Initiative
+- URL: https://www.oregon.gov/Pages/index.aspx
+- Parsed text: research_results/documents/parsed/43a842a53cfa511e1bc88276a0352d1c.txt
+- Text length: 720
+- Why it likely scored > 0:
+  - DEI terms: accessibility(1)
+- Summary:
+  - Search Services Featured News & Initiatives Did you know… Latest News Stories Go to Newsroom Footer Links At Your Service State Government State Agency Directory State Employee Search Online Services Newcomers Guide Veterans Outreach Elected Officials Governor
+- DEI-language context snippets:
+  - …oner News & Alerts News & Press Releases Road & Weather Conditions Health Authority News Wildfire Recovery Amber Alerts Flag Status Website Accessibility Website Feedback Terms & Conditions Supported Browsers Help & Resources Back to Top…

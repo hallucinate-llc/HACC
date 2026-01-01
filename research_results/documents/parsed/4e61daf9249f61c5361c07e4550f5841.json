@@ -1,0 +1,14 @@
+{
+  "pdf_path": "research_results/documents/raw/4e61daf9249f61c5361c07e4550f5841.pdf",
+  "parsed_text_path": "research_results/documents/parsed/4e61daf9249f61c5361c07e4550f5841.txt",
+  "parse_date": "2025-12-31T10:08:23.046887",
+  "source": "third_party:refresh_redownload",
+  "url": "https://www.oregon.gov/ohcs/development/Documents/Oregon%20SDC%20Study_FinalReport_121422.pdf",
+  "text_length": 695867,
+  "checksum": "d713e874dd4e660e7d80b2243bd02b2011890244cc316525474a1a3e272cb0eb",
+  "extraction_method": "ocrmypdf_force+pdftotext",
+  "ocr_available": true,
+  "ocr_attempted": true,
+  "ocr_used": true,
+  "needs_ocr": false
+}

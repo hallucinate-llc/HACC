@@ -1,0 +1,21 @@
+Seeded search summary - 2025-12-31 13:07:49
+
+- Download queue size (manifest entries): 568
+- PDFs fetched (files in research_results/documents/raw): 585
+- OCR parsed documents (manifest entries): 763
+
+Top domains by queued URL count:
+  - www.oregon.gov: 132
+  - www.hud.gov: 93
+  - www.hudexchange.info: 82
+  - olis.oregonlegislature.gov: 75
+  - dochub.clackamas.us: 32
+  - oregon.gov: 31
+  - files.hudexchange.info: 30
+  - www.oregonlegislature.gov: 27
+  - www.clackamas.us: 24
+  - archives.hud.gov: 14
+
+Notes:
+ - batch_ocr_parallel.py was run; it skips already-parsed files and merged metadata into parse_manifest.json.
+ - Some downloads/ocr operations failed; see manifests for details.

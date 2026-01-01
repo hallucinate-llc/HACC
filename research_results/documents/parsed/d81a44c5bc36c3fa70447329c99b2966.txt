@@ -1,0 +1,401 @@
+     ECalth
+     Oregon
+
+               Authority
+
+
+
+
+                                        Substance Use Disorder
+      Screening, Brief Intervention and Referral to Treatment (SBIRT)
+
+
+                                              Measure Basic Information
+
+Name and date of specifications used: The measure specifications were developed by OHA in
+collaboration with a workgroup including CCOs and clinics and included clinical piloting. The measure
+calls for use of standardized assessment tools.
+
+URL of Specifications: N/A. Value sets used in this measure may be accessed through the Value Set
+Authority Center (VSAC): https://vsac.nim.nih.gov/.
+
+Measure Type:
+L] HEDIS                   OC pal                O   Survey                        MH Other. Specify: OHA-developed
+
+Measure Utility:
+MM CCO Incentive           LJ state Quality      CJ CMS Adult Core Set             CJ CMS Child Core Set
+LJ other. Specify:
+
+Data Source:    Electronic Health Records
+
+Measurement Period: January 1, 2024 — December 31, 2024
+
+Benchmark:
+
+                                               2022                                2023                                2024
+                                Both components must be met.        |Both components must be met.       |Both components must be met.
+ Benchmark for OHA              Rate 1, screening: 68.2%            Rate 1, screening: 66.6%            Rate 1, screening: 66.6%
+ measurement    year            Rate 2, brief intervention: 53.5%   Rate 2, brief intervention: 28.7%   Rate 2, brief intervention: 46.7%
+ Improvement target for                                             MN Method with 1 percentage         MN Method with 2 percentage
+ OHA measurement year           |MN Method with no floor            point floor                         point floor
+                                                                                                        MY2021 & MY2022 75"
+ Source                         MY 2019 CCO 75th percentile         MY CCO 2021 75th percentile         Percentile
+
+For standard, national measures, the Metrics            & Scoring Committee has used CCO percentiles and
+national-level data/percentiles from the National Committee for Quality Assurance (NCQA). For all types
+of measures, Metrics and Scoring has also used CCO statewide data/percentiles. For ease of reference,
+the measurement year (MY) is noted for national-level and CCO statewide data/percentiles rather than
+the publication year. NCQA publishes annual data with national Medicaid, Commercial, and Medicare
+percentiles.
+
+Note on telehealth: This measure is telehealth eligible. The base denominator before exclusions and
+exceptions for SBIRT rate 1 (screening) is the same as the depression screening and follow-up measure
+(CMS2), which is telehealth eligible according to CMS 2024 telehealth guidance. For further information
+
+
+
+CCO Incentive Measure Specification Sheet for 2024 Measurement Year                                              Page lof 7
+December 29, 2023
+        CaAlth
+
+               Authority
+
+
+
+specific to Oregon, the Health Evidence Review Commission (HERC) has provided this guideline on
+telehealth services.
+
+Changes in Specifications from 2023 to 2024:
+
+    e    Replaced direct reference code ICD-10-CM code (251.5) with value set Palliative Care Diagnosis
+         (2.16.840.1.113883.3.464.1003.1167) based on change in measure requirements/measure
+         specification.
+
+
+ Value Set Name and OID                           Status
+
+
+ Value set Encounter to Screen for Depression     Added 12 CPT codes based on review by technical experts,
+ (2.16.840.1.113883.3.600.1916)                   SMEs, and/or public feedback. Deleted 12 CPT codes
+                                                  based on terminology update. Added 2 HCPCS codes
+                                                  (GO270, GO271) based on review by technical experts,
+                                                  SMEs, and/or public feedback.
+ Value set Substance Use Disorder                 Added 20 SNOMED CT codes based on review by technical
+ (2.16.840.1.113883.3.464.1003.106.12.1001)       experts, SMEs, and/or public feedback. Deleted     5 SNOMED
+                                                  CT codes (1142050005, 16236661000119100, 231475006,
+                                                  191877009, 361150008)      based on review by technical
+                                                  experts, SMEs, and/or public feedback.
+
+
+ Value set Dementia & Mental Degenerations        Deleted 3 ICD-10-CM codes (F01.51, FO3.91, F02.81) based
+ (2.16.840.1.113883.3.526.3.1005)                 on new or changed coding guidelines. Deleted 1 SNOMED
+                                                  CT code (230283005) based on terminology update.
+
+ Value set Hospice Encounter                      Added 2 SNOMED CT codes (305911006, 385765002)
+ (2.16.840.1.113883.3.464.1003.1003)              based on review by technical experts, SMEs, and/or public
+                                                  feedback.
+
+ Value set Hospice Care Ambulatory                Deleted     3 SNOMED CT codes (170935008, 170936009,
+ (2.16.840.1.113883.3.526.3.1584)                 305911006)     based on review by technical experts, SMEs,
+                                                  and/or public feedback.
+
+
+ Value set Patient Declined                       Added 1 SNOMED CT code (895451009) based on
+ (2.16.840.1.113883.3.526.3.1582)                 terminology update. Deleted 3 SNOMED CT codes
+                                                  (183944003, 413310006, 413312003) based on
+                                                  terminology update.
+
+ Value set Palliative Care Intervention           Deleted     3 SNOMED CT codes (305686008, 305824005,
+ (2.16.840.1.113883.3.464.1003.198.12.1135)       441874000)     based on review by technical experts, SMEs,
+                                                  and/or public feedback.
+
+
+                                                  Replaced direct reference code ICD-10-CM code (Z51.5)
+                                                  with value set Palliative Care Diagnosis
+                                                  (2.16.840.1.113883.3.464.1003.1167) based on change in
+                                                  measure requirements/measure specification.
+
+
+
+
+CCO Incentive Measure Specification Sheet for 2024 Measurement Year                                 Page 2 of 7
+December 29, 2023
+     CaAlth
+
+                Authority
+
+
+
+Denied claims: n/a
+
+
+                                                 Measure Details
+
+Measure Components and Scoring
+
+Detailed measure specifications for the depression screening and follow-up measure, which is used in
+SBIRT for the Rate 1 denominator and for denominator exceptions, are available in the eCQI Resource
+Center: https://ecqi.healthit.gov/ecqm/ec/2024/cms0002v13. Detailed value set contents are available
+in the Value Set Authority Center.
+
+Two rates are reported for this SBIRT measure:
+
+    (1)   The percentage of patients who received age-appropriate screening and
+
+    (2) The percentage of patients with a positive full screen who received a brief intervention, a
+          referral to treatment, or both
+
+Screening in an ambulatory setting is required once per measurement year. This measure does not
+require screening to occur at all encounters.
+
+Rate 1
+
+Data elements required denominator:         All patients aged 12 years and older before the beginning of the
+measurement period with at least one qualifying encounter during the measurement period.
+
+These denominator criteria for SBIRT Rate 1 are identical to the denominator criteria for the depression
+screening and follow-up measure (CMS2v13). The denominator exclusions for depression screening and
+follow-up, however, are different from the exclusions for SBIRT. SBIRT exclusions are set out below.
+Qualifying encounters are identified through the value sets Encounter to Screen for Depression
+(2.16.840.1.113883.3.600.1916), Physical Therapy Evaluation (2.16.840.1.113883.3.526.3.1022), and
+Telephone Visits (2.16.840.1.113883.3.464.1003.101.12.1080).
+
+Required denominator exclusions and exceptions: See below.
+
+Data elements required numerator: Patients screened on the date of the qualifying encounter or up to
+14 calendar days prior to the date of the qualifying encounter using an age-appropriate, SBIRT screening
+tool approved by OHA AND had either a brief screen with a negative result or a full screen.
+
+          Note: This measure leaves flexibility for clinical preferences on whether to do a brief screen
+          before a full screen. Although a negative brief screen is numerator compliant, a positive brief
+          screen, by itself, is not numerator compliant. If a patient has a positive brief screen, then a full
+          screen must be completed for numerator compliance on Rate 1. A full screen is numerator
+          compliant, regardless of the result.
+
+          Note: Approved SBIRT screening tools are available on the HSD-Approved Evidence-Based
+          Screening Resources/ Tools (SBIRT) page: https://www.oregon.gov/oha/HSD/AMH/Pages/EB-
+
+
+
+CCO Incentive Measure Specification Sheet for 2024 Measurement Year                                  Page 3 of 7
+December 29, 2023
+     CaAlth
+
+               Authority
+
+
+
+         Tools.aspx . The name of the screening tool used must be documented in the medical record,
+         but it does not need to be captured in a queryable field.
+
+         The clinician should interpret the age-appropriate screening tool to determine if the result is
+         positive or negative. Where the screening tool includes guidance on interpreting scores, the
+         clinician should consult that guidance. This is the same approach used to identify positive or
+         negative results for depression screening in CMS2. There may be instances in which it is
+         appropriate for clinicians to use their discretion in interpreting whether a result is positive or
+         negative, such as for patients reporting use of topical medicinal marijuana.
+
+         Note: The screening(s) and result(s) must be captured as queryable structured data in the EHR.
+         The EHR does not need to capture each response to each question in the screening tool as
+         structured data. It is acceptable to capture the interpretation and the follow-up as structured
+         data, without having a field for each question in the screening tool used. For supporting
+         documentation, keeping a scan or other non-structured documentation of the screening tool
+         (including the name of the screening tool used) is acceptable. The intent of this guidance is that
+         the data elements needed to calculate the measure can be reported out of the EHR, without
+         chart review. OHA does not intend to be prescriptive about how supporting documentation is
+         maintained in a patient’s medical record.
+
+Required exclusions for numerator: SBIRT services received in an emergency department (e.g., Place of
+Service 23) or hospital setting (e.g., Place of Service 21).
+
+Rate 2
+
+Data elements required denominator:        All patients in Rate   1 denominator who had a positive full screen
+during the measurement period.
+
+Required denominator exclusions and exceptions: See below.
+
+Data elements required numerator: Patients who received a brief intervention, a referral to treatment,
+or both during the qualifying encounter that is documented on the date of or up to two calendar days
+after the date of the qualifying encounter.
+
+         Note — Brief Intervention: Brief interventions are interactions with patients that are intended to
+         induce a change in a health-related behavior. They are short, one-on-one counseling sessions
+         ideally suited for people who use substances or drink in ways that are harmful or abusive.
+         Examples of brief interventions include assessment of the patient’s commitment to quit and
+         offer of pharmacological or behavioral support, provision of self-help material, or referral to
+         other supportive resources.
+
+         A brief intervention of less than 15 minutes can count for Rate 2 numerator compliance.
+         Because reimbursement codes for brief intervention services may require services of at least 15
+         minutes, such codes would undercount services that qualify for the Rate 2 numerator. Although
+         clinics may bill for SBIRT services when appropriate, this measure (unlike the earlier claims-
+         based CCO SBIRT measure) does not require use of billing codes to determine whether screening
+         ora brief intervention or referral occurred. Documentation in the medical record (e.g., through
+
+
+
+CCO Incentive Measure Specification Sheet for 2024 Measurement Year                                 Page 4of 7
+December 29, 2023
+     CaAlth
+
+                Authority
+
+
+
+        checkboxes, flowsheets, or other structured data) that a brief intervention was completed is
+        sufficient.
+
+        Note — Referral to Treatment: A referral is counted for Rate 2 numerator compliance when the
+        referral is made. Given the challenges of documenting whether a referral was completed (that
+        is, whether the patient actually saw the provider to whom       the patient was referred), numerator
+        compliance is not dependent on referral completion.
+
+Required exclusions for numerator: SBIRT services received in an emergency department (e.g., Place of
+Service 23) or hospital setting (e.g., Place of Service 21).
+
+Denominator            Exclusions and Exceptions — Rate 1 and Rate 2
+
+Required exclusions for denominator: Patients with:
+
+ Exclusions                      Value Set Name                Value Set OID
+ Active diagnosis of             Substance Use Disorder        2.16.840.1.113883.3.464.1003.106.12.1001
+ substance use disorder
+ Engagement in substance         Substance Use Disorder        2.16.840.1.113883.3.464.1003.106.12.1005
+ use disorder treatment          Treatment
+
+ Dementia or mental              Dementia & Mental             2.16.840.1.113883.3.526.3.1005
+ degeneration                    Degenerations
+ Hospice care                    Discharge to home for         SNOMEDCT Code 428361000124107
+                                 hospice care (procedure)
+ Hospice care                    Discharge to healthcare       SNOMEDCT Code 428371000124100
+                                 facility for hospice care
+                                 (procedure)
+ Hospice care                    Hospice Encounter             2.16.840.1.113883.3.464.1003.1003
+
+ Hospice care                    Hospice care [Minimum         LOINC Code 45755-6, where
+                                 Data Set]                     HospiceAssessment.result ~ "Yes (qualifier value)
+                                                               SNOMEDCT Code 373066001
+ Hospice care                    Hospice Care Ambulatory       2.16.840.1.113883.3.526.3.1584
+ Hospice care                    Hospice Diagnosis             2.16.840.1.113883.3.464.1003.1165
+ Palliative care                 Functional Assessment of      LOINC Code 71007-9
+                                 Chronic Illness Therapy -
+                                 Palliative Care
+                                 Questionnaire (FACIT-Pal)
+ Palliative care                 Encounter for palliative      ICD10CM Code Z51.5
+                                 care
+ Palliative care                 Palliative Care               2.16.840.1.113883.3.464.1003.198.12.1135
+                                 Intervention
+
+ Palliative care                 Palliative Care Encounter     2.16.840.1.113883.3.464.1003.101.12.1090
+
+
+
+
+CCO Incentive Measure Specification Sheet for 2024 Measurement Year                                   Page 5of7
+December 29, 2023
+    CaAlth
+
+              Auth 10r ity
+
+
+
+        Note: As with the earlier, claims-based version of this measure, SBIRT screening and
+        intervention services are designed to prevent Oregon Health Plan members from developing a
+        substance use disorder or for early detection. These services are not intended to treat members
+        already diagnosed with an active substance use disorder or those members already receiving
+        substance use treatment services.
+
+        The exclusions for active diagnosis of substance use disorder and for dementia or mental
+        degeneration, apply if they occur before the qualifying encounter (that is, before a visit that puts
+        the patient in the denominator for Rate 1). The exclusions for hospice or palliative care apply if
+        the patient is in hospice or palliative care for any part of the measurement period.
+
+        The exclusion for engagement in treatment applies if the patient was engaged in treatment
+        before the qualifying visit and up to one year before the start of the measurement year.
+
+Denominator Exceptions: Any of the following criteria also remove patients from the denominator.
+
+ Exception                                                                 Grouping Value Set
+ Patient Reason                                                            Patient Declined 1
+ Patient refuses to participate                                            (2.16.840.1.113883.3.526.3.1582)
+
+ Medical Reason(s)                                                  Medical Reason 1
+ Documentation of medical reason for not screening patient (e.g., | (2.16.840.1.113883.3.526.3.1007)
+ cognitive, functional, or motivational limitations that may impact
+ accuracy of results; patient is in an urgent or emergent situation
+ where time is of the essence and to delay treatment would
+ jeopardize the patient's health status)
+
+
+
+        Note: For this SBIRT measure, these exception criteria may be captured using the SNOMED-CT
+        codes in the value sets listed above or otherwise captured in a queryable field, such as a
+        checkbox for noting patient refusal of screening. In other words, as the measure steward for this
+        CCO SBIRT measure, OHA uses the same concepts but Is less stringent than the measure steward
+        for the depression screening and follow-up measure (CMS2) about how data is captured for
+        these denominator exceptions.
+
+        Note: These exceptions could be applied at different points in the SBIRT process. For example, if
+        the patient refuses screening at any point before the needed screening is completed, the
+        patient would be excepted from Rate 1. Because a positive full screen is required for a patient to
+        be counted in Rate 2, a patient who is an exception for Rate 1 would not be counted in Rate 2.
+
+                   Patient refuses brief screen = Exception. Patient is not counted in rate 1.
+                   Patient completes brief screen, which is negative. = Process complete, and patient is
+                   numerator compliant for Rate 1.
+                   Patient completes brief screen, which is positive. Patient then completes full screen. =
+                   Process complete for rate 1, and patient is numerator compliant. (If full screen is
+                   positive, proceed to evaluate brief intervention or referral for rate 2.)
+                   Patient completes brief screen, which is positive. Patient then refuses full screen, either
+                   before starting or partway through. = Exception. Patient is not counted in rate 1.
+
+
+CCO Incentive Measure Specification Sheet for 2024 Measurement Year                                 Page 6 of 7
+December 29, 2023
+|   | Oregon It |
+
+        C           Authority
+
+
+
+                e       Patient completes full screen, which is positive. Patient then refuses brief intervention
+                       or referral to treatment. = Patient is numerator compliant for rate 1 but is not counted
+                       for rate 2.
+
+Deviations from cited specifications for denominator: None.
+
+Deviations from cited specifications for numerator: None.
+
+What are the continuous enrollment criteria: For now, OHA does not use continuous enrollment
+criteria for EHR-based measures; the “eligible as of the last date of the reporting period” rule may be
+used to identify beneficiaries.
+
+What are allowable gaps in enrollment:             n/a
+
+Define Anchor Date (if applicable):          n/a
+
+For more information:
+
+    e       Educational materials and other resources related to EHR-sourced quality measurement can be
+            accessed through the CMS/ ONC eCQI Resource Center: https://ecqi.healthit.gov/ep-ec-ecqms
+    e       Value set content can be accessed through the Value Set Authority Center (VSAC) at the
+            National Library of Medicine. https://vsac.nim.nih.gov/
+                o       For more information about value sets and the code systems used, a guide can be found
+                        in the CMS Measure Management Blueprint:
+                        https://www.cms.gov/files/document/blueprint-codes-code-systems-value-sets.
+                                                                                                  pdf
+    e       Additional information on OHA reporting requirements will be available in the Year Eleven
+            (2024) Guidance Documentation, which will be posted at
+            httos://www.oregon.gov/oha/HPA/ANALYTICS/Pages/CCO-Metrics.aspx
+
+
+
+                                                         Version Control
+
+
+
+
+CCO Incentive Measure Specification Sheet for 2024 Measurement Year                                      Page 7 of 7
+December 29, 2023
+

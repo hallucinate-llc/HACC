@@ -1,13 +1,14 @@
 {
   "pdf_path": "research_results/documents/raw/e0e77cae191a75355e4664ccf427a3f2.pdf",
   "parsed_text_path": "research_results/documents/parsed/e0e77cae191a75355e4664ccf427a3f2.txt",
-  "parse_date": "2025-12-31T02:48:19.429357",
-  "source": "third_party:acousticalsociety.org",
-  "url": "https://acousticalsociety.org/wp-content/uploads/2025/03/ASA-Briefing.pdf",
-  "text_length": 277442,
-  "checksum": "f67d1f542eb9fb5d8d2fe1819ac9ebae0ab34e150815a172489f2552f99332a2",
-  "domain": "acousticalsociety.org",
-  "ingest_date": "2025-12-31T02:48:19.295823",
-  "content_type": "application/pdf",
-  "original_saved_path": "research_results/third_party_downloads/acousticalsociety.org/acousticalsociety.org_wp-content_uploads_2025_03_ASA-Briefing.pdf"
+  "parse_date": "2025-12-31T03:33:12.776592",
+  "source": "third_party:batch_parallel",
+  "url": "file://research_results/documents/raw/e0e77cae191a75355e4664ccf427a3f2.pdf",
+  "text_length": 359021,
+  "checksum": "c70eb666b98a8616ffa0be4235900d77ff6ee60d48247a6d04a3aa085c3ef0f0",
+  "extraction_method": "ocrmypdf_force+pdftotext",
+  "ocr_available": true,
+  "ocr_attempted": true,
+  "ocr_used": true,
+  "needs_ocr": false
 }

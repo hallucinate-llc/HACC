@@ -1,0 +1,289 @@
+# KG-driven follow-up discovery
+
+Generated: 2025-12-31T12:05:29
+
+## Inputs
+- Knowledge graph: research_results/audit_policy_knowledge_graph_20251231.json
+- Audit review CSV: research_results/audit_policy_reviews_20251231.csv
+
+## Top entities (by mentions weight)
+- OHCS (entity) weight=323
+- ISO (entity) weight=292
+- GET (entity) weight=270
+- DEI (entity) weight=264
+- STEM (entity) weight=253
+- OED (entity) weight=249
+- ASA (entity) weight=247
+- AMI (entity) weight=205
+- POST (entity) weight=197
+- ODOE (entity) weight=183
+- SDC (entity) weight=176
+- HTML (entity) weight=151
+- NSF (entity) weight=141
+- Quantum Residential (person) weight=127
+- ORCA (entity) weight=121
+- PSH (entity) weight=119
+- OBO (entity) weight=116
+- Summer St (person) weight=103
+- NE Suite (person) weight=103
+- FAX (entity) weight=103
+- All Rights Reserved (entity) weight=103
+- Impact Assessment (person) weight=102
+- EDPUB (entity) weight=95
+- Find Your New Home (entity) weight=95
+- Team Member Portal (entity) weight=94
+- Privacy Policy (person) weight=94
+- Oregon Housing and Community Services (entity) weight=93
+- HUD (government_body) weight=89
+- Accessibility Brand Name Brand Name (entity) weight=89
+- Oregon Employment Department (government_body) weight=86
+
+## Follow-up hit summary
+- Local text files scanned: 480
+- JSON artifacts scanned: 27
+- Hits written: 88
+
+## High-signal hits (top 60)
+
+### Oregon Employment Department + nondiscrimination
+- file: research_results/documents/parsed/b3b027941a48b0372a0fe52293173996.txt
+- snippet: …Human Resources The Office of Human Resources (OHR) provides human resource and labor consultation for all employees on topics such as recruitment, staff development, personnel administration, benefits administration, nondiscrimination and affirmative action, and cultural awareness and diversity. The Office of Human Resources supports the Oregon Employment Department statewide Labor Management Committee, advises the Equity and Inclusion Council, and c…
+
+### Oregon Employment Department + nondiscrimination
+- file: research_results/documents/parsed/e074d302eac8c1251ce84c7611f87a01.txt
+- snippet: …Ae The Office of Human Resources (OHR) provides human resource and labor consultation for all employees on topics such as recruitment, staff development, personnel administration, benefits administration, nondiscrimination and affirmative action, and cultural awareness and diversity. The Office of Human Resources supports the Oregon Employment Department statewide Labor Management Committee, advises the Equity and Inclusion Council, and c…
+
+### DEI Plan + retaliation
+- file: research_results/documents/parsed/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.txt
+- snippet: …laint comes in. This will be followed by sharing the Harassment and Discrimination Free Workplace Policy and an Opening Letter to the complainant stating the expectations of the investigation and giving information that retaliation is not permitted. Lastly, the opening letter also states that this matter will be handled confidentially, and appropriate action will be taken. This will be followed by an Opening Letter to the subject of the complaint,…
+
+### DEI Plan + nondiscrimination
+- file: research_results/documents/parsed/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.txt
+- snippet: …| | HAPO Services [Vacant] Affirmative Action Plan Affirmative Action Statement The purpose of DLCD’s Affirmative Action Plan is to establish the department’s policies of nondiscrimination and equal employment opportunity. DLCD commits to establishing and maintaining a workforce reflective of the diverse population within Oregon. DLCD has an affirmative action program that provides equal opportunities for…
+
+### DEI Plan + retaliation
+- file: research_results/documents/parsed/4260e59b296ab49cb9ae241fbba37c68.txt
+- snippet: …ation 0 Religious Discrimination 0 Sex-Based Discrimination oO o Sexual Harassment Title VII e Prohibition on Retaliation 18…
+
+### DEI Plan + nondiscrimination
+- file: research_results/documents/parsed/4260e59b296ab49cb9ae241fbba37c68.txt
+- snippet: …of 1967 e Americans With Disabilities Act of 1990 e Equal Pay Act of 1963 — 29 USC Chapter 8 Section 206 e Title VIl of the Civil Rights Act of 196 - 43 USC Chapter 411 e Genetic Information Nondiscrimination Act of 2008 (GINA) e Title VII of the Civil Rights Act of 1964 National Origin Discrimination 0 Pregnancy Discrimination 0 R…
+
+### HUD + quota
+- file: research_results/documents/parsed/121df9a7bd9e7fb132e4cbd006e418fd.txt
+- snippet: …e the KKK to use racial violence to protect the status quo. In the North and the West, Black people were not generally in as much danger, but they did suffer from systematic repression. Employment discrimination, racial quota systems in higher education, de facto segregation in schools, discrimination in banking and financial services, real estate prohibitions, police brutality, and policies that forced most Black people to live in segregate…
+
+### Oregon Employment Department + equity framework
+- file: research_results/documents/parsed/b3b027941a48b0372a0fe52293173996.txt
+- snippet: …n as well as shared services. Through these assignments, team members gain a better understanding of the programs they support and the audiences they are trying to reach. The Communications Office works through a robust equity framework through the following principles: ¢ The Equity and Inclusion Office (EIO) members are embedded in the communications process to provide an equity review of all materials ¢ Edit all content for readability and…
+
+### Oregon Employment Department + equity framework
+- file: research_results/documents/parsed/e074d302eac8c1251ce84c7611f87a01.txt
+- snippet: …— Explain the concepts of diversity, equity, and inclusion — Use our resources to learn more about reasonable accommodations, language access, affirmative action, Equity Framework, required and optional trainings, and agency policies and procedures related to equity and inclusion oY“~ ors ove ~~ wee 5be een entook Toate : ae…
+
+### DEI Plan + cultural competence
+- file: research_results/documents/parsed/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.txt
+- snippet: …ating for implicit bias; Ensure interview panels represent a diverse workforce; Conducting training for staff on Affirmative Action and Equal Employment Opportunity issues, workplace harassment, and cultural competence; Receiving and investigate discrimination complaints by the DLCD’s complaint procedures and make recommendations to the director or deputy director for appropriate action; and Conducting exit…
+
+### DEI Plan + lived experience
+- file: research_results/documents/parsed/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.txt
+- snippet: …n Planning Association and the American Water Resources Association to invite diverse perspectives into our work. DLCD supports retention efforts that ensure a welcoming environment that values diverse perspectives and lived experiences of individuals. New employees have an opportunity to meet with and learn about different groups and initiatives within the agency. This includes an introduction to the Land Conservation and Development Commission, the…
+
+### DEI Plan + cultural competence
+- file: research_results/documents/parsed/4260e59b296ab49cb9ae241fbba37c68.txt
+- snippet: …ar, OREA has made strides in our efforts to increase the representation of diverse employees. This goal remains a cornerstone of our commitment to better reflect and serve the diverse population of Oregon, enhancing our cultural competence and improving our service delivery to all Oregonians. In our ongoing efforts to foster a diverse and inclusive workforce, we now include language on all job descriptions that addresses the well-documented phenomenon of…
+
+### HUD + contract
+- file: research_results/documents/parsed/07191d2e982a998b5c108d04213e94bb.txt
+- snippet: …cretary Scott Turner on Fox & Friends - “DEI is dead at HUD.” Thursday, February 20, 2025 ICYMI | HUD and DOGE Recover $1.9 Billion of Misplaced Taxpayer Dollars Thursday, February 20, 2025 HUD Cancels $4 Million in DEI Contracts Thursday, February 13, 2025 HUD Secretary Scott Turner Launches DOGE Task Force to Eliminate Waste, Fraud and Abuse Thursday, February 13, 2025 ICYMI | Secretary Scott Turner on The Charlie Kirk Show Thursday, February…
+
+### HUD + agreement
+- file: research_results/documents/parsed/07191d2e982a998b5c108d04213e94bb.txt
+- snippet: …Disasters Wednesday, June 18, 2025 HUD Delivers Disaster Aid, Financial Flexibility for Oklahoma Residents Impacted by Natural Disasters Friday, June 13, 2025 HUD, Ginnie Mae, and Korea Housing Finance Corporation Sign Agreement to Advance Affordable Housing and Strategic Housing Finance Cooperation Wednesday, June 11, 2025 Andrew Hughes Confirmed as Deputy Secretary of U.S. Department of Housing and Urban Development Thursday, June 5, 2025 ICY…
+
+### HUD + bid
+- file: research_results/documents/parsed/07191d2e982a998b5c108d04213e94bb.txt
+- snippet: …News On This Page Press Releases Join the HUD News Mailing List Media Interview Requests Press Releases December Tuesday, December 30, 2025 HUD Financial Report Finds Billions in Potential Payment Errors Occurred During Biden Administration Monday, December 29, 2025 ICYMI | Secretary Turner Op-Ed in Fox News Digital: “Homeownership is making a comeback thanks to Trump, but there’s more to come” Friday, December 19, 2025 United States Senat…
+
+### HUD + bid
+- file: research_results/documents/parsed/0da0d7eead05f008d7561470a796b471.txt
+- snippet: …Tv:(p)wL|A4;Qg"yZbg ZB$8yPQfT.t(R oL9!( @ T \ (# O@@ : FrKbol7Ψ$~5ǗqaŖXc N WNHn'"#mBASWS'#P歙T )zTk1kD$HcUdDp? YO[)=³rox))TjM"TdaExC å f} bi)[IZzi}̭vXTEd}/R c fۇx} Ƴy*cOfȨip|O<Զ:!1C~ybID-C [*\E%L ),SMؐ%K-yY[=TsOov Nj eb$LFun$RI>ɭHmRFH Y<Tq Ȋ|=j1,+YI>gCȐ AX R?(vXfW".[+;=N% @ UY]XNI8+7X!Jm;qa*!:;~G/wAtЖ؊|<Rȼd9XH0:`+>U[E6w@<2  BQ[ x"lmlR~.Z¿\M LN" tB>T P3@m|@Фc~tCqGcn}h ;9,…
+
+### HUD + contract
+- file: research_results/documents/parsed/1171b9007c447304c2078fde38778fb3.txt
+- snippet: …cal leaders accountable for illegal race-based housing plans. 11. Uncovering Waste and Fraud Immediately upon President Trump taking office, HUD uncovered $1.9 billion in misplaced funds and cut $250 million in wasteful contracts, stewarding taxpayer dollars as promised. Learn More About HUD Helping Americans HUD Partners Researchers News About Contact U.S. Department of Housing and Urban Development U.S. Department of Housing and Urban Develop…
+
+### HUD + bid
+- file: research_results/documents/parsed/1171b9007c447304c2078fde38778fb3.txt
+- snippet: …no longer take a back seat to illegal aliens in any HUD-funded program. 3. Cutting Red Tape and Restoring Local Control HUD cut red tape and restored local control—ending the unaffordability of American homes under the Biden administration. This was achieved by slashing the Obama-Biden Affirmatively Furthering Fair Housing zoning tax, along with rescinding 12 additional sub-regulatory policies. Less red tape = more affordable homeownershi…
+
+### HUD + termination
+- file: research_results/documents/parsed/121df9a7bd9e7fb132e4cbd006e418fd.txt
+- snippet: …ying white neighborhoods. The capstone of the Blanchard Plan was to be the closure of Jefferson High School, and many Blacks at the time considered both Blanchard and Newman to be educational villains for their dogged determination to close the schools in Black neighborhoods. In 1979, school board chairman Jonathan Newman resigned when a longtime critic of the Blanchard Plan was appointed to the board. In 1980, Blanchard was fired in an acrimoniou…
+
+### HUD + contract
+- file: research_results/documents/parsed/121df9a7bd9e7fb132e4cbd006e418fd.txt
+- snippet: …, which was repealed in 1853. The Oregon constitution, adopted in 1857, banned slavery but also excluded Black people from legal residence. It made it illegal for Black people to be in Oregon or to own real estate, make contracts, vote, or use the legal system. Like earlier exclusion laws, the constitutional ban, which took effect when Oregon became a state in 1859, was not retroactive, which meant that it did not apply to Black people who were…
+
+### HUD + bid
+- file: research_results/documents/parsed/121df9a7bd9e7fb132e4cbd006e418fd.txt
+- snippet: …ulation turn to illegitimate activities. Portland was a wide-open town, where police and political corruption thrived well into the twentieth century. Consequently, the city’s underworld of illicit entertainment and “forbidden pleasures”—including bootlegging, gambling, and prostitution—emerged as the most racially fluid and integrated aspect of Portland life. There were legitimate businesses as well, of course, many of them in the William…
+
+### HUD + RFP
+- file: research_results/documents/parsed/14926c8739ba0f5691225319d546bf08.txt
+- snippet: …{œo{t B`i0~UC.+ib7wЃ (XY 5</,-qŔ_2kd:u D q_Zn*C ko,q+JmD JGx&\Qwsr)H &t>K*-Zrb&6n=)U-)]tҺ Nw̩C';qLXr\V΋G8 8#9C 7jVGM=qPPuV*I0s^T%GJKāo}\;ʒ? ) ,:QvhK0^LV cc~ObHΚ}j K 4%<۷s*A#9A cϼY RFP¥[7fid89m]  & ]ֿ4?qLL4$Э wHy$s3R_ eIy$#\[ R <H6pYshvY# mܨRS:kts -]%  L@pˏh G=C.4H󥲖{tovy /¿Ox`} Q蕯M Hi Qq$FӗMT|nz1s%k\Z#H Ltڀb S*R &:XzXJ:$s|\Lwh ?ݦqn)/s 8T[_6 #)?y@Ah[f}MZ%o&6 *˥= 㖌)[$…
+
+### HUD + bid
+- file: research_results/documents/parsed/14926c8739ba0f5691225319d546bf08.txt
+- snippet: …0;[AW9{RɑDF$듗%Y;7**VPd%\ޜA='o:z ? ^%Y]8NM0D3v؛N^PS+RIS. X"[-6EtUH<F:箊C(ɑ* J<\1u\$<{dOƚ8vEħYENYJnVJ):3Zkc6B@}(vH$ǭRcSq]a@1I)O`}b Kn.%P7 3U ȳ\c [y<edxҜV <[IrӪA$ Hαw1Wl eJFNqōY7m\.<!BIDiV1)` u:炑@![Ϧjٕ+pM7fcwWi-ښڮ 𴩞KQe% tmK# o($["Fae_'Mۭyn ,ǧNUqø.C*!Dh@b3 ^& ZTIR9ti[8> C@ZBu<(Յ#*no:klc K>-e pdl7ׄ8K0f6kzp9HI`5Q6Pv*˸ SE@9sH\ b]j!H ¡Wh\]-57%\ڮ26 NDʫp 9-GlZx1wl)FTӡOk-٦Rp~0B~mzET…
+
+### HUD + MWBE
+- file: research_results/documents/parsed/15b2fbd59e779bb261aa99a201a7ec54.txt
+- snippet: …ZP UРC#iD \'n \Η7{0K)lʆTH!r Ǳet{Csv/ -z׎z߮F; E3 :>ge|~ eQ=E˴.5noɽnlfo<| Zqh4zCSK-g=6:u0xݷQIڷ+pc O 7᯹> ĩr|lggqGqBp̺Sjk {1!Bϳ.'f="XjH]9Z{4̸m4r@\@61"5֔vF_5w.;;)sn fVz Wnpޛɾp:9}΁s? !G&?bcq['8 5mWBe    FNTN     "Q(@FJT d)(  IDF@@ *<H2# "4B#8"0d D ZR@(yxV 2IJ>LuU$)HZ+uj "<ѼJ6+i.I e2BPl $] ەvYq,S.lx͋Qbf_Fr pLkm; Afy zlm \o(y 'i,GkyaZ{n^o<ѯyOIuFb!k[kcU ,;g>g:z˄mSfl^<=m & Re얕Lql :…
+
+### HUD + bid
+- file: research_results/documents/parsed/15b2fbd59e779bb261aa99a201a7ec54.txt
+- snippet: …qG0͎jQZy2&0@ Q7+ָ4⻑ whCj;=ܦ#z  )oh),>ʷ7o)#3jW;!gS"aH$:BM6` f AךYԡe+Ef h pOzJkLM4ɀ& CHo5 s%ǌ -M.wR?)H}0p^9_Bk _59CIp" NxMOw F=޸/n5egX9PϳB dAK5 Ѵos4'= &|[=qͧ0Ji^T\#9<  gn]4/7Sl' A՞itEbid}ٴJ Vޖu:${x%jSDO>GdRj1cAObeRFȫ+ Wĝ{$w9CAGq~&hM4tQsad}s^5- & 0!͈=flMli zзamUo$C~HwY7<&(th aqP qvV,%qL )ք;Ҵ-9Ǩ-5-i㈐ Oտ١N<c79̾ rcſ[`娺 Dɛ(A G^eG`P70N@/jou:J$'hRLÈ_2 톚?"(qT1 % 8;p( ;kv k֩?…
+
+### HUD + bid
+- file: research_results/documents/parsed/1a4f8e8e700177433560dc025b06ca8c.txt
+- snippet: …q֦ɡC-6b[Չ cN+Xo=c:ɣ:r| V Y Uۥ?Sc0`();f^#q;ybI+RX{bvn8SS%98bve6 x ^dTÃpC^cE Eh,U<1IAv*@6gtku tA{|T}fS (]"q ikMzڝ.Gqh{H?[YV|= 8?Xyk6K_9_|b˿XsۓDҋC pɈe4P;+kDv⧊>ĩUuO{ !}߯D4xj>-\ի1I 9𚩦KBbIdq׾*@uTzF^o3`tV$CFE}`k|fuki^)m7n %-~moHM> 6^ɿąz2 ϖr[wo ֢_w{:?t^}}6tkKtlx8Gs~ M.m0 :s6IoxI={]<ɑO[ZÏ҂qdꫵ'aas&~m3_ ^ D?f[yr;v(2%㐴4 dcJ ǅ33#ych9y3DQ/[m8pVJTñj<hK o96<!',r :T.anhiyY;?ȝwCR!z ;o^~6XKN…
+
+### HUD + RFP
+- file: research_results/documents/parsed/1af62bf32113c269dca3aea29daec2db.txt
+- snippet: …rNEV Uӭ!5I$@dfa_sm!UE]$a;*^x(6Njj +`w~ǳ"< Fk n6jƾj _ n.jØr z I(lޚ@+|mbeœ`2=$TgÂ9Y&'4dd }jꂣfng =xѪH8\ u>a+vDCHH6 boX[6(9feexdQB,I0^Y. EP"^ T RTx,@i+Oł.G˾͚ 6 קW=ΓLIku jE}d8m*ؼ%7p~STRfp QC,Y@lޣ4V q <rD60wU@@ۖƗM  dlWrBӻq #05qE"WyV#KC,~ %x@,cYv$c3G P,[>i!`"l  ǯ87*Sq- PN_<*`s ;EM=!J]`+k<#Hai5%Rh$AV{Ձ>_D?ج9 '1I ,>xw8NT!ҽxg)2y%vf yKe_0lJx߹mdԀfPn"<WǏcUR))_ ho9 >Mʠ…
+
+### HUD + RFP
+- file: research_results/documents/parsed/219f9b0f06283ae87f11e3f3ca83e3dd.txt
+- snippet: …9W PNA-P~,@;hA<RLb   Bh bu[>T;1 ?::#"30G抰9TF[s*ER19`qBCwMmiX=%<zQm>tY4yA`CG, qjbm55CKc؈9dTU_V$NTwqG*+b3E14=h!c)ԶU)ކfģNG5֚ˍ6@;.}Upzs/z SY o&G]Wm2J6yht *rz_ ?=/tyOr:/g[4k n+]0* %eurgpCچWH \irfp'I $jěT,jݞU]>g(=6˫##+vCR>Ucؐ3 W[VrqJ)؎5A;,qd<VP$ס TLmϣТ.oݡ3eRBP jb=`܆BPN )  Ede}Vń ZtaJ/[@ʏЌO+ AΨ +JZֈ6$yO  QRCv0Y#g.QJ+NMU DҰ Q:??E \؎@Q??KQJJ:3om] z:~SAFL[FVYG-'7+VBT=h1= F<J)-…
+
+### HUD + RFQ
+- file: research_results/documents/parsed/219f9b0f06283ae87f11e3f3ca83e3dd.txt
+- snippet: …[ES |z~Pk@Ŗ j3YBDrS#>Y'C͍țYoj v\B|Vr[! 2ͯcݯʛcT+C  g=Bk  x`bn4! !j <}ƹ'k&*"ҹ*lk}GM!3cE)N@@fiGmcB@'^=#( [|Co!mlRB$Tqz:be?PvgFTQRzŻg(qH'(YJ@V8P)  ON+| 1N.'D!8? *J&︮R.Km) q  'E{?Vh O׺#o.jEaRfq ڤ-jBz<'Mq6EN < `K nkOɓ4[PeԒP<*? $&O2qLO ˄;K@̸IR\iA@z_w}gXL9|=>yBQj3na% 'l6*\! H?Lovm:ѩwcHD)=5NQ;TS#vjW*+Ha>l]s֨T I'v$E"e:F!xb`M+& n<AUU`!ʡv*BPKb uU C@]1mABP&-cF݈@ՇB 0>4z dи^^BthlXǽ c…
+
+### HUD + bid
+- file: research_results/documents/parsed/219f9b0f06283ae87f11e3f3ca83e3dd.txt
+- snippet: …d{MyV~))mXt ? g"\Q?oy A }[6sW9`KՑ3jkiTT܄>TQIV2zs\tbi #Mre:HFЌ9V灚SND'oEWzZ\m%(nWz^%chO6W[R˝T%8ި8;Az^w<VUosm>IL8~ +{j R sʾw(p} W䎟 4nδnHJ^Iy^gf;M iOO@+G U}<1K Sڅo !_OK`%2JH M}ZGHtjBIdp};JՁQ t/χK` DR Y=q_i.M*'/ TحX=m. ZKQ[隖׀ tP 4{Z?؂?f yCwuQ O]Qzr \+]qiV`[ʥM?)*OQO brrK RՊ5*n'狼&k?W*>L#R)4ǭ4dli 'C)N:aT7C)7 TH9MAM%ʱU!YXw$ )Ь^gbxMk6r=]pQ߃ē6c1̖rkҋQG l ؂o@y^wg~4M3 TN=I5QvQ퐒@…
+
+### HUD + DBE
+- file: research_results/documents/parsed/22adfaf76948415ff7e20b296b46cc29.txt
+- snippet: …󄪕)Cnvnoel(E A x) ]+npKrUňk@N ٷ3ck˨ZvmYD}ߴ 8wEpyCI[2Jr0Ŀ]@8h^q< pGz߄ AoO}.o -`<Ӈu"nM"c X%U&A5œ#}>K[1]<aH؀XEԆ$6bгI aa CdIY:%K֍/ōB! -:fNCݙфmh)~lcRkjH 7oK+ƙ߫FsH/ףé  RVX8pI{ lwxHRRH}s<)/DBEf!70a6>"*\I@`ɘ- ߲֕=Η4 e Wv~ 0y1 23_iz+ dpm _J@=,_!{ed { ݀&9] u Ԝ%Rը+*f ,?g23?Hj ,JrFv0 JC  H\!@}>P2S1D##me.v< 15)T%Oz\0ccě{xēl W\ߩI ) 1Z5J&],kҐ sێ*HɉUL՛|f-ʭ˖SL6c© /Qꤛ@P`%,z݇g= kw…
+
+### HUD + RFP
+- file: research_results/documents/parsed/22adfaf76948415ff7e20b296b46cc29.txt
+- snippet: …8*'cY JJ(metjXjJjI= QVvRiϬ6)R>{>FZTs)j7u''r-), t=U6/T>M75򊪉2I*&$ #IMKF݇#x# j<?`ORnmj _ULÓnT :\J4IN0[R-@W* J ҄ =c)W9&BeS2B1Q[[[WU5SfDJp ˈE( ,wS~䑨<IBڎW l~0 =aD< j,+s'\ I?-,"Zܒi/5D-$I," &/=IK2|N&8=brFp!Nqnc]>U7˛>QV X|LejJ&ULPBGRc]eddMO1)m:@^~;tX<86%dj6 pAF< [Jm۰qg b.ް`]A= .xA'fWxE  fhAK^~w@q AwcEx&6A~0B 41 S3l 11Hn _pIq(-!x`p: l An] h x Ϲ.  Ń]ߍ@;A0܈7bAD9{0I; _,B  :7b?&@~.Fւ…
+
+### HUD + DBE
+- file: research_results/documents/parsed/266eb08420b3a62fa0177cd9470150d9.txt
+- snippet: … msQ#58ic, 4+ b C+<y ʚqʋi啁/vpMBCϮqLbzU+M%1VS08fESݛ$RrHi2!qҫ 1eW7 []+&!HpJ8 =(wxLr,ԡ>$sP{Vrإ7|Q -Lhp|h? {׵x+xy[&j_79 F ^& <.vXc^W??A;Iu}bF@\4I#|?>%m2$19?  3\/g_jrnf֤A '+ 85䶿/bi6if   \7${W#Dbeo,vW ,ٜ| {iq QOt} ]WM s\`^ܭ`d$uG #Xe^z2Ey  g W_g5"}L\k^K+C5d42?XG\, `z+.ϦH'Mo84eg)oim<TrŁ!}1ئ$QaVjQv8})Plb {t}L)LV t#I S CP TE  mK73K#@͐B.e ) Gi  sHAj2O }a8]f ?c>o}z7d47 4v:⌌P>֎)…
+
+### HUD + RFQ
+- file: research_results/documents/parsed/266eb08420b3a62fa0177cd9470150d9.txt
+- snippet: … r?Cr񈜤cEP>9BQczhC"Z W絷BdP쪱$@ g sN F{&߯ ~'4+PR:PKRqjxD h(y> c}CJIT?_G<#j,(nXCѼip)'i }QJSmMB:#bҔyf1   ?:Դ1$ˤ2e}NpFNA@9Myoq ۢFCy ,o?^q0ds@jJ6\c-`㓟KEܣ:Şd]>HAσP.3j:T+}rG@N< LP P<tV dRFq:'"*!.Xi葅mZYڈ x-G/@O$:wVcOŎ3^FK: Sil{{=p3zmdrJgiaatsbynqUŕr!rR?Z^tJ2nObӬ4]&W_7X $^:ڴ!y.fr|AFH2n ۃדҭ/$`?Ti%{9l+G]2p ezhm LwG$YUcLprv$ܥŪ4fu])@0| zx/vm/7\FeUeXFKp0^S$6揎0p抓:1XeM'q q0;g?ʫOq: ˼N_݈M6y nT_ߋ…
+
+### HUD + bid
+- file: research_results/documents/parsed/266eb08420b3a62fa0177cd9470150d9.txt
+- snippet: …|?r^& !ss^6LEzpz5jKa2~8    A}BןWm<a  =t w6n?2>&%EslG08.v$E CD]KR@KoḖ }Dh\uY4(~A ]< hJj"Ǯ * 6~ ŪZIzQ-ڥµw]FyMzx30um, #ǳ n9}x溝Nl,&xFf' $]͞'oAZB40,*va  gx燵9\ç0 y4t8 t.{>9%s#L.{g  +>{>H^-^h MY|%o\BIdu )s=ME<Mٮ5ߝ)_r> ˽Vu<#$ ď)gVmF@%y'=]&h+3+FsĀ]PO?A-̫?j_ ")w)U!-#fP6rv@$ZtJL]6cL[.u 5 H ^yV98AkkAui&\<Qv7 ᷟ+5=WBצtֲ<QMmT Q(Fa7 >&]FĖ nĶ cھP7(`|f`g{ a`:Z90DYXwwZ~>jZ\^ ʌ$F]5}Ē33?gX|]w_l?γ~'p|I%ǨK]ۻz^T <j…
+
+### HUD + DBE
+- file: research_results/documents/parsed/29661131760fa5f575c2a7abd4c91a0a.txt
+- snippet: …Oī ;@%ނXQC]  @N`>1Sv~v3zM' bu0JB%* A & >_)/V4KX9fUBW͖ H9d1c葴 0<5I2IC: #IL%;\ 1h?̗THc?Y5OTIsԛE G 8-Hf>ǫ+&M)D E^ Gy2Ԧ@ cp")X$R~ wnYi@j2m8ւN* :Ɔ[G%#"ǰ͋z.5O *bi"q;v)jMߨ/j  WFa)İƨ$)DBE?4>[r Pڡ5qy/`_oR0Vi7nDc VFv ie% r/gr źTM6}b? woϾ(p} r q/e AdSG-GCO` L*L : f9`v@ѢZbǯLڅE'NٿqA[C7z, OUH , r6}) /PSkw ^1W;NE DwE9bˣ}qA|lf^ݷqS|sd H>l 1t*KUTǚ. zYpY$;\N B _-<P/lNdU[~#,\<(…
+
+### Oregon Employment Department + contract
+- file: research_results/documents/parsed/60ff12d7e79e6a9763b86f62b24ac6f4.txt
+- snippet: …adership transitions. Reporting agencies follow an established process based on agency size and include engagement with board or commission leadership when appropriate. Agencies with 75 or more employees use a statewide contract with Gallup to administer director evaluations, while smaller agencies may use a standardized, alternate process implemented in fall 2024. Percentage of 360 performance reviews for agency directors scheduled that occurr…
+
+### Oregon Employment Department + procurement
+- file: research_results/documents/parsed/645b1f978c1291384280119d20b07e77.txt
+- snippet: …cies. As cohorts convene in fall 2023, the Office of Cultural Change will offer supports that align around cohort needs (e.g. — foundational DEI learning, learning about state resources to expand DEI in operations like procurement and hiring, etc.). STATUS UPDATE: Agency Hiring Practices Time-to-Fill Positions It is the Governor's expectation that the average time-to-fill positions does not exceed 17 more than 50 days. We start calculating t…
+
+### Oregon Employment Department + contract
+- file: research_results/documents/parsed/645b1f978c1291384280119d20b07e77.txt
+- snippet: …ublic Utility Commission 94 3 Department of Veterans Affairs 60 2 Commission for the Blind 52 2 Construction Contractors Board 46 2 For Quarter Due July 31, 2023…
+
+### Oregon Employment Department + agreement
+- file: research_results/documents/parsed/645b1f978c1291384280119d20b07e77.txt
+- snippet: …Agencies without a review in the prior 12 months will be prioritized. Agency directors who report to a board or commission should have a review completed every two years by their governing body. DAS will provide a price agreement with available vendors to facilitate this process. DAS will also provide a 360-performance template for boards and commissions to use as a model by June 1, 2023. DAS will have the price agreement and template in place b…
+
+### Oregon Employment Department + minority-owned
+- file: research_results/documents/parsed/b3b027941a48b0372a0fe52293173996.txt
+- snippet: …on’s budget and where discretionary funding could assist with removing barriers or otherwise prioritizing equitable access. Due to staff turnover, this goal has been restarted. Contracting and Procurement Challenge 8: Minority-owned businesses and vendors are underrepresented in agency contracts. Action 8.1: Continue to streamline processes, participate in state outreach and engagement events, and promote opportunities with the Department of Admi…
+
+### Oregon Employment Department + safe space
+- file: research_results/documents/parsed/b3b027941a48b0372a0fe52293173996.txt
+- snippet: …one or more Empowerment Groups focused on disabilities. All Empowerment Groups focused on disabilities will have active executive-level sponsorship and participation. The groups will provide connection to mentors and a safe space to raise concerns, questions, and ideas related to disability inclusion. Division or team responsible for the action: Equity and Inclusion Office Initial milestones and next steps: First group was created in February…
+
+### Oregon Employment Department + monitoring
+- file: research_results/documents/parsed/b3b027941a48b0372a0fe52293173996.txt
+- snippet: …eo including the vision, goals, framework, group agreements, resource list, manager instructions, and participant survey. The Equity and Inclusion Office is responsible for monitoring participant feedback, providing technical assistance to managers and employees, and updating the project and resources as needed. Diversity, Equity, and Inclusion Initiatives Throughout the Agency We car…
+
+### Oregon Employment Department + termination
+- file: research_results/documents/parsed/b3b027941a48b0372a0fe52293173996.txt
+- snippet: …priority languages (pdf versions), and based on funding and capacity hopes to make these translations available in the online claims system. Action 14.11: Conduct plain language review and translate the Ul monetary determination form (form 196) and accompanying advisements into Spanish, at a minimum, and additional languages specified within the Employment Department’s Language Access Procedure depending on funding. These translations will go l…
+
+### Oregon Employment Department + procurement
+- file: research_results/documents/parsed/b3b027941a48b0372a0fe52293173996.txt
+- snippet: …csesesesesesaceesecevasaesesevesacaesesesasacaesesesaseseesesasaneseasesases 20 Decision-Making and Budgets ............ccccccssssceccssssseessssssessscssssssessseseseseessseseseseesssesesaeeess 30 Contracting and ProcureMent............ccccseecscsscscessssssssessssessessssseseeesesesseiesesessteesssesreten 31 Diversifying workforce and internal CUILUSE ..........cceccscccccseecseeeessetecsstecsssteceseeesasereesasen 33 SEPVICE DELIVEL…
+
+### Oregon Employment Department + contract
+- file: research_results/documents/parsed/b3b027941a48b0372a0fe52293173996.txt
+- snippet: …nscscesacseusesecsesesesesesaceesecevasaesesevesacaesesesasacaesesesaseseesesasaneseasesases 20 Decision-Making and Budgets ............ccccccssssceccssssseessssssessscssssssessseseseseessseseseseesssesesaeeess 30 Contracting and ProcureMent............ccccseecscsscscessssssssessssessessssseseeesesesseiesesessteesssesreten 31 Diversifying workforce and internal CUILUSE ..........cceccscccccseecseeeessetecsstecsssteceseeesasereesasen 33…
+
+### Oregon Employment Department + agreement
+- file: research_results/documents/parsed/b3b027941a48b0372a0fe52293173996.txt
+- snippet: …Employment Department | Employment.Oregon.Gov | EDPUB 225 052025 | Page 4 eo including the vision, goals, framework, group agreements, resource list, manager instructions, and participant survey. The Equity and Inclusion Office is responsible for monitoring participant feedback, providing technical assistance to managers and empl…
+
+### Oregon Employment Department + RFP
+- file: research_results/documents/parsed/b3b027941a48b0372a0fe52293173996.txt
+- snippet: …on.gov. Oregon Employment Department | Employment.Oregon.Gov | EDPUB 225 052025 | Page 95 ACSF 2AAIK? BU TZ 8 ANAT TO! PAGTY PDC MIDZ P (The Oregon Employment Department, OED) PATA ALA HEIN, 1D ATATACERFPIY MP NPT ASA OED 79 ATHY LAMA AISIL PAAPH PPANT PIS AT PIIIC HID ANCAP FT: Ader DIDPOP CHAS KATE FAP UPIDI ALPE AT Aer CAPE TPOR# ATH ATT? ANNP 1 503-947-1444 2 Lar PTTY FMPMP TH 711 LOOAE OL communications@employ.orego…
+
+### Oregon Employment Department + bid
+- file: research_results/documents/parsed/b3b027941a48b0372a0fe52293173996.txt
+- snippet: …minority owned vendors and small and intermediate contracts. Division or team responsible for the action: Administrative and Business Services Initial milestones and next steps: Increase percentage of contracts with COBID vendors from 5% to 10% of total contracts by June 2025. Progress report: In progress. OED met with a COBID subject matter expert in 2023 to learn more about the process and vendor support. OED also collected the Depart…
+
+### Oregon Employment Department + minority-owned
+- file: research_results/documents/parsed/e074d302eac8c1251ce84c7611f87a01.txt
+- snippet: …eerste? Wo PPLE CAL ES RY ar aks BOP NPR RP Ae PR ek ; Challenge 8: Minority-owned businesses and vendors are underrepresented in agency contracts. Continue to streamline processes, participate in state outreach and engagement events, and promote opportunities with the Department of Administrative…
+
+### Oregon Employment Department + safe space
+- file: research_results/documents/parsed/e074d302eac8c1251ce84c7611f87a01.txt
+- snippet: …ne or more Empowerment Groups focused on disabilities. All Empowerment Groups fo- cused on disabilities will have active executive-level sponsorship and participation. The groups will provide connection to mentors and a safe space to raise concerns, questions, and ideas related to disability inclusion. Division or team responsible for the action: Equity and Inclusion Office Initial milestones and next steps: First group was created in February 20…
+
+### Oregon Employment Department + monitoring
+- file: research_results/documents/parsed/e074d302eac8c1251ce84c7611f87a01.txt
+- snippet: …staff in fall 2022 to identify ongoing opportunities to improve the work and support the psychological safety of employees from historically marginalized communities. The Equity and Inclusion Office is responsible for monitoring participant feedback and updating the project and resources as needed. fe…
+
+### Oregon Employment Department + procurement
+- file: research_results/documents/parsed/e074d302eac8c1251ce84c7611f87a01.txt
+- snippet: …¢ Budget - financial analysis, guidance, and leadership to make sure we stays within funding limitations and maximizes opportunities to serve the public ¢ Procurement — centralized contracting and purchasing services « Property & Risk Management — centralize safety and facilities services ABS is implementing Oregon’s new web-based eProcurement system, Oregon Buy…
+
+### Oregon Employment Department + contract
+- file: research_results/documents/parsed/e074d302eac8c1251ce84c7611f87a01.txt
+- snippet: …ticipants will be able to: — Understand our requirements, responsibilities, and resources for providing an inclusive and respectful environment for our customers, employees, and contractors of all gender identities ¢ Required for all new employees ¢ Alive, 45-minute presentation for new employees ¢ Atthe end of this presenta…
+
+### Oregon Employment Department + agreement
+- file: research_results/documents/parsed/e074d302eac8c1251ce84c7611f87a01.txt
+- snippet: …a supportive mindset for equitable and inclusive practices and develop useful skills to be a change agent. The Equity and Inclusion Council developed all project materials, including the vision, goals, framework, group agreements, resource list, manager instructions, and participant survey. The Equity and Inclusion Council surveyed all staff in fall 2022 to identify ongoing opportunities to improve the work and support the psychological safe…
+
+### Oregon Employment Department + bid
+- file: research_results/documents/parsed/e074d302eac8c1251ce84c7611f87a01.txt
+- snippet: …< ss < as s ow dy abide © ceee arse eR ~ mH Sig SEV PyEES Ey ren ; é…
+
+### DEI Plan + women-owned
+- file: research_results/documents/parsed/07a1076fa131f26b2cdcc68681afddbb.txt
+- snippet: …Strategy 7 — Contract Equity and Improving Agency Procurement Processes The department applies equitable contracting and purchasing practices to promote recovery and community economic development for minority-owned, women-owned, service-disabled veteran-owned, and emerging small businesses. Actions ox 7.1 Ensure practices are in place to increase contracting opportunities for minority-owned, women- === amm owned, service-disab…
+
+### DEI Plan + minority-owned
+- file: research_results/documents/parsed/07a1076fa131f26b2cdcc68681afddbb.txt
+- snippet: …EI PLAN - 18 Strategy 7 — Contract Equity and Improving Agency Procurement Processes The department applies equitable contracting and purchasing practices to promote recovery and community economic development for minority-owned, women-owned, service-disabled veteran-owned, and emerging small businesses. Actions ox 7.1 Ensure practices are in place to increase contracting opportunities for minority-owned, women- === amm owned,…
+
+### DEI Plan + safe space
+- file: research_results/documents/parsed/07a1076fa131f26b2cdcc68681afddbb.txt
+- snippet: …tomers. The department has adopted clear processes for sharing and reporting racial discrimination complaints. Actions e e 9.1 Continue to ensure the agency has structures in place to provide all staff with safe space to (Cad) com-municate concerns or ideas related to equity. Continuously monitor practice to ensure employees have a safe space; review agency policy every three years. NN 9.2 Continu…
+
+### DEI Plan + monitoring
+- file: research_results/documents/parsed/07a1076fa131f26b2cdcc68681afddbb.txt
+- snippet: …for the infrastructure department. of our daily lives, of our loved ones’ lives, and the Monitoring and Evaluating critical support systems for ; ; O , . How we will monitor, evaluate, and…
+
+## Web query queue
+- Wrote: research_results/kg_followup_query_queue_20251231.txt (first 72 queries)

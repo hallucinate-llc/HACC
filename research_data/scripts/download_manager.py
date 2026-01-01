@@ -15,6 +15,17 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
+try:
+    from playwright.sync_api import sync_playwright
+    HAS_PLAYWRIGHT = True
+except Exception:
+    HAS_PLAYWRIGHT = False
+
+try:
+    from collect_brave import BraveCollector
+    HAS_BRAVE = True
+except Exception:
+    HAS_BRAVE = False
 
 class DownloadManager:
     """Manage downloads, deduplication, and metadata storage."""
@@ -67,8 +78,9 @@ class DownloadManager:
             resp = self.session.get(url, timeout=timeout, allow_redirects=True)
             resp.raise_for_status()
             
-            if resp.headers.get('content-type', '').lower() not in ['application/pdf', 'application/octet-stream']:
-                logger.warning(f"Unexpected content-type for {url}: {resp.headers.get('content-type')}")
+            ctype = resp.headers.get('content-type', '').lower()
+            if 'application/pdf' not in ctype and 'octet-stream' not in ctype:
+                logger.warning(f"Unexpected content-type for {url}: {ctype}")
             
             # Generate safe filename
             filename = hashlib.md5(url.encode()).hexdigest() + ".pdf"
@@ -77,6 +89,72 @@ class DownloadManager:
             # Save file
             with open(filepath, 'wb') as f:
                 f.write(resp.content)
+
+            # If saved file doesn't look like PDF, attempt fallbacks
+            saved_bytes = resp.content
+            if not saved_bytes.startswith(b"%PDF-"):
+                note = None
+                # Try Playwright redownload (browser context) if available
+                if HAS_PLAYWRIGHT:
+                    try:
+                        with sync_playwright() as p:
+                            browser = p.chromium.launch(headless=True)
+                            context = browser.new_context()
+                            page = context.new_page()
+                            r2 = None
+                            try:
+                                r2 = page.goto(url, wait_until='networkidle', timeout=60000)
+                            except Exception as e:
+                                note = f'playwright goto failed: {e}'
+                            if r2:
+                                try:
+                                    body = r2.body()
+                                except Exception:
+                                    body = b''
+                                c2 = (r2.headers.get('content-type') or '').lower()
+                                if ("application/pdf" in c2) or (body.startswith(b"%PDF-")):
+                                    with open(filepath, 'wb') as f:
+                                        f.write(body)
+                                    saved_bytes = body
+                                    note = 'recovered via playwright'
+                            context.close()
+                            browser.close()
+                    except Exception as e:
+                        logger.debug(f'Playwright redownload error: {e}')
+
+                # If still not PDF, try Brave search for alternate sources
+                if (not saved_bytes.startswith(b"%PDF-")) and HAS_BRAVE:
+                    try:
+                        bc = BraveCollector()
+                        # build a filename-based query
+                        fname = url.split('/')[-1]
+                        fname = fname.split('?')[0]
+                        if fname:
+                            query = f'"{fname}" filetype:pdf'
+                        else:
+                            domain = url.split('/')[2] if '//' in url else url
+                            query = f'site:{domain} filetype:pdf'
+                        results = bc.search(query, count=10)
+                        for r in results[:6]:
+                            cand = r.get('url')
+                            if not cand:
+                                continue
+                            try:
+                                rr = self.session.get(cand, timeout=30)
+                                rr.raise_for_status()
+                                if rr.content.startswith(b"%PDF-"):
+                                    with open(filepath, 'wb') as f:
+                                        f.write(rr.content)
+                                    saved_bytes = rr.content
+                                    note = f'recovered via brave search {cand}'
+                                    break
+                            except Exception:
+                                continue
+                    except Exception:
+                        logger.debug('Brave search fallback failed')
+
+                if note:
+                    logger.info(f'{url} fallback note: {note}')
             
             # Record metadata
             metadata = {
@@ -84,7 +162,7 @@ class DownloadManager:
                 "source": source,
                 "filepath": str(filepath),
                 "download_date": datetime.now().isoformat(),
-                "file_size": len(resp.content),
+                "file_size": len(saved_bytes),
                 "content_type": resp.headers.get('content-type', 'unknown')
             }
             self.manifest["downloads"].append(metadata)

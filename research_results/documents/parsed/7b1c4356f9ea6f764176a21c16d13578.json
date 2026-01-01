@@ -1,0 +1,14 @@
+{
+  "pdf_path": "research_results/documents/raw/7b1c4356f9ea6f764176a21c16d13578.pdf",
+  "parsed_text_path": "research_results/documents/parsed/7b1c4356f9ea6f764176a21c16d13578.txt",
+  "parse_date": "2025-12-31T16:31:44.900640",
+  "source": "third_party:batch_parallel",
+  "url": "file://research_results/documents/raw/7b1c4356f9ea6f764176a21c16d13578.pdf",
+  "text_length": 111813,
+  "checksum": "65a7c6e1a04f2ff2aadc7dc396e12c757b500a0b7ea70564323b716ffefb22c9",
+  "extraction_method": "ocrmypdf_force+pdftotext",
+  "ocr_available": true,
+  "ocr_attempted": true,
+  "ocr_used": true,
+  "needs_ocr": false
+}

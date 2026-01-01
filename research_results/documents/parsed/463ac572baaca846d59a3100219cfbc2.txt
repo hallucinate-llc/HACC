@@ -1,0 +1,995 @@
+            ee      Me
+
+           Q “lal
+             &
+      oY
+
+
+
+
+                         swe?
+                           os
+  w
+  S
+
+
+
+              il”
+  =
+  -
+
+                         Mra
+           ll DEV eo
+
+
+  D I S   n l i n e
+I       O
+           EDI ERROR MESSAGES
+Integrated Disbursement and Information System Online (IDIS Online)
+C04
+
+
+
+
+U.S. Department of Housing and Urban Development
+
+
+
+
+March 2022
+ eiMENT Of
+
+
+
+
+                                                                         IDIS Online/EDI Error Messages
+
+
+IDIS Online EDI Error Messages Revision Sheet
+
+     Date                                        Revision Description
+11/16/2001   Added error messages 371 to 376 in release 6.5.
+01/31/2002   Added error messages 377 and 378 in release 6.6.
+04/23/2002   Added error messages 379 to 413 in release 6.7.
+09/27/2002   Added error message 414 for release 6.9.
+11/29/2002   Added error message 415 to 430 for release 7.0.
+02/28/2003   Added error message 431 to 434 for release 7.1.
+03/18/2004   Added error messages 435 through 482 for release 8.0.
+09/16/2004   Added error messages 483 through 507 for release 8.3. Changed processing on BEN data
+             for CDBG to allow 0 and to handle nulls.
+07/12/2005   Added error messages 508 through 514 for release 8.7.
+11/28/2005   Added error messages 515 through 540 for release 9.0.
+05/06        Added error messages 541 through 576 for release 10.0.
+04/07        Added error message 577 through 590 for release 10.2.
+02/15/2008   Changed error message 563 for release 10.3.3.
+09/11/2009   Added error messages for IDIS-Online Release; old message numbers have been retired.
+09/18/2009   Updated message text for errors 1144 and 1292.
+10/08/2009   Updated message text for error 1388.
+11/10/2009   Added error 1550, Updated message text for errors 1356, 1358, 1359, 1360.
+01/13/2010   Added error 1551, 1552, 1553, 1554. Updated message text for errors 1297, 1298, 1299,
+             1300.
+02/18/2010   Updated message text for error 1543.
+03/09/2010   Added error messages 1555 — 1562.
+06/22/2010   Added Error 1563 through 1569. Updated message text for error 1543.
+09/07/2010   Added error message 1570. Updated message text for error 1050.
+12/08/2010   Added error messages 1571, 1582. Updated message text for errors 1245 and 1247.
+04/28/2011   Added error messages 1583 - 1592.
+07/05/2011   Added error messages 1593 - 1595.
+10/19/2011   Updated message text for errors 1379. Added error messages 1596 — 1602.
+12/09/2011   Added error messages 1603 - 1644. Updated message text for errors 1407, 1457 and 1473.
+
+
+05/03/2012   Added error messages 1645 — 1653.
+09/04/2012   Added error messages 1654 — 1655.
+04/29/2013   Added error messages 1656-1657.
+11/05/2013   Added error messages 1658-1659.
+02/09/2014   Added error messages 1660 — 1661.
+03/21/2017   Added error messages 1662 — 1666.
+03/07/2018   Added error messages 1667 — 1670.
+07/30/2019   Added error messages 1671 — 1672.
+
+
+
+
+                                                                                                    Page ii
+Cy
+    on ENT Or hy
+
+
+
+
+,               é
+    "ean neve                                                                        IDIS Online/EDI Error Messages
+
+6/12/2020           | Updated references to TIN. The TIN NUM field contains the grantee’s Employer
+                      Identification Number. The Employer Identification Number (EIN) is a type of TIN issued by
+                      the IRS to identify a business entity. An EIN is not associated with an individual and as such
+                      is not PIl.
+03/03/2022          | Updated HOME     activity record layouts to incorporate HOME-ARP     related changes. New
+                      data elements and error messages added.
+
+
+
+
+                                                                                                                Page 3
+   AMENT On
+
+
+
+
+                                                                                IDIS Online/EDI Error Messages
+
+
+IDIS ONLINE/EDI ERROR MESSAGES
+IDIS processes the EDI transactions you send it. If, however, there is an error in an EDI transaction, then
+IDIS returns the transaction with an IDIS / EDI Error Message Number. Use this number to find the
+corresponding IDIS/EDI Error Message Description in the list below. Once you find the description, correct
+the error and resubmit the IDIS/EDI transaction.
+
+  IDIS/EDI                                        IDIS/EDI Error Description.
+  Error No.
+     1000     Invalid Grantee EIN.
+     1001     Plan year not found for grantee.
+     1002     Plan year must be between 1972 and <current year + 1>.
+     1003     idis_proj_id not found.
+     1004     Data format invalid (<regex>).
+     1005     Access Grantee EIN cannot match Grantee EIN.
+     1006     Invalid Access Grantee EIN.
+     1007     Project Status ID must be 1 or 4.
+     1008     Project status ID cannot be set to 4 (cancelled) because it has associated activities.
+     1009     One or more program area amount must be greater than $0.00.
+     1013     idis_actv_id not found.
+     1018     Activity status must be changed to Open before any other changes can be made.
+     1019     actv_completed_dt must be equal to or later than init_funding_dt.
+     1020     Funds must be deobligated before completing the activity.
+     1021     Activity CDBG completion validation is disabled but activity has CDBG data. Activity status
+              cannot be changed to completed.
+     1022     Activity ESG completion validation is disabled but activity has ESG data. Activity status
+              cannot be changed to completed.
+     1023     Activity HOME completion validation is disabled but activity has HOME data. Activity status
+              cannot be changed to completed.
+     1024     Activity HOPWA completion validation is disabled but activity has HOPWA data. Activity
+              status cannot be changed to completed.
+     1025     Activity has CDBG path but no draws from CDBG money.
+     1026     Activity CDBG must be ready to fund before activity can be completed.
+     1027     Activity CDBG   requires a performance objective.
+     1028     Activity CDBG   requires a performance outcome.
+     1029     Activity CDBG   racial data by household must be reported.
+     1031     Activity CDBG   racial data by persons must be reported.
+     1033     Activity CDBG must have number of low/mod people benefitting greater than 0.
+     1034     Activity CDBG total persons by income does not match total by race.
+     1036     Activity CDBG total expected jobs (full-time jobs or part time hours) must be greater than
+              zero.
+     1037     Activity CDBG total actual created or retained jobs (full-time jobs or part time hours) must
+              be greater than zero.
+
+
+                                                                                                           Page 1
+ AMENT On
+
+
+
+J hl’
+le
+ SAN peve™                                                                  IDIS Online/EDI Error Messages
+
+    1038     Activity CDBG total number benefiting (total of all race codes) must equal FTE jobs.
+    1039     Activity CDBG total number benefiting (total all race codes) cannot be less than the total
+             FTE jobs.
+    1040     Activity CDBG there must be at least one county code/census tract/block group identified
+             OR the activity must note that it encompasses the entire area for the grantee.
+    1041     Activity CDBG percent low/mod must be greater than zero.
+    1042     Activity CDBG must indicate the number of brownfield acres remediated. (i.e., number of
+             acres must be > zero).
+    1043     Activity CDBG must have a target area name.
+    1044     Activity CDBG must have a target area revitalization type.
+    1045     Activity CDBG must have value greater than zero for With New or Continuing Access to a
+             Service or Benefit, With Improved Access to a Service or Benefit, or Receive a Service or
+             Benefit that is No Longer Substandard.
+    1046     Activity CDBG low/mod population must equal number of people with new access plus
+             number with improved access + number received from no longer sub-standard benefit.
+    1047     Activity CDBG total benefitting from actual accomplishments must equal number of people
+             with new access plus number with improved access plus number received from no longer
+             sub-standard benefit.
+    1048     Activity CDBG total number of beneficiaries must equal number of people with new access
+             plus number with improved access + number received from no longer sub-standard
+             benefit.
+    1049     Activity CDBG at least one year of performance measure data must be present in order to
+             complete the activity.
+    1050     Total number of affordable units for all years must be > 0 if accomplishments by race are >
+             0.
+    1051     Activity CDBG   number of rehab rental units must be greater than zero for all years 2006
+             and later.
+    1052     Activity CDBG   number of STRA must be greater than zero for all years 2006 and later.
+    1053     Activity CDBG   number of homeless prevention must be greater than zero for all years 2006
+             and later.
+    1054     Activity CDBG actual jobs created greater than zero must have job categories defined for all
+             years 2006 and later.
+    1055     Activity CDBG actual jobs retained greater than zero must have job categories defined for
+             all years 2006 and later.
+    1056     Activity has ESG path but no draws from ESG money.
+    1057     Activity ESG must be ready to fund before activity can be completed.
+    1058     Activity ESG categorized as Homeless Prevention or Homeless Assistance must have at least
+             one Housing and Services category specified.
+    1059     Activity ESG categorized as Homeless Prevention or Homeless Assistance must have
+             performance objective and performance outcome specified.
+    1061     Activity has HOME   path but no draws from HOME     money.
+    1062     Activity HOME must be ready to fund before activity can be completed.
+    1063     Activity HOME sum of property fund amounts must equal sum of drawn.
+    1064     Activity HOME TBRA activity must have at least one beneficiary.
+
+
+                                                                                                         Page 2
+ AMENT On
+
+
+
+J hl’
+le                                                                                      .
+ “AN peve™                                                                       IDIS Online/EDI Error Messages
+
+    1065     Activity HOME multi-address activity must have at least two addresses.
+    1066     Activity HOME addresses must have associated beneficiary and fund data.
+    1068     Activity HOME completed units must match number of beneficiary units.
+    1070     Activity HOME CHDO loan total does not equal CHDO drawn total.
+    1071     Activity HOME CHDO loan activity must have amount for each down payment assistance
+             property.
+    1072     Activity HOME - at least 20% of the beneficiaries must have a median income category 50%
+             or less.
+    1073     Activity HOME - for rental, homebuyer, and homebuyer properties, only one unit can be
+             owner occupied.
+    1074     Activity HOME - for homebuyer, and homebuyer properties exactly one unit must be owner
+             occupied.
+    1075     Activity HOME - for each property, the initial price must not exceed the total reported cost.
+    1076     Activity has HOPWA      path but no draws from HOPWA       money.
+    1077     Activity HOPWA must be ready to fund before activity can be completed.
+    1080     Invalid idis_actv_id.
+    1081     Activity status is not open.
+    1089     Colonia value of 1 (Y) only valid for California, New Mexico, Arizona, and Texas grantees.
+    1093     National objective code not valid for matrix code.
+    1094     UOG    LG does not exist or is not an LG grantee.
+    1095     Cannot assign UOG       LG EIN to a non-state grantee activity.
+    1096     Obligated date is only valid for state grantees.
+    1097     Obligated date is only valid for activities with a national objective code.
+    1098     Accomplishment type code not valid for given matrix and national objective codes.
+    1099     Accomplishment type code not valid for state grantee.
+    1100     Proposed Val must be greater than 0 when national objective is defined.
+    1106     other_idis_actv_id not found.
+    1108     Carryout type must be provided when activity is carried out by another grantee.
+    1109     Organization categorized as must be provided when activity is not carried out by another
+             grantee.
+
+    1110     Other grantee org not found by name or not unique for the grantee state.
+    1111     Other grantee org must be provided when activity is not carried out by another grantee.
+    1114     Remediate acres (brownfield) only valid for activities with CDBG brownfield SP Chars
+             record.
+    1115     Remediate acres (brownfield) must be greater than 0.
+    1118     Float fund due date is required when activity is flagged as float fund.
+    1119     Float balance must be greater than 0 when activity is flagged as float fund.
+    1124     Target area type must be CDFI area if national objective is low/mod commercial
+             development financial institution benefit.
+    1125     Target area name is required when target area type is provided.
+    1126     Target area name not found.
+
+
+
+                                                                                                            Page 3
+ AMENT On
+
+
+
+J hl’
+le                                                                                       .
+ SAN peve™                                                                     IDIS Online/EDI Error Messages
+
+    1128     Address 1 is required for activity with entitlement or insular area grantee and with national
+             objective.
+    1131     City is required when address 1 is provided.
+    1132     State is required when address 1 is provided.
+    1133     First 5 digits of zip code are required when address 1 is provided.
+    1134     LMA survey flag only valid for LMA* national objectives.
+    1135     LMA capped flag only valid for LMA* national objectives.
+    1136     LMA capped flag of U (uncapped) only valid if grantee has uncapped LMISD data.
+    1137     LMA capped flag of C (capped) only valid for entitlement grantees.
+    1138     LM total only valid for LMA* national objectives.
+    1139     LM total required for state grantees.
+    1140     LM total required for entitlement grantees and survey required.
+    1141     LM population only valid for LMA* national objectives.
+    1142     LM population required for state grantees.
+    1143     LM population required for entitlement grantees and survey required.
+    1144     LM total and LM population must be greater than zero.
+    1145     LM percent cannot be less than 51% for non-exception grantee.
+    1146     LM percent cannot be less than <exception percent>% for exception grantee.
+    1147     All area flag only valid for national objective LMA*.
+    1148     All area flag only valid for entitlement grantee.
+    1149     All area flag only valid for census tract.
+    1150     Multi-unit housing flag required for national objective LMH*.
+    1151     Multi-unit housing flag required for national objective SB*/URG and matrix code 01, O5R,
+             12, 14A, 14B, 14C, 14D, 14F, 14G, 141, or 16A.
+    1152     Rental housing flag required for national objective LMH*.
+    1153     Rental housing flag required for national objective SB*/URG and matrix code 01, O5R, 12,
+             14A, 14B, 14C, 14D, 14F, 14G, 14I, or 16A.
+    1154     LMC NL flag of yes (1) only valid for national objective LMC*.
+    1155     LMC PB flag of yes (1) only valid for national objective LMC*.
+    1156     LMC PB flag value of yes (1) is not valid when LMC NL flag is also yes (1).
+    1157     Multi-housing units at start only valid if multi-housing flag is yes (1).
+    1158     Multi-housing units at start must be greater than zero.
+    1159     Multi-housing units occupied at start only valid if multi-housing flag is yes (1).
+    1160     Multi-housing units occupied at start must be greater than zero.
+    1161     Multi-housing units occupied at start that are low/mod only valid if multi-housing flag is yes
+             (1).
+    1162     Multi-housing units occupied at start that are low/mod cannot be greater than total multi-
+             housing units occupied at start.
+    1163     Multi-housing units at completion only valid if multi-housing flag is yes (1).
+    1164     Multi-housing units at completion must be greater than zero.
+    1165     Multi-housing units occupied at completion only valid if multi-housing flag is yes (1).
+    1166     Multi-housing units occupied at completion must be greater than zero.
+
+                                                                                                          Page 4
+  AMENT On
+
+
+
+
+ial)
+“Cen oee                                                                    IDIS Online/EDI Error Messages
+
+    1167     Multi-housing units occupied at completion that are low/mod only valid if multi-housing
+             flag is yes (1).
+    1168     Multi-housing units occupied at completion that are low/mod cannot be greater than total
+             multi-housing units occupied at completion.
+    1169     SBA percent only valid if national objective is SBA.
+    1170     SBA description only valid if national objective is SBA.
+    1171     SBA year only valid if national objective is SBA.
+    1172     Invalid matrix code.
+    1174     Invalid rehab_type_id.
+    1175     rehab_type_id already exists.
+    1176     More than one rehab_type_id returned.
+    1177     More than one actv_cdbg
+                                   _id returned.
+    1181     Narrative <= 4000 characters.
+    1182     Activity must be LMA or SBA.
+    1185     Invalid assist method.
+    1186     More than one assist method returned.
+    1187     actv_assist_loan record already exists for assist_method_id.
+    1188     rate must be >= 0.
+    1189     term must be > 0.
+    1190     amount must be > 0.
+    1191     actv_assist_loan record not found.
+    1195     fund_cat_id not eligible for CDBG.
+    1196     other_desc allowed if fund category is Other.
+    1197     invalid other_desc for CDBG.
+    1201     invalid fund_cat_id for CDBG.
+    1202     actv_cdbg_fund record already exists for fund_cat_id.
+    1203     actv_cdbg_ fund     record not found.
+    1205     invalid cdbg_perf_type_id for CDBG.
+    1206     jobs must >= 0.
+    1207     jobs Im must >= 0 and < jobs.
+    1208     hrs must be >= 0.
+    1209     hrs Im Im must >= 0 and< hrs.
+    1210     Either job or hrs must >= 0.
+    1213     actv_cdbg
+                     job record already exists for cdbg_perf_type_id.
+    1214     actv_cdbg
+                     job record not found.
+    1216     invalid actv_cdbg_Ima_county_id.
+    1217     Not allowed since all_area_flag = 1.
+    1220     multiple rows returned for actv_cdbg_Ima_id.
+    1222     invalid ct.
+    1223     Invalid Displace Flag.
+    1224     City cannot be populated together with CT.
+
+
+                                                                                                       Page 5
+ AMENT On
+
+
+
+J hl’
+le                                                                                  .
+ “AN peve™                                                                   IDIS Online/EDI Error Messages
+
+    1225     CT cannot be populated together with City.
+    1226     City or CT has to be populated with value.
+    1227     CT or City has to be populated with value.
+    1228     Invalid Race Id.
+    1229     Displace_hsp (MSGO09) cannot be greater than Displace (MSGO08).
+    1230     Remain_hsp (MSGO011) cannot be greater than Remain (MSGO10).
+    1231     Remain_hsp (MSG013) cannot be greater than Remain (MSGO12).
+    1232     idis_actv_id has to be valid to process the record.
+    1233     actv_cdbg_id does not exist.
+    1235     Invalid Replace Flag.
+    1242     actv_cdbg _replace_id does not exist.
+    1243     Invalid combination of Nat Objective and Accomplishment Type for db_hhs_female_renter.
+    1244     Invalid actual_val. The value must be greater than zero.
+    1245     actual_val is only valid for national objectives LMA, SBA, SBS, SBR, and URG.
+    1246     Invalid ps_persons. The value must be greater than zero.
+    1247     ps_persons is only valid for national objectives LMJ, SBA, SBS, SBR, and URG.
+    1249     Invalid NA - Abbreviation for Person, Owner, Renter.
+    1251     Invalid national objectives (one of LMA, SBA, SBS, SBR or URG).
+    1252     Invalid combination of national objectives with NA (Person).
+    1253     Invalid combination of national objectives with NA (Owner or Renter).
+    1254     Invalid combination of NA (Renter) with rental housing flag from ACTV_CDBG       (MUST BE 1).
+    1256     Element 009 cannot be greater than element 008.
+    1258     Invalid cdbg perf type id.
+    1260     Invalid national objective code.
+    1265     national_objective_id does not exist.
+    1266     Incorrect National Objectives and/or Activity Category.
+    1268     jobs or hrs have to be greater than ZERO.
+    1269     jobs_lm cannot be greater than jobs.
+    1270     hrs_Ilm cannot be greater than hrs.
+    1276     Incorrect National Objectives and/or Accomplishment Type Code.
+    1280     Value of relocating cannot be greater than value of existing.
+    1281     Value of cdbg_actv_cat_code must be in 14E, 17*, and 18*.
+    1282     Value of one of two fields new and existing must be greater than zero.
+    1286     Public service persons only valid for national objective LMJ* and matrix code 03.
+    1287     CDBG Activity Type 11 only valid for national objective LMH*/SB*/URG, matrix code 14A-
+             14D, 14F-141, and rental flag is Y.
+    1288     CDBG Activity Type 12 and 22 only valid for national objective LMH*/SB*/URG and matrix
+             code 01 or 12.
+    1289     CDBG Activity Type 21 only valid for matrix code 01, 14A-14D, 14F-14l, and
+             accomplishment type code 04 and 10.
+    1290     CDBG performance type not found in reference table.
+
+
+                                                                                                        Page 6
+ AMENT On
+
+
+
+J hl’
+le
+ SAN peve™                                                                      IDIS Online/EDI Error Messages
+
+    1291     CDBG performance type 163001, 163002, 163003 only valid for matrix codes 05* and O3T.
+    1292     CDBG performance type 163004, 163005, 163006 only valid for matrix codes 03* (not 03T)
+             and national objective codes other than LMJ*.
+    1293     CDBG performance type 163007, 163008 only valid for matrix code 03C OR matrix codes
+             03*/05* with help homeless flag of Y.
+    1294     CDBG performance type 41001, 41002, 41003 only valid for matrix code 03C OR matrix
+             codes 03*/05* with help homeless flag of Y.
+    1295     CDBG performance type 192001, 192002, 192003 only valid for matrix code 05S.
+    1296     CDBG performance type 82001, 82002 only valid for matrix codes O5C, 05Q, O5T with help
+             homeless flag of Y.
+    1297     CDBG performance type 211001, 211005, 211007, 211101, 211102, 211103, 211105,
+             211106, 211109, 211110 only valid for national objective LMH*/SB*/URG, matrix code 14A-
+             14D, 14F-141, and rental flag is Y.
+    1298     CDBG performance type 211001, 211005, 211006, 211007, 211009, 211101, 211102,
+             211103, 211105, 211106, 211109, 211110 only valid for national objective LMH*/SB*/URG,
+             matrix code 01, 12 and rental flag is Y.
+    1299     CDBG performance type 211001, 211002, 211005, 211007, 211008, 211101, 211104,
+             211106, 211107, 211108, 211110 only valid for national objective LMH*/SB*/URG,             matrix
+             code 01, 12, and CDBG activity type 22.
+    1300     CDBG   performance type 211003, 211004, 211005, 211007, 211009 only valid for
+             accomplishment type codes 04, 10 and CDBG activity type 21.
+    1301     CDBG   performance type 21001, 21002 only valid for accomplishment type codes 14E, 17%,
+             18*.
+    1307     Tenure type is not valid.
+    1308     Multi-address flag is not valid.
+    1309     Setup type is not valid.
+    1310     Estimated HOME     units value is not valid.
+    1311     Estimated HOME     units value is not valid.
+    1312     Estimated HOME     units must be greater than or equal to $1000 per HOME-Assisted unit.
+    1313     The activity can only be funded with CR if it is a Homeowner rehab.
+    1314     If the activity will be funded by CR, then the CHDO type must be Owned, Sponsored or
+             Developed.
+    1315     Initial funding for the activity can only be a CHDO    loan if the activity will be funded by CR.
+    1316     The activity cannot go forward to development/construction phase if the initial funding for
+             the activity is not a CHDO loan.
+    1317     Faith-based value is not valid.
+    1318     Loan guaranteed value is not valid.
+    1319     Completion type is not valid.
+    1320     Property type is not valid.
+    1321     Mixed income flag is only valid if the Home tenure type is Rental.
+    1322     Mixed use flag is only valid if the Home tenure type is Rental.
+    1323     Estimated total completed units value is not valid.
+    1324     Estimated total completed HOME        units value is not valid.
+
+
+                                                                                                            Page 7
+ AMENT On
+
+
+
+J hl’
+le                                                                                           .
+ SAN peve™                                                                           IDIS Online/EDI Error Messages
+
+    1325     Estimated total completed HOME          units value is not valid.
+    1326     Estimated total completed HOME          units cannot be greater than total completed units.
+    1327     Period of affordability is not valid for Homeowner Rehab activity.
+    1328     Period of affordability is not valid.
+    1331     Invalid Home Perf Type ID. Value provided : <provided value> not in 211005, 211007,
+             211011, 211012, 211013, 211014.
+    1332     Units provided : <provided value> cannot be greater than the total # of completed units :
+             <provided value>.
+    1333     Units_home provided : <provided value> cannot be greater than the total # of completed
+             units : <provided value>.
+    1334     Units_ home   provided : <provided value> cannot be greater than the units provided :
+             <provided value>.
+    1335     units_home field not applicable to perf_type 211005 or any perf_type on TBRA activity.
+    1336     Address 1, city, state zip, county code fields are required.
+    1338     Address 1 data not sent.
+    1341     County code is not valid for State.
+    1342     State code abbreviation is not valid.
+    1343     Zip code is not valid.
+    1344     Initial price is only valid for Homebuyer activities.
+    1345     Initial price must be greater than 0 for Homebuyer activity.
+    1346     Initial price must be equal to 0 for Rental or Homeowner            Rehab activity.
+    1347     Unit value after rehab is required on all activities where Completion type includes
+             Rehabilitation.
+    1348     Unit value after rehab is not valid.
+    1349     Purchase agreement date is valid for Homebuyer activities only.
+    1350     First-time homebuyer flag is valid for Homebuyer activities only.
+    1351     Homebuyer counseling is valid for Homebuyer activities on.
+    1352     Homebuyer counseling is valid for Homebuyer activities on.
+    1353     FHA Insured flag is valid for Homebuyer,       Homebuyer Rehab, and Rental activities.
+    1354     Homebuyer counseling Is not valid.
+    1355     Subsidized housing flag is valid for Homebuyer activities only.
+    1356     Invalid Fund Cat Id, Must be 12,21,22,23,121,301,302,303 or 401 for Rental activities.
+    1357     Invalid Fund Cat Id. must be 21, 22, 23,121,122,123,301,302 or 303 for Homebuyer
+             activities.
+    1358     Invalid Fund Cat Id, Must be 12,21,22,23,301,302 or 303 for Homeowner Rehab activities.
+    1359     Invalid Assist Method    Id, must be 1, 2, 3 or 5 for Fund categories 12, 122 or 123.
+    1360     Invalid Assist Method    Id, Must be 0 for ALL Fund categories other than 12, 122 and 123.
+    1362     Owner/Developer/Contractor Type is not valid.
+    1363     Name fields are mandatory for homeowner rehab activities.
+    1364     Name fields are mandatory for single-address rental activities.
+    1365     Address 2 and Address 3 are valid only if address 1 is available.
+    1371     Room Type cannot be null.
+
+                                                                                                                Page 8
+ AMENT On
+
+
+
+J hl’
+le                                                                                     .
+ SAN peve™                                                                      IDIS Online/EDI Error Messages
+
+    1372     Room Type Id must be 0, 1, 2, 3,     40r 5.
+    1373     Occupant Type cannot be null.
+    1374     Occupant Type Id must be 1, 2 or 9.
+    1375     Median Income Type Id must be 1, 2, 3 or 4.
+    1376     Median Income Type should be null when occupant_type_id is 9.
+    1377     Unit_num is required when occupant_type_id is 9.
+    1378     Household Size Id must be 1, 2, 3, 4, 5, 6, 7 or 8.
+    1379     Household Type Id must be 1,2,3,4, or 5.
+    1380     Assist Type Id must be 1, 2, 3, 4,5 0r 9.
+    1381     Race Id must be 11, 12, 13, 14, 15, 16, 17, 18, 19 or 20.
+    1382     HSP_FLAG    is required.
+    1383     Beneficiary sequence number must be numeric; greater than zero.
+    1384     Last name must be greater than spaces.
+    1385     Valid values for room type are SRO/Efficiency,        1 Bedroom, 2 Bedroom, 3 Bedroom, 4
+             Bedroom, 5 or more bedrooms.
+    1386     Security deposit must be numeric.
+    1387     Tenant rent amount must be numeric.
+    1388     Either security deposit or subsidy amount must be greater than zero.
+    1389     Total Subsidy amount must be numeric, greater than zero.
+    1390     Valid values for median income are 0% to 30%, 30+ to 50%, 50+ to 60%, 60+ to 80%.
+    1391     Valid values for Household size are 1-8. If there are more than 8 people in the household,
+             enter 8.
+    1392     Valid values for Household type are Single non-elderly, Elderly, Single parent, Two parents,
+             Other, Vacant.
+    1393     Valid values for Contract type are Owner, Tenant.
+    1394     Valid values for Newly assisted are 1(Yes) or O(No).
+    1395     Race code for the head of the household is not valid.
+    1396     Valid values for head of household Hispanic or Latino is 1(Yes) or O(No).
+    1397     Number of months in tenant contract is not valid.
+    1398     Type of development is valid only for HOPWA       activity type Facility-based Housing
+             development.
+    1399     Type of development is not valid.
+    1400     Is activity being carried out by a Sponsor?
+    1401     Sponsor organization must be specified if activity is carried out by Sponsor.
+    1402     Sponsor organization does not exist.
+    1403     In conjunction with housing?
+    1404     In conjunction with housing? is only valid for Supportive Services.
+    1405     Proposed Household units is only valid for Facility-based Housing Operations, TBRA, and
+             STRMU.
+    1406     Proposed Household units must be numeric.
+    1407     Facility type is only valid for Facility-based Housing - Development or Subsidy Assistance.
+    1408     Facility Type is not valid.
+
+                                                                                                           Page 9
+  AMENT On
+
+
+
+
+fal)
+“Cen oee                                                                      IDIS Online/EDI Error Messages
+
+    1409     Is site owned   by a public entity? is only valid for Facility-based Housing Development.
+    1410     Is site owned   by a public entity?
+    1411     Program year must be between <earliest program year> and <latest program year>.
+    1412     Final Flag must be either 0 or 1.
+    1413     Num_jobs is valid only for activities with HOPWA Actv Cat: Supportive Services
+             hopwa_actv_cat_id: 19.
+    1414     hhs is valid only for activities with HOPWA Actv Category: Supportive Services
+             hopwa_actv_cat_id: 19.
+    1415     hhs_ho is valid only for activities with HOPWA Actv Category: Supportive Services
+             hopwa_actv_cat_id: 19.
+    1416     Program Year is required.
+    1417     Program Year does not exist.
+    1418     Milestone is required.
+    1419     Milestone is not valid for HOPWA activity type.
+    1420     Milestone date is not valid.
+    1421     pgm_yr does not exist.
+    1422     perf_type_id is required.
+    1423     perf_type_id is not valid - must be either 161001 or 161002.
+    1424     Persons is required.
+    1425     Number of Persons must be numeric.
+    1427     Age category Is required.
+    1428     Age category does not exist.
+    1429     Number of Males is required and value must be numeric.
+    1430     Number of Females is required and value must be numeric.
+    1434     perf_type_id is not valid - must be in (92002, 92004, 92005, 92006, 92007, 92008).
+    1435     hhs_exit is required.
+    1436     hhs_exit must be numeric.
+    1437     hhs_entry is required.
+    1438     hhs_entry must be numeric.
+    1441     Performance category is required.
+    1442     Performance category does not exist.
+    1443     Other description is allowed only when the performance measurement type is Other.
+    1444     Other description must be greater than spaces.
+    1445     Number of households assisted is required and must be numeric.
+    1447     race id does not exist in the race table.
+    1449     Number of Persons_hsp must be numeric.
+    1450     Persons_hsp value cannot be greater than persons.
+    1453     Performance category.
+    1454     Number of persons is required and value must be numeric.
+    1456     Expend_type_id is required.
+    1457     Invalid HOPWA     Expend Type Id.
+
+
+
+                                                                                                         Page 10
+ AMENT On
+
+
+
+J hl’
+le                                                                                   .
+ SAN peve™                                                                    IDIS Online/EDI Error Messages
+
+    1458     Invalid Amount, Value must be Numeric.
+    1459     Invalid hhs, Value must be Numeric.
+    1460     hhs must be greater than zero where amount is greater than zero.
+    1461     Other Desc is not allowed for any hopwa_extend_type_id other than 14 and 1313.
+    1462     Other desc cannot be spaces when hopwa_expend_type_id        is 14 (Other).
+    1465     Number of bedrooms must be numeric.
+    1473     Valid values for perf_type_id are 31001 thru 31012.
+    1475     ESG Activity Category choices are Homeless Prevention, Homeless Assistance, or
+             Administration.
+    1476     Sponsor organization does not exist.
+    1477     Community Based Organization - Enter 1(Yes) or O(No).
+    1478     Address is confidential - Enter 1(Yes) or O(No).
+    1479     City is required.
+    1482     Invalid   hsg svc_type, must be 1 thru 15.
+    1483     Other_desc is required for hsg_svc_type_id 15.
+    1484     Other_desc is not allowed when hsg_svc_type_id value is not 15.
+    1485     Program year is not valid.
+    1486     Race code is not valid.
+    1487     Number of beneficiaries must be numeric.
+    1488     Number of beneficiaries w Hispanic Ethnicity must be numeric and not greater than total
+             number of beneficiaries.
+    1489     esg_perf_type_id is invalid. Must be in (141001, 181001, 181002).
+    1492     Performance Type ID is not valid.
+    1493     Number of people served must be numeric.
+    1495     esg_perf_type_id is invalid. Must be in (62001, 62002, 62003).
+    1496     hhs must be numeric.
+    1500     esg _perf_type_id is invalid. Must be in (191001, 191002, 191003, 191004, 191005, 191006,
+             191007, 191008).
+    1502     Other_desc is required for esg_perf_type_id 191008.
+    1503     Other_desc is not allowed when esg_perf_type_id value is not 191008.
+    1505     Fund Category is not valid.
+    1506     Amount must be numeric.
+    1507     Expend_type_id is required.
+    1508     Invalid Expend Type Id - must be 1 thru 7.
+    1509     Activity HOPWA accomplishments must be finalized.
+    1510     matrix code not found.
+    1511     matrix code not valid for grantee org type.
+    1512     Activity CDBG cannot be deleted because it has activity funding records.
+    1513     More than one matrix code returned.
+    1514     actv_home_id does not exist in ACTV_HOME table for the given tin_num and
+             idis_activity_id. The tun_num is the grantee’s Employer Identification Number. The
+
+
+
+                                                                                                        Page 11
+  AMENT On
+
+
+
+
+Sip,
+“Cen oee                                                                         IDIS Online/EDI Error Messages
+
+             Employer Identification Number (EIN) is a type of TIN issued by the IRS to identify a
+             business entity. An EIN is not associated with an individual and as such is not Pll.
+    1515     actv_home_property_id does not exist.
+    1516     actv_hopwa_id does not exist.
+    1517     acc_hopwa_id does not exist.
+    1518     actv_esg_id does not exist.
+    1519     acc_esg_id does not exist.
+    1520     More than one actv_home_property_fund_id           returned for seq_num <provided value> and
+             fund_cat_id <provided value>.
+    1521     Insert Failed - Record already exist in acc_esg
+                                                         res_ Svc.
+    1522     Insert Failed - Record already exist in acc_esg   non_res_ svc.
+    1523     Delete failed - Record does not exist in acc_hopwa.
+    1524     Delete Failed - Record does not exist in actv_home_property ben.
+    1525     Delete Failed - actv_home_unit record not found.
+    1526     Delete Failed - no actv_home_property_fund        record found to delete.
+    1527     Delete Failed - Record does not exist in acc_hopwa_perf_person.
+    1528     Delete Failed - Record does not exist in acc_hopwa_income.
+    1529     Delete Failed - Record does not exist in acc_hopwa_race.
+    1530     Delete failed - Record does not exist in acc_hopwa_expend.
+    1531     Delete Failed - record not found in acc_hopwa_cli_hsg_out_des.
+    1532     Delete Failed - Record does not exist in actv_esg
+                                                           hsg_ svc.
+    1533     Delete Failed - Record does not exist in acc_esg
+                                                          res svc.
+    1534     Delete Failed - Record does not exist in acc_esg     non_res_svc.
+    1535     Delete Failed - Record does not exist in acc_esg_fam_two_parent.
+    1536     Delete Failed - Record does not exist in acc_esg_ shelter.
+    1537     Delete Failed - Record does not exist in acc_esg fund.
+    1538     invalid actv_cdbg_id.
+    1539     acc_cdbg_id does not exist.
+    1540     Record does not exist in actv_home table.
+    1541     More than one actv_home record returned for tin_num <provided value> and
+             idis_activity_id <provided value>. The tin_num field contains the grantee’s Employer
+             Identification Number. The Employer Identification Number (EIN) is a type of TIN issued by
+             the IRS to identify a business entity. An EIN is not associated with an individual and as such
+             is not PIl.
+    1542     Activity does not exist.
+    1543     Activity is not set up as a CDBG Activity or Accomplishment Type is invalid.
+    1544     Current CDBG Activity does not have National Objective.
+    1545     Current CDBG Activity does not have Accomplishment Type id.
+    1546     Invalid program year.
+    1547     Invalid combination of Nat Objective and Accomplishment Type for db_hhs_female_owner.
+    1548     Invalid actv_cdbg
+                          _ displace_id is NULL.
+    1549     Invalid actv_cdbg
+                         _ displace_dtl_id is NULL.
+
+
+                                                                                                           Page 12
+  AMENT On
+
+
+
+J hl’
+%, ill
+  Saw pave                                                                      IDIS Online/EDI Error Messages
+
+    1550     Activity on which accomplishments will be reported (other_idis_actv_id) is required when
+             flag (other_idis_actv_flag) is true (1).
+    1551     Invalid CDBG performance type for CDBG Activity Type 11.
+    1552     Invalid CDBG performance type for CDBG Activity Type 12.
+    1553     Invalid CDBG performance type for CDBG Activity Type 22.
+    1554     Invalid CDBG performance type for CDBG Activity Type 21.
+    1555     Accomplishment Type ID is Invalid or Null.
+    1556     Multi-housing units at start must be zero when accomplishments reported on another
+             activity.
+    1557     Multi-housing units occupied at start must be zero when accomplishments reported on
+             another activity.
+    1558     Multi-housing low/mod units occupied at start must be 0 when accomplishments reported
+             on another act.
+    1559     Multi-housing units at completion must be zero when accomplishments reported on
+             another activity.
+    1560     Multi-housing units occupied at completion must be        0 when accomplishments reported on
+             another activity.
+    1561     Multi-housing low/mod units occupied at completion must be 0 when accomplishments
+             reported on another activity.
+    1562     Jobs Placed is only valid for activities with Matrix Code OSH.
+    1563     Proposed Value must be greater than zero.
+    1564     Colonia Set-aside Flag value of 1 (Y) is only valid for Colonia Activities.
+    1565     Colonia Name is only valid for Colonia Activities.
+    1566     Colonia Name is required for a Colonia Activity.
+    1567     Colonia Narrative is only valid for Colonia Activities.
+    1568     Colonia Narrative must be greater than spaces.
+    1569     Occupant Type must be 2 or 9 for the 1st beneficiary.
+    1570     Cannot Complete/cancel activity: Activity has pending (outstanding) voucher line items.
+    1571     Female headed households - Owner Total cannot exceed the total number of race by
+             owner.
+    1572     Female headed households - Renter Total cannot exceed the total number of race by
+             renter.
+    1573     CDBG performance type 212001, 212002, 212003, 212004 only valid for matrix code 15 and
+             national objective LMA, SBA, SBR, or URG.
+    1574     CDBG      performance type 212001 must be greater than zero.
+    1575     CDBG performance type 212002, 212003, 212004 cannot be greater than performance
+             type 212001.
+    1576     LM_Percent must be greater than 51 or UOGLG tin_num is required for State Activity The
+             tin_num field contains the grantee’s Employer Identification Number. The Employer
+             Identification Number (EIN) is a type of TIN issued by the IRS to identify a business entity.
+             An EIN is not associated with an individual and as such is not PII.
+    1577     Record valid for State CDBG with matrix code 15 and national objective LMA, SBA, SBR, or
+             URG and accomp type 4 or 10.
+
+
+                                                                                                          Page 13
+ AMENT On
+
+
+
+£ ills
+le                                                                                     .
+ SAN peve™                                                                      IDIS Online/EDI Error Messages
+
+    1578     CDBG   performance type 212001 must be greater than zero.
+    1579     Actual_Val is invalid for matrix code/national objective code combination.
+    1580     Ps_persons invalid for matrix code/national objective code combination.
+    1581     Criteria to fund activity not met for Entitlement.
+    1582     CDBG Code Enforcement Narrative is required.
+    1583     Criteria to fund activity not met for Entitlement.
+    1584     Invalid Lead Paint Type ID.
+    1585     Lead Paint Type ID cannot be NULL when Lead Paint Action ID is populated.
+    1586     Invalid Activity Type for Lead Paint Action.
+    1587     Invalid Lead Paint Action ID.
+    1588     Invalid Activity Type for Lead Paint Type.
+    1589     Lead Paint Action ID is Invalid when Lead Paint Type is Exempt.
+    1590     Invalid Lead Paint Action ID for Acquisition Only Activity Type.
+
+    1591     Invalid Lead Paint Action ID for Acquisition/Rehabilitation Activity Type.
+    1592     Invalid Lead Paint Action ID for Rehabilitation Activity Type.
+    1593     Total number of beneficiaries reported for all years must equal total number of addresses.
+    1594     Total number of actual accomplishments for all years must equal total number of
+             addresses.
+    1595     Invalid CDBG Activity Criteria for Transaction.
+    1596     HPRP activity cannot be completed using EDI.
+    1597     HESG activities are invalid for this transaction.
+    1598     Valid values for HESG Activity Category are 1, 3, 6, 7,8 and 9.
+    1599     HESG Transaction is invalid for a previously assigned ESG or HPRP activity.
+    1600     Valid values for ESG Secondary Activity Category are 3, 4, 5, 6, 7 and 8.
+    1601     Invalid ESG Secondary Activity Category.
+    1602     Delete Failed - Record does not exist in actv_esg_ cat2.
+    1603     Invalid Matrix Code\National Objective Code\Accomplishment Type for this transaction.
+    1604     Housing Rehabilitation item Perform Emergency Housing Repairs must be selected.
+    1605     Lead Paint Units cannot be greater than actual value or sum of Owners and Renters.
+    1606     Invalid CDBG Activity Category and CDBG Activity Type combination.
+    1607     Activity HESG completion validation is disabled but activity has HESG data.
+    1608     Activity has HESG path but no draws from HESG money.
+    1609     Lead Paint Data cannot be captured for a CDBG-R activity.
+    1610     Invalid CDBG Activity Type and Lead Paint Action combination.
+    1611     Transaction is only valid when Lead Paint Type (Housing constructed before 1978) exists.
+    1612     Valid values for CDBG Activity Type are 1, 3 and 4.
+    1613     Value cannot be greater than total # units reported for Units constructed before 1978.
+    1614     HOPWA Amount must be greater than zero when HOPWA Sponsor is populated.
+    1615     Data for Activity Categories 21, 22 and 23 can only be submitted Online.
+    1616     Facility Type Other Description (MSG0O13) must be greater than spaces.
+    1617     Invalid housing type.
+
+
+                                                                                                          Page 14
+ AMENT On
+
+
+
+J hl’
+le                                                                                     .
+ SAN peve™                                                                   IDIS Online/EDI Error Messages
+
+    1618     Housing type is only valid for Facility-based Housing - Development or Subsidy Assistance.
+    1619     Facility Name is only valid for Facility-based Housing - Development or Subsidy Assistance.
+    1620     Lead Paint Action Units cannot be greater than actual value or sum of Owners and Renters.
+    1621     Lead Paint Type Units cannot be greater than actual value or sum of Owners and Renters.
+    1622     Valid values for Capital Development Project (MSG016) are 1(Yes) or O(No).
+    1623     Value of 1(Yes) is only valid for HOPWA Activity Category Facility-based housing subsidy
+             assistance.
+    1624     Expend Types 901, 902, 903 and 904 are only valid for HOPWA Activity category STRMU.
+    1625     Invalid Facility Type or HOPWA Activity Category for Facility Type Other Description.
+    1626     Only one HOPWA Administrative Activity per project is allowed.
+    1627     Subrecipient does not exist.
+    1628     Delete Failed - Record does not exist in actv_hopwa_sub
+                                                                 _ recip.
+    1629     Valid values for Waiting List Flag are 1(Yes) or O(No).
+    1630     Number Of Persons Waiting cannot be greater than zero unless Waiting List Flag is Yes.
+    1631     Valid values for Service Flag are 1(Yes) or O(No).
+    1632     Units Placed in Service cannot be greater than Total Units in Facility.
+    1633     Total Units in Facility must be greater than zero.
+    1634     Transaction 1515 is only valid for HOPWA Activity Category Facility-based Housing
+             Development.
+    1635     actv_hopwa or acc_hopwa does not exist or invalid pgm_yr.
+    1636     Invalid HOPWA    Lead Paint Type ID.
+    1637     Lead Paint Type is only valid for Facility-based Housing - Development or Subsidy
+             Assistance.
+    1638     Invalid HOPWA    Lead Paint Action ID.
+    1639     Lead Paint Action is only valid for Facility-based Housing - Development or Subsidy
+             Assistance.
+    1640     Invalid HOPWA    Performance Type.
+    1641     Performance Type 81001 is only valid with HOPWA Actv Category: 11, 12, 16 or 20.
+    1642     Performance Type 81004 is only valid with HOPWA Actv Category: 14, 15.
+    1643     Performance Types 81013, 81101, or 81102 are only valid with HOPWA Actv Category: 14.
+    1644     Transaction Is Obsolete.
+    1645     Transaction 1514 is only valid for HOPWA Actv Cat: 11, 12.
+    1646     UOG LGTIN is required for a state grantee activity. The UOG LGTIN field contains the
+             grantee’s Employer Identification Number. The Employer Identification Number (EIN) is a
+             type of TIN issued by the IRS to identify a business entity. An EIN is not associated with an
+             individual and as such is not PII.
+    1647     Invalid HOPWA Activity Category for Proposed Units developed with HOPWA          Funds.
+    1648     Invalid HOPWA Activity Category for MSGOO7.
+    1649     Invalid HOPWA Activity Category for MSGOO8.
+    1650     Invalid HOPWA Activity Category for MSGOO9.
+    1651     Invalid HOPWA Activity Category for MSGO10.
+    1652     Invalid HOPWA Activity Category for MSGO11.
+
+
+                                                                                                       Page 15
+ AMENT On
+
+
+
+J hl’
+le                                                                                    .
+ SAN peve™                                                                    IDIS Online/EDI Error Messages
+
+    1653     Invalid HOPWA Activity Category for Proposed Budget For RA.
+    1654     Activity has been blocked from making HOME       additions and modifications.
+    1655     Cannot create HOME activity data. Activity(s) have been flagged for final draw or
+             infrequent draws.
+    1656     idis_actv_id must be > 4, activity 1 through 4 are reserved.
+    1657     actual_val must be > 0 for at least one accomplishment year when completing         an SB* or
+             URG activity.
+    1658     Activity cannot be canceled because draws exist for it.
+    1659     Cannot complete this activity. The total Job LM% through all years does not meet the
+             national objective of 51%.
+    1660     Activity CDBG Owner total persons by income does not match Owner total by race.
+    1661     Activity CDBG Renter total persons by income does not match Renter total by race.
+    1662     National objective code should not be provided for admin matrix code.
+    1663     Accomplishment type should not be provided for admin matrix code.
+    1664     National objective code should be provided for non-admin matrix code.
+    1665     Accomplishment type should be provided for given matrix and national objective codes.
+    1666     Accomplishment type should not be provided for given matrix and national objective
+             codes.
+    1667     The matrix code requires Name of Organization providing Housing Counseling under 24 CFR
+             5.100.
+    1668     Organization providing Housing Counseling under 24 CFR 5.100 not found for Name
+             submitted.
+    1669     Organization providing Housing Counseling under 24 CFR 5.100 not unique for Name
+             submitted.
+    1670     Cannot assign Name of Organization providing Housing Counseling for this Matrix Code.
+    1671     This activity has been blocked by HUD due to it not meeting the four-year project
+             completion deadline. Grantees cannot make any changes to this activity, which includes
+             editing the setup and accomplishment data, changing the activity status, increasing
+             funding, or disbursing funds.
+    1672     The HOME activity cannot be added because there are additional activities flagged for
+             Infrequent Draws for 12 Months or More and/or Final Draws for 120 days or More.
+    1673     Tenure type is not valid for HOME-ARP activity
+    1674     [HOME-ARP    Rental] Total Years of Affordability must be greater than 15.
+    1675     [HOME-ARP Non-Congregate Shelter] Total Years of Restricted Use must be greater than
+             10.
+    1676     [HOME-ARP    Non-Congregate Shelter] Total Years of Restricted Use must be greater than
+             15.
+    1677     The Written Agreement Execution Date cannot be in the future or after the initial funding
+             date
+    1678     At least one quarterly report must be submitted
+    1679     One or more reported quarters are missing required data
+    1680     There are other activities that are flagged for infrequent or final draws for this grantee.
+    1681     Total HOME-ARP QP units cannot be larger than HOME-ARP          assisted units
+
+
+                                                                                                           Page 16
+  AMENT On
+
+
+
+£ ills
+% lil é
+ San oeve®                                                IDIS Online/EDI! Error Messages
+
+    1682     Invalid Qualifying Population (QP) Type
+    9990     Invalid Input.
+    9991     Missing Message: <message number>.
+    9992     Transaction Not Supported.
+    9993     Message Not in Sequence: <message number>.
+    9994     Message Out Of Range: <message number>.
+    9995     Invalid Format: <message data>.
+    9996     Transaction Type Not Supported.
+    9999     Data Exception.
+
+
+
+
+                                                                                     Page 17
+

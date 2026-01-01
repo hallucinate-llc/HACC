@@ -1,13 +1,14 @@
 {
   "pdf_path": "research_results/documents/raw/c441d095b5efadcac83eadd5ad604240.pdf",
   "parsed_text_path": "research_results/documents/parsed/c441d095b5efadcac83eadd5ad604240.txt",
-  "parse_date": "2025-12-31T01:06:04.259178",
-  "source": "third_party:www.raceforward.org",
-  "url": "https://www.raceforward.org/sites/default/files/Race%20Reporting%20Guide%20by%20Race%20Forward_V1.1.pdf",
-  "text_length": 53834,
-  "checksum": "d23f050319c10a81f3a05d55a435eb6533919674393b9b307768f4751086d630",
-  "domain": "www.raceforward.org",
-  "ingest_date": "2025-12-31T01:06:04.225475",
-  "content_type": "application/pdf",
-  "original_saved_path": "research_results/third_party_downloads/www.raceforward.org/www.raceforward.org_sites_default_files_Race_20Reporting_20Guide_20by_20Race_20Forward_V1.1_dd3a577012.pdf"
+  "parse_date": "2025-12-31T03:31:06.925466",
+  "source": "third_party:batch_parallel",
+  "url": "file://research_results/documents/raw/c441d095b5efadcac83eadd5ad604240.pdf",
+  "text_length": 57355,
+  "checksum": "199f0533ef3e960267aa07f2b2daaf66cdfec3ab4708f3cee6f883714f3414e8",
+  "extraction_method": "ocrmypdf_force+pdftotext",
+  "ocr_available": true,
+  "ocr_attempted": true,
+  "ocr_used": true,
+  "needs_ocr": false
 }

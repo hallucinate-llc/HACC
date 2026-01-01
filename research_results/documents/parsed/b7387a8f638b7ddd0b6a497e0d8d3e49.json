@@ -1,13 +1,14 @@
 {
   "pdf_path": "research_results/documents/raw/b7387a8f638b7ddd0b6a497e0d8d3e49.pdf",
   "parsed_text_path": "research_results/documents/parsed/b7387a8f638b7ddd0b6a497e0d8d3e49.txt",
-  "parse_date": "2025-12-31T02:09:48.107508",
-  "source": "third_party:www.oregonmetro.gov",
-  "url": "https://www.oregonmetro.gov/sites/default/files/2025-10/affordable-housing-bond-oversight-committee-meeting-packet-20250317.pdf",
-  "text_length": 245274,
-  "checksum": "4a36f8146640f2d7653e878e66b8a5e0c865a41f57f713e49c19599505edf19c",
-  "domain": "www.oregonmetro.gov",
-  "ingest_date": "2025-12-31T02:09:47.072445",
-  "content_type": "application/pdf",
-  "original_saved_path": "research_results/third_party_downloads/www.oregonmetro.gov/www.oregonmetro.gov_sites_default_files_2025-10_affordable-housing-bond-oversight-committee-meeting-packet-20250317.pdf"
+  "parse_date": "2025-12-31T03:33:34.190961",
+  "source": "third_party:batch_parallel",
+  "url": "file://research_results/documents/raw/b7387a8f638b7ddd0b6a497e0d8d3e49.pdf",
+  "text_length": 310529,
+  "checksum": "4e2d7ed79455644909c2c122571187cbe5726a520a8cfdccaa26c8f691450d5f",
+  "extraction_method": "ocrmypdf_force+pdftotext",
+  "ocr_available": true,
+  "ocr_attempted": true,
+  "ocr_used": true,
+  "needs_ocr": false
 }

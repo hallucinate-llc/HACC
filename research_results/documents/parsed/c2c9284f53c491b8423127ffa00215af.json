@@ -1,13 +1,14 @@
 {
   "pdf_path": "research_results/documents/raw/c2c9284f53c491b8423127ffa00215af.pdf",
   "parsed_text_path": "research_results/documents/parsed/c2c9284f53c491b8423127ffa00215af.txt",
-  "parse_date": "2025-12-31T01:24:45.392144",
-  "source": "third_party:tinyurl.com",
-  "url": "https://www.oregon.gov/das/ORBuys/Documents/Demographic-Data.pdf",
-  "text_length": 4055,
-  "checksum": "6ccb2f08dd96663267a7b6b883253d40ecaae11110f68aff244fa79b63e494f6",
-  "domain": "tinyurl.com",
-  "ingest_date": "2025-12-31T01:24:45.379629",
-  "content_type": "application/pdf",
-  "original_saved_path": "research_results/third_party_downloads/tinyurl.com/www.oregon.gov_das_ORBuys_Documents_Demographic-Data.pdf"
+  "parse_date": "2025-12-31T03:32:01.156498",
+  "source": "third_party:batch_parallel",
+  "url": "file://research_results/documents/raw/c2c9284f53c491b8423127ffa00215af.pdf",
+  "text_length": 4171,
+  "checksum": "8306117dfe7441fe84cd98329ddbd23feee6ff31390aa9f0afb3b696bf2152f2",
+  "extraction_method": "ocrmypdf_force+pdftotext",
+  "ocr_available": true,
+  "ocr_attempted": true,
+  "ocr_used": true,
+  "needs_ocr": false
 }

@@ -1,0 +1,499 @@
+TRANSPORTATION ENGINEERING AND PLANNING – Vol. I - Transportation Systems - David Boyce
+
+
+
+
+TRANSPORTATION SYSTEMS
+David Boyce
+Northwestern University, USA
+
+Keywords: mode, guideway, vehicle, operations plan, congestion, emissions
+
+Contents
+
+1. Definitions
+2. Roles and Effects of Transportation Systems
+3. Planning and Control of Future Systems
+Bibliography
+
+
+
+
+             TE SS
+Biographical Sketch
+
+
+
+
+                 S
+Summary
+
+
+
+
+               R
+           AP L
+Although transportation systems are pervasive to modern society, people tend to take
+          H O
+them for granted until something goes wrong. Airlines are known to fail as economic
+enterprises, public systems encounter deficits, excessive crashes occur on highways, and
+         C E
+spacecraft are sometimes lost. Understanding transportation systems in terms of their
+technological and economic complexity, and their important impacts on society, is a
+       E O–
+
+large and fascinating field of study. This article, and the individual articles that it
+summarizes, seek to capture the excitement of these systems at an introductory level,
+and encourage further reading and study.
+     PL C
+
+
+
+1. Definitions
+    M ES
+
+
+
+
+An appropriate point of departure for any discussion of transportation systems is a set of
+definitions. What is a transportation system? What are the various types of
+transportation systems? And how do they interact with their environment? After
+  SA N
+
+
+
+
+responding to these questions, this essay will briefly examine the role, effects, and
+control of transportation systems in the economic, social, and physical systems.
+    U
+
+
+
+
+The textbook definition of a transportation system or mode is a system for moving
+persons or goods consisting of three components:
+
+(a) The vehicle (equipment) is what moves objects or traffic (people, goods). The
+vehicle consists of a container and some type of motive power, either onboard or
+elsewhere.
+
+(b) The guideway is what the vehicles move along. The guideway consists of links and
+nodes that together form a network. A sequence of links is called a route. A terminal is a
+node where traffic is transferred from one vehicle to another.
+
+(c) The operations plan is the set of procedures by which traffic and vehicles are moved
+over the guideway, including schedules or timetables, crew assignments, and control
+systems.
+
+
+
+©Encyclopedia of Life Support Systems (EOLSS)
+TRANSPORTATION ENGINEERING AND PLANNING – Vol. I - Transportation Systems - David Boyce
+
+
+
+
+As with any general definition, various authors use somewhat different terms and divide
+the system in various ways. The definition given here is recommended for its simplicity.
+
+Transportation systems, either existing or envisaged for the future, can be classified
+according to these components and their relations to the larger economic, social, and
+physical systems in which they occur. Guideways often reside on or within Earth’s
+surface and are therefore described as surface or ground transportation systems.
+Examples are highways and railways. Some systems, however, have their guideways in
+the air or on the water. In this case, their principal facilities are ports, either airports or
+harbors. Of course, a canal is also a guideway consisting of water held in a channel.
+
+Vehicles operating over these guideways may be similarly classified. Automobiles and
+
+
+
+
+             TE SS
+trucks operate on highways; locomotives and various types of railroad cars operate on
+railways; and airplanes and ships operate in the air and water. Operations plans provide
+
+
+
+
+                 S
+the timetables, crew schedules, control systems, and protocols that enable these vehicles
+
+
+
+
+               R
+to operate safely and efficiently.
+
+
+           AP L
+          H O
+Other ways to categorize modes are also useful. One categorization differentiates
+between public and private. For example, freight railroads in the United States are
+         C E
+generally owned and operated by private organizations, but in many countries they are
+publicly owned and operated. Passenger railroads generally consist of publicly owned
+       E O–
+
+vehicles and operations plans, but may operate over private railways. Airline services
+are provided by privately owned airplanes operating between publicly owned and
+operated airports under the control of a public air traffic control system.
+     PL C
+
+
+
+Urban transit systems are increasingly public in their guideways, vehicles, and
+operations plans. This mode illustrates another dichotomy of modes: urban vs.
+    M ES
+
+
+
+
+interregional. Some transit modes only serve one urban region; others connect many
+urban regions into an interregional system. An example is an urban bus system vs. an
+interregional bus network.
+  SA N
+
+
+
+
+Each transportation system operates within a larger economic, social, and physical
+    U
+
+
+
+
+environment, as noted above. Accordingly, each system generates certain external
+effects, or externalities, on its environment. Among these are emissions, noise, and
+damage to property and persons, both those using the system and those adjacent to it.
+Emissions, largely from vehicles, degrade the air, water, and soil through their exhaust
+and spills of hazardous materials. Noise from vehicle operations impact society within
+hearing distance. Passengers and bystanders are injured or killed when crashes occur,
+and accidents also damage or destroy goods and property.
+
+The articles within this topic may be neatly described in terms of these definitions. The
+first three articles concern systems with a strong urban orientation. Highways and
+Private Modes of Transportation describes highways and related private modes of
+transportation, including not only automobiles and trucks, but also pedestrians, bicycles,
+and motorcycles. The emphasis is on the guideways and vehicles comprising the
+highway/vehicle mode. Public Transportation Modes comprehensively examines public
+transportation systems in an urban setting, providing a detailed classification of vehicle
+
+
+
+©Encyclopedia of Life Support Systems (EOLSS)
+TRANSPORTATION ENGINEERING AND PLANNING – Vol. I - Transportation Systems - David Boyce
+
+
+
+
+types and the guideways on which they operate. Because operations plans are so
+important to this system, sections are also devoted to the scheduling of transit services.
+Paratransit Systems considers another type of transit mode, describing paratransit as all
+forms of passenger transit that operate on schedules and follow routes determined by the
+demands of individual passengers, hence the name demand-responsive transit. Not
+surprisingly, the emphasis in this article is on the operations plan component of this
+system.
+
+The next four articles examine modes that are primarily interregional in nature. Water
+Transport Systems and Port Developments addresses water transportation systems and
+ports, primarily as a freight transportation mode. Naturally, vessel technology as well as
+management systems is covered. Railroad Transportation provides a comprehensive
+treatment of the railroad mode, organized largely according to the above guideway-
+
+
+
+
+             TE SS
+vehicle-operations plan definition. While the emphasis is on freight transportation, there
+are also sections on high-speed railroad passenger service. Network Developments in
+
+
+
+
+                 S
+Aviation examines recent developments in aviation networks and their underlying
+
+
+
+
+               R
+economic mechanisms. Deregulation of international airline markets is a primary thrust
+
+
+           AP L
+of this article, as well as the interplay of airlines and airport operations. Airport Design
+          H O
+and Development covers the aviation sector from the airport development viewpoint.
+The emphasis on engineering design and operations in this article nicely complements
+         C E
+the economic perspective in Network Developments in Aviation.
+       E O–
+
+The final three articles of this topic examine issues of travel demand and safety. Urban
+Travel considers the multimodal transportation system serving large urban regions from
+the viewpoint of travel choices in the context of congestion and excess demand. This
+approach complements the supply orientation of the first three articles, and emphasizes
+     PL C
+
+
+
+the role of the equilibrium between demand and generalized travel costs. Inter-Regional
+Transportation surveys the broad topic of interregional transportation from both the
+    M ES
+
+
+
+
+supply (technology) and demand points of view. The emphasis on developing regions
+complements the earlier articles on interregional modes, which are written more from a
+developed region perspective. Finally, Safety of Transportion treats the question of
+  SA N
+
+
+
+
+transportation safety primarily from an American highway perspective.
+    U
+
+
+
+
+2. Roles and Effects of Transportation Systems
+
+As documented in the ten articles in this topic, transportation systems have pervasive
+and extensive effects on the economic and social systems that they serve. Although it is
+common to describe the use of transportation services as a derived demand, the way in
+which transportation modes are provided has an enormous effect on society itself. The
+initial effect of the introduction of a new transportation mode or service is generally to
+reduce travel or shipment times and costs, whether the mode or service is an existing
+technology or a new technological development. But this is only the first step in the
+“two-step dance” (see also Historical Transportation Development). The second step
+occurs when “innovative folk think of ways to do new things using the newly created
+services: entirely new market niches are uncovered, or old ones significantly expanded
+and remolded.” As a result, mobility may be increased, and spatial interaction and trade
+expand. Finally, opportunities for economic and social integration may occur. The
+history of technology development in transportation is replete with examples of the
+
+
+
+©Encyclopedia of Life Support Systems (EOLSS)
+TRANSPORTATION ENGINEERING AND PLANNING – Vol. I - Transportation Systems - David Boyce
+
+
+
+
+effects of such innovations, many of which are described in this topic and in Historical
+Transportation Development.
+
+Despite their positive effects, transportation systems also can, and often do, have large
+negative effects on the economic and social systems they serve. One of the most
+pervasive effects is that of traffic congestion in all levels and types of transportation
+services. Congestion of transportation systems occurs when the demand or use of the
+system brought forth at the given generalized cost (time, money, risks, etc.) is excessive
+compared with the system’s capacity or the supply of services available. Congestion is
+effectively the wasted time and expense of using an inadequately supplied transportation
+service. However, congestion also serves to bring the system’s use into balance with its
+available capacity.
+
+
+
+
+             TE SS
+Since transportation services, such as highway systems, do not always have an active
+supplier, so the interplay of use and available capacity may not be described well by the
+
+
+
+
+                 S
+classical demand-supply model of microeconomics. Instead, the supply may be fixed for
+
+
+
+
+               R
+the present, and pricing mechanisms may be absent. Some economists and others
+
+
+           AP L
+advocate that pricing should be invoked in such situations to dampen demand. However,
+          H O
+pricing of transportation services impacts various socioeconomic groups and travel and
+shipment purposes differently. Therefore invoking transportation pricing may not
+         C E
+manage demand in the way that advocates believe.
+       E O–
+
+Likewise, increasing the supply of transportation services, such as building more road
+capacity, may be counterproductive because households and firms may simply have an
+incentive to increase use of the service. Providing alternative services, which may be
+suited to serve large-scale demand efficiently, may be a better solution. For example, if
+     PL C
+
+
+
+road congestion to a common destination is pervasive, the solution may be to improve
+the quality of public transit service available, rather than increasing the road capacity.
+    M ES
+
+
+
+
+Such solutions may also need to be accompanied by disincentives for the use of private
+cars.
+  SA N
+
+
+
+
+Excessive atmospheric emissions and use of nonrenewable resources (for example
+petroleum) often accompany traffic congestion. These issues are complex, and therefore
+    U
+
+
+
+
+require careful investigation and analysis from both demand and supply points of view.
+Understanding both the performance and the cost of the alternative technological
+solutions, and forecasting their future use, is essential for wise and effective decisions.
+
+3. Planning and Control of Future Systems
+
+In attempting to take a long run, global perspective of transportation systems
+development, one is struck not only by how much has been accomplished in the
+twentieth century, but also by differences in transportation development among various
+world regions. When visiting large, rapidly developing regions, such as China and
+Russia, one wonders whether they will avoid the transportation development mistakes
+of regions that were principal innovators, such as the United States, Western Europe,
+and Japan. If so, what knowledge and resources will they require, and how should they
+go about obtaining it? Knowledge development generally occurs through research by
+institutions of higher education and professional experts. Acquiring resources for
+
+
+
+©Encyclopedia of Life Support Systems (EOLSS)
+TRANSPORTATION ENGINEERING AND PLANNING – Vol. I - Transportation Systems - David Boyce
+
+
+
+
+transportation development requires an estimate of future benefits and costs, which
+themselves require the best available forecasts of use levels and costs of system
+implementation and operation.
+
+
+-
+
+-
+-
+
+
+              TO ACCESS ALL THE 5 PAGES OF THIS CHAPTER,
+              Visit: http://www.eolss.net/Eolss-sampleAllChapter.aspx
+
+
+
+
+               TE SS
+                   S
+                 R
+Bibliography
+
+             AP L
+            H O
+Banks J.H. (2002). Introduction to Transportation Engineering, second edition, 511 pp. Boston:
+           C E
+McGraw-Hill. [This text is a general and comprehensive reference on transportation engineering and
+planning.]
+         E O–
+
+Garrison W.L. and Ward J.D. (2000). Tomorrow’s Transportation: Changing Cities, Economies, and
+Lives, 335 pp. Boston: Artech House. [This book is a refreshing examination of issues and technology in
+the future of transportation systems.]
+
+Biographical Sketch
+       PL C
+
+
+
+Dr. David Boyce is Adjunct Professor, Department of Civil and Environmental Engineering,
+      M ES
+
+
+
+
+Northwestern University, Evanston, Illinois, and Professor Emeritus of Transportation and Regional
+Science, Department of Civil and Materials Engineering, University of Illinois at Chicago. During 40
+years of research and teaching, Professor Boyce has addressed key methodological issues related to
+metropolitan transportation and land use planning. His early monograph, Metropolitan Plan Making,
+    SA N
+
+
+
+
+critically examined the experience with the land use and travel forecasting models during the 1960s.
+Recognizing that these methods lacked an adequate scientific basis, he has since devoted himself to the
+      U
+
+
+
+
+formulation and solution of urban travel and land use forecasting models as constrained optimization
+problems and related constructs, which synthesize elements of network analysis and modeling, stochastic
+discrete choice theory, and entropy-based methods.
+Through this research, he concluded that the conventional travel forecasting paradigm, widely known as
+the four-step travel forecasting procedure, may now be seen to be a counter-productive concept. By
+focusing research on individual elements of daily travel decisions, mainly represented as having fixed
+travel times and costs, the conventional point of view obscures the overall equilibria and interdependence
+of travel choices. To offer an alternative perspective, Professor Boyce has rigorously formulated,
+implemented, estimated, and validated large-scale, integrated models of travel behavior. This ongoing
+research offers an alternative both to the conventional viewpoint and to newer initiatives that lack a
+rigorous scientific foundation. He has also extended this integrative approach to the study of regional
+economies, interregional commodity flows, and freight transportation systems.
+In addition to this primary research theme, from 1986 to 1996, Professor Boyce was an early innovator of
+in-vehicle dynamic route guidance systems, a principal element of the emerging field of Intelligent
+Transportation Systems. This research culminated in his leading a multi-university team that performed
+development and evaluation tasks for the ADVANCE Project, a large-scale field test of a prototype route
+guidance system, in conjunction with Motorola, Inc., and federal and state transportation departments. In
+
+
+
+
+©Encyclopedia of Life Support Systems (EOLSS)
+TRANSPORTATION ENGINEERING AND PLANNING – Vol. I - Transportation Systems - David Boyce
+
+
+
+
+this role he also conducted theoretical and modeling studies of the performance of route guidance systems
+on urban road networks.
+During his career, Professor Boyce has served as a faculty member at the University of Pennsylvania
+(1966–1977), the University of Illinois at Urbana-Champaign (1977–1988), and the University of Illinois
+at Chicago (1988–2003) and Northwestern University (2003-2006). From 1988 to 1996, he also served as
+Director of the Urban Transportation Center at the University of Illinois at Chicago. Professor Boyce
+received the BS in civil engineering from Northwestern University in 1961, and the PhD in regional
+science from the University of Pennsylvania in 1965. He also received the Master of City Planning degree
+from the University of Pennsylvania. He is a Registered Professional Engineer in the State of Ohio. He
+has published 180 books, book chapters, journal articles, and reports during the past 40 years.
+
+
+
+
+             TE SS
+                 S
+               R
+           AP L
+          H O
+         C E
+       E O–
+     PL C
+    M ES
+  SA N
+    U
+
+
+
+
+©Encyclopedia of Life Support Systems (EOLSS)
+
