@@ -189,14 +189,14 @@ var MSOWebPartPageFormName = 'aspnetForm';
 var g_presenceEnabled = true;
 var g_wsaEnabled = false;
 
-var g_correlationId = '2a9be8a1-c8f2-5059-054f-d0615d82a8d8';
+var g_correlationId = '7f23e9a1-1851-5059-8d61-bc51980720ce';
 var g_wsaQoSEnabled = false;
 var g_wsaQoSDataPoints = [];
 var g_wsaRUMEnabled = false;
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'STS#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fode\u002fstudents-and-family\u002fequity\u002fcivilrights", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fode\u002fstudents-and-family\u002fequity\u002fcivilrights", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fode", serverRequestPath: "\u002fode\u002fstudents-and-family\u002fequity\u002fcivilrights\u002fpages\u002fwhat-is-discrimination.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Civil Rights", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-01T03:06:59.2285468Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-01T03:06:59.2285468Z"), siteClientTag: "21$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{cbdb941b-f983-4b3f-beba-9dd7ba732c60}",pageItemId:17, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fode", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fode\u002fstudents-and-family\u002fequity\u002fcivilrights", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fode\u002fstudents-and-family\u002fequity\u002fcivilrights", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fode", serverRequestPath: "\u002fode\u002fstudents-and-family\u002fequity\u002fcivilrights\u002fpages\u002fwhat-is-discrimination.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Civil Rights", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-02T18:49:30.7356976Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-02T18:49:30.7356976Z"), siteClientTag: "21$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{cbdb941b-f983-4b3f-beba-9dd7ba732c60}",pageItemId:17, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fode", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
 </script>
 
 <script src="/_layouts/15/16.0.5456.1000/blank.js" type="text/javascript"></script>
@@ -460,16 +460,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ2"  class="ms-WPBody "   style="" ><div id="ctl00_ctl40_g_c7ad405e_c99a_476f_8abd_fbc8a29bd5eb">
 		<div class="list-unstyled panel-group or-accordion-list" id="accordion-ctl00_ctl40_g_c7ad405e_c99a_476f_8abd_fbc8a29bd5eb_ctl01">
-			<div class="panel panel-default or-accordion-panel" id="panel-c124044d-a4b4-4aeb-9f0f-235cfe2df86b">
+			<div class="panel panel-default or-accordion-panel" id="panel-2d640d6c-12d3-4da1-aead-04791988c815">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#c124044d-a4b4-4aeb-9f0f-235cfe2df86b" aria-controls="c124044d-a4b4-4aeb-9f0f-235cfe2df86b" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="8ab71ceb-2bb4-42f5-9cd1-0a5a8d60eab0">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#2d640d6c-12d3-4da1-aead-04791988c815" aria-controls="2d640d6c-12d3-4da1-aead-04791988c815" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="7aef3910-2328-4c1e-82da-728a542f4e4d">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">What is Discrimination? (PDF)</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="c124044d-a4b4-4aeb-9f0f-235cfe2df86b" >
+				</h2><div class="panel-collapse collapse" id="2d640d6c-12d3-4da1-aead-04791988c815" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass26BCA0CFF0E74B5898C667BA7A6513E1"><ul><li>​​<a href="/ode/students-and-family/equity/civilrights/SiteAssets/Lists/What%20Is%20Discrimination%20Flyers/AllItems/ENGLISH%20What%20is%20Discrimination%20Flyer_accessible.pdf">ENGLISH -&#160;What is Discrimination Flyer</a><br></li><li>​<a href="/ode/students-and-family/equity/civilrights/SiteAssets/Lists/What%20Is%20Discrimination%20Flyers/AllItems/ARABIC%20What%20is%20Discrimination%20Flyer_accessible.pdf">ARABIC -&#160;What is Discrimination Flyer</a></li><li><a href="/ode/students-and-family/equity/civilrights/SiteAssets/Lists/What%20Is%20Discrimination%20Flyers/AllItems/SIMP%20CHINESE%20What%20is%20Discrimination%20Flyer_accessible.pdf">CHINESE&#160;(Simplified)&#160;What is Discrimination Flyer</a><br></li><li><a href="/ode/students-and-family/equity/civilrights/SiteAssets/Lists/What%20Is%20Discrimination%20Flyers/AllItems/TRAD%20CHINESE%20What%20is%20Discrimination%20Flyer_accessible.pdf">CHINESE (Traditional)&#160;What is Discrimination Flyer</a><br></li><li><a href="/ode/students-and-family/equity/civilrights/SiteAssets/Lists/What%20Is%20Discrimination%20Flyers/AllItems/CHUUKESE%20What%20is%20Discrimination%20Flyer_accessible.pdf">CHUUKESE -&#160;What is Discrimination Flyer</a><br></li><li><a href="/ode/students-and-family/equity/civilrights/SiteAssets/Lists/What%20Is%20Discrimination%20Flyers/AllItems/SOMALI%20What%20is%20Discrimination%20Flyer_accessible.pdf">SOMALI - What is Discrimination Flyer</a><br></li><li><a href="/ode/students-and-family/equity/civilrights/SiteAssets/Lists/What%20Is%20Discrimination%20Flyers/AllItems/SPANISH%20What%20is%20Discrimination%20Flyer_accessible.pdf">SPANISH -&#160;What is Discrimination Flyer</a><br></li><li><a href="/ode/students-and-family/equity/civilrights/SiteAssets/Lists/What%20Is%20Discrimination%20Flyers/AllItems/RUSSIAN%20What%20is%20Discrimination%20Flyer_accessible.pdf">RUSSIAN -&#160;What is Discrimination Flyer</a><br></li><li><a href="/ode/students-and-family/equity/civilrights/SiteAssets/Lists/What%20Is%20Discrimination%20Flyers/AllItems/UKRANIAN%20What%20is%20Discrimination%20Flyer_accessible.pdf">UKRANIAN - What is Discrimination Flyer</a><br></li><li><a href="/ode/students-and-family/equity/civilrights/SiteAssets/Lists/What%20Is%20Discrimination%20Flyers/AllItems/VIETNAMESE%20What%20is%20Discrimination%20Flyer_accessible.pdf">VIETNAMESE -&#160;What is Discrimination Flyer</a><br></li></ul></div>
@@ -484,96 +484,96 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ1"  class="ms-WPBody "   style="" ><div id="ctl00_ctl40_g_3b81c831_f47a_4ef1_99a3_d11549f8a5dd">
 		<div class="list-unstyled panel-group or-accordion-list" id="accordion-ctl00_ctl40_g_3b81c831_f47a_4ef1_99a3_d11549f8a5dd_ctl01">
-			<div class="panel panel-default or-accordion-panel" id="panel-4369a834-9085-4372-9b4c-d30a061fb11f">
+			<div class="panel panel-default or-accordion-panel" id="panel-5aebb630-4c39-420b-be9a-c0db182ddced">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#4369a834-9085-4372-9b4c-d30a061fb11f" aria-controls="4369a834-9085-4372-9b4c-d30a061fb11f" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="917e00bf-ce28-4ec9-bea8-079ac4a34331">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#5aebb630-4c39-420b-be9a-c0db182ddced" aria-controls="5aebb630-4c39-420b-be9a-c0db182ddced" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="533460c6-007e-4d4f-955f-34f237d171e5">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Are nondiscrimination protections in place during non-academic time too? </p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="4369a834-9085-4372-9b4c-d30a061fb11f" >
+				</h2><div class="panel-collapse collapse" id="5aebb630-4c39-420b-be9a-c0db182ddced" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassF4CFDDC660BF40E796B0A1B30209528F"><p>​Yes. Nondiscrimination law applies to all of the school’s programs and activities, which includes more than just in class academic time. It may also include field trips, extracurricular activities, recess, lunch time, and more.​<br></p></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-6d1f36db-fd44-46aa-b529-67cb6d04f152">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-74139ee7-8c7d-4fae-90c7-58d6d4edc967">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#6d1f36db-fd44-46aa-b529-67cb6d04f152" aria-controls="6d1f36db-fd44-46aa-b529-67cb6d04f152" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="a0987640-2556-45a8-aec5-20862128c3ad">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#74139ee7-8c7d-4fae-90c7-58d6d4edc967" aria-controls="74139ee7-8c7d-4fae-90c7-58d6d4edc967" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="3ab353b4-57e4-4434-8b94-69b625576a4e">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Do these protections apply to charter schools too?</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="6d1f36db-fd44-46aa-b529-67cb6d04f152" >
+				</h2><div class="panel-collapse collapse" id="74139ee7-8c7d-4fae-90c7-58d6d4edc967" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass72255A0193CE49D5BC4C9FBEA469953F"><p>​Yes. Nondiscrimination law applies to all public schools in Oregon, including public charter schools.​<br></p></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-d3eafaf5-95b3-456a-a801-a953aca453ed">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-0b3441a5-6135-41a4-9945-87740d345f00">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#d3eafaf5-95b3-456a-a801-a953aca453ed" aria-controls="d3eafaf5-95b3-456a-a801-a953aca453ed" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="61bdfd31-4261-4020-bafb-aef7ee527413">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#0b3441a5-6135-41a4-9945-87740d345f00" aria-controls="0b3441a5-6135-41a4-9945-87740d345f00" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="197a853a-373b-40d2-ad1b-f845250d1b4d">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Does discrimination have to be intentional?</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="d3eafaf5-95b3-456a-a801-a953aca453ed" >
+				</h2><div class="panel-collapse collapse" id="0b3441a5-6135-41a4-9945-87740d345f00" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass43D2E9DEA1AC49488C9F98A7D820E072"><p>​No, not necessarily. Oregon law focuses on the impact of the discriminatory action, not the intention. Discrimination can be “intended or unintended.”&#160;​<br></p></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-8291b884-91cd-4657-b345-d5a598d63774">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-c69d496a-ac5f-4577-9cc2-0a704d8744d6">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#8291b884-91cd-4657-b345-d5a598d63774" aria-controls="8291b884-91cd-4657-b345-d5a598d63774" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="ecc3fb5d-0f77-48b6-9094-39c9df0ffd78">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#c69d496a-ac5f-4577-9cc2-0a704d8744d6" aria-controls="c69d496a-ac5f-4577-9cc2-0a704d8744d6" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="92a49828-3455-4f63-88e6-34747d45998b">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Is there somewhere I can file a complaint about discrimination?</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="8291b884-91cd-4657-b345-d5a598d63774" >
+				</h2><div class="panel-collapse collapse" id="c69d496a-ac5f-4577-9cc2-0a704d8744d6" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassEDE387B6138E435EA78086CD2C7B2FB4"><p>​Yes. You can file a complaint with your school district and/or with the U.S. Department of Education’s Office for Civil Rights. More information about how to file a complaint can be found on the <a href="/ode/students-and-family/equity/civilrights/Pages/FilingComplaint.aspx">Filing A Civil Rights Complaint page.​</a><br></p></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-6217f3b1-857f-4653-b5b0-eafbeb97f64e">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-4e3e0a80-90d8-4573-9a7e-ca14ed8a423b">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#6217f3b1-857f-4653-b5b0-eafbeb97f64e" aria-controls="6217f3b1-857f-4653-b5b0-eafbeb97f64e" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="94f4b6b1-c590-4ddb-932f-a348400c5d14">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#4e3e0a80-90d8-4573-9a7e-ca14ed8a423b" aria-controls="4e3e0a80-90d8-4573-9a7e-ca14ed8a423b" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="a42d3000-d198-4fdc-b19e-979aba8e7631">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">What if I’m experiencing multiple types of discrimination at once, such as discrimination based on race and sexual orientation?</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="6217f3b1-857f-4653-b5b0-eafbeb97f64e" >
+				</h2><div class="panel-collapse collapse" id="4e3e0a80-90d8-4573-9a7e-ca14ed8a423b" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass304DF4BFA8AA499F8F86E1B7FEA8D084"><p>You may file a complaint that includes all the discrimination you have experienced, including multiple protected classes.​<br></p></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-a659db7f-73fa-43e3-a308-8251ae7539c6">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-e1ef27d2-89e0-4b14-bde6-bd5994e78a97">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#a659db7f-73fa-43e3-a308-8251ae7539c6" aria-controls="a659db7f-73fa-43e3-a308-8251ae7539c6" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="5149d3eb-72e4-417f-8009-302aa2fe33fc">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#e1ef27d2-89e0-4b14-bde6-bd5994e78a97" aria-controls="e1ef27d2-89e0-4b14-bde6-bd5994e78a97" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="ed434aa6-0025-4bd7-9d69-ceddaa4d2a71">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Is there anyone in the district I can talk to about my concerns? What about at ODE?</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="a659db7f-73fa-43e3-a308-8251ae7539c6" >
+				</h2><div class="panel-collapse collapse" id="e1ef27d2-89e0-4b14-bde6-bd5994e78a97" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass7B179B1EBC7042E080804091DFC03229"><p>​Yes. School districts in Oregon are required to have a Title IX Coordinator, a Section 504/ADA Coordinator, and Civil Rights Coordinator. The contact information for these coordinators should be available on the district website. ODE also has Civil Rights Support Specialists available<span style="white-space&#58;pre;">	</span>to assist families with concerns about discrimination. The Civil Rights Supports Specialists can be reached at <a href="mailto&#58;ODE.CivilRightsSupport@ode.oregon.gov">ODE.CivilRightsSupport@ode.oregon.gov​</a>.&#160;<br></p></div>

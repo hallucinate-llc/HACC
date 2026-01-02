@@ -263,14 +263,14 @@ var MSOWebPartPageFormName = 'aspnetForm';
 var g_presenceEnabled = true;
 var g_wsaEnabled = false;
 
-var g_correlationId = 'c79be8a1-48f3-5059-a10c-87b0ceb657a2';
+var g_correlationId = 'dc23e9a1-4821-5059-054f-d8e15d945dc7';
 var g_wsaQoSEnabled = false;
 var g_wsaQoSDataPoints = [];
 var g_wsaRUMEnabled = false;
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'STS#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fodot\u002fBusiness\u002fOCR", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodot\u002fBusiness\u002fOCR", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fODOT", serverRequestPath: "\u002fODOT\u002fBusiness\u002fOCR\u002fPages\u002fIntermodal-Civil-Rights.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Civil Rights", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-01T03:17:41.8910882Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-01T03:17:41.8910882Z"), siteClientTag: "87$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{2b76d722-20fb-45a0-b00b-409531ec20cc}",pageItemId:22, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fODOT", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fodot\u002fBusiness\u002fOCR", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodot\u002fBusiness\u002fOCR", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fODOT", serverRequestPath: "\u002fODOT\u002fBusiness\u002fOCR\u002fPages\u002fIntermodal-Civil-Rights.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Civil Rights", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-02T18:55:50.8827612Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-02T18:55:50.8827612Z"), siteClientTag: "87$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{2b76d722-20fb-45a0-b00b-409531ec20cc}",pageItemId:22, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fODOT", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
 </script>
 
 <script src="/_layouts/15/16.0.5456.1000/blank.js" type="text/javascript"></script>
@@ -539,16 +539,16 @@ ODOT's Intermodal Civil Rights Program (IMCR) ensures that public transportation
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ1"  class="ms-WPBody "   style="" ><div id="ctl00_ctl00_ctl40_g_99d2510b_d2de_4bed_8adf_cff1650c8366">
 		<div class="list-unstyled panel-group or-accordion-list" id="accordion-ctl00_ctl00_ctl40_g_99d2510b_d2de_4bed_8adf_cff1650c8366_ctl01">
-			<div class="panel panel-default or-accordion-panel" id="panel-9a1c7a4c-915a-4d39-a30e-edf8e070e462">
+			<div class="panel panel-default or-accordion-panel" id="panel-62f16d41-092d-44b3-8b90-6e43aa42274e">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#9a1c7a4c-915a-4d39-a30e-edf8e070e462" aria-controls="9a1c7a4c-915a-4d39-a30e-edf8e070e462" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="e308884b-3323-41d6-873f-d625d8a57daa">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#62f16d41-092d-44b3-8b90-6e43aa42274e" aria-controls="62f16d41-092d-44b3-8b90-6e43aa42274e" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="97240730-f0b7-46f4-88a4-951f342402bc">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Intermodal Disadvantaged Business Enterprise (DBE) program</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="9a1c7a4c-915a-4d39-a30e-edf8e070e462" >
+				</h2><div class="panel-collapse collapse" id="62f16d41-092d-44b3-8b90-6e43aa42274e" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass929123E4D0084D7DAF40683CE12D5918"><p class="ExternalClassC96DA0D2097647689385CA9910EFFA6A">The federal Disadvantaged Business Enterprise program ensures nondiscrimination in the award and administration of federally funded contracts.&#160;The DBE program also creates a level playing field for certified&#160;firms to compete fairly for these contracts.&#160;ODOT monitors the use of Disadvantaged Business Enterprises through the&#160;<a href="/odot/Business/OCR/Pages/Disadvantaged-Business-Enterprise.aspx" target="_blank">Disadvantaged Business Enterprise Program</a>.<br></p>
@@ -557,16 +557,16 @@ ODOT's Intermodal Civil Rights Program (IMCR) ensures that public transportation
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-0eac9587-0e6f-4f61-a6bf-cc3ad6ee46c8">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-ac52db05-b603-49cc-8b5d-50639be98668">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#0eac9587-0e6f-4f61-a6bf-cc3ad6ee46c8" aria-controls="0eac9587-0e6f-4f61-a6bf-cc3ad6ee46c8" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="e1ef0eab-0eaa-4b54-b438-e1cbe211bf17">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#ac52db05-b603-49cc-8b5d-50639be98668" aria-controls="ac52db05-b603-49cc-8b5d-50639be98668" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="c3851cf0-2231-43e9-9d8d-a4af2400296e">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Intermodal Title VI Program</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="0eac9587-0e6f-4f61-a6bf-cc3ad6ee46c8" >
+				</h2><div class="panel-collapse collapse" id="ac52db05-b603-49cc-8b5d-50639be98668" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass4B32AB45EE1C409E83022A2485E63722">Title VI of the Civil Rights Act of 1964 establishes that no person in the United States shall be discriminated against under any federally funded program or activity based on race, color, or ​national origin.&#160;All entities that receive FTA funding from ODOT must comply with Title VI by establishing a nondiscrimination policy and&#160;a discrimination complaint process&#160;and maintaining an&#160;up-to-date Title VI Plan.&#160;Title VI Plans must be updated and submitted to ODOT on a three-year basis.&#160;IMCR provides technical assistance, review, and acknowledgement of a complete and compliant plan.</div><div class="ExternalClass4B32AB45EE1C409E83022A2485E63722"><br></div><div class="ExternalClass4B32AB45EE1C409E83022A2485E63722">For further information on Title VI&#58;<br><ul><li><a href="https&#58;//www.transit.dot.gov/regulations-and-guidance/civil-rights-ada/title-vi-civil-rights-act-1964" target="_blank">FTA Title VI Circular 4702.1B</a><br></li>
@@ -575,48 +575,48 @@ ODOT's Intermodal Civil Rights Program (IMCR) ensures that public transportation
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-0b53c807-f1a6-4e49-91c6-1cda9013f107">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-18358f3e-b881-44b0-acee-3ace8d743adc">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#0b53c807-f1a6-4e49-91c6-1cda9013f107" aria-controls="0b53c807-f1a6-4e49-91c6-1cda9013f107" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="74f74fca-1dbb-4499-92f9-0f0d92c5ddab">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#18358f3e-b881-44b0-acee-3ace8d743adc" aria-controls="18358f3e-b881-44b0-acee-3ace8d743adc" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="c87f421b-7995-4451-9f7d-a66b4f543264">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Intermodal Americans with Disabilities Act (ADA) program</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="0b53c807-f1a6-4e49-91c6-1cda9013f107" >
+				</h2><div class="panel-collapse collapse" id="18358f3e-b881-44b0-acee-3ace8d743adc" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass2DF3F8305B6D4D30820189AAF5DB0F12"><p><br></p><div class="ExternalClassFCDC37E2FCF8470C9FA954B7F007B5F8">​The Americans with Disabilities Act of 1990 and amendments prohibit discrimination and provide equal opportunity and access for persons with&#160;​disabilities.&#160;Public transportation providers are required to ensure their services, vehicles, and facilities are accessible to and usable by individuals with disabilities.&#160;IMCR provides assistance to public transportation providers in interpreting ADA requirements and guidance.</div><div class="ExternalClassFCDC37E2FCF8470C9FA954B7F007B5F8"><br><p class="ExternalClassE82B621A720B41FEA1428D746B444EB8">For further resources on ADA&#58;​<br></p><div class="ExternalClassE82B621A720B41FEA1428D746B444EB8"><ul><li><a href="https&#58;//www.transit.dot.gov/regulations-and-guidance/civil-rights-ada/ada-regulations" target="_blank">ADA Regulations</a><br></li><li><a href="/odot/About/Pages/ADA.aspx" target="_blank">Accessibility at ODOT</a><br></li><li><a href="/odot/Engineering/Pages/Accessibility.aspx" target="_blank">Engineering for Accessibility at ODOT</a>​</li><li><a href="https&#58;//www.nadtc.org/resources-publications/resource/ada-essentials-for-transit-board-members-fundamentals-of-the-americans-with-disabilities-act/" target="_blank">ADA Board Member Handbook</a><br></li><li>​<a href="https&#58;//www.nadtc.org/resources-publications/resource/toolkit-for-the-assessment-of-bus-stop-accessibility-and-safety/" target="_blank">ADA Bus Stop​ Toolkit</a><a href="/odot/Business/OCR/Documents/ada-essential-handbook.pdf" target="_blank"></a></li><li><a href="/odot/Business/OCR/Documents/ada-bus-stop-toolkit.pdf" target="_blank"></a><a href="https&#58;//www.nationalrtap.org/Toolkits/ADA-Toolkit/service-animals" target="_blank">ADA Service Animal Definition and Guidance</a>​<br><br></li></ul></div></div></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-525b843f-f5e3-4803-9e79-8749a58ae3c8">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-3274d7bf-8751-4358-a696-830bfe40dccd">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#525b843f-f5e3-4803-9e79-8749a58ae3c8" aria-controls="525b843f-f5e3-4803-9e79-8749a58ae3c8" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="e95bfaf9-7cf4-4a22-a05c-e1b7b0d9c427">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#3274d7bf-8751-4358-a696-830bfe40dccd" aria-controls="3274d7bf-8751-4358-a696-830bfe40dccd" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="966041d9-6dc2-4f72-a8c1-675741d7bb69">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Additional Civil Rights Requirements for Intermodal programs</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="525b843f-f5e3-4803-9e79-8749a58ae3c8" >
+				</h2><div class="panel-collapse collapse" id="3274d7bf-8751-4358-a696-830bfe40dccd" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassD88D3448C9A1449F87D44862922AC664"><h4>Equal Employme​nt Opportunity<br></h4><div class="ExternalClass63AC127194664D969635F2166090B42A">The Federal Transit Administration is responsible for ensuring that its recipients do not engage in discrimination in the workplace based on federal requirements.<br></div><div><br></div><div>A Federal Transit Administration applicant, recipient, subrecipient​, or contractor must implement all <a href="https&#58;//www.transit.dot.gov/eeo" target="_blank">EEO Program​</a> elements if they&#160;meet the following criteria&#58;<br><ul><li>Employs 100 or more transit-related employees&#160;<em>and</em>;<br></li><li>Requests or receives capital or operating assistance over $1 million in the previous Federal fiscal year; or planning assistance over $250,000 in the previous Federal fiscal year.<br></li></ul><div>Agencies that meet the monetary requirement but employ 50-99 transit-related employees must maintain an abbreviated EEO Program, which does not need to be submitted unless requested by the Federal Transit Administration or Intermodal Civil Rights.<br></div><div><br></div><div>Agencies must include all part-time employees and employees that have duties that support the transportation system in their calculations.&#160;For example, a budget analyst who processes payments for the transit program would be considered a transit-related employee.<br></div><div><br></div><div>For further information on Equal Employment Opportunity&#58;<br></div><ul><li><a href="https&#58;//www.transit.dot.gov/regulations-and-guidance/civil-rights-ada/eeo-circular" target="_blank">FTA Guidance</a><br></li><li><a href="https&#58;//www.transit.dot.gov/regulations-and-guidance/civil-rights-ada/eeo-training-presentation" target="_blank">Training</a>​<br></li></ul><h4><br></h4><h4>Langu​age Access<br></h4></div><div class="ExternalClass2DDDBCC6055C4E08A2AA5B811AF4B6BC">Public transportation providers satisfy language access compliance obligations by having a Language Access Plan as part of their Title VI program.<br></div></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-5af821a4-45fa-460e-980c-ead0608dfb38">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-d67a51b9-4307-44f3-8b1b-4da7aca37696">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#5af821a4-45fa-460e-980c-ead0608dfb38" aria-controls="5af821a4-45fa-460e-980c-ead0608dfb38" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="9ec09e28-b7f9-4013-ae87-66e45cc97f0e">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#d67a51b9-4307-44f3-8b1b-4da7aca37696" aria-controls="d67a51b9-4307-44f3-8b1b-4da7aca37696" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="46cce27a-d404-4a03-b0e0-081434036501">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">ADA Access and Title VI nondiscrimination</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="5af821a4-45fa-460e-980c-ead0608dfb38" >
+				</h2><div class="panel-collapse collapse" id="d67a51b9-4307-44f3-8b1b-4da7aca37696" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass7EBDD99365024340BBAF1A147B932D8E"><p>
@@ -629,16 +629,16 @@ ODOT's Intermodal Civil Rights Program (IMCR) ensures that public transportation
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-edbe73dc-6118-45ba-9bb4-ddb456f71b13">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-37741898-906d-41d9-8061-7e569112d27a">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#edbe73dc-6118-45ba-9bb4-ddb456f71b13" aria-controls="edbe73dc-6118-45ba-9bb4-ddb456f71b13" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="1cf0e20c-6bfd-4bc3-a487-8b9d4038b2e1">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#37741898-906d-41d9-8061-7e569112d27a" aria-controls="37741898-906d-41d9-8061-7e569112d27a" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="88db78a6-6023-436e-9a08-097775553110">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Contact OECR about nondiscrimination programs</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="edbe73dc-6118-45ba-9bb4-ddb456f71b13" >
+				</h2><div class="panel-collapse collapse" id="37741898-906d-41d9-8061-7e569112d27a" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass650C98F531EA4F03A3B60F7E67162C59">​​You can email our&#160;<a href="mailto&#58;OCRINFOREQUEST@odot.state.or.us?subject=ODOT%20OCR%20information%20request" target="_blank"><strong>Administrative Office</strong></a>, our&#160;<a href="mailto&#58;ODOT_ADA@ODOT.Oregon.Gov?subject=ODOT%20ADA%20Program%20Manager%20information%20request" target="_blank" style="text-decoration-line&#58;underline;"><strong>ADA Program</strong>&#160;<strong>Manager</strong></a>, or our&#160;<a href="mailto&#58;ODOT.TItleVI@ODOT.Oregon.Gov?subject=ODOT%20Title%20VI%20Officer%20information%20request" target="_blank"><strong>Title VI Officer</strong></a><strong>&#160;</strong>for assistance. You can also reach us using one of the following methods&#58;<div><ul><li><strong>Administrative Office Phone&#58;&#160;</strong>503-986-4350</li><li><strong>Title VI/ADA Toll Free Line&#58;</strong>&#160;855-540-6655</li><li><strong>TTY&#58;</strong>&#160;<span data-teams="true">800-735-2900</span></li><li><strong>Oregon Relay Service&#58;</strong>&#160;7-1-1<br></li><li><strong>Fax&#58;</strong>&#160;503-986-6382​<br></li></ul><br></div><br></div>

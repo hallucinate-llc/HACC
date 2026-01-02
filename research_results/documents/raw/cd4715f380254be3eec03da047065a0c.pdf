@@ -286,14 +286,14 @@ var MSOWebPartPageFormName = 'aspnetForm';
 var g_presenceEnabled = true;
 var g_wsaEnabled = false;
 
-var g_correlationId = '2d9be8a1-d80e-5059-054f-d81fc8f8cd27';
+var g_correlationId = '8123e9a1-d853-5059-8d61-b7129487cec7';
 var g_wsaQoSEnabled = false;
 var g_wsaQoSDataPoints = [];
 var g_wsaRUMEnabled = false;
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'STS#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fodhs\u002femployment-first", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodhs\u002femployment-first", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodhs", serverRequestPath: "\u002fodhs\u002femployment-first\u002fpages\u002fpolicy.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Employment First", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-01T03:07:07.4520973Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-01T03:07:07.4520973Z"), siteClientTag: "719$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{7bbfd337-4e4c-4891-9fbb-af2c9afb6af7}",pageItemId:10, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fodhs", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fodhs\u002femployment-first", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodhs\u002femployment-first", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodhs", serverRequestPath: "\u002fodhs\u002femployment-first\u002fpages\u002fpolicy.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Employment First", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-02T18:49:38.9553691Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-02T18:49:38.9553691Z"), siteClientTag: "719$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{7bbfd337-4e4c-4891-9fbb-af2c9afb6af7}",pageItemId:10, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fodhs", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
 </script>
 
 <script src="/_layouts/15/16.0.5456.1000/blank.js" type="text/javascript"></script>
@@ -604,16 +604,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 			<div id="ctl00_ctl00_MainContentPlaceHolder_PageContentPlaceHolder_PageContentPlaceHolder_RichHtmlField16_label" style='display:none'></div><div id="ctl00_ctl00_MainContentPlaceHolder_PageContentPlaceHolder_PageContentPlaceHolder_RichHtmlField16__ControlWrapper_OregonRichHtmlField" class="ms-rtestate-field" style="display:inline" ><hr /><h2>Policies<br></h2><div class="ms-rtestate-read ms-rte-wpbox"><div class="ms-rtestate-notify  ms-rtestate-read abea4936-03e0-4554-965b-cef2da608ccf" id="div_abea4936-03e0-4554-965b-cef2da608ccf" unselectable="on"><div id="MSOZoneCell_WebPartWPQ1" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ1"  class="ms-WPBody "   style="" ><div id="ctl00_ctl00_ctl40_g_abea4936_03e0_4554_965b_cef2da608ccf">
-		<div id="3c613ca8-7a47-46d5-ac19-e1f8d9dcdc24">
+		<div id="b8a7ed56-a564-49ea-85ea-2b374ed4d9c2">
 			<accordion-search params="searchId: &#39;search_accordion-ctl00_ctl00_ctl40_g_abea4936_03e0_4554_965b_cef2da608ccf_ctl01&#39;">
 
 			</accordion-search>
 		</div><script type="text/javascript">
-			ko.applyBindings(null, document.getElementById('3c613ca8-7a47-46d5-ac19-e1f8d9dcdc24'))
+			ko.applyBindings(null, document.getElementById('b8a7ed56-a564-49ea-85ea-2b374ed4d9c2'))
 		</script><div class="list-unstyled panel-group or-accordion-list" id="accordion-ctl00_ctl00_ctl40_g_abea4936_03e0_4554_965b_cef2da608ccf_ctl01">
-			<div class="panel panel-default or-accordion-panel" id="panel-61d2a890-f238-4010-87f0-30ea41957553">
+			<div class="panel panel-default or-accordion-panel" id="panel-b0125731-45e0-42be-a52a-4de85f38b1e9">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#61d2a890-f238-4010-87f0-30ea41957553" aria-controls="61d2a890-f238-4010-87f0-30ea41957553" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="0e220f22-cc6d-402f-9a0b-ee07e2b5dc02">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#b0125731-45e0-42be-a52a-4de85f38b1e9" aria-controls="b0125731-45e0-42be-a52a-4de85f38b1e9" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="7ae95356-63d6-4305-a70b-7dd5a562f554">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-green-192.png" alt="&quot;&quot;" />
@@ -622,7 +622,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="61d2a890-f238-4010-87f0-30ea41957553" >
+				</h3><div class="panel-collapse collapse" id="b0125731-45e0-42be-a52a-4de85f38b1e9" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass167D2226B0CC41AB9FBDE1CB3644F457"><p>​Benefits and Work Incentive Counseling services help people with disabilities make informed decisions about work, benefits and the use of work incentives to achieve their employment goals.</p><p><strong>Policy Documents and Related Infor​mation</strong></p><ul><li>
@@ -634,9 +634,9 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-ec4d764a-68a6-4278-aa8a-ee9fc2038d6c">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-3aeaf0ff-f1ec-4c2f-881c-c9df1fa50003">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#ec4d764a-68a6-4278-aa8a-ee9fc2038d6c" aria-controls="ec4d764a-68a6-4278-aa8a-ee9fc2038d6c" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="7a7d88d2-3397-4365-9912-4108b64eb2fb">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#3aeaf0ff-f1ec-4c2f-881c-c9df1fa50003" aria-controls="3aeaf0ff-f1ec-4c2f-881c-c9df1fa50003" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="2bd18cf6-57d1-4b8c-988b-b2cd4e290445">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-green-192.png" alt="&quot;&quot;" />
@@ -645,7 +645,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="ec4d764a-68a6-4278-aa8a-ee9fc2038d6c" >
+				</h3><div class="panel-collapse collapse" id="3aeaf0ff-f1ec-4c2f-881c-c9df1fa50003" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassCCE544418B034CEAB581CC1805F78234"><p>​The Career Development Plan (CDP) identifies the individual's employment goals and objectives. The CDP is based on person-centered planning principles.<br></p><p> 
@@ -657,9 +657,9 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-f1b34e96-ade4-44a4-a1e7-97a0eb9252fa">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-e81ac685-addf-4a77-8488-457e618fd599">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#f1b34e96-ade4-44a4-a1e7-97a0eb9252fa" aria-controls="f1b34e96-ade4-44a4-a1e7-97a0eb9252fa" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="65fc57a8-af61-4589-af8d-b8e8daa1193f">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#e81ac685-addf-4a77-8488-457e618fd599" aria-controls="e81ac685-addf-4a77-8488-457e618fd599" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="3521e5e9-eec2-4143-ba61-1b68fbbae92e">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-green-192.png" alt="&quot;&quot;" />
@@ -668,7 +668,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="f1b34e96-ade4-44a4-a1e7-97a0eb9252fa" >
+				</h3><div class="panel-collapse collapse" id="e81ac685-addf-4a77-8488-457e618fd599" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassE63520E36AE645FD87EF306B09C1D279"><p>Competitive Integrated Employment is full or part-time work at minimum wage or higher, with wages and benefits similar to those without disabilities performing the same work, and fully integrated with co-workers without disabilities.</p><p>
@@ -681,9 +681,9 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-5f76f71e-0a37-4279-8f3d-8e69d1f7f016">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-8f279576-9af7-4363-b7e2-fb79b4b38f4b">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#5f76f71e-0a37-4279-8f3d-8e69d1f7f016" aria-controls="5f76f71e-0a37-4279-8f3d-8e69d1f7f016" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="4918c80f-f572-4220-bec2-3daa180fffb4">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#8f279576-9af7-4363-b7e2-fb79b4b38f4b" aria-controls="8f279576-9af7-4363-b7e2-fb79b4b38f4b" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="00b41f19-8ba0-41f2-ba49-c2c8939a9dd2">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-green-192.png" alt="&quot;&quot;" />
@@ -692,7 +692,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="5f76f71e-0a37-4279-8f3d-8e69d1f7f016" >
+				</h3><div class="panel-collapse collapse" id="8f279576-9af7-4363-b7e2-fb79b4b38f4b" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassCDBC1D6E508D401384700E149D81D97C"><p>ODDS and VR are committed to contracting employment services from qualified Employment Professionals who meet training and competencies adopted by Oregon Employment First.</p><p> 
@@ -710,9 +710,9 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-957b50ff-0e2a-41ef-a9c9-c7782a1b7269">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-679d1926-d5c7-410f-a9e9-e27c489bfb64">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#957b50ff-0e2a-41ef-a9c9-c7782a1b7269" aria-controls="957b50ff-0e2a-41ef-a9c9-c7782a1b7269" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="56f60e0a-5500-4ada-bb88-cf019f3498de">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#679d1926-d5c7-410f-a9e9-e27c489bfb64" aria-controls="679d1926-d5c7-410f-a9e9-e27c489bfb64" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="ad1a757e-1e68-47eb-b17b-b70585704d95">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-green-192.png" alt="&quot;&quot;" />
@@ -721,7 +721,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="957b50ff-0e2a-41ef-a9c9-c7782a1b7269" >
+				</h3><div class="panel-collapse collapse" id="679d1926-d5c7-410f-a9e9-e27c489bfb64" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassED4A65B9890E445382FFF88AB5E961A3"><p>​This is a person-centered, time-limited, employment planning service. It can help an individual obtain, maintain, or advance in a competitive integrate​d job at or above minimum wage. Activities in the service can vary and can identify an individual's interests, strengths, and abilities.<br></p><p> 
@@ -738,9 +738,9 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-84a442fa-952c-49d7-a511-8639b55d33c6">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-988f5701-8ebd-4fe1-a57c-444f068f19d9">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#84a442fa-952c-49d7-a511-8639b55d33c6" aria-controls="84a442fa-952c-49d7-a511-8639b55d33c6" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="8700d91a-e252-44ae-99ee-760fdffd46ae">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#988f5701-8ebd-4fe1-a57c-444f068f19d9" aria-controls="988f5701-8ebd-4fe1-a57c-444f068f19d9" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="b10fc061-53c8-4df5-a093-3278f307fb45">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-green-192.png" alt="&quot;&quot;" />
@@ -749,16 +749,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="84a442fa-952c-49d7-a511-8639b55d33c6" >
+				</h3><div class="panel-collapse collapse" id="988f5701-8ebd-4fe1-a57c-444f068f19d9" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass310A17FEC5814F33A34DF7DF0FF4E229"><p>The&#160;<a href="https&#58;//eos.oregon.gov/">Employment Outcomes System (EOS)​</a> is a system for collecting semiannual data on the employment o​utcomes of adults with intellectual and/or developmental disabilities who are receiving employment services from​ ODDS. Job seekers can use this data to research employment providers in their area.<br></p></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-53d4c036-4118-42a3-ba2e-a38bb97b39ef">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-f44ef644-df41-4bef-a32a-6ebca01481c0">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#53d4c036-4118-42a3-ba2e-a38bb97b39ef" aria-controls="53d4c036-4118-42a3-ba2e-a38bb97b39ef" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="de24ed06-abee-4b1d-83fb-b563c88da2c4">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#f44ef644-df41-4bef-a32a-6ebca01481c0" aria-controls="f44ef644-df41-4bef-a32a-6ebca01481c0" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="57c71f32-c00e-4ffd-bc6d-1f6c897901c2">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-green-192.png" alt="&quot;&quot;" />
@@ -767,7 +767,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="53d4c036-4118-42a3-ba2e-a38bb97b39ef" >
+				</h3><div class="panel-collapse collapse" id="f44ef644-df41-4bef-a32a-6ebca01481c0" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass95DAB2DDBAD14604817FAC1F585AAE30">​<p>Employment Path Community Services should provide learning and work experiences. It may include volunteer opportunities. The goal of this service is for an individual to develop employment skills to be used in an integrated job.​​<br></p><p> 
@@ -780,9 +780,9 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-0f42dd70-8087-4908-bc6c-85c060793bcd">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-395f7ca9-15ea-4376-b6c7-4deab5ade8d9">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#0f42dd70-8087-4908-bc6c-85c060793bcd" aria-controls="0f42dd70-8087-4908-bc6c-85c060793bcd" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="2f33b25c-67fd-4d7d-acc2-f267db81a085">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#395f7ca9-15ea-4376-b6c7-4deab5ade8d9" aria-controls="395f7ca9-15ea-4376-b6c7-4deab5ade8d9" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="6bd18063-9ea0-4403-83ee-a743f9f44c7b">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-green-192.png" alt="&quot;&quot;" />
@@ -791,7 +791,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="0f42dd70-8087-4908-bc6c-85c060793bcd" >
+				</h3><div class="panel-collapse collapse" id="395f7ca9-15ea-4376-b6c7-4deab5ade8d9" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass6DEA0386895B4820981F12C3C4B665EC"><p>​The Employment Stabilization Worker's Guide outlines the process related to transfers from VR-funded job coaching to ODDS-funded job coaching. It also specifies how and when ODDS can fund job coaching in its entirety.<br></p><p>   <strong>Policy Documents and Related​ Information</strong></p><ul><li>
@@ -800,9 +800,9 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-7a662bf4-90fe-4f35-93d3-ba8e4e48a1c6">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-c9c9ab0e-d695-40a2-958d-ce234c10f7d4">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#7a662bf4-90fe-4f35-93d3-ba8e4e48a1c6" aria-controls="7a662bf4-90fe-4f35-93d3-ba8e4e48a1c6" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="9404912c-ea6d-478f-ab1a-5e91094eb71c">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#c9c9ab0e-d695-40a2-958d-ce234c10f7d4" aria-controls="c9c9ab0e-d695-40a2-958d-ce234c10f7d4" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="d2a5505f-16dc-4266-a70e-0d214a40da23">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-green-192.png" alt="&quot;&quot;" />
@@ -811,7 +811,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="7a662bf4-90fe-4f35-93d3-ba8e4e48a1c6" >
+				</h3><div class="panel-collapse collapse" id="c9c9ab0e-d695-40a2-958d-ce234c10f7d4" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass8FF9CBEC22AB46309AECDFCECF944C07"><p>​ODDS services are funded through the 
@@ -825,9 +825,9 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-2e318cb6-5d68-47ca-bb52-6f26aa2c6c8e">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-453e8351-eca8-4cbd-8ea6-8b609fccd2f1">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#2e318cb6-5d68-47ca-bb52-6f26aa2c6c8e" aria-controls="2e318cb6-5d68-47ca-bb52-6f26aa2c6c8e" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="ba1bba19-23af-4329-9e17-2e9a2e0097a3">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#453e8351-eca8-4cbd-8ea6-8b609fccd2f1" aria-controls="453e8351-eca8-4cbd-8ea6-8b609fccd2f1" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="8d34365c-6923-4daa-9f2b-e8c802d604d5">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-green-192.png" alt="&quot;&quot;" />
@@ -836,16 +836,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="2e318cb6-5d68-47ca-bb52-6f26aa2c6c8e" >
+				</h3><div class="panel-collapse collapse" id="453e8351-eca8-4cbd-8ea6-8b609fccd2f1" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassB2F78236DCB141A9ABDEDB7498EAA388"><p><br><br></p></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-56f80d1f-63bd-4f2d-9820-b0395c2d47c1">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-3d992e64-d810-47a1-b230-a25eeb1c7fc5">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#56f80d1f-63bd-4f2d-9820-b0395c2d47c1" aria-controls="56f80d1f-63bd-4f2d-9820-b0395c2d47c1" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="1b62a468-0922-4388-999e-60b3f88d12bb">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#3d992e64-d810-47a1-b230-a25eeb1c7fc5" aria-controls="3d992e64-d810-47a1-b230-a25eeb1c7fc5" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="27e77769-7653-4714-ae00-49d4f31c67c4">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-green-192.png" alt="&quot;&quot;" />
@@ -854,7 +854,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="56f80d1f-63bd-4f2d-9820-b0395c2d47c1" >
+				</h3><div class="panel-collapse collapse" id="3d992e64-d810-47a1-b230-a25eeb1c7fc5" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass2137C25DBC5A43ECB79362AC16DDE21C"><p>Job Coaching is a support service for an individual to maintain or advance in an individual job in a competitive integrated employment setting in the general workforce, including customized employment or self-employment.</p><p>
@@ -874,14 +874,14 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
          <a href="/odhs/employment-first/Documents/factsheet-job-coaching-direct-contact.pdf" title="Fact sheet&#58; ODDS Job Coaching Payment Methodology and Entering Direct Contact Time">​Fact sheet&#58; ODDS Job Coaching Payment Methodology and Entering Direct Contact Time</a></li></ul><p>
       <strong>Forms</strong></p><ul><li>​ 
          <a href="/odhs/employment-first/Documents/job-coaching-without-vr-placement-form.docx">Job Coaching Without Vocational Rehabilitation Placement​​ Form</a></li><li>​ 
-         <a href="/odhs/idd/Documents/maintenance-job-coaching-request-form.docx">Maintenance Job Coaching Request​ Form</a></li></ul><p>
+         <a href="/odhs/idd/Documents/maintenance-job-coaching-request-form.docx">Maintenance Job Coaching Request​ Form</a><br></li></ul><div><strong>Rates</strong><br></div><div><ul><li><a href="/odhs/employment-first/Documents/job-coaching-proposed-rate-models.pdf">ODDS Job Coaching Rate Model effective July 1, 2026</a></li><li><a href="/odhs/employment-first/Documents/job-coaching-rate-change-faq.pdf">Job Coaching rate change Frequently Asked Questions​</a><br></li></ul></div><p>
       <strong>Transm​ittals</strong></p><ul><li>​<a href="/odhs/transmittals/oddstransmittals/ar20063.pdf" title="Stipend Payments for PSWs with Job Coach Specialty">Stipend Payments for PSWs with Job Coach Specialty​​​</a>&#160;​</li></ul></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-e7ae334a-d978-43d6-a459-bc46617f11a5">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-35f04171-4801-495f-9414-10ce68e3ce7b">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#e7ae334a-d978-43d6-a459-bc46617f11a5" aria-controls="e7ae334a-d978-43d6-a459-bc46617f11a5" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="0aa8ff0c-cab1-4588-acd1-ad02bf6c9b70">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#35f04171-4801-495f-9414-10ce68e3ce7b" aria-controls="35f04171-4801-495f-9414-10ce68e3ce7b" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="cc18c72b-c706-42d9-9e95-f4d3bd0fe7bb">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-green-192.png" alt="&quot;&quot;" />
@@ -890,7 +890,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="e7ae334a-d978-43d6-a459-bc46617f11a5" >
+				</h3><div class="panel-collapse collapse" id="35f04171-4801-495f-9414-10ce68e3ce7b" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassF4262F2828C14EE1AA46AEFDC54224F4"><p>​A Job Developer identifies job opportunities in the workplace where an individual's skills match the employer's need. Job Development may include support with the application and interview process, and visits with potential employers.</p><p>
@@ -900,9 +900,9 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-070f4af7-335e-48c1-8d1d-3f37ca00aa27">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-f564d8cc-4ac4-422b-993f-96805f849f7d">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#070f4af7-335e-48c1-8d1d-3f37ca00aa27" aria-controls="070f4af7-335e-48c1-8d1d-3f37ca00aa27" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="eb0e7cc8-f28f-4ece-8b5e-9e811f79c7a8">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#f564d8cc-4ac4-422b-993f-96805f849f7d" aria-controls="f564d8cc-4ac4-422b-993f-96805f849f7d" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="03908ac0-55d9-4005-a9a8-e1f9f5b7c54e">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-green-192.png" alt="&quot;&quot;" />
@@ -911,7 +911,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="070f4af7-335e-48c1-8d1d-3f37ca00aa27" >
+				</h3><div class="panel-collapse collapse" id="f564d8cc-4ac4-422b-993f-96805f849f7d" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass313F77BF13F64DBBB08B971E7113C617"><p>​Lane v. Brown is a class action involving employment services that Oregon provides to people with intellectual and developmental disabilities (I/DD). A settlement was reached at the end of 2015, which was accepted and approved by the Oregon Federal District Court in January 2016.​<br></p><p>    
@@ -919,9 +919,9 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-a28276cf-b5f8-4a06-ba2f-a1e7df140479">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-0f85a7aa-1800-4279-bc4b-563d50f13b32">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#a28276cf-b5f8-4a06-ba2f-a1e7df140479" aria-controls="a28276cf-b5f8-4a06-ba2f-a1e7df140479" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="c202e340-e152-4fb9-bde5-38c4b7499b2a">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#0f85a7aa-1800-4279-bc4b-563d50f13b32" aria-controls="0f85a7aa-1800-4279-bc4b-563d50f13b32" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="3c843d40-87d2-4041-b217-fe0440f8e951">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-green-192.png" alt="&quot;&quot;" />
@@ -930,7 +930,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="a28276cf-b5f8-4a06-ba2f-a1e7df140479" >
+				</h3><div class="panel-collapse collapse" id="0f85a7aa-1800-4279-bc4b-563d50f13b32" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass05E1937C209741E595C880FBA12E1639"><ul><li> 
@@ -940,9 +940,9 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-a259e7c2-b8ac-4d7a-a0bc-1c692f034aa9">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-14340919-e62f-4a85-a42c-69e44e53096b">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#a259e7c2-b8ac-4d7a-a0bc-1c692f034aa9" aria-controls="a259e7c2-b8ac-4d7a-a0bc-1c692f034aa9" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="165bcd38-eadb-4cc6-8c43-1596e3d81520">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#14340919-e62f-4a85-a42c-69e44e53096b" aria-controls="14340919-e62f-4a85-a42c-69e44e53096b" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="7fd25730-af38-4de3-814e-8697857901f5">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-green-192.png" alt="&quot;&quot;" />
@@ -951,7 +951,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="a259e7c2-b8ac-4d7a-a0bc-1c692f034aa9" >
+				</h3><div class="panel-collapse collapse" id="14340919-e62f-4a85-a42c-69e44e53096b" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass248573D0C16C4D7F86840A249496B613"><p>​Project SEARCH is a successful employment service model where interns gain work experience while rotating in a series of nine-month internships. The goal is to leave with competitive integrated employment in the community.<a href="https&#58;//www.oregon.gov/dhs/SENIORS-DISABILITIES/DD/PROVIDERS-PARTNERS/WorkerGuides/employment-dsa-ltccn-dns.pdf"> </a></p><ul><li> 
@@ -963,9 +963,9 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-e00232ba-8dd8-46b8-918f-600b2ce29152">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-bd015f89-f20f-48a5-939c-d52dfb563850">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#e00232ba-8dd8-46b8-918f-600b2ce29152" aria-controls="e00232ba-8dd8-46b8-918f-600b2ce29152" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="47a6f337-640d-41c4-a04a-d550d7892d99">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#bd015f89-f20f-48a5-939c-d52dfb563850" aria-controls="bd015f89-f20f-48a5-939c-d52dfb563850" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="82c61733-263f-4607-8ee3-54208128f68a">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-green-192.png" alt="&quot;&quot;" />
@@ -974,7 +974,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="e00232ba-8dd8-46b8-918f-600b2ce29152" >
+				</h3><div class="panel-collapse collapse" id="bd015f89-f20f-48a5-939c-d52dfb563850" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass1E9DB7DBD39A436A9731BFA2DDD21FC9"><p>
@@ -988,9 +988,9 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-6327df4a-0aed-466d-b529-df49925a9679">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-0fa0527a-3cbd-424f-b0b5-fbf2b03ae9a0">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#6327df4a-0aed-466d-b529-df49925a9679" aria-controls="6327df4a-0aed-466d-b529-df49925a9679" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="7f2c4570-8e86-4ec9-9ac5-46417963d18a">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#0fa0527a-3cbd-424f-b0b5-fbf2b03ae9a0" aria-controls="0fa0527a-3cbd-424f-b0b5-fbf2b03ae9a0" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="bc520da0-72cd-4821-8903-3e264af320b4">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-green-192.png" alt="&quot;&quot;" />
@@ -999,7 +999,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="6327df4a-0aed-466d-b529-df49925a9679" >
+				</h3><div class="panel-collapse collapse" id="0fa0527a-3cbd-424f-b0b5-fbf2b03ae9a0" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass839677A9BE04445D9AFA27F48372F6F8"><p> 
@@ -1015,9 +1015,9 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-5e7f3e76-9afb-4122-9ffc-657752740f6e">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-d4e5da3f-bd49-4ead-9f38-8b1126a8d604">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#5e7f3e76-9afb-4122-9ffc-657752740f6e" aria-controls="5e7f3e76-9afb-4122-9ffc-657752740f6e" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="a0c16642-2982-426d-96cf-9f8ad8da4de4">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#d4e5da3f-bd49-4ead-9f38-8b1126a8d604" aria-controls="d4e5da3f-bd49-4ead-9f38-8b1126a8d604" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="04b028ca-62b3-4e64-bc35-b0679aaedf03">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-green-192.png" alt="&quot;&quot;" />
@@ -1026,16 +1026,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="5e7f3e76-9afb-4122-9ffc-657752740f6e" >
+				</h3><div class="panel-collapse collapse" id="d4e5da3f-bd49-4ead-9f38-8b1126a8d604" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass18442DF641294A6D9F7ED2A85999EBFF"><ul><li>​​​<a href="/odhs/providers-partners/idd/workerguides/supported-self-employment.pdf">Supported Self-Employment Worker Guide​</a></li></ul></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-a2ac350c-80bc-4cea-a20a-7657227031bc">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-bbb4c405-845d-4153-8f86-2a605458f828">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#a2ac350c-80bc-4cea-a20a-7657227031bc" aria-controls="a2ac350c-80bc-4cea-a20a-7657227031bc" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="63565b77-5969-4e06-a2ce-ed9711cc5dcc">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#bbb4c405-845d-4153-8f86-2a605458f828" aria-controls="bbb4c405-845d-4153-8f86-2a605458f828" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="e09db2bb-f8e5-4719-9d5b-f32fe1292cdb">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-green-192.png" alt="&quot;&quot;" />
@@ -1044,7 +1044,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="a2ac350c-80bc-4cea-a20a-7657227031bc" >
+				</h3><div class="panel-collapse collapse" id="bbb4c405-845d-4153-8f86-2a605458f828" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass9FBEF3A8BCBD4EBC93F705E2956F7A81"><p>​The tier review process has been in effect since 2014 when ODDS started tier-based rates for employment and Day Support Activities. A Service Coordinator or Personal Agent would submit a request to ODDS for a tier review. If a provider is concerned that an individual's needs are not supported by their current tier, they can notify the SC/PA that a tier review is needed and provide supporting documents.<br></p><p>
@@ -1052,9 +1052,9 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-e3f25766-4c39-45cd-b54f-dbeb80f3cb7e">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-015fbcec-9233-4487-b1b2-2a07b9e5acc5">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#e3f25766-4c39-45cd-b54f-dbeb80f3cb7e" aria-controls="e3f25766-4c39-45cd-b54f-dbeb80f3cb7e" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="5c40bb5e-6d38-403b-a9c0-4ab0e679a2f1">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#015fbcec-9233-4487-b1b2-2a07b9e5acc5" aria-controls="015fbcec-9233-4487-b1b2-2a07b9e5acc5" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="6ff1515c-cf21-4ee9-a16d-027ec604bd99">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-green-192.png" alt="&quot;&quot;" />
@@ -1063,7 +1063,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="e3f25766-4c39-45cd-b54f-dbeb80f3cb7e" >
+				</h3><div class="panel-collapse collapse" id="015fbcec-9233-4487-b1b2-2a07b9e5acc5" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassD324B8D9E4D34D64BF4BFA88F7804B4D"><p>​Transition from school to work or post-secondary education involves a number of partners and activities and should begin well before students leave school. Transition services begin at age 16, or younger if the team determines it is nece​​ssary, and continues through age 21. In some cases, adult service providers may continue transition services up to age 24.<br></p><p> 
@@ -1078,9 +1078,9 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-3e2ab4ed-795a-44f2-934a-0712c5be2264">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-a2157fb6-dbcb-4759-8c9f-14681aba05ca">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#3e2ab4ed-795a-44f2-934a-0712c5be2264" aria-controls="3e2ab4ed-795a-44f2-934a-0712c5be2264" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="9b95883b-39c5-40cd-bba9-944298b57cfc">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#a2157fb6-dbcb-4759-8c9f-14681aba05ca" aria-controls="a2157fb6-dbcb-4759-8c9f-14681aba05ca" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="9c88b472-e515-4712-aa62-50305ac8ff60">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-green-192.png" alt="&quot;&quot;" />
@@ -1089,16 +1089,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="3e2ab4ed-795a-44f2-934a-0712c5be2264" >
+				</h3><div class="panel-collapse collapse" id="a2157fb6-dbcb-4759-8c9f-14681aba05ca" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass8421A2F8DF4744D9ABCF275D55630521"><p>Individuals are eligible for community or Employment/Day Support Activity (DSA) transportation services, if they need daily living care supports either during transportation or at the destination and are receiving services through the Office of Developmental Disabilities Services (ODDS).&#160;</p><p>​More information is available on the&#160;<a href="/odhs/idd/Pages/transportation.aspx">ODDS Transportation Services​ ​web page​</a>.</p></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-75fb2913-4051-42fc-9b26-8a1537aa282d">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-2299c50c-3b39-45dd-bddf-e6781f51bcd4">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#75fb2913-4051-42fc-9b26-8a1537aa282d" aria-controls="75fb2913-4051-42fc-9b26-8a1537aa282d" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="6819f5f5-2ccc-4a9e-9ef2-8a27e707e71f">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#2299c50c-3b39-45dd-bddf-e6781f51bcd4" aria-controls="2299c50c-3b39-45dd-bddf-e6781f51bcd4" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="e379e412-4d23-470f-8870-570665db0d45">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-green-192.png" alt="&quot;&quot;" />
@@ -1107,7 +1107,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="75fb2913-4051-42fc-9b26-8a1537aa282d" >
+				</h3><div class="panel-collapse collapse" id="2299c50c-3b39-45dd-bddf-e6781f51bcd4" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass41C76BCCA5144EFCBDBEC98D56A623CE"><p>​ODDS and VR policy for planning and implementing supported employment services is the opportunity to work at least 20 hours per week, recognizing that based on individual choice, preferences and circumstances, so​me people may choose to work at that level while others may not.</p><p> 

@@ -227,14 +227,14 @@ var MSOWebPartPageFormName = 'aspnetForm';
 var g_presenceEnabled = true;
 var g_wsaEnabled = false;
 
-var g_correlationId = '3e9be8a1-f8f1-5059-a10c-8f491adb4a36';
+var g_correlationId = '8723e9a1-6871-5059-8d61-bc1573c8559e';
 var g_wsaQoSEnabled = false;
 var g_wsaQoSDataPoints = [];
 var g_wsaRUMEnabled = false;
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'STS#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fdas\u002fOPM", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdas\u002fOPM", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdas", serverRequestPath: "\u002fdas\u002fopm\u002fpages\u002fintermediate.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Oregon Procurement Manual", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-01T03:08:20.7484669Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-01T03:08:20.7484669Z"), siteClientTag: "1$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{0f07a897-0798-445b-b1ab-54f2d1740d15}",pageItemId:18, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fdas", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fdas\u002fOPM", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdas\u002fOPM", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdas", serverRequestPath: "\u002fdas\u002fopm\u002fpages\u002fintermediate.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Oregon Procurement Manual", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-02T18:50:03.9885553Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-02T18:50:03.9885553Z"), siteClientTag: "1$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{0f07a897-0798-445b-b1ab-54f2d1740d15}",pageItemId:18, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fdas", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
 </script>
 
 <script src="/_layouts/15/16.0.5456.1000/blank.js" type="text/javascript"></script>
@@ -519,12 +519,12 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 </div><div><div class="ms-rtestate-read ms-rte-wpbox"><div class="ms-rtestate-notify  ms-rtestate-read 61a8ace8-740b-448b-bd07-d06f0f659cf6" id="div_61a8ace8-740b-448b-bd07-d06f0f659cf6" unselectable="on"><div id="MSOZoneCell_WebPartWPQ2" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ2"  class="ms-WPBody "   style="" ><div id="ctl00_ctl40_g_61a8ace8_740b_448b_bd07_d06f0f659cf6" class="or-dataTablesWebPart">
-		<div id="2ad8b860-16b7-4feb-a2f1-4f1365f0c3f4">
+		<div id="df0ec878-c923-4eb8-aabe-12f1647db955">
 			<data-tables-web-part params="webPartId: &#39;g_61a8ace8_740b_448b_bd07_d06f0f659cf6&#39;, webPartProperties: {&quot;webPartId&quot;:&quot;g_61a8ace8_740b_448b_bd07_d06f0f659cf6&quot;,&quot;tableCaption&quot;:&quot;&quot;,&quot;dataSource&quot;:&quot;list&quot;,&quot;socrataId&quot;:&quot;&quot;,&quot;sharePointWebUrl&quot;:&quot;/das/OPM&quot;,&quot;sharePointListUrl&quot;:&quot;/das/OPM/Lists/Process Description Table&quot;,&quot;sharePointViewName&quot;:&quot;Intermediate&quot;,&quot;responsiveMode&quot;:&quot;reflow&quot;,&quot;paginationEnabled&quot;:false,&quot;searchEnabled&quot;:false,&quot;sortEnabled&quot;:false,&quot;filterEnabled&quot;:false,&quot;stateSaveEnabled&quot;:false,&quot;copyButtonEnabled&quot;:false,&quot;printButtonEnabled&quot;:false,&quot;excelButtonEnabled&quot;:false,&quot;pdfButtonEnabled&quot;:false,&quot;tableBordered&quot;:true,&quot;tableStriped&quot;:false,&quot;tableCondensed&quot;:false}">
 
 			</data-tables-web-part>
 		</div><script type="text/javascript">
-			ko.applyBindings(null, document.getElementById('2ad8b860-16b7-4feb-a2f1-4f1365f0c3f4'))
+			ko.applyBindings(null, document.getElementById('df0ec878-c923-4eb8-aabe-12f1647db955'))
 		</script>
 	</div><div class="ms-clear"></div></div>
 </div>
@@ -536,12 +536,12 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 <div class="ms-rtestate-read ms-rte-wpbox"><div class="ms-rtestate-notify  ms-rtestate-read e5b77fbc-9ddc-492c-840d-dde266db231c" id="div_e5b77fbc-9ddc-492c-840d-dde266db231c" unselectable="on"><div id="MSOZoneCell_WebPartWPQ1" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ1"  class="ms-WPBody "   style="" ><div id="ctl00_ctl40_g_e5b77fbc_9ddc_492c_840d_dde266db231c" class="or-dataTablesWebPart">
-		<div id="0228cb37-2cdb-4b67-937f-0428bca07151">
+		<div id="966a1238-d325-4c73-9feb-43ae32d0de0d">
 			<data-tables-web-part params="webPartId: &#39;g_e5b77fbc_9ddc_492c_840d_dde266db231c&#39;, webPartProperties: {&quot;webPartId&quot;:&quot;g_e5b77fbc_9ddc_492c_840d_dde266db231c&quot;,&quot;tableCaption&quot;:&quot;&quot;,&quot;dataSource&quot;:&quot;list&quot;,&quot;socrataId&quot;:&quot;&quot;,&quot;sharePointWebUrl&quot;:&quot;/das/OPM&quot;,&quot;sharePointListUrl&quot;:&quot;/das/OPM/Lists/Reference Links Right Side&quot;,&quot;sharePointViewName&quot;:&quot;Intermediate&quot;,&quot;responsiveMode&quot;:&quot;scroll&quot;,&quot;paginationEnabled&quot;:false,&quot;searchEnabled&quot;:false,&quot;sortEnabled&quot;:false,&quot;filterEnabled&quot;:false,&quot;stateSaveEnabled&quot;:false,&quot;copyButtonEnabled&quot;:false,&quot;printButtonEnabled&quot;:false,&quot;excelButtonEnabled&quot;:false,&quot;pdfButtonEnabled&quot;:false,&quot;tableBordered&quot;:true,&quot;tableStriped&quot;:false,&quot;tableCondensed&quot;:false}">
 
 			</data-tables-web-part>
 		</div><script type="text/javascript">
-			ko.applyBindings(null, document.getElementById('0228cb37-2cdb-4b67-937f-0428bca07151'))
+			ko.applyBindings(null, document.getElementById('966a1238-d325-4c73-9feb-43ae32d0de0d'))
 		</script>
 	</div><div class="ms-clear"></div></div>
 </div>

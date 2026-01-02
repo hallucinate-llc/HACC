@@ -210,14 +210,14 @@ var MSOWebPartPageFormName = 'aspnetForm';
 var g_presenceEnabled = true;
 var g_wsaEnabled = false;
 
-var g_correlationId = '449be8a1-c8ab-5059-054f-d66bdfd60471';
+var g_correlationId = '8d23e9a1-4856-5059-8d61-be140ae336e5';
 var g_wsaQoSEnabled = false;
 var g_wsaQoSDataPoints = [];
 var g_wsaRUMEnabled = false;
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'STS#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fdelc\u002fabout-us", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdelc\u002fabout-us", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdelc", serverRequestPath: "\u002fdelc\u002fabout-us\u002fPages\u002fdei-action-plan.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "About Us", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-01T03:08:44.1707213Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-01T03:08:44.1707213Z"), siteClientTag: "21$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{bc7f1d06-7b1f-468a-a79c-37e897a38a5c}",pageItemId:26, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fdelc", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fdelc\u002fabout-us", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdelc\u002fabout-us", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdelc", serverRequestPath: "\u002fdelc\u002fabout-us\u002fPages\u002fdei-action-plan.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "About Us", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-02T18:50:28.1306917Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-02T18:50:28.1306917Z"), siteClientTag: "21$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{bc7f1d06-7b1f-468a-a79c-37e897a38a5c}",pageItemId:26, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fdelc", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
 </script>
 
 <script src="/_layouts/15/16.0.5456.1000/blank.js" type="text/javascript"></script>
@@ -417,12 +417,12 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
                <strong>Table 2</strong></a> provides an overview of DELC’s foundational services. Growing Oregon Together’s objectives and strategies refer to core programs, which are the initiatives that directly provide services to children and families. These core programs are designed to support family access to early learning and care providers to ensure that children, and their families participate in culturally appropriate, and family-centered services that recognize and respect the strengths and needs of all children, families, and early learning and care professionals. Foundational services provide critical backbone and infrastructure support. These include the child care licensing program, systems-building initiatives that center community needs and priorities, workforce supports, and DELC agency functions such as finance, budget and provider payments. As with core programs, foundational services are essential to ensuring that the early learning and care system is culturally appropriate, family-centered, and recognizes and respects the strengths and needs of all children, families, and the early learning and care workforce.<br></p><hr style="color&#58;#002e55;border-width&#58;initial;border-style&#58;none;border-top-color&#58;initial;height&#58;30px;font-size&#58;17.5px;background-color&#58;#002e55;" /><h3 id="core-programs-table">Table 1. DELC Core Programs</h3><div class="ms-rtestate-read ms-rte-wpbox"><div class="ms-rtestate-notify  ms-rtestate-read 82b05d83-c9a4-43c9-bedd-c9933a330c37" id="div_82b05d83-c9a4-43c9-bedd-c9933a330c37" unselectable="on"><div id="MSOZoneCell_WebPartWPQ1" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ1"  class="ms-WPBody "   style="" ><div id="ctl00_ctl00_ctl40_g_82b05d83_c9a4_43c9_bedd_c9933a330c37" class="or-dataTablesWebPart">
-		<div id="3a9e757c-947c-4019-b00c-4f3c720ea145">
+		<div id="dbbff795-68aa-4d4b-b772-b909623da42d">
 			<data-tables-web-part params="webPartId: &#39;g_82b05d83_c9a4_43c9_bedd_c9933a330c37&#39;, webPartProperties: {&quot;webPartId&quot;:&quot;g_82b05d83_c9a4_43c9_bedd_c9933a330c37&quot;,&quot;tableCaption&quot;:&quot;Table 1&quot;,&quot;dataSource&quot;:&quot;list&quot;,&quot;socrataId&quot;:&quot;&quot;,&quot;sharePointWebUrl&quot;:&quot;/delc/about-us&quot;,&quot;sharePointListUrl&quot;:&quot;/delc/about-us/Lists/Strategic_Plan_Table1CorePrograms&quot;,&quot;sharePointViewName&quot;:&quot;All Items&quot;,&quot;responsiveMode&quot;:&quot;collapse&quot;,&quot;paginationEnabled&quot;:false,&quot;searchEnabled&quot;:false,&quot;sortEnabled&quot;:false,&quot;filterEnabled&quot;:false,&quot;stateSaveEnabled&quot;:false,&quot;copyButtonEnabled&quot;:false,&quot;printButtonEnabled&quot;:false,&quot;excelButtonEnabled&quot;:false,&quot;pdfButtonEnabled&quot;:false,&quot;tableBordered&quot;:true,&quot;tableStriped&quot;:true,&quot;tableCondensed&quot;:true}">
 
 			</data-tables-web-part>
 		</div><script type="text/javascript">
-			ko.applyBindings(null, document.getElementById('3a9e757c-947c-4019-b00c-4f3c720ea145'))
+			ko.applyBindings(null, document.getElementById('dbbff795-68aa-4d4b-b772-b909623da42d'))
 		</script>
 	</div><div class="ms-clear"></div></div>
 </div>
@@ -430,12 +430,12 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
             <em>All reach data FY 22-23 except ERDC which is March 2024 data.</em></p><hr style="color&#58;#002e55;border-width&#58;initial;border-style&#58;none;border-top-color&#58;initial;height&#58;30px;font-size&#58;17.5px;background-color&#58;#002e55;" /><h3 id="foundational-services-table">Table 2. DELC Foundational Services<br></h3><div class="ms-rtestate-read ms-rte-wpbox"><div class="ms-rtestate-notify  ms-rtestate-read 00333a1d-a74d-4c4e-a2a1-a4a04239122d" id="div_00333a1d-a74d-4c4e-a2a1-a4a04239122d" unselectable="on"><div id="MSOZoneCell_WebPartWPQ2" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ2"  class="ms-WPBody "   style="" ><div id="ctl00_ctl00_ctl40_g_00333a1d_a74d_4c4e_a2a1_a4a04239122d" class="or-dataTablesWebPart">
-		<div id="80ab5544-3f51-4e4f-9d9d-0412b2786fa8">
+		<div id="e8d70440-88fb-4148-a3b5-38777e4734be">
 			<data-tables-web-part params="webPartId: &#39;g_00333a1d_a74d_4c4e_a2a1_a4a04239122d&#39;, webPartProperties: {&quot;webPartId&quot;:&quot;g_00333a1d_a74d_4c4e_a2a1_a4a04239122d&quot;,&quot;tableCaption&quot;:&quot;Table 2&quot;,&quot;dataSource&quot;:&quot;list&quot;,&quot;socrataId&quot;:&quot;&quot;,&quot;sharePointWebUrl&quot;:&quot;/delc/about-us&quot;,&quot;sharePointListUrl&quot;:&quot;/delc/about-us/Lists/Strategic_Plan_Table2FoundationalServices&quot;,&quot;sharePointViewName&quot;:&quot;All Items&quot;,&quot;responsiveMode&quot;:&quot;collapse&quot;,&quot;paginationEnabled&quot;:false,&quot;searchEnabled&quot;:false,&quot;sortEnabled&quot;:false,&quot;filterEnabled&quot;:false,&quot;stateSaveEnabled&quot;:false,&quot;copyButtonEnabled&quot;:false,&quot;printButtonEnabled&quot;:false,&quot;excelButtonEnabled&quot;:false,&quot;pdfButtonEnabled&quot;:false,&quot;tableBordered&quot;:true,&quot;tableStriped&quot;:true,&quot;tableCondensed&quot;:true}">
 
 			</data-tables-web-part>
 		</div><script type="text/javascript">
-			ko.applyBindings(null, document.getElementById('80ab5544-3f51-4e4f-9d9d-0412b2786fa8'))
+			ko.applyBindings(null, document.getElementById('e8d70440-88fb-4148-a3b5-38777e4734be'))
 		</script>
 	</div><div class="ms-clear"></div></div>
 </div>
@@ -443,16 +443,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ3"  class="ms-WPBody "   style="" ><div id="ctl00_ctl00_ctl40_g_59f3bf04_113d_4120_ad3e_c2e0d76df343">
 		<div class="list-unstyled panel-group or-accordion-list" id="accordion-ctl00_ctl00_ctl40_g_59f3bf04_113d_4120_ad3e_c2e0d76df343_ctl01">
-			<div class="panel panel-default or-accordion-panel" id="panel-ab404d20-8b1b-4d94-b4d0-53b92a2f222f">
+			<div class="panel panel-default or-accordion-panel" id="panel-87ba0716-bd10-4d16-9e2a-4b452b27e72c">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#ab404d20-8b1b-4d94-b4d0-53b92a2f222f" aria-controls="ab404d20-8b1b-4d94-b4d0-53b92a2f222f" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_59f3bf04_113d_4120_ad3e_c2e0d76df343_ctl01"><div class="panel-heading" id="ba6eb10b-82c6-47d3-a0b3-f2cc06db4e69">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#87ba0716-bd10-4d16-9e2a-4b452b27e72c" aria-controls="87ba0716-bd10-4d16-9e2a-4b452b27e72c" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_59f3bf04_113d_4120_ad3e_c2e0d76df343_ctl01"><div class="panel-heading" id="defc5e93-39f4-45ee-92fc-654d43ed2398">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">EQUITY</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="ab404d20-8b1b-4d94-b4d0-53b92a2f222f" >
+				</h4><div class="panel-collapse collapse" id="87ba0716-bd10-4d16-9e2a-4b452b27e72c" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass28E519FC2DEB4477A5929351CA104698"><p>We are committed to dismantling the systems of oppression
@@ -466,16 +466,16 @@ programs, services, and resources.
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-be24d81d-8d02-4a03-a1f6-8e24e24316cf">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-ee8695fb-919c-432b-967a-4304e1b044cd">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#be24d81d-8d02-4a03-a1f6-8e24e24316cf" aria-controls="be24d81d-8d02-4a03-a1f6-8e24e24316cf" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_59f3bf04_113d_4120_ad3e_c2e0d76df343_ctl01"><div class="panel-heading" id="5805c474-ddad-4c1c-b2b9-969f0fc43d26">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#ee8695fb-919c-432b-967a-4304e1b044cd" aria-controls="ee8695fb-919c-432b-967a-4304e1b044cd" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_59f3bf04_113d_4120_ad3e_c2e0d76df343_ctl01"><div class="panel-heading" id="9b020d0c-5f95-479f-900d-32fb0e7dbe89">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">RESPECT</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="be24d81d-8d02-4a03-a1f6-8e24e24316cf" >
+				</h4><div class="panel-collapse collapse" id="ee8695fb-919c-432b-967a-4304e1b044cd" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass7026AE23776A474B9D79F00BC41881E2"><p>We believe that family is a child’s first teacher. We are committed
@@ -486,32 +486,32 @@ professionals, and community partners
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-6685684c-96ae-4fe1-8739-6e732e71872c">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-ac2c6cb9-bbb9-4268-8f3f-eecedbf452d7">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#6685684c-96ae-4fe1-8739-6e732e71872c" aria-controls="6685684c-96ae-4fe1-8739-6e732e71872c" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_59f3bf04_113d_4120_ad3e_c2e0d76df343_ctl01"><div class="panel-heading" id="8a2b92e2-5867-4885-9fb0-fa800f7661ff">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#ac2c6cb9-bbb9-4268-8f3f-eecedbf452d7" aria-controls="ac2c6cb9-bbb9-4268-8f3f-eecedbf452d7" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_59f3bf04_113d_4120_ad3e_c2e0d76df343_ctl01"><div class="panel-heading" id="0974a56d-913c-4c29-a2eb-d9598e0fcc87">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">TRUST</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="6685684c-96ae-4fe1-8739-6e732e71872c" >
+				</h4><div class="panel-collapse collapse" id="ac2c6cb9-bbb9-4268-8f3f-eecedbf452d7" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass431FCEAFF0A949A28FCEF40EEC566500"><p>We value the public’s trust through honesty, transparency, and keeping our commitments.​<br></p></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-8708e5a9-8dfa-4495-b296-7a68aa815b91">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-c52f0838-81f1-4ed9-ae47-ee142f037019">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#8708e5a9-8dfa-4495-b296-7a68aa815b91" aria-controls="8708e5a9-8dfa-4495-b296-7a68aa815b91" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_59f3bf04_113d_4120_ad3e_c2e0d76df343_ctl01"><div class="panel-heading" id="7e408fb9-73d8-4e71-8194-e1074a0800d7">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#c52f0838-81f1-4ed9-ae47-ee142f037019" aria-controls="c52f0838-81f1-4ed9-ae47-ee142f037019" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_59f3bf04_113d_4120_ad3e_c2e0d76df343_ctl01"><div class="panel-heading" id="7cc251ff-bd11-484a-8ecf-271305fce634">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">RELATIONSHIPS</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="8708e5a9-8dfa-4495-b296-7a68aa815b91" >
+				</h4><div class="panel-collapse collapse" id="c52f0838-81f1-4ed9-ae47-ee142f037019" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassA3157984CD924C0D99D7A23D19623E34"><p>We acknowledge the importance of nurturing relationships
@@ -520,16 +520,16 @@ celebrate the professionals, families, and children in our communities.<br></p><
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-39af86d5-02c6-4446-aed9-c814b1162589">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-bfe2a74e-4352-4c78-9568-ec494c648c44">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#39af86d5-02c6-4446-aed9-c814b1162589" aria-controls="39af86d5-02c6-4446-aed9-c814b1162589" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_59f3bf04_113d_4120_ad3e_c2e0d76df343_ctl01"><div class="panel-heading" id="c5e2d856-1872-41a8-a7d1-e3f34a81ea1f">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#bfe2a74e-4352-4c78-9568-ec494c648c44" aria-controls="bfe2a74e-4352-4c78-9568-ec494c648c44" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_59f3bf04_113d_4120_ad3e_c2e0d76df343_ctl01"><div class="panel-heading" id="9210b175-b61e-445e-8fd6-4516ec859e98">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">SAFETY</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="39af86d5-02c6-4446-aed9-c814b1162589" >
+				</h4><div class="panel-collapse collapse" id="bfe2a74e-4352-4c78-9568-ec494c648c44" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass480F76603E1141349DC12C3046512151"><p>We put safety and well-being first for our children, families, and
@@ -537,16 +537,16 @@ early learning and care professionals.<br></p></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-38fa7b50-aadb-44aa-93d5-2e882bcc7698">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-d7460f85-40ca-49db-bdd6-e1874f6de435">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#38fa7b50-aadb-44aa-93d5-2e882bcc7698" aria-controls="38fa7b50-aadb-44aa-93d5-2e882bcc7698" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_59f3bf04_113d_4120_ad3e_c2e0d76df343_ctl01"><div class="panel-heading" id="9348a91f-f4c4-426b-8788-fb1087c39f38">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#d7460f85-40ca-49db-bdd6-e1874f6de435" aria-controls="d7460f85-40ca-49db-bdd6-e1874f6de435" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_59f3bf04_113d_4120_ad3e_c2e0d76df343_ctl01"><div class="panel-heading" id="2876cc16-9dcf-4ec3-a7ef-d39095136b45">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">CONTINUOUS IMPROVEMENT</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="38fa7b50-aadb-44aa-93d5-2e882bcc7698" >
+				</h4><div class="panel-collapse collapse" id="d7460f85-40ca-49db-bdd6-e1874f6de435" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass3E682E52EBE0438E885CF8E463ACBEB4"><p>We set goals, seek input from community,
@@ -555,16 +555,16 @@ and efficiency, and drive innovation.<br></p></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-e6cd7b17-2731-4cbc-9f0b-f7fcda4a64df">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-ef2f910c-1e8b-4580-b6e1-b1b7314a8435">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#e6cd7b17-2731-4cbc-9f0b-f7fcda4a64df" aria-controls="e6cd7b17-2731-4cbc-9f0b-f7fcda4a64df" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_59f3bf04_113d_4120_ad3e_c2e0d76df343_ctl01"><div class="panel-heading" id="7fcdf363-2add-4d14-9750-56256092dab5">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#ef2f910c-1e8b-4580-b6e1-b1b7314a8435" aria-controls="ef2f910c-1e8b-4580-b6e1-b1b7314a8435" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_59f3bf04_113d_4120_ad3e_c2e0d76df343_ctl01"><div class="panel-heading" id="92380d5d-c4dc-43ff-b343-c169008826be">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">INTEGRITY</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="e6cd7b17-2731-4cbc-9f0b-f7fcda4a64df" >
+				</h4><div class="panel-collapse collapse" id="ef2f910c-1e8b-4580-b6e1-b1b7314a8435" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass6C305BBCDA0945E2A3EA0FD97F649482"><p>We are accountable for our actions, decisions, and our work to
@@ -586,16 +586,16 @@ reliably achieve high-quality outcomes.<br></p></div>
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ4"  class="ms-WPBody "   style="" ><div id="ctl00_ctl00_ctl40_g_6578582e_c1ab_4739_8e54_6e85d1a36a38">
 		<div class="list-unstyled panel-group or-accordion-list" id="accordion-ctl00_ctl00_ctl40_g_6578582e_c1ab_4739_8e54_6e85d1a36a38_ctl01">
-			<div class="panel panel-default or-accordion-panel" id="panel-2c5678ac-8d19-46d4-998d-074676f01650">
+			<div class="panel panel-default or-accordion-panel" id="panel-08d253b2-0ba0-4fb4-8104-f13f2c85de81">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#2c5678ac-8d19-46d4-998d-074676f01650" aria-controls="2c5678ac-8d19-46d4-998d-074676f01650" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_6578582e_c1ab_4739_8e54_6e85d1a36a38_ctl01"><div class="panel-heading" id="c2c6dde3-5d30-4edd-bbfc-0a0526ef7b19">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#08d253b2-0ba0-4fb4-8104-f13f2c85de81" aria-controls="08d253b2-0ba0-4fb4-8104-f13f2c85de81" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_6578582e_c1ab_4739_8e54_6e85d1a36a38_ctl01"><div class="panel-heading" id="e29139c7-1b27-4ac9-bc4b-d3b2c95e20aa">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Strategy 1: Develop DELC Agency-wide Diversity, Equity, and Inclusion (DEI) Action Plan</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="2c5678ac-8d19-46d4-998d-074676f01650" >
+				</h4><div class="panel-collapse collapse" id="08d253b2-0ba0-4fb4-8104-f13f2c85de81" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassB5285880A0B641369CFDF19B709AACAF"><p>As a new state agency, it is critical that DELC is rooted in a clear plan that recognizes the multiple social identities, such as race, ethnicity, Tribal nations, as well as geography and economic factors of the children, families, child care providers, and community partners we serve.</p><p>
@@ -603,16 +603,16 @@ reliably achieve high-quality outcomes.<br></p></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-2d0b2b15-1a2d-4fd0-9ec7-14824baac5a0">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-16b4a0ec-25d9-48b2-9d6f-f90c78cc593f">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#2d0b2b15-1a2d-4fd0-9ec7-14824baac5a0" aria-controls="2d0b2b15-1a2d-4fd0-9ec7-14824baac5a0" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_6578582e_c1ab_4739_8e54_6e85d1a36a38_ctl01"><div class="panel-heading" id="0be5bd68-f470-4eab-a4c1-96b2223bd689">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#16b4a0ec-25d9-48b2-9d6f-f90c78cc593f" aria-controls="16b4a0ec-25d9-48b2-9d6f-f90c78cc593f" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_6578582e_c1ab_4739_8e54_6e85d1a36a38_ctl01"><div class="panel-heading" id="c209a8dc-231e-4868-8242-d4f6158ba77e">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Strategy 2: Build Diversity, Equity and Inclusion Infrastructure</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="2d0b2b15-1a2d-4fd0-9ec7-14824baac5a0" >
+				</h4><div class="panel-collapse collapse" id="16b4a0ec-25d9-48b2-9d6f-f90c78cc593f" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassB5285880A0B641369CFDF19B709AACAF"><p>A robust diversity, equity, and inclusion infrastructure is critical to the success of the implementation of
@@ -622,16 +622,16 @@ leadership to advise and influence budgets, policies, and decisions.</p><p>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-a9b9fb80-b211-4e85-807f-0eaf2bfdc9a2">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-d97cd4c0-ce4d-4a15-9912-7e95456abfea">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#a9b9fb80-b211-4e85-807f-0eaf2bfdc9a2" aria-controls="a9b9fb80-b211-4e85-807f-0eaf2bfdc9a2" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_6578582e_c1ab_4739_8e54_6e85d1a36a38_ctl01"><div class="panel-heading" id="65183cd4-af76-4756-a524-5b73f91c014e">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#d97cd4c0-ce4d-4a15-9912-7e95456abfea" aria-controls="d97cd4c0-ce4d-4a15-9912-7e95456abfea" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_6578582e_c1ab_4739_8e54_6e85d1a36a38_ctl01"><div class="panel-heading" id="df0480bd-17dc-41da-9cbd-85adc5f73cce">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Strategy 3: Foster Accessible and Inclusive Communications</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="a9b9fb80-b211-4e85-807f-0eaf2bfdc9a2" >
+				</h4><div class="panel-collapse collapse" id="d97cd4c0-ce4d-4a15-9912-7e95456abfea" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassB5285880A0B641369CFDF19B709AACAF"><p>For maximum transparency and accountability, communicating DELC’s work needs to unfold in
@@ -641,16 +641,16 @@ needed to create public narrative shifts around race, diversity, and equity in e
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-fb56523f-2b23-4af1-9c51-9f6f5c1e14b6">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-1791b946-b1c4-4339-854e-59071047c4b0">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#fb56523f-2b23-4af1-9c51-9f6f5c1e14b6" aria-controls="fb56523f-2b23-4af1-9c51-9f6f5c1e14b6" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_6578582e_c1ab_4739_8e54_6e85d1a36a38_ctl01"><div class="panel-heading" id="21eee754-6fcf-4471-82dc-527cda1643bf">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#1791b946-b1c4-4339-854e-59071047c4b0" aria-controls="1791b946-b1c4-4339-854e-59071047c4b0" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_6578582e_c1ab_4739_8e54_6e85d1a36a38_ctl01"><div class="panel-heading" id="05b1954a-75ae-4fc6-8b3c-2f3d23fba281">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Strategy 4: Cultivate Meaningful Tribal Consultation and Government-to-Government Partnership</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="fb56523f-2b23-4af1-9c51-9f6f5c1e14b6" >
+				</h4><div class="panel-collapse collapse" id="1791b946-b1c4-4339-854e-59071047c4b0" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassB5285880A0B641369CFDF19B709AACAF"><p>Tribal consultation is a formal, two-way, government-to-government process designed to ensure timely
@@ -669,16 +669,16 @@ strengths, needs, and government structure.​<br></li></ul></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-b3ac0265-3b63-40ad-b7a9-20a72c188dc2">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-2b67b76e-649e-4111-943b-5226d7b08fcc">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#b3ac0265-3b63-40ad-b7a9-20a72c188dc2" aria-controls="b3ac0265-3b63-40ad-b7a9-20a72c188dc2" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_6578582e_c1ab_4739_8e54_6e85d1a36a38_ctl01"><div class="panel-heading" id="c0055e16-b305-472b-9da5-09b60f3a8a86">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#2b67b76e-649e-4111-943b-5226d7b08fcc" aria-controls="2b67b76e-649e-4111-943b-5226d7b08fcc" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_6578582e_c1ab_4739_8e54_6e85d1a36a38_ctl01"><div class="panel-heading" id="1ed5c480-a473-4a1a-887c-a1bd107f57c4">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Strategy 5: Strengthen Engagement, Empowerment, and Partnership with the Communities Across Oregon</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="b3ac0265-3b63-40ad-b7a9-20a72c188dc2" >
+				</h4><div class="panel-collapse collapse" id="2b67b76e-649e-4111-943b-5226d7b08fcc" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassB5285880A0B641369CFDF19B709AACAF"><p>DELC intends to provide information, build relationships, co-design, and proactively work with
@@ -692,16 +692,16 @@ budget decisions.</li><li>Ensure policy making bodies center those most impacted
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-8eed0f47-68a3-4b39-ad4b-579ff24a54d9">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-5a4412c6-c172-48aa-8e55-87e884059ada">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#8eed0f47-68a3-4b39-ad4b-579ff24a54d9" aria-controls="8eed0f47-68a3-4b39-ad4b-579ff24a54d9" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_6578582e_c1ab_4739_8e54_6e85d1a36a38_ctl01"><div class="panel-heading" id="7939d26f-8e50-4206-8b2e-a200b16d83b9">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#5a4412c6-c172-48aa-8e55-87e884059ada" aria-controls="5a4412c6-c172-48aa-8e55-87e884059ada" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_6578582e_c1ab_4739_8e54_6e85d1a36a38_ctl01"><div class="panel-heading" id="8a04796d-dcb0-4b17-86ae-2288da09723a">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Strategy 6: Leverage Disaggregated Data as a Lever for Change</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="8eed0f47-68a3-4b39-ad4b-579ff24a54d9" >
+				</h4><div class="panel-collapse collapse" id="5a4412c6-c172-48aa-8e55-87e884059ada" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassB5285880A0B641369CFDF19B709AACAF"><p>DELC will build a culture and practice of leveraging qualitative and quantitative data to drive questions
@@ -718,16 +718,16 @@ their impact.<br></li></ul></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-29993e7a-2261-4190-b856-cd6141d86c79">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-ff53fb26-c47b-4c4d-90b4-c8f45a56b921">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#29993e7a-2261-4190-b856-cd6141d86c79" aria-controls="29993e7a-2261-4190-b856-cd6141d86c79" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_6578582e_c1ab_4739_8e54_6e85d1a36a38_ctl01"><div class="panel-heading" id="eac88297-cff1-4e81-af0d-3a6f34582aa1">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#ff53fb26-c47b-4c4d-90b4-c8f45a56b921" aria-controls="ff53fb26-c47b-4c4d-90b4-c8f45a56b921" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_6578582e_c1ab_4739_8e54_6e85d1a36a38_ctl01"><div class="panel-heading" id="170f7286-6b8f-4e27-896d-35110301029f">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Strategy 7: Develop Equitable Budget, Inclusive Budget Process, and Investing</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="29993e7a-2261-4190-b856-cd6141d86c79" >
+				</h4><div class="panel-collapse collapse" id="ff53fb26-c47b-4c4d-90b4-c8f45a56b921" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassB5285880A0B641369CFDF19B709AACAF"><p>It is important to acknowledge and address the racial roots of inequity that currently exist whenever
@@ -739,16 +739,16 @@ families, and providers impacted by DELC’s programs and services.</p><p>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-24be2c8b-7f83-4a65-a14b-25df07492aae">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-4c0c4a26-1fde-41c2-945b-b9bc9ea1f45b">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#24be2c8b-7f83-4a65-a14b-25df07492aae" aria-controls="24be2c8b-7f83-4a65-a14b-25df07492aae" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_6578582e_c1ab_4739_8e54_6e85d1a36a38_ctl01"><div class="panel-heading" id="5060c51a-c868-418f-828c-ec3a51741cb0">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#4c0c4a26-1fde-41c2-945b-b9bc9ea1f45b" aria-controls="4c0c4a26-1fde-41c2-945b-b9bc9ea1f45b" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_6578582e_c1ab_4739_8e54_6e85d1a36a38_ctl01"><div class="panel-heading" id="aa90d840-1117-4629-a267-fb1803377454">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Strategy 8: Advance Contract Equity and Improving DELC Procurement Processes</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="24be2c8b-7f83-4a65-a14b-25df07492aae" >
+				</h4><div class="panel-collapse collapse" id="4c0c4a26-1fde-41c2-945b-b9bc9ea1f45b" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassB5285880A0B641369CFDF19B709AACAF"><p>Many early learning and care programs are minority-and women-owned small businesses. DELC
@@ -759,16 +759,16 @@ service-disabled veteran- owned, and emerging small businesses.</p><p>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-017fc236-da37-482e-978d-39506860d2c7">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-ebfffe0a-a12f-4092-aef6-ecbbcfa064df">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#017fc236-da37-482e-978d-39506860d2c7" aria-controls="017fc236-da37-482e-978d-39506860d2c7" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_6578582e_c1ab_4739_8e54_6e85d1a36a38_ctl01"><div class="panel-heading" id="87ef1484-4d3b-4bd1-af3d-7997086a81a5">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#ebfffe0a-a12f-4092-aef6-ecbbcfa064df" aria-controls="ebfffe0a-a12f-4092-aef6-ecbbcfa064df" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_6578582e_c1ab_4739_8e54_6e85d1a36a38_ctl01"><div class="panel-heading" id="fdc58f7a-4980-4473-85c8-3079e686aae1">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Strategy 9: Build a More Diverse and Inclusive Workplace Free from Discrimination</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="017fc236-da37-482e-978d-39506860d2c7" >
+				</h4><div class="panel-collapse collapse" id="ebfffe0a-a12f-4092-aef6-ecbbcfa064df" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassB5285880A0B641369CFDF19B709AACAF"><p>DELC will participate in the state’s efforts to promote public service through intentional and purposeful

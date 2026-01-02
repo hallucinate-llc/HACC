@@ -227,14 +227,14 @@ var MSOWebPartPageFormName = 'aspnetForm';
 var g_presenceEnabled = true;
 var g_wsaEnabled = false;
 
-var g_correlationId = 'e19be8a1-1877-5059-a10c-801d7727676d';
+var g_correlationId = 'ef23e9a1-1844-5059-054f-d215900b6780';
 var g_wsaQoSEnabled = false;
 var g_wsaQoSDataPoints = [];
 var g_wsaRUMEnabled = false;
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'STS#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fdas\u002fOPM", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdas\u002fOPM", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdas", serverRequestPath: "\u002fdas\u002fopm\u002fpages\u002fadministration.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Oregon Procurement Manual", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-01T03:19:26.3994836Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-01T03:19:26.3994836Z"), siteClientTag: "1$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{0f07a897-0798-445b-b1ab-54f2d1740d15}",pageItemId:2, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fdas", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fdas\u002fOPM", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdas\u002fOPM", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdas", serverRequestPath: "\u002fdas\u002fopm\u002fpages\u002fadministration.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Oregon Procurement Manual", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-02T18:57:09.2794801Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-02T18:57:09.2794801Z"), siteClientTag: "1$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{0f07a897-0798-445b-b1ab-54f2d1740d15}",pageItemId:2, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fdas", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
 </script>
 
 <script src="/_layouts/15/16.0.5456.1000/blank.js" type="text/javascript"></script>
@@ -518,16 +518,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ1"  class="ms-WPBody "   style="" ><div id="ctl00_ctl40_g_fb91a870_bd75_4b53_9d2e_f7a7b755542a">
 		<div class="list-unstyled panel-group or-accordion-list" id="accordion-ctl00_ctl40_g_fb91a870_bd75_4b53_9d2e_f7a7b755542a_ctl01">
-			<div class="panel panel-default or-accordion-panel" id="panel-b5fe5fab-3f27-413c-ae14-d8a58d145adf">
+			<div class="panel panel-default or-accordion-panel" id="panel-a263c3b5-7c59-4a0a-b17c-46d860c36353">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#b5fe5fab-3f27-413c-ae14-d8a58d145adf" aria-controls="b5fe5fab-3f27-413c-ae14-d8a58d145adf" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="79a4b072-405b-4d45-b011-4cfa4e8f08aa">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#a263c3b5-7c59-4a0a-b17c-46d860c36353" aria-controls="a263c3b5-7c59-4a0a-b17c-46d860c36353" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="45c96371-cf08-4679-92b6-549d8b50d21f">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">1. Develop contract administration plan</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="b5fe5fab-3f27-413c-ae14-d8a58d145adf" >
+				</h4><div class="panel-collapse collapse" id="a263c3b5-7c59-4a0a-b17c-46d860c36353" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass35FD1EAB74034EE79B71451F0F7CAA3B"><span class="ms-rteFontFace-13">​The Contract Administration Plan (CAP) defines how the agency will  manage the contract and document, monitor and control contract  performance. The CAP provides a mechanism to reconcile the various  contract documents and the order of precedence into a management tool  the agency can use to focus and govern implementation tasks.<br><br></span></div><div class="ExternalClass35FD1EAB74034EE79B71451F0F7CAA3B"><span class="ms-rteFontFace-13">An agency should develop and use a CAP for a contract with high  risk or complexity. The plan elements and content will vary based on the  contract scope, requirements, and the level of risk or complexity. The  frame of the plan should focus on the who, what, when, where, and how of  administering a contract. A CAP generally addresses a common set of  topics, with particular emphasis on process, output and outcome.</span><br class="ms-rteFontFace-13"><br class="ms-rteFontFace-13"><span class="ms-rteFontFace-13">
@@ -538,32 +538,32 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-f2eb965b-a885-4914-a326-a90f9b3a5ac9">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-c1f100cd-7529-48ee-8e95-6a11a74751b4">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#f2eb965b-a885-4914-a326-a90f9b3a5ac9" aria-controls="f2eb965b-a885-4914-a326-a90f9b3a5ac9" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="98b50c68-0d55-43b3-82b7-80897040a2f5">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#c1f100cd-7529-48ee-8e95-6a11a74751b4" aria-controls="c1f100cd-7529-48ee-8e95-6a11a74751b4" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="0cffadb9-c7f1-4ba6-92d6-ca683cec5121">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">2. Conduct kick-off meeting</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="f2eb965b-a885-4914-a326-a90f9b3a5ac9" >
+				</h4><div class="panel-collapse collapse" id="c1f100cd-7529-48ee-8e95-6a11a74751b4" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassBF4FF201EEC44B03B538888F0B8A2623"><span class="ms-rteFontFace-13">​As part of the contract initiation process, the agency should  conduct a kick-off meeting prior to commencing the work, particularly  for any contract for which a CAP has been developed. The kick-off  meeting is a method to formally notify all team members, the contractor,  and stakeholders that the contract work has commenced and to ensure  that everyone has a common understanding of the requirements and each  party’s roles and responsibilities.<br><br>The contract administrator should consider inviting the following representatives to participate in the meeting&#58;</span></div><div class="ExternalClassBF4FF201EEC44B03B538888F0B8A2623"><ul><li><span class="ms-rteFontFace-13">Procurement professional.</span></li><li><span class="ms-rteFontFace-13">Contractor team.</span></li><li><span class="ms-rteFontFace-13">Project sponsor.</span></li><li><span class="ms-rteFontFace-13">Project manager.</span></li><li><span class="ms-rteFontFace-13">Internal project team.</span></li><li><span class="ms-rteFontFace-13">Legal representative, as applicable.</span></li></ul></div><div class="ExternalClassBF4FF201EEC44B03B538888F0B8A2623"><span class="ms-rteFontFace-13">The purpose of the kick-off meeting is to&#58;</span></div><div class="ExternalClassBF4FF201EEC44B03B538888F0B8A2623"><ul><li><span class="ms-rteFontFace-13">Review either the contract, CAP or both.</span></li><li><span class="ms-rteFontFace-13">Clarify how the parties will interact and exchange information.</span></li><li><span class="ms-rteFontFace-13">Clarify roles and responsibilities of all parties.</span></li><li><span class="ms-rteFontFace-13">Clarify key contacts and escalation processes.</span></li><li><span class="ms-rteFontFace-13">Ensure understanding and agreement on management elements used to track and monitor contract health.</span></li></ul></div><div class="ExternalClassBF4FF201EEC44B03B538888F0B8A2623"><span class="ms-rteFontFace-13">The meeting should address the agency’s needs  and requirements and also provide key information for contractors, for  example, the payment process.</span></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-8267c753-4438-46a5-913d-e13910fc3775">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-6473a5b5-885f-460d-b3bd-a2b6363400c8">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#8267c753-4438-46a5-913d-e13910fc3775" aria-controls="8267c753-4438-46a5-913d-e13910fc3775" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="e0c4d211-0029-46fe-bb31-13cc341bf99a">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#6473a5b5-885f-460d-b3bd-a2b6363400c8" aria-controls="6473a5b5-885f-460d-b3bd-a2b6363400c8" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="757b65b0-d758-41e7-8bb0-6b9e82880c40">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">3. Monitor contract</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="8267c753-4438-46a5-913d-e13910fc3775" >
+				</h4><div class="panel-collapse collapse" id="6473a5b5-885f-460d-b3bd-a2b6363400c8" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassE609474A48B94B5691A54FE81077FD4D"> 
@@ -598,96 +598,96 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-22287ce7-36c0-4255-a640-606c8b0ae37a">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-a695fc56-ec13-4c5e-92ee-2ebbe0c4341d">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#22287ce7-36c0-4255-a640-606c8b0ae37a" aria-controls="22287ce7-36c0-4255-a640-606c8b0ae37a" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="9d43b349-5c22-4131-86fe-d3442eca7b5d">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#a695fc56-ec13-4c5e-92ee-2ebbe0c4341d" aria-controls="a695fc56-ec13-4c5e-92ee-2ebbe0c4341d" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="18543e91-b48e-48db-bdac-abf8cabf7625">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">4. Manage supplier relations</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="22287ce7-36c0-4255-a640-606c8b0ae37a" >
+				</h4><div class="panel-collapse collapse" id="a695fc56-ec13-4c5e-92ee-2ebbe0c4341d" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass30AF7923A8884449AAA69C754A494974"><span class="ms-rteFontFace-13">An effective state-contractor relationship is one that fosters a  mutually beneficial business relationship. The goal is to create an  environment where all parties are treated with courtesy, honesty and  fairness. The contract administrator is responsible for managing  relations between the agency and a contractor so that contractor meets  obligations to the agency and the agency meets obligations to the  contractor.</span><br class="ms-rteFontFace-13"><br class="ms-rteFontFace-13"><span class="ms-rteFontFace-13">The following list provides basic guidelines for interacting with  contractors to ensure a successful business relationship is established  and maintained&#58;</span><br class="ms-rteFontFace-13"><ul><li><span class="ms-rteFontFace-13">Know the contract. If the agency does not know what the  contractor is required to do, the agency cannot manage the relationship.<br></span></li><li><span class="ms-rteFontFace-13">Reinforce roles and responsibilities. Reinforce the roles,  responsibilities, and expectations of all parties to the contract to  strengthen the agency’s position in administering the contract.</span></li><li><span class="ms-rteFontFace-13">Be fair, honest and ethical. An obvious guideline and also the key to building a positive relationship with the contractor.</span></li><li><span class="ms-rteFontFace-13">Be reasonable. Understand the needs of the agency and the contractor  and strive to create a mutually beneficial business relationship.</span></li><li><span class="ms-rteFontFace-13">Communicate regularly. Without regular communication of contract  performance, the business and contract relationship will suffer.</span></li><li><span class="ms-rteFontFace-13">Document everything.Trust but verify. If not reduced to writing, it does not exist in the contract.</span></li><li><span class="ms-rteFontFace-13">Pay promptly. Prompt payment demonstrates an agency’s commitment to its contractual obligations.</span></li></ul> </div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-448b09e3-65c7-420c-84c8-f4a855fe4d9e">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-2fb43595-ebb3-4b4f-8c0b-082e728f6541">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#448b09e3-65c7-420c-84c8-f4a855fe4d9e" aria-controls="448b09e3-65c7-420c-84c8-f4a855fe4d9e" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="4eb1e68a-0c45-455d-a98f-d4c00df1741e">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#2fb43595-ebb3-4b4f-8c0b-082e728f6541" aria-controls="2fb43595-ebb3-4b4f-8c0b-082e728f6541" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="50c10b72-d23d-41ec-bcad-c22c88c6e0d4">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">5. Receive products and services</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="448b09e3-65c7-420c-84c8-f4a855fe4d9e" >
+				</h4><div class="panel-collapse collapse" id="2fb43595-ebb3-4b4f-8c0b-082e728f6541" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass0F3FF63347324A1BBA54C72660B8FA31"><span class="ms-rteFontFace-13">The contract administrator is responsible for ensuring that the  contractor performs services and delivers products according to the  contract requirements. The contract administrator is responsible for  ensuring that prompt receipt, inspection,and acceptance of all products and services procured by the agency is performed.<br><br>Appropriate personnel, designated by the agency or delegated by the  contract administrator, must certify that the products or services were  received, that quantities were verified, that the products or services  met specifications and contract terms and conditions, and that the  condition was satisfactory or noted otherwise upon receipt.</span></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-565c4166-09bc-44cb-b8a2-99cbacc44254">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-d442453d-b197-4cf6-bfea-2144709ec31e">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#565c4166-09bc-44cb-b8a2-99cbacc44254" aria-controls="565c4166-09bc-44cb-b8a2-99cbacc44254" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="e28f188d-5fb0-4c00-8cae-518175534e13">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#d442453d-b197-4cf6-bfea-2144709ec31e" aria-controls="d442453d-b197-4cf6-bfea-2144709ec31e" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="7abe2bb2-c05f-476d-b066-a7e63f6f4bcd">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">6. Remit payment to contractor</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="565c4166-09bc-44cb-b8a2-99cbacc44254" >
+				</h4><div class="panel-collapse collapse" id="d442453d-b197-4cf6-bfea-2144709ec31e" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass59697EF9BA4446E2883203E2DA539AE2"><span class="ms-rteFontFace-13">Another critical function of contract administration is invoice  approval and contractor payment. To receive payment, a contractor must  submit an invoice to the agency with the detail as outlined in the  contract.<br><br></span></div><div class="ExternalClass59697EF9BA4446E2883203E2DA539AE2"><span class="ms-rteFontFace-13">Appropriate personnel, designated by the agency or delegated by the  contract administrator, must review and verify the accuracy of the  invoice and authorize payment consistent with the contract terms.</span><br class="ms-rteFontFace-13"><br class="ms-rteFontFace-13"><span class="ms-rteFontFace-13">The review should verify that&#58;</span><br class="ms-rteFontFace-13"><ul><li><span class="ms-rteFontFace-13">The contractor is invoicing only for products or services received.</span></li><li><span class="ms-rteFontFace-13">The products or services have been received and accepted.</span></li><li><span class="ms-rteFontFace-13">The invoice is correct and complies with terms and conditions of contract.</span></li><li><span class="ms-rteFontFace-13">Total payments do not exceed the contract limits.</span></li></ul> </div><div class="ExternalClass59697EF9BA4446E2883203E2DA539AE2"><span class="ms-rteFontFace-13">An agency should not release final payment until it has verified  that the contract is complete and all products and services have been  received and accepted. For information on the contract closeout process,  refer to&#160;</span><a href="/das/OPM/Pages/closeout.aspx"><span class="ms-rteFontFace-13">Contract Closeout</span></a><span class="ms-rteFontFace-13">​.</span><br class="ms-rteFontFace-13"></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-cf5857ee-153c-4b8b-93a2-d38e90d3e0b5">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-4ffb45b8-e6fe-47d8-80ac-52970428307f">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#cf5857ee-153c-4b8b-93a2-d38e90d3e0b5" aria-controls="cf5857ee-153c-4b8b-93a2-d38e90d3e0b5" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="9d696f63-f34f-4dfc-9459-0729fcb2f1f4">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#4ffb45b8-e6fe-47d8-80ac-52970428307f" aria-controls="4ffb45b8-e6fe-47d8-80ac-52970428307f" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="42bfb92c-cfba-4a88-861d-77b4a132677c">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">7. Manage contract issues and disputes</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="cf5857ee-153c-4b8b-93a2-d38e90d3e0b5" >
+				</h4><div class="panel-collapse collapse" id="4ffb45b8-e6fe-47d8-80ac-52970428307f" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassA019EAEDD35C423185DD7C72A5E165CA"><span class="ms-rteFontFace-13">The contract administrator is responsible for recognizing,  investigating, documenting and acting on emerging disputes or other  risks, unique requirements, unusual situations or other issues that  arise in managing a contract. The contract administrator must formulate  appropriate responses and resolutions, seeking advice from legal  counsel, risk management personnel or other persons when necessary.<br><br>An agency should include appropriate contract provisions and  outline the processes to address issues and manage disputes when they  arise. The following sections discuss the types of contract issues that  may arise and how a contract administrator should use the contract terms  and conditions to manage those issues.&#160;</span></div><div class="ExternalClassA019EAEDD35C423185DD7C72A5E165CA"><br class="ms-rteFontFace-13"><h3><span class="ms-rteFontFace-13">Issue tracking and escalation</span></h3><span class="ms-rteFontFace-13">The contract administrator must act to address issues when they  arise in a contract. While simple issues can be resolved directly, more  complex issues may require escalation. In certain cases issues may be  characterized by disagreement, leading to disputes between the  contracted parties.</span><br class="ms-rteFontFace-13"><br class="ms-rteFontFace-13"><span class="ms-rteFontFace-13">The key to effective contract issues management is to create a  process for documenting, tracking, and escalating issues as necessary.  This process provides a shared understanding of the triggers that drive  issue escalation and knowledge of the available mechanisms to deal with  issues as they progress through the escalation process.</span><br class="ms-rteFontFace-13"><span class="ms-rteFontFace-13">​</span><br class="ms-rteFontFace-13"><span class="ms-rteFontFace-13">The following sequence provides a basic issues escalation framework that can apply to most contracts&#58;</span></div><div class="ExternalClassA019EAEDD35C423185DD7C72A5E165CA"><ol><li><span class="ms-rteFontFace-13">Contract administrator should attempt to resolve the problem by  working with the contractor’s on-site supervisor or the lowest possible  management level.</span></li><li><span class="ms-rteFontFace-13">Contract administrator contacts the contractor’s higher-level,  off-site manager to resolve the performance issue or convenes a meeting  with the contractor, procurement organization, and others as required.  If a problem is severe enough, legal representation may be necessary.</span></li><li><span class="ms-rteFontFace-13">Action is taken according to the contract provisions and applicable laws. Examples include liquidated damages or notice to cure.</span></li><li><span class="ms-rteFontFace-13">Contract administrator works with the procurement organization and legal counsel to initiate steps toward contract termination.</span></li></ol></div><div class="ExternalClassA019EAEDD35C423185DD7C72A5E165CA"><span class="ms-rteFontFace-13">​The goal of the issue escalation process is to address areas of non-compliance and correct any deficiencies that exist.</span><br class="ms-rteFontFace-13"><h3><br class="ms-rteFontFace-13"></h3><h3><span class="ms-rteFontFace-13">  Contract disputes</span></h3><span class="ms-rteFontFace-13">Some issues that arise during contract performance are difficult to  resolve. A dispute is a disagreement that is not resolvable between the  parties to the contract. Contact your agency DPO and/or legal counsel for assistance in resolving disputes.</span><br class="ms-rteFontFace-13"></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-801ebc32-d3a1-49a0-a749-b59521755af0">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-38c0481f-6b05-42f7-b6d7-b812dd53dcc2">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#801ebc32-d3a1-49a0-a749-b59521755af0" aria-controls="801ebc32-d3a1-49a0-a749-b59521755af0" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="dfd4194a-019b-4233-8b12-cf299682f972">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#38c0481f-6b05-42f7-b6d7-b812dd53dcc2" aria-controls="38c0481f-6b05-42f7-b6d7-b812dd53dcc2" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="060c8a43-7616-490d-9a4f-e29ed1a620d5">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">8. Terminate contract when necessary</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="801ebc32-d3a1-49a0-a749-b59521755af0" >
+				</h4><div class="panel-collapse collapse" id="38c0481f-6b05-42f7-b6d7-b812dd53dcc2" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass07CCB3175495412F91460BAD707498F9"><span class="ms-rteFontFace-13">In certain cases, an agency may need to end a contract before the  contractual period of performance has ended. The premature ending of a  contract is referred to as termination and generally takes on one of the  following forms&#58;&#160;</span></div><div class="ExternalClass07CCB3175495412F91460BAD707498F9"><ul><li><span class="ms-rteFontFace-13">Termination for convenience.</span></li><li><span class="ms-rteFontFace-13">Termination for default.</span></li></ul></div><div class="ExternalClass07CCB3175495412F91460BAD707498F9"><span class="ms-rteFontFace-13">Termination should begin only after sufficient consideration and  consultation, as the consequences for both parties are extreme, and may  require future litigation.</span></div><div class="ExternalClass07CCB3175495412F91460BAD707498F9"><br class="ms-rteFontFace-13"><h3><span class="ms-rteFontFace-13">Termination for convenience</span></h3><span class="ms-rteFontFace-13">Termination for convenience is one of the most powerful provisions  in any public contract as it gives the state the unilateral right to  terminate all or part of the contract when it is in the state’s best  interest. An agency may determine a need to exercise its termination for  convenience for reasons such as a change in government priorities,  funding or other unanticipated events.</span><br class="ms-rteFontFace-13"><br class="ms-rteFontFace-13"><span class="ms-rteFontFace-13">Termination for convenience is generally not intended as a  reflection of the contractor’s performance. This is typically executed  when budget is cut for the contract and funds do not exist or future  work is no longer required due to scope changes within a project.</span></div><div class="ExternalClass07CCB3175495412F91460BAD707498F9"><br class="ms-rteFontFace-13"><h3><span class="ms-rteFontFace-13">Termination for default</span></h3><span class="ms-rteFontFace-13">Termination for default, also referred to as termination for cause,  is a standard contract provision that allows either party the right to  cancel the contract due to failure of the other party to execute to  contract requirements. Termination for default requires that the state  provide documented proof that there is a reasonable likelihood that the  contractor cannot cure the performance issue identified.</span><br class="ms-rteFontFace-13"><br class="ms-rteFontFace-13"><span class="ms-rteFontFace-13">An agency must adhere to the contract provisions that  establish the basis for termination for default and must follow  prescribed procedures to ensure this action is legally enforceable.Failure  to follow these procedures in the manner they are prescribed places the  state at great risk. Agencies are strongly encouraged to consult with  their procurement organization and the Attorney General or other legal  counsel prior to proceeding with any termination action.</span><br class="ms-rteFontFace-13"></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-2bfce02b-1d4b-4706-8f08-74b2799a2a16">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-b8efc9c7-4786-46e2-993c-9d005549c1e4">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#2bfce02b-1d4b-4706-8f08-74b2799a2a16" aria-controls="2bfce02b-1d4b-4706-8f08-74b2799a2a16" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="6d452946-e999-4315-9d11-8b261ef2b957">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#b8efc9c7-4786-46e2-993c-9d005549c1e4" aria-controls="b8efc9c7-4786-46e2-993c-9d005549c1e4" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="28dbdf8d-90d3-4881-98a8-9209a7c8db34">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">9. Establish and maintain a contract file</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="2bfce02b-1d4b-4706-8f08-74b2799a2a16" >
+				</h4><div class="panel-collapse collapse" id="b8efc9c7-4786-46e2-993c-9d005549c1e4" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass6CE21E2B8BA349EAA1F4E78155AB6DC0"><span class="ms-rteFontFace-13">The contract administrator must understand the auditing  requirements and procedures that apply to the contract being  administered. The contract administrator must organize and maintain  appropriate documentation and administrative practices to effectively  manage the contract and meet auditing requirements. The contract  administrator should coordinate closely with the procurement team  throughout the life of the contract to ensure that the procurement file  contains the appropriate contract administration documentation that must  be retained according to the procurement method.</span><br class="ms-rteFontFace-13"><br class="ms-rteFontFace-13"><span class="ms-rteFontFace-13">For more information on required procurement and contract documentation and the proper management of these documents, refer to&#160;</span><a href="/das/OPM/Pages/doc-management.aspx"><span class="ms-rteFontFace-13">document management</span></a><span class="ms-rteFontFace-13">​.</span><br class="ms-rteFontFace-13"></div>
@@ -706,12 +706,12 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 			<div id="ctl00_MainContentPlaceHolder_PageContentPlaceHolder_RichHtmlField13_label" style='display:none'></div><div id="ctl00_MainContentPlaceHolder_PageContentPlaceHolder_RichHtmlField13__ControlWrapper_OregonRichHtmlField" class="ms-rtestate-field" style="display:inline" > &#160;<div class="ms-rtestate-read ms-rte-wpbox"><div class="ms-rtestate-notify  ms-rtestate-read d48a57c5-bad8-4587-8fec-b26908df621d" id="div_d48a57c5-bad8-4587-8fec-b26908df621d" unselectable="on"><div id="MSOZoneCell_WebPartWPQ2" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ2"  class="ms-WPBody "   style="" ><div id="ctl00_ctl40_g_d48a57c5_bad8_4587_8fec_b26908df621d" class="or-dataTablesWebPart">
-		<div id="824d692e-6f26-493f-985d-a381879ba7c8">
+		<div id="3eed9b5f-f0ce-4416-96b0-d9557795c58f">
 			<data-tables-web-part params="webPartId: &#39;g_d48a57c5_bad8_4587_8fec_b26908df621d&#39;, webPartProperties: {&quot;webPartId&quot;:&quot;g_d48a57c5_bad8_4587_8fec_b26908df621d&quot;,&quot;tableCaption&quot;:&quot;&quot;,&quot;dataSource&quot;:&quot;list&quot;,&quot;socrataId&quot;:&quot;&quot;,&quot;sharePointWebUrl&quot;:&quot;/das/OPM&quot;,&quot;sharePointListUrl&quot;:&quot;/das/OPM/Lists/Reference Links Right Side&quot;,&quot;sharePointViewName&quot;:&quot;ContractAdmin&quot;,&quot;responsiveMode&quot;:&quot;scroll&quot;,&quot;paginationEnabled&quot;:false,&quot;searchEnabled&quot;:false,&quot;sortEnabled&quot;:false,&quot;filterEnabled&quot;:false,&quot;stateSaveEnabled&quot;:false,&quot;copyButtonEnabled&quot;:false,&quot;printButtonEnabled&quot;:false,&quot;excelButtonEnabled&quot;:false,&quot;pdfButtonEnabled&quot;:false,&quot;tableBordered&quot;:true,&quot;tableStriped&quot;:false,&quot;tableCondensed&quot;:false}">
 
 			</data-tables-web-part>
 		</div><script type="text/javascript">
-			ko.applyBindings(null, document.getElementById('824d692e-6f26-493f-985d-a381879ba7c8'))
+			ko.applyBindings(null, document.getElementById('3eed9b5f-f0ce-4416-96b0-d9557795c58f'))
 		</script>
 	</div><div class="ms-clear"></div></div>
 </div>

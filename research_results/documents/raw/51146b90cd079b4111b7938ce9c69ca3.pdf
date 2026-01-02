@@ -263,14 +263,14 @@ var MSOWebPartPageFormName = 'aspnetForm';
 var g_presenceEnabled = true;
 var g_wsaEnabled = false;
 
-var g_correlationId = 'c69be8a1-989b-5059-054f-d5175f25e07f';
+var g_correlationId = 'da23e9a1-18a6-5059-f3fa-ad8d7c8a249b';
 var g_wsaQoSEnabled = false;
 var g_wsaQoSDataPoints = [];
 var g_wsaRUMEnabled = false;
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'STS#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fodot\u002fBusiness\u002fProcurement", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodot\u002fBusiness\u002fProcurement", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fODOT", serverRequestPath: "\u002fODOT\u002fBusiness\u002fProcurement\u002fPages\u002fHowTo.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Procurement", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-01T03:17:36.4533884Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-01T03:17:36.4533884Z"), siteClientTag: "87$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{aa1cbc5d-7f99-484e-a94c-4f931109874e}",pageItemId:12, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fODOT", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fodot\u002fBusiness\u002fProcurement", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodot\u002fBusiness\u002fProcurement", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fODOT", serverRequestPath: "\u002fODOT\u002fBusiness\u002fProcurement\u002fPages\u002fHowTo.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Procurement", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-02T18:55:44.8093603Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-02T18:55:44.8093603Z"), siteClientTag: "87$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{aa1cbc5d-7f99-484e-a94c-4f931109874e}",pageItemId:12, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fODOT", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
 </script>
 
 <script src="/_layouts/15/16.0.5456.1000/blank.js" type="text/javascript"></script>
@@ -540,16 +540,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ1"  class="ms-WPBody "   style="" ><div id="ctl00_ctl00_ctl40_g_e1880d1e_9d43_40db_afbe_dfea076f9874">
 		<div class="list-unstyled panel-group or-accordion-list" id="accordion-ctl00_ctl00_ctl40_g_e1880d1e_9d43_40db_afbe_dfea076f9874_ctl01">
-			<div class="panel panel-default or-accordion-panel" id="panel-1a254443-83b9-49f5-9a29-e4a62fab3d39">
+			<div class="panel panel-default or-accordion-panel" id="panel-153c2a89-70ea-4d8b-a4e0-3dc9a02aff8c">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#1a254443-83b9-49f5-9a29-e4a62fab3d39" aria-controls="1a254443-83b9-49f5-9a29-e4a62fab3d39" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="fa4481f9-6487-40ac-a1b2-febd5f8bcfdb">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#153c2a89-70ea-4d8b-a4e0-3dc9a02aff8c" aria-controls="153c2a89-70ea-4d8b-a4e0-3dc9a02aff8c" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="a4c9c1f7-7f19-4d1f-b1b9-d69a917f9a68">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Small Business Resources</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="1a254443-83b9-49f5-9a29-e4a62fab3d39" >
+				</h3><div class="panel-collapse collapse" id="153c2a89-70ea-4d8b-a4e0-3dc9a02aff8c" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassE3E7283C58D24659BA27979D45A307FF"><p class="ExternalClassC227CAAA372E4A788E61315C3DE672A0">​<a href="/odot/Business/OCR/Pages/index.aspx">ODOT's Office of Civil Rights</a>&#160;administers&#160;various programs<a href="http&#58;//www.oregon.gov/ODOT/CS/CIVILRIGHTS/Pages/small_business_resources.aspx" target="_blank">&#160;</a>and provides information regarding&#160;potential contracting opportunities for ​construction, architectural &amp; engineering and other personal services and trade services. This&#160;includes&#58;</p>
@@ -562,16 +562,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-ebd53496-befd-4b67-9331-dc7d4c4b5067">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-80d8bf76-2f8b-4467-8bbb-3531ec319de3">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#ebd53496-befd-4b67-9331-dc7d4c4b5067" aria-controls="ebd53496-befd-4b67-9331-dc7d4c4b5067" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="4f61a1ee-3713-4204-b654-02e3a620f9b6">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#80d8bf76-2f8b-4467-8bbb-3531ec319de3" aria-controls="80d8bf76-2f8b-4467-8bbb-3531ec319de3" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="0a424a2b-2c65-46c6-abb5-dd10c9a526c2">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Services, Goods, Consultants and Regional Public Improvements</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="ebd53496-befd-4b67-9331-dc7d4c4b5067" >
+				</h3><div class="panel-collapse collapse" id="80d8bf76-2f8b-4467-8bbb-3531ec319de3" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass46453219536247CEB07A299798F9E4B5">
@@ -587,16 +587,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-bcfdecda-3330-4a99-8418-4c215c72178d">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-ef58a5ca-4fef-498e-98d9-540afc938b40">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#bcfdecda-3330-4a99-8418-4c215c72178d" aria-controls="bcfdecda-3330-4a99-8418-4c215c72178d" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="be58c059-029e-4c6f-ad06-e829e8d3e3e4">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#ef58a5ca-4fef-498e-98d9-540afc938b40" aria-controls="ef58a5ca-4fef-498e-98d9-540afc938b40" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="a0e99b64-b4be-4d91-a3a2-147e68146bed">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">A&amp;E Consultant Outsourced Reports</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="bcfdecda-3330-4a99-8418-4c215c72178d" >
+				</h3><div class="panel-collapse collapse" id="ef58a5ca-4fef-498e-98d9-540afc938b40" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass247DBA5DC6B9417588A05509579B2B06"><span style="font-size&#58;13px;"><p class="ExternalClass7C39B07F0FC6436E9D3B89F5E12BC1FC">​<strong>Preliminary Engineering-Construction Engineering Outsourced Reports</strong><br></p>
@@ -606,16 +606,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-2ac62d8f-b828-4b2d-bd59-9d5176035af0">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-fca1a027-041f-4430-9c1e-49e83ae491e7">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#2ac62d8f-b828-4b2d-bd59-9d5176035af0" aria-controls="2ac62d8f-b828-4b2d-bd59-9d5176035af0" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="34ffcd5a-9901-4fae-aa2c-960edf2d4e2c">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#fca1a027-041f-4430-9c1e-49e83ae491e7" aria-controls="fca1a027-041f-4430-9c1e-49e83ae491e7" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="524679d2-487b-4615-82f4-5068e2c336f8">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Highway and Bridge Construction (large projects)</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="2ac62d8f-b828-4b2d-bd59-9d5176035af0" >
+				</h3><div class="panel-collapse collapse" id="fca1a027-041f-4430-9c1e-49e83ae491e7" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass2272067D95814D9FBEE7D10C49C02547"><div class="ExternalClassC03B9C1A1D1E473899954F84D1AD75FF"><div class="ExternalClassDF263D509C3D4D22989DE1DA3C2A086C"><div>The Construction Contracts&#160;Unit contracts approximately&#160;100 to&#160;150 highway and bridge construction projects per year. </div>
