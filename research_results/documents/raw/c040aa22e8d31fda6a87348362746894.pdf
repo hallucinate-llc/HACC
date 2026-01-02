@@ -189,14 +189,14 @@ var MSOWebPartPageFormName = 'aspnetForm';
 var g_presenceEnabled = true;
 var g_wsaEnabled = false;
 
-var g_correlationId = '059be8a1-8887-5059-f3fa-afa70643ccd3';
+var g_correlationId = 'cc22e9a1-38dd-5059-f3fa-a45af08376ef';
 var g_wsaQoSEnabled = false;
 var g_wsaQoSDataPoints = [];
 var g_wsaRUMEnabled = false;
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'STS#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fode\u002feducator-resources\u002fassessment", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fode\u002feducator-resources\u002fassessment", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fode", serverRequestPath: "\u002fode\u002feducator-resources\u002fassessment\u002fpages\u002fformative_assessment.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Student Assessment", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-01T03:04:25.6167987Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-01T03:04:25.6167987Z"), siteClientTag: "21$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{0e00a291-7acd-4960-a97e-d347daa28f4e}",pageItemId:47, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fode", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fode\u002feducator-resources\u002fassessment", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fode\u002feducator-resources\u002fassessment", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fode", serverRequestPath: "\u002fode\u002feducator-resources\u002fassessment\u002fpages\u002fformative_assessment.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Student Assessment", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-02T18:37:19.8083964Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-02T18:37:19.8083964Z"), siteClientTag: "21$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{0e00a291-7acd-4960-a97e-d347daa28f4e}",pageItemId:47, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fode", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
 </script>
 
 <script src="/_layouts/15/16.0.5456.1000/blank.js" type="text/javascript"></script>
@@ -436,16 +436,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ2"  class="ms-WPBody "   style="" ><div id="ctl00_ctl40_g_93d573c9_b443_4eb9_b8d9_2e1d51b3c3cd">
 		<div class="list-unstyled panel-group or-accordion-list" id="accordion-ctl00_ctl40_g_93d573c9_b443_4eb9_b8d9_2e1d51b3c3cd_ctl01">
-			<div class="panel panel-default or-accordion-panel" id="panel-f30269de-e470-42ec-b83b-8d57084c61c5">
+			<div class="panel panel-default or-accordion-panel" id="panel-ee5ce4dd-a1cf-4fca-9ac8-b8905f9f1ebd">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#f30269de-e470-42ec-b83b-8d57084c61c5" aria-controls="f30269de-e470-42ec-b83b-8d57084c61c5" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="676d40ba-292e-495f-8427-5aa5c4fbe4bc">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#ee5ce4dd-a1cf-4fca-9ac8-b8905f9f1ebd" aria-controls="ee5ce4dd-a1cf-4fca-9ac8-b8905f9f1ebd" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="230f64e3-a861-4669-9355-ba95bbf68734">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Dimension 1: Clarify Learning Goals and Criteria for Success</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="f30269de-e470-42ec-b83b-8d57084c61c5" >
+				</h3><div class="panel-collapse collapse" id="ee5ce4dd-a1cf-4fca-9ac8-b8905f9f1ebd" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass6865B89B3D2B4EE4991ACF4A9D350220"><p>​What does this mean?</p><ul><li>Determine Learning Goals, or what students will know by the end of the lesson. Goals describe “big ideas” or concepts and reflect academic standards. Learning goals are written in student-friendly language, beginning with, “I understand...”<br></li><li>Establish Success Criteria, or the evidence teachers and students use to determine how students are progressing toward learning goals. They are also written in student-friendly language, beginning with, “I can...”<br></li></ul><p>Things to consider&#58;<br></p><ul><li>​Use the Backward Design process, through which instructional activities and strategies are framed around these learning goals.<br></li><li>Use a learning progression rather than just grade-level standards to plan instruction. Achieve the Core’s Coherence Map Tool helps connect concepts and skills across grade levels.<br></li><li>While learning goals typically center around the concepts and skills of standards, success criteria can embed components of SEL. Some examples include&#58;<br>
@@ -455,16 +455,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-f1fcab37-a4a1-4009-9be0-e07095b0088b">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-3b3cf4d9-9666-4b86-b92d-0f1137ded37a">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#f1fcab37-a4a1-4009-9be0-e07095b0088b" aria-controls="f1fcab37-a4a1-4009-9be0-e07095b0088b" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="be669dfc-c3d3-44bd-8a0b-37d3e6dd4bdb">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#3b3cf4d9-9666-4b86-b92d-0f1137ded37a" aria-controls="3b3cf4d9-9666-4b86-b92d-0f1137ded37a" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="e6ca0dfc-17a4-4cb5-ab35-5cd9a1d43fa3">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Dimension 2: Elicit Evidence of Student Learning</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="f1fcab37-a4a1-4009-9be0-e07095b0088b" >
+				</h3><div class="panel-collapse collapse" id="3b3cf4d9-9666-4b86-b92d-0f1137ded37a" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassA3749440642D46B6A7DC0D7BBC4F9AC5"><p>​What does this mean?<br></p><ul><li>​​Engage in a learning event or activity that prompts and generates evidence of learning. Evidence should be tightly aligned to the learning goals and guided by success criteria.<br></li><li>Consider student needs, interests, and learning styles when deciding how to elicit evidence so that students can demonstrate their understanding in different ways to meet the success criteria. Use multiple sources of evidence to draw accurate conclusions about student learning.​<br></li></ul><p>Things to consider&#58;<br></p><ul><li>​Intentionally engage students with tasks or activities that require them to show their thinking. Limit or avoid tasks that require only an answer without an opportunity to explain thinking or connect concepts.<br></li><li>Use the Smarter Content Explorer or Sample Items Database to find and adapt tasks that are aligned to learning goals and standards.<br></li><li>Quality tasks matter more than quantity of tasks.<br></li><li>Try out some of the ​<a href="/ode/educator-resources/standards/Documents/CDL%20Digital%20Toolkit/Gathering%20Evidence%20of%20Student%20Achievement.pdf">56 Ways to Gather Evidence of Student Achievement​​</a><br></li><li>
@@ -472,16 +472,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-8bf7c387-6eac-4b75-b8f0-2b05acb16ba1">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-3990fc70-03ba-4bdf-b6f5-a5be61492466">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#8bf7c387-6eac-4b75-b8f0-2b05acb16ba1" aria-controls="8bf7c387-6eac-4b75-b8f0-2b05acb16ba1" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="b53003a9-ee13-4f04-bacf-cf1b22cca199">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#3990fc70-03ba-4bdf-b6f5-a5be61492466" aria-controls="3990fc70-03ba-4bdf-b6f5-a5be61492466" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="591c30d2-2e9e-4d9a-8e2f-2180f11ce0dd">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Dimension 3: Interpret Evidence to Determine Next Steps</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="8bf7c387-6eac-4b75-b8f0-2b05acb16ba1" >
+				</h3><div class="panel-collapse collapse" id="3990fc70-03ba-4bdf-b6f5-a5be61492466" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass46ECACBE8F8C47A4968AB93B11534591"><p>​What does this mean?<br></p><ul><li>​Review evidence to determine students’ progress toward learning goals and success criteria. Interpreting is about using evidence to identify the gap between where students are and where they need to be.​<br></li><li>Students can analyze evidence of their own learning and discuss with teachers and peers.<br></li><li>Interpreting evidence is not a single event, but part of an ongoing process throughout instruction.<br></li></ul><p>Things to consider&#58;<br></p><ul><li>​Interpreting evidence is a valuable skill for students’ post-secondary readiness and often aligns to specific standards and practices. Teaching students to interpret evidence is worth the instructional time investment.<br></li><li>Rubrics often make this interpretation easier and more consistent. A number of online tools exist to quickly create rubrics.<br></li><li>While much of this interpretation happens “on the fly,” educators must anticipate student thinking as part of their planning process.<br>
@@ -491,16 +491,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-4059e887-59b5-461c-8d7a-88b383bd4bd7">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-2a5c7ec1-9c2e-4f51-a8eb-bb960138fe9c">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#4059e887-59b5-461c-8d7a-88b383bd4bd7" aria-controls="4059e887-59b5-461c-8d7a-88b383bd4bd7" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="eb2c0c34-7af7-456a-b8d8-f76d67c418d8">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#2a5c7ec1-9c2e-4f51-a8eb-bb960138fe9c" aria-controls="2a5c7ec1-9c2e-4f51-a8eb-bb960138fe9c" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="230c5168-84e3-4f9b-a94e-e24ce6c53b96">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Dimension 4: Act by Providing Feedback and Adjusting Instruction</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="4059e887-59b5-461c-8d7a-88b383bd4bd7" >
+				</h3><div class="panel-collapse collapse" id="2a5c7ec1-9c2e-4f51-a8eb-bb960138fe9c" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass7E08275FB2804250870294BD2AE0F521"><p>​What does this mean?<br></p><ul><li>​Teachers determine and initiate appropriate instructional next steps. These may not be the same for all students and must take into consideration each student’s readiness, interests, and learning preferences.</li><li>​Students receive feedback that is specific about what they need to do next in the learning process.​<br></li></ul><p>Things to consider&#58;<br></p><ul><li>​​​A positive, collaborative culture must be in place between educators and students for feedback to be most meaningful and effective.<br></li><li>Students must receive feedback that is descriptive, actionable, and timely.<br></li><li>Utilizing peer feedback routines can substantially increase the amount of feedback each student receives.<br></li><li>A number of online tools make verbal and video feedback easy to give and receive.​<br></li></ul>
@@ -508,16 +508,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-f5baef2d-abd7-4484-aeee-177cadb0c7c7">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-8575c1ed-f8f2-4774-9ee8-ffd06c9d0796">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#f5baef2d-abd7-4484-aeee-177cadb0c7c7" aria-controls="f5baef2d-abd7-4484-aeee-177cadb0c7c7" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="4b0389ca-8d64-4455-8fe7-f3d70aa337cb">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#8575c1ed-f8f2-4774-9ee8-ffd06c9d0796" aria-controls="8575c1ed-f8f2-4774-9ee8-ffd06c9d0796" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="88e0a892-a7fb-4ee2-ab39-a9ceb95ffdf6">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Tools for Teachers</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="f5baef2d-abd7-4484-aeee-177cadb0c7c7" >
+				</h3><div class="panel-collapse collapse" id="8575c1ed-f8f2-4774-9ee8-ffd06c9d0796" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassD81A1A964F294EF8A6E797ED2A257B26"><p>
@@ -543,48 +543,48 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-23072d73-9d8c-4863-b6ca-e99b06790891">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-9347b1fa-b28f-4c46-bfda-84792b9ea1ee">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#23072d73-9d8c-4863-b6ca-e99b06790891" aria-controls="23072d73-9d8c-4863-b6ca-e99b06790891" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="cf360ce2-0efd-428e-9ed1-4ce9614bbdb9">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#9347b1fa-b28f-4c46-bfda-84792b9ea1ee" aria-controls="9347b1fa-b28f-4c46-bfda-84792b9ea1ee" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="5f0ecd2a-f4a3-4bd2-933d-aa996433ebd9">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Formative Assessment Rubric, Resources, and Observation Protocol (FARROP)</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="23072d73-9d8c-4863-b6ca-e99b06790891" >
+				</h3><div class="panel-collapse collapse" id="9347b1fa-b28f-4c46-bfda-84792b9ea1ee" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass3569023CB14A4E88B4B6FCAA84A16097"><ul><li>​The <a href="/ode/educator-resources/teachingcontent/Documents/FARROP_Rubrics_Revised_2022.pdf">Formative Assessment Rubric, Resources, and Observation Protocol (FARROP)</a> provides guidelines and resources for use in observations and reflections on formative assessment practices. It is not an evaluative tool, rather it should be used to encourage reflection, provide feedback, and facilitate conversations for continuous improvement.</li><ul><li>For a short overview, see the <a href="https&#58;//usethefarrop.files.wordpress.com/2018/07/farrop-at-a-glance.pdf">FARROP At-A-Glance</a>.</li></ul></ul></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-f6303a9f-950b-4c01-a773-5fd88181ff64">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-47676e57-0526-4e2c-bfbc-6700579554dd">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#f6303a9f-950b-4c01-a773-5fd88181ff64" aria-controls="f6303a9f-950b-4c01-a773-5fd88181ff64" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="9cc5fed5-d384-4f3c-8e91-e7b441ca41d6">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#47676e57-0526-4e2c-bfbc-6700579554dd" aria-controls="47676e57-0526-4e2c-bfbc-6700579554dd" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="dd7bf0a5-8b8f-4b16-acd5-45295cc86e03">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Formative Assessment Professional Learning</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="f6303a9f-950b-4c01-a773-5fd88181ff64" >
+				</h3><div class="panel-collapse collapse" id="47676e57-0526-4e2c-bfbc-6700579554dd" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassE9BB25FC63E441C8BEF4F4BA9FE8EF98"><ul><li><a href="/ode/educator-resources/assessment/Pages/Formative-Assessment-PLC-Modules.aspx">Introduction to Formative Assessment Practices</a></li><li><a href="https&#58;//ode.instructure.com/courses/122">OFAST Course</a>&#160;(Oregon Formative Assessment for Students and Teachers)</li><li><a href="https&#58;//www.nciea.org/library/classroom-assessment-learning-modules/">Classroom Assessment Learning Modules</a></li><li><a href="https&#58;//www.cde.ca.gov/ta/tg/sa/fainaction.asp">California’s Formative Assessment in Action Video Series</a><br></li></ul></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-6d3c5d80-c616-4df1-a3a2-8067c374d135">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-b316b115-ec57-4cd9-a040-4b5c73b730cc">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#6d3c5d80-c616-4df1-a3a2-8067c374d135" aria-controls="6d3c5d80-c616-4df1-a3a2-8067c374d135" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="ee2b8b6c-d6c2-450b-8d2d-1f24ee3f8f1b">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#b316b115-ec57-4cd9-a040-4b5c73b730cc" aria-controls="b316b115-ec57-4cd9-a040-4b5c73b730cc" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="4261cb0d-4beb-45b1-aa7a-35a817d7c268">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Additional Resources</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="6d3c5d80-c616-4df1-a3a2-8067c374d135" >
+				</h3><div class="panel-collapse collapse" id="b316b115-ec57-4cd9-a040-4b5c73b730cc" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassBF84A7B03CFD459387BEBF054A7FD53C"><ul><li><a href="/ode/educator-resources/assessment/Pages/Formative-Assessment-Resources.aspx">Select content from Formative&#160;Assessment Insights Course​</a><br></li><li><a href="https&#58;//www.youtube.com/watch?v=E_6PskE3zfQ">Austin’s Butterfly</a>&#58; A short video of formative assessment in action</li></ul>

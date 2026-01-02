@@ -263,14 +263,14 @@ var MSOWebPartPageFormName = 'aspnetForm';
 var g_presenceEnabled = true;
 var g_wsaEnabled = false;
 
-var g_correlationId = '579ae8a1-1820-5059-a10c-8be5e7723ca3';
+var g_correlationId = 'fe22e9a1-081b-5059-054f-dc36373dd1bd';
 var g_wsaQoSEnabled = false;
 var g_wsaQoSDataPoints = [];
 var g_wsaRUMEnabled = false;
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'STS#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fodot\u002fBusiness\u002fOCR", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodot\u002fBusiness\u002fOCR", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodot", serverRequestPath: "\u002fodot\u002fbusiness\u002focr\u002fpages\u002fnon-discrimination.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Civil Rights", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-01T02:52:31.1682032Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-01T02:52:31.1682032Z"), siteClientTag: "87$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{2b76d722-20fb-45a0-b00b-409531ec20cc}",pageItemId:25, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fodot", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fodot\u002fBusiness\u002fOCR", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodot\u002fBusiness\u002fOCR", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodot", serverRequestPath: "\u002fodot\u002fbusiness\u002focr\u002fpages\u002fnon-discrimination.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Civil Rights", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-02T18:40:41.4764578Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-02T18:40:41.4764578Z"), siteClientTag: "87$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{2b76d722-20fb-45a0-b00b-409531ec20cc}",pageItemId:25, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fodot", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
 </script>
 
 <script src="/_layouts/15/16.0.5456.1000/blank.js" type="text/javascript"></script>
@@ -533,32 +533,32 @@ The Oregon Department of Transportation (ODOT) complies with Title VI of the Civ
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ1"  class="ms-WPBody "   style="" ><div id="ctl00_ctl00_ctl40_g_f6d8937b_70ef_477b_9b42_39c9aaf19e61">
 		<div class="list-unstyled panel-group or-accordion-list" id="accordion-ctl00_ctl00_ctl40_g_f6d8937b_70ef_477b_9b42_39c9aaf19e61_ctl01">
-			<div class="panel panel-default or-accordion-panel" id="panel-1955e57d-e1ef-4401-9e61-cd9f4352708f">
+			<div class="panel panel-default or-accordion-panel" id="panel-c60e6d3c-c36b-4f88-84e6-8259d256a403">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#1955e57d-e1ef-4401-9e61-cd9f4352708f" aria-controls="1955e57d-e1ef-4401-9e61-cd9f4352708f" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="8966c26c-b70f-4d75-a295-74a1c9989f20">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#c60e6d3c-c36b-4f88-84e6-8259d256a403" aria-controls="c60e6d3c-c36b-4f88-84e6-8259d256a403" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="1f68dd11-e2b0-4f97-ad7d-e7c7cd307f4f">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Nondiscrimination Programs at ODOT</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="1955e57d-e1ef-4401-9e61-cd9f4352708f" >
+				</h2><div class="panel-collapse collapse" id="c60e6d3c-c36b-4f88-84e6-8259d256a403" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass369861AB86DB487D8DFA1B6D3AADDDD6"><p></p><p>The ODOT Office of Civil Rights partners with other business areas at ODOT to serve people in Oregon in alignment with federal nondiscrimination authorities.</p><ul><li><a href="/odot/About/Pages/ADA.aspx" target="_blank">Americans with Disabilities Act</a></li><li><a href="/odot/Business/OCR/SiteAssets/Lists/Non_Dis_Main_List/EditForm/ODOT-TitleVI-Implementation-Plan.pdf" target="_blank">Title VI of the Civil Rights Act of 1964</a><br></li><li><a href="/odot/Business/OCR/Pages/Intermodal-Civil-Rights.aspx" target="_blank">Intermodal Civil Rights (Public Transportation)</a></li><li><a href="/odot/Business/OCR/SiteAssets/Lists/Non_Dis_Main_List/EditForm/ODOT-Annual-EJ-Report.pdf" target="_blank">Environmental Justice</a><br></li></ul><p>For more information, see the <strong>Related Links</strong> section further down the page.​​​​<br></p></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-e5fa0953-3367-49f7-91b1-410aa8578082">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-e0972d6d-e152-4feb-8f4a-6ef3fbb6c995">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#e5fa0953-3367-49f7-91b1-410aa8578082" aria-controls="e5fa0953-3367-49f7-91b1-410aa8578082" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="ee4f6295-9524-4122-b449-937d0fbe8ae7">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#e0972d6d-e152-4feb-8f4a-6ef3fbb6c995" aria-controls="e0972d6d-e152-4feb-8f4a-6ef3fbb6c995" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="21ecd1b8-6069-4f32-8842-551df11da26a">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">ODOT OECR assistance, concerns, and complaints</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="e5fa0953-3367-49f7-91b1-410aa8578082" >
+				</h2><div class="panel-collapse collapse" id="e0972d6d-e152-4feb-8f4a-6ef3fbb6c995" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass230AEDF3F39A44C19E0EDFECF6201DE1"><p>In an effort to provide equitable access, ODOT provides accessibility aids, translation, and interpretation services for all public events and vital documents free of charge upon request. You can get these services by providing reasonable advanced notice.<br></p><p>
@@ -572,16 +572,16 @@ If you need help from ODOT related to a discrimination concern, or if you want t
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-f65f5e02-7af2-4526-b666-40f47e657fdd">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-80cb4efa-20ac-4bcb-bc0c-72a4897a67e9">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#f65f5e02-7af2-4526-b666-40f47e657fdd" aria-controls="f65f5e02-7af2-4526-b666-40f47e657fdd" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="3fc38cec-8588-461d-be3c-3de21370d58d">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#80cb4efa-20ac-4bcb-bc0c-72a4897a67e9" aria-controls="80cb4efa-20ac-4bcb-bc0c-72a4897a67e9" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="55d85d1a-226d-494f-bf1d-356c649e7a16">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Related Links</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="f65f5e02-7af2-4526-b666-40f47e657fdd" >
+				</h2><div class="panel-collapse collapse" id="80cb4efa-20ac-4bcb-bc0c-72a4897a67e9" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass2257BA56C6084AC48C66807BD1FE27D4"><p>
@@ -615,16 +615,16 @@ If you need help from ODOT related to a discrimination concern, or if you want t
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-af3a9b7c-9230-4ba8-b977-e60b96b18076">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-b2431249-121e-4fd4-9dbe-b55b2e80b87f">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#af3a9b7c-9230-4ba8-b977-e60b96b18076" aria-controls="af3a9b7c-9230-4ba8-b977-e60b96b18076" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="e6775892-0cc6-4c8e-bbf5-ef9e8b2b302f">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#b2431249-121e-4fd4-9dbe-b55b2e80b87f" aria-controls="b2431249-121e-4fd4-9dbe-b55b2e80b87f" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="939cbefb-4874-45fc-b7db-2bc41b9e2aec">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Contact OECR about nondiscrimination programs</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="af3a9b7c-9230-4ba8-b977-e60b96b18076" >
+				</h2><div class="panel-collapse collapse" id="b2431249-121e-4fd4-9dbe-b55b2e80b87f" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass36B68F88DD324000BA5A3E3E41E8ECF3">​You can email our <a href="mailto&#58;OCRINFOREQUEST@odot.state.or.us?subject=ODOT%20OCR%20information%20request" target="_blank"><strong>Administrative Office</strong></a>, our <a href="mailto&#58;ODOT_ADA@ODOT.Oregon.Gov?subject=ODOT%20ADA%20Program%20Manager%20information%20request" target="_blank"><strong>ADA Program</strong> <strong>Manager</strong></a>, or our <a href="mailto&#58;ODOT.TItleVI@ODOT.Oregon.Gov?subject=ODOT%20Title%20VI%20Officer%20information%20request" target="_blank"><strong>Title VI Officer</strong></a><strong> </strong>for assistance. You can also reach us using one of the following methods&#58;<ul><li><strong>Administrative Office Phone&#58; </strong>503-986-4350</li><li><strong>Title VI/ADA Toll Free Line&#58;</strong> 855-540-6655</li><li><strong>TTY&#58;</strong> <span data-teams="true">800-735-2900</span></li><li><strong>Oregon Relay Service&#58;</strong> 7-1-1<br></li><li><strong>Fax&#58;</strong> 503-986-6382​<br></li></ul></div>

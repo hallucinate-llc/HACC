@@ -186,14 +186,14 @@ var MSOWebPartPageFormName = 'aspnetForm';
 var g_presenceEnabled = true;
 var g_wsaEnabled = false;
 
-var g_correlationId = '659ae8a1-58dc-5059-054f-ddfe1be79741';
+var g_correlationId = '0a23e9a1-e83e-5059-8d61-bf361a9a895f';
 var g_wsaQoSEnabled = false;
 var g_wsaQoSDataPoints = [];
 var g_wsaRUMEnabled = false;
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'STS#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fohcs\u002fdevelopment", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fohcs\u002fdevelopment", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fohcs", serverRequestPath: "\u002fohcs\u002fdevelopment\u002fPages\u002fgrants-tax-credit-programs.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Housing Development", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "\u002fohcs\u002fPublishingImages\u002flogo-color.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-01T02:53:31.5556901Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-01T02:53:31.5556901Z"), siteClientTag: "2$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{d8e2ecdb-109f-4413-99a2-4ce1268dbbd9}",pageItemId:12, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fohcs", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fohcs\u002fdevelopment", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fohcs\u002fdevelopment", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fohcs", serverRequestPath: "\u002fohcs\u002fdevelopment\u002fPages\u002fgrants-tax-credit-programs.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Housing Development", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "\u002fohcs\u002fPublishingImages\u002flogo-color.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-02T18:41:31.2028848Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-02T18:41:31.2028848Z"), siteClientTag: "2$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{d8e2ecdb-109f-4413-99a2-4ce1268dbbd9}",pageItemId:12, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fohcs", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
 </script>
 
 <script src="/_layouts/15/16.0.5456.1000/blank.js" type="text/javascript"></script>
@@ -354,7 +354,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
                             <p class="sr-only">You are here:</p>
                             
                                 <ol class="breadcrumb or-breadcrumbs">
-	<li class="home"><a href="/ohcs/Pages/index.aspx" aria-label="Home - Oregon Housing and Community Services"><span class="fa fa-home md-18" aria-hidden="true"></span><span>Oregon Housing and Community Services</span></a></li><li><a href="/ohcs/development/Pages/index.aspx" aria-label="Housing Development">Housing Development</a></li><li class="active">Grants & Tax Credits</li>
+	<li class="home"><a href="/ohcs/Pages/index.aspx" aria-label="Home - Oregon Housing and Community Services"><span class="fa fa-home md-18" aria-hidden="true"></span><span>Oregon Housing and Community Services</span></a></li><li><a href="/ohcs/development/Pages/index.aspx" aria-label="Housing Development">Housing Development</a></li><li>Programs</li><li class="active">Grants & Tax Credits</li>
 </ol>
                             
                         </nav>
@@ -410,23 +410,23 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
                             <!-- side navigation menu -->
                             <nav id="OregonSideNavigation" aria-label="Site Navigation" class="or-side-navigation navmenu navmenu-default navmenu-fixed-left offcanvas-sm">
 	<ul class="nav">
-		<li class="or-side-navigation-parent"><a data-toggle="collapse" role="button" aria-expanded="false" aria-controls="11e1865f-dd51-489a-8693-698a0d0e7655" id="a8cf45c8-7575-49f4-9b6a-21c17e403814" href="#11e1865f-dd51-489a-8693-698a0d0e7655" class="collapsed">Housing Preservation<span class="or-side-navigation-caret material-icons skiptranslate">expand_more</span></a><div aria-labelledby="a8cf45c8-7575-49f4-9b6a-21c17e403814" id="11e1865f-dd51-489a-8693-698a0d0e7655" class="collapse">
+		<li class="or-side-navigation-parent"><a data-toggle="collapse" role="button" aria-expanded="false" aria-controls="c1e4865c-e822-41e4-8da5-155fdac7f604" id="b84a2a59-3328-44e0-887f-be9619eee985" href="#c1e4865c-e822-41e4-8da5-155fdac7f604" class="collapsed">Housing Preservation<span class="or-side-navigation-caret material-icons skiptranslate">expand_more</span></a><div aria-labelledby="b84a2a59-3328-44e0-887f-be9619eee985" id="c1e4865c-e822-41e4-8da5-155fdac7f604" class="collapse">
 			<ul class="or-side-navigation-submenu list-unstyled">
 				<li class=""><a href="/ohcs/development/Pages/housing-preservation.aspx">Affordable Rental Housing Preservation</a></li><li class=""><a href="/ohcs/development/Pages/housing-preservation-developers.aspx">Housing Preservation (for Developers)</a></li><li class=""><a href="/ohcs/compliance-monitoring/Pages/push.aspx">Preservation Compliance (for Owners)</a></li>
 			</ul>
-		</div></li><li class="or-side-navigation-parent"><a data-toggle="collapse" role="button" aria-expanded="false" aria-controls="8ef278bd-a1ff-4cea-9c5d-b7b497f997ba" id="af62aa0a-8325-4342-942e-16039c002172" href="#8ef278bd-a1ff-4cea-9c5d-b7b497f997ba" class="collapsed">Policy &amp; Partner Engagement<span class="or-side-navigation-caret material-icons skiptranslate">expand_more</span></a><div aria-labelledby="af62aa0a-8325-4342-942e-16039c002172" id="8ef278bd-a1ff-4cea-9c5d-b7b497f997ba" class="collapse">
+		</div></li><li class="or-side-navigation-parent"><a data-toggle="collapse" role="button" aria-expanded="false" aria-controls="6eb96eda-b402-4860-93ec-25a45feeb5d2" id="0b98a8e9-ebe7-42d8-ad7d-1f8d4c7f66ad" href="#6eb96eda-b402-4860-93ec-25a45feeb5d2" class="collapsed">Policy &amp; Partner Engagement<span class="or-side-navigation-caret material-icons skiptranslate">expand_more</span></a><div aria-labelledby="0b98a8e9-ebe7-42d8-ad7d-1f8d4c7f66ad" id="6eb96eda-b402-4860-93ec-25a45feeb5d2" class="collapse">
 			<ul class="or-side-navigation-submenu list-unstyled">
 				<li class=""><a href="/ohcs/development/Pages/arh-partner-calls.aspx">​Affordable Rental Housing Partner Calls</a></li><li class=""><a href="/ohcs/development/Pages/capacity-partner-engagement.aspx">​Affordable Rental Housing Events and Engagement Opportunities</a></li><li class=""><a href="/ohcs/development/Pages/technical-advisories.aspx">Technical Advisories</a></li>
 			</ul>
-		</div></li><li class="or-side-navigation-parent"><a data-toggle="collapse" role="button" aria-expanded="false" aria-controls="848f73a3-a94e-4100-b683-5c9bf28e1a65" id="d34fbcd4-f3fe-45c0-b36e-3b0b7915f10c" href="#848f73a3-a94e-4100-b683-5c9bf28e1a65" class="collapsed">Programs<span class="or-side-navigation-caret material-icons skiptranslate">expand_more</span></a><div aria-labelledby="d34fbcd4-f3fe-45c0-b36e-3b0b7915f10c" id="848f73a3-a94e-4100-b683-5c9bf28e1a65" class="collapse">
+		</div></li><li class="or-side-navigation-parent"><a data-toggle="collapse" role="button" aria-expanded="false" aria-controls="7e6e4024-43c0-4908-adc0-90576f71c64a" id="aa9f1ecd-ebad-4fbd-8157-64fdf1731c25" href="#7e6e4024-43c0-4908-adc0-90576f71c64a" class="collapsed">Programs<span class="or-side-navigation-caret material-icons skiptranslate">expand_more</span></a><div aria-labelledby="aa9f1ecd-ebad-4fbd-8157-64fdf1731c25" id="7e6e4024-43c0-4908-adc0-90576f71c64a" class="collapse">
 			<ul class="or-side-navigation-submenu list-unstyled">
 				<li class=""><a href="/ohcs/development/Pages/bond-financing-loans.aspx">Bond Financing &amp; Loans</a></li><li class="or-side-navigation-current"><a href="/ohcs/development/Pages/grants-tax-credit-programs.aspx" aria-current="page">Grants &amp; Tax Credits</a></li><li class=""><a href="/ohcs/development/Pages/oregon-multifamily-energy-program.aspx">Oregon Multifamily Energy Program</a></li>
 			</ul>
-		</div></li><li class="or-side-navigation-parent"><a data-toggle="collapse" role="button" aria-expanded="false" aria-controls="598be4ff-c9bd-4eec-b650-6e5467329e3d" id="c384d738-83ab-4898-b8c8-6d9cba60695d" href="#598be4ff-c9bd-4eec-b650-6e5467329e3d" class="collapsed">Partner Resources<span class="or-side-navigation-caret material-icons skiptranslate">expand_more</span></a><div aria-labelledby="c384d738-83ab-4898-b8c8-6d9cba60695d" id="598be4ff-c9bd-4eec-b650-6e5467329e3d" class="collapse">
+		</div></li><li class="or-side-navigation-parent"><a data-toggle="collapse" role="button" aria-expanded="false" aria-controls="8d19a492-688f-47b7-b0ef-f595ddfec7e3" id="396a184c-deba-43cc-9f09-f89ed77a8c24" href="#8d19a492-688f-47b7-b0ef-f595ddfec7e3" class="collapsed">Partner Resources<span class="or-side-navigation-caret material-icons skiptranslate">expand_more</span></a><div aria-labelledby="396a184c-deba-43cc-9f09-f89ed77a8c24" id="8d19a492-688f-47b7-b0ef-f595ddfec7e3" class="collapse">
 			<ul class="or-side-navigation-submenu list-unstyled">
 				<li class=""><a href="/ohcs/development/Pages/core-development-manual.aspx">Core-Development</a></li><li class=""><a href="/ohcs/development/Pages/housing-data-analysis.aspx">Housing Data &amp; Analysis</a></li><li class=""><a href="/ohcs/compliance-monitoring/Pages/rent-income-limits.aspx">Income &amp; Rent Limits</a></li><li class=""><a href="/ohcs/development/Pages/mwesb-sdvbe-rental-housing.aspx">MWESB/SDVBE </a></li><li class=""><a href="/ohcs/Pages/oregon-state-wide-housing-plan.aspx">Oregon Statewide Housing Plan</a></li>
 			</ul>
-		</div></li><li class="or-side-navigation-parent"><a data-toggle="collapse" role="button" aria-expanded="false" aria-controls="f93b8841-55fc-487e-a56f-f7b44a54b0ea" id="6589456f-8f5f-4099-83f7-b4a8896cd90e" href="#f93b8841-55fc-487e-a56f-f7b44a54b0ea" class="collapsed">Education and Training<span class="or-side-navigation-caret material-icons skiptranslate">expand_more</span></a><div aria-labelledby="6589456f-8f5f-4099-83f7-b4a8896cd90e" id="f93b8841-55fc-487e-a56f-f7b44a54b0ea" class="collapse">
+		</div></li><li class="or-side-navigation-parent"><a data-toggle="collapse" role="button" aria-expanded="false" aria-controls="a10af1ef-dce7-40a6-bd3e-61110be573bf" id="495641c3-3c58-41a8-8c6c-64c974b3ab42" href="#a10af1ef-dce7-40a6-bd3e-61110be573bf" class="collapsed">Education and Training<span class="or-side-navigation-caret material-icons skiptranslate">expand_more</span></a><div aria-labelledby="495641c3-3c58-41a8-8c6c-64c974b3ab42" id="a10af1ef-dce7-40a6-bd3e-61110be573bf" class="collapse">
 			<ul class="or-side-navigation-submenu list-unstyled">
 				<li class=""><a href="https://app.procorem.com/login" target="_blank">PROCOREM, Login<span class="sr-only"> (Opens in new window)</span></a></li><li class=""><a href="https://youtu.be/UeGkyKPXwCY" target="_blank">Prevailing Wage 101 <span class="sr-only"> (Opens in new window)</span></a></li>
 			</ul>
@@ -488,16 +488,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ1"  class="ms-WPBody "   style="" ><div id="ctl00_ctl00_ctl40_g_fe316560_5083_480b_88ae_3f79d59b7aac">
 		<div class="list-unstyled panel-group or-accordion-list" id="accordion-ctl00_ctl00_ctl40_g_fe316560_5083_480b_88ae_3f79d59b7aac_ctl01">
-			<div class="panel panel-default or-accordion-panel" id="panel-482a54da-ce4b-4fe2-a055-e94c5093096b">
+			<div class="panel panel-default or-accordion-panel" id="panel-1c0db862-fe52-4d3b-8464-aa1844405d9a">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#482a54da-ce4b-4fe2-a055-e94c5093096b" aria-controls="482a54da-ce4b-4fe2-a055-e94c5093096b" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="8159db8e-7dca-44a8-bfd5-6679c2c4846c">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#1c0db862-fe52-4d3b-8464-aa1844405d9a" aria-controls="1c0db862-fe52-4d3b-8464-aa1844405d9a" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="f21c551f-fcc3-4378-8cd7-c1fddcf8e139">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">General Housing Account Program (GHAP) and GHAP Veterans </p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="482a54da-ce4b-4fe2-a055-e94c5093096b" >
+				</h3><div class="panel-collapse collapse" id="1c0db862-fe52-4d3b-8464-aa1844405d9a" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass8C2F404EAC12475DAE374C721EF628DF"><div>The General Housing Account Program (GHAP) was created to expand Oregon’s housing supply for low and very low-income families and individuals. It serves in two areas&#58;<br>
@@ -505,16 +505,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-922fed41-0981-4a1f-b55a-587e807dec20">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-52b2a48d-d675-4098-9af8-d8759ea4599b">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#922fed41-0981-4a1f-b55a-587e807dec20" aria-controls="922fed41-0981-4a1f-b55a-587e807dec20" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="32c559d7-1752-4434-8832-33e1e00316e4">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#52b2a48d-d675-4098-9af8-d8759ea4599b" aria-controls="52b2a48d-d675-4098-9af8-d8759ea4599b" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="6dfd78f8-2814-447e-8846-4a4f9bc6d872">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">GHAP Capacity Building</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="922fed41-0981-4a1f-b55a-587e807dec20" >
+				</h3><div class="panel-collapse collapse" id="52b2a48d-d675-4098-9af8-d8759ea4599b" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass99BA7B39545646FDA67184406E3E9C02"><p>OHCS General Housing Account Program Capacity Building (GHAP-CB) program to support the important role our local and regional housing partners play in fostering community, health, and housing stability. GHAP represents the funding sources. CB represents the intent of the fund.&#160;</p><p>Nonprofit housing developers, local housing authorities, and Tribal nation housing entities are uniquely positioned within their communities to support placemaking and provide culturally specific and responsive housing and resident services. Local governments also play a key role in facilitating the development and long-term viability of affordable rental housing projects. The GHAP CB program was created to support capacity strengthening in these entities towards meeting our shared goals in affordable rental housing development and operations.</p><p> 
@@ -522,16 +522,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-6cb4d4d2-46f5-4fa8-b43f-fcf1d1f4e119">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-81a894cf-2414-41f6-b0cc-034bfffa8566">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#6cb4d4d2-46f5-4fa8-b43f-fcf1d1f4e119" aria-controls="6cb4d4d2-46f5-4fa8-b43f-fcf1d1f4e119" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="a746a351-86d7-46ea-a09f-704f539982f9">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#81a894cf-2414-41f6-b0cc-034bfffa8566" aria-controls="81a894cf-2414-41f6-b0cc-034bfffa8566" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="45ebdf41-14fe-4869-bf49-da99468e44e1">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">HOME ARP</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="6cb4d4d2-46f5-4fa8-b43f-fcf1d1f4e119" >
+				</h3><div class="panel-collapse collapse" id="81a894cf-2414-41f6-b0cc-034bfffa8566" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassF4840425FAB24964886CB86F6F4607A8"><div><p>
@@ -539,16 +539,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-a9aefe88-d49f-45d8-806a-87035708c19f">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-27791c6a-5c71-479b-9adc-944466ebc93c">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#a9aefe88-d49f-45d8-806a-87035708c19f" aria-controls="a9aefe88-d49f-45d8-806a-87035708c19f" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="e4aa6e8a-5b23-4854-8640-dd48f8b2b098">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#27791c6a-5c71-479b-9adc-944466ebc93c" aria-controls="27791c6a-5c71-479b-9adc-944466ebc93c" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="88121a3d-b3da-4fda-b7cf-6ff565aa5f6f">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">HOME Investment Partnerships Program (HOME)</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="a9aefe88-d49f-45d8-806a-87035708c19f" >
+				</h3><div class="panel-collapse collapse" id="27791c6a-5c71-479b-9adc-944466ebc93c" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass84BF9E769ABE4D428765BFB2B5A3B8B1"><p>The HOME program provides federal funds from HUD to develop affordable housing. The OHCS Affordable Rental Housing Division&#160;administers the HOME program for Oregon, allocating HOME resources to &quot;balance of state&quot; communities whose populations do not meet population requirements to have their own direct allocation of HOME funding from HUD.&#160;</p><div><div><p>Currently, eligible activities under the state’s program align with priorities identified in the Oregon Statewide Housing Plan and&#160;include&#58;<br></p><div><p><ul><li>Acquisition, new construction, and rehabilitation of affordable&#160;rental housing,</li><li>Tenant-based rental assistance through the OHCS HOME Tenant-based&#160;Assistance Program.&#160;<br></li></ul></p></div><p>Activities funded must benefit low- and very low-income households. 
@@ -556,32 +556,32 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-a4697390-eef7-4d44-9fde-5a61eafcb4f2">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-2be17a30-6b4f-46bd-bfde-40fbdd4eb8a4">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#a4697390-eef7-4d44-9fde-5a61eafcb4f2" aria-controls="a4697390-eef7-4d44-9fde-5a61eafcb4f2" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="179a445e-7635-4a21-994b-74e0ccf08e04">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#2be17a30-6b4f-46bd-bfde-40fbdd4eb8a4" aria-controls="2be17a30-6b4f-46bd-bfde-40fbdd4eb8a4" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="e72c58bc-5899-428a-96a7-9c524fc963a8">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Housing Development Grant Program (“Trust Fund”)</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="a4697390-eef7-4d44-9fde-5a61eafcb4f2" >
+				</h3><div class="panel-collapse collapse" id="2be17a30-6b4f-46bd-bfde-40fbdd4eb8a4" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassB96AD5A0040F4D0EBBE5F8103EE6D2DC"><div><div><p>​The Housing Development Grant Program (HDGP) “Trust Fund” was created to expand Oregon’s housing supply for low-&#160;and very low-income families and individuals. HDGP is designed to provide grants to construct new housing, acquire and/or rehabilitate existing structures, or operate housing for low-income households living in multifamily rental housing.​</p><p><a href="/ohcs/rental-housing/housing-development/development-resources/Pages/housing-development-grant-program.aspx">Learn more about HDGP.</a>​​</p></div></div></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-7fa5753a-1978-4a7f-b599-bdaeb374e4a8">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-2405ae62-8173-44c4-8a00-8cefbcafe7c7">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#7fa5753a-1978-4a7f-b599-bdaeb374e4a8" aria-controls="7fa5753a-1978-4a7f-b599-bdaeb374e4a8" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="011ca566-336b-4e07-9f15-b8a841b10c5d">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#2405ae62-8173-44c4-8a00-8cefbcafe7c7" aria-controls="2405ae62-8173-44c4-8a00-8cefbcafe7c7" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="58cf0ebd-9f2b-4801-968c-2a6f75485438">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Multifamily Energy Program (OR-MEP)</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="7fa5753a-1978-4a7f-b599-bdaeb374e4a8" >
+				</h3><div class="panel-collapse collapse" id="2405ae62-8173-44c4-8a00-8cefbcafe7c7" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass2D41EC204C894F3DBCAF0539B55C22F1"><p> 
@@ -591,16 +591,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-0e0bcebb-940b-445d-9aff-98b1b76d3086">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-9690c1a6-b006-4c67-883a-b0db7d6f87c9">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#0e0bcebb-940b-445d-9aff-98b1b76d3086" aria-controls="0e0bcebb-940b-445d-9aff-98b1b76d3086" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="ec2ccf5c-2047-4fa0-a4fa-94140cccc5d3">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#9690c1a6-b006-4c67-883a-b0db7d6f87c9" aria-controls="9690c1a6-b006-4c67-883a-b0db7d6f87c9" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="031153b5-5ef7-4ed1-95ac-84ce15233e15">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">National Housing Trust Fund (HTF)</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="0e0bcebb-940b-445d-9aff-98b1b76d3086" >
+				</h3><div class="panel-collapse collapse" id="9690c1a6-b006-4c67-883a-b0db7d6f87c9" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass080F0A4AE3584652BEACAD78D5633C35"><p>The National Housing Trust Fund (HTF) is a formula grant program to be administered by states which is intended to increase and preserve the supply of decent, safe, sanitary, and affordable housing, primarily rental housing, for extremely low-income and very low-income households.<br></p><p>HUD has developed the proposed program rule for the Housing Trust Fund to mirror the HOME Program regulations in an effort to consolidate similar programs, improve the coordination of local and regional planning efforts and activity delivery, and reduce the administrative burden placed on grantees overall. Many of the HTF requirements are similar to HOME.​ <a href="/ohcs/rental-housing/housing-development/development-resources/Pages/home-homearp-housing-trust-fund.aspx">Learn more about HTF</a>​.<br></p></div>
@@ -615,16 +615,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ2"  class="ms-WPBody "   style="" ><div id="ctl00_ctl00_ctl40_g_154b42ab_ff4c_46b7_aea8_b21dd33275a9">
 		<div class="list-unstyled panel-group or-accordion-list" id="accordion-ctl00_ctl00_ctl40_g_154b42ab_ff4c_46b7_aea8_b21dd33275a9_ctl01">
-			<div class="panel panel-default or-accordion-panel" id="panel-b805a796-365d-445e-b56c-fb2d7d5a9163">
+			<div class="panel panel-default or-accordion-panel" id="panel-52e1c2c5-f903-49b7-af6d-89613af69883">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#b805a796-365d-445e-b56c-fb2d7d5a9163" aria-controls="b805a796-365d-445e-b56c-fb2d7d5a9163" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="d14188ad-43a1-4663-899d-07d430f36967">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#52e1c2c5-f903-49b7-af6d-89613af69883" aria-controls="52e1c2c5-f903-49b7-af6d-89613af69883" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="a8d51f4e-f897-4e11-8500-f1e71d73bdf6">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Agriculture Workforce Housing Tax Credit (AWHTC)</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="b805a796-365d-445e-b56c-fb2d7d5a9163" >
+				</h3><div class="panel-collapse collapse" id="52e1c2c5-f903-49b7-af6d-89613af69883" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassA9A9BC11C2194AD9AABB537780B30F8A"><p> 
@@ -639,16 +639,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-1483d73a-eedb-4745-918a-711ecdd288a9">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-f08c0146-1421-4e7a-a738-048b49f7a39c">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#1483d73a-eedb-4745-918a-711ecdd288a9" aria-controls="1483d73a-eedb-4745-918a-711ecdd288a9" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="4e1142a5-c0b1-4b67-ade4-5332f8a5c2c3">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#f08c0146-1421-4e7a-a738-048b49f7a39c" aria-controls="f08c0146-1421-4e7a-a738-048b49f7a39c" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="fb6385ab-d59d-4054-a10b-ae2f93b6debb">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Low-Income Housing Tax Credit (LIHTC)</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="1483d73a-eedb-4745-918a-711ecdd288a9" >
+				</h3><div class="panel-collapse collapse" id="f08c0146-1421-4e7a-a738-048b49f7a39c" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassF9B27D374EE24FF7BCAB75DDA3EA2190"><p> 
@@ -667,16 +667,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-dd565ce4-6d22-4b07-8163-13870608b463">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-6bcc89ba-6628-484d-ab58-45a75e207d51">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#dd565ce4-6d22-4b07-8163-13870608b463" aria-controls="dd565ce4-6d22-4b07-8163-13870608b463" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="51b3e29c-6bbe-464f-ab71-1d80bdc57fd3">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#6bcc89ba-6628-484d-ab58-45a75e207d51" aria-controls="6bcc89ba-6628-484d-ab58-45a75e207d51" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="d53d4223-9588-4dd2-88c5-d4847c05bc4f">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Oregon Affordable Housing Tax Credit (OAHTC)</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="dd565ce4-6d22-4b07-8163-13870608b463" >
+				</h3><div class="panel-collapse collapse" id="6bcc89ba-6628-484d-ab58-45a75e207d51" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassF019A2D8E68B4A02B97F0DF544EBC383"><p> 

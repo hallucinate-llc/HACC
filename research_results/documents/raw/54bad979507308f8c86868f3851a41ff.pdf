@@ -227,14 +227,14 @@ var MSOWebPartPageFormName = 'aspnetForm';
 var g_presenceEnabled = true;
 var g_wsaEnabled = false;
 
-var g_correlationId = 'fa9ae8a1-5878-5059-8d61-b8711f031b22';
+var g_correlationId = '5a23e9a1-7809-5059-8d61-b4664cd99812';
 var g_wsaQoSEnabled = false;
 var g_wsaQoSDataPoints = [];
 var g_wsaRUMEnabled = false;
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'STS#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fdas\u002fORBuys", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdas\u002fORBuys", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdas", serverRequestPath: "\u002fdas\u002fORBuys\u002fPages\u002feprocurement-project.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "OregonBuys Program Information", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-01T03:03:40.2592694Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-01T03:03:40.2592694Z"), siteClientTag: "1$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{5ffe6c98-07f4-4209-bf95-4f24b73f1b4d}",pageItemId:7, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fdas", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fdas\u002fORBuys", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdas\u002fORBuys", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdas", serverRequestPath: "\u002fdas\u002fORBuys\u002fPages\u002feprocurement-project.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "OregonBuys Program Information", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-02T18:46:58.0219388Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-02T18:46:58.0219388Z"), siteClientTag: "1$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{5ffe6c98-07f4-4209-bf95-4f24b73f1b4d}",pageItemId:7, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fdas", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
 </script>
 
 <script src="/_layouts/15/16.0.5456.1000/blank.js" type="text/javascript"></script>
@@ -545,12 +545,12 @@ implementation. <br></div>
 <h2 class="ms-rteElement-Heading2">Overview Documents</h2></span></div><div>Documents and presentations used to share the project idea with interested agencies. </div><div><br></div><div>Document categories are&#58; agency outreach, agency outreach - project kickoff, background information, background information - project updates, lessons learned, project documents, project documents - contracts, Request for Information (RFI),  Request for Proposals (RFP).<br></div><div><div class="ms-rtestate-read ms-rte-wpbox"><div class="ms-rtestate-notify  ms-rtestate-read b34be42b-6e07-4c10-90e7-fa6d95e549d5" id="div_b34be42b-6e07-4c10-90e7-fa6d95e549d5" unselectable="on"><div id="MSOZoneCell_WebPartWPQ1" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ1"  class="ms-WPBody "   style="" ><div id="ctl00_ctl40_g_b34be42b_6e07_4c10_90e7_fa6d95e549d5" class="or-dataTablesWebPart">
-		<div id="3c6e20a6-a67c-44ac-b3f7-55d178ea1bbe">
+		<div id="318bf922-40d4-4480-971c-42f12cb89daf">
 			<data-tables-web-part params="webPartId: &#39;g_b34be42b_6e07_4c10_90e7_fa6d95e549d5&#39;, webPartProperties: {&quot;webPartId&quot;:&quot;g_b34be42b_6e07_4c10_90e7_fa6d95e549d5&quot;,&quot;tableCaption&quot;:&quot;&quot;,&quot;dataSource&quot;:&quot;list&quot;,&quot;socrataId&quot;:&quot;&quot;,&quot;sharePointWebUrl&quot;:&quot;/das/ORBuys&quot;,&quot;sharePointListUrl&quot;:&quot;/das/ORBuys/BackgroundDocuments&quot;,&quot;sharePointViewName&quot;:&quot;agencyoutreach&quot;,&quot;responsiveMode&quot;:&quot;reflow&quot;,&quot;paginationEnabled&quot;:true,&quot;searchEnabled&quot;:true,&quot;sortEnabled&quot;:true,&quot;filterEnabled&quot;:true,&quot;stateSaveEnabled&quot;:false,&quot;copyButtonEnabled&quot;:false,&quot;printButtonEnabled&quot;:false,&quot;excelButtonEnabled&quot;:false,&quot;pdfButtonEnabled&quot;:false,&quot;tableBordered&quot;:true,&quot;tableStriped&quot;:true,&quot;tableCondensed&quot;:true}">
 
 			</data-tables-web-part>
 		</div><script type="text/javascript">
-			ko.applyBindings(null, document.getElementById('3c6e20a6-a67c-44ac-b3f7-55d178ea1bbe'))
+			ko.applyBindings(null, document.getElementById('318bf922-40d4-4480-971c-42f12cb89daf'))
 		</script>
 	</div><div class="ms-clear"></div></div>
 </div>

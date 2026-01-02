@@ -286,14 +286,14 @@ var MSOWebPartPageFormName = 'aspnetForm';
 var g_presenceEnabled = true;
 var g_wsaEnabled = false;
 
-var g_correlationId = '4d9ae8a1-c869-5059-8d61-ba7fbec68c03';
+var g_correlationId = 'f422e9a1-78b5-5059-8d61-be1b1d3e9080';
 var g_wsaQoSEnabled = false;
 var g_wsaQoSDataPoints = [];
 var g_wsaRUMEnabled = false;
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'STS#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fodhs\u002fabout", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodhs\u002fabout", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodhs", serverRequestPath: "\u002fodhs\u002fabout\u002fpages\u002fcontracts.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "About Us", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-01T02:51:51.4185176Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-01T02:51:51.4185176Z"), siteClientTag: "719$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{3532b108-4d2c-4800-8404-e5c3527daf6f}",pageItemId:10, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fodhs", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fodhs\u002fabout", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodhs\u002fabout", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodhs", serverRequestPath: "\u002fodhs\u002fabout\u002fpages\u002fcontracts.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "About Us", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-02T18:40:03.0910451Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-02T18:40:03.0910451Z"), siteClientTag: "719$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{3532b108-4d2c-4800-8404-e5c3527daf6f}",pageItemId:10, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fodhs", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
 </script>
 
 <script src="/_layouts/15/16.0.5456.1000/blank.js" type="text/javascript"></script>
@@ -524,9 +524,9 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ1"  class="ms-WPBody "   style="" ><div id="ctl00_ctl00_ctl40_g_1b1b86a0_377d_49d4_b579_5b7b2c41045c">
 		<div class="list-unstyled panel-group or-accordion-list" id="accordion-ctl00_ctl00_ctl40_g_1b1b86a0_377d_49d4_b579_5b7b2c41045c_ctl01">
-			<div class="panel panel-default or-accordion-panel" id="panel-51c91bdc-18ec-4473-8b9a-32af94e02070">
+			<div class="panel panel-default or-accordion-panel" id="panel-c747ca37-efa3-457a-8604-f06d558cef98">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#51c91bdc-18ec-4473-8b9a-32af94e02070" aria-controls="51c91bdc-18ec-4473-8b9a-32af94e02070" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="d408e5aa-c0d6-47c0-b68c-f042c8b11db0">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#c747ca37-efa3-457a-8604-f06d558cef98" aria-controls="c747ca37-efa3-457a-8604-f06d558cef98" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="d08f8ac7-6749-4d55-bb26-a334a8939bb6">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-blue-32.png" alt="&quot;&quot;" />
@@ -535,7 +535,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="51c91bdc-18ec-4473-8b9a-32af94e02070" >
+				</h3><div class="panel-collapse collapse" id="c747ca37-efa3-457a-8604-f06d558cef98" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassD2E13A15950B4A4A85D244BC6D907173"><h4>What we do</h4><h5>Contracts</h5><p>The Contracts office is responsible for preparing, issuing and awarding contracts to qualified vendors in a manner that protects people, assets and public trust.​</p><h5>Procu​​​rement</h5>
@@ -543,9 +543,9 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-94af9811-b199-4556-8b68-35c2573f6dd3">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-2a23d0c9-ec30-435e-9ac6-1593af34ff9c">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#94af9811-b199-4556-8b68-35c2573f6dd3" aria-controls="94af9811-b199-4556-8b68-35c2573f6dd3" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="71fb52a6-a2be-40ea-9eda-60655b127790">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#2a23d0c9-ec30-435e-9ac6-1593af34ff9c" aria-controls="2a23d0c9-ec30-435e-9ac6-1593af34ff9c" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="345c7c20-61b1-4ed3-8c58-257ba036e66c">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-blue-32.png" alt="&quot;&quot;" />
@@ -554,7 +554,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="94af9811-b199-4556-8b68-35c2573f6dd3" >
+				</h3><div class="panel-collapse collapse" id="2a23d0c9-ec30-435e-9ac6-1593af34ff9c" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass01B959F76EAC48A1AF43B6093218E379"><h4>Oregonians’ need is established</h4><ul><li>Oregonians receiving services through an ODHS or OHA program have a specific need for a good or service.</li><li>The O​DHS or OHA program follows the “Buy Decision” to contract for purchasing goods and services. 
@@ -562,9 +562,9 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-0e592a86-7627-4f28-b2dd-478fe9c617b0">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-9f973600-34b1-46e6-9fe4-7968163cd19e">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#0e592a86-7627-4f28-b2dd-478fe9c617b0" aria-controls="0e592a86-7627-4f28-b2dd-478fe9c617b0" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="92158671-de2e-4792-be47-2bb3ed1afe1a">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#9f973600-34b1-46e6-9fe4-7968163cd19e" aria-controls="9f973600-34b1-46e6-9fe4-7968163cd19e" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="32835675-f15d-4e77-a800-3398b20ada52">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-blue-32.png" alt="&quot;&quot;" />
@@ -573,7 +573,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="0e592a86-7627-4f28-b2dd-478fe9c617b0" >
+				</h3><div class="panel-collapse collapse" id="9f973600-34b1-46e6-9fe4-7968163cd19e" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassDC4264C9CF6E48C39A9531BBA01152E8"><p></p><ul><li>View ​resources for starting a business, contracting with Oregon and business-focused training on the 
@@ -585,9 +585,9 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-1f4ae26e-e17c-4fab-ac90-8dafaa4c4f94">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-11b72b99-0ab5-4187-96db-406c7f1da1fe">
 				<h3>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#1f4ae26e-e17c-4fab-ac90-8dafaa4c4f94" aria-controls="1f4ae26e-e17c-4fab-ac90-8dafaa4c4f94" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="1adfe470-bf63-42f5-834b-75c279763c2c">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#11b72b99-0ab5-4187-96db-406c7f1da1fe" aria-controls="11b72b99-0ab5-4187-96db-406c7f1da1fe" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="840c7f72-78be-46d1-97c5-e49a27e6ab56">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-thumb">
 								<img class="img-responsive" src="https://www.oregon.gov/odhs/PublishingImages/icons/arrow-blue-32.png" alt="&quot;&quot;" />
@@ -596,7 +596,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h3><div class="panel-collapse collapse" id="1f4ae26e-e17c-4fab-ac90-8dafaa4c4f94" >
+				</h3><div class="panel-collapse collapse" id="11b72b99-0ab5-4187-96db-406c7f1da1fe" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass7A3D38D315EA45E78F969096E22DBAEB"><p>To provide a fair opportunity for businesses to compete for government contracts regardless of the owner's ethnicity, gender, disability or firm size, <a href="https&#58;//www.oregon.gov/biz/programs/cobid/pages/default.aspx">businesses can be certified</a> as&#58;<br></p><ul><li>Minority-owned<br></li><li>Women-owned<br></li><li>Service-disabled veteran-owned<br></li><li>Emerging small business<br></li><li>Disadvantaged business​<br></li></ul><p>The Oregon Certification Office for Business Inclusion and Diversity (<strong>COBID</strong>) oversees these free certification programs. You can apply for more than one certification​.&#160;​<br></p><p>Benefits include&#58;<br></p><ul><li>Being listed in the 

@@ -187,14 +187,14 @@ var MSOWebPartPageFormName = 'aspnetForm';
 var g_presenceEnabled = true;
 var g_wsaEnabled = false;
 
-var g_correlationId = 'fd9ae8a1-d859-5059-054f-daecfdb38d65';
+var g_correlationId = '5c23e9a1-4817-5059-a10c-80e99d4c33bf';
 var g_wsaQoSEnabled = false;
 var g_wsaQoSDataPoints = [];
 var g_wsaRUMEnabled = false;
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'STS#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fode\u002fstudents-and-family\u002fequity\u002fcivilrights", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fode\u002fstudents-and-family\u002fequity\u002fcivilrights", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fode", serverRequestPath: "\u002fode\u002fstudents-and-family\u002fequity\u002fcivilrights\u002fPages\u002fgender-identity-guidance.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Civil Rights", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-01T03:03:52.0432439Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-01T03:03:52.0432439Z"), siteClientTag: "21$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{cbdb941b-f983-4b3f-beba-9dd7ba732c60}",pageItemId:12, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fode", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fode\u002fstudents-and-family\u002fequity\u002fcivilrights", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fode\u002fstudents-and-family\u002fequity\u002fcivilrights", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fode", serverRequestPath: "\u002fode\u002fstudents-and-family\u002fequity\u002fcivilrights\u002fPages\u002fgender-identity-guidance.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Civil Rights", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-02T18:47:06.4299105Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-02T18:47:06.4299105Z"), siteClientTag: "21$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{cbdb941b-f983-4b3f-beba-9dd7ba732c60}",pageItemId:12, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fode", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
 </script>
 
 <script src="/_layouts/15/16.0.5456.1000/blank.js" type="text/javascript"></script>
@@ -475,16 +475,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ1"  class="ms-WPBody "   style="" ><div id="ctl00_ctl40_g_5338ca0c_48b6_4809_a1eb_2ec2b2b322ef">
 		<div class="list-unstyled panel-group or-accordion-list" id="accordion-ctl00_ctl40_g_5338ca0c_48b6_4809_a1eb_2ec2b2b322ef_ctl01">
-			<div class="panel panel-default or-accordion-panel" id="panel-89fbcbbf-d427-4755-95ec-fd112cc419bc">
+			<div class="panel panel-default or-accordion-panel" id="panel-57a56e42-6f33-4c5d-a1bd-cb9876952573">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#89fbcbbf-d427-4755-95ec-fd112cc419bc" aria-controls="89fbcbbf-d427-4755-95ec-fd112cc419bc" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="7f589728-d393-4def-8af5-8b548b7d5c01">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#57a56e42-6f33-4c5d-a1bd-cb9876952573" aria-controls="57a56e42-6f33-4c5d-a1bd-cb9876952573" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="009b96ab-931c-4ebf-bd72-3b77d62b039d">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">2025 Updates</p>
 							</div>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="89fbcbbf-d427-4755-95ec-fd112cc419bc" >
+				</h2><div class="panel-collapse collapse" id="57a56e42-6f33-4c5d-a1bd-cb9876952573" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							2025 Updates

@@ -263,14 +263,14 @@ var MSOWebPartPageFormName = 'aspnetForm';
 var g_presenceEnabled = true;
 var g_wsaEnabled = false;
 
-var g_correlationId = '539ae8a1-1812-5059-a10c-888216d1ad69';
+var g_correlationId = 'fa22e9a1-984e-5059-054f-d49d52d4d129';
 var g_wsaQoSEnabled = false;
 var g_wsaQoSDataPoints = [];
 var g_wsaRUMEnabled = false;
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'STS#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fodot\u002fBusiness\u002fProcurement", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodot\u002fBusiness\u002fProcurement", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodot", serverRequestPath: "\u002fodot\u002fbusiness\u002fprocurement\u002fpages\u002fpsk.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Procurement", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-01T02:52:14.5755765Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-01T02:52:14.5755765Z"), siteClientTag: "87$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{aa1cbc5d-7f99-484e-a94c-4f931109874e}",pageItemId:21, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fodot", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fodot\u002fBusiness\u002fProcurement", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodot\u002fBusiness\u002fProcurement", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodot", serverRequestPath: "\u002fodot\u002fbusiness\u002fprocurement\u002fpages\u002fpsk.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Procurement", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-02T18:40:25.9113340Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-02T18:40:25.9113340Z"), siteClientTag: "87$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{aa1cbc5d-7f99-484e-a94c-4f931109874e}",pageItemId:21, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fodot", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
 </script>
 
 <script src="/_layouts/15/16.0.5456.1000/blank.js" type="text/javascript"></script>
@@ -533,16 +533,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ1"  class="ms-WPBody "   style="" ><div id="ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47">
 		<div class="list-unstyled panel-group or-accordion-list" id="accordion-ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47_ctl01">
-			<div class="panel panel-default or-accordion-panel" id="panel-64169ff7-e946-4c36-8860-e032c8283f47">
+			<div class="panel panel-default or-accordion-panel" id="panel-ab26360a-17f1-4517-851d-56d23eab0a13">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#64169ff7-e946-4c36-8860-e032c8283f47" aria-controls="64169ff7-e946-4c36-8860-e032c8283f47" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47_ctl01"><div class="panel-heading" id="64b1190c-da18-4409-b36c-e91e0bdc0a30">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#ab26360a-17f1-4517-851d-56d23eab0a13" aria-controls="ab26360a-17f1-4517-851d-56d23eab0a13" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47_ctl01"><div class="panel-heading" id="fd60db9e-be63-4c66-803e-ddcd95ce6a0d">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">&quot;DBE&quot; or &quot;Disadvantaged Business Enterprise&quot; and other forms required by Office of Civil Rights</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="64169ff7-e946-4c36-8860-e032c8283f47" >
+				</h2><div class="panel-collapse collapse" id="ab26360a-17f1-4517-851d-56d23eab0a13" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassCD25FE1A7F40452CBD5A9F03B488D5B5"><p><a href="/odot/Forms/2ODOT/7345235.pdf">Committed DBE Breakdown and Certification Form - A&amp;E #734-5235 </a></p>
@@ -551,16 +551,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-c0f04778-04a1-4cbb-bab4-76d2669b8e26">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-933eeb7b-4fc7-40cb-a3ec-16bef595eb7d">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#c0f04778-04a1-4cbb-bab4-76d2669b8e26" aria-controls="c0f04778-04a1-4cbb-bab4-76d2669b8e26" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47_ctl01"><div class="panel-heading" id="413ebf7f-1d67-402f-ba96-2a8fc256442d">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#933eeb7b-4fc7-40cb-a3ec-16bef595eb7d" aria-controls="933eeb7b-4fc7-40cb-a3ec-16bef595eb7d" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47_ctl01"><div class="panel-heading" id="4978515a-53cc-42f7-baff-7620bc2e8116">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Cost, Billing Rate &amp; Compensation Related Forms</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="c0f04778-04a1-4cbb-bab4-76d2669b8e26" >
+				</h2><div class="panel-collapse collapse" id="933eeb7b-4fc7-40cb-a3ec-16bef595eb7d" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassF6DE19ECC3AB4C5D8EAC13F4C0872D34"><div class="ExternalClass15F4033170CD440180AE647968256F76"><div class="ExternalClassF3B4891DF08540D79D1B9A2B9DC072DF"><div class="ExternalClass53E66502294E43539E58BB835B2185BE"><span style="font-family&#58;&quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;"><p class="ExternalClass9FF9E7CD2EFF4075A3FF02F44F6AA3E3" style="font-size&#58;8pt;"><span style="font-size&#58;13px;"><b>Billing Rates</b></span></p><p class="ExternalClass9FF9E7CD2EFF4075A3FF02F44F6AA3E3" style="font-size&#58;8pt;"><span style="font-size&#58;13px;">Fo</span><span style="font-size&#58;13px;">r Billing Rate information and resources, please visit the </span><a href="/odot/business/procurement/pages/cbr.aspx" target="_blank" style="font-size&#58;13px;">Consultant Billing Rates​</a><span style="font-size&#58;13px;"> page.&#160;</span></p><p class="ExternalClass9FF9E7CD2EFF4075A3FF02F44F6AA3E3" style="font-size&#58;8pt;"><strong style="font-size&#58;13px;">​​Cost Estimate Templates &amp; Guidance</strong></p>
@@ -576,16 +576,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-ad432712-55b2-4b50-89a0-7a763abbc6c1">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-23411e49-2990-425c-8f99-b3a668c8071a">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#ad432712-55b2-4b50-89a0-7a763abbc6c1" aria-controls="ad432712-55b2-4b50-89a0-7a763abbc6c1" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47_ctl01"><div class="panel-heading" id="2865a9b0-436a-4cd4-9d4c-8368af0cefdd">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#23411e49-2990-425c-8f99-b3a668c8071a" aria-controls="23411e49-2990-425c-8f99-b3a668c8071a" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47_ctl01"><div class="panel-heading" id="9be39e79-e532-4b53-995e-530a4837c5db">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Miscellaneous Procurement Forms (typically required for consultants)</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="ad432712-55b2-4b50-89a0-7a763abbc6c1" >
+				</h2><div class="panel-collapse collapse" id="23411e49-2990-425c-8f99-b3a668c8071a" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassB51A3E675AEC4D75B34F586D6818B668">
@@ -601,16 +601,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-d086b84b-787c-48b5-b090-87071cb6c7b7">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-4f308417-80c6-495e-8abb-8148bedaed65">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#d086b84b-787c-48b5-b090-87071cb6c7b7" aria-controls="d086b84b-787c-48b5-b090-87071cb6c7b7" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47_ctl01"><div class="panel-heading" id="69a685e5-9c3e-449f-b20a-0f3825b877e5">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#4f308417-80c6-495e-8abb-8148bedaed65" aria-controls="4f308417-80c6-495e-8abb-8148bedaed65" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47_ctl01"><div class="panel-heading" id="e58add4c-e3c0-4fcc-8d33-b47b585a067d">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Guidance, Policy &amp; Resources</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="d086b84b-787c-48b5-b090-87071cb6c7b7" >
+				</h2><div class="panel-collapse collapse" id="4f308417-80c6-495e-8abb-8148bedaed65" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassBA7E5B1900FA408F83D0B2DEA7940904"><p>​<strong>Guidance/Publications</strong></p>
@@ -629,16 +629,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-b8eda049-2595-469c-8701-09168408683a">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-d8fa3588-227d-4f95-b775-fdc6f5f4f9f2">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#b8eda049-2595-469c-8701-09168408683a" aria-controls="b8eda049-2595-469c-8701-09168408683a" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47_ctl01"><div class="panel-heading" id="074c366b-f375-4d3b-81eb-1fbf0d8b6e4f">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#d8fa3588-227d-4f95-b775-fdc6f5f4f9f2" aria-controls="d8fa3588-227d-4f95-b775-fdc6f5f4f9f2" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47_ctl01"><div class="panel-heading" id="bf0d0588-1506-4992-acba-3a7f87af23da">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Contract/Price Agreement Exhibits Incorporated by Reference from the Web</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="b8eda049-2595-469c-8701-09168408683a" >
+				</h2><div class="panel-collapse collapse" id="d8fa3588-227d-4f95-b775-fdc6f5f4f9f2" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassD4B07B68BE86455FB65732EDA6658A2D"><div class="ExternalClassC0119ED2D0E94472B7796AB02A4674DF"><div class="ExternalClassABE3737CE9F844FDBCF3B6BFE5B19677">

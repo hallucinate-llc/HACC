@@ -189,14 +189,14 @@ var MSOWebPartPageFormName = 'aspnetForm';
 var g_presenceEnabled = true;
 var g_wsaEnabled = false;
 
-var g_correlationId = '599ae8a1-a8f2-5059-a10c-86f2ab911227';
+var g_correlationId = '0023e9a1-888e-5059-a10c-814caf884f03';
 var g_wsaQoSEnabled = false;
 var g_wsaQoSDataPoints = [];
 var g_wsaRUMEnabled = false;
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'STS#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fode\u002flearning-options\u002fCTE\u002fEquity", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fode\u002flearning-options\u002fCTE\u002fEquity", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fode", serverRequestPath: "\u002fode\u002flearning-options\u002fCTE\u002fEquity\u002fPages\u002fCivil-Rights-and-Equity-Resources.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Civil Rights and Equity", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-01T02:52:42.7760138Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-01T02:52:42.7760138Z"), siteClientTag: "21$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{11528c8c-c2d5-4e0d-a9e2-5e8f1a623ae3}",pageItemId:14, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fode", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fode\u002flearning-options\u002fCTE\u002fEquity", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fode\u002flearning-options\u002fCTE\u002fEquity", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fode", serverRequestPath: "\u002fode\u002flearning-options\u002fCTE\u002fEquity\u002fPages\u002fCivil-Rights-and-Equity-Resources.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Civil Rights and Equity", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-02T18:40:51.4928552Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-02T18:40:51.4928552Z"), siteClientTag: "21$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{11528c8c-c2d5-4e0d-a9e2-5e8f1a623ae3}",pageItemId:14, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fode", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
 </script>
 
 <script src="/_layouts/15/16.0.5456.1000/blank.js" type="text/javascript"></script>
@@ -476,16 +476,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ1"  class="ms-WPBody "   style="" ><div id="ctl00_ctl40_g_7d466089_705c_45b5_b4e6_35d1762c6e3f">
 		<div class="list-unstyled panel-group or-accordion-list" id="accordion-ctl00_ctl40_g_7d466089_705c_45b5_b4e6_35d1762c6e3f_ctl01">
-			<div class="panel panel-default or-accordion-panel" id="panel-340831b6-fb97-4a77-8770-89f04791e307">
+			<div class="panel panel-default or-accordion-panel" id="panel-e72a2441-f9b4-4bc9-9538-5c1a535db7df">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#340831b6-fb97-4a77-8770-89f04791e307" aria-controls="340831b6-fb97-4a77-8770-89f04791e307" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl40_g_7d466089_705c_45b5_b4e6_35d1762c6e3f_ctl01"><div class="panel-heading" id="fc4e452a-8cc5-47a9-a282-f9b963c53950">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#e72a2441-f9b4-4bc9-9538-5c1a535db7df" aria-controls="e72a2441-f9b4-4bc9-9538-5c1a535db7df" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl40_g_7d466089_705c_45b5_b4e6_35d1762c6e3f_ctl01"><div class="panel-heading" id="355ed58e-73c1-499d-a88e-5479e60fb9d5">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Discrimination Based on Race, Color, and National Origin</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="340831b6-fb97-4a77-8770-89f04791e307" >
+				</h2><div class="panel-collapse collapse" id="e72a2441-f9b4-4bc9-9538-5c1a535db7df" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass1E433FB2BD334AB792E82DE2DBC4598F"><p>​</p><ul><li> 
@@ -512,16 +512,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-6e0c633a-524f-4d06-93c9-fb7a437d20cf">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-209833e4-9557-4120-87c8-76565d7ad819">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#6e0c633a-524f-4d06-93c9-fb7a437d20cf" aria-controls="6e0c633a-524f-4d06-93c9-fb7a437d20cf" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl40_g_7d466089_705c_45b5_b4e6_35d1762c6e3f_ctl01"><div class="panel-heading" id="a0d18712-79f7-4439-8c7c-8c0f5522a664">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#209833e4-9557-4120-87c8-76565d7ad819" aria-controls="209833e4-9557-4120-87c8-76565d7ad819" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl40_g_7d466089_705c_45b5_b4e6_35d1762c6e3f_ctl01"><div class="panel-heading" id="9d7f0df7-f036-46a3-87f6-8c48ac4dd5a9">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Discrimination Based on Sex, Gender, Sexual Orientation, and Gender Identity</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="6e0c633a-524f-4d06-93c9-fb7a437d20cf" >
+				</h2><div class="panel-collapse collapse" id="209833e4-9557-4120-87c8-76565d7ad819" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass63E58E59BA03427EA70E013408D7EFA2"><ul><li> 
@@ -547,16 +547,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-b8788c33-5d1a-4549-9483-047ff12a36c9">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-e6b8c3d3-2491-41b4-a01a-f18be35280a7">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#b8788c33-5d1a-4549-9483-047ff12a36c9" aria-controls="b8788c33-5d1a-4549-9483-047ff12a36c9" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl40_g_7d466089_705c_45b5_b4e6_35d1762c6e3f_ctl01"><div class="panel-heading" id="a07a044c-1e25-4617-8ca8-ae51a7ce8d94">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#e6b8c3d3-2491-41b4-a01a-f18be35280a7" aria-controls="e6b8c3d3-2491-41b4-a01a-f18be35280a7" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl40_g_7d466089_705c_45b5_b4e6_35d1762c6e3f_ctl01"><div class="panel-heading" id="f321dbf4-5e59-4609-a837-114d9f727ca1">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Discrimination Based on Disability</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="b8788c33-5d1a-4549-9483-047ff12a36c9" >
+				</h2><div class="panel-collapse collapse" id="e6b8c3d3-2491-41b4-a01a-f18be35280a7" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass1FD17750DB1143FA9A1EC016D5124257"><p>​</p><ul><li>
@@ -580,16 +580,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-b1087ac2-bba7-4a41-95e9-c101ee2e0769">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-aee43411-2e4f-4fda-ac86-d468b0d803b0">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#b1087ac2-bba7-4a41-95e9-c101ee2e0769" aria-controls="b1087ac2-bba7-4a41-95e9-c101ee2e0769" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl40_g_7d466089_705c_45b5_b4e6_35d1762c6e3f_ctl01"><div class="panel-heading" id="8369b6c4-301d-48be-9657-6cc1551216ee">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#aee43411-2e4f-4fda-ac86-d468b0d803b0" aria-controls="aee43411-2e4f-4fda-ac86-d468b0d803b0" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl40_g_7d466089_705c_45b5_b4e6_35d1762c6e3f_ctl01"><div class="panel-heading" id="6ecd08d3-e1ac-4275-af98-e662a80ffa71">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Resources for Schools Not Otherwise Included Above</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="b1087ac2-bba7-4a41-95e9-c101ee2e0769" >
+				</h2><div class="panel-collapse collapse" id="aee43411-2e4f-4fda-ac86-d468b0d803b0" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass077341880B414EA38B8C66F33DE2CCFE"><p>​</p><ul><li> 

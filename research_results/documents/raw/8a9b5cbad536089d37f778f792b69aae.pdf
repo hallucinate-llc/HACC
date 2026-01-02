@@ -204,14 +204,14 @@ var MSOWebPartPageFormName = 'aspnetForm';
 var g_presenceEnabled = true;
 var g_wsaEnabled = false;
 
-var g_correlationId = '489ae8a1-c8dd-5059-a10c-870ffe42010f';
+var g_correlationId = 'f122e9a1-2805-5059-f3fa-a12acd1b4993';
 var g_wsaQoSEnabled = false;
 var g_wsaQoSDataPoints = [];
 var g_wsaRUMEnabled = false;
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'STS#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002ftransparency", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002ftransparency", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002ftransparency", serverRequestPath: "\u002ftransparency\u002fpages\u002fcontracts.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Oregon Transparency", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-01T02:51:32.8255823Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-01T02:51:32.8255823Z"), siteClientTag: "468$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{f7421762-ac6d-4a97-9ae7-bbe64dff31ec}",pageItemId:62, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002ftransparency", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002ftransparency", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002ftransparency", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002ftransparency", serverRequestPath: "\u002ftransparency\u002fpages\u002fcontracts.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Oregon Transparency", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-02T18:39:47.8568312Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-02T18:39:47.8568312Z"), siteClientTag: "468$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{f7421762-ac6d-4a97-9ae7-bbe64dff31ec}",pageItemId:62, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002ftransparency", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};
                             function DoCallBack(filterText)
                             {WebForm_DoCallback('ctl00$ctl00$HeaderWrapperPlaceHolder$g_f282332f_8bef_4b6b_8a46_7c1e00177c4e',filterText,UpdateFilterCallback,0,CallBackError,true)
                             }

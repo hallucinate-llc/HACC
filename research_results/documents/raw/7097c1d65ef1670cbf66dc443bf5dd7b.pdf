@@ -227,14 +227,14 @@ var MSOWebPartPageFormName = 'aspnetForm';
 var g_presenceEnabled = true;
 var g_wsaEnabled = false;
 
-var g_correlationId = 'f89ae8a1-f816-5059-a10c-807e88733e62';
+var g_correlationId = '5823e9a1-181f-5059-f3fa-a81455d9a6ee';
 var g_wsaQoSEnabled = false;
 var g_wsaQoSDataPoints = [];
 var g_wsaRUMEnabled = false;
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'STS#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fdas\u002fOPM", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdas\u002fOPM", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdas", serverRequestPath: "\u002fdas\u002fopm\u002fpages\u002fevaluation.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Oregon Procurement Manual", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-01T03:03:30.5092679Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-01T03:03:30.5092679Z"), siteClientTag: "1$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{0f07a897-0798-445b-b1ab-54f2d1740d15}",pageItemId:14, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fdas", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fdas\u002fOPM", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdas\u002fOPM", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdas", serverRequestPath: "\u002fdas\u002fopm\u002fpages\u002fevaluation.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Oregon Procurement Manual", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-02T18:46:50.1597419Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-02T18:46:50.1597419Z"), siteClientTag: "1$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{0f07a897-0798-445b-b1ab-54f2d1740d15}",pageItemId:14, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fdas", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
 </script>
 
 <script src="/_layouts/15/16.0.5456.1000/blank.js" type="text/javascript"></script>
@@ -517,16 +517,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ1"  class="ms-WPBody "   style="" ><div id="ctl00_ctl40_g_c00f547b_bd92_4fab_a4d0_0a4f2d651240">
 		<div class="list-unstyled panel-group or-accordion-list" id="accordion-ctl00_ctl40_g_c00f547b_bd92_4fab_a4d0_0a4f2d651240_ctl01">
-			<div class="panel panel-default or-accordion-panel" id="panel-ba9fe595-9935-480e-a68c-60f36c83bfd5">
+			<div class="panel panel-default or-accordion-panel" id="panel-77d9a80d-2713-4a7a-bdd0-ef4e53a09b7e">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#ba9fe595-9935-480e-a68c-60f36c83bfd5" aria-controls="ba9fe595-9935-480e-a68c-60f36c83bfd5" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="68e3ee6c-9c9f-4dd6-bde2-b237c01c3e5e">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#77d9a80d-2713-4a7a-bdd0-ef4e53a09b7e" aria-controls="77d9a80d-2713-4a7a-bdd0-ef4e53a09b7e" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="97d03ad9-cc58-4f60-a32e-6fd3cf68e120">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">1. Evaluation committee roles and members</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="ba9fe595-9935-480e-a68c-60f36c83bfd5" >
+				</h4><div class="panel-collapse collapse" id="77d9a80d-2713-4a7a-bdd0-ef4e53a09b7e" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassD600DEE488A0489CB8705EB330E2BA04"><span class="ms-rteFontFace-13">The procurement professional identifies the roles and potential members  of the evaluation committee, which may include members of the  procurement team. Depending on the nature and complexity of the  solicitation, the procurement professional may establish a committee  that includes both voting and non-voting members. The procurement  professional serves as a facilitator and advisor and is not a voting  member of the committee.</span><br class="ms-rteFontFace-13"><span class="ms-rteFontFace-13">Responsibilities of evaluation committee members require that they&#58;</span><br class="ms-rteFontFace-13"><span class="ms-rteFontFace-13">
@@ -540,16 +540,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-a2fa8de6-e157-464e-b51a-6c1f11ce09dc">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-6269b9d7-0d3f-4ac0-8b16-37bf8b4a8f24">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#a2fa8de6-e157-464e-b51a-6c1f11ce09dc" aria-controls="a2fa8de6-e157-464e-b51a-6c1f11ce09dc" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="9744e8d5-1fe1-4320-88b0-194bda59e23e">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#6269b9d7-0d3f-4ac0-8b16-37bf8b4a8f24" aria-controls="6269b9d7-0d3f-4ac0-8b16-37bf8b4a8f24" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="ec7a9357-ca2a-4472-b00f-8be636c1154d">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">2. Evaluation process</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="a2fa8de6-e157-464e-b51a-6c1f11ce09dc" >
+				</h4><div class="panel-collapse collapse" id="6269b9d7-0d3f-4ac0-8b16-37bf8b4a8f24" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass5622B0070CB145D89299667DBC2AB4C0"><span class="ms-rteFontFace-13">​The evaluation strategy should describe the specific process for how the committee will evaluate solicitation responses.</span><br class="ms-rteFontFace-13"><br class="ms-rteFontFace-13"><span class="ms-rteFontFace-13">The evaluation process typically includes four phases&#58;</span><br class="ms-rteFontFace-13"><span class="ms-rteFontFace-13"> 
@@ -562,32 +562,32 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-97b39240-3533-4dd8-af5a-ea23b883289c">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-bfd84130-3b29-4f11-a84b-27bea01e2bbb">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#97b39240-3533-4dd8-af5a-ea23b883289c" aria-controls="97b39240-3533-4dd8-af5a-ea23b883289c" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="5872cb60-0747-467b-9b72-07e823744f7b">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#bfd84130-3b29-4f11-a84b-27bea01e2bbb" aria-controls="bfd84130-3b29-4f11-a84b-27bea01e2bbb" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="ae897281-9fb5-46a0-a432-2025ed824999">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">3. Evaluation criteria</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="97b39240-3533-4dd8-af5a-ea23b883289c" >
+				</h4><div class="panel-collapse collapse" id="bfd84130-3b29-4f11-a84b-27bea01e2bbb" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassB91DBE46BDBC4872AE22B1EB45A00F8C"><span class="ms-rteFontFace-13">Evaluation criteria are the measure used to assess each proposal in a  fair and consistent way. Criteria consist of the factors and sub-factors  that reflect the areas of importance to an agency in its selection  decision. Using evaluation criteria, the procuring agency can assess the  extent to which a proposal is responsive to a solicitation’s  specifications or scope of work. The assessment also helps make a sound  selection decision.<br><br>Evaluation criteria provide committee members  with a clear and concise method to identify responsive proposals, allow  the procuring agency to rank the proposals and ultimately select the  proposal representing best value to the state.<br><br>To establish  evaluation criteria, the procurement team should begin by making a list  of the most important aspects of the product or service required,  including cost. From this list, the team should group and then  prioritize the factors by category in order of importance. These  categories represent the evaluation criteria for the product or service.  This process will help to determine the most appropriate weighting for  each criteria based on its relative importance. The most important items  will naturally be evaluated heavier and have more points available.<br><br>There  is no right or wrong evaluation criteria for a solicitation. Evaluation  criteria should be tailored to each procurement and include only those  factors having an impact on the selection. The nature and types of  evaluation criteria applied to a procurement are within the broad  discretion of the procuring agency.</span></div>
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-33f6e2bb-be04-47e5-9e67-1e90f08fc718">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-57f55a1b-f70e-460b-8a7c-9ad42e1f8999">
 				<h4>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#33f6e2bb-be04-47e5-9e67-1e90f08fc718" aria-controls="33f6e2bb-be04-47e5-9e67-1e90f08fc718" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="422ddfdd-1f19-4cd9-80b6-9117a2ee0541">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#57f55a1b-f70e-460b-8a7c-9ad42e1f8999" aria-controls="57f55a1b-f70e-460b-8a7c-9ad42e1f8999" data-toggle="collapse" aria-expanded="false"><div class="panel-heading" id="c20f149e-5cf8-499b-be73-3e6270fc61d9">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">4. Evaluation criteria weighting and calculations</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h4><div class="panel-collapse collapse" id="33f6e2bb-be04-47e5-9e67-1e90f08fc718" >
+				</h4><div class="panel-collapse collapse" id="57f55a1b-f70e-460b-8a7c-9ad42e1f8999" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClass757EEC7EE4DB4C4F8CCEC449DF5BF7EB"><span class="ms-rteFontFace-13">Evaluation criteria weighting provides a means for the procuring agency  to communicate the relative importance of each evaluation criterion to  potential proposers. The procuring agency must include the evaluation  criteria and the weighting of those criteria in the solicitation  document.<br><br>The following table provides an example of a solicitation document evaluation criteria weighting&#58;<br></span></div><div class="ExternalClass757EEC7EE4DB4C4F8CCEC449DF5BF7EB"><table class="ms-rteTable-default" width="100%" cellspacing="0" style="height&#58;140px;"><tbody><tr class="ms-rteTableHeaderRow-default"><th class="ms-rteTableHeaderEvenCol-default" rowspan="1" colspan="1" style="width&#58;83%;height&#58;6px;"><span class="ms-rteFontFace-13"><strong>Evaluation criteria​</strong><br></span></th><th class="ms-rteTableHeaderOddCol-default" rowspan="1" colspan="1" style="width&#58;50%;height&#58;6px;"><span class="ms-rteFontFace-13"><strong>​Points</strong><br></span></th></tr><tr class="ms-rteTableOddRow-default"><td class="ms-rteTableEvenCol-default" style="width&#58;83%;height&#58;13px;"><span class="ms-rteFontFace-13">​Technical proposal<br></span></td><td class="ms-rteTableOddCol-default" style="height&#58;13px;"><span class="ms-rteFontFace-13">​400<br></span></td></tr><tr class="ms-rteTableEvenRow-default"><td class="ms-rteTableEvenCol-default" style="width&#58;83%;height&#58;13px;"><span class="ms-rteFontFace-13">​Qualifications, prior experience and references<br></span></td><td class="ms-rteTableOddCol-default" style="height&#58;13px;"><span class="ms-rteFontFace-13">​400<br></span></td></tr><tr class="ms-rteTableOddRow-default"><td class="ms-rteTableEvenCol-default" rowspan="1" style="width&#58;83%;height&#58;13px;"><span class="ms-rteFontFace-13">​Cost<br></span></td><td class="ms-rteTableOddCol-default" rowspan="1" style="height&#58;13px;"><span class="ms-rteFontFace-13">​200<br></span></td></tr><tr class="ms-rteTableEvenRow-default"><td class="ms-rteTableEvenCol-default" rowspan="1" style="width&#58;83%;height&#58;10px;"><span class="ms-rteFontFace-13">​<strong>Total points</strong><br></span></td><td class="ms-rteTableOddCol-default" rowspan="1" style="height&#58;10px;"><span class="ms-rteFontFace-13"><strong>​​1000</strong><br></span></td></tr></tbody></table><br class="ms-rteFontFace-13"></div><div class="ExternalClass757EEC7EE4DB4C4F8CCEC449DF5BF7EB"><span class="ms-rteFontFace-13">
@@ -613,12 +613,12 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 			<div id="ctl00_MainContentPlaceHolder_PageContentPlaceHolder_RichHtmlField13_label" style='display:none'></div><div id="ctl00_MainContentPlaceHolder_PageContentPlaceHolder_RichHtmlField13__ControlWrapper_OregonRichHtmlField" class="ms-rtestate-field" style="display:inline" ><div class="ms-rtestate-read ms-rte-wpbox"><div class="ms-rtestate-notify  ms-rtestate-read 75d11b9d-a9cc-454e-8647-82ba8cdd5766" id="div_75d11b9d-a9cc-454e-8647-82ba8cdd5766" unselectable="on"><div id="MSOZoneCell_WebPartWPQ2" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ2"  class="ms-WPBody "   style="" ><div id="ctl00_ctl40_g_75d11b9d_a9cc_454e_8647_82ba8cdd5766" class="or-dataTablesWebPart">
-		<div id="a0d993d6-62f4-4f8e-ab77-ed4ec876c0f3">
+		<div id="f201e2e7-66dd-4665-8972-9e26e789152b">
 			<data-tables-web-part params="webPartId: &#39;g_75d11b9d_a9cc_454e_8647_82ba8cdd5766&#39;, webPartProperties: {&quot;webPartId&quot;:&quot;g_75d11b9d_a9cc_454e_8647_82ba8cdd5766&quot;,&quot;tableCaption&quot;:&quot;&quot;,&quot;dataSource&quot;:&quot;list&quot;,&quot;socrataId&quot;:&quot;&quot;,&quot;sharePointWebUrl&quot;:&quot;/das/OPM&quot;,&quot;sharePointListUrl&quot;:&quot;/das/OPM/Lists/Reference Links Right Side&quot;,&quot;sharePointViewName&quot;:&quot;Evaluation&quot;,&quot;responsiveMode&quot;:&quot;scroll&quot;,&quot;paginationEnabled&quot;:false,&quot;searchEnabled&quot;:false,&quot;sortEnabled&quot;:false,&quot;filterEnabled&quot;:false,&quot;stateSaveEnabled&quot;:false,&quot;copyButtonEnabled&quot;:false,&quot;printButtonEnabled&quot;:false,&quot;excelButtonEnabled&quot;:false,&quot;pdfButtonEnabled&quot;:false,&quot;tableBordered&quot;:true,&quot;tableStriped&quot;:false,&quot;tableCondensed&quot;:false}">
 
 			</data-tables-web-part>
 		</div><script type="text/javascript">
-			ko.applyBindings(null, document.getElementById('a0d993d6-62f4-4f8e-ab77-ed4ec876c0f3'))
+			ko.applyBindings(null, document.getElementById('f201e2e7-66dd-4665-8972-9e26e789152b'))
 		</script>
 	</div><div class="ms-clear"></div></div>
 </div>
