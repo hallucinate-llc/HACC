@@ -1,0 +1,4191 @@
+{
+  "document": {
+    "backend": "markitdown",
+    "document_id": "document:b9b8827abb6e07a5",
+    "source_path": "/home/barberb/HACC/hacc_website/b53a0523-fa60-4df6-bba3-6ae34a47cb02",
+    "title": "Long-term Rent Assistance (LTRA)"
+  },
+  "entities": [
+    {
+      "attributes": {
+        "backend": "markitdown",
+        "file_name": "b53a0523-fa60-4df6-bba3-6ae34a47cb02",
+        "source_path": "/home/barberb/HACC/hacc_website/b53a0523-fa60-4df6-bba3-6ae34a47cb02"
+      },
+      "confidence": 1.0,
+      "id": "document:b9b8827abb6e07a5",
+      "name": "Long-term Rent Assistance (LTRA)",
+      "type": "policy_document"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 0
+      },
+      "confidence": 1.0,
+      "id": "section:cd0562ed28ebd0ee",
+      "name": "Document Overview",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 1
+      },
+      "confidence": 1.0,
+      "id": "section:1eb34ba49efb60fb",
+      "name": "Long-term Rent Assistance (LTRA)",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 2
+      },
+      "confidence": 1.0,
+      "id": "section:07ca3f325aeb7bb7",
+      "name": "Updated 09/1/2024 (all previous versions are obsolete)",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 3
+      },
+      "confidence": 1.0,
+      "id": "section:e7563889b8a27a0c",
+      "name": "Subsidy Amount Determination",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 4
+      },
+      "confidence": 1.0,
+      "id": "section:f367438f18ab7dcf",
+      "name": "Utility Allowance Schedule",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 5
+      },
+      "confidence": 1.0,
+      "id": "section:dd94b4c8b90b2a5e",
+      "name": "Inspections",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 6
+      },
+      "confidence": 1.0,
+      "id": "section:47c4f3b1802b6d10",
+      "name": "Income (Income Increase, Decrease, and Re-evaluations)",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 7
+      },
+      "confidence": 1.0,
+      "id": "section:b0e00e439ab65229",
+      "name": "Household Composition (Adding & Removing a Household Member, and",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 8
+      },
+      "confidence": 1.0,
+      "id": "section:d2051b4cae3bffb6",
+      "name": "Temporary Absence)",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 9
+      },
+      "confidence": 1.0,
+      "id": "section:83616ad9cd3bb1b1",
+      "name": "Household Changes During Program",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 10
+      },
+      "confidence": 1.0,
+      "id": "section:1a8d7dbbe9d10452",
+      "name": "Transfers within program jurisdiction",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 11
+      },
+      "confidence": 1.0,
+      "id": "section:7202b4e7dbb7e269",
+      "name": "Grievance/Appeals Procedure",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 12
+      },
+      "confidence": 1.0,
+      "id": "section:ec7ce3fcd04e8f92",
+      "name": "Ending Program Participation",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 13
+      },
+      "confidence": 1.0,
+      "id": "section:ddc5f86b1326f1f7",
+      "name": "Discontinuation of Rent Assistance",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 14
+      },
+      "confidence": 1.0,
+      "id": "section:e1e9828cbb780e72",
+      "name": "Program Reinstatement",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 15
+      },
+      "confidence": 1.0,
+      "id": "section:5cfe9947729f7b1d",
+      "name": "Application Process",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 16
+      },
+      "confidence": 1.0,
+      "id": "section:b2b2f91016a01f71",
+      "name": "Priority:",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 17
+      },
+      "confidence": 1.0,
+      "id": "section:d956f0b95edc53db",
+      "name": "Priority One:",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 18
+      },
+      "confidence": 1.0,
+      "id": "section:37acf764144be94f",
+      "name": "Priority Two:",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 19
+      },
+      "confidence": 1.0,
+      "id": "section:a1cc5c971202dfed",
+      "name": "Tenant Referral, Eligibility and Documentation",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 20
+      },
+      "confidence": 1.0,
+      "id": "section:e1e9c6aebd562fba",
+      "name": "Referral Criteria - General",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 21
+      },
+      "confidence": 1.0,
+      "id": "section:03ed6510be1a88ef",
+      "name": "Referral Criteria - Household Composition",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 22
+      },
+      "confidence": 1.0,
+      "id": "section:b6b896292a494a39",
+      "name": "AND",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "ordinal": 23
+      },
+      "confidence": 1.0,
+      "id": "section:e9c504c01344c693",
+      "name": "Document Guidelines",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 0,
+        "rule_type": "obligation",
+        "section_id": "section:07ca3f325aeb7bb7",
+        "section_title": "Updated 09/1/2024 (all previous versions are obsolete)",
+        "text": "Program components that are not explicitly addressed in this Policy framework will be guided by the existing"
+      },
+      "confidence": 0.9,
+      "id": "rule:90946cc798ce70c2",
+      "name": "Program components that are not explicitly addressed in this Policy framework will be guided by the existing",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "provider_entity_id": "84713c4a-b33a-434a-870b-c14b3732b39b",
+        "source_text": "Program components that are not explicitly addressed in this Policy framework will be guided by t"
+      },
+      "confidence": 0.8,
+      "id": "concept:87db6e9b34f6013a",
+      "name": "Program components that are not explicitly addressed in this Policy",
+      "type": "technology"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 1,
+        "rule_type": "obligation",
+        "section_id": "section:e7563889b8a27a0c",
+        "section_title": "Subsidy Amount Determination",
+        "text": "The LTRA program will use one consistent rent calculation for all households with incomes at or below"
+      },
+      "confidence": 0.9,
+      "id": "rule:ddb9312f0303a1c1",
+      "name": "The LTRA program will use one consistent rent calculation for all households with incomes at or below",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 2,
+        "rule_type": "obligation",
+        "section_id": "section:e7563889b8a27a0c",
+        "section_title": "Subsidy Amount Determination",
+        "text": "Clackamas County LTRA program will use 28.5% of gross income, with deductions (e.g"
+      },
+      "confidence": 0.9,
+      "id": "rule:095245d19bff14ba",
+      "name": "Clackamas County LTRA program will use 28.5% of gross income, with deductions (e.g",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "provider_entity_id": "e9d12fa7-3faf-41f7-8488-2f323d248a16",
+        "source_text": "Clackamas County LTRA program will u"
+      },
+      "confidence": 0.8,
+      "id": "concept:704ceaccf9081e67",
+      "name": "Clackamas County",
+      "type": "person"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "forbidden",
+        "ordinal": 3,
+        "rule_type": "prohibition",
+        "section_id": "section:e7563889b8a27a0c",
+        "section_title": "Subsidy Amount Determination",
+        "text": "income (recycling, plasma, etc.) will not be counted toward the tenant\u2019s income calculation."
+      },
+      "confidence": 0.9,
+      "id": "rule:d58d417c472e2472",
+      "name": "income (recycling, plasma, etc.) will not be counted toward the tenant\u2019s income calculation.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "discretionary",
+        "ordinal": 4,
+        "rule_type": "discretion",
+        "section_id": "section:e7563889b8a27a0c",
+        "section_title": "Subsidy Amount Determination",
+        "text": "30% and 80% AMI to pay more than 28.5% of gross income may be considered."
+      },
+      "confidence": 0.9,
+      "id": "rule:301a08f8d00e75c6",
+      "name": "30% and 80% AMI to pay more than 28.5% of gross income may be considered.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 5,
+        "rule_type": "obligation",
+        "section_id": "section:f367438f18ab7dcf",
+        "section_title": "Utility Allowance Schedule",
+        "text": "The LTRA program will factor in the reasonable cost of utilities paid separately when calculating rent"
+      },
+      "confidence": 0.9,
+      "id": "rule:4f277fcb9882f037",
+      "name": "The LTRA program will factor in the reasonable cost of utilities paid separately when calculating rent",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 6,
+        "rule_type": "obligation",
+        "section_id": "section:f367438f18ab7dcf",
+        "section_title": "Utility Allowance Schedule",
+        "text": "Program participants will be reimbursed for the amount that this utility cost exceeds their"
+      },
+      "confidence": 0.9,
+      "id": "rule:e0742a893b4fce38",
+      "name": "Program participants will be reimbursed for the amount that this utility cost exceeds their",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "discretionary",
+        "ordinal": 7,
+        "rule_type": "discretion",
+        "section_id": "section:f367438f18ab7dcf",
+        "section_title": "Utility Allowance Schedule",
+        "text": "toward the utility costs can be paid directly to the utility company, property management company, or the"
+      },
+      "confidence": 0.9,
+      "id": "rule:ebd70862f70a0be1",
+      "name": "toward the utility costs can be paid directly to the utility company, property management company, or the",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "discretionary",
+        "ordinal": 8,
+        "rule_type": "discretion",
+        "section_id": "section:f367438f18ab7dcf",
+        "section_title": "Utility Allowance Schedule",
+        "text": "household at the program\u2019s discretion, with local flexibility based on funder requirements, etc."
+      },
+      "confidence": 0.9,
+      "id": "rule:827fc61e3fcdb38a",
+      "name": "household at the program\u2019s discretion, with local flexibility based on funder requirements, etc.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 9,
+        "rule_type": "obligation",
+        "section_id": "section:dd94b4c8b90b2a5e",
+        "section_title": "Inspections",
+        "text": "Unit quality: Inspections to assess unit quality will use Housing Quality Standards (HQS) or National Standards"
+      },
+      "confidence": 0.9,
+      "id": "rule:dd7abca8ed68068e",
+      "name": "Unit quality: Inspections to assess unit quality will use Housing Quality Standards (HQS) or National Standards",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "provider_entity_id": "85e7bef7-cf10-4a5d-8957-70fc8fa0e49d",
+        "source_text": "it quality will use Housing Quality Standards (HQS) or National S"
+      },
+      "confidence": 0.8,
+      "id": "concept:a0807f66d79f2898",
+      "name": "Housing Quality Standards",
+      "type": "person"
+    },
+    {
+      "attributes": {
+        "provider_entity_id": "769cc675-3b5a-487a-a8a4-d8761109dc23",
+        "source_text": "Standards (HQS) or National Standards"
+      },
+      "confidence": 0.8,
+      "id": "concept:529cccc88b4630c5",
+      "name": "National Standards",
+      "type": "person"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "forbidden",
+        "ordinal": 10,
+        "rule_type": "prohibition",
+        "section_id": "section:dd94b4c8b90b2a5e",
+        "section_title": "Inspections",
+        "text": "Units that do not meet HQS or NSPIRE standards will not be able to"
+      },
+      "confidence": 0.9,
+      "id": "rule:cdc7c81f09928522",
+      "name": "Units that do not meet HQS or NSPIRE standards will not be able to",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 11,
+        "rule_type": "obligation",
+        "section_id": "section:dd94b4c8b90b2a5e",
+        "section_title": "Inspections",
+        "text": "HACC will complete the initial inspection, determine whether the unit satisfies HQS"
+      },
+      "confidence": 0.9,
+      "id": "rule:6ae7dbfc1a13f60d",
+      "name": "HACC will complete the initial inspection, determine whether the unit satisfies HQS",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "time_bound",
+        "ordinal": 12,
+        "rule_type": "deadline",
+        "section_id": "section:dd94b4c8b90b2a5e",
+        "section_title": "Inspections",
+        "text": "or NSPIRE, and notify the owner and the family of the determination within 15 days of submission of the Request"
+      },
+      "confidence": 0.9,
+      "id": "rule:9486cabff1d9968b",
+      "name": "or NSPIRE, and notify the owner and the family of the determination within 15 days of submission of the Request",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "time_bound",
+        "ordinal": 13,
+        "rule_type": "deadline",
+        "section_id": "section:dd94b4c8b90b2a5e",
+        "section_title": "Inspections",
+        "text": "In cases where HACC is not able to complete the inspection within 15 days, the file"
+      },
+      "confidence": 0.9,
+      "id": "rule:cc9909e686402704",
+      "name": "In cases where HACC is not able to complete the inspection within 15 days, the file",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 14,
+        "rule_type": "obligation",
+        "section_id": "section:dd94b4c8b90b2a5e",
+        "section_title": "Inspections",
+        "text": "will be documented as to the reason it was not practicable."
+      },
+      "confidence": 0.9,
+      "id": "rule:83378f7a4856e7ba",
+      "name": "will be documented as to the reason it was not practicable.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 15,
+        "rule_type": "obligation",
+        "section_id": "section:dd94b4c8b90b2a5e",
+        "section_title": "Inspections",
+        "text": "All units under contract must have a passing inspection"
+      },
+      "confidence": 0.9,
+      "id": "rule:4db1b3b40feb8bb9",
+      "name": "All units under contract must have a passing inspection",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "time_bound",
+        "ordinal": 16,
+        "rule_type": "deadline",
+        "section_id": "section:dd94b4c8b90b2a5e",
+        "section_title": "Inspections",
+        "text": "completed within 60 days of the effective date of the LTRA contract."
+      },
+      "confidence": 0.9,
+      "id": "rule:21c6426c30bed4cd",
+      "name": "completed within 60 days of the effective date of the LTRA contract.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "forbidden",
+        "ordinal": 17,
+        "rule_type": "prohibition",
+        "section_id": "section:dd94b4c8b90b2a5e",
+        "section_title": "Inspections",
+        "text": "LTRA contract to be effective prior to completion of inspection, and the unit cannot pass inspection, the LTRA"
+      },
+      "confidence": 0.9,
+      "id": "rule:df3c570d859e81e7",
+      "name": "LTRA contract to be effective prior to completion of inspection, and the unit cannot pass inspection, the LTRA",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 18,
+        "rule_type": "obligation",
+        "section_id": "section:dd94b4c8b90b2a5e",
+        "section_title": "Inspections",
+        "text": "contract will be dissolved but rent will be covered up to the failed inspection date."
+      },
+      "confidence": 0.9,
+      "id": "rule:8cf04bdd742a2205",
+      "name": "contract will be dissolved but rent will be covered up to the failed inspection date.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "eligibility",
+        "ordinal": 19,
+        "rule_type": "eligibility",
+        "section_id": "section:dd94b4c8b90b2a5e",
+        "section_title": "Inspections",
+        "text": "eligibility will be required only for non-regulated units (i.e."
+      },
+      "confidence": 0.9,
+      "id": "rule:a756c4b93889d3c7",
+      "name": "eligibility will be required only for non-regulated units (i.e.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "eligibility",
+        "ordinal": 20,
+        "rule_type": "eligibility",
+        "section_id": "section:dd94b4c8b90b2a5e",
+        "section_title": "Inspections",
+        "text": "SROs, congregate, shared housing) will be eligible,"
+      },
+      "confidence": 0.9,
+      "id": "rule:c35c86cf397c3fd8",
+      "name": "SROs, congregate, shared housing) will be eligible,",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "discretionary",
+        "ordinal": 21,
+        "rule_type": "discretion",
+        "section_id": "section:dd94b4c8b90b2a5e",
+        "section_title": "Inspections",
+        "text": "with the goal of providing flexibility."
+      },
+      "confidence": 0.9,
+      "id": "rule:e534bcb327bb5c94",
+      "name": "with the goal of providing flexibility.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "eligibility",
+        "ordinal": 22,
+        "rule_type": "eligibility",
+        "section_id": "section:dd94b4c8b90b2a5e",
+        "section_title": "Inspections",
+        "text": "The LTRA program will clarify eligible special housing type"
+      },
+      "confidence": 0.9,
+      "id": "rule:b1dbd4073f71dc11",
+      "name": "The LTRA program will clarify eligible special housing type",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 23,
+        "rule_type": "obligation",
+        "section_id": "section:47c4f3b1802b6d10",
+        "section_title": "Income (Income Increase, Decrease, and Re-evaluations)",
+        "text": "Income reexaminations: Income reexaminations specific to the LTRA program will occur every three"
+      },
+      "confidence": 0.9,
+      "id": "rule:e5c80347eb9ff2f1",
+      "name": "Income reexaminations: Income reexaminations specific to the LTRA program will occur every three",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "discretionary",
+        "ordinal": 24,
+        "rule_type": "discretion",
+        "section_id": "section:47c4f3b1802b6d10",
+        "section_title": "Income (Income Increase, Decrease, and Re-evaluations)",
+        "text": "Interim reexaminations may be conducted prior to this two- or three-year schedule and"
+      },
+      "confidence": 0.9,
+      "id": "rule:ceceab0d84261f20",
+      "name": "Interim reexaminations may be conducted prior to this two- or three-year schedule and",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 25,
+        "rule_type": "obligation",
+        "section_id": "section:47c4f3b1802b6d10",
+        "section_title": "Income (Income Increase, Decrease, and Re-evaluations)",
+        "text": "All income changes must be reported by the household."
+      },
+      "confidence": 0.9,
+      "id": "rule:6c5240824c9069f0",
+      "name": "All income changes must be reported by the household.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 26,
+        "rule_type": "obligation",
+        "section_id": "section:47c4f3b1802b6d10",
+        "section_title": "Income (Income Increase, Decrease, and Re-evaluations)",
+        "text": "when an interim reexamination will be conducted are as follow: if the household\u2019s income decreases,"
+      },
+      "confidence": 0.9,
+      "id": "rule:8e16436dcccfb3aa",
+      "name": "when an interim reexamination will be conducted are as follow: if the household\u2019s income decreases,",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 27,
+        "rule_type": "obligation",
+        "section_id": "section:83616ad9cd3bb1b1",
+        "section_title": "Household Changes During Program",
+        "text": "Households over income: The rent contract will be maintained for up to 180 days for participants who"
+      },
+      "confidence": 0.9,
+      "id": "rule:3498e946fac551bc",
+      "name": "Households over income: The rent contract will be maintained for up to 180 days for participants who",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "eligibility",
+        "ordinal": 28,
+        "rule_type": "eligibility",
+        "section_id": "section:83616ad9cd3bb1b1",
+        "section_title": "Household Changes During Program",
+        "text": "as long as the household still meets income eligibility and unit capacity requirements."
+      },
+      "confidence": 0.9,
+      "id": "rule:96192b97519bf8a4",
+      "name": "as long as the household still meets income eligibility and unit capacity requirements.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 29,
+        "rule_type": "obligation",
+        "section_id": "section:83616ad9cd3bb1b1",
+        "section_title": "Household Changes During Program",
+        "text": "residing in a unit under LTRA contract must receive approval from their Landlord and HACC before a"
+      },
+      "confidence": 0.9,
+      "id": "rule:7b66cf2cb45739c5",
+      "name": "residing in a unit under LTRA contract must receive approval from their Landlord and HACC before a",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 30,
+        "rule_type": "obligation",
+        "section_id": "section:83616ad9cd3bb1b1",
+        "section_title": "Household Changes During Program",
+        "text": "Temporary vacancy: The rent contract will be maintained for up to 180 days if the tenant is temporarily"
+      },
+      "confidence": 0.9,
+      "id": "rule:48da11571e8aa29b",
+      "name": "Temporary vacancy: The rent contract will be maintained for up to 180 days if the tenant is temporarily",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 31,
+        "rule_type": "obligation",
+        "section_id": "section:83616ad9cd3bb1b1",
+        "section_title": "Household Changes During Program",
+        "text": "Accommodations beyond 180 days will be at the discretion of the program and may include options to be"
+      },
+      "confidence": 0.9,
+      "id": "rule:31b05e6161551f8d",
+      "name": "Accommodations beyond 180 days will be at the discretion of the program and may include options to be",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 32,
+        "rule_type": "obligation",
+        "section_id": "section:83616ad9cd3bb1b1",
+        "section_title": "Household Changes During Program",
+        "text": "LTRA subsidy payments will be made through the end"
+      },
+      "confidence": 0.9,
+      "id": "rule:891520df85987e34",
+      "name": "LTRA subsidy payments will be made through the end",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 33,
+        "rule_type": "obligation",
+        "section_id": "section:1a8d7dbbe9d10452",
+        "section_title": "Transfers within program jurisdiction",
+        "text": "A formal policy regarding LTRA transfers is pending and will be developed upon receiving further"
+      },
+      "confidence": 0.9,
+      "id": "rule:3a4a71f739ecb18e",
+      "name": "A formal policy regarding LTRA transfers is pending and will be developed upon receiving further",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 34,
+        "rule_type": "obligation",
+        "section_id": "section:1a8d7dbbe9d10452",
+        "section_title": "Transfers within program jurisdiction",
+        "text": "This section will be updated accordingly once that guidance is available."
+      },
+      "confidence": 0.9,
+      "id": "rule:56bb2c7f33621f16",
+      "name": "This section will be updated accordingly once that guidance is available.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 35,
+        "rule_type": "obligation",
+        "section_id": "section:7202b4e7dbb7e269",
+        "section_title": "Grievance/Appeals Procedure",
+        "text": "Appeals process: Participants will be provided with a formal appeals process that at a minimum must"
+      },
+      "confidence": 0.9,
+      "id": "rule:ac8a1c4caa53075f",
+      "name": "Appeals process: Participants will be provided with a formal appeals process that at a minimum must",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "discretionary",
+        "ordinal": 36,
+        "rule_type": "discretion",
+        "section_id": "section:ddc5f86b1326f1f7",
+        "section_title": "Discontinuation of Rent Assistance",
+        "text": "An LTRA participant may only be discontinued from the program due to serious violations of program"
+      },
+      "confidence": 0.9,
+      "id": "rule:051227e275ee999b",
+      "name": "An LTRA participant may only be discontinued from the program due to serious violations of program",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "eligibility",
+        "ordinal": 37,
+        "rule_type": "eligibility",
+        "section_id": "section:ddc5f86b1326f1f7",
+        "section_title": "Discontinuation of Rent Assistance",
+        "text": "\uf0b7 Participant no longer meet the eligibility guidelines for LTRA assistance."
+      },
+      "confidence": 0.9,
+      "id": "rule:938f4ffc96084d92",
+      "name": "\uf0b7 Participant no longer meet the eligibility guidelines for LTRA assistance.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 38,
+        "rule_type": "obligation",
+        "section_id": "section:e1e9828cbb780e72",
+        "section_title": "Program Reinstatement",
+        "text": "To be reinstated, the participant will be instructed to work with CHA (Coordinated Housing Access) for"
+      },
+      "confidence": 0.9,
+      "id": "rule:d018199d6ef3a00a",
+      "name": "To be reinstated, the participant will be instructed to work with CHA (Coordinated Housing Access) for",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "provider_entity_id": "608b8371-105e-4f9d-b403-67c23f678241",
+        "source_text": "d to work with CHA (Coordinated Housing Access) for"
+      },
+      "confidence": 0.8,
+      "id": "concept:deced32af7a343bd",
+      "name": "Coordinated Housing Access",
+      "type": "person"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 39,
+        "rule_type": "obligation",
+        "section_id": "section:b2b2f91016a01f71",
+        "section_title": "Priority:",
+        "text": "Priority will be given to the following household applicants under LTRA:"
+      },
+      "confidence": 0.9,
+      "id": "rule:23814ceafb5c9762",
+      "name": "Priority will be given to the following household applicants under LTRA:",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "eligibility",
+        "ordinal": 40,
+        "rule_type": "eligibility",
+        "section_id": "section:d956f0b95edc53db",
+        "section_title": "Priority One:",
+        "text": "The households that will be rehoused via EO 23-02 and HB5019 will have first eligibility priority for LTRA"
+      },
+      "confidence": 0.9,
+      "id": "rule:9034090cbbf63405",
+      "name": "The households that will be rehoused via EO 23-02 and HB5019 will have first eligibility priority for LTRA",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "eligibility",
+        "ordinal": 41,
+        "rule_type": "eligibility",
+        "section_id": "section:37acf764144be94f",
+        "section_title": "Priority Two:",
+        "text": "providers with MOUs for referral to LTRA will have second eligibility priority for LTRA assistance."
+      },
+      "confidence": 0.9,
+      "id": "rule:a6d0ec70b76072a0",
+      "name": "providers with MOUs for referral to LTRA will have second eligibility priority for LTRA assistance.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 42,
+        "rule_type": "obligation",
+        "section_id": "section:a1cc5c971202dfed",
+        "section_title": "Tenant Referral, Eligibility and Documentation",
+        "text": "Referral process: The LTRA program will receive referrals through a flexible process with multiple referral"
+      },
+      "confidence": 0.9,
+      "id": "rule:cdd90fbd17026d7a",
+      "name": "Referral process: The LTRA program will receive referrals through a flexible process with multiple referral",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 43,
+        "rule_type": "obligation",
+        "section_id": "section:a1cc5c971202dfed",
+        "section_title": "Tenant Referral, Eligibility and Documentation",
+        "text": "The counties' coordinated access systems will be the primary referral"
+      },
+      "confidence": 0.9,
+      "id": "rule:4ac612460d02db93",
+      "name": "The counties' coordinated access systems will be the primary referral",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "provider_entity_id": "45fc956d-4cfb-41d8-92b8-d9298312b9e5",
+        "source_text": "The counties' coordinated access systems will be the primary"
+      },
+      "confidence": 0.8,
+      "id": "concept:958faba201293ca9",
+      "name": "coordinated access",
+      "type": "technology"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "discretionary",
+        "ordinal": 44,
+        "rule_type": "discretion",
+        "section_id": "section:a1cc5c971202dfed",
+        "section_title": "Tenant Referral, Eligibility and Documentation",
+        "text": "Other referring agencies may include community-based and culturally-specific"
+      },
+      "confidence": 0.9,
+      "id": "rule:2f2aea3e66835768",
+      "name": "Other referring agencies may include community-based and culturally-specific",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "eligibility",
+        "ordinal": 45,
+        "rule_type": "eligibility",
+        "section_id": "section:a1cc5c971202dfed",
+        "section_title": "Tenant Referral, Eligibility and Documentation",
+        "text": "Each referring agency will screen potential participants for LTRA voucher eligibility,"
+      },
+      "confidence": 0.9,
+      "id": "rule:fb8c0eb59b7a79ae",
+      "name": "Each referring agency will screen potential participants for LTRA voucher eligibility,",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "eligibility",
+        "ordinal": 46,
+        "rule_type": "eligibility",
+        "section_id": "section:a1cc5c971202dfed",
+        "section_title": "Tenant Referral, Eligibility and Documentation",
+        "text": "according to the State eligibility guidelines below."
+      },
+      "confidence": 0.9,
+      "id": "rule:3fafef2ae955b995",
+      "name": "according to the State eligibility guidelines below.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 47,
+        "rule_type": "obligation",
+        "section_id": "section:a1cc5c971202dfed",
+        "section_title": "Tenant Referral, Eligibility and Documentation",
+        "text": "Counties will be held accountable for ensuring referral"
+      },
+      "confidence": 0.9,
+      "id": "rule:9afa50258208894d",
+      "name": "Counties will be held accountable for ensuring referral",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "eligibility",
+        "ordinal": 48,
+        "rule_type": "eligibility",
+        "section_id": "section:a1cc5c971202dfed",
+        "section_title": "Tenant Referral, Eligibility and Documentation",
+        "text": "pathways are equitable, inclusive and effective at connecting eligible participants with appropriate housing"
+      },
+      "confidence": 0.9,
+      "id": "rule:b8126286374d813d",
+      "name": "pathways are equitable, inclusive and effective at connecting eligible participants with appropriate housing",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 49,
+        "rule_type": "obligation",
+        "section_id": "section:e1e9c6aebd562fba",
+        "section_title": "Referral Criteria - General",
+        "text": "\uf0b7 The households that will be rehoused via EO 23-02 and HB5019 will have priority for the LTRA program and"
+      },
+      "confidence": 0.9,
+      "id": "rule:539bce7e3f651ea5",
+      "name": "\uf0b7 The households that will be rehoused via EO 23-02 and HB5019 will have priority for the LTRA program and",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "forbidden",
+        "ordinal": 50,
+        "rule_type": "prohibition",
+        "section_id": "section:e1e9c6aebd562fba",
+        "section_title": "Referral Criteria - General",
+        "text": "will not require re-screening for eligibility to include income, Fair Market Rent (FMR) requirements, and rent"
+      },
+      "confidence": 0.9,
+      "id": "rule:54c4d9e001ec9c12",
+      "name": "will not require re-screening for eligibility to include income, Fair Market Rent (FMR) requirements, and rent",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "provider_entity_id": "0b0cb7a9-d8db-4316-8b1b-ba59bad98a30",
+        "source_text": "to include income, Fair Market Rent (FMR) requirements,"
+      },
+      "confidence": 0.8,
+      "id": "concept:ac00ccf07fbe18c8",
+      "name": "Fair Market Rent",
+      "type": "person"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 51,
+        "rule_type": "obligation",
+        "section_id": "section:03ed6510be1a88ef",
+        "section_title": "Referral Criteria - Household Composition",
+        "text": "\uf0b7 Each household must identify the individuals to be included in the household at the time of application and"
+      },
+      "confidence": 0.9,
+      "id": "rule:864c0c609a3017b2",
+      "name": "\uf0b7 Each household must identify the individuals to be included in the household at the time of application and",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 52,
+        "rule_type": "obligation",
+        "section_id": "section:03ed6510be1a88ef",
+        "section_title": "Referral Criteria - Household Composition",
+        "text": "must notify the program Administrator and its staff if the household composition changes."
+      },
+      "confidence": 0.9,
+      "id": "rule:959f3a7abd663e09",
+      "name": "must notify the program Administrator and its staff if the household composition changes.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "discretionary",
+        "ordinal": 53,
+        "rule_type": "discretion",
+        "section_id": "section:03ed6510be1a88ef",
+        "section_title": "Referral Criteria - Household Composition",
+        "text": "\uf0b7 Household composition may include but not be limited to the following, regardless of actual perceived sexual"
+      },
+      "confidence": 0.9,
+      "id": "rule:4b50b40e3627b6aa",
+      "name": "\uf0b7 Household composition may include but not be limited to the following, regardless of actual perceived sexual",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "discretionary",
+        "ordinal": 54,
+        "rule_type": "discretion",
+        "section_id": "section:03ed6510be1a88ef",
+        "section_title": "Referral Criteria - Household Composition",
+        "text": "o A single person, who may be an elderly person, displaced person, disabled person, near elderly"
+      },
+      "confidence": 0.9,
+      "id": "rule:683e73f1dff995dd",
+      "name": "o A single person, who may be an elderly person, displaced person, disabled person, near elderly",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 55,
+        "rule_type": "obligation",
+        "section_id": "section:03ed6510be1a88ef",
+        "section_title": "Referral Criteria - Household Composition",
+        "text": "\uf0b7 Clackamas County will set the Income Limits at 80% AMI or below."
+      },
+      "confidence": 0.9,
+      "id": "rule:373e2e0616d19b29",
+      "name": "\uf0b7 Clackamas County will set the Income Limits at 80% AMI or below.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "provider_entity_id": "1472ab8b-367c-4095-9c1a-d98cfd5ade3f",
+        "source_text": "County will set the Income Limits at 80% AMI or below"
+      },
+      "confidence": 0.8,
+      "id": "concept:7ca421dcc4aceccc",
+      "name": "Income Limits",
+      "type": "person"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 56,
+        "rule_type": "obligation",
+        "section_id": "section:03ed6510be1a88ef",
+        "section_title": "Referral Criteria - Household Composition",
+        "text": "than the 80% AMI will receive an exception to the above requirement."
+      },
+      "confidence": 0.9,
+      "id": "rule:8f89a5e17741b597",
+      "name": "than the 80% AMI will receive an exception to the above requirement.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "eligibility",
+        "ordinal": 57,
+        "rule_type": "eligibility",
+        "section_id": "section:03ed6510be1a88ef",
+        "section_title": "Referral Criteria - Household Composition",
+        "text": "For purposes of the LTRA program referral and eligibility, the definition of homeless is defined as the following:"
+      },
+      "confidence": 0.9,
+      "id": "rule:ecbdaa98050e77ea",
+      "name": "For purposes of the LTRA program referral and eligibility, the definition of homeless is defined as the following:",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "forbidden",
+        "ordinal": 58,
+        "rule_type": "prohibition",
+        "section_id": "section:03ed6510be1a88ef",
+        "section_title": "Referral Criteria - Household Composition",
+        "text": "definition of homelessness, which stipulates that time spent in an institution must not exceed 90 days to not"
+      },
+      "confidence": 0.9,
+      "id": "rule:3b9e3ba126620eeb",
+      "name": "definition of homelessness, which stipulates that time spent in an institution must not exceed 90 days to not",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "eligibility",
+        "ordinal": 59,
+        "rule_type": "eligibility",
+        "section_id": "section:03ed6510be1a88ef",
+        "section_title": "Referral Criteria - Household Composition",
+        "text": "entry may be for communities and has expanded the definition of eligibility for rapid rehousing as a result."
+      },
+      "confidence": 0.9,
+      "id": "rule:b9d65c10f3a5c581",
+      "name": "entry may be for communities and has expanded the definition of eligibility for rapid rehousing as a result.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 60,
+        "rule_type": "obligation",
+        "section_id": "section:03ed6510be1a88ef",
+        "section_title": "Referral Criteria - Household Composition",
+        "text": "Category 2: Imminent Risk of Homelessness\u2014Individual or family who will imminently lose their primary"
+      },
+      "confidence": 0.9,
+      "id": "rule:8a03ff62d2952dc4",
+      "name": "Category 2: Imminent Risk of Homelessness\u2014Individual or family who will imminently lose their primary",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "provider_entity_id": "01be2cd7-11c9-42e2-8b2a-891b34c549d4",
+        "source_text": "Category 2: Imminent Risk of Homelessness\u2014Ind"
+      },
+      "confidence": 0.8,
+      "id": "concept:aef6850eebba3549",
+      "name": "Imminent Risk",
+      "type": "person"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "time_bound",
+        "ordinal": 61,
+        "rule_type": "deadline",
+        "section_id": "section:03ed6510be1a88ef",
+        "section_title": "Referral Criteria - Household Composition",
+        "text": "\uf0b7 The primary nighttime residence will be lost within 21 days of the date of application for homeless assistance."
+      },
+      "confidence": 0.9,
+      "id": "rule:609e0e10da73fbba",
+      "name": "\uf0b7 The primary nighttime residence will be lost within 21 days of the date of application for homeless assistance.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "eligibility",
+        "ordinal": 62,
+        "rule_type": "eligibility",
+        "section_id": "section:03ed6510be1a88ef",
+        "section_title": "Referral Criteria - Household Composition",
+        "text": "otherwise qualify as homeless under this definition, (literally homeless, imminent risk of homelessness or"
+      },
+      "confidence": 0.9,
+      "id": "rule:5a75cec03c9ff1fe",
+      "name": "otherwise qualify as homeless under this definition, (literally homeless, imminent risk of homelessness or",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "eligibility",
+        "ordinal": 63,
+        "rule_type": "eligibility",
+        "section_id": "section:b6b896292a494a39",
+        "section_title": "AND",
+        "text": "Is at risk of losing their housing, and does not otherwise qualify as homeless under the above listed (1-4)"
+      },
+      "confidence": 0.9,
+      "id": "rule:9026650c46ad77f7",
+      "name": "Is at risk of losing their housing, and does not otherwise qualify as homeless under the above listed (1-4)",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "discretionary",
+        "ordinal": 64,
+        "rule_type": "discretion",
+        "section_id": "section:b6b896292a494a39",
+        "section_title": "AND",
+        "text": "High risk may be demonstrated by but is not solely defined as:"
+      },
+      "confidence": 0.9,
+      "id": "rule:fbc1b1d61f3275a8",
+      "name": "High risk may be demonstrated by but is not solely defined as:",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "discretionary",
+        "ordinal": 65,
+        "rule_type": "discretion",
+        "section_id": "section:b6b896292a494a39",
+        "section_title": "AND",
+        "text": "reason (\u201cdoubled up\u201d) may demonstrate a high risk of losing current housing."
+      },
+      "confidence": 0.9,
+      "id": "rule:4692df4bf11fc671",
+      "name": "reason (\u201cdoubled up\u201d) may demonstrate a high risk of losing current housing.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "discretionary",
+        "ordinal": 66,
+        "rule_type": "discretion",
+        "section_id": "section:b6b896292a494a39",
+        "section_title": "AND",
+        "text": "o Owing rental arrears or not having the ability to pay for future rent may also demonstrate high risk status."
+      },
+      "confidence": 0.9,
+      "id": "rule:9e0844327ffc9991",
+      "name": "o Owing rental arrears or not having the ability to pay for future rent may also demonstrate high risk status.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "discretionary",
+        "ordinal": 67,
+        "rule_type": "discretion",
+        "section_id": "section:b6b896292a494a39",
+        "section_title": "AND",
+        "text": "may include community-based and culturally specific partner organizations, hospitals, health care and mental"
+      },
+      "confidence": 0.9,
+      "id": "rule:c117fe284a9f82d7",
+      "name": "may include community-based and culturally specific partner organizations, hospitals, health care and mental",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "eligibility",
+        "ordinal": 68,
+        "rule_type": "eligibility",
+        "section_id": "section:b6b896292a494a39",
+        "section_title": "AND",
+        "text": "\uf0b7 Each referring agency will need to screen potential participants for program eligibility, according to LTRA"
+      },
+      "confidence": 0.9,
+      "id": "rule:ee3ee4a45f9d0cba",
+      "name": "\uf0b7 Each referring agency will need to screen potential participants for program eligibility, according to LTRA",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "eligibility",
+        "ordinal": 69,
+        "rule_type": "eligibility",
+        "section_id": "section:b6b896292a494a39",
+        "section_title": "AND",
+        "text": "\uf0b7 Referral pathways should be equitable, inclusive, and effective at connecting eligible participants with"
+      },
+      "confidence": 0.9,
+      "id": "rule:c1577ba9cd2dda14",
+      "name": "\uf0b7 Referral pathways should be equitable, inclusive, and effective at connecting eligible participants with",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "eligibility",
+        "ordinal": 70,
+        "rule_type": "eligibility",
+        "section_id": "section:b6b896292a494a39",
+        "section_title": "AND",
+        "text": "Eligibility guidelines: Eligibility guidelines are based on the priority criteria listed in this policy document."
+      },
+      "confidence": 0.9,
+      "id": "rule:f1b17b46d0410db6",
+      "name": "Eligibility guidelines: Eligibility guidelines are based on the priority criteria listed in this policy document.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 71,
+        "rule_type": "obligation",
+        "section_id": "section:b6b896292a494a39",
+        "section_title": "AND",
+        "text": "Tenant screening: Tenant screening will be the responsibility of the participating landlord or property manager."
+      },
+      "confidence": 0.9,
+      "id": "rule:8c844ce963077374",
+      "name": "Tenant screening: Tenant screening will be the responsibility of the participating landlord or property manager.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 72,
+        "rule_type": "obligation",
+        "section_id": "section:b6b896292a494a39",
+        "section_title": "AND",
+        "text": "No tenant screening will be conducted by the LTRA program and there will be no screening criteria for mandatory"
+      },
+      "confidence": 0.9,
+      "id": "rule:ec00283268301890",
+      "name": "No tenant screening will be conducted by the LTRA program and there will be no screening criteria for mandatory",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 73,
+        "rule_type": "obligation",
+        "section_id": "section:b6b896292a494a39",
+        "section_title": "AND",
+        "text": "The only screening conducted by the LTRA program will be a verification system to ensure that"
+      },
+      "confidence": 0.9,
+      "id": "rule:5bdf13578cf83691",
+      "name": "The only screening conducted by the LTRA program will be a verification system to ensure that",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "provider_entity_id": "657539e6-1369-433e-aed9-c80454e64df6",
+        "source_text": "A program will be a verification system to ensure that"
+      },
+      "confidence": 0.8,
+      "id": "concept:60c90b25f9cb7606",
+      "name": "verification",
+      "type": "technology"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "eligibility",
+        "ordinal": 74,
+        "rule_type": "eligibility",
+        "section_id": "section:e9c504c01344c693",
+        "section_title": "Document Guidelines",
+        "text": "Documentation guidelines: Documentation requirements for LTRA eligibility will be flexible to minimize"
+      },
+      "confidence": 0.9,
+      "id": "rule:8350802ec7c6d348",
+      "name": "Documentation guidelines: Documentation requirements for LTRA eligibility will be flexible to minimize",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "eligibility",
+        "ordinal": 75,
+        "rule_type": "eligibility",
+        "section_id": "section:e9c504c01344c693",
+        "section_title": "Document Guidelines",
+        "text": "agency containing the applicant\u2019s name and date of birth."
+      },
+      "confidence": 0.9,
+      "id": "rule:bbfdbdcf48d4fa4e",
+      "name": "agency containing the applicant\u2019s name and date of birth.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "forbidden",
+        "ordinal": 76,
+        "rule_type": "prohibition",
+        "section_id": "section:e9c504c01344c693",
+        "section_title": "Document Guidelines",
+        "text": "Citizenship status and criminal background will not be"
+      },
+      "confidence": 0.9,
+      "id": "rule:408c0004de9ba02a",
+      "name": "Citizenship status and criminal background will not be",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:b9b8827abb6e07a5",
+        "modality": "required",
+        "ordinal": 77,
+        "rule_type": "obligation",
+        "section_id": "section:e9c504c01344c693",
+        "section_title": "Document Guidelines",
+        "text": "Program guidelines will specify that no social security numbers should be collected and will clarify"
+      },
+      "confidence": 0.9,
+      "id": "rule:1a0835754db7740c",
+      "name": "Program guidelines will specify that no social security numbers should be collected and will clarify",
+      "type": "policy_rule"
+    }
+  ],
+  "metadata": {
+    "backend": "markitdown",
+    "backend_available": true,
+    "details": {
+      "backend": "markitdown",
+      "backend_available": true,
+      "implementation_status": "implemented",
+      "operation": "extract_policy_rules_from_pdf",
+      "source_path": "/home/barberb/HACC/hacc_website/b53a0523-fa60-4df6-bba3-6ae34a47cb02"
+    },
+    "document_id": "document:b9b8827abb6e07a5",
+    "document_title": "Long-term Rent Assistance (LTRA)",
+    "implementation_status": "implemented",
+    "operation": "extract_policy_rules_from_pdf",
+    "provider": "ipfs_datasets_py",
+    "rule_count": 78,
+    "section_count": 24,
+    "source_path": "/home/barberb/HACC/hacc_website/b53a0523-fa60-4df6-bba3-6ae34a47cb02",
+    "text_length": 17649
+  },
+  "provider": "ipfs_datasets_py",
+  "relationships": [
+    {
+      "attributes": {
+        "ordinal": 0
+      },
+      "confidence": 1.0,
+      "id": "rel:8d05cab1cf574659",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:cd0562ed28ebd0ee"
+    },
+    {
+      "attributes": {
+        "ordinal": 1
+      },
+      "confidence": 1.0,
+      "id": "rel:4d2750fe9020e4ea",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:1eb34ba49efb60fb"
+    },
+    {
+      "attributes": {
+        "ordinal": 2
+      },
+      "confidence": 1.0,
+      "id": "rel:392e8a279b505fbf",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:07ca3f325aeb7bb7"
+    },
+    {
+      "attributes": {
+        "ordinal": 3
+      },
+      "confidence": 1.0,
+      "id": "rel:d09412b7d9f5669c",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:e7563889b8a27a0c"
+    },
+    {
+      "attributes": {
+        "ordinal": 4
+      },
+      "confidence": 1.0,
+      "id": "rel:68145ff60b5cd7af",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:f367438f18ab7dcf"
+    },
+    {
+      "attributes": {
+        "ordinal": 5
+      },
+      "confidence": 1.0,
+      "id": "rel:9e6d45ffa18e4270",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:dd94b4c8b90b2a5e"
+    },
+    {
+      "attributes": {
+        "ordinal": 6
+      },
+      "confidence": 1.0,
+      "id": "rel:b73ecfd9f7865349",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:47c4f3b1802b6d10"
+    },
+    {
+      "attributes": {
+        "ordinal": 7
+      },
+      "confidence": 1.0,
+      "id": "rel:d938e72d308858bc",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:b0e00e439ab65229"
+    },
+    {
+      "attributes": {
+        "ordinal": 8
+      },
+      "confidence": 1.0,
+      "id": "rel:6b9e599f8cbe497d",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:d2051b4cae3bffb6"
+    },
+    {
+      "attributes": {
+        "ordinal": 9
+      },
+      "confidence": 1.0,
+      "id": "rel:77250ed2ebace6ac",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:83616ad9cd3bb1b1"
+    },
+    {
+      "attributes": {
+        "ordinal": 10
+      },
+      "confidence": 1.0,
+      "id": "rel:1c6109653fa9ec43",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:1a8d7dbbe9d10452"
+    },
+    {
+      "attributes": {
+        "ordinal": 11
+      },
+      "confidence": 1.0,
+      "id": "rel:fbee910757308ff9",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:7202b4e7dbb7e269"
+    },
+    {
+      "attributes": {
+        "ordinal": 12
+      },
+      "confidence": 1.0,
+      "id": "rel:176336133f87681b",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:ec7ce3fcd04e8f92"
+    },
+    {
+      "attributes": {
+        "ordinal": 13
+      },
+      "confidence": 1.0,
+      "id": "rel:d50bbc404f894ded",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:ddc5f86b1326f1f7"
+    },
+    {
+      "attributes": {
+        "ordinal": 14
+      },
+      "confidence": 1.0,
+      "id": "rel:f2b14021c490be73",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:e1e9828cbb780e72"
+    },
+    {
+      "attributes": {
+        "ordinal": 15
+      },
+      "confidence": 1.0,
+      "id": "rel:f8b8ac678bf71a85",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:5cfe9947729f7b1d"
+    },
+    {
+      "attributes": {
+        "ordinal": 16
+      },
+      "confidence": 1.0,
+      "id": "rel:0e4074be6e51cf2c",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:b2b2f91016a01f71"
+    },
+    {
+      "attributes": {
+        "ordinal": 17
+      },
+      "confidence": 1.0,
+      "id": "rel:40a053d5b0fef8e9",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:d956f0b95edc53db"
+    },
+    {
+      "attributes": {
+        "ordinal": 18
+      },
+      "confidence": 1.0,
+      "id": "rel:c0237a94424b4ac6",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:37acf764144be94f"
+    },
+    {
+      "attributes": {
+        "ordinal": 19
+      },
+      "confidence": 1.0,
+      "id": "rel:22803c372dcb3e36",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:a1cc5c971202dfed"
+    },
+    {
+      "attributes": {
+        "ordinal": 20
+      },
+      "confidence": 1.0,
+      "id": "rel:def29d55ae91ebca",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:e1e9c6aebd562fba"
+    },
+    {
+      "attributes": {
+        "ordinal": 21
+      },
+      "confidence": 1.0,
+      "id": "rel:5ad5a3a4334dd291",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:03ed6510be1a88ef"
+    },
+    {
+      "attributes": {
+        "ordinal": 22
+      },
+      "confidence": 1.0,
+      "id": "rel:c5508973f8970bbc",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:b6b896292a494a39"
+    },
+    {
+      "attributes": {
+        "ordinal": 23
+      },
+      "confidence": 1.0,
+      "id": "rel:6b54387c5e9bcf50",
+      "relation_type": "has_section",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "section:e9c504c01344c693"
+    },
+    {
+      "attributes": {
+        "ordinal": 0
+      },
+      "confidence": 1.0,
+      "id": "rel:cbf4d4257b5c45c7",
+      "relation_type": "contains_rule",
+      "source_id": "section:07ca3f325aeb7bb7",
+      "target_id": "rule:90946cc798ce70c2"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:bc07789464fd6efb",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:90946cc798ce70c2"
+    },
+    {
+      "attributes": {
+        "section_title": "Updated 09/1/2024 (all previous versions are obsolete)"
+      },
+      "confidence": 0.8,
+      "id": "rel:5d9a7ab8ccf4e06b",
+      "relation_type": "mentions",
+      "source_id": "rule:90946cc798ce70c2",
+      "target_id": "concept:87db6e9b34f6013a"
+    },
+    {
+      "attributes": {
+        "ordinal": 1
+      },
+      "confidence": 1.0,
+      "id": "rel:7c174de46fde0bf4",
+      "relation_type": "contains_rule",
+      "source_id": "section:e7563889b8a27a0c",
+      "target_id": "rule:ddb9312f0303a1c1"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:93d5e0d80bb8e9ce",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:ddb9312f0303a1c1"
+    },
+    {
+      "attributes": {
+        "ordinal": 2
+      },
+      "confidence": 1.0,
+      "id": "rel:dfdc1de95d654ac4",
+      "relation_type": "contains_rule",
+      "source_id": "section:e7563889b8a27a0c",
+      "target_id": "rule:095245d19bff14ba"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:97f5d74e7ba96f23",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:095245d19bff14ba"
+    },
+    {
+      "attributes": {
+        "section_title": "Subsidy Amount Determination"
+      },
+      "confidence": 0.8,
+      "id": "rel:a3b932bc0f9c4980",
+      "relation_type": "mentions",
+      "source_id": "rule:095245d19bff14ba",
+      "target_id": "concept:704ceaccf9081e67"
+    },
+    {
+      "attributes": {
+        "ordinal": 3
+      },
+      "confidence": 1.0,
+      "id": "rel:f24e8e5f786f3456",
+      "relation_type": "contains_rule",
+      "source_id": "section:e7563889b8a27a0c",
+      "target_id": "rule:d58d417c472e2472"
+    },
+    {
+      "attributes": {
+        "rule_type": "prohibition"
+      },
+      "confidence": 1.0,
+      "id": "rel:f0a19bbf66c4df2a",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:d58d417c472e2472"
+    },
+    {
+      "attributes": {
+        "ordinal": 4
+      },
+      "confidence": 1.0,
+      "id": "rel:bb2c37a3cd717c5f",
+      "relation_type": "contains_rule",
+      "source_id": "section:e7563889b8a27a0c",
+      "target_id": "rule:301a08f8d00e75c6"
+    },
+    {
+      "attributes": {
+        "rule_type": "discretion"
+      },
+      "confidence": 1.0,
+      "id": "rel:29453dc654ae659f",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:301a08f8d00e75c6"
+    },
+    {
+      "attributes": {
+        "ordinal": 5
+      },
+      "confidence": 1.0,
+      "id": "rel:e8fe55766ff4ead3",
+      "relation_type": "contains_rule",
+      "source_id": "section:f367438f18ab7dcf",
+      "target_id": "rule:4f277fcb9882f037"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:f1175b758e494eda",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:4f277fcb9882f037"
+    },
+    {
+      "attributes": {
+        "ordinal": 6
+      },
+      "confidence": 1.0,
+      "id": "rel:bd1baa79c57f9585",
+      "relation_type": "contains_rule",
+      "source_id": "section:f367438f18ab7dcf",
+      "target_id": "rule:e0742a893b4fce38"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:56d7d86b629451cd",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:e0742a893b4fce38"
+    },
+    {
+      "attributes": {
+        "ordinal": 7
+      },
+      "confidence": 1.0,
+      "id": "rel:59c860c7b79d3702",
+      "relation_type": "contains_rule",
+      "source_id": "section:f367438f18ab7dcf",
+      "target_id": "rule:ebd70862f70a0be1"
+    },
+    {
+      "attributes": {
+        "rule_type": "discretion"
+      },
+      "confidence": 1.0,
+      "id": "rel:497c67d852f6551a",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:ebd70862f70a0be1"
+    },
+    {
+      "attributes": {
+        "ordinal": 8
+      },
+      "confidence": 1.0,
+      "id": "rel:b89df02036594482",
+      "relation_type": "contains_rule",
+      "source_id": "section:f367438f18ab7dcf",
+      "target_id": "rule:827fc61e3fcdb38a"
+    },
+    {
+      "attributes": {
+        "rule_type": "discretion"
+      },
+      "confidence": 1.0,
+      "id": "rel:40f5d5110b272cea",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:827fc61e3fcdb38a"
+    },
+    {
+      "attributes": {
+        "ordinal": 9
+      },
+      "confidence": 1.0,
+      "id": "rel:4da293c12b3a4735",
+      "relation_type": "contains_rule",
+      "source_id": "section:dd94b4c8b90b2a5e",
+      "target_id": "rule:dd7abca8ed68068e"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:0b32f52630c5bbed",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:dd7abca8ed68068e"
+    },
+    {
+      "attributes": {
+        "section_title": "Inspections"
+      },
+      "confidence": 0.8,
+      "id": "rel:0f75a7ea31606fab",
+      "relation_type": "mentions",
+      "source_id": "rule:dd7abca8ed68068e",
+      "target_id": "concept:a0807f66d79f2898"
+    },
+    {
+      "attributes": {
+        "section_title": "Inspections"
+      },
+      "confidence": 0.8,
+      "id": "rel:b87c79a53e89abb7",
+      "relation_type": "mentions",
+      "source_id": "rule:dd7abca8ed68068e",
+      "target_id": "concept:529cccc88b4630c5"
+    },
+    {
+      "attributes": {
+        "derived_from_rule_id": "rule:dd7abca8ed68068e"
+      },
+      "confidence": 0.6,
+      "id": "rel:3ea1803681a129b2",
+      "relation_type": "co_mentioned_in_rule",
+      "source_id": "concept:a0807f66d79f2898",
+      "target_id": "concept:529cccc88b4630c5"
+    },
+    {
+      "attributes": {
+        "ordinal": 10
+      },
+      "confidence": 1.0,
+      "id": "rel:18c98cd5fb2f0251",
+      "relation_type": "contains_rule",
+      "source_id": "section:dd94b4c8b90b2a5e",
+      "target_id": "rule:cdc7c81f09928522"
+    },
+    {
+      "attributes": {
+        "rule_type": "prohibition"
+      },
+      "confidence": 1.0,
+      "id": "rel:38867f8e85ea0076",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:cdc7c81f09928522"
+    },
+    {
+      "attributes": {
+        "ordinal": 11
+      },
+      "confidence": 1.0,
+      "id": "rel:12645a597f7ced86",
+      "relation_type": "contains_rule",
+      "source_id": "section:dd94b4c8b90b2a5e",
+      "target_id": "rule:6ae7dbfc1a13f60d"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:0189dbec4a79ede6",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:6ae7dbfc1a13f60d"
+    },
+    {
+      "attributes": {
+        "ordinal": 12
+      },
+      "confidence": 1.0,
+      "id": "rel:e42fd5c3a7d1fe1c",
+      "relation_type": "contains_rule",
+      "source_id": "section:dd94b4c8b90b2a5e",
+      "target_id": "rule:9486cabff1d9968b"
+    },
+    {
+      "attributes": {
+        "rule_type": "deadline"
+      },
+      "confidence": 1.0,
+      "id": "rel:1b650f28a88f0312",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:9486cabff1d9968b"
+    },
+    {
+      "attributes": {
+        "ordinal": 13
+      },
+      "confidence": 1.0,
+      "id": "rel:3d8297f4401788b6",
+      "relation_type": "contains_rule",
+      "source_id": "section:dd94b4c8b90b2a5e",
+      "target_id": "rule:cc9909e686402704"
+    },
+    {
+      "attributes": {
+        "rule_type": "deadline"
+      },
+      "confidence": 1.0,
+      "id": "rel:9f9ea828977d9784",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:cc9909e686402704"
+    },
+    {
+      "attributes": {
+        "ordinal": 14
+      },
+      "confidence": 1.0,
+      "id": "rel:1da4c61c077c5c7e",
+      "relation_type": "contains_rule",
+      "source_id": "section:dd94b4c8b90b2a5e",
+      "target_id": "rule:83378f7a4856e7ba"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:f8c169bd95a71caf",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:83378f7a4856e7ba"
+    },
+    {
+      "attributes": {
+        "ordinal": 15
+      },
+      "confidence": 1.0,
+      "id": "rel:42625f54d59e4512",
+      "relation_type": "contains_rule",
+      "source_id": "section:dd94b4c8b90b2a5e",
+      "target_id": "rule:4db1b3b40feb8bb9"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:8fbd298e575e66b3",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:4db1b3b40feb8bb9"
+    },
+    {
+      "attributes": {
+        "ordinal": 16
+      },
+      "confidence": 1.0,
+      "id": "rel:65319b0ca6a8d3a7",
+      "relation_type": "contains_rule",
+      "source_id": "section:dd94b4c8b90b2a5e",
+      "target_id": "rule:21c6426c30bed4cd"
+    },
+    {
+      "attributes": {
+        "rule_type": "deadline"
+      },
+      "confidence": 1.0,
+      "id": "rel:8d4fadd4a3b68cdf",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:21c6426c30bed4cd"
+    },
+    {
+      "attributes": {
+        "ordinal": 17
+      },
+      "confidence": 1.0,
+      "id": "rel:4a070153dc5a5c9a",
+      "relation_type": "contains_rule",
+      "source_id": "section:dd94b4c8b90b2a5e",
+      "target_id": "rule:df3c570d859e81e7"
+    },
+    {
+      "attributes": {
+        "rule_type": "prohibition"
+      },
+      "confidence": 1.0,
+      "id": "rel:040c57395e8d600e",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:df3c570d859e81e7"
+    },
+    {
+      "attributes": {
+        "ordinal": 18
+      },
+      "confidence": 1.0,
+      "id": "rel:82db072f3c2de478",
+      "relation_type": "contains_rule",
+      "source_id": "section:dd94b4c8b90b2a5e",
+      "target_id": "rule:8cf04bdd742a2205"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:30a9859a406d63fd",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:8cf04bdd742a2205"
+    },
+    {
+      "attributes": {
+        "ordinal": 19
+      },
+      "confidence": 1.0,
+      "id": "rel:e2324bd9e5911343",
+      "relation_type": "contains_rule",
+      "source_id": "section:dd94b4c8b90b2a5e",
+      "target_id": "rule:a756c4b93889d3c7"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:4b6a3db8f344b149",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:a756c4b93889d3c7"
+    },
+    {
+      "attributes": {
+        "ordinal": 20
+      },
+      "confidence": 1.0,
+      "id": "rel:a8dcf88775e38c5a",
+      "relation_type": "contains_rule",
+      "source_id": "section:dd94b4c8b90b2a5e",
+      "target_id": "rule:c35c86cf397c3fd8"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:0c48825a15b9d476",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:c35c86cf397c3fd8"
+    },
+    {
+      "attributes": {
+        "ordinal": 21
+      },
+      "confidence": 1.0,
+      "id": "rel:627314697ad10c94",
+      "relation_type": "contains_rule",
+      "source_id": "section:dd94b4c8b90b2a5e",
+      "target_id": "rule:e534bcb327bb5c94"
+    },
+    {
+      "attributes": {
+        "rule_type": "discretion"
+      },
+      "confidence": 1.0,
+      "id": "rel:dd340ee10ad58829",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:e534bcb327bb5c94"
+    },
+    {
+      "attributes": {
+        "ordinal": 22
+      },
+      "confidence": 1.0,
+      "id": "rel:2939f6568b8ef11f",
+      "relation_type": "contains_rule",
+      "source_id": "section:dd94b4c8b90b2a5e",
+      "target_id": "rule:b1dbd4073f71dc11"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:da9b25dff18c5c5c",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:b1dbd4073f71dc11"
+    },
+    {
+      "attributes": {
+        "ordinal": 23
+      },
+      "confidence": 1.0,
+      "id": "rel:e8e2283527188f75",
+      "relation_type": "contains_rule",
+      "source_id": "section:47c4f3b1802b6d10",
+      "target_id": "rule:e5c80347eb9ff2f1"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:bd7002d7c169ae57",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:e5c80347eb9ff2f1"
+    },
+    {
+      "attributes": {
+        "ordinal": 24
+      },
+      "confidence": 1.0,
+      "id": "rel:a125f040c8c2583f",
+      "relation_type": "contains_rule",
+      "source_id": "section:47c4f3b1802b6d10",
+      "target_id": "rule:ceceab0d84261f20"
+    },
+    {
+      "attributes": {
+        "rule_type": "discretion"
+      },
+      "confidence": 1.0,
+      "id": "rel:57f63d7997dd3b7e",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:ceceab0d84261f20"
+    },
+    {
+      "attributes": {
+        "ordinal": 25
+      },
+      "confidence": 1.0,
+      "id": "rel:2cd62062ad30fb6d",
+      "relation_type": "contains_rule",
+      "source_id": "section:47c4f3b1802b6d10",
+      "target_id": "rule:6c5240824c9069f0"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:6808335506902566",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:6c5240824c9069f0"
+    },
+    {
+      "attributes": {
+        "ordinal": 26
+      },
+      "confidence": 1.0,
+      "id": "rel:0f3a384e00594ba4",
+      "relation_type": "contains_rule",
+      "source_id": "section:47c4f3b1802b6d10",
+      "target_id": "rule:8e16436dcccfb3aa"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:c08c9f2addc83587",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:8e16436dcccfb3aa"
+    },
+    {
+      "attributes": {
+        "ordinal": 27
+      },
+      "confidence": 1.0,
+      "id": "rel:b182214b70db30b0",
+      "relation_type": "contains_rule",
+      "source_id": "section:83616ad9cd3bb1b1",
+      "target_id": "rule:3498e946fac551bc"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:9b9700c200d8939a",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:3498e946fac551bc"
+    },
+    {
+      "attributes": {
+        "ordinal": 28
+      },
+      "confidence": 1.0,
+      "id": "rel:653931af06bdb08d",
+      "relation_type": "contains_rule",
+      "source_id": "section:83616ad9cd3bb1b1",
+      "target_id": "rule:96192b97519bf8a4"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:d5f169084b06434b",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:96192b97519bf8a4"
+    },
+    {
+      "attributes": {
+        "ordinal": 29
+      },
+      "confidence": 1.0,
+      "id": "rel:8aa998ed7982cbc8",
+      "relation_type": "contains_rule",
+      "source_id": "section:83616ad9cd3bb1b1",
+      "target_id": "rule:7b66cf2cb45739c5"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:4cd19364265e6481",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:7b66cf2cb45739c5"
+    },
+    {
+      "attributes": {
+        "ordinal": 30
+      },
+      "confidence": 1.0,
+      "id": "rel:3f163d7f8afa09fb",
+      "relation_type": "contains_rule",
+      "source_id": "section:83616ad9cd3bb1b1",
+      "target_id": "rule:48da11571e8aa29b"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:6bb05fa7fc9d88d7",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:48da11571e8aa29b"
+    },
+    {
+      "attributes": {
+        "ordinal": 31
+      },
+      "confidence": 1.0,
+      "id": "rel:ef557d2b22a8c974",
+      "relation_type": "contains_rule",
+      "source_id": "section:83616ad9cd3bb1b1",
+      "target_id": "rule:31b05e6161551f8d"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:3c8b32482fac997c",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:31b05e6161551f8d"
+    },
+    {
+      "attributes": {
+        "ordinal": 32
+      },
+      "confidence": 1.0,
+      "id": "rel:203519914fa93816",
+      "relation_type": "contains_rule",
+      "source_id": "section:83616ad9cd3bb1b1",
+      "target_id": "rule:891520df85987e34"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:a66a09326824c7c0",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:891520df85987e34"
+    },
+    {
+      "attributes": {
+        "ordinal": 33
+      },
+      "confidence": 1.0,
+      "id": "rel:d7e90c697604fbce",
+      "relation_type": "contains_rule",
+      "source_id": "section:1a8d7dbbe9d10452",
+      "target_id": "rule:3a4a71f739ecb18e"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:9ca1f39c32a3ea67",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:3a4a71f739ecb18e"
+    },
+    {
+      "attributes": {
+        "ordinal": 34
+      },
+      "confidence": 1.0,
+      "id": "rel:50172a17f0b39bdb",
+      "relation_type": "contains_rule",
+      "source_id": "section:1a8d7dbbe9d10452",
+      "target_id": "rule:56bb2c7f33621f16"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:12c0e930b71502ca",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:56bb2c7f33621f16"
+    },
+    {
+      "attributes": {
+        "ordinal": 35
+      },
+      "confidence": 1.0,
+      "id": "rel:39204ddedb00819c",
+      "relation_type": "contains_rule",
+      "source_id": "section:7202b4e7dbb7e269",
+      "target_id": "rule:ac8a1c4caa53075f"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:62074ef7710624b4",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:ac8a1c4caa53075f"
+    },
+    {
+      "attributes": {
+        "ordinal": 36
+      },
+      "confidence": 1.0,
+      "id": "rel:9289d0e9e02243a3",
+      "relation_type": "contains_rule",
+      "source_id": "section:ddc5f86b1326f1f7",
+      "target_id": "rule:051227e275ee999b"
+    },
+    {
+      "attributes": {
+        "rule_type": "discretion"
+      },
+      "confidence": 1.0,
+      "id": "rel:84527773d5ac2759",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:051227e275ee999b"
+    },
+    {
+      "attributes": {
+        "ordinal": 37
+      },
+      "confidence": 1.0,
+      "id": "rel:0d9b2876175bd45e",
+      "relation_type": "contains_rule",
+      "source_id": "section:ddc5f86b1326f1f7",
+      "target_id": "rule:938f4ffc96084d92"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:2108daed9531f20d",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:938f4ffc96084d92"
+    },
+    {
+      "attributes": {
+        "ordinal": 38
+      },
+      "confidence": 1.0,
+      "id": "rel:d723d24af789010e",
+      "relation_type": "contains_rule",
+      "source_id": "section:e1e9828cbb780e72",
+      "target_id": "rule:d018199d6ef3a00a"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:eef27128f3dc5784",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:d018199d6ef3a00a"
+    },
+    {
+      "attributes": {
+        "section_title": "Program Reinstatement"
+      },
+      "confidence": 0.8,
+      "id": "rel:1924cd1d34ca91f4",
+      "relation_type": "mentions",
+      "source_id": "rule:d018199d6ef3a00a",
+      "target_id": "concept:deced32af7a343bd"
+    },
+    {
+      "attributes": {
+        "ordinal": 39
+      },
+      "confidence": 1.0,
+      "id": "rel:272895e63999276a",
+      "relation_type": "contains_rule",
+      "source_id": "section:b2b2f91016a01f71",
+      "target_id": "rule:23814ceafb5c9762"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:1feeac3af535fec7",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:23814ceafb5c9762"
+    },
+    {
+      "attributes": {
+        "ordinal": 40
+      },
+      "confidence": 1.0,
+      "id": "rel:93522b3675ae6782",
+      "relation_type": "contains_rule",
+      "source_id": "section:d956f0b95edc53db",
+      "target_id": "rule:9034090cbbf63405"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:bfe31cdce235a7ff",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:9034090cbbf63405"
+    },
+    {
+      "attributes": {
+        "ordinal": 41
+      },
+      "confidence": 1.0,
+      "id": "rel:fec271d207662fa1",
+      "relation_type": "contains_rule",
+      "source_id": "section:37acf764144be94f",
+      "target_id": "rule:a6d0ec70b76072a0"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:4c1a31f75f4fad97",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:a6d0ec70b76072a0"
+    },
+    {
+      "attributes": {
+        "ordinal": 42
+      },
+      "confidence": 1.0,
+      "id": "rel:81c4c070d8d879c4",
+      "relation_type": "contains_rule",
+      "source_id": "section:a1cc5c971202dfed",
+      "target_id": "rule:cdd90fbd17026d7a"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:90998d300b4f8c78",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:cdd90fbd17026d7a"
+    },
+    {
+      "attributes": {
+        "ordinal": 43
+      },
+      "confidence": 1.0,
+      "id": "rel:0d6d09feb4e91ab1",
+      "relation_type": "contains_rule",
+      "source_id": "section:a1cc5c971202dfed",
+      "target_id": "rule:4ac612460d02db93"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:7d87fa49d0ee8110",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:4ac612460d02db93"
+    },
+    {
+      "attributes": {
+        "section_title": "Tenant Referral, Eligibility and Documentation"
+      },
+      "confidence": 0.8,
+      "id": "rel:2aa362e6519e67d9",
+      "relation_type": "mentions",
+      "source_id": "rule:4ac612460d02db93",
+      "target_id": "concept:958faba201293ca9"
+    },
+    {
+      "attributes": {
+        "ordinal": 44
+      },
+      "confidence": 1.0,
+      "id": "rel:5937b0c27041d9ac",
+      "relation_type": "contains_rule",
+      "source_id": "section:a1cc5c971202dfed",
+      "target_id": "rule:2f2aea3e66835768"
+    },
+    {
+      "attributes": {
+        "rule_type": "discretion"
+      },
+      "confidence": 1.0,
+      "id": "rel:06e542feba7dc625",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:2f2aea3e66835768"
+    },
+    {
+      "attributes": {
+        "ordinal": 45
+      },
+      "confidence": 1.0,
+      "id": "rel:980720e5775d852d",
+      "relation_type": "contains_rule",
+      "source_id": "section:a1cc5c971202dfed",
+      "target_id": "rule:fb8c0eb59b7a79ae"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:4e7af536e58e3367",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:fb8c0eb59b7a79ae"
+    },
+    {
+      "attributes": {
+        "ordinal": 46
+      },
+      "confidence": 1.0,
+      "id": "rel:3ada3d69a8d0a2a1",
+      "relation_type": "contains_rule",
+      "source_id": "section:a1cc5c971202dfed",
+      "target_id": "rule:3fafef2ae955b995"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:47f1ec38d745ae95",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:3fafef2ae955b995"
+    },
+    {
+      "attributes": {
+        "ordinal": 47
+      },
+      "confidence": 1.0,
+      "id": "rel:0d5b5f01e578b654",
+      "relation_type": "contains_rule",
+      "source_id": "section:a1cc5c971202dfed",
+      "target_id": "rule:9afa50258208894d"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:a9669cb7dbc2b6ba",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:9afa50258208894d"
+    },
+    {
+      "attributes": {
+        "ordinal": 48
+      },
+      "confidence": 1.0,
+      "id": "rel:1f74e39963462a41",
+      "relation_type": "contains_rule",
+      "source_id": "section:a1cc5c971202dfed",
+      "target_id": "rule:b8126286374d813d"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:8a80ddc03f235196",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:b8126286374d813d"
+    },
+    {
+      "attributes": {
+        "ordinal": 49
+      },
+      "confidence": 1.0,
+      "id": "rel:c5ab50602b28558b",
+      "relation_type": "contains_rule",
+      "source_id": "section:e1e9c6aebd562fba",
+      "target_id": "rule:539bce7e3f651ea5"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:2542a8c01b37f71a",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:539bce7e3f651ea5"
+    },
+    {
+      "attributes": {
+        "ordinal": 50
+      },
+      "confidence": 1.0,
+      "id": "rel:8c018baf4c22542a",
+      "relation_type": "contains_rule",
+      "source_id": "section:e1e9c6aebd562fba",
+      "target_id": "rule:54c4d9e001ec9c12"
+    },
+    {
+      "attributes": {
+        "rule_type": "prohibition"
+      },
+      "confidence": 1.0,
+      "id": "rel:b5e9f6bef1de2bf5",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:54c4d9e001ec9c12"
+    },
+    {
+      "attributes": {
+        "section_title": "Referral Criteria - General"
+      },
+      "confidence": 0.8,
+      "id": "rel:45f56b40eb33f841",
+      "relation_type": "mentions",
+      "source_id": "rule:54c4d9e001ec9c12",
+      "target_id": "concept:ac00ccf07fbe18c8"
+    },
+    {
+      "attributes": {
+        "ordinal": 51
+      },
+      "confidence": 1.0,
+      "id": "rel:252642a9cb6d667a",
+      "relation_type": "contains_rule",
+      "source_id": "section:03ed6510be1a88ef",
+      "target_id": "rule:864c0c609a3017b2"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:62c8e5ec005388ba",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:864c0c609a3017b2"
+    },
+    {
+      "attributes": {
+        "ordinal": 52
+      },
+      "confidence": 1.0,
+      "id": "rel:8232ca3cdd2a4dfd",
+      "relation_type": "contains_rule",
+      "source_id": "section:03ed6510be1a88ef",
+      "target_id": "rule:959f3a7abd663e09"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:2a58c42290ed94a9",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:959f3a7abd663e09"
+    },
+    {
+      "attributes": {
+        "ordinal": 53
+      },
+      "confidence": 1.0,
+      "id": "rel:dc59c238be4cc9f1",
+      "relation_type": "contains_rule",
+      "source_id": "section:03ed6510be1a88ef",
+      "target_id": "rule:4b50b40e3627b6aa"
+    },
+    {
+      "attributes": {
+        "rule_type": "discretion"
+      },
+      "confidence": 1.0,
+      "id": "rel:d97b0a7ff2c75693",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:4b50b40e3627b6aa"
+    },
+    {
+      "attributes": {
+        "ordinal": 54
+      },
+      "confidence": 1.0,
+      "id": "rel:e3bfc1027a3ba034",
+      "relation_type": "contains_rule",
+      "source_id": "section:03ed6510be1a88ef",
+      "target_id": "rule:683e73f1dff995dd"
+    },
+    {
+      "attributes": {
+        "rule_type": "discretion"
+      },
+      "confidence": 1.0,
+      "id": "rel:5c70f17db79666fa",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:683e73f1dff995dd"
+    },
+    {
+      "attributes": {
+        "ordinal": 55
+      },
+      "confidence": 1.0,
+      "id": "rel:22c5b8d0d7a64786",
+      "relation_type": "contains_rule",
+      "source_id": "section:03ed6510be1a88ef",
+      "target_id": "rule:373e2e0616d19b29"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:e85e6bd069ece2ac",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:373e2e0616d19b29"
+    },
+    {
+      "attributes": {
+        "section_title": "Referral Criteria - Household Composition"
+      },
+      "confidence": 0.8,
+      "id": "rel:4944df5ef9054a2b",
+      "relation_type": "mentions",
+      "source_id": "rule:373e2e0616d19b29",
+      "target_id": "concept:704ceaccf9081e67"
+    },
+    {
+      "attributes": {
+        "section_title": "Referral Criteria - Household Composition"
+      },
+      "confidence": 0.8,
+      "id": "rel:af8775f5113d9341",
+      "relation_type": "mentions",
+      "source_id": "rule:373e2e0616d19b29",
+      "target_id": "concept:7ca421dcc4aceccc"
+    },
+    {
+      "attributes": {
+        "derived_from_rule_id": "rule:373e2e0616d19b29"
+      },
+      "confidence": 0.6,
+      "id": "rel:3db912287cde3198",
+      "relation_type": "co_mentioned_in_rule",
+      "source_id": "concept:704ceaccf9081e67",
+      "target_id": "concept:7ca421dcc4aceccc"
+    },
+    {
+      "attributes": {
+        "ordinal": 56
+      },
+      "confidence": 1.0,
+      "id": "rel:e4157706b9ddb692",
+      "relation_type": "contains_rule",
+      "source_id": "section:03ed6510be1a88ef",
+      "target_id": "rule:8f89a5e17741b597"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:6f9b8e1dbb0c637c",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:8f89a5e17741b597"
+    },
+    {
+      "attributes": {
+        "ordinal": 57
+      },
+      "confidence": 1.0,
+      "id": "rel:3c345454772a42f1",
+      "relation_type": "contains_rule",
+      "source_id": "section:03ed6510be1a88ef",
+      "target_id": "rule:ecbdaa98050e77ea"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:14e6943ffdfa2e86",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:ecbdaa98050e77ea"
+    },
+    {
+      "attributes": {
+        "ordinal": 58
+      },
+      "confidence": 1.0,
+      "id": "rel:f31b2a54f520518e",
+      "relation_type": "contains_rule",
+      "source_id": "section:03ed6510be1a88ef",
+      "target_id": "rule:3b9e3ba126620eeb"
+    },
+    {
+      "attributes": {
+        "rule_type": "prohibition"
+      },
+      "confidence": 1.0,
+      "id": "rel:4fa081d5a24b679e",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:3b9e3ba126620eeb"
+    },
+    {
+      "attributes": {
+        "ordinal": 59
+      },
+      "confidence": 1.0,
+      "id": "rel:27dcfd4a07ed408f",
+      "relation_type": "contains_rule",
+      "source_id": "section:03ed6510be1a88ef",
+      "target_id": "rule:b9d65c10f3a5c581"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:8a8ebf4d63f1f5ea",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:b9d65c10f3a5c581"
+    },
+    {
+      "attributes": {
+        "ordinal": 60
+      },
+      "confidence": 1.0,
+      "id": "rel:9e5b3fc46f464341",
+      "relation_type": "contains_rule",
+      "source_id": "section:03ed6510be1a88ef",
+      "target_id": "rule:8a03ff62d2952dc4"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:b5f747562e75cca9",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:8a03ff62d2952dc4"
+    },
+    {
+      "attributes": {
+        "section_title": "Referral Criteria - Household Composition"
+      },
+      "confidence": 0.8,
+      "id": "rel:0315fd30627862c7",
+      "relation_type": "mentions",
+      "source_id": "rule:8a03ff62d2952dc4",
+      "target_id": "concept:aef6850eebba3549"
+    },
+    {
+      "attributes": {
+        "ordinal": 61
+      },
+      "confidence": 1.0,
+      "id": "rel:e695072e081117f6",
+      "relation_type": "contains_rule",
+      "source_id": "section:03ed6510be1a88ef",
+      "target_id": "rule:609e0e10da73fbba"
+    },
+    {
+      "attributes": {
+        "rule_type": "deadline"
+      },
+      "confidence": 1.0,
+      "id": "rel:3512b1b139162461",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:609e0e10da73fbba"
+    },
+    {
+      "attributes": {
+        "ordinal": 62
+      },
+      "confidence": 1.0,
+      "id": "rel:fb732b207bc6cb40",
+      "relation_type": "contains_rule",
+      "source_id": "section:03ed6510be1a88ef",
+      "target_id": "rule:5a75cec03c9ff1fe"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:5006952b2990bd11",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:5a75cec03c9ff1fe"
+    },
+    {
+      "attributes": {
+        "ordinal": 63
+      },
+      "confidence": 1.0,
+      "id": "rel:030c68f75267d7ec",
+      "relation_type": "contains_rule",
+      "source_id": "section:b6b896292a494a39",
+      "target_id": "rule:9026650c46ad77f7"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:a3b91216601b31db",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:9026650c46ad77f7"
+    },
+    {
+      "attributes": {
+        "ordinal": 64
+      },
+      "confidence": 1.0,
+      "id": "rel:1e8cadbc32df7ee3",
+      "relation_type": "contains_rule",
+      "source_id": "section:b6b896292a494a39",
+      "target_id": "rule:fbc1b1d61f3275a8"
+    },
+    {
+      "attributes": {
+        "rule_type": "discretion"
+      },
+      "confidence": 1.0,
+      "id": "rel:bda7bd17fa2daac5",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:fbc1b1d61f3275a8"
+    },
+    {
+      "attributes": {
+        "ordinal": 65
+      },
+      "confidence": 1.0,
+      "id": "rel:c592961a02faf03b",
+      "relation_type": "contains_rule",
+      "source_id": "section:b6b896292a494a39",
+      "target_id": "rule:4692df4bf11fc671"
+    },
+    {
+      "attributes": {
+        "rule_type": "discretion"
+      },
+      "confidence": 1.0,
+      "id": "rel:7b9a03ef7169135a",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:4692df4bf11fc671"
+    },
+    {
+      "attributes": {
+        "ordinal": 66
+      },
+      "confidence": 1.0,
+      "id": "rel:6ca6984e13218a38",
+      "relation_type": "contains_rule",
+      "source_id": "section:b6b896292a494a39",
+      "target_id": "rule:9e0844327ffc9991"
+    },
+    {
+      "attributes": {
+        "rule_type": "discretion"
+      },
+      "confidence": 1.0,
+      "id": "rel:353ea61c7d737958",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:9e0844327ffc9991"
+    },
+    {
+      "attributes": {
+        "ordinal": 67
+      },
+      "confidence": 1.0,
+      "id": "rel:7c4a6acb7de3e22a",
+      "relation_type": "contains_rule",
+      "source_id": "section:b6b896292a494a39",
+      "target_id": "rule:c117fe284a9f82d7"
+    },
+    {
+      "attributes": {
+        "rule_type": "discretion"
+      },
+      "confidence": 1.0,
+      "id": "rel:77dd8b8532acddf7",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:c117fe284a9f82d7"
+    },
+    {
+      "attributes": {
+        "ordinal": 68
+      },
+      "confidence": 1.0,
+      "id": "rel:d7282785cf265b26",
+      "relation_type": "contains_rule",
+      "source_id": "section:b6b896292a494a39",
+      "target_id": "rule:ee3ee4a45f9d0cba"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:348d483fa0a4dbdd",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:ee3ee4a45f9d0cba"
+    },
+    {
+      "attributes": {
+        "ordinal": 69
+      },
+      "confidence": 1.0,
+      "id": "rel:2114e801f64e4a31",
+      "relation_type": "contains_rule",
+      "source_id": "section:b6b896292a494a39",
+      "target_id": "rule:c1577ba9cd2dda14"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:005aee363e94c6d0",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:c1577ba9cd2dda14"
+    },
+    {
+      "attributes": {
+        "ordinal": 70
+      },
+      "confidence": 1.0,
+      "id": "rel:2aa4a74d26fa8b85",
+      "relation_type": "contains_rule",
+      "source_id": "section:b6b896292a494a39",
+      "target_id": "rule:f1b17b46d0410db6"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:9c78b0e95c7d9d4b",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:f1b17b46d0410db6"
+    },
+    {
+      "attributes": {
+        "ordinal": 71
+      },
+      "confidence": 1.0,
+      "id": "rel:bd4d4e17b8337800",
+      "relation_type": "contains_rule",
+      "source_id": "section:b6b896292a494a39",
+      "target_id": "rule:8c844ce963077374"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:5b64603cf9ccef0e",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:8c844ce963077374"
+    },
+    {
+      "attributes": {
+        "ordinal": 72
+      },
+      "confidence": 1.0,
+      "id": "rel:8043e1667659a900",
+      "relation_type": "contains_rule",
+      "source_id": "section:b6b896292a494a39",
+      "target_id": "rule:ec00283268301890"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:952511d5aa8665ff",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:ec00283268301890"
+    },
+    {
+      "attributes": {
+        "ordinal": 73
+      },
+      "confidence": 1.0,
+      "id": "rel:94777aec2fc0b20d",
+      "relation_type": "contains_rule",
+      "source_id": "section:b6b896292a494a39",
+      "target_id": "rule:5bdf13578cf83691"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:317a8739eb0ed85a",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:5bdf13578cf83691"
+    },
+    {
+      "attributes": {
+        "section_title": "AND"
+      },
+      "confidence": 0.8,
+      "id": "rel:1a0fb8280764558b",
+      "relation_type": "mentions",
+      "source_id": "rule:5bdf13578cf83691",
+      "target_id": "concept:60c90b25f9cb7606"
+    },
+    {
+      "attributes": {
+        "ordinal": 74
+      },
+      "confidence": 1.0,
+      "id": "rel:aeb86d31cffe1b7c",
+      "relation_type": "contains_rule",
+      "source_id": "section:e9c504c01344c693",
+      "target_id": "rule:8350802ec7c6d348"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:fe764dad00d3965c",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:8350802ec7c6d348"
+    },
+    {
+      "attributes": {
+        "ordinal": 75
+      },
+      "confidence": 1.0,
+      "id": "rel:d717b4bc4adfa2fa",
+      "relation_type": "contains_rule",
+      "source_id": "section:e9c504c01344c693",
+      "target_id": "rule:bbfdbdcf48d4fa4e"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:c2b5fe3ae1280ddf",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:bbfdbdcf48d4fa4e"
+    },
+    {
+      "attributes": {
+        "ordinal": 76
+      },
+      "confidence": 1.0,
+      "id": "rel:87206543e9cb953c",
+      "relation_type": "contains_rule",
+      "source_id": "section:e9c504c01344c693",
+      "target_id": "rule:408c0004de9ba02a"
+    },
+    {
+      "attributes": {
+        "rule_type": "prohibition"
+      },
+      "confidence": 1.0,
+      "id": "rel:f786eb13b1181f87",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:408c0004de9ba02a"
+    },
+    {
+      "attributes": {
+        "ordinal": 77
+      },
+      "confidence": 1.0,
+      "id": "rel:be5109fcdc8d950a",
+      "relation_type": "contains_rule",
+      "source_id": "section:e9c504c01344c693",
+      "target_id": "rule:1a0835754db7740c"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:f203c1481bf93b03",
+      "relation_type": "has_rule",
+      "source_id": "document:b9b8827abb6e07a5",
+      "target_id": "rule:1a0835754db7740c"
+    }
+  ],
+  "rules": [
+    {
+      "modality": "required",
+      "ordinal": 0,
+      "rule_id": "rule:90946cc798ce70c2",
+      "rule_type": "obligation",
+      "section_id": "section:07ca3f325aeb7bb7",
+      "section_title": "Updated 09/1/2024 (all previous versions are obsolete)",
+      "text": "Program components that are not explicitly addressed in this Policy framework will be guided by the existing"
+    },
+    {
+      "modality": "required",
+      "ordinal": 1,
+      "rule_id": "rule:ddb9312f0303a1c1",
+      "rule_type": "obligation",
+      "section_id": "section:e7563889b8a27a0c",
+      "section_title": "Subsidy Amount Determination",
+      "text": "The LTRA program will use one consistent rent calculation for all households with incomes at or below"
+    },
+    {
+      "modality": "required",
+      "ordinal": 2,
+      "rule_id": "rule:095245d19bff14ba",
+      "rule_type": "obligation",
+      "section_id": "section:e7563889b8a27a0c",
+      "section_title": "Subsidy Amount Determination",
+      "text": "Clackamas County LTRA program will use 28.5% of gross income, with deductions (e.g"
+    },
+    {
+      "modality": "forbidden",
+      "ordinal": 3,
+      "rule_id": "rule:d58d417c472e2472",
+      "rule_type": "prohibition",
+      "section_id": "section:e7563889b8a27a0c",
+      "section_title": "Subsidy Amount Determination",
+      "text": "income (recycling, plasma, etc.) will not be counted toward the tenant\u2019s income calculation."
+    },
+    {
+      "modality": "discretionary",
+      "ordinal": 4,
+      "rule_id": "rule:301a08f8d00e75c6",
+      "rule_type": "discretion",
+      "section_id": "section:e7563889b8a27a0c",
+      "section_title": "Subsidy Amount Determination",
+      "text": "30% and 80% AMI to pay more than 28.5% of gross income may be considered."
+    },
+    {
+      "modality": "required",
+      "ordinal": 5,
+      "rule_id": "rule:4f277fcb9882f037",
+      "rule_type": "obligation",
+      "section_id": "section:f367438f18ab7dcf",
+      "section_title": "Utility Allowance Schedule",
+      "text": "The LTRA program will factor in the reasonable cost of utilities paid separately when calculating rent"
+    },
+    {
+      "modality": "required",
+      "ordinal": 6,
+      "rule_id": "rule:e0742a893b4fce38",
+      "rule_type": "obligation",
+      "section_id": "section:f367438f18ab7dcf",
+      "section_title": "Utility Allowance Schedule",
+      "text": "Program participants will be reimbursed for the amount that this utility cost exceeds their"
+    },
+    {
+      "modality": "discretionary",
+      "ordinal": 7,
+      "rule_id": "rule:ebd70862f70a0be1",
+      "rule_type": "discretion",
+      "section_id": "section:f367438f18ab7dcf",
+      "section_title": "Utility Allowance Schedule",
+      "text": "toward the utility costs can be paid directly to the utility company, property management company, or the"
+    },
+    {
+      "modality": "discretionary",
+      "ordinal": 8,
+      "rule_id": "rule:827fc61e3fcdb38a",
+      "rule_type": "discretion",
+      "section_id": "section:f367438f18ab7dcf",
+      "section_title": "Utility Allowance Schedule",
+      "text": "household at the program\u2019s discretion, with local flexibility based on funder requirements, etc."
+    },
+    {
+      "modality": "required",
+      "ordinal": 9,
+      "rule_id": "rule:dd7abca8ed68068e",
+      "rule_type": "obligation",
+      "section_id": "section:dd94b4c8b90b2a5e",
+      "section_title": "Inspections",
+      "text": "Unit quality: Inspections to assess unit quality will use Housing Quality Standards (HQS) or National Standards"
+    },
+    {
+      "modality": "forbidden",
+      "ordinal": 10,
+      "rule_id": "rule:cdc7c81f09928522",
+      "rule_type": "prohibition",
+      "section_id": "section:dd94b4c8b90b2a5e",
+      "section_title": "Inspections",
+      "text": "Units that do not meet HQS or NSPIRE standards will not be able to"
+    },
+    {
+      "modality": "required",
+      "ordinal": 11,
+      "rule_id": "rule:6ae7dbfc1a13f60d",
+      "rule_type": "obligation",
+      "section_id": "section:dd94b4c8b90b2a5e",
+      "section_title": "Inspections",
+      "text": "HACC will complete the initial inspection, determine whether the unit satisfies HQS"
+    },
+    {
+      "modality": "time_bound",
+      "ordinal": 12,
+      "rule_id": "rule:9486cabff1d9968b",
+      "rule_type": "deadline",
+      "section_id": "section:dd94b4c8b90b2a5e",
+      "section_title": "Inspections",
+      "text": "or NSPIRE, and notify the owner and the family of the determination within 15 days of submission of the Request"
+    },
+    {
+      "modality": "time_bound",
+      "ordinal": 13,
+      "rule_id": "rule:cc9909e686402704",
+      "rule_type": "deadline",
+      "section_id": "section:dd94b4c8b90b2a5e",
+      "section_title": "Inspections",
+      "text": "In cases where HACC is not able to complete the inspection within 15 days, the file"
+    },
+    {
+      "modality": "required",
+      "ordinal": 14,
+      "rule_id": "rule:83378f7a4856e7ba",
+      "rule_type": "obligation",
+      "section_id": "section:dd94b4c8b90b2a5e",
+      "section_title": "Inspections",
+      "text": "will be documented as to the reason it was not practicable."
+    },
+    {
+      "modality": "required",
+      "ordinal": 15,
+      "rule_id": "rule:4db1b3b40feb8bb9",
+      "rule_type": "obligation",
+      "section_id": "section:dd94b4c8b90b2a5e",
+      "section_title": "Inspections",
+      "text": "All units under contract must have a passing inspection"
+    },
+    {
+      "modality": "time_bound",
+      "ordinal": 16,
+      "rule_id": "rule:21c6426c30bed4cd",
+      "rule_type": "deadline",
+      "section_id": "section:dd94b4c8b90b2a5e",
+      "section_title": "Inspections",
+      "text": "completed within 60 days of the effective date of the LTRA contract."
+    },
+    {
+      "modality": "forbidden",
+      "ordinal": 17,
+      "rule_id": "rule:df3c570d859e81e7",
+      "rule_type": "prohibition",
+      "section_id": "section:dd94b4c8b90b2a5e",
+      "section_title": "Inspections",
+      "text": "LTRA contract to be effective prior to completion of inspection, and the unit cannot pass inspection, the LTRA"
+    },
+    {
+      "modality": "required",
+      "ordinal": 18,
+      "rule_id": "rule:8cf04bdd742a2205",
+      "rule_type": "obligation",
+      "section_id": "section:dd94b4c8b90b2a5e",
+      "section_title": "Inspections",
+      "text": "contract will be dissolved but rent will be covered up to the failed inspection date."
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 19,
+      "rule_id": "rule:a756c4b93889d3c7",
+      "rule_type": "eligibility",
+      "section_id": "section:dd94b4c8b90b2a5e",
+      "section_title": "Inspections",
+      "text": "eligibility will be required only for non-regulated units (i.e."
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 20,
+      "rule_id": "rule:c35c86cf397c3fd8",
+      "rule_type": "eligibility",
+      "section_id": "section:dd94b4c8b90b2a5e",
+      "section_title": "Inspections",
+      "text": "SROs, congregate, shared housing) will be eligible,"
+    },
+    {
+      "modality": "discretionary",
+      "ordinal": 21,
+      "rule_id": "rule:e534bcb327bb5c94",
+      "rule_type": "discretion",
+      "section_id": "section:dd94b4c8b90b2a5e",
+      "section_title": "Inspections",
+      "text": "with the goal of providing flexibility."
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 22,
+      "rule_id": "rule:b1dbd4073f71dc11",
+      "rule_type": "eligibility",
+      "section_id": "section:dd94b4c8b90b2a5e",
+      "section_title": "Inspections",
+      "text": "The LTRA program will clarify eligible special housing type"
+    },
+    {
+      "modality": "required",
+      "ordinal": 23,
+      "rule_id": "rule:e5c80347eb9ff2f1",
+      "rule_type": "obligation",
+      "section_id": "section:47c4f3b1802b6d10",
+      "section_title": "Income (Income Increase, Decrease, and Re-evaluations)",
+      "text": "Income reexaminations: Income reexaminations specific to the LTRA program will occur every three"
+    },
+    {
+      "modality": "discretionary",
+      "ordinal": 24,
+      "rule_id": "rule:ceceab0d84261f20",
+      "rule_type": "discretion",
+      "section_id": "section:47c4f3b1802b6d10",
+      "section_title": "Income (Income Increase, Decrease, and Re-evaluations)",
+      "text": "Interim reexaminations may be conducted prior to this two- or three-year schedule and"
+    },
+    {
+      "modality": "required",
+      "ordinal": 25,
+      "rule_id": "rule:6c5240824c9069f0",
+      "rule_type": "obligation",
+      "section_id": "section:47c4f3b1802b6d10",
+      "section_title": "Income (Income Increase, Decrease, and Re-evaluations)",
+      "text": "All income changes must be reported by the household."
+    },
+    {
+      "modality": "required",
+      "ordinal": 26,
+      "rule_id": "rule:8e16436dcccfb3aa",
+      "rule_type": "obligation",
+      "section_id": "section:47c4f3b1802b6d10",
+      "section_title": "Income (Income Increase, Decrease, and Re-evaluations)",
+      "text": "when an interim reexamination will be conducted are as follow: if the household\u2019s income decreases,"
+    },
+    {
+      "modality": "required",
+      "ordinal": 27,
+      "rule_id": "rule:3498e946fac551bc",
+      "rule_type": "obligation",
+      "section_id": "section:83616ad9cd3bb1b1",
+      "section_title": "Household Changes During Program",
+      "text": "Households over income: The rent contract will be maintained for up to 180 days for participants who"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 28,
+      "rule_id": "rule:96192b97519bf8a4",
+      "rule_type": "eligibility",
+      "section_id": "section:83616ad9cd3bb1b1",
+      "section_title": "Household Changes During Program",
+      "text": "as long as the household still meets income eligibility and unit capacity requirements."
+    },
+    {
+      "modality": "required",
+      "ordinal": 29,
+      "rule_id": "rule:7b66cf2cb45739c5",
+      "rule_type": "obligation",
+      "section_id": "section:83616ad9cd3bb1b1",
+      "section_title": "Household Changes During Program",
+      "text": "residing in a unit under LTRA contract must receive approval from their Landlord and HACC before a"
+    },
+    {
+      "modality": "required",
+      "ordinal": 30,
+      "rule_id": "rule:48da11571e8aa29b",
+      "rule_type": "obligation",
+      "section_id": "section:83616ad9cd3bb1b1",
+      "section_title": "Household Changes During Program",
+      "text": "Temporary vacancy: The rent contract will be maintained for up to 180 days if the tenant is temporarily"
+    },
+    {
+      "modality": "required",
+      "ordinal": 31,
+      "rule_id": "rule:31b05e6161551f8d",
+      "rule_type": "obligation",
+      "section_id": "section:83616ad9cd3bb1b1",
+      "section_title": "Household Changes During Program",
+      "text": "Accommodations beyond 180 days will be at the discretion of the program and may include options to be"
+    },
+    {
+      "modality": "required",
+      "ordinal": 32,
+      "rule_id": "rule:891520df85987e34",
+      "rule_type": "obligation",
+      "section_id": "section:83616ad9cd3bb1b1",
+      "section_title": "Household Changes During Program",
+      "text": "LTRA subsidy payments will be made through the end"
+    },
+    {
+      "modality": "required",
+      "ordinal": 33,
+      "rule_id": "rule:3a4a71f739ecb18e",
+      "rule_type": "obligation",
+      "section_id": "section:1a8d7dbbe9d10452",
+      "section_title": "Transfers within program jurisdiction",
+      "text": "A formal policy regarding LTRA transfers is pending and will be developed upon receiving further"
+    },
+    {
+      "modality": "required",
+      "ordinal": 34,
+      "rule_id": "rule:56bb2c7f33621f16",
+      "rule_type": "obligation",
+      "section_id": "section:1a8d7dbbe9d10452",
+      "section_title": "Transfers within program jurisdiction",
+      "text": "This section will be updated accordingly once that guidance is available."
+    },
+    {
+      "modality": "required",
+      "ordinal": 35,
+      "rule_id": "rule:ac8a1c4caa53075f",
+      "rule_type": "obligation",
+      "section_id": "section:7202b4e7dbb7e269",
+      "section_title": "Grievance/Appeals Procedure",
+      "text": "Appeals process: Participants will be provided with a formal appeals process that at a minimum must"
+    },
+    {
+      "modality": "discretionary",
+      "ordinal": 36,
+      "rule_id": "rule:051227e275ee999b",
+      "rule_type": "discretion",
+      "section_id": "section:ddc5f86b1326f1f7",
+      "section_title": "Discontinuation of Rent Assistance",
+      "text": "An LTRA participant may only be discontinued from the program due to serious violations of program"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 37,
+      "rule_id": "rule:938f4ffc96084d92",
+      "rule_type": "eligibility",
+      "section_id": "section:ddc5f86b1326f1f7",
+      "section_title": "Discontinuation of Rent Assistance",
+      "text": "\uf0b7 Participant no longer meet the eligibility guidelines for LTRA assistance."
+    },
+    {
+      "modality": "required",
+      "ordinal": 38,
+      "rule_id": "rule:d018199d6ef3a00a",
+      "rule_type": "obligation",
+      "section_id": "section:e1e9828cbb780e72",
+      "section_title": "Program Reinstatement",
+      "text": "To be reinstated, the participant will be instructed to work with CHA (Coordinated Housing Access) for"
+    },
+    {
+      "modality": "required",
+      "ordinal": 39,
+      "rule_id": "rule:23814ceafb5c9762",
+      "rule_type": "obligation",
+      "section_id": "section:b2b2f91016a01f71",
+      "section_title": "Priority:",
+      "text": "Priority will be given to the following household applicants under LTRA:"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 40,
+      "rule_id": "rule:9034090cbbf63405",
+      "rule_type": "eligibility",
+      "section_id": "section:d956f0b95edc53db",
+      "section_title": "Priority One:",
+      "text": "The households that will be rehoused via EO 23-02 and HB5019 will have first eligibility priority for LTRA"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 41,
+      "rule_id": "rule:a6d0ec70b76072a0",
+      "rule_type": "eligibility",
+      "section_id": "section:37acf764144be94f",
+      "section_title": "Priority Two:",
+      "text": "providers with MOUs for referral to LTRA will have second eligibility priority for LTRA assistance."
+    },
+    {
+      "modality": "required",
+      "ordinal": 42,
+      "rule_id": "rule:cdd90fbd17026d7a",
+      "rule_type": "obligation",
+      "section_id": "section:a1cc5c971202dfed",
+      "section_title": "Tenant Referral, Eligibility and Documentation",
+      "text": "Referral process: The LTRA program will receive referrals through a flexible process with multiple referral"
+    },
+    {
+      "modality": "required",
+      "ordinal": 43,
+      "rule_id": "rule:4ac612460d02db93",
+      "rule_type": "obligation",
+      "section_id": "section:a1cc5c971202dfed",
+      "section_title": "Tenant Referral, Eligibility and Documentation",
+      "text": "The counties' coordinated access systems will be the primary referral"
+    },
+    {
+      "modality": "discretionary",
+      "ordinal": 44,
+      "rule_id": "rule:2f2aea3e66835768",
+      "rule_type": "discretion",
+      "section_id": "section:a1cc5c971202dfed",
+      "section_title": "Tenant Referral, Eligibility and Documentation",
+      "text": "Other referring agencies may include community-based and culturally-specific"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 45,
+      "rule_id": "rule:fb8c0eb59b7a79ae",
+      "rule_type": "eligibility",
+      "section_id": "section:a1cc5c971202dfed",
+      "section_title": "Tenant Referral, Eligibility and Documentation",
+      "text": "Each referring agency will screen potential participants for LTRA voucher eligibility,"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 46,
+      "rule_id": "rule:3fafef2ae955b995",
+      "rule_type": "eligibility",
+      "section_id": "section:a1cc5c971202dfed",
+      "section_title": "Tenant Referral, Eligibility and Documentation",
+      "text": "according to the State eligibility guidelines below."
+    },
+    {
+      "modality": "required",
+      "ordinal": 47,
+      "rule_id": "rule:9afa50258208894d",
+      "rule_type": "obligation",
+      "section_id": "section:a1cc5c971202dfed",
+      "section_title": "Tenant Referral, Eligibility and Documentation",
+      "text": "Counties will be held accountable for ensuring referral"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 48,
+      "rule_id": "rule:b8126286374d813d",
+      "rule_type": "eligibility",
+      "section_id": "section:a1cc5c971202dfed",
+      "section_title": "Tenant Referral, Eligibility and Documentation",
+      "text": "pathways are equitable, inclusive and effective at connecting eligible participants with appropriate housing"
+    },
+    {
+      "modality": "required",
+      "ordinal": 49,
+      "rule_id": "rule:539bce7e3f651ea5",
+      "rule_type": "obligation",
+      "section_id": "section:e1e9c6aebd562fba",
+      "section_title": "Referral Criteria - General",
+      "text": "\uf0b7 The households that will be rehoused via EO 23-02 and HB5019 will have priority for the LTRA program and"
+    },
+    {
+      "modality": "forbidden",
+      "ordinal": 50,
+      "rule_id": "rule:54c4d9e001ec9c12",
+      "rule_type": "prohibition",
+      "section_id": "section:e1e9c6aebd562fba",
+      "section_title": "Referral Criteria - General",
+      "text": "will not require re-screening for eligibility to include income, Fair Market Rent (FMR) requirements, and rent"
+    },
+    {
+      "modality": "required",
+      "ordinal": 51,
+      "rule_id": "rule:864c0c609a3017b2",
+      "rule_type": "obligation",
+      "section_id": "section:03ed6510be1a88ef",
+      "section_title": "Referral Criteria - Household Composition",
+      "text": "\uf0b7 Each household must identify the individuals to be included in the household at the time of application and"
+    },
+    {
+      "modality": "required",
+      "ordinal": 52,
+      "rule_id": "rule:959f3a7abd663e09",
+      "rule_type": "obligation",
+      "section_id": "section:03ed6510be1a88ef",
+      "section_title": "Referral Criteria - Household Composition",
+      "text": "must notify the program Administrator and its staff if the household composition changes."
+    },
+    {
+      "modality": "discretionary",
+      "ordinal": 53,
+      "rule_id": "rule:4b50b40e3627b6aa",
+      "rule_type": "discretion",
+      "section_id": "section:03ed6510be1a88ef",
+      "section_title": "Referral Criteria - Household Composition",
+      "text": "\uf0b7 Household composition may include but not be limited to the following, regardless of actual perceived sexual"
+    },
+    {
+      "modality": "discretionary",
+      "ordinal": 54,
+      "rule_id": "rule:683e73f1dff995dd",
+      "rule_type": "discretion",
+      "section_id": "section:03ed6510be1a88ef",
+      "section_title": "Referral Criteria - Household Composition",
+      "text": "o A single person, who may be an elderly person, displaced person, disabled person, near elderly"
+    },
+    {
+      "modality": "required",
+      "ordinal": 55,
+      "rule_id": "rule:373e2e0616d19b29",
+      "rule_type": "obligation",
+      "section_id": "section:03ed6510be1a88ef",
+      "section_title": "Referral Criteria - Household Composition",
+      "text": "\uf0b7 Clackamas County will set the Income Limits at 80% AMI or below."
+    },
+    {
+      "modality": "required",
+      "ordinal": 56,
+      "rule_id": "rule:8f89a5e17741b597",
+      "rule_type": "obligation",
+      "section_id": "section:03ed6510be1a88ef",
+      "section_title": "Referral Criteria - Household Composition",
+      "text": "than the 80% AMI will receive an exception to the above requirement."
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 57,
+      "rule_id": "rule:ecbdaa98050e77ea",
+      "rule_type": "eligibility",
+      "section_id": "section:03ed6510be1a88ef",
+      "section_title": "Referral Criteria - Household Composition",
+      "text": "For purposes of the LTRA program referral and eligibility, the definition of homeless is defined as the following:"
+    },
+    {
+      "modality": "forbidden",
+      "ordinal": 58,
+      "rule_id": "rule:3b9e3ba126620eeb",
+      "rule_type": "prohibition",
+      "section_id": "section:03ed6510be1a88ef",
+      "section_title": "Referral Criteria - Household Composition",
+      "text": "definition of homelessness, which stipulates that time spent in an institution must not exceed 90 days to not"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 59,
+      "rule_id": "rule:b9d65c10f3a5c581",
+      "rule_type": "eligibility",
+      "section_id": "section:03ed6510be1a88ef",
+      "section_title": "Referral Criteria - Household Composition",
+      "text": "entry may be for communities and has expanded the definition of eligibility for rapid rehousing as a result."
+    },
+    {
+      "modality": "required",
+      "ordinal": 60,
+      "rule_id": "rule:8a03ff62d2952dc4",
+      "rule_type": "obligation",
+      "section_id": "section:03ed6510be1a88ef",
+      "section_title": "Referral Criteria - Household Composition",
+      "text": "Category 2: Imminent Risk of Homelessness\u2014Individual or family who will imminently lose their primary"
+    },
+    {
+      "modality": "time_bound",
+      "ordinal": 61,
+      "rule_id": "rule:609e0e10da73fbba",
+      "rule_type": "deadline",
+      "section_id": "section:03ed6510be1a88ef",
+      "section_title": "Referral Criteria - Household Composition",
+      "text": "\uf0b7 The primary nighttime residence will be lost within 21 days of the date of application for homeless assistance."
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 62,
+      "rule_id": "rule:5a75cec03c9ff1fe",
+      "rule_type": "eligibility",
+      "section_id": "section:03ed6510be1a88ef",
+      "section_title": "Referral Criteria - Household Composition",
+      "text": "otherwise qualify as homeless under this definition, (literally homeless, imminent risk of homelessness or"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 63,
+      "rule_id": "rule:9026650c46ad77f7",
+      "rule_type": "eligibility",
+      "section_id": "section:b6b896292a494a39",
+      "section_title": "AND",
+      "text": "Is at risk of losing their housing, and does not otherwise qualify as homeless under the above listed (1-4)"
+    },
+    {
+      "modality": "discretionary",
+      "ordinal": 64,
+      "rule_id": "rule:fbc1b1d61f3275a8",
+      "rule_type": "discretion",
+      "section_id": "section:b6b896292a494a39",
+      "section_title": "AND",
+      "text": "High risk may be demonstrated by but is not solely defined as:"
+    },
+    {
+      "modality": "discretionary",
+      "ordinal": 65,
+      "rule_id": "rule:4692df4bf11fc671",
+      "rule_type": "discretion",
+      "section_id": "section:b6b896292a494a39",
+      "section_title": "AND",
+      "text": "reason (\u201cdoubled up\u201d) may demonstrate a high risk of losing current housing."
+    },
+    {
+      "modality": "discretionary",
+      "ordinal": 66,
+      "rule_id": "rule:9e0844327ffc9991",
+      "rule_type": "discretion",
+      "section_id": "section:b6b896292a494a39",
+      "section_title": "AND",
+      "text": "o Owing rental arrears or not having the ability to pay for future rent may also demonstrate high risk status."
+    },
+    {
+      "modality": "discretionary",
+      "ordinal": 67,
+      "rule_id": "rule:c117fe284a9f82d7",
+      "rule_type": "discretion",
+      "section_id": "section:b6b896292a494a39",
+      "section_title": "AND",
+      "text": "may include community-based and culturally specific partner organizations, hospitals, health care and mental"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 68,
+      "rule_id": "rule:ee3ee4a45f9d0cba",
+      "rule_type": "eligibility",
+      "section_id": "section:b6b896292a494a39",
+      "section_title": "AND",
+      "text": "\uf0b7 Each referring agency will need to screen potential participants for program eligibility, according to LTRA"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 69,
+      "rule_id": "rule:c1577ba9cd2dda14",
+      "rule_type": "eligibility",
+      "section_id": "section:b6b896292a494a39",
+      "section_title": "AND",
+      "text": "\uf0b7 Referral pathways should be equitable, inclusive, and effective at connecting eligible participants with"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 70,
+      "rule_id": "rule:f1b17b46d0410db6",
+      "rule_type": "eligibility",
+      "section_id": "section:b6b896292a494a39",
+      "section_title": "AND",
+      "text": "Eligibility guidelines: Eligibility guidelines are based on the priority criteria listed in this policy document."
+    },
+    {
+      "modality": "required",
+      "ordinal": 71,
+      "rule_id": "rule:8c844ce963077374",
+      "rule_type": "obligation",
+      "section_id": "section:b6b896292a494a39",
+      "section_title": "AND",
+      "text": "Tenant screening: Tenant screening will be the responsibility of the participating landlord or property manager."
+    },
+    {
+      "modality": "required",
+      "ordinal": 72,
+      "rule_id": "rule:ec00283268301890",
+      "rule_type": "obligation",
+      "section_id": "section:b6b896292a494a39",
+      "section_title": "AND",
+      "text": "No tenant screening will be conducted by the LTRA program and there will be no screening criteria for mandatory"
+    },
+    {
+      "modality": "required",
+      "ordinal": 73,
+      "rule_id": "rule:5bdf13578cf83691",
+      "rule_type": "obligation",
+      "section_id": "section:b6b896292a494a39",
+      "section_title": "AND",
+      "text": "The only screening conducted by the LTRA program will be a verification system to ensure that"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 74,
+      "rule_id": "rule:8350802ec7c6d348",
+      "rule_type": "eligibility",
+      "section_id": "section:e9c504c01344c693",
+      "section_title": "Document Guidelines",
+      "text": "Documentation guidelines: Documentation requirements for LTRA eligibility will be flexible to minimize"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 75,
+      "rule_id": "rule:bbfdbdcf48d4fa4e",
+      "rule_type": "eligibility",
+      "section_id": "section:e9c504c01344c693",
+      "section_title": "Document Guidelines",
+      "text": "agency containing the applicant\u2019s name and date of birth."
+    },
+    {
+      "modality": "forbidden",
+      "ordinal": 76,
+      "rule_id": "rule:408c0004de9ba02a",
+      "rule_type": "prohibition",
+      "section_id": "section:e9c504c01344c693",
+      "section_title": "Document Guidelines",
+      "text": "Citizenship status and criminal background will not be"
+    },
+    {
+      "modality": "required",
+      "ordinal": 77,
+      "rule_id": "rule:1a0835754db7740c",
+      "rule_type": "obligation",
+      "section_id": "section:e9c504c01344c693",
+      "section_title": "Document Guidelines",
+      "text": "Program guidelines will specify that no social security numbers should be collected and will clarify"
+    }
+  ],
+  "source_id": "document:b9b8827abb6e07a5",
+  "status": "success",
+  "text": "Long-term Rent Assistance (LTRA)\nClackamas County\u2019s Program Policies\nUpdated 09/1/2024 (all previous versions are obsolete)\n\nProgram components that are not explicitly addressed in this Policy framework will be guided by the existing\npolicies and practices of each County\u2019s housing authority and/or County.\n\n1.  Subsidy Amount Determination\n\nThe LTRA program will use one consistent rent calculation for all households with incomes at or below\n30% AMI. Clackamas County LTRA program will use 28.5% of gross income, with deductions (e.g\nChild Care, Disability and dependent allowances, etc.). Assets, student financial aid and incidental\nincome (recycling, plasma, etc.) will not be counted toward the tenant\u2019s income calculation. No rent\nminimums may be established. Flexible rent calculations that require households with incomes between\n30% and 80% AMI to pay more than 28.5% of gross income may be considered.\n\n2.  Utility Allowance Schedule\n\nThe LTRA program will factor in the reasonable cost of utilities paid separately when calculating rent\ncontributions. Program participants will be reimbursed for the amount that this utility cost exceeds their\nrent contribution based on the LTRA Administrator\u2019s utility allowance schedule. Any reimbursement\ntoward the utility costs can be paid directly to the utility company, property management company, or the\nhousehold at the program\u2019s discretion, with local flexibility based on funder requirements, etc. The Utility\nAllowance schedule is updated by the Housing Authority of Clackamas County (HACC) following its\nAdministrative Plan.\n\n3.  Inspections\n\nUnit quality: Inspections to assess unit quality will use Housing Quality Standards (HQS) or National Standards\nfor the Physical Inspection of Real Estate (NSPIRE), when finalized and adopted by HUD and the Housing\nAuthority in its Administrative Plan policies. Units that do not meet HQS or NSPIRE standards will not be able to\nenter into an LTRA contract. HACC will complete the initial inspection, determine whether the unit satisfies HQS\nor NSPIRE, and notify the owner and the family of the determination within 15 days of submission of the Request\nfor Tenancy Approval (RTA). In cases where HACC is not able to complete the inspection within 15 days, the file\nwill be documented as to the reason it was not practicable. All units under contract must have a passing inspection\ncompleted within 60 days of the effective date of the LTRA contract. If the LTRA Administrator permitted an\nLTRA contract to be effective prior to completion of inspection, and the unit cannot pass inspection, the LTRA\ncontract will be dissolved but rent will be covered up to the failed inspection date. Inspections to assess unit\neligibility will be required only for non-regulated units (i.e. units not already subject to habitability standards\nlinked to another government funding source) that do not have other inspection standards and requirements.\n\n  Special housing types:  Special housing types (e.g. SROs, congregate, shared housing) will be eligible,\nwith  the  goal  of  providing  flexibility.  The  LTRA  program  will  clarify  eligible  special  housing  type\nstandards and guidelines.\n\n0\n\n\f4.  Income (Income Increase, Decrease, and Re-evaluations)\n\nIncome reexaminations: Income reexaminations specific to the LTRA program will occur every three\nyears if the head of household is 55 years or older or a person with a disability, and every two years for all\nother households. Interim reexaminations may be conducted prior to this two- or three-year schedule and\nmay be requested by the household. All income changes must be reported by the household. Examples of\nwhen an interim reexamination will be conducted are as follow: if the household\u2019s income decreases,\nincreases from zero income, there is a change in household composition that changes the household\nincome from previous reexamination, or if the contract rent changes.\n\n5.  Household Composition (Adding & Removing a Household Member, and\n\nTemporary Absence)\n\nHousehold Changes During Program\n\nHouseholds over income: The rent contract will be maintained for up to 180 days for participants who\nare determined to be over income (i.e. subsidy is no longer needed because 28.5% of income is higher\nthan the rent, reducing rent assistance to $0).\n\nHousehold membership: Qualifying Household members can be added to an LTRA voucher at any time,\nas long as the household still meets income eligibility and unit capacity requirements. Participants\nresiding in a unit under LTRA contract must receive approval from their Landlord and HACC before a\nnew Household member moves into the unit.\n\nTemporary vacancy: The rent contract will be maintained for up to 180 days if the tenant is temporarily\nout of the unit (e.g. confined to a nursing home, hospital, inpatient treatment or incarcerated).\nAccommodations beyond 180 days will be at the discretion of the program and may include options to be\nplaced at the top of the list when the tenant returns or is released.\n\nUnit transfers: Tenant-based unit transfers are allowed after 12 months of assistance (or sooner if the\nlease is for less than 12 months or the landlord is willing to terminate the lease early). Exceptions will be\nmade for reasons of reasonable accommodation, reasons related to domestic violence or personal safety,\nreasons related to discrimination or harassment in housing, changes in household composition, or other\nreasons as approved by the LTRA Administrator. LTRA subsidy payments will be made through the end\nof the last month of tenancy to allow for overlap with the new tenancy as needed. Transfer lease-up\ntimelines are the same as for initial lease-up. Recertifications are only required with a unit transfer if the\nhousehold composition changes.\n\n6.  Transfers within program jurisdiction\n\nA formal policy regarding LTRA transfers is pending and will be developed upon receiving further\nguidance from OHCS. This section will be updated accordingly once that guidance is available.\n\n1\n\n\f7.  Grievance/Appeals Procedure\n\nAppeals process: Participants will be provided with a formal appeals process that at a minimum must\nconsist of (a) written notice to the participant containing a clear statement of the reasons for termination,\n(b) a review of the decision, in which the participant is given the opportunity to present written or oral\nobjections before a person other than the person (or a subordinate of that person) who made or approved\nthe termination decision, and (c) prompt written notice of the final decision to the participant.\n\n8.  Ending Program Participation\n\nDiscontinuation of Rent Assistance\n\nSupporting housing stability: The LTRA program is guided by Housing First principles. All possible\nefforts are made to avoid a loss of rental assistance or return to homelessness. LTRA Administrators,\nservice providers and counties are expected to work together to preserve participant access to the program\nand prevent the discontinuation of rent assistance. Program partners work together to preserve participant\naccess to the program by (a) providing all participants with written copies of program rules at move-in,\n(b) ensuring participants are connected with appropriate supportive services to support housing stability,\n(c) notifying participants in writing when their rent assistance is at risk of being discontinued and working\nwith them to resolve the issues, and (d) providing access to reasonable accommodations and supportive\nservices, and using case conferencing as needed to prevent program discontinuation.\n\nFactors that put a participant at risk of losing rent assistance:\n\nAn LTRA participant may only be discontinued from the program due to serious violations of program\nrules or conditions of occupancy. All extenuating circumstances are considered to ensure that a\nparticipant\u2019s rent assistance is discontinued only in the most severe cases. Some examples of potential\ngrounds for discontinuation of assistance include:\n\n\uf0b7  Participant no longer meet the eligibility guidelines for LTRA assistance.\n\uf0b7  Serious or repeated lease violations that threaten the safety and stability of the community such as\n\nsignificant intentional damage to the unit/premises or serious acts of violence, or threat of\nviolence, against another person.\n\n\uf0b7  Serious or repeated violations of program rules that jeopardize the continued administration of the\n\nvoucher.\n\n\uf0b7  Serious or repeated violent, racist, threatening, harassing or abusive behavior toward staff of\n\nLTRA Administrator, services provider, or other program partners.\n\n9.  Program Reinstatement\n\nEnd of Assistance does not bar the participant from receiving further assistance at a later date.\n\nTo be reinstated, the participant will be instructed to work with CHA (Coordinated Housing Access) for\nplacement on appropriate waiting lists.\n\n2\n\n\f10.  Application Process\n\nPriority:\n\nPriority will be given to the following household applicants under LTRA:\n\nPriority One:\nThe households that will be rehoused via EO 23-02 and HB5019 will have first eligibility priority for LTRA\nassistance.\n\nPriority Two:\nAdditional households referred from Coordinated Housing Access (Clackamas County\u2019s Coordinated Entry) and\nproviders with MOUs for referral to LTRA will have second eligibility priority for LTRA assistance.\n\nTenant Referral, Eligibility and Documentation\n\nReferral process: The LTRA program will receive referrals through a flexible process with multiple referral\npaths, to be determined at the county level. The counties' coordinated access systems will be the primary referral\nsource for partnering agencies. Other referring agencies may include community-based and culturally-specific\npartner organizations. Each referring agency will screen potential participants for LTRA voucher eligibility,\naccording to the State eligibility guidelines below. Counties will be held accountable for ensuring referral\npathways are equitable, inclusive and effective at connecting eligible participants with appropriate housing\noptions and supportive services.\n\nReferral Criteria - General\n\n\uf0b7  The households that will be rehoused via EO 23-02 and HB5019 will have priority for the LTRA program and\nwill not require re-screening for eligibility to include income, Fair Market Rent (FMR) requirements, and rent\nreasonable standards.\n\n\uf0b7  For the LTRA program, there is not a requirement to obtain and verify Social Security Numbers (SSN) and\ndocumentation evidencing citizen status before admitting the household to the program. The household will\nbe responsible to provide custody paperwork and birth certificate for any minor(s) in the household.\n\nReferral Criteria - Household Composition\n\n\uf0b7  Each household must identify the individuals to be included in the household at the time of application and\n\nmust notify the program Administrator and its staff if the household composition changes.\n\n\uf0b7  Household composition may include but not be limited to the following, regardless of actual perceived sexual\n\norientation, gender identity, or marital status.\n\no  A single person, who may be an elderly person, displaced person, disabled person, near elderly\n\nperson, or any other single person.\n\no  A group of people residing together. Such group includes but is not limited to a family with or\n\nwithout children (a child who is temporarily away from the home because of placement in foster care\nis considered a member of the family), an elderly family, a near-elderly family, a disabled family, a\ndisplaced family, or the remaining member of a family.\n\n3\n\n\fReferral Criteria \u2013 Income Limits\n\n\uf0b7  Clackamas County will set the Income Limits at 80% AMI or below.\n\n\uf0b7  Households rehoused under EO 23-02 who have been determined to need LTRA services based upon the\n\napproved Community Plan methodology for determining need for this population and have higher incomes\nthan the 80% AMI will receive an exception to the above requirement.\n\nReferral Criteria \u2013 Living Situation\n\n For purposes of the LTRA program referral and eligibility, the definition of homeless is defined as the following:\n\nCategory 1: Literally Homeless\u2014Individual or family who lacks a fixed, regular, and adequate nighttime\n\nresidence, meaning:\n\n\uf0b7  Living in a primary nighttime residence that is a public or private place not designed for human habitation\n(including, but not exclusive to, a car, park, abandoned building, bus or train station, airport or camping\nground).\n\n\uf0b7  Living in a publicly or privately operated shelter designated to provide temporary living arrangements\n\n(including congregate shelters, transitional shelter, and hotels or motels paid for by charitable organizations or\nby federal, state, or local government programs), OR\n\n\uf0b7  When entering homelessness from an institutional care facility (i.e., hospitals, jails, substance abuse or mental\nhealth treatment facilities, or other similar facility) -To reduce barriers, there is no maximum time limit for\ndays spent in institutional care that would cause ineligibility for EO rapid rehousing. This differs from HUD's\ndefinition of homelessness, which stipulates that time spent in an institution must not exceed 90 days to not\nconstitute a break in homelessness. OHCS acknowledges the importance of recognizing where the point of\nentry may be for communities and has expanded the definition of eligibility for rapid rehousing as a result.\n\nCategory 2: Imminent Risk of Homelessness\u2014Individual or family who will imminently lose their primary\nnighttime residence provided that:\n\uf0b7  The primary nighttime residence will be lost within 21 days of the date of application for homeless assistance.\n\uf0b7  No subsequent residence has been identified; AND\n\uf0b7  The individual or family lacks the resources or support networks (e.g., family, friends, faith-based or other\nsocial networks) needed to obtain other permanent housing. 11 Category 3: Homeless Under Other Federal\nStatutes\u2014Unaccompanied youth under 25 years of age, or families with children and youth, who do not\notherwise qualify as homeless under this definition, (literally homeless, imminent risk of homelessness or\nfleeing/attempting to flee domestic violence) but who:\n\n\uf0b7  Are defined as homeless under other listed federal statutes. \u2022 Have not had a lease, ownership interest, or\n\noccupancy agreement in permanent housing during the 60 days prior to the program assistance application.\n\n\uf0b7  Have experienced persistent instability as measured by two moves or more during the preceding 60 days;\n\nAND\n\n\uf0b7  Can be expected to continue in such status for an extended period due to special needs or barriers.\n\nCategory 4: Fleeing/Attempting to Flee Domestic Violence\u2014Individual or family who:\n\uf0b7\n\nIs fleeing, or is attempting to flee, domestic violence; sexual assault, stalking, labor, and human trafficking, or\nother dangerous or life-threatening conditions that relate to violence.\n\nCategory 5: Unstably Housed\u2014Individual or family who:\n\n4\n\n\f\uf0b7\n\nIs at risk of losing their housing, and does not otherwise qualify as homeless under the above listed (1-4)\ncategories, provided that:\n\n\uf0b7  They have been notified to vacate current residence or otherwise demonstrate high risk* of losing current\n\nhousing; AND\n\n\uf0b7  Lack the resources or support networks to obtain other permanent housing.\nHigh risk may be demonstrated by but is not solely defined as:\n\no  having experienced a loss of income or other threat to housing stability.\no\n\nIn addition, sharing housing of other persons due to loss of housing, economic hardship, or a similar\nreason (\u201cdoubled up\u201d) may demonstrate a high risk of losing current housing.\n\no  Owing rental arrears or not having the ability to pay for future rent may also demonstrate high risk status.\no\no\n\n Previously experience of homelessness.\n Time limited rental emergency assistance programs that are coming to an end or combination of\nextremely low income and severe cost burden.\n\n\uf0b7  Communities should establish a flexible process with multiple referral paths.\n\uf0b7  The Counties coordinated access systems should be the primary referring agencies. Other referring agencies\n\nmay include community-based and culturally specific partner organizations, hospitals, health care and mental\nhealth institutions.\n\n\uf0b7  Each referring agency will need to screen potential participants for program eligibility, according to LTRA\n\nguidelines.\n\n\uf0b7  Referral pathways should be equitable, inclusive, and effective at connecting eligible participants with\n\nappropriate housing options and supportive services.\n\nEligibility guidelines: Eligibility guidelines are based on the priority criteria listed in this policy document.\n\nTenant screening: Tenant screening will be the responsibility of the participating landlord or property manager.\nNo tenant screening will be conducted by the LTRA program and there will be no screening criteria for mandatory\ndenials. The only screening conducted by the LTRA program will be a verification system to ensure that\napplicants are not already receiving long-term rent assistance in another county or program.\n\n11.  Document Guidelines\n\nDocumentation guidelines: Documentation requirements for LTRA eligibility will be flexible to minimize\nbarriers. Government issued identification is preferred, but this can include documentation from any government\nagency containing the applicant\u2019s name and date of birth. Citizenship status and criminal background will not be\nassessed. Program guidelines will specify that no social security numbers should be collected and will clarify\nalignment with HMIS standards. A Birth Certificate is required for any household member under 18 years of age\nto verify age and identity.\n\n5\n\n"
+}

@@ -1,0 +1,3563 @@
+{
+  "document": {
+    "backend": "markitdown",
+    "document_id": "document:4197fe6dbb7892b9",
+    "source_path": "/home/barberb/HACC/hacc_website/d6695a2f-e5fa-4f14-afe5-96a1ab01dfad",
+    "title": "Housing Authority of Clackamas County"
+  },
+  "entities": [
+    {
+      "attributes": {
+        "backend": "markitdown",
+        "file_name": "d6695a2f-e5fa-4f14-afe5-96a1ab01dfad",
+        "source_path": "/home/barberb/HACC/hacc_website/d6695a2f-e5fa-4f14-afe5-96a1ab01dfad"
+      },
+      "confidence": 1.0,
+      "id": "document:4197fe6dbb7892b9",
+      "name": "Housing Authority of Clackamas County",
+      "type": "policy_document"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 0
+      },
+      "confidence": 1.0,
+      "id": "section:d3afbce9b36c7db9",
+      "name": "Document Overview",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 1
+      },
+      "confidence": 1.0,
+      "id": "section:3a04bf4264c01c52",
+      "name": "Housing Authority of Clackamas County",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 2
+      },
+      "confidence": 1.0,
+      "id": "section:22df0204613d2eb0",
+      "name": "PROFICIENT PERSONS",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 3
+      },
+      "confidence": 1.0,
+      "id": "section:e15ec7756feb1702",
+      "name": "Effective Immediately",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 4
+      },
+      "confidence": 1.0,
+      "id": "section:1a902f16a9876d76",
+      "name": "Introduction",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 5
+      },
+      "confidence": 1.0,
+      "id": "section:300d51aec82f490f",
+      "name": "Section 8 Housing Choice Voucher (HCV)",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 6
+      },
+      "confidence": 1.0,
+      "id": "section:6dfdd5346cc5ccca",
+      "name": "Public Housing",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 7
+      },
+      "confidence": 1.0,
+      "id": "section:762d3c097a836632",
+      "name": "Shelter Plus Care",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 8
+      },
+      "confidence": 1.0,
+      "id": "section:e49b5c50ad6efc5d",
+      "name": "Jannsen Road Transitional Housing",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 9
+      },
+      "confidence": 1.0,
+      "id": "section:511c0b8c83e0ed3c",
+      "name": "HCV Family Self-Sufficiency",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 10
+      },
+      "confidence": 1.0,
+      "id": "section:0113d75cc6bf3214",
+      "name": "Definition of LEP Person",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 11
+      },
+      "confidence": 1.0,
+      "id": "section:26f20065b2b7b22c",
+      "name": "Identifying LEP Individuals who Need Language Assistance",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 12
+      },
+      "confidence": 1.0,
+      "id": "section:82989b6e1fef9006",
+      "name": "Language Assistance Measures",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 13
+      },
+      "confidence": 1.0,
+      "id": "section:b2451361127e12c8",
+      "name": "Types of Language Services Available",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 14
+      },
+      "confidence": 1.0,
+      "id": "section:d180304f08653adc",
+      "name": "Oral Language Services (Interpretation)",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 15
+      },
+      "confidence": 1.0,
+      "id": "section:f51a53b10825ec05",
+      "name": "Written Language Services (Translation)",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 16
+      },
+      "confidence": 1.0,
+      "id": "section:97fda681aeffabea",
+      "name": "Telephone Services",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 17
+      },
+      "confidence": 1.0,
+      "id": "section:a6f879a544d8cf8d",
+      "name": "On-Site Visitors",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 18
+      },
+      "confidence": 1.0,
+      "id": "section:972ecdfa37cf9735",
+      "name": "Written Communications",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 19
+      },
+      "confidence": 1.0,
+      "id": "section:eb3f20a3c8d5d1bb",
+      "name": "Training Staff",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 20
+      },
+      "confidence": 1.0,
+      "id": "section:6260ab9a024adb63",
+      "name": "HACC will provide training to ensure that:",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 21
+      },
+      "confidence": 1.0,
+      "id": "section:d5491abfc77c969b",
+      "name": "Providing Notice to LEP Persons",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 22
+      },
+      "confidence": 1.0,
+      "id": "section:f99ce3d2adaa75ff",
+      "name": "Monitoring and Updating LEP Plan",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 23
+      },
+      "confidence": 1.0,
+      "id": "section:2121d8e60df7aaae",
+      "name": "Addendum to Plan",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 24
+      },
+      "confidence": 1.0,
+      "id": "section:4d40daed76017d94",
+      "name": "Population",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 25
+      },
+      "confidence": 1.0,
+      "id": "section:d406c1fed934492f",
+      "name": "Translated",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 26
+      },
+      "confidence": 1.0,
+      "id": "section:40f93a4879af9a76",
+      "name": "Into",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 27
+      },
+      "confidence": 1.0,
+      "id": "section:f89e3fef2fb6e2b5",
+      "name": "Currently",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 28
+      },
+      "confidence": 1.0,
+      "id": "section:d406c1fed934492f",
+      "name": "Translated",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 29
+      },
+      "confidence": 1.0,
+      "id": "section:40f93a4879af9a76",
+      "name": "Into",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 30
+      },
+      "confidence": 1.0,
+      "id": "section:1e73ad9dd1c9ae77",
+      "name": "Signs",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 31
+      },
+      "confidence": 1.0,
+      "id": "section:e6e0811f4ed8176e",
+      "name": "Posted",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 32
+      },
+      "confidence": 1.0,
+      "id": "section:f36e01c85341c942",
+      "name": "Place for",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 33
+      },
+      "confidence": 1.0,
+      "id": "section:61c2cb3db9ccc171",
+      "name": "LEP Callers",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 34
+      },
+      "confidence": 1.0,
+      "id": "section:f36e01c85341c942",
+      "name": "Place for",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 35
+      },
+      "confidence": 1.0,
+      "id": "section:3a6432295689b574",
+      "name": "LEP",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 36
+      },
+      "confidence": 1.0,
+      "id": "section:32e3b09dc483652e",
+      "name": "Visitors",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 37
+      },
+      "confidence": 1.0,
+      "id": "section:1fb6b8039655d348",
+      "name": "Training on",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 38
+      },
+      "confidence": 1.0,
+      "id": "section:c376dc991c801330",
+      "name": "Working",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 39
+      },
+      "confidence": 1.0,
+      "id": "section:77e86ae5348fcac1",
+      "name": "Interpreters",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 40
+      },
+      "confidence": 1.0,
+      "id": "section:bf899ebb709d05ae",
+      "name": "Listing of Forms Available in Spanish or Russian",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 41
+      },
+      "confidence": 1.0,
+      "id": "section:f1f589a32f3c7d6f",
+      "name": "Reasonable Accommodation",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 42
+      },
+      "confidence": 1.0,
+      "id": "section:685d642d916f9a5d",
+      "name": "Community Service X X (submitted 11/7/07 for completion)",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 43
+      },
+      "confidence": 1.0,
+      "id": "section:f1f589a32f3c7d6f",
+      "name": "Reasonable Accommodation",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 44
+      },
+      "confidence": 1.0,
+      "id": "section:771a67702d0c592e",
+      "name": "FORMS WE SENT TO BE TRANSLATED FOR RECERT PACKETS",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "ordinal": 45
+      },
+      "confidence": 1.0,
+      "id": "section:4bc38804c416bdb4",
+      "name": "RUSSIAN SPANISH",
+      "type": "policy_section"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "eligibility",
+        "ordinal": 0,
+        "rule_type": "eligibility",
+        "section_id": "section:1a902f16a9876d76",
+        "section_title": "Introduction",
+        "text": "persons in the eligible service population, the frequency with which LEP individuals come in contact with the program, the"
+      },
+      "confidence": 0.9,
+      "id": "rule:da9343826928d683",
+      "name": "persons in the eligible service population, the frequency with which LEP individuals come in contact with the program, t",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 1,
+        "rule_type": "obligation",
+        "section_id": "section:26f20065b2b7b22c",
+        "section_title": "Identifying LEP Individuals who Need Language Assistance",
+        "text": "HACC shall take reasonable steps to identify LEP persons served or encountered using the following methods:"
+      },
+      "confidence": 0.9,
+      "id": "rule:5f8065ccc055bbff",
+      "name": "HACC shall take reasonable steps to identify LEP persons served or encountered using the following methods:",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 2,
+        "rule_type": "obligation",
+        "section_id": "section:26f20065b2b7b22c",
+        "section_title": "Identifying LEP Individuals who Need Language Assistance",
+        "text": "\u2022 Using the Census Bureau Language Identification Flashcards to invite LEP persons to identify their language needs to"
+      },
+      "confidence": 0.9,
+      "id": "rule:29e4bd2e3c0ef9e5",
+      "name": "\u2022 Using the Census Bureau Language Identification Flashcards to invite LEP persons to identify their language needs to",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "provider_entity_id": "65d59d5d-6bb7-4f2c-91ad-993ef78718f1",
+        "source_text": "\u2022 Using the Census Bureau Language Identification Flashcards to invite LEP perso"
+      },
+      "confidence": 0.8,
+      "id": "concept:f89a9b33173b1480",
+      "name": "Census Bureau Language Identification Flashcards",
+      "type": "person"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 3,
+        "rule_type": "obligation",
+        "section_id": "section:26f20065b2b7b22c",
+        "section_title": "Identifying LEP Individuals who Need Language Assistance",
+        "text": "staff; these cards will be available at all HACC offices and application locations."
+      },
+      "confidence": 0.9,
+      "id": "rule:548e9ef4cc2653e1",
+      "name": "staff; these cards will be available at all HACC offices and application locations.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 4,
+        "rule_type": "obligation",
+        "section_id": "section:b2451361127e12c8",
+        "section_title": "Types of Language Services Available",
+        "text": "HACC shall take reasonable steps to provide oral and written language services as described in this section."
+      },
+      "confidence": 0.9,
+      "id": "rule:44bd92595d0cf0b6",
+      "name": "HACC shall take reasonable steps to provide oral and written language services as described in this section.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 5,
+        "rule_type": "obligation",
+        "section_id": "section:b2451361127e12c8",
+        "section_title": "Types of Language Services Available",
+        "text": "what language services should be provided, HACC shall consider the following factors:"
+      },
+      "confidence": 0.9,
+      "id": "rule:4e5fe460cc82c0b4",
+      "name": "what language services should be provided, HACC shall consider the following factors:",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "eligibility",
+        "ordinal": 6,
+        "rule_type": "eligibility",
+        "section_id": "section:b2451361127e12c8",
+        "section_title": "Types of Language Services Available",
+        "text": "The number or Proportion of LEP Persons Served or Encountered in the Eligible Service Population"
+      },
+      "confidence": 0.9,
+      "id": "rule:f0e0734f70c8ea83",
+      "name": "The number or Proportion of LEP Persons Served or Encountered in the Eligible Service Population",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "provider_entity_id": "79b4c23e-9087-4bff-9057-0727b653ff3b",
+        "source_text": "r Proportion of LEP Persons Served or Encountered in t"
+      },
+      "confidence": 0.8,
+      "id": "concept:1ef4b547b6b80be2",
+      "name": "Persons Served",
+      "type": "person"
+    },
+    {
+      "attributes": {
+        "provider_entity_id": "c5e2408c-94e7-4830-87d8-4b19f1461ed7",
+        "source_text": "Encountered in the Eligible Service Population"
+      },
+      "confidence": 0.8,
+      "id": "concept:e5e7632ccb2b1810",
+      "name": "Eligible Service Population",
+      "type": "person"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 7,
+        "rule_type": "obligation",
+        "section_id": "section:b2451361127e12c8",
+        "section_title": "Types of Language Services Available",
+        "text": "HACC shall examine its prior experiences with LEP encounters to determine the breadth and scope of language services"
+      },
+      "confidence": 0.9,
+      "id": "rule:ec685dfbd89c234b",
+      "name": "HACC shall examine its prior experiences with LEP encounters to determine the breadth and scope of language services",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 8,
+        "rule_type": "obligation",
+        "section_id": "section:b2451361127e12c8",
+        "section_title": "Types of Language Services Available",
+        "text": "HACC shall also consult other data to refine or validate its prior experience, including the latest census data for the"
+      },
+      "confidence": 0.9,
+      "id": "rule:7140304b6fbc733b",
+      "name": "HACC shall also consult other data to refine or validate its prior experience, including the latest census data for the",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 9,
+        "rule_type": "obligation",
+        "section_id": "section:b2451361127e12c8",
+        "section_title": "Types of Language Services Available",
+        "text": "Effectively immediately, HACC will update applications to identify LEP persons and track in HAB LEP families"
+      },
+      "confidence": 0.9,
+      "id": "rule:f92d08b70926ab8e",
+      "name": "Effectively immediately, HACC will update applications to identify LEP persons and track in HAB LEP families",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 10,
+        "rule_type": "obligation",
+        "section_id": "section:b2451361127e12c8",
+        "section_title": "Types of Language Services Available",
+        "text": "HACC shall take reasonable steps to assess, as accurately as possible, the frequency of contact with LEP persons from"
+      },
+      "confidence": 0.9,
+      "id": "rule:22cf14adeeb19d53",
+      "name": "HACC shall take reasonable steps to assess, as accurately as possible, the frequency of contact with LEP persons from",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 11,
+        "rule_type": "obligation",
+        "section_id": "section:b2451361127e12c8",
+        "section_title": "Types of Language Services Available",
+        "text": "Each month, HACC front office staff will document encounters with LEP persons using U.S."
+      },
+      "confidence": 0.9,
+      "id": "rule:35a035da112df23f",
+      "name": "Each month, HACC front office staff will document encounters with LEP persons using U.S.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "discretionary",
+        "ordinal": 12,
+        "rule_type": "discretion",
+        "section_id": "section:b2451361127e12c8",
+        "section_title": "Types of Language Services Available",
+        "text": "Less frequent contact with different language groups may suggest a different"
+      },
+      "confidence": 0.9,
+      "id": "rule:b8adf94d1893951b",
+      "name": "Less frequent contact with different language groups may suggest a different",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "discretionary",
+        "ordinal": 13,
+        "rule_type": "discretion",
+        "section_id": "section:b2451361127e12c8",
+        "section_title": "Types of Language Services Available",
+        "text": "the LEP persons, the more likely language services may be needed."
+      },
+      "confidence": 0.9,
+      "id": "rule:b55de4e19329d552",
+      "name": "the LEP persons, the more likely language services may be needed.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "discretionary",
+        "ordinal": 14,
+        "rule_type": "discretion",
+        "section_id": "section:b2451361127e12c8",
+        "section_title": "Types of Language Services Available",
+        "text": "persons, the availability of resources may limit the provision of language services in some instances."
+      },
+      "confidence": 0.9,
+      "id": "rule:e7ef3f13ba8ad81a",
+      "name": "persons, the availability of resources may limit the provision of language services in some instances.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 15,
+        "rule_type": "obligation",
+        "section_id": "section:b2451361127e12c8",
+        "section_title": "Types of Language Services Available",
+        "text": "HACC shall explore the most cost-effective"
+      },
+      "confidence": 0.9,
+      "id": "rule:d9cb00c0cd9df0c1",
+      "name": "HACC shall explore the most cost-effective",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 16,
+        "rule_type": "obligation",
+        "section_id": "section:d180304f08653adc",
+        "section_title": "Oral Language Services (Interpretation)",
+        "text": "HACC shall use contract interpreters and bilingual HACC staff to provide the services."
+      },
+      "confidence": 0.9,
+      "id": "rule:8ecef5023eedd499",
+      "name": "HACC shall use contract interpreters and bilingual HACC staff to provide the services.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "discretionary",
+        "ordinal": 17,
+        "rule_type": "discretion",
+        "section_id": "section:d180304f08653adc",
+        "section_title": "Oral Language Services (Interpretation)",
+        "text": "HACC may, at its discretion, choose"
+      },
+      "confidence": 0.9,
+      "id": "rule:be3492d26e677a3f",
+      "name": "HACC may, at its discretion, choose",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 18,
+        "rule_type": "obligation",
+        "section_id": "section:d180304f08653adc",
+        "section_title": "Oral Language Services (Interpretation)",
+        "text": "HACC shall take reasonable steps to ensure competency of the language service provider."
+      },
+      "confidence": 0.9,
+      "id": "rule:02023b0cad5829f8",
+      "name": "HACC shall take reasonable steps to ensure competency of the language service provider.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 19,
+        "rule_type": "obligation",
+        "section_id": "section:d180304f08653adc",
+        "section_title": "Oral Language Services (Interpretation)",
+        "text": "assistance, HACC shall use the following general criteria to ensure effective communication with LEP persons:"
+      },
+      "confidence": 0.9,
+      "id": "rule:4c1f2339657b8417",
+      "name": "assistance, HACC shall use the following general criteria to ensure effective communication with LEP persons:",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 20,
+        "rule_type": "obligation",
+        "section_id": "section:d180304f08653adc",
+        "section_title": "Oral Language Services (Interpretation)",
+        "text": "When interpretation is needed and is reasonable, it shall be provided in a timely manner so as to avoid the effective denial of a"
+      },
+      "confidence": 0.9,
+      "id": "rule:9c7424194c0fe51f",
+      "name": "When interpretation is needed and is reasonable, it shall be provided in a timely manner so as to avoid the effective de",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "discretionary",
+        "ordinal": 21,
+        "rule_type": "discretion",
+        "section_id": "section:d180304f08653adc",
+        "section_title": "Oral Language Services (Interpretation)",
+        "text": "language assistance may be reasonably delayed."
+      },
+      "confidence": 0.9,
+      "id": "rule:c8b1d4ef7405660b",
+      "name": "language assistance may be reasonably delayed.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 22,
+        "rule_type": "obligation",
+        "section_id": "section:f51a53b10825ec05",
+        "section_title": "Written Language Services (Translation)",
+        "text": "HACC shall take reasonable steps to provide written translations of vital documents that list program rules and instructions"
+      },
+      "confidence": 0.9,
+      "id": "rule:34a8ccd005652d15",
+      "name": "HACC shall take reasonable steps to provide written translations of vital documents that list program rules and instruct",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "eligibility",
+        "ordinal": 23,
+        "rule_type": "eligibility",
+        "section_id": "section:f51a53b10825ec05",
+        "section_title": "Written Language Services (Translation)",
+        "text": "for each eligible LEP language group that constitutes 5% or 1,000 persons, whichever is less, of program"
+      },
+      "confidence": 0.9,
+      "id": "rule:b49fc854bf1268cd",
+      "name": "for each eligible LEP language group that constitutes 5% or 1,000 persons, whichever is less, of program",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "discretionary",
+        "ordinal": 24,
+        "rule_type": "discretion",
+        "section_id": "section:f51a53b10825ec05",
+        "section_title": "Written Language Services (Translation)",
+        "text": "Whether or not a document (or information it solicits) is vital may depend upon the"
+      },
+      "confidence": 0.9,
+      "id": "rule:75bed1476f299755",
+      "name": "Whether or not a document (or information it solicits) is vital may depend upon the",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "eligibility",
+        "ordinal": 25,
+        "rule_type": "eligibility",
+        "section_id": "section:f51a53b10825ec05",
+        "section_title": "Written Language Services (Translation)",
+        "text": "All documents that require action from an applicant or participant shall include a statement in the languages of eligible groups"
+      },
+      "confidence": 0.9,
+      "id": "rule:58acc1356d98603b",
+      "name": "All documents that require action from an applicant or participant shall include a statement in the languages of eligibl",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 26,
+        "rule_type": "obligation",
+        "section_id": "section:f51a53b10825ec05",
+        "section_title": "Written Language Services (Translation)",
+        "text": "If you need assistance, please contact us immediately.\u201d HACC shall take"
+      },
+      "confidence": 0.9,
+      "id": "rule:6ec6c575f5a71de7",
+      "name": "If you need assistance, please contact us immediately.\u201d HACC shall take",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "eligibility",
+        "ordinal": 27,
+        "rule_type": "eligibility",
+        "section_id": "section:f51a53b10825ec05",
+        "section_title": "Written Language Services (Translation)",
+        "text": "For all documents available in the languages of eligible groups, the English version of the documents shall include a statement"
+      },
+      "confidence": 0.9,
+      "id": "rule:f02a507ca8a1c5b4",
+      "name": "For all documents available in the languages of eligible groups, the English version of the documents shall include a st",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "eligibility",
+        "ordinal": 28,
+        "rule_type": "eligibility",
+        "section_id": "section:f51a53b10825ec05",
+        "section_title": "Written Language Services (Translation)",
+        "text": "on the bottom in the languages of eligible groups reading \u201cThis form is available in (language) upon request.\u201d"
+      },
+      "confidence": 0.9,
+      "id": "rule:77d775d8e2f682d8",
+      "name": "on the bottom in the languages of eligible groups reading \u201cThis form is available in (language) upon request.\u201d",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "forbidden",
+        "ordinal": 29,
+        "rule_type": "prohibition",
+        "section_id": "section:f51a53b10825ec05",
+        "section_title": "Written Language Services (Translation)",
+        "text": "For LEP language groups that constitute less than of program applicants, participants or residents, HACC will not translate"
+      },
+      "confidence": 0.9,
+      "id": "rule:200a3e5c31c132dc",
+      "name": "For LEP language groups that constitute less than of program applicants, participants or residents, HACC will not transl",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 30,
+        "rule_type": "obligation",
+        "section_id": "section:f51a53b10825ec05",
+        "section_title": "Written Language Services (Translation)",
+        "text": "written materials, but shall take reasonable steps to provide oral interpretation of the written materials upon request."
+      },
+      "confidence": 0.9,
+      "id": "rule:d06736ea0608cda8",
+      "name": "written materials, but shall take reasonable steps to provide oral interpretation of the written materials upon request.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 31,
+        "rule_type": "obligation",
+        "section_id": "section:f51a53b10825ec05",
+        "section_title": "Written Language Services (Translation)",
+        "text": "As with oral interpreters, HACC will take reasonable steps to ensure competency of translators of written documents."
+      },
+      "confidence": 0.9,
+      "id": "rule:57ab5c7f6a3ce9ac",
+      "name": "As with oral interpreters, HACC will take reasonable steps to ensure competency of translators of written documents.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 32,
+        "rule_type": "obligation",
+        "section_id": "section:f51a53b10825ec05",
+        "section_title": "Written Language Services (Translation)",
+        "text": "legal or other vital documents are involved, HACC shall make a reasonable effort to use certified translators."
+      },
+      "confidence": 0.9,
+      "id": "rule:e8bf8d7a89ce18ce",
+      "name": "legal or other vital documents are involved, HACC shall make a reasonable effort to use certified translators.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "eligibility",
+        "ordinal": 33,
+        "rule_type": "eligibility",
+        "section_id": "section:97fda681aeffabea",
+        "section_title": "Telephone Services",
+        "text": "When calls are received by an LEP applicant, participant or resident, HACC staff will make every effort to determine the"
+      },
+      "confidence": 0.9,
+      "id": "rule:a54a44ce9d17ff5e",
+      "name": "When calls are received by an LEP applicant, participant or resident, HACC staff will make every effort to determine the",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 34,
+        "rule_type": "obligation",
+        "section_id": "section:97fda681aeffabea",
+        "section_title": "Telephone Services",
+        "text": "Calls will be forwarded to HACC staff who speak the same language as the caller for"
+      },
+      "confidence": 0.9,
+      "id": "rule:0e5b26fa999ba243",
+      "name": "Calls will be forwarded to HACC staff who speak the same language as the caller for",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 35,
+        "rule_type": "obligation",
+        "section_id": "section:97fda681aeffabea",
+        "section_title": "Telephone Services",
+        "text": "If HACC staff are not available at the time of the call, the caller will be requested to call back when an interpreter can be"
+      },
+      "confidence": 0.9,
+      "id": "rule:dc6857154c83f08f",
+      "name": "If HACC staff are not available at the time of the call, the caller will be requested to call back when an interpreter c",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "eligibility",
+        "ordinal": 36,
+        "rule_type": "eligibility",
+        "section_id": "section:a6f879a544d8cf8d",
+        "section_title": "On-Site Visitors",
+        "text": "When an LEP applicant, participant or resident comes to a HACC office, HACC staff will make every effort to determine the"
+      },
+      "confidence": 0.9,
+      "id": "rule:999f989eb9e1d2d5",
+      "name": "When an LEP applicant, participant or resident comes to a HACC office, HACC staff will make every effort to determine th",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "eligibility",
+        "ordinal": 37,
+        "rule_type": "eligibility",
+        "section_id": "section:a6f879a544d8cf8d",
+        "section_title": "On-Site Visitors",
+        "text": "who speak the language are available to assist the applicant, participant or resident, they will do so, either in person or via"
+      },
+      "confidence": 0.9,
+      "id": "rule:bcba597dd640caa8",
+      "name": "who speak the language are available to assist the applicant, participant or resident, they will do so, either in person",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 38,
+        "rule_type": "obligation",
+        "section_id": "section:a6f879a544d8cf8d",
+        "section_title": "On-Site Visitors",
+        "text": "If HACC staff are not available at the time of the visit, the person will be requested to come back when an interpreter can be"
+      },
+      "confidence": 0.9,
+      "id": "rule:7ad963a1a500341e",
+      "name": "If HACC staff are not available at the time of the visit, the person will be requested to come back when an interpreter ",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 39,
+        "rule_type": "obligation",
+        "section_id": "section:a6f879a544d8cf8d",
+        "section_title": "On-Site Visitors",
+        "text": "An interpreter will be secured within a reasonable time frame."
+      },
+      "confidence": 0.9,
+      "id": "rule:53097e73acf4d222",
+      "name": "An interpreter will be secured within a reasonable time frame.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 40,
+        "rule_type": "obligation",
+        "section_id": "section:972ecdfa37cf9735",
+        "section_title": "Written Communications",
+        "text": "Correspondence received in languages other than English will be translated by HACC staff who speak the language, where"
+      },
+      "confidence": 0.9,
+      "id": "rule:c81cd29f0f4e27b6",
+      "name": "Correspondence received in languages other than English will be translated by HACC staff who speak the language, where",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 41,
+        "rule_type": "obligation",
+        "section_id": "section:972ecdfa37cf9735",
+        "section_title": "Written Communications",
+        "text": "Responses will be translated into the same language as the letter that"
+      },
+      "confidence": 0.9,
+      "id": "rule:15df94517574c56c",
+      "name": "Responses will be translated into the same language as the letter that",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 42,
+        "rule_type": "obligation",
+        "section_id": "section:eb3f20a3c8d5d1bb",
+        "section_title": "Training Staff",
+        "text": "HACC will ensure that staff knows the obligation to provide meaningful access to information and services to LEP persons."
+      },
+      "confidence": 0.9,
+      "id": "rule:6a37e13f93c52393",
+      "name": "HACC will ensure that staff knows the obligation to provide meaningful access to information and services to LEP persons",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 43,
+        "rule_type": "obligation",
+        "section_id": "section:6260ab9a024adb63",
+        "section_title": "HACC will provide training to ensure that:",
+        "text": "The training will be included as a part of departmental orientation for new employees."
+      },
+      "confidence": 0.9,
+      "id": "rule:cd4f8fe9c1720aa6",
+      "name": "The training will be included as a part of departmental orientation for new employees.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 44,
+        "rule_type": "obligation",
+        "section_id": "section:6260ab9a024adb63",
+        "section_title": "HACC will provide training to ensure that:",
+        "text": "Staff will be provided with listing of forms available in languages other than English, bilingual HACC staff and contact"
+      },
+      "confidence": 0.9,
+      "id": "rule:ef535cf3e1fe26c0",
+      "name": "Staff will be provided with listing of forms available in languages other than English, bilingual HACC staff and contact",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 45,
+        "rule_type": "obligation",
+        "section_id": "section:d5491abfc77c969b",
+        "section_title": "Providing Notice to LEP Persons",
+        "text": "HACC shall provide a notice to LEP persons of the availability of free language assistance that ensures meaningful access to"
+      },
+      "confidence": 0.9,
+      "id": "rule:4b1243028348a328",
+      "name": "HACC shall provide a notice to LEP persons of the availability of free language assistance that ensures meaningful acces",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "discretionary",
+        "ordinal": 46,
+        "rule_type": "discretion",
+        "section_id": "section:d5491abfc77c969b",
+        "section_title": "Providing Notice to LEP Persons",
+        "text": "Examples of notification may include:"
+      },
+      "confidence": 0.9,
+      "id": "rule:8a2344ecf37900f4",
+      "name": "Examples of notification may include:",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 47,
+        "rule_type": "obligation",
+        "section_id": "section:d5491abfc77c969b",
+        "section_title": "Providing Notice to LEP Persons",
+        "text": "The signs shall be translated into the"
+      },
+      "confidence": 0.9,
+      "id": "rule:ba1330900ca07e4e",
+      "name": "The signs shall be translated into the",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 48,
+        "rule_type": "obligation",
+        "section_id": "section:d5491abfc77c969b",
+        "section_title": "Providing Notice to LEP Persons",
+        "text": "These statements shall be translated into the most"
+      },
+      "confidence": 0.9,
+      "id": "rule:ee7c208838c4970e",
+      "name": "These statements shall be translated into the most",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 49,
+        "rule_type": "obligation",
+        "section_id": "section:f99ce3d2adaa75ff",
+        "section_title": "Monitoring and Updating LEP Plan",
+        "text": "HACC will monitor the implementation of the LEP plan on an ongoing basis to determine whether new documents,"
+      },
+      "confidence": 0.9,
+      "id": "rule:0e9022444a835278",
+      "name": "HACC will monitor the implementation of the LEP plan on an ongoing basis to determine whether new documents,",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 50,
+        "rule_type": "obligation",
+        "section_id": "section:f99ce3d2adaa75ff",
+        "section_title": "Monitoring and Updating LEP Plan",
+        "text": "programs, services, and activities need to be made accessible for LEP persons."
+      },
+      "confidence": 0.9,
+      "id": "rule:45b01d36834d7f5a",
+      "name": "programs, services, and activities need to be made accessible for LEP persons.",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "required",
+        "ordinal": 51,
+        "rule_type": "obligation",
+        "section_id": "section:f99ce3d2adaa75ff",
+        "section_title": "Monitoring and Updating LEP Plan",
+        "text": "In addition, HACC will review its LEP plan"
+      },
+      "confidence": 0.9,
+      "id": "rule:235dc956f87750ad",
+      "name": "In addition, HACC will review its LEP plan",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "time_bound",
+        "ordinal": 52,
+        "rule_type": "deadline",
+        "section_id": "section:f99ce3d2adaa75ff",
+        "section_title": "Monitoring and Updating LEP Plan",
+        "text": "annually to evaluate the following information:"
+      },
+      "confidence": 0.9,
+      "id": "rule:e6913ff0c8b25886",
+      "name": "annually to evaluate the following information:",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "eligibility",
+        "ordinal": 53,
+        "rule_type": "eligibility",
+        "section_id": "section:f99ce3d2adaa75ff",
+        "section_title": "Monitoring and Updating LEP Plan",
+        "text": "\u2022 Proportion of LEP persons in the eligible service population;"
+      },
+      "confidence": 0.9,
+      "id": "rule:53f31e894c669f92",
+      "name": "\u2022 Proportion of LEP persons in the eligible service population;",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "eligibility",
+        "ordinal": 54,
+        "rule_type": "eligibility",
+        "section_id": "section:bf899ebb709d05ae",
+        "section_title": "Listing of Forms Available in Spanish or Russian",
+        "text": "| Applicant/Tenant Certification | | X | X | | |"
+      },
+      "confidence": 0.9,
+      "id": "rule:a003ba5d3ceb1a8b",
+      "name": "| Applicant/Tenant Certification | | X | X | | |",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "provider_entity_id": "49765565-a363-4acf-912b-f39ed22a10a8",
+        "source_text": "| Applicant/Tenant Certification | | X | X | | |"
+      },
+      "confidence": 0.8,
+      "id": "concept:dec194067dd89b33",
+      "name": "Tenant Certification",
+      "type": "person"
+    },
+    {
+      "attributes": {
+        "document_id": "document:4197fe6dbb7892b9",
+        "modality": "eligibility",
+        "ordinal": 55,
+        "rule_type": "eligibility",
+        "section_id": "section:4bc38804c416bdb4",
+        "section_title": "RUSSIAN SPANISH",
+        "text": "#79 Family Self Sufficiency Letter #33 Applicant/Tenant Certification"
+      },
+      "confidence": 0.9,
+      "id": "rule:b2aa39032de489dd",
+      "name": "#79 Family Self Sufficiency Letter #33 Applicant/Tenant Certification",
+      "type": "policy_rule"
+    },
+    {
+      "attributes": {
+        "provider_entity_id": "db447236-c060-4c29-906f-fed7f3abfbe1",
+        "source_text": "#79 Family Self Sufficiency Letter #33 Applicant/Tenan"
+      },
+      "confidence": 0.8,
+      "id": "concept:5b3737300f9b9d0b",
+      "name": "Family Self Sufficiency Letter",
+      "type": "person"
+    }
+  ],
+  "metadata": {
+    "backend": "markitdown",
+    "backend_available": true,
+    "details": {
+      "backend": "markitdown",
+      "backend_available": true,
+      "implementation_status": "implemented",
+      "operation": "extract_policy_rules_from_pdf",
+      "source_path": "/home/barberb/HACC/hacc_website/d6695a2f-e5fa-4f14-afe5-96a1ab01dfad"
+    },
+    "document_id": "document:4197fe6dbb7892b9",
+    "document_title": "Housing Authority of Clackamas County",
+    "implementation_status": "implemented",
+    "operation": "extract_policy_rules_from_pdf",
+    "provider": "ipfs_datasets_py",
+    "rule_count": 56,
+    "section_count": 46,
+    "source_path": "/home/barberb/HACC/hacc_website/d6695a2f-e5fa-4f14-afe5-96a1ab01dfad",
+    "text_length": 19747
+  },
+  "provider": "ipfs_datasets_py",
+  "relationships": [
+    {
+      "attributes": {
+        "ordinal": 0
+      },
+      "confidence": 1.0,
+      "id": "rel:9721b052b945e1ce",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:d3afbce9b36c7db9"
+    },
+    {
+      "attributes": {
+        "ordinal": 1
+      },
+      "confidence": 1.0,
+      "id": "rel:737de937a12dee4c",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:3a04bf4264c01c52"
+    },
+    {
+      "attributes": {
+        "ordinal": 2
+      },
+      "confidence": 1.0,
+      "id": "rel:f03a8b700ad5afd8",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:22df0204613d2eb0"
+    },
+    {
+      "attributes": {
+        "ordinal": 3
+      },
+      "confidence": 1.0,
+      "id": "rel:e391b277eebdffbf",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:e15ec7756feb1702"
+    },
+    {
+      "attributes": {
+        "ordinal": 4
+      },
+      "confidence": 1.0,
+      "id": "rel:ad5ac3db5188628d",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:1a902f16a9876d76"
+    },
+    {
+      "attributes": {
+        "ordinal": 5
+      },
+      "confidence": 1.0,
+      "id": "rel:ce644cc2d7a45eff",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:300d51aec82f490f"
+    },
+    {
+      "attributes": {
+        "ordinal": 6
+      },
+      "confidence": 1.0,
+      "id": "rel:5eb545fc4e8fb062",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:6dfdd5346cc5ccca"
+    },
+    {
+      "attributes": {
+        "ordinal": 7
+      },
+      "confidence": 1.0,
+      "id": "rel:d8b668ddc4c402f6",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:762d3c097a836632"
+    },
+    {
+      "attributes": {
+        "ordinal": 8
+      },
+      "confidence": 1.0,
+      "id": "rel:7c9fbd52edf9908d",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:e49b5c50ad6efc5d"
+    },
+    {
+      "attributes": {
+        "ordinal": 9
+      },
+      "confidence": 1.0,
+      "id": "rel:b1dee173c3113117",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:511c0b8c83e0ed3c"
+    },
+    {
+      "attributes": {
+        "ordinal": 10
+      },
+      "confidence": 1.0,
+      "id": "rel:6af032cd0666696a",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:0113d75cc6bf3214"
+    },
+    {
+      "attributes": {
+        "ordinal": 11
+      },
+      "confidence": 1.0,
+      "id": "rel:888bfac5a046234f",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:26f20065b2b7b22c"
+    },
+    {
+      "attributes": {
+        "ordinal": 12
+      },
+      "confidence": 1.0,
+      "id": "rel:0c26a7fbb0046e40",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:82989b6e1fef9006"
+    },
+    {
+      "attributes": {
+        "ordinal": 13
+      },
+      "confidence": 1.0,
+      "id": "rel:aae5f8fdcb20e4da",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:b2451361127e12c8"
+    },
+    {
+      "attributes": {
+        "ordinal": 14
+      },
+      "confidence": 1.0,
+      "id": "rel:37843cb528b1b3ad",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:d180304f08653adc"
+    },
+    {
+      "attributes": {
+        "ordinal": 15
+      },
+      "confidence": 1.0,
+      "id": "rel:212d37d37515a799",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:f51a53b10825ec05"
+    },
+    {
+      "attributes": {
+        "ordinal": 16
+      },
+      "confidence": 1.0,
+      "id": "rel:e818932b85bba2ac",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:97fda681aeffabea"
+    },
+    {
+      "attributes": {
+        "ordinal": 17
+      },
+      "confidence": 1.0,
+      "id": "rel:49f0c3d1c8496ed3",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:a6f879a544d8cf8d"
+    },
+    {
+      "attributes": {
+        "ordinal": 18
+      },
+      "confidence": 1.0,
+      "id": "rel:66b7fa1b40228669",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:972ecdfa37cf9735"
+    },
+    {
+      "attributes": {
+        "ordinal": 19
+      },
+      "confidence": 1.0,
+      "id": "rel:77fa8a1d01e0e6ff",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:eb3f20a3c8d5d1bb"
+    },
+    {
+      "attributes": {
+        "ordinal": 20
+      },
+      "confidence": 1.0,
+      "id": "rel:dc086b7d4ed220de",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:6260ab9a024adb63"
+    },
+    {
+      "attributes": {
+        "ordinal": 21
+      },
+      "confidence": 1.0,
+      "id": "rel:a095b004bf8e82f9",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:d5491abfc77c969b"
+    },
+    {
+      "attributes": {
+        "ordinal": 22
+      },
+      "confidence": 1.0,
+      "id": "rel:eaaadd6efd48468b",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:f99ce3d2adaa75ff"
+    },
+    {
+      "attributes": {
+        "ordinal": 23
+      },
+      "confidence": 1.0,
+      "id": "rel:3fed8c4294a40174",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:2121d8e60df7aaae"
+    },
+    {
+      "attributes": {
+        "ordinal": 24
+      },
+      "confidence": 1.0,
+      "id": "rel:287ecaf4d01a7c8a",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:4d40daed76017d94"
+    },
+    {
+      "attributes": {
+        "ordinal": 25
+      },
+      "confidence": 1.0,
+      "id": "rel:b06eb1ab3d29778e",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:d406c1fed934492f"
+    },
+    {
+      "attributes": {
+        "ordinal": 26
+      },
+      "confidence": 1.0,
+      "id": "rel:698e57be176e8788",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:40f93a4879af9a76"
+    },
+    {
+      "attributes": {
+        "ordinal": 27
+      },
+      "confidence": 1.0,
+      "id": "rel:efb989c1b91311d3",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:f89e3fef2fb6e2b5"
+    },
+    {
+      "attributes": {
+        "ordinal": 28
+      },
+      "confidence": 1.0,
+      "id": "rel:b06eb1ab3d29778e",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:d406c1fed934492f"
+    },
+    {
+      "attributes": {
+        "ordinal": 29
+      },
+      "confidence": 1.0,
+      "id": "rel:698e57be176e8788",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:40f93a4879af9a76"
+    },
+    {
+      "attributes": {
+        "ordinal": 30
+      },
+      "confidence": 1.0,
+      "id": "rel:9f7da90deda6a8e6",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:1e73ad9dd1c9ae77"
+    },
+    {
+      "attributes": {
+        "ordinal": 31
+      },
+      "confidence": 1.0,
+      "id": "rel:5676451e4475d698",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:e6e0811f4ed8176e"
+    },
+    {
+      "attributes": {
+        "ordinal": 32
+      },
+      "confidence": 1.0,
+      "id": "rel:9124e738b56187e2",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:f36e01c85341c942"
+    },
+    {
+      "attributes": {
+        "ordinal": 33
+      },
+      "confidence": 1.0,
+      "id": "rel:7241cd994a86814e",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:61c2cb3db9ccc171"
+    },
+    {
+      "attributes": {
+        "ordinal": 34
+      },
+      "confidence": 1.0,
+      "id": "rel:9124e738b56187e2",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:f36e01c85341c942"
+    },
+    {
+      "attributes": {
+        "ordinal": 35
+      },
+      "confidence": 1.0,
+      "id": "rel:3e8f6a6832fcc66c",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:3a6432295689b574"
+    },
+    {
+      "attributes": {
+        "ordinal": 36
+      },
+      "confidence": 1.0,
+      "id": "rel:92d6b223348f1d17",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:32e3b09dc483652e"
+    },
+    {
+      "attributes": {
+        "ordinal": 37
+      },
+      "confidence": 1.0,
+      "id": "rel:3c491cdbf1746b00",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:1fb6b8039655d348"
+    },
+    {
+      "attributes": {
+        "ordinal": 38
+      },
+      "confidence": 1.0,
+      "id": "rel:bab1db4ade7dda09",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:c376dc991c801330"
+    },
+    {
+      "attributes": {
+        "ordinal": 39
+      },
+      "confidence": 1.0,
+      "id": "rel:1ad181182def59e0",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:77e86ae5348fcac1"
+    },
+    {
+      "attributes": {
+        "ordinal": 40
+      },
+      "confidence": 1.0,
+      "id": "rel:38f448c168df1646",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:bf899ebb709d05ae"
+    },
+    {
+      "attributes": {
+        "ordinal": 41
+      },
+      "confidence": 1.0,
+      "id": "rel:80317e4e95a25275",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:f1f589a32f3c7d6f"
+    },
+    {
+      "attributes": {
+        "ordinal": 42
+      },
+      "confidence": 1.0,
+      "id": "rel:f484c52716156063",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:685d642d916f9a5d"
+    },
+    {
+      "attributes": {
+        "ordinal": 43
+      },
+      "confidence": 1.0,
+      "id": "rel:80317e4e95a25275",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:f1f589a32f3c7d6f"
+    },
+    {
+      "attributes": {
+        "ordinal": 44
+      },
+      "confidence": 1.0,
+      "id": "rel:3f6ed490358bb1b5",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:771a67702d0c592e"
+    },
+    {
+      "attributes": {
+        "ordinal": 45
+      },
+      "confidence": 1.0,
+      "id": "rel:854b4e0be97a368f",
+      "relation_type": "has_section",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "section:4bc38804c416bdb4"
+    },
+    {
+      "attributes": {
+        "ordinal": 0
+      },
+      "confidence": 1.0,
+      "id": "rel:f930cb990f6d4470",
+      "relation_type": "contains_rule",
+      "source_id": "section:1a902f16a9876d76",
+      "target_id": "rule:da9343826928d683"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:088beced5274b2dc",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:da9343826928d683"
+    },
+    {
+      "attributes": {
+        "ordinal": 1
+      },
+      "confidence": 1.0,
+      "id": "rel:91d8147735867856",
+      "relation_type": "contains_rule",
+      "source_id": "section:26f20065b2b7b22c",
+      "target_id": "rule:5f8065ccc055bbff"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:0e3200193abd7ea5",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:5f8065ccc055bbff"
+    },
+    {
+      "attributes": {
+        "ordinal": 2
+      },
+      "confidence": 1.0,
+      "id": "rel:e477860d68c519f0",
+      "relation_type": "contains_rule",
+      "source_id": "section:26f20065b2b7b22c",
+      "target_id": "rule:29e4bd2e3c0ef9e5"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:d90890ba24caf4eb",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:29e4bd2e3c0ef9e5"
+    },
+    {
+      "attributes": {
+        "section_title": "Identifying LEP Individuals who Need Language Assistance"
+      },
+      "confidence": 0.8,
+      "id": "rel:5efdf5c718997e99",
+      "relation_type": "mentions",
+      "source_id": "rule:29e4bd2e3c0ef9e5",
+      "target_id": "concept:f89a9b33173b1480"
+    },
+    {
+      "attributes": {
+        "ordinal": 3
+      },
+      "confidence": 1.0,
+      "id": "rel:9f6cb73e0c600f00",
+      "relation_type": "contains_rule",
+      "source_id": "section:26f20065b2b7b22c",
+      "target_id": "rule:548e9ef4cc2653e1"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:2dbb4b8855aea48b",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:548e9ef4cc2653e1"
+    },
+    {
+      "attributes": {
+        "ordinal": 4
+      },
+      "confidence": 1.0,
+      "id": "rel:3b38e7d370c8d5f0",
+      "relation_type": "contains_rule",
+      "source_id": "section:b2451361127e12c8",
+      "target_id": "rule:44bd92595d0cf0b6"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:05d63076d164cab7",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:44bd92595d0cf0b6"
+    },
+    {
+      "attributes": {
+        "ordinal": 5
+      },
+      "confidence": 1.0,
+      "id": "rel:4e9224eeb24111f7",
+      "relation_type": "contains_rule",
+      "source_id": "section:b2451361127e12c8",
+      "target_id": "rule:4e5fe460cc82c0b4"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:6f2a63ec0885baf8",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:4e5fe460cc82c0b4"
+    },
+    {
+      "attributes": {
+        "ordinal": 6
+      },
+      "confidence": 1.0,
+      "id": "rel:c9437e828aff6ff0",
+      "relation_type": "contains_rule",
+      "source_id": "section:b2451361127e12c8",
+      "target_id": "rule:f0e0734f70c8ea83"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:1ceca2bafedf8ef5",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:f0e0734f70c8ea83"
+    },
+    {
+      "attributes": {
+        "section_title": "Types of Language Services Available"
+      },
+      "confidence": 0.8,
+      "id": "rel:99e32c47e75cc2c3",
+      "relation_type": "mentions",
+      "source_id": "rule:f0e0734f70c8ea83",
+      "target_id": "concept:1ef4b547b6b80be2"
+    },
+    {
+      "attributes": {
+        "section_title": "Types of Language Services Available"
+      },
+      "confidence": 0.8,
+      "id": "rel:2403f5745d110670",
+      "relation_type": "mentions",
+      "source_id": "rule:f0e0734f70c8ea83",
+      "target_id": "concept:e5e7632ccb2b1810"
+    },
+    {
+      "attributes": {
+        "derived_from_rule_id": "rule:f0e0734f70c8ea83"
+      },
+      "confidence": 0.6,
+      "id": "rel:6b5108690104fd52",
+      "relation_type": "co_mentioned_in_rule",
+      "source_id": "concept:1ef4b547b6b80be2",
+      "target_id": "concept:e5e7632ccb2b1810"
+    },
+    {
+      "attributes": {
+        "ordinal": 7
+      },
+      "confidence": 1.0,
+      "id": "rel:010be94c8f13d8df",
+      "relation_type": "contains_rule",
+      "source_id": "section:b2451361127e12c8",
+      "target_id": "rule:ec685dfbd89c234b"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:e99cf0ee0afb74fb",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:ec685dfbd89c234b"
+    },
+    {
+      "attributes": {
+        "ordinal": 8
+      },
+      "confidence": 1.0,
+      "id": "rel:0258f1051c217f2c",
+      "relation_type": "contains_rule",
+      "source_id": "section:b2451361127e12c8",
+      "target_id": "rule:7140304b6fbc733b"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:29114dd9ea78cc14",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:7140304b6fbc733b"
+    },
+    {
+      "attributes": {
+        "ordinal": 9
+      },
+      "confidence": 1.0,
+      "id": "rel:aecbd66858f61dad",
+      "relation_type": "contains_rule",
+      "source_id": "section:b2451361127e12c8",
+      "target_id": "rule:f92d08b70926ab8e"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:10ba8561a79ecd1a",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:f92d08b70926ab8e"
+    },
+    {
+      "attributes": {
+        "ordinal": 10
+      },
+      "confidence": 1.0,
+      "id": "rel:c37612a4cf352d1b",
+      "relation_type": "contains_rule",
+      "source_id": "section:b2451361127e12c8",
+      "target_id": "rule:22cf14adeeb19d53"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:63f151a98700c53c",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:22cf14adeeb19d53"
+    },
+    {
+      "attributes": {
+        "ordinal": 11
+      },
+      "confidence": 1.0,
+      "id": "rel:3eecfc9ec3150d4c",
+      "relation_type": "contains_rule",
+      "source_id": "section:b2451361127e12c8",
+      "target_id": "rule:35a035da112df23f"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:c082ac8c82e6f35b",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:35a035da112df23f"
+    },
+    {
+      "attributes": {
+        "ordinal": 12
+      },
+      "confidence": 1.0,
+      "id": "rel:c6bccef9a8ec30c8",
+      "relation_type": "contains_rule",
+      "source_id": "section:b2451361127e12c8",
+      "target_id": "rule:b8adf94d1893951b"
+    },
+    {
+      "attributes": {
+        "rule_type": "discretion"
+      },
+      "confidence": 1.0,
+      "id": "rel:438b09d25a8dc04f",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:b8adf94d1893951b"
+    },
+    {
+      "attributes": {
+        "ordinal": 13
+      },
+      "confidence": 1.0,
+      "id": "rel:6f1f477c338ee23f",
+      "relation_type": "contains_rule",
+      "source_id": "section:b2451361127e12c8",
+      "target_id": "rule:b55de4e19329d552"
+    },
+    {
+      "attributes": {
+        "rule_type": "discretion"
+      },
+      "confidence": 1.0,
+      "id": "rel:8c62f8ee17ff9550",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:b55de4e19329d552"
+    },
+    {
+      "attributes": {
+        "ordinal": 14
+      },
+      "confidence": 1.0,
+      "id": "rel:122cdbcb31a655ab",
+      "relation_type": "contains_rule",
+      "source_id": "section:b2451361127e12c8",
+      "target_id": "rule:e7ef3f13ba8ad81a"
+    },
+    {
+      "attributes": {
+        "rule_type": "discretion"
+      },
+      "confidence": 1.0,
+      "id": "rel:25266edce029e6fe",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:e7ef3f13ba8ad81a"
+    },
+    {
+      "attributes": {
+        "ordinal": 15
+      },
+      "confidence": 1.0,
+      "id": "rel:11acd688d8ee6f93",
+      "relation_type": "contains_rule",
+      "source_id": "section:b2451361127e12c8",
+      "target_id": "rule:d9cb00c0cd9df0c1"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:7479820e33039643",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:d9cb00c0cd9df0c1"
+    },
+    {
+      "attributes": {
+        "ordinal": 16
+      },
+      "confidence": 1.0,
+      "id": "rel:cdb60d10b5fb25c1",
+      "relation_type": "contains_rule",
+      "source_id": "section:d180304f08653adc",
+      "target_id": "rule:8ecef5023eedd499"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:153282299bd07e3b",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:8ecef5023eedd499"
+    },
+    {
+      "attributes": {
+        "ordinal": 17
+      },
+      "confidence": 1.0,
+      "id": "rel:caa4e0086bebbd69",
+      "relation_type": "contains_rule",
+      "source_id": "section:d180304f08653adc",
+      "target_id": "rule:be3492d26e677a3f"
+    },
+    {
+      "attributes": {
+        "rule_type": "discretion"
+      },
+      "confidence": 1.0,
+      "id": "rel:a8ac8d6cf2f6e7ae",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:be3492d26e677a3f"
+    },
+    {
+      "attributes": {
+        "ordinal": 18
+      },
+      "confidence": 1.0,
+      "id": "rel:3f01025df262b6c8",
+      "relation_type": "contains_rule",
+      "source_id": "section:d180304f08653adc",
+      "target_id": "rule:02023b0cad5829f8"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:27ecf077fd505925",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:02023b0cad5829f8"
+    },
+    {
+      "attributes": {
+        "ordinal": 19
+      },
+      "confidence": 1.0,
+      "id": "rel:03df0cd6998d0c6c",
+      "relation_type": "contains_rule",
+      "source_id": "section:d180304f08653adc",
+      "target_id": "rule:4c1f2339657b8417"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:01a7dba8e6261f44",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:4c1f2339657b8417"
+    },
+    {
+      "attributes": {
+        "ordinal": 20
+      },
+      "confidence": 1.0,
+      "id": "rel:dd4ab4f2807951ee",
+      "relation_type": "contains_rule",
+      "source_id": "section:d180304f08653adc",
+      "target_id": "rule:9c7424194c0fe51f"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:b68923069787a93c",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:9c7424194c0fe51f"
+    },
+    {
+      "attributes": {
+        "ordinal": 21
+      },
+      "confidence": 1.0,
+      "id": "rel:edc3ea50b1e5c455",
+      "relation_type": "contains_rule",
+      "source_id": "section:d180304f08653adc",
+      "target_id": "rule:c8b1d4ef7405660b"
+    },
+    {
+      "attributes": {
+        "rule_type": "discretion"
+      },
+      "confidence": 1.0,
+      "id": "rel:c2176e4d82b98ea9",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:c8b1d4ef7405660b"
+    },
+    {
+      "attributes": {
+        "ordinal": 22
+      },
+      "confidence": 1.0,
+      "id": "rel:0a09b893dc22c93f",
+      "relation_type": "contains_rule",
+      "source_id": "section:f51a53b10825ec05",
+      "target_id": "rule:34a8ccd005652d15"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:8593d9d878da6b55",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:34a8ccd005652d15"
+    },
+    {
+      "attributes": {
+        "ordinal": 23
+      },
+      "confidence": 1.0,
+      "id": "rel:450c106807c4303b",
+      "relation_type": "contains_rule",
+      "source_id": "section:f51a53b10825ec05",
+      "target_id": "rule:b49fc854bf1268cd"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:83ea07176c0576be",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:b49fc854bf1268cd"
+    },
+    {
+      "attributes": {
+        "ordinal": 24
+      },
+      "confidence": 1.0,
+      "id": "rel:b46693d64cdb6073",
+      "relation_type": "contains_rule",
+      "source_id": "section:f51a53b10825ec05",
+      "target_id": "rule:75bed1476f299755"
+    },
+    {
+      "attributes": {
+        "rule_type": "discretion"
+      },
+      "confidence": 1.0,
+      "id": "rel:cbf29bac7d907096",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:75bed1476f299755"
+    },
+    {
+      "attributes": {
+        "ordinal": 25
+      },
+      "confidence": 1.0,
+      "id": "rel:e3c44f91a7d135e4",
+      "relation_type": "contains_rule",
+      "source_id": "section:f51a53b10825ec05",
+      "target_id": "rule:58acc1356d98603b"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:9c2b4ea3c50b0da9",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:58acc1356d98603b"
+    },
+    {
+      "attributes": {
+        "ordinal": 26
+      },
+      "confidence": 1.0,
+      "id": "rel:281d3c97d962179a",
+      "relation_type": "contains_rule",
+      "source_id": "section:f51a53b10825ec05",
+      "target_id": "rule:6ec6c575f5a71de7"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:b4dd4d568402bda4",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:6ec6c575f5a71de7"
+    },
+    {
+      "attributes": {
+        "ordinal": 27
+      },
+      "confidence": 1.0,
+      "id": "rel:a7c66e0769821ad9",
+      "relation_type": "contains_rule",
+      "source_id": "section:f51a53b10825ec05",
+      "target_id": "rule:f02a507ca8a1c5b4"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:fed896aac460cbd5",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:f02a507ca8a1c5b4"
+    },
+    {
+      "attributes": {
+        "ordinal": 28
+      },
+      "confidence": 1.0,
+      "id": "rel:d8c49c69f78a9f7e",
+      "relation_type": "contains_rule",
+      "source_id": "section:f51a53b10825ec05",
+      "target_id": "rule:77d775d8e2f682d8"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:d96b580c4dc6807c",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:77d775d8e2f682d8"
+    },
+    {
+      "attributes": {
+        "ordinal": 29
+      },
+      "confidence": 1.0,
+      "id": "rel:17551d3d22503e5a",
+      "relation_type": "contains_rule",
+      "source_id": "section:f51a53b10825ec05",
+      "target_id": "rule:200a3e5c31c132dc"
+    },
+    {
+      "attributes": {
+        "rule_type": "prohibition"
+      },
+      "confidence": 1.0,
+      "id": "rel:ab9735a34d90ef18",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:200a3e5c31c132dc"
+    },
+    {
+      "attributes": {
+        "ordinal": 30
+      },
+      "confidence": 1.0,
+      "id": "rel:f68fee8852998dd1",
+      "relation_type": "contains_rule",
+      "source_id": "section:f51a53b10825ec05",
+      "target_id": "rule:d06736ea0608cda8"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:91f2e03e0fe9d6ea",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:d06736ea0608cda8"
+    },
+    {
+      "attributes": {
+        "ordinal": 31
+      },
+      "confidence": 1.0,
+      "id": "rel:9f6a57b158ac69eb",
+      "relation_type": "contains_rule",
+      "source_id": "section:f51a53b10825ec05",
+      "target_id": "rule:57ab5c7f6a3ce9ac"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:68c81beecc1a1b74",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:57ab5c7f6a3ce9ac"
+    },
+    {
+      "attributes": {
+        "ordinal": 32
+      },
+      "confidence": 1.0,
+      "id": "rel:a684026029f06466",
+      "relation_type": "contains_rule",
+      "source_id": "section:f51a53b10825ec05",
+      "target_id": "rule:e8bf8d7a89ce18ce"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:2d8b04cb1677e7fa",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:e8bf8d7a89ce18ce"
+    },
+    {
+      "attributes": {
+        "ordinal": 33
+      },
+      "confidence": 1.0,
+      "id": "rel:24916cf99fa26c7d",
+      "relation_type": "contains_rule",
+      "source_id": "section:97fda681aeffabea",
+      "target_id": "rule:a54a44ce9d17ff5e"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:6468c31c50eb1fdc",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:a54a44ce9d17ff5e"
+    },
+    {
+      "attributes": {
+        "ordinal": 34
+      },
+      "confidence": 1.0,
+      "id": "rel:c05672a1daccd810",
+      "relation_type": "contains_rule",
+      "source_id": "section:97fda681aeffabea",
+      "target_id": "rule:0e5b26fa999ba243"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:d270006c58b76676",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:0e5b26fa999ba243"
+    },
+    {
+      "attributes": {
+        "ordinal": 35
+      },
+      "confidence": 1.0,
+      "id": "rel:544400304651cee8",
+      "relation_type": "contains_rule",
+      "source_id": "section:97fda681aeffabea",
+      "target_id": "rule:dc6857154c83f08f"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:15345584ebcebf52",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:dc6857154c83f08f"
+    },
+    {
+      "attributes": {
+        "ordinal": 36
+      },
+      "confidence": 1.0,
+      "id": "rel:06ba7b8f260be653",
+      "relation_type": "contains_rule",
+      "source_id": "section:a6f879a544d8cf8d",
+      "target_id": "rule:999f989eb9e1d2d5"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:3e7608a257ef3157",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:999f989eb9e1d2d5"
+    },
+    {
+      "attributes": {
+        "ordinal": 37
+      },
+      "confidence": 1.0,
+      "id": "rel:845d46d7f2c89f41",
+      "relation_type": "contains_rule",
+      "source_id": "section:a6f879a544d8cf8d",
+      "target_id": "rule:bcba597dd640caa8"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:b60c7879b5d46e9c",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:bcba597dd640caa8"
+    },
+    {
+      "attributes": {
+        "ordinal": 38
+      },
+      "confidence": 1.0,
+      "id": "rel:d3cca855fdb2c2d7",
+      "relation_type": "contains_rule",
+      "source_id": "section:a6f879a544d8cf8d",
+      "target_id": "rule:7ad963a1a500341e"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:db1be0fb9b71e317",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:7ad963a1a500341e"
+    },
+    {
+      "attributes": {
+        "ordinal": 39
+      },
+      "confidence": 1.0,
+      "id": "rel:72d0da7970e44059",
+      "relation_type": "contains_rule",
+      "source_id": "section:a6f879a544d8cf8d",
+      "target_id": "rule:53097e73acf4d222"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:f7b61eeee27bb360",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:53097e73acf4d222"
+    },
+    {
+      "attributes": {
+        "ordinal": 40
+      },
+      "confidence": 1.0,
+      "id": "rel:a10851660dee5762",
+      "relation_type": "contains_rule",
+      "source_id": "section:972ecdfa37cf9735",
+      "target_id": "rule:c81cd29f0f4e27b6"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:fcfa85e7f8320b16",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:c81cd29f0f4e27b6"
+    },
+    {
+      "attributes": {
+        "ordinal": 41
+      },
+      "confidence": 1.0,
+      "id": "rel:78b1abd618151a33",
+      "relation_type": "contains_rule",
+      "source_id": "section:972ecdfa37cf9735",
+      "target_id": "rule:15df94517574c56c"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:39b761c290f263ae",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:15df94517574c56c"
+    },
+    {
+      "attributes": {
+        "ordinal": 42
+      },
+      "confidence": 1.0,
+      "id": "rel:a47027fc3a18e17f",
+      "relation_type": "contains_rule",
+      "source_id": "section:eb3f20a3c8d5d1bb",
+      "target_id": "rule:6a37e13f93c52393"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:f34e76e00ad55747",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:6a37e13f93c52393"
+    },
+    {
+      "attributes": {
+        "ordinal": 43
+      },
+      "confidence": 1.0,
+      "id": "rel:c7710fdebbd445f2",
+      "relation_type": "contains_rule",
+      "source_id": "section:6260ab9a024adb63",
+      "target_id": "rule:cd4f8fe9c1720aa6"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:6012df2fc9de6c58",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:cd4f8fe9c1720aa6"
+    },
+    {
+      "attributes": {
+        "ordinal": 44
+      },
+      "confidence": 1.0,
+      "id": "rel:a04b0032f0927701",
+      "relation_type": "contains_rule",
+      "source_id": "section:6260ab9a024adb63",
+      "target_id": "rule:ef535cf3e1fe26c0"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:d982366a1510ed1b",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:ef535cf3e1fe26c0"
+    },
+    {
+      "attributes": {
+        "ordinal": 45
+      },
+      "confidence": 1.0,
+      "id": "rel:5dc14e3623cefeb8",
+      "relation_type": "contains_rule",
+      "source_id": "section:d5491abfc77c969b",
+      "target_id": "rule:4b1243028348a328"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:0d53c042f998676a",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:4b1243028348a328"
+    },
+    {
+      "attributes": {
+        "ordinal": 46
+      },
+      "confidence": 1.0,
+      "id": "rel:5ab526ad22db64c3",
+      "relation_type": "contains_rule",
+      "source_id": "section:d5491abfc77c969b",
+      "target_id": "rule:8a2344ecf37900f4"
+    },
+    {
+      "attributes": {
+        "rule_type": "discretion"
+      },
+      "confidence": 1.0,
+      "id": "rel:581c528ab9273889",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:8a2344ecf37900f4"
+    },
+    {
+      "attributes": {
+        "ordinal": 47
+      },
+      "confidence": 1.0,
+      "id": "rel:0859bf40c1c3087e",
+      "relation_type": "contains_rule",
+      "source_id": "section:d5491abfc77c969b",
+      "target_id": "rule:ba1330900ca07e4e"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:7bc1de484ba81294",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:ba1330900ca07e4e"
+    },
+    {
+      "attributes": {
+        "ordinal": 48
+      },
+      "confidence": 1.0,
+      "id": "rel:a7096735d37bc2f4",
+      "relation_type": "contains_rule",
+      "source_id": "section:d5491abfc77c969b",
+      "target_id": "rule:ee7c208838c4970e"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:d915c3c3c908fea9",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:ee7c208838c4970e"
+    },
+    {
+      "attributes": {
+        "ordinal": 49
+      },
+      "confidence": 1.0,
+      "id": "rel:9f2777f8d7b41029",
+      "relation_type": "contains_rule",
+      "source_id": "section:f99ce3d2adaa75ff",
+      "target_id": "rule:0e9022444a835278"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:1c5f7d0dd4164c4e",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:0e9022444a835278"
+    },
+    {
+      "attributes": {
+        "ordinal": 50
+      },
+      "confidence": 1.0,
+      "id": "rel:7944423f5d4c85e1",
+      "relation_type": "contains_rule",
+      "source_id": "section:f99ce3d2adaa75ff",
+      "target_id": "rule:45b01d36834d7f5a"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:e8bcb9d53b940fa9",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:45b01d36834d7f5a"
+    },
+    {
+      "attributes": {
+        "ordinal": 51
+      },
+      "confidence": 1.0,
+      "id": "rel:dd8df369aea10d71",
+      "relation_type": "contains_rule",
+      "source_id": "section:f99ce3d2adaa75ff",
+      "target_id": "rule:235dc956f87750ad"
+    },
+    {
+      "attributes": {
+        "rule_type": "obligation"
+      },
+      "confidence": 1.0,
+      "id": "rel:f6cc15eddb9f2783",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:235dc956f87750ad"
+    },
+    {
+      "attributes": {
+        "ordinal": 52
+      },
+      "confidence": 1.0,
+      "id": "rel:845eb94b8194371a",
+      "relation_type": "contains_rule",
+      "source_id": "section:f99ce3d2adaa75ff",
+      "target_id": "rule:e6913ff0c8b25886"
+    },
+    {
+      "attributes": {
+        "rule_type": "deadline"
+      },
+      "confidence": 1.0,
+      "id": "rel:b27d23ba27511f14",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:e6913ff0c8b25886"
+    },
+    {
+      "attributes": {
+        "ordinal": 53
+      },
+      "confidence": 1.0,
+      "id": "rel:74cd3a25226ba248",
+      "relation_type": "contains_rule",
+      "source_id": "section:f99ce3d2adaa75ff",
+      "target_id": "rule:53f31e894c669f92"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:942b2bfc35cbea75",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:53f31e894c669f92"
+    },
+    {
+      "attributes": {
+        "ordinal": 54
+      },
+      "confidence": 1.0,
+      "id": "rel:6ea1b56e72ec770a",
+      "relation_type": "contains_rule",
+      "source_id": "section:bf899ebb709d05ae",
+      "target_id": "rule:a003ba5d3ceb1a8b"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:303661a5589292ec",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:a003ba5d3ceb1a8b"
+    },
+    {
+      "attributes": {
+        "section_title": "Listing of Forms Available in Spanish or Russian"
+      },
+      "confidence": 0.8,
+      "id": "rel:734be4145cd34ddf",
+      "relation_type": "mentions",
+      "source_id": "rule:a003ba5d3ceb1a8b",
+      "target_id": "concept:dec194067dd89b33"
+    },
+    {
+      "attributes": {
+        "ordinal": 55
+      },
+      "confidence": 1.0,
+      "id": "rel:406df7402ff949fa",
+      "relation_type": "contains_rule",
+      "source_id": "section:4bc38804c416bdb4",
+      "target_id": "rule:b2aa39032de489dd"
+    },
+    {
+      "attributes": {
+        "rule_type": "eligibility"
+      },
+      "confidence": 1.0,
+      "id": "rel:d1ac6e41584c1912",
+      "relation_type": "has_rule",
+      "source_id": "document:4197fe6dbb7892b9",
+      "target_id": "rule:b2aa39032de489dd"
+    },
+    {
+      "attributes": {
+        "section_title": "RUSSIAN SPANISH"
+      },
+      "confidence": 0.8,
+      "id": "rel:4c172dd48724d2d2",
+      "relation_type": "mentions",
+      "source_id": "rule:b2aa39032de489dd",
+      "target_id": "concept:5b3737300f9b9d0b"
+    },
+    {
+      "attributes": {
+        "section_title": "RUSSIAN SPANISH"
+      },
+      "confidence": 0.8,
+      "id": "rel:254ac337f66aea0c",
+      "relation_type": "mentions",
+      "source_id": "rule:b2aa39032de489dd",
+      "target_id": "concept:dec194067dd89b33"
+    },
+    {
+      "attributes": {
+        "derived_from_rule_id": "rule:b2aa39032de489dd"
+      },
+      "confidence": 0.6,
+      "id": "rel:5ebafc284d2ef8d5",
+      "relation_type": "co_mentioned_in_rule",
+      "source_id": "concept:5b3737300f9b9d0b",
+      "target_id": "concept:dec194067dd89b33"
+    }
+  ],
+  "rules": [
+    {
+      "modality": "eligibility",
+      "ordinal": 0,
+      "rule_id": "rule:da9343826928d683",
+      "rule_type": "eligibility",
+      "section_id": "section:1a902f16a9876d76",
+      "section_title": "Introduction",
+      "text": "persons in the eligible service population, the frequency with which LEP individuals come in contact with the program, the"
+    },
+    {
+      "modality": "required",
+      "ordinal": 1,
+      "rule_id": "rule:5f8065ccc055bbff",
+      "rule_type": "obligation",
+      "section_id": "section:26f20065b2b7b22c",
+      "section_title": "Identifying LEP Individuals who Need Language Assistance",
+      "text": "HACC shall take reasonable steps to identify LEP persons served or encountered using the following methods:"
+    },
+    {
+      "modality": "required",
+      "ordinal": 2,
+      "rule_id": "rule:29e4bd2e3c0ef9e5",
+      "rule_type": "obligation",
+      "section_id": "section:26f20065b2b7b22c",
+      "section_title": "Identifying LEP Individuals who Need Language Assistance",
+      "text": "\u2022 Using the Census Bureau Language Identification Flashcards to invite LEP persons to identify their language needs to"
+    },
+    {
+      "modality": "required",
+      "ordinal": 3,
+      "rule_id": "rule:548e9ef4cc2653e1",
+      "rule_type": "obligation",
+      "section_id": "section:26f20065b2b7b22c",
+      "section_title": "Identifying LEP Individuals who Need Language Assistance",
+      "text": "staff; these cards will be available at all HACC offices and application locations."
+    },
+    {
+      "modality": "required",
+      "ordinal": 4,
+      "rule_id": "rule:44bd92595d0cf0b6",
+      "rule_type": "obligation",
+      "section_id": "section:b2451361127e12c8",
+      "section_title": "Types of Language Services Available",
+      "text": "HACC shall take reasonable steps to provide oral and written language services as described in this section."
+    },
+    {
+      "modality": "required",
+      "ordinal": 5,
+      "rule_id": "rule:4e5fe460cc82c0b4",
+      "rule_type": "obligation",
+      "section_id": "section:b2451361127e12c8",
+      "section_title": "Types of Language Services Available",
+      "text": "what language services should be provided, HACC shall consider the following factors:"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 6,
+      "rule_id": "rule:f0e0734f70c8ea83",
+      "rule_type": "eligibility",
+      "section_id": "section:b2451361127e12c8",
+      "section_title": "Types of Language Services Available",
+      "text": "The number or Proportion of LEP Persons Served or Encountered in the Eligible Service Population"
+    },
+    {
+      "modality": "required",
+      "ordinal": 7,
+      "rule_id": "rule:ec685dfbd89c234b",
+      "rule_type": "obligation",
+      "section_id": "section:b2451361127e12c8",
+      "section_title": "Types of Language Services Available",
+      "text": "HACC shall examine its prior experiences with LEP encounters to determine the breadth and scope of language services"
+    },
+    {
+      "modality": "required",
+      "ordinal": 8,
+      "rule_id": "rule:7140304b6fbc733b",
+      "rule_type": "obligation",
+      "section_id": "section:b2451361127e12c8",
+      "section_title": "Types of Language Services Available",
+      "text": "HACC shall also consult other data to refine or validate its prior experience, including the latest census data for the"
+    },
+    {
+      "modality": "required",
+      "ordinal": 9,
+      "rule_id": "rule:f92d08b70926ab8e",
+      "rule_type": "obligation",
+      "section_id": "section:b2451361127e12c8",
+      "section_title": "Types of Language Services Available",
+      "text": "Effectively immediately, HACC will update applications to identify LEP persons and track in HAB LEP families"
+    },
+    {
+      "modality": "required",
+      "ordinal": 10,
+      "rule_id": "rule:22cf14adeeb19d53",
+      "rule_type": "obligation",
+      "section_id": "section:b2451361127e12c8",
+      "section_title": "Types of Language Services Available",
+      "text": "HACC shall take reasonable steps to assess, as accurately as possible, the frequency of contact with LEP persons from"
+    },
+    {
+      "modality": "required",
+      "ordinal": 11,
+      "rule_id": "rule:35a035da112df23f",
+      "rule_type": "obligation",
+      "section_id": "section:b2451361127e12c8",
+      "section_title": "Types of Language Services Available",
+      "text": "Each month, HACC front office staff will document encounters with LEP persons using U.S."
+    },
+    {
+      "modality": "discretionary",
+      "ordinal": 12,
+      "rule_id": "rule:b8adf94d1893951b",
+      "rule_type": "discretion",
+      "section_id": "section:b2451361127e12c8",
+      "section_title": "Types of Language Services Available",
+      "text": "Less frequent contact with different language groups may suggest a different"
+    },
+    {
+      "modality": "discretionary",
+      "ordinal": 13,
+      "rule_id": "rule:b55de4e19329d552",
+      "rule_type": "discretion",
+      "section_id": "section:b2451361127e12c8",
+      "section_title": "Types of Language Services Available",
+      "text": "the LEP persons, the more likely language services may be needed."
+    },
+    {
+      "modality": "discretionary",
+      "ordinal": 14,
+      "rule_id": "rule:e7ef3f13ba8ad81a",
+      "rule_type": "discretion",
+      "section_id": "section:b2451361127e12c8",
+      "section_title": "Types of Language Services Available",
+      "text": "persons, the availability of resources may limit the provision of language services in some instances."
+    },
+    {
+      "modality": "required",
+      "ordinal": 15,
+      "rule_id": "rule:d9cb00c0cd9df0c1",
+      "rule_type": "obligation",
+      "section_id": "section:b2451361127e12c8",
+      "section_title": "Types of Language Services Available",
+      "text": "HACC shall explore the most cost-effective"
+    },
+    {
+      "modality": "required",
+      "ordinal": 16,
+      "rule_id": "rule:8ecef5023eedd499",
+      "rule_type": "obligation",
+      "section_id": "section:d180304f08653adc",
+      "section_title": "Oral Language Services (Interpretation)",
+      "text": "HACC shall use contract interpreters and bilingual HACC staff to provide the services."
+    },
+    {
+      "modality": "discretionary",
+      "ordinal": 17,
+      "rule_id": "rule:be3492d26e677a3f",
+      "rule_type": "discretion",
+      "section_id": "section:d180304f08653adc",
+      "section_title": "Oral Language Services (Interpretation)",
+      "text": "HACC may, at its discretion, choose"
+    },
+    {
+      "modality": "required",
+      "ordinal": 18,
+      "rule_id": "rule:02023b0cad5829f8",
+      "rule_type": "obligation",
+      "section_id": "section:d180304f08653adc",
+      "section_title": "Oral Language Services (Interpretation)",
+      "text": "HACC shall take reasonable steps to ensure competency of the language service provider."
+    },
+    {
+      "modality": "required",
+      "ordinal": 19,
+      "rule_id": "rule:4c1f2339657b8417",
+      "rule_type": "obligation",
+      "section_id": "section:d180304f08653adc",
+      "section_title": "Oral Language Services (Interpretation)",
+      "text": "assistance, HACC shall use the following general criteria to ensure effective communication with LEP persons:"
+    },
+    {
+      "modality": "required",
+      "ordinal": 20,
+      "rule_id": "rule:9c7424194c0fe51f",
+      "rule_type": "obligation",
+      "section_id": "section:d180304f08653adc",
+      "section_title": "Oral Language Services (Interpretation)",
+      "text": "When interpretation is needed and is reasonable, it shall be provided in a timely manner so as to avoid the effective denial of a"
+    },
+    {
+      "modality": "discretionary",
+      "ordinal": 21,
+      "rule_id": "rule:c8b1d4ef7405660b",
+      "rule_type": "discretion",
+      "section_id": "section:d180304f08653adc",
+      "section_title": "Oral Language Services (Interpretation)",
+      "text": "language assistance may be reasonably delayed."
+    },
+    {
+      "modality": "required",
+      "ordinal": 22,
+      "rule_id": "rule:34a8ccd005652d15",
+      "rule_type": "obligation",
+      "section_id": "section:f51a53b10825ec05",
+      "section_title": "Written Language Services (Translation)",
+      "text": "HACC shall take reasonable steps to provide written translations of vital documents that list program rules and instructions"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 23,
+      "rule_id": "rule:b49fc854bf1268cd",
+      "rule_type": "eligibility",
+      "section_id": "section:f51a53b10825ec05",
+      "section_title": "Written Language Services (Translation)",
+      "text": "for each eligible LEP language group that constitutes 5% or 1,000 persons, whichever is less, of program"
+    },
+    {
+      "modality": "discretionary",
+      "ordinal": 24,
+      "rule_id": "rule:75bed1476f299755",
+      "rule_type": "discretion",
+      "section_id": "section:f51a53b10825ec05",
+      "section_title": "Written Language Services (Translation)",
+      "text": "Whether or not a document (or information it solicits) is vital may depend upon the"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 25,
+      "rule_id": "rule:58acc1356d98603b",
+      "rule_type": "eligibility",
+      "section_id": "section:f51a53b10825ec05",
+      "section_title": "Written Language Services (Translation)",
+      "text": "All documents that require action from an applicant or participant shall include a statement in the languages of eligible groups"
+    },
+    {
+      "modality": "required",
+      "ordinal": 26,
+      "rule_id": "rule:6ec6c575f5a71de7",
+      "rule_type": "obligation",
+      "section_id": "section:f51a53b10825ec05",
+      "section_title": "Written Language Services (Translation)",
+      "text": "If you need assistance, please contact us immediately.\u201d HACC shall take"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 27,
+      "rule_id": "rule:f02a507ca8a1c5b4",
+      "rule_type": "eligibility",
+      "section_id": "section:f51a53b10825ec05",
+      "section_title": "Written Language Services (Translation)",
+      "text": "For all documents available in the languages of eligible groups, the English version of the documents shall include a statement"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 28,
+      "rule_id": "rule:77d775d8e2f682d8",
+      "rule_type": "eligibility",
+      "section_id": "section:f51a53b10825ec05",
+      "section_title": "Written Language Services (Translation)",
+      "text": "on the bottom in the languages of eligible groups reading \u201cThis form is available in (language) upon request.\u201d"
+    },
+    {
+      "modality": "forbidden",
+      "ordinal": 29,
+      "rule_id": "rule:200a3e5c31c132dc",
+      "rule_type": "prohibition",
+      "section_id": "section:f51a53b10825ec05",
+      "section_title": "Written Language Services (Translation)",
+      "text": "For LEP language groups that constitute less than of program applicants, participants or residents, HACC will not translate"
+    },
+    {
+      "modality": "required",
+      "ordinal": 30,
+      "rule_id": "rule:d06736ea0608cda8",
+      "rule_type": "obligation",
+      "section_id": "section:f51a53b10825ec05",
+      "section_title": "Written Language Services (Translation)",
+      "text": "written materials, but shall take reasonable steps to provide oral interpretation of the written materials upon request."
+    },
+    {
+      "modality": "required",
+      "ordinal": 31,
+      "rule_id": "rule:57ab5c7f6a3ce9ac",
+      "rule_type": "obligation",
+      "section_id": "section:f51a53b10825ec05",
+      "section_title": "Written Language Services (Translation)",
+      "text": "As with oral interpreters, HACC will take reasonable steps to ensure competency of translators of written documents."
+    },
+    {
+      "modality": "required",
+      "ordinal": 32,
+      "rule_id": "rule:e8bf8d7a89ce18ce",
+      "rule_type": "obligation",
+      "section_id": "section:f51a53b10825ec05",
+      "section_title": "Written Language Services (Translation)",
+      "text": "legal or other vital documents are involved, HACC shall make a reasonable effort to use certified translators."
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 33,
+      "rule_id": "rule:a54a44ce9d17ff5e",
+      "rule_type": "eligibility",
+      "section_id": "section:97fda681aeffabea",
+      "section_title": "Telephone Services",
+      "text": "When calls are received by an LEP applicant, participant or resident, HACC staff will make every effort to determine the"
+    },
+    {
+      "modality": "required",
+      "ordinal": 34,
+      "rule_id": "rule:0e5b26fa999ba243",
+      "rule_type": "obligation",
+      "section_id": "section:97fda681aeffabea",
+      "section_title": "Telephone Services",
+      "text": "Calls will be forwarded to HACC staff who speak the same language as the caller for"
+    },
+    {
+      "modality": "required",
+      "ordinal": 35,
+      "rule_id": "rule:dc6857154c83f08f",
+      "rule_type": "obligation",
+      "section_id": "section:97fda681aeffabea",
+      "section_title": "Telephone Services",
+      "text": "If HACC staff are not available at the time of the call, the caller will be requested to call back when an interpreter can be"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 36,
+      "rule_id": "rule:999f989eb9e1d2d5",
+      "rule_type": "eligibility",
+      "section_id": "section:a6f879a544d8cf8d",
+      "section_title": "On-Site Visitors",
+      "text": "When an LEP applicant, participant or resident comes to a HACC office, HACC staff will make every effort to determine the"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 37,
+      "rule_id": "rule:bcba597dd640caa8",
+      "rule_type": "eligibility",
+      "section_id": "section:a6f879a544d8cf8d",
+      "section_title": "On-Site Visitors",
+      "text": "who speak the language are available to assist the applicant, participant or resident, they will do so, either in person or via"
+    },
+    {
+      "modality": "required",
+      "ordinal": 38,
+      "rule_id": "rule:7ad963a1a500341e",
+      "rule_type": "obligation",
+      "section_id": "section:a6f879a544d8cf8d",
+      "section_title": "On-Site Visitors",
+      "text": "If HACC staff are not available at the time of the visit, the person will be requested to come back when an interpreter can be"
+    },
+    {
+      "modality": "required",
+      "ordinal": 39,
+      "rule_id": "rule:53097e73acf4d222",
+      "rule_type": "obligation",
+      "section_id": "section:a6f879a544d8cf8d",
+      "section_title": "On-Site Visitors",
+      "text": "An interpreter will be secured within a reasonable time frame."
+    },
+    {
+      "modality": "required",
+      "ordinal": 40,
+      "rule_id": "rule:c81cd29f0f4e27b6",
+      "rule_type": "obligation",
+      "section_id": "section:972ecdfa37cf9735",
+      "section_title": "Written Communications",
+      "text": "Correspondence received in languages other than English will be translated by HACC staff who speak the language, where"
+    },
+    {
+      "modality": "required",
+      "ordinal": 41,
+      "rule_id": "rule:15df94517574c56c",
+      "rule_type": "obligation",
+      "section_id": "section:972ecdfa37cf9735",
+      "section_title": "Written Communications",
+      "text": "Responses will be translated into the same language as the letter that"
+    },
+    {
+      "modality": "required",
+      "ordinal": 42,
+      "rule_id": "rule:6a37e13f93c52393",
+      "rule_type": "obligation",
+      "section_id": "section:eb3f20a3c8d5d1bb",
+      "section_title": "Training Staff",
+      "text": "HACC will ensure that staff knows the obligation to provide meaningful access to information and services to LEP persons."
+    },
+    {
+      "modality": "required",
+      "ordinal": 43,
+      "rule_id": "rule:cd4f8fe9c1720aa6",
+      "rule_type": "obligation",
+      "section_id": "section:6260ab9a024adb63",
+      "section_title": "HACC will provide training to ensure that:",
+      "text": "The training will be included as a part of departmental orientation for new employees."
+    },
+    {
+      "modality": "required",
+      "ordinal": 44,
+      "rule_id": "rule:ef535cf3e1fe26c0",
+      "rule_type": "obligation",
+      "section_id": "section:6260ab9a024adb63",
+      "section_title": "HACC will provide training to ensure that:",
+      "text": "Staff will be provided with listing of forms available in languages other than English, bilingual HACC staff and contact"
+    },
+    {
+      "modality": "required",
+      "ordinal": 45,
+      "rule_id": "rule:4b1243028348a328",
+      "rule_type": "obligation",
+      "section_id": "section:d5491abfc77c969b",
+      "section_title": "Providing Notice to LEP Persons",
+      "text": "HACC shall provide a notice to LEP persons of the availability of free language assistance that ensures meaningful access to"
+    },
+    {
+      "modality": "discretionary",
+      "ordinal": 46,
+      "rule_id": "rule:8a2344ecf37900f4",
+      "rule_type": "discretion",
+      "section_id": "section:d5491abfc77c969b",
+      "section_title": "Providing Notice to LEP Persons",
+      "text": "Examples of notification may include:"
+    },
+    {
+      "modality": "required",
+      "ordinal": 47,
+      "rule_id": "rule:ba1330900ca07e4e",
+      "rule_type": "obligation",
+      "section_id": "section:d5491abfc77c969b",
+      "section_title": "Providing Notice to LEP Persons",
+      "text": "The signs shall be translated into the"
+    },
+    {
+      "modality": "required",
+      "ordinal": 48,
+      "rule_id": "rule:ee7c208838c4970e",
+      "rule_type": "obligation",
+      "section_id": "section:d5491abfc77c969b",
+      "section_title": "Providing Notice to LEP Persons",
+      "text": "These statements shall be translated into the most"
+    },
+    {
+      "modality": "required",
+      "ordinal": 49,
+      "rule_id": "rule:0e9022444a835278",
+      "rule_type": "obligation",
+      "section_id": "section:f99ce3d2adaa75ff",
+      "section_title": "Monitoring and Updating LEP Plan",
+      "text": "HACC will monitor the implementation of the LEP plan on an ongoing basis to determine whether new documents,"
+    },
+    {
+      "modality": "required",
+      "ordinal": 50,
+      "rule_id": "rule:45b01d36834d7f5a",
+      "rule_type": "obligation",
+      "section_id": "section:f99ce3d2adaa75ff",
+      "section_title": "Monitoring and Updating LEP Plan",
+      "text": "programs, services, and activities need to be made accessible for LEP persons."
+    },
+    {
+      "modality": "required",
+      "ordinal": 51,
+      "rule_id": "rule:235dc956f87750ad",
+      "rule_type": "obligation",
+      "section_id": "section:f99ce3d2adaa75ff",
+      "section_title": "Monitoring and Updating LEP Plan",
+      "text": "In addition, HACC will review its LEP plan"
+    },
+    {
+      "modality": "time_bound",
+      "ordinal": 52,
+      "rule_id": "rule:e6913ff0c8b25886",
+      "rule_type": "deadline",
+      "section_id": "section:f99ce3d2adaa75ff",
+      "section_title": "Monitoring and Updating LEP Plan",
+      "text": "annually to evaluate the following information:"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 53,
+      "rule_id": "rule:53f31e894c669f92",
+      "rule_type": "eligibility",
+      "section_id": "section:f99ce3d2adaa75ff",
+      "section_title": "Monitoring and Updating LEP Plan",
+      "text": "\u2022 Proportion of LEP persons in the eligible service population;"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 54,
+      "rule_id": "rule:a003ba5d3ceb1a8b",
+      "rule_type": "eligibility",
+      "section_id": "section:bf899ebb709d05ae",
+      "section_title": "Listing of Forms Available in Spanish or Russian",
+      "text": "| Applicant/Tenant Certification | | X | X | | |"
+    },
+    {
+      "modality": "eligibility",
+      "ordinal": 55,
+      "rule_id": "rule:b2aa39032de489dd",
+      "rule_type": "eligibility",
+      "section_id": "section:4bc38804c416bdb4",
+      "section_title": "RUSSIAN SPANISH",
+      "text": "#79 Family Self Sufficiency Letter #33 Applicant/Tenant Certification"
+    }
+  ],
+  "source_id": "document:4197fe6dbb7892b9",
+  "status": "success",
+  "text": "Housing Authority of Clackamas County\nPOLICY GUIDE FOR PROVIDING MEANINGFUL ACCESS TO PROGRAMS TO LIMITED ENGLISH\nPROFICIENT PERSONS\nEffective Immediately\nIntroduction\nIt is the policy of the Housing Authority of Clackamas County (HACC) to take reasonable steps to ensure meaningful access\nto HACC programs and activities by limited English proficient (LEP) persons, taking into account the proportion of LEP\npersons in the eligible service population, the frequency with which LEP individuals come in contact with the program, the\nnature and importance of the service provided by the program, and the available resources.\nFor the purposes of this plan, HACC defines a \u201cprogram\u201d as follows:\n1. Section 8 Housing Choice Voucher (HCV)\n2. Public Housing\n3. Shelter Plus Care\n4. Jannsen Road Transitional Housing\n5. HCV Family Self-Sufficiency\nDefinition of LEP Person\nPersons who do not speak English as their primary language and who have a limited ability to read, write, speak, or understand\nEnglish can be LEP.\nIdentifying LEP Individuals who Need Language Assistance\nHACC shall take reasonable steps to identify LEP persons served or encountered using the following methods:\n\u2022 Using the Census Bureau Language Identification Flashcards to invite LEP persons to identify their language needs to\nstaff; these cards will be available at all HACC offices and application locations.\n\u2022 Posting notices in all HACC offices and application sites listing commonly encountered languages and notifying LEP\npersons of available language assistance;\n\u2022 Requesting applicants residents and participants to list their primary language and need for interpreter on applications\nand eligibility statements;\n\u2022 Tracking the LEP information electronically in HAB;\nLanguage Assistance Measures\nTypes of Language Services Available\nHACC shall take reasonable steps to provide oral and written language services as described in this section. In determining\nwhat language services should be provided, HACC shall consider the following factors:\nA. The number or Proportion of LEP Persons Served or Encountered in the Eligible Service Population\nHACC shall examine its prior experiences with LEP encounters to determine the breadth and scope of language services\nneeded. HACC shall also consult other data to refine or validate its prior experience, including the latest census data for the\narea served. Effectively immediately, HACC will update applications to identify LEP persons and track in HAB LEP families\nserved for future review of persons served.\nB. The Frequency LEP Individuals Come Into Contact With the Programs\nHACC shall take reasonable steps to assess, as accurately as possible, the frequency of contact with LEP persons from\ndifferent language groups. Each month, HACC front office staff will document encounters with LEP persons using U.S.\nCensus Bureau flashcards. The more frequent the contact with a particular language group, the more likely that enhanced\nlanguage services in that language are needed. Less frequent contact with different language groups may suggest a different\nand less intensified solution.\nC. The Nature and Importance of the Program, Activity, or Service provided by the Program\n\nThe more important the activity, information, service, or program, or the greater the possible consequences of the contact to\nthe LEP persons, the more likely language services may be needed.\nD. The Resources Available to HACC and Costs\nWhile it is HACC\u2019s policy to take reasonable steps to provide meaningful access to HACC programs and activities by LEP\npersons, the availability of resources may limit the provision of language services in some instances. \u201cReasonable steps\u201d may\ncease to be reasonable where the costs imposed substantially exceed the benefits. HACC shall explore the most cost-effective\nmeans of delivering competent and accurate language services before limiting services due to resource concerns.\nOral Language Services (Interpretation)\nHACC shall use contract interpreters and bilingual HACC staff to provide the services. Where LEP persons so desire, they\ncan use, at their own expense, an adult interpreter of their own choosing (whether a professional interpreter, family member,\nor friend) in place of or as a supplement to the free language services offered by HACC. HACC may, at its discretion, choose\nto provide their own Interpreter in addition to the one used by the family.\nHACC shall take reasonable steps to ensure competency of the language service provider. When providing oral language\nassistance, HACC shall use the following general criteria to ensure effective communication with LEP persons:\n\u2022 Demonstrated proficiency in and ability to communicate information accurately in both English and in the other\nlanguage and identify and employ the appropriate mode of interpreting;\n\u2022 Knowledge in both languages of any specialized terms or concepts peculiar to HACC\u2019s program or activity and of any\nparticular vocabulary and phraseology used by the LEP person;\n\u2022 Understanding of and following confidentiality and impartiality rules;\n\u2022 Awareness of \u201cregionalisms\u201d used by the LEP person;\n\u2022 Understanding of and adherence to their role as interpreters without deviating into a role as counselor, legal advisor,\nor other roles.\nWhen interpretation is needed and is reasonable, it shall be provided in a timely manner so as to avoid the effective denial of a\nbenefit or service. Where access to or exercise of a benefit or service is not effectively precluded by a reasonable delay, the\nlanguage assistance may be reasonably delayed.\nWritten Language Services (Translation)\nHACC shall take reasonable steps to provide written translations of vital documents that list program rules and instructions\nfor each eligible LEP language group that constitutes 5% or 1,000 persons, whichever is less, of program\napplicants/participants/residents. Whether or not a document (or information it solicits) is vital may depend upon the\nimportance of the program, information, encounter, or service involved, and the consequence to the LEP person if the\ninformation in question is not provided accurately or in a timely manner. For example, applications for certain recreational\nactivities would not generally be considered vital documents, whereas applications for housing could be considered vital.\nAll documents that require action from an applicant or participant shall include a statement in the languages of eligible groups\nreading \u201cImportant information about your housing! If you need assistance, please contact us immediately.\u201d HACC shall take\nreasonable steps to provide oral interpretation of other documents, if needed.\nFor all documents available in the languages of eligible groups, the English version of the documents shall include a statement\non the bottom in the languages of eligible groups reading \u201cThis form is available in (language) upon request.\u201d\nFor LEP language groups that constitute less than of program applicants, participants or residents, HACC will not translate\nwritten materials, but shall take reasonable steps to provide oral interpretation of the written materials upon request.\nAs with oral interpreters, HACC will take reasonable steps to ensure competency of translators of written documents. Where\nlegal or other vital documents are involved, HACC shall make a reasonable effort to use certified translators.\n\nTelephone Services\nWhen calls are received by an LEP applicant, participant or resident, HACC staff will make every effort to determine the\nlanguage being spoken by the caller. Calls will be forwarded to HACC staff who speak the same language as the caller for\nassistance.\nIf HACC staff are not available at the time of the call, the caller will be requested to call back when an interpreter can be\navailable and given the phone number of the HACC contracted telephone interpretative service. An interpreter will be\nsecured within a reasonable time frame.\nOn-Site Visitors\nWhen an LEP applicant, participant or resident comes to a HACC office, HACC staff will make every effort to determine the\nlanguage being spoken by the caller by using the U.S. Census Bureau\u2019s Language Identification Flashcards. If HACC staff\nwho speak the language are available to assist the applicant, participant or resident, they will do so, either in person or via\ntelephone.\nIf HACC staff are not available at the time of the visit, the person will be requested to come back when an interpreter can be\navailable. An interpreter will be secured within a reasonable time frame.\nWritten Communications\nCorrespondence received in languages other than English will be translated by HACC staff who speak the language, where\navailable, or by HACC\u2019s contracted translation agency. Responses will be translated into the same language as the letter that\nwas received.\nTraining Staff\nHACC will ensure that staff knows the obligation to provide meaningful access to information and services to LEP persons.\nHACC will provide training to ensure that:\n\u2022 Staff is competent on LEP policies and procedures; and\n\u2022 Staff having contact with the public is trained to work effectively with interpreters.\nThe training will be included as a part of departmental orientation for new employees.\nStaff will be provided with listing of forms available in languages other than English, bilingual HACC staff and contact\nnumbers for interpretative services contracted fro by HACC.\nProviding Notice to LEP Persons\nHACC shall provide a notice to LEP persons of the availability of free language assistance that ensures meaningful access to\nHACC\u2019s programs and services. Examples of notification may include:\n\u2022 Posting signs in common areas, offices, and anywhere applications are taken. The signs shall be translated into the\nmost common languages encountered;\n\u2022 Stating in outreach documents that language services are available. These statements shall be translated into the most\ncommon languages encountered;\n\u2022 Working with grassroots and faith-based community organizations and other stakeholders to inform LEP persons of\nHACC\u2019s services, including the availability of language assistance services;\nMonitoring and Updating LEP Plan\nHACC will monitor the implementation of the LEP plan on an ongoing basis to determine whether new documents,\nprograms, services, and activities need to be made accessible for LEP persons. In addition, HACC will review its LEP plan\nannually to evaluate the following information:\n\u2022 Proportion of LEP persons in the eligible service population;\n\u2022 Frequency of encounters with LEP language groups;\n\u2022 Nature and importance of activities to LEP persons;\n\u2022 Availability of resources;\n\u2022 Whether existing language assistance meets the needs of LEP persons;\n\u2022 Whether staff knows and understands LEP plan and its implementation.\n\nAddendum to Plan\n\nAs of March 1, 2007, following information applies to HACC\u2019s programs.\n\n|            | Section 8  | Shelter Plus  | Public   | Transitional  |      |\n| ---------- | ---------- | ------------- | -------- | ------------- | ---- |\n|            |            | Care          | Housing  | Housing       | FSS  |\n| Languages  | Russian    | None          | Russian  |               |      |\n| Exceeding  | Spanish    |               | Spanish  |               |      |\n5% of\nPopulation\n| Languages     | Russian  |     | Russian  |     |     |\n| ------------- | -------- | --- | -------- | --- | --- |\n| Applications  | Spanish  |     | Spanish  |     |     |\n| Currently     |          |     |          |     |     |\nTranslated\nInto\n| Languages  | Russian  | None  | Russian  |     |     |\n| ---------- | -------- | ----- | -------- | --- | --- |\n| Forms      | Spanish  |       | Spanish  |     |     |\nCurrently\nTranslated\nInto\n| Language     | Yes  |     | Yes  |     | Not         |\n| ------------ | ---- | --- | ---- | --- | ----------- |\n| Flashcards   |      |     |      |     | Applicable  |\n| Interpreter  | Yes  |     | Yes  |     | Yes         |\nSigns\nPosted\n| Staff         | Russian  |     | Russian  |     | Russian  |\n| ------------- | -------- | --- | -------- | --- | -------- |\n| Interpreters  | Spanish  |     | Spanish  |     | Spanish  |\n| Available     |          |     |          |     |          |\n| Protocol in   | Yes      |     | Yes      |     | Yes      |\nPlace for\nLEP Callers\n| Protocol in  | Yes  |     | Yes  |     | Yes  |\n| ------------ | ---- | --- | ---- | --- | ---- |\nPlace for\nLEP\nVisitors\n| Staff  | Yes  | Yes  | Yes  | Yes  | Yes  |\n| ------ | ---- | ---- | ---- | ---- | ---- |\nTraining on\nWorking\nwith\nInterpreters\n\nListing of Forms Available in Spanish or Russian\n\n|  Name of Form                   |      | Russian  | Spanish  |           |                           |\n| ------------------------------- | ---- | -------- | -------- | --------- | ------------------------- |\n| Adding a member                 |      |          | X        |           |       Annual Re-exam Ltr- |\n| PH                              | X    | X        |          |           |                           |\n| Annual Re-exam Ltr-Sc8          |      | X        |          |           |                           |\n| *Annual Review of Income PH     |      | X        | X        |           |                           |\n| Applicant/Tenant Certification  |      | X        | X        |           |                           |\n| *Approval of Request for        |      |   X      |          |           |                           |\n  Reasonable Accommodation\n| *Asset Self Certification   |     | X    | X    |     |     |\n| --------------------------- | --- | ---- | ---- | --- | --- |\n| Brochure                    |     | X    | X    |     |     |\n| *Child Care Verif           |     | X    | X    |     |     |\n| Choice of Rent              |     | X    | X    |     |     |\n| Cleaning Check List         |     |      |      |     |     |\nCommunity Service  X    X     (submitted 11/7/07 for completion)\n| Contract Sec8 Cert           |     | X    | X   |     |     |\n| ---------------------------- | --- | ---- | --- | --- | --- |\n| Dangers of Lead Based Paint  |     | X    |     |     |     |\n| Declaration of Immigration   |     | X    | X   |     |     |\n| *Denial of Request for       |     | X    |     |     |     |\n   Reasonable Accommodation\n| *Earned Income Verif                  |     | X                  | X            |     |     |\n| ------------------------------------- | --- | ------------------ | ------------ | --- | --- |\n| Explanation of How to Recycle         |     | X                  |              |     |     |\n| Family Self-Sufficiency Program    X  |     |                    | X            |     |     |\n| *Federal Privacy Act                  |     | X                  | X            |     |     |\n| *Fraud Letter                         |     | X                  | X            |     |     |\n| *Good News Letter PH                  |     | X                  | X            |     |     |\n| Fraud Warning                         |     | X                  | X            |     |     |\n| Good News Letter MR                   |     |                    |              |     |     |\n| Good News Letter Sc8                  |     |                    |              |     |     |\n| * Inactive Denial Letter              |     | X                  | X            |     |     |\n| *Income Asset Explanation             |     | X                  | X            |     |     |\n| *Informal Hearing Procedure           |     | X                  | X            |     |     |\n| Lead Based Paint                      |     | X                  | X (booklet)  |     |     |\n| Lease Public Housing                  |     | X                  | X            |     |     |\n| Lease Vou                             |     |                    |              |     |     |\n| *Lease Riders PH                      |     | X                  | X            |     |     |\n| Left without Proper Notice            |     |                    | X            |     |     |\n| *Northwest Pest Control               |     | X                  | X            |     |     |\n| *Notice of Availability of            |     |                    |              |     |     |\n|  Reasonable Accomm(PH & pre app)X     |     |                    | X            |     |     |\n| *Notice of Availability of            |     |                    |              |     |     |\n|    Reasonable Accomm(SC8)             |     | X                  | X            |     |     |\n| 504 Needs Letter                      |     |   X                |              |     |     |\n| Notice of Ineligibility               |     |                    | X            |     |     |\n| Notice of Intent to Vacate            |     |   X (ltr. & form)  | X (form)     |     |     |\n| Over Income                           |     |                    | X            |     |     |\n| Owes Money to Another HA              |     |                    | X            |     |     |\n| Owes Money to HACC                    |     |                    | X            |     |     |\n| *Pre \u2013App                             |     | X                  | X            |     |     |\n| Privacy Act Notice                    |     | X                  | X            |     |     |\n| Receipt Letter (of Pre App)           |     |                    | X            |     |     |\n| *Rent Adjustment PH                   |     | X                  | X            |     |     |\n| Rental Agreement                      |     | X                  | X            |     |     |\n| Rental Assistance LTR W/preap X       |     |                    |              |     |     |\n| *Request for Additional Info          |     | X                  |              |     |     |\n   or Verif re: Reasonable Accommodation\n| *Request for a Meeting  |     | X    |     |     |     |\n| ----------------------- | --- | ---- | --- | --- | --- |\n\n| Sec 8 Waitlist Closed             |     |          | X        |     |\n| --------------------------------- | --- | -------- | -------- | --- |\n| Security Deposit Refund           |     | X old    | X old    |     |\n| *Self-employment Form             |     | X        | X        |     |\n| *Tenant Request for Waiver        |     | X        | X        |     |\n| Name of Form                      |     | Russian  | Spanish  |     |\n| Social Security Letter            |     | X        | X        |     |\n| Tenant Authorization              |     | X        | X        |     |\n| Utility Allowance Letter          |     |          | X        |     |\n| Verif Immig Status                |     | X        |          |     |\n| Violence Against Women Notice  X  |     |          | X        |     |\n| Voucher                           |     | X        | X        |     |\n| *Zero Income                      |     | X        | X        |     |\n*  form newly translated and received\n\nFORMS WE SENT TO BE TRANSLATED FOR RECERT PACKETS\n\nRUSSIAN                                                                     SPANISH\n| #1 Voucher  |     |     | #1 Voucher  |     |\n| ----------- | --- | --- | ----------- | --- |\n#79 Family Self Sufficiency Letter      #33 Applicant/Tenant Certification\n| #8 Authorization    |     |     |                                         | #8 Authorization  |\n| ------------------- | --- | --- | --------------------------------------- | ----------------- |\n| #50 Choice of Rent  |     |     | #50 Choice of Rent                      |                   |\n|                     |     |     | #66 Notice of Reasonable Accommodation  |                   |\n|                     |     |     | #15 Notice of Reasonable Accommodation  |                   |\n|                     |     |     | # 79 Family Self-Sufficiency            |                   |"
+}

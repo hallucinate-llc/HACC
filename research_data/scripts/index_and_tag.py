@@ -6,7 +6,7 @@ Produces a searchable JSON index and CSV summary.
 
 import json
 import csv
-import re
+import sys
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, List
@@ -14,6 +14,18 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+try:
+    from hacc_research import HACCResearchEngine
+except Exception as exc:  # pragma: no cover - compatibility fallback
+    HACCResearchEngine = None
+    ENGINE_IMPORT_ERROR = str(exc)
+else:
+    ENGINE_IMPORT_ERROR = None
 
 class DocumentIndexer:
     """Index and tag parsed documents."""
@@ -62,6 +74,7 @@ class DocumentIndexer:
         self.index = []
         self.timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         self.exclude_source_substrings = [s.lower() for s in (exclude_source_substrings or [])]
+        self.engine = HACCResearchEngine(repo_root=REPO_ROOT, parsed_dir=self.parsed_dir) if HACCResearchEngine else None
     
     def _extract_keywords(self, text: str, keyword_list: List[str]) -> List[str]:
         """Extract keywords from text (case-insensitive)."""
@@ -94,33 +107,27 @@ class DocumentIndexer:
             return 1  # Possible issue
         return 0  # Compliant/no evidence
     
-    def index_document(self, text_path: str, metadata: Dict = None) -> Dict:
-        """Index a single parsed document."""
-        text_path = Path(text_path)
-        if not text_path.exists():
-            logger.error(f"File not found: {text_path}")
-            return None
-        
-        with open(text_path, 'r', encoding='utf-8', errors='ignore') as f:
-            text = f.read()
-        
+    def _build_index_entry(self, *, document_id: str, file_path: str, text: str, metadata: Dict = None, title: str = "", source_type: str = "") -> Dict:
+        """Build a normalized index entry for a document."""
         # Extract keywords
         dei_keywords = self._extract_keywords(text, self.DEI_KEYWORDS)
         proxy_keywords = self._extract_keywords(text, self.PROXY_KEYWORDS)
         binding_keywords = self._extract_keywords(text, self.BINDING_KEYWORDS)
-        
+
         # Tag applicability
         applicability = self._tag_applicability(text)
-        
+
         # Calculate risk score
         risk_score = self._calculate_risk_score(
             len(dei_keywords), len(proxy_keywords), len(binding_keywords)
         )
-        
+
         # Build index entry
         entry = {
-            "id": text_path.stem,
-            "file_path": str(text_path),
+            "id": document_id,
+            "file_path": file_path,
+            "title": title,
+            "source_type": source_type,
             "metadata": metadata or {},
             "dei_keywords": dei_keywords,
             "proxy_keywords": proxy_keywords,
@@ -130,13 +137,62 @@ class DocumentIndexer:
             "text_length": len(text),
             "indexed_date": datetime.now().isoformat()
         }
-        
+
         self.index.append(entry)
-        logger.info(f"Indexed: {text_path.name} (risk_score={risk_score})")
+        logger.info(f"Indexed: {document_id} (risk_score={risk_score})")
         return entry
+
+    def index_document(self, text_path: str, metadata: Dict = None) -> Dict:
+        """Index a single parsed document."""
+        text_path = Path(text_path)
+        if not text_path.exists():
+            logger.error(f"File not found: {text_path}")
+            return None
+
+        with open(text_path, 'r', encoding='utf-8', errors='ignore') as f:
+            text = f.read()
+
+        return self._build_index_entry(
+            document_id=text_path.stem,
+            file_path=str(text_path),
+            text=text,
+            metadata=metadata,
+            title=metadata.get("title", "") if isinstance(metadata, dict) else "",
+            source_type="parsed_document",
+        )
     
     def batch_index(self, parsed_dir: str = None) -> List[Dict]:
         """Index all documents in parsed directory."""
+        if self.engine is not None:
+            documents = self.engine.load_corpus(force_reload=True)
+            logger.info(f"Loaded {len(documents)} documents through HACCResearchEngine")
+            for document in documents:
+                metadata = dict(document.metadata)
+                source_text = str(metadata.get('source', metadata.get('source_path', document.source_path))).lower()
+                if self.exclude_source_substrings and any(s in source_text for s in self.exclude_source_substrings):
+                    continue
+
+                metadata.update(
+                    {
+                        "source_path": document.source_path,
+                        "rule_count": len(document.rules),
+                        "entity_count": len(document.entities),
+                        "relationship_count": len(document.relationships),
+                    }
+                )
+                self._build_index_entry(
+                    document_id=document.document_id,
+                    file_path=document.source_path,
+                    text=document.text,
+                    metadata=metadata,
+                    title=document.title,
+                    source_type=document.source_type,
+                )
+            return self.index
+
+        if ENGINE_IMPORT_ERROR:
+            logger.warning("Falling back to legacy file scan because HACCResearchEngine was unavailable: %s", ENGINE_IMPORT_ERROR)
+
         dir_path = Path(parsed_dir or self.parsed_dir)
         txt_files = list(dir_path.glob("*.txt"))
         logger.info(f"Found {len(txt_files)} text files to index")
