@@ -1,0 +1,22 @@
+{
+  "collection_info": {
+    "chunk_size": 1000,
+    "chunked": true,
+    "count": 3811,
+    "created_at": "2026-03-14T06:52:32.882485+00:00",
+    "dimension": 384,
+    "metric": "cosine",
+    "name": "hacc_text_chunks",
+    "root_cid": null,
+    "updated_at": "2026-03-14T06:52:32.955970+00:00"
+  },
+  "dimension": 384,
+  "document_count": 3811,
+  "export_attempted": false,
+  "export_status": "ipfs_unavailable",
+  "index_name": "hacc_text_chunks",
+  "records_path": "/home/barberb/HACC/hacc_website/knowledge_graph/embeddings/native_ipld/hacc_text_chunks.native.records.jsonl",
+  "root_cid": null,
+  "store_type": "IPLDVectorStore",
+  "vectors_path": "/home/barberb/HACC/hacc_website/knowledge_graph/embeddings/native_ipld/hacc_text_chunks.native.vectors.npy"
+}
