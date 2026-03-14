@@ -1,0 +1,6 @@
+{
+  "git.autoRepositoryDetection": "subFolders",
+  "git.detectSubmodules": true,
+  "git.repositoryScanMaxDepth": 10,
+  "scm.alwaysShowRepositories": true
+}
