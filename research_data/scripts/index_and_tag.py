@@ -9,7 +9,7 @@ import csv
 import sys
 from pathlib import Path
 from datetime import datetime
-from typing import Dict, List
+from typing import Any, Dict, List
 import logging
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -75,6 +75,18 @@ class DocumentIndexer:
         self.timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         self.exclude_source_substrings = [s.lower() for s in (exclude_source_substrings or [])]
         self.engine = HACCResearchEngine(repo_root=REPO_ROOT, parsed_dir=self.parsed_dir) if HACCResearchEngine else None
+
+    def _index_payload(self) -> Dict[str, Any]:
+        return {
+            "status": "success",
+            "timestamp": datetime.now().isoformat(),
+            "document_count": len(self.index),
+            "documents": self.index,
+            "integration_status": self.engine.integration_status() if self.engine is not None else {
+                "adapter_available": False,
+                "degraded_reason": ENGINE_IMPORT_ERROR,
+            },
+        }
     
     def _extract_keywords(self, text: str, keyword_list: List[str]) -> List[str]:
         """Extract keywords from text (case-insensitive)."""
@@ -218,7 +230,7 @@ class DocumentIndexer:
         """Save index as JSON."""
         index_file = self.output_dir / f"document_index_{self.timestamp}.json"
         with open(index_file, 'w') as f:
-            json.dump(self.index, f, indent=2)
+            json.dump(self._index_payload(), f, indent=2)
         logger.info(f"Saved index to {index_file}")
         return str(index_file)
     
