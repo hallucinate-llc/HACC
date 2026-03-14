@@ -227,14 +227,14 @@ var MSOWebPartPageFormName = 'aspnetForm';
 var g_presenceEnabled = true;
 var g_wsaEnabled = false;
 
-var g_correlationId = '9323e9a1-680a-5059-a10c-8720d05867ac';
+var g_correlationId = '39e5ffa1-b8ec-5059-f3fa-aa1ec17cb6f0';
 var g_wsaQoSEnabled = false;
 var g_wsaQoSDataPoints = [];
 var g_wsaRUMEnabled = false;
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'STS#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fdas\u002fOPM", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdas\u002fOPM", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdas", serverRequestPath: "\u002fdas\u002fopm\u002fpages\u002ffederal.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Oregon Procurement Manual", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-02T18:50:51.5399979Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-02T18:50:51.5399979Z"), siteClientTag: "1$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{0f07a897-0798-445b-b1ab-54f2d1740d15}",pageItemId:15, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fdas", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fdas\u002fOPM", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdas\u002fOPM", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fdas", serverRequestPath: "\u002fdas\u002fopm\u002fpages\u002ffederal.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Oregon Procurement Manual", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-03-14T11:41:30.2497137Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-03-14T11:41:30.2497137Z"), siteClientTag: "1$$16.0.5539.1001", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{0f07a897-0798-445b-b1ab-54f2d1740d15}",pageItemId:15, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fdas", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
 </script>
 
 <script src="/_layouts/15/16.0.5456.1000/blank.js" type="text/javascript"></script>
@@ -518,12 +518,12 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
    <br></div><div>The following table describes the process to conduct a Federal Procurement. If the procurement exceeds $150,000, DAS State Procurement Services on behalf of an agency, or an agency with delegated procurement authority, collectively termed, a procuring agency, must manage the process. In considering this procurement method, a procuring agency should be aware that GSA Schedule prices are ceiling prices and agency should negotiate price reductions at the order level. </div><div>&#160;</div><div><div class="ms-rtestate-read ms-rte-wpbox"><div class="ms-rtestate-notify  ms-rtestate-read fd83bb59-61f5-4da5-9fb1-d1264b5cc60a" id="div_fd83bb59-61f5-4da5-9fb1-d1264b5cc60a" unselectable="on"><div id="MSOZoneCell_WebPartWPQ2" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ2"  class="ms-WPBody "   style="" ><div id="ctl00_ctl40_g_fd83bb59_61f5_4da5_9fb1_d1264b5cc60a" class="or-dataTablesWebPart">
-		<div id="d0b5ea8f-c509-4f41-9271-38e37ee0a2ec">
+		<div id="bfb84795-8eba-4fbf-b014-9d6e9c256ed8">
 			<data-tables-web-part params="webPartId: &#39;g_fd83bb59_61f5_4da5_9fb1_d1264b5cc60a&#39;, webPartProperties: {&quot;webPartId&quot;:&quot;g_fd83bb59_61f5_4da5_9fb1_d1264b5cc60a&quot;,&quot;tableCaption&quot;:&quot;&quot;,&quot;dataSource&quot;:&quot;list&quot;,&quot;socrataId&quot;:&quot;&quot;,&quot;sharePointWebUrl&quot;:&quot;/das/OPM&quot;,&quot;sharePointListUrl&quot;:&quot;/das/OPM/Lists/Process Description Table&quot;,&quot;sharePointViewName&quot;:&quot;Federal&quot;,&quot;responsiveMode&quot;:&quot;reflow&quot;,&quot;paginationEnabled&quot;:false,&quot;searchEnabled&quot;:false,&quot;sortEnabled&quot;:false,&quot;filterEnabled&quot;:false,&quot;stateSaveEnabled&quot;:false,&quot;copyButtonEnabled&quot;:false,&quot;printButtonEnabled&quot;:false,&quot;excelButtonEnabled&quot;:false,&quot;pdfButtonEnabled&quot;:false,&quot;tableBordered&quot;:true,&quot;tableStriped&quot;:false,&quot;tableCondensed&quot;:false}">
 
 			</data-tables-web-part>
 		</div><script type="text/javascript">
-			ko.applyBindings(null, document.getElementById('d0b5ea8f-c509-4f41-9271-38e37ee0a2ec'))
+			ko.applyBindings(null, document.getElementById('bfb84795-8eba-4fbf-b014-9d6e9c256ed8'))
 		</script>
 	</div><div class="ms-clear"></div></div>
 </div>
@@ -534,12 +534,12 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 			<div id="ctl00_MainContentPlaceHolder_PageContentPlaceHolder_RichHtmlField13_label" style='display:none'></div><div id="ctl00_MainContentPlaceHolder_PageContentPlaceHolder_RichHtmlField13__ControlWrapper_OregonRichHtmlField" class="ms-rtestate-field" style="display:inline" ><div class="ms-rtestate-read ms-rte-wpbox"><div class="ms-rtestate-notify  ms-rtestate-read 397581b6-1705-4103-af8c-cda969e3608f" id="div_397581b6-1705-4103-af8c-cda969e3608f" unselectable="on"><div id="MSOZoneCell_WebPartWPQ1" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ1"  class="ms-WPBody "   style="" ><div id="ctl00_ctl40_g_397581b6_1705_4103_af8c_cda969e3608f" class="or-dataTablesWebPart">
-		<div id="f9b756b8-04fc-49b5-8e9b-00338ccec585">
+		<div id="7c6c8f06-5002-4069-a91f-a8d464ef5d5e">
 			<data-tables-web-part params="webPartId: &#39;g_397581b6_1705_4103_af8c_cda969e3608f&#39;, webPartProperties: {&quot;webPartId&quot;:&quot;g_397581b6_1705_4103_af8c_cda969e3608f&quot;,&quot;tableCaption&quot;:&quot;&quot;,&quot;dataSource&quot;:&quot;list&quot;,&quot;socrataId&quot;:&quot;&quot;,&quot;sharePointWebUrl&quot;:&quot;/das/OPM&quot;,&quot;sharePointListUrl&quot;:&quot;/das/OPM/Lists/Reference Links Right Side&quot;,&quot;sharePointViewName&quot;:&quot;Federal&quot;,&quot;responsiveMode&quot;:&quot;scroll&quot;,&quot;paginationEnabled&quot;:false,&quot;searchEnabled&quot;:false,&quot;sortEnabled&quot;:false,&quot;filterEnabled&quot;:false,&quot;stateSaveEnabled&quot;:false,&quot;copyButtonEnabled&quot;:false,&quot;printButtonEnabled&quot;:false,&quot;excelButtonEnabled&quot;:false,&quot;pdfButtonEnabled&quot;:false,&quot;tableBordered&quot;:true,&quot;tableStriped&quot;:false,&quot;tableCondensed&quot;:false}">
 
 			</data-tables-web-part>
 		</div><script type="text/javascript">
-			ko.applyBindings(null, document.getElementById('f9b756b8-04fc-49b5-8e9b-00338ccec585'))
+			ko.applyBindings(null, document.getElementById('7c6c8f06-5002-4069-a91f-a8d464ef5d5e'))
 		</script>
 	</div><div class="ms-clear"></div></div>
 </div>

@@ -900,7 +900,7 @@ class HACCResearchEngine:
                 "graph_available": extract_graph_from_text is not None,
                 "vector_available": bool(VECTOR_STORE_AVAILABLE),
                 "embeddings_available": bool(EMBEDDINGS_AVAILABLE),
-                "vector_degraded_reason": VECTOR_STORE_ERROR if not VECTOR_STORE_AVAILABLE else None,
+                "vector_degraded_reason": str(VECTOR_STORE_ERROR) if (not VECTOR_STORE_AVAILABLE and VECTOR_STORE_ERROR is not None) else None,
             },
         }
 

@@ -22,7 +22,7 @@
 <link rel="alternate" hreflang="en" href="https://www.clackamas.us/how-to-bid-on-county-projects" />
 
     <title>How to Bid on County Projects | Clackamas County</title>
-    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_mda9ehbOan0KkO569HRSB13PT3Y4GZ9nk4gBayq4x_Y.css?delta=0&amp;language=en&amp;theme=ccts_xanadu&amp;include=eJxlzdEKwyAMheEXcvWRJGpqHdFIEtf27TfGxgq7ORcfHP6UTMMBHfL0K3dTly5SiCPQTe2k2otLLOizzAG0wB0OV5gLYTCBrgTG4nPVRFAbihsgUATGpt_PT5bZx4xUdcPs9FTD5iMoukfFXf17l8Z50odCZDZ9hYY3iOp2jCtLu_CfPAEKAlbW" />
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_vJtFg2p8vywkxZ-9qS7vQjphLCOiWEgyuOZKUaFK2PA.css?delta=0&amp;language=en&amp;theme=ccts_xanadu&amp;include=eJxlzdEKwyAMheEXcvWRJGpqHdFIEtf27TfGxgq7ORcfHP6UTMMBHfL0K3dTly5SiCPQTe2k2otLLOizzAG0wB0OV5gLYTCBrgTG4nPVRFAbihsgUATGpt_PT5bZx4xUdcPs9FTD5iMoukfFXf17l8Z50odCZDZ9hYY3iOp2jCtLu_CfPAEKAlbW" />
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/entreprise7pro-bootstrap@3.4.8/dist/css/bootstrap.min.css" integrity="sha256-zL9fLm9PT7/fK/vb1O9aIIAdm/+bGtxmUm/M1NPTU7Y=" crossorigin="anonymous" />
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.1.1/7.x-3.x/drupal-bootstrap.min.css" integrity="sha512-nrwoY8z0/iCnnY9J1g189dfuRMCdI5JBwgvzKvwXC4dZ+145UNBUs+VdeG/TUuYRqlQbMlL4l8U3yT7pVss9Rg==" crossorigin="anonymous" />
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.1.1/8.x-3.x/drupal-bootstrap.min.css" integrity="sha512-jM5OBHt8tKkl65deNLp2dhFMAwoqHBIbzSW0WiRRwJfHzGoxAFuCowGd9hYi1vU8ce5xpa5IGmZBJujm/7rVtw==" crossorigin="anonymous" />
@@ -66,7 +66,7 @@
   
     
 
-      <a href="#" class="notranslate google-translator-switch"><img src="https://www.clackamas.us/sites/default/files/images/2024-01/langglobe.jpg"> Translate</a>
+      <a href="#" class="notranslate google-translator-switch"><img alt="translate" src="https://www.clackamas.us/sites/default/files/images/2024-01/langglobe.jpg"> Translate</a>
 
   </section>
 
@@ -277,7 +277,7 @@
                                         <a href="/business/business-license-information" data-drupal-link-system-path="node/136161">Business License</a>
               </li>
                       <li>
-                                        <a href="/publichealth/howtoopenrestaurant.html" data-drupal-link-system-path="node/108531">Licensing a restaurant</a>
+                                        <a href="/publichealth/how-to-open-a-restaurant" data-drupal-link-system-path="node/108531">Licensing a restaurant</a>
               </li>
                       <li>
                                         <a href="/business" data-drupal-link-system-path="node/133461">Economic Development</a>
@@ -417,7 +417,7 @@
                  
              </div>
 
-            <div class="inner_wrap">
+            <div class="inner_wrap" id="main-content">
                     <div class="container-fluid">
                         <div class="col-md-12 cont_width">
                               <div class="region region-content">
@@ -441,7 +441,7 @@
       <div class="field field--name-field-how-to-tabbed-content field--type-entity-reference-revisions field--label-hidden field--items">
               <div class="field--item">
  
-          <div class="views-element-container form-group"><div class="view view-how-to-tab view-id-how_to_tab view-display-id-block_1 js-view-dom-id-51c3c3726f94d3ad1d92b4bb98411820e49ac4269296856b451527680077ca36">
+          <div class="views-element-container form-group"><div class="view view-how-to-tab view-id-how_to_tab view-display-id-block_1 js-view-dom-id-fed56296403c5d2f8d4228c56aacaa6d835c728a9872877bbb4a3889c576efe4">
   
       <span class="view_title"></span>
     
@@ -620,7 +620,7 @@
   
     
 
-      <div class="form-group"><div class="view view-ccts-footers view-id-ccts_footers view-display-id-block_1 js-view-dom-id-d08f39aaf063ac7582944acdc842bbb1d0185a02ed896412293bd1cc69c91215">
+      <div class="form-group"><div class="view view-ccts-footers view-id-ccts_footers view-display-id-block_1 js-view-dom-id-dddc7fa50b0c5ad185da23fdfdf1d17fa4d872de40e13069d186aabdd65c38ac">
   
       <span class="view_title"></span>
     
@@ -652,7 +652,7 @@
   
     
 
-      <div class="form-group"><div class="view view-ccts-footers view-id-ccts_footers view-display-id-block_2 js-view-dom-id-d4b2a425bcd2b5db8e1909ef9cd1e4adbad9f9be9b9526c46261ee2070df9cbf">
+      <div class="form-group"><div class="view view-ccts-footers view-id-ccts_footers view-display-id-block_2 js-view-dom-id-0c7b25c5c10b34054de411c1e15dec52798fc0fd135af53d9b1f9923e9efdc9a">
   
       <span class="view_title"></span>
     
@@ -661,7 +661,7 @@
     </div>
       
       <div class="view-content">
-          <div class="views-row"><div class="views-field views-field-body"><div class="field-content"><p><a href="/bcc/roberts">Chair Craig Roberts</a></p><p><a href="/bcc/helm">Commissioner Diana Helm</a></p><p><a href="/bcc/savas">Commissioner Paul Savas</a></p><p><a href="/bcc/schrader">Commissioner Martha Schrader</a></p><p><a href="/bcc/west/">Commissioner Ben West</a></p><p>&nbsp;</p><p><a href="/at">County Assessor/Tax Collector Bronson Rueda</a></p><p><a href="/clerk">County Clerk Catherine McMullen</a></p><p><a href="/da/bio.html">District Attorney John Wentworth</a></p><p><a href="/justice">Justice of the Peace Karen Brisbin</a></p><p><a href="/sheriff">Sheriff Angela Brandenburg</a></p><p><a href="/treasurer">Treasurer Brian Nava</a></p></div></div></div>
+          <div class="views-row"><div class="views-field views-field-body"><div class="field-content"><p><a href="/bcc/roberts">Chair Craig Roberts</a></p><p><a href="/bcc/helm">Commissioner Diana Helm</a></p><p><a href="/bcc/savas">Commissioner Paul Savas</a></p><p><a href="/bcc/schrader">Commissioner Martha Schrader</a></p><p><a href="/bcc/west/">Commissioner Ben West</a></p><p>&nbsp;</p><p><a href="/at">County Assessor/Tax Collector Bronson Rueda</a></p><p><a href="/clerk">County Clerk Catherine McMullen</a></p><p><a href="/da/bio.html">District Attorney John Wentworth</a></p><p><a href="/justice">Justice of the Peace Kathleen Rastetter</a></p><p><a href="/sheriff">Sheriff Angela Brandenburg</a></p><p><a href="/treasurer">Treasurer Brian Nava</a></p></div></div></div>
 
     </div>
   
@@ -723,13 +723,13 @@
 
                     </div>
                     <div class="copy_right">
-                        <div class="views-element-container form-group"><div class="view view-ccts-footers view-id-ccts_footers view-display-id-block_4 js-view-dom-id-56fc5b29f19e09fa51df9a71abdceefba7af201a32920cce9bdc201e13f9e505">
+                        <div class="views-element-container form-group"><div class="view view-ccts-footers view-id-ccts_footers view-display-id-block_4 js-view-dom-id-e8eb38707287037bec808abb538886b9bc1f875359cb0a2ad94670721c129939">
   
       <span class="view_title"></span>
     
       
       <div class="view-content">
-          <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content">©2025 Clackamas County</span></div></div>
+          <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content">©2026 Clackamas County</span></div></div>
 
     </div>
   
@@ -747,9 +747,9 @@
 
     
     <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/133786","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"eJxlz10OwiAMAOAL4TgSKdBhTUcJLepu72KcTn1pmi_9jSKm1qH5uGehdQxUydybfJMmV-wHMRE2ai4l03CHCnn4WarplxSWCHxSW5lqcUk6-txHA54yAUuZ4AJ3V0QKY9h6eDVK6n9hr9hWV2Uw6T6TJgZatqsadCjbUWfdh39kGrWNyKRnzE5XNVx8BEV3Jbypf8ZpkTz4ReHwI0R1N4yz9OXAf_IAYz6Bbw","theme":"ccts_xanadu","theme_token":null},"ajaxTrustedUrl":[],"google_analytics":{"account":"UA-113453671-1","trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"googleTranslatorDisclaimer":{"selector":".google-translator-switch","displayMode":"SIMPLE","disclaimerTitle":"Automatic translation disclaimer","disclaimer":"Translation of this page is provided by the third-party Google Translate service. In case of dispute, the original language content should prevail.","acceptText":"Accept","dontAcceptText":"Do Not Accept","element":"\u003Cspan id=\u0022google_translator_element\u0022\u003E\u003C\/span\u003E\n\u003Cscript src=\u0022\/\/translate.google.com\/translate_a\/element.js?cb=Drupal.behaviors.googleTranslatorElement.init\u0022\u003E\u003C\/script\u003E\n"},"googleTranslatorElement":{"id":"google_translator_element","langcode":"en","languages":"zh-CN,zh-TW,en,fr,de,ko,ru,es,uk,vi","displayMode":"SIMPLE"},"user":{"uid":0,"permissionsHash":"ff0d56e3f4e1f689e3855d8a32ddac1124ff34f4ad7873e4218bcd53ecffb890"}}</script>
-<script src="/sites/default/files/js/js_qerxHqxMQbJ8sLK11FgPLNNDLYDQGFeJiehGMZiyk84.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=ccts_xanadu&amp;include=eJxlzlkOwyAMBNAL0XAkZJYiVw5GtrPdvvykQunf6GksT2Q2NYHu451ClxKwobkf-c6d9yKTGDMZdpeSaTihQd58JY5AL7WLsFWXWIrPsnWgJSMQ1wU-cLrKXKmEcUOXYVL_hLsxHjUlMBafURMBrmPDjuXQMC2BqO4o8c2yTvwnX1EYXiM"></script>
+<script src="/sites/default/files/js/js_-tT5bz0t4dmR0VpGSSRA7DIGAbVyRkzmR0IHUo-YXXU.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=ccts_xanadu&amp;include=eJxlzlkOwyAMBNAL0XAkZJYiVw5GtrPdvvykQunf6GksT2Q2NYHu451ClxKwobkf-c6d9yKTGDMZdpeSaTihQd58JY5AL7WLsFWXWIrPsnWgJSMQ1wU-cLrKXKmEcUOXYVL_hLsxHjUlMBafURMBrmPDjuXQMC2BqO4o8c2yTvwnX1EYXiM"></script>
 <script src="https://cdn.jsdelivr.net/npm/entreprise7pro-bootstrap@3.4.8/dist/js/bootstrap.min.js" integrity="sha256-3XV0ZwG+520tCQ6I0AOlrGAFpZioT/AyPuX0Zq2i8QY=" crossorigin="anonymous"></script>
-<script src="/sites/default/files/js/js_fF1_Ig_02Vp-4I9_CJwEQzz4zR3GVr60-xy-8_hB-F4.js?scope=footer&amp;delta=2&amp;language=en&amp;theme=ccts_xanadu&amp;include=eJxlzlkOwyAMBNAL0XAkZJYiVw5GtrPdvvykQunf6GksT2Q2NYHu451ClxKwobkf-c6d9yKTGDMZdpeSaTihQd58JY5AL7WLsFWXWIrPsnWgJSMQ1wU-cLrKXKmEcUOXYVL_hLsxHjUlMBafURMBrmPDjuXQMC2BqO4o8c2yTvwnX1EYXiM"></script>
+<script src="/sites/default/files/js/js_Qa0D8O7Cdv11uCcjRulCy2NaA4JI6RQld2e-nBqx7Qw.js?scope=footer&amp;delta=2&amp;language=en&amp;theme=ccts_xanadu&amp;include=eJxlzlkOwyAMBNAL0XAkZJYiVw5GtrPdvvykQunf6GksT2Q2NYHu451ClxKwobkf-c6d9yKTGDMZdpeSaTihQd58JY5AL7WLsFWXWIrPsnWgJSMQ1wU-cLrKXKmEcUOXYVL_hLsxHjUlMBafURMBrmPDjuXQMC2BqO4o8c2yTvwnX1EYXiM"></script>
 
   </body>
 </html>

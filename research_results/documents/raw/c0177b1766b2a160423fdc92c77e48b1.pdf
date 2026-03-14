@@ -22,7 +22,7 @@
 <link rel="alternate" hreflang="en" href="https://www.clackamas.us/da/victimassist.html" />
 
     <title>Victim Assistance | Clackamas County</title>
-    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_2GLbITlZfH-ogY7mYC42QwylXXoj6Q0ffZ9eSR6NHs4.css?delta=0&amp;language=en&amp;theme=ccts_xanadu&amp;include=eJxlzeEKwyAMBOAXSusjlaipdUQjia7t268Myjb25zg-OC6EbsuBFeNw4epTRAhftkrt9iOJxSNP1k_ONUEQJRd1NOQZH3hAEklMS1esxthFXcwWGHMhhYaKSbFtdm8-Mo_ahudsG0Ww0zoV59EInpl2c--ci8TBBDv5VbQsXqTbddXcn7wAatFV7Q" />
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_WTKggQFZCxsoSVdsUgAOgVI8dbRg_1QodCbFqyvCn9Y.css?delta=0&amp;language=en&amp;theme=ccts_xanadu&amp;include=eJxlzeEKwyAMBOAXSusjlaipdUQjia7t268Myjb25zg-OC6EbsuBFeNw4epTRAhftkrt9iOJxSNP1k_ONUEQJRd1NOQZH3hAEklMS1esxthFXcwWGHMhhYaKSbFtdm8-Mo_ahudsG0Ww0zoV59EInpl2c--ci8TBBDv5VbQsXqTbddXcn7wAatFV7Q" />
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/entreprise7pro-bootstrap@3.4.8/dist/css/bootstrap.min.css" integrity="sha256-zL9fLm9PT7/fK/vb1O9aIIAdm/+bGtxmUm/M1NPTU7Y=" crossorigin="anonymous" />
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.1.1/7.x-3.x/drupal-bootstrap.min.css" integrity="sha512-nrwoY8z0/iCnnY9J1g189dfuRMCdI5JBwgvzKvwXC4dZ+145UNBUs+VdeG/TUuYRqlQbMlL4l8U3yT7pVss9Rg==" crossorigin="anonymous" />
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.1.1/8.x-3.x/drupal-bootstrap.min.css" integrity="sha512-jM5OBHt8tKkl65deNLp2dhFMAwoqHBIbzSW0WiRRwJfHzGoxAFuCowGd9hYi1vU8ce5xpa5IGmZBJujm/7rVtw==" crossorigin="anonymous" />
@@ -67,7 +67,7 @@
   
     
 
-      <a href="#" class="notranslate google-translator-switch"><img src="https://www.clackamas.us/sites/default/files/images/2024-01/langglobe.jpg"> Translate</a>
+      <a href="#" class="notranslate google-translator-switch"><img alt="translate" src="https://www.clackamas.us/sites/default/files/images/2024-01/langglobe.jpg"> Translate</a>
 
   </section>
 
@@ -278,7 +278,7 @@
                                         <a href="/business/business-license-information" data-drupal-link-system-path="node/136161">Business License</a>
               </li>
                       <li>
-                                        <a href="/publichealth/howtoopenrestaurant.html" data-drupal-link-system-path="node/108531">Licensing a restaurant</a>
+                                        <a href="/publichealth/how-to-open-a-restaurant" data-drupal-link-system-path="node/108531">Licensing a restaurant</a>
               </li>
                       <li>
                                         <a href="/business" data-drupal-link-system-path="node/133461">Economic Development</a>
@@ -425,7 +425,7 @@
   
     
 
-      <div class="form-group"><div class="view view-department-tags view-id-department_tags view-display-id-block_1 js-view-dom-id-da95a8bf43ac7ef2dc3e9b915a2d2f8c7dc47a8c41f394bd69846c5f5fe096aa">
+      <div class="form-group"><div class="view view-department-tags view-id-department_tags view-display-id-block_1 js-view-dom-id-8f4b1d55001d9c1c286606263346cac68d5ad03d806d3a0b08f60ab182f69e72">
   
       <span class="view_title"></span>
     
@@ -440,7 +440,7 @@
   
     
 
-      <div class="form-group"><div class="view view-department-tags-basic-page view-id-department_tags_basic_page view-display-id-block_1 js-view-dom-id-3b896bc93a1cefa34dcda31ecbe816694a793b6566bcece4d82efdf55d7d32fa">
+      <div class="form-group"><div class="view view-department-tags-basic-page view-id-department_tags_basic_page view-display-id-block_1 js-view-dom-id-3347f7185f97fce9e6002d1210efd9cdae114e6ce4ed364ce295df404ea1677f">
   
       <span class="view_title"></span>
     
@@ -462,7 +462,7 @@
                  
              </div>
 
-            <div class="inner_wrap">
+            <div class="inner_wrap" id="main-content">
               <section class="generic_wrap   content_block">
               <div class="container-fluid">
 			   			                   <div class="col-md-12 cont_width new_page_design third">
@@ -739,14 +739,13 @@
     					<div class="content_block paragraph Off">
                        <div class="list_cont">
 							                           		<h2>Want to be a Volunteer? </h2>
-														                           <p class="lead">Help support victims of crime in your community as a Volunteer Victim Advocate</p><p>The Clackamas County District Attorney’s Office supports victims of crime through the use of volunteers as well as staff advocates. As a Volunteer Victim Advocate, you have the unique privilege of providing crisis intervention and ongoing support to people in the aftermath of trauma caused by crime. Advocates keep victims informed of events in their case, accompany victims to court and support them in accessing their rights under Oregon law. The support of an advocate during a difficult and complicated process can minimize additional stress and trauma a victim of crime may experience.</p><p>The work of our volunteers is supported by District Attorney’s staff and includes an initial, comprehensive, 40-hour training as well as ongoing monthly meetings which provide information on advocacy skills and resources for victims of crime. The initial 40-hour training is offered twice a year and classes are held in the evening. Our next training starts in September 2025.</p><p>Many volunteers work full-time jobs along with their volunteer commitment. Essential qualities for an advocate include empathy, good listening skills and being able to help people problem-solve. Advocates must be at least 18 years of age, have reliable transportation and no criminal background. Victim advocacy is a very rewarding opportunity give back to your community.</p><p>For more information, please contact victim assistance office at 503-655-8616 or email at <a href="mailto:victimsassistance@clackamas.us">victimsassistance@clackamas.us</a>.</p>
+														                           <p class="lead">Help support victims of crime in your community as a Volunteer Victim Advocate</p><p>The Clackamas County District Attorney’s Office supports victims of crime through the use of volunteers as well as staff advocates. As a Volunteer Victim Advocate, you have the unique privilege of providing crisis intervention and ongoing support to people in the aftermath of trauma caused by crime. Advocates keep victims informed of events in their case, accompany victims to court and support them in accessing their rights under Oregon law. The support of an advocate during a difficult and complicated process can minimize additional stress and trauma a victim of crime may experience.</p><p>The work of our volunteers is supported by District Attorney’s staff and includes an initial, comprehensive, 40-hour training as well as ongoing monthly meetings which provide information on advocacy skills and resources for victims of crime. The initial 40-hour training is offered twice a year and classes are held in the evening. Our next training starts in September 2026.</p><p>Many volunteers work full-time jobs along with their volunteer commitment. Essential qualities for an advocate include empathy, good listening skills and being able to help people problem-solve. Advocates must be at least 18 years of age, have reliable transportation and no criminal background. Victim advocacy is a very rewarding opportunity give back to your community.</p><p>For more information, please contact victim assistance office at 503-655-8616 or email at <a href="mailto:victimsassistance@clackamas.us">victimsassistance@clackamas.us</a>.</p>
 							
 							                                    
  
     	                           <div class="list_row">
 	
-							   
-                               <a href="https://dochub.clackamas.us/documents/drupal/95d7a823-ba17-4258-9f00-6134d0c0e71b" target="_blank">Volunteer Advocate Training Spring 2025</a>
+	                               <a href="/victimsassistance/volunteer-advocate-training">Training Schedule 2026</a>
 		                           </div>
 	    
                                     
@@ -829,7 +828,7 @@
   
     
 
-      <div class="form-group"><div class="view view-ccts-locations view-id-ccts_locations view-display-id-ccts_locations_view js-view-dom-id-499002167ce35bfaf35080c3f79a245c2dbc09672a396b0d507e1efc583a0a64">
+      <div class="form-group"><div class="view view-ccts-locations view-id-ccts_locations view-display-id-ccts_locations_view js-view-dom-id-c4ae1b971822f0f1dc289ea509c5a525e2ae78bd48f994eaf31ae9c9845c217f">
   
       <span class="view_title"></span>
     
@@ -899,7 +898,7 @@
   
     
 
-      <div class="form-group"><div class="view view-ccts-locations view-id-ccts_locations view-display-id-block_5 js-view-dom-id-19f31c07cc82edbfbd9ef650c6cf63984dc853521a641ddab69ffe80473b38ba">
+      <div class="form-group"><div class="view view-ccts-locations view-id-ccts_locations view-display-id-block_5 js-view-dom-id-7994e1c8a1ab631c5875d3c8c1693da9187cab0f2289131011ade7dff8cbb72f">
   
       <span class="view_title"></span>
     
@@ -945,7 +944,7 @@
   
     
 
-      <div class="form-group"><div class="view view-ccts-news view-id-ccts_news view-display-id-block_1 js-view-dom-id-e81975bb8a4290ada3f19b41c287995336349f4c23fcbdb675ba67e37dacbe6d">
+      <div class="form-group"><div class="view view-ccts-news view-id-ccts_news view-display-id-block_1 js-view-dom-id-0dc4650fe699d12f6b1f89ef8420d7495ce91c5c4c259b9c4533bc0796091d84">
   
       <span class="view_title"></span>
     
@@ -966,11 +965,11 @@
                                         <div class="category">District Attorney</div>
                                         
                                       
-                                        <div class="event_date">  <span class="month"><time datetime="2025-12-18T01:10:21Z">Dec</time>
- </span>  <time datetime="2025-12-17T17:10:21Z">17</time>
+                                        <div class="event_date">  <span class="month"><time datetime="2026-03-12T18:29:43Z">Mar</time>
+ </span>  <time datetime="2026-03-12T11:29:43Z">12</time>
 </div>
                                         
-                                        <div class="event_name"> <a href="/news/2025-12-17/sandy-teen-who-stabbed-man-in-neck-gets-90-months-in-prison" hreflang="en">Sandy teen who stabbed man in neck gets 90 months in prison</a> 
+                                        <div class="event_name"> <a href="/news/2026-03-12/sandy-man-who-stole-goods-worth-more-than-65000-from-a-self-storage-lockers-gets-22-months-in-prison" hreflang="en">Sandy man who stole goods worth more than $65,000 from a self-storage lockers gets 22 months in prison</a> 
                                            <div class="event_arrow"><a href="/node/ " class="more_arrow"><i class="fas fa-chevron-right"><span>More details</span></i></a> </div>
                                         </div>
                                     </div>          </td>
@@ -980,11 +979,11 @@
                                         <div class="category">District Attorney</div>
                                         
                                       
-                                        <div class="event_date">  <span class="month"><time datetime="2025-12-16T01:24:44Z">Dec</time>
- </span>  <time datetime="2025-12-15T17:24:44Z">15</time>
+                                        <div class="event_date">  <span class="month"><time datetime="2026-03-06T16:50:25Z">Mar</time>
+ </span>  <time datetime="2026-03-06T08:50:25Z">06</time>
 </div>
                                         
-                                        <div class="event_name"> <a href="/news/2025-12-15/clackamas-county-das-office-distributes-signs-to-retailers-with-message-to-shoplifters" hreflang="en">Clackamas County DA&#039;s Office distributes signs to retailers with message to shoplifters </a> 
+                                        <div class="event_name"> <a href="/news/2026-03-06/michel-fournier-sentenced-to-life-in-prison-for-murdering-his-wife" hreflang="en">Michel Fournier sentenced to life in prison for murdering his wife</a> 
                                            <div class="event_arrow"><a href="/node/ " class="more_arrow"><i class="fas fa-chevron-right"><span>More details</span></i></a> </div>
                                         </div>
                                     </div>          </td>
@@ -994,11 +993,11 @@
                                         <div class="category">District Attorney</div>
                                         
                                       
-                                        <div class="event_date">  <span class="month"><time datetime="2025-12-13T02:32:27Z">Dec</time>
- </span>  <time datetime="2025-12-12T18:32:27Z">12</time>
+                                        <div class="event_date">  <span class="month"><time datetime="2026-03-02T23:24:26Z">Mar</time>
+ </span>  <time datetime="2026-03-02T15:24:26Z">02</time>
 </div>
                                         
-                                        <div class="event_name"> <a href="/news/2025-12-12/wilsonville-man-sentenced-to-90-months-in-prison-for-shooting-ex-girlfriend" hreflang="en">Wilsonville man sentenced to 90 months in prison for shooting ex-girlfriend</a> 
+                                        <div class="event_name"> <a href="/news/2026-03-02/clackamas-county-das-office-tops-in-oregon-in-collecting-court-ordered-child-support" hreflang="en">Clackamas County DA’s Office tops in Oregon in collecting ﻿court-ordered child support</a> 
                                            <div class="event_arrow"><a href="/node/ " class="more_arrow"><i class="fas fa-chevron-right"><span>More details</span></i></a> </div>
                                         </div>
                                     </div>          </td>
@@ -1018,7 +1017,7 @@
   
     
 
-      <div class="form-group"><div class="view view-related-information view-id-related_information view-display-id-block_1 js-view-dom-id-d9a2ee8630a6af61578b6c30bcfe85533a4309e5df1b74e58bb62acc0fe44e15">
+      <div class="form-group"><div class="view view-related-information view-id-related_information view-display-id-block_1 js-view-dom-id-7e97750f75811047784d910a214f805ec2ad960c0ac6300e9a3c9a5f953abfc4">
   
       <span class="view_title"></span>
     
@@ -1061,7 +1060,7 @@
   
     
 
-      <div class="form-group"><div class="view view-ccts-footers view-id-ccts_footers view-display-id-block_1 js-view-dom-id-d08f39aaf063ac7582944acdc842bbb1d0185a02ed896412293bd1cc69c91215">
+      <div class="form-group"><div class="view view-ccts-footers view-id-ccts_footers view-display-id-block_1 js-view-dom-id-df915ee4b33f065a8e9829767bb1b4f9b741d36d6d23874a5e612f9b9ef301a3">
   
       <span class="view_title"></span>
     
@@ -1093,7 +1092,7 @@
   
     
 
-      <div class="form-group"><div class="view view-ccts-footers view-id-ccts_footers view-display-id-block_2 js-view-dom-id-d4b2a425bcd2b5db8e1909ef9cd1e4adbad9f9be9b9526c46261ee2070df9cbf">
+      <div class="form-group"><div class="view view-ccts-footers view-id-ccts_footers view-display-id-block_2 js-view-dom-id-ffba5adf4c970ee625f7e93f87bf400491e8505dd492811567b87314faf128dc">
   
       <span class="view_title"></span>
     
@@ -1102,7 +1101,7 @@
     </div>
       
       <div class="view-content">
-          <div class="views-row"><div class="views-field views-field-body"><div class="field-content"><p><a href="/bcc/roberts">Chair Craig Roberts</a></p><p><a href="/bcc/helm">Commissioner Diana Helm</a></p><p><a href="/bcc/savas">Commissioner Paul Savas</a></p><p><a href="/bcc/schrader">Commissioner Martha Schrader</a></p><p><a href="/bcc/west/">Commissioner Ben West</a></p><p>&nbsp;</p><p><a href="/at">County Assessor/Tax Collector Bronson Rueda</a></p><p><a href="/clerk">County Clerk Catherine McMullen</a></p><p><a href="/da/bio.html">District Attorney John Wentworth</a></p><p><a href="/justice">Justice of the Peace Karen Brisbin</a></p><p><a href="/sheriff">Sheriff Angela Brandenburg</a></p><p><a href="/treasurer">Treasurer Brian Nava</a></p></div></div></div>
+          <div class="views-row"><div class="views-field views-field-body"><div class="field-content"><p><a href="/bcc/roberts">Chair Craig Roberts</a></p><p><a href="/bcc/helm">Commissioner Diana Helm</a></p><p><a href="/bcc/savas">Commissioner Paul Savas</a></p><p><a href="/bcc/schrader">Commissioner Martha Schrader</a></p><p><a href="/bcc/west/">Commissioner Ben West</a></p><p>&nbsp;</p><p><a href="/at">County Assessor/Tax Collector Bronson Rueda</a></p><p><a href="/clerk">County Clerk Catherine McMullen</a></p><p><a href="/da/bio.html">District Attorney John Wentworth</a></p><p><a href="/justice">Justice of the Peace Kathleen Rastetter</a></p><p><a href="/sheriff">Sheriff Angela Brandenburg</a></p><p><a href="/treasurer">Treasurer Brian Nava</a></p></div></div></div>
 
     </div>
   
@@ -1165,13 +1164,13 @@
 
                     </div>
                     <div class="copy_right">
-                        <div class="views-element-container form-group"><div class="view view-ccts-footers view-id-ccts_footers view-display-id-block_4 js-view-dom-id-989b2102dde53e28cd136c21aec7ab2a7e9dd2649a15c3bd13afde6904945c33">
+                        <div class="views-element-container form-group"><div class="view view-ccts-footers view-id-ccts_footers view-display-id-block_4 js-view-dom-id-3a717567c1c343f39a29cb3513989f11a8a67df418c59f89f3563af0fbae0390">
   
       <span class="view_title"></span>
     
       
       <div class="view-content">
-          <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content">©2025 Clackamas County</span></div></div>
+          <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content">©2026 Clackamas County</span></div></div>
 
     </div>
   
@@ -1189,9 +1188,9 @@
 
     
     <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/132546","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"eJxlz20OwyAIBuALuXokg8ocCxUj2K63X7ek-_xDyBMgL1HE1Do0H48utI6BKpl7kW_SZMH-ISbCRs2lZBpuUCEP_-hPGb7sLNX0SwpLBD6pbUy1uCQdfe6jAU-ZgKVMcIWbKyKFMew7vBkl9b9wTOxxqjKYdJ9JEwPNe9IGHcoe9KLH8bdMo7YRmfSC2emmhrOPoOgWwlX9s06z5MHoVoxn6XN4f_4nd4j_gIY","theme":"ccts_xanadu","theme_token":null},"ajaxTrustedUrl":[],"google_analytics":{"account":"UA-113453671-1","trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"googleTranslatorDisclaimer":{"selector":".google-translator-switch","displayMode":"SIMPLE","disclaimerTitle":"Automatic translation disclaimer","disclaimer":"Translation of this page is provided by the third-party Google Translate service. In case of dispute, the original language content should prevail.","acceptText":"Accept","dontAcceptText":"Do Not Accept","element":"\u003Cspan id=\u0022google_translator_element\u0022\u003E\u003C\/span\u003E\n\u003Cscript src=\u0022\/\/translate.google.com\/translate_a\/element.js?cb=Drupal.behaviors.googleTranslatorElement.init\u0022\u003E\u003C\/script\u003E\n"},"googleTranslatorElement":{"id":"google_translator_element","langcode":"en","languages":"zh-CN,zh-TW,en,fr,de,ko,ru,es,uk,vi","displayMode":"SIMPLE"},"user":{"uid":0,"permissionsHash":"ff0d56e3f4e1f689e3855d8a32ddac1124ff34f4ad7873e4218bcd53ecffb890"}}</script>
-<script src="/sites/default/files/js/js_qerxHqxMQbJ8sLK11FgPLNNDLYDQGFeJiehGMZiyk84.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=ccts_xanadu&amp;include=eJxlzlkOwyAMBNALkXAkZJYiVw6DjNMmt2_6ka5_oyePPBGwYUrdxzOFriVwY3Mv8h0dt6IfYoAYd5eSjbBRo7z6Z54yfVkVRJJp2C7cqkvQ4rOunWTOTII605U2V4EqJRwd2Y3T8L9wXhzP2xAyqM88khAvx657iRfoEt77_uQBtp9dOg"></script>
+<script src="/sites/default/files/js/js_-tT5bz0t4dmR0VpGSSRA7DIGAbVyRkzmR0IHUo-YXXU.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=ccts_xanadu&amp;include=eJxlzlkOwyAMBNALkXAkZJYiVw6DjNMmt2_6ka5_oyePPBGwYUrdxzOFriVwY3Mv8h0dt6IfYoAYd5eSjbBRo7z6Z54yfVkVRJJp2C7cqkvQ4rOunWTOTII605U2V4EqJRwd2Y3T8L9wXhzP2xAyqM88khAvx657iRfoEt77_uQBtp9dOg"></script>
 <script src="https://cdn.jsdelivr.net/npm/entreprise7pro-bootstrap@3.4.8/dist/js/bootstrap.min.js" integrity="sha256-3XV0ZwG+520tCQ6I0AOlrGAFpZioT/AyPuX0Zq2i8QY=" crossorigin="anonymous"></script>
-<script src="/sites/default/files/js/js_51qKyMsmtx1iacT6OomV7rJMLfOD5p7yZ2yAAA6Fz2Q.js?scope=footer&amp;delta=2&amp;language=en&amp;theme=ccts_xanadu&amp;include=eJxlzlkOwyAMBNALkXAkZJYiVw6DjNMmt2_6ka5_oyePPBGwYUrdxzOFriVwY3Mv8h0dt6IfYoAYd5eSjbBRo7z6Z54yfVkVRJJp2C7cqkvQ4rOunWTOTII605U2V4EqJRwd2Y3T8L9wXhzP2xAyqM88khAvx657iRfoEt77_uQBtp9dOg"></script>
+<script src="/sites/default/files/js/js_5jm41aI8jIzX7PfAvyFOt33g4uVCnmF9aIywnMFr0nI.js?scope=footer&amp;delta=2&amp;language=en&amp;theme=ccts_xanadu&amp;include=eJxlzlkOwyAMBNALkXAkZJYiVw6DjNMmt2_6ka5_oyePPBGwYUrdxzOFriVwY3Mv8h0dt6IfYoAYd5eSjbBRo7z6Z54yfVkVRJJp2C7cqkvQ4rOunWTOTII605U2V4EqJRwd2Y3T8L9wXhzP2xAyqM88khAvx657iRfoEt77_uQBtp9dOg"></script>
 
   </body>
 </html>

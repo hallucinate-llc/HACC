@@ -263,14 +263,14 @@ var MSOWebPartPageFormName = 'aspnetForm';
 var g_presenceEnabled = true;
 var g_wsaEnabled = false;
 
-var g_correlationId = 'fa22e9a1-984e-5059-054f-d49d52d4d129';
+var g_correlationId = '31e5ffa1-b806-5059-a10c-8f8969132994';
 var g_wsaQoSEnabled = false;
 var g_wsaQoSDataPoints = [];
 var g_wsaRUMEnabled = false;
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'STS#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fodot\u002fBusiness\u002fProcurement", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodot\u002fBusiness\u002fProcurement", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodot", serverRequestPath: "\u002fodot\u002fbusiness\u002fprocurement\u002fpages\u002fpsk.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Procurement", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-02T18:40:25.9113340Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-02T18:40:25.9113340Z"), siteClientTag: "87$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{aa1cbc5d-7f99-484e-a94c-4f931109874e}",pageItemId:21, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fodot", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fodot\u002fBusiness\u002fProcurement", webAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodot\u002fBusiness\u002fProcurement", siteAbsoluteUrl: "https:\u002f\u002fwww.oregon.gov\u002fodot", serverRequestPath: "\u002fodot\u002fbusiness\u002fprocurement\u002fpages\u002fpsk.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Procurement", webTemplate: "1", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-03-14T11:40:53.8174036Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-03-14T11:40:53.8174036Z"), siteClientTag: "87$$16.0.5539.1001", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{aa1cbc5d-7f99-484e-a94c-4f931109874e}",pageItemId:21, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002fodot", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};Flighting.ExpFeatures = [480215056,1880287568,1561350208,302071836,3212816,69472768,4194310,-2113396707,268502022,-872284160,1049232,-2147421952,65536,65536,2097472,917504,-2147474174,1372324107,67108882,0,0,-2147483648,2097152,0,0,32768,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32768];var _spWebPartComponents = new Object();//]]>
 </script>
 
 <script src="/_layouts/15/16.0.5456.1000/blank.js" type="text/javascript"></script>
@@ -360,15 +360,17 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 	<div class="or-navigation-label visible-xs">
 		Main Navigation
 	</div><ul class="or-navigation-list">
-		<li><a href="/odot">ODOT Home</a></li><li><a href="/odot/Programs/Pages/index.aspx">Programs</a></li><li><a href="/odot/Planning/Pages/default.aspx">Planning &amp; Technical Guidance</a></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="#">Drivers &amp; Vehicles&nbsp;<span class="material-icons md-18 notranslate" aria-hidden="true">&#xe5c5;</span></a><ul class="dropdown-menu">
-			<li><a href="/odot/DMV/Pages/index.aspx">Oregon Driver &amp; Motor Vehicle Services</a></li><li><a href="/odot/MCT/Pages/Index.aspx">Commerce and Compliance Division</a></li>
+		<li><a href="/odot">ODOT Home</a></li><li><a href="/odot/Data/Pages/index.aspx">Data &amp; Maps</a></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="#">Drivers &amp; Vehicles&nbsp;<span class="material-icons md-18 notranslate" aria-hidden="true">&#xe5c5;</span></a><ul class="dropdown-menu">
+			<li><a href="/odot/DMV/Pages/index.aspx">DMV</a></li><li><a href="/odot/MCT/Pages/index.aspx">Commerce &amp; Compliance</a></li>
 		</ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="#">Doing Business&nbsp;<span class="material-icons md-18 notranslate" aria-hidden="true">&#xe5c5;</span></a><ul class="dropdown-menu">
 			<li><a href="/odot/Business/Pages/index.aspx">Doing Business Home</a></li><li><a href="/odot/Business/OCR/Pages/index.aspx">Civil Rights</a></li><li><a href="/odot/Business/Procurement/Pages/index.aspx">Procurement</a></li><li><a href="/odot/FTG/Pages/index.aspx">Fuels Tax Group</a></li>
-		</ul></li><li><a href="/odot/Data/Pages/index.aspx">Data &amp; Maps</a></li><li><a href="/odot/LocalGov/Pages/index.aspx">Local Governments</a></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="#">Get Involved&nbsp;<span class="material-icons md-18 notranslate" aria-hidden="true">&#xe5c5;</span></a><ul class="dropdown-menu">
+		</ul></li><li><a href="/odot/LocalGov/Pages/index.aspx">Local Governments</a></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="#">Planning &amp; Technical Guidance&nbsp;<span class="material-icons md-18 notranslate" aria-hidden="true">&#xe5c5;</span></a><ul class="dropdown-menu">
+			<li><a href="/odot/Planning/Pages/default.aspx">Planning &amp; Technical Guidance Home</a></li><li><a href="/odot/Planning/Pages/Plans.aspx">Plans &amp; Guidance</a></li><li><a href="/odot/Engineering/Pages/Eng-Guidance.aspx">Engineering Guidance</a></li><li><a href="/odot/state-of-the-system/Pages/default.aspx">State of the System</a></li>
+		</ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="#">Get Involved&nbsp;<span class="material-icons md-18 notranslate" aria-hidden="true">&#xe5c5;</span></a><ul class="dropdown-menu">
 			<li><a href="/odot/Get-Involved/Pages/index.aspx">Get Involved Home</a></li><li><a href="/odot/Get-Involved/Pages/OTC_Main.aspx">Oregon Transportation Commission</a></li>
 		</ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="#">About Us&nbsp;<span class="material-icons md-18 notranslate" aria-hidden="true">&#xe5c5;</span></a><ul class="dropdown-menu">
-			<li><a href="/odot/About/Pages/index.aspx">About Us Home</a></li><li><a href="/odot/About/Pages/Contact-Us.aspx">Contact Us</a></li><li><a href="/odot/TAP/Pages/index.aspx">Transparency &amp; Performance</a></li><li><a href="/odot/ADA/Pages/default.aspx">Accessibility at ODOT</a></li><li><a href="/odot/About/Documents/ADM%2005-09-01.pdf">Customer Service Policy</a></li>
-		</ul></li>
+			<li><a href="/odot/About/Pages/index.aspx">About Us Home</a></li><li><a href="/odot/About/Pages/Contact-Us.aspx">Contact Us</a></li><li><a href="/odot/TAP/Pages/index.aspx">Transparency &amp; Performance</a></li><li><a href="/odot/ADA/Pages/default.aspx">Accessibility at ODOT</a></li><li><a href="/odot/About/Documents/ADM%2005-09-01.pdf">Customer Service Policy</a></li><li><a href="/odot/About/Pages/Government-Relations.aspx">Government Relations</a></li>
+		</ul></li><li><a href="/odot/Programs/Pages/index.aspx">Programs</a></li>
 	</ul>
 </nav>
                 
@@ -533,16 +535,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 	<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
 	<div    id="WebPartWPQ1"  class="ms-WPBody "   style="" ><div id="ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47">
 		<div class="list-unstyled panel-group or-accordion-list" id="accordion-ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47_ctl01">
-			<div class="panel panel-default or-accordion-panel" id="panel-ab26360a-17f1-4517-851d-56d23eab0a13">
+			<div class="panel panel-default or-accordion-panel" id="panel-c334d277-13b6-4cdd-a26b-0005e2a4018d">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#ab26360a-17f1-4517-851d-56d23eab0a13" aria-controls="ab26360a-17f1-4517-851d-56d23eab0a13" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47_ctl01"><div class="panel-heading" id="fd60db9e-be63-4c66-803e-ddcd95ce6a0d">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#c334d277-13b6-4cdd-a26b-0005e2a4018d" aria-controls="c334d277-13b6-4cdd-a26b-0005e2a4018d" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47_ctl01"><div class="panel-heading" id="4f825efe-30be-4b04-af73-5f03fff5485d">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">&quot;DBE&quot; or &quot;Disadvantaged Business Enterprise&quot; and other forms required by Office of Civil Rights</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="ab26360a-17f1-4517-851d-56d23eab0a13" >
+				</h2><div class="panel-collapse collapse" id="c334d277-13b6-4cdd-a26b-0005e2a4018d" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassCD25FE1A7F40452CBD5A9F03B488D5B5"><p><a href="/odot/Forms/2ODOT/7345235.pdf">Committed DBE Breakdown and Certification Form - A&amp;E #734-5235 </a></p>
@@ -551,16 +553,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-933eeb7b-4fc7-40cb-a3ec-16bef595eb7d">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-ce3198a1-8cd7-4c60-b566-8fd0548c0fc3">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#933eeb7b-4fc7-40cb-a3ec-16bef595eb7d" aria-controls="933eeb7b-4fc7-40cb-a3ec-16bef595eb7d" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47_ctl01"><div class="panel-heading" id="4978515a-53cc-42f7-baff-7620bc2e8116">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#ce3198a1-8cd7-4c60-b566-8fd0548c0fc3" aria-controls="ce3198a1-8cd7-4c60-b566-8fd0548c0fc3" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47_ctl01"><div class="panel-heading" id="02463919-4ff4-4526-9198-6c7312588904">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Cost, Billing Rate &amp; Compensation Related Forms</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="933eeb7b-4fc7-40cb-a3ec-16bef595eb7d" >
+				</h2><div class="panel-collapse collapse" id="ce3198a1-8cd7-4c60-b566-8fd0548c0fc3" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassF6DE19ECC3AB4C5D8EAC13F4C0872D34"><div class="ExternalClass15F4033170CD440180AE647968256F76"><div class="ExternalClassF3B4891DF08540D79D1B9A2B9DC072DF"><div class="ExternalClass53E66502294E43539E58BB835B2185BE"><span style="font-family&#58;&quot;segoe ui&quot;, segoe, tahoma, helvetica, arial, sans-serif;"><p class="ExternalClass9FF9E7CD2EFF4075A3FF02F44F6AA3E3" style="font-size&#58;8pt;"><span style="font-size&#58;13px;"><b>Billing Rates</b></span></p><p class="ExternalClass9FF9E7CD2EFF4075A3FF02F44F6AA3E3" style="font-size&#58;8pt;"><span style="font-size&#58;13px;">Fo</span><span style="font-size&#58;13px;">r Billing Rate information and resources, please visit the </span><a href="/odot/business/procurement/pages/cbr.aspx" target="_blank" style="font-size&#58;13px;">Consultant Billing Rates​</a><span style="font-size&#58;13px;"> page.&#160;</span></p><p class="ExternalClass9FF9E7CD2EFF4075A3FF02F44F6AA3E3" style="font-size&#58;8pt;"><strong style="font-size&#58;13px;">​​Cost Estimate Templates &amp; Guidance</strong></p>
@@ -568,7 +570,7 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 <p style="font-size&#58;8pt;"><a href="/odot/Business/Procurement/DocsPSK/bocrequirements.pdf" target="_blank"><span style="font-size&#58;13px;">Breakdown of Costs Requirements</span></a><br style="font-size&#58;13px;"></p>
 <p style="font-size&#58;8pt;"><a href="/odot/Business/Procurement/DocsPSK/ProfitFee.xlsx" target="_blank"><span style="font-size&#58;13px;">Profit Fee Worksheet</span></a></p><p style="font-size&#58;8pt;"><strong style="font-size&#58;13px;">​Invoice Related</strong></p>
 
-<p style="font-size&#58;8pt;"><font color="#0066cc" style="font-size&#58;13px;"><a href="/odot/Business/Procurement/DocsPSK/inveq1.pdf" target="_blank">Procurement Standard for Invoice Requirements - Consultant&#160;(&quot;Invoice Requirements&quot;)&#160;</a>​</font></p><ul style="font-size&#58;8pt;"><li><a href="/odot/Business/Procurement/DocsPSK/CPFF_invCklst.docx" target="_blank"><font color="#0066cc" style="font-size&#58;13px;">A&amp;E Cost-Plus-Fixed-Fee Invoice Checklist</font></a></li><li><a href="/odot/Business/Procurement/DocsPSK/T%26M_invCklst.docx" target="_blank"><font color="#0066cc" style="font-size&#58;13px;">A&amp;E Time &amp; Materials Invoice Checklist</font></a></li><li><font color="#0066cc" style="font-size&#58;13px;"><a href="/odot/Business/Procurement/DocsPSK/FP_invCklst.docx" target="_blank">A&amp;E Fixed Price Invoice Checklist</a></font></li><li><span style="text-decoration&#58;underline;font-size&#58;13px;"></span><a href="/odot/Business/Procurement/DocsPSK/PSK_ProgExample.xls" target="_blank"><span style="font-size&#58;13px;">Progress Report Example​</span></a></li><li><a href="/odot/Business/Procurement/DocsPSK/InvExample_T%26M.xlsx" target="_blank"><span style="font-size&#58;13px;">T&amp;M Invoice Example</span></a></li><li><a href="/odot/Business/Procurement/DocsPSK/InvExample_FP.xlsx" target="_blank"><span style="font-size&#58;13px;">Fixed Price Invoice Example</span></a><span style="font-size&#58;13px;">​</span><br style="font-size&#58;13px;"></li></ul><p style="font-size&#58;8pt;"><a href="/odot/Business/Procurement/DocsPSK/InvFAQ.pdf" target="_blank"><span style="font-size&#58;13px;">Consultant Invoice FAQ​</span></a><br style="font-size&#58;13px;"></p><p><a href="https&#58;//youtu.be/LEolG850N_U?feature=shared" target="_blank">Invoice Requirements for Personal Services Contracts for Consultants Training Module​</a><br></p><p style="font-size&#58;8pt;"><span style="font-size&#58;13px;">​</span><a href="/odot/Business/Procurement/DocsPSK/remitaddress.docx" target="_blank"><span style="font-size&#58;13px;">Vendor Remit Address Form</span></a><br style="font-size&#58;13px;"></p>
+<p style="font-size&#58;8pt;"><font color="#0066cc" style="font-size&#58;13px;"><a href="/odot/Business/Procurement/DocsPSK/inveq1.pdf" target="_blank">Procurement Standard for Invoice Requirements - Consultant&#160;(&quot;Invoice Requirements&quot;)&#160;</a>​</font></p><ul style="font-size&#58;8pt;"><li><a href="/odot/Business/Procurement/DocsPSK/CPFF_invCklst.docx" target="_blank"><font color="#0066cc" style="font-size&#58;13px;">A&amp;E Cost-Plus-Fixed-Fee Invoice Checklist</font></a></li><li><a href="/odot/Business/Procurement/DocsPSK/T%26M_invCklst.docx" target="_blank"><font color="#0066cc" style="font-size&#58;13px;">A&amp;E Time &amp; Materials Invoice Checklist</font></a></li><li><font color="#0066cc" style="font-size&#58;13px;"><a href="/odot/Business/Procurement/DocsPSK/FP_invCklst.docx" target="_blank">A&amp;E Fixed Price Invoice Checklist</a></font></li><li><span style="text-decoration&#58;underline;font-size&#58;13px;"></span><a href="/odot/Business/Procurement/DocsPSK/PSK_ProgExample.xls" target="_blank"><span style="font-size&#58;13px;">Progress Report Example​</span></a></li><li><a href="/odot/Business/Procurement/DocsPSK/InvExample_T%26M.xlsx" target="_blank"><span style="font-size&#58;13px;">T&amp;M Invoice Example</span></a></li><li><a href="/odot/Business/Procurement/DocsPSK/InvExample_FP.xlsx" target="_blank"><span style="font-size&#58;13px;">Fixed Price Invoice Example</span></a><span style="font-size&#58;13px;">​</span><br style="font-size&#58;13px;"></li></ul><p style="font-size&#58;8pt;"><a href="/odot/Business/Procurement/DocsPSK/InvFAQ.pdf" target="_blank"><span style="font-size&#58;13px;">Consultant Invoice FAQ​</span></a><br style="font-size&#58;13px;"></p><p><a href="https&#58;//youtu.be/txaI73l6qe8">Invoice Requirements for Personal Services Contracts for Consultants Training Module​​</a><br></p><p style="font-size&#58;8pt;"><span style="font-size&#58;13px;">​</span><a href="/odot/Business/Procurement/DocsPSK/remitaddress.docx" target="_blank"><span style="font-size&#58;13px;">Vendor Remit Address Form</span></a><br style="font-size&#58;13px;"></p>
 
 <p style="font-size&#58;8pt;"><span style="font-size&#58;13px;">​</span><a href="/odot/Forms/2ODOT/2882.pdf" target="_blank"><span style="font-size&#58;13px;">Paid Summary Report, Form #734-2882</span></a><span style="font-size&#58;13px;">&#160; (</span><a href="/odot/Business/Procurement/DocsPSK/PSRguidance.pdf" target="_blank"><span style="font-size&#58;13px;">PSR Guidance​</span></a><span style="font-size&#58;13px;">)</span><br style="font-size&#58;13px;"></p>
 <p style="font-size&#58;8pt;"><a href="/odot/Business/Procurement/DocsPSK/InvODCcert.docx" target="_blank"><span style="font-size&#58;13px;">Certification of Invoicing and ODC Billing Practices</span></a></p>
@@ -576,16 +578,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-23411e49-2990-425c-8f99-b3a668c8071a">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-2d47fc8a-84c6-4bab-86ef-8fe8cc3381a9">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#23411e49-2990-425c-8f99-b3a668c8071a" aria-controls="23411e49-2990-425c-8f99-b3a668c8071a" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47_ctl01"><div class="panel-heading" id="9be39e79-e532-4b53-995e-530a4837c5db">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#2d47fc8a-84c6-4bab-86ef-8fe8cc3381a9" aria-controls="2d47fc8a-84c6-4bab-86ef-8fe8cc3381a9" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47_ctl01"><div class="panel-heading" id="ff0628d6-1972-43d2-8a7c-cfc38cd29e93">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Miscellaneous Procurement Forms (typically required for consultants)</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="23411e49-2990-425c-8f99-b3a668c8071a" >
+				</h2><div class="panel-collapse collapse" id="2d47fc8a-84c6-4bab-86ef-8fe8cc3381a9" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassB51A3E675AEC4D75B34F586D6818B668">
@@ -601,16 +603,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-4f308417-80c6-495e-8abb-8148bedaed65">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-cd0e3bc9-6208-4e0d-8b4d-7020d2ec7bfb">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#4f308417-80c6-495e-8abb-8148bedaed65" aria-controls="4f308417-80c6-495e-8abb-8148bedaed65" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47_ctl01"><div class="panel-heading" id="e58add4c-e3c0-4fcc-8d33-b47b585a067d">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#cd0e3bc9-6208-4e0d-8b4d-7020d2ec7bfb" aria-controls="cd0e3bc9-6208-4e0d-8b4d-7020d2ec7bfb" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47_ctl01"><div class="panel-heading" id="a1c75be3-bc9e-4d0f-8c69-e9f77df8234a">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Guidance, Policy &amp; Resources</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="4f308417-80c6-495e-8abb-8148bedaed65" >
+				</h2><div class="panel-collapse collapse" id="cd0e3bc9-6208-4e0d-8b4d-7020d2ec7bfb" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassBA7E5B1900FA408F83D0B2DEA7940904"><p>​<strong>Guidance/Publications</strong></p>
@@ -629,16 +631,16 @@ if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();/
 						</div>
 					</div>
 				</div>
-			</div><div class="panel panel-default or-accordion-panel" id="panel-d8fa3588-227d-4f95-b775-fdc6f5f4f9f2">
+			</div><div class="panel panel-default or-accordion-panel" id="panel-da710266-b6e7-41c5-9dff-26845600b153">
 				<h2>
-					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#d8fa3588-227d-4f95-b775-fdc6f5f4f9f2" aria-controls="d8fa3588-227d-4f95-b775-fdc6f5f4f9f2" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47_ctl01"><div class="panel-heading" id="bf0d0588-1506-4992-acba-3a7f87af23da">
+					<button class="collapsed btn btn-link or-accordion-panel-btn" href="#da710266-b6e7-41c5-9dff-26845600b153" aria-controls="da710266-b6e7-41c5-9dff-26845600b153" data-toggle="collapse" aria-expanded="false" data-parent="#accordion-ctl00_ctl00_ctl40_g_892fff02_52dc_428a_a06d_b760c0bc3f47_ctl01"><div class="panel-heading" id="f47cd43b-9f16-4b3b-b541-6872e91d9da0">
 						<div class="or-accordion-heading">
 							<div class="or-accordion-heading-title">
 								<p class="panel-title">Contract/Price Agreement Exhibits Incorporated by Reference from the Web</p>
 							</div><span class="or-accordion-heading-collapse" role="img" aria-hidden="true"></span>
 						</div>
 					</div></button>
-				</h2><div class="panel-collapse collapse" id="d8fa3588-227d-4f95-b775-fdc6f5f4f9f2" >
+				</h2><div class="panel-collapse collapse" id="da710266-b6e7-41c5-9dff-26845600b153" >
 					<div class="panel-body">
 						<div class="or-accordion-content-field">
 							<div class="ExternalClassD4B07B68BE86455FB65732EDA6658A2D"><div class="ExternalClassC0119ED2D0E94472B7796AB02A4674DF"><div class="ExternalClassABE3737CE9F844FDBCF3B6BFE5B19677">

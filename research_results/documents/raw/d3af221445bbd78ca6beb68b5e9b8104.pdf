@@ -23,7 +23,6 @@
 <script src="/_layouts/15/16.0.5456.1000/init.js"></script>
 <script type="text/javascript" src="/ScriptResource.axd?d=g3TnJCl28GjMecq32hXbw27c61ss9AnUJ9pP49BNcJEdTn-CVmh7sC8Y_w-zNTErFCeVaYBRfE3Z141_oJTzvPlyA3AtJn7LiOvVev5gx_X5K65tDJP8tjUVtsbWVUKMOhS6SWQi8SZwdtEV471Hzdq1WM-4HYCp8khDG4FH3aBTuOlEoeo_pWj3_SrBDEgX0&amp;t=5c0e0825"></script>
 <script type="text/javascript" src="/_layouts/15/16.0.5456.1000/blank.js"></script>
-<script type="text/javascript" src="/ScriptResource.axd?d=zAEO7Sxj-zi0-ZW7PEWuWi5RnxyzKy48SGK2DdtZKLBfD-L4q_sC3l82mYv53cWifwXGvxb9SousaIhtohmhdy2c0O9k4Ci0m09sKXTJ1XnwDLiCVjFvekY1RkW5_p4cGkNpi296O7qq8IiDnCFhFo36U10AhBAxZc676rrAW1lscrC_rU5JYYXQaqSujw9_0&amp;t=5c0e0825"></script>
 <script type="text/javascript">RegisterSod("require.js", "\u002f_layouts\u002f15\u002f16.0.5456.1000\u002frequire.js");</script>
 <script type="text/javascript">RegisterSod("strings.js", "\u002f_layouts\u002f15\u002f16.0.5456.1000\u002f1033\u002fstrings.js");</script>
 <script type="text/javascript">RegisterSod("sp.res.resx", "\u002f_layouts\u002f15\u002f16.0.5456.1000\u002f1033\u002fsp.res.js");</script>
@@ -39,7 +38,7 @@
 <script type="text/javascript">RegisterSod("clienttemplates.js", "\u002f_layouts\u002f15\u002f16.0.5456.1000\u002fclienttemplates.js");</script>
 <script type="text/javascript">RegisterSod("sharing.js", "\u002f_layouts\u002f15\u002f16.0.5456.1000\u002fsharing.js");RegisterSodDep("sharing.js", "strings.js");RegisterSodDep("sharing.js", "mQuery.js");RegisterSodDep("sharing.js", "clienttemplates.js");RegisterSodDep("sharing.js", "core.js");</script>
 <script type="text/javascript">RegisterSod("suitelinks.js", "\u002f_layouts\u002f15\u002f16.0.5456.1000\u002fsuitelinks.js");RegisterSodDep("suitelinks.js", "strings.js");RegisterSodDep("suitelinks.js", "core.js");</script>
-<script type="text/javascript">RegisterSod("browserScript", "\u002f_layouts\u002f15\u002f16.0.5456.1000\u002fie55up.js");RegisterSodDep("browserScript", "strings.js");</script>
+<script type="text/javascript">RegisterSod("browserScript", "\u002f_layouts\u002f15\u002f16.0.5456.1000\u002fnon_ie.js");RegisterSodDep("browserScript", "strings.js");</script>
 <script type="text/javascript">RegisterSod("inplview", "\u002f_layouts\u002f15\u002f16.0.5456.1000\u002finplview.js");RegisterSodDep("inplview", "strings.js");RegisterSodDep("inplview", "core.js");RegisterSodDep("inplview", "clienttemplates.js");RegisterSodDep("inplview", "sp.js");</script>
 <script type="text/javascript">RegisterSod("datepicker.js", "\u002f_layouts\u002f15\u002f16.0.5456.1000\u002fdatepicker.js");RegisterSodDep("datepicker.js", "strings.js");</script>
 
@@ -61,8 +60,7 @@
                 <li><a href="#primaryNav">Skip to the main site navigation</a></li>
             </ul>
         </nav>
-        <form method="post" action="./contractingopportunities.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
-<div class="aspNetHidden">
+        <form method="post" action="./contractingopportunities.aspx" id="aspnetForm">
 <input type="hidden" name="_wpcmWpid" id="_wpcmWpid" value="" />
 <input type="hidden" name="wpcmVal" id="wpcmVal" value="" />
 <input type="hidden" name="MSOWebPartPage_PostbackSource" id="MSOWebPartPage_PostbackSource" value="" />
@@ -72,8 +70,6 @@
 <input type="hidden" name="MSOGallery_SelectedLibrary" id="MSOGallery_SelectedLibrary" value="" />
 <input type="hidden" name="MSOGallery_FilterString" id="MSOGallery_FilterString" value="" />
 <input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
-<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
-<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
 <input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="noDigest" />
 <input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
 <input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
@@ -86,27 +82,7 @@
 <input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
 <input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
 <input type="hidden" name="SideBySideToken" id="SideBySideToken" value="16.0.5456.1000" />
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUBMA9kFgJmD2QWBAICD2QWAgIMD2QWBAICDxYCHhNQcmV2aW91c0NvbnRyb2xNb2RlCymIAU1pY3Jvc29mdC5TaGFyZVBvaW50LldlYkNvbnRyb2xzLlNQQ29udHJvbE1vZGUsIE1pY3Jvc29mdC5TaGFyZVBvaW50LCBWZXJzaW9uPTE2LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTcxZTliY2UxMTFlOTQyOWMBZAIGDxYCHwALKwQBZAIED2QWBgIGD2QWAgICD2QWAgIBD2QWAgIDDxYCHgdWaXNpYmxlaBYCZg9kFgQCAw9kFgYCAQ8WAh8BaGQCAw8WAh8BaGQCBQ8WAh8BaGQCBA8PFgIeCUFjY2Vzc0tleQUBL2RkAgwPDxYEHhBGaWx0ZXJPcGVyYXRpb25zMo0FAAEAAAD/////AQAAAAAAAAAEAQAAAJMCU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtNaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJQYXJ0UGFnZXMuRmlsdGVyT3BlcmF0aW9uLCBNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xNi4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljXV0DAAAAB1ZlcnNpb24IQ29tcGFyZXIISGFzaFNpemUAAwAIkgFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5HZW5lcmljRXF1YWxpdHlDb21wYXJlcmAxW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQgAAAAACQIAAAAAAAAABAIAAACSAVN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkdlbmVyaWNFcXVhbGl0eUNvbXBhcmVyYDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAAAAAAseC1BhcmFtVmFsdWVzMrwEAAEAAAD/////AQAAAAAAAAAMAgAAAFhNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xNi4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljBQEAAAA9TWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViUGFydFBhZ2VzLlBhcmFtZXRlck5hbWVWYWx1ZUhhc2h0YWJsZQEAAAAFX2NvbGwDHFN5c3RlbS5Db2xsZWN0aW9ucy5IYXNodGFibGUCAAAACQMAAAAEAwAAABxTeXN0ZW0uQ29sbGVjdGlvbnMuSGFzaHRhYmxlBwAAAApMb2FkRmFjdG9yB1ZlcnNpb24IQ29tcGFyZXIQSGFzaENvZGVQcm92aWRlcghIYXNoU2l6ZQRLZXlzBlZhbHVlcwAAAwMABQULCBxTeXN0ZW0uQ29sbGVjdGlvbnMuSUNvbXBhcmVyJFN5c3RlbS5Db2xsZWN0aW9ucy5JSGFzaENvZGVQcm92aWRlcgjsUTg/BQAAAAoKBwAAAAkEAAAACQUAAAAQBAAAAAQAAAAGBgAAAAZVc2VySUQGBwAAAApGaWx0ZXJMaW5rBggAAAARZHZ0X3N0YXJ0cG9zaXRpb24GCQAAAAVUb2RheRAFAAAABAAAAAYKAAAAD0N1cnJlbnRVc2VyTmFtZQYLAAAAAT8GDAAAAAAGDQAAABQyMDI2LTAxLTAyVDEyOjM5OjE3WgtkZAIUD2QWBgIBDxYCHwALKwQBZAIDDxYCHwALKwQBZAIFDxYCHwALKwQBZGTgQV1h/uZNS1IMA7wHw0M/YtxOqrCsJetRbefgHLWtaw==" />
-</div>
-
-<script type="text/javascript">
-//<![CDATA[
-var theForm = document.forms['aspnetForm'];
-if (!theForm) {
-    theForm = document.aspnetForm;
-}
-function __doPostBack(eventTarget, eventArgument) {
-    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-        theForm.__EVENTTARGET.value = eventTarget;
-        theForm.__EVENTARGUMENT.value = eventArgument;
-        theForm.submit();
-    }
-}
-//]]>
-</script>
-
-
-<script src="/WebResource.axd?d=n-EJPNoUKGa9oeCy5MBZgY0MkxvX9s9siA5i7No_sQe9Q5tZv8ZqGsNV09qCKBa0uqqcHkuPbyAaho3uLTUNCnr0URL7s1w7ZpbH-Pyy6PU1&amp;t=638901356248157332" type="text/javascript"></script>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUBMA9kFgJmD2QWBAICD2QWAgIMD2QWBAICDxYCHhNQcmV2aW91c0NvbnRyb2xNb2RlCymIAU1pY3Jvc29mdC5TaGFyZVBvaW50LldlYkNvbnRyb2xzLlNQQ29udHJvbE1vZGUsIE1pY3Jvc29mdC5TaGFyZVBvaW50LCBWZXJzaW9uPTE2LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTcxZTliY2UxMTFlOTQyOWMBZAIGDxYCHwALKwQBZAIED2QWBgIGD2QWAgICD2QWAgIBD2QWAgIDDxYCHgdWaXNpYmxlaBYCZg9kFgQCAw9kFgYCAQ8WAh8BaGQCAw8WAh8BaGQCBQ8WAh8BaGQCBA8PFgIeCUFjY2Vzc0tleQUBL2RkAgwPDxYEHhBGaWx0ZXJPcGVyYXRpb25zMo0FAAEAAAD/////AQAAAAAAAAAEAQAAAJMCU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtNaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJQYXJ0UGFnZXMuRmlsdGVyT3BlcmF0aW9uLCBNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xNi4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljXV0DAAAAB1ZlcnNpb24IQ29tcGFyZXIISGFzaFNpemUAAwAIkgFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5HZW5lcmljRXF1YWxpdHlDb21wYXJlcmAxW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQgAAAAACQIAAAAAAAAABAIAAACSAVN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkdlbmVyaWNFcXVhbGl0eUNvbXBhcmVyYDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAAAAAAseC1BhcmFtVmFsdWVzMrwEAAEAAAD/////AQAAAAAAAAAMAgAAAFhNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xNi4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljBQEAAAA9TWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViUGFydFBhZ2VzLlBhcmFtZXRlck5hbWVWYWx1ZUhhc2h0YWJsZQEAAAAFX2NvbGwDHFN5c3RlbS5Db2xsZWN0aW9ucy5IYXNodGFibGUCAAAACQMAAAAEAwAAABxTeXN0ZW0uQ29sbGVjdGlvbnMuSGFzaHRhYmxlBwAAAApMb2FkRmFjdG9yB1ZlcnNpb24IQ29tcGFyZXIQSGFzaENvZGVQcm92aWRlcghIYXNoU2l6ZQRLZXlzBlZhbHVlcwAAAwMABQULCBxTeXN0ZW0uQ29sbGVjdGlvbnMuSUNvbXBhcmVyJFN5c3RlbS5Db2xsZWN0aW9ucy5JSGFzaENvZGVQcm92aWRlcgjsUTg/BQAAAAoKBwAAAAkEAAAACQUAAAAQBAAAAAQAAAAGBgAAAAZVc2VySUQGBwAAAApGaWx0ZXJMaW5rBggAAAARZHZ0X3N0YXJ0cG9zaXRpb24GCQAAAAVUb2RheRAFAAAABAAAAAYKAAAAD0N1cnJlbnRVc2VyTmFtZQYLAAAAAT8GDAAAAAAGDQAAABQyMDI2LTAzLTE0VDA2OjQwOjQ4WgtkZAIUD2QWBgIBDxYCHwALKwQBZAIDDxYCHwALKwQBZAIFDxYCHwALKwQBZGRZxoaGAm/jEeKSqBweeIuzEOLvLDy0FE8TcW1FcxQJQg==" />
 
 
 <script type="text/javascript">
@@ -115,17 +91,14 @@ var MSOWebPartPageFormName = 'aspnetForm';
 var g_presenceEnabled = true;
 var g_wsaEnabled = false;
 
-var g_correlationId = 'e922e9a1-f88b-5059-054f-dd459309a6b2';
+var g_correlationId = '2fe5ffa1-08ab-5059-a10c-815c48c8a43d';
 var g_wsaQoSEnabled = false;
 var g_wsaQoSDataPoints = [];
 var g_wsaRUMEnabled = false;
 var g_wsaLCID = 1033;
 var g_wsaListTemplateId = 850;
 var g_wsaSiteTemplateId = 'BLANKINTERNET#0';
-var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webAbsoluteUrl: "https:\u002f\u002fsos.oregon.gov", siteAbsoluteUrl: "https:\u002f\u002fsos.oregon.gov", serverRequestPath: "\u002fPages\u002fcontractingopportunities.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Oregon Secretary of State", webTemplate: "53", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-01-02T18:39:17.2150811Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-01-02T18:39:17.2150811Z"), siteClientTag: "122$$16.0.5530.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{9689d572-ac52-402a-99fb-5f8d248fd2f1}",pageItemId:22, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True', isSiteAdmin: false};var L_Menu_BaseUrl="";
-var L_Menu_LCID="1033";
-var L_Menu_SiteTheme="null";
-document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webAbsoluteUrl: "https:\u002f\u002fsos.oregon.gov", siteAbsoluteUrl: "https:\u002f\u002fsos.oregon.gov", serverRequestPath: "\u002fPages\u002fcontractingopportunities.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "Oregon Secretary of State", webTemplate: "53", tenantAppVersion: "0", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2026-03-14T11:40:48.2387700Z") - new Date(), updateFormDigestPageLoaded: new Date("2026-03-14T11:40:48.2387700Z"), siteClientTag: "122$$16.0.5539.1001", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{9689d572-ac52-402a-99fb-5f8d248fd2f1}",pageItemId:22, pagePersonalizationScope:1, alertsEnabled:true, customMarkupInCalculatedFieldDisabled: true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True', isSiteAdmin: false};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};
                             function DoCallBack(filterText)
                             {WebForm_DoCallback('ctl00$g_f5c65dcd_f815_4bb0_84a8_52ef13de50a7',filterText,UpdateFilterCallback,0,CallBackError,true)
                             }
@@ -155,23 +128,11 @@ document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){remo
         _spBodyOnLoadFunctions.push(function() {
             SP.SOD.executeFunc('core.js', 'FollowingCallout', function() { FollowingCallout(); });
         });
-    })();if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();function WebForm_OnSubmit() {
-UpdateFormDigest('\u002f', 1440000);if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;};
-return true;
-}
-//]]>
+    })();if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();//]]>
 </script>
 
-<div class="aspNetHidden">
-
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="BAB98CB3" />
-</div>
-            <script type="text/javascript">
-//<![CDATA[
-Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm', ['tctl00$g_f5c65dcd_f815_4bb0_84a8_52ef13de50a7$updatePanelctl00_g_f5c65dcd_f815_4bb0_84a8_52ef13de50a7',''], [], [], 90, 'ctl00');
-//]]>
-</script>
-
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="BAB98CB3" />
+            
             
             <div>
 	
@@ -293,7 +254,7 @@ window.__gcse = {
 						<section role="aside" class="relative-content">
 							<div id="ctl00_PlaceHolderMain_ctl01_label" style='display:none'>Relative Content</div><div id="ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl01_label"><h2>Our Practices</h2><h3>Procurements up to $25​,000</h3><p class="ms-rteElement-P">The Secretary may contact a vendor directly and establish a contract for the services required by direct appoint up to $10,000. Purchases over $10,000, the Secretary will consider and provide notice to COBID businesses.​ When appropriate, we may get&#160;competitive quotes.</p><h3>Procurements from $10,000 to $250,000</h3><p class="ms-rteElement-P">These require at least 3 competitive quotes. An informal procurement process is used for awarding and establishing these contracts. These opportunities are advertised in 
    <a href="https&#58;//oregonbuys.gov/bso/" target="_blank">OregonBuys​</a>.&#160;</p><p class="ms-rteElement-P">Bids and offers are evaluated for responsiveness to mandatory requirements. The offeror with the lowest bid or highest score is named the Apparent Successful Bidder/Proposer.</p><h3>Procurements Over $250,000</h3><p class="ms-rteElement-P">These are considered formal procurements. The solicitation may be advertised in a local newspaper of general circulation (for example, the Statesman Journal, The Oregonian), the Daily Journal of Commerce or in 
-   <a href="https&#58;//oregonbuys.gov/bso/" target="_blank">OregonBuys​</a>. </p><p> All solicitations and contracts over $250,000 and all information technology contracts and solicitations over $150,000​ require legal sufficiency review by the Oregon Department of Justice prior to release of the solicitation and prior to contract executions. </p></div>
+   <a href="https&#58;//oregonbuys.gov/bso/" target="_blank">OregonBuys​</a>. </p><p> All information technology contracts and solicitations over $150,000, and any other solicitation and contract over $250,000, require legal sufficiency review by the Oregon Department of Justice prior to release of the solicitation and prior to contract execution. </p></div>
 						</section>
 					</div>		
 
@@ -342,8 +303,7 @@ window.__gcse = {
 
 <script type="text/javascript">
 //<![CDATA[
-var _spFormDigestRefreshInterval = 1440000;
-WebForm_InitCallback();var _fV4UI = true;
+var _spFormDigestRefreshInterval = 1440000;var _fV4UI = true;
 function _RegisterWebPartPageCUI()
 {
     var initInfo = {editable: false,isEditMode: false,allowWebPartAdder: false,listId: "{9689d572-ac52-402a-99fb-5f8d248fd2f1}",itemId: 22,recycleBinEnabled: true,enableMinorVersioning: true,enableModeration: true,forceCheckout: true,rootFolderUrl: "\u002fPages",itemPermissions:{High:16,Low:196673}};
