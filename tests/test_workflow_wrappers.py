@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import os
 import tempfile
 import unittest
 from pathlib import Path
@@ -213,6 +214,302 @@ class WorkflowWrapperTests(unittest.TestCase):
             self.assertTrue((extract_dir / "statutory_provisions_report.txt").exists())
             self.assertTrue((extract_dir / "compliance_matrix.txt").exists())
             self.assertIn("COMPLIANCE MATRIX", matrix)
+
+    def test_kg_followup_search_wrapper_uses_shared_engine(self) -> None:
+        module = _load_module(
+            Path("/home/barberb/HACC/research_data/scripts/kg_followup_search.py"),
+            "kg_followup_search_test",
+        )
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            kg_path = root / "kg.json"
+            audit_csv = root / "audit.csv"
+            out_md = root / "followup.md"
+            out_csv = root / "followup.csv"
+            out_queue = root / "followup.txt"
+            kg_path.write_text(
+                json.dumps(
+                    {
+                        "nodes": [
+                            {"id": "ent:1", "label": "Housing Authority", "type": "government_body"},
+                        ],
+                        "edges": [
+                            {"type": "MENTIONS", "target": "ent:1", "weight": 3},
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            audit_csv.write_text("document_id,assessment,classification,domain,url\n", encoding="utf-8")
+
+            class FakeEngine:
+                def __init__(self, *args, **kwargs):
+                    pass
+
+                def search_local(self, query, top_k=5):
+                    return {
+                        "results": [
+                            {
+                                "document_id": "doc-1",
+                                "source_path": "/tmp/doc-1.txt",
+                                "snippet": "Housing Authority procurement policy",
+                            }
+                        ]
+                    }
+
+                def load_corpus(self):
+                    return ["doc-1"]
+
+            with patch.object(module, "KG_JSON", str(kg_path)):
+                with patch.object(module, "AUDIT_CSV", str(audit_csv)):
+                    with patch.object(module, "OUT_MD", str(out_md)):
+                        with patch.object(module, "OUT_CSV", str(out_csv)):
+                            with patch.object(module, "OUT_QUEUE", str(out_queue)):
+                                with patch.object(module, "HACCResearchEngine", FakeEngine):
+                                    module.main()
+
+            self.assertTrue(out_md.exists())
+            self.assertTrue(out_csv.exists())
+            self.assertTrue(out_queue.exists())
+
+    def test_kg_seed_pack_wrapper_delegates_to_violation_seed_builder(self) -> None:
+        module = _load_module(
+            Path("/home/barberb/HACC/research_data/scripts/kg_seed_pack.py"),
+            "kg_seed_pack_test",
+        )
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            kg_path = root / "kg.json"
+            out_json = root / "seed_pack.json"
+            out_txt = root / "seed_queries.txt"
+            kg_path.write_text(
+                json.dumps(
+                    {
+                        "nodes": [
+                            {"id": "ent:1", "label": "Housing Authority", "type": "government_body"},
+                            {"id": "ent:2", "label": "Procurement Policy", "type": "policy_or_law"},
+                        ],
+                        "edges": [],
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            class FakeEntity:
+                def __init__(self, label, type, score):
+                    self.label = label
+                    self.type = type
+                    self.score = score
+
+            fake_module = type(
+                "FakeViolationModule",
+                (),
+                {
+                    "load_kg_nodes": staticmethod(lambda path: json.loads(Path(path).read_text(encoding="utf-8")).get("nodes_by_label", {})),
+                    "entity_label_ok": staticmethod(lambda label: True),
+                    "ENTITY_TYPE_ALLOW": {"government_body", "policy_or_law", "entity"},
+                    "CATEGORY_TERMS": {"selection_contracting": ["procurement"], "proxies": ["equity lens"], "retaliation_protections": ["retaliation"]},
+                    "DEFAULT_SITES": ["clackamas.us"],
+                    "Entity": FakeEntity,
+                    "make_queries": staticmethod(lambda **kwargs: ["site:clackamas.us \"Housing Authority\" procurement"]),
+                    "datetime": __import__("datetime").datetime,
+                },
+            )
+
+            nodes_by_label = {
+                "housing authority": {"label": "Housing Authority", "type": "government_body"},
+                "procurement policy": {"label": "Procurement Policy", "type": "policy_or_law"},
+            }
+
+            with patch.object(module, "KG_JSON", str(kg_path)):
+                with patch.object(module, "OUT_JSON", str(out_json)):
+                    with patch.object(module, "OUT_TXT", str(out_txt)):
+                        with patch.object(module, "violation_seed_queries", fake_module):
+                            with patch.object(fake_module, "load_kg_nodes", return_value=nodes_by_label):
+                                module.main()
+
+            self.assertTrue(out_json.exists())
+            self.assertTrue(out_txt.exists())
+            payload = json.loads(out_json.read_text(encoding="utf-8"))
+            self.assertEqual(payload["generated_by"], "kg_violation_seed_queries.make_queries")
+
+    def test_kg_violation_seed_queries_wrapper_uses_upstream_seed_generator(self) -> None:
+        module = _load_module(
+            Path("/home/barberb/HACC/research_data/scripts/kg_violation_seed_queries.py"),
+            "kg_violation_seed_queries_test",
+        )
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            reviews_path = root / "reviews.csv"
+            kg_path = root / "kg.json"
+            results_dir = root / "research_results"
+            results_dir.mkdir(parents=True, exist_ok=True)
+
+            reviews_path.write_text(
+                "\n".join(
+                    [
+                        "document_id,max_checklist_score,assessment,max_checklist_category,top_entities",
+                        'doc-1,3,likely-violation-indicator,selection_contracting,"Housing Authority(3); Procurement Policy(2)"',
+                    ]
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            kg_path.write_text(
+                json.dumps(
+                    {
+                        "nodes": [
+                            {"id": "ent:1", "label": "Housing Authority", "type": "government_body"},
+                            {"id": "ent:2", "label": "Procurement Policy", "type": "policy_or_law"},
+                        ]
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            old_cwd = os.getcwd()
+            try:
+                os.chdir(root)
+                with patch("sys.argv", ["kg_violation_seed_queries.py", "--reviews", str(reviews_path), "--kg", str(kg_path)]):
+                    module.main()
+            finally:
+                os.chdir(old_cwd)
+
+            pack_files = list(results_dir.glob("kg_violation_seed_pack_*.json"))
+            query_files = list(results_dir.glob("kg_violation_seed_queries_*.txt"))
+            self.assertEqual(len(pack_files), 1)
+            self.assertEqual(len(query_files), 1)
+
+            payload = json.loads(pack_files[0].read_text(encoding="utf-8"))
+            self.assertEqual(payload["generated_by"], "complaint_analysis.research_seed_generator")
+            self.assertEqual(payload["selected_docs"], 1)
+            self.assertTrue(payload["queries"])
+
+    def test_kg_prioritize_queues_uses_consolidated_entity_loader(self) -> None:
+        module = _load_module(
+            Path("/home/barberb/HACC/research_data/scripts/kg_prioritize_queues.py"),
+            "kg_prioritize_queues_test",
+        )
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            kg_path = root / "kg.json"
+            queue_path = root / "sample_queue.json"
+            out_json = root / "prioritized.json"
+            out_csv = root / "prioritized.csv"
+            kg_path.write_text(json.dumps({"nodes": []}), encoding="utf-8")
+            queue_path.write_text(json.dumps({"items": [{"url": "https://clackamas.us/housing-authority/procurement-policy.pdf"}]}), encoding="utf-8")
+
+            fake_violation_module = type(
+                "FakeViolationModule",
+                (),
+                {
+                    "load_kg_nodes": staticmethod(lambda path: {"housing authority": {"label": "Housing Authority", "type": "government_body"}}),
+                    "ENTITY_TYPE_ALLOW": {"government_body"},
+                    "entity_label_ok": staticmethod(lambda label: True),
+                },
+            )
+
+            with patch.object(module, "KG_JSON", str(kg_path)):
+                with patch.object(module, "QUEUE_GLOBS", [str(queue_path)]):
+                    with patch.object(module, "OUT_JSON", str(out_json)):
+                        with patch.object(module, "OUT_CSV", str(out_csv)):
+                            with patch.object(module, "violation_seed_queries", fake_violation_module):
+                                module.main()
+
+            self.assertTrue(out_json.exists())
+            self.assertTrue(out_csv.exists())
+            payload = json.loads(out_json.read_text(encoding="utf-8"))
+            self.assertEqual(len(payload["items"]), 1)
+
+    def test_generate_third_party_download_queue_wrapper_uses_shared_queue_builder(self) -> None:
+        module = _load_module(
+            Path("/home/barberb/HACC/research_data/scripts/generate_third_party_download_queue.py"),
+            "generate_third_party_download_queue_test",
+        )
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            candidates_path = root / "candidates.json"
+            output_path = root / "queue.json"
+            candidates_path.write_text(json.dumps({"candidates": [{"candidate_type": "domain", "candidate": "example.org"}]}), encoding="utf-8")
+
+            fake_queue = {"domain_count": 1, "items": [{"domain": "example.org", "score": 60}], "notes": "ok"}
+
+            with patch.object(module, "CANDIDATES_JSON", candidates_path):
+                with patch.object(module, "OUTPUT_JSON", output_path):
+                    with patch.object(module, "build_download_queue", return_value=fake_queue):
+                        module.main()
+
+            payload = json.loads(output_path.read_text(encoding="utf-8"))
+            self.assertEqual(payload["source"], str(candidates_path))
+            self.assertEqual(payload["domain_count"], 1)
+
+    def test_filter_third_party_download_queue_wrapper_uses_shared_filter(self) -> None:
+        module = _load_module(
+            Path("/home/barberb/HACC/research_data/scripts/filter_third_party_download_queue.py"),
+            "filter_third_party_download_queue_test",
+        )
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            in_path = root / "queue.json"
+            out_path = root / "filtered.json"
+            summary_path = root / "summary.json"
+            in_path.write_text(json.dumps({"items": [{"domain": "example.org", "score": 60}]}), encoding="utf-8")
+
+            fake_filtered = {"domain_count": 1, "items": [{"domain": "example.org", "score": 60}]}
+            fake_summary = {"output_domain_count": 1}
+
+            with patch.object(module, "filter_download_queue", return_value=(fake_filtered, fake_summary)):
+                with patch(
+                    "sys.argv",
+                    [
+                        "filter_third_party_download_queue.py",
+                        "--in",
+                        str(in_path),
+                        "--out",
+                        str(out_path),
+                        "--summary",
+                        str(summary_path),
+                    ],
+                ):
+                    module.main()
+
+            payload = json.loads(out_path.read_text(encoding="utf-8"))
+            summary = json.loads(summary_path.read_text(encoding="utf-8"))
+            self.assertEqual(payload["source"], str(in_path))
+            self.assertEqual(summary["output"], str(out_path))
+
+    def test_download_third_party_queue_wrapper_uses_shared_downloader(self) -> None:
+        module = _load_module(
+            Path("/home/barberb/HACC/research_data/scripts/download_third_party_queue.py"),
+            "download_third_party_queue_test",
+        )
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            queue_path = root / "queue.json"
+            manifest_json = root / "manifest.json"
+            manifest_csv = root / "manifest.csv"
+            queue_path.write_text(json.dumps({"items": [{"domain": "example.org", "seed_urls": ["https://example.org"]}]}), encoding="utf-8")
+
+            with patch.object(
+                module,
+                "download_queue",
+                return_value={"domains_processed": 1, "ok_downloads": 1, "manifest_rows": 1, "manifest_json": str(manifest_json), "manifest_csv": str(manifest_csv)},
+            ) as patched:
+                with patch(
+                    "sys.argv",
+                    [
+                        "download_third_party_queue.py",
+                        "--queue",
+                        str(queue_path),
+                        "--manifest-json",
+                        str(manifest_json),
+                        "--manifest-csv",
+                        str(manifest_csv),
+                    ],
+                ):
+                    module.main()
+
+            self.assertTrue(patched.called)
 
 
 if __name__ == "__main__":

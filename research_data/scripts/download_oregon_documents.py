@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# DEPRECATED: historical corpus-bootstrapping helper; prefer shared HACC/complaint-generator workflows.
 """
 Download Oregon state documents from extracted links.
 Prioritizes regulatory documents, housing policies, and civil rights guidance.

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# DEPRECATED: historical corpus-bootstrapping helper; prefer shared HACC/complaint-generator workflows.
 """
 Extract hyperlinks from P1/P2 Oregon documents (critical/high priority).
 Scans text/binary content for http/https URLs and saves JSON results.

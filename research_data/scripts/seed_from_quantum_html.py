@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# DEPRECATED: historical corpus-bootstrapping helper; prefer shared HACC/complaint-generator workflows.
 """seed_from_quantum_html.py
 
 Purpose

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# DEPRECATED: historical corpus-bootstrapping helper; prefer shared HACC/complaint-generator workflows.
 """extract_quantum_residential_documents.py
 
 Extract document URLs referenced by downloaded Quantum Residential pages.

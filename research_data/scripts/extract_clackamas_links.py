@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# DEPRECATED: historical corpus-bootstrapping helper; prefer shared HACC/complaint-generator workflows.
 """
 extract_clackamas_links.py - Extract and follow links from Clackamas County Housing Authority pages
 """

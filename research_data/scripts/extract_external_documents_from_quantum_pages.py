@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# DEPRECATED: historical corpus-bootstrapping helper; prefer shared HACC/complaint-generator workflows.
 """extract_external_documents_from_quantum_pages.py
 
 Scan locally-downloaded Quantum Residential HTML pages (from a download manifest)

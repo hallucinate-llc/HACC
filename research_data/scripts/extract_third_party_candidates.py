@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# DEPRECATED: historical corpus-bootstrapping helper; prefer shared HACC/complaint-generator workflows.
 """extract_third_party_candidates.py
 
 Scan the existing local corpus (HACC + Oregon pages + parsed text) to identify

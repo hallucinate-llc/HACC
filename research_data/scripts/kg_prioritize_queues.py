@@ -26,9 +26,17 @@ import glob
 import json
 import os
 import re
+import sys
 from collections import Counter
 from datetime import datetime
+from pathlib import Path
 from typing import Any
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+import kg_violation_seed_queries as violation_seed_queries
 
 KG_JSON = "research_results/audit_policy_knowledge_graph_20251231.json"
 
@@ -111,35 +119,24 @@ ALLOW_DOMAIN_SUBSTRINGS = [
 ]
 
 
+def _tokenize_label(label: str) -> str:
+    token = label.lower().strip()
+    token = re.sub(r"[^a-z0-9]+", "-", token).strip("-")
+    return token
+
+
 def load_kg_entities() -> list[str]:
-    with open(KG_JSON, "r", encoding="utf-8") as f:
-        kg = json.load(f)
-
-    nodes = {n.get("id"): n for n in kg.get("nodes", []) if isinstance(n, dict)}
-    mentions = Counter()
-    for e in kg.get("edges", []):
-        if not isinstance(e, dict):
-            continue
-        if e.get("type") != "MENTIONS":
-            continue
-        dst = e.get("target") or ""
-        if dst.startswith("ent:"):
-            mentions[dst] += int(e.get("weight") or 1)
-
-    # take top entities by mentions, but use simple tokens for URL matching
+    kg_nodes = violation_seed_queries.load_kg_nodes(Path(KG_JSON))
     ranked = []
-    for ent_id, w in mentions.most_common(400):
-        node = nodes.get(ent_id) or {}
-        label = (node.get("label") or "").strip()
-        if not label:
+    for label, node in kg_nodes.items():
+        entity_label = (node.get("label") or label).strip()
+        entity_type = (node.get("type") or "entity").strip()
+        if entity_type not in violation_seed_queries.ENTITY_TYPE_ALLOW:
             continue
-        if len(label) > 60:
+        if not violation_seed_queries.entity_label_ok(entity_label):
             continue
-        if re.fullmatch(r"[A-Z]{2,}", label) and len(label) >= 8:
-            continue
-        ranked.append((label, w))
+        ranked.append(entity_label)
 
-    # Convert labels to URL-ish tokens (lower, spaces -> -)
     tokens: list[str] = []
     seen = set()
     stop_tokens = {
@@ -162,9 +159,8 @@ def load_kg_entities() -> list[str]:
         "privacy",
         "policy",
     }
-    for label, _w in ranked:
-        t = label.lower().strip()
-        t = re.sub(r"[^a-z0-9]+", "-", t).strip("-")
+    for label in ranked:
+        t = _tokenize_label(label)
         if len(t) < 4:
             continue
         if t in stop_tokens:

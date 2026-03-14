@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# DEPRECATED: historical corpus-bootstrapping helper; prefer shared HACC/complaint-generator workflows.
 """
 Filter P1/P2 Oregon links to likely policy documents and download them.
 Criteria: pdf/doc/docx/xlsx and housing/fair-housing/discrimination/procurement keywords.
