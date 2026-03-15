@@ -2,6 +2,8 @@
 research_env/*
 research_env
 research_venv
+.venv-validation
+.venv-validation/*
 __pycache__/
 *.py[cod]
 research_results/research.log
