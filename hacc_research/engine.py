@@ -25,10 +25,12 @@ try:
         VECTOR_STORE_ERROR,
         create_vector_index,
         discover_seeded_commoncrawl,
+        get_ipfs_datasets_capabilities,
         scrape_web_content,
         search_brave_web,
         search_multi_engine_web,
         search_vector_index,
+        summarize_ipfs_datasets_capability_report,
     )
     from integrations.ipfs_datasets.graphs import extract_graph_from_text
     from integrations.ipfs_datasets.legal import (
@@ -44,10 +46,12 @@ except Exception as exc:  # pragma: no cover - exercised through fallback behavi
     VECTOR_STORE_ERROR = str(exc)
     create_vector_index = None
     discover_seeded_commoncrawl = None
+    get_ipfs_datasets_capabilities = None
     scrape_web_content = None
     search_brave_web = None
     search_multi_engine_web = None
     search_vector_index = None
+    summarize_ipfs_datasets_capability_report = None
     extract_graph_from_text = None
     LEGAL_SCRAPERS_AVAILABLE = False
     LEGAL_SCRAPERS_ERROR = str(exc)
@@ -57,6 +61,23 @@ except Exception as exc:  # pragma: no cover - exercised through fallback behavi
     INTEGRATION_IMPORT_ERROR = str(exc)
 else:
     INTEGRATION_IMPORT_ERROR = None
+
+
+REPOSITORY_EVIDENCE_EXTENSIONS = {".html", ".htm", ".json", ".md", ".txt"}
+REPOSITORY_EVIDENCE_RECURSIVE_DIRS = (
+    "correspondances",
+    "research_data",
+    "research_results",
+    "state",
+)
+REPOSITORY_EVIDENCE_SKIP_PARTS = {
+    ".git",
+    "__pycache__",
+    "complaint-generator",
+    "hacc_website",
+    "search_indexes",
+}
+REPOSITORY_EVIDENCE_MAX_BYTES = 2_000_000
 
 
 def _clean_text(value: str) -> str:
@@ -210,6 +231,7 @@ class HACCResearchEngine:
 
         documents = []
         documents.extend(self._load_parsed_documents())
+        documents.extend(self._load_repository_evidence_documents())
         documents.extend(self._load_knowledge_graph_documents())
         self._documents = documents
         return list(documents)
@@ -285,6 +307,84 @@ class HACCResearchEngine:
             payload["integration_status"] = self._integration_status()
         return payload
 
+    def ensure_vector_index(
+        self,
+        *,
+        index_name: str = "hacc_corpus",
+        index_dir: Optional[Path | str] = None,
+        batch_size: int = 32,
+    ) -> Dict[str, Any]:
+        candidate_indexes = self._resolve_vector_indexes(index_name=index_name, index_dir=index_dir)
+        for candidate in candidate_indexes:
+            manifest_path = Path(candidate["index_dir"]) / f"{candidate['index_name']}.manifest.json"
+            if manifest_path.exists():
+                return {
+                    "status": "existing",
+                    "index_name": candidate["index_name"],
+                    "index_dir": candidate["index_dir"],
+                    "manifest_path": str(manifest_path),
+                    "integration_status": self._integration_status(),
+                }
+
+        if create_vector_index is None or not VECTOR_STORE_AVAILABLE or not EMBEDDINGS_AVAILABLE:
+            return {
+                "status": "unavailable",
+                "index_name": index_name,
+                "index_dir": str(Path(index_dir or self.default_index_dir).resolve()),
+                "error": INTEGRATION_IMPORT_ERROR or VECTOR_STORE_ERROR or "vector index adapter unavailable",
+                "integration_status": self._integration_status(),
+            }
+
+        return self.build_vector_index(
+            output_dir=index_dir or self.default_index_dir,
+            index_name=index_name,
+            batch_size=batch_size,
+        )
+
+    def search_package(
+        self,
+        query: str,
+        *,
+        top_k: int = 10,
+        vector_top_k: Optional[int] = None,
+        index_name: str = "hacc_corpus",
+        index_dir: Optional[Path | str] = None,
+        source_types: Optional[Sequence[str]] = None,
+        auto_build_index: bool = True,
+    ) -> Dict[str, Any]:
+        query_text = _clean_text(query)
+        index_status: Optional[Dict[str, Any]] = None
+        vector_ready = self._has_preferred_vector_index(index_name=index_name, index_dir=index_dir)
+
+        if auto_build_index and not vector_ready:
+            index_status = self.ensure_vector_index(index_name=index_name, index_dir=index_dir)
+            vector_ready = self._has_preferred_vector_index(index_name=index_name, index_dir=index_dir)
+
+        if vector_ready:
+            payload = self.hybrid_search(
+                query_text,
+                top_k=top_k,
+                vector_top_k=vector_top_k,
+                index_name=index_name,
+                index_dir=index_dir,
+                source_types=source_types,
+            )
+            payload["backend_mode"] = "shared_hybrid"
+        else:
+            payload = self.search_local(query_text, top_k=top_k, source_types=source_types)
+            payload["backend_mode"] = "lexical_fallback"
+            payload["vector_status"] = "unavailable"
+            if index_status and index_status.get("status") == "unavailable":
+                payload["vector_error"] = index_status.get("error")
+
+        payload["index_status"] = index_status or {
+            "status": "existing" if vector_ready else "skipped",
+            "index_name": index_name,
+            "index_dir": str(Path(index_dir or self.default_index_dir).resolve()),
+        }
+        payload["integration_status"] = self._integration_status()
+        return payload
+
     def search(
         self,
         query: str,
@@ -299,10 +399,20 @@ class HACCResearchEngine:
         min_score: float = 0.0,
     ) -> Dict[str, Any]:
         normalized_mode = str(search_mode or "auto").strip().lower()
-        if normalized_mode not in {"auto", "lexical", "hybrid", "vector"}:
+        if normalized_mode not in {"auto", "lexical", "hybrid", "vector", "package"}:
             normalized_mode = "auto"
 
         should_use_vector = bool(use_vector)
+        if normalized_mode == "package":
+            return self.search_package(
+                query,
+                top_k=top_k,
+                vector_top_k=vector_top_k,
+                index_name=index_name,
+                index_dir=index_dir,
+                source_types=source_types,
+                auto_build_index=True,
+            )
         if normalized_mode == "vector":
             return self.search_vector(
                 query,
@@ -428,6 +538,7 @@ class HACCResearchEngine:
         lexical = self.search(
             query,
             top_k=max(top_k, vector_top_k or top_k),
+            search_mode="lexical",
             source_types=source_types,
         )
         vector = self.search_vector(
@@ -775,6 +886,184 @@ class HACCResearchEngine:
             "integration_status": self._integration_status(),
         }
 
+    def build_grounding_bundle(
+        self,
+        query: str,
+        *,
+        top_k: int = 5,
+        claim_type: str = "housing_discrimination",
+        search_mode: str = "package",
+        use_vector: bool = False,
+    ) -> Dict[str, Any]:
+        query_text = _clean_text(query)
+        search_payload = self.search(
+            query_text,
+            top_k=max(top_k * 5, top_k),
+            search_mode=search_mode,
+            use_vector=use_vector,
+        )
+        upload_candidates = self._select_uploadable_results(search_payload, top_k=top_k)
+        synthetic_prompts = self._build_synthetic_prompts(
+            query_text=query_text,
+            claim_type=claim_type,
+            upload_candidates=upload_candidates,
+        )
+        return {
+            "status": "success",
+            "query": query_text,
+            "claim_type": str(claim_type or "").strip() or "housing_discrimination",
+            "search_mode": str(search_mode or "auto"),
+            "use_vector": bool(use_vector),
+            "search_payload": search_payload,
+            "upload_candidates": upload_candidates,
+            "synthetic_prompts": synthetic_prompts,
+            "integration_status": self._integration_status(),
+        }
+
+    def simulate_evidence_upload(
+        self,
+        query: str,
+        *,
+        top_k: int = 5,
+        claim_type: str = "housing_discrimination",
+        user_id: str = "hacc-grounding",
+        search_mode: str = "package",
+        use_vector: bool = False,
+        db_dir: Optional[Path | str] = None,
+        mediator: Any = None,
+    ) -> Dict[str, Any]:
+        grounding_bundle = self.build_grounding_bundle(
+            query,
+            top_k=top_k,
+            claim_type=claim_type,
+            search_mode=search_mode,
+            use_vector=use_vector,
+        )
+        upload_candidates = list(grounding_bundle.get("upload_candidates", []) or [])
+        if not upload_candidates:
+            return {
+                "status": "success",
+                "query": _clean_text(query),
+                "claim_type": str(claim_type or "").strip() or "housing_discrimination",
+                "user_id": str(user_id or "hacc-grounding"),
+                "upload_count": 0,
+                "uploads": [],
+                "errors": [],
+                "stored_evidence": [],
+                "support_summary": {},
+                "synthetic_prompts": grounding_bundle.get("synthetic_prompts", {}),
+                "database_paths": {},
+                "integration_status": self._integration_status(),
+            }
+
+        created_db_dir = False
+        db_root: Optional[Path] = None
+        if mediator is None:
+            try:
+                from mediator.mediator import Mediator
+            except Exception as exc:
+                return {
+                    "status": "unavailable",
+                    "query": _clean_text(query),
+                    "claim_type": str(claim_type or "").strip() or "housing_discrimination",
+                    "user_id": str(user_id or "hacc-grounding"),
+                    "upload_count": 0,
+                    "uploads": [],
+                    "errors": [{"stage": "import", "error": str(exc)}],
+                    "stored_evidence": [],
+                    "support_summary": {},
+                    "synthetic_prompts": grounding_bundle.get("synthetic_prompts", {}),
+                    "database_paths": {},
+                    "integration_status": self._integration_status(),
+                }
+
+            if db_dir is None:
+                db_root = Path(tempfile.mkdtemp(prefix="hacc_grounding_"))
+                created_db_dir = True
+            else:
+                db_root = Path(db_dir).resolve()
+                db_root.mkdir(parents=True, exist_ok=True)
+            mediator = Mediator(
+                backends=[],
+                evidence_db_path=str(db_root / "evidence.duckdb"),
+                legal_authority_db_path=str(db_root / "legal_authorities.duckdb"),
+                claim_support_db_path=str(db_root / "claim_support.duckdb"),
+            )
+            mediator.state.username = str(user_id or "hacc-grounding")
+            mediator.state.hashed_username = str(user_id or "hacc-grounding")
+
+        uploads: List[Dict[str, Any]] = []
+        errors: List[Dict[str, Any]] = []
+        for candidate in upload_candidates:
+            file_path = str(candidate.get("source_path") or "")
+            if not file_path:
+                continue
+            try:
+                result = mediator.submit_evidence_file(
+                    file_path=file_path,
+                    evidence_type="document",
+                    user_id=str(user_id or "hacc-grounding"),
+                    description=f"Grounding evidence: {candidate.get('title') or Path(file_path).name}",
+                    claim_type=str(claim_type or "").strip() or "housing_discrimination",
+                    claim_element=_clean_text(query),
+                    metadata={
+                        "grounding_query": _clean_text(query),
+                        "source_type": candidate.get("source_type", "repository_evidence"),
+                        "relative_path": candidate.get("relative_path", ""),
+                        "snippet": candidate.get("snippet", ""),
+                    },
+                )
+            except Exception as exc:
+                errors.append(
+                    {
+                        "source_path": file_path,
+                        "title": candidate.get("title", ""),
+                        "error": str(exc),
+                    }
+                )
+                continue
+            uploads.append(
+                {
+                    "source_path": file_path,
+                    "title": candidate.get("title", ""),
+                    "relative_path": candidate.get("relative_path", ""),
+                    "result": result if isinstance(result, dict) else {"value": str(result)},
+                }
+            )
+
+        get_user_evidence = getattr(mediator, "get_user_evidence", None)
+        stored_evidence = (
+            list(get_user_evidence(str(user_id or "hacc-grounding")) or [])
+            if callable(get_user_evidence)
+            else []
+        )
+        summarize_claim_support = getattr(mediator, "summarize_claim_support", None)
+        support_summary = (
+            summarize_claim_support(str(user_id or "hacc-grounding"), str(claim_type or "").strip() or None)
+            if callable(summarize_claim_support)
+            else {}
+        )
+        database_paths = {
+            "evidence_db_path": str(db_root / "evidence.duckdb") if db_root else "",
+            "legal_authority_db_path": str(db_root / "legal_authorities.duckdb") if db_root else "",
+            "claim_support_db_path": str(db_root / "claim_support.duckdb") if db_root else "",
+            "temporary_db_dir": str(db_root) if db_root and created_db_dir else "",
+        }
+        return {
+            "status": "success" if not errors else "partial",
+            "query": _clean_text(query),
+            "claim_type": str(claim_type or "").strip() or "housing_discrimination",
+            "user_id": str(user_id or "hacc-grounding"),
+            "upload_count": len(uploads),
+            "uploads": uploads,
+            "errors": errors,
+            "stored_evidence": stored_evidence,
+            "support_summary": support_summary if isinstance(support_summary, dict) else {"value": support_summary},
+            "synthetic_prompts": grounding_bundle.get("synthetic_prompts", {}),
+            "database_paths": database_paths,
+            "integration_status": self._integration_status(),
+        }
+
     def _resolve_vector_indexes(
         self,
         *,
@@ -854,6 +1143,167 @@ class HACCResearchEngine:
                 )
             )
         return documents
+
+    def _load_repository_evidence_documents(self) -> List[CorpusDocument]:
+        documents: List[CorpusDocument] = []
+        seen_paths: set[str] = set()
+        for path in self._iter_repository_evidence_paths():
+            resolved = str(path.resolve())
+            if resolved in seen_paths:
+                continue
+            seen_paths.add(resolved)
+            try:
+                text = path.read_text(encoding="utf-8", errors="ignore")
+            except OSError:
+                continue
+            if not _clean_text(text):
+                continue
+
+            relative_path = path.relative_to(self.repo_root)
+            documents.append(
+                CorpusDocument(
+                    document_id=f"repo::{relative_path.as_posix()}",
+                    title=self._infer_title(text, fallback=relative_path.stem.replace("_", " ")),
+                    text=text,
+                    source_type="repository_evidence",
+                    source_path=str(path),
+                    metadata={
+                        "relative_path": relative_path.as_posix(),
+                        "category": relative_path.parts[0] if len(relative_path.parts) > 1 else "root",
+                        "size_bytes": path.stat().st_size,
+                        "graph_status": "skipped_repository_evidence",
+                    },
+                    rules=[],
+                    entities=[],
+                    relationships=[],
+                )
+            )
+        return documents
+
+    def _iter_repository_evidence_paths(self) -> Iterable[Path]:
+        try:
+            for child in sorted(self.repo_root.iterdir()):
+                if child.is_file() and not self._should_skip_repository_evidence_path(child):
+                    yield child
+        except OSError:
+            return
+
+        for dir_name in REPOSITORY_EVIDENCE_RECURSIVE_DIRS:
+            root = (self.repo_root / dir_name).resolve()
+            if not root.exists() or not root.is_dir():
+                continue
+            for path in sorted(root.rglob("*")):
+                if path.is_file() and not self._should_skip_repository_evidence_path(path):
+                    yield path
+
+    def _should_skip_repository_evidence_path(self, path: Path) -> bool:
+        try:
+            relative = path.resolve().relative_to(self.repo_root)
+        except ValueError:
+            return True
+
+        if path.name.startswith("."):
+            return True
+        if path.suffix.lower() not in REPOSITORY_EVIDENCE_EXTENSIONS:
+            return True
+        if any(part in REPOSITORY_EVIDENCE_SKIP_PARTS for part in relative.parts):
+            return True
+        if relative.parts[:2] == ("research_results", "documents"):
+            return True
+        try:
+            if path.stat().st_size > REPOSITORY_EVIDENCE_MAX_BYTES:
+                return True
+        except OSError:
+            return True
+        return False
+
+    def _select_uploadable_results(self, payload: Dict[str, Any], *, top_k: int) -> List[Dict[str, Any]]:
+        candidates: List[Dict[str, Any]] = []
+        seen_paths: set[str] = set()
+        for item in list(payload.get("results", []) or []):
+            source_path = str(item.get("source_path") or "").strip()
+            if not source_path:
+                continue
+            path = Path(source_path)
+            if not path.exists() or not path.is_file():
+                continue
+            resolved_path = str(path.resolve())
+            if resolved_path in seen_paths:
+                continue
+            seen_paths.add(resolved_path)
+            try:
+                relative_path = path.resolve().relative_to(self.repo_root).as_posix()
+            except ValueError:
+                relative_path = path.name
+            candidates.append(
+                {
+                    "document_id": str(item.get("document_id") or ""),
+                    "title": str(item.get("title") or path.name),
+                    "source_type": str(item.get("source_type") or "document"),
+                    "source_path": resolved_path,
+                    "relative_path": relative_path,
+                    "score": float(item.get("score", 0.0) or 0.0),
+                    "snippet": str(item.get("snippet") or "")[:500],
+                    "metadata": dict(item.get("metadata") or {}),
+                }
+            )
+        source_rank = {
+            "repository_evidence": 0,
+            "parsed_document": 1,
+            "knowledge_graph": 2,
+        }
+        candidates.sort(
+            key=lambda item: (
+                source_rank.get(str(item.get("source_type") or ""), 9),
+                -float(item.get("score", 0.0) or 0.0),
+                str(item.get("title") or ""),
+            )
+        )
+        return candidates[:top_k]
+
+    def _build_synthetic_prompts(
+        self,
+        *,
+        query_text: str,
+        claim_type: str,
+        upload_candidates: Sequence[Dict[str, Any]],
+    ) -> Dict[str, Any]:
+        upload_prompts: List[Dict[str, Any]] = []
+        evidence_titles: List[str] = []
+        for index, candidate in enumerate(upload_candidates, 1):
+            title = str(candidate.get("title") or candidate.get("relative_path") or f"evidence_{index}")
+            snippet = _clean_text(str(candidate.get("snippet") or ""))
+            evidence_titles.append(title)
+            upload_prompts.append(
+                {
+                    "prompt_id": f"evidence_upload_{index}",
+                    "prompt_type": "evidence_upload",
+                    "title": title,
+                    "source_path": str(candidate.get("source_path") or ""),
+                    "relative_path": str(candidate.get("relative_path") or ""),
+                    "text": (
+                        f"Upload the evidence file '{candidate.get('relative_path') or candidate.get('source_path')}' "
+                        f"and explain how it supports a {claim_type} complaint about '{query_text}'. "
+                        f"Focus on the most relevant language: {snippet or 'Describe the relevant sections in the document.'}"
+                    ),
+                }
+            )
+
+        chatbot_prompt = (
+            f"Ground the complaint chatbot in the uploaded repository evidence for '{query_text}'. "
+            f"Use the uploaded materials ({', '.join(evidence_titles) if evidence_titles else 'uploaded evidence'}) as factual grounding, "
+            "ask the user to connect each document to case-specific events, and identify missing timeline, actor, harm, and remedy facts."
+        )
+        mediator_prompt = (
+            f"Evaluate each uploaded evidence item for a {claim_type} complaint about '{query_text}'. "
+            "For every document, determine what claim element it supports, what facts it proves directly, what facts remain missing, "
+            "and what follow-up questions the mediator should ask before drafting a complaint."
+        )
+        return {
+            "evidence_upload_prompts": upload_prompts,
+            "complaint_chatbot_prompt": chatbot_prompt,
+            "mediator_evaluation_prompt": mediator_prompt,
+        }
 
     def _load_knowledge_graph_documents(self) -> List[CorpusDocument]:
         documents_dir = self.knowledge_graph_dir / "documents"
@@ -1080,11 +1530,13 @@ class HACCResearchEngine:
         return counts
 
     def _integration_status(self) -> Dict[str, Any]:
+        capability_report = self._shared_capability_report()
         return {
             "complaint_generator_root": str(COMPLAINT_GENERATOR_ROOT),
             "adapter_available": INTEGRATION_IMPORT_ERROR is None,
             "degraded_reason": INTEGRATION_IMPORT_ERROR,
             "preferred_vector_indexes": self._resolve_vector_indexes(index_name="hacc_corpus", index_dir=None),
+            "capability_report": capability_report,
             "capabilities": {
                 "discovery_available": search_multi_engine_web is not None or search_brave_web is not None,
                 "seeded_commoncrawl_available": discover_seeded_commoncrawl is not None,
@@ -1096,6 +1548,38 @@ class HACCResearchEngine:
                 "vector_degraded_reason": str(VECTOR_STORE_ERROR) if (not VECTOR_STORE_AVAILABLE and VECTOR_STORE_ERROR is not None) else None,
                 "legal_degraded_reason": str(LEGAL_SCRAPERS_ERROR) if (not LEGAL_SCRAPERS_AVAILABLE and LEGAL_SCRAPERS_ERROR is not None) else None,
             },
+        }
+
+    def _shared_capability_report(self) -> Dict[str, Any]:
+        if summarize_ipfs_datasets_capability_report is None:
+            return {
+                "status": "degraded",
+                "available_count": 0,
+                "degraded_count": 0,
+                "available_capabilities": [],
+                "degraded_capabilities": {},
+                "error": INTEGRATION_IMPORT_ERROR or "capability report unavailable",
+            }
+        try:
+            payload = summarize_ipfs_datasets_capability_report()
+        except Exception as exc:
+            return {
+                "status": "error",
+                "available_count": 0,
+                "degraded_count": 0,
+                "available_capabilities": [],
+                "degraded_capabilities": {},
+                "error": str(exc),
+            }
+        if isinstance(payload, dict):
+            return payload
+        return {
+            "status": "error",
+            "available_count": 0,
+            "degraded_count": 0,
+            "available_capabilities": [],
+            "degraded_capabilities": {},
+            "error": "Unexpected capability report payload",
         }
 
     def _normalize_domain_filters(self, domain_filter: Optional[Sequence[str] | str]) -> set[str]:
@@ -1146,9 +1630,9 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     search.add_argument(
         "--search-mode",
-        choices=["auto", "lexical", "hybrid", "vector"],
-        default="auto",
-        help="Search strategy. 'auto' prefers shared vector indexes when available.",
+        choices=["auto", "lexical", "hybrid", "vector", "package"],
+        default="package",
+        help="Search strategy. 'package' uses complaint-generator/ipfs_datasets search first and falls back to lexical search.",
     )
     search.add_argument("--use-vector", action="store_true", help="Blend lexical and vector search")
     search.add_argument("--index-dir", default=str(REPO_ROOT / "research_results/search_indexes"), help="Vector index directory")
@@ -1188,9 +1672,9 @@ def _build_parser() -> argparse.ArgumentParser:
     research.add_argument("--max-results", type=int, default=10, help="Maximum number of web results")
     research.add_argument(
         "--search-mode",
-        choices=["auto", "lexical", "hybrid", "vector"],
-        default="auto",
-        help="Local search strategy. 'auto' prefers shared vector indexes when available.",
+        choices=["auto", "lexical", "hybrid", "vector", "package"],
+        default="package",
+        help="Local search strategy. 'package' uses complaint-generator/ipfs_datasets search first and falls back to lexical search.",
     )
     research.add_argument("--engine", action="append", default=[], help="Preferred search engine (repeatable)")
     research.add_argument("--domain", action="append", default=[], help="Domain substring filter (repeatable)")
@@ -1200,6 +1684,46 @@ def _build_parser() -> argparse.ArgumentParser:
     research.add_argument("--legal-max-results", type=int, default=10, help="Maximum number of legal authority results")
     research.add_argument("--index-dir", default=str(REPO_ROOT / "research_results/search_indexes"), help="Vector index directory")
     research.add_argument("--index-name", default="hacc_corpus", help="Vector index name")
+
+    grounding = subparsers.add_parser(
+        "grounding-bundle",
+        help="Build repository-grounded evidence candidates and synthetic upload prompts",
+    )
+    grounding.add_argument("query", help="Grounding query")
+    grounding.add_argument("--top-k", type=int, default=5, help="Maximum number of upload candidates")
+    grounding.add_argument(
+        "--claim-type",
+        default="housing_discrimination",
+        help="Claim type to reflect in generated prompts",
+    )
+    grounding.add_argument(
+        "--search-mode",
+        choices=["auto", "lexical", "hybrid", "vector", "package"],
+        default="package",
+        help="Search strategy used to build the grounding bundle",
+    )
+    grounding.add_argument("--use-vector", action="store_true", help="Blend lexical and vector search when supported")
+
+    simulate_upload = subparsers.add_parser(
+        "simulate-upload",
+        help="Upload repository evidence into the complaint-generator mediator and summarize evaluation",
+    )
+    simulate_upload.add_argument("query", help="Grounding query")
+    simulate_upload.add_argument("--top-k", type=int, default=5, help="Maximum number of upload candidates")
+    simulate_upload.add_argument(
+        "--claim-type",
+        default="housing_discrimination",
+        help="Claim type to assign to uploaded evidence",
+    )
+    simulate_upload.add_argument("--user-id", default="hacc-grounding", help="Mediator user id for the simulated upload")
+    simulate_upload.add_argument(
+        "--search-mode",
+        choices=["auto", "lexical", "hybrid", "vector", "package"],
+        default="package",
+        help="Search strategy used to choose upload candidates",
+    )
+    simulate_upload.add_argument("--use-vector", action="store_true", help="Blend lexical and vector search when supported")
+    simulate_upload.add_argument("--db-dir", default=None, help="Optional directory for mediator DuckDB artifacts")
 
     return parser
 
@@ -1267,6 +1791,24 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             court=args.court,
             start_date=args.start_date,
             end_date=args.end_date,
+        )
+    elif args.command == "grounding-bundle":
+        payload = engine.build_grounding_bundle(
+            args.query,
+            top_k=args.top_k,
+            claim_type=args.claim_type,
+            search_mode=args.search_mode,
+            use_vector=args.use_vector,
+        )
+    elif args.command == "simulate-upload":
+        payload = engine.simulate_evidence_upload(
+            args.query,
+            top_k=args.top_k,
+            claim_type=args.claim_type,
+            user_id=args.user_id,
+            search_mode=args.search_mode,
+            use_vector=args.use_vector,
+            db_dir=args.db_dir,
         )
     else:
         payload = engine.research(

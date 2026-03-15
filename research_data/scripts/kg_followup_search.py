@@ -153,7 +153,7 @@ def main() -> None:
     for _ent_id, label, entity_type, weight in top_entities:
         if entity_type not in ("government_body", "policy_or_law", "program", "organization"):
             continue
-        search_payload = engine.search_local(label, top_k=5)
+        search_payload = engine.search(label, top_k=5, search_mode="package")
         for result in search_payload.get("results", []):
             document_id = str(result.get("document_id") or "")
             audit = audit_map.get(document_id, {})

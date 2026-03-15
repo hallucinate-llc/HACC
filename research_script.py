@@ -118,7 +118,7 @@ class HAACCResearcher:
         enable_brave: bool = True,
         enable_duckduckgo: bool = True,
         use_vector: bool = False,
-        search_mode: str = "auto",
+        search_mode: str = "package",
     ) -> List[dict]:
         path = Path(queries_file)
         if not path.exists():
@@ -151,7 +151,7 @@ class HAACCResearcher:
         self.log(f"Wrote seeded search report: {report_path}")
         return all_search_results
 
-    async def run_full_research(self, *, use_vector: bool = False, search_mode: str = "auto") -> dict:
+    async def run_full_research(self, *, use_vector: bool = False, search_mode: str = "package") -> dict:
         self.log("=" * 80)
         self.log("Starting HACC research via shared search engine")
         self.log("=" * 80)
@@ -205,9 +205,9 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
     parser.add_argument("--use-vector", action="store_true", help="Blend lexical and vector local search.")
     parser.add_argument(
         "--search-mode",
-        choices=["auto", "lexical", "hybrid", "vector"],
-        default="auto",
-        help="Shared search strategy for the local HACC corpus.",
+        choices=["auto", "lexical", "hybrid", "vector", "package"],
+        default="package",
+        help="Shared search strategy for the local HACC corpus. 'package' uses complaint-generator/ipfs_datasets first.",
     )
     args = parser.parse_args(list(argv) if argv is not None else None)
 

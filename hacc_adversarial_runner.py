@@ -939,8 +939,8 @@ def _load_runtime(demo: bool, config_path: Optional[str], backend_id: Optional[s
                     pass
             return backend
 
-        def mediator_factory() -> Any:
-            return Mediator(backends=build_backends(config, backend_id=backend_id))
+        def mediator_factory(**kwargs: Any) -> Any:
+            return Mediator(backends=build_backends(config, backend_id=backend_id), **kwargs)
 
         selected_backend_id = backend_id
         if not selected_backend_id:
@@ -971,8 +971,11 @@ def _load_runtime(demo: bool, config_path: Optional[str], backend_id: Optional[s
     complainant_backend = LLMRouterBackend(id="complainant", provider=provider, model=model)
     critic_backend = LLMRouterBackend(id="critic", provider=provider, model=model)
 
-    def mediator_factory() -> Any:
-        return Mediator(backends=[LLMRouterBackend(id="mediator", provider=provider, model=model)])
+    def mediator_factory(**kwargs: Any) -> Any:
+        return Mediator(
+            backends=[LLMRouterBackend(id="mediator", provider=provider, model=model)],
+            **kwargs,
+        )
 
     runtime = {
         "mode": "llm_router",

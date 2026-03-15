@@ -246,6 +246,87 @@ SUGGESTIONS:
         self.assertTrue(any(call["provider"] == "copilot_cli" for call in router_calls))
         self.assertTrue(any(call["model_name"] == "gpt-5-mini" for call in router_calls))
 
+    def test_live_runner_passes_session_db_paths_to_mediator(self) -> None:
+        complaint_generator_root = REPO_ROOT / "complaint-generator"
+        if str(complaint_generator_root) not in sys.path:
+            sys.path.insert(0, str(complaint_generator_root))
+
+        import backends.llm_router_backend as llm_router_backend_module
+        import mediator as mediator_module
+
+        init_kwargs = []
+
+        def fake_generate_text(*, prompt, provider, model_name, **kwargs):
+            lower_prompt = prompt.lower()
+            if "scores:" in lower_prompt or "evaluate" in lower_prompt:
+                return """SCORES:
+question_quality: 0.80
+information_extraction: 0.78
+empathy: 0.74
+efficiency: 0.76
+coverage: 0.79
+
+FEEDBACK:
+The mediator asked strong questions grounded in the available evidence.
+
+STRENGTHS:
+- Good sequencing
+
+WEAKNESSES:
+- Could ask for a little more timeline detail
+
+SUGGESTIONS:
+- Ask for documentary evidence earlier
+"""
+            return "The housing authority denied my request after I complained about the policy."
+
+        class FakeMediator:
+            def __init__(self, *args, **kwargs):
+                init_kwargs.append(kwargs)
+                self.phase_manager = mock.Mock()
+                self.phase_manager.get_phase_data.side_effect = lambda phase, key: None
+
+            def save_claim_support_document(self, **kwargs):
+                return {"cid": "cid-123", "record_id": 1, "metadata": kwargs.get("metadata", {})}
+
+            def start_three_phase_process(self, complaint_text):
+                return {
+                    "phase": "intake",
+                    "initial_questions": [],
+                }
+
+            def process_denoising_answer(self, question, answer):
+                return {
+                    "converged": True,
+                    "next_questions": [],
+                }
+
+            def get_three_phase_status(self):
+                return {
+                    "current_phase": "intake",
+                    "iteration_count": 1,
+                }
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            with mock.patch.object(llm_router_backend_module, "generate_text", side_effect=fake_generate_text):
+                with mock.patch.object(mediator_module, "Mediator", FakeMediator):
+                    run_hacc_adversarial_batch(
+                        output_dir=tmpdir,
+                        num_sessions=1,
+                        max_turns=1,
+                        max_parallel=1,
+                        hacc_preset="core_hacc_policies",
+                        demo=False,
+                        provider="copilot_cli",
+                        model="gpt-5-mini",
+                    )
+
+        self.assertTrue(init_kwargs)
+        mediator_kwargs = init_kwargs[0]
+        self.assertTrue(str(mediator_kwargs["evidence_db_path"]).endswith("evidence.duckdb"))
+        self.assertTrue(str(mediator_kwargs["legal_authority_db_path"]).endswith("legal_authorities.duckdb"))
+        self.assertTrue(str(mediator_kwargs["claim_support_db_path"]).endswith("claim_support.duckdb"))
+
     def test_runner_can_emit_autopatch_summary(self) -> None:
         complaint_generator_root = REPO_ROOT / "complaint-generator"
         if str(complaint_generator_root) not in sys.path:

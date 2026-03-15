@@ -10,6 +10,38 @@ from hacc_research import engine as engine_module
 
 
 class HACCResearchEngineTests(unittest.TestCase):
+    def test_load_corpus_includes_repository_evidence_documents(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            root.joinpath("README.md").write_text(
+                "Repository Evidence\nReasonable accommodation notices must be reviewable.",
+                encoding="utf-8",
+            )
+            correspondence_dir = root / "correspondances"
+            correspondence_dir.mkdir(parents=True, exist_ok=True)
+            correspondence_dir.joinpath("notice.txt").write_text(
+                "Notice of adverse action and hearing rights.",
+                encoding="utf-8",
+            )
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+            documents = engine.load_corpus()
+
+            repository_docs = [document for document in documents if document.source_type == "repository_evidence"]
+            self.assertEqual(len(repository_docs), 2)
+            self.assertEqual(
+                {document.document_id for document in repository_docs},
+                {"repo::README.md", "repo::correspondances/notice.txt"},
+            )
+
     def test_load_corpus_reads_parsed_and_knowledge_graph_documents(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
@@ -220,6 +252,194 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertEqual(result["status"], "success")
             self.assertIn("integration_status", result)
             self.assertIn("capabilities", result["integration_status"])
+            self.assertIn("capability_report", result["integration_status"])
+
+    def test_build_grounding_bundle_emits_synthetic_prompts_for_file_backed_results(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            root.joinpath("README.md").write_text(
+                "Reasonable Accommodation Policy\nUploadable repository evidence about hearing rights.",
+                encoding="utf-8",
+            )
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+            payload = engine.build_grounding_bundle(
+                "reasonable accommodation hearing rights",
+                top_k=1,
+                claim_type="housing_discrimination",
+                search_mode="lexical",
+            )
+
+            self.assertEqual(payload["status"], "success")
+            self.assertEqual(len(payload["upload_candidates"]), 1)
+            self.assertEqual(payload["upload_candidates"][0]["relative_path"], "README.md")
+            prompts = payload["synthetic_prompts"]
+            self.assertEqual(len(prompts["evidence_upload_prompts"]), 1)
+            self.assertIn("Upload the evidence file", prompts["evidence_upload_prompts"][0]["text"])
+            self.assertIn("Evaluate each uploaded evidence item", prompts["mediator_evaluation_prompt"])
+
+    def test_simulate_evidence_upload_uses_mediator_submit_path(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            evidence_path = root / "README.md"
+            evidence_path.write_text(
+                "Reasonable Accommodation Policy\nThis file should be uploaded into the mediator.",
+                encoding="utf-8",
+            )
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            class FakeMediator:
+                def __init__(self):
+                    self.calls = []
+
+                def submit_evidence_file(self, **kwargs):
+                    self.calls.append(kwargs)
+                    return {"cid": "bafy-test", "record_id": 7, "claim_type": kwargs.get("claim_type")}
+
+                def get_user_evidence(self, user_id):
+                    return [{"id": 7, "cid": "bafy-test", "user_id": user_id}]
+
+                def summarize_claim_support(self, user_id, claim_type=None):
+                    return {"user_id": user_id, "claim_type": claim_type, "total_links": 1}
+
+            mediator = FakeMediator()
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+            payload = engine.simulate_evidence_upload(
+                "reasonable accommodation hearing rights",
+                top_k=1,
+                claim_type="housing_discrimination",
+                user_id="test-user",
+                search_mode="lexical",
+                mediator=mediator,
+            )
+
+            self.assertEqual(payload["status"], "success")
+            self.assertEqual(payload["upload_count"], 1)
+            self.assertEqual(payload["support_summary"]["total_links"], 1)
+            self.assertEqual(len(mediator.calls), 1)
+            self.assertEqual(mediator.calls[0]["file_path"], str(evidence_path.resolve()))
+            self.assertEqual(mediator.calls[0]["claim_type"], "housing_discrimination")
+
+    def test_search_package_builds_shared_vector_index_when_missing(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            parsed_dir = root / "research_results/documents/parsed"
+            parsed_dir.mkdir(parents=True, exist_ok=True)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=parsed_dir,
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            original_vector_available = engine_module.VECTOR_STORE_AVAILABLE
+            original_embeddings_available = engine_module.EMBEDDINGS_AVAILABLE
+            try:
+                engine_module.VECTOR_STORE_AVAILABLE = True
+                engine_module.EMBEDDINGS_AVAILABLE = True
+
+                build_calls = []
+                hybrid_calls = []
+                has_index_states = iter([False, True])
+
+                original_build_vector_index = engine.build_vector_index
+                original_hybrid_search = engine.hybrid_search
+                original_has_preferred_vector_index = engine._has_preferred_vector_index
+
+                def fake_build_vector_index(*, output_dir=None, index_name="hacc_corpus", batch_size=32):
+                    build_calls.append({
+                        "output_dir": output_dir,
+                        "index_name": index_name,
+                        "batch_size": batch_size,
+                    })
+                    return {"status": "success", "index_name": index_name}
+
+                def fake_hybrid_search(query, *, top_k=10, vector_top_k=None, index_name="hacc_corpus", index_dir=None, source_types=None):
+                    hybrid_calls.append({
+                        "query": query,
+                        "top_k": top_k,
+                        "index_name": index_name,
+                        "index_dir": index_dir,
+                    })
+                    return {"status": "success", "query": query, "results": [{"document_id": "vector-doc"}]}
+
+                def fake_has_preferred_vector_index(*, index_name="hacc_corpus", index_dir=None):
+                    return next(has_index_states)
+
+                engine.build_vector_index = fake_build_vector_index
+                engine.hybrid_search = fake_hybrid_search
+                engine._has_preferred_vector_index = fake_has_preferred_vector_index
+                payload = engine.search("reasonable accommodation", top_k=2, search_mode="package")
+            finally:
+                engine.build_vector_index = original_build_vector_index
+                engine.hybrid_search = original_hybrid_search
+                engine._has_preferred_vector_index = original_has_preferred_vector_index
+                engine_module.VECTOR_STORE_AVAILABLE = original_vector_available
+                engine_module.EMBEDDINGS_AVAILABLE = original_embeddings_available
+
+            self.assertEqual(payload["status"], "success")
+            self.assertEqual(payload["backend_mode"], "shared_hybrid")
+            self.assertEqual(payload["results"][0]["document_id"], "vector-doc")
+            self.assertEqual(len(build_calls), 1)
+            self.assertEqual(len(hybrid_calls), 1)
+
+    def test_search_package_falls_back_to_lexical_when_shared_vector_backend_is_unavailable(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            parsed_dir = root / "research_results/documents/parsed"
+            parsed_dir.mkdir(parents=True, exist_ok=True)
+            text_path = parsed_dir / "doc1.txt"
+            text_path.write_text("Reasonable Accommodation Policy\nSearch time extensions are available.", encoding="utf-8")
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(
+                json.dumps({"parsed_documents": [{"parsed_text_path": "research_results/documents/parsed/doc1.txt"}]}),
+                encoding="utf-8",
+            )
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=parsed_dir,
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            original_vector_available = engine_module.VECTOR_STORE_AVAILABLE
+            original_embeddings_available = engine_module.EMBEDDINGS_AVAILABLE
+            original_create_vector_index = engine_module.create_vector_index
+            try:
+                engine_module.VECTOR_STORE_AVAILABLE = False
+                engine_module.EMBEDDINGS_AVAILABLE = False
+                engine_module.create_vector_index = None
+                payload = engine.search("reasonable accommodation", top_k=1, search_mode="package")
+            finally:
+                engine_module.VECTOR_STORE_AVAILABLE = original_vector_available
+                engine_module.EMBEDDINGS_AVAILABLE = original_embeddings_available
+                engine_module.create_vector_index = original_create_vector_index
+
+            self.assertEqual(payload["status"], "success")
+            self.assertEqual(payload["backend_mode"], "lexical_fallback")
+            self.assertEqual(payload["results"][0]["document_id"], "doc1")
+            self.assertEqual(payload["vector_status"], "unavailable")
 
     def test_hybrid_search_merges_lexical_and_vector_results(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -282,6 +502,41 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertEqual(payload["status"], "success")
             self.assertEqual(payload["results"][0]["document_id"], "housing_policy")
             self.assertIn("vector", payload["results"][0]["search_modes"])
+
+    def test_hybrid_search_forces_lexical_base_search_mode(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            parsed_dir = root / "research_results/documents/parsed"
+            parsed_dir.mkdir(parents=True, exist_ok=True)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=parsed_dir,
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            original_search = engine.search
+            original_search_vector = engine.search_vector
+            try:
+                captured_modes = []
+
+                def fake_search(query, *, top_k=10, use_vector=False, search_mode="auto", vector_top_k=None, index_name="hacc_corpus", index_dir=None, source_types=None, min_score=0.0):
+                    captured_modes.append(search_mode)
+                    return {"status": "success", "results": []}
+
+                engine.search = fake_search
+                engine.search_vector = lambda *args, **kwargs: {"status": "success", "results": []}
+                payload = original_search("reasonable accommodation", search_mode="hybrid")
+            finally:
+                engine.search = original_search
+                engine.search_vector = original_search_vector
+
+            self.assertEqual(payload["status"], "success")
+            self.assertEqual(captured_modes[0], "lexical")
 
     def test_hybrid_search_handles_unavailable_vector_backend(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:

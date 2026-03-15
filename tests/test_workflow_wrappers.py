@@ -246,7 +246,7 @@ class WorkflowWrapperTests(unittest.TestCase):
                 def __init__(self, *args, **kwargs):
                     pass
 
-                def search_local(self, query, top_k=5):
+                def search(self, query, top_k=5, search_mode="package"):
                     return {
                         "results": [
                             {
