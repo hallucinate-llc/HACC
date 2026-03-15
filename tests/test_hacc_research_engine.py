@@ -422,6 +422,47 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertEqual(payload["legal_discovery"]["result_count"], 2)
             self.assertEqual(payload["legal_discovery"]["results"][0]["authority_source"], "us_code")
 
+    def test_discover_seeded_commoncrawl_uses_shared_adapter(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            parsed_dir = root / "research_results/documents/parsed"
+            parsed_dir.mkdir(parents=True, exist_ok=True)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=parsed_dir,
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            original_discover_seeded_commoncrawl = engine_module.discover_seeded_commoncrawl
+            try:
+                calls = []
+
+                def fake_discover_seeded_commoncrawl(queries_file, **kwargs):
+                    calls.append((str(queries_file), kwargs))
+                    return {"status": "success", "candidates": {"sites": {"example.org": {"top": [{"url": "https://example.org/policy.pdf"}]}}}}
+
+                engine_module.discover_seeded_commoncrawl = fake_discover_seeded_commoncrawl
+                payload = engine.discover_seeded_commoncrawl(
+                    ['site:example.org "grievance policy"'],
+                    cc_limit=25,
+                    top_per_site=5,
+                    fetch_top=1,
+                    sleep_seconds=0.0,
+                )
+            finally:
+                engine_module.discover_seeded_commoncrawl = original_discover_seeded_commoncrawl
+
+            self.assertEqual(payload["status"], "success")
+            self.assertEqual(len(calls), 1)
+            self.assertEqual(calls[0][1]["cc_limit"], 25)
+            self.assertEqual(calls[0][1]["top_per_site"], 5)
+            self.assertEqual(calls[0][1]["fetch_top"], 1)
+
     def test_search_vector_prefers_knowledge_graph_embedding_indexes(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
