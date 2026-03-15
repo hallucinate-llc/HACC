@@ -4,9 +4,11 @@
 from __future__ import annotations
 
 import argparse
+import difflib
 import os
 import importlib.util
 import json
+import re
 import shutil
 import subprocess
 import sys
@@ -47,6 +49,12 @@ def _sanitize_for_json(value: Any) -> Any:
 
 def _autopatch_target_profiles() -> Dict[str, List[Path]]:
     return {
+        "denoiser_standard_intake_only": [
+            COMPLAINT_GENERATOR_ROOT / "complaint_phases" / "denoiser.py",
+        ],
+        "denoiser_process_answer_only": [
+            COMPLAINT_GENERATOR_ROOT / "complaint_phases" / "denoiser.py",
+        ],
         "phase_manager_action_only": [
             COMPLAINT_GENERATOR_ROOT / "complaint_phases" / "phase_manager.py",
         ],
@@ -73,6 +81,24 @@ def _default_autopatch_target_files() -> List[Path]:
 
 
 def _autopatch_constraints_for_profile(profile: str, target_files: List[Path]) -> Dict[str, Any]:
+    if profile == "denoiser_standard_intake_only":
+        target_map: Dict[str, List[str]] = {}
+        for path in target_files:
+            if path.name == "denoiser.py":
+                target_map[str(path.resolve())] = [
+                    "_ensure_standard_intake_questions",
+                ]
+        if target_map:
+            return {"target_symbols": target_map}
+    if profile == "denoiser_process_answer_only":
+        target_map: Dict[str, List[str]] = {}
+        for path in target_files:
+            if path.name == "denoiser.py":
+                target_map[str(path.resolve())] = [
+                    "process_answer",
+                ]
+        if target_map:
+            return {"target_symbols": target_map}
     if profile == "phase_manager_action_only":
         target_map: Dict[str, List[str]] = {}
         for path in target_files:
@@ -110,7 +136,72 @@ def _resolve_autopatch_target_files(target_files: Optional[List[str]], profile: 
     return resolved
 
 
-def _build_agentic_llm_router(provider_name: Optional[str]) -> Any:
+def _resolve_autopatch_timeout(
+    *,
+    profile: str,
+    target_files: Optional[List[Path]] = None,
+) -> Optional[float]:
+    raw_timeout = os.environ.get("HACC_AGENTIC_AUTOPATCH_TIMEOUT", "").strip().lower()
+    if raw_timeout in {"none", "off", "disable", "disabled", "unlimited", "infinite", "inf", "0"}:
+        return None
+    if raw_timeout:
+        try:
+            resolved = float(raw_timeout)
+            return resolved if resolved > 0 else None
+        except Exception:
+            pass
+
+    profile_defaults = {
+        "denoiser_standard_intake_only": 150.0,
+        "denoiser_process_answer_only": 180.0,
+        "phase_manager_action_only": 120.0,
+        "phase_manager_only": 180.0,
+        "question_flow": 300.0,
+        "denoiser_focus": 240.0,
+        "full_mediator": 420.0,
+    }
+    if profile in profile_defaults:
+        return profile_defaults[profile]
+
+    target_count = len(target_files or [])
+    if target_count <= 1:
+        return 120.0
+    if target_count == 2:
+        return 300.0
+    return 420.0
+
+
+def _default_codex_model() -> str:
+    return "gpt-5.3-codex-spark"
+
+
+def _codex_backup_model() -> str:
+    return "gpt-5.1-codex-mini"
+
+
+def _is_likely_throttling_error(exc: Exception) -> bool:
+    message = str(exc).lower()
+    return any(
+        token in message
+        for token in (
+            "rate limit",
+            "rate-limit",
+            "too many requests",
+            "429",
+            "throttle",
+            "throttled",
+            "quota",
+            "capacity",
+        )
+    )
+
+
+def _build_agentic_llm_router(
+    provider_name: Optional[str],
+    *,
+    profile: str = "question_flow",
+    target_files: Optional[List[Path]] = None,
+) -> Any:
     _ensure_complaint_generator_on_path()
 
     try:
@@ -141,11 +232,7 @@ def _build_agentic_llm_router(provider_name: Optional[str]) -> Any:
     if resolved_provider is None:
         return None
 
-    raw_timeout = os.environ.get("HACC_AGENTIC_AUTOPATCH_TIMEOUT", "").strip()
-    try:
-        autopatch_timeout = float(raw_timeout) if raw_timeout else 90.0
-    except Exception:
-        autopatch_timeout = 90.0
+    autopatch_timeout = _resolve_autopatch_timeout(profile=profile, target_files=target_files)
 
     class _PinnedRunnerLLMRouter:
         def __init__(self, provider: str):
@@ -160,16 +247,37 @@ def _build_agentic_llm_router(provider_name: Optional[str]) -> Any:
             router_kwargs: Optional[Dict[str, Any]] = None,
         ) -> str:
             kwargs = dict(router_kwargs or {})
-            model_name = str(kwargs.pop("model_name", "") or os.environ.get("IPFS_DATASETS_PY_CODEX_MODEL", ""))
-            kwargs.setdefault("timeout", autopatch_timeout)
-            return generate_text(
-                prompt=prompt,
-                provider=self.provider,
-                model_name=model_name,
-                max_new_tokens=max_tokens,
-                temperature=temperature,
-                **kwargs,
-            )
+            model_name = str(kwargs.pop("model_name", "") or os.environ.get("IPFS_DATASETS_PY_CODEX_MODEL", "")).strip()
+            if self.provider == "codex_cli" and not model_name:
+                model_name = _default_codex_model()
+            if autopatch_timeout is not None:
+                kwargs.setdefault("timeout", autopatch_timeout)
+            kwargs.setdefault("disable_model_retry", True)
+            try:
+                return generate_text(
+                    prompt=prompt,
+                    provider=self.provider,
+                    model_name=model_name,
+                    max_new_tokens=max_tokens,
+                    temperature=temperature,
+                    **kwargs,
+                )
+            except Exception as exc:
+                if (
+                    self.provider == "codex_cli"
+                    and model_name == _default_codex_model()
+                    and _is_likely_throttling_error(exc)
+                ):
+                    fallback_model = _codex_backup_model()
+                    return generate_text(
+                        prompt=prompt,
+                        provider=self.provider,
+                        model_name=fallback_model,
+                        max_new_tokens=max_tokens,
+                        temperature=temperature,
+                        **kwargs,
+                    )
+                raise
 
         def get_usage_stats(self) -> Dict[str, Any]:
             return {"provider": self.provider}
@@ -187,6 +295,19 @@ def _resolve_autopatch_validation_level() -> Any:
         return ValidationLevel(raw_level)
     except Exception:
         return ValidationLevel.STANDARD
+
+
+def _autopatch_auto_apply_enabled() -> bool:
+    raw = os.environ.get("HACC_AUTOPATCH_AUTO_APPLY", "1").strip().lower()
+    return raw not in {"0", "false", "no", "off"}
+
+
+def _autopatch_repair_attempts() -> int:
+    raw = os.environ.get("HACC_AUTOPATCH_REPAIR_ATTEMPTS", "1").strip()
+    try:
+        return max(0, int(raw))
+    except Exception:
+        return 1
 
 
 def _autopatch_validation_test_files(target_files: List[Path]) -> List[Path]:
@@ -211,6 +332,218 @@ def _autopatch_validation_test_files(target_files: List[Path]) -> List[Path]:
         key = str(path).replace("\\", "/")
         resolved.extend(test_map.get(key, []))
     return list(dict.fromkeys(resolved))
+
+
+def _autopatch_validation_support_roots() -> List[str]:
+    return [
+        "backends",
+        "mediator",
+        "complaint_phases",
+        "adversarial_harness",
+        "integrations",
+        "complaint_analysis",
+    ]
+
+
+def _autopatch_validation_support_files(repo_root: Path) -> List[str]:
+    return sorted(path.name for path in repo_root.glob("*.py") if path.is_file())
+
+
+def _extract_unified_diff(text: str) -> str:
+    if not text:
+        return ""
+    stripped = text.strip()
+    if stripped.startswith("--- ") and "\n+++ " in stripped:
+        return stripped + ("\n" if not stripped.endswith("\n") else "")
+    fenced = re.search(r"```(?:diff)?\n(.*?)```", text, flags=re.DOTALL)
+    if fenced:
+        candidate = fenced.group(1).strip()
+        if candidate.startswith("--- ") and "\n+++ " in candidate:
+            return candidate + ("\n" if not candidate.endswith("\n") else "")
+    start = stripped.find("--- ")
+    if start >= 0:
+        candidate = stripped[start:].strip()
+        if "\n+++ " in candidate:
+            return candidate + ("\n" if not candidate.endswith("\n") else "")
+    return ""
+
+
+def _extract_file_replacements(text: str, target_files: List[Path]) -> Dict[Path, str]:
+    replacements: Dict[Path, str] = {}
+    normalized_targets = {path.as_posix(): path for path in target_files}
+    normalized_targets.update({path.name: path for path in target_files})
+
+    for match in re.finditer(r"FILE:\s*(.+?)\n```(?:python)?\n(.*?)```", text, flags=re.DOTALL):
+        raw_name = match.group(1).strip()
+        content = match.group(2)
+        target = normalized_targets.get(raw_name)
+        if target is None:
+            candidate_name = raw_name.replace("\\", "/")
+            target = normalized_targets.get(candidate_name)
+        if target is not None:
+            replacements[target] = content.rstrip() + "\n"
+
+    if replacements:
+        return replacements
+
+    fenced_blocks = re.findall(r"```(?:python)?\n(.*?)```", text, flags=re.DOTALL)
+    if len(target_files) == 1 and fenced_blocks:
+        replacements[target_files[0]] = fenced_blocks[-1].rstrip() + "\n"
+        return replacements
+
+    stripped = text.strip()
+    if len(target_files) == 1 and stripped and not stripped.startswith("--- "):
+        replacements[target_files[0]] = stripped + ("\n" if not stripped.endswith("\n") else "")
+    return replacements
+
+
+def _build_diff_from_replacements(
+    *,
+    replacements: Dict[Path, str],
+    repo_root: Path,
+) -> str:
+    diff_chunks: List[str] = []
+    for relative_path, new_content in replacements.items():
+        source_path = repo_root / relative_path
+        if not source_path.exists():
+            continue
+        old_content = source_path.read_text(encoding="utf-8")
+        if old_content == new_content:
+            continue
+        old_lines = old_content.splitlines(keepends=True)
+        new_lines = new_content.splitlines(keepends=True)
+        file_diff = list(
+            difflib.unified_diff(
+                old_lines,
+                new_lines,
+                fromfile=f"a/{relative_path.as_posix()}",
+                tofile=f"b/{relative_path.as_posix()}",
+                lineterm="",
+            )
+        )
+        if file_diff:
+            diff_chunks.append("\n".join(file_diff) + "\n")
+    return "".join(diff_chunks)
+
+
+def _build_patch_repair_prompt(
+    *,
+    patch_diff: str,
+    patch_validation: Dict[str, Any],
+    target_files: List[Path],
+    repo_root: Path,
+) -> str:
+    file_blocks: List[str] = []
+    for relative_path in target_files:
+        full_path = repo_root / relative_path
+        if not full_path.exists():
+            continue
+        try:
+            content = full_path.read_text(encoding="utf-8")
+        except Exception:
+            continue
+        file_blocks.append(
+            f"FILE: {relative_path.as_posix()}\n```python\n{content}\n```"
+        )
+
+    validation_json = json.dumps(_sanitize_for_json(patch_validation), ensure_ascii=False, indent=2)
+    return (
+        "You are repairing a unified git diff patch for a Python codebase.\n"
+        "Return ONLY a corrected unified diff patch. Do not include explanations.\n"
+        "Requirements:\n"
+        "- Output must begin with '--- a/...'\n"
+        "- Preserve repository-relative paths exactly.\n"
+        "- Fix the patch so it passes validation errors.\n"
+        "- Keep the change as small as possible.\n"
+        "- Do not rewrite unrelated code.\n\n"
+        "Validation failure details:\n"
+        f"{validation_json}\n\n"
+        "Current candidate patch:\n"
+        f"```diff\n{patch_diff}\n```\n\n"
+        "Current target file contents:\n"
+        f"{chr(10).join(file_blocks)}\n"
+    )
+
+
+def _repair_patch_with_llm(
+    *,
+    patch_path: str | Path,
+    patch_validation: Dict[str, Any],
+    repo_root: Path,
+    provider_name: Optional[str],
+    model_name: Optional[str],
+    output_dir: Path,
+    attempt_index: int,
+    profile: str,
+) -> Dict[str, Any]:
+    _ensure_complaint_generator_on_path()
+
+    from ipfs_datasets_py.optimizers.agentic.patch_control import Patch, PatchManager
+
+    resolved_patch_path = Path(patch_path).resolve()
+    manager = PatchManager()
+    patch = manager.load_patch(resolved_patch_path)
+    target_files = [Path(path) for path in getattr(patch, "target_files", [])]
+    router = _build_agentic_llm_router(
+        provider_name,
+        profile=profile,
+        target_files=target_files,
+    )
+    if router is None:
+        raise RuntimeError("No llm_router available for patch repair")
+
+    previous_codex_model = os.environ.get("IPFS_DATASETS_PY_CODEX_MODEL")
+    try:
+        if str(provider_name or "").strip().lower() in {"codex", "codex_cli"} and model_name:
+            os.environ["IPFS_DATASETS_PY_CODEX_MODEL"] = str(model_name)
+        response = router.generate(
+            _build_patch_repair_prompt(
+                patch_diff=patch.diff_content,
+                patch_validation=patch_validation,
+                target_files=target_files,
+                repo_root=repo_root,
+            ),
+            max_tokens=5000,
+            temperature=0.1,
+        )
+    finally:
+        if str(provider_name or "").strip().lower() in {"codex", "codex_cli"}:
+            if previous_codex_model is None:
+                os.environ.pop("IPFS_DATASETS_PY_CODEX_MODEL", None)
+            else:
+                os.environ["IPFS_DATASETS_PY_CODEX_MODEL"] = previous_codex_model
+
+    repaired_diff = _extract_unified_diff(response)
+    if not repaired_diff:
+        replacements = _extract_file_replacements(response, target_files)
+        repaired_diff = _build_diff_from_replacements(
+            replacements=replacements,
+            repo_root=repo_root,
+        )
+    if not repaired_diff:
+        raise RuntimeError("Patch repair response did not contain a unified diff or usable file content")
+
+    repaired_patch = Patch(
+        patch_id=f"{patch.patch_id}-repair{attempt_index}",
+        agent_id=patch.agent_id,
+        task_id=patch.task_id,
+        description=f"{patch.description} (repair attempt {attempt_index})",
+        diff_content=repaired_diff,
+        target_files=list(getattr(patch, "target_files", [])),
+        parent_patches=[patch.patch_id],
+        worktree_path=patch.worktree_path,
+        metadata={
+            **dict(getattr(patch, "metadata", {}) or {}),
+            "repair_attempt": attempt_index,
+            "repaired_from_patch": str(resolved_patch_path),
+        },
+    )
+    repaired_path = output_dir / f"{repaired_patch.patch_id}.patch"
+    saved_path = manager.save_patch(repaired_patch, repaired_path)
+    return {
+        "patch_path": str(saved_path.resolve()),
+        "raw_response_preview": response[:1000],
+    }
 
 
 def _validate_generated_patch(*, patch_path: str | Path, repo_root: Path) -> Dict[str, Any]:
@@ -253,8 +586,13 @@ def _validate_generated_patch(*, patch_path: str | Path, repo_root: Path) -> Dic
         summary["pytest_files"] = [str(path.relative_to(repo_root)) for path in stage_tests if path.exists()]
 
         copied_roots = set()
+        roots_to_copy = set(_autopatch_validation_support_roots())
         for relative_path in target_files:
             top_level = relative_path.parts[0] if relative_path.parts else ""
+            if top_level:
+                roots_to_copy.add(top_level)
+
+        for top_level in roots_to_copy:
             if top_level and top_level not in copied_roots:
                 source_root = (repo_root / top_level).resolve()
                 staged_root = stage_root / top_level
@@ -266,6 +604,13 @@ def _validate_generated_patch(*, patch_path: str | Path, repo_root: Path) -> Dic
                         ignore=shutil.ignore_patterns("__pycache__", "*.pyc"),
                     )
                     copied_roots.add(top_level)
+
+        for support_file in _autopatch_validation_support_files(repo_root):
+            source_file = (repo_root / support_file).resolve()
+            if source_file.is_file():
+                staged_file = stage_root / support_file
+                staged_file.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(source_file, staged_file)
 
         for test_path in stage_tests:
             if not test_path.exists():
@@ -403,6 +748,7 @@ def _run_agentic_autopatch(
         "metadata": {},
         "metrics": {},
         "validation": None,
+        "repair_attempts": [],
         "summary_json": str(autopatch_summary_path),
         "error": None,
     }
@@ -417,7 +763,11 @@ def _run_agentic_autopatch(
             method=method,
             constraints=constraints,
             report=report,
-            llm_router=_build_agentic_llm_router(provider_name),
+            llm_router=_build_agentic_llm_router(
+                provider_name,
+                profile=profile,
+                target_files=target_files,
+            ),
             metadata={
                 "hacc_runner": True,
                 "output_dir": str(output_root),
@@ -447,10 +797,50 @@ def _run_agentic_autopatch(
                 repo_root=COMPLAINT_GENERATOR_ROOT,
             )
             summary["validation"]["patch_validation"] = _sanitize_for_json(patch_validation)
-            if not patch_validation.get("passed", False) and not summary["error"]:
-                summary["error"] = "Generated patch failed validation"
+            if not patch_validation.get("passed", False):
+                repair_attempts = _autopatch_repair_attempts()
+                for attempt_index in range(1, repair_attempts + 1):
+                    repair_summary: Dict[str, Any] = {
+                        "attempt": attempt_index,
+                        "source_patch_path": summary["patch_path"],
+                        "validation_before": _sanitize_for_json(patch_validation),
+                    }
+                    try:
+                        repaired = _repair_patch_with_llm(
+                            patch_path=summary["patch_path"],
+                            patch_validation=patch_validation,
+                            repo_root=COMPLAINT_GENERATOR_ROOT,
+                            provider_name=provider_name,
+                            model_name=model_name,
+                            output_dir=autopatch_dir,
+                            attempt_index=attempt_index,
+                            profile=profile,
+                        )
+                        repaired_validation = _validate_generated_patch(
+                            patch_path=repaired["patch_path"],
+                            repo_root=COMPLAINT_GENERATOR_ROOT,
+                        )
+                        repair_summary["repaired_patch_path"] = repaired["patch_path"]
+                        repair_summary["raw_response_preview"] = repaired.get("raw_response_preview", "")
+                        repair_summary["validation_after"] = _sanitize_for_json(repaired_validation)
+                        repair_summary["passed"] = bool(repaired_validation.get("passed", False))
+                        summary["repair_attempts"].append(_sanitize_for_json(repair_summary))
+                        if repaired_validation.get("passed", False):
+                            summary["patch_path"] = repaired["patch_path"]
+                            summary["validation"]["patch_validation"] = _sanitize_for_json(repaired_validation)
+                            patch_validation = repaired_validation
+                            summary["success"] = True
+                            summary["error"] = None
+                            break
+                    except Exception as repair_exc:
+                        repair_summary["passed"] = False
+                        repair_summary["error"] = str(repair_exc)
+                        summary["repair_attempts"].append(_sanitize_for_json(repair_summary))
+                if not patch_validation.get("passed", False) and not summary["error"]:
+                    summary["error"] = "Generated patch failed validation"
 
-        if apply_patch and summary["patch_path"]:
+        should_apply_patch = bool(summary["patch_path"]) and (apply_patch or _autopatch_auto_apply_enabled())
+        if should_apply_patch and summary["patch_path"]:
             from ipfs_datasets_py.optimizers.agentic.patch_control import PatchManager
 
             patch_validation = (summary.get("validation") or {}).get("patch_validation") or {}

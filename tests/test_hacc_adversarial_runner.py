@@ -10,10 +10,104 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from hacc_adversarial_runner import run_hacc_adversarial_batch
+from hacc_adversarial_runner import (
+    _autopatch_constraints_for_profile,
+    _autopatch_target_profiles,
+    _build_diff_from_replacements,
+    _build_agentic_llm_router,
+    _codex_backup_model,
+    _default_codex_model,
+    _extract_file_replacements,
+    _resolve_autopatch_timeout,
+    run_hacc_adversarial_batch,
+)
 
 
 class HACCAdversarialRunnerTests(unittest.TestCase):
+    def test_resolve_autopatch_timeout_uses_profile_defaults_and_can_disable(self) -> None:
+        with mock.patch.dict("os.environ", {}, clear=False):
+            self.assertEqual(_resolve_autopatch_timeout(profile="denoiser_standard_intake_only"), 150.0)
+            self.assertEqual(_resolve_autopatch_timeout(profile="denoiser_process_answer_only"), 180.0)
+            self.assertEqual(_resolve_autopatch_timeout(profile="phase_manager_action_only"), 120.0)
+            self.assertEqual(_resolve_autopatch_timeout(profile="question_flow"), 300.0)
+            self.assertEqual(_resolve_autopatch_timeout(profile="full_mediator"), 420.0)
+
+        with mock.patch.dict("os.environ", {"HACC_AGENTIC_AUTOPATCH_TIMEOUT": "0"}, clear=False):
+            self.assertIsNone(_resolve_autopatch_timeout(profile="question_flow"))
+
+        with mock.patch.dict("os.environ", {"HACC_AGENTIC_AUTOPATCH_TIMEOUT": "180"}, clear=False):
+            self.assertEqual(_resolve_autopatch_timeout(profile="question_flow"), 180.0)
+
+    def test_denoiser_process_answer_profile_targets_symbol(self) -> None:
+        target_files = _autopatch_target_profiles()["denoiser_process_answer_only"]
+        constraints = _autopatch_constraints_for_profile("denoiser_process_answer_only", target_files)
+        target_map = constraints["target_symbols"]
+        self.assertEqual(len(target_map), 1)
+        only_target, symbols = next(iter(target_map.items()))
+        self.assertTrue(only_target.endswith("complaint_phases/denoiser.py"))
+        self.assertEqual(symbols, ["process_answer"])
+
+    def test_denoiser_standard_intake_profile_targets_symbol(self) -> None:
+        target_files = _autopatch_target_profiles()["denoiser_standard_intake_only"]
+        constraints = _autopatch_constraints_for_profile("denoiser_standard_intake_only", target_files)
+        target_map = constraints["target_symbols"]
+        self.assertEqual(len(target_map), 1)
+        only_target, symbols = next(iter(target_map.items()))
+        self.assertTrue(only_target.endswith("complaint_phases/denoiser.py"))
+        self.assertEqual(symbols, ["_ensure_standard_intake_questions"])
+
+    def test_repair_helpers_can_build_diff_from_file_content_response(self) -> None:
+        target = Path("mediator/inquiries.py")
+        response = (
+            "FILE: mediator/inquiries.py\n"
+            "```python\n"
+            "def generate():\n"
+            "    return ['What happened?']\n"
+            "```\n"
+        )
+
+        replacements = _extract_file_replacements(response, [target])
+        self.assertIn(target, replacements)
+        self.assertIn("What happened?", replacements[target])
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            repo_root = Path(tmpdir)
+            file_path = repo_root / target
+            file_path.parent.mkdir(parents=True, exist_ok=True)
+            file_path.write_text("def generate():\n    return []\n", encoding="utf-8")
+
+            diff = _build_diff_from_replacements(replacements=replacements, repo_root=repo_root)
+            self.assertIn("--- a/mediator/inquiries.py", diff)
+            self.assertIn("+++ b/mediator/inquiries.py", diff)
+            self.assertIn("What happened?", diff)
+
+    def test_codex_router_defaults_to_spark(self) -> None:
+        with mock.patch("ipfs_datasets_py.llm_router.generate_text", return_value="OK") as generate_mock:
+            router = _build_agentic_llm_router("codex_cli", profile="question_flow")
+            self.assertIsNotNone(router)
+            result = router.generate("Reply with OK", max_tokens=10, temperature=0)
+
+        self.assertEqual(result, "OK")
+        self.assertEqual(generate_mock.call_args.kwargs["model_name"], _default_codex_model())
+
+    def test_codex_router_falls_back_to_mini_on_throttling(self) -> None:
+        calls = []
+
+        def fake_generate_text(**kwargs):
+            calls.append(kwargs["model_name"])
+            if len(calls) == 1:
+                raise RuntimeError("Rate limit exceeded for this model")
+            return "OK"
+
+        with mock.patch("ipfs_datasets_py.llm_router.generate_text", side_effect=fake_generate_text):
+            router = _build_agentic_llm_router("codex_cli", profile="question_flow")
+            self.assertIsNotNone(router)
+            result = router.generate("Reply with OK", max_tokens=10, temperature=0)
+
+        self.assertEqual(result, "OK")
+        self.assertEqual(calls[0], _default_codex_model())
+        self.assertEqual(calls[1], _codex_backup_model())
+
     def test_demo_runner_writes_expected_artifacts(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             summary = run_hacc_adversarial_batch(
@@ -152,36 +246,37 @@ SUGGESTIONS:
         fake_patch = Path("/tmp/fake-mediator.patch")
         with tempfile.TemporaryDirectory() as tmpdir:
             fake_patch.write_text("diff --git a/file b/file\n", encoding="utf-8")
-            with mock.patch.object(
-                optimizer_module.Optimizer,
-                "run_agentic_autopatch",
-                return_value=SimpleNamespace(
-                    success=True,
-                    patch_path=fake_patch,
-                    patch_cid="bafy-autopatch",
-                    metadata={"kind": "runner-test"},
-                ),
-            ) as autopatch_mock:
-                with mock.patch(
-                    "hacc_adversarial_runner._validate_generated_patch",
-                    return_value={
-                        "passed": True,
-                        "level": "standard",
-                        "target_files": ["mediator/inquiries.py"],
-                        "file_results": [],
-                        "errors": [],
-                        "warnings": [],
-                    },
-                ):
-                    summary = run_hacc_adversarial_batch(
-                        output_dir=tmpdir,
-                        num_sessions=1,
-                        max_turns=1,
-                        max_parallel=1,
-                        hacc_preset="core_hacc_policies",
-                        demo=True,
-                        emit_autopatch=True,
-                    )
+            with mock.patch.dict("os.environ", {"HACC_AUTOPATCH_AUTO_APPLY": "0"}):
+                with mock.patch.object(
+                    optimizer_module.Optimizer,
+                    "run_agentic_autopatch",
+                    return_value=SimpleNamespace(
+                        success=True,
+                        patch_path=fake_patch,
+                        patch_cid="bafy-autopatch",
+                        metadata={"kind": "runner-test"},
+                    ),
+                ) as autopatch_mock:
+                    with mock.patch(
+                        "hacc_adversarial_runner._validate_generated_patch",
+                        return_value={
+                            "passed": True,
+                            "level": "standard",
+                            "target_files": ["mediator/inquiries.py"],
+                            "file_results": [],
+                            "errors": [],
+                            "warnings": [],
+                        },
+                    ):
+                        summary = run_hacc_adversarial_batch(
+                            output_dir=tmpdir,
+                            num_sessions=1,
+                            max_turns=1,
+                            max_parallel=1,
+                            hacc_preset="core_hacc_policies",
+                            demo=True,
+                            emit_autopatch=True,
+                        )
 
             self.assertTrue(summary["autopatch"]["requested"])
             self.assertTrue(summary["autopatch"]["success"])
@@ -195,6 +290,64 @@ SUGGESTIONS:
             self.assertGreaterEqual(len(autopatch_kwargs["target_files"]), 2)
             self.assertTrue(any(str(path).endswith("complaint_phases/phase_manager.py") for path in autopatch_kwargs["target_files"]))
             self.assertTrue(any(str(path).endswith("mediator/inquiries.py") for path in autopatch_kwargs["target_files"]))
+
+    def test_runner_auto_applies_valid_patch_by_default(self) -> None:
+        complaint_generator_root = REPO_ROOT / "complaint-generator"
+        if str(complaint_generator_root) not in sys.path:
+            sys.path.insert(0, str(complaint_generator_root))
+
+        import adversarial_harness.optimizer as optimizer_module
+        import ipfs_datasets_py.optimizers.agentic.patch_control as patch_control_module
+
+        fake_patch = Path("/tmp/fake-auto-apply.patch")
+        with tempfile.TemporaryDirectory() as tmpdir:
+            fake_patch.write_text("diff --git a/file b/file\n", encoding="utf-8")
+            patch_instance = SimpleNamespace(validated=False)
+            with mock.patch.object(
+                optimizer_module.Optimizer,
+                "run_agentic_autopatch",
+                return_value=SimpleNamespace(
+                    success=True,
+                    patch_path=fake_patch,
+                    patch_cid="bafy-auto-apply",
+                    metadata={"kind": "auto-apply-test"},
+                ),
+            ):
+                with mock.patch(
+                    "hacc_adversarial_runner._validate_generated_patch",
+                    return_value={
+                        "passed": True,
+                        "level": "standard",
+                        "target_files": ["complaint_phases/phase_manager.py"],
+                        "file_results": [],
+                        "errors": [],
+                        "warnings": [],
+                    },
+                ):
+                    with mock.patch.object(
+                        patch_control_module.PatchManager,
+                        "load_patch",
+                        return_value=patch_instance,
+                    ) as load_mock:
+                        with mock.patch.object(
+                            patch_control_module.PatchManager,
+                            "apply_patch",
+                            return_value=True,
+                        ) as apply_mock:
+                            summary = run_hacc_adversarial_batch(
+                                output_dir=tmpdir,
+                                num_sessions=1,
+                                max_turns=1,
+                                max_parallel=1,
+                                hacc_preset="core_hacc_policies",
+                                demo=True,
+                                emit_autopatch=True,
+                            )
+
+            self.assertTrue(summary["autopatch"]["applied"])
+            self.assertTrue(summary["autopatch"]["apply_success"])
+            load_mock.assert_called_once_with(fake_patch)
+            apply_mock.assert_called_once()
 
     def test_runner_can_apply_autopatch_via_patch_manager(self) -> None:
         complaint_generator_root = REPO_ROOT / "complaint-generator"
@@ -321,6 +474,86 @@ SUGGESTIONS:
             self.assertFalse(summary["autopatch"]["validation"]["patch_validation"]["passed"])
             self.assertIn("validation", str(summary["autopatch"]["error"]).lower())
             apply_mock.assert_not_called()
+
+    def test_runner_repairs_invalid_patch_before_apply(self) -> None:
+        complaint_generator_root = REPO_ROOT / "complaint-generator"
+        if str(complaint_generator_root) not in sys.path:
+            sys.path.insert(0, str(complaint_generator_root))
+
+        import adversarial_harness.optimizer as optimizer_module
+        import ipfs_datasets_py.optimizers.agentic.patch_control as patch_control_module
+
+        bad_patch = Path("/tmp/fake-bad.patch")
+        repaired_patch = Path("/tmp/fake-bad-repair1.patch")
+        with tempfile.TemporaryDirectory() as tmpdir:
+            bad_patch.write_text("diff --git a/file b/file\n", encoding="utf-8")
+            patch_instance = SimpleNamespace(validated=False)
+            with mock.patch.object(
+                optimizer_module.Optimizer,
+                "run_agentic_autopatch",
+                return_value=SimpleNamespace(
+                    success=True,
+                    patch_path=bad_patch,
+                    patch_cid="bafy-bad",
+                    metadata={"kind": "repair-test"},
+                ),
+            ):
+                with mock.patch(
+                    "hacc_adversarial_runner._validate_generated_patch",
+                    side_effect=[
+                        {
+                            "passed": False,
+                            "level": "standard",
+                            "target_files": ["complaint_phases/phase_manager.py"],
+                            "file_results": [],
+                            "errors": ["targeted pytest failed"],
+                            "warnings": [],
+                        },
+                        {
+                            "passed": True,
+                            "level": "standard",
+                            "target_files": ["complaint_phases/phase_manager.py"],
+                            "file_results": [],
+                            "errors": [],
+                            "warnings": [],
+                        },
+                    ],
+                ):
+                    with mock.patch(
+                        "hacc_adversarial_runner._repair_patch_with_llm",
+                        return_value={
+                            "patch_path": str(repaired_patch),
+                            "raw_response_preview": "--- a/file\n+++ b/file\n",
+                        },
+                    ) as repair_mock:
+                        with mock.patch.object(
+                            patch_control_module.PatchManager,
+                            "load_patch",
+                            return_value=patch_instance,
+                        ) as load_mock:
+                            with mock.patch.object(
+                                patch_control_module.PatchManager,
+                                "apply_patch",
+                                return_value=True,
+                            ) as apply_mock:
+                                summary = run_hacc_adversarial_batch(
+                                    output_dir=tmpdir,
+                                    num_sessions=1,
+                                    max_turns=1,
+                                    max_parallel=1,
+                                    hacc_preset="core_hacc_policies",
+                                    demo=True,
+                                    emit_autopatch=True,
+                                )
+
+            self.assertTrue(summary["autopatch"]["success"])
+            self.assertEqual(summary["autopatch"]["patch_path"], str(repaired_patch))
+            self.assertEqual(len(summary["autopatch"]["repair_attempts"]), 1)
+            self.assertTrue(summary["autopatch"]["repair_attempts"][0]["passed"])
+            self.assertTrue(summary["autopatch"]["apply_success"])
+            repair_mock.assert_called_once()
+            load_mock.assert_called_once_with(repaired_patch)
+            apply_mock.assert_called_once()
 
 
 if __name__ == "__main__":
