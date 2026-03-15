@@ -49,6 +49,9 @@ def _sanitize_for_json(value: Any) -> Any:
 
 def _autopatch_target_profiles() -> Dict[str, List[Path]]:
     return {
+        "denoiser_select_candidates_only": [
+            COMPLAINT_GENERATOR_ROOT / "complaint_phases" / "denoiser.py",
+        ],
         "denoiser_standard_intake_only": [
             COMPLAINT_GENERATOR_ROOT / "complaint_phases" / "denoiser.py",
         ],
@@ -81,6 +84,15 @@ def _default_autopatch_target_files() -> List[Path]:
 
 
 def _autopatch_constraints_for_profile(profile: str, target_files: List[Path]) -> Dict[str, Any]:
+    if profile == "denoiser_select_candidates_only":
+        target_map: Dict[str, List[str]] = {}
+        for path in target_files:
+            if path.name == "denoiser.py":
+                target_map[str(path.resolve())] = [
+                    "select_question_candidates",
+                ]
+        if target_map:
+            return {"target_symbols": target_map}
     if profile == "denoiser_standard_intake_only":
         target_map: Dict[str, List[str]] = {}
         for path in target_files:
@@ -152,6 +164,7 @@ def _resolve_autopatch_timeout(
             pass
 
     profile_defaults = {
+        "denoiser_select_candidates_only": 150.0,
         "denoiser_standard_intake_only": 150.0,
         "denoiser_process_answer_only": 180.0,
         "phase_manager_action_only": 120.0,

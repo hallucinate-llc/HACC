@@ -12,6 +12,7 @@ import argparse
 import asyncio
 import json
 import sys
+import tempfile
 from datetime import datetime
 from pathlib import Path
 from typing import Iterable, List, Optional
@@ -91,13 +92,25 @@ class HAACCResearcher:
         return list(payload.get("results", []) or [])
 
     def search_commoncrawl(self, domain: str) -> List[dict]:
-        payload = self.engine.discover(
-            f"site:{domain}",
-            max_results=50,
-            engines=["commoncrawl"],
-            domain_filter=[domain],
-        )
-        return list(payload.get("results", []) or [])
+        seeded_query = f'site:{domain} "housing authority" OR grievance OR appeal OR policy'
+        with tempfile.NamedTemporaryFile("w", suffix=".txt", delete=False, encoding="utf-8") as handle:
+            handle.write(seeded_query + "\n")
+            query_file = Path(handle.name)
+        try:
+            payload = self.engine.discover_seeded_commoncrawl(
+                query_file,
+                cc_limit=1000,
+                top_per_site=50,
+                fetch_top=0,
+            )
+        finally:
+            query_file.unlink(missing_ok=True)
+        sites = ((payload.get("candidates") or {}).get("sites") or {}) if isinstance(payload, dict) else {}
+        site_payload = sites.get(domain) or {}
+        top_results = list(site_payload.get("top", []) or [])
+        if top_results:
+            return top_results
+        return list(site_payload.get("rows", []) or [])
 
     def run_seeded_search(
         self,
@@ -105,6 +118,7 @@ class HAACCResearcher:
         enable_brave: bool = True,
         enable_duckduckgo: bool = True,
         use_vector: bool = False,
+        search_mode: str = "auto",
     ) -> List[dict]:
         path = Path(queries_file)
         if not path.exists():
@@ -125,6 +139,7 @@ class HAACCResearcher:
                 local_top_k=10,
                 web_max_results=20,
                 use_vector=use_vector,
+                search_mode=search_mode,
                 engines=engines or None,
                 domain_filter=self.allowed_domains,
             )
@@ -136,7 +151,7 @@ class HAACCResearcher:
         self.log(f"Wrote seeded search report: {report_path}")
         return all_search_results
 
-    async def run_full_research(self, *, use_vector: bool = False) -> dict:
+    async def run_full_research(self, *, use_vector: bool = False, search_mode: str = "auto") -> dict:
         self.log("=" * 80)
         self.log("Starting HACC research via shared search engine")
         self.log("=" * 80)
@@ -150,6 +165,7 @@ class HAACCResearcher:
                     local_top_k=10,
                     web_max_results=20,
                     use_vector=use_vector,
+                    search_mode=search_mode,
                     engines=["brave", "duckduckgo"],
                     domain_filter=self.allowed_domains,
                 )
@@ -187,6 +203,12 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
     parser.add_argument("--no-brave", action="store_true", help="Disable Brave-backed discovery.")
     parser.add_argument("--no-duckduckgo", action="store_true", help="Disable DuckDuckGo-backed discovery.")
     parser.add_argument("--use-vector", action="store_true", help="Blend lexical and vector local search.")
+    parser.add_argument(
+        "--search-mode",
+        choices=["auto", "lexical", "hybrid", "vector"],
+        default="auto",
+        help="Shared search strategy for the local HACC corpus.",
+    )
     args = parser.parse_args(list(argv) if argv is not None else None)
 
     allowed_domains = {item.split("/")[0] for item in args.commoncrawl_domain}
@@ -198,10 +220,11 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
             enable_brave=not args.no_brave,
             enable_duckduckgo=not args.no_duckduckgo,
             use_vector=args.use_vector,
+            search_mode=args.search_mode,
         )
         return 0
 
-    asyncio.run(researcher.run_full_research(use_vector=args.use_vector))
+    asyncio.run(researcher.run_full_research(use_vector=args.use_vector, search_mode=args.search_mode))
     return 0
 
 

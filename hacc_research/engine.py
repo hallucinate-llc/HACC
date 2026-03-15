@@ -4,6 +4,7 @@ import argparse
 import json
 import re
 import sys
+import tempfile
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Sequence
@@ -23,22 +24,36 @@ try:
         VECTOR_STORE_AVAILABLE,
         VECTOR_STORE_ERROR,
         create_vector_index,
+        discover_seeded_commoncrawl,
         scrape_web_content,
         search_brave_web,
         search_multi_engine_web,
         search_vector_index,
     )
     from integrations.ipfs_datasets.graphs import extract_graph_from_text
+    from integrations.ipfs_datasets.legal import (
+        LEGAL_SCRAPERS_AVAILABLE,
+        LEGAL_SCRAPERS_ERROR,
+        search_federal_register,
+        search_recap_documents,
+        search_us_code,
+    )
 except Exception as exc:  # pragma: no cover - exercised through fallback behavior
     EMBEDDINGS_AVAILABLE = False
     VECTOR_STORE_AVAILABLE = False
     VECTOR_STORE_ERROR = str(exc)
     create_vector_index = None
+    discover_seeded_commoncrawl = None
     scrape_web_content = None
     search_brave_web = None
     search_multi_engine_web = None
     search_vector_index = None
     extract_graph_from_text = None
+    LEGAL_SCRAPERS_AVAILABLE = False
+    LEGAL_SCRAPERS_ERROR = str(exc)
+    search_federal_register = None
+    search_recap_documents = None
+    search_us_code = None
     INTEGRATION_IMPORT_ERROR = str(exc)
 else:
     INTEGRATION_IMPORT_ERROR = None
@@ -276,13 +291,34 @@ class HACCResearchEngine:
         *,
         top_k: int = 10,
         use_vector: bool = False,
+        search_mode: str = "auto",
         vector_top_k: Optional[int] = None,
         index_name: str = "hacc_corpus",
         index_dir: Optional[Path | str] = None,
         source_types: Optional[Sequence[str]] = None,
         min_score: float = 0.0,
     ) -> Dict[str, Any]:
-        if use_vector:
+        normalized_mode = str(search_mode or "auto").strip().lower()
+        if normalized_mode not in {"auto", "lexical", "hybrid", "vector"}:
+            normalized_mode = "auto"
+
+        should_use_vector = bool(use_vector)
+        if normalized_mode == "vector":
+            return self.search_vector(
+                query,
+                index_name=index_name,
+                index_dir=index_dir,
+                top_k=vector_top_k or top_k,
+            )
+        if normalized_mode == "hybrid":
+            should_use_vector = True
+        elif normalized_mode == "auto":
+            should_use_vector = bool(use_vector) or self._has_preferred_vector_index(
+                index_name=index_name,
+                index_dir=index_dir,
+            )
+
+        if should_use_vector:
             return self.hybrid_search(
                 query,
                 top_k=top_k,
@@ -554,6 +590,131 @@ class HACCResearchEngine:
             "integration_status": self._integration_status(),
         }
 
+    def discover_seeded_commoncrawl(
+        self,
+        queries: Sequence[str] | str | Path,
+        *,
+        cc_limit: int = 1000,
+        top_per_site: int = 50,
+        fetch_top: int = 0,
+        sleep_seconds: float = 0.5,
+    ) -> Dict[str, Any]:
+        if discover_seeded_commoncrawl is None:
+            return {
+                "status": "unavailable",
+                "queries": list(queries) if isinstance(queries, (list, tuple)) else [str(queries)],
+                "error": INTEGRATION_IMPORT_ERROR or "seeded commoncrawl adapter unavailable",
+                "integration_status": self._integration_status(),
+            }
+
+        query_path: Optional[Path] = None
+        cleanup_path: Optional[Path] = None
+        if isinstance(queries, (str, Path)) and Path(queries).exists():
+            query_path = Path(queries)
+        else:
+            if isinstance(queries, (str, Path)):
+                query_lines = [str(queries)]
+            else:
+                query_lines = [str(item).strip() for item in queries if str(item).strip()]
+            handle = tempfile.NamedTemporaryFile("w", suffix=".txt", delete=False, encoding="utf-8")
+            with handle:
+                handle.write("\n".join(query_lines) + "\n")
+            cleanup_path = Path(handle.name)
+            query_path = cleanup_path
+
+        try:
+            payload = discover_seeded_commoncrawl(
+                query_path,
+                cc_limit=cc_limit,
+                top_per_site=top_per_site,
+                fetch_top=fetch_top,
+                sleep_seconds=sleep_seconds,
+            )
+        finally:
+            if cleanup_path is not None and cleanup_path.exists():
+                cleanup_path.unlink(missing_ok=True)
+
+        if isinstance(payload, dict):
+            payload.setdefault("integration_status", self._integration_status())
+        return payload
+
+    def discover_legal_authorities(
+        self,
+        query: str,
+        *,
+        max_results: int = 10,
+        title: Optional[str] = None,
+        court: Optional[str] = None,
+        start_date: Optional[str] = None,
+        end_date: Optional[str] = None,
+    ) -> Dict[str, Any]:
+        query_text = _clean_text(query)
+        if not query_text:
+            return {
+                "status": "error",
+                "query": query_text,
+                "results": [],
+                "error": "empty query",
+                "integration_status": self._integration_status(),
+            }
+
+        if not LEGAL_SCRAPERS_AVAILABLE:
+            return {
+                "status": "unavailable",
+                "query": query_text,
+                "results": [],
+                "error": LEGAL_SCRAPERS_ERROR or INTEGRATION_IMPORT_ERROR or "legal scraper adapter unavailable",
+                "integration_status": self._integration_status(),
+            }
+
+        results: List[Dict[str, Any]] = []
+        errors: List[Dict[str, Any]] = []
+        seen_keys: set[str] = set()
+        operations = [
+            ("us_code", search_us_code, {"title": title, "max_results": max_results}),
+            (
+                "federal_register",
+                search_federal_register,
+                {"start_date": start_date, "end_date": end_date, "max_results": max_results},
+            ),
+            ("recap", search_recap_documents, {"court": court, "max_results": max_results}),
+        ]
+
+        for source_name, func, kwargs in operations:
+            if func is None:
+                continue
+            try:
+                source_results = func(query_text, **kwargs)
+            except Exception as exc:  # pragma: no cover - exercised through degraded integrations
+                errors.append({"source": source_name, "error": str(exc)})
+                continue
+            for item in list(source_results or []):
+                citation = str(item.get("citation") or item.get("title") or item.get("url") or "").strip()
+                dedupe_key = f"{source_name}:{citation.lower()}"
+                if not citation or dedupe_key in seen_keys:
+                    continue
+                seen_keys.add(dedupe_key)
+                results.append(
+                    {
+                        **item,
+                        "authority_source": source_name,
+                        "title": str(item.get("title") or citation),
+                        "citation": citation,
+                        "url": str(item.get("url") or ""),
+                        "score": float(item.get("relevance_score", 0.5) or 0.5),
+                    }
+                )
+
+        results.sort(key=lambda item: (-float(item.get("score", 0.0)), str(item.get("title", ""))))
+        return {
+            "status": "success" if results else "error" if errors else "success",
+            "query": query_text,
+            "result_count": len(results[:max_results]),
+            "results": results[:max_results],
+            "errors": errors,
+            "integration_status": self._integration_status(),
+        }
+
     def research(
         self,
         query: str,
@@ -561,16 +722,20 @@ class HACCResearchEngine:
         local_top_k: int = 10,
         web_max_results: int = 10,
         use_vector: bool = False,
+        search_mode: str = "auto",
         vector_index_name: str = "hacc_corpus",
         vector_index_dir: Optional[Path | str] = None,
         engines: Optional[List[str]] = None,
         domain_filter: Optional[Sequence[str] | str] = None,
         scrape: bool = False,
+        include_legal: bool = True,
+        legal_max_results: int = 10,
     ) -> Dict[str, Any]:
         local_payload = self.search(
             query,
             top_k=local_top_k,
             use_vector=use_vector,
+            search_mode=search_mode,
             index_name=vector_index_name,
             index_dir=vector_index_dir,
         )
@@ -581,21 +746,32 @@ class HACCResearchEngine:
             domain_filter=domain_filter,
             scrape=scrape,
         )
+        legal_payload = self.discover_legal_authorities(query, max_results=legal_max_results) if include_legal else {
+            "status": "disabled",
+            "query": _clean_text(query),
+            "results": [],
+            "result_count": 0,
+            "integration_status": self._integration_status(),
+        }
         return {
             "status": "success",
             "query": _clean_text(query),
             "query_metadata": {
                 "use_vector": bool(use_vector),
+                "search_mode": str(search_mode or "auto"),
                 "local_top_k": int(local_top_k),
                 "web_max_results": int(web_max_results),
+                "legal_max_results": int(legal_max_results),
                 "vector_index_name": vector_index_name,
                 "vector_index_dir": str(Path(vector_index_dir or self.default_index_dir).resolve()),
                 "engines": list(engines or []),
                 "domain_filter": sorted(self._normalize_domain_filters(domain_filter)),
                 "scrape": bool(scrape),
+                "include_legal": bool(include_legal),
             },
             "local_search": local_payload,
             "web_discovery": web_payload,
+            "legal_discovery": legal_payload,
             "integration_status": self._integration_status(),
         }
 
@@ -621,6 +797,21 @@ class HACCResearchEngine:
                 available_candidates.append(candidate)
 
         return available_candidates or preferred_candidates
+
+    def _has_preferred_vector_index(
+        self,
+        *,
+        index_name: str,
+        index_dir: Optional[Path | str],
+    ) -> bool:
+        if search_vector_index is None or not VECTOR_STORE_AVAILABLE:
+            return False
+        candidates = self._resolve_vector_indexes(index_name=index_name, index_dir=index_dir)
+        for candidate in candidates:
+            manifest_path = Path(candidate["index_dir"]) / f"{candidate['index_name']}.manifest.json"
+            if manifest_path.exists():
+                return True
+        return False
 
     def _load_parsed_documents(self) -> List[CorpusDocument]:
         if not self.parse_manifest_path.exists():
@@ -896,11 +1087,14 @@ class HACCResearchEngine:
             "preferred_vector_indexes": self._resolve_vector_indexes(index_name="hacc_corpus", index_dir=None),
             "capabilities": {
                 "discovery_available": search_multi_engine_web is not None or search_brave_web is not None,
+                "seeded_commoncrawl_available": discover_seeded_commoncrawl is not None,
+                "legal_discovery_available": bool(LEGAL_SCRAPERS_AVAILABLE),
                 "scrape_available": scrape_web_content is not None,
                 "graph_available": extract_graph_from_text is not None,
                 "vector_available": bool(VECTOR_STORE_AVAILABLE),
                 "embeddings_available": bool(EMBEDDINGS_AVAILABLE),
                 "vector_degraded_reason": str(VECTOR_STORE_ERROR) if (not VECTOR_STORE_AVAILABLE and VECTOR_STORE_ERROR is not None) else None,
+                "legal_degraded_reason": str(LEGAL_SCRAPERS_ERROR) if (not LEGAL_SCRAPERS_AVAILABLE and LEGAL_SCRAPERS_ERROR is not None) else None,
             },
         }
 
@@ -950,6 +1144,12 @@ def _build_parser() -> argparse.ArgumentParser:
         default=[],
         help="Optional source type filter (repeatable): parsed_document or knowledge_graph",
     )
+    search.add_argument(
+        "--search-mode",
+        choices=["auto", "lexical", "hybrid", "vector"],
+        default="auto",
+        help="Search strategy. 'auto' prefers shared vector indexes when available.",
+    )
     search.add_argument("--use-vector", action="store_true", help="Blend lexical and vector search")
     search.add_argument("--index-dir", default=str(REPO_ROOT / "research_results/search_indexes"), help="Vector index directory")
     search.add_argument("--index-name", default="hacc_corpus", help="Vector index name")
@@ -967,14 +1167,37 @@ def _build_parser() -> argparse.ArgumentParser:
     discover.add_argument("--domain", action="append", default=[], help="Domain substring filter (repeatable)")
     discover.add_argument("--scrape", action="store_true", help="Scrape the top few discovered URLs")
 
+    seeded_commoncrawl = subparsers.add_parser("seeded-commoncrawl", help="Run shared seeded Common Crawl discovery")
+    seeded_commoncrawl.add_argument("--queries-file", required=True, help="Path to a seeded-query text file")
+    seeded_commoncrawl.add_argument("--cc-limit", type=int, default=1000, help="Maximum Common Crawl rows per site")
+    seeded_commoncrawl.add_argument("--top-per-site", type=int, default=50, help="Top scored URLs to keep per site")
+    seeded_commoncrawl.add_argument("--fetch-top", type=int, default=0, help="Fetch and preview the top N URLs per site")
+    seeded_commoncrawl.add_argument("--sleep-seconds", type=float, default=0.5, help="Delay between site queries")
+
+    discover_legal = subparsers.add_parser("discover-legal", help="Search shared legal authority sources")
+    discover_legal.add_argument("query", help="Legal discovery query")
+    discover_legal.add_argument("--max-results", type=int, default=10, help="Maximum number of legal results")
+    discover_legal.add_argument("--title", help="Optional U.S. Code title filter")
+    discover_legal.add_argument("--court", help="Optional RECAP court filter")
+    discover_legal.add_argument("--start-date", help="Optional Federal Register start date (YYYY-MM-DD)")
+    discover_legal.add_argument("--end-date", help="Optional Federal Register end date (YYYY-MM-DD)")
+
     research = subparsers.add_parser("research", help="Run local search plus web discovery")
     research.add_argument("query", help="Research query")
     research.add_argument("--top-k", type=int, default=10, help="Maximum number of local results")
     research.add_argument("--max-results", type=int, default=10, help="Maximum number of web results")
+    research.add_argument(
+        "--search-mode",
+        choices=["auto", "lexical", "hybrid", "vector"],
+        default="auto",
+        help="Local search strategy. 'auto' prefers shared vector indexes when available.",
+    )
     research.add_argument("--engine", action="append", default=[], help="Preferred search engine (repeatable)")
     research.add_argument("--domain", action="append", default=[], help="Domain substring filter (repeatable)")
     research.add_argument("--scrape", action="store_true", help="Scrape the top few discovered URLs")
     research.add_argument("--use-vector", action="store_true", help="Blend lexical and vector search for local results")
+    research.add_argument("--no-legal", action="store_true", help="Disable shared legal authority discovery")
+    research.add_argument("--legal-max-results", type=int, default=10, help="Maximum number of legal authority results")
     research.add_argument("--index-dir", default=str(REPO_ROOT / "research_results/search_indexes"), help="Vector index directory")
     research.add_argument("--index-name", default="hacc_corpus", help="Vector index name")
 
@@ -1007,6 +1230,10 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             payload = engine.search(
                 args.query,
                 top_k=args.top_k,
+                search_mode=args.search_mode,
+                use_vector=args.use_vector,
+                index_name=args.index_name,
+                index_dir=args.index_dir,
                 source_types=args.source_type or None,
             )
     elif args.command == "vector-search":
@@ -1024,17 +1251,37 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
             domain_filter=args.domain or None,
             scrape=args.scrape,
         )
+    elif args.command == "seeded-commoncrawl":
+        payload = engine.discover_seeded_commoncrawl(
+            args.queries_file,
+            cc_limit=args.cc_limit,
+            top_per_site=args.top_per_site,
+            fetch_top=args.fetch_top,
+            sleep_seconds=args.sleep_seconds,
+        )
+    elif args.command == "discover-legal":
+        payload = engine.discover_legal_authorities(
+            args.query,
+            max_results=args.max_results,
+            title=args.title,
+            court=args.court,
+            start_date=args.start_date,
+            end_date=args.end_date,
+        )
     else:
         payload = engine.research(
             args.query,
             local_top_k=args.top_k,
             web_max_results=args.max_results,
             use_vector=args.use_vector,
+            search_mode=args.search_mode,
             vector_index_name=args.index_name,
             vector_index_dir=args.index_dir,
             engines=args.engine or None,
             domain_filter=args.domain or None,
             scrape=args.scrape,
+            include_legal=not args.no_legal,
+            legal_max_results=args.legal_max_results,
         )
 
     print(json.dumps(payload, indent=2, sort_keys=True))

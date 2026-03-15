@@ -335,6 +335,93 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertEqual(payload["vector_status"], "unavailable")
             self.assertEqual(payload["results"][0]["document_id"], "housing_policy")
 
+    def test_search_auto_prefers_hybrid_when_shared_vector_index_exists(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            parsed_dir = root / "research_results/documents/parsed"
+            parsed_dir.mkdir(parents=True, exist_ok=True)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            embeddings_dir = root / "hacc_website/knowledge_graph/embeddings"
+            embeddings_dir.mkdir(parents=True, exist_ok=True)
+            (embeddings_dir / "hacc_policy_graph.manifest.json").write_text("{}", encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=parsed_dir,
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            original_hybrid_search = engine.hybrid_search
+            try:
+                calls = []
+
+                def fake_hybrid_search(query, *, top_k=10, vector_top_k=None, index_name="hacc_corpus", index_dir=None, source_types=None):
+                    calls.append(
+                        {
+                            "query": query,
+                            "top_k": top_k,
+                            "vector_top_k": vector_top_k,
+                            "index_name": index_name,
+                            "index_dir": index_dir,
+                        }
+                    )
+                    return {"status": "success", "query": query, "results": [{"document_id": "vector-doc"}]}
+
+                engine.hybrid_search = fake_hybrid_search
+                payload = engine.search("reasonable accommodation", top_k=2, search_mode="auto")
+            finally:
+                engine.hybrid_search = original_hybrid_search
+
+            self.assertEqual(payload["results"][0]["document_id"], "vector-doc")
+            self.assertEqual(len(calls), 1)
+            self.assertEqual(calls[0]["query"], "reasonable accommodation")
+
+    def test_research_includes_shared_legal_discovery(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            parsed_dir = root / "research_results/documents/parsed"
+            parsed_dir.mkdir(parents=True, exist_ok=True)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=parsed_dir,
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            original_search_us_code = engine_module.search_us_code
+            original_search_federal_register = engine_module.search_federal_register
+            original_search_recap_documents = engine_module.search_recap_documents
+            original_legal_available = engine_module.LEGAL_SCRAPERS_AVAILABLE
+            try:
+                engine_module.LEGAL_SCRAPERS_AVAILABLE = True
+                engine_module.search_us_code = lambda query, **kwargs: [
+                    {"title": "42 U.S.C. 3604", "citation": "42 U.S.C. 3604", "url": "https://example.com/uscode", "relevance_score": 0.9}
+                ]
+                engine_module.search_federal_register = lambda query, **kwargs: [
+                    {"title": "HUD Notice", "citation": "HUD-2024-1", "url": "https://example.com/fr", "relevance_score": 0.7}
+                ]
+                engine_module.search_recap_documents = lambda query, **kwargs: []
+
+                payload = engine.research("reasonable accommodation retaliation", local_top_k=1, web_max_results=1)
+            finally:
+                engine_module.search_us_code = original_search_us_code
+                engine_module.search_federal_register = original_search_federal_register
+                engine_module.search_recap_documents = original_search_recap_documents
+                engine_module.LEGAL_SCRAPERS_AVAILABLE = original_legal_available
+
+            self.assertIn("legal_discovery", payload)
+            self.assertEqual(payload["legal_discovery"]["status"], "success")
+            self.assertEqual(payload["legal_discovery"]["result_count"], 2)
+            self.assertEqual(payload["legal_discovery"]["results"][0]["authority_source"], "us_code")
+
     def test_search_vector_prefers_knowledge_graph_embedding_indexes(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

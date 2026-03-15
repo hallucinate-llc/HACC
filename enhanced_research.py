@@ -69,7 +69,7 @@ class EnhancedHAACCResearcher:
         with (self.results_dir / "research.log").open("a", encoding="utf-8") as handle:
             handle.write(log_msg + "\n")
 
-    async def run_comprehensive_research(self, *, use_vector: bool = False) -> dict:
+    async def run_comprehensive_research(self, *, use_vector: bool = False, search_mode: str = "auto") -> dict:
         self.log("=" * 80)
         self.log("COMPREHENSIVE HACC RESEARCH VIA SHARED ENGINE")
         self.log("=" * 80)
@@ -82,6 +82,7 @@ class EnhancedHAACCResearcher:
                     local_top_k=15,
                     web_max_results=25,
                     use_vector=use_vector,
+                    search_mode=search_mode,
                     engines=["brave", "duckduckgo"],
                     domain_filter=["clackamas.us"],
                     scrape=True,
@@ -106,8 +107,14 @@ class EnhancedHAACCResearcher:
 
 def main(argv: Optional[List[str]] = None) -> int:
     use_vector = bool(argv and "--use-vector" in argv)
+    search_mode = "auto"
+    if argv and "--search-mode" in argv:
+        try:
+            search_mode = argv[argv.index("--search-mode") + 1]
+        except Exception:
+            search_mode = "auto"
     researcher = EnhancedHAACCResearcher()
-    asyncio.run(researcher.run_comprehensive_research(use_vector=use_vector))
+    asyncio.run(researcher.run_comprehensive_research(use_vector=use_vector, search_mode=search_mode))
     return 0
 
 

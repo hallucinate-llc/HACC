@@ -26,6 +26,7 @@ from hacc_adversarial_runner import (
 class HACCAdversarialRunnerTests(unittest.TestCase):
     def test_resolve_autopatch_timeout_uses_profile_defaults_and_can_disable(self) -> None:
         with mock.patch.dict("os.environ", {}, clear=False):
+            self.assertEqual(_resolve_autopatch_timeout(profile="denoiser_select_candidates_only"), 150.0)
             self.assertEqual(_resolve_autopatch_timeout(profile="denoiser_standard_intake_only"), 150.0)
             self.assertEqual(_resolve_autopatch_timeout(profile="denoiser_process_answer_only"), 180.0)
             self.assertEqual(_resolve_autopatch_timeout(profile="phase_manager_action_only"), 120.0)
@@ -55,6 +56,15 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
         only_target, symbols = next(iter(target_map.items()))
         self.assertTrue(only_target.endswith("complaint_phases/denoiser.py"))
         self.assertEqual(symbols, ["_ensure_standard_intake_questions"])
+
+    def test_denoiser_select_candidates_profile_targets_symbol(self) -> None:
+        target_files = _autopatch_target_profiles()["denoiser_select_candidates_only"]
+        constraints = _autopatch_constraints_for_profile("denoiser_select_candidates_only", target_files)
+        target_map = constraints["target_symbols"]
+        self.assertEqual(len(target_map), 1)
+        only_target, symbols = next(iter(target_map.items()))
+        self.assertTrue(only_target.endswith("complaint_phases/denoiser.py"))
+        self.assertEqual(symbols, ["select_question_candidates"])
 
     def test_repair_helpers_can_build_diff_from_file_content_response(self) -> None:
         target = Path("mediator/inquiries.py")
