@@ -2,6 +2,7 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
 import sys
 from unittest import mock
 
@@ -140,6 +141,100 @@ SUGGESTIONS:
         self.assertGreater(len(router_calls), 0)
         self.assertTrue(any(call["provider"] == "copilot_cli" for call in router_calls))
         self.assertTrue(any(call["model_name"] == "gpt-5-mini" for call in router_calls))
+
+    def test_runner_can_emit_autopatch_summary(self) -> None:
+        complaint_generator_root = REPO_ROOT / "complaint-generator"
+        if str(complaint_generator_root) not in sys.path:
+            sys.path.insert(0, str(complaint_generator_root))
+
+        import adversarial_harness.optimizer as optimizer_module
+
+        fake_patch = Path("/tmp/fake-mediator.patch")
+        with tempfile.TemporaryDirectory() as tmpdir:
+            fake_patch.write_text("diff --git a/file b/file\n", encoding="utf-8")
+            with mock.patch.object(
+                optimizer_module.Optimizer,
+                "run_agentic_autopatch",
+                return_value=SimpleNamespace(
+                    success=True,
+                    patch_path=fake_patch,
+                    patch_cid="bafy-autopatch",
+                    metadata={"kind": "runner-test"},
+                ),
+            ) as autopatch_mock:
+                summary = run_hacc_adversarial_batch(
+                    output_dir=tmpdir,
+                    num_sessions=1,
+                    max_turns=1,
+                    max_parallel=1,
+                    hacc_preset="core_hacc_policies",
+                    demo=True,
+                    emit_autopatch=True,
+                )
+
+            self.assertTrue(summary["autopatch"]["requested"])
+            self.assertTrue(summary["autopatch"]["success"])
+            self.assertEqual(summary["autopatch"]["patch_cid"], "bafy-autopatch")
+            self.assertEqual(summary["artifacts"]["autopatch_patch_path"], str(fake_patch.resolve()))
+            self.assertTrue(Path(summary["artifacts"]["autopatch_summary_json"]).is_file())
+            autopatch_kwargs = autopatch_mock.call_args.kwargs
+            self.assertEqual(autopatch_kwargs["method"], "test_driven")
+            self.assertEqual(summary["autopatch"]["profile"], "question_flow")
+            self.assertGreaterEqual(len(autopatch_kwargs["target_files"]), 2)
+            self.assertTrue(any(str(path).endswith("complaint_phases/phase_manager.py") for path in autopatch_kwargs["target_files"]))
+            self.assertTrue(any(str(path).endswith("mediator/inquiries.py") for path in autopatch_kwargs["target_files"]))
+
+    def test_runner_can_apply_autopatch_via_patch_manager(self) -> None:
+        complaint_generator_root = REPO_ROOT / "complaint-generator"
+        if str(complaint_generator_root) not in sys.path:
+            sys.path.insert(0, str(complaint_generator_root))
+
+        import adversarial_harness.optimizer as optimizer_module
+        import ipfs_datasets_py.optimizers.agentic.patch_control as patch_control_module
+
+        fake_patch = Path("/tmp/fake-apply.patch")
+        with tempfile.TemporaryDirectory() as tmpdir:
+            fake_patch.write_text("diff --git a/file b/file\n", encoding="utf-8")
+            patch_instance = object()
+            with mock.patch.object(
+                optimizer_module.Optimizer,
+                "run_agentic_autopatch",
+                return_value=SimpleNamespace(
+                    success=True,
+                    patch_path=fake_patch,
+                    patch_cid="bafy-apply",
+                    metadata={"kind": "apply-test"},
+                ),
+            ):
+                with mock.patch.object(
+                    patch_control_module.PatchManager,
+                    "load_patch",
+                    return_value=patch_instance,
+                ) as load_mock:
+                    with mock.patch.object(
+                        patch_control_module.PatchManager,
+                        "apply_patch",
+                        return_value=True,
+                    ) as apply_mock:
+                        summary = run_hacc_adversarial_batch(
+                            output_dir=tmpdir,
+                            num_sessions=1,
+                            max_turns=1,
+                            max_parallel=1,
+                            hacc_preset="core_hacc_policies",
+                            demo=True,
+                            apply_autopatch=True,
+                            autopatch_target_files=["mediator/mediator.py"],
+                        )
+
+            self.assertTrue(summary["autopatch"]["requested"])
+            self.assertTrue(summary["autopatch"]["success"])
+            self.assertTrue(summary["autopatch"]["applied"])
+            self.assertTrue(summary["autopatch"]["apply_success"])
+            load_mock.assert_called_once_with(fake_patch)
+            apply_mock.assert_called_once()
+            self.assertEqual(apply_mock.call_args.args[0], patch_instance)
+            self.assertEqual(apply_mock.call_args.args[1], complaint_generator_root)
 
 
 if __name__ == "__main__":

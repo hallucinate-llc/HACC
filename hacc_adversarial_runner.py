@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 import importlib.util
 import json
 import sys
@@ -40,6 +41,230 @@ def _sanitize_for_json(value: Any) -> Any:
         except Exception:
             return str(value)
     return str(value)
+
+
+def _autopatch_target_profiles() -> Dict[str, List[Path]]:
+    return {
+        "phase_manager_action_only": [
+            COMPLAINT_GENERATOR_ROOT / "complaint_phases" / "phase_manager.py",
+        ],
+        "phase_manager_only": [
+            COMPLAINT_GENERATOR_ROOT / "complaint_phases" / "phase_manager.py",
+        ],
+        "question_flow": [
+            COMPLAINT_GENERATOR_ROOT / "complaint_phases" / "phase_manager.py",
+            COMPLAINT_GENERATOR_ROOT / "mediator" / "inquiries.py",
+        ],
+        "denoiser_focus": [
+            COMPLAINT_GENERATOR_ROOT / "complaint_phases" / "denoiser.py",
+            COMPLAINT_GENERATOR_ROOT / "complaint_phases" / "phase_manager.py",
+        ],
+        "full_mediator": [
+            COMPLAINT_GENERATOR_ROOT / "mediator" / "mediator.py",
+            COMPLAINT_GENERATOR_ROOT / "complaint_phases" / "phase_manager.py",
+        ],
+    }
+
+
+def _default_autopatch_target_files() -> List[Path]:
+    return list(_autopatch_target_profiles()["question_flow"])
+
+
+def _autopatch_constraints_for_profile(profile: str, target_files: List[Path]) -> Dict[str, Any]:
+    if profile == "phase_manager_action_only":
+        target_map: Dict[str, List[str]] = {}
+        for path in target_files:
+            if path.name == "phase_manager.py":
+                target_map[str(path.resolve())] = [
+                    "_get_intake_action",
+                ]
+        if target_map:
+            return {"target_symbols": target_map}
+    if profile == "phase_manager_only":
+        target_map: Dict[str, List[str]] = {}
+        for path in target_files:
+            if path.name == "phase_manager.py":
+                target_map[str(path.resolve())] = [
+                    "_is_intake_complete",
+                    "_get_intake_action",
+                ]
+        if target_map:
+            return {"target_symbols": target_map}
+    return {}
+
+
+def _resolve_autopatch_target_files(target_files: Optional[List[str]], profile: str = "question_flow") -> List[Path]:
+    if not target_files:
+        return list(_autopatch_target_profiles().get(profile, _default_autopatch_target_files()))
+
+    resolved: List[Path] = []
+    for raw_path in target_files:
+        candidate = Path(raw_path)
+        if not candidate.is_absolute():
+            candidate = (COMPLAINT_GENERATOR_ROOT / candidate).resolve()
+        else:
+            candidate = candidate.resolve()
+        resolved.append(candidate)
+    return resolved
+
+
+def _build_agentic_llm_router(provider_name: Optional[str]) -> Any:
+    _ensure_complaint_generator_on_path()
+
+    try:
+        from ipfs_datasets_py.llm_router import generate_text
+    except Exception:
+        return None
+
+    normalized = str(provider_name or "").strip().lower()
+    provider_mapping = {
+        "codex": "codex_cli",
+        "codex_cli": "codex_cli",
+        "copilot": "copilot_cli",
+        "copilot_cli": "copilot_cli",
+        "copilot_sdk": "copilot_sdk",
+        "openai": "openai",
+        "gpt4": "openai",
+        "anthropic": "anthropic",
+        "claude": "anthropic",
+        "claude_code": "claude_code",
+        "claude_py": "claude_py",
+        "gemini": "gemini_cli",
+        "gemini_cli": "gemini_cli",
+        "gemini_py": "gemini_py",
+        "accelerate": "accelerate",
+        "local": "local",
+    }
+    resolved_provider = provider_mapping.get(normalized)
+    if resolved_provider is None:
+        return None
+
+    raw_timeout = os.environ.get("HACC_AGENTIC_AUTOPATCH_TIMEOUT", "").strip()
+    try:
+        autopatch_timeout = float(raw_timeout) if raw_timeout else 90.0
+    except Exception:
+        autopatch_timeout = 90.0
+
+    class _PinnedRunnerLLMRouter:
+        def __init__(self, provider: str):
+            self.provider = provider
+
+        def generate(
+            self,
+            prompt: str,
+            method: Any = None,
+            max_tokens: int = 2000,
+            temperature: float = 0.7,
+            router_kwargs: Optional[Dict[str, Any]] = None,
+        ) -> str:
+            kwargs = dict(router_kwargs or {})
+            model_name = str(kwargs.pop("model_name", "") or os.environ.get("IPFS_DATASETS_PY_CODEX_MODEL", ""))
+            kwargs.setdefault("timeout", autopatch_timeout)
+            return generate_text(
+                prompt=prompt,
+                provider=self.provider,
+                model_name=model_name,
+                max_new_tokens=max_tokens,
+                temperature=temperature,
+                **kwargs,
+            )
+
+        def get_usage_stats(self) -> Dict[str, Any]:
+            return {"provider": self.provider}
+
+    return _PinnedRunnerLLMRouter(resolved_provider)
+
+
+def _run_agentic_autopatch(
+    *,
+    optimizer: Any,
+    results: List[Any],
+    report: Any,
+    output_root: Path,
+    target_files: List[Path],
+    method: str,
+    profile: str,
+    constraints: Dict[str, Any],
+    apply_patch: bool,
+    provider_name: Optional[str],
+    model_name: Optional[str],
+) -> Dict[str, Any]:
+    _ensure_complaint_generator_on_path()
+
+    autopatch_dir = output_root / "autopatch"
+    autopatch_dir.mkdir(parents=True, exist_ok=True)
+    autopatch_summary_path = autopatch_dir / "autopatch_summary.json"
+
+    summary: Dict[str, Any] = {
+        "requested": True,
+        "method": method,
+        "profile": profile,
+        "target_files": [str(path) for path in target_files],
+        "applied": False,
+        "apply_success": False,
+        "success": False,
+        "patch_path": None,
+        "patch_cid": None,
+        "metadata": {},
+        "metrics": {},
+        "validation": None,
+        "summary_json": str(autopatch_summary_path),
+        "error": None,
+    }
+
+    try:
+        previous_codex_model = os.environ.get("IPFS_DATASETS_PY_CODEX_MODEL")
+        if str(provider_name or "").strip().lower() in {"codex", "codex_cli"} and model_name:
+            os.environ["IPFS_DATASETS_PY_CODEX_MODEL"] = str(model_name)
+        result = optimizer.run_agentic_autopatch(
+            results,
+            target_files=target_files,
+            method=method,
+            constraints=constraints,
+            report=report,
+            llm_router=_build_agentic_llm_router(provider_name),
+            metadata={
+                "hacc_runner": True,
+                "output_dir": str(output_root),
+            },
+        )
+        summary["success"] = bool(getattr(result, "success", False))
+        summary["patch_path"] = (
+            str(Path(getattr(result, "patch_path")).resolve())
+            if getattr(result, "patch_path", None)
+            else None
+        )
+        summary["patch_cid"] = getattr(result, "patch_cid", None)
+        summary["metadata"] = _sanitize_for_json(getattr(result, "metadata", {}))
+        summary["metrics"] = _sanitize_for_json(getattr(result, "metrics", {}))
+        summary["validation"] = _sanitize_for_json(getattr(result, "validation", None))
+        result_error = getattr(result, "error_message", None)
+        if result_error:
+            summary["error"] = str(result_error)
+
+        if apply_patch and summary["patch_path"]:
+            from ipfs_datasets_py.optimizers.agentic.patch_control import PatchManager
+
+            manager = PatchManager(patches_dir=autopatch_dir)
+            patch = manager.load_patch(Path(summary["patch_path"]))
+            summary["applied"] = True
+            summary["apply_success"] = bool(manager.apply_patch(patch, COMPLAINT_GENERATOR_ROOT))
+            if not summary["apply_success"]:
+                summary["error"] = "Patch apply failed"
+    except Exception as exc:
+        summary["error"] = str(exc)
+    finally:
+        if str(provider_name or "").strip().lower() in {"codex", "codex_cli"}:
+            if previous_codex_model is None:
+                os.environ.pop("IPFS_DATASETS_PY_CODEX_MODEL", None)
+            else:
+                os.environ["IPFS_DATASETS_PY_CODEX_MODEL"] = previous_codex_model
+
+    autopatch_summary_path.write_text(
+        json.dumps(_sanitize_for_json(summary), ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    return summary
 
 
 def _load_runtime(demo: bool, config_path: Optional[str], backend_id: Optional[str], provider: str, model: Optional[str]) -> Dict[str, Any]:
@@ -205,6 +430,11 @@ def run_hacc_adversarial_batch(
     backend_id: Optional[str] = None,
     provider: str = "copilot_cli",
     model: Optional[str] = None,
+    emit_autopatch: bool = False,
+    apply_autopatch: bool = False,
+    autopatch_method: str = "test_driven",
+    autopatch_profile: str = "question_flow",
+    autopatch_target_files: Optional[List[str]] = None,
 ) -> Dict[str, Any]:
     output_root = Path(output_dir).resolve()
     output_root.mkdir(parents=True, exist_ok=True)
@@ -237,6 +467,8 @@ def run_hacc_adversarial_batch(
     report = optimizer.analyze(results)
     stats = harness.get_statistics()
     best_result = _select_best_result(results)
+    autopatch_target_paths = _resolve_autopatch_target_files(autopatch_target_files, autopatch_profile)
+    autopatch_constraints = _autopatch_constraints_for_profile(autopatch_profile, autopatch_target_paths)
 
     run_results_path = output_root / "adversarial_results.json"
     optimization_report_path = output_root / "optimization_report.json"
@@ -252,6 +484,36 @@ def run_hacc_adversarial_batch(
         json.dumps(optimization_payload, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
+
+    autopatch_summary = {
+        "requested": False,
+        "method": autopatch_method,
+        "profile": autopatch_profile,
+        "target_files": [str(path) for path in autopatch_target_paths],
+        "constraints": _sanitize_for_json(autopatch_constraints),
+        "applied": False,
+        "apply_success": False,
+        "success": False,
+        "patch_path": None,
+        "patch_cid": None,
+        "metadata": {},
+        "summary_json": None,
+        "error": None,
+    }
+    if emit_autopatch or apply_autopatch:
+        autopatch_summary = _run_agentic_autopatch(
+            optimizer=optimizer,
+            results=results,
+            report=report,
+            output_root=output_root,
+            target_files=autopatch_target_paths,
+            method=autopatch_method,
+            profile=autopatch_profile,
+            constraints=autopatch_constraints,
+            apply_patch=apply_autopatch,
+            provider_name=runtime_bundle["runtime"].get("provider"),
+            model_name=runtime_bundle["runtime"].get("model"),
+        )
 
     best_bundle = {
         "seed_complaint": _sanitize_for_json(best_result.seed_complaint if best_result else None),
@@ -289,6 +551,7 @@ def run_hacc_adversarial_batch(
             "recommendations": optimization_payload.get("recommendations"),
             "best_session_id": optimization_payload.get("best_session_id"),
         },
+        "autopatch": _sanitize_for_json(autopatch_summary),
         "best_complaint": {
             "session_id": getattr(best_result, "session_id", None),
             "initial_complaint_text": getattr(best_result, "initial_complaint_text", ""),
@@ -303,6 +566,8 @@ def run_hacc_adversarial_batch(
             "anchor_section_csv": str(anchor_report_path),
             "best_complaint_bundle_json": str(best_complaint_path),
             "session_state_dir": str(session_dir),
+            "autopatch_summary_json": autopatch_summary.get("summary_json"),
+            "autopatch_patch_path": autopatch_summary.get("patch_path"),
         },
     }
     summary_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -326,6 +591,28 @@ def create_parser() -> argparse.ArgumentParser:
     parser.add_argument("--backend-id", default=None, help="Optional backend id from the selected config.")
     parser.add_argument("--provider", default="copilot_cli", help="LLM router provider when not using --demo or --config.")
     parser.add_argument("--model", default=None, help="Optional model name when using the direct llm_router path.")
+    parser.add_argument("--emit-autopatch", action="store_true", help="Generate an optimizer patch artifact targeting the mediator codebase.")
+    parser.add_argument("--apply-autopatch", action="store_true", help="Generate and apply the optimizer patch to complaint-generator.")
+    parser.add_argument("--autopatch-method", default="test_driven", help="Agentic optimization method for autopatch generation.")
+    parser.add_argument(
+        "--autopatch-profile",
+        default="question_flow",
+        choices=sorted(_autopatch_target_profiles().keys()),
+        help=(
+            "Named autopatch target profile. question_flow keeps the default scope small "
+            "for live runs; explicit --autopatch-target-file values override the profile."
+        ),
+    )
+    parser.add_argument(
+        "--autopatch-target-file",
+        action="append",
+        dest="autopatch_target_files",
+        help=(
+            "Repeat to override autopatch target files. Relative paths are resolved from "
+            "complaint-generator/. Default profile is question_flow "
+            "(complaint_phases/phase_manager.py + mediator/inquiries.py)."
+        ),
+    )
     parser.add_argument("--json", action="store_true", help="Print the full summary JSON.")
     return parser
 
@@ -346,6 +633,11 @@ def main(argv: Optional[List[str]] = None) -> int:
         backend_id=args.backend_id,
         provider=args.provider,
         model=args.model,
+        emit_autopatch=args.emit_autopatch,
+        apply_autopatch=args.apply_autopatch,
+        autopatch_method=args.autopatch_method,
+        autopatch_profile=args.autopatch_profile,
+        autopatch_target_files=args.autopatch_target_files,
     )
     if args.json:
         print(json.dumps(summary, ensure_ascii=False, indent=2))
@@ -354,6 +646,11 @@ def main(argv: Optional[List[str]] = None) -> int:
         print(f"Best complaint score: {summary['best_complaint']['score']:.3f}")
         print(f"Best complaint seed: {summary['best_complaint']['seed_type']} - {summary['best_complaint']['seed_summary']}")
         print(f"Recommended preset: {summary['optimization_report']['recommended_hacc_preset'] or summary['inputs']['hacc_preset']}")
+        if summary["autopatch"]["requested"]:
+            print(f"Autopatch success: {summary['autopatch']['success']}")
+            print(f"Autopatch applied: {summary['autopatch']['apply_success']}")
+            if summary["autopatch"]["patch_path"]:
+                print(f"Autopatch patch: {summary['autopatch']['patch_path']}")
         print(f"Results JSON: {summary['artifacts']['results_json']}")
         print(f"Optimization report: {summary['artifacts']['optimization_report_json']}")
         print(f"Best complaint bundle: {summary['artifacts']['best_complaint_bundle_json']}")
