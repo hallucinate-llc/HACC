@@ -17,3 +17,4 @@ research_results/search_indexes/*.manifest.json
 research_results/search_indexes/*.records.jsonl
 research_results/search_indexes/*.summary.json
 research_results/search_indexes/*.vectors.npy
+research_results/adversarial_runs/*

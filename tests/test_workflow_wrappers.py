@@ -511,6 +511,106 @@ class WorkflowWrapperTests(unittest.TestCase):
 
             self.assertTrue(patched.called)
 
+    def test_extract_third_party_candidates_wrapper_uses_shared_bootstrap_workflow(self) -> None:
+        module = _load_module(
+            Path("/home/barberb/HACC/research_data/scripts/extract_third_party_candidates.py"),
+            "extract_third_party_candidates_test",
+        )
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            workspace_root = root / "workspace"
+            output_json = root / "third_party_candidates.json"
+            output_csv = root / "third_party_candidates.csv"
+            workspace_root.mkdir(parents=True, exist_ok=True)
+
+            fake_payload = {"scanned_files": 1, "candidate_count": 1, "candidates": [{"candidate": "example.org"}]}
+
+            with patch.object(module, "WORKSPACE_ROOT", workspace_root):
+                with patch.object(module, "OUTPUT_JSON", output_json):
+                    with patch.object(module, "OUTPUT_CSV", output_csv):
+                        with patch.object(module, "extract_third_party_candidates_from_corpus", return_value=fake_payload):
+                            with patch.object(module, "write_candidates_csv") as write_csv:
+                                module.main()
+
+            payload = json.loads(output_json.read_text(encoding="utf-8"))
+            self.assertEqual(payload["candidate_count"], 1)
+            self.assertTrue(write_csv.called)
+
+    def test_extract_external_documents_wrapper_uses_shared_bootstrap_workflow(self) -> None:
+        module = _load_module(
+            Path("/home/barberb/HACC/research_data/scripts/extract_external_documents_from_quantum_pages.py"),
+            "extract_external_documents_from_quantum_pages_test",
+        )
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            manifest_path = root / "manifest.json"
+            out_queue = root / "queue.json"
+            out_evidence = root / "evidence.json"
+            manifest_path.write_text("[]", encoding="utf-8")
+
+            fake_queue = {"stats": {"candidate_domains": 1}, "items": [{"domain": "example.org"}]}
+            fake_evidence = {"rows": [{"candidate_url": "https://example.org/policy.pdf"}]}
+
+            with patch.object(module, "load_manifest_rows", return_value=[]):
+                with patch.object(module, "extract_external_document_queue", return_value=(fake_queue, fake_evidence)):
+                    with patch(
+                        "sys.argv",
+                        [
+                            "extract_external_documents_from_quantum_pages.py",
+                            "--manifest",
+                            str(manifest_path),
+                            "--out-queue",
+                            str(out_queue),
+                            "--out-evidence",
+                            str(out_evidence),
+                        ],
+                    ):
+                        module.main()
+
+            queue_payload = json.loads(out_queue.read_text(encoding="utf-8"))
+            evidence_payload = json.loads(out_evidence.read_text(encoding="utf-8"))
+            self.assertEqual(queue_payload["source"]["manifest"], str(manifest_path))
+            self.assertEqual(evidence_payload["source"]["manifest"], str(manifest_path))
+
+    def test_seeded_commoncrawl_wrapper_uses_shared_search_adapter(self) -> None:
+        module = _load_module(
+            Path("/home/barberb/HACC/research_data/scripts/seeded_commoncrawl_discovery.py"),
+            "seeded_commoncrawl_discovery_test",
+        )
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            queries_file = root / "queries.txt"
+            results_dir = root / "research_results"
+            queries_file.write_text('site:example.org "procurement policy"\n', encoding="utf-8")
+            results_dir.mkdir(parents=True, exist_ok=True)
+
+            fake_result = {
+                "status": "success",
+                "candidates": {"sites": {"example.org": {"top": [{"url": "https://example.org/policy.pdf"}]}}},
+                "fetched": {"sites": {"example.org": {"rows": [{"url": "https://example.org/policy.pdf"}]}}},
+            }
+
+            old_cwd = os.getcwd()
+            try:
+                os.chdir(root)
+                with patch.object(module, "discover_seeded_commoncrawl", return_value=fake_result):
+                    with patch(
+                        "sys.argv",
+                        [
+                            "seeded_commoncrawl_discovery.py",
+                            "--queries-file",
+                            str(queries_file),
+                            "--fetch-top",
+                            "1",
+                        ],
+                    ):
+                        module.main()
+            finally:
+                os.chdir(old_cwd)
+
+            self.assertEqual(len(list(results_dir.glob("seeded_commoncrawl_candidates_*.json"))), 1)
+            self.assertEqual(len(list(results_dir.glob("seeded_commoncrawl_fetch_*.json"))), 1)
+
 
 if __name__ == "__main__":
     unittest.main()
