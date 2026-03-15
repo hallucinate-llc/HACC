@@ -7,6 +7,8 @@ import argparse
 import os
 import importlib.util
 import json
+import shutil
+import subprocess
 import sys
 from datetime import UTC, datetime
 from pathlib import Path
@@ -175,6 +177,199 @@ def _build_agentic_llm_router(provider_name: Optional[str]) -> Any:
     return _PinnedRunnerLLMRouter(resolved_provider)
 
 
+def _resolve_autopatch_validation_level() -> Any:
+    _ensure_complaint_generator_on_path()
+
+    from ipfs_datasets_py.optimizers.agentic.validation import ValidationLevel
+
+    raw_level = os.environ.get("HACC_AUTOPATCH_VALIDATION_LEVEL", "standard").strip().lower()
+    try:
+        return ValidationLevel(raw_level)
+    except Exception:
+        return ValidationLevel.STANDARD
+
+
+def _autopatch_validation_test_files(target_files: List[Path]) -> List[Path]:
+    test_map = {
+        "complaint_phases/phase_manager.py": [
+            COMPLAINT_GENERATOR_ROOT / "tests" / "test_complaint_phases.py",
+        ],
+        "complaint_phases/denoiser.py": [
+            COMPLAINT_GENERATOR_ROOT / "tests" / "test_enhanced_denoising.py",
+            COMPLAINT_GENERATOR_ROOT / "tests" / "test_complaint_phases.py",
+        ],
+        "mediator/inquiries.py": [
+            COMPLAINT_GENERATOR_ROOT / "tests" / "test_inquiries.py",
+        ],
+        "mediator/mediator.py": [
+            COMPLAINT_GENERATOR_ROOT / "tests" / "test_mediator.py",
+            COMPLAINT_GENERATOR_ROOT / "tests" / "test_mediator_three_phase.py",
+        ],
+    }
+    resolved: List[Path] = []
+    for path in target_files:
+        key = str(path).replace("\\", "/")
+        resolved.extend(test_map.get(key, []))
+    return list(dict.fromkeys(resolved))
+
+
+def _validate_generated_patch(*, patch_path: str | Path, repo_root: Path) -> Dict[str, Any]:
+    _ensure_complaint_generator_on_path()
+
+    from ipfs_datasets_py.optimizers.agentic.patch_control import PatchManager
+    from ipfs_datasets_py.optimizers.agentic.validation import OptimizationValidator, ValidationLevel
+
+    resolved_patch_path = Path(patch_path).resolve()
+    manager = PatchManager()
+    patch = manager.load_patch(resolved_patch_path)
+    validation_level = _resolve_autopatch_validation_level()
+    target_files = [Path(path) for path in getattr(patch, "target_files", [])]
+
+    summary: Dict[str, Any] = {
+        "passed": False,
+        "level": getattr(validation_level, "value", str(validation_level)),
+        "patch_path": str(resolved_patch_path),
+        "target_files": [str(path) for path in target_files],
+        "pytest_files": [],
+        "file_results": [],
+        "errors": [],
+        "warnings": [],
+    }
+
+    if not target_files:
+        summary["passed"] = False
+        summary["errors"].append("Patch metadata does not include target files")
+        return summary
+
+    python_targets = [path for path in target_files if path.suffix == ".py"]
+    if not python_targets:
+        summary["passed"] = True
+        summary["warnings"].append("Patch does not modify Python files; skipping code validation")
+        return summary
+
+    with tempfile.TemporaryDirectory(prefix="hacc_patch_validation_") as tmpdir:
+        stage_root = Path(tmpdir)
+        stage_tests = _autopatch_validation_test_files(target_files)
+        summary["pytest_files"] = [str(path.relative_to(repo_root)) for path in stage_tests if path.exists()]
+
+        copied_roots = set()
+        for relative_path in target_files:
+            top_level = relative_path.parts[0] if relative_path.parts else ""
+            if top_level and top_level not in copied_roots:
+                source_root = (repo_root / top_level).resolve()
+                staged_root = stage_root / top_level
+                if source_root.is_dir():
+                    shutil.copytree(
+                        source_root,
+                        staged_root,
+                        dirs_exist_ok=True,
+                        ignore=shutil.ignore_patterns("__pycache__", "*.pyc"),
+                    )
+                    copied_roots.add(top_level)
+
+        for test_path in stage_tests:
+            if not test_path.exists():
+                continue
+            relative_test_path = test_path.relative_to(repo_root)
+            staged_test_path = stage_root / relative_test_path
+            staged_test_path.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(test_path, staged_test_path)
+
+        pytest_ini = repo_root / "pytest.ini"
+        if pytest_ini.exists():
+            shutil.copy2(pytest_ini, stage_root / "pytest.ini")
+
+        staged_patch_path = stage_root / "candidate.patch"
+        staged_patch_path.write_text(patch.diff_content, encoding="utf-8")
+
+        check_result = subprocess.run(
+            ["git", "apply", "--check", str(staged_patch_path)],
+            cwd=stage_root,
+            capture_output=True,
+            text=True,
+        )
+        if check_result.returncode != 0:
+            summary["errors"].append(check_result.stderr.strip() or "git apply --check failed")
+            return summary
+
+        apply_result = subprocess.run(
+            ["git", "apply", str(staged_patch_path)],
+            cwd=stage_root,
+            capture_output=True,
+            text=True,
+        )
+        if apply_result.returncode != 0:
+            summary["errors"].append(apply_result.stderr.strip() or "git apply failed")
+            return summary
+
+        validator = OptimizationValidator(level=ValidationLevel.BASIC, parallel=False, max_workers=1)
+        overall_passed = True
+        overall_errors: List[str] = []
+        overall_warnings: List[str] = []
+        file_results: List[Dict[str, Any]] = []
+
+        for relative_path in python_targets:
+            staged_path = stage_root / relative_path
+            if not staged_path.exists():
+                overall_passed = False
+                overall_errors.append(f"{relative_path}: staged file missing after patch apply")
+                file_results.append(
+                    {
+                        "file": str(relative_path),
+                        "passed": False,
+                        "errors": ["staged file missing after patch apply"],
+                        "warnings": [],
+                    }
+                )
+                continue
+
+            code = staged_path.read_text(encoding="utf-8")
+            detailed_result = validator.validate(
+                code=code,
+                target_files=[staged_path],
+                level=ValidationLevel.BASIC,
+                parallel=False,
+                use_enhanced_parallel=False,
+                context={"repo_root": str(stage_root)},
+            )
+            file_result = {
+                "file": str(relative_path),
+                "passed": bool(detailed_result.passed),
+                "errors": list(detailed_result.errors),
+                "warnings": list(detailed_result.warnings),
+            }
+            file_results.append(file_result)
+            if not detailed_result.passed:
+                overall_passed = False
+                overall_errors.extend(f"{relative_path}: {error}" for error in detailed_result.errors)
+            overall_warnings.extend(f"{relative_path}: {warning}" for warning in detailed_result.warnings)
+
+        if stage_tests:
+            relative_pytest_files = [str(path.relative_to(repo_root)) for path in stage_tests if path.exists()]
+            pytest_result = subprocess.run(
+                ["pytest", "-q", *relative_pytest_files],
+                cwd=stage_root,
+                capture_output=True,
+                text=True,
+                env={**os.environ, "PYTHONPATH": str(stage_root)},
+            )
+            if pytest_result.returncode != 0:
+                overall_passed = False
+                combined = (pytest_result.stdout or "") + (pytest_result.stderr or "")
+                failure_lines = [line.strip() for line in combined.splitlines() if line.strip()]
+                overall_errors.append(
+                    failure_lines[-1] if failure_lines else "Targeted pytest validation failed"
+                )
+            elif "passed" not in (pytest_result.stdout or ""):
+                overall_warnings.append("Targeted pytest validation produced no explicit pass summary")
+
+        summary["passed"] = overall_passed
+        summary["file_results"] = file_results
+        summary["errors"] = overall_errors
+        summary["warnings"] = overall_warnings
+        return summary
+
+
 def _run_agentic_autopatch(
     *,
     optimizer: Any,
@@ -237,16 +432,38 @@ def _run_agentic_autopatch(
         summary["patch_cid"] = getattr(result, "patch_cid", None)
         summary["metadata"] = _sanitize_for_json(getattr(result, "metadata", {}))
         summary["metrics"] = _sanitize_for_json(getattr(result, "metrics", {}))
-        summary["validation"] = _sanitize_for_json(getattr(result, "validation", None))
+        optimizer_validation = _sanitize_for_json(getattr(result, "validation", None))
+        summary["validation"] = {
+            "optimizer_result_validation": optimizer_validation,
+            "patch_validation": None,
+        }
         result_error = getattr(result, "error_message", None)
         if result_error:
             summary["error"] = str(result_error)
 
+        if summary["patch_path"]:
+            patch_validation = _validate_generated_patch(
+                patch_path=summary["patch_path"],
+                repo_root=COMPLAINT_GENERATOR_ROOT,
+            )
+            summary["validation"]["patch_validation"] = _sanitize_for_json(patch_validation)
+            if not patch_validation.get("passed", False) and not summary["error"]:
+                summary["error"] = "Generated patch failed validation"
+
         if apply_patch and summary["patch_path"]:
             from ipfs_datasets_py.optimizers.agentic.patch_control import PatchManager
 
+            patch_validation = (summary.get("validation") or {}).get("patch_validation") or {}
+            if not patch_validation.get("passed", False):
+                summary["applied"] = True
+                summary["apply_success"] = False
+                if not summary["error"]:
+                    summary["error"] = "Patch apply blocked by validation failure"
+                raise RuntimeError(summary["error"])
+
             manager = PatchManager(patches_dir=autopatch_dir)
             patch = manager.load_patch(Path(summary["patch_path"]))
+            patch.validated = True
             summary["applied"] = True
             summary["apply_success"] = bool(manager.apply_patch(patch, COMPLAINT_GENERATOR_ROOT))
             if not summary["apply_success"]:

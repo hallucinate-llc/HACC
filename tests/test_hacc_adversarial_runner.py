@@ -162,21 +162,33 @@ SUGGESTIONS:
                     metadata={"kind": "runner-test"},
                 ),
             ) as autopatch_mock:
-                summary = run_hacc_adversarial_batch(
-                    output_dir=tmpdir,
-                    num_sessions=1,
-                    max_turns=1,
-                    max_parallel=1,
-                    hacc_preset="core_hacc_policies",
-                    demo=True,
-                    emit_autopatch=True,
-                )
+                with mock.patch(
+                    "hacc_adversarial_runner._validate_generated_patch",
+                    return_value={
+                        "passed": True,
+                        "level": "standard",
+                        "target_files": ["mediator/inquiries.py"],
+                        "file_results": [],
+                        "errors": [],
+                        "warnings": [],
+                    },
+                ):
+                    summary = run_hacc_adversarial_batch(
+                        output_dir=tmpdir,
+                        num_sessions=1,
+                        max_turns=1,
+                        max_parallel=1,
+                        hacc_preset="core_hacc_policies",
+                        demo=True,
+                        emit_autopatch=True,
+                    )
 
             self.assertTrue(summary["autopatch"]["requested"])
             self.assertTrue(summary["autopatch"]["success"])
             self.assertEqual(summary["autopatch"]["patch_cid"], "bafy-autopatch")
             self.assertEqual(summary["artifacts"]["autopatch_patch_path"], str(fake_patch.resolve()))
             self.assertTrue(Path(summary["artifacts"]["autopatch_summary_json"]).is_file())
+            self.assertTrue(summary["autopatch"]["validation"]["patch_validation"]["passed"])
             autopatch_kwargs = autopatch_mock.call_args.kwargs
             self.assertEqual(autopatch_kwargs["method"], "test_driven")
             self.assertEqual(summary["autopatch"]["profile"], "question_flow")
@@ -195,7 +207,7 @@ SUGGESTIONS:
         fake_patch = Path("/tmp/fake-apply.patch")
         with tempfile.TemporaryDirectory() as tmpdir:
             fake_patch.write_text("diff --git a/file b/file\n", encoding="utf-8")
-            patch_instance = object()
+            patch_instance = SimpleNamespace(validated=False)
             with mock.patch.object(
                 optimizer_module.Optimizer,
                 "run_agentic_autopatch",
@@ -216,16 +228,27 @@ SUGGESTIONS:
                         "apply_patch",
                         return_value=True,
                     ) as apply_mock:
-                        summary = run_hacc_adversarial_batch(
-                            output_dir=tmpdir,
-                            num_sessions=1,
-                            max_turns=1,
-                            max_parallel=1,
-                            hacc_preset="core_hacc_policies",
-                            demo=True,
-                            apply_autopatch=True,
-                            autopatch_target_files=["mediator/mediator.py"],
-                        )
+                        with mock.patch(
+                            "hacc_adversarial_runner._validate_generated_patch",
+                            return_value={
+                                "passed": True,
+                                "level": "standard",
+                                "target_files": ["mediator/mediator.py"],
+                                "file_results": [],
+                                "errors": [],
+                                "warnings": [],
+                            },
+                        ):
+                            summary = run_hacc_adversarial_batch(
+                                output_dir=tmpdir,
+                                num_sessions=1,
+                                max_turns=1,
+                                max_parallel=1,
+                                hacc_preset="core_hacc_policies",
+                                demo=True,
+                                apply_autopatch=True,
+                                autopatch_target_files=["mediator/mediator.py"],
+                            )
 
             self.assertTrue(summary["autopatch"]["requested"])
             self.assertTrue(summary["autopatch"]["success"])
@@ -235,6 +258,69 @@ SUGGESTIONS:
             apply_mock.assert_called_once()
             self.assertEqual(apply_mock.call_args.args[0], patch_instance)
             self.assertEqual(apply_mock.call_args.args[1], complaint_generator_root)
+
+    def test_runner_blocks_autopatch_apply_when_patch_validation_fails(self) -> None:
+        complaint_generator_root = REPO_ROOT / "complaint-generator"
+        if str(complaint_generator_root) not in sys.path:
+            sys.path.insert(0, str(complaint_generator_root))
+
+        import adversarial_harness.optimizer as optimizer_module
+        import ipfs_datasets_py.optimizers.agentic.patch_control as patch_control_module
+
+        fake_patch = Path("/tmp/fake-invalid.patch")
+        with tempfile.TemporaryDirectory() as tmpdir:
+            fake_patch.write_text("diff --git a/file b/file\n", encoding="utf-8")
+            with mock.patch.object(
+                optimizer_module.Optimizer,
+                "run_agentic_autopatch",
+                return_value=SimpleNamespace(
+                    success=True,
+                    patch_path=fake_patch,
+                    patch_cid="bafy-invalid",
+                    metadata={"kind": "invalid-apply-test"},
+                ),
+            ):
+                with mock.patch(
+                    "hacc_adversarial_runner._validate_generated_patch",
+                    return_value={
+                        "passed": False,
+                        "level": "standard",
+                        "target_files": ["complaint_phases/phase_manager.py"],
+                        "file_results": [
+                            {
+                                "file": "complaint_phases/phase_manager.py",
+                                "passed": False,
+                                "errors": ["syntax failure"],
+                                "warnings": [],
+                            }
+                        ],
+                        "errors": ["complaint_phases/phase_manager.py: syntax failure"],
+                        "warnings": [],
+                    },
+                ):
+                    with mock.patch.object(
+                        patch_control_module.PatchManager,
+                        "apply_patch",
+                        return_value=True,
+                    ) as apply_mock:
+                        summary = run_hacc_adversarial_batch(
+                            output_dir=tmpdir,
+                            num_sessions=1,
+                            max_turns=1,
+                            max_parallel=1,
+                            hacc_preset="core_hacc_policies",
+                            demo=True,
+                            apply_autopatch=True,
+                            autopatch_target_files=["complaint_phases/phase_manager.py"],
+                        )
+
+            self.assertTrue(summary["autopatch"]["requested"])
+            self.assertTrue(summary["autopatch"]["success"])
+            self.assertTrue(summary["autopatch"]["applied"])
+            self.assertFalse(summary["autopatch"]["apply_success"])
+            self.assertFalse(summary["autopatch"]["validation"]["patch_validation"]["passed"])
+            self.assertIn("validation", str(summary["autopatch"]["error"]).lower())
+            apply_mock.assert_not_called()
 
 
 if __name__ == "__main__":
