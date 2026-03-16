@@ -297,6 +297,39 @@ class HacceEvidenceSeedGenerationTests(unittest.TestCase):
         self.assertIn("due process rights", excerpt)
         self.assertLess(excerpt.lower().find("request an informal hearing"), excerpt.lower().rfind("hearing decision") + 1)
 
+    def test_extract_source_window_prefers_admin_plan_notice_body_over_toc_heading_block(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            source_path = Path(tmpdir) / "admin-plan.txt"
+            source_path.write_text(
+                "16-11 Notice to the Applicant [24 CFR 982.554(a)] ........ 16-11 "
+                "Scheduling an Informal Review ........ 16-11 "
+                "Informal Review Procedures [24 CFR 982.554(b)] ........ 16-11 "
+                "Informal Review Decision [24 CFR 982.554(b)] ........ 16-15\n\n"
+                "Notice to the Applicant [24 CFR 982.554(a)]\n\n"
+                "HACC must give an applicant prompt notice of a decision denying assistance. "
+                "The notice must state that the applicant may request an informal review and describe how to obtain it.\n\n"
+                "Scheduling an Informal Review\n\n"
+                "HACC Policy\n\n"
+                "A request for an informal review must be made in writing and delivered to HACC. "
+                "HACC must schedule and send written notice of the informal review within 10 business days.\n",
+                encoding="utf-8",
+            )
+
+            excerpt = _extract_source_window(
+                source_path=str(source_path),
+                anchor_terms=[
+                    "Notice to the Applicant",
+                    "Scheduling an Informal Review",
+                    "Informal Review Procedures",
+                    "Informal Review Decision",
+                ],
+                fallback_snippet="Notice to the Applicant",
+            )
+
+        self.assertIn("prompt notice of a decision denying assistance", excerpt)
+        self.assertIn("must schedule and send written notice", excerpt)
+        self.assertNotIn("........ 16-11", excerpt)
+
     def test_extract_source_window_prefers_knowledge_graph_text_before_raw_blob(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             repo_root = Path(tmpdir)
