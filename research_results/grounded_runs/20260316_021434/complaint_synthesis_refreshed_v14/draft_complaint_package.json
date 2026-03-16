@@ -1,0 +1,165 @@
+{
+  "generated_at": "2026-03-16T06:41:23.165996+00:00",
+  "preset": "core_hacc_policies",
+  "filing_forum": "hud",
+  "session_id": "session_20260316_021508_000",
+  "critic_score": 0.7101666666666666,
+  "summary": "HACC policy defines a grievance as a tenant dispute concerning HACC action or inaction. HACC policy says some grievance procedures may be limited when HUD has issued a due process determination.",
+  "caption": {
+    "court": "HUD, U.S. Department of Housing and Urban Development, Office of Fair Housing and Equal Opportunity",
+    "case_title": "Administrative Fair Housing Complaint",
+    "document_title": "Draft HUD Housing Discrimination Complaint",
+    "caption_note": "Retaliation complaint anchored to HACC core housing policies"
+  },
+  "parties": {
+    "plaintiff": "Aggrieved person / complainant (name to be inserted).",
+    "defendant": "Housing Authority of Clackamas County (HACC), respondent."
+  },
+  "jurisdiction_and_venue": [
+    "This draft is structured as an administrative housing-discrimination intake for HUD and should be tailored to the final statutory basis asserted.",
+    "HUD jurisdiction and timeliness should be confirmed against the final incident dates, protected-basis theory, and requested relief.",
+    "The dispute appears to arise from housing-program administration, adverse action, and procedural protections connected to HACC operations."
+  ],
+  "legal_theory_summary": {
+    "theory_labels": [
+      "retaliation",
+      "due_process_failure"
+    ],
+    "protected_bases": [],
+    "authority_hints": [
+      "Fair Housing Act anti-retaliation provisions",
+      "24 C.F.R. Part 100"
+    ]
+  },
+  "anchor_sections": [
+    "grievance_hearing",
+    "appeal_rights",
+    "adverse_action"
+  ],
+  "factual_allegations": [
+    "The complaint centers on Retaliation complaint anchored to HACC core housing policies.",
+    "The complainant contends that the grievance or hearing process was not handled in the manner described by HACC policy.",
+    "The complainant contends that appeal rights and due-process protections were not clearly honored.",
+    "The complainant contends that HACC moved toward denial or termination of assistance without clear notice and documented process.",
+    "The core documentary support for these allegations appears in Exhibit A (ADMISSIONS AND CONTINUED OCCUPANCY POLICY) and Exhibit B (ADMINISTRATIVE PLAN)."
+  ],
+  "claims_theory": [
+    "Likely authority implicated by the current theory includes Fair Housing Act anti-retaliation provisions, 24 C.F.R. Part 100.",
+    "HACC appears to have pursued or upheld a denial or termination of assistance without a clearly documented and transparent adverse-action process.",
+    "The available policy language suggests the complainant should have received an informal review or hearing, written notice, and a review decision, but the intake narrative describes those protections as missing or unclear.",
+    "The complainant also describes a retaliation theory based on the timing of the adverse treatment after protected complaints or grievance activity.",
+    "The strongest policy support for these theories is: HACC policy defines a grievance as a tenant dispute concerning HACC action or inaction. HACC policy says some grievance procedures may be limited when HUD has issued a due process determination. That documentary support is reflected in Exhibit A (ADMISSIONS AND CONTINUED OCCUPANCY POLICY) and Exhibit B (ADMINISTRATIVE PLAN)."
+  ],
+  "policy_basis": [
+    "ADMISSIONS AND CONTINUED OCCUPANCY POLICY supports grievance hearing, appeal rights: [hearing] GRIEVANCES AND APPEALS INTRODUCTION This chapter discusses grievances and appeals pertaining to HACC actions or failures to act that adversely affect public housing applicants or residents. The policies are discussed in the following three parts: Part I: Informal Hearings for Public Housing Applicants. Full passage: GRIEVANCES AND APPEALS INTRODUCTION This chapter discusses grievances and appeals pertaining to HACC actions or failures to act that adversely affect public housing applicants or residents. The policies are discussed in the following three parts: Part I: Informal Hearings for Public Housing Applicants. This part outlines the requirements and procedures for informal hearings for public housing applicants. Part II: Informal Hearings with Regard to Noncitizens. This part discusses informal hearings regarding citizenship status and where they differ from the requirements for general applicant and tenant grievances.",
+    "ADMINISTRATIVE PLAN supports grievance hearing, appeal rights, adverse action: [notice, hearing, adverse_action] HACC policy describes scheduling and procedures for informal review. Full passage: 16-11 Scheduling an Informal Review ................................................... 16-11 Informal Review Procedures [24 CFR 982.554(b)] ..................... 16-11 Informal Review Decision [24 CFR 982.554(b)] ......................... 16-15 16-III.C. Informal Hearings for Participants [24 CFR 982.555] ....................... 16-16 Decisions Subject to Informal Hearing ......................................... 16-16 Informal Hearing Procedures ........................................................ 16-20 16-III.D. Hearing and Appeal Provisions for Noncitizens [24 CFR 5.514] ................................................................................... 16-28 Notice of Denial or Termination of Assistance [24 CFR 5.514(d)] ........................................................................"
+  ],
+  "causes_of_action": [
+    {
+      "title": "Administrative Fair Housing Process Failure",
+      "theory": "The draft facts suggest denial or termination activity without the clear notice, review, or hearing process described by HACC policy.",
+      "support": [
+        "Likely authority implicated by the current theory includes Fair Housing Act anti-retaliation provisions, 24 C.F.R. Part 100.",
+        "HACC appears to have pursued or upheld a denial or termination of assistance without a clearly documented and transparent adverse-action process.",
+        "Documentary support: Exhibit B (ADMINISTRATIVE PLAN). Rationale: selected for stronger notice and process language."
+      ],
+      "selected_exhibits": [
+        {
+          "exhibit_id": "Exhibit B",
+          "label": "ADMINISTRATIVE PLAN"
+        }
+      ],
+      "selection_rationale": "selected for stronger notice and process language",
+      "selection_tags": [
+        "notice",
+        "hearing",
+        "adverse_action"
+      ]
+    },
+    {
+      "title": "Retaliation for Protected Fair Housing Activity",
+      "theory": "The complainant narrative suggests adverse treatment after raising concerns or invoking grievance protections.",
+      "support": [
+        "Likely authority implicated by the current theory includes Fair Housing Act anti-retaliation provisions, 24 C.F.R. Part 100.",
+        "The complainant also describes a retaliation theory based on the timing of the adverse treatment after protected complaints or grievance activity.",
+        "Documentary support: Exhibit B (ADMINISTRATIVE PLAN). Rationale: selected as the closest documentary match for this claim."
+      ],
+      "selected_exhibits": [
+        {
+          "exhibit_id": "Exhibit B",
+          "label": "ADMINISTRATIVE PLAN"
+        }
+      ],
+      "selection_rationale": "selected as the closest documentary match for this claim",
+      "selection_tags": []
+    }
+  ],
+  "anchor_passages": [
+    "ADMISSIONS AND CONTINUED OCCUPANCY POLICY [grievance_hearing, appeal_rights]: [hearing] GRIEVANCES AND APPEALS INTRODUCTION This chapter discusses grievances and appeals pertaining to HACC actions or failures to act that adversely affect public housing applicants or residents. The policies are discussed in the following three parts: Part I: Informal Hearings for Public Housing Applicants. Full passage: GRIEVANCES AND APPEALS INTRODUCTION This chapter discusses grievances and appeals pertaining to HACC actions or failures to act that adversely affect public housing applicants or residents. The policies are discussed in the following three parts: Part I: Informal Hearings for Public Housing Applicants. This part outlines the requirements and procedures for informal hearings for public housing applicants. Part II: Informal Hearings with Regard to Noncitizens. This part discusses informal hearings regarding citizenship status and where they differ from the requirements for general applicant and tenant grievances.",
+    "ADMINISTRATIVE PLAN [grievance_hearing, appeal_rights, adverse_action]: [notice, hearing, adverse_action] HACC policy describes scheduling and procedures for informal review. Full passage: 16-11 Scheduling an Informal Review ................................................... 16-11 Informal Review Procedures [24 CFR 982.554(b)] ..................... 16-11 Informal Review Decision [24 CFR 982.554(b)] ......................... 16-15 16-III.C. Informal Hearings for Participants [24 CFR 982.555] ....................... 16-16 Decisions Subject to Informal Hearing ......................................... 16-16 Informal Hearing Procedures ........................................................ 16-20 16-III.D. Hearing and Appeal Provisions for Noncitizens [24 CFR 5.514] ................................................................................... 16-28 Notice of Denial or Termination of Assistance [24 CFR 5.514(d)] ........................................................................"
+  ],
+  "supporting_evidence": [
+    "ADMISSIONS AND CONTINUED OCCUPANCY POLICY: [hearing] GRIEVANCES AND APPEALS INTRODUCTION This chapter discusses grievances and appeals pertaining to HACC actions or failures to act that adversely affect public housing applicants or residents. The policies are discussed in the following three parts: Part I: Informal Hearings for Public Housing Applicants. Full passage: GRIEVANCES AND APPEALS INTRODUCTION This chapter discusses grievances and appeals pertaining to HACC actions or failures to act that adversely affect public housing applicants or residents. The policies are discussed in the following three parts: Part I: Informal Hearings for Public Housing Applicants. This part outlines the requirements and procedures for informal hearings for public housing applicants. Part II: Informal Hearings with Regard to Noncitizens. This part discusses informal hearings regarding citizenship status and where they differ from the requirements for general applicant and tenant grievances. (/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b).",
+    "ADMINISTRATIVE PLAN: [notice, hearing, adverse_action] HACC policy describes scheduling and procedures for informal review. Full passage: 16-11 Scheduling an Informal Review ................................................... 16-11 Informal Review Procedures [24 CFR 982.554(b)] ..................... 16-11 Informal Review Decision [24 CFR 982.554(b)] ......................... 16-15 16-III.C. Informal Hearings for Participants [24 CFR 982.555] ....................... 16-16 Decisions Subject to Informal Hearing ......................................... 16-16 Informal Hearing Procedures ........................................................ 16-20 16-III.D. Hearing and Appeal Provisions for Noncitizens [24 CFR 5.514] ................................................................................... 16-28 Notice of Denial or Termination of Assistance [24 CFR 5.514(d)] ........................................................................ (/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858).",
+    "ADMISSIONS AND CONTINUED OCCUPANCY POLICY: prepared as mediator evidence for grounded intake; uploaded into mediator evidence store (hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b).",
+    "ADMINISTRATIVE PLAN: prepared as mediator evidence for grounded intake; uploaded into mediator evidence store (hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858)."
+  ],
+  "proposed_allegations": [
+    "Complainant alleges conduct arising from Retaliation complaint anchored to HACC core housing policies.",
+    "The available HACC materials suggest that HACC policy defines a grievance as a tenant dispute concerning HACC action or inaction. HACC policy says some grievance procedures may be limited when HUD has issued a due process determination.",
+    "The intake record suggests a dispute involving grievance hearing.",
+    "The intake record suggests a dispute involving appeal rights.",
+    "The intake record suggests a dispute involving adverse action.",
+    "During intake, the complainant stated that I reported discrimination to human resources after my supervisor denied a promotion and made repeated comments about women not being fit for leadership; Two days later I was terminated."
+  ],
+  "requested_relief": [
+    "Administrative investigation of the challenged housing practices and adverse-action process.",
+    "Corrective action requiring clear notice, fair review, and non-retaliation safeguards.",
+    "Appropriate administrative remedies, damages, and other relief authorized by fair housing law.",
+    "Any additional relief HUD is authorized to obtain or recommend."
+  ],
+  "grounded_evidence_summary": [
+    "Grounding query: retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+    "Grounding claim type: housing_discrimination",
+    "Mediator preload / upload count: 2",
+    "Claim-support links recorded: 0",
+    "Ground the complaint chatbot in the uploaded repository evidence for 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Use the uploaded materials (ADMISSIONS AND CONTINUED OCCUPANCY POLICY, ADMINISTRATIVE PLAN) as factual grounding, ask the user to connect each document to case-specific events, and identify missing timeline, actor, harm, and remedy facts."
+  ],
+  "selection_rationale": {},
+  "source_artifacts": {
+    "results_json": "/home/barberb/HACC/research_results/grounded_runs/20260316_021434/adversarial/adversarial_results.json",
+    "matrix_summary": null,
+    "selection_source": "results_json",
+    "grounded_run_dir": "/home/barberb/HACC/research_results/grounded_runs/20260316_021434",
+    "grounding_bundle_json": "/home/barberb/HACC/research_results/grounded_runs/20260316_021434/grounding_bundle.json",
+    "evidence_upload_report_json": "/home/barberb/HACC/research_results/grounded_runs/20260316_021434/evidence_upload_report.json"
+  },
+  "claim_selection_summary": [
+    {
+      "title": "Administrative Fair Housing Process Failure",
+      "selection_tags": [
+        "notice",
+        "hearing",
+        "adverse_action"
+      ],
+      "selected_exhibits": [
+        {
+          "exhibit_id": "Exhibit B",
+          "label": "ADMINISTRATIVE PLAN"
+        }
+      ],
+      "selection_rationale": "selected for stronger notice and process language"
+    },
+    {
+      "title": "Retaliation for Protected Fair Housing Activity",
+      "selection_tags": [],
+      "selected_exhibits": [
+        {
+          "exhibit_id": "Exhibit B",
+          "label": "ADMINISTRATIVE PLAN"
+        }
+      ],
+      "selection_rationale": "selected as the closest documentary match for this claim"
+    }
+  ]
+}
