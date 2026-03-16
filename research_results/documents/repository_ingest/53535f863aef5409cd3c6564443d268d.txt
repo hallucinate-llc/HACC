@@ -1,0 +1,612 @@
+{
+"generated": "2025-12-31T12:59:00",
+"cdx_api": "https://index.commoncrawl.org/CC-MAIN-2025-51-index",
+"sites": {
+"clackamas.us": {
+"terms": [
+"equity lens",
+"racial equity framework",
+"OHCS",
+"cultural competence",
+"lived experience",
+"targeted universalism",
+"equity impact",
+"quota",
+"set-aside",
+"preference",
+"race-based",
+"STEM",
+"OED",
+"DEI",
+"AMI",
+"ODOE",
+"NSF",
+"ORCA",
+"PSH",
+"OBO",
+"Oregon Housing and Community Services",
+"Oregon Employment Department",
+"DEQ",
+"DEI PLAN",
+"Paid Leave Oregon",
+"LIHTC",
+"Equity and Inclusion Office",
+"DLCD",
+"COBID",
+"RANKING MEMBER ZOE LOFGREN",
+"MWESB",
+"Oregon Agency Expectations Page",
+"Oregon Department of Energy",
+"HOUSE OF REPRESENTATIVES COMMITTEE ON SCIENCE",
+"Requirement to",
+"Percentage of",
+"Instructions for",
+"National Science Foundation",
+"ANNUAL ENVIRONMENTAL JUSTICE COUNCIL REPORT",
+"Housing Stability Council",
+"DEMOCRATIC STAFF REPORT",
+"Strategic Plan",
+"ORS 182",
+"VBE",
+"OREA",
+"BIPOC",
+"State of Oregon",
+"HACC",
+"Human and Social Good",
+"Funded Convergence Accelerator Workshop Award No"
+],
+"total_cc_rows": 500,
+"scored_rows": 30,
+"top": [
+{
+"url": "https://www.clackamas.us/transportation/motorcarrier",
+"score": 3,
+"timestamp": "20251210012524",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.clackamas.us/robots.txt",
+"score": 3,
+"timestamp": "20251209004629",
+"mime": "text/plain",
+"status": "200"
+},
+{
+"url": "https://www.clackamas.us/robots.txt",
+"score": 3,
+"timestamp": "20251209193557",
+"mime": "text/plain",
+"status": "200"
+},
+{
+"url": "https://www.clackamas.us/robots.txt",
+"score": 3,
+"timestamp": "20251210011938",
+"mime": "text/plain",
+"status": "200"
+},
+{
+"url": "https://www.clackamas.us/robots.txt",
+"score": 3,
+"timestamp": "20251214234650",
+"mime": "text/plain",
+"status": "200"
+},
+{
+"url": "https://www.clackamas.us/robots.txt",
+"score": 3,
+"timestamp": "20251217082338",
+"mime": "text/plain",
+"status": "200"
+},
+{
+"url": "https://www.clackamas.us/recycling/multifamily.html",
+"score": 3,
+"timestamp": "20251210022146",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.clackamas.us/event/2025-12-19/all-ages-family-storytime-oak-lodge-public-library",
+"score": 3,
+"timestamp": "20251209021315",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.clackamas.us/event/2025-12-05/all-ages-family-storytime-oak-lodge-public-library",
+"score": 3,
+"timestamp": "20251209022838",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.clackamas.us/event/2025-12-05/all-ages-family-storytime-gladstone-library",
+"score": 3,
+"timestamp": "20251209012221",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.clackamas.us/event/2025-11-22/all-ages-family-storytime-gladstone-library",
+"score": 3,
+"timestamp": "20251209023159",
+"mime": "text/html",
+"status": "404"
+},
+{
+"url": "https://www.clackamas.us/event/2025-11-21/all-ages-family-storytime-oak-lodge-public-library",
+"score": 3,
+"timestamp": "20251209024016",
+"mime": "text/html",
+"status": "404"
+},
+{
+"url": "https://www.clackamas.us/event/2025-11-21/all-ages-family-storytime-gladstone-library",
+"score": 3,
+"timestamp": "20251209013241",
+"mime": "text/html",
+"status": "404"
+},
+{
+"url": "https://www.clackamas.us/event/2025-11-14/all-ages-family-storytime-oak-lodge-public-library",
+"score": 3,
+"timestamp": "20251209012544",
+"mime": "text/html",
+"status": "404"
+},
+{
+"url": "https://www.clackamas.us/event/2025-11-14/all-ages-family-storytime-gladstone-library",
+"score": 3,
+"timestamp": "20251209020635",
+"mime": "text/html",
+"status": "404"
+},
+{
+"url": "https://www.clackamas.us/event/2025-11-12/transportation-system-plan-public-advisory-committee-meeting-1",
+"score": 3,
+"timestamp": "20251209022453",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.clackamas.us/event/2025-07-19/all-ages-family-storytime-gladstone-library",
+"score": 3,
+"timestamp": "20251217095023",
+"mime": "text/html",
+"status": "404"
+},
+{
+"url": "https://www.clackamas.us/event/2025-07-18/all-ages-family-storytime-oak-lodge-public-library",
+"score": 3,
+"timestamp": "20251210024052",
+"mime": "text/html",
+"status": "404"
+},
+{
+"url": "https://www.clackamas.us/event/2025-07-05/all-ages-family-storytime-gladstone-library",
+"score": 3,
+"timestamp": "20251210013429",
+"mime": "text/html",
+"status": "404"
+},
+{
+"url": "https://www.clackamas.us/event/2025-05-24/all-ages-family-storytime-gladstone-library",
+"score": 3,
+"timestamp": "20251209014146",
+"mime": "text/html",
+"status": "404"
+},
+{
+"url": "https://www.clackamas.us/event/2025-05-17/all-ages-family-storytime-gladstone-library",
+"score": 3,
+"timestamp": "20251210025021",
+"mime": "text/html",
+"status": "404"
+},
+{
+"url": "https://www.clackamas.us/event/2025-05-09/all-ages-family-storytime-gladstone-library",
+"score": 3,
+"timestamp": "20251217093844",
+"mime": "text/html",
+"status": "404"
+},
+{
+"url": "https://www.clackamas.us/event/2025-05-03/all-ages-family-storytime-gladstone-library",
+"score": 3,
+"timestamp": "20251210014753",
+"mime": "text/html",
+"status": "404"
+},
+{
+"url": "https://www.clackamas.us/event/2025-04-19/all-ages-family-storytime-gladstone-library",
+"score": 3,
+"timestamp": "20251217093319",
+"mime": "text/html",
+"status": "404"
+},
+{
+"url": "https://www.clackamas.us/event/2025-03-28/all-ages-family-storytime-gladstone-library",
+"score": 3,
+"timestamp": "20251209022929",
+"mime": "text/html",
+"status": "404"
+},
+{
+"url": "https://www.clackamas.us/event/2025-03-14/all-ages-family-storytime-oak-lodge-public-library",
+"score": 3,
+"timestamp": "20251210030836",
+"mime": "text/html",
+"status": "404"
+},
+{
+"url": "https://www.clackamas.us/event/2024-12-21/all-ages-family-storytime-gladstone-library",
+"score": 3,
+"timestamp": "20251209012921",
+"mime": "text/html",
+"status": "404"
+},
+{
+"url": "https://www.clackamas.us/event/2024-07-25/summer-show-the-big-clown-show-with-michael-oneill-gladstone-center-for-children-and-families",
+"score": 3,
+"timestamp": "20251210023523",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.clackamas.us/da/familysupport.html",
+"score": 3,
+"timestamp": "20251209023532",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://clackamas.us/robots.txt",
+"score": 3,
+"timestamp": "20251214234650",
+"mime": "text/html",
+"status": "301"
+}
+]
+},
+"oregon.gov": {
+"terms": [
+"equity lens",
+"racial equity framework",
+"OHCS",
+"cultural competence",
+"lived experience",
+"targeted universalism",
+"equity impact",
+"quota",
+"set-aside",
+"preference",
+"race-based",
+"STEM",
+"OED",
+"DEI",
+"AMI",
+"ODOE",
+"NSF",
+"ORCA",
+"PSH",
+"OBO",
+"Oregon Housing and Community Services",
+"Oregon Employment Department",
+"DEQ",
+"DEI PLAN",
+"Paid Leave Oregon",
+"LIHTC",
+"Equity and Inclusion Office",
+"DLCD",
+"COBID",
+"RANKING MEMBER ZOE LOFGREN",
+"MWESB",
+"Oregon Agency Expectations Page",
+"Oregon Department of Energy",
+"HOUSE OF REPRESENTATIVES COMMITTEE ON SCIENCE",
+"Requirement to",
+"Percentage of",
+"Instructions for",
+"National Science Foundation",
+"ANNUAL ENVIRONMENTAL JUSTICE COUNCIL REPORT",
+"Housing Stability Council",
+"DEMOCRATIC STAFF REPORT",
+"Strategic Plan",
+"ORS 182",
+"VBE",
+"OREA",
+"BIPOC",
+"State of Oregon",
+"HACC",
+"Human and Social Good",
+"Funded Convergence Accelerator Workshop Award No"
+],
+"total_cc_rows": 1000,
+"scored_rows": 141,
+"top": [
+{
+"url": "https://www.oregon.gov/ccb/Documents/Agency%20Strategic%20Planning/CCB%20DEIB%20Strategic%20Plan_2024.pdf",
+"score": 7,
+"timestamp": "20251204201956",
+"mime": "application/pdf",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/aqPermits/Pages/Basic-Autobody-Permit.aspx",
+"score": 6,
+"timestamp": "20251207060720",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/delc/about-us/Pages/dei-action-plan.aspx",
+"score": 5,
+"timestamp": "20251207130747",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/das/Docs/DEI_Action_Plan_2021.pdf?utm_medium=email&utm_source=govdelivery",
+"score": 5,
+"timestamp": "20251210185406",
+"mime": "application/pdf",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/wr/pages/rfp-medford.aspx",
+"score": 3,
+"timestamp": "20251206190604",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/wr/pages/hollingsworth-and-vose.aspx",
+"score": 3,
+"timestamp": "20251205084549",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/wr/pages/covanta-marion.aspx",
+"score": 3,
+"timestamp": "20251210151340",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/wr/pages/acpi.aspx",
+"score": 3,
+"timestamp": "20251208045026",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/wr/Pages/Packaging-Corporation-of-America.aspx",
+"score": 3,
+"timestamp": "20251213070724",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/wr/Pages/Columbia-FP.aspx",
+"score": 3,
+"timestamp": "20251206001950",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/wr/Pages/Boise-Cascade.aspx",
+"score": 3,
+"timestamp": "20251211234245",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/pages/healthrisk.aspx",
+"score": 3,
+"timestamp": "20251208040922",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/pages/faq-step3.aspx",
+"score": 3,
+"timestamp": "20251213132646",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/pages/faq-step2.aspx",
+"score": 3,
+"timestamp": "20251206183537",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/pages/aci-emissions-testing.aspx",
+"score": 3,
+"timestamp": "20251213225108",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/nwr/Pages/eagle.aspx",
+"score": 3,
+"timestamp": "20251211235413",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/nwr/Pages/boeing.aspx",
+"score": 3,
+"timestamp": "20251209040501",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/nwr/Pages/PCC-SSBO.aspx",
+"score": 3,
+"timestamp": "20251210025458",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/nwr/Pages/Mutual-Materials.aspx",
+"score": 3,
+"timestamp": "20251217071924",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/nwr/Pages/Microchip-Tech.aspx",
+"score": 3,
+"timestamp": "20251208195934",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/nwr/Pages/Intel-Aloha.aspx",
+"score": 3,
+"timestamp": "20251209043409",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/er/Pages/Oil-Re-Refining-Company-Klamath-Falls.aspx",
+"score": 3,
+"timestamp": "20251208012726",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/Pages/default.aspx",
+"score": 3,
+"timestamp": "20251211111329",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/Pages/Technical-Assistance-for-Small-Business.aspx",
+"score": 3,
+"timestamp": "20251205062614",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/Pages/CAO-Adopted-Rules.aspx",
+"score": 3,
+"timestamp": "20251207164305",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/Pages/ACI-Emissions-Testing.aspx",
+"score": 3,
+"timestamp": "20251207060534",
+"mime": "text/html",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/Documents/covantaRevSTRlow.pdf",
+"score": 3,
+"timestamp": "20251205171744",
+"mime": "application/pdf",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/Documents/covantaRevSTRhigh.pdf",
+"score": 3,
+"timestamp": "20251212162345",
+"mime": "application/pdf",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/Documents/covantaCover070522.pdf",
+"score": 3,
+"timestamp": "20251205185758",
+"mime": "application/pdf",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/Documents/covDEQresponse062321.pdf",
+"score": 3,
+"timestamp": "20251205183433",
+"mime": "application/pdf",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/Documents/covDEQrespLetter102221.pdf",
+"score": 3,
+"timestamp": "20251210154209",
+"mime": "application/pdf",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/Documents/caoSTRcoverLetter.pdf",
+"score": 3,
+"timestamp": "20251205184349",
+"mime": "application/pdf",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/Documents/caoSTRchronicHealth.pdf",
+"score": 3,
+"timestamp": "20251212155337",
+"mime": "application/pdf",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/Documents/caoSTRacuteHealth.pdf",
+"score": 3,
+"timestamp": "20251212145519",
+"mime": "application/pdf",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/Documents/OwensBrockway2020208NCPO.pdf",
+"score": 3,
+"timestamp": "20251208100536",
+"mime": "warc/revisit",
+"status": "304"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/Documents/CovantaReqforEIextension20220824.pdf",
+"score": 3,
+"timestamp": "20251205190050",
+"mime": "application/pdf",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/Documents/CovantaEIExtensionDEQResponse20220826.pdf",
+"score": 3,
+"timestamp": "20251212163627",
+"mime": "application/pdf",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/Documents/Covanta2023extension.pdf",
+"score": 3,
+"timestamp": "20251205184138",
+"mime": "application/pdf",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/Documents/Covanta20230425EIExtensionDEQResponse.pdf",
+"score": 3,
+"timestamp": "20251205184212",
+"mime": "application/pdf",
+"status": "200"
+},
+{
+"url": "https://www.oregon.gov/deq/aq/cao/Documents/Covanta-extensionrequest10262020.pdf",
+"score": 3,
+"timestamp": "20251210140746",
+"mime": "application/pdf",
+"status": "200"
+}
+]
+}
+}
+}

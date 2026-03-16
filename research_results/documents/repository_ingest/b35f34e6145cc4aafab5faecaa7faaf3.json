@@ -1,0 +1,71 @@
+{
+  "title": "obiu.org course what-is-targeted-universalism",
+  "relative_path": "research_results/third_party_downloads/obiu.org/obiu.org_course_what-is-targeted-universalism.html",
+  "source_type": "repository_evidence",
+  "filename": "obiu.org_course_what-is-targeted-universalism.html",
+  "mime_type": "text/html",
+  "size": 1026362,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 42,
+  "paragraph_count": 1,
+  "text_length": 33030,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 33030,
+    "text_length": 33030,
+    "raw_size": 1026362,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 42
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 33030,
+      "text_length": 33030,
+      "raw_size": 1026362,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "b35f34e6145cc4aafab5faecaa7faaf3",
+  "checksum": "2183aa2ce7b696ff63839c9c79aa070d69b1c537e329cb9253ec0ef6a04934ed",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/obiu.org/obiu.org_course_what-is-targeted-universalism.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/b35f34e6145cc4aafab5faecaa7faaf3.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

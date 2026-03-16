@@ -1,0 +1,69 @@
+{
+  "title": "colorlines.com",
+  "relative_path": "research_results/third_party_downloads/colorlines.com/colorlines.com.html",
+  "source_type": "repository_evidence",
+  "filename": "colorlines.com.html",
+  "mime_type": "text/html",
+  "size": 74860,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 10,
+  "paragraph_count": 1,
+  "text_length": 7548,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 7548,
+    "text_length": 7548,
+    "raw_size": 74860,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 10
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 7548,
+      "text_length": 7548,
+      "raw_size": 74860,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "b30776edeec8440d27d26df8ca5a167b",
+  "checksum": "02915a2484b5182f79cc7af93fb3cdea3582a0e624af008f4cf853abdfd6136e",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/colorlines.com/colorlines.com.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/b30776edeec8440d27d26df8ca5a167b.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

@@ -1,0 +1,3223 @@
+{
+"timestamp": "2026-03-15T03:47:53.683961+00:00",
+"statistics": {
+"total_sessions": 3,
+"successful_sessions": 3,
+"failed_sessions": 0,
+"average_score": 0.5655,
+"min_score": 0.552,
+"max_score": 0.5915,
+"average_questions": 2.0,
+"average_duration": 29.84367044766744,
+"score_distribution": {
+"0.0-0.2": 0,
+"0.2-0.4": 0,
+"0.4-0.6": 3,
+"0.6-0.8": 0,
+"0.8-1.0": 0
+},
+"anchor_sections": {
+"expected_counts": {
+"general_policy": 1,
+"adverse_action": 1,
+"selection_criteria": 1,
+"reasonable_accommodation": 1
+},
+"covered_counts": {
+"adverse_action": 1,
+"selection_criteria": 1,
+"reasonable_accommodation": 1
+},
+"missing_counts": {
+"general_policy": 1
+},
+"coverage_by_section": {
+"adverse_action": {
+"expected": 1,
+"covered": 1,
+"missing": 0,
+"coverage_rate": 1.0
+},
+"general_policy": {
+"expected": 1,
+"covered": 0,
+"missing": 1,
+"coverage_rate": 0.0
+},
+"reasonable_accommodation": {
+"expected": 1,
+"covered": 1,
+"missing": 0,
+"coverage_rate": 1.0
+},
+"selection_criteria": {
+"expected": 1,
+"covered": 1,
+"missing": 0,
+"coverage_rate": 1.0
+}
+}
+}
+},
+"results": [
+{
+"session_id": "session_20260315_034346_000",
+"timestamp": "2026-03-15T03:45:13.133815+00:00",
+"seed_complaint": {
+"template_id": "hacc::housing_discrimination::retaliation grievance complaint appeal h",
+"type": "housing_discrimination",
+"category": "housing",
+"description": "Retaliation complaint anchored to HACC core housing policies",
+"summary": "The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"key_facts": {
+"incident_summary": "Retaliation complaint anchored to HACC core housing policies",
+"evidence_query": "retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+"evidence_summary": "The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"evidence_documents": [
+"ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"ADMINISTRATIVE PLAN"
+],
+"source_paths": [
+"/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+],
+"anchor_titles": [
+"ADMINISTRATIVE PLAN",
+"ADMISSIONS AND CONTINUED OCCUPANCY POLICY"
+],
+"anchor_source_paths": [],
+"anchor_terms": [
+"grievance",
+"hearing",
+"appeal",
+"informal hearing",
+"due process"
+],
+"anchor_passages": [
+{
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"snippet": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"section_labels": [
+"general_policy"
+]
+}
+],
+"anchor_sections": [
+"general_policy"
+],
+"grounding_note": "Use the evidence as factual grounding and identify missing case-specific facts during questioning."
+},
+"keywords": [],
+"legal_patterns": [],
+"hacc_evidence": [
+{
+"document_id": "document:c8dc2af6ee6996a0",
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"score": 4399.3864,
+"snippet": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"matched_rules": [
+{
+"text": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"section_title": "EXHIBIT 14-1: SAMPLE GRIEVANCE PROCEDURE",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 3
+},
+{
+"text": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+"section_title": "ACOP 11/1/24",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 3
+},
+{
+"text": "In states without due process determinations, HACC must grant opportunity for grievance",
+"section_title": "ACOP 11/1/24",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 3
+}
+],
+"matched_entities": [
+{
+"name": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "In states without due process determinations, HACC must grant opportunity for grievance",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "The notice must also state that the tenant may request a grievance hearing on the HACC\u2019s",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "adverse action and will provide the subject of the record and the tenant a copy of such",
+"type": "policy_rule",
+"overlap": 3
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+},
+"document_id": "document:c8dc2af6ee6996a0",
+"document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 5318,
+"section_count": 3423,
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"text_length": 1401793,
+"status": "success"
+}
+},
+{
+"document_id": "document:be93a165d00f0101",
+"title": "ADMINISTRATIVE PLAN",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"score": 4196.7273,
+"snippet": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"matched_rules": [
+{
+"text": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"section_title": "HACC Policy",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 2
+},
+{
+"text": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 2
+},
+{
+"text": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+"section_title": "HACC Policy",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 2
+}
+],
+"matched_entities": [
+{
+"name": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "HACC will inform the family of its policy regarding moves denied due to insufficient",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "See Chapter 9 for more detail on unit eligibility policies and process.",
+"type": "policy_rule",
+"overlap": 2
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+},
+"document_id": "document:be93a165d00f0101",
+"document_title": "ADMINISTRATIVE PLAN",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 7441,
+"section_count": 4968,
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"text_length": 1927962,
+"status": "success"
+}
+}
+],
+"source": "hacc_research_engine",
+"_meta": {
+"personality": "cooperative",
+"max_turns": 2,
+"include_hacc_evidence": true,
+"hacc_preset": "core_hacc_policies",
+"use_hacc_vector_search": false,
+"seed_source": "hacc_research_engine",
+"anchor_sections": [
+"general_policy"
+]
+}
+},
+"initial_complaint_text": "I\u2019m filing this complaint because I believe HACC retaliated against me after I tried to raise concerns and exercise my rights. I requested a grievance and asked for due process after an adverse action, and instead of addressing the issue, I was met with additional \u043d\u0435\u0433\u0430\u0442\u0438\u0432ive treatment. The policy says a grievance is any dispute a tenant may have with respect to HACC action or failure to act, and I\u2019m using that process because I have a real dispute about how I was treated.\n\nHere\u2019s what happened in my own words. After I [reported/asked about/complained about] [brief description of the original issue], HACC took adverse action against me on or about [date]. I asked for a grievance hearing and an appeal because I wanted a fair chance to explain and correct what happened. Instead, I was treated as if I had done something wrong just for speaking up. I felt like my request for a hearing was ignored or delayed, and the actions against me kept moving forward.\n\nThis has affected me a lot. I\u2019m dealing with stress, anxiety, and uncertainty about my housing. I feel punished for asserting my rights and for asking for a grievance process that is supposed to exist for tenants. It has made it hard for me to feel safe or stable in my housing.\n\nKey facts I want on the record:\n1. The adverse action happened after I raised a concern and asked for a grievance.\n2. I requested a hearing/appeal and due process, but the response from HACC felt retaliatory.\n3. I\u2019m asking HACC to follow its grievance and hearing policies and stop the retaliatory actions.\n\nI want a fair hearing, a clear explanation of the actions taken against me, and a resolution that stops the retaliation and respects the grievance process.\n\nMissing details I can provide if needed:\n1. Dates of each incident and each notice I received\n2. Names/titles of HACC staff involved\n3. Copies of notices, emails, or letters\n4. The specific adverse action (e.g., termination notice, transfer denial, rent issue, inspection-related penalty)",
+"conversation_history": [
+{
+"role": "complainant",
+"type": "initial_complaint",
+"content": "I\u2019m filing this complaint because I believe HACC retaliated against me after I tried to raise concerns and exercise my rights. I requested a grievance and asked for due process after an adverse action, and instead of addressing the issue, I was met with additional \u043d\u0435\u0433\u0430\u0442\u0438\u0432ive treatment. The policy says a grievance is any dispute a tenant may have with respect to HACC action or failure to act, and I\u2019m using that process because I have a real dispute about how I was treated.\n\nHere\u2019s what happened in my own words. After I [reported/asked about/complained about] [brief description of the original issue], HACC took adverse action against me on or about [date]. I asked for a grievance hearing and an appeal because I wanted a fair chance to explain and correct what happened. Instead, I was treated as if I had done something wrong just for speaking up. I felt like my request for a hearing was ignored or delayed, and the actions against me kept moving forward.\n\nThis has affected me a lot. I\u2019m dealing with stress, anxiety, and uncertainty about my housing. I feel punished for asserting my rights and for asking for a grievance process that is supposed to exist for tenants. It has made it hard for me to feel safe or stable in my housing.\n\nKey facts I want on the record:\n1. The adverse action happened after I raised a concern and asked for a grievance.\n2. I requested a hearing/appeal and due process, but the response from HACC felt retaliatory.\n3. I\u2019m asking HACC to follow its grievance and hearing policies and stop the retaliatory actions.\n\nI want a fair hearing, a clear explanation of the actions taken against me, and a resolution that stops the retaliation and respects the grievance process.\n\nMissing details I can provide if needed:\n1. Dates of each incident and each notice I received\n2. Names/titles of HACC staff involved\n3. Copies of notices, emails, or letters\n4. The specific adverse action (e.g., termination notice, transfer denial, rent issue, inspection-related penalty)"
+},
+{
+"role": "mediator",
+"type": "question",
+"content": "To make sure I understand, can you provide more details about Impact: I\u2019m filing this complaint because I believe HACC retaliat...?"
+},
+{
+"role": "complainant",
+"type": "response",
+"content": "Sure. The impact has been really significant for me. I\u2019ve been under a lot of stress and anxiety since this happened, and I feel like my housing situation is unstable. I\u2019ve had trouble sleeping, I\u2019m constantly worried about losing my housing, and it\u2019s been hard to feel safe or settled at home. I also feel discouraged about speaking up in the future because it seems like asking for a grievance \u2014 which the policy says is for any dispute about HACC\u2019s actions or failure to act \u2014 led to more negative treatment instead of a fair process. That makes me feel powerless and like the system isn\u2019t working for tenants like me. If you need specific dates or documents tied to these impacts, I can provide those.",
+"evidence_context": {
+"dynamic_evidence_summary": "For this question, the strongest supporting material is 'ADMINISTRATIVE PLAN'. Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"dynamic_evidence_items": [
+{
+"document_id": "document:c8dc2af6ee6996a0",
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"score": 4399.3864,
+"snippet": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"matched_rules": [
+{
+"text": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"section_title": "EXHIBIT 14-1: SAMPLE GRIEVANCE PROCEDURE",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 3
+},
+{
+"text": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+"section_title": "ACOP 11/1/24",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 3
+},
+{
+"text": "In states without due process determinations, HACC must grant opportunity for grievance",
+"section_title": "ACOP 11/1/24",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 3
+}
+],
+"matched_entities": [
+{
+"name": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "In states without due process determinations, HACC must grant opportunity for grievance",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "The notice must also state that the tenant may request a grievance hearing on the HACC\u2019s",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "adverse action and will provide the subject of the record and the tenant a copy of such",
+"type": "policy_rule",
+"overlap": 3
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+},
+"document_id": "document:c8dc2af6ee6996a0",
+"document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 5318,
+"section_count": 3423,
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"text_length": 1401793,
+"status": "success"
+}
+},
+{
+"document_id": "document:be93a165d00f0101",
+"title": "ADMINISTRATIVE PLAN",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"score": 4196.7273,
+"snippet": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"matched_rules": [
+{
+"text": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"section_title": "HACC Policy",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 2
+},
+{
+"text": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 2
+},
+{
+"text": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+"section_title": "HACC Policy",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 2
+}
+],
+"matched_entities": [
+{
+"name": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "HACC will inform the family of its policy regarding moves denied due to insufficient",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "See Chapter 9 for more detail on unit eligibility policies and process.",
+"type": "policy_rule",
+"overlap": 2
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+},
+"document_id": "document:be93a165d00f0101",
+"document_title": "ADMINISTRATIVE PLAN",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 7441,
+"section_count": 4968,
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"text_length": 1927962,
+"status": "success"
+}
+}
+],
+"dynamic_anchor_passages": [
+{
+"title": "ADMINISTRATIVE PLAN",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"snippet": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"section_labels": [
+"general_policy"
+]
+},
+{
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"snippet": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"section_labels": [
+"general_policy"
+]
+}
+],
+"dynamic_anchor_sections": [
+"general_policy"
+]
+}
+},
+{
+"role": "mediator",
+"type": "question",
+"content": "What are the most precise dates or date ranges for each key event, starting with the first incident?"
+},
+{
+"role": "complainant",
+"type": "response",
+"content": "I don\u2019t have the exact dates in front of me, but here are the best ranges I can give right now, and I can confirm with documents if you need:\n\n1. First incident (when I raised the concern): late [month/year] \u2014 roughly the week of [month day range]. \n2. Adverse action by HACC: on or about [month/day/year], or within the following 1\u20132 weeks after I raised the issue. \n3. Request for grievance/hearing/appeal: I asked for it shortly after the adverse action, within about [X] days (around [month/day range]). \n4. Ongoing impacts: from that time through the present.\n\nIf it helps, I can pull the exact dates from the notices, emails, or letters and send them.",
+"evidence_context": {
+"dynamic_evidence_summary": "For this question, the strongest supporting material is 'ADMINISTRATIVE PLAN'. HACC informal hearing process, does not preclude the family from exercising the right, that may",
+"dynamic_evidence_items": [
+{
+"document_id": "document:c8dc2af6ee6996a0",
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"score": 4399.3864,
+"snippet": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"matched_rules": [
+{
+"text": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"section_title": "EXHIBIT 14-1: SAMPLE GRIEVANCE PROCEDURE",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 3
+},
+{
+"text": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+"section_title": "ACOP 11/1/24",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 3
+},
+{
+"text": "In states without due process determinations, HACC must grant opportunity for grievance",
+"section_title": "ACOP 11/1/24",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 3
+}
+],
+"matched_entities": [
+{
+"name": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "In states without due process determinations, HACC must grant opportunity for grievance",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "The notice must also state that the tenant may request a grievance hearing on the HACC\u2019s",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "adverse action and will provide the subject of the record and the tenant a copy of such",
+"type": "policy_rule",
+"overlap": 3
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+},
+"document_id": "document:c8dc2af6ee6996a0",
+"document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 5318,
+"section_count": 3423,
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"text_length": 1401793,
+"status": "success"
+}
+},
+{
+"document_id": "document:be93a165d00f0101",
+"title": "ADMINISTRATIVE PLAN",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"score": 4196.7273,
+"snippet": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"matched_rules": [
+{
+"text": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"section_title": "HACC Policy",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 2
+},
+{
+"text": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 2
+},
+{
+"text": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+"section_title": "HACC Policy",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 2
+}
+],
+"matched_entities": [
+{
+"name": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "HACC will inform the family of its policy regarding moves denied due to insufficient",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "See Chapter 9 for more detail on unit eligibility policies and process.",
+"type": "policy_rule",
+"overlap": 2
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+},
+"document_id": "document:be93a165d00f0101",
+"document_title": "ADMINISTRATIVE PLAN",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 7441,
+"section_count": 4968,
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"text_length": 1927962,
+"status": "success"
+}
+}
+],
+"dynamic_anchor_passages": [
+{
+"title": "ADMINISTRATIVE PLAN",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"snippet": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+"section_labels": [
+"grievance_hearing",
+"appeal_rights"
+]
+},
+{
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"snippet": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"section_labels": [
+"general_policy"
+]
+}
+],
+"dynamic_anchor_sections": [
+"grievance_hearing",
+"appeal_rights",
+"general_policy"
+]
+}
+}
+],
+"num_questions": 2,
+"num_turns": 2,
+"final_state": {
+"current_phase": "intake",
+"iteration_count": 3,
+"convergence_history": [
+{
+"iteration": 1,
+"loss": 0.78,
+"phase": "intake",
+"metrics": {
+"entities": 8,
+"relationships": 9,
+"gaps": 9
+},
+"timestamp": "2026-03-15T03:44:49.031583+00:00"
+},
+{
+"iteration": 2,
+"loss": 0.77,
+"phase": "intake",
+"metrics": {
+"entities": 8,
+"relationships": 9,
+"gaps": 8,
+"updates": {
+"entities_updated": 1,
+"relationships_added": 0,
+"requirements_satisfied": 0
+},
+"denoiser_policy": {
+"exploration_enabled": false,
+"exploration_epsilon": 0.0,
+"exploration_top_k": 3,
+"momentum_enabled": false,
+"momentum_beta": 0.85,
+"stagnation_window": 4,
+"stagnation_gain_threshold": 0.5,
+"type_gain_ema": {
+"clarification": 1.0
+},
+"recent_gains": [
+1.0
+]
+}
+},
+"timestamp": "2026-03-15T03:45:00.276963+00:00"
+},
+{
+"iteration": 3,
+"loss": 0.7466666666666667,
+"phase": "intake",
+"metrics": {
+"entities": 9,
+"relationships": 10,
+"gaps": 8,
+"updates": {
+"entities_updated": 1,
+"relationships_added": 1,
+"requirements_satisfied": 0
+},
+"denoiser_policy": {
+"exploration_enabled": false,
+"exploration_epsilon": 0.0,
+"exploration_top_k": 3,
+"momentum_enabled": false,
+"momentum_beta": 0.85,
+"stagnation_window": 4,
+"stagnation_gain_threshold": 0.5,
+"type_gain_ema": {
+"clarification": 1.0,
+"timeline": 2.0
+},
+"recent_gains": [
+1.0,
+2.0
+]
+}
+},
+"timestamp": "2026-03-15T03:45:06.178681+00:00"
+}
+],
+"loss_history": [
+{
+"iteration": 1,
+"loss": 0.78,
+"phase": "intake",
+"metrics": {
+"entities": 8,
+"relationships": 9,
+"gaps": 9
+},
+"timestamp": "2026-03-15T03:44:49.031583+00:00"
+},
+{
+"iteration": 2,
+"loss": 0.77,
+"phase": "intake",
+"metrics": {
+"entities": 8,
+"relationships": 9,
+"gaps": 8,
+"updates": {
+"entities_updated": 1,
+"relationships_added": 0,
+"requirements_satisfied": 0
+},
+"denoiser_policy": {
+"exploration_enabled": false,
+"exploration_epsilon": 0.0,
+"exploration_top_k": 3,
+"momentum_enabled": false,
+"momentum_beta": 0.85,
+"stagnation_window": 4,
+"stagnation_gain_threshold": 0.5,
+"type_gain_ema": {
+"clarification": 1.0
+},
+"recent_gains": [
+1.0
+]
+}
+},
+"timestamp": "2026-03-15T03:45:00.276963+00:00"
+},
+{
+"iteration": 3,
+"loss": 0.7466666666666667,
+"phase": "intake",
+"metrics": {
+"entities": 9,
+"relationships": 10,
+"gaps": 8,
+"updates": {
+"entities_updated": 1,
+"relationships_added": 1,
+"requirements_satisfied": 0
+},
+"denoiser_policy": {
+"exploration_enabled": false,
+"exploration_epsilon": 0.0,
+"exploration_top_k": 3,
+"momentum_enabled": false,
+"momentum_beta": 0.85,
+"stagnation_window": 4,
+"stagnation_gain_threshold": 0.5,
+"type_gain_ema": {
+"clarification": 1.0,
+"timeline": 2.0
+},
+"recent_gains": [
+1.0,
+2.0
+]
+}
+},
+"timestamp": "2026-03-15T03:45:06.178681+00:00"
+}
+],
+"phase_completion": {
+"intake": false,
+"evidence": false,
+"formalization": false
+},
+"next_action": {
+"action": "continue_denoising"
+}
+},
+"knowledge_graph_summary": {
+"total_entities": 9,
+"total_relationships": 10,
+"entity_types": {
+"organization": 1,
+"evidence": 4,
+"fact": 3,
+"claim": 1
+},
+"relationship_types": {
+"involves": 1,
+"supported_by": 4,
+"associated_with": 4,
+"has_timeline_detail": 1
+},
+"gaps": 8
+},
+"dependency_graph_summary": {
+"total_nodes": 3,
+"total_dependencies": 2,
+"node_types": {
+"claim": 1,
+"fact": 2
+},
+"dependency_types": {
+"depends_on": 2
+},
+"satisfied_nodes": 0,
+"satisfaction_rate": 0.0
+},
+"knowledge_graph": {
+"metadata": {
+"created_at": "2026-03-15T03:44:49.027190+00:00",
+"last_updated": "2026-03-15T03:45:06.178506+00:00",
+"version": "1.0"
+},
+"entities": {
+"entity_1": {
+"id": "entity_1",
+"type": "organization",
+"name": "HACC",
+"attributes": {
+"role": "respondent"
+},
+"confidence": 0.6,
+"source": "complaint"
+},
+"entity_2": {
+"id": "entity_2",
+"type": "evidence",
+"name": "Email communication",
+"attributes": {
+"evidence_type": "email communication",
+"description": "I\u2019m filing this complaint because I believe HACC retaliated against me after I tried to raise concerns and exercise my rights. I requested a grievance and asked for due process after an adverse action, and instead of addressing the issue..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_3": {
+"id": "entity_3",
+"type": "evidence",
+"name": "Letter",
+"attributes": {
+"evidence_type": "letter",
+"description": "I\u2019m filing this complaint because I believe HACC retaliated against me after I tried to raise concerns and exercise my rights. I requested a grievance and asked for due process after an adverse action, and instead of addressing the issue..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_4": {
+"id": "entity_4",
+"type": "evidence",
+"name": "Notice",
+"attributes": {
+"evidence_type": "notice",
+"description": "I\u2019m filing this complaint because I believe HACC retaliated against me after I tried to raise concerns and exercise my rights. I requested a grievance and asked for due process after an adverse action, and instead of addressing the issue..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_5": {
+"id": "entity_5",
+"type": "evidence",
+"name": "Policy",
+"attributes": {
+"evidence_type": "policy",
+"description": "I\u2019m filing this complaint because I believe HACC retaliated against me after I tried to raise concerns and exercise my rights. I requested a grievance and asked for due process after an adverse action, and instead of addressing the issue..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_6": {
+"id": "entity_6",
+"type": "fact",
+"name": "Impact: I\u2019m filing this complaint because I believe HACC retaliat...",
+"attributes": {
+"fact_type": "impact",
+"description": "I\u2019m filing this complaint because I believe HACC retaliated against me after I tried to raise concerns and exercise my rights. I requested a grievance and asked for due process after an adverse action, and instead of addressing the issue...",
+"clarification": "Sure. The impact has been really significant for me. I\u2019ve been under a lot of stress and anxiety since this happened, and I feel like my housing situation is unstable. I\u2019ve had trouble sleeping, I\u2019m constantly worried about losing my housing, and it\u2019s been hard to feel safe or settled at home. I also feel discouraged about speaking up in the future because it seems like asking for a grievance \u2014 which the policy says is for any dispute about HACC\u2019s actions or failure to act \u2014 led to more negative treatment instead of a fair process. That makes me feel powerless and like the system isn\u2019t working for tenants like me. If you need specific dates or documents tied to these impacts, I can provide those."
+},
+"confidence": 0.75,
+"source": "complaint"
+},
+"entity_7": {
+"id": "entity_7",
+"type": "fact",
+"name": "Requested remedy: I\u2019m filing this complaint because I believe HACC retaliat...",
+"attributes": {
+"fact_type": "remedy",
+"description": "I\u2019m filing this complaint because I believe HACC retaliated against me after I tried to raise concerns and exercise my rights. I requested a grievance and asked for due process after an adverse action, and instead of addressing the issue..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_8": {
+"id": "entity_8",
+"type": "claim",
+"name": "Complaint Claim",
+"attributes": {
+"claim_type": "unknown",
+"description": "I\u2019m filing this complaint because I believe HACC retaliated against me after I tried to raise concerns and exercise my rights. I requested a grievance and asked for due process after an adverse action, and instead of addressing the issue..."
+},
+"confidence": 0.5,
+"source": "complaint"
+},
+"entity_9": {
+"id": "entity_9",
+"type": "fact",
+"name": "Timeline detail: I don\u2019t have the exact dates in front of me, but here are...",
+"attributes": {
+"fact_type": "timeline",
+"description": "I don\u2019t have the exact dates in front of me, but here are the best ranges I can give right now, and I can confirm wit..."
+},
+"confidence": 0.6,
+"source": "complaint"
+}
+},
+"relationships": {
+"rel_1": {
+"id": "rel_1",
+"source_id": "entity_8",
+"target_id": "entity_1",
+"relation_type": "involves",
+"attributes": {},
+"confidence": 0.6,
+"source": "complaint"
+},
+"rel_2": {
+"id": "rel_2",
+"source_id": "entity_8",
+"target_id": "entity_2",
+"relation_type": "supported_by",
+"attributes": {},
+"confidence": 0.55,
+"source": "complaint"
+},
+"rel_3": {
+"id": "rel_3",
+"source_id": "entity_8",
+"target_id": "entity_3",
+"relation_type": "supported_by",
+"attributes": {},
+"confidence": 0.55,
+"source": "complaint"
+},
+"rel_4": {
+"id": "rel_4",
+"source_id": "entity_8",
+"target_id": "entity_4",
+"relation_type": "supported_by",
+"attributes": {},
+"confidence": 0.55,
+"source": "complaint"
+},
+"rel_5": {
+"id": "rel_5",
+"source_id": "entity_8",
+"target_id": "entity_5",
+"relation_type": "supported_by",
+"attributes": {},
+"confidence": 0.55,
+"source": "complaint"
+},
+"rel_6": {
+"id": "rel_6",
+"source_id": "entity_2",
+"target_id": "entity_1",
+"relation_type": "associated_with",
+"attributes": {},
+"confidence": 0.5,
+"source": "complaint"
+},
+"rel_7": {
+"id": "rel_7",
+"source_id": "entity_3",
+"target_id": "entity_1",
+"relation_type": "associated_with",
+"attributes": {},
+"confidence": 0.5,
+"source": "complaint"
+},
+"rel_8": {
+"id": "rel_8",
+"source_id": "entity_4",
+"target_id": "entity_1",
+"relation_type": "associated_with",
+"attributes": {},
+"confidence": 0.5,
+"source": "complaint"
+},
+"rel_9": {
+"id": "rel_9",
+"source_id": "entity_5",
+"target_id": "entity_1",
+"relation_type": "associated_with",
+"attributes": {},
+"confidence": 0.5,
+"source": "complaint"
+},
+"rel_10": {
+"id": "rel_10",
+"source_id": "entity_8",
+"target_id": "entity_9",
+"relation_type": "has_timeline_detail",
+"attributes": {},
+"confidence": 0.6,
+"source": "complaint"
+}
+}
+},
+"dependency_graph": {
+"metadata": {
+"created_at": "2026-03-15T03:44:49.031237+00:00",
+"last_updated": "2026-03-15T03:44:49.031329+00:00",
+"version": "1.0"
+},
+"nodes": {
+"node_1": {
+"id": "node_1",
+"node_type": "claim",
+"name": "Complaint Claim",
+"description": "I\u2019m filing this complaint because I believe HACC retaliated against me after I tried to raise concerns and exercise my rights. I requested a grievance and asked for due process after an adverse action, and instead of addressing the issue...",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {
+"claim_type": "unknown"
+}
+},
+"node_2": {
+"id": "node_2",
+"node_type": "fact",
+"name": "Timeline of events",
+"description": "Dates or sequence of key events related to this claim",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {}
+},
+"node_3": {
+"id": "node_3",
+"node_type": "fact",
+"name": "Responsible party",
+"description": "Who took the action or decision tied to this claim",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {}
+}
+},
+"dependencies": {
+"dep_1": {
+"id": "dep_1",
+"source_id": "node_2",
+"target_id": "node_1",
+"dependency_type": "depends_on",
+"required": true,
+"strength": 1.0
+},
+"dep_2": {
+"id": "dep_2",
+"source_id": "node_3",
+"target_id": "node_1",
+"dependency_type": "depends_on",
+"required": true,
+"strength": 1.0
+}
+}
+},
+"critic_score": {
+"overall_score": 0.553,
+"question_quality": 0.62,
+"information_extraction": 0.56,
+"empathy": 0.48,
+"efficiency": 0.64,
+"coverage": 0.45,
+"feedback": "The mediator asked for impact details and then for a timeline, which are relevant intake moves, but the questions were generic and did not leverage the complainant\u2019s stated policy basis or missing fact list to drive specificity. Information extraction improved slightly with the timeline prompt, yet key gaps remained unaddressed: the exact adverse action, the protected activity that triggered retaliation, the specific HACC notices, staff names, and documentary evidence. Empathy was limited to neutral prompts without acknowledgment of distress or validation. Efficiency was fair because there were only two questions and no repetition, but coverage was incomplete given the importance of policy grounding and adverse action details in retaliation claims.",
+"strengths": [
+"Focused on impact and timeline, which are core intake elements.",
+"Kept questions concise and easy to answer."
+],
+"weaknesses": [
+"Did not elicit the specific adverse action, protected activity, or documentary evidence.",
+"Minimal rapport-building or emotional acknowledgment.",
+"Missed anchor sections: general_policy"
+],
+"suggestions": [
+"Ask for the exact adverse action and the triggering complaint in a single, precise question.",
+"Add a brief validating statement before targeted follow-ups on notices, staff involved, and documents.",
+"Add questions covering: general_policy"
+],
+"anchor_sections_expected": [
+"general_policy"
+],
+"anchor_sections_covered": [],
+"anchor_sections_missing": [
+"general_policy"
+]
+},
+"anchor_section_summary": {
+"expected": [
+"general_policy"
+],
+"covered": [],
+"missing": [
+"general_policy"
+]
+},
+"duration_seconds": 34.065512895584106,
+"success": true,
+"error": null
+},
+{
+"session_id": "session_20260315_034346_001",
+"timestamp": "2026-03-15T03:46:36.617311+00:00",
+"seed_complaint": {
+"template_id": "hacc::housing_discrimination::proxy language DEI equity inclusion hous",
+"type": "housing_discrimination",
+"category": "housing",
+"description": "Proxy-language complaint anchored to HACC core housing policies",
+"summary": "The strongest supporting material is 'ADMINISTRATIVE PLAN'. Deny admission by the applicant or tenant to the housing or program;",
+"key_facts": {
+"incident_summary": "Proxy-language complaint anchored to HACC core housing policies",
+"evidence_query": "proxy language DEI equity inclusion housing policy admissions occupancy tenant selection",
+"evidence_summary": "The strongest supporting material is 'ADMINISTRATIVE PLAN'. Deny admission by the applicant or tenant to the housing or program;",
+"evidence_documents": [
+"ADMINISTRATIVE PLAN",
+"ADMISSIONS AND CONTINUED OCCUPANCY POLICY"
+],
+"source_paths": [
+"/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+],
+"anchor_titles": [
+"ADMINISTRATIVE PLAN",
+"ADMISSIONS AND CONTINUED OCCUPANCY POLICY"
+],
+"anchor_source_paths": [],
+"anchor_terms": [],
+"anchor_passages": [
+{
+"title": "ADMINISTRATIVE PLAN",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"snippet": "Deny admission by the applicant or tenant to the housing or program;",
+"section_labels": [
+"adverse_action"
+]
+},
+{
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"snippet": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"section_labels": [
+"selection_criteria"
+]
+}
+],
+"anchor_sections": [
+"adverse_action",
+"selection_criteria"
+],
+"grounding_note": "Use the evidence as factual grounding and identify missing case-specific facts during questioning."
+},
+"keywords": [],
+"legal_patterns": [],
+"hacc_evidence": [
+{
+"document_id": "document:be93a165d00f0101",
+"title": "ADMINISTRATIVE PLAN",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"score": 5298.4773,
+"snippet": "Deny admission by the applicant or tenant to the housing or program;",
+"matched_rules": [
+{
+"text": "Deny admission by the applicant or tenant to the housing or program;",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 3
+},
+{
+"text": "Deny assistance under the covered housing program to the applicant or tenant;",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 2
+},
+{
+"text": "For the initial certification, HACC will use the family\u2019s public housing tenant rent (reflected on",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 2
+}
+],
+"matched_entities": [
+{
+"name": "Deny admission by the applicant or tenant to the housing or program;",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "APPLICATIONS, WAITING LIST AND TENANT SELECTION",
+"type": "policy_section",
+"overlap": 2
+},
+{
+"name": "APPLICATIONS, WAITING LIST AND TENANT SELECTION",
+"type": "policy_section",
+"overlap": 2
+},
+{
+"name": "Deny assistance under the covered housing program to the applicant or tenant;",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "For the initial certification, HACC will use the family\u2019s public housing tenant rent (reflected on",
+"type": "policy_rule",
+"overlap": 2
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+},
+"document_id": "document:be93a165d00f0101",
+"document_title": "ADMINISTRATIVE PLAN",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 7441,
+"section_count": 4968,
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"text_length": 1927962,
+"status": "success"
+}
+},
+{
+"document_id": "document:c8dc2af6ee6996a0",
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"score": 3964.6818,
+"snippet": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"matched_rules": [
+{
+"text": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"section_title": "PART III: TENANT SELECTION",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 4
+},
+{
+"text": "According to the Continued Occupancy Policy, your family may continue to reside in a public housing",
+"section_title": "ACOP 1/1/2024",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 3
+},
+{
+"text": "admission, including tenant selection criteria, the applicant must be notified of the approximate",
+"section_title": "ACOP 11/1/2024",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 3
+}
+],
+"matched_entities": [
+{
+"name": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"type": "policy_rule",
+"overlap": 4
+},
+{
+"name": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"type": "policy_document",
+"overlap": 3
+},
+{
+"name": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"type": "policy_section",
+"overlap": 3
+},
+{
+"name": "According to the Continued Occupancy Policy, your family may continue to reside in a public housing",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "Admissions and continued occupancy policy",
+"type": "policy_section",
+"overlap": 3
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+},
+"document_id": "document:c8dc2af6ee6996a0",
+"document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 5318,
+"section_count": 3423,
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"text_length": 1401793,
+"status": "success"
+}
+}
+],
+"source": "hacc_research_engine",
+"_meta": {
+"personality": "defensive",
+"max_turns": 2,
+"include_hacc_evidence": true,
+"hacc_preset": "core_hacc_policies",
+"use_hacc_vector_search": false,
+"seed_source": "hacc_research_engine",
+"anchor_sections": [
+"adverse_action",
+"selection_criteria"
+]
+}
+},
+"initial_complaint_text": "I\u2019m filing this complaint because I believe I was treated unfairly in the housing admissions process. I applied for housing and was told I was being denied. I was given vague \u201cpolicy\u201d reasons and language about equity, inclusion, or similar ideas, but no clear, concrete basis tied to my actual eligibility or tenant selection criteria. I\u2019m not comfortable sharing all personal details, but I met the requirements as far as I understand them.\n\nThis has been stressful and frustrating. Housing is critical, and being denied without a clear explanation leaves me feeling singled out and dismissed. The administrative plan and admissions/continued occupancy policy say HACC must have tenant selection policies and that admission can be denied under specific grounds. I don\u2019t see how those rules were applied to me in a transparent or consistent way. It felt like the decision was based on proxy language rather than my actual qualifications.\n\nI want a clear explanation of why I was denied, what specific policy basis was used, and what evidence supports that decision. If there is a legitimate reason under the tenant selection policy, I expect it to be stated plainly. If not, I want this decision reviewed and corrected.",
+"conversation_history": [
+{
+"role": "complainant",
+"type": "initial_complaint",
+"content": "I\u2019m filing this complaint because I believe I was treated unfairly in the housing admissions process. I applied for housing and was told I was being denied. I was given vague \u201cpolicy\u201d reasons and language about equity, inclusion, or similar ideas, but no clear, concrete basis tied to my actual eligibility or tenant selection criteria. I\u2019m not comfortable sharing all personal details, but I met the requirements as far as I understand them.\n\nThis has been stressful and frustrating. Housing is critical, and being denied without a clear explanation leaves me feeling singled out and dismissed. The administrative plan and admissions/continued occupancy policy say HACC must have tenant selection policies and that admission can be denied under specific grounds. I don\u2019t see how those rules were applied to me in a transparent or consistent way. It felt like the decision was based on proxy language rather than my actual qualifications.\n\nI want a clear explanation of why I was denied, what specific policy basis was used, and what evidence supports that decision. If there is a legitimate reason under the tenant selection policy, I expect it to be stated plainly. If not, I want this decision reviewed and corrected."
+},
+{
+"role": "mediator",
+"type": "question",
+"content": "I understand this can be stressful, and these details help me support you. What harm did you experience, and what outcome or remedy are you seeking?"
+},
+{
+"role": "complainant",
+"type": "response",
+"content": "Honestly, the harm is pretty direct: I lost a chance at housing and I\u2019m still stuck in an unstable situation because of it. It\u2019s been stressful, humiliating, and it feels like I was brushed off with vague \u201cpolicy\u201d language instead of a real reason. I\u2019m not saying I need special treatment, but if there\u2019s a legitimate basis under the tenant selection policy, they should state it plainly and show it.\n\nAs for remedy, I want a clear, written explanation of the specific policy grounds and evidence they used, and I want the decision reviewed. If the denial wasn\u2019t actually tied to the admissions criteria, then I want it corrected. Why do you need more detail than that right now?",
+"evidence_context": {
+"dynamic_evidence_summary": "For this question, the strongest supporting material is 'ADMINISTRATIVE PLAN'. You may report a covered housing provider\u2019s violations of these rights and seek additional",
+"dynamic_evidence_items": [
+{
+"document_id": "document:be93a165d00f0101",
+"title": "ADMINISTRATIVE PLAN",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"score": 5298.4773,
+"snippet": "Deny admission by the applicant or tenant to the housing or program;",
+"matched_rules": [
+{
+"text": "Deny admission by the applicant or tenant to the housing or program;",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 3
+},
+{
+"text": "Deny assistance under the covered housing program to the applicant or tenant;",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 2
+},
+{
+"text": "For the initial certification, HACC will use the family\u2019s public housing tenant rent (reflected on",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 2
+}
+],
+"matched_entities": [
+{
+"name": "Deny admission by the applicant or tenant to the housing or program;",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "APPLICATIONS, WAITING LIST AND TENANT SELECTION",
+"type": "policy_section",
+"overlap": 2
+},
+{
+"name": "APPLICATIONS, WAITING LIST AND TENANT SELECTION",
+"type": "policy_section",
+"overlap": 2
+},
+{
+"name": "Deny assistance under the covered housing program to the applicant or tenant;",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "For the initial certification, HACC will use the family\u2019s public housing tenant rent (reflected on",
+"type": "policy_rule",
+"overlap": 2
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+},
+"document_id": "document:be93a165d00f0101",
+"document_title": "ADMINISTRATIVE PLAN",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 7441,
+"section_count": 4968,
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"text_length": 1927962,
+"status": "success"
+}
+},
+{
+"document_id": "document:c8dc2af6ee6996a0",
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"score": 3964.6818,
+"snippet": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"matched_rules": [
+{
+"text": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"section_title": "PART III: TENANT SELECTION",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 4
+},
+{
+"text": "According to the Continued Occupancy Policy, your family may continue to reside in a public housing",
+"section_title": "ACOP 1/1/2024",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 3
+},
+{
+"text": "admission, including tenant selection criteria, the applicant must be notified of the approximate",
+"section_title": "ACOP 11/1/2024",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 3
+}
+],
+"matched_entities": [
+{
+"name": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"type": "policy_rule",
+"overlap": 4
+},
+{
+"name": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"type": "policy_document",
+"overlap": 3
+},
+{
+"name": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"type": "policy_section",
+"overlap": 3
+},
+{
+"name": "According to the Continued Occupancy Policy, your family may continue to reside in a public housing",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "Admissions and continued occupancy policy",
+"type": "policy_section",
+"overlap": 3
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+},
+"document_id": "document:c8dc2af6ee6996a0",
+"document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 5318,
+"section_count": 3423,
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"text_length": 1401793,
+"status": "success"
+}
+}
+],
+"dynamic_anchor_passages": [
+{
+"title": "ADMINISTRATIVE PLAN",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"snippet": "You may report a covered housing provider\u2019s violations of these rights and seek additional",
+"section_labels": [
+"appeal_rights"
+]
+},
+{
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"snippet": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"section_labels": [
+"selection_criteria"
+]
+}
+],
+"dynamic_anchor_sections": [
+"appeal_rights",
+"selection_criteria"
+]
+}
+},
+{
+"role": "mediator",
+"type": "question",
+"content": "When did the key events happen? Please share dates or a brief timeline."
+},
+{
+"role": "complainant",
+"type": "response",
+"content": "I don\u2019t have the exact dates in front of me, and I\u2019m not trying to overshare. Roughly, I applied a few months ago, got a denial notice shortly after, and asked for clarification soon after that. Why do you need exact dates right now? If it\u2019s necessary, I can try to pull the notice date and give you a more precise timeline.",
+"evidence_context": {
+"dynamic_evidence_summary": "For this question, the strongest supporting material is 'ADMINISTRATIVE PLAN'. Deny admission by the applicant or tenant to the housing or program;",
+"dynamic_evidence_items": [
+{
+"document_id": "document:be93a165d00f0101",
+"title": "ADMINISTRATIVE PLAN",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"score": 5298.4773,
+"snippet": "Deny admission by the applicant or tenant to the housing or program;",
+"matched_rules": [
+{
+"text": "Deny admission by the applicant or tenant to the housing or program;",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 3
+},
+{
+"text": "Deny assistance under the covered housing program to the applicant or tenant;",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 2
+},
+{
+"text": "For the initial certification, HACC will use the family\u2019s public housing tenant rent (reflected on",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 2
+}
+],
+"matched_entities": [
+{
+"name": "Deny admission by the applicant or tenant to the housing or program;",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "APPLICATIONS, WAITING LIST AND TENANT SELECTION",
+"type": "policy_section",
+"overlap": 2
+},
+{
+"name": "APPLICATIONS, WAITING LIST AND TENANT SELECTION",
+"type": "policy_section",
+"overlap": 2
+},
+{
+"name": "Deny assistance under the covered housing program to the applicant or tenant;",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "For the initial certification, HACC will use the family\u2019s public housing tenant rent (reflected on",
+"type": "policy_rule",
+"overlap": 2
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+},
+"document_id": "document:be93a165d00f0101",
+"document_title": "ADMINISTRATIVE PLAN",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 7441,
+"section_count": 4968,
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"text_length": 1927962,
+"status": "success"
+}
+},
+{
+"document_id": "document:c8dc2af6ee6996a0",
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"score": 3964.6818,
+"snippet": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"matched_rules": [
+{
+"text": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"section_title": "PART III: TENANT SELECTION",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 4
+},
+{
+"text": "According to the Continued Occupancy Policy, your family may continue to reside in a public housing",
+"section_title": "ACOP 1/1/2024",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 3
+},
+{
+"text": "admission, including tenant selection criteria, the applicant must be notified of the approximate",
+"section_title": "ACOP 11/1/2024",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 3
+}
+],
+"matched_entities": [
+{
+"name": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"type": "policy_rule",
+"overlap": 4
+},
+{
+"name": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"type": "policy_document",
+"overlap": 3
+},
+{
+"name": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"type": "policy_section",
+"overlap": 3
+},
+{
+"name": "According to the Continued Occupancy Policy, your family may continue to reside in a public housing",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "Admissions and continued occupancy policy",
+"type": "policy_section",
+"overlap": 3
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+},
+"document_id": "document:c8dc2af6ee6996a0",
+"document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 5318,
+"section_count": 3423,
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"text_length": 1401793,
+"status": "success"
+}
+}
+],
+"dynamic_anchor_passages": [
+{
+"title": "ADMINISTRATIVE PLAN",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"snippet": "Deny admission by the applicant or tenant to the housing or program;",
+"section_labels": [
+"adverse_action"
+]
+},
+{
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"snippet": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"section_labels": [
+"selection_criteria"
+]
+}
+],
+"dynamic_anchor_sections": [
+"adverse_action",
+"selection_criteria"
+]
+}
+}
+],
+"num_questions": 2,
+"num_turns": 2,
+"final_state": {
+"current_phase": "intake",
+"iteration_count": 3,
+"convergence_history": [
+{
+"iteration": 1,
+"loss": 0.76,
+"phase": "intake",
+"metrics": {
+"entities": 3,
+"relationships": 1,
+"gaps": 5
+},
+"timestamp": "2026-03-15T03:46:14.169402+00:00"
+},
+{
+"iteration": 2,
+"loss": 0.76,
+"phase": "intake",
+"metrics": {
+"entities": 4,
+"relationships": 2,
+"gaps": 6,
+"updates": {
+"entities_updated": 1,
+"relationships_added": 1,
+"requirements_satisfied": 0
+},
+"denoiser_policy": {
+"exploration_enabled": false,
+"exploration_epsilon": 0.0,
+"exploration_top_k": 3,
+"momentum_enabled": false,
+"momentum_beta": 0.85,
+"stagnation_window": 4,
+"stagnation_gain_threshold": 0.5,
+"type_gain_ema": {
+"impact": 2.0
+},
+"recent_gains": [
+2.0
+]
+}
+},
+"timestamp": "2026-03-15T03:46:19.382015+00:00"
+},
+{
+"iteration": 3,
+"loss": 0.76,
+"phase": "intake",
+"metrics": {
+"entities": 5,
+"relationships": 3,
+"gaps": 6,
+"updates": {
+"entities_updated": 1,
+"relationships_added": 1,
+"requirements_satisfied": 0
+},
+"denoiser_policy": {
+"exploration_enabled": false,
+"exploration_epsilon": 0.0,
+"exploration_top_k": 3,
+"momentum_enabled": false,
+"momentum_beta": 0.85,
+"stagnation_window": 4,
+"stagnation_gain_threshold": 0.5,
+"type_gain_ema": {
+"impact": 2.0,
+"timeline": 2.0
+},
+"recent_gains": [
+2.0,
+2.0
+]
+}
+},
+"timestamp": "2026-03-15T03:46:23.345747+00:00"
+}
+],
+"loss_history": [
+{
+"iteration": 1,
+"loss": 0.76,
+"phase": "intake",
+"metrics": {
+"entities": 3,
+"relationships": 1,
+"gaps": 5
+},
+"timestamp": "2026-03-15T03:46:14.169402+00:00"
+},
+{
+"iteration": 2,
+"loss": 0.76,
+"phase": "intake",
+"metrics": {
+"entities": 4,
+"relationships": 2,
+"gaps": 6,
+"updates": {
+"entities_updated": 1,
+"relationships_added": 1,
+"requirements_satisfied": 0
+},
+"denoiser_policy": {
+"exploration_enabled": false,
+"exploration_epsilon": 0.0,
+"exploration_top_k": 3,
+"momentum_enabled": false,
+"momentum_beta": 0.85,
+"stagnation_window": 4,
+"stagnation_gain_threshold": 0.5,
+"type_gain_ema": {
+"impact": 2.0
+},
+"recent_gains": [
+2.0
+]
+}
+},
+"timestamp": "2026-03-15T03:46:19.382015+00:00"
+},
+{
+"iteration": 3,
+"loss": 0.76,
+"phase": "intake",
+"metrics": {
+"entities": 5,
+"relationships": 3,
+"gaps": 6,
+"updates": {
+"entities_updated": 1,
+"relationships_added": 1,
+"requirements_satisfied": 0
+},
+"denoiser_policy": {
+"exploration_enabled": false,
+"exploration_epsilon": 0.0,
+"exploration_top_k": 3,
+"momentum_enabled": false,
+"momentum_beta": 0.85,
+"stagnation_window": 4,
+"stagnation_gain_threshold": 0.5,
+"type_gain_ema": {
+"impact": 2.0,
+"timeline": 2.0
+},
+"recent_gains": [
+2.0,
+2.0
+]
+}
+},
+"timestamp": "2026-03-15T03:46:23.345747+00:00"
+}
+],
+"phase_completion": {
+"intake": false,
+"evidence": false,
+"formalization": false
+},
+"next_action": {
+"action": "continue_denoising"
+}
+},
+"knowledge_graph_summary": {
+"total_entities": 5,
+"total_relationships": 3,
+"entity_types": {
+"claim": 1,
+"evidence": 1,
+"fact": 3
+},
+"relationship_types": {
+"supported_by": 1,
+"has_impact": 1,
+"has_timeline_detail": 1
+},
+"gaps": 6
+},
+"dependency_graph_summary": {
+"total_nodes": 3,
+"total_dependencies": 2,
+"node_types": {
+"claim": 1,
+"fact": 2
+},
+"dependency_types": {
+"depends_on": 2
+},
+"satisfied_nodes": 0,
+"satisfaction_rate": 0.0
+},
+"knowledge_graph": {
+"metadata": {
+"created_at": "2026-03-15T03:46:14.168250+00:00",
+"last_updated": "2026-03-15T03:46:23.345582+00:00",
+"version": "1.0"
+},
+"entities": {
+"entity_1": {
+"id": "entity_1",
+"type": "claim",
+"name": "Denial/Refusal Claim",
+"attributes": {
+"claim_type": "denial",
+"description": "I\u2019m filing this complaint because I believe I was treated unfairly in the housing admissions process. I applied for housing and was told I was being denied. I was given vague \u201cpolicy\u201d reasons and language about equity, inclusion, or simi..."
+},
+"confidence": 0.7,
+"source": "complaint"
+},
+"entity_2": {
+"id": "entity_2",
+"type": "evidence",
+"name": "Policy",
+"attributes": {
+"evidence_type": "policy",
+"description": "I\u2019m filing this complaint because I believe I was treated unfairly in the housing admissions process. I applied for housing and was told I was being denied. I was given vague \u201cpolicy\u201d reasons and language about equity, inclusion, or simi..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_3": {
+"id": "entity_3",
+"type": "fact",
+"name": "Impact: I\u2019m filing this complaint because I believe I was treated...",
+"attributes": {
+"fact_type": "impact",
+"description": "I\u2019m filing this complaint because I believe I was treated unfairly in the housing admissions process. I applied for housing and was told I was being denied. I was given vague \u201cpolicy\u201d reasons and language about equity, inclusion, or simi..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_4": {
+"id": "entity_4",
+"type": "fact",
+"name": "Impact: Honestly, the harm is pretty direct: I lost a chance at h...",
+"attributes": {
+"fact_type": "impact",
+"description": "Honestly, the harm is pretty direct: I lost a chance at housing and I\u2019m still stuck in an unstable situation because ..."
+},
+"confidence": 0.6,
+"source": "complaint"
+},
+"entity_5": {
+"id": "entity_5",
+"type": "fact",
+"name": "Timeline detail: I don\u2019t have the exact dates in front of me, and I\u2019m not ...",
+"attributes": {
+"fact_type": "timeline",
+"description": "I don\u2019t have the exact dates in front of me, and I\u2019m not trying to overshare. Roughly, I applied a few months ago, go..."
+},
+"confidence": 0.6,
+"source": "complaint"
+}
+},
+"relationships": {
+"rel_1": {
+"id": "rel_1",
+"source_id": "entity_1",
+"target_id": "entity_2",
+"relation_type": "supported_by",
+"attributes": {},
+"confidence": 0.55,
+"source": "complaint"
+},
+"rel_2": {
+"id": "rel_2",
+"source_id": "entity_1",
+"target_id": "entity_4",
+"relation_type": "has_impact",
+"attributes": {},
+"confidence": 0.6,
+"source": "complaint"
+},
+"rel_3": {
+"id": "rel_3",
+"source_id": "entity_1",
+"target_id": "entity_5",
+"relation_type": "has_timeline_detail",
+"attributes": {},
+"confidence": 0.6,
+"source": "complaint"
+}
+}
+},
+"dependency_graph": {
+"metadata": {
+"created_at": "2026-03-15T03:46:14.169144+00:00",
+"last_updated": "2026-03-15T03:46:14.169220+00:00",
+"version": "1.0"
+},
+"nodes": {
+"node_1": {
+"id": "node_1",
+"node_type": "claim",
+"name": "Denial/Refusal Claim",
+"description": "I\u2019m filing this complaint because I believe I was treated unfairly in the housing admissions process. I applied for housing and was told I was being denied. I was given vague \u201cpolicy\u201d reasons and language about equity, inclusion, or simi...",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {
+"claim_type": "denial"
+}
+},
+"node_2": {
+"id": "node_2",
+"node_type": "fact",
+"name": "Timeline of events",
+"description": "Dates or sequence of key events related to this claim",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {}
+},
+"node_3": {
+"id": "node_3",
+"node_type": "fact",
+"name": "Responsible party",
+"description": "Who took the action or decision tied to this claim",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {}
+}
+},
+"dependencies": {
+"dep_1": {
+"id": "dep_1",
+"source_id": "node_2",
+"target_id": "node_1",
+"dependency_type": "depends_on",
+"required": true,
+"strength": 1.0
+},
+"dep_2": {
+"id": "dep_2",
+"source_id": "node_3",
+"target_id": "node_1",
+"dependency_type": "depends_on",
+"required": true,
+"strength": 1.0
+}
+}
+},
+"critic_score": {
+"overall_score": 0.552,
+"question_quality": 0.52,
+"information_extraction": 0.48,
+"empathy": 0.62,
+"efficiency": 0.66,
+"coverage": 0.55,
+"feedback": "The mediator asked two core intake questions (harm/remedy and timeline) and opened with a brief validating statement, which helped rapport. However, the questions were generic and did not translate the complainant\u2019s concerns about \u201cproxy language\u201d into concrete, case-specific facts (e.g., the exact denial reason provided, the specific policy cited, how/when notice was delivered, and whether an appeal or review process was offered). The complainant\u2019s pushback about \u201cwhy do you need exact dates\u201d was not addressed, and no effort was made to explain relevance or to reframe in a less intrusive way. Overall, the mediator gathered some high-level harms and desired remedy but missed opportunities to extract key factual anchors needed for intake completeness.",
+"strengths": [
+"Clear, straightforward questions about harm/remedy and timeline.",
+"Acknowledged the stress of the situation, supporting rapport."
+],
+"weaknesses": [
+"Missed critical case-specific details (denial notice contents, cited policy basis, method of notification, and any appeal steps).",
+"Did not address the complainant\u2019s resistance to providing dates or explain why they matter."
+],
+"suggestions": [
+"Ask targeted follow-ups that translate \u201cvague policy language\u201d into specifics: \u201cWhat exact wording did the notice use?\u201d \u201cDid it cite a policy section or criteria?\u201d",
+"When the complainant hesitates, briefly explain the purpose (e.g., \u201cDates help determine deadlines for review/appeal\u201d) and offer low-burden options (approximate dates, month/year, or document-based verification)."
+],
+"anchor_sections_expected": [
+"adverse_action",
+"selection_criteria"
+],
+"anchor_sections_covered": [
+"adverse_action",
+"selection_criteria"
+],
+"anchor_sections_missing": []
+},
+"anchor_section_summary": {
+"expected": [
+"adverse_action",
+"selection_criteria"
+],
+"covered": [
+"adverse_action",
+"selection_criteria"
+],
+"missing": []
+},
+"duration_seconds": 30.224043130874634,
+"success": true,
+"error": null
+},
+{
+"session_id": "session_20260315_034346_002",
+"timestamp": "2026-03-15T03:47:53.678024+00:00",
+"seed_complaint": {
+"template_id": "hacc::housing_discrimination::reasonable accommodation disability inte",
+"type": "housing_discrimination",
+"category": "housing",
+"description": "Accommodation complaint anchored to HACC core housing policies",
+"summary": "The strongest supporting material is 'ADMINISTRATIVE PLAN'. applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"key_facts": {
+"incident_summary": "Accommodation complaint anchored to HACC core housing policies",
+"evidence_query": "reasonable accommodation disability interactive process denial housing authority",
+"evidence_summary": "The strongest supporting material is 'ADMINISTRATIVE PLAN'. applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"evidence_documents": [
+"ADMINISTRATIVE PLAN",
+"ADMISSIONS AND CONTINUED OCCUPANCY POLICY"
+],
+"source_paths": [
+"/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+],
+"anchor_titles": [
+"ADMINISTRATIVE PLAN",
+"ADMISSIONS AND CONTINUED OCCUPANCY POLICY"
+],
+"anchor_source_paths": [],
+"anchor_terms": [
+"reasonable accommodation",
+"disability",
+"applicant",
+"accommodation"
+],
+"anchor_passages": [
+{
+"title": "ADMINISTRATIVE PLAN",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"snippet": "applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"section_labels": [
+"reasonable_accommodation"
+]
+},
+{
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"snippet": "applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"section_labels": [
+"reasonable_accommodation"
+]
+}
+],
+"anchor_sections": [
+"reasonable_accommodation"
+],
+"grounding_note": "Use the evidence as factual grounding and identify missing case-specific facts during questioning."
+},
+"keywords": [],
+"legal_patterns": [],
+"hacc_evidence": [
+{
+"document_id": "document:be93a165d00f0101",
+"title": "ADMINISTRATIVE PLAN",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"score": 2977.75,
+"snippet": "applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"matched_rules": [
+{
+"text": "applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"section_title": "HACC Policy",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 3
+},
+{
+"text": "reasonable accommodation for a person with a disability, and HACC must permit a family to",
+"section_title": "INTRODUCTION",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 3
+},
+{
+"text": "reasonable accommodation for a person with a disability, if an applicant does not have",
+"section_title": "HACC Policy",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 3
+}
+],
+"matched_entities": [
+{
+"name": "Reasonable Accommodations under the Fair Housing Act,",
+"type": "policy_section",
+"overlap": 3
+},
+{
+"name": "applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "reasonable accommodation for a person with a disability, and HACC must permit a family to",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "reasonable accommodation for a person with a disability, if an applicant does not have",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "reasonable accommodation for a resident with a disability may be to move the family to a",
+"type": "policy_rule",
+"overlap": 3
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+},
+"document_id": "document:be93a165d00f0101",
+"document_title": "ADMINISTRATIVE PLAN",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 7441,
+"section_count": 4968,
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"text_length": 1927962,
+"status": "success"
+}
+},
+{
+"document_id": "document:c8dc2af6ee6996a0",
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"score": 2022.0,
+"snippet": "applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"matched_rules": [
+{
+"text": "applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"section_title": "HACC Policy",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 3
+},
+{
+"text": "cannot be controlled with a reasonable accommodation under the public housing program",
+"section_title": "The definition of a person with disabilities does not include:",
+"rule_type": "prohibition",
+"modality": "forbidden",
+"overlap": 3
+},
+{
+"text": "reasonable accommodation for a resident with a disability may be to move the",
+"section_title": "HACC Policy",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 3
+}
+],
+"matched_entities": [
+{
+"name": "applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "cannot be controlled with a reasonable accommodation under the public housing program",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "reasonable accommodation for a resident with a disability may be to move the",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "A reasonable accommodation and a LIA application must be approved prior to the",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "As part of the public housing orientation process, HACC will provide information to public",
+"type": "policy_rule",
+"overlap": 2
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+},
+"document_id": "document:c8dc2af6ee6996a0",
+"document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 5318,
+"section_count": 3423,
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"text_length": 1401793,
+"status": "success"
+}
+}
+],
+"source": "hacc_research_engine",
+"_meta": {
+"personality": "vague",
+"max_turns": 2,
+"include_hacc_evidence": true,
+"hacc_preset": "core_hacc_policies",
+"use_hacc_vector_search": false,
+"seed_source": "hacc_research_engine",
+"anchor_sections": [
+"reasonable_accommodation"
+]
+}
+},
+"initial_complaint_text": "I\u2019m filing this complaint about a reasonable accommodation I asked for because of my disability. I\u2019m an applicant, and I made it clear I needed an accommodation to be able to access the housing program. Even though their own policies say applicants with disabilities can request reasonable accommodations, it felt like my request was dismissed without a real interactive process or any meaningful effort to work with me.\n\nWhat happened is that I asked for help and was told no, or was given vague answers that didn\u2019t address my actual needs. I wasn\u2019t offered alternatives or a clear way to fix the issue. It left me feeling like I was being treated differently because of my disability. I don\u2019t remember every date or exact wording, but I do remember feeling stuck and ignored.\n\nThis has had a real impact on me. It made it harder to move forward with housing, and it added stress when I was already dealing with health-related challenges. I\u2019m not asking for special treatment\u2014I\u2019m asking for the reasonable accommodation that the policies say is supposed to be available to someone in my situation.\n\nI want this reviewed and for the housing authority to follow its own reasonable accommodation process for applicants with disabilities.",
+"conversation_history": [
+{
+"role": "complainant",
+"type": "initial_complaint",
+"content": "I\u2019m filing this complaint about a reasonable accommodation I asked for because of my disability. I\u2019m an applicant, and I made it clear I needed an accommodation to be able to access the housing program. Even though their own policies say applicants with disabilities can request reasonable accommodations, it felt like my request was dismissed without a real interactive process or any meaningful effort to work with me.\n\nWhat happened is that I asked for help and was told no, or was given vague answers that didn\u2019t address my actual needs. I wasn\u2019t offered alternatives or a clear way to fix the issue. It left me feeling like I was being treated differently because of my disability. I don\u2019t remember every date or exact wording, but I do remember feeling stuck and ignored.\n\nThis has had a real impact on me. It made it harder to move forward with housing, and it added stress when I was already dealing with health-related challenges. I\u2019m not asking for special treatment\u2014I\u2019m asking for the reasonable accommodation that the policies say is supposed to be available to someone in my situation.\n\nI want this reviewed and for the housing authority to follow its own reasonable accommodation process for applicants with disabilities."
+},
+{
+"role": "mediator",
+"type": "question",
+"content": "I understand this can be stressful, and these details help me support you. So we can support your claim, what evidence supports the claim: Accommodation Request?"
+},
+{
+"role": "complainant",
+"type": "response",
+"content": "I don\u2019t have a lot of hard proof beyond what I was told and what the policies say, but I did make the request and explained it was because of my disability. I was told no or given vague answers, and I don\u2019t remember exact dates or wording. I remember pointing to their reasonable accommodation policy for applicants, and it felt like they didn\u2019t really do the interactive process.\n\nEvidence-wise, I can point to their own Administrative Plan and Admissions and Continued Occupancy Policy about reasonable accommodations for applicants with disabilities. I don\u2019t have the actual form in front of me, but I know there was an option to submit a request. From my side, I have my notes and any emails or messages I sent asking for the accommodation. I\u2019m not sure if they kept records of the request, but I assume they would if they followed their process. That part is an inference on my end.",
+"evidence_context": {
+"dynamic_evidence_summary": "For this question, the strongest supporting material is 'ADMINISTRATIVE PLAN'. In response to this request, you or someone on your behalf may complete this optional form and submit it",
+"dynamic_evidence_items": [
+{
+"document_id": "document:be93a165d00f0101",
+"title": "ADMINISTRATIVE PLAN",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"score": 2977.75,
+"snippet": "applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"matched_rules": [
+{
+"text": "applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"section_title": "HACC Policy",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 3
+},
+{
+"text": "reasonable accommodation for a person with a disability, and HACC must permit a family to",
+"section_title": "INTRODUCTION",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 3
+},
+{
+"text": "reasonable accommodation for a person with a disability, if an applicant does not have",
+"section_title": "HACC Policy",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 3
+}
+],
+"matched_entities": [
+{
+"name": "Reasonable Accommodations under the Fair Housing Act,",
+"type": "policy_section",
+"overlap": 3
+},
+{
+"name": "applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "reasonable accommodation for a person with a disability, and HACC must permit a family to",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "reasonable accommodation for a person with a disability, if an applicant does not have",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "reasonable accommodation for a resident with a disability may be to move the family to a",
+"type": "policy_rule",
+"overlap": 3
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+},
+"document_id": "document:be93a165d00f0101",
+"document_title": "ADMINISTRATIVE PLAN",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 7441,
+"section_count": 4968,
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"text_length": 1927962,
+"status": "success"
+}
+},
+{
+"document_id": "document:c8dc2af6ee6996a0",
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"score": 2022.0,
+"snippet": "applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"matched_rules": [
+{
+"text": "applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"section_title": "HACC Policy",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 3
+},
+{
+"text": "cannot be controlled with a reasonable accommodation under the public housing program",
+"section_title": "The definition of a person with disabilities does not include:",
+"rule_type": "prohibition",
+"modality": "forbidden",
+"overlap": 3
+},
+{
+"text": "reasonable accommodation for a resident with a disability may be to move the",
+"section_title": "HACC Policy",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 3
+}
+],
+"matched_entities": [
+{
+"name": "applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "cannot be controlled with a reasonable accommodation under the public housing program",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "reasonable accommodation for a resident with a disability may be to move the",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "A reasonable accommodation and a LIA application must be approved prior to the",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "As part of the public housing orientation process, HACC will provide information to public",
+"type": "policy_rule",
+"overlap": 2
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+},
+"document_id": "document:c8dc2af6ee6996a0",
+"document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 5318,
+"section_count": 3423,
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"text_length": 1401793,
+"status": "success"
+}
+}
+],
+"dynamic_anchor_passages": [
+{
+"title": "ADMINISTRATIVE PLAN",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"snippet": "In response to this request, you or someone on your behalf may complete this optional form and submit it",
+"section_labels": [
+"general_policy"
+]
+},
+{
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"snippet": "In response to this request, you or someone on your behalf may complete this optional form and submit it to your",
+"section_labels": [
+"general_policy"
+]
+}
+],
+"dynamic_anchor_sections": [
+"general_policy"
+]
+}
+},
+{
+"role": "mediator",
+"type": "question",
+"content": "When did the key events happen? Please share dates or a brief timeline."
+},
+{
+"role": "complainant",
+"type": "response",
+"content": "It\u2019s hard for me to pin down exact dates. I made the request while I was in the application process, and it was around that time that I got the \u201cno\u201d or vague responses. I remember following up at least once after the first response, but I don\u2019t have the exact days or wording. My notes and any emails I sent would have the closest timestamps, but that\u2019s just me assuming those records line up with the timeline. I can say it was all within the same application period, not over years or anything like that.",
+"evidence_context": {
+"dynamic_evidence_summary": "For this question, the strongest supporting material is 'ADMINISTRATIVE PLAN'. applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"dynamic_evidence_items": [
+{
+"document_id": "document:be93a165d00f0101",
+"title": "ADMINISTRATIVE PLAN",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"score": 2977.75,
+"snippet": "applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"matched_rules": [
+{
+"text": "applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"section_title": "HACC Policy",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 3
+},
+{
+"text": "reasonable accommodation for a person with a disability, and HACC must permit a family to",
+"section_title": "INTRODUCTION",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 3
+},
+{
+"text": "reasonable accommodation for a person with a disability, if an applicant does not have",
+"section_title": "HACC Policy",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 3
+}
+],
+"matched_entities": [
+{
+"name": "Reasonable Accommodations under the Fair Housing Act,",
+"type": "policy_section",
+"overlap": 3
+},
+{
+"name": "applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "reasonable accommodation for a person with a disability, and HACC must permit a family to",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "reasonable accommodation for a person with a disability, if an applicant does not have",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "reasonable accommodation for a resident with a disability may be to move the family to a",
+"type": "policy_rule",
+"overlap": 3
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+},
+"document_id": "document:be93a165d00f0101",
+"document_title": "ADMINISTRATIVE PLAN",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 7441,
+"section_count": 4968,
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"text_length": 1927962,
+"status": "success"
+}
+},
+{
+"document_id": "document:c8dc2af6ee6996a0",
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"score": 2022.0,
+"snippet": "applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"matched_rules": [
+{
+"text": "applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"section_title": "HACC Policy",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 3
+},
+{
+"text": "cannot be controlled with a reasonable accommodation under the public housing program",
+"section_title": "The definition of a person with disabilities does not include:",
+"rule_type": "prohibition",
+"modality": "forbidden",
+"overlap": 3
+},
+{
+"text": "reasonable accommodation for a resident with a disability may be to move the",
+"section_title": "HACC Policy",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 3
+}
+],
+"matched_entities": [
+{
+"name": "applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "cannot be controlled with a reasonable accommodation under the public housing program",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "reasonable accommodation for a resident with a disability may be to move the",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "A reasonable accommodation and a LIA application must be approved prior to the",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "As part of the public housing orientation process, HACC will provide information to public",
+"type": "policy_rule",
+"overlap": 2
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+},
+"document_id": "document:c8dc2af6ee6996a0",
+"document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 5318,
+"section_count": 3423,
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"text_length": 1401793,
+"status": "success"
+}
+}
+],
+"dynamic_anchor_passages": [
+{
+"title": "ADMINISTRATIVE PLAN",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"snippet": "applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"section_labels": [
+"reasonable_accommodation"
+]
+},
+{
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"snippet": "applicant as a reasonable accommodation for a person with a disability, if an applicant",
+"section_labels": [
+"reasonable_accommodation"
+]
+}
+],
+"dynamic_anchor_sections": [
+"reasonable_accommodation"
+]
+}
+}
+],
+"num_questions": 2,
+"num_turns": 2,
+"final_state": {
+"current_phase": "intake",
+"iteration_count": 3,
+"convergence_history": [
+{
+"iteration": 1,
+"loss": 0.75,
+"phase": "intake",
+"metrics": {
+"entities": 4,
+"relationships": 1,
+"gaps": 5
+},
+"timestamp": "2026-03-15T03:47:34.910499+00:00"
+},
+{
+"iteration": 2,
+"loss": 0.752,
+"phase": "intake",
+"metrics": {
+"entities": 5,
+"relationships": 2,
+"gaps": 5,
+"updates": {
+"entities_updated": 2,
+"relationships_added": 1,
+"requirements_satisfied": 0
+},
+"denoiser_policy": {
+"exploration_enabled": false,
+"exploration_epsilon": 0.0,
+"exploration_top_k": 3,
+"momentum_enabled": false,
+"momentum_beta": 0.85,
+"stagnation_window": 4,
+"stagnation_gain_threshold": 0.5,
+"type_gain_ema": {
+"evidence": 3.0
+},
+"recent_gains": [
+3.0
+]
+}
+},
+"timestamp": "2026-03-15T03:47:41.887718+00:00"
+},
+{
+"iteration": 3,
+"loss": 0.72,
+"phase": "intake",
+"metrics": {
+"entities": 6,
+"relationships": 3,
+"gaps": 5,
+"updates": {
+"entities_updated": 1,
+"relationships_added": 1,
+"requirements_satisfied": 0
+},
+"denoiser_policy": {
+"exploration_enabled": false,
+"exploration_epsilon": 0.0,
+"exploration_top_k": 3,
+"momentum_enabled": false,
+"momentum_beta": 0.85,
+"stagnation_window": 4,
+"stagnation_gain_threshold": 0.5,
+"type_gain_ema": {
+"evidence": 3.0,
+"timeline": 2.0
+},
+"recent_gains": [
+3.0,
+2.0
+]
+}
+},
+"timestamp": "2026-03-15T03:47:46.640069+00:00"
+}
+],
+"loss_history": [
+{
+"iteration": 1,
+"loss": 0.75,
+"phase": "intake",
+"metrics": {
+"entities": 4,
+"relationships": 1,
+"gaps": 5
+},
+"timestamp": "2026-03-15T03:47:34.910499+00:00"
+},
+{
+"iteration": 2,
+"loss": 0.752,
+"phase": "intake",
+"metrics": {
+"entities": 5,
+"relationships": 2,
+"gaps": 5,
+"updates": {
+"entities_updated": 2,
+"relationships_added": 1,
+"requirements_satisfied": 0
+},
+"denoiser_policy": {
+"exploration_enabled": false,
+"exploration_epsilon": 0.0,
+"exploration_top_k": 3,
+"momentum_enabled": false,
+"momentum_beta": 0.85,
+"stagnation_window": 4,
+"stagnation_gain_threshold": 0.5,
+"type_gain_ema": {
+"evidence": 3.0
+},
+"recent_gains": [
+3.0
+]
+}
+},
+"timestamp": "2026-03-15T03:47:41.887718+00:00"
+},
+{
+"iteration": 3,
+"loss": 0.72,
+"phase": "intake",
+"metrics": {
+"entities": 6,
+"relationships": 3,
+"gaps": 5,
+"updates": {
+"entities_updated": 1,
+"relationships_added": 1,
+"requirements_satisfied": 0
+},
+"denoiser_policy": {
+"exploration_enabled": false,
+"exploration_epsilon": 0.0,
+"exploration_top_k": 3,
+"momentum_enabled": false,
+"momentum_beta": 0.85,
+"stagnation_window": 4,
+"stagnation_gain_threshold": 0.5,
+"type_gain_ema": {
+"evidence": 3.0,
+"timeline": 2.0
+},
+"recent_gains": [
+3.0,
+2.0
+]
+}
+},
+"timestamp": "2026-03-15T03:47:46.640069+00:00"
+}
+],
+"phase_completion": {
+"intake": false,
+"evidence": false,
+"formalization": false
+},
+"next_action": {
+"action": "continue_denoising"
+}
+},
+"knowledge_graph_summary": {
+"total_entities": 6,
+"total_relationships": 3,
+"entity_types": {
+"claim": 1,
+"organization": 1,
+"fact": 3,
+"evidence": 1
+},
+"relationship_types": {
+"involves": 1,
+"supported_by": 1,
+"has_timeline_detail": 1
+},
+"gaps": 5
+},
+"dependency_graph_summary": {
+"total_nodes": 3,
+"total_dependencies": 2,
+"node_types": {
+"claim": 1,
+"fact": 2
+},
+"dependency_types": {
+"depends_on": 2
+},
+"satisfied_nodes": 0,
+"satisfaction_rate": 0.0
+},
+"knowledge_graph": {
+"metadata": {
+"created_at": "2026-03-15T03:47:34.909306+00:00",
+"last_updated": "2026-03-15T03:47:46.639877+00:00",
+"version": "1.0"
+},
+"entities": {
+"entity_1": {
+"id": "entity_1",
+"type": "claim",
+"name": "Accommodation Request",
+"attributes": {
+"claim_type": "accommodation",
+"description": "I\u2019m filing this complaint about a reasonable accommodation I asked for because of my disability. I\u2019m an applicant, and I made it clear I needed an accommodation to be able to access the housing program. Even though their own policies say...",
+"evidence_descriptions": [
+"I don\u2019t have a lot of hard proof beyond what I was told and what the policies say, but I did make the request and explained it was because of my disability. I was told no or given vague answers, and I don\u2019t remember exact dates or wording. I remember pointing to their reasonable accommodation policy for applicants, and it felt like they didn\u2019t really do the interactive process.\n\nEvidence-wise, I can point to their own Administrative Plan and Admissions and Continued Occupancy Policy about reasonable accommodations for applicants with disabilities. I don\u2019t have the actual form in front of me, but I know there was an option to submit a request. From my side, I have my notes and any emails or messages I sent asking for the accommodation. I\u2019m not sure if they kept records of the request, but I assume they would if they followed their process. That part is an inference on my end."
+]
+},
+"confidence": 0.8,
+"source": "complaint"
+},
+"entity_2": {
+"id": "entity_2",
+"type": "organization",
+"name": "Property Management",
+"attributes": {
+"role": "respondent"
+},
+"confidence": 0.6,
+"source": "complaint"
+},
+"entity_3": {
+"id": "entity_3",
+"type": "fact",
+"name": "Impact: I\u2019m filing this complaint about a reasonable accommodatio...",
+"attributes": {
+"fact_type": "impact",
+"description": "I\u2019m filing this complaint about a reasonable accommodation I asked for because of my disability. I\u2019m an applicant, and I made it clear I needed an accommodation to be able to access the housing program. Even though their own policies say..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_4": {
+"id": "entity_4",
+"type": "fact",
+"name": "Requested remedy: I\u2019m filing this complaint about a reasonable accommodatio...",
+"attributes": {
+"fact_type": "remedy",
+"description": "I\u2019m filing this complaint about a reasonable accommodation I asked for because of my disability. I\u2019m an applicant, and I made it clear I needed an accommodation to be able to access the housing program. Even though their own policies say..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_5": {
+"id": "entity_5",
+"type": "evidence",
+"name": "Evidence: I don\u2019t have a lot of hard proof beyond what I was told and what the policies...",
+"attributes": {
+"description": "I don\u2019t have a lot of hard proof beyond what I was told and what the policies say, but I did make the request and exp..."
+},
+"confidence": 0.6,
+"source": "complaint"
+},
+"entity_6": {
+"id": "entity_6",
+"type": "fact",
+"name": "Timeline detail: It\u2019s hard for me to pin down exact dates. I made the requ...",
+"attributes": {
+"fact_type": "timeline",
+"description": "It\u2019s hard for me to pin down exact dates. I made the request while I was in the application process, and it was aroun..."
+},
+"confidence": 0.6,
+"source": "complaint"
+}
+},
+"relationships": {
+"rel_1": {
+"id": "rel_1",
+"source_id": "entity_1",
+"target_id": "entity_2",
+"relation_type": "involves",
+"attributes": {},
+"confidence": 0.6,
+"source": "complaint"
+},
+"rel_2": {
+"id": "rel_2",
+"source_id": "entity_1",
+"target_id": "entity_5",
+"relation_type": "supported_by",
+"attributes": {},
+"confidence": 0.6,
+"source": "complaint"
+},
+"rel_3": {
+"id": "rel_3",
+"source_id": "entity_1",
+"target_id": "entity_6",
+"relation_type": "has_timeline_detail",
+"attributes": {},
+"confidence": 0.6,
+"source": "complaint"
+}
+}
+},
+"dependency_graph": {
+"metadata": {
+"created_at": "2026-03-15T03:47:34.910225+00:00",
+"last_updated": "2026-03-15T03:47:34.910302+00:00",
+"version": "1.0"
+},
+"nodes": {
+"node_1": {
+"id": "node_1",
+"node_type": "claim",
+"name": "Accommodation Request",
+"description": "I\u2019m filing this complaint about a reasonable accommodation I asked for because of my disability. I\u2019m an applicant, and I made it clear I needed an accommodation to be able to access the housing program. Even though their own policies say...",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {
+"claim_type": "accommodation"
+}
+},
+"node_2": {
+"id": "node_2",
+"node_type": "fact",
+"name": "Timeline of events",
+"description": "Dates or sequence of key events related to this claim",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {}
+},
+"node_3": {
+"id": "node_3",
+"node_type": "fact",
+"name": "Responsible party",
+"description": "Who took the action or decision tied to this claim",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {}
+}
+},
+"dependencies": {
+"dep_1": {
+"id": "dep_1",
+"source_id": "node_2",
+"target_id": "node_1",
+"dependency_type": "depends_on",
+"required": true,
+"strength": 1.0
+},
+"dep_2": {
+"id": "dep_2",
+"source_id": "node_3",
+"target_id": "node_1",
+"dependency_type": "depends_on",
+"required": true,
+"strength": 1.0
+}
+}
+},
+"critic_score": {
+"overall_score": 0.5915,
+"question_quality": 0.62,
+"information_extraction": 0.55,
+"empathy": 0.68,
+"efficiency": 0.7,
+"coverage": 0.46,
+"feedback": "The mediator asked two clear, focused questions that were easy for the complainant to answer and showed a basic empathetic tone. The evidence question was appropriate, and the timeline question was necessary, but both were fairly generic and did not probe for key specifics that would strengthen the record (who denied the request, what accommodation was requested, how it related to disability, and what alternatives were proposed or refused). Information extraction was limited because the mediator did not follow up to clarify the accommodation type, the decision-maker, channels of communication, or any concrete documentation. Efficiency was decent because there was little repetition, but the session missed opportunities to gather critical facts for intake completeness, lowering coverage.",
+"strengths": [
+"Clear, non-leading questions that were easy to understand.",
+"Acknowledged stress and showed basic empathy."
+],
+"weaknesses": [
+"Limited follow-up on the accommodation request details and denial process.",
+"Missed key intake elements like who, what specific accommodation, and any written communications."
+],
+"suggestions": [
+"Ask targeted follow-ups: the exact accommodation requested, who responded, and how the response was delivered.",
+"Probe for any written records or witnesses and ask for approximate dates or milestones (application submission date, response date, follow-up date)."
+],
+"anchor_sections_expected": [
+"reasonable_accommodation"
+],
+"anchor_sections_covered": [
+"reasonable_accommodation"
+],
+"anchor_sections_missing": []
+},
+"anchor_section_summary": {
+"expected": [
+"reasonable_accommodation"
+],
+"covered": [
+"reasonable_accommodation"
+],
+"missing": []
+},
+"duration_seconds": 25.24145531654358,
+"success": true,
+"error": null
+}
+]
+}

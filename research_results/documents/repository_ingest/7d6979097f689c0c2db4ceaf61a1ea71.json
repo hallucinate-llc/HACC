@@ -1,0 +1,71 @@
+{
+  "title": "give.raceforward.org give 341942",
+  "relative_path": "research_results/third_party_downloads/give.raceforward.org/give.raceforward.org_give_341942.html",
+  "source_type": "repository_evidence",
+  "filename": "give.raceforward.org_give_341942.html",
+  "mime_type": "text/html",
+  "size": 67356,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 1,
+  "paragraph_count": 1,
+  "text_length": 18,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 18,
+    "text_length": 18,
+    "raw_size": 67356,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 1
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 18,
+      "text_length": 18,
+      "raw_size": 67356,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "7d6979097f689c0c2db4ceaf61a1ea71",
+  "checksum": "3e1cc080b879cc574dfc5eeb1b07d563c69b055da9c461e8fa49d1a744e84133",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/give.raceforward.org/give.raceforward.org_give_341942.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/7d6979097f689c0c2db4ceaf61a1ea71.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

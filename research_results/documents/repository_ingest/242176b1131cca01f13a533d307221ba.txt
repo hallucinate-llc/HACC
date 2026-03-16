@@ -1,0 +1,21 @@
+{
+"generated_at": "2025-12-31T00:00:00Z",
+"source": {
+"notes": "Assets referenced by Paycom sprawl.json"
+},
+"items": [
+{
+"domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+"score": 80,
+"evidence_urls": [
+"https://portal-applicant-tracking.us-cent.paycomonline.net/career-portal/main/index-sprawl-6ETZXKZJ.js",
+"https://portal-applicant-tracking.us-cent.paycomonline.net/career-portal/main/index-sprawl-PTGBCNKL.css"
+],
+"seed_urls": [
+"https://portal-applicant-tracking.us-cent.paycomonline.net/career-portal/sprawl.json"
+],
+"guessed_urls": [],
+"notes": "Static assets referenced by sprawl.json"
+}
+]
+}

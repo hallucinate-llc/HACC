@@ -1,0 +1,71 @@
+{
+  "title": "obiu.org courses",
+  "relative_path": "research_results/third_party_downloads/obiu.org/obiu.org_courses.html",
+  "source_type": "repository_evidence",
+  "filename": "obiu.org_courses.html",
+  "mime_type": "text/html",
+  "size": 834562,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 29,
+  "paragraph_count": 1,
+  "text_length": 23249,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 23249,
+    "text_length": 23249,
+    "raw_size": 834562,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 29
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 23249,
+      "text_length": 23249,
+      "raw_size": 834562,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "02c9cde59febc7d6e2ad28c96bd488a7",
+  "checksum": "d00c7a8eae7629e1b208f875484963f12fc6e0775a8fa6c84f86d3ea1c4363a3",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/obiu.org/obiu.org_courses.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/02c9cde59febc7d6e2ad28c96bd488a7.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

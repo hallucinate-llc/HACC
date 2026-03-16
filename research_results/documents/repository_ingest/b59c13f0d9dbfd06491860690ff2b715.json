@@ -1,0 +1,71 @@
+{
+  "title": "www.racialequityalliance.org viewdocument democracy-resilience-toolkit-promp",
+  "relative_path": "research_results/third_party_downloads/www.racialequityalliance.org/www.racialequityalliance.org_viewdocument_democracy-resilience-toolkit-promp.html",
+  "source_type": "repository_evidence",
+  "filename": "www.racialequityalliance.org_viewdocument_democracy-resilience-toolkit-promp.html",
+  "mime_type": "text/html",
+  "size": 148172,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 4,
+  "paragraph_count": 1,
+  "text_length": 2809,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 2809,
+    "text_length": 2809,
+    "raw_size": 148172,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 4
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 2809,
+      "text_length": 2809,
+      "raw_size": 148172,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "b59c13f0d9dbfd06491860690ff2b715",
+  "checksum": "8d7ff64ba17ea10688f36c4dc016a07fa324e557c16310f4e5d0d59e7c3c715f",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.racialequityalliance.org/www.racialequityalliance.org_viewdocument_democracy-resilience-toolkit-promp.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/b59c13f0d9dbfd06491860690ff2b715.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

@@ -1,0 +1,123 @@
+[
+{
+"domain": "www.oregonmetro.gov",
+"url": "https://www.oregonmetro.gov/sites/default/files/2023/04/25/Housing-Bond-Quarterly-Progress-Report_Q1-JAN_MAR_2023_Final_wFinancials_StaffReports.pdf",
+"final_url": "https://www.oregonmetro.gov/sites/default/files/2023/04/25/Housing-Bond-Quarterly-Progress-Report_Q1-JAN_MAR_2023_Final_wFinancials_StaffReports.pdf",
+"status": "error",
+"http_status": 404,
+"content_type": "text/html; charset=UTF-8",
+"bytes": 0,
+"saved_path": "",
+"error": "http_404"
+},
+{
+"domain": "www.oregonmetro.gov",
+"url": "https://www.oregonmetro.gov/sites/default/files/2025-10/affordable-housing-bond-oversight-committee-meeting-packet-20250317.pdf",
+"final_url": "https://www.oregonmetro.gov/sites/default/files/2025-10/affordable-housing-bond-oversight-committee-meeting-packet-20250317.pdf",
+"status": "error",
+"http_status": 200,
+"content_type": "application/pdf",
+"bytes": 0,
+"saved_path": "",
+"error": "too_large_content_length:18570789"
+},
+{
+"domain": "acousticalsociety.org",
+"url": "https://acousticalsociety.org/wp-content/uploads/2025/03/ASA-Briefing.pdf",
+"final_url": "https://acousticalsociety.org/wp-content/uploads/2025/03/ASA-Briefing.pdf",
+"status": "ok",
+"http_status": 200,
+"content_type": "application/pdf",
+"bytes": 8539841,
+"saved_path": "research_results/third_party_downloads/acousticalsociety.org/acousticalsociety.org_wp-content_uploads_2025_03_ASA-Briefing.pdf",
+"error": ""
+},
+{
+"domain": "d1u7huky9c51vj.cloudfront.net",
+"url": "https://d1u7huky9c51vj.cloudfront.net/wp-content/uploads/2024/06/04213626/Impact-Statements-2022-Revised-reduced.pdf",
+"final_url": "https://d1u7huky9c51vj.cloudfront.net/wp-content/uploads/2024/06/04213626/Impact-Statements-2022-Revised-reduced.pdf",
+"status": "ok",
+"http_status": 200,
+"content_type": "application/pdf",
+"bytes": 2224087,
+"saved_path": "research_results/third_party_downloads/d1u7huky9c51vj.cloudfront.net/d1u7huky9c51vj.cloudfront.net_wp-content_uploads_2024_06_04213626_Impact-Statements-2022-Revised-reduced.pdf",
+"error": ""
+},
+{
+"domain": "democrats-science.house.gov",
+"url": "https://democrats-science.house.gov/imo/media/doc/democratic_staff_report-defending_hidden_figures.pdf",
+"final_url": "https://democrats-science.house.gov/imo/media/doc/democratic_staff_report-defending_hidden_figures.pdf",
+"status": "ok",
+"http_status": 200,
+"content_type": "application/pdf",
+"bytes": 1168324,
+"saved_path": "research_results/third_party_downloads/democrats-science.house.gov/democrats-science.house.gov_imo_media_doc_democratic_staff_report-defending_hidden_figures.pdf",
+"error": ""
+},
+{
+"domain": "futurumcareers.com",
+"url": "https://futurumcareers.com/Issue-09.pdf",
+"final_url": "https://futurumcareers.com/Issue-09.pdf",
+"status": "ok",
+"http_status": 200,
+"content_type": "application/pdf",
+"bytes": 12681639,
+"saved_path": "research_results/third_party_downloads/futurumcareers.com/futurumcareers.com_Issue-09.pdf",
+"error": ""
+},
+{
+"domain": "nsf-gov-resources.nsf.gov",
+"url": "https://nsf-gov-resources.nsf.gov/2021-12/Reimagining%20Advanced%20Research%20for%20Human%20Good%20through%20Industry%20and%20Educational%20Partnerships_2119846_June%202021_Final_508.pdf",
+"final_url": "https://nsf-gov-resources.nsf.gov/2021-12/Reimagining%20Advanced%20Research%20for%20Human%20Good%20through%20Industry%20and%20Educational%20Partnerships_2119846_June%202021_Final_508.pdf",
+"status": "ok",
+"http_status": 200,
+"content_type": "application/pdf",
+"bytes": 5080326,
+"saved_path": "research_results/third_party_downloads/nsf-gov-resources.nsf.gov/nsf-gov-resources.nsf.gov_2021-12_Reimagining_20Advanced_20Research_20for_20Human_20Good_20through_20Industry_20and_20Ed_07dbd2c478",
+"error": ""
+},
+{
+"domain": "wshfc.org",
+"url": "https://wshfc.org/managers/Reports/TCReports/2025%20TC%20ReportTypesbyPropertyName.pdf",
+"final_url": "https://wshfc.org/managers/Reports/TCReports/2025%20TC%20ReportTypesbyPropertyName.pdf",
+"status": "ok",
+"http_status": 200,
+"content_type": "application/pdf",
+"bytes": 432249,
+"saved_path": "research_results/third_party_downloads/wshfc.org/wshfc.org_managers_Reports_TCReports_2025_20TC_20ReportTypesbyPropertyName.pdf",
+"error": ""
+},
+{
+"domain": "www.kiscolawfirm.com",
+"url": "https://www.kiscolawfirm.com/wp-content/uploads/sites/1504051/2020/03/Sorblum-vs-Carrollwood-Condominum-I.pdf",
+"final_url": "https://www.kiscolawfirm.com/wp-content/uploads/sites/1504051/2020/03/Sorblum-vs-Carrollwood-Condominum-I.pdf",
+"status": "ok",
+"http_status": 200,
+"content_type": "application/pdf",
+"bytes": 392326,
+"saved_path": "research_results/third_party_downloads/www.kiscolawfirm.com/www.kiscolawfirm.com_wp-content_uploads_sites_1504051_2020_03_Sorblum-vs-Carrollwood-Condominum-I.pdf",
+"error": ""
+},
+{
+"domain": "www.lse.ac.uk",
+"url": "https://www.lse.ac.uk/tii/assets/documents/The-City-Quantum-Summit-TII-Report.pdf",
+"final_url": "https://www.lse.ac.uk/tii/assets/documents/The-City-Quantum-Summit-TII-Report.pdf",
+"status": "ok",
+"http_status": 200,
+"content_type": "application/pdf",
+"bytes": 2359561,
+"saved_path": "research_results/third_party_downloads/www.lse.ac.uk/www.lse.ac.uk_tii_assets_documents_The-City-Quantum-Summit-TII-Report.pdf",
+"error": ""
+},
+{
+"domain": "www.oregon.gov",
+"url": "https://www.oregon.gov/biz/Publications/Broadband/ORDigitalEquityPlan.pdf",
+"final_url": "https://www.oregon.gov/biz/Publications/Broadband/ORDigitalEquityPlan.pdf",
+"status": "ok",
+"http_status": 200,
+"content_type": "application/pdf",
+"bytes": 10587140,
+"saved_path": "research_results/third_party_downloads/www.oregon.gov/www.oregon.gov_biz_Publications_Broadband_ORDigitalEquityPlan.pdf",
+"error": ""
+}
+]

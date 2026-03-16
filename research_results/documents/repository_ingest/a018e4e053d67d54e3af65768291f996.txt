@@ -1,0 +1,39 @@
+{
+"metadata": {
+"created_at": "2026-03-15T22:44:12.728795+00:00",
+"last_updated": "2026-03-15T22:44:12.728859+00:00",
+"version": "1.0"
+},
+"nodes": {
+"node_1": {
+"id": "node_1",
+"node_type": "claim",
+"name": "Retaliation Claim",
+"description": "Complaint: I am a HACC resident and I am filing a retaliation complaint against HACC for adverse actions taken against me after I raised concerns through the proper channels. After I reported a serious issue and asked for correction thro...",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {
+"claim_type": "retaliation"
+}
+},
+"node_2": {
+"id": "node_2",
+"node_type": "fact",
+"name": "Timeline of events",
+"description": "Dates or sequence of key events related to this claim",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {}
+}
+},
+"dependencies": {
+"dep_1": {
+"id": "dep_1",
+"source_id": "node_2",
+"target_id": "node_1",
+"dependency_type": "depends_on",
+"required": true,
+"strength": 1.0
+}
+}
+}

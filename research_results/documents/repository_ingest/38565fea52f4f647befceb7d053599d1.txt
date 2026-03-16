@@ -1,0 +1,200 @@
+{
+"metadata": {
+"created_at": "2026-03-15T03:44:49.027190+00:00",
+"last_updated": "2026-03-15T03:45:06.178506+00:00",
+"version": "1.0"
+},
+"entities": {
+"entity_1": {
+"id": "entity_1",
+"type": "organization",
+"name": "HACC",
+"attributes": {
+"role": "respondent"
+},
+"confidence": 0.6,
+"source": "complaint"
+},
+"entity_2": {
+"id": "entity_2",
+"type": "evidence",
+"name": "Email communication",
+"attributes": {
+"evidence_type": "email communication",
+"description": "I’m filing this complaint because I believe HACC retaliated against me after I tried to raise concerns and exercise my rights. I requested a grievance and asked for due process after an adverse action, and instead of addressing the issue..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_3": {
+"id": "entity_3",
+"type": "evidence",
+"name": "Letter",
+"attributes": {
+"evidence_type": "letter",
+"description": "I’m filing this complaint because I believe HACC retaliated against me after I tried to raise concerns and exercise my rights. I requested a grievance and asked for due process after an adverse action, and instead of addressing the issue..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_4": {
+"id": "entity_4",
+"type": "evidence",
+"name": "Notice",
+"attributes": {
+"evidence_type": "notice",
+"description": "I’m filing this complaint because I believe HACC retaliated against me after I tried to raise concerns and exercise my rights. I requested a grievance and asked for due process after an adverse action, and instead of addressing the issue..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_5": {
+"id": "entity_5",
+"type": "evidence",
+"name": "Policy",
+"attributes": {
+"evidence_type": "policy",
+"description": "I’m filing this complaint because I believe HACC retaliated against me after I tried to raise concerns and exercise my rights. I requested a grievance and asked for due process after an adverse action, and instead of addressing the issue..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_6": {
+"id": "entity_6",
+"type": "fact",
+"name": "Impact: I’m filing this complaint because I believe HACC retaliat...",
+"attributes": {
+"fact_type": "impact",
+"description": "I’m filing this complaint because I believe HACC retaliated against me after I tried to raise concerns and exercise my rights. I requested a grievance and asked for due process after an adverse action, and instead of addressing the issue...",
+"clarification": "Sure. The impact has been really significant for me. I’ve been under a lot of stress and anxiety since this happened, and I feel like my housing situation is unstable. I’ve had trouble sleeping, I’m constantly worried about losing my housing, and it’s been hard to feel safe or settled at home. I also feel discouraged about speaking up in the future because it seems like asking for a grievance — which the policy says is for any dispute about HACC’s actions or failure to act — led to more negative treatment instead of a fair process. That makes me feel powerless and like the system isn’t working for tenants like me. If you need specific dates or documents tied to these impacts, I can provide those."
+},
+"confidence": 0.75,
+"source": "complaint"
+},
+"entity_7": {
+"id": "entity_7",
+"type": "fact",
+"name": "Requested remedy: I’m filing this complaint because I believe HACC retaliat...",
+"attributes": {
+"fact_type": "remedy",
+"description": "I’m filing this complaint because I believe HACC retaliated against me after I tried to raise concerns and exercise my rights. I requested a grievance and asked for due process after an adverse action, and instead of addressing the issue..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_8": {
+"id": "entity_8",
+"type": "claim",
+"name": "Complaint Claim",
+"attributes": {
+"claim_type": "unknown",
+"description": "I’m filing this complaint because I believe HACC retaliated against me after I tried to raise concerns and exercise my rights. I requested a grievance and asked for due process after an adverse action, and instead of addressing the issue..."
+},
+"confidence": 0.5,
+"source": "complaint"
+},
+"entity_9": {
+"id": "entity_9",
+"type": "fact",
+"name": "Timeline detail: I don’t have the exact dates in front of me, but here are...",
+"attributes": {
+"fact_type": "timeline",
+"description": "I don’t have the exact dates in front of me, but here are the best ranges I can give right now, and I can confirm wit..."
+},
+"confidence": 0.6,
+"source": "complaint"
+}
+},
+"relationships": {
+"rel_1": {
+"id": "rel_1",
+"source_id": "entity_8",
+"target_id": "entity_1",
+"relation_type": "involves",
+"attributes": {},
+"confidence": 0.6,
+"source": "complaint"
+},
+"rel_2": {
+"id": "rel_2",
+"source_id": "entity_8",
+"target_id": "entity_2",
+"relation_type": "supported_by",
+"attributes": {},
+"confidence": 0.55,
+"source": "complaint"
+},
+"rel_3": {
+"id": "rel_3",
+"source_id": "entity_8",
+"target_id": "entity_3",
+"relation_type": "supported_by",
+"attributes": {},
+"confidence": 0.55,
+"source": "complaint"
+},
+"rel_4": {
+"id": "rel_4",
+"source_id": "entity_8",
+"target_id": "entity_4",
+"relation_type": "supported_by",
+"attributes": {},
+"confidence": 0.55,
+"source": "complaint"
+},
+"rel_5": {
+"id": "rel_5",
+"source_id": "entity_8",
+"target_id": "entity_5",
+"relation_type": "supported_by",
+"attributes": {},
+"confidence": 0.55,
+"source": "complaint"
+},
+"rel_6": {
+"id": "rel_6",
+"source_id": "entity_2",
+"target_id": "entity_1",
+"relation_type": "associated_with",
+"attributes": {},
+"confidence": 0.5,
+"source": "complaint"
+},
+"rel_7": {
+"id": "rel_7",
+"source_id": "entity_3",
+"target_id": "entity_1",
+"relation_type": "associated_with",
+"attributes": {},
+"confidence": 0.5,
+"source": "complaint"
+},
+"rel_8": {
+"id": "rel_8",
+"source_id": "entity_4",
+"target_id": "entity_1",
+"relation_type": "associated_with",
+"attributes": {},
+"confidence": 0.5,
+"source": "complaint"
+},
+"rel_9": {
+"id": "rel_9",
+"source_id": "entity_5",
+"target_id": "entity_1",
+"relation_type": "associated_with",
+"attributes": {},
+"confidence": 0.5,
+"source": "complaint"
+},
+"rel_10": {
+"id": "rel_10",
+"source_id": "entity_8",
+"target_id": "entity_9",
+"relation_type": "has_timeline_detail",
+"attributes": {},
+"confidence": 0.6,
+"source": "complaint"
+}
+}
+}

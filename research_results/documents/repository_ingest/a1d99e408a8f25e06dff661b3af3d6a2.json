@@ -1,0 +1,69 @@
+{
+  "title": "wordpress.org plugins gdpr-cookie-compliance",
+  "relative_path": "research_results/third_party_downloads/wordpress.org/wordpress.org_plugins_gdpr-cookie-compliance.html",
+  "source_type": "repository_evidence",
+  "filename": "wordpress.org_plugins_gdpr-cookie-compliance.html",
+  "mime_type": "text/html",
+  "size": 222387,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 41,
+  "paragraph_count": 1,
+  "text_length": 35199,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 35199,
+    "text_length": 35199,
+    "raw_size": 222387,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 41
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 35199,
+      "text_length": 35199,
+      "raw_size": 222387,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "a1d99e408a8f25e06dff661b3af3d6a2",
+  "checksum": "719f6a36c4532074afc196cdeccd4a7a16f27ef0803b1164593e172151f4e7ce",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/wordpress.org/wordpress.org_plugins_gdpr-cookie-compliance.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/a1d99e408a8f25e06dff661b3af3d6a2.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

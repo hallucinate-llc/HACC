@@ -1,0 +1,69 @@
+{
+  "title": "d3uf7shreuzboy.cloudfront.net WebRoot stable i18n js-fr.82c96ebd",
+  "relative_path": "research_results/third_party_downloads/d3uf7shreuzboy.cloudfront.net/d3uf7shreuzboy.cloudfront.net_WebRoot_stable_i18n_js-fr.82c96ebd.json",
+  "source_type": "repository_evidence",
+  "filename": "d3uf7shreuzboy.cloudfront.net_WebRoot_stable_i18n_js-fr.82c96ebd.json",
+  "mime_type": "application/json",
+  "size": 31761,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 32,
+  "paragraph_count": 1,
+  "text_length": 27360,
+  "input_format": "text",
+  "page_count": 1,
+  "extraction_method": "text_normalization",
+  "parse_quality": {
+    "quality_score": 98.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 27360,
+    "text_length": 27360,
+    "raw_size": 31761,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "text",
+    "normalization": "text_normalization",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 32
+    },
+    "extraction": {
+      "method": "text_normalization",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 27360,
+      "text_length": 27360,
+      "raw_size": 31761,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "4ff7a76c37148d3db25912a7c0a6df11",
+  "checksum": "bb5d9fbbe5b2e87ab6f9f6b4fa2131aa4d59aed739c796501d35e6282f3da31b",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/d3uf7shreuzboy.cloudfront.net/d3uf7shreuzboy.cloudfront.net_WebRoot_stable_i18n_js-fr.82c96ebd.json",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/4ff7a76c37148d3db25912a7c0a6df11.txt",
+  "content_type": "application/json",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

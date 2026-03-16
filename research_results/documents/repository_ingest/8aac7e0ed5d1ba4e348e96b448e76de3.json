@@ -1,0 +1,69 @@
+{
+  "title": "www.raceforward.org projects-programs- 26-initiatives cultural-week-of-action",
+  "relative_path": "research_results/third_party_downloads/raceforward.org/www.raceforward.org_projects-programs-_26-initiatives_cultural-week-of-action.html",
+  "source_type": "repository_evidence",
+  "filename": "www.raceforward.org_projects-programs-_26-initiatives_cultural-week-of-action.html",
+  "mime_type": "text/html",
+  "size": 39387,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 9,
+  "paragraph_count": 1,
+  "text_length": 7187,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 7187,
+    "text_length": 7187,
+    "raw_size": 39387,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 9
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 7187,
+      "text_length": 7187,
+      "raw_size": 39387,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "8aac7e0ed5d1ba4e348e96b448e76de3",
+  "checksum": "e9a39da2aa40e9c1ced7cc349ab8c74a57fc14166037de14d34f20a04c014696",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/raceforward.org/www.raceforward.org_projects-programs-_26-initiatives_cultural-week-of-action.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/8aac7e0ed5d1ba4e348e96b448e76de3.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

@@ -1,0 +1,71 @@
+{
+  "title": "www.tiktok.com 404 4987085fdb",
+  "relative_path": "research_results/third_party_downloads/www.tiktok.com/www.tiktok.com_404_4987085fdb.html",
+  "source_type": "repository_evidence",
+  "filename": "www.tiktok.com_404_4987085fdb.html",
+  "mime_type": "text/html",
+  "size": 65711,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 1,
+  "paragraph_count": 1,
+  "text_length": 6,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 6,
+    "text_length": 6,
+    "raw_size": 65711,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 1
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 6,
+      "text_length": 6,
+      "raw_size": 65711,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "28b19c8e6159db9535c9472acb5c8d65",
+  "checksum": "1bb6fcfbf1368a7b27a6db04802e2756a9e209eb24f189c3e35be8542f439a2c",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.tiktok.com/www.tiktok.com_404_4987085fdb.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/28b19c8e6159db9535c9472acb5c8d65.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

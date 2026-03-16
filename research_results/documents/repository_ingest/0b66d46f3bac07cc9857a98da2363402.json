@@ -1,0 +1,71 @@
+{
+  "title": "candid.org claim-nonprofit-profile 7b929685af",
+  "relative_path": "research_results/third_party_downloads/candid.org/candid.org_claim-nonprofit-profile_7b929685af.html",
+  "source_type": "repository_evidence",
+  "filename": "candid.org_claim-nonprofit-profile_7b929685af.html",
+  "mime_type": "text/html",
+  "size": 114650,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 6,
+  "paragraph_count": 1,
+  "text_length": 5341,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 5341,
+    "text_length": 5341,
+    "raw_size": 114650,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 6
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 5341,
+      "text_length": 5341,
+      "raw_size": 114650,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "0b66d46f3bac07cc9857a98da2363402",
+  "checksum": "2c7e957baa29d552d160358e9773d32704d307c3a363a5e70ca3a4c46d2f939a",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/candid.org/candid.org_claim-nonprofit-profile_7b929685af.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/0b66d46f3bac07cc9857a98da2363402.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

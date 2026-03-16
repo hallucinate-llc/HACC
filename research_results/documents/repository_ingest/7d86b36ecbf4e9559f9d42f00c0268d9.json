@@ -1,0 +1,71 @@
+{
+  "title": "obiu.org 4ba94aeb9f",
+  "relative_path": "research_results/third_party_downloads/obiu.org/obiu.org_4ba94aeb9f.html",
+  "source_type": "repository_evidence",
+  "filename": "obiu.org_4ba94aeb9f.html",
+  "mime_type": "text/html",
+  "size": 1092780,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 45,
+  "paragraph_count": 1,
+  "text_length": 36357,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 36357,
+    "text_length": 36357,
+    "raw_size": 1092780,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 45
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 36357,
+      "text_length": 36357,
+      "raw_size": 1092780,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "7d86b36ecbf4e9559f9d42f00c0268d9",
+  "checksum": "cf93f02727bab19ae755dc6f108d3f57a1d12d1e637ac53ed6a8360a74412e52",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/obiu.org/obiu.org_4ba94aeb9f.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/7d86b36ecbf4e9559f9d42f00c0268d9.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

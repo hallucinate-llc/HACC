@@ -1,0 +1,70 @@
+{
+"domain_count": 13,
+"domains": [
+{
+"domain": "www.google.com",
+"mentions": 6,
+"ignored": true
+},
+{
+"domain": "www.oregonmetro.gov",
+"mentions": 5,
+"ignored": false
+},
+{
+"domain": "www.youtube.com",
+"mentions": 3,
+"ignored": true
+},
+{
+"domain": "www.w3.org",
+"mentions": 2,
+"ignored": true
+},
+{
+"domain": "www.oregon.gov",
+"mentions": 2,
+"ignored": false
+},
+{
+"domain": "stollberne.com",
+"mentions": 1,
+"ignored": false
+},
+{
+"domain": "dockets.justia.com",
+"mentions": 1,
+"ignored": false
+},
+{
+"domain": "ojd.contentdm.oclc.org",
+"mentions": 1,
+"ignored": false
+},
+{
+"domain": "www.bbb.org",
+"mentions": 1,
+"ignored": false
+},
+{
+"domain": "www.portland.gov",
+"mentions": 1,
+"ignored": false
+},
+{
+"domain": "relatednorthwest.com",
+"mentions": 1,
+"ignored": false
+},
+{
+"domain": "www.centrocultural.org",
+"mentions": 1,
+"ignored": false
+},
+{
+"domain": "lh3.googleusercontent.com",
+"mentions": 1,
+"ignored": true
+}
+]
+}

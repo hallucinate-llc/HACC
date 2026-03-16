@@ -1,0 +1,69 @@
+{
+  "title": "foundation.wikimedia.org wiki Home",
+  "relative_path": "research_results/third_party_downloads/foundation.wikimedia.org/foundation.wikimedia.org_wiki_Home.html",
+  "source_type": "repository_evidence",
+  "filename": "foundation.wikimedia.org_wiki_Home.html",
+  "mime_type": "text/html",
+  "size": 109569,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 8,
+  "paragraph_count": 1,
+  "text_length": 6440,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 6440,
+    "text_length": 6440,
+    "raw_size": 109569,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 8
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 6440,
+      "text_length": 6440,
+      "raw_size": 109569,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "a57d73b1a63ad8175ff83f784bde7aa4",
+  "checksum": "6cb3cabd79b2d780a6702effa355ed2e7daa5e8319df55e1239e4800a9bcf2f0",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/foundation.wikimedia.org/foundation.wikimedia.org_wiki_Home.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/a57d73b1a63ad8175ff83f784bde7aa4.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

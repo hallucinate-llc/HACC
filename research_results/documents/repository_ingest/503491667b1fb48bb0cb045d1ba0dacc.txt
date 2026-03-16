@@ -1,0 +1,134 @@
+{
+"generated_at": "2025-12-31T10:46:43.457158+00:00",
+"source": {
+"downloads_root": "research_results/third_party_downloads",
+"domains_scanned": [
+"quantumresidential.com",
+"www.quantumresidential.com"
+],
+"manifests": [
+"research_results/third_party_download_manifest.json",
+"research_results/third_party_download_manifest_next_hop.json",
+"research_results/third_party_download_manifest_paycom_api_endpoints.json",
+"research_results/third_party_download_manifest_paycom_sprawl.json",
+"research_results/third_party_download_manifest_paycom_sprawl_assets.json",
+"research_results/third_party_download_manifest_quantum_docs.json",
+"research_results/third_party_download_manifest_quantum_files.json",
+"research_results/third_party_download_manifest_quantum_pages_from_sitemaps.json",
+"research_results/third_party_download_manifest_quantum_portals.json",
+"research_results/third_party_download_manifest_quantum_seed.json",
+"research_results/third_party_download_manifest_quantum_sitemaps.json",
+"research_results/third_party_download_manifest_quantum_subsitemaps.json"
+]
+},
+"stats": {
+"html_files_scanned": 108,
+"raw_links_seen": 9277,
+"doc_domains": 10,
+"doc_urls_total": 11,
+"skipped_external_doc_urls": 0
+},
+"items": [
+{
+"domain": "www.oregonmetro.gov",
+"score": 100,
+"evidence_urls": [
+"https://www.oregonmetro.gov/sites/default/files/2023/04/25/Housing-Bond-Quarterly-Progress-Report_Q1-JAN_MAR_2023_Final_wFinancials_StaffReports.pdf",
+"https://www.oregonmetro.gov/sites/default/files/2025-10/affordable-housing-bond-oversight-committee-meeting-packet-20250317.pdf"
+],
+"seed_urls": [],
+"guessed_urls": [],
+"notes": "Extracted from downloaded Quantum Residential HTML pages"
+},
+{
+"domain": "acousticalsociety.org",
+"score": 100,
+"evidence_urls": [
+"https://acousticalsociety.org/wp-content/uploads/2025/03/ASA-Briefing.pdf"
+],
+"seed_urls": [],
+"guessed_urls": [],
+"notes": "Extracted from downloaded Quantum Residential HTML pages"
+},
+{
+"domain": "d1u7huky9c51vj.cloudfront.net",
+"score": 100,
+"evidence_urls": [
+"https://d1u7huky9c51vj.cloudfront.net/wp-content/uploads/2024/06/04213626/Impact-Statements-2022-Revised-reduced.pdf"
+],
+"seed_urls": [],
+"guessed_urls": [],
+"notes": "Extracted from downloaded Quantum Residential HTML pages"
+},
+{
+"domain": "democrats-science.house.gov",
+"score": 100,
+"evidence_urls": [
+"https://democrats-science.house.gov/imo/media/doc/democratic_staff_report-defending_hidden_figures.pdf"
+],
+"seed_urls": [],
+"guessed_urls": [],
+"notes": "Extracted from downloaded Quantum Residential HTML pages"
+},
+{
+"domain": "futurumcareers.com",
+"score": 100,
+"evidence_urls": [
+"https://futurumcareers.com/Issue-09.pdf"
+],
+"seed_urls": [],
+"guessed_urls": [],
+"notes": "Extracted from downloaded Quantum Residential HTML pages"
+},
+{
+"domain": "nsf-gov-resources.nsf.gov",
+"score": 100,
+"evidence_urls": [
+"https://nsf-gov-resources.nsf.gov/2021-12/Reimagining%20Advanced%20Research%20for%20Human%20Good%20through%20Industry%20and%20Educational%20Partnerships_2119846_June%202021_Final_508.pdf"
+],
+"seed_urls": [],
+"guessed_urls": [],
+"notes": "Extracted from downloaded Quantum Residential HTML pages"
+},
+{
+"domain": "wshfc.org",
+"score": 100,
+"evidence_urls": [
+"https://wshfc.org/managers/Reports/TCReports/2025%20TC%20ReportTypesbyPropertyName.pdf"
+],
+"seed_urls": [],
+"guessed_urls": [],
+"notes": "Extracted from downloaded Quantum Residential HTML pages"
+},
+{
+"domain": "www.kiscolawfirm.com",
+"score": 100,
+"evidence_urls": [
+"https://www.kiscolawfirm.com/wp-content/uploads/sites/1504051/2020/03/Sorblum-vs-Carrollwood-Condominum-I.pdf"
+],
+"seed_urls": [],
+"guessed_urls": [],
+"notes": "Extracted from downloaded Quantum Residential HTML pages"
+},
+{
+"domain": "www.lse.ac.uk",
+"score": 100,
+"evidence_urls": [
+"https://www.lse.ac.uk/tii/assets/documents/The-City-Quantum-Summit-TII-Report.pdf"
+],
+"seed_urls": [],
+"guessed_urls": [],
+"notes": "Extracted from downloaded Quantum Residential HTML pages"
+},
+{
+"domain": "www.oregon.gov",
+"score": 100,
+"evidence_urls": [
+"https://www.oregon.gov/biz/Publications/Broadband/ORDigitalEquityPlan.pdf"
+],
+"seed_urls": [],
+"guessed_urls": [],
+"notes": "Extracted from downloaded Quantum Residential HTML pages"
+}
+]
+}

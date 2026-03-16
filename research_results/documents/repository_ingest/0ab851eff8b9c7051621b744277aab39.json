@@ -1,0 +1,69 @@
+{
+  "title": "HOUSING FOCUS FINDINGS",
+  "relative_path": "HOUSING_FOCUS_FINDINGS.md",
+  "source_type": "repository_evidence",
+  "filename": "HOUSING_FOCUS_FINDINGS.md",
+  "mime_type": "text/markdown",
+  "size": 10995,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 13,
+  "paragraph_count": 1,
+  "text_length": 10664,
+  "input_format": "text",
+  "page_count": 1,
+  "extraction_method": "text_normalization",
+  "parse_quality": {
+    "quality_score": 98.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 10664,
+    "text_length": 10664,
+    "raw_size": 10995,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "text",
+    "normalization": "text_normalization",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 13
+    },
+    "extraction": {
+      "method": "text_normalization",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 10664,
+      "text_length": 10664,
+      "raw_size": 10995,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "0ab851eff8b9c7051621b744277aab39",
+  "checksum": "05f5bbb3cac6a06bc513b6411fb74e7a2aa4cab209024583fbd5686722847c5f",
+  "source_path": "/home/barberb/HACC/HOUSING_FOCUS_FINDINGS.md",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/0ab851eff8b9c7051621b744277aab39.txt",
+  "content_type": "text/markdown",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

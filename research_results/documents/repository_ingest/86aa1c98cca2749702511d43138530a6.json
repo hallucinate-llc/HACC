@@ -1,0 +1,69 @@
+{
+  "title": "www.paycom.com terms-of-use",
+  "relative_path": "research_results/third_party_downloads/paycom.com/www.paycom.com_terms-of-use.html",
+  "source_type": "repository_evidence",
+  "filename": "www.paycom.com_terms-of-use.html",
+  "mime_type": "text/html",
+  "size": 125250,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 26,
+  "paragraph_count": 1,
+  "text_length": 21405,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 21405,
+    "text_length": 21405,
+    "raw_size": 125250,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 26
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 21405,
+      "text_length": 21405,
+      "raw_size": 125250,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "86aa1c98cca2749702511d43138530a6",
+  "checksum": "21f481ccad4e55e9a4cc857ca48069e5e204611d44745f4b5e2b036b7352f8b4",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/paycom.com/www.paycom.com_terms-of-use.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/86aa1c98cca2749702511d43138530a6.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

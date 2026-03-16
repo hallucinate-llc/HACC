@@ -1,0 +1,87 @@
+{
+"timestamp": "2026-03-15T22:39:16.794792+00:00",
+"num_sessions_analyzed": 1,
+"average_score": 0.459,
+"score_trend": "insufficient_data",
+"question_quality_avg": 0.28,
+"information_extraction_avg": 0.31,
+"empathy_avg": 0.72,
+"efficiency_avg": 0.53,
+"coverage_avg": 0.62,
+"common_weaknesses": [
+"The question did not gather high-priority missing facts (dates, dates of notices, who made decisions, exact adverse action, first notice content), leaving major claim elements unresolved.",
+"Coverage is thin for legal intake needs: no timeline, no responsible actor confirmation, and no evidence leads collected despite multiple explicit knowledge gaps."
+],
+"common_strengths": [
+"The question was phrased in a non-judgmental, clarifying way, which reduced friction and helped the complainant expand their narrative.",
+"The follow-up successfully elicited concrete impact details (anxiety, sleep disruption, pressure, day-to-day burden), improving the harm/impact section.",
+"Covered all seeded anchor sections: grievance_hearing, appeal_rights, adverse_action"
+],
+"recommendations": [
+"Overall performance is below average. Focus on fundamental improvements.",
+"Improve question formulation: make questions more specific and relevant.",
+"Enhance information extraction: ask follow-up questions when responses are vague.",
+"Improve efficiency: avoid repetitive questions and streamline the process.",
+"Evidence-section coverage is improving. Preserve explicit questioning around: grievance_hearing, appeal_rights, adverse_action.",
+"Knowledge graph gap count is high on average. Improve gap-reduction logic in complaint_phases/denoiser.py and ensure process_answer updates entities/relationships meaningfully.",
+"In 1 sessions, KG gaps did not reduce over iterations. Consider making denoiser.process_answer reduce gaps deterministically (e.g., marking gap items as addressed when answers supply the missing fields).",
+"Knowledge graph relationships are not increasing across iterations. Consider adding relationship updates when answers mention who/what/when/where/why links.",
+"KG gaps are not decreasing on average (or are increasing). Improve gap selection + answer processing so each turn reduces uncertainty.",
+"Dependency satisfaction rate is very low on average. Consider having denoising answers mark requirements as satisfied or add evidence/fact nodes as they are provided.",
+"Ask a short, structured sequence next, starting with: “What happened first? What date? What was the adverse action? Who sent the first notice? What did it say?” and then “What was your next action and when?”",
+"Request specific documentary anchors immediately: copies/ids of notices, policy excerpts referenced, email/portal entries, names/roles of staff involved, and any deadlines you were pressured to meet.",
+"Best HACC preset so far is 'core_hacc_policies'. Prefer it when generating evidence-backed adversarial batches."
+],
+"priority_improvements": [
+"Improve question quality: current avg 0.28",
+"Improve information extraction: current avg 0.31",
+"Improve efficiency: current avg 0.53"
+],
+"kg_sessions_with_data": 1,
+"dg_sessions_with_data": 1,
+"kg_sessions_empty": 0,
+"dg_sessions_empty": 0,
+"kg_avg_total_entities": 8.0,
+"kg_avg_total_relationships": 0.0,
+"kg_avg_gaps": 9.0,
+"dg_avg_total_nodes": 6.0,
+"dg_avg_total_dependencies": 4.0,
+"dg_avg_satisfaction_rate": 0.0,
+"kg_avg_entities_delta_per_iter": 2.0,
+"kg_avg_relationships_delta_per_iter": 0.0,
+"kg_avg_gaps_delta_per_iter": 1.0,
+"kg_sessions_gaps_not_reducing": 1,
+"best_session_id": "session_20260315_223806_000",
+"worst_session_id": "session_20260315_223806_000",
+"best_score": 0.459,
+"worst_score": 0.459,
+"hacc_preset_performance": {
+"core_hacc_policies": {
+"count": 1,
+"average_score": 0.459,
+"min_score": 0.459,
+"max_score": 0.459
+}
+},
+"anchor_section_performance": {
+"grievance_hearing": {
+"count": 1,
+"average_score": 0.459,
+"min_score": 0.459,
+"max_score": 0.459
+},
+"appeal_rights": {
+"count": 1,
+"average_score": 0.459,
+"min_score": 0.459,
+"max_score": 0.459
+},
+"adverse_action": {
+"count": 1,
+"average_score": 0.459,
+"min_score": 0.459,
+"max_score": 0.459
+}
+},
+"recommended_hacc_preset": "core_hacc_policies"
+}

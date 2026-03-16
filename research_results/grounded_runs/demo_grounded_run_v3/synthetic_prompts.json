@@ -1,0 +1,31 @@
+{
+  "evidence_upload_prompts": [
+    {
+      "prompt_id": "evidence_upload_1",
+      "prompt_type": "evidence_upload",
+      "title": "Governor of Oregon : Executive Orders : State of Oregon",
+      "source_path": "/home/barberb/HACC/research_data/raw_documents/Executive_Orders_Index.html",
+      "relative_path": "research_data/raw_documents/Executive_Orders_Index.html",
+      "text": "Upload the evidence file 'research_data/raw_documents/Executive_Orders_Index.html' and explain how it supports a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Focus on the most relevant language: Governor of Oregon : Executive Orders : State of Oregon Search this site Submit close --> Skip to main content An official website of the State of Oregon Learn How you know » (how to identify a Oregon.gov website) An official website of the State of Oregon » Office of Oregon Governor Tina Kotek Governor’s Priorities Governor's Councils Resources About Contact Us Translate this site into other Languages Arabic / اللغة العربية Chinese (Simplified) / 简体中文 Chinese (Traditional) / 繁體中文 English Hindi"
+    },
+    {
+      "prompt_id": "evidence_upload_2",
+      "prompt_type": "evidence_upload",
+      "title": "# Complete DEI Audit Summary - Housing Authority of Clackamas County",
+      "source_path": "/home/barberb/HACC/COLLECTION_COMPLETE_SUMMARY.md",
+      "relative_path": "COLLECTION_COMPLETE_SUMMARY.md",
+      "text": "Upload the evidence file 'COLLECTION_COMPLETE_SUMMARY.md' and explain how it supports a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Focus on the most relevant language: **Detailed Policy Analysis** - Compare Oregon findings against Housing Authority policies - Identify conflicts with Bondi memo guidance - Draft remediation recommendations --- ## Success Metrics | Objective | Target | Status | |-----------|--------|--------| | Discover Oregon DEI policies | 15+ | ✅ 24 documents | | Identify housing-specific policies | 10+ | ✅ 22 documents | | Find OHCS governance documents | 2+ | ✅ 4 board packets | | Rate documents for risk | 100% | ✅ 24/24 scored | | Create se"
+    },
+    {
+      "prompt_id": "evidence_upload_3",
+      "prompt_type": "evidence_upload",
+      "title": "# Risk Review (risk_score > 0)",
+      "source_path": "/home/barberb/HACC/research_results/risk_review_20251231.md",
+      "relative_path": "research_results/risk_review_20251231.md",
+      "text": "Upload the evidence file 'research_results/risk_review_20251231.md' and explain how it supports a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Focus on the most relevant language: # Risk Review (risk_score > 0) Generated: 2025-12-31T10:40:05 Index: research_results/document_index_20251231_100922.json Total indexed docs: 480 Docs with risk_score > 0: 253 Focused docs (excluding QuantumResidential assets/images/js/css): 115 ## Top domains (focused) - (no-domain): max_risk=3 docs=35 - risk=2 url=file://research_results/documents/raw/592594abd4eb6a8bad89ce62855bb42e.pdf file=research_results/documents/parsed/592594abd4eb6a8bad89ce62855bb42e.txt id=592594abd4eb6a8bad89ce62855b"
+    }
+  ],
+  "complaint_chatbot_prompt": "Ground the complaint chatbot in the uploaded repository evidence for 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Use the uploaded materials (Governor of Oregon : Executive Orders : State of Oregon, # Complete DEI Audit Summary - Housing Authority of Clackamas County, # Risk Review (risk_score > 0)) as factual grounding, ask the user to connect each document to case-specific events, and identify missing timeline, actor, harm, and remedy facts.",
+  "mediator_evaluation_prompt": "Evaluate each uploaded evidence item for a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. For every document, determine what claim element it supports, what facts it proves directly, what facts remain missing, and what follow-up questions the mediator should ask before drafting a complaint.",
+  "production_upload_prompt": "A user uploads repository evidence for 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Save each file into the complaint-generator evidence store, extract factual support from the parsed document, and route the uploaded materials through mediator evidence analysis before drafting or revising a complaint."
+}

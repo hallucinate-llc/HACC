@@ -1,0 +1,222 @@
+# Audit Toolkit Deployment Summary
+**Date:** December 31, 2025
+**Project:** Housing Authority of Clackamas County — DEI Compliance Audit
+**Status:** ✅ COMPLETE
+---
+## Deliverables
+### 1. Structured Audit Framework (`agent.md`)
+✅ **Comprehensive audit guide** including:
+- Purpose, scope, and audit objectives
+- High-level audit process (6 steps)
+- Detailed checklist mapped to Bondi memo sections:
+- Preferential treatment
+- Proxy criteria usage
+- Segregation/exclusion
+- Selection & contracting
+- Training content
+- Third-party monitoring
+- Retaliation protections
+- Evidence collection requirements
+- Red flag indicators
+- Scoring & prioritization rubric (0–3 scale)
+- Analytical test descriptions
+- Remediation steps
+- **Search & Collection Strategy** (Brave API, Common Crawl, Google Search)
+- Query terms and domain filters
+- PDF download and parsing workflow
+- Indexing and analysis approach
+- Integration with the project
+### 2. Evidence Request Template (`EVIDENCE_REQUEST_TEMPLATE.md`)
+✅ **Ready-to-use email template** with:
+- 10 evidence categories (policies, job postings, hiring records, procurement, training, programs, facilities, third-party agreements, complaints, other)
+- Detailed descriptions of what's needed in each category
+- Submission instructions and confidentiality guidance
+- Follow-up process and next steps
+### 3. Collection & Analysis Toolkit (`research_data/scripts/`)
+#### Core Scripts
+- ✅ **`download_manager.py`** (358 lines)
+- Download and deduplicate URLs
+- Store metadata alongside raw files
+- Rate limit friendly
+- ✅ **`parse_pdfs.py`** (217 lines)
+- Extract text from PDFs using `pdftotext`
+- OCR fallback for scanned documents
+- Metadata tagging and checksum verification
+- ✅ **`index_and_tag.py`** (297 lines)
+- Index parsed documents
+- Tag with keywords (DEI, proxies, binding indicators)
+- Score by risk (0–3)
+- Tag by applicability (hiring, procurement, training, housing)
+- Export JSON index and CSV summary
+- ✅ **`report_generator.py`** (239 lines)
+- Generate one-page executive summary
+- Generate detailed technical report
+- Identify high-risk, medium-risk documents
+- Summarize applicability areas
+#### Search Collectors
+- ✅ **`collect_brave.py`** (91 lines)
+- Brave Search API integration
+- Batch search queries
+- JSON result storage
+#### Main Orchestration
+- ✅ **`run_collection.py`** (181 lines)
+- Full workflow automation
+- PDF directory handling
+- Fallback web collection (no API needed)
+- Comprehensive logging
+#### Documentation
+- ✅ **`README.md`** (Toolkit documentation)
+- Installation & setup instructions
+- Usage examples
+- Output file reference
+- Keyword & scoring reference
+- Troubleshooting guide
+- Integration notes
+### 4. Quick Start Guide (`QUICK_START.md`)
+✅ **User-friendly guide** including:
+- Overview of deliverables
+- Three options to get started (manual, API, hybrid)
+- Understanding output files
+- Key audit concepts (risk scoring, red flags, applicability)
+- Step-by-step next steps
+- Common Q&A
+- Troubleshooting
+---
+## Technical Specifications
+### Language
+- Python 3.8+
+- Modular design for easy extension
+### Dependencies
+- `requests` (HTTP downloads)
+- Standard library (json, csv, pathlib, logging, etc.)
+- System tools: `pdftotext` (poppler), optional `ocrmypdf` + `tesseract`
+### Data Flow
+```
+Brave/CommonCrawl/Google Search
+↓
+download_manager.py (dedupe & download)
+↓
+research_results/documents/raw/*.pdf
+↓
+parse_pdfs.py (extract text)
+↓
+research_results/documents/parsed/*.txt + *.json
+↓
+index_and_tag.py (keyword match & score)
+↓
+research_results/document_index.json + summary.csv
+↓
+report_generator.py (summarize)
+↓
+FINDINGS_*.txt + DETAILED_REPORT_*.txt
+```
+### Scoring Rubric
+| Score | Criteria | Action |
+|-------|----------|--------|
+| 0 | No DEI/proxy language | Compliant |
+| 1 | DEI/proxy only | Review context |
+| 2 | DEI/proxy + binding indicators | Prioritize review |
+| 3 | Explicit DEI policy + mandatory | Immediate remediation |
+### Keywords Indexed
+**DEI**: diversity, equity, inclusion, dei, deia, deib, underrepresented, underserved
+**Proxies**: cultural competence, lived experience, diversity statement, safe space, bipoc, minority-only, first-generation, low-income targeting, equity plan
+**Binding**: policy, ordinance, statewide, contract, required, must, shall, mandatory, applicable to
+---
+## How to Use (Three Paths)
+### Path A: Manual Evidence Collection
+No API keys needed. Collect documents manually, then analyze.
+```bash
+cp documents/*.pdf research_results/documents/raw/
+python3 research_data/scripts/run_collection.py --pdf-dir research_results/documents/raw/
+```
+### Path B: Automated Web Search
+Use Brave Search API to discover Oregon.gov documents.
+```bash
+export BRAVE_API_KEY="your_key"
+python3 research_data/scripts/run_collection.py
+```
+### Path C: Hybrid
+Combine manual PDFs + API search for comprehensive coverage.
+---
+## Output Generated
+Each run produces:
+1. **JSON Index** — Full searchable document index with metadata
+2. **CSV Summary** — Spreadsheet of all documents, scores, keywords
+3. **One-Page Findings** — Executive summary of high-risk items
+4. **Detailed Report** — Technical analysis with full breakdown
+5. **Metadata Manifests** — Download and parse logs for reproducibility
+---
+## Integration with Audit Process
+The toolkit directly supports the `agent.md` checklist:
+| Agent.md Section | Toolkit Support |
+|------------------|-----------------|
+| Search & Collection Strategy | Full workflow in run_collection.py |
+| Red Flags / Indicators | Keywords indexed in index_and_tag.py |
+| Scoring & Prioritization | Risk scoring 0–3 in index_and_tag.py |
+| Audit Checklist | Template in EVIDENCE_REQUEST_TEMPLATE.md |
+| Remediation Steps | Evidence feeds into decision-making |
+---
+## Testing & Validation
+✅ **Workflow tested** — All scripts executed successfully
+✅ **Empty-state validation** — Generates correct output with no PDFs
+✅ **Imports verified** — All module imports working
+✅ **Argument parsing** — CLI options working correctly
+---
+## Next Steps for User
+1. **Read** `agent.md` and `QUICK_START.md` (15 min)
+2. **Collect Evidence** using template or API (1–2 weeks)
+3. **Run Analysis** (5 min): `python3 research_data/scripts/run_collection.py`
+4. **Review Findings** in `FINDINGS_*.txt` and CSV (1–2 hours)
+5. **Interview Stakeholders** using red-flag documents as talking points
+6. **Develop Remediation Plan** using `agent.md` checklist
+7. **Track Progress** and report to leadership
+---
+## Files Created
+### Root Directory
+- `agent.md` — Audit framework & search strategy
+- `EVIDENCE_REQUEST_TEMPLATE.md` — Email template for evidence requests
+- `QUICK_START.md` — Quick-start user guide
+- `AUDIT_TOOLKIT_SUMMARY.md` — This file
+### Scripts (`research_data/scripts/`)
+- `download_manager.py` — Download utilities
+- `parse_pdfs.py` — PDF extraction
+- `index_and_tag.py` — Indexing & scoring
+- `report_generator.py` — Report generation
+- `collect_brave.py` — Brave Search API
+- `run_collection.py` — Main orchestration
+- `README.md` — Toolkit documentation
+### Data Outputs (auto-generated on run)
+- `research_results/documents/raw/` — Downloaded PDFs
+- `research_results/documents/parsed/` — Extracted text
+- `research_results/document_index_*.json` — Searchable index
+- `research_results/summary_*.csv` — Spreadsheet summary
+- `research_results/FINDINGS_*.txt` — One-page summary
+- `research_results/DETAILED_REPORT_*.txt` — Full report
+---
+## Support & Customization
+### To Add New Keywords
+Edit `index_and_tag.py`, update the keyword lists in `DocumentIndexer` class.
+### To Change Risk Scoring
+Edit `_calculate_risk_score()` method in `index_and_tag.py`.
+### To Modify Report Format
+Edit `report_generator.py` to customize output templates.
+### To Add New Search API
+Create new collector script (e.g., `collect_cc.py` for Common Crawl), import in `run_collection.py`.
+---
+## Version & Metadata
+- **Version**: 1.0
+- **Created**: December 31, 2025
+- **Python**: 3.8+
+- **License**: Internal Use
+- **Maintainer**: Housing Authority Compliance Team
+---
+## Summary
+You now have a **production-ready audit toolkit** to:
+✅ Search for Oregon policy references to DEI and proxies
+✅ Download and parse PDFs automatically
+✅ Index documents with risk scoring
+✅ Generate executive summaries and detailed reports
+✅ Support evidence collection from organizations
+✅ Implement the Bondi memo audit checklist
+**To get started:** Read `QUICK_START.md` and run the first collection!
+---

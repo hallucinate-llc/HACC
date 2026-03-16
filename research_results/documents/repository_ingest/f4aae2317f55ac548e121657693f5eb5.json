@@ -1,0 +1,71 @@
+{
+  "title": "BOLI Pages default",
+  "relative_path": "research_data/raw_documents/BOLI_Pages_default.html",
+  "source_type": "repository_evidence",
+  "filename": "BOLI_Pages_default.html",
+  "mime_type": "text/html",
+  "size": 1000097,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 9,
+  "paragraph_count": 1,
+  "text_length": 7046,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 7046,
+    "text_length": 7046,
+    "raw_size": 1000097,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 9
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 7046,
+      "text_length": 7046,
+      "raw_size": 1000097,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "f4aae2317f55ac548e121657693f5eb5",
+  "checksum": "0db49b86414f24ae994cf5c425f597b42df925f6156cc9d3d57aa1c9332facd0",
+  "source_path": "/home/barberb/HACC/research_data/raw_documents/BOLI_Pages_default.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/f4aae2317f55ac548e121657693f5eb5.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

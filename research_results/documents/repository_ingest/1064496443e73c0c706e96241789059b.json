@@ -1,0 +1,69 @@
+{
+  "title": "ORS ORS 659",
+  "relative_path": "research_data/raw_documents/ORS_ORS_659.html",
+  "source_type": "repository_evidence",
+  "filename": "ORS_ORS_659.html",
+  "mime_type": "text/html",
+  "size": 315340,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 25,
+  "paragraph_count": 1,
+  "text_length": 21341,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 21341,
+    "text_length": 21341,
+    "raw_size": 315340,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 25
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 21341,
+      "text_length": 21341,
+      "raw_size": 315340,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "1064496443e73c0c706e96241789059b",
+  "checksum": "d12b5bfb86cca28f507ebb0cf81dd8583fbda8b90305366ecafd4076d204396c",
+  "source_path": "/home/barberb/HACC/research_data/raw_documents/ORS_ORS_659.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/1064496443e73c0c706e96241789059b.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

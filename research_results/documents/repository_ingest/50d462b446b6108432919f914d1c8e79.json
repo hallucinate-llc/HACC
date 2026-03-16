@@ -1,0 +1,71 @@
+{
+  "title": "OHCS Compliance",
+  "relative_path": "research_data/raw_documents/OHCS_Compliance.html",
+  "source_type": "repository_evidence",
+  "filename": "OHCS_Compliance.html",
+  "mime_type": "text/html",
+  "size": 716007,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 33,
+  "paragraph_count": 1,
+  "text_length": 28343,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 28343,
+    "text_length": 28343,
+    "raw_size": 716007,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 33
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 28343,
+      "text_length": 28343,
+      "raw_size": 716007,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "50d462b446b6108432919f914d1c8e79",
+  "checksum": "ba48d91d097a5d6545f16b90a552e9870431ba289452f30718748aee1a4956f0",
+  "source_path": "/home/barberb/HACC/research_data/raw_documents/OHCS_Compliance.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/50d462b446b6108432919f914d1c8e79.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

@@ -1,0 +1,69 @@
+{
+  "title": "en.wikipedia.org wiki RDFa",
+  "relative_path": "research_results/third_party_downloads/en.wikipedia.org/en.wikipedia.org_wiki_RDFa.html",
+  "source_type": "repository_evidence",
+  "filename": "en.wikipedia.org_wiki_RDFa.html",
+  "mime_type": "text/html",
+  "size": 160373,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 22,
+  "paragraph_count": 1,
+  "text_length": 18694,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 22251,
+    "text_length": 22251,
+    "raw_size": 160373,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 22
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 22251,
+      "text_length": 22251,
+      "raw_size": 160373,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "77d51625951a2e10b3420d6e167a9a2d",
+  "checksum": "f7480e62270557c5df79a448404d5339b52d979beb00b3a804de858d538dc19f",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/en.wikipedia.org/en.wikipedia.org_wiki_RDFa.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/77d51625951a2e10b3420d6e167a9a2d.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

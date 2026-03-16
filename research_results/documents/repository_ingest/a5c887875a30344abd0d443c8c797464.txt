@@ -1,0 +1,1528 @@
+{
+"timestamp": "2026-03-15T22:39:16.794920+00:00",
+"statistics": {
+"total_sessions": 1,
+"successful_sessions": 1,
+"failed_sessions": 0,
+"average_score": 0.459,
+"min_score": 0.459,
+"max_score": 0.459,
+"average_questions": 1.0,
+"average_duration": 18.316775798797607,
+"score_distribution": {
+"0.0-0.2": 0,
+"0.2-0.4": 0,
+"0.4-0.6": 1,
+"0.6-0.8": 0,
+"0.8-1.0": 0
+},
+"anchor_sections": {
+"expected_counts": {
+"grievance_hearing": 1,
+"appeal_rights": 1,
+"adverse_action": 1
+},
+"covered_counts": {
+"grievance_hearing": 1,
+"appeal_rights": 1,
+"adverse_action": 1
+},
+"missing_counts": {},
+"coverage_by_section": {
+"adverse_action": {
+"expected": 1,
+"covered": 1,
+"missing": 0,
+"coverage_rate": 1.0
+},
+"appeal_rights": {
+"expected": 1,
+"covered": 1,
+"missing": 0,
+"coverage_rate": 1.0
+},
+"grievance_hearing": {
+"expected": 1,
+"covered": 1,
+"missing": 0,
+"coverage_rate": 1.0
+}
+}
+}
+},
+"results": [
+{
+"session_id": "session_20260315_223806_000",
+"timestamp": "2026-03-15T22:39:16.788819+00:00",
+"seed_complaint": {
+"template_id": "hacc::housing_discrimination::retaliation grievance complaint appeal h",
+"type": "housing_discrimination",
+"category": "housing",
+"description": "Retaliation complaint anchored to HACC core housing policies",
+"summary": "The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. 14 GRIEVANCES AND APPEALS INTRODUCTION ......................................................................................................................14-1 PART I: INFORMAL HEARINGS FOR PUBLIC HOUSING APPLICANTS I.A. OVERVIEW ...................................................................................................................14-1 INFORMAL HEARING PROCESS ..............................................................................14-2 I.B. PART II: INFORMAL HEARINGS WITH REGARD TO NONCITIZENS II.A. HEARING AND APPEAL PROVISIONS FOR NONCITIZENS ................................14-7 PART III: GRIEVANCE PROCEDURES FOR PUBLIC HOUSING RESIDENTS III.A. REQUIREMENTS .......................................................................................................14-11 III.B.",
+"key_facts": {
+"incident_summary": "Retaliation complaint anchored to HACC core housing policies",
+"evidence_query": "retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+"evidence_summary": "The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. 14 GRIEVANCES AND APPEALS INTRODUCTION ......................................................................................................................14-1 PART I: INFORMAL HEARINGS FOR PUBLIC HOUSING APPLICANTS I.A. OVERVIEW ...................................................................................................................14-1 INFORMAL HEARING PROCESS ..............................................................................14-2 I.B. PART II: INFORMAL HEARINGS WITH REGARD TO NONCITIZENS II.A. HEARING AND APPEAL PROVISIONS FOR NONCITIZENS ................................14-7 PART III: GRIEVANCE PROCEDURES FOR PUBLIC HOUSING RESIDENTS III.A. REQUIREMENTS .......................................................................................................14-11 III.B.",
+"evidence_documents": [
+"ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"ADMINISTRATIVE PLAN"
+],
+"source_paths": [
+"/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+],
+"anchor_titles": [
+"ADMINISTRATIVE PLAN",
+"ADMISSIONS AND CONTINUED OCCUPANCY POLICY"
+],
+"anchor_source_paths": [],
+"anchor_terms": [
+"grievance",
+"hearing",
+"appeal",
+"informal hearing",
+"due process"
+],
+"anchor_passages": [
+{
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"snippet": "14 GRIEVANCES AND APPEALS INTRODUCTION ......................................................................................................................14-1 PART I: INFORMAL HEARINGS FOR PUBLIC HOUSING APPLICANTS I.A. OVERVIEW ...................................................................................................................14-1 INFORMAL HEARING PROCESS ..............................................................................14-2 I.B. PART II: INFORMAL HEARINGS WITH REGARD TO NONCITIZENS II.A. HEARING AND APPEAL PROVISIONS FOR NONCITIZENS ................................14-7 PART III: GRIEVANCE PROCEDURES FOR PUBLIC HOUSING RESIDENTS III.A. REQUIREMENTS .......................................................................................................14-11 III.B.",
+"section_labels": [
+"grievance_hearing",
+"appeal_rights"
+]
+},
+{
+"title": "ADMINISTRATIVE PLAN",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"snippet": "16-11 Scheduling an Informal Review ................................................... 16-11 Informal Review Procedures [24 CFR 982.554(b)] ..................... 16-11 Informal Review Decision [24 CFR 982.554(b)] ......................... 16-15 16-III.C. Informal Hearings for Participants [24 CFR 982.555] ....................... 16-16 Decisions Subject to Informal Hearing ......................................... 16-16 Informal Hearing Procedures ........................................................ 16-20 16-III.D. Hearing and Appeal Provisions for Noncitizens [24 CFR 5.514] ................................................................................... 16-28 Notice of Denial or Termination of Assistance [24 CFR 5.514(d)] ........................................................................",
+"section_labels": [
+"grievance_hearing",
+"appeal_rights",
+"adverse_action"
+]
+}
+],
+"anchor_sections": [
+"grievance_hearing",
+"appeal_rights",
+"adverse_action"
+],
+"theory_labels": [
+"retaliation",
+"due_process_failure"
+],
+"protected_bases": [],
+"authority_hints": [
+"Fair Housing Act anti-retaliation provisions",
+"24 C.F.R. Part 100"
+],
+"grounding_note": "Use the evidence as factual grounding and identify missing case-specific facts during questioning."
+},
+"keywords": [],
+"legal_patterns": [],
+"hacc_evidence": [
+{
+"document_id": "document:c8dc2af6ee6996a0",
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"score": 4399.3864,
+"snippet": "14 GRIEVANCES AND APPEALS INTRODUCTION ......................................................................................................................14-1 PART I: INFORMAL HEARINGS FOR PUBLIC HOUSING APPLICANTS I.A. OVERVIEW ...................................................................................................................14-1 INFORMAL HEARING PROCESS ..............................................................................14-2 I.B. PART II: INFORMAL HEARINGS WITH REGARD TO NONCITIZENS II.A. HEARING AND APPEAL PROVISIONS FOR NONCITIZENS ................................14-7 PART III: GRIEVANCE PROCEDURES FOR PUBLIC HOUSING RESIDENTS III.A. REQUIREMENTS .......................................................................................................14-11 III.B.",
+"matched_rules": [
+{
+"text": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"section_title": "EXHIBIT 14-1: SAMPLE GRIEVANCE PROCEDURE",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 3
+},
+{
+"text": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+"section_title": "ACOP 11/1/24",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 3
+},
+{
+"text": "In states without due process determinations, HACC must grant opportunity for grievance",
+"section_title": "ACOP 11/1/24",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 3
+}
+],
+"matched_entities": [
+{
+"name": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "In states without due process determinations, HACC must grant opportunity for grievance",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "The notice must also state that the tenant may request a grievance hearing on the HACC\u2019s",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "adverse action and will provide the subject of the record and the tenant a copy of such",
+"type": "policy_rule",
+"overlap": 3
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+},
+"document_id": "document:c8dc2af6ee6996a0",
+"document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 5318,
+"section_count": 3423,
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"text_length": 1401793,
+"status": "success"
+}
+},
+{
+"document_id": "document:be93a165d00f0101",
+"title": "ADMINISTRATIVE PLAN",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"score": 4196.7273,
+"snippet": "16-11 Scheduling an Informal Review ................................................... 16-11 Informal Review Procedures [24 CFR 982.554(b)] ..................... 16-11 Informal Review Decision [24 CFR 982.554(b)] ......................... 16-15 16-III.C. Informal Hearings for Participants [24 CFR 982.555] ....................... 16-16 Decisions Subject to Informal Hearing ......................................... 16-16 Informal Hearing Procedures ........................................................ 16-20 16-III.D. Hearing and Appeal Provisions for Noncitizens [24 CFR 5.514] ................................................................................... 16-28 Notice of Denial or Termination of Assistance [24 CFR 5.514(d)] ........................................................................",
+"matched_rules": [
+{
+"text": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"section_title": "HACC Policy",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 2
+},
+{
+"text": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 2
+},
+{
+"text": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+"section_title": "HACC Policy",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 2
+}
+],
+"matched_entities": [
+{
+"name": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "HACC will inform the family of its policy regarding moves denied due to insufficient",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "See Chapter 9 for more detail on unit eligibility policies and process.",
+"type": "policy_rule",
+"overlap": 2
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+},
+"document_id": "document:be93a165d00f0101",
+"document_title": "ADMINISTRATIVE PLAN",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 7441,
+"section_count": 4968,
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"text_length": 1927962,
+"status": "success"
+}
+}
+],
+"source": "hacc_research_engine",
+"_meta": {
+"personality": "cooperative",
+"max_turns": 1,
+"include_hacc_evidence": true,
+"hacc_preset": "core_hacc_policies",
+"use_hacc_vector_search": false,
+"seed_source": "hacc_research_engine",
+"anchor_sections": [
+"grievance_hearing",
+"appeal_rights",
+"adverse_action"
+]
+}
+},
+"initial_complaint_text": "Complaint:\n\nI am a HACC resident filing a retaliation complaint under housing discrimination protections because I believe I was treated unfairly after exercising my rights as a tenant.\n\nIn my situation, I raised concerns internally about a problem with my unit and then filed/initiated a formal grievance request through HACC channels. Shortly after, I received an adverse action that should have been handled through the full hearing and appeals process under HACC policy. Instead of getting a clear process and a chance to be heard, I was met with delays, unclear explanations, and pressure to accept the decision without a proper hearing. The timing and sequence of events made it feel like retaliation for reporting the issue rather than a neutral enforcement decision.\n\nUnder HACC\u2019s own policy framework, there is a defined structure for informal hearings, appeals, and grievance procedures for residents, including requirements for hearing and appeal rights. The Administrative Plan language also references informal review, informal review decisions, and informal hearing procedures under 24 C.F.R. 982.554 and 982.555. In addition, the admissions and continued occupancy policy identifies grievance hearings and appeal rights and distinguishes that adverse action situations are subject to those protections. Based on that policy structure, I should have been given a clearly stated grievance hearing pathway, proper notice, and an opportunity to challenge the action in a timely way.\n\nI did not receive that process in practice. I was not given a straightforward written notice that explained my hearing rights in a usable format, the decision basis was unclear, and I was not given a fair opportunity to present evidence or respond before being subjected to the adverse outcome. This has caused immediate and serious harm: ongoing stress and fear of losing housing, uncertainty about my rights, and emotional strain in managing daily life while trying to respond to an action I believe was punitive.\n\nI am asking that this matter be treated as a retaliation complaint and reviewed as a due-process violation of my tenant rights. I respectfully request:\n1) Immediate review of the adverse action and a suspension of any enforcement pending appeal rights, \n2) A proper informal hearing with full notice, access to the record, and the ability to submit evidence, \n3) A full written explanation of why adverse action was taken and why my grievance request was not handled under the policy procedures, \n4) Training and compliance review to ensure HACC follows the grievance/hearing/appeal process for residents in line with its own policy.\n\nI am available to provide additional details, dates, names, and any documents I still need to gather when completing this complaint package.",
+"conversation_history": [
+{
+"role": "complainant",
+"type": "initial_complaint",
+"content": "Complaint:\n\nI am a HACC resident filing a retaliation complaint under housing discrimination protections because I believe I was treated unfairly after exercising my rights as a tenant.\n\nIn my situation, I raised concerns internally about a problem with my unit and then filed/initiated a formal grievance request through HACC channels. Shortly after, I received an adverse action that should have been handled through the full hearing and appeals process under HACC policy. Instead of getting a clear process and a chance to be heard, I was met with delays, unclear explanations, and pressure to accept the decision without a proper hearing. The timing and sequence of events made it feel like retaliation for reporting the issue rather than a neutral enforcement decision.\n\nUnder HACC\u2019s own policy framework, there is a defined structure for informal hearings, appeals, and grievance procedures for residents, including requirements for hearing and appeal rights. The Administrative Plan language also references informal review, informal review decisions, and informal hearing procedures under 24 C.F.R. 982.554 and 982.555. In addition, the admissions and continued occupancy policy identifies grievance hearings and appeal rights and distinguishes that adverse action situations are subject to those protections. Based on that policy structure, I should have been given a clearly stated grievance hearing pathway, proper notice, and an opportunity to challenge the action in a timely way.\n\nI did not receive that process in practice. I was not given a straightforward written notice that explained my hearing rights in a usable format, the decision basis was unclear, and I was not given a fair opportunity to present evidence or respond before being subjected to the adverse outcome. This has caused immediate and serious harm: ongoing stress and fear of losing housing, uncertainty about my rights, and emotional strain in managing daily life while trying to respond to an action I believe was punitive.\n\nI am asking that this matter be treated as a retaliation complaint and reviewed as a due-process violation of my tenant rights. I respectfully request:\n1) Immediate review of the adverse action and a suspension of any enforcement pending appeal rights, \n2) A proper informal hearing with full notice, access to the record, and the ability to submit evidence, \n3) A full written explanation of why adverse action was taken and why my grievance request was not handled under the policy procedures, \n4) Training and compliance review to ensure HACC follows the grievance/hearing/appeal process for residents in line with its own policy.\n\nI am available to provide additional details, dates, names, and any documents I still need to gather when completing this complaint package."
+},
+{
+"role": "mediator",
+"type": "question",
+"content": "To make sure I understand, can you provide more details about Impact: Complaint: I am a HACC resident filing a retaliation comp...?"
+},
+{
+"role": "complainant",
+"type": "response",
+"content": "I can explain the impact in plain terms.\n\nThe biggest impact was fear and instability about my housing. After I filed the grievance, the adverse action came quickly and I felt pressured into accepting a result I didn\u2019t think was fair because I wasn\u2019t given a clear hearing process. That created real anxiety\u2014constant worry about losing my home, not being able to sleep, and feeling like I had to respond under a deadline without knowing my rights.\n\nIt also affected my ability to plan day-to-day life. I had to spend time and stress tracking down contacts, asking for documents, and responding to notices instead of focusing on work and health. It also made me distrust the process, because I couldn\u2019t get a clear written explanation of why I was being punished or what evidence was used.\n\nI\u2019m also impacted emotionally. I felt isolated and intimidated by the pressure to \u201caccept\u201d the outcome without an opportunity to present my side, especially since the policies should provide notice, informal review, and hearing/appeal rights. From the policy language in the *ADMISSIONS AND CONTINUED OCCUPANCY POLICY* and *ADMINISTRATIVE PLAN*, I understand adverse actions are meant to go through grievance/hearing/appeal structures\u2014so the lack of that process makes the harm feel both procedural and retaliatory.\n\nI should be candid: I don\u2019t yet have every case-specific fact in this message (exact dates, letter dates, the first official notice, and who made each decision). I can provide those next if you want, but this is the practical impact I\u2019m experiencing now.",
+"evidence_context": {
+"dynamic_evidence_summary": "For this question, the strongest supporting material is 'ADMINISTRATIVE PLAN'. 16-11 Scheduling an Informal Review ................................................... 16-11 Informal Review Procedures [24 CFR 982.554(b)] ..................... 16-11 Informal Review Decision [24 CFR 982.554(b)] ......................... 16-15 16-III.C. Informal Hearings for Participants [24 CFR 982.555] ....................... 16-16 Decisions Subject to Informal Hearing ......................................... 16-16 Informal Hearing Procedures ........................................................ 16-20 16-III.D. Hearing and Appeal Provisions for Noncitizens [24 CFR 5.514] ................................................................................... 16-28 Notice of Denial or Termination of Assistance [24 CFR 5.514(d)] ........................................................................",
+"dynamic_evidence_items": [
+{
+"document_id": "document:c8dc2af6ee6996a0",
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"score": 4399.3864,
+"snippet": "14 GRIEVANCES AND APPEALS INTRODUCTION ......................................................................................................................14-1 PART I: INFORMAL HEARINGS FOR PUBLIC HOUSING APPLICANTS I.A. OVERVIEW ...................................................................................................................14-1 INFORMAL HEARING PROCESS ..............................................................................14-2 I.B. PART II: INFORMAL HEARINGS WITH REGARD TO NONCITIZENS II.A. HEARING AND APPEAL PROVISIONS FOR NONCITIZENS ................................14-7 PART III: GRIEVANCE PROCEDURES FOR PUBLIC HOUSING RESIDENTS III.A. REQUIREMENTS .......................................................................................................14-11 III.B.",
+"matched_rules": [
+{
+"text": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"section_title": "EXHIBIT 14-1: SAMPLE GRIEVANCE PROCEDURE",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 3
+},
+{
+"text": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+"section_title": "ACOP 11/1/24",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 3
+},
+{
+"text": "In states without due process determinations, HACC must grant opportunity for grievance",
+"section_title": "ACOP 11/1/24",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 3
+}
+],
+"matched_entities": [
+{
+"name": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "In states without due process determinations, HACC must grant opportunity for grievance",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "The notice must also state that the tenant may request a grievance hearing on the HACC\u2019s",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "adverse action and will provide the subject of the record and the tenant a copy of such",
+"type": "policy_rule",
+"overlap": 3
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+},
+"document_id": "document:c8dc2af6ee6996a0",
+"document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 5318,
+"section_count": 3423,
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"text_length": 1401793,
+"status": "success"
+}
+},
+{
+"document_id": "document:be93a165d00f0101",
+"title": "ADMINISTRATIVE PLAN",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"score": 4196.7273,
+"snippet": "16-11 Scheduling an Informal Review ................................................... 16-11 Informal Review Procedures [24 CFR 982.554(b)] ..................... 16-11 Informal Review Decision [24 CFR 982.554(b)] ......................... 16-15 16-III.C. Informal Hearings for Participants [24 CFR 982.555] ....................... 16-16 Decisions Subject to Informal Hearing ......................................... 16-16 Informal Hearing Procedures ........................................................ 16-20 16-III.D. Hearing and Appeal Provisions for Noncitizens [24 CFR 5.514] ................................................................................... 16-28 Notice of Denial or Termination of Assistance [24 CFR 5.514(d)] ........................................................................",
+"matched_rules": [
+{
+"text": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"section_title": "HACC Policy",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 2
+},
+{
+"text": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 2
+},
+{
+"text": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+"section_title": "HACC Policy",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 2
+}
+],
+"matched_entities": [
+{
+"name": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "HACC will inform the family of its policy regarding moves denied due to insufficient",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "See Chapter 9 for more detail on unit eligibility policies and process.",
+"type": "policy_rule",
+"overlap": 2
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+},
+"document_id": "document:be93a165d00f0101",
+"document_title": "ADMINISTRATIVE PLAN",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 7441,
+"section_count": 4968,
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"text_length": 1927962,
+"status": "success"
+}
+}
+],
+"dynamic_anchor_passages": [
+{
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"snippet": "14 GRIEVANCES AND APPEALS INTRODUCTION ......................................................................................................................14-1 PART I: INFORMAL HEARINGS FOR PUBLIC HOUSING APPLICANTS I.A. OVERVIEW ...................................................................................................................14-1 INFORMAL HEARING PROCESS ..............................................................................14-2 I.B. PART II: INFORMAL HEARINGS WITH REGARD TO NONCITIZENS II.A. HEARING AND APPEAL PROVISIONS FOR NONCITIZENS ................................14-7 PART III: GRIEVANCE PROCEDURES FOR PUBLIC HOUSING RESIDENTS III.A. REQUIREMENTS .......................................................................................................14-11 III.B.",
+"section_labels": [
+"grievance_hearing",
+"appeal_rights"
+]
+},
+{
+"title": "ADMINISTRATIVE PLAN",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"snippet": "16-11 Scheduling an Informal Review ................................................... 16-11 Informal Review Procedures [24 CFR 982.554(b)] ..................... 16-11 Informal Review Decision [24 CFR 982.554(b)] ......................... 16-15 16-III.C. Informal Hearings for Participants [24 CFR 982.555] ....................... 16-16 Decisions Subject to Informal Hearing ......................................... 16-16 Informal Hearing Procedures ........................................................ 16-20 16-III.D. Hearing and Appeal Provisions for Noncitizens [24 CFR 5.514] ................................................................................... 16-28 Notice of Denial or Termination of Assistance [24 CFR 5.514(d)] ........................................................................",
+"section_labels": [
+"grievance_hearing",
+"appeal_rights",
+"adverse_action"
+]
+}
+],
+"dynamic_anchor_sections": [
+"grievance_hearing",
+"appeal_rights",
+"adverse_action"
+]
+}
+}
+],
+"num_questions": 1,
+"num_turns": 1,
+"final_state": {
+"current_phase": "intake",
+"iteration_count": 2,
+"convergence_history": [
+{
+"iteration": 1,
+"loss": 0.7366666666666668,
+"phase": "intake",
+"metrics": {
+"entities": 6,
+"relationships": 0,
+"gaps": 8
+},
+"timestamp": "2026-03-15T22:39:02.784724+00:00"
+},
+{
+"iteration": 2,
+"loss": 0.7350000000000001,
+"phase": "intake",
+"metrics": {
+"entities": 8,
+"relationships": 0,
+"gaps": 9,
+"updates": {
+"entities_updated": 3,
+"relationships_added": 0,
+"requirements_satisfied": 0
+},
+"denoiser_policy": {
+"exploration_enabled": false,
+"exploration_epsilon": 0.0,
+"exploration_top_k": 3,
+"momentum_enabled": false,
+"momentum_beta": 0.85,
+"stagnation_window": 4,
+"stagnation_gain_threshold": 0.5,
+"type_gain_ema": {
+"clarification": 3.0
+},
+"recent_gains": [
+3.0
+]
+}
+},
+"timestamp": "2026-03-15T22:39:14.003377+00:00"
+}
+],
+"loss_history": [
+{
+"iteration": 1,
+"loss": 0.7366666666666668,
+"phase": "intake",
+"metrics": {
+"entities": 6,
+"relationships": 0,
+"gaps": 8
+},
+"timestamp": "2026-03-15T22:39:02.784724+00:00"
+},
+{
+"iteration": 2,
+"loss": 0.7350000000000001,
+"phase": "intake",
+"metrics": {
+"entities": 8,
+"relationships": 0,
+"gaps": 9,
+"updates": {
+"entities_updated": 3,
+"relationships_added": 0,
+"requirements_satisfied": 0
+},
+"denoiser_policy": {
+"exploration_enabled": false,
+"exploration_epsilon": 0.0,
+"exploration_top_k": 3,
+"momentum_enabled": false,
+"momentum_beta": 0.85,
+"stagnation_window": 4,
+"stagnation_gain_threshold": 0.5,
+"type_gain_ema": {
+"clarification": 3.0
+},
+"recent_gains": [
+3.0
+]
+}
+},
+"timestamp": "2026-03-15T22:39:14.003377+00:00"
+}
+],
+"intake_readiness": {
+"score": 0.706,
+"blockers": [
+"unresolved_gaps",
+"denoising_not_converged",
+"missing_actor",
+"missing_proof_leads",
+"missing_core_chronology"
+],
+"criteria": {
+"knowledge_graph_ready": true,
+"dependency_graph_ready": true,
+"gaps_within_threshold": false,
+"denoising_converged": false,
+"timeline_captured": true,
+"responsible_party_identified": false,
+"impact_or_remedy_captured": true,
+"proof_leads_present": false,
+"candidate_claim_identified": true,
+"core_chronology_present": false,
+"core_actors_identified": true,
+"conduct_described": true,
+"harm_captured": true,
+"remedy_captured": true,
+"proof_leads_captured": true,
+"claim_elements_captured": true,
+"blocking_contradictions_resolved": true
+},
+"ready": false,
+"ready_to_advance": false,
+"remaining_gap_count": 9,
+"contradiction_count": 0,
+"contradictions": [],
+"intake_sections": {
+"chronology": {
+"status": "missing",
+"missing_items": [
+"event dates or timeline anchors"
+]
+},
+"actors": {
+"status": "complete",
+"missing_items": []
+},
+"conduct": {
+"status": "complete",
+"missing_items": []
+},
+"harm": {
+"status": "complete",
+"missing_items": []
+},
+"remedy": {
+"status": "complete",
+"missing_items": []
+},
+"proof_leads": {
+"status": "complete",
+"missing_items": []
+},
+"claim_elements": {
+"status": "complete",
+"missing_items": []
+}
+},
+"candidate_claim_count": 2,
+"canonical_fact_count": 3,
+"proof_lead_count": 2,
+"blocking_contradictions": []
+},
+"candidate_claims": [
+{
+"claim_id": "entity_1",
+"claim_type": "discrimination",
+"label": "Discrimination Claim",
+"description": "Complaint: I am a HACC resident filing a retaliation complaint under housing discrimination protections because I believe I was treated unfairly after exercising my rights as a tenant. In my situation, I raised concerns internally about ...",
+"confidence": 0.9,
+"source": "complaint",
+"required_elements": [
+{
+"element_id": "protected_trait",
+"label": "Protected trait or class",
+"blocking": true,
+"status": "present"
+},
+{
+"element_id": "adverse_action",
+"label": "Adverse action or discriminatory conduct",
+"blocking": true,
+"status": "present"
+},
+{
+"element_id": "discriminatory_motive",
+"label": "Facts suggesting discriminatory motive",
+"blocking": true,
+"status": "present"
+}
+]
+},
+{
+"claim_id": "entity_2",
+"claim_type": "retaliation",
+"label": "Retaliation Claim",
+"description": "Complaint: I am a HACC resident filing a retaliation complaint under housing discrimination protections because I believe I was treated unfairly after exercising my rights as a tenant. In my situation, I raised concerns internally about ...",
+"confidence": 0.85,
+"source": "complaint",
+"required_elements": [
+{
+"element_id": "protected_activity",
+"label": "Protected activity",
+"blocking": true,
+"status": "present"
+},
+{
+"element_id": "adverse_action",
+"label": "Adverse action",
+"blocking": true,
+"status": "present"
+},
+{
+"element_id": "causation",
+"label": "Timing or facts connecting activity to retaliation",
+"blocking": true,
+"status": "present"
+}
+]
+}
+],
+"intake_sections": {
+"chronology": {
+"status": "missing",
+"missing_items": [
+"event dates or timeline anchors"
+]
+},
+"actors": {
+"status": "complete",
+"missing_items": []
+},
+"conduct": {
+"status": "complete",
+"missing_items": []
+},
+"harm": {
+"status": "complete",
+"missing_items": []
+},
+"remedy": {
+"status": "complete",
+"missing_items": []
+},
+"proof_leads": {
+"status": "complete",
+"missing_items": []
+},
+"claim_elements": {
+"status": "complete",
+"missing_items": []
+}
+},
+"canonical_fact_summary": {
+"count": 3,
+"facts": [
+{
+"fact_id": "entity_5",
+"text": "Complaint: I am a HACC resident filing a retaliation complaint under housing discrimination protections because I believe I was treated unfairly after exercising my rights as a tenant. In my situation, I raised concerns internally about ...",
+"fact_type": "impact",
+"claim_types": [],
+"element_tags": [],
+"event_date_or_range": null,
+"actor_ids": [],
+"target_ids": [],
+"location": null,
+"source_kind": "knowledge_graph_entity",
+"source_ref": "entity_5",
+"confidence": 0.55,
+"status": "accepted",
+"needs_corroboration": true,
+"contradiction_group_id": null
+},
+{
+"fact_id": "entity_6",
+"text": "Complaint: I am a HACC resident filing a retaliation complaint under housing discrimination protections because I believe I was treated unfairly after exercising my rights as a tenant. In my situation, I raised concerns internally about ...",
+"fact_type": "remedy",
+"claim_types": [],
+"element_tags": [],
+"event_date_or_range": null,
+"actor_ids": [],
+"target_ids": [],
+"location": null,
+"source_kind": "knowledge_graph_entity",
+"source_ref": "entity_6",
+"confidence": 0.55,
+"status": "accepted",
+"needs_corroboration": true,
+"contradiction_group_id": null
+},
+{
+"fact_id": "fact_003",
+"text": "I can explain the impact in plain terms. The biggest impact was fear and instability about my housing. After I filed the grievance, the adverse action came quickly and I felt pressured into accepting a result I didn\u2019t think was fair because I wasn\u2019t given a clear hearing process. That created real anxiety\u2014constant worry about losing my home, not being able to sleep, and feeling like I had to respond under a deadline without knowing my rights. It also affected my ability to plan day-to-day life. I had to spend time and stress tracking down contacts, asking for documents, and responding to notices instead of focusing on work and health. It also made me distrust the process, because I couldn\u2019t get a clear written explanation of why I was being punished or what evidence was used. I\u2019m also impacted emotionally. I felt isolated and intimidated by the pressure to \u201caccept\u201d the outcome without an opportunity to present my side, especially since the policies should provide notice, informal review, and hearing/appeal rights. From the policy language in the *ADMISSIONS AND CONTINUED OCCUPANCY POLICY* and *ADMINISTRATIVE PLAN*, I understand adverse actions are meant to go through grievance/hearing/appeal structures\u2014so the lack of that process makes the harm feel both procedural and retaliatory. I should be candid: I don\u2019t yet have every case-specific fact in this message (exact dates, letter dates, the first official notice, and who made each decision). I can provide those next if you want, but this is the practical impact I\u2019m experiencing now.",
+"fact_type": "clarification",
+"claim_types": [
+"discrimination",
+"retaliation"
+],
+"element_tags": [],
+"event_date_or_range": null,
+"actor_ids": [],
+"target_ids": [],
+"location": null,
+"source_kind": "complainant_answer",
+"source_ref": "clarification",
+"confidence": 0.75,
+"status": "accepted",
+"needs_corroboration": true,
+"contradiction_group_id": null
+}
+]
+},
+"proof_lead_summary": {
+"count": 2,
+"proof_leads": [
+{
+"lead_id": "entity_3",
+"lead_type": "notice",
+"description": "Complaint: I am a HACC resident filing a retaliation complaint under housing discrimination protections because I believe I was treated unfairly after exercising my rights as a tenant. In my situation, I raised concerns internally about ...",
+"related_fact_ids": [],
+"availability": "mentioned_in_initial_complaint",
+"source_kind": "knowledge_graph_entity",
+"source_ref": "entity_3"
+},
+{
+"lead_id": "entity_4",
+"lead_type": "policy",
+"description": "Complaint: I am a HACC resident filing a retaliation complaint under housing discrimination protections because I believe I was treated unfairly after exercising my rights as a tenant. In my situation, I raised concerns internally about ...",
+"related_fact_ids": [],
+"availability": "mentioned_in_initial_complaint",
+"source_kind": "knowledge_graph_entity",
+"source_ref": "entity_4"
+}
+]
+},
+"intake_matching_summary": {
+"claim_count": 2,
+"claims": {
+"discrimination": {
+"missing_requirement_count": 3,
+"matcher_confidence": 0.0,
+"legal_requirements": 3,
+"satisfied_requirements": 0,
+"missing_requirement_names": [
+"Protected trait or class",
+"Adverse action or discriminatory conduct",
+"Facts suggesting discriminatory motive"
+],
+"missing_requirement_element_ids": [
+"protected_trait",
+"adverse_action",
+"discriminatory_motive"
+]
+},
+"retaliation": {
+"missing_requirement_count": 3,
+"matcher_confidence": 0.0,
+"legal_requirements": 3,
+"satisfied_requirements": 0,
+"missing_requirement_names": [
+"Protected activity",
+"Adverse action",
+"Timing or facts connecting activity to retaliation"
+],
+"missing_requirement_element_ids": [
+"protected_activity",
+"adverse_action",
+"causation"
+]
+}
+},
+"total_missing_requirements": 6,
+"max_missing_requirements": 3,
+"average_matcher_confidence": 0.0
+},
+"intake_legal_targeting_summary": {
+"claim_count": 2,
+"total_open_elements": 6,
+"mapped_question_count": 0,
+"unmapped_claim_count": 2,
+"claims": {
+"discrimination": {
+"missing_requirement_count": 3,
+"matcher_confidence": 0.0,
+"missing_requirement_names": [
+"Protected trait or class",
+"Adverse action or discriminatory conduct",
+"Facts suggesting discriminatory motive"
+],
+"missing_requirement_element_ids": [
+"protected_trait",
+"adverse_action",
+"discriminatory_motive"
+],
+"mapped_candidates": [],
+"unmapped_element_ids": [
+"protected_trait",
+"adverse_action",
+"discriminatory_motive"
+]
+},
+"retaliation": {
+"missing_requirement_count": 3,
+"matcher_confidence": 0.0,
+"missing_requirement_names": [
+"Protected activity",
+"Adverse action",
+"Timing or facts connecting activity to retaliation"
+],
+"missing_requirement_element_ids": [
+"protected_activity",
+"adverse_action",
+"causation"
+],
+"mapped_candidates": [],
+"unmapped_element_ids": [
+"protected_activity",
+"adverse_action",
+"causation"
+]
+}
+}
+},
+"question_candidate_summary": {
+"count": 5,
+"candidates": [
+{
+"type": "clarification",
+"question": "Can you provide more details about Notice?",
+"context": {
+"entity_id": "entity_3",
+"entity_name": "Notice",
+"confidence": 0.55
+},
+"priority": "medium",
+"question_objective": "clarify_low_confidence_fact",
+"question_reason": "The current record about Notice is too uncertain to rely on safely.",
+"expected_proof_gain": "medium",
+"proof_priority": 6,
+"phase1_section": "general",
+"target_claim_type": "",
+"target_element_id": "",
+"target_fact_type": "uncertain_fact",
+"blocking_level": "informational",
+"expected_update_kind": "clarify_fact",
+"candidate_source": "knowledge_graph_gap",
+"ranking_explanation": {
+"candidate_source": "knowledge_graph_gap",
+"priority": "medium",
+"proof_priority": 6,
+"blocking_level": "informational",
+"phase1_section": "general",
+"question_goal": "clarify_low_confidence_fact",
+"question_strategy": "default_generation",
+"target_claim_type": "",
+"target_element_id": "",
+"target_fact_type": "uncertain_fact",
+"expected_update_kind": "clarify_fact"
+}
+},
+{
+"type": "clarification",
+"question": "Can you provide more details about Policy?",
+"context": {
+"entity_id": "entity_4",
+"entity_name": "Policy",
+"confidence": 0.55
+},
+"priority": "medium",
+"question_objective": "clarify_low_confidence_fact",
+"question_reason": "The current record about Policy is too uncertain to rely on safely.",
+"expected_proof_gain": "medium",
+"proof_priority": 6,
+"phase1_section": "general",
+"target_claim_type": "",
+"target_element_id": "",
+"target_fact_type": "uncertain_fact",
+"blocking_level": "informational",
+"expected_update_kind": "clarify_fact",
+"candidate_source": "knowledge_graph_gap",
+"ranking_explanation": {
+"candidate_source": "knowledge_graph_gap",
+"priority": "medium",
+"proof_priority": 6,
+"blocking_level": "informational",
+"phase1_section": "general",
+"question_goal": "clarify_low_confidence_fact",
+"question_strategy": "default_generation",
+"target_claim_type": "",
+"target_element_id": "",
+"target_fact_type": "uncertain_fact",
+"expected_update_kind": "clarify_fact"
+}
+},
+{
+"type": "clarification",
+"question": "Can you provide more details about Requested remedy: Complaint: I am a HACC resident filing a retaliation comp...?",
+"context": {
+"entity_id": "entity_6",
+"entity_name": "Requested remedy: Complaint: I am a HACC resident filing a retaliation comp...",
+"confidence": 0.55
+},
+"priority": "medium",
+"question_objective": "clarify_low_confidence_fact",
+"question_reason": "The current record about Requested remedy: Complaint: I am a HACC resident filing a retaliation comp... is too uncertain to rely on safely.",
+"expected_proof_gain": "medium",
+"proof_priority": 6,
+"phase1_section": "general",
+"target_claim_type": "",
+"target_element_id": "",
+"target_fact_type": "uncertain_fact",
+"blocking_level": "informational",
+"expected_update_kind": "clarify_fact",
+"candidate_source": "knowledge_graph_gap",
+"ranking_explanation": {
+"candidate_source": "knowledge_graph_gap",
+"priority": "medium",
+"proof_priority": 6,
+"blocking_level": "informational",
+"phase1_section": "general",
+"question_goal": "clarify_low_confidence_fact",
+"question_strategy": "default_generation",
+"target_claim_type": "",
+"target_element_id": "",
+"target_fact_type": "uncertain_fact",
+"expected_update_kind": "clarify_fact"
+}
+},
+{
+"type": "clarification",
+"question": "Can you provide more details about HR?",
+"context": {
+"entity_id": "entity_7",
+"entity_name": "HR",
+"confidence": 0.55
+},
+"priority": "medium",
+"question_objective": "clarify_low_confidence_fact",
+"question_reason": "The current record about HR is too uncertain to rely on safely.",
+"expected_proof_gain": "medium",
+"proof_priority": 6,
+"phase1_section": "general",
+"target_claim_type": "",
+"target_element_id": "",
+"target_fact_type": "uncertain_fact",
+"blocking_level": "informational",
+"expected_update_kind": "clarify_fact",
+"candidate_source": "knowledge_graph_gap",
+"ranking_explanation": {
+"candidate_source": "knowledge_graph_gap",
+"priority": "medium",
+"proof_priority": 6,
+"blocking_level": "informational",
+"phase1_section": "general",
+"question_goal": "clarify_low_confidence_fact",
+"question_strategy": "default_generation",
+"target_claim_type": "",
+"target_element_id": "",
+"target_fact_type": "uncertain_fact",
+"expected_update_kind": "clarify_fact"
+}
+},
+{
+"type": "clarification",
+"question": "Can you provide more details about Timeline detail: I can explain the impact in plain terms. The biggest impa...?",
+"context": {
+"entity_id": "entity_8",
+"entity_name": "Timeline detail: I can explain the impact in plain terms. The biggest impa...",
+"confidence": 0.6
+},
+"priority": "medium",
+"question_objective": "clarify_low_confidence_fact",
+"question_reason": "The current record about Timeline detail: I can explain the impact in plain terms. The biggest impa... is too uncertain to rely on safely.",
+"expected_proof_gain": "medium",
+"proof_priority": 6,
+"phase1_section": "general",
+"target_claim_type": "",
+"target_element_id": "",
+"target_fact_type": "uncertain_fact",
+"blocking_level": "informational",
+"expected_update_kind": "clarify_fact",
+"candidate_source": "knowledge_graph_gap",
+"ranking_explanation": {
+"candidate_source": "knowledge_graph_gap",
+"priority": "medium",
+"proof_priority": 6,
+"blocking_level": "informational",
+"phase1_section": "general",
+"question_goal": "clarify_low_confidence_fact",
+"question_strategy": "default_generation",
+"target_claim_type": "",
+"target_element_id": "",
+"target_fact_type": "uncertain_fact",
+"expected_update_kind": "clarify_fact"
+}
+}
+],
+"source_counts": {
+"knowledge_graph_gap": 5
+},
+"question_goal_counts": {
+"clarify_low_confidence_fact": 5
+},
+"phase1_section_counts": {
+"general": 5
+},
+"blocking_level_counts": {
+"informational": 5
+}
+},
+"claim_support_packet_summary": {
+"claim_count": 0,
+"element_count": 0,
+"status_counts": {
+"supported": 0,
+"partially_supported": 0,
+"unsupported": 0,
+"contradicted": 0
+},
+"recommended_actions": []
+},
+"intake_evidence_alignment_summary": {
+"claim_count": 2,
+"aligned_element_count": 0,
+"unsupported_shared_count": 0,
+"claims": {
+"discrimination": {
+"intake_required_element_ids": [
+"protected_trait",
+"adverse_action",
+"discriminatory_motive"
+],
+"packet_element_statuses": {},
+"shared_elements": [],
+"intake_only_element_ids": [
+"protected_trait",
+"adverse_action",
+"discriminatory_motive"
+],
+"evidence_only_element_ids": []
+},
+"retaliation": {
+"intake_required_element_ids": [
+"protected_activity",
+"adverse_action",
+"causation"
+],
+"packet_element_statuses": {},
+"shared_elements": [],
+"intake_only_element_ids": [
+"protected_activity",
+"adverse_action",
+"causation"
+],
+"evidence_only_element_ids": []
+}
+}
+},
+"alignment_evidence_tasks": [],
+"intake_contradictions": {
+"candidate_count": 0,
+"candidates": []
+},
+"phase_completion": {
+"intake": false,
+"evidence": false,
+"formalization": false
+},
+"next_action": {
+"action": "address_gaps",
+"gaps": [
+{
+"type": "low_confidence_entity",
+"entity_id": "entity_3",
+"entity_type": "evidence",
+"entity_name": "Notice",
+"confidence": 0.55,
+"suggested_question": "Can you provide more details about Notice?"
+},
+{
+"type": "low_confidence_entity",
+"entity_id": "entity_4",
+"entity_type": "evidence",
+"entity_name": "Policy",
+"confidence": 0.55,
+"suggested_question": "Can you provide more details about Policy?"
+},
+{
+"type": "low_confidence_entity",
+"entity_id": "entity_6",
+"entity_type": "fact",
+"entity_name": "Requested remedy: Complaint: I am a HACC resident filing a retaliation comp...",
+"confidence": 0.55,
+"suggested_question": "Can you provide more details about Requested remedy: Complaint: I am a HACC resident filing a retaliation comp...?"
+},
+{
+"type": "low_confidence_entity",
+"entity_id": "entity_7",
+"entity_type": "person",
+"entity_name": "HR",
+"confidence": 0.55,
+"suggested_question": "Can you provide more details about HR?"
+},
+{
+"type": "low_confidence_entity",
+"entity_id": "entity_8",
+"entity_type": "fact",
+"entity_name": "Timeline detail: I can explain the impact in plain terms. The biggest impa...",
+"confidence": 0.6,
+"suggested_question": "Can you provide more details about Timeline detail: I can explain the impact in plain terms. The biggest impa...?"
+},
+{
+"type": "isolated_entity",
+"entity_id": "entity_7",
+"entity_type": "person",
+"entity_name": "HR",
+"suggested_question": "What is the relationship between HR and the complaint?"
+},
+{
+"type": "unsupported_claim",
+"entity_id": "entity_1",
+"claim_name": "Discrimination Claim",
+"suggested_question": "What evidence supports the claim: Discrimination Claim?"
+},
+{
+"type": "unsupported_claim",
+"entity_id": "entity_2",
+"claim_name": "Retaliation Claim",
+"suggested_question": "What evidence supports the claim: Retaliation Claim?"
+},
+{
+"type": "missing_responsible_party",
+"suggested_question": "Who is the person or organization you believe is responsible (e.g., employer, manager, agency)?"
+}
+],
+"intake_readiness_score": 0.706,
+"intake_blockers": [
+"unresolved_gaps",
+"denoising_not_converged",
+"missing_actor",
+"missing_proof_leads",
+"missing_core_chronology"
+]
+}
+},
+"knowledge_graph_summary": {
+"total_entities": 8,
+"total_relationships": 0,
+"entity_types": {
+"claim": 2,
+"evidence": 2,
+"fact": 3,
+"person": 1
+},
+"relationship_types": {},
+"gaps": 9
+},
+"dependency_graph_summary": {
+"total_nodes": 6,
+"total_dependencies": 4,
+"node_types": {
+"claim": 2,
+"fact": 4
+},
+"dependency_types": {
+"depends_on": 4
+},
+"satisfied_nodes": 0,
+"satisfaction_rate": 0.0
+},
+"knowledge_graph": {
+"metadata": {
+"created_at": "2026-03-15T22:39:02.779354+00:00",
+"last_updated": "2026-03-15T22:39:14.002664+00:00",
+"version": "1.0"
+},
+"entities": {
+"entity_1": {
+"id": "entity_1",
+"type": "claim",
+"name": "Discrimination Claim",
+"attributes": {
+"claim_type": "discrimination",
+"description": "Complaint: I am a HACC resident filing a retaliation complaint under housing discrimination protections because I believe I was treated unfairly after exercising my rights as a tenant. In my situation, I raised concerns internally about ..."
+},
+"confidence": 0.9,
+"source": "complaint"
+},
+"entity_2": {
+"id": "entity_2",
+"type": "claim",
+"name": "Retaliation Claim",
+"attributes": {
+"claim_type": "retaliation",
+"description": "Complaint: I am a HACC resident filing a retaliation complaint under housing discrimination protections because I believe I was treated unfairly after exercising my rights as a tenant. In my situation, I raised concerns internally about ..."
+},
+"confidence": 0.85,
+"source": "complaint"
+},
+"entity_3": {
+"id": "entity_3",
+"type": "evidence",
+"name": "Notice",
+"attributes": {
+"evidence_type": "notice",
+"description": "Complaint: I am a HACC resident filing a retaliation complaint under housing discrimination protections because I believe I was treated unfairly after exercising my rights as a tenant. In my situation, I raised concerns internally about ..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_4": {
+"id": "entity_4",
+"type": "evidence",
+"name": "Policy",
+"attributes": {
+"evidence_type": "policy",
+"description": "Complaint: I am a HACC resident filing a retaliation complaint under housing discrimination protections because I believe I was treated unfairly after exercising my rights as a tenant. In my situation, I raised concerns internally about ..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_5": {
+"id": "entity_5",
+"type": "fact",
+"name": "Impact: Complaint: I am a HACC resident filing a retaliation comp...",
+"attributes": {
+"fact_type": "impact",
+"description": "Complaint: I am a HACC resident filing a retaliation complaint under housing discrimination protections because I believe I was treated unfairly after exercising my rights as a tenant. In my situation, I raised concerns internally about ...",
+"clarification": "I can explain the impact in plain terms.\n\nThe biggest impact was fear and instability about my housing. After I filed the grievance, the adverse action came quickly and I felt pressured into accepting a result I didn\u2019t think was fair because I wasn\u2019t given a clear hearing process. That created real anxiety\u2014constant worry about losing my home, not being able to sleep, and feeling like I had to respond under a deadline without knowing my rights.\n\nIt also affected my ability to plan day-to-day life. I had to spend time and stress tracking down contacts, asking for documents, and responding to notices instead of focusing on work and health. It also made me distrust the process, because I couldn\u2019t get a clear written explanation of why I was being punished or what evidence was used.\n\nI\u2019m also impacted emotionally. I felt isolated and intimidated by the pressure to \u201caccept\u201d the outcome without an opportunity to present my side, especially since the policies should provide notice, informal review, and hearing/appeal rights. From the policy language in the *ADMISSIONS AND CONTINUED OCCUPANCY POLICY* and *ADMINISTRATIVE PLAN*, I understand adverse actions are meant to go through grievance/hearing/appeal structures\u2014so the lack of that process makes the harm feel both procedural and retaliatory.\n\nI should be candid: I don\u2019t yet have every case-specific fact in this message (exact dates, letter dates, the first official notice, and who made each decision). I can provide those next if you want, but this is the practical impact I\u2019m experiencing now."
+},
+"confidence": 0.75,
+"source": "complaint"
+},
+"entity_6": {
+"id": "entity_6",
+"type": "fact",
+"name": "Requested remedy: Complaint: I am a HACC resident filing a retaliation comp...",
+"attributes": {
+"fact_type": "remedy",
+"description": "Complaint: I am a HACC resident filing a retaliation complaint under housing discrimination protections because I believe I was treated unfairly after exercising my rights as a tenant. In my situation, I raised concerns internally about ..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_7": {
+"id": "entity_7",
+"type": "person",
+"name": "HR",
+"attributes": {
+"role": "hr"
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_8": {
+"id": "entity_8",
+"type": "fact",
+"name": "Timeline detail: I can explain the impact in plain terms. The biggest impa...",
+"attributes": {
+"fact_type": "timeline",
+"description": "I can explain the impact in plain terms. The biggest impact was fear and instability about my housing. After I filed ..."
+},
+"confidence": 0.6,
+"source": "complaint"
+}
+},
+"relationships": {}
+},
+"dependency_graph": {
+"metadata": {
+"created_at": "2026-03-15T22:39:02.783342+00:00",
+"last_updated": "2026-03-15T22:39:02.783468+00:00",
+"version": "1.0"
+},
+"nodes": {
+"node_1": {
+"id": "node_1",
+"node_type": "claim",
+"name": "Discrimination Claim",
+"description": "Complaint: I am a HACC resident filing a retaliation complaint under housing discrimination protections because I believe I was treated unfairly after exercising my rights as a tenant. In my situation, I raised concerns internally about ...",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {
+"claim_type": "discrimination"
+}
+},
+"node_2": {
+"id": "node_2",
+"node_type": "claim",
+"name": "Retaliation Claim",
+"description": "Complaint: I am a HACC resident filing a retaliation complaint under housing discrimination protections because I believe I was treated unfairly after exercising my rights as a tenant. In my situation, I raised concerns internally about ...",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {
+"claim_type": "retaliation"
+}
+},
+"node_3": {
+"id": "node_3",
+"node_type": "fact",
+"name": "Timeline of events",
+"description": "Dates or sequence of key events related to this claim",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {}
+},
+"node_4": {
+"id": "node_4",
+"node_type": "fact",
+"name": "Responsible party",
+"description": "Who took the action or decision tied to this claim",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {}
+},
+"node_5": {
+"id": "node_5",
+"node_type": "fact",
+"name": "Timeline of events",
+"description": "Dates or sequence of key events related to this claim",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {}
+},
+"node_6": {
+"id": "node_6",
+"node_type": "fact",
+"name": "Responsible party",
+"description": "Who took the action or decision tied to this claim",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {}
+}
+},
+"dependencies": {
+"dep_1": {
+"id": "dep_1",
+"source_id": "node_3",
+"target_id": "node_1",
+"dependency_type": "depends_on",
+"required": true,
+"strength": 1.0
+},
+"dep_2": {
+"id": "dep_2",
+"source_id": "node_4",
+"target_id": "node_1",
+"dependency_type": "depends_on",
+"required": true,
+"strength": 1.0
+},
+"dep_3": {
+"id": "dep_3",
+"source_id": "node_5",
+"target_id": "node_2",
+"dependency_type": "depends_on",
+"required": true,
+"strength": 1.0
+},
+"dep_4": {
+"id": "dep_4",
+"source_id": "node_6",
+"target_id": "node_2",
+"dependency_type": "depends_on",
+"required": true,
+"strength": 1.0
+}
+}
+},
+"critic_score": {
+"overall_score": 0.459,
+"question_quality": 0.28,
+"information_extraction": 0.31,
+"empathy": 0.72,
+"efficiency": 0.53,
+"coverage": 0.62,
+"feedback": "The mediator\u2019s first and only follow-up was polite and open-ended, but it was too narrow and not strategically targeted to close the biggest intake gaps. The prompt repeated a long fragment of the complaint rather than asking for the missing legal-factual essentials (timeline anchors, adverse action details, responsible party, and documentation trail), so the interaction generated rich emotional context but left critical claim elements under-extracted. The exchange also missed the opportunity to map evidence anchors (notice, policy sections, hearing request status) to specific facts. Overall, rapport was decent, but intake quality is insufficient for advancing the case.",
+"strengths": [
+"The question was phrased in a non-judgmental, clarifying way, which reduced friction and helped the complainant expand their narrative.",
+"The follow-up successfully elicited concrete impact details (anxiety, sleep disruption, pressure, day-to-day burden), improving the harm/impact section.",
+"Covered all seeded anchor sections: grievance_hearing, appeal_rights, adverse_action"
+],
+"weaknesses": [
+"The question did not gather high-priority missing facts (dates, dates of notices, who made decisions, exact adverse action, first notice content), leaving major claim elements unresolved.",
+"Coverage is thin for legal intake needs: no timeline, no responsible actor confirmation, and no evidence leads collected despite multiple explicit knowledge gaps."
+],
+"suggestions": [
+"Ask a short, structured sequence next, starting with: \u201cWhat happened first? What date? What was the adverse action? Who sent the first notice? What did it say?\u201d and then \u201cWhat was your next action and when?\u201d",
+"Request specific documentary anchors immediately: copies/ids of notices, policy excerpts referenced, email/portal entries, names/roles of staff involved, and any deadlines you were pressured to meet."
+],
+"anchor_sections_expected": [
+"grievance_hearing",
+"appeal_rights",
+"adverse_action"
+],
+"anchor_sections_covered": [
+"grievance_hearing",
+"appeal_rights",
+"adverse_action"
+],
+"anchor_sections_missing": []
+},
+"anchor_section_summary": {
+"expected": [
+"grievance_hearing",
+"appeal_rights",
+"adverse_action"
+],
+"covered": [
+"grievance_hearing",
+"appeal_rights",
+"adverse_action"
+],
+"missing": []
+},
+"duration_seconds": 18.316775798797607,
+"success": true,
+"error": null
+}
+]
+}

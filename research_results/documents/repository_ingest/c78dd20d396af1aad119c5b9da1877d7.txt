@@ -1,0 +1,31 @@
+{
+"generated_at": "2025-12-31T10:40:27.276266+00:00",
+"source": {
+"downloads_root": "research_results/third_party_downloads",
+"domains_scanned": [
+"www.quantumresidential.com",
+"quantumresidential.com"
+],
+"manifests": [
+"research_results/third_party_download_manifest.json",
+"research_results/third_party_download_manifest_next_hop.json",
+"research_results/third_party_download_manifest_paycom_api_endpoints.json",
+"research_results/third_party_download_manifest_paycom_sprawl.json",
+"research_results/third_party_download_manifest_paycom_sprawl_assets.json",
+"research_results/third_party_download_manifest_quantum_docs.json",
+"research_results/third_party_download_manifest_quantum_pages_from_sitemaps.json",
+"research_results/third_party_download_manifest_quantum_portals.json",
+"research_results/third_party_download_manifest_quantum_seed.json",
+"research_results/third_party_download_manifest_quantum_sitemaps.json",
+"research_results/third_party_download_manifest_quantum_subsitemaps.json"
+]
+},
+"stats": {
+"html_files_scanned": 108,
+"raw_links_seen": 9259,
+"doc_domains": 0,
+"doc_urls_total": 0,
+"skipped_external_doc_urls": 12
+},
+"items": []
+}

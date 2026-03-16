@@ -1,0 +1,174 @@
+{
+"input": "research_results/third_party_download_queue.json",
+"input_domain_count": 843,
+"output": "research_results/third_party_download_queue_next_hop.json",
+"output_domain_count": 63,
+"dropped_domain_count": 780,
+"dropped_by_reason": {
+"score_below_min": 548,
+"noise:wordpress.org": 170,
+"noise:wikimedia.org": 13,
+"noise:tiktok.com": 10,
+"noise:thrillshare.com": 6,
+"noise:assets.": 5,
+"noise:googleapis.com": 3,
+"noise:learnworlds.com": 3,
+"noise:wordpress.com": 2,
+"noise:cdn.": 2,
+"noise:xmlns.com": 1,
+"noise:threads.net": 1,
+"noise:twimg.com": 1,
+"gov_filtered": 1,
+"noise:stripe.com": 1,
+"noise:bonfire.com": 1,
+"noise:slideshare.net": 1,
+"noise:flickr.com": 1,
+"noise:wnycstudios.org": 1,
+"noise:cbs8.com": 1,
+"noise:mouseflow.com": 1,
+"noise:adobedtm.com": 1,
+"noise:licdn.com": 1,
+"noise:jsdelivr.net": 1,
+"noise:heapanalytics.com": 1,
+"noise:doubleclick.net": 1,
+"noise:static.": 1,
+"noise:confiant-integrations.net": 1
+},
+"dropped_examples": {
+"noise:tiktok.com": [
+"www.tiktok.com",
+"im-api.tiktok.com",
+"webcast.us.tiktok.com",
+"newsroom.tiktok.com",
+"lifeattiktok.com",
+"shop.tiktok.com",
+"developers.tiktok.com",
+"effecthouse.tiktok.com",
+"ads.tiktok.com",
+"support.tiktok.com"
+],
+"noise:xmlns.com": [
+"xmlns.com"
+],
+"noise:wordpress.org": [
+"wordpress.org",
+"developer.wordpress.org",
+"make.wordpress.org",
+"learn.wordpress.org",
+"events.wordpress.org",
+"mercantile.wordpress.org",
+"ca.wordpress.org",
+"cs.wordpress.org",
+"de.wordpress.org",
+"el.wordpress.org"
+],
+"noise:googleapis.com": [
+"maps.googleapis.com",
+"youtubei-att.googleapis.com",
+"ajax.googleapis.com"
+],
+"noise:threads.net": [
+"www.threads.net"
+],
+"noise:twimg.com": [
+"abs.twimg.com"
+],
+"noise:assets.": [
+"github.githubassets.com",
+"cmsv2-assets.apptegy.net",
+"opengraph.githubassets.com",
+"assets.adida.net",
+"assets.raceforward.org"
+],
+"gov_filtered": [
+"www.hud.gov"
+],
+"noise:thrillshare.com": [
+"thrillshare-cmsv2.services.thrillshare.com",
+"thrillshare.com",
+"umatillaor.sites.thrillshare.com",
+"umatillaor.id.thrillshare.com",
+"forms.services.thrillshare.com",
+"engage-api.services.thrillshare.com"
+],
+"noise:learnworlds.com": [
+"api.us-e1.learnworlds.com",
+"www.learnworlds.com",
+"cta.mylearnworlds.com"
+],
+"noise:stripe.com": [
+"js.stripe.com"
+],
+"noise:bonfire.com": [
+"www.bonfire.com"
+],
+"noise:slideshare.net": [
+"www.slideshare.net"
+],
+"noise:flickr.com": [
+"www.flickr.com"
+],
+"noise:wikimedia.org": [
+"foundation.wikimedia.org",
+"wikimedia.org",
+"donate.wikimedia.org",
+"developer.wikimedia.org",
+"stats.wikimedia.org",
+"www.wikimedia.org",
+"commons.wikimedia.org",
+"species.wikimedia.org",
+"meta.wikimedia.org",
+"outreach.wikimedia.org"
+],
+"noise:wnycstudios.org": [
+"www.wnycstudios.org"
+],
+"noise:cbs8.com": [
+"www.cbs8.com"
+],
+"score_below_min": [
+"openverse.org",
+"wordpress.tv",
+"jobs.wordpress.net",
+"wordpressfoundation.org",
+"ma.tt",
+"bbpress.org",
+"buddypress.org",
+"wordpress.tumblr.com",
+"volunteer.charitynavigator.org",
+"wikimediafoundation.org"
+],
+"noise:wordpress.com": [
+"wordpress.com",
+"rnzncomms.files.wordpress.com"
+],
+"noise:cdn.": [
+"cdn.restorativejustice.org",
+"cdn.knightlab.com"
+],
+"noise:mouseflow.com": [
+"cdn.mouseflow.com"
+],
+"noise:adobedtm.com": [
+"assets.adobedtm.com"
+],
+"noise:licdn.com": [
+"snap.licdn.com"
+],
+"noise:jsdelivr.net": [
+"cdn.jsdelivr.net"
+],
+"noise:heapanalytics.com": [
+"cdn.heapanalytics.com"
+],
+"noise:doubleclick.net": [
+"ad.doubleclick.net"
+],
+"noise:static.": [
+"www.gstatic.cn"
+],
+"noise:confiant-integrations.net": [
+"cdn.confiant-integrations.net"
+]
+}
+}

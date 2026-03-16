@@ -1,0 +1,74 @@
+[
+  {
+    "document_label": "Governor of Oregon : Executive Orders : State of Oregon",
+    "source_path": "/home/barberb/HACC/research_data/raw_documents/Executive_Orders_Index.html",
+    "relative_path": "research_data/raw_documents/Executive_Orders_Index.html",
+    "filename": "Executive_Orders_Index.html",
+    "mime_type": "text/html",
+    "metadata": {
+      "source_type": "repository_evidence",
+      "relative_path": "research_data/raw_documents/Executive_Orders_Index.html",
+      "parse_summary": {
+        "status": "available-fallback",
+        "chunk_count": 78,
+        "text_length": 64660,
+        "parser_version": "documents-adapter:1",
+        "input_format": "html",
+        "paragraph_count": 1,
+        "extraction_method": "html_to_text",
+        "quality_tier": "medium",
+        "quality_score": 80.0,
+        "page_count": 1
+      },
+      "graph_status": "available-fallback"
+    }
+  },
+  {
+    "document_label": "# Complete DEI Audit Summary - Housing Authority of Clackamas County",
+    "source_path": "/home/barberb/HACC/COLLECTION_COMPLETE_SUMMARY.md",
+    "relative_path": "COLLECTION_COMPLETE_SUMMARY.md",
+    "filename": "COLLECTION_COMPLETE_SUMMARY.md",
+    "mime_type": "text/markdown",
+    "metadata": {
+      "source_type": "repository_evidence",
+      "relative_path": "COLLECTION_COMPLETE_SUMMARY.md",
+      "parse_summary": {
+        "status": "available-fallback",
+        "chunk_count": 19,
+        "text_length": 16072,
+        "parser_version": "documents-adapter:1",
+        "input_format": "text",
+        "paragraph_count": 1,
+        "extraction_method": "text_normalization",
+        "quality_tier": "high",
+        "quality_score": 98.0,
+        "page_count": 1
+      },
+      "graph_status": "available-fallback"
+    }
+  },
+  {
+    "document_label": "# Risk Review (risk_score > 0)",
+    "source_path": "/home/barberb/HACC/research_results/risk_review_20251231.md",
+    "relative_path": "research_results/risk_review_20251231.md",
+    "filename": "risk_review_20251231.md",
+    "mime_type": "text/markdown",
+    "metadata": {
+      "source_type": "repository_evidence",
+      "relative_path": "research_results/risk_review_20251231.md",
+      "parse_summary": {
+        "status": "available-fallback",
+        "chunk_count": 64,
+        "text_length": 53992,
+        "parser_version": "documents-adapter:1",
+        "input_format": "text",
+        "paragraph_count": 1,
+        "extraction_method": "text_normalization",
+        "quality_tier": "high",
+        "quality_score": 98.0,
+        "page_count": 1
+      },
+      "graph_status": "available-fallback"
+    }
+  }
+]

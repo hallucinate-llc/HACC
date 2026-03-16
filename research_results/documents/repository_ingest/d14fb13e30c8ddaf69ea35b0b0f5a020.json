@@ -1,0 +1,71 @@
+{
+  "title": "www.tiktok.com 52b897af28",
+  "relative_path": "research_results/third_party_downloads/www.tiktok.com/www.tiktok.com_52b897af28.html",
+  "source_type": "repository_evidence",
+  "filename": "www.tiktok.com_52b897af28.html",
+  "mime_type": "text/html",
+  "size": 302378,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 1,
+  "paragraph_count": 1,
+  "text_length": 22,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 22,
+    "text_length": 22,
+    "raw_size": 302378,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 1
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 22,
+      "text_length": 22,
+      "raw_size": 302378,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "d14fb13e30c8ddaf69ea35b0b0f5a020",
+  "checksum": "9a1dadd3120566415a8c41a77faa7a55a36f58f0ca26f422ed920b296d9a66c3",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.tiktok.com/www.tiktok.com_52b897af28.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/d14fb13e30c8ddaf69ea35b0b0f5a020.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

@@ -1,0 +1,71 @@
+{
+  "title": "ddg long query debug",
+  "relative_path": "research_results/ddg_long_query_debug.html",
+  "source_type": "repository_evidence",
+  "filename": "ddg_long_query_debug.html",
+  "mime_type": "text/html",
+  "size": 76066,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 1,
+  "paragraph_count": 1,
+  "text_length": 183,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 183,
+    "text_length": 183,
+    "raw_size": 76066,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 1
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 183,
+      "text_length": 183,
+      "raw_size": 76066,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "3354c8dea9e4acebd3463fa1af2c87d3",
+  "checksum": "77a691f8d7a5defff2274d975fa5eda09b0f492b9b96e3b4331920c286424d3d",
+  "source_path": "/home/barberb/HACC/research_results/ddg_long_query_debug.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/3354c8dea9e4acebd3463fa1af2c87d3.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

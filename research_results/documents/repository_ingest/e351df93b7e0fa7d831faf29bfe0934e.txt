@@ -1,0 +1,142 @@
+{
+"timestamp": "20260315_033613",
+"runtime": {
+"mode": "llm_router",
+"provider": "codex_cli",
+"model": "gpt-5.2-codex",
+"complainant_backend_class": "LLMRouterBackend",
+"critic_backend_class": "LLMRouterBackend"
+},
+"router_diagnostics": {
+"ipfs_router": {
+"status": "available",
+"backend_name": "KuboCLIBackend",
+"backend_present": true,
+"error": "",
+"provider": "ipfs_datasets_py",
+"metadata": {
+"operation": "storage_backend_status",
+"backend_available": true,
+"provider": "ipfs_datasets_py",
+"implementation_status": "available",
+"details": {
+"operation": "storage_backend_status",
+"backend_available": true,
+"implementation_status": "available"
+}
+}
+},
+"embeddings_router": {
+"status": "success",
+"index_name": "router_diag",
+"document_count": 2,
+"dimension": 384,
+"provider": "ipfs_datasets_py.auto",
+"model_name": "",
+"files": {
+"vectors_path": "/tmp/tmp43p6ws0s/router_diag.vectors.npy",
+"records_path": "/tmp/tmp43p6ws0s/router_diag.records.jsonl",
+"manifest_path": "/tmp/tmp43p6ws0s/router_diag.manifest.json"
+},
+"metadata": {
+"operation": "create_vector_index",
+"backend_available": true,
+"provider": "ipfs_datasets_py",
+"implementation_status": "implemented",
+"batch_size": 32,
+"details": {
+"operation": "create_vector_index",
+"backend_available": true,
+"implementation_status": "implemented",
+"batch_size": 32
+}
+}
+}
+},
+"inputs": {
+"num_sessions": 1,
+"max_turns": 1,
+"max_parallel": 1,
+"personalities": [],
+"hacc_preset": "core_hacc_policies",
+"hacc_count": null,
+"use_hacc_vector_search": false
+},
+"statistics": {
+"total_sessions": 1,
+"successful_sessions": 1,
+"failed_sessions": 0,
+"average_score": 0.2925,
+"min_score": 0.2925,
+"max_score": 0.2925,
+"average_questions": 1.0,
+"average_duration": 28.6983699798584,
+"score_distribution": {
+"0.0-0.2": 0,
+"0.2-0.4": 1,
+"0.4-0.6": 0,
+"0.6-0.8": 0,
+"0.8-1.0": 0
+},
+"anchor_sections": {
+"expected_counts": {
+"general_policy": 1
+},
+"covered_counts": {},
+"missing_counts": {
+"general_policy": 1
+},
+"coverage_by_section": {
+"general_policy": {
+"expected": 1,
+"covered": 0,
+"missing": 1,
+"coverage_rate": 0.0
+}
+}
+}
+},
+"optimization_report": {
+"average_score": 0.2925,
+"score_trend": "insufficient_data",
+"recommended_hacc_preset": "core_hacc_policies",
+"priority_improvements": [
+"Improve empathy: current avg 0.15",
+"Improve coverage: current avg 0.20",
+"Improve information extraction: current avg 0.30"
+],
+"recommendations": [
+"Overall performance is below average. Focus on fundamental improvements.",
+"Improve question formulation: make questions more specific and relevant.",
+"Enhance information extraction: ask follow-up questions when responses are vague.",
+"Increase empathy: acknowledge complainant's feelings and concerns.",
+"Improve efficiency: avoid repetitive questions and streamline the process.",
+"Expand topic coverage: ensure all important aspects are addressed.",
+"Decision-tree coverage is incomplete for seeded evidence sections. Add explicit probes for: general_policy.",
+"Knowledge graph gap count is high on average. Improve gap-reduction logic in complaint_phases/denoiser.py and ensure process_answer updates entities/relationships meaningfully.",
+"Knowledge graph is not growing much per iteration. Consider extracting structured entities/relationships from denoising answers to enrich the KG over time.",
+"Knowledge graph relationships are not increasing across iterations. Consider adding relationship updates when answers mention who/what/when/where/why links.",
+"Dependency satisfaction rate is very low on average. Consider having denoising answers mark requirements as satisfied or add evidence/fact nodes as they are provided.",
+"Add questions covering: general_policy",
+"Ask targeted, time-anchored questions about the sequence: complaint date, grievance request date, notice dates, and the exact adverse actions taken",
+"Include empathic acknowledgment and explicitly request due process details (hearing offered, written notice, appeal rights, and any responses received)",
+"Best HACC preset so far is 'core_hacc_policies'. Prefer it when generating evidence-backed adversarial batches."
+],
+"best_session_id": "session_20260315_033452_000"
+},
+"best_complaint": {
+"session_id": "session_20260315_033452_000",
+"initial_complaint_text": "Complaint:\n\nI am filing this retaliation complaint about how HACC handled my situation after I raised concerns and tried to use the grievance process. I made a complaint about my housing conditions and asked for help, and shortly after that I started receiving adverse actions from HACC. It feels like I was targeted because I spoke up.\n\nWhat happened, in my own words: I contacted HACC to report issues in my unit and asked for a grievance because I disagreed with HACC’s action and their failure to fix the problem. After that, I received notices and decisions that seemed unrelated to my original issue and were harmful to me. The timing and pattern make it feel like retaliation. I asked for a fair grievance hearing and due process, but I did not feel I was given a meaningful chance to explain my side or appeal before the action was taken.\n\nThis has affected me a lot. It has caused stress, fear about my housing stability, and a sense that I can’t safely raise concerns without being punished. I am trying to follow HACC’s policies and use the grievance process, but I feel shut down and threatened for doing so.\n\nKey facts:\n- I raised a complaint about my housing situation and requested a grievance.\n- Soon after, HACC took adverse actions against me.\n- I asked for an appeal or hearing and did not feel due process was provided.\n- The retaliation has impacted my housing security and wellbeing.\n\nI am asking HACC to stop the retaliatory actions, provide a fair grievance hearing, and follow its own policies regarding tenant disputes and due process. I want a clear explanation of the actions taken against me and a chance to be heard without fear of further retaliation.",
+"score": 0.2925,
+"seed_type": "housing_discrimination",
+"seed_summary": "The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. Grievance: Any dispute a tenant may have with respect to HACC action or failure to"
+},
+"artifacts": {
+"output_dir": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_1",
+"results_json": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_1/adversarial_results.json",
+"optimization_report_json": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_1/optimization_report.json",
+"anchor_section_csv": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_1/anchor_section_coverage.csv",
+"best_complaint_bundle_json": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_1/best_complaint_bundle.json",
+"session_state_dir": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_1/sessions"
+}
+}

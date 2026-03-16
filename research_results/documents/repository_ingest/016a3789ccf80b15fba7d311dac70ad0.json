@@ -1,0 +1,71 @@
+{
+  "title": "eo-25-26.pdf",
+  "relative_path": "research_data/raw_documents/eo-25-26.pdf.txt",
+  "source_type": "repository_evidence",
+  "filename": "eo-25-26.pdf.txt",
+  "mime_type": "text/plain",
+  "size": 10,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 0,
+  "paragraph_count": 0,
+  "text_length": 0,
+  "input_format": "text",
+  "page_count": 0,
+  "extraction_method": "text_normalization",
+  "parse_quality": {
+    "quality_score": 0.0,
+    "quality_tier": "empty",
+    "quality_flags": [
+      "empty_text"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 0,
+    "text_length": 0,
+    "raw_size": 10,
+    "page_count": 0
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "text",
+    "normalization": "text_normalization",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 0
+    },
+    "extraction": {
+      "method": "text_normalization",
+      "ocr_used": false,
+      "page_count": 0
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 0,
+      "text_length": 0,
+      "raw_size": 10,
+      "page_count": 0
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "empty",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "empty"
+  },
+  "record_id": "016a3789ccf80b15fba7d311dac70ad0",
+  "checksum": "",
+  "source_path": "/home/barberb/HACC/research_data/raw_documents/eo-25-26.pdf.txt",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/016a3789ccf80b15fba7d311dac70ad0.txt",
+  "content_type": "text/plain",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

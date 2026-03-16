@@ -1,0 +1,69 @@
+{
+  "title": "en.wikipedia.org wiki CURIE",
+  "relative_path": "research_results/third_party_downloads/en.wikipedia.org/en.wikipedia.org_wiki_CURIE.html",
+  "source_type": "repository_evidence",
+  "filename": "en.wikipedia.org_wiki_CURIE.html",
+  "mime_type": "text/html",
+  "size": 83502,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 6,
+  "paragraph_count": 1,
+  "text_length": 4551,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 4770,
+    "text_length": 4770,
+    "raw_size": 83502,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 6
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 4770,
+      "text_length": 4770,
+      "raw_size": 83502,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "62adcd8117fa4430b9569eb66806b6dc",
+  "checksum": "9664b1714990f39b50e84420be14dfe12ff822853c669139e732c6a4ec7b3c86",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/en.wikipedia.org/en.wikipedia.org_wiki_CURIE.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/62adcd8117fa4430b9569eb66806b6dc.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

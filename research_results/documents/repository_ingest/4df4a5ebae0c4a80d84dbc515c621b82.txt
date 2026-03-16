@@ -1,0 +1,63 @@
+================================================================================
+FINDINGS SUMMARY — Oregon DEI References Audit
+Generated: 20251231_000831
+================================================================================
+SCOPE
+- Search for State of Oregon policies and rules referencing DEI, equity, diversity,
+or proxies/euphemisms (cultural competence, lived experience, etc.) that could
+be binding on the Housing Authority of Clackamas County.
+- Source: oregon.gov, clackamas.us, and partner domains.
+- Analysis: Keyword matching + risk scoring (0-3 scale).
+HIGH-RISK DOCUMENTS (Score >= 2, 15 found)
+- These documents contain both DEI/proxy language AND binding indicators
+("policy", "shall", "required", "contract", etc.)
+[3] e074d302eac8c1251ce84c7611f87a01
+DEI: underrepresented, equity, diversity
+Areas: hiring, procurement, training, housing
+[3] 2cb743c45485324adc632bb0642bc614
+DEI: underrepresented, equity, diversity
+Areas: hiring, procurement, training, housing
+[2] 645b1f978c1291384280119d20b07e77
+DEI: underrepresented, equity, diversity
+Areas: hiring, procurement, training, housing
+[2] 0605239e9e394ac73f36ee2d115a566f
+DEI: dei, inclusion, equity
+Areas: hiring, training, housing
+[3] 544d76b9a259616a1c691b4f98098735
+DEI: underrepresented, equity, diversity
+Areas: hiring, procurement, training, housing
+[2] ffb8613e7bb63a09a1349a4f4cd7e90b
+DEI: underrepresented, equity, diversity
+Areas: training, housing
+[2] 57a271a61cfdda6b8b76a264c5c1a897
+DEI: underrepresented, equity, diversity
+Areas: hiring, procurement, training, housing
+[3] bbfc77a24628ff8e29dd977ba4c66095
+DEI: underrepresented, equity, diversity
+Areas: hiring, procurement, training, housing
+[2] 6e6c69b294212c64d1c617f261e70841
+DEI: underrepresented, equity, diversity
+Areas: hiring, procurement, training, housing
+[3] 0a3c2fb7aaa8fce1b2fcc321ae18e5b9
+DEI: equity, diversity, underserved
+Areas: hiring, procurement, training, housing
+MEDIUM-RISK DOCUMENTS (Score = 1, 1 found)
+- These contain DEI/proxy language but may lack explicit binding indicators.
+- Review to assess applicability and intent.
+[1] 9992a1019c1a850d63d4e6c5f0ef450b
+DEI: dei, inclusion, equity
+Areas: training
+KEY APPLICABILITY AREAS IDENTIFIED
+- Training: 16 document(s)
+- Hiring: 14 document(s)
+- Housing: 14 document(s)
+- Procurement: 11 document(s)
+NEXT STEPS
+1. Review high-risk documents in detail; prioritize those tagged "hiring" or "procurement".
+2. Check if Oregon policies explicitly apply to local housing authorities.
+3. Collect evidence of current HA policies to compare against findings.
+4. Assess risk and draft remediation plan.
+For detailed analysis, see:
+- Full index: research_results/document_index_20251231_000831.json
+- CSV summary: research_results/summary_20251231_000831.csv
+================================================================================

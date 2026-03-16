@@ -1,0 +1,74 @@
+[
+  {
+    "document_label": "\"seed_complaint\": {",
+    "source_path": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_1/best_complaint_bundle.json",
+    "relative_path": "research_results/adversarial_runs/live_hacc_20260315_1/best_complaint_bundle.json",
+    "filename": "best_complaint_bundle.json",
+    "mime_type": "application/json",
+    "metadata": {
+      "source_type": "repository_evidence",
+      "relative_path": "research_results/adversarial_runs/live_hacc_20260315_1/best_complaint_bundle.json",
+      "parse_summary": {
+        "status": "available-fallback",
+        "chunk_count": 25,
+        "text_length": 20828,
+        "parser_version": "documents-adapter:1",
+        "input_format": "text",
+        "paragraph_count": 1,
+        "extraction_method": "text_normalization",
+        "quality_tier": "high",
+        "quality_score": 98.0,
+        "page_count": 1
+      },
+      "graph_status": "available-fallback"
+    }
+  },
+  {
+    "document_label": "\"session_id\": \"session_20260315_033452_000\",",
+    "source_path": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_1/sessions/session_20260315_033452_000/session.json",
+    "relative_path": "research_results/adversarial_runs/live_hacc_20260315_1/sessions/session_20260315_033452_000/session.json",
+    "filename": "session.json",
+    "mime_type": "application/json",
+    "metadata": {
+      "source_type": "repository_evidence",
+      "relative_path": "research_results/adversarial_runs/live_hacc_20260315_1/sessions/session_20260315_033452_000/session.json",
+      "parse_summary": {
+        "status": "available-fallback",
+        "chunk_count": 27,
+        "text_length": 22564,
+        "parser_version": "documents-adapter:1",
+        "input_format": "text",
+        "paragraph_count": 1,
+        "extraction_method": "text_normalization",
+        "quality_tier": "high",
+        "quality_score": 98.0,
+        "page_count": 1
+      },
+      "graph_status": "available-fallback"
+    }
+  },
+  {
+    "document_label": "\"timestamp\": \"2026-03-15T03:36:13.915505+00:00\",",
+    "source_path": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_1/adversarial_results.json",
+    "relative_path": "research_results/adversarial_runs/live_hacc_20260315_1/adversarial_results.json",
+    "filename": "adversarial_results.json",
+    "mime_type": "application/json",
+    "metadata": {
+      "source_type": "repository_evidence",
+      "relative_path": "research_results/adversarial_runs/live_hacc_20260315_1/adversarial_results.json",
+      "parse_summary": {
+        "status": "available-fallback",
+        "chunk_count": 31,
+        "text_length": 26801,
+        "parser_version": "documents-adapter:1",
+        "input_format": "text",
+        "paragraph_count": 1,
+        "extraction_method": "text_normalization",
+        "quality_tier": "high",
+        "quality_score": 98.0,
+        "page_count": 1
+      },
+      "graph_status": "available-fallback"
+    }
+  }
+]

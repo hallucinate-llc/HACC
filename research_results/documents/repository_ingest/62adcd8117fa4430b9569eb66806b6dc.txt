@@ -1,0 +1,280 @@
+CURIE - Wikipedia
+Jump to content
+Main menu
+Main menu
+move to sidebar
+hide
+Navigation
+Main page
+Contents
+Current events
+Random article
+About Wikipedia
+Contact us
+Contribute
+Help
+Learn to edit
+Community portal
+Recent changes
+Upload file
+Special pages
+Search
+Search
+Appearance
+Donate
+Create account
+Log in
+Personal tools
+Donate
+Create account
+Log in
+Contents
+move to sidebar
+hide
+(Top)
+1
+Example
+2
+See also
+3
+References
+Toggle the table of contents
+CURIE
+4 languages
+Deutsch
+Español
+Bahasa Indonesia
+日本語
+Edit links
+Article
+Talk
+English
+Read
+Edit
+View history
+Tools
+Tools
+move to sidebar
+hide
+Actions
+Read
+Edit
+View history
+General
+What links here
+Related changes
+Upload file
+Permanent link
+Page information
+Cite this page
+Get shortened URL
+Download QR code
+Print/export
+Download as PDF
+Printable version
+In other projects
+Wikidata item
+Appearance
+move to sidebar
+hide
+From Wikipedia, the free encyclopedia
+Form of abbreviated URI
+For other uses, see Curie (disambiguation) .
+In computing , a CURIE (or Compact URI ) defines a generic, abbreviated syntax for expressing Uniform Resource Identifiers (URIs). It is an abbreviated URI expressed in a compact syntax, and may be found in both XML and non-XML grammars. A CURIE may be considered a datatype .
+An example of CURIE syntax: [isbn:0393315703]
+The square brackets may be used to prevent ambiguities between CURIEs and regular URIs, yielding so-called safe CURIEs.
+QNames (the namespace prefixes used in XML ) often are used as a CURIE, and may be considered a type of CURIE. Unlike QNames, the part of a CURIE after the colon does not need to conform to the rules for XML element names.
+The first W3C Working Draft of CURIE syntax was released 7 March 2007. [ 1 ]
+The final recommendation was released 16 December 2010. [ 2 ]
+Example
+[ edit ]
+This example is based on one from the aforementioned draft, [ 1 ] using a QName syntax within XHTML .
+...
+Find out more about biomes .
+Line 1: Prefix definition:
+Line 5: Hyperlinked CURIE: [wikipedia:Biome]
+See also
+[ edit ]
+QName
+Notation3
+RDF/XML
+Turtle (syntax)
+References
+[ edit ]
+^ a b "CURIE Syntax 1.0 Working Draft" . w3.org . W3C . 7 March 2007.
+^ "CURIE Syntax 1.0 Final Recommendation" . w3.org . W3C . 16 December 2010.
+v
+t
+e
+World Wide Web Consortium (W3C)
+Products,
+standards
+Recommendations
+ActivityPub
+Activity Streams
+ARIA
+Canonical XML
+CDF
+CSS
+Animations
+Flexbox
+Grid
+DOM
+EXI
+EmotionML
+Geolocation API
+HTML
+HTML5
+IndexedDB
+ITS
+JSON-LD
+Linked Data Notifications
+MathML
+Micropub
+OWL
+PLS
+RDF
+Schema
+RDFa
+SISR
+SKOS
+SMIL
+SOAP
+SRGS
+SRI
+SSML
+SVG
+Animation
+Filter Effects
+SCXML
+SHACL
+SPARQL
+Timed text
+VoiceXML
+WebAssembly
+WoT
+TD
+Web storage
+WSDL
+Webmention
+WebSub
+WebVTT
+WOFF
+XHTML
++RDFa
+XML
+Base
+Encryption
+Events
+Information Set
+Namespace
+Schema
+Signature
+XForms
+XInclude
+XLink
+XOP
+XPath
+2.0
+3.x
+XPointer
+XProc
+XQuery
+XSL
+XSL-FO
+XSLT
+elements
+Notes
+IndieAuth
+XAdES
+XBL
+XHTML+SMIL
+XUP
+Working drafts
+CCXML
+CURIE
+EME
+InkML
+MSE
+RIF
+SMIL Timesheets
+sXBL
+WebGPU
+WebXR
+XFDL
+XFrames
+XMLHttpRequest
+Guidelines
+Web Content Accessibility Guidelines
+Initiative
+Markup Validation Service
+Web Accessibility Initiative
+Web Components
+Deprecated
+C-HTML
+HDML
+JSSS
+PGML
+VML
+WebPlatform
+Obsoleted
+P3P
+XHTML+MathML+SVG
+Groups,
+organizations
+WHATWG
+Defunct: World Wide Web Foundation
+Elected
+AB
+Board
+TAG
+Working
+CSS
+SVG
+WebAssembly
+WebAuthn
+Community, business
+Web Advertising BG
+WebAssembly CG
+Closed
+Device Description (DDWG)
+HTML
+Multimodal Interaction Activity (MMI)
+Software
+CERN httpd
+Libwww
+Browsers
+Line Mode (1990–)
+Arena (1993–98)
+Agora (1994–97)
+Argo (1994–97)
+Amaya (browser/editor, 1996–2012)
+Conferences
+International World Wide Web Conference (IW3C)
+Steering Committee (IW3C2)
+First conference ("WWW1", 1994)
+Retrieved from " https://en.wikipedia.org/w/index.php?title=CURIE&oldid=1307999879 "
+Categories : World Wide Web Consortium standards
+Internet properties established in 2009
+URI schemes
+Hidden categories: Articles with short description
+Short description matches Wikidata
+This page was last edited on 26 August 2025, at 23:07  (UTC) .
+Text is available under the Creative Commons Attribution-ShareAlike 4.0 License ;
+additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy . Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc. , a non-profit organization.
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Legal & safety contacts
+Code of Conduct
+Developers
+Statistics
+Cookie statement
+Mobile view
+Search
+Search
+Toggle the table of contents
+CURIE
+4 languages
+Add topic

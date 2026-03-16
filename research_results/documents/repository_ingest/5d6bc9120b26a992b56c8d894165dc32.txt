@@ -1,0 +1,22 @@
+{
+"evidence_upload_prompts": [
+{
+"prompt_id": "evidence_upload_1",
+"prompt_type": "evidence_upload",
+"title": "Name of Policy: Nondiscrimination",
+"source_path": "/home/barberb/HACC/research_results/documents/parsed/d7c66224975576e469720f35d4dd5173.txt",
+"relative_path": "research_results/documents/parsed/d7c66224975576e469720f35d4dd5173.txt",
+"text": "Upload the evidence file 'research_results/documents/parsed/d7c66224975576e469720f35d4dd5173.txt' and explain how it supports a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Focus on the most relevant language: Retaliation: Adverse action taken against an individual because the individual has engaged in a protected activity (such as filing a discrimination complaint or participating in an investigation of a violation of law or policy)."
+},
+{
+"prompt_id": "evidence_upload_2",
+"prompt_type": "evidence_upload",
+"title": "VOLUNTARY RESOLUTION AGREEMENT",
+"source_path": "/home/barberb/HACC/research_results/documents/parsed/f401a0fa8facd2145131a938e879207e.txt",
+"relative_path": "research_results/documents/parsed/f401a0fa8facd2145131a938e879207e.txt",
+"text": "Upload the evidence file 'research_results/documents/parsed/f401a0fa8facd2145131a938e879207e.txt' and explain how it supports a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Focus on the most relevant language: VOLUNTARY RESOLUTION AGREEMENT The McMinnville School District (the district) voluntarily agrees to take the following actions to resolve complaint Reference No."
+}
+],
+"complaint_chatbot_prompt": "Ground the complaint chatbot in the uploaded repository evidence for 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Use the uploaded materials (Name of Policy: Nondiscrimination, VOLUNTARY RESOLUTION AGREEMENT) as factual grounding, ask the user to connect each document to case-specific events, and identify missing timeline, actor, harm, and remedy facts.",
+"mediator_evaluation_prompt": "Evaluate each uploaded evidence item for a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. For every document, determine what claim element it supports, what facts it proves directly, what facts remain missing, and what follow-up questions the mediator should ask before drafting a complaint."
+}

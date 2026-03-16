@@ -1,0 +1,35 @@
+{
+"items": [
+{
+"domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+"evidence_urls": [
+"https://portal-applicant-tracking.us-cent.paycomonline.net/career-portal/sprawl.json",
+"https://portal-applicant-tracking.us-cent.paycomonline.net/career-portal/main/index-sprawl-6ETZXKZJ.js",
+"https://portal-applicant-tracking.us-cent.paycomonline.net/api/ats/candidate-exists",
+"https://portal-applicant-tracking.us-cent.paycomonline.net/api/password-setup",
+"https://portal-applicant-tracking.us-cent.paycomonline.net/api/portal-session-jwt",
+"https://portal-applicant-tracking.us-cent.paycomonline.net/api/protected-session-jwt",
+"https://portal-applicant-tracking.us-cent.paycomonline.net/api/request-password-reset",
+"https://portal-applicant-tracking.us-cent.paycomonline.net/api/reset-password",
+"https://portal-applicant-tracking.us-cent.paycomonline.net/api/set-password",
+"https://portal-applicant-tracking.us-cent.paycomonline.net/api/smarty",
+"https://portal-applicant-tracking.us-cent.paycomonline.net/v4/ats/",
+"https://portal-applicant-tracking.us-cent.paycomonline.net/v4/ats/web.php",
+"https://portal-applicant-tracking.us-cent.paycomonline.net/v4/ats/web.php/portal",
+"https://portal-applicant-tracking.us-cent.paycomonline.net/v4/ats/web.php/smarty",
+"https://portal-applicant-tracking.us-cent.paycomonline.net/v4/cl/web.php/ats/api/validator-data",
+"https://portal-applicant-tracking.us-cent.paycomonline.net/v4/cl/web.php/employee-forms-api/smarty",
+"https://portal-applicant-tracking.us-cent.paycomonline.net/v4/ee/web.php/employee/smarty",
+"https://portal-applicant-tracking.us-cent.paycomonline.net/v4/assets/generated/paycom-ckeditor/ckeditor.js",
+"https://portal-applicant-tracking.us-cent.paycomonline.net/v4/assets/react-pdf/pdf.worker.lts.3.6.172.js"
+]
+},
+{
+"domain": "paycom.com",
+"evidence_urls": [
+"https://paycom.com/privacy/",
+"https://paycom.com/terms-of-use/"
+]
+}
+]
+}

@@ -1,0 +1,69 @@
+{
+  "title": "compliance matrix",
+  "relative_path": "research_data/analysis/extracts/compliance_matrix.txt",
+  "source_type": "repository_evidence",
+  "filename": "compliance_matrix.txt",
+  "mime_type": "text/plain",
+  "size": 2567,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 2,
+  "paragraph_count": 1,
+  "text_length": 1754,
+  "input_format": "text",
+  "page_count": 1,
+  "extraction_method": "text_normalization",
+  "parse_quality": {
+    "quality_score": 98.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 1754,
+    "text_length": 1754,
+    "raw_size": 2567,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "text",
+    "normalization": "text_normalization",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 2
+    },
+    "extraction": {
+      "method": "text_normalization",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 1754,
+      "text_length": 1754,
+      "raw_size": 2567,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "1b455e32f973efd06b661c5554d0ca5c",
+  "checksum": "7ce6b41a8ed256b41d5f1ee2874aaf3e2fb247291c7e89113e0f19296466335d",
+  "source_path": "/home/barberb/HACC/research_data/analysis/extracts/compliance_matrix.txt",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/1b455e32f973efd06b661c5554d0ca5c.txt",
+  "content_type": "text/plain",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

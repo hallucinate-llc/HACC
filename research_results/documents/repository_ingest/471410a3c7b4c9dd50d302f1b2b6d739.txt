@@ -1,0 +1,56 @@
+{
+"metadata": {
+"created_at": "2026-03-15T03:46:14.169144+00:00",
+"last_updated": "2026-03-15T03:46:14.169220+00:00",
+"version": "1.0"
+},
+"nodes": {
+"node_1": {
+"id": "node_1",
+"node_type": "claim",
+"name": "Denial/Refusal Claim",
+"description": "I’m filing this complaint because I believe I was treated unfairly in the housing admissions process. I applied for housing and was told I was being denied. I was given vague “policy” reasons and language about equity, inclusion, or simi...",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {
+"claim_type": "denial"
+}
+},
+"node_2": {
+"id": "node_2",
+"node_type": "fact",
+"name": "Timeline of events",
+"description": "Dates or sequence of key events related to this claim",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {}
+},
+"node_3": {
+"id": "node_3",
+"node_type": "fact",
+"name": "Responsible party",
+"description": "Who took the action or decision tied to this claim",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {}
+}
+},
+"dependencies": {
+"dep_1": {
+"id": "dep_1",
+"source_id": "node_2",
+"target_id": "node_1",
+"dependency_type": "depends_on",
+"required": true,
+"strength": 1.0
+},
+"dep_2": {
+"id": "dep_2",
+"source_id": "node_3",
+"target_id": "node_1",
+"dependency_type": "depends_on",
+"required": true,
+"strength": 1.0
+}
+}
+}

@@ -69,6 +69,57 @@ class HACCGroundedPipelineTests(unittest.TestCase):
             prompts_payload = json.loads((output_root / "synthetic_prompts.json").read_text(encoding="utf-8"))
             self.assertIn("evidence_upload_prompts", prompts_payload)
 
+    def test_run_grounded_pipeline_can_trigger_complaint_synthesis(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            fake_grounding = {
+                "status": "success",
+                "query": "reasonable accommodation hearing rights",
+                "claim_type": "housing_discrimination",
+                "upload_candidates": [],
+                "mediator_evidence_packets": [],
+                "synthetic_prompts": {},
+            }
+            fake_upload = {
+                "status": "success",
+                "upload_count": 0,
+                "uploads": [],
+                "support_summary": {},
+                "synthetic_prompts": {},
+            }
+            fake_adversarial_summary = {
+                "statistics": {"successful_sessions": 1, "total_sessions": 1},
+                "best_complaint": {"score": 0.91},
+                "artifacts": {"output_dir": str(Path(tmpdir) / "adversarial")},
+            }
+            fake_synthesis = {
+                "output_dir": str(Path(tmpdir) / "complaint_synthesis"),
+                "draft_complaint_package_json": str(Path(tmpdir) / "complaint_synthesis" / "draft_complaint_package.json"),
+                "draft_complaint_package_md": str(Path(tmpdir) / "complaint_synthesis" / "draft_complaint_package.md"),
+            }
+
+            with mock.patch.object(pipeline, "HACCResearchEngine") as engine_cls:
+                engine = engine_cls.return_value
+                engine.build_grounding_bundle.return_value = fake_grounding
+                engine.simulate_evidence_upload.return_value = fake_upload
+                with mock.patch.object(
+                    pipeline,
+                    "run_hacc_adversarial_batch",
+                    return_value=fake_adversarial_summary,
+                ):
+                    with mock.patch.object(pipeline, "_run_complaint_synthesis", return_value=fake_synthesis) as synth_mock:
+                        summary = pipeline.run_hacc_grounded_pipeline(
+                            output_dir=tmpdir,
+                            query="reasonable accommodation hearing rights",
+                            hacc_preset="core_hacc_policies",
+                            demo=True,
+                            synthesize_complaint=True,
+                            filing_forum="hud",
+                        )
+
+            synth_mock.assert_called_once()
+            self.assertEqual(summary["complaint_synthesis"]["draft_complaint_package_json"], fake_synthesis["draft_complaint_package_json"])
+            self.assertEqual(summary["artifacts"]["draft_complaint_package_md"], fake_synthesis["draft_complaint_package_md"])
+
 
 if __name__ == "__main__":
     unittest.main()

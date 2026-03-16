@@ -1,0 +1,69 @@
+{
+  "title": "www.guidestar.org profile 94-2759879 cfe51e53d7",
+  "relative_path": "research_results/third_party_downloads/www.guidestar.org/www.guidestar.org_profile_94-2759879_cfe51e53d7.html",
+  "source_type": "repository_evidence",
+  "filename": "www.guidestar.org_profile_94-2759879_cfe51e53d7.html",
+  "mime_type": "text/html",
+  "size": 113153,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 22,
+  "paragraph_count": 1,
+  "text_length": 17672,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 17672,
+    "text_length": 17672,
+    "raw_size": 113153,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 22
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 17672,
+      "text_length": 17672,
+      "raw_size": 113153,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "92d42d73397e026b5400a031b12fbabd",
+  "checksum": "7d18e0073be8aceaae33afa5d6f8d01e29e9afb4667a6e2e9b3dc65471548eba",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.guidestar.org/www.guidestar.org_profile_94-2759879_cfe51e53d7.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/92d42d73397e026b5400a031b12fbabd.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

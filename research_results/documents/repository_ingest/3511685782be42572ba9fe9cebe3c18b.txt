@@ -1,0 +1,56 @@
+{
+"metadata": {
+"created_at": "2026-03-15T03:35:54.168554+00:00",
+"last_updated": "2026-03-15T03:35:54.168637+00:00",
+"version": "1.0"
+},
+"nodes": {
+"node_1": {
+"id": "node_1",
+"node_type": "claim",
+"name": "Complaint Claim",
+"description": "Complaint: I am filing this retaliation complaint about how HACC handled my situation after I raised concerns and tried to use the grievance process. I made a complaint about my housing conditions and asked for help, and shortly after th...",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {
+"claim_type": "unknown"
+}
+},
+"node_2": {
+"id": "node_2",
+"node_type": "fact",
+"name": "Timeline of events",
+"description": "Dates or sequence of key events related to this claim",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {}
+},
+"node_3": {
+"id": "node_3",
+"node_type": "fact",
+"name": "Responsible party",
+"description": "Who took the action or decision tied to this claim",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {}
+}
+},
+"dependencies": {
+"dep_1": {
+"id": "dep_1",
+"source_id": "node_2",
+"target_id": "node_1",
+"dependency_type": "depends_on",
+"required": true,
+"strength": 1.0
+},
+"dep_2": {
+"id": "dep_2",
+"source_id": "node_3",
+"target_id": "node_1",
+"dependency_type": "depends_on",
+"required": true,
+"strength": 1.0
+}
+}
+}

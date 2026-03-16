@@ -1,0 +1,71 @@
+{
+  "title": "www.quantumresidential.com property crescent-court-apartments",
+  "relative_path": "research_results/third_party_downloads/www.quantumresidential.com/www.quantumresidential.com_property_crescent-court-apartments.html",
+  "source_type": "repository_evidence",
+  "filename": "www.quantumresidential.com_property_crescent-court-apartments.html",
+  "mime_type": "text/html",
+  "size": 58354,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 1,
+  "paragraph_count": 1,
+  "text_length": 432,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 432,
+    "text_length": 432,
+    "raw_size": 58354,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 1
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 432,
+      "text_length": 432,
+      "raw_size": 58354,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "56c3672dbb08d143a0f485ccdb0eb203",
+  "checksum": "56efffbdc7b67e8682e89eeccadc025aedb15bcb7e62a0d4a5ee3199389760ee",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.quantumresidential.com/www.quantumresidential.com_property_crescent-court-apartments.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/56c3672dbb08d143a0f485ccdb0eb203.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

@@ -1,0 +1,71 @@
+{
+  "title": "wordpress.org news",
+  "relative_path": "research_results/third_party_downloads/wordpress.org/wordpress.org_news.html",
+  "source_type": "repository_evidence",
+  "filename": "wordpress.org_news.html",
+  "mime_type": "text/html",
+  "size": 153395,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 3,
+  "paragraph_count": 1,
+  "text_length": 2617,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 2617,
+    "text_length": 2617,
+    "raw_size": 153395,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 3
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 2617,
+      "text_length": 2617,
+      "raw_size": 153395,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "07dde8b9d36b47d6b2a1c120c157d1f1",
+  "checksum": "3d8aab1e29ca89123c6061b88a1791c3a34f4437f0ad52c181c81dc28f4e6f0d",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/wordpress.org/wordpress.org_news.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/07dde8b9d36b47d6b2a1c120c157d1f1.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

@@ -1,0 +1,71 @@
+{
+  "title": "colorlines.com explainers",
+  "relative_path": "research_results/third_party_downloads/colorlines.com/colorlines.com_explainers.html",
+  "source_type": "repository_evidence",
+  "filename": "colorlines.com_explainers.html",
+  "mime_type": "text/html",
+  "size": 46300,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 3,
+  "paragraph_count": 1,
+  "text_length": 2281,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 2281,
+    "text_length": 2281,
+    "raw_size": 46300,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 3
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 2281,
+      "text_length": 2281,
+      "raw_size": 46300,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "76d7b495a49867d5252233b983db2784",
+  "checksum": "886690d52cabc0ea3caaed2017f7bcdb8d23fddaf9013c621f8ba4b181171fb7",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/colorlines.com/colorlines.com_explainers.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/76d7b495a49867d5252233b983db2784.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

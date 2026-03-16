@@ -1,0 +1,69 @@
+{
+  "title": "d3uf7shreuzboy.cloudfront.net WebRoot stable i18n react-fr.c24098db",
+  "relative_path": "research_results/third_party_downloads/d3uf7shreuzboy.cloudfront.net/d3uf7shreuzboy.cloudfront.net_WebRoot_stable_i18n_react-fr.c24098db.json",
+  "source_type": "repository_evidence",
+  "filename": "d3uf7shreuzboy.cloudfront.net_WebRoot_stable_i18n_react-fr.c24098db.json",
+  "mime_type": "application/json",
+  "size": 74340,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 76,
+  "paragraph_count": 1,
+  "text_length": 65489,
+  "input_format": "text",
+  "page_count": 1,
+  "extraction_method": "text_normalization",
+  "parse_quality": {
+    "quality_score": 98.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 65489,
+    "text_length": 65489,
+    "raw_size": 74340,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "text",
+    "normalization": "text_normalization",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 76
+    },
+    "extraction": {
+      "method": "text_normalization",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 65489,
+      "text_length": 65489,
+      "raw_size": 74340,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "429d1c45a7efc83d6a43f0da81696367",
+  "checksum": "37d14efa97a9933ad81cf4e29fd3c4c558fbd49c75dd790018399b48180cce89",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/d3uf7shreuzboy.cloudfront.net/d3uf7shreuzboy.cloudfront.net_WebRoot_stable_i18n_react-fr.c24098db.json",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/429d1c45a7efc83d6a43f0da81696367.txt",
+  "content_type": "application/json",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

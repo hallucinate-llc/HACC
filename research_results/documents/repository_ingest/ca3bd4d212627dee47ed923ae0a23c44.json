@@ -1,0 +1,71 @@
+{
+  "title": "jobs.aiim.org job 2026-knowledge-management-qc-onboarding-co-op-jun-dec 81803011",
+  "relative_path": "research_results/third_party_downloads/jobs.aiim.org/jobs.aiim.org_job_2026-knowledge-management-qc-onboarding-co-op-jun-dec_81803011.html",
+  "source_type": "repository_evidence",
+  "filename": "jobs.aiim.org_job_2026-knowledge-management-qc-onboarding-co-op-jun-dec_81803011.html",
+  "mime_type": "text/html",
+  "size": 177045,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 9,
+  "paragraph_count": 1,
+  "text_length": 7419,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 7419,
+    "text_length": 7419,
+    "raw_size": 177045,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 9
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 7419,
+      "text_length": 7419,
+      "raw_size": 177045,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "ca3bd4d212627dee47ed923ae0a23c44",
+  "checksum": "dd9453f1b1e824569a81be3fa602984fb0e4597a7af344a7ab9a737e10335e33",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/jobs.aiim.org/jobs.aiim.org_job_2026-knowledge-management-qc-onboarding-co-op-jun-dec_81803011.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/ca3bd4d212627dee47ed923ae0a23c44.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

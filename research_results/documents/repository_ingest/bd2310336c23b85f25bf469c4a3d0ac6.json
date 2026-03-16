@@ -1,0 +1,71 @@
+{
+  "title": "www.quantumresidential.com contact",
+  "relative_path": "research_results/third_party_downloads/www.quantumresidential.com/www.quantumresidential.com_contact.html",
+  "source_type": "repository_evidence",
+  "filename": "www.quantumresidential.com_contact.html",
+  "mime_type": "text/html",
+  "size": 115005,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 3,
+  "paragraph_count": 1,
+  "text_length": 2220,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 2220,
+    "text_length": 2220,
+    "raw_size": 115005,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 3
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 2220,
+      "text_length": 2220,
+      "raw_size": 115005,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "bd2310336c23b85f25bf469c4a3d0ac6",
+  "checksum": "bd8729105e118b6bab8087088b1b3d898543b636ef1cd05cd5cd1ba18f40903a",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.quantumresidential.com/www.quantumresidential.com_contact.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/bd2310336c23b85f25bf469c4a3d0ac6.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

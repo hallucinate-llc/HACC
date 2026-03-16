@@ -1,0 +1,69 @@
+{
+  "title": "quantum portal links queue",
+  "relative_path": "research_results/quantum_portal_links_queue.json",
+  "source_type": "repository_evidence",
+  "filename": "quantum_portal_links_queue.json",
+  "mime_type": "application/json",
+  "size": 729,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 1,
+  "paragraph_count": 1,
+  "text_length": 599,
+  "input_format": "text",
+  "page_count": 1,
+  "extraction_method": "text_normalization",
+  "parse_quality": {
+    "quality_score": 98.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 599,
+    "text_length": 599,
+    "raw_size": 729,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "text",
+    "normalization": "text_normalization",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 1
+    },
+    "extraction": {
+      "method": "text_normalization",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 599,
+      "text_length": 599,
+      "raw_size": 729,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "e5bada64e45e6e905f08c983b1370d74",
+  "checksum": "71a232ae94900a34ad12bd2e116346c4ed3ebfc5a1adc33347e2cb5cddd8feea",
+  "source_path": "/home/barberb/HACC/research_results/quantum_portal_links_queue.json",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/e5bada64e45e6e905f08c983b1370d74.txt",
+  "content_type": "application/json",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

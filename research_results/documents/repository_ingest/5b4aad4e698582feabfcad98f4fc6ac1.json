@@ -1,0 +1,71 @@
+{
+  "title": "www.youtube.com watch",
+  "relative_path": "research_results/third_party_downloads/youtu.be/www.youtube.com_watch.html",
+  "source_type": "repository_evidence",
+  "filename": "www.youtube.com_watch.html",
+  "mime_type": "text/html",
+  "size": 1133574,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 1,
+  "paragraph_count": 1,
+  "text_length": 231,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 231,
+    "text_length": 231,
+    "raw_size": 1133574,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 1
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 231,
+      "text_length": 231,
+      "raw_size": 1133574,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "5b4aad4e698582feabfcad98f4fc6ac1",
+  "checksum": "5f67dfe8a8bc07b672044e8f2c4a0380f00d0e2e9281526f444b365b4a9516f7",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/youtu.be/www.youtube.com_watch.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/5b4aad4e698582feabfcad98f4fc6ac1.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

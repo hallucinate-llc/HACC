@@ -1,0 +1,71 @@
+{
+  "title": "give.raceforward.org give 724524",
+  "relative_path": "research_results/third_party_downloads/give.raceforward.org/give.raceforward.org_give_724524.html",
+  "source_type": "repository_evidence",
+  "filename": "give.raceforward.org_give_724524.html",
+  "mime_type": "text/html",
+  "size": 122192,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 1,
+  "paragraph_count": 1,
+  "text_length": 38,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 38,
+    "text_length": 38,
+    "raw_size": 122192,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 1
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 38,
+      "text_length": 38,
+      "raw_size": 122192,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "22490814a5ea0c848f87cbb5afb9b1bb",
+  "checksum": "fa85b4d6171dcb1f58ac3de874933c1ec6712ab5a5d3710f8a841f8704a121d4",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/give.raceforward.org/give.raceforward.org_give_724524.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/22490814a5ea0c848f87cbb5afb9b1bb.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

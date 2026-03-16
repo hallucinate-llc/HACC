@@ -1,0 +1,69 @@
+{
+  "title": "audit policy knowledge graph 20251231",
+  "relative_path": "research_results/audit_policy_knowledge_graph_20251231.json",
+  "source_type": "repository_evidence",
+  "filename": "audit_policy_knowledge_graph_20251231.json",
+  "mime_type": "application/json",
+  "size": 1679849,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 1510,
+  "paragraph_count": 1,
+  "text_length": 1328640,
+  "input_format": "text",
+  "page_count": 1,
+  "extraction_method": "text_normalization",
+  "parse_quality": {
+    "quality_score": 98.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 1328640,
+    "text_length": 1328640,
+    "raw_size": 1679849,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "text",
+    "normalization": "text_normalization",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 1510
+    },
+    "extraction": {
+      "method": "text_normalization",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 1328640,
+      "text_length": 1328640,
+      "raw_size": 1679849,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "a58b6c03fa01b123e41ad81efcb5121c",
+  "checksum": "73ca514767688f039c4f2735f17bf5659f2ce6b7e33e88e5031ae2eb2fa16317",
+  "source_path": "/home/barberb/HACC/research_results/audit_policy_knowledge_graph_20251231.json",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/a58b6c03fa01b123e41ad81efcb5121c.txt",
+  "content_type": "application/json",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

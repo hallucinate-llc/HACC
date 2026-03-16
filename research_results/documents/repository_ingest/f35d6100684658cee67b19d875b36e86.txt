@@ -1,0 +1,84 @@
+{
+"timestamp": "2026-03-15T22:44:26.407177+00:00",
+"num_sessions_analyzed": 1,
+"average_score": 0.6094999999999999,
+"score_trend": "insufficient_data",
+"question_quality_avg": 0.52,
+"information_extraction_avg": 0.61,
+"empathy_avg": 0.55,
+"efficiency_avg": 0.73,
+"coverage_avg": 0.675,
+"common_weaknesses": [
+"Coverage of essential elements was insufficient: key anchors already known as relevant (adverse action notice, grievance timeline, due process steps, specific remedy requests) were not probed.",
+"The wording was awkward/truncated (“Impact: Complaint…”) and under-facilitated rapport; it missed emotional validation despite high distress.",
+"No targeted follow-up captured chronology or concrete proof leads, despite these being listed blockers in the final state."
+],
+"common_strengths": [
+"The open-ended format encouraged a detailed, honest response and reduced defensiveness.",
+"The mediator demonstrated basic active-listening intent (“To make sure I understand”), which helped the complainant clarify harm and uncertainty.",
+"Covered all seeded anchor sections: grievance_hearing, appeal_rights, adverse_action"
+],
+"recommendations": [
+"Performance is moderate. Targeted improvements can significantly boost quality.",
+"Improve question formulation: make questions more specific and relevant.",
+"Increase empathy: acknowledge complainant's feelings and concerns.",
+"Evidence-section coverage is improving. Preserve explicit questioning around: grievance_hearing, appeal_rights, adverse_action.",
+"Knowledge graph gap count is high on average. Improve gap-reduction logic in complaint_phases/denoiser.py and ensure process_answer updates entities/relationships meaningfully.",
+"Dependency satisfaction rate is very low on average. Consider having denoising answers mark requirements as satisfied or add evidence/fact nodes as they are provided.",
+"Ask a short sequence of structured clarifying questions: “What was the date of the adverse action?”, “What exact notice did you receive and when?”, “Who denied or communicated each step?”, “What was asked but not provided?”",
+"Use an empathy-forward template before technical probes: briefly acknowledge stress and housing anxiety, then transition to evidence-gathering (dates, documents, communications, names, remedy requested).",
+"Best HACC preset so far is 'core_hacc_policies'. Prefer it when generating evidence-backed adversarial batches."
+],
+"priority_improvements": [
+"Improve question quality: current avg 0.52",
+"Improve empathy: current avg 0.55",
+"Improve information extraction: current avg 0.61"
+],
+"kg_sessions_with_data": 1,
+"dg_sessions_with_data": 1,
+"kg_sessions_empty": 0,
+"dg_sessions_empty": 0,
+"kg_avg_total_entities": 7.0,
+"kg_avg_total_relationships": 4.0,
+"kg_avg_gaps": 5.0,
+"dg_avg_total_nodes": 2.0,
+"dg_avg_total_dependencies": 1.0,
+"dg_avg_satisfaction_rate": 0.0,
+"kg_avg_entities_delta_per_iter": 2.0,
+"kg_avg_relationships_delta_per_iter": 2.0,
+"kg_avg_gaps_delta_per_iter": -1.0,
+"kg_sessions_gaps_not_reducing": 0,
+"best_session_id": "session_20260315_224313_000",
+"worst_session_id": "session_20260315_224313_000",
+"best_score": 0.6094999999999999,
+"worst_score": 0.6094999999999999,
+"hacc_preset_performance": {
+"core_hacc_policies": {
+"count": 1,
+"average_score": 0.6094999999999999,
+"min_score": 0.6094999999999999,
+"max_score": 0.6094999999999999
+}
+},
+"anchor_section_performance": {
+"grievance_hearing": {
+"count": 1,
+"average_score": 0.6094999999999999,
+"min_score": 0.6094999999999999,
+"max_score": 0.6094999999999999
+},
+"appeal_rights": {
+"count": 1,
+"average_score": 0.6094999999999999,
+"min_score": 0.6094999999999999,
+"max_score": 0.6094999999999999
+},
+"adverse_action": {
+"count": 1,
+"average_score": 0.6094999999999999,
+"min_score": 0.6094999999999999,
+"max_score": 0.6094999999999999
+}
+},
+"recommended_hacc_preset": "core_hacc_policies"
+}

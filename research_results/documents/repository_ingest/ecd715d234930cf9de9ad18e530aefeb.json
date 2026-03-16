@@ -1,0 +1,69 @@
+{
+  "title": "www.prrac.org 0c82a6a774",
+  "relative_path": "research_results/third_party_downloads/www.prrac.org/www.prrac.org_0c82a6a774.html",
+  "source_type": "repository_evidence",
+  "filename": "www.prrac.org_0c82a6a774.html",
+  "mime_type": "text/html",
+  "size": 115269,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 11,
+  "paragraph_count": 1,
+  "text_length": 9119,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 9119,
+    "text_length": 9119,
+    "raw_size": 115269,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 11
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 9119,
+      "text_length": 9119,
+      "raw_size": 115269,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "ecd715d234930cf9de9ad18e530aefeb",
+  "checksum": "e864d4973438cb0ee45cc2485b52a400121e3a761f153250a256c7b39a3ecfbc",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.prrac.org/www.prrac.org_0c82a6a774.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/ecd715d234930cf9de9ad18e530aefeb.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

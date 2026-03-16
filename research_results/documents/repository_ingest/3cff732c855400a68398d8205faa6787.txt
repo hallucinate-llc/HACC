@@ -1,0 +1,191 @@
+================================================================================
+DETAILED TECHNICAL REPORT — Oregon DEI References Audit
+Generated: 20251231_023537
+================================================================================
+METHODOLOGY
+- Parsed 417 documents from Oregon state and local government sources.
+- Applied keyword matching for DEI terms (e.g., "diversity", "equity") and proxies
+(e.g., "cultural competence", "lived experience").
+- Scored based on presence of binding indicators ("policy", "shall", "required").
+- Tagged by applicability area: hiring, procurement, training, housing.
+SCORING RUBRIC
+- Score 0: No DEI/proxy language detected (compliant).
+- Score 1: DEI/proxy present but weak binding indicators (possible issue).
+- Score 2: DEI/proxy + multiple binding indicators (probable issue).
+- Score 3: Explicit DEI policy with mandatory language (clear violation).
+DOCUMENT BREAKDOWN
+Total Documents: 417
+Score 3: 29 document(s)
+Score 2: 178 document(s)
+Score 1: 34 document(s)
+Score 0: 176 document(s)
+APPLICABILITY BY AREA
+Community engagement: 49 document(s)
+Hiring: 158 document(s)
+Housing: 233 document(s)
+Procurement: 138 document(s)
+Training: 114 document(s)
+HIGH-RISK DOCUMENTS (DETAILED)
+[007b03ee41b89c9bfb655c2f066db43b]
+File: research_results/documents/parsed/007b03ee41b89c9bfb655c2f066db43b.txt
+Risk Score: 2
+DEI Keywords: accessibility
+Proxy Keywords:
+Binding Indicators: required, regulation, agreement, standard, rule, must, policy
+Applicability: hiring, procurement, training, housing
+Text Length: 20044 chars
+[70cd1c5a92bcf53af2ccfbe1bb03108d]
+File: research_results/documents/parsed/70cd1c5a92bcf53af2ccfbe1bb03108d.txt
+Risk Score: 2
+DEI Keywords: accessibility
+Proxy Keywords:
+Binding Indicators: required, standard, rule, policy
+Applicability: hiring, housing
+Text Length: 22250 chars
+[ac8b3b54df4124a34387d7e8da8f3838]
+File: research_results/documents/parsed/ac8b3b54df4124a34387d7e8da8f3838.txt
+Risk Score: 2
+DEI Keywords: dei
+Proxy Keywords:
+Binding Indicators: standard, policy
+Applicability: training, housing, community engagement
+Text Length: 12337 chars
+[7f0586533f4c87d7768eb727c2c3f188]
+File: research_results/documents/parsed/7f0586533f4c87d7768eb727c2c3f188.txt
+Risk Score: 2
+DEI Keywords: accessibility
+Proxy Keywords:
+Binding Indicators: required, regulation, agreement, standard, rule, must, policy
+Applicability: hiring, procurement, training, housing
+Text Length: 20044 chars
+[0034e235b9015f1e70670ff8e44995a7]
+File: research_results/documents/parsed/0034e235b9015f1e70670ff8e44995a7.txt
+Risk Score: 2
+DEI Keywords: accessibility
+Proxy Keywords:
+Binding Indicators: policy
+Applicability: housing
+Text Length: 424 chars
+[154c4988defec1ded443cde2fcf7f5df]
+File: research_results/documents/parsed/154c4988defec1ded443cde2fcf7f5df.txt
+Risk Score: 2
+DEI Keywords: accessibility
+Proxy Keywords:
+Binding Indicators: policy
+Applicability: housing
+Text Length: 425 chars
+[592594abd4eb6a8bad89ce62855bb42e]
+File: research_results/documents/parsed/592594abd4eb6a8bad89ce62855bb42e.txt
+Risk Score: 2
+DEI Keywords: underserved, inclusion, equity, minority, diversity, dei, racial justice
+Proxy Keywords:
+Binding Indicators: required, regulation, compliance, contract, standard, applicability, must
+Applicability: hiring, procurement, housing, community engagement
+Text Length: 21859 chars
+[9e33ebe3140361da05a5258ac1ccdc88]
+File: research_results/documents/parsed/9e33ebe3140361da05a5258ac1ccdc88.txt
+Risk Score: 2
+DEI Keywords: equitable, racial justice, equity
+Proxy Keywords:
+Binding Indicators: standard, policy
+Applicability: training, housing
+Text Length: 2931 chars
+[41cd297c4c4771fffe814705e9bd37fd]
+File: research_results/documents/parsed/41cd297c4c4771fffe814705e9bd37fd.txt
+Risk Score: 2
+DEI Keywords: accessibility
+Proxy Keywords:
+Binding Indicators: rule
+Applicability: hiring
+Text Length: 1083 chars
+[d99adba5f859153dc055e701f3b00cc8]
+File: research_results/documents/parsed/d99adba5f859153dc055e701f3b00cc8.txt
+Risk Score: 2
+DEI Keywords: equitable, accessibility, equity
+Proxy Keywords:
+Binding Indicators: mandatory, standard, rule, policy
+Applicability: hiring, training
+Text Length: 10069 chars
+[173fee7c4d1bd41609fa6be5bfb8d359]
+File: research_results/documents/parsed/173fee7c4d1bd41609fa6be5bfb8d359.txt
+Risk Score: 2
+DEI Keywords: diversity, inclusion, equity
+Proxy Keywords:
+Binding Indicators: policy
+Applicability: housing
+Text Length: 6660 chars
+[7ab1c698e9aca12f84f98488520ed0a0]
+File: research_results/documents/parsed/7ab1c698e9aca12f84f98488520ed0a0.txt
+Risk Score: 2
+DEI Keywords: social justice, racial justice
+Proxy Keywords:
+Binding Indicators: required, standard, must
+Applicability: hiring, housing
+Text Length: 505468 chars
+[57bc4c0b92be846af1bffc624c286b72]
+File: research_results/documents/parsed/57bc4c0b92be846af1bffc624c286b72.txt
+Risk Score: 2
+DEI Keywords: accessibility
+Proxy Keywords:
+Binding Indicators: must, policy
+Applicability: housing
+Text Length: 602 chars
+[bf83699c0a4f2001dd2920dd6d60b502]
+File: research_results/documents/parsed/bf83699c0a4f2001dd2920dd6d60b502.txt
+Risk Score: 2
+DEI Keywords: social justice, inclusive, equitable, equity
+Proxy Keywords:
+Binding Indicators: compliance, policy
+Applicability: training
+Text Length: 5202 chars
+[6f232df7b455731acded00e409d68b90]
+File: research_results/documents/parsed/6f232df7b455731acded00e409d68b90.txt
+Risk Score: 2
+DEI Keywords: accessibility
+Proxy Keywords:
+Binding Indicators: policy
+Applicability: housing
+Text Length: 438 chars
+[74c6bb8d3aa480a95207e0085fc1c4c0]
+File: research_results/documents/parsed/74c6bb8d3aa480a95207e0085fc1c4c0.txt
+Risk Score: 3
+DEI Keywords: underserved, underrepresented, inclusion, inclusive, bipoc, equity, minority, diversity, dei, equitable, racial justice, accessibility
+Proxy Keywords: bipoc
+Binding Indicators: required, compliance, contract, shall, agreement, standard, rule, mandatory, must, statewide, policy
+Applicability: hiring, procurement, training, housing, community engagement
+Text Length: 59426 chars
+[c10680c1c36c265aeea4755339787a19]
+File: research_results/documents/parsed/c10680c1c36c265aeea4755339787a19.txt
+Risk Score: 2
+DEI Keywords: accessibility
+Proxy Keywords:
+Binding Indicators: policy
+Applicability: procurement, housing
+Text Length: 1248 chars
+[b5954653ff0f6fe3eeb0aa5b63479bda]
+File: research_results/documents/parsed/b5954653ff0f6fe3eeb0aa5b63479bda.txt
+Risk Score: 2
+DEI Keywords: equitable, marginalized, racial justice, equity
+Proxy Keywords:
+Binding Indicators: governing, policy
+Applicability: housing
+Text Length: 2803 chars
+[049a09731baae3d3cf7f2d9e3597c40a]
+File: research_results/documents/parsed/049a09731baae3d3cf7f2d9e3597c40a.txt
+Risk Score: 2
+DEI Keywords: accessibility
+Proxy Keywords:
+Binding Indicators: must, policy
+Applicability: housing
+Text Length: 638 chars
+[ebd34508ab517ed00ccb36ea0e14fe3c]
+File: research_results/documents/parsed/ebd34508ab517ed00ccb36ea0e14fe3c.txt
+Risk Score: 2
+DEI Keywords: accessibility
+Proxy Keywords:
+Binding Indicators: policy
+Applicability: housing
+Text Length: 447 chars
+================================================================================
+END OF REPORT
+================================================================================

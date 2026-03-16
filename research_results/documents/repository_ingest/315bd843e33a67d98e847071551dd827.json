@@ -1,0 +1,69 @@
+{
+  "title": "https   www clackamas us housingauthority about 20251230 184948",
+  "relative_path": "research_results/https___www_clackamas_us_housingauthority_about_20251230_184948.html",
+  "source_type": "repository_evidence",
+  "filename": "https___www_clackamas_us_housingauthority_about_20251230_184948.html",
+  "mime_type": "text/html",
+  "size": 42673,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 3,
+  "paragraph_count": 1,
+  "text_length": 2149,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 2149,
+    "text_length": 2149,
+    "raw_size": 42673,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 3
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 2149,
+      "text_length": 2149,
+      "raw_size": 42673,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "315bd843e33a67d98e847071551dd827",
+  "checksum": "2643e3c6a6b738ff64afba45d6c40fbe775e0ae22498934215c124c8e7abf4d4",
+  "source_path": "/home/barberb/HACC/research_results/https___www_clackamas_us_housingauthority_about_20251230_184948.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/315bd843e33a67d98e847071551dd827.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

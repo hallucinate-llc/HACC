@@ -1,0 +1,69 @@
+{
+  "title": "dependency graph",
+  "relative_path": "research_results/adversarial_runs/live_hacc_20260315_batch3x2/sessions/session_20260315_034346_002/dependency_graph.json",
+  "source_type": "repository_evidence",
+  "filename": "dependency_graph.json",
+  "mime_type": "application/json",
+  "size": 1583,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 2,
+  "paragraph_count": 1,
+  "text_length": 1303,
+  "input_format": "text",
+  "page_count": 1,
+  "extraction_method": "text_normalization",
+  "parse_quality": {
+    "quality_score": 98.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 1303,
+    "text_length": 1303,
+    "raw_size": 1583,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "text",
+    "normalization": "text_normalization",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 2
+    },
+    "extraction": {
+      "method": "text_normalization",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 1303,
+      "text_length": 1303,
+      "raw_size": 1583,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "fff043c151b69884ddf85d1fd6b766da",
+  "checksum": "63db266e92d613b4880dd7971008ec0d11a45b67668edcd72e13c92a7c0eb009",
+  "source_path": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_batch3x2/sessions/session_20260315_034346_002/dependency_graph.json",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/fff043c151b69884ddf85d1fd6b766da.txt",
+  "content_type": "application/json",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

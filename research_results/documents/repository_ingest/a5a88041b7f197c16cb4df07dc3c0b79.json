@@ -1,0 +1,71 @@
+{
+  "title": "Executive Orders Index",
+  "relative_path": "research_data/raw_documents/Executive_Orders_Index.html",
+  "source_type": "repository_evidence",
+  "filename": "Executive_Orders_Index.html",
+  "mime_type": "text/html",
+  "size": 1305399,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 78,
+  "paragraph_count": 1,
+  "text_length": 64660,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 64660,
+    "text_length": 64660,
+    "raw_size": 1305399,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 78
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 64660,
+      "text_length": 64660,
+      "raw_size": 1305399,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "a5a88041b7f197c16cb4df07dc3c0b79",
+  "checksum": "0f7b8760b2c5440e5ba07c6cf9f7a3aefab80386aac0efa270577078b688e8b8",
+  "source_path": "/home/barberb/HACC/research_data/raw_documents/Executive_Orders_Index.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/a5a88041b7f197c16cb4df07dc3c0b79.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

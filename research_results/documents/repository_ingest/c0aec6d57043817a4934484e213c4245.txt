@@ -1,0 +1,34 @@
+{
+"generated_at": "2025-12-31T00:00:00Z",
+"source": {
+"notes": "Fetch Quantum Residential sitemap/robots endpoints for document discovery"
+},
+"items": [
+{
+"domain": "www.quantumresidential.com",
+"score": 100,
+"evidence_urls": [
+"https://www.quantumresidential.com/robots.txt",
+"https://www.quantumresidential.com/sitemap.xml",
+"https://www.quantumresidential.com/sitemap_index.xml",
+"https://www.quantumresidential.com/wp-sitemap.xml"
+],
+"seed_urls": [],
+"guessed_urls": [],
+"notes": "Sitemap discovery"
+},
+{
+"domain": "quantumresidential.com",
+"score": 100,
+"evidence_urls": [
+"https://quantumresidential.com/robots.txt",
+"https://quantumresidential.com/sitemap.xml",
+"https://quantumresidential.com/sitemap_index.xml",
+"https://quantumresidential.com/wp-sitemap.xml"
+],
+"seed_urls": [],
+"guessed_urls": [],
+"notes": "Sitemap discovery"
+}
+]
+}

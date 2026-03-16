@@ -1,0 +1,28 @@
+{
+"generated_at": "2025-12-31T10:21:49.746900+00:00",
+"source": {
+"notes": "SharePoint/Paycom links referenced across Quantum pages"
+},
+"items": [
+{
+"domain": "qresinc.sharepoint.com",
+"score": 100,
+"evidence_urls": [
+"https://qresinc.sharepoint.com/sites/Portal"
+],
+"seed_urls": [],
+"guessed_urls": [],
+"notes": "Portal/document-host candidate"
+},
+{
+"domain": "www.paycomonline.net",
+"score": 100,
+"evidence_urls": [
+"https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=BC8C4A60F87D82E71EF353A71CF59EEA"
+],
+"seed_urls": [],
+"guessed_urls": [],
+"notes": "Portal/document-host candidate"
+}
+]
+}

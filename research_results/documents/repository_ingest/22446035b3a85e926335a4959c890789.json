@@ -1,0 +1,69 @@
+{
+  "title": "www.quantumresidential.com 2022 04 13 attributes-good-property-manager-possess",
+  "relative_path": "research_results/third_party_downloads/www.quantumresidential.com/www.quantumresidential.com_2022_04_13_attributes-good-property-manager-possess.html",
+  "source_type": "repository_evidence",
+  "filename": "www.quantumresidential.com_2022_04_13_attributes-good-property-manager-possess.html",
+  "mime_type": "text/html",
+  "size": 67079,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 5,
+  "paragraph_count": 1,
+  "text_length": 3651,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 3651,
+    "text_length": 3651,
+    "raw_size": 67079,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 5
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 3651,
+      "text_length": 3651,
+      "raw_size": 67079,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "22446035b3a85e926335a4959c890789",
+  "checksum": "fc11da415213f3b6c3d639a5250a3d6c65625a33965350c5d70a9c1675f5e3a7",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.quantumresidential.com/www.quantumresidential.com_2022_04_13_attributes-good-property-manager-possess.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/22446035b3a85e926335a4959c890789.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

@@ -1,0 +1,7153 @@
+{
+"generated": "2025-12-31T12:06:33",
+"inputs": {
+"kg": "research_results/audit_policy_knowledge_graph_20251231.json",
+"queue_globs": [
+"research_results/*queue*.json",
+"research_results/*_links.json"
+]
+},
+"entity_tokens_used": [
+"ohcs",
+"stem",
+"odoe",
+"quantum-residential",
+"orca",
+"summer-st",
+"ne-suite",
+"all-rights-reserved",
+"impact-assessment",
+"edpub",
+"find-your-new-home",
+"team-member-portal",
+"privacy-policy",
+"oregon-housing-and-community-services",
+"accessibility-brand-name-brand-name",
+"oregon-employment-department",
+"previous-all-next-make-the-move",
+"www-quantumresidential-com",
+"final-report",
+"the-id-for-the",
+"oregon-system-development-charges-study",
+"dei-plan",
+"delete",
+"whether-the",
+"equity-and-inclusion-office-initial",
+"hsc-packet",
+"patch",
+"irs-form",
+"paid-leave-oregon",
+"gare",
+"lihtc",
+"summer-street-ne",
+"cdata",
+"workforce-operations",
+"equity-and-inclusion-office",
+"dlcd",
+"cruz-report",
+"suite",
+"senator-cruz",
+"cobid",
+"mc-neal",
+"space",
+"ranking-member-zoe-lofgren",
+"hsc-material",
+"mwesb",
+"united-states",
+"uc-berkeley",
+"oregon-agency-expectations-page",
+"targeted-universalism",
+"oregon-department-of-energy",
+"house-of-representatives-committee-on-science",
+"requirement-to",
+"osba",
+"text-the",
+"section",
+"percentage-of",
+"lack-of",
+"lift",
+"rise",
+"salem",
+"race-forward",
+"national-science-foundation",
+"instructions-for",
+"hsc-materials",
+"ors-223",
+"annual-environmental-justice-council-report",
+"state-of-oregon",
+"democratic-staff-report",
+"housing-stability-council",
+"whether-to",
+"title-for-the",
+"amendment-number",
+"strategic-plan",
+"ors-182",
+"and-technology",
+"orea",
+"jane-doe",
+"unemployment-insurance-initial",
+"race-and-equity",
+"bipoc"
+],
+"items": [
+{
+"score": 13,
+"url": "https://www.quantumresidential.com/privacy-policy/",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"privacy-policy",
+"ntia"
+],
+"keyword_hits": [
+"policy"
+],
+"gov_hint": false
+},
+{
+"score": 12,
+"url": "https://www.oregon.gov/boli/civil-rights/pages/fair-housing.aspx",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"boli"
+],
+"keyword_hits": [
+"civil-rights",
+"fair-housing"
+],
+"gov_hint": true
+},
+{
+"score": 12,
+"url": "https://oregonbuys.gov/contracts",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [
+"contract",
+"contracts"
+],
+"gov_hint": true
+},
+{
+"score": 12,
+"url": "http://oregonbuys.gov/contracts",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [
+"contract",
+"contracts"
+],
+"gov_hint": true
+},
+{
+"score": 11,
+"url": "https://www.oregon.gov/ohcs/rental-housing/housing-development/oregon-centralized-application-orca/pages/orca-diversity-equity-inclusion-agreement.aspx",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ohcs",
+"orca"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 11,
+"url": "https://www.quantumresidential.com/contracts",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"contract",
+"contracts"
+],
+"gov_hint": false
+},
+{
+"score": 11,
+"url": "http://www.quantumresidential.com/contracts",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"contract",
+"contracts"
+],
+"gov_hint": false
+},
+{
+"score": 11,
+"url": "https://quantumresidential.com/contracts",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"contract",
+"contracts"
+],
+"gov_hint": false
+},
+{
+"score": 11,
+"url": "http://quantumresidential.com/contracts",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"contract",
+"contracts"
+],
+"gov_hint": false
+},
+{
+"score": 10,
+"url": "https://www.quantumresidential.com/author/quantum-residential/",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"quantum-residential",
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 10,
+"url": "https://www.quantumresidential.com/career/part-time-lihtc-assistant-manager/",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"lihtc",
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 10,
+"url": "https://www.quantumresidential.com/property/norseman-village/",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia",
+"ors"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 10,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2018/04/Quantum-Residential-preoperty-management-about-header-e1529528405340.jpg",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"quantum-residential",
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 10,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2018/04/Quantum-Residential-services-asset-prevention.jpg",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"quantum-residential",
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 10,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2018/04/Quantum-Residential-services-industry-leading-accounting.jpg",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"quantum-residential",
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 10,
+"url": "https://www.quantumresidential.com/wp-content/themes/razzinteractive-child/assets/js/debug.addIndicators.min.js?ver=6.9",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia",
+"ors"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 10,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2018/01/cropped-Quantum-Residential-180x180.png",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"quantum-residential",
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 10,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2018/01/cropped-Quantum-Residential-192x192.png",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"quantum-residential",
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 10,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2018/01/cropped-Quantum-Residential-32x32.png",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"quantum-residential",
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 10,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2021/06/Horizontal-Quantum-Residential-Logo-Dark-Background-100x33.png",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"quantum-residential",
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 10,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2021/06/Horizontal-Quantum-Residential-Logo-White-100x33.png",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"quantum-residential",
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 9,
+"url": "https://www.oregon.gov/das/procurement/pages/equity-procurement-dashboard.aspx",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oar"
+],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 9,
+"url": "https://complaints.boli.oregon.gov/home/landing",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"boli"
+],
+"keyword_hits": [
+"complaint"
+],
+"gov_hint": true
+},
+{
+"score": 9,
+"url": "https://www.oregon.gov/boli/civil-rights/pages/racial-discrimination.aspx",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"boli"
+],
+"keyword_hits": [
+"civil-rights"
+],
+"gov_hint": true
+},
+{
+"score": 9,
+"url": "https://oregonbuys.gov/policies",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [
+"policies"
+],
+"gov_hint": true
+},
+{
+"score": 9,
+"url": "https://oregonbuys.gov/policy",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [
+"policy"
+],
+"gov_hint": true
+},
+{
+"score": 9,
+"url": "https://oregonbuys.gov/nondiscrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [
+"nondiscrimination"
+],
+"gov_hint": true
+},
+{
+"score": 9,
+"url": "https://oregonbuys.gov/non-discrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [
+"non-discrimination"
+],
+"gov_hint": true
+},
+{
+"score": 9,
+"url": "https://oregonbuys.gov/civil-rights",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [
+"civil-rights"
+],
+"gov_hint": true
+},
+{
+"score": 9,
+"url": "https://oregonbuys.gov/fair-housing",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [
+"fair-housing"
+],
+"gov_hint": true
+},
+{
+"score": 9,
+"url": "https://oregonbuys.gov/complaints",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [
+"complaint"
+],
+"gov_hint": true
+},
+{
+"score": 9,
+"url": "https://oregonbuys.gov/rfp",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [
+"rfp"
+],
+"gov_hint": true
+},
+{
+"score": 9,
+"url": "https://oregonbuys.gov/rfq",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [
+"rfq"
+],
+"gov_hint": true
+},
+{
+"score": 9,
+"url": "https://oregonbuys.gov/procurement",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 9,
+"url": "http://oregonbuys.gov/policies",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [
+"policies"
+],
+"gov_hint": true
+},
+{
+"score": 9,
+"url": "http://oregonbuys.gov/policy",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [
+"policy"
+],
+"gov_hint": true
+},
+{
+"score": 9,
+"url": "http://oregonbuys.gov/nondiscrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [
+"nondiscrimination"
+],
+"gov_hint": true
+},
+{
+"score": 9,
+"url": "http://oregonbuys.gov/non-discrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [
+"non-discrimination"
+],
+"gov_hint": true
+},
+{
+"score": 9,
+"url": "http://oregonbuys.gov/civil-rights",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [
+"civil-rights"
+],
+"gov_hint": true
+},
+{
+"score": 9,
+"url": "http://oregonbuys.gov/fair-housing",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [
+"fair-housing"
+],
+"gov_hint": true
+},
+{
+"score": 9,
+"url": "http://oregonbuys.gov/complaints",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [
+"complaint"
+],
+"gov_hint": true
+},
+{
+"score": 9,
+"url": "http://oregonbuys.gov/rfp",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [
+"rfp"
+],
+"gov_hint": true
+},
+{
+"score": 9,
+"url": "http://oregonbuys.gov/rfq",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [
+"rfq"
+],
+"gov_hint": true
+},
+{
+"score": 9,
+"url": "http://oregonbuys.gov/procurement",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 8,
+"url": "https://www.quantumresidential.com/policies",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"policies"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "https://www.quantumresidential.com/policy",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"policy"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "https://www.quantumresidential.com/nondiscrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"nondiscrimination"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "https://www.quantumresidential.com/non-discrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"non-discrimination"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "https://www.quantumresidential.com/civil-rights",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"civil-rights"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "https://www.quantumresidential.com/fair-housing",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"fair-housing"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "https://www.quantumresidential.com/complaints",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"complaint"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "https://www.quantumresidential.com/rfp",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"rfp"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "https://www.quantumresidential.com/rfq",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"rfq"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "https://www.quantumresidential.com/procurement",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "http://www.quantumresidential.com/policies",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"policies"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "http://www.quantumresidential.com/policy",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"policy"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "http://www.quantumresidential.com/nondiscrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"nondiscrimination"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "http://www.quantumresidential.com/non-discrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"non-discrimination"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "http://www.quantumresidential.com/civil-rights",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"civil-rights"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "http://www.quantumresidential.com/fair-housing",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"fair-housing"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "http://www.quantumresidential.com/complaints",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"complaint"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "http://www.quantumresidential.com/rfp",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"rfp"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "http://www.quantumresidential.com/rfq",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"rfq"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "http://www.quantumresidential.com/procurement",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "https://quantumresidential.com/policies",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"policies"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "https://quantumresidential.com/policy",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"policy"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "https://quantumresidential.com/nondiscrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"nondiscrimination"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "https://quantumresidential.com/non-discrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"non-discrimination"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "https://quantumresidential.com/civil-rights",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"civil-rights"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "https://quantumresidential.com/fair-housing",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"fair-housing"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "https://quantumresidential.com/complaints",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"complaint"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "https://quantumresidential.com/rfp",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"rfp"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "https://quantumresidential.com/rfq",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"rfq"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "https://quantumresidential.com/procurement",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "http://quantumresidential.com/policies",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"policies"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "http://quantumresidential.com/policy",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"policy"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "http://quantumresidential.com/nondiscrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"nondiscrimination"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "http://quantumresidential.com/non-discrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"non-discrimination"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "http://quantumresidential.com/civil-rights",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"civil-rights"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "http://quantumresidential.com/fair-housing",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"fair-housing"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "http://quantumresidential.com/complaints",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"complaint"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "http://quantumresidential.com/rfp",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"rfp"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "http://quantumresidential.com/rfq",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"rfq"
+],
+"gov_hint": false
+},
+{
+"score": 8,
+"url": "http://quantumresidential.com/procurement",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": false
+},
+{
+"score": 7,
+"url": "https://www.hud.gov/contracts",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"contract",
+"contracts"
+],
+"gov_hint": true
+},
+{
+"score": 7,
+"url": "http://www.hud.gov/contracts",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"contract",
+"contracts"
+],
+"gov_hint": true
+},
+{
+"score": 7,
+"url": "https://www.hudexchange.info/contracts",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"contract",
+"contracts"
+],
+"gov_hint": true
+},
+{
+"score": 7,
+"url": "http://www.hudexchange.info/contracts",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"contract",
+"contracts"
+],
+"gov_hint": true
+},
+{
+"score": 7,
+"url": "https://files.hudexchange.info/contracts",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"contract",
+"contracts"
+],
+"gov_hint": true
+},
+{
+"score": 7,
+"url": "http://files.hudexchange.info/contracts",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"contract",
+"contracts"
+],
+"gov_hint": true
+},
+{
+"score": 7,
+"url": "https://www.oregon.gov/contracts",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"contract",
+"contracts"
+],
+"gov_hint": true
+},
+{
+"score": 7,
+"url": "http://www.oregon.gov/contracts",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"contract",
+"contracts"
+],
+"gov_hint": true
+},
+{
+"score": 7,
+"url": "https://sos.oregon.gov/contracts",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"contract",
+"contracts"
+],
+"gov_hint": true
+},
+{
+"score": 7,
+"url": "http://sos.oregon.gov/contracts",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"contract",
+"contracts"
+],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "https://www.oregon.gov/boli/about/pages/rulemaking.aspx",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"boli"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "https://www.oregon.gov/boli/workers/pages/discrimination-at-work.aspx",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"boli"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "https://www.oregon.gov/boli/workers/pages/hiring-discrimination.aspx",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"boli"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "https://oregonbuys.gov/",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "https://apps.oregon.gov/Application/CDN/Enterprise/images/logos/Oregon/oregon-gov-color.svg?v=03_04_2025",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"rise"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "https://www.oregon.gov/ohcs/about-us/Pages/equity-and-racial-justice.aspx",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ohcs"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "https://www.google.com/search?q=https://www.oregon.gov/ohcs/about-us/Pages/equity-and-racial-justice.aspx",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ohcs"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "https://oregonbuys.gov",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "http://oregonbuys.gov",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "https://oregonbuys.gov/about",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "https://oregonbuys.gov/about-us",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "https://oregonbuys.gov/who-we-are",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "https://oregonbuys.gov/mission",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "https://oregonbuys.gov/leadership",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "https://oregonbuys.gov/programs",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "https://oregonbuys.gov/services",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "https://oregonbuys.gov/resources",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "https://oregonbuys.gov/publications",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "https://oregonbuys.gov/reports",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "https://oregonbuys.gov/documents",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "https://oregonbuys.gov/fairhousing",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "https://oregonbuys.gov/grants",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "http://oregonbuys.gov/about",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "http://oregonbuys.gov/about-us",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "http://oregonbuys.gov/who-we-are",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "http://oregonbuys.gov/mission",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "http://oregonbuys.gov/leadership",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "http://oregonbuys.gov/programs",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "http://oregonbuys.gov/services",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "http://oregonbuys.gov/resources",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "http://oregonbuys.gov/publications",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "http://oregonbuys.gov/reports",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "http://oregonbuys.gov/documents",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "http://oregonbuys.gov/fairhousing",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 6,
+"url": "http://oregonbuys.gov/grants",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"oregonbuys"
+],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/2022/01/27/what-is-multifamily-property-management/",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/2022/02/10/what-does-multifamily-manager-do/",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/edison-park/",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/spurling-court/",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2022/02/what-does-a-multifamily-manager-do-scaled.jpg",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2022/03/multifamily-property-management-1.jpg",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2024/02/Spurling-Exterior.jpg",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2024/03/edison-park-apartments-sunnyside-wa-building-photo-1.jpg",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.8.11",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/plugins/gravityforms/js/jquery.maskedinput.min.js?ver=2.8.11",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2018/04/logo-mobile-100x62.png",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2022/03/multifamily-property-management-1-300x200.jpg",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/robots.txt",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://quantumresidential.com/robots.txt",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/post-sitemap.xml",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/2022/02/24/questions-to-ask-residential-property-manager/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/2022/03/10/difference-between-residential-and-commercial-property-management/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/2022/04/13/attributes-good-property-manager-possess/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/2022/04/14/what-is-property-maintenance/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/2022/04/28/what-is-resident-retention/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/about/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/accessiblity/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/career/full-time-maintenance-tech-portland/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/career/full-time-maintenance-tech-vancouver/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/career/full-time-property-manager-maintenance-specialist/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/career/porter/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/career/tax-credit-manager-2/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/career/tax-credit-manager/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/careers/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/category/uncategorized/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/contact/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property-search/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/18th-street-apartments/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/albina-one/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/aloha-project/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/bascom-village-ii/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/bellrose-station/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/berg-rose/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/beyer-court-apartments/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/blue-heron-hollow/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/camas-apartments/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/canopy-at-powell/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/cascade-manor/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/casey-apartments/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/cashmere-park/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/cathedral-village/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/chestnut-grove/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/country-squire/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/crescent-court-apartments/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/east-county-project/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/eastgate-station/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/easton-ridge/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/elk-creek-terrace/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/firland-apartments/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/forest-park-apartments/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/fruit-valley-commons-south/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/greenview-terrace/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/hampton-court/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/hawthorn-29th-place/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/hayden-bridge-landing/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/hillside-manor/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/holgate-project/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/huntington-court/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/jim-and-salles-place/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/johnson-creek-commons/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/joice-taylor/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/leander-court/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/lents-2000/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/lents-village/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/lewis-clark-plaza/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/market-district-commons/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/marla-manor/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/munsel-park/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/new-winds/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/oaks-14th/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/orchards-of-82nd/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/paragon/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/park-village/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/pennsylvania-place/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/pine-point/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/pinewood-terrace/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/richardson-bridge/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/rose-sfr/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/sarang/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/selah-park/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/terrace-glen-apartments/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/terracina-vista/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/the-commons-on-mlk/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/the-keystone/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/the-nel/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/valley-commons-i/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/valley-commons-ii/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/victorian-olive-court/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/village-place/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/vineyard-i/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/vineyard-ii/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/westcott/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/westview-villa/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/windsor-park/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/woody-guthrie/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/wynne-watts/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property/z-street-lofts/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/residents/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/service/service-1/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/service/service-2/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/service/service-3/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/services/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/terms-and-conditions/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/thank-you/",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2018/04/easton-ridge-apartments-e1527807159125.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2018/07/BV-015.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2018/07/Hawthorn-1_.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2018/07/MP-003_edited.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2018/07/NV-002_edited.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2018/07/NW-002_edited.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2018/07/RB-4.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2018/07/TheOaks_BishoffWEB49-1.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2018/07/jessica-castro-449551-unsplash.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2019/07/BC-1_SQ.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2019/07/BRS-2_SQ.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2019/07/GVT-4_.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2019/07/JSP-2.e.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2019/07/Sign-3.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2019/09/LV-1_SQ.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2019/10/155A1004_REC.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2019/10/CS3_.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2019/10/F2_.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2019/10/JCC-1_SQ.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2019/10/L2000-2_.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2019/10/LC-3_SQ.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2019/10/MM-2_.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2020/04/mdc.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2021/02/WG-18.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2021/03/Commons-on-MLK-1.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2021/03/O82-1.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2021/05/3-D-Sarang-High-Res-Aerial-Rendering.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2021/05/Hayden-Site-High-Res-Updated_3-10-2020.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2021/05/LCP-1_.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2021/05/bed-bedroom-chair-707581.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2021/05/taylor-hernandez-401953.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2021/08/IMG_0177_.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2021/11/16__.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2022/03/difference-between-residential-and-commercial-property-management-scaled.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2022/03/property-owners-property-management.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2022/04/attributes-a-good-property-manager-should-possess-scaled.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2022/04/what-is-resident-retention-1-scaled.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2022/05/eea-ikeda-L6OoL86ut-k-unsplash-scaled.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2022/05/stephanie-harvey-PPA6wsuedeM-unsplash-scaled.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2022/05/wynne_watts.png",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2022/06/Cathedral-Village.PNG-1.png",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2022/06/Crescent-Court-Rendering.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2023/03/Casey-FeatureIMG.png",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2023/03/NHP_0392-scaled.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2023/03/Pinewood.webp",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2023/03/TheKeystone-FeatureIMG.webp",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2023/03/TheNel-FeatureIMG.webp",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2023/04/24.png",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2023/05/20191121_082947.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2023/05/pine-point-apartments-portland-or-primary-photo.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2023/10/18thStreet.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2023/10/BlueHeron.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2023/10/ElkCreek.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2023/10/ForestPark.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2023/10/VictorianOliveCourt.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2024/02/103-e-pennsylvania-ave-roslyn-wa-primary-photo.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2024/02/2b38975809035d5ff115c0ee31c2cec2-cc_ft_960.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2024/02/Cascademanor.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2024/02/Outside-Building32.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2024/02/Windsorpark.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2024/02/hampton-court-property.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2024/02/park-villlage-apartments-i-ii-selah-wa-primary-photo.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2024/02/valley-commons-i-ii-apartments-sunnyside-wa-playground.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2024/02/valley-commons-i-ii-apartments-sunnyside-wa-valley-commons-1.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2024/02/vineyard-i-grandview-wa-primary-photo.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2024/02/vineyards-ii-grandview-wa-primary-photo.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2024/03/Building3-e1709667521891.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2024/03/huntingtoncourt.png",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2024/03/outside-building25.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2024/03/paragon-apartments-sunnyside-wa-building-photo.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2024/03/park-villlage-apartments-i-ii-selah-wa-primary-photo-1.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2025/08/albina-one.webp",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2025/09/joice-taylor.webp",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2025/10/terracina-vista-exterior-9.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2025/10/the-canopy-apartments-at-powell57.jpg",
+"source": "research_results/quantum_pages_from_sitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/logos/doodles/2025/new-years-eve-2025-6753651837110713.2-lsg.png",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/plugins/corporate-property-management/dist/app.js?ver=1.0.5",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/plugins/corporate-property-management/dist/styles.css?ver=1.0.5",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/plugins/duracelltomi-google-tag-manager/dist/js/gtm4wp-form-move-tracker.js?ver=1.20.2",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js?ver=bab19fd84843dabc070e73326d787910",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=2d19baeb93e2a0395e435793e50c082b",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js?ver=54e7080aa7a02c83aa61fae430b9d869",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.8.11",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/plugins/gravityforms/js/placeholders.jquery.min.js?ver=2.8.11",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/plugins/gravityforms/legacy/css/browsers.min.css?ver=2.8.11",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/plugins/gravityforms/legacy/css/formreset.min.css?ver=2.8.11",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/plugins/gravityforms/legacy/css/formsmain.min.css?ver=2.8.11",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/plugins/gravityforms/legacy/css/readyclass.min.css?ver=2.8.11",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/plugins/instagram-feed/css/sbi-styles.min.css?ver=6.5.1",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/themes/razzinteractive-child/assets/img/logo-dark-small.png",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/themes/razzinteractive-child/assets/js/ScrollMagic.min.js?ver=6.9",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/themes/razzinteractive-child/assets/js/TweenMax.min.js?ver=6.9",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/themes/razzinteractive-child/assets/js/animation.gsap.min.js?ver=6.9",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/themes/razzinteractive-child/dist/css/razz-custom.min.css?ver=2.3",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/themes/razzinteractive-child/dist/js/razz-custom.min.js?ver=razz-interactive-child",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/themes/razzinteractive/assets/font-awesome/css/fontawesome-all.min.css?ver=6.9",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/themes/razzinteractive/assets/lib/lightGallery/dist/js/lightgallery-all.js?ver=1",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/themes/razzinteractive/dist/css/razz-theme.min.css?ver=1",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/themes/razzinteractive/dist/js/razz-theme.min.js?ver=1",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/themes/razzinteractive/slides/js/plugins.js?ver=1",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2018/04/Kalib-DD_QR-Cropped-189x265.jpg",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2018/04/Matt-3_cropped-189x265.jpg",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2018/04/footers.png",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2018/06/Nelly-3_Cropped-189x265.jpg",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2021/01/Maggie-2_cropped-189x265.jpg",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2022/06/Cathedral-Village.PNG-1-95x133.png",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2022/12/joe-veno-189x265.jpeg",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2023/03/Casey-FeatureIMG-95x133.png",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2023/04/image-189x265.jpg",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-content/uploads/2025/08/albina-one-95x133.webp",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-includes/js/dist/a11y.min.js?ver=cb460b4676c94bd228ed",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-includes/js/plupload/moxie.min.js?ver=1.3.5.1",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-includes/js/plupload/plupload.min.js?ver=2.1.9",
+"source": "research_results/quantum_residential_files_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/sitemap.xml",
+"source": "research_results/quantum_sitemap_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/sitemap_index.xml",
+"source": "research_results/quantum_sitemap_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-sitemap.xml",
+"source": "research_results/quantum_sitemap_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://quantumresidential.com/sitemap.xml",
+"source": "research_results/quantum_sitemap_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://quantumresidential.com/sitemap_index.xml",
+"source": "research_results/quantum_sitemap_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://quantumresidential.com/wp-sitemap.xml",
+"source": "research_results/quantum_sitemap_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/page-sitemap.xml",
+"source": "research_results/quantum_subsitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/property-sitemap.xml",
+"source": "research_results/quantum_subsitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/service-sitemap.xml",
+"source": "research_results/quantum_subsitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/career-sitemap.xml",
+"source": "research_results/quantum_subsitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/category-sitemap.xml",
+"source": "research_results/quantum_subsitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/author-sitemap.xml",
+"source": "research_results/quantum_subsitemaps_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://www.quantumresidential.com",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/about",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/about-us",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/who-we-are",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/mission",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/leadership",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/programs",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/services",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/resources",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/publications",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/reports",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/documents",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/fairhousing",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/grants",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://www.quantumresidential.com/about",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://www.quantumresidential.com/about-us",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://www.quantumresidential.com/who-we-are",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://www.quantumresidential.com/mission",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://www.quantumresidential.com/leadership",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://www.quantumresidential.com/programs",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://www.quantumresidential.com/services",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://www.quantumresidential.com/resources",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://www.quantumresidential.com/publications",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://www.quantumresidential.com/reports",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://www.quantumresidential.com/documents",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://www.quantumresidential.com/fairhousing",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://www.quantumresidential.com/grants",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.QuantumResidential.com",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/?s={search_term_string",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://www.quantumresidential.com/wp-admin/admin-ajax.php",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://quantumresidential.com",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://quantumresidential.com",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://quantumresidential.com/about",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://quantumresidential.com/about-us",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://quantumresidential.com/who-we-are",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://quantumresidential.com/mission",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://quantumresidential.com/leadership",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://quantumresidential.com/programs",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://quantumresidential.com/services",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://quantumresidential.com/resources",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://quantumresidential.com/publications",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://quantumresidential.com/reports",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://quantumresidential.com/documents",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://quantumresidential.com/fairhousing",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "https://quantumresidential.com/grants",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://quantumresidential.com/about",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://quantumresidential.com/about-us",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://quantumresidential.com/who-we-are",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://quantumresidential.com/mission",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://quantumresidential.com/leadership",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://quantumresidential.com/programs",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://quantumresidential.com/services",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://quantumresidential.com/resources",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://quantumresidential.com/publications",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://quantumresidential.com/reports",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://quantumresidential.com/documents",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://quantumresidential.com/fairhousing",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 5,
+"url": "http://quantumresidential.com/grants",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [
+"ntia"
+],
+"keyword_hits": [],
+"gov_hint": false
+},
+{
+"score": 4,
+"url": "https://www.oregon.gov/das/Procurement/Pages/equity-targets-goals.aspx",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.oregon.gov/das/Procurement/Pages/Orcpp.aspx",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.oregon.gov/das/Procurement/Pages/equity-disparity-study.aspx",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.oregon.gov/das/Procurement/Pages/equity-newsletters.aspx",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.oregon.gov/das/Procurement/Pages/equity-outreach.aspx",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.oregon.gov/das/Procurement/Pages/equity-procurement-resources.aspx",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.oregon.gov/das/Procurement/Pages/equity-resources.aspx",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.oregon.gov/das/Procurement/Pages/equity-roadmap.aspx",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.oregon.gov/das/Procurement/Pages/equity-team.aspx",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.oregon.gov/das/procurement/pages/equity-about.aspx",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.oregon.gov/das/procurement/pages/equity.aspx",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.hud.gov/policies",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"policies"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.hud.gov/policy",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"policy"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.hud.gov/nondiscrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"nondiscrimination"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.hud.gov/non-discrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"non-discrimination"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.hud.gov/civil-rights",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"civil-rights"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.hud.gov/fair-housing",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"fair-housing"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.hud.gov/complaints",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"complaint"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.hud.gov/rfp",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"rfp"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.hud.gov/rfq",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"rfq"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.hud.gov/procurement",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.hud.gov/policies",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"policies"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.hud.gov/policy",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"policy"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.hud.gov/nondiscrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"nondiscrimination"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.hud.gov/non-discrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"non-discrimination"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.hud.gov/civil-rights",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"civil-rights"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.hud.gov/fair-housing",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"fair-housing"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.hud.gov/complaints",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"complaint"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.hud.gov/rfp",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"rfp"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.hud.gov/rfq",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"rfq"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.hud.gov/procurement",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.hudexchange.info/policies",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"policies"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.hudexchange.info/policy",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"policy"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.hudexchange.info/nondiscrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"nondiscrimination"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.hudexchange.info/non-discrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"non-discrimination"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.hudexchange.info/civil-rights",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"civil-rights"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.hudexchange.info/fair-housing",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"fair-housing"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.hudexchange.info/complaints",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"complaint"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.hudexchange.info/rfp",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"rfp"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.hudexchange.info/rfq",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"rfq"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.hudexchange.info/procurement",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.hudexchange.info/policies",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"policies"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.hudexchange.info/policy",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"policy"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.hudexchange.info/nondiscrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"nondiscrimination"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.hudexchange.info/non-discrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"non-discrimination"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.hudexchange.info/civil-rights",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"civil-rights"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.hudexchange.info/fair-housing",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"fair-housing"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.hudexchange.info/complaints",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"complaint"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.hudexchange.info/rfp",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"rfp"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.hudexchange.info/rfq",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"rfq"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.hudexchange.info/procurement",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://files.hudexchange.info/policies",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"policies"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://files.hudexchange.info/policy",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"policy"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://files.hudexchange.info/nondiscrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"nondiscrimination"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://files.hudexchange.info/non-discrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"non-discrimination"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://files.hudexchange.info/civil-rights",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"civil-rights"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://files.hudexchange.info/fair-housing",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"fair-housing"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://files.hudexchange.info/complaints",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"complaint"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://files.hudexchange.info/rfp",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"rfp"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://files.hudexchange.info/rfq",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"rfq"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://files.hudexchange.info/procurement",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://files.hudexchange.info/policies",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"policies"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://files.hudexchange.info/policy",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"policy"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://files.hudexchange.info/nondiscrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"nondiscrimination"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://files.hudexchange.info/non-discrimination",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"non-discrimination"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://files.hudexchange.info/civil-rights",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"civil-rights"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://files.hudexchange.info/fair-housing",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"fair-housing"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://files.hudexchange.info/complaints",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"complaint"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://files.hudexchange.info/rfp",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"rfp"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://files.hudexchange.info/rfq",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"rfq"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://files.hudexchange.info/procurement",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.oregon.gov/policies",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"policies"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.oregon.gov/policy",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"policy"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.oregon.gov/nondiscrimination",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"nondiscrimination"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.oregon.gov/non-discrimination",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"non-discrimination"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.oregon.gov/civil-rights",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"civil-rights"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.oregon.gov/fair-housing",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"fair-housing"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.oregon.gov/complaints",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"complaint"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.oregon.gov/rfp",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"rfp"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.oregon.gov/rfq",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"rfq"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://www.oregon.gov/procurement",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.oregon.gov/policies",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"policies"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.oregon.gov/policy",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"policy"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.oregon.gov/nondiscrimination",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"nondiscrimination"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.oregon.gov/non-discrimination",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"non-discrimination"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.oregon.gov/civil-rights",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"civil-rights"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.oregon.gov/fair-housing",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"fair-housing"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.oregon.gov/complaints",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"complaint"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.oregon.gov/rfp",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"rfp"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.oregon.gov/rfq",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"rfq"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://www.oregon.gov/procurement",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://sos.oregon.gov/policies",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"policies"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://sos.oregon.gov/policy",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"policy"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://sos.oregon.gov/nondiscrimination",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"nondiscrimination"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://sos.oregon.gov/non-discrimination",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"non-discrimination"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://sos.oregon.gov/civil-rights",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"civil-rights"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://sos.oregon.gov/fair-housing",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"fair-housing"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://sos.oregon.gov/complaints",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"complaint"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://sos.oregon.gov/rfp",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"rfp"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://sos.oregon.gov/rfq",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"rfq"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "https://sos.oregon.gov/procurement",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://sos.oregon.gov/policies",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"policies"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://sos.oregon.gov/policy",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"policy"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://sos.oregon.gov/nondiscrimination",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"nondiscrimination"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://sos.oregon.gov/non-discrimination",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"non-discrimination"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://sos.oregon.gov/civil-rights",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"civil-rights"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://sos.oregon.gov/fair-housing",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"fair-housing"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://sos.oregon.gov/complaints",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"complaint"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://sos.oregon.gov/rfp",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"rfp"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://sos.oregon.gov/rfq",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"rfq"
+],
+"gov_hint": true
+},
+{
+"score": 4,
+"url": "http://sos.oregon.gov/procurement",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [
+"procurement"
+],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://employeesearch.dasapp.oregon.gov/",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hudexchange.info/resources/documents/HomelessDefinition_RecordkeepingRequirementsandCriteria.pdf",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://files.hudexchange.info/resources/documents/HMIS-Data-Standards.pdf",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://files.hudexchange.info/resources/documents/HMIS-Data-Collection-Requirements-for-Transition.pdf",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://files.hudexchange.info/resources/documents/Zip-Code-to-Geography-Crosswalk.xlsx",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hud.gov/program_offices/fair_housing_equal_opp",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hud.gov/contactus/fairhousing",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/bundle.min.js?b=modernizr,respond.js",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.oregon.gov/biz/Publications/Broadband/ORDigitalEquityPlan.pdf",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hud.gov",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hud.gov",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hud.gov/about",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hud.gov/about-us",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hud.gov/who-we-are",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hud.gov/mission",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hud.gov/leadership",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hud.gov/programs",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hud.gov/services",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hud.gov/resources",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hud.gov/publications",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hud.gov/reports",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hud.gov/documents",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hud.gov/fairhousing",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hud.gov/grants",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hud.gov/about",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hud.gov/about-us",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hud.gov/who-we-are",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hud.gov/mission",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hud.gov/leadership",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hud.gov/programs",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hud.gov/services",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hud.gov/resources",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hud.gov/publications",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hud.gov/reports",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hud.gov/documents",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hud.gov/fairhousing",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hud.gov/grants",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hud.gov/contactus/fairhousing",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hud.gov/no-fear-act",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hud.gov/news",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hud.gov/subscribe/signup?listname=HUD",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hudexchange.info",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hudexchange.info",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hudexchange.info/about",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hudexchange.info/about-us",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hudexchange.info/who-we-are",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hudexchange.info/mission",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hudexchange.info/leadership",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hudexchange.info/programs",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hudexchange.info/services",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hudexchange.info/resources",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hudexchange.info/publications",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hudexchange.info/reports",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hudexchange.info/documents",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hudexchange.info/fairhousing",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hudexchange.info/grants",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hudexchange.info/about",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hudexchange.info/about-us",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hudexchange.info/who-we-are",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hudexchange.info/mission",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hudexchange.info/leadership",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hudexchange.info/programs",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hudexchange.info/services",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hudexchange.info/resources",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hudexchange.info/publications",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hudexchange.info/reports",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hudexchange.info/documents",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hudexchange.info/fairhousing",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.hudexchange.info/grants",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hudexchange.info/homelessness-assistance/",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.hudexchange.info/",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://sos.oregon.gov/business/Pages/apostille.aspx",
+"source": "research_results/kg_prioritized_download_queue_20251231.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://sos.oregon.gov/",
+"source": "research_results/oregon_p1p2_filtered_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://images.oregon.gov/Portal/Images/Flags/oregon-flag.jpg",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/bundle.min.css?b=font-awesome3Css",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/bundle.min.css?b=font-awesomeCss",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/bundle.min.css?b=helpful-page-poll_an_extCss",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/bundle.min.js?b=jquery@1.8.2",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/bundle.min.js?b=js.cookie,helpful-page-poll_an_bs",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/bundle.min.js?b=oregon-sharepoint",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/css/sharepoint/v4/sharepoint-reset.css",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/images/icons/favicons/apple-touch-icon-114x114.png",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/images/icons/favicons/apple-touch-icon-120x120.png",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/images/icons/favicons/apple-touch-icon-144x144.png",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/images/icons/favicons/apple-touch-icon-152x152.png",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/images/icons/favicons/apple-touch-icon-57x57.png",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/images/icons/favicons/apple-touch-icon-60x60.png",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/images/icons/favicons/apple-touch-icon-72x72.png",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/images/icons/favicons/favicon-128.png",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/images/icons/favicons/favicon-16x16.png",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/images/icons/favicons/favicon-196x196.png",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/images/icons/favicons/favicon-32x32.png",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/images/icons/favicons/favicon-96x96.png",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/images/icons/favicons/favicon.ico",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/images/icons/favicons/mstile-144x144.png",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/images/icons/favicons/mstile-150x150.png",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/images/icons/favicons/mstile-310x150.png",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/images/icons/favicons/mstile-310x310.png",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://cdn.oregon.gov/images/icons/favicons/mstile-70x70.png",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://sos.oregon.gov/SiteCollectionImages/branding/blossom-capitol.jpg",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.oregon.gov",
+"source": "research_results/oregon_p1p2_links.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.oregon.gov",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.oregon.gov/about",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.oregon.gov/about-us",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.oregon.gov/who-we-are",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.oregon.gov/mission",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.oregon.gov/leadership",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.oregon.gov/programs",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.oregon.gov/services",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.oregon.gov/resources",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.oregon.gov/publications",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.oregon.gov/reports",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.oregon.gov/documents",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.oregon.gov/fairhousing",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://www.oregon.gov/grants",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.oregon.gov/about",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.oregon.gov/about-us",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.oregon.gov/who-we-are",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.oregon.gov/mission",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.oregon.gov/leadership",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.oregon.gov/programs",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.oregon.gov/services",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.oregon.gov/resources",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.oregon.gov/publications",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.oregon.gov/reports",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.oregon.gov/documents",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.oregon.gov/fairhousing",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://www.oregon.gov/grants",
+"source": "research_results/quantum_seed_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://sos.oregon.gov",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://sos.oregon.gov",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://sos.oregon.gov/about",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://sos.oregon.gov/about-us",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://sos.oregon.gov/who-we-are",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://sos.oregon.gov/mission",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://sos.oregon.gov/leadership",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://sos.oregon.gov/programs",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://sos.oregon.gov/services",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://sos.oregon.gov/resources",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://sos.oregon.gov/publications",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://sos.oregon.gov/reports",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://sos.oregon.gov/documents",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://sos.oregon.gov/fairhousing",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://sos.oregon.gov/grants",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://sos.oregon.gov/about",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://sos.oregon.gov/about-us",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://sos.oregon.gov/who-we-are",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://sos.oregon.gov/mission",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://sos.oregon.gov/leadership",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://sos.oregon.gov/programs",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://sos.oregon.gov/services",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://sos.oregon.gov/resources",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://sos.oregon.gov/publications",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://sos.oregon.gov/reports",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://sos.oregon.gov/documents",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://sos.oregon.gov/fairhousing",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://sos.oregon.gov/grants",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://sos.oregon.gov/audits/Pages/stateaudits.aspx",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://sos.oregon.gov/voting/Pages/drop-box-locator.aspx",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://files.hudexchange.info",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://files.hudexchange.info",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://files.hudexchange.info/about",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://files.hudexchange.info/about-us",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://files.hudexchange.info/who-we-are",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://files.hudexchange.info/mission",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://files.hudexchange.info/leadership",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://files.hudexchange.info/programs",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://files.hudexchange.info/services",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://files.hudexchange.info/resources",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://files.hudexchange.info/publications",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://files.hudexchange.info/reports",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://files.hudexchange.info/documents",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://files.hudexchange.info/fairhousing",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://files.hudexchange.info/grants",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://files.hudexchange.info/about",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://files.hudexchange.info/about-us",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://files.hudexchange.info/who-we-are",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://files.hudexchange.info/mission",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://files.hudexchange.info/leadership",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://files.hudexchange.info/programs",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://files.hudexchange.info/services",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://files.hudexchange.info/resources",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://files.hudexchange.info/publications",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://files.hudexchange.info/reports",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://files.hudexchange.info/documents",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://files.hudexchange.info/fairhousing",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "http://files.hudexchange.info/grants",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+},
+{
+"score": 1,
+"url": "https://files.hudexchange.info/resources/documents/HMIS-Data-Standards-Mapping-Instructions.xlsx",
+"source": "research_results/third_party_download_queue.json",
+"entity_hits": [],
+"keyword_hits": [],
+"gov_hint": true
+}
+]
+}

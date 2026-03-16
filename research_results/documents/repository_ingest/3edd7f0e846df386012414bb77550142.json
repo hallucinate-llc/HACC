@@ -1,0 +1,71 @@
+{
+  "title": "obiu.org about",
+  "relative_path": "research_results/third_party_downloads/obiu.org/obiu.org_about.html",
+  "source_type": "repository_evidence",
+  "filename": "obiu.org_about.html",
+  "mime_type": "text/html",
+  "size": 596996,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 16,
+  "paragraph_count": 1,
+  "text_length": 12918,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 12918,
+    "text_length": 12918,
+    "raw_size": 596996,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 16
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 12918,
+      "text_length": 12918,
+      "raw_size": 596996,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "3edd7f0e846df386012414bb77550142",
+  "checksum": "a4fe47359e6adb4bd9e3153de2d6bc1c7f0b7630b68eb4b4a3d1d1ebf511f21e",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/obiu.org/obiu.org_about.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/3edd7f0e846df386012414bb77550142.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

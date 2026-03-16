@@ -1,0 +1,71 @@
+{
+  "title": "github.com newrelic newrelic-browser-agent blob main docs warning-codes",
+  "relative_path": "research_results/third_party_downloads/github.com/github.com_newrelic_newrelic-browser-agent_blob_main_docs_warning-codes.md",
+  "source_type": "repository_evidence",
+  "filename": "github.com_newrelic_newrelic-browser-agent_blob_main_docs_warning-codes.md",
+  "mime_type": "text/markdown",
+  "size": 287261,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 4,
+  "paragraph_count": 1,
+  "text_length": 3009,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 3009,
+    "text_length": 3009,
+    "raw_size": 287261,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 4
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 3009,
+      "text_length": 3009,
+      "raw_size": 287261,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "8511103284febff6f8bb2471a46de9fa",
+  "checksum": "6df4e6940aa2c32a38b32f4cc46f5b678082c1189c4d9fd2fb1bfeff9cf3325a",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/github.com/github.com_newrelic_newrelic-browser-agent_blob_main_docs_warning-codes.md",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/8511103284febff6f8bb2471a46de9fa.txt",
+  "content_type": "text/markdown",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

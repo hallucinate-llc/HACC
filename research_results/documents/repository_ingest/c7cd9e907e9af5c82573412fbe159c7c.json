@@ -1,0 +1,69 @@
+{
+  "title": "statutory provisions report",
+  "relative_path": "research_data/analysis/extracts/statutory_provisions_report.txt",
+  "source_type": "repository_evidence",
+  "filename": "statutory_provisions_report.txt",
+  "mime_type": "text/plain",
+  "size": 44489,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 46,
+  "paragraph_count": 1,
+  "text_length": 39784,
+  "input_format": "text",
+  "page_count": 1,
+  "extraction_method": "text_normalization",
+  "parse_quality": {
+    "quality_score": 98.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 39784,
+    "text_length": 39784,
+    "raw_size": 44489,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "text",
+    "normalization": "text_normalization",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 46
+    },
+    "extraction": {
+      "method": "text_normalization",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 39784,
+      "text_length": 39784,
+      "raw_size": 44489,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "c7cd9e907e9af5c82573412fbe159c7c",
+  "checksum": "caa3693b6658b5cb70e6c83b131bfe45e53e786ae32129c52ff933504417c97b",
+  "source_path": "/home/barberb/HACC/research_data/analysis/extracts/statutory_provisions_report.txt",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/c7cd9e907e9af5c82573412fbe159c7c.txt",
+  "content_type": "text/plain",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

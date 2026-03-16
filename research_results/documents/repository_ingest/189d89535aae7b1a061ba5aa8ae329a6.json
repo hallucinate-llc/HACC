@@ -1,0 +1,69 @@
+{
+  "title": "research report",
+  "relative_path": "research_data/analysis/research_report.txt",
+  "source_type": "repository_evidence",
+  "filename": "research_report.txt",
+  "mime_type": "text/plain",
+  "size": 1551,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 2,
+  "paragraph_count": 1,
+  "text_length": 1496,
+  "input_format": "text",
+  "page_count": 1,
+  "extraction_method": "text_normalization",
+  "parse_quality": {
+    "quality_score": 98.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 1496,
+    "text_length": 1496,
+    "raw_size": 1551,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "text",
+    "normalization": "text_normalization",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 2
+    },
+    "extraction": {
+      "method": "text_normalization",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 1496,
+      "text_length": 1496,
+      "raw_size": 1551,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "189d89535aae7b1a061ba5aa8ae329a6",
+  "checksum": "61c347dfdaf7e81bd63bf08295b9aca41ee19315dc29dd18677c5fb1155481e6",
+  "source_path": "/home/barberb/HACC/research_data/analysis/research_report.txt",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/189d89535aae7b1a061ba5aa8ae329a6.txt",
+  "content_type": "text/plain",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

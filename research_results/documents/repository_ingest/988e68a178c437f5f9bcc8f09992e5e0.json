@@ -1,0 +1,69 @@
+{
+  "title": "comprehensive report 20260314 055513",
+  "relative_path": "research_results/search_reports/comprehensive_report_20260314_055513.json",
+  "source_type": "repository_evidence",
+  "filename": "comprehensive_report_20260314_055513.json",
+  "mime_type": "application/json",
+  "size": 1164364,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 1036,
+  "paragraph_count": 1,
+  "text_length": 883018,
+  "input_format": "text",
+  "page_count": 1,
+  "extraction_method": "text_normalization",
+  "parse_quality": {
+    "quality_score": 98.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 883018,
+    "text_length": 883018,
+    "raw_size": 1164364,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "text",
+    "normalization": "text_normalization",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 1036
+    },
+    "extraction": {
+      "method": "text_normalization",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 883018,
+      "text_length": 883018,
+      "raw_size": 1164364,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "988e68a178c437f5f9bcc8f09992e5e0",
+  "checksum": "9b81c4c5e2eb678dffad9245d57556e3044c2ab24f3bbe1122adddca8060fce3",
+  "source_path": "/home/barberb/HACC/research_results/search_reports/comprehensive_report_20260314_055513.json",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/988e68a178c437f5f9bcc8f09992e5e0.txt",
+  "content_type": "application/json",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

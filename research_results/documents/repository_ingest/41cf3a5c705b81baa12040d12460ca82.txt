@@ -1,0 +1,24 @@
+[
+{
+"domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+"url": "https://portal-applicant-tracking.us-cent.paycomonline.net/career-portal/sprawl.json",
+"final_url": "https://portal-applicant-tracking.us-cent.paycomonline.net/career-portal/sprawl.json",
+"status": "ok",
+"http_status": 200,
+"content_type": "application/json",
+"bytes": 259,
+"saved_path": "research_results/third_party_downloads/portal-applicant-tracking.us-cent.paycomonline.net/portal-applicant-tracking.us-cent.paycomonline.net_career-portal_sprawl.json",
+"error": ""
+},
+{
+"domain": "portal-applicant-tracking.us-cent.paycomonline.net",
+"url": "https://www.paycomonline.net/v4/ats/web.php/portal/BC8C4A60F87D82E71EF353A71CF59EEA/career-page",
+"final_url": "https://www.paycomonline.net/v4/ats/web.php/portal/BC8C4A60F87D82E71EF353A71CF59EEA/career-page",
+"status": "ok",
+"http_status": 200,
+"content_type": "text/html; charset=UTF-8",
+"bytes": 5736,
+"saved_path": "research_results/third_party_downloads/portal-applicant-tracking.us-cent.paycomonline.net/www.paycomonline.net_v4_ats_web.php_portal_BC8C4A60F87D82E71EF353A71CF59EEA_career-page.html",
+"error": ""
+}
+]

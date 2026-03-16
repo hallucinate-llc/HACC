@@ -1,0 +1,93 @@
+{
+"metadata": {
+"created_at": "2026-03-15T03:46:14.168250+00:00",
+"last_updated": "2026-03-15T03:46:23.345582+00:00",
+"version": "1.0"
+},
+"entities": {
+"entity_1": {
+"id": "entity_1",
+"type": "claim",
+"name": "Denial/Refusal Claim",
+"attributes": {
+"claim_type": "denial",
+"description": "I’m filing this complaint because I believe I was treated unfairly in the housing admissions process. I applied for housing and was told I was being denied. I was given vague “policy” reasons and language about equity, inclusion, or simi..."
+},
+"confidence": 0.7,
+"source": "complaint"
+},
+"entity_2": {
+"id": "entity_2",
+"type": "evidence",
+"name": "Policy",
+"attributes": {
+"evidence_type": "policy",
+"description": "I’m filing this complaint because I believe I was treated unfairly in the housing admissions process. I applied for housing and was told I was being denied. I was given vague “policy” reasons and language about equity, inclusion, or simi..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_3": {
+"id": "entity_3",
+"type": "fact",
+"name": "Impact: I’m filing this complaint because I believe I was treated...",
+"attributes": {
+"fact_type": "impact",
+"description": "I’m filing this complaint because I believe I was treated unfairly in the housing admissions process. I applied for housing and was told I was being denied. I was given vague “policy” reasons and language about equity, inclusion, or simi..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_4": {
+"id": "entity_4",
+"type": "fact",
+"name": "Impact: Honestly, the harm is pretty direct: I lost a chance at h...",
+"attributes": {
+"fact_type": "impact",
+"description": "Honestly, the harm is pretty direct: I lost a chance at housing and I’m still stuck in an unstable situation because ..."
+},
+"confidence": 0.6,
+"source": "complaint"
+},
+"entity_5": {
+"id": "entity_5",
+"type": "fact",
+"name": "Timeline detail: I don’t have the exact dates in front of me, and I’m not ...",
+"attributes": {
+"fact_type": "timeline",
+"description": "I don’t have the exact dates in front of me, and I’m not trying to overshare. Roughly, I applied a few months ago, go..."
+},
+"confidence": 0.6,
+"source": "complaint"
+}
+},
+"relationships": {
+"rel_1": {
+"id": "rel_1",
+"source_id": "entity_1",
+"target_id": "entity_2",
+"relation_type": "supported_by",
+"attributes": {},
+"confidence": 0.55,
+"source": "complaint"
+},
+"rel_2": {
+"id": "rel_2",
+"source_id": "entity_1",
+"target_id": "entity_4",
+"relation_type": "has_impact",
+"attributes": {},
+"confidence": 0.6,
+"source": "complaint"
+},
+"rel_3": {
+"id": "rel_3",
+"source_id": "entity_1",
+"target_id": "entity_5",
+"relation_type": "has_timeline_detail",
+"attributes": {},
+"confidence": 0.6,
+"source": "complaint"
+}
+}
+}

@@ -1,0 +1,22 @@
+================================================================================
+DETAILED TECHNICAL REPORT — Oregon DEI References Audit
+Generated: 20251231_000808
+================================================================================
+METHODOLOGY
+- Parsed 0 documents from Oregon state and local government sources.
+- Applied keyword matching for DEI terms (e.g., "diversity", "equity") and proxies
+(e.g., "cultural competence", "lived experience").
+- Scored based on presence of binding indicators ("policy", "shall", "required").
+- Tagged by applicability area: hiring, procurement, training, housing.
+SCORING RUBRIC
+- Score 0: No DEI/proxy language detected (compliant).
+- Score 1: DEI/proxy present but weak binding indicators (possible issue).
+- Score 2: DEI/proxy + multiple binding indicators (probable issue).
+- Score 3: Explicit DEI policy with mandatory language (clear violation).
+DOCUMENT BREAKDOWN
+Total Documents: 0
+APPLICABILITY BY AREA
+HIGH-RISK DOCUMENTS (DETAILED)
+================================================================================
+END OF REPORT
+================================================================================

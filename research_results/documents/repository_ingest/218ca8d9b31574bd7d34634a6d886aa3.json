@@ -1,0 +1,69 @@
+{
+  "title": "www.raceforward.org what-racial-equity",
+  "relative_path": "research_results/third_party_downloads/www.raceforward.org/www.raceforward.org_what-racial-equity.html",
+  "source_type": "repository_evidence",
+  "filename": "www.raceforward.org_what-racial-equity.html",
+  "mime_type": "text/html",
+  "size": 29480,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 13,
+  "paragraph_count": 1,
+  "text_length": 10292,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 10292,
+    "text_length": 10292,
+    "raw_size": 29480,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 13
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 10292,
+      "text_length": 10292,
+      "raw_size": 29480,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "218ca8d9b31574bd7d34634a6d886aa3",
+  "checksum": "004e8a4831f097feca44a138b892e15b6564bfede00ac825fcf4bc06f0da66af",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.raceforward.org/www.raceforward.org_what-racial-equity.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/218ca8d9b31574bd7d34634a6d886aa3.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

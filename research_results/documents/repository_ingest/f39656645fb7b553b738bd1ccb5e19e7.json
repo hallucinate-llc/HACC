@@ -1,0 +1,69 @@
+{
+  "title": "seeded search summary 20251231 130749",
+  "relative_path": "research_results/seeded_search_summary_20251231_130749.txt",
+  "source_type": "repository_evidence",
+  "filename": "seeded_search_summary_20251231_130749.txt",
+  "mime_type": "text/plain",
+  "size": 690,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 1,
+  "paragraph_count": 1,
+  "text_length": 664,
+  "input_format": "text",
+  "page_count": 1,
+  "extraction_method": "text_normalization",
+  "parse_quality": {
+    "quality_score": 98.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 664,
+    "text_length": 664,
+    "raw_size": 690,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "text",
+    "normalization": "text_normalization",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 1
+    },
+    "extraction": {
+      "method": "text_normalization",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 664,
+      "text_length": 664,
+      "raw_size": 690,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "f39656645fb7b553b738bd1ccb5e19e7",
+  "checksum": "9e0eb05860fa2e745fe22a6b1c875f84bd80890801ee2442e3346e154f052a4b",
+  "source_path": "/home/barberb/HACC/research_results/seeded_search_summary_20251231_130749.txt",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/f39656645fb7b553b738bd1ccb5e19e7.txt",
+  "content_type": "text/plain",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

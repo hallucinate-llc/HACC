@@ -1,0 +1,69 @@
+{
+  "title": "www.guidestar.org 33a08789e6",
+  "relative_path": "research_results/third_party_downloads/www.guidestar.org/www.guidestar.org_33a08789e6.html",
+  "source_type": "repository_evidence",
+  "filename": "www.guidestar.org_33a08789e6.html",
+  "mime_type": "text/html",
+  "size": 25582,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 3,
+  "paragraph_count": 1,
+  "text_length": 2236,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 2236,
+    "text_length": 2236,
+    "raw_size": 25582,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 3
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 2236,
+      "text_length": 2236,
+      "raw_size": 25582,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "1e28f33b6c29b03688f2c57da75b811c",
+  "checksum": "22325bc2cc2ad4b604c0e1de8d9c09e9966c43df6014f38e280bc2f71c8a7921",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.guidestar.org/www.guidestar.org_33a08789e6.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/1e28f33b6c29b03688f2c57da75b811c.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

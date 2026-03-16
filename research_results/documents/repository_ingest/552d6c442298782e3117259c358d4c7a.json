@@ -1,0 +1,69 @@
+{
+  "title": "www.bbb.org us wa vancouver profile property-management quantum-residential-inc-1296-22139264 07f5d73c8a",
+  "relative_path": "research_results/third_party_downloads/www.bbb.org/www.bbb.org_us_wa_vancouver_profile_property-management_quantum-residential-inc-1296-22139264_07f5d73c8a.html",
+  "source_type": "repository_evidence",
+  "filename": "www.bbb.org_us_wa_vancouver_profile_property-management_quantum-residential-inc-1296-22139264_07f5d73c8a.html",
+  "mime_type": "text/html",
+  "size": 107242,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 8,
+  "paragraph_count": 1,
+  "text_length": 6284,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 6284,
+    "text_length": 6284,
+    "raw_size": 107242,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 8
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 6284,
+      "text_length": 6284,
+      "raw_size": 107242,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "552d6c442298782e3117259c358d4c7a",
+  "checksum": "050896981f3018ff6e2ea20f7b17b6412a1fbc1d22bbb1ddf0a917e92f018a1e",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.bbb.org/www.bbb.org_us_wa_vancouver_profile_property-management_quantum-residential-inc-1296-22139264_07f5d73c8a.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/552d6c442298782e3117259c358d4c7a.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

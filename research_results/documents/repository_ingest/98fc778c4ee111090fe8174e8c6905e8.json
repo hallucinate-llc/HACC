@@ -1,0 +1,69 @@
+{
+  "title": "mediator evidence packets",
+  "relative_path": "research_results/grounded_runs/20260316_015528/mediator_evidence_packets.json",
+  "source_type": "repository_evidence",
+  "filename": "mediator_evidence_packets.json",
+  "mime_type": "application/json",
+  "size": 3008,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 3,
+  "paragraph_count": 1,
+  "text_length": 2582,
+  "input_format": "text",
+  "page_count": 1,
+  "extraction_method": "text_normalization",
+  "parse_quality": {
+    "quality_score": 98.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 2582,
+    "text_length": 2582,
+    "raw_size": 3008,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "text",
+    "normalization": "text_normalization",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 3
+    },
+    "extraction": {
+      "method": "text_normalization",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 2582,
+      "text_length": 2582,
+      "raw_size": 3008,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "98fc778c4ee111090fe8174e8c6905e8",
+  "checksum": "c81e7f24dce1e5212068ad3258c81b0e357f9037f727dcda299a922be52020ee",
+  "source_path": "/home/barberb/HACC/research_results/grounded_runs/20260316_015528/mediator_evidence_packets.json",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/98fc778c4ee111090fe8174e8c6905e8.txt",
+  "content_type": "application/json",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

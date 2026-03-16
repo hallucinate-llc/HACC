@@ -1,0 +1,69 @@
+{
+  "title": "seeded urls unique 20251231 130749",
+  "relative_path": "research_results/seeded_urls_unique_20251231_130749.json",
+  "source_type": "repository_evidence",
+  "filename": "seeded_urls_unique_20251231_130749.json",
+  "mime_type": "application/json",
+  "size": 290868,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 336,
+  "paragraph_count": 1,
+  "text_length": 277487,
+  "input_format": "text",
+  "page_count": 1,
+  "extraction_method": "text_normalization",
+  "parse_quality": {
+    "quality_score": 98.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 277487,
+    "text_length": 277487,
+    "raw_size": 290868,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "text",
+    "normalization": "text_normalization",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 336
+    },
+    "extraction": {
+      "method": "text_normalization",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 277487,
+      "text_length": 277487,
+      "raw_size": 290868,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "6c9db264d72b34b29af9cbf343fd4159",
+  "checksum": "874956c7d069f3e6a21840e9acea46779c0a0d577c1ee389f4848c6cb580dacf",
+  "source_path": "/home/barberb/HACC/research_results/seeded_urls_unique_20251231_130749.json",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/6c9db264d72b34b29af9cbf343fd4159.txt",
+  "content_type": "application/json",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

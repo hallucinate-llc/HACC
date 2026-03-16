@@ -1,0 +1,71 @@
+{
+  "title": "app.aiim.org login 16eb323f4a",
+  "relative_path": "research_results/third_party_downloads/app.aiim.org/app.aiim.org_login_16eb323f4a.html",
+  "source_type": "repository_evidence",
+  "filename": "app.aiim.org_login_16eb323f4a.html",
+  "mime_type": "text/html",
+  "size": 3572,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 1,
+  "paragraph_count": 1,
+  "text_length": 125,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 125,
+    "text_length": 125,
+    "raw_size": 3572,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 1
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 125,
+      "text_length": 125,
+      "raw_size": 3572,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "7337c0fd1690d72f69bd825d51e28650",
+  "checksum": "452c6fd29eb358d973b3a9dd6cd52144b2adc11c54a4d2dc2a3ab689af23cd8e",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/app.aiim.org/app.aiim.org_login_16eb323f4a.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/7337c0fd1690d72f69bd825d51e28650.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

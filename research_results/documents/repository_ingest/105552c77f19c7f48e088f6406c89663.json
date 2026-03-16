@@ -1,0 +1,71 @@
+{
+  "title": "www.quantumresidential.com career tax-credit-manager",
+  "relative_path": "research_results/third_party_downloads/www.quantumresidential.com/www.quantumresidential.com_career_tax-credit-manager.html",
+  "source_type": "repository_evidence",
+  "filename": "www.quantumresidential.com_career_tax-credit-manager.html",
+  "mime_type": "text/html",
+  "size": 57170,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 1,
+  "paragraph_count": 1,
+  "text_length": 602,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 602,
+    "text_length": 602,
+    "raw_size": 57170,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 1
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 602,
+      "text_length": 602,
+      "raw_size": 57170,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "105552c77f19c7f48e088f6406c89663",
+  "checksum": "90c382dc6463aacd0b5c705e5b55489c1ac3713151906c5b4b2e4467a6f20cd6",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.quantumresidential.com/www.quantumresidential.com_career_tax-credit-manager.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/105552c77f19c7f48e088f6406c89663.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

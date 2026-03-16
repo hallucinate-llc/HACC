@@ -1,0 +1,69 @@
+{
+  "title": "new.drupal.org home 3b1f62d3fa",
+  "relative_path": "research_results/third_party_downloads/www.drupal.org/new.drupal.org_home_3b1f62d3fa.html",
+  "source_type": "repository_evidence",
+  "filename": "new.drupal.org_home_3b1f62d3fa.html",
+  "mime_type": "text/html",
+  "size": 83232,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 10,
+  "paragraph_count": 1,
+  "text_length": 8229,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 8229,
+    "text_length": 8229,
+    "raw_size": 83232,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 10
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 8229,
+      "text_length": 8229,
+      "raw_size": 83232,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "d302bbed4e23e9e7d7e773c584e42f51",
+  "checksum": "c5a4ebad4da7c0d79a58a30078f308eaa673a63f6f5038617f8b83448eb9ccf3",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.drupal.org/new.drupal.org_home_3b1f62d3fa.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/d302bbed4e23e9e7d7e773c584e42f51.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

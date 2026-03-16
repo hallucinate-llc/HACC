@@ -1,0 +1,69 @@
+{
+  "title": "oregonbuys.gov:443 bso",
+  "relative_path": "research_results/third_party_downloads/oregonbuys.gov/oregonbuys.gov:443_bso.html",
+  "source_type": "repository_evidence",
+  "filename": "oregonbuys.gov:443_bso.html",
+  "mime_type": "text/html",
+  "size": 155805,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 10,
+  "paragraph_count": 1,
+  "text_length": 7917,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 7917,
+    "text_length": 7917,
+    "raw_size": 155805,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 10
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 7917,
+      "text_length": 7917,
+      "raw_size": 155805,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "d0f62f12861acf9324cdb39a4e598a0a",
+  "checksum": "d7470c83b4e8e4fc3e15dcbaf39eea88618302f18eed832b9a77fc05ed6cb565",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/oregonbuys.gov/oregonbuys.gov:443_bso.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/d0f62f12861acf9324cdb39a4e598a0a.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

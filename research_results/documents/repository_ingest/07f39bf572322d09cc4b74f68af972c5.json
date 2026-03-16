@@ -1,0 +1,69 @@
+{
+  "title": "seeded search results 20251231 130749",
+  "relative_path": "research_results/seeded_search_results_20251231_130749.json",
+  "source_type": "repository_evidence",
+  "filename": "seeded_search_results_20251231_130749.json",
+  "mime_type": "application/json",
+  "size": 872882,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 1020,
+  "paragraph_count": 1,
+  "text_length": 837301,
+  "input_format": "text",
+  "page_count": 1,
+  "extraction_method": "text_normalization",
+  "parse_quality": {
+    "quality_score": 98.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 837301,
+    "text_length": 837301,
+    "raw_size": 872882,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "text",
+    "normalization": "text_normalization",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 1020
+    },
+    "extraction": {
+      "method": "text_normalization",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 837301,
+      "text_length": 837301,
+      "raw_size": 872882,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "07f39bf572322d09cc4b74f68af972c5",
+  "checksum": "e67b061b027774f3d26517b80603971f985a6ac721b7703d3b0b41dd5dc1efa4",
+  "source_path": "/home/barberb/HACC/research_results/seeded_search_results_20251231_130749.json",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/07f39bf572322d09cc4b74f68af972c5.txt",
+  "content_type": "application/json",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

@@ -1,0 +1,69 @@
+{
+  "title": "www.oregonmetro.gov what-metro-does housing-and-homelessness affordable-housing-bond racial-equity d7790ea68d",
+  "relative_path": "research_results/third_party_downloads/www.oregonmetro.gov/www.oregonmetro.gov_what-metro-does_housing-and-homelessness_affordable-housing-bond_racial-equity_d7790ea68d.html",
+  "source_type": "repository_evidence",
+  "filename": "www.oregonmetro.gov_what-metro-does_housing-and-homelessness_affordable-housing-bond_racial-equity_d7790ea68d.html",
+  "mime_type": "text/html",
+  "size": 78532,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 9,
+  "paragraph_count": 1,
+  "text_length": 7526,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 7526,
+    "text_length": 7526,
+    "raw_size": 78532,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 9
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 7526,
+      "text_length": 7526,
+      "raw_size": 78532,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "a597f4208c2d014d0e3da5356782aa9e",
+  "checksum": "d51f9240284aa10b021a200fb80e5009686a5df2844db3de60f868d6bf51e3f2",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.oregonmetro.gov/www.oregonmetro.gov_what-metro-does_housing-and-homelessness_affordable-housing-bond_racial-equity_d7790ea68d.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/a597f4208c2d014d0e3da5356782aa9e.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

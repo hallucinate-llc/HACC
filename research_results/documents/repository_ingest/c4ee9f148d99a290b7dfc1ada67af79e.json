@@ -1,0 +1,69 @@
+{
+  "title": "www.racialequityalliance.org blogs gare-team 2025 12 16 government-at-just-narratives",
+  "relative_path": "research_results/third_party_downloads/www.racialequityalliance.org/www.racialequityalliance.org_blogs_gare-team_2025_12_16_government-at-just-narratives.html",
+  "source_type": "repository_evidence",
+  "filename": "www.racialequityalliance.org_blogs_gare-team_2025_12_16_government-at-just-narratives.html",
+  "mime_type": "text/html",
+  "size": 178076,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 16,
+  "paragraph_count": 1,
+  "text_length": 12327,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 12327,
+    "text_length": 12327,
+    "raw_size": 178076,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 16
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 12327,
+      "text_length": 12327,
+      "raw_size": 178076,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "c4ee9f148d99a290b7dfc1ada67af79e",
+  "checksum": "932c88a0fd960dd202712e5698a06b1f0456cbc9850a1a9ea865a9549c2b15dc",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.racialequityalliance.org/www.racialequityalliance.org_blogs_gare-team_2025_12_16_government-at-just-narratives.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/c4ee9f148d99a290b7dfc1ada67af79e.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

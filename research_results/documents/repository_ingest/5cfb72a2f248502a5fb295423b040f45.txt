@@ -1,0 +1,98 @@
+{
+"metadata": {
+"created_at": "2026-03-15T22:39:02.779354+00:00",
+"last_updated": "2026-03-15T22:39:14.002664+00:00",
+"version": "1.0"
+},
+"entities": {
+"entity_1": {
+"id": "entity_1",
+"type": "claim",
+"name": "Discrimination Claim",
+"attributes": {
+"claim_type": "discrimination",
+"description": "Complaint: I am a HACC resident filing a retaliation complaint under housing discrimination protections because I believe I was treated unfairly after exercising my rights as a tenant. In my situation, I raised concerns internally about ..."
+},
+"confidence": 0.9,
+"source": "complaint"
+},
+"entity_2": {
+"id": "entity_2",
+"type": "claim",
+"name": "Retaliation Claim",
+"attributes": {
+"claim_type": "retaliation",
+"description": "Complaint: I am a HACC resident filing a retaliation complaint under housing discrimination protections because I believe I was treated unfairly after exercising my rights as a tenant. In my situation, I raised concerns internally about ..."
+},
+"confidence": 0.85,
+"source": "complaint"
+},
+"entity_3": {
+"id": "entity_3",
+"type": "evidence",
+"name": "Notice",
+"attributes": {
+"evidence_type": "notice",
+"description": "Complaint: I am a HACC resident filing a retaliation complaint under housing discrimination protections because I believe I was treated unfairly after exercising my rights as a tenant. In my situation, I raised concerns internally about ..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_4": {
+"id": "entity_4",
+"type": "evidence",
+"name": "Policy",
+"attributes": {
+"evidence_type": "policy",
+"description": "Complaint: I am a HACC resident filing a retaliation complaint under housing discrimination protections because I believe I was treated unfairly after exercising my rights as a tenant. In my situation, I raised concerns internally about ..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_5": {
+"id": "entity_5",
+"type": "fact",
+"name": "Impact: Complaint: I am a HACC resident filing a retaliation comp...",
+"attributes": {
+"fact_type": "impact",
+"description": "Complaint: I am a HACC resident filing a retaliation complaint under housing discrimination protections because I believe I was treated unfairly after exercising my rights as a tenant. In my situation, I raised concerns internally about ...",
+"clarification": "I can explain the impact in plain terms.\n\nThe biggest impact was fear and instability about my housing. After I filed the grievance, the adverse action came quickly and I felt pressured into accepting a result I didn’t think was fair because I wasn’t given a clear hearing process. That created real anxiety—constant worry about losing my home, not being able to sleep, and feeling like I had to respond under a deadline without knowing my rights.\n\nIt also affected my ability to plan day-to-day life. I had to spend time and stress tracking down contacts, asking for documents, and responding to notices instead of focusing on work and health. It also made me distrust the process, because I couldn’t get a clear written explanation of why I was being punished or what evidence was used.\n\nI’m also impacted emotionally. I felt isolated and intimidated by the pressure to “accept” the outcome without an opportunity to present my side, especially since the policies should provide notice, informal review, and hearing/appeal rights. From the policy language in the *ADMISSIONS AND CONTINUED OCCUPANCY POLICY* and *ADMINISTRATIVE PLAN*, I understand adverse actions are meant to go through grievance/hearing/appeal structures—so the lack of that process makes the harm feel both procedural and retaliatory.\n\nI should be candid: I don’t yet have every case-specific fact in this message (exact dates, letter dates, the first official notice, and who made each decision). I can provide those next if you want, but this is the practical impact I’m experiencing now."
+},
+"confidence": 0.75,
+"source": "complaint"
+},
+"entity_6": {
+"id": "entity_6",
+"type": "fact",
+"name": "Requested remedy: Complaint: I am a HACC resident filing a retaliation comp...",
+"attributes": {
+"fact_type": "remedy",
+"description": "Complaint: I am a HACC resident filing a retaliation complaint under housing discrimination protections because I believe I was treated unfairly after exercising my rights as a tenant. In my situation, I raised concerns internally about ..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_7": {
+"id": "entity_7",
+"type": "person",
+"name": "HR",
+"attributes": {
+"role": "hr"
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_8": {
+"id": "entity_8",
+"type": "fact",
+"name": "Timeline detail: I can explain the impact in plain terms. The biggest impa...",
+"attributes": {
+"fact_type": "timeline",
+"description": "I can explain the impact in plain terms. The biggest impact was fear and instability about my housing. After I filed ..."
+},
+"confidence": 0.6,
+"source": "complaint"
+}
+},
+"relationships": {}
+}

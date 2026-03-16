@@ -1,0 +1,167 @@
+{
+"timestamp": "20260315_034753",
+"runtime": {
+"mode": "llm_router",
+"provider": "codex_cli",
+"model": "gpt-5.2-codex",
+"complainant_backend_class": "LLMRouterBackend",
+"critic_backend_class": "LLMRouterBackend"
+},
+"router_diagnostics": {
+"ipfs_router": {
+"status": "available",
+"backend_name": "KuboCLIBackend",
+"backend_present": true,
+"error": "",
+"provider": "ipfs_datasets_py",
+"metadata": {
+"operation": "storage_backend_status",
+"backend_available": true,
+"provider": "ipfs_datasets_py",
+"implementation_status": "available",
+"details": {
+"operation": "storage_backend_status",
+"backend_available": true,
+"implementation_status": "available"
+}
+}
+},
+"embeddings_router": {
+"status": "success",
+"index_name": "router_diag",
+"document_count": 2,
+"dimension": 384,
+"provider": "ipfs_datasets_py.auto",
+"model_name": "",
+"files": {
+"vectors_path": "/tmp/tmps8306iuj/router_diag.vectors.npy",
+"records_path": "/tmp/tmps8306iuj/router_diag.records.jsonl",
+"manifest_path": "/tmp/tmps8306iuj/router_diag.manifest.json"
+},
+"metadata": {
+"operation": "create_vector_index",
+"backend_available": true,
+"provider": "ipfs_datasets_py",
+"implementation_status": "implemented",
+"batch_size": 32,
+"details": {
+"operation": "create_vector_index",
+"backend_available": true,
+"implementation_status": "implemented",
+"batch_size": 32
+}
+}
+}
+},
+"inputs": {
+"num_sessions": 3,
+"max_turns": 2,
+"max_parallel": 1,
+"personalities": [],
+"hacc_preset": "core_hacc_policies",
+"hacc_count": null,
+"use_hacc_vector_search": false
+},
+"statistics": {
+"total_sessions": 3,
+"successful_sessions": 3,
+"failed_sessions": 0,
+"average_score": 0.5655,
+"min_score": 0.552,
+"max_score": 0.5915,
+"average_questions": 2.0,
+"average_duration": 29.84367044766744,
+"score_distribution": {
+"0.0-0.2": 0,
+"0.2-0.4": 0,
+"0.4-0.6": 3,
+"0.6-0.8": 0,
+"0.8-1.0": 0
+},
+"anchor_sections": {
+"expected_counts": {
+"general_policy": 1,
+"adverse_action": 1,
+"selection_criteria": 1,
+"reasonable_accommodation": 1
+},
+"covered_counts": {
+"adverse_action": 1,
+"selection_criteria": 1,
+"reasonable_accommodation": 1
+},
+"missing_counts": {
+"general_policy": 1
+},
+"coverage_by_section": {
+"adverse_action": {
+"expected": 1,
+"covered": 1,
+"missing": 0,
+"coverage_rate": 1.0
+},
+"general_policy": {
+"expected": 1,
+"covered": 0,
+"missing": 1,
+"coverage_rate": 0.0
+},
+"reasonable_accommodation": {
+"expected": 1,
+"covered": 1,
+"missing": 0,
+"coverage_rate": 1.0
+},
+"selection_criteria": {
+"expected": 1,
+"covered": 1,
+"missing": 0,
+"coverage_rate": 1.0
+}
+}
+}
+},
+"optimization_report": {
+"average_score": 0.5655,
+"score_trend": "stable",
+"recommended_hacc_preset": "core_hacc_policies",
+"priority_improvements": [
+"Improve coverage: current avg 0.49",
+"Improve information extraction: current avg 0.53",
+"Improve question quality: current avg 0.59"
+],
+"recommendations": [
+"Performance is moderate. Targeted improvements can significantly boost quality.",
+"Improve question formulation: make questions more specific and relevant.",
+"Enhance information extraction: ask follow-up questions when responses are vague.",
+"Increase empathy: acknowledge complainant's feelings and concerns.",
+"Expand topic coverage: ensure all important aspects are addressed.",
+"Decision-tree coverage is incomplete for seeded evidence sections. Add explicit probes for: general_policy.",
+"Knowledge graph gap count is high on average. Improve gap-reduction logic in complaint_phases/denoiser.py and ensure process_answer updates entities/relationships meaningfully.",
+"In 2 sessions, KG gaps did not reduce over iterations. Consider making denoiser.process_answer reduce gaps deterministically (e.g., marking gap items as addressed when answers supply the missing fields).",
+"KG gaps are not decreasing on average (or are increasing). Improve gap selection + answer processing so each turn reduces uncertainty.",
+"Dependency satisfaction rate is very low on average. Consider having denoising answers mark requirements as satisfied or add evidence/fact nodes as they are provided.",
+"Add a brief validating statement before targeted follow-ups on notices, staff involved, and documents.",
+"Ask targeted follow-ups that translate “vague policy language” into specifics: “What exact wording did the notice use?” “Did it cite a policy section or criteria?”",
+"Ask for the exact adverse action and the triggering complaint in a single, precise question.",
+"Best HACC preset so far is 'core_hacc_policies'. Prefer it when generating evidence-backed adversarial batches.",
+"Decision-tree coverage is weakest for these seeded anchor sections: adverse_action, selection_criteria, general_policy. Add more explicit branch logic for them."
+],
+"best_session_id": "session_20260315_034346_002"
+},
+"best_complaint": {
+"session_id": "session_20260315_034346_002",
+"initial_complaint_text": "I’m filing this complaint about a reasonable accommodation I asked for because of my disability. I’m an applicant, and I made it clear I needed an accommodation to be able to access the housing program. Even though their own policies say applicants with disabilities can request reasonable accommodations, it felt like my request was dismissed without a real interactive process or any meaningful effort to work with me.\n\nWhat happened is that I asked for help and was told no, or was given vague answers that didn’t address my actual needs. I wasn’t offered alternatives or a clear way to fix the issue. It left me feeling like I was being treated differently because of my disability. I don’t remember every date or exact wording, but I do remember feeling stuck and ignored.\n\nThis has had a real impact on me. It made it harder to move forward with housing, and it added stress when I was already dealing with health-related challenges. I’m not asking for special treatment—I’m asking for the reasonable accommodation that the policies say is supposed to be available to someone in my situation.\n\nI want this reviewed and for the housing authority to follow its own reasonable accommodation process for applicants with disabilities.",
+"score": 0.5915,
+"seed_type": "housing_discrimination",
+"seed_summary": "The strongest supporting material is 'ADMINISTRATIVE PLAN'. applicant as a reasonable accommodation for a person with a disability, if an applicant"
+},
+"artifacts": {
+"output_dir": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_batch3x2",
+"results_json": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_batch3x2/adversarial_results.json",
+"optimization_report_json": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_batch3x2/optimization_report.json",
+"anchor_section_csv": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_batch3x2/anchor_section_coverage.csv",
+"best_complaint_bundle_json": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_batch3x2/best_complaint_bundle.json",
+"session_state_dir": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_batch3x2/sessions"
+}
+}

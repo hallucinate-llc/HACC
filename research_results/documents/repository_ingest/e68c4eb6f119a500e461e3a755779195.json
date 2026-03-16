@@ -1,0 +1,69 @@
+{
+  "title": "www.guidestar.org profile shared 89796459-f7f6-4286-b0df-2352a87aef3f 66aa9e524f",
+  "relative_path": "research_results/third_party_downloads/www.guidestar.org/www.guidestar.org_profile_shared_89796459-f7f6-4286-b0df-2352a87aef3f_66aa9e524f.html",
+  "source_type": "repository_evidence",
+  "filename": "www.guidestar.org_profile_shared_89796459-f7f6-4286-b0df-2352a87aef3f_66aa9e524f.html",
+  "mime_type": "text/html",
+  "size": 638552,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 69,
+  "paragraph_count": 1,
+  "text_length": 60157,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 60157,
+    "text_length": 60157,
+    "raw_size": 638552,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 69
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 60157,
+      "text_length": 60157,
+      "raw_size": 638552,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "e68c4eb6f119a500e461e3a755779195",
+  "checksum": "4b0869552952bfcbcc5c008dfa07250369d672392ca00d436f18fca9f587530b",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.guidestar.org/www.guidestar.org_profile_shared_89796459-f7f6-4286-b0df-2352a87aef3f_66aa9e524f.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/e68c4eb6f119a500e461e3a755779195.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

@@ -1,0 +1,71 @@
+{
+  "title": "www.quantumresidential.com property the-nel",
+  "relative_path": "research_results/third_party_downloads/www.quantumresidential.com/www.quantumresidential.com_property_the-nel.html",
+  "source_type": "repository_evidence",
+  "filename": "www.quantumresidential.com_property_the-nel.html",
+  "mime_type": "text/html",
+  "size": 58041,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 1,
+  "paragraph_count": 1,
+  "text_length": 418,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 418,
+    "text_length": 418,
+    "raw_size": 58041,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 1
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 418,
+      "text_length": 418,
+      "raw_size": 58041,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "819d44f2e21eb1e7fc3dae57818a37d0",
+  "checksum": "92e1ba0f01871c30a41e546af318f8ad49f3b9bff5f1ff5c320a6d701b96515e",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.quantumresidential.com/www.quantumresidential.com_property_the-nel.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/819d44f2e21eb1e7fc3dae57818a37d0.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

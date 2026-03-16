@@ -1,0 +1,103 @@
+{
+"metadata": {
+"created_at": "2026-03-15T03:35:54.164999+00:00",
+"last_updated": "2026-03-15T03:35:54.168384+00:00",
+"version": "1.0"
+},
+"entities": {
+"entity_1": {
+"id": "entity_1",
+"type": "organization",
+"name": "HACC",
+"attributes": {
+"role": "respondent"
+},
+"confidence": 0.6,
+"source": "complaint"
+},
+"entity_2": {
+"id": "entity_2",
+"type": "organization",
+"name": "HACC. It",
+"attributes": {
+"role": "respondent"
+},
+"confidence": 0.6,
+"source": "complaint"
+},
+"entity_3": {
+"id": "entity_3",
+"type": "evidence",
+"name": "Notice",
+"attributes": {
+"evidence_type": "notice",
+"description": "Complaint: I am filing this retaliation complaint about how HACC handled my situation after I raised concerns and tried to use the grievance process. I made a complaint about my housing conditions and asked for help, and shortly after th..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_4": {
+"id": "entity_4",
+"type": "fact",
+"name": "Impact: Complaint: I am filing this retaliation complaint about h...",
+"attributes": {
+"fact_type": "impact",
+"description": "Complaint: I am filing this retaliation complaint about how HACC handled my situation after I raised concerns and tried to use the grievance process. I made a complaint about my housing conditions and asked for help, and shortly after th...",
+"clarification": "Sure. The impact has been mostly emotional and practical. Emotionally, I’ve been stressed and anxious because it feels like speaking up made things worse, and I’m worried about losing my housing. Practically, the adverse actions and notices have made me feel unstable and distracted, and it’s been harder to focus on daily life because I’m constantly worried about what comes next. \n\nI’ve tried to use the grievance process as HACC’s policies describe — a grievance is a dispute about HACC’s action or failure to act — but I didn’t feel I got a fair chance to explain my side before decisions were made. That’s why it feels retaliatory to me, especially given the timing after I asked for a grievance and due process."
+},
+"confidence": 0.75,
+"source": "complaint"
+},
+"entity_5": {
+"id": "entity_5",
+"type": "fact",
+"name": "Requested remedy: Complaint: I am filing this retaliation complaint about h...",
+"attributes": {
+"fact_type": "remedy",
+"description": "Complaint: I am filing this retaliation complaint about how HACC handled my situation after I raised concerns and tried to use the grievance process. I made a complaint about my housing conditions and asked for help, and shortly after th..."
+},
+"confidence": 0.55,
+"source": "complaint"
+},
+"entity_6": {
+"id": "entity_6",
+"type": "claim",
+"name": "Complaint Claim",
+"attributes": {
+"claim_type": "unknown",
+"description": "Complaint: I am filing this retaliation complaint about how HACC handled my situation after I raised concerns and tried to use the grievance process. I made a complaint about my housing conditions and asked for help, and shortly after th..."
+},
+"confidence": 0.5,
+"source": "complaint"
+}
+},
+"relationships": {
+"rel_1": {
+"id": "rel_1",
+"source_id": "entity_6",
+"target_id": "entity_1",
+"relation_type": "involves",
+"attributes": {},
+"confidence": 0.6,
+"source": "complaint"
+},
+"rel_2": {
+"id": "rel_2",
+"source_id": "entity_6",
+"target_id": "entity_2",
+"relation_type": "involves",
+"attributes": {},
+"confidence": 0.6,
+"source": "complaint"
+},
+"rel_3": {
+"id": "rel_3",
+"source_id": "entity_6",
+"target_id": "entity_3",
+"relation_type": "supported_by",
+"attributes": {},
+"confidence": 0.55,
+"source": "complaint"
+}
+}
+}

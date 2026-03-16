@@ -1,0 +1,56 @@
+{
+"metadata": {
+"created_at": "2026-03-15T03:47:34.910225+00:00",
+"last_updated": "2026-03-15T03:47:34.910302+00:00",
+"version": "1.0"
+},
+"nodes": {
+"node_1": {
+"id": "node_1",
+"node_type": "claim",
+"name": "Accommodation Request",
+"description": "I’m filing this complaint about a reasonable accommodation I asked for because of my disability. I’m an applicant, and I made it clear I needed an accommodation to be able to access the housing program. Even though their own policies say...",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {
+"claim_type": "accommodation"
+}
+},
+"node_2": {
+"id": "node_2",
+"node_type": "fact",
+"name": "Timeline of events",
+"description": "Dates or sequence of key events related to this claim",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {}
+},
+"node_3": {
+"id": "node_3",
+"node_type": "fact",
+"name": "Responsible party",
+"description": "Who took the action or decision tied to this claim",
+"satisfied": false,
+"confidence": 0.0,
+"attributes": {}
+}
+},
+"dependencies": {
+"dep_1": {
+"id": "dep_1",
+"source_id": "node_2",
+"target_id": "node_1",
+"dependency_type": "depends_on",
+"required": true,
+"strength": 1.0
+},
+"dep_2": {
+"id": "dep_2",
+"source_id": "node_3",
+"target_id": "node_1",
+"dependency_type": "depends_on",
+"required": true,
+"strength": 1.0
+}
+}
+}

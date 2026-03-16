@@ -1,0 +1,24 @@
+[
+{
+"domain": "qresinc.sharepoint.com",
+"url": "https://qresinc.sharepoint.com/sites/Portal",
+"final_url": "https://login.microsoftonline.com:443/74842533-dcde-4132-bb4f-f6c9b9280b3d/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-000000000000&response_mode=form_post&response_type=code%20id_token&resource=00000003-0000-0ff1-ce00-000000000000&scope=openid&nonce=CD084AFEBE465D9BFD51E70B581C6E0604AAF1CEB0753EEB-E8E4955659B97F5F2DCB29C18925478ED48E3D8E99A79B03E68B430EEBF200DE&redirect_uri=https%3A%2F%2Fqresinc.sharepoint.com%2F_forms%2Fdefault.aspx&state=OD0w&claims=%7B%22id_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&wsucxt=1&cobrandid=11bd8083-87e0-41b5-bb78-0bc43c8a8e8a&client-request-id=a861e8a1-a08b-b000-13c2-d16082cc2414",
+"status": "ok",
+"http_status": 200,
+"content_type": "text/html; charset=utf-8",
+"bytes": 41335,
+"saved_path": "research_results/third_party_downloads/qresinc.sharepoint.com/login.microsoftonline.com:443_74842533-dcde-4132-bb4f-f6c9b9280b3d_oauth2_authorize.html",
+"error": ""
+},
+{
+"domain": "www.paycomonline.net",
+"url": "https://www.paycomonline.net/v4/ats/web.php/jobs?clientkey=BC8C4A60F87D82E71EF353A71CF59EEA",
+"final_url": "https://www.paycomonline.net/v4/ats/web.php/portal/BC8C4A60F87D82E71EF353A71CF59EEA/career-page",
+"status": "ok",
+"http_status": 200,
+"content_type": "text/html; charset=UTF-8",
+"bytes": 5739,
+"saved_path": "research_results/third_party_downloads/www.paycomonline.net/www.paycomonline.net_v4_ats_web.php_portal_BC8C4A60F87D82E71EF353A71CF59EEA_career-page.html",
+"error": ""
+}
+]

@@ -1,0 +1,69 @@
+{
+  "title": "ORS Chapter 279C Public Contracting   Construction",
+  "relative_path": "research_data/raw_documents/ORS_Chapter_279C_Public_Contracting___Construction.html",
+  "source_type": "repository_evidence",
+  "filename": "ORS_Chapter_279C_Public_Contracting___Construction.html",
+  "mime_type": "text/html",
+  "size": 648268,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 357,
+  "paragraph_count": 1,
+  "text_length": 309682,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 309682,
+    "text_length": 309682,
+    "raw_size": 648268,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 357
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 309682,
+      "text_length": 309682,
+      "raw_size": 648268,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "c0a133c3e7874de41e9a222865ccd8e9",
+  "checksum": "0e67e66f1835c824e69bbfbdbf0a118196c968165c2878ed4f2c576a12039e69",
+  "source_path": "/home/barberb/HACC/research_data/raw_documents/ORS_Chapter_279C_Public_Contracting___Construction.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/c0a133c3e7874de41e9a222865ccd8e9.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

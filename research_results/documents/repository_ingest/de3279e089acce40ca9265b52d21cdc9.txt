@@ -1,0 +1,381 @@
+# Risk Score > 0 — Notes & Document Summaries
+Generated: 2025-12-31T11:07:04
+## Sources used
+- Index: `research_results/document_index_20251231_100922.json`
+- Summary CSV: `research_results/summary_20251231_100922.csv`
+- Parse manifest: `research_results/documents/parse_manifest.json`
+- Prior rollup (domains + top docs): `research_results/risk_review_20251231.md`
+## What “risk_score” means (practical)
+- It’s a keyword-based heuristic: higher score generally indicates more DEI / proxy terms + more “binding” language (e.g., must/shall/required) + applicability tags (hiring/procurement/training/housing).
+- It is **not** a legal determination by itself; it’s a triage signal for what to read next.
+## Noise filtering applied (for decision support)
+- Excluded: Quantum Residential site assets, images, JavaScript, and CSS (frequent false positives).
+- Remaining focused set: 115 documents (out of 253 with risk_score>0).
+## Category breakdown (focused set)
+- Framework/influence: 30
+- Unclassified local PDF: 21
+- Other third-party: 17
+- Infrastructure noise: 17
+- Government/operations: 15
+- Government/operations (PDF): 14
+- Portal/login (context only): 1
+## Top domains (focused set)
+- (no-domain): max_risk=3 docs=35
+- www.racialequityalliance.org: max_risk=3 docs=9
+- obiu.org: max_risk=3 docs=6
+- www.raceforward.org: max_risk=3 docs=6
+- www.oregonmetro.gov: max_risk=3 docs=4
+- en.wikipedia.org: max_risk=2 docs=6
+- opportunityagenda.org: max_risk=2 docs=5
+- www.drupal.org: max_risk=2 docs=4
+- www.hud.gov: max_risk=2 docs=4
+- www.hudexchange.info: max_risk=2 docs=4
+- schema.org: max_risk=2 docs=3
+- d3uf7shreuzboy.cloudfront.net: max_risk=2 docs=3
+- www.osba.org: max_risk=2 docs=3
+- www.charitynavigator.org: max_risk=2 docs=3
+- paycom.com: max_risk=2 docs=2
+- belonging.berkeley.edu: max_risk=2 docs=2
+- tinyurl.com: max_risk=2 docs=2
+- github.com: max_risk=2 docs=2
+- oregonbuys.gov: max_risk=2 docs=2
+- raceforward.org: max_risk=2 docs=2
+## Key takeaways (what is likely worth follow-up)
+- OHCS / ORCA materials show up repeatedly (including an ORCA DEI agreement page and an ORCA manual PDF). If your next stage is “what requirements may attach to housing development funding applications,” these are high-leverage reads.
+- Oregon agency “DEI/Inclusion plans” appear as long PDFs with procurement/hiring/service-delivery language. These are often operational playbooks (not necessarily binding on HACC), but can indicate partner expectations and common statewide vocabulary.
+- Metro’s affordable housing bond pages and oversight materials are present; these are relevant if HACC intersects with Metro bond-funded housing, reporting, or civil-rights framing.
+- The Race Forward / GARE / OBI/OBIU documents are primarily frameworks (REIA tools, narrative strategy, targeted universalism). Treat these as influence/context sources rather than compliance sources.
+## Common false positives in this list (usually not worth time)
+- “Infrastructure noise” (Wikipedia, Schema.org, Drupal docs, GitHub, CloudFront i18n JSON): frequently scores because it contains words like “policy,” “standard,” “required,” or metadata vocabulary.
+- Portal/login captures (e.g., OregonBuys login pages): useful only if the procurement portal itself is a research target.
+## Government/operations (PDF) — Top documents
+- risk=3 len=245854 title=State of Oregon
+- url=file://research_results/documents/raw/e074d302eac8c1251ce84c7611f87a01.pdf
+- file=research_results/documents/parsed/e074d302eac8c1251ce84c7611f87a01.txt
+- keywords: dei=[equity; inclusion; underrepresented groups; diversity; minority; marginalized; underrepresented; inclusive; anti-racist; equity initiatives; equitable; racial justice; underserved; bipoc; equity framework; people of color; accessibility; dei] | proxy=[safe space; inclusive environment; equity initiatives; bipoc; equity framework] | binding=[standard; statewide; rule; policy; contract; agreement; applicability; must; compliance; required] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=3 len=210365 title=Housing Stability Council
+- url=file://research_results/documents/raw/a2f08c4c1146471bbf56e2808875d0b6.pdf
+- file=research_results/documents/parsed/a2f08c4c1146471bbf56e2808875d0b6.txt
+- keywords: dei=[equity; inclusion; diversity; minority; marginalized; underrepresented; inclusive; equitable; racial justice; underserved; bipoc; accessibility; dei] | proxy=[bipoc; lived experience] | binding=[shall; standard; statewide; rule; policy; contract; agreement; must; compliance; required] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=3 len=194354 title=Inclusion PLAN
+- url=file://research_results/documents/raw/b3b027941a48b0372a0fe52293173996.pdf
+- file=research_results/documents/parsed/b3b027941a48b0372a0fe52293173996.txt
+- keywords: dei=[equity; cultural humility; underrepresented groups; diversity; minority; marginalized; underrepresented; inclusive; anti-racist; equitable; inclusion; underserved; bipoc; equity framework; people of color; accessibility; dei] | proxy=[bipoc; equity framework; inclusive environment; safe space] | binding=[standard; statewide; rule; policy; contract; agreement; applicability; must; compliance; required] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=3 len=148125 title=Oregon Housing and Community Services
+- url=https://www.oregon.gov/ohcs/rental-housing/housing-development/oregon-centralized-application-orca/Documents/how-to-apply/orca-manual-2025-july.pdf
+- file=research_results/documents/parsed/36569dd9f987a996afefc9d54375067e.txt
+- keywords: dei=[equity; inclusion; diversity; minority; equitable; racial justice; underserved; bipoc; people of color; accessibility; dei] | proxy=[bipoc] | binding=[shall; standard; rule; policy; contract; agreement; must; regulation; applicable to; compliance; binding; required] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=3 len=104349 title=Housing Stability Council
+- url=file://research_results/documents/raw/f05cefc6c4eb4225c881409d8daadc29.pdf
+- file=research_results/documents/parsed/f05cefc6c4eb4225c881409d8daadc29.txt
+- keywords: dei=[equity; inclusion; equity lens; diversity; equitable; racial justice; underserved; bipoc; minority; dei] | proxy=[equity lens; bipoc] | binding=[shall; standard; statewide; policy; contract; agreement; obligated; compliance; required] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=3 len=89754 title=Housing Stability Council
+- url=file://research_results/documents/raw/6431de02c3af80fab467e7aebdc1d17c.pdf
+- file=research_results/documents/parsed/6431de02c3af80fab467e7aebdc1d17c.txt
+- keywords: dei=[equity; inclusion; equity lens; diversity; minority; inclusive; equitable; racial justice; underserved; bipoc; people of color; accessibility; dei] | proxy=[equity lens; bipoc] | binding=[shall; standard; statewide; rule; policy; contract; agreement; must; regulation; compliance; required] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=3 len=75911 title=Housing Stability Council
+- url=file://research_results/documents/raw/74c6bb8d3aa480a95207e0085fc1c4c0.pdf
+- file=research_results/documents/parsed/74c6bb8d3aa480a95207e0085fc1c4c0.txt
+- keywords: dei=[equity; inclusion; diversity; minority; underrepresented; inclusive; equitable; racial justice; underserved; bipoc; accessibility; dei] | proxy=[bipoc] | binding=[shall; mandatory; standard; statewide; rule; policy; contract; agreement; must; compliance; required] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=3 len=46832 title=OREGON REAL ESTATE AGENCY
+- url=file://research_results/documents/raw/4260e59b296ab49cb9ae241fbba37c68.pdf
+- file=research_results/documents/parsed/4260e59b296ab49cb9ae241fbba37c68.txt
+- keywords: dei=[equity; underrepresented groups; diversity; minority; underrepresented; inclusive; equitable; inclusion; people of color; accessibility; dei] | proxy=[inclusive environment; cultural competence] | binding=[shall; statewide; directive; rule; policy; contract; agreement; governing; regulation; compliance; required] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=3 len=36176 title=Oregon Department of Land Conservation
+- url=file://research_results/documents/raw/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.pdf
+- file=research_results/documents/parsed/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.txt
+- keywords: dei=[equity; inclusion; diversity; marginalized; inclusive; equitable; racial justice; underserved; people of color; minority; dei] | proxy=[inclusive environment; cultural competence; lived experience] | binding=[shall; standard; statewide; rule; policy; contract; must; regulation; compliance; required] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=3 len=16147 title=TO: Ethan Stuckmayer, Housing Division Manager
+- url=file://research_results/documents/raw/f17c22e859e2c48b5a346d23fc10a3c0.pdf
+- file=research_results/documents/parsed/f17c22e859e2c48b5a346d23fc10a3c0.txt
+- keywords: dei=[equity; diversity; marginalized; equitable; inclusion; underserved; equity framework; accessibility] | proxy=[equity framework] | binding=[standard; statewide; rule; policy; must; compliance] | tags=[hiring; housing; community engagement]
+- risk=2 len=695867 title=OREGON SYSTEM DEVELOPMENT
+- url=https://www.oregon.gov/ohcs/development/Documents/Oregon%20SDC%20Study_FinalReport_121422.pdf
+- file=research_results/documents/parsed/4e61daf9249f61c5361c07e4550f5841.txt
+- keywords: dei=[equity; diversity; equitable; inclusion; accessibility] | proxy=[] | binding=[shall; standard; statewide; directive; rule; policy; contract; agreement; applicability; ordinance; governing; must; regulation; applicable to; compliance; required] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=2 len=26474 title=NOTE: This PDF is an excerpt from the Oregon Department of Administrative Services' 2021 DEI Action
+- url=file://research_results/documents/raw/ffb8613e7bb63a09a1349a4f4cd7e90b.pdf
+- file=research_results/documents/parsed/ffb8613e7bb63a09a1349a4f4cd7e90b.txt
+- keywords: dei=[equity; inclusion; social justice; diversity; minority; underrepresented; inclusive; equitable; racial justice; underserved; cultural humility; people of color; accessibility; dei] | proxy=[] | binding=[policy; must; standard; required] | tags=[hiring; training; housing; community engagement]
+- risk=2 len=19177 title=Oregon Housing and Community Services
+- url=file://research_results/documents/raw/592594abd4eb6a8bad89ce62855bb42e.pdf
+- file=research_results/documents/parsed/592594abd4eb6a8bad89ce62855bb42e.txt
+- keywords: dei=[equity; inclusion; diversity; racial justice; underserved; minority; dei] | proxy=[] | binding=[contract; applicability; must; compliance; required] | tags=[hiring; procurement; housing; community engagement]
+- risk=2 len=4171 title=Oregon Buys
+- url=file://research_results/documents/raw/c2c9284f53c491b8423127ffa00215af.pdf
+- file=research_results/documents/parsed/c2c9284f53c491b8423127ffa00215af.txt
+- keywords: dei=[equity] | proxy=[] | binding=[policy; contract; required] | tags=[procurement; housing]
+## Government/operations — Top documents
+- risk=3 len=5449 title=Projects | Metro Skip to main content collapse all Events News and stories Tools and data Contact Language hub Metro logo, to the homepage Open menu Close menu
+- url=https://www.oregonmetro.gov/projects
+- file=research_results/documents/parsed/0fa504280ae86dd4e5ccf8c473b7d22c.txt
+- keywords: dei=[equity; accessibility] | proxy=[equity plan] | binding=[policy; contract] | tags=[hiring; procurement; training; housing]
+- risk=2 len=18226 title=News | HUD.gov / U.S. Department of Housing and Urban Development (HUD) Skip to main content An official website of the United States Government Here’s how you
+- url=https://www.hud.gov/news
+- file=research_results/documents/parsed/07191d2e982a998b5c108d04213e94bb.txt
+- keywords: dei=[accessibility; dei] | proxy=[] | binding=[rule; contract; agreement; must; regulation] | tags=[hiring; procurement; housing]
+- risk=2 len=8895 title=About - HUD Exchange Skip to main content NEED HOUSING ASSISTANCE? Email Updates Log In HUD Exchange Search Toggle navigation Search Form title Search Log In Pr
+- url=https://www.hudexchange.info/about/
+- file=research_results/documents/parsed/03f0b1ced9a67059ca7c1c803601a4f1.txt
+- keywords: dei=[accessibility] | proxy=[] | binding=[policy; regulation] | tags=[hiring; procurement; training; housing]
+- risk=2 len=7525 title=Racial equity and housing | Metro Skip to main content collapse all Events News and stories Tools and data Contact Language hub Metro logo, to the homepage Open
+- url=https://www.oregonmetro.gov/what-metro-does/housing-and-homelessness/affordable-housing-bond/racial-equity
+- file=research_results/documents/parsed/d1b57d035c043d274245fea7ac99f95a.txt
+- keywords: dei=[equity; diversity; underrepresented; accessibility; equitable; inclusion; people of color; minority] | proxy=[] | binding=[policy; contract; must; regulation; binding; required] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=2 len=6458 title=Homelessness Assistance Programs - HUD Exchange Skip to main content NEED HOUSING ASSISTANCE? Email Updates Log In HUD Exchange Search Toggle navigation Search
+- url=https://www.hudexchange.info/homelessness-assistance/
+- file=research_results/documents/parsed/b8db36676c4c140396b695f791f8e0b9.txt
+- keywords: dei=[accessibility] | proxy=[] | binding=[policy; standard; regulation] | tags=[hiring; procurement; training; housing]
+- risk=2 len=5340 title=Oregon Housing and Community Services : ORCA DEI Agreement : Oregon Centralized Application : State of Oregon Skip to main content An official website of the St
+- url=https://www.oregon.gov/ohcs/rental-housing/housing-development/oregon-centralized-application-orca/pages/orca-diversity-equity-inclusion-agreement.aspx
+- file=research_results/documents/parsed/0033be02ec78316625017000c92e110e.txt
+- keywords: dei=[equity; diversity; deib; inclusion; racial justice; dei] | proxy=[] | binding=[standard; agreement; must; compliance; required] | tags=[hiring; procurement; housing; community engagement]
+- risk=2 len=5187 title=HMIS Data Standards - HUD Exchange Skip to main content NEED HOUSING ASSISTANCE? Email Updates Log In HUD Exchange Search Toggle navigation Search Form title Se
+- url=https://www.hudexchange.info/resource/3824/hmis-data-dictionary/
+- file=research_results/documents/parsed/022621fee8894629a4293f7bcd169817.txt
+- keywords: dei=[accessibility] | proxy=[] | binding=[policy; standard; required; regulation] | tags=[hiring; procurement; training; housing]
+- risk=2 len=5075 title=Committees | Metro Skip to main content collapse all Events News and stories Tools and data Contact Language hub Metro logo, to the homepage Open menu Close men
+- url=https://www.oregonmetro.gov/committees
+- file=research_results/documents/parsed/ebc99fc1209f8c2c5f749b2004124f65.txt
+- keywords: dei=[equity; inclusion; accessibility] | proxy=[] | binding=[policy; contract] | tags=[hiring; procurement; training; housing]
+- risk=2 len=4636 title=HUD Home | HUD.gov / U.S. Department of Housing and Urban Development (HUD) Skip to main content An official website of the United States Government Here’s how
+- url=https://www.hud.gov/
+- file=research_results/documents/parsed/1171b9007c447304c2078fde38778fb3.txt
+- keywords: dei=[accessibility; dei] | proxy=[] | binding=[policy; contract] | tags=[procurement; housing]
+- risk=2 len=4421 title=Metro Skip to main content collapse all Events News and stories Tools and data Contact Language hub Metro logo, to the homepage Open menu Close menu What Metro
+- url=https://www.oregonmetro.gov/
+- file=research_results/documents/parsed/78c1b6400b5d5a077a730e1abdd3a397.txt
+- keywords: dei=[equity; accessibility] | proxy=[] | binding=[contract] | tags=[hiring; procurement; training; housing]
+- risk=2 len=4140 title=Welcome to HUD Exchange - HUD Exchange Skip to main content NEED HOUSING ASSISTANCE? Email Updates Log In HUD Exchange Search Toggle navigation Search Form titl
+- url=https://www.hudexchange.info/
+- file=research_results/documents/parsed/5b94e8a5df0af6d0ee9bdeaa10261e5e.txt
+- keywords: dei=[accessibility] | proxy=[] | binding=[policy; regulation] | tags=[hiring; procurement; training; housing]
+- risk=2 len=2035 title=We Provide Procurement Transformation Solutions | Periscope Holdings Menu For Buyers NIGP Solutions For Suppliers Contact Us For Buyers NIGP Solutions Who We Ar
+- url=https://www.periscopeholdings.com/who-we-are?p=who-we-are
+- file=research_results/documents/parsed/98c9506cf4fdebe9ad866266418748db.txt
+- keywords: dei=[diversity] | proxy=[] | binding=[compliance; policy] | tags=[hiring; procurement; housing]
+- risk=1 len=5840 title=Contact information for FHEO Offices | HUD.gov / U.S. Department of Housing and Urban Development (HUD) Skip to main content An official website of the United S
+- url=https://www.hud.gov/contactus/fairhousing
+- file=research_results/documents/parsed/60836bb392b2f12f39e28102c4ae36fa.txt
+- keywords: dei=[accessibility] | proxy=[] | binding=[] | tags=[housing]
+- risk=1 len=3077 title=Office of Equal Employment Opportunity: No Fear Act | HUD.gov / U.S. Department of Housing and Urban Development (HUD) Skip to main content An official website
+- url=https://www.hud.gov/no-fear-act
+- file=research_results/documents/parsed/ce61429f7a2184a4678907a98c463d66.txt
+- keywords: dei=[accessibility] | proxy=[] | binding=[] | tags=[hiring; housing]
+- risk=1 len=720 title=Oregon.gov : State of Oregon Oregon.gov Top Services Top Links Looking for a State Agency? Search Agencies Looking for an Online Service? Search Services Featur
+- url=https://www.oregon.gov/Pages/index.aspx
+- file=research_results/documents/parsed/43a842a53cfa511e1bc88276a0352d1c.txt
+- keywords: dei=[accessibility] | proxy=[] | binding=[] | tags=[hiring; housing; community engagement]
+## Framework/influence — Top documents
+- risk=3 len=35957 title=OBI University Home Courses About How to Use OBI University What is OBI Contact Us OBI Home SIGN UP SIGN IN Explore our new courses on targeted universalism! Sh
+- url=https://obiu.org/
+- file=research_results/documents/parsed/3118d8dcd1c708d5160b1108a9b231ea.txt
+- keywords: dei=[equity; inclusion; social justice; cultural responsiveness; diversity; inclusive; equity initiatives; equitable; racial justice; accessibility; dei] | proxy=[equity initiatives] | binding=[shall; policy; contract; statewide] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=3 len=32684 title=Targeted Univeralism 1: What is TU? Home Courses About How to Use OBI University What is OBI Contact Us OBI Home SIGN UP SIGN IN What is Targeted Universalism?
+- url=https://obiu.org/course/what-is-targeted-universalism
+- file=research_results/documents/parsed/65855a9e72d39c381c793fccf7e2afd0.txt
+- keywords: dei=[equity; inclusion; social justice; diversity; inclusive; equity initiatives; equitable; racial justice; cultural humility; accessibility; cultural responsiveness] | proxy=[equity initiatives; lived experience; equity plan] | binding=[shall; statewide; policy; contract; agreement] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=3 len=32626 title=Targeted Universalism 3: Stages of TU, part two Home Courses About How to Use OBI University What is OBI Contact Us OBI Home SIGN UP SIGN IN Stages of Targeted
+- url=https://obiu.org/course/stages-of-targeted-univeralism-part2
+- file=research_results/documents/parsed/dc398148018f34aaa217529c5dbcce3b.txt
+- keywords: dei=[equity; inclusion; social justice; diversity; inclusive; equity initiatives; equitable; racial justice; cultural humility; accessibility; cultural responsiveness] | proxy=[equity initiatives; lived experience; equity plan] | binding=[shall; statewide; policy; contract; agreement] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=3 len=32531 title=Targeted Universalism 2: Stages of TU, part one Home Courses About How to Use OBI University What is OBI Contact Us OBI Home SIGN UP SIGN IN Stages of Targeted
+- url=https://obiu.org/course/stages-of-targeted-universalism-part1
+- file=research_results/documents/parsed/d222d253ff69a82ff3faca1b694d631e.txt
+- keywords: dei=[equity; inclusion; social justice; diversity; inclusive; equity initiatives; equitable; racial justice; cultural humility; accessibility; cultural responsiveness] | proxy=[equity initiatives; lived experience; equity plan] | binding=[shall; statewide; policy; contract; agreement] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=3 len=22905 title=Courses | OBI University Home Courses About How to Use OBI University What is OBI Contact Us OBI Home SIGN UP SIGN IN OBIU Courses Explore all of the classes th
+- url=https://obiu.org/courses
+- file=research_results/documents/parsed/385a88a7fe2da014385f69da14fe3381.txt
+- keywords: dei=[equity; inclusion; social justice; diversity; inclusive; equity initiatives; equitable; racial justice; cultural humility; accessibility; cultural responsiveness] | proxy=[equity initiatives] | binding=[shall; statewide; policy; contract; agreement] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=3 len=15121 title=Navigating Racial Equity Work When Leadership's Support Is Only Symbolic Skip main navigation (Press Enter). Log in Toggle navigation Who We Are About Us Our Ap
+- url=https://www.racialequityalliance.org/blogs/gare-team/2025/12/11/navigating-racial-equity-work-when-leaderships-sup
+- file=research_results/documents/parsed/cd4a2c72e4d00cf7d614ababe9e73779.txt
+- keywords: dei=[equity; inclusion; social justice; diversity; marginalized; equity initiatives; racial justice; dei] | proxy=[equity initiatives; equity plan] | binding=[compliance; policy; ordinance; directive] | tags=[hiring; housing]
+- risk=3 len=12664 title=Just Narratives for Multiracial Solidarity | Race Forward Skip to main content Main navigation Learn About Us Our Story Our Mission, Vision, and Values Our Stra
+- url=https://www.raceforward.org/training-and-events/just-narratives
+- file=research_results/documents/parsed/d000a9697b5ecd1908fdc47f91470b1e.txt
+- keywords: dei=[equity; diversity; marginalized; inclusive; equitable; racial justice; people of color] | proxy=[lived experience] | binding=[policy; must; required] | tags=[hiring; training; housing; community engagement]
+- risk=3 len=12584 title=About | OBI University Home Courses About How to Use OBI University What is OBI Contact Us OBI Home SIGN UP SIGN IN What is the Othering & Belonging Institute?
+- url=https://obiu.org/about
+- file=research_results/documents/parsed/a626e07c5852ed3bdb811988165371fe.txt
+- keywords: dei=[equity; inclusion; social justice; diversity; inclusive; equity initiatives; equitable; racial justice; accessibility; cultural responsiveness] | proxy=[equity initiatives] | binding=[shall; policy; contract; statewide] | tags=[procurement; training; housing; community engagement]
+- risk=3 len=12324 title=Local, Regional, & State Government Practitioners Gain New Skills, Insights, and Connections at the Inaugural Just Narratives Convening Skip main navigation (Pr
+- url=https://www.racialequityalliance.org/blogs/gare-team/2025/12/16/government-at-just-narratives
+- file=research_results/documents/parsed/0907648c5876f269eb95f4122bbe6150.txt
+- keywords: dei=[equity; racial justice; justice-centered; inclusion] | proxy=[lived experience] | binding=[statewide; policy; contract; governing; must] | tags=[procurement; housing]
+- risk=3 len=10278 title=What is Racial Equity? | Race Forward Skip to main content Main navigation Learn About Us Our Story Our Mission, Vision, and Values Our Strategic Plan Annual Re
+- url=https://www.raceforward.org/what-racial-equity
+- file=research_results/documents/parsed/a190e1e7829daedea88c07cffb922811.txt
+- keywords: dei=[equity; inclusive; equitable; equity framework; people of color] | proxy=[equity framework] | binding=[applicable to; policy; must] | tags=[hiring; training; housing; community engagement]
+- risk=3 len=6942 title=State of the Field - GARE Online Community Skip main navigation (Press Enter). Log in Toggle navigation Who We Are About Us Our Approach Our Impact Careers at G
+- url=https://www.racialequityalliance.org/resources/state-of-the-field-25
+- file=research_results/documents/parsed/181bd6ec8cfef085a9c88f92bf6a1ca5.txt
+- keywords: dei=[equity; equity initiatives; diversity] | proxy=[equity initiatives] | binding=[policy; agreement; ordinance; regulation; compliance] | tags=[hiring; housing; community engagement]
+- risk=2 len=505468 title={"name":"The Opportunity Agenda","description":"narrative, long-term narrative shift, storytelling, social justice, racial justice, economic justice, immigratio
+- url=https://opportunityagenda.org/wp-json/
+- file=research_results/documents/parsed/7ab1c698e9aca12f84f98488520ed0a0.txt
+- keywords: dei=[racial justice; social justice] | proxy=[] | binding=[must; standard; required] | tags=[hiring; housing]
+- risk=2 len=17516 title=Home | Othering & Belonging Institute Skip to main content Sign up for our new, free courses on Targeted Universalism at OBI University. Start Now Othering & Be
+- url=https://belonging.berkeley.edu/
+- file=research_results/documents/parsed/e1ab2e335f7e813fd3cfbd5c10ab62b6.txt
+- keywords: dei=[equity; diversity; inclusive; equitable; accessibility] | proxy=[] | binding=[policy] | tags=[hiring; training; housing; community engagement]
+- risk=2 len=13772 title=Targeted Universalism | Othering & Belonging Institute Skip to main content Sign up for our new, free courses on Targeted Universalism at OBI University. Start
+- url=https://belonging.berkeley.edu/targeted-universalism
+- file=research_results/documents/parsed/f220833a1ebb227c820ffdcc641e2779.txt
+- keywords: dei=[equity; diversity; marginalized; inclusive; equitable; inclusion; accessibility] | proxy=[] | binding=[policy; must] | tags=[procurement; training; housing; community engagement]
+- risk=2 len=9213 title=Seasons of Change: Reflections from Ithaca and the 2025 GARE Local Meeting Skip main navigation (Press Enter). Log in Toggle navigation Who We Are About Us Our
+- url=https://www.racialequityalliance.org/blogs/gare-team/2025/12/09/ithaca-local-meeting
+- file=research_results/documents/parsed/1bb15fecc239f35d9ee2fc03e86de86b.txt
+- keywords: dei=[equity; equitable; diversity] | proxy=[] | binding=[policy; statewide] | tags=[hiring; procurement; community engagement]
+- risk=2 len=7187 title=Cultural Week of Action on Race and Democracy | Race Forward Skip to main content Main navigation Learn About Us Our Story Our Mission, Vision, and Values Our S
+- url=https://www.raceforward.org/projects-programs-%26-initiatives/cultural-week-of-action
+- file=research_results/documents/parsed/4b919881b559c56832bdfb54da9e035e.txt
+- keywords: dei=[equity; inclusion; diversity; inclusive; racial justice] | proxy=[] | binding=[policy] | tags=[hiring; training; housing]
+- risk=2 len=5019 title=Advancing racial justice in our policies, institutions and culture. | Race Forward Skip to main content Main navigation Learn About Us Our Story Our Mission, Vi
+- url=https://www.raceforward.org/
+- file=research_results/documents/parsed/6edb45aeefba069c869f50585373f1c6.txt
+- keywords: dei=[equity; racial justice; equitable] | proxy=[] | binding=[policy] | tags=[procurement; training; housing]
+- risk=2 len=5019 title=Advancing racial justice in our policies, institutions and culture. | Race Forward Skip to main content Main navigation Learn About Us Our Story Our Mission, Vi
+- url=http://www.raceforward.org/
+- file=research_results/documents/parsed/13a8dbfefb0e62ac8f3861aa3b6c4758.txt
+- keywords: dei=[equity; racial justice; equitable] | proxy=[] | binding=[policy] | tags=[procurement; training; housing]
+- risk=2 len=4359 title=Home - GARE Online Community Skip main navigation (Press Enter). Log in Toggle navigation Who We Are About Us Our Approach Our Impact Careers at GARE Join Us Me
+- url=https://www.racialequityalliance.org/home
+- file=research_results/documents/parsed/0e1e03d72717fb6325339c86021d7ea8.txt
+- keywords: dei=[equity; racial justice; social justice] | proxy=[] | binding=[policy; governing] | tags=[housing]
+- risk=2 len=2946 title=Messages to Grow and Uproot: Narrative Strategy Amid Attacks on Diversity, Equity, Inclusion, and Racial Justice | Race Forward Skip to main content Main naviga
+- url=https://www.raceforward.org/resources/toolkits/messages-grow-and-uproot-narrative-strategy-amid-attacks-diversity-equity
+- file=research_results/documents/parsed/19fe65d220983b78d9b82406f68a7436.txt
+- keywords: dei=[equity; racial justice; inclusion; diversity] | proxy=[] | binding=[policy] | tags=[training; housing]
+## Portal/login (context only) — Top documents
+- risk=2 len=7916 title=OregonBuys - /view/login/login.xhtml skip to main content User ID Please enter the login id. Password Please enter the password. Forgot User ID Forgot Password
+- url=https://oregonbuys.gov:443/bso/
+- file=research_results/documents/parsed/f6741790087ba13efcf09ff18aaee9d6.txt
+- keywords: dei=[inclusion; diversity] | proxy=[] | binding=[shall; contract; required] | tags=[procurement; housing]
+## Infrastructure noise — Top documents
+- risk=2 len=67813 title=Person - Schema.org Type Note : You are viewing the development version of Schema.org . See how we work for more details. Schema.org Docs Schemas Validate About
+- url=https://schema.org/Person
+- file=research_results/documents/parsed/9e9cb48c1174c31afed273d1a674e5ba.txt
+- keywords: dei=[diversity] | proxy=[] | binding=[rule; standard; required] | tags=[hiring; procurement; training; housing]
+- risk=2 len=54745 title=ISO 8601 - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contac
+- url=https://en.wikipedia.org/wiki/ISO_8601
+- file=research_results/documents/parsed/097f2f6b250b065a6a9eb2d97f44d074.txt
+- keywords: dei=[inclusion; inclusive] | proxy=[] | binding=[shall; standard; rule; policy; agreement; must; required] | tags=[procurement]
+- risk=2 len=53382 title=ISO 4217 - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contac
+- url=https://en.wikipedia.org/wiki/ISO_4217
+- file=research_results/documents/parsed/db13e23918ccc7cc83dae317c32a5d58.txt
+- keywords: dei=[inclusion] | proxy=[] | binding=[shall; standard; rule; policy; agreement; must; regulation; required] | tags=[hiring; housing]
+- risk=2 len=50333 title=VideoObject - Schema.org Type Note : You are viewing the development version of Schema.org . See how we work for more details. Schema.org Docs Schemas Validate
+- url=https://schema.org/VideoObject
+- file=research_results/documents/parsed/5184c7c35874f7f32dd9b11fd5c0851e.txt
+- keywords: dei=[accessibility; diversity] | proxy=[] | binding=[applicable to; standard; required] | tags=[hiring; procurement; training; housing]
+- risk=2 len=37079 title=ImageObject - Schema.org Type Note : You are viewing the development version of Schema.org . See how we work for more details. Schema.org Docs Schemas Validate
+- url=https://schema.org/ImageObject
+- file=research_results/documents/parsed/2195e7212f1c4ad1e4ee1c0bb15a46b1.txt
+- keywords: dei=[accessibility; diversity] | proxy=[] | binding=[applicable to; standard; required] | tags=[hiring; procurement; training; housing]
+- risk=2 len=22250 title=RDFa - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us
+- url=https://en.wikipedia.org/wiki/RDFa
+- file=research_results/documents/parsed/70cd1c5a92bcf53af2ccfbe1bb03108d.txt
+- keywords: dei=[accessibility] | proxy=[] | binding=[rule; policy; standard; required] | tags=[hiring; housing]
+- risk=2 len=21062 title=Values & Principles | Drupal.org Skip to main content Skip to search Can we use first and third party cookies and web beacons to understand our audience, and to
+- url=https://www.drupal.org/about/values-and-principles
+- file=research_results/documents/parsed/adcf7235f7f3bbc0db58cf35869d2d55.txt
+- keywords: dei=[equity; diversity; inclusive; inclusion; accessibility] | proxy=[] | binding=[applicable to; policy; governing; agreement] | tags=[hiring; training; housing; community engagement]
+- risk=2 len=17140 title=Dublin Core - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Con
+- url=https://en.wikipedia.org/wiki/Dublin_Core
+- file=research_results/documents/parsed/244dee6f75bb503ebdcf3d3df5729d4a.txt
+- keywords: dei=[diversity] | proxy=[] | binding=[rule; policy; standard; required] | tags=[training]
+- risk=2 len=15904 title=Drupal Certified Partners | Drupal.org Skip to main content Skip to search Can we use first and third party cookies and web beacons to understand our audience,
+- url=https://www.drupal.org/drupal-services
+- file=research_results/documents/parsed/3624845de3c2316d6c0dbf0f2893e487.txt
+- keywords: dei=[accessibility] | proxy=[] | binding=[shall; policy; contract; standard] | tags=[hiring; procurement; training; housing]
+- risk=2 len=12337 title=Wikipedia, the free encyclopedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wiki
+- url=https://en.wikipedia.org/wiki/Main_Page
+- file=research_results/documents/parsed/ac8b3b54df4124a34387d7e8da8f3838.txt
+- keywords: dei=[dei] | proxy=[] | binding=[policy; standard] | tags=[training; housing; community engagement]
+## Other third-party — Top documents
+- risk=2 len=6051301 title=var qxr=Object.create;var oU=Object.defineProperty;var Sxr=Object.getOwnPropertyDescriptor;var Ixr=Object.getOwnPropertyNames;var Rxr=Object.getPrototypeOf,Pxr=
+- url=https://portal-applicant-tracking.us-cent.paycomonline.net/career-portal/main/index-sprawl-6ETZXKZJ.js
+- file=research_results/documents/parsed/cb1ac965894e26608da47802bbcd2ed2.txt
+- keywords: dei=[accessibility; dei] | proxy=[] | binding=[shall; mandatory; standard; rule; policy; contract; must; compliance; binding; required] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=2 len=65489 title={ "common": { "edit": "Modifier", "close": "Fermer", "closeSymbol": "×", "cancel": "Annuler", "insert": "Insérer", "selectTimezone": "Sélectionner un fuseau hor
+- url=https://d3uf7shreuzboy.cloudfront.net/WebRoot/stable/i18n/react-fr.c24098db.json
+- file=research_results/documents/parsed/7a83b025fa586877c6a5ea8493dc7719.txt
+- keywords: dei=[accessibility; dei] | proxy=[] | binding=[standard; required] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=2 len=63193 title={ "common": { "edit": "Editar", "close": "Cerrar", "closeSymbol": "×", "cancel": "Cancelar", "insert": "Insertar", "selectTimezone": "Seleccionar una zona horar
+- url=https://d3uf7shreuzboy.cloudfront.net/WebRoot/stable/i18n/react-es.5f80097a.json
+- file=research_results/documents/parsed/18a4457561e7c756d769d5af38c56b27.txt
+- keywords: dei=[accessibility; dei] | proxy=[] | binding=[standard; required] | tags=[hiring; procurement; training]
+- risk=2 len=57087 title={ "common": { "edit": "Edit", "close": "Close", "closeSymbol": "×", "cancel": "Cancel", "insert": "Insert", "selectTimezone": "Select a timezone", "confirmation
+- url=https://d3uf7shreuzboy.cloudfront.net/WebRoot/stable/i18n/react-en.d711bacb.json
+- file=research_results/documents/parsed/4aacabcdbcf635327d725f4d380c2cc3.txt
+- keywords: dei=[accessibility; dei] | proxy=[] | binding=[rule; must; standard; required] | tags=[hiring; procurement; training; housing]
+- risk=2 len=51615 title=<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI
+- url=https://www.osba.org/feed/
+- file=research_results/documents/parsed/592c84071aa2e1e2c199fe14a36d610c.txt
+- keywords: dei=[equity; underserved; diversity] | proxy=[] | binding=[statewide; rule; policy; contract; must; compliance; required] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=2 len=21400 title=Terms of use | Paycom Skip to Main Content Client Employee Accountant Paycom® Logo Login careers investors contact Request meeting Our Solution Overview Payroll
+- url=https://www.paycom.com/terms-of-use/
+- file=research_results/documents/parsed/4fada016a1e7290916d8640a92a5bb4b.txt
+- keywords: dei=[accessibility] | proxy=[] | binding=[shall; standard; policy; agreement; governing; must; regulation; compliance] | tags=[hiring; procurement; training; housing]
+- risk=2 len=20868 title=U.S. District Court and U.S. Court of Appeals Cases, Dockets and Filings | Justia Dockets & Filings Log In Sign Up Find a Lawyer Ask a Lawyer Research the Law L
+- url=https://dockets.justia.com/
+- file=research_results/documents/parsed/9fd5bea8a1a6cb3ee89674f6d06a3d6c.txt
+- keywords: dei=[diversity] | proxy=[] | binding=[policy; contract; standard; regulation] | tags=[hiring; procurement; training; housing]
+- risk=2 len=19229 title=Charity Navigator - Rating for Race Forward Sign in/Create an account Sign Out Nonprofit Resources Support Charity Navigator Discover Charities Best Charities A
+- url=https://www.charitynavigator.org/ein/942759879
+- file=research_results/documents/parsed/17d6cf0baacf85a5dc3bdc2d4e886207.txt
+- keywords: dei=[marginalized; diversity] | proxy=[] | binding=[policy; governing; standard] | tags=[hiring; housing]
+- risk=2 len=19110 title=Charity Navigator - Rating for Opportunity Agenda Inc. Sign in/Create an account Sign Out Nonprofit Resources Support Charity Navigator Discover Charities Best
+- url=https://www.charitynavigator.org/ein/843935514
+- file=research_results/documents/parsed/ee02c83be8b5d732d469696cbae371d2.txt
+- keywords: dei=[inclusive; marginalized; diversity] | proxy=[] | binding=[policy; governing; standard] | tags=[hiring; housing]
+- risk=2 len=11668 title=Related Northwest | Related California Skip to main Related California Related Northwest Luxury Rentals Related Corporate Related Beal Related Midwest Related A
+- url=https://www.relatedcalifornia.com/our-company/related-northwest
+- file=research_results/documents/parsed/8444b9d83856f5d89ff54709a5e8a7f1.txt
+- keywords: dei=[equitable] | proxy=[] | binding=[policy] | tags=[hiring; procurement; training; housing]
+## Unclassified local PDF — Top documents
+- risk=3 len=1288890 title=busin Ss
+- url=file://research_results/documents/raw/003c0bf391f9060e15360bb52c763605.pdf
+- file=research_results/documents/parsed/003c0bf391f9060e15360bb52c763605.txt
+- keywords: dei=[equity; inclusion; equity lens; social justice; diversity; minority; marginalized; underrepresented; inclusive; equity initiatives; equitable; racial justice; underserved; bipoc; equity framework; people of color; accessibility; dei] | proxy=[equity lens; barrier reduction; equity initiatives; bipoc; equity framework; lived experience; equity plan] | binding=[shall; mandatory; standard; statewide; rule; policy; contract; agreement; must; regulation; applicable to; compliance; required] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=3 len=540637 title=A SCIENCE, RESEARCH AND TECH MAG
+- url=file://research_results/documents/raw/77aef0247eed912205987be720f44eb3.pdf
+- file=research_results/documents/parsed/77aef0247eed912205987be720f44eb3.txt
+- keywords: dei=[equity; diversity; underrepresented; inclusive; equitable; inclusion; underserved; bipoc; minority; dei] | proxy=[overcoming obstacles; bipoc; first-generation] | binding=[standard; rule; policy; contract; agreement; governing; must; regulation; required] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=3 len=405875 title=NSF-Funded Convergence
+- url=file://research_results/documents/raw/a13956024790bc87e0defbaf2e9aaa63.pdf
+- file=research_results/documents/parsed/a13956024790bc87e0defbaf2e9aaa63.txt
+- keywords: dei=[equity; inclusion; social justice; underrepresented groups; diversity; minority; marginalized; underrepresented; inclusive; anti-racist; equitable; racial justice; underserved; bipoc; people of color; accessibility; dei] | proxy=[bipoc; cultural competence; lived experience] | binding=[mandatory; standard; rule; policy; contract; must; regulation; required] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=3 len=310529 title=Agenda
+- url=file://research_results/documents/raw/b7387a8f638b7ddd0b6a497e0d8d3e49.pdf
+- file=research_results/documents/parsed/b7387a8f638b7ddd0b6a497e0d8d3e49.txt
+- keywords: dei=[equity; underrepresented groups; diversity; minority; marginalized; underrepresented; inclusive; equitable; inclusion; underserved; bipoc; people of color; accessibility; dei] | proxy=[bipoc] | binding=[standard; policy; contract; agreement; regulation; compliance; required] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=3 len=178688 title=Si LM awa
+- url=file://research_results/documents/raw/2cb743c45485324adc632bb0642bc614.pdf
+- file=research_results/documents/parsed/2cb743c45485324adc632bb0642bc614.txt
+- keywords: dei=[equity; inclusion; equity lens; social justice; diversity; minority; marginalized; underrepresented; inclusive; equity initiatives; equitable; racial justice; underserved; cultural humility; people of color; accessibility; dei] | proxy=[equity lens; equity initiatives; lived experience; equity plan] | binding=[shall; mandatory; standard; statewide; rule; policy; contract; agreement; governing; must; compliance; required] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=3 len=156561 title=Defending the Hidden Figures:
+- url=file://research_results/documents/raw/7994a276120954c3d9f90e5633d232c8.pdf
+- file=research_results/documents/parsed/7994a276120954c3d9f90e5633d232c8.txt
+- keywords: dei=[equity; social justice; underserved; underrepresented groups; cultural humility; diversity; minority; marginalized; underrepresented; inclusive; equitable; inclusion; racial justice; bipoc; people of color; accessibility; dei; deia] | proxy=[bipoc; first-generation; safe space] | binding=[shall; mandatory; standard; directive; policy; contract; agreement; obligated; governing; must; applicable to; compliance; required] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=3 len=89868 title=»e “0%. LOCAL AND REGIONAL
+- url=https://www.racialequityalliance.org/HigherLogic/System/DownloadDocumentFile.ashx?DocumentFileKey=a1780a0b-4314-ff6c-e82a-824973972b52&forceDialog=1
+- file=research_results/documents/parsed/11925ba57cc06a39fad9a6dc5a8cc1f0.txt
+- keywords: dei=[equity; equity lens; social justice; diversity; inclusive; equitable; inclusion; equity framework; people of color] | proxy=[equity lens; equity framework; lived experience; equity plan] | binding=[policy; contract; governing; must; applicable to; binding; required] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=3 len=72989 title=Diversity, Equity, and
+- url=file://research_results/documents/raw/bbfc77a24628ff8e29dd977ba4c66095.pdf
+- file=research_results/documents/parsed/bbfc77a24628ff8e29dd977ba4c66095.txt
+- keywords: dei=[equity; social justice; diversity; underrepresented; marginalized; inclusive; anti-racist; equitable; inclusion; underserved; bipoc; equity framework; accessibility; dei] | proxy=[bipoc; equity framework] | binding=[standard; statewide; directive; policy; contract; agreement; must; required] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=3 len=69627 title=Developing the Processes and Potential to Engage Historically
+- url=file://research_results/documents/raw/1f3072ad9703ad0bed2e0dcd0a8d2d5c.pdf
+- file=research_results/documents/parsed/1f3072ad9703ad0bed2e0dcd0a8d2d5c.txt
+- keywords: dei=[equity; social justice; diversity; underrepresented; marginalized; inclusive; anti-racist; equitable; inclusion; underserved; bipoc; accessibility; dei] | proxy=[safe space; bipoc; lived experience] | binding=[standard; rule; agreement; must; required] | tags=[hiring; procurement; training; housing; community engagement]
+- risk=3 len=51150 title=DIVERSITY, EQUITY, AND
+- url=file://research_results/documents/raw/07a1076fa131f26b2cdcc68681afddbb.pdf
+- file=research_results/documents/parsed/07a1076fa131f26b2cdcc68681afddbb.txt
+- keywords: dei=[equity; inclusion; diversity; minority; underrepresented; inclusive; equitable; racial justice; underserved; people of color; accessibility; dei] | proxy=[inclusive environment; safe space; equity plan] | binding=[shall; mandatory; statewide; rule; policy; contract; must] | tags=[hiring; procurement; training; housing; community engagement]
+## Recommended next-stage reading order (fast path)
+- Start with Government/operations (PDF) items that directly mention housing councils, OHCS, Metro bond oversight, ORCA, or state agency DEI plans (these are most likely to affect HACC operations indirectly or directly).
+- Then review Government/operations web pages (HUD/HUDExchange, Oregon Metro equity pages, OregonBuys) for any procedural/contracting implications.
+- Treat Framework/influence docs (Race Forward, GARE, OBI) as “context + vocabulary” for what partners/grantors may ask for (impact assessments, targeted universalism framing, etc.).

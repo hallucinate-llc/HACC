@@ -1,0 +1,69 @@
+{
+  "title": "FINDINGS 20251231 015047",
+  "relative_path": "research_results/FINDINGS_20251231_015047.txt",
+  "source_type": "repository_evidence",
+  "filename": "FINDINGS_20251231_015047.txt",
+  "mime_type": "text/plain",
+  "size": 2831,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 3,
+  "paragraph_count": 1,
+  "text_length": 2637,
+  "input_format": "text",
+  "page_count": 1,
+  "extraction_method": "text_normalization",
+  "parse_quality": {
+    "quality_score": 98.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 2637,
+    "text_length": 2637,
+    "raw_size": 2831,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "text",
+    "normalization": "text_normalization",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 3
+    },
+    "extraction": {
+      "method": "text_normalization",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 2637,
+      "text_length": 2637,
+      "raw_size": 2831,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "4053270c3ba7f4859bd5acd4bc231804",
+  "checksum": "4ba2b85e57b36a5f434e0f119f14f416b99b893808f428f2c2676857aabe8a97",
+  "source_path": "/home/barberb/HACC/research_results/FINDINGS_20251231_015047.txt",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/4053270c3ba7f4859bd5acd4bc231804.txt",
+  "content_type": "text/plain",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

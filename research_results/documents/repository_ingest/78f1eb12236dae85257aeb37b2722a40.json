@@ -1,0 +1,69 @@
+{
+  "title": "third party download manifest quantum subsitemaps",
+  "relative_path": "research_results/third_party_download_manifest_quantum_subsitemaps.json",
+  "source_type": "repository_evidence",
+  "filename": "third_party_download_manifest_quantum_subsitemaps.json",
+  "mime_type": "application/json",
+  "size": 3182,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 4,
+  "paragraph_count": 1,
+  "text_length": 2902,
+  "input_format": "text",
+  "page_count": 1,
+  "extraction_method": "text_normalization",
+  "parse_quality": {
+    "quality_score": 98.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 2902,
+    "text_length": 2902,
+    "raw_size": 3182,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "text",
+    "normalization": "text_normalization",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 4
+    },
+    "extraction": {
+      "method": "text_normalization",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 2902,
+      "text_length": 2902,
+      "raw_size": 3182,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "78f1eb12236dae85257aeb37b2722a40",
+  "checksum": "38f4887d28d6cbda33f7a2d0f7a6f671f2c8c059c7098318134905eda078500d",
+  "source_path": "/home/barberb/HACC/research_results/third_party_download_manifest_quantum_subsitemaps.json",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/78f1eb12236dae85257aeb37b2722a40.txt",
+  "content_type": "application/json",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

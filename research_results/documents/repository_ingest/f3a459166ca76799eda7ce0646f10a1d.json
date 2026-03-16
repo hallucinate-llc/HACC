@@ -1,0 +1,69 @@
+{
+  "title": "www.portland.gov 31726563a0",
+  "relative_path": "research_results/third_party_downloads/www.portland.gov/www.portland.gov_31726563a0.html",
+  "source_type": "repository_evidence",
+  "filename": "www.portland.gov_31726563a0.html",
+  "mime_type": "text/html",
+  "size": 76044,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 6,
+  "paragraph_count": 1,
+  "text_length": 5302,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 5302,
+    "text_length": 5302,
+    "raw_size": 76044,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 6
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 5302,
+      "text_length": 5302,
+      "raw_size": 76044,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "f3a459166ca76799eda7ce0646f10a1d",
+  "checksum": "84db4dcaa923364d6418fc870bb2a1d54c61292ba1489e228225ac171f8a8e57",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.portland.gov/www.portland.gov_31726563a0.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/f3a459166ca76799eda7ce0646f10a1d.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

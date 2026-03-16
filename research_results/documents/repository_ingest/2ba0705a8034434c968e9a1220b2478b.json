@@ -1,0 +1,71 @@
+{
+  "title": "github.com facebook open-graph-protocol",
+  "relative_path": "research_results/third_party_downloads/github.com/github.com_facebook_open-graph-protocol.html",
+  "source_type": "repository_evidence",
+  "filename": "github.com_facebook_open-graph-protocol.html",
+  "mime_type": "text/html",
+  "size": 263031,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 5,
+  "paragraph_count": 1,
+  "text_length": 4322,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 4322,
+    "text_length": 4322,
+    "raw_size": 263031,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 5
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 4322,
+      "text_length": 4322,
+      "raw_size": 263031,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "2ba0705a8034434c968e9a1220b2478b",
+  "checksum": "43c3ffe533d55124e19e5a90accad1aa8650e61e2ab0982e333ca2f02e88ffa7",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/github.com/github.com_facebook_open-graph-protocol.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/2ba0705a8034434c968e9a1220b2478b.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

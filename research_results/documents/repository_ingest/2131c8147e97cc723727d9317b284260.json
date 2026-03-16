@@ -1,0 +1,71 @@
+{
+  "title": "login.microsoftonline.com:443 74842533-dcde-4132-bb4f-f6c9b9280b3d oauth2 authorize",
+  "relative_path": "research_results/third_party_downloads/qresinc.sharepoint.com/login.microsoftonline.com:443_74842533-dcde-4132-bb4f-f6c9b9280b3d_oauth2_authorize.html",
+  "source_type": "repository_evidence",
+  "filename": "login.microsoftonline.com:443_74842533-dcde-4132-bb4f-f6c9b9280b3d_oauth2_authorize.html",
+  "mime_type": "text/html",
+  "size": 41335,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 1,
+  "paragraph_count": 1,
+  "text_length": 23,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 23,
+    "text_length": 23,
+    "raw_size": 41335,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 1
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 23,
+      "text_length": 23,
+      "raw_size": 41335,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "2131c8147e97cc723727d9317b284260",
+  "checksum": "54f9715d07d21af5a9a34297f3e442a50086b83034aa0647e59d00c643b7e5a4",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/qresinc.sharepoint.com/login.microsoftonline.com:443_74842533-dcde-4132-bb4f-f6c9b9280b3d_oauth2_authorize.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/2131c8147e97cc723727d9317b284260.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

@@ -1,0 +1,69 @@
+{
+  "title": "kg violation seed queries 20251231 125530",
+  "relative_path": "research_results/kg_violation_seed_queries_20251231_125530.txt",
+  "source_type": "repository_evidence",
+  "filename": "kg_violation_seed_queries_20251231_125530.txt",
+  "mime_type": "text/plain",
+  "size": 59560,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 69,
+  "paragraph_count": 1,
+  "text_length": 59559,
+  "input_format": "text",
+  "page_count": 1,
+  "extraction_method": "text_normalization",
+  "parse_quality": {
+    "quality_score": 98.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 59559,
+    "text_length": 59559,
+    "raw_size": 59560,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "text",
+    "normalization": "text_normalization",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 69
+    },
+    "extraction": {
+      "method": "text_normalization",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 59559,
+      "text_length": 59559,
+      "raw_size": 59560,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "a03d0ea814ca7a1bc7ae877ab9700c53",
+  "checksum": "3af79c47c076929b04ce544fa39292c816563adec423482b71662895bd8d2c24",
+  "source_path": "/home/barberb/HACC/research_results/kg_violation_seed_queries_20251231_125530.txt",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/a03d0ea814ca7a1bc7ae877ab9700c53.txt",
+  "content_type": "text/plain",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

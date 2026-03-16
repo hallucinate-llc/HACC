@@ -1,0 +1,71 @@
+{
+  "title": "jobs.aiim.org job health-information-management-directorprivacy-officer 81532550 512cea3936",
+  "relative_path": "research_results/third_party_downloads/jobs.aiim.org/jobs.aiim.org_job_health-information-management-directorprivacy-officer_81532550_512cea3936.html",
+  "source_type": "repository_evidence",
+  "filename": "jobs.aiim.org_job_health-information-management-directorprivacy-officer_81532550_512cea3936.html",
+  "mime_type": "text/html",
+  "size": 235666,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 14,
+  "paragraph_count": 1,
+  "text_length": 10762,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 10762,
+    "text_length": 10762,
+    "raw_size": 235666,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 14
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 10762,
+      "text_length": 10762,
+      "raw_size": 235666,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "0e5bc28c10d7419e86ec533a8e564b77",
+  "checksum": "2ebb1635c681fd104fe028a3ab37c2aef169528a50486cd657a5764c4170149c",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/jobs.aiim.org/jobs.aiim.org_job_health-information-management-directorprivacy-officer_81532550_512cea3936.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/0e5bc28c10d7419e86ec533a8e564b77.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

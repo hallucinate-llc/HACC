@@ -1,0 +1,1833 @@
+{
+"timestamp": "2026-03-15T22:47:38.706991+00:00",
+"grounding_query": "retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+"claim_type": "housing_discrimination",
+"hacc_preset": "core_hacc_policies",
+"use_hacc_vector_search": false,
+"grounding": {
+"status": "success",
+"query": "retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+"claim_type": "housing_discrimination",
+"search_mode": "package",
+"use_vector": false,
+"search_payload": {
+"status": "success",
+"query": "retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+"results": [
+{
+"document_id": "document:c8dc2af6ee6996a0",
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"score": 4399.3864,
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"snippet": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"matched_rules": [
+{
+"text": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"section_title": "EXHIBIT 14-1: SAMPLE GRIEVANCE PROCEDURE",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 3
+},
+{
+"text": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+"section_title": "ACOP 11/1/24",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 3
+},
+{
+"text": "In states without due process determinations, HACC must grant opportunity for grievance",
+"section_title": "ACOP 11/1/24",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 3
+}
+],
+"matched_entities": [
+{
+"name": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "In states without due process determinations, HACC must grant opportunity for grievance",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "The notice must also state that the tenant may request a grievance hearing on the HACC’s",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "adverse action and will provide the subject of the record and the tenant a copy of such",
+"type": "policy_rule",
+"overlap": 3
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+},
+"document_id": "document:c8dc2af6ee6996a0",
+"document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 5318,
+"section_count": 3423,
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"text_length": 1401793,
+"status": "success"
+},
+"lexical_score": 4399.3864,
+"vector_score": 0.0,
+"search_modes": [
+"lexical"
+]
+},
+{
+"document_id": "document:be93a165d00f0101",
+"title": "ADMINISTRATIVE PLAN",
+"score": 4196.7273,
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"snippet": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"matched_rules": [
+{
+"text": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"section_title": "HACC Policy",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 2
+},
+{
+"text": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 2
+},
+{
+"text": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+"section_title": "HACC Policy",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 2
+}
+],
+"matched_entities": [
+{
+"name": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "HACC will inform the family of its policy regarding moves denied due to insufficient",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "See Chapter 9 for more detail on unit eligibility policies and process.",
+"type": "policy_rule",
+"overlap": 2
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+},
+"document_id": "document:be93a165d00f0101",
+"document_title": "ADMINISTRATIVE PLAN",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 7441,
+"section_count": 4968,
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"text_length": 1927962,
+"status": "success"
+},
+"lexical_score": 4196.7273,
+"vector_score": 0.0,
+"search_modes": [
+"lexical"
+]
+}
+],
+"returned_result_count": 2,
+"lexical_status": "success",
+"vector_status": "unavailable",
+"vector_error": null,
+"integration_status": {
+"complaint_generator_root": "/home/barberb/HACC/complaint-generator",
+"adapter_available": true,
+"degraded_reason": null,
+"preferred_vector_indexes": [
+{
+"index_name": "hacc_policy_graph",
+"index_dir": "/home/barberb/HACC/hacc_website/knowledge_graph/embeddings"
+},
+{
+"index_name": "hacc_text_chunks",
+"index_dir": "/home/barberb/HACC/hacc_website/knowledge_graph/embeddings"
+}
+],
+"capability_report": {
+"status": "degraded",
+"available_count": 8,
+"degraded_count": 3,
+"available_capabilities": [
+"documents",
+"graphrag",
+"ipfs_storage",
+"knowledge_graphs",
+"llm_router",
+"logic_tools",
+"mcp_gateway",
+"vector_store"
+],
+"degraded_capabilities": {
+"web_archiving": "No module named 'pydantic'",
+"common_crawl": "No module named 'pydantic'",
+"legal_scrapers": "No module named 'bs4'"
+},
+"family_counts": {
+"generation": 1,
+"storage": 1,
+"acquisition": 2,
+"documents": 1,
+"legal": 1,
+"graphs": 1,
+"validation": 2,
+"retrieval": 1,
+"mcp": 1
+},
+"capabilities": {
+"llm_router": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.llm_router",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "llm_router",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.llm",
+"contract_family": "generation"
+}
+},
+"ipfs_storage": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.ipfs_backend_router",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "ipfs_storage",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.storage",
+"contract_family": "storage"
+}
+},
+"web_archiving": {
+"status": "degraded",
+"available": false,
+"module_path": "ipfs_datasets_py.web_archiving",
+"degraded_reason": "No module named 'pydantic'",
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "web_archiving",
+"error_type": "ModuleNotFoundError",
+"adapter_module": "integrations.ipfs_datasets.search",
+"contract_family": "acquisition"
+}
+},
+"common_crawl": {
+"status": "degraded",
+"available": false,
+"module_path": "ipfs_datasets_py.processors.web_archiving.common_crawl_integration",
+"degraded_reason": "No module named 'pydantic'",
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "common_crawl",
+"error_type": "ModuleNotFoundError",
+"adapter_module": "integrations.ipfs_datasets.search",
+"contract_family": "acquisition"
+}
+},
+"documents": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.processors",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "documents",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.documents",
+"contract_family": "documents"
+}
+},
+"legal_scrapers": {
+"status": "degraded",
+"available": false,
+"module_path": "ipfs_datasets_py.processors.legal_scrapers",
+"degraded_reason": "No module named 'bs4'",
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "legal_scrapers",
+"error_type": "ModuleNotFoundError",
+"adapter_module": "integrations.ipfs_datasets.legal",
+"contract_family": "legal"
+}
+},
+"knowledge_graphs": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.knowledge_graphs",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "knowledge_graphs",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.graphs",
+"contract_family": "graphs"
+}
+},
+"graphrag": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.optimizers.graphrag",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "graphrag",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.graphrag",
+"contract_family": "validation"
+}
+},
+"logic_tools": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.logic",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "logic_tools",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.logic",
+"contract_family": "validation"
+}
+},
+"vector_store": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.vector_stores",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "vector_store",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.vector_store",
+"contract_family": "retrieval"
+}
+},
+"mcp_gateway": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.mcp_server",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "mcp_gateway",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.mcp_gateway",
+"contract_family": "mcp"
+}
+}
+}
+},
+"capabilities": {
+"discovery_available": true,
+"seeded_commoncrawl_available": true,
+"legal_discovery_available": false,
+"scrape_available": true,
+"graph_available": true,
+"vector_available": true,
+"embeddings_available": true,
+"vector_degraded_reason": null,
+"legal_degraded_reason": "No module named 'bs4'"
+}
+},
+"backend_mode": "shared_hybrid",
+"index_status": {
+"status": "existing",
+"index_name": "hacc_corpus",
+"index_dir": "/home/barberb/HACC/research_results/search_indexes"
+}
+},
+"upload_candidates": [
+{
+"document_id": "document:c8dc2af6ee6996a0",
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"relative_path": "hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"score": 4399.3864,
+"snippet": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+},
+"document_id": "document:c8dc2af6ee6996a0",
+"document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 5318,
+"section_count": 3423,
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"text_length": 1401793,
+"status": "success"
+}
+},
+{
+"document_id": "document:be93a165d00f0101",
+"title": "ADMINISTRATIVE PLAN",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"relative_path": "hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"score": 4196.7273,
+"snippet": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+},
+"document_id": "document:be93a165d00f0101",
+"document_title": "ADMINISTRATIVE PLAN",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 7441,
+"section_count": 4968,
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"text_length": 1927962,
+"status": "success"
+}
+}
+],
+"synthetic_prompts": {
+"evidence_upload_prompts": [
+{
+"prompt_id": "evidence_upload_1",
+"prompt_type": "evidence_upload",
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"relative_path": "hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"text": "Upload the evidence file 'hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b' and explain how it supports a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Focus on the most relevant language: Grievance: Any dispute a tenant may have with respect to HACC action or failure to"
+},
+{
+"prompt_id": "evidence_upload_2",
+"prompt_type": "evidence_upload",
+"title": "ADMINISTRATIVE PLAN",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"relative_path": "hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"text": "Upload the evidence file 'hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858' and explain how it supports a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Focus on the most relevant language: Applicants or tenant families who wish to file a VAWA complaint against HACC may"
+}
+],
+"complaint_chatbot_prompt": "Ground the complaint chatbot in the uploaded repository evidence for 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Use the uploaded materials (ADMISSIONS AND CONTINUED OCCUPANCY POLICY, ADMINISTRATIVE PLAN) as factual grounding, ask the user to connect each document to case-specific events, and identify missing timeline, actor, harm, and remedy facts.",
+"mediator_evaluation_prompt": "Evaluate each uploaded evidence item for a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. For every document, determine what claim element it supports, what facts it proves directly, what facts remain missing, and what follow-up questions the mediator should ask before drafting a complaint."
+},
+"integration_status": {
+"complaint_generator_root": "/home/barberb/HACC/complaint-generator",
+"adapter_available": true,
+"degraded_reason": null,
+"preferred_vector_indexes": [
+{
+"index_name": "hacc_policy_graph",
+"index_dir": "/home/barberb/HACC/hacc_website/knowledge_graph/embeddings"
+},
+{
+"index_name": "hacc_text_chunks",
+"index_dir": "/home/barberb/HACC/hacc_website/knowledge_graph/embeddings"
+}
+],
+"capability_report": {
+"status": "degraded",
+"available_count": 8,
+"degraded_count": 3,
+"available_capabilities": [
+"documents",
+"graphrag",
+"ipfs_storage",
+"knowledge_graphs",
+"llm_router",
+"logic_tools",
+"mcp_gateway",
+"vector_store"
+],
+"degraded_capabilities": {
+"web_archiving": "No module named 'pydantic'",
+"common_crawl": "No module named 'pydantic'",
+"legal_scrapers": "No module named 'bs4'"
+},
+"family_counts": {
+"generation": 1,
+"storage": 1,
+"acquisition": 2,
+"documents": 1,
+"legal": 1,
+"graphs": 1,
+"validation": 2,
+"retrieval": 1,
+"mcp": 1
+},
+"capabilities": {
+"llm_router": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.llm_router",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "llm_router",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.llm",
+"contract_family": "generation"
+}
+},
+"ipfs_storage": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.ipfs_backend_router",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "ipfs_storage",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.storage",
+"contract_family": "storage"
+}
+},
+"web_archiving": {
+"status": "degraded",
+"available": false,
+"module_path": "ipfs_datasets_py.web_archiving",
+"degraded_reason": "No module named 'pydantic'",
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "web_archiving",
+"error_type": "ModuleNotFoundError",
+"adapter_module": "integrations.ipfs_datasets.search",
+"contract_family": "acquisition"
+}
+},
+"common_crawl": {
+"status": "degraded",
+"available": false,
+"module_path": "ipfs_datasets_py.processors.web_archiving.common_crawl_integration",
+"degraded_reason": "No module named 'pydantic'",
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "common_crawl",
+"error_type": "ModuleNotFoundError",
+"adapter_module": "integrations.ipfs_datasets.search",
+"contract_family": "acquisition"
+}
+},
+"documents": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.processors",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "documents",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.documents",
+"contract_family": "documents"
+}
+},
+"legal_scrapers": {
+"status": "degraded",
+"available": false,
+"module_path": "ipfs_datasets_py.processors.legal_scrapers",
+"degraded_reason": "No module named 'bs4'",
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "legal_scrapers",
+"error_type": "ModuleNotFoundError",
+"adapter_module": "integrations.ipfs_datasets.legal",
+"contract_family": "legal"
+}
+},
+"knowledge_graphs": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.knowledge_graphs",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "knowledge_graphs",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.graphs",
+"contract_family": "graphs"
+}
+},
+"graphrag": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.optimizers.graphrag",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "graphrag",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.graphrag",
+"contract_family": "validation"
+}
+},
+"logic_tools": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.logic",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "logic_tools",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.logic",
+"contract_family": "validation"
+}
+},
+"vector_store": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.vector_stores",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "vector_store",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.vector_store",
+"contract_family": "retrieval"
+}
+},
+"mcp_gateway": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.mcp_server",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "mcp_gateway",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.mcp_gateway",
+"contract_family": "mcp"
+}
+}
+}
+},
+"capabilities": {
+"discovery_available": true,
+"seeded_commoncrawl_available": true,
+"legal_discovery_available": false,
+"scrape_available": true,
+"graph_available": true,
+"vector_available": true,
+"embeddings_available": true,
+"vector_degraded_reason": null,
+"legal_degraded_reason": "No module named 'bs4'"
+}
+}
+},
+"evidence_upload": {
+"status": "success",
+"query": "retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+"claim_type": "housing_discrimination",
+"user_id": "hacc-grounded-pipeline",
+"upload_count": 2,
+"uploads": [
+{
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"relative_path": "hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"result": {
+"cid": "Qmc339f28aece12e92388ff51aeb7fac9ac4548661fd37",
+"size": 3471421,
+"timestamp": "2026-03-15T22:47:01.506149",
+"artifact_id": "artifact:2dffa90c71d40ab9",
+"mime_type": "",
+"source_type": "knowledge_graph",
+"content_hash": "c339f28aece12e92388ff51aeb7fac9ac4548661fd3763663b80403f0e50683f",
+"acquisition_method": "submitted",
+"source_url": "",
+"parser_version": "",
+"extraction_version": "",
+"transform_version": "",
+"reasoning_version": "",
+"metadata": {
+"grounding_query": "retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+"source_type": "knowledge_graph",
+"relative_path": "hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"snippet": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"filename": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"claim_type": "housing_discrimination",
+"claim_element": "retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+"provenance": {
+"acquisition_method": "submitted",
+"source_type": "knowledge_graph",
+"acquired_at": "2026-03-15T22:47:01.504130",
+"content_hash": "c339f28aece12e92388ff51aeb7fac9ac4548661fd3763663b80403f0e50683f",
+"source_system": "complaint_generator"
+},
+"document_parse_summary": {
+"status": "empty",
+"chunk_count": 0,
+"text_length": 0,
+"parser_version": "documents-adapter:1",
+"input_format": "pdf",
+"paragraph_count": 0,
+"extraction_method": "pdf_unparsed",
+"quality_tier": "empty",
+"quality_score": 0.0,
+"page_count": 0,
+"source": "bytes"
+},
+"document_parse_contract": {
+"status": "empty",
+"source": "bytes",
+"chunk_count": 0,
+"text": "",
+"text_preview": "",
+"summary": {
+"status": "empty",
+"chunk_count": 0,
+"text_length": 0,
+"parser_version": "documents-adapter:1",
+"input_format": "pdf",
+"paragraph_count": 0,
+"extraction_method": "pdf_unparsed",
+"quality_tier": "empty",
+"quality_score": 0.0,
+"page_count": 0,
+"source": "bytes"
+},
+"storage_metadata": {
+"filename": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"mime_type": "text/plain",
+"size": 3471421,
+"backend_available": true,
+"parser_version": "documents-adapter:1",
+"source": "bytes",
+"chunk_count": 0,
+"paragraph_count": 0,
+"text_length": 0,
+"input_format": "pdf",
+"page_count": 0,
+"extraction_method": "pdf_unparsed",
+"parse_quality": {
+"quality_score": 0.0,
+"quality_tier": "empty",
+"quality_flags": [
+"empty_text",
+"requires_ocr_or_binary_pdf"
+],
+"ocr_used": false
+},
+"source_span": {
+"char_start": 0,
+"char_end": 0,
+"text_length": 0,
+"raw_size": 3471421,
+"page_count": 0
+},
+"transform_lineage": {
+"source": "bytes",
+"parser_version": "documents-adapter:1",
+"input_format": "pdf",
+"normalization": "pdf_unparsed",
+"chunking": {
+"chunk_size": 1000,
+"overlap": 100,
+"chunk_count": 0
+},
+"extraction": {
+"method": "pdf_unparsed",
+"ocr_used": false,
+"page_count": 0
+},
+"source_span": {
+"char_start": 0,
+"char_end": 0,
+"text_length": 0,
+"raw_size": 3471421,
+"page_count": 0
+}
+},
+"operation": "parse_document_text",
+"provider": "ipfs_datasets_py",
+"implementation_status": "empty",
+"details": {
+"operation": "parse_document_text",
+"backend_available": true,
+"implementation_status": "empty"
+},
+"status": "empty",
+"quality_tier": "empty",
+"quality_score": 0.0
+},
+"lineage": {
+"source": "bytes",
+"parser_version": "documents-adapter:1",
+"input_format": "pdf",
+"normalization": "pdf_unparsed",
+"chunking": {
+"chunk_size": 1000,
+"overlap": 100,
+"chunk_count": 0
+},
+"extraction": {
+"method": "pdf_unparsed",
+"ocr_used": false,
+"page_count": 0
+},
+"source_span": {
+"char_start": 0,
+"char_end": 0,
+"text_length": 0,
+"raw_size": 3471421,
+"page_count": 0
+}
+},
+"parse_quality": {
+"quality_score": 0.0,
+"quality_tier": "empty",
+"quality_flags": [
+"empty_text",
+"requires_ocr_or_binary_pdf"
+],
+"ocr_used": false
+},
+"source_span": {
+"char_start": 0,
+"char_end": 0,
+"text_length": 0,
+"raw_size": 3471421,
+"page_count": 0
+}
+},
+"document_graph_summary": {
+"status": "available-fallback",
+"entity_count": 2,
+"relationship_count": 0
+}
+},
+"provenance": {
+"source_url": "",
+"acquisition_method": "submitted",
+"source_type": "knowledge_graph",
+"acquired_at": "2026-03-15T22:47:01.504130",
+"content_hash": "c339f28aece12e92388ff51aeb7fac9ac4548661fd3763663b80403f0e50683f",
+"source_system": "complaint_generator",
+"jurisdiction": "",
+"metadata": {}
+},
+"type": "document",
+"document_parse": {
+"status": "empty",
+"text": "",
+"chunks": [],
+"summary": {
+"status": "empty",
+"chunk_count": 0,
+"text_length": 0,
+"parser_version": "documents-adapter:1",
+"input_format": "pdf",
+"paragraph_count": 0,
+"extraction_method": "pdf_unparsed",
+"quality_tier": "empty",
+"quality_score": 0.0,
+"page_count": 0
+},
+"lineage": {
+"source": "bytes",
+"parser_version": "documents-adapter:1",
+"input_format": "pdf",
+"normalization": "pdf_unparsed",
+"chunking": {
+"chunk_size": 1000,
+"overlap": 100,
+"chunk_count": 0
+},
+"extraction": {
+"method": "pdf_unparsed",
+"ocr_used": false,
+"page_count": 0
+},
+"source_span": {
+"char_start": 0,
+"char_end": 0,
+"text_length": 0,
+"raw_size": 3471421,
+"page_count": 0
+}
+},
+"metadata": {
+"filename": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"mime_type": "text/plain",
+"size": 3471421,
+"backend_available": true,
+"parser_version": "documents-adapter:1",
+"source": "bytes",
+"chunk_count": 0,
+"paragraph_count": 0,
+"text_length": 0,
+"input_format": "pdf",
+"page_count": 0,
+"extraction_method": "pdf_unparsed",
+"parse_quality": {
+"quality_score": 0.0,
+"quality_tier": "empty",
+"quality_flags": [
+"empty_text",
+"requires_ocr_or_binary_pdf"
+],
+"ocr_used": false
+},
+"source_span": {
+"char_start": 0,
+"char_end": 0,
+"text_length": 0,
+"raw_size": 3471421,
+"page_count": 0
+},
+"transform_lineage": {
+"source": "bytes",
+"parser_version": "documents-adapter:1",
+"input_format": "pdf",
+"normalization": "pdf_unparsed",
+"chunking": {
+"chunk_size": 1000,
+"overlap": 100,
+"chunk_count": 0
+},
+"extraction": {
+"method": "pdf_unparsed",
+"ocr_used": false,
+"page_count": 0
+},
+"source_span": {
+"char_start": 0,
+"char_end": 0,
+"text_length": 0,
+"raw_size": 3471421,
+"page_count": 0
+}
+},
+"operation": "parse_document_text",
+"provider": "ipfs_datasets_py",
+"implementation_status": "empty",
+"details": {
+"operation": "parse_document_text",
+"backend_available": true,
+"implementation_status": "empty"
+}
+},
+"provider": "ipfs_datasets_py"
+},
+"document_graph": {
+"status": "available-fallback",
+"source_id": "artifact:2dffa90c71d40ab9",
+"entities": [
+{
+"name": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"confidence": 1.0,
+"attributes": {
+"source_id": "artifact:2dffa90c71d40ab9",
+"source_url": "",
+"mime_type": ""
+},
+"id": "artifact:2dffa90c71d40ab9",
+"type": "artifact"
+},
+{
+"name": "retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+"confidence": 1.0,
+"attributes": {
+"claim_element_id": "",
+"claim_element_text": "retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+"claim_type": "housing_discrimination"
+},
+"id": "claim_element:7e759d2f42ccdfd2",
+"type": "claim_element"
+}
+],
+"relationships": [],
+"metadata": {
+"artifact_id": "artifact:2dffa90c71d40ab9",
+"filename": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"mime_type": "",
+"source_url": "",
+"claim_type": "housing_discrimination",
+"claim_element_id": "",
+"claim_element_text": "retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+"title": "",
+"text_length": 0,
+"sentence_count": 0,
+"operation": "extract_graph_from_text",
+"backend_available": true,
+"provider": "ipfs_datasets_py",
+"implementation_status": "fallback",
+"details": {
+"operation": "extract_graph_from_text",
+"backend_available": true,
+"implementation_status": "fallback"
+}
+},
+"provider": "ipfs_datasets_py"
+},
+"ipfs_available": true,
+"record_id": -1,
+"record_created": false,
+"record_reused": false,
+"claim_element_id": null,
+"claim_element_text": "retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+"user_id": "hacc-grounded-pipeline",
+"support_link_id": -1,
+"support_link_created": false,
+"support_link_reused": false
+}
+},
+{
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"title": "ADMINISTRATIVE PLAN",
+"relative_path": "hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"result": {
+"cid": "Qm364f21872109478ad7ece9e8f5631b6ceb2ebeb573ee",
+"size": 9792356,
+"timestamp": "2026-03-15T22:47:01.519337",
+"artifact_id": "artifact:951d5cf6bf8d0c18",
+"mime_type": "",
+"source_type": "knowledge_graph",
+"content_hash": "364f21872109478ad7ece9e8f5631b6ceb2ebeb573ee01ec10db6fd475f2a127",
+"acquisition_method": "submitted",
+"source_url": "",
+"parser_version": "",
+"extraction_version": "",
+"transform_version": "",
+"reasoning_version": "",
+"metadata": {
+"grounding_query": "retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+"source_type": "knowledge_graph",
+"relative_path": "hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"snippet": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"filename": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"claim_type": "housing_discrimination",
+"claim_element": "retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+"provenance": {
+"acquisition_method": "submitted",
+"source_type": "knowledge_graph",
+"acquired_at": "2026-03-15T22:47:01.514999",
+"content_hash": "364f21872109478ad7ece9e8f5631b6ceb2ebeb573ee01ec10db6fd475f2a127",
+"source_system": "complaint_generator"
+},
+"document_parse_summary": {
+"status": "empty",
+"chunk_count": 0,
+"text_length": 0,
+"parser_version": "documents-adapter:1",
+"input_format": "pdf",
+"paragraph_count": 0,
+"extraction_method": "pdf_unparsed",
+"quality_tier": "empty",
+"quality_score": 0.0,
+"page_count": 0,
+"source": "bytes"
+},
+"document_parse_contract": {
+"status": "empty",
+"source": "bytes",
+"chunk_count": 0,
+"text": "",
+"text_preview": "",
+"summary": {
+"status": "empty",
+"chunk_count": 0,
+"text_length": 0,
+"parser_version": "documents-adapter:1",
+"input_format": "pdf",
+"paragraph_count": 0,
+"extraction_method": "pdf_unparsed",
+"quality_tier": "empty",
+"quality_score": 0.0,
+"page_count": 0,
+"source": "bytes"
+},
+"storage_metadata": {
+"filename": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"mime_type": "text/plain",
+"size": 9792356,
+"backend_available": true,
+"parser_version": "documents-adapter:1",
+"source": "bytes",
+"chunk_count": 0,
+"paragraph_count": 0,
+"text_length": 0,
+"input_format": "pdf",
+"page_count": 0,
+"extraction_method": "pdf_unparsed",
+"parse_quality": {
+"quality_score": 0.0,
+"quality_tier": "empty",
+"quality_flags": [
+"empty_text",
+"requires_ocr_or_binary_pdf"
+],
+"ocr_used": false
+},
+"source_span": {
+"char_start": 0,
+"char_end": 0,
+"text_length": 0,
+"raw_size": 9792356,
+"page_count": 0
+},
+"transform_lineage": {
+"source": "bytes",
+"parser_version": "documents-adapter:1",
+"input_format": "pdf",
+"normalization": "pdf_unparsed",
+"chunking": {
+"chunk_size": 1000,
+"overlap": 100,
+"chunk_count": 0
+},
+"extraction": {
+"method": "pdf_unparsed",
+"ocr_used": false,
+"page_count": 0
+},
+"source_span": {
+"char_start": 0,
+"char_end": 0,
+"text_length": 0,
+"raw_size": 9792356,
+"page_count": 0
+}
+},
+"operation": "parse_document_text",
+"provider": "ipfs_datasets_py",
+"implementation_status": "empty",
+"details": {
+"operation": "parse_document_text",
+"backend_available": true,
+"implementation_status": "empty"
+},
+"status": "empty",
+"quality_tier": "empty",
+"quality_score": 0.0
+},
+"lineage": {
+"source": "bytes",
+"parser_version": "documents-adapter:1",
+"input_format": "pdf",
+"normalization": "pdf_unparsed",
+"chunking": {
+"chunk_size": 1000,
+"overlap": 100,
+"chunk_count": 0
+},
+"extraction": {
+"method": "pdf_unparsed",
+"ocr_used": false,
+"page_count": 0
+},
+"source_span": {
+"char_start": 0,
+"char_end": 0,
+"text_length": 0,
+"raw_size": 9792356,
+"page_count": 0
+}
+},
+"parse_quality": {
+"quality_score": 0.0,
+"quality_tier": "empty",
+"quality_flags": [
+"empty_text",
+"requires_ocr_or_binary_pdf"
+],
+"ocr_used": false
+},
+"source_span": {
+"char_start": 0,
+"char_end": 0,
+"text_length": 0,
+"raw_size": 9792356,
+"page_count": 0
+}
+},
+"document_graph_summary": {
+"status": "available-fallback",
+"entity_count": 2,
+"relationship_count": 0
+}
+},
+"provenance": {
+"source_url": "",
+"acquisition_method": "submitted",
+"source_type": "knowledge_graph",
+"acquired_at": "2026-03-15T22:47:01.514999",
+"content_hash": "364f21872109478ad7ece9e8f5631b6ceb2ebeb573ee01ec10db6fd475f2a127",
+"source_system": "complaint_generator",
+"jurisdiction": "",
+"metadata": {}
+},
+"type": "document",
+"document_parse": {
+"status": "empty",
+"text": "",
+"chunks": [],
+"summary": {
+"status": "empty",
+"chunk_count": 0,
+"text_length": 0,
+"parser_version": "documents-adapter:1",
+"input_format": "pdf",
+"paragraph_count": 0,
+"extraction_method": "pdf_unparsed",
+"quality_tier": "empty",
+"quality_score": 0.0,
+"page_count": 0
+},
+"lineage": {
+"source": "bytes",
+"parser_version": "documents-adapter:1",
+"input_format": "pdf",
+"normalization": "pdf_unparsed",
+"chunking": {
+"chunk_size": 1000,
+"overlap": 100,
+"chunk_count": 0
+},
+"extraction": {
+"method": "pdf_unparsed",
+"ocr_used": false,
+"page_count": 0
+},
+"source_span": {
+"char_start": 0,
+"char_end": 0,
+"text_length": 0,
+"raw_size": 9792356,
+"page_count": 0
+}
+},
+"metadata": {
+"filename": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"mime_type": "text/plain",
+"size": 9792356,
+"backend_available": true,
+"parser_version": "documents-adapter:1",
+"source": "bytes",
+"chunk_count": 0,
+"paragraph_count": 0,
+"text_length": 0,
+"input_format": "pdf",
+"page_count": 0,
+"extraction_method": "pdf_unparsed",
+"parse_quality": {
+"quality_score": 0.0,
+"quality_tier": "empty",
+"quality_flags": [
+"empty_text",
+"requires_ocr_or_binary_pdf"
+],
+"ocr_used": false
+},
+"source_span": {
+"char_start": 0,
+"char_end": 0,
+"text_length": 0,
+"raw_size": 9792356,
+"page_count": 0
+},
+"transform_lineage": {
+"source": "bytes",
+"parser_version": "documents-adapter:1",
+"input_format": "pdf",
+"normalization": "pdf_unparsed",
+"chunking": {
+"chunk_size": 1000,
+"overlap": 100,
+"chunk_count": 0
+},
+"extraction": {
+"method": "pdf_unparsed",
+"ocr_used": false,
+"page_count": 0
+},
+"source_span": {
+"char_start": 0,
+"char_end": 0,
+"text_length": 0,
+"raw_size": 9792356,
+"page_count": 0
+}
+},
+"operation": "parse_document_text",
+"provider": "ipfs_datasets_py",
+"implementation_status": "empty",
+"details": {
+"operation": "parse_document_text",
+"backend_available": true,
+"implementation_status": "empty"
+}
+},
+"provider": "ipfs_datasets_py"
+},
+"document_graph": {
+"status": "available-fallback",
+"source_id": "artifact:951d5cf6bf8d0c18",
+"entities": [
+{
+"name": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"confidence": 1.0,
+"attributes": {
+"source_id": "artifact:951d5cf6bf8d0c18",
+"source_url": "",
+"mime_type": ""
+},
+"id": "artifact:951d5cf6bf8d0c18",
+"type": "artifact"
+},
+{
+"name": "retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+"confidence": 1.0,
+"attributes": {
+"claim_element_id": "",
+"claim_element_text": "retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+"claim_type": "housing_discrimination"
+},
+"id": "claim_element:7e759d2f42ccdfd2",
+"type": "claim_element"
+}
+],
+"relationships": [],
+"metadata": {
+"artifact_id": "artifact:951d5cf6bf8d0c18",
+"filename": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"mime_type": "",
+"source_url": "",
+"claim_type": "housing_discrimination",
+"claim_element_id": "",
+"claim_element_text": "retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+"title": "",
+"text_length": 0,
+"sentence_count": 0,
+"operation": "extract_graph_from_text",
+"backend_available": true,
+"provider": "ipfs_datasets_py",
+"implementation_status": "fallback",
+"details": {
+"operation": "extract_graph_from_text",
+"backend_available": true,
+"implementation_status": "fallback"
+}
+},
+"provider": "ipfs_datasets_py"
+},
+"ipfs_available": true,
+"record_id": -1,
+"record_created": false,
+"record_reused": false,
+"claim_element_id": null,
+"claim_element_text": "retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+"user_id": "hacc-grounded-pipeline",
+"support_link_id": -1,
+"support_link_created": false,
+"support_link_reused": false
+}
+}
+],
+"errors": [],
+"stored_evidence": [],
+"support_summary": {
+"available": false,
+"total_links": 0,
+"claims": {
+"housing_discrimination": {
+"total_links": 0,
+"total_facts": 0,
+"support_by_kind": {},
+"total_elements": 0,
+"covered_elements": 0,
+"uncovered_elements": 0,
+"authority_treatment_summary": {
+"authority_link_count": 0,
+"treated_authority_link_count": 0,
+"supportive_authority_link_count": 0,
+"adverse_authority_link_count": 0,
+"uncertain_authority_link_count": 0,
+"treatment_type_counts": {},
+"max_treatment_confidence": 0.0
+},
+"authority_rule_candidate_summary": {
+"authority_link_count": 0,
+"authority_links_with_rule_candidates": 0,
+"total_rule_candidate_count": 0,
+"matched_claim_element_rule_count": 0,
+"rule_type_counts": {},
+"max_extraction_confidence": 0.0
+},
+"elements": [],
+"unassigned_links": [],
+"links": []
+}
+}
+},
+"synthetic_prompts": {
+"evidence_upload_prompts": [
+{
+"prompt_id": "evidence_upload_1",
+"prompt_type": "evidence_upload",
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"relative_path": "hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"text": "Upload the evidence file 'hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b' and explain how it supports a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Focus on the most relevant language: Grievance: Any dispute a tenant may have with respect to HACC action or failure to"
+},
+{
+"prompt_id": "evidence_upload_2",
+"prompt_type": "evidence_upload",
+"title": "ADMINISTRATIVE PLAN",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"relative_path": "hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"text": "Upload the evidence file 'hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858' and explain how it supports a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Focus on the most relevant language: Applicants or tenant families who wish to file a VAWA complaint against HACC may"
+}
+],
+"complaint_chatbot_prompt": "Ground the complaint chatbot in the uploaded repository evidence for 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Use the uploaded materials (ADMISSIONS AND CONTINUED OCCUPANCY POLICY, ADMINISTRATIVE PLAN) as factual grounding, ask the user to connect each document to case-specific events, and identify missing timeline, actor, harm, and remedy facts.",
+"mediator_evaluation_prompt": "Evaluate each uploaded evidence item for a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. For every document, determine what claim element it supports, what facts it proves directly, what facts remain missing, and what follow-up questions the mediator should ask before drafting a complaint."
+},
+"database_paths": {
+"evidence_db_path": "/home/barberb/HACC/research_results/grounded_runs/demo_grounded_run/mediator_state/evidence.duckdb",
+"legal_authority_db_path": "/home/barberb/HACC/research_results/grounded_runs/demo_grounded_run/mediator_state/legal_authorities.duckdb",
+"claim_support_db_path": "/home/barberb/HACC/research_results/grounded_runs/demo_grounded_run/mediator_state/claim_support.duckdb",
+"temporary_db_dir": ""
+},
+"integration_status": {
+"complaint_generator_root": "/home/barberb/HACC/complaint-generator",
+"adapter_available": true,
+"degraded_reason": null,
+"preferred_vector_indexes": [
+{
+"index_name": "hacc_policy_graph",
+"index_dir": "/home/barberb/HACC/hacc_website/knowledge_graph/embeddings"
+},
+{
+"index_name": "hacc_text_chunks",
+"index_dir": "/home/barberb/HACC/hacc_website/knowledge_graph/embeddings"
+}
+],
+"capability_report": {
+"status": "degraded",
+"available_count": 8,
+"degraded_count": 3,
+"available_capabilities": [
+"documents",
+"graphrag",
+"ipfs_storage",
+"knowledge_graphs",
+"llm_router",
+"logic_tools",
+"mcp_gateway",
+"vector_store"
+],
+"degraded_capabilities": {
+"web_archiving": "No module named 'pydantic'",
+"common_crawl": "No module named 'pydantic'",
+"legal_scrapers": "No module named 'bs4'"
+},
+"family_counts": {
+"generation": 1,
+"storage": 1,
+"acquisition": 2,
+"documents": 1,
+"legal": 1,
+"graphs": 1,
+"validation": 2,
+"retrieval": 1,
+"mcp": 1
+},
+"capabilities": {
+"llm_router": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.llm_router",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "llm_router",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.llm",
+"contract_family": "generation"
+}
+},
+"ipfs_storage": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.ipfs_backend_router",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "ipfs_storage",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.storage",
+"contract_family": "storage"
+}
+},
+"web_archiving": {
+"status": "degraded",
+"available": false,
+"module_path": "ipfs_datasets_py.web_archiving",
+"degraded_reason": "No module named 'pydantic'",
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "web_archiving",
+"error_type": "ModuleNotFoundError",
+"adapter_module": "integrations.ipfs_datasets.search",
+"contract_family": "acquisition"
+}
+},
+"common_crawl": {
+"status": "degraded",
+"available": false,
+"module_path": "ipfs_datasets_py.processors.web_archiving.common_crawl_integration",
+"degraded_reason": "No module named 'pydantic'",
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "common_crawl",
+"error_type": "ModuleNotFoundError",
+"adapter_module": "integrations.ipfs_datasets.search",
+"contract_family": "acquisition"
+}
+},
+"documents": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.processors",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "documents",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.documents",
+"contract_family": "documents"
+}
+},
+"legal_scrapers": {
+"status": "degraded",
+"available": false,
+"module_path": "ipfs_datasets_py.processors.legal_scrapers",
+"degraded_reason": "No module named 'bs4'",
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "legal_scrapers",
+"error_type": "ModuleNotFoundError",
+"adapter_module": "integrations.ipfs_datasets.legal",
+"contract_family": "legal"
+}
+},
+"knowledge_graphs": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.knowledge_graphs",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "knowledge_graphs",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.graphs",
+"contract_family": "graphs"
+}
+},
+"graphrag": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.optimizers.graphrag",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "graphrag",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.graphrag",
+"contract_family": "validation"
+}
+},
+"logic_tools": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.logic",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "logic_tools",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.logic",
+"contract_family": "validation"
+}
+},
+"vector_store": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.vector_stores",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "vector_store",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.vector_store",
+"contract_family": "retrieval"
+}
+},
+"mcp_gateway": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.mcp_server",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "mcp_gateway",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.mcp_gateway",
+"contract_family": "mcp"
+}
+}
+}
+},
+"capabilities": {
+"discovery_available": true,
+"seeded_commoncrawl_available": true,
+"legal_discovery_available": false,
+"scrape_available": true,
+"graph_available": true,
+"vector_available": true,
+"embeddings_available": true,
+"vector_degraded_reason": null,
+"legal_degraded_reason": "No module named 'bs4'"
+}
+}
+},
+"adversarial": {
+"timestamp": "20260315_224738",
+"runtime": {
+"mode": "demo",
+"provider": "demo",
+"model": "demo"
+},
+"router_diagnostics": {
+"ipfs_router": {
+"status": "available",
+"backend_name": "KuboCLIBackend",
+"backend_present": true,
+"error": "",
+"provider": "ipfs_datasets_py",
+"metadata": {
+"operation": "storage_backend_status",
+"backend_available": true,
+"provider": "ipfs_datasets_py",
+"implementation_status": "available",
+"details": {
+"operation": "storage_backend_status",
+"backend_available": true,
+"implementation_status": "available"
+}
+}
+},
+"embeddings_router": {
+"status": "unavailable",
+"index_name": "router_diag",
+"document_count": 2,
+"provider": "ipfs_datasets_py",
+"degraded_reason": "module 'ipfs_datasets_py.embeddings_router' has no attribute 'EmbeddingsRouter'",
+"metadata": {
+"operation": "create_vector_index",
+"backend_available": false,
+"provider": "ipfs_datasets_py",
+"implementation_status": "unavailable",
+"degraded_reason": "module 'ipfs_datasets_py.embeddings_router' has no attribute 'EmbeddingsRouter'",
+"details": {
+"operation": "create_vector_index",
+"backend_available": false,
+"implementation_status": "unavailable",
+"degraded_reason": "module 'ipfs_datasets_py.embeddings_router' has no attribute 'EmbeddingsRouter'"
+}
+}
+}
+},
+"inputs": {
+"num_sessions": 1,
+"max_turns": 2,
+"max_parallel": 1,
+"personalities": [],
+"hacc_preset": "core_hacc_policies",
+"hacc_count": 2,
+"use_hacc_vector_search": false
+},
+"statistics": {
+"total_sessions": 1,
+"successful_sessions": 1,
+"failed_sessions": 0,
+"average_score": 0.7101666666666666,
+"min_score": 0.7101666666666666,
+"max_score": 0.7101666666666666,
+"average_questions": 2.0,
+"average_duration": 19.764237642288208,
+"score_distribution": {
+"0.0-0.2": 0,
+"0.2-0.4": 0,
+"0.4-0.6": 0,
+"0.6-0.8": 1,
+"0.8-1.0": 0
+},
+"anchor_sections": {
+"expected_counts": {
+"grievance_hearing": 1,
+"appeal_rights": 1,
+"adverse_action": 1
+},
+"covered_counts": {
+"appeal_rights": 1,
+"adverse_action": 1
+},
+"missing_counts": {
+"grievance_hearing": 1
+},
+"coverage_by_section": {
+"adverse_action": {
+"expected": 1,
+"covered": 1,
+"missing": 0,
+"coverage_rate": 1.0
+},
+"appeal_rights": {
+"expected": 1,
+"covered": 1,
+"missing": 0,
+"coverage_rate": 1.0
+},
+"grievance_hearing": {
+"expected": 1,
+"covered": 0,
+"missing": 1,
+"coverage_rate": 0.0
+}
+}
+}
+},
+"optimization_report": {
+"average_score": 0.7101666666666666,
+"score_trend": "insufficient_data",
+"recommended_hacc_preset": "core_hacc_policies",
+"priority_improvements": [
+"Improve empathy: current avg 0.68",
+"Improve efficiency: current avg 0.69",
+"Improve coverage: current avg 0.70"
+],
+"recommendations": [
+"Performance is good. Focus on consistency and edge cases.",
+"Decision-tree coverage is incomplete for seeded evidence sections. Add explicit probes for: grievance_hearing.",
+"Add questions covering: grievance_hearing",
+"Ask directly about documentary evidence and witnesses earlier in the loop",
+"Add a dedicated timeline probe after the first retaliation allegation",
+"Best HACC preset so far is 'core_hacc_policies'. Prefer it when generating evidence-backed adversarial batches."
+],
+"best_session_id": "session_20260315_224718_000"
+},
+"autopatch": {
+"requested": false,
+"method": "test_driven",
+"profile": "question_flow",
+"target_files": [
+"/home/barberb/HACC/complaint-generator/complaint_phases/phase_manager.py",
+"/home/barberb/HACC/complaint-generator/mediator/inquiries.py"
+],
+"constraints": {},
+"applied": false,
+"apply_success": false,
+"success": false,
+"patch_path": null,
+"patch_cid": null,
+"metadata": {},
+"summary_json": null,
+"error": null
+},
+"best_complaint": {
+"session_id": "session_20260315_224718_000",
+"initial_complaint_text": "I reported discrimination to human resources after my supervisor denied a promotion and made repeated comments about women not being fit for leadership. Two days later I was terminated.",
+"score": 0.7101666666666666,
+"seed_type": "housing_discrimination",
+"seed_summary": "The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. 14 GRIEVANCES AND APPEALS INTRODUCTION ......................................................................................................................14-1 PART I: INFORMAL HEARINGS FOR PUBLIC HOUSING APPLICANTS I.A. OVERVIEW ...................................................................................................................14-1 INFORMAL HEARING PROCESS ..............................................................................14-2 I.B. PART II: INFORMAL HEARINGS WITH REGARD TO NONCITIZENS II.A. HEARING AND APPEAL PROVISIONS FOR NONCITIZENS ................................14-7 PART III: GRIEVANCE PROCEDURES FOR PUBLIC HOUSING RESIDENTS III.A. REQUIREMENTS .......................................................................................................14-11 III.B."
+},
+"artifacts": {
+"output_dir": "/home/barberb/HACC/research_results/grounded_runs/demo_grounded_run/adversarial",
+"results_json": "/home/barberb/HACC/research_results/grounded_runs/demo_grounded_run/adversarial/adversarial_results.json",
+"optimization_report_json": "/home/barberb/HACC/research_results/grounded_runs/demo_grounded_run/adversarial/optimization_report.json",
+"anchor_section_csv": "/home/barberb/HACC/research_results/grounded_runs/demo_grounded_run/adversarial/anchor_section_coverage.csv",
+"best_complaint_bundle_json": "/home/barberb/HACC/research_results/grounded_runs/demo_grounded_run/adversarial/best_complaint_bundle.json",
+"session_state_dir": "/home/barberb/HACC/research_results/grounded_runs/demo_grounded_run/adversarial/sessions",
+"autopatch_summary_json": null,
+"autopatch_patch_path": null
+}
+},
+"artifacts": {
+"output_dir": "/home/barberb/HACC/research_results/grounded_runs/demo_grounded_run",
+"grounding_bundle_json": "/home/barberb/HACC/research_results/grounded_runs/demo_grounded_run/grounding_bundle.json",
+"synthetic_prompts_json": "/home/barberb/HACC/research_results/grounded_runs/demo_grounded_run/synthetic_prompts.json",
+"evidence_upload_report_json": "/home/barberb/HACC/research_results/grounded_runs/demo_grounded_run/evidence_upload_report.json",
+"adversarial_summary_json": "/home/barberb/HACC/research_results/grounded_runs/demo_grounded_run/adversarial_summary.json",
+"adversarial_output_dir": "/home/barberb/HACC/research_results/grounded_runs/demo_grounded_run/adversarial"
+}
+}

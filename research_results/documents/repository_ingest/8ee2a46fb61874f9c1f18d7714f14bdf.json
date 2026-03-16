@@ -1,0 +1,71 @@
+{
+  "title": "wordpress.org 072314d454",
+  "relative_path": "research_results/third_party_downloads/s.w.org/wordpress.org_072314d454.html",
+  "source_type": "repository_evidence",
+  "filename": "wordpress.org_072314d454.html",
+  "mime_type": "text/html",
+  "size": 171414,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 4,
+  "paragraph_count": 1,
+  "text_length": 3508,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 3508,
+    "text_length": 3508,
+    "raw_size": 171414,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 4
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 3508,
+      "text_length": 3508,
+      "raw_size": 171414,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "8ee2a46fb61874f9c1f18d7714f14bdf",
+  "checksum": "47402ad67e38b53d5d295175b64eb893bcd847803a9fce88392bcbb0efc60e84",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/s.w.org/wordpress.org_072314d454.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/8ee2a46fb61874f9c1f18d7714f14bdf.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

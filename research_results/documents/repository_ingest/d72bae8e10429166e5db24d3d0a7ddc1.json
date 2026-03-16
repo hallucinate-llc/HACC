@@ -1,0 +1,69 @@
+{
+  "title": "OAR Chapter 137 Public Contracting",
+  "relative_path": "research_data/raw_documents/OAR_Chapter_137_Public_Contracting.html",
+  "source_type": "repository_evidence",
+  "filename": "OAR_Chapter_137_Public_Contracting.html",
+  "mime_type": "text/html",
+  "size": 1253,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 1,
+  "paragraph_count": 1,
+  "text_length": 574,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 574,
+    "text_length": 574,
+    "raw_size": 1253,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 1
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 574,
+      "text_length": 574,
+      "raw_size": 1253,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "d72bae8e10429166e5db24d3d0a7ddc1",
+  "checksum": "fcd8ca64999f435c7f3837c3bff3397bcab5a1613e331c928e6b163825751d66",
+  "source_path": "/home/barberb/HACC/research_data/raw_documents/OAR_Chapter_137_Public_Contracting.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/d72bae8e10429166e5db24d3d0a7ddc1.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

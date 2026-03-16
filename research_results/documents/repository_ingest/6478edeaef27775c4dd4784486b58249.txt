@@ -1,0 +1,176 @@
+{
+"timestamp": "20260315_224837",
+"runtime": {
+"mode": "llm_router",
+"provider": "codex_cli",
+"model": "gpt-5.3-codex-spark",
+"complainant_backend_class": "LLMRouterBackend",
+"critic_backend_class": "LLMRouterBackend"
+},
+"router_diagnostics": {
+"ipfs_router": {
+"status": "available",
+"backend_name": "KuboCLIBackend",
+"backend_present": true,
+"error": "",
+"provider": "ipfs_datasets_py",
+"metadata": {
+"operation": "storage_backend_status",
+"backend_available": true,
+"provider": "ipfs_datasets_py",
+"implementation_status": "available",
+"details": {
+"operation": "storage_backend_status",
+"backend_available": true,
+"implementation_status": "available"
+}
+}
+},
+"embeddings_router": {
+"status": "success",
+"index_name": "router_diag",
+"document_count": 2,
+"dimension": 384,
+"provider": "ipfs_datasets_py.auto",
+"model_name": "",
+"files": {
+"vectors_path": "/tmp/tmp7th79g12/router_diag.vectors.npy",
+"records_path": "/tmp/tmp7th79g12/router_diag.records.jsonl",
+"manifest_path": "/tmp/tmp7th79g12/router_diag.manifest.json"
+},
+"metadata": {
+"operation": "create_vector_index",
+"backend_available": true,
+"provider": "ipfs_datasets_py",
+"implementation_status": "implemented",
+"batch_size": 32,
+"details": {
+"operation": "create_vector_index",
+"backend_available": true,
+"implementation_status": "implemented",
+"batch_size": 32
+}
+}
+}
+},
+"inputs": {
+"num_sessions": 1,
+"max_turns": 1,
+"max_parallel": 1,
+"personalities": [],
+"hacc_preset": "core_hacc_policies",
+"hacc_count": null,
+"use_hacc_vector_search": false
+},
+"statistics": {
+"total_sessions": 1,
+"successful_sessions": 1,
+"failed_sessions": 0,
+"average_score": 0.6415,
+"min_score": 0.6415,
+"max_score": 0.6415,
+"average_questions": 1.0,
+"average_duration": 27.77040386199951,
+"score_distribution": {
+"0.0-0.2": 0,
+"0.2-0.4": 0,
+"0.4-0.6": 0,
+"0.6-0.8": 1,
+"0.8-1.0": 0
+},
+"anchor_sections": {
+"expected_counts": {
+"grievance_hearing": 1,
+"appeal_rights": 1,
+"adverse_action": 1
+},
+"covered_counts": {
+"grievance_hearing": 1,
+"appeal_rights": 1,
+"adverse_action": 1
+},
+"missing_counts": {},
+"coverage_by_section": {
+"adverse_action": {
+"expected": 1,
+"covered": 1,
+"missing": 0,
+"coverage_rate": 1.0
+},
+"appeal_rights": {
+"expected": 1,
+"covered": 1,
+"missing": 0,
+"coverage_rate": 1.0
+},
+"grievance_hearing": {
+"expected": 1,
+"covered": 1,
+"missing": 0,
+"coverage_rate": 1.0
+}
+}
+}
+},
+"optimization_report": {
+"average_score": 0.6415,
+"score_trend": "insufficient_data",
+"recommended_hacc_preset": "core_hacc_policies",
+"priority_improvements": [
+"Improve question quality: current avg 0.55",
+"Improve information extraction: current avg 0.58",
+"Improve empathy: current avg 0.64"
+],
+"recommendations": [
+"Performance is moderate. Targeted improvements can significantly boost quality.",
+"Improve question formulation: make questions more specific and relevant.",
+"Enhance information extraction: ask follow-up questions when responses are vague.",
+"Evidence-section coverage is improving. Preserve explicit questioning around: grievance_hearing, appeal_rights, adverse_action.",
+"Knowledge graph gap count is high on average. Improve gap-reduction logic in complaint_phases/denoiser.py and ensure process_answer updates entities/relationships meaningfully.",
+"In 1 sessions, KG gaps did not reduce over iterations. Consider making denoiser.process_answer reduce gaps deterministically (e.g., marking gap items as addressed when answers supply the missing fields).",
+"Knowledge graph relationships are not increasing across iterations. Consider adding relationship updates when answers mention who/what/when/where/why links.",
+"KG gaps are not decreasing on average (or are increasing). Improve gap selection + answer processing so each turn reduces uncertainty.",
+"Dependency satisfaction rate is very low on average. Consider having denoising answers mark requirements as satisfied or add evidence/fact nodes as they are provided.",
+"Ask a causation-focused clarification: “Who took each adverse action, what exactly changed after your complaint, and what were the reasons given?”",
+"Reframe with rapport: briefly acknowledge the stress and housing fear before shifting to fact-gathering to improve trust and completeness.",
+"Ask a structured timeline question next, e.g., “What date did you first raise the housing concern, and what happened on each subsequent date including who responded?”",
+"Best HACC preset so far is 'core_hacc_policies'. Prefer it when generating evidence-backed adversarial batches."
+],
+"best_session_id": "session_20260315_224718_000"
+},
+"autopatch": {
+"requested": false,
+"method": "test_driven",
+"profile": "question_flow",
+"target_files": [
+"/home/barberb/HACC/complaint-generator/complaint_phases/phase_manager.py",
+"/home/barberb/HACC/complaint-generator/mediator/inquiries.py"
+],
+"constraints": {},
+"applied": false,
+"apply_success": false,
+"success": false,
+"patch_path": null,
+"patch_cid": null,
+"metadata": {},
+"summary_json": null,
+"error": null
+},
+"best_complaint": {
+"session_id": "session_20260315_224718_000",
+"initial_complaint_text": "Complaint:\n\nI am a HACC resident, and I am filing this complaint because I believe I have been retaliated against for using my housing rights.\n\nAfter I raised concerns with HACC about issues affecting my housing situation, I began to experience adverse actions that felt punitive rather than corrective. Instead of addressing my concerns through the normal process, I was treated differently and faced consequences that I believe were meant to discourage me from continuing to complain. I submitted requests in writing and asked for a formal review, but I was not given a clear, timely path to a hearing the way I expected.\n\nThe most serious issue is that I was denied the grievance and appeal protections that are supposed to be available. The **ADMISSIONS AND CONTINUED OCCUPANCY POLICY** lays out that residents can pursue grievances through an informal hearing and appeal framework, and that housing-related disputes with HACC are meant to be handled through that process. In **PART I–III** of that policy, the hearing and appeal structure is described as a regular pathway for residents and applicants, including requirements and procedural steps. I also requested the opportunity for a grievance hearing as a result of this adverse treatment, because the action against me is directly tied to the matter I raised.\n\nI also asked for the review process described in the **ADMINISTRATIVE PLAN**, which references scheduling an informal review, informal review procedures, informal review decisions, and informal hearing procedures (including the hearing and appeal provisions under **24 CFR 982.554(b), 982.555, and 5.514(d)**). Despite that, I did not receive a consistent hearing timeline, and no one gave me a clear explanation of what happened to my request. I was told, in effect, to wait without a formal appeal path. That left me with no meaningful due process and no reliable way to challenge the action quickly.\n\nThis retaliation affected me in concrete ways. I felt intimidated and uncertain about my housing stability, and it interrupted my ability to rely on the housing process for basic security. I became afraid that if I pursued my concerns, I would lose more than just a complaint response—I could lose my ability to remain in stable housing. The stress and uncertainty have affected my work, my family’s routine, and my health, and it has eroded trust in the entire local grievance system that is supposed to protect residents like me.\n\nFrom my review of the governing materials, both policy documents and the cited process sections indicate that I should have access to fair notice, an opportunity to be heard, and an appeal mechanism for adverse action. I am asking that my complaint be formally accepted as a **retaliation and due process complaint**, that the adverse action be paused until proper review, and that HACC provide me a scheduled informal hearing and written appeal decision that explains all reasons and the evidence used. I also request confirmation that no further retaliation will be taken for my use of grievance rights and that staff who handled this matter follow the hearing and appeal procedures required under HACC policy and applicable federal requirements.\n\nI am willing to provide additional dates, names, and copies of all correspondence, and I request that my complaint be handled without delay.",
+"score": 0.6415,
+"seed_type": "housing_discrimination",
+"seed_summary": "The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. 14 GRIEVANCES AND APPEALS INTRODUCTION ......................................................................................................................14-1 PART I: INFORMAL HEARINGS FOR PUBLIC HOUSING APPLICANTS I.A. OVERVIEW ...................................................................................................................14-1 INFORMAL HEARING PROCESS ..............................................................................14-2 I.B. PART II: INFORMAL HEARINGS WITH REGARD TO NONCITIZENS II.A. HEARING AND APPEAL PROVISIONS FOR NONCITIZENS ................................14-7 PART III: GRIEVANCE PROCEDURES FOR PUBLIC HOUSING RESIDENTS III.A. REQUIREMENTS .......................................................................................................14-11 III.B."
+},
+"artifacts": {
+"output_dir": "/home/barberb/HACC/research_results/adversarial_runs/hacc_grounded_live_upload_sessiondb_fix_20260315",
+"results_json": "/home/barberb/HACC/research_results/adversarial_runs/hacc_grounded_live_upload_sessiondb_fix_20260315/adversarial_results.json",
+"optimization_report_json": "/home/barberb/HACC/research_results/adversarial_runs/hacc_grounded_live_upload_sessiondb_fix_20260315/optimization_report.json",
+"anchor_section_csv": "/home/barberb/HACC/research_results/adversarial_runs/hacc_grounded_live_upload_sessiondb_fix_20260315/anchor_section_coverage.csv",
+"best_complaint_bundle_json": "/home/barberb/HACC/research_results/adversarial_runs/hacc_grounded_live_upload_sessiondb_fix_20260315/best_complaint_bundle.json",
+"session_state_dir": "/home/barberb/HACC/research_results/adversarial_runs/hacc_grounded_live_upload_sessiondb_fix_20260315/sessions",
+"autopatch_summary_json": null,
+"autopatch_patch_path": null
+}
+}

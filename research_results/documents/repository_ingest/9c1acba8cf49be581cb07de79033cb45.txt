@@ -1,0 +1,34 @@
+{
+"generated_at": "2025-12-31T10:09:19.105813+00:00",
+"source": {
+"downloads_root": "research_results/third_party_downloads",
+"domains_scanned": [
+"quantumresidential.com",
+"www.quantumresidential.com"
+],
+"manifests": [
+"research_results/third_party_download_manifest.json",
+"research_results/third_party_download_manifest_next_hop.json",
+"research_results/third_party_download_manifest_quantum_seed.json"
+]
+},
+"stats": {
+"html_files_scanned": 9,
+"raw_links_seen": 842,
+"doc_domains": 1,
+"doc_urls_total": 2
+},
+"items": [
+{
+"domain": "www.oregonmetro.gov",
+"score": 100,
+"evidence_urls": [
+"https://www.oregonmetro.gov/sites/default/files/2023/04/25/Housing-Bond-Quarterly-Progress-Report_Q1-JAN_MAR_2023_Final_wFinancials_StaffReports.pdf",
+"https://www.oregonmetro.gov/sites/default/files/2025-10/affordable-housing-bond-oversight-committee-meeting-packet-20250317.pdf"
+],
+"seed_urls": [],
+"guessed_urls": [],
+"notes": "Extracted from downloaded Quantum Residential HTML pages"
+}
+]
+}

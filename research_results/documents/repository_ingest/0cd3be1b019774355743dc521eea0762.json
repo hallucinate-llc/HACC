@@ -1,0 +1,71 @@
+{
+  "title": "www.flickr.com photos hudopa albums",
+  "relative_path": "research_results/third_party_downloads/www.flickr.com/www.flickr.com_photos_hudopa_albums.html",
+  "source_type": "repository_evidence",
+  "filename": "www.flickr.com_photos_hudopa_albums.html",
+  "mime_type": "text/html",
+  "size": 572482,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 2,
+  "paragraph_count": 1,
+  "text_length": 1220,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 1220,
+    "text_length": 1220,
+    "raw_size": 572482,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 2
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 1220,
+      "text_length": 1220,
+      "raw_size": 572482,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "0cd3be1b019774355743dc521eea0762",
+  "checksum": "7e3a69c1ab6417bbb0132ca68a1847050f2b4dbdb759bb4d2b7e2c6b35e485b2",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.flickr.com/www.flickr.com_photos_hudopa_albums.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/0cd3be1b019774355743dc521eea0762.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

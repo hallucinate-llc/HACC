@@ -1,0 +1,71 @@
+{
+  "title": "www.osba.org",
+  "relative_path": "research_results/third_party_downloads/www.osba.org/www.osba.org.html",
+  "source_type": "repository_evidence",
+  "filename": "www.osba.org.html",
+  "mime_type": "text/html",
+  "size": 220519,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 13,
+  "paragraph_count": 1,
+  "text_length": 10665,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 10665,
+    "text_length": 10665,
+    "raw_size": 220519,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 13
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 10665,
+      "text_length": 10665,
+      "raw_size": 220519,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "02e9dbcdf1cf99f147a25e1783fa2150",
+  "checksum": "a18ec769ecc70822edfa89667aeecd0b94befea40973bd94fed229d7d887c644",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.osba.org/www.osba.org.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/02e9dbcdf1cf99f147a25e1783fa2150.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

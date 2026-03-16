@@ -1,0 +1,71 @@
+{
+  "title": "www.quantumresidential.com career full-time-maintenance-tech-vancouver",
+  "relative_path": "research_results/third_party_downloads/www.quantumresidential.com/www.quantumresidential.com_career_full-time-maintenance-tech-vancouver.html",
+  "source_type": "repository_evidence",
+  "filename": "www.quantumresidential.com_career_full-time-maintenance-tech-vancouver.html",
+  "mime_type": "text/html",
+  "size": 57732,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 1,
+  "paragraph_count": 1,
+  "text_length": 704,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 704,
+    "text_length": 704,
+    "raw_size": 57732,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 1
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 704,
+      "text_length": 704,
+      "raw_size": 57732,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "045bdb97cc58b0cf4dc4570a397ac0ae",
+  "checksum": "bb805467cb8b9777f1db7b417fc899cd12dc607f9a92a5e635933ed2adb263d6",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.quantumresidential.com/www.quantumresidential.com_career_full-time-maintenance-tech-vancouver.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/045bdb97cc58b0cf4dc4570a397ac0ae.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

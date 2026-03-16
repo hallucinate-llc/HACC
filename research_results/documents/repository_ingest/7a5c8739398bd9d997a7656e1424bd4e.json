@@ -1,0 +1,71 @@
+{
+  "title": "www.youtube.com watch c6af67a01c",
+  "relative_path": "research_results/third_party_downloads/youtu.be/www.youtube.com_watch_c6af67a01c.html",
+  "source_type": "repository_evidence",
+  "filename": "www.youtube.com_watch_c6af67a01c.html",
+  "mime_type": "text/html",
+  "size": 1071826,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 1,
+  "paragraph_count": 1,
+  "text_length": 207,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 207,
+    "text_length": 207,
+    "raw_size": 1071826,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 1
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 207,
+      "text_length": 207,
+      "raw_size": 1071826,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "7a5c8739398bd9d997a7656e1424bd4e",
+  "checksum": "abc9154901146a96f5c49d67ad2fc182546842101e6fe29e1f08604e1d18e043",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/youtu.be/www.youtube.com_watch_c6af67a01c.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/7a5c8739398bd9d997a7656e1424bd4e.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

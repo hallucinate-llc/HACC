@@ -1,0 +1,69 @@
+{
+  "title": "www.quantumresidential.com privacy-policy",
+  "relative_path": "research_results/third_party_downloads/www.quantumresidential.com/www.quantumresidential.com_privacy-policy.html",
+  "source_type": "repository_evidence",
+  "filename": "www.quantumresidential.com_privacy-policy.html",
+  "mime_type": "text/html",
+  "size": 61204,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 5,
+  "paragraph_count": 1,
+  "text_length": 3881,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 3881,
+    "text_length": 3881,
+    "raw_size": 61204,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 5
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 3881,
+      "text_length": 3881,
+      "raw_size": 61204,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "b025f40ba20f017ffab1bf63490793c0",
+  "checksum": "bf5c9c7059d8d3445957cbdca4d6a9b6b47fc40cc0a74da8e49e1173a869c30b",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.quantumresidential.com/www.quantumresidential.com_privacy-policy.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/b025f40ba20f017ffab1bf63490793c0.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

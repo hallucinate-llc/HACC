@@ -1,0 +1,69 @@
+{
+  "title": "www.hud.gov news",
+  "relative_path": "research_results/third_party_downloads/www.hud.gov/www.hud.gov_news.html",
+  "source_type": "repository_evidence",
+  "filename": "www.hud.gov_news.html",
+  "mime_type": "text/html",
+  "size": 167179,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 22,
+  "paragraph_count": 1,
+  "text_length": 18259,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 18259,
+    "text_length": 18259,
+    "raw_size": 167179,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 22
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 18259,
+      "text_length": 18259,
+      "raw_size": 167179,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "d7ed97794cddd69655d9e8870c014d39",
+  "checksum": "852ad7f5c4ca563046d93d8568ae8e4a694300f31ae6dedc30ad139b48eeabad",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.hud.gov/www.hud.gov_news.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/d7ed97794cddd69655d9e8870c014d39.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

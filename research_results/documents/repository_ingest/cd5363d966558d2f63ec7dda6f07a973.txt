@@ -1,0 +1,879 @@
+{
+"session_id": "session_20260315_034346_001",
+"timestamp": "2026-03-15T03:46:36.617311+00:00",
+"seed_complaint": {
+"template_id": "hacc::housing_discrimination::proxy language DEI equity inclusion hous",
+"type": "housing_discrimination",
+"category": "housing",
+"description": "Proxy-language complaint anchored to HACC core housing policies",
+"summary": "The strongest supporting material is 'ADMINISTRATIVE PLAN'. Deny admission by the applicant or tenant to the housing or program;",
+"key_facts": {
+"incident_summary": "Proxy-language complaint anchored to HACC core housing policies",
+"evidence_query": "proxy language DEI equity inclusion housing policy admissions occupancy tenant selection",
+"evidence_summary": "The strongest supporting material is 'ADMINISTRATIVE PLAN'. Deny admission by the applicant or tenant to the housing or program;",
+"evidence_documents": [
+"ADMINISTRATIVE PLAN",
+"ADMISSIONS AND CONTINUED OCCUPANCY POLICY"
+],
+"source_paths": [
+"/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+],
+"anchor_titles": [
+"ADMINISTRATIVE PLAN",
+"ADMISSIONS AND CONTINUED OCCUPANCY POLICY"
+],
+"anchor_source_paths": [],
+"anchor_terms": [],
+"anchor_passages": [
+{
+"title": "ADMINISTRATIVE PLAN",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"snippet": "Deny admission by the applicant or tenant to the housing or program;",
+"section_labels": [
+"adverse_action"
+]
+},
+{
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"snippet": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"section_labels": [
+"selection_criteria"
+]
+}
+],
+"anchor_sections": [
+"adverse_action",
+"selection_criteria"
+],
+"grounding_note": "Use the evidence as factual grounding and identify missing case-specific facts during questioning."
+},
+"keywords": [],
+"legal_patterns": [],
+"hacc_evidence": [
+{
+"document_id": "document:be93a165d00f0101",
+"title": "ADMINISTRATIVE PLAN",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"score": 5298.4773,
+"snippet": "Deny admission by the applicant or tenant to the housing or program;",
+"matched_rules": [
+{
+"text": "Deny admission by the applicant or tenant to the housing or program;",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 3
+},
+{
+"text": "Deny assistance under the covered housing program to the applicant or tenant;",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 2
+},
+{
+"text": "For the initial certification, HACC will use the family’s public housing tenant rent (reflected on",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 2
+}
+],
+"matched_entities": [
+{
+"name": "Deny admission by the applicant or tenant to the housing or program;",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "APPLICATIONS, WAITING LIST AND TENANT SELECTION",
+"type": "policy_section",
+"overlap": 2
+},
+{
+"name": "APPLICATIONS, WAITING LIST AND TENANT SELECTION",
+"type": "policy_section",
+"overlap": 2
+},
+{
+"name": "Deny assistance under the covered housing program to the applicant or tenant;",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "For the initial certification, HACC will use the family’s public housing tenant rent (reflected on",
+"type": "policy_rule",
+"overlap": 2
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+},
+"document_id": "document:be93a165d00f0101",
+"document_title": "ADMINISTRATIVE PLAN",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 7441,
+"section_count": 4968,
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"text_length": 1927962,
+"status": "success"
+}
+},
+{
+"document_id": "document:c8dc2af6ee6996a0",
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"score": 3964.6818,
+"snippet": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"matched_rules": [
+{
+"text": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"section_title": "PART III: TENANT SELECTION",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 4
+},
+{
+"text": "According to the Continued Occupancy Policy, your family may continue to reside in a public housing",
+"section_title": "ACOP 1/1/2024",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 3
+},
+{
+"text": "admission, including tenant selection criteria, the applicant must be notified of the approximate",
+"section_title": "ACOP 11/1/2024",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 3
+}
+],
+"matched_entities": [
+{
+"name": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"type": "policy_rule",
+"overlap": 4
+},
+{
+"name": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"type": "policy_document",
+"overlap": 3
+},
+{
+"name": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"type": "policy_section",
+"overlap": 3
+},
+{
+"name": "According to the Continued Occupancy Policy, your family may continue to reside in a public housing",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "Admissions and continued occupancy policy",
+"type": "policy_section",
+"overlap": 3
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+},
+"document_id": "document:c8dc2af6ee6996a0",
+"document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 5318,
+"section_count": 3423,
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"text_length": 1401793,
+"status": "success"
+}
+}
+],
+"source": "hacc_research_engine",
+"_meta": {
+"personality": "defensive",
+"max_turns": 2,
+"include_hacc_evidence": true,
+"hacc_preset": "core_hacc_policies",
+"use_hacc_vector_search": false,
+"seed_source": "hacc_research_engine",
+"anchor_sections": [
+"adverse_action",
+"selection_criteria"
+]
+}
+},
+"initial_complaint_text": "I’m filing this complaint because I believe I was treated unfairly in the housing admissions process. I applied for housing and was told I was being denied. I was given vague “policy” reasons and language about equity, inclusion, or similar ideas, but no clear, concrete basis tied to my actual eligibility or tenant selection criteria. I’m not comfortable sharing all personal details, but I met the requirements as far as I understand them.\n\nThis has been stressful and frustrating. Housing is critical, and being denied without a clear explanation leaves me feeling singled out and dismissed. The administrative plan and admissions/continued occupancy policy say HACC must have tenant selection policies and that admission can be denied under specific grounds. I don’t see how those rules were applied to me in a transparent or consistent way. It felt like the decision was based on proxy language rather than my actual qualifications.\n\nI want a clear explanation of why I was denied, what specific policy basis was used, and what evidence supports that decision. If there is a legitimate reason under the tenant selection policy, I expect it to be stated plainly. If not, I want this decision reviewed and corrected.",
+"conversation_history": [
+{
+"role": "complainant",
+"type": "initial_complaint",
+"content": "I’m filing this complaint because I believe I was treated unfairly in the housing admissions process. I applied for housing and was told I was being denied. I was given vague “policy” reasons and language about equity, inclusion, or similar ideas, but no clear, concrete basis tied to my actual eligibility or tenant selection criteria. I’m not comfortable sharing all personal details, but I met the requirements as far as I understand them.\n\nThis has been stressful and frustrating. Housing is critical, and being denied without a clear explanation leaves me feeling singled out and dismissed. The administrative plan and admissions/continued occupancy policy say HACC must have tenant selection policies and that admission can be denied under specific grounds. I don’t see how those rules were applied to me in a transparent or consistent way. It felt like the decision was based on proxy language rather than my actual qualifications.\n\nI want a clear explanation of why I was denied, what specific policy basis was used, and what evidence supports that decision. If there is a legitimate reason under the tenant selection policy, I expect it to be stated plainly. If not, I want this decision reviewed and corrected."
+},
+{
+"role": "mediator",
+"type": "question",
+"content": "I understand this can be stressful, and these details help me support you. What harm did you experience, and what outcome or remedy are you seeking?"
+},
+{
+"role": "complainant",
+"type": "response",
+"content": "Honestly, the harm is pretty direct: I lost a chance at housing and I’m still stuck in an unstable situation because of it. It’s been stressful, humiliating, and it feels like I was brushed off with vague “policy” language instead of a real reason. I’m not saying I need special treatment, but if there’s a legitimate basis under the tenant selection policy, they should state it plainly and show it.\n\nAs for remedy, I want a clear, written explanation of the specific policy grounds and evidence they used, and I want the decision reviewed. If the denial wasn’t actually tied to the admissions criteria, then I want it corrected. Why do you need more detail than that right now?",
+"evidence_context": {
+"dynamic_evidence_summary": "For this question, the strongest supporting material is 'ADMINISTRATIVE PLAN'. You may report a covered housing provider’s violations of these rights and seek additional",
+"dynamic_evidence_items": [
+{
+"document_id": "document:be93a165d00f0101",
+"title": "ADMINISTRATIVE PLAN",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"score": 5298.4773,
+"snippet": "Deny admission by the applicant or tenant to the housing or program;",
+"matched_rules": [
+{
+"text": "Deny admission by the applicant or tenant to the housing or program;",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 3
+},
+{
+"text": "Deny assistance under the covered housing program to the applicant or tenant;",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 2
+},
+{
+"text": "For the initial certification, HACC will use the family’s public housing tenant rent (reflected on",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 2
+}
+],
+"matched_entities": [
+{
+"name": "Deny admission by the applicant or tenant to the housing or program;",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "APPLICATIONS, WAITING LIST AND TENANT SELECTION",
+"type": "policy_section",
+"overlap": 2
+},
+{
+"name": "APPLICATIONS, WAITING LIST AND TENANT SELECTION",
+"type": "policy_section",
+"overlap": 2
+},
+{
+"name": "Deny assistance under the covered housing program to the applicant or tenant;",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "For the initial certification, HACC will use the family’s public housing tenant rent (reflected on",
+"type": "policy_rule",
+"overlap": 2
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+},
+"document_id": "document:be93a165d00f0101",
+"document_title": "ADMINISTRATIVE PLAN",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 7441,
+"section_count": 4968,
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"text_length": 1927962,
+"status": "success"
+}
+},
+{
+"document_id": "document:c8dc2af6ee6996a0",
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"score": 3964.6818,
+"snippet": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"matched_rules": [
+{
+"text": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"section_title": "PART III: TENANT SELECTION",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 4
+},
+{
+"text": "According to the Continued Occupancy Policy, your family may continue to reside in a public housing",
+"section_title": "ACOP 1/1/2024",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 3
+},
+{
+"text": "admission, including tenant selection criteria, the applicant must be notified of the approximate",
+"section_title": "ACOP 11/1/2024",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 3
+}
+],
+"matched_entities": [
+{
+"name": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"type": "policy_rule",
+"overlap": 4
+},
+{
+"name": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"type": "policy_document",
+"overlap": 3
+},
+{
+"name": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"type": "policy_section",
+"overlap": 3
+},
+{
+"name": "According to the Continued Occupancy Policy, your family may continue to reside in a public housing",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "Admissions and continued occupancy policy",
+"type": "policy_section",
+"overlap": 3
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+},
+"document_id": "document:c8dc2af6ee6996a0",
+"document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 5318,
+"section_count": 3423,
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"text_length": 1401793,
+"status": "success"
+}
+}
+],
+"dynamic_anchor_passages": [
+{
+"title": "ADMINISTRATIVE PLAN",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"snippet": "You may report a covered housing provider’s violations of these rights and seek additional",
+"section_labels": [
+"appeal_rights"
+]
+},
+{
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"snippet": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"section_labels": [
+"selection_criteria"
+]
+}
+],
+"dynamic_anchor_sections": [
+"appeal_rights",
+"selection_criteria"
+]
+}
+},
+{
+"role": "mediator",
+"type": "question",
+"content": "When did the key events happen? Please share dates or a brief timeline."
+},
+{
+"role": "complainant",
+"type": "response",
+"content": "I don’t have the exact dates in front of me, and I’m not trying to overshare. Roughly, I applied a few months ago, got a denial notice shortly after, and asked for clarification soon after that. Why do you need exact dates right now? If it’s necessary, I can try to pull the notice date and give you a more precise timeline.",
+"evidence_context": {
+"dynamic_evidence_summary": "For this question, the strongest supporting material is 'ADMINISTRATIVE PLAN'. Deny admission by the applicant or tenant to the housing or program;",
+"dynamic_evidence_items": [
+{
+"document_id": "document:be93a165d00f0101",
+"title": "ADMINISTRATIVE PLAN",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"score": 5298.4773,
+"snippet": "Deny admission by the applicant or tenant to the housing or program;",
+"matched_rules": [
+{
+"text": "Deny admission by the applicant or tenant to the housing or program;",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 3
+},
+{
+"text": "Deny assistance under the covered housing program to the applicant or tenant;",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 2
+},
+{
+"text": "For the initial certification, HACC will use the family’s public housing tenant rent (reflected on",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 2
+}
+],
+"matched_entities": [
+{
+"name": "Deny admission by the applicant or tenant to the housing or program;",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "APPLICATIONS, WAITING LIST AND TENANT SELECTION",
+"type": "policy_section",
+"overlap": 2
+},
+{
+"name": "APPLICATIONS, WAITING LIST AND TENANT SELECTION",
+"type": "policy_section",
+"overlap": 2
+},
+{
+"name": "Deny assistance under the covered housing program to the applicant or tenant;",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "For the initial certification, HACC will use the family’s public housing tenant rent (reflected on",
+"type": "policy_rule",
+"overlap": 2
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+},
+"document_id": "document:be93a165d00f0101",
+"document_title": "ADMINISTRATIVE PLAN",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 7441,
+"section_count": 4968,
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"text_length": 1927962,
+"status": "success"
+}
+},
+{
+"document_id": "document:c8dc2af6ee6996a0",
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"score": 3964.6818,
+"snippet": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"matched_rules": [
+{
+"text": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"section_title": "PART III: TENANT SELECTION",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 4
+},
+{
+"text": "According to the Continued Occupancy Policy, your family may continue to reside in a public housing",
+"section_title": "ACOP 1/1/2024",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 3
+},
+{
+"text": "admission, including tenant selection criteria, the applicant must be notified of the approximate",
+"section_title": "ACOP 11/1/2024",
+"rule_type": "eligibility",
+"modality": "eligibility",
+"overlap": 3
+}
+],
+"matched_entities": [
+{
+"name": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"type": "policy_rule",
+"overlap": 4
+},
+{
+"name": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"type": "policy_document",
+"overlap": 3
+},
+{
+"name": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"type": "policy_section",
+"overlap": 3
+},
+{
+"name": "According to the Continued Occupancy Policy, your family may continue to reside in a public housing",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "Admissions and continued occupancy policy",
+"type": "policy_section",
+"overlap": 3
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+},
+"document_id": "document:c8dc2af6ee6996a0",
+"document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 5318,
+"section_count": 3423,
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"text_length": 1401793,
+"status": "success"
+}
+}
+],
+"dynamic_anchor_passages": [
+{
+"title": "ADMINISTRATIVE PLAN",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"snippet": "Deny admission by the applicant or tenant to the housing or program;",
+"section_labels": [
+"adverse_action"
+]
+},
+{
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"snippet": "HACC must establish tenant selection policies for families being admitted to public housing [24",
+"section_labels": [
+"selection_criteria"
+]
+}
+],
+"dynamic_anchor_sections": [
+"adverse_action",
+"selection_criteria"
+]
+}
+}
+],
+"num_questions": 2,
+"num_turns": 2,
+"final_state": {
+"current_phase": "intake",
+"iteration_count": 3,
+"convergence_history": [
+{
+"iteration": 1,
+"loss": 0.76,
+"phase": "intake",
+"metrics": {
+"entities": 3,
+"relationships": 1,
+"gaps": 5
+},
+"timestamp": "2026-03-15T03:46:14.169402+00:00"
+},
+{
+"iteration": 2,
+"loss": 0.76,
+"phase": "intake",
+"metrics": {
+"entities": 4,
+"relationships": 2,
+"gaps": 6,
+"updates": {
+"entities_updated": 1,
+"relationships_added": 1,
+"requirements_satisfied": 0
+},
+"denoiser_policy": {
+"exploration_enabled": false,
+"exploration_epsilon": 0.0,
+"exploration_top_k": 3,
+"momentum_enabled": false,
+"momentum_beta": 0.85,
+"stagnation_window": 4,
+"stagnation_gain_threshold": 0.5,
+"type_gain_ema": {
+"impact": 2.0
+},
+"recent_gains": [
+2.0
+]
+}
+},
+"timestamp": "2026-03-15T03:46:19.382015+00:00"
+},
+{
+"iteration": 3,
+"loss": 0.76,
+"phase": "intake",
+"metrics": {
+"entities": 5,
+"relationships": 3,
+"gaps": 6,
+"updates": {
+"entities_updated": 1,
+"relationships_added": 1,
+"requirements_satisfied": 0
+},
+"denoiser_policy": {
+"exploration_enabled": false,
+"exploration_epsilon": 0.0,
+"exploration_top_k": 3,
+"momentum_enabled": false,
+"momentum_beta": 0.85,
+"stagnation_window": 4,
+"stagnation_gain_threshold": 0.5,
+"type_gain_ema": {
+"impact": 2.0,
+"timeline": 2.0
+},
+"recent_gains": [
+2.0,
+2.0
+]
+}
+},
+"timestamp": "2026-03-15T03:46:23.345747+00:00"
+}
+],
+"loss_history": [
+{
+"iteration": 1,
+"loss": 0.76,
+"phase": "intake",
+"metrics": {
+"entities": 3,
+"relationships": 1,
+"gaps": 5
+},
+"timestamp": "2026-03-15T03:46:14.169402+00:00"
+},
+{
+"iteration": 2,
+"loss": 0.76,
+"phase": "intake",
+"metrics": {
+"entities": 4,
+"relationships": 2,
+"gaps": 6,
+"updates": {
+"entities_updated": 1,
+"relationships_added": 1,
+"requirements_satisfied": 0
+},
+"denoiser_policy": {
+"exploration_enabled": false,
+"exploration_epsilon": 0.0,
+"exploration_top_k": 3,
+"momentum_enabled": false,
+"momentum_beta": 0.85,
+"stagnation_window": 4,
+"stagnation_gain_threshold": 0.5,
+"type_gain_ema": {
+"impact": 2.0
+},
+"recent_gains": [
+2.0
+]
+}
+},
+"timestamp": "2026-03-15T03:46:19.382015+00:00"
+},
+{
+"iteration": 3,
+"loss": 0.76,
+"phase": "intake",
+"metrics": {
+"entities": 5,
+"relationships": 3,
+"gaps": 6,
+"updates": {
+"entities_updated": 1,
+"relationships_added": 1,
+"requirements_satisfied": 0
+},
+"denoiser_policy": {
+"exploration_enabled": false,
+"exploration_epsilon": 0.0,
+"exploration_top_k": 3,
+"momentum_enabled": false,
+"momentum_beta": 0.85,
+"stagnation_window": 4,
+"stagnation_gain_threshold": 0.5,
+"type_gain_ema": {
+"impact": 2.0,
+"timeline": 2.0
+},
+"recent_gains": [
+2.0,
+2.0
+]
+}
+},
+"timestamp": "2026-03-15T03:46:23.345747+00:00"
+}
+],
+"phase_completion": {
+"intake": false,
+"evidence": false,
+"formalization": false
+},
+"next_action": {
+"action": "continue_denoising"
+}
+},
+"knowledge_graph_summary": {
+"total_entities": 5,
+"total_relationships": 3,
+"entity_types": {
+"claim": 1,
+"evidence": 1,
+"fact": 3
+},
+"relationship_types": {
+"supported_by": 1,
+"has_impact": 1,
+"has_timeline_detail": 1
+},
+"gaps": 6
+},
+"dependency_graph_summary": {
+"total_nodes": 3,
+"total_dependencies": 2,
+"node_types": {
+"claim": 1,
+"fact": 2
+},
+"dependency_types": {
+"depends_on": 2
+},
+"satisfied_nodes": 0,
+"satisfaction_rate": 0.0
+},
+"critic_score": {
+"overall_score": 0.552,
+"question_quality": 0.52,
+"information_extraction": 0.48,
+"empathy": 0.62,
+"efficiency": 0.66,
+"coverage": 0.55,
+"feedback": "The mediator asked two core intake questions (harm/remedy and timeline) and opened with a brief validating statement, which helped rapport. However, the questions were generic and did not translate the complainant’s concerns about “proxy language” into concrete, case-specific facts (e.g., the exact denial reason provided, the specific policy cited, how/when notice was delivered, and whether an appeal or review process was offered). The complainant’s pushback about “why do you need exact dates” was not addressed, and no effort was made to explain relevance or to reframe in a less intrusive way. Overall, the mediator gathered some high-level harms and desired remedy but missed opportunities to extract key factual anchors needed for intake completeness.",
+"strengths": [
+"Clear, straightforward questions about harm/remedy and timeline.",
+"Acknowledged the stress of the situation, supporting rapport."
+],
+"weaknesses": [
+"Missed critical case-specific details (denial notice contents, cited policy basis, method of notification, and any appeal steps).",
+"Did not address the complainant’s resistance to providing dates or explain why they matter."
+],
+"suggestions": [
+"Ask targeted follow-ups that translate “vague policy language” into specifics: “What exact wording did the notice use?” “Did it cite a policy section or criteria?”",
+"When the complainant hesitates, briefly explain the purpose (e.g., “Dates help determine deadlines for review/appeal”) and offer low-burden options (approximate dates, month/year, or document-based verification)."
+],
+"anchor_sections_expected": [
+"adverse_action",
+"selection_criteria"
+],
+"anchor_sections_covered": [
+"adverse_action",
+"selection_criteria"
+],
+"anchor_sections_missing": []
+},
+"anchor_section_summary": {
+"expected": [
+"adverse_action",
+"selection_criteria"
+],
+"covered": [
+"adverse_action",
+"selection_criteria"
+],
+"missing": []
+},
+"duration_seconds": 30.224043130874634,
+"success": true,
+"error": null,
+"artifacts": {
+"evidence_duckdb_expected": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_batch3x2/sessions/session_20260315_034346_001/evidence.duckdb",
+"legal_authorities_duckdb_expected": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_batch3x2/sessions/session_20260315_034346_001/legal_authorities.duckdb",
+"claim_support_duckdb_expected": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_batch3x2/sessions/session_20260315_034346_001/claim_support.duckdb",
+"evidence_duckdb_exists": true,
+"legal_authorities_duckdb_exists": true,
+"claim_support_duckdb_exists": true,
+"evidence_duckdb": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_batch3x2/sessions/session_20260315_034346_001/evidence.duckdb",
+"legal_authorities_duckdb": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_batch3x2/sessions/session_20260315_034346_001/legal_authorities.duckdb",
+"claim_support_duckdb": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_batch3x2/sessions/session_20260315_034346_001/claim_support.duckdb",
+"knowledge_graph_json": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_batch3x2/sessions/session_20260315_034346_001/knowledge_graph.json",
+"dependency_graph_json": "/home/barberb/HACC/research_results/adversarial_runs/live_hacc_20260315_batch3x2/sessions/session_20260315_034346_001/dependency_graph.json"
+}
+}

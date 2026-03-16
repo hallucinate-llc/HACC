@@ -1,0 +1,71 @@
+{
+  "title": "www.hud.gov contactus fairhousing",
+  "relative_path": "research_results/third_party_downloads/www.hud.gov/www.hud.gov_contactus_fairhousing.html",
+  "source_type": "repository_evidence",
+  "filename": "www.hud.gov_contactus_fairhousing.html",
+  "mime_type": "text/html",
+  "size": 151498,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 7,
+  "paragraph_count": 1,
+  "text_length": 5872,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 5872,
+    "text_length": 5872,
+    "raw_size": 151498,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 7
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 5872,
+      "text_length": 5872,
+      "raw_size": 151498,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "9c07db8bf70d191854044c6cd76dd1d0",
+  "checksum": "c6afeeecdcd4cd0a3ab137f683c92ba9fae1b5968a618db0818d595304acbe32",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/www.hud.gov/www.hud.gov_contactus_fairhousing.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/9c07db8bf70d191854044c6cd76dd1d0.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

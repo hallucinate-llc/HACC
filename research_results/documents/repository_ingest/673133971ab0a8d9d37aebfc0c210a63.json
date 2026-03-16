@@ -1,0 +1,69 @@
+{
+  "title": "en.wikipedia.org wiki Dublin Core",
+  "relative_path": "research_results/third_party_downloads/en.wikipedia.org/en.wikipedia.org_wiki_Dublin_Core.html",
+  "source_type": "repository_evidence",
+  "filename": "en.wikipedia.org_wiki_Dublin_Core.html",
+  "mime_type": "text/html",
+  "size": 148374,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 20,
+  "paragraph_count": 1,
+  "text_length": 17027,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 17145,
+    "text_length": 17145,
+    "raw_size": 148374,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 20
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 17145,
+      "text_length": 17145,
+      "raw_size": 148374,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "673133971ab0a8d9d37aebfc0c210a63",
+  "checksum": "542011d40de21627a14b7d0fa2dd4c9742a593637c4cb7c268b8bd79c7ef7aaa",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/en.wikipedia.org/en.wikipedia.org_wiki_Dublin_Core.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/673133971ab0a8d9d37aebfc0c210a63.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

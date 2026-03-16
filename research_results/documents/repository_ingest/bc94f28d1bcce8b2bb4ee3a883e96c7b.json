@@ -1,0 +1,69 @@
+{
+  "title": "OAR Chapter 137 Public Contracting Rules",
+  "relative_path": "research_data/raw_documents/OAR_Chapter_137_Public_Contracting_Rules.html",
+  "source_type": "repository_evidence",
+  "filename": "OAR_Chapter_137_Public_Contracting_Rules.html",
+  "mime_type": "text/html",
+  "size": 5645,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 1,
+  "paragraph_count": 1,
+  "text_length": 672,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 672,
+    "text_length": 672,
+    "raw_size": 5645,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 1
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 672,
+      "text_length": 672,
+      "raw_size": 5645,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "bc94f28d1bcce8b2bb4ee3a883e96c7b",
+  "checksum": "6b7d551f471d5440b7111329421412bf92dc6a03f139ddc9024a302250faee78",
+  "source_path": "/home/barberb/HACC/research_data/raw_documents/OAR_Chapter_137_Public_Contracting_Rules.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/bc94f28d1bcce8b2bb4ee3a883e96c7b.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

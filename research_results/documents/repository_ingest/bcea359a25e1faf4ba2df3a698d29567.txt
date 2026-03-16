@@ -1,0 +1,125 @@
+{
+"timestamp": "2025-12-30T18:50:28.144632",
+"total_urls_collected": 5,
+"total_findings": 4,
+"urls_visited": [
+"https://www.clackamas.us/housingauthority/resources",
+"https://www.clackamas.us/housingauthority",
+"https://www.clackamas.us/housingauthority/programs",
+"https://www.clackamas.us/housingauthority/contact",
+"https://www.clackamas.us/housingauthority/about"
+],
+"findings": [
+{
+"url": "https://www.clackamas.us/housingauthority",
+"keyword": "inclusion",
+"count": 1,
+"contexts": [
+"ovide and develop affordable housing with supportive services for individuals and families on their path to improved health, wellness, prosperity and inclusion. In order to sustain these services, we prioritize equitable service delivery, financial sustainability, and thriving partnerships to ensure our long"
+],
+"timestamp": "2025-12-30T18:50:19.963737"
+},
+{
+"url": "https://www.clackamas.us/housingauthority",
+"keyword": "equitable",
+"count": 1,
+"contexts": [
+"for individuals and families on their path to improved health, wellness, prosperity and inclusion. In order to sustain these services, we prioritize equitable service delivery, financial sustainability, and thriving partnerships to ensure our long term viability.\u00a0\n\nThe Section 8 wait list is currently close"
+],
+"timestamp": "2025-12-30T18:50:19.963969"
+},
+{
+"url": "https://www.clackamas.us/housingauthority",
+"keyword": "marginalized",
+"count": 1,
+"contexts": [
+"ry. The bond allows our region the opportunity to invest in the development of new housing resources for some of our most vulnerable and historically marginalized residents.\n\nLEARN MORE\n2023 METRO BOND ANNUAL REPORT\n2021 AUDIT REPORT\nCurrent Projects\nBlossom & Community Apartments\nClackamas Heights\nClayton Mohr"
+],
+"timestamp": "2025-12-30T18:50:19.964430"
+},
+{
+"url": "https://www.clackamas.us/housingauthority",
+"keyword": "historically marginalized",
+"count": 1,
+"contexts": [
+"growth boundary. The bond allows our region the opportunity to invest in the development of new housing resources for some of our most vulnerable and historically marginalized residents.\n\nLEARN MORE\n2023 METRO BOND ANNUAL REPORT\n2021 AUDIT REPORT\nCurrent Projects\nBlossom & Community Apartments\nClackamas Heights\nClayton Mohr"
+],
+"timestamp": "2025-12-30T18:50:19.966118"
+}
+],
+"keywords_searched": [
+"diversity",
+"equity",
+"inclusion",
+"DEI",
+"DEIB",
+"belonging",
+"diverse",
+"equitable",
+"inclusive",
+"social justice",
+"racial justice",
+"environmental justice",
+"disparate impact",
+"disparity",
+"disparities",
+"underrepresented",
+"underserved",
+"marginalized",
+"protected class",
+"protected classes",
+"affirmative action",
+"equal opportunity",
+"cultural competency",
+"cultural competence",
+"culturally responsive",
+"implicit bias",
+"unconscious bias",
+"anti-bias",
+"anti-racism",
+"antiracism",
+"racial equity",
+"systemic racism",
+"structural racism",
+"institutional racism",
+"white privilege",
+"privilege",
+"intersectionality",
+"intersectional",
+"microaggression",
+"microaggressions",
+"safe space",
+"brave space",
+"restorative justice",
+"transformative justice",
+"community engagement",
+"stakeholder engagement",
+"accessibility",
+"accessible",
+"fair housing",
+"housing justice",
+"economic justice",
+"wealth gap",
+"opportunity gap",
+"achievement gap",
+"historically excluded",
+"historically marginalized",
+"underinvested communities",
+"BIPOC",
+"people of color",
+"communities of color",
+"LGBTQ",
+"LGBTQIA",
+"gender identity",
+"sexual orientation",
+"lived experience",
+"centering voices",
+"elevating voices",
+"power dynamics",
+"power imbalance",
+"allyship",
+"ally",
+"decolonize",
+"decolonization"
+]
+}

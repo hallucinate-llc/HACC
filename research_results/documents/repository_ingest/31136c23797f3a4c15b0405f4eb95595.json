@@ -1,0 +1,71 @@
+{
+  "title": "www.paycomonline.net v4 ats web.php portal BC8C4A60F87D82E71EF353A71CF59EEA career-page",
+  "relative_path": "research_results/third_party_downloads/portal-applicant-tracking.us-cent.paycomonline.net/www.paycomonline.net_v4_ats_web.php_portal_BC8C4A60F87D82E71EF353A71CF59EEA_career-page.html",
+  "source_type": "repository_evidence",
+  "filename": "www.paycomonline.net_v4_ats_web.php_portal_BC8C4A60F87D82E71EF353A71CF59EEA_career-page.html",
+  "mime_type": "text/html",
+  "size": 5736,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 1,
+  "paragraph_count": 1,
+  "text_length": 57,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 57,
+    "text_length": 57,
+    "raw_size": 5736,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 1
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 57,
+      "text_length": 57,
+      "raw_size": 5736,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "31136c23797f3a4c15b0405f4eb95595",
+  "checksum": "8124f06507d4c9faec01ea91e1edbab25f4cfc30c1662df8f1d05b66ef4043bd",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/portal-applicant-tracking.us-cent.paycomonline.net/www.paycomonline.net_v4_ats_web.php_portal_BC8C4A60F87D82E71EF353A71CF59EEA_career-page.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/31136c23797f3a4c15b0405f4eb95595.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

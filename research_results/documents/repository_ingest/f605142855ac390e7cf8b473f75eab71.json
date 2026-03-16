@@ -1,0 +1,69 @@
+{
+  "title": "www.oregonencyclopedia.org articles blacks in oregon",
+  "relative_path": "research_results/third_party_downloads/oregonencyclopedia.org/www.oregonencyclopedia.org_articles_blacks_in_oregon.html",
+  "source_type": "repository_evidence",
+  "filename": "www.oregonencyclopedia.org_articles_blacks_in_oregon.html",
+  "mime_type": "text/html",
+  "size": 124017,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 45,
+  "paragraph_count": 1,
+  "text_length": 36918,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 36918,
+    "text_length": 36918,
+    "raw_size": 124017,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 45
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 36918,
+      "text_length": 36918,
+      "raw_size": 124017,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "f605142855ac390e7cf8b473f75eab71",
+  "checksum": "24afa6d04aec2c61dbdc8c013ab0d256abf60b38f8e51649dff474b3e6ad0f2a",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/oregonencyclopedia.org/www.oregonencyclopedia.org_articles_blacks_in_oregon.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/f605142855ac390e7cf8b473f75eab71.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

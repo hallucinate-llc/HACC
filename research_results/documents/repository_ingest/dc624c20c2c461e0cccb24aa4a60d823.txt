@@ -1,0 +1,1255 @@
+{
+"status": "success",
+"query": "retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+"claim_type": "housing_discrimination",
+"search_mode": "package",
+"use_vector": false,
+"search_payload": {
+"status": "success",
+"query": "retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+"results": [
+{
+"document_id": "document:c8dc2af6ee6996a0",
+"title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"score": 4399.3864,
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"snippet": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"matched_rules": [
+{
+"text": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"section_title": "EXHIBIT 14-1: SAMPLE GRIEVANCE PROCEDURE",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 3
+},
+{
+"text": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+"section_title": "ACOP 11/1/24",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 3
+},
+{
+"text": "In states without due process determinations, HACC must grant opportunity for grievance",
+"section_title": "ACOP 11/1/24",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 3
+}
+],
+"matched_entities": [
+{
+"name": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "In states without due process determinations, HACC must grant opportunity for grievance",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "The notice must also state that the tenant may request a grievance hearing on the HACC’s",
+"type": "policy_rule",
+"overlap": 3
+},
+{
+"name": "adverse action and will provide the subject of the record and the tenant a copy of such",
+"type": "policy_rule",
+"overlap": 3
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+},
+"document_id": "document:c8dc2af6ee6996a0",
+"document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 5318,
+"section_count": 3423,
+"source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+"text_length": 1401793,
+"status": "success"
+},
+"lexical_score": 4399.3864,
+"vector_score": 0.0,
+"search_modes": [
+"lexical"
+]
+},
+{
+"document_id": "document:be93a165d00f0101",
+"title": "ADMINISTRATIVE PLAN",
+"score": 4196.7273,
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"snippet": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"matched_rules": [
+{
+"text": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"section_title": "HACC Policy",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 2
+},
+{
+"text": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+"section_title": "Adminplan 7/1/2025",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 2
+},
+{
+"text": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+"section_title": "HACC Policy",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 2
+}
+],
+"matched_entities": [
+{
+"name": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "HACC will inform the family of its policy regarding moves denied due to insufficient",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "See Chapter 9 for more detail on unit eligibility policies and process.",
+"type": "policy_rule",
+"overlap": 2
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+},
+"document_id": "document:be93a165d00f0101",
+"document_title": "ADMINISTRATIVE PLAN",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 7441,
+"section_count": 4968,
+"source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+"text_length": 1927962,
+"status": "success"
+},
+"lexical_score": 4196.7273,
+"vector_score": 0.0,
+"search_modes": [
+"lexical"
+]
+},
+{
+"document_id": "document:1badd86efbbad087",
+"title": "Supportive Housing Services Program",
+"score": 142.6136,
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+"snippet": "Appeals process: Participants will be provided with a formal appeals process that at a minimum must consist of",
+"matched_rules": [
+{
+"text": "Appeals process: Participants will be provided with a formal appeals process that at a minimum must consist of",
+"section_title": "Discontinuation of Rent Assistance",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 2
+},
+{
+"text": "A landlord liaison function will be included in each county’s implementation of the tenant-based RLRA program.",
+"section_title": "Landlord liaison function",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 1
+},
+{
+"text": "All landlords leasing to tenant-based RLRA voucher holders will have access to a risk mitigation fund administered",
+"section_title": "Risk mitigation fund",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 1
+}
+],
+"matched_entities": [
+{
+"name": "Appeals process: Participants will be provided with a formal appeals process that at a minimum must consist of",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "Tenant-based RLRA Policies",
+"type": "policy_section",
+"overlap": 2
+},
+{
+"name": "A landlord liaison function will be included in each county’s implementation of the tenant-based RLRA program.",
+"type": "policy_rule",
+"overlap": 1
+},
+{
+"name": "All landlords leasing to tenant-based RLRA voucher holders will have access to a risk mitigation fund administered",
+"type": "policy_rule",
+"overlap": 1
+},
+{
+"name": "Existing tenants that are displaced by a new development with a project-based RLRA contract will be",
+"type": "policy_rule",
+"overlap": 1
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/945af141-c7d1-4973-88c0-b57024243114"
+},
+"document_id": "document:1badd86efbbad087",
+"document_title": "Supportive Housing Services Program",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 166,
+"section_count": 42,
+"source_path": "/home/barberb/HACC/hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+"text_length": 33964,
+"status": "success"
+},
+"lexical_score": 142.6136,
+"vector_score": 0.0,
+"search_modes": [
+"lexical"
+]
+},
+{
+"document_id": "document:10a43e9d70ec57bc",
+"title": "HOUSING AUTHORITY OF CLACKAMAS COUNTY",
+"score": 100.2727,
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/dd7daaf8-3391-4e6e-b5b9-539456b237c3",
+"snippet": "information, the Authority estimates the amounts due from tenants that may be uncollectible.",
+"matched_rules": [
+{
+"text": "information, the Authority estimates the amounts due from tenants that may be uncollectible.",
+"section_title": "Accounts Receivable",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 2
+},
+{
+"text": "OPERS funding policy provides for monthly employer contributions at actuarially determined",
+"section_title": "Contributions:",
+"rule_type": "deadline",
+"modality": "time_bound",
+"overlap": 1
+},
+{
+"text": "Principal and interest are due monthly based on a 30-year amortization.",
+"section_title": "LONG-TERM LIABILITIES (Continued)",
+"rule_type": "deadline",
+"modality": "time_bound",
+"overlap": 1
+}
+],
+"matched_entities": [
+{
+"name": "information, the Authority estimates the amounts due from tenants that may be uncollectible.",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "Accounts payable (due within 30 days)",
+"type": "policy_section",
+"overlap": 1
+},
+{
+"name": "Bad debt - tenant rents",
+"type": "policy_section",
+"overlap": 1
+},
+{
+"name": "Corrective Action Plan:",
+"type": "policy_section",
+"overlap": 1
+},
+{
+"name": "Decrease in due to Clackamas County",
+"type": "policy_section",
+"overlap": 1
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/dd7daaf8-3391-4e6e-b5b9-539456b237c3"
+},
+"document_id": "document:10a43e9d70ec57bc",
+"document_title": "HOUSING AUTHORITY OF CLACKAMAS COUNTY",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 107,
+"section_count": 1533,
+"source_path": "/home/barberb/HACC/hacc_website/dd7daaf8-3391-4e6e-b5b9-539456b237c3",
+"text_length": 167583,
+"status": "success"
+},
+"lexical_score": 100.2727,
+"vector_score": 0.0,
+"search_modes": [
+"lexical"
+]
+},
+{
+"document_id": "document:c22e106e297025b1",
+"title": "CLACKAMAS COUNTY CONTINUUM OF CARE (COC) PROGRAM",
+"score": 98.8409,
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/76861a83-9a1a-43ee-becb-f8556827f676",
+"snippet": "If termination is necessary, principles of due process must be followed.",
+"matched_rules": [
+{
+"text": "If termination is necessary, principles of due process must be followed.",
+"section_title": "Termination Requirements:",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 2
+},
+{
+"text": "At these times, the Sponsor will work toward a satisfactory resolution for both the tenant and the landlord in",
+"section_title": "Occupancy Issues:",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 1
+},
+{
+"text": "Death: In the case of death, rent will be paid for the lesser of up to the date the tenant’s possessions are",
+"section_title": "Occupancy Issues:",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 1
+}
+],
+"matched_entities": [
+{
+"name": "Appeal Process:",
+"type": "policy_section",
+"overlap": 2
+},
+{
+"name": "If termination is necessary, principles of due process must be followed.",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "At these times, the Sponsor will work toward a satisfactory resolution for both the tenant and the landlord in",
+"type": "policy_rule",
+"overlap": 1
+},
+{
+"name": "Calculating Tenant Rent Payments:",
+"type": "policy_section",
+"overlap": 1
+},
+{
+"name": "Death: In the case of death, rent will be paid for the lesser of up to the date the tenant’s possessions are",
+"type": "policy_rule",
+"overlap": 1
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/76861a83-9a1a-43ee-becb-f8556827f676"
+},
+"document_id": "document:c22e106e297025b1",
+"document_title": "CLACKAMAS COUNTY CONTINUUM OF CARE (COC) PROGRAM",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 230,
+"section_count": 104,
+"source_path": "/home/barberb/HACC/hacc_website/76861a83-9a1a-43ee-becb-f8556827f676",
+"text_length": 82212,
+"status": "success"
+},
+"lexical_score": 98.8409,
+"vector_score": 0.0,
+"search_modes": [
+"lexical"
+]
+},
+{
+"document_id": "document:b9b8827abb6e07a5",
+"title": "Long-term Rent Assistance (LTRA)",
+"score": 70.6364,
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/b53a0523-fa60-4df6-bba3-6ae34a47cb02",
+"snippet": "Appeals process: Participants will be provided with a formal appeals process that at a minimum must",
+"matched_rules": [
+{
+"text": "Appeals process: Participants will be provided with a formal appeals process that at a minimum must",
+"section_title": "Grievance/Appeals Procedure",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 2
+},
+{
+"text": "A formal policy regarding LTRA transfers is pending and will be developed upon receiving further",
+"section_title": "Transfers within program jurisdiction",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 1
+},
+{
+"text": "An LTRA participant may only be discontinued from the program due to serious violations of program",
+"section_title": "Discontinuation of Rent Assistance",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 1
+}
+],
+"matched_entities": [
+{
+"name": "Appeals process: Participants will be provided with a formal appeals process that at a minimum must",
+"type": "policy_rule",
+"overlap": 2
+},
+{
+"name": "Grievance/Appeals Procedure",
+"type": "policy_section",
+"overlap": 2
+},
+{
+"name": "A formal policy regarding LTRA transfers is pending and will be developed upon receiving further",
+"type": "policy_rule",
+"overlap": 1
+},
+{
+"name": "An LTRA participant may only be discontinued from the program due to serious violations of program",
+"type": "policy_rule",
+"overlap": 1
+},
+{
+"name": "Application Process",
+"type": "policy_section",
+"overlap": 1
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/b53a0523-fa60-4df6-bba3-6ae34a47cb02"
+},
+"document_id": "document:b9b8827abb6e07a5",
+"document_title": "Long-term Rent Assistance (LTRA)",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 78,
+"section_count": 24,
+"source_path": "/home/barberb/HACC/hacc_website/b53a0523-fa60-4df6-bba3-6ae34a47cb02",
+"text_length": 17649,
+"status": "success"
+},
+"lexical_score": 70.6364,
+"vector_score": 0.0,
+"search_modes": [
+"lexical"
+]
+},
+{
+"document_id": "document:5f22c118bb027fba",
+"title": "Clackamas County",
+"score": 67.0455,
+"source_type": "knowledge_graph",
+"source_path": "/home/barberb/HACC/hacc_website/4ac71dc5-c600-43df-8452-940f73f5d83e",
+"snippet": "Private discrimination may also occur when tenants are evicted for “no cause”",
+"matched_rules": [
+{
+"text": "Private discrimination may also occur when tenants are evicted for “no cause”",
+"section_title": "Private discrimination: Private discrimination in the housing rental market",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 1
+},
+{
+"text": "Publicly Supported Housing however this may be due to the rapid growth of this",
+"section_title": "Analysis",
+"rule_type": "discretion",
+"modality": "discretionary",
+"overlap": 1
+},
+{
+"text": "The jurisdiction will continue to work with tenants, property managers and landlords to",
+"section_title": "Page 14 of 69",
+"rule_type": "obligation",
+"modality": "required",
+"overlap": 1
+}
+],
+"matched_entities": [
+{
+"name": "Action",
+"type": "policy_section",
+"overlap": 1
+},
+{
+"name": "Assessment of Past Goals, Actions and Strategies",
+"type": "policy_section",
+"overlap": 1
+},
+{
+"name": "Community Participation Process",
+"type": "policy_section",
+"overlap": 1
+},
+{
+"name": "Private discrimination may also occur when tenants are evicted for “no cause”",
+"type": "policy_rule",
+"overlap": 1
+},
+{
+"name": "Publicly Supported Housing however this may be due to the rapid growth of this",
+"type": "policy_rule",
+"overlap": 1
+}
+],
+"metadata": {
+"backend": "markitdown",
+"backend_available": true,
+"details": {
+"backend": "markitdown",
+"backend_available": true,
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"source_path": "/home/barberb/HACC/hacc_website/4ac71dc5-c600-43df-8452-940f73f5d83e"
+},
+"document_id": "document:5f22c118bb027fba",
+"document_title": "Clackamas County",
+"implementation_status": "implemented",
+"operation": "extract_policy_rules_from_pdf",
+"provider": "ipfs_datasets_py",
+"rule_count": 105,
+"section_count": 650,
+"source_path": "/home/barberb/HACC/hacc_website/4ac71dc5-c600-43df-8452-940f73f5d83e",
+"text_length": 203544,
+"status": "success"
+},
+"lexical_score": 67.0455,
+"vector_score": 0.0,
+"search_modes": [
+"lexical"
+]
+},
+{
+"document_id": "d7c66224975576e469720f35d4dd5173",
+"title": "Name of Policy: Nondiscrimination",
+"score": 48.5909,
+"source_type": "parsed_document",
+"source_path": "/home/barberb/HACC/research_results/documents/parsed/d7c66224975576e469720f35d4dd5173.txt",
+"snippet": "Retaliation: Adverse action taken against an individual because the individual has engaged in a protected activity (such as filing a discrimination complaint or participating in an investigation of a violation of law or policy).",
+"matched_rules": [],
+"matched_entities": [
+{
+"name": "Retaliation: Adverse action taken against an individual because the individual has engaged in a protected activity (such",
+"type": "fact",
+"overlap": 3
+},
+{
+"name": "Retaliation against anyone because he or she has made a complaint or served as a witness or otherwise engaged in activit",
+"type": "fact",
+"overlap": 2
+},
+{
+"name": "The adverse action can be tangible (such as the giving of a lower grade or unjustified discipline) or intangible (such a",
+"type": "fact",
+"overlap": 2
+},
+{
+"name": "The reporting and processing of complaints alleging discrimination, discriminatory harassment, or retaliation on multipl",
+"type": "fact",
+"overlap": 2
+},
+{
+"name": "This policy addresses the reporting and processing of complaints alleging discrimination, including discriminatory haras",
+"type": "fact",
+"overlap": 2
+}
+],
+"metadata": {
+"pdf_path": "research_results/documents/raw/d7c66224975576e469720f35d4dd5173.pdf",
+"parsed_text_path": "research_results/documents/parsed/d7c66224975576e469720f35d4dd5173.txt",
+"parse_date": "2026-01-01T03:24:44.018382",
+"source": "fallback:pdftotext",
+"url": "file://research_results/documents/raw/d7c66224975576e469720f35d4dd5173.pdf",
+"text_length": 21177,
+"checksum": "66a6355c57551ef58c0ed7d7b74f7d105a8069588ee5c7e744294c65d87cd36e",
+"extraction_method": "pdftotext_only",
+"ocr_available": false,
+"ocr_attempted": false,
+"ocr_used": false,
+"needs_ocr": false,
+"graph_status": "available-fallback"
+},
+"lexical_score": 48.5909,
+"vector_score": 0.0,
+"search_modes": [
+"lexical"
+]
+},
+{
+"document_id": "f401a0fa8facd2145131a938e879207e",
+"title": "VOLUNTARY RESOLUTION AGREEMENT",
+"score": 35.3636,
+"source_type": "parsed_document",
+"source_path": "/home/barberb/HACC/research_results/documents/parsed/f401a0fa8facd2145131a938e879207e.txt",
+"snippet": "VOLUNTARY RESOLUTION AGREEMENT The McMinnville School District (the district) voluntarily agrees to take the following actions to resolve complaint Reference No.",
+"matched_rules": [],
+"matched_entities": [
+{
+"name": "By October 31, 2020, the district will provide OCR a copy of its draft policies, which it developed pursuant to Action I",
+"type": "fact",
+"overlap": 2
+},
+{
+"name": "OCR and the district will repeat this process until OCR approves the policies.",
+"type": "fact",
+"overlap": 2
+},
+{
+"name": "Review of Policies and Procedures Action Item 1.",
+"type": "fact",
+"overlap": 2
+},
+{
+"name": "Within 30 days of receiving OCR’s written approval of the policies developed under Action Item A.1, the district will pr",
+"type": "fact",
+"overlap": 2
+},
+{
+"name": "Within 45 days of receiving OCR’s written approval of the policies developed under Action Item A.1, the district will su",
+"type": "fact",
+"overlap": 2
+}
+],
+"metadata": {
+"pdf_path": "research_results/documents/raw/f401a0fa8facd2145131a938e879207e.pdf",
+"parsed_text_path": "research_results/documents/parsed/f401a0fa8facd2145131a938e879207e.txt",
+"parse_date": "2025-12-31T17:00:05.775468",
+"source": "third_party:batch_parallel",
+"url": "file://research_results/documents/raw/f401a0fa8facd2145131a938e879207e.pdf",
+"text_length": 14285,
+"checksum": "126fd45e15b624653a84618d74ae62c84c89684b33f27dbd24f26fc89d6be88f",
+"extraction_method": "ocrmypdf_force+pdftotext",
+"ocr_available": true,
+"ocr_attempted": true,
+"ocr_used": true,
+"needs_ocr": false,
+"graph_status": "available-fallback"
+},
+"lexical_score": 35.3636,
+"vector_score": 0.0,
+"search_modes": [
+"lexical"
+]
+},
+{
+"document_id": "b261ef9163971b7db02376dcdee42892",
+"title": "FOREWORD",
+"score": 30.6364,
+"source_type": "parsed_document",
+"source_path": "/home/barberb/HACC/research_results/documents/parsed/b261ef9163971b7db02376dcdee42892.txt",
+"snippet": "FOREWORD The policy statements in this document were adopted by the Board to govern both the function of its internal staff and the general operation of the schools and related services.",
+"matched_rules": [],
+"matched_entities": [
+{
+"name": "AC Discrimination Complaint Procedure ..........................................................................",
+"type": "fact",
+"overlap": 1
+},
+{
+"name": "ACA ADA Grievance Procedure ..........................................................................................",
+"type": "fact",
+"overlap": 1
+},
+{
+"name": "ACA-AR Adoption and Revision of Policies ...............................................................................",
+"type": "fact",
+"overlap": 1
+},
+{
+"name": "All policies have been referenced with the appropriate Oregon Revised Statutes and Oregon Administrative Rules, federal ",
+"type": "fact",
+"overlap": 1
+},
+{
+"name": "FOREWORD The policy statements in this document were adopted by the Board to govern both the function of its internal st",
+"type": "fact",
+"overlap": 1
+}
+],
+"metadata": {
+"pdf_path": "research_results/documents/raw/b261ef9163971b7db02376dcdee42892.pdf",
+"parsed_text_path": "research_results/documents/parsed/b261ef9163971b7db02376dcdee42892.txt",
+"parse_date": "2026-01-01T01:54:41.914187",
+"source": "fallback:pdftotext",
+"url": "file://research_results/documents/raw/b261ef9163971b7db02376dcdee42892.pdf",
+"text_length": 1071352,
+"checksum": "d0f58824697b016baea0f196b9fc0236f77093dee16c51825b5726780c447b21",
+"extraction_method": "pdftotext_only",
+"ocr_available": false,
+"ocr_attempted": false,
+"ocr_used": false,
+"needs_ocr": false,
+"graph_status": "available-fallback"
+},
+"lexical_score": 30.6364,
+"vector_score": 0.0,
+"search_modes": [
+"lexical"
+]
+}
+],
+"returned_result_count": 10,
+"lexical_status": "success",
+"vector_status": "unavailable",
+"vector_error": null,
+"integration_status": {
+"complaint_generator_root": "/home/barberb/HACC/complaint-generator",
+"adapter_available": true,
+"degraded_reason": null,
+"preferred_vector_indexes": [
+{
+"index_name": "hacc_policy_graph",
+"index_dir": "/home/barberb/HACC/hacc_website/knowledge_graph/embeddings"
+},
+{
+"index_name": "hacc_text_chunks",
+"index_dir": "/home/barberb/HACC/hacc_website/knowledge_graph/embeddings"
+}
+],
+"capability_report": {
+"status": "degraded",
+"available_count": 8,
+"degraded_count": 3,
+"available_capabilities": [
+"documents",
+"graphrag",
+"ipfs_storage",
+"knowledge_graphs",
+"llm_router",
+"logic_tools",
+"mcp_gateway",
+"vector_store"
+],
+"degraded_capabilities": {
+"web_archiving": "No module named 'pydantic'",
+"common_crawl": "No module named 'pydantic'",
+"legal_scrapers": "No module named 'bs4'"
+},
+"family_counts": {
+"generation": 1,
+"storage": 1,
+"acquisition": 2,
+"documents": 1,
+"legal": 1,
+"graphs": 1,
+"validation": 2,
+"retrieval": 1,
+"mcp": 1
+},
+"capabilities": {
+"llm_router": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.llm_router",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "llm_router",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.llm",
+"contract_family": "generation"
+}
+},
+"ipfs_storage": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.ipfs_backend_router",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "ipfs_storage",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.storage",
+"contract_family": "storage"
+}
+},
+"web_archiving": {
+"status": "degraded",
+"available": false,
+"module_path": "ipfs_datasets_py.web_archiving",
+"degraded_reason": "No module named 'pydantic'",
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "web_archiving",
+"error_type": "ModuleNotFoundError",
+"adapter_module": "integrations.ipfs_datasets.search",
+"contract_family": "acquisition"
+}
+},
+"common_crawl": {
+"status": "degraded",
+"available": false,
+"module_path": "ipfs_datasets_py.processors.web_archiving.common_crawl_integration",
+"degraded_reason": "No module named 'pydantic'",
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "common_crawl",
+"error_type": "ModuleNotFoundError",
+"adapter_module": "integrations.ipfs_datasets.search",
+"contract_family": "acquisition"
+}
+},
+"documents": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.processors",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "documents",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.documents",
+"contract_family": "documents"
+}
+},
+"legal_scrapers": {
+"status": "degraded",
+"available": false,
+"module_path": "ipfs_datasets_py.processors.legal_scrapers",
+"degraded_reason": "No module named 'bs4'",
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "legal_scrapers",
+"error_type": "ModuleNotFoundError",
+"adapter_module": "integrations.ipfs_datasets.legal",
+"contract_family": "legal"
+}
+},
+"knowledge_graphs": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.knowledge_graphs",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "knowledge_graphs",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.graphs",
+"contract_family": "graphs"
+}
+},
+"graphrag": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.optimizers.graphrag",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "graphrag",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.graphrag",
+"contract_family": "validation"
+}
+},
+"logic_tools": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.logic",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "logic_tools",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.logic",
+"contract_family": "validation"
+}
+},
+"vector_store": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.vector_stores",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "vector_store",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.vector_store",
+"contract_family": "retrieval"
+}
+},
+"mcp_gateway": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.mcp_server",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "mcp_gateway",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.mcp_gateway",
+"contract_family": "mcp"
+}
+}
+}
+},
+"capabilities": {
+"discovery_available": true,
+"seeded_commoncrawl_available": true,
+"legal_discovery_available": false,
+"scrape_available": true,
+"graph_available": true,
+"vector_available": true,
+"embeddings_available": true,
+"vector_degraded_reason": null,
+"legal_degraded_reason": "No module named 'bs4'"
+}
+},
+"backend_mode": "shared_hybrid",
+"index_status": {
+"status": "existing",
+"index_name": "hacc_corpus",
+"index_dir": "/home/barberb/HACC/research_results/search_indexes"
+}
+},
+"upload_candidates": [
+{
+"document_id": "d7c66224975576e469720f35d4dd5173",
+"title": "Name of Policy: Nondiscrimination",
+"source_type": "parsed_document",
+"source_path": "/home/barberb/HACC/research_results/documents/parsed/d7c66224975576e469720f35d4dd5173.txt",
+"relative_path": "research_results/documents/parsed/d7c66224975576e469720f35d4dd5173.txt",
+"score": 48.5909,
+"snippet": "Retaliation: Adverse action taken against an individual because the individual has engaged in a protected activity (such as filing a discrimination complaint or participating in an investigation of a violation of law or policy).",
+"metadata": {
+"pdf_path": "research_results/documents/raw/d7c66224975576e469720f35d4dd5173.pdf",
+"parsed_text_path": "research_results/documents/parsed/d7c66224975576e469720f35d4dd5173.txt",
+"parse_date": "2026-01-01T03:24:44.018382",
+"source": "fallback:pdftotext",
+"url": "file://research_results/documents/raw/d7c66224975576e469720f35d4dd5173.pdf",
+"text_length": 21177,
+"checksum": "66a6355c57551ef58c0ed7d7b74f7d105a8069588ee5c7e744294c65d87cd36e",
+"extraction_method": "pdftotext_only",
+"ocr_available": false,
+"ocr_attempted": false,
+"ocr_used": false,
+"needs_ocr": false,
+"graph_status": "available-fallback"
+}
+},
+{
+"document_id": "f401a0fa8facd2145131a938e879207e",
+"title": "VOLUNTARY RESOLUTION AGREEMENT",
+"source_type": "parsed_document",
+"source_path": "/home/barberb/HACC/research_results/documents/parsed/f401a0fa8facd2145131a938e879207e.txt",
+"relative_path": "research_results/documents/parsed/f401a0fa8facd2145131a938e879207e.txt",
+"score": 35.3636,
+"snippet": "VOLUNTARY RESOLUTION AGREEMENT The McMinnville School District (the district) voluntarily agrees to take the following actions to resolve complaint Reference No.",
+"metadata": {
+"pdf_path": "research_results/documents/raw/f401a0fa8facd2145131a938e879207e.pdf",
+"parsed_text_path": "research_results/documents/parsed/f401a0fa8facd2145131a938e879207e.txt",
+"parse_date": "2025-12-31T17:00:05.775468",
+"source": "third_party:batch_parallel",
+"url": "file://research_results/documents/raw/f401a0fa8facd2145131a938e879207e.pdf",
+"text_length": 14285,
+"checksum": "126fd45e15b624653a84618d74ae62c84c89684b33f27dbd24f26fc89d6be88f",
+"extraction_method": "ocrmypdf_force+pdftotext",
+"ocr_available": true,
+"ocr_attempted": true,
+"ocr_used": true,
+"needs_ocr": false,
+"graph_status": "available-fallback"
+}
+}
+],
+"synthetic_prompts": {
+"evidence_upload_prompts": [
+{
+"prompt_id": "evidence_upload_1",
+"prompt_type": "evidence_upload",
+"title": "Name of Policy: Nondiscrimination",
+"source_path": "/home/barberb/HACC/research_results/documents/parsed/d7c66224975576e469720f35d4dd5173.txt",
+"relative_path": "research_results/documents/parsed/d7c66224975576e469720f35d4dd5173.txt",
+"text": "Upload the evidence file 'research_results/documents/parsed/d7c66224975576e469720f35d4dd5173.txt' and explain how it supports a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Focus on the most relevant language: Retaliation: Adverse action taken against an individual because the individual has engaged in a protected activity (such as filing a discrimination complaint or participating in an investigation of a violation of law or policy)."
+},
+{
+"prompt_id": "evidence_upload_2",
+"prompt_type": "evidence_upload",
+"title": "VOLUNTARY RESOLUTION AGREEMENT",
+"source_path": "/home/barberb/HACC/research_results/documents/parsed/f401a0fa8facd2145131a938e879207e.txt",
+"relative_path": "research_results/documents/parsed/f401a0fa8facd2145131a938e879207e.txt",
+"text": "Upload the evidence file 'research_results/documents/parsed/f401a0fa8facd2145131a938e879207e.txt' and explain how it supports a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Focus on the most relevant language: VOLUNTARY RESOLUTION AGREEMENT The McMinnville School District (the district) voluntarily agrees to take the following actions to resolve complaint Reference No."
+}
+],
+"complaint_chatbot_prompt": "Ground the complaint chatbot in the uploaded repository evidence for 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Use the uploaded materials (Name of Policy: Nondiscrimination, VOLUNTARY RESOLUTION AGREEMENT) as factual grounding, ask the user to connect each document to case-specific events, and identify missing timeline, actor, harm, and remedy facts.",
+"mediator_evaluation_prompt": "Evaluate each uploaded evidence item for a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. For every document, determine what claim element it supports, what facts it proves directly, what facts remain missing, and what follow-up questions the mediator should ask before drafting a complaint."
+},
+"integration_status": {
+"complaint_generator_root": "/home/barberb/HACC/complaint-generator",
+"adapter_available": true,
+"degraded_reason": null,
+"preferred_vector_indexes": [
+{
+"index_name": "hacc_policy_graph",
+"index_dir": "/home/barberb/HACC/hacc_website/knowledge_graph/embeddings"
+},
+{
+"index_name": "hacc_text_chunks",
+"index_dir": "/home/barberb/HACC/hacc_website/knowledge_graph/embeddings"
+}
+],
+"capability_report": {
+"status": "degraded",
+"available_count": 8,
+"degraded_count": 3,
+"available_capabilities": [
+"documents",
+"graphrag",
+"ipfs_storage",
+"knowledge_graphs",
+"llm_router",
+"logic_tools",
+"mcp_gateway",
+"vector_store"
+],
+"degraded_capabilities": {
+"web_archiving": "No module named 'pydantic'",
+"common_crawl": "No module named 'pydantic'",
+"legal_scrapers": "No module named 'bs4'"
+},
+"family_counts": {
+"generation": 1,
+"storage": 1,
+"acquisition": 2,
+"documents": 1,
+"legal": 1,
+"graphs": 1,
+"validation": 2,
+"retrieval": 1,
+"mcp": 1
+},
+"capabilities": {
+"llm_router": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.llm_router",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "llm_router",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.llm",
+"contract_family": "generation"
+}
+},
+"ipfs_storage": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.ipfs_backend_router",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "ipfs_storage",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.storage",
+"contract_family": "storage"
+}
+},
+"web_archiving": {
+"status": "degraded",
+"available": false,
+"module_path": "ipfs_datasets_py.web_archiving",
+"degraded_reason": "No module named 'pydantic'",
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "web_archiving",
+"error_type": "ModuleNotFoundError",
+"adapter_module": "integrations.ipfs_datasets.search",
+"contract_family": "acquisition"
+}
+},
+"common_crawl": {
+"status": "degraded",
+"available": false,
+"module_path": "ipfs_datasets_py.processors.web_archiving.common_crawl_integration",
+"degraded_reason": "No module named 'pydantic'",
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "common_crawl",
+"error_type": "ModuleNotFoundError",
+"adapter_module": "integrations.ipfs_datasets.search",
+"contract_family": "acquisition"
+}
+},
+"documents": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.processors",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "documents",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.documents",
+"contract_family": "documents"
+}
+},
+"legal_scrapers": {
+"status": "degraded",
+"available": false,
+"module_path": "ipfs_datasets_py.processors.legal_scrapers",
+"degraded_reason": "No module named 'bs4'",
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "legal_scrapers",
+"error_type": "ModuleNotFoundError",
+"adapter_module": "integrations.ipfs_datasets.legal",
+"contract_family": "legal"
+}
+},
+"knowledge_graphs": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.knowledge_graphs",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "knowledge_graphs",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.graphs",
+"contract_family": "graphs"
+}
+},
+"graphrag": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.optimizers.graphrag",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "graphrag",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.graphrag",
+"contract_family": "validation"
+}
+},
+"logic_tools": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.logic",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "logic_tools",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.logic",
+"contract_family": "validation"
+}
+},
+"vector_store": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.vector_stores",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "vector_store",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.vector_store",
+"contract_family": "retrieval"
+}
+},
+"mcp_gateway": {
+"status": "available",
+"available": true,
+"module_path": "ipfs_datasets_py.mcp_server",
+"degraded_reason": null,
+"provider": "ipfs_datasets_py",
+"details": {
+"capability": "mcp_gateway",
+"error_type": "",
+"adapter_module": "integrations.ipfs_datasets.mcp_gateway",
+"contract_family": "mcp"
+}
+}
+}
+},
+"capabilities": {
+"discovery_available": true,
+"seeded_commoncrawl_available": true,
+"legal_discovery_available": false,
+"scrape_available": true,
+"graph_available": true,
+"vector_available": true,
+"embeddings_available": true,
+"vector_degraded_reason": null,
+"legal_degraded_reason": "No module named 'bs4'"
+}
+}
+}

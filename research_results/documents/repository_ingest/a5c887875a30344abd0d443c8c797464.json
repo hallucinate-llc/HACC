@@ -1,0 +1,69 @@
+{
+  "title": "adversarial results",
+  "relative_path": "research_results/adversarial_runs/hacc_grounded_live_upload_sim_20260315_rerun/adversarial_results.json",
+  "source_type": "repository_evidence",
+  "filename": "adversarial_results.json",
+  "mime_type": "application/json",
+  "size": 80316,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 71,
+  "paragraph_count": 1,
+  "text_length": 60416,
+  "input_format": "text",
+  "page_count": 1,
+  "extraction_method": "text_normalization",
+  "parse_quality": {
+    "quality_score": 98.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 60416,
+    "text_length": 60416,
+    "raw_size": 80316,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "text",
+    "normalization": "text_normalization",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 71
+    },
+    "extraction": {
+      "method": "text_normalization",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 60416,
+      "text_length": 60416,
+      "raw_size": 80316,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "a5c887875a30344abd0d443c8c797464",
+  "checksum": "6fa382e63dcadc298d5a82f53e5b828e10e639f3c98056b869154816ef0abab7",
+  "source_path": "/home/barberb/HACC/research_results/adversarial_runs/hacc_grounded_live_upload_sim_20260315_rerun/adversarial_results.json",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/a5c887875a30344abd0d443c8c797464.txt",
+  "content_type": "application/json",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

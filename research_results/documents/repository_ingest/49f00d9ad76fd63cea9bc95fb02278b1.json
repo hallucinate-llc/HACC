@@ -1,0 +1,71 @@
+{
+  "title": "colorlines.com categories schools-youth aceb9ab427",
+  "relative_path": "research_results/third_party_downloads/colorlines.com/colorlines.com_categories_schools-youth_aceb9ab427.html",
+  "source_type": "repository_evidence",
+  "filename": "colorlines.com_categories_schools-youth_aceb9ab427.html",
+  "mime_type": "text/html",
+  "size": 35155,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 2,
+  "paragraph_count": 1,
+  "text_length": 1353,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 80.0,
+    "quality_tier": "medium",
+    "quality_flags": [
+      "low_text_density"
+    ],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 1353,
+    "text_length": 1353,
+    "raw_size": 35155,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 2
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 1353,
+      "text_length": 1353,
+      "raw_size": 35155,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "49f00d9ad76fd63cea9bc95fb02278b1",
+  "checksum": "127054e7e8e9a83a4fe5ced84a169247d9a104f3eb6370e7b534a3888b0c4d2c",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/colorlines.com/colorlines.com_categories_schools-youth_aceb9ab427.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/49f00d9ad76fd63cea9bc95fb02278b1.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

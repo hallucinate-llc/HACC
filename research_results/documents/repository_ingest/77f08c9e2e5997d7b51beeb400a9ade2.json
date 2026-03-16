@@ -1,0 +1,69 @@
+{
+  "title": "www.douglasesd.k12.or.us about-douglas-esd news default-board-post-page ~board news post american-education-week",
+  "relative_path": "research_results/third_party_downloads/tinyurl.com/www.douglasesd.k12.or.us_about-douglas-esd_news_default-board-post-page_~board_news_post_american-education-week.html",
+  "source_type": "repository_evidence",
+  "filename": "www.douglasesd.k12.or.us_about-douglas-esd_news_default-board-post-page_~board_news_post_american-education-week.html",
+  "mime_type": "text/html",
+  "size": 62100,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 12,
+  "paragraph_count": 1,
+  "text_length": 10069,
+  "input_format": "html",
+  "page_count": 1,
+  "extraction_method": "html_to_text",
+  "parse_quality": {
+    "quality_score": 95.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 10069,
+    "text_length": 10069,
+    "raw_size": 62100,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "html",
+    "normalization": "html_to_text",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 12
+    },
+    "extraction": {
+      "method": "html_to_text",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 10069,
+      "text_length": 10069,
+      "raw_size": 62100,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "77f08c9e2e5997d7b51beeb400a9ade2",
+  "checksum": "1abcbe98e7eef4d0d4ec1ce6a5328557b245df91119b0f5d6d71efa700b509ad",
+  "source_path": "/home/barberb/HACC/research_results/third_party_downloads/tinyurl.com/www.douglasesd.k12.or.us_about-douglas-esd_news_default-board-post-page_~board_news_post_american-education-week.html",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/77f08c9e2e5997d7b51beeb400a9ade2.txt",
+  "content_type": "text/html",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

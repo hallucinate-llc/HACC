@@ -1,0 +1,673 @@
+# Risk Review (risk_score > 0)
+Generated: 2025-12-31T10:40:05
+Index: research_results/document_index_20251231_100922.json
+Total indexed docs: 480
+Docs with risk_score > 0: 253
+Focused docs (excluding QuantumResidential assets/images/js/css): 115
+## Top domains (focused)
+- (no-domain): max_risk=3 docs=35
+- risk=2 url=file://research_results/documents/raw/592594abd4eb6a8bad89ce62855bb42e.pdf file=research_results/documents/parsed/592594abd4eb6a8bad89ce62855bb42e.txt id=592594abd4eb6a8bad89ce62855bb42e
+- risk=3 url=file://research_results/documents/raw/74c6bb8d3aa480a95207e0085fc1c4c0.pdf file=research_results/documents/parsed/74c6bb8d3aa480a95207e0085fc1c4c0.txt id=74c6bb8d3aa480a95207e0085fc1c4c0
+- risk=3 url=file://research_results/documents/raw/e074d302eac8c1251ce84c7611f87a01.pdf file=research_results/documents/parsed/e074d302eac8c1251ce84c7611f87a01.txt id=e074d302eac8c1251ce84c7611f87a01
+- risk=3 url=file://research_results/documents/raw/003c0bf391f9060e15360bb52c763605.pdf file=research_results/documents/parsed/003c0bf391f9060e15360bb52c763605.txt id=003c0bf391f9060e15360bb52c763605
+- risk=3 url=file://research_results/documents/raw/2cb743c45485324adc632bb0642bc614.pdf file=research_results/documents/parsed/2cb743c45485324adc632bb0642bc614.txt id=2cb743c45485324adc632bb0642bc614
+- www.racialequityalliance.org: max_risk=3 docs=9
+- risk=2 url=https://www.racialequityalliance.org/viewdocument/democracy-resilience-toolkit-promp file=research_results/documents/parsed/b5954653ff0f6fe3eeb0aa5b63479bda.txt id=b5954653ff0f6fe3eeb0aa5b63479bda
+- risk=3 url=https://www.racialequityalliance.org/blogs/gare-team/2025/12/16/government-at-just-narratives file=research_results/documents/parsed/0907648c5876f269eb95f4122bbe6150.txt id=0907648c5876f269eb95f4122bbe6150
+- risk=2 url=https://www.racialequityalliance.org/resources/public-sector-jobs- file=research_results/documents/parsed/c03fa557fce41394cb3254c013c5736b.txt id=c03fa557fce41394cb3254c013c5736b
+- risk=3 url=https://www.racialequityalliance.org/resources/state-of-the-field-25 file=research_results/documents/parsed/181bd6ec8cfef085a9c88f92bf6a1ca5.txt id=181bd6ec8cfef085a9c88f92bf6a1ca5
+- risk=2 url=https://www.racialequityalliance.org/home file=research_results/documents/parsed/0e1e03d72717fb6325339c86021d7ea8.txt id=0e1e03d72717fb6325339c86021d7ea8
+- obiu.org: max_risk=3 docs=6
+- risk=3 url=https://obiu.org/about file=research_results/documents/parsed/a626e07c5852ed3bdb811988165371fe.txt id=a626e07c5852ed3bdb811988165371fe
+- risk=3 url=https://obiu.org/course/stages-of-targeted-univeralism-part2 file=research_results/documents/parsed/dc398148018f34aaa217529c5dbcce3b.txt id=dc398148018f34aaa217529c5dbcce3b
+- risk=3 url=https://obiu.org/ file=research_results/documents/parsed/3118d8dcd1c708d5160b1108a9b231ea.txt id=3118d8dcd1c708d5160b1108a9b231ea
+- risk=3 url=https://obiu.org/course/what-is-targeted-universalism file=research_results/documents/parsed/65855a9e72d39c381c793fccf7e2afd0.txt id=65855a9e72d39c381c793fccf7e2afd0
+- risk=3 url=https://obiu.org/courses file=research_results/documents/parsed/385a88a7fe2da014385f69da14fe3381.txt id=385a88a7fe2da014385f69da14fe3381
+- www.raceforward.org: max_risk=3 docs=6
+- risk=2 url=https://www.raceforward.org/resources/toolkits/messages-grow-and-uproot-narrative-strategy-amid-attacks-diversity-equity file=research_results/documents/parsed/19fe65d220983b78d9b82406f68a7436.txt id=19fe65d220983b78d9b82406f68a7436
+- risk=2 url=https://www.raceforward.org/2024-annual-report file=research_results/documents/parsed/3280f67cdb07a327ce492b515521ebce.txt id=3280f67cdb07a327ce492b515521ebce
+- risk=2 url=https://www.raceforward.org/ file=research_results/documents/parsed/6edb45aeefba069c869f50585373f1c6.txt id=6edb45aeefba069c869f50585373f1c6
+- risk=3 url=https://www.raceforward.org/what-racial-equity file=research_results/documents/parsed/a190e1e7829daedea88c07cffb922811.txt id=a190e1e7829daedea88c07cffb922811
+- risk=3 url=https://www.raceforward.org/training-and-events/just-narratives file=research_results/documents/parsed/d000a9697b5ecd1908fdc47f91470b1e.txt id=d000a9697b5ecd1908fdc47f91470b1e
+- www.oregonmetro.gov: max_risk=3 docs=4
+- risk=2 url=https://www.oregonmetro.gov/ file=research_results/documents/parsed/78c1b6400b5d5a077a730e1abdd3a397.txt id=78c1b6400b5d5a077a730e1abdd3a397
+- risk=2 url=https://www.oregonmetro.gov/what-metro-does/housing-and-homelessness/affordable-housing-bond/racial-equity file=research_results/documents/parsed/d1b57d035c043d274245fea7ac99f95a.txt id=d1b57d035c043d274245fea7ac99f95a
+- risk=2 url=https://www.oregonmetro.gov/committees file=research_results/documents/parsed/ebc99fc1209f8c2c5f749b2004124f65.txt id=ebc99fc1209f8c2c5f749b2004124f65
+- risk=3 url=https://www.oregonmetro.gov/projects file=research_results/documents/parsed/0fa504280ae86dd4e5ccf8c473b7d22c.txt id=0fa504280ae86dd4e5ccf8c473b7d22c
+- en.wikipedia.org: max_risk=2 docs=6
+- risk=2 url=https://en.wikipedia.org/wiki/RDFa file=research_results/documents/parsed/70cd1c5a92bcf53af2ccfbe1bb03108d.txt id=70cd1c5a92bcf53af2ccfbe1bb03108d
+- risk=2 url=https://en.wikipedia.org/wiki/Main_Page file=research_results/documents/parsed/ac8b3b54df4124a34387d7e8da8f3838.txt id=ac8b3b54df4124a34387d7e8da8f3838
+- risk=2 url=https://en.wikipedia.org/wiki/Dublin_Core file=research_results/documents/parsed/244dee6f75bb503ebdcf3d3df5729d4a.txt id=244dee6f75bb503ebdcf3d3df5729d4a
+- risk=2 url=https://en.wikipedia.org/wiki/ISO_4217 file=research_results/documents/parsed/db13e23918ccc7cc83dae317c32a5d58.txt id=db13e23918ccc7cc83dae317c32a5d58
+- risk=2 url=https://en.wikipedia.org/wiki/CURIE file=research_results/documents/parsed/e09418552bffc631d834012946662292.txt id=e09418552bffc631d834012946662292
+- opportunityagenda.org: max_risk=2 docs=5
+- risk=2 url=https://opportunityagenda.org/wp-json/ file=research_results/documents/parsed/7ab1c698e9aca12f84f98488520ed0a0.txt id=7ab1c698e9aca12f84f98488520ed0a0
+- risk=1 url=https://opportunityagenda.org/comments/feed/ file=research_results/documents/parsed/457312611cef31a2cfe6e349011f468e.txt id=457312611cef31a2cfe6e349011f468e
+- risk=1 url=https://opportunityagenda.org/feed/ file=research_results/documents/parsed/a6118b290fad4b795a070b61557b3182.txt id=a6118b290fad4b795a070b61557b3182
+- risk=2 url=https://opportunityagenda.org/events/?ical=1 file=research_results/documents/parsed/942ef0696af0624037562a90533f3a2f.txt id=942ef0696af0624037562a90533f3a2f
+- risk=2 url=https://opportunityagenda.org/?s=%7Bsearch_term_string file=research_results/documents/parsed/3d2f61921dcdc94801c90a0fee237047.txt id=3d2f61921dcdc94801c90a0fee237047
+- www.drupal.org: max_risk=2 docs=4
+- risk=2 url=https://www.drupal.org/about/values-and-principles file=research_results/documents/parsed/adcf7235f7f3bbc0db58cf35869d2d55.txt id=adcf7235f7f3bbc0db58cf35869d2d55
+- risk=2 url=https://www.drupal.org/drupal-services file=research_results/documents/parsed/3624845de3c2316d6c0dbf0f2893e487.txt id=3624845de3c2316d6c0dbf0f2893e487
+- risk=2 url=https://new.drupal.org/home file=research_results/documents/parsed/11f8c5e1123008295d7e64cc85216997.txt id=11f8c5e1123008295d7e64cc85216997
+- risk=2 url=https://www.drupal.org/about file=research_results/documents/parsed/9afc03806c436d495f9b35661514a4c4.txt id=9afc03806c436d495f9b35661514a4c4
+- www.hudexchange.info: max_risk=2 docs=4
+- risk=2 url=https://www.hudexchange.info/resource/3824/hmis-data-dictionary/ file=research_results/documents/parsed/022621fee8894629a4293f7bcd169817.txt id=022621fee8894629a4293f7bcd169817
+- risk=2 url=https://www.hudexchange.info/homelessness-assistance/ file=research_results/documents/parsed/b8db36676c4c140396b695f791f8e0b9.txt id=b8db36676c4c140396b695f791f8e0b9
+- risk=2 url=https://www.hudexchange.info/ file=research_results/documents/parsed/5b94e8a5df0af6d0ee9bdeaa10261e5e.txt id=5b94e8a5df0af6d0ee9bdeaa10261e5e
+- risk=2 url=https://www.hudexchange.info/about/ file=research_results/documents/parsed/03f0b1ced9a67059ca7c1c803601a4f1.txt id=03f0b1ced9a67059ca7c1c803601a4f1
+- www.hud.gov: max_risk=2 docs=4
+- risk=1 url=https://www.hud.gov/contactus/fairhousing file=research_results/documents/parsed/60836bb392b2f12f39e28102c4ae36fa.txt id=60836bb392b2f12f39e28102c4ae36fa
+- risk=1 url=https://www.hud.gov/no-fear-act file=research_results/documents/parsed/ce61429f7a2184a4678907a98c463d66.txt id=ce61429f7a2184a4678907a98c463d66
+- risk=2 url=https://www.hud.gov/ file=research_results/documents/parsed/1171b9007c447304c2078fde38778fb3.txt id=1171b9007c447304c2078fde38778fb3
+- risk=2 url=https://www.hud.gov/news file=research_results/documents/parsed/07191d2e982a998b5c108d04213e94bb.txt id=07191d2e982a998b5c108d04213e94bb
+- www.charitynavigator.org: max_risk=2 docs=3
+- risk=2 url=https://www.charitynavigator.org/about-us file=research_results/documents/parsed/173fee7c4d1bd41609fa6be5bfb8d359.txt id=173fee7c4d1bd41609fa6be5bfb8d359
+- risk=2 url=https://www.charitynavigator.org/ein/942759879 file=research_results/documents/parsed/17d6cf0baacf85a5dc3bdc2d4e886207.txt id=17d6cf0baacf85a5dc3bdc2d4e886207
+- risk=2 url=https://www.charitynavigator.org/ein/843935514 file=research_results/documents/parsed/ee02c83be8b5d732d469696cbae371d2.txt id=ee02c83be8b5d732d469696cbae371d2
+- d3uf7shreuzboy.cloudfront.net: max_risk=2 docs=3
+- risk=2 url=https://d3uf7shreuzboy.cloudfront.net/WebRoot/stable/i18n/react-en.d711bacb.json file=research_results/documents/parsed/4aacabcdbcf635327d725f4d380c2cc3.txt id=4aacabcdbcf635327d725f4d380c2cc3
+- risk=2 url=https://d3uf7shreuzboy.cloudfront.net/WebRoot/stable/i18n/react-fr.c24098db.json file=research_results/documents/parsed/7a83b025fa586877c6a5ea8493dc7719.txt id=7a83b025fa586877c6a5ea8493dc7719
+- risk=2 url=https://d3uf7shreuzboy.cloudfront.net/WebRoot/stable/i18n/react-es.5f80097a.json file=research_results/documents/parsed/18a4457561e7c756d769d5af38c56b27.txt id=18a4457561e7c756d769d5af38c56b27
+- www.osba.org: max_risk=2 docs=3
+- risk=2 url=https://www.osba.org/feed/ file=research_results/documents/parsed/592c84071aa2e1e2c199fe14a36d610c.txt id=592c84071aa2e1e2c199fe14a36d610c
+- risk=2 url=https://www.osba.org/ file=research_results/documents/parsed/07815e32e695fa0202bb1b593746c401.txt id=07815e32e695fa0202bb1b593746c401
+- risk=2 url=https://www.osba.org/?s=%7Bsearch_term_string file=research_results/documents/parsed/a1550d1abc15f930d2e7861bcdf06840.txt id=a1550d1abc15f930d2e7861bcdf06840
+- schema.org: max_risk=2 docs=3
+- risk=2 url=https://schema.org/ImageObject file=research_results/documents/parsed/2195e7212f1c4ad1e4ee1c0bb15a46b1.txt id=2195e7212f1c4ad1e4ee1c0bb15a46b1
+- risk=2 url=https://schema.org/VideoObject file=research_results/documents/parsed/5184c7c35874f7f32dd9b11fd5c0851e.txt id=5184c7c35874f7f32dd9b11fd5c0851e
+- risk=2 url=https://schema.org/Person file=research_results/documents/parsed/9e9cb48c1174c31afed273d1a674e5ba.txt id=9e9cb48c1174c31afed273d1a674e5ba
+- raceforward.org: max_risk=2 docs=2
+- risk=2 url=https://www.raceforward.org/reporting-guide file=research_results/documents/parsed/9e33ebe3140361da05a5258ac1ccdc88.txt id=9e33ebe3140361da05a5258ac1ccdc88
+- risk=2 url=https://www.raceforward.org/projects-programs-%26-initiatives/cultural-week-of-action file=research_results/documents/parsed/4b919881b559c56832bdfb54da9e035e.txt id=4b919881b559c56832bdfb54da9e035e
+- tinyurl.com: max_risk=2 docs=2
+- risk=2 url=https://www.douglasesd.k12.or.us/about-douglas-esd/news/default-board-post-page/~board/news/post/american-education-week file=research_results/documents/parsed/d99adba5f859153dc055e701f3b00cc8.txt id=d99adba5f859153dc055e701f3b00cc8
+- risk=1 url=https://www.umatilla.k12.or.us/article/2583213 file=research_results/documents/parsed/3ab0972aa46f257cd03b2af722485308.txt id=3ab0972aa46f257cd03b2af722485308
+- www.oregon.gov: max_risk=2 docs=2
+- risk=2 url=https://www.oregon.gov/ohcs/rental-housing/housing-development/oregon-centralized-application-orca/pages/orca-diversity-equity-inclusion-agreement.aspx file=research_results/documents/parsed/0033be02ec78316625017000c92e110e.txt id=0033be02ec78316625017000c92e110e
+- risk=1 url=https://www.oregon.gov/Pages/index.aspx file=research_results/documents/parsed/43a842a53cfa511e1bc88276a0352d1c.txt id=43a842a53cfa511e1bc88276a0352d1c
+- paycom.com: max_risk=2 docs=2
+- risk=2 url=https://www.paycom.com/terms-of-use/ file=research_results/documents/parsed/4fada016a1e7290916d8640a92a5bb4b.txt id=4fada016a1e7290916d8640a92a5bb4b
+- risk=2 url=https://www.paycom.com/privacy/ file=research_results/documents/parsed/7c609bec3dc012696d3ba11191567f46.txt id=7c609bec3dc012696d3ba11191567f46
+- belonging.berkeley.edu: max_risk=2 docs=2
+- risk=2 url=https://belonging.berkeley.edu/ file=research_results/documents/parsed/e1ab2e335f7e813fd3cfbd5c10ab62b6.txt id=e1ab2e335f7e813fd3cfbd5c10ab62b6
+- risk=2 url=https://belonging.berkeley.edu/targeted-universalism file=research_results/documents/parsed/f220833a1ebb227c820ffdcc641e2779.txt id=f220833a1ebb227c820ffdcc641e2779
+- github.com: max_risk=2 docs=2
+- risk=2 url=https://github.com/about file=research_results/documents/parsed/5148e0039f816c8b620f360dfaa24d24.txt id=5148e0039f816c8b620f360dfaa24d24
+- risk=2 url=https://github.com/ file=research_results/documents/parsed/008ec4453ff31513f43893cba7aa31c8.txt id=008ec4453ff31513f43893cba7aa31c8
+- oregonbuys.gov: max_risk=2 docs=2
+- risk=2 url=https://www.periscopeholdings.com/who-we-are?p=who-we-are file=research_results/documents/parsed/98c9506cf4fdebe9ad866266418748db.txt id=98c9506cf4fdebe9ad866266418748db
+- risk=2 url=https://oregonbuys.gov:443/bso/ file=research_results/documents/parsed/f6741790087ba13efcf09ff18aaee9d6.txt id=f6741790087ba13efcf09ff18aaee9d6
+- x.com: max_risk=2 docs=1
+- risk=2 url=https://about.x.com/en file=research_results/documents/parsed/41cd297c4c4771fffe814705e9bd37fd.txt id=41cd297c4c4771fffe814705e9bd37fd
+- www.opportunityagenda.org: max_risk=2 docs=1
+- risk=2 url=https://opportunityagenda.org/ file=research_results/documents/parsed/bf83699c0a4f2001dd2920dd6d60b502.txt id=bf83699c0a4f2001dd2920dd6d60b502
+- dockets.justia.com: max_risk=2 docs=1
+- risk=2 url=https://dockets.justia.com/ file=research_results/documents/parsed/9fd5bea8a1a6cb3ee89674f6d06a3d6c.txt id=9fd5bea8a1a6cb3ee89674f6d06a3d6c
+- relatednorthwest.com: max_risk=2 docs=1
+- risk=2 url=https://www.relatedcalifornia.com/our-company/related-northwest file=research_results/documents/parsed/8444b9d83856f5d89ff54709a5e8a7f1.txt id=8444b9d83856f5d89ff54709a5e8a7f1
+- portal-applicant-tracking.us-cent.paycomonline.net: max_risk=2 docs=1
+- risk=2 url=https://portal-applicant-tracking.us-cent.paycomonline.net/career-portal/main/index-sprawl-6ETZXKZJ.js file=research_results/documents/parsed/cb1ac965894e26608da47802bbcd2ed2.txt id=cb1ac965894e26608da47802bbcd2ed2
+- www.colorlines.com: max_risk=2 docs=1
+- risk=2 url=https://colorlines.com/ file=research_results/documents/parsed/b03119e6b8cde2b7df224e42d8cdd827.txt id=b03119e6b8cde2b7df224e42d8cdd827
+## Top documents (focused)
+- 01. risk=3 domain=None content_type=None len=1288890 id=003c0bf391f9060e15360bb52c763605
+- url=file://research_results/documents/raw/003c0bf391f9060e15360bb52c763605.pdf
+- file=research_results/documents/parsed/003c0bf391f9060e15360bb52c763605.txt
+- dei=equity; inclusion; equity lens; social justice; diversity; minority; marginalized; underrepresented; inclusive; equity initiatives; equitable; racial justice; underserved; bipoc; equity framework; people of color; accessibility; dei
+- proxy=equity lens; barrier reduction; equity initiatives; bipoc; equity framework; lived experience; equity plan
+- binding=shall; mandatory; standard; statewide; rule; policy; contract; agreement; must; regulation; applicable to; compliance; required
+- tags=hiring; procurement; training; housing; community engagement
+- 02. risk=3 domain=None content_type=None len=540637 id=77aef0247eed912205987be720f44eb3
+- url=file://research_results/documents/raw/77aef0247eed912205987be720f44eb3.pdf
+- file=research_results/documents/parsed/77aef0247eed912205987be720f44eb3.txt
+- dei=equity; diversity; underrepresented; inclusive; equitable; inclusion; underserved; bipoc; minority; dei
+- proxy=overcoming obstacles; bipoc; first-generation
+- binding=standard; rule; policy; contract; agreement; governing; must; regulation; required
+- tags=hiring; procurement; training; housing; community engagement
+- 03. risk=3 domain=None content_type=None len=405875 id=a13956024790bc87e0defbaf2e9aaa63
+- url=file://research_results/documents/raw/a13956024790bc87e0defbaf2e9aaa63.pdf
+- file=research_results/documents/parsed/a13956024790bc87e0defbaf2e9aaa63.txt
+- dei=equity; inclusion; social justice; underrepresented groups; diversity; minority; marginalized; underrepresented; inclusive; anti-racist; equitable; racial justice; underserved; bipoc; people of color; accessibility; dei
+- proxy=bipoc; cultural competence; lived experience
+- binding=mandatory; standard; rule; policy; contract; must; regulation; required
+- tags=hiring; procurement; training; housing; community engagement
+- 04. risk=3 domain=None content_type=None len=310529 id=b7387a8f638b7ddd0b6a497e0d8d3e49
+- url=file://research_results/documents/raw/b7387a8f638b7ddd0b6a497e0d8d3e49.pdf
+- file=research_results/documents/parsed/b7387a8f638b7ddd0b6a497e0d8d3e49.txt
+- dei=equity; underrepresented groups; diversity; minority; marginalized; underrepresented; inclusive; equitable; inclusion; underserved; bipoc; people of color; accessibility; dei
+- proxy=bipoc
+- binding=standard; policy; contract; agreement; regulation; compliance; required
+- tags=hiring; procurement; training; housing; community engagement
+- 05. risk=3 domain=None content_type=None len=245854 id=e074d302eac8c1251ce84c7611f87a01
+- url=file://research_results/documents/raw/e074d302eac8c1251ce84c7611f87a01.pdf
+- file=research_results/documents/parsed/e074d302eac8c1251ce84c7611f87a01.txt
+- dei=equity; inclusion; underrepresented groups; diversity; minority; marginalized; underrepresented; inclusive; anti-racist; equity initiatives; equitable; racial justice; underserved; bipoc; equity framework; people of color; accessibility; dei
+- proxy=safe space; inclusive environment; equity initiatives; bipoc; equity framework
+- binding=standard; statewide; rule; policy; contract; agreement; applicability; must; compliance; required
+- tags=hiring; procurement; training; housing; community engagement
+- 06. risk=3 domain=None content_type=None len=210365 id=a2f08c4c1146471bbf56e2808875d0b6
+- url=file://research_results/documents/raw/a2f08c4c1146471bbf56e2808875d0b6.pdf
+- file=research_results/documents/parsed/a2f08c4c1146471bbf56e2808875d0b6.txt
+- dei=equity; inclusion; diversity; minority; marginalized; underrepresented; inclusive; equitable; racial justice; underserved; bipoc; accessibility; dei
+- proxy=bipoc; lived experience
+- binding=shall; standard; statewide; rule; policy; contract; agreement; must; compliance; required
+- tags=hiring; procurement; training; housing; community engagement
+- 07. risk=3 domain=None content_type=None len=194354 id=b3b027941a48b0372a0fe52293173996
+- url=file://research_results/documents/raw/b3b027941a48b0372a0fe52293173996.pdf
+- file=research_results/documents/parsed/b3b027941a48b0372a0fe52293173996.txt
+- dei=equity; cultural humility; underrepresented groups; diversity; minority; marginalized; underrepresented; inclusive; anti-racist; equitable; inclusion; underserved; bipoc; equity framework; people of color; accessibility; dei
+- proxy=bipoc; equity framework; inclusive environment; safe space
+- binding=standard; statewide; rule; policy; contract; agreement; applicability; must; compliance; required
+- tags=hiring; procurement; training; housing; community engagement
+- 08. risk=3 domain=None content_type=None len=178688 id=2cb743c45485324adc632bb0642bc614
+- url=file://research_results/documents/raw/2cb743c45485324adc632bb0642bc614.pdf
+- file=research_results/documents/parsed/2cb743c45485324adc632bb0642bc614.txt
+- dei=equity; inclusion; equity lens; social justice; diversity; minority; marginalized; underrepresented; inclusive; equity initiatives; equitable; racial justice; underserved; cultural humility; people of color; accessibility; dei
+- proxy=equity lens; equity initiatives; lived experience; equity plan
+- binding=shall; mandatory; standard; statewide; rule; policy; contract; agreement; governing; must; compliance; required
+- tags=hiring; procurement; training; housing; community engagement
+- 09. risk=3 domain=None content_type=None len=156561 id=7994a276120954c3d9f90e5633d232c8
+- url=file://research_results/documents/raw/7994a276120954c3d9f90e5633d232c8.pdf
+- file=research_results/documents/parsed/7994a276120954c3d9f90e5633d232c8.txt
+- dei=equity; social justice; underserved; underrepresented groups; cultural humility; diversity; minority; marginalized; underrepresented; inclusive; equitable; inclusion; racial justice; bipoc; people of color; accessibility; dei; deia
+- proxy=bipoc; first-generation; safe space
+- binding=shall; mandatory; standard; directive; policy; contract; agreement; obligated; governing; must; applicable to; compliance; required
+- tags=hiring; procurement; training; housing; community engagement
+- 10. risk=3 domain=None content_type=None len=148125 id=36569dd9f987a996afefc9d54375067e
+- url=https://www.oregon.gov/ohcs/rental-housing/housing-development/oregon-centralized-application-orca/Documents/how-to-apply/orca-manual-2025-july.pdf
+- file=research_results/documents/parsed/36569dd9f987a996afefc9d54375067e.txt
+- dei=equity; inclusion; diversity; minority; equitable; racial justice; underserved; bipoc; people of color; accessibility; dei
+- proxy=bipoc
+- binding=shall; standard; rule; policy; contract; agreement; must; regulation; applicable to; compliance; binding; required
+- tags=hiring; procurement; training; housing; community engagement
+- 11. risk=3 domain=None content_type=None len=104349 id=f05cefc6c4eb4225c881409d8daadc29
+- url=file://research_results/documents/raw/f05cefc6c4eb4225c881409d8daadc29.pdf
+- file=research_results/documents/parsed/f05cefc6c4eb4225c881409d8daadc29.txt
+- dei=equity; inclusion; equity lens; diversity; equitable; racial justice; underserved; bipoc; minority; dei
+- proxy=equity lens; bipoc
+- binding=shall; standard; statewide; policy; contract; agreement; obligated; compliance; required
+- tags=hiring; procurement; training; housing; community engagement
+- 12. risk=3 domain=None content_type=None len=89868 id=11925ba57cc06a39fad9a6dc5a8cc1f0
+- url=https://www.racialequityalliance.org/HigherLogic/System/DownloadDocumentFile.ashx?DocumentFileKey=a1780a0b-4314-ff6c-e82a-824973972b52&forceDialog=1
+- file=research_results/documents/parsed/11925ba57cc06a39fad9a6dc5a8cc1f0.txt
+- dei=equity; equity lens; social justice; diversity; inclusive; equitable; inclusion; equity framework; people of color
+- proxy=equity lens; equity framework; lived experience; equity plan
+- binding=policy; contract; governing; must; applicable to; binding; required
+- tags=hiring; procurement; training; housing; community engagement
+- 13. risk=3 domain=None content_type=None len=89754 id=6431de02c3af80fab467e7aebdc1d17c
+- url=file://research_results/documents/raw/6431de02c3af80fab467e7aebdc1d17c.pdf
+- file=research_results/documents/parsed/6431de02c3af80fab467e7aebdc1d17c.txt
+- dei=equity; inclusion; equity lens; diversity; minority; inclusive; equitable; racial justice; underserved; bipoc; people of color; accessibility; dei
+- proxy=equity lens; bipoc
+- binding=shall; standard; statewide; rule; policy; contract; agreement; must; regulation; compliance; required
+- tags=hiring; procurement; training; housing; community engagement
+- 14. risk=3 domain=None content_type=None len=75911 id=74c6bb8d3aa480a95207e0085fc1c4c0
+- url=file://research_results/documents/raw/74c6bb8d3aa480a95207e0085fc1c4c0.pdf
+- file=research_results/documents/parsed/74c6bb8d3aa480a95207e0085fc1c4c0.txt
+- dei=equity; inclusion; diversity; minority; underrepresented; inclusive; equitable; racial justice; underserved; bipoc; accessibility; dei
+- proxy=bipoc
+- binding=shall; mandatory; standard; statewide; rule; policy; contract; agreement; must; compliance; required
+- tags=hiring; procurement; training; housing; community engagement
+- 15. risk=3 domain=None content_type=None len=72989 id=bbfc77a24628ff8e29dd977ba4c66095
+- url=file://research_results/documents/raw/bbfc77a24628ff8e29dd977ba4c66095.pdf
+- file=research_results/documents/parsed/bbfc77a24628ff8e29dd977ba4c66095.txt
+- dei=equity; social justice; diversity; underrepresented; marginalized; inclusive; anti-racist; equitable; inclusion; underserved; bipoc; equity framework; accessibility; dei
+- proxy=bipoc; equity framework
+- binding=standard; statewide; directive; policy; contract; agreement; must; required
+- tags=hiring; procurement; training; housing; community engagement
+- 16. risk=3 domain=None content_type=None len=69627 id=1f3072ad9703ad0bed2e0dcd0a8d2d5c
+- url=file://research_results/documents/raw/1f3072ad9703ad0bed2e0dcd0a8d2d5c.pdf
+- file=research_results/documents/parsed/1f3072ad9703ad0bed2e0dcd0a8d2d5c.txt
+- dei=equity; social justice; diversity; underrepresented; marginalized; inclusive; anti-racist; equitable; inclusion; underserved; bipoc; accessibility; dei
+- proxy=safe space; bipoc; lived experience
+- binding=standard; rule; agreement; must; required
+- tags=hiring; procurement; training; housing; community engagement
+- 17. risk=3 domain=None content_type=None len=51150 id=07a1076fa131f26b2cdcc68681afddbb
+- url=file://research_results/documents/raw/07a1076fa131f26b2cdcc68681afddbb.pdf
+- file=research_results/documents/parsed/07a1076fa131f26b2cdcc68681afddbb.txt
+- dei=equity; inclusion; diversity; minority; underrepresented; inclusive; equitable; racial justice; underserved; people of color; accessibility; dei
+- proxy=inclusive environment; safe space; equity plan
+- binding=shall; mandatory; statewide; rule; policy; contract; must
+- tags=hiring; procurement; training; housing; community engagement
+- 18. risk=3 domain=None content_type=None len=51150 id=544d76b9a259616a1c691b4f98098735
+- url=file://research_results/documents/raw/544d76b9a259616a1c691b4f98098735.pdf
+- file=research_results/documents/parsed/544d76b9a259616a1c691b4f98098735.txt
+- dei=equity; inclusion; diversity; minority; underrepresented; inclusive; equitable; racial justice; underserved; people of color; accessibility; dei
+- proxy=inclusive environment; safe space; equity plan
+- binding=shall; mandatory; statewide; rule; policy; contract; must
+- tags=hiring; procurement; training; housing; community engagement
+- 19. risk=3 domain=None content_type=None len=46832 id=4260e59b296ab49cb9ae241fbba37c68
+- url=file://research_results/documents/raw/4260e59b296ab49cb9ae241fbba37c68.pdf
+- file=research_results/documents/parsed/4260e59b296ab49cb9ae241fbba37c68.txt
+- dei=equity; underrepresented groups; diversity; minority; underrepresented; inclusive; equitable; inclusion; people of color; accessibility; dei
+- proxy=inclusive environment; cultural competence
+- binding=shall; statewide; directive; rule; policy; contract; agreement; governing; regulation; compliance; required
+- tags=hiring; procurement; training; housing; community engagement
+- 20. risk=3 domain=None content_type=None len=36369 id=6e6c69b294212c64d1c617f261e70841
+- url=file://research_results/documents/raw/6e6c69b294212c64d1c617f261e70841.pdf
+- file=research_results/documents/parsed/6e6c69b294212c64d1c617f261e70841.txt
+- dei=equity; equity lens; social justice; diversity; underrepresented; marginalized; inclusive; equitable; inclusion; underserved; people of color; dei
+- proxy=equity lens
+- binding=rule; policy; must; regulation
+- tags=hiring; procurement; training; housing; community engagement
+- 21. risk=3 domain=None content_type=None len=36176 id=0a3c2fb7aaa8fce1b2fcc321ae18e5b9
+- url=file://research_results/documents/raw/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.pdf
+- file=research_results/documents/parsed/0a3c2fb7aaa8fce1b2fcc321ae18e5b9.txt
+- dei=equity; inclusion; diversity; marginalized; inclusive; equitable; racial justice; underserved; people of color; minority; dei
+- proxy=inclusive environment; cultural competence; lived experience
+- binding=shall; standard; statewide; rule; policy; contract; must; regulation; compliance; required
+- tags=hiring; procurement; training; housing; community engagement
+- 22. risk=3 domain=obiu.org content_type=text/html;charset=UTF-8 len=35957 id=3118d8dcd1c708d5160b1108a9b231ea
+- url=https://obiu.org/
+- file=research_results/documents/parsed/3118d8dcd1c708d5160b1108a9b231ea.txt
+- dei=equity; inclusion; social justice; cultural responsiveness; diversity; inclusive; equity initiatives; equitable; racial justice; accessibility; dei
+- proxy=equity initiatives
+- binding=shall; policy; contract; statewide
+- tags=hiring; procurement; training; housing; community engagement
+- 23. risk=3 domain=obiu.org content_type=text/html;charset=UTF-8 len=32684 id=65855a9e72d39c381c793fccf7e2afd0
+- url=https://obiu.org/course/what-is-targeted-universalism
+- file=research_results/documents/parsed/65855a9e72d39c381c793fccf7e2afd0.txt
+- dei=equity; inclusion; social justice; diversity; inclusive; equity initiatives; equitable; racial justice; cultural humility; accessibility; cultural responsiveness
+- proxy=equity initiatives; lived experience; equity plan
+- binding=shall; statewide; policy; contract; agreement
+- tags=hiring; procurement; training; housing; community engagement
+- 24. risk=3 domain=obiu.org content_type=text/html;charset=UTF-8 len=32626 id=dc398148018f34aaa217529c5dbcce3b
+- url=https://obiu.org/course/stages-of-targeted-univeralism-part2
+- file=research_results/documents/parsed/dc398148018f34aaa217529c5dbcce3b.txt
+- dei=equity; inclusion; social justice; diversity; inclusive; equity initiatives; equitable; racial justice; cultural humility; accessibility; cultural responsiveness
+- proxy=equity initiatives; lived experience; equity plan
+- binding=shall; statewide; policy; contract; agreement
+- tags=hiring; procurement; training; housing; community engagement
+- 25. risk=3 domain=obiu.org content_type=text/html;charset=UTF-8 len=32531 id=d222d253ff69a82ff3faca1b694d631e
+- url=https://obiu.org/course/stages-of-targeted-universalism-part1
+- file=research_results/documents/parsed/d222d253ff69a82ff3faca1b694d631e.txt
+- dei=equity; inclusion; social justice; diversity; inclusive; equity initiatives; equitable; racial justice; cultural humility; accessibility; cultural responsiveness
+- proxy=equity initiatives; lived experience; equity plan
+- binding=shall; statewide; policy; contract; agreement
+- tags=hiring; procurement; training; housing; community engagement
+- 26. risk=3 domain=obiu.org content_type=text/html;charset=UTF-8 len=22905 id=385a88a7fe2da014385f69da14fe3381
+- url=https://obiu.org/courses
+- file=research_results/documents/parsed/385a88a7fe2da014385f69da14fe3381.txt
+- dei=equity; inclusion; social justice; diversity; inclusive; equity initiatives; equitable; racial justice; cultural humility; accessibility; cultural responsiveness
+- proxy=equity initiatives
+- binding=shall; statewide; policy; contract; agreement
+- tags=hiring; procurement; training; housing; community engagement
+- 27. risk=3 domain=None content_type=None len=20402 id=1d20c2a61ee7a30f077fe8e8eeba2667
+- url=file://research_results/documents/raw/1d20c2a61ee7a30f077fe8e8eeba2667.pdf
+- file=research_results/documents/parsed/1d20c2a61ee7a30f077fe8e8eeba2667.txt
+- dei=equity; equity lens; diversity; underrepresented; marginalized; deib; inclusive; equitable; inclusion; bipoc; dei
+- proxy=equity lens; bipoc; lived experience
+- binding=rule; policy; must; agreement
+- tags=hiring; training; housing; community engagement
+- 28. risk=3 domain=None content_type=None len=16147 id=f17c22e859e2c48b5a346d23fc10a3c0
+- url=file://research_results/documents/raw/f17c22e859e2c48b5a346d23fc10a3c0.pdf
+- file=research_results/documents/parsed/f17c22e859e2c48b5a346d23fc10a3c0.txt
+- dei=equity; diversity; marginalized; equitable; inclusion; underserved; equity framework; accessibility
+- proxy=equity framework
+- binding=standard; statewide; rule; policy; must; compliance
+- tags=hiring; housing; community engagement
+- 29. risk=3 domain=www.racialequityalliance.org content_type=text/html; charset=utf-8 len=15121 id=cd4a2c72e4d00cf7d614ababe9e73779
+- url=https://www.racialequityalliance.org/blogs/gare-team/2025/12/11/navigating-racial-equity-work-when-leaderships-sup
+- file=research_results/documents/parsed/cd4a2c72e4d00cf7d614ababe9e73779.txt
+- dei=equity; inclusion; social justice; diversity; marginalized; equity initiatives; racial justice; dei
+- proxy=equity initiatives; equity plan
+- binding=compliance; policy; ordinance; directive
+- tags=hiring; housing
+- 30. risk=3 domain=www.raceforward.org content_type=text/html; charset=UTF-8 len=12664 id=d000a9697b5ecd1908fdc47f91470b1e
+- url=https://www.raceforward.org/training-and-events/just-narratives
+- file=research_results/documents/parsed/d000a9697b5ecd1908fdc47f91470b1e.txt
+- dei=equity; diversity; marginalized; inclusive; equitable; racial justice; people of color
+- proxy=lived experience
+- binding=policy; must; required
+- tags=hiring; training; housing; community engagement
+- 31. risk=3 domain=obiu.org content_type=text/html;charset=UTF-8 len=12584 id=a626e07c5852ed3bdb811988165371fe
+- url=https://obiu.org/about
+- file=research_results/documents/parsed/a626e07c5852ed3bdb811988165371fe.txt
+- dei=equity; inclusion; social justice; diversity; inclusive; equity initiatives; equitable; racial justice; accessibility; cultural responsiveness
+- proxy=equity initiatives
+- binding=shall; policy; contract; statewide
+- tags=procurement; training; housing; community engagement
+- 32. risk=3 domain=www.racialequityalliance.org content_type=text/html; charset=utf-8 len=12324 id=0907648c5876f269eb95f4122bbe6150
+- url=https://www.racialequityalliance.org/blogs/gare-team/2025/12/16/government-at-just-narratives
+- file=research_results/documents/parsed/0907648c5876f269eb95f4122bbe6150.txt
+- dei=equity; racial justice; justice-centered; inclusion
+- proxy=lived experience
+- binding=statewide; policy; contract; governing; must
+- tags=procurement; housing
+- 33. risk=3 domain=www.raceforward.org content_type=text/html; charset=UTF-8 len=10278 id=a190e1e7829daedea88c07cffb922811
+- url=https://www.raceforward.org/what-racial-equity
+- file=research_results/documents/parsed/a190e1e7829daedea88c07cffb922811.txt
+- dei=equity; inclusive; equitable; equity framework; people of color
+- proxy=equity framework
+- binding=applicable to; policy; must
+- tags=hiring; training; housing; community engagement
+- 34. risk=3 domain=None content_type=None len=7836 id=ffb8b3c67a74866bc9b85c48b68e4bf0
+- url=file://research_results/documents/raw/ffb8b3c67a74866bc9b85c48b68e4bf0.pdf
+- file=research_results/documents/parsed/ffb8b3c67a74866bc9b85c48b68e4bf0.txt
+- dei=equity; inclusion; social justice; diversity; equitable; racial justice; minority
+- proxy=equity plan
+- binding=policy; must; required
+- tags=community engagement
+- 35. risk=3 domain=www.racialequityalliance.org content_type=text/html; charset=utf-8 len=6942 id=181bd6ec8cfef085a9c88f92bf6a1ca5
+- url=https://www.racialequityalliance.org/resources/state-of-the-field-25
+- file=research_results/documents/parsed/181bd6ec8cfef085a9c88f92bf6a1ca5.txt
+- dei=equity; equity initiatives; diversity
+- proxy=equity initiatives
+- binding=policy; agreement; ordinance; regulation; compliance
+- tags=hiring; housing; community engagement
+- 36. risk=3 domain=www.oregonmetro.gov content_type=text/html; charset=UTF-8 len=5449 id=0fa504280ae86dd4e5ccf8c473b7d22c
+- url=https://www.oregonmetro.gov/projects
+- file=research_results/documents/parsed/0fa504280ae86dd4e5ccf8c473b7d22c.txt
+- dei=equity; accessibility
+- proxy=equity plan
+- binding=policy; contract
+- tags=hiring; procurement; training; housing
+- 37. risk=2 domain=portal-applicant-tracking.us-cent.paycomonline.net content_type=text/javascript; charset=utf-8 len=6051301 id=cb1ac965894e26608da47802bbcd2ed2
+- url=https://portal-applicant-tracking.us-cent.paycomonline.net/career-portal/main/index-sprawl-6ETZXKZJ.js
+- file=research_results/documents/parsed/cb1ac965894e26608da47802bbcd2ed2.txt
+- dei=accessibility; dei
+- proxy=
+- binding=shall; mandatory; standard; rule; policy; contract; must; compliance; binding; required
+- tags=hiring; procurement; training; housing; community engagement
+- 38. risk=2 domain=None content_type=None len=695867 id=4e61daf9249f61c5361c07e4550f5841
+- url=https://www.oregon.gov/ohcs/development/Documents/Oregon%20SDC%20Study_FinalReport_121422.pdf
+- file=research_results/documents/parsed/4e61daf9249f61c5361c07e4550f5841.txt
+- dei=equity; diversity; equitable; inclusion; accessibility
+- proxy=
+- binding=shall; standard; statewide; directive; rule; policy; contract; agreement; applicability; ordinance; governing; must; regulation; applicable to; compliance; required
+- tags=hiring; procurement; training; housing; community engagement
+- 39. risk=2 domain=opportunityagenda.org content_type=application/json; charset=UTF-8 len=505468 id=7ab1c698e9aca12f84f98488520ed0a0
+- url=https://opportunityagenda.org/wp-json/
+- file=research_results/documents/parsed/7ab1c698e9aca12f84f98488520ed0a0.txt
+- dei=racial justice; social justice
+- proxy=
+- binding=must; standard; required
+- tags=hiring; housing
+- 40. risk=2 domain=None content_type=None len=359021 id=e0e77cae191a75355e4664ccf427a3f2
+- url=file://research_results/documents/raw/e0e77cae191a75355e4664ccf427a3f2.pdf
+- file=research_results/documents/parsed/e0e77cae191a75355e4664ccf427a3f2.txt
+- dei=equity; diversity; minority; underrepresented; inclusive; inclusion; underserved; people of color; accessibility; dei
+- proxy=
+- binding=standard; rule; policy; contract; agreement; applicability; governing; must; regulation; applicable to; compliance; required
+- tags=hiring; procurement; training; housing; community engagement
+- 41. risk=2 domain=None content_type=None len=125874 id=24cbe0113967a4f6725bb7683d5ad024
+- url=https://belonging.berkeley.edu/sites/default/files/gare-racial_equity_toolkit.pdf
+- file=research_results/documents/parsed/24cbe0113967a4f6725bb7683d5ad024.txt
+- dei=equity; social justice; diversity; underrepresented; marginalized; inclusive; equitable; inclusion; minority
+- proxy=
+- binding=policy; contract; agreement; ordinance; must
+- tags=hiring; procurement; training; housing; community engagement
+- 42. risk=2 domain=None content_type=None len=118329 id=57a271a61cfdda6b8b76a264c5c1a897
+- url=file://research_results/documents/raw/57a271a61cfdda6b8b76a264c5c1a897.pdf
+- file=research_results/documents/parsed/57a271a61cfdda6b8b76a264c5c1a897.txt
+- dei=equity; inclusion; diversity; underrepresented; marginalized; inclusive; equitable; racial justice; underserved; cultural humility; accessibility; dei
+- proxy=
+- binding=shall; standard; statewide; rule; policy; contract; agreement; ordinance; must; regulation; applicable to; compliance; required
+- tags=hiring; procurement; training; housing; community engagement
+- 43. risk=2 domain=None content_type=None len=94585 id=60ff12d7e79e6a9763b86f62b24ac6f4
+- url=file://research_results/documents/raw/60ff12d7e79e6a9763b86f62b24ac6f4.pdf
+- file=research_results/documents/parsed/60ff12d7e79e6a9763b86f62b24ac6f4.txt
+- dei=equity; diversity; underrepresented; deib; inclusion; dei
+- proxy=
+- binding=standard; statewide; contract; must; compliance; required
+- tags=hiring; procurement; training; housing; community engagement
+- 44. risk=2 domain=None content_type=None len=88007 id=645b1f978c1291384280119d20b07e77
+- url=file://research_results/documents/raw/645b1f978c1291384280119d20b07e77.pdf
+- file=research_results/documents/parsed/645b1f978c1291384280119d20b07e77.txt
+- dei=equity; diversity; underrepresented; inclusive; equitable; inclusion; dei
+- proxy=
+- binding=shall; mandatory; standard; statewide; policy; contract; agreement; governing; must; compliance; required
+- tags=hiring; procurement; training; housing; community engagement
+- 45. risk=2 domain=schema.org content_type=text/html len=67813 id=9e9cb48c1174c31afed273d1a674e5ba
+- url=https://schema.org/Person
+- file=research_results/documents/parsed/9e9cb48c1174c31afed273d1a674e5ba.txt
+- dei=diversity
+- proxy=
+- binding=rule; standard; required
+- tags=hiring; procurement; training; housing
+- 46. risk=2 domain=d3uf7shreuzboy.cloudfront.net content_type=application/json len=65489 id=7a83b025fa586877c6a5ea8493dc7719
+- url=https://d3uf7shreuzboy.cloudfront.net/WebRoot/stable/i18n/react-fr.c24098db.json
+- file=research_results/documents/parsed/7a83b025fa586877c6a5ea8493dc7719.txt
+- dei=accessibility; dei
+- proxy=
+- binding=standard; required
+- tags=hiring; procurement; training; housing; community engagement
+- 47. risk=2 domain=d3uf7shreuzboy.cloudfront.net content_type=application/json len=63193 id=18a4457561e7c756d769d5af38c56b27
+- url=https://d3uf7shreuzboy.cloudfront.net/WebRoot/stable/i18n/react-es.5f80097a.json
+- file=research_results/documents/parsed/18a4457561e7c756d769d5af38c56b27.txt
+- dei=accessibility; dei
+- proxy=
+- binding=standard; required
+- tags=hiring; procurement; training
+- 48. risk=2 domain=None content_type=None len=57355 id=c441d095b5efadcac83eadd5ad604240
+- url=file://research_results/documents/raw/c441d095b5efadcac83eadd5ad604240.pdf
+- file=research_results/documents/parsed/c441d095b5efadcac83eadd5ad604240.txt
+- dei=equity; inclusion; social justice; diversity; inclusive; equitable; racial justice; people of color; minority
+- proxy=
+- binding=standard; statewide; rule; policy; contract; must
+- tags=hiring; procurement; training; housing
+- 49. risk=2 domain=d3uf7shreuzboy.cloudfront.net content_type=application/json len=57087 id=4aacabcdbcf635327d725f4d380c2cc3
+- url=https://d3uf7shreuzboy.cloudfront.net/WebRoot/stable/i18n/react-en.d711bacb.json
+- file=research_results/documents/parsed/4aacabcdbcf635327d725f4d380c2cc3.txt
+- dei=accessibility; dei
+- proxy=
+- binding=rule; must; standard; required
+- tags=hiring; procurement; training; housing
+- 50. risk=2 domain=en.wikipedia.org content_type=text/html; charset=UTF-8 len=54745 id=097f2f6b250b065a6a9eb2d97f44d074
+- url=https://en.wikipedia.org/wiki/ISO_8601
+- file=research_results/documents/parsed/097f2f6b250b065a6a9eb2d97f44d074.txt
+- dei=inclusion; inclusive
+- proxy=
+- binding=shall; standard; rule; policy; agreement; must; required
+- tags=procurement
+- 51. risk=2 domain=en.wikipedia.org content_type=text/html; charset=UTF-8 len=53382 id=db13e23918ccc7cc83dae317c32a5d58
+- url=https://en.wikipedia.org/wiki/ISO_4217
+- file=research_results/documents/parsed/db13e23918ccc7cc83dae317c32a5d58.txt
+- dei=inclusion
+- proxy=
+- binding=shall; standard; rule; policy; agreement; must; regulation; required
+- tags=hiring; housing
+- 52. risk=2 domain=www.osba.org content_type=application/rss+xml; charset=UTF-8 len=51615 id=592c84071aa2e1e2c199fe14a36d610c
+- url=https://www.osba.org/feed/
+- file=research_results/documents/parsed/592c84071aa2e1e2c199fe14a36d610c.txt
+- dei=equity; underserved; diversity
+- proxy=
+- binding=statewide; rule; policy; contract; must; compliance; required
+- tags=hiring; procurement; training; housing; community engagement
+- 53. risk=2 domain=schema.org content_type=text/html len=50333 id=5184c7c35874f7f32dd9b11fd5c0851e
+- url=https://schema.org/VideoObject
+- file=research_results/documents/parsed/5184c7c35874f7f32dd9b11fd5c0851e.txt
+- dei=accessibility; diversity
+- proxy=
+- binding=applicable to; standard; required
+- tags=hiring; procurement; training; housing
+- 54. risk=2 domain=schema.org content_type=text/html len=37079 id=2195e7212f1c4ad1e4ee1c0bb15a46b1
+- url=https://schema.org/ImageObject
+- file=research_results/documents/parsed/2195e7212f1c4ad1e4ee1c0bb15a46b1.txt
+- dei=accessibility; diversity
+- proxy=
+- binding=applicable to; standard; required
+- tags=hiring; procurement; training; housing
+- 55. risk=2 domain=None content_type=None len=26474 id=ffb8613e7bb63a09a1349a4f4cd7e90b
+- url=file://research_results/documents/raw/ffb8613e7bb63a09a1349a4f4cd7e90b.pdf
+- file=research_results/documents/parsed/ffb8613e7bb63a09a1349a4f4cd7e90b.txt
+- dei=equity; inclusion; social justice; diversity; minority; underrepresented; inclusive; equitable; racial justice; underserved; cultural humility; people of color; accessibility; dei
+- proxy=
+- binding=policy; must; standard; required
+- tags=hiring; training; housing; community engagement
+- 56. risk=2 domain=en.wikipedia.org content_type=text/html; charset=UTF-8 len=22250 id=70cd1c5a92bcf53af2ccfbe1bb03108d
+- url=https://en.wikipedia.org/wiki/RDFa
+- file=research_results/documents/parsed/70cd1c5a92bcf53af2ccfbe1bb03108d.txt
+- dei=accessibility
+- proxy=
+- binding=rule; policy; standard; required
+- tags=hiring; housing
+- 57. risk=2 domain=paycom.com content_type=text/html; charset=UTF-8 len=21400 id=4fada016a1e7290916d8640a92a5bb4b
+- url=https://www.paycom.com/terms-of-use/
+- file=research_results/documents/parsed/4fada016a1e7290916d8640a92a5bb4b.txt
+- dei=accessibility
+- proxy=
+- binding=shall; standard; policy; agreement; governing; must; regulation; compliance
+- tags=hiring; procurement; training; housing
+- 58. risk=2 domain=www.drupal.org content_type=text/html; charset=utf-8 len=21062 id=adcf7235f7f3bbc0db58cf35869d2d55
+- url=https://www.drupal.org/about/values-and-principles
+- file=research_results/documents/parsed/adcf7235f7f3bbc0db58cf35869d2d55.txt
+- dei=equity; diversity; inclusive; inclusion; accessibility
+- proxy=
+- binding=applicable to; policy; governing; agreement
+- tags=hiring; training; housing; community engagement
+- 59. risk=2 domain=dockets.justia.com content_type=text/html; charset=UTF-8 len=20868 id=9fd5bea8a1a6cb3ee89674f6d06a3d6c
+- url=https://dockets.justia.com/
+- file=research_results/documents/parsed/9fd5bea8a1a6cb3ee89674f6d06a3d6c.txt
+- dei=diversity
+- proxy=
+- binding=policy; contract; standard; regulation
+- tags=hiring; procurement; training; housing
+- 60. risk=2 domain=None content_type=None len=19371 id=c0a1fde5f3c0e6ae0a289cda132cc407
+- url=file://research_results/documents/raw/c0a1fde5f3c0e6ae0a289cda132cc407.pdf
+- file=research_results/documents/parsed/c0a1fde5f3c0e6ae0a289cda132cc407.txt
+- dei=equity; diversity; inclusive; inclusion; dei
+- proxy=
+- binding=must
+- tags=hiring; training; housing; community engagement
+- 61. risk=2 domain=www.charitynavigator.org content_type=text/html; charset=utf-8 len=19229 id=17d6cf0baacf85a5dc3bdc2d4e886207
+- url=https://www.charitynavigator.org/ein/942759879
+- file=research_results/documents/parsed/17d6cf0baacf85a5dc3bdc2d4e886207.txt
+- dei=marginalized; diversity
+- proxy=
+- binding=policy; governing; standard
+- tags=hiring; housing
+- 62. risk=2 domain=None content_type=None len=19177 id=592594abd4eb6a8bad89ce62855bb42e
+- url=file://research_results/documents/raw/592594abd4eb6a8bad89ce62855bb42e.pdf
+- file=research_results/documents/parsed/592594abd4eb6a8bad89ce62855bb42e.txt
+- dei=equity; inclusion; diversity; racial justice; underserved; minority; dei
+- proxy=
+- binding=contract; applicability; must; compliance; required
+- tags=hiring; procurement; housing; community engagement
+- 63. risk=2 domain=www.charitynavigator.org content_type=text/html; charset=utf-8 len=19110 id=ee02c83be8b5d732d469696cbae371d2
+- url=https://www.charitynavigator.org/ein/843935514
+- file=research_results/documents/parsed/ee02c83be8b5d732d469696cbae371d2.txt
+- dei=inclusive; marginalized; diversity
+- proxy=
+- binding=policy; governing; standard
+- tags=hiring; housing
+- 64. risk=2 domain=www.hud.gov content_type=text/html; charset=UTF-8 len=18226 id=07191d2e982a998b5c108d04213e94bb
+- url=https://www.hud.gov/news
+- file=research_results/documents/parsed/07191d2e982a998b5c108d04213e94bb.txt
+- dei=accessibility; dei
+- proxy=
+- binding=rule; contract; agreement; must; regulation
+- tags=hiring; procurement; housing
+- 65. risk=2 domain=belonging.berkeley.edu content_type=text/html; charset=UTF-8 len=17516 id=e1ab2e335f7e813fd3cfbd5c10ab62b6
+- url=https://belonging.berkeley.edu/
+- file=research_results/documents/parsed/e1ab2e335f7e813fd3cfbd5c10ab62b6.txt
+- dei=equity; diversity; inclusive; equitable; accessibility
+- proxy=
+- binding=policy
+- tags=hiring; training; housing; community engagement
+- 66. risk=2 domain=en.wikipedia.org content_type=text/html; charset=UTF-8 len=17140 id=244dee6f75bb503ebdcf3d3df5729d4a
+- url=https://en.wikipedia.org/wiki/Dublin_Core
+- file=research_results/documents/parsed/244dee6f75bb503ebdcf3d3df5729d4a.txt
+- dei=diversity
+- proxy=
+- binding=rule; policy; standard; required
+- tags=training
+- 67. risk=2 domain=www.drupal.org content_type=text/html; charset=utf-8 len=15904 id=3624845de3c2316d6c0dbf0f2893e487
+- url=https://www.drupal.org/drupal-services
+- file=research_results/documents/parsed/3624845de3c2316d6c0dbf0f2893e487.txt
+- dei=accessibility
+- proxy=
+- binding=shall; policy; contract; standard
+- tags=hiring; procurement; training; housing
+- 68. risk=2 domain=belonging.berkeley.edu content_type=text/html; charset=UTF-8 len=13772 id=f220833a1ebb227c820ffdcc641e2779
+- url=https://belonging.berkeley.edu/targeted-universalism
+- file=research_results/documents/parsed/f220833a1ebb227c820ffdcc641e2779.txt
+- dei=equity; diversity; marginalized; inclusive; equitable; inclusion; accessibility
+- proxy=
+- binding=policy; must
+- tags=procurement; training; housing; community engagement
+- 69. risk=2 domain=en.wikipedia.org content_type=text/html; charset=UTF-8 len=12337 id=ac8b3b54df4124a34387d7e8da8f3838
+- url=https://en.wikipedia.org/wiki/Main_Page
+- file=research_results/documents/parsed/ac8b3b54df4124a34387d7e8da8f3838.txt
+- dei=dei
+- proxy=
+- binding=policy; standard
+- tags=training; housing; community engagement
+- 70. risk=2 domain=relatednorthwest.com content_type=text/html; charset=UTF-8 len=11668 id=8444b9d83856f5d89ff54709a5e8a7f1
+- url=https://www.relatedcalifornia.com/our-company/related-northwest
+- file=research_results/documents/parsed/8444b9d83856f5d89ff54709a5e8a7f1.txt
+- dei=equitable
+- proxy=
+- binding=policy
+- tags=hiring; procurement; training; housing
+- 71. risk=2 domain=www.osba.org content_type=text/html; charset=UTF-8 len=10560 id=07815e32e695fa0202bb1b593746c401
+- url=https://www.osba.org/
+- file=research_results/documents/parsed/07815e32e695fa0202bb1b593746c401.txt
+- dei=equity
+- proxy=
+- binding=policy; required
+- tags=hiring; procurement; training; housing; community engagement
+- 72. risk=2 domain=tinyurl.com content_type=text/html; charset=utf-8 len=10069 id=d99adba5f859153dc055e701f3b00cc8
+- url=https://www.douglasesd.k12.or.us/about-douglas-esd/news/default-board-post-page/~board/news/post/american-education-week
+- file=research_results/documents/parsed/d99adba5f859153dc055e701f3b00cc8.txt
+- dei=equity; accessibility; equitable
+- proxy=
+- binding=mandatory; rule; policy; standard
+- tags=hiring; training
+- 73. risk=2 domain=www.racialequityalliance.org content_type=text/html; charset=utf-8 len=9213 id=1bb15fecc239f35d9ee2fc03e86de86b
+- url=https://www.racialequityalliance.org/blogs/gare-team/2025/12/09/ithaca-local-meeting
+- file=research_results/documents/parsed/1bb15fecc239f35d9ee2fc03e86de86b.txt
+- dei=equity; equitable; diversity
+- proxy=
+- binding=policy; statewide
+- tags=hiring; procurement; community engagement
+- 74. risk=2 domain=www.hudexchange.info content_type=text/html;charset=UTF-8 len=8895 id=03f0b1ced9a67059ca7c1c803601a4f1
+- url=https://www.hudexchange.info/about/
+- file=research_results/documents/parsed/03f0b1ced9a67059ca7c1c803601a4f1.txt
+- dei=accessibility
+- proxy=
+- binding=policy; regulation
+- tags=hiring; procurement; training; housing
+- 75. risk=2 domain=paycom.com content_type=text/html; charset=UTF-8 len=8531 id=7c609bec3dc012696d3ba11191567f46
+- url=https://www.paycom.com/privacy/
+- file=research_results/documents/parsed/7c609bec3dc012696d3ba11191567f46.txt
+- dei=accessibility
+- proxy=
+- binding=compliance; policy; standard
+- tags=hiring; procurement; training; housing
+- 76. risk=2 domain=github.com content_type=text/html; charset=utf-8 len=8254 id=008ec4453ff31513f43893cba7aa31c8
+- url=https://github.com/
+- file=research_results/documents/parsed/008ec4453ff31513f43893cba7aa31c8.txt
+- dei=inclusion
+- proxy=
+- binding=standard; required
+- tags=training
+- 77. risk=2 domain=www.drupal.org content_type=text/html; charset=UTF-8 len=8229 id=11f8c5e1123008295d7e64cc85216997
+- url=https://new.drupal.org/home
+- file=research_results/documents/parsed/11f8c5e1123008295d7e64cc85216997.txt
+- dei=accessibility
+- proxy=
+- binding=policy; standard; required
+- tags=hiring; procurement; training; housing
+- 78. risk=2 domain=oregonbuys.gov content_type=text/html;charset=UTF-8 len=7916 id=f6741790087ba13efcf09ff18aaee9d6
+- url=https://oregonbuys.gov:443/bso/
+- file=research_results/documents/parsed/f6741790087ba13efcf09ff18aaee9d6.txt
+- dei=inclusion; diversity
+- proxy=
+- binding=shall; contract; required
+- tags=procurement; housing
+- 79. risk=2 domain=www.colorlines.com content_type=text/html; charset=UTF-8 len=7547 id=b03119e6b8cde2b7df224e42d8cdd827
+- url=https://colorlines.com/
+- file=research_results/documents/parsed/b03119e6b8cde2b7df224e42d8cdd827.txt
+- dei=equity; racial justice; inclusive; equitable
+- proxy=
+- binding=must
+- tags=training; housing
+- 80. risk=2 domain=www.oregonmetro.gov content_type=text/html; charset=UTF-8 len=7525 id=d1b57d035c043d274245fea7ac99f95a
+- url=https://www.oregonmetro.gov/what-metro-does/housing-and-homelessness/affordable-housing-bond/racial-equity
+- file=research_results/documents/parsed/d1b57d035c043d274245fea7ac99f95a.txt
+- dei=equity; diversity; underrepresented; accessibility; equitable; inclusion; people of color; minority
+- proxy=
+- binding=policy; contract; must; regulation; binding; required
+- tags=hiring; procurement; training; housing; community engagement
