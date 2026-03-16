@@ -20,12 +20,15 @@ if COMPLAINT_GENERATOR_ROOT.exists():
 
 try:
     from integrations.ipfs_datasets import (
+        DOCUMENTS_AVAILABLE,
+        DOCUMENTS_ERROR,
         EMBEDDINGS_AVAILABLE,
         VECTOR_STORE_AVAILABLE,
         VECTOR_STORE_ERROR,
         create_vector_index,
         discover_seeded_commoncrawl,
         get_ipfs_datasets_capabilities,
+        ingest_local_document,
         scrape_web_content,
         search_brave_web,
         search_multi_engine_web,
@@ -41,12 +44,15 @@ try:
         search_us_code,
     )
 except Exception as exc:  # pragma: no cover - exercised through fallback behavior
+    DOCUMENTS_AVAILABLE = False
+    DOCUMENTS_ERROR = str(exc)
     EMBEDDINGS_AVAILABLE = False
     VECTOR_STORE_AVAILABLE = False
     VECTOR_STORE_ERROR = str(exc)
     create_vector_index = None
     discover_seeded_commoncrawl = None
     get_ipfs_datasets_capabilities = None
+    ingest_local_document = None
     scrape_web_content = None
     search_brave_web = None
     search_multi_engine_web = None
@@ -73,8 +79,11 @@ REPOSITORY_EVIDENCE_RECURSIVE_DIRS = (
 REPOSITORY_EVIDENCE_SKIP_PARTS = {
     ".git",
     "__pycache__",
+    "adversarial_runs",
     "complaint-generator",
+    "grounded_runs",
     "hacc_website",
+    "search_reports",
     "search_indexes",
 }
 REPOSITORY_EVIDENCE_MAX_BYTES = 2_000_000
@@ -220,6 +229,7 @@ class HACCResearchEngine:
         self.knowledge_graph_dir = Path(
             knowledge_graph_dir or (self.repo_root / "hacc_website/knowledge_graph")
         ).resolve()
+        self.repository_ingest_dir = (self.repo_root / "research_results/documents/repository_ingest").resolve()
         self.default_embedding_dir = (self.knowledge_graph_dir / "embeddings").resolve()
         self.default_index_dir = (self.repo_root / "research_results/search_indexes").resolve()
         self.default_index_path = self.default_index_dir / "hacc_corpus.summary.json"
@@ -908,6 +918,7 @@ class HACCResearchEngine:
             claim_type=claim_type,
             upload_candidates=upload_candidates,
         )
+        mediator_evidence_packets = self._build_mediator_evidence_packets(upload_candidates)
         return {
             "status": "success",
             "query": query_text,
@@ -916,6 +927,7 @@ class HACCResearchEngine:
             "use_vector": bool(use_vector),
             "search_payload": search_payload,
             "upload_candidates": upload_candidates,
+            "mediator_evidence_packets": mediator_evidence_packets,
             "synthetic_prompts": synthetic_prompts,
             "integration_status": self._integration_status(),
         }
@@ -1043,6 +1055,19 @@ class HACCResearchEngine:
             if callable(summarize_claim_support)
             else {}
         )
+        evidence_analysis = {}
+        evidence_analysis_hook = getattr(mediator, "evidence_analysis", None)
+        analyze_evidence_for_claim = getattr(evidence_analysis_hook, "analyze_evidence_for_claim", None)
+        if not callable(analyze_evidence_for_claim):
+            analyze_evidence_for_claim = getattr(mediator, "analyze_evidence_for_claim", None)
+        if callable(analyze_evidence_for_claim):
+            try:
+                evidence_analysis = analyze_evidence_for_claim(
+                    str(user_id or "hacc-grounding"),
+                    str(claim_type or "").strip() or "housing_discrimination",
+                )
+            except Exception as exc:
+                evidence_analysis = {"error": str(exc)}
         database_paths = {
             "evidence_db_path": str(db_root / "evidence.duckdb") if db_root else "",
             "legal_authority_db_path": str(db_root / "legal_authorities.duckdb") if db_root else "",
@@ -1059,6 +1084,8 @@ class HACCResearchEngine:
             "errors": errors,
             "stored_evidence": stored_evidence,
             "support_summary": support_summary if isinstance(support_summary, dict) else {"value": support_summary},
+            "evidence_analysis": evidence_analysis if isinstance(evidence_analysis, dict) else {"value": evidence_analysis},
+            "mediator_evidence_packets": grounding_bundle.get("mediator_evidence_packets", []),
             "synthetic_prompts": grounding_bundle.get("synthetic_prompts", {}),
             "database_paths": database_paths,
             "integration_status": self._integration_status(),
@@ -1152,33 +1179,85 @@ class HACCResearchEngine:
             if resolved in seen_paths:
                 continue
             seen_paths.add(resolved)
+            document = self._ingest_repository_evidence_document(path)
+            if document is None:
+                continue
+            documents.append(document)
+        return documents
+
+    def _ingest_repository_evidence_document(self, path: Path) -> Optional[CorpusDocument]:
+        try:
+            relative_path = path.relative_to(self.repo_root)
+        except ValueError:
+            return None
+
+        ingest_payload: Dict[str, Any] = {}
+        if ingest_local_document is not None:
+            try:
+                ingest_payload = ingest_local_document(
+                    path,
+                    metadata={
+                        "title": relative_path.stem.replace("_", " "),
+                        "relative_path": relative_path.as_posix(),
+                        "source_type": "repository_evidence",
+                    },
+                    output_dir=self.repository_ingest_dir,
+                )
+            except Exception:
+                ingest_payload = {}
+
+        text = str(ingest_payload.get("text") or "")
+        if not _clean_text(text):
             try:
                 text = path.read_text(encoding="utf-8", errors="ignore")
             except OSError:
-                continue
-            if not _clean_text(text):
-                continue
+                return None
+        if not _clean_text(text):
+            return None
 
-            relative_path = path.relative_to(self.repo_root)
-            documents.append(
-                CorpusDocument(
-                    document_id=f"repo::{relative_path.as_posix()}",
-                    title=self._infer_title(text, fallback=relative_path.stem.replace("_", " ")),
-                    text=text,
-                    source_type="repository_evidence",
-                    source_path=str(path),
-                    metadata={
-                        "relative_path": relative_path.as_posix(),
-                        "category": relative_path.parts[0] if len(relative_path.parts) > 1 else "root",
-                        "size_bytes": path.stat().st_size,
-                        "graph_status": "skipped_repository_evidence",
-                    },
-                    rules=[],
-                    entities=[],
-                    relationships=[],
-                )
-            )
-        return documents
+        parse_payload = ingest_payload.get("parse") if isinstance(ingest_payload.get("parse"), dict) else {}
+        parse_metadata = parse_payload.get("metadata") if isinstance(parse_payload.get("metadata"), dict) else {}
+        parse_summary = parse_payload.get("summary") if isinstance(parse_payload.get("summary"), dict) else {}
+        title = self._infer_title(text, fallback=relative_path.stem.replace("_", " "))
+        source_id = f"repo::{relative_path.as_posix()}"
+        graph_payload = self._extract_graph_payload(text=text, source_id=source_id, title=title, source_path=path)
+        rule_like_facts = self._graph_facts_to_rule_like_records(graph_payload)
+        try:
+            size_bytes = path.stat().st_size
+        except OSError:
+            size_bytes = len(text.encode("utf-8", errors="ignore"))
+
+        quality_payload = parse_metadata.get("parse_quality") if isinstance(parse_metadata.get("parse_quality"), dict) else {}
+        return CorpusDocument(
+            document_id=source_id,
+            title=title,
+            text=text,
+            source_type="repository_evidence",
+            source_path=str(path),
+            metadata={
+                "relative_path": relative_path.as_posix(),
+                "category": relative_path.parts[0] if len(relative_path.parts) > 1 else "root",
+                "size_bytes": size_bytes,
+                "graph_status": graph_payload.get("status", "unavailable"),
+                "graph_entity_count": len(graph_payload.get("entities", []) or []),
+                "graph_relationship_count": len(graph_payload.get("relationships", []) or []),
+                "document_ingest_status": str(ingest_payload.get("status") or ("success" if text else "empty")),
+                "content_type": str(ingest_payload.get("content_type") or parse_metadata.get("mime_type") or ""),
+                "extraction_method": str(ingest_payload.get("extraction_method") or parse_metadata.get("extraction_method") or ""),
+                "parse_status": str(parse_payload.get("status") or ""),
+                "parse_summary": dict(parse_summary),
+                "parse_metadata": dict(parse_metadata),
+                "quality_tier": str(quality_payload.get("quality_tier") or ""),
+                "quality_score": float(quality_payload.get("quality_score", 0.0) or 0.0),
+                "parsed_text_path": str(ingest_payload.get("parsed_text_path") or ""),
+                "metadata_path": str(ingest_payload.get("metadata_path") or ""),
+                "checksum": str(ingest_payload.get("checksum") or ""),
+                "source_record_id": str(ingest_payload.get("id") or ""),
+            },
+            rules=rule_like_facts,
+            entities=list(graph_payload.get("entities", []) or []),
+            relationships=list(graph_payload.get("relationships", []) or []),
+        )
 
     def _iter_repository_evidence_paths(self) -> Iterable[Path]:
         try:
@@ -1245,6 +1324,8 @@ class HACCResearchEngine:
                     "score": float(item.get("score", 0.0) or 0.0),
                     "snippet": str(item.get("snippet") or "")[:500],
                     "metadata": dict(item.get("metadata") or {}),
+                    "parse_summary": dict((item.get("metadata") or {}).get("parse_summary") or {}),
+                    "graph_status": str((item.get("metadata") or {}).get("graph_status") or ""),
                 }
             )
         source_rank = {
@@ -1254,12 +1335,38 @@ class HACCResearchEngine:
         }
         candidates.sort(
             key=lambda item: (
-                source_rank.get(str(item.get("source_type") or ""), 9),
                 -float(item.get("score", 0.0) or 0.0),
+                source_rank.get(str(item.get("source_type") or ""), 9),
                 str(item.get("title") or ""),
             )
         )
         return candidates[:top_k]
+
+    def _build_mediator_evidence_packets(self, upload_candidates: Sequence[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        packets: List[Dict[str, Any]] = []
+        for candidate in upload_candidates:
+            source_path = str(candidate.get("source_path") or "").strip()
+            if not source_path:
+                continue
+            path = Path(source_path)
+            if not path.exists() or not path.is_file():
+                continue
+            packets.append(
+                {
+                    "document_label": str(candidate.get("title") or path.name),
+                    "source_path": source_path,
+                    "relative_path": str(candidate.get("relative_path") or path.name),
+                    "filename": path.name,
+                    "mime_type": str((candidate.get("metadata") or {}).get("content_type") or "text/plain"),
+                    "metadata": {
+                        "source_type": str(candidate.get("source_type") or "repository_evidence"),
+                        "relative_path": str(candidate.get("relative_path") or path.name),
+                        "parse_summary": dict(candidate.get("parse_summary") or {}),
+                        "graph_status": str(candidate.get("graph_status") or ""),
+                    },
+                }
+            )
+        return packets
 
     def _build_synthetic_prompts(
         self,
@@ -1299,11 +1406,37 @@ class HACCResearchEngine:
             "For every document, determine what claim element it supports, what facts it proves directly, what facts remain missing, "
             "and what follow-up questions the mediator should ask before drafting a complaint."
         )
+        production_prompt = (
+            f"A user uploads repository evidence for '{query_text}'. Save each file into the complaint-generator evidence store, "
+            "extract factual support from the parsed document, and route the uploaded materials through mediator evidence analysis "
+            "before drafting or revising a complaint."
+        )
         return {
             "evidence_upload_prompts": upload_prompts,
             "complaint_chatbot_prompt": chatbot_prompt,
             "mediator_evaluation_prompt": mediator_prompt,
+            "production_upload_prompt": production_prompt,
         }
+
+    def _graph_facts_to_rule_like_records(self, graph_payload: Dict[str, Any]) -> List[Dict[str, Any]]:
+        rule_like_records: List[Dict[str, Any]] = []
+        for entity in list(graph_payload.get("entities", []) or []):
+            entity_type = str(entity.get("type") or entity.get("entity_type") or "")
+            if entity_type != "fact":
+                continue
+            attributes = entity.get("attributes") if isinstance(entity.get("attributes"), dict) else {}
+            fact_text = _clean_text(str(attributes.get("text") or entity.get("name") or ""))
+            if not fact_text:
+                continue
+            rule_like_records.append(
+                {
+                    "text": fact_text,
+                    "section_title": str(attributes.get("section_title") or "repository_evidence"),
+                    "rule_type": "fact",
+                    "modality": "evidence",
+                }
+            )
+        return rule_like_records
 
     def _load_knowledge_graph_documents(self) -> List[CorpusDocument]:
         documents_dir = self.knowledge_graph_dir / "documents"
@@ -1543,8 +1676,10 @@ class HACCResearchEngine:
                 "legal_discovery_available": bool(LEGAL_SCRAPERS_AVAILABLE),
                 "scrape_available": scrape_web_content is not None,
                 "graph_available": extract_graph_from_text is not None,
+                "documents_available": bool(DOCUMENTS_AVAILABLE),
                 "vector_available": bool(VECTOR_STORE_AVAILABLE),
                 "embeddings_available": bool(EMBEDDINGS_AVAILABLE),
+                "documents_degraded_reason": str(DOCUMENTS_ERROR) if (not DOCUMENTS_AVAILABLE and DOCUMENTS_ERROR is not None) else None,
                 "vector_degraded_reason": str(VECTOR_STORE_ERROR) if (not VECTOR_STORE_AVAILABLE and VECTOR_STORE_ERROR is not None) else None,
                 "legal_degraded_reason": str(LEGAL_SCRAPERS_ERROR) if (not LEGAL_SCRAPERS_AVAILABLE and LEGAL_SCRAPERS_ERROR is not None) else None,
             },

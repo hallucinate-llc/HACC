@@ -41,6 +41,38 @@ class HACCResearchEngineTests(unittest.TestCase):
                 {document.document_id for document in repository_docs},
                 {"repo::README.md", "repo::correspondances/notice.txt"},
             )
+            readme_doc = next(document for document in repository_docs if document.document_id == "repo::README.md")
+            self.assertEqual(readme_doc.metadata["document_ingest_status"], "success")
+            self.assertTrue(readme_doc.metadata["parse_summary"])
+            self.assertTrue(readme_doc.entities)
+            self.assertTrue(readme_doc.rules)
+
+    def test_load_corpus_skips_generated_runtime_artifacts(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            root.joinpath("README.md").write_text("Source evidence", encoding="utf-8")
+            generated_dir = root / "research_results" / "adversarial_runs" / "demo"
+            generated_dir.mkdir(parents=True, exist_ok=True)
+            generated_dir.joinpath("run_summary.json").write_text(
+                json.dumps({"status": "generated"}),
+                encoding="utf-8",
+            )
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            documents = engine.load_corpus()
+            self.assertEqual(
+                [document.document_id for document in documents if document.source_type == "repository_evidence"],
+                ["repo::README.md"],
+            )
 
     def test_load_corpus_reads_parsed_and_knowledge_graph_documents(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -285,6 +317,53 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertEqual(len(prompts["evidence_upload_prompts"]), 1)
             self.assertIn("Upload the evidence file", prompts["evidence_upload_prompts"][0]["text"])
             self.assertIn("Evaluate each uploaded evidence item", prompts["mediator_evaluation_prompt"])
+            self.assertIn("production_upload_prompt", prompts)
+            self.assertEqual(len(payload["mediator_evidence_packets"]), 1)
+            self.assertEqual(payload["mediator_evidence_packets"][0]["relative_path"], "README.md")
+
+    def test_select_uploadable_results_prefers_stronger_scores_over_source_type_bias(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            strong_path = root / "policy.txt"
+            weak_path = root / "note.txt"
+            strong_path.write_text("strong", encoding="utf-8")
+            weak_path.write_text("weak", encoding="utf-8")
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            candidates = engine._select_uploadable_results(
+                {
+                    "results": [
+                        {
+                            "document_id": "repo::note.txt",
+                            "title": "Weak repo evidence",
+                            "source_type": "repository_evidence",
+                            "source_path": str(weak_path),
+                            "score": 5.0,
+                            "metadata": {},
+                        },
+                        {
+                            "document_id": "kg::policy",
+                            "title": "Strong policy evidence",
+                            "source_type": "knowledge_graph",
+                            "source_path": str(strong_path),
+                            "score": 99.0,
+                            "metadata": {},
+                        },
+                    ]
+                },
+                top_k=2,
+            )
+
+            self.assertEqual(candidates[0]["document_id"], "kg::policy")
 
     def test_simulate_evidence_upload_uses_mediator_submit_path(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -301,6 +380,7 @@ class HACCResearchEngineTests(unittest.TestCase):
             class FakeMediator:
                 def __init__(self):
                     self.calls = []
+                    self.evidence_analysis = self
 
                 def submit_evidence_file(self, **kwargs):
                     self.calls.append(kwargs)
@@ -311,6 +391,9 @@ class HACCResearchEngineTests(unittest.TestCase):
 
                 def summarize_claim_support(self, user_id, claim_type=None):
                     return {"user_id": user_id, "claim_type": claim_type, "total_links": 1}
+
+                def analyze_evidence_for_claim(self, user_id, claim_type):
+                    return {"user_id": user_id, "claim_type": claim_type, "total_evidence": 1, "has_evidence": True}
 
             mediator = FakeMediator()
             engine = HACCResearchEngine(
@@ -331,9 +414,11 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertEqual(payload["status"], "success")
             self.assertEqual(payload["upload_count"], 1)
             self.assertEqual(payload["support_summary"]["total_links"], 1)
+            self.assertEqual(payload["evidence_analysis"]["total_evidence"], 1)
             self.assertEqual(len(mediator.calls), 1)
             self.assertEqual(mediator.calls[0]["file_path"], str(evidence_path.resolve()))
             self.assertEqual(mediator.calls[0]["claim_type"], "housing_discrimination")
+            self.assertEqual(payload["mediator_evidence_packets"][0]["relative_path"], "README.md")
 
     def test_search_package_builds_shared_vector_index_when_missing(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:

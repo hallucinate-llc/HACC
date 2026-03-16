@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import importlib
 import json
 import sys
 from datetime import UTC, datetime
@@ -25,6 +26,20 @@ from hacc_research import HACCResearchEngine
 
 def _timestamp() -> str:
     return datetime.now(UTC).strftime("%Y%m%d_%H%M%S")
+
+
+def _json_safe(value: Any) -> Any:
+    if isinstance(value, (str, int, float, bool)) or value is None:
+        return value
+    if isinstance(value, dict):
+        return {str(key): _json_safe(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple, set)):
+        return [_json_safe(item) for item in value]
+    if isinstance(value, Path):
+        return str(value)
+    if isinstance(value, datetime):
+        return value.isoformat()
+    return str(value)
 
 
 def _default_grounding_request(hacc_preset: str) -> Dict[str, str]:
@@ -49,6 +64,43 @@ def _default_grounding_request(hacc_preset: str) -> Dict[str, str]:
     }
 
 
+def _load_synthesis_module() -> Any:
+    scripts_dir = COMPLAINT_GENERATOR_ROOT / "scripts"
+    scripts_dir_str = str(scripts_dir)
+    if scripts_dir_str not in sys.path:
+        sys.path.insert(0, scripts_dir_str)
+    return importlib.import_module("synthesize_hacc_complaint")
+
+
+def _run_complaint_synthesis(
+    *,
+    grounded_run_dir: Path,
+    filing_forum: str,
+    preset: str,
+) -> Dict[str, Any]:
+    synthesis_module = _load_synthesis_module()
+    adversarial_results_path = grounded_run_dir / "adversarial" / "adversarial_results.json"
+    output_dir = grounded_run_dir / "complaint_synthesis"
+    argv = [
+        "--results-json",
+        str(adversarial_results_path),
+        "--grounded-run-dir",
+        str(grounded_run_dir),
+        "--filing-forum",
+        filing_forum,
+        "--output-dir",
+        str(output_dir),
+    ]
+    if preset:
+        argv.extend(["--preset", preset])
+    synthesis_module.main(argv)
+    return {
+        "output_dir": str(output_dir),
+        "draft_complaint_package_json": str(output_dir / "draft_complaint_package.json"),
+        "draft_complaint_package_md": str(output_dir / "draft_complaint_package.md"),
+    }
+
+
 def run_hacc_grounded_pipeline(
     *,
     output_dir: str | Path,
@@ -65,6 +117,8 @@ def run_hacc_grounded_pipeline(
     backend_id: Optional[str] = None,
     provider: str = "copilot_cli",
     model: Optional[str] = None,
+    synthesize_complaint: bool = False,
+    filing_forum: str = "court",
 ) -> Dict[str, Any]:
     output_root = Path(output_dir).resolve()
     output_root.mkdir(parents=True, exist_ok=True)
@@ -104,14 +158,31 @@ def run_hacc_grounded_pipeline(
         provider=provider,
         model=model,
     )
+    grounding_bundle = _json_safe(grounding_bundle)
+    upload_report = _json_safe(upload_report)
+    adversarial_summary = _json_safe(adversarial_summary)
+    synthesis_summary: Dict[str, Any] = {}
+    if synthesize_complaint:
+        synthesis_summary = _json_safe(
+            _run_complaint_synthesis(
+                grounded_run_dir=output_root,
+                filing_forum=filing_forum,
+                preset=hacc_preset,
+            )
+        )
 
     grounding_path = output_root / "grounding_bundle.json"
+    mediator_packets_path = output_root / "mediator_evidence_packets.json"
     prompts_path = output_root / "synthetic_prompts.json"
     upload_path = output_root / "evidence_upload_report.json"
     adversarial_path = output_root / "adversarial_summary.json"
     summary_path = output_root / "run_summary.json"
 
     grounding_path.write_text(json.dumps(grounding_bundle, ensure_ascii=False, indent=2), encoding="utf-8")
+    mediator_packets_path.write_text(
+        json.dumps(grounding_bundle.get("mediator_evidence_packets", []), ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
     prompts_path.write_text(
         json.dumps(grounding_bundle.get("synthetic_prompts", {}), ensure_ascii=False, indent=2),
         encoding="utf-8",
@@ -128,15 +199,21 @@ def run_hacc_grounded_pipeline(
         "grounding": grounding_bundle,
         "evidence_upload": upload_report,
         "adversarial": adversarial_summary,
+        "complaint_synthesis": synthesis_summary,
         "artifacts": {
             "output_dir": str(output_root),
             "grounding_bundle_json": str(grounding_path),
+            "mediator_evidence_packets_json": str(mediator_packets_path),
             "synthetic_prompts_json": str(prompts_path),
             "evidence_upload_report_json": str(upload_path),
             "adversarial_summary_json": str(adversarial_path),
             "adversarial_output_dir": str(output_root / "adversarial"),
+            "complaint_synthesis_dir": synthesis_summary.get("output_dir", ""),
+            "draft_complaint_package_json": synthesis_summary.get("draft_complaint_package_json", ""),
+            "draft_complaint_package_md": synthesis_summary.get("draft_complaint_package_md", ""),
         },
     }
+    summary = _json_safe(summary)
     summary_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
     return summary
 
@@ -159,6 +236,8 @@ def create_parser() -> argparse.ArgumentParser:
     parser.add_argument("--backend-id", default=None, help="Optional backend id from the selected config.")
     parser.add_argument("--provider", default="copilot_cli")
     parser.add_argument("--model", default=None)
+    parser.add_argument("--synthesize-complaint", action="store_true", help="Run complaint synthesis after the grounded adversarial batch completes.")
+    parser.add_argument("--filing-forum", default="court", choices=("court", "hud", "state_agency"))
     parser.add_argument("--json", action="store_true", help="Print the full workflow summary JSON.")
     return parser
 
@@ -180,6 +259,8 @@ def main(argv: Optional[list[str]] = None) -> int:
         backend_id=args.backend_id,
         provider=args.provider,
         model=args.model,
+        synthesize_complaint=args.synthesize_complaint,
+        filing_forum=args.filing_forum,
     )
     if args.json:
         print(json.dumps(summary, ensure_ascii=False, indent=2))
@@ -189,6 +270,8 @@ def main(argv: Optional[list[str]] = None) -> int:
         print(f"Uploaded evidence count: {summary['evidence_upload']['upload_count']}")
         print(f"Adversarial output directory: {summary['artifacts']['adversarial_output_dir']}")
         print(f"Synthetic prompts: {summary['artifacts']['synthetic_prompts_json']}")
+        if summary["artifacts"].get("draft_complaint_package_json"):
+            print(f"Draft complaint package: {summary['artifacts']['draft_complaint_package_json']}")
     return 0
 
 
