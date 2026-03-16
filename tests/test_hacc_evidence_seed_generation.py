@@ -255,6 +255,27 @@ class HacceEvidenceSeedGenerationTests(unittest.TestCase):
         self.assertIn("must schedule and send written notice", excerpt)
         self.assertNotIn("Table of Contents", excerpt)
 
+    def test_extract_source_window_carries_definitions_into_due_process_section(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            source_path = Path(tmpdir) / "policy.txt"
+            source_path.write_text(
+                "I. Definitions applicable to the grievance procedure [24 CFR 966.53]\n\n"
+                "A. Grievance: Any dispute a tenant may have with respect to HACC action or failure to act in accordance with the individual tenant's lease or HACC regulations that adversely affects the individual tenant's rights, duties, welfare, or status.\n\n"
+                "B. Complainant: Any tenant whose grievance is presented to HACC.\n\n"
+                "C. Elements of due process: An eviction action or a termination of tenancy in a state or local court in which adequate notice and an opportunity to refute the evidence are required.\n",
+                encoding="utf-8",
+            )
+
+            excerpt = _extract_source_window(
+                source_path=str(source_path),
+                anchor_terms=["Definitions applicable to the grievance procedure"],
+                fallback_snippet="Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+                window_chars=900,
+            )
+
+        self.assertIn("A. Grievance:", excerpt)
+        self.assertIn("C. Elements of due process:", excerpt)
+
     def test_extract_source_window_prefers_excerpt_with_more_anchor_term_coverage(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             source_path = Path(tmpdir) / "policy.txt"
