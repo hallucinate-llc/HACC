@@ -1,0 +1,31 @@
+{
+  "evidence_upload_prompts": [
+    {
+      "prompt_id": "evidence_upload_1",
+      "prompt_type": "evidence_upload",
+      "title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+      "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+      "relative_path": "hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+      "text": "Upload the evidence file 'hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b' and explain how it supports a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Focus on the most relevant language: Grievance: Any dispute a tenant may have with respect to HACC action or failure to"
+    },
+    {
+      "prompt_id": "evidence_upload_2",
+      "prompt_type": "evidence_upload",
+      "title": "ADMINISTRATIVE PLAN",
+      "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+      "relative_path": "hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+      "text": "Upload the evidence file 'hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858' and explain how it supports a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Focus on the most relevant language: Applicants or tenant families who wish to file a VAWA complaint against HACC may"
+    },
+    {
+      "prompt_id": "evidence_upload_3",
+      "prompt_type": "evidence_upload",
+      "title": "Supportive Housing Services Program",
+      "source_path": "/home/barberb/HACC/hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+      "relative_path": "hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+      "text": "Upload the evidence file 'hacc_website/945af141-c7d1-4973-88c0-b57024243114' and explain how it supports a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Focus on the most relevant language: Appeals process: Participants will be provided with a formal appeals process that at a minimum must consist of"
+    }
+  ],
+  "complaint_chatbot_prompt": "Ground the complaint chatbot in the uploaded repository evidence for 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Use the uploaded materials (ADMISSIONS AND CONTINUED OCCUPANCY POLICY, ADMINISTRATIVE PLAN, Supportive Housing Services Program) as factual grounding, ask the user to connect each document to case-specific events, and identify missing timeline, actor, harm, and remedy facts.",
+  "mediator_evaluation_prompt": "Evaluate each uploaded evidence item for a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. For every document, determine what claim element it supports, what facts it proves directly, what facts remain missing, and what follow-up questions the mediator should ask before drafting a complaint.",
+  "production_upload_prompt": "A user uploads repository evidence for 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Save each file into the complaint-generator evidence store, extract factual support from the parsed document, and route the uploaded materials through mediator evidence analysis before drafting or revising a complaint."
+}

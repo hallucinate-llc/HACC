@@ -13,6 +13,24 @@ You now have a complete audit toolkit comprising:
 - `run_collection.py` — Main orchestration script (full workflow)
 - `README.md` — Comprehensive toolkit documentation
 ## How to Get Started
+### Option 0: Run The Grounded Complaint Pipeline
+**Best for:** Turning the evidence already collected in this repo into an adversarially tested draft complaint package.
+```bash
+python3 hacc_grounded_pipeline.py \
+--demo \
+--num-sessions 1 \
+--max-turns 2 \
+--top-k 2 \
+--synthesize-complaint \
+--filing-forum hud
+```
+Artifacts land in `research_results/grounded_runs/<timestamp>/` and include:
+- `grounding_bundle.json` — ranked repository evidence plus synthetic prompts
+- `mediator_evidence_packets.json` — preloadable evidence packets for the mediator
+- `evidence_upload_report.json` — upload and claim-support summary
+- `adversarial/` — batch results and best session bundle
+- `complaint_synthesis/draft_complaint_package.json`
+- `complaint_synthesis/draft_complaint_package.md`
 ### Option A: Manual Evidence Collection (No API Keys Required)
 **Best for:** Immediate audit with documents you already have or can request.
 ```bash

@@ -1,0 +1,168 @@
+{
+  "timestamp": "20260316_020755",
+  "runtime": {
+    "mode": "demo",
+    "provider": "demo",
+    "model": "demo"
+  },
+  "router_diagnostics": {
+    "ipfs_router": {
+      "status": "available",
+      "backend_name": "KuboCLIBackend",
+      "backend_present": true,
+      "error": "",
+      "provider": "ipfs_datasets_py",
+      "metadata": {
+        "operation": "storage_backend_status",
+        "backend_available": true,
+        "provider": "ipfs_datasets_py",
+        "implementation_status": "available",
+        "details": {
+          "operation": "storage_backend_status",
+          "backend_available": true,
+          "implementation_status": "available"
+        }
+      }
+    },
+    "embeddings_router": {
+      "status": "success",
+      "index_name": "router_diag",
+      "document_count": 2,
+      "dimension": 384,
+      "provider": "ipfs_datasets_py.auto",
+      "model_name": "",
+      "files": {
+        "vectors_path": "/tmp/tmps1lcvoiu/router_diag.vectors.npy",
+        "records_path": "/tmp/tmps1lcvoiu/router_diag.records.jsonl",
+        "manifest_path": "/tmp/tmps1lcvoiu/router_diag.manifest.json"
+      },
+      "metadata": {
+        "operation": "create_vector_index",
+        "backend_available": true,
+        "provider": "ipfs_datasets_py",
+        "implementation_status": "implemented",
+        "batch_size": 32,
+        "details": {
+          "operation": "create_vector_index",
+          "backend_available": true,
+          "implementation_status": "implemented",
+          "batch_size": 32
+        }
+      }
+    }
+  },
+  "inputs": {
+    "num_sessions": 1,
+    "max_turns": 2,
+    "max_parallel": 1,
+    "personalities": [],
+    "hacc_preset": "core_hacc_policies",
+    "hacc_count": 3,
+    "use_hacc_vector_search": false
+  },
+  "statistics": {
+    "total_sessions": 1,
+    "successful_sessions": 1,
+    "failed_sessions": 0,
+    "average_score": 0.7101666666666666,
+    "min_score": 0.7101666666666666,
+    "max_score": 0.7101666666666666,
+    "average_questions": 2.0,
+    "average_duration": 18.735694646835327,
+    "score_distribution": {
+      "0.0-0.2": 0,
+      "0.2-0.4": 0,
+      "0.4-0.6": 0,
+      "0.6-0.8": 1,
+      "0.8-1.0": 0
+    },
+    "anchor_sections": {
+      "expected_counts": {
+        "grievance_hearing": 1,
+        "appeal_rights": 1,
+        "adverse_action": 1
+      },
+      "covered_counts": {
+        "appeal_rights": 1,
+        "adverse_action": 1
+      },
+      "missing_counts": {
+        "grievance_hearing": 1
+      },
+      "coverage_by_section": {
+        "adverse_action": {
+          "expected": 1,
+          "covered": 1,
+          "missing": 0,
+          "coverage_rate": 1.0
+        },
+        "appeal_rights": {
+          "expected": 1,
+          "covered": 1,
+          "missing": 0,
+          "coverage_rate": 1.0
+        },
+        "grievance_hearing": {
+          "expected": 1,
+          "covered": 0,
+          "missing": 1,
+          "coverage_rate": 0.0
+        }
+      }
+    }
+  },
+  "optimization_report": {
+    "average_score": 0.7101666666666666,
+    "score_trend": "insufficient_data",
+    "recommended_hacc_preset": "core_hacc_policies",
+    "priority_improvements": [
+      "Improve empathy: current avg 0.68",
+      "Improve efficiency: current avg 0.69",
+      "Improve coverage: current avg 0.70"
+    ],
+    "recommendations": [
+      "Performance is good. Focus on consistency and edge cases.",
+      "Decision-tree coverage is incomplete for seeded evidence sections. Add explicit probes for: grievance_hearing.",
+      "Add questions covering: grievance_hearing",
+      "Ask directly about documentary evidence and witnesses earlier in the loop",
+      "Add a dedicated timeline probe after the first retaliation allegation",
+      "Best HACC preset so far is 'core_hacc_policies'. Prefer it when generating evidence-backed adversarial batches."
+    ],
+    "best_session_id": "session_20260316_020736_000"
+  },
+  "autopatch": {
+    "requested": false,
+    "method": "test_driven",
+    "profile": "question_flow",
+    "target_files": [
+      "/home/barberb/HACC/complaint-generator/complaint_phases/phase_manager.py",
+      "/home/barberb/HACC/complaint-generator/mediator/inquiries.py"
+    ],
+    "constraints": {},
+    "applied": false,
+    "apply_success": false,
+    "success": false,
+    "patch_path": null,
+    "patch_cid": null,
+    "metadata": {},
+    "summary_json": null,
+    "error": null
+  },
+  "best_complaint": {
+    "session_id": "session_20260316_020736_000",
+    "initial_complaint_text": "I reported discrimination to human resources after my supervisor denied a promotion and made repeated comments about women not being fit for leadership. Two days later I was terminated.",
+    "score": 0.7101666666666666,
+    "seed_type": "housing_discrimination",
+    "seed_summary": "The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. 14 GRIEVANCES AND APPEALS INTRODUCTION ......................................................................................................................14-1 PART I: INFORMAL HEARINGS FOR PUBLIC HOUSING APPLICANTS I.A. OVERVIEW ...................................................................................................................14-1 INFORMAL HEARING PROCESS ..............................................................................14-2 I.B. PART II: INFORMAL HEARINGS WITH REGARD TO NONCITIZENS II.A. HEARING AND APPEAL PROVISIONS FOR NONCITIZENS ................................14-7 PART III: GRIEVANCE PROCEDURES FOR PUBLIC HOUSING RESIDENTS III.A. REQUIREMENTS .......................................................................................................14-11 III.B."
+  },
+  "artifacts": {
+    "output_dir": "/home/barberb/HACC/research_results/grounded_runs/demo_grounded_run_v5/adversarial",
+    "results_json": "/home/barberb/HACC/research_results/grounded_runs/demo_grounded_run_v5/adversarial/adversarial_results.json",
+    "optimization_report_json": "/home/barberb/HACC/research_results/grounded_runs/demo_grounded_run_v5/adversarial/optimization_report.json",
+    "anchor_section_csv": "/home/barberb/HACC/research_results/grounded_runs/demo_grounded_run_v5/adversarial/anchor_section_coverage.csv",
+    "best_complaint_bundle_json": "/home/barberb/HACC/research_results/grounded_runs/demo_grounded_run_v5/adversarial/best_complaint_bundle.json",
+    "session_state_dir": "/home/barberb/HACC/research_results/grounded_runs/demo_grounded_run_v5/adversarial/sessions",
+    "autopatch_summary_json": null,
+    "autopatch_patch_path": null
+  }
+}

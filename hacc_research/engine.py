@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import mimetypes
 import re
 import sys
 import tempfile
@@ -87,6 +88,18 @@ REPOSITORY_EVIDENCE_SKIP_PARTS = {
     "search_indexes",
 }
 REPOSITORY_EVIDENCE_MAX_BYTES = 2_000_000
+
+
+def _detect_content_type(path: Path) -> str:
+    try:
+        with path.open("rb") as handle:
+            header = handle.read(8)
+    except OSError:
+        header = b""
+    if header.startswith(b"%PDF-"):
+        return "application/pdf"
+    guessed, _ = mimetypes.guess_type(path.name)
+    return str(guessed or "text/plain")
 
 
 def _clean_text(value: str) -> str:
@@ -1010,21 +1023,40 @@ class HACCResearchEngine:
             file_path = str(candidate.get("source_path") or "")
             if not file_path:
                 continue
+            submission = self._prepare_mediator_submission(candidate)
+            path = Path(file_path)
+            metadata = {
+                "grounding_query": _clean_text(query),
+                "source_type": candidate.get("source_type", "repository_evidence"),
+                "relative_path": candidate.get("relative_path", ""),
+                "snippet": candidate.get("snippet", ""),
+                "mime_type": submission["mime_type"],
+                "filename": submission["filename"],
+                "original_mime_type": submission["original_mime_type"],
+                "original_filename": path.name,
+                "upload_strategy": submission["upload_strategy"],
+            }
             try:
-                result = mediator.submit_evidence_file(
-                    file_path=file_path,
-                    evidence_type="document",
-                    user_id=str(user_id or "hacc-grounding"),
-                    description=f"Grounding evidence: {candidate.get('title') or Path(file_path).name}",
-                    claim_type=str(claim_type or "").strip() or "housing_discrimination",
-                    claim_element=_clean_text(query),
-                    metadata={
-                        "grounding_query": _clean_text(query),
-                        "source_type": candidate.get("source_type", "repository_evidence"),
-                        "relative_path": candidate.get("relative_path", ""),
-                        "snippet": candidate.get("snippet", ""),
-                    },
-                )
+                if submission["upload_strategy"] == "extracted_text_fallback":
+                    result = mediator.submit_evidence(
+                        data=submission["data"],
+                        evidence_type="document",
+                        user_id=str(user_id or "hacc-grounding"),
+                        description=f"Grounding evidence: {candidate.get('title') or path.name}",
+                        claim_type=str(claim_type or "").strip() or "housing_discrimination",
+                        claim_element=_clean_text(query),
+                        metadata=metadata,
+                    )
+                else:
+                    result = mediator.submit_evidence_file(
+                        file_path=file_path,
+                        evidence_type="document",
+                        user_id=str(user_id or "hacc-grounding"),
+                        description=f"Grounding evidence: {candidate.get('title') or path.name}",
+                        claim_type=str(claim_type or "").strip() or "housing_discrimination",
+                        claim_element=_clean_text(query),
+                        metadata=metadata,
+                    )
             except Exception as exc:
                 errors.append(
                     {
@@ -1039,6 +1071,7 @@ class HACCResearchEngine:
                     "source_path": file_path,
                     "title": candidate.get("title", ""),
                     "relative_path": candidate.get("relative_path", ""),
+                    "upload_strategy": submission["upload_strategy"],
                     "result": result if isinstance(result, dict) else {"value": str(result)},
                 }
             )
@@ -1342,6 +1375,55 @@ class HACCResearchEngine:
         )
         return candidates[:top_k]
 
+    def _prepare_mediator_submission(self, candidate: Dict[str, Any]) -> Dict[str, Any]:
+        source_path = str(candidate.get("source_path") or "").strip()
+        path = Path(source_path)
+        original_content_type = str((candidate.get("metadata") or {}).get("content_type") or _detect_content_type(path))
+        upload_filename = path.name or str(candidate.get("title") or "evidence").strip() or "evidence"
+        extracted_text = self._resolve_candidate_upload_text(candidate)
+
+        if original_content_type == "application/pdf" and _clean_text(extracted_text):
+            if "." not in upload_filename:
+                upload_filename = f"{upload_filename}.txt"
+            return {
+                "upload_strategy": "extracted_text_fallback",
+                "data": extracted_text.encode("utf-8"),
+                "mime_type": "text/plain",
+                "filename": upload_filename,
+                "original_mime_type": original_content_type,
+            }
+
+        return {
+            "upload_strategy": "file",
+            "data": None,
+            "mime_type": original_content_type,
+            "filename": upload_filename,
+            "original_mime_type": original_content_type,
+        }
+
+    def _resolve_candidate_upload_text(self, candidate: Dict[str, Any]) -> str:
+        metadata = candidate.get("metadata") if isinstance(candidate.get("metadata"), dict) else {}
+        parsed_text_path = str(metadata.get("parsed_text_path") or "").strip()
+        if parsed_text_path:
+            path = Path(parsed_text_path)
+            if not path.is_absolute():
+                path = (self.repo_root / path).resolve()
+            try:
+                text = path.read_text(encoding="utf-8", errors="ignore")
+            except OSError:
+                text = ""
+            if _clean_text(text):
+                return text
+
+        source_path = str(candidate.get("source_path") or "").strip()
+        document_id = str(candidate.get("document_id") or "").strip()
+        for document in self.load_corpus():
+            if document_id and document.document_id == document_id and _clean_text(document.text):
+                return document.text
+            if source_path and document.source_path == source_path and _clean_text(document.text):
+                return document.text
+        return ""
+
     def _build_mediator_evidence_packets(self, upload_candidates: Sequence[Dict[str, Any]]) -> List[Dict[str, Any]]:
         packets: List[Dict[str, Any]] = []
         for candidate in upload_candidates:
@@ -1351,18 +1433,22 @@ class HACCResearchEngine:
             path = Path(source_path)
             if not path.exists() or not path.is_file():
                 continue
+            submission = self._prepare_mediator_submission(candidate)
             packets.append(
                 {
                     "document_label": str(candidate.get("title") or path.name),
                     "source_path": source_path,
                     "relative_path": str(candidate.get("relative_path") or path.name),
-                    "filename": path.name,
-                    "mime_type": str((candidate.get("metadata") or {}).get("content_type") or "text/plain"),
+                    "filename": submission["filename"],
+                    "mime_type": submission["mime_type"],
                     "metadata": {
                         "source_type": str(candidate.get("source_type") or "repository_evidence"),
                         "relative_path": str(candidate.get("relative_path") or path.name),
                         "parse_summary": dict(candidate.get("parse_summary") or {}),
                         "graph_status": str(candidate.get("graph_status") or ""),
+                        "original_mime_type": submission["original_mime_type"],
+                        "original_filename": path.name,
+                        "upload_strategy": submission["upload_strategy"],
                     },
                 }
             )

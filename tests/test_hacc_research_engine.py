@@ -420,6 +420,93 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertEqual(mediator.calls[0]["claim_type"], "housing_discrimination")
             self.assertEqual(payload["mediator_evidence_packets"][0]["relative_path"], "README.md")
 
+    def test_simulate_evidence_upload_uses_extracted_text_fallback_for_extensionless_pdf_sources(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            pdf_source = root / "hacc_website" / "policy-source"
+            pdf_source.parent.mkdir(parents=True, exist_ok=True)
+            pdf_source.write_bytes(b"%PDF-1.4\n1 0 obj\n<<>>\nendobj\n")
+
+            kg_dir = root / "hacc_website" / "knowledge_graph" / "documents"
+            kg_dir.mkdir(parents=True, exist_ok=True)
+            kg_dir.joinpath("policy.json").write_text(
+                json.dumps(
+                    {
+                        "status": "success",
+                        "source_id": "policy",
+                        "text": "Reasonable accommodation hearing rights are explained in this policy.",
+                        "document": {
+                            "title": "Extensionless Policy PDF",
+                            "source_path": str(pdf_source),
+                        },
+                        "rules": [
+                            {
+                                "text": "Reasonable accommodation hearing rights are explained in this policy.",
+                                "rule_type": "obligation",
+                                "section_title": "Hearing Rights",
+                            }
+                        ],
+                        "entities": [{"id": "entity1", "type": "concept", "name": "reasonable accommodation"}],
+                        "relationships": [],
+                        "metadata": {},
+                        "provider": "ipfs_datasets_py",
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            class FakeMediator:
+                def __init__(self):
+                    self.calls = []
+                    self.evidence_analysis = self
+
+                def submit_evidence(self, **kwargs):
+                    self.calls.append(("submit_evidence", kwargs))
+                    return {"cid": "bafy-test", "record_id": 8}
+
+                def submit_evidence_file(self, **kwargs):
+                    self.calls.append(("submit_evidence_file", kwargs))
+                    return {"cid": "bafy-test", "record_id": 8}
+
+                def get_user_evidence(self, user_id):
+                    return [{"id": 8, "cid": "bafy-test", "user_id": user_id}]
+
+                def summarize_claim_support(self, user_id, claim_type=None):
+                    return {"user_id": user_id, "claim_type": claim_type, "total_links": 1}
+
+                def analyze_evidence_for_claim(self, user_id, claim_type):
+                    return {"user_id": user_id, "claim_type": claim_type, "total_evidence": 1, "has_evidence": True}
+
+            mediator = FakeMediator()
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            payload = engine.simulate_evidence_upload(
+                "reasonable accommodation hearing rights",
+                top_k=1,
+                claim_type="housing_discrimination",
+                user_id="test-user",
+                search_mode="lexical",
+                mediator=mediator,
+            )
+
+            self.assertEqual(payload["status"], "success")
+        self.assertEqual(payload["mediator_evidence_packets"][0]["mime_type"], "text/plain")
+        self.assertEqual(payload["mediator_evidence_packets"][0]["metadata"]["upload_strategy"], "extracted_text_fallback")
+        self.assertEqual(mediator.calls[0][0], "submit_evidence")
+        self.assertIn(b"Reasonable accommodation hearing rights", mediator.calls[0][1]["data"])
+        self.assertEqual(mediator.calls[0][1]["metadata"]["mime_type"], "text/plain")
+        self.assertEqual(mediator.calls[0][1]["metadata"]["original_mime_type"], "application/pdf")
+        self.assertEqual(mediator.calls[0][1]["metadata"]["filename"], "policy-source.txt")
+
     def test_search_package_builds_shared_vector_index_when_missing(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

@@ -1,0 +1,793 @@
+{
+  "session_id": "session_20260316_021508_000",
+  "timestamp": "2026-03-16T02:15:25.822001+00:00",
+  "seed_complaint": {
+    "template_id": "hacc::housing_discrimination::retaliation grievance complaint appeal h",
+    "type": "housing_discrimination",
+    "category": "housing",
+    "description": "Retaliation complaint anchored to HACC core housing policies",
+    "summary": "The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. 14 GRIEVANCES AND APPEALS INTRODUCTION ......................................................................................................................14-1 PART I: INFORMAL HEARINGS FOR PUBLIC HOUSING APPLICANTS I.A. OVERVIEW ...................................................................................................................14-1 INFORMAL HEARING PROCESS ..............................................................................14-2 I.B. PART II: INFORMAL HEARINGS WITH REGARD TO NONCITIZENS II.A. HEARING AND APPEAL PROVISIONS FOR NONCITIZENS ................................14-7 PART III: GRIEVANCE PROCEDURES FOR PUBLIC HOUSING RESIDENTS III.A. REQUIREMENTS .......................................................................................................14-11 III.B.",
+    "key_facts": {
+      "incident_summary": "Retaliation complaint anchored to HACC core housing policies",
+      "evidence_query": "retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+      "evidence_summary": "The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. 14 GRIEVANCES AND APPEALS INTRODUCTION ......................................................................................................................14-1 PART I: INFORMAL HEARINGS FOR PUBLIC HOUSING APPLICANTS I.A. OVERVIEW ...................................................................................................................14-1 INFORMAL HEARING PROCESS ..............................................................................14-2 I.B. PART II: INFORMAL HEARINGS WITH REGARD TO NONCITIZENS II.A. HEARING AND APPEAL PROVISIONS FOR NONCITIZENS ................................14-7 PART III: GRIEVANCE PROCEDURES FOR PUBLIC HOUSING RESIDENTS III.A. REQUIREMENTS .......................................................................................................14-11 III.B.",
+      "evidence_documents": [
+        "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+        "ADMINISTRATIVE PLAN"
+      ],
+      "source_paths": [
+        "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+        "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+      ],
+      "anchor_titles": [
+        "ADMINISTRATIVE PLAN",
+        "ADMISSIONS AND CONTINUED OCCUPANCY POLICY"
+      ],
+      "anchor_source_paths": [],
+      "anchor_terms": [
+        "grievance",
+        "hearing",
+        "appeal",
+        "informal hearing",
+        "due process"
+      ],
+      "anchor_passages": [
+        {
+          "title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+          "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+          "snippet": "14 GRIEVANCES AND APPEALS INTRODUCTION ......................................................................................................................14-1 PART I: INFORMAL HEARINGS FOR PUBLIC HOUSING APPLICANTS I.A. OVERVIEW ...................................................................................................................14-1 INFORMAL HEARING PROCESS ..............................................................................14-2 I.B. PART II: INFORMAL HEARINGS WITH REGARD TO NONCITIZENS II.A. HEARING AND APPEAL PROVISIONS FOR NONCITIZENS ................................14-7 PART III: GRIEVANCE PROCEDURES FOR PUBLIC HOUSING RESIDENTS III.A. REQUIREMENTS .......................................................................................................14-11 III.B.",
+          "section_labels": [
+            "grievance_hearing",
+            "appeal_rights"
+          ]
+        },
+        {
+          "title": "ADMINISTRATIVE PLAN",
+          "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+          "snippet": "16-11 Scheduling an Informal Review ................................................... 16-11 Informal Review Procedures [24 CFR 982.554(b)] ..................... 16-11 Informal Review Decision [24 CFR 982.554(b)] ......................... 16-15 16-III.C. Informal Hearings for Participants [24 CFR 982.555] ....................... 16-16 Decisions Subject to Informal Hearing ......................................... 16-16 Informal Hearing Procedures ........................................................ 16-20 16-III.D. Hearing and Appeal Provisions for Noncitizens [24 CFR 5.514] ................................................................................... 16-28 Notice of Denial or Termination of Assistance [24 CFR 5.514(d)] ........................................................................",
+          "section_labels": [
+            "grievance_hearing",
+            "appeal_rights",
+            "adverse_action"
+          ]
+        }
+      ],
+      "anchor_sections": [
+        "grievance_hearing",
+        "appeal_rights",
+        "adverse_action"
+      ],
+      "theory_labels": [
+        "retaliation",
+        "due_process_failure"
+      ],
+      "protected_bases": [],
+      "authority_hints": [
+        "Fair Housing Act anti-retaliation provisions",
+        "24 C.F.R. Part 100"
+      ],
+      "repository_evidence_candidates": [
+        {
+          "title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+          "relative_path": "hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+          "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+          "snippet": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+          "score": 4399.3864,
+          "source_type": "knowledge_graph"
+        },
+        {
+          "title": "ADMINISTRATIVE PLAN",
+          "relative_path": "hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+          "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+          "snippet": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+          "score": 4196.7273,
+          "source_type": "knowledge_graph"
+        },
+        {
+          "title": "Supportive Housing Services Program",
+          "relative_path": "hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+          "source_path": "/home/barberb/HACC/hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+          "snippet": "Appeals process: Participants will be provided with a formal appeals process that at a minimum must consist of",
+          "score": 142.6136,
+          "source_type": "knowledge_graph"
+        }
+      ],
+      "synthetic_prompts": {
+        "evidence_upload_prompts": [
+          {
+            "prompt_id": "evidence_upload_1",
+            "prompt_type": "evidence_upload",
+            "title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+            "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+            "relative_path": "hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+            "text": "Upload the evidence file 'hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b' and explain how it supports a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Focus on the most relevant language: Grievance: Any dispute a tenant may have with respect to HACC action or failure to"
+          },
+          {
+            "prompt_id": "evidence_upload_2",
+            "prompt_type": "evidence_upload",
+            "title": "ADMINISTRATIVE PLAN",
+            "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+            "relative_path": "hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+            "text": "Upload the evidence file 'hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858' and explain how it supports a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Focus on the most relevant language: Applicants or tenant families who wish to file a VAWA complaint against HACC may"
+          },
+          {
+            "prompt_id": "evidence_upload_3",
+            "prompt_type": "evidence_upload",
+            "title": "Supportive Housing Services Program",
+            "source_path": "/home/barberb/HACC/hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+            "relative_path": "hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+            "text": "Upload the evidence file 'hacc_website/945af141-c7d1-4973-88c0-b57024243114' and explain how it supports a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Focus on the most relevant language: Appeals process: Participants will be provided with a formal appeals process that at a minimum must consist of"
+          }
+        ],
+        "complaint_chatbot_prompt": "Ground the complaint chatbot in the uploaded repository evidence for 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Use the uploaded materials (ADMISSIONS AND CONTINUED OCCUPANCY POLICY, ADMINISTRATIVE PLAN, Supportive Housing Services Program) as factual grounding, ask the user to connect each document to case-specific events, and identify missing timeline, actor, harm, and remedy facts.",
+        "mediator_evaluation_prompt": "Evaluate each uploaded evidence item for a housing_discrimination complaint about 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. For every document, determine what claim element it supports, what facts it proves directly, what facts remain missing, and what follow-up questions the mediator should ask before drafting a complaint.",
+        "production_upload_prompt": "A user uploads repository evidence for 'retaliation grievance complaint appeal hearing due process tenant policy adverse action'. Save each file into the complaint-generator evidence store, extract factual support from the parsed document, and route the uploaded materials through mediator evidence analysis before drafting or revising a complaint."
+      },
+      "complainant_story_facts": [
+        "Complaint theory: Retaliation complaint anchored to HACC core housing policies",
+        "Primary evidence summary: The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. 14 GRIEVANCES AND APPEALS INTRODUCTION ......................................................................................................................14-1 PART I: INFOR...",
+        "Anchor from ADMISSIONS AND CONTINUED OCCUPANCY POLICY [grievance_hearing, appeal_rights]: 14 GRIEVANCES AND APPEALS INTRODUCTION ......................................................................................................................14-1 PART I: INFORMAL HEARINGS FOR PUBLIC HOUSING APPLICANTS I.A. OVERVIEW...",
+        "Anchor from ADMINISTRATIVE PLAN [grievance_hearing, appeal_rights, adverse_action]: 16-11 Scheduling an Informal Review ................................................... 16-11 Informal Review Procedures [24 CFR 982.554(b)] ..................... 16-11 Informal Review Decision [24 CFR 982.554(b)]...",
+        "Repository evidence ADMISSIONS AND CONTINUED OCCUPANCY POLICY: Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+        "Repository evidence ADMINISTRATIVE PLAN: Applicants or tenant families who wish to file a VAWA complaint against HACC may"
+      ],
+      "grounding_note": "Use the evidence as factual grounding and identify missing case-specific facts during questioning."
+    },
+    "keywords": [],
+    "legal_patterns": [],
+    "hacc_evidence": [
+      {
+        "document_id": "document:c8dc2af6ee6996a0",
+        "title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+        "source_type": "knowledge_graph",
+        "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+        "score": 4399.3864,
+        "snippet": "14 GRIEVANCES AND APPEALS INTRODUCTION ......................................................................................................................14-1 PART I: INFORMAL HEARINGS FOR PUBLIC HOUSING APPLICANTS I.A. OVERVIEW ...................................................................................................................14-1 INFORMAL HEARING PROCESS ..............................................................................14-2 I.B. PART II: INFORMAL HEARINGS WITH REGARD TO NONCITIZENS II.A. HEARING AND APPEAL PROVISIONS FOR NONCITIZENS ................................14-7 PART III: GRIEVANCE PROCEDURES FOR PUBLIC HOUSING RESIDENTS III.A. REQUIREMENTS .......................................................................................................14-11 III.B.",
+        "matched_rules": [
+          {
+            "text": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+            "section_title": "EXHIBIT 14-1: SAMPLE GRIEVANCE PROCEDURE",
+            "rule_type": "discretion",
+            "modality": "discretionary",
+            "overlap": 3
+          },
+          {
+            "text": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+            "section_title": "ACOP 11/1/24",
+            "rule_type": "discretion",
+            "modality": "discretionary",
+            "overlap": 3
+          },
+          {
+            "text": "In states without due process determinations, HACC must grant opportunity for grievance",
+            "section_title": "ACOP 11/1/24",
+            "rule_type": "obligation",
+            "modality": "required",
+            "overlap": 3
+          }
+        ],
+        "matched_entities": [
+          {
+            "name": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+            "type": "policy_rule",
+            "overlap": 3
+          },
+          {
+            "name": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+            "type": "policy_rule",
+            "overlap": 3
+          },
+          {
+            "name": "In states without due process determinations, HACC must grant opportunity for grievance",
+            "type": "policy_rule",
+            "overlap": 3
+          },
+          {
+            "name": "The notice must also state that the tenant may request a grievance hearing on the HACC’s",
+            "type": "policy_rule",
+            "overlap": 3
+          },
+          {
+            "name": "adverse action and will provide the subject of the record and the tenant a copy of such",
+            "type": "policy_rule",
+            "overlap": 3
+          }
+        ],
+        "metadata": {
+          "backend": "markitdown",
+          "backend_available": true,
+          "details": {
+            "backend": "markitdown",
+            "backend_available": true,
+            "implementation_status": "implemented",
+            "operation": "extract_policy_rules_from_pdf",
+            "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+          },
+          "document_id": "document:c8dc2af6ee6996a0",
+          "document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+          "implementation_status": "implemented",
+          "operation": "extract_policy_rules_from_pdf",
+          "provider": "ipfs_datasets_py",
+          "rule_count": 5318,
+          "section_count": 3423,
+          "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+          "text_length": 1401793,
+          "status": "success"
+        }
+      },
+      {
+        "document_id": "document:be93a165d00f0101",
+        "title": "ADMINISTRATIVE PLAN",
+        "source_type": "knowledge_graph",
+        "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+        "score": 4196.7273,
+        "snippet": "16-11 Scheduling an Informal Review ................................................... 16-11 Informal Review Procedures [24 CFR 982.554(b)] ..................... 16-11 Informal Review Decision [24 CFR 982.554(b)] ......................... 16-15 16-III.C. Informal Hearings for Participants [24 CFR 982.555] ....................... 16-16 Decisions Subject to Informal Hearing ......................................... 16-16 Informal Hearing Procedures ........................................................ 16-20 16-III.D. Hearing and Appeal Provisions for Noncitizens [24 CFR 5.514] ................................................................................... 16-28 Notice of Denial or Termination of Assistance [24 CFR 5.514(d)] ........................................................................",
+        "matched_rules": [
+          {
+            "text": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+            "section_title": "HACC Policy",
+            "rule_type": "discretion",
+            "modality": "discretionary",
+            "overlap": 2
+          },
+          {
+            "text": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+            "section_title": "Adminplan 7/1/2025",
+            "rule_type": "discretion",
+            "modality": "discretionary",
+            "overlap": 2
+          },
+          {
+            "text": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+            "section_title": "HACC Policy",
+            "rule_type": "obligation",
+            "modality": "required",
+            "overlap": 2
+          }
+        ],
+        "matched_entities": [
+          {
+            "name": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+            "type": "policy_rule",
+            "overlap": 2
+          },
+          {
+            "name": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+            "type": "policy_rule",
+            "overlap": 2
+          },
+          {
+            "name": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+            "type": "policy_rule",
+            "overlap": 2
+          },
+          {
+            "name": "HACC will inform the family of its policy regarding moves denied due to insufficient",
+            "type": "policy_rule",
+            "overlap": 2
+          },
+          {
+            "name": "See Chapter 9 for more detail on unit eligibility policies and process.",
+            "type": "policy_rule",
+            "overlap": 2
+          }
+        ],
+        "metadata": {
+          "backend": "markitdown",
+          "backend_available": true,
+          "details": {
+            "backend": "markitdown",
+            "backend_available": true,
+            "implementation_status": "implemented",
+            "operation": "extract_policy_rules_from_pdf",
+            "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+          },
+          "document_id": "document:be93a165d00f0101",
+          "document_title": "ADMINISTRATIVE PLAN",
+          "implementation_status": "implemented",
+          "operation": "extract_policy_rules_from_pdf",
+          "provider": "ipfs_datasets_py",
+          "rule_count": 7441,
+          "section_count": 4968,
+          "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+          "text_length": 1927962,
+          "status": "success"
+        }
+      }
+    ],
+    "source": "hacc_research_engine",
+    "_meta": {
+      "personality": "cooperative",
+      "max_turns": 2,
+      "include_hacc_evidence": true,
+      "hacc_preset": "core_hacc_policies",
+      "use_hacc_vector_search": false,
+      "seed_source": "hacc_research_engine",
+      "anchor_sections": [
+        "grievance_hearing",
+        "appeal_rights",
+        "adverse_action"
+      ]
+    }
+  },
+  "initial_complaint_text": "I reported discrimination to human resources after my supervisor denied a promotion and made repeated comments about women not being fit for leadership. Two days later I was terminated.",
+  "conversation_history": [
+    {
+      "role": "complainant",
+      "type": "initial_complaint",
+      "content": "I reported discrimination to human resources after my supervisor denied a promotion and made repeated comments about women not being fit for leadership. Two days later I was terminated."
+    },
+    {
+      "role": "mediator",
+      "type": "question",
+      "content": "I understand this can be stressful, and these details help me support you. What adverse action happened to you exactly, such as a denial, termination, or other loss of housing benefits?"
+    },
+    {
+      "role": "complainant",
+      "type": "response",
+      "content": "SCORES:\nquestion_quality: 0.72\ninformation_extraction: 0.74\nempathy: 0.68\nefficiency: 0.69\ncoverage: 0.73\n\nFEEDBACK:\nGood coverage, but the mediator can ask more specific timeline and witness questions.\n\nSTRENGTHS:\n- Clear questioning\n- Good coverage of key issues\n\nWEAKNESSES:\n- Timeline probing could be more specific\n- Witness and documentary evidence follow-ups could be stronger\n\nSUGGESTIONS:\n- Add a dedicated timeline probe after the first retaliation allegation\n- Ask directly about documentary evidence and witnesses earlier in the loop\n",
+      "evidence_context": {
+        "dynamic_evidence_summary": "For this question, the strongest supporting material is 'ADMINISTRATIVE PLAN'. 16-11 Scheduling an Informal Review ................................................... 16-11 Informal Review Procedures [24 CFR 982.554(b)] ..................... 16-11 Informal Review Decision [24 CFR 982.554(b)] ......................... 16-15 16-III.C. Informal Hearings for Participants [24 CFR 982.555] ....................... 16-16 Decisions Subject to Informal Hearing ......................................... 16-16 Informal Hearing Procedures ........................................................ 16-20 16-III.D. Hearing and Appeal Provisions for Noncitizens [24 CFR 5.514] ................................................................................... 16-28 Notice of Denial or Termination of Assistance [24 CFR 5.514(d)] ........................................................................",
+        "dynamic_evidence_items": [
+          {
+            "document_id": "document:c8dc2af6ee6996a0",
+            "title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+            "source_type": "knowledge_graph",
+            "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+            "score": 4399.3864,
+            "snippet": "14 GRIEVANCES AND APPEALS INTRODUCTION ......................................................................................................................14-1 PART I: INFORMAL HEARINGS FOR PUBLIC HOUSING APPLICANTS I.A. OVERVIEW ...................................................................................................................14-1 INFORMAL HEARING PROCESS ..............................................................................14-2 I.B. PART II: INFORMAL HEARINGS WITH REGARD TO NONCITIZENS II.A. HEARING AND APPEAL PROVISIONS FOR NONCITIZENS ................................14-7 PART III: GRIEVANCE PROCEDURES FOR PUBLIC HOUSING RESIDENTS III.A. REQUIREMENTS .......................................................................................................14-11 III.B.",
+            "matched_rules": [
+              {
+                "text": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+                "section_title": "EXHIBIT 14-1: SAMPLE GRIEVANCE PROCEDURE",
+                "rule_type": "discretion",
+                "modality": "discretionary",
+                "overlap": 3
+              },
+              {
+                "text": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+                "section_title": "ACOP 11/1/24",
+                "rule_type": "discretion",
+                "modality": "discretionary",
+                "overlap": 3
+              },
+              {
+                "text": "In states without due process determinations, HACC must grant opportunity for grievance",
+                "section_title": "ACOP 11/1/24",
+                "rule_type": "obligation",
+                "modality": "required",
+                "overlap": 3
+              }
+            ],
+            "matched_entities": [
+              {
+                "name": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+                "type": "policy_rule",
+                "overlap": 3
+              },
+              {
+                "name": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+                "type": "policy_rule",
+                "overlap": 3
+              },
+              {
+                "name": "In states without due process determinations, HACC must grant opportunity for grievance",
+                "type": "policy_rule",
+                "overlap": 3
+              },
+              {
+                "name": "The notice must also state that the tenant may request a grievance hearing on the HACC’s",
+                "type": "policy_rule",
+                "overlap": 3
+              },
+              {
+                "name": "adverse action and will provide the subject of the record and the tenant a copy of such",
+                "type": "policy_rule",
+                "overlap": 3
+              }
+            ],
+            "metadata": {
+              "backend": "markitdown",
+              "backend_available": true,
+              "details": {
+                "backend": "markitdown",
+                "backend_available": true,
+                "implementation_status": "implemented",
+                "operation": "extract_policy_rules_from_pdf",
+                "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+              },
+              "document_id": "document:c8dc2af6ee6996a0",
+              "document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+              "implementation_status": "implemented",
+              "operation": "extract_policy_rules_from_pdf",
+              "provider": "ipfs_datasets_py",
+              "rule_count": 5318,
+              "section_count": 3423,
+              "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+              "text_length": 1401793,
+              "status": "success"
+            }
+          },
+          {
+            "document_id": "document:be93a165d00f0101",
+            "title": "ADMINISTRATIVE PLAN",
+            "source_type": "knowledge_graph",
+            "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+            "score": 4196.7273,
+            "snippet": "16-11 Scheduling an Informal Review ................................................... 16-11 Informal Review Procedures [24 CFR 982.554(b)] ..................... 16-11 Informal Review Decision [24 CFR 982.554(b)] ......................... 16-15 16-III.C. Informal Hearings for Participants [24 CFR 982.555] ....................... 16-16 Decisions Subject to Informal Hearing ......................................... 16-16 Informal Hearing Procedures ........................................................ 16-20 16-III.D. Hearing and Appeal Provisions for Noncitizens [24 CFR 5.514] ................................................................................... 16-28 Notice of Denial or Termination of Assistance [24 CFR 5.514(d)] ........................................................................",
+            "matched_rules": [
+              {
+                "text": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+                "section_title": "HACC Policy",
+                "rule_type": "discretion",
+                "modality": "discretionary",
+                "overlap": 2
+              },
+              {
+                "text": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+                "section_title": "Adminplan 7/1/2025",
+                "rule_type": "discretion",
+                "modality": "discretionary",
+                "overlap": 2
+              },
+              {
+                "text": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+                "section_title": "HACC Policy",
+                "rule_type": "obligation",
+                "modality": "required",
+                "overlap": 2
+              }
+            ],
+            "matched_entities": [
+              {
+                "name": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+                "type": "policy_rule",
+                "overlap": 2
+              },
+              {
+                "name": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+                "type": "policy_rule",
+                "overlap": 2
+              },
+              {
+                "name": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+                "type": "policy_rule",
+                "overlap": 2
+              },
+              {
+                "name": "HACC will inform the family of its policy regarding moves denied due to insufficient",
+                "type": "policy_rule",
+                "overlap": 2
+              },
+              {
+                "name": "See Chapter 9 for more detail on unit eligibility policies and process.",
+                "type": "policy_rule",
+                "overlap": 2
+              }
+            ],
+            "metadata": {
+              "backend": "markitdown",
+              "backend_available": true,
+              "details": {
+                "backend": "markitdown",
+                "backend_available": true,
+                "implementation_status": "implemented",
+                "operation": "extract_policy_rules_from_pdf",
+                "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+              },
+              "document_id": "document:be93a165d00f0101",
+              "document_title": "ADMINISTRATIVE PLAN",
+              "implementation_status": "implemented",
+              "operation": "extract_policy_rules_from_pdf",
+              "provider": "ipfs_datasets_py",
+              "rule_count": 7441,
+              "section_count": 4968,
+              "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+              "text_length": 1927962,
+              "status": "success"
+            }
+          }
+        ],
+        "dynamic_anchor_passages": [
+          {
+            "title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+            "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+            "snippet": "14 GRIEVANCES AND APPEALS INTRODUCTION ......................................................................................................................14-1 PART I: INFORMAL HEARINGS FOR PUBLIC HOUSING APPLICANTS I.A. OVERVIEW ...................................................................................................................14-1 INFORMAL HEARING PROCESS ..............................................................................14-2 I.B. PART II: INFORMAL HEARINGS WITH REGARD TO NONCITIZENS II.A. HEARING AND APPEAL PROVISIONS FOR NONCITIZENS ................................14-7 PART III: GRIEVANCE PROCEDURES FOR PUBLIC HOUSING RESIDENTS III.A. REQUIREMENTS .......................................................................................................14-11 III.B.",
+            "section_labels": [
+              "grievance_hearing",
+              "appeal_rights"
+            ]
+          },
+          {
+            "title": "ADMINISTRATIVE PLAN",
+            "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+            "snippet": "16-11 Scheduling an Informal Review ................................................... 16-11 Informal Review Procedures [24 CFR 982.554(b)] ..................... 16-11 Informal Review Decision [24 CFR 982.554(b)] ......................... 16-15 16-III.C. Informal Hearings for Participants [24 CFR 982.555] ....................... 16-16 Decisions Subject to Informal Hearing ......................................... 16-16 Informal Hearing Procedures ........................................................ 16-20 16-III.D. Hearing and Appeal Provisions for Noncitizens [24 CFR 5.514] ................................................................................... 16-28 Notice of Denial or Termination of Assistance [24 CFR 5.514(d)] ........................................................................",
+            "section_labels": [
+              "grievance_hearing",
+              "appeal_rights",
+              "adverse_action"
+            ]
+          }
+        ],
+        "dynamic_anchor_sections": [
+          "grievance_hearing",
+          "appeal_rights",
+          "adverse_action"
+        ]
+      }
+    },
+    {
+      "role": "mediator",
+      "type": "question",
+      "content": "Were you given any appeal, review, or due-process rights, and did you try to use them?"
+    },
+    {
+      "role": "complainant",
+      "type": "response",
+      "content": "SCORES:\nquestion_quality: 0.72\ninformation_extraction: 0.74\nempathy: 0.68\nefficiency: 0.69\ncoverage: 0.73\n\nFEEDBACK:\nGood coverage, but the mediator can ask more specific timeline and witness questions.\n\nSTRENGTHS:\n- Clear questioning\n- Good coverage of key issues\n\nWEAKNESSES:\n- Timeline probing could be more specific\n- Witness and documentary evidence follow-ups could be stronger\n\nSUGGESTIONS:\n- Add a dedicated timeline probe after the first retaliation allegation\n- Ask directly about documentary evidence and witnesses earlier in the loop\n",
+      "evidence_context": {
+        "dynamic_evidence_summary": "For this question, the strongest supporting material is 'ADMINISTRATIVE PLAN'. 16-11 Scheduling an Informal Review ................................................... 16-11 Informal Review Procedures [24 CFR 982.554(b)] ..................... 16-11 Informal Review Decision [24 CFR 982.554(b)] ......................... 16-15 16-III.C. Informal Hearings for Participants [24 CFR 982.555] ....................... 16-16 Decisions Subject to Informal Hearing ......................................... 16-16 Informal Hearing Procedures ........................................................ 16-20 16-III.D. Hearing and Appeal Provisions for Noncitizens [24 CFR 5.514] ................................................................................... 16-28 Notice of Denial or Termination of Assistance [24 CFR 5.514(d)] ........................................................................",
+        "dynamic_evidence_items": [
+          {
+            "document_id": "document:c8dc2af6ee6996a0",
+            "title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+            "source_type": "knowledge_graph",
+            "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+            "score": 4399.3864,
+            "snippet": "14 GRIEVANCES AND APPEALS INTRODUCTION ......................................................................................................................14-1 PART I: INFORMAL HEARINGS FOR PUBLIC HOUSING APPLICANTS I.A. OVERVIEW ...................................................................................................................14-1 INFORMAL HEARING PROCESS ..............................................................................14-2 I.B. PART II: INFORMAL HEARINGS WITH REGARD TO NONCITIZENS II.A. HEARING AND APPEAL PROVISIONS FOR NONCITIZENS ................................14-7 PART III: GRIEVANCE PROCEDURES FOR PUBLIC HOUSING RESIDENTS III.A. REQUIREMENTS .......................................................................................................14-11 III.B.",
+            "matched_rules": [
+              {
+                "text": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+                "section_title": "EXHIBIT 14-1: SAMPLE GRIEVANCE PROCEDURE",
+                "rule_type": "discretion",
+                "modality": "discretionary",
+                "overlap": 3
+              },
+              {
+                "text": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+                "section_title": "ACOP 11/1/24",
+                "rule_type": "discretion",
+                "modality": "discretionary",
+                "overlap": 3
+              },
+              {
+                "text": "In states without due process determinations, HACC must grant opportunity for grievance",
+                "section_title": "ACOP 11/1/24",
+                "rule_type": "obligation",
+                "modality": "required",
+                "overlap": 3
+              }
+            ],
+            "matched_entities": [
+              {
+                "name": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+                "type": "policy_rule",
+                "overlap": 3
+              },
+              {
+                "name": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+                "type": "policy_rule",
+                "overlap": 3
+              },
+              {
+                "name": "In states without due process determinations, HACC must grant opportunity for grievance",
+                "type": "policy_rule",
+                "overlap": 3
+              },
+              {
+                "name": "The notice must also state that the tenant may request a grievance hearing on the HACC’s",
+                "type": "policy_rule",
+                "overlap": 3
+              },
+              {
+                "name": "adverse action and will provide the subject of the record and the tenant a copy of such",
+                "type": "policy_rule",
+                "overlap": 3
+              }
+            ],
+            "metadata": {
+              "backend": "markitdown",
+              "backend_available": true,
+              "details": {
+                "backend": "markitdown",
+                "backend_available": true,
+                "implementation_status": "implemented",
+                "operation": "extract_policy_rules_from_pdf",
+                "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+              },
+              "document_id": "document:c8dc2af6ee6996a0",
+              "document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+              "implementation_status": "implemented",
+              "operation": "extract_policy_rules_from_pdf",
+              "provider": "ipfs_datasets_py",
+              "rule_count": 5318,
+              "section_count": 3423,
+              "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+              "text_length": 1401793,
+              "status": "success"
+            }
+          },
+          {
+            "document_id": "document:be93a165d00f0101",
+            "title": "ADMINISTRATIVE PLAN",
+            "source_type": "knowledge_graph",
+            "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+            "score": 4196.7273,
+            "snippet": "16-11 Scheduling an Informal Review ................................................... 16-11 Informal Review Procedures [24 CFR 982.554(b)] ..................... 16-11 Informal Review Decision [24 CFR 982.554(b)] ......................... 16-15 16-III.C. Informal Hearings for Participants [24 CFR 982.555] ....................... 16-16 Decisions Subject to Informal Hearing ......................................... 16-16 Informal Hearing Procedures ........................................................ 16-20 16-III.D. Hearing and Appeal Provisions for Noncitizens [24 CFR 5.514] ................................................................................... 16-28 Notice of Denial or Termination of Assistance [24 CFR 5.514(d)] ........................................................................",
+            "matched_rules": [
+              {
+                "text": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+                "section_title": "HACC Policy",
+                "rule_type": "discretion",
+                "modality": "discretionary",
+                "overlap": 2
+              },
+              {
+                "text": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+                "section_title": "Adminplan 7/1/2025",
+                "rule_type": "discretion",
+                "modality": "discretionary",
+                "overlap": 2
+              },
+              {
+                "text": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+                "section_title": "HACC Policy",
+                "rule_type": "obligation",
+                "modality": "required",
+                "overlap": 2
+              }
+            ],
+            "matched_entities": [
+              {
+                "name": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+                "type": "policy_rule",
+                "overlap": 2
+              },
+              {
+                "name": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+                "type": "policy_rule",
+                "overlap": 2
+              },
+              {
+                "name": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+                "type": "policy_rule",
+                "overlap": 2
+              },
+              {
+                "name": "HACC will inform the family of its policy regarding moves denied due to insufficient",
+                "type": "policy_rule",
+                "overlap": 2
+              },
+              {
+                "name": "See Chapter 9 for more detail on unit eligibility policies and process.",
+                "type": "policy_rule",
+                "overlap": 2
+              }
+            ],
+            "metadata": {
+              "backend": "markitdown",
+              "backend_available": true,
+              "details": {
+                "backend": "markitdown",
+                "backend_available": true,
+                "implementation_status": "implemented",
+                "operation": "extract_policy_rules_from_pdf",
+                "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+              },
+              "document_id": "document:be93a165d00f0101",
+              "document_title": "ADMINISTRATIVE PLAN",
+              "implementation_status": "implemented",
+              "operation": "extract_policy_rules_from_pdf",
+              "provider": "ipfs_datasets_py",
+              "rule_count": 7441,
+              "section_count": 4968,
+              "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+              "text_length": 1927962,
+              "status": "success"
+            }
+          }
+        ],
+        "dynamic_anchor_passages": [
+          {
+            "title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+            "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+            "snippet": "14 GRIEVANCES AND APPEALS INTRODUCTION ......................................................................................................................14-1 PART I: INFORMAL HEARINGS FOR PUBLIC HOUSING APPLICANTS I.A. OVERVIEW ...................................................................................................................14-1 INFORMAL HEARING PROCESS ..............................................................................14-2 I.B. PART II: INFORMAL HEARINGS WITH REGARD TO NONCITIZENS II.A. HEARING AND APPEAL PROVISIONS FOR NONCITIZENS ................................14-7 PART III: GRIEVANCE PROCEDURES FOR PUBLIC HOUSING RESIDENTS III.A. REQUIREMENTS .......................................................................................................14-11 III.B.",
+            "section_labels": [
+              "grievance_hearing",
+              "appeal_rights"
+            ]
+          },
+          {
+            "title": "ADMINISTRATIVE PLAN",
+            "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+            "snippet": "16-11 Scheduling an Informal Review ................................................... 16-11 Informal Review Procedures [24 CFR 982.554(b)] ..................... 16-11 Informal Review Decision [24 CFR 982.554(b)] ......................... 16-15 16-III.C. Informal Hearings for Participants [24 CFR 982.555] ....................... 16-16 Decisions Subject to Informal Hearing ......................................... 16-16 Informal Hearing Procedures ........................................................ 16-20 16-III.D. Hearing and Appeal Provisions for Noncitizens [24 CFR 5.514] ................................................................................... 16-28 Notice of Denial or Termination of Assistance [24 CFR 5.514(d)] ........................................................................",
+            "section_labels": [
+              "grievance_hearing",
+              "appeal_rights",
+              "adverse_action"
+            ]
+          }
+        ],
+        "dynamic_anchor_sections": [
+          "grievance_hearing",
+          "appeal_rights",
+          "adverse_action"
+        ]
+      }
+    }
+  ],
+  "num_questions": 2,
+  "num_turns": 2,
+  "final_state": {
+    "current_phase": "intake",
+    "iteration_count": 2
+  },
+  "knowledge_graph_summary": {
+    "total_entities": 5,
+    "total_relationships": 4
+  },
+  "dependency_graph_summary": {
+    "total_nodes": 4,
+    "total_dependencies": 3
+  },
+  "critic_score": {
+    "overall_score": 0.7101666666666666,
+    "question_quality": 0.72,
+    "information_extraction": 0.74,
+    "empathy": 0.68,
+    "efficiency": 0.69,
+    "coverage": 0.6983333333333333,
+    "feedback": "Good coverage, but the mediator can ask more specific timeline and witness questions. Anchor-section coverage was incomplete (2/3 covered).",
+    "strengths": [
+      "Clear questioning",
+      "Good coverage of key issues"
+    ],
+    "weaknesses": [
+      "Timeline probing could be more specific",
+      "Witness and documentary evidence follow-ups could be stronger",
+      "Missed anchor sections: grievance_hearing"
+    ],
+    "suggestions": [
+      "Add a dedicated timeline probe after the first retaliation allegation",
+      "Ask directly about documentary evidence and witnesses earlier in the loop",
+      "Add questions covering: grievance_hearing"
+    ],
+    "anchor_sections_expected": [
+      "grievance_hearing",
+      "appeal_rights",
+      "adverse_action"
+    ],
+    "anchor_sections_covered": [
+      "appeal_rights",
+      "adverse_action"
+    ],
+    "anchor_sections_missing": [
+      "grievance_hearing"
+    ]
+  },
+  "anchor_section_summary": {
+    "expected": [
+      "grievance_hearing",
+      "appeal_rights",
+      "adverse_action"
+    ],
+    "covered": [
+      "appeal_rights",
+      "adverse_action"
+    ],
+    "missing": [
+      "grievance_hearing"
+    ]
+  },
+  "duration_seconds": 17.63334846496582,
+  "success": true,
+  "error": null,
+  "artifacts": {
+    "evidence_duckdb_expected": "/home/barberb/HACC/research_results/grounded_runs/20260316_021434/adversarial/sessions/session_20260316_021508_000/evidence.duckdb",
+    "legal_authorities_duckdb_expected": "/home/barberb/HACC/research_results/grounded_runs/20260316_021434/adversarial/sessions/session_20260316_021508_000/legal_authorities.duckdb",
+    "claim_support_duckdb_expected": "/home/barberb/HACC/research_results/grounded_runs/20260316_021434/adversarial/sessions/session_20260316_021508_000/claim_support.duckdb",
+    "evidence_duckdb_exists": false,
+    "legal_authorities_duckdb_exists": false,
+    "claim_support_duckdb_exists": false
+  }
+}
