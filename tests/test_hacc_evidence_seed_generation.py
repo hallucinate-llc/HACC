@@ -1,6 +1,7 @@
 import unittest
 from pathlib import Path
 import sys
+import tempfile
 from unittest import mock
 
 
@@ -12,7 +13,7 @@ if str(COMPLAINT_GENERATOR_ROOT) not in sys.path:
     sys.path.insert(0, str(COMPLAINT_GENERATOR_ROOT))
 
 from adversarial_harness.complainant import Complainant
-from adversarial_harness.hacc_evidence import build_hacc_evidence_seeds, build_hacc_mediator_evidence_packet, _summarize_hit
+from adversarial_harness.hacc_evidence import build_hacc_evidence_seeds, build_hacc_mediator_evidence_packet, _summarize_hit, _extract_source_window
 
 
 class HacceEvidenceSeedGenerationTests(unittest.TestCase):
@@ -207,6 +208,73 @@ class HacceEvidenceSeedGenerationTests(unittest.TestCase):
         summarized = _summarize_hit(hit)
 
         self.assertIn("tenant may request a grievance hearing", summarized["snippet"])
+
+    def test_extract_source_window_prefers_body_paragraph_over_table_of_contents(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            source_path = Path(tmpdir) / "policy.txt"
+            source_path.write_text(
+                "Scheduling an Informal Review ........ 16-11\n"
+                "Informal Review Procedures ........ 16-11\n\n"
+                "Scheduling an Informal Review\n\n"
+                "HACC must schedule the informal review promptly and provide written notice of the review procedures.\n",
+                encoding="utf-8",
+            )
+
+            excerpt = _extract_source_window(
+                source_path=str(source_path),
+                anchor_terms=["Scheduling an Informal Review"],
+                fallback_snippet="Scheduling an Informal Review ........ 16-11",
+            )
+
+        self.assertIn("HACC must schedule the informal review promptly", excerpt)
+        self.assertNotIn("........ 16-11", excerpt)
+
+    def test_extract_source_window_prefers_substantive_policy_text_when_heading_repeat_exists(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            source_path = Path(tmpdir) / "policy.txt"
+            source_path.write_text(
+                "Administrative Plan - Table of Contents\n\n"
+                "16-III.B. Informal Reviews ........ 16-11\n"
+                "Scheduling an Informal Review ........ 16-11\n"
+                "Informal Review Procedures ........ 16-11\n\n"
+                "The notice must describe how to obtain the informal review.\n\n"
+                "Scheduling an Informal Review\n\n"
+                "HACC Policy\n\n"
+                "A request for an informal review must be made in writing and delivered to HACC.\n"
+                "HACC must schedule and send written notice of the informal review within 10 business days.\n",
+                encoding="utf-8",
+            )
+
+            excerpt = _extract_source_window(
+                source_path=str(source_path),
+                anchor_terms=["Scheduling an Informal Review"],
+                fallback_snippet="Scheduling an Informal Review ........ 16-11",
+            )
+
+        self.assertIn("HACC Policy", excerpt)
+        self.assertIn("must schedule and send written notice", excerpt)
+        self.assertNotIn("Table of Contents", excerpt)
+
+    def test_extract_source_window_prefers_excerpt_with_more_anchor_term_coverage(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            source_path = Path(tmpdir) / "policy.txt"
+            source_path.write_text(
+                "The authority must safeguard the due process rights of applicants and tenants before denying admission.\n\n"
+                "Grievance Hearing Procedures\n\n"
+                "A tenant may request an informal hearing through the grievance process, and HACC must provide written notice of the hearing decision.\n",
+                encoding="utf-8",
+            )
+
+            excerpt = _extract_source_window(
+                source_path=str(source_path),
+                anchor_terms=["grievance", "hearing", "appeal", "informal hearing", "due process"],
+                fallback_snippet="The authority must safeguard the due process rights of applicants and tenants before denying admission.",
+            )
+
+        self.assertIn("request an informal hearing", excerpt)
+        self.assertIn("grievance process", excerpt)
+        self.assertIn("due process rights", excerpt)
+        self.assertLess(excerpt.lower().find("request an informal hearing"), excerpt.lower().rfind("hearing decision") + 1)
 
 
 if __name__ == "__main__":
