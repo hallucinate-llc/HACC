@@ -13,7 +13,7 @@ if str(COMPLAINT_GENERATOR_ROOT) not in sys.path:
     sys.path.insert(0, str(COMPLAINT_GENERATOR_ROOT))
 
 from adversarial_harness.complainant import Complainant
-from adversarial_harness.hacc_evidence import build_hacc_evidence_seeds, build_hacc_mediator_evidence_packet, _summarize_hit, _extract_source_window
+from adversarial_harness.hacc_evidence import build_hacc_evidence_seeds, build_hacc_mediator_evidence_packet, _summarize_hit, _extract_source_window, _filter_section_labels_for_anchor_terms
 
 
 class HacceEvidenceSeedGenerationTests(unittest.TestCase):
@@ -275,6 +275,14 @@ class HacceEvidenceSeedGenerationTests(unittest.TestCase):
         self.assertIn("grievance process", excerpt)
         self.assertIn("due process rights", excerpt)
         self.assertLess(excerpt.lower().find("request an informal hearing"), excerpt.lower().rfind("hearing decision") + 1)
+
+    def test_filter_section_labels_drops_unrequested_anchor_classes(self) -> None:
+        labels = _filter_section_labels_for_anchor_terms(
+            ["grievance_hearing", "appeal_rights", "reasonable_accommodation", "adverse_action"],
+            ["grievance", "hearing", "appeal", "informal hearing", "due process", "adverse action"],
+        )
+
+        self.assertEqual(labels, ["grievance_hearing", "appeal_rights", "adverse_action"])
 
 
 if __name__ == "__main__":
