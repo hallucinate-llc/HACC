@@ -297,6 +297,31 @@ class HacceEvidenceSeedGenerationTests(unittest.TestCase):
         self.assertIn("due process rights", excerpt)
         self.assertLess(excerpt.lower().find("request an informal hearing"), excerpt.lower().rfind("hearing decision") + 1)
 
+    def test_extract_source_window_prefers_knowledge_graph_text_before_raw_blob(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            repo_root = Path(tmpdir)
+            hacc_root = repo_root / "hacc_website"
+            knowledge_root = hacc_root / "knowledge_graph" / "texts"
+            knowledge_root.mkdir(parents=True)
+
+            source_path = hacc_root / "policy-id"
+            source_path.write_bytes(b"\x00\x01\x02" * 50000)
+            (knowledge_root / "policy-id.txt").write_text(
+                "Scheduling an Informal Review\n\n"
+                "HACC must schedule the informal review promptly and provide written notice.\n",
+                encoding="utf-8",
+            )
+
+            with mock.patch("adversarial_harness.hacc_evidence._repo_root", return_value=repo_root):
+                excerpt = _extract_source_window(
+                    source_path=str(source_path),
+                    anchor_terms=["Scheduling an Informal Review"],
+                    fallback_snippet="Scheduling an Informal Review ........ 16-11",
+                )
+
+        self.assertIn("HACC must schedule the informal review promptly", excerpt)
+        self.assertNotIn("........ 16-11", excerpt)
+
     def test_filter_section_labels_drops_unrequested_anchor_classes(self) -> None:
         labels = _filter_section_labels_for_anchor_terms(
             ["grievance_hearing", "appeal_rights", "reasonable_accommodation", "adverse_action"],
