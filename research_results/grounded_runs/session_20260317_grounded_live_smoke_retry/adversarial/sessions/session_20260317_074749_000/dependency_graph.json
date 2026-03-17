@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "created_at": "2026-03-17T07:47:54.918382+00:00",
+    "last_updated": "2026-03-17T07:47:54.918455+00:00",
+    "version": "1.0"
+  },
+  "nodes": {
+    "node_1": {
+      "id": "node_1",
+      "node_type": "claim",
+      "name": "Discrimination Claim",
+      "description": "I need to file a complaint about housing_discrimination. The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. If HACC denies a request for an accommodation because it is not reasonable (it would impose an und...",
+      "satisfied": false,
+      "confidence": 0.0,
+      "attributes": {
+        "claim_type": "discrimination"
+      }
+    },
+    "node_2": {
+      "id": "node_2",
+      "node_type": "claim",
+      "name": "Accommodation Request",
+      "description": "I need to file a complaint about housing_discrimination. The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. If HACC denies a request for an accommodation because it is not reasonable (it would impose an und...",
+      "satisfied": false,
+      "confidence": 0.0,
+      "attributes": {
+        "claim_type": "accommodation"
+      }
+    },
+    "node_3": {
+      "id": "node_3",
+      "node_type": "fact",
+      "name": "Timeline of events",
+      "description": "Dates or sequence of key events related to this claim",
+      "satisfied": false,
+      "confidence": 0.0,
+      "attributes": {}
+    },
+    "node_4": {
+      "id": "node_4",
+      "node_type": "fact",
+      "name": "Responsible party",
+      "description": "Who took the action or decision tied to this claim",
+      "satisfied": false,
+      "confidence": 0.0,
+      "attributes": {}
+    },
+    "node_5": {
+      "id": "node_5",
+      "node_type": "fact",
+      "name": "Timeline of events",
+      "description": "Dates or sequence of key events related to this claim",
+      "satisfied": false,
+      "confidence": 0.0,
+      "attributes": {}
+    },
+    "node_6": {
+      "id": "node_6",
+      "node_type": "fact",
+      "name": "Responsible party",
+      "description": "Who took the action or decision tied to this claim",
+      "satisfied": false,
+      "confidence": 0.0,
+      "attributes": {}
+    }
+  },
+  "dependencies": {
+    "dep_1": {
+      "id": "dep_1",
+      "source_id": "node_3",
+      "target_id": "node_1",
+      "dependency_type": "depends_on",
+      "required": true,
+      "strength": 1.0
+    },
+    "dep_2": {
+      "id": "dep_2",
+      "source_id": "node_4",
+      "target_id": "node_1",
+      "dependency_type": "depends_on",
+      "required": true,
+      "strength": 1.0
+    },
+    "dep_3": {
+      "id": "dep_3",
+      "source_id": "node_5",
+      "target_id": "node_2",
+      "dependency_type": "depends_on",
+      "required": true,
+      "strength": 1.0
+    },
+    "dep_4": {
+      "id": "dep_4",
+      "source_id": "node_6",
+      "target_id": "node_2",
+      "dependency_type": "depends_on",
+      "required": true,
+      "strength": 1.0
+    }
+  }
+}
