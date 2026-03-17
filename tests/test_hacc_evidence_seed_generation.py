@@ -13,10 +13,16 @@ if str(COMPLAINT_GENERATOR_ROOT) not in sys.path:
     sys.path.insert(0, str(COMPLAINT_GENERATOR_ROOT))
 
 from adversarial_harness.complainant import Complainant
-from adversarial_harness.hacc_evidence import build_hacc_evidence_seeds, build_hacc_mediator_evidence_packet, _summarize_hit, _extract_source_window, _filter_section_labels_for_anchor_terms
+from adversarial_harness.hacc_evidence import build_hacc_evidence_seeds, build_hacc_mediator_evidence_packet, _summarize_hit, _extract_source_window, _filter_section_labels_for_anchor_terms, _load_hacc_engine
 
 
 class HacceEvidenceSeedGenerationTests(unittest.TestCase):
+    def test_load_hacc_engine_imports_real_engine_class(self) -> None:
+        engine_cls = _load_hacc_engine()
+
+        self.assertEqual(engine_cls.__name__, "HACCResearchEngine")
+        self.assertEqual(engine_cls.__module__, "hacc_research.engine")
+
     def test_build_hacc_evidence_seeds_includes_grounded_complainant_fields(self) -> None:
         class FakeEngine:
             def search(self, query, top_k=3, use_vector=False):
