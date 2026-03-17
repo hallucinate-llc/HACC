@@ -313,16 +313,76 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertEqual(payload["status"], "success")
             self.assertEqual(len(payload["upload_candidates"]), 1)
             self.assertEqual(payload["upload_candidates"][0]["relative_path"], "README.md")
+            self.assertEqual(payload["evidence_summary"], "Reasonable Accommodation Policy Uploadable repository evidence about hearing rights.")
+            self.assertEqual(set(payload["anchor_sections"]), {"reasonable_accommodation", "grievance_hearing"})
+            self.assertEqual(
+                set(payload["anchor_passages"][0]["section_labels"]),
+                {"reasonable_accommodation", "grievance_hearing"},
+            )
             prompts = payload["synthetic_prompts"]
             self.assertEqual(len(prompts["evidence_upload_prompts"]), 1)
             self.assertIn("Upload the evidence file", prompts["evidence_upload_prompts"][0]["text"])
+            self.assertEqual(
+                set(prompts["evidence_upload_prompts"][0]["anchor_sections"]),
+                {"reasonable_accommodation", "grievance_hearing"},
+            )
             self.assertIn("Evaluate each uploaded evidence item", prompts["mediator_evaluation_prompt"])
+            self.assertIn("Prioritize these anchor sections", prompts["mediator_evaluation_prompt"])
             self.assertIn("production_upload_prompt", prompts)
             self.assertIn("intake_questionnaire_prompt", prompts)
             self.assertIn("What happened, and what adverse action did HACC take", prompts["intake_questionnaire_prompt"])
+            self.assertIn("Anchor the intake to these policy sections", prompts["intake_questionnaire_prompt"])
             self.assertEqual(len(prompts["intake_questions"]), 6)
+            self.assertEqual(set(prompts["anchor_sections"]), {"reasonable_accommodation", "grievance_hearing"})
             self.assertEqual(len(payload["mediator_evidence_packets"]), 1)
             self.assertEqual(payload["mediator_evidence_packets"][0]["relative_path"], "README.md")
+            self.assertEqual(
+                set(payload["mediator_evidence_packets"][0]["metadata"]["anchor_sections"]),
+                {"reasonable_accommodation", "grievance_hearing"},
+            )
+
+    def test_select_uploadable_results_preserves_match_context(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            evidence_path = root / "policy.txt"
+            evidence_path.write_text("hearing rights", encoding="utf-8")
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            candidates = engine._select_uploadable_results(
+                {
+                    "results": [
+                        {
+                            "document_id": "kg::policy",
+                            "title": "Policy",
+                            "source_type": "knowledge_graph",
+                            "source_path": str(evidence_path),
+                            "score": 10.0,
+                            "snippet": "Residents may request an informal hearing.",
+                            "matched_rules": [
+                                {
+                                    "text": "Residents may request an informal hearing.",
+                                    "section_title": "Appeal Procedures",
+                                }
+                            ],
+                            "matched_entities": [{"name": "informal hearing", "type": "policy_rule"}],
+                            "metadata": {},
+                        }
+                    ]
+                },
+                top_k=1,
+            )
+
+            self.assertEqual(candidates[0]["matched_rules"][0]["section_title"], "Appeal Procedures")
+            self.assertEqual(candidates[0]["matched_entities"][0]["name"], "informal hearing")
 
     def test_select_uploadable_results_prefers_stronger_scores_over_source_type_bias(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:

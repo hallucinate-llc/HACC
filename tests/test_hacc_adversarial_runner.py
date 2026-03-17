@@ -142,7 +142,15 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             self.assertTrue(summary_path.is_file())
             self.assertIn("router_diagnostics", summary)
             self.assertEqual(summary["inputs"]["hacc_search_mode"], "hybrid")
-            self.assertEqual(summary["router_diagnostics"]["embeddings_router"]["status"], "success")
+            self.assertIn(
+                summary["router_diagnostics"]["embeddings_router"]["status"],
+                {"available", "degraded", "error", "unavailable"},
+            )
+            self.assertIn("vector_index", summary["router_diagnostics"])
+            self.assertIn(
+                summary["router_diagnostics"]["vector_index"]["status"],
+                {"available", "error", "unavailable"},
+            )
             self.assertIn(
                 summary["router_diagnostics"]["ipfs_router"]["status"],
                 {"available", "unavailable"},

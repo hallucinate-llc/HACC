@@ -926,10 +926,12 @@ class HACCResearchEngine:
             use_vector=use_vector,
         )
         upload_candidates = self._select_uploadable_results(search_payload, top_k=top_k)
+        grounding_overview = self._build_grounding_overview(upload_candidates)
         synthetic_prompts = self._build_synthetic_prompts(
             query_text=query_text,
             claim_type=claim_type,
             upload_candidates=upload_candidates,
+            grounding_overview=grounding_overview,
         )
         mediator_evidence_packets = self._build_mediator_evidence_packets(upload_candidates)
         return {
@@ -940,6 +942,9 @@ class HACCResearchEngine:
             "use_vector": bool(use_vector),
             "search_payload": search_payload,
             "upload_candidates": upload_candidates,
+            "evidence_summary": grounding_overview["evidence_summary"],
+            "anchor_passages": grounding_overview["anchor_passages"],
+            "anchor_sections": grounding_overview["anchor_sections"],
             "mediator_evidence_packets": mediator_evidence_packets,
             "synthetic_prompts": synthetic_prompts,
             "integration_status": self._integration_status(),
@@ -1357,6 +1362,8 @@ class HACCResearchEngine:
                     "score": float(item.get("score", 0.0) or 0.0),
                     "snippet": str(item.get("snippet") or "")[:500],
                     "metadata": dict(item.get("metadata") or {}),
+                    "matched_rules": list(item.get("matched_rules") or []),
+                    "matched_entities": list(item.get("matched_entities") or []),
                     "parse_summary": dict((item.get("metadata") or {}).get("parse_summary") or {}),
                     "graph_status": str((item.get("metadata") or {}).get("graph_status") or ""),
                 }
@@ -1444,6 +1451,7 @@ class HACCResearchEngine:
                     "metadata": {
                         "source_type": str(candidate.get("source_type") or "repository_evidence"),
                         "relative_path": str(candidate.get("relative_path") or path.name),
+                        "anchor_sections": self._candidate_anchor_sections(candidate),
                         "parse_summary": dict(candidate.get("parse_summary") or {}),
                         "graph_status": str(candidate.get("graph_status") or ""),
                         "original_mime_type": submission["original_mime_type"],
@@ -1460,13 +1468,17 @@ class HACCResearchEngine:
         query_text: str,
         claim_type: str,
         upload_candidates: Sequence[Dict[str, Any]],
+        grounding_overview: Optional[Dict[str, Any]] = None,
     ) -> Dict[str, Any]:
+        grounding_overview = dict(grounding_overview or {})
         upload_prompts: List[Dict[str, Any]] = []
         evidence_titles: List[str] = []
         for index, candidate in enumerate(upload_candidates, 1):
             title = str(candidate.get("title") or candidate.get("relative_path") or f"evidence_{index}")
             snippet = _clean_text(str(candidate.get("snippet") or ""))
+            anchor_sections = self._candidate_anchor_sections(candidate)
             evidence_titles.append(title)
+            anchor_note = f" Anchor sections: {', '.join(anchor_sections)}." if anchor_sections else ""
             upload_prompts.append(
                 {
                     "prompt_id": f"evidence_upload_{index}",
@@ -1474,23 +1486,31 @@ class HACCResearchEngine:
                     "title": title,
                     "source_path": str(candidate.get("source_path") or ""),
                     "relative_path": str(candidate.get("relative_path") or ""),
+                    "anchor_sections": anchor_sections,
                     "text": (
                         f"Upload the evidence file '{candidate.get('relative_path') or candidate.get('source_path')}' "
                         f"and explain how it supports a {claim_type} complaint about '{query_text}'. "
                         f"Focus on the most relevant language: {snippet or 'Describe the relevant sections in the document.'}"
+                        f"{anchor_note}"
                     ),
                 }
             )
 
+        anchor_sections = [str(item) for item in list(grounding_overview.get("anchor_sections") or []) if str(item)]
+        anchor_passages = list(grounding_overview.get("anchor_passages") or [])
+        evidence_summary = str(grounding_overview.get("evidence_summary") or "").strip()
+        anchor_note = f" Prioritize these anchor sections: {', '.join(anchor_sections)}." if anchor_sections else ""
         chatbot_prompt = (
             f"Ground the complaint chatbot in the uploaded repository evidence for '{query_text}'. "
             f"Use the uploaded materials ({', '.join(evidence_titles) if evidence_titles else 'uploaded evidence'}) as factual grounding, "
             "ask the user to connect each document to case-specific events, and identify missing timeline, actor, harm, and remedy facts."
+            f"{anchor_note}"
         )
         mediator_prompt = (
             f"Evaluate each uploaded evidence item for a {claim_type} complaint about '{query_text}'. "
             "For every document, determine what claim element it supports, what facts it proves directly, what facts remain missing, "
             "and what follow-up questions the mediator should ask before drafting a complaint."
+            f"{anchor_note}"
         )
         production_prompt = (
             f"A user uploads repository evidence for '{query_text}'. Save each file into the complaint-generator evidence store, "
@@ -1510,6 +1530,7 @@ class HACCResearchEngine:
             f"Use the uploaded materials ({', '.join(evidence_titles) if evidence_titles else 'uploaded evidence'}) to anchor the questions, "
             "and ask for the following details in plain language:\n- "
             + "\n- ".join(intake_questions)
+            + (f"\n- Anchor the intake to these policy sections: {', '.join(anchor_sections)}" if anchor_sections else "")
         )
         return {
             "evidence_upload_prompts": upload_prompts,
@@ -1518,6 +1539,79 @@ class HACCResearchEngine:
             "production_upload_prompt": production_prompt,
             "intake_questionnaire_prompt": intake_questionnaire_prompt,
             "intake_questions": intake_questions,
+            "evidence_summary": evidence_summary,
+            "anchor_sections": anchor_sections,
+            "anchor_passages": anchor_passages,
+        }
+
+    def _best_candidate_anchor_text(self, candidate: Dict[str, Any]) -> str:
+        for rule in list(candidate.get("matched_rules") or []):
+            rule_text = _clean_text(str(rule.get("text") or ""))
+            if rule_text:
+                return rule_text
+        return _clean_text(str(candidate.get("snippet") or ""))
+
+    def _candidate_anchor_sections(self, candidate: Dict[str, Any]) -> List[str]:
+        sections: List[str] = []
+        seen: set[str] = set()
+        for rule in list(candidate.get("matched_rules") or []):
+            section_title = _clean_text(str(rule.get("section_title") or "")).lower()
+            text = " ".join(
+                [
+                    _clean_text(str(rule.get("text") or "")),
+                    section_title,
+                    _clean_text(str(candidate.get("snippet") or "")),
+                ]
+            ).lower()
+            for label, terms in {
+                "grievance_hearing": ("grievance", "informal hearing", "hearing"),
+                "appeal_rights": ("appeal", "review decision", "written notice", "informal review"),
+                "reasonable_accommodation": ("reasonable accommodation", "accommodation", "disability"),
+                "adverse_action": ("adverse action", "termination", "denial", "notice"),
+            }.items():
+                if label in seen:
+                    continue
+                if any(term in text for term in terms):
+                    seen.add(label)
+                    sections.append(label)
+        return sections
+
+    def _build_grounding_overview(self, upload_candidates: Sequence[Dict[str, Any]]) -> Dict[str, Any]:
+        anchor_passages: List[Dict[str, Any]] = []
+        seen_titles: set[tuple[str, str]] = set()
+        for candidate in upload_candidates:
+            anchor_text = self._best_candidate_anchor_text(candidate)
+            if not anchor_text:
+                continue
+            title = str(candidate.get("title") or candidate.get("relative_path") or "Grounding evidence")
+            source_path = str(candidate.get("source_path") or "")
+            key = (title.lower(), source_path.lower())
+            if key in seen_titles:
+                continue
+            seen_titles.add(key)
+            anchor_passages.append(
+                {
+                    "title": title,
+                    "source_path": source_path,
+                    "snippet": anchor_text,
+                    "section_labels": self._candidate_anchor_sections(candidate),
+                }
+            )
+        anchor_sections: List[str] = []
+        seen_sections: set[str] = set()
+        for passage in anchor_passages:
+            for label in list(passage.get("section_labels") or []):
+                label_text = str(label).strip()
+                if label_text and label_text not in seen_sections:
+                    seen_sections.add(label_text)
+                    anchor_sections.append(label_text)
+        evidence_summary = " ".join(
+            snippet for snippet in [str(item.get("snippet") or "").strip() for item in anchor_passages[:2]] if snippet
+        )
+        return {
+            "evidence_summary": evidence_summary,
+            "anchor_passages": anchor_passages,
+            "anchor_sections": anchor_sections,
         }
 
     def _graph_facts_to_rule_like_records(self, graph_payload: Dict[str, Any]) -> List[Dict[str, Any]]:

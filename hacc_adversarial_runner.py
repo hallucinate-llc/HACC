@@ -1016,21 +1016,16 @@ def _router_diagnostics() -> Dict[str, Any]:
         }
 
     try:
-        from integrations.ipfs_datasets.vector_store import create_vector_index
+        from integrations.ipfs_datasets.vector_store import embeddings_backend_status, vector_index_backend_status
 
-        with tempfile.TemporaryDirectory() as tmpdir:
-            diagnostics["embeddings_router"] = _sanitize_for_json(
-                create_vector_index(
-                    [
-                        {"id": "diag-a", "text": "reasonable accommodation grievance hearing"},
-                        {"id": "diag-b", "text": "procurement vendor selection policy"},
-                    ],
-                    index_name="router_diag",
-                    output_dir=tmpdir,
-                )
-            )
+        diagnostics["embeddings_router"] = _sanitize_for_json(embeddings_backend_status())
+        diagnostics["vector_index"] = _sanitize_for_json(vector_index_backend_status(require_local_persistence=True))
     except Exception as exc:
         diagnostics["embeddings_router"] = {
+            "status": "error",
+            "error": str(exc),
+        }
+        diagnostics["vector_index"] = {
             "status": "error",
             "error": str(exc),
         }

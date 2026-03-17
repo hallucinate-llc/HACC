@@ -14,6 +14,15 @@ class HACCGroundedPipelineTests(unittest.TestCase):
                 "status": "success",
                 "query": "reasonable accommodation hearing rights",
                 "claim_type": "housing_discrimination",
+                "evidence_summary": "Reasonable accommodation policy language supporting hearing rights.",
+                "anchor_sections": ["reasonable_accommodation", "grievance_hearing"],
+                "anchor_passages": [
+                    {
+                        "title": "README",
+                        "snippet": "Residents may request an informal hearing as an accommodation-related safeguard.",
+                        "section_labels": ["reasonable_accommodation", "grievance_hearing"],
+                    }
+                ],
                 "upload_candidates": [
                     {
                         "title": "README",
@@ -67,6 +76,7 @@ class HACCGroundedPipelineTests(unittest.TestCase):
             self.assertEqual(summary["hacc_search_mode"], "hybrid")
             self.assertEqual(summary["evidence_upload"]["upload_count"], 1)
             self.assertEqual(summary["adversarial"]["best_complaint"]["score"], 0.91)
+            self.assertEqual(summary["grounding"]["anchor_sections"], ["reasonable_accommodation", "grievance_hearing"])
             self.assertEqual(batch_mock.call_args.kwargs["hacc_search_mode"], "hybrid")
 
             prompts_payload = json.loads((output_root / "synthetic_prompts.json").read_text(encoding="utf-8"))
