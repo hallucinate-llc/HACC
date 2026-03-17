@@ -1497,11 +1497,27 @@ class HACCResearchEngine:
             "extract factual support from the parsed document, and route the uploaded materials through mediator evidence analysis "
             "before drafting or revising a complaint."
         )
+        intake_questions = [
+            "What happened, and what adverse action did HACC take or threaten to take?",
+            "When did the key events happen, including the complaint, notice, hearing or review request, and any denial or termination decision?",
+            "Who at HACC made, communicated, or carried out each decision?",
+            "What written notice, grievance, informal review, hearing, or appeal rights were provided, requested, denied, or ignored?",
+            "What housing harm resulted, such as denial of assistance, termination, loss of voucher, delay, extra expense, or risk of displacement?",
+            "What remedy are you seeking now?",
+        ]
+        intake_questionnaire_prompt = (
+            f"Before drafting a {claim_type} complaint about '{query_text}', collect concrete case facts from the user. "
+            f"Use the uploaded materials ({', '.join(evidence_titles) if evidence_titles else 'uploaded evidence'}) to anchor the questions, "
+            "and ask for the following details in plain language:\n- "
+            + "\n- ".join(intake_questions)
+        )
         return {
             "evidence_upload_prompts": upload_prompts,
             "complaint_chatbot_prompt": chatbot_prompt,
             "mediator_evaluation_prompt": mediator_prompt,
             "production_upload_prompt": production_prompt,
+            "intake_questionnaire_prompt": intake_questionnaire_prompt,
+            "intake_questions": intake_questions,
         }
 
     def _graph_facts_to_rule_like_records(self, graph_payload: Dict[str, Any]) -> List[Dict[str, Any]]:

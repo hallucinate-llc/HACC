@@ -318,6 +318,9 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertIn("Upload the evidence file", prompts["evidence_upload_prompts"][0]["text"])
             self.assertIn("Evaluate each uploaded evidence item", prompts["mediator_evaluation_prompt"])
             self.assertIn("production_upload_prompt", prompts)
+            self.assertIn("intake_questionnaire_prompt", prompts)
+            self.assertIn("What happened, and what adverse action did HACC take", prompts["intake_questionnaire_prompt"])
+            self.assertEqual(len(prompts["intake_questions"]), 6)
             self.assertEqual(len(payload["mediator_evidence_packets"]), 1)
             self.assertEqual(payload["mediator_evidence_packets"][0]["relative_path"], "README.md")
 
