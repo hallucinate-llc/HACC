@@ -48,11 +48,12 @@ class HACCGroundedPipelineTests(unittest.TestCase):
                     pipeline,
                     "run_hacc_adversarial_batch",
                     return_value=fake_adversarial_summary,
-                ):
+                ) as batch_mock:
                     summary = pipeline.run_hacc_grounded_pipeline(
                         output_dir=tmpdir,
                         query="reasonable accommodation hearing rights",
                         hacc_preset="core_hacc_policies",
+                        hacc_search_mode="hybrid",
                         demo=True,
                     )
 
@@ -63,8 +64,10 @@ class HACCGroundedPipelineTests(unittest.TestCase):
             self.assertTrue((output_root / "adversarial_summary.json").is_file())
             self.assertTrue((output_root / "run_summary.json").is_file())
             self.assertEqual(summary["grounding_query"], "reasonable accommodation hearing rights")
+            self.assertEqual(summary["hacc_search_mode"], "hybrid")
             self.assertEqual(summary["evidence_upload"]["upload_count"], 1)
             self.assertEqual(summary["adversarial"]["best_complaint"]["score"], 0.91)
+            self.assertEqual(batch_mock.call_args.kwargs["hacc_search_mode"], "hybrid")
 
             prompts_payload = json.loads((output_root / "synthetic_prompts.json").read_text(encoding="utf-8"))
             self.assertIn("evidence_upload_prompts", prompts_payload)

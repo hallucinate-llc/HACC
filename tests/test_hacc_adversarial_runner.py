@@ -126,6 +126,7 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
                 max_turns=2,
                 max_parallel=1,
                 hacc_preset="core_hacc_policies",
+                hacc_search_mode="hybrid",
                 demo=True,
             )
 
@@ -140,6 +141,7 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             self.assertTrue(best_path.is_file())
             self.assertTrue(summary_path.is_file())
             self.assertIn("router_diagnostics", summary)
+            self.assertEqual(summary["inputs"]["hacc_search_mode"], "hybrid")
             self.assertEqual(summary["router_diagnostics"]["embeddings_router"]["status"], "success")
             self.assertIn(
                 summary["router_diagnostics"]["ipfs_router"]["status"],

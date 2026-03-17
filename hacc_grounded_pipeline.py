@@ -113,6 +113,7 @@ def run_hacc_grounded_pipeline(
     max_turns: int = 4,
     max_parallel: int = 1,
     use_hacc_vector_search: bool = False,
+    hacc_search_mode: str = "package",
     config_path: Optional[str] = None,
     backend_id: Optional[str] = None,
     provider: str = "copilot_cli",
@@ -152,6 +153,7 @@ def run_hacc_grounded_pipeline(
         hacc_preset=hacc_preset,
         hacc_count=top_k,
         use_hacc_vector_search=use_hacc_vector_search,
+        hacc_search_mode=hacc_search_mode,
         demo=demo,
         config_path=config_path,
         backend_id=backend_id,
@@ -196,6 +198,7 @@ def run_hacc_grounded_pipeline(
         "claim_type": resolved_claim_type,
         "hacc_preset": hacc_preset,
         "use_hacc_vector_search": bool(use_hacc_vector_search),
+        "hacc_search_mode": hacc_search_mode,
         "grounding": grounding_bundle,
         "evidence_upload": upload_report,
         "adversarial": adversarial_summary,
@@ -231,6 +234,12 @@ def create_parser() -> argparse.ArgumentParser:
     parser.add_argument("--max-turns", type=int, default=4)
     parser.add_argument("--max-parallel", type=int, default=1)
     parser.add_argument("--use-hacc-vector-search", action="store_true")
+    parser.add_argument(
+        "--hacc-search-mode",
+        choices=("auto", "lexical", "hybrid", "vector", "package"),
+        default="package",
+        help="Search strategy used for HACC evidence retrieval during the adversarial batch.",
+    )
     parser.add_argument("--demo", action="store_true", help="Use deterministic demo backends for the adversarial run.")
     parser.add_argument("--config", default=None, help="Optional complaint-generator config JSON.")
     parser.add_argument("--backend-id", default=None, help="Optional backend id from the selected config.")
@@ -255,6 +264,7 @@ def main(argv: Optional[list[str]] = None) -> int:
         max_turns=args.max_turns,
         max_parallel=args.max_parallel,
         use_hacc_vector_search=args.use_hacc_vector_search,
+        hacc_search_mode=args.hacc_search_mode,
         config_path=args.config,
         backend_id=args.backend_id,
         provider=args.provider,

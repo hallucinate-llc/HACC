@@ -250,6 +250,74 @@ class HacceEvidenceSeedGenerationTests(unittest.TestCase):
         self.assertEqual(packets[0]["document_label"], "ADMINISTRATIVE PLAN")
         self.assertEqual(packets[0]["metadata"]["upload_strategy"], "extracted_text_fallback")
 
+    def test_build_hacc_evidence_seeds_truncates_grounded_seed_packet_text(self) -> None:
+        class FakeEngine:
+            def search(self, query, top_k=3, use_vector=False, search_mode="auto"):
+                return {
+                    "results": [
+                        {
+                            "document_id": "doc-1",
+                            "title": "ADMINISTRATIVE PLAN",
+                            "source_type": "repository_evidence",
+                            "source_path": str(REPO_ROOT / "README.txt"),
+                            "score": 0.91,
+                            "snippet": "Residents may request an informal hearing and written notice of adverse action.",
+                        }
+                    ]
+                }
+
+            def build_grounding_bundle(self, query, top_k=3, claim_type="housing_discrimination", search_mode="package", use_vector=False):
+                return {
+                    "upload_candidates": [
+                        {
+                            "document_id": "doc-1",
+                            "title": "README.txt",
+                            "relative_path": "README.txt",
+                            "source_path": str(REPO_ROOT / "README.txt"),
+                            "source_type": "repository_evidence",
+                            "score": 0.88,
+                            "snippet": "Repository evidence about grievance hearings and written notice.",
+                        }
+                    ],
+                    "synthetic_prompts": {},
+                    "mediator_evidence_packets": [
+                        {
+                            "document_label": "README.txt",
+                            "source_path": str(REPO_ROOT / "README.txt"),
+                            "relative_path": "README.txt",
+                            "filename": "README.txt",
+                            "mime_type": "text/plain",
+                            "metadata": {
+                                "relative_path": "README.txt",
+                                "source_type": "repository_evidence",
+                                "upload_strategy": "file",
+                            },
+                        }
+                    ],
+                }
+
+            def _resolve_candidate_upload_text(self, candidate):
+                return "Policy text. " * 2000
+
+        fake_engine = FakeEngine()
+        with mock.patch("adversarial_harness.hacc_evidence._load_hacc_engine", return_value=lambda *args, **kwargs: fake_engine):
+            seeds = build_hacc_evidence_seeds(
+                count=1,
+                query_specs=[
+                    {
+                        "query": "grievance hearing written notice adverse action",
+                        "type": "housing_discrimination",
+                        "category": "housing",
+                        "description": "Due-process complaint grounded in HACC evidence",
+                    }
+                ],
+            )
+
+        packet = seeds[0]["key_facts"]["mediator_evidence_packets"][0]
+        self.assertLessEqual(len(packet["document_text"]), 6000)
+        self.assertTrue(packet["metadata"]["seed_packet_truncated"])
+        self.assertIn("Relevant excerpt:", packet["document_text"])
+
     def test_summarize_hit_prefers_matched_rule_when_snippet_is_table_of_contents(self) -> None:
         hit = {
             "title": "ADMINISTRATIVE PLAN",

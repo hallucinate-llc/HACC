@@ -1048,6 +1048,7 @@ def run_hacc_adversarial_batch(
     hacc_preset: str = "core_hacc_policies",
     hacc_count: Optional[int] = None,
     use_hacc_vector_search: bool = False,
+    hacc_search_mode: str = "package",
     demo: bool = False,
     config_path: Optional[str] = None,
     backend_id: Optional[str] = None,
@@ -1084,6 +1085,7 @@ def run_hacc_adversarial_batch(
         hacc_count=hacc_count,
         hacc_preset=hacc_preset,
         use_hacc_vector_search=use_hacc_vector_search,
+        hacc_search_mode=hacc_search_mode,
     )
 
     optimizer = Optimizer()
@@ -1164,6 +1166,7 @@ def run_hacc_adversarial_batch(
             "hacc_preset": hacc_preset,
             "hacc_count": hacc_count,
             "use_hacc_vector_search": use_hacc_vector_search,
+            "hacc_search_mode": hacc_search_mode,
         },
         "statistics": _sanitize_for_json(stats),
         "optimization_report": {
@@ -1209,6 +1212,12 @@ def create_parser() -> argparse.ArgumentParser:
     parser.add_argument("--hacc-preset", default="core_hacc_policies")
     parser.add_argument("--hacc-count", type=int, default=None)
     parser.add_argument("--use-hacc-vector-search", action="store_true")
+    parser.add_argument(
+        "--hacc-search-mode",
+        choices=("auto", "lexical", "hybrid", "vector", "package"),
+        default="package",
+        help="Search strategy used for HACC evidence retrieval during adversarial seed generation.",
+    )
     parser.add_argument("--demo", action="store_true", help="Use deterministic demo backends instead of live LLM routing.")
     parser.add_argument("--config", default=None, help="Optional complaint-generator config JSON to source backends from.")
     parser.add_argument("--backend-id", default=None, help="Optional backend id from the selected config.")
@@ -1251,6 +1260,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         hacc_preset=args.hacc_preset,
         hacc_count=args.hacc_count,
         use_hacc_vector_search=args.use_hacc_vector_search,
+        hacc_search_mode=args.hacc_search_mode,
         demo=args.demo,
         config_path=args.config,
         backend_id=args.backend_id,
