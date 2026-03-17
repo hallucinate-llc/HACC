@@ -1033,6 +1033,44 @@ def _router_diagnostics() -> Dict[str, Any]:
     return diagnostics
 
 
+def _adversarial_search_summary(
+    *,
+    requested_mode: str,
+    use_vector: bool,
+    router_diagnostics: Dict[str, Any],
+) -> Dict[str, Any]:
+    normalized_mode = str(requested_mode or "auto").strip().lower() or "auto"
+    vector_status = str(((router_diagnostics.get("vector_index") or {}).get("status") or "")).strip().lower()
+    vector_error = str(
+        ((router_diagnostics.get("vector_index") or {}).get("error"))
+        or (((router_diagnostics.get("vector_index") or {}).get("metadata") or {}).get("degraded_reason"))
+        or ""
+    ).strip()
+
+    effective_mode = normalized_mode
+    fallback_note = ""
+    if normalized_mode == "hybrid" and vector_status != "available":
+        effective_mode = "lexical_only"
+        fallback_note = "Requested hybrid search, but vector support is unavailable; using lexical results instead."
+    elif normalized_mode == "package" and vector_status != "available":
+        effective_mode = "lexical_fallback"
+        fallback_note = "Requested package/shared hybrid search, but vector support is unavailable; using lexical results instead."
+    elif normalized_mode == "package":
+        effective_mode = "shared_hybrid"
+
+    if fallback_note and vector_error:
+        fallback_note = f"{fallback_note} Vector backend detail: {vector_error}"
+
+    return {
+        "requested_search_mode": normalized_mode,
+        "requested_use_vector": bool(use_vector),
+        "effective_search_mode": effective_mode,
+        "vector_status": vector_status,
+        "vector_error": vector_error,
+        "fallback_note": fallback_note,
+    }
+
+
 def run_hacc_adversarial_batch(
     *,
     output_dir: str | Path,
@@ -1149,10 +1187,17 @@ def run_hacc_adversarial_batch(
         encoding="utf-8",
     )
 
+    router_diagnostics = _router_diagnostics()
+    search_summary = _adversarial_search_summary(
+        requested_mode=hacc_search_mode,
+        use_vector=use_hacc_vector_search,
+        router_diagnostics=router_diagnostics,
+    )
+
     summary = {
         "timestamp": _timestamp(),
         "runtime": runtime_bundle["runtime"],
-        "router_diagnostics": _router_diagnostics(),
+        "router_diagnostics": router_diagnostics,
         "inputs": {
             "num_sessions": num_sessions,
             "max_turns": max_turns,
@@ -1163,6 +1208,7 @@ def run_hacc_adversarial_batch(
             "use_hacc_vector_search": use_hacc_vector_search,
             "hacc_search_mode": hacc_search_mode,
         },
+        "search_summary": search_summary,
         "statistics": _sanitize_for_json(stats),
         "optimization_report": {
             "average_score": optimization_payload.get("average_score"),
@@ -1179,6 +1225,7 @@ def run_hacc_adversarial_batch(
             "score": float(getattr(getattr(best_result, "critic_score", None), "overall_score", 0.0) or 0.0) if best_result else 0.0,
             "seed_type": str((getattr(best_result, "seed_complaint", {}) or {}).get("type") or "") if best_result else "",
             "seed_summary": str((getattr(best_result, "seed_complaint", {}) or {}).get("summary") or "") if best_result else "",
+            "search_summary": search_summary,
         },
         "artifacts": {
             "output_dir": str(output_root),

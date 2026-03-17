@@ -237,6 +237,37 @@ def _build_fallback_note(*, requested_mode: str, vector_status: str = "", vector
     return note
 
 
+def _summarize_search_payload(payload: Any, *, requested_mode: str, use_vector: bool) -> Dict[str, Any]:
+    if not isinstance(payload, dict):
+        return {
+            "requested_search_mode": str(requested_mode or "auto"),
+            "requested_use_vector": bool(use_vector),
+            "effective_search_mode": str(requested_mode or "auto"),
+            "status": "unknown",
+            "backend_mode": "",
+            "vector_status": "",
+            "vector_error": "",
+            "fallback_note": "",
+        }
+
+    effective_mode = str(
+        payload.get("effective_search_mode")
+        or payload.get("backend_mode")
+        or requested_mode
+        or "auto"
+    )
+    return {
+        "requested_search_mode": str(requested_mode or "auto"),
+        "requested_use_vector": bool(use_vector),
+        "effective_search_mode": effective_mode,
+        "status": str(payload.get("status") or "unknown"),
+        "backend_mode": str(payload.get("backend_mode") or ""),
+        "vector_status": str(payload.get("vector_status") or ""),
+        "vector_error": str(payload.get("vector_error") or ""),
+        "fallback_note": str(payload.get("fallback_note") or ""),
+    }
+
+
 @dataclass
 class CorpusDocument:
     document_id: str
@@ -976,6 +1007,11 @@ class HACCResearchEngine:
                 "scrape": bool(scrape),
                 "include_legal": bool(include_legal),
             },
+            "local_search_summary": _summarize_search_payload(
+                local_payload,
+                requested_mode=str(search_mode or "auto"),
+                use_vector=bool(use_vector),
+            ),
             "local_search": local_payload,
             "web_discovery": web_payload,
             "legal_discovery": legal_payload,
@@ -1013,6 +1049,11 @@ class HACCResearchEngine:
             "claim_type": str(claim_type or "").strip() or "housing_discrimination",
             "search_mode": str(search_mode or "auto"),
             "use_vector": bool(use_vector),
+            "search_summary": _summarize_search_payload(
+                search_payload,
+                requested_mode=str(search_mode or "auto"),
+                use_vector=bool(use_vector),
+            ),
             "search_payload": search_payload,
             "upload_candidates": upload_candidates,
             "evidence_summary": grounding_overview["evidence_summary"],
@@ -1049,6 +1090,7 @@ class HACCResearchEngine:
                 "query": _clean_text(query),
                 "claim_type": str(claim_type or "").strip() or "housing_discrimination",
                 "user_id": str(user_id or "hacc-grounding"),
+                "search_summary": grounding_bundle.get("search_summary", {}),
                 "upload_count": 0,
                 "uploads": [],
                 "errors": [],
@@ -1070,6 +1112,7 @@ class HACCResearchEngine:
                     "query": _clean_text(query),
                     "claim_type": str(claim_type or "").strip() or "housing_discrimination",
                     "user_id": str(user_id or "hacc-grounding"),
+                    "search_summary": grounding_bundle.get("search_summary", {}),
                     "upload_count": 0,
                     "uploads": [],
                     "errors": [{"stage": "import", "error": str(exc)}],
@@ -1190,6 +1233,7 @@ class HACCResearchEngine:
             "query": _clean_text(query),
             "claim_type": str(claim_type or "").strip() or "housing_discrimination",
             "user_id": str(user_id or "hacc-grounding"),
+            "search_summary": grounding_bundle.get("search_summary", {}),
             "upload_count": len(uploads),
             "uploads": uploads,
             "errors": errors,

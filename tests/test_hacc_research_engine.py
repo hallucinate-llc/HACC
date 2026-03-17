@@ -996,6 +996,50 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertEqual(search_calls[0]["search_mode"], "package")
             self.assertEqual(search_calls[0]["top_k"], 1)
 
+    def test_research_surfaces_local_search_summary(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            parsed_dir = root / "research_results/documents/parsed"
+            parsed_dir.mkdir(parents=True, exist_ok=True)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=parsed_dir,
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            original_search = engine.search
+            original_discover = engine.discover
+            original_discover_legal_authorities = engine.discover_legal_authorities
+            try:
+                engine.search = lambda *args, **kwargs: {
+                    "status": "success",
+                    "effective_search_mode": "lexical_only",
+                    "vector_status": "unavailable",
+                    "fallback_note": "Requested hybrid search, but vector support is unavailable; using lexical results instead.",
+                    "results": [],
+                }
+                engine.discover = lambda *args, **kwargs: {"status": "success", "results": []}
+                engine.discover_legal_authorities = lambda *args, **kwargs: {"status": "success", "results": [], "result_count": 0}
+                payload = engine.research(
+                    "reasonable accommodation retaliation",
+                    local_top_k=1,
+                    web_max_results=1,
+                    search_mode="hybrid",
+                )
+            finally:
+                engine.search = original_search
+                engine.discover = original_discover
+                engine.discover_legal_authorities = original_discover_legal_authorities
+
+            self.assertEqual(payload["local_search_summary"]["requested_search_mode"], "hybrid")
+            self.assertEqual(payload["local_search_summary"]["effective_search_mode"], "lexical_only")
+            self.assertIn("using lexical results instead", payload["local_search_summary"]["fallback_note"])
+
     def test_research_includes_shared_legal_discovery(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

@@ -1,0 +1,1444 @@
+{
+  "timestamp": "2026-03-17T10:04:37.409417+00:00",
+  "statistics": {
+    "total_sessions": 1,
+    "successful_sessions": 1,
+    "failed_sessions": 0,
+    "average_score": 0.525,
+    "min_score": 0.525,
+    "max_score": 0.525,
+    "average_questions": 2.0,
+    "average_duration": 16.99954319000244,
+    "score_distribution": {
+      "0.0-0.2": 0,
+      "0.2-0.4": 0,
+      "0.4-0.6": 1,
+      "0.6-0.8": 0,
+      "0.8-1.0": 0
+    },
+    "anchor_sections": {
+      "expected_counts": {
+        "grievance_hearing": 1,
+        "appeal_rights": 1,
+        "adverse_action": 1,
+        "general_policy": 1
+      },
+      "covered_counts": {
+        "grievance_hearing": 1,
+        "appeal_rights": 1,
+        "adverse_action": 1
+      },
+      "missing_counts": {
+        "general_policy": 1
+      },
+      "coverage_by_section": {
+        "adverse_action": {
+          "expected": 1,
+          "covered": 1,
+          "missing": 0,
+          "coverage_rate": 1.0
+        },
+        "appeal_rights": {
+          "expected": 1,
+          "covered": 1,
+          "missing": 0,
+          "coverage_rate": 1.0
+        },
+        "general_policy": {
+          "expected": 1,
+          "covered": 0,
+          "missing": 1,
+          "coverage_rate": 0.0
+        },
+        "grievance_hearing": {
+          "expected": 1,
+          "covered": 1,
+          "missing": 0,
+          "coverage_rate": 1.0
+        }
+      }
+    }
+  },
+  "results": [
+    {
+      "session_id": "session_20260317_100420_000",
+      "timestamp": "2026-03-17T10:04:37.406686+00:00",
+      "seed_complaint": {
+        "template_id": "hacc::housing_discrimination::retaliation protections grievance compla",
+        "type": "housing_discrimination",
+        "category": "housing",
+        "description": "Retaliation or grievance-process complaint grounded in HACC evidence",
+        "summary": "The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. of HACC; \u2022 Any violent or drug-related criminal activity on or off such premises; or \u2022 Any criminal activity that resulted in felony conviction of a household member In states without due process determinations, HACC must grant opportunity for grievance hearings for all lease terminations, regardless of cause, with the following exception: HACC may use expedited grievance procedures for the excluded categories listed above. These expedited grievance procedures are described in Section 14-III.E. below. If HUD has issued a due process determination, HACC may evict through the state/local judicial eviction procedures. In this case, the PHA is not required to provide the opportunity for a hearing under HACC\u2019s grievance procedure as described above.",
+        "key_facts": {
+          "incident_summary": "Retaliation or grievance-process complaint grounded in HACC evidence",
+          "evidence_query": "retaliation protections grievance complaint appeal hearing due process tenant policy adverse action",
+          "evidence_summary": "The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. of HACC; \u2022 Any violent or drug-related criminal activity on or off such premises; or \u2022 Any criminal activity that resulted in felony conviction of a household member In states without due process determinations, HACC must grant opportunity for grievance hearings for all lease terminations, regardless of cause, with the following exception: HACC may use expedited grievance procedures for the excluded categories listed above. These expedited grievance procedures are described in Section 14-III.E. below. If HUD has issued a due process determination, HACC may evict through the state/local judicial eviction procedures. In this case, the PHA is not required to provide the opportunity for a hearing under HACC\u2019s grievance procedure as described above.",
+          "evidence_documents": [
+            "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+            "ADMINISTRATIVE PLAN",
+            "Supportive Housing Services Program"
+          ],
+          "source_paths": [
+            "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+            "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+            "/home/barberb/HACC/hacc_website/945af141-c7d1-4973-88c0-b57024243114"
+          ],
+          "anchor_titles": [],
+          "anchor_source_paths": [],
+          "anchor_terms": [],
+          "anchor_passages": [
+            {
+              "title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+              "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+              "snippet": "If HUD has issued a due process determination, HACC may exclude from HACC grievance procedure any grievance concerning a termination of tenancy or eviction that involves: \u2022 Any criminal activity that threatens the health, safety or right to peaceful enjoyment of the premises of other residents or employees of HACC; \u2022 Any violent or drug-related criminal activity on or off such premises; or \u2022 Any criminal activity that resulted in felony conviction of a household member In states without due process determinations, HACC must grant opportunity for grievance hearings for all lease terminations, regardless of cause, with the following exception: HACC may use expedited grievance procedures for the excluded categories listed above. These expedited grievance procedures are described in Section 14-III.E. below. If HUD has issued a due process determination, HACC may evict through the state/local judicial eviction procedures.",
+              "section_labels": [
+                "grievance_hearing",
+                "appeal_rights",
+                "adverse_action"
+              ]
+            },
+            {
+              "title": "Supportive Housing Services Program",
+              "source_path": "/home/barberb/HACC/hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+              "snippet": "\u25aa Serious or repeated lease violations that threaten the safety and stability of the community such as significant intentional damage to the unit/premises or serious acts of violence against another person. \u25aa Serious or repeated violations of program rules that jeopardize the continued administration of the voucher. \u25aa Serious or repeated violent, racist or abusive behavior toward staff of RLRA Administrator, service provider, or other program partners. Appeals process: Participants will be provided with a formal appeals process that at a minimum must consist of (a) written notice to the participant containing a clear statement of the reasons for discontinuation of rent assistance, (b) a review of the decision, in",
+              "section_labels": [
+                "appeal_rights"
+              ]
+            },
+            {
+              "title": "ADMINISTRATIVE PLAN",
+              "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+              "snippet": "When the amount of overpaid assistance meets or exceeds the federal threshold, the case will also be referred to the HUD Office of Inspector General (OIG). Other criminal violations related to the HCV program will be referred to the appropriate local, state, or federal entity. 14-II.F . FRAUD AND PROGRAM ABUSE RECOVERIES HACC may retain a portion of program fraud losses that the HACC recovers from a family or owner through litigation, court order, or a repayment agreement [24 CFR 982.163]. HACC must be the principal party initiating or sustaining the action to recover amounts due from tenants that are due as a result of fraud and abuse. 24 CFR 792.202 permits HACC to retain the greater of: \uf0b7 50 percent of the amount it actually collects from a judgment, litigation (including settlement of a lawsuit) or an administrative repayment agreement, or \uf0b7 Reasonable and necessary costs that HACC incurs related to the collection including costs of investigation, legal fees, and agency collection fees.",
+              "section_labels": [
+                "general_policy"
+              ]
+            }
+          ],
+          "anchor_sections": [
+            "grievance_hearing",
+            "appeal_rights",
+            "adverse_action",
+            "general_policy"
+          ],
+          "theory_labels": [
+            "retaliation",
+            "due_process_failure"
+          ],
+          "protected_bases": [],
+          "authority_hints": [
+            "Fair Housing Act anti-retaliation provisions",
+            "24 C.F.R. Part 100"
+          ],
+          "repository_evidence_candidates": [
+            {
+              "title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+              "relative_path": "hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+              "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+              "snippet": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+              "score": 4452.5833,
+              "source_type": "knowledge_graph",
+              "metadata": {
+                "backend": "markitdown",
+                "backend_available": true,
+                "details": {
+                  "backend": "markitdown",
+                  "backend_available": true,
+                  "implementation_status": "implemented",
+                  "operation": "extract_policy_rules_from_pdf",
+                  "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+                },
+                "document_id": "document:c8dc2af6ee6996a0",
+                "document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+                "implementation_status": "implemented",
+                "operation": "extract_policy_rules_from_pdf",
+                "provider": "ipfs_datasets_py",
+                "rule_count": 5318,
+                "section_count": 3423,
+                "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+                "text_length": 1401793,
+                "status": "success"
+              }
+            },
+            {
+              "title": "ADMINISTRATIVE PLAN",
+              "relative_path": "hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+              "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+              "snippet": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+              "score": 4253.4167,
+              "source_type": "knowledge_graph",
+              "metadata": {
+                "backend": "markitdown",
+                "backend_available": true,
+                "details": {
+                  "backend": "markitdown",
+                  "backend_available": true,
+                  "implementation_status": "implemented",
+                  "operation": "extract_policy_rules_from_pdf",
+                  "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+                },
+                "document_id": "document:be93a165d00f0101",
+                "document_title": "ADMINISTRATIVE PLAN",
+                "implementation_status": "implemented",
+                "operation": "extract_policy_rules_from_pdf",
+                "provider": "ipfs_datasets_py",
+                "rule_count": 7441,
+                "section_count": 4968,
+                "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+                "text_length": 1927962,
+                "status": "success"
+              }
+            },
+            {
+              "title": "Supportive Housing Services Program",
+              "relative_path": "hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+              "source_path": "/home/barberb/HACC/hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+              "snippet": "Appeals process: Participants will be provided with a formal appeals process that at a minimum must consist of",
+              "score": 143.8333,
+              "source_type": "knowledge_graph",
+              "metadata": {
+                "backend": "markitdown",
+                "backend_available": true,
+                "details": {
+                  "backend": "markitdown",
+                  "backend_available": true,
+                  "implementation_status": "implemented",
+                  "operation": "extract_policy_rules_from_pdf",
+                  "source_path": "/home/barberb/HACC/hacc_website/945af141-c7d1-4973-88c0-b57024243114"
+                },
+                "document_id": "document:1badd86efbbad087",
+                "document_title": "Supportive Housing Services Program",
+                "implementation_status": "implemented",
+                "operation": "extract_policy_rules_from_pdf",
+                "provider": "ipfs_datasets_py",
+                "rule_count": 166,
+                "section_count": 42,
+                "source_path": "/home/barberb/HACC/hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+                "text_length": 33964,
+                "status": "success"
+              }
+            }
+          ],
+          "synthetic_prompts": {
+            "evidence_upload_prompts": [
+              {
+                "prompt_id": "evidence_upload_1",
+                "prompt_type": "evidence_upload",
+                "title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+                "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+                "relative_path": "hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+                "anchor_sections": [
+                  "grievance_hearing",
+                  "appeal_rights",
+                  "adverse_action"
+                ],
+                "text": "Upload the evidence file 'hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b' and explain how it supports a housing_discrimination complaint about 'retaliation protections grievance complaint appeal hearing due process tenant policy adverse action'. Focus on the most relevant language: Grievance: Any dispute a tenant may have with respect to HACC action or failure to Anchor sections: grievance_hearing, appeal_rights, adverse_action."
+              },
+              {
+                "prompt_id": "evidence_upload_2",
+                "prompt_type": "evidence_upload",
+                "title": "ADMINISTRATIVE PLAN",
+                "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+                "relative_path": "hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+                "anchor_sections": [
+                  "grievance_hearing"
+                ],
+                "text": "Upload the evidence file 'hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858' and explain how it supports a housing_discrimination complaint about 'retaliation protections grievance complaint appeal hearing due process tenant policy adverse action'. Focus on the most relevant language: Applicants or tenant families who wish to file a VAWA complaint against HACC may Anchor sections: grievance_hearing."
+              },
+              {
+                "prompt_id": "evidence_upload_3",
+                "prompt_type": "evidence_upload",
+                "title": "Supportive Housing Services Program",
+                "source_path": "/home/barberb/HACC/hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+                "relative_path": "hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+                "anchor_sections": [
+                  "appeal_rights"
+                ],
+                "text": "Upload the evidence file 'hacc_website/945af141-c7d1-4973-88c0-b57024243114' and explain how it supports a housing_discrimination complaint about 'retaliation protections grievance complaint appeal hearing due process tenant policy adverse action'. Focus on the most relevant language: Appeals process: Participants will be provided with a formal appeals process that at a minimum must consist of Anchor sections: appeal_rights."
+              }
+            ],
+            "complaint_chatbot_prompt": "Ground the complaint chatbot in the uploaded repository evidence for 'retaliation protections grievance complaint appeal hearing due process tenant policy adverse action'. Use the uploaded materials (ADMISSIONS AND CONTINUED OCCUPANCY POLICY, ADMINISTRATIVE PLAN, Supportive Housing Services Program) as factual grounding, ask the user to connect each document to case-specific events, and identify missing timeline, actor, harm, and remedy facts. Prioritize these anchor sections: grievance_hearing, appeal_rights, adverse_action.",
+            "mediator_evaluation_prompt": "Evaluate each uploaded evidence item for a housing_discrimination complaint about 'retaliation protections grievance complaint appeal hearing due process tenant policy adverse action'. For every document, determine what claim element it supports, what facts it proves directly, what facts remain missing, and what follow-up questions the mediator should ask before drafting a complaint. Prioritize these anchor sections: grievance_hearing, appeal_rights, adverse_action.",
+            "production_upload_prompt": "A user uploads repository evidence for 'retaliation protections grievance complaint appeal hearing due process tenant policy adverse action'. Save each file into the complaint-generator evidence store, extract factual support from the parsed document, and route the uploaded materials through mediator evidence analysis before drafting or revising a complaint.",
+            "intake_questionnaire_prompt": "Before drafting a housing_discrimination complaint about 'retaliation protections grievance complaint appeal hearing due process tenant policy adverse action', collect concrete case facts from the user. Use the uploaded materials (ADMISSIONS AND CONTINUED OCCUPANCY POLICY, ADMINISTRATIVE PLAN, Supportive Housing Services Program) to anchor the questions, and ask for the following details in plain language:\n- What happened, and what adverse action did HACC take or threaten to take?\n- When did the key events happen, including the complaint, notice, hearing or review request, and any denial or termination decision?\n- Who at HACC made, communicated, or carried out each decision?\n- What written notice, grievance, informal review, hearing, or appeal rights were provided, requested, denied, or ignored?\n- What housing harm resulted, such as denial of assistance, termination, loss of voucher, delay, extra expense, or risk of displacement?\n- What remedy are you seeking now?\n- Anchor the intake to these policy sections: grievance_hearing, appeal_rights, adverse_action",
+            "intake_questions": [
+              "What happened, and what adverse action did HACC take or threaten to take?",
+              "When did the key events happen, including the complaint, notice, hearing or review request, and any denial or termination decision?",
+              "Who at HACC made, communicated, or carried out each decision?",
+              "What written notice, grievance, informal review, hearing, or appeal rights were provided, requested, denied, or ignored?",
+              "What housing harm resulted, such as denial of assistance, termination, loss of voucher, delay, extra expense, or risk of displacement?",
+              "What remedy are you seeking now?"
+            ],
+            "evidence_summary": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+            "anchor_sections": [
+              "grievance_hearing",
+              "appeal_rights",
+              "adverse_action"
+            ],
+            "anchor_passages": [
+              {
+                "title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+                "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+                "snippet": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+                "section_labels": [
+                  "grievance_hearing",
+                  "appeal_rights",
+                  "adverse_action"
+                ]
+              },
+              {
+                "title": "ADMINISTRATIVE PLAN",
+                "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+                "snippet": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+                "section_labels": [
+                  "grievance_hearing"
+                ]
+              },
+              {
+                "title": "Supportive Housing Services Program",
+                "source_path": "/home/barberb/HACC/hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+                "snippet": "Appeals process: Participants will be provided with a formal appeals process that at a minimum must consist of",
+                "section_labels": [
+                  "appeal_rights"
+                ]
+              }
+            ]
+          },
+          "mediator_evidence_packets": [
+            {
+              "document_label": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+              "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+              "relative_path": "hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+              "filename": "a38c7914-ea37-4c2f-a815-711d4a97c92b.txt",
+              "mime_type": "text/plain",
+              "metadata": {
+                "source_type": "knowledge_graph",
+                "relative_path": "hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+                "anchor_sections": [
+                  "grievance_hearing",
+                  "appeal_rights",
+                  "adverse_action"
+                ],
+                "parse_summary": {},
+                "graph_status": "",
+                "original_mime_type": "application/pdf",
+                "original_filename": "a38c7914-ea37-4c2f-a815-711d4a97c92b",
+                "upload_strategy": "extracted_text_fallback",
+                "seed_packet_truncated": true
+              },
+              "document_text": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY FOR THE PUBLIC HOUSING PROGRAM May 1, 2005 Revision Date February 1, 2006 October 1, 2006 June 1, 2007 September 1, 2008 September 1, 2009 August 1, 2010 June 1, 2011 June 1, 2012 July 1, 2013 July 1, 2014 June 1, 2015 June 1, 2016 July 1, 2017 July1, 2018 July 1, 2019 July 1, 2020 July 1, 2021 July 1, 2022 November 1, 2023 January 1, 2024 July 1, 2024 July 1, 2025 Approved by the PHA Board of Commissioners: April 2025 Submitted to HUD: June 2025 Copyright 2024 by Nan McKay & Associates, Inc. All rights reserved Permission to reprint granted only to the Public Housing Authority that has purchased this plan from Nan McKay & Associates, Inc. This document may not be reprinted or distributed to any other person or entity other than the purchasing agency without the express written permission of Nan McKay & Associates, Inc. Table of Contents Introduction HOTMA 102/104 .................................................................................................................... Intro-i HOTMA CHANGES IN THE ACOP Chapter 1 OVERVIEW OF THE PROGRAM AND PLAN INTRODUCTION ........................................................................................................................1-1 PART I: THE PHA I.A. OVERVIEW .....................................................................................................................1-1 I.B. ORGANIZATION AND STRUCTURE OF THE PHA ..................................................1-2 I.C. PHA MISSION .................................................................................................................1-3 I.D. THE PHA\u2019S COMMITMENT TO ETHICS AND SERVICE ........................................1-4 PART II: THE PUBLIC HOUSING PROGRAM II.A. OVERVIEW AND HISTORY OF THE PROGRAM .....................................................1-6 II.B. PUBLIC HOUSING PROGRAM BASICS .....................................................................1-7 II.C. PUBLIC HOUSING PARTNERSHIPS ...........................................................................1-7 II.D. APPLICABLE REGULATIONS ...................................................................................1-11 PART III: THE ADMISSIONS AND CONTINUED OCCUPANCY POLICIES III.A. OVERVIEW AND PURPOSE OF THE POLICY ........................................................1-12 III.B. CONTENTS OF THE POLICY .....................................................................................1-12 III.C. UPDATING AND REVISING THE POLICY ..............................................................1-13 \u00a9 Copyright 2024 Nan McKay & Associates Unlimited copies may be made for internal use Intro-1 ACOP 11/1/24 Table of Contents Chapter 2 FAIR HOUSING AND EQUAL OPPORTUNITY INTRODUCTION ........................................................................................................................2-1 PART I: NONDISCRIMINATION I.A. OVERVIEW .....................................................................................................................2-2 I.B. NONDISCRIMINATION ................................................................................................2-3 I.C. DISCRIMINATION COMPLAINTS ..............................................................................2-4 PART II: POLICIES RELATED TO PERSONS WITH DISABILITIES II.A. OVERVIEW .....................................................................................................................2-8 II.B. DEFINITION OF REASONABLE ACCOMMODATION .............................................2-9 II.C. REQUEST FOR AN ACCOMMODATION .................................................................2-10 II.D. VERIFICATION OF DISABILITY ...............................................................................2-11 II.E. APPROVAL/DENIAL OF A REQUESTED ACCOMMODATION ...........................2-12 II.F. PROGRAM ACCESSIBILITY FOR PERSONS WITH HEARING OR VISION IMPAIRMENTS ..............................................................................................2-14 II.G. PHYSICAL ACCESSIBILITY ......................................................................................2-15 II.H. DENIAL OR TERMINATION OF ASSISTANCE .......................................................2-16 PART III: IMPROVING ACCESS TO SERVICES FOR PERSONS WITH LIMITED ENGLISH PROFICIENCY (LEP) III.A. OVERVIEW ...................................................................................................................2-16 III.B. ORAL INTERPRETATION ..........................................................................................2-17 III.C. WRITTEN TRANSLATION .........................................................................................2-17 III.D. IMPLEMENTATION PLAN .........................................................................................2-18 2-1: DEFINITION OF A PERSON WITH A DISABILITY UNDER FEDERAL CIVIL RIGHTS LAWS ..................................................................................................2-19 EXHIBITS \u00a9 Copyright 2024 Nan McKay & Associates Unlimited copies may be made for internal use Intro-2 ACOP 11/1/24 Table of Contents Chapter 3 ELIGIBILITY INTRODUCTION ........................................................................................................................3-1 PART I: DEFINITIONS OF FAMILY AND HOUSEHOLD MEMBERS I.A. OVERVIEW .....................................................................................................................3-2 FAMILY AND HOUSEHOLD ........................................................................................3-2 I.B. I.C. FAMILY BREAK-UP AND REMAINING MEMBER OF TENANT FAMILY ..........3-3 I.D. HEAD OF HOUSEHOLD................................................................................................3-5 I.E. SPOUSE, COHEAD, AND OTHER ADULT\n\nRelevant excerpt: Grievance: Any dispute a tenant may have with respect to HACC action or failure to"
+            },
+            {
+              "document_label": "ADMINISTRATIVE PLAN",
+              "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+              "relative_path": "hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+              "filename": "8ee6f7d1-0c36-48e4-9677-336b95fb9858.txt",
+              "mime_type": "text/plain",
+              "metadata": {
+                "source_type": "knowledge_graph",
+                "relative_path": "hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+                "anchor_sections": [
+                  "grievance_hearing"
+                ],
+                "parse_summary": {},
+                "graph_status": "",
+                "original_mime_type": "application/pdf",
+                "original_filename": "8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+                "upload_strategy": "extracted_text_fallback",
+                "seed_packet_truncated": true
+              },
+              "document_text": "ADMINISTRATIVE PLAN FOR THE HOUSING AUTHORITY OF CLACKAMAS COUNTY HOUSING CHOICE VOUCHER PROGRAM Effective: July 1, 2025 Approved by the HA Board of Commissioners: April 2025 PHA Annual Plan Submitted to HUD: April 2025 Copyright 2024 by Nan McKay & Associates, Inc. All rights reserved Permission to reprint granted only to the Public Housing Authority or Housing Agency that has purchased this plan from Nan McKay & Associates, Inc. This document may not be reprinted or distributed to any other person or entity other than the purchasing agency without the express written permission of Nan McKay & Associates, Inc. Administrative Plan -Table of Contents Introduction ABOUT THE REFERENCES CITED IN THE MODEL ADMINISTRATIVE PLAN PART I: PART II: Chapter 1 OVERVIEW OF THE PROGRAM AND PLAN THE PHA ................................................................................................................ 1-1 Overview ................................................................................................. 1-1 1-I.A. Organization and Structure of the PHA .................................................. 1-2 1-I.B. PHA Mission .......................................................................................... 1-2 1-I.C. The PHA\u2019s Programs (Moving to Work Status) ..................................... 1-2 1-I.D. The PHA\u2019s Commitment to Ethics and Service ..................................... 1-4 1-I.E. THE HOUSING CHOICE VOUCHER (HCV) PROGRAM ................................. 1-8 1-II.A. Overview and History of the Program .................................................... 1-8 1-II.B. HCV Program Basics ............................................................................ 1-10 The HCV Partnerships .......................................................................... 1-10 1-II.C. The HCV Relationships: ................................................................. 1-11 What Does HUD Do? ..................................................................... 1-11 What Does HACC Do? ................................................................... 1-12 What Does the Owner Do? ............................................................. 1-12 What Does the Family Do? ............................................................. 1-13 1-II.D. Applicable Regulations ......................................................................... 1-13 PART III: THE HCV ADMINISTRATIVE PLAN ............................................................... 1-14 1-III.A. Overview and Purpose of the Plan ........................................................ 1-14 1-III.B. Contents of the Plan (24CFR 982.54) ................................................... 1-14 Mandatory vs. Discretionary Policy ............................................... 1-15 1-III.C. Organization of the Plan ....................................................................... 1-16 1-III.D. Updating and Revising the Plan ........................................................... 1-16 \u00a9 Copyright 2024 Nan McKay & Associates Unlimited copies may be made for internal use TOC-1 Admin. Plan 7/1/2025 Administrative Plan -Table of Contents Chapter 2 FAIR HOUSING AND EQUAL OPPORTUNITY PART I: PART II: PART III: NONDISCRIMINATION....................................................................................... 2-1 2-I.A. Overview ................................................................................................. 2-2 2-I.B. Nondiscrimination .................................................................................. 2-3 Providing Information to Families and Owners ............................... 2-4 Discrimination Complaints ............................................................... 2-4 POLICIES RELATED TO PERSONS WITH DISABILITIES ............................. 2-7 2-II.A. Overview ................................................................................................. 2-7 2-II.B. Definition of Reasonable Accommodation ............................................ 2-8 Types of Reasonable Accommodations ............................................ 2-8 2-II.C. Request for an Accommodation ............................................................. 2-9 2-II.D. Verification of Disability ...................................................................... 2-10 2-II.E. Approval/Denial of a Requested Accommodation 2-II.F. [Joint Statement of the Departments of HUD and Justice: Reasonable Accommodations under the Fair Housing Act, Notice PIH 2010-26]. ............................................................................ 2-11 Program Accessibility for Persons with Hearing or Vision Impairments ......................................................................... 2-13 2-II.G. Physical Accessibility ........................................................................... 2-13 2-II.H. Denial or Termination of Assistance .................................................... 2-15 IMPROVING ACCESS TO SERVICES FOR PERSONS WITH LIMITED ENGLISH PROFICIENCY (LEP) ....................................................................... 2-16 2-III.A. Overview ............................................................................................... 2-16 2-III.B. Oral Interpretation ................................................................................ 2-17 2-III.C. Written Translation ............................................................................... 2-17 Implementation Plan ............................................................................. 2-18 2-III.D. Exhibit 2-1: Definition of a Person with a Disability Under Federal Civil Rights Laws [24 CFR Parts 8.3, and 100.201] ............................... 2-19 \u00a9 Copyright 2024 Nan McKay & Associates Unlimited copies may be made for internal use TOC-2 Admin. Plan 7/1/2025 PART I: Administrative Plan -\n\nRelevant excerpt: Applicants or tenant families who wish to file a VAWA complaint against HACC may"
+            },
+            {
+              "document_label": "Supportive Housing Services Program",
+              "source_path": "/home/barberb/HACC/hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+              "relative_path": "hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+              "filename": "945af141-c7d1-4973-88c0-b57024243114.txt",
+              "mime_type": "text/plain",
+              "metadata": {
+                "source_type": "knowledge_graph",
+                "relative_path": "hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+                "anchor_sections": [
+                  "appeal_rights"
+                ],
+                "parse_summary": {},
+                "graph_status": "",
+                "original_mime_type": "application/pdf",
+                "original_filename": "945af141-c7d1-4973-88c0-b57024243114",
+                "upload_strategy": "extracted_text_fallback",
+                "seed_packet_truncated": true
+              },
+              "document_text": "Supportive Housing Services Program Regional Long-term Rent Assistance Program Policies Updated 1/23/25 (all previous versions are obsolete) Overview On May 19, 2020, voters in the greater Portland region approved a measure to provide housing and wraparound services to prevent and address homelessness. The measure authorized a new regional tax that generated initial revenue beginning in July 2021 and will sunset in December 2030 unless it is renewed by voters. The revenue funds a new Supportive Housing Services program (SHS) that will provide services for at least 5,000 households experiencing prolonged homelessness with complex disabilities, and 10,000 households experiencing short-term homelessness or at risk of homelessness. A key strategy for achieving the measure\u2019s goals is the development of a Regional Long-term Rent Assistance (RLRA) program. The program will provide flexible and continued rent subsidy that will significantly expand access to housing for households with extremely and very low incomes across the region. RLRA subsidies will be available for as long as the household needs and remains eligible for the subsidy, with no pre-determined end date (other than if the SHS measure is not renewed by voters). Tenant-based RLRA subsidies will leverage existing private market and regulated housing, maximizing tenant choice, while project-based RLRA subsidies will increase the availability of units in new housing developments. RLRA program service partners will cover payments of move-in costs and provide supportive services as needed to ensure housing stability. A Regional Landlord Guarantee will cover potential damages to increase participation and mitigate risks for participating landlords. At a glance, RLRA will operate similar to the federal Housing Choice Voucher program. Tenants will pay 28.5% of gross income as their monthly rent portion and the program will subsidize the remaining costs. Participating units will meet inspection requirements and rent reasonableness standards, with base rents that do not exceed 120% Fair Market Rent (FMR) as established by the U.S. Department of Housing and Urban Development (HUD). RLRA policies and guidelines will be flexible and low barrier to meet local needs and fill gaps in existing programs. RLRA aims to streamline screening criteria, simplify application processes, and reduce eligibility barriers to increase housing access and support long-term housing stability for all participants. RLRA implementation The RLRA program will be implemented independently by each county while following consistent regional guidelines and policies. This regional framework will provide consistency for participating landlords and tenants, simplify application and certification processes, and enable tenants to move between counties as needed. Specific program and administrative practices may be tailored to reflect local variations and be responsive to the needs and capacities of each county. The RLRA program will build on the existing long-term rent assistance infrastructure and expertise within Clackamas, Multnomah and Washington counties. Each county will have its own RLRA Administrator(s), defined as the housing authority or community-based organization(s) responsible for administering the rent assistance according to the regional guidelines and policies. This document sets forth the regional framework developed by the three counties that will guide the RLRA program\u2019s implementation. Program components that are not explicitly addressed in this regional framework will be guided by the existing policies and practices of each county\u2019s housing authority and/or County. The counties will continue to work together and with Metro to monitor the program\u2019s implementation and may adjust these policies over time to address emerging needs and lessons learned. Supportive Housing Services Program alignment The RLRA program will operate within the broader context of the regional Supportive Housing Services program. RLRA rent subsidies will support and align with other SHS components including: \u25aa Outreach: Street outreach and engagement, relationship building, peer support, service navigation and housing placement. \u25aa Housing navigation: Support with housing search and placement, applications, fees, security deposits, appeals, reasonable accommodation requests, and enforcement of fair housing and landlord tenant laws. \u25aa Supportive services: Case management, tailored wraparound services and flexible funds to support long-term housing stability, including connections to clinical services, health and wellness supports, employment and benefit supports, and legal assistance as needed. \u25aa System capacity: Technical assistance and financial investments to strengthen each county\u2019s systems of care, expand culturally specific service provision, and ensure service providers have adequate resources and capacity to meet SHS service expectations and needs. Guiding principles The RLRA program is rooted in a commitment to lead with racial equity by especially meeting the needs of Black, Indigenous and people of color (BIPOC) who are disproportionately impacted by housing instability and homelessness. This includes implementing strategies to mitigate barriers to program access, using equity criteria to inform program design, and collecting and evaluating disaggregated data to ensure the program achieves racially equitable outcomes. Lead with racial equity and work toward racial justice Implementation of the RLRA program will be guided by the following principles: \u25aa \u25aa Provide housing stability for households who are experiencing or at risk of homelessness \u25aa Ensure program accessibility by removing screening barriers and simplifying application processes \u25aa Actively work to preserve participant access to the program and prevent eviction and discontinuation of rent as\n\nRelevant excerpt: Appeals process: Participants will be provided with a formal appeals process that at a minimum must consist of"
+            }
+          ],
+          "complainant_story_facts": [
+            "Complaint theory: Retaliation or grievance-process complaint grounded in HACC evidence",
+            "Primary evidence summary: The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. of HACC; \u2022 Any violent or drug-related criminal activity on or off such premises; or \u2022 Any criminal activity that resulted in felony conviction of a household member In states...",
+            "Anchor from ADMISSIONS AND CONTINUED OCCUPANCY POLICY [grievance_hearing, appeal_rights, adverse_action]: If HUD has issued a due process determination, HACC may exclude from HACC grievance procedure any grievance concerning a termination of tenancy or eviction that involves: \u2022 Any criminal activity that threatens the health, safety or right...",
+            "Anchor from Supportive Housing Services Program [appeal_rights]: \u25aa Serious or repeated lease violations that threaten the safety and stability of the community such as significant intentional damage to the unit/premises or serious acts of violence against another person. \u25aa Serious or repeated violatio...",
+            "Anchor from ADMINISTRATIVE PLAN [general_policy]: When the amount of overpaid assistance meets or exceeds the federal threshold, the case will also be referred to the HUD Office of Inspector General (OIG). Other criminal violations related to the HCV program will be referred to the appr...",
+            "Repository evidence ADMISSIONS AND CONTINUED OCCUPANCY POLICY: Grievance: Any dispute a tenant may have with respect to HACC action or failure to"
+          ],
+          "grounding_note": "Use the evidence as factual grounding and identify missing case-specific facts during questioning."
+        },
+        "keywords": [],
+        "legal_patterns": [],
+        "hacc_evidence": [
+          {
+            "document_id": "document:c8dc2af6ee6996a0",
+            "title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+            "source_type": "knowledge_graph",
+            "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+            "score": 4452.5833,
+            "snippet": "of HACC; \u2022 Any violent or drug-related criminal activity on or off such premises; or \u2022 Any criminal activity that resulted in felony conviction of a household member In states without due process determinations, HACC must grant opportunity for grievance hearings for all lease terminations, regardless of cause, with the following exception: HACC may use expedited grievance procedures for the excluded categories listed above. These expedited grievance procedures are described in Section 14-III.E. below. If HUD has issued a due process determination, HACC may evict through the state/local judicial eviction procedures. In this case, the PHA is not required to provide the opportunity for a hearing under HACC\u2019s grievance procedure as described above.",
+            "matched_rules": [
+              {
+                "text": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+                "section_title": "EXHIBIT 14-1: SAMPLE GRIEVANCE PROCEDURE",
+                "rule_type": "discretion",
+                "modality": "discretionary",
+                "overlap": 3
+              },
+              {
+                "text": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+                "section_title": "ACOP 11/1/24",
+                "rule_type": "discretion",
+                "modality": "discretionary",
+                "overlap": 3
+              },
+              {
+                "text": "In states without due process determinations, HACC must grant opportunity for grievance",
+                "section_title": "ACOP 11/1/24",
+                "rule_type": "obligation",
+                "modality": "required",
+                "overlap": 3
+              }
+            ],
+            "matched_entities": [
+              {
+                "name": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+                "type": "policy_rule",
+                "overlap": 3
+              },
+              {
+                "name": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+                "type": "policy_rule",
+                "overlap": 3
+              },
+              {
+                "name": "In states without due process determinations, HACC must grant opportunity for grievance",
+                "type": "policy_rule",
+                "overlap": 3
+              },
+              {
+                "name": "The notice must also state that the tenant may request a grievance hearing on the HACC\u2019s",
+                "type": "policy_rule",
+                "overlap": 3
+              },
+              {
+                "name": "adverse action and will provide the subject of the record and the tenant a copy of such",
+                "type": "policy_rule",
+                "overlap": 3
+              }
+            ],
+            "metadata": {
+              "backend": "markitdown",
+              "backend_available": true,
+              "details": {
+                "backend": "markitdown",
+                "backend_available": true,
+                "implementation_status": "implemented",
+                "operation": "extract_policy_rules_from_pdf",
+                "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+              },
+              "document_id": "document:c8dc2af6ee6996a0",
+              "document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+              "implementation_status": "implemented",
+              "operation": "extract_policy_rules_from_pdf",
+              "provider": "ipfs_datasets_py",
+              "rule_count": 5318,
+              "section_count": 3423,
+              "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+              "text_length": 1401793,
+              "status": "success"
+            }
+          },
+          {
+            "document_id": "document:be93a165d00f0101",
+            "title": "ADMINISTRATIVE PLAN",
+            "source_type": "knowledge_graph",
+            "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+            "score": 4253.4167,
+            "snippet": "FRAUD AND PROGRAM ABUSE RECOVERIES HACC may retain a portion of program fraud losses that the HACC recovers from a family or owner through litigation, court order, or a repayment agreement [24 CFR 982.163]. HACC must be the principal party initiating or sustaining the action to recover amounts due from tenants that are due as a result of fraud and abuse. 24 CFR 792.202 permits HACC to retain the greater of: \uf0b7 50 percent of the amount it actually collects from a judgment, litigation (including settlement of a lawsuit) or an administrative repayment agreement, or \uf0b7 Reasonable and necessary costs that HACC incurs related to the collection including costs of investigation, legal fees, and agency collection fees. The family must be afforded the opportunity for an informal hearing in accordance with requirements in 24 CFR 982.555.",
+            "matched_rules": [
+              {
+                "text": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+                "section_title": "HACC Policy",
+                "rule_type": "discretion",
+                "modality": "discretionary",
+                "overlap": 2
+              },
+              {
+                "text": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+                "section_title": "Adminplan 7/1/2025",
+                "rule_type": "discretion",
+                "modality": "discretionary",
+                "overlap": 2
+              },
+              {
+                "text": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+                "section_title": "HACC Policy",
+                "rule_type": "obligation",
+                "modality": "required",
+                "overlap": 2
+              }
+            ],
+            "matched_entities": [
+              {
+                "name": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+                "type": "policy_rule",
+                "overlap": 2
+              },
+              {
+                "name": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+                "type": "policy_rule",
+                "overlap": 2
+              },
+              {
+                "name": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+                "type": "policy_rule",
+                "overlap": 2
+              },
+              {
+                "name": "HACC will inform the family of its policy regarding moves denied due to insufficient",
+                "type": "policy_rule",
+                "overlap": 2
+              },
+              {
+                "name": "If an applicant or tenant requests VAWA protection based on status as a victim of domestic violence,",
+                "type": "policy_rule",
+                "overlap": 2
+              }
+            ],
+            "metadata": {
+              "backend": "markitdown",
+              "backend_available": true,
+              "details": {
+                "backend": "markitdown",
+                "backend_available": true,
+                "implementation_status": "implemented",
+                "operation": "extract_policy_rules_from_pdf",
+                "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+              },
+              "document_id": "document:be93a165d00f0101",
+              "document_title": "ADMINISTRATIVE PLAN",
+              "implementation_status": "implemented",
+              "operation": "extract_policy_rules_from_pdf",
+              "provider": "ipfs_datasets_py",
+              "rule_count": 7441,
+              "section_count": 4968,
+              "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+              "text_length": 1927962,
+              "status": "success"
+            }
+          },
+          {
+            "document_id": "document:1badd86efbbad087",
+            "title": "Supportive Housing Services Program",
+            "source_type": "knowledge_graph",
+            "source_path": "/home/barberb/HACC/hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+            "score": 143.8333,
+            "snippet": "\u25aa Serious or repeated violations of program rules that jeopardize the continued administration of the voucher. \u25aa Serious or repeated violent, racist or abusive behavior toward staff of RLRA Administrator, service provider, or other program partners. Appeals process: Participants will be provided with a formal appeals process that at a minimum must consist of (a) written notice to the participant containing a clear statement of the reasons for discontinuation of rent assistance, (b) a review of the decision, in which the participant is given the opportunity to present written or oral objections before a person other than the person (or a subordinate of that person) who made or approved the decision to discontinue rent assistance, and (c) prompt written notice of the final decision to the participant.",
+            "matched_rules": [
+              {
+                "text": "Appeals process: Participants will be provided with a formal appeals process that at a minimum must consist of",
+                "section_title": "Discontinuation of Rent Assistance",
+                "rule_type": "obligation",
+                "modality": "required",
+                "overlap": 2
+              },
+              {
+                "text": "A landlord liaison function will be included in each county\u2019s implementation of the tenant-based RLRA program.",
+                "section_title": "Landlord liaison function",
+                "rule_type": "obligation",
+                "modality": "required",
+                "overlap": 1
+              },
+              {
+                "text": "All landlords leasing to tenant-based RLRA voucher holders will have access to a risk mitigation fund administered",
+                "section_title": "Risk mitigation fund",
+                "rule_type": "obligation",
+                "modality": "required",
+                "overlap": 1
+              }
+            ],
+            "matched_entities": [
+              {
+                "name": "Appeals process: Participants will be provided with a formal appeals process that at a minimum must consist of",
+                "type": "policy_rule",
+                "overlap": 2
+              },
+              {
+                "name": "Protections for Existing Tenants",
+                "type": "policy_section",
+                "overlap": 2
+              },
+              {
+                "name": "Tenant-based RLRA Policies",
+                "type": "policy_section",
+                "overlap": 2
+              },
+              {
+                "name": "A landlord liaison function will be included in each county\u2019s implementation of the tenant-based RLRA program.",
+                "type": "policy_rule",
+                "overlap": 1
+              },
+              {
+                "name": "All landlords leasing to tenant-based RLRA voucher holders will have access to a risk mitigation fund administered",
+                "type": "policy_rule",
+                "overlap": 1
+              }
+            ],
+            "metadata": {
+              "backend": "markitdown",
+              "backend_available": true,
+              "details": {
+                "backend": "markitdown",
+                "backend_available": true,
+                "implementation_status": "implemented",
+                "operation": "extract_policy_rules_from_pdf",
+                "source_path": "/home/barberb/HACC/hacc_website/945af141-c7d1-4973-88c0-b57024243114"
+              },
+              "document_id": "document:1badd86efbbad087",
+              "document_title": "Supportive Housing Services Program",
+              "implementation_status": "implemented",
+              "operation": "extract_policy_rules_from_pdf",
+              "provider": "ipfs_datasets_py",
+              "rule_count": 166,
+              "section_count": 42,
+              "source_path": "/home/barberb/HACC/hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+              "text_length": 33964,
+              "status": "success"
+            }
+          }
+        ],
+        "source": "hacc_research_engine",
+        "_meta": {
+          "personality": "cooperative",
+          "max_turns": 2,
+          "include_hacc_evidence": true,
+          "hacc_preset": "retaliation_focus",
+          "use_hacc_vector_search": false,
+          "seed_source": "hacc_research_engine",
+          "anchor_sections": [
+            "grievance_hearing",
+            "appeal_rights",
+            "adverse_action",
+            "general_policy"
+          ]
+        }
+      },
+      "initial_complaint_text": "I reported discrimination to human resources after my supervisor denied a promotion and made repeated comments about women not being fit for leadership. Two days later I was terminated.",
+      "conversation_history": [
+        {
+          "role": "complainant",
+          "type": "initial_complaint",
+          "content": "I reported discrimination to human resources after my supervisor denied a promotion and made repeated comments about women not being fit for leadership. Two days later I was terminated."
+        },
+        {
+          "role": "mediator",
+          "type": "question",
+          "content": "I understand this can be stressful, and these details help me support you. What housing harm resulted, such as denial of assistance, termination, loss of voucher, delay, extra expense, or risk of displacement?"
+        },
+        {
+          "role": "complainant",
+          "type": "response",
+          "content": "I reported discrimination to human resources after my supervisor denied a promotion and made repeated comments about women not being fit for leadership. Two days later I was terminated.",
+          "evidence_context": {
+            "dynamic_evidence_summary": "For this question, the strongest supporting material is 'ADMINISTRATIVE PLAN'. If no continued housing assistance is available, HACC must remove the wrong-sized or accessible unit from the HAP contract to make voucher assistance available to issue the family a tenant-based voucher. If HACC offers the family a tenant-based voucher, HACC must terminate the housing assistance payments for a wrong-sized or accessible unit at the earlier of the expiration of the term of the family\u2019s voucher (including any extension granted by HACC) or the date upon which the family vacates the unit. If the family does not move out of the wrong-sized unit or accessible unit by the expiration of the term of the family\u2019s voucher, HACC must remove the unit from the HAP contract. If HACC offers the family another form",
+            "dynamic_evidence_items": [
+              {
+                "document_id": "document:c8dc2af6ee6996a0",
+                "title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+                "source_type": "knowledge_graph",
+                "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+                "score": 4452.5833,
+                "snippet": "of HACC; \u2022 Any violent or drug-related criminal activity on or off such premises; or \u2022 Any criminal activity that resulted in felony conviction of a household member In states without due process determinations, HACC must grant opportunity for grievance hearings for all lease terminations, regardless of cause, with the following exception: HACC may use expedited grievance procedures for the excluded categories listed above. These expedited grievance procedures are described in Section 14-III.E. below. If HUD has issued a due process determination, HACC may evict through the state/local judicial eviction procedures. In this case, the PHA is not required to provide the opportunity for a hearing under HACC\u2019s grievance procedure as described above.",
+                "matched_rules": [
+                  {
+                    "text": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+                    "section_title": "EXHIBIT 14-1: SAMPLE GRIEVANCE PROCEDURE",
+                    "rule_type": "discretion",
+                    "modality": "discretionary",
+                    "overlap": 3
+                  },
+                  {
+                    "text": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+                    "section_title": "ACOP 11/1/24",
+                    "rule_type": "discretion",
+                    "modality": "discretionary",
+                    "overlap": 3
+                  },
+                  {
+                    "text": "In states without due process determinations, HACC must grant opportunity for grievance",
+                    "section_title": "ACOP 11/1/24",
+                    "rule_type": "obligation",
+                    "modality": "required",
+                    "overlap": 3
+                  }
+                ],
+                "matched_entities": [
+                  {
+                    "name": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+                    "type": "policy_rule",
+                    "overlap": 3
+                  },
+                  {
+                    "name": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+                    "type": "policy_rule",
+                    "overlap": 3
+                  },
+                  {
+                    "name": "In states without due process determinations, HACC must grant opportunity for grievance",
+                    "type": "policy_rule",
+                    "overlap": 3
+                  },
+                  {
+                    "name": "The notice must also state that the tenant may request a grievance hearing on the HACC\u2019s",
+                    "type": "policy_rule",
+                    "overlap": 3
+                  },
+                  {
+                    "name": "adverse action and will provide the subject of the record and the tenant a copy of such",
+                    "type": "policy_rule",
+                    "overlap": 3
+                  }
+                ],
+                "metadata": {
+                  "backend": "markitdown",
+                  "backend_available": true,
+                  "details": {
+                    "backend": "markitdown",
+                    "backend_available": true,
+                    "implementation_status": "implemented",
+                    "operation": "extract_policy_rules_from_pdf",
+                    "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+                  },
+                  "document_id": "document:c8dc2af6ee6996a0",
+                  "document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+                  "implementation_status": "implemented",
+                  "operation": "extract_policy_rules_from_pdf",
+                  "provider": "ipfs_datasets_py",
+                  "rule_count": 5318,
+                  "section_count": 3423,
+                  "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+                  "text_length": 1401793,
+                  "status": "success"
+                }
+              },
+              {
+                "document_id": "document:be93a165d00f0101",
+                "title": "ADMINISTRATIVE PLAN",
+                "source_type": "knowledge_graph",
+                "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+                "score": 4253.4167,
+                "snippet": "FRAUD AND PROGRAM ABUSE RECOVERIES HACC may retain a portion of program fraud losses that the HACC recovers from a family or owner through litigation, court order, or a repayment agreement [24 CFR 982.163]. HACC must be the principal party initiating or sustaining the action to recover amounts due from tenants that are due as a result of fraud and abuse. 24 CFR 792.202 permits HACC to retain the greater of: \uf0b7 50 percent of the amount it actually collects from a judgment, litigation (including settlement of a lawsuit) or an administrative repayment agreement, or \uf0b7 Reasonable and necessary costs that HACC incurs related to the collection including costs of investigation, legal fees, and agency collection fees. The family must be afforded the opportunity for an informal hearing in accordance with requirements in 24 CFR 982.555.",
+                "matched_rules": [
+                  {
+                    "text": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+                    "section_title": "HACC Policy",
+                    "rule_type": "discretion",
+                    "modality": "discretionary",
+                    "overlap": 2
+                  },
+                  {
+                    "text": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+                    "section_title": "Adminplan 7/1/2025",
+                    "rule_type": "discretion",
+                    "modality": "discretionary",
+                    "overlap": 2
+                  },
+                  {
+                    "text": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+                    "section_title": "HACC Policy",
+                    "rule_type": "obligation",
+                    "modality": "required",
+                    "overlap": 2
+                  }
+                ],
+                "matched_entities": [
+                  {
+                    "name": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+                    "type": "policy_rule",
+                    "overlap": 2
+                  },
+                  {
+                    "name": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+                    "type": "policy_rule",
+                    "overlap": 2
+                  },
+                  {
+                    "name": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+                    "type": "policy_rule",
+                    "overlap": 2
+                  },
+                  {
+                    "name": "HACC will inform the family of its policy regarding moves denied due to insufficient",
+                    "type": "policy_rule",
+                    "overlap": 2
+                  },
+                  {
+                    "name": "If an applicant or tenant requests VAWA protection based on status as a victim of domestic violence,",
+                    "type": "policy_rule",
+                    "overlap": 2
+                  }
+                ],
+                "metadata": {
+                  "backend": "markitdown",
+                  "backend_available": true,
+                  "details": {
+                    "backend": "markitdown",
+                    "backend_available": true,
+                    "implementation_status": "implemented",
+                    "operation": "extract_policy_rules_from_pdf",
+                    "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+                  },
+                  "document_id": "document:be93a165d00f0101",
+                  "document_title": "ADMINISTRATIVE PLAN",
+                  "implementation_status": "implemented",
+                  "operation": "extract_policy_rules_from_pdf",
+                  "provider": "ipfs_datasets_py",
+                  "rule_count": 7441,
+                  "section_count": 4968,
+                  "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+                  "text_length": 1927962,
+                  "status": "success"
+                }
+              },
+              {
+                "document_id": "document:1badd86efbbad087",
+                "title": "Supportive Housing Services Program",
+                "source_type": "knowledge_graph",
+                "source_path": "/home/barberb/HACC/hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+                "score": 143.8333,
+                "snippet": "\u25aa Serious or repeated violations of program rules that jeopardize the continued administration of the voucher. \u25aa Serious or repeated violent, racist or abusive behavior toward staff of RLRA Administrator, service provider, or other program partners. Appeals process: Participants will be provided with a formal appeals process that at a minimum must consist of (a) written notice to the participant containing a clear statement of the reasons for discontinuation of rent assistance, (b) a review of the decision, in which the participant is given the opportunity to present written or oral objections before a person other than the person (or a subordinate of that person) who made or approved the decision to discontinue rent assistance, and (c) prompt written notice of the final decision to the participant.",
+                "matched_rules": [
+                  {
+                    "text": "Appeals process: Participants will be provided with a formal appeals process that at a minimum must consist of",
+                    "section_title": "Discontinuation of Rent Assistance",
+                    "rule_type": "obligation",
+                    "modality": "required",
+                    "overlap": 2
+                  },
+                  {
+                    "text": "A landlord liaison function will be included in each county\u2019s implementation of the tenant-based RLRA program.",
+                    "section_title": "Landlord liaison function",
+                    "rule_type": "obligation",
+                    "modality": "required",
+                    "overlap": 1
+                  },
+                  {
+                    "text": "All landlords leasing to tenant-based RLRA voucher holders will have access to a risk mitigation fund administered",
+                    "section_title": "Risk mitigation fund",
+                    "rule_type": "obligation",
+                    "modality": "required",
+                    "overlap": 1
+                  }
+                ],
+                "matched_entities": [
+                  {
+                    "name": "Appeals process: Participants will be provided with a formal appeals process that at a minimum must consist of",
+                    "type": "policy_rule",
+                    "overlap": 2
+                  },
+                  {
+                    "name": "Protections for Existing Tenants",
+                    "type": "policy_section",
+                    "overlap": 2
+                  },
+                  {
+                    "name": "Tenant-based RLRA Policies",
+                    "type": "policy_section",
+                    "overlap": 2
+                  },
+                  {
+                    "name": "A landlord liaison function will be included in each county\u2019s implementation of the tenant-based RLRA program.",
+                    "type": "policy_rule",
+                    "overlap": 1
+                  },
+                  {
+                    "name": "All landlords leasing to tenant-based RLRA voucher holders will have access to a risk mitigation fund administered",
+                    "type": "policy_rule",
+                    "overlap": 1
+                  }
+                ],
+                "metadata": {
+                  "backend": "markitdown",
+                  "backend_available": true,
+                  "details": {
+                    "backend": "markitdown",
+                    "backend_available": true,
+                    "implementation_status": "implemented",
+                    "operation": "extract_policy_rules_from_pdf",
+                    "source_path": "/home/barberb/HACC/hacc_website/945af141-c7d1-4973-88c0-b57024243114"
+                  },
+                  "document_id": "document:1badd86efbbad087",
+                  "document_title": "Supportive Housing Services Program",
+                  "implementation_status": "implemented",
+                  "operation": "extract_policy_rules_from_pdf",
+                  "provider": "ipfs_datasets_py",
+                  "rule_count": 166,
+                  "section_count": 42,
+                  "source_path": "/home/barberb/HACC/hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+                  "text_length": 33964,
+                  "status": "success"
+                }
+              },
+              {
+                "document_id": "document:c22e106e297025b1",
+                "title": "CLACKAMAS COUNTY CONTINUUM OF CARE (COC) PROGRAM",
+                "source_type": "knowledge_graph",
+                "source_path": "/home/barberb/HACC/hacc_website/76861a83-9a1a-43ee-becb-f8556827f676",
+                "score": 461.3816,
+                "snippet": "assistance \uf0b7 Violation of the Occupancy Agreement/Program agreement if different from the lease. \uf0b7 Subleasing to other persons \uf0b7 Illegal activity Termination Requirements: If termination is necessary, principles of due process must be followed. At a minimum, this process must include: \uf0b7 Written notice to the participant containing a clear statement of the reason for the termination and at least 30 days\u2019 notice and a date to when they can appeal the decision. \uf0b7 A review of the decision, during which the participant can present written or verbal objections before someone other than the person (or a subordinate of the person) who made or approved the termination decision; and \uf0b7 Prompt written notice of the final decision to the participant.",
+                "matched_rules": [
+                  {
+                    "text": "HACC will follow its Housing Choice Voucher Policy on verifying citizenship status and will",
+                    "section_title": "HACC Policy",
+                    "rule_type": "obligation",
+                    "modality": "required",
+                    "overlap": 3
+                  },
+                  {
+                    "text": "If termination is necessary, principles of due process must be followed.",
+                    "section_title": "Termination Requirements:",
+                    "rule_type": "obligation",
+                    "modality": "required",
+                    "overlap": 3
+                  },
+                  {
+                    "text": "A sample format and instructions will help support service providers to provide accurate documentation for",
+                    "section_title": "Requirements for Calculating Match:",
+                    "rule_type": "obligation",
+                    "modality": "required",
+                    "overlap": 2
+                  }
+                ],
+                "matched_entities": [
+                  {
+                    "name": "HACC will follow its Housing Choice Voucher Policy on verifying citizenship status and will",
+                    "type": "policy_rule",
+                    "overlap": 3
+                  },
+                  {
+                    "name": "Housing Choice Voucher Policy",
+                    "type": "person",
+                    "overlap": 3
+                  },
+                  {
+                    "name": "If termination is necessary, principles of due process must be followed.",
+                    "type": "policy_rule",
+                    "overlap": 3
+                  },
+                  {
+                    "name": "A sample format and instructions will help support service providers to provide accurate documentation for",
+                    "type": "policy_rule",
+                    "overlap": 2
+                  },
+                  {
+                    "name": "Appeal Process:",
+                    "type": "policy_section",
+                    "overlap": 2
+                  }
+                ],
+                "metadata": {
+                  "backend": "markitdown",
+                  "backend_available": true,
+                  "details": {
+                    "backend": "markitdown",
+                    "backend_available": true,
+                    "implementation_status": "implemented",
+                    "operation": "extract_policy_rules_from_pdf",
+                    "source_path": "/home/barberb/HACC/hacc_website/76861a83-9a1a-43ee-becb-f8556827f676"
+                  },
+                  "document_id": "document:c22e106e297025b1",
+                  "document_title": "CLACKAMAS COUNTY CONTINUUM OF CARE (COC) PROGRAM",
+                  "implementation_status": "implemented",
+                  "operation": "extract_policy_rules_from_pdf",
+                  "provider": "ipfs_datasets_py",
+                  "rule_count": 230,
+                  "section_count": 104,
+                  "source_path": "/home/barberb/HACC/hacc_website/76861a83-9a1a-43ee-becb-f8556827f676",
+                  "text_length": 82212,
+                  "status": "success"
+                }
+              }
+            ],
+            "dynamic_anchor_passages": [
+              {
+                "title": "CLACKAMAS COUNTY CONTINUUM OF CARE (COC) PROGRAM",
+                "source_path": "/home/barberb/HACC/hacc_website/76861a83-9a1a-43ee-becb-f8556827f676",
+                "snippet": "\uf0b7 Incarcerated for more than 30 days \uf0b7 Hospitalized for either medical or psychiatric reasons for more than 90 days \uf0b7 Voluntarily termination \uf0b7 Submission of incorrect information \uf0b7 Non-compliance with the financial portion of the rental assistance \uf0b7 Violation of the Occupancy Agreement/Program agreement if different from the lease. \uf0b7 Subleasing to other persons \uf0b7 Illegal activity Termination Requirements: If termination is necessary, principles of due process must be followed. At a minimum, this process must include: \uf0b7 Written notice to the participant containing a clear statement of the reason for the termination and at least 30 days\u2019 notice and a date to when they can appeal the decision. \uf0b7 A review of the decision, during which the participant",
+                "section_labels": [
+                  "appeal_rights",
+                  "adverse_action"
+                ]
+              },
+              {
+                "title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+                "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+                "snippet": "the tenant a copy of such information, and an opportunity to dispute the accuracy and relevance of the information before an eviction or lease enforcement action is taken. HACC Policy In all cases where criminal record or sex offender registration information would result in lease enforcement or eviction, HACC will notify the household in writing of the proposed adverse action and will provide the subject of the record and the tenant a copy of such information, and an opportunity to dispute the accuracy and relevance of the information before an eviction or lease enforcement action is taken. The family will be given 10 business days from the date of HACC notice, to dispute the accuracy and relevance of the information.",
+                "section_labels": [
+                  "adverse_action"
+                ]
+              },
+              {
+                "title": "ADMINISTRATIVE PLAN",
+                "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+                "snippet": "HACC will offer the family the following types of continued assistance in the following order, based on the availability of assistance: PBV assistance in an appropriately sized unit in the same building or project; PBV assistance an appropriately sized unit in in another project; and Tenant-based voucher assistance. If no continued housing assistance is available, HACC must remove the wrong-sized or accessible unit from the HAP contract to make voucher assistance available to issue the family a tenant-based voucher. If HACC offers the family a tenant-based voucher, HACC must terminate the housing assistance payments for a wrong-sized or accessible unit at the earlier of the expiration of the term of the family\u2019s voucher (including any extension granted by HACC) or the date upon which the family vacates the unit. If the family does not move out of the wrong-sized unit or accessible unit by the expiration of the term of the family\u2019s voucher, HACC must remove the unit from the HAP contract.",
+                "section_labels": [
+                  "general_policy"
+                ]
+              }
+            ],
+            "dynamic_anchor_sections": [
+              "appeal_rights",
+              "adverse_action",
+              "general_policy"
+            ]
+          }
+        },
+        {
+          "role": "mediator",
+          "type": "question",
+          "content": "What written notice, grievance, informal review, hearing, or appeal rights were provided, requested, denied, or ignored?"
+        },
+        {
+          "role": "complainant",
+          "type": "response",
+          "content": "I reported discrimination to human resources after my supervisor denied a promotion and made repeated comments about women not being fit for leadership. Two days later I was terminated.",
+          "evidence_context": {
+            "dynamic_evidence_summary": "For this question, the strongest supporting material is 'ADMINISTRATIVE PLAN'. HACC Policy A request for an informal hearing must be made in writing and delivered to HACC either in person or by first class mail, by the close of the business day, no later than 10 business days from the date of HACC\u2019s decision or notice to terminate assistance. HACC must schedule and send written notice of the informal hearing to the family within 10 business days of the family\u2019s request. If HACC hearing will be conducted remotely, at the time the notice is sent to the family, the family will be notified: Regarding the processes involved in a remote informal hearing; That HACC will provide technical assistance prior to and during the informal hearing, if needed; and That if the family or any individual witness has any technological, resource, or accessibility barriers, the family may inform HACC and HACC will assist the family in either resolving the issue or allow the family to participate in an in- person hearing, as appropriate.",
+            "dynamic_evidence_items": [
+              {
+                "document_id": "document:c8dc2af6ee6996a0",
+                "title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+                "source_type": "knowledge_graph",
+                "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+                "score": 4452.5833,
+                "snippet": "of HACC; \u2022 Any violent or drug-related criminal activity on or off such premises; or \u2022 Any criminal activity that resulted in felony conviction of a household member In states without due process determinations, HACC must grant opportunity for grievance hearings for all lease terminations, regardless of cause, with the following exception: HACC may use expedited grievance procedures for the excluded categories listed above. These expedited grievance procedures are described in Section 14-III.E. below. If HUD has issued a due process determination, HACC may evict through the state/local judicial eviction procedures. In this case, the PHA is not required to provide the opportunity for a hearing under HACC\u2019s grievance procedure as described above.",
+                "matched_rules": [
+                  {
+                    "text": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+                    "section_title": "EXHIBIT 14-1: SAMPLE GRIEVANCE PROCEDURE",
+                    "rule_type": "discretion",
+                    "modality": "discretionary",
+                    "overlap": 3
+                  },
+                  {
+                    "text": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+                    "section_title": "ACOP 11/1/24",
+                    "rule_type": "discretion",
+                    "modality": "discretionary",
+                    "overlap": 3
+                  },
+                  {
+                    "text": "In states without due process determinations, HACC must grant opportunity for grievance",
+                    "section_title": "ACOP 11/1/24",
+                    "rule_type": "obligation",
+                    "modality": "required",
+                    "overlap": 3
+                  }
+                ],
+                "matched_entities": [
+                  {
+                    "name": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to",
+                    "type": "policy_rule",
+                    "overlap": 3
+                  },
+                  {
+                    "name": "If HUD has issued a due process determination, HACC may exclude from HACC grievance",
+                    "type": "policy_rule",
+                    "overlap": 3
+                  },
+                  {
+                    "name": "In states without due process determinations, HACC must grant opportunity for grievance",
+                    "type": "policy_rule",
+                    "overlap": 3
+                  },
+                  {
+                    "name": "The notice must also state that the tenant may request a grievance hearing on the HACC\u2019s",
+                    "type": "policy_rule",
+                    "overlap": 3
+                  },
+                  {
+                    "name": "adverse action and will provide the subject of the record and the tenant a copy of such",
+                    "type": "policy_rule",
+                    "overlap": 3
+                  }
+                ],
+                "metadata": {
+                  "backend": "markitdown",
+                  "backend_available": true,
+                  "details": {
+                    "backend": "markitdown",
+                    "backend_available": true,
+                    "implementation_status": "implemented",
+                    "operation": "extract_policy_rules_from_pdf",
+                    "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b"
+                  },
+                  "document_id": "document:c8dc2af6ee6996a0",
+                  "document_title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+                  "implementation_status": "implemented",
+                  "operation": "extract_policy_rules_from_pdf",
+                  "provider": "ipfs_datasets_py",
+                  "rule_count": 5318,
+                  "section_count": 3423,
+                  "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+                  "text_length": 1401793,
+                  "status": "success"
+                }
+              },
+              {
+                "document_id": "document:be93a165d00f0101",
+                "title": "ADMINISTRATIVE PLAN",
+                "source_type": "knowledge_graph",
+                "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+                "score": 4253.4167,
+                "snippet": "FRAUD AND PROGRAM ABUSE RECOVERIES HACC may retain a portion of program fraud losses that the HACC recovers from a family or owner through litigation, court order, or a repayment agreement [24 CFR 982.163]. HACC must be the principal party initiating or sustaining the action to recover amounts due from tenants that are due as a result of fraud and abuse. 24 CFR 792.202 permits HACC to retain the greater of: \uf0b7 50 percent of the amount it actually collects from a judgment, litigation (including settlement of a lawsuit) or an administrative repayment agreement, or \uf0b7 Reasonable and necessary costs that HACC incurs related to the collection including costs of investigation, legal fees, and agency collection fees. The family must be afforded the opportunity for an informal hearing in accordance with requirements in 24 CFR 982.555.",
+                "matched_rules": [
+                  {
+                    "text": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+                    "section_title": "HACC Policy",
+                    "rule_type": "discretion",
+                    "modality": "discretionary",
+                    "overlap": 2
+                  },
+                  {
+                    "text": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+                    "section_title": "Adminplan 7/1/2025",
+                    "rule_type": "discretion",
+                    "modality": "discretionary",
+                    "overlap": 2
+                  },
+                  {
+                    "text": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+                    "section_title": "HACC Policy",
+                    "rule_type": "obligation",
+                    "modality": "required",
+                    "overlap": 2
+                  }
+                ],
+                "matched_entities": [
+                  {
+                    "name": "Applicants or tenant families who wish to file a VAWA complaint against HACC may",
+                    "type": "policy_rule",
+                    "overlap": 2
+                  },
+                  {
+                    "name": "HACC informal hearing process, does not preclude the family from exercising the right, that may",
+                    "type": "policy_rule",
+                    "overlap": 2
+                  },
+                  {
+                    "name": "HACC must be the principal party initiating or sustaining the action to recover amounts due from",
+                    "type": "policy_rule",
+                    "overlap": 2
+                  },
+                  {
+                    "name": "HACC will inform the family of its policy regarding moves denied due to insufficient",
+                    "type": "policy_rule",
+                    "overlap": 2
+                  },
+                  {
+                    "name": "If an applicant or tenant requests VAWA protection based on status as a victim of domestic violence,",
+                    "type": "policy_rule",
+                    "overlap": 2
+                  }
+                ],
+                "metadata": {
+                  "backend": "markitdown",
+                  "backend_available": true,
+                  "details": {
+                    "backend": "markitdown",
+                    "backend_available": true,
+                    "implementation_status": "implemented",
+                    "operation": "extract_policy_rules_from_pdf",
+                    "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858"
+                  },
+                  "document_id": "document:be93a165d00f0101",
+                  "document_title": "ADMINISTRATIVE PLAN",
+                  "implementation_status": "implemented",
+                  "operation": "extract_policy_rules_from_pdf",
+                  "provider": "ipfs_datasets_py",
+                  "rule_count": 7441,
+                  "section_count": 4968,
+                  "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+                  "text_length": 1927962,
+                  "status": "success"
+                }
+              },
+              {
+                "document_id": "document:1badd86efbbad087",
+                "title": "Supportive Housing Services Program",
+                "source_type": "knowledge_graph",
+                "source_path": "/home/barberb/HACC/hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+                "score": 143.8333,
+                "snippet": "\u25aa Serious or repeated violations of program rules that jeopardize the continued administration of the voucher. \u25aa Serious or repeated violent, racist or abusive behavior toward staff of RLRA Administrator, service provider, or other program partners. Appeals process: Participants will be provided with a formal appeals process that at a minimum must consist of (a) written notice to the participant containing a clear statement of the reasons for discontinuation of rent assistance, (b) a review of the decision, in which the participant is given the opportunity to present written or oral objections before a person other than the person (or a subordinate of that person) who made or approved the decision to discontinue rent assistance, and (c) prompt written notice of the final decision to the participant.",
+                "matched_rules": [
+                  {
+                    "text": "Appeals process: Participants will be provided with a formal appeals process that at a minimum must consist of",
+                    "section_title": "Discontinuation of Rent Assistance",
+                    "rule_type": "obligation",
+                    "modality": "required",
+                    "overlap": 2
+                  },
+                  {
+                    "text": "A landlord liaison function will be included in each county\u2019s implementation of the tenant-based RLRA program.",
+                    "section_title": "Landlord liaison function",
+                    "rule_type": "obligation",
+                    "modality": "required",
+                    "overlap": 1
+                  },
+                  {
+                    "text": "All landlords leasing to tenant-based RLRA voucher holders will have access to a risk mitigation fund administered",
+                    "section_title": "Risk mitigation fund",
+                    "rule_type": "obligation",
+                    "modality": "required",
+                    "overlap": 1
+                  }
+                ],
+                "matched_entities": [
+                  {
+                    "name": "Appeals process: Participants will be provided with a formal appeals process that at a minimum must consist of",
+                    "type": "policy_rule",
+                    "overlap": 2
+                  },
+                  {
+                    "name": "Protections for Existing Tenants",
+                    "type": "policy_section",
+                    "overlap": 2
+                  },
+                  {
+                    "name": "Tenant-based RLRA Policies",
+                    "type": "policy_section",
+                    "overlap": 2
+                  },
+                  {
+                    "name": "A landlord liaison function will be included in each county\u2019s implementation of the tenant-based RLRA program.",
+                    "type": "policy_rule",
+                    "overlap": 1
+                  },
+                  {
+                    "name": "All landlords leasing to tenant-based RLRA voucher holders will have access to a risk mitigation fund administered",
+                    "type": "policy_rule",
+                    "overlap": 1
+                  }
+                ],
+                "metadata": {
+                  "backend": "markitdown",
+                  "backend_available": true,
+                  "details": {
+                    "backend": "markitdown",
+                    "backend_available": true,
+                    "implementation_status": "implemented",
+                    "operation": "extract_policy_rules_from_pdf",
+                    "source_path": "/home/barberb/HACC/hacc_website/945af141-c7d1-4973-88c0-b57024243114"
+                  },
+                  "document_id": "document:1badd86efbbad087",
+                  "document_title": "Supportive Housing Services Program",
+                  "implementation_status": "implemented",
+                  "operation": "extract_policy_rules_from_pdf",
+                  "provider": "ipfs_datasets_py",
+                  "rule_count": 166,
+                  "section_count": 42,
+                  "source_path": "/home/barberb/HACC/hacc_website/945af141-c7d1-4973-88c0-b57024243114",
+                  "text_length": 33964,
+                  "status": "success"
+                }
+              },
+              {
+                "document_id": "document:c22e106e297025b1",
+                "title": "CLACKAMAS COUNTY CONTINUUM OF CARE (COC) PROGRAM",
+                "source_type": "knowledge_graph",
+                "source_path": "/home/barberb/HACC/hacc_website/76861a83-9a1a-43ee-becb-f8556827f676",
+                "score": 257.7065,
+                "snippet": "assistance \uf0b7 Violation of the Occupancy Agreement/Program agreement if different from the lease. \uf0b7 Subleasing to other persons \uf0b7 Illegal activity Termination Requirements: If termination is necessary, principles of due process must be followed. At a minimum, this process must include: \uf0b7 Written notice to the participant containing a clear statement of the reason for the termination and at least 30 days\u2019 notice and a date to when they can appeal the decision. \uf0b7 A review of the decision, during which the participant can present written or verbal objections before someone other than the person (or a subordinate of the person) who made or approved the termination decision; and \uf0b7 Prompt written notice of the final decision to the participant.",
+                "matched_rules": [
+                  {
+                    "text": "HACC may also deny a request if services cannot be monitored or provided to the client due to a",
+                    "section_title": "HACC Policy",
+                    "rule_type": "prohibition",
+                    "modality": "forbidden",
+                    "overlap": 3
+                  },
+                  {
+                    "text": "If termination is necessary, principles of due process must be followed.",
+                    "section_title": "Termination Requirements:",
+                    "rule_type": "obligation",
+                    "modality": "required",
+                    "overlap": 2
+                  },
+                  {
+                    "text": "Landlord Request: If the tenant cooperates with the landlord\u2019s request to leave, they may keep their",
+                    "section_title": "Occupancy Issues:",
+                    "rule_type": "discretion",
+                    "modality": "discretionary",
+                    "overlap": 2
+                  }
+                ],
+                "matched_entities": [
+                  {
+                    "name": "HACC may also deny a request if services cannot be monitored or provided to the client due to a",
+                    "type": "policy_rule",
+                    "overlap": 3
+                  },
+                  {
+                    "name": "Appeal Process:",
+                    "type": "policy_section",
+                    "overlap": 2
+                  },
+                  {
+                    "name": "If termination is necessary, principles of due process must be followed.",
+                    "type": "policy_rule",
+                    "overlap": 2
+                  },
+                  {
+                    "name": "Landlord Request: If the tenant cooperates with the landlord\u2019s request to leave, they may keep their",
+                    "type": "policy_rule",
+                    "overlap": 2
+                  },
+                  {
+                    "name": "Upon the written request of the recipient, HUD may grant an exception to the provisions of",
+                    "type": "policy_rule",
+                    "overlap": 2
+                  }
+                ],
+                "metadata": {
+                  "backend": "markitdown",
+                  "backend_available": true,
+                  "details": {
+                    "backend": "markitdown",
+                    "backend_available": true,
+                    "implementation_status": "implemented",
+                    "operation": "extract_policy_rules_from_pdf",
+                    "source_path": "/home/barberb/HACC/hacc_website/76861a83-9a1a-43ee-becb-f8556827f676"
+                  },
+                  "document_id": "document:c22e106e297025b1",
+                  "document_title": "CLACKAMAS COUNTY CONTINUUM OF CARE (COC) PROGRAM",
+                  "implementation_status": "implemented",
+                  "operation": "extract_policy_rules_from_pdf",
+                  "provider": "ipfs_datasets_py",
+                  "rule_count": 230,
+                  "section_count": 104,
+                  "source_path": "/home/barberb/HACC/hacc_website/76861a83-9a1a-43ee-becb-f8556827f676",
+                  "text_length": 82212,
+                  "status": "success"
+                }
+              }
+            ],
+            "dynamic_anchor_passages": [
+              {
+                "title": "ADMINISTRATIVE PLAN",
+                "source_path": "/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858",
+                "snippet": "HACC Policy A request for an informal hearing must be made in writing and delivered to HACC either in person or by first class mail, by the close of the business day, no later than 10 business days from the date of HACC\u2019s decision or notice to terminate assistance. HACC must schedule and send written notice of the informal hearing to the family within 10 business days of the family\u2019s request. If HACC hearing will be conducted remotely, at the time the notice is sent to the family, the family will be notified: Regarding the processes involved in a remote informal hearing; That HACC will provide technical assistance prior to and during the informal hearing, if needed; and That if the family or any individual witness has any technological, resource, or accessibility barriers, the family may inform HACC and HACC will assist the family in either resolving the issue or allow the family to participate in an in- person hearing, as appropriate.",
+                "section_labels": [
+                  "grievance_hearing",
+                  "appeal_rights",
+                  "adverse_action"
+                ]
+              },
+              {
+                "title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+                "source_path": "/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b",
+                "snippet": "The applicant will remain at the top of the waiting list until the family receives an offer for which they do not have good cause to refuse. HACC will require documentation of good cause for unit refusals. Unit Refusal Without Good Cause HACC Policy When an applicant rejects the unit offer without good cause, HACC will remove the applicant\u2019s name from the waiting list and send notice to the family of such removal. The notice will inform the family of their right to request an informal hearing and the process for doing so (see Chapter 14). The applicant may reapply for assistance if the waiting list is open. If the waiting list is not open, the applicant must wait to reapply until HACC opens the waiting list.",
+                "section_labels": [
+                  "grievance_hearing",
+                  "appeal_rights"
+                ]
+              },
+              {
+                "title": "CLACKAMAS COUNTY CONTINUUM OF CARE (COC) PROGRAM",
+                "source_path": "/home/barberb/HACC/hacc_website/76861a83-9a1a-43ee-becb-f8556827f676",
+                "snippet": "\uf0b7 Incarcerated for more than 30 days \uf0b7 Hospitalized for either medical or psychiatric reasons for more than 90 days \uf0b7 Voluntarily termination \uf0b7 Submission of incorrect information \uf0b7 Non-compliance with the financial portion of the rental assistance \uf0b7 Violation of the Occupancy Agreement/Program agreement if different from the lease. \uf0b7 Subleasing to other persons \uf0b7 Illegal activity Termination Requirements: If termination is necessary, principles of due process must be followed. At a minimum, this process must include: \uf0b7 Written notice to the participant containing a clear statement of the reason for the termination and at least 30 days\u2019 notice and a date to when they can appeal the decision. \uf0b7 A review of the decision, during which the participant",
+                "section_labels": [
+                  "appeal_rights",
+                  "adverse_action"
+                ]
+              }
+            ],
+            "dynamic_anchor_sections": [
+              "grievance_hearing",
+              "appeal_rights",
+              "adverse_action"
+            ]
+          }
+        }
+      ],
+      "num_questions": 2,
+      "num_turns": 2,
+      "final_state": {
+        "current_phase": "intake",
+        "iteration_count": 2
+      },
+      "knowledge_graph_summary": {
+        "total_entities": 5,
+        "total_relationships": 4
+      },
+      "dependency_graph_summary": {
+        "total_nodes": 4,
+        "total_dependencies": 3
+      },
+      "knowledge_graph": null,
+      "dependency_graph": null,
+      "critic_score": {
+        "overall_score": 0.525,
+        "question_quality": 0.5,
+        "information_extraction": 0.5,
+        "empathy": 0.5,
+        "efficiency": 0.5,
+        "coverage": 0.625,
+        "feedback": "Anchor-section coverage was incomplete (3/4 covered).",
+        "strengths": [],
+        "weaknesses": [
+          "Missed anchor sections: general_policy"
+        ],
+        "suggestions": [
+          "Add questions covering: general_policy"
+        ],
+        "anchor_sections_expected": [
+          "grievance_hearing",
+          "appeal_rights",
+          "adverse_action",
+          "general_policy"
+        ],
+        "anchor_sections_covered": [
+          "grievance_hearing",
+          "appeal_rights",
+          "adverse_action"
+        ],
+        "anchor_sections_missing": [
+          "general_policy"
+        ]
+      },
+      "anchor_section_summary": {
+        "expected": [
+          "grievance_hearing",
+          "appeal_rights",
+          "adverse_action",
+          "general_policy"
+        ],
+        "covered": [
+          "grievance_hearing",
+          "appeal_rights",
+          "adverse_action"
+        ],
+        "missing": [
+          "general_policy"
+        ]
+      },
+      "duration_seconds": 16.99954319000244,
+      "success": true,
+      "error": null
+    }
+  ]
+}

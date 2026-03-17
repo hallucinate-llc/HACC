@@ -133,7 +133,7 @@ def run_hacc_grounded_pipeline(
         grounding_query,
         top_k=top_k,
         claim_type=resolved_claim_type,
-        search_mode="package",
+        search_mode=hacc_search_mode,
         use_vector=use_hacc_vector_search,
     )
     upload_report = engine.simulate_evidence_upload(
@@ -141,7 +141,7 @@ def run_hacc_grounded_pipeline(
         top_k=top_k,
         claim_type=resolved_claim_type,
         user_id="hacc-grounded-pipeline",
-        search_mode="package",
+        search_mode=hacc_search_mode,
         use_vector=use_hacc_vector_search,
         db_dir=output_root / "mediator_state",
     )
@@ -199,6 +199,11 @@ def run_hacc_grounded_pipeline(
         "hacc_preset": hacc_preset,
         "use_hacc_vector_search": bool(use_hacc_vector_search),
         "hacc_search_mode": hacc_search_mode,
+        "search_summary": {
+            "grounding": grounding_bundle.get("search_summary", {}),
+            "evidence_upload": upload_report.get("search_summary", {}),
+            "adversarial": adversarial_summary.get("search_summary", {}),
+        },
         "grounding": grounding_bundle,
         "evidence_upload": upload_report,
         "adversarial": adversarial_summary,

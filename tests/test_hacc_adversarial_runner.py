@@ -142,6 +142,7 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             self.assertTrue(summary_path.is_file())
             self.assertIn("router_diagnostics", summary)
             self.assertEqual(summary["inputs"]["hacc_search_mode"], "hybrid")
+            self.assertEqual(summary["search_summary"]["requested_search_mode"], "hybrid")
             self.assertIn(
                 summary["router_diagnostics"]["embeddings_router"]["status"],
                 {"available", "degraded", "error", "unavailable"},
@@ -155,6 +156,7 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
                 summary["router_diagnostics"]["ipfs_router"]["status"],
                 {"available", "unavailable"},
             )
+            self.assertEqual(summary["best_complaint"]["search_summary"], summary["search_summary"])
 
             best_bundle = json.loads(best_path.read_text(encoding="utf-8"))
             self.assertIn("initial_complaint_text", best_bundle)

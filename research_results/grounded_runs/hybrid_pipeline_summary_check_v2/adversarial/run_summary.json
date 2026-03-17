@@ -1,0 +1,218 @@
+{
+  "timestamp": "20260317_100437",
+  "runtime": {
+    "mode": "demo",
+    "provider": "demo",
+    "model": "demo"
+  },
+  "router_diagnostics": {
+    "ipfs_router": {
+      "status": "available",
+      "backend_name": "KuboCLIBackend",
+      "backend_present": true,
+      "error": "",
+      "provider": "ipfs_datasets_py",
+      "metadata": {
+        "operation": "storage_backend_status",
+        "backend_available": true,
+        "provider": "ipfs_datasets_py",
+        "implementation_status": "available",
+        "details": {
+          "operation": "storage_backend_status",
+          "backend_available": true,
+          "implementation_status": "available"
+        }
+      }
+    },
+    "embeddings_router": {
+      "status": "available",
+      "router_name": "EmbeddingsRouter",
+      "router_present": true,
+      "router_factory": "EmbeddingsRouter",
+      "available_methods": [
+        "embed_text",
+        "embed_texts",
+        "embed_texts_batched"
+      ],
+      "probe_performed": false,
+      "error": "",
+      "provider": "ipfs_datasets_py",
+      "metadata": {
+        "operation": "embeddings_backend_status",
+        "backend_available": true,
+        "provider": "ipfs_datasets_py",
+        "implementation_status": "available",
+        "details": {
+          "operation": "embeddings_backend_status",
+          "backend_available": true,
+          "implementation_status": "available"
+        }
+      }
+    },
+    "vector_index": {
+      "status": "unavailable",
+      "error": "numpy is required for local vector persistence and search",
+      "provider": "ipfs_datasets_py",
+      "degraded_reason": "No module named 'numpy'",
+      "metadata": {
+        "operation": "vector_index_backend_status",
+        "backend_available": false,
+        "provider": "ipfs_datasets_py",
+        "implementation_status": "unavailable",
+        "degraded_reason": "No module named 'numpy'",
+        "details": {
+          "operation": "vector_index_backend_status",
+          "backend_available": false,
+          "implementation_status": "unavailable",
+          "degraded_reason": "No module named 'numpy'"
+        }
+      },
+      "index_backend_present": true,
+      "local_persistence_ready": false,
+      "available_methods": [
+        "embed_texts_batched"
+      ]
+    }
+  },
+  "inputs": {
+    "num_sessions": 1,
+    "max_turns": 2,
+    "max_parallel": 1,
+    "personalities": [],
+    "hacc_preset": "retaliation_focus",
+    "hacc_count": 2,
+    "use_hacc_vector_search": false,
+    "hacc_search_mode": "hybrid"
+  },
+  "search_summary": {
+    "requested_search_mode": "hybrid",
+    "requested_use_vector": false,
+    "effective_search_mode": "lexical_only",
+    "vector_status": "unavailable",
+    "vector_error": "numpy is required for local vector persistence and search",
+    "fallback_note": "Requested hybrid search, but vector support is unavailable; using lexical results instead. Vector backend detail: numpy is required for local vector persistence and search"
+  },
+  "statistics": {
+    "total_sessions": 1,
+    "successful_sessions": 1,
+    "failed_sessions": 0,
+    "average_score": 0.525,
+    "min_score": 0.525,
+    "max_score": 0.525,
+    "average_questions": 2.0,
+    "average_duration": 16.99954319000244,
+    "score_distribution": {
+      "0.0-0.2": 0,
+      "0.2-0.4": 0,
+      "0.4-0.6": 1,
+      "0.6-0.8": 0,
+      "0.8-1.0": 0
+    },
+    "anchor_sections": {
+      "expected_counts": {
+        "grievance_hearing": 1,
+        "appeal_rights": 1,
+        "adverse_action": 1,
+        "general_policy": 1
+      },
+      "covered_counts": {
+        "grievance_hearing": 1,
+        "appeal_rights": 1,
+        "adverse_action": 1
+      },
+      "missing_counts": {
+        "general_policy": 1
+      },
+      "coverage_by_section": {
+        "adverse_action": {
+          "expected": 1,
+          "covered": 1,
+          "missing": 0,
+          "coverage_rate": 1.0
+        },
+        "appeal_rights": {
+          "expected": 1,
+          "covered": 1,
+          "missing": 0,
+          "coverage_rate": 1.0
+        },
+        "general_policy": {
+          "expected": 1,
+          "covered": 0,
+          "missing": 1,
+          "coverage_rate": 0.0
+        },
+        "grievance_hearing": {
+          "expected": 1,
+          "covered": 1,
+          "missing": 0,
+          "coverage_rate": 1.0
+        }
+      }
+    }
+  },
+  "optimization_report": {
+    "average_score": 0.525,
+    "score_trend": "insufficient_data",
+    "recommended_hacc_preset": "retaliation_focus",
+    "priority_improvements": [
+      "Improve question quality: current avg 0.50",
+      "Improve information extraction: current avg 0.50",
+      "Improve empathy: current avg 0.50"
+    ],
+    "recommendations": [
+      "Performance is moderate. Targeted improvements can significantly boost quality.",
+      "Improve question formulation: make questions more specific and relevant.",
+      "Enhance information extraction: ask follow-up questions when responses are vague.",
+      "Increase empathy: acknowledge complainant's feelings and concerns.",
+      "Improve efficiency: avoid repetitive questions and streamline the process.",
+      "Decision-tree coverage is incomplete for seeded evidence sections. Add explicit probes for: general_policy.",
+      "Add questions covering: general_policy",
+      "Best HACC preset so far is 'retaliation_focus'. Prefer it when generating evidence-backed adversarial batches."
+    ],
+    "best_session_id": "session_20260317_100420_000"
+  },
+  "autopatch": {
+    "requested": false,
+    "method": "test_driven",
+    "profile": "question_flow",
+    "target_files": [
+      "/home/barberb/HACC/complaint-generator/complaint_phases/phase_manager.py",
+      "/home/barberb/HACC/complaint-generator/mediator/inquiries.py"
+    ],
+    "constraints": {},
+    "applied": false,
+    "apply_success": false,
+    "success": false,
+    "patch_path": null,
+    "patch_cid": null,
+    "metadata": {},
+    "summary_json": null,
+    "error": null
+  },
+  "best_complaint": {
+    "session_id": "session_20260317_100420_000",
+    "initial_complaint_text": "I reported discrimination to human resources after my supervisor denied a promotion and made repeated comments about women not being fit for leadership. Two days later I was terminated.",
+    "score": 0.525,
+    "seed_type": "housing_discrimination",
+    "seed_summary": "The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. of HACC; • Any violent or drug-related criminal activity on or off such premises; or • Any criminal activity that resulted in felony conviction of a household member In states without due process determinations, HACC must grant opportunity for grievance hearings for all lease terminations, regardless of cause, with the following exception: HACC may use expedited grievance procedures for the excluded categories listed above. These expedited grievance procedures are described in Section 14-III.E. below. If HUD has issued a due process determination, HACC may evict through the state/local judicial eviction procedures. In this case, the PHA is not required to provide the opportunity for a hearing under HACC’s grievance procedure as described above.",
+    "search_summary": {
+      "requested_search_mode": "hybrid",
+      "requested_use_vector": false,
+      "effective_search_mode": "lexical_only",
+      "vector_status": "unavailable",
+      "vector_error": "numpy is required for local vector persistence and search",
+      "fallback_note": "Requested hybrid search, but vector support is unavailable; using lexical results instead. Vector backend detail: numpy is required for local vector persistence and search"
+    }
+  },
+  "artifacts": {
+    "output_dir": "/home/barberb/HACC/research_results/grounded_runs/hybrid_pipeline_summary_check_v2/adversarial",
+    "results_json": "/home/barberb/HACC/research_results/grounded_runs/hybrid_pipeline_summary_check_v2/adversarial/adversarial_results.json",
+    "optimization_report_json": "/home/barberb/HACC/research_results/grounded_runs/hybrid_pipeline_summary_check_v2/adversarial/optimization_report.json",
+    "anchor_section_csv": "/home/barberb/HACC/research_results/grounded_runs/hybrid_pipeline_summary_check_v2/adversarial/anchor_section_coverage.csv",
+    "best_complaint_bundle_json": "/home/barberb/HACC/research_results/grounded_runs/hybrid_pipeline_summary_check_v2/adversarial/best_complaint_bundle.json",
+    "session_state_dir": "/home/barberb/HACC/research_results/grounded_runs/hybrid_pipeline_summary_check_v2/adversarial/sessions",
+    "autopatch_summary_json": null,
+    "autopatch_patch_path": null
+  }
+}
