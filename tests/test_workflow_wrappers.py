@@ -18,6 +18,54 @@ def _load_module(path: Path, name: str):
 
 
 class WorkflowWrapperTests(unittest.TestCase):
+    def test_run_collection_collect_from_brave_api_uses_shared_engine_discovery(self) -> None:
+        module = _load_module(
+            Path("/home/barberb/HACC/research_data/scripts/run_collection.py"),
+            "run_collection_shared_search_test",
+        )
+
+        class FakeEngine:
+            def __init__(self, *args, **kwargs):
+                self.calls = []
+
+            def discover(self, query, *, max_results=10, engines=None, domain_filter=None, scrape=False):
+                self.calls.append(
+                    {
+                        "query": query,
+                        "max_results": max_results,
+                        "engines": list(engines or []),
+                        "domain_filter": list(domain_filter or []),
+                        "scrape": scrape,
+                    }
+                )
+                return {
+                    "results": [
+                        {
+                            "url": "https://www.clackamas.us/housingauthority/policy.pdf",
+                            "title": "Policy PDF",
+                            "description": "Housing policy",
+                            "source_type": "web_discovery",
+                        },
+                        {
+                            "url": "https://www.clackamas.us/housingauthority/not-a-pdf",
+                            "title": "HTML page",
+                            "description": "Ignored non-PDF",
+                            "source_type": "web_discovery",
+                        },
+                    ]
+                }
+
+        with patch.object(module, "HACCResearchEngine", FakeEngine):
+            orchestrator = module.CollectionOrchestrator()
+            results = orchestrator.collect_from_brave_api()
+
+        self.assertEqual(len(results), 1)
+        self.assertEqual(results[0]["url"], "https://www.clackamas.us/housingauthority/policy.pdf")
+        self.assertEqual(len(orchestrator.engine.calls), len(module.DEFAULT_QUERIES))
+        self.assertEqual(orchestrator.engine.calls[0]["engines"], ["brave", "duckduckgo"])
+        self.assertEqual(orchestrator.engine.calls[0]["domain_filter"], ["clackamas.us"])
+        self.assertFalse(orchestrator.engine.calls[0]["scrape"])
+
     def test_ingest_third_party_wrapper_uses_shared_ingest_and_writes_results(self) -> None:
         module = _load_module(
             Path("/home/barberb/HACC/research_data/scripts/ingest_third_party_into_corpus.py"),

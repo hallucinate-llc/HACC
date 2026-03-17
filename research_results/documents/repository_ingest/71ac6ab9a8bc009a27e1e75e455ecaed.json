@@ -1,0 +1,69 @@
+{
+  "title": "README",
+  "relative_path": "README.md",
+  "source_type": "repository_evidence",
+  "filename": "README.md",
+  "mime_type": "text/markdown",
+  "size": 31083,
+  "backend_available": true,
+  "parser_version": "documents-adapter:1",
+  "source": "file",
+  "chunk_count": 33,
+  "paragraph_count": 1,
+  "text_length": 27757,
+  "input_format": "text",
+  "page_count": 1,
+  "extraction_method": "text_normalization",
+  "parse_quality": {
+    "quality_score": 98.0,
+    "quality_tier": "high",
+    "quality_flags": [],
+    "ocr_used": false
+  },
+  "source_span": {
+    "char_start": 0,
+    "char_end": 27757,
+    "text_length": 27757,
+    "raw_size": 31083,
+    "page_count": 1
+  },
+  "transform_lineage": {
+    "source": "file",
+    "parser_version": "documents-adapter:1",
+    "input_format": "text",
+    "normalization": "text_normalization",
+    "chunking": {
+      "chunk_size": 1000,
+      "overlap": 100,
+      "chunk_count": 33
+    },
+    "extraction": {
+      "method": "text_normalization",
+      "ocr_used": false,
+      "page_count": 1
+    },
+    "source_span": {
+      "char_start": 0,
+      "char_end": 27757,
+      "text_length": 27757,
+      "raw_size": 31083,
+      "page_count": 1
+    }
+  },
+  "operation": "parse_document_text",
+  "provider": "ipfs_datasets_py",
+  "implementation_status": "implemented",
+  "details": {
+    "operation": "parse_document_text",
+    "backend_available": true,
+    "implementation_status": "implemented"
+  },
+  "record_id": "71ac6ab9a8bc009a27e1e75e455ecaed",
+  "checksum": "5733700ccbbcf42519676b1d8319a50f8606002be0ea85acd2e523d78e454984",
+  "source_path": "/home/barberb/HACC/README.md",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/71ac6ab9a8bc009a27e1e75e455ecaed.txt",
+  "content_type": "text/markdown",
+  "ocr_attempted": false,
+  "ocr_used": false,
+  "needs_ocr": false
+}

@@ -12,7 +12,7 @@ import os
 import sys
 from datetime import datetime
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Optional, Sequence
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 COMPLAINT_GENERATOR_ROOT = REPO_ROOT / "complaint-generator"
@@ -25,6 +25,7 @@ if str(SCRIPT_DIR) not in sys.path:
 
 from integrations.ipfs_datasets.search import search_multi_engine_web
 from download_manager import DownloadManager
+from hacc_research import HACCResearchEngine
 from parse_pdfs import PDFParser
 from index_and_tag import DocumentIndexer
 from report_generator import ReportGenerator
@@ -54,18 +55,39 @@ class CollectionOrchestrator:
         self.parser = PDFParser()
         self.indexer = DocumentIndexer()
         self.reporter = ReportGenerator()
+        self.engine = HACCResearchEngine(repo_root=REPO_ROOT)
+        self.allowed_domains = ["clackamas.us"]
 
-    def collect_from_brave_api(self) -> List[Dict]:
-        logger.info("Starting shared search collection...")
+    def collect_from_brave_api(
+        self,
+        *,
+        max_results_per_query: int = 10,
+        engines: Optional[Sequence[str]] = None,
+        domain_filter: Optional[Sequence[str]] = None,
+    ) -> List[Dict]:
+        logger.info("Starting shared-engine discovery collection...")
         urls_found: List[Dict] = []
         seen: set[str] = set()
+        configured_engines = list(engines or ["brave", "duckduckgo"])
+        configured_domains = list(domain_filter or self.allowed_domains)
 
         for query in DEFAULT_QUERIES:
             try:
-                results = search_multi_engine_web(query, max_results=10)
+                payload = self.engine.discover(
+                    query,
+                    max_results=max_results_per_query,
+                    engines=configured_engines,
+                    domain_filter=configured_domains,
+                    scrape=False,
+                )
+                results = list(payload.get("results", []) or [])
             except Exception as exc:
-                logger.warning("Search failed for query %s: %s", query, exc)
-                continue
+                logger.warning("Shared discovery failed for query %s: %s", query, exc)
+                try:
+                    results = search_multi_engine_web(query, max_results=max_results_per_query)
+                except Exception as fallback_exc:
+                    logger.warning("Fallback search failed for query %s: %s", query, fallback_exc)
+                    continue
 
             for result in results:
                 url = str(result.get("url") or "")

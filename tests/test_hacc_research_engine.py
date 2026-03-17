@@ -810,6 +810,93 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertEqual(len(calls), 1)
             self.assertEqual(calls[0]["query"], "reasonable accommodation")
 
+    def test_search_defaults_to_package_mode(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            parsed_dir = root / "research_results/documents/parsed"
+            parsed_dir.mkdir(parents=True, exist_ok=True)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=parsed_dir,
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            original_search_package = engine.search_package
+            try:
+                calls = []
+
+                def fake_search_package(query, *, top_k=10, vector_top_k=None, index_name="hacc_corpus", index_dir=None, source_types=None, auto_build_index=True):
+                    calls.append(
+                        {
+                            "query": query,
+                            "top_k": top_k,
+                            "index_name": index_name,
+                            "index_dir": index_dir,
+                            "auto_build_index": auto_build_index,
+                        }
+                    )
+                    return {"status": "success", "query": query, "results": [{"document_id": "package-doc"}]}
+
+                engine.search_package = fake_search_package
+                payload = engine.search("reasonable accommodation", top_k=2)
+            finally:
+                engine.search_package = original_search_package
+
+            self.assertEqual(payload["results"][0]["document_id"], "package-doc")
+            self.assertEqual(len(calls), 1)
+            self.assertEqual(calls[0]["query"], "reasonable accommodation")
+
+    def test_research_defaults_to_package_mode_for_local_search(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            parsed_dir = root / "research_results/documents/parsed"
+            parsed_dir.mkdir(parents=True, exist_ok=True)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=parsed_dir,
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            original_search = engine.search
+            original_discover = engine.discover
+            original_discover_legal_authorities = engine.discover_legal_authorities
+            try:
+                search_calls = []
+
+                def fake_search(query, *, top_k=10, use_vector=False, search_mode="auto", vector_top_k=None, index_name="hacc_corpus", index_dir=None, source_types=None, min_score=0.0):
+                    search_calls.append(
+                        {
+                            "query": query,
+                            "top_k": top_k,
+                            "search_mode": search_mode,
+                            "use_vector": use_vector,
+                        }
+                    )
+                    return {"status": "success", "query": query, "results": []}
+
+                engine.search = fake_search
+                engine.discover = lambda *args, **kwargs: {"status": "success", "results": []}
+                engine.discover_legal_authorities = lambda *args, **kwargs: {"status": "success", "results": [], "result_count": 0}
+                payload = engine.research("reasonable accommodation retaliation", local_top_k=1, web_max_results=1)
+            finally:
+                engine.search = original_search
+                engine.discover = original_discover
+                engine.discover_legal_authorities = original_discover_legal_authorities
+
+            self.assertEqual(payload["status"], "success")
+            self.assertEqual(search_calls[0]["search_mode"], "package")
+            self.assertEqual(search_calls[0]["top_k"], 1)
+
     def test_research_includes_shared_legal_discovery(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

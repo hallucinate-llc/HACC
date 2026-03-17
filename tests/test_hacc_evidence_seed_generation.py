@@ -13,7 +13,7 @@ if str(COMPLAINT_GENERATOR_ROOT) not in sys.path:
     sys.path.insert(0, str(COMPLAINT_GENERATOR_ROOT))
 
 from adversarial_harness.complainant import Complainant
-from adversarial_harness.hacc_evidence import build_hacc_evidence_seeds, build_hacc_mediator_evidence_packet, _summarize_hit, _extract_source_window, _filter_section_labels_for_anchor_terms, _load_hacc_engine
+from adversarial_harness.hacc_evidence import build_hacc_evidence_seeds, build_hacc_mediator_evidence_packet, resolve_hacc_question_evidence, _summarize_hit, _extract_source_window, _filter_section_labels_for_anchor_terms, _load_hacc_engine
 
 
 class HacceEvidenceSeedGenerationTests(unittest.TestCase):
@@ -25,7 +25,12 @@ class HacceEvidenceSeedGenerationTests(unittest.TestCase):
 
     def test_build_hacc_evidence_seeds_includes_grounded_complainant_fields(self) -> None:
         class FakeEngine:
-            def search(self, query, top_k=3, use_vector=False):
+            def __init__(self):
+                self.last_search_mode = None
+                self.last_grounding_search_mode = None
+
+            def search(self, query, top_k=3, use_vector=False, search_mode="auto"):
+                self.last_search_mode = search_mode
                 return {
                     "results": [
                         {
@@ -39,7 +44,8 @@ class HacceEvidenceSeedGenerationTests(unittest.TestCase):
                     ]
                 }
 
-            def build_grounding_bundle(self, query, top_k=3, claim_type="housing_discrimination", use_vector=False):
+            def build_grounding_bundle(self, query, top_k=3, claim_type="housing_discrimination", search_mode="package", use_vector=False):
+                self.last_grounding_search_mode = search_mode
                 return {
                     "upload_candidates": [
                         {
@@ -85,10 +91,13 @@ class HacceEvidenceSeedGenerationTests(unittest.TestCase):
             }
         ]
 
-        with mock.patch("adversarial_harness.hacc_evidence._load_hacc_engine", return_value=FakeEngine):
+        fake_engine = FakeEngine()
+        with mock.patch("adversarial_harness.hacc_evidence._load_hacc_engine", return_value=lambda *args, **kwargs: fake_engine):
             seeds = build_hacc_evidence_seeds(count=1, query_specs=query_specs)
 
         self.assertEqual(len(seeds), 1)
+        self.assertEqual(fake_engine.last_search_mode, "package")
+        self.assertEqual(fake_engine.last_grounding_search_mode, "package")
         key_facts = seeds[0]["key_facts"]
         self.assertIn("repository_evidence_candidates", key_facts)
         self.assertIn("synthetic_prompts", key_facts)
@@ -98,6 +107,47 @@ class HacceEvidenceSeedGenerationTests(unittest.TestCase):
         self.assertTrue(key_facts["complainant_story_facts"])
         self.assertIn("complaint_chatbot_prompt", key_facts["synthetic_prompts"])
         self.assertEqual(key_facts["mediator_evidence_packets"][0]["document_text"], "Repository evidence about grievance hearings and written notice.")
+
+    def test_resolve_hacc_question_evidence_uses_package_search_mode(self) -> None:
+        class FakeEngine:
+            def __init__(self):
+                self.calls = []
+
+            def search(self, query, top_k=4, use_vector=False, search_mode="auto"):
+                self.calls.append(
+                    {
+                        "query": query,
+                        "top_k": top_k,
+                        "use_vector": use_vector,
+                        "search_mode": search_mode,
+                    }
+                )
+                return {
+                    "results": [
+                        {
+                            "document_id": "doc-1",
+                            "title": "ADMINISTRATIVE PLAN",
+                            "source_type": "repository_evidence",
+                            "source_path": str(REPO_ROOT / "README.txt"),
+                            "score": 0.91,
+                            "snippet": "Residents may request an informal hearing and written notice of adverse action.",
+                        }
+                    ]
+                }
+
+        fake_engine = FakeEngine()
+        with mock.patch("adversarial_harness.hacc_evidence._get_hacc_engine_instance", return_value=fake_engine):
+            payload = resolve_hacc_question_evidence(
+                question="What hearing rights were denied?",
+                key_facts={
+                    "evidence_query": "grievance hearing written notice adverse action",
+                    "anchor_terms": ["informal hearing", "written notice"],
+                },
+            )
+
+        self.assertEqual(fake_engine.calls[0]["search_mode"], "package")
+        self.assertIn("informal hearing", fake_engine.calls[0]["query"])
+        self.assertEqual(payload["evidence_items"][0]["title"], "ADMINISTRATIVE PLAN")
 
     def test_complainant_prompt_prefers_grounded_case_digest(self) -> None:
         seed = {
