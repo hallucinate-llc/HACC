@@ -314,17 +314,17 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertEqual(len(payload["upload_candidates"]), 1)
             self.assertEqual(payload["upload_candidates"][0]["relative_path"], "README.md")
             self.assertEqual(payload["evidence_summary"], "Reasonable Accommodation Policy Uploadable repository evidence about hearing rights.")
-            self.assertEqual(set(payload["anchor_sections"]), {"reasonable_accommodation", "grievance_hearing"})
+            self.assertEqual(set(payload["anchor_sections"]), {"reasonable_accommodation"})
             self.assertEqual(
                 set(payload["anchor_passages"][0]["section_labels"]),
-                {"reasonable_accommodation", "grievance_hearing"},
+                {"reasonable_accommodation"},
             )
             prompts = payload["synthetic_prompts"]
             self.assertEqual(len(prompts["evidence_upload_prompts"]), 1)
             self.assertIn("Upload the evidence file", prompts["evidence_upload_prompts"][0]["text"])
             self.assertEqual(
                 set(prompts["evidence_upload_prompts"][0]["anchor_sections"]),
-                {"reasonable_accommodation", "grievance_hearing"},
+                {"reasonable_accommodation"},
             )
             self.assertIn("Evaluate each uploaded evidence item", prompts["mediator_evaluation_prompt"])
             self.assertIn("Prioritize these anchor sections", prompts["mediator_evaluation_prompt"])
@@ -333,12 +333,12 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertIn("What happened, and what adverse action did HACC take", prompts["intake_questionnaire_prompt"])
             self.assertIn("Anchor the intake to these policy sections", prompts["intake_questionnaire_prompt"])
             self.assertEqual(len(prompts["intake_questions"]), 6)
-            self.assertEqual(set(prompts["anchor_sections"]), {"reasonable_accommodation", "grievance_hearing"})
+            self.assertEqual(set(prompts["anchor_sections"]), {"reasonable_accommodation"})
             self.assertEqual(len(payload["mediator_evidence_packets"]), 1)
             self.assertEqual(payload["mediator_evidence_packets"][0]["relative_path"], "README.md")
             self.assertEqual(
                 set(payload["mediator_evidence_packets"][0]["metadata"]["anchor_sections"]),
-                {"reasonable_accommodation", "grievance_hearing"},
+                {"reasonable_accommodation"},
             )
 
     def test_select_uploadable_results_preserves_match_context(self) -> None:
@@ -383,6 +383,40 @@ class HACCResearchEngineTests(unittest.TestCase):
 
             self.assertEqual(candidates[0]["matched_rules"][0]["section_title"], "Appeal Procedures")
             self.assertEqual(candidates[0]["matched_entities"][0]["name"], "informal hearing")
+
+    def test_candidate_anchor_sections_uses_matched_entity_context_for_appeal_rights(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            labels = engine._candidate_anchor_sections(
+                {
+                    "title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+                    "snippet": "Grievance: Any dispute a tenant may have with respect to HACC action or failure to act.",
+                    "matched_rules": [
+                        {
+                            "text": "In states without due process determinations, HACC must grant opportunity for grievance procedures.",
+                            "section_title": "Sample Grievance Procedure",
+                        }
+                    ],
+                    "matched_entities": [
+                        {"name": "The notice must also state that the tenant may request a grievance hearing", "type": "policy_rule"},
+                        {"name": "right to appeal HACC's decision", "type": "policy_rule"},
+                    ],
+                }
+            )
+
+            self.assertIn("grievance_hearing", labels)
+            self.assertIn("appeal_rights", labels)
 
     def test_select_uploadable_results_prefers_stronger_scores_over_source_type_bias(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -633,6 +667,7 @@ class HACCResearchEngineTests(unittest.TestCase):
 
             self.assertEqual(payload["status"], "success")
             self.assertEqual(payload["backend_mode"], "shared_hybrid")
+            self.assertEqual(payload["effective_search_mode"], "shared_hybrid")
             self.assertEqual(payload["results"][0]["document_id"], "vector-doc")
             self.assertEqual(len(build_calls), 1)
             self.assertEqual(len(hybrid_calls), 1)
@@ -673,8 +708,10 @@ class HACCResearchEngineTests(unittest.TestCase):
 
             self.assertEqual(payload["status"], "success")
             self.assertEqual(payload["backend_mode"], "lexical_fallback")
+            self.assertEqual(payload["effective_search_mode"], "lexical_fallback")
             self.assertEqual(payload["results"][0]["document_id"], "doc1")
             self.assertEqual(payload["vector_status"], "unavailable")
+            self.assertIn("using lexical results instead", payload["fallback_note"])
 
     def test_hybrid_search_merges_lexical_and_vector_results(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -823,6 +860,8 @@ class HACCResearchEngineTests(unittest.TestCase):
 
             self.assertEqual(payload["status"], "success")
             self.assertEqual(payload["vector_status"], "unavailable")
+            self.assertEqual(payload["effective_search_mode"], "lexical_only")
+            self.assertIn("using lexical results instead", payload["fallback_note"])
             self.assertEqual(payload["results"][0]["document_id"], "housing_policy")
 
     def test_search_auto_prefers_hybrid_when_shared_vector_index_exists(self) -> None:

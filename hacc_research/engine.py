@@ -44,6 +44,10 @@ try:
         search_recap_documents,
         search_us_code,
     )
+    from adversarial_harness.hacc_evidence import (
+        ANCHOR_SECTION_PATTERNS as CG_ANCHOR_SECTION_PATTERNS,
+        _classify_anchor_sections as classify_anchor_sections,
+    )
 except Exception as exc:  # pragma: no cover - exercised through fallback behavior
     DOCUMENTS_AVAILABLE = False
     DOCUMENTS_ERROR = str(exc)
@@ -65,6 +69,48 @@ except Exception as exc:  # pragma: no cover - exercised through fallback behavi
     search_federal_register = None
     search_recap_documents = None
     search_us_code = None
+    CG_ANCHOR_SECTION_PATTERNS = {
+        "grievance_hearing": (
+            "grievance hearing",
+            "informal hearing",
+            "impartial person",
+            "hearing process",
+            "hearing procedures",
+            "request a grievance hearing",
+        ),
+        "appeal_rights": (
+            "appeal",
+            "review",
+            "right to appeal",
+            "right to request",
+            "due process",
+            "due process rights",
+            "final decision",
+            "written notice",
+        ),
+        "reasonable_accommodation": ("reasonable accommodation", "person with a disability", "disability", "accommodation"),
+        "adverse_action": (
+            "termination",
+            "termination decision",
+            "denial",
+            "adverse action",
+            "admission",
+            "occupancy",
+            "terminate assistance",
+            "discontinued",
+            "notice of adverse action",
+        ),
+        "selection_criteria": ("selection", "screening", "criteria", "evaluation", "prioritization"),
+    }
+
+    def classify_anchor_sections(snippet: str) -> List[str]:
+        normalized = str(snippet or "").strip().lower()
+        labels: List[str] = []
+        for label, patterns in CG_ANCHOR_SECTION_PATTERNS.items():
+            if any(pattern in normalized for pattern in patterns):
+                labels.append(label)
+        return labels or ["general_policy"]
+
     INTEGRATION_IMPORT_ERROR = str(exc)
 else:
     INTEGRATION_IMPORT_ERROR = None
@@ -179,6 +225,16 @@ def _safe_json_load(path: Path) -> Dict[str, Any]:
         return json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         return {}
+
+
+def _build_fallback_note(*, requested_mode: str, vector_status: str = "", vector_error: str = "") -> str:
+    normalized_requested = _clean_text(requested_mode) or "hybrid"
+    normalized_status = _clean_text(vector_status) or "unavailable"
+    normalized_error = _clean_text(vector_error)
+    note = f"Requested {normalized_requested} search, but vector support is {normalized_status}; using lexical results instead."
+    if normalized_error:
+        note = f"{note} Vector backend detail: {normalized_error}"
+    return note
 
 
 @dataclass
@@ -393,12 +449,19 @@ class HACCResearchEngine:
                 source_types=source_types,
             )
             payload["backend_mode"] = "shared_hybrid"
+            payload.setdefault("effective_search_mode", "shared_hybrid")
         else:
             payload = self.search_local(query_text, top_k=top_k, source_types=source_types)
             payload["backend_mode"] = "lexical_fallback"
+            payload["effective_search_mode"] = "lexical_fallback"
             payload["vector_status"] = "unavailable"
             if index_status and index_status.get("status") == "unavailable":
                 payload["vector_error"] = index_status.get("error")
+            payload["fallback_note"] = _build_fallback_note(
+                requested_mode="package/shared_hybrid",
+                vector_status=str(payload.get("vector_status") or "unavailable"),
+                vector_error=str(payload.get("vector_error") or ""),
+            )
 
         payload["index_status"] = index_status or {
             "status": "existing" if vector_ready else "skipped",
@@ -617,7 +680,7 @@ class HACCResearchEngine:
                 }
 
         ranked = sorted(merged.values(), key=lambda item: (-float(item.get("score", 0.0)), item.get("title", "")))
-        return {
+        payload = {
             "status": "success",
             "query": _clean_text(query),
             "results": ranked[:top_k],
@@ -627,6 +690,16 @@ class HACCResearchEngine:
             "vector_error": vector.get("error"),
             "integration_status": self._integration_status(),
         }
+        if vector.get("status") == "success":
+            payload["effective_search_mode"] = "hybrid"
+        else:
+            payload["effective_search_mode"] = "lexical_only"
+            payload["fallback_note"] = _build_fallback_note(
+                requested_mode="hybrid",
+                vector_status=str(vector.get("status") or "unavailable"),
+                vector_error=str(vector.get("error") or ""),
+            )
+        return payload
 
     def search_local(
         self,
@@ -1552,29 +1625,38 @@ class HACCResearchEngine:
         return _clean_text(str(candidate.get("snippet") or ""))
 
     def _candidate_anchor_sections(self, candidate: Dict[str, Any]) -> List[str]:
-        sections: List[str] = []
-        seen: set[str] = set()
+        evidence_fragments: List[str] = [
+            _clean_text(str(candidate.get("title") or "")),
+            _clean_text(str(candidate.get("snippet") or "")),
+        ]
         for rule in list(candidate.get("matched_rules") or []):
-            section_title = _clean_text(str(rule.get("section_title") or "")).lower()
-            text = " ".join(
-                [
-                    _clean_text(str(rule.get("text") or "")),
-                    section_title,
-                    _clean_text(str(candidate.get("snippet") or "")),
-                ]
-            ).lower()
-            for label, terms in {
-                "grievance_hearing": ("grievance", "informal hearing", "hearing"),
-                "appeal_rights": ("appeal", "review decision", "written notice", "informal review"),
-                "reasonable_accommodation": ("reasonable accommodation", "accommodation", "disability"),
-                "adverse_action": ("adverse action", "termination", "denial", "notice"),
-            }.items():
-                if label in seen:
+            evidence_fragments.append(_clean_text(str(rule.get("text") or "")))
+            evidence_fragments.append(_clean_text(str(rule.get("section_title") or "")))
+        for entity in list(candidate.get("matched_entities") or []):
+            evidence_fragments.append(_clean_text(str(entity.get("name") or "")))
+            evidence_fragments.append(_clean_text(str(entity.get("type") or "")))
+
+        combined_text = " ".join(fragment for fragment in evidence_fragments if fragment)
+        labels = [
+            str(label)
+            for label in classify_anchor_sections(combined_text)
+            if str(label) and str(label) != "general_policy"
+        ]
+
+        if labels:
+            return labels
+
+        # Fall back to per-fragment classification so a short but precise rule can still surface a label.
+        seen: set[str] = set()
+        resolved: List[str] = []
+        for fragment in evidence_fragments:
+            for label in classify_anchor_sections(fragment):
+                label_text = str(label)
+                if not label_text or label_text == "general_policy" or label_text in seen:
                     continue
-                if any(term in text for term in terms):
-                    seen.add(label)
-                    sections.append(label)
-        return sections
+                seen.add(label_text)
+                resolved.append(label_text)
+        return resolved
 
     def _build_grounding_overview(self, upload_candidates: Sequence[Dict[str, Any]]) -> Dict[str, Any]:
         anchor_passages: List[Dict[str, Any]] = []
