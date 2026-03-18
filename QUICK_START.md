@@ -41,6 +41,35 @@ Artifacts land in `research_results/grounded_runs/<timestamp>/` and include:
 - `adversarial/` — batch results and best session bundle
 - `complaint_synthesis/draft_complaint_package.json`
 - `complaint_synthesis/draft_complaint_package.md`
+- `complaint_synthesis/intake_follow_up_worksheet.json`
+- `complaint_synthesis/intake_follow_up_worksheet.md`
+
+### Option 0B: Fill Missing Facts And Rerun
+
+**Best for:** Taking the generated worksheet, filling in the missing case-specific facts, and rerunning the grounded complaint pipeline with those answers merged back in.
+
+```bash
+# 1. Validate the worksheet and fail fast if required answers are still missing
+python3 complaint-generator/scripts/validate_intake_follow_up_worksheet.py \
+  research_results/grounded_runs/<timestamp>/complaint_synthesis/intake_follow_up_worksheet.json \
+  --require-complete \
+  --in-place
+
+# 2. Rerun the full grounded complaint pipeline with the completed worksheet
+python3 rerun_hacc_with_intake_worksheet.py \
+  research_results/grounded_runs/<timestamp>/complaint_synthesis/intake_follow_up_worksheet.json \
+  -- \
+  --demo \
+  --synthesize-complaint \
+  --filing-forum hud
+```
+
+The rerun wrapper will:
+
+- normalize and validate the worksheet
+- print a short preflight summary of answered/open/invalid items
+- stop before rerun if required answers are still missing
+- rerun `hacc_grounded_pipeline.py` with `--completed-intake-worksheet`
 
 ### Option A: Manual Evidence Collection (No API Keys Required)
 
