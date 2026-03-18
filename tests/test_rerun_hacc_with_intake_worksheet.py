@@ -50,8 +50,10 @@ def test_main_validates_then_reruns_pipeline_with_completed_worksheet(tmp_path, 
     assert "hud" in pipeline_cmd
 
 
-def test_main_stops_when_validation_fails():
-    worksheet = "/tmp/intake_follow_up_worksheet.json"
+def test_main_stops_when_validation_fails(tmp_path):
+    worksheet_path = tmp_path / "intake_follow_up_worksheet.json"
+    worksheet_path.write_text("{}", encoding="utf-8")
+    worksheet = str(worksheet_path)
 
     def fake_run(cmd, cwd=None, check=False):
         if cmd[1].endswith("validate_intake_follow_up_worksheet.py"):
