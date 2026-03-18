@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "created_at": "2026-03-17T23:39:10.805540+00:00",
+    "last_updated": "2026-03-17T23:39:44.127995+00:00",
+    "version": "1.0"
+  },
+  "entities": {
+    "entity_1": {
+      "id": "entity_1",
+      "type": "claim",
+      "name": "Discrimination Claim",
+      "attributes": {
+        "claim_type": "discrimination",
+        "description": "I need to file a complaint about housing_discrimination. The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. If HACC denies a request for an accommodation because it is not reasonable (it would impose an und..."
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_2": {
+      "id": "entity_2",
+      "type": "claim",
+      "name": "Accommodation Request",
+      "attributes": {
+        "claim_type": "accommodation",
+        "description": "I need to file a complaint about housing_discrimination. The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. If HACC denies a request for an accommodation because it is not reasonable (it would impose an und..."
+      },
+      "confidence": 0.8,
+      "source": "complaint"
+    },
+    "entity_3": {
+      "id": "entity_3",
+      "type": "evidence",
+      "name": "Notice",
+      "attributes": {
+        "evidence_type": "notice",
+        "description": "I need to file a complaint about housing_discrimination. The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. If HACC denies a request for an accommodation because it is not reasonable (it would impose an und..."
+      },
+      "confidence": 0.55,
+      "source": "complaint"
+    },
+    "entity_4": {
+      "id": "entity_4",
+      "type": "evidence",
+      "name": "Policy",
+      "attributes": {
+        "evidence_type": "policy",
+        "description": "I need to file a complaint about housing_discrimination. The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. If HACC denies a request for an accommodation because it is not reasonable (it would impose an und..."
+      },
+      "confidence": 0.55,
+      "source": "complaint"
+    },
+    "entity_5": {
+      "id": "entity_5",
+      "type": "fact",
+      "name": "Impact: I need to file a complaint about housing_discrimination. ...",
+      "attributes": {
+        "fact_type": "impact",
+        "description": "I need to file a complaint about housing_discrimination. The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. If HACC denies a request for an accommodation because it is not reasonable (it would impose an und..."
+      },
+      "confidence": 0.55,
+      "source": "complaint"
+    },
+    "entity_6": {
+      "id": "entity_6",
+      "type": "fact",
+      "name": "Requested remedy: I need to file a complaint about housing_discrimination. ...",
+      "attributes": {
+        "fact_type": "remedy",
+        "description": "I need to file a complaint about housing_discrimination. The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. If HACC denies a request for an accommodation because it is not reasonable (it would impose an und..."
+      },
+      "confidence": 0.55,
+      "source": "complaint"
+    },
+    "entity_7": {
+      "id": "entity_7",
+      "type": "person",
+      "name": "HR",
+      "attributes": {
+        "role": "hr"
+      },
+      "confidence": 0.55,
+      "source": "complaint"
+    },
+    "entity_8": {
+      "id": "entity_8",
+      "type": "fact",
+      "name": "Timeline detail: I'm not sure how to answer that right now. Can you rephra...",
+      "attributes": {
+        "fact_type": "timeline",
+        "description": "I'm not sure how to answer that right now. Can you rephrase the question?"
+      },
+      "confidence": 0.6,
+      "source": "complaint"
+    }
+  },
+  "relationships": {}
+}

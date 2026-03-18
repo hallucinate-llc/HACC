@@ -1216,6 +1216,8 @@ def run_hacc_adversarial_batch(
             "recommended_hacc_preset": optimization_payload.get("recommended_hacc_preset"),
             "priority_improvements": optimization_payload.get("priority_improvements"),
             "recommendations": optimization_payload.get("recommendations"),
+            "intake_priority_performance": optimization_payload.get("intake_priority_performance"),
+            "coverage_remediation": optimization_payload.get("coverage_remediation"),
             "best_session_id": optimization_payload.get("best_session_id"),
         },
         "autopatch": _sanitize_for_json(autopatch_summary),
@@ -1319,6 +1321,13 @@ def main(argv: Optional[List[str]] = None) -> int:
     else:
         print(f"Output directory: {summary['artifacts']['output_dir']}")
         print(f"Best complaint score: {summary['best_complaint']['score']:.3f}")
+        print(
+            "HACC search mode: "
+            f"requested={summary['search_summary']['requested_search_mode']} "
+            f"effective={summary['search_summary']['effective_search_mode']}"
+        )
+        if summary["search_summary"].get("fallback_note"):
+            print(f"HACC search fallback: {summary['search_summary']['fallback_note']}")
         print(f"Best complaint seed: {summary['best_complaint']['seed_type']} - {summary['best_complaint']['seed_summary']}")
         print(f"Recommended preset: {summary['optimization_report']['recommended_hacc_preset'] or summary['inputs']['hacc_preset']}")
         if summary["autopatch"]["requested"]:

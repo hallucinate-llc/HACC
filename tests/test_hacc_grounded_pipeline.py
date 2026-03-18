@@ -108,7 +108,10 @@ class HACCGroundedPipelineTests(unittest.TestCase):
                 "output_dir": str(Path(tmpdir) / "complaint_synthesis"),
                 "draft_complaint_package_json": str(Path(tmpdir) / "complaint_synthesis" / "draft_complaint_package.json"),
                 "draft_complaint_package_md": str(Path(tmpdir) / "complaint_synthesis" / "draft_complaint_package.md"),
+                "intake_follow_up_worksheet_json": str(Path(tmpdir) / "complaint_synthesis" / "intake_follow_up_worksheet.json"),
+                "intake_follow_up_worksheet_md": str(Path(tmpdir) / "complaint_synthesis" / "intake_follow_up_worksheet.md"),
             }
+            completed_worksheet = str(Path(tmpdir) / "completed_intake_follow_up_worksheet.json")
 
             with mock.patch.object(pipeline, "HACCResearchEngine") as engine_cls:
                 engine = engine_cls.return_value
@@ -127,11 +130,14 @@ class HACCGroundedPipelineTests(unittest.TestCase):
                             demo=True,
                             synthesize_complaint=True,
                             filing_forum="hud",
+                            completed_intake_worksheet=completed_worksheet,
                         )
 
             synth_mock.assert_called_once()
+            self.assertEqual(synth_mock.call_args.kwargs["completed_intake_worksheet"], completed_worksheet)
             self.assertEqual(summary["complaint_synthesis"]["draft_complaint_package_json"], fake_synthesis["draft_complaint_package_json"])
             self.assertEqual(summary["artifacts"]["draft_complaint_package_md"], fake_synthesis["draft_complaint_package_md"])
+            self.assertEqual(summary["artifacts"]["intake_follow_up_worksheet_json"], fake_synthesis["intake_follow_up_worksheet_json"])
 
 
 if __name__ == "__main__":

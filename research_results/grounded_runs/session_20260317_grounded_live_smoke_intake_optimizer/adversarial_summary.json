@@ -1,0 +1,208 @@
+{
+  "timestamp": "20260317_233516",
+  "runtime": {
+    "mode": "llm_router",
+    "provider": "copilot_cli",
+    "model": "gpt-5-mini",
+    "complainant_backend_class": "LLMRouterBackend",
+    "critic_backend_class": "LLMRouterBackend"
+  },
+  "router_diagnostics": {
+    "ipfs_router": {
+      "status": "available",
+      "backend_name": "KuboCLIBackend",
+      "backend_present": true,
+      "error": "",
+      "provider": "ipfs_datasets_py",
+      "metadata": {
+        "operation": "storage_backend_status",
+        "backend_available": true,
+        "provider": "ipfs_datasets_py",
+        "implementation_status": "available",
+        "details": {
+          "operation": "storage_backend_status",
+          "backend_available": true,
+          "implementation_status": "available"
+        }
+      }
+    },
+    "embeddings_router": {
+      "status": "available",
+      "router_name": "EmbeddingsRouter",
+      "router_present": true,
+      "router_factory": "EmbeddingsRouter",
+      "available_methods": [
+        "embed_text",
+        "embed_texts",
+        "embed_texts_batched"
+      ],
+      "probe_performed": false,
+      "error": "",
+      "provider": "ipfs_datasets_py",
+      "metadata": {
+        "operation": "embeddings_backend_status",
+        "backend_available": true,
+        "provider": "ipfs_datasets_py",
+        "implementation_status": "available",
+        "details": {
+          "operation": "embeddings_backend_status",
+          "backend_available": true,
+          "implementation_status": "available"
+        }
+      }
+    },
+    "vector_index": {
+      "status": "available",
+      "index_backend_present": true,
+      "local_persistence_ready": true,
+      "available_methods": [
+        "embed_texts_batched"
+      ],
+      "error": "",
+      "provider": "ipfs_datasets_py",
+      "metadata": {
+        "operation": "vector_index_backend_status",
+        "backend_available": true,
+        "provider": "ipfs_datasets_py",
+        "implementation_status": "available",
+        "details": {
+          "operation": "vector_index_backend_status",
+          "backend_available": true,
+          "implementation_status": "available"
+        }
+      }
+    }
+  },
+  "inputs": {
+    "num_sessions": 1,
+    "max_turns": 2,
+    "max_parallel": 1,
+    "personalities": [],
+    "hacc_preset": "core_hacc_policies",
+    "hacc_count": 3,
+    "use_hacc_vector_search": false,
+    "hacc_search_mode": "package"
+  },
+  "search_summary": {
+    "requested_search_mode": "package",
+    "requested_use_vector": false,
+    "effective_search_mode": "shared_hybrid",
+    "vector_status": "available",
+    "vector_error": "",
+    "fallback_note": ""
+  },
+  "statistics": {
+    "total_sessions": 1,
+    "successful_sessions": 1,
+    "failed_sessions": 0,
+    "average_score": 0.45,
+    "min_score": 0.45,
+    "max_score": 0.45,
+    "average_questions": 2.0,
+    "average_duration": 36.05873417854309,
+    "score_distribution": {
+      "0.0-0.2": 0,
+      "0.2-0.4": 0,
+      "0.4-0.6": 1,
+      "0.6-0.8": 0,
+      "0.8-1.0": 0
+    },
+    "anchor_sections": {
+      "expected_counts": {
+        "grievance_hearing": 1,
+        "appeal_rights": 1
+      },
+      "covered_counts": {},
+      "missing_counts": {
+        "grievance_hearing": 1,
+        "appeal_rights": 1
+      },
+      "coverage_by_section": {
+        "appeal_rights": {
+          "expected": 1,
+          "covered": 0,
+          "missing": 1,
+          "coverage_rate": 0.0
+        },
+        "grievance_hearing": {
+          "expected": 1,
+          "covered": 0,
+          "missing": 1,
+          "coverage_rate": 0.0
+        }
+      }
+    }
+  },
+  "optimization_report": {
+    "average_score": 0.45,
+    "score_trend": "insufficient_data",
+    "recommended_hacc_preset": "core_hacc_policies",
+    "priority_improvements": [
+      "Improve coverage: current avg 0.25",
+      "Improve question quality: current avg 0.50",
+      "Improve information extraction: current avg 0.50"
+    ],
+    "recommendations": [
+      "Overall performance is below average. Focus on fundamental improvements.",
+      "Improve question formulation: make questions more specific and relevant.",
+      "Enhance information extraction: ask follow-up questions when responses are vague.",
+      "Increase empathy: acknowledge complainant's feelings and concerns.",
+      "Improve efficiency: avoid repetitive questions and streamline the process.",
+      "Expand topic coverage: ensure all important aspects are addressed.",
+      "Decision-tree coverage is incomplete for seeded evidence sections. Add explicit probes for: grievance_hearing, appeal_rights.",
+      "Knowledge graph gap count is high on average. Improve gap-reduction logic in complaint_phases/denoiser.py and ensure process_answer updates entities/relationships meaningfully.",
+      "In 1 sessions, KG gaps did not reduce over iterations. Consider making denoiser.process_answer reduce gaps deterministically (e.g., marking gap items as addressed when answers supply the missing fields).",
+      "Knowledge graph relationships are not increasing across iterations. Consider adding relationship updates when answers mention who/what/when/where/why links.",
+      "KG gaps are not decreasing on average (or are increasing). Improve gap selection + answer processing so each turn reduces uncertainty.",
+      "Dependency satisfaction rate is very low on average. Consider having denoising answers mark requirements as satisfied or add evidence/fact nodes as they are provided.",
+      "Add questions covering: grievance_hearing, appeal_rights",
+      "Review LLM backend configuration",
+      "Best HACC preset so far is 'core_hacc_policies'. Prefer it when generating evidence-backed adversarial batches."
+    ],
+    "intake_priority_performance": null,
+    "best_session_id": "session_20260317_233437_000"
+  },
+  "autopatch": {
+    "requested": false,
+    "method": "test_driven",
+    "profile": "question_flow",
+    "target_files": [
+      "/home/barberb/HACC/complaint-generator/complaint_phases/phase_manager.py",
+      "/home/barberb/HACC/complaint-generator/mediator/inquiries.py"
+    ],
+    "constraints": {},
+    "applied": false,
+    "apply_success": false,
+    "success": false,
+    "patch_path": null,
+    "patch_cid": null,
+    "metadata": {},
+    "summary_json": null,
+    "error": null
+  },
+  "best_complaint": {
+    "session_id": "session_20260317_233437_000",
+    "initial_complaint_text": "I need to file a complaint about housing_discrimination. The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. If HACC denies a request for an accommodation because it is not reasonable (it would impose an undue financial and administrative burden or fundamentally alter the nature of HACC’s operations), HACC will notify the family in writing of its decision. The notice will inform the family of the right to appeal HACC’s decision through an informal hearing (if applicable) or the grievance process (see Chapter 14). If HACC denies a request for an accommodation because it is not reasonable (it would impose an undue financial and administrative burden or fundamentally alter the nature of HACC’s operations), but has determined there is an alternative accommodation that could effectively address the family's disability related need without a fundamental alteration to the public housing program without imposing an undue financial and administrative burden, HACC will notify the family in writing.",
+    "score": 0.45,
+    "seed_type": "housing_discrimination",
+    "seed_summary": "The strongest supporting material is 'ADMISSIONS AND CONTINUED OCCUPANCY POLICY'. If HACC denies a request for an accommodation because it is not reasonable (it would impose an undue financial and administrative burden or fundamentally alter the nature of HACC’s operations), HACC will notify the family in writing of its decision. The notice will inform the family of the right to appeal HACC’s decision through an informal hearing (if applicable) or the grievance process (see Chapter 14). If HACC denies a request for an accommodation because it is not reasonable (it would impose an undue financial and administrative burden or fundamentally alter the nature of HACC’s operations), but has determined there is an alternative accommodation that could effectively address the family's disability related need without a fundamental alteration to the public housing program without imposing an undue financial and administrative burden, HACC will notify the family in writing.",
+    "search_summary": {
+      "requested_search_mode": "package",
+      "requested_use_vector": false,
+      "effective_search_mode": "shared_hybrid",
+      "vector_status": "available",
+      "vector_error": "",
+      "fallback_note": ""
+    }
+  },
+  "artifacts": {
+    "output_dir": "/home/barberb/HACC/research_results/grounded_runs/session_20260317_grounded_live_smoke_intake_optimizer/adversarial",
+    "results_json": "/home/barberb/HACC/research_results/grounded_runs/session_20260317_grounded_live_smoke_intake_optimizer/adversarial/adversarial_results.json",
+    "optimization_report_json": "/home/barberb/HACC/research_results/grounded_runs/session_20260317_grounded_live_smoke_intake_optimizer/adversarial/optimization_report.json",
+    "anchor_section_csv": "/home/barberb/HACC/research_results/grounded_runs/session_20260317_grounded_live_smoke_intake_optimizer/adversarial/anchor_section_coverage.csv",
+    "best_complaint_bundle_json": "/home/barberb/HACC/research_results/grounded_runs/session_20260317_grounded_live_smoke_intake_optimizer/adversarial/best_complaint_bundle.json",
+    "session_state_dir": "/home/barberb/HACC/research_results/grounded_runs/session_20260317_grounded_live_smoke_intake_optimizer/adversarial/sessions",
+    "autopatch_summary_json": null,
+    "autopatch_patch_path": null
+  }
+}

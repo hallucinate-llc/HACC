@@ -77,6 +77,7 @@ def _run_complaint_synthesis(
     grounded_run_dir: Path,
     filing_forum: str,
     preset: str,
+    completed_intake_worksheet: str | None = None,
 ) -> Dict[str, Any]:
     synthesis_module = _load_synthesis_module()
     adversarial_results_path = grounded_run_dir / "adversarial" / "adversarial_results.json"
@@ -93,11 +94,15 @@ def _run_complaint_synthesis(
     ]
     if preset:
         argv.extend(["--preset", preset])
+    if completed_intake_worksheet:
+        argv.extend(["--completed-intake-worksheet", completed_intake_worksheet])
     synthesis_module.main(argv)
     return {
         "output_dir": str(output_dir),
         "draft_complaint_package_json": str(output_dir / "draft_complaint_package.json"),
         "draft_complaint_package_md": str(output_dir / "draft_complaint_package.md"),
+        "intake_follow_up_worksheet_json": str(output_dir / "intake_follow_up_worksheet.json"),
+        "intake_follow_up_worksheet_md": str(output_dir / "intake_follow_up_worksheet.md"),
     }
 
 
@@ -120,6 +125,7 @@ def run_hacc_grounded_pipeline(
     model: Optional[str] = None,
     synthesize_complaint: bool = False,
     filing_forum: str = "court",
+    completed_intake_worksheet: Optional[str] = None,
 ) -> Dict[str, Any]:
     output_root = Path(output_dir).resolve()
     output_root.mkdir(parents=True, exist_ok=True)
@@ -170,6 +176,7 @@ def run_hacc_grounded_pipeline(
                 grounded_run_dir=output_root,
                 filing_forum=filing_forum,
                 preset=hacc_preset,
+                completed_intake_worksheet=completed_intake_worksheet,
             )
         )
 
@@ -219,6 +226,8 @@ def run_hacc_grounded_pipeline(
             "complaint_synthesis_dir": synthesis_summary.get("output_dir", ""),
             "draft_complaint_package_json": synthesis_summary.get("draft_complaint_package_json", ""),
             "draft_complaint_package_md": synthesis_summary.get("draft_complaint_package_md", ""),
+            "intake_follow_up_worksheet_json": synthesis_summary.get("intake_follow_up_worksheet_json", ""),
+            "intake_follow_up_worksheet_md": synthesis_summary.get("intake_follow_up_worksheet_md", ""),
         },
     }
     summary = _json_safe(summary)
@@ -252,6 +261,7 @@ def create_parser() -> argparse.ArgumentParser:
     parser.add_argument("--model", default=None)
     parser.add_argument("--synthesize-complaint", action="store_true", help="Run complaint synthesis after the grounded adversarial batch completes.")
     parser.add_argument("--filing-forum", default="court", choices=("court", "hud", "state_agency"))
+    parser.add_argument("--completed-intake-worksheet", default=None, help="Optional completed intake_follow_up_worksheet.json to merge into synthesis.")
     parser.add_argument("--json", action="store_true", help="Print the full workflow summary JSON.")
     return parser
 
@@ -276,17 +286,45 @@ def main(argv: Optional[list[str]] = None) -> int:
         model=args.model,
         synthesize_complaint=args.synthesize_complaint,
         filing_forum=args.filing_forum,
+        completed_intake_worksheet=args.completed_intake_worksheet,
     )
     if args.json:
         print(json.dumps(summary, ensure_ascii=False, indent=2))
     else:
         print(f"Output directory: {summary['artifacts']['output_dir']}")
         print(f"Grounding query: {summary['grounding_query']}")
+        grounding_search = summary.get("search_summary", {}).get("grounding", {})
+        upload_search = summary.get("search_summary", {}).get("evidence_upload", {})
+        adversarial_search = summary.get("search_summary", {}).get("adversarial", {})
+        if grounding_search:
+            print(
+                "Grounding search mode: "
+                f"requested={grounding_search.get('requested_search_mode', '')} "
+                f"effective={grounding_search.get('effective_search_mode', '')}"
+            )
+            if grounding_search.get("fallback_note"):
+                print(f"Grounding search fallback: {grounding_search['fallback_note']}")
+        if upload_search:
+            print(
+                "Evidence upload search mode: "
+                f"requested={upload_search.get('requested_search_mode', '')} "
+                f"effective={upload_search.get('effective_search_mode', '')}"
+            )
+        if adversarial_search:
+            print(
+                "Adversarial search mode: "
+                f"requested={adversarial_search.get('requested_search_mode', '')} "
+                f"effective={adversarial_search.get('effective_search_mode', '')}"
+            )
+            if adversarial_search.get("fallback_note"):
+                print(f"Adversarial search fallback: {adversarial_search['fallback_note']}")
         print(f"Uploaded evidence count: {summary['evidence_upload']['upload_count']}")
         print(f"Adversarial output directory: {summary['artifacts']['adversarial_output_dir']}")
         print(f"Synthetic prompts: {summary['artifacts']['synthetic_prompts_json']}")
         if summary["artifacts"].get("draft_complaint_package_json"):
             print(f"Draft complaint package: {summary['artifacts']['draft_complaint_package_json']}")
+        if summary["artifacts"].get("intake_follow_up_worksheet_json"):
+            print(f"Intake worksheet: {summary['artifacts']['intake_follow_up_worksheet_json']}")
     return 0
 
 

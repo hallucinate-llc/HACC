@@ -1,6 +1,7 @@
 import json
 import tempfile
 import unittest
+from io import StringIO
 from pathlib import Path
 from types import SimpleNamespace
 import sys
@@ -19,6 +20,7 @@ from hacc_adversarial_runner import (
     _default_codex_model,
     _extract_file_replacements,
     _resolve_autopatch_timeout,
+    main,
     run_hacc_adversarial_batch,
 )
 
@@ -143,6 +145,8 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             self.assertIn("router_diagnostics", summary)
             self.assertEqual(summary["inputs"]["hacc_search_mode"], "hybrid")
             self.assertEqual(summary["search_summary"]["requested_search_mode"], "hybrid")
+            self.assertIn("intake_priority_performance", summary["optimization_report"])
+            self.assertIn("coverage_remediation", summary["optimization_report"])
             self.assertIn(
                 summary["router_diagnostics"]["embeddings_router"]["status"],
                 {"available", "degraded", "error", "unavailable"},
@@ -159,9 +163,45 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             self.assertEqual(summary["best_complaint"]["search_summary"], summary["search_summary"])
 
             best_bundle = json.loads(best_path.read_text(encoding="utf-8"))
+            optimization_payload = json.loads(report_path.read_text(encoding="utf-8"))
             self.assertIn("initial_complaint_text", best_bundle)
             self.assertTrue(best_bundle["initial_complaint_text"])
             self.assertIn("conversation_history", best_bundle)
+            self.assertIn("intake_priority_performance", optimization_payload)
+            self.assertIn("coverage_remediation", optimization_payload)
+
+    def test_main_prints_effective_search_mode_and_fallback(self) -> None:
+        fake_summary = {
+            "artifacts": {
+                "output_dir": "/tmp/adversarial",
+                "results_json": "/tmp/adversarial/adversarial_results.json",
+                "optimization_report_json": "/tmp/adversarial/optimization_report.json",
+                "best_complaint_bundle_json": "/tmp/adversarial/best_complaint_bundle.json",
+            },
+            "best_complaint": {
+                "score": 0.525,
+                "seed_type": "housing_discrimination",
+                "seed_summary": "seed summary",
+            },
+            "search_summary": {
+                "requested_search_mode": "hybrid",
+                "effective_search_mode": "lexical_only",
+                "fallback_note": "Requested hybrid search, but vector support is unavailable; using lexical results instead.",
+            },
+            "optimization_report": {"recommended_hacc_preset": "retaliation_focus"},
+            "inputs": {"hacc_preset": "retaliation_focus"},
+            "autopatch": {"requested": False},
+        }
+
+        stdout = StringIO()
+        with mock.patch("hacc_adversarial_runner.run_hacc_adversarial_batch", return_value=fake_summary):
+            with mock.patch("sys.stdout", stdout):
+                exit_code = main(["--demo", "--output-dir", "/tmp/adversarial"])
+
+        rendered = stdout.getvalue()
+        self.assertEqual(exit_code, 0)
+        self.assertIn("HACC search mode: requested=hybrid effective=lexical_only", rendered)
+        self.assertIn("HACC search fallback:", rendered)
 
     def test_live_runner_uses_llm_router_backend(self) -> None:
         complaint_generator_root = REPO_ROOT / "complaint-generator"
