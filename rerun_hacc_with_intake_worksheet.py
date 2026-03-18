@@ -14,6 +14,7 @@ from typing import Any, Dict, List
 REPO_ROOT = Path(__file__).resolve().parent
 VALIDATOR_PATH = REPO_ROOT / "complaint-generator" / "scripts" / "validate_intake_follow_up_worksheet.py"
 PIPELINE_PATH = REPO_ROOT / "hacc_grounded_pipeline.py"
+GROUNDED_RUNS_DIR = REPO_ROOT / "research_results" / "grounded_runs"
 DEFAULT_WORKSHEET_NAME = "intake_follow_up_worksheet.json"
 
 
@@ -86,13 +87,37 @@ def _resolve_worksheet_path(path_or_run_dir: str) -> Path:
     raise FileNotFoundError(f"Worksheet path does not exist: {candidate}")
 
 
+def _latest_grounded_run_worksheet() -> Path:
+    if not GROUNDED_RUNS_DIR.is_dir():
+        raise FileNotFoundError(f"Grounded runs directory does not exist: {GROUNDED_RUNS_DIR}")
+    candidates = []
+    for run_dir in GROUNDED_RUNS_DIR.iterdir():
+        if not run_dir.is_dir():
+            continue
+        try:
+            worksheet = _resolve_worksheet_path(str(run_dir))
+        except FileNotFoundError:
+            continue
+        candidates.append((worksheet.stat().st_mtime, str(worksheet), worksheet))
+    if not candidates:
+        raise FileNotFoundError(f"No grounded run with {DEFAULT_WORKSHEET_NAME} found under {GROUNDED_RUNS_DIR}")
+    candidates.sort(reverse=True)
+    return candidates[0][2]
+
+
 def create_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="Validate an intake worksheet, then rerun the grounded HACC pipeline with it.",
     )
     parser.add_argument(
         "worksheet_json",
+        nargs="?",
         help="Path to intake_follow_up_worksheet.json, or a grounded run directory containing it.",
+    )
+    parser.add_argument(
+        "--latest",
+        action="store_true",
+        help="Auto-discover the newest grounded run worksheet under research_results/grounded_runs.",
     )
     parser.add_argument(
         "pipeline_args",
@@ -104,7 +129,12 @@ def create_parser() -> argparse.ArgumentParser:
 
 def main(argv: List[str] | None = None) -> int:
     args = create_parser().parse_args(argv)
-    worksheet_json = str(_resolve_worksheet_path(args.worksheet_json))
+    if args.latest:
+        worksheet_json = str(_latest_grounded_run_worksheet())
+    elif args.worksheet_json:
+        worksheet_json = str(_resolve_worksheet_path(args.worksheet_json))
+    else:
+        raise SystemExit("Either provide a worksheet path/run directory or use --latest.")
     pipeline_args = list(args.pipeline_args or [])
     if pipeline_args and pipeline_args[0] == "--":
         pipeline_args = pipeline_args[1:]

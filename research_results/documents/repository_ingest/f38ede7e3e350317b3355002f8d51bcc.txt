@@ -49,6 +49,24 @@ research_results/grounded_runs/<timestamp>/complaint_synthesis/intake_follow_up_
 --synthesize-complaint \
 --filing-forum hud
 ```
+You can also point the rerun wrapper at the grounded run directory itself, and it will auto-discover `complaint_synthesis/intake_follow_up_worksheet.json`:
+```bash
+python3 rerun_hacc_with_intake_worksheet.py \
+research_results/grounded_runs/<timestamp> \
+-- \
+--demo \
+--synthesize-complaint \
+--filing-forum hud
+```
+Or let the wrapper pick the newest grounded run automatically:
+```bash
+python3 rerun_hacc_with_intake_worksheet.py \
+--latest \
+-- \
+--demo \
+--synthesize-complaint \
+--filing-forum hud
+```
 The rerun wrapper will:
 - normalize and validate the worksheet
 - print a short preflight summary of answered/open/invalid items

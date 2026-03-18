@@ -75,6 +75,17 @@ python3 rerun_hacc_with_intake_worksheet.py \
   --filing-forum hud
 ```
 
+Or let the wrapper pick the newest grounded run automatically:
+
+```bash
+python3 rerun_hacc_with_intake_worksheet.py \
+  --latest \
+  -- \
+  --demo \
+  --synthesize-complaint \
+  --filing-forum hud
+```
+
 The rerun wrapper will:
 
 - normalize and validate the worksheet

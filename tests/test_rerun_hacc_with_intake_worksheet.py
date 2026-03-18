@@ -99,3 +99,49 @@ def test_main_accepts_grounded_run_directory_and_discovers_worksheet(tmp_path):
     pipeline_cmd = calls[1][0]
     assert str(worksheet_path.resolve()) in validator_cmd
     assert str(worksheet_path.resolve()) in pipeline_cmd
+
+
+def test_main_accepts_latest_and_uses_newest_grounded_run(tmp_path):
+    older_run = tmp_path / "older_run"
+    newer_run = tmp_path / "newer_run"
+    older_worksheet = older_run / "complaint_synthesis" / "intake_follow_up_worksheet.json"
+    newer_worksheet = newer_run / "complaint_synthesis" / "intake_follow_up_worksheet.json"
+    older_worksheet.parent.mkdir(parents=True)
+    newer_worksheet.parent.mkdir(parents=True)
+    older_worksheet.write_text(
+        '{"validation_summary":{"item_count":1,"status_counts":{"answered":1},"all_answered":true,"open_question_count":0,"invalid_question_count":0}}',
+        encoding="utf-8",
+    )
+    newer_worksheet.write_text(
+        '{"validation_summary":{"item_count":4,"status_counts":{"answered":4},"all_answered":true,"open_question_count":0,"invalid_question_count":0}}',
+        encoding="utf-8",
+    )
+    older_run.touch()
+    newer_run.touch()
+    calls = []
+
+    def fake_run(cmd, cwd=None, check=False):
+        calls.append((cmd, cwd, check))
+        return CompletedProcess(cmd, 0)
+
+    with (
+        mock.patch.object(module, "GROUNDED_RUNS_DIR", tmp_path),
+        mock.patch.object(module.subprocess, "run", side_effect=fake_run),
+    ):
+        exit_code = module.main(["--latest", "--", "--demo", "--filing-forum", "hud"])
+
+    assert exit_code == 0
+    assert len(calls) == 2
+    validator_cmd = calls[0][0]
+    pipeline_cmd = calls[1][0]
+    assert str(newer_worksheet.resolve()) in validator_cmd
+    assert str(newer_worksheet.resolve()) in pipeline_cmd
+
+
+def test_main_requires_path_or_latest():
+    try:
+        module.main([])
+    except SystemExit as exc:
+        assert str(exc) == "Either provide a worksheet path/run directory or use --latest."
+    else:
+        raise AssertionError("expected SystemExit when no worksheet source is provided")
