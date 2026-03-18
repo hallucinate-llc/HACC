@@ -62,3 +62,38 @@ def test_main_stops_when_validation_fails():
         exit_code = module.main([worksheet, "--", "--demo"])
 
     assert exit_code == 2
+
+
+def test_main_accepts_grounded_run_directory_and_discovers_worksheet(tmp_path):
+    run_dir = tmp_path / "grounded_run"
+    worksheet_path = run_dir / "complaint_synthesis" / "intake_follow_up_worksheet.json"
+    worksheet_path.parent.mkdir(parents=True)
+    worksheet_path.write_text(
+        """
+        {
+          "validation_summary": {
+            "item_count": 2,
+            "status_counts": {"answered": 2},
+            "all_answered": true,
+            "open_question_count": 0,
+            "invalid_question_count": 0
+          }
+        }
+        """.strip(),
+        encoding="utf-8",
+    )
+    calls = []
+
+    def fake_run(cmd, cwd=None, check=False):
+        calls.append((cmd, cwd, check))
+        return CompletedProcess(cmd, 0)
+
+    with mock.patch.object(module.subprocess, "run", side_effect=fake_run):
+        exit_code = module.main([str(run_dir), "--", "--demo"])
+
+    assert exit_code == 0
+    assert len(calls) == 2
+    validator_cmd = calls[0][0]
+    pipeline_cmd = calls[1][0]
+    assert str(worksheet_path.resolve()) in validator_cmd
+    assert str(worksheet_path.resolve()) in pipeline_cmd

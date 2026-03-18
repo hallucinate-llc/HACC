@@ -14,6 +14,7 @@ from typing import Any, Dict, List
 REPO_ROOT = Path(__file__).resolve().parent
 VALIDATOR_PATH = REPO_ROOT / "complaint-generator" / "scripts" / "validate_intake_follow_up_worksheet.py"
 PIPELINE_PATH = REPO_ROOT / "hacc_grounded_pipeline.py"
+DEFAULT_WORKSHEET_NAME = "intake_follow_up_worksheet.json"
 
 
 def _validator_command(worksheet_json: str) -> List[str]:
@@ -63,11 +64,36 @@ def _print_validation_summary(worksheet_json: str) -> None:
     print(f"- invalid: {summary.get('invalid_question_count', 0)}")
 
 
+def _resolve_worksheet_path(path_or_run_dir: str) -> Path:
+    candidate = Path(path_or_run_dir).expanduser().resolve()
+    if candidate.is_file():
+        return candidate
+    if candidate.is_dir():
+        direct_candidate = candidate / DEFAULT_WORKSHEET_NAME
+        if direct_candidate.is_file():
+            return direct_candidate
+        synthesis_candidate = candidate / "complaint_synthesis" / DEFAULT_WORKSHEET_NAME
+        if synthesis_candidate.is_file():
+            return synthesis_candidate
+        matches = sorted(
+            candidate.glob(f"**/{DEFAULT_WORKSHEET_NAME}"),
+            key=lambda path: (path.stat().st_mtime, str(path)),
+            reverse=True,
+        )
+        if matches:
+            return matches[0]
+        raise FileNotFoundError(f"No {DEFAULT_WORKSHEET_NAME} found under {candidate}")
+    raise FileNotFoundError(f"Worksheet path does not exist: {candidate}")
+
+
 def create_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="Validate an intake worksheet, then rerun the grounded HACC pipeline with it.",
     )
-    parser.add_argument("worksheet_json", help="Path to intake_follow_up_worksheet.json")
+    parser.add_argument(
+        "worksheet_json",
+        help="Path to intake_follow_up_worksheet.json, or a grounded run directory containing it.",
+    )
     parser.add_argument(
         "pipeline_args",
         nargs=argparse.REMAINDER,
@@ -78,7 +104,7 @@ def create_parser() -> argparse.ArgumentParser:
 
 def main(argv: List[str] | None = None) -> int:
     args = create_parser().parse_args(argv)
-    worksheet_json = str(Path(args.worksheet_json).resolve())
+    worksheet_json = str(_resolve_worksheet_path(args.worksheet_json))
     pipeline_args = list(args.pipeline_args or [])
     if pipeline_args and pipeline_args[0] == "--":
         pipeline_args = pipeline_args[1:]
