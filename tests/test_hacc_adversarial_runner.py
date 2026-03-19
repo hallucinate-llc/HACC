@@ -22,6 +22,7 @@ from hacc_adversarial_runner import (
     _default_codex_model,
     _extract_file_replacements,
     _resolve_autopatch_timeout,
+    _run_agentic_autopatch,
     main,
     run_hacc_adversarial_batch,
 )
@@ -562,12 +563,14 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             self.assertIn("What happened?", diff)
 
     def test_codex_router_defaults_to_spark(self) -> None:
-        with mock.patch("ipfs_datasets_py.llm_router.generate_text", return_value="OK") as generate_mock:
+        fake_router_module = SimpleNamespace(generate_text=mock.Mock(return_value="OK"))
+        with mock.patch.dict(sys.modules, {"ipfs_datasets_py.llm_router": fake_router_module}):
             router = _build_agentic_llm_router("codex_cli", profile="question_flow")
             self.assertIsNotNone(router)
             result = router.generate("Reply with OK", max_tokens=10, temperature=0)
 
         self.assertEqual(result, "OK")
+        generate_mock = fake_router_module.generate_text
         self.assertEqual(generate_mock.call_args.kwargs["model_name"], _default_codex_model())
 
     def test_codex_router_falls_back_to_mini_on_throttling(self) -> None:
@@ -579,7 +582,8 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
                 raise RuntimeError("Rate limit exceeded for this model")
             return "OK"
 
-        with mock.patch("ipfs_datasets_py.llm_router.generate_text", side_effect=fake_generate_text):
+        fake_router_module = SimpleNamespace(generate_text=fake_generate_text)
+        with mock.patch.dict(sys.modules, {"ipfs_datasets_py.llm_router": fake_router_module}):
             router = _build_agentic_llm_router("codex_cli", profile="question_flow")
             self.assertIsNotNone(router)
             result = router.generate("Reply with OK", max_tokens=10, temperature=0)
@@ -982,6 +986,49 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
         self.assertEqual(captured_optimizer["project_root"], str(complaint_generator_root))
         self.assertTrue(captured_optimizer["output_dir"].endswith("/autopatch"))
         self.assertEqual(captured_optimizer["marker_prefix"], "Demo autopatch recommendation")
+
+    def test_run_agentic_autopatch_preserves_generation_diagnostics_on_exception(self) -> None:
+        class FailingOptimizer:
+            def __init__(self):
+                self._last_generation_diagnostics = [
+                    {
+                        "file": "/tmp/example.py",
+                        "status": "error",
+                        "mode": "symbol_level",
+                        "error_type": "ValueError",
+                        "error_message": "unexpected indent (<unknown>, line 3)",
+                        "raw_response_preview": "    def broken():\n        pass",
+                    }
+                ]
+
+            def run_agentic_autopatch(self, *args, **kwargs):
+                raise ValueError("unexpected indent (<unknown>, line 3)")
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            summary = _run_agentic_autopatch(
+                optimizer=FailingOptimizer(),
+                results=[],
+                report=SimpleNamespace(to_dict=lambda: {}),
+                output_root=Path(tmpdir),
+                requested_profile="question_flow",
+                requested_target_files=[],
+                recommended_profile="question_flow",
+                recommended_target_files=[],
+                used_recommended_targets=False,
+                target_files=[],
+                method="test_driven",
+                profile="question_flow",
+                constraints={},
+                apply_patch=False,
+                provider_name="local",
+                model_name=None,
+            )
+
+        self.assertEqual(summary["error"], "unexpected indent (<unknown>, line 3)")
+        self.assertEqual(
+            summary["metadata"]["generation_diagnostics"][0]["error_message"],
+            "unexpected indent (<unknown>, line 3)",
+        )
 
     def test_live_runner_uses_llm_router_backend(self) -> None:
         complaint_generator_root = REPO_ROOT / "complaint-generator"

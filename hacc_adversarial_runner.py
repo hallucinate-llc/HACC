@@ -837,12 +837,22 @@ def _run_agentic_autopatch(
         "error": None,
     }
 
+    def _optimizer_generation_diagnostics(resolved_optimizer: Any) -> List[Dict[str, Any]]:
+        cached = getattr(resolved_optimizer, "_last_agentic_generation_diagnostics", None)
+        if isinstance(cached, list) and cached:
+            return cached
+        diagnostics = getattr(resolved_optimizer, "_last_generation_diagnostics", None)
+        if isinstance(diagnostics, list):
+            return diagnostics
+        return []
+
+    resolved_optimizer = None
+
     try:
         previous_codex_model = os.environ.get("IPFS_DATASETS_PY_CODEX_MODEL")
         demo_mode = str(provider_name or "").strip().lower() == "demo"
         if str(provider_name or "").strip().lower() in {"codex", "codex_cli"} and model_name:
             os.environ["IPFS_DATASETS_PY_CODEX_MODEL"] = str(model_name)
-        resolved_optimizer = None
         resolved_llm_router = None
         if demo_mode:
             from adversarial_harness.demo_autopatch import DemoPatchOptimizer
@@ -971,6 +981,11 @@ def _run_agentic_autopatch(
             if not summary["apply_success"]:
                 summary["error"] = "Patch apply failed"
     except Exception as exc:
+        diagnostics = _optimizer_generation_diagnostics(resolved_optimizer) or _optimizer_generation_diagnostics(optimizer)
+        if diagnostics:
+            metadata = dict(summary.get("metadata") or {})
+            metadata.setdefault("generation_diagnostics", _sanitize_for_json(diagnostics))
+            summary["metadata"] = metadata
         summary["error"] = str(exc)
     finally:
         if str(provider_name or "").strip().lower() in {"codex", "codex_cli"}:
