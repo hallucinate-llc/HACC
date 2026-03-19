@@ -76,6 +76,15 @@ def _extract_named_output(stdout: str, label: str) -> str:
     return ""
 
 
+def _markdown_draft_path(draft_package: str) -> str:
+    if not draft_package:
+        return ""
+    draft_path = Path(draft_package)
+    if draft_path.name == "draft_complaint_package.json":
+        return str(draft_path.with_name("draft_complaint_package.md"))
+    return ""
+
+
 def _print_validation_summary(worksheet_json: str) -> None:
     summary = _load_validation_summary(worksheet_json)
     if not summary:
@@ -185,10 +194,13 @@ def main(argv: List[str] | None = None) -> int:
     output_dir = _extract_output_directory(rerun.stdout or "")
     draft_package = _extract_named_output(rerun.stdout or "", "Draft complaint package")
     intake_worksheet = _extract_named_output(rerun.stdout or "", "Intake worksheet")
+    markdown_draft = _markdown_draft_path(draft_package)
     if rerun.returncode == 0 and output_dir:
         print(f"Rerun artifacts: {output_dir}")
     if rerun.returncode == 0 and draft_package:
         print(f"Refreshed complaint draft: {draft_package}")
+    if rerun.returncode == 0 and markdown_draft:
+        print(f"Refreshed complaint markdown: {markdown_draft}")
     if rerun.returncode == 0 and intake_worksheet:
         print(f"Refreshed intake worksheet: {intake_worksheet}")
     return rerun.returncode

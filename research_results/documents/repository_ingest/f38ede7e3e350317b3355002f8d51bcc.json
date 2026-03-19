@@ -4,13 +4,13 @@
   "source_type": "repository_evidence",
   "filename": "QUICK_START.md",
   "mime_type": "text/markdown",
-  "size": 9514,
+  "size": 9748,
   "backend_available": true,
   "parser_version": "documents-adapter:1",
   "source": "file",
   "chunk_count": 11,
   "paragraph_count": 1,
-  "text_length": 9253,
+  "text_length": 9487,
   "input_format": "text",
   "page_count": 1,
   "extraction_method": "text_normalization",
@@ -22,9 +22,9 @@
   },
   "source_span": {
     "char_start": 0,
-    "char_end": 9253,
-    "text_length": 9253,
-    "raw_size": 9514,
+    "char_end": 9487,
+    "text_length": 9487,
+    "raw_size": 9748,
     "page_count": 1
   },
   "transform_lineage": {
@@ -44,9 +44,9 @@
     },
     "source_span": {
       "char_start": 0,
-      "char_end": 9253,
-      "text_length": 9253,
-      "raw_size": 9514,
+      "char_end": 9487,
+      "text_length": 9487,
+      "raw_size": 9748,
       "page_count": 1
     }
   },
@@ -59,7 +59,7 @@
     "implementation_status": "implemented"
   },
   "record_id": "f38ede7e3e350317b3355002f8d51bcc",
-  "checksum": "6c9516417ff74bd81c98f2f73c8e0b3f1201bf3943b6cf535bc93419052e51d2",
+  "checksum": "4d851773bffe3cb40b0ac459d0bf9990e705b0a0a1152b62fadbe4c6b2c2862e",
   "source_path": "/home/barberb/HACC/QUICK_START.md",
   "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/f38ede7e3e350317b3355002f8d51bcc.txt",
   "content_type": "text/markdown",

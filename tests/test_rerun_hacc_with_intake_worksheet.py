@@ -53,6 +53,7 @@ def test_main_validates_then_reruns_pipeline_with_completed_worksheet(tmp_path, 
     assert "Output directory: /tmp/rerun-output" in output
     assert "Rerun artifacts: /tmp/rerun-output" in output
     assert "Refreshed complaint draft: /tmp/rerun-output/complaint_synthesis/draft_complaint_package.json" in output
+    assert "Refreshed complaint markdown: /tmp/rerun-output/complaint_synthesis/draft_complaint_package.md" in output
     assert "Refreshed intake worksheet: /tmp/rerun-output/complaint_synthesis/intake_follow_up_worksheet.json" in output
     validator_cmd = calls[0][0]
     pipeline_cmd = calls[1][0]
@@ -172,6 +173,7 @@ def test_main_accepts_latest_and_uses_newest_grounded_run(tmp_path, capsys):
     assert f"- grounded_run: {newer_run.resolve()}" in output
     assert f"- worksheet: {newer_worksheet.resolve()}" in output
     assert "Refreshed complaint draft: /tmp/latest-rerun-output/complaint_synthesis/draft_complaint_package.json" in output
+    assert "Refreshed complaint markdown: /tmp/latest-rerun-output/complaint_synthesis/draft_complaint_package.md" in output
     validator_cmd = calls[0][0]
     pipeline_cmd = calls[1][0]
     assert str(newer_worksheet.resolve()) in validator_cmd

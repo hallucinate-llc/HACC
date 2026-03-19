@@ -83,6 +83,38 @@ def _default_autopatch_target_files() -> List[Path]:
     return list(_autopatch_target_profiles()["question_flow"])
 
 
+def _resolve_optimizer_recommended_target_files(optimizer: Any, report: Any) -> List[Path]:
+    if optimizer is None or report is None:
+        return []
+    try:
+        recommended = list(optimizer._recommended_target_files_for_report(report))  # type: ignore[attr-defined]
+    except Exception:
+        return []
+    resolved: List[Path] = []
+    for candidate in recommended:
+        path = Path(candidate)
+        if not path.is_absolute():
+            path = COMPLAINT_GENERATOR_ROOT / path
+        if path not in resolved:
+            resolved.append(path)
+    return resolved
+
+
+def _recommended_autopatch_profile(target_files: List[Path]) -> str:
+    normalized_targets = {path.resolve() for path in target_files}
+    if not normalized_targets:
+        return "question_flow"
+    for profile_name, profile_targets in _autopatch_target_profiles().items():
+        normalized_profile = {path.resolve() for path in profile_targets}
+        if normalized_targets == normalized_profile:
+            return profile_name
+    for profile_name, profile_targets in _autopatch_target_profiles().items():
+        normalized_profile = {path.resolve() for path in profile_targets}
+        if normalized_targets.issubset(normalized_profile):
+            return profile_name
+    return "custom"
+
+
 def _autopatch_constraints_for_profile(profile: str, target_files: List[Path]) -> Dict[str, Any]:
     if profile == "denoiser_select_candidates_only":
         target_map: Dict[str, List[str]] = {}
@@ -1092,6 +1124,7 @@ def run_hacc_adversarial_batch(
     autopatch_method: str = "test_driven",
     autopatch_profile: str = "question_flow",
     autopatch_target_files: Optional[List[str]] = None,
+    use_recommended_autopatch_targets: bool = False,
 ) -> Dict[str, Any]:
     output_root = Path(output_dir).resolve()
     output_root.mkdir(parents=True, exist_ok=True)
@@ -1125,8 +1158,14 @@ def run_hacc_adversarial_batch(
     report = optimizer.analyze(results)
     stats = harness.get_statistics()
     best_result = _select_best_result(results)
+    recommended_autopatch_targets = _resolve_optimizer_recommended_target_files(optimizer, report)
+    recommended_autopatch_profile = _recommended_autopatch_profile(recommended_autopatch_targets)
+    selected_autopatch_profile = autopatch_profile
     autopatch_target_paths = _resolve_autopatch_target_files(autopatch_target_files, autopatch_profile)
-    autopatch_constraints = _autopatch_constraints_for_profile(autopatch_profile, autopatch_target_paths)
+    if use_recommended_autopatch_targets and recommended_autopatch_targets:
+        autopatch_target_paths = list(recommended_autopatch_targets)
+        selected_autopatch_profile = recommended_autopatch_profile
+    autopatch_constraints = _autopatch_constraints_for_profile(selected_autopatch_profile, autopatch_target_paths)
 
     run_results_path = output_root / "adversarial_results.json"
     optimization_report_path = output_root / "optimization_report.json"
@@ -1146,8 +1185,11 @@ def run_hacc_adversarial_batch(
     autopatch_summary = {
         "requested": False,
         "method": autopatch_method,
-        "profile": autopatch_profile,
+        "profile": selected_autopatch_profile,
         "target_files": [str(path) for path in autopatch_target_paths],
+        "recommended_profile": recommended_autopatch_profile,
+        "recommended_target_files": [str(path) for path in recommended_autopatch_targets],
+        "used_recommended_targets": bool(use_recommended_autopatch_targets and recommended_autopatch_targets),
         "constraints": _sanitize_for_json(autopatch_constraints),
         "applied": False,
         "apply_success": False,
@@ -1166,7 +1208,7 @@ def run_hacc_adversarial_batch(
             output_root=output_root,
             target_files=autopatch_target_paths,
             method=autopatch_method,
-            profile=autopatch_profile,
+            profile=selected_autopatch_profile,
             constraints=autopatch_constraints,
             apply_patch=apply_autopatch,
             provider_name=runtime_bundle["runtime"].get("provider"),
@@ -1289,6 +1331,11 @@ def create_parser() -> argparse.ArgumentParser:
             "(complaint_phases/phase_manager.py + mediator/inquiries.py)."
         ),
     )
+    parser.add_argument(
+        "--use-recommended-autopatch-targets",
+        action="store_true",
+        help="Use the optimizer's intake-driven recommended autopatch target files/profile instead of the requested profile defaults.",
+    )
     parser.add_argument("--json", action="store_true", help="Print the full summary JSON.")
     return parser
 
@@ -1315,6 +1362,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         autopatch_method=args.autopatch_method,
         autopatch_profile=args.autopatch_profile,
         autopatch_target_files=args.autopatch_target_files,
+        use_recommended_autopatch_targets=args.use_recommended_autopatch_targets,
     )
     if args.json:
         print(json.dumps(summary, ensure_ascii=False, indent=2))
@@ -1333,6 +1381,12 @@ def main(argv: Optional[List[str]] = None) -> int:
         if summary["autopatch"]["requested"]:
             print(f"Autopatch success: {summary['autopatch']['success']}")
             print(f"Autopatch applied: {summary['autopatch']['apply_success']}")
+            print(f"Using recommended autopatch targets: {summary['autopatch'].get('used_recommended_targets', False)}")
+            if summary["autopatch"].get("recommended_profile"):
+                print(f"Recommended autopatch profile: {summary['autopatch']['recommended_profile']}")
+            recommended_targets = list(summary["autopatch"].get("recommended_target_files") or [])
+            if recommended_targets:
+                print(f"Recommended autopatch targets: {', '.join(str(path) for path in recommended_targets)}")
             if summary["autopatch"]["patch_path"]:
                 print(f"Autopatch patch: {summary['autopatch']['patch_path']}")
         print(f"Results JSON: {summary['artifacts']['results_json']}")

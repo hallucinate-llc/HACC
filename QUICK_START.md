@@ -93,7 +93,7 @@ The rerun wrapper will:
 - stop before rerun if required answers are still missing
 - rerun `hacc_grounded_pipeline.py` with `--completed-intake-worksheet`
 - print the refreshed grounded run output directory when the rerun completes
-- print the refreshed complaint draft and worksheet paths when synthesis artifacts are available
+- print the refreshed complaint JSON path, complaint Markdown path, and worksheet path when synthesis artifacts are available
 
 ### Option A: Manual Evidence Collection (No API Keys Required)
 
