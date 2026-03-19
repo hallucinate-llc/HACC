@@ -59,6 +59,23 @@ def _infer_grounded_run_dir(worksheet_json: str) -> Path:
     return worksheet_path.parent
 
 
+def _extract_output_directory(stdout: str) -> str:
+    for line in stdout.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("Output directory:"):
+            return stripped.split(":", 1)[1].strip()
+    return ""
+
+
+def _extract_named_output(stdout: str, label: str) -> str:
+    prefix = f"{label}:"
+    for line in stdout.splitlines():
+        stripped = line.strip()
+        if stripped.startswith(prefix):
+            return stripped.split(":", 1)[1].strip()
+    return ""
+
+
 def _print_validation_summary(worksheet_json: str) -> None:
     summary = _load_validation_summary(worksheet_json)
     if not summary:
@@ -154,7 +171,26 @@ def main(argv: List[str] | None = None) -> int:
     _print_validation_summary(worksheet_json)
 
     pipeline_cmd = _pipeline_command(worksheet_json, pipeline_args)
-    rerun = subprocess.run(pipeline_cmd, cwd=str(REPO_ROOT), check=False)
+    rerun = subprocess.run(
+        pipeline_cmd,
+        cwd=str(REPO_ROOT),
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+    if rerun.stdout:
+        print(rerun.stdout, end="" if rerun.stdout.endswith("\n") else "\n")
+    if rerun.stderr:
+        print(rerun.stderr, file=sys.stderr, end="" if rerun.stderr.endswith("\n") else "\n")
+    output_dir = _extract_output_directory(rerun.stdout or "")
+    draft_package = _extract_named_output(rerun.stdout or "", "Draft complaint package")
+    intake_worksheet = _extract_named_output(rerun.stdout or "", "Intake worksheet")
+    if rerun.returncode == 0 and output_dir:
+        print(f"Rerun artifacts: {output_dir}")
+    if rerun.returncode == 0 and draft_package:
+        print(f"Refreshed complaint draft: {draft_package}")
+    if rerun.returncode == 0 and intake_worksheet:
+        print(f"Refreshed intake worksheet: {intake_worksheet}")
     return rerun.returncode
 
 

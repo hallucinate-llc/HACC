@@ -92,6 +92,8 @@ The rerun wrapper will:
 - print a short preflight summary of the selected grounded run plus answered/open/invalid items
 - stop before rerun if required answers are still missing
 - rerun `hacc_grounded_pipeline.py` with `--completed-intake-worksheet`
+- print the refreshed grounded run output directory when the rerun completes
+- print the refreshed complaint draft and worksheet paths when synthesis artifacts are available
 
 ### Option A: Manual Evidence Collection (No API Keys Required)
 

@@ -24,9 +24,20 @@ def test_main_validates_then_reruns_pipeline_with_completed_worksheet(tmp_path, 
     worksheet = str(worksheet_path)
     calls = []
 
-    def fake_run(cmd, cwd=None, check=False):
+    def fake_run(cmd, cwd=None, check=False, capture_output=False, text=False):
         calls.append((cmd, cwd, check))
-        return CompletedProcess(cmd, 0)
+        if cmd[1].endswith("hacc_grounded_pipeline.py"):
+            return CompletedProcess(
+                cmd,
+                0,
+                stdout=(
+                    "Output directory: /tmp/rerun-output\n"
+                    "Draft complaint package: /tmp/rerun-output/complaint_synthesis/draft_complaint_package.json\n"
+                    "Intake worksheet: /tmp/rerun-output/complaint_synthesis/intake_follow_up_worksheet.json\n"
+                ),
+                stderr="",
+            )
+        return CompletedProcess(cmd, 0, stdout="", stderr="")
 
     with mock.patch.object(module.subprocess, "run", side_effect=fake_run):
         exit_code = module.main([worksheet, "--", "--demo", "--synthesize-complaint", "--filing-forum", "hud"])
@@ -39,6 +50,10 @@ def test_main_validates_then_reruns_pipeline_with_completed_worksheet(tmp_path, 
     assert f"- worksheet: {worksheet}" in output
     assert "- item_count: 3" in output
     assert "- answered: 3" in output
+    assert "Output directory: /tmp/rerun-output" in output
+    assert "Rerun artifacts: /tmp/rerun-output" in output
+    assert "Refreshed complaint draft: /tmp/rerun-output/complaint_synthesis/draft_complaint_package.json" in output
+    assert "Refreshed intake worksheet: /tmp/rerun-output/complaint_synthesis/intake_follow_up_worksheet.json" in output
     validator_cmd = calls[0][0]
     pipeline_cmd = calls[1][0]
     assert validator_cmd[1].endswith("validate_intake_follow_up_worksheet.py")
@@ -56,9 +71,9 @@ def test_main_stops_when_validation_fails(tmp_path):
     worksheet_path.write_text("{}", encoding="utf-8")
     worksheet = str(worksheet_path)
 
-    def fake_run(cmd, cwd=None, check=False):
+    def fake_run(cmd, cwd=None, check=False, capture_output=False, text=False):
         if cmd[1].endswith("validate_intake_follow_up_worksheet.py"):
-            return CompletedProcess(cmd, 2)
+            return CompletedProcess(cmd, 2, stdout="", stderr="")
         raise AssertionError("pipeline should not run when validation fails")
 
     with mock.patch.object(module.subprocess, "run", side_effect=fake_run):
@@ -87,9 +102,19 @@ def test_main_accepts_grounded_run_directory_and_discovers_worksheet(tmp_path):
     )
     calls = []
 
-    def fake_run(cmd, cwd=None, check=False):
+    def fake_run(cmd, cwd=None, check=False, capture_output=False, text=False):
         calls.append((cmd, cwd, check))
-        return CompletedProcess(cmd, 0)
+        if cmd[1].endswith("hacc_grounded_pipeline.py"):
+            return CompletedProcess(
+                cmd,
+                0,
+                stdout=(
+                    "Output directory: /tmp/grounded-run-output\n"
+                    "Draft complaint package: /tmp/grounded-run-output/complaint_synthesis/draft_complaint_package.json\n"
+                ),
+                stderr="",
+            )
+        return CompletedProcess(cmd, 0, stdout="", stderr="")
 
     with mock.patch.object(module.subprocess, "run", side_effect=fake_run):
         exit_code = module.main([str(run_dir), "--", "--demo"])
@@ -121,9 +146,19 @@ def test_main_accepts_latest_and_uses_newest_grounded_run(tmp_path, capsys):
     newer_run.touch()
     calls = []
 
-    def fake_run(cmd, cwd=None, check=False):
+    def fake_run(cmd, cwd=None, check=False, capture_output=False, text=False):
         calls.append((cmd, cwd, check))
-        return CompletedProcess(cmd, 0)
+        if cmd[1].endswith("hacc_grounded_pipeline.py"):
+            return CompletedProcess(
+                cmd,
+                0,
+                stdout=(
+                    "Output directory: /tmp/latest-rerun-output\n"
+                    "Draft complaint package: /tmp/latest-rerun-output/complaint_synthesis/draft_complaint_package.json\n"
+                ),
+                stderr="",
+            )
+        return CompletedProcess(cmd, 0, stdout="", stderr="")
 
     with (
         mock.patch.object(module, "GROUNDED_RUNS_DIR", tmp_path),
@@ -136,6 +171,7 @@ def test_main_accepts_latest_and_uses_newest_grounded_run(tmp_path, capsys):
     output = capsys.readouterr().out
     assert f"- grounded_run: {newer_run.resolve()}" in output
     assert f"- worksheet: {newer_worksheet.resolve()}" in output
+    assert "Refreshed complaint draft: /tmp/latest-rerun-output/complaint_synthesis/draft_complaint_package.json" in output
     validator_cmd = calls[0][0]
     pipeline_cmd = calls[1][0]
     assert str(newer_worksheet.resolve()) in validator_cmd
