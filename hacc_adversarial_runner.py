@@ -824,22 +824,38 @@ def _run_agentic_autopatch(
 
     try:
         previous_codex_model = os.environ.get("IPFS_DATASETS_PY_CODEX_MODEL")
+        demo_mode = str(provider_name or "").strip().lower() == "demo"
         if str(provider_name or "").strip().lower() in {"codex", "codex_cli"} and model_name:
             os.environ["IPFS_DATASETS_PY_CODEX_MODEL"] = str(model_name)
+        resolved_optimizer = None
+        resolved_llm_router = None
+        if demo_mode:
+            from adversarial_harness.demo_autopatch import DemoPatchOptimizer
+
+            resolved_optimizer = DemoPatchOptimizer(
+                project_root=COMPLAINT_GENERATOR_ROOT,
+                output_dir=autopatch_dir,
+                marker_prefix="Demo autopatch recommendation",
+            )
+            resolved_llm_router = object()
+        else:
+            resolved_llm_router = _build_agentic_llm_router(
+                provider_name,
+                profile=profile,
+                target_files=target_files,
+            )
         result = optimizer.run_agentic_autopatch(
             results,
             target_files=target_files,
             method=method,
             constraints=constraints,
             report=report,
-            llm_router=_build_agentic_llm_router(
-                provider_name,
-                profile=profile,
-                target_files=target_files,
-            ),
+            llm_router=resolved_llm_router,
+            optimizer=resolved_optimizer,
             metadata={
                 "hacc_runner": True,
                 "output_dir": str(output_root),
+                "demo_autopatch": demo_mode,
             },
         )
         summary["success"] = bool(getattr(result, "success", False))
@@ -1127,6 +1143,38 @@ def _adversarial_search_summary(
     }
 
 
+def _best_complaint_grounding_overview(best_result: Any) -> Dict[str, Any]:
+    seed = dict((getattr(best_result, "seed_complaint", {}) or {})) if best_result else {}
+    key_facts = dict(seed.get("key_facts") or {})
+    anchor_sections = [str(item) for item in list(key_facts.get("anchor_sections") or []) if str(item)]
+    anchor_passages = [dict(item) for item in list(key_facts.get("anchor_passages") or []) if isinstance(item, dict)]
+    hacc_evidence = [dict(item) for item in list(seed.get("hacc_evidence") or []) if isinstance(item, dict)]
+
+    top_documents: List[str] = []
+    for item in hacc_evidence:
+        label = str(item.get("title") or item.get("source_path") or "").strip()
+        if label and label not in top_documents:
+            top_documents.append(label)
+        if len(top_documents) >= 3:
+            break
+
+    overview = {
+        "evidence_summary": str(key_facts.get("evidence_summary") or seed.get("summary") or "").strip(),
+        "anchor_sections": anchor_sections,
+        "anchor_passage_count": len(anchor_passages),
+        "evidence_item_count": len(hacc_evidence),
+        "top_documents": top_documents,
+    }
+    compact: Dict[str, Any] = {}
+    for key, value in overview.items():
+        if value in (None, "", [], {}):
+            continue
+        if isinstance(value, int) and value <= 0:
+            continue
+        compact[key] = value
+    return compact
+
+
 def run_hacc_adversarial_batch(
     *,
     output_dir: str | Path,
@@ -1310,6 +1358,7 @@ def run_hacc_adversarial_batch(
             "score": float(getattr(getattr(best_result, "critic_score", None), "overall_score", 0.0) or 0.0) if best_result else 0.0,
             "seed_type": str((getattr(best_result, "seed_complaint", {}) or {}).get("type") or "") if best_result else "",
             "seed_summary": str((getattr(best_result, "seed_complaint", {}) or {}).get("summary") or "") if best_result else "",
+            "grounding_overview": _best_complaint_grounding_overview(best_result),
             "search_summary": search_summary,
         },
         "artifacts": {

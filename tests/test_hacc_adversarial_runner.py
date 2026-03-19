@@ -13,6 +13,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from hacc_adversarial_runner import (
+    _best_complaint_grounding_overview,
     _autopatch_constraints_for_profile,
     _autopatch_target_profiles,
     _build_diff_from_replacements,
@@ -27,7 +28,7 @@ from hacc_adversarial_runner import (
 
 
 class HACCAdversarialRunnerTests(unittest.TestCase):
-    def test_runner_path_imports_package_based_hacc_loader(self) -> None:
+    def test_runner_path_imports_file_based_hacc_loader(self) -> None:
         complaint_generator_root = REPO_ROOT / "complaint-generator"
         if str(complaint_generator_root) in sys.path:
             sys.path.remove(str(complaint_generator_root))
@@ -41,9 +42,36 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
         source = inspect.getsource(hacc_evidence_module._load_hacc_engine)
 
         self.assertIn(str(complaint_generator_root), sys.path)
-        self.assertIn('importlib.import_module("hacc_research")', source)
-        self.assertNotIn("spec_from_file_location", source)
-        self.assertNotIn("module_from_spec", source)
+        self.assertIn("spec_from_file_location", source)
+        self.assertIn("module_from_spec", source)
+        self.assertNotIn('importlib.import_module("hacc_research")', source)
+
+    def test_best_complaint_grounding_overview_summarizes_anchor_context(self) -> None:
+        best_result = SimpleNamespace(
+            seed_complaint={
+                "summary": "Retaliation complaint grounded in HACC grievance procedures.",
+                "key_facts": {
+                    "evidence_summary": "HACC policy language supporting grievance and appeal protections.",
+                    "anchor_sections": ["grievance_hearing", "appeal_rights"],
+                    "anchor_passages": [
+                        {"title": "ADMINISTRATIVE PLAN", "snippet": "Informal hearing language."},
+                        {"title": "ACOP", "snippet": "Appeal notice language."},
+                    ],
+                },
+                "hacc_evidence": [
+                    {"title": "ADMINISTRATIVE PLAN", "snippet": "Informal hearing language."},
+                    {"title": "ACOP", "snippet": "Appeal notice language."},
+                ],
+            }
+        )
+
+        overview = _best_complaint_grounding_overview(best_result)
+
+        self.assertEqual(overview["evidence_summary"], "HACC policy language supporting grievance and appeal protections.")
+        self.assertEqual(overview["anchor_sections"], ["grievance_hearing", "appeal_rights"])
+        self.assertEqual(overview["anchor_passage_count"], 2)
+        self.assertEqual(overview["evidence_item_count"], 2)
+        self.assertEqual(overview["top_documents"], ["ADMINISTRATIVE PLAN", "ACOP"])
 
     def test_run_hacc_adversarial_batch_passes_hacc_grounding_flags(self) -> None:
         run_batch_kwargs = {}
@@ -124,6 +152,7 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
         self.assertFalse(run_batch_kwargs["use_hacc_vector_search"])
         self.assertEqual(summary["inputs"]["hacc_search_mode"], "package")
         self.assertEqual(summary["search_summary"]["requested_search_mode"], "package")
+        self.assertEqual(summary["best_complaint"]["grounding_overview"], {})
         self.assertEqual(summary["best_complaint"]["search_summary"], summary["search_summary"])
 
     def test_run_hacc_adversarial_batch_reports_package_fallback_when_vector_unavailable(self) -> None:
@@ -410,6 +439,7 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
                 {"available", "unavailable"},
             )
             self.assertEqual(summary["best_complaint"]["search_summary"], summary["search_summary"])
+            self.assertIn("grounding_overview", summary["best_complaint"])
 
             best_bundle = json.loads(best_path.read_text(encoding="utf-8"))
             optimization_payload = json.loads(report_path.read_text(encoding="utf-8"))
@@ -622,6 +652,53 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
         self.assertIn("cachetools", str(summary["autopatch"]["preflight"]["error"]))
         self.assertIn("Autopatch dependency preflight failed", str(summary["autopatch"]["error"]))
         autopatch_mock.assert_not_called()
+
+    def test_demo_runner_uses_demo_patch_optimizer_for_autopatch(self) -> None:
+        complaint_generator_root = REPO_ROOT / "complaint-generator"
+        if str(complaint_generator_root) not in sys.path:
+            sys.path.insert(0, str(complaint_generator_root))
+
+        import adversarial_harness.demo_autopatch as demo_autopatch_module
+        import adversarial_harness.optimizer as optimizer_module
+
+        captured_optimizer = {}
+
+        class FakeDemoPatchOptimizer:
+            def __init__(self, *, project_root, output_dir, marker_prefix):
+                captured_optimizer["project_root"] = str(project_root)
+                captured_optimizer["output_dir"] = str(output_dir)
+                captured_optimizer["marker_prefix"] = marker_prefix
+
+            def optimize(self, task):
+                patch_path = Path(captured_optimizer["output_dir"]) / "demo.patch"
+                patch_path.parent.mkdir(parents=True, exist_ok=True)
+                patch_path.write_text("demo patch", encoding="utf-8")
+                return SimpleNamespace(
+                    success=True,
+                    patch_path=patch_path,
+                    patch_cid="demo-cid",
+                    metadata={"demo": True},
+                )
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            with mock.patch.object(demo_autopatch_module, "DemoPatchOptimizer", FakeDemoPatchOptimizer):
+                summary = run_hacc_adversarial_batch(
+                    output_dir=tmpdir,
+                    num_sessions=1,
+                    max_turns=1,
+                    max_parallel=1,
+                    hacc_preset="core_hacc_policies",
+                    demo=True,
+                    emit_autopatch=True,
+                )
+
+        self.assertTrue(summary["autopatch"]["requested"])
+        self.assertTrue(summary["autopatch"]["success"])
+        self.assertEqual(summary["autopatch"]["patch_cid"], "demo-cid")
+        self.assertEqual(summary["autopatch"]["metadata"]["demo"], True)
+        self.assertEqual(captured_optimizer["project_root"], str(COMPLAINT_GENERATOR_ROOT))
+        self.assertTrue(captured_optimizer["output_dir"].endswith("/autopatch"))
+        self.assertEqual(captured_optimizer["marker_prefix"], "Demo autopatch recommendation")
 
     def test_live_runner_uses_llm_router_backend(self) -> None:
         complaint_generator_root = REPO_ROOT / "complaint-generator"
