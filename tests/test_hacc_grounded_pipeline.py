@@ -8,6 +8,133 @@ import hacc_grounded_pipeline as pipeline
 
 
 class HACCGroundedPipelineTests(unittest.TestCase):
+    def test_run_grounded_pipeline_preserves_package_search_summary_in_artifacts(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            fake_grounding = {
+                "status": "success",
+                "query": "retaliation grievance appeal",
+                "claim_type": "housing_discrimination",
+                "search_summary": {
+                    "requested_search_mode": "package",
+                    "requested_use_vector": False,
+                    "effective_search_mode": "lexical_only",
+                    "fallback_note": "Requested package/shared hybrid search, but vector support is unavailable; using lexical results instead.",
+                },
+                "anchor_sections": [],
+                "anchor_passages": [],
+                "upload_candidates": [],
+                "mediator_evidence_packets": [],
+                "synthetic_prompts": {},
+            }
+            fake_upload = {
+                "status": "success",
+                "upload_count": 0,
+                "uploads": [],
+                "search_summary": {
+                    "requested_search_mode": "package",
+                    "requested_use_vector": False,
+                    "effective_search_mode": "lexical_only",
+                    "fallback_note": "Requested package/shared hybrid search, but vector support is unavailable; using lexical results instead.",
+                },
+            }
+            fake_adversarial_summary = {
+                "search_summary": {
+                    "requested_search_mode": "package",
+                    "requested_use_vector": False,
+                    "effective_search_mode": "lexical_fallback",
+                    "fallback_note": "Requested package/shared hybrid search, but vector support is unavailable; using lexical results instead. Vector backend detail: numpy is required for local vector persistence and search",
+                },
+                "statistics": {"successful_sessions": 1, "total_sessions": 1},
+                "best_complaint": {"score": 0.91},
+                "artifacts": {"output_dir": str(Path(tmpdir) / "adversarial")},
+            }
+
+            with mock.patch.object(pipeline, "HACCResearchEngine") as engine_cls:
+                engine = engine_cls.return_value
+                engine.build_grounding_bundle.return_value = fake_grounding
+                engine.simulate_evidence_upload.return_value = fake_upload
+                with mock.patch.object(pipeline, "run_hacc_adversarial_batch", return_value=fake_adversarial_summary):
+                    summary = pipeline.run_hacc_grounded_pipeline(
+                        output_dir=tmpdir,
+                        hacc_preset="core_hacc_policies",
+                        hacc_search_mode="package",
+                        use_hacc_vector_search=False,
+                        demo=True,
+                    )
+
+            summary_payload = json.loads((Path(tmpdir) / "run_summary.json").read_text(encoding="utf-8"))
+            self.assertEqual(summary["search_summary"]["grounding"]["requested_search_mode"], "package")
+            self.assertEqual(summary["search_summary"]["grounding"]["effective_search_mode"], "lexical_only")
+            self.assertIn("Requested package/shared hybrid search", summary["search_summary"]["grounding"]["fallback_note"])
+            self.assertEqual(summary["search_summary"]["adversarial"]["effective_search_mode"], "lexical_fallback")
+            self.assertEqual(summary_payload["search_summary"]["grounding"], summary["search_summary"]["grounding"])
+            self.assertEqual(summary_payload["search_summary"]["evidence_upload"], summary["search_summary"]["evidence_upload"])
+            self.assertEqual(summary_payload["search_summary"]["adversarial"], summary["search_summary"]["adversarial"])
+
+    def test_run_grounded_pipeline_preserves_hybrid_search_summary_in_artifacts(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            fake_grounding = {
+                "status": "success",
+                "query": "retaliation grievance appeal",
+                "claim_type": "housing_discrimination",
+                "search_summary": {
+                    "requested_search_mode": "hybrid",
+                    "requested_use_vector": True,
+                    "effective_search_mode": "lexical_only",
+                    "fallback_note": "Requested hybrid search, but vector support is unavailable; using lexical results instead.",
+                },
+                "anchor_sections": [],
+                "anchor_passages": [],
+                "upload_candidates": [],
+                "mediator_evidence_packets": [],
+                "synthetic_prompts": {},
+            }
+            fake_upload = {
+                "status": "success",
+                "upload_count": 0,
+                "uploads": [],
+                "search_summary": {
+                    "requested_search_mode": "hybrid",
+                    "requested_use_vector": True,
+                    "effective_search_mode": "lexical_only",
+                    "fallback_note": "Requested hybrid search, but vector support is unavailable; using lexical results instead.",
+                },
+            }
+            fake_adversarial_summary = {
+                "search_summary": {
+                    "requested_search_mode": "hybrid",
+                    "requested_use_vector": True,
+                    "effective_search_mode": "lexical_only",
+                    "fallback_note": "Requested hybrid search, but vector support is unavailable; using lexical results instead. Vector backend detail: numpy is required for local vector persistence and search",
+                },
+                "statistics": {"successful_sessions": 1, "total_sessions": 1},
+                "best_complaint": {"score": 0.91},
+                "artifacts": {"output_dir": str(Path(tmpdir) / "adversarial")},
+            }
+
+            with mock.patch.object(pipeline, "HACCResearchEngine") as engine_cls:
+                engine = engine_cls.return_value
+                engine.build_grounding_bundle.return_value = fake_grounding
+                engine.simulate_evidence_upload.return_value = fake_upload
+                with mock.patch.object(pipeline, "run_hacc_adversarial_batch", return_value=fake_adversarial_summary):
+                    summary = pipeline.run_hacc_grounded_pipeline(
+                        output_dir=tmpdir,
+                        hacc_preset="core_hacc_policies",
+                        hacc_search_mode="hybrid",
+                        use_hacc_vector_search=True,
+                        demo=True,
+                    )
+
+            summary_payload = json.loads((Path(tmpdir) / "run_summary.json").read_text(encoding="utf-8"))
+            self.assertEqual(summary["search_summary"]["grounding"]["requested_search_mode"], "hybrid")
+            self.assertTrue(summary["search_summary"]["grounding"]["requested_use_vector"])
+            self.assertEqual(summary["search_summary"]["grounding"]["effective_search_mode"], "lexical_only")
+            self.assertIn("Requested hybrid search", summary["search_summary"]["grounding"]["fallback_note"])
+            self.assertEqual(summary["search_summary"]["adversarial"]["effective_search_mode"], "lexical_only")
+            self.assertEqual(summary_payload["search_summary"]["grounding"], summary["search_summary"]["grounding"])
+            self.assertEqual(summary_payload["search_summary"]["evidence_upload"], summary["search_summary"]["evidence_upload"])
+            self.assertEqual(summary_payload["search_summary"]["adversarial"], summary["search_summary"]["adversarial"])
+
     def test_run_grounded_pipeline_writes_expected_artifacts(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             fake_grounding = {

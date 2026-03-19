@@ -1,0 +1,44 @@
+{
+  "patch_id": "0a607e1918801d40",
+  "agent_id": "adversarial-harness-optimizer",
+  "task_id": "adversarial_autopatch_20260319_085002",
+  "description": "Use the test_driven optimizer to improve the complaint-generator adversarial complainant/mediator loop. Target files: /home/barberb/HACC/complaint-generator/complaint_phases/phase_manager.py, /home/barberb/HACC/complaint-generator/mediator/inquiries.py. Priorities from the latest adversarial batch: Improve question quality: current avg 0.50; Improve empathy: current avg 0.50; Improve efficiency: current avg 0.50. Preserve current behavior while improving router-backed question quality, information extraction, coverage, and patchability.",
+  "diff_content": "--- a/complaint_phases/phase_manager.py\n+++ b/complaint_phases/phase_manager.py\n@@ -946,15 +946,6 @@\n                 'intake_blockers': readiness['blockers'],\n             }\n \n-        remaining_gaps = data.get('remaining_gaps', float('inf'))\n-        if remaining_gaps > _INTAKE_GAPS_THRESHOLD:\n-            return {\n-                'action': 'address_gaps',\n-                'gaps': gaps,\n-                'intake_readiness_score': readiness['score'],\n-                'intake_blockers': readiness['blockers'],\n-            }\n-\n         semantic_blockers = [\n             blocker for blocker in readiness['blockers']\n             if blocker not in {\n@@ -979,7 +970,7 @@\n                 'intake_blockers': readiness['blockers'],\n             }\n \n-        if (data.get('denoising_converged', False) and remaining_gaps <= gap_threshold) or self.iteration_count >= _DENOISING_MAX_ITERATIONS:\n+        if data.get('denoising_converged', False) and remaining_gaps <= gap_threshold:\n             return {\n                 'action': 'complete_intake',\n                 'intake_readiness_score': readiness['score'],\n",
+  "target_files": [
+    "complaint_phases/phase_manager.py"
+  ],
+  "created_at": "2026-03-19T08:50:49.213387",
+  "parent_patches": [],
+  "ipfs_cid": null,
+  "worktree_path": "",
+  "validated": false,
+  "applied": false,
+  "metadata": {
+    "patch_mode": "direct_diff",
+    "repo_root": "/home/barberb/HACC/complaint-generator",
+    "generation_diagnostics": [
+      {
+        "file": "/home/barberb/HACC/complaint-generator/complaint_phases/phase_manager.py",
+        "status": "optimized",
+        "mode": "symbol_level",
+        "target_symbols": [
+          "_get_intake_action"
+        ],
+        "response_length": 55959,
+        "changed": true
+      },
+      {
+        "file": "/home/barberb/HACC/complaint-generator/mediator/inquiries.py",
+        "status": "error",
+        "mode": "symbol_level",
+        "target_symbols": [
+          "get_next",
+          "merge_legal_questions"
+        ],
+        "error_type": "ValueError",
+        "error_message": "Symbol replacement produced invalid Python: unindent does not match any outer indentation level (<unknown>, line 56)",
+        "raw_response_preview": "Return a compact JSON object describing how inquiries.get_next and inquiries.merge_legal_questions should behave.\n\nFile: /home/barberb/HACC/complaint-generator/mediator/inquiries.py\nTask: Use the test_driven optimizer to improve the complaint-generator adversarial complainant/mediator loop. Target files: /home/barberb/HACC/complaint-generator/complaint_phases/phase_manager.py, /home/barberb/HACC/complaint-generator/mediator/inquiries.py. Priorities from the latest adversarial batch: Improve question quality: current avg 0.50; Improve empathy: current avg 0.50; Improve efficiency: current avg 0.50. Preserve current behavior while improving router-backed question quality, information extraction, coverage, and patchability.\n\nCurrent performance:\n- Execution time: 1.5s\n- Test coverage: 85.0%\n\nRecent adversarial findings:\n- Performance is moderate. Targeted improvements can significantly boost quality.\n- Improve question formulation: make questions more specific and relevant.\n- Increase empathy: acknowledge complainant's feelings and concerns.\n- Improve efficiency: avoid repetitive questions and streamline the process.\n\nReturn JSON only with these keys:\n- \"prioritize_dependency_gaps_fir\n...[truncated]..."
+      }
+    ]
+  }
+}

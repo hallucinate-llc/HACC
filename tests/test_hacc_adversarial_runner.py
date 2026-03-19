@@ -222,9 +222,9 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
         source = inspect.getsource(hacc_evidence_module._load_hacc_engine)
 
         self.assertIn(str(complaint_generator_root), sys.path)
-        self.assertIn('importlib.import_module("hacc_research")', source)
-        self.assertNotIn("spec_from_file_location", source)
-        self.assertNotIn("module_from_spec", source)
+        self.assertIn("spec_from_file_location", source)
+        self.assertIn("module_from_spec", source)
+        self.assertNotIn('import_module("hacc_research")', source)
 
     def test_best_complaint_grounding_overview_summarizes_anchor_context(self) -> None:
         best_result = SimpleNamespace(
