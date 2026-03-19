@@ -481,6 +481,10 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
                     "/home/barberb/HACC/complaint-generator/complaint_phases/phase_manager.py",
                     "/home/barberb/HACC/complaint-generator/mediator/inquiries.py",
                 ],
+                "preflight": {
+                    "ready": False,
+                    "error": "No module named 'cachetools'",
+                },
                 "used_recommended_targets": True,
                 "profile": "question_flow",
                 "target_files": [
@@ -503,6 +507,8 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
         rendered = stdout.getvalue()
         self.assertEqual(exit_code, 0)
         self.assertIn("Using recommended autopatch targets: True", rendered)
+        self.assertIn("Autopatch preflight ready: False", rendered)
+        self.assertIn("Autopatch preflight error: No module named 'cachetools'", rendered)
         self.assertIn("Requested autopatch profile: question_flow", rendered)
         self.assertIn(
             "Requested autopatch targets: /home/barberb/HACC/complaint-generator/complaint_phases/phase_manager.py, "
@@ -582,6 +588,40 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             self.assertTrue(any(str(path).endswith("mediator/mediator.py") for path in summary["autopatch"]["target_files"]))
             self.assertTrue(any(str(path).endswith("adversarial_harness/complainant.py") for path in summary["autopatch"]["target_files"]))
             self.assertEqual(autopatch_kwargs["profile"], "custom")
+
+    def test_runner_reports_autopatch_preflight_failure_without_calling_optimizer(self) -> None:
+        complaint_generator_root = REPO_ROOT / "complaint-generator"
+        if str(complaint_generator_root) not in sys.path:
+            sys.path.insert(0, str(complaint_generator_root))
+
+        import adversarial_harness.optimizer as optimizer_module
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            with mock.patch.object(
+                optimizer_module.Optimizer,
+                "_load_agentic_optimizer_components",
+                side_effect=RuntimeError("No module named 'cachetools'"),
+            ):
+                with mock.patch.object(
+                    optimizer_module.Optimizer,
+                    "run_agentic_autopatch",
+                ) as autopatch_mock:
+                    summary = run_hacc_adversarial_batch(
+                        output_dir=tmpdir,
+                        num_sessions=1,
+                        max_turns=1,
+                        max_parallel=1,
+                        hacc_preset="core_hacc_policies",
+                        demo=True,
+                        emit_autopatch=True,
+                    )
+
+        self.assertTrue(summary["autopatch"]["requested"])
+        self.assertFalse(summary["autopatch"]["success"])
+        self.assertEqual(summary["autopatch"]["preflight"]["ready"], False)
+        self.assertIn("cachetools", str(summary["autopatch"]["preflight"]["error"]))
+        self.assertIn("Autopatch dependency preflight failed", str(summary["autopatch"]["error"]))
+        autopatch_mock.assert_not_called()
 
     def test_live_runner_uses_llm_router_backend(self) -> None:
         complaint_generator_root = REPO_ROOT / "complaint-generator"

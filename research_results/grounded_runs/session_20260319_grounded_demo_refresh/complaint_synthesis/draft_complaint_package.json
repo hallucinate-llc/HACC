@@ -1,0 +1,223 @@
+{
+  "generated_at": "2026-03-19T04:40:42.277069+00:00",
+  "preset": "core_hacc_policies",
+  "filing_forum": "hud",
+  "session_id": "session_20260319_043926_002",
+  "critic_score": 0.7435,
+  "summary": "However, HACC is not required to permit families receiving assistance in its jurisdiction to use these housing types, except that PHAs must permit use of any special housing type if needed as a reasonable accommodation for a person with a disability, and HACC must permit a family to lease a manufactured home and space with assistance under the program.",
+  "caption": {
+    "court": "HUD, U.S. Department of Housing and Urban Development, Office of Fair Housing and Equal Opportunity",
+    "case_title": "Administrative Fair Housing Complaint",
+    "document_title": "Draft HUD Housing Discrimination Complaint",
+    "caption_note": "Accommodation complaint anchored to HACC core housing policies"
+  },
+  "parties": {
+    "plaintiff": "Aggrieved person / complainant (name to be inserted).",
+    "defendant": "Housing Authority of Clackamas County (HACC), respondent."
+  },
+  "jurisdiction_and_venue": [
+    "This draft is structured as an administrative housing-discrimination intake for HUD and should be tailored to the final statutory basis asserted.",
+    "HUD jurisdiction and timeliness should be confirmed against the final incident dates, protected-basis theory, and requested relief.",
+    "The dispute appears to arise from housing-program administration, adverse action, and procedural protections connected to HACC operations."
+  ],
+  "legal_theory_summary": {
+    "theory_labels": [
+      "reasonable_accommodation",
+      "disability_discrimination"
+    ],
+    "protected_bases": [
+      "disability"
+    ],
+    "authority_hints": [
+      "Fair Housing Act reasonable accommodation requirements",
+      "Section 504 of the Rehabilitation Act",
+      "Americans with Disabilities Act"
+    ]
+  },
+  "anchor_sections": [
+    "reasonable_accommodation"
+  ],
+  "factual_allegations": [
+    "The complaint centers on Accommodation complaint concerning HACC notice, grievance, and hearing protections.",
+    "The intake and evidence record suggest a dispute implicating protected basis concerns related to disability.",
+    "The complainant contends that accommodation-related concerns were not fairly addressed.",
+    "The core documentary support for these allegations appears in Exhibit A (ADMISSIONS AND CONTINUED OCCUPANCY POLICY) and Exhibit B (ADMINISTRATIVE PLAN)."
+  ],
+  "claims_theory": [
+    "The current evidence suggests a disability-related accommodation or fair-housing theory connected to the challenged process.",
+    "The available record suggests the dispute may implicate protected basis concerns related to disability.",
+    "Likely authority implicated by the current theory includes Fair Housing Act reasonable accommodation requirements, Section 504 of the Rehabilitation Act, Americans with Disabilities Act.",
+    "The intake and policy materials suggest a potential failure to provide or fairly evaluate reasonable accommodation within the adverse-action process.",
+    "The policy theory is grounded in HACC language stating that However, HACC is not required to permit families receiving assistance in its jurisdiction to use these housing types, except that PHAs must permit use of any special housing type if needed as a reasonable accommodation for a person with a disability, and HACC must permit a family to lease a manufactured home and space with assistance under the program. That documentary support is reflected in Exhibit A (ADMISSIONS AND CONTINUED OCCUPANCY POLICY) and Exhibit B (ADMINISTRATIVE PLAN)."
+  ],
+  "policy_basis": [
+    "ADMISSIONS AND CONTINUED OCCUPANCY POLICY supports reasonable accommodation: [reasonable_accommodation] REQUEST FOR AN ACCOMMODATION If an applicant or participant indicates that an exception, change, or adjustment to a rule, policy, practice, or service is needed because of a disability, HUD requires that HACC treat the information as a request for a reasonable accommodation, even if no formal request is made [Joint Statement of the Departments of HUD and... Full passage: REQUEST FOR AN ACCOMMODATION If an applicant or participant indicates that an exception, change, or adjustment to a rule, policy, practice, or service is needed because of a disability, HUD requires that HACC treat the information as a request for a reasonable accommodation, even if no formal request is made [Joint Statement of the Departments of HUD and Justice: Reasonable Accommodations under the Fair Housing Act]. The family must explain what type of accommodation is needed to provide the person with the disability full access to HACC\u2019s programs and services. If the need for the accommodation is not readily apparent or known to HACC, the family must explain the relationship between the requested accommodation and the disability. HACC will encourage the family to make its request in writing using a reasonable accommodation request form. However, HACC will consider the accommodation any time the family indicates that an accommodation is needed, whether or not a formal written request is submitted.",
+    "ADMINISTRATIVE PLAN supports reasonable accommodation: [reasonable_accommodation] Types of Reasonable Accommodations When needed, HACC will modify normal procedures to accommodate the needs of a person with disabilities. Examples include: \uf0b7 Permitting applications and reexaminations to be completed by mail \uf0b7 Conducting home visits \uf0b7 Using higher payment standards (either within the acceptable range or with HUD approval of a payment sta... Full passage: in the nature of the program or service offered. A fundamental alteration is a modification that alters the essential nature of a provider\u2019s operations. Types of Reasonable Accommodations When needed, HACC will modify normal procedures to accommodate the needs of a person with disabilities. Examples include: \uf0b7 Permitting applications and reexaminations to be completed by mail \uf0b7 Conducting home visits \uf0b7 Using higher payment standards (either within the acceptable range or with HUD approval of a payment standard outside HACC range) if HACC determines this is necessary to enable a person with disabilities to obtain a suitable housing unit HACC Policy When a family that includes a person with disabilities requires an exception payment standard as a reasonable accommodation, HACC may approve or deny requests for exceptions not to exceed 120% of the applicable FMR."
+  ],
+  "causes_of_action": [
+    {
+      "title": "Fair Housing Act / Section 504 Accommodation Theory",
+      "theory": "The available record suggests accommodation-related issues may have intersected with adverse-action or review procedures.",
+      "support": [
+        "The current evidence suggests a disability-related accommodation or fair-housing theory connected to the challenged process.",
+        "Likely authority implicated by the current theory includes Fair Housing Act reasonable accommodation requirements, Section 504 of the Rehabilitation Act, Americans with Disabilities Act.",
+        "The intake and policy materials suggest a potential failure to provide or fairly evaluate reasonable accommodation within the adverse-action process.",
+        "The policy theory is grounded in HACC language stating that However, HACC is not required to permit families receiving assistance in its jurisdiction to use these housing types, except that PHAs must permit use of any special housing type if needed as a reasonable accommodation for a person with a disability, and HACC must permit a family to lease a manufactured home and space with assistance under the program.",
+        "Documentary support: Exhibit B (ADMINISTRATIVE PLAN). Rationale: selected for stronger accommodation contact-language."
+      ],
+      "selected_exhibits": [
+        {
+          "exhibit_id": "Exhibit B",
+          "label": "ADMINISTRATIVE PLAN"
+        }
+      ],
+      "selection_rationale": "selected for stronger accommodation contact-language",
+      "selection_tags": [
+        "reasonable_accommodation",
+        "contact"
+      ]
+    },
+    {
+      "title": "Fair Housing Act Protected-Basis Administrative Theory",
+      "theory": "The current evidence suggests HACC may have applied housing policy or process in a manner that warrants review for protected-basis discrimination involving disability. Likely authority includes Fair Housing Act reasonable accommodation requirements, Section 504 of the Rehabilitation Act.",
+      "support": [
+        "The available record suggests the dispute may implicate protected basis concerns related to disability.",
+        "Documentary support: Exhibit B (ADMINISTRATIVE PLAN). Rationale: selected for strongest overlap with the protected-basis theory."
+      ],
+      "selected_exhibits": [
+        {
+          "exhibit_id": "Exhibit B",
+          "label": "ADMINISTRATIVE PLAN"
+        }
+      ],
+      "selection_rationale": "selected for strongest overlap with the protected-basis theory",
+      "selection_tags": [
+        "protected_basis"
+      ]
+    }
+  ],
+  "anchor_passages": [
+    "ADMISSIONS AND CONTINUED OCCUPANCY POLICY [reasonable_accommodation]: [reasonable_accommodation] REQUEST FOR AN ACCOMMODATION If an applicant or participant indicates that an exception, change, or adjustment to a rule, policy, practice, or service is needed because of a disability, HUD requires that HACC treat the information as a request for a reasonable accommodation, even if no formal request is made [Joint Statement of the Departments of HUD and... Full passage: REQUEST FOR AN ACCOMMODATION If an applicant or participant indicates that an exception, change, or adjustment to a rule, policy, practice, or service is needed because of a disability, HUD requires that HACC treat the information as a request for a reasonable accommodation, even if no formal request is made [Joint Statement of the Departments of HUD and Justice: Reasonable Accommodations under the Fair Housing Act]. The family must explain what type of accommodation is needed to provide the person with the disability full access to HACC\u2019s programs and services. If the need for the accommodation is not readily apparent or known to HACC, the family must explain the relationship between the requested accommodation and the disability. HACC will encourage the family to make its request in writing using a reasonable accommodation request form. However, HACC will consider the accommodation any time the family indicates that an accommodation is needed, whether or not a formal written request is submitted.",
+    "ADMINISTRATIVE PLAN [reasonable_accommodation]: [reasonable_accommodation] Types of Reasonable Accommodations When needed, HACC will modify normal procedures to accommodate the needs of a person with disabilities. Examples include: \uf0b7 Permitting applications and reexaminations to be completed by mail \uf0b7 Conducting home visits \uf0b7 Using higher payment standards (either within the acceptable range or with HUD approval of a payment sta... Full passage: in the nature of the program or service offered. A fundamental alteration is a modification that alters the essential nature of a provider\u2019s operations. Types of Reasonable Accommodations When needed, HACC will modify normal procedures to accommodate the needs of a person with disabilities. Examples include: \uf0b7 Permitting applications and reexaminations to be completed by mail \uf0b7 Conducting home visits \uf0b7 Using higher payment standards (either within the acceptable range or with HUD approval of a payment standard outside HACC range) if HACC determines this is necessary to enable a person with disabilities to obtain a suitable housing unit HACC Policy When a family that includes a person with disabilities requires an exception payment standard as a reasonable accommodation, HACC may approve or deny requests for exceptions not to exceed 120% of the applicable FMR."
+  ],
+  "supporting_evidence": [
+    "ADMINISTRATIVE PLAN: [reasonable_accommodation] Types of Reasonable Accommodations When needed, HACC will modify normal procedures to accommodate the needs of a person with disabilities. Examples include: \uf0b7 Permitting applications and reexaminations to be completed by mail \uf0b7 Conducting home visits \uf0b7 Using higher payment standards (either within the acceptable range or with HUD approval of a payment sta... Full passage: in the nature of the program or service offered. A fundamental alteration is a modification that alters the essential nature of a provider\u2019s operations. Types of Reasonable Accommodations When needed, HACC will modify normal procedures to accommodate the needs of a person with disabilities. Examples include: \uf0b7 Permitting applications and reexaminations to be completed by mail \uf0b7 Conducting home visits \uf0b7 Using higher payment standards (either within the acceptable range or with HUD approval of a payment standard outside HACC range) if HACC determines this is necessary to enable a person with disabilities to obtain a suitable housing unit HACC Policy When a family that includes a person with disabilities requires an exception payment standard as a reasonable accommodation, HACC may approve or deny requests for exceptions not to exceed 120% of the applicable FMR. (/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858).",
+    "ADMISSIONS AND CONTINUED OCCUPANCY POLICY: [reasonable_accommodation] REQUEST FOR AN ACCOMMODATION If an applicant or participant indicates that an exception, change, or adjustment to a rule, policy, practice, or service is needed because of a disability, HUD requires that HACC treat the information as a request for a reasonable accommodation, even if no formal request is made [Joint Statement of the Departments of HUD and... Full passage: REQUEST FOR AN ACCOMMODATION If an applicant or participant indicates that an exception, change, or adjustment to a rule, policy, practice, or service is needed because of a disability, HUD requires that HACC treat the information as a request for a reasonable accommodation, even if no formal request is made [Joint Statement of the Departments of HUD and Justice: Reasonable Accommodations under the Fair Housing Act]. The family must explain what type of accommodation is needed to provide the person with the disability full access to HACC\u2019s programs and services. If the need for the accommodation is not readily apparent or known to HACC, the family must explain the relationship between the requested accommodation and the disability. HACC will encourage the family to make its request in writing using a reasonable accommodation request form. However, HACC will consider the accommodation any time the family indicates that an accommodation is needed, whether or not a formal written request is submitted. (/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b)."
+  ],
+  "proposed_allegations": [
+    "Complainant alleges conduct arising from Accommodation complaint concerning HACC notice, grievance, and hearing protections.",
+    "The available HACC materials suggest that However, HACC is not required to permit families receiving assistance in its jurisdiction to use these housing types, except that PHAs must permit use of any special housing type if needed as a reasonable accommodation for a person with a disability, and HACC must permit a family to lease a manufactured home and space with assistance under the program.",
+    "The intake record suggests accommodation-related concerns were not fairly addressed within the HACC process.",
+    "Case-specific facts still need confirmation, including the date and nature of the adverse action, who at HACC made or communicated the decision, the resulting housing harm and requested remedy."
+  ],
+  "outstanding_intake_gaps": [],
+  "outstanding_intake_follow_up_questions": [],
+  "requested_relief": [
+    "Administrative investigation of the challenged housing practices and adverse-action process.",
+    "Corrective action requiring clear notice, fair review, and non-retaliation safeguards.",
+    "Appropriate administrative remedies, damages, and other relief authorized by fair housing law.",
+    "Any additional relief HUD is authorized to obtain or recommend."
+  ],
+  "grounded_evidence_summary": [],
+  "grounding_overview": {
+    "evidence_summary": "",
+    "anchor_sections": [],
+    "anchor_passage_count": 0,
+    "upload_candidate_count": 0,
+    "mediator_packet_count": 0,
+    "uploaded_evidence_count": 0,
+    "top_documents": []
+  },
+  "search_summary": {
+    "requested_search_mode": "package",
+    "effective_search_mode": "package"
+  },
+  "selection_rationale": {},
+  "source_artifacts": {
+    "results_json": "/home/barberb/HACC/research_results/grounded_runs/session_20260319_grounded_demo_refresh/adversarial/adversarial_results.json",
+    "matrix_summary": null,
+    "selection_source": "results_json",
+    "grounded_run_dir": "/home/barberb/HACC/research_results/grounded_runs/session_20260319_grounded_demo_refresh",
+    "grounding_bundle_json": "/home/barberb/HACC/research_results/grounded_runs/session_20260319_grounded_demo_refresh/grounding_bundle.json",
+    "grounding_overview_json": "/home/barberb/HACC/research_results/grounded_runs/session_20260319_grounded_demo_refresh/grounding_overview.json",
+    "evidence_upload_report_json": "/home/barberb/HACC/research_results/grounded_runs/session_20260319_grounded_demo_refresh/evidence_upload_report.json",
+    "completed_intake_worksheet_json": null,
+    "search_summary": {
+      "requested_search_mode": "package",
+      "effective_search_mode": "package"
+    }
+  },
+  "requested_relief_annotations": [
+    {
+      "text": "Administrative investigation of the challenged housing practices and adverse-action process."
+    },
+    {
+      "text": "Corrective action requiring clear notice, fair review, and non-retaliation safeguards."
+    },
+    {
+      "text": "Appropriate administrative remedies, damages, and other relief authorized by fair housing law."
+    },
+    {
+      "text": "Any additional relief HUD is authorized to obtain or recommend."
+    }
+  ],
+  "claim_selection_summary": [
+    {
+      "title": "Fair Housing Act / Section 504 Accommodation Theory",
+      "selection_tags": [
+        "reasonable_accommodation",
+        "contact"
+      ],
+      "selected_exhibits": [
+        {
+          "exhibit_id": "Exhibit B",
+          "label": "ADMINISTRATIVE PLAN"
+        }
+      ],
+      "selection_rationale": "selected for stronger accommodation contact-language"
+    },
+    {
+      "title": "Fair Housing Act Protected-Basis Administrative Theory",
+      "selection_tags": [
+        "protected_basis"
+      ],
+      "selected_exhibits": [
+        {
+          "exhibit_id": "Exhibit B",
+          "label": "ADMINISTRATIVE PLAN"
+        }
+      ],
+      "selection_rationale": "selected for strongest overlap with the protected-basis theory"
+    }
+  ],
+  "relief_selection_summary": [
+    {
+      "text": "Administrative investigation of the challenged housing practices and adverse-action process.",
+      "strategic_families": [],
+      "strategic_role": "",
+      "strategic_note": "",
+      "related_claims": []
+    },
+    {
+      "text": "Corrective action requiring clear notice, fair review, and non-retaliation safeguards.",
+      "strategic_families": [],
+      "strategic_role": "",
+      "strategic_note": "",
+      "related_claims": []
+    },
+    {
+      "text": "Appropriate administrative remedies, damages, and other relief authorized by fair housing law.",
+      "strategic_families": [],
+      "strategic_role": "",
+      "strategic_note": "",
+      "related_claims": []
+    },
+    {
+      "text": "Any additional relief HUD is authorized to obtain or recommend.",
+      "strategic_families": [],
+      "strategic_role": "",
+      "strategic_note": "",
+      "related_claims": []
+    }
+  ]
+}

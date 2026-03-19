@@ -504,6 +504,16 @@ python3 hacc_adversarial_runner.py \
   --autopatch-method test_driven
 ```
 
+**Autopatch dependency note:**
+
+If the runner prints `Autopatch preflight ready: False`, install the complaint-generator Python dependencies first:
+
+```bash
+python3 -m pip install -r complaint-generator/requirements.txt
+```
+
+The current live autopatch path specifically requires `cachetools` in addition to the broader complaint-generator stack.
+
 ---
 
 ## Collection & Analysis Scripts

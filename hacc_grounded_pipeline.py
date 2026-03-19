@@ -193,16 +193,6 @@ def run_hacc_grounded_pipeline(
     grounding_bundle = _json_safe(grounding_bundle)
     upload_report = _json_safe(upload_report)
     adversarial_summary = _json_safe(adversarial_summary)
-    synthesis_summary: Dict[str, Any] = {}
-    if synthesize_complaint:
-        synthesis_summary = _json_safe(
-            _run_complaint_synthesis(
-                grounded_run_dir=output_root,
-                filing_forum=filing_forum,
-                preset=hacc_preset,
-                completed_intake_worksheet=completed_intake_worksheet,
-            )
-        )
 
     grounding_path = output_root / "grounding_bundle.json"
     grounding_overview_path = output_root / "grounding_overview.json"
@@ -235,6 +225,17 @@ def run_hacc_grounded_pipeline(
     )
     upload_path.write_text(json.dumps(upload_report, ensure_ascii=False, indent=2), encoding="utf-8")
     adversarial_path.write_text(json.dumps(adversarial_summary, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    synthesis_summary: Dict[str, Any] = {}
+    if synthesize_complaint:
+        synthesis_summary = _json_safe(
+            _run_complaint_synthesis(
+                grounded_run_dir=output_root,
+                filing_forum=filing_forum,
+                preset=hacc_preset,
+                completed_intake_worksheet=completed_intake_worksheet,
+            )
+        )
 
     summary = {
         "timestamp": datetime.now(UTC).isoformat(),

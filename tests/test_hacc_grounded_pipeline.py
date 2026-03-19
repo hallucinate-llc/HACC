@@ -102,7 +102,22 @@ class HACCGroundedPipelineTests(unittest.TestCase):
                 "status": "success",
                 "query": "reasonable accommodation hearing rights",
                 "claim_type": "housing_discrimination",
-                "upload_candidates": [],
+                "evidence_summary": "Reasonable accommodation policy language supporting hearing rights.",
+                "anchor_sections": ["reasonable_accommodation", "grievance_hearing"],
+                "anchor_passages": [
+                    {
+                        "title": "README",
+                        "snippet": "Residents may request an informal hearing as an accommodation-related safeguard.",
+                        "section_labels": ["reasonable_accommodation", "grievance_hearing"],
+                    }
+                ],
+                "upload_candidates": [
+                    {
+                        "title": "README",
+                        "relative_path": "README.md",
+                        "source_path": "/tmp/README.md",
+                    }
+                ],
                 "mediator_evidence_packets": [],
                 "synthetic_prompts": {},
             }
@@ -133,7 +148,16 @@ class HACCGroundedPipelineTests(unittest.TestCase):
                     "run_hacc_adversarial_batch",
                     return_value=fake_adversarial_summary,
                 ):
-                    with mock.patch.object(pipeline, "_run_complaint_synthesis", return_value=fake_synthesis) as synth_mock:
+                    def fake_synthesize(**kwargs):
+                        grounded_run_dir = Path(kwargs["grounded_run_dir"])
+                        self.assertTrue((grounded_run_dir / "grounding_bundle.json").is_file())
+                        self.assertTrue((grounded_run_dir / "grounding_overview.json").is_file())
+                        self.assertTrue((grounded_run_dir / "evidence_upload_report.json").is_file())
+                        overview_payload = json.loads((grounded_run_dir / "grounding_overview.json").read_text(encoding="utf-8"))
+                        self.assertEqual(overview_payload["anchor_sections"], ["reasonable_accommodation", "grievance_hearing"])
+                        return fake_synthesis
+
+                    with mock.patch.object(pipeline, "_run_complaint_synthesis", side_effect=fake_synthesize) as synth_mock:
                         summary = pipeline.run_hacc_grounded_pipeline(
                             output_dir=tmpdir,
                             query="reasonable accommodation hearing rights",

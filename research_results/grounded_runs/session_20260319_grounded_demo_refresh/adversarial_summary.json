@@ -1,0 +1,268 @@
+{
+  "timestamp": "20260319_044037",
+  "runtime": {
+    "mode": "demo",
+    "provider": "demo",
+    "model": "demo"
+  },
+  "router_diagnostics": {
+    "ipfs_router": {
+      "status": "available",
+      "backend_name": "KuboCLIBackend",
+      "backend_present": true,
+      "error": "",
+      "provider": "ipfs_datasets_py",
+      "metadata": {
+        "operation": "storage_backend_status",
+        "backend_available": true,
+        "provider": "ipfs_datasets_py",
+        "implementation_status": "available",
+        "details": {
+          "operation": "storage_backend_status",
+          "backend_available": true,
+          "implementation_status": "available"
+        }
+      }
+    },
+    "embeddings_router": {
+      "status": "available",
+      "router_name": "EmbeddingsRouter",
+      "router_present": true,
+      "router_factory": "EmbeddingsRouter",
+      "available_methods": [
+        "embed_text",
+        "embed_texts",
+        "embed_texts_batched"
+      ],
+      "probe_performed": false,
+      "error": "",
+      "provider": "ipfs_datasets_py",
+      "metadata": {
+        "operation": "embeddings_backend_status",
+        "backend_available": true,
+        "provider": "ipfs_datasets_py",
+        "implementation_status": "available",
+        "details": {
+          "operation": "embeddings_backend_status",
+          "backend_available": true,
+          "implementation_status": "available"
+        }
+      }
+    },
+    "vector_index": {
+      "status": "available",
+      "index_backend_present": true,
+      "local_persistence_ready": true,
+      "available_methods": [
+        "embed_texts_batched"
+      ],
+      "error": "",
+      "provider": "ipfs_datasets_py",
+      "metadata": {
+        "operation": "vector_index_backend_status",
+        "backend_available": true,
+        "provider": "ipfs_datasets_py",
+        "implementation_status": "available",
+        "details": {
+          "operation": "vector_index_backend_status",
+          "backend_available": true,
+          "implementation_status": "available"
+        }
+      }
+    }
+  },
+  "inputs": {
+    "num_sessions": 3,
+    "max_turns": 4,
+    "max_parallel": 1,
+    "personalities": [],
+    "hacc_preset": "core_hacc_policies",
+    "hacc_count": 5,
+    "use_hacc_vector_search": false,
+    "hacc_search_mode": "package"
+  },
+  "search_summary": {
+    "requested_search_mode": "package",
+    "requested_use_vector": false,
+    "effective_search_mode": "shared_hybrid",
+    "vector_status": "available",
+    "vector_error": "",
+    "fallback_note": ""
+  },
+  "statistics": {
+    "total_sessions": 3,
+    "successful_sessions": 3,
+    "failed_sessions": 0,
+    "average_score": 0.6678888888888889,
+    "min_score": 0.55,
+    "max_score": 0.7435,
+    "average_questions": 2.6666666666666665,
+    "average_duration": 23.40049982070923,
+    "score_distribution": {
+      "0.0-0.2": 0,
+      "0.2-0.4": 0,
+      "0.4-0.6": 1,
+      "0.6-0.8": 2,
+      "0.8-1.0": 0
+    },
+    "anchor_sections": {
+      "expected_counts": {
+        "grievance_hearing": 1,
+        "appeal_rights": 1,
+        "reasonable_accommodation": 2,
+        "selection_criteria": 1,
+        "general_policy": 1
+      },
+      "covered_counts": {
+        "grievance_hearing": 1,
+        "appeal_rights": 1,
+        "reasonable_accommodation": 2,
+        "selection_criteria": 1
+      },
+      "missing_counts": {
+        "general_policy": 1
+      },
+      "coverage_by_section": {
+        "appeal_rights": {
+          "expected": 1,
+          "covered": 1,
+          "missing": 0,
+          "coverage_rate": 1.0
+        },
+        "general_policy": {
+          "expected": 1,
+          "covered": 0,
+          "missing": 1,
+          "coverage_rate": 0.0
+        },
+        "grievance_hearing": {
+          "expected": 1,
+          "covered": 1,
+          "missing": 0,
+          "coverage_rate": 1.0
+        },
+        "reasonable_accommodation": {
+          "expected": 2,
+          "covered": 2,
+          "missing": 0,
+          "coverage_rate": 1.0
+        },
+        "selection_criteria": {
+          "expected": 1,
+          "covered": 1,
+          "missing": 0,
+          "coverage_rate": 1.0
+        }
+      }
+    },
+    "intake_priority": {
+      "expected_counts": {},
+      "covered_counts": {},
+      "uncovered_counts": {},
+      "coverage_by_objective": {},
+      "sessions_with_full_coverage": 0,
+      "sessions_with_partial_coverage": 3
+    }
+  },
+  "optimization_report": {
+    "average_score": 0.6678888888888889,
+    "score_trend": "improving",
+    "recommended_hacc_preset": "core_hacc_policies",
+    "priority_improvements": [
+      "Close anchor-section coverage gaps: general_policy",
+      "Improve empathy: current avg 0.62",
+      "Improve efficiency: current avg 0.63",
+      "Improve question quality: current avg 0.65"
+    ],
+    "recommendations": [
+      "Performance is moderate. Targeted improvements can significantly boost quality.",
+      "Decision-tree coverage is incomplete for seeded evidence sections. Add explicit probes for: general_policy.",
+      "Add a dedicated timeline probe after the first retaliation allegation",
+      "Add questions covering: general_policy",
+      "Ask directly about documentary evidence and witnesses earlier in the loop",
+      "Best HACC preset so far is 'core_hacc_policies'. Prefer it when generating evidence-backed adversarial batches.",
+      "Decision-tree coverage is weakest for these seeded anchor sections: grievance_hearing, appeal_rights. Add more explicit branch logic for them."
+    ],
+    "intake_priority_performance": {
+      "expected_counts": {},
+      "covered_counts": {},
+      "uncovered_counts": {},
+      "coverage_by_objective": {},
+      "sessions_with_full_coverage": 0,
+      "sessions_with_partial_coverage": 3
+    },
+    "coverage_remediation": {
+      "anchor_sections": {
+        "missing_sections": [
+          "general_policy"
+        ],
+        "recommended_actions": [
+          {
+            "section": "general_policy",
+            "recommended_action": "Add or strengthen explicit mediator probes for 'general_policy' before the session exits intake.",
+            "signal": "critic_missing"
+          }
+        ]
+      },
+      "intake_priorities": {
+        "uncovered_objectives": [],
+        "recommended_actions": [],
+        "sessions_with_full_coverage": 0,
+        "sessions_with_partial_coverage": 3
+      }
+    },
+    "best_session_id": "session_20260319_043926_002"
+  },
+  "autopatch": {
+    "requested": false,
+    "method": "test_driven",
+    "requested_profile": "question_flow",
+    "requested_target_files": [
+      "/home/barberb/HACC/complaint-generator/complaint_phases/phase_manager.py",
+      "/home/barberb/HACC/complaint-generator/mediator/inquiries.py"
+    ],
+    "profile": "question_flow",
+    "target_files": [
+      "/home/barberb/HACC/complaint-generator/complaint_phases/phase_manager.py",
+      "/home/barberb/HACC/complaint-generator/mediator/inquiries.py"
+    ],
+    "recommended_profile": "question_flow",
+    "recommended_target_files": [],
+    "used_recommended_targets": false,
+    "constraints": {},
+    "preflight": null,
+    "applied": false,
+    "apply_success": false,
+    "success": false,
+    "patch_path": null,
+    "patch_cid": null,
+    "metadata": {},
+    "summary_json": null,
+    "error": null
+  },
+  "best_complaint": {
+    "session_id": "session_20260319_043926_002",
+    "initial_complaint_text": "I reported discrimination to human resources after my supervisor denied a promotion and made repeated comments about women not being fit for leadership. Two days later I was terminated.",
+    "score": 0.7435,
+    "seed_type": "housing_discrimination",
+    "seed_summary": "The strongest supporting material is 'ADMINISTRATIVE PLAN'. However, HACC is not required to permit families receiving assistance in its jurisdiction to use these housing types, except that PHAs must permit use of any special housing type if needed as a reasonable accommodation for a person with a disability, and HACC must permit a family to lease a manufactured home and space with assistance under the program. HACC also may limit the number of families who receive HCV assistance in these housing types and cannot require families to use a particular housing type. No special funding is provided for special housing types. Unless specifically modified by the regulations, housing quality standards apply to special housing types (Single Room Occupancy, Congregate Housing, Group Homes, Shared Housing, Manufactured Homes, Homeownership units) [Notice PIH 2023-28].",
+    "search_summary": {
+      "requested_search_mode": "package",
+      "requested_use_vector": false,
+      "effective_search_mode": "shared_hybrid",
+      "vector_status": "available",
+      "vector_error": "",
+      "fallback_note": ""
+    }
+  },
+  "artifacts": {
+    "output_dir": "/home/barberb/HACC/research_results/grounded_runs/session_20260319_grounded_demo_refresh/adversarial",
+    "results_json": "/home/barberb/HACC/research_results/grounded_runs/session_20260319_grounded_demo_refresh/adversarial/adversarial_results.json",
+    "optimization_report_json": "/home/barberb/HACC/research_results/grounded_runs/session_20260319_grounded_demo_refresh/adversarial/optimization_report.json",
+    "anchor_section_csv": "/home/barberb/HACC/research_results/grounded_runs/session_20260319_grounded_demo_refresh/adversarial/anchor_section_coverage.csv",
+    "best_complaint_bundle_json": "/home/barberb/HACC/research_results/grounded_runs/session_20260319_grounded_demo_refresh/adversarial/best_complaint_bundle.json",
+    "session_state_dir": "/home/barberb/HACC/research_results/grounded_runs/session_20260319_grounded_demo_refresh/adversarial/sessions",
+    "autopatch_summary_json": null,
+    "autopatch_patch_path": null
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "timestamp": "2026-03-19T04:42:36.042180+00:00",
+  "num_sessions_analyzed": 1,
+  "average_score": 0.55,
+  "score_trend": "insufficient_data",
+  "question_quality_avg": 0.5,
+  "information_extraction_avg": 0.5,
+  "empathy_avg": 0.5,
+  "efficiency_avg": 0.5,
+  "coverage_avg": 0.75,
+  "common_weaknesses": [],
+  "common_strengths": [
+    "Covered all seeded anchor sections: grievance_hearing, appeal_rights"
+  ],
+  "recommendations": [
+    "Performance is moderate. Targeted improvements can significantly boost quality.",
+    "Improve question formulation: make questions more specific and relevant.",
+    "Enhance information extraction: ask follow-up questions when responses are vague.",
+    "Increase empathy: acknowledge complainant's feelings and concerns.",
+    "Improve efficiency: avoid repetitive questions and streamline the process.",
+    "Evidence-section coverage is improving. Preserve explicit questioning around: grievance_hearing, appeal_rights.",
+    "Best HACC preset so far is 'core_hacc_policies'. Prefer it when generating evidence-backed adversarial batches."
+  ],
+  "priority_improvements": [
+    "Improve question quality: current avg 0.50",
+    "Improve information extraction: current avg 0.50",
+    "Improve empathy: current avg 0.50"
+  ],
+  "kg_sessions_with_data": 1,
+  "dg_sessions_with_data": 1,
+  "kg_sessions_empty": 0,
+  "dg_sessions_empty": 0,
+  "kg_avg_total_entities": 5.0,
+  "kg_avg_total_relationships": 4.0,
+  "kg_avg_gaps": null,
+  "dg_avg_total_nodes": 4.0,
+  "dg_avg_total_dependencies": 3.0,
+  "dg_avg_satisfaction_rate": null,
+  "kg_avg_entities_delta_per_iter": null,
+  "kg_avg_relationships_delta_per_iter": null,
+  "kg_avg_gaps_delta_per_iter": null,
+  "kg_sessions_gaps_not_reducing": 0,
+  "best_session_id": "session_20260319_044202_000",
+  "worst_session_id": "session_20260319_044202_000",
+  "best_score": 0.55,
+  "worst_score": 0.55,
+  "hacc_preset_performance": {
+    "core_hacc_policies": {
+      "count": 1,
+      "average_score": 0.55,
+      "min_score": 0.55,
+      "max_score": 0.55
+    }
+  },
+  "anchor_section_performance": {
+    "grievance_hearing": {
+      "count": 1,
+      "average_score": 0.55,
+      "min_score": 0.55,
+      "max_score": 0.55
+    },
+    "appeal_rights": {
+      "count": 1,
+      "average_score": 0.55,
+      "min_score": 0.55,
+      "max_score": 0.55
+    }
+  },
+  "intake_priority_performance": {
+    "expected_counts": {},
+    "covered_counts": {},
+    "uncovered_counts": {},
+    "coverage_by_objective": {},
+    "sessions_with_full_coverage": 0,
+    "sessions_with_partial_coverage": 1
+  },
+  "coverage_remediation": {
+    "anchor_sections": {
+      "missing_sections": [],
+      "recommended_actions": []
+    },
+    "intake_priorities": {
+      "uncovered_objectives": [],
+      "recommended_actions": [],
+      "sessions_with_full_coverage": 0,
+      "sessions_with_partial_coverage": 1
+    }
+  },
+  "recommended_hacc_preset": "core_hacc_policies"
+}
