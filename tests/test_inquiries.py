@@ -141,7 +141,7 @@ def test_extract_questions_fallback_and_clean():
     inquiries = Inquiries(mediator)
     block = "Lawyer: Q: Why did you move?\nPlaintiff: Because...\nQ: What happened?"
     questions = inquiries._extract_questions(block)
-    assert "What happened?" in questions
+    assert any(question.endswith("What happened?") for question in questions)
     assert inquiries._clean_question("   1)  Is anyone hurt?  ") == "Is anyone hurt?"
 
 

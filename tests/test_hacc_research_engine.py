@@ -672,6 +672,45 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertEqual(len(build_calls), 1)
             self.assertEqual(len(hybrid_calls), 1)
 
+    def test_search_package_rewrites_hybrid_fallback_note_for_package_requests(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            parsed_dir = root / "research_results/documents/parsed"
+            parsed_dir.mkdir(parents=True, exist_ok=True)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=parsed_dir,
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            original_hybrid_search = engine.hybrid_search
+            original_has_preferred_vector_index = engine._has_preferred_vector_index
+            try:
+                engine.hybrid_search = lambda *args, **kwargs: {
+                    "status": "success",
+                    "results": [],
+                    "effective_search_mode": "lexical_only",
+                    "vector_status": "unavailable",
+                    "vector_error": "numpy unavailable",
+                    "fallback_note": "Requested hybrid search, but vector support is unavailable; using lexical results instead.",
+                }
+                engine._has_preferred_vector_index = lambda **kwargs: True
+
+                payload = engine.search("reasonable accommodation", top_k=2, search_mode="package")
+            finally:
+                engine.hybrid_search = original_hybrid_search
+                engine._has_preferred_vector_index = original_has_preferred_vector_index
+
+            self.assertEqual(payload["backend_mode"], "shared_hybrid")
+            self.assertEqual(payload["effective_search_mode"], "lexical_only")
+            self.assertIn("Requested package/shared hybrid search", payload["fallback_note"])
+            self.assertIn("numpy unavailable", payload["fallback_note"])
+
     def test_search_package_falls_back_to_lexical_when_shared_vector_backend_is_unavailable(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

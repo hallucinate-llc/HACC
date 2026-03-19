@@ -162,6 +162,20 @@ def _autopatch_constraints_for_profile(profile: str, target_files: List[Path]) -
                 ]
         if target_map:
             return {"target_symbols": target_map}
+    if profile == "question_flow":
+        target_map: Dict[str, List[str]] = {}
+        for path in target_files:
+            if path.name == "phase_manager.py":
+                target_map[str(path.resolve())] = [
+                    "_get_intake_action",
+                ]
+            elif path.name == "inquiries.py":
+                target_map[str(path.resolve())] = [
+                    "get_next",
+                    "merge_legal_questions",
+                ]
+        if target_map:
+            return {"target_symbols": target_map}
     return {}
 
 
@@ -271,7 +285,8 @@ def _build_agentic_llm_router(
         "gemini_cli": "gemini_cli",
         "gemini_py": "gemini_py",
         "accelerate": "accelerate",
-        "local": "local",
+        "local": "hf",
+        "local_hf": "hf",
     }
     resolved_provider = provider_mapping.get(normalized)
     if resolved_provider is None:

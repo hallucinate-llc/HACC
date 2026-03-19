@@ -481,6 +481,12 @@ class HACCResearchEngine:
             )
             payload["backend_mode"] = "shared_hybrid"
             payload.setdefault("effective_search_mode", "shared_hybrid")
+            if str(payload.get("effective_search_mode") or "") != "shared_hybrid":
+                payload["fallback_note"] = _build_fallback_note(
+                    requested_mode="package/shared_hybrid",
+                    vector_status=str(payload.get("vector_status") or "unavailable"),
+                    vector_error=str(payload.get("vector_error") or ""),
+                )
         else:
             payload = self.search_local(query_text, top_k=top_k, source_types=source_types)
             payload["backend_mode"] = "lexical_fallback"

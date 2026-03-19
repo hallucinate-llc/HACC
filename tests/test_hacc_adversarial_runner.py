@@ -207,7 +207,7 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             "runtime": {"mode": "demo", "provider": "demo", "model": "demo"},
         }
 
-    def test_runner_path_imports_file_based_hacc_loader(self) -> None:
+    def test_runner_path_imports_package_based_hacc_loader(self) -> None:
         complaint_generator_root = REPO_ROOT / "complaint-generator"
         if str(complaint_generator_root) in sys.path:
             sys.path.remove(str(complaint_generator_root))
@@ -221,9 +221,9 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
         source = inspect.getsource(hacc_evidence_module._load_hacc_engine)
 
         self.assertIn(str(complaint_generator_root), sys.path)
-        self.assertIn("spec_from_file_location", source)
-        self.assertIn("module_from_spec", source)
-        self.assertNotIn('importlib.import_module("hacc_research")', source)
+        self.assertIn('importlib.import_module("hacc_research")', source)
+        self.assertNotIn("spec_from_file_location", source)
+        self.assertNotIn("module_from_spec", source)
 
     def test_best_complaint_grounding_overview_summarizes_anchor_context(self) -> None:
         best_result = SimpleNamespace(
@@ -525,6 +525,17 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
         self.assertTrue(only_target.endswith("complaint_phases/denoiser.py"))
         self.assertEqual(symbols, ["select_question_candidates"])
 
+    def test_question_flow_profile_targets_patchable_symbols(self) -> None:
+        target_files = _autopatch_target_profiles()["question_flow"]
+        constraints = _autopatch_constraints_for_profile("question_flow", target_files)
+        target_map = constraints["target_symbols"]
+
+        self.assertEqual(len(target_map), 2)
+        phase_manager_target = next(path for path in target_map if path.endswith("complaint_phases/phase_manager.py"))
+        inquiries_target = next(path for path in target_map if path.endswith("mediator/inquiries.py"))
+        self.assertEqual(target_map[phase_manager_target], ["_get_intake_action"])
+        self.assertEqual(target_map[inquiries_target], ["get_next", "merge_legal_questions"])
+
     def test_repair_helpers_can_build_diff_from_file_content_response(self) -> None:
         target = Path("mediator/inquiries.py")
         response = (
@@ -823,6 +834,52 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             self.assertTrue(any(str(path).endswith("mediator/mediator.py") for path in autopatch_kwargs["target_files"]))
             self.assertTrue(any(str(path).endswith("adversarial_harness/complainant.py") for path in autopatch_kwargs["target_files"]))
 
+    def test_default_question_flow_autopatch_uses_symbol_constraints(self) -> None:
+        complaint_generator_root = REPO_ROOT / "complaint-generator"
+        if str(complaint_generator_root) not in sys.path:
+            sys.path.insert(0, str(complaint_generator_root))
+
+        runtime_bundle = self._build_fake_demo_runtime_bundle()
+
+        import adversarial_harness.optimizer as optimizer_module
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            with mock.patch.object(
+                optimizer_module.Optimizer,
+                "run_agentic_autopatch",
+                return_value=SimpleNamespace(
+                    success=True,
+                    patch_path=Path(tmpdir) / "fake.patch",
+                    patch_cid="bafy-symbols",
+                    metadata={},
+                ),
+            ) as autopatch_mock:
+                with mock.patch(
+                    "hacc_adversarial_runner._router_diagnostics",
+                    return_value=self._available_router_diagnostics(),
+                ):
+                    with mock.patch("hacc_adversarial_runner._load_runtime", return_value=runtime_bundle):
+                        with mock.patch(
+                            "hacc_adversarial_runner._agentic_autopatch_preflight",
+                            return_value={"ready": True, "error": None},
+                        ):
+                            run_hacc_adversarial_batch(
+                                output_dir=tmpdir,
+                                num_sessions=1,
+                                max_turns=1,
+                                max_parallel=1,
+                                hacc_preset="core_hacc_policies",
+                                demo=True,
+                                emit_autopatch=True,
+                            )
+
+        constraints = autopatch_mock.call_args.kwargs["constraints"]
+        target_symbols = constraints["target_symbols"]
+        phase_manager_target = next(path for path in target_symbols if path.endswith("complaint_phases/phase_manager.py"))
+        inquiries_target = next(path for path in target_symbols if path.endswith("mediator/inquiries.py"))
+        self.assertEqual(target_symbols[phase_manager_target], ["_get_intake_action"])
+        self.assertEqual(target_symbols[inquiries_target], ["get_next", "merge_legal_questions"])
+
     def test_runner_reports_autopatch_preflight_failure_without_calling_optimizer(self) -> None:
         complaint_generator_root = REPO_ROOT / "complaint-generator"
         if str(complaint_generator_root) not in sys.path:
@@ -1025,6 +1082,35 @@ SUGGESTIONS:
         self.assertGreater(len(router_calls), 0)
         self.assertTrue(any(call["provider"] == "copilot_cli" for call in router_calls))
         self.assertTrue(any(call["model_name"] == "gpt-5-mini" for call in router_calls))
+
+    def test_build_agentic_llm_router_normalizes_local_provider(self) -> None:
+        complaint_generator_root = REPO_ROOT / "complaint-generator"
+        if str(complaint_generator_root) not in sys.path:
+            sys.path.insert(0, str(complaint_generator_root))
+
+        import types
+
+        router_calls = []
+
+        def fake_generate_text(*, prompt, provider, model_name, **kwargs):
+            router_calls.append(
+                {
+                    "prompt": prompt,
+                    "provider": provider,
+                    "model_name": model_name,
+                    "kwargs": kwargs,
+                }
+            )
+            return "ok"
+
+        fake_router_module = types.SimpleNamespace(generate_text=fake_generate_text)
+        with mock.patch.dict(sys.modules, {"ipfs_datasets_py.llm_router": fake_router_module}):
+            router = _build_agentic_llm_router("local", profile="question_flow")
+            self.assertIsNotNone(router)
+            response = router.generate("test prompt", max_tokens=64, temperature=0.1)
+
+        self.assertEqual(response, "ok")
+        self.assertEqual(router_calls[0]["provider"], "hf")
 
     def test_live_runner_passes_session_db_paths_to_mediator(self) -> None:
         complaint_generator_root = REPO_ROOT / "complaint-generator"
