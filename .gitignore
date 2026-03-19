@@ -5,10 +5,8 @@ research_venv
 .venv-validation
 .venv-validation/*
 __pycache__/
-.venv
-venv
-.venv/*
-.venv
+.venv/
+venv/
 *.py[cod]
 research_results/research.log
 research_results/search_reports/
@@ -24,3 +22,4 @@ research_results/search_indexes/*.records.jsonl
 research_results/search_indexes/*.summary.json
 research_results/search_indexes/*.vectors.npy
 research_results/adversarial_runs/*
+research_results/grounded_runs/*
