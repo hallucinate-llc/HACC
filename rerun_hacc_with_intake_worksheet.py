@@ -52,12 +52,20 @@ def _load_validation_summary(worksheet_json: str) -> Dict[str, Any]:
     return dict(summary) if isinstance(summary, dict) else {}
 
 
+def _infer_grounded_run_dir(worksheet_json: str) -> Path:
+    worksheet_path = Path(worksheet_json).resolve()
+    if worksheet_path.parent.name == "complaint_synthesis":
+        return worksheet_path.parent.parent
+    return worksheet_path.parent
+
+
 def _print_validation_summary(worksheet_json: str) -> None:
     summary = _load_validation_summary(worksheet_json)
     if not summary:
         return
     status_counts = dict(summary.get("status_counts") or {})
     print("Worksheet preflight summary:")
+    print(f"- grounded_run: {_infer_grounded_run_dir(worksheet_json)}")
     print(f"- worksheet: {worksheet_json}")
     print(f"- item_count: {summary.get('item_count', 0)}")
     print(f"- answered: {status_counts.get('answered', 0)}")

@@ -89,7 +89,7 @@ python3 rerun_hacc_with_intake_worksheet.py \
 The rerun wrapper will:
 
 - normalize and validate the worksheet
-- print a short preflight summary of answered/open/invalid items
+- print a short preflight summary of the selected grounded run plus answered/open/invalid items
 - stop before rerun if required answers are still missing
 - rerun `hacc_grounded_pipeline.py` with `--completed-intake-worksheet`
 

@@ -42,6 +42,30 @@ def _json_safe(value: Any) -> Any:
     return str(value)
 
 
+def _grounding_overview(grounding_bundle: Dict[str, Any], upload_report: Dict[str, Any]) -> Dict[str, Any]:
+    anchor_sections = [str(item) for item in list(grounding_bundle.get("anchor_sections") or []) if str(item)]
+    anchor_passages = [dict(item) for item in list(grounding_bundle.get("anchor_passages") or []) if isinstance(item, dict)]
+    upload_candidates = [dict(item) for item in list(grounding_bundle.get("upload_candidates") or []) if isinstance(item, dict)]
+    mediator_packets = [dict(item) for item in list(grounding_bundle.get("mediator_evidence_packets") or []) if isinstance(item, dict)]
+    uploads = [dict(item) for item in list(upload_report.get("uploads") or []) if isinstance(item, dict)]
+
+    top_titles: list[str] = []
+    for item in upload_candidates[:3]:
+        title = str(item.get("title") or item.get("relative_path") or item.get("source_path") or "").strip()
+        if title and title not in top_titles:
+            top_titles.append(title)
+
+    return {
+        "evidence_summary": str(grounding_bundle.get("evidence_summary") or "").strip(),
+        "anchor_sections": anchor_sections,
+        "anchor_passage_count": len(anchor_passages),
+        "upload_candidate_count": len(upload_candidates),
+        "mediator_packet_count": len(mediator_packets),
+        "uploaded_evidence_count": int(upload_report.get("upload_count") or len(uploads) or 0),
+        "top_documents": top_titles,
+    }
+
+
 def _default_grounding_request(hacc_preset: str) -> Dict[str, str]:
     try:
         from adversarial_harness.hacc_evidence import get_hacc_query_specs
@@ -181,13 +205,26 @@ def run_hacc_grounded_pipeline(
         )
 
     grounding_path = output_root / "grounding_bundle.json"
+    grounding_overview_path = output_root / "grounding_overview.json"
+    anchor_passages_path = output_root / "anchor_passages.json"
+    upload_candidates_path = output_root / "upload_candidates.json"
     mediator_packets_path = output_root / "mediator_evidence_packets.json"
     prompts_path = output_root / "synthetic_prompts.json"
     upload_path = output_root / "evidence_upload_report.json"
     adversarial_path = output_root / "adversarial_summary.json"
     summary_path = output_root / "run_summary.json"
+    grounding_overview = _json_safe(_grounding_overview(grounding_bundle, upload_report))
 
     grounding_path.write_text(json.dumps(grounding_bundle, ensure_ascii=False, indent=2), encoding="utf-8")
+    grounding_overview_path.write_text(json.dumps(grounding_overview, ensure_ascii=False, indent=2), encoding="utf-8")
+    anchor_passages_path.write_text(
+        json.dumps(grounding_bundle.get("anchor_passages", []), ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    upload_candidates_path.write_text(
+        json.dumps(grounding_bundle.get("upload_candidates", []), ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
     mediator_packets_path.write_text(
         json.dumps(grounding_bundle.get("mediator_evidence_packets", []), ensure_ascii=False, indent=2),
         encoding="utf-8",
@@ -211,6 +248,7 @@ def run_hacc_grounded_pipeline(
             "evidence_upload": upload_report.get("search_summary", {}),
             "adversarial": adversarial_summary.get("search_summary", {}),
         },
+        "grounding_overview": grounding_overview,
         "grounding": grounding_bundle,
         "evidence_upload": upload_report,
         "adversarial": adversarial_summary,
@@ -218,6 +256,9 @@ def run_hacc_grounded_pipeline(
         "artifacts": {
             "output_dir": str(output_root),
             "grounding_bundle_json": str(grounding_path),
+            "grounding_overview_json": str(grounding_overview_path),
+            "anchor_passages_json": str(anchor_passages_path),
+            "upload_candidates_json": str(upload_candidates_path),
             "mediator_evidence_packets_json": str(mediator_packets_path),
             "synthetic_prompts_json": str(prompts_path),
             "evidence_upload_report_json": str(upload_path),

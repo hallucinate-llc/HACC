@@ -35,6 +35,7 @@ def test_main_validates_then_reruns_pipeline_with_completed_worksheet(tmp_path, 
     assert len(calls) == 2
     output = capsys.readouterr().out
     assert "Worksheet preflight summary:" in output
+    assert f"- grounded_run: {tmp_path}" in output
     assert f"- worksheet: {worksheet}" in output
     assert "- item_count: 3" in output
     assert "- answered: 3" in output
@@ -101,7 +102,7 @@ def test_main_accepts_grounded_run_directory_and_discovers_worksheet(tmp_path):
     assert str(worksheet_path.resolve()) in pipeline_cmd
 
 
-def test_main_accepts_latest_and_uses_newest_grounded_run(tmp_path):
+def test_main_accepts_latest_and_uses_newest_grounded_run(tmp_path, capsys):
     older_run = tmp_path / "older_run"
     newer_run = tmp_path / "newer_run"
     older_worksheet = older_run / "complaint_synthesis" / "intake_follow_up_worksheet.json"
@@ -132,6 +133,9 @@ def test_main_accepts_latest_and_uses_newest_grounded_run(tmp_path):
 
     assert exit_code == 0
     assert len(calls) == 2
+    output = capsys.readouterr().out
+    assert f"- grounded_run: {newer_run.resolve()}" in output
+    assert f"- worksheet: {newer_worksheet.resolve()}" in output
     validator_cmd = calls[0][0]
     pipeline_cmd = calls[1][0]
     assert str(newer_worksheet.resolve()) in validator_cmd

@@ -68,6 +68,9 @@ class HACCGroundedPipelineTests(unittest.TestCase):
 
             output_root = Path(tmpdir)
             self.assertTrue((output_root / "grounding_bundle.json").is_file())
+            self.assertTrue((output_root / "grounding_overview.json").is_file())
+            self.assertTrue((output_root / "anchor_passages.json").is_file())
+            self.assertTrue((output_root / "upload_candidates.json").is_file())
             self.assertTrue((output_root / "synthetic_prompts.json").is_file())
             self.assertTrue((output_root / "evidence_upload_report.json").is_file())
             self.assertTrue((output_root / "adversarial_summary.json").is_file())
@@ -77,10 +80,21 @@ class HACCGroundedPipelineTests(unittest.TestCase):
             self.assertEqual(summary["evidence_upload"]["upload_count"], 1)
             self.assertEqual(summary["adversarial"]["best_complaint"]["score"], 0.91)
             self.assertEqual(summary["grounding"]["anchor_sections"], ["reasonable_accommodation", "grievance_hearing"])
+            self.assertEqual(summary["grounding_overview"]["anchor_passage_count"], 1)
+            self.assertEqual(summary["grounding_overview"]["upload_candidate_count"], 1)
+            self.assertEqual(summary["grounding_overview"]["uploaded_evidence_count"], 1)
+            self.assertEqual(summary["grounding_overview"]["top_documents"], ["README"])
+            self.assertEqual(summary["artifacts"]["grounding_overview_json"], str(output_root / "grounding_overview.json"))
             self.assertEqual(batch_mock.call_args.kwargs["hacc_search_mode"], "hybrid")
 
             prompts_payload = json.loads((output_root / "synthetic_prompts.json").read_text(encoding="utf-8"))
             self.assertIn("evidence_upload_prompts", prompts_payload)
+            overview_payload = json.loads((output_root / "grounding_overview.json").read_text(encoding="utf-8"))
+            self.assertEqual(overview_payload["anchor_sections"], ["reasonable_accommodation", "grievance_hearing"])
+            anchor_passages_payload = json.loads((output_root / "anchor_passages.json").read_text(encoding="utf-8"))
+            self.assertEqual(anchor_passages_payload[0]["title"], "README")
+            upload_candidates_payload = json.loads((output_root / "upload_candidates.json").read_text(encoding="utf-8"))
+            self.assertEqual(upload_candidates_payload[0]["relative_path"], "README.md")
 
     def test_run_grounded_pipeline_can_trigger_complaint_synthesis(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
