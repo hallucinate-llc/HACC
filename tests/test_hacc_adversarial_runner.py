@@ -1030,6 +1030,53 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             "unexpected indent (<unknown>, line 3)",
         )
 
+    def test_run_agentic_autopatch_reads_inner_optimizer_generation_diagnostics(self) -> None:
+        inner_optimizer = SimpleNamespace(
+            _last_generation_diagnostics=[
+                {
+                    "file": "/tmp/example.py",
+                    "status": "error",
+                    "mode": "symbol_level",
+                    "error_type": "ValueError",
+                    "error_message": "unexpected indent (<unknown>, line 3)",
+                    "raw_response_preview": "    def broken():\n        pass",
+                    }
+            ]
+        )
+
+        class FailingOptimizer:
+            def __init__(self):
+                self._last_agentic_generation_diagnostics = []
+                self._last_agentic_optimizer = inner_optimizer
+
+            def run_agentic_autopatch(self, *args, **kwargs):
+                raise ValueError("unexpected indent (<unknown>, line 3)")
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            summary = _run_agentic_autopatch(
+                optimizer=FailingOptimizer(),
+                results=[],
+                report=SimpleNamespace(to_dict=lambda: {}),
+                output_root=Path(tmpdir),
+                requested_profile="question_flow",
+                requested_target_files=[],
+                recommended_profile="question_flow",
+                recommended_target_files=[],
+                used_recommended_targets=False,
+                target_files=[],
+                method="test_driven",
+                profile="question_flow",
+                constraints={},
+                apply_patch=False,
+                provider_name="local",
+                model_name=None,
+            )
+
+        self.assertEqual(
+            summary["metadata"]["generation_diagnostics"][0]["raw_response_preview"],
+            "    def broken():\n        pass",
+        )
+
     def test_live_runner_uses_llm_router_backend(self) -> None:
         complaint_generator_root = REPO_ROOT / "complaint-generator"
         if str(complaint_generator_root) not in sys.path:

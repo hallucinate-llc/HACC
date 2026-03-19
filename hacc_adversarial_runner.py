@@ -841,6 +841,10 @@ def _run_agentic_autopatch(
         cached = getattr(resolved_optimizer, "_last_agentic_generation_diagnostics", None)
         if isinstance(cached, list) and cached:
             return cached
+        inner_optimizer = getattr(resolved_optimizer, "_last_agentic_optimizer", None)
+        inner_cached = getattr(inner_optimizer, "_last_generation_diagnostics", None)
+        if isinstance(inner_cached, list) and inner_cached:
+            return inner_cached
         diagnostics = getattr(resolved_optimizer, "_last_generation_diagnostics", None)
         if isinstance(diagnostics, list):
             return diagnostics
