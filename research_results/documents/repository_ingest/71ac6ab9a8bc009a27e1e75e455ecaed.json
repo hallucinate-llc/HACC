@@ -4,13 +4,13 @@
   "source_type": "repository_evidence",
   "filename": "README.md",
   "mime_type": "text/markdown",
-  "size": 31083,
+  "size": 32320,
   "backend_available": true,
   "parser_version": "documents-adapter:1",
   "source": "file",
-  "chunk_count": 33,
+  "chunk_count": 34,
   "paragraph_count": 1,
-  "text_length": 27757,
+  "text_length": 28977,
   "input_format": "text",
   "page_count": 1,
   "extraction_method": "text_normalization",
@@ -22,9 +22,9 @@
   },
   "source_span": {
     "char_start": 0,
-    "char_end": 27757,
-    "text_length": 27757,
-    "raw_size": 31083,
+    "char_end": 28977,
+    "text_length": 28977,
+    "raw_size": 32320,
     "page_count": 1
   },
   "transform_lineage": {
@@ -35,7 +35,7 @@
     "chunking": {
       "chunk_size": 1000,
       "overlap": 100,
-      "chunk_count": 33
+      "chunk_count": 34
     },
     "extraction": {
       "method": "text_normalization",
@@ -44,9 +44,9 @@
     },
     "source_span": {
       "char_start": 0,
-      "char_end": 27757,
-      "text_length": 27757,
-      "raw_size": 31083,
+      "char_end": 28977,
+      "text_length": 28977,
+      "raw_size": 32320,
       "page_count": 1
     }
   },
@@ -59,7 +59,7 @@
     "implementation_status": "implemented"
   },
   "record_id": "71ac6ab9a8bc009a27e1e75e455ecaed",
-  "checksum": "5733700ccbbcf42519676b1d8319a50f8606002be0ea85acd2e523d78e454984",
+  "checksum": "5c754a7e18205e08e9e2540f11c107be7cda73330b261eb65c99a48520c441ad",
   "source_path": "/home/barberb/HACC/README.md",
   "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/71ac6ab9a8bc009a27e1e75e455ecaed.txt",
   "content_type": "text/markdown",

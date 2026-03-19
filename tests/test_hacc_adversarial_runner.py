@@ -45,6 +45,236 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
         self.assertNotIn("spec_from_file_location", source)
         self.assertNotIn("module_from_spec", source)
 
+    def test_run_hacc_adversarial_batch_passes_hacc_grounding_flags(self) -> None:
+        run_batch_kwargs = {}
+
+        class FakeHarness:
+            def __init__(self, *args, **kwargs):
+                self._init_kwargs = kwargs
+
+            def run_batch(self, **kwargs):
+                run_batch_kwargs.update(kwargs)
+                return []
+
+            def get_statistics(self):
+                return {"total_sessions": 0}
+
+            def save_results(self, path):
+                Path(path).write_text(json.dumps({"results": []}), encoding="utf-8")
+
+            def save_anchor_section_report(self, path, format="csv"):
+                Path(path).write_text("anchor_section,covered\n", encoding="utf-8")
+
+        class FakeReport:
+            def to_dict(self):
+                return {
+                    "average_score": 0.0,
+                    "score_trend": "insufficient_data",
+                    "recommended_hacc_preset": "core_hacc_policies",
+                    "priority_improvements": [],
+                    "recommendations": [],
+                    "intake_priority_performance": {},
+                    "coverage_remediation": {},
+                    "best_session_id": None,
+                }
+
+        class FakeOptimizer:
+            def analyze(self, results):
+                return FakeReport()
+
+            @staticmethod
+            def _recommended_target_files_for_report(report):
+                return []
+
+        runtime_bundle = {
+            "AdversarialHarness": FakeHarness,
+            "Optimizer": FakeOptimizer,
+            "complainant_backend": object(),
+            "critic_backend": object(),
+            "mediator_factory": lambda **kwargs: object(),
+            "runtime": {"mode": "demo"},
+        }
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            with mock.patch("hacc_adversarial_runner._load_runtime", return_value=runtime_bundle):
+                with mock.patch(
+                    "hacc_adversarial_runner._router_diagnostics",
+                    return_value={
+                        "ipfs_router": {"status": "available"},
+                        "embeddings_router": {"status": "available"},
+                        "vector_index": {"status": "available"},
+                    },
+                ):
+                    summary = run_hacc_adversarial_batch(
+                        output_dir=tmpdir,
+                        num_sessions=2,
+                        max_turns=3,
+                        max_parallel=1,
+                        hacc_preset="core_hacc_policies",
+                        hacc_count=2,
+                        hacc_search_mode="package",
+                        use_hacc_vector_search=False,
+                        demo=True,
+                    )
+
+        self.assertTrue(run_batch_kwargs["include_hacc_evidence"])
+        self.assertEqual(run_batch_kwargs["hacc_preset"], "core_hacc_policies")
+        self.assertEqual(run_batch_kwargs["hacc_count"], 2)
+        self.assertEqual(run_batch_kwargs["hacc_search_mode"], "package")
+        self.assertFalse(run_batch_kwargs["use_hacc_vector_search"])
+        self.assertEqual(summary["inputs"]["hacc_search_mode"], "package")
+        self.assertEqual(summary["search_summary"]["requested_search_mode"], "package")
+        self.assertEqual(summary["best_complaint"]["search_summary"], summary["search_summary"])
+
+    def test_run_hacc_adversarial_batch_reports_package_fallback_when_vector_unavailable(self) -> None:
+        class FakeHarness:
+            def __init__(self, *args, **kwargs):
+                self._init_kwargs = kwargs
+
+            def run_batch(self, **kwargs):
+                return []
+
+            def get_statistics(self):
+                return {"total_sessions": 0}
+
+            def save_results(self, path):
+                Path(path).write_text(json.dumps({"results": []}), encoding="utf-8")
+
+            def save_anchor_section_report(self, path, format="csv"):
+                Path(path).write_text("anchor_section,covered\n", encoding="utf-8")
+
+        class FakeReport:
+            def to_dict(self):
+                return {
+                    "average_score": 0.0,
+                    "score_trend": "insufficient_data",
+                    "recommended_hacc_preset": "core_hacc_policies",
+                    "priority_improvements": [],
+                    "recommendations": [],
+                    "intake_priority_performance": {},
+                    "coverage_remediation": {},
+                    "best_session_id": None,
+                }
+
+        class FakeOptimizer:
+            def analyze(self, results):
+                return FakeReport()
+
+            @staticmethod
+            def _recommended_target_files_for_report(report):
+                return []
+
+        runtime_bundle = {
+            "AdversarialHarness": FakeHarness,
+            "Optimizer": FakeOptimizer,
+            "complainant_backend": object(),
+            "critic_backend": object(),
+            "mediator_factory": lambda **kwargs: object(),
+            "runtime": {"mode": "demo"},
+        }
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            with mock.patch("hacc_adversarial_runner._load_runtime", return_value=runtime_bundle):
+                with mock.patch(
+                    "hacc_adversarial_runner._router_diagnostics",
+                    return_value={
+                        "ipfs_router": {"status": "available"},
+                        "embeddings_router": {"status": "available"},
+                        "vector_index": {"status": "error", "error": "numpy unavailable"},
+                    },
+                ):
+                    summary = run_hacc_adversarial_batch(
+                        output_dir=tmpdir,
+                        num_sessions=1,
+                        max_turns=1,
+                        max_parallel=1,
+                        hacc_preset="core_hacc_policies",
+                        hacc_search_mode="package",
+                        use_hacc_vector_search=False,
+                        demo=True,
+                    )
+
+        self.assertEqual(summary["search_summary"]["requested_search_mode"], "package")
+        self.assertEqual(summary["search_summary"]["effective_search_mode"], "lexical_fallback")
+        self.assertIn("vector support is unavailable", summary["search_summary"]["fallback_note"])
+        self.assertIn("numpy unavailable", summary["search_summary"]["fallback_note"])
+        self.assertEqual(summary["best_complaint"]["search_summary"], summary["search_summary"])
+
+    def test_run_hacc_adversarial_batch_reports_hybrid_fallback_when_vector_unavailable(self) -> None:
+        class FakeHarness:
+            def __init__(self, *args, **kwargs):
+                self._init_kwargs = kwargs
+
+            def run_batch(self, **kwargs):
+                return []
+
+            def get_statistics(self):
+                return {"total_sessions": 0}
+
+            def save_results(self, path):
+                Path(path).write_text(json.dumps({"results": []}), encoding="utf-8")
+
+            def save_anchor_section_report(self, path, format="csv"):
+                Path(path).write_text("anchor_section,covered\n", encoding="utf-8")
+
+        class FakeReport:
+            def to_dict(self):
+                return {
+                    "average_score": 0.0,
+                    "score_trend": "insufficient_data",
+                    "recommended_hacc_preset": "core_hacc_policies",
+                    "priority_improvements": [],
+                    "recommendations": [],
+                    "intake_priority_performance": {},
+                    "coverage_remediation": {},
+                    "best_session_id": None,
+                }
+
+        class FakeOptimizer:
+            def analyze(self, results):
+                return FakeReport()
+
+            @staticmethod
+            def _recommended_target_files_for_report(report):
+                return []
+
+        runtime_bundle = {
+            "AdversarialHarness": FakeHarness,
+            "Optimizer": FakeOptimizer,
+            "complainant_backend": object(),
+            "critic_backend": object(),
+            "mediator_factory": lambda **kwargs: object(),
+            "runtime": {"mode": "demo"},
+        }
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            with mock.patch("hacc_adversarial_runner._load_runtime", return_value=runtime_bundle):
+                with mock.patch(
+                    "hacc_adversarial_runner._router_diagnostics",
+                    return_value={
+                        "ipfs_router": {"status": "available"},
+                        "embeddings_router": {"status": "available"},
+                        "vector_index": {"status": "error", "error": "numpy unavailable"},
+                    },
+                ):
+                    summary = run_hacc_adversarial_batch(
+                        output_dir=tmpdir,
+                        num_sessions=1,
+                        max_turns=1,
+                        max_parallel=1,
+                        hacc_preset="core_hacc_policies",
+                        hacc_search_mode="hybrid",
+                        use_hacc_vector_search=True,
+                        demo=True,
+                    )
+
+        self.assertEqual(summary["search_summary"]["requested_search_mode"], "hybrid")
+        self.assertTrue(summary["search_summary"]["requested_use_vector"])
+        self.assertEqual(summary["search_summary"]["effective_search_mode"], "lexical_only")
+        self.assertIn("vector support is unavailable", summary["search_summary"]["fallback_note"])
+        self.assertIn("numpy unavailable", summary["search_summary"]["fallback_note"])
+        self.assertEqual(summary["best_complaint"]["search_summary"], summary["search_summary"])
+
     def test_resolve_autopatch_timeout_uses_profile_defaults_and_can_disable(self) -> None:
         with mock.patch.dict("os.environ", {}, clear=False):
             self.assertEqual(_resolve_autopatch_timeout(profile="denoiser_select_candidates_only"), 150.0)
@@ -246,7 +476,17 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
                 "success": False,
                 "apply_success": False,
                 "patch_path": None,
+                "requested_profile": "question_flow",
+                "requested_target_files": [
+                    "/home/barberb/HACC/complaint-generator/complaint_phases/phase_manager.py",
+                    "/home/barberb/HACC/complaint-generator/mediator/inquiries.py",
+                ],
                 "used_recommended_targets": True,
+                "profile": "question_flow",
+                "target_files": [
+                    "/home/barberb/HACC/complaint-generator/adversarial_harness/session.py",
+                    "/home/barberb/HACC/complaint-generator/mediator/mediator.py",
+                ],
                 "recommended_profile": "question_flow",
                 "recommended_target_files": [
                     "/home/barberb/HACC/complaint-generator/adversarial_harness/session.py",
@@ -263,9 +503,21 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
         rendered = stdout.getvalue()
         self.assertEqual(exit_code, 0)
         self.assertIn("Using recommended autopatch targets: True", rendered)
+        self.assertIn("Requested autopatch profile: question_flow", rendered)
+        self.assertIn(
+            "Requested autopatch targets: /home/barberb/HACC/complaint-generator/complaint_phases/phase_manager.py, "
+            "/home/barberb/HACC/complaint-generator/mediator/inquiries.py",
+            rendered,
+        )
         self.assertIn("Recommended autopatch profile: question_flow", rendered)
         self.assertIn(
             "Recommended autopatch targets: /home/barberb/HACC/complaint-generator/adversarial_harness/session.py, "
+            "/home/barberb/HACC/complaint-generator/mediator/mediator.py",
+            rendered,
+        )
+        self.assertIn("Selected autopatch profile: question_flow", rendered)
+        self.assertIn(
+            "Selected autopatch targets: /home/barberb/HACC/complaint-generator/adversarial_harness/session.py, "
             "/home/barberb/HACC/complaint-generator/mediator/mediator.py",
             rendered,
         )
@@ -322,6 +574,9 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             autopatch_kwargs = autopatch_mock.call_args.kwargs
             self.assertTrue(summary["autopatch"]["requested"])
             self.assertTrue(summary["autopatch"]["used_recommended_targets"])
+            self.assertEqual(summary["autopatch"]["requested_profile"], "question_flow")
+            self.assertTrue(any(str(path).endswith("complaint_phases/phase_manager.py") for path in summary["autopatch"]["requested_target_files"]))
+            self.assertTrue(any(str(path).endswith("mediator/inquiries.py") for path in summary["autopatch"]["requested_target_files"]))
             self.assertEqual(summary["autopatch"]["profile"], "custom")
             self.assertTrue(any(str(path).endswith("adversarial_harness/session.py") for path in summary["autopatch"]["target_files"]))
             self.assertTrue(any(str(path).endswith("mediator/mediator.py") for path in summary["autopatch"]["target_files"]))

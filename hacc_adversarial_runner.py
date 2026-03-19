@@ -766,6 +766,11 @@ def _run_agentic_autopatch(
     results: List[Any],
     report: Any,
     output_root: Path,
+    requested_profile: str,
+    requested_target_files: List[Path],
+    recommended_profile: str,
+    recommended_target_files: List[Path],
+    used_recommended_targets: bool,
     target_files: List[Path],
     method: str,
     profile: str,
@@ -783,8 +788,13 @@ def _run_agentic_autopatch(
     summary: Dict[str, Any] = {
         "requested": True,
         "method": method,
+        "requested_profile": requested_profile,
+        "requested_target_files": [str(path) for path in requested_target_files],
         "profile": profile,
         "target_files": [str(path) for path in target_files],
+        "recommended_profile": recommended_profile,
+        "recommended_target_files": [str(path) for path in recommended_target_files],
+        "used_recommended_targets": bool(used_recommended_targets),
         "applied": False,
         "apply_success": False,
         "success": False,
@@ -1158,10 +1168,12 @@ def run_hacc_adversarial_batch(
     report = optimizer.analyze(results)
     stats = harness.get_statistics()
     best_result = _select_best_result(results)
+    requested_autopatch_profile = autopatch_profile
+    requested_autopatch_target_paths = _resolve_autopatch_target_files(autopatch_target_files, autopatch_profile)
     recommended_autopatch_targets = _resolve_optimizer_recommended_target_files(optimizer, report)
     recommended_autopatch_profile = _recommended_autopatch_profile(recommended_autopatch_targets)
     selected_autopatch_profile = autopatch_profile
-    autopatch_target_paths = _resolve_autopatch_target_files(autopatch_target_files, autopatch_profile)
+    autopatch_target_paths = list(requested_autopatch_target_paths)
     if use_recommended_autopatch_targets and recommended_autopatch_targets:
         autopatch_target_paths = list(recommended_autopatch_targets)
         selected_autopatch_profile = recommended_autopatch_profile
@@ -1185,6 +1197,8 @@ def run_hacc_adversarial_batch(
     autopatch_summary = {
         "requested": False,
         "method": autopatch_method,
+        "requested_profile": requested_autopatch_profile,
+        "requested_target_files": [str(path) for path in requested_autopatch_target_paths],
         "profile": selected_autopatch_profile,
         "target_files": [str(path) for path in autopatch_target_paths],
         "recommended_profile": recommended_autopatch_profile,
@@ -1206,6 +1220,11 @@ def run_hacc_adversarial_batch(
             results=results,
             report=report,
             output_root=output_root,
+            requested_profile=requested_autopatch_profile,
+            requested_target_files=requested_autopatch_target_paths,
+            recommended_profile=recommended_autopatch_profile,
+            recommended_target_files=recommended_autopatch_targets,
+            used_recommended_targets=bool(use_recommended_autopatch_targets and recommended_autopatch_targets),
             target_files=autopatch_target_paths,
             method=autopatch_method,
             profile=selected_autopatch_profile,
@@ -1382,11 +1401,20 @@ def main(argv: Optional[List[str]] = None) -> int:
             print(f"Autopatch success: {summary['autopatch']['success']}")
             print(f"Autopatch applied: {summary['autopatch']['apply_success']}")
             print(f"Using recommended autopatch targets: {summary['autopatch'].get('used_recommended_targets', False)}")
+            if summary["autopatch"].get("requested_profile"):
+                print(f"Requested autopatch profile: {summary['autopatch']['requested_profile']}")
+            requested_targets = list(summary["autopatch"].get("requested_target_files") or [])
+            if requested_targets:
+                print(f"Requested autopatch targets: {', '.join(str(path) for path in requested_targets)}")
             if summary["autopatch"].get("recommended_profile"):
                 print(f"Recommended autopatch profile: {summary['autopatch']['recommended_profile']}")
             recommended_targets = list(summary["autopatch"].get("recommended_target_files") or [])
             if recommended_targets:
                 print(f"Recommended autopatch targets: {', '.join(str(path) for path in recommended_targets)}")
+            print(f"Selected autopatch profile: {summary['autopatch']['profile']}")
+            selected_targets = list(summary["autopatch"].get("target_files") or [])
+            if selected_targets:
+                print(f"Selected autopatch targets: {', '.join(str(path) for path in selected_targets)}")
             if summary["autopatch"]["patch_path"]:
                 print(f"Autopatch patch: {summary['autopatch']['patch_path']}")
         print(f"Results JSON: {summary['artifacts']['results_json']}")

@@ -307,6 +307,16 @@ summary = run_hacc_adversarial_batch(
 | `emit_autopatch` | `False` | Generate an optimizer patch artifact |
 | `apply_autopatch` | `False` | Generate and apply optimizer patch to `complaint-generator` |
 | `autopatch_method` | `"test_driven"` | Agentic optimization method |
+| `autopatch_profile` | `"question_flow"` | Requested autopatch target profile |
+| `autopatch_target_files` | `None` | Explicit target-file override list |
+| `use_recommended_autopatch_targets` | `False` | Let the optimizer replace the requested autopatch scope with intake-driven recommended files/profile |
+
+**Autopatch recommendation fields** in the run summary:
+
+- `requested_profile` / `requested_target_files` — the original scope requested by the caller
+- `recommended_profile` / `recommended_target_files` — the optimizer's intake-driven recommendation
+- `profile` / `target_files` — the actual scope selected for the autopatch run
+- `used_recommended_targets` — whether the optimizer recommendation replaced the requested scope
 
 **Autopatch profiles** (targeted code optimization):
 
@@ -458,6 +468,9 @@ python3 hacc_adversarial_runner.py [options]
 | `--emit-autopatch` | off | Generate an optimizer patch artifact |
 | `--apply-autopatch` | off | Generate and apply the optimizer patch |
 | `--autopatch-method` | `test_driven` | Agentic optimization method |
+| `--autopatch-profile` | `question_flow` | Requested autopatch target profile |
+| `--autopatch-target-file` | *(repeatable)* | Explicit complaint-generator target file override |
+| `--use-recommended-autopatch-targets` | off | Replace the requested autopatch scope with the optimizer's recommended files/profile |
 | `--json` | off | Print the full summary JSON |
 
 **Examples:**
@@ -477,6 +490,12 @@ python3 hacc_adversarial_runner.py \
   --demo \
   --emit-autopatch \
   --autopatch-method test_driven
+
+# Emit an autopatch artifact using intake-driven recommended targets
+python3 hacc_adversarial_runner.py \
+  --demo \
+  --emit-autopatch \
+  --use-recommended-autopatch-targets
 
 # Apply autopatch to complaint-generator codebase
 python3 hacc_adversarial_runner.py \
