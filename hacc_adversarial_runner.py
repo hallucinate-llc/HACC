@@ -876,7 +876,7 @@ def _run_agentic_autopatch(
         if result_error:
             summary["error"] = str(result_error)
 
-        if summary["patch_path"]:
+        if summary["patch_path"] and not demo_mode:
             patch_validation = _validate_generated_patch(
                 patch_path=summary["patch_path"],
                 repo_root=COMPLAINT_GENERATOR_ROOT,
@@ -924,7 +924,19 @@ def _run_agentic_autopatch(
                 if not patch_validation.get("passed", False) and not summary["error"]:
                     summary["error"] = "Generated patch failed validation"
 
-        should_apply_patch = bool(summary["patch_path"]) and (apply_patch or _autopatch_auto_apply_enabled())
+        elif demo_mode:
+            summary["validation"]["patch_validation"] = {
+                "passed": True,
+                "level": "demo",
+                "patch_path": summary["patch_path"],
+                "target_files": [str(path) for path in target_files],
+                "pytest_files": [],
+                "file_results": [],
+                "errors": [],
+                "warnings": ["Skipped patch validation for demo autopatch run"],
+            }
+
+        should_apply_patch = bool(summary["patch_path"]) and not demo_mode and (apply_patch or _autopatch_auto_apply_enabled())
         if should_apply_patch and summary["patch_path"]:
             from ipfs_datasets_py.optimizers.agentic.patch_control import PatchManager
 
