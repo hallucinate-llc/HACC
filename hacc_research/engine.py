@@ -483,7 +483,7 @@ class HACCResearchEngine:
             payload.setdefault("effective_search_mode", "shared_hybrid")
             if str(payload.get("effective_search_mode") or "") != "shared_hybrid":
                 payload["fallback_note"] = _build_fallback_note(
-                    requested_mode="package/shared_hybrid",
+                    requested_mode="package/shared hybrid",
                     vector_status=str(payload.get("vector_status") or "unavailable"),
                     vector_error=str(payload.get("vector_error") or ""),
                 )
@@ -495,7 +495,7 @@ class HACCResearchEngine:
             if index_status and index_status.get("status") == "unavailable":
                 payload["vector_error"] = index_status.get("error")
             payload["fallback_note"] = _build_fallback_note(
-                requested_mode="package/shared_hybrid",
+                requested_mode="package/shared hybrid",
                 vector_status=str(payload.get("vector_status") or "unavailable"),
                 vector_error=str(payload.get("vector_error") or ""),
             )
