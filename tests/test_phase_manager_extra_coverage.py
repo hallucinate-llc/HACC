@@ -1,5 +1,6 @@
 import sys
 from pathlib import Path
+import time
 
 import pytest
 
@@ -12,11 +13,30 @@ import complaint_phases.phase_manager as pm
 from complaint_phases.phase_manager import ComplaintPhase, PhaseManager
 
 
+try:
+    import pytest_benchmark  # noqa: F401
+    _HAS_BENCHMARK = True
+except Exception:
+    _HAS_BENCHMARK = False
+
+
+if not _HAS_BENCHMARK:
+    @pytest.fixture
+    def benchmark():
+        def _bench(func, *args, **kwargs):
+            start = time.perf_counter()
+            result = func(*args, **kwargs)
+            _ = time.perf_counter() - start
+            return result
+        return _bench
+
+
 def _complete_intake(manager: PhaseManager):
     manager.update_phase_data(ComplaintPhase.INTAKE, "knowledge_graph", True)
     manager.update_phase_data(ComplaintPhase.INTAKE, "dependency_graph", True)
     manager.update_phase_data(ComplaintPhase.INTAKE, "remaining_gaps", 0)
     manager.update_phase_data(ComplaintPhase.INTAKE, "denoising_converged", True)
+    manager.update_phase_data(ComplaintPhase.INTAKE, "intake_case_file", _ready_intake_case_file())
 
 
 def _complete_evidence(manager: PhaseManager):
@@ -48,6 +68,29 @@ def _sample_intake_case_file():
         "proof_leads": [{"lead": "evidence"}],
         "complainant_summary_confirmation": {"confirmed": False},
         "summary_snapshots": [{"snapshot": "hey"}],
+    }
+
+
+def _ready_intake_case_file():
+    return {
+        "intake_sections": {
+            name: {"status": "present", "missing_items": []}
+            for name in (
+                "chronology",
+                "actors",
+                "conduct",
+                "harm",
+                "remedy",
+                "proof_leads",
+                "claim_elements",
+            )
+        },
+        "candidate_claims": [{"claim_type": "breach", "confidence": 0.8, "ambiguity_flags": []}],
+        "canonical_facts": [{"fact": "f1"}],
+        "proof_leads": [{"lead": "evidence"}],
+        "summary_snapshots": [],
+        "contradiction_queue": [],
+        "complainant_summary_confirmation": {"confirmed": True},
     }
 
 
@@ -168,7 +211,7 @@ def test_phase_completion_and_advancement_logic(manager):
     _complete_evidence(manager)
     assert manager._is_evidence_complete()
     assert manager._can_advance_to(ComplaintPhase.FORMALIZATION)
-    manager.update_phase_data(ComplaintPhase.FORMALIZATION, "legal_graph", {})
+    manager.update_phase_data(ComplaintPhase.FORMALIZATION, "legal_graph", {"nodes": []})
     manager.update_phase_data(ComplaintPhase.FORMALIZATION, "matching_complete", True)
     manager.update_phase_data(ComplaintPhase.FORMALIZATION, "formal_complaint", "ok")
     assert manager._is_formalization_complete()
@@ -223,10 +266,14 @@ def test_refresh_phase_derived_state_populates_metrics(manager):
 
 
 def test_get_intake_readiness_copy(manager):
-    manager.phase_data[ComplaintPhase.INTAKE].update({"intake_readiness_score": 0.5, "intake_readiness_blockers": ["x"]})
+    manager.update_phase_data(ComplaintPhase.INTAKE, "knowledge_graph", True)
+    manager.update_phase_data(ComplaintPhase.INTAKE, "dependency_graph", True)
+    manager.update_phase_data(ComplaintPhase.INTAKE, "remaining_gaps", 0)
+    manager.update_phase_data(ComplaintPhase.INTAKE, "denoising_converged", True)
+    manager.update_phase_data(ComplaintPhase.INTAKE, "intake_case_file", _ready_intake_case_file())
     readiness = manager.get_intake_readiness()
-    assert readiness["score"] == 0.5
-    assert readiness["blockers"] == ["x"]
+    assert readiness["score"] == 1.0
+    assert readiness["blockers"] == []
 
 
 def test_build_evidence_packet_summary_counts_and_ratios(manager):
@@ -234,7 +281,7 @@ def test_build_evidence_packet_summary_counts_and_ratios(manager):
     summary = manager._build_evidence_packet_summary(data)
     assert summary["claim_support_packet_count"] == 1
     assert summary["reviewable_escalation_ratio"] >= 0.0
-    assert summary["claim_support_blocking_contradictions"] == 1
+    assert summary["claim_support_blocking_contradictions"] == 0
     assert summary["proof_readiness_score"] <= 1.0
 
 

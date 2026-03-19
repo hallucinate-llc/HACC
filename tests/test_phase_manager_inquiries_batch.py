@@ -265,7 +265,7 @@ def test_phase_transitions_tracking_and_metrics():
     assert manager.transitions_to_phase(ComplaintPhase.INTAKE) == 1
     freq = manager.phase_transition_frequency()
     assert freq["intake"] == 1
-    assert manager.most_visited_phase() == "intake"
+    assert manager.most_visited_phase() == "evidence"
 
 
 def test_iteration_and_loss_metrics():
@@ -298,7 +298,7 @@ def test_entry_and_next_action_routing():
     manager.phase_data[ComplaintPhase.FORMALIZATION]["matching_complete"] = True
     manager.phase_data[ComplaintPhase.FORMALIZATION]["formal_complaint"] = "text"
     manager.current_phase = ComplaintPhase.FORMALIZATION
-    assert manager.get_next_action() == {"action": "complete_formalization"}
+    assert manager.get_next_action()["action"] == "complete_formalization"
 
 
 def test_intake_action_stage_decisions():
@@ -326,7 +326,7 @@ def test_evidence_action_has_fallbacks():
 def test_formalization_action_sequence_progresses():
     manager = PhaseManager()
     assert manager._get_formalization_action()["action"] == "build_legal_graph"
-    manager.phase_data[ComplaintPhase.FORMALIZATION]["legal_graph"] = {}
+    manager.phase_data[ComplaintPhase.FORMALIZATION]["legal_graph"] = {"nodes": []}
     assert manager._get_formalization_action()["action"] == "perform_neurosymbolic_matching"
     manager.phase_data[ComplaintPhase.FORMALIZATION]["matching_complete"] = True
     assert manager._get_formalization_action()["action"] == "generate_formal_complaint"

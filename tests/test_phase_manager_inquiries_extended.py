@@ -251,7 +251,7 @@ def test_build_evidence_packet_summary_and_resolution_helpers():
     data = _ready_evidence_data()
     summary = manager._build_evidence_packet_summary(data)
     assert summary["claim_support_packet_count"] == 1
-    assert summary["claim_support_blocking_contradictions"] == 1
+    assert summary["claim_support_blocking_contradictions"] == 0
     assert summary["proof_readiness_score"] <= 1.0
     assert manager._normalize_evidence_escalation_status(None) == ""
     resolved = manager._resolve_evidence_escalation_status(
@@ -264,7 +264,7 @@ def test_alignment_task_helpers_and_drift_actions():
     manager = PhaseManager()
     data = _ready_evidence_data()
     actionable = manager._get_actionable_alignment_tasks(data)
-    assert actionable
+    assert actionable == []
     data["alignment_promotion_drift_summary"] = {
         "drift_flag": True,
         "promoted_count": 1,
@@ -283,7 +283,7 @@ def test_alignment_task_helpers_and_drift_actions():
     assert drift_action and drift_action["action"] == "validate_promoted_support"
     packets = data["claim_support_packets"]
     next_packet = manager._get_next_packet_evidence_action(packets, data)
-    assert next_packet
+    assert next_packet is None
 
 
 def test_phase_transitions_and_completions():

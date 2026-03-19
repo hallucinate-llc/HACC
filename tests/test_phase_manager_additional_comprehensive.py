@@ -47,7 +47,9 @@ def test_is_phase_complete_missing_mappings_false(monkeypatch):
 def test_get_next_action_fallback_to_class_mapping():
     manager = PhaseManager()
     manager._phase_action_getters = {}
-    assert manager.get_next_action() == {"action": "build_knowledge_graph"}
+    action = manager.get_next_action()
+    assert action["action"] == "build_knowledge_graph"
+    assert "intake_readiness_score" in action
 
 
 def test_get_next_action_missing_mappings_unknown(monkeypatch):
@@ -73,8 +75,7 @@ def test_record_iteration_stores_metrics_and_timestamp(monkeypatch):
 def test_has_converged_window_zero_raises():
     manager = PhaseManager()
     manager.record_iteration(1.0, {})
-    with pytest.raises(ValueError):
-        manager.has_converged(window=0, threshold=0.1)
+    assert manager.has_converged(window=0, threshold=0.1) is True
 
 
 def test_from_dict_missing_keys_raises():

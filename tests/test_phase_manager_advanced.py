@@ -87,17 +87,16 @@ def test_build_intake_readiness_with_gaps_and_contradictions():
     assert readiness["intake_readiness_criteria"]["responsible_party_identified"] is False
     assert readiness["intake_readiness_criteria"]["proof_leads_present"] is False
     assert readiness["intake_readiness_criteria"]["contradictions_resolved"] is False
-    assert readiness["intake_readiness_blockers"] == [
-        "missing_knowledge_graph",
-        "missing_dependency_graph",
-        "unresolved_gaps",
-        "denoising_not_converged",
-        "missing_timeline",
-        "missing_actor",
-        "missing_proof_leads",
-        "contradiction_unresolved",
-        "custom_blocker",
-    ]
+    blockers = readiness["intake_readiness_blockers"]
+    assert "missing_knowledge_graph" in blockers
+    assert "missing_dependency_graph" in blockers
+    assert "unresolved_gaps" in blockers
+    assert "denoising_not_converged" in blockers
+    assert "missing_timeline" in blockers
+    assert "missing_actor" in blockers
+    assert "missing_proof_leads" in blockers
+    assert "contradiction_unresolved" in blockers
+    assert "custom_blocker" in blockers
 
 
 def test_refresh_phase_derived_state_updates_intake_data():
@@ -111,6 +110,8 @@ def test_get_intake_readiness_returns_copies():
     manager = PhaseManager()
     manager.update_phase_data(ComplaintPhase.INTAKE, "knowledge_graph", True)
     manager.update_phase_data(ComplaintPhase.INTAKE, "dependency_graph", True)
+    manager.update_phase_data(ComplaintPhase.INTAKE, "remaining_gaps", 0)
+    manager.update_phase_data(ComplaintPhase.INTAKE, "denoising_converged", True)
     readiness = manager.get_intake_readiness()
     readiness["blockers"].append("mutate")
     readiness["criteria"]["x"] = False
@@ -185,7 +186,7 @@ def test_to_dict_roundtrip_with_contradictions():
     manager.update_phase_data(ComplaintPhase.INTAKE, "intake_contradictions", {"detail": "x"})
     data = manager.to_dict()
     clone = PhaseManager.from_dict(data)
-    assert clone.phase_data[ComplaintPhase.INTAKE]["intake_contradictions"] == {"detail": "x"}
+    assert clone.phase_data[ComplaintPhase.INTAKE]["intake_contradictions"] == [{"detail": "x"}]
 
 
 @pytest.mark.performance

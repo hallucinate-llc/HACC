@@ -210,19 +210,19 @@ def test_active_and_resolution_detects_blocking():
 
 def test_section_blockers_and_readiness_integration(phase_manager):
     case_file = _ready_case_file()
-    readiness = phase_manager._build_intake_readiness(
-        {
-            "knowledge_graph": True,
-            "dependency_graph": True,
-            "remaining_gaps": 0,
-            "denoising_converged": True,
-            "intake_case_file": case_file,
-            "current_gaps": [],
-        }
-    )
+    intake_state = {
+        "knowledge_graph": True,
+        "dependency_graph": True,
+        "remaining_gaps": 0,
+        "denoising_converged": True,
+        "intake_case_file": case_file,
+        "current_gaps": [],
+    }
+    readiness = phase_manager._build_intake_readiness(intake_state)
     assert readiness["intake_ready"] is True
-    assert all(not blocker.startswith("missing_") for blocker in readiness["blockers"])
-    phase_manager.phase_data[ComplaintPhase.INTAKE] = readiness
+    blockers = list(readiness.get("blockers") or readiness.get("intake_readiness_blockers") or [])
+    assert all(not blocker.startswith("missing_") for blocker in blockers)
+    phase_manager.phase_data[ComplaintPhase.INTAKE] = {**intake_state, **readiness}
     phase_manager._refresh_phase_derived_state(ComplaintPhase.INTAKE)
     assert phase_manager.phase_data[ComplaintPhase.INTAKE].get("intake_ready") is True
 

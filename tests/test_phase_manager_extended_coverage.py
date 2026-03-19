@@ -53,14 +53,14 @@ def test_extract_intake_gap_types_combines_sources():
 def test_extract_intake_contradictions_supports_various_formats():
     manager = PhaseManager()
     candidates = manager._extract_intake_contradictions(
-        {"candidates": [{"issue": "A"}, "ignore"]}
+        {"intake_contradictions": {"candidates": [{"issue": "A"}, "ignore"]}}
     )
     assert candidates == [{"issue": "A"}]
-    single = manager._extract_intake_contradictions({"unexpected": "value"})
+    single = manager._extract_intake_contradictions({"intake_contradictions": {"unexpected": "value"}})
     assert single == [{"unexpected": "value"}]
-    listed = manager._extract_intake_contradictions(
-        [{"status": "open"}, {"status": "resolved"}]
-    )
+    listed = manager._extract_intake_contradictions({
+        "intake_contradictions": [{"status": "open"}, {"status": "resolved"}]
+    })
     assert listed == [{"status": "open"}, {"status": "resolved"}]
 
 
@@ -191,7 +191,7 @@ def test_build_evidence_packet_summary_counts_elements_and_temporal_tasks():
     summary = manager._build_evidence_packet_summary(data)
     assert summary["claim_support_packet_count"] == 1
     assert summary["temporal_gap_task_count"] == 1
-    assert summary["reviewable_escalation_count"] >= 1
+    assert summary["claim_support_reviewable_escalation_count"] >= 1
     assert summary["proof_readiness_score"] >= 0.0
 
 
@@ -222,7 +222,8 @@ def test_get_actionable_alignment_tasks_filters_nonactionable():
         ]
     }
     actionable = manager._get_actionable_alignment_tasks(data)
-    assert len(actionable) == 2
+    assert len(actionable) == 1
+    assert actionable[0]["support_status"] == "contradicted"
 
 
 def test_get_alignment_promotion_drift_action_focuses_single_claim():

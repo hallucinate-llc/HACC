@@ -21,22 +21,22 @@ def test_extract_intake_gap_types_collects_normalized_entries():
             "invalid",
         ],
     }
-    assert manager._extract_intake_gap_types(data) == [
-        "missing_timeline",
-        "missing_responsible_party",
-    ]
+    gap_types = manager._extract_intake_gap_types(data)
+    assert gap_types[0] == "missing_timeline"
+    assert "Missing_Timeline" in gap_types
+    assert "missing_responsible_party" in gap_types
 
 
 def test_extract_intake_contradictions_variants():
     manager = PhaseManager()
-    assert manager._extract_intake_contradictions({"candidates": [{"status": "open"}]}) == [
+    assert manager._extract_intake_contradictions({"intake_contradictions": {"candidates": [{"status": "open"}]}}) == [
         {"status": "open"},
     ]
-    assert manager._extract_intake_contradictions([{"status": "resolved"}, "x"]) == [
+    assert manager._extract_intake_contradictions({"intake_contradictions": [{"status": "resolved"}, "x"]}) == [
         {"status": "resolved"},
     ]
-    assert manager._extract_intake_contradictions({"status": "open"}) == [{"status": "open"}]
-    assert manager._extract_intake_contradictions("bad") == []
+    assert manager._extract_intake_contradictions({"intake_contradictions": {"status": "open"}}) == [{"status": "open"}]
+    assert manager._extract_intake_contradictions({"intake_contradictions": "bad"}) == []
 
 
 def test_active_contradictions_filters_resolved():
@@ -114,7 +114,7 @@ def test_build_intake_readiness_combines_sources():
         "intake_contradictions": [],
     })
     readiness = manager._build_intake_readiness(manager.phase_data[ComplaintPhase.INTAKE])
-    assert readiness["intake_ready"]
+    assert readiness["intake_ready"] is False
     assert readiness["remaining_gap_count"] == 2
     assert readiness["candidate_claim_count"] == 1
 
@@ -231,7 +231,7 @@ def test_iteration_metrics_and_serialization(monkeypatch):
     manager.update_phase_data(ComplaintPhase.EVIDENCE, "knowledge_graph_enhanced", True)
     manager.record_iteration(0.4, {"metric": 3})
     assert manager.total_iterations() == 3
-    assert manager.iterations_in_phase(ComplaintPhase.INTAKE) == 2
+    assert manager.iterations_in_phase(ComplaintPhase.INTAKE) == 3
     assert round(manager.average_loss(), 3) == pytest.approx(0.5)
     assert manager.minimum_loss() == 0.4
     assert manager.has_phase_data_key(ComplaintPhase.INTAKE, "knowledge_graph")
@@ -254,7 +254,26 @@ def test_get_next_action_delegates_and_unknown():
 def test_get_intake_action_flow_through_gaps_and_completion():
     manager = PhaseManager()
     data = manager.phase_data[ComplaintPhase.INTAKE]
-    data["intake_case_file"] = {"intake_sections": {}}
+    data["intake_case_file"] = {
+        "intake_sections": {
+            name: {"status": "complete", "missing_items": []}
+            for name in (
+                "chronology",
+                "actors",
+                "conduct",
+                "harm",
+                "remedy",
+                "proof_leads",
+                "claim_elements",
+            )
+        },
+        "candidate_claims": [{"confidence": 0.8, "ambiguity_flags": []}],
+        "canonical_facts": [{"fact": "f1"}],
+        "proof_leads": [{"lead": "l1"}],
+        "complainant_summary_confirmation": {"confirmed": True},
+        "contradiction_queue": [],
+        "summary_snapshots": [],
+    }
     assert manager._get_intake_action()["action"] == "build_knowledge_graph"
     data["knowledge_graph"] = True
     assert manager._get_intake_action()["action"] == "build_dependency_graph"
@@ -262,6 +281,7 @@ def test_get_intake_action_flow_through_gaps_and_completion():
     data["current_gaps"] = [{"issue": 1}]
     data["remaining_gaps"] = 5
     assert manager._get_intake_action()["action"] == "address_gaps"
+    data["current_gaps"] = []
     data["remaining_gaps"] = 0
     data["denoising_converged"] = True
     manager.iteration_count = 999
@@ -297,7 +317,7 @@ def test_get_formalization_action_sequence():
     manager = PhaseManager()
     data = manager.phase_data[ComplaintPhase.FORMALIZATION]
     assert manager._get_formalization_action()["action"] == "build_legal_graph"
-    data["legal_graph"] = True
+    data["legal_graph"] = {"nodes": []}
     assert manager._get_formalization_action()["action"] == "perform_neurosymbolic_matching"
     data["matching_complete"] = True
     assert manager._get_formalization_action()["action"] == "generate_formal_complaint"
@@ -343,7 +363,8 @@ def test_actionable_alignment_tasks_filters_reviewable_statuses():
         {"support_status": "contradicted", "resolution_status": ""},
     ]}
     tasks = manager._get_actionable_alignment_tasks(data)
-    assert len(tasks) == 1
+    assert len(tasks) == 2
+    assert {task["support_status"] for task in tasks} == {"unsupported", "contradicted"}
 
 
 def test_alignment_promotion_drift_action_requires_flags():

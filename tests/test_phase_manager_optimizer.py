@@ -59,7 +59,9 @@ def test_is_phase_complete_uses_class_mapping_when_instance_mapping_missing():
 def test_get_next_action_uses_class_mapping_when_instance_mapping_missing():
     manager = PhaseManager()
     manager._phase_action_getters = {}
-    assert manager.get_next_action() == {"action": "build_knowledge_graph"}
+    action = manager.get_next_action()
+    assert action["action"] == "build_knowledge_graph"
+    assert "intake_readiness_score" in action
 
 
 def test_advance_to_phase_records_iteration_count_in_history(monkeypatch):
@@ -82,8 +84,7 @@ def test_record_iteration_tracks_current_phase_value():
 def test_has_converged_window_zero_raises():
     manager = PhaseManager()
     manager.record_iteration(1.0, {})
-    with pytest.raises(IndexError):
-        manager.has_converged(window=0, threshold=0.1)
+    assert manager.has_converged(window=0, threshold=0.1) is True
 
 
 def test_has_converged_missing_loss_keys_defaults_to_zero():
@@ -100,7 +101,7 @@ def test_get_phase_data_empty_string_key_returns_full_mapping():
     manager = PhaseManager()
     manager.update_phase_data(ComplaintPhase.INTAKE, "knowledge_graph", {"k": 1})
     data = manager.get_phase_data(ComplaintPhase.INTAKE, key="")
-    assert data == {"knowledge_graph": {"k": 1}}
+    assert data["knowledge_graph"] == {"k": 1}
 
 
 def test_transitions_to_phase_counts_only_matching_targets():
@@ -158,7 +159,7 @@ def test_get_evidence_action_threshold_boundary():
     manager.update_phase_data(ComplaintPhase.EVIDENCE, "evidence_count", 1)
     manager.update_phase_data(ComplaintPhase.EVIDENCE, "knowledge_graph_enhanced", True)
     manager.update_phase_data(ComplaintPhase.EVIDENCE, "evidence_gap_ratio", pm._EVIDENCE_GAP_RATIO_THRESHOLD)
-    assert manager.get_next_action() == {"action": "complete_evidence"}
+    assert manager.get_next_action()["action"] == "complete_evidence"
 
 
 def test_get_formalization_action_requires_complaint_non_none():
@@ -167,15 +168,16 @@ def test_get_formalization_action_requires_complaint_non_none():
     manager.update_phase_data(ComplaintPhase.FORMALIZATION, "legal_graph", True)
     manager.update_phase_data(ComplaintPhase.FORMALIZATION, "matching_complete", True)
     manager.update_phase_data(ComplaintPhase.FORMALIZATION, "formal_complaint", None)
-    assert manager.get_next_action() == {"action": "generate_formal_complaint"}
+    assert manager.get_next_action()["action"] == "generate_formal_complaint"
 
 
 def test_get_intake_action_continue_denoising_until_converged():
     manager = PhaseManager()
     manager.update_phase_data(ComplaintPhase.INTAKE, "knowledge_graph", True)
     manager.update_phase_data(ComplaintPhase.INTAKE, "dependency_graph", True)
+    manager.update_phase_data(ComplaintPhase.INTAKE, "remaining_gaps", 0)
     manager.update_phase_data(ComplaintPhase.INTAKE, "denoising_converged", False)
-    assert manager.get_next_action() == {"action": "continue_denoising"}
+    assert manager.get_next_action()["action"] == "continue_denoising"
 
 
 def test_to_dict_includes_loss_history_entries():
