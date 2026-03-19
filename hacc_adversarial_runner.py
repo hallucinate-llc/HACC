@@ -330,6 +330,20 @@ def _build_agentic_llm_router(
     return _PinnedRunnerLLMRouter(resolved_provider)
 
 
+def _agentic_autopatch_preflight(optimizer: Any) -> Dict[str, Any]:
+    try:
+        optimizer._load_agentic_optimizer_components()  # type: ignore[attr-defined]
+        return {
+            "ready": True,
+            "error": None,
+        }
+    except Exception as exc:
+        return {
+            "ready": False,
+            "error": str(exc),
+        }
+
+
 def _resolve_autopatch_validation_level() -> Any:
     _ensure_complaint_generator_on_path()
 
@@ -1205,6 +1219,7 @@ def run_hacc_adversarial_batch(
         "recommended_target_files": [str(path) for path in recommended_autopatch_targets],
         "used_recommended_targets": bool(use_recommended_autopatch_targets and recommended_autopatch_targets),
         "constraints": _sanitize_for_json(autopatch_constraints),
+        "preflight": None,
         "applied": False,
         "apply_success": False,
         "success": False,
@@ -1215,24 +1230,31 @@ def run_hacc_adversarial_batch(
         "error": None,
     }
     if emit_autopatch or apply_autopatch:
-        autopatch_summary = _run_agentic_autopatch(
-            optimizer=optimizer,
-            results=results,
-            report=report,
-            output_root=output_root,
-            requested_profile=requested_autopatch_profile,
-            requested_target_files=requested_autopatch_target_paths,
-            recommended_profile=recommended_autopatch_profile,
-            recommended_target_files=recommended_autopatch_targets,
-            used_recommended_targets=bool(use_recommended_autopatch_targets and recommended_autopatch_targets),
-            target_files=autopatch_target_paths,
-            method=autopatch_method,
-            profile=selected_autopatch_profile,
-            constraints=autopatch_constraints,
-            apply_patch=apply_autopatch,
-            provider_name=runtime_bundle["runtime"].get("provider"),
-            model_name=runtime_bundle["runtime"].get("model"),
-        )
+        autopatch_preflight = _agentic_autopatch_preflight(optimizer)
+        autopatch_summary["preflight"] = _sanitize_for_json(autopatch_preflight)
+        if autopatch_preflight.get("ready"):
+            autopatch_summary = _run_agentic_autopatch(
+                optimizer=optimizer,
+                results=results,
+                report=report,
+                output_root=output_root,
+                requested_profile=requested_autopatch_profile,
+                requested_target_files=requested_autopatch_target_paths,
+                recommended_profile=recommended_autopatch_profile,
+                recommended_target_files=recommended_autopatch_targets,
+                used_recommended_targets=bool(use_recommended_autopatch_targets and recommended_autopatch_targets),
+                target_files=autopatch_target_paths,
+                method=autopatch_method,
+                profile=selected_autopatch_profile,
+                constraints=autopatch_constraints,
+                apply_patch=apply_autopatch,
+                provider_name=runtime_bundle["runtime"].get("provider"),
+                model_name=runtime_bundle["runtime"].get("model"),
+            )
+            autopatch_summary["preflight"] = _sanitize_for_json(autopatch_preflight)
+        else:
+            autopatch_summary["requested"] = True
+            autopatch_summary["error"] = f"Autopatch dependency preflight failed: {autopatch_preflight.get('error')}"
 
     best_bundle = {
         "seed_complaint": _sanitize_for_json(best_result.seed_complaint if best_result else None),
@@ -1401,6 +1423,11 @@ def main(argv: Optional[List[str]] = None) -> int:
             print(f"Autopatch success: {summary['autopatch']['success']}")
             print(f"Autopatch applied: {summary['autopatch']['apply_success']}")
             print(f"Using recommended autopatch targets: {summary['autopatch'].get('used_recommended_targets', False)}")
+            preflight = dict(summary["autopatch"].get("preflight") or {})
+            if preflight:
+                print(f"Autopatch preflight ready: {preflight.get('ready', False)}")
+                if preflight.get("error"):
+                    print(f"Autopatch preflight error: {preflight['error']}")
             if summary["autopatch"].get("requested_profile"):
                 print(f"Requested autopatch profile: {summary['autopatch']['requested_profile']}")
             requested_targets = list(summary["autopatch"].get("requested_target_files") or [])
