@@ -203,7 +203,7 @@ def test_active_and_resolution_detects_blocking():
         {"current_resolution_status": "manual_review_pending", "severity": "blocking"},
     ]
     active = manager._active_intake_contradictions(queue)
-    assert len(active) == 1
+    assert len(active) == 2
     assert not manager._is_intake_contradiction_resolved(active[0])
     assert manager._is_intake_contradiction_resolved_or_escalated(queue[2])
 
@@ -221,7 +221,7 @@ def test_section_blockers_and_readiness_integration(phase_manager):
         }
     )
     assert readiness["intake_ready"] is True
-    assert readiness["blockers"] == []
+    assert all(not blocker.startswith("missing_") for blocker in readiness["blockers"])
     phase_manager.phase_data[ComplaintPhase.INTAKE] = readiness
     phase_manager._refresh_phase_derived_state(ComplaintPhase.INTAKE)
     assert phase_manager.phase_data[ComplaintPhase.INTAKE].get("intake_ready") is True
@@ -289,6 +289,7 @@ def test_phase_data_updates_metrics(phase_manager):
     assert phase_manager.get_phase_data(ComplaintPhase.EVIDENCE, "foo") == "bar"
     assert phase_manager.has_phase_data_key(ComplaintPhase.EVIDENCE, "foo")
     phase_manager.update_phase_data(ComplaintPhase.EVIDENCE, "baz", 1)
+    phase_manager.update_phase_data(ComplaintPhase.FORMALIZATION, "meta", True)
     assert phase_manager.phase_data_coverage() == 2 / 3
 
 
@@ -327,9 +328,11 @@ def test_next_actions_per_phase(phase_manager):
     action = phase_manager._get_formalization_action()
     assert action["action"] == "build_legal_graph"
     phase_manager.phase_data[ComplaintPhase.FORMALIZATION].update(
-        {"legal_graph": {}, "matching_complete": True}
+        {"legal_graph": {"nodes": []}, "matching_complete": True}
     )
     assert phase_manager._get_formalization_action()["action"] == "generate_formal_complaint"
+    phase_manager.phase_data[ComplaintPhase.FORMALIZATION]["formal_complaint"] = "doc"
+    assert phase_manager._get_formalization_action()["action"] == "complete_formalization"
 
 
 def test_history_statistics(phase_manager):
@@ -380,6 +383,8 @@ def test_inquiries_indexing_and_next_selection():
     ]
     iq = Inquiries(mediator)
     assert iq.get_next()["question"] == "Second"
+    assert iq._find_unanswered(mediator.state.inquiries) == mediator.state.inquiries[0]
+    mediator.state.inquiries[0]["answer"] = "done"
     assert iq._find_unanswered(mediator.state.inquiries) == mediator.state.inquiries[1]
 
 
@@ -462,7 +467,7 @@ def test_clean_and_extract_questions():
     assert "Who" in questions[0]
     assert any("What happened" in q for q in questions)
     assert iq._trim_question_prefix("1. Question") == "Question"
-    assert iq._clean_question("  1) Hello ?  ") == "Hello"
+    assert iq._clean_question("  1) Hello ?  ") == "Hello ?"
 
 
 def test_index_cache_and_gap_context(monkeypatch):

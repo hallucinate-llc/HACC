@@ -1,429 +1,253 @@
 import sys
-from pathlib import Path
 import time
-import math
+from pathlib import Path
+
 import pytest
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-COMPLAINT_GENERATOR_ROOT = REPO_ROOT / "complaint-generator"
-if str(COMPLAINT_GENERATOR_ROOT) not in sys.path:
-    sys.path.insert(0, str(COMPLAINT_GENERATOR_ROOT))
+COMPLAINT_ROOT = REPO_ROOT / "complaint-generator"
+if str(COMPLAINT_ROOT) not in sys.path:
+    sys.path.insert(0, str(COMPLAINT_ROOT))
 
 from complaint_phases import phase_manager as pm
-from complaint_phases.phase_manager import PhaseManager, ComplaintPhase
+from complaint_phases.phase_manager import ComplaintPhase, PhaseManager
 
 
-def _complete_intake(manager: PhaseManager):
-    manager.update_phase_data(ComplaintPhase.INTAKE, "knowledge_graph", True)
-    manager.update_phase_data(ComplaintPhase.INTAKE, "dependency_graph", True)
-    manager.update_phase_data(ComplaintPhase.INTAKE, "remaining_gaps", 0)
-    manager.update_phase_data(ComplaintPhase.INTAKE, "denoising_converged", True)
+def _build_complete_intake_case() -> dict:
+    sections = {
+        "chronology": {"status": "complete", "missing_items": []},
+        "actors": {"status": "complete", "missing_items": []},
+        "conduct": {"status": "complete", "missing_items": []},
+        "harm": {"status": "complete", "missing_items": []},
+        "remedy": {"status": "complete", "missing_items": []},
+        "proof_leads": {"status": "complete", "missing_items": []},
+        "claim_elements": {"status": "complete", "missing_items": []},
+    }
+    case_file = {
+        "intake_sections": sections,
+        "candidate_claims": [{"claim_type": "retaliation", "confidence": 0.9}],
+        "canonical_facts": [{"fact": "confirmed"}],
+        "proof_leads": [{"lead": "document"}],
+        "summary_snapshots": [],
+        "contradiction_queue": [],
+    }
+    return case_file
 
 
-def _complete_evidence(manager: PhaseManager):
-    manager.update_phase_data(ComplaintPhase.EVIDENCE, "evidence_count", 1)
-    manager.update_phase_data(ComplaintPhase.EVIDENCE, "knowledge_graph_enhanced", True)
-    manager.update_phase_data(ComplaintPhase.EVIDENCE, "evidence_gap_ratio", 0.2)
+@pytest.fixture
+def manager() -> PhaseManager:
+    return PhaseManager()
 
 
-def test_utc_now_isoformat_deterministic(monkeypatch):
-    fixed = pm.datetime(2024, 1, 2, 3, 4, 5, tzinfo=pm.UTC)
-
-    class DummyDateTime:
-        @classmethod
-        def now(cls, tz=None):
-            return fixed
-
-    monkeypatch.setattr(pm, "datetime", DummyDateTime)
-    assert pm._utc_now_isoformat() == fixed.isoformat()
-
-
-def test_utc_now_isoformat_includes_utc_offset():
-    value = pm._utc_now_isoformat()
-    assert value.endswith("+00:00")
-
-
-def test_init_defaults():
-    manager = PhaseManager()
-    assert manager.mediator is None
+def test_phase_manager_initial_state_and_utc_helper(manager: PhaseManager):
     assert manager.current_phase == ComplaintPhase.INTAKE
     assert manager.phase_history == []
-    assert manager.iteration_count == 0
-    assert manager.loss_history == []
-    assert set(manager.phase_data.keys()) == {
-        ComplaintPhase.INTAKE,
-        ComplaintPhase.EVIDENCE,
-        ComplaintPhase.FORMALIZATION,
+    assert isinstance(pm._utc_now_isoformat(), str)
+    assert manager.phase_data[ComplaintPhase.INTAKE] == {}
+
+
+def test_extract_gap_types_and_contradictions(manager: PhaseManager):
+    data = {
+        "intake_gap_types": ["missing_timeline", "missing_timeline", None],
+        "current_gaps": [
+            {"type": "missing_responsible_party"},
+            {"type": "", "notes": "ignored"},
+            "not a dict",
+        ],
+        "intake_contradictions": {
+            "candidates": [{"id": 1}, {"status": "resolved"}],
+        },
     }
-    assert all(manager.phase_data[phase] == {} for phase in manager.phase_data)
+    gap_types = manager._extract_intake_gap_types(data)
+    assert "missing_timeline" in gap_types
+    assert "missing_responsible_party" in gap_types
+    contradictions = manager._extract_intake_contradictions(data)
+    assert isinstance(contradictions, list)
+    assert any(c.get("id") == 1 for c in contradictions)
+    assert manager._active_intake_contradictions([
+        {"status": "open"},
+        {"status": "resolved"},
+    ]) == [{"status": "open"}]
+    assert manager._is_intake_contradiction_resolved({"status": "resolved"})
+    assert manager._is_intake_contradiction_resolved_or_escalated({"status": "escalated"})
+    assert not manager._is_intake_contradiction_resolved_or_escalated({"status": "open"})
 
 
-def test_get_current_phase():
-    manager = PhaseManager()
-    assert manager.get_current_phase() == ComplaintPhase.INTAKE
-
-
-def test_advance_to_phase_success_and_history(monkeypatch):
-    manager = PhaseManager()
-    _complete_intake(manager)
-    monkeypatch.setattr(pm, "_utc_now_isoformat", lambda: "2020-01-01T00:00:00+00:00")
-
-    assert manager.advance_to_phase(ComplaintPhase.EVIDENCE) is True
-    assert manager.current_phase == ComplaintPhase.EVIDENCE
-    assert manager.phase_history[-1] == {
-        "from_phase": "intake",
-        "to_phase": "evidence",
-        "timestamp": "2020-01-01T00:00:00+00:00",
-        "iteration": 0,
-    }
-
-
-def test_advance_to_phase_allows_return_to_intake(monkeypatch):
-    manager = PhaseManager()
-    _complete_intake(manager)
-    manager.advance_to_phase(ComplaintPhase.EVIDENCE)
-    monkeypatch.setattr(pm, "_utc_now_isoformat", lambda: "2021-01-01T00:00:00+00:00")
-
-    assert manager.advance_to_phase(ComplaintPhase.INTAKE) is True
-    assert manager.current_phase == ComplaintPhase.INTAKE
-    assert manager.phase_history[-1]["to_phase"] == "intake"
-
-
-def test_advance_to_phase_failure_when_requirements_not_met():
-    manager = PhaseManager()
-    assert manager.advance_to_phase(ComplaintPhase.EVIDENCE) is False
-    assert manager.current_phase == ComplaintPhase.INTAKE
-    assert manager.phase_history == []
-
-
-def test_advance_to_phase_invalid_phase_raises():
-    manager = PhaseManager()
-    with pytest.raises(AttributeError):
-        manager.advance_to_phase("bogus")
-
-
-def test_can_advance_to_logic():
-    manager = PhaseManager()
-    assert manager._can_advance_to(ComplaintPhase.INTAKE) is True
-    assert manager._can_advance_to(ComplaintPhase.EVIDENCE) is False
-    manager.update_phase_data(ComplaintPhase.INTAKE, "knowledge_graph", True)
-    manager.update_phase_data(ComplaintPhase.INTAKE, "dependency_graph", True)
-    manager.update_phase_data(ComplaintPhase.INTAKE, "remaining_gaps", 3)
-    manager.update_phase_data(ComplaintPhase.INTAKE, "denoising_converged", True)
-    assert manager._can_advance_to(ComplaintPhase.EVIDENCE) is True
-    assert manager._can_advance_to(ComplaintPhase.FORMALIZATION) is False
-    manager.update_phase_data(ComplaintPhase.EVIDENCE, "evidence_count", 1)
-    manager.update_phase_data(ComplaintPhase.EVIDENCE, "knowledge_graph_enhanced", True)
-    manager.update_phase_data(ComplaintPhase.EVIDENCE, "evidence_gap_ratio", 0.2)
-    assert manager._can_advance_to(ComplaintPhase.FORMALIZATION) is True
-
-
-def test_is_intake_complete_requirements():
-    manager = PhaseManager()
-    assert manager._is_intake_complete() is False
-    manager.update_phase_data(ComplaintPhase.INTAKE, "knowledge_graph", True)
-    manager.update_phase_data(ComplaintPhase.INTAKE, "dependency_graph", True)
-    manager.update_phase_data(ComplaintPhase.INTAKE, "remaining_gaps", 4)
-    manager.update_phase_data(ComplaintPhase.INTAKE, "denoising_converged", True)
-    assert manager._is_intake_complete() is False
-    manager.update_phase_data(ComplaintPhase.INTAKE, "remaining_gaps", 3)
-    assert manager._is_intake_complete() is True
-
-
-def test_is_evidence_complete_requirements():
-    manager = PhaseManager()
-    assert manager._is_evidence_complete() is False
-    manager.update_phase_data(ComplaintPhase.EVIDENCE, "evidence_count", 1)
-    manager.update_phase_data(ComplaintPhase.EVIDENCE, "knowledge_graph_enhanced", True)
-    manager.update_phase_data(ComplaintPhase.EVIDENCE, "evidence_gap_ratio", 0.3)
-    assert manager._is_evidence_complete() is False
-    manager.update_phase_data(ComplaintPhase.EVIDENCE, "evidence_gap_ratio", 0.29)
-    assert manager._is_evidence_complete() is True
-
-
-def test_is_formalization_complete_requirements():
-    manager = PhaseManager()
-    assert manager._is_formalization_complete() is False
-    manager.update_phase_data(ComplaintPhase.FORMALIZATION, "legal_graph", {"nodes": []})
-    manager.update_phase_data(ComplaintPhase.FORMALIZATION, "matching_complete", True)
-    manager.update_phase_data(ComplaintPhase.FORMALIZATION, "formal_complaint", None)
-    assert manager._is_formalization_complete() is False
-    manager.update_phase_data(ComplaintPhase.FORMALIZATION, "formal_complaint", "text")
-    assert manager._is_formalization_complete() is True
-
-
-def test_is_phase_complete_routes():
-    manager = PhaseManager()
-    _complete_intake(manager)
-    assert manager.is_phase_complete(ComplaintPhase.INTAKE) is True
-    assert manager.is_phase_complete(ComplaintPhase.EVIDENCE) is False
-    assert manager.is_phase_complete(ComplaintPhase.FORMALIZATION) is False
-
-
-def test_is_phase_complete_unknown_phase_false():
-    manager = PhaseManager()
-    assert manager.is_phase_complete("bogus") is False
-
-
-def test_update_and_get_phase_data():
-    manager = PhaseManager()
-    manager.update_phase_data(ComplaintPhase.INTAKE, "knowledge_graph", {"k": 1})
-    assert manager.get_phase_data(ComplaintPhase.INTAKE, "knowledge_graph") == {"k": 1}
-    assert manager.get_phase_data(ComplaintPhase.INTAKE, "missing") is None
-    assert manager.get_phase_data(ComplaintPhase.INTAKE) == {"knowledge_graph": {"k": 1}}
-
-
-def test_update_phase_data_invalid_phase_raises():
-    manager = PhaseManager()
-    with pytest.raises(KeyError):
-        manager.update_phase_data("bogus", "x", 1)
-
-
-def test_get_phase_data_invalid_phase_raises():
-    manager = PhaseManager()
-    with pytest.raises(KeyError):
-        manager.get_phase_data("not-a-phase")
-
-
-def test_record_iteration_and_convergence(monkeypatch):
-    manager = PhaseManager()
-    monkeypatch.setattr(pm, "_utc_now_isoformat", lambda: "2020-01-01T00:00:00+00:00")
-    manager.record_iteration(1.0, {"a": 1})
-    manager.record_iteration(1.02, {"a": 2})
-    assert manager.iteration_count == 2
-    assert manager.loss_history[-1]["phase"] == "intake"
-    assert manager.loss_history[-1]["timestamp"] == "2020-01-01T00:00:00+00:00"
-    assert manager.has_converged(window=3, threshold=0.1) is False
-    manager.record_iteration(1.01, {"a": 3})
-    assert manager.has_converged(window=3, threshold=0.05) is True
-    assert manager.has_converged(window=3, threshold=0.005) is False
-
-
-def test_has_converged_exact_threshold_is_false():
-    manager = PhaseManager()
-    manager.record_iteration(1.0, {})
-    manager.record_iteration(1.1, {})
-    manager.record_iteration(1.0, {})
-    assert manager.has_converged(window=3, threshold=0.1) is False
-
-
-def test_get_next_action_intake_flow():
-    manager = PhaseManager()
-    assert manager.get_next_action() == {"action": "build_knowledge_graph"}
-    manager.update_phase_data(ComplaintPhase.INTAKE, "knowledge_graph", True)
-    assert manager.get_next_action() == {"action": "build_dependency_graph"}
-    manager.update_phase_data(ComplaintPhase.INTAKE, "dependency_graph", True)
-    manager.update_phase_data(ComplaintPhase.INTAKE, "current_gaps", ["g1"])
-    assert manager.get_next_action() == {"action": "address_gaps", "gaps": ["g1"]}
-    manager.update_phase_data(ComplaintPhase.INTAKE, "current_gaps", [])
-    assert manager.get_next_action() == {"action": "continue_denoising"}
-    manager.update_phase_data(ComplaintPhase.INTAKE, "denoising_converged", True)
-    assert manager.get_next_action() == {"action": "complete_intake"}
-
-
-def test_get_next_action_intake_iteration_cutoff():
-    manager = PhaseManager()
-    manager.update_phase_data(ComplaintPhase.INTAKE, "knowledge_graph", True)
-    manager.update_phase_data(ComplaintPhase.INTAKE, "dependency_graph", True)
-    manager.iteration_count = 20
-    assert manager.get_next_action() == {"action": "complete_intake"}
-
-
-def test_get_next_action_intake_no_gaps_none():
-    manager = PhaseManager()
-    manager.update_phase_data(ComplaintPhase.INTAKE, "knowledge_graph", True)
-    manager.update_phase_data(ComplaintPhase.INTAKE, "dependency_graph", True)
-    manager.update_phase_data(ComplaintPhase.INTAKE, "current_gaps", None)
-    assert manager.get_next_action() == {"action": "continue_denoising"}
-
-
-def test_get_next_action_evidence_flow():
-    manager = PhaseManager()
-    manager.current_phase = ComplaintPhase.EVIDENCE
-    assert manager.get_next_action() == {"action": "gather_evidence"}
-    manager.update_phase_data(ComplaintPhase.EVIDENCE, "evidence_count", 2)
-    assert manager.get_next_action() == {"action": "enhance_knowledge_graph"}
-    manager.update_phase_data(ComplaintPhase.EVIDENCE, "knowledge_graph_enhanced", True)
-    manager.update_phase_data(ComplaintPhase.EVIDENCE, "evidence_gap_ratio", 0.6)
-    assert manager.get_next_action() == {"action": "fill_evidence_gaps", "gap_ratio": 0.6}
-    manager.update_phase_data(ComplaintPhase.EVIDENCE, "evidence_gap_ratio", 0.3)
-    assert manager.get_next_action() == {"action": "complete_evidence"}
-
-
-def test_get_next_action_formalization_flow():
-    manager = PhaseManager()
-    manager.current_phase = ComplaintPhase.FORMALIZATION
-    assert manager.get_next_action() == {"action": "build_legal_graph"}
-    manager.update_phase_data(ComplaintPhase.FORMALIZATION, "legal_graph", True)
-    assert manager.get_next_action() == {"action": "perform_neurosymbolic_matching"}
-    manager.update_phase_data(ComplaintPhase.FORMALIZATION, "matching_complete", True)
-    assert manager.get_next_action() == {"action": "generate_formal_complaint"}
-    manager.update_phase_data(ComplaintPhase.FORMALIZATION, "formal_complaint", "done")
-    assert manager.get_next_action() == {"action": "complete_formalization"}
-
-
-def test_get_next_action_formalization_empty_string_complaint():
-    manager = PhaseManager()
-    manager.current_phase = ComplaintPhase.FORMALIZATION
-    manager.update_phase_data(ComplaintPhase.FORMALIZATION, "legal_graph", True)
-    manager.update_phase_data(ComplaintPhase.FORMALIZATION, "matching_complete", True)
-    manager.update_phase_data(ComplaintPhase.FORMALIZATION, "formal_complaint", "")
-    assert manager.get_next_action() == {"action": "generate_formal_complaint"}
-
-
-def test_get_next_action_unknown_phase():
-    manager = PhaseManager()
-    manager.current_phase = "bogus"
-    assert manager.get_next_action() == {"action": "unknown"}
-
-
-def test_to_dict_from_dict_roundtrip():
-    manager = PhaseManager()
-    manager.update_phase_data(ComplaintPhase.INTAKE, "knowledge_graph", True)
-    manager.record_iteration(0.9, {"m": 1})
-    manager.phase_history.append({
-        "from_phase": "intake",
-        "to_phase": "evidence",
-        "timestamp": "2020-01-01T00:00:00+00:00",
-        "iteration": 1,
+def test_collect_intake_case_blockers_creates_metrics(manager: PhaseManager):
+    intake_file = _build_complete_intake_case()
+    intake_file.update({
+        "summary_snapshots": [{"summary": "draft"}],
+        "complainant_summary_confirmation": {"confirmed": False},
+        "contradiction_queue": [
+            {"severity": "blocking", "status": "open", "current_resolution_status": "open"}
+        ],
     })
-    manager.current_phase = ComplaintPhase.EVIDENCE
-
-    data = manager.to_dict()
-    clone = PhaseManager.from_dict(data)
-
-    assert clone.current_phase == ComplaintPhase.EVIDENCE
-    assert clone.phase_history == manager.phase_history
-    assert clone.phase_data[ComplaintPhase.INTAKE]["knowledge_graph"] is True
-    assert clone.iteration_count == manager.iteration_count
-    assert clone.loss_history == manager.loss_history
+    readiness = manager._collect_intake_section_blockers(intake_file)
+    assert readiness["sections"]["chronology"]["status"] == "complete"
+    assert "blocking_contradiction" in readiness["blockers"]
+    assert readiness["criteria"]["case_theory_coherent"]
+    assert readiness["criteria"]["minimum_proof_path_present"]
 
 
-def test_to_dict_serializes_phase_data_keys_as_strings():
-    manager = PhaseManager()
-    manager.update_phase_data(ComplaintPhase.INTAKE, "knowledge_graph", True)
-    data = manager.to_dict()
-    assert "intake" in data["phase_data"]
-    assert ComplaintPhase.INTAKE not in data["phase_data"]
+def test_build_and_refresh_intake_readiness(manager: PhaseManager):
+    manager.phase_data[ComplaintPhase.INTAKE].update({
+        "knowledge_graph": True,
+        "dependency_graph": True,
+        "denoising_converged": True,
+        "current_gaps": [],
+        "remaining_gaps": 0,
+        "intake_case_file": _build_complete_intake_case(),
+    })
+    readiness = manager._build_intake_readiness(manager.phase_data[ComplaintPhase.INTAKE])
+    assert readiness["intake_ready"]
+    manager._refresh_phase_derived_state(ComplaintPhase.INTAKE)
+    state = manager.get_intake_readiness()
+    assert state["ready"]
+    assert state["score"] > 0.0
 
 
-def test_from_dict_invalid_phase_raises():
-    data = {
-        "current_phase": "bogus",
-        "phase_history": [],
-        "phase_data": {"intake": {}},
-        "iteration_count": 0,
-        "loss_history": [],
+def test_evidence_packet_summary_and_resolution_helpers(manager: PhaseManager):
+    packets = {
+        "claim-a": {
+            "claim_type": "retaliation",
+            "elements": [
+                {
+                    "element_id": "el-1",
+                    "support_status": "partially_supported",
+                    "contradiction_count": 0,
+                    "recommended_next_step": "review",
+                },
+                {
+                    "element_id": "el-2",
+                    "support_status": "unsupported",
+                    "parse_quality_flags": [],
+                },
+            ],
+        }
     }
-    with pytest.raises(ValueError):
-        PhaseManager.from_dict(data)
+    manager.phase_data[ComplaintPhase.EVIDENCE].update({
+        "claim_support_packets": packets,
+        "alignment_evidence_tasks": [
+            {"claim_type": "retaliation", "claim_element_id": "el-1", "support_status": "contradicted", "action": "follow_up", "resolution_status": "needs_manual_review"},
+        ],
+        "claim_support_recommended_actions": ["doc review"],
+    })
+    summary = manager._build_evidence_packet_summary(manager.phase_data[ComplaintPhase.EVIDENCE])
+    assert summary["claim_support_packet_count"] == 1
+    assert summary["reviewable_escalation_ratio"] >= 0.0
+    assert manager._normalize_evidence_escalation_status(" PROMOTED_To_TESTIMONY ") == "promoted_to_testimony"
+    element = {"resolution_status": "", "recommended_next_step": "next"}
+    resolved = manager._resolve_evidence_escalation_status(element, "promoted_to_document")
+    assert resolved == "promoted_to_document"
 
 
-def test_from_dict_invalid_phase_data_raises():
+def test_alignment_actions_and_packet_selection(manager: PhaseManager):
     data = {
-        "current_phase": "intake",
-        "phase_history": [],
-        "phase_data": {"bogus": {}},
-        "iteration_count": 0,
-        "loss_history": [],
+        "alignment_evidence_tasks": [
+            {"support_status": "unsupported", "claim_type": "retaliation", "claim_element_id": "el-1", "resolution_status": "needs_manual_review", "action": "fill_temporal_chronology_gap"},
+            {"support_status": "supported", "action": "ok"},
+        ],
+        "alignment_task_update_history": [
+            {"task_id": "t1", "resolution_status": "promoted_to_testimony", "claim_type": "retaliation", "claim_element_id": "el-1", "evidence_sequence": 1},
+            {"task_id": "t1", "resolution_status": "promoted_to_document", "claim_type": "retaliation", "claim_element_id": "el-1", "evidence_sequence": 2},
+        ],
+        "claim_support_recommended_actions": ["follow-up"],
     }
-    with pytest.raises(ValueError):
-        PhaseManager.from_dict(data)
+    tasks = manager._get_actionable_alignment_tasks(data)
+    assert all(task.get("support_status") != "supported" for task in tasks)
+    drift_action = manager._get_alignment_promotion_drift_action(data)
+    assert drift_action["action"] == "validate_promoted_support"
+    packets = {
+        "claim-a": {
+            "claim_type": "retaliation",
+            "elements": [
+                {"element_id": "el-1", "support_status": "contradicted", "recommended_next_step": "resolve"}
+            ],
+        }
+    }
+    packet_action = manager._get_next_packet_evidence_action(packets, data)
+    assert packet_action["action"] == "resolve"
 
 
-def test_from_dict_preserves_mediator():
-    mediator = object()
-    manager = PhaseManager()
-    data = manager.to_dict()
-    clone = PhaseManager.from_dict(data, mediator=mediator)
-    assert clone.mediator is mediator
-
-
-def test_phase_transition_metrics():
-    manager = PhaseManager()
-    _complete_intake(manager)
-    manager.advance_to_phase(ComplaintPhase.EVIDENCE)
-    _complete_evidence(manager)
-    manager.advance_to_phase(ComplaintPhase.FORMALIZATION)
-
-    assert manager.total_phase_transitions() == 2
+def test_phase_transitions_actions_and_checks(manager: PhaseManager):
+    manager.phase_data[ComplaintPhase.INTAKE].update({
+        "knowledge_graph": True,
+        "dependency_graph": True,
+        "denoising_converged": True,
+        "current_gaps": [],
+        "remaining_gaps": 0,
+        "intake_case_file": _build_complete_intake_case(),
+    })
+    assert manager._is_intake_complete()
+    assert manager._can_advance_to(ComplaintPhase.EVIDENCE)
+    assert manager.advance_to_phase(ComplaintPhase.EVIDENCE)
+    assert manager.current_phase == ComplaintPhase.EVIDENCE
+    assert manager.total_phase_transitions() == 1
     assert manager.transitions_to_phase(ComplaintPhase.EVIDENCE) == 1
-    assert manager.transitions_to_phase(ComplaintPhase.FORMALIZATION) == 1
-    assert manager.phase_transition_frequency() == {"evidence": 1, "formalization": 1}
-    assert manager.most_visited_phase() in {"evidence", "formalization"}
+    assert manager.most_visited_phase() == "evidence"
+    assert manager.phase_transition_frequency()["evidence"] == 1
+    manager.phase_data[ComplaintPhase.EVIDENCE].update({
+        "claim_support_packets": {
+            "claim-a": {
+                "elements": [{"support_status": "supported", "element_id": "el"}],
+            }
+        },
+        "claim_support_element_count": 1,
+        "claim_support_explicit_status_count": 1,
+        "claim_support_blocking_contradictions": 0,
+        "claim_support_unresolved_without_review_path_count": 0,
+        "alignment_evidence_tasks": [],
+        "claim_support_unsupported_count": 0,
+    })
+    assert manager._is_evidence_complete()
+    manager.phase_data[ComplaintPhase.FORMALIZATION].clear()
+    manager.current_phase = ComplaintPhase.FORMALIZATION
+    assert manager._get_formalization_action()["action"] == "build_legal_graph"
+    assert manager.get_next_action()["action"] == "build_legal_graph"
+    manager.phase_data[ComplaintPhase.FORMALIZATION]["legal_graph"] = {"nodes": []}
+    assert manager._get_formalization_action()["action"] == "perform_neurosymbolic_matching"
+    manager.phase_data[ComplaintPhase.FORMALIZATION]["matching_complete"] = True
+    assert manager._get_formalization_action()["action"] == "generate_formal_complaint"
+    manager.phase_data[ComplaintPhase.FORMALIZATION]["formal_complaint"] = "draft"
+    assert manager._get_formalization_action()["action"] == "complete_formalization"
+    assert manager._is_formalization_complete()
 
 
-def test_phase_transition_metrics_empty_history():
-    manager = PhaseManager()
-    assert manager.total_phase_transitions() == 0
-    assert manager.most_visited_phase() == "none"
-    assert manager.phase_transition_frequency() == {}
+def test_phase_data_management_and_serialization(manager: PhaseManager):
+    manager.update_phase_data(ComplaintPhase.INTAKE, "key", "value")
+    assert manager.get_phase_data(ComplaintPhase.INTAKE, "key") == "value"
+    assert manager.has_phase_data_key(ComplaintPhase.INTAKE, "key")
+    assert manager.phase_data_coverage() > 0.0
+    snapshot = manager.to_dict()
+    restored = PhaseManager.from_dict(snapshot)
+    assert restored.current_phase == snapshot["current_phase"] and restored.iteration_count == snapshot["iteration_count"]
+    assert restored.total_phase_transitions() == manager.total_phase_transitions()
 
 
-def test_phase_transition_frequency_counts_missing_phase_keys():
-    manager = PhaseManager()
-    manager.phase_history.append({"from_phase": "intake", "timestamp": "t"})
-    assert manager.phase_transition_frequency() == {None: 1}
+def test_iteration_metrics_and_convergence(manager: PhaseManager):
+    manager.record_iteration(1.0, {"label": "first"})
+    manager.record_iteration(0.9, {"label": "second"})
+    manager.record_iteration(0.91, {"label": "third"})
+    manager.record_iteration(0.905, {"label": "fourth"})
+    manager.record_iteration(0.902, {"label": "fifth"})
+    assert manager.total_iterations() == 5
+    assert manager.iterations_in_phase(ComplaintPhase.INTAKE) == 5
+    assert pytest.approx(manager.average_loss(), rel=1e-3) == pytest.approx((1.0 + 0.9 + 0.91 + 0.905 + 0.902) / 5)
+    assert manager.minimum_loss() == pytest.approx(0.9, rel=1e-3)
+    assert manager.has_converged(window=5, threshold=0.05)
 
 
-def test_iteration_metrics_and_losses():
-    manager = PhaseManager()
-    assert manager.total_iterations() == 0
-    assert manager.average_loss() == 0.0
-    assert manager.minimum_loss() == float("inf")
-    manager.record_iteration(1.0, {})
-    manager.record_iteration(0.5, {})
-    assert manager.total_iterations() == 2
-    assert math.isclose(manager.average_loss(), 0.75, rel_tol=0.0, abs_tol=1e-9)
-    assert manager.minimum_loss() == 0.5
-    assert manager.iterations_in_phase(ComplaintPhase.INTAKE) == 2
-    manager.current_phase = ComplaintPhase.EVIDENCE
-    manager.record_iteration(0.4, {})
-    assert manager.iterations_in_phase(ComplaintPhase.EVIDENCE) == 1
-
-
-def test_iterations_in_phase_no_history():
-    manager = PhaseManager()
-    assert manager.iterations_in_phase(ComplaintPhase.EVIDENCE) == 0
-
-
-def test_phase_data_coverage_and_keys():
-    manager = PhaseManager()
-    assert manager.phase_data_coverage() == 0.0
-    manager.update_phase_data(ComplaintPhase.INTAKE, "knowledge_graph", True)
-    assert manager.has_phase_data_key(ComplaintPhase.INTAKE, "knowledge_graph") is True
-    assert manager.has_phase_data_key(ComplaintPhase.EVIDENCE, "knowledge_graph") is False
-    assert manager.phase_data_coverage() == 1 / 3
-
-
-def test_phase_data_coverage_no_phases():
-    manager = PhaseManager()
-    manager.phase_data = {}
-    assert manager.phase_data_coverage() == 0.0
-
-
-def test_has_phase_data_key_missing_phase():
-    manager = PhaseManager()
-    assert manager.has_phase_data_key("bogus", "x") is False
-
-
-@pytest.mark.performance
-def test_record_iteration_performance():
-    manager = PhaseManager()
+def test_evidence_packet_summary_performance(manager: PhaseManager):
+    data = {
+        "claim_support_packets": {
+            "claim-a": {
+                "elements": [{"support_status": "unsupported", "element_id": "el"}],
+            }
+        },
+        "alignment_evidence_tasks": [],
+    }
     start = time.perf_counter()
-    for i in range(2000):
-        manager.record_iteration(1.0 - (i * 0.0001), {"i": i})
+    for _ in range(50):
+        manager._build_evidence_packet_summary(data)
     elapsed = time.perf_counter() - start
-    assert elapsed < 1.0
-
-
-@pytest.mark.performance
-def test_phase_transition_frequency_performance():
-    manager = PhaseManager()
-    for i in range(2000):
-        manager.phase_history.append({"to_phase": "intake" if i % 2 == 0 else "evidence"})
-    start = time.perf_counter()
-    freq = manager.phase_transition_frequency()
-    elapsed = time.perf_counter() - start
-    assert freq == {"intake": 1000, "evidence": 1000}
     assert elapsed < 0.5

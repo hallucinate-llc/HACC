@@ -28,6 +28,103 @@ from hacc_adversarial_runner import (
 
 
 class HACCAdversarialRunnerTests(unittest.TestCase):
+    @staticmethod
+    def _build_fake_llm_router_runtime_bundle(*, provider: str, model: str):
+        import hacc_adversarial_runner as runner_module
+
+        original_load_runtime = runner_module._load_runtime
+        runtime_bundle = original_load_runtime(False, None, None, provider, model)
+
+        class FakeHarness:
+            def __init__(
+                self,
+                *,
+                llm_backend_complainant,
+                llm_backend_critic,
+                mediator_factory,
+                max_parallel,
+                session_state_dir,
+            ):
+                self._complainant_backend = llm_backend_complainant
+                self._critic_backend = llm_backend_critic
+                self._mediator_factory = mediator_factory
+                self._session_state_dir = Path(session_state_dir)
+                self._max_parallel = max_parallel
+
+            def run_batch(self, *, num_sessions, personalities, max_turns_per_session, **kwargs):
+                mediator = self._mediator_factory(
+                    evidence_db_path=self._session_state_dir / "evidence.duckdb",
+                    legal_authority_db_path=self._session_state_dir / "legal_authorities.duckdb",
+                    claim_support_db_path=self._session_state_dir / "claim_support.duckdb",
+                )
+                intake_state = mediator.start_three_phase_process(
+                    "The housing authority denied my request after I complained about the policy."
+                )
+                questions = list(intake_state.get("initial_questions") or [])
+
+                turns_remaining = max(1, int(max_turns_per_session or 1))
+                while questions and turns_remaining > 0:
+                    question = dict(questions.pop(0))
+                    answer = self._complainant_backend(question.get("question") or "Provide more detail.")
+                    result = mediator.process_denoising_answer(question.get("question"), answer)
+                    if result.get("converged"):
+                        break
+                    questions = list(result.get("next_questions") or [])
+                    turns_remaining -= 1
+
+                self._critic_backend(
+                    "Evaluate this mediation session and return SCORES: question_quality, information_extraction, empathy, efficiency, coverage."
+                )
+
+                return [
+                    SimpleNamespace(
+                        success=True,
+                        session_id="session-1",
+                        initial_complaint_text="Grounded complaint text",
+                        seed_complaint={
+                            "type": "grounded_hacc_seed",
+                            "summary": "Grounded complaint based on HACC evidence.",
+                            "key_facts": {},
+                            "hacc_evidence": [],
+                        },
+                        critic_score=SimpleNamespace(overall_score=0.8),
+                    )
+                ]
+
+            def get_statistics(self):
+                return {"total_sessions": 1, "max_parallel": self._max_parallel}
+
+            def save_results(self, path):
+                Path(path).write_text(json.dumps({"results": [{"session_id": "session-1"}]}), encoding="utf-8")
+
+            def save_anchor_section_report(self, path, format="csv"):
+                Path(path).write_text("anchor_section,covered\n", encoding="utf-8")
+
+        class FakeReport:
+            def to_dict(self):
+                return {
+                    "average_score": 0.8,
+                    "score_trend": "stable",
+                    "recommended_hacc_preset": "core_hacc_policies",
+                    "priority_improvements": [],
+                    "recommendations": [],
+                    "intake_priority_performance": {},
+                    "coverage_remediation": {},
+                    "best_session_id": "session-1",
+                }
+
+        class FakeOptimizer:
+            def analyze(self, results):
+                return FakeReport()
+
+            @staticmethod
+            def _recommended_target_files_for_report(report):
+                return []
+
+        runtime_bundle["AdversarialHarness"] = FakeHarness
+        runtime_bundle["Optimizer"] = FakeOptimizer
+        return runtime_bundle
+
     def test_runner_path_imports_file_based_hacc_loader(self) -> None:
         complaint_generator_root = REPO_ROOT / "complaint-generator"
         if str(complaint_generator_root) in sys.path:
@@ -705,6 +802,8 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
         if str(complaint_generator_root) not in sys.path:
             sys.path.insert(0, str(complaint_generator_root))
 
+        runtime_bundle = self._build_fake_llm_router_runtime_bundle(provider="copilot_cli", model="gpt-5-mini")
+
         import backends.llm_router_backend as llm_router_backend_module
         import mediator as mediator_module
 
@@ -774,19 +873,22 @@ SUGGESTIONS:
                     "iteration_count": self.questions_asked,
                 }
 
+        runtime_bundle["mediator_factory"] = lambda **kwargs: FakeMediator(**kwargs)
+
         with tempfile.TemporaryDirectory() as tmpdir:
             with mock.patch.object(llm_router_backend_module, "generate_text", side_effect=fake_generate_text):
                 with mock.patch.object(mediator_module, "Mediator", FakeMediator):
-                    summary = run_hacc_adversarial_batch(
-                        output_dir=tmpdir,
-                        num_sessions=1,
-                        max_turns=2,
-                        max_parallel=1,
-                        hacc_preset="core_hacc_policies",
-                        demo=False,
-                        provider="copilot_cli",
-                        model="gpt-5-mini",
-                    )
+                    with mock.patch("hacc_adversarial_runner._load_runtime", return_value=runtime_bundle):
+                        summary = run_hacc_adversarial_batch(
+                            output_dir=tmpdir,
+                            num_sessions=1,
+                            max_turns=2,
+                            max_parallel=1,
+                            hacc_preset="core_hacc_policies",
+                            demo=False,
+                            provider="copilot_cli",
+                            model="gpt-5-mini",
+                        )
 
         self.assertEqual(summary["runtime"]["mode"], "llm_router")
         self.assertEqual(summary["runtime"]["complainant_backend_class"], "LLMRouterBackend")
@@ -799,6 +901,8 @@ SUGGESTIONS:
         complaint_generator_root = REPO_ROOT / "complaint-generator"
         if str(complaint_generator_root) not in sys.path:
             sys.path.insert(0, str(complaint_generator_root))
+
+        runtime_bundle = self._build_fake_llm_router_runtime_bundle(provider="copilot_cli", model="gpt-5-mini")
 
         import backends.llm_router_backend as llm_router_backend_module
         import mediator as mediator_module
@@ -856,19 +960,22 @@ SUGGESTIONS:
                     "iteration_count": 1,
                 }
 
+        runtime_bundle["mediator_factory"] = lambda **kwargs: FakeMediator(**kwargs)
+
         with tempfile.TemporaryDirectory() as tmpdir:
             with mock.patch.object(llm_router_backend_module, "generate_text", side_effect=fake_generate_text):
                 with mock.patch.object(mediator_module, "Mediator", FakeMediator):
-                    run_hacc_adversarial_batch(
-                        output_dir=tmpdir,
-                        num_sessions=1,
-                        max_turns=1,
-                        max_parallel=1,
-                        hacc_preset="core_hacc_policies",
-                        demo=False,
-                        provider="copilot_cli",
-                        model="gpt-5-mini",
-                    )
+                    with mock.patch("hacc_adversarial_runner._load_runtime", return_value=runtime_bundle):
+                        run_hacc_adversarial_batch(
+                            output_dir=tmpdir,
+                            num_sessions=1,
+                            max_turns=1,
+                            max_parallel=1,
+                            hacc_preset="core_hacc_policies",
+                            demo=False,
+                            provider="copilot_cli",
+                            model="gpt-5-mini",
+                        )
 
         self.assertTrue(init_kwargs)
         mediator_kwargs = init_kwargs[0]
