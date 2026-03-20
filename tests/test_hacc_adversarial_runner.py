@@ -1,5 +1,6 @@
 import inspect
 import json
+import os
 import tempfile
 import unittest
 from io import StringIO
@@ -23,12 +24,27 @@ from hacc_adversarial_runner import (
     _extract_file_replacements,
     _resolve_autopatch_timeout,
     _run_agentic_autopatch,
+    create_parser,
     main,
     run_hacc_adversarial_batch,
 )
 
 
 class HACCAdversarialRunnerTests(unittest.TestCase):
+    @staticmethod
+    def _fake_patch_control_module() -> SimpleNamespace:
+        class FakePatchManager:
+            def __init__(self, patches_dir=None):
+                self.patches_dir = patches_dir
+
+            def load_patch(self, path):
+                raise NotImplementedError()
+
+            def apply_patch(self, patch, repo_root):
+                raise NotImplementedError()
+
+        return SimpleNamespace(PatchManager=FakePatchManager)
+
     @staticmethod
     def _available_router_diagnostics() -> dict:
         return {
@@ -208,7 +224,7 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             "runtime": {"mode": "demo", "provider": "demo", "model": "demo"},
         }
 
-    def test_runner_path_imports_package_based_hacc_loader(self) -> None:
+    def test_runner_path_imports_file_based_hacc_loader(self) -> None:
         complaint_generator_root = REPO_ROOT / "complaint-generator"
         if str(complaint_generator_root) in sys.path:
             sys.path.remove(str(complaint_generator_root))
@@ -706,6 +722,12 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
                 "requested": True,
                 "success": False,
                 "apply_success": False,
+                "apply_mode": {
+                    "source": "env",
+                    "requested": None,
+                    "env_default": True,
+                    "effective": True,
+                },
                 "patch_path": None,
                 "requested_profile": "question_flow",
                 "requested_target_files": [
@@ -737,6 +759,7 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
 
         rendered = stdout.getvalue()
         self.assertEqual(exit_code, 0)
+        self.assertIn("Autopatch apply mode: source=env requested=None env_default=True effective=True", rendered)
         self.assertIn("Using recommended autopatch targets: True", rendered)
         self.assertIn("Autopatch preflight ready: False", rendered)
         self.assertIn("Autopatch preflight error: No module named 'cachetools'", rendered)
@@ -758,6 +781,14 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             "/home/barberb/HACC/complaint-generator/mediator/mediator.py",
             rendered,
         )
+
+    def test_parser_supports_explicit_no_apply_autopatch(self) -> None:
+        parser = create_parser()
+
+        parsed = parser.parse_args(["--emit-autopatch", "--no-apply-autopatch"])
+
+        self.assertTrue(parsed.emit_autopatch)
+        self.assertIs(parsed.apply_autopatch, False)
 
     def test_runner_can_use_recommended_autopatch_targets(self) -> None:
         complaint_generator_root = REPO_ROOT / "complaint-generator"
@@ -1374,9 +1405,9 @@ SUGGESTIONS:
         runtime_bundle["runtime"] = {"mode": "llm_router", "provider": "copilot_cli", "model": "gpt-5-mini"}
 
         import adversarial_harness.optimizer as optimizer_module
-        import ipfs_datasets_py.optimizers.agentic.patch_control as patch_control_module
 
         fake_patch = Path("/tmp/fake-auto-apply.patch")
+        fake_patch_control_module = self._fake_patch_control_module()
         with tempfile.TemporaryDirectory() as tmpdir:
             fake_patch.write_text("diff --git a/file b/file\n", encoding="utf-8")
             patch_instance = SimpleNamespace(validated=False)
@@ -1390,41 +1421,49 @@ SUGGESTIONS:
                     metadata={"kind": "auto-apply-test"},
                 ),
             ):
-                with mock.patch(
-                    "hacc_adversarial_runner._validate_generated_patch",
-                    return_value={
-                        "passed": True,
-                        "level": "standard",
-                        "target_files": ["complaint_phases/phase_manager.py"],
-                        "file_results": [],
-                        "errors": [],
-                        "warnings": [],
-                    },
+                with mock.patch.dict(
+                    sys.modules,
+                    {"ipfs_datasets_py.optimizers.agentic.patch_control": fake_patch_control_module},
                 ):
-                    with mock.patch.object(
-                        patch_control_module.PatchManager,
-                        "load_patch",
-                        return_value=patch_instance,
-                    ) as load_mock:
-                        with mock.patch.object(
-                            patch_control_module.PatchManager,
-                            "apply_patch",
-                            return_value=True,
-                        ) as apply_mock:
-                            with mock.patch(
-                                "hacc_adversarial_runner._router_diagnostics",
-                                return_value=self._available_router_diagnostics(),
-                            ):
-                                with mock.patch("hacc_adversarial_runner._load_runtime", return_value=runtime_bundle):
-                                    summary = run_hacc_adversarial_batch(
-                                        output_dir=tmpdir,
-                                        num_sessions=1,
-                                        max_turns=1,
-                                        max_parallel=1,
-                                        hacc_preset="core_hacc_policies",
-                                        demo=True,
-                                        emit_autopatch=True,
-                                    )
+                    with mock.patch(
+                        "hacc_adversarial_runner._agentic_autopatch_preflight",
+                        return_value={"ready": True, "error": None},
+                    ):
+                        with mock.patch(
+                            "hacc_adversarial_runner._validate_generated_patch",
+                            return_value={
+                                "passed": True,
+                                "level": "standard",
+                                "target_files": ["complaint_phases/phase_manager.py"],
+                                "file_results": [],
+                                "errors": [],
+                                "warnings": [],
+                            },
+                        ):
+                            with mock.patch.object(
+                                fake_patch_control_module.PatchManager,
+                                "load_patch",
+                                return_value=patch_instance,
+                            ) as load_mock:
+                                with mock.patch.object(
+                                    fake_patch_control_module.PatchManager,
+                                    "apply_patch",
+                                    return_value=True,
+                                ) as apply_mock:
+                                    with mock.patch(
+                                        "hacc_adversarial_runner._router_diagnostics",
+                                        return_value=self._available_router_diagnostics(),
+                                    ):
+                                        with mock.patch("hacc_adversarial_runner._load_runtime", return_value=runtime_bundle):
+                                            summary = run_hacc_adversarial_batch(
+                                                output_dir=tmpdir,
+                                                num_sessions=1,
+                                                max_turns=1,
+                                                max_parallel=1,
+                                                hacc_preset="core_hacc_policies",
+                                                demo=True,
+                                                emit_autopatch=True,
+                                            )
 
             self.assertTrue(summary["autopatch"]["applied"])
             self.assertTrue(summary["autopatch"]["apply_success"])
@@ -1440,9 +1479,9 @@ SUGGESTIONS:
         runtime_bundle["runtime"] = {"mode": "llm_router", "provider": "copilot_cli", "model": "gpt-5-mini"}
 
         import adversarial_harness.optimizer as optimizer_module
-        import ipfs_datasets_py.optimizers.agentic.patch_control as patch_control_module
 
         fake_patch = Path("/tmp/fake-apply.patch")
+        fake_patch_control_module = self._fake_patch_control_module()
         with tempfile.TemporaryDirectory() as tmpdir:
             fake_patch.write_text("diff --git a/file b/file\n", encoding="utf-8")
             patch_instance = SimpleNamespace(validated=False)
@@ -1456,42 +1495,50 @@ SUGGESTIONS:
                     metadata={"kind": "apply-test"},
                 ),
             ):
-                with mock.patch.object(
-                    patch_control_module.PatchManager,
-                    "load_patch",
-                    return_value=patch_instance,
-                ) as load_mock:
-                    with mock.patch.object(
-                        patch_control_module.PatchManager,
-                        "apply_patch",
-                        return_value=True,
-                    ) as apply_mock:
-                        with mock.patch(
-                            "hacc_adversarial_runner._validate_generated_patch",
-                            return_value={
-                                "passed": True,
-                                "level": "standard",
-                                "target_files": ["mediator/mediator.py"],
-                                "file_results": [],
-                                "errors": [],
-                                "warnings": [],
-                            },
-                        ):
-                            with mock.patch(
-                                "hacc_adversarial_runner._router_diagnostics",
-                                return_value=self._available_router_diagnostics(),
-                            ):
-                                with mock.patch("hacc_adversarial_runner._load_runtime", return_value=runtime_bundle):
-                                    summary = run_hacc_adversarial_batch(
-                                        output_dir=tmpdir,
-                                        num_sessions=1,
-                                        max_turns=1,
-                                        max_parallel=1,
-                                        hacc_preset="core_hacc_policies",
-                                        demo=True,
-                                        apply_autopatch=True,
-                                        autopatch_target_files=["mediator/mediator.py"],
-                                    )
+                with mock.patch.dict(
+                    sys.modules,
+                    {"ipfs_datasets_py.optimizers.agentic.patch_control": fake_patch_control_module},
+                ):
+                    with mock.patch(
+                        "hacc_adversarial_runner._agentic_autopatch_preflight",
+                        return_value={"ready": True, "error": None},
+                    ):
+                        with mock.patch.object(
+                            fake_patch_control_module.PatchManager,
+                            "load_patch",
+                            return_value=patch_instance,
+                        ) as load_mock:
+                            with mock.patch.object(
+                                fake_patch_control_module.PatchManager,
+                                "apply_patch",
+                                return_value=True,
+                            ) as apply_mock:
+                                with mock.patch(
+                                    "hacc_adversarial_runner._validate_generated_patch",
+                                    return_value={
+                                        "passed": True,
+                                        "level": "standard",
+                                        "target_files": ["mediator/mediator.py"],
+                                        "file_results": [],
+                                        "errors": [],
+                                        "warnings": [],
+                                    },
+                                ):
+                                    with mock.patch(
+                                        "hacc_adversarial_runner._router_diagnostics",
+                                        return_value=self._available_router_diagnostics(),
+                                    ):
+                                        with mock.patch("hacc_adversarial_runner._load_runtime", return_value=runtime_bundle):
+                                            summary = run_hacc_adversarial_batch(
+                                                output_dir=tmpdir,
+                                                num_sessions=1,
+                                                max_turns=1,
+                                                max_parallel=1,
+                                                hacc_preset="core_hacc_policies",
+                                                demo=True,
+                                                apply_autopatch=True,
+                                                autopatch_target_files=["mediator/mediator.py"],
+                                            )
 
             self.assertTrue(summary["autopatch"]["requested"])
             self.assertTrue(summary["autopatch"]["success"])
@@ -1502,6 +1549,75 @@ SUGGESTIONS:
             self.assertEqual(apply_mock.call_args.args[0], patch_instance)
             self.assertEqual(apply_mock.call_args.args[1], complaint_generator_root)
 
+    def test_runner_can_skip_autopatch_apply_explicitly(self) -> None:
+        complaint_generator_root = REPO_ROOT / "complaint-generator"
+        if str(complaint_generator_root) not in sys.path:
+            sys.path.insert(0, str(complaint_generator_root))
+
+        runtime_bundle = self._build_fake_demo_runtime_bundle()
+        runtime_bundle["runtime"] = {"mode": "llm_router", "provider": "copilot_cli", "model": "gpt-5-mini"}
+
+        import adversarial_harness.optimizer as optimizer_module
+
+        fake_patch = Path("/tmp/fake-no-apply.patch")
+        with tempfile.TemporaryDirectory() as tmpdir:
+            fake_patch.write_text("diff --git a/file b/file\n", encoding="utf-8")
+            with mock.patch.object(
+                optimizer_module.Optimizer,
+                "run_agentic_autopatch",
+                return_value=SimpleNamespace(
+                    success=True,
+                    patch_path=fake_patch,
+                    patch_cid="bafy-no-apply",
+                    metadata={"kind": "no-apply-test"},
+                ),
+            ):
+                with mock.patch(
+                    "hacc_adversarial_runner._validate_generated_patch",
+                    return_value={
+                        "passed": True,
+                        "level": "standard",
+                        "target_files": ["mediator/mediator.py"],
+                        "file_results": [],
+                        "errors": [],
+                        "warnings": [],
+                    },
+                ):
+                    with mock.patch(
+                        "hacc_adversarial_runner._router_diagnostics",
+                        return_value=self._available_router_diagnostics(),
+                    ):
+                        with mock.patch(
+                            "hacc_adversarial_runner._agentic_autopatch_preflight",
+                            return_value={"ready": True, "error": None},
+                        ):
+                            with mock.patch("hacc_adversarial_runner._load_runtime", return_value=runtime_bundle):
+                                with mock.patch.dict(os.environ, {"HACC_AUTOPATCH_AUTO_APPLY": "1"}, clear=False):
+                                    summary = run_hacc_adversarial_batch(
+                                        output_dir=tmpdir,
+                                        num_sessions=1,
+                                        max_turns=1,
+                                        max_parallel=1,
+                                        hacc_preset="core_hacc_policies",
+                                        emit_autopatch=True,
+                                        apply_autopatch=False,
+                                        autopatch_target_files=["mediator/mediator.py"],
+                                    )
+
+            self.assertTrue(summary["autopatch"]["requested"])
+            self.assertTrue(summary["autopatch"]["success"])
+            self.assertFalse(summary["autopatch"]["applied"])
+            self.assertFalse(summary["autopatch"]["apply_success"])
+            self.assertEqual(
+                summary["autopatch"]["apply_mode"],
+                {
+                    "source": "cli",
+                    "requested": False,
+                    "env_default": True,
+                    "effective": False,
+                },
+            )
+
     def test_runner_blocks_autopatch_apply_when_patch_validation_fails(self) -> None:
         complaint_generator_root = REPO_ROOT / "complaint-generator"
         if str(complaint_generator_root) not in sys.path:
@@ -1511,9 +1627,9 @@ SUGGESTIONS:
         runtime_bundle["runtime"] = {"mode": "llm_router", "provider": "copilot_cli", "model": "gpt-5-mini"}
 
         import adversarial_harness.optimizer as optimizer_module
-        import ipfs_datasets_py.optimizers.agentic.patch_control as patch_control_module
 
         fake_patch = Path("/tmp/fake-invalid.patch")
+        fake_patch_control_module = self._fake_patch_control_module()
         with tempfile.TemporaryDirectory() as tmpdir:
             fake_patch.write_text("diff --git a/file b/file\n", encoding="utf-8")
             with mock.patch.object(
@@ -1544,26 +1660,34 @@ SUGGESTIONS:
                         "warnings": [],
                     },
                 ):
-                    with mock.patch.object(
-                        patch_control_module.PatchManager,
-                        "apply_patch",
-                        return_value=True,
-                    ) as apply_mock:
+                    with mock.patch.dict(
+                        sys.modules,
+                        {"ipfs_datasets_py.optimizers.agentic.patch_control": fake_patch_control_module},
+                    ):
                         with mock.patch(
-                            "hacc_adversarial_runner._router_diagnostics",
-                            return_value=self._available_router_diagnostics(),
+                            "hacc_adversarial_runner._agentic_autopatch_preflight",
+                            return_value={"ready": True, "error": None},
                         ):
-                            with mock.patch("hacc_adversarial_runner._load_runtime", return_value=runtime_bundle):
-                                summary = run_hacc_adversarial_batch(
-                                    output_dir=tmpdir,
-                                    num_sessions=1,
-                                    max_turns=1,
-                                    max_parallel=1,
-                                    hacc_preset="core_hacc_policies",
-                                    demo=True,
-                                    apply_autopatch=True,
-                                    autopatch_target_files=["complaint_phases/phase_manager.py"],
-                                )
+                            with mock.patch.object(
+                                fake_patch_control_module.PatchManager,
+                                "apply_patch",
+                                return_value=True,
+                            ) as apply_mock:
+                                with mock.patch(
+                                    "hacc_adversarial_runner._router_diagnostics",
+                                    return_value=self._available_router_diagnostics(),
+                                ):
+                                    with mock.patch("hacc_adversarial_runner._load_runtime", return_value=runtime_bundle):
+                                        summary = run_hacc_adversarial_batch(
+                                            output_dir=tmpdir,
+                                            num_sessions=1,
+                                            max_turns=1,
+                                            max_parallel=1,
+                                            hacc_preset="core_hacc_policies",
+                                            demo=True,
+                                            apply_autopatch=True,
+                                            autopatch_target_files=["complaint_phases/phase_manager.py"],
+                                        )
 
             self.assertTrue(summary["autopatch"]["requested"])
             self.assertTrue(summary["autopatch"]["success"])
@@ -1582,10 +1706,10 @@ SUGGESTIONS:
         runtime_bundle["runtime"] = {"mode": "llm_router", "provider": "copilot_cli", "model": "gpt-5-mini"}
 
         import adversarial_harness.optimizer as optimizer_module
-        import ipfs_datasets_py.optimizers.agentic.patch_control as patch_control_module
 
         bad_patch = Path("/tmp/fake-bad.patch")
         repaired_patch = Path("/tmp/fake-bad-repair1.patch")
+        fake_patch_control_module = self._fake_patch_control_module()
         with tempfile.TemporaryDirectory() as tmpdir:
             bad_patch.write_text("diff --git a/file b/file\n", encoding="utf-8")
             patch_instance = SimpleNamespace(validated=False)
@@ -1627,30 +1751,38 @@ SUGGESTIONS:
                             "raw_response_preview": "--- a/file\n+++ b/file\n",
                         },
                     ) as repair_mock:
-                        with mock.patch.object(
-                            patch_control_module.PatchManager,
-                            "load_patch",
-                            return_value=patch_instance,
-                        ) as load_mock:
-                            with mock.patch.object(
-                                patch_control_module.PatchManager,
-                                "apply_patch",
-                                return_value=True,
-                            ) as apply_mock:
-                                with mock.patch(
-                                    "hacc_adversarial_runner._router_diagnostics",
-                                    return_value=self._available_router_diagnostics(),
-                                ):
-                                    with mock.patch("hacc_adversarial_runner._load_runtime", return_value=runtime_bundle):
-                                        summary = run_hacc_adversarial_batch(
-                                            output_dir=tmpdir,
-                                            num_sessions=1,
-                                            max_turns=1,
-                                            max_parallel=1,
-                                            hacc_preset="core_hacc_policies",
-                                            demo=True,
-                                            emit_autopatch=True,
-                                        )
+                        with mock.patch.dict(
+                            sys.modules,
+                            {"ipfs_datasets_py.optimizers.agentic.patch_control": fake_patch_control_module},
+                        ):
+                            with mock.patch(
+                                "hacc_adversarial_runner._agentic_autopatch_preflight",
+                                return_value={"ready": True, "error": None},
+                            ):
+                                with mock.patch.object(
+                                    fake_patch_control_module.PatchManager,
+                                    "load_patch",
+                                    return_value=patch_instance,
+                                ) as load_mock:
+                                    with mock.patch.object(
+                                        fake_patch_control_module.PatchManager,
+                                        "apply_patch",
+                                        return_value=True,
+                                    ) as apply_mock:
+                                        with mock.patch(
+                                            "hacc_adversarial_runner._router_diagnostics",
+                                            return_value=self._available_router_diagnostics(),
+                                        ):
+                                            with mock.patch("hacc_adversarial_runner._load_runtime", return_value=runtime_bundle):
+                                                summary = run_hacc_adversarial_batch(
+                                                    output_dir=tmpdir,
+                                                    num_sessions=1,
+                                                    max_turns=1,
+                                                    max_parallel=1,
+                                                    hacc_preset="core_hacc_policies",
+                                                    demo=True,
+                                                    emit_autopatch=True,
+                                                )
 
             self.assertTrue(summary["autopatch"]["success"])
             self.assertEqual(summary["autopatch"]["patch_path"], str(repaired_patch))

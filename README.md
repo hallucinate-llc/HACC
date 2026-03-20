@@ -467,6 +467,7 @@ python3 hacc_adversarial_runner.py [options]
 | `--model` | `None` | Optional model name |
 | `--emit-autopatch` | off | Generate an optimizer patch artifact |
 | `--apply-autopatch` | off | Generate and apply the optimizer patch |
+| `--no-apply-autopatch` | off | Generate an optimizer patch artifact without applying it, even if env auto-apply is enabled |
 | `--autopatch-method` | `test_driven` | Agentic optimization method |
 | `--autopatch-profile` | `question_flow` | Requested autopatch target profile |
 | `--autopatch-target-file` | *(repeatable)* | Explicit complaint-generator target file override |
@@ -489,6 +490,7 @@ python3 hacc_adversarial_runner.py \
 python3 hacc_adversarial_runner.py \
   --demo \
   --emit-autopatch \
+  --no-apply-autopatch \
   --autopatch-method test_driven
 
 # Emit an autopatch artifact using intake-driven recommended targets
@@ -513,6 +515,12 @@ python3 -m pip install -r complaint-generator/requirements.txt
 ```
 
 The current live autopatch path specifically requires `cachetools` in addition to the broader complaint-generator stack.
+
+Auto-apply note:
+
+- If you pass `--apply-autopatch`, the runner applies the generated patch explicitly.
+- If you pass `--no-apply-autopatch`, the runner will not apply the patch even when `HACC_AUTOPATCH_AUTO_APPLY=1`.
+- If you pass only `--emit-autopatch`, the runner falls back to `HACC_AUTOPATCH_AUTO_APPLY` and now prints the effective apply mode in its CLI summary.
 
 ---
 

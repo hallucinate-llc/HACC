@@ -376,6 +376,30 @@ def _autopatch_auto_apply_enabled() -> bool:
     return raw not in {"0", "false", "no", "off"}
 
 
+def _resolve_autopatch_apply_mode(apply_patch: Optional[bool]) -> Dict[str, Any]:
+    env_default = _autopatch_auto_apply_enabled()
+    if apply_patch is True:
+        return {
+            "requested": True,
+            "env_default": env_default,
+            "effective": True,
+            "source": "cli",
+        }
+    if apply_patch is False:
+        return {
+            "requested": False,
+            "env_default": env_default,
+            "effective": False,
+            "source": "cli",
+        }
+    return {
+        "requested": None,
+        "env_default": env_default,
+        "effective": env_default,
+        "source": "env",
+    }
+
+
 def _autopatch_repair_attempts() -> int:
     raw = os.environ.get("HACC_AUTOPATCH_REPAIR_ATTEMPTS", "1").strip()
     try:
@@ -804,7 +828,7 @@ def _run_agentic_autopatch(
     method: str,
     profile: str,
     constraints: Dict[str, Any],
-    apply_patch: bool,
+    apply_patch: Optional[bool],
     provider_name: Optional[str],
     model_name: Optional[str],
 ) -> Dict[str, Any]:
@@ -824,6 +848,7 @@ def _run_agentic_autopatch(
         "recommended_profile": recommended_profile,
         "recommended_target_files": [str(path) for path in recommended_target_files],
         "used_recommended_targets": bool(used_recommended_targets),
+        "apply_mode": _resolve_autopatch_apply_mode(apply_patch),
         "applied": False,
         "apply_success": False,
         "success": False,
@@ -965,7 +990,8 @@ def _run_agentic_autopatch(
                 "warnings": ["Skipped patch validation for demo autopatch run"],
             }
 
-        should_apply_patch = bool(summary["patch_path"]) and not demo_mode and (apply_patch or _autopatch_auto_apply_enabled())
+        apply_mode = dict(summary.get("apply_mode") or {})
+        should_apply_patch = bool(summary["patch_path"]) and not demo_mode and bool(apply_mode.get("effective"))
         if should_apply_patch and summary["patch_path"]:
             from ipfs_datasets_py.optimizers.agentic.patch_control import PatchManager
 
@@ -1238,7 +1264,7 @@ def run_hacc_adversarial_batch(
     provider: str = "copilot_cli",
     model: Optional[str] = None,
     emit_autopatch: bool = False,
-    apply_autopatch: bool = False,
+    apply_autopatch: Optional[bool] = None,
     autopatch_method: str = "test_driven",
     autopatch_profile: str = "question_flow",
     autopatch_target_files: Optional[List[str]] = None,
@@ -1312,6 +1338,7 @@ def run_hacc_adversarial_batch(
         "recommended_profile": recommended_autopatch_profile,
         "recommended_target_files": [str(path) for path in recommended_autopatch_targets],
         "used_recommended_targets": bool(use_recommended_autopatch_targets and recommended_autopatch_targets),
+        "apply_mode": _resolve_autopatch_apply_mode(apply_autopatch),
         "constraints": _sanitize_for_json(autopatch_constraints),
         "preflight": None,
         "applied": False,
@@ -1323,7 +1350,7 @@ def run_hacc_adversarial_batch(
         "summary_json": None,
         "error": None,
     }
-    if emit_autopatch or apply_autopatch:
+    if emit_autopatch or apply_autopatch is not None:
         autopatch_preflight = _agentic_autopatch_preflight(optimizer)
         autopatch_summary["preflight"] = _sanitize_for_json(autopatch_preflight)
         if autopatch_preflight.get("ready"):
@@ -1445,8 +1472,22 @@ def create_parser() -> argparse.ArgumentParser:
     parser.add_argument("--backend-id", default=None, help="Optional backend id from the selected config.")
     parser.add_argument("--provider", default="copilot_cli", help="LLM router provider when not using --demo or --config.")
     parser.add_argument("--model", default=None, help="Optional model name when using the direct llm_router path.")
+    parser.set_defaults(apply_autopatch=None)
     parser.add_argument("--emit-autopatch", action="store_true", help="Generate an optimizer patch artifact targeting the mediator codebase.")
-    parser.add_argument("--apply-autopatch", action="store_true", help="Generate and apply the optimizer patch to complaint-generator.")
+    parser.add_argument(
+        "--apply-autopatch",
+        action="store_const",
+        const=True,
+        dest="apply_autopatch",
+        help="Generate and apply the optimizer patch to complaint-generator.",
+    )
+    parser.add_argument(
+        "--no-apply-autopatch",
+        action="store_const",
+        const=False,
+        dest="apply_autopatch",
+        help="Generate the optimizer patch artifact without applying it, even if HACC_AUTOPATCH_AUTO_APPLY is enabled.",
+    )
     parser.add_argument("--autopatch-method", default="test_driven", help="Agentic optimization method for autopatch generation.")
     parser.add_argument(
         "--autopatch-profile",
@@ -1517,6 +1558,14 @@ def main(argv: Optional[List[str]] = None) -> int:
         if summary["autopatch"]["requested"]:
             print(f"Autopatch success: {summary['autopatch']['success']}")
             print(f"Autopatch applied: {summary['autopatch']['apply_success']}")
+            apply_mode = dict(summary["autopatch"].get("apply_mode") or {})
+            print(
+                "Autopatch apply mode: "
+                f"source={apply_mode.get('source', 'env')} "
+                f"requested={apply_mode.get('requested')} "
+                f"env_default={apply_mode.get('env_default', False)} "
+                f"effective={apply_mode.get('effective', False)}"
+            )
             print(f"Using recommended autopatch targets: {summary['autopatch'].get('used_recommended_targets', False)}")
             preflight = dict(summary["autopatch"].get("preflight") or {})
             if preflight:
