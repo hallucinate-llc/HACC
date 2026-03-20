@@ -676,6 +676,39 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             self.assertIn("workflow_phase_plan", workflow_payload)
             self.assertIn("phase_tasks", workflow_payload)
 
+    def test_demo_runner_can_emit_workflow_phase_autopatches(self) -> None:
+        runtime_bundle = self._build_fake_demo_runtime_bundle()
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            with mock.patch(
+                "hacc_adversarial_runner._router_diagnostics",
+                return_value=self._available_router_diagnostics(),
+            ):
+                with mock.patch("hacc_adversarial_runner._load_runtime", return_value=runtime_bundle):
+                    with mock.patch(
+                        "hacc_adversarial_runner._agentic_autopatch_preflight",
+                        return_value={"ready": True, "error": None},
+                    ):
+                        summary = run_hacc_adversarial_batch(
+                            output_dir=tmpdir,
+                            num_sessions=1,
+                            max_turns=2,
+                            max_parallel=1,
+                            hacc_preset="core_hacc_policies",
+                            hacc_search_mode="hybrid",
+                            demo=True,
+                            emit_workflow_phase_autopatches=True,
+                        )
+
+            workflow_phase = summary["workflow_phase_autopatch"]
+            self.assertTrue(workflow_phase["requested"])
+            self.assertGreaterEqual(workflow_phase["count"], 1)
+            self.assertTrue(Path(summary["artifacts"]["workflow_phase_autopatch_results_json"]).is_file())
+            first = workflow_phase["results"][0]
+            self.assertIn("phase", first)
+            self.assertIn("summary", first)
+            self.assertIn("success", first["summary"])
+
     def test_main_prints_effective_search_mode_and_fallback(self) -> None:
         fake_summary = {
             "artifacts": {

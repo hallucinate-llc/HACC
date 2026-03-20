@@ -117,6 +117,66 @@ def _recommended_autopatch_profile(target_files: List[Path]) -> str:
     return "custom"
 
 
+def _build_workflow_optimization_payload(
+    optimizer: Any,
+    *,
+    results: List[Any],
+    report: Any,
+) -> Dict[str, Any]:
+    if hasattr(optimizer, "build_workflow_optimization_bundle"):
+        try:
+            bundle, _ = optimizer.build_workflow_optimization_bundle(
+                results,
+                report=report,
+                components=optimizer._fallback_agentic_optimizer_components(),
+            )
+            if hasattr(bundle, "to_dict"):
+                return _sanitize_for_json(bundle.to_dict())
+            if isinstance(bundle, dict):
+                return _sanitize_for_json(bundle)
+        except Exception:
+            pass
+
+    phase_tasks_payload: List[Dict[str, Any]] = []
+    if hasattr(optimizer, "build_phase_patch_tasks"):
+        try:
+            tasks, _ = optimizer.build_phase_patch_tasks(
+                results,
+                report=report,
+                components=getattr(optimizer, "_fallback_agentic_optimizer_components", lambda: {})(),
+            )
+            for task in list(tasks or []):
+                phase_tasks_payload.append(
+                    {
+                        "task_id": str(getattr(task, "task_id", "")),
+                        "description": str(getattr(task, "description", "")),
+                        "target_files": [str(path) for path in list(getattr(task, "target_files", []) or [])],
+                        "method": str(getattr(task, "method", "")),
+                        "priority": int(getattr(task, "priority", 0) or 0),
+                        "constraints": _sanitize_for_json(getattr(task, "constraints", {}) or {}),
+                        "metadata": _sanitize_for_json(getattr(task, "metadata", {}) or {}),
+                    }
+                )
+        except Exception:
+            phase_tasks_payload = []
+
+    report_payload = _sanitize_for_json(report.to_dict()) if hasattr(report, "to_dict") else _sanitize_for_json(report)
+    return {
+        "timestamp": _timestamp(),
+        "num_sessions_analyzed": int(report_payload.get("num_sessions_analyzed") or 0),
+        "average_score": float(report_payload.get("average_score") or 0.0),
+        "workflow_phase_plan": dict(report_payload.get("workflow_phase_plan") or {}),
+        "global_objectives": list(report_payload.get("priority_improvements") or []),
+        "phase_tasks": phase_tasks_payload,
+        "shared_context": {
+            "recommendations": list(report_payload.get("recommendations") or []),
+            "priority_improvements": list(report_payload.get("priority_improvements") or []),
+            "coverage_remediation": dict(report_payload.get("coverage_remediation") or {}),
+            "intake_priority_performance": dict(report_payload.get("intake_priority_performance") or {}),
+        },
+    }
+
+
 def _autopatch_constraints_for_profile(profile: str, target_files: List[Path]) -> Dict[str, Any]:
     if profile == "denoiser_select_candidates_only":
         target_map: Dict[str, List[str]] = {}
@@ -1065,6 +1125,73 @@ def _run_agentic_autopatch(
     return summary
 
 
+def _run_workflow_phase_autopatches(
+    *,
+    optimizer: Any,
+    results: List[Any],
+    report: Any,
+    workflow_payload: Dict[str, Any],
+    output_root: Path,
+    method: str,
+    apply_patch: Optional[bool],
+    provider_name: Optional[str],
+    model_name: Optional[str],
+) -> Dict[str, Any]:
+    phase_dir = output_root / "workflow_phase_autopatch"
+    phase_dir.mkdir(parents=True, exist_ok=True)
+    results_path = phase_dir / "workflow_phase_autopatch_results.json"
+
+    phase_results: List[Dict[str, Any]] = []
+    for task in list(workflow_payload.get("phase_tasks") or []):
+        metadata = dict(task.get("metadata") or {})
+        phase_name = str(metadata.get("workflow_phase") or "workflow_phase")
+        target_files = [Path(path) for path in list(task.get("target_files") or [])]
+        phase_output_root = phase_dir / phase_name
+        summary = _run_agentic_autopatch(
+            optimizer=optimizer,
+            results=results,
+            report=report,
+            output_root=phase_output_root,
+            requested_profile=phase_name,
+            requested_target_files=target_files,
+            recommended_profile=phase_name,
+            recommended_target_files=target_files,
+            used_recommended_targets=False,
+            target_files=target_files,
+            method=str(task.get("method") or method).strip().lower() if str(task.get("method") or "") else method,
+            profile=phase_name,
+            constraints=dict(task.get("constraints") or {}),
+            apply_patch=apply_patch,
+            provider_name=provider_name,
+            model_name=model_name,
+        )
+        phase_results.append(
+            {
+                "phase": phase_name,
+                "task_id": str(task.get("task_id") or ""),
+                "description": str(task.get("description") or ""),
+                "target_files": [str(path) for path in target_files],
+                "summary": _sanitize_for_json(summary),
+                "patch_path": summary.get("patch_path"),
+                "patch_cid": summary.get("patch_cid"),
+                "success": bool(summary.get("success")),
+                "apply_success": bool(summary.get("apply_success")),
+                "summary_json": summary.get("summary_json"),
+            }
+        )
+
+    results_path.write_text(
+        json.dumps(_sanitize_for_json(phase_results), ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    return {
+        "requested": True,
+        "count": len(phase_results),
+        "results_json": str(results_path),
+        "results": phase_results,
+    }
+
+
 def _load_runtime(demo: bool, config_path: Optional[str], backend_id: Optional[str], provider: Optional[str], model: Optional[str]) -> Dict[str, Any]:
     _ensure_complaint_generator_on_path()
 
@@ -1328,6 +1455,8 @@ def run_hacc_adversarial_batch(
     autopatch_profile: str = "question_flow",
     autopatch_target_files: Optional[List[str]] = None,
     use_recommended_autopatch_targets: bool = False,
+    emit_workflow_phase_autopatches: bool = False,
+    apply_workflow_phase_autopatches: Optional[bool] = None,
 ) -> Dict[str, Any]:
     output_root = Path(output_dir).resolve()
     output_root.mkdir(parents=True, exist_ok=True)
@@ -1385,26 +1514,11 @@ def run_hacc_adversarial_batch(
     harness.save_anchor_section_report(str(anchor_report_path), format="csv")
 
     optimization_payload = _sanitize_for_json(report.to_dict())
-    workflow_payload: Dict[str, Any] = {
-        "global_objectives": [],
-        "workflow_phase_plan": optimization_payload.get("workflow_phase_plan"),
-        "phase_tasks": [],
-    }
-    build_workflow_bundle = getattr(optimizer, "build_workflow_optimization_bundle", None)
-    fallback_components = getattr(optimizer, "_fallback_agentic_optimizer_components", None)
-    if callable(build_workflow_bundle) and callable(fallback_components):
-        workflow_bundle, _ = build_workflow_bundle(
-            results,
-            report=report,
-            components=fallback_components(),
-        )
-        workflow_payload = _sanitize_for_json(workflow_bundle.to_dict())
-    elif callable(build_workflow_bundle):
-        workflow_bundle, _ = build_workflow_bundle(
-            results,
-            report=report,
-        )
-        workflow_payload = _sanitize_for_json(workflow_bundle.to_dict())
+    workflow_payload = _build_workflow_optimization_payload(
+        optimizer,
+        results=results,
+        report=report,
+    )
     optimization_report_path.write_text(
         json.dumps(optimization_payload, ensure_ascii=False, indent=2),
         encoding="utf-8",
@@ -1413,6 +1527,12 @@ def run_hacc_adversarial_batch(
         json.dumps(workflow_payload, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
+    workflow_phase_autopatch_summary: Dict[str, Any] = {
+        "requested": False,
+        "count": 0,
+        "results_json": None,
+        "results": [],
+    }
 
     autopatch_summary = {
         "requested": False,
@@ -1465,6 +1585,31 @@ def run_hacc_adversarial_batch(
         else:
             autopatch_summary["requested"] = True
             autopatch_summary["error"] = f"Autopatch dependency preflight failed: {autopatch_preflight.get('error')}"
+
+    if emit_workflow_phase_autopatches or apply_workflow_phase_autopatches is not None:
+        workflow_phase_preflight = _agentic_autopatch_preflight(optimizer)
+        if workflow_phase_preflight.get("ready"):
+            workflow_phase_autopatch_summary = _run_workflow_phase_autopatches(
+                optimizer=optimizer,
+                results=results,
+                report=report,
+                workflow_payload=workflow_payload,
+                output_root=output_root,
+                method=autopatch_method,
+                apply_patch=apply_workflow_phase_autopatches,
+                provider_name=runtime_bundle["runtime"].get("provider"),
+                model_name=runtime_bundle["runtime"].get("model"),
+            )
+            workflow_phase_autopatch_summary["preflight"] = _sanitize_for_json(workflow_phase_preflight)
+        else:
+            workflow_phase_autopatch_summary = {
+                "requested": True,
+                "count": 0,
+                "results_json": None,
+                "results": [],
+                "preflight": _sanitize_for_json(workflow_phase_preflight),
+                "error": f"Workflow phase autopatch dependency preflight failed: {workflow_phase_preflight.get('error')}",
+            }
 
     best_bundle = {
         "seed_complaint": _sanitize_for_json(best_result.seed_complaint if best_result else None),
@@ -1521,6 +1666,7 @@ def run_hacc_adversarial_batch(
             "workflow_phase_plan": workflow_payload.get("workflow_phase_plan"),
             "phase_tasks": workflow_payload.get("phase_tasks"),
         },
+        "workflow_phase_autopatch": _sanitize_for_json(workflow_phase_autopatch_summary),
         "autopatch": _sanitize_for_json(autopatch_summary),
         "best_complaint": {
             "session_id": getattr(best_result, "session_id", None),
@@ -1536,6 +1682,7 @@ def run_hacc_adversarial_batch(
             "results_json": str(run_results_path),
             "optimization_report_json": str(optimization_report_path),
             "workflow_optimization_bundle_json": str(workflow_optimization_path),
+            "workflow_phase_autopatch_results_json": workflow_phase_autopatch_summary.get("results_json"),
             "anchor_section_csv": str(anchor_report_path),
             "best_complaint_bundle_json": str(best_complaint_path),
             "session_state_dir": str(session_dir),
@@ -1622,6 +1769,26 @@ def create_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Use the optimizer's intake-driven recommended autopatch target files/profile instead of the requested profile defaults.",
     )
+    parser.set_defaults(apply_workflow_phase_autopatches=None)
+    parser.add_argument(
+        "--emit-workflow-phase-autopatches",
+        action="store_true",
+        help="Generate phase-by-phase optimizer patch artifacts for intake, graph analysis, and document generation.",
+    )
+    parser.add_argument(
+        "--apply-workflow-phase-autopatches",
+        action="store_const",
+        const=True,
+        dest="apply_workflow_phase_autopatches",
+        help="Generate and apply phase-by-phase optimizer patches for the workflow stages.",
+    )
+    parser.add_argument(
+        "--no-apply-workflow-phase-autopatches",
+        action="store_const",
+        const=False,
+        dest="apply_workflow_phase_autopatches",
+        help="Generate workflow phase patch artifacts without applying them.",
+    )
     parser.add_argument("--json", action="store_true", help="Print the full summary JSON.")
     return parser
 
@@ -1649,6 +1816,8 @@ def main(argv: Optional[List[str]] = None) -> int:
         autopatch_profile=args.autopatch_profile,
         autopatch_target_files=args.autopatch_target_files,
         use_recommended_autopatch_targets=args.use_recommended_autopatch_targets,
+        emit_workflow_phase_autopatches=args.emit_workflow_phase_autopatches,
+        apply_workflow_phase_autopatches=args.apply_workflow_phase_autopatches,
     )
     if args.json:
         print(json.dumps(summary, ensure_ascii=False, indent=2))
@@ -1709,11 +1878,19 @@ def main(argv: Optional[List[str]] = None) -> int:
                 print(f"Selected autopatch targets: {', '.join(str(path) for path in selected_targets)}")
             if summary["autopatch"]["patch_path"]:
                 print(f"Autopatch patch: {summary['autopatch']['patch_path']}")
+        workflow_phase_autopatch = dict(summary.get("workflow_phase_autopatch") or {})
+        if workflow_phase_autopatch.get("requested"):
+            print(f"Workflow phase autopatch count: {workflow_phase_autopatch.get('count', 0)}")
+            if workflow_phase_autopatch.get("error"):
+                print(f"Workflow phase autopatch error: {workflow_phase_autopatch['error']}")
         print(f"Results JSON: {summary['artifacts']['results_json']}")
         print(f"Optimization report: {summary['artifacts']['optimization_report_json']}")
         workflow_bundle_path = (summary.get("artifacts") or {}).get("workflow_optimization_bundle_json")
         if workflow_bundle_path:
             print(f"Workflow optimization bundle: {workflow_bundle_path}")
+        workflow_phase_results_path = (summary.get("artifacts") or {}).get("workflow_phase_autopatch_results_json")
+        if workflow_phase_results_path:
+            print(f"Workflow phase autopatch results: {workflow_phase_results_path}")
         print(f"Best complaint bundle: {summary['artifacts']['best_complaint_bundle_json']}")
     return 0
 
