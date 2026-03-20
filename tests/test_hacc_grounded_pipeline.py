@@ -223,6 +223,46 @@ class HACCGroundedPipelineTests(unittest.TestCase):
             upload_candidates_payload = json.loads((output_root / "upload_candidates.json").read_text(encoding="utf-8"))
             self.assertEqual(upload_candidates_payload[0]["relative_path"], "README.md")
 
+    def test_run_grounded_pipeline_defaults_to_codex_provider_and_model(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            fake_grounding = {
+                "status": "success",
+                "query": "reasonable accommodation hearing rights",
+                "claim_type": "housing_discrimination",
+                "anchor_sections": [],
+                "anchor_passages": [],
+                "upload_candidates": [],
+                "synthetic_prompts": {},
+            }
+            fake_upload = {
+                "status": "success",
+                "upload_count": 0,
+                "uploads": [],
+            }
+            fake_adversarial_summary = {
+                "statistics": {"successful_sessions": 1, "total_sessions": 1},
+                "best_complaint": {"score": 0.91},
+                "artifacts": {"output_dir": str(Path(tmpdir) / "adversarial")},
+            }
+
+            with mock.patch.object(pipeline, "HACCResearchEngine") as engine_cls:
+                engine = engine_cls.return_value
+                engine.build_grounding_bundle.return_value = fake_grounding
+                engine.simulate_evidence_upload.return_value = fake_upload
+                with mock.patch.object(
+                    pipeline,
+                    "run_hacc_adversarial_batch",
+                    return_value=fake_adversarial_summary,
+                ) as batch_mock:
+                    pipeline.run_hacc_grounded_pipeline(
+                        output_dir=tmpdir,
+                        hacc_preset="core_hacc_policies",
+                        demo=False,
+                    )
+
+        self.assertEqual(batch_mock.call_args.kwargs["provider"], pipeline.HACC_DEFAULT_PROVIDER)
+        self.assertEqual(batch_mock.call_args.kwargs["model"], pipeline.HACC_DEFAULT_MODEL)
+
     def test_run_grounded_pipeline_can_trigger_complaint_synthesis(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             fake_grounding = {

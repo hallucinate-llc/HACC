@@ -14,6 +14,8 @@ from typing import Any, Dict, Optional
 
 REPO_ROOT = Path(__file__).resolve().parent
 COMPLAINT_GENERATOR_ROOT = REPO_ROOT / "complaint-generator"
+HACC_DEFAULT_PROVIDER = "codex"
+HACC_DEFAULT_MODEL = "gpt-5.3-codex"
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 if str(COMPLAINT_GENERATOR_ROOT) not in sys.path:
@@ -145,7 +147,7 @@ def run_hacc_grounded_pipeline(
     hacc_search_mode: str = "package",
     config_path: Optional[str] = None,
     backend_id: Optional[str] = None,
-    provider: str = "copilot_cli",
+    provider: Optional[str] = None,
     model: Optional[str] = None,
     synthesize_complaint: bool = False,
     filing_forum: str = "court",
@@ -153,6 +155,8 @@ def run_hacc_grounded_pipeline(
 ) -> Dict[str, Any]:
     output_root = Path(output_dir).resolve()
     output_root.mkdir(parents=True, exist_ok=True)
+    resolved_provider = str(provider or "").strip() or HACC_DEFAULT_PROVIDER
+    resolved_model = str(model or "").strip() or HACC_DEFAULT_MODEL
 
     default_request = _default_grounding_request(hacc_preset)
     grounding_query = str(query or default_request["query"])
@@ -187,8 +191,8 @@ def run_hacc_grounded_pipeline(
         demo=demo,
         config_path=config_path,
         backend_id=backend_id,
-        provider=provider,
-        model=model,
+        provider=resolved_provider,
+        model=resolved_model,
     )
     grounding_bundle = _json_safe(grounding_bundle)
     upload_report = _json_safe(upload_report)
@@ -299,8 +303,12 @@ def create_parser() -> argparse.ArgumentParser:
     parser.add_argument("--demo", action="store_true", help="Use deterministic demo backends for the adversarial run.")
     parser.add_argument("--config", default=None, help="Optional complaint-generator config JSON.")
     parser.add_argument("--backend-id", default=None, help="Optional backend id from the selected config.")
-    parser.add_argument("--provider", default="copilot_cli")
-    parser.add_argument("--model", default=None)
+    parser.add_argument(
+        "--provider",
+        default=HACC_DEFAULT_PROVIDER,
+        help=f"LLM router provider override for the adversarial batch. Defaults to {HACC_DEFAULT_PROVIDER}.",
+    )
+    parser.add_argument("--model", default=HACC_DEFAULT_MODEL)
     parser.add_argument("--synthesize-complaint", action="store_true", help="Run complaint synthesis after the grounded adversarial batch completes.")
     parser.add_argument("--filing-forum", default="court", choices=("court", "hud", "state_agency"))
     parser.add_argument("--completed-intake-worksheet", default=None, help="Optional completed intake_follow_up_worksheet.json to merge into synthesis.")

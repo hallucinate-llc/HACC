@@ -266,7 +266,7 @@ summary = run_hacc_grounded_pipeline(
 | `max_turns` | `4` | Maximum turns per adversarial session |
 | `max_parallel` | `1` | Maximum parallel sessions |
 | `demo` | `False` | Use deterministic demo backends (no LLM API calls) |
-| `provider` | `"copilot_cli"` | LLM router provider |
+| `provider` | `None` | Optional LLM router provider override; omit to let router/env defaults choose |
 | `model` | `None` | Optional model override |
 | `synthesize_complaint` | `False` | Run complaint synthesis after adversarial batch |
 | `filing_forum` | `"court"` | Filing forum: `"court"`, `"hud"`, or `"state_agency"` |
@@ -302,7 +302,7 @@ summary = run_hacc_adversarial_batch(
 | `hacc_preset` | `"core_hacc_policies"` | Named HACC evidence query preset |
 | `hacc_count` | `None` | Maximum evidence files per session |
 | `personalities` | `None` | Pin specific complainant personalities |
-| `provider` | `"copilot_cli"` | LLM router provider |
+| `provider` | `None` | Optional LLM router provider override; omit to let router/env defaults choose |
 | `model` | `None` | Optional model override |
 | `emit_autopatch` | `False` | Generate an optimizer patch artifact |
 | `apply_autopatch` | `False` | Generate and apply optimizer patch to `complaint-generator` |
@@ -409,7 +409,7 @@ python3 hacc_grounded_pipeline.py [options]
 | `--demo` | off | Use deterministic demo backends |
 | `--config` | `None` | Optional complaint-generator config JSON |
 | `--backend-id` | `None` | Backend id from config |
-| `--provider` | `copilot_cli` | LLM router provider |
+| `--provider` | `None` | Optional LLM router provider override |
 | `--model` | `None` | Optional model override |
 | `--synthesize-complaint` | off | Run complaint synthesis after adversarial batch |
 | `--filing-forum` | `court` | `court`, `hud`, or `state_agency` |
@@ -427,14 +427,15 @@ python3 hacc_grounded_pipeline.py \
   --synthesize-complaint \
   --filing-forum hud
 
-# Live run with Copilot CLI backend
+# Live run pinned to Codex through llm_router
 python3 hacc_grounded_pipeline.py \
   --num-sessions 3 \
   --max-turns 4 \
   --top-k 5 \
   --synthesize-complaint \
   --filing-forum court \
-  --provider copilot_cli
+  --provider codex \
+  --model gpt-5.3-codex
 
 # Custom query with vector search
 python3 hacc_grounded_pipeline.py \
@@ -463,11 +464,11 @@ python3 hacc_adversarial_runner.py [options]
 | `--demo` | off | Use deterministic demo backends |
 | `--config` | `None` | Optional complaint-generator config JSON |
 | `--backend-id` | `None` | Backend id from config |
-| `--provider` | `copilot_cli` | LLM router provider |
+| `--provider` | `None` | Optional LLM router provider override |
 | `--model` | `None` | Optional model name |
-| `--emit-autopatch` | off | Generate an optimizer patch artifact |
+| `--emit-autopatch` | off | Generate an optimizer patch artifact without applying it |
 | `--apply-autopatch` | off | Generate and apply the optimizer patch |
-| `--no-apply-autopatch` | off | Generate an optimizer patch artifact without applying it, even if env auto-apply is enabled |
+| `--no-apply-autopatch` | off | Keep the run artifact-only and never apply the generated patch |
 | `--autopatch-method` | `test_driven` | Agentic optimization method |
 | `--autopatch-profile` | `question_flow` | Requested autopatch target profile |
 | `--autopatch-target-file` | *(repeatable)* | Explicit complaint-generator target file override |
@@ -480,28 +481,38 @@ python3 hacc_adversarial_runner.py [options]
 # Demo run (no API keys)
 python3 hacc_adversarial_runner.py --demo --num-sessions 2 --max-turns 3
 
-# Live run with Copilot CLI
+# Live run pinned to Codex through llm_router
 python3 hacc_adversarial_runner.py \
   --num-sessions 5 \
   --max-turns 4 \
-  --provider copilot_cli
+  --provider codex \
+  --model gpt-5.3-codex
 
-# Emit an autopatch artifact (without applying)
+# Live run pinned to OpenAI through llm_router
 python3 hacc_adversarial_runner.py \
-  --demo \
+  --num-sessions 5 \
+  --max-turns 4 \
+  --provider openai
+
+# Emit an autopatch artifact with the recommended live Codex route (without applying)
+python3 hacc_adversarial_runner.py \
+  --provider codex \
+  --model gpt-5.3-codex \
   --emit-autopatch \
   --no-apply-autopatch \
   --autopatch-method test_driven
 
 # Emit an autopatch artifact using intake-driven recommended targets
 python3 hacc_adversarial_runner.py \
-  --demo \
+  --provider codex \
+  --model gpt-5.3-codex \
   --emit-autopatch \
   --use-recommended-autopatch-targets
 
-# Apply autopatch to complaint-generator codebase
+# Apply autopatch to complaint-generator codebase through Codex
 python3 hacc_adversarial_runner.py \
-  --demo \
+  --provider codex \
+  --model gpt-5.3-codex \
   --apply-autopatch \
   --autopatch-method test_driven
 ```
@@ -516,11 +527,12 @@ python3 -m pip install -r complaint-generator/requirements.txt
 
 The current live autopatch path specifically requires `cachetools` in addition to the broader complaint-generator stack.
 
-Auto-apply note:
+Autopatch apply note:
 
 - If you pass `--apply-autopatch`, the runner applies the generated patch explicitly.
-- If you pass `--no-apply-autopatch`, the runner will not apply the patch even when `HACC_AUTOPATCH_AUTO_APPLY=1`.
-- If you pass only `--emit-autopatch`, the runner falls back to `HACC_AUTOPATCH_AUTO_APPLY` and now prints the effective apply mode in its CLI summary.
+- If you pass `--emit-autopatch` without `--apply-autopatch`, the runner stays artifact-only and will not modify `complaint-generator`.
+- If you pass `--no-apply-autopatch`, the runner stays artifact-only even when other automation or environment defaults would have allowed apply.
+- The CLI summary still prints `env_default` so you can see legacy environment state, but explicit `--apply-autopatch` is now required for live patch application.
 
 ---
 
@@ -674,7 +686,7 @@ The adversarial runner and grounded pipeline support multiple LLM providers via 
 
 | Provider | Flag |
 |----------|------|
-| GitHub Copilot CLI | `--provider copilot_cli` |
+| Codex | `--provider codex --model gpt-5.3-codex` |
 | OpenAI (GPT) | `--provider openai` |
 | Anthropic (Claude) | `--provider anthropic` |
 | Google Gemini | `--provider gemini` |

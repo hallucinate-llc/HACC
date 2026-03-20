@@ -20,6 +20,8 @@ from typing import Any, Dict, List, Optional
 
 REPO_ROOT = Path(__file__).resolve().parent
 COMPLAINT_GENERATOR_ROOT = REPO_ROOT / "complaint-generator"
+HACC_DEFAULT_PROVIDER = "codex"
+HACC_DEFAULT_MODEL = "gpt-5.3-codex"
 
 
 def _ensure_complaint_generator_on_path() -> None:
@@ -238,6 +240,17 @@ def _codex_backup_model() -> str:
     return "gpt-5.1-codex-mini"
 
 
+def _resolve_hacc_runtime_provider_model(
+    provider: Optional[str],
+    model: Optional[str],
+) -> tuple[Optional[str], Optional[str]]:
+    resolved_provider = str(provider or "").strip() or HACC_DEFAULT_PROVIDER
+    resolved_model = str(model or "").strip() or None
+    if not resolved_model and str(resolved_provider).strip().lower() in {"codex", "codex_cli"}:
+        resolved_model = HACC_DEFAULT_MODEL
+    return resolved_provider, resolved_model
+
+
 def _is_likely_throttling_error(exc: Exception) -> bool:
     message = str(exc).lower()
     return any(
@@ -288,14 +301,12 @@ def _build_agentic_llm_router(
         "local": "hf",
         "local_hf": "hf",
     }
-    resolved_provider = provider_mapping.get(normalized)
-    if resolved_provider is None:
-        return None
+    resolved_provider = provider_mapping.get(normalized, normalized or None)
 
     autopatch_timeout = _resolve_autopatch_timeout(profile=profile, target_files=target_files)
 
     class _PinnedRunnerLLMRouter:
-        def __init__(self, provider: str):
+        def __init__(self, provider: Optional[str]):
             self.provider = provider
 
         def generate(
@@ -316,7 +327,7 @@ def _build_agentic_llm_router(
             try:
                 return generate_text(
                     prompt=prompt,
-                    provider=self.provider,
+                    provider=self.provider or None,
                     model_name=model_name,
                     max_new_tokens=max_tokens,
                     temperature=temperature,
@@ -331,7 +342,7 @@ def _build_agentic_llm_router(
                     fallback_model = _codex_backup_model()
                     return generate_text(
                         prompt=prompt,
-                        provider=self.provider,
+                        provider=self.provider or None,
                         model_name=fallback_model,
                         max_new_tokens=max_tokens,
                         temperature=temperature,
@@ -376,7 +387,7 @@ def _autopatch_auto_apply_enabled() -> bool:
     return raw not in {"0", "false", "no", "off"}
 
 
-def _resolve_autopatch_apply_mode(apply_patch: Optional[bool]) -> Dict[str, Any]:
+def _resolve_autopatch_apply_mode(apply_patch: Optional[bool], *, emit_patch: bool = False) -> Dict[str, Any]:
     env_default = _autopatch_auto_apply_enabled()
     if apply_patch is True:
         return {
@@ -391,6 +402,13 @@ def _resolve_autopatch_apply_mode(apply_patch: Optional[bool]) -> Dict[str, Any]
             "env_default": env_default,
             "effective": False,
             "source": "cli",
+        }
+    if emit_patch:
+        return {
+            "requested": None,
+            "env_default": env_default,
+            "effective": False,
+            "source": "safe_default",
         }
     return {
         "requested": None,
@@ -419,6 +437,7 @@ def _autopatch_validation_test_files(target_files: List[Path]) -> List[Path]:
         ],
         "mediator/inquiries.py": [
             COMPLAINT_GENERATOR_ROOT / "tests" / "test_inquiries.py",
+            COMPLAINT_GENERATOR_ROOT / "tests" / "test_inquiries_priority.py",
         ],
         "mediator/mediator.py": [
             COMPLAINT_GENERATOR_ROOT / "tests" / "test_mediator.py",
@@ -848,7 +867,7 @@ def _run_agentic_autopatch(
         "recommended_profile": recommended_profile,
         "recommended_target_files": [str(path) for path in recommended_target_files],
         "used_recommended_targets": bool(used_recommended_targets),
-        "apply_mode": _resolve_autopatch_apply_mode(apply_patch),
+        "apply_mode": _resolve_autopatch_apply_mode(apply_patch, emit_patch=True),
         "applied": False,
         "apply_success": False,
         "success": False,
@@ -1031,7 +1050,7 @@ def _run_agentic_autopatch(
     return summary
 
 
-def _load_runtime(demo: bool, config_path: Optional[str], backend_id: Optional[str], provider: str, model: Optional[str]) -> Dict[str, Any]:
+def _load_runtime(demo: bool, config_path: Optional[str], backend_id: Optional[str], provider: Optional[str], model: Optional[str]) -> Dict[str, Any]:
     _ensure_complaint_generator_on_path()
 
     from adversarial_harness import AdversarialHarness, Optimizer
@@ -1123,10 +1142,14 @@ def _load_runtime(demo: bool, config_path: Optional[str], backend_id: Optional[s
 
     runtime = {
         "mode": "llm_router",
-        "provider": provider,
+        "provider": getattr(complainant_backend, "provider", None) or provider,
         "model": model or getattr(complainant_backend, "model", None),
         "complainant_backend_class": type(complainant_backend).__name__,
         "critic_backend_class": type(critic_backend).__name__,
+        "provider_status": _runtime_provider_status(
+            getattr(complainant_backend, "provider", None) or provider,
+            model or getattr(complainant_backend, "model", None),
+        ),
     }
     return {
         "AdversarialHarness": AdversarialHarness,
@@ -1175,6 +1198,27 @@ def _router_diagnostics() -> Dict[str, Any]:
         }
 
     return diagnostics
+
+
+def _runtime_provider_status(provider: Optional[str], model: Optional[str]) -> Dict[str, Any]:
+    _ensure_complaint_generator_on_path()
+    try:
+        from integrations.ipfs_datasets.llm import llm_router_status
+
+        return _sanitize_for_json(
+            llm_router_status(
+                provider=provider,
+                model_name=model,
+                perform_probe=False,
+            )
+        )
+    except Exception as exc:
+        return {
+            "status": "error",
+            "configured_provider_name": provider or "",
+            "configured_model_name": model or "",
+            "error": str(exc),
+        }
 
 
 def _adversarial_search_summary(
@@ -1261,7 +1305,7 @@ def run_hacc_adversarial_batch(
     demo: bool = False,
     config_path: Optional[str] = None,
     backend_id: Optional[str] = None,
-    provider: str = "copilot_cli",
+    provider: Optional[str] = None,
     model: Optional[str] = None,
     emit_autopatch: bool = False,
     apply_autopatch: Optional[bool] = None,
@@ -1275,7 +1319,9 @@ def run_hacc_adversarial_batch(
     session_dir = output_root / "sessions"
     session_dir.mkdir(parents=True, exist_ok=True)
 
-    runtime_bundle = _load_runtime(demo, config_path, backend_id, provider, model)
+    resolved_provider, resolved_model = _resolve_hacc_runtime_provider_model(provider, model)
+
+    runtime_bundle = _load_runtime(demo, config_path, backend_id, resolved_provider, resolved_model)
     AdversarialHarness = runtime_bundle["AdversarialHarness"]
     Optimizer = runtime_bundle["Optimizer"]
 
@@ -1338,7 +1384,10 @@ def run_hacc_adversarial_batch(
         "recommended_profile": recommended_autopatch_profile,
         "recommended_target_files": [str(path) for path in recommended_autopatch_targets],
         "used_recommended_targets": bool(use_recommended_autopatch_targets and recommended_autopatch_targets),
-        "apply_mode": _resolve_autopatch_apply_mode(apply_autopatch),
+        "apply_mode": _resolve_autopatch_apply_mode(
+            apply_autopatch,
+            emit_patch=bool(emit_autopatch or apply_autopatch is not None),
+        ),
         "constraints": _sanitize_for_json(autopatch_constraints),
         "preflight": None,
         "applied": False,
@@ -1411,6 +1460,8 @@ def run_hacc_adversarial_batch(
             "hacc_count": hacc_count,
             "use_hacc_vector_search": use_hacc_vector_search,
             "hacc_search_mode": hacc_search_mode,
+            "provider": resolved_provider,
+            "model": resolved_model,
         },
         "search_summary": search_summary,
         "statistics": _sanitize_for_json(stats),
@@ -1470,8 +1521,19 @@ def create_parser() -> argparse.ArgumentParser:
     parser.add_argument("--demo", action="store_true", help="Use deterministic demo backends instead of live LLM routing.")
     parser.add_argument("--config", default=None, help="Optional complaint-generator config JSON to source backends from.")
     parser.add_argument("--backend-id", default=None, help="Optional backend id from the selected config.")
-    parser.add_argument("--provider", default="copilot_cli", help="LLM router provider when not using --demo or --config.")
-    parser.add_argument("--model", default=None, help="Optional model name when using the direct llm_router path.")
+    parser.add_argument(
+        "--provider",
+        default=HACC_DEFAULT_PROVIDER,
+        help=(
+            "LLM router provider override when not using --demo or --config. "
+            f"Defaults to {HACC_DEFAULT_PROVIDER} for HACC runs."
+        ),
+    )
+    parser.add_argument(
+        "--model",
+        default=HACC_DEFAULT_MODEL,
+        help=f"Optional model name when using the direct llm_router path. Defaults to {HACC_DEFAULT_MODEL}.",
+    )
     parser.set_defaults(apply_autopatch=None)
     parser.add_argument("--emit-autopatch", action="store_true", help="Generate an optimizer patch artifact targeting the mediator codebase.")
     parser.add_argument(
@@ -1551,6 +1613,18 @@ def main(argv: Optional[List[str]] = None) -> int:
             f"requested={summary['search_summary']['requested_search_mode']} "
             f"effective={summary['search_summary']['effective_search_mode']}"
         )
+        provider_status = dict((summary.get("runtime") or {}).get("provider_status") or {})
+        if provider_status:
+            effective_provider = provider_status.get("effective_provider_name") or (summary.get("runtime") or {}).get("provider") or "router-default"
+            effective_model = provider_status.get("effective_model_name") or (summary.get("runtime") or {}).get("model") or ""
+            print(
+                "LLM provider status: "
+                f"status={provider_status.get('status', 'unknown')} "
+                f"provider={effective_provider}"
+                + (f" model={effective_model}" if effective_model else "")
+            )
+            if provider_status.get("error"):
+                print(f"LLM provider detail: {provider_status['error']}")
         if summary["search_summary"].get("fallback_note"):
             print(f"HACC search fallback: {summary['search_summary']['fallback_note']}")
         print(f"Best complaint seed: {summary['best_complaint']['seed_type']} - {summary['best_complaint']['seed_summary']}")

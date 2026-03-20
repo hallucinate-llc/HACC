@@ -331,5 +331,97 @@
         }
       ]
     }
+  },
+  {
+    "patch_id": "bc8cd7e3841811c9",
+    "agent_id": "adversarial-harness-optimizer",
+    "task_id": "adversarial_autopatch_20260320_054001",
+    "description": "Use the test_driven optimizer to improve the complaint-generator adversarial complainant/mediator loop. Target files: /home/barberb/HACC/complaint-generator/complaint_phases/phase_manager.py, /home/barberb/HACC/complaint-generator/mediator/inquiries.py. Priorities from the latest adversarial batch: The mediator did not obtain key missing facts such as dates, decision-makers, notices, and requested hearing or appeal rights.; The question produced mostly emotional and generalized harm rather than specific, draft-ready factual details.. Preserve current behavior while improving router-backed question quality, information extraction, coverage, and patchability.",
+    "diff_content": "--- a/complaint_phases/phase_manager.py\n+++ b/complaint_phases/phase_manager.py\n@@ -1014,8 +1014,7 @@\n         gaps = data.get('current_gaps', [])\n         gap_threshold = _INTAKE_GAPS_THRESHOLD\n         remaining_gaps = data.get('remaining_gaps', float('inf'))\n-        denoising_iteration_cap_hit = self.iteration_count >= _DENOISING_MAX_ITERATIONS\n-        if ((gaps and len(gaps) > 0) or remaining_gaps > gap_threshold) and not denoising_iteration_cap_hit:\n+        if (gaps and len(gaps) > 0) or remaining_gaps > gap_threshold:\n             return {\n                 'action': 'address_gaps',\n                 'gaps': gaps,\n@@ -1040,14 +1039,14 @@\n                 'intake_blockers': readiness['blockers'],\n             }\n \n-        if not data.get('denoising_converged', False) and not denoising_iteration_cap_hit:\n+        if not data.get('denoising_converged', False) and self.iteration_count < _DENOISING_MAX_ITERATIONS:\n             return {\n                 'action': 'continue_denoising',\n                 'intake_readiness_score': readiness['score'],\n                 'intake_blockers': readiness['blockers'],\n             }\n \n-        if denoising_iteration_cap_hit or (data.get('denoising_converged', False) and remaining_gaps <= gap_threshold):\n+        if data.get('denoising_converged', False) and remaining_gaps <= gap_threshold:\n             return {\n                 'action': 'complete_intake',\n                 'intake_readiness_score': readiness['score'],\n--- a/mediator/inquiries.py\n+++ b/mediator/inquiries.py\n@@ -54,25 +54,25 @@\n \t\treturn self._index\n \n \tdef get_next(self):\n-\t\tinquiries = self._state_inquiries()\n-\t\tif not inquiries:\n-\t\t\treturn None\n-\t\tunanswered = [\n-\t\t\t(item, index)\n-\t\t\tfor index, item in enumerate(inquiries)\n-\t\t\tif not item.get(\"answer\")\n-\t\t]\n-\t\tif not unanswered:\n-\t\t\treturn None\n-\t\tunanswered.sort(\n-\t\t\tkey=lambda pair: (\n-\t\t\t\t0 if pair[0].get(\"support_gap_targeted\") else 1,\n-\t\t\t\t0 if pair[0].get(\"dependency_gap_targeted\") else 1,\n-\t\t\t\tself._priority_rank(pair[0].get(\"priority\")),\n-\t\t\t\tpair[1],\n-\t\t\t)\n-\t\t)\n-\t\treturn unanswered[0][0]\n+\t    inquiries = self._state_inquiries()\n+\t    if not inquiries:\n+\t        return None\n+\t    unanswered = [\n+\t        (item, index)\n+\t        for index, item in enumerate(inquiries)\n+\t        if not item.get(\"answer\")\n+\t    ]\n+\t    if not unanswered:\n+\t        return None\n+\t        unanswered.sort(\n+\t            key=lambda pair: (\n+\t                0 if pair[0].get(\"dependency_gap_targeted\") else 1,\n+\t                0 if pair[0].get(\"support_gap_targeted\") else 1,\n+\t                self._priority_rank(pair[0].get(\"priority\")),\n+\t                pair[1],\n+\t            )\n+\t        )\n+\t    return unanswered[0][0]\n \n \tdef answer(self, text):\n \t\tcurrent = self.get_next()\n@@ -136,7 +136,7 @@\n \t            existing_priority = self._priority_rank(existing.get(\"priority\"))\n \t            incoming_priority = self._priority_rank(item.get(\"priority\"))\n \t            if incoming_priority < existing_priority:\n-\t                existing[\"priority\"] = item.get(\"priority\")\n+\t                existing[\"priority\"] = str(item.get(\"priority\") or existing.get(\"priority\") or \"Medium\").strip().title()\n \t            existing[\"support_gap_targeted\"] = bool(\n \t                existing.get(\"support_gap_targeted\") or item.get(\"support_gap_targeted\")\n \t            )\n@@ -158,11 +158,12 @@\n \t            merged += 1\n \t            continue\n \n+\t        priority_value = str(item.get(\"priority\", \"Medium\") or \"Medium\").strip().title()\n \t        inquiry = {\n \t            \"question\": question_text,\n \t            \"alternative_questions\": list(item.get(\"alternative_questions\") or []),\n \t            \"answer\": item.get(\"answer\"),\n-\t            \"priority\": item.get(\"priority\", \"Medium\"),\n+\t            \"priority\": priority_value,\n \t            \"support_gap_targeted\": bool(item.get(\"support_gap_targeted\", False)),\n \t            \"dependency_gap_targeted\": dependency_gap_targeted,\n \t            \"source\": \"legal_question\",\n",
+    "target_files": [
+      "complaint_phases/phase_manager.py",
+      "mediator/inquiries.py"
+    ],
+    "created_at": "2026-03-20T05:41:24.389608",
+    "parent_patches": [],
+    "ipfs_cid": null,
+    "worktree_path": "",
+    "validated": false,
+    "applied": false,
+    "metadata": {
+      "patch_mode": "direct_diff",
+      "repo_root": "/home/barberb/HACC/complaint-generator",
+      "generation_diagnostics": [
+        {
+          "file": "/home/barberb/HACC/complaint-generator/complaint_phases/phase_manager.py",
+          "status": "optimized",
+          "mode": "symbol_level",
+          "target_symbols": [
+            "_get_intake_action"
+          ],
+          "response_length": 59486,
+          "changed": true
+        },
+        {
+          "file": "/home/barberb/HACC/complaint-generator/mediator/inquiries.py",
+          "status": "optimized",
+          "mode": "symbol_level",
+          "target_symbols": [
+            "get_next",
+            "merge_legal_questions"
+          ],
+          "response_length": 9568,
+          "changed": true
+        }
+      ]
+    }
+  },
+  {
+    "patch_id": "bc8cd7e3841811c9-repair1",
+    "agent_id": "adversarial-harness-optimizer",
+    "task_id": "adversarial_autopatch_20260320_054001",
+    "description": "Use the test_driven optimizer to improve the complaint-generator adversarial complainant/mediator loop. Target files: /home/barberb/HACC/complaint-generator/complaint_phases/phase_manager.py, /home/barberb/HACC/complaint-generator/mediator/inquiries.py. Priorities from the latest adversarial batch: The mediator did not obtain key missing facts such as dates, decision-makers, notices, and requested hearing or appeal rights.; The question produced mostly emotional and generalized harm rather than specific, draft-ready factual details.. Preserve current behavior while improving router-backed question quality, information extraction, coverage, and patchability. (repair attempt 1)",
+    "diff_content": "--- a/complaint_phases/phase_manager.py\n+++ b/complaint_phases/phase_manager.py\n@@ -1014,7 +1014,13 @@\n         gaps = data.get('current_gaps', [])\n         gap_threshold = _INTAKE_GAPS_THRESHOLD\n         remaining_gaps = data.get('remaining_gaps', float('inf'))\n         denoising_iteration_cap_hit = self.iteration_count >= _DENOISING_MAX_ITERATIONS\n-        if ((gaps and len(gaps) > 0) or remaining_gaps > gap_threshold) and not denoising_iteration_cap_hit:\n+        if gaps and len(gaps) > 0:\n+            return {\n+                'action': 'address_gaps',\n+                'gaps': gaps,\n+                'intake_readiness_score': readiness['score'],\n+                'intake_blockers': readiness['blockers'],\n+            }\n+        if remaining_gaps > gap_threshold and not denoising_iteration_cap_hit:\n             return {\n                 'action': 'address_gaps',\n                 'gaps': gaps,\n--- a/mediator/inquiries.py\n+++ b/mediator/inquiries.py\n@@ -136,7 +136,7 @@\n \t            existing_priority = self._priority_rank(existing.get(\"priority\"))\n \t            incoming_priority = self._priority_rank(item.get(\"priority\"))\n \t            if incoming_priority < existing_priority:\n-\t                existing[\"priority\"] = item.get(\"priority\")\n+\t                existing[\"priority\"] = item.get(\"priority\") or existing.get(\"priority\") or \"Medium\"\n \t            existing[\"support_gap_targeted\"] = bool(\n \t                existing.get(\"support_gap_targeted\") or item.get(\"support_gap_targeted\")\n \t            )\n@@ -161,7 +161,7 @@\n \t        inquiry = {\n \t            \"question\": question_text,\n \t            \"alternative_questions\": list(item.get(\"alternative_questions\") or []),\n \t            \"answer\": item.get(\"answer\"),\n-\t            \"priority\": item.get(\"priority\", \"Medium\"),\n+\t            \"priority\": item.get(\"priority\") or \"Medium\",\n \t            \"support_gap_targeted\": bool(item.get(\"support_gap_targeted\", False)),\n \t            \"dependency_gap_targeted\": dependency_gap_targeted,\n \t            \"source\": \"legal_question\",\n",
+    "target_files": [
+      "complaint_phases/phase_manager.py",
+      "mediator/inquiries.py"
+    ],
+    "created_at": "2026-03-20T05:43:29.477288",
+    "parent_patches": [
+      "bc8cd7e3841811c9"
+    ],
+    "ipfs_cid": null,
+    "worktree_path": "",
+    "validated": false,
+    "applied": false,
+    "metadata": {
+      "patch_mode": "direct_diff",
+      "repo_root": "/home/barberb/HACC/complaint-generator",
+      "generation_diagnostics": [
+        {
+          "file": "/home/barberb/HACC/complaint-generator/complaint_phases/phase_manager.py",
+          "status": "optimized",
+          "mode": "symbol_level",
+          "target_symbols": [
+            "_get_intake_action"
+          ],
+          "response_length": 59486,
+          "changed": true
+        },
+        {
+          "file": "/home/barberb/HACC/complaint-generator/mediator/inquiries.py",
+          "status": "optimized",
+          "mode": "symbol_level",
+          "target_symbols": [
+            "get_next",
+            "merge_legal_questions"
+          ],
+          "response_length": 9568,
+          "changed": true
+        }
+      ],
+      "repair_attempt": 1,
+      "repaired_from_patch": "/home/barberb/HACC/patches/bc8cd7e3841811c9.patch"
+    }
   }
 ]

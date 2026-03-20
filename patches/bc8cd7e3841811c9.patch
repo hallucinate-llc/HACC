@@ -1,0 +1,99 @@
+--- a/complaint_phases/phase_manager.py
++++ b/complaint_phases/phase_manager.py
+@@ -1014,8 +1014,7 @@
+         gaps = data.get('current_gaps', [])
+         gap_threshold = _INTAKE_GAPS_THRESHOLD
+         remaining_gaps = data.get('remaining_gaps', float('inf'))
+-        denoising_iteration_cap_hit = self.iteration_count >= _DENOISING_MAX_ITERATIONS
+-        if ((gaps and len(gaps) > 0) or remaining_gaps > gap_threshold) and not denoising_iteration_cap_hit:
++        if (gaps and len(gaps) > 0) or remaining_gaps > gap_threshold:
+             return {
+                 'action': 'address_gaps',
+                 'gaps': gaps,
+@@ -1040,14 +1039,14 @@
+                 'intake_blockers': readiness['blockers'],
+             }
+ 
+-        if not data.get('denoising_converged', False) and not denoising_iteration_cap_hit:
++        if not data.get('denoising_converged', False) and self.iteration_count < _DENOISING_MAX_ITERATIONS:
+             return {
+                 'action': 'continue_denoising',
+                 'intake_readiness_score': readiness['score'],
+                 'intake_blockers': readiness['blockers'],
+             }
+ 
+-        if denoising_iteration_cap_hit or (data.get('denoising_converged', False) and remaining_gaps <= gap_threshold):
++        if data.get('denoising_converged', False) and remaining_gaps <= gap_threshold:
+             return {
+                 'action': 'complete_intake',
+                 'intake_readiness_score': readiness['score'],
+--- a/mediator/inquiries.py
++++ b/mediator/inquiries.py
+@@ -54,25 +54,25 @@
+ 		return self._index
+ 
+ 	def get_next(self):
+-		inquiries = self._state_inquiries()
+-		if not inquiries:
+-			return None
+-		unanswered = [
+-			(item, index)
+-			for index, item in enumerate(inquiries)
+-			if not item.get("answer")
+-		]
+-		if not unanswered:
+-			return None
+-		unanswered.sort(
+-			key=lambda pair: (
+-				0 if pair[0].get("support_gap_targeted") else 1,
+-				0 if pair[0].get("dependency_gap_targeted") else 1,
+-				self._priority_rank(pair[0].get("priority")),
+-				pair[1],
+-			)
+-		)
+-		return unanswered[0][0]
++	    inquiries = self._state_inquiries()
++	    if not inquiries:
++	        return None
++	    unanswered = [
++	        (item, index)
++	        for index, item in enumerate(inquiries)
++	        if not item.get("answer")
++	    ]
++	    if not unanswered:
++	        return None
++	        unanswered.sort(
++	            key=lambda pair: (
++	                0 if pair[0].get("dependency_gap_targeted") else 1,
++	                0 if pair[0].get("support_gap_targeted") else 1,
++	                self._priority_rank(pair[0].get("priority")),
++	                pair[1],
++	            )
++	        )
++	    return unanswered[0][0]
+ 
+ 	def answer(self, text):
+ 		current = self.get_next()
+@@ -136,7 +136,7 @@
+ 	            existing_priority = self._priority_rank(existing.get("priority"))
+ 	            incoming_priority = self._priority_rank(item.get("priority"))
+ 	            if incoming_priority < existing_priority:
+-	                existing["priority"] = item.get("priority")
++	                existing["priority"] = str(item.get("priority") or existing.get("priority") or "Medium").strip().title()
+ 	            existing["support_gap_targeted"] = bool(
+ 	                existing.get("support_gap_targeted") or item.get("support_gap_targeted")
+ 	            )
+@@ -158,11 +158,12 @@
+ 	            merged += 1
+ 	            continue
+ 
++	        priority_value = str(item.get("priority", "Medium") or "Medium").strip().title()
+ 	        inquiry = {
+ 	            "question": question_text,
+ 	            "alternative_questions": list(item.get("alternative_questions") or []),
+ 	            "answer": item.get("answer"),
+-	            "priority": item.get("priority", "Medium"),
++	            "priority": priority_value,
+ 	            "support_gap_targeted": bool(item.get("support_gap_targeted", False)),
+ 	            "dependency_gap_targeted": dependency_gap_targeted,
+ 	            "source": "legal_question",

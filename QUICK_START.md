@@ -24,6 +24,17 @@ You now have a complete audit toolkit comprising:
 **Best for:** Turning the evidence already collected in this repo into an adversarially tested draft complaint package.
 
 ```bash
+# Recommended live route via Codex-backed llm_router
+python3 hacc_grounded_pipeline.py \
+  --provider codex \
+  --model gpt-5.3-codex \
+  --num-sessions 1 \
+  --max-turns 2 \
+  --top-k 2 \
+  --synthesize-complaint \
+  --filing-forum hud
+
+# Demo mode if you want deterministic no-API behavior
 python3 hacc_grounded_pipeline.py \
   --demo \
   --num-sessions 1 \

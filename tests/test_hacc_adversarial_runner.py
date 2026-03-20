@@ -14,6 +14,8 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from hacc_adversarial_runner import (
+    HACC_DEFAULT_MODEL,
+    HACC_DEFAULT_PROVIDER,
     _best_complaint_grounding_overview,
     _autopatch_constraints_for_profile,
     _autopatch_target_profiles,
@@ -707,6 +709,14 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
                 "optimization_report_json": "/tmp/adversarial/optimization_report.json",
                 "best_complaint_bundle_json": "/tmp/adversarial/best_complaint_bundle.json",
             },
+            "runtime": {
+                "provider_status": {
+                    "status": "degraded",
+                    "effective_provider_name": "openai",
+                    "effective_model_name": "gpt-4o-mini",
+                    "error": "OpenAI unavailable: missing API key. Set OPENAI_API_KEY.",
+                }
+            },
             "best_complaint": {
                 "score": 0.725,
                 "seed_type": "housing_discrimination",
@@ -723,10 +733,10 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
                 "success": False,
                 "apply_success": False,
                 "apply_mode": {
-                    "source": "env",
+                    "source": "safe_default",
                     "requested": None,
                     "env_default": True,
-                    "effective": True,
+                    "effective": False,
                 },
                 "patch_path": None,
                 "requested_profile": "question_flow",
@@ -759,7 +769,9 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
 
         rendered = stdout.getvalue()
         self.assertEqual(exit_code, 0)
-        self.assertIn("Autopatch apply mode: source=env requested=None env_default=True effective=True", rendered)
+        self.assertIn("LLM provider status: status=degraded provider=openai model=gpt-4o-mini", rendered)
+        self.assertIn("LLM provider detail: OpenAI unavailable: missing API key. Set OPENAI_API_KEY.", rendered)
+        self.assertIn("Autopatch apply mode: source=safe_default requested=None env_default=True effective=False", rendered)
         self.assertIn("Using recommended autopatch targets: True", rendered)
         self.assertIn("Autopatch preflight ready: False", rendered)
         self.assertIn("Autopatch preflight error: No module named 'cachetools'", rendered)
@@ -934,20 +946,24 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
                     optimizer_module.Optimizer,
                     "run_agentic_autopatch",
                 ) as autopatch_mock:
-                    with mock.patch(
-                        "hacc_adversarial_runner._router_diagnostics",
-                        return_value=self._available_router_diagnostics(),
-                    ):
-                        with mock.patch("hacc_adversarial_runner._load_runtime", return_value=runtime_bundle):
-                            summary = run_hacc_adversarial_batch(
-                                output_dir=tmpdir,
-                                num_sessions=1,
-                                max_turns=1,
-                                max_parallel=1,
-                                hacc_preset="core_hacc_policies",
-                                demo=True,
-                                emit_autopatch=True,
-                            )
+                        with mock.patch(
+                            "hacc_adversarial_runner._router_diagnostics",
+                            return_value=self._available_router_diagnostics(),
+                        ):
+                            with mock.patch(
+                                "hacc_adversarial_runner._agentic_autopatch_preflight",
+                                return_value={"ready": False, "error": "No module named 'cachetools'"},
+                            ):
+                                with mock.patch("hacc_adversarial_runner._load_runtime", return_value=runtime_bundle):
+                                    summary = run_hacc_adversarial_batch(
+                                        output_dir=tmpdir,
+                                        num_sessions=1,
+                                        max_turns=1,
+                                        max_parallel=1,
+                                        hacc_preset="core_hacc_policies",
+                                        demo=True,
+                                        emit_autopatch=True,
+                                    )
 
         self.assertTrue(summary["autopatch"]["requested"])
         self.assertFalse(summary["autopatch"]["success"])
@@ -1237,6 +1253,83 @@ SUGGESTIONS:
         self.assertEqual(response, "ok")
         self.assertEqual(router_calls[0]["provider"], "hf")
 
+    def test_build_agentic_llm_router_leaves_provider_unpinned_when_not_requested(self) -> None:
+        complaint_generator_root = REPO_ROOT / "complaint-generator"
+        if str(complaint_generator_root) not in sys.path:
+            sys.path.insert(0, str(complaint_generator_root))
+
+        import types
+
+        router_calls = []
+
+        def fake_generate_text(*, prompt, provider, model_name, **kwargs):
+            router_calls.append(
+                {
+                    "prompt": prompt,
+                    "provider": provider,
+                    "model_name": model_name,
+                    "kwargs": kwargs,
+                }
+            )
+            return "ok"
+
+        fake_router_module = types.SimpleNamespace(generate_text=fake_generate_text)
+        with mock.patch.dict(sys.modules, {"ipfs_datasets_py.llm_router": fake_router_module}):
+            router = _build_agentic_llm_router(None, profile="question_flow")
+            self.assertIsNotNone(router)
+            response = router.generate("test prompt", max_tokens=64, temperature=0.1)
+
+        self.assertEqual(response, "ok")
+        self.assertIsNone(router_calls[0]["provider"])
+
+    def test_build_agentic_llm_router_passes_through_unknown_provider_names(self) -> None:
+        complaint_generator_root = REPO_ROOT / "complaint-generator"
+        if str(complaint_generator_root) not in sys.path:
+            sys.path.insert(0, str(complaint_generator_root))
+
+        import types
+
+        router_calls = []
+
+        def fake_generate_text(*, prompt, provider, model_name, **kwargs):
+            router_calls.append(
+                {
+                    "prompt": prompt,
+                    "provider": provider,
+                    "model_name": model_name,
+                    "kwargs": kwargs,
+                }
+            )
+            return "ok"
+
+        fake_router_module = types.SimpleNamespace(generate_text=fake_generate_text)
+        with mock.patch.dict(sys.modules, {"ipfs_datasets_py.llm_router": fake_router_module}):
+            router = _build_agentic_llm_router("openrouter", profile="question_flow")
+            self.assertIsNotNone(router)
+            response = router.generate("test prompt", max_tokens=64, temperature=0.1)
+
+        self.assertEqual(response, "ok")
+        self.assertEqual(router_calls[0]["provider"], "openrouter")
+
+    def test_hacc_runtime_defaults_to_codex_when_not_overridden(self) -> None:
+        complaint_generator_root = REPO_ROOT / "complaint-generator"
+        if str(complaint_generator_root) not in sys.path:
+            sys.path.insert(0, str(complaint_generator_root))
+        with mock.patch("hacc_adversarial_runner._runtime_provider_status", return_value={"status": "available"}):
+            runtime_bundle = self._build_fake_llm_router_runtime_bundle(provider=HACC_DEFAULT_PROVIDER, model=HACC_DEFAULT_MODEL)
+        self.assertEqual(runtime_bundle["runtime"]["mode"], "llm_router")
+        self.assertEqual(runtime_bundle["runtime"]["provider"], HACC_DEFAULT_PROVIDER)
+        self.assertEqual(runtime_bundle["runtime"]["model"], HACC_DEFAULT_MODEL)
+        self.assertEqual(runtime_bundle["runtime"]["provider_status"]["status"], "available")
+        self.assertEqual(getattr(runtime_bundle["complainant_backend"], "provider", object()), HACC_DEFAULT_PROVIDER)
+        self.assertEqual(getattr(runtime_bundle["critic_backend"], "provider", object()), HACC_DEFAULT_PROVIDER)
+
+    def test_parser_defaults_to_codex_provider_and_model(self) -> None:
+        parser = create_parser()
+        args = parser.parse_args([])
+        self.assertEqual(args.provider, HACC_DEFAULT_PROVIDER)
+        self.assertEqual(args.model, HACC_DEFAULT_MODEL)
+
     def test_live_runner_passes_session_db_paths_to_mediator(self) -> None:
         complaint_generator_root = REPO_ROOT / "complaint-generator"
         if str(complaint_generator_root) not in sys.path:
@@ -1354,31 +1447,35 @@ SUGGESTIONS:
                             "mediator/inquiries.py",
                         ],
                     ):
-                        with mock.patch(
-                            "hacc_adversarial_runner._validate_generated_patch",
-                            return_value={
-                                "passed": True,
-                                "level": "standard",
-                                "target_files": ["mediator/inquiries.py"],
-                                "file_results": [],
-                                "errors": [],
-                                "warnings": [],
-                            },
-                        ):
-                            with mock.patch(
-                                "hacc_adversarial_runner._router_diagnostics",
-                                return_value=self._available_router_diagnostics(),
-                            ):
-                                with mock.patch("hacc_adversarial_runner._load_runtime", return_value=runtime_bundle):
-                                    summary = run_hacc_adversarial_batch(
-                                        output_dir=tmpdir,
-                                        num_sessions=1,
-                                        max_turns=1,
-                                        max_parallel=1,
-                                        hacc_preset="core_hacc_policies",
-                                        demo=True,
-                                        emit_autopatch=True,
-                                    )
+	                        with mock.patch(
+	                            "hacc_adversarial_runner._validate_generated_patch",
+	                            return_value={
+	                                "passed": True,
+	                                "level": "standard",
+	                                "target_files": ["mediator/inquiries.py"],
+	                                "file_results": [],
+	                                "errors": [],
+	                                "warnings": [],
+	                            },
+	                        ):
+	                            with mock.patch(
+	                                "hacc_adversarial_runner._router_diagnostics",
+	                                return_value=self._available_router_diagnostics(),
+	                            ):
+	                                with mock.patch(
+	                                    "hacc_adversarial_runner._agentic_autopatch_preflight",
+	                                    return_value={"ready": True, "error": None},
+	                                ):
+	                                    with mock.patch("hacc_adversarial_runner._load_runtime", return_value=runtime_bundle):
+	                                        summary = run_hacc_adversarial_batch(
+	                                            output_dir=tmpdir,
+	                                            num_sessions=1,
+	                                            max_turns=1,
+	                                            max_parallel=1,
+	                                            hacc_preset="core_hacc_policies",
+	                                            demo=True,
+	                                            emit_autopatch=True,
+	                                        )
 
             self.assertTrue(summary["autopatch"]["requested"])
             self.assertTrue(summary["autopatch"]["success"])
@@ -1396,7 +1493,7 @@ SUGGESTIONS:
             self.assertTrue(any(str(path).endswith("complaint_phases/phase_manager.py") for path in autopatch_kwargs["target_files"]))
             self.assertTrue(any(str(path).endswith("mediator/inquiries.py") for path in autopatch_kwargs["target_files"]))
 
-    def test_runner_auto_applies_valid_patch_by_default(self) -> None:
+    def test_runner_does_not_auto_apply_valid_patch_without_explicit_flag(self) -> None:
         complaint_generator_root = REPO_ROOT / "complaint-generator"
         if str(complaint_generator_root) not in sys.path:
             sys.path.insert(0, str(complaint_generator_root))
@@ -1465,10 +1562,19 @@ SUGGESTIONS:
                                                 emit_autopatch=True,
                                             )
 
-            self.assertTrue(summary["autopatch"]["applied"])
-            self.assertTrue(summary["autopatch"]["apply_success"])
-            load_mock.assert_called_once_with(fake_patch)
-            apply_mock.assert_called_once()
+            self.assertFalse(summary["autopatch"]["applied"])
+            self.assertFalse(summary["autopatch"]["apply_success"])
+            self.assertEqual(
+                summary["autopatch"]["apply_mode"],
+                {
+                    "source": "safe_default",
+                    "requested": None,
+                    "env_default": True,
+                    "effective": False,
+                },
+            )
+            load_mock.assert_not_called()
+            apply_mock.assert_not_called()
 
     def test_runner_can_apply_autopatch_via_patch_manager(self) -> None:
         complaint_generator_root = REPO_ROOT / "complaint-generator"
@@ -1781,7 +1887,7 @@ SUGGESTIONS:
                                                     max_parallel=1,
                                                     hacc_preset="core_hacc_policies",
                                                     demo=True,
-                                                    emit_autopatch=True,
+                                                    apply_autopatch=True,
                                                 )
 
             self.assertTrue(summary["autopatch"]["success"])
