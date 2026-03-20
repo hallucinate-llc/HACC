@@ -714,6 +714,11 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             self.assertEqual(first["status"], "completed")
             self.assertIn("started_at", first)
             self.assertIn("completed_at", first)
+            self.assertIn("file_runs", first)
+            self.assertGreaterEqual(len(first["file_runs"]), 1)
+            self.assertEqual(first["file_runs"][0]["status"], "completed")
+            self.assertIn("started_at", first["file_runs"][0])
+            self.assertIn("completed_at", first["file_runs"][0])
             self.assertEqual(persisted[0]["status"], "completed")
 
     def test_main_prints_effective_search_mode_and_fallback(self) -> None:

@@ -1153,6 +1153,8 @@ def _run_workflow_phase_autopatches(
         phase_name = str(task.get("phase_name") or metadata.get("workflow_phase") or "workflow_phase")
         target_files = [Path(path) for path in list(task.get("target_files") or [])]
         phase_output_root = phase_dir / phase_name
+        base_constraints = dict(task.get("constraints") or {})
+        target_symbols = dict(base_constraints.get("target_symbols") or {})
         phase_record: Dict[str, Any] = {
             "phase": phase_name,
             "task_id": str(task.get("task_id") or ""),
@@ -1163,33 +1165,67 @@ def _run_workflow_phase_autopatches(
         }
         phase_results.append(phase_record)
         _write_phase_results()
-        summary = _run_agentic_autopatch(
-            optimizer=optimizer,
-            results=results,
-            report=report,
-            output_root=phase_output_root,
-            requested_profile=phase_name,
-            requested_target_files=target_files,
-            recommended_profile=phase_name,
-            recommended_target_files=target_files,
-            used_recommended_targets=False,
-            target_files=target_files,
-            method=str(task.get("method") or method).strip().lower() if str(task.get("method") or "") else method,
-            profile=phase_name,
-            constraints=dict(task.get("constraints") or {}),
-            apply_patch=apply_patch,
-            provider_name=provider_name,
-            model_name=model_name,
-        )
+        file_runs: List[Dict[str, Any]] = []
+        for target_path in target_files or [Path()]:
+            file_constraints = dict(base_constraints)
+            if target_symbols and target_path:
+                symbol_key = target_path.as_posix()
+                selected_symbols = target_symbols.get(symbol_key)
+                file_constraints["target_symbols"] = {symbol_key: selected_symbols} if selected_symbols else {}
+            file_record: Dict[str, Any] = {
+                "target_file": str(target_path) if target_path else None,
+                "status": "running",
+                "started_at": datetime.now(UTC).isoformat(),
+            }
+            file_runs.append(file_record)
+            phase_record["file_runs"] = file_runs
+            _write_phase_results()
+            file_summary = _run_agentic_autopatch(
+                optimizer=optimizer,
+                results=results,
+                report=report,
+                output_root=phase_output_root / (target_path.stem or "phase"),
+                requested_profile=phase_name,
+                requested_target_files=[target_path] if target_path else target_files,
+                recommended_profile=phase_name,
+                recommended_target_files=[target_path] if target_path else target_files,
+                used_recommended_targets=False,
+                target_files=[target_path] if target_path else target_files,
+                method=str(task.get("method") or method).strip().lower() if str(task.get("method") or "") else method,
+                profile=phase_name,
+                constraints=file_constraints,
+                apply_patch=apply_patch,
+                provider_name=provider_name,
+                model_name=model_name,
+            )
+            file_record.update(
+                {
+                    "status": "completed",
+                    "completed_at": datetime.now(UTC).isoformat(),
+                    "summary": _sanitize_for_json(file_summary),
+                    "patch_path": file_summary.get("patch_path"),
+                    "patch_cid": file_summary.get("patch_cid"),
+                    "success": bool(file_summary.get("success")),
+                    "apply_success": bool(file_summary.get("apply_success")),
+                    "summary_json": file_summary.get("summary_json"),
+                }
+            )
+            phase_record["file_runs"] = file_runs
+            _write_phase_results()
+
+        successful_runs = [entry for entry in file_runs if entry.get("success")]
+        applied_runs = [entry for entry in file_runs if entry.get("apply_success")]
+        summary = dict(successful_runs[0]["summary"] if successful_runs else file_runs[-1]["summary"])
         phase_record.update(
             {
                 "status": "completed",
                 "completed_at": datetime.now(UTC).isoformat(),
                 "summary": _sanitize_for_json(summary),
+                "file_runs": file_runs,
                 "patch_path": summary.get("patch_path"),
                 "patch_cid": summary.get("patch_cid"),
-                "success": bool(summary.get("success")),
-                "apply_success": bool(summary.get("apply_success")),
+                "success": bool(successful_runs),
+                "apply_success": bool(applied_runs),
                 "summary_json": summary.get("summary_json"),
             }
         )
