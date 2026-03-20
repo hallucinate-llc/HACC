@@ -632,11 +632,13 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             artifacts = summary["artifacts"]
             results_path = Path(artifacts["results_json"])
             report_path = Path(artifacts["optimization_report_json"])
+            workflow_path = Path(artifacts["workflow_optimization_bundle_json"])
             best_path = Path(artifacts["best_complaint_bundle_json"])
             summary_path = Path(tmpdir) / "run_summary.json"
 
             self.assertTrue(results_path.is_file())
             self.assertTrue(report_path.is_file())
+            self.assertTrue(workflow_path.is_file())
             self.assertTrue(best_path.is_file())
             self.assertTrue(summary_path.is_file())
             self.assertIn("router_diagnostics", summary)
@@ -644,6 +646,9 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             self.assertEqual(summary["search_summary"]["requested_search_mode"], "hybrid")
             self.assertIn("intake_priority_performance", summary["optimization_report"])
             self.assertIn("coverage_remediation", summary["optimization_report"])
+            self.assertIn("workflow_phase_plan", summary["optimization_report"])
+            self.assertIn("workflow_optimization", summary)
+            self.assertIn("phase_tasks", summary["workflow_optimization"])
             self.assertIn(
                 summary["router_diagnostics"]["embeddings_router"]["status"],
                 {"available", "degraded", "error", "unavailable"},
@@ -662,11 +667,14 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
 
             best_bundle = json.loads(best_path.read_text(encoding="utf-8"))
             optimization_payload = json.loads(report_path.read_text(encoding="utf-8"))
+            workflow_payload = json.loads(workflow_path.read_text(encoding="utf-8"))
             self.assertIn("initial_complaint_text", best_bundle)
             self.assertTrue(best_bundle["initial_complaint_text"])
             self.assertIn("conversation_history", best_bundle)
             self.assertIn("intake_priority_performance", optimization_payload)
             self.assertIn("coverage_remediation", optimization_payload)
+            self.assertIn("workflow_phase_plan", workflow_payload)
+            self.assertIn("phase_tasks", workflow_payload)
 
     def test_main_prints_effective_search_mode_and_fallback(self) -> None:
         fake_summary = {

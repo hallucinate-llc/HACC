@@ -1376,6 +1376,7 @@ def run_hacc_adversarial_batch(
 
     run_results_path = output_root / "adversarial_results.json"
     optimization_report_path = output_root / "optimization_report.json"
+    workflow_optimization_path = output_root / "workflow_optimization_bundle.json"
     anchor_report_path = output_root / "anchor_section_coverage.csv"
     best_complaint_path = output_root / "best_complaint_bundle.json"
     summary_path = output_root / "run_summary.json"
@@ -1384,8 +1385,32 @@ def run_hacc_adversarial_batch(
     harness.save_anchor_section_report(str(anchor_report_path), format="csv")
 
     optimization_payload = _sanitize_for_json(report.to_dict())
+    workflow_payload: Dict[str, Any] = {
+        "global_objectives": [],
+        "workflow_phase_plan": optimization_payload.get("workflow_phase_plan"),
+        "phase_tasks": [],
+    }
+    build_workflow_bundle = getattr(optimizer, "build_workflow_optimization_bundle", None)
+    fallback_components = getattr(optimizer, "_fallback_agentic_optimizer_components", None)
+    if callable(build_workflow_bundle) and callable(fallback_components):
+        workflow_bundle, _ = build_workflow_bundle(
+            results,
+            report=report,
+            components=fallback_components(),
+        )
+        workflow_payload = _sanitize_for_json(workflow_bundle.to_dict())
+    elif callable(build_workflow_bundle):
+        workflow_bundle, _ = build_workflow_bundle(
+            results,
+            report=report,
+        )
+        workflow_payload = _sanitize_for_json(workflow_bundle.to_dict())
     optimization_report_path.write_text(
         json.dumps(optimization_payload, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    workflow_optimization_path.write_text(
+        json.dumps(workflow_payload, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
 
@@ -1489,6 +1514,12 @@ def run_hacc_adversarial_batch(
             "intake_priority_performance": optimization_payload.get("intake_priority_performance"),
             "coverage_remediation": optimization_payload.get("coverage_remediation"),
             "best_session_id": optimization_payload.get("best_session_id"),
+            "workflow_phase_plan": optimization_payload.get("workflow_phase_plan"),
+        },
+        "workflow_optimization": {
+            "global_objectives": workflow_payload.get("global_objectives"),
+            "workflow_phase_plan": workflow_payload.get("workflow_phase_plan"),
+            "phase_tasks": workflow_payload.get("phase_tasks"),
         },
         "autopatch": _sanitize_for_json(autopatch_summary),
         "best_complaint": {
@@ -1504,6 +1535,7 @@ def run_hacc_adversarial_batch(
             "output_dir": str(output_root),
             "results_json": str(run_results_path),
             "optimization_report_json": str(optimization_report_path),
+            "workflow_optimization_bundle_json": str(workflow_optimization_path),
             "anchor_section_csv": str(anchor_report_path),
             "best_complaint_bundle_json": str(best_complaint_path),
             "session_state_dir": str(session_dir),
@@ -1679,6 +1711,9 @@ def main(argv: Optional[List[str]] = None) -> int:
                 print(f"Autopatch patch: {summary['autopatch']['patch_path']}")
         print(f"Results JSON: {summary['artifacts']['results_json']}")
         print(f"Optimization report: {summary['artifacts']['optimization_report_json']}")
+        workflow_bundle_path = (summary.get("artifacts") or {}).get("workflow_optimization_bundle_json")
+        if workflow_bundle_path:
+            print(f"Workflow optimization bundle: {workflow_bundle_path}")
         print(f"Best complaint bundle: {summary['artifacts']['best_complaint_bundle_json']}")
     return 0
 
