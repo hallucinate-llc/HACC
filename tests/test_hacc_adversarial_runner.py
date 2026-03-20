@@ -703,11 +703,18 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             workflow_phase = summary["workflow_phase_autopatch"]
             self.assertTrue(workflow_phase["requested"])
             self.assertGreaterEqual(workflow_phase["count"], 1)
-            self.assertTrue(Path(summary["artifacts"]["workflow_phase_autopatch_results_json"]).is_file())
+            results_path = Path(summary["artifacts"]["workflow_phase_autopatch_results_json"])
+            self.assertTrue(results_path.is_file())
+            persisted = json.loads(results_path.read_text(encoding="utf-8"))
+            self.assertGreaterEqual(len(persisted), 1)
             first = workflow_phase["results"][0]
             self.assertIn("phase", first)
             self.assertIn("summary", first)
             self.assertIn("success", first["summary"])
+            self.assertEqual(first["status"], "completed")
+            self.assertIn("started_at", first)
+            self.assertIn("completed_at", first)
+            self.assertEqual(persisted[0]["status"], "completed")
 
     def test_main_prints_effective_search_mode_and_fallback(self) -> None:
         fake_summary = {

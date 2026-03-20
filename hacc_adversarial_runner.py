@@ -1141,12 +1141,28 @@ def _run_workflow_phase_autopatches(
     phase_dir.mkdir(parents=True, exist_ok=True)
     results_path = phase_dir / "workflow_phase_autopatch_results.json"
 
+    def _write_phase_results() -> None:
+        results_path.write_text(
+            json.dumps(_sanitize_for_json(phase_results), ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+
     phase_results: List[Dict[str, Any]] = []
     for task in list(workflow_payload.get("phase_tasks") or []):
         metadata = dict(task.get("metadata") or {})
         phase_name = str(task.get("phase_name") or metadata.get("workflow_phase") or "workflow_phase")
         target_files = [Path(path) for path in list(task.get("target_files") or [])]
         phase_output_root = phase_dir / phase_name
+        phase_record: Dict[str, Any] = {
+            "phase": phase_name,
+            "task_id": str(task.get("task_id") or ""),
+            "description": str(task.get("description") or ""),
+            "target_files": [str(path) for path in target_files],
+            "status": "running",
+            "started_at": datetime.now(UTC).isoformat(),
+        }
+        phase_results.append(phase_record)
+        _write_phase_results()
         summary = _run_agentic_autopatch(
             optimizer=optimizer,
             results=results,
@@ -1165,12 +1181,10 @@ def _run_workflow_phase_autopatches(
             provider_name=provider_name,
             model_name=model_name,
         )
-        phase_results.append(
+        phase_record.update(
             {
-                "phase": phase_name,
-                "task_id": str(task.get("task_id") or ""),
-                "description": str(task.get("description") or ""),
-                "target_files": [str(path) for path in target_files],
+                "status": "completed",
+                "completed_at": datetime.now(UTC).isoformat(),
                 "summary": _sanitize_for_json(summary),
                 "patch_path": summary.get("patch_path"),
                 "patch_cid": summary.get("patch_cid"),
@@ -1179,11 +1193,8 @@ def _run_workflow_phase_autopatches(
                 "summary_json": summary.get("summary_json"),
             }
         )
+        _write_phase_results()
 
-    results_path.write_text(
-        json.dumps(_sanitize_for_json(phase_results), ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
     return {
         "requested": True,
         "count": len(phase_results),
