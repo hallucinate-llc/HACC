@@ -1144,7 +1144,7 @@ def _run_workflow_phase_autopatches(
     phase_results: List[Dict[str, Any]] = []
     for task in list(workflow_payload.get("phase_tasks") or []):
         metadata = dict(task.get("metadata") or {})
-        phase_name = str(metadata.get("workflow_phase") or "workflow_phase")
+        phase_name = str(task.get("phase_name") or metadata.get("workflow_phase") or "workflow_phase")
         target_files = [Path(path) for path in list(task.get("target_files") or [])]
         phase_output_root = phase_dir / phase_name
         summary = _run_agentic_autopatch(
