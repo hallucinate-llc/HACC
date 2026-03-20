@@ -208,8 +208,8 @@ filing_forum="hud",
 | `max_turns` | `4` | Maximum turns per adversarial session |
 | `max_parallel` | `1` | Maximum parallel sessions |
 | `demo` | `False` | Use deterministic demo backends (no LLM API calls) |
-| `provider` | `None` | Optional LLM router provider override; omit to let router/env defaults choose |
-| `model` | `None` | Optional model override |
+| `provider` | `"codex"` | LLM router provider override for HACC runs |
+| `model` | `"gpt-5.3-codex"` | Default HACC model override |
 | `synthesize_complaint` | `False` | Run complaint synthesis after adversarial batch |
 | `filing_forum` | `"court"` | Filing forum: `"court"`, `"hud"`, or `"state_agency"` |
 | `use_hacc_vector_search` | `False` | Blend lexical and vector search |
@@ -237,8 +237,8 @@ hacc_preset="core_hacc_policies",
 | `hacc_preset` | `"core_hacc_policies"` | Named HACC evidence query preset |
 | `hacc_count` | `None` | Maximum evidence files per session |
 | `personalities` | `None` | Pin specific complainant personalities |
-| `provider` | `None` | Optional LLM router provider override; omit to let router/env defaults choose |
-| `model` | `None` | Optional model override |
+| `provider` | `"codex"` | Default LLM router provider for HACC runs |
+| `model` | `"gpt-5.3-codex"` | Default HACC model override |
 | `emit_autopatch` | `False` | Generate an optimizer patch artifact |
 | `apply_autopatch` | `False` | Generate and apply optimizer patch to `complaint-generator` |
 | `autopatch_method` | `"test_driven"` | Agentic optimization method |
@@ -321,8 +321,8 @@ python3 hacc_grounded_pipeline.py [options]
 | `--demo` | off | Use deterministic demo backends |
 | `--config` | `None` | Optional complaint-generator config JSON |
 | `--backend-id` | `None` | Backend id from config |
-| `--provider` | `None` | Optional LLM router provider override |
-| `--model` | `None` | Optional model override |
+| `--provider` | `codex` | Default LLM router provider for HACC runs |
+| `--model` | `gpt-5.3-codex` | Default HACC model override |
 | `--synthesize-complaint` | off | Run complaint synthesis after adversarial batch |
 | `--filing-forum` | `court` | `court`, `hud`, or `state_agency` |
 | `--json` | off | Print the full workflow summary JSON |
@@ -369,8 +369,8 @@ python3 hacc_adversarial_runner.py [options]
 | `--demo` | off | Use deterministic demo backends |
 | `--config` | `None` | Optional complaint-generator config JSON |
 | `--backend-id` | `None` | Backend id from config |
-| `--provider` | `None` | Optional LLM router provider override |
-| `--model` | `None` | Optional model name |
+| `--provider` | `codex` | Default LLM router provider for HACC runs |
+| `--model` | `gpt-5.3-codex` | Default HACC model name |
 | `--emit-autopatch` | off | Generate an optimizer patch artifact without applying it |
 | `--apply-autopatch` | off | Generate and apply the optimizer patch |
 | `--no-apply-autopatch` | off | Keep the run artifact-only and never apply the generated patch |
