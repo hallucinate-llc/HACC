@@ -187,6 +187,7 @@ def _build_workflow_optimization_payload(
             "priority_improvements": list(report_payload.get("priority_improvements") or []),
             "coverage_remediation": dict(report_payload.get("coverage_remediation") or {}),
             "intake_priority_performance": dict(report_payload.get("intake_priority_performance") or {}),
+            "document_chronology_reasoning_summary": dict(report_payload.get("document_chronology_reasoning_summary") or {}),
         },
     }
 
