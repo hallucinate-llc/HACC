@@ -1,0 +1,524 @@
+--- a/mediator/mediator.py
++++ b/mediator/mediator.py
+@@ -237,6 +237,77 @@
+ 					],
+ 				)
+ 			)
++
++	@staticmethod
++	def _extract_document_chronology_priority_hints(*payloads: Any) -> Dict[str, Any]:
++		candidate_containers = [payload for payload in payloads if isinstance(payload, dict)]
++		unresolved_temporal_issue_count = 0
++		chronology_task_count = 0
++		missing_proof_artifact_count = 0
++		objectives = set()
++
++		for payload in candidate_containers:
++			nested_payloads = [
++				payload,
++				payload.get('workflow_optimization_guidance') if isinstance(payload.get('workflow_optimization_guidance'), dict) else None,
++				payload.get('document_optimization') if isinstance(payload.get('document_optimization'), dict) else None,
++				payload.get('optimization_guidance') if isinstance(payload.get('optimization_guidance'), dict) else None,
++				payload.get('actor_critic_optimizer') if isinstance(payload.get('actor_critic_optimizer'), dict) else None,
++			]
++			for nested in nested_payloads:
++				if not isinstance(nested, dict):
++					continue
++				temporal_handoff = nested.get('claim_support_temporal_handoff')
++				if isinstance(temporal_handoff, dict):
++					unresolved_temporal_issue_count += int(temporal_handoff.get('unresolved_temporal_issue_count') or 0)
++					chronology_task_count += int(temporal_handoff.get('chronology_task_count') or 0)
++					if int(temporal_handoff.get('unresolved_temporal_issue_count') or 0) > 0 or int(temporal_handoff.get('chronology_task_count') or 0) > 0:
++						objectives.update({'timeline', 'exact_dates'})
++					claim_element_id = str(temporal_handoff.get('claim_element_id') or '').strip().lower()
++					temporal_objective_text = ' '.join(
++						str(item or '').strip().lower()
++						for item in list(temporal_handoff.get('temporal_proof_objectives') or [])
++						if str(item or '').strip()
++					)
++					if claim_element_id == 'causation' or any(
++						token in temporal_objective_text
++						for token in ('causation', 'protected activity', 'adverse action', 'retaliation', 'sequence')
++					):
++						objectives.add('causation_sequence')
++					if any(
++						token in temporal_objective_text
++						for token in ('hearing', 'appeal', 'review', 'grievance')
++					):
++						objectives.add('hearing_request_timing')
++					if any(
++						token in temporal_objective_text
++						for token in ('response', 'notice', 'decision')
++					):
++						objectives.add('response_dates')
++
++				claim_reasoning_review = nested.get('claim_reasoning_review')
++				if isinstance(claim_reasoning_review, dict):
++					for review in claim_reasoning_review.values():
++						if not isinstance(review, dict):
++							continue
++						status_counts = dict(review.get('proof_artifact_status_counts') or {})
++						missing_count = int(status_counts.get('missing') or 0)
++						if missing_count <= 0:
++							total_count = int(review.get('proof_artifact_element_count') or 0)
++							available_count = int(review.get('proof_artifact_available_element_count') or 0)
++							missing_count = max(0, total_count - available_count)
++						if missing_count > 0:
++							missing_proof_artifact_count += missing_count
++							objectives.add('documents')
++
++		return {
++			'needs_chronology_closure': bool(unresolved_temporal_issue_count or chronology_task_count),
++			'needs_decision_document_precision': bool(missing_proof_artifact_count),
++			'objectives': sorted(objectives),
++			'unresolved_temporal_issue_count': unresolved_temporal_issue_count,
++			'chronology_task_count': chronology_task_count,
++			'missing_proof_artifact_count': missing_proof_artifact_count,
++		}
+ 
+ 		def _anchor_grievance_hearing_match(candidate: Dict[str, Any], signals: Dict[str, Any], text: str) -> bool:
+ 			question_objective = str(
+@@ -1460,317 +1531,133 @@
+ 			'questions': questions
+ 		}
+ 
+-	@staticmethod
+-	def _extract_document_chronology_priority_hints(*payloads: Any) -> Dict[str, Any]:
+-		candidate_containers = [payload for payload in payloads if isinstance(payload, dict)]
+-		unresolved_temporal_issue_count = 0
+-		chronology_task_count = 0
+-		missing_proof_artifact_count = 0
+-		objectives = set()
+-
+-		for payload in candidate_containers:
+-			nested_payloads = [
+-				payload,
+-				payload.get('workflow_optimization_guidance') if isinstance(payload.get('workflow_optimization_guidance'), dict) else None,
+-				payload.get('document_optimization') if isinstance(payload.get('document_optimization'), dict) else None,
+-				payload.get('optimization_guidance') if isinstance(payload.get('optimization_guidance'), dict) else None,
+-				payload.get('actor_critic_optimizer') if isinstance(payload.get('actor_critic_optimizer'), dict) else None,
+-			]
+-			for nested in nested_payloads:
+-				if not isinstance(nested, dict):
+-					continue
+-				temporal_handoff = nested.get('claim_support_temporal_handoff')
+-				if isinstance(temporal_handoff, dict):
+-					unresolved_temporal_issue_count += int(temporal_handoff.get('unresolved_temporal_issue_count') or 0)
+-					chronology_task_count += int(temporal_handoff.get('chronology_task_count') or 0)
+-					if int(temporal_handoff.get('unresolved_temporal_issue_count') or 0) > 0 or int(temporal_handoff.get('chronology_task_count') or 0) > 0:
+-						objectives.update({'timeline', 'exact_dates'})
+-					claim_element_id = str(temporal_handoff.get('claim_element_id') or '').strip().lower()
+-					temporal_objective_text = ' '.join(
+-						str(item or '').strip().lower()
+-						for item in list(temporal_handoff.get('temporal_proof_objectives') or [])
+-						if str(item or '').strip()
+-					)
+-					if claim_element_id == 'causation' or any(
+-						token in temporal_objective_text
+-						for token in ('causation', 'protected activity', 'adverse action', 'retaliation', 'sequence')
+-					):
+-						objectives.add('causation_sequence')
+-					if any(
+-						token in temporal_objective_text
+-						for token in ('hearing', 'appeal', 'review', 'grievance')
+-					):
+-						objectives.add('hearing_request_timing')
+-					if any(
+-						token in temporal_objective_text
+-						for token in ('response', 'notice', 'decision')
+-					):
+-						objectives.add('response_dates')
+-
+-				claim_reasoning_review = nested.get('claim_reasoning_review')
+-				if isinstance(claim_reasoning_review, dict):
+-					for review in claim_reasoning_review.values():
+-						if not isinstance(review, dict):
+-							continue
+-						status_counts = dict(review.get('proof_artifact_status_counts') or {})
+-						missing_count = int(status_counts.get('missing') or 0)
+-						if missing_count <= 0:
+-							total_count = int(review.get('proof_artifact_element_count') or 0)
+-							available_count = int(review.get('proof_artifact_available_element_count') or 0)
+-							missing_count = max(0, total_count - available_count)
+-						if missing_count > 0:
+-							missing_proof_artifact_count += missing_count
+-							objectives.add('documents')
+-
+-		return {
+-			'needs_chronology_closure': bool(unresolved_temporal_issue_count or chronology_task_count),
+-			'needs_decision_document_precision': bool(missing_proof_artifact_count),
+-			'objectives': sorted(objectives),
+-			'unresolved_temporal_issue_count': unresolved_temporal_issue_count,
+-			'chronology_task_count': chronology_task_count,
+-			'missing_proof_artifact_count': missing_proof_artifact_count,
+-		}
+-
+ 	def build_inquiry_gap_context(self) -> Dict[str, Any]:
+-		priority_terms: List[str] = []
+-		priority_term_lookup = set()
+-		intake_case_file = self.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'intake_case_file') or {}
+-		claim_support_packets = self.phase_manager.get_phase_data(ComplaintPhase.EVIDENCE, 'claim_support_packets') or {}
+-		adversarial_summary = (
+-			self.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'adversarial_intake_priority_summary') or {}
+-		)
+-		chronology_priority_hints = self._extract_document_chronology_priority_hints(
+-			intake_case_file,
+-			claim_support_packets,
+-			adversarial_summary,
+-			self.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'workflow_optimization_guidance') or {},
+-			self.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'claim_support_temporal_handoff') or {},
+-			self.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'claim_reasoning_review') or {},
+-			self.phase_manager.get_phase_data(ComplaintPhase.EVIDENCE, 'workflow_optimization_guidance') or {},
+-			self.phase_manager.get_phase_data(ComplaintPhase.EVIDENCE, 'claim_support_temporal_handoff') or {},
+-			self.phase_manager.get_phase_data(ComplaintPhase.EVIDENCE, 'claim_reasoning_review') or {},
+-		)
+-		expected_objectives = [
+-			str(value).strip().lower()
+-			for value in (
+-				(adversarial_summary.get('expected_objectives') or [])
+-				if isinstance(adversarial_summary, dict)
+-				else []
+-			)
+-			if str(value).strip()
+-		]
+-		covered_objectives = [
+-			str(value).strip().lower()
+-			for value in (
+-				(adversarial_summary.get('covered_objectives') or [])
+-				if isinstance(adversarial_summary, dict)
+-				else []
+-			)
+-			if str(value).strip()
+-		]
+-		uncovered_objectives = [
+-			str(value).strip().lower()
+-			for value in (
+-				(adversarial_summary.get('uncovered_objectives') or [])
+-				if isinstance(adversarial_summary, dict)
+-				else []
+-			)
+-			if str(value).strip()
+-		]
+-		for default_objective in (
+-			'anchor_appeal_rights',
+-			'anchor_grievance_hearing',
+-			'anchor_selection_criteria',
+-			'causation_sequence',
+-			'hearing_request_timing',
+-		):
+-			if default_objective in expected_objectives or default_objective in uncovered_objectives:
+-				continue
+-			if default_objective not in covered_objectives:
+-				uncovered_objectives.append(default_objective)
+-				if default_objective not in expected_objectives:
+-					expected_objectives.append(default_objective)
+-		for chronology_objective in chronology_priority_hints.get('objectives') or []:
+-			objective = str(chronology_objective).strip().lower()
+-			if not objective:
+-				continue
+-			if objective not in expected_objectives:
+-				expected_objectives.append(objective)
+-			if objective not in covered_objectives and objective not in uncovered_objectives:
+-				uncovered_objectives.append(objective)
+-
+-		def _add_priority_term(value: Any) -> None:
+-			text = str(value or '').strip()
+-			if not text:
+-				return
+-			lowered = text.lower()
+-			if lowered in priority_term_lookup:
+-				return
+-			priority_term_lookup.add(lowered)
+-			priority_terms.append(text)
+-
+-		for claim_packet in claim_support_packets.values() if isinstance(claim_support_packets, dict) else []:
+-			if not isinstance(claim_packet, dict):
+-				continue
+-			for element in claim_packet.get('elements', []) or []:
+-				if not isinstance(element, dict):
+-					continue
+-				if str(element.get('support_status') or '').strip().lower() == 'supported':
+-					continue
+-				for value in (element.get('element_label'), element.get('element_id'), claim_packet.get('claim_type')):
+-					_add_priority_term(value)
+-		if 'anchor_appeal_rights' in uncovered_objectives:
+-			for term in (
+-				'appeal rights notice',
+-				'right to appeal',
+-				'appeal deadline',
+-				'appeal request process',
+-			):
+-				_add_priority_term(term)
+-		if 'anchor_grievance_hearing' in uncovered_objectives:
+-			for term in (
+-				'grievance hearing request',
+-				'hearing process',
+-				'informal hearing record',
+-				'hearing officer or panel',
+-				'fallback grievance hearing details',
+-			):
+-				_add_priority_term(term)
+-		if 'anchor_selection_criteria' in uncovered_objectives:
+-			for term in (
+-				'selection criteria',
+-				'selection process',
+-				'qualifications used for selection',
+-				'written policy or rubric',
+-				'fallback selection criteria details',
+-			):
+-				_add_priority_term(term)
+-		if 'causation_sequence' in uncovered_objectives:
+-			for term in (
+-				'protected activity',
+-				'response timeline',
+-				'adverse action sequence',
+-				'step-by-step chronology',
+-			):
+-				_add_priority_term(term)
+-		if 'hearing_request_timing' in uncovered_objectives:
+-			for term in (
+-				'hearing request date',
+-				'hearing request timing',
+-				'how hearing or review request was submitted',
+-				'when hacc responded to hearing or review request',
+-				'request date request method response date',
+-				'deadline to request hearing',
+-				'date management received hearing request',
+-			):
+-				_add_priority_term(term)
+-		if bool(chronology_priority_hints.get('needs_chronology_closure')):
+-			for term in (
+-				'exact dates',
+-				'event timeline',
+-				'chronology sequence',
+-				'order of events',
+-				'decision timeline',
+-			):
+-				_add_priority_term(term)
+-		if 'causation_sequence' in uncovered_objectives:
+-			for term in (
+-				'causation sequence',
+-				'protected activity timeline',
+-				'sequence from complaint to adverse action',
+-			):
+-				_add_priority_term(term)
+-		if 'response_dates' in uncovered_objectives:
+-			for term in (
+-				'response date',
+-				'decision notice date',
+-				'when the denial or decision was communicated',
+-			):
+-				_add_priority_term(term)
+-		if bool(chronology_priority_hints.get('needs_decision_document_precision')):
+-			for term in (
+-				'decision notice',
+-				'denial letter',
+-				'written decision',
+-				'notice email',
+-			):
+-				_add_priority_term(term)
+-		intake_fallback_probes: List[Dict[str, str]] = []
+-		if bool(chronology_priority_hints.get('needs_chronology_closure')):
+-			intake_fallback_probes.append({
+-				'objective': 'timeline',
+-				'question': 'Ask for the exact sequence of events, including dates for the protected activity, any response, and the adverse decision.',
+-			})
+-		if bool(chronology_priority_hints.get('needs_decision_document_precision')):
+-			intake_fallback_probes.append({
+-				'objective': 'documents',
+-				'question': 'Ask for the denial notice, written decision, appeal notice, or related emails that fix the decision date and stated reason.',
+-			})
+-		if 'anchor_grievance_hearing' in uncovered_objectives:
+-			intake_fallback_probes.append({
+-				'objective': 'anchor_grievance_hearing',
+-				'question': 'If grievance-hearing details are still missing, ask what grievance or hearing process was available, whether it was requested, and who handled it.',
+-			})
+-		if 'anchor_selection_criteria' in uncovered_objectives:
+-			intake_fallback_probes.append({
+-				'objective': 'anchor_selection_criteria',
+-				'question': 'If selection-criteria details are still missing, ask what criteria were used, what qualifications were considered, and what policy or rubric governed the decision.',
+-			})
+-		if 'hearing_request_timing' in uncovered_objectives:
+-			intake_fallback_probes.append({
+-				'objective': 'hearing_request_timing',
+-				'question': 'Ask when the hearing or review was requested, how the request was made, and when HACC responded.',
+-			})
+-		weak_claim_types = []
+-		for claim in intake_case_file.get('candidate_claims', []) if isinstance(intake_case_file, dict) else []:
+-			if not isinstance(claim, dict):
+-				continue
+-			claim_type = str(claim.get('claim_type') or '').strip().lower()
+-			if claim_type in {'housing_discrimination', 'hacc_research_engine'} and claim_type not in weak_claim_types:
+-				weak_claim_types.append(claim_type)
+-		weak_modalities = set()
+-		for claim_packet in claim_support_packets.values() if isinstance(claim_support_packets, dict) else []:
+-			if not isinstance(claim_packet, dict):
+-				continue
+-			for element in claim_packet.get('elements', []) or []:
+-				if not isinstance(element, dict):
+-					continue
+-				for key in ('evidence_classes', 'recommended_evidence', 'recommended_evidence_types', 'missing_evidence_modalities'):
+-					values = element.get(key)
+-					for value in values if isinstance(values, list) else [values]:
+-						normalized = str(value or '').strip().lower()
+-						if normalized in {'policy_document', 'file_evidence'}:
+-							weak_modalities.add(normalized)
+-		if 'policy_document' in weak_modalities:
+-			for term in ('policy document', 'handbook', 'written procedure', 'official policy notice'):
+-				_add_priority_term(term)
+-		if 'file_evidence' in weak_modalities:
+-			for term in ('file evidence', 'case file', 'email file', 'notice attachment'):
+-				_add_priority_term(term)
+-		return {
+-			'priority_terms': priority_terms,
+-			'gap_count': len(priority_terms),
+-			'needs_chronology_closure': bool(chronology_priority_hints.get('needs_chronology_closure')),
+-			'needs_decision_document_precision': bool(chronology_priority_hints.get('needs_decision_document_precision')),
+-			'unresolved_temporal_issue_count': int(chronology_priority_hints.get('unresolved_temporal_issue_count') or 0),
+-			'chronology_task_count': int(chronology_priority_hints.get('chronology_task_count') or 0),
+-			'missing_proof_artifact_count': int(chronology_priority_hints.get('missing_proof_artifact_count') or 0),
+-			'intake_expected_objectives': expected_objectives,
+-			'intake_covered_objectives': covered_objectives,
+-			'intake_uncovered_objectives': uncovered_objectives,
+-			'intake_anchor_objectives': [
+-				objective
+-				for objective in (
+-					'anchor_appeal_rights',
+-					'anchor_grievance_hearing',
+-					'anchor_selection_criteria',
+-				)
+-				if objective in uncovered_objectives or objective in expected_objectives
+-			],
+-			'intake_fallback_probes': intake_fallback_probes,
+-			'weak_claim_types': weak_claim_types,
+-			'weak_evidence_modalities': sorted(weak_modalities),
+-		}
++	    priority_terms: List[str] = []
++	    priority_term_lookup = set()
++	    intake_case_file = self.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'intake_case_file') or {}
++	    claim_support_packets = self.phase_manager.get_phase_data(ComplaintPhase.EVIDENCE, 'claim_support_packets') or {}
++	    adversarial_summary = self.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'adversarial_intake_priority_summary') or {}
++
++	    def _normalize_list(values: Any) -> List[str]:
++	        normalized: List[str] = []
++	        seen = set()
++	        for raw in values if isinstance(values, list) else []:
++	            value = str(raw or '').strip().lower()
++	            if value and value not in seen:
++	                seen.add(value)
++	                normalized.append(value)
++	        return normalized
++
++	    def _append_unique(values: List[str], item: Any) -> None:
++	        text = str(item or '').strip().lower()
++	        if text and text not in values:
++	            values.append(text)
++
++	    def _add_priority_term(value: Any) -> None:
++	        text = str(value or '').strip()
++	        if not text:
++	            return
++	        lowered = text.lower()
++	        if lowered in priority_term_lookup:
++	            return
++	        priority_term_lookup.add(lowered)
++	        priority_terms.append(text)
++	    claim_packet_payloads: List[Dict[str, Any]] = []
++	    if isinstance(claim_support_packets, dict):
++	        for packet in claim_support_packets.values():
++	            if isinstance(packet, dict):
++	                claim_packet_payloads.append(packet)
++	    chronology_priority_hints = self._extract_document_chronology_priority_hints(intake_case_file if isinstance(intake_case_file, dict) else {}, adversarial_summary if isinstance(adversarial_summary, dict) else {}, *claim_packet_payloads)
++	    expected_objectives = _normalize_list(adversarial_summary.get('expected_objectives') if isinstance(adversarial_summary, dict) else [])
++	    covered_objectives = _normalize_list(adversarial_summary.get('covered_objectives') if isinstance(adversarial_summary, dict) else [])
++	    uncovered_objectives = _normalize_list(adversarial_summary.get('uncovered_objectives') if isinstance(adversarial_summary, dict) else [])
++	    default_objectives = ('anchor_appeal_rights', 'anchor_grievance_hearing', 'anchor_selection_criteria', 'causation_sequence', 'chronology', 'retaliation', 'hearing_request_timing')
++	    for objective in default_objectives:
++	        if objective not in expected_objectives:
++	            expected_objectives.append(objective)
++	        if objective not in covered_objectives and objective not in uncovered_objectives:
++	            uncovered_objectives.append(objective)
++	    for chronology_objective in chronology_priority_hints.get('objectives') or []:
++	        objective = str(chronology_objective or '').strip().lower()
++	        if not objective:
++	            continue
++	        if objective == 'timeline':
++	            objective = 'chronology'
++	        _append_unique(expected_objectives, objective)
++	        if objective not in covered_objectives:
++	            _append_unique(uncovered_objectives, objective)
++	    weak_claim_types: List[str] = []
++	    if isinstance(intake_case_file, dict):
++	        for claim in intake_case_file.get('candidate_claims', []) or []:
++	            if not isinstance(claim, dict):
++	                continue
++	            claim_type = str(claim.get('claim_type') or '').strip().lower()
++	            if claim_type in {'housing_discrimination', 'hacc_research_engine'} and claim_type not in weak_claim_types:
++	                weak_claim_types.append(claim_type)
++	    if weak_claim_types:
++	        for objective in ('causation_sequence', 'chronology', 'retaliation', 'anchor_selection_criteria'):
++	            _append_unique(expected_objectives, objective)
++	            if objective not in covered_objectives:
++	                _append_unique(uncovered_objectives, objective)
++	    weak_modalities = set()
++	    for claim_packet in claim_packet_payloads:
++	        for element in claim_packet.get('elements', []) or []:
++	            if not isinstance(element, dict):
++	                continue
++	            status = str(element.get('support_status') or '').strip().lower()
++	            if status != 'supported':
++	                for value in (element.get('element_label'), element.get('element_id'), claim_packet.get('claim_type')):
++	                    _add_priority_term(value)
++	            for key in ('evidence_classes', 'recommended_evidence', 'recommended_evidence_types', 'missing_evidence_modalities'):
++	                values = element.get(key)
++	                for value in values if isinstance(values, list) else [values]:
++	                    normalized = str(value or '').strip().lower()
++	                    if normalized in {'policy_document', 'file_evidence'}:
++	                        weak_modalities.add(normalized)
++	    objective_terms = {'anchor_appeal_rights': ('appeal rights notice', 'right to appeal', 'appeal deadline', 'appeal request process'), 'anchor_grievance_hearing': ('grievance hearing request', 'hearing process', 'informal hearing record', 'hearing officer or panel'), 'anchor_selection_criteria': ('selection criteria', 'selection process', 'qualifications used for selection', 'written policy or rubric'), 'causation_sequence': ('step-by-step protected activity response adverse action chronology', 'protected activity date and details', 'who responded and when', 'adverse action date and decision maker'), 'chronology': ('exact dates', 'event timeline', 'order of events', 'decision timeline'), 'retaliation': ('what happened after complaint or protected activity', 'timeline from complaint to adverse action', 'changed treatment after complaint'), 'hearing_request_timing': ('hearing request date', 'how hearing or review request was submitted', 'when hacc responded to hearing or review request', 'deadline to request hearing'), 'response_dates': ('response date', 'decision notice date', 'when denial or decision was communicated'), 'documents': ('denial letter', 'written decision', 'appeal notice', 'notice email')}
++	    for objective in uncovered_objectives:
++	        for term in objective_terms.get(objective, ()):
++	            _add_priority_term(term)
++	    if bool(chronology_priority_hints.get('needs_chronology_closure')):
++	        for term in objective_terms['chronology']:
++	            _add_priority_term(term)
++	    if bool(chronology_priority_hints.get('needs_decision_document_precision')):
++	        for term in objective_terms['documents']:
++	            _add_priority_term(term)
++	    if 'policy_document' in weak_modalities:
++	        for term in ('policy document', 'handbook', 'written procedure', 'official policy notice'):
++	            _add_priority_term(term)
++	    if 'file_evidence' in weak_modalities:
++	        for term in ('file evidence', 'case file', 'email file', 'notice attachment'):
++	            _add_priority_term(term)
++	    intake_fallback_probes: List[Dict[str, str]] = []
++	    fallback_probe_lookup = set()
++
++	    def _add_probe(objective: str, question: str) -> None:
++	        key = f'{objective.strip().lower()}::{question.strip().lower()}'
++	        if key in fallback_probe_lookup:
++	            return
++	        fallback_probe_lookup.add(key)
++	        intake_fallback_probes.append({'objective': objective, 'question': question})
++	    if 'causation_sequence' in uncovered_objectives or 'retaliation' in uncovered_objectives:
++	        _add_probe('causation_sequence', 'Ask the complainant to walk step-by-step through the protected activity, who responded, and the adverse action, with dates and decision makers for each step.')
++	    if bool(chronology_priority_hints.get('needs_chronology_closure')) or 'chronology' in uncovered_objectives:
++	        _add_probe('chronology', 'Ask for the exact timeline in order: protected activity date, response dates, adverse action date, and when notice was received.')
++	    if bool(chronology_priority_hints.get('needs_decision_document_precision')):
++	        _add_probe('documents', 'Ask for the denial notice, written decision, appeal notice, grievance paperwork, and related emails that fix dates and stated reasons.')
++	    if 'anchor_grievance_hearing' in uncovered_objectives:
++	        _add_probe('anchor_grievance_hearing', 'If grievance-hearing details are missing, ask what hearing process was available, whether it was requested, when it was requested, and who handled it.')
++	    if 'anchor_appeal_rights' in uncovered_objectives:
++	        _add_probe('anchor_appeal_rights', 'If appeal-rights details are missing, ask what appeal rights notice was provided, the deadline, and what steps were required.')
++	    if 'anchor_selection_criteria' in uncovered_objectives:
++	        _add_probe('anchor_selection_criteria', 'If selection-criteria details are missing, ask what criteria were used, what qualifications were considered, and what written policy governed the decision.')
++	    if 'hearing_request_timing' in uncovered_objectives:
++	        _add_probe('hearing_request_timing', 'Ask when the hearing or review was requested, how the request was submitted, and when HACC responded.')
++	    if 'policy_document' in weak_modalities:
++	        _add_probe('policy_document', 'Ask for policy documents, handbook language, or formal written procedures cited by staff.')
++	    if 'file_evidence' in weak_modalities:
++	        _add_probe('file_evidence', 'Ask for file evidence: case file entries, notices, emails, and attachments showing timeline and rationale.')
++	    return {'priority_terms': priority_terms, 'gap_count': len(priority_terms), 'needs_chronology_closure': bool(chronology_priority_hints.get('needs_chronology_closure')), 'needs_decision_document_precision': bool(chronology_priority_hints.get('needs_decision_document_precision')), 'unresolved_temporal_issue_count': int(chronology_priority_hints.get('unresolved_temporal_issue_count') or 0), 'chronology_task_count': int(chronology_priority_hints.get('chronology_task_count') or 0), 'missing_proof_artifact_count': int(chronology_priority_hints.get('missing_proof_artifact_count') or 0), 'intake_expected_objectives': expected_objectives, 'intake_covered_objectives': covered_objectives, 'intake_uncovered_objectives': uncovered_objectives, 'intake_anchor_objectives': [objective for objective in ('anchor_appeal_rights', 'anchor_grievance_hearing', 'anchor_selection_criteria') if objective in uncovered_objectives or objective in expected_objectives], 'intake_fallback_probes': intake_fallback_probes, 'weak_claim_types': weak_claim_types, 'weak_evidence_modalities': sorted(weak_modalities)}
+ 
+ 	def get_current_inquiry_payload(self) -> Dict[str, Any]:
+ 		inquiry = self.state.current_inquiry
