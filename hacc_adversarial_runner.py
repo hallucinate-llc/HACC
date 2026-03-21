@@ -117,6 +117,20 @@ def _recommended_autopatch_profile(target_files: List[Path]) -> str:
     return "custom"
 
 
+def _resolve_workflow_target_path(path: str | Path) -> Path:
+    candidate = Path(path)
+    if candidate.is_absolute():
+        return candidate
+    return COMPLAINT_GENERATOR_ROOT / candidate
+
+
+def _resolve_workflow_target_symbols(target_symbols: Dict[str, Any]) -> Dict[str, Any]:
+    resolved: Dict[str, Any] = {}
+    for key, value in dict(target_symbols or {}).items():
+        resolved[str(_resolve_workflow_target_path(key))] = value
+    return resolved
+
+
 def _build_workflow_optimization_payload(
     optimizer: Any,
     *,
@@ -1167,10 +1181,12 @@ def _run_workflow_phase_autopatches(
         metadata = dict(task.get("metadata") or {})
         phase_name = str(task.get("phase_name") or metadata.get("workflow_phase") or "workflow_phase")
         phase_status = str(metadata.get("workflow_phase_status") or "ready")
-        target_files = [Path(path) for path in list(task.get("target_files") or [])]
+        target_file_labels = [str(path) for path in list(task.get("target_files") or [])]
+        target_files = [_resolve_workflow_target_path(path) for path in target_file_labels]
         phase_output_root = phase_dir / phase_name
         base_constraints = dict(task.get("constraints") or {})
         target_symbols = dict(base_constraints.get("target_symbols") or {})
+        resolved_target_symbols = _resolve_workflow_target_symbols(target_symbols)
         if phase_status == "ready":
             phase_results.append(
                 {
@@ -1178,7 +1194,7 @@ def _run_workflow_phase_autopatches(
                     "phase_name": phase_name,
                     "task_id": str(task.get("task_id") or ""),
                     "description": str(task.get("description") or ""),
-                    "target_files": [str(path) for path in target_files],
+                    "target_files": list(target_file_labels),
                     "status": "skipped",
                     "started_at": datetime.now(UTC).isoformat(),
                     "completed_at": datetime.now(UTC).isoformat(),
@@ -1187,7 +1203,7 @@ def _run_workflow_phase_autopatches(
                         "requested": True,
                         "success": False,
                         "apply_success": False,
-                        "target_files": [str(path) for path in target_files],
+                        "target_files": list(target_file_labels),
                         "target_symbols": _sanitize_for_json(target_symbols),
                         "error": "Skipped workflow phase because the optimization report already marked it ready.",
                     },
@@ -1207,7 +1223,7 @@ def _run_workflow_phase_autopatches(
                     "phase_name": phase_name,
                     "task_id": str(task.get("task_id") or ""),
                     "description": str(task.get("description") or ""),
-                    "target_files": [str(path) for path in target_files],
+                    "target_files": list(target_file_labels),
                     "status": "skipped",
                     "started_at": datetime.now(UTC).isoformat(),
                     "completed_at": datetime.now(UTC).isoformat(),
@@ -1216,7 +1232,7 @@ def _run_workflow_phase_autopatches(
                         "requested": True,
                         "success": False,
                         "apply_success": False,
-                        "target_files": [str(path) for path in target_files],
+                        "target_files": list(target_file_labels),
                         "target_symbols": _sanitize_for_json(target_symbols),
                         "error": "Skipped workflow phase because no successful sessions were available; prioritize stability and intake fixes first.",
                     },
@@ -1234,27 +1250,27 @@ def _run_workflow_phase_autopatches(
             "phase_name": phase_name,
             "task_id": str(task.get("task_id") or ""),
             "description": str(task.get("description") or ""),
-            "target_files": [str(path) for path in target_files],
+            "target_files": list(target_file_labels),
             "status": "running",
             "started_at": datetime.now(UTC).isoformat(),
         }
         phase_results.append(phase_record)
         _write_phase_results()
         file_runs: List[Dict[str, Any]] = []
-        for target_path in target_files or [Path()]:
+        for target_label, target_path in zip(target_file_labels or [""], target_files or [Path()]):
             file_constraints = dict(base_constraints)
             selected_symbols: List[str] = []
-            if target_symbols and target_path:
-                symbol_key = target_path.as_posix()
-                selected_symbols = target_symbols.get(symbol_key)
+            if resolved_target_symbols and target_path:
+                symbol_key = str(target_path)
+                selected_symbols = list(resolved_target_symbols.get(symbol_key) or [])
                 file_constraints["target_symbols"] = {symbol_key: selected_symbols} if selected_symbols else {}
             file_description = str(task.get("description") or "")
             if target_path:
-                file_description += f" Focus only on {target_path.as_posix()}."
+                file_description += f" Focus only on {target_label or target_path.as_posix()}."
             if selected_symbols:
                 file_description += " Target symbols: " + ", ".join(str(symbol) for symbol in selected_symbols) + "."
             file_record: Dict[str, Any] = {
-                "target_file": str(target_path) if target_path else None,
+                "target_file": target_label or (str(target_path) if target_path else None),
                 "target_symbols": list(selected_symbols),
                 "status": "running",
                 "started_at": datetime.now(UTC).isoformat(),

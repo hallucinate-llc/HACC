@@ -237,6 +237,22 @@ def _build_fallback_note(*, requested_mode: str, vector_status: str = "", vector
     return note
 
 
+def _summarize_vector_errors(errors: Sequence[Dict[str, Any]] | None) -> str:
+    if not errors:
+        return ""
+
+    fragments: List[str] = []
+    for item in errors:
+        if not isinstance(item, dict):
+            continue
+        message = _clean_text(item.get("error"))
+        if not message:
+            continue
+        index_name = _clean_text(item.get("index_name"))
+        fragments.append(f"{index_name}: {message}" if index_name else message)
+    return "; ".join(fragments)
+
+
 def _summarize_search_payload(payload: Any, *, requested_mode: str, use_vector: bool) -> Dict[str, Any]:
     if not isinstance(payload, dict):
         return {
@@ -480,7 +496,12 @@ class HACCResearchEngine:
                 source_types=source_types,
             )
             payload["backend_mode"] = "shared_hybrid"
-            payload.setdefault("effective_search_mode", "shared_hybrid")
+            effective_mode = str(payload.get("effective_search_mode") or "")
+            if effective_mode == "hybrid" and str(payload.get("vector_status") or "") == "success":
+                payload["effective_search_mode"] = "shared_hybrid"
+                payload["fallback_note"] = ""
+            else:
+                payload.setdefault("effective_search_mode", "shared_hybrid")
             if str(payload.get("effective_search_mode") or "") != "shared_hybrid":
                 payload["fallback_note"] = _build_fallback_note(
                     requested_mode="package/shared hybrid",
@@ -639,12 +660,14 @@ class HACCResearchEngine:
         )
 
         status = "success" if aggregated_results else "unavailable" if all(value == "unavailable" for value in statuses) else "error" if errors else "success"
+        error_summary = _summarize_vector_errors(errors)
         return {
             "status": status,
             "query": query_text,
             "results": aggregated_results[:top_k],
             "searched_indexes": candidate_indexes,
             "errors": errors,
+            "error": error_summary,
             "integration_status": self._integration_status(),
         }
 

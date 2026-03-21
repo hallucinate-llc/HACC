@@ -948,6 +948,69 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             self.assertIn("marked it ready", summary["results"][0]["summary"]["error"])
             self.assertEqual(summary["results"][1]["status"], "completed")
 
+    def test_workflow_phase_autopatches_resolve_relative_target_paths_before_execution(self) -> None:
+        workflow_payload = {
+            "phase_tasks": [
+                {
+                    "phase_name": "graph_analysis",
+                    "task_id": "task_graph",
+                    "description": "Graph phase should execute against real complaint-generator files.",
+                    "target_files": ["complaint_phases/dependency_graph.py"],
+                    "method": "test_driven",
+                    "constraints": {
+                        "target_symbols": {
+                            "complaint_phases/dependency_graph.py": ["get_claim_readiness"],
+                        }
+                    },
+                    "metadata": {
+                        "workflow_phase": "graph_analysis",
+                        "workflow_phase_status": "critical",
+                    },
+                },
+            ]
+        }
+
+        calls = []
+
+        def fake_run_agentic_autopatch(**kwargs):
+            calls.append(kwargs)
+            return {
+                "requested": True,
+                "success": False,
+                "apply_success": False,
+                "target_files": [str(path) for path in kwargs.get("target_files") or []],
+                "target_symbols": dict((kwargs.get("constraints") or {}).get("target_symbols") or {}),
+                "summary_json": None,
+                "error": "no patch",
+            }
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            with mock.patch("hacc_adversarial_runner._run_agentic_autopatch", side_effect=fake_run_agentic_autopatch):
+                _run_workflow_phase_autopatches(
+                    optimizer=object(),
+                    results=[],
+                    report=SimpleNamespace(num_sessions_analyzed=1),
+                    workflow_payload=workflow_payload,
+                    output_root=Path(tmpdir),
+                    method="test_driven",
+                    apply_patch=False,
+                    provider_name="codex",
+                    model_name="gpt-5.3-codex",
+                )
+
+        self.assertEqual(len(calls), 1)
+        target_path = calls[0]["target_files"][0]
+        self.assertTrue(Path(target_path).is_absolute())
+        self.assertTrue(str(target_path).endswith("complaint-generator/complaint_phases/dependency_graph.py"))
+        self.assertEqual(
+            calls[0]["constraints"]["target_symbols"],
+            {
+                str(REPO_ROOT / "complaint-generator" / "complaint_phases" / "dependency_graph.py"): [
+                    "get_claim_readiness"
+                ]
+            },
+        )
+
     def test_main_prints_effective_search_mode_and_fallback(self) -> None:
         fake_summary = {
             "artifacts": {

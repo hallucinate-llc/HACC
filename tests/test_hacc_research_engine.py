@@ -711,6 +711,44 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertIn("Requested package/shared hybrid search", payload["fallback_note"])
             self.assertIn("numpy unavailable", payload["fallback_note"])
 
+    def test_search_package_normalizes_successful_hybrid_mode(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            parsed_dir = root / "research_results/documents/parsed"
+            parsed_dir.mkdir(parents=True, exist_ok=True)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=parsed_dir,
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            original_hybrid_search = engine.hybrid_search
+            original_has_preferred_vector_index = engine._has_preferred_vector_index
+            try:
+                engine.hybrid_search = lambda *args, **kwargs: {
+                    "status": "success",
+                    "results": [{"document_id": "vector-doc"}],
+                    "effective_search_mode": "hybrid",
+                    "vector_status": "success",
+                    "vector_error": "",
+                    "fallback_note": "",
+                }
+                engine._has_preferred_vector_index = lambda **kwargs: True
+
+                payload = engine.search("reasonable accommodation", top_k=2, search_mode="package")
+            finally:
+                engine.hybrid_search = original_hybrid_search
+                engine._has_preferred_vector_index = original_has_preferred_vector_index
+
+            self.assertEqual(payload["backend_mode"], "shared_hybrid")
+            self.assertEqual(payload["effective_search_mode"], "shared_hybrid")
+            self.assertEqual(payload["fallback_note"], "")
+
     def test_search_package_falls_back_to_lexical_when_shared_vector_backend_is_unavailable(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
@@ -902,6 +940,61 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertEqual(payload["effective_search_mode"], "lexical_only")
             self.assertIn("using lexical results instead", payload["fallback_note"])
             self.assertEqual(payload["results"][0]["document_id"], "housing_policy")
+
+    def test_hybrid_search_surfaces_vector_backend_error_details(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            parsed_dir = root / "research_results/documents/parsed"
+            parsed_dir.mkdir(parents=True, exist_ok=True)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            kg_dir = root / "hacc_website/knowledge_graph/documents"
+            kg_dir.mkdir(parents=True, exist_ok=True)
+            kg_dir.joinpath("housing_policy.json").write_text(
+                json.dumps(
+                    {
+                        "status": "success",
+                        "source_id": "housing_policy",
+                        "text": "HACC must approve additional search time if needed as a reasonable accommodation.",
+                        "document": {
+                            "title": "Housing Search Accommodation Policy",
+                            "source_path": "/tmp/housing_policy.pdf",
+                        },
+                        "rules": [],
+                        "entities": [],
+                        "relationships": [],
+                        "metadata": {},
+                        "provider": "ipfs_datasets_py",
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            original_search_vector_index = engine_module.search_vector_index
+            try:
+                engine_module.search_vector_index = lambda *args, **kwargs: {
+                    "status": "error",
+                    "results": [],
+                    "error": "transformers/torch not available for HF embeddings",
+                }
+                engine = HACCResearchEngine(
+                    repo_root=root,
+                    parsed_dir=parsed_dir,
+                    parse_manifest_path=manifest_path,
+                    knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+                )
+                payload = engine.hybrid_search("reasonable accommodation search time", top_k=3)
+            finally:
+                engine_module.search_vector_index = original_search_vector_index
+
+            self.assertEqual(payload["status"], "success")
+            self.assertEqual(payload["vector_status"], "error")
+            self.assertIn("hacc_policy_graph: transformers/torch not available for HF embeddings", payload["vector_error"])
+            self.assertIn("hacc_text_chunks: transformers/torch not available for HF embeddings", payload["vector_error"])
+            self.assertIn("hacc_corpus: transformers/torch not available for HF embeddings", payload["vector_error"])
+            self.assertIn("transformers/torch not available for HF embeddings", payload["fallback_note"])
 
     def test_search_auto_prefers_hybrid_when_shared_vector_index_exists(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
