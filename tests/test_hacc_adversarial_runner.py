@@ -1406,6 +1406,46 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             "    def broken():\n        pass",
         )
 
+    def test_run_agentic_autopatch_reports_no_patchable_change_when_result_is_empty(self) -> None:
+        result = SimpleNamespace(
+            success=False,
+            patch_path=None,
+            patch_cid=None,
+            metadata={},
+            metrics={},
+            validation=None,
+            error_message=None,
+        )
+
+        class NoPatchOptimizer:
+            def run_agentic_autopatch(self, *args, **kwargs):
+                return result
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            summary = _run_agentic_autopatch(
+                optimizer=NoPatchOptimizer(),
+                results=[],
+                report=SimpleNamespace(to_dict=lambda: {}),
+                output_root=Path(tmpdir),
+                requested_profile="graph_analysis",
+                requested_target_files=["complaint_phases/dependency_graph.py"],
+                recommended_profile="graph_analysis",
+                recommended_target_files=["complaint_phases/dependency_graph.py"],
+                used_recommended_targets=False,
+                target_files=["complaint_phases/dependency_graph.py"],
+                description="Optimize dependency readiness ranking",
+                method="actor_critic",
+                profile="graph_analysis",
+                constraints={"target_symbols": {"complaint_phases/dependency_graph.py": ["get_claim_readiness"]}},
+                apply_patch=False,
+                provider_name="codex",
+                model_name="gpt-5.3-codex",
+            )
+
+        self.assertFalse(summary["success"])
+        self.assertIsNone(summary["patch_path"])
+        self.assertEqual(summary["error"], "Agentic autopatch produced no patchable change")
+
     def test_live_runner_uses_llm_router_backend(self) -> None:
         complaint_generator_root = REPO_ROOT / "complaint-generator"
         if str(complaint_generator_root) not in sys.path:
