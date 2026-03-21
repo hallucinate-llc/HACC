@@ -1158,14 +1158,45 @@ def _run_workflow_phase_autopatches(
     for index, task in enumerate(list(workflow_payload.get("phase_tasks") or [])):
         metadata = dict(task.get("metadata") or {})
         phase_name = str(task.get("phase_name") or metadata.get("workflow_phase") or "workflow_phase")
+        phase_status = str(metadata.get("workflow_phase_status") or "ready")
         target_files = [Path(path) for path in list(task.get("target_files") or [])]
         phase_output_root = phase_dir / phase_name
         base_constraints = dict(task.get("constraints") or {})
         target_symbols = dict(base_constraints.get("target_symbols") or {})
+        if phase_status == "ready":
+            phase_results.append(
+                {
+                    "phase": phase_name,
+                    "phase_name": phase_name,
+                    "task_id": str(task.get("task_id") or ""),
+                    "description": str(task.get("description") or ""),
+                    "target_files": [str(path) for path in target_files],
+                    "status": "skipped",
+                    "started_at": datetime.now(UTC).isoformat(),
+                    "completed_at": datetime.now(UTC).isoformat(),
+                    "file_runs": [],
+                    "summary": {
+                        "requested": True,
+                        "success": False,
+                        "apply_success": False,
+                        "target_files": [str(path) for path in target_files],
+                        "target_symbols": _sanitize_for_json(target_symbols),
+                        "error": "Skipped workflow phase because the optimization report already marked it ready.",
+                    },
+                    "patch_path": None,
+                    "patch_cid": None,
+                    "success": False,
+                    "apply_success": False,
+                    "summary_json": None,
+                }
+            )
+            _write_phase_results()
+            continue
         if stability_only_mode and index > 0:
             phase_results.append(
                 {
                     "phase": phase_name,
+                    "phase_name": phase_name,
                     "task_id": str(task.get("task_id") or ""),
                     "description": str(task.get("description") or ""),
                     "target_files": [str(path) for path in target_files],
@@ -1192,6 +1223,7 @@ def _run_workflow_phase_autopatches(
             continue
         phase_record: Dict[str, Any] = {
             "phase": phase_name,
+            "phase_name": phase_name,
             "task_id": str(task.get("task_id") or ""),
             "description": str(task.get("description") or ""),
             "target_files": [str(path) for path in target_files],
@@ -1215,6 +1247,7 @@ def _run_workflow_phase_autopatches(
                 file_description += " Target symbols: " + ", ".join(str(symbol) for symbol in selected_symbols) + "."
             file_record: Dict[str, Any] = {
                 "target_file": str(target_path) if target_path else None,
+                "target_symbols": list(selected_symbols),
                 "status": "running",
                 "started_at": datetime.now(UTC).isoformat(),
             }
@@ -1566,6 +1599,17 @@ def run_hacc_adversarial_batch(
         session_state_dir=str(session_dir),
     )
 
+    router_diagnostics = _router_diagnostics()
+    search_summary = _adversarial_search_summary(
+        requested_mode=hacc_search_mode,
+        use_vector=use_hacc_vector_search,
+        router_diagnostics=router_diagnostics,
+    )
+    effective_search_mode = str(search_summary.get("effective_search_mode") or hacc_search_mode)
+    effective_use_hacc_vector_search = bool(use_hacc_vector_search)
+    if effective_search_mode in {"lexical_only", "lexical_fallback"}:
+        effective_use_hacc_vector_search = False
+
     results = harness.run_batch(
         num_sessions=num_sessions,
         personalities=personalities,
@@ -1573,8 +1617,8 @@ def run_hacc_adversarial_batch(
         include_hacc_evidence=True,
         hacc_count=hacc_count,
         hacc_preset=hacc_preset,
-        use_hacc_vector_search=use_hacc_vector_search,
-        hacc_search_mode=hacc_search_mode,
+        use_hacc_vector_search=effective_use_hacc_vector_search,
+        hacc_search_mode=effective_search_mode,
     )
 
     optimizer = Optimizer()
@@ -1714,13 +1758,6 @@ def run_hacc_adversarial_batch(
         encoding="utf-8",
     )
 
-    router_diagnostics = _router_diagnostics()
-    search_summary = _adversarial_search_summary(
-        requested_mode=hacc_search_mode,
-        use_vector=use_hacc_vector_search,
-        router_diagnostics=router_diagnostics,
-    )
-
     summary = {
         "timestamp": _timestamp(),
         "runtime": runtime_bundle["runtime"],
@@ -1733,7 +1770,9 @@ def run_hacc_adversarial_batch(
             "hacc_preset": hacc_preset,
             "hacc_count": hacc_count,
             "use_hacc_vector_search": use_hacc_vector_search,
+            "effective_use_hacc_vector_search": effective_use_hacc_vector_search,
             "hacc_search_mode": hacc_search_mode,
+            "effective_hacc_search_mode": effective_search_mode,
             "provider": resolved_provider,
             "model": resolved_model,
         },

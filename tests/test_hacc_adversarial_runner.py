@@ -347,9 +347,10 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
         self.assertTrue(run_batch_kwargs["include_hacc_evidence"])
         self.assertEqual(run_batch_kwargs["hacc_preset"], "core_hacc_policies")
         self.assertEqual(run_batch_kwargs["hacc_count"], 2)
-        self.assertEqual(run_batch_kwargs["hacc_search_mode"], "package")
+        self.assertEqual(run_batch_kwargs["hacc_search_mode"], "shared_hybrid")
         self.assertFalse(run_batch_kwargs["use_hacc_vector_search"])
         self.assertEqual(summary["inputs"]["hacc_search_mode"], "package")
+        self.assertEqual(summary["inputs"]["effective_hacc_search_mode"], "shared_hybrid")
         self.assertEqual(summary["search_summary"]["requested_search_mode"], "package")
         self.assertEqual(summary["best_complaint"]["grounding_overview"], {})
         self.assertEqual(summary["best_complaint"]["search_summary"], summary["search_summary"])
@@ -427,6 +428,82 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
         self.assertIn("vector support is unavailable", summary["search_summary"]["fallback_note"])
         self.assertIn("numpy unavailable", summary["search_summary"]["fallback_note"])
         self.assertEqual(summary["best_complaint"]["search_summary"], summary["search_summary"])
+        self.assertEqual(summary["inputs"]["effective_hacc_search_mode"], "lexical_fallback")
+        self.assertFalse(summary["inputs"]["effective_use_hacc_vector_search"])
+
+    def test_run_hacc_adversarial_batch_passes_effective_search_mode_to_harness(self) -> None:
+        run_batch_kwargs = {}
+
+        class FakeHarness:
+            def __init__(self, *args, **kwargs):
+                pass
+
+            def run_batch(self, **kwargs):
+                run_batch_kwargs.update(kwargs)
+                return []
+
+            def get_statistics(self):
+                return {"total_sessions": 0}
+
+            def save_results(self, path):
+                Path(path).write_text(json.dumps({"results": []}), encoding="utf-8")
+
+            def save_anchor_section_report(self, path, format="csv"):
+                Path(path).write_text("anchor_section,covered\n", encoding="utf-8")
+
+        class FakeReport:
+            def to_dict(self):
+                return {
+                    "average_score": 0.0,
+                    "score_trend": "insufficient_data",
+                    "recommended_hacc_preset": "core_hacc_policies",
+                    "priority_improvements": [],
+                    "recommendations": [],
+                    "intake_priority_performance": {},
+                    "coverage_remediation": {},
+                    "best_session_id": None,
+                }
+
+        class FakeOptimizer:
+            def analyze(self, results):
+                return FakeReport()
+
+            @staticmethod
+            def _recommended_target_files_for_report(report):
+                return []
+
+        runtime_bundle = {
+            "AdversarialHarness": FakeHarness,
+            "Optimizer": FakeOptimizer,
+            "complainant_backend": object(),
+            "critic_backend": object(),
+            "mediator_factory": lambda **kwargs: object(),
+            "runtime": {"mode": "demo"},
+        }
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            with mock.patch("hacc_adversarial_runner._load_runtime", return_value=runtime_bundle):
+                with mock.patch(
+                    "hacc_adversarial_runner._router_diagnostics",
+                    return_value={
+                        "ipfs_router": {"status": "available"},
+                        "embeddings_router": {"status": "available"},
+                        "vector_index": {"status": "error", "error": "numpy unavailable"},
+                    },
+                ):
+                    run_hacc_adversarial_batch(
+                        output_dir=tmpdir,
+                        num_sessions=1,
+                        max_turns=1,
+                        max_parallel=1,
+                        hacc_preset="core_hacc_policies",
+                        hacc_search_mode="package",
+                        use_hacc_vector_search=True,
+                        demo=True,
+                    )
+
+        self.assertEqual(run_batch_kwargs["hacc_search_mode"], "lexical_fallback")
+        self.assertFalse(run_batch_kwargs["use_hacc_vector_search"])
 
     def test_run_hacc_adversarial_batch_reports_hybrid_fallback_when_vector_unavailable(self) -> None:
         class FakeHarness:
@@ -502,6 +579,8 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
         self.assertIn("vector support is unavailable", summary["search_summary"]["fallback_note"])
         self.assertIn("numpy unavailable", summary["search_summary"]["fallback_note"])
         self.assertEqual(summary["best_complaint"]["search_summary"], summary["search_summary"])
+        self.assertEqual(summary["inputs"]["effective_hacc_search_mode"], "lexical_only")
+        self.assertFalse(summary["inputs"]["effective_use_hacc_vector_search"])
 
     def test_resolve_autopatch_timeout_uses_profile_defaults_and_can_disable(self) -> None:
         with mock.patch.dict("os.environ", {}, clear=False):
@@ -740,7 +819,10 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
                             "adversarial_harness/session.py": ["_inject_intake_prompt_questions"],
                         }
                     },
-                    "metadata": {"workflow_phase": "intake_questioning"},
+                    "metadata": {
+                        "workflow_phase": "intake_questioning",
+                        "workflow_phase_status": "critical",
+                    },
                 },
                 {
                     "phase_name": "graph_analysis",
@@ -753,7 +835,10 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
                             "complaint_phases/dependency_graph.py": ["get_claim_readiness"],
                         }
                     },
-                    "metadata": {"workflow_phase": "graph_analysis"},
+                    "metadata": {
+                        "workflow_phase": "graph_analysis",
+                        "workflow_phase_status": "critical",
+                    },
                 },
             ]
         }
@@ -794,6 +879,74 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
                 summary["results"][1]["summary"]["target_symbols"],
                 {"complaint_phases/dependency_graph.py": ["get_claim_readiness"]},
             )
+
+    def test_workflow_phase_autopatches_skip_ready_phases(self) -> None:
+        workflow_payload = {
+            "phase_tasks": [
+                {
+                    "phase_name": "intake_questioning",
+                    "task_id": "task_intake",
+                    "description": "Intake already looks healthy.",
+                    "target_files": ["adversarial_harness/session.py"],
+                    "method": "actor_critic",
+                    "constraints": {
+                        "target_symbols": {
+                            "adversarial_harness/session.py": ["_inject_intake_prompt_questions"],
+                        }
+                    },
+                    "metadata": {
+                        "workflow_phase": "intake_questioning",
+                        "workflow_phase_status": "ready",
+                    },
+                },
+                {
+                    "phase_name": "graph_analysis",
+                    "task_id": "task_graph",
+                    "description": "Graph phase still needs work.",
+                    "target_files": ["complaint_phases/dependency_graph.py"],
+                    "method": "actor_critic",
+                    "constraints": {
+                        "target_symbols": {
+                            "complaint_phases/dependency_graph.py": ["get_claim_readiness"],
+                        }
+                    },
+                    "metadata": {
+                        "workflow_phase": "graph_analysis",
+                        "workflow_phase_status": "critical",
+                    },
+                },
+            ]
+        }
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            with mock.patch(
+                "hacc_adversarial_runner._run_agentic_autopatch",
+                return_value={
+                    "requested": True,
+                    "success": False,
+                    "apply_success": False,
+                    "target_files": ["complaint_phases/dependency_graph.py"],
+                    "target_symbols": {"complaint_phases/dependency_graph.py": ["get_claim_readiness"]},
+                    "summary_json": str(Path(tmpdir) / "autopatch_summary.json"),
+                    "error": None,
+                },
+            ) as autopatch_mock:
+                summary = _run_workflow_phase_autopatches(
+                    optimizer=object(),
+                    results=[],
+                    report=SimpleNamespace(num_sessions_analyzed=1),
+                    workflow_payload=workflow_payload,
+                    output_root=Path(tmpdir),
+                    method="actor_critic",
+                    apply_patch=False,
+                    provider_name="codex",
+                    model_name="gpt-5.3-codex",
+                )
+
+            autopatch_mock.assert_called_once()
+            self.assertEqual(summary["results"][0]["status"], "skipped")
+            self.assertIn("marked it ready", summary["results"][0]["summary"]["error"])
+            self.assertEqual(summary["results"][1]["status"], "completed")
 
     def test_main_prints_effective_search_mode_and_fallback(self) -> None:
         fake_summary = {

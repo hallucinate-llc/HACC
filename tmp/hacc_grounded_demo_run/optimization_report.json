@@ -1,0 +1,303 @@
+{
+  "timestamp": "2026-03-21T01:58:11.790564+00:00",
+  "num_sessions_analyzed": 1,
+  "average_score": 0.55,
+  "score_trend": "insufficient_data",
+  "question_quality_avg": 0.5,
+  "information_extraction_avg": 0.5,
+  "empathy_avg": 0.5,
+  "efficiency_avg": 0.5,
+  "coverage_avg": 0.75,
+  "common_weaknesses": [],
+  "common_strengths": [
+    "Covered all seeded anchor sections: grievance_hearing, appeal_rights"
+  ],
+  "recommendations": [
+    "Performance is moderate. Targeted improvements can significantly boost quality.",
+    "Improve question formulation: make questions more specific and relevant.",
+    "Enhance information extraction: ask follow-up questions when responses are vague.",
+    "Increase empathy: acknowledge complainant's feelings and concerns.",
+    "Improve efficiency: avoid repetitive questions and streamline the process.",
+    "Evidence-section coverage is improving. Preserve explicit questioning around: grievance_hearing, appeal_rights.",
+    "Best HACC preset so far is 'core_hacc_policies'. Prefer it when generating evidence-backed adversarial batches."
+  ],
+  "priority_improvements": [
+    "Improve question quality: current avg 0.50",
+    "Improve information extraction: current avg 0.50",
+    "Improve empathy: current avg 0.50"
+  ],
+  "kg_sessions_with_data": 1,
+  "dg_sessions_with_data": 1,
+  "kg_sessions_empty": 0,
+  "dg_sessions_empty": 0,
+  "kg_avg_total_entities": 5.0,
+  "kg_avg_total_relationships": 4.0,
+  "kg_avg_gaps": null,
+  "dg_avg_total_nodes": 4.0,
+  "dg_avg_total_dependencies": 3.0,
+  "dg_avg_satisfaction_rate": null,
+  "kg_avg_entities_delta_per_iter": null,
+  "kg_avg_relationships_delta_per_iter": null,
+  "kg_avg_gaps_delta_per_iter": null,
+  "kg_sessions_gaps_not_reducing": 0,
+  "best_session_id": "session_20260321_015719_000",
+  "worst_session_id": "session_20260321_015719_000",
+  "best_score": 0.55,
+  "worst_score": 0.55,
+  "hacc_preset_performance": {
+    "core_hacc_policies": {
+      "count": 1,
+      "average_score": 0.55,
+      "min_score": 0.55,
+      "max_score": 0.55
+    }
+  },
+  "anchor_section_performance": {
+    "grievance_hearing": {
+      "count": 1,
+      "average_score": 0.55,
+      "min_score": 0.55,
+      "max_score": 0.55
+    },
+    "appeal_rights": {
+      "count": 1,
+      "average_score": 0.55,
+      "min_score": 0.55,
+      "max_score": 0.55
+    }
+  },
+  "complaint_type_performance": {
+    "housing_discrimination": {
+      "count": 1,
+      "average_score": 0.55,
+      "min_score": 0.55,
+      "max_score": 0.55
+    },
+    "hacc_research_engine": {
+      "count": 1,
+      "average_score": 0.55,
+      "min_score": 0.55,
+      "max_score": 0.55
+    }
+  },
+  "evidence_modality_performance": {
+    "policy_document": {
+      "count": 1,
+      "average_score": 0.55,
+      "min_score": 0.55,
+      "max_score": 0.55
+    },
+    "file_evidence": {
+      "count": 1,
+      "average_score": 0.55,
+      "min_score": 0.55,
+      "max_score": 0.55
+    }
+  },
+  "intake_priority_performance": {
+    "expected_counts": {},
+    "covered_counts": {},
+    "uncovered_counts": {},
+    "coverage_by_objective": {},
+    "sessions_with_full_coverage": 0,
+    "sessions_with_partial_coverage": 1
+  },
+  "coverage_remediation": {
+    "anchor_sections": {
+      "missing_sections": [],
+      "recommended_actions": []
+    },
+    "intake_priorities": {
+      "uncovered_objectives": [],
+      "recommended_actions": [],
+      "sessions_with_full_coverage": 0,
+      "sessions_with_partial_coverage": 1
+    }
+  },
+  "recommended_hacc_preset": "core_hacc_policies",
+  "workflow_phase_plan": {
+    "recommended_order": [
+      "intake_questioning",
+      "document_generation",
+      "graph_analysis"
+    ],
+    "phases": {
+      "intake_questioning": {
+        "status": "warning",
+        "summary": "Improve complainant and mediator questioning so intake exits with stronger factual, evidentiary, and anchor coverage.",
+        "signals": [
+          "question quality average is 0.50",
+          "efficiency average is 0.50"
+        ],
+        "recommended_actions": [
+          {
+            "focus": "mediator_questioning",
+            "signal": "question_quality",
+            "recommended_action": "Tighten mediator prompts so each question is specific to the unresolved factual gap and references the strongest available evidence anchor."
+          },
+          {
+            "focus": "question_deduplication",
+            "signal": "efficiency",
+            "recommended_action": "Prefer unanswered objectives before revisiting covered topics, and deduplicate repeated mediator questions across turns."
+          }
+        ],
+        "target_files": [
+          "adversarial_harness/session.py",
+          "mediator/mediator.py",
+          "adversarial_harness/complainant.py"
+        ],
+        "priority": 1
+      },
+      "graph_analysis": {
+        "status": "ready",
+        "summary": "Improve knowledge-graph and dependency-graph population so denoising and legal reasoning operate on structured facts instead of raw narrative alone.",
+        "signals": [],
+        "recommended_actions": [],
+        "target_files": [
+          "complaint_phases/knowledge_graph.py",
+          "complaint_phases/dependency_graph.py",
+          "complaint_phases/denoiser.py",
+          "complaint_phases/intake_case_file.py"
+        ],
+        "priority": 3
+      },
+      "document_generation": {
+        "status": "warning",
+        "summary": "Improve drafting handoff so complaint generation reflects the collected facts, exhibits, and unresolved gaps at formalization time.",
+        "signals": [
+          "information extraction average is 0.50"
+        ],
+        "recommended_actions": [
+          {
+            "focus": "drafting_handoff",
+            "signal": "information_extraction",
+            "recommended_action": "Promote structured intake facts, anchors, and evidence references directly into summary-of-facts and claim-support generation before document optimization runs."
+          }
+        ],
+        "target_files": [
+          "document_pipeline.py",
+          "document_optimization.py",
+          "scripts/synthesize_hacc_complaint.py",
+          "mediator/formal_document.py"
+        ],
+        "priority": 2
+      }
+    }
+  },
+  "phase_scorecards": {
+    "intake_questioning": {
+      "status": "warning",
+      "score": 0.5833,
+      "focus_areas": [],
+      "generalization_targets": [
+        "hacc_research_engine",
+        "housing_discrimination"
+      ],
+      "evidence_targets": [
+        "file_evidence",
+        "policy_document"
+      ]
+    },
+    "graph_analysis": {
+      "status": "ready",
+      "score": 0.5,
+      "focus_areas": [
+        "graph_stability",
+        "dependency_satisfaction"
+      ],
+      "generalization_targets": [
+        "hacc_research_engine",
+        "housing_discrimination"
+      ],
+      "evidence_targets": [
+        "file_evidence",
+        "policy_document"
+      ]
+    },
+    "document_generation": {
+      "status": "warning",
+      "score": 0.4167,
+      "focus_areas": [],
+      "generalization_targets": [
+        "hacc_research_engine",
+        "housing_discrimination"
+      ],
+      "evidence_targets": [
+        "file_evidence",
+        "policy_document"
+      ]
+    }
+  },
+  "complaint_type_generalization_summary": {
+    "count": 2,
+    "weakest": [
+      {
+        "name": "hacc_research_engine",
+        "average_score": 0.55,
+        "count": 1
+      },
+      {
+        "name": "housing_discrimination",
+        "average_score": 0.55,
+        "count": 1
+      }
+    ],
+    "strongest": [
+      {
+        "name": "housing_discrimination",
+        "average_score": 0.55,
+        "count": 1
+      },
+      {
+        "name": "hacc_research_engine",
+        "average_score": 0.55,
+        "count": 1
+      }
+    ],
+    "score_spread": 0.0,
+    "below_baseline_count": 0
+  },
+  "evidence_modality_generalization_summary": {
+    "count": 2,
+    "weakest": [
+      {
+        "name": "file_evidence",
+        "average_score": 0.55,
+        "count": 1
+      },
+      {
+        "name": "policy_document",
+        "average_score": 0.55,
+        "count": 1
+      }
+    ],
+    "strongest": [
+      {
+        "name": "policy_document",
+        "average_score": 0.55,
+        "count": 1
+      },
+      {
+        "name": "file_evidence",
+        "average_score": 0.55,
+        "count": 1
+      }
+    ],
+    "score_spread": 0.0,
+    "below_baseline_count": 0
+  },
+  "document_handoff_summary": {
+    "unresolved_intake_objectives": [],
+    "graph_dependency_status": "ready",
+    "document_generation_status": "warning",
+    "complaint_type_gap_count": 0,
+    "evidence_modality_gap_count": 0,
+    "blockers": [
+      "document_generation_not_ready"
+    ],
+    "ready_for_document_optimization": false
+  },
+  "cross_phase_findings": [
+    "Phase scorecards do not show a dominant cross-phase bottleneck; preserve the current handoff order and focus on consistency."
+  ]
+}
