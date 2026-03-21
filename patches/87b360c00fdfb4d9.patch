@@ -1,0 +1,605 @@
+--- a/adversarial_harness/session.py
++++ b/adversarial_harness/session.py
+@@ -1829,6 +1829,7 @@
+         return similarity >= 0.72
+ 
+     @classmethod
++    @classmethod
+     def _inject_intake_prompt_questions(
+         cls,
+         seed_complaint: Dict[str, Any],
+@@ -1838,33 +1839,6 @@
+         optimizer_context = cls._extract_actor_critic_intake_context(seed_complaint)
+         weak_evidence_modalities = set(optimizer_context.get('weak_evidence_modalities') or set())
+         weak_complaint_types = set(optimizer_context.get('weak_complaint_types') or set())
+-        key_facts = seed_complaint.get('key_facts') if isinstance(seed_complaint.get('key_facts'), dict) else {}
+-        unresolved_intake_objectives: Set[str] = set()
+-        unresolved_objective_keys = ('unresolved_intake_objectives', 'uncovered_objectives', 'focus_areas')
+-        context_payloads = [
+-            seed_complaint,
+-            key_facts,
+-            seed_complaint.get('_meta') if isinstance(seed_complaint.get('_meta'), dict) else None,
+-            seed_complaint.get('actor_critic_optimizer') if isinstance(seed_complaint.get('actor_critic_optimizer'), dict) else None,
+-            seed_complaint.get('optimization_guidance') if isinstance(seed_complaint.get('optimization_guidance'), dict) else None,
+-            seed_complaint.get('document_optimization') if isinstance(seed_complaint.get('document_optimization'), dict) else None,
+-        ]
+-        for payload in context_payloads:
+-            if not isinstance(payload, dict):
+-                continue
+-            nested_payloads = [
+-                payload,
+-                payload.get('intake_priorities') if isinstance(payload.get('intake_priorities'), dict) else None,
+-                payload.get('document_handoff_summary') if isinstance(payload.get('document_handoff_summary'), dict) else None,
+-            ]
+-            for nested in nested_payloads:
+-                if not isinstance(nested, dict):
+-                    continue
+-                for key in unresolved_objective_keys:
+-                    for value in list(nested.get(key) or []):
+-                        objective = str(value or '').strip().lower()
+-                        if objective:
+-                            unresolved_intake_objectives.add(objective)
+         signal_values = [
+             float(value)
+             for value in (
+@@ -1874,267 +1848,42 @@
+             )
+             if isinstance(value, (int, float))
+         ]
+-        stability_contexts = [
+-            seed_complaint,
+-            key_facts,
+-            seed_complaint.get('_meta') if isinstance(seed_complaint.get('_meta'), dict) else None,
+-            seed_complaint.get('actor_critic_optimizer') if isinstance(seed_complaint.get('actor_critic_optimizer'), dict) else None,
+-            seed_complaint.get('optimization_guidance') if isinstance(seed_complaint.get('optimization_guidance'), dict) else None,
+-            seed_complaint.get('document_optimization') if isinstance(seed_complaint.get('document_optimization'), dict) else None,
+-            key_facts.get('actor_critic_optimizer') if isinstance(key_facts.get('actor_critic_optimizer'), dict) else None,
+-            key_facts.get('actor_critic_session_stability') if isinstance(key_facts.get('actor_critic_session_stability'), dict) else None,
+-        ]
+-        num_successful_sessions = None
+-        no_successful_sessions_hint = False
+-        explicit_recovery_hint = False
+-        for payload in stability_contexts:
+-            if not isinstance(payload, dict):
+-                continue
+-            for key in ('num_successful_sessions', 'successful_sessions', 'successful_runs'):
+-                value = payload.get(key)
+-                if isinstance(value, (int, float)):
+-                    num_successful_sessions = int(value)
+-            if bool(payload.get('no_successful_sessions')):
+-                no_successful_sessions_hint = True
+-            summary = str(payload.get('summary') or '').strip().lower()
+-            message = str(payload.get('message') or '').strip().lower()
+-            if 'no successful sessions' in summary or 'no successful sessions' in message:
+-                no_successful_sessions_hint = True
+-
+-            stability_payload = payload.get('actor_critic_session_stability')
+-            if isinstance(stability_payload, dict):
+-                if str(stability_payload.get('mode') or '').strip().lower() == 'recovery':
+-                    explicit_recovery_hint = True
+-                if str(stability_payload.get('reason') or '').strip().lower() == 'no_successful_sessions':
+-                    no_successful_sessions_hint = True
+-                for key in ('num_successful_sessions', 'successful_sessions'):
+-                    value = stability_payload.get(key)
+-                    if isinstance(value, (int, float)):
+-                        num_successful_sessions = int(value)
+-
+-            phase_signals = payload.get('phase_signal_context')
+-            if isinstance(phase_signals, dict):
+-                if bool(phase_signals.get('no_successful_sessions')):
+-                    no_successful_sessions_hint = True
+-                for key in ('num_successful_sessions', 'successful_sessions'):
+-                    value = phase_signals.get(key)
+-                    if isinstance(value, (int, float)):
+-                        num_successful_sessions = int(value)
+-
+-        no_successful_sessions = bool(no_successful_sessions_hint or num_successful_sessions == 0)
+-        # When actor-critic intake signals are missing/near-zero, preserve mediator
+-        # flow and only backfill a small number of missing objective probes.
+-        stability_recovery_mode = (
+-            no_successful_sessions
+-            or explicit_recovery_hint
+-            or (not signal_values)
+-            or max(signal_values) <= 0.05
+-        )
+-        strict_stability_mode = no_successful_sessions or explicit_recovery_hint
+-        signal_strength = max(signal_values) if signal_values else 0.0
++        stability_recovery_mode = (not signal_values) or max(signal_values) <= 0.05
+         seed_boosted_probes: List[tuple[str, str]] = []
+-        supports_selection_criteria = cls._seed_supports_selection_criteria(seed_complaint)
+-        should_frontload_anchor_selection = bool(
+-            (
+-                supports_selection_criteria
+-                and weak_evidence_modalities.intersection({'policy_document', 'file_evidence'})
+-            )
+-            or 'anchor_selection_criteria' in unresolved_intake_objectives
+-        )
+-        should_frontload_anchor_appeal_rights = bool(
+-            weak_complaint_types.intersection({'housing_discrimination', 'hacc_research_engine'})
+-            or 'anchor_appeal_rights' in unresolved_intake_objectives
+-        )
+-        should_frontload_anchor_grievance_hearing = bool(
+-            weak_complaint_types.intersection({'housing_discrimination', 'hacc_research_engine'})
+-            or 'anchor_grievance_hearing' in unresolved_intake_objectives
+-        )
+-        should_frontload_hearing_request_timing = bool(
+-            weak_complaint_types.intersection({'housing_discrimination', 'hacc_research_engine'})
+-            or 'hearing_request_timing' in unresolved_intake_objectives
+-            or 'anchor_grievance_hearing' in unresolved_intake_objectives
+-        )
+-        should_frontload_staff_names_titles = bool(
+-            weak_complaint_types.intersection({'housing_discrimination', 'hacc_research_engine'})
+-            or 'staff_names_titles' in unresolved_intake_objectives
+-            or bool(cls._extract_anchor_sections(seed_complaint).intersection({'grievance_hearing', 'appeal_rights', 'adverse_action'}))
+-        )
+-        should_frontload_causation_sequence = bool(
+-            weak_complaint_types.intersection({'housing_discrimination', 'hacc_research_engine'})
+-            or 'causation_sequence' in unresolved_intake_objectives
+-        )
+-
+-        if should_frontload_anchor_appeal_rights:
+-            seed_boosted_probes.append(
++
++        if weak_evidence_modalities.intersection({'policy_document', 'file_evidence'}):
++            seed_boosted_probes.extend([
+                 (
+-                    "What written appeal rights notice did you receive, when did you receive it, and what exact deadline and steps did it require?",
+-                    "anchor_appeal_rights",
+-                )
+-            )
+-        if should_frontload_anchor_grievance_hearing:
+-            seed_boosted_probes.append(
++                    'Which specific policy or procedure document did staff rely on, what section did they cite, and how was it applied to you?',
++                    'documents',
++                ),
+                 (
+-                    "What grievance hearing rights were explained to you, when did you request a hearing, and what response or scheduling result did you get, including the request record and response notice date?",
+-                    "anchor_grievance_hearing",
+-                )
+-            )
+-            # Dedicated fallback that stays specific to the grievance-hearing anchor.
+-            seed_boosted_probes.append(
++                    'Please list each supporting file you have (notice, email, text, letter, screenshot, or upload), including date, sender, and what fact it proves.',
++                    'documents',
++                ),
++            ])
++        if weak_complaint_types.intersection({'housing_discrimination', 'hacc_research_engine'}):
++            seed_boosted_probes.extend([
+                 (
+-                    "For the grievance hearing process, on what date did you request a hearing or review, how did you request it (portal/email/form/phone/in person), when did HACC respond, and what record or file verifies each step?",
+-                    "anchor_grievance_hearing",
+-                )
+-            )
+-        if should_frontload_anchor_selection:
+-            seed_boosted_probes.append(
++                    'What protected characteristic, accommodation request, or complaint came before the adverse action, and what happened right after it?',
++                    'causation_sequence',
++                ),
+                 (
+-                    "What exact screening, selection, or evaluation criteria were used in your case, where are those criteria written, and how were they applied to you in the case file or notice?",
+-                    "anchor_selection_criteria",
+-                )
+-            )
+-            # Dedicated fallback that keeps this anchor ahead of generic intake follow-ups.
+-            seed_boosted_probes.append(
+-                (
+-                    "For selection criteria specifically, what exact factor or threshold did HACC apply to you, where is it documented, and what evidence file can verify that application?",
+-                    "anchor_selection_criteria",
+-                )
+-            )
+-        if should_frontload_hearing_request_timing:
+-            seed_boosted_probes.append(
+-                (
+-                    "When was the hearing or review requested, how was it requested, and when did HACC respond?",
+-                    "hearing_request_timing",
+-                )
+-            )
+-        if should_frontload_staff_names_titles:
+-            seed_boosted_probes.append(
+-                (
+-                    "Which HACC staff members handled each step, what were their full names and titles or roles, and how can you identify each person from the notices, emails, portal messages, or other records?",
+-                    "staff_names_titles",
+-                )
+-            )
+-        if should_frontload_causation_sequence:
+-            seed_boosted_probes.append(
+-                (
+-                    "Please walk through this step by step: protected activity, HACC response, and adverse action, including who knew each step and when.",
+-                    "causation_sequence",
+-                )
+-            )
+-
+-        if weak_evidence_modalities.intersection({'policy_document', 'file_evidence'}):
+-            seed_boosted_probes.extend(
+-                [
+-                    (
+-                        "Which specific policy or procedure document did staff rely on, what section did they cite, and how was it applied to you?",
+-                        "documents",
+-                    ),
+-                    (
+-                        "Please list each supporting file you have (notice, email, text, letter, screenshot, or upload), including date, sender, and what fact it proves.",
+-                        "documents",
+-                    ),
+-                ]
+-            )
+-        if weak_complaint_types.intersection({'housing_discrimination', 'hacc_research_engine'}):
+-            seed_boosted_probes.extend(
+-                [
+-                    (
+-                        "What protected characteristic, accommodation request, or complaint came before the adverse action, and what happened right after it?",
+-                        "causation_sequence",
+-                    ),
+-                    (
+-                        "What exact reason was given for the housing decision, who gave it, and what date was it communicated?",
+-                        "adverse_action_details",
+-                    ),
+-                ]
+-            )
++                    'What exact reason was given for the housing decision, who gave it, and what date was it communicated?',
++                    'adverse_action_details',
++                ),
++            ])
+ 
+         prioritized_prompts = seed_boosted_probes + cls._extract_intake_prompt_candidates(seed_complaint)
+-        # Keep anchor-selection probes ahead of generic catch-all prompts when unresolved.
+-        prompt_priority_tier: Dict[int, int] = {}
+-        for prompt_index, (probe_text, probe_type) in enumerate(prioritized_prompts):
+-            if probe_type == 'anchor_selection_criteria':
+-                prompt_priority_tier[prompt_index] = 0
+-            elif probe_type in {'anchor_grievance_hearing', 'anchor_appeal_rights', 'hearing_request_timing'}:
+-                prompt_priority_tier[prompt_index] = 1
+-            elif probe_type == 'staff_names_titles' and should_frontload_staff_names_titles:
+-                prompt_priority_tier[prompt_index] = 1
+-            elif probe_type == 'intake_follow_up':
+-                prompt_priority_tier[prompt_index] = 9
+-            else:
+-                prompt_priority_tier[prompt_index] = 3
+         objective_priority: Dict[str, int] = {}
+         for _, objective in prioritized_prompts:
+             objective_priority.setdefault(objective, len(objective_priority))
+-
+-        forced_objectives: Set[str] = set()
+-        if supports_selection_criteria and weak_evidence_modalities.intersection({'policy_document', 'file_evidence'}):
+-            forced_objectives.update({'documents', 'anchor_selection_criteria'})
+-        elif weak_evidence_modalities.intersection({'policy_document', 'file_evidence'}):
+-            forced_objectives.add('documents')
+-        if weak_complaint_types.intersection({'housing_discrimination', 'hacc_research_engine'}):
+-            forced_objectives.update(
+-                {
+-                    'exact_dates',
+-                    'adverse_action_details',
+-                    'hearing_request_timing',
+-                    'causation_sequence',
+-                    'anchor_adverse_action',
+-                    'anchor_appeal_rights',
+-                    'anchor_grievance_hearing',
+-                }
+-            )
+-            if supports_selection_criteria:
+-                forced_objectives.add('anchor_selection_criteria')
+-        forced_objectives.update(
+-            {
+-                objective
+-                for objective in (
+-                    'anchor_appeal_rights',
+-                    'anchor_grievance_hearing',
+-                    'anchor_selection_criteria',
+-                    'hearing_request_timing',
+-                    'staff_names_titles',
+-                    'causation_sequence',
+-                )
+-                if objective in unresolved_intake_objectives
+-            }
+-        )
+-        for objective in sorted(forced_objectives):
+-            objective_priority.setdefault(objective, len(objective_priority))
+-
+-        deduped_existing: List[Any] = []
+-        seen_existing: Set[str] = set()
+-        for question in existing_questions:
+-            question_text = cls._extract_question_text(question)
+-            key = cls._question_dedupe_key(question_text)
+-            if key and key in seen_existing:
+-                continue
+-            if key:
+-                seen_existing.add(key)
+-            deduped_existing.append(question)
+-        existing_questions = deduped_existing
+ 
+         covered_objectives: Set[str] = set()
+         for question in existing_questions:
+             for objective in objective_priority:
+                 if cls._candidate_matches_intake_objective(question, objective):
+                     covered_objectives.add(objective)
+-
+-        objective_group_coverage: Dict[str, int] = {'factual': 0, 'evidentiary': 0, 'anchor': 0}
+-        for objective in covered_objectives:
+-            group = cls._intake_objective_group(objective)
+-            if group in objective_group_coverage:
+-                objective_group_coverage[group] += 1
+-
+-        group_targets = {'factual': 0, 'evidentiary': 0, 'anchor': 0}
+-        if not stability_recovery_mode:
+-            group_targets['factual'] = 3
+-            group_targets['evidentiary'] = 2 if weak_evidence_modalities.intersection({'policy_document', 'file_evidence'}) else 1
+-            group_targets['anchor'] = 2 if weak_complaint_types.intersection({'housing_discrimination', 'hacc_research_engine'}) else 1
+-        elif not strict_stability_mode:
+-            group_targets['factual'] = 1
+-            group_targets['evidentiary'] = 1 if weak_evidence_modalities.intersection({'policy_document', 'file_evidence'}) else 0
+-            group_targets['anchor'] = 1 if weak_complaint_types.intersection({'housing_discrimination', 'hacc_research_engine'}) else 0
+ 
+         merged: List[Any] = []
+         seen = set()
+@@ -2146,175 +1895,35 @@
+             if objective not in covered_objectives
+         ]
+ 
+-        critical_objectives = [
+-            'exact_dates',
+-            'staff_names_titles',
+-            'hearing_request_timing',
+-            'response_dates',
+-            'adverse_action_details',
+-            'timeline',
+-            'actors',
+-            'causation_sequence',
+-            'documents',
+-            'anchor_appeal_rights',
+-            'anchor_grievance_hearing',
+-            'anchor_selection_criteria',
+-            'harm_remedy',
+-        ]
+-        uncovered_critical_objectives = [
+-            objective for objective in critical_objectives if objective in missing_objectives
+-        ]
+-
+-        for question in existing_questions:
+-            key = cls._question_dedupe_key(cls._extract_question_text(question))
+-            if key and key in seen:
+-                continue
+-            if key:
+-                seen.add(key)
+-            merged.append(question)
+-
+         if stability_recovery_mode:
+-            explicit_prompt_objectives = {
+-                objective
+-                for _, objective in cls._extract_intake_prompt_candidates(seed_complaint)
+-            }
+-            missing_explicit_prompt_objectives = [
+-                objective
+-                for objective in uncovered_critical_objectives
+-                if objective in explicit_prompt_objectives
+-            ]
+-            if existing_questions and (
+-                strict_stability_mode
+-                or len(existing_questions) >= 2
+-                or not uncovered_critical_objectives
+-            ) and not missing_explicit_prompt_objectives:
+-                return merged
+-            # Recovery mode should prioritize continuity over aggressive backfilling.
+-            # Only inject a minimal, high-value probe when intake coverage is clearly weak.
+-            if strict_stability_mode:
+-                injection_budget = 1
+-            else:
+-                injection_budget = min(3, len(uncovered_critical_objectives) or 2)
+-                if not existing_questions:
+-                    injection_budget = max(injection_budget, 2)
+-        else:
+-            if signal_strength >= 0.75:
+-                injection_budget = 10
+-            elif signal_strength >= 0.4:
+-                injection_budget = 8
+-            else:
+-                injection_budget = 6
+-            if not existing_questions:
+-                injection_budget = max(injection_budget, 5)
+-            forced_missing = [objective for objective in forced_objectives if objective in missing_objectives]
+-            unmet_group_targets = sum(
+-                max(0, group_targets[group] - objective_group_coverage.get(group, 0))
+-                for group in group_targets
+-            )
+-            if forced_missing:
+-                injection_budget = max(injection_budget, min(12, len(forced_missing) + 4))
+-            if unmet_group_targets > 0:
+-                injection_budget = max(injection_budget, min(12, unmet_group_targets + 4))
+-
+-        weighted_prompts: List[tuple[int, float, int, str, str]] = []
+-        for index, (probe_text, probe_type) in enumerate(prioritized_prompts):
+-            weight = cls._intake_objective_weight(probe_type, optimizer_context)
+-            if probe_type in forced_objectives:
+-                weight += 0.75
+-            if probe_type == 'anchor_selection_criteria' and should_frontload_anchor_selection:
+-                weight += 0.95
+-            if probe_type == 'anchor_appeal_rights' and should_frontload_anchor_appeal_rights:
+-                weight += 0.90
+-            if probe_type == 'anchor_grievance_hearing' and should_frontload_anchor_grievance_hearing:
+-                weight += 0.90
+-            if probe_type == 'hearing_request_timing' and should_frontload_hearing_request_timing:
+-                weight += 0.88
+-            if probe_type == 'staff_names_titles' and should_frontload_staff_names_titles:
+-                weight += 0.92
+-            if probe_type == 'causation_sequence' and should_frontload_causation_sequence:
+-                weight += 0.75
+-            if probe_type == 'intake_follow_up':
+-                # Keep generic catch-all prompts behind unresolved anchor/timing objectives.
+-                weight -= 0.40
+-                if (
+-                    should_frontload_anchor_grievance_hearing
+-                    or should_frontload_anchor_selection
+-                    or 'anchor_grievance_hearing' in unresolved_intake_objectives
+-                    or 'anchor_selection_criteria' in unresolved_intake_objectives
+-                ):
+-                    weight -= 0.75
+-            group = cls._intake_objective_group(probe_type)
+-            if group in group_targets:
+-                remaining = max(0, group_targets[group] - objective_group_coverage.get(group, 0))
+-                if remaining > 0:
+-                    weight += min(0.9, remaining * 0.35)
+-            if probe_type in missing_objectives:
+-                weight += 0.25
+-            tier = prompt_priority_tier.get(index, 3)
+-            if probe_type == 'anchor_selection_criteria' and should_frontload_anchor_selection:
+-                tier = 0
+-            if probe_type == 'intake_follow_up':
+-                tier = max(tier, 9)
+-            weighted_prompts.append((tier, weight, index, probe_text, probe_type))
+-        weighted_prompts.sort(key=lambda item: (item[0], -item[1], item[2]))
+-
++            for question in existing_questions:
++                key = cls._question_dedupe_key(cls._extract_question_text(question))
++                if key and key in seen:
++                    continue
++                if key:
++                    seen.add(key)
++                merged.append(question)
++
++        injection_budget = 3 if stability_recovery_mode else 10
++        if not existing_questions:
++            injection_budget = max(injection_budget, 4)
+         injected = 0
+-        injected_questions: List[Any] = []
+-        injected_objective_counts: Dict[str, int] = {}
+-        max_per_objective: Dict[str, int] = {}
+-        if should_frontload_anchor_selection and 'anchor_selection_criteria' in missing_objectives:
+-            # Allow one dedicated fallback on top of the primary selection-criteria probe.
+-            max_per_objective['anchor_selection_criteria'] = 2
+-        strict_recovery_objectives = {
+-            'timeline',
+-            'actors',
+-            'adverse_action_details',
+-            'documents',
+-            'anchor_appeal_rights',
+-            'anchor_grievance_hearing',
+-            'anchor_selection_criteria',
+-            'causation_sequence',
+-            'harm_remedy',
+-            'exact_dates',
+-            'staff_names_titles',
+-        }
+-        for _tier, _weight, _index, probe_text, probe_type in weighted_prompts:
++        for probe_text, probe_type in prioritized_prompts:
+             if injected >= injection_budget:
+                 break
+-            current_count = injected_objective_counts.get(probe_type, 0)
+-            per_objective_limit = max_per_objective.get(probe_type, 1)
+-            if current_count >= per_objective_limit:
++            if stability_recovery_mode and True and missing_objectives and probe_type not in missing_objectives:
+                 continue
+-            if missing_objectives and probe_type not in missing_objectives:
+-                continue
+-            if stability_recovery_mode and probe_type not in critical_objectives and missing_objectives:
+-                continue
+-            if strict_stability_mode and probe_type not in strict_recovery_objectives and missing_objectives:
++            if stability_recovery_mode and True and probe_type in injected_objectives:
+                 continue
+             key = cls._question_dedupe_key(probe_text)
+             if key and (key in seen or key in skipped):
+                 continue
+-            evidence_anchor = cls._strongest_evidence_anchor_for_objective(
+-                probe_type,
+-                weak_evidence_modalities,
+-            )
+-            tightened_probe_text = probe_text
+-            if (
+-                probe_type in unresolved_intake_objectives
+-                or probe_type in forced_objectives
+-                or probe_type in {'anchor_grievance_hearing', 'anchor_selection_criteria'}
+-            ):
+-                tightened_probe_text = cls._tighten_intake_question_text(
+-                    probe_text,
+-                    probe_type,
+-                    evidence_anchor,
+-                )
+             synthetic_question = {
+-                "question": tightened_probe_text,
+-                "type": probe_type,
+-                "question_objective": probe_type,
+-                "question_reason": "Structured intake prompt imported from the grounding bundle.",
+-                "source": "synthetic_intake_prompt",
++                'question': probe_text,
++                'type': probe_type,
++                'question_objective': probe_type,
++                'question_reason': 'Structured intake prompt imported from the grounding bundle.',
++                'source': 'synthetic_intake_prompt',
+             }
+             if any(
+                 cls._questions_substantially_overlap(synthetic_question, existing_question)
+@@ -2326,67 +1935,18 @@
+             if key and key not in seen:
+                 seen.add(key)
+                 injected_objectives.add(probe_type)
+-                injected_objective_counts[probe_type] = injected_objective_counts.get(probe_type, 0) + 1
+-                injected_questions.append(synthetic_question)
+-                objective_group = cls._intake_objective_group(probe_type)
+-                if objective_group in objective_group_coverage:
+-                    objective_group_coverage[objective_group] += 1
++                merged.append(synthetic_question)
+                 injected += 1
+ 
+-        # Final guardrail for non-recovery runs: if weak areas are still uncovered and
+-        # budget remains, add one extra high-priority question per unmet objective group.
+-        if not stability_recovery_mode and injected < injection_budget:
+-            unmet_groups = [
+-                group
+-                for group, target_count in group_targets.items()
+-                if objective_group_coverage.get(group, 0) < target_count
+-            ]
+-            for group in unmet_groups:
+-                if injected >= injection_budget:
+-                    break
+-                for _tier, _weight, _index, probe_text, probe_type in weighted_prompts:
+-                    if cls._intake_objective_group(probe_type) != group:
+-                        continue
+-                    current_count = injected_objective_counts.get(probe_type, 0)
+-                    per_objective_limit = max_per_objective.get(probe_type, 1)
+-                    key = cls._question_dedupe_key(probe_text)
+-                    if current_count >= per_objective_limit:
+-                        continue
+-                    if key and (key in seen or key in skipped):
+-                        continue
+-                    evidence_anchor = cls._strongest_evidence_anchor_for_objective(
+-                        probe_type,
+-                        weak_evidence_modalities,
+-                    )
+-                    tightened_probe_text = cls._tighten_intake_question_text(
+-                        probe_text,
+-                        probe_type,
+-                        evidence_anchor,
+-                    )
+-                    synthetic_question = {
+-                        "question": tightened_probe_text,
+-                        "type": probe_type,
+-                        "question_objective": probe_type,
+-                        "question_reason": "Structured intake prompt imported from the grounding bundle.",
+-                        "source": "synthetic_intake_prompt",
+-                    }
+-                    if any(
+-                        cls._questions_substantially_overlap(synthetic_question, existing_question)
+-                        for existing_question in existing_questions
+-                    ):
+-                        if key:
+-                            skipped.add(key)
+-                        continue
+-                    if key:
+-                        seen.add(key)
+-                    injected_objectives.add(probe_type)
+-                    injected_objective_counts[probe_type] = injected_objective_counts.get(probe_type, 0) + 1
+-                    injected_questions.append(synthetic_question)
+-                    objective_group_coverage[group] = objective_group_coverage.get(group, 0) + 1
+-                    injected += 1
+-                    break
+-
+-        return injected_questions + merged
++        if not stability_recovery_mode:
++            for question in existing_questions:
++                key = cls._question_dedupe_key(cls._extract_question_text(question))
++                if key and key in seen:
++                    continue
++                if key:
++                    seen.add(key)
++                merged.append(question)
++        return merged
+ 
+     @classmethod
+     def _candidate_matches_intake_objective(cls, candidate: Any, objective: str) -> bool:

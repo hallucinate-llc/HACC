@@ -15,7 +15,7 @@ import sys
 from datetime import UTC, datetime
 from pathlib import Path
 import tempfile
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 
 REPO_ROOT = Path(__file__).resolve().parent
@@ -936,7 +936,7 @@ def _run_agentic_autopatch(
     recommended_target_files: List[Path],
     used_recommended_targets: bool,
     target_files: List[Path],
-    description: Optional[str],
+    description: Optional[str] = None,
     method: str,
     profile: str,
     constraints: Dict[str, Any],
@@ -989,6 +989,18 @@ def _run_agentic_autopatch(
         return []
 
     resolved_optimizer = None
+    resolved_description = str(description or "").strip()
+    if not resolved_description:
+        target_labels = [path.as_posix() for path in target_files if isinstance(path, Path)]
+        if target_labels:
+            resolved_description = (
+                f"Use the {method} optimizer to improve the complaint-generator {profile} flow. "
+                f"Target files: {', '.join(target_labels)}."
+            )
+        else:
+            resolved_description = (
+                f"Use the {method} optimizer to improve the complaint-generator {profile} flow."
+            )
 
     try:
         previous_codex_model = os.environ.get("IPFS_DATASETS_PY_CODEX_MODEL")
@@ -1014,7 +1026,7 @@ def _run_agentic_autopatch(
         result = optimizer.run_agentic_autopatch(
             results,
             target_files=target_files,
-            description=description,
+            description=resolved_description,
             method=method,
             constraints=constraints,
             report=report,
@@ -1187,6 +1199,15 @@ def _run_workflow_phase_autopatches(
         base_constraints = dict(task.get("constraints") or {})
         target_symbols = dict(base_constraints.get("target_symbols") or {})
         resolved_target_symbols = _resolve_workflow_target_symbols(target_symbols)
+        secondary_target_file_labels = [
+            str(path)
+            for path in list(metadata.get("workflow_phase_secondary_target_files") or [])
+            if str(path)
+        ]
+        secondary_target_files = [_resolve_workflow_target_path(path) for path in secondary_target_file_labels]
+        secondary_constraints = dict(metadata.get("workflow_phase_secondary_constraints") or {})
+        secondary_target_symbols = dict(secondary_constraints.get("target_symbols") or {})
+        resolved_secondary_target_symbols = _resolve_workflow_target_symbols(secondary_target_symbols)
         if phase_status == "ready":
             phase_results.append(
                 {
@@ -1257,13 +1278,37 @@ def _run_workflow_phase_autopatches(
         phase_results.append(phase_record)
         _write_phase_results()
         file_runs: List[Dict[str, Any]] = []
+        pending_targets: List[Tuple[str, Path, Dict[str, List[str]]]] = []
         for target_label, target_path in zip(target_file_labels or [""], target_files or [Path()]):
-            file_constraints = dict(base_constraints)
-            selected_symbols: List[str] = []
+            symbol_map: Dict[str, List[str]] = {}
             if resolved_target_symbols and target_path:
                 symbol_key = str(target_path)
-                selected_symbols = list(resolved_target_symbols.get(symbol_key) or [])
+                selected = list(resolved_target_symbols.get(symbol_key) or [])
+                if selected:
+                    symbol_map[symbol_key] = selected
+            pending_targets.append((target_label, target_path, symbol_map))
+
+        secondary_pending_targets: List[Tuple[str, Path, Dict[str, List[str]]]] = []
+        for target_label, target_path in zip(secondary_target_file_labels, secondary_target_files):
+            symbol_map: Dict[str, List[str]] = {}
+            if resolved_secondary_target_symbols and target_path:
+                symbol_key = str(target_path)
+                selected = list(resolved_secondary_target_symbols.get(symbol_key) or [])
+                if selected:
+                    symbol_map[symbol_key] = selected
+            secondary_pending_targets.append((target_label, target_path, symbol_map))
+
+        primary_succeeded = False
+        while pending_targets:
+            target_label, target_path, explicit_symbol_map = pending_targets.pop(0)
+            file_constraints = dict(base_constraints)
+            selected_symbols: List[str] = []
+            if explicit_symbol_map:
+                symbol_key = next(iter(explicit_symbol_map))
+                selected_symbols = list(explicit_symbol_map.get(symbol_key) or [])
                 file_constraints["target_symbols"] = {symbol_key: selected_symbols} if selected_symbols else {}
+            else:
+                file_constraints["target_symbols"] = {}
             file_description = str(task.get("description") or "")
             if target_path:
                 file_description += f" Focus only on {target_label or target_path.as_posix()}."
@@ -1311,6 +1356,12 @@ def _run_workflow_phase_autopatches(
             )
             phase_record["file_runs"] = file_runs
             _write_phase_results()
+
+            if file_record.get("success") and not primary_succeeded:
+                primary_succeeded = True
+                if secondary_pending_targets:
+                    pending_targets.extend(secondary_pending_targets)
+                    secondary_pending_targets = []
 
         successful_runs = [entry for entry in file_runs if entry.get("success")]
         applied_runs = [entry for entry in file_runs if entry.get("apply_success")]

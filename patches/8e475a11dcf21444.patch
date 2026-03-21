@@ -1,0 +1,171 @@
+--- a/document_optimization.py
++++ b/document_optimization.py
+@@ -3266,112 +3266,89 @@
+         section_scores: Dict[str, float],
+         support_context: Dict[str, Any],
+     ) -> Dict[str, Any]:
+-        priorities = support_context.get("intake_priorities") if isinstance(support_context.get("intake_priorities"), dict) else {}
++        priorities = support_context.get('intake_priorities') if isinstance(support_context.get('intake_priorities'), dict) else {}
+         unresolved_objectives = {
+             _normalize_intake_objective(item)
+-            for item in list(priorities.get("unresolved_objectives") or [])
++            for item in list(priorities.get('unresolved_objectives') or [])
+             if _normalize_intake_objective(item)
+         }
+         critical_unresolved = {
+             _normalize_intake_objective(item)
+-            for item in list(priorities.get("critical_unresolved_objectives") or [])
++            for item in list(priorities.get('critical_unresolved_objectives') or [])
+             if _normalize_intake_objective(item)
+         }
+         blocker_extraction_targets = {
+             str(item).strip().lower()
+-            for item in list(priorities.get("blocker_extraction_targets") or [])
++            for item in list(priorities.get('blocker_extraction_targets') or [])
+             if str(item).strip()
+         }
+         blocker_workflow_phases = {
+             str(item).strip().lower()
+-            for item in list(priorities.get("blocker_workflow_phases") or [])
++            for item in list(priorities.get('blocker_workflow_phases') or [])
+             if str(item).strip()
+         }
+         blocker_issue_families = {
+             str(item).strip().lower()
+-            for item in list(priorities.get("blocker_issue_families") or [])
++            for item in list(priorities.get('blocker_issue_families') or [])
+             if str(item).strip()
+         }
+-        blocker_count = int(priorities.get("blocker_count") or 0)
+-        chronology_context_active = any(
+-            (
+-                bool(priorities.get("anchored_chronology_summary")),
+-                int(priorities.get("claim_temporal_gap_count") or 0) > 0,
+-                int(priorities.get("unresolved_temporal_issue_count", priorities.get("temporal_issue_count", 0)) or 0) > 0,
+-                int(priorities.get("resolved_temporal_issue_count") or 0) > 0,
+-            )
+-        )
+-        graph_blockers = unresolved_objectives.intersection(
+-            {
+-                "exact_dates",
+-                "timeline",
+-                "actors",
+-                "staff_names_titles",
+-                "causation_link",
+-                "causation_sequence",
+-                "anchor_adverse_action",
+-                "anchor_appeal_rights",
+-                "hearing_request_timing",
+-                "response_dates",
+-            }
+-        )
+-        document_blockers = unresolved_objectives.intersection(
+-            {
+-                "documents",
+-                "harm_remedy",
+-                "exact_dates",
+-                "anchor_adverse_action",
+-                "anchor_appeal_rights",
+-                "staff_names_titles",
+-                "hearing_request_timing",
+-                "response_dates",
+-            }
+-        )
+-
+-        factual_pressure = max(0.0, 1.0 - float(section_scores.get("factual_allegations") or 0.0))
+-        claims_pressure = max(0.0, 1.0 - float(section_scores.get("claims_for_relief") or 0.0))
+-        requested_relief_pressure = max(0.0, 1.0 - float(section_scores.get("requested_relief") or 0.0))
+-        affidavit_pressure = max(0.0, 1.0 - float(section_scores.get("affidavit") or 0.0))
+-        certificate_pressure = max(0.0, 1.0 - float(section_scores.get("certificate_of_service") or 0.0))
+-        packet_pressure = max(0.0, 1.0 - float(section_scores.get("packet_projection") or 0.0))
+-        intake_pressure = max(0.0, 1.0 - float(section_scores.get("intake_questioning") or 0.0))
+-
++        blocker_count = int(priorities.get('blocker_count') or 0)
++        chronology_context_active = any((
++            bool(priorities.get('anchored_chronology_summary')),
++            int(priorities.get('claim_temporal_gap_count') or 0) > 0,
++            int(priorities.get('unresolved_temporal_issue_count', priorities.get('temporal_issue_count', 0)) or 0) > 0,
++            int(priorities.get('resolved_temporal_issue_count') or 0) > 0,
++        ))
++        graph_blockers = unresolved_objectives.intersection({
++            'exact_dates', 'timeline', 'actors', 'staff_names_titles', 'causation_link', 'causation_sequence',
++            'anchor_adverse_action', 'anchor_appeal_rights', 'hearing_request_timing', 'response_dates',
++        })
++        document_blockers = unresolved_objectives.intersection({
++            'documents', 'harm_remedy', 'exact_dates', 'anchor_adverse_action', 'anchor_appeal_rights',
++            'staff_names_titles', 'hearing_request_timing', 'response_dates',
++        })
++        factual_pressure = max(0.0, 1.0 - float(section_scores.get('factual_allegations') or 0.0))
++        claims_pressure = max(0.0, 1.0 - float(section_scores.get('claims_for_relief') or 0.0))
++        requested_relief_pressure = max(0.0, 1.0 - float(section_scores.get('requested_relief') or 0.0))
++        affidavit_pressure = max(0.0, 1.0 - float(section_scores.get('affidavit') or 0.0))
++        certificate_pressure = max(0.0, 1.0 - float(section_scores.get('certificate_of_service') or 0.0))
++        packet_pressure = max(0.0, 1.0 - float(section_scores.get('packet_projection') or 0.0))
++        intake_pressure = max(0.0, 1.0 - float(section_scores.get('intake_questioning') or 0.0))
+         phase_scores = {
+-            "graph_analysis": _clamp(
++            'graph_analysis': _clamp(
+                 factual_pressure * 0.55
+                 + claims_pressure * 0.15
+-                + min(len(graph_blockers) * 0.08, 0.28)
++                + min(len(graph_blockers) * 0.1100, 0.28)
+                 + min(len(critical_unresolved.intersection(graph_blockers)) * 0.05, 0.15)
+-                + (0.08 if blocker_workflow_phases.intersection({"graph_analysis"}) else 0.0)
+-                + min(len(blocker_extraction_targets.intersection({"timeline_anchors", "actor_role_mapping", "retaliation_sequence", "hearing_process", "response_timeline"})) * 0.03, 0.15)
++                + (0.08 if blocker_workflow_phases.intersection({'graph_analysis'}) else 0.0)
++                + min(len(blocker_extraction_targets.intersection({'timeline_anchors', 'actor_role_mapping', 'retaliation_sequence', 'hearing_process', 'response_timeline'})) * 0.03, 0.15)
+             ),
+-            "document_generation": _clamp(
++            'document_generation': _clamp(
+                 claims_pressure * 0.2
+                 + requested_relief_pressure * 0.2
+                 + affidavit_pressure * 0.2
+                 + certificate_pressure * 0.15
+                 + packet_pressure * 0.15
+-                + min(len(document_blockers) * 0.06, 0.18)
+-                + (0.05 if blocker_workflow_phases.intersection({"document_generation"}) else 0.0)
++                + min(len(document_blockers) * 0.0800, 0.18)
++                + (0.05 if blocker_workflow_phases.intersection({'document_generation'}) else 0.0)
+             ),
+-            "intake_questioning": _clamp(
++            'intake_questioning': _clamp(
+                 (intake_pressure * 0.55)
+-                + min(len(unresolved_objectives) * 0.05, 0.2)
++                + min(len(unresolved_objectives) * 0.0500, 0.2)
+                 + min(len(critical_unresolved) * 0.04, 0.12)
+                 + min(blocker_count * 0.03, 0.12)
+-                + (0.04 if blocker_workflow_phases.intersection({"intake_questioning"}) else 0.0)
++                + (0.04 if blocker_workflow_phases.intersection({'intake_questioning'}) else 0.0)
+             ),
+         }
+-        if blocker_issue_families.intersection({"notice_chain", "response_timeline", "hearing_process"}):
+-            phase_scores["document_generation"] = _clamp(float(phase_scores.get("document_generation") or 0.0) + 0.04)
++        if blocker_issue_families.intersection({'notice_chain', 'response_timeline', 'hearing_process'}):
++            phase_scores['document_generation'] = _clamp(float(phase_scores.get('document_generation') or 0.0) + 0.04)
+         if graph_blockers and factual_pressure >= 0.35:
+-            phase_scores["graph_analysis"] = _clamp(
++            phase_scores['graph_analysis'] = _clamp(
+                 max(
+-                    float(phase_scores.get("graph_analysis") or 0.0),
+-                    float(phase_scores.get("intake_questioning") or 0.0) + 0.05,
++                    float(phase_scores.get('graph_analysis') or 0.0),
++                    float(phase_scores.get('intake_questioning') or 0.0) + 0.05,
+                 )
+             )
+-
+         phase_focus_order = [
+             name
+             for name, _score in sorted(
+@@ -3389,9 +3366,9 @@
+             for phase_name in phase_focus_order
+         }
+         return {
+-            "phase_scores": phase_scores,
+-            "phase_focus_order": phase_focus_order,
+-            "phase_target_sections": phase_target_sections,
++            'phase_scores': phase_scores,
++            'phase_focus_order': phase_focus_order,
++            'phase_target_sections': phase_target_sections,
+         }
+ 
+     def _select_phase_target_section(

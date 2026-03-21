@@ -23,9 +23,18 @@ You now have a complete audit toolkit comprising:
 
 **Best for:** Turning the evidence already collected in this repo into an adversarially tested draft complaint package.
 
+If you want package-mode search to run with shared hybrid retrieval instead of lexical fallback, install the optional HACC search extras into an isolated environment first:
+
+```bash
+python3 -m venv .venv-hacc-search --system-site-packages
+.venv-hacc-search/bin/pip install -r requirements-hacc-search.txt
+```
+
+Then invoke the grounded pipeline with that interpreter:
+
 ```bash
 # Recommended live route via Codex-backed llm_router
-python3 hacc_grounded_pipeline.py \
+.venv-hacc-search/bin/python hacc_grounded_pipeline.py \
   --provider codex \
   --model gpt-5.3-codex \
   --num-sessions 1 \
@@ -35,7 +44,7 @@ python3 hacc_grounded_pipeline.py \
   --filing-forum hud
 
 # Demo mode if you want deterministic no-API behavior
-python3 hacc_grounded_pipeline.py \
+.venv-hacc-search/bin/python hacc_grounded_pipeline.py \
   --demo \
   --num-sessions 1 \
   --max-turns 2 \
@@ -43,6 +52,8 @@ python3 hacc_grounded_pipeline.py \
   --synthesize-complaint \
   --filing-forum hud
 ```
+
+The first vector-backed run may download the embedding model used by the search adapter.
 
 Artifacts land in `research_results/grounded_runs/<timestamp>/` and include:
 
@@ -54,6 +65,8 @@ Artifacts land in `research_results/grounded_runs/<timestamp>/` and include:
 - `complaint_synthesis/draft_complaint_package.md`
 - `complaint_synthesis/intake_follow_up_worksheet.json`
 - `complaint_synthesis/intake_follow_up_worksheet.md`
+
+When shared hybrid search is active, `run_summary.json` reports `effective_hacc_search_mode: shared_hybrid` and the search summary will not include a fallback note.
 
 ### Option 0B: Fill Missing Facts And Rerun
 

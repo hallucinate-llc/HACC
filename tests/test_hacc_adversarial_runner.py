@@ -1011,6 +1011,73 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             },
         )
 
+    def test_workflow_phase_autopatches_expand_to_secondary_target_after_primary_success(self) -> None:
+        workflow_payload = {
+            "phase_tasks": [
+                {
+                    "phase_name": "document_generation",
+                    "task_id": "task_document",
+                    "description": "Document phase should expand after the primary target succeeds.",
+                    "target_files": ["document_optimization.py"],
+                    "method": "test_driven",
+                    "constraints": {
+                        "target_symbols": {
+                            "document_optimization.py": ["_build_workflow_phase_targeting"],
+                        }
+                    },
+                    "metadata": {
+                        "workflow_phase": "document_generation",
+                        "workflow_phase_status": "critical",
+                        "workflow_phase_secondary_target_files": ["scripts/synthesize_hacc_complaint.py"],
+                        "workflow_phase_secondary_constraints": {
+                            "target_symbols": {
+                                "scripts/synthesize_hacc_complaint.py": ["_factual_allegations"],
+                            }
+                        },
+                    },
+                },
+            ]
+        }
+
+        calls = []
+
+        def fake_run_agentic_autopatch(**kwargs):
+            calls.append(kwargs)
+            target_file = str((kwargs.get("target_files") or [None])[0])
+            return {
+                "requested": True,
+                "success": True,
+                "apply_success": False,
+                "target_files": [target_file],
+                "target_symbols": dict((kwargs.get("constraints") or {}).get("target_symbols") or {}),
+                "summary_json": None,
+                "error": None,
+                "patch_path": f"/tmp/{Path(target_file).name}.patch",
+                "validation": {"patch_validation": {"passed": True}},
+            }
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            with mock.patch("hacc_adversarial_runner._run_agentic_autopatch", side_effect=fake_run_agentic_autopatch):
+                summary = _run_workflow_phase_autopatches(
+                    optimizer=object(),
+                    results=[],
+                    report=SimpleNamespace(num_sessions_analyzed=1),
+                    workflow_payload=workflow_payload,
+                    output_root=Path(tmpdir),
+                    method="test_driven",
+                    apply_patch=False,
+                    provider_name="codex",
+                    model_name="gpt-5.3-codex",
+                )
+
+        self.assertEqual(len(calls), 2)
+        self.assertTrue(str(calls[0]["target_files"][0]).endswith("complaint-generator/document_optimization.py"))
+        self.assertTrue(str(calls[1]["target_files"][0]).endswith("complaint-generator/scripts/synthesize_hacc_complaint.py"))
+        file_runs = summary["results"][0]["file_runs"]
+        self.assertEqual(len(file_runs), 2)
+        self.assertEqual(file_runs[0]["target_symbols"], ["_build_workflow_phase_targeting"])
+        self.assertEqual(file_runs[1]["target_symbols"], ["_factual_allegations"])
+
     def test_main_prints_effective_search_mode_and_fallback(self) -> None:
         fake_summary = {
             "artifacts": {

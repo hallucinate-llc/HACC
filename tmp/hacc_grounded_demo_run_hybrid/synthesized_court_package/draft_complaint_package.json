@@ -1,0 +1,255 @@
+{
+  "generated_at": "2026-03-21T05:51:23.614883+00:00",
+  "preset": "core_hacc_policies",
+  "filing_forum": "court",
+  "session_id": "session_20260321_050547_000",
+  "critic_score": 0.5,
+  "summary": "If HACC denies a request for an accommodation because it is not reasonable (it would impose an undue financial and administrative burden or fundamentally alter the nature of HACC\u2019s operations), HACC will notify the family in writing of its decision. The notice will inform the family of the right to appeal HACC\u2019s decision through an informal hearing (if ap...",
+  "caption": {
+    "court": "Court to be determined",
+    "case_title": "Complainant v. Housing Authority of Clackamas County",
+    "document_title": "Draft Complaint for Housing Discrimination",
+    "caption_note": "Retaliation complaint anchored to HACC core housing policies"
+  },
+  "parties": {
+    "plaintiff": "Complainant / tenant or program participant (name to be inserted).",
+    "defendant": "Housing Authority of Clackamas County (HACC)."
+  },
+  "jurisdiction_and_venue": [
+    "Jurisdiction and venue should be tailored to the final filing forum and the specific legal claims asserted.",
+    "The current draft is grounded in HACC housing-policy evidence and is intended as a complaint-development scaffold rather than a filed pleading.",
+    "The dispute appears to arise from housing-program administration, adverse action, and procedural protections connected to HACC operations."
+  ],
+  "legal_theory_summary": {
+    "theory_labels": [
+      "retaliation",
+      "due_process_failure"
+    ],
+    "protected_bases": [],
+    "authority_hints": [
+      "Fair Housing Act anti-retaliation provisions",
+      "24 C.F.R. Part 100"
+    ]
+  },
+  "anchor_sections": [
+    "grievance_hearing",
+    "appeal_rights"
+  ],
+  "factual_allegations": [
+    "Drafting readiness is warning (coverage 0.95); formalization should wait until graph completeness and document-generation blockers are cleared (graph_analysis_not_ready, document_generation_not_ready).",
+    "Graph completeness gate is still open; factual allegations should remain provisional until chronology links, actor mapping, and causation sequence are complete.",
+    "Document generation remains gated at drafting handoff; unresolved factual and legal gaps must be surfaced and closed before formalization.",
+    "Unresolved factual gaps still require confirmation before formalization, including Graph chronology is incomplete and still needs canonical events and timeline links before formalization.",
+    "Structured anchor evidence for summary-of-facts and allegations from ADMISSIONS AND CONTINUED OCCUPANCY POLICY (grievance_hearing, appeal_rights): If HACC denies a request for an accommodation because it is not reasonable (it would impose an undue financial and administrative burden or fundamentally alter the nature of HACC\u2019s operations), HACC will notify the family in writing of its decision. The notice will inform the family of the right to appeal HACC\u2019s decision through an informal hearing (if ap...",
+    "Structured anchor evidence for summary-of-facts and allegations from ADMINISTRATIVE PLAN (grievance_hearing, appeal_rights): Informal Hearings for Participants), an opportunity for an informal hearing must be given to residents for any dispute that a resident may have with respect to an owner action in accordance with the individual\u2019s lease or the contract administrator in accordance with RAD PBV requirements that adversely affect the resident\u2019s rights, obligations, welfare, or...",
+    "The core documentary support for these allegations appears in Exhibit A (ADMISSIONS AND CONTINUED OCCUPANCY POLICY) and Exhibit B (ADMINISTRATIVE PLAN)."
+  ],
+  "claims_theory": [
+    "Formalization gate: drafting remains warning (coverage 0.95) because graph_analysis_not_ready, document_generation_not_ready; claims are provisional until unresolved graph and drafting blockers are closed.",
+    "Unresolved factual gaps are still blocking final legal framing, including Graph chronology is incomplete and still needs canonical events and timeline links before formalization.",
+    "This theory is framed to generalize across housing_discrimination and hacc_research_engine by tying each claim to both policy language and case-specific evidence artifacts.",
+    "Anchor evidence promoted into claim support from ADMISSIONS AND CONTINUED OCCUPANCY POLICY (grievance_hearing, appeal_rights): If HACC denies a request for an accommodation because it is not reasonable (it would impose an undue financial and administrative burden or fundamentally alter the nature of HACC\u2019s operations), HACC will notify the family in writing of its decision. The notice will inform the family of the right to appeal HACC\u2019s decision through an informal hearing (if ap...",
+    "Fair Housing Act anti-retaliation provisions, 24 C.F.R. Part 100 may be implicated if HACC used grievance, review, or adverse-action procedures to respond to protected complaints or protected activity.",
+    "The available policy language suggests the complainant should have received an informal review or hearing, written notice, and a review decision, but the intake narrative describes those protections as missing or unclear.",
+    "The primary documentary support for these theories appears in Exhibit A (ADMISSIONS AND CONTINUED OCCUPANCY POLICY) and Exhibit B (ADMINISTRATIVE PLAN)."
+  ],
+  "policy_basis": [
+    "ADMISSIONS AND CONTINUED OCCUPANCY POLICY supports grievance hearing, appeal rights: [reasonable_accommodation, notice, hearing] If HACC denies a request for an accommodation because it is not reasonable (it would impose an undue financial and administrative burden or fundamentally alter the nature of HACC\u2019s operations), HACC will notify the family in writing of its decision. The notice will inform the family of the right to appeal HACC\u2019s decision through an informal hearing (if ap... Full passage: If HACC denies a request for an accommodation because it is not reasonable (it would impose an undue financial and administrative burden or fundamentally alter the nature of HACC\u2019s operations), HACC will notify the family in writing of its decision. The notice will inform the family of the right to appeal HACC\u2019s decision through an informal hearing (if applicable) or the grievance process (see Chapter 14). If HACC denies a request for an accommodation because it is not reasonable (it would impose an undue financial and administrative burden or fundamentally alter the nature of HACC\u2019s operations), but has determined there is an alternative accommodation that could effectively address the family's disability related need without a fundamental alteration to the public housing program without imposing an undue financial and administrative burden, HACC will notify the family in writing.",
+    "ADMINISTRATIVE PLAN supports grievance hearing, appeal rights: [hearing] Informal Hearings for Participants), an opportunity for an informal hearing must be given to residents for any dispute that a resident may have with respect to an owner action in accordance with the individual\u2019s lease or the contract administrator in accordance with RAD PBV requirements that adversely affect the resident\u2019s rights, obligations, welfare, or... Full passage: Informal Hearings for Participants), an opportunity for an informal hearing must be given to residents for any dispute that a resident may have with respect to an owner action in accordance with the individual\u2019s lease or the contract administrator in accordance with RAD PBV requirements that adversely affect the resident\u2019s rights, obligations, welfare, or status. \uf0b7 For any hearing required under 24 CFR 982.555(a)(1)(i)\u2013(v), the contract administrator will perform the hearing in accordance with Chapter 16 Part III: Informal Reviews and Hearings, as is the current standard in the program. \uf0b7 For any additional hearings required under RAD, HACC (as owner) will perform the hearing. An informal hearing will not be required for class grievances or for disputes between residents not involving HACC (as owner) or contract administrator. This hearing requirement does not apply to and is not intended as a forum for initiating or negotiating policy changes between a group or groups of residents and HACC (as owner) or contract administrator."
+  ],
+  "causes_of_action": [
+    {
+      "title": "Failure to Provide Required Notice and Process",
+      "theory": "The draft facts suggest denial or termination activity without the clear notice, review, or hearing process described by HACC policy.",
+      "support": [
+        "Formalization gate: drafting remains warning (coverage 0.95) because graph_analysis_not_ready, document_generation_not_ready; claims are provisional until unresolved graph and drafting blockers are closed.",
+        "Unresolved factual gaps are still blocking final legal framing, including Graph chronology is incomplete and still needs canonical events and timeline links before formalization.",
+        "Documentary support: Exhibit A (ADMISSIONS AND CONTINUED OCCUPANCY POLICY). Rationale: selected as the closest documentary match for this claim."
+      ],
+      "selected_exhibits": [
+        {
+          "exhibit_id": "Exhibit A",
+          "label": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY"
+        }
+      ],
+      "selection_rationale": "selected as the closest documentary match for this claim",
+      "selection_tags": [
+        "notice",
+        "hearing",
+        "adverse_action"
+      ]
+    },
+    {
+      "title": "Retaliation for Protected Complaint Activity",
+      "theory": "The complainant narrative suggests adverse treatment after raising concerns or invoking grievance protections.",
+      "support": [
+        "Fair Housing Act anti-retaliation provisions, 24 C.F.R. Part 100 may be implicated if HACC used grievance, review, or adverse-action procedures to respond to protected complaints or protected activity.",
+        "Documentary support: Exhibit A (ADMISSIONS AND CONTINUED OCCUPANCY POLICY) and Exhibit B (ADMINISTRATIVE PLAN). Rationale: selected for the strongest overlap with grievance activity and adverse-process protections tied to the retaliation theory."
+      ],
+      "selected_exhibits": [
+        {
+          "exhibit_id": "Exhibit A",
+          "label": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY"
+        },
+        {
+          "exhibit_id": "Exhibit B",
+          "label": "ADMINISTRATIVE PLAN"
+        }
+      ],
+      "selection_rationale": "selected for the strongest overlap with grievance activity and adverse-process protections tied to the retaliation theory",
+      "selection_tags": []
+    }
+  ],
+  "anchor_passages": [
+    "ADMISSIONS AND CONTINUED OCCUPANCY POLICY [grievance_hearing, appeal_rights]: [reasonable_accommodation, notice, hearing] If HACC denies a request for an accommodation because it is not reasonable (it would impose an undue financial and administrative burden or fundamentally alter the nature of HACC\u2019s operations), HACC will notify the family in writing of its decision. The notice will inform the family of the right to appeal HACC\u2019s decision through an informal hearing (if ap... Full passage: If HACC denies a request for an accommodation because it is not reasonable (it would impose an undue financial and administrative burden or fundamentally alter the nature of HACC\u2019s operations), HACC will notify the family in writing of its decision. The notice will inform the family of the right to appeal HACC\u2019s decision through an informal hearing (if applicable) or the grievance process (see Chapter 14). If HACC denies a request for an accommodation because it is not reasonable (it would impose an undue financial and administrative burden or fundamentally alter the nature of HACC\u2019s operations), but has determined there is an alternative accommodation that could effectively address the family's disability related need without a fundamental alteration to the public housing program without imposing an undue financial and administrative burden, HACC will notify the family in writing.",
+    "ADMINISTRATIVE PLAN [grievance_hearing, appeal_rights]: [hearing] Informal Hearings for Participants), an opportunity for an informal hearing must be given to residents for any dispute that a resident may have with respect to an owner action in accordance with the individual\u2019s lease or the contract administrator in accordance with RAD PBV requirements that adversely affect the resident\u2019s rights, obligations, welfare, or... Full passage: Informal Hearings for Participants), an opportunity for an informal hearing must be given to residents for any dispute that a resident may have with respect to an owner action in accordance with the individual\u2019s lease or the contract administrator in accordance with RAD PBV requirements that adversely affect the resident\u2019s rights, obligations, welfare, or status. \uf0b7 For any hearing required under 24 CFR 982.555(a)(1)(i)\u2013(v), the contract administrator will perform the hearing in accordance with Chapter 16 Part III: Informal Reviews and Hearings, as is the current standard in the program. \uf0b7 For any additional hearings required under RAD, HACC (as owner) will perform the hearing. An informal hearing will not be required for class grievances or for disputes between residents not involving HACC (as owner) or contract administrator. This hearing requirement does not apply to and is not intended as a forum for initiating or negotiating policy changes between a group or groups of residents and HACC (as owner) or contract administrator."
+  ],
+  "supporting_evidence": [
+    "ADMISSIONS AND CONTINUED OCCUPANCY POLICY: [reasonable_accommodation, notice, hearing] If HACC denies a request for an accommodation because it is not reasonable (it would impose an undue financial and administrative burden or fundamentally alter the nature of HACC\u2019s operations), HACC will notify the family in writing of its decision. The notice will inform the family of the right to appeal HACC\u2019s decision through an informal hearing (if ap... Full passage: If HACC denies a request for an accommodation because it is not reasonable (it would impose an undue financial and administrative burden or fundamentally alter the nature of HACC\u2019s operations), HACC will notify the family in writing of its decision. The notice will inform the family of the right to appeal HACC\u2019s decision through an informal hearing (if applicable) or the grievance process (see Chapter 14). If HACC denies a request for an accommodation because it is not reasonable (it would impose an undue financial and administrative burden or fundamentally alter the nature of HACC\u2019s operations), but has determined there is an alternative accommodation that could effectively address the family's disability related need without a fundamental alteration to the public housing program without imposing an undue financial and administrative burden, HACC will notify the family in writing. (/home/barberb/HACC/hacc_website/a38c7914-ea37-4c2f-a815-711d4a97c92b).",
+    "ADMINISTRATIVE PLAN: [hearing] Informal Hearings for Participants), an opportunity for an informal hearing must be given to residents for any dispute that a resident may have with respect to an owner action in accordance with the individual\u2019s lease or the contract administrator in accordance with RAD PBV requirements that adversely affect the resident\u2019s rights, obligations, welfare, or... Full passage: Informal Hearings for Participants), an opportunity for an informal hearing must be given to residents for any dispute that a resident may have with respect to an owner action in accordance with the individual\u2019s lease or the contract administrator in accordance with RAD PBV requirements that adversely affect the resident\u2019s rights, obligations, welfare, or status. \uf0b7 For any hearing required under 24 CFR 982.555(a)(1)(i)\u2013(v), the contract administrator will perform the hearing in accordance with Chapter 16 Part III: Informal Reviews and Hearings, as is the current standard in the program. \uf0b7 For any additional hearings required under RAD, HACC (as owner) will perform the hearing. An informal hearing will not be required for class grievances or for disputes between residents not involving HACC (as owner) or contract administrator. This hearing requirement does not apply to and is not intended as a forum for initiating or negotiating policy changes between a group or groups of residents and HACC (as owner) or contract administrator. (/home/barberb/HACC/hacc_website/8ee6f7d1-0c36-48e4-9677-336b95fb9858)."
+  ],
+  "proposed_allegations": [
+    "Plaintiff alleges conduct arising from a retaliation and grievance-related housing complaint involving HACC notice and review protections.",
+    "The available HACC materials indicate that If HACC denies a request for an accommodation because it is not reasonable (it would impose an undue financial and administrative burden or fundamentally alter the nature of HACC\u2019s operations), HACC will notify the family in writing of its decision. The notice will inform the family of the right to appeal HACC\u2019s decision through an informal hearing (if ap...",
+    "The intake record suggests the grievance or hearing process was not handled in the manner described by HACC policy.",
+    "Case-specific facts still need confirmation, including the date and nature of the adverse action, whether written notice, an informal review, a grievance hearing, or an appeal was requested or denied, who at HACC made or communicated the decision, the resulting housing harm and requested remedy."
+  ],
+  "anchored_chronology_summary": [],
+  "intake_blocker_summary": {
+    "blocking_item_count": 0,
+    "blocking_objectives": [],
+    "extraction_targets": [],
+    "workflow_phases": [],
+    "blocking_items": []
+  },
+  "outstanding_intake_gaps": [],
+  "outstanding_intake_follow_up_questions": [],
+  "requested_relief": [
+    "Declaratory relief identifying the challenged conduct and policies.",
+    "Injunctive relief requiring fair review, corrected process, and non-retaliation safeguards.",
+    "Compensatory damages or other available monetary relief according to proof.",
+    "Costs, fees, and any other relief authorized by law."
+  ],
+  "grounded_evidence_summary": [],
+  "grounding_overview": {
+    "evidence_summary": "",
+    "anchor_sections": [],
+    "anchor_passage_count": 0,
+    "upload_candidate_count": 0,
+    "mediator_packet_count": 0,
+    "uploaded_evidence_count": 0,
+    "top_documents": []
+  },
+  "search_summary": {
+    "requested_search_mode": "shared_hybrid",
+    "effective_search_mode": "shared_hybrid"
+  },
+  "actor_critic_optimizer": {
+    "optimization_method": "actor_critic",
+    "phase_focus_order": [
+      "graph_analysis",
+      "document_generation",
+      "intake_questioning"
+    ],
+    "priority": 70,
+    "router_backed_question_quality": false,
+    "metrics": {
+      "question_quality": 0.5,
+      "information_extraction": 0.5,
+      "empathy": 0.5,
+      "efficiency": 0.5,
+      "coverage": 0.5
+    }
+  },
+  "selection_rationale": {},
+  "source_artifacts": {
+    "results_json": "/home/barberb/HACC/tmp/hacc_grounded_demo_run_hybrid/adversarial_results.json",
+    "matrix_summary": null,
+    "selection_source": "results_json",
+    "grounded_run_dir": "/home/barberb/HACC/tmp/hacc_grounded_demo_run_hybrid",
+    "grounding_bundle_json": null,
+    "grounding_overview_json": null,
+    "evidence_upload_report_json": null,
+    "completed_intake_worksheet_json": null,
+    "search_summary": {
+      "requested_search_mode": "shared_hybrid",
+      "effective_search_mode": "shared_hybrid"
+    }
+  },
+  "requested_relief_annotations": [
+    {
+      "text": "Declaratory relief identifying the challenged conduct and policies."
+    },
+    {
+      "text": "Injunctive relief requiring fair review, corrected process, and non-retaliation safeguards."
+    },
+    {
+      "text": "Compensatory damages or other available monetary relief according to proof."
+    },
+    {
+      "text": "Costs, fees, and any other relief authorized by law."
+    }
+  ],
+  "claim_selection_summary": [
+    {
+      "title": "Failure to Provide Required Notice and Process",
+      "selection_tags": [
+        "notice",
+        "hearing",
+        "adverse_action"
+      ],
+      "selected_exhibits": [
+        {
+          "exhibit_id": "Exhibit A",
+          "label": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY"
+        }
+      ],
+      "selection_rationale": "selected as the closest documentary match for this claim"
+    },
+    {
+      "title": "Retaliation for Protected Complaint Activity",
+      "selection_tags": [],
+      "selected_exhibits": [
+        {
+          "exhibit_id": "Exhibit A",
+          "label": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY"
+        },
+        {
+          "exhibit_id": "Exhibit B",
+          "label": "ADMINISTRATIVE PLAN"
+        }
+      ],
+      "selection_rationale": "selected for the strongest overlap with grievance activity and adverse-process protections tied to the retaliation theory"
+    }
+  ],
+  "relief_selection_summary": [
+    {
+      "text": "Declaratory relief identifying the challenged conduct and policies.",
+      "strategic_families": [],
+      "strategic_role": "",
+      "strategic_note": "",
+      "related_claims": []
+    },
+    {
+      "text": "Injunctive relief requiring fair review, corrected process, and non-retaliation safeguards.",
+      "strategic_families": [],
+      "strategic_role": "",
+      "strategic_note": "",
+      "related_claims": []
+    },
+    {
+      "text": "Compensatory damages or other available monetary relief according to proof.",
+      "strategic_families": [],
+      "strategic_role": "",
+      "strategic_note": "",
+      "related_claims": []
+    },
+    {
+      "text": "Costs, fees, and any other relief authorized by law.",
+      "strategic_families": [],
+      "strategic_role": "",
+      "strategic_note": "",
+      "related_claims": []
+    }
+  ]
+}

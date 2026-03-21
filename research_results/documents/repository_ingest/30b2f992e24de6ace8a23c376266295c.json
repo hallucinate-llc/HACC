@@ -1,16 +1,16 @@
 {
-  "title": "README",
-  "relative_path": "README.md",
+  "title": "requirements-hacc-search",
+  "relative_path": "requirements-hacc-search.txt",
   "source_type": "repository_evidence",
-  "filename": "README.md",
-  "mime_type": "text/markdown",
-  "size": 34655,
+  "filename": "requirements-hacc-search.txt",
+  "mime_type": "text/plain",
+  "size": 78,
   "backend_available": true,
   "parser_version": "documents-adapter:1",
   "source": "file",
-  "chunk_count": 36,
+  "chunk_count": 1,
   "paragraph_count": 1,
-  "text_length": 31269,
+  "text_length": 78,
   "input_format": "text",
   "page_count": 1,
   "extraction_method": "text_normalization",
@@ -22,9 +22,9 @@
   },
   "source_span": {
     "char_start": 0,
-    "char_end": 31269,
-    "text_length": 31269,
-    "raw_size": 34655,
+    "char_end": 78,
+    "text_length": 78,
+    "raw_size": 78,
     "page_count": 1
   },
   "transform_lineage": {
@@ -35,7 +35,7 @@
     "chunking": {
       "chunk_size": 1000,
       "overlap": 100,
-      "chunk_count": 36
+      "chunk_count": 1
     },
     "extraction": {
       "method": "text_normalization",
@@ -44,9 +44,9 @@
     },
     "source_span": {
       "char_start": 0,
-      "char_end": 31269,
-      "text_length": 31269,
-      "raw_size": 34655,
+      "char_end": 78,
+      "text_length": 78,
+      "raw_size": 78,
       "page_count": 1
     }
   },
@@ -58,11 +58,11 @@
     "backend_available": true,
     "implementation_status": "implemented"
   },
-  "record_id": "71ac6ab9a8bc009a27e1e75e455ecaed",
-  "checksum": "bc1517aa3abb828e8ed0ab86c76f272381225eb2fc7748e1e2893530a0c07792",
-  "source_path": "/home/barberb/HACC/README.md",
-  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/71ac6ab9a8bc009a27e1e75e455ecaed.txt",
-  "content_type": "text/markdown",
+  "record_id": "30b2f992e24de6ace8a23c376266295c",
+  "checksum": "2474469eb66dbe6296304620108de35235d7589dfd8aed5b881ea57483166eea",
+  "source_path": "/home/barberb/HACC/requirements-hacc-search.txt",
+  "parsed_text_path": "/home/barberb/HACC/research_results/documents/repository_ingest/30b2f992e24de6ace8a23c376266295c.txt",
+  "content_type": "text/plain",
   "ocr_attempted": false,
   "ocr_used": false,
   "needs_ocr": false

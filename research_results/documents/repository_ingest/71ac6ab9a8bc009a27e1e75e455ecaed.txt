@@ -33,6 +33,22 @@ The system integrates with the [`complaint-generator`](./complaint-generator/) s
 ## Quick Start
 ### Option 0 — Run the Full Grounded Complaint Pipeline (Recommended)
 Turns evidence already collected in this repository into an adversarially tested draft complaint package. No API keys required in demo mode.
+If you want package-mode search to use the shared hybrid path instead of lexical fallback, create an isolated environment and install the optional HACC search extras first:
+```bash
+python3 -m venv .venv-hacc-search --system-site-packages
+.venv-hacc-search/bin/pip install -r requirements-hacc-search.txt
+```
+Then run the pipeline with that interpreter:
+```bash
+.venv-hacc-search/bin/python hacc_grounded_pipeline.py \
+--demo \
+--num-sessions 1 \
+--max-turns 2 \
+--top-k 2 \
+--synthesize-complaint \
+--filing-forum hud
+```
+The first vector-backed run may download the embedding model used by the search adapter.
 ```bash
 python3 hacc_grounded_pipeline.py \
 --demo \
@@ -53,6 +69,7 @@ Artifacts land in `research_results/grounded_runs/<timestamp>/`:
 | `complaint_synthesis/draft_complaint_package.json` | Structured complaint (JSON) |
 | `complaint_synthesis/draft_complaint_package.md` | Draft complaint (Markdown) |
 | `run_summary.json` | Consolidated workflow summary |
+When shared hybrid search is active, `run_summary.json` reports `effective_hacc_search_mode: shared_hybrid` and the search summary will not include a fallback note.
 ### Option A — Manual Evidence Collection (No API Keys)
 ```bash
 # 1. Request documents using the evidence request template
