@@ -1031,7 +1031,7 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
                         "workflow_phase_secondary_target_files": ["scripts/synthesize_hacc_complaint.py"],
                         "workflow_phase_secondary_constraints": {
                             "target_symbols": {
-                                "scripts/synthesize_hacc_complaint.py": ["_factual_allegations"],
+                                "scripts/synthesize_hacc_complaint.py": ["_merge_seed_with_grounding"],
                             }
                         },
                     },
@@ -1076,7 +1076,7 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
         file_runs = summary["results"][0]["file_runs"]
         self.assertEqual(len(file_runs), 2)
         self.assertEqual(file_runs[0]["target_symbols"], ["_build_workflow_phase_targeting"])
-        self.assertEqual(file_runs[1]["target_symbols"], ["_factual_allegations"])
+        self.assertEqual(file_runs[1]["target_symbols"], ["_merge_seed_with_grounding"])
 
     def test_main_prints_effective_search_mode_and_fallback(self) -> None:
         fake_summary = {

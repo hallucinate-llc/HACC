@@ -1,0 +1,29 @@
+--- a/scripts/synthesize_hacc_complaint.py
++++ b/scripts/synthesize_hacc_complaint.py
+@@ -2621,7 +2621,7 @@
+     blocker_seen = _reset_seen(blocker_handoff_answers)
+ 
+     anchor_passages = [dict(item) for item in list(key_facts.get("anchor_passages") or []) if isinstance(item, dict)]
+-    for passage in anchor_passages[:4]:
++    for passage in anchor_passages[:5]:
+         title = str(passage.get("title") or "anchor evidence").strip()
+         source_path = str(passage.get("source_path") or "").strip()
+         section_labels = [str(item).strip().lower() for item in list(passage.get("section_labels") or []) if str(item).strip()]
+@@ -2662,7 +2662,7 @@
+                 f"Map grievance hearing and appeal rights language from {title}{section_phrase} to hearing request date, notice text, and review outcome facts.",
+             )
+ 
+-    for evidence in [dict(item) for item in list(merged.get("hacc_evidence") or []) if isinstance(item, dict)][:6]:
++    for evidence in [dict(item) for item in list(merged.get("hacc_evidence") or []) if isinstance(item, dict)][:7]:
+         title = str(evidence.get("title") or "evidence artifact").strip()
+         modality = str(evidence.get("evidence_type") or evidence.get("modality") or "").strip().lower()
+         snippet = _summarize_policy_excerpt(str(evidence.get("snippet") or ""))
+@@ -2698,7 +2698,7 @@
+             _append_unique_text(blocker_handoff_raw_answers, blocker_answer_seen, answer)
+ 
+     blocker_obj_seen: set[str] = set()
+-    for answer in blocker_handoff_raw_answers[:8]:
++    for answer in blocker_handoff_raw_answers[:7]:
+         objective = _normalize_intake_objective(_classify_intake_question_objective(answer))
+         if objective:
+             _append_unique_objective(unresolved_objectives, unresolved_seen, objective)
