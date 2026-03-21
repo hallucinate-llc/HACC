@@ -1218,6 +1218,15 @@ def _run_workflow_phase_autopatches(
         tertiary_constraints = dict(metadata.get("workflow_phase_tertiary_constraints") or {})
         tertiary_target_symbols = dict(tertiary_constraints.get("target_symbols") or {})
         resolved_tertiary_target_symbols = _resolve_workflow_target_symbols(tertiary_target_symbols)
+        quaternary_target_file_labels = [
+            str(path)
+            for path in list(metadata.get("workflow_phase_quaternary_target_files") or [])
+            if str(path)
+        ]
+        quaternary_target_files = [_resolve_workflow_target_path(path) for path in quaternary_target_file_labels]
+        quaternary_constraints = dict(metadata.get("workflow_phase_quaternary_constraints") or {})
+        quaternary_target_symbols = dict(quaternary_constraints.get("target_symbols") or {})
+        resolved_quaternary_target_symbols = _resolve_workflow_target_symbols(quaternary_target_symbols)
         if phase_status == "ready":
             phase_results.append(
                 {
@@ -1317,9 +1326,19 @@ def _run_workflow_phase_autopatches(
                 if selected:
                     symbol_map[symbol_key] = selected
             tertiary_pending_targets.append((target_label, target_path, symbol_map))
+        quaternary_pending_targets: List[Tuple[str, Path, Dict[str, List[str]]]] = []
+        for target_label, target_path in zip(quaternary_target_file_labels, quaternary_target_files):
+            symbol_map: Dict[str, List[str]] = {}
+            if resolved_quaternary_target_symbols and target_path:
+                symbol_key = str(target_path)
+                selected = list(resolved_quaternary_target_symbols.get(symbol_key) or [])
+                if selected:
+                    symbol_map[symbol_key] = selected
+            quaternary_pending_targets.append((target_label, target_path, symbol_map))
 
         primary_succeeded = False
         secondary_succeeded = False
+        tertiary_succeeded = False
         while pending_targets:
             target_label, target_path, explicit_symbol_map = pending_targets.pop(0)
             file_constraints = dict(base_constraints)
@@ -1387,11 +1406,25 @@ def _run_workflow_phase_autopatches(
                     secondary_succeeded = True
                     pending_targets.extend(tertiary_pending_targets)
                     tertiary_pending_targets = []
+                elif quaternary_pending_targets:
+                    secondary_succeeded = True
+                    tertiary_succeeded = True
+                    pending_targets.extend(quaternary_pending_targets)
+                    quaternary_pending_targets = []
             elif file_record.get("success") and primary_succeeded and not secondary_succeeded:
                 secondary_succeeded = True
                 if tertiary_pending_targets:
                     pending_targets.extend(tertiary_pending_targets)
                     tertiary_pending_targets = []
+                elif quaternary_pending_targets:
+                    tertiary_succeeded = True
+                    pending_targets.extend(quaternary_pending_targets)
+                    quaternary_pending_targets = []
+            elif file_record.get("success") and primary_succeeded and secondary_succeeded and not tertiary_succeeded:
+                tertiary_succeeded = True
+                if quaternary_pending_targets:
+                    pending_targets.extend(quaternary_pending_targets)
+                    quaternary_pending_targets = []
 
         successful_runs = [entry for entry in file_runs if entry.get("success")]
         applied_runs = [entry for entry in file_runs if entry.get("apply_success")]

@@ -1,0 +1,86 @@
+--- a/adversarial_harness/complainant.py
++++ b/adversarial_harness/complainant.py
+@@ -1292,17 +1292,16 @@
+         return "\n".join([f"- {item}" for item in guidance])
+ 
+     def _build_actor_critic_guidance(self, question: str) -> str:
+-        question_text = str(question or "").strip()
++        question_text = str(question or '').strip()
+         question_lower = question_text.lower()
+-        context = self.context or ComplaintContext(complaint_type="unknown", key_facts={})
++        context = self.context or ComplaintContext(complaint_type='unknown', key_facts={})
+ 
+         phase_focus = _ordered_workflow_phases(
+             list(context.workflow_phase_priorities or _ACTOR_CRITIC_PHASE_FOCUS_ORDER),
+             explicit_phase_order=_ACTOR_CRITIC_PHASE_FOCUS_ORDER,
+         )
+-
+         placeholder_objectives = [
+-            str(item.get("objective") or "").strip()
++            str(item.get('objective') or '').strip()
+             for item in _extract_confirmation_placeholders(context.key_facts)
+             if isinstance(item, dict)
+         ]
+@@ -1312,20 +1311,18 @@
+         )
+ 
+         guidance: List[str] = []
+-        guidance.append("Keep your answer short, factual, and easy for the mediator to act on in the next question.")
+-        if str(context.emotional_state).lower() in _EMPATHY_HEAVY_STATES:
+-            guidance.append("Open with one brief impact/emotion sentence, then provide concrete facts.")
+-        if any(token in question_lower for token in ("how did that affect you", "impact", "harm", "stress", "feeling", "feel")):
+-            guidance.append("Name one concrete impact (housing/work/health/financial) and one emotional impact.")
+-        if any(token in question_lower for token in ("why", "explain", "tell me more", "what happened")) and len(question_text.split()) < 10:
+-            guidance.append("If the question is vague, provide the best direct answer and add one precise clarification need.")
++        guidance.append('Keep your answer short, factual, and easy for the mediator to act on in the next question.')
++        if any(token in question_lower for token in ('how did that affect you', 'impact', 'harm', 'stress', 'feeling', 'feel')):
++            guidance.append('Name one concrete impact (housing/work/health/financial) and one emotional impact.')
++        if any(token in question_lower for token in ('why', 'explain', 'tell me more', 'what happened')) and len(question_text.split()) < 10:
++            guidance.append('If the question is vague, provide the best direct answer and add one precise clarification need.')
+ 
+         if unresolved_objectives:
+-            prioritized = unresolved_objectives[:3]
++            prioritized = unresolved_objectives[:2]
+             guidance.append(
+                 "When facts remain unresolved, end with a short 'still needs confirmation' line for: "
+-                + ", ".join(prioritized)
+-                + "."
++                + ', '.join(prioritized)
++                + '.'
+             )
+             follow_up_prompts = [
+                 prompt
+@@ -1333,23 +1330,22 @@
+                 if prompt
+             ]
+             if follow_up_prompts:
+-                guidance.append("Suggested high-yield follow-up prompts: " + " | ".join(follow_up_prompts))
++                guidance.append('Suggested high-yield follow-up prompts: ' + ' | '.join(follow_up_prompts))
+         else:
+-            guidance.append("If chronology or decision-maker precision still feels vague, ask one explicit follow-up prompt before ending.")
++            guidance.append('If chronology or decision-maker precision still feels vague, ask one explicit follow-up prompt before ending.')
+ 
+         if any(token in question_lower for token in _CHRONOLOGY_TERMS):
+-            guidance.append("Close chronology gaps by providing event sequence with dates and response timing, even if approximate.")
++            guidance.append('Close chronology gaps by providing event sequence with dates and response timing, even if approximate.')
+         if any(token in question_lower for token in _DECISION_MAKER_TERMS):
+-            guidance.append("Pin down each decision-maker and role; if uncertain, provide the best known role and source context.")
++            guidance.append('Pin down each decision-maker and role; if uncertain, provide the best known role and source context.')
+         if any(token in question_lower for token in _DOCUMENT_ARTIFACT_TERMS):
+-            guidance.append("Name documentary artifacts precisely (letter/email/notice), including IDs or subject lines when available.")
+-
++            guidance.append('Name documentary artifacts precisely (letter/email/notice), including IDs or subject lines when available.')
+         guidance.append(
+-            "Phase focus order: "
+-            + " -> ".join(phase_focus[:3] if phase_focus else list(_ACTOR_CRITIC_PHASE_FOCUS_ORDER))
+-            + "."
+-        )
+-        return "\n".join(f"- {item}" for item in guidance)
++            'Phase focus order: '
++            + ' -> '.join(phase_focus[:3] if phase_focus else list(_ACTOR_CRITIC_PHASE_FOCUS_ORDER))
++            + '.'
++        )
++        return '\n'.join(f'- {item}' for item in guidance)
+     
+     def _fallback_complaint(self, seed_data: Dict[str, Any]) -> str:
+         """Fallback complaint if LLM fails."""

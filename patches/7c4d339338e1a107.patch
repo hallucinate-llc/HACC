@@ -1,0 +1,38 @@
+--- a/mediator/formal_document.py
++++ b/mediator/formal_document.py
+@@ -1374,7 +1374,7 @@
+         if chronology_lines:
+             lines.append("")
+             lines.append("ANCHORED CHRONOLOGY")
+-            for index, chronology_line in enumerate(chronology_lines, 1):
++            for index, chronology_line in enumerate(chronology_lines[:4], 1):
+                 lines.append(f"{index}. {chronology_line}")
+ 
+         claims = _listify(draft.get("legal_claims"))
+@@ -1399,7 +1399,7 @@
+             supporting_facts = _listify(claim.get("supporting_facts"))
+             if supporting_facts:
+                 lines.append("Supporting Facts:")
+-                for fact in supporting_facts:
++                for fact in supporting_facts[:5]:
+                     lines.append(f"- {_clean_sentence(fact)}")
+             authorities = _listify(claim.get("supporting_authorities"))
+             if authorities:
+@@ -1431,7 +1431,7 @@
+         if exhibits:
+             lines.append("")
+             lines.append("EXHIBITS")
+-            for exhibit in exhibits:
++            for exhibit in exhibits[:6]:
+                 reference = exhibit.get("reference") or exhibit.get("source_url") or exhibit.get("cid") or ""
+                 summary = exhibit.get("summary") or exhibit.get("description") or ""
+                 exhibit_line = f"{exhibit.get('label', 'Exhibit')} - {_clean_text(exhibit.get('title') or exhibit.get('description') or 'Supporting exhibit')}"
+@@ -1455,7 +1455,7 @@
+                 lines.append(_clean_sentence(affidavit.get("knowledge_graph_note")))
+             if affidavit.get("facts"):
+                 lines.append("Affiant states as follows:")
+-                for index, fact in enumerate(_listify(affidavit.get("facts")), 1):
++                for index, fact in enumerate(_listify(affidavit.get("facts"))[:6], 1):
+                     cleaned_fact = _clean_sentence(fact)
+                     if cleaned_fact:
+                         lines.append(f"{index}. {cleaned_fact}")

@@ -1,0 +1,32 @@
+{
+  "patch_id": "7c4d339338e1a107",
+  "agent_id": "adversarial-harness-optimizer",
+  "task_id": "adversarial_autopatch_20260321_084750",
+  "description": "Use the test_driven optimizer to improve the complaint-generator document generation phase. Target files: document_optimization.py. Phase goal: Improve drafting handoff so complaint generation reflects the collected facts, exhibits, and unresolved gaps at formalization time. Recommended actions: Carry blocker-closing intake answers directly into factual allegations, claim support, and exhibit descriptions so drafted complaints preserve timing, actor identity, and causation sequence.; Gate document generation on graph completeness signals and surface unresolved factual or legal gaps in drafting readiness before formalization.; Carry canonical fact ids, support traces, and artifact-backed support rows through drafting so the complaint text is grounded in traceable evidence.. Weak complaint types to generalize for: housing_discrimination, hacc_research_engine. Weak evidence modalities to improve: policy_document, file_evidence. Focus only on mediator/formal_document.py. Target symbols: render_text.",
+  "diff_content": "--- a/mediator/formal_document.py\n+++ b/mediator/formal_document.py\n@@ -1374,7 +1374,7 @@\n         if chronology_lines:\n             lines.append(\"\")\n             lines.append(\"ANCHORED CHRONOLOGY\")\n-            for index, chronology_line in enumerate(chronology_lines, 1):\n+            for index, chronology_line in enumerate(chronology_lines[:4], 1):\n                 lines.append(f\"{index}. {chronology_line}\")\n \n         claims = _listify(draft.get(\"legal_claims\"))\n@@ -1399,7 +1399,7 @@\n             supporting_facts = _listify(claim.get(\"supporting_facts\"))\n             if supporting_facts:\n                 lines.append(\"Supporting Facts:\")\n-                for fact in supporting_facts:\n+                for fact in supporting_facts[:5]:\n                     lines.append(f\"- {_clean_sentence(fact)}\")\n             authorities = _listify(claim.get(\"supporting_authorities\"))\n             if authorities:\n@@ -1431,7 +1431,7 @@\n         if exhibits:\n             lines.append(\"\")\n             lines.append(\"EXHIBITS\")\n-            for exhibit in exhibits:\n+            for exhibit in exhibits[:6]:\n                 reference = exhibit.get(\"reference\") or exhibit.get(\"source_url\") or exhibit.get(\"cid\") or \"\"\n                 summary = exhibit.get(\"summary\") or exhibit.get(\"description\") or \"\"\n                 exhibit_line = f\"{exhibit.get('label', 'Exhibit')} - {_clean_text(exhibit.get('title') or exhibit.get('description') or 'Supporting exhibit')}\"\n@@ -1455,7 +1455,7 @@\n                 lines.append(_clean_sentence(affidavit.get(\"knowledge_graph_note\")))\n             if affidavit.get(\"facts\"):\n                 lines.append(\"Affiant states as follows:\")\n-                for index, fact in enumerate(_listify(affidavit.get(\"facts\")), 1):\n+                for index, fact in enumerate(_listify(affidavit.get(\"facts\"))[:6], 1):\n                     cleaned_fact = _clean_sentence(fact)\n                     if cleaned_fact:\n                         lines.append(f\"{index}. {cleaned_fact}\")\n",
+  "target_files": [
+    "mediator/formal_document.py"
+  ],
+  "created_at": "2026-03-21T08:48:13.580765",
+  "parent_patches": [],
+  "ipfs_cid": null,
+  "worktree_path": "",
+  "validated": false,
+  "applied": false,
+  "metadata": {
+    "patch_mode": "direct_diff",
+    "repo_root": "/home/barberb/HACC/complaint-generator",
+    "generation_diagnostics": [
+      {
+        "file": "/home/barberb/HACC/complaint-generator/mediator/formal_document.py",
+        "status": "optimized",
+        "mode": "symbol_level",
+        "target_symbols": [
+          "render_text"
+        ],
+        "response_length": 131531,
+        "changed": true
+      }
+    ]
+  }
+}

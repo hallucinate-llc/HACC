@@ -1,0 +1,20 @@
+--- a/scripts/synthesize_hacc_complaint.py
++++ b/scripts/synthesize_hacc_complaint.py
+@@ -2698,7 +2698,7 @@
+             _append_unique_text(blocker_handoff_raw_answers, blocker_answer_seen, answer)
+ 
+     blocker_obj_seen: set[str] = set()
+-    for answer in blocker_handoff_raw_answers[:8]:
++    for answer in blocker_handoff_raw_answers[:6]:
+         objective = _normalize_intake_objective(_classify_intake_question_objective(answer))
+         if objective:
+             _append_unique_objective(unresolved_objectives, unresolved_seen, objective)
+@@ -2728,7 +2728,7 @@
+             list(dict.fromkeys(unresolved_objectives)),
+             key=lambda item: (-_safe_float(INTAKE_OBJECTIVE_PRIORITY.get(item), 0.0), item),
+         )
+-        for objective in prioritized[:4]:
++        for objective in prioritized[:5]:
+             label = _intake_objective_label(objective)
+             if objective == "anchor_appeal_rights":
+                 line = (
