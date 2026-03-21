@@ -280,6 +280,9 @@ def _resolve_autopatch_timeout(
         "question_flow": 300.0,
         "denoiser_focus": 240.0,
         "full_mediator": 420.0,
+        "graph_analysis": 300.0,
+        "document_generation": 300.0,
+        "intake_questioning": 240.0,
     }
     if profile in profile_defaults:
         return profile_defaults[profile]
@@ -919,6 +922,7 @@ def _run_agentic_autopatch(
     recommended_target_files: List[Path],
     used_recommended_targets: bool,
     target_files: List[Path],
+    description: Optional[str],
     method: str,
     profile: str,
     constraints: Dict[str, Any],
@@ -939,6 +943,7 @@ def _run_agentic_autopatch(
         "requested_target_files": [str(path) for path in requested_target_files],
         "profile": profile,
         "target_files": [str(path) for path in target_files],
+        "target_symbols": _sanitize_for_json((constraints or {}).get("target_symbols")),
         "recommended_profile": recommended_profile,
         "recommended_target_files": [str(path) for path in recommended_target_files],
         "used_recommended_targets": bool(used_recommended_targets),
@@ -995,6 +1000,7 @@ def _run_agentic_autopatch(
         result = optimizer.run_agentic_autopatch(
             results,
             target_files=target_files,
+            description=description,
             method=method,
             constraints=constraints,
             report=report,
@@ -1140,6 +1146,7 @@ def _run_workflow_phase_autopatches(
     phase_dir = output_root / "workflow_phase_autopatch"
     phase_dir.mkdir(parents=True, exist_ok=True)
     results_path = phase_dir / "workflow_phase_autopatch_results.json"
+    stability_only_mode = int(getattr(report, "num_sessions_analyzed", 0) or 0) == 0
 
     def _write_phase_results() -> None:
         results_path.write_text(
@@ -1148,13 +1155,41 @@ def _run_workflow_phase_autopatches(
         )
 
     phase_results: List[Dict[str, Any]] = []
-    for task in list(workflow_payload.get("phase_tasks") or []):
+    for index, task in enumerate(list(workflow_payload.get("phase_tasks") or [])):
         metadata = dict(task.get("metadata") or {})
         phase_name = str(task.get("phase_name") or metadata.get("workflow_phase") or "workflow_phase")
         target_files = [Path(path) for path in list(task.get("target_files") or [])]
         phase_output_root = phase_dir / phase_name
         base_constraints = dict(task.get("constraints") or {})
         target_symbols = dict(base_constraints.get("target_symbols") or {})
+        if stability_only_mode and index > 0:
+            phase_results.append(
+                {
+                    "phase": phase_name,
+                    "task_id": str(task.get("task_id") or ""),
+                    "description": str(task.get("description") or ""),
+                    "target_files": [str(path) for path in target_files],
+                    "status": "skipped",
+                    "started_at": datetime.now(UTC).isoformat(),
+                    "completed_at": datetime.now(UTC).isoformat(),
+                    "file_runs": [],
+                    "summary": {
+                        "requested": True,
+                        "success": False,
+                        "apply_success": False,
+                        "target_files": [str(path) for path in target_files],
+                        "target_symbols": _sanitize_for_json(target_symbols),
+                        "error": "Skipped workflow phase because no successful sessions were available; prioritize stability and intake fixes first.",
+                    },
+                    "patch_path": None,
+                    "patch_cid": None,
+                    "success": False,
+                    "apply_success": False,
+                    "summary_json": None,
+                }
+            )
+            _write_phase_results()
+            continue
         phase_record: Dict[str, Any] = {
             "phase": phase_name,
             "task_id": str(task.get("task_id") or ""),
@@ -1168,10 +1203,16 @@ def _run_workflow_phase_autopatches(
         file_runs: List[Dict[str, Any]] = []
         for target_path in target_files or [Path()]:
             file_constraints = dict(base_constraints)
+            selected_symbols: List[str] = []
             if target_symbols and target_path:
                 symbol_key = target_path.as_posix()
                 selected_symbols = target_symbols.get(symbol_key)
                 file_constraints["target_symbols"] = {symbol_key: selected_symbols} if selected_symbols else {}
+            file_description = str(task.get("description") or "")
+            if target_path:
+                file_description += f" Focus only on {target_path.as_posix()}."
+            if selected_symbols:
+                file_description += " Target symbols: " + ", ".join(str(symbol) for symbol in selected_symbols) + "."
             file_record: Dict[str, Any] = {
                 "target_file": str(target_path) if target_path else None,
                 "status": "running",
@@ -1191,6 +1232,7 @@ def _run_workflow_phase_autopatches(
                 recommended_target_files=[target_path] if target_path else target_files,
                 used_recommended_targets=False,
                 target_files=[target_path] if target_path else target_files,
+                description=file_description,
                 method=str(task.get("method") or method).strip().lower() if str(task.get("method") or "") else method,
                 profile=phase_name,
                 constraints=file_constraints,

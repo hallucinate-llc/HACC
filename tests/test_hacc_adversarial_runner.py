@@ -26,6 +26,7 @@ from hacc_adversarial_runner import (
     _extract_file_replacements,
     _resolve_autopatch_timeout,
     _run_agentic_autopatch,
+    _run_workflow_phase_autopatches,
     create_parser,
     main,
     run_hacc_adversarial_batch,
@@ -510,6 +511,9 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             self.assertEqual(_resolve_autopatch_timeout(profile="phase_manager_action_only"), 120.0)
             self.assertEqual(_resolve_autopatch_timeout(profile="question_flow"), 300.0)
             self.assertEqual(_resolve_autopatch_timeout(profile="full_mediator"), 420.0)
+            self.assertEqual(_resolve_autopatch_timeout(profile="graph_analysis"), 300.0)
+            self.assertEqual(_resolve_autopatch_timeout(profile="document_generation"), 300.0)
+            self.assertEqual(_resolve_autopatch_timeout(profile="intake_questioning"), 240.0)
 
         with mock.patch.dict("os.environ", {"HACC_AGENTIC_AUTOPATCH_TIMEOUT": "0"}, clear=False):
             self.assertIsNone(_resolve_autopatch_timeout(profile="question_flow"))
@@ -720,6 +724,76 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             self.assertIn("started_at", first["file_runs"][0])
             self.assertIn("completed_at", first["file_runs"][0])
             self.assertEqual(persisted[0]["status"], "completed")
+
+    def test_workflow_phase_autopatches_skip_later_phases_when_no_successful_sessions(self) -> None:
+        fake_report = SimpleNamespace(num_sessions_analyzed=0)
+        workflow_payload = {
+            "phase_tasks": [
+                {
+                    "phase_name": "intake_questioning",
+                    "task_id": "task_intake",
+                    "description": "Fix intake stability first.",
+                    "target_files": ["adversarial_harness/session.py"],
+                    "method": "actor_critic",
+                    "constraints": {
+                        "target_symbols": {
+                            "adversarial_harness/session.py": ["_inject_intake_prompt_questions"],
+                        }
+                    },
+                    "metadata": {"workflow_phase": "intake_questioning"},
+                },
+                {
+                    "phase_name": "graph_analysis",
+                    "task_id": "task_graph",
+                    "description": "Graph phase should be skipped without session data.",
+                    "target_files": ["complaint_phases/dependency_graph.py"],
+                    "method": "actor_critic",
+                    "constraints": {
+                        "target_symbols": {
+                            "complaint_phases/dependency_graph.py": ["get_claim_readiness"],
+                        }
+                    },
+                    "metadata": {"workflow_phase": "graph_analysis"},
+                },
+            ]
+        }
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            with mock.patch(
+                "hacc_adversarial_runner._run_agentic_autopatch",
+                return_value={
+                    "requested": True,
+                    "success": False,
+                    "apply_success": False,
+                    "target_files": ["adversarial_harness/session.py"],
+                    "target_symbols": {"adversarial_harness/session.py": ["_inject_intake_prompt_questions"]},
+                    "summary_json": str(Path(tmpdir) / "autopatch_summary.json"),
+                    "error": "timed out",
+                },
+            ) as autopatch_mock:
+                summary = _run_workflow_phase_autopatches(
+                    optimizer=object(),
+                    results=[],
+                    report=fake_report,
+                    workflow_payload=workflow_payload,
+                    output_root=Path(tmpdir),
+                    method="actor_critic",
+                    apply_patch=False,
+                    provider_name="codex",
+                    model_name="gpt-5.3-codex",
+                )
+
+            autopatch_mock.assert_called_once()
+            self.assertEqual(summary["count"], 2)
+            self.assertEqual(summary["results"][0]["phase"], "intake_questioning")
+            self.assertEqual(summary["results"][0]["status"], "completed")
+            self.assertEqual(summary["results"][1]["phase"], "graph_analysis")
+            self.assertEqual(summary["results"][1]["status"], "skipped")
+            self.assertIn("no successful sessions", summary["results"][1]["summary"]["error"].lower())
+            self.assertEqual(
+                summary["results"][1]["summary"]["target_symbols"],
+                {"complaint_phases/dependency_graph.py": ["get_claim_readiness"]},
+            )
 
     def test_main_prints_effective_search_mode_and_fallback(self) -> None:
         fake_summary = {
@@ -1116,15 +1190,17 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
                 recommended_target_files=[],
                 used_recommended_targets=False,
                 target_files=[],
+                description=None,
                 method="test_driven",
                 profile="question_flow",
-                constraints={},
+                constraints={"target_symbols": {"example.py": ["get_next"]}},
                 apply_patch=False,
                 provider_name="local",
                 model_name=None,
             )
 
         self.assertEqual(summary["error"], "unexpected indent (<unknown>, line 3)")
+        self.assertEqual(summary["target_symbols"], {"example.py": ["get_next"]})
         self.assertEqual(
             summary["metadata"]["generation_diagnostics"][0]["error_message"],
             "unexpected indent (<unknown>, line 3)",
