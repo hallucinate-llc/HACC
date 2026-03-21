@@ -1031,6 +1031,12 @@ def _run_agentic_autopatch(
             summary["error"] = str(result_error)
         elif not summary["success"] and not summary["patch_path"]:
             summary["error"] = "Agentic autopatch produced no patchable change"
+        if not summary["success"] and not summary["patch_path"]:
+            diagnostics = _optimizer_generation_diagnostics(resolved_optimizer) or _optimizer_generation_diagnostics(optimizer)
+            if diagnostics:
+                metadata = dict(summary.get("metadata") or {})
+                metadata.setdefault("generation_diagnostics", _sanitize_for_json(diagnostics))
+                summary["metadata"] = metadata
 
         if summary["patch_path"] and not demo_mode:
             patch_validation = _validate_generated_patch(

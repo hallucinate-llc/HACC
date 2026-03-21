@@ -1446,6 +1446,55 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
         self.assertIsNone(summary["patch_path"])
         self.assertEqual(summary["error"], "Agentic autopatch produced no patchable change")
 
+    def test_run_agentic_autopatch_carries_generation_diagnostics_on_no_patch_result(self) -> None:
+        result = SimpleNamespace(
+            success=False,
+            patch_path=None,
+            patch_cid=None,
+            metadata={},
+            metrics={},
+            validation=None,
+            error_message=None,
+        )
+
+        class NoPatchOptimizer:
+            def __init__(self):
+                self._last_agentic_generation_diagnostics = [
+                    {
+                        "file": "/tmp/example.py",
+                        "status": "no_change",
+                        "mode": "symbol_level",
+                        "raw_response_preview": "def get_claim_readiness(self):\\n    return {}",
+                    }
+                ]
+
+            def run_agentic_autopatch(self, *args, **kwargs):
+                return result
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            summary = _run_agentic_autopatch(
+                optimizer=NoPatchOptimizer(),
+                results=[],
+                report=SimpleNamespace(to_dict=lambda: {}),
+                output_root=Path(tmpdir),
+                requested_profile="graph_analysis",
+                requested_target_files=["complaint_phases/dependency_graph.py"],
+                recommended_profile="graph_analysis",
+                recommended_target_files=["complaint_phases/dependency_graph.py"],
+                used_recommended_targets=False,
+                target_files=["complaint_phases/dependency_graph.py"],
+                description="Optimize dependency readiness ranking",
+                method="actor_critic",
+                profile="graph_analysis",
+                constraints={"target_symbols": {"complaint_phases/dependency_graph.py": ["get_claim_readiness"]}},
+                apply_patch=False,
+                provider_name="codex",
+                model_name="gpt-5.3-codex",
+            )
+
+        assert summary["metadata"]["generation_diagnostics"][0]["status"] == "no_change"
+        assert "get_claim_readiness" in summary["metadata"]["generation_diagnostics"][0]["raw_response_preview"]
+
     def test_live_runner_uses_llm_router_backend(self) -> None:
         complaint_generator_root = REPO_ROOT / "complaint-generator"
         if str(complaint_generator_root) not in sys.path:
