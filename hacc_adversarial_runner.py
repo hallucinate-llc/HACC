@@ -1208,6 +1208,15 @@ def _run_workflow_phase_autopatches(
         secondary_constraints = dict(metadata.get("workflow_phase_secondary_constraints") or {})
         secondary_target_symbols = dict(secondary_constraints.get("target_symbols") or {})
         resolved_secondary_target_symbols = _resolve_workflow_target_symbols(secondary_target_symbols)
+        tertiary_target_file_labels = [
+            str(path)
+            for path in list(metadata.get("workflow_phase_tertiary_target_files") or [])
+            if str(path)
+        ]
+        tertiary_target_files = [_resolve_workflow_target_path(path) for path in tertiary_target_file_labels]
+        tertiary_constraints = dict(metadata.get("workflow_phase_tertiary_constraints") or {})
+        tertiary_target_symbols = dict(tertiary_constraints.get("target_symbols") or {})
+        resolved_tertiary_target_symbols = _resolve_workflow_target_symbols(tertiary_target_symbols)
         if phase_status == "ready":
             phase_results.append(
                 {
@@ -1298,7 +1307,18 @@ def _run_workflow_phase_autopatches(
                     symbol_map[symbol_key] = selected
             secondary_pending_targets.append((target_label, target_path, symbol_map))
 
+        tertiary_pending_targets: List[Tuple[str, Path, Dict[str, List[str]]]] = []
+        for target_label, target_path in zip(tertiary_target_file_labels, tertiary_target_files):
+            symbol_map: Dict[str, List[str]] = {}
+            if resolved_tertiary_target_symbols and target_path:
+                symbol_key = str(target_path)
+                selected = list(resolved_tertiary_target_symbols.get(symbol_key) or [])
+                if selected:
+                    symbol_map[symbol_key] = selected
+            tertiary_pending_targets.append((target_label, target_path, symbol_map))
+
         primary_succeeded = False
+        secondary_succeeded = False
         while pending_targets:
             target_label, target_path, explicit_symbol_map = pending_targets.pop(0)
             file_constraints = dict(base_constraints)
@@ -1362,6 +1382,15 @@ def _run_workflow_phase_autopatches(
                 if secondary_pending_targets:
                     pending_targets.extend(secondary_pending_targets)
                     secondary_pending_targets = []
+                elif tertiary_pending_targets:
+                    secondary_succeeded = True
+                    pending_targets.extend(tertiary_pending_targets)
+                    tertiary_pending_targets = []
+            elif file_record.get("success") and primary_succeeded and not secondary_succeeded:
+                secondary_succeeded = True
+                if tertiary_pending_targets:
+                    pending_targets.extend(tertiary_pending_targets)
+                    tertiary_pending_targets = []
 
         successful_runs = [entry for entry in file_runs if entry.get("success")]
         applied_runs = [entry for entry in file_runs if entry.get("apply_success")]

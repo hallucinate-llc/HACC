@@ -1034,6 +1034,12 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
                                 "scripts/synthesize_hacc_complaint.py": ["_merge_seed_with_grounding"],
                             }
                         },
+                        "workflow_phase_tertiary_target_files": ["document_pipeline.py"],
+                        "workflow_phase_tertiary_constraints": {
+                            "target_symbols": {
+                                "document_pipeline.py": ["_build_drafting_readiness"],
+                            }
+                        },
                     },
                 },
             ]
@@ -1070,13 +1076,15 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
                     model_name="gpt-5.3-codex",
                 )
 
-        self.assertEqual(len(calls), 2)
+        self.assertEqual(len(calls), 3)
         self.assertTrue(str(calls[0]["target_files"][0]).endswith("complaint-generator/document_optimization.py"))
         self.assertTrue(str(calls[1]["target_files"][0]).endswith("complaint-generator/scripts/synthesize_hacc_complaint.py"))
+        self.assertTrue(str(calls[2]["target_files"][0]).endswith("complaint-generator/document_pipeline.py"))
         file_runs = summary["results"][0]["file_runs"]
-        self.assertEqual(len(file_runs), 2)
+        self.assertEqual(len(file_runs), 3)
         self.assertEqual(file_runs[0]["target_symbols"], ["_build_workflow_phase_targeting"])
         self.assertEqual(file_runs[1]["target_symbols"], ["_merge_seed_with_grounding"])
+        self.assertEqual(file_runs[2]["target_symbols"], ["_build_drafting_readiness"])
 
     def test_main_prints_effective_search_mode_and_fallback(self) -> None:
         fake_summary = {
