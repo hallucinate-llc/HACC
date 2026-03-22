@@ -346,6 +346,61 @@ class HACCGroundedPipelineTests(unittest.TestCase):
             self.assertEqual(summary["complaint_synthesis"]["draft_complaint_package_json"], fake_synthesis["draft_complaint_package_json"])
             self.assertEqual(summary["artifacts"]["draft_complaint_package_md"], fake_synthesis["draft_complaint_package_md"])
 
+    def test_run_grounded_pipeline_can_reuse_existing_artifacts_for_synthesis(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            output_root = Path(tmpdir)
+            grounding = {
+                "status": "success",
+                "query": "reuse grounded query",
+                "claim_type": "housing_discrimination",
+                "search_summary": {"effective_search_mode": "lexical"},
+                "anchor_sections": ["appeal_rights"],
+                "anchor_passages": [],
+                "upload_candidates": [],
+                "mediator_evidence_packets": [],
+                "synthetic_prompts": {"court_complaint_synthesis_prompt": "Synthesize the complaint."},
+            }
+            upload = {
+                "status": "success",
+                "upload_count": 1,
+                "uploads": [{"title": "ADMINISTRATIVE PLAN"}],
+                "search_summary": {"effective_search_mode": "lexical"},
+            }
+            adversarial_summary = {
+                "search_summary": {"effective_search_mode": "lexical"},
+                "statistics": {"successful_sessions": 1, "total_sessions": 1},
+                "best_complaint": {"score": 0.77},
+                "artifacts": {"output_dir": str(output_root / "adversarial")},
+            }
+            (output_root / "grounding_bundle.json").write_text(json.dumps(grounding), encoding="utf-8")
+            (output_root / "evidence_upload_report.json").write_text(json.dumps(upload), encoding="utf-8")
+            (output_root / "adversarial_summary.json").write_text(json.dumps(adversarial_summary), encoding="utf-8")
+
+            fake_synthesis = {
+                "output_dir": str(output_root / "complaint_synthesis"),
+                "draft_complaint_package_json": str(output_root / "complaint_synthesis" / "draft_complaint_package.json"),
+                "draft_complaint_package_md": str(output_root / "complaint_synthesis" / "draft_complaint_package.md"),
+            }
+
+            with mock.patch.object(pipeline, "HACCResearchEngine") as engine_cls:
+                with mock.patch.object(pipeline, "run_hacc_adversarial_batch") as batch_mock:
+                    with mock.patch.object(pipeline, "_run_complaint_synthesis", return_value=fake_synthesis) as synth_mock:
+                        summary = pipeline.run_hacc_grounded_pipeline(
+                            output_dir=tmpdir,
+                            hacc_preset="core_hacc_policies",
+                            demo=True,
+                            synthesize_complaint=True,
+                            reuse_existing_artifacts=True,
+                        )
+
+            engine_cls.assert_not_called()
+            batch_mock.assert_not_called()
+            synth_mock.assert_called_once()
+            self.assertTrue((output_root / "run_summary.json").is_file())
+            self.assertTrue(summary["reuse_existing_artifacts"])
+            self.assertEqual(summary["grounding"]["query"], "reuse grounded query")
+            self.assertEqual(summary["adversarial"]["best_complaint"]["score"], 0.77)
+
 
 if __name__ == "__main__":
     unittest.main()

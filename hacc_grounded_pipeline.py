@@ -44,6 +44,16 @@ def _json_safe(value: Any) -> Any:
     return str(value)
 
 
+def _load_json_if_exists(path: Path) -> Optional[Dict[str, Any]]:
+    if not path.is_file():
+        return None
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+    return payload if isinstance(payload, dict) else None
+
+
 def _grounding_overview(grounding_bundle: Dict[str, Any], upload_report: Dict[str, Any]) -> Dict[str, Any]:
     anchor_sections = [str(item) for item in list(grounding_bundle.get("anchor_sections") or []) if str(item)]
     anchor_passages = [dict(item) for item in list(grounding_bundle.get("anchor_passages") or []) if isinstance(item, dict)]
@@ -152,6 +162,7 @@ def run_hacc_grounded_pipeline(
     synthesize_complaint: bool = False,
     filing_forum: str = "court",
     completed_intake_worksheet: Optional[str] = None,
+    reuse_existing_artifacts: bool = False,
 ) -> Dict[str, Any]:
     output_root = Path(output_dir).resolve()
     output_root.mkdir(parents=True, exist_ok=True)
@@ -161,42 +172,6 @@ def run_hacc_grounded_pipeline(
     default_request = _default_grounding_request(hacc_preset)
     grounding_query = str(query or default_request["query"])
     resolved_claim_type = str(claim_type or default_request["claim_type"] or "housing_discrimination")
-
-    engine = HACCResearchEngine(repo_root=REPO_ROOT)
-    grounding_bundle = engine.build_grounding_bundle(
-        grounding_query,
-        top_k=top_k,
-        claim_type=resolved_claim_type,
-        search_mode=hacc_search_mode,
-        use_vector=use_hacc_vector_search,
-    )
-    upload_report = engine.simulate_evidence_upload(
-        grounding_query,
-        top_k=top_k,
-        claim_type=resolved_claim_type,
-        user_id="hacc-grounded-pipeline",
-        search_mode=hacc_search_mode,
-        use_vector=use_hacc_vector_search,
-        db_dir=output_root / "mediator_state",
-    )
-    adversarial_summary = run_hacc_adversarial_batch(
-        output_dir=output_root / "adversarial",
-        num_sessions=num_sessions,
-        max_turns=max_turns,
-        max_parallel=max_parallel,
-        hacc_preset=hacc_preset,
-        hacc_count=top_k,
-        use_hacc_vector_search=use_hacc_vector_search,
-        hacc_search_mode=hacc_search_mode,
-        demo=demo,
-        config_path=config_path,
-        backend_id=backend_id,
-        provider=resolved_provider,
-        model=resolved_model,
-    )
-    grounding_bundle = _json_safe(grounding_bundle)
-    upload_report = _json_safe(upload_report)
-    adversarial_summary = _json_safe(adversarial_summary)
 
     grounding_path = output_root / "grounding_bundle.json"
     grounding_overview_path = output_root / "grounding_overview.json"
@@ -208,6 +183,51 @@ def run_hacc_grounded_pipeline(
     upload_path = output_root / "evidence_upload_report.json"
     adversarial_path = output_root / "adversarial_summary.json"
     summary_path = output_root / "run_summary.json"
+
+    grounding_bundle = _load_json_if_exists(grounding_path) if reuse_existing_artifacts else None
+    upload_report = _load_json_if_exists(upload_path) if reuse_existing_artifacts else None
+
+    if grounding_bundle is None or upload_report is None:
+        engine = HACCResearchEngine(repo_root=REPO_ROOT)
+        grounding_bundle = engine.build_grounding_bundle(
+            grounding_query,
+            top_k=top_k,
+            claim_type=resolved_claim_type,
+            search_mode=hacc_search_mode,
+            use_vector=use_hacc_vector_search,
+        )
+        upload_report = engine.simulate_evidence_upload(
+            grounding_query,
+            top_k=top_k,
+            claim_type=resolved_claim_type,
+            user_id="hacc-grounded-pipeline",
+            search_mode=hacc_search_mode,
+            use_vector=use_hacc_vector_search,
+            db_dir=output_root / "mediator_state",
+        )
+
+    adversarial_summary = _load_json_if_exists(adversarial_path) if reuse_existing_artifacts else None
+    if adversarial_summary is None and reuse_existing_artifacts:
+        adversarial_summary = _load_json_if_exists(output_root / "adversarial" / "run_summary.json")
+    if adversarial_summary is None:
+        adversarial_summary = run_hacc_adversarial_batch(
+            output_dir=output_root / "adversarial",
+            num_sessions=num_sessions,
+            max_turns=max_turns,
+            max_parallel=max_parallel,
+            hacc_preset=hacc_preset,
+            hacc_count=top_k,
+            use_hacc_vector_search=use_hacc_vector_search,
+            hacc_search_mode=hacc_search_mode,
+            demo=demo,
+            config_path=config_path,
+            backend_id=backend_id,
+            provider=resolved_provider,
+            model=resolved_model,
+        )
+    grounding_bundle = _json_safe(grounding_bundle)
+    upload_report = _json_safe(upload_report)
+    adversarial_summary = _json_safe(adversarial_summary)
     grounding_overview = _json_safe(_grounding_overview(grounding_bundle, upload_report))
 
     grounding_path.write_text(json.dumps(grounding_bundle, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -253,6 +273,7 @@ def run_hacc_grounded_pipeline(
         "hacc_preset": hacc_preset,
         "use_hacc_vector_search": bool(use_hacc_vector_search),
         "hacc_search_mode": hacc_search_mode,
+        "reuse_existing_artifacts": bool(reuse_existing_artifacts),
         "search_summary": {
             "grounding": grounding_bundle.get("search_summary", {}),
             "evidence_upload": upload_report.get("search_summary", {}),
@@ -318,6 +339,7 @@ def create_parser() -> argparse.ArgumentParser:
     parser.add_argument("--synthesize-complaint", action="store_true", help="Run complaint synthesis after the grounded adversarial batch completes.")
     parser.add_argument("--filing-forum", default="court", choices=("court", "hud", "state_agency"))
     parser.add_argument("--completed-intake-worksheet", default=None, help="Optional completed intake_follow_up_worksheet.json to merge into synthesis.")
+    parser.add_argument("--reuse-existing-artifacts", action="store_true", help="Reuse existing grounding/adversarial artifacts in the output directory before rerunning expensive stages.")
     parser.add_argument("--json", action="store_true", help="Print the full workflow summary JSON.")
     return parser
 
@@ -343,6 +365,7 @@ def main(argv: Optional[list[str]] = None) -> int:
         synthesize_complaint=args.synthesize_complaint,
         filing_forum=args.filing_forum,
         completed_intake_worksheet=args.completed_intake_worksheet,
+        reuse_existing_artifacts=args.reuse_existing_artifacts,
     )
     if args.json:
         print(json.dumps(summary, ensure_ascii=False, indent=2))
