@@ -1,0 +1,32 @@
+{
+  "patch_id": "46b5a276689d6dd6",
+  "agent_id": "adversarial-harness-optimizer",
+  "task_id": "adversarial_autopatch_20260322_003431",
+  "description": "Use the test_driven optimizer to improve the complaint-generator document generation phase. Target files: document_optimization.py. Phase goal: Improve drafting handoff so complaint generation reflects the collected facts, exhibits, and unresolved gaps at formalization time. Recommended actions: Carry blocker-closing intake answers directly into factual allegations, claim support, and exhibit descriptions so drafted complaints preserve timing, actor identity, and causation sequence.; Gate document generation on graph completeness signals and surface unresolved factual or legal gaps in drafting readiness before formalization.; Carry canonical fact ids, support traces, and artifact-backed support rows through drafting so the complaint text is grounded in traceable evidence.. Weak complaint types to generalize for: housing_discrimination, hacc_research_engine. Weak evidence modalities to improve: policy_document, file_evidence. Focus only on document_pipeline.py. Target symbols: _build_runtime_workflow_phase_plan.",
+  "diff_content": "--- a/document_pipeline.py\n+++ b/document_pipeline.py\n@@ -5934,17 +5934,17 @@\n             if unresolved_factual_gaps:\n                 actions.append(\n                     \"Close unresolved factual gaps before formalization: \"\n-                    + \"; \".join(unresolved_factual_gaps[:3])\n+                    + \"; \".join(unresolved_factual_gaps[:2])\n                 )\n             if unresolved_legal_gaps:\n                 actions.append(\n                     \"Close unresolved legal gaps before formalization: \"\n-                    + \"; \".join(unresolved_legal_gaps[:3])\n+                    + \"; \".join(unresolved_legal_gaps[:2])\n                 )\n             if uncovered_intake_objectives or missing_required_intake_objectives:\n                 actions.append(\n                     \"Resolve uncovered intake objectives before formalization: \"\n-                    + \", \".join((missing_required_intake_objectives or uncovered_intake_objectives)[:4])\n+                    + \", \".join((missing_required_intake_objectives or uncovered_intake_objectives)[:3])\n                 )\n             if structured_handoff_gap_count > 0:\n                 actions.append(\n",
+  "target_files": [
+    "document_pipeline.py"
+  ],
+  "created_at": "2026-03-22T00:35:00.904425",
+  "parent_patches": [],
+  "ipfs_cid": null,
+  "worktree_path": "",
+  "validated": false,
+  "applied": false,
+  "metadata": {
+    "patch_mode": "direct_diff",
+    "repo_root": "/home/barberb/HACC/complaint-generator",
+    "generation_diagnostics": [
+      {
+        "file": "/home/barberb/HACC/complaint-generator/document_pipeline.py",
+        "status": "optimized",
+        "mode": "symbol_level",
+        "target_symbols": [
+          "_build_runtime_workflow_phase_plan"
+        ],
+        "response_length": 406563,
+        "changed": true
+      }
+    ]
+  }
+}

@@ -1034,16 +1034,16 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
                                 "scripts/synthesize_hacc_complaint.py": ["_merge_seed_with_grounding"],
                             }
                         },
-                        "workflow_phase_tertiary_target_files": ["document_pipeline.py"],
+                        "workflow_phase_tertiary_target_files": ["mediator/formal_document.py"],
                         "workflow_phase_tertiary_constraints": {
                             "target_symbols": {
-                                "document_pipeline.py": ["_build_drafting_readiness"],
+                                "mediator/formal_document.py": ["render_text"],
                             }
                         },
-                        "workflow_phase_quaternary_target_files": ["mediator/formal_document.py"],
+                        "workflow_phase_quaternary_target_files": ["document_pipeline.py"],
                         "workflow_phase_quaternary_constraints": {
                             "target_symbols": {
-                                "mediator/formal_document.py": ["render_text"],
+                                "document_pipeline.py": ["_build_runtime_workflow_phase_plan"],
                             }
                         },
                     },
@@ -1085,14 +1085,14 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
         self.assertEqual(len(calls), 4)
         self.assertTrue(str(calls[0]["target_files"][0]).endswith("complaint-generator/document_optimization.py"))
         self.assertTrue(str(calls[1]["target_files"][0]).endswith("complaint-generator/scripts/synthesize_hacc_complaint.py"))
-        self.assertTrue(str(calls[2]["target_files"][0]).endswith("complaint-generator/document_pipeline.py"))
-        self.assertTrue(str(calls[3]["target_files"][0]).endswith("complaint-generator/mediator/formal_document.py"))
+        self.assertTrue(str(calls[2]["target_files"][0]).endswith("complaint-generator/mediator/formal_document.py"))
+        self.assertTrue(str(calls[3]["target_files"][0]).endswith("complaint-generator/document_pipeline.py"))
         file_runs = summary["results"][0]["file_runs"]
         self.assertEqual(len(file_runs), 4)
         self.assertEqual(file_runs[0]["target_symbols"], ["_build_workflow_phase_targeting"])
         self.assertEqual(file_runs[1]["target_symbols"], ["_merge_seed_with_grounding"])
-        self.assertEqual(file_runs[2]["target_symbols"], ["_build_drafting_readiness"])
-        self.assertEqual(file_runs[3]["target_symbols"], ["render_text"])
+        self.assertEqual(file_runs[2]["target_symbols"], ["render_text"])
+        self.assertEqual(file_runs[3]["target_symbols"], ["_build_runtime_workflow_phase_plan"])
 
     def test_main_prints_effective_search_mode_and_fallback(self) -> None:
         fake_summary = {

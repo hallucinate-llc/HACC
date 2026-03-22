@@ -329,17 +329,71 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertIn("Evaluate each uploaded evidence item", prompts["mediator_evaluation_prompt"])
             self.assertIn("Prioritize these anchor sections", prompts["mediator_evaluation_prompt"])
             self.assertIn("production_upload_prompt", prompts)
+            self.assertIn("production_evidence_intake_steps", prompts)
+            self.assertIn("mediator_upload_checklist", prompts)
+            self.assertIn("document_generation_checklist", prompts)
+            self.assertIn("evidence_upload_form_seed", prompts)
+            self.assertIn("mediator_evidence_review_prompt", prompts)
+            self.assertIn("document_generation_prompt", prompts)
+            self.assertEqual(
+                prompts["workflow_phase_priorities"],
+                ["intake_questioning", "evidence_upload", "graph_analysis", "document_generation"],
+            )
+            self.assertIn("actor_role_mapping", prompts["extraction_targets"])
+            self.assertIn("document_identifier_mapping", prompts["extraction_targets"])
+            self.assertIn("claim_support_mapping", prompts["extraction_targets"])
             self.assertIn("intake_questionnaire_prompt", prompts)
             self.assertIn("What happened, and what adverse action did HACC take", prompts["intake_questionnaire_prompt"])
             self.assertIn("Anchor the intake to these policy sections", prompts["intake_questionnaire_prompt"])
             self.assertEqual(len(prompts["intake_questions"]), 6)
             self.assertEqual(set(prompts["anchor_sections"]), {"reasonable_accommodation"})
+            self.assertEqual(prompts["evidence_upload_form_seed"]["claim_type"], "housing_discrimination")
+            self.assertEqual(prompts["evidence_upload_form_seed"]["recommended_files"], ["Reasonable Accommodation Policy"])
+            self.assertIn("claim_support_temporal_handoff", payload)
+            self.assertIn("drafting_readiness", payload)
+            self.assertIn("document_generation_handoff", payload)
+            self.assertIn("graph_completeness_signals", payload)
             self.assertEqual(len(payload["mediator_evidence_packets"]), 1)
             self.assertEqual(payload["mediator_evidence_packets"][0]["relative_path"], "README.md")
             self.assertEqual(
                 set(payload["mediator_evidence_packets"][0]["metadata"]["anchor_sections"]),
                 {"reasonable_accommodation"},
             )
+            self.assertIn("document_text", payload["mediator_evidence_packets"][0])
+            self.assertIn("claim_support_temporal_handoff", payload["mediator_evidence_packets"][0]["metadata"])
+
+    def test_search_local_surfaces_chronology_summary_and_prioritizes_timeline_ready_documents(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            dated_path = root / "dated_notice.txt"
+            dated_path.write_text(
+                "HACC sent written notice on March 4, 2024 and denied the review on March 8, 2024.",
+                encoding="utf-8",
+            )
+            plain_path = root / "plain_note.txt"
+            plain_path.write_text(
+                "HACC discussed a hearing and notice without any date details.",
+                encoding="utf-8",
+            )
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            payload = engine.search_local("hearing notice response date", top_k=2)
+
+            self.assertEqual(payload["status"], "success")
+            self.assertEqual(payload["chronology_ready_result_count"], 1)
+            self.assertEqual(payload["results"][0]["document_id"], "repo::dated_notice.txt")
+            self.assertGreaterEqual(payload["results"][0]["chronology_summary"]["timeline_anchor_count"], 1)
+            self.assertEqual(payload["results"][1]["chronology_summary"]["timeline_anchor_count"], 0)
 
     def test_select_uploadable_results_preserves_match_context(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -1171,6 +1225,63 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertEqual(payload["local_search_summary"]["requested_search_mode"], "hybrid")
             self.assertEqual(payload["local_search_summary"]["effective_search_mode"], "lexical_only")
             self.assertIn("using lexical results instead", payload["local_search_summary"]["fallback_note"])
+            self.assertEqual(payload["local_chronology_summary"]["chronology_ready_result_count"], 0)
+            self.assertEqual(payload["research_grounding_summary"]["upload_ready_candidate_count"], 0)
+            self.assertIn("seeded_discovery_plan", payload)
+
+    def test_research_builds_grounding_summary_and_seeded_discovery_plan(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            root.joinpath("notice.txt").write_text(
+                "HACC sent written notice on March 4, 2024 and denied the review on March 8, 2024.",
+                encoding="utf-8",
+            )
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            original_discover = engine.discover
+            original_discover_legal_authorities = engine.discover_legal_authorities
+            try:
+                engine.discover = lambda *args, **kwargs: {
+                    "status": "success",
+                    "results": [{"url": "https://example.org/policies/hearing-rights"}],
+                }
+                engine.discover_legal_authorities = lambda *args, **kwargs: {
+                    "status": "success",
+                    "results": [{"title": "42 U.S.C. 1437d", "authority_source": "us_code"}],
+                    "result_count": 1,
+                }
+                payload = engine.research(
+                    "notice review date",
+                    local_top_k=1,
+                    web_max_results=1,
+                    search_mode="lexical",
+                )
+            finally:
+                engine.discover = original_discover
+                engine.discover_legal_authorities = original_discover_legal_authorities
+
+            grounding_summary = payload["research_grounding_summary"]
+            self.assertEqual(grounding_summary["upload_ready_candidate_count"], 1)
+            self.assertEqual(grounding_summary["recommended_upload_paths"], ["notice.txt"])
+            self.assertGreaterEqual(grounding_summary["timeline_anchor_count"], 1)
+            self.assertIn("evidence_upload_form_seed", grounding_summary)
+            self.assertIn("production_evidence_intake_steps", grounding_summary)
+            self.assertIn("mediator_upload_checklist", grounding_summary)
+            self.assertIn("document_generation_handoff", grounding_summary)
+            self.assertIn("seeded_discovery_plan", grounding_summary)
+            self.assertEqual(grounding_summary["seeded_discovery_plan"]["has_web_results"], True)
+            self.assertEqual(grounding_summary["seeded_discovery_plan"]["has_legal_results"], True)
+            self.assertIn("example.org", grounding_summary["seeded_discovery_plan"]["recommended_domains"])
+            self.assertEqual(payload["seeded_discovery_plan"]["priority"], "chronology_first")
 
     def test_research_includes_shared_legal_discovery(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:

@@ -62,6 +62,36 @@ class HacceEvidenceSeedGenerationTests(unittest.TestCase):
                         "complaint_chatbot_prompt": "Ground the complaint chatbot in uploaded repository evidence.",
                         "mediator_evaluation_prompt": "Evaluate each uploaded evidence item.",
                     },
+                    "chronology_analysis": {
+                        "timeline_anchors": [
+                            {
+                                "fact_id": "fact:1",
+                                "anchor_text": "2024-01-04",
+                                "start_date": "2024-01-04",
+                            }
+                        ]
+                    },
+                    "timeline_anchors": [
+                        {
+                            "fact_id": "fact:1",
+                            "anchor_text": "2024-01-04",
+                            "start_date": "2024-01-04",
+                        }
+                    ],
+                    "claim_support_temporal_handoff": {
+                        "contract_version": "claim_support_temporal_handoff_v1",
+                        "chronology_task_count": 1,
+                        "unresolved_temporal_issue_count": 0,
+                    },
+                    "drafting_readiness": {
+                        "phase_status": "ready",
+                    },
+                    "document_generation_handoff": {
+                        "summary_of_facts_lines": ["Timeline line"],
+                    },
+                    "graph_completeness_signals": {
+                        "graph_complete": True,
+                    },
                     "mediator_evidence_packets": [
                         {
                             "document_label": "README.txt",
@@ -107,6 +137,10 @@ class HacceEvidenceSeedGenerationTests(unittest.TestCase):
         self.assertTrue(key_facts["complainant_story_facts"])
         self.assertIn("complaint_chatbot_prompt", key_facts["synthetic_prompts"])
         self.assertEqual(key_facts["mediator_evidence_packets"][0]["document_text"], "Repository evidence about grievance hearings and written notice.")
+        self.assertEqual(key_facts["timeline_anchors"][0]["start_date"], "2024-01-04")
+        self.assertEqual(key_facts["claim_support_temporal_handoff"]["contract_version"], "claim_support_temporal_handoff_v1")
+        self.assertEqual(key_facts["drafting_readiness"]["phase_status"], "ready")
+        self.assertTrue(key_facts["graph_completeness_signals"]["graph_complete"])
 
     def test_resolve_hacc_question_evidence_uses_package_search_mode(self) -> None:
         class FakeEngine:

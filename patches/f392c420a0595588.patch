@@ -1,0 +1,88 @@
+--- a/mediator/mediator.py
++++ b/mediator/mediator.py
+@@ -1557,45 +1557,45 @@
+ 		intake_case_file = self.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'intake_case_file') or {}
+ 		claim_support_packets = self.phase_manager.get_phase_data(ComplaintPhase.EVIDENCE, 'claim_support_packets') or {}
+ 		adversarial_summary = (
+-			self.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'adversarial_intake_priority_summary') or {}
++		self.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'adversarial_intake_priority_summary') or {}
+ 		)
+ 		chronology_priority_hints = self._extract_document_chronology_priority_hints(
+-			intake_case_file,
+-			claim_support_packets,
+-			adversarial_summary,
+-			self.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'workflow_optimization_guidance') or {},
+-			self.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'claim_support_temporal_handoff') or {},
+-			self.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'claim_reasoning_review') or {},
+-			self.phase_manager.get_phase_data(ComplaintPhase.EVIDENCE, 'workflow_optimization_guidance') or {},
+-			self.phase_manager.get_phase_data(ComplaintPhase.EVIDENCE, 'claim_support_temporal_handoff') or {},
+-			self.phase_manager.get_phase_data(ComplaintPhase.EVIDENCE, 'claim_reasoning_review') or {},
++		intake_case_file,
++		claim_support_packets,
++		adversarial_summary,
++		self.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'workflow_optimization_guidance') or {},
++		self.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'claim_support_temporal_handoff') or {},
++		self.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'claim_reasoning_review') or {},
++		self.phase_manager.get_phase_data(ComplaintPhase.EVIDENCE, 'workflow_optimization_guidance') or {},
++		self.phase_manager.get_phase_data(ComplaintPhase.EVIDENCE, 'claim_support_temporal_handoff') or {},
++		self.phase_manager.get_phase_data(ComplaintPhase.EVIDENCE, 'claim_reasoning_review') or {},
+ 		)
+ 		expected_objectives = [
+-			str(value).strip().lower()
+-			for value in (
+-				(adversarial_summary.get('expected_objectives') or [])
+-				if isinstance(adversarial_summary, dict)
+-				else []
+-			)
+-			if str(value).strip()
++		str(value).strip().lower()
++		for value in (
++			(adversarial_summary.get('expected_objectives') or [])
++			if isinstance(adversarial_summary, dict)
++			else []
++		)
++		if str(value).strip()
+ 		]
+ 		covered_objectives = [
+-			str(value).strip().lower()
+-			for value in (
+-				(adversarial_summary.get('covered_objectives') or [])
+-				if isinstance(adversarial_summary, dict)
+-				else []
+-			)
+-			if str(value).strip()
++		str(value).strip().lower()
++		for value in (
++			(adversarial_summary.get('covered_objectives') or [])
++			if isinstance(adversarial_summary, dict)
++			else []
++		)
++		if str(value).strip()
+ 		]
+ 		uncovered_objectives = [
+-			str(value).strip().lower()
+-			for value in (
+-				(adversarial_summary.get('uncovered_objectives') or [])
+-				if isinstance(adversarial_summary, dict)
+-				else []
+-			)
+-			if str(value).strip()
++		str(value).strip().lower()
++		for value in (
++			(adversarial_summary.get('uncovered_objectives') or [])
++			if isinstance(adversarial_summary, dict)
++			else []
++		)
++		if str(value).strip()
+ 		]
+ 		for default_objective in (
+ 			'anchor_appeal_rights',
+@@ -1787,7 +1787,7 @@
+ 				)
+ 				if objective in uncovered_objectives or objective in expected_objectives
+ 			],
+-			'intake_fallback_probes': intake_fallback_probes,
++			'intake_fallback_probes': intake_fallback_probes[:5],
+ 			'weak_claim_types': weak_claim_types,
+ 			'weak_evidence_modalities': sorted(weak_modalities),
+ 		}

@@ -1,0 +1,32 @@
+{
+  "patch_id": "219550b72d6cc5af",
+  "agent_id": "adversarial-harness-optimizer",
+  "task_id": "adversarial_autopatch_20260322_002821",
+  "description": "Use the test_driven optimizer to improve the complaint-generator graph analysis phase. Target files: complaint_phases/dependency_graph.py. Phase goal: Improve knowledge-graph and dependency-graph population so denoising and legal reasoning operate on structured facts instead of raw narrative alone. Recommended actions: Improve denoiser gap selection and answer processing so each turn closes a concrete knowledge-graph gap instead of only restating the narrative.; Make answer processing update entities, relationships, and satisfied requirements deterministically when the complainant supplies the missing field.; Promote exact dates, staff names/titles, hearing-request timing, response dates, and causation sequencing into graph updates before broadening the next question set.. Weak complaint types to generalize for: housing_discrimination, hacc_research_engine. Weak evidence modalities to improve: policy_document, file_evidence. Focus only on complaint_phases/knowledge_graph.py. Target symbols: build_from_text.",
+  "diff_content": "--- a/complaint_phases/knowledge_graph.py\n+++ b/complaint_phases/knowledge_graph.py\n@@ -892,17 +892,21 @@\n     def build_from_text(self, text: str) -> KnowledgeGraph:\n         \"\"\"\n         Build a knowledge graph from complaint text.\n-        \n+\n         Args:\n             text: The complaint text to analyze\n-            \n+\n         Returns:\n             A KnowledgeGraph instance\n         \"\"\"\n         graph = KnowledgeGraph()\n-        \n-        # Extract entities\n-        entities = self._extract_entities(text)\n+        source_text = str(text or '')\n+        normalized_text = ' '.join(source_text.split())\n+        graph.metadata['source_text_char_count'] = len(normalized_text)\n+        if not normalized_text.strip():\n+            graph.metadata['build_status'] = 'empty_input'\n+\n+        entities = self._extract_entities(normalized_text)\n         for entity_data in entities:\n             entity = Entity(\n                 id=self._get_entity_id(),\n@@ -913,9 +917,8 @@\n                 source='complaint'\n             )\n             graph.add_entity(entity)\n-        \n-        # Extract relationships\n-        relationships = self._extract_relationships(text, graph)\n+\n+        relationships = self._extract_relationships(normalized_text, graph)\n         for rel_data in relationships:\n             rel = Relationship(\n                 id=self._get_relationship_id(),\n@@ -927,6 +930,8 @@\n                 source='complaint'\n             )\n             graph.add_relationship(rel)\n+        graph.metadata['extracted_entity_candidates'] = len(entities)\n+        graph.metadata['extracted_relationship_candidates'] = len(relationships)\n \n         if self.actor_critic_enabled:\n             entity_scores = [\n@@ -950,13 +955,9 @@\n                 \"entity_score_floor\": float(self.min_entity_actor_critic_score),\n                 \"relationship_score_floor\": float(self.min_relationship_actor_critic_score),\n             }\n-        \n         logger.info(f\"Built knowledge graph: {graph.summary()}\")\n-        \n-        # Batch 220: Track graph building\n         self._built_graphs.append(graph)\n         self._text_processed_count += 1\n-        \n         return graph\n     \n     def _extract_entities(self, text: str) -> List[Dict[str, Any]]:\n",
+  "target_files": [
+    "complaint_phases/knowledge_graph.py"
+  ],
+  "created_at": "2026-03-22T00:28:41.095820",
+  "parent_patches": [],
+  "ipfs_cid": null,
+  "worktree_path": "",
+  "validated": false,
+  "applied": false,
+  "metadata": {
+    "patch_mode": "direct_diff",
+    "repo_root": "/home/barberb/HACC/complaint-generator",
+    "generation_diagnostics": [
+      {
+        "file": "/home/barberb/HACC/complaint-generator/complaint_phases/knowledge_graph.py",
+        "status": "optimized",
+        "mode": "symbol_level",
+        "target_symbols": [
+          "build_from_text"
+        ],
+        "response_length": 82699,
+        "changed": true
+      }
+    ]
+  }
+}

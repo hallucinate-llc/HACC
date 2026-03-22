@@ -1,0 +1,23 @@
+--- a/document_pipeline.py
++++ b/document_pipeline.py
+@@ -5934,17 +5934,17 @@
+             if unresolved_factual_gaps:
+                 actions.append(
+                     "Close unresolved factual gaps before formalization: "
+-                    + "; ".join(unresolved_factual_gaps[:3])
++                    + "; ".join(unresolved_factual_gaps[:2])
+                 )
+             if unresolved_legal_gaps:
+                 actions.append(
+                     "Close unresolved legal gaps before formalization: "
+-                    + "; ".join(unresolved_legal_gaps[:3])
++                    + "; ".join(unresolved_legal_gaps[:2])
+                 )
+             if uncovered_intake_objectives or missing_required_intake_objectives:
+                 actions.append(
+                     "Resolve uncovered intake objectives before formalization: "
+-                    + ", ".join((missing_required_intake_objectives or uncovered_intake_objectives)[:4])
++                    + ", ".join((missing_required_intake_objectives or uncovered_intake_objectives)[:3])
+                 )
+             if structured_handoff_gap_count > 0:
+                 actions.append(

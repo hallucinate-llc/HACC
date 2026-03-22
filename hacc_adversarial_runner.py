@@ -1667,6 +1667,9 @@ def _best_complaint_grounding_overview(best_result: Any) -> Dict[str, Any]:
     anchor_sections = [str(item) for item in list(key_facts.get("anchor_sections") or []) if str(item)]
     anchor_passages = [dict(item) for item in list(key_facts.get("anchor_passages") or []) if isinstance(item, dict)]
     hacc_evidence = [dict(item) for item in list(seed.get("hacc_evidence") or []) if isinstance(item, dict)]
+    timeline_anchors = [dict(item) for item in list(key_facts.get("timeline_anchors") or []) if isinstance(item, dict)]
+    claim_support_temporal_handoff = dict(key_facts.get("claim_support_temporal_handoff") or {})
+    mediator_packets = [dict(item) for item in list(key_facts.get("mediator_evidence_packets") or []) if isinstance(item, dict)]
 
     top_documents: List[str] = []
     for item in hacc_evidence:
@@ -1682,6 +1685,10 @@ def _best_complaint_grounding_overview(best_result: Any) -> Dict[str, Any]:
         "anchor_passage_count": len(anchor_passages),
         "evidence_item_count": len(hacc_evidence),
         "top_documents": top_documents,
+        "timeline_anchor_count": len(timeline_anchors),
+        "unresolved_temporal_issue_count": int(claim_support_temporal_handoff.get("unresolved_temporal_issue_count") or 0),
+        "chronology_task_count": int(claim_support_temporal_handoff.get("chronology_task_count") or 0),
+        "mediator_packet_count": len(mediator_packets),
     }
     compact: Dict[str, Any] = {}
     for key, value in overview.items():
