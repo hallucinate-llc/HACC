@@ -1,0 +1,64 @@
+--- a/complaint_phases/knowledge_graph.py
++++ b/complaint_phases/knowledge_graph.py
+@@ -892,17 +892,21 @@
+     def build_from_text(self, text: str) -> KnowledgeGraph:
+         """
+         Build a knowledge graph from complaint text.
+-        
++
+         Args:
+             text: The complaint text to analyze
+-            
++
+         Returns:
+             A KnowledgeGraph instance
+         """
+         graph = KnowledgeGraph()
+-        
+-        # Extract entities
+-        entities = self._extract_entities(text)
++        source_text = str(text or '')
++        normalized_text = ' '.join(source_text.split())
++        graph.metadata['source_text_char_count'] = len(normalized_text)
++        if not normalized_text.strip():
++            graph.metadata['build_status'] = 'empty_input'
++
++        entities = self._extract_entities(normalized_text)
+         for entity_data in entities:
+             entity = Entity(
+                 id=self._get_entity_id(),
+@@ -913,9 +917,8 @@
+                 source='complaint'
+             )
+             graph.add_entity(entity)
+-        
+-        # Extract relationships
+-        relationships = self._extract_relationships(text, graph)
++
++        relationships = self._extract_relationships(normalized_text, graph)
+         for rel_data in relationships:
+             rel = Relationship(
+                 id=self._get_relationship_id(),
+@@ -927,6 +930,8 @@
+                 source='complaint'
+             )
+             graph.add_relationship(rel)
++        graph.metadata['extracted_entity_candidates'] = len(entities)
++        graph.metadata['extracted_relationship_candidates'] = len(relationships)
+ 
+         if self.actor_critic_enabled:
+             entity_scores = [
+@@ -950,13 +955,9 @@
+                 "entity_score_floor": float(self.min_entity_actor_critic_score),
+                 "relationship_score_floor": float(self.min_relationship_actor_critic_score),
+             }
+-        
+         logger.info(f"Built knowledge graph: {graph.summary()}")
+-        
+-        # Batch 220: Track graph building
+         self._built_graphs.append(graph)
+         self._text_processed_count += 1
+-        
+         return graph
+     
+     def _extract_entities(self, text: str) -> List[Dict[str, Any]]:

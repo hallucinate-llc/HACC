@@ -1,0 +1,32 @@
+{
+  "patch_id": "d99a6d475ffea221",
+  "agent_id": "adversarial-harness-optimizer",
+  "task_id": "adversarial_autopatch_20260322_020721",
+  "description": "Use the test_driven optimizer to improve the complaint-generator graph analysis phase. Target files: complaint_phases/dependency_graph.py. Phase goal: Improve knowledge-graph and dependency-graph population so denoising and legal reasoning operate on structured facts instead of raw narrative alone. Recommended actions: Improve denoiser gap selection and answer processing so each turn closes a concrete knowledge-graph gap instead of only restating the narrative.; Make answer processing update entities, relationships, and satisfied requirements deterministically when the complainant supplies the missing field.; Promote exact dates, staff names/titles, hearing-request timing, response dates, and causation sequencing into graph updates before broadening the next question set.. Weak complaint types to generalize for: housing_discrimination, hacc_research_engine. Weak evidence modalities to improve: policy_document, file_evidence. Focus only on complaint_phases/intake_case_file.py. Target symbols: build_timeline_consistency_summary.",
+  "diff_content": "--- a/complaint_phases/intake_case_file.py\n+++ b/complaint_phases/intake_case_file.py\n@@ -1231,6 +1231,11 @@\n     if non_day_precision_fact_ids:\n         warnings.append(\"Some anchored facts are only month/year precision and may still need day-level dates.\")\n \n+    if orphan_anchor_count:\n+\n+        warnings.append(\"Some timeline anchors do not map back to canonical facts and should be attached or removed.\")\n+\n+\n     return {\n         \"event_count\": len(timeline_facts),\n         \"anchor_count\": len(anchors),\n@@ -1243,7 +1248,7 @@\n         \"missing_temporal_fact_ids\": missing_temporal_fact_ids,\n         \"relative_only_fact_ids\": relative_only_fact_ids,\n         \"warnings\": warnings,\n-        \"partial_order_ready\": bool(timeline_facts) and not missing_temporal_fact_ids and not temporal_conflict_relation_count,\n+        \"partial_order_ready\": bool(timeline_facts) and not missing_temporal_fact_ids and not temporal_conflict_relation_count and not orphan_anchor_count,\n         \"day_precision_fact_count\": len(day_precision_fact_ids),\n         \"non_day_precision_fact_ids\": non_day_precision_fact_ids,\n         \"temporal_conflict_relation_count\": temporal_conflict_relation_count,\n",
+  "target_files": [
+    "complaint_phases/intake_case_file.py"
+  ],
+  "created_at": "2026-03-22T02:07:35.161047",
+  "parent_patches": [],
+  "ipfs_cid": null,
+  "worktree_path": "",
+  "validated": false,
+  "applied": false,
+  "metadata": {
+    "patch_mode": "direct_diff",
+    "repo_root": "/home/barberb/HACC/complaint-generator",
+    "generation_diagnostics": [
+      {
+        "file": "/home/barberb/HACC/complaint-generator/complaint_phases/intake_case_file.py",
+        "status": "optimized",
+        "mode": "symbol_level",
+        "target_symbols": [
+          "build_timeline_consistency_summary"
+        ],
+        "response_length": 119868,
+        "changed": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "patch_id": "32936a243bc36382",
+  "agent_id": "adversarial-harness-optimizer",
+  "task_id": "adversarial_autopatch_20260322_020754",
+  "description": "Use the test_driven optimizer to improve the complaint-generator document generation phase. Target files: document_optimization.py. Phase goal: Improve drafting handoff so complaint generation reflects the collected facts, exhibits, and unresolved gaps at formalization time. Recommended actions: Carry blocker-closing intake answers directly into factual allegations, claim support, and exhibit descriptions so drafted complaints preserve timing, actor identity, and causation sequence.; Gate document generation on graph completeness signals and surface unresolved factual or legal gaps in drafting readiness before formalization.; Carry canonical fact ids, support traces, and artifact-backed support rows through drafting so the complaint text is grounded in traceable evidence.. Weak complaint types to generalize for: housing_discrimination, hacc_research_engine. Weak evidence modalities to improve: policy_document, file_evidence. Focus only on scripts/synthesize_hacc_complaint.py. Target symbols: _merge_seed_with_grounding.",
+  "diff_content": "--- a/scripts/synthesize_hacc_complaint.py\n+++ b/scripts/synthesize_hacc_complaint.py\n@@ -2698,7 +2698,7 @@\n             _append_unique_text(blocker_handoff_raw_answers, blocker_answer_seen, answer)\n \n     blocker_obj_seen: set[str] = set()\n-    for answer in blocker_handoff_raw_answers[:8]:\n+    for answer in blocker_handoff_raw_answers[:6]:\n         objective = _normalize_intake_objective(_classify_intake_question_objective(answer))\n         if objective:\n             _append_unique_objective(unresolved_objectives, unresolved_seen, objective)\n@@ -2728,7 +2728,7 @@\n             list(dict.fromkeys(unresolved_objectives)),\n             key=lambda item: (-_safe_float(INTAKE_OBJECTIVE_PRIORITY.get(item), 0.0), item),\n         )\n-        for objective in prioritized[:4]:\n+        for objective in prioritized[:3]:\n             label = _intake_objective_label(objective)\n             if objective == \"anchor_appeal_rights\":\n                 line = (\n",
+  "target_files": [
+    "scripts/synthesize_hacc_complaint.py"
+  ],
+  "created_at": "2026-03-22T02:07:59.409792",
+  "parent_patches": [],
+  "ipfs_cid": null,
+  "worktree_path": "",
+  "validated": false,
+  "applied": false,
+  "metadata": {
+    "patch_mode": "direct_diff",
+    "repo_root": "/home/barberb/HACC/complaint-generator",
+    "generation_diagnostics": [
+      {
+        "file": "/home/barberb/HACC/complaint-generator/scripts/synthesize_hacc_complaint.py",
+        "status": "optimized",
+        "mode": "symbol_level",
+        "target_symbols": [
+          "_merge_seed_with_grounding"
+        ],
+        "response_length": 275631,
+        "changed": true
+      }
+    ]
+  }
+}

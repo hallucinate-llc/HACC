@@ -1,0 +1,23 @@
+--- a/complaint_phases/intake_case_file.py
++++ b/complaint_phases/intake_case_file.py
+@@ -1231,6 +1231,11 @@
+     if non_day_precision_fact_ids:
+         warnings.append("Some anchored facts are only month/year precision and may still need day-level dates.")
+ 
++    if orphan_anchor_count:
++
++        warnings.append("Some timeline anchors do not map back to canonical facts and should be attached or removed.")
++
++
+     return {
+         "event_count": len(timeline_facts),
+         "anchor_count": len(anchors),
+@@ -1243,7 +1248,7 @@
+         "missing_temporal_fact_ids": missing_temporal_fact_ids,
+         "relative_only_fact_ids": relative_only_fact_ids,
+         "warnings": warnings,
+-        "partial_order_ready": bool(timeline_facts) and not missing_temporal_fact_ids and not temporal_conflict_relation_count,
++        "partial_order_ready": bool(timeline_facts) and not missing_temporal_fact_ids and not temporal_conflict_relation_count and not orphan_anchor_count,
+         "day_precision_fact_count": len(day_precision_fact_ids),
+         "non_day_precision_fact_ids": non_day_precision_fact_ids,
+         "temporal_conflict_relation_count": temporal_conflict_relation_count,

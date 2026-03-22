@@ -138,6 +138,8 @@ REPOSITORY_EVIDENCE_SKIP_PARTS = {
     "search_indexes",
 }
 REPOSITORY_EVIDENCE_MAX_BYTES = 2_000_000
+MAX_TIMELINE_EXTRACTION_CHARS = 8_000
+MAX_SHARED_TEMPORAL_SENTENCE_CHARS = 400
 GROUNDING_WORKFLOW_PHASE_PRIORITIES = (
     "intake_questioning",
     "evidence_upload",
@@ -1136,6 +1138,12 @@ class HACCResearchEngine:
             web_payload=web_payload,
             legal_payload=legal_payload,
         )
+        research_action_queue = self._build_research_action_queue(
+            query_text=query_text,
+            grounding_summary=grounding_summary,
+            web_payload=web_payload,
+            legal_payload=legal_payload,
+        )
         return {
             "status": "success",
             "query": query_text,
@@ -1163,6 +1171,8 @@ class HACCResearchEngine:
             },
             "research_grounding_summary": grounding_summary,
             "seeded_discovery_plan": dict(grounding_summary.get("seeded_discovery_plan") or {}),
+            "research_action_queue": research_action_queue,
+            "recommended_next_action": dict(research_action_queue[0]) if research_action_queue else {},
             "local_search": local_payload,
             "web_discovery": web_payload,
             "legal_discovery": legal_payload,
@@ -1534,6 +1544,95 @@ class HACCResearchEngine:
             "unresolved_temporal_issue_count": unresolved_temporal_issue_count,
             "priority": "chronology_first" if unresolved_temporal_issue_count else "upload_and_graph",
         }
+
+    def _build_research_action_queue(
+        self,
+        *,
+        query_text: str,
+        grounding_summary: Dict[str, Any],
+        web_payload: Dict[str, Any],
+        legal_payload: Dict[str, Any],
+    ) -> List[Dict[str, Any]]:
+        action_queue: List[Dict[str, Any]] = []
+        upload_ready_candidate_count = int(grounding_summary.get("upload_ready_candidate_count", 0) or 0)
+        recommended_upload_paths = [
+            str(item).strip()
+            for item in list(grounding_summary.get("recommended_upload_paths") or [])
+            if str(item).strip()
+        ]
+        blocker_objectives = [
+            str(item).strip()
+            for item in list(grounding_summary.get("blocker_objectives") or [])
+            if str(item).strip()
+        ]
+        seeded_discovery_plan = dict(grounding_summary.get("seeded_discovery_plan") or {})
+        if upload_ready_candidate_count:
+            action_queue.append(
+                {
+                    "phase_name": "evidence_upload",
+                    "action": "upload_local_repository_evidence",
+                    "priority": 100,
+                    "description": f"Upload the strongest repository evidence for '{query_text}' into the mediator first.",
+                    "recommended_upload_paths": recommended_upload_paths[:5],
+                }
+            )
+
+        if int(seeded_discovery_plan.get("unresolved_temporal_issue_count", 0) or 0) > 0:
+            action_queue.append(
+                {
+                    "phase_name": "graph_analysis",
+                    "action": "fill_chronology_gaps",
+                    "priority": 95,
+                    "description": "Prioritize dated notices, response timing, and event order before broad drafting.",
+                    "blocker_objectives": blocker_objectives[:5],
+                    "seeded_queries": list(seeded_discovery_plan.get("queries") or [])[:5],
+                }
+            )
+
+        if list(seeded_discovery_plan.get("queries") or []):
+            action_queue.append(
+                {
+                    "phase_name": "research",
+                    "action": "run_seeded_discovery",
+                    "priority": 85,
+                    "description": "Expand discovery with complaint-aware seeded CommonCrawl/IPFS queries.",
+                    "seeded_queries": list(seeded_discovery_plan.get("queries") or [])[:5],
+                    "recommended_domains": list(seeded_discovery_plan.get("recommended_domains") or [])[:8],
+                }
+            )
+
+        web_results = list(web_payload.get("results") or [])
+        if web_results:
+            action_queue.append(
+                {
+                    "phase_name": "research",
+                    "action": "review_web_discovery_results",
+                    "priority": 70,
+                    "description": "Review discovered web materials for additional uploadable policies, notices, or procedures.",
+                    "result_count": len(web_results),
+                }
+            )
+
+        legal_results = list(legal_payload.get("results") or [])
+        if legal_results:
+            action_queue.append(
+                {
+                    "phase_name": "document_generation",
+                    "action": "review_legal_authorities",
+                    "priority": 60,
+                    "description": "Use discovered legal authorities to strengthen the complaint theory and document framing.",
+                    "result_count": len(legal_results),
+                }
+            )
+
+        action_queue.sort(
+            key=lambda item: (
+                -int(item.get("priority", 0) or 0),
+                str(item.get("phase_name") or ""),
+                str(item.get("action") or ""),
+            )
+        )
+        return action_queue
 
     def _resolve_vector_indexes(
         self,
@@ -2286,12 +2385,16 @@ class HACCResearchEngine:
     ) -> List[Dict[str, Any]]:
         if build_shared_temporal_context is None:
             return []
+        if len(text) > MAX_TIMELINE_EXTRACTION_CHARS:
+            return []
 
         anchors: List[Dict[str, Any]] = []
         seen_keys: set[tuple[str, str, str]] = set()
         for sentence in _sentence_split(text):
             if len(anchors) >= 8:
                 break
+            if len(sentence) > MAX_SHARED_TEMPORAL_SENTENCE_CHARS:
+                continue
             temporal_context = build_shared_temporal_context(sentence, fallback_text=sentence)
             if not isinstance(temporal_context, dict):
                 continue
@@ -2687,7 +2790,7 @@ class HACCResearchEngine:
         claim_type: str = "housing_discrimination",
     ) -> Dict[str, Any]:
         anchors = self._extract_timeline_anchors_from_text(
-            text,
+            text[:MAX_TIMELINE_EXTRACTION_CHARS],
             title=title,
             source_path=source_path,
             claim_type=claim_type,

@@ -4,6 +4,7 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 from hacc_research import HACCResearchEngine
 from hacc_research import engine as engine_module
@@ -285,6 +286,31 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertIn("integration_status", result)
             self.assertIn("capabilities", result["integration_status"])
             self.assertIn("capability_report", result["integration_status"])
+
+    def test_document_chronology_metadata_skips_shared_parser_for_large_text(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            long_text = ("January 4, 2024 " + ("timeline " * 1200)).strip()
+            with mock.patch.object(engine_module, "build_shared_temporal_context", side_effect=AssertionError("shared parser should be skipped")):
+                payload = engine._build_document_chronology_metadata(
+                    long_text,
+                    title="Long chronology",
+                    source_path="/tmp/long.txt",
+                )
+
+            self.assertEqual(payload["timeline_anchor_count"], 1)
+            self.assertEqual(payload["timeline_anchor_preview"][0]["start_date"], "2024-01-04")
 
     def test_build_grounding_bundle_emits_synthetic_prompts_for_file_backed_results(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -1228,6 +1254,8 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertEqual(payload["local_chronology_summary"]["chronology_ready_result_count"], 0)
             self.assertEqual(payload["research_grounding_summary"]["upload_ready_candidate_count"], 0)
             self.assertIn("seeded_discovery_plan", payload)
+            self.assertEqual(payload["research_action_queue"][0]["action"], "run_seeded_discovery")
+            self.assertEqual(payload["recommended_next_action"]["action"], "run_seeded_discovery")
 
     def test_research_builds_grounding_summary_and_seeded_discovery_plan(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -1282,6 +1310,9 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertEqual(grounding_summary["seeded_discovery_plan"]["has_legal_results"], True)
             self.assertIn("example.org", grounding_summary["seeded_discovery_plan"]["recommended_domains"])
             self.assertEqual(payload["seeded_discovery_plan"]["priority"], "chronology_first")
+            self.assertEqual(payload["research_action_queue"][0]["action"], "upload_local_repository_evidence")
+            self.assertEqual(payload["research_action_queue"][1]["action"], "fill_chronology_gaps")
+            self.assertEqual(payload["recommended_next_action"]["action"], "upload_local_repository_evidence")
 
     def test_research_includes_shared_legal_discovery(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
