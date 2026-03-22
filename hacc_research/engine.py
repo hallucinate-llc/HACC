@@ -381,6 +381,23 @@ def _clean_text(value: str) -> str:
     return re.sub(r"\s+", " ", str(value or "")).strip()
 
 
+def _json_safe(value: Any) -> Any:
+    if isinstance(value, (str, int, float, bool)) or value is None:
+        return value
+    if isinstance(value, dict):
+        return {str(key): _json_safe(item) for key, item in value.items()}
+    if isinstance(value, set):
+        return [_json_safe(item) for item in sorted(value, key=lambda item: str(item))]
+    if isinstance(value, (list, tuple)):
+        return [_json_safe(item) for item in value]
+    if hasattr(value, "to_dict") and callable(value.to_dict):
+        try:
+            return _json_safe(value.to_dict())
+        except Exception:
+            return str(value)
+    return str(value)
+
+
 def _semantic_token(token: str) -> str:
     normalized = token.lower().strip()
     if not normalized:
@@ -434,6 +451,21 @@ def _semantic_tokens(value: str) -> set[str]:
         for normalized in (_semantic_token(token) for token in re.findall(r"[a-z0-9]+", value.lower()))
         if normalized and normalized not in stopwords
     }
+
+
+def _ordered_unique_strings(values: Sequence[str]) -> List[str]:
+    ordered: List[str] = []
+    seen: set[str] = set()
+    for value in values:
+        cleaned = _clean_text(value)
+        if not cleaned:
+            continue
+        lowered = cleaned.lower()
+        if lowered in seen:
+            continue
+        seen.add(lowered)
+        ordered.append(cleaned)
+    return ordered
 
 
 def _sentence_split(text: str) -> List[str]:
@@ -629,7 +661,9 @@ class HACCResearchEngine:
     def _external_research_query_plan(self, query_text: str, *, claim_type: str = "") -> Dict[str, Any]:
         normalized_query = _clean_text(query_text)
         normalized_claim_type = str(claim_type or "").strip().lower()
-        query_context = self._build_retrieval_query_context(normalized_query, claim_type=normalized_claim_type)
+        query_context = _json_safe(
+            self._build_retrieval_query_context(normalized_query, claim_type=normalized_claim_type)
+        )
         query_variants = [
             str(item).strip()
             for item in list(query_context.get("queries") or [])
@@ -655,8 +689,8 @@ class HACCResearchEngine:
         web_queries = _dedupe_queries(
             [
                 normalized_query,
-                f"{claim_label} {normalized_query}" if claim_label else "",
                 *[str(hint).strip() for hint in list(hints.get("web") or []) if str(hint).strip()],
+                f"{claim_label} {normalized_query}" if claim_label else "",
                 *query_variants,
                 *[
                     f"{normalized_query} {hint}" if normalized_query else hint
@@ -666,8 +700,9 @@ class HACCResearchEngine:
         )
         legal_queries = _dedupe_queries(
             [
-                f"{claim_label} {normalized_query}" if claim_label else normalized_query,
+                normalized_query,
                 *[str(hint).strip() for hint in list(hints.get("legal") or []) if str(hint).strip()],
+                f"{claim_label} {normalized_query}" if claim_label else "",
                 *query_variants,
                 *[
                     f"{normalized_query} {hint}" if normalized_query else hint
@@ -2763,8 +2798,8 @@ class HACCResearchEngine:
         max_results: int = 5,
     ) -> Dict[str, Any]:
         query_plan = self._external_research_query_plan(query_text, claim_type=claim_type)
-        web_queries = list(query_plan.get("web_queries") or [query_text])[:4]
-        legal_queries = list(query_plan.get("legal_queries") or [query_text])[:4]
+        web_queries = list(query_plan.get("web_queries") or [query_text])[:6]
+        legal_queries = list(query_plan.get("legal_queries") or [query_text])[:6]
         web_attempts = [
             self.discover(candidate_query, max_results=max_results, scrape=False)
             for candidate_query in web_queries
@@ -2783,6 +2818,20 @@ class HACCResearchEngine:
             legal_attempts,
             result_key="results",
             dedupe_keys=("citation", "title", "url"),
+            max_results=max_results,
+        )
+        web_payload = self._rank_external_research_payload(
+            web_payload,
+            query_text=query_text,
+            claim_type=claim_type,
+            result_kind="web",
+            max_results=max_results,
+        )
+        legal_payload = self._rank_external_research_payload(
+            legal_payload,
+            query_text=query_text,
+            claim_type=claim_type,
+            result_kind="legal",
             max_results=max_results,
         )
         web_payload.update({
@@ -2816,6 +2865,116 @@ class HACCResearchEngine:
                 "top_legal_titles": top_legal_titles,
             },
         }
+
+    def _rank_external_research_payload(
+        self,
+        payload: Dict[str, Any],
+        *,
+        query_text: str,
+        claim_type: str,
+        result_kind: str,
+        max_results: int,
+    ) -> Dict[str, Any]:
+        ranked_results: List[Dict[str, Any]] = []
+        for item in list(payload.get("results") or []):
+            if not isinstance(item, dict):
+                continue
+            ranked_results.append(
+                self._score_external_research_result(
+                    dict(item),
+                    query_text=query_text,
+                    claim_type=claim_type,
+                    result_kind=result_kind,
+                )
+            )
+        ranked_results.sort(
+            key=lambda item: (
+                -float(item.get("research_priority_score", 0.0) or 0.0),
+                _clean_text(str(item.get("title") or item.get("citation") or item.get("url") or "")),
+            )
+        )
+        ranked_payload = dict(payload or {})
+        ranked_payload["results"] = ranked_results[:max_results]
+        ranked_payload["result_count"] = len(ranked_payload["results"])
+        return ranked_payload
+
+    def _score_external_research_result(
+        self,
+        item: Dict[str, Any],
+        *,
+        query_text: str,
+        claim_type: str,
+        result_kind: str,
+    ) -> Dict[str, Any]:
+        claim_hints = dict(EXTERNAL_RESEARCH_HINTS_BY_CLAIM.get(str(claim_type or "").strip().lower()) or {})
+        evidence_text = " ".join(
+            fragment
+            for fragment in (
+                str(item.get("title") or ""),
+                str(item.get("citation") or ""),
+                str(item.get("summary") or ""),
+                str(item.get("snippet") or ""),
+                str(item.get("description") or ""),
+                str(item.get("url") or ""),
+                str(item.get("authority_source") or ""),
+            )
+            if _clean_text(fragment)
+        )
+        evidence_tokens = _semantic_tokens(evidence_text)
+        query_tokens = _semantic_tokens(query_text)
+        chronology_hits = sorted(
+            token for token in _CHRONOLOGY_QUERY_TOKENS
+            if token in evidence_tokens
+        )
+        claim_hint_tokens = _semantic_tokens(" ".join(str(value) for value in list(claim_hints.get(result_kind) or [])))
+        matched_claim_tokens = sorted(token for token in claim_hint_tokens if token in evidence_tokens)
+        matched_query_tokens = sorted(token for token in query_tokens if token in evidence_tokens)
+        score = float(len(matched_query_tokens))
+        score += 1.5 * float(len(matched_claim_tokens))
+        score += 1.0 * float(len(chronology_hits))
+
+        source_text = evidence_text.lower()
+        reasons: List[str] = []
+        if matched_query_tokens:
+            reasons.append(f"matched query terms: {', '.join(matched_query_tokens[:6])}")
+        if matched_claim_tokens:
+            reasons.append(f"matched {result_kind} claim hints: {', '.join(matched_claim_tokens[:6])}")
+        if chronology_hits:
+            reasons.append(f"contains chronology cues: {', '.join(chronology_hits[:6])}")
+
+        anchor_sections = [
+            section
+            for section in classify_anchor_sections(evidence_text)
+            if section and section != "general_policy"
+        ]
+        if anchor_sections:
+            score += 1.25 * float(len(anchor_sections))
+            reasons.append(f"touches anchor sections: {', '.join(anchor_sections[:4])}")
+
+        if result_kind == "legal":
+            if _clean_text(str(item.get("citation") or "")):
+                score += 3.0
+                reasons.append("has formal citation")
+            authority_source = _clean_text(str(item.get("authority_source") or ""))
+            if authority_source:
+                score += 1.5
+                reasons.append(f"authority source: {authority_source}")
+            if any(token in source_text for token in ("u.s.c.", "c.f.r.", "federal register", "hud", "court", "appeal")):
+                score += 2.0
+        else:
+            if any(term in source_text for term in _CASE_EVIDENCE_PRIORITY_CUES):
+                score += 2.0
+                reasons.append("contains evidence-priority cues")
+            domain = _normalize_domain(str(item.get("url") or ""))
+            if domain.endswith(".gov") or domain.endswith(".edu"):
+                score += 1.5
+                reasons.append(f"trusted domain: {domain}")
+
+        scored = dict(item)
+        scored["research_priority_score"] = round(score, 3)
+        scored["research_priority_reasons"] = _ordered_unique_strings(reasons)
+        scored["anchor_sections"] = _ordered_unique_strings(anchor_sections)
+        return scored
 
     def _truncate_seed_packet_text(self, text: str, *, max_chars: int = 6000) -> str:
         cleaned = _clean_text(text)
