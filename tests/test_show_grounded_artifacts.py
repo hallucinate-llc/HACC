@@ -111,6 +111,33 @@ def test_main_prints_json_summary(tmp_path, capsys):
     assert payload["claim_type"] == "c"
 
 
+def test_main_can_filter_sections(tmp_path, capsys):
+    run_dir = tmp_path / "grounded-run"
+    _write_json(
+        run_dir / "synthetic_prompts.json",
+        {
+            "evidence_upload_prompts": [
+                {"title": "Policy A", "relative_path": "repo/policy-a.txt", "anchor_sections": []}
+            ],
+            "mediator_questions": ["Which record proves the date?"],
+        },
+    )
+    _write_json(run_dir / "grounding_bundle.json", {"query": "q", "claim_type": "c", "upload_candidates": []})
+    _write_json(run_dir / "external_research_bundle.json", {"summary": {}})
+    _write_json(
+        run_dir / "complaint_synthesis" / "draft_complaint_package.json",
+        {"authorities_and_research_basis": {}, "evidence_attachments": []},
+    )
+
+    exit_code = module.main([str(run_dir), "--section", "mediator-questions"])
+
+    assert exit_code == 0
+    output = capsys.readouterr().out
+    assert "Mediator Questions" in output
+    assert "Which record proves the date?" in output
+    assert "Upload Prompts" not in output
+
+
 def test_main_requires_path_or_latest():
     try:
         module.main([])

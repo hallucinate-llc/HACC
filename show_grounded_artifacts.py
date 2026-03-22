@@ -101,6 +101,25 @@ def create_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Print the collected summary as JSON instead of formatted text.",
     )
+    parser.add_argument(
+        "--section",
+        action="append",
+        choices=(
+            "upload-prompts",
+            "evidence-candidates",
+            "attachments",
+            "mediator-questions",
+            "blockers",
+            "intake-steps",
+            "upload-checklist",
+            "authorities",
+            "web-research",
+            "top-web",
+            "top-legal",
+            "paths",
+        ),
+        help="Limit output to one or more specific sections. May be passed multiple times.",
+    )
     return parser
 
 
@@ -155,6 +174,10 @@ def _format_attachment_rows(items: list[dict[str, Any]]) -> list[str]:
     return rows
 
 
+def _should_print(selections: set[str], name: str) -> bool:
+    return not selections or name in selections
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = create_parser()
     args = parser.parse_args(argv)
@@ -180,21 +203,44 @@ def main(argv: list[str] | None = None) -> int:
         "External research: "
         f"web_results={ext['web_result_count']} legal_results={ext['legal_result_count']}"
     )
+    selections = set(args.section or [])
 
-    _print_section("Upload Prompts", _format_upload_prompts(summary["upload_prompts"]))
-    _print_section("Top Evidence Candidates", _format_upload_candidates(summary["upload_candidates"]))
-    _print_section("Mediator Attachments", _format_attachment_rows(summary["evidence_attachments"]))
-    _print_section("Mediator Questions", list(summary["mediator_questions"]))
-    _print_section("Blocker Objectives", list(summary["blocker_objectives"]))
-    _print_section("Production Intake Steps", list(summary["production_evidence_intake_steps"]))
-    _print_section("Mediator Upload Checklist", list(summary["mediator_upload_checklist"]))
-    _print_section("Authorities", _format_authorities(summary["authority_records"]))
-    _print_section(
-        "Corroborating Web Research",
-        _format_authorities(summary["corroborating_web_research_records"]),
-    )
-    _print_section("Top Web Titles", list(summary["external_research_summary"]["top_web_titles"]))
-    _print_section("Top Legal Titles", list(summary["external_research_summary"]["top_legal_titles"]))
+    if _should_print(selections, "paths"):
+        _print_section(
+            "Key Artifact Paths",
+            [
+                str(run_dir / "synthetic_prompts.json"),
+                str(run_dir / "grounding_bundle.json"),
+                str(run_dir / "external_research_bundle.json"),
+                str(run_dir / "complaint_synthesis" / "draft_complaint_package.json"),
+                str(run_dir / "complaint_synthesis" / "draft_complaint_package.md"),
+            ],
+        )
+    if _should_print(selections, "upload-prompts"):
+        _print_section("Upload Prompts", _format_upload_prompts(summary["upload_prompts"]))
+    if _should_print(selections, "evidence-candidates"):
+        _print_section("Top Evidence Candidates", _format_upload_candidates(summary["upload_candidates"]))
+    if _should_print(selections, "attachments"):
+        _print_section("Mediator Attachments", _format_attachment_rows(summary["evidence_attachments"]))
+    if _should_print(selections, "mediator-questions"):
+        _print_section("Mediator Questions", list(summary["mediator_questions"]))
+    if _should_print(selections, "blockers"):
+        _print_section("Blocker Objectives", list(summary["blocker_objectives"]))
+    if _should_print(selections, "intake-steps"):
+        _print_section("Production Intake Steps", list(summary["production_evidence_intake_steps"]))
+    if _should_print(selections, "upload-checklist"):
+        _print_section("Mediator Upload Checklist", list(summary["mediator_upload_checklist"]))
+    if _should_print(selections, "authorities"):
+        _print_section("Authorities", _format_authorities(summary["authority_records"]))
+    if _should_print(selections, "web-research"):
+        _print_section(
+            "Corroborating Web Research",
+            _format_authorities(summary["corroborating_web_research_records"]),
+        )
+    if _should_print(selections, "top-web"):
+        _print_section("Top Web Titles", list(summary["external_research_summary"]["top_web_titles"]))
+    if _should_print(selections, "top-legal"):
+        _print_section("Top Legal Titles", list(summary["external_research_summary"]["top_legal_titles"]))
     return 0
 
 
