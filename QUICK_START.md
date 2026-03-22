@@ -68,6 +68,18 @@ Artifacts land in `research_results/grounded_runs/<timestamp>/` and include:
 
 When shared hybrid search is active, `run_summary.json` reports `effective_hacc_search_mode: shared_hybrid` and the search summary will not include a fallback note.
 
+If a grounded run already finished grounding/adversarial work and you only want to regenerate the complaint package, reuse the saved artifacts instead of rerunning the expensive stages:
+
+```bash
+.venv-hacc-search/bin/python hacc_grounded_pipeline.py \
+  --output-dir research_results/grounded_runs/<existing-run> \
+  --provider codex \
+  --model gpt-5.3-codex \
+  --hacc-search-mode lexical \
+  --synthesize-complaint \
+  --reuse-existing-artifacts
+```
+
 ### Option 0B: Fill Missing Facts And Rerun
 
 **Best for:** Taking the generated worksheet, filling in the missing case-specific facts, and rerunning the grounded complaint pipeline with those answers merged back in.
@@ -118,6 +130,29 @@ The rerun wrapper will:
 - rerun `hacc_grounded_pipeline.py` with `--completed-intake-worksheet`
 - print the refreshed grounded run output directory when the rerun completes
 - print the refreshed complaint JSON path, complaint Markdown path, and worksheet path when synthesis artifacts are available
+
+If you need to refresh only the adversarial summary for an existing run, you can also reuse the saved adversarial artifacts directly:
+
+```bash
+python3 hacc_adversarial_runner.py \
+  --output-dir research_results/grounded_runs/repo_evidence_adversarial_v7_progress \
+  --provider codex \
+  --model gpt-5.3-codex \
+  --hacc-search-mode lexical \
+  --reuse-existing-artifacts
+```
+
+If you want a shorter wrapper for either case, use `resume_hacc_run.py`:
+
+```bash
+# Resume the newest grounded run and regenerate complaint synthesis
+python3 resume_hacc_run.py grounded --latest -- --synthesize-complaint
+
+# Resume a specific adversarial run and rebuild its summary
+python3 resume_hacc_run.py adversarial \
+  research_results/grounded_runs/repo_evidence_adversarial_v7_progress \
+  -- --hacc-search-mode lexical --provider codex --model gpt-5.3-codex
+```
 
 ### Option A: Manual Evidence Collection (No API Keys Required)
 

@@ -435,6 +435,7 @@ python3 hacc_grounded_pipeline.py [options]
 | `--provider` | `codex` | Default LLM router provider for HACC runs |
 | `--model` | `gpt-5.3-codex` | Default HACC model override |
 | `--synthesize-complaint` | off | Run complaint synthesis after adversarial batch |
+| `--reuse-existing-artifacts` | off | Reuse saved grounding/adversarial artifacts in the output dir before synthesis |
 | `--filing-forum` | `court` | `court`, `hud`, or `state_agency` |
 | `--json` | off | Print the full workflow summary JSON |
 
@@ -466,6 +467,15 @@ python3 hacc_grounded_pipeline.py \
   --use-hacc-vector-search \
   --top-k 8 \
   --num-sessions 2
+
+# Resume a completed grounded run and only refresh complaint synthesis
+python3 hacc_grounded_pipeline.py \
+  --output-dir research_results/grounded_runs/<existing-run> \
+  --hacc-search-mode lexical \
+  --provider codex \
+  --model gpt-5.3-codex \
+  --synthesize-complaint \
+  --reuse-existing-artifacts
 ```
 
 ### `hacc_adversarial_runner` CLI
@@ -496,6 +506,7 @@ python3 hacc_adversarial_runner.py [options]
 | `--autopatch-profile` | `question_flow` | Requested autopatch target profile |
 | `--autopatch-target-file` | *(repeatable)* | Explicit complaint-generator target file override |
 | `--use-recommended-autopatch-targets` | off | Replace the requested autopatch scope with the optimizer's recommended files/profile |
+| `--reuse-existing-artifacts` | off | Reuse saved adversarial/optimizer artifacts in the output dir instead of rerunning the batch |
 | `--json` | off | Print the full summary JSON |
 
 **Examples:**
@@ -538,6 +549,14 @@ python3 hacc_adversarial_runner.py \
   --model gpt-5.3-codex \
   --apply-autopatch \
   --autopatch-method test_driven
+
+# Resume a completed adversarial run and rebuild the summary from saved artifacts
+python3 hacc_adversarial_runner.py \
+  --output-dir research_results/grounded_runs/repo_evidence_adversarial_v7_progress \
+  --hacc-search-mode lexical \
+  --provider codex \
+  --model gpt-5.3-codex \
+  --reuse-existing-artifacts
 ```
 
 **Autopatch dependency note:**
