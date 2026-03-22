@@ -559,6 +559,13 @@ python3 hacc_adversarial_runner.py \
   --reuse-existing-artifacts
 ```
 
+You can also use the small helper wrapper to resume the latest grounded or adversarial run without retyping the runner path:
+
+```bash
+python3 resume_hacc_run.py grounded --latest -- --synthesize-complaint
+python3 resume_hacc_run.py adversarial research_results/grounded_runs/repo_evidence_adversarial_v7_progress -- --hacc-search-mode lexical --provider codex --model gpt-5.3-codex
+```
+
 **Autopatch dependency note:**
 
 If the runner prints `Autopatch preflight ready: False`, install the complaint-generator Python dependencies first:
