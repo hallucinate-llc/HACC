@@ -172,6 +172,32 @@ ANCHOR_SECTION_TEMPORAL_PROOF_OBJECTIVES = {
     "adverse_action": ("show adverse action chronology", "show causation sequence"),
     "reasonable_accommodation": ("show accommodation request handling sequence",),
 }
+EXTERNAL_RESEARCH_HINTS_BY_CLAIM = {
+    "housing_discrimination": {
+        "web": (
+            "fair housing retaliation",
+            "HUD informal hearing",
+            "voucher termination notice",
+            "public housing grievance procedure",
+        ),
+        "legal": (
+            "Fair Housing Act retaliation",
+            "24 C.F.R. 982.555 informal hearing",
+            "42 U.S.C. 1437d grievance procedure",
+            "42 U.S.C. 3604 fair housing retaliation",
+        ),
+    },
+    "retaliation": {
+        "web": (
+            "protected activity adverse action",
+            "complaint retaliation timeline",
+        ),
+        "legal": (
+            "retaliation adverse action causation",
+            "protected activity retaliation caselaw",
+        ),
+    },
+}
 TIMELINE_ISSUE_FAMILY_BY_SECTION = {
     "grievance_hearing": "hearing_process",
     "appeal_rights": "response_timeline",
@@ -599,6 +625,116 @@ class HACCResearchEngine:
             )
         except Exception:
             return {}
+
+    def _external_research_query_plan(self, query_text: str, *, claim_type: str = "") -> Dict[str, Any]:
+        normalized_query = _clean_text(query_text)
+        normalized_claim_type = str(claim_type or "").strip().lower()
+        query_context = self._build_retrieval_query_context(normalized_query, claim_type=normalized_claim_type)
+        query_variants = [
+            str(item).strip()
+            for item in list(query_context.get("queries") or [])
+            if str(item).strip()
+        ]
+        claim_label = normalized_claim_type.replace("_", " ").strip()
+        hints = dict(EXTERNAL_RESEARCH_HINTS_BY_CLAIM.get(normalized_claim_type) or {})
+
+        def _dedupe_queries(values: Sequence[str]) -> List[str]:
+            ordered: List[str] = []
+            seen: set[str] = set()
+            for value in values:
+                cleaned = str(value or "").strip()
+                if not cleaned:
+                    continue
+                lowered = cleaned.lower()
+                if lowered in seen:
+                    continue
+                seen.add(lowered)
+                ordered.append(cleaned)
+            return ordered
+
+        web_queries = _dedupe_queries(
+            [
+                normalized_query,
+                f"{claim_label} {normalized_query}" if claim_label else "",
+                *[str(hint).strip() for hint in list(hints.get("web") or []) if str(hint).strip()],
+                *query_variants,
+                *[
+                    f"{normalized_query} {hint}" if normalized_query else hint
+                    for hint in list(hints.get("web") or [])
+                ],
+            ]
+        )
+        legal_queries = _dedupe_queries(
+            [
+                f"{claim_label} {normalized_query}" if claim_label else normalized_query,
+                *[str(hint).strip() for hint in list(hints.get("legal") or []) if str(hint).strip()],
+                *query_variants,
+                *[
+                    f"{normalized_query} {hint}" if normalized_query else hint
+                    for hint in list(hints.get("legal") or [])
+                ],
+            ]
+        )
+        return {
+            "query_context": query_context,
+            "web_queries": web_queries,
+            "legal_queries": legal_queries,
+        }
+
+    def _aggregate_external_discovery_results(
+        self,
+        payloads: Sequence[Dict[str, Any]],
+        *,
+        result_key: str,
+        dedupe_keys: Sequence[str],
+        max_results: int,
+    ) -> Dict[str, Any]:
+        aggregated_results: List[Dict[str, Any]] = []
+        attempts: List[Dict[str, Any]] = []
+        seen: set[str] = set()
+        for payload in payloads:
+            if not isinstance(payload, dict):
+                continue
+            attempts.append(
+                {
+                    "query": str(payload.get("query") or "").strip(),
+                    "status": str(payload.get("status") or ""),
+                    "result_count": int(payload.get("result_count", len(list(payload.get(result_key) or []))) or 0),
+                    "error": str(payload.get("error") or "").strip(),
+                }
+            )
+            for item in list(payload.get(result_key) or []):
+                if not isinstance(item, dict):
+                    continue
+                dedupe_value = ""
+                for key in dedupe_keys:
+                    candidate = str(item.get(key) or "").strip().lower()
+                    if candidate:
+                        dedupe_value = f"{key}:{candidate}"
+                        break
+                if not dedupe_value or dedupe_value in seen:
+                    continue
+                seen.add(dedupe_value)
+                aggregated_results.append(dict(item))
+                if len(aggregated_results) >= max_results:
+                    break
+            if len(aggregated_results) >= max_results:
+                break
+
+        integration_status = {}
+        for payload in payloads:
+            if isinstance(payload, dict) and isinstance(payload.get("integration_status"), dict):
+                integration_status = dict(payload.get("integration_status") or {})
+                break
+
+        status = "success" if aggregated_results else "error" if any(attempt.get("error") for attempt in attempts) else "success"
+        return {
+            "status": status,
+            "result_count": len(aggregated_results),
+            "results": aggregated_results[:max_results],
+            "attempts": attempts,
+            "integration_status": integration_status,
+        }
 
     def _normalized_retrieval_source_type(self, source_type: str) -> str:
         normalized = str(source_type or "").strip().lower()
@@ -2626,15 +2762,37 @@ class HACCResearchEngine:
         claim_type: str,
         max_results: int = 5,
     ) -> Dict[str, Any]:
-        web_payload = self.discover(
-            query_text,
+        query_plan = self._external_research_query_plan(query_text, claim_type=claim_type)
+        web_queries = list(query_plan.get("web_queries") or [query_text])[:4]
+        legal_queries = list(query_plan.get("legal_queries") or [query_text])[:4]
+        web_attempts = [
+            self.discover(candidate_query, max_results=max_results, scrape=False)
+            for candidate_query in web_queries
+        ]
+        legal_attempts = [
+            self.discover_legal_authorities(candidate_query, max_results=max_results)
+            for candidate_query in legal_queries
+        ]
+        web_payload = self._aggregate_external_discovery_results(
+            web_attempts,
+            result_key="results",
+            dedupe_keys=("url", "title"),
             max_results=max_results,
-            scrape=False,
         )
-        legal_payload = self.discover_legal_authorities(
-            query_text,
+        legal_payload = self._aggregate_external_discovery_results(
+            legal_attempts,
+            result_key="results",
+            dedupe_keys=("citation", "title", "url"),
             max_results=max_results,
         )
+        web_payload.update({
+            "query": query_text,
+            "queries": web_queries,
+        })
+        legal_payload.update({
+            "query": query_text,
+            "queries": legal_queries,
+        })
         top_web_titles = [
             str(item.get("title") or item.get("url") or "").strip()
             for item in list(web_payload.get("results") or [])[:max_results]
@@ -2648,6 +2806,7 @@ class HACCResearchEngine:
         return {
             "query": query_text,
             "claim_type": claim_type,
+            "query_plan": query_plan,
             "web_discovery": web_payload,
             "legal_authorities": legal_payload,
             "summary": {

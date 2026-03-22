@@ -636,6 +636,85 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertIn("legal_authority_research_prompt", prompts)
             self.assertIn("24 C.F.R. 982.555", prompts["court_complaint_synthesis_prompt"])
 
+    def test_build_external_research_bundle_aggregates_query_variants_for_legal_results(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            web_calls = []
+            legal_calls = []
+
+            def fake_discover(query, *, max_results=10, engines=None, domain_filter=None, scrape=False):
+                web_calls.append(query)
+                if "fair housing retaliation" in query.lower():
+                    return {
+                        "status": "success",
+                        "query": query,
+                        "result_count": 1,
+                        "results": [
+                            {
+                                "title": "HUD fair housing retaliation guidance",
+                                "url": "https://example.org/hud-retaliation",
+                            }
+                        ],
+                    }
+                return {
+                    "status": "success",
+                    "query": query,
+                    "result_count": 0,
+                    "results": [],
+                }
+
+            def fake_discover_legal_authorities(query, *, max_results=10, title=None, court=None, start_date=None, end_date=None):
+                legal_calls.append(query)
+                if "24 c.f.r. 982.555" in query.lower():
+                    return {
+                        "status": "success",
+                        "query": query,
+                        "result_count": 1,
+                        "results": [
+                            {
+                                "title": "Informal hearing for participants",
+                                "citation": "24 C.F.R. 982.555",
+                                "authority_source": "federal_register",
+                            }
+                        ],
+                    }
+                return {
+                    "status": "success",
+                    "query": query,
+                    "result_count": 0,
+                    "results": [],
+                }
+
+            with mock.patch.object(engine, "discover", side_effect=fake_discover), mock.patch.object(
+                engine,
+                "discover_legal_authorities",
+                side_effect=fake_discover_legal_authorities,
+            ):
+                payload = engine._build_external_research_bundle(
+                    query_text="retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+                    claim_type="housing_discrimination",
+                    max_results=3,
+                )
+
+            self.assertGreaterEqual(len(web_calls), 2)
+            self.assertGreaterEqual(len(legal_calls), 2)
+            self.assertIn("fair housing retaliation", " ".join(payload["web_discovery"]["queries"]).lower())
+            self.assertIn("24 c.f.r. 982.555", " ".join(payload["legal_authorities"]["queries"]).lower())
+            self.assertEqual(payload["summary"]["top_web_titles"], ["HUD fair housing retaliation guidance"])
+            self.assertEqual(payload["summary"]["top_legal_titles"], ["24 C.F.R. 982.555"])
+            self.assertEqual(payload["legal_authorities"]["results"][0]["citation"], "24 C.F.R. 982.555")
+
     def test_search_local_surfaces_chronology_summary_and_prioritizes_timeline_ready_documents(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

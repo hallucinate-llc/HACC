@@ -207,6 +207,7 @@ class HACCGroundedPipelineTests(unittest.TestCase):
             self.assertTrue((output_root / "evidence_upload_report.json").is_file())
             self.assertTrue((output_root / "adversarial_summary.json").is_file())
             self.assertTrue((output_root / "run_summary.json").is_file())
+            self.assertTrue((output_root / "progress.json").is_file())
             self.assertEqual(summary["grounding_query"], "reasonable accommodation hearing rights")
             self.assertEqual(summary["hacc_search_mode"], "hybrid")
             self.assertFalse(summary["inputs"]["reuse_existing_artifacts"])
@@ -220,6 +221,7 @@ class HACCGroundedPipelineTests(unittest.TestCase):
             self.assertEqual(summary["artifacts"]["grounding_overview_json"], str(output_root / "grounding_overview.json"))
             self.assertEqual(summary["artifacts"]["retrieval_support_bundle_json"], str(output_root / "retrieval_support_bundle.json"))
             self.assertEqual(summary["artifacts"]["external_research_bundle_json"], str(output_root / "external_research_bundle.json"))
+            self.assertEqual(summary["artifacts"]["progress_json"], str(output_root / "progress.json"))
             self.assertEqual(summary["artifacts"]["complaint_synthesis"]["draft_complaint_package_json"], "")
             self.assertEqual(batch_mock.call_args.kwargs["hacc_search_mode"], "hybrid")
 
@@ -409,6 +411,8 @@ class HACCGroundedPipelineTests(unittest.TestCase):
                 summary["artifacts"]["complaint_synthesis"]["draft_complaint_package_json"],
                 str(output_root / "complaint_synthesis" / "draft_complaint_package.json"),
             )
+            progress_payload = json.loads((output_root / "progress.json").read_text(encoding="utf-8"))
+            self.assertEqual(progress_payload["status"], "completed")
 
 
 if __name__ == "__main__":

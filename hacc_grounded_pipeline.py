@@ -188,6 +188,10 @@ def _write_grounding_artifacts(
     return grounding_overview
 
 
+def _write_pipeline_progress(path: Path, payload: Dict[str, Any]) -> None:
+    path.write_text(json.dumps(_json_safe(payload), ensure_ascii=False, indent=2), encoding="utf-8")
+
+
 def run_hacc_grounded_pipeline(
     *,
     output_dir: str | Path,
@@ -230,11 +234,33 @@ def run_hacc_grounded_pipeline(
     upload_path = output_root / "evidence_upload_report.json"
     adversarial_path = output_root / "adversarial_summary.json"
     summary_path = output_root / "run_summary.json"
+    progress_path = output_root / "progress.json"
+
+    _write_pipeline_progress(
+        progress_path,
+        {
+            "status": "initializing",
+            "timestamp": datetime.now(UTC).isoformat(),
+            "output_dir": str(output_root),
+            "grounding_query": grounding_query,
+            "reuse_existing_artifacts": bool(reuse_existing_artifacts),
+        },
+    )
 
     grounding_bundle = _load_json_if_exists(grounding_path) if reuse_existing_artifacts else None
     upload_report = _load_json_if_exists(upload_path) if reuse_existing_artifacts else None
 
     if grounding_bundle is None or upload_report is None:
+        _write_pipeline_progress(
+            progress_path,
+            {
+                "status": "building_grounding_bundle",
+                "timestamp": datetime.now(UTC).isoformat(),
+                "output_dir": str(output_root),
+                "grounding_query": grounding_query,
+                "reuse_existing_artifacts": bool(reuse_existing_artifacts),
+            },
+        )
         engine = HACCResearchEngine(repo_root=REPO_ROOT)
         grounding_bundle = engine.build_grounding_bundle(
             grounding_query,
@@ -242,6 +268,26 @@ def run_hacc_grounded_pipeline(
             claim_type=resolved_claim_type,
             search_mode=hacc_search_mode,
             use_vector=use_hacc_vector_search,
+        )
+        _write_pipeline_progress(
+            progress_path,
+            {
+                "status": "grounding_bundle_ready",
+                "timestamp": datetime.now(UTC).isoformat(),
+                "output_dir": str(output_root),
+                "grounding_query": grounding_query,
+                "reuse_existing_artifacts": bool(reuse_existing_artifacts),
+            },
+        )
+        _write_pipeline_progress(
+            progress_path,
+            {
+                "status": "uploading_evidence",
+                "timestamp": datetime.now(UTC).isoformat(),
+                "output_dir": str(output_root),
+                "grounding_query": grounding_query,
+                "reuse_existing_artifacts": bool(reuse_existing_artifacts),
+            },
         )
         upload_report = engine.simulate_evidence_upload(
             grounding_query,
@@ -272,11 +318,31 @@ def run_hacc_grounded_pipeline(
         grounding_bundle = _json_safe(grounding_bundle)
         upload_report = _json_safe(upload_report)
         grounding_overview = _json_safe(_grounding_overview(grounding_bundle, upload_report))
+        _write_pipeline_progress(
+            progress_path,
+            {
+                "status": "reused_grounding_and_upload",
+                "timestamp": datetime.now(UTC).isoformat(),
+                "output_dir": str(output_root),
+                "grounding_query": grounding_query,
+                "reuse_existing_artifacts": bool(reuse_existing_artifacts),
+            },
+        )
 
     adversarial_summary = _load_json_if_exists(adversarial_path) if reuse_existing_artifacts else None
     if adversarial_summary is None and reuse_existing_artifacts:
         adversarial_summary = _load_json_if_exists(output_root / "adversarial" / "run_summary.json")
     if adversarial_summary is None:
+        _write_pipeline_progress(
+            progress_path,
+            {
+                "status": "running_adversarial_batch",
+                "timestamp": datetime.now(UTC).isoformat(),
+                "output_dir": str(output_root),
+                "grounding_query": grounding_query,
+                "reuse_existing_artifacts": bool(reuse_existing_artifacts),
+            },
+        )
         adversarial_summary = run_hacc_adversarial_batch(
             output_dir=output_root / "adversarial",
             num_sessions=num_sessions,
@@ -291,6 +357,17 @@ def run_hacc_grounded_pipeline(
             backend_id=backend_id,
             provider=resolved_provider,
             model=resolved_model,
+        )
+    else:
+        _write_pipeline_progress(
+            progress_path,
+            {
+                "status": "reused_adversarial_summary",
+                "timestamp": datetime.now(UTC).isoformat(),
+                "output_dir": str(output_root),
+                "grounding_query": grounding_query,
+                "reuse_existing_artifacts": bool(reuse_existing_artifacts),
+            },
         )
     adversarial_summary = _json_safe(adversarial_summary)
     grounding_overview = _write_grounding_artifacts(
@@ -311,6 +388,16 @@ def run_hacc_grounded_pipeline(
 
     synthesis_summary: Dict[str, Any] = {}
     if synthesize_complaint:
+        _write_pipeline_progress(
+            progress_path,
+            {
+                "status": "running_complaint_synthesis",
+                "timestamp": datetime.now(UTC).isoformat(),
+                "output_dir": str(output_root),
+                "grounding_query": grounding_query,
+                "reuse_existing_artifacts": bool(reuse_existing_artifacts),
+            },
+        )
         synthesis_summary = _json_safe(
             _run_complaint_synthesis(
                 grounded_run_dir=output_root,
@@ -375,6 +462,7 @@ def run_hacc_grounded_pipeline(
             "draft_complaint_package_md": synthesis_summary.get("draft_complaint_package_md", ""),
             "intake_follow_up_worksheet_json": synthesis_summary.get("intake_follow_up_worksheet_json", ""),
             "intake_follow_up_worksheet_md": synthesis_summary.get("intake_follow_up_worksheet_md", ""),
+            "progress_json": str(progress_path),
             "complaint_synthesis": {
                 "output_dir": synthesis_summary.get("output_dir", ""),
                 "draft_complaint_package_json": synthesis_summary.get("draft_complaint_package_json", ""),
@@ -386,6 +474,17 @@ def run_hacc_grounded_pipeline(
     }
     summary = _json_safe(summary)
     summary_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+    _write_pipeline_progress(
+        progress_path,
+        {
+            "status": "completed",
+            "timestamp": datetime.now(UTC).isoformat(),
+            "output_dir": str(output_root),
+            "grounding_query": grounding_query,
+            "reuse_existing_artifacts": bool(reuse_existing_artifacts),
+            "run_summary_json": str(summary_path),
+        },
+    )
     return summary
 
 
