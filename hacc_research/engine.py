@@ -2527,6 +2527,16 @@ class HACCResearchEngine:
             + "\n- ".join(intake_questions)
             + (f"\n- Anchor the intake to these policy sections: {', '.join(anchor_sections)}" if anchor_sections else "")
         )
+        selected_upload_candidates = [
+            {
+                "title": str(candidate.get("title") or "").strip(),
+                "source_type": str(candidate.get("source_type") or "").strip(),
+                "relative_path": str(candidate.get("relative_path") or "").strip(),
+                "selection_priority": float(candidate.get("selection_priority", 0.0) or 0.0),
+                "anchor_sections": self._candidate_anchor_sections(candidate),
+            }
+            for candidate in upload_candidates[:5]
+        ]
         return {
             "evidence_upload_prompts": upload_prompts,
             "evidence_upload_prompt": upload_prompts[0]["text"] if upload_prompts else production_prompt,
@@ -2547,6 +2557,7 @@ class HACCResearchEngine:
                 "anchor_sections": anchor_sections,
                 "timeline_anchor_count": int(chronology_summary.get("timeline_anchor_count", 0) or 0),
                 "recommended_files": evidence_titles[:5],
+                "selected_upload_candidates": selected_upload_candidates,
                 "blocker_objectives": blocker_objectives,
                 "extraction_targets": extraction_targets,
             },

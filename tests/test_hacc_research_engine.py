@@ -576,6 +576,18 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertEqual(set(prompts["anchor_sections"]), {"reasonable_accommodation"})
             self.assertEqual(prompts["evidence_upload_form_seed"]["claim_type"], "housing_discrimination")
             self.assertEqual(prompts["evidence_upload_form_seed"]["recommended_files"], ["Reasonable Accommodation Policy"])
+            self.assertEqual(
+                prompts["evidence_upload_form_seed"]["selected_upload_candidates"],
+                [
+                    {
+                        "title": "Reasonable Accommodation Policy",
+                        "source_type": "repository_evidence",
+                        "relative_path": "README.md",
+                        "selection_priority": 0.0,
+                        "anchor_sections": ["reasonable_accommodation"],
+                    }
+                ],
+            )
             self.assertIn("claim_support_temporal_handoff", payload)
             self.assertIn("drafting_readiness", payload)
             self.assertIn("document_generation_handoff", payload)
