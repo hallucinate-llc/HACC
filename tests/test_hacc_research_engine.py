@@ -330,7 +330,7 @@ class HACCResearchEngineTests(unittest.TestCase):
                 knowledge_graph_dir=root / "hacc_website/knowledge_graph",
             )
 
-            long_text = ("January 4, 2024 " + ("timeline " * 1200)).strip()
+            long_text = ("HACC sent written notice on January 4, 2024 " + ("timeline " * 1200)).strip()
             with mock.patch.object(engine_module, "build_shared_temporal_context", side_effect=AssertionError("shared parser should be skipped")):
                 payload = engine._build_document_chronology_metadata(
                     long_text,
@@ -479,6 +479,36 @@ class HACCResearchEngineTests(unittest.TestCase):
 
             self.assertEqual([anchor["start_date"] for anchor in analysis["timeline_anchors"]], ["2024-03-04"])
             self.assertEqual(analysis["timeline_anchor_count"], 1)
+
+    def test_document_chronology_metadata_uses_focused_text_for_knowledge_graph_documents(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            raw_text = (
+                "ADMINISTRATIVE PLAN FOR THE HOUSING AUTHORITY Effective: July 1, 2025 Approved by the HA Board. "
+                "Revision Date May 1, 2005 February 1, 2006 October 1, 2006."
+            )
+            metadata = engine._build_document_chronology_metadata(
+                raw_text,
+                title="Administrative Plan",
+                source_path="/tmp/policy.pdf",
+                source_type="knowledge_graph",
+                rules=[{"text": "The tenant may request an informal review of the decision."}],
+                entities=[{"name": "informal review"}],
+            )
+
+            self.assertEqual(metadata["timeline_anchor_count"], 0)
+            self.assertEqual(metadata["timeline_anchor_preview"], [])
 
     def test_build_grounding_bundle_emits_synthetic_prompts_for_file_backed_results(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:

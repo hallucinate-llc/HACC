@@ -1954,6 +1954,7 @@ class HACCResearchEngine:
                 text,
                 title=title,
                 source_path=str(text_path),
+                source_type="parsed_document",
             )
             documents.append(
                 CorpusDocument(
@@ -2039,6 +2040,7 @@ class HACCResearchEngine:
             text,
             title=title,
             source_path=str(path),
+            source_type="repository_evidence",
         )
         try:
             size_bytes = path.stat().st_size
@@ -3030,6 +3032,9 @@ class HACCResearchEngine:
                 text,
                 title=title,
                 source_path=source_path,
+                source_type="knowledge_graph",
+                rules=list(payload.get("rules", []) or []),
+                entities=list(payload.get("entities", []) or []),
             )
             documents.append(
                 CorpusDocument(
@@ -3184,9 +3189,18 @@ class HACCResearchEngine:
         title: str,
         source_path: str,
         claim_type: str = "housing_discrimination",
+        source_type: str = "repository_evidence",
+        rules: Optional[Sequence[Dict[str, Any]]] = None,
+        entities: Optional[Sequence[Dict[str, Any]]] = None,
     ) -> Dict[str, Any]:
-        anchors = self._extract_timeline_anchors_from_text(
+        chronology_text = self._select_document_chronology_text(
             text,
+            source_type=source_type,
+            rules=rules,
+            entities=entities,
+        )
+        anchors = self._extract_timeline_anchors_from_text(
+            chronology_text,
             title=title,
             source_path=source_path,
             claim_type=claim_type,
@@ -3197,6 +3211,32 @@ class HACCResearchEngine:
             "timeline_anchor_count": int(chronology_summary.get("timeline_anchor_count", 0) or 0),
             "timeline_anchor_preview": list(chronology_summary.get("anchor_preview") or []),
         }
+
+    def _select_document_chronology_text(
+        self,
+        text: str,
+        *,
+        source_type: str,
+        rules: Optional[Sequence[Dict[str, Any]]] = None,
+        entities: Optional[Sequence[Dict[str, Any]]] = None,
+    ) -> str:
+        normalized_source_type = str(source_type or "").strip().lower()
+        if normalized_source_type in {"repository_evidence", "parsed_document"}:
+            return text
+
+        fragments: List[str] = []
+        for rule in list(rules or [])[:12]:
+            rule_text = _clean_text(str(rule.get("text") or ""))
+            if rule_text:
+                fragments.append(rule_text)
+        for entity in list(entities or [])[:12]:
+            entity_name = _clean_text(str(entity.get("name") or ""))
+            if entity_name:
+                fragments.append(entity_name)
+        focused_text = " ".join(fragment for fragment in fragments if fragment)
+        if focused_text:
+            return focused_text[:MAX_TIMELINE_EXTRACTION_CHARS]
+        return text[: min(len(text), 1200)]
 
     def _summarize_chronology_anchors(self, anchors: Sequence[Dict[str, Any]]) -> Dict[str, Any]:
         normalized_anchors = [dict(item) for item in list(anchors or []) if isinstance(item, dict)]
