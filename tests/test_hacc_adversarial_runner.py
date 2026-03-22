@@ -915,6 +915,106 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             self.assertIn("completed_at", first["file_runs"][0])
             self.assertEqual(persisted[0]["status"], "completed")
 
+    def test_run_hacc_adversarial_batch_can_reuse_existing_artifacts(self) -> None:
+        class FakeHarness:
+            def __init__(self, *args, **kwargs):
+                raise AssertionError("Harness should not be constructed when reusing existing artifacts")
+
+        class FakeOptimizer:
+            @staticmethod
+            def _recommended_target_files_for_report(report):
+                return []
+
+        runtime_bundle = {
+            "AdversarialHarness": FakeHarness,
+            "Optimizer": FakeOptimizer,
+            "complainant_backend": object(),
+            "critic_backend": object(),
+            "mediator_factory": lambda **kwargs: object(),
+            "runtime": {"mode": "demo", "provider": "codex", "model": "gpt-5.3-codex"},
+        }
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            output_root = Path(tmpdir)
+            (output_root / "adversarial_results.json").write_text(
+                json.dumps({"results": [{"session_id": "session-1"}]}),
+                encoding="utf-8",
+            )
+            (output_root / "optimization_report.json").write_text(
+                json.dumps(
+                    {
+                        "average_score": 0.82,
+                        "score_trend": "stable",
+                        "recommended_hacc_preset": "core_hacc_policies",
+                        "priority_improvements": [],
+                        "recommendations": [],
+                        "intake_priority_performance": {},
+                        "coverage_remediation": {},
+                        "best_session_id": "session-1",
+                        "workflow_phase_plan": [],
+                        "num_sessions_analyzed": 1,
+                    }
+                ),
+                encoding="utf-8",
+            )
+            (output_root / "workflow_optimization_bundle.json").write_text(
+                json.dumps({"global_objectives": [], "workflow_phase_plan": [], "phase_tasks": []}),
+                encoding="utf-8",
+            )
+            (output_root / "best_complaint_bundle.json").write_text(
+                json.dumps(
+                    {
+                        "seed_complaint": {"type": "grounded_hacc_seed"},
+                        "initial_complaint_text": "Existing complaint",
+                        "conversation_history": [],
+                        "critic_score": {"overall_score": 0.82},
+                        "final_state": {},
+                        "knowledge_graph_summary": {},
+                        "dependency_graph_summary": {},
+                    }
+                ),
+                encoding="utf-8",
+            )
+            (output_root / "batch_progress.json").write_text(
+                json.dumps({"status": "reused_existing_artifacts", "completed_sessions": 1}),
+                encoding="utf-8",
+            )
+            (output_root / "run_summary.json").write_text(
+                json.dumps(
+                    {
+                        "inputs": {"reuse_existing_artifacts": True},
+                        "statistics": {"total_sessions": 1, "successful_sessions": 1, "failed_sessions": 0},
+                        "search_summary": {"effective_search_mode": "lexical"},
+                        "optimization_report": {"average_score": 0.82},
+                        "best_complaint": {"initial_complaint_text": "Existing complaint"},
+                        "artifacts": {"batch_progress_json": str(output_root / "batch_progress.json")},
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            with mock.patch("hacc_adversarial_runner._load_runtime", return_value=runtime_bundle):
+                with mock.patch(
+                    "hacc_adversarial_runner._router_diagnostics",
+                    return_value=self._available_router_diagnostics(),
+                ):
+                    summary = run_hacc_adversarial_batch(
+                        output_dir=tmpdir,
+                        num_sessions=1,
+                        max_turns=1,
+                        max_parallel=1,
+                        hacc_preset="core_hacc_policies",
+                        hacc_search_mode="lexical",
+                        demo=True,
+                        reuse_existing_artifacts=True,
+                    )
+
+            self.assertEqual(summary["statistics"]["total_sessions"], 1)
+            self.assertEqual(summary["optimization_report"]["average_score"], 0.82)
+            self.assertEqual(summary["best_complaint"]["initial_complaint_text"], "Existing complaint")
+            self.assertEqual(summary["search_summary"]["effective_search_mode"], "lexical")
+            self.assertTrue(Path(summary["artifacts"]["batch_progress_json"]).is_file())
+
     def test_workflow_phase_autopatches_skip_later_phases_when_no_successful_sessions(self) -> None:
         fake_report = SimpleNamespace(num_sessions_analyzed=0)
         workflow_payload = {
@@ -1957,6 +2057,12 @@ SUGGESTIONS:
         args = parser.parse_args([])
         self.assertEqual(args.provider, HACC_DEFAULT_PROVIDER)
         self.assertEqual(args.model, HACC_DEFAULT_MODEL)
+        self.assertFalse(args.reuse_existing_artifacts)
+
+    def test_parser_supports_reuse_existing_artifacts(self) -> None:
+        parser = create_parser()
+        args = parser.parse_args(["--reuse-existing-artifacts"])
+        self.assertTrue(args.reuse_existing_artifacts)
 
     def test_live_runner_passes_session_db_paths_to_mediator(self) -> None:
         complaint_generator_root = REPO_ROOT / "complaint-generator"

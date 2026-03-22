@@ -50,6 +50,26 @@ def _sanitize_for_json(value: Any) -> Any:
     return str(value)
 
 
+def _load_json_if_exists(path: Path) -> Optional[Dict[str, Any]]:
+    if not path.is_file():
+        return None
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+    return payload if isinstance(payload, dict) else None
+
+
+class _LoadedReport:
+    def __init__(self, payload: Dict[str, Any]):
+        self._payload = dict(payload or {})
+        for key, value in self._payload.items():
+            setattr(self, key, value)
+
+    def to_dict(self) -> Dict[str, Any]:
+        return dict(self._payload)
+
+
 @contextlib.contextmanager
 def _scoped_mediator_integration_env(*, effective_search_mode: str, use_hacc_vector_search: bool):
     lexical_modes = {"lexical", "lexical_only", "lexical_fallback"}
@@ -1754,6 +1774,7 @@ def run_hacc_adversarial_batch(
     use_recommended_autopatch_targets: bool = False,
     emit_workflow_phase_autopatches: bool = False,
     apply_workflow_phase_autopatches: Optional[bool] = None,
+    reuse_existing_artifacts: bool = False,
 ) -> Dict[str, Any]:
     output_root = Path(output_dir).resolve()
     output_root.mkdir(parents=True, exist_ok=True)
@@ -1763,17 +1784,32 @@ def run_hacc_adversarial_batch(
 
     resolved_provider, resolved_model = _resolve_hacc_runtime_provider_model(provider, model)
 
+    run_results_path = output_root / "adversarial_results.json"
+    optimization_report_path = output_root / "optimization_report.json"
+    workflow_optimization_path = output_root / "workflow_optimization_bundle.json"
+    anchor_report_path = output_root / "anchor_section_coverage.csv"
+    best_complaint_path = output_root / "best_complaint_bundle.json"
+    summary_path = output_root / "run_summary.json"
+
+    if reuse_existing_artifacts:
+        existing_summary = _load_json_if_exists(summary_path)
+        if existing_summary is not None:
+            return existing_summary
+
     runtime_bundle = _load_runtime(demo, config_path, backend_id, resolved_provider, resolved_model)
     AdversarialHarness = runtime_bundle["AdversarialHarness"]
     Optimizer = runtime_bundle["Optimizer"]
+    optimizer = Optimizer()
 
-    harness = AdversarialHarness(
-        llm_backend_complainant=runtime_bundle["complainant_backend"],
-        llm_backend_critic=runtime_bundle["critic_backend"],
-        mediator_factory=runtime_bundle["mediator_factory"],
-        max_parallel=max_parallel,
-        session_state_dir=str(session_dir),
-    )
+    harness = None
+    if not reuse_existing_artifacts:
+        harness = AdversarialHarness(
+            llm_backend_complainant=runtime_bundle["complainant_backend"],
+            llm_backend_critic=runtime_bundle["critic_backend"],
+            mediator_factory=runtime_bundle["mediator_factory"],
+            max_parallel=max_parallel,
+            session_state_dir=str(session_dir),
+        )
 
     router_diagnostics = _router_diagnostics()
     search_summary = _adversarial_search_summary(
@@ -1792,39 +1828,125 @@ def run_hacc_adversarial_batch(
             encoding="utf-8",
         )
 
-    _write_batch_progress(
-        {
-            "status": "initializing",
-            "timestamp": datetime.now(UTC).isoformat(),
-            "total_sessions": int(num_sessions or 0),
-            "completed_sessions": 0,
-            "successful_sessions": 0,
-            "failed_sessions": 0,
-            "active_session_ids": [],
-            "search_summary": _sanitize_for_json(search_summary),
-        }
-    )
+    existing_summary = _load_json_if_exists(summary_path) if reuse_existing_artifacts else None
+    existing_results_payload = _load_json_if_exists(run_results_path) if reuse_existing_artifacts else None
+    existing_optimization_payload = _load_json_if_exists(optimization_report_path) if reuse_existing_artifacts else None
+    existing_workflow_payload = _load_json_if_exists(workflow_optimization_path) if reuse_existing_artifacts else None
+    existing_best_bundle = _load_json_if_exists(best_complaint_path) if reuse_existing_artifacts else None
 
-    with _scoped_mediator_integration_env(
-        effective_search_mode=effective_search_mode,
-        use_hacc_vector_search=effective_use_hacc_vector_search,
-    ):
-        results = harness.run_batch(
-            num_sessions=num_sessions,
-            personalities=personalities,
-            max_turns_per_session=max_turns,
-            include_hacc_evidence=True,
-            hacc_count=hacc_count,
-            hacc_preset=hacc_preset,
-            use_hacc_vector_search=effective_use_hacc_vector_search,
-            hacc_search_mode=effective_search_mode,
-            progress_callback=_write_batch_progress,
+    if reuse_existing_artifacts and existing_results_payload and existing_optimization_payload and existing_workflow_payload:
+        _write_batch_progress(
+            {
+                "status": "reused_existing_artifacts",
+                "timestamp": datetime.now(UTC).isoformat(),
+                "total_sessions": int(num_sessions or 0),
+                "completed_sessions": int(((existing_summary or {}).get("statistics") or {}).get("total_sessions") or 0),
+                "successful_sessions": int(((existing_summary or {}).get("statistics") or {}).get("successful_sessions") or 0),
+                "failed_sessions": int(((existing_summary or {}).get("statistics") or {}).get("failed_sessions") or 0),
+                "active_session_ids": [],
+                "search_summary": _sanitize_for_json((existing_summary or {}).get("search_summary") or search_summary),
+            }
+        )
+        results = list(existing_results_payload.get("results") or [])
+        report = _LoadedReport(existing_optimization_payload)
+        optimization_payload = existing_optimization_payload
+        workflow_payload = existing_workflow_payload
+        stats = _sanitize_for_json((existing_summary or {}).get("statistics") or {"total_sessions": len(results)})
+        best_bundle = _sanitize_for_json(existing_best_bundle or {})
+        best_result = None
+    else:
+        _write_batch_progress(
+            {
+                "status": "initializing",
+                "timestamp": datetime.now(UTC).isoformat(),
+                "total_sessions": int(num_sessions or 0),
+                "completed_sessions": 0,
+                "successful_sessions": 0,
+                "failed_sessions": 0,
+                "active_session_ids": [],
+                "search_summary": _sanitize_for_json(search_summary),
+            }
         )
 
-    optimizer = Optimizer()
-    report = optimizer.analyze(results)
-    stats = harness.get_statistics()
-    best_result = _select_best_result(results)
+        with _scoped_mediator_integration_env(
+            effective_search_mode=effective_search_mode,
+            use_hacc_vector_search=effective_use_hacc_vector_search,
+        ):
+            results = harness.run_batch(
+                num_sessions=num_sessions,
+                personalities=personalities,
+                max_turns_per_session=max_turns,
+                include_hacc_evidence=True,
+                hacc_count=hacc_count,
+                hacc_preset=hacc_preset,
+                use_hacc_vector_search=effective_use_hacc_vector_search,
+                hacc_search_mode=effective_search_mode,
+                progress_callback=_write_batch_progress,
+            )
+
+        report = optimizer.analyze(results)
+        stats = harness.get_statistics()
+        best_result = _select_best_result(results)
+        optimization_payload = _sanitize_for_json(report.to_dict())
+        workflow_payload = _build_workflow_optimization_payload(
+            optimizer,
+            results=results,
+            report=report,
+        )
+        harness.save_results(str(run_results_path))
+        harness.save_anchor_section_report(str(anchor_report_path), format="csv")
+        optimization_report_path.write_text(
+            json.dumps(optimization_payload, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+        workflow_optimization_path.write_text(
+            json.dumps(workflow_payload, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+        best_bundle = {
+            "seed_complaint": _sanitize_for_json(best_result.seed_complaint if best_result else None),
+            "initial_complaint_text": getattr(best_result, "initial_complaint_text", ""),
+            "conversation_history": _sanitize_for_json(getattr(best_result, "conversation_history", [])),
+            "critic_score": _sanitize_for_json(getattr(best_result, "critic_score", None)),
+            "final_state": _sanitize_for_json(getattr(best_result, "final_state", {})),
+            "knowledge_graph_summary": _sanitize_for_json(getattr(best_result, "knowledge_graph_summary", {})),
+            "dependency_graph_summary": _sanitize_for_json(getattr(best_result, "dependency_graph_summary", {})),
+        }
+        best_complaint_path.write_text(
+            json.dumps(best_bundle, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+
+    persisted_best_summary = dict((existing_summary or {}).get("best_complaint") or {})
+    persisted_seed_value = best_bundle.get("seed_complaint") or {}
+    persisted_seed = dict(persisted_seed_value) if isinstance(persisted_seed_value, dict) else {}
+    persisted_critic_score_value = best_bundle.get("critic_score") or {}
+    persisted_critic_score = dict(persisted_critic_score_value) if isinstance(persisted_critic_score_value, dict) else {}
+    best_complaint_summary = {
+        "session_id": getattr(best_result, "session_id", None) or persisted_best_summary.get("session_id"),
+        "initial_complaint_text": getattr(best_result, "initial_complaint_text", "") or str(best_bundle.get("initial_complaint_text") or ""),
+        "score": (
+            float(getattr(getattr(best_result, "critic_score", None), "overall_score", 0.0) or 0.0)
+            if best_result
+            else float(persisted_critic_score.get("overall_score") or persisted_best_summary.get("score") or 0.0)
+        ),
+        "seed_type": (
+            str((getattr(best_result, "seed_complaint", {}) or {}).get("type") or "")
+            if best_result
+            else str(persisted_seed.get("type") or persisted_best_summary.get("seed_type") or "")
+        ),
+        "seed_summary": (
+            str((getattr(best_result, "seed_complaint", {}) or {}).get("summary") or "")
+            if best_result
+            else str(persisted_seed.get("summary") or persisted_best_summary.get("seed_summary") or "")
+        ),
+        "grounding_overview": (
+            _best_complaint_grounding_overview(best_result)
+            if best_result
+            else _sanitize_for_json(persisted_best_summary.get("grounding_overview") or {})
+        ),
+        "search_summary": search_summary,
+    }
     requested_autopatch_profile = autopatch_profile
     requested_autopatch_target_paths = _resolve_autopatch_target_files(autopatch_target_files, autopatch_profile)
     recommended_autopatch_targets = _resolve_optimizer_recommended_target_files(optimizer, report)
@@ -1836,30 +1958,6 @@ def run_hacc_adversarial_batch(
         selected_autopatch_profile = recommended_autopatch_profile
     autopatch_constraints = _autopatch_constraints_for_profile(selected_autopatch_profile, autopatch_target_paths)
 
-    run_results_path = output_root / "adversarial_results.json"
-    optimization_report_path = output_root / "optimization_report.json"
-    workflow_optimization_path = output_root / "workflow_optimization_bundle.json"
-    anchor_report_path = output_root / "anchor_section_coverage.csv"
-    best_complaint_path = output_root / "best_complaint_bundle.json"
-    summary_path = output_root / "run_summary.json"
-
-    harness.save_results(str(run_results_path))
-    harness.save_anchor_section_report(str(anchor_report_path), format="csv")
-
-    optimization_payload = _sanitize_for_json(report.to_dict())
-    workflow_payload = _build_workflow_optimization_payload(
-        optimizer,
-        results=results,
-        report=report,
-    )
-    optimization_report_path.write_text(
-        json.dumps(optimization_payload, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
-    workflow_optimization_path.write_text(
-        json.dumps(workflow_payload, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
     workflow_phase_autopatch_summary: Dict[str, Any] = {
         "requested": False,
         "count": 0,
@@ -1944,20 +2042,6 @@ def run_hacc_adversarial_batch(
                 "error": f"Workflow phase autopatch dependency preflight failed: {workflow_phase_preflight.get('error')}",
             }
 
-    best_bundle = {
-        "seed_complaint": _sanitize_for_json(best_result.seed_complaint if best_result else None),
-        "initial_complaint_text": getattr(best_result, "initial_complaint_text", ""),
-        "conversation_history": _sanitize_for_json(getattr(best_result, "conversation_history", [])),
-        "critic_score": _sanitize_for_json(getattr(best_result, "critic_score", None)),
-        "final_state": _sanitize_for_json(getattr(best_result, "final_state", {})),
-        "knowledge_graph_summary": _sanitize_for_json(getattr(best_result, "knowledge_graph_summary", {})),
-        "dependency_graph_summary": _sanitize_for_json(getattr(best_result, "dependency_graph_summary", {})),
-    }
-    best_complaint_path.write_text(
-        json.dumps(best_bundle, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
-
     summary = {
         "timestamp": _timestamp(),
         "runtime": runtime_bundle["runtime"],
@@ -1975,6 +2059,7 @@ def run_hacc_adversarial_batch(
             "effective_hacc_search_mode": effective_search_mode,
             "provider": resolved_provider,
             "model": resolved_model,
+            "reuse_existing_artifacts": reuse_existing_artifacts,
         },
         "search_summary": search_summary,
         "statistics": _sanitize_for_json(stats),
@@ -1996,15 +2081,7 @@ def run_hacc_adversarial_batch(
         },
         "workflow_phase_autopatch": _sanitize_for_json(workflow_phase_autopatch_summary),
         "autopatch": _sanitize_for_json(autopatch_summary),
-        "best_complaint": {
-            "session_id": getattr(best_result, "session_id", None),
-            "initial_complaint_text": getattr(best_result, "initial_complaint_text", ""),
-            "score": float(getattr(getattr(best_result, "critic_score", None), "overall_score", 0.0) or 0.0) if best_result else 0.0,
-            "seed_type": str((getattr(best_result, "seed_complaint", {}) or {}).get("type") or "") if best_result else "",
-            "seed_summary": str((getattr(best_result, "seed_complaint", {}) or {}).get("summary") or "") if best_result else "",
-            "grounding_overview": _best_complaint_grounding_overview(best_result),
-            "search_summary": search_summary,
-        },
+        "best_complaint": best_complaint_summary,
         "artifacts": {
             "output_dir": str(output_root),
             "results_json": str(run_results_path),
@@ -2118,6 +2195,11 @@ def create_parser() -> argparse.ArgumentParser:
         dest="apply_workflow_phase_autopatches",
         help="Generate workflow phase patch artifacts without applying them.",
     )
+    parser.add_argument(
+        "--reuse-existing-artifacts",
+        action="store_true",
+        help="Reuse saved adversarial/optimizer artifacts from the output directory instead of rerunning the batch.",
+    )
     parser.add_argument("--json", action="store_true", help="Print the full summary JSON.")
     return parser
 
@@ -2147,6 +2229,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         use_recommended_autopatch_targets=args.use_recommended_autopatch_targets,
         emit_workflow_phase_autopatches=args.emit_workflow_phase_autopatches,
         apply_workflow_phase_autopatches=args.apply_workflow_phase_autopatches,
+        reuse_existing_artifacts=args.reuse_existing_artifacts,
     )
     if args.json:
         print(json.dumps(summary, ensure_ascii=False, indent=2))
