@@ -142,7 +142,7 @@ class HacceEvidenceSeedGenerationTests(unittest.TestCase):
         self.assertEqual(key_facts["drafting_readiness"]["phase_status"], "ready")
         self.assertTrue(key_facts["graph_completeness_signals"]["graph_complete"])
 
-    def test_resolve_hacc_question_evidence_uses_package_search_mode(self) -> None:
+    def test_resolve_hacc_question_evidence_prefers_effective_search_summary_mode(self) -> None:
         class FakeEngine:
             def __init__(self):
                 self.calls = []
@@ -176,10 +176,16 @@ class HacceEvidenceSeedGenerationTests(unittest.TestCase):
                 key_facts={
                     "evidence_query": "grievance hearing written notice adverse action",
                     "anchor_terms": ["informal hearing", "written notice"],
+                    "search_summary": {
+                        "requested_search_mode": "package",
+                        "effective_search_mode": "lexical",
+                        "requested_use_vector": True,
+                    },
                 },
             )
 
-        self.assertEqual(fake_engine.calls[0]["search_mode"], "package")
+        self.assertEqual(fake_engine.calls[0]["search_mode"], "lexical")
+        self.assertFalse(fake_engine.calls[0]["use_vector"])
         self.assertIn("informal hearing", fake_engine.calls[0]["query"])
         self.assertEqual(payload["evidence_items"][0]["title"], "ADMINISTRATIVE PLAN")
 

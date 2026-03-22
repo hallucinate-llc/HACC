@@ -751,6 +751,126 @@ class HACCResearchEngineTests(unittest.TestCase):
 
             self.assertEqual(candidates[0]["document_id"], "kg::policy")
 
+    def test_select_uploadable_results_prefers_case_like_notice_evidence_for_chronology_queries(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            policy_path = root / "policy.txt"
+            notice_path = root / "notice.txt"
+            policy_path.write_text("policy", encoding="utf-8")
+            notice_path.write_text("notice", encoding="utf-8")
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            candidates = engine._select_uploadable_results(
+                {
+                    "query": "retaliation grievance complaint appeal hearing due process tenant notice response date",
+                    "results": [
+                        {
+                            "document_id": "kg::policy",
+                            "title": "Administrative Plan Policy",
+                            "source_type": "knowledge_graph",
+                            "source_path": str(policy_path),
+                            "score": 95.0,
+                            "snippet": "General housing policy overview.",
+                            "matched_rules": [
+                                {
+                                    "text": "General program rules and policy summary.",
+                                    "section_title": "Policy Overview",
+                                }
+                            ],
+                            "metadata": {},
+                        },
+                        {
+                            "document_id": "repo::notice.txt",
+                            "title": "Tenant Notice",
+                            "source_type": "repository_evidence",
+                            "source_path": str(notice_path),
+                            "score": 82.0,
+                            "snippet": "HACC sent written notice and described the right to request an informal review.",
+                            "matched_rules": [
+                                {
+                                    "text": "The notice must describe how to obtain the informal review and explain the denial of assistance.",
+                                    "section_title": "Notice to Applicant",
+                                }
+                            ],
+                            "matched_entities": [
+                                {"name": "written notice of denial", "type": "policy_rule"},
+                            ],
+                            "metadata": {},
+                        },
+                    ],
+                },
+                top_k=2,
+            )
+
+            self.assertEqual(candidates[0]["document_id"], "repo::notice.txt")
+            self.assertGreater(candidates[0]["selection_priority"], candidates[1]["selection_priority"])
+
+    def test_select_uploadable_results_penalizes_noisy_review_markup_for_chronology_queries(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            noisy_path = root / "reviews.html"
+            policy_path = root / "policy.txt"
+            noisy_path.write_text("reviews", encoding="utf-8")
+            policy_path.write_text("policy", encoding="utf-8")
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            candidates = engine._select_uploadable_results(
+                {
+                    "query": "retaliation grievance appeal hearing notice response date",
+                    "results": [
+                        {
+                            "document_id": "repo::reviews.html",
+                            "title": "Apartment Reviews",
+                            "source_type": "repository_evidence",
+                            "source_path": str(noisy_path),
+                            "score": 88.0,
+                            "snippet": '<script>window.__FEATURE_FLAG_STATE__={"featureFlags":[]};</script> "previewText":"I asked to cancel my application"',
+                            "matched_rules": [],
+                            "matched_entities": [],
+                            "metadata": {},
+                        },
+                        {
+                            "document_id": "kg::policy",
+                            "title": "ADMISSIONS AND CONTINUED OCCUPANCY POLICY",
+                            "source_type": "knowledge_graph",
+                            "source_path": str(policy_path),
+                            "score": 75.0,
+                            "snippet": "The notice must also state that the tenant may request a grievance hearing on the HACC decision.",
+                            "matched_rules": [
+                                {
+                                    "text": "The notice must also state that the tenant may request a grievance hearing on the HACC decision.",
+                                    "section_title": "Sample Grievance Procedure",
+                                }
+                            ],
+                            "matched_entities": [{"name": "HACC grievance hearing", "type": "policy_rule"}],
+                            "metadata": {},
+                        },
+                    ],
+                },
+                top_k=2,
+            )
+
+            self.assertEqual(candidates[0]["document_id"], "kg::policy")
+            self.assertLess(candidates[1]["selection_priority"], 0.0)
+
     def test_simulate_evidence_upload_uses_mediator_submit_path(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

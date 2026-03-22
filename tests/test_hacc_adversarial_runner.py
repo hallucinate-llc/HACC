@@ -433,6 +433,7 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
 
     def test_run_hacc_adversarial_batch_passes_effective_search_mode_to_harness(self) -> None:
         run_batch_kwargs = {}
+        env_snapshot = {}
 
         class FakeHarness:
             def __init__(self, *args, **kwargs):
@@ -440,6 +441,16 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
 
             def run_batch(self, **kwargs):
                 run_batch_kwargs.update(kwargs)
+                env_snapshot.update(
+                    {
+                        "IPFS_DATASETS_ENHANCED_LEGAL": os.environ.get("IPFS_DATASETS_ENHANCED_LEGAL"),
+                        "IPFS_DATASETS_ENHANCED_SEARCH": os.environ.get("IPFS_DATASETS_ENHANCED_SEARCH"),
+                        "IPFS_DATASETS_ENHANCED_GRAPH": os.environ.get("IPFS_DATASETS_ENHANCED_GRAPH"),
+                        "IPFS_DATASETS_ENHANCED_VECTOR": os.environ.get("IPFS_DATASETS_ENHANCED_VECTOR"),
+                        "IPFS_DATASETS_ENHANCED_OPTIMIZER": os.environ.get("IPFS_DATASETS_ENHANCED_OPTIMIZER"),
+                        "RETRIEVAL_RERANKER_MODE": os.environ.get("RETRIEVAL_RERANKER_MODE"),
+                    }
+                )
                 return []
 
             def get_statistics(self):
@@ -504,6 +515,106 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
 
         self.assertEqual(run_batch_kwargs["hacc_search_mode"], "lexical_fallback")
         self.assertFalse(run_batch_kwargs["use_hacc_vector_search"])
+        self.assertEqual(env_snapshot["IPFS_DATASETS_ENHANCED_LEGAL"], "0")
+        self.assertEqual(env_snapshot["IPFS_DATASETS_ENHANCED_SEARCH"], "0")
+        self.assertEqual(env_snapshot["IPFS_DATASETS_ENHANCED_GRAPH"], "0")
+        self.assertEqual(env_snapshot["IPFS_DATASETS_ENHANCED_VECTOR"], "0")
+        self.assertEqual(env_snapshot["IPFS_DATASETS_ENHANCED_OPTIMIZER"], "0")
+        self.assertEqual(env_snapshot["RETRIEVAL_RERANKER_MODE"], "off")
+
+    def test_run_hacc_adversarial_batch_writes_batch_progress_artifact(self) -> None:
+        class FakeHarness:
+            def __init__(self, *args, **kwargs):
+                pass
+
+            def run_batch(self, **kwargs):
+                progress_callback = kwargs.get("progress_callback")
+                if callable(progress_callback):
+                    progress_callback(
+                        {
+                            "status": "running",
+                            "total_sessions": 1,
+                            "completed_sessions": 0,
+                            "successful_sessions": 0,
+                            "failed_sessions": 0,
+                            "active_session_ids": ["session-1"],
+                            "latest_session": {"session_id": "session-1", "status": "started"},
+                        }
+                    )
+                    progress_callback(
+                        {
+                            "status": "completed",
+                            "total_sessions": 1,
+                            "completed_sessions": 1,
+                            "successful_sessions": 0,
+                            "failed_sessions": 0,
+                            "active_session_ids": [],
+                            "latest_session": {"session_id": "session-1", "status": "completed"},
+                        }
+                    )
+                return []
+
+            def get_statistics(self):
+                return {"total_sessions": 0}
+
+            def save_results(self, path):
+                Path(path).write_text(json.dumps({"results": []}), encoding="utf-8")
+
+            def save_anchor_section_report(self, path, format="csv"):
+                Path(path).write_text("anchor_section,covered\n", encoding="utf-8")
+
+        class FakeReport:
+            def to_dict(self):
+                return {
+                    "average_score": 0.0,
+                    "score_trend": "insufficient_data",
+                    "recommended_hacc_preset": "core_hacc_policies",
+                    "priority_improvements": [],
+                    "recommendations": [],
+                    "intake_priority_performance": {},
+                    "coverage_remediation": {},
+                    "best_session_id": None,
+                }
+
+        class FakeOptimizer:
+            def analyze(self, results):
+                return FakeReport()
+
+            @staticmethod
+            def _recommended_target_files_for_report(report):
+                return []
+
+        runtime_bundle = {
+            "AdversarialHarness": FakeHarness,
+            "Optimizer": FakeOptimizer,
+            "complainant_backend": object(),
+            "critic_backend": object(),
+            "mediator_factory": lambda **kwargs: object(),
+            "runtime": {"mode": "demo"},
+        }
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            with mock.patch("hacc_adversarial_runner._load_runtime", return_value=runtime_bundle):
+                with mock.patch(
+                    "hacc_adversarial_runner._router_diagnostics",
+                    return_value=self._available_router_diagnostics(),
+                ):
+                    summary = run_hacc_adversarial_batch(
+                        output_dir=tmpdir,
+                        num_sessions=1,
+                        max_turns=1,
+                        max_parallel=1,
+                        hacc_preset="core_hacc_policies",
+                        hacc_search_mode="lexical",
+                        use_hacc_vector_search=False,
+                        demo=True,
+                    )
+
+            progress_path = Path(summary["artifacts"]["batch_progress_json"])
+            self.assertTrue(progress_path.exists())
+            payload = json.loads(progress_path.read_text(encoding="utf-8"))
+            self.assertEqual(payload["status"], "completed")
+            self.assertEqual(payload["completed_sessions"], 1)
 
     def test_run_hacc_adversarial_batch_reports_hybrid_fallback_when_vector_unavailable(self) -> None:
         class FakeHarness:

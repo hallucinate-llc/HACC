@@ -282,6 +282,42 @@ _CASE_TIMELINE_PARTY_CUES = (
     "voucher",
     "hacc",
 )
+_CHRONOLOGY_QUERY_TOKENS = {
+    "date",
+    "dates",
+    "timeline",
+    "chronology",
+    "notice",
+    "hearing",
+    "review",
+    "appeal",
+    "response",
+    "termination",
+    "retaliation",
+    "denial",
+    "adverse",
+}
+_CASE_EVIDENCE_PRIORITY_CUES = (
+    "written notice",
+    "notice of",
+    "informal review",
+    "grievance hearing",
+    "informal hearing",
+    "right to appeal",
+    "request an informal review",
+    "request a grievance hearing",
+    "denial of assistance",
+    "adverse action",
+    "termination",
+)
+_UPLOAD_CANDIDATE_NOISE_MARKERS = (
+    "<script",
+    "window.__feature_flag_state__",
+    "previewtext",
+    "displayname",
+    "hasfullreviewlink",
+    "featureflags",
+)
 
 
 def _detect_content_type(path: Path) -> str:
@@ -2120,6 +2156,7 @@ class HACCResearchEngine:
     def _select_uploadable_results(self, payload: Dict[str, Any], *, top_k: int) -> List[Dict[str, Any]]:
         candidates: List[Dict[str, Any]] = []
         seen_paths: set[str] = set()
+        query_text = _clean_text(str(payload.get("query") or ""))
         for item in list(payload.get("results", []) or []):
             source_path = str(item.get("source_path") or "").strip()
             if not source_path:
@@ -2149,6 +2186,7 @@ class HACCResearchEngine:
                     "matched_entities": list(item.get("matched_entities") or []),
                     "parse_summary": dict((item.get("metadata") or {}).get("parse_summary") or {}),
                     "graph_status": str((item.get("metadata") or {}).get("graph_status") or ""),
+                    "selection_priority": self._upload_candidate_priority_score(item, query_text=query_text),
                 }
             )
         source_rank = {
@@ -2158,12 +2196,69 @@ class HACCResearchEngine:
         }
         candidates.sort(
             key=lambda item: (
+                -float(item.get("selection_priority", 0.0) or 0.0),
                 -float(item.get("score", 0.0) or 0.0),
                 source_rank.get(str(item.get("source_type") or ""), 9),
                 str(item.get("title") or ""),
             )
         )
         return candidates[:top_k]
+
+    def _upload_candidate_priority_score(self, item: Dict[str, Any], *, query_text: str) -> float:
+        if not query_text:
+            return 0.0
+        query_tokens = _semantic_tokens(query_text)
+        chronology_intent = bool(query_tokens & _CHRONOLOGY_QUERY_TOKENS)
+        if not chronology_intent:
+            return 0.0
+
+        priority = 0.0
+        source_type = str(item.get("source_type") or "").strip().lower()
+        if source_type == "repository_evidence":
+            priority += 3.0
+        elif source_type == "parsed_document":
+            priority += 2.0
+
+        evidence_fragments = [
+            _clean_text(str(item.get("title") or "")),
+            _clean_text(str(item.get("snippet") or "")),
+        ]
+        for rule in list(item.get("matched_rules") or [])[:5]:
+            evidence_fragments.append(_clean_text(str(rule.get("text") or "")))
+            evidence_fragments.append(_clean_text(str(rule.get("section_title") or "")))
+        for entity in list(item.get("matched_entities") or [])[:5]:
+            evidence_fragments.append(_clean_text(str(entity.get("name") or "")))
+        combined_text = " ".join(fragment for fragment in evidence_fragments if fragment).lower()
+        anchor_sections = self._candidate_anchor_sections(item)
+
+        cue_hits = sum(1 for cue in _CASE_EVIDENCE_PRIORITY_CUES if cue in combined_text)
+        action_hits = sum(1 for cue in _CASE_TIMELINE_ACTION_CUES if cue in combined_text)
+        party_hits = sum(1 for cue in _CASE_TIMELINE_PARTY_CUES if cue in combined_text)
+        hacc_hits = combined_text.count("hacc")
+        if cue_hits:
+            priority += min(6.0, cue_hits * 1.75)
+        if action_hits:
+            priority += min(4.0, action_hits * 1.5)
+        if party_hits:
+            priority += min(2.0, party_hits * 0.5)
+        if anchor_sections:
+            priority += min(3.0, len(anchor_sections) * 1.25)
+        if hacc_hits:
+            priority += min(2.5, hacc_hits * 0.75)
+
+        chronology_summary = dict((item.get("chronology_summary") or (item.get("metadata") or {}).get("chronology_summary") or {}))
+        if int(chronology_summary.get("timeline_anchor_count", 0) or 0) > 0:
+            priority += 1.5
+
+        title_lower = str(item.get("title") or "").strip().lower()
+        if any(term in title_lower for term in ("policy", "plan", "program")) and not cue_hits and not action_hits:
+            priority -= 1.0
+        if any(marker in combined_text for marker in _UPLOAD_CANDIDATE_NOISE_MARKERS):
+            priority -= 8.0
+        if not hacc_hits and not anchor_sections:
+            priority -= 2.5
+
+        return priority
 
     def _prepare_mediator_submission(self, candidate: Dict[str, Any]) -> Dict[str, Any]:
         source_path = str(candidate.get("source_path") or "").strip()

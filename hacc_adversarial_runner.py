@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import contextlib
 import difflib
 import os
 import importlib.util
@@ -47,6 +48,35 @@ def _sanitize_for_json(value: Any) -> Any:
         except Exception:
             return str(value)
     return str(value)
+
+
+@contextlib.contextmanager
+def _scoped_mediator_integration_env(*, effective_search_mode: str, use_hacc_vector_search: bool):
+    lexical_modes = {"lexical", "lexical_only", "lexical_fallback"}
+    force_lexical_only = str(effective_search_mode or "").strip().lower() in lexical_modes and not bool(use_hacc_vector_search)
+    if not force_lexical_only:
+        yield
+        return
+
+    overrides = {
+        "IPFS_DATASETS_ENHANCED_LEGAL": "0",
+        "IPFS_DATASETS_ENHANCED_SEARCH": "0",
+        "IPFS_DATASETS_ENHANCED_GRAPH": "0",
+        "IPFS_DATASETS_ENHANCED_VECTOR": "0",
+        "IPFS_DATASETS_ENHANCED_OPTIMIZER": "0",
+        "RETRIEVAL_RERANKER_MODE": "off",
+    }
+    previous = {key: os.environ.get(key) for key in overrides}
+    try:
+        for key, value in overrides.items():
+            os.environ[key] = value
+        yield
+    finally:
+        for key, value in previous.items():
+            if value is None:
+                os.environ.pop(key, None)
+            else:
+                os.environ[key] = value
 
 
 def _autopatch_target_profiles() -> Dict[str, List[Path]]:
@@ -1729,6 +1759,7 @@ def run_hacc_adversarial_batch(
     output_root.mkdir(parents=True, exist_ok=True)
     session_dir = output_root / "sessions"
     session_dir.mkdir(parents=True, exist_ok=True)
+    batch_progress_path = output_root / "batch_progress.json"
 
     resolved_provider, resolved_model = _resolve_hacc_runtime_provider_model(provider, model)
 
@@ -1755,16 +1786,40 @@ def run_hacc_adversarial_batch(
     if effective_search_mode in {"lexical_only", "lexical_fallback"}:
         effective_use_hacc_vector_search = False
 
-    results = harness.run_batch(
-        num_sessions=num_sessions,
-        personalities=personalities,
-        max_turns_per_session=max_turns,
-        include_hacc_evidence=True,
-        hacc_count=hacc_count,
-        hacc_preset=hacc_preset,
-        use_hacc_vector_search=effective_use_hacc_vector_search,
-        hacc_search_mode=effective_search_mode,
+    def _write_batch_progress(payload: Dict[str, Any]) -> None:
+        batch_progress_path.write_text(
+            json.dumps(_sanitize_for_json(payload), ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+
+    _write_batch_progress(
+        {
+            "status": "initializing",
+            "timestamp": datetime.now(UTC).isoformat(),
+            "total_sessions": int(num_sessions or 0),
+            "completed_sessions": 0,
+            "successful_sessions": 0,
+            "failed_sessions": 0,
+            "active_session_ids": [],
+            "search_summary": _sanitize_for_json(search_summary),
+        }
     )
+
+    with _scoped_mediator_integration_env(
+        effective_search_mode=effective_search_mode,
+        use_hacc_vector_search=effective_use_hacc_vector_search,
+    ):
+        results = harness.run_batch(
+            num_sessions=num_sessions,
+            personalities=personalities,
+            max_turns_per_session=max_turns,
+            include_hacc_evidence=True,
+            hacc_count=hacc_count,
+            hacc_preset=hacc_preset,
+            use_hacc_vector_search=effective_use_hacc_vector_search,
+            hacc_search_mode=effective_search_mode,
+            progress_callback=_write_batch_progress,
+        )
 
     optimizer = Optimizer()
     report = optimizer.analyze(results)
@@ -1959,6 +2014,7 @@ def run_hacc_adversarial_batch(
             "anchor_section_csv": str(anchor_report_path),
             "best_complaint_bundle_json": str(best_complaint_path),
             "session_state_dir": str(session_dir),
+            "batch_progress_json": str(batch_progress_path),
             "autopatch_summary_json": autopatch_summary.get("summary_json"),
             "autopatch_patch_path": autopatch_summary.get("patch_path"),
         },
