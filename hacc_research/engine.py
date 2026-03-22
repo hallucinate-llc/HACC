@@ -310,6 +310,16 @@ _CASE_EVIDENCE_PRIORITY_CUES = (
     "adverse action",
     "termination",
 )
+_UPLOAD_CANDIDATE_PROCEDURAL_TERMS = (
+    "notice",
+    "grievance",
+    "hearing",
+    "appeal",
+    "denial",
+    "terminated",
+    "termination",
+    "adverse action",
+)
 _UPLOAD_CANDIDATE_NOISE_MARKERS = (
     "<script",
     "window.__feature_flag_state__",
@@ -317,6 +327,15 @@ _UPLOAD_CANDIDATE_NOISE_MARKERS = (
     "displayname",
     "hasfullreviewlink",
     "featureflags",
+)
+_UPLOAD_CANDIDATE_ANALYSIS_TITLE_TERMS = (
+    "audit",
+    "summary",
+    "analysis",
+    "report",
+    "status",
+    "guide",
+    "brief",
 )
 
 
@@ -2232,11 +2251,14 @@ class HACCResearchEngine:
         anchor_sections = self._candidate_anchor_sections(item)
 
         cue_hits = sum(1 for cue in _CASE_EVIDENCE_PRIORITY_CUES if cue in combined_text)
+        procedural_hits = sum(1 for cue in _UPLOAD_CANDIDATE_PROCEDURAL_TERMS if cue in combined_text)
         action_hits = sum(1 for cue in _CASE_TIMELINE_ACTION_CUES if cue in combined_text)
         party_hits = sum(1 for cue in _CASE_TIMELINE_PARTY_CUES if cue in combined_text)
         hacc_hits = combined_text.count("hacc")
         if cue_hits:
             priority += min(6.0, cue_hits * 1.75)
+        if procedural_hits:
+            priority += min(4.0, procedural_hits * 1.0)
         if action_hits:
             priority += min(4.0, action_hits * 1.5)
         if party_hits:
@@ -2255,8 +2277,14 @@ class HACCResearchEngine:
             priority -= 1.0
         if any(marker in combined_text for marker in _UPLOAD_CANDIDATE_NOISE_MARKERS):
             priority -= 8.0
+        if any(term in title_lower for term in _UPLOAD_CANDIDATE_ANALYSIS_TITLE_TERMS) and not anchor_sections:
+            priority -= 5.0
         if not hacc_hits and not anchor_sections:
             priority -= 2.5
+        if not anchor_sections and cue_hits == 0:
+            priority -= 3.0
+        if procedural_hits == 0:
+            priority -= 4.0
 
         return priority
 
