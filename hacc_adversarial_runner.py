@@ -1791,11 +1791,6 @@ def run_hacc_adversarial_batch(
     best_complaint_path = output_root / "best_complaint_bundle.json"
     summary_path = output_root / "run_summary.json"
 
-    if reuse_existing_artifacts:
-        existing_summary = _load_json_if_exists(summary_path)
-        if existing_summary is not None:
-            return existing_summary
-
     runtime_bundle = _load_runtime(demo, config_path, backend_id, resolved_provider, resolved_model)
     AdversarialHarness = runtime_bundle["AdversarialHarness"]
     Optimizer = runtime_bundle["Optimizer"]
