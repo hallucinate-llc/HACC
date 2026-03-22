@@ -527,12 +527,29 @@ class HACCResearchEngineTests(unittest.TestCase):
                 parse_manifest_path=manifest_path,
                 knowledge_graph_dir=root / "hacc_website/knowledge_graph",
             )
-            payload = engine.build_grounding_bundle(
-                "reasonable accommodation hearing rights",
-                top_k=1,
-                claim_type="housing_discrimination",
-                search_mode="lexical",
-            )
+            with mock.patch.object(
+                engine,
+                "discover",
+                return_value={
+                    "status": "success",
+                    "result_count": 1,
+                    "results": [{"title": "Tenant advocacy article", "url": "https://example.com/article"}],
+                },
+            ), mock.patch.object(
+                engine,
+                "discover_legal_authorities",
+                return_value={
+                    "status": "success",
+                    "result_count": 1,
+                    "results": [{"title": "HUD regulation", "citation": "24 C.F.R. 982.555"}],
+                },
+            ):
+                payload = engine.build_grounding_bundle(
+                    "reasonable accommodation hearing rights",
+                    top_k=1,
+                    claim_type="housing_discrimination",
+                    search_mode="lexical",
+                )
 
             self.assertEqual(payload["status"], "success")
             self.assertEqual(len(payload["upload_candidates"]), 1)
@@ -594,6 +611,15 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertIn("graph_completeness_signals", payload)
             self.assertIn("query_context", payload)
             self.assertIn("retrieval_support_bundle", payload)
+            self.assertIn("external_research_bundle", payload)
+            self.assertEqual(
+                payload["external_research_bundle"]["summary"]["top_web_titles"],
+                ["Tenant advocacy article"],
+            )
+            self.assertEqual(
+                payload["external_research_bundle"]["summary"]["top_legal_titles"],
+                ["24 C.F.R. 982.555"],
+            )
             self.assertGreaterEqual(
                 int((payload["retrieval_support_bundle"].get("summary") or {}).get("total_records", 0) or 0),
                 1,
@@ -606,6 +632,9 @@ class HACCResearchEngineTests(unittest.TestCase):
             )
             self.assertIn("document_text", payload["mediator_evidence_packets"][0])
             self.assertIn("claim_support_temporal_handoff", payload["mediator_evidence_packets"][0]["metadata"])
+            self.assertIn("web_evidence_research_prompt", prompts)
+            self.assertIn("legal_authority_research_prompt", prompts)
+            self.assertIn("24 C.F.R. 982.555", prompts["court_complaint_synthesis_prompt"])
 
     def test_search_local_surfaces_chronology_summary_and_prioritizes_timeline_ready_documents(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -994,6 +1023,7 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertEqual(mediator.calls[0]["file_path"], str(evidence_path.resolve()))
             self.assertEqual(mediator.calls[0]["claim_type"], "housing_discrimination")
             self.assertEqual(payload["mediator_evidence_packets"][0]["relative_path"], "README.md")
+            self.assertIn("external_research_bundle", payload)
 
     def test_simulate_evidence_upload_uses_extracted_text_fallback_for_extensionless_pdf_sources(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:

@@ -142,6 +142,52 @@ def _run_complaint_synthesis(
     }
 
 
+def _write_grounding_artifacts(
+    *,
+    output_root: Path,
+    grounding_bundle: Dict[str, Any],
+    upload_report: Dict[str, Any],
+    grounding_path: Path,
+    grounding_overview_path: Path,
+    anchor_passages_path: Path,
+    upload_candidates_path: Path,
+    mediator_packets_path: Path,
+    prompts_path: Path,
+    retrieval_support_path: Path,
+    external_research_path: Path,
+    upload_path: Path,
+) -> Dict[str, Any]:
+    grounding_overview = _json_safe(_grounding_overview(grounding_bundle, upload_report))
+    grounding_path.write_text(json.dumps(grounding_bundle, ensure_ascii=False, indent=2), encoding="utf-8")
+    grounding_overview_path.write_text(json.dumps(grounding_overview, ensure_ascii=False, indent=2), encoding="utf-8")
+    anchor_passages_path.write_text(
+        json.dumps(grounding_bundle.get("anchor_passages", []), ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    upload_candidates_path.write_text(
+        json.dumps(grounding_bundle.get("upload_candidates", []), ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    mediator_packets_path.write_text(
+        json.dumps(grounding_bundle.get("mediator_evidence_packets", []), ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    prompts_path.write_text(
+        json.dumps(grounding_bundle.get("synthetic_prompts", {}), ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    retrieval_support_path.write_text(
+        json.dumps(grounding_bundle.get("retrieval_support_bundle", {}), ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    external_research_path.write_text(
+        json.dumps(grounding_bundle.get("external_research_bundle", {}), ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    upload_path.write_text(json.dumps(upload_report, ensure_ascii=False, indent=2), encoding="utf-8")
+    return grounding_overview
+
+
 def run_hacc_grounded_pipeline(
     *,
     output_dir: str | Path,
@@ -180,6 +226,7 @@ def run_hacc_grounded_pipeline(
     mediator_packets_path = output_root / "mediator_evidence_packets.json"
     prompts_path = output_root / "synthetic_prompts.json"
     retrieval_support_path = output_root / "retrieval_support_bundle.json"
+    external_research_path = output_root / "external_research_bundle.json"
     upload_path = output_root / "evidence_upload_report.json"
     adversarial_path = output_root / "adversarial_summary.json"
     summary_path = output_root / "run_summary.json"
@@ -205,6 +252,26 @@ def run_hacc_grounded_pipeline(
             use_vector=use_hacc_vector_search,
             db_dir=output_root / "mediator_state",
         )
+        grounding_bundle = _json_safe(grounding_bundle)
+        upload_report = _json_safe(upload_report)
+        grounding_overview = _write_grounding_artifacts(
+            output_root=output_root,
+            grounding_bundle=grounding_bundle,
+            upload_report=upload_report,
+            grounding_path=grounding_path,
+            grounding_overview_path=grounding_overview_path,
+            anchor_passages_path=anchor_passages_path,
+            upload_candidates_path=upload_candidates_path,
+            mediator_packets_path=mediator_packets_path,
+            prompts_path=prompts_path,
+            retrieval_support_path=retrieval_support_path,
+            external_research_path=external_research_path,
+            upload_path=upload_path,
+        )
+    else:
+        grounding_bundle = _json_safe(grounding_bundle)
+        upload_report = _json_safe(upload_report)
+        grounding_overview = _json_safe(_grounding_overview(grounding_bundle, upload_report))
 
     adversarial_summary = _load_json_if_exists(adversarial_path) if reuse_existing_artifacts else None
     if adversarial_summary is None and reuse_existing_artifacts:
@@ -225,34 +292,21 @@ def run_hacc_grounded_pipeline(
             provider=resolved_provider,
             model=resolved_model,
         )
-    grounding_bundle = _json_safe(grounding_bundle)
-    upload_report = _json_safe(upload_report)
     adversarial_summary = _json_safe(adversarial_summary)
-    grounding_overview = _json_safe(_grounding_overview(grounding_bundle, upload_report))
-
-    grounding_path.write_text(json.dumps(grounding_bundle, ensure_ascii=False, indent=2), encoding="utf-8")
-    grounding_overview_path.write_text(json.dumps(grounding_overview, ensure_ascii=False, indent=2), encoding="utf-8")
-    anchor_passages_path.write_text(
-        json.dumps(grounding_bundle.get("anchor_passages", []), ensure_ascii=False, indent=2),
-        encoding="utf-8",
+    grounding_overview = _write_grounding_artifacts(
+        output_root=output_root,
+        grounding_bundle=grounding_bundle,
+        upload_report=upload_report,
+        grounding_path=grounding_path,
+        grounding_overview_path=grounding_overview_path,
+        anchor_passages_path=anchor_passages_path,
+        upload_candidates_path=upload_candidates_path,
+        mediator_packets_path=mediator_packets_path,
+        prompts_path=prompts_path,
+        retrieval_support_path=retrieval_support_path,
+        external_research_path=external_research_path,
+        upload_path=upload_path,
     )
-    upload_candidates_path.write_text(
-        json.dumps(grounding_bundle.get("upload_candidates", []), ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
-    mediator_packets_path.write_text(
-        json.dumps(grounding_bundle.get("mediator_evidence_packets", []), ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
-    prompts_path.write_text(
-        json.dumps(grounding_bundle.get("synthetic_prompts", {}), ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
-    retrieval_support_path.write_text(
-        json.dumps(grounding_bundle.get("retrieval_support_bundle", {}), ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
-    upload_path.write_text(json.dumps(upload_report, ensure_ascii=False, indent=2), encoding="utf-8")
     adversarial_path.write_text(json.dumps(adversarial_summary, ensure_ascii=False, indent=2), encoding="utf-8")
 
     synthesis_summary: Dict[str, Any] = {}
@@ -312,6 +366,7 @@ def run_hacc_grounded_pipeline(
             "mediator_evidence_packets_json": str(mediator_packets_path),
             "synthetic_prompts_json": str(prompts_path),
             "retrieval_support_bundle_json": str(retrieval_support_path),
+            "external_research_bundle_json": str(external_research_path),
             "evidence_upload_report_json": str(upload_path),
             "adversarial_summary_json": str(adversarial_path),
             "adversarial_output_dir": str(output_root / "adversarial"),

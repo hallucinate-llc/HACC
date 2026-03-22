@@ -203,6 +203,7 @@ class HACCGroundedPipelineTests(unittest.TestCase):
             self.assertTrue((output_root / "upload_candidates.json").is_file())
             self.assertTrue((output_root / "synthetic_prompts.json").is_file())
             self.assertTrue((output_root / "retrieval_support_bundle.json").is_file())
+            self.assertTrue((output_root / "external_research_bundle.json").is_file())
             self.assertTrue((output_root / "evidence_upload_report.json").is_file())
             self.assertTrue((output_root / "adversarial_summary.json").is_file())
             self.assertTrue((output_root / "run_summary.json").is_file())
@@ -218,6 +219,7 @@ class HACCGroundedPipelineTests(unittest.TestCase):
             self.assertEqual(summary["grounding_overview"]["top_documents"], ["README"])
             self.assertEqual(summary["artifacts"]["grounding_overview_json"], str(output_root / "grounding_overview.json"))
             self.assertEqual(summary["artifacts"]["retrieval_support_bundle_json"], str(output_root / "retrieval_support_bundle.json"))
+            self.assertEqual(summary["artifacts"]["external_research_bundle_json"], str(output_root / "external_research_bundle.json"))
             self.assertEqual(summary["artifacts"]["complaint_synthesis"]["draft_complaint_package_json"], "")
             self.assertEqual(batch_mock.call_args.kwargs["hacc_search_mode"], "hybrid")
 

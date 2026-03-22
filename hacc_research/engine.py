@@ -1502,6 +1502,11 @@ class HACCResearchEngine:
             grounding_overview=grounding_overview,
             chronology_analysis=chronology_analysis,
         )
+        external_research_bundle = self._build_external_research_bundle(
+            query_text=query_text,
+            claim_type=str(claim_type or "").strip() or "housing_discrimination",
+            max_results=max(3, min(top_k, 5)),
+        )
         synthetic_prompts = self._build_synthetic_prompts(
             query_text=query_text,
             claim_type=claim_type,
@@ -1509,6 +1514,7 @@ class HACCResearchEngine:
             grounding_overview=grounding_overview,
             chronology_analysis=chronology_analysis,
             grounding_signals=grounding_signals,
+            external_research_bundle=external_research_bundle,
         )
         mediator_evidence_packets = self._build_mediator_evidence_packets(
             upload_candidates,
@@ -1535,6 +1541,7 @@ class HACCResearchEngine:
             "anchor_sections": grounding_overview["anchor_sections"],
             "mediator_evidence_packets": mediator_evidence_packets,
             "synthetic_prompts": synthetic_prompts,
+            "external_research_bundle": external_research_bundle,
             "chronology_analysis": chronology_analysis,
             "timeline_anchors": chronology_analysis.get("timeline_anchors", []),
             "claim_support_temporal_handoff": grounding_signals["claim_support_temporal_handoff"],
@@ -1583,6 +1590,7 @@ class HACCResearchEngine:
                 "support_summary": {},
                 "synthetic_prompts": grounding_bundle.get("synthetic_prompts", {}),
                 "retrieval_support_bundle": grounding_bundle.get("retrieval_support_bundle", {}),
+                "external_research_bundle": grounding_bundle.get("external_research_bundle", {}),
                 "query_context": grounding_bundle.get("query_context", {}),
                 "database_paths": {},
                 "integration_status": self._integration_status(),
@@ -1607,6 +1615,7 @@ class HACCResearchEngine:
                     "support_summary": {},
                     "synthetic_prompts": grounding_bundle.get("synthetic_prompts", {}),
                     "retrieval_support_bundle": grounding_bundle.get("retrieval_support_bundle", {}),
+                    "external_research_bundle": grounding_bundle.get("external_research_bundle", {}),
                     "query_context": grounding_bundle.get("query_context", {}),
                     "database_paths": {},
                     "integration_status": self._integration_status(),
@@ -1732,6 +1741,7 @@ class HACCResearchEngine:
             "mediator_evidence_packets": grounding_bundle.get("mediator_evidence_packets", []),
             "synthetic_prompts": grounding_bundle.get("synthetic_prompts", {}),
             "retrieval_support_bundle": grounding_bundle.get("retrieval_support_bundle", {}),
+            "external_research_bundle": grounding_bundle.get("external_research_bundle", {}),
             "query_context": grounding_bundle.get("query_context", {}),
             "database_paths": database_paths,
             "integration_status": self._integration_status(),
@@ -2399,13 +2409,29 @@ class HACCResearchEngine:
         grounding_overview: Optional[Dict[str, Any]] = None,
         chronology_analysis: Optional[Dict[str, Any]] = None,
         grounding_signals: Optional[Dict[str, Any]] = None,
+        external_research_bundle: Optional[Dict[str, Any]] = None,
     ) -> Dict[str, Any]:
         grounding_overview = dict(grounding_overview or {})
         chronology_analysis = dict(chronology_analysis or {})
         grounding_signals = dict(grounding_signals or {})
+        external_research_bundle = dict(external_research_bundle or {})
         temporal_handoff = dict(grounding_signals.get("claim_support_temporal_handoff") or {})
         drafting_readiness = dict(grounding_signals.get("drafting_readiness") or {})
         document_generation_handoff = dict(grounding_signals.get("document_generation_handoff") or {})
+        web_discovery = dict(external_research_bundle.get("web_discovery") or {})
+        legal_authorities = dict(external_research_bundle.get("legal_authorities") or {})
+        top_web_results = list(web_discovery.get("results") or [])[:3]
+        top_legal_results = list(legal_authorities.get("results") or [])[:3]
+        top_web_titles = [
+            str(item.get("title") or item.get("url") or "").strip()
+            for item in top_web_results
+            if str(item.get("title") or item.get("url") or "").strip()
+        ]
+        top_legal_titles = [
+            str(item.get("citation") or item.get("title") or "").strip()
+            for item in top_legal_results
+            if str(item.get("citation") or item.get("title") or "").strip()
+        ]
         blocker_objectives = [str(item) for item in list(grounding_signals.get("blocker_objectives") or []) if str(item)]
         extraction_targets = [str(item) for item in list(grounding_signals.get("extraction_targets") or []) if str(item)]
         workflow_phase_priorities = [
@@ -2446,6 +2472,11 @@ class HACCResearchEngine:
         anchor_passages = list(grounding_overview.get("anchor_passages") or [])
         evidence_summary = str(grounding_overview.get("evidence_summary") or "").strip()
         anchor_note = f" Prioritize these anchor sections: {', '.join(anchor_sections)}." if anchor_sections else ""
+        external_research_note = ""
+        if top_web_titles:
+            external_research_note += f" Review these web evidence leads: {', '.join(top_web_titles)}."
+        if top_legal_titles:
+            external_research_note += f" Review these legal or caselaw authorities: {', '.join(top_legal_titles)}."
         chronology_note = ""
         chronology_summary = dict(chronology_analysis.get("chronology_summary") or {})
         timeline_consistency_summary = dict(chronology_analysis.get("timeline_consistency_summary") or {})
@@ -2459,18 +2490,19 @@ class HACCResearchEngine:
             f"Ground the complaint chatbot in the uploaded repository evidence for '{query_text}'. "
             f"Use the uploaded materials ({', '.join(evidence_titles) if evidence_titles else 'uploaded evidence'}) as factual grounding, "
             "ask the user to connect each document to case-specific events, and identify missing timeline, actor, harm, and remedy facts."
-            f"{anchor_note}{chronology_note}"
+            f"{anchor_note}{chronology_note}{external_research_note}"
         )
         mediator_prompt = (
             f"Evaluate each uploaded evidence item for a {claim_type} complaint about '{query_text}'. "
             "For every document, determine what claim element it supports, what facts it proves directly, what facts remain missing, "
             "and what follow-up questions the mediator should ask before drafting a complaint."
-            f"{anchor_note}{chronology_note}"
+            f"{anchor_note}{chronology_note}{external_research_note}"
         )
         production_prompt = (
             f"A user uploads repository evidence for '{query_text}'. Save each file into the complaint-generator evidence store, "
             "extract factual support from the parsed document, and route the uploaded materials through mediator evidence analysis "
             "before drafting or revising a complaint."
+            f"{external_research_note}"
         )
         mediator_questions = [
             "Which uploaded records directly prove dates, notice timing, hearing requests, or decision responses?",
@@ -2484,6 +2516,7 @@ class HACCResearchEngine:
         court_complaint_synthesis_prompt = (
             f"Synthesize a court-ready complaint for '{query_text}' by combining uploaded evidence, mediator findings, chronology anchors, "
             "claim-support handoff metadata, and exhibit descriptions. Preserve source links, identify unresolved proof gaps, and keep chronology-sensitive claims conditional when anchors remain incomplete."
+            f"{external_research_note}"
         )
         evidence_upload_simulation_prompt = (
             f"Simulate a production evidence upload for '{query_text}': ingest each repository-backed file into the evidence store, "
@@ -2570,11 +2603,59 @@ class HACCResearchEngine:
             "evidence_summary": evidence_summary,
             "anchor_sections": anchor_sections,
             "anchor_passages": anchor_passages,
+            "external_research_bundle": external_research_bundle,
+            "web_evidence_research_prompt": (
+                f"Search for internet evidence about '{query_text}' that can corroborate the uploaded facts, and rank results by evidentiary usefulness."
+                + (f" Start with: {', '.join(top_web_titles)}." if top_web_titles else "")
+            ),
+            "legal_authority_research_prompt": (
+                f"Search for statutes, regulations, HUD guidance, and caselaw relevant to '{query_text}' and the {claim_type} theory."
+                + (f" Start with: {', '.join(top_legal_titles)}." if top_legal_titles else "")
+            ),
             "timeline_anchors": chronology_analysis.get("timeline_anchors", []),
             "timeline_consistency_summary": timeline_consistency_summary,
             "claim_support_temporal_handoff": temporal_handoff,
             "drafting_readiness": drafting_readiness,
             "document_generation_handoff": document_generation_handoff,
+        }
+
+    def _build_external_research_bundle(
+        self,
+        *,
+        query_text: str,
+        claim_type: str,
+        max_results: int = 5,
+    ) -> Dict[str, Any]:
+        web_payload = self.discover(
+            query_text,
+            max_results=max_results,
+            scrape=False,
+        )
+        legal_payload = self.discover_legal_authorities(
+            query_text,
+            max_results=max_results,
+        )
+        top_web_titles = [
+            str(item.get("title") or item.get("url") or "").strip()
+            for item in list(web_payload.get("results") or [])[:max_results]
+            if str(item.get("title") or item.get("url") or "").strip()
+        ]
+        top_legal_titles = [
+            str(item.get("citation") or item.get("title") or "").strip()
+            for item in list(legal_payload.get("results") or [])[:max_results]
+            if str(item.get("citation") or item.get("title") or "").strip()
+        ]
+        return {
+            "query": query_text,
+            "claim_type": claim_type,
+            "web_discovery": web_payload,
+            "legal_authorities": legal_payload,
+            "summary": {
+                "web_result_count": int(web_payload.get("result_count", len(list(web_payload.get("results") or []))) or 0),
+                "legal_result_count": int(legal_payload.get("result_count", len(list(legal_payload.get("results") or []))) or 0),
+                "top_web_titles": top_web_titles,
+                "top_legal_titles": top_legal_titles,
+            },
         }
 
     def _truncate_seed_packet_text(self, text: str, *, max_chars: int = 6000) -> str:
