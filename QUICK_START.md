@@ -154,6 +154,13 @@ python3 resume_hacc_run.py adversarial \
   -- --hacc-search-mode lexical --provider codex --model gpt-5.3-codex
 ```
 
+If you want a quick human-readable view of the best grounded artifacts from a completed run, use `show_grounded_artifacts.py`:
+
+```bash
+python3 show_grounded_artifacts.py research_results/grounded_runs/repo_evidence_grounded_v10_lexical_ranked
+python3 show_grounded_artifacts.py --latest
+```
+
 ### Option A: Manual Evidence Collection (No API Keys Required)
 
 **Best for:** Immediate audit with documents you already have or can request.

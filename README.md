@@ -566,6 +566,13 @@ python3 resume_hacc_run.py grounded --latest -- --synthesize-complaint
 python3 resume_hacc_run.py adversarial research_results/grounded_runs/repo_evidence_adversarial_v7_progress -- --hacc-search-mode lexical --provider codex --model gpt-5.3-codex
 ```
 
+To inspect the saved upload prompts, ranked authorities, and top evidence candidates from a completed grounded run without opening multiple JSON files, use:
+
+```bash
+python3 show_grounded_artifacts.py research_results/grounded_runs/repo_evidence_grounded_v10_lexical_ranked
+python3 show_grounded_artifacts.py --latest
+```
+
 **Autopatch dependency note:**
 
 If the runner prints `Autopatch preflight ready: False`, install the complaint-generator Python dependencies first:

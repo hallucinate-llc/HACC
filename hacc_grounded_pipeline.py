@@ -142,6 +142,19 @@ def _run_complaint_synthesis(
     }
 
 
+def _build_synthesis_skip_summary(*, reason: str, detail: str = "") -> Dict[str, Any]:
+    return {
+        "status": "skipped",
+        "reason": reason,
+        "detail": detail,
+        "output_dir": "",
+        "draft_complaint_package_json": "",
+        "draft_complaint_package_md": "",
+        "intake_follow_up_worksheet_json": "",
+        "intake_follow_up_worksheet_md": "",
+    }
+
+
 def _write_grounding_artifacts(
     *,
     output_root: Path,
@@ -388,24 +401,67 @@ def run_hacc_grounded_pipeline(
 
     synthesis_summary: Dict[str, Any] = {}
     if synthesize_complaint:
-        _write_pipeline_progress(
-            progress_path,
-            {
-                "status": "running_complaint_synthesis",
-                "timestamp": datetime.now(UTC).isoformat(),
-                "output_dir": str(output_root),
-                "grounding_query": grounding_query,
-                "reuse_existing_artifacts": bool(reuse_existing_artifacts),
-            },
-        )
-        synthesis_summary = _json_safe(
-            _run_complaint_synthesis(
-                grounded_run_dir=output_root,
-                filing_forum=filing_forum,
-                preset=hacc_preset,
-                completed_intake_worksheet=completed_intake_worksheet,
+        successful_sessions = int(
+            ((adversarial_summary.get("statistics") if isinstance(adversarial_summary, dict) else {}) or {}).get(
+                "successful_sessions",
+                0,
             )
+            or 0
         )
+        if successful_sessions <= 0:
+            synthesis_summary = _build_synthesis_skip_summary(
+                reason="no_successful_adversarial_sessions",
+                detail="Complaint synthesis was skipped because the adversarial batch produced no successful sessions.",
+            )
+            _write_pipeline_progress(
+                progress_path,
+                {
+                    "status": "complaint_synthesis_skipped",
+                    "timestamp": datetime.now(UTC).isoformat(),
+                    "output_dir": str(output_root),
+                    "grounding_query": grounding_query,
+                    "reuse_existing_artifacts": bool(reuse_existing_artifacts),
+                    "reason": synthesis_summary["reason"],
+                },
+            )
+        else:
+            _write_pipeline_progress(
+                progress_path,
+                {
+                    "status": "running_complaint_synthesis",
+                    "timestamp": datetime.now(UTC).isoformat(),
+                    "output_dir": str(output_root),
+                    "grounding_query": grounding_query,
+                    "reuse_existing_artifacts": bool(reuse_existing_artifacts),
+                },
+            )
+            try:
+                synthesis_summary = _json_safe(
+                    _run_complaint_synthesis(
+                        grounded_run_dir=output_root,
+                        filing_forum=filing_forum,
+                        preset=hacc_preset,
+                        completed_intake_worksheet=completed_intake_worksheet,
+                    )
+                )
+            except ValueError as exc:
+                if "No successful session with critic_score found in results payload" not in str(exc):
+                    raise
+                synthesis_summary = _build_synthesis_skip_summary(
+                    reason="missing_successful_session_with_critic_score",
+                    detail=str(exc),
+                )
+                _write_pipeline_progress(
+                    progress_path,
+                    {
+                        "status": "complaint_synthesis_skipped",
+                        "timestamp": datetime.now(UTC).isoformat(),
+                        "output_dir": str(output_root),
+                        "grounding_query": grounding_query,
+                        "reuse_existing_artifacts": bool(reuse_existing_artifacts),
+                        "reason": synthesis_summary["reason"],
+                    },
+                )
 
     summary = {
         "timestamp": datetime.now(UTC).isoformat(),

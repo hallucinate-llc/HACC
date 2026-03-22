@@ -183,8 +183,11 @@ EXTERNAL_RESEARCH_HINTS_BY_CLAIM = {
         "legal": (
             "Fair Housing Act retaliation",
             "24 C.F.R. 982.555 informal hearing",
+            "24 C.F.R. part 966 grievance procedures",
             "42 U.S.C. 1437d grievance procedure",
+            "42 U.S.C. 1437d(k) grievance procedure",
             "42 U.S.C. 3604 fair housing retaliation",
+            "42 U.S.C. 3617 fair housing retaliation coercion intimidation interference",
         ),
     },
     "retaliation": {
@@ -198,6 +201,31 @@ EXTERNAL_RESEARCH_HINTS_BY_CLAIM = {
         ),
     },
 }
+EXTERNAL_RESEARCH_DOMAIN_FILTERS_BY_CLAIM = {
+    "housing_discrimination": (
+        "hud.gov",
+        "hudexchange.info",
+        "justice.gov",
+        "govinfo.gov",
+        "law.cornell.edu",
+        "lawhelp.org",
+        "nhlp.org",
+    ),
+}
+EXTERNAL_RESEARCH_WEB_NOISE_DOMAINS = (
+    "merriam-webster.com",
+    "cambridge.org",
+    "dictionary.com",
+    "vocabulary.com",
+)
+EXTERNAL_RESEARCH_EMPLOYMENT_NOISE_TERMS = (
+    "equal employment opportunity commission",
+    "employment opportunity commission",
+    "workplace retaliation",
+    "employer retaliation",
+    "employee retaliation",
+    "job discrimination",
+)
 TIMELINE_ISSUE_FAMILY_BY_SECTION = {
     "grievance_hearing": "hearing_process",
     "appeal_rights": "response_timeline",
@@ -363,6 +391,30 @@ _UPLOAD_CANDIDATE_ANALYSIS_TITLE_TERMS = (
     "guide",
     "brief",
 )
+_UPLOAD_CANDIDATE_DOCUMENTATION_PATH_TERMS = (
+    "readme",
+    "quick_start",
+    "quick-reference",
+    "quick_reference",
+    "documentation_index",
+)
+_UPLOAD_CANDIDATE_DOCUMENTATION_MARKERS = (
+    "```python",
+    "cli reference",
+    "key parameters",
+    "output_dir",
+    "max_turns",
+    "run_hacc_adversarial_batch",
+)
+_EXTERNAL_RESEARCH_LEGAL_FALLBACK_DOMAINS = (
+    "ecfr.gov",
+    "law.cornell.edu",
+    "hud.gov",
+    "hudexchange.info",
+    "govregs.com",
+    "federalregister.gov",
+    "justice.gov",
+)
 
 
 def _detect_content_type(path: Path) -> str:
@@ -379,6 +431,23 @@ def _detect_content_type(path: Path) -> str:
 
 def _clean_text(value: str) -> str:
     return re.sub(r"\s+", " ", str(value or "")).strip()
+
+
+def _extract_legal_citation(value: str) -> str:
+    cleaned = _clean_text(value)
+    if not cleaned:
+        return ""
+    patterns = (
+        r"\b\d+\s+C\.?F\.?R\.?\s*(?:part\s+)?(?:[\u00a7§]\s*)?[\d\w.()\-]+",
+        r"\b\d+\s+U\.?S\.?C\.?\s*(?:[\u00a7§]\s*)?[\d\w.()\-]+",
+        r"\btitle\s+\d+[^\n]{0,80}?part\s+\d+[\w.()\-]*",
+        r"\bpart\s+\d+[\w.()\-]*\s+subpart\s+[A-Z]\b",
+    )
+    for pattern in patterns:
+        match = re.search(pattern, cleaned, re.IGNORECASE)
+        if match:
+            return _clean_text(match.group(0))
+    return ""
 
 
 def _json_safe(value: Any) -> Any:
@@ -716,6 +785,14 @@ class HACCResearchEngine:
             "legal_queries": legal_queries,
         }
 
+    def _preferred_external_web_domains(self, claim_type: str) -> List[str]:
+        normalized_claim_type = str(claim_type or "").strip().lower()
+        return [
+            str(item).strip().lower()
+            for item in list(EXTERNAL_RESEARCH_DOMAIN_FILTERS_BY_CLAIM.get(normalized_claim_type) or [])
+            if str(item).strip()
+        ]
+
     def _aggregate_external_discovery_results(
         self,
         payloads: Sequence[Dict[str, Any]],
@@ -769,6 +846,71 @@ class HACCResearchEngine:
             "results": aggregated_results[:max_results],
             "attempts": attempts,
             "integration_status": integration_status,
+        }
+
+    def _promote_web_results_to_legal_authorities(
+        self,
+        web_payload: Dict[str, Any],
+        *,
+        max_results: int,
+    ) -> Dict[str, Any]:
+        promoted_results: List[Dict[str, Any]] = []
+        seen: set[str] = set()
+        for item in list(web_payload.get("results") or []):
+            if not isinstance(item, dict):
+                continue
+            url = str(item.get("url") or "").strip()
+            domain = _normalize_domain(url)
+            if not domain or not any(candidate in domain for candidate in _EXTERNAL_RESEARCH_LEGAL_FALLBACK_DOMAINS):
+                continue
+            key = url.lower() or str(item.get("title") or "").strip().lower()
+            if not key or key in seen:
+                continue
+            seen.add(key)
+            title = _clean_text(str(item.get("title") or url))
+            citation = _extract_legal_citation(
+                " ".join(
+                    fragment
+                    for fragment in (
+                        title,
+                        url,
+                        str(item.get("description") or ""),
+                        str(item.get("summary") or ""),
+                    )
+                    if _clean_text(fragment)
+                )
+            )
+            if not citation and domain.endswith("law.cornell.edu"):
+                citation = title
+            if not citation and domain.endswith("ecfr.gov"):
+                citation = title
+            promoted_results.append(
+                {
+                    "title": title,
+                    "citation": citation,
+                    "url": url,
+                    "summary": str(item.get("description") or item.get("content") or item.get("summary") or "").strip(),
+                    "authority_source": "web_fallback",
+                    "source_domain": domain,
+                    "promoted_from": "web_discovery",
+                }
+            )
+            if len(promoted_results) >= max_results:
+                break
+        return {
+            "status": "success" if promoted_results else "success",
+            "result_count": len(promoted_results),
+            "results": promoted_results,
+            "attempts": [
+                {
+                    "query": "",
+                    "status": "success" if promoted_results else "success",
+                    "result_count": len(promoted_results),
+                    "error": "",
+                    "fallback": "web_legal_promotion",
+                }
+            ],
+            "integration_status": dict(web_payload.get("integration_status") or {}),
         }
 
     def _normalized_retrieval_source_type(self, source_type: str) -> str:
@@ -2458,6 +2600,12 @@ class HACCResearchEngine:
             priority -= 1.0
         if any(marker in combined_text for marker in _UPLOAD_CANDIDATE_NOISE_MARKERS):
             priority -= 8.0
+        relative_path_lower = str(item.get("relative_path") or item.get("source_path") or "").strip().lower()
+        if source_type == "repository_evidence":
+            if any(term in relative_path_lower for term in _UPLOAD_CANDIDATE_DOCUMENTATION_PATH_TERMS):
+                priority -= 4.5
+            if any(marker in combined_text for marker in _UPLOAD_CANDIDATE_DOCUMENTATION_MARKERS):
+                priority -= 6.0
         if any(term in title_lower for term in _UPLOAD_CANDIDATE_ANALYSIS_TITLE_TERMS) and not anchor_sections:
             priority -= 5.0
         if not hacc_hits and not anchor_sections:
@@ -2800,10 +2948,20 @@ class HACCResearchEngine:
         query_plan = self._external_research_query_plan(query_text, claim_type=claim_type)
         web_queries = list(query_plan.get("web_queries") or [query_text])[:6]
         legal_queries = list(query_plan.get("legal_queries") or [query_text])[:6]
-        web_attempts = [
-            self.discover(candidate_query, max_results=max_results, scrape=False)
-            for candidate_query in web_queries
-        ]
+        preferred_web_domains = self._preferred_external_web_domains(claim_type)
+        web_attempts: List[Dict[str, Any]] = []
+        for candidate_query in web_queries:
+            filtered_payload = self.discover(
+                candidate_query,
+                max_results=max_results,
+                domain_filter=preferred_web_domains or None,
+                scrape=False,
+            )
+            web_attempts.append(filtered_payload)
+            if int(filtered_payload.get("result_count", len(list(filtered_payload.get("results") or []))) or 0) <= 0:
+                web_attempts.append(
+                    self.discover(candidate_query, max_results=max_results, scrape=False)
+                )
         legal_attempts = [
             self.discover_legal_authorities(candidate_query, max_results=max_results)
             for candidate_query in legal_queries
@@ -2834,9 +2992,24 @@ class HACCResearchEngine:
             result_kind="legal",
             max_results=max_results,
         )
+        if int(legal_payload.get("result_count", 0) or 0) <= 0:
+            promoted_legal_payload = self._promote_web_results_to_legal_authorities(
+                web_payload,
+                max_results=max_results,
+            )
+            promoted_legal_payload = self._rank_external_research_payload(
+                promoted_legal_payload,
+                query_text=query_text,
+                claim_type=claim_type,
+                result_kind="legal",
+                max_results=max_results,
+            )
+            if int(promoted_legal_payload.get("result_count", 0) or 0) > 0:
+                legal_payload = promoted_legal_payload
         web_payload.update({
             "query": query_text,
             "queries": web_queries,
+            "preferred_domain_filter": preferred_web_domains,
         })
         legal_payload.update({
             "query": query_text,
@@ -2907,6 +3080,7 @@ class HACCResearchEngine:
         result_kind: str,
     ) -> Dict[str, Any]:
         claim_hints = dict(EXTERNAL_RESEARCH_HINTS_BY_CLAIM.get(str(claim_type or "").strip().lower()) or {})
+        preferred_domains = self._preferred_external_web_domains(claim_type)
         evidence_text = " ".join(
             fragment
             for fragment in (
@@ -2966,9 +3140,21 @@ class HACCResearchEngine:
                 score += 2.0
                 reasons.append("contains evidence-priority cues")
             domain = _normalize_domain(str(item.get("url") or ""))
+            if domain and any(candidate in domain for candidate in preferred_domains):
+                score += 3.5
+                reasons.append(f"preferred housing domain: {domain}")
             if domain.endswith(".gov") or domain.endswith(".edu"):
                 score += 1.5
                 reasons.append(f"trusted domain: {domain}")
+            if domain and any(noise_domain in domain for noise_domain in EXTERNAL_RESEARCH_WEB_NOISE_DOMAINS):
+                score -= 4.0
+                reasons.append(f"generic reference domain: {domain}")
+            if any(term in source_text for term in EXTERNAL_RESEARCH_EMPLOYMENT_NOISE_TERMS):
+                score -= 3.0
+                reasons.append("employment-focused retaliation context")
+            if any(term in source_text for term in ("fair housing", "public housing", "voucher", "tenant", "hud")):
+                score += 1.5
+                reasons.append("housing-specific context")
 
         scored = dict(item)
         scored["research_priority_score"] = round(score, 3)

@@ -414,6 +414,101 @@ class HACCGroundedPipelineTests(unittest.TestCase):
             progress_payload = json.loads((output_root / "progress.json").read_text(encoding="utf-8"))
             self.assertEqual(progress_payload["status"], "completed")
 
+    def test_run_grounded_pipeline_skips_complaint_synthesis_without_successful_sessions(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            fake_grounding = {
+                "status": "success",
+                "query": "reasonable accommodation hearing rights",
+                "claim_type": "housing_discrimination",
+                "anchor_sections": [],
+                "anchor_passages": [],
+                "upload_candidates": [],
+                "mediator_evidence_packets": [],
+                "synthetic_prompts": {},
+            }
+            fake_upload = {
+                "status": "success",
+                "upload_count": 0,
+                "uploads": [],
+            }
+            fake_adversarial_summary = {
+                "statistics": {"successful_sessions": 0, "total_sessions": 1},
+                "best_complaint": {},
+                "artifacts": {"output_dir": str(Path(tmpdir) / "adversarial")},
+            }
+
+            with mock.patch.object(pipeline, "HACCResearchEngine") as engine_cls:
+                engine = engine_cls.return_value
+                engine.build_grounding_bundle.return_value = fake_grounding
+                engine.simulate_evidence_upload.return_value = fake_upload
+                with mock.patch.object(
+                    pipeline,
+                    "run_hacc_adversarial_batch",
+                    return_value=fake_adversarial_summary,
+                ):
+                    with mock.patch.object(pipeline, "_run_complaint_synthesis") as synth_mock:
+                        summary = pipeline.run_hacc_grounded_pipeline(
+                            output_dir=tmpdir,
+                            query="reasonable accommodation hearing rights",
+                            hacc_preset="core_hacc_policies",
+                            demo=True,
+                            synthesize_complaint=True,
+                        )
+
+            synth_mock.assert_not_called()
+            self.assertEqual(summary["complaint_synthesis"]["status"], "skipped")
+            self.assertEqual(summary["complaint_synthesis"]["reason"], "no_successful_adversarial_sessions")
+            self.assertEqual(summary["artifacts"]["complaint_synthesis"]["draft_complaint_package_json"], "")
+
+    def test_run_grounded_pipeline_skips_complaint_synthesis_on_missing_critic_score(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            fake_grounding = {
+                "status": "success",
+                "query": "reasonable accommodation hearing rights",
+                "claim_type": "housing_discrimination",
+                "anchor_sections": [],
+                "anchor_passages": [],
+                "upload_candidates": [],
+                "mediator_evidence_packets": [],
+                "synthetic_prompts": {},
+            }
+            fake_upload = {
+                "status": "success",
+                "upload_count": 0,
+                "uploads": [],
+            }
+            fake_adversarial_summary = {
+                "statistics": {"successful_sessions": 1, "total_sessions": 1},
+                "best_complaint": {"score": 0.42},
+                "artifacts": {"output_dir": str(Path(tmpdir) / "adversarial")},
+            }
+
+            with mock.patch.object(pipeline, "HACCResearchEngine") as engine_cls:
+                engine = engine_cls.return_value
+                engine.build_grounding_bundle.return_value = fake_grounding
+                engine.simulate_evidence_upload.return_value = fake_upload
+                with mock.patch.object(
+                    pipeline,
+                    "run_hacc_adversarial_batch",
+                    return_value=fake_adversarial_summary,
+                ):
+                    with mock.patch.object(
+                        pipeline,
+                        "_run_complaint_synthesis",
+                        side_effect=ValueError("No successful session with critic_score found in results payload"),
+                    ):
+                        summary = pipeline.run_hacc_grounded_pipeline(
+                            output_dir=tmpdir,
+                            query="reasonable accommodation hearing rights",
+                            hacc_preset="core_hacc_policies",
+                            demo=True,
+                            synthesize_complaint=True,
+                        )
+
+            self.assertEqual(summary["complaint_synthesis"]["status"], "skipped")
+            self.assertEqual(summary["complaint_synthesis"]["reason"], "missing_successful_session_with_critic_score")
+            self.assertIn("critic_score", summary["complaint_synthesis"]["detail"])
+
 
 if __name__ == "__main__":
     unittest.main()

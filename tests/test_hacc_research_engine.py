@@ -714,6 +714,54 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertEqual(payload["summary"]["top_web_titles"], ["HUD fair housing retaliation guidance"])
             self.assertEqual(payload["summary"]["top_legal_titles"], ["24 C.F.R. 982.555"])
             self.assertEqual(payload["legal_authorities"]["results"][0]["citation"], "24 C.F.R. 982.555")
+
+    def test_build_external_research_bundle_promotes_legal_domain_web_results_when_legal_search_is_empty(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            web_payload = {
+                "status": "success",
+                "query": "fair housing retaliation",
+                "result_count": 2,
+                "results": [
+                    {
+                        "title": "24 CFR Part 966 Subpart B -- Grievance Procedures and Requirements",
+                        "url": "https://www.ecfr.gov/current/title-24/subtitle-B/chapter-IX/part-966/subpart-B",
+                        "description": "Grievance procedures for public housing tenants.",
+                    },
+                    {
+                        "title": "PDFGrievance Procedures - HUD.gov",
+                        "url": "https://www.hud.gov/sites/dfiles/PIH/documents/PHOG_GrievanceProcedures.pdf",
+                        "description": "HUD grievance procedure guidance.",
+                    },
+                ],
+            }
+
+            with mock.patch.object(engine, "discover", return_value=web_payload), mock.patch.object(
+                engine,
+                "discover_legal_authorities",
+                return_value={"status": "success", "query": "fair housing retaliation", "result_count": 0, "results": []},
+            ):
+                payload = engine._build_external_research_bundle(
+                    query_text="retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+                    claim_type="housing_discrimination",
+                    max_results=3,
+                )
+
+            self.assertGreater(payload["legal_authorities"]["result_count"], 0)
+            self.assertEqual(payload["legal_authorities"]["results"][0]["authority_source"], "web_fallback")
+            self.assertIn("24 CFR Part 966", payload["summary"]["top_legal_titles"][0])
+            self.assertEqual(payload["legal_authorities"]["results"][0]["citation"], "24 CFR Part 966")
             self.assertGreater(payload["legal_authorities"]["results"][0]["research_priority_score"], 0.0)
             self.assertIn("has formal citation", payload["legal_authorities"]["results"][0]["research_priority_reasons"])
 
@@ -792,6 +840,65 @@ class HACCResearchEngineTests(unittest.TestCase):
                 "contains chronology cues",
                 " ".join(payload["web_discovery"]["results"][0]["research_priority_reasons"]).lower(),
             )
+
+    def test_build_external_research_bundle_prefers_housing_domain_filtered_web_results(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            web_calls = []
+
+            def fake_discover(query, *, max_results=10, engines=None, domain_filter=None, scrape=False):
+                web_calls.append({"query": query, "domain_filter": list(domain_filter or [])})
+                if domain_filter:
+                    return {
+                        "status": "success",
+                        "query": query,
+                        "result_count": 1,
+                        "results": [
+                            {
+                                "title": "HUD grievance hearing notice guidance",
+                                "url": "https://www.hud.gov/example/hearing-rights",
+                                "snippet": "HUD guidance about grievance hearing notice, appeal rights, and adverse action timing.",
+                            }
+                        ],
+                    }
+                return {
+                    "status": "success",
+                    "query": query,
+                    "result_count": 1,
+                    "results": [
+                        {
+                            "title": "RETALIATION Definition",
+                            "url": "https://www.merriam-webster.com/dictionary/retaliation",
+                            "snippet": "Dictionary definition of retaliation.",
+                        }
+                    ],
+                }
+
+            with mock.patch.object(engine, "discover", side_effect=fake_discover), mock.patch.object(
+                engine,
+                "discover_legal_authorities",
+                return_value={"status": "success", "query": "", "result_count": 0, "results": []},
+            ):
+                payload = engine._build_external_research_bundle(
+                    query_text="retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+                    claim_type="housing_discrimination",
+                    max_results=2,
+                )
+
+            self.assertTrue(any("hud.gov" in call["domain_filter"] for call in web_calls if call["domain_filter"]))
+            self.assertEqual(payload["web_discovery"]["results"][0]["title"], "HUD grievance hearing notice guidance")
+            self.assertIn("preferred housing domain", " ".join(payload["web_discovery"]["results"][0]["research_priority_reasons"]).lower())
 
     def test_search_local_surfaces_chronology_summary_and_prioritizes_timeline_ready_documents(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -1116,6 +1223,64 @@ class HACCResearchEngineTests(unittest.TestCase):
                                 }
                             ],
                             "matched_entities": [{"name": "HACC grievance hearing", "type": "policy_rule"}],
+                            "metadata": {},
+                        },
+                    ],
+                },
+                top_k=2,
+            )
+
+            self.assertEqual(candidates[0]["document_id"], "kg::policy")
+            self.assertLess(candidates[1]["selection_priority"], candidates[0]["selection_priority"])
+
+    def test_select_uploadable_results_penalizes_repository_documentation_for_chronology_queries(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            readme_path = root / "README.md"
+            policy_path = root / "policy.txt"
+            readme_path.write_text("readme", encoding="utf-8")
+            policy_path.write_text("policy", encoding="utf-8")
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            candidates = engine._select_uploadable_results(
+                {
+                    "query": "retaliation grievance appeal hearing notice response date",
+                    "results": [
+                        {
+                            "document_id": "repo::README.md",
+                            "title": "# HACC Audit and Complaint System",
+                            "source_type": "repository_evidence",
+                            "source_path": str(readme_path),
+                            "relative_path": "README.md",
+                            "score": 90.0,
+                            "snippet": "```python from hacc_adversarial_runner import run_hacc_adversarial_batch ``` CLI reference with key parameters and output_dir values.",
+                            "matched_rules": [],
+                            "matched_entities": [],
+                            "metadata": {},
+                        },
+                        {
+                            "document_id": "kg::policy",
+                            "title": "ADMINISTRATIVE PLAN",
+                            "source_type": "knowledge_graph",
+                            "source_path": str(policy_path),
+                            "score": 75.0,
+                            "snippet": "The notice must also state that the tenant may request an informal review of the decision.",
+                            "matched_rules": [
+                                {
+                                    "text": "The notice must also state that the tenant may request an informal review of the decision.",
+                                    "section_title": "Notice to Applicant",
+                                }
+                            ],
+                            "matched_entities": [{"name": "informal review", "type": "policy_rule"}],
                             "metadata": {},
                         },
                     ],
