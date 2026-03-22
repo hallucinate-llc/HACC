@@ -761,9 +761,54 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertGreater(payload["legal_authorities"]["result_count"], 0)
             self.assertEqual(payload["legal_authorities"]["results"][0]["authority_source"], "web_fallback")
             self.assertIn("24 CFR Part 966", payload["summary"]["top_legal_titles"][0])
-            self.assertEqual(payload["legal_authorities"]["results"][0]["citation"], "24 CFR Part 966")
+            self.assertEqual(payload["legal_authorities"]["results"][0]["citation"], "24 CFR Part 966 Subpart B")
             self.assertGreater(payload["legal_authorities"]["results"][0]["research_priority_score"], 0.0)
             self.assertIn("has formal citation", payload["legal_authorities"]["results"][0]["research_priority_reasons"])
+            self.assertEqual(
+                payload["legal_authorities"]["results"][1]["citation"],
+                "Grievance Procedures (HUD guidance)",
+            )
+
+    def test_build_external_research_bundle_extracts_us_code_citation_from_web_fallback(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            web_payload = {
+                "status": "success",
+                "query": "fair housing retaliation",
+                "result_count": 1,
+                "results": [
+                    {
+                        "title": "34 U.S. Code § 12494 - Prohibition on retaliation | U.S. Code | US Law | LII / Legal Information Institute",
+                        "url": "https://www.law.cornell.edu/uscode/text/34/12494",
+                        "description": "Federal retaliation authority.",
+                    }
+                ],
+            }
+
+            with mock.patch.object(engine, "discover", return_value=web_payload), mock.patch.object(
+                engine,
+                "discover_legal_authorities",
+                return_value={"status": "success", "query": "fair housing retaliation", "result_count": 0, "results": []},
+            ):
+                payload = engine._build_external_research_bundle(
+                    query_text="retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+                    claim_type="housing_discrimination",
+                    max_results=3,
+                )
+
+            self.assertEqual(payload["legal_authorities"]["results"][0]["citation"], "34 U.S. Code § 12494")
+            self.assertEqual(payload["summary"]["top_legal_titles"][0], "34 U.S. Code § 12494")
 
     def test_build_external_research_bundle_ranks_web_and_legal_results_by_claim_and_chronology_fit(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:

@@ -138,6 +138,55 @@ def test_main_can_filter_sections(tmp_path, capsys):
     assert "Upload Prompts" not in output
 
 
+def test_main_can_write_brief(tmp_path, capsys):
+    run_dir = tmp_path / "grounded-run"
+    _write_json(
+        run_dir / "synthetic_prompts.json",
+        {
+            "evidence_upload_prompts": [
+                {"title": "Policy A", "relative_path": "repo/policy-a.txt", "anchor_sections": []}
+            ],
+            "mediator_questions": ["Which record proves the date?"],
+            "blocker_objectives": ["exact_dates"],
+        },
+    )
+    _write_json(
+        run_dir / "grounding_bundle.json",
+        {"query": "q", "claim_type": "c", "upload_candidates": [{"title": "Policy A", "snippet": "notice", "metadata": {}}]},
+    )
+    _write_json(
+        run_dir / "external_research_bundle.json",
+        {"summary": {"web_result_count": 1, "legal_result_count": 0, "top_web_titles": [], "top_legal_titles": []}},
+    )
+    _write_json(
+        run_dir / "complaint_synthesis" / "draft_complaint_package.json",
+        {
+            "evidence_attachments": [],
+            "authorities_and_research_basis": {
+                "authority_records": [
+                    {
+                        "type": "Regulation",
+                        "label": "24 CFR Part 966",
+                        "why_it_matters": "supports grievance allegations",
+                        "url": "https://example.test/966",
+                    }
+                ]
+            },
+        },
+    )
+
+    exit_code = module.main([str(run_dir), "--write-brief"])
+
+    assert exit_code == 0
+    output = capsys.readouterr().out
+    brief_path = run_dir / "grounded_run_brief.md"
+    assert f"Wrote brief: {brief_path}" in output
+    brief_text = brief_path.read_text()
+    assert "# Grounded Run Brief" in brief_text
+    assert "## Mediator Questions" in brief_text
+    assert "24 CFR Part 966" in brief_text
+
+
 def test_main_requires_path_or_latest():
     try:
         module.main([])

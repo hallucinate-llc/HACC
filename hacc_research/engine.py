@@ -398,6 +398,13 @@ _UPLOAD_CANDIDATE_DOCUMENTATION_PATH_TERMS = (
     "quick_reference",
     "documentation_index",
 )
+_UPLOAD_CANDIDATE_REPOSITORY_SUMMARY_PATH_TERMS = (
+    "audit",
+    "summary",
+    "status",
+    "brief",
+    "guide",
+)
 _UPLOAD_CANDIDATE_DOCUMENTATION_MARKERS = (
     "```python",
     "cli reference",
@@ -438,7 +445,9 @@ def _extract_legal_citation(value: str) -> str:
     if not cleaned:
         return ""
     patterns = (
+        r"\b\d+\s+C\.?F\.?R\.?\s+part\s+\d+[\w.()\-]*\s+subpart\s+[A-Z]\b",
         r"\b\d+\s+C\.?F\.?R\.?\s*(?:part\s+)?(?:[\u00a7§]\s*)?[\d\w.()\-]+",
+        r"\b\d+\s+U\.?S\.?\s+Code\s*(?:[\u00a7§]\s*)?[\d\w.()\-]+",
         r"\b\d+\s+U\.?S\.?C\.?\s*(?:[\u00a7§]\s*)?[\d\w.()\-]+",
         r"\btitle\s+\d+[^\n]{0,80}?part\s+\d+[\w.()\-]*",
         r"\bpart\s+\d+[\w.()\-]*\s+subpart\s+[A-Z]\b",
@@ -448,6 +457,23 @@ def _extract_legal_citation(value: str) -> str:
         if match:
             return _clean_text(match.group(0))
     return ""
+
+
+def _normalize_guidance_citation(*, title: str, domain: str) -> str:
+    cleaned_title = _clean_text(title)
+    if not cleaned_title:
+        return ""
+    normalized = re.sub(r"^PDF", "", cleaned_title, flags=re.IGNORECASE).strip(" -|")
+    normalized = re.sub(r"\s*-\s*(HUD(?:\.gov)?|HUD Exchange|HUDExchange(?:\.info)?)$", "", normalized, flags=re.IGNORECASE)
+    normalized = re.sub(r"\s*-\s*[A-Za-z0-9.-]+\.[A-Za-z]{2,}$", "", normalized)
+    normalized = _clean_text(normalized)
+    if not normalized:
+        return ""
+    if "hud" in domain:
+        return f"{normalized} (HUD guidance)"
+    if "justice.gov" in domain:
+        return f"{normalized} (DOJ guidance)"
+    return normalized
 
 
 def _json_safe(value: Any) -> Any:
@@ -793,6 +819,50 @@ class HACCResearchEngine:
             if str(item).strip()
         ]
 
+    def _legal_authority_query_variants(self, query_text: str) -> List[str]:
+        cleaned_query = _clean_text(query_text)
+        if not cleaned_query:
+            return []
+
+        variants: List[str] = [cleaned_query]
+        citation = _extract_legal_citation(cleaned_query)
+        if citation and citation.lower() != cleaned_query.lower():
+            variants.append(citation)
+
+        lowered_query = cleaned_query.lower()
+        has_housing_context = any(token in lowered_query for token in ("housing", "tenant", "voucher", "participant", "hud"))
+        has_procedure_context = any(token in lowered_query for token in ("grievance", "hearing", "appeal", "notice", "informal review"))
+        has_retaliation_context = "retaliation" in lowered_query
+
+        if has_housing_context and has_procedure_context:
+            variants.extend(
+                [
+                    "24 C.F.R. 982.555 informal hearing",
+                    "24 C.F.R. part 966 grievance procedures",
+                    "42 U.S.C. 1437d grievance procedure",
+                ]
+            )
+        if has_housing_context and has_retaliation_context:
+            variants.extend(
+                [
+                    "Fair Housing Act retaliation",
+                    "42 U.S.C. 3604 fair housing retaliation",
+                ]
+            )
+
+        ordered: List[str] = []
+        seen: set[str] = set()
+        for value in variants:
+            normalized = _clean_text(value)
+            if not normalized:
+                continue
+            key = normalized.lower()
+            if key in seen:
+                continue
+            seen.add(key)
+            ordered.append(normalized)
+        return ordered[:5]
+
     def _aggregate_external_discovery_results(
         self,
         payloads: Sequence[Dict[str, Any]],
@@ -884,6 +954,8 @@ class HACCResearchEngine:
                 citation = title
             if not citation and domain.endswith("ecfr.gov"):
                 citation = title
+            if not citation and any(candidate in domain for candidate in ("hud.gov", "hudexchange.info", "justice.gov")):
+                citation = _normalize_guidance_citation(title=title, domain=domain)
             promoted_results.append(
                 {
                     "title": title,
@@ -1637,7 +1709,9 @@ class HACCResearchEngine:
 
         results: List[Dict[str, Any]] = []
         errors: List[Dict[str, Any]] = []
+        attempts: List[Dict[str, Any]] = []
         seen_keys: set[str] = set()
+        query_variants = self._legal_authority_query_variants(query_text) or [query_text]
         operations = [
             ("us_code", search_us_code, {"title": title, "max_results": max_results}),
             (
@@ -1648,38 +1722,48 @@ class HACCResearchEngine:
             ("recap", search_recap_documents, {"court": court, "max_results": max_results}),
         ]
 
-        for source_name, func, kwargs in operations:
-            if func is None:
-                continue
-            try:
-                source_results = func(query_text, **kwargs)
-            except Exception as exc:  # pragma: no cover - exercised through degraded integrations
-                errors.append({"source": source_name, "error": str(exc)})
-                continue
-            for item in list(source_results or []):
-                citation = str(item.get("citation") or item.get("title") or item.get("url") or "").strip()
-                dedupe_key = f"{source_name}:{citation.lower()}"
-                if not citation or dedupe_key in seen_keys:
+        for candidate_query in query_variants:
+            before_count = len(results)
+            for source_name, func, kwargs in operations:
+                if func is None:
                     continue
-                seen_keys.add(dedupe_key)
-                results.append(
-                    {
-                        **item,
-                        "authority_source": source_name,
-                        "title": str(item.get("title") or citation),
-                        "citation": citation,
-                        "url": str(item.get("url") or ""),
-                        "score": float(item.get("relevance_score", 0.5) or 0.5),
-                    }
-                )
+                try:
+                    source_results = func(candidate_query, **kwargs)
+                except Exception as exc:  # pragma: no cover - exercised through degraded integrations
+                    errors.append({"source": source_name, "query": candidate_query, "error": str(exc)})
+                    attempts.append({"source": source_name, "query": candidate_query, "result_count": 0, "error": str(exc)})
+                    continue
+                added = 0
+                for item in list(source_results or []):
+                    citation = str(item.get("citation") or item.get("title") or item.get("url") or "").strip()
+                    dedupe_key = f"{source_name}:{citation.lower()}"
+                    if not citation or dedupe_key in seen_keys:
+                        continue
+                    seen_keys.add(dedupe_key)
+                    results.append(
+                        {
+                            **item,
+                            "authority_source": source_name,
+                            "title": str(item.get("title") or citation),
+                            "citation": citation,
+                            "url": str(item.get("url") or ""),
+                            "score": float(item.get("relevance_score", 0.5) or 0.5),
+                        }
+                    )
+                    added += 1
+                attempts.append({"source": source_name, "query": candidate_query, "result_count": added, "error": ""})
+            if len(results) >= max_results and len(results) > before_count:
+                break
 
         results.sort(key=lambda item: (-float(item.get("score", 0.0)), str(item.get("title", ""))))
         return {
             "status": "success" if results else "error" if errors else "success",
             "query": query_text,
+            "queries": query_variants,
             "result_count": len(results[:max_results]),
             "results": results[:max_results],
             "errors": errors,
+            "attempts": attempts,
             "integration_status": self._integration_status(),
         }
 
@@ -2606,7 +2690,12 @@ class HACCResearchEngine:
                 priority -= 4.5
             if any(marker in combined_text for marker in _UPLOAD_CANDIDATE_DOCUMENTATION_MARKERS):
                 priority -= 6.0
-        if any(term in title_lower for term in _UPLOAD_CANDIDATE_ANALYSIS_TITLE_TERMS) and not anchor_sections:
+            if any(term in title_lower for term in _UPLOAD_CANDIDATE_ANALYSIS_TITLE_TERMS):
+                priority -= 6.0
+            root_level_repo_file = "/" not in relative_path_lower and relative_path_lower.endswith((".md", ".txt", ".html", ".htm", ".json"))
+            if root_level_repo_file and any(term in relative_path_lower for term in _UPLOAD_CANDIDATE_REPOSITORY_SUMMARY_PATH_TERMS):
+                priority -= 5.0
+        elif any(term in title_lower for term in _UPLOAD_CANDIDATE_ANALYSIS_TITLE_TERMS) and not anchor_sections:
             priority -= 5.0
         if not hacc_hits and not anchor_sections:
             priority -= 2.5
@@ -3126,6 +3215,23 @@ class HACCResearchEngine:
             reasons.append(f"touches anchor sections: {', '.join(anchor_sections[:4])}")
 
         if result_kind == "legal":
+            domain = _normalize_domain(str(item.get("url") or ""))
+            housing_legal_hits = [
+                term
+                for term in (
+                    "fair housing",
+                    "public housing",
+                    "voucher",
+                    "tenant",
+                    "grievance",
+                    "informal hearing",
+                    "hearing",
+                    "hud",
+                    "982.555",
+                    "1437d",
+                )
+                if term in source_text
+            ]
             if _clean_text(str(item.get("citation") or "")):
                 score += 3.0
                 reasons.append("has formal citation")
@@ -3135,6 +3241,22 @@ class HACCResearchEngine:
                 reasons.append(f"authority source: {authority_source}")
             if any(token in source_text for token in ("u.s.c.", "c.f.r.", "federal register", "hud", "court", "appeal")):
                 score += 2.0
+            if domain and any(candidate in domain for candidate in preferred_domains):
+                score += 3.5
+                reasons.append(f"preferred housing domain: {domain}")
+            if housing_legal_hits:
+                score += min(5.0, float(len(housing_legal_hits)) * 1.15)
+                reasons.append(f"housing grievance context: {', '.join(housing_legal_hits[:5])}")
+            citation_lower = _clean_text(str(item.get("citation") or "")).lower()
+            if "c.f.r." in citation_lower or re.search(r"\b\d+\s+cfr\b", citation_lower):
+                score += 2.5
+                reasons.append("regulatory authority")
+            if "u.s.c." in citation_lower and not housing_legal_hits:
+                score -= 2.5
+                reasons.append("generic statutory citation without housing fit")
+            if "34 u.s.c." in citation_lower and not housing_legal_hits:
+                score -= 3.0
+                reasons.append("generic retaliation statute")
         else:
             if any(term in source_text for term in _CASE_EVIDENCE_PRIORITY_CUES):
                 score += 2.0

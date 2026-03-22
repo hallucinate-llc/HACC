@@ -120,6 +120,11 @@ def create_parser() -> argparse.ArgumentParser:
         ),
         help="Limit output to one or more specific sections. May be passed multiple times.",
     )
+    parser.add_argument(
+        "--write-brief",
+        action="store_true",
+        help="Write a compact Markdown brief into the grounded run directory.",
+    )
     return parser
 
 
@@ -178,6 +183,46 @@ def _should_print(selections: set[str], name: str) -> bool:
     return not selections or name in selections
 
 
+def _markdown_lines(summary: dict[str, Any], run_dir: Path) -> list[str]:
+    ext = summary["external_research_summary"]
+    lines = [
+        "# Grounded Run Brief",
+        "",
+        f"- Run: `{summary['run_dir']}`",
+        f"- Query: `{summary['query']}`" if summary["query"] else "- Query: ",
+        f"- Claim type: `{summary['claim_type']}`" if summary["claim_type"] else "- Claim type: ",
+        f"- Status: `{summary['status']}`" if summary["status"] else "- Status: ",
+        f"- Progress stage: `{summary['progress_stage']}`" if summary["progress_stage"] else "- Progress stage: ",
+        f"- External research: web_results={ext['web_result_count']} legal_results={ext['legal_result_count']}",
+        "",
+        "## Key Artifact Paths",
+        "",
+        f"- `{run_dir / 'synthetic_prompts.json'}`",
+        f"- `{run_dir / 'grounding_bundle.json'}`",
+        f"- `{run_dir / 'external_research_bundle.json'}`",
+        f"- `{run_dir / 'complaint_synthesis' / 'draft_complaint_package.json'}`",
+        f"- `{run_dir / 'complaint_synthesis' / 'draft_complaint_package.md'}`",
+        "",
+        "## Upload Prompts",
+        "",
+    ]
+    for row in _format_upload_prompts(summary["upload_prompts"]) or ["none"]:
+        lines.append(f"- {row}")
+    lines.extend(["", "## Mediator Questions", ""])
+    for row in summary["mediator_questions"] or ["none"]:
+        lines.append(f"- {row}")
+    lines.extend(["", "## Blocker Objectives", ""])
+    for row in summary["blocker_objectives"] or ["none"]:
+        lines.append(f"- {row}")
+    lines.extend(["", "## Authorities", ""])
+    for row in _format_authorities(summary["authority_records"]) or ["none"]:
+        lines.append(f"- {row}")
+    lines.extend(["", "## Top Evidence Candidates", ""])
+    for row in _format_upload_candidates(summary["upload_candidates"]) or ["none"]:
+        lines.append(f"- {row}")
+    return lines
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = create_parser()
     args = parser.parse_args(argv)
@@ -187,6 +232,11 @@ def main(argv: list[str] | None = None) -> int:
     if args.json:
         print(json.dumps(summary, indent=2))
         return 0
+
+    if args.write_brief:
+        brief_path = run_dir / "grounded_run_brief.md"
+        brief_path.write_text("\n".join(_markdown_lines(summary, run_dir)) + "\n")
+        print(f"Wrote brief: {brief_path}")
 
     print(f"Grounded run: {summary['run_dir']}")
     if summary["query"]:
