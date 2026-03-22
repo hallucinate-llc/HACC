@@ -157,10 +157,12 @@ class HACCGroundedPipelineTests(unittest.TestCase):
                         "source_path": "/tmp/README.md",
                     }
                 ],
+                "retrieval_support_bundle": {"summary": {"total_records": 1}},
                 "synthetic_prompts": {
                     "evidence_upload_prompts": [{"text": "Upload README.md"}],
                     "complaint_chatbot_prompt": "Ground the chatbot.",
                     "mediator_evaluation_prompt": "Evaluate the upload.",
+                    "court_complaint_synthesis_prompt": "Synthesize the complaint.",
                 },
             }
             fake_upload = {
@@ -168,6 +170,7 @@ class HACCGroundedPipelineTests(unittest.TestCase):
                 "upload_count": 1,
                 "uploads": [{"title": "README"}],
                 "support_summary": {"total_links": 1},
+                "retrieval_support_bundle": {"summary": {"total_records": 1}},
                 "synthetic_prompts": fake_grounding["synthetic_prompts"],
             }
             fake_adversarial_summary = {
@@ -199,6 +202,7 @@ class HACCGroundedPipelineTests(unittest.TestCase):
             self.assertTrue((output_root / "anchor_passages.json").is_file())
             self.assertTrue((output_root / "upload_candidates.json").is_file())
             self.assertTrue((output_root / "synthetic_prompts.json").is_file())
+            self.assertTrue((output_root / "retrieval_support_bundle.json").is_file())
             self.assertTrue((output_root / "evidence_upload_report.json").is_file())
             self.assertTrue((output_root / "adversarial_summary.json").is_file())
             self.assertTrue((output_root / "run_summary.json").is_file())
@@ -212,10 +216,14 @@ class HACCGroundedPipelineTests(unittest.TestCase):
             self.assertEqual(summary["grounding_overview"]["uploaded_evidence_count"], 1)
             self.assertEqual(summary["grounding_overview"]["top_documents"], ["README"])
             self.assertEqual(summary["artifacts"]["grounding_overview_json"], str(output_root / "grounding_overview.json"))
+            self.assertEqual(summary["artifacts"]["retrieval_support_bundle_json"], str(output_root / "retrieval_support_bundle.json"))
             self.assertEqual(batch_mock.call_args.kwargs["hacc_search_mode"], "hybrid")
 
             prompts_payload = json.loads((output_root / "synthetic_prompts.json").read_text(encoding="utf-8"))
             self.assertIn("evidence_upload_prompts", prompts_payload)
+            self.assertIn("court_complaint_synthesis_prompt", prompts_payload)
+            retrieval_payload = json.loads((output_root / "retrieval_support_bundle.json").read_text(encoding="utf-8"))
+            self.assertEqual(retrieval_payload["summary"]["total_records"], 1)
             overview_payload = json.loads((output_root / "grounding_overview.json").read_text(encoding="utf-8"))
             self.assertEqual(overview_payload["anchor_sections"], ["reasonable_accommodation", "grievance_hearing"])
             anchor_passages_payload = json.loads((output_root / "anchor_passages.json").read_text(encoding="utf-8"))

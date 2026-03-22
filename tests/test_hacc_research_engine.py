@@ -48,6 +48,35 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertTrue(readme_doc.entities)
             self.assertTrue(readme_doc.rules)
 
+    def test_repository_text_evidence_does_not_require_ingest_adapter(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            evidence_path = root / "README.md"
+            evidence_path.write_text(
+                "Repository Evidence\nReasonable accommodation hearing rights and written notice.",
+                encoding="utf-8",
+            )
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+            with mock.patch.object(
+                engine_module,
+                "ingest_local_document",
+                side_effect=AssertionError("plain text repository evidence should not hit ingest adapter"),
+            ):
+                documents = engine.load_corpus(force_reload=True)
+
+            repository_docs = [document for document in documents if document.source_type == "repository_evidence"]
+            self.assertEqual(len(repository_docs), 1)
+            self.assertIn("hearing rights", repository_docs[0].text.lower())
+
     def test_load_corpus_skips_generated_runtime_artifacts(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
@@ -312,6 +341,145 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertEqual(payload["timeline_anchor_count"], 1)
             self.assertEqual(payload["timeline_anchor_preview"][0]["start_date"], "2024-01-04")
 
+    def test_extract_timeline_anchors_skips_policy_revision_dates(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            text = (
+                "ADMINISTRATIVE PLAN Revision Date May 1, 2005 February 1, 2006 October 1, 2006. "
+                "HACC sent written notice on March 4, 2024 and denied the review on March 8, 2024."
+            )
+            with mock.patch.object(engine_module, "build_shared_temporal_context", None):
+                anchors = engine._extract_timeline_anchors_from_text(
+                    text,
+                    title="Administrative Plan",
+                    source_path="/tmp/policy.txt",
+                    claim_type="housing_discrimination",
+                )
+
+            self.assertEqual([anchor["start_date"] for anchor in anchors], ["2024-03-04", "2024-03-08"])
+
+    def test_shared_timeline_extraction_skips_policy_revision_sentences(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            text = (
+                "ADMINISTRATIVE PLAN Revision Date May 1, 2005 February 1, 2006 October 1, 2006. "
+                "HACC sent written notice on March 4, 2024."
+            )
+
+            def fake_temporal_context(sentence, fallback_text=None):
+                self.assertNotIn("Revision Date", sentence)
+                if "March 4, 2024" in sentence:
+                    return {
+                        "start_date": "2024-03-04",
+                        "matched_text": "March 4, 2024",
+                        "granularity": "day",
+                    }
+                return {}
+
+            with mock.patch.object(engine_module, "build_shared_temporal_context", side_effect=fake_temporal_context):
+                anchors = engine._extract_shared_timeline_anchors_from_text(
+                    text,
+                    title="Administrative Plan",
+                    source_path="/tmp/policy.txt",
+                    claim_type="housing_discrimination",
+                )
+
+            self.assertEqual(len(anchors), 1)
+            self.assertEqual(anchors[0]["start_date"], "2024-03-04")
+
+    def test_extract_timeline_anchors_skips_regulatory_history_dates(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            text = (
+                "Plan 7/1/2025 Administrative Plan -Table of Contents Chapter 2 FAIR HOUSING. "
+                "On September 29, 2023, HUD issued Notice PIH 2023-27. "
+                "HACC sent the tenant a written notice of denial on March 4, 2024."
+            )
+            with mock.patch.object(engine_module, "build_shared_temporal_context", None):
+                anchors = engine._extract_timeline_anchors_from_text(
+                    text,
+                    title="Administrative Plan",
+                    source_path="/tmp/policy.txt",
+                    claim_type="housing_discrimination",
+                )
+
+            self.assertEqual([anchor["start_date"] for anchor in anchors], ["2024-03-04"])
+
+    def test_grounding_chronology_uses_full_text_only_for_repository_evidence(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            knowledge_graph_candidate = {
+                "title": "Administrative Plan",
+                "source_path": "/tmp/policy.pdf",
+                "source_type": "knowledge_graph",
+                "snippet": "Hearing rights and appeal procedures.",
+            }
+            repository_candidate = {
+                "title": "Tenant Notice",
+                "source_path": "/tmp/tenant_notice.txt",
+                "source_type": "repository_evidence",
+                "snippet": "Written notice details.",
+            }
+
+            upload_texts = {
+                "/tmp/policy.pdf": "Revision Date May 1, 2005 February 1, 2006 October 1, 2006.",
+                "/tmp/tenant_notice.txt": "HACC sent the tenant a written notice on March 4, 2024 and denied review on March 8, 2024.",
+            }
+
+            with mock.patch.object(engine, "_resolve_candidate_upload_text", side_effect=lambda candidate: upload_texts[str(candidate.get("source_path"))]):
+                analysis = engine._build_grounding_chronology_analysis(
+                    [knowledge_graph_candidate, repository_candidate],
+                    claim_type="housing_discrimination",
+                    query_text="hearing appeal notice",
+                )
+
+            self.assertEqual([anchor["start_date"] for anchor in analysis["timeline_anchors"]], ["2024-03-04"])
+            self.assertEqual(analysis["timeline_anchor_count"], 1)
+
     def test_build_grounding_bundle_emits_synthetic_prompts_for_file_backed_results(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
@@ -355,12 +523,15 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertIn("Evaluate each uploaded evidence item", prompts["mediator_evaluation_prompt"])
             self.assertIn("Prioritize these anchor sections", prompts["mediator_evaluation_prompt"])
             self.assertIn("production_upload_prompt", prompts)
+            self.assertIn("court_complaint_synthesis_prompt", prompts)
+            self.assertIn("evidence_upload_simulation_prompt", prompts)
             self.assertIn("production_evidence_intake_steps", prompts)
             self.assertIn("mediator_upload_checklist", prompts)
             self.assertIn("document_generation_checklist", prompts)
             self.assertIn("evidence_upload_form_seed", prompts)
             self.assertIn("mediator_evidence_review_prompt", prompts)
             self.assertIn("document_generation_prompt", prompts)
+            self.assertIn("timeline_consistency_summary", prompts)
             self.assertEqual(
                 prompts["workflow_phase_priorities"],
                 ["intake_questioning", "evidence_upload", "graph_analysis", "document_generation"],
@@ -379,6 +550,12 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertIn("drafting_readiness", payload)
             self.assertIn("document_generation_handoff", payload)
             self.assertIn("graph_completeness_signals", payload)
+            self.assertIn("query_context", payload)
+            self.assertIn("retrieval_support_bundle", payload)
+            self.assertGreaterEqual(
+                int((payload["retrieval_support_bundle"].get("summary") or {}).get("total_records", 0) or 0),
+                1,
+            )
             self.assertEqual(len(payload["mediator_evidence_packets"]), 1)
             self.assertEqual(payload["mediator_evidence_packets"][0]["relative_path"], "README.md")
             self.assertEqual(
@@ -416,6 +593,8 @@ class HACCResearchEngineTests(unittest.TestCase):
             payload = engine.search_local("hearing notice response date", top_k=2)
 
             self.assertEqual(payload["status"], "success")
+            self.assertIn("support_bundle", payload)
+            self.assertIn("query_context", payload)
             self.assertEqual(payload["chronology_ready_result_count"], 1)
             self.assertEqual(payload["results"][0]["document_id"], "repo::dated_notice.txt")
             self.assertGreaterEqual(payload["results"][0]["chronology_summary"]["timeline_anchor_count"], 1)

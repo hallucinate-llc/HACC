@@ -204,6 +204,7 @@ def run_hacc_grounded_pipeline(
     upload_candidates_path = output_root / "upload_candidates.json"
     mediator_packets_path = output_root / "mediator_evidence_packets.json"
     prompts_path = output_root / "synthetic_prompts.json"
+    retrieval_support_path = output_root / "retrieval_support_bundle.json"
     upload_path = output_root / "evidence_upload_report.json"
     adversarial_path = output_root / "adversarial_summary.json"
     summary_path = output_root / "run_summary.json"
@@ -225,6 +226,10 @@ def run_hacc_grounded_pipeline(
     )
     prompts_path.write_text(
         json.dumps(grounding_bundle.get("synthetic_prompts", {}), ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    retrieval_support_path.write_text(
+        json.dumps(grounding_bundle.get("retrieval_support_bundle", {}), ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
     upload_path.write_text(json.dumps(upload_report, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -266,6 +271,7 @@ def run_hacc_grounded_pipeline(
             "upload_candidates_json": str(upload_candidates_path),
             "mediator_evidence_packets_json": str(mediator_packets_path),
             "synthetic_prompts_json": str(prompts_path),
+            "retrieval_support_bundle_json": str(retrieval_support_path),
             "evidence_upload_report_json": str(upload_path),
             "adversarial_summary_json": str(adversarial_path),
             "adversarial_output_dir": str(output_root / "adversarial"),

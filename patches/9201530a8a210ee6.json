@@ -1,0 +1,32 @@
+{
+  "patch_id": "9201530a8a210ee6",
+  "agent_id": "adversarial-harness-optimizer",
+  "task_id": "adversarial_autopatch_20260322_020911",
+  "description": "Use the test_driven optimizer to improve the complaint-generator intake questioning phase. Target files: adversarial_harness/session.py. Phase goal: Improve complainant and mediator questioning so intake exits with stronger factual, evidentiary, and anchor coverage. Recommended actions: Ask the complainant to walk step-by-step through protected activity, response, and adverse action so causation can be modeled directly.. Weak complaint types to generalize for: housing_discrimination, hacc_research_engine. Weak evidence modalities to improve: policy_document, file_evidence. Intake targets: causation_sequence, chronology, retaliation. Focus only on mediator/mediator.py. Target symbols: build_inquiry_gap_context.",
+  "diff_content": "--- a/mediator/mediator.py\n+++ b/mediator/mediator.py\n@@ -1558,45 +1558,45 @@\n \t\tintake_case_file = self.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'intake_case_file') or {}\n \t\tclaim_support_packets = self.phase_manager.get_phase_data(ComplaintPhase.EVIDENCE, 'claim_support_packets') or {}\n \t\tadversarial_summary = (\n-\t\t\tself.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'adversarial_intake_priority_summary') or {}\n+\t\tself.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'adversarial_intake_priority_summary') or {}\n \t\t)\n \t\tchronology_priority_hints = self._extract_document_chronology_priority_hints(\n-\t\t\tintake_case_file,\n-\t\t\tclaim_support_packets,\n-\t\t\tadversarial_summary,\n-\t\t\tself.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'workflow_optimization_guidance') or {},\n-\t\t\tself.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'claim_support_temporal_handoff') or {},\n-\t\t\tself.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'claim_reasoning_review') or {},\n-\t\t\tself.phase_manager.get_phase_data(ComplaintPhase.EVIDENCE, 'workflow_optimization_guidance') or {},\n-\t\t\tself.phase_manager.get_phase_data(ComplaintPhase.EVIDENCE, 'claim_support_temporal_handoff') or {},\n-\t\t\tself.phase_manager.get_phase_data(ComplaintPhase.EVIDENCE, 'claim_reasoning_review') or {},\n+\t\tintake_case_file,\n+\t\tclaim_support_packets,\n+\t\tadversarial_summary,\n+\t\tself.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'workflow_optimization_guidance') or {},\n+\t\tself.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'claim_support_temporal_handoff') or {},\n+\t\tself.phase_manager.get_phase_data(ComplaintPhase.INTAKE, 'claim_reasoning_review') or {},\n+\t\tself.phase_manager.get_phase_data(ComplaintPhase.EVIDENCE, 'workflow_optimization_guidance') or {},\n+\t\tself.phase_manager.get_phase_data(ComplaintPhase.EVIDENCE, 'claim_support_temporal_handoff') or {},\n+\t\tself.phase_manager.get_phase_data(ComplaintPhase.EVIDENCE, 'claim_reasoning_review') or {},\n \t\t)\n \t\texpected_objectives = [\n-\t\t\tstr(value).strip().lower()\n-\t\t\tfor value in (\n-\t\t\t\t(adversarial_summary.get('expected_objectives') or [])\n-\t\t\t\tif isinstance(adversarial_summary, dict)\n-\t\t\t\telse []\n-\t\t\t)\n-\t\t\tif str(value).strip()\n+\t\tstr(value).strip().lower()\n+\t\tfor value in (\n+\t\t\t(adversarial_summary.get('expected_objectives') or [])\n+\t\t\tif isinstance(adversarial_summary, dict)\n+\t\t\telse []\n+\t\t)\n+\t\tif str(value).strip()\n \t\t]\n \t\tcovered_objectives = [\n-\t\t\tstr(value).strip().lower()\n-\t\t\tfor value in (\n-\t\t\t\t(adversarial_summary.get('covered_objectives') or [])\n-\t\t\t\tif isinstance(adversarial_summary, dict)\n-\t\t\t\telse []\n-\t\t\t)\n-\t\t\tif str(value).strip()\n+\t\tstr(value).strip().lower()\n+\t\tfor value in (\n+\t\t\t(adversarial_summary.get('covered_objectives') or [])\n+\t\t\tif isinstance(adversarial_summary, dict)\n+\t\t\telse []\n+\t\t)\n+\t\tif str(value).strip()\n \t\t]\n \t\tuncovered_objectives = [\n-\t\t\tstr(value).strip().lower()\n-\t\t\tfor value in (\n-\t\t\t\t(adversarial_summary.get('uncovered_objectives') or [])\n-\t\t\t\tif isinstance(adversarial_summary, dict)\n-\t\t\t\telse []\n-\t\t\t)\n-\t\t\tif str(value).strip()\n+\t\tstr(value).strip().lower()\n+\t\tfor value in (\n+\t\t\t(adversarial_summary.get('uncovered_objectives') or [])\n+\t\t\tif isinstance(adversarial_summary, dict)\n+\t\t\telse []\n+\t\t)\n+\t\tif str(value).strip()\n \t\t]\n \t\tfor default_objective in (\n \t\t\t'anchor_appeal_rights',\n@@ -1788,7 +1788,7 @@\n \t\t\t\t)\n \t\t\t\tif objective in uncovered_objectives or objective in expected_objectives\n \t\t\t],\n-\t\t\t'intake_fallback_probes': intake_fallback_probes,\n+\t\t\t'intake_fallback_probes': intake_fallback_probes[:6],\n \t\t\t'weak_claim_types': weak_claim_types,\n \t\t\t'weak_evidence_modalities': sorted(weak_modalities),\n \t\t}\n",
+  "target_files": [
+    "mediator/mediator.py"
+  ],
+  "created_at": "2026-03-22T02:09:29.730117",
+  "parent_patches": [],
+  "ipfs_cid": null,
+  "worktree_path": "",
+  "validated": false,
+  "applied": false,
+  "metadata": {
+    "patch_mode": "direct_diff",
+    "repo_root": "/home/barberb/HACC/complaint-generator",
+    "generation_diagnostics": [
+      {
+        "file": "/home/barberb/HACC/complaint-generator/mediator/mediator.py",
+        "status": "optimized",
+        "mode": "symbol_level",
+        "target_symbols": [
+          "build_inquiry_gap_context"
+        ],
+        "response_length": 433925,
+        "changed": true
+      }
+    ]
+  }
+}

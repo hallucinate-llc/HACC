@@ -50,6 +50,9 @@ try:
         _classify_anchor_sections as classify_anchor_sections,
     )
     from complaint_phases.intake_case_file import _build_temporal_context as build_shared_temporal_context
+    from complaint_phases.intake_case_file import build_timeline_consistency_summary
+    from mediator.integrations.contracts import NormalizedRetrievalRecord
+    from mediator.integrations.retrieval_orchestrator import RetrievalOrchestrator
 except Exception as exc:  # pragma: no cover - exercised through fallback behavior
     DOCUMENTS_AVAILABLE = False
     DOCUMENTS_ERROR = str(exc)
@@ -114,6 +117,9 @@ except Exception as exc:  # pragma: no cover - exercised through fallback behavi
         return labels or ["general_policy"]
 
     build_shared_temporal_context = None
+    build_timeline_consistency_summary = None
+    NormalizedRetrievalRecord = None
+    RetrievalOrchestrator = None
 
     INTEGRATION_IMPORT_ERROR = str(exc)
 else:
@@ -209,6 +215,73 @@ _MONTH_NAME_TO_NUMBER = {
     "dec": "12",
     "december": "12",
 }
+_NON_CASE_TIMELINE_KEYWORDS = (
+    "revision date",
+    "revision dates",
+    "effective date",
+    "effective dates",
+    "revised",
+    "amended",
+    "updated",
+    "adopted",
+    "implementation date",
+    "table of contents",
+    "federal register",
+    "final rule",
+    "joint statement",
+    "notice pih",
+    "hotma",
+    "supplementary guidance",
+    "administrative plan",
+    "adminplan",
+)
+_CASE_TIMELINE_EVENT_CUES = (
+    "written notice",
+    "notice of",
+    "hearing",
+    "appeal",
+    "review",
+    "request",
+    "requested",
+    "denied",
+    "termination",
+    "complaint",
+    "response",
+    "responded",
+    "sent",
+    "received",
+    "filed",
+    "deadline",
+    "meeting",
+    "interview",
+    "grievance",
+    "adverse action",
+)
+_CASE_TIMELINE_ACTION_CUES = (
+    "sent",
+    "received",
+    "denied",
+    "requested",
+    "filed",
+    "responded",
+    "scheduled",
+    "moved",
+    "terminated",
+    "complained",
+    "emailed",
+    "mailed",
+)
+_CASE_TIMELINE_PARTY_CUES = (
+    "tenant",
+    "applicant",
+    "family",
+    "participant",
+    "resident",
+    "complainant",
+    "landlord",
+    "voucher",
+    "hacc",
+)
 
 
 def _detect_content_type(path: Path) -> str:
@@ -445,6 +518,126 @@ class HACCResearchEngine:
         self.default_index_dir = (self.repo_root / "research_results/search_indexes").resolve()
         self.default_index_path = self.default_index_dir / "hacc_corpus.summary.json"
         self._documents: Optional[List[CorpusDocument]] = None
+
+    def _retrieval_orchestrator(self) -> Any:
+        if RetrievalOrchestrator is None:
+            return None
+        try:
+            return RetrievalOrchestrator()
+        except Exception:
+            return None
+
+    def _build_retrieval_query_context(self, query_text: str, *, claim_type: str = "") -> Dict[str, Any]:
+        orchestrator = self._retrieval_orchestrator()
+        if orchestrator is None:
+            return {}
+        try:
+            return dict(
+                orchestrator.build_query_context(
+                    query=query_text,
+                    claim_type=claim_type or "",
+                    complaint_type=claim_type or "",
+                    jurisdiction="federal",
+                    max_queries=4,
+                )
+                or {}
+            )
+        except Exception:
+            return {}
+
+    def _normalized_retrieval_source_type(self, source_type: str) -> str:
+        normalized = str(source_type or "").strip().lower()
+        if normalized in {"repository_evidence", "parsed_document"}:
+            return "evidence"
+        if normalized in {"knowledge_graph"}:
+            return "legal_corpus"
+        return normalized or "evidence"
+
+    def _build_normalized_retrieval_record(
+        self,
+        item: Dict[str, Any],
+        *,
+        query_text: str,
+        claim_type: str = "",
+    ) -> Any:
+        if NormalizedRetrievalRecord is None:
+            return None
+        metadata = dict(item.get("metadata") or {})
+        metadata.setdefault("document_id", str(item.get("document_id") or ""))
+        metadata.setdefault("source_path", str(item.get("source_path") or ""))
+        metadata.setdefault("relative_path", str(metadata.get("relative_path") or ""))
+        metadata.setdefault("title", str(item.get("title") or ""))
+        metadata.setdefault("complaint_type", str(claim_type or ""))
+        metadata.setdefault("chronology_summary", dict(item.get("chronology_summary") or {}))
+        metadata.setdefault("matched_rules", list(item.get("matched_rules") or []))
+        metadata.setdefault("matched_entities", list(item.get("matched_entities") or []))
+        return NormalizedRetrievalRecord(
+            source_type=self._normalized_retrieval_source_type(str(item.get("source_type") or "")),
+            source_name=str(item.get("source_type") or "hacc_corpus"),
+            query=query_text,
+            title=str(item.get("title") or ""),
+            url=str(item.get("source_path") or ""),
+            citation=str(metadata.get("relative_path") or item.get("source_path") or item.get("title") or ""),
+            snippet=str(item.get("snippet") or ""),
+            content=str(item.get("snippet") or ""),
+            score=float(item.get("score", 0.0) or 0.0),
+            confidence=min(1.0, max(0.0, float(item.get("score", 0.0) or 0.0) / 25.0)),
+            metadata=metadata,
+        )
+
+    def _rerank_result_items(
+        self,
+        items: Sequence[Dict[str, Any]],
+        *,
+        query_text: str,
+        claim_type: str = "",
+        max_results: int,
+    ) -> tuple[List[Dict[str, Any]], Dict[str, Any], Dict[str, Any]]:
+        orchestrator = self._retrieval_orchestrator()
+        query_context = self._build_retrieval_query_context(query_text, claim_type=claim_type)
+        if orchestrator is None or NormalizedRetrievalRecord is None:
+            return list(items)[:max_results], {}, {}
+
+        records = []
+        record_map: Dict[str, Dict[str, Any]] = {}
+        for index, item in enumerate(items):
+            record = self._build_normalized_retrieval_record(
+                item,
+                query_text=query_text,
+                claim_type=claim_type,
+            )
+            if record is None:
+                continue
+            key = record.dedupe_key() or f"anonymous:{index}"
+            records.append(record)
+            record_map[key] = dict(item)
+
+        if not records:
+            return list(items)[:max_results], query_context, {}
+
+        try:
+            ranked_records = orchestrator.merge_and_rank(records, max_results=max_results, query_context=query_context)
+            support_bundle = dict(orchestrator.build_support_bundle(ranked_records, max_items_per_bucket=5) or {})
+        except Exception:
+            return list(items)[:max_results], query_context, {}
+
+        reranked: List[Dict[str, Any]] = []
+        seen_keys: set[str] = set()
+        for fallback_index, record in enumerate(ranked_records):
+            key = record.dedupe_key() or f"anonymous:{fallback_index}"
+            if key in seen_keys:
+                continue
+            seen_keys.add(key)
+            item = dict(record_map.get(key) or {})
+            if not item:
+                continue
+            item["score"] = round(float((record.metadata or {}).get("orchestrator_composite_score", record.score) or record.score), 6)
+            item["metadata"] = dict(record.metadata or {})
+            reranked.append(item)
+
+        if not reranked:
+            return list(items)[:max_results], query_context, support_bundle
+        return reranked[:max_results], query_context, support_bundle
 
     def load_corpus(self, *, force_reload: bool = False) -> List[CorpusDocument]:
         if self._documents is not None and not force_reload:
@@ -835,14 +1028,22 @@ class HACCResearchEngine:
                 }
 
         ranked = sorted(merged.values(), key=lambda item: (-float(item.get("score", 0.0)), item.get("title", "")))
+        reranked, query_context, support_bundle = self._rerank_result_items(
+            ranked,
+            query_text=_clean_text(query),
+            max_results=top_k,
+        )
         payload = {
             "status": "success",
             "query": _clean_text(query),
-            "results": ranked[:top_k],
-            "returned_result_count": min(top_k, len(ranked)),
+            "results": reranked,
+            "returned_result_count": min(top_k, len(reranked)),
             "lexical_status": lexical.get("status"),
             "vector_status": vector.get("status"),
             "vector_error": vector.get("error"),
+            "query_context": query_context,
+            "support_bundle": support_bundle,
+            "reranked_by_orchestrator": bool(support_bundle),
             "integration_status": self._integration_status(),
         }
         if vector.get("status") == "success":
@@ -909,14 +1110,35 @@ class HACCResearchEngine:
                 label_text = str(label or "").strip()
                 if label_text:
                     anchor_section_counts[label_text] = int(anchor_section_counts.get(label_text, 0) or 0) + 1
+        reranked_results, query_context, support_bundle = self._rerank_result_items(
+            ranked_results,
+            query_text=query_text,
+            max_results=top_k,
+        )
+        chronology_ready_result_count = sum(
+            1
+            for item in reranked_results
+            if isinstance(item.get("chronology_summary"), dict)
+            and int((item.get("chronology_summary") or {}).get("timeline_anchor_count", 0) or 0) > 0
+        )
+        anchor_section_counts = {}
+        for item in reranked_results[:top_k]:
+            metadata = item.get("metadata") if isinstance(item.get("metadata"), dict) else {}
+            for label in list(metadata.get("anchor_sections") or []):
+                label_text = str(label or "").strip()
+                if label_text:
+                    anchor_section_counts[label_text] = int(anchor_section_counts.get(label_text, 0) or 0) + 1
         return {
             "status": "success",
             "query": query_text,
             "document_count": len(documents),
-            "returned_result_count": min(top_k, len(ranked_results)),
+            "returned_result_count": min(top_k, len(reranked_results)),
             "chronology_ready_result_count": chronology_ready_result_count,
             "anchor_section_counts": anchor_section_counts,
-            "results": ranked_results[:top_k],
+            "results": reranked_results[:top_k],
+            "query_context": query_context,
+            "support_bundle": support_bundle,
+            "reranked_by_orchestrator": bool(support_bundle),
             "integration_status": self._integration_status(),
         }
 
@@ -1195,6 +1417,22 @@ class HACCResearchEngine:
             search_mode=search_mode,
             use_vector=use_vector,
         )
+        search_results = list(search_payload.get("results", []) or [])
+        reranked_search_results, grounding_query_context, grounding_support_bundle = self._rerank_result_items(
+            search_results,
+            query_text=query_text,
+            claim_type=str(claim_type or "").strip() or "housing_discrimination",
+            max_results=max(top_k * 5, top_k),
+        )
+        if reranked_search_results:
+            search_payload["results"] = reranked_search_results
+            search_payload["returned_result_count"] = min(
+                int(search_payload.get("returned_result_count") or len(reranked_search_results)),
+                len(reranked_search_results),
+            )
+            search_payload["query_context"] = grounding_query_context
+            search_payload["support_bundle"] = grounding_support_bundle
+            search_payload["reranked_by_orchestrator"] = bool(grounding_support_bundle)
         upload_candidates = self._select_uploadable_results(search_payload, top_k=top_k)
         grounding_overview = self._build_grounding_overview(upload_candidates)
         chronology_analysis = self._build_grounding_chronology_analysis(
@@ -1234,6 +1472,8 @@ class HACCResearchEngine:
                 use_vector=bool(use_vector),
             ),
             "search_payload": search_payload,
+            "query_context": grounding_query_context,
+            "retrieval_support_bundle": grounding_support_bundle,
             "upload_candidates": upload_candidates,
             "evidence_summary": grounding_overview["evidence_summary"],
             "anchor_passages": grounding_overview["anchor_passages"],
@@ -1287,6 +1527,8 @@ class HACCResearchEngine:
                 "stored_evidence": [],
                 "support_summary": {},
                 "synthetic_prompts": grounding_bundle.get("synthetic_prompts", {}),
+                "retrieval_support_bundle": grounding_bundle.get("retrieval_support_bundle", {}),
+                "query_context": grounding_bundle.get("query_context", {}),
                 "database_paths": {},
                 "integration_status": self._integration_status(),
             }
@@ -1309,6 +1551,8 @@ class HACCResearchEngine:
                     "stored_evidence": [],
                     "support_summary": {},
                     "synthetic_prompts": grounding_bundle.get("synthetic_prompts", {}),
+                    "retrieval_support_bundle": grounding_bundle.get("retrieval_support_bundle", {}),
+                    "query_context": grounding_bundle.get("query_context", {}),
                     "database_paths": {},
                     "integration_status": self._integration_status(),
                 }
@@ -1432,6 +1676,8 @@ class HACCResearchEngine:
             "evidence_analysis": evidence_analysis if isinstance(evidence_analysis, dict) else {"value": evidence_analysis},
             "mediator_evidence_packets": grounding_bundle.get("mediator_evidence_packets", []),
             "synthetic_prompts": grounding_bundle.get("synthetic_prompts", {}),
+            "retrieval_support_bundle": grounding_bundle.get("retrieval_support_bundle", {}),
+            "query_context": grounding_bundle.get("query_context", {}),
             "database_paths": database_paths,
             "integration_status": self._integration_status(),
         }
@@ -1495,9 +1741,12 @@ class HACCResearchEngine:
             "production_evidence_intake_steps": list(synthetic_prompts.get("production_evidence_intake_steps") or []),
             "mediator_upload_checklist": list(synthetic_prompts.get("mediator_upload_checklist") or []),
             "document_generation_checklist": list(synthetic_prompts.get("document_generation_checklist") or []),
+            "court_complaint_synthesis_prompt": str(synthetic_prompts.get("court_complaint_synthesis_prompt") or ""),
+            "evidence_upload_simulation_prompt": str(synthetic_prompts.get("evidence_upload_simulation_prompt") or ""),
             "claim_support_temporal_handoff": dict(grounding_signals.get("claim_support_temporal_handoff") or {}),
             "document_generation_handoff": dict(grounding_signals.get("document_generation_handoff") or {}),
             "drafting_readiness": dict(grounding_signals.get("drafting_readiness") or {}),
+            "retrieval_support_bundle": dict(local_payload.get("support_bundle") or {}),
             "seeded_discovery_plan": seeded_discovery_plan,
         }
 
@@ -1577,7 +1826,13 @@ class HACCResearchEngine:
                 }
             )
 
-        if int(seeded_discovery_plan.get("unresolved_temporal_issue_count", 0) or 0) > 0:
+        if (
+            int(seeded_discovery_plan.get("unresolved_temporal_issue_count", 0) or 0) > 0
+            and (
+                upload_ready_candidate_count > 0
+                or int(grounding_summary.get("timeline_anchor_count", 0) or 0) > 0
+            )
+        ):
             action_queue.append(
                 {
                     "phase_name": "graph_analysis",
@@ -1741,7 +1996,13 @@ class HACCResearchEngine:
             return None
 
         ingest_payload: Dict[str, Any] = {}
-        if ingest_local_document is not None:
+        text = ""
+        try:
+            text = path.read_text(encoding="utf-8", errors="ignore")
+        except OSError:
+            text = ""
+
+        if not _clean_text(text) and ingest_local_document is not None:
             try:
                 ingest_payload = ingest_local_document(
                     path,
@@ -1755,18 +2016,21 @@ class HACCResearchEngine:
             except Exception:
                 ingest_payload = {}
 
-        text = str(ingest_payload.get("text") or "")
         if not _clean_text(text):
-            try:
-                text = path.read_text(encoding="utf-8", errors="ignore")
-            except OSError:
-                return None
+            text = str(ingest_payload.get("text") or "")
         if not _clean_text(text):
             return None
 
         parse_payload = ingest_payload.get("parse") if isinstance(ingest_payload.get("parse"), dict) else {}
         parse_metadata = parse_payload.get("metadata") if isinstance(parse_payload.get("metadata"), dict) else {}
         parse_summary = parse_payload.get("summary") if isinstance(parse_payload.get("summary"), dict) else {}
+        if not parse_summary:
+            parse_summary = {
+                "status": "success" if _clean_text(text) else "empty",
+                "text_length": len(text),
+                "line_count": len(text.splitlines()),
+                "ingest_mode": "direct_text_read",
+            }
         title = self._infer_title(text, fallback=relative_path.stem.replace("_", " "))
         source_id = f"repo::{relative_path.as_posix()}"
         graph_payload = self._extract_graph_payload(text=text, source_id=source_id, title=title, source_path=path)
@@ -2059,10 +2323,13 @@ class HACCResearchEngine:
         anchor_note = f" Prioritize these anchor sections: {', '.join(anchor_sections)}." if anchor_sections else ""
         chronology_note = ""
         chronology_summary = dict(chronology_analysis.get("chronology_summary") or {})
+        timeline_consistency_summary = dict(chronology_analysis.get("timeline_consistency_summary") or {})
         unresolved_temporal_issue_count = int(temporal_handoff.get("unresolved_temporal_issue_count", 0) or 0)
         chronology_task_count = int(temporal_handoff.get("chronology_task_count", 0) or 0)
         if unresolved_temporal_issue_count or chronology_task_count:
             chronology_note = " Treat chronology as incomplete until uploaded evidence or testimony supplies dates, actor sequence, and decision-response timing."
+        if timeline_consistency_summary and not bool(timeline_consistency_summary.get("partial_order_ready")):
+            chronology_note += " Keep chronology-sensitive allegations provisional until ordering and anchor consistency are resolved."
         chatbot_prompt = (
             f"Ground the complaint chatbot in the uploaded repository evidence for '{query_text}'. "
             f"Use the uploaded materials ({', '.join(evidence_titles) if evidence_titles else 'uploaded evidence'}) as factual grounding, "
@@ -2088,6 +2355,14 @@ class HACCResearchEngine:
         document_generation_prompt = (
             f"Promote uploaded evidence for '{query_text}' into chronology anchors, claim-support mappings, exhibit descriptions, and formal allegations. "
             "Use the uploaded records and policy anchors together so the complaint draft stays grounded in provable facts and source-linked exhibits."
+        )
+        court_complaint_synthesis_prompt = (
+            f"Synthesize a court-ready complaint for '{query_text}' by combining uploaded evidence, mediator findings, chronology anchors, "
+            "claim-support handoff metadata, and exhibit descriptions. Preserve source links, identify unresolved proof gaps, and keep chronology-sensitive claims conditional when anchors remain incomplete."
+        )
+        evidence_upload_simulation_prompt = (
+            f"Simulate a production evidence upload for '{query_text}': ingest each repository-backed file into the evidence store, "
+            "extract dated events and actor-role facts, run mediator evaluation, and feed the resulting packets into complaint synthesis."
         )
         production_evidence_intake_steps = [
             "Upload the strongest case-specific notices, emails, hearing requests, decisions, and policy excerpts first.",
@@ -2136,6 +2411,8 @@ class HACCResearchEngine:
             "mediator_evidence_review_prompt": mediator_prompt,
             "production_upload_prompt": production_prompt,
             "document_generation_prompt": document_generation_prompt,
+            "court_complaint_synthesis_prompt": court_complaint_synthesis_prompt,
+            "evidence_upload_simulation_prompt": evidence_upload_simulation_prompt,
             "production_evidence_intake_steps": production_evidence_intake_steps,
             "mediator_upload_checklist": mediator_upload_checklist,
             "document_generation_checklist": document_generation_checklist,
@@ -2158,6 +2435,7 @@ class HACCResearchEngine:
             "anchor_sections": anchor_sections,
             "anchor_passages": anchor_passages,
             "timeline_anchors": chronology_analysis.get("timeline_anchors", []),
+            "timeline_consistency_summary": timeline_consistency_summary,
             "claim_support_temporal_handoff": temporal_handoff,
             "drafting_readiness": drafting_readiness,
             "document_generation_handoff": document_generation_handoff,
@@ -2267,10 +2545,10 @@ class HACCResearchEngine:
                     section_labels.append(label)
             title = str(candidate.get("title") or candidate.get("relative_path") or "evidence").strip()
             source_path = str(candidate.get("source_path") or "").strip()
-            candidate_texts = [
-                self._best_candidate_anchor_text(candidate),
-                self._resolve_candidate_upload_text(candidate),
-            ]
+            source_type = str(candidate.get("source_type") or "").strip().lower()
+            candidate_texts = [self._best_candidate_anchor_text(candidate)]
+            if source_type in {"repository_evidence", "parsed_document"}:
+                candidate_texts.append(self._resolve_candidate_upload_text(candidate))
             for text in candidate_texts:
                 for anchor in self._extract_timeline_anchors_from_text(
                     text,
@@ -2289,6 +2567,7 @@ class HACCResearchEngine:
             for family in (TIMELINE_ISSUE_FAMILY_BY_SECTION.get(label, "") for label in section_labels)
             if family
         ]
+        timeline_consistency_summary = self._build_grounding_timeline_consistency_summary(timeline_anchors)
         temporal_proof_objectives = self._dedupe_preserve_order(
             objective
             for label in section_labels
@@ -2301,6 +2580,15 @@ class HACCResearchEngine:
         if chronology_sensitive and len(timeline_anchors) < 2:
             unresolved_temporal_issue_count = max(1, len(issue_labels) or len(temporal_proof_objectives) or 1)
             chronology_task_count = max(1, len(temporal_proof_objectives) or len(issue_labels))
+        if timeline_consistency_summary:
+            if not bool(timeline_consistency_summary.get("partial_order_ready")):
+                unresolved_temporal_issue_count = max(1, unresolved_temporal_issue_count)
+            if int(timeline_consistency_summary.get("orphan_anchor_count", 0) or 0) > 0:
+                chronology_task_count = max(1, chronology_task_count)
+            if int(timeline_consistency_summary.get("non_day_precision_fact_count", 0) or 0) > 0:
+                temporal_proof_objectives = self._dedupe_preserve_order(
+                    [*temporal_proof_objectives, "pin exact dates for chronology-critical events"]
+                )
         temporal_issue_ids = [
             _stable_identifier("timeline-issue", claim_type, query_text, label)
             for label in issue_labels
@@ -2313,6 +2601,7 @@ class HACCResearchEngine:
             "timeline_anchors": timeline_anchors[:12],
             "timeline_anchor_count": len(timeline_anchors),
             "chronology_summary": chronology_summary,
+            "timeline_consistency_summary": timeline_consistency_summary,
             "issue_families": issue_labels,
             "chronology_task_count": chronology_task_count,
             "unresolved_temporal_issue_count": unresolved_temporal_issue_count,
@@ -2334,6 +2623,8 @@ class HACCResearchEngine:
         source_path: str,
         claim_type: str,
     ) -> List[Dict[str, Any]]:
+        original_text = text
+        text = text[:MAX_TIMELINE_EXTRACTION_CHARS]
         shared_anchors = self._extract_shared_timeline_anchors_from_text(
             text,
             title=title,
@@ -2347,6 +2638,8 @@ class HACCResearchEngine:
         for sentence in _sentence_split(text):
             if len(anchors) >= 6:
                 break
+            if self._should_skip_timeline_sentence(sentence):
+                continue
             for pattern in _TIMELINE_DATE_PATTERNS:
                 for match in pattern.finditer(sentence):
                     normalized_date, granularity = _normalize_timeline_date(match)
@@ -2373,6 +2666,32 @@ class HACCResearchEngine:
                         break
                 if len(anchors) >= 6:
                     break
+        if anchors or len(original_text) <= MAX_TIMELINE_EXTRACTION_CHARS:
+            return anchors
+
+        # Large inputs skip the shared parser for performance. If the stricter
+        # sentence filter yields nothing, fall back to a single lenient anchor
+        # so chronology-aware ranking still sees dated material.
+        for pattern in _TIMELINE_DATE_PATTERNS:
+            match = pattern.search(text)
+            if match is None:
+                continue
+            normalized_date, granularity = _normalize_timeline_date(match)
+            if not normalized_date:
+                continue
+            anchor_text = _clean_text(match.group(0))
+            return [
+                {
+                    "fact_id": _stable_identifier("fact", title, source_path, claim_type, normalized_date, anchor_text),
+                    "anchor_text": anchor_text,
+                    "sentence": _clean_text(text[:320]),
+                    "start_date": normalized_date,
+                    "granularity": granularity,
+                    "title": title,
+                    "source_path": source_path,
+                    "predicate_family": "timeline_anchor",
+                }
+            ]
         return anchors
 
     def _extract_shared_timeline_anchors_from_text(
@@ -2394,6 +2713,8 @@ class HACCResearchEngine:
             if len(anchors) >= 8:
                 break
             if len(sentence) > MAX_SHARED_TEMPORAL_SENTENCE_CHARS:
+                continue
+            if self._should_skip_timeline_sentence(sentence):
                 continue
             temporal_context = build_shared_temporal_context(sentence, fallback_text=sentence)
             if not isinstance(temporal_context, dict):
@@ -2437,6 +2758,71 @@ class HACCResearchEngine:
             )
         return anchors
 
+    def _build_grounding_timeline_consistency_summary(
+        self,
+        timeline_anchors: Sequence[Dict[str, Any]],
+    ) -> Dict[str, Any]:
+        if build_timeline_consistency_summary is None:
+            return {}
+        canonical_facts: List[Dict[str, Any]] = []
+        for index, anchor in enumerate(timeline_anchors, start=1):
+            anchor_dict = dict(anchor or {})
+            fact_id = str(anchor_dict.get("fact_id") or f"grounding_anchor_{index}")
+            canonical_facts.append(
+                {
+                    "fact_id": fact_id,
+                    "fact_type": "timeline",
+                    "description": str(anchor_dict.get("sentence") or anchor_dict.get("anchor_text") or ""),
+                    "temporal_context": {
+                        "start_date": str(anchor_dict.get("start_date") or ""),
+                        "end_date": str(anchor_dict.get("end_date") or ""),
+                        "granularity": str(anchor_dict.get("granularity") or ""),
+                        "is_approximate": bool(anchor_dict.get("is_approximate", False)),
+                        "is_range": bool(anchor_dict.get("is_range", False)),
+                        "relative_markers": list(anchor_dict.get("relative_markers") or []),
+                    },
+                }
+            )
+        try:
+            return dict(build_timeline_consistency_summary(canonical_facts, list(timeline_anchors or []), []) or {})
+        except Exception:
+            return {}
+
+    def _should_skip_timeline_sentence(self, sentence: str) -> bool:
+        normalized = _clean_text(sentence).lower()
+        if not normalized:
+            return True
+        date_match_count = self._count_timeline_dates_in_text(normalized)
+        if date_match_count <= 0:
+            return True
+        has_case_event_cue = any(cue in normalized for cue in _CASE_TIMELINE_EVENT_CUES)
+        has_case_action_cue = any(cue in normalized for cue in _CASE_TIMELINE_ACTION_CUES)
+        has_party_cue = any(cue in normalized for cue in _CASE_TIMELINE_PARTY_CUES)
+        has_non_case_keyword = any(keyword in normalized for keyword in _NON_CASE_TIMELINE_KEYWORDS)
+        if has_non_case_keyword and not has_case_action_cue:
+            return True
+        if date_match_count >= 3 and not has_case_action_cue:
+            return True
+        if not has_case_action_cue and not has_party_cue:
+            return True
+        if ("table of contents" in normalized or "chapter " in normalized) and not has_case_action_cue:
+            return True
+        if has_case_event_cue and has_party_cue:
+            return False
+        if has_case_action_cue:
+            return False
+        if has_party_cue and not has_non_case_keyword and date_match_count <= 2:
+            return False
+        if "effective:" in normalized or normalized.startswith("effective "):
+            return True
+        return False
+
+    def _count_timeline_dates_in_text(self, text: str) -> int:
+        total = 0
+        for pattern in _TIMELINE_DATE_PATTERNS:
+            total += sum(1 for _ in pattern.finditer(text))
+        return total
+
     def _build_grounding_signal_bundle(
         self,
         upload_candidates: Sequence[Dict[str, Any]],
@@ -2469,6 +2855,7 @@ class HACCResearchEngine:
         timeline_anchor_count = int(chronology_analysis.get("timeline_anchor_count", 0) or 0)
         unresolved_temporal_issue_count = int(chronology_analysis.get("unresolved_temporal_issue_count", 0) or 0)
         chronology_task_count = int(chronology_analysis.get("chronology_task_count", 0) or 0)
+        timeline_consistency_summary = dict(chronology_analysis.get("timeline_consistency_summary") or {})
         coverage = 0.82 if upload_candidates else 0.55
         if timeline_anchor_count:
             coverage += 0.12
@@ -2486,6 +2873,11 @@ class HACCResearchEngine:
             blockers.extend(["graph_analysis_not_ready", "document_generation_not_ready"])
             unresolved_factual_gaps.append(
                 "Case chronology remains incomplete; uploaded evidence or testimony still needs exact dates, response timing, and event order."
+            )
+        if timeline_consistency_summary and not bool(timeline_consistency_summary.get("partial_order_ready")):
+            blockers.append("chronology_partial_order_not_ready")
+            unresolved_factual_gaps.append(
+                "Chronology anchors still need ordering cleanup before complaint allegations should rely on them."
             )
         if anchor_sections:
             unresolved_legal_gaps.append(f"Map uploaded evidence into supported policy anchors: {', '.join(anchor_sections)}.")
@@ -2558,10 +2950,13 @@ class HACCResearchEngine:
             "artifact_support_rows": artifact_support_rows[:10],
         }
         graph_completeness_signals = {
-            "graph_complete": bool(upload_candidates) and (timeline_anchor_count > 0 or unresolved_temporal_issue_count == 0),
+            "graph_complete": bool(upload_candidates)
+            and (timeline_anchor_count > 0 or unresolved_temporal_issue_count == 0)
+            and (not timeline_consistency_summary or bool(timeline_consistency_summary.get("partial_order_ready"))),
             "timeline_anchor_count": timeline_anchor_count,
             "chronology_issue_count": unresolved_temporal_issue_count,
             "chronology_task_count": chronology_task_count,
+            "timeline_consistency_summary": timeline_consistency_summary,
             "phase_status": phase_status,
         }
         drafting_readiness = {
@@ -2570,6 +2965,7 @@ class HACCResearchEngine:
             "blockers": self._dedupe_preserve_order(blockers),
             "unresolved_factual_gaps": self._dedupe_preserve_order(unresolved_factual_gaps),
             "unresolved_legal_gaps": self._dedupe_preserve_order(unresolved_legal_gaps),
+            "timeline_consistency_summary": timeline_consistency_summary,
             "graph_completeness_signals": graph_completeness_signals,
             "document_generation_signals": {
                 "supported_anchor_sections": anchor_sections,
@@ -2790,7 +3186,7 @@ class HACCResearchEngine:
         claim_type: str = "housing_discrimination",
     ) -> Dict[str, Any]:
         anchors = self._extract_timeline_anchors_from_text(
-            text[:MAX_TIMELINE_EXTRACTION_CHARS],
+            text,
             title=title,
             source_path=source_path,
             claim_type=claim_type,
