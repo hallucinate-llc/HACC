@@ -208,6 +208,7 @@ class HACCGroundedPipelineTests(unittest.TestCase):
             self.assertTrue((output_root / "run_summary.json").is_file())
             self.assertEqual(summary["grounding_query"], "reasonable accommodation hearing rights")
             self.assertEqual(summary["hacc_search_mode"], "hybrid")
+            self.assertFalse(summary["inputs"]["reuse_existing_artifacts"])
             self.assertEqual(summary["evidence_upload"]["upload_count"], 1)
             self.assertEqual(summary["adversarial"]["best_complaint"]["score"], 0.91)
             self.assertEqual(summary["grounding"]["anchor_sections"], ["reasonable_accommodation", "grievance_hearing"])
@@ -217,6 +218,7 @@ class HACCGroundedPipelineTests(unittest.TestCase):
             self.assertEqual(summary["grounding_overview"]["top_documents"], ["README"])
             self.assertEqual(summary["artifacts"]["grounding_overview_json"], str(output_root / "grounding_overview.json"))
             self.assertEqual(summary["artifacts"]["retrieval_support_bundle_json"], str(output_root / "retrieval_support_bundle.json"))
+            self.assertEqual(summary["artifacts"]["complaint_synthesis"]["draft_complaint_package_json"], "")
             self.assertEqual(batch_mock.call_args.kwargs["hacc_search_mode"], "hybrid")
 
             prompts_payload = json.loads((output_root / "synthetic_prompts.json").read_text(encoding="utf-8"))
@@ -398,8 +400,13 @@ class HACCGroundedPipelineTests(unittest.TestCase):
             synth_mock.assert_called_once()
             self.assertTrue((output_root / "run_summary.json").is_file())
             self.assertTrue(summary["reuse_existing_artifacts"])
+            self.assertTrue(summary["inputs"]["reuse_existing_artifacts"])
             self.assertEqual(summary["grounding"]["query"], "reuse grounded query")
             self.assertEqual(summary["adversarial"]["best_complaint"]["score"], 0.77)
+            self.assertEqual(
+                summary["artifacts"]["complaint_synthesis"]["draft_complaint_package_json"],
+                str(output_root / "complaint_synthesis" / "draft_complaint_package.json"),
+            )
 
 
 if __name__ == "__main__":
