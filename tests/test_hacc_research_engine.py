@@ -2149,7 +2149,10 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertIn("legal_discovery", payload)
             self.assertEqual(payload["legal_discovery"]["status"], "success")
             self.assertEqual(payload["legal_discovery"]["result_count"], 2)
-            self.assertEqual(payload["legal_discovery"]["results"][0]["authority_source"], "us_code")
+            self.assertEqual(
+                {item["authority_source"] for item in payload["legal_discovery"]["results"]},
+                {"us_code", "federal_register"},
+            )
 
     def test_discover_seeded_commoncrawl_uses_shared_adapter(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:

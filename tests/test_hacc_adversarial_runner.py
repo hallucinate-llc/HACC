@@ -1431,6 +1431,57 @@ class HACCAdversarialRunnerTests(unittest.TestCase):
             rendered,
         )
 
+    def test_main_prints_workflow_phase_autopatch_summary_lines(self) -> None:
+        fake_summary = {
+            "artifacts": {
+                "output_dir": "/tmp/adversarial",
+                "results_json": "/tmp/adversarial/adversarial_results.json",
+                "optimization_report_json": "/tmp/adversarial/optimization_report.json",
+                "workflow_optimization_bundle_json": "/tmp/adversarial/workflow_optimization_bundle.json",
+                "workflow_phase_autopatch_results_json": "/tmp/adversarial/workflow_phase_autopatch_results.json",
+                "best_complaint_bundle_json": "/tmp/adversarial/best_complaint_bundle.json",
+            },
+            "best_complaint": {
+                "score": 0.812,
+                "seed_type": "housing_discrimination",
+                "seed_summary": "seed summary",
+            },
+            "search_summary": {
+                "requested_search_mode": "package",
+                "effective_search_mode": "package",
+            },
+            "optimization_report": {"recommended_hacc_preset": "core_hacc_policies"},
+            "inputs": {"hacc_preset": "core_hacc_policies"},
+            "autopatch": {"requested": False},
+            "workflow_phase_autopatch": {
+                "requested": True,
+                "count": 3,
+                "error": "graph_analysis patch validation failed",
+            },
+        }
+
+        stdout = StringIO()
+        with mock.patch("hacc_adversarial_runner.run_hacc_adversarial_batch", return_value=fake_summary):
+            with mock.patch("sys.stdout", stdout):
+                exit_code = main(
+                    [
+                        "--demo",
+                        "--output-dir",
+                        "/tmp/adversarial",
+                        "--emit-workflow-phase-autopatches",
+                    ]
+                )
+
+        rendered = stdout.getvalue()
+        self.assertEqual(exit_code, 0)
+        self.assertIn("Workflow phase autopatch count: 3", rendered)
+        self.assertIn("Workflow phase autopatch error: graph_analysis patch validation failed", rendered)
+        self.assertIn("Workflow optimization bundle: /tmp/adversarial/workflow_optimization_bundle.json", rendered)
+        self.assertIn(
+            "Workflow phase autopatch results: /tmp/adversarial/workflow_phase_autopatch_results.json",
+            rendered,
+        )
+
     def test_parser_supports_explicit_no_apply_autopatch(self) -> None:
         parser = create_parser()
 
@@ -2063,6 +2114,70 @@ SUGGESTIONS:
         parser = create_parser()
         args = parser.parse_args(["--reuse-existing-artifacts"])
         self.assertTrue(args.reuse_existing_artifacts)
+
+    def test_parser_supports_workflow_phase_autopatch_flags(self) -> None:
+        parser = create_parser()
+
+        args = parser.parse_args(
+            [
+                "--emit-workflow-phase-autopatches",
+                "--no-apply-workflow-phase-autopatches",
+                "--use-recommended-autopatch-targets",
+                "--json",
+            ]
+        )
+
+        self.assertTrue(args.emit_workflow_phase_autopatches)
+        self.assertIs(args.apply_workflow_phase_autopatches, False)
+        self.assertTrue(args.use_recommended_autopatch_targets)
+        self.assertTrue(args.json)
+
+    def test_main_json_prints_summary_and_forwards_workflow_phase_flags(self) -> None:
+        fake_summary = {
+            "artifacts": {
+                "output_dir": "/tmp/adversarial",
+                "results_json": "/tmp/adversarial/adversarial_results.json",
+                "optimization_report_json": "/tmp/adversarial/optimization_report.json",
+                "best_complaint_bundle_json": "/tmp/adversarial/best_complaint_bundle.json",
+            },
+            "best_complaint": {
+                "score": 0.725,
+                "seed_type": "housing_discrimination",
+                "seed_summary": "seed summary",
+            },
+            "search_summary": {
+                "requested_search_mode": "package",
+                "effective_search_mode": "package",
+            },
+            "optimization_report": {"recommended_hacc_preset": "core_hacc_policies"},
+            "inputs": {"hacc_preset": "core_hacc_policies"},
+            "autopatch": {"requested": False},
+            "workflow_phase_autopatch": {"requested": True, "count": 2},
+        }
+
+        stdout = StringIO()
+        with mock.patch("hacc_adversarial_runner.run_hacc_adversarial_batch", return_value=fake_summary) as run_mock:
+            with mock.patch("sys.stdout", stdout):
+                exit_code = main(
+                    [
+                        "--demo",
+                        "--output-dir",
+                        "/tmp/adversarial",
+                        "--emit-workflow-phase-autopatches",
+                        "--no-apply-workflow-phase-autopatches",
+                        "--use-recommended-autopatch-targets",
+                        "--json",
+                    ]
+                )
+
+        rendered = stdout.getvalue()
+        payload = json.loads(rendered)
+        self.assertEqual(exit_code, 0)
+        self.assertEqual(payload["workflow_phase_autopatch"]["count"], 2)
+        call_kwargs = run_mock.call_args.kwargs
+        self.assertTrue(call_kwargs["emit_workflow_phase_autopatches"])
+        self.assertIs(call_kwargs["apply_workflow_phase_autopatches"], False)
+        self.assertTrue(call_kwargs["use_recommended_autopatch_targets"])
 
     def test_live_runner_passes_session_db_paths_to_mediator(self) -> None:
         complaint_generator_root = REPO_ROOT / "complaint-generator"

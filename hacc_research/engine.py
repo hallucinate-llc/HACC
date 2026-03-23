@@ -819,6 +819,12 @@ class HACCResearchEngine:
             if str(item).strip()
         ]
 
+    def _default_claim_type_for_query(self, query_text: str) -> str:
+        lowered_query = _clean_text(query_text).lower()
+        if any(token in lowered_query for token in ("housing", "tenant", "voucher", "hud", "public housing")):
+            return "housing_discrimination"
+        return ""
+
     def _legal_authority_query_variants(self, query_text: str) -> List[str]:
         cleaned_query = _clean_text(query_text)
         if not cleaned_query:
@@ -923,6 +929,7 @@ class HACCResearchEngine:
         web_payload: Dict[str, Any],
         *,
         max_results: int,
+        authority_source: str = "web_fallback",
     ) -> Dict[str, Any]:
         promoted_results: List[Dict[str, Any]] = []
         seen: set[str] = set()
@@ -962,7 +969,7 @@ class HACCResearchEngine:
                     "citation": citation,
                     "url": url,
                     "summary": str(item.get("description") or item.get("content") or item.get("summary") or "").strip(),
-                    "authority_source": "web_fallback",
+                    "authority_source": authority_source,
                     "source_domain": domain,
                     "promoted_from": "web_discovery",
                 }
@@ -979,10 +986,64 @@ class HACCResearchEngine:
                     "status": "success" if promoted_results else "success",
                     "result_count": len(promoted_results),
                     "error": "",
-                    "fallback": "web_legal_promotion",
+                    "fallback": authority_source,
                 }
             ],
             "integration_status": dict(web_payload.get("integration_status") or {}),
+        }
+
+    def _discover_legal_authorities_via_web_search(
+        self,
+        query_variants: Sequence[str],
+        *,
+        max_results: int,
+    ) -> Dict[str, Any]:
+        results: List[Dict[str, Any]] = []
+        attempts: List[Dict[str, Any]] = []
+        seen: set[str] = set()
+        integration_status: Dict[str, Any] = {}
+        for candidate_query in query_variants:
+            web_payload = self.discover(
+                candidate_query,
+                max_results=max_results,
+                domain_filter=_EXTERNAL_RESEARCH_LEGAL_FALLBACK_DOMAINS,
+                scrape=False,
+            )
+            if isinstance(web_payload.get("integration_status"), dict) and not integration_status:
+                integration_status = dict(web_payload.get("integration_status") or {})
+            promoted_payload = self._promote_web_results_to_legal_authorities(
+                web_payload,
+                max_results=max_results,
+                authority_source="web_legal_search",
+            )
+            added = 0
+            for item in list(promoted_payload.get("results") or []):
+                if not isinstance(item, dict):
+                    continue
+                dedupe_key = str(item.get("citation") or item.get("title") or item.get("url") or "").strip().lower()
+                if not dedupe_key or dedupe_key in seen:
+                    continue
+                seen.add(dedupe_key)
+                results.append(dict(item))
+                added += 1
+                if len(results) >= max_results:
+                    break
+            attempts.append(
+                {
+                    "source": "web_legal_search",
+                    "query": candidate_query,
+                    "result_count": added,
+                    "error": "",
+                }
+            )
+            if len(results) >= max_results:
+                break
+        return {
+            "status": "success" if results else "success",
+            "result_count": len(results[:max_results]),
+            "results": results[:max_results],
+            "attempts": attempts,
+            "integration_status": integration_status,
         }
 
     def _normalized_retrieval_source_type(self, source_type: str) -> str:
@@ -1683,6 +1744,7 @@ class HACCResearchEngine:
         query: str,
         *,
         max_results: int = 10,
+        claim_type: str = "",
         title: Optional[str] = None,
         court: Optional[str] = None,
         start_date: Optional[str] = None,
@@ -1711,6 +1773,7 @@ class HACCResearchEngine:
         errors: List[Dict[str, Any]] = []
         attempts: List[Dict[str, Any]] = []
         seen_keys: set[str] = set()
+        collected_result_limit = max(max_results * 4, max_results)
         query_variants = self._legal_authority_query_variants(query_text) or [query_text]
         operations = [
             ("us_code", search_us_code, {"title": title, "max_results": max_results}),
@@ -1751,21 +1814,54 @@ class HACCResearchEngine:
                         }
                     )
                     added += 1
+                    if len(results) >= collected_result_limit:
+                        break
                 attempts.append({"source": source_name, "query": candidate_query, "result_count": added, "error": ""})
-            if len(results) >= max_results and len(results) > before_count:
+                if len(results) >= collected_result_limit:
+                    break
+            if len(results) >= collected_result_limit and len(results) > before_count:
                 break
 
-        results.sort(key=lambda item: (-float(item.get("score", 0.0)), str(item.get("title", ""))))
-        return {
+        if not results:
+            web_fallback_payload = self._discover_legal_authorities_via_web_search(
+                query_variants,
+                max_results=max_results,
+            )
+            for item in list(web_fallback_payload.get("results") or []):
+                if not isinstance(item, dict):
+                    continue
+                citation = str(item.get("citation") or item.get("title") or item.get("url") or "").strip()
+                dedupe_key = f"web_legal_search:{citation.lower()}"
+                if not citation or dedupe_key in seen_keys:
+                    continue
+                seen_keys.add(dedupe_key)
+                results.append(dict(item))
+            attempts.extend(list(web_fallback_payload.get("attempts") or []))
+
+        ranking_claim_type = str(claim_type or "").strip().lower() or self._default_claim_type_for_query(query_text)
+        ranked_payload = self._rank_external_research_payload(
+            {
+                "status": "success" if results else "error" if errors else "success",
+                "result_count": len(results),
+                "results": results,
+                "errors": errors,
+                "attempts": attempts,
+                "integration_status": self._integration_status(),
+            },
+            query_text=query_text,
+            claim_type=ranking_claim_type,
+            result_kind="legal",
+            max_results=max_results,
+        )
+        ranked_payload.update({
             "status": "success" if results else "error" if errors else "success",
             "query": query_text,
             "queries": query_variants,
-            "result_count": len(results[:max_results]),
-            "results": results[:max_results],
             "errors": errors,
             "attempts": attempts,
             "integration_status": self._integration_status(),
-        }
+        })
+        return ranked_payload
 
     def research(
         self,
@@ -1799,7 +1895,10 @@ class HACCResearchEngine:
             domain_filter=domain_filter,
             scrape=scrape,
         )
-        legal_payload = self.discover_legal_authorities(query_text, max_results=legal_max_results) if include_legal else {
+        legal_payload = self.discover_legal_authorities(
+            query_text,
+            max_results=legal_max_results,
+        ) if include_legal else {
             "status": "disabled",
             "query": query_text,
             "results": [],
@@ -3081,20 +3180,27 @@ class HACCResearchEngine:
             result_kind="legal",
             max_results=max_results,
         )
-        if int(legal_payload.get("result_count", 0) or 0) <= 0:
-            promoted_legal_payload = self._promote_web_results_to_legal_authorities(
-                web_payload,
-                max_results=max_results,
+        promoted_legal_payload = self._promote_web_results_to_legal_authorities(
+            web_payload,
+            max_results=max_results,
+        )
+        if int(promoted_legal_payload.get("result_count", 0) or 0) > 0:
+            merged_legal_payload = self._aggregate_external_discovery_results(
+                [legal_payload, promoted_legal_payload],
+                result_key="results",
+                dedupe_keys=("citation", "title", "url"),
+                max_results=max(max_results * 3, max_results),
             )
-            promoted_legal_payload = self._rank_external_research_payload(
-                promoted_legal_payload,
+            merged_legal_payload["attempts"] = list(legal_payload.get("attempts") or []) + list(
+                promoted_legal_payload.get("attempts") or []
+            )
+            legal_payload = self._rank_external_research_payload(
+                merged_legal_payload,
                 query_text=query_text,
                 claim_type=claim_type,
                 result_kind="legal",
                 max_results=max_results,
             )
-            if int(promoted_legal_payload.get("result_count", 0) or 0) > 0:
-                legal_payload = promoted_legal_payload
         web_payload.update({
             "query": query_text,
             "queries": web_queries,
@@ -3239,7 +3345,7 @@ class HACCResearchEngine:
             if authority_source:
                 score += 1.5
                 reasons.append(f"authority source: {authority_source}")
-            if any(token in source_text for token in ("u.s.c.", "c.f.r.", "federal register", "hud", "court", "appeal")):
+            if any(token in source_text for token in ("u.s.c.", "c.f.r.", "hud", "court", "appeal")):
                 score += 2.0
             if domain and any(candidate in domain for candidate in preferred_domains):
                 score += 3.5
