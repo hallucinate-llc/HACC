@@ -12,6 +12,8 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Sequence
 from urllib.parse import urlparse
 
+from hacc_complaint_manager import complaint_manager_interfaces
+
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 COMPLAINT_GENERATOR_ROOT = REPO_ROOT / "complaint-generator"
@@ -2047,6 +2049,7 @@ class HACCResearchEngine:
             "anchor_sections": grounding_overview["anchor_sections"],
             "mediator_evidence_packets": mediator_evidence_packets,
             "synthetic_prompts": synthetic_prompts,
+            "complaint_manager_interfaces": complaint_manager_interfaces(),
             "external_research_bundle": external_research_bundle,
             "chronology_analysis": chronology_analysis,
             "timeline_anchors": chronology_analysis.get("timeline_anchors", []),
@@ -3121,6 +3124,7 @@ class HACCResearchEngine:
             "anchor_sections": anchor_sections,
             "anchor_passages": anchor_passages,
             "external_research_bundle": external_research_bundle,
+            "complaint_manager_interfaces": complaint_manager_interfaces(),
             "web_evidence_research_prompt": (
                 f"Search for internet evidence about '{query_text}' that can corroborate the uploaded facts, and rank results by evidentiary usefulness."
                 + (f" Start with: {', '.join(top_web_titles)}." if top_web_titles else "")

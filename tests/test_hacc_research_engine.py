@@ -579,6 +579,11 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertIn("mediator_evidence_review_prompt", prompts)
             self.assertIn("document_generation_prompt", prompts)
             self.assertIn("timeline_consistency_summary", prompts)
+            self.assertIn("complaint_manager_interfaces", prompts)
+            self.assertEqual(
+                prompts["complaint_manager_interfaces"]["package"]["service_class"],
+                "ComplaintWorkspaceService",
+            )
             self.assertEqual(
                 prompts["workflow_phase_priorities"],
                 ["intake_questioning", "evidence_upload", "graph_analysis", "document_generation"],
@@ -612,6 +617,7 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertIn("query_context", payload)
             self.assertIn("retrieval_support_bundle", payload)
             self.assertIn("external_research_bundle", payload)
+            self.assertIn("complaint_manager_interfaces", payload)
             self.assertEqual(
                 payload["external_research_bundle"]["summary"]["top_web_titles"],
                 ["Tenant advocacy article"],

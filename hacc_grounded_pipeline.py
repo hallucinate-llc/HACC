@@ -23,6 +23,7 @@ if str(COMPLAINT_GENERATOR_ROOT) not in sys.path:
 
 
 from hacc_adversarial_runner import run_hacc_adversarial_batch
+from hacc_complaint_manager import complaint_manager_interfaces
 from hacc_research import HACCResearchEngine
 
 
@@ -168,6 +169,7 @@ def _write_grounding_artifacts(
     prompts_path: Path,
     retrieval_support_path: Path,
     external_research_path: Path,
+    interfaces_path: Path,
     upload_path: Path,
 ) -> Dict[str, Any]:
     grounding_overview = _json_safe(_grounding_overview(grounding_bundle, upload_report))
@@ -195,6 +197,14 @@ def _write_grounding_artifacts(
     )
     external_research_path.write_text(
         json.dumps(grounding_bundle.get("external_research_bundle", {}), ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    interfaces_path.write_text(
+        json.dumps(
+            grounding_bundle.get("complaint_manager_interfaces", complaint_manager_interfaces()),
+            ensure_ascii=False,
+            indent=2,
+        ),
         encoding="utf-8",
     )
     upload_path.write_text(json.dumps(upload_report, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -244,6 +254,7 @@ def run_hacc_grounded_pipeline(
     prompts_path = output_root / "synthetic_prompts.json"
     retrieval_support_path = output_root / "retrieval_support_bundle.json"
     external_research_path = output_root / "external_research_bundle.json"
+    interfaces_path = output_root / "complaint_manager_interfaces.json"
     upload_path = output_root / "evidence_upload_report.json"
     adversarial_path = output_root / "adversarial_summary.json"
     summary_path = output_root / "run_summary.json"
@@ -325,6 +336,7 @@ def run_hacc_grounded_pipeline(
             prompts_path=prompts_path,
             retrieval_support_path=retrieval_support_path,
             external_research_path=external_research_path,
+            interfaces_path=interfaces_path,
             upload_path=upload_path,
         )
     else:
@@ -395,6 +407,7 @@ def run_hacc_grounded_pipeline(
         prompts_path=prompts_path,
         retrieval_support_path=retrieval_support_path,
         external_research_path=external_research_path,
+        interfaces_path=interfaces_path,
         upload_path=upload_path,
     )
     adversarial_path.write_text(json.dumps(adversarial_summary, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -510,6 +523,7 @@ def run_hacc_grounded_pipeline(
             "synthetic_prompts_json": str(prompts_path),
             "retrieval_support_bundle_json": str(retrieval_support_path),
             "external_research_bundle_json": str(external_research_path),
+            "complaint_manager_interfaces_json": str(interfaces_path),
             "evidence_upload_report_json": str(upload_path),
             "adversarial_summary_json": str(adversarial_path),
             "adversarial_output_dir": str(output_root / "adversarial"),
