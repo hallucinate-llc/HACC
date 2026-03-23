@@ -12,15 +12,16 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Sequence
 from urllib.parse import urlparse
 
-from hacc_complaint_manager import complaint_manager_interfaces
+from hacc_complaint_manager import (
+    COMPLAINT_GENERATOR_ROOT,
+    complaint_manager_interfaces,
+    ensure_complaint_generator_on_path,
+)
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-COMPLAINT_GENERATOR_ROOT = REPO_ROOT / "complaint-generator"
 if COMPLAINT_GENERATOR_ROOT.exists():
-    complaint_generator_path = str(COMPLAINT_GENERATOR_ROOT)
-    if complaint_generator_path not in sys.path:
-        sys.path.insert(0, complaint_generator_path)
+    ensure_complaint_generator_on_path()
 
 try:
     from integrations.ipfs_datasets import (

@@ -45,6 +45,7 @@ def _collect_summary(run_dir: Path, top_n: int) -> dict[str, Any]:
     complaint_package = _read_json(run_dir / "complaint_synthesis" / "draft_complaint_package.json")
     grounding_bundle = _read_json(run_dir / "grounding_bundle.json")
     external_research = _read_json(run_dir / "external_research_bundle.json")
+    interface_bundle = _read_json(run_dir / "complaint_manager_interfaces.json")
     run_summary = _read_json(run_dir / "run_summary.json")
 
     authority_basis = complaint_package.get("authorities_and_research_basis", {})
@@ -71,6 +72,7 @@ def _collect_summary(run_dir: Path, top_n: int) -> dict[str, Any]:
         "blocker_objectives": prompts.get("blocker_objectives", [])[:top_n],
         "production_evidence_intake_steps": prompts.get("production_evidence_intake_steps", [])[:top_n],
         "mediator_upload_checklist": prompts.get("mediator_upload_checklist", [])[:top_n],
+        "complaint_manager_interfaces": interface_bundle,
         "external_research_summary": {
             "web_result_count": external_summary.get("web_result_count", 0),
             "legal_result_count": external_summary.get("legal_result_count", 0),
@@ -117,6 +119,7 @@ def create_parser() -> argparse.ArgumentParser:
             "top-web",
             "top-legal",
             "paths",
+            "interfaces",
         ),
         help="Limit output to one or more specific sections. May be passed multiple times.",
     )
@@ -179,6 +182,34 @@ def _format_attachment_rows(items: list[dict[str, Any]]) -> list[str]:
     return rows
 
 
+def _format_interface_rows(payload: dict[str, Any]) -> list[str]:
+    rows: list[str] = []
+    package = dict(payload.get("package") or {})
+    cli = dict(payload.get("cli") or {})
+    mcp = dict(payload.get("mcp") or {})
+    if package:
+        rows.append(
+            "package: "
+            f"module={package.get('module', '')} service_class={package.get('service_class', '')} "
+            f"mcp_handler={package.get('mcp_handler_module', '')}.{package.get('mcp_handler', '')}"
+        )
+    if cli:
+        aliases = ",".join(str(item) for item in list(cli.get("script_aliases") or []) if str(item))
+        rows.append(
+            "cli: "
+            f"module={cli.get('module', '')} entrypoint={cli.get('module_entrypoint', '')} "
+            f"script={cli.get('script_name', '')} aliases={aliases}"
+        )
+    if mcp:
+        rows.append(
+            "mcp: "
+            f"module={mcp.get('module', '')} entrypoint={mcp.get('module_entrypoint', '')} "
+            f"script={mcp.get('script_name', '')} alias={mcp.get('launcher_alias', '')} "
+            f"server_info={mcp.get('server_info_name', '')} transport={mcp.get('transport', '')}"
+        )
+    return rows
+
+
 def _should_print(selections: set[str], name: str) -> bool:
     return not selections or name in selections
 
@@ -217,6 +248,9 @@ def _markdown_lines(summary: dict[str, Any], run_dir: Path) -> list[str]:
         lines.append(f"- {row}")
     lines.extend(["", "## Authorities", ""])
     for row in _format_authorities(summary["authority_records"]) or ["none"]:
+        lines.append(f"- {row}")
+    lines.extend(["", "## Complaint Manager Interfaces", ""])
+    for row in _format_interface_rows(summary["complaint_manager_interfaces"]) or ["none"]:
         lines.append(f"- {row}")
     lines.extend(["", "## Top Evidence Candidates", ""])
     for row in _format_upload_candidates(summary["upload_candidates"]) or ["none"]:
@@ -282,6 +316,8 @@ def main(argv: list[str] | None = None) -> int:
         _print_section("Production Intake Steps", list(summary["production_evidence_intake_steps"]))
     if _should_print(selections, "upload-checklist"):
         _print_section("Mediator Upload Checklist", list(summary["mediator_upload_checklist"]))
+    if _should_print(selections, "interfaces"):
+        _print_section("Complaint Manager Interfaces", _format_interface_rows(summary["complaint_manager_interfaces"]))
     if _should_print(selections, "authorities"):
         _print_section("Authorities", _format_authorities(summary["authority_records"]))
     if _should_print(selections, "web-research"):

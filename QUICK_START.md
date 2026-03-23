@@ -161,6 +161,14 @@ python3 show_grounded_artifacts.py research_results/grounded_runs/repo_evidence_
 python3 show_grounded_artifacts.py --latest
 ```
 
+If you want to exercise the current complaint manager through its package, MCP, or CLI interface from HACC, use `invoke_complaint_manager.py`:
+
+```bash
+python3 invoke_complaint_manager.py package --tool complaint.list_intake_questions
+python3 invoke_complaint_manager.py mcp --tool complaint.list_claim_elements
+python3 invoke_complaint_manager.py cli -- tools
+```
+
 ### Option A: Manual Evidence Collection (No API Keys Required)
 
 **Best for:** Immediate audit with documents you already have or can request.

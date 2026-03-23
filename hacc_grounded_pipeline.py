@@ -508,6 +508,9 @@ def run_hacc_grounded_pipeline(
             "evidence_upload": upload_report.get("search_summary", {}),
             "adversarial": adversarial_summary.get("search_summary", {}),
         },
+        "complaint_manager_interfaces": grounding_bundle.get(
+            "complaint_manager_interfaces", complaint_manager_interfaces()
+        ),
         "grounding_overview": grounding_overview,
         "grounding": grounding_bundle,
         "evidence_upload": upload_report,

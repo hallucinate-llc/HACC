@@ -77,6 +77,31 @@ def test_main_prints_human_readable_summary(tmp_path, capsys):
             },
         },
     )
+    _write_json(
+        run_dir / "complaint_manager_interfaces.json",
+        {
+            "package": {
+                "module": "complaint_generator",
+                "service_class": "ComplaintWorkspaceService",
+                "mcp_handler_module": "complaint_generator.mcp",
+                "mcp_handler": "handle_jsonrpc_message",
+            },
+            "cli": {
+                "module": "complaint_generator.cli",
+                "module_entrypoint": "complaint_generator.cli:main",
+                "script_name": "complaint-workspace",
+                "script_aliases": ["complaint-generator-workspace"],
+            },
+            "mcp": {
+                "module": "complaint_generator.mcp_server",
+                "module_entrypoint": "complaint_generator.mcp_server:main",
+                "script_name": "complaint-mcp-server",
+                "launcher_alias": "complaint-generator-mcp",
+                "server_info_name": "complaint-workspace-mcp",
+                "transport": "stdio-jsonrpc",
+            },
+        },
+    )
     _write_json(run_dir / "run_summary.json", {"status": "completed"})
     _write_json(run_dir / "progress.json", {"stage": "completed"})
 
@@ -88,9 +113,12 @@ def test_main_prints_human_readable_summary(tmp_path, capsys):
     assert "Upload Prompts" in output
     assert "Top Evidence Candidates" in output
     assert "Authorities" in output
+    assert "Complaint Manager Interfaces" in output
     assert "24 CFR Part 966" in output
     assert "Mediator Questions" in output
     assert "exact_dates" in output
+    assert "complaint_generator.cli:main" in output
+    assert "complaint-workspace-mcp" in output
 
 
 def test_main_prints_json_summary(tmp_path, capsys):
@@ -98,6 +126,7 @@ def test_main_prints_json_summary(tmp_path, capsys):
     _write_json(run_dir / "synthetic_prompts.json", {"evidence_upload_prompts": []})
     _write_json(run_dir / "grounding_bundle.json", {"query": "q", "claim_type": "c", "upload_candidates": []})
     _write_json(run_dir / "external_research_bundle.json", {"summary": {}})
+    _write_json(run_dir / "complaint_manager_interfaces.json", {})
     _write_json(
         run_dir / "complaint_synthesis" / "draft_complaint_package.json",
         {"authorities_and_research_basis": {}},
@@ -124,6 +153,7 @@ def test_main_can_filter_sections(tmp_path, capsys):
     )
     _write_json(run_dir / "grounding_bundle.json", {"query": "q", "claim_type": "c", "upload_candidates": []})
     _write_json(run_dir / "external_research_bundle.json", {"summary": {}})
+    _write_json(run_dir / "complaint_manager_interfaces.json", {})
     _write_json(
         run_dir / "complaint_synthesis" / "draft_complaint_package.json",
         {"authorities_and_research_basis": {}, "evidence_attachments": []},
@@ -159,6 +189,31 @@ def test_main_can_write_brief(tmp_path, capsys):
         {"summary": {"web_result_count": 1, "legal_result_count": 0, "top_web_titles": [], "top_legal_titles": []}},
     )
     _write_json(
+        run_dir / "complaint_manager_interfaces.json",
+        {
+            "package": {
+                "module": "complaint_generator",
+                "service_class": "ComplaintWorkspaceService",
+                "mcp_handler_module": "complaint_generator.mcp",
+                "mcp_handler": "handle_jsonrpc_message",
+            },
+            "cli": {
+                "module": "complaint_generator.cli",
+                "module_entrypoint": "complaint_generator.cli:main",
+                "script_name": "complaint-workspace",
+                "script_aliases": ["complaint-generator-workspace"],
+            },
+            "mcp": {
+                "module": "complaint_generator.mcp_server",
+                "module_entrypoint": "complaint_generator.mcp_server:main",
+                "script_name": "complaint-mcp-server",
+                "launcher_alias": "complaint-generator-mcp",
+                "server_info_name": "complaint-workspace-mcp",
+                "transport": "stdio-jsonrpc",
+            },
+        },
+    )
+    _write_json(
         run_dir / "complaint_synthesis" / "draft_complaint_package.json",
         {
             "evidence_attachments": [],
@@ -184,7 +239,10 @@ def test_main_can_write_brief(tmp_path, capsys):
     brief_text = brief_path.read_text()
     assert "# Grounded Run Brief" in brief_text
     assert "## Mediator Questions" in brief_text
+    assert "## Complaint Manager Interfaces" in brief_text
     assert "24 CFR Part 966" in brief_text
+    assert "complaint_generator.cli:main" in brief_text
+    assert "complaint-workspace-mcp" in brief_text
 
 
 def test_main_requires_path_or_latest():

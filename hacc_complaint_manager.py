@@ -3,7 +3,9 @@
 
 from __future__ import annotations
 
+import os
 import sys
+import subprocess
 from pathlib import Path
 from typing import Any, Dict
 
@@ -15,6 +17,7 @@ COMPLAINT_WORKSPACE_SCRIPT = "complaint-workspace"
 COMPLAINT_WORKSPACE_ALIASES = ["complaint-generator-workspace"]
 COMPLAINT_MCP_SERVER_SCRIPT = "complaint-mcp-server"
 COMPLAINT_MCP_SERVER_ALIASES = ["complaint-generator-mcp"]
+COMPLAINT_MCP_SERVER_INFO_NAME = "complaint-workspace-mcp"
 
 
 def ensure_complaint_generator_on_path() -> None:
@@ -72,6 +75,7 @@ def complaint_manager_interfaces() -> Dict[str, Any]:
             "script_name": COMPLAINT_MCP_SERVER_SCRIPT,
             "launcher_alias": COMPLAINT_MCP_SERVER_ALIASES[0],
             "launcher_aliases": list(COMPLAINT_MCP_SERVER_ALIASES),
+            "server_info_name": COMPLAINT_MCP_SERVER_INFO_NAME,
             "request_handler": "handle_jsonrpc_message",
             "tool_list_function": "tool_list_payload",
         },
@@ -90,3 +94,42 @@ def list_workspace_mcp_tools() -> Dict[str, Any]:
     from complaint_generator.mcp import tool_list_payload
 
     return tool_list_payload(create_workspace_service())
+
+
+def call_workspace_tool(tool_name: str, arguments: Dict[str, Any] | None = None) -> Dict[str, Any]:
+    service = create_workspace_service()
+    return service.call_mcp_tool(tool_name, arguments or {})
+
+
+def call_workspace_mcp(tool_name: str, arguments: Dict[str, Any] | None = None, request_id: int = 1) -> Dict[str, Any]:
+    ensure_complaint_generator_on_path()
+    from complaint_generator.mcp import handle_jsonrpc_message
+
+    service = create_workspace_service()
+    request = {
+        "jsonrpc": "2.0",
+        "id": request_id,
+        "method": "tools/call",
+        "params": {
+            "name": tool_name,
+            "arguments": arguments or {},
+        },
+    }
+    response = handle_jsonrpc_message(service, request)
+    return dict(response or {})
+
+
+def run_workspace_cli(args: list[str]) -> subprocess.CompletedProcess[str]:
+    env = dict(os.environ)
+    existing_pythonpath = env.get("PYTHONPATH", "")
+    root = str(COMPLAINT_GENERATOR_ROOT)
+    env["PYTHONPATH"] = root if not existing_pythonpath else f"{root}:{existing_pythonpath}"
+    command = [sys.executable, "-m", f"{COMPLAINT_GENERATOR_PACKAGE}.cli", *args]
+    return subprocess.run(command, check=False, capture_output=True, text=True, cwd=str(COMPLAINT_GENERATOR_ROOT), env=env)
+
+
+def handle_workspace_mcp_message(request: Dict[str, Any]) -> Dict[str, Any] | None:
+    ensure_complaint_generator_on_path()
+    from complaint_generator.mcp import handle_jsonrpc_message
+
+    return handle_jsonrpc_message(create_workspace_service(), request)

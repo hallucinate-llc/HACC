@@ -573,6 +573,14 @@ python3 show_grounded_artifacts.py research_results/grounded_runs/repo_evidence_
 python3 show_grounded_artifacts.py --latest
 ```
 
+To invoke the updated complaint manager directly from HACC through its package, MCP, or CLI surface, use:
+
+```bash
+python3 invoke_complaint_manager.py package --tool complaint.list_intake_questions
+python3 invoke_complaint_manager.py mcp --tool complaint.list_claim_elements
+python3 invoke_complaint_manager.py cli -- tools
+```
+
 **Autopatch dependency note:**
 
 If the runner prints `Autopatch preflight ready: False`, install the complaint-generator Python dependencies first:

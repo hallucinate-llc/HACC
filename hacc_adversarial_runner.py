@@ -18,17 +18,16 @@ from pathlib import Path
 import tempfile
 from typing import Any, Dict, List, Optional, Tuple
 
+from hacc_complaint_manager import COMPLAINT_GENERATOR_ROOT, ensure_complaint_generator_on_path
+
 
 REPO_ROOT = Path(__file__).resolve().parent
-COMPLAINT_GENERATOR_ROOT = REPO_ROOT / "complaint-generator"
 HACC_DEFAULT_PROVIDER = "codex"
 HACC_DEFAULT_MODEL = "gpt-5.3-codex"
 
 
 def _ensure_complaint_generator_on_path() -> None:
-    root = str(COMPLAINT_GENERATOR_ROOT)
-    if root not in sys.path:
-        sys.path.insert(0, root)
+    ensure_complaint_generator_on_path()
 
 
 def _timestamp() -> str:

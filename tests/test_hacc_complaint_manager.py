@@ -1,3 +1,5 @@
+from unittest import mock
+
 import hacc_complaint_manager as module
 
 
@@ -19,3 +21,30 @@ def test_complaint_manager_interfaces_expose_package_cli_and_mcp() -> None:
     assert payload["mcp"]["protocol_module"] == "complaint_generator.mcp"
     assert payload["mcp"]["script_name"] == "complaint-mcp-server"
     assert payload["mcp"]["launcher_alias"] == "complaint-generator-mcp"
+    assert payload["mcp"]["server_info_name"] == "complaint-workspace-mcp"
+
+
+def test_handle_workspace_mcp_message_uses_public_protocol_surface() -> None:
+    response = module.handle_workspace_mcp_message(
+        {
+            "jsonrpc": "2.0",
+            "id": 1,
+            "method": "initialize",
+            "params": {},
+        }
+    )
+
+    assert response is not None
+    assert response["result"]["serverInfo"]["name"] == "complaint-workspace-mcp"
+
+
+def test_run_workspace_cli_uses_public_package_module() -> None:
+    with mock.patch.object(module.subprocess, "run", return_value=mock.Mock(returncode=0, stdout="", stderr="")) as run_mock:
+        module.run_workspace_cli(["tools"])
+
+    command = run_mock.call_args.args[0]
+    kwargs = run_mock.call_args.kwargs
+    assert command[:3] == [module.sys.executable, "-m", "complaint_generator.cli"]
+    assert command[3:] == ["tools"]
+    assert kwargs["cwd"] == str(module.COMPLAINT_GENERATOR_ROOT)
+    assert str(module.COMPLAINT_GENERATOR_ROOT) in kwargs["env"]["PYTHONPATH"]
