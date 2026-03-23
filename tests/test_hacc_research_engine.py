@@ -810,6 +810,53 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertEqual(payload["legal_authorities"]["results"][0]["citation"], "34 U.S. Code § 12494")
             self.assertEqual(payload["summary"]["top_legal_titles"][0], "34 U.S. Code § 12494")
 
+    def test_build_external_research_bundle_prefers_title_over_opaque_legal_identifier_in_summary(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            def fake_discover_legal_authorities(query, *, max_results=10, title=None, court=None, start_date=None, end_date=None):
+                return {
+                    "status": "success",
+                    "query": query,
+                    "result_count": 1,
+                    "results": [
+                        {
+                            "title": "Notice Requirements for Informal Hearings",
+                            "citation": "2024-29824",
+                            "authority_source": "federal_register",
+                            "summary": "Federal Register material discussing notice and hearing procedures.",
+                        }
+                    ],
+                }
+
+            with mock.patch.object(
+                engine,
+                "discover",
+                return_value={"status": "success", "query": "", "result_count": 0, "results": []},
+            ), mock.patch.object(
+                engine,
+                "discover_legal_authorities",
+                side_effect=fake_discover_legal_authorities,
+            ):
+                payload = engine._build_external_research_bundle(
+                    query_text="retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+                    claim_type="housing_discrimination",
+                    max_results=3,
+                )
+
+            self.assertEqual(payload["legal_authorities"]["results"][0]["citation"], "2024-29824")
+            self.assertEqual(payload["summary"]["top_legal_titles"][0], "Notice Requirements for Informal Hearings")
+
     def test_build_external_research_bundle_ranks_web_and_legal_results_by_claim_and_chronology_fit(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

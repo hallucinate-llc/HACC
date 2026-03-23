@@ -476,6 +476,16 @@ def _normalize_guidance_citation(*, title: str, domain: str) -> str:
     return normalized
 
 
+def _legal_summary_display_text(item: Dict[str, Any]) -> str:
+    citation = _clean_text(str(item.get("citation") or ""))
+    title = _clean_text(str(item.get("title") or ""))
+    if citation:
+        opaque_id = bool(re.fullmatch(r"\d{4}-\d{4,6}", citation))
+        if not opaque_id:
+            return citation
+    return title or citation
+
+
 def _json_safe(value: Any) -> Any:
     if isinstance(value, (str, int, float, bool)) or value is None:
         return value
@@ -3216,9 +3226,9 @@ class HACCResearchEngine:
             if str(item.get("title") or item.get("url") or "").strip()
         ]
         top_legal_titles = [
-            str(item.get("citation") or item.get("title") or "").strip()
+            _legal_summary_display_text(item)
             for item in list(legal_payload.get("results") or [])[:max_results]
-            if str(item.get("citation") or item.get("title") or "").strip()
+            if _legal_summary_display_text(item)
         ]
         return {
             "query": query_text,
