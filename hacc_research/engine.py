@@ -462,9 +462,9 @@ def _extract_legal_citation(value: str) -> str:
         return ""
     patterns = (
         r"\b\d+\s+C\.?F\.?R\.?\s+part\s+\d+[\w.()\-]*\s+subpart\s+[A-Z]\b",
-        r"\b\d+\s+C\.?F\.?R\.?\s*(?:part\s+)?(?:[\u00a7§]\s*)?[\d\w.()\-]+",
+        r"\b\d+\s*C\.?F\.?R\.?\s*(?:part\s+)?(?:[\u00a7§]\s*)?[\d\w.()\-]+",
         r"\b\d+\s+U\.?S\.?\s+Code\s*(?:[\u00a7§]\s*)?[\d\w.()\-]+",
-        r"\b\d+\s+U\.?S\.?C\.?\s*(?:[\u00a7§]\s*)?[\d\w.()\-]+",
+        r"\b\d+\s*U\.?S\.?C\.?\s*(?:[\u00a7§]\s*)?[\d\w.()\-]+",
         r"\btitle\s+\d+[^\n]{0,80}?part\s+\d+[\w.()\-]*",
         r"\bpart\s+\d+[\w.()\-]*\s+subpart\s+[A-Z]\b",
     )
@@ -489,14 +489,14 @@ def _canonical_legal_citation_key(value: str) -> str:
     if title_usc_match:
         return f"usc:{title_usc_match.group(1)}:{title_usc_match.group(2).lower().rstrip('.')}"
     usc_match = re.search(
-        r"\b(\d+)\s+u\.?s\.?c\.?\s*(?:§\s*)?([\d\w.()\-]+)",
+        r"\b(\d+)\s*u\.?s\.?c\.?\s*(?:§\s*)?([\d\w.()\-]+)",
         normalized,
         re.IGNORECASE,
     )
     if usc_match:
         return f"usc:{usc_match.group(1)}:{usc_match.group(2).lower().rstrip('.')}"
     cfr_match = re.search(
-        r"\b(\d+)\s+c\.?f\.?r\.?\s*(?:part\s+)?(?:§\s*)?([\d\w.()\-]+)",
+        r"\b(\d+)\s*c\.?f\.?r\.?\s*(?:part\s+)?(?:§\s*)?([\d\w.()\-]+)",
         normalized,
         re.IGNORECASE,
     )
