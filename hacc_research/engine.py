@@ -611,7 +611,9 @@ def _external_research_has_housing_context(text: str) -> bool:
         "voucher",
         "public housing",
         "lease",
-        "assistance",
+        "rental assistance",
+        "housing assistance",
+        "project-based rental assistance",
         "section 8",
         "hacc",
         "pha",
@@ -638,6 +640,20 @@ def _external_research_has_procedural_context(text: str) -> bool:
         "discrimin",
     )
     return any(marker in lowered for marker in procedural_markers)
+
+
+def _external_research_has_strong_procedural_fit(text: str) -> bool:
+    lowered = str(text or "").lower()
+    strong_procedural_markers = (
+        "grievance",
+        "hearing",
+        "informal review",
+        "appeal",
+        "due process",
+        "reasonable accommodation",
+        "retaliat",
+    )
+    return any(marker in lowered for marker in strong_procedural_markers)
 
 
 def _external_research_has_strong_legal_citation(text: str) -> bool:
@@ -3441,6 +3457,7 @@ class HACCResearchEngine:
             )
             housing_context = _external_research_has_housing_context(legal_relevance_text)
             procedural_context = _external_research_has_procedural_context(legal_relevance_text)
+            strong_procedural_fit = _external_research_has_strong_procedural_fit(legal_relevance_text)
             strong_legal_citation = _external_research_has_strong_legal_citation(legal_relevance_text)
             federal_register_like = authority_source == "federal_register" or "govinfo.gov" in domain or "federalregister.gov" in domain
             opaque_identifier = _is_opaque_external_research_identifier(citation_text)
@@ -3497,11 +3514,11 @@ class HACCResearchEngine:
             if "34 u.s.c." in citation_lower and not housing_legal_hits:
                 score -= 3.0
                 reasons.append("generic retaliation statute")
-            if federal_register_like and opaque_identifier and not (housing_context and procedural_context):
+            if federal_register_like and opaque_identifier and not (housing_context and strong_procedural_fit):
                 score -= 10.0
                 reasons.append("generic federal register item without grievance-process fit")
                 blocked = True
-            elif federal_register_like and not strong_legal_citation and not procedural_context:
+            elif federal_register_like and not strong_legal_citation and not (housing_context and strong_procedural_fit):
                 score -= 8.0
                 reasons.append("federal register-like item without grievance-process fit")
                 blocked = True
