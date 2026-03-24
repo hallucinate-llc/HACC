@@ -502,6 +502,149 @@ def _legal_summary_display_text(item: Dict[str, Any]) -> str:
     return title or citation
 
 
+def _external_research_prompt_text(item: Dict[str, Any]) -> str:
+    return " ".join(
+        _clean_text(str(part or ""))
+        for part in (
+            item.get("citation"),
+            item.get("title"),
+            item.get("summary"),
+            item.get("description"),
+            item.get("url"),
+            item.get("authority_source"),
+            " ".join(
+                _clean_text(str(value or ""))
+                for value in list(item.get("research_priority_reasons") or [])
+                if _clean_text(str(value or ""))
+            ),
+        )
+        if _clean_text(str(part or ""))
+    )
+
+
+def _is_legal_like_web_research_item(item: Dict[str, Any]) -> bool:
+    text = _external_research_prompt_text(item).lower()
+    url = str(item.get("url") or "").strip().lower()
+    legal_like_markers = (
+        "law.cornell.edu/uscode",
+        "law.cornell.edu/cfr",
+        "uscode.house.gov",
+        "ecfr.gov",
+        "govinfo.gov",
+        "federalregister.gov",
+        " u.s.c.",
+        " u.s. code",
+        " c.f.r.",
+        " cfr ",
+        "§",
+    )
+    return any(marker in text or marker in url for marker in legal_like_markers)
+
+
+def _is_relevant_prompt_web_research_item(item: Dict[str, Any]) -> bool:
+    text = _external_research_prompt_text(item)
+    url = str(item.get("url") or "").strip().lower()
+    if _is_non_housing_grievance_noise(text, url=url):
+        return False
+    if _is_legal_like_web_research_item(item):
+        return False
+    if ".edu/" in url and not _external_research_has_housing_context(text):
+        return False
+    return _external_research_has_housing_context(text) and _external_research_has_procedural_context(text)
+
+
+def _is_relevant_prompt_legal_research_item(item: Dict[str, Any]) -> bool:
+    relevance_text = " ".join(
+        _clean_text(str(part or ""))
+        for part in (
+            item.get("citation"),
+            item.get("title"),
+            item.get("url"),
+            item.get("authority_source"),
+            " ".join(
+                _clean_text(str(value or ""))
+                for value in list(item.get("research_priority_reasons") or [])
+                if _clean_text(str(value or ""))
+            ),
+        )
+        if _clean_text(str(part or ""))
+    )
+    citation = str(item.get("citation") or "").strip()
+    authority_source = str(item.get("authority_source") or "").strip().lower()
+    url = str(item.get("url") or "").strip().lower()
+    has_housing = _external_research_has_housing_context(relevance_text)
+    has_procedural = _external_research_has_procedural_context(relevance_text)
+    has_strong_procedural_fit = _external_research_has_strong_procedural_fit(relevance_text)
+    has_grievance_process_fit = _external_research_has_grievance_process_fit(relevance_text)
+    if _external_research_has_strong_legal_citation(relevance_text):
+        return has_procedural or has_grievance_process_fit
+    if _is_opaque_external_research_identifier(citation):
+        if "federal_register" in authority_source or "/fr-" in url or "govinfo.gov" in url:
+            return has_housing and has_strong_procedural_fit
+        return has_housing or has_procedural
+    if "federal_register" in authority_source or "/fr-" in url:
+        return has_housing and has_strong_procedural_fit
+    return has_housing or has_procedural
+
+
+def _prompt_web_research_display_text(item: Dict[str, Any]) -> str:
+    title = _clean_text(str(item.get("title") or item.get("url") or ""))
+    url = str(item.get("url") or "").strip()
+    if not title:
+        return ""
+    normalized = _normalize_guidance_citation(title=title, domain=_normalize_domain(url))
+    return normalized or title
+
+
+def _normalize_prompt_legal_display_text(value: str) -> str:
+    cleaned = _clean_text(value).strip(" .,-")
+    if not cleaned:
+        return ""
+    cleaned = re.sub(r"--+$", "", cleaned).strip(" .,-")
+    cfr_match = re.fullmatch(r"(\d+)\s+C\.?F\.?R\.?\s+([\d.()a-zA-Z-]+)", cleaned, re.IGNORECASE)
+    if cfr_match:
+        return f"{cfr_match.group(1)} C.F.R. {cfr_match.group(2)}".strip(" .,-")
+    usc_match = re.fullmatch(r"(\d+)\s+U\.?S\.?C\.?\s+([\d.()a-zA-Z-]+)", cleaned, re.IGNORECASE)
+    if usc_match:
+        return f"{usc_match.group(1)} U.S.C. {usc_match.group(2)}".strip(" .,-")
+    return cleaned
+
+
+def _prompt_legal_research_display_text(item: Dict[str, Any]) -> str:
+    citation = _clean_text(str(item.get("citation") or ""))
+    title = _clean_text(str(item.get("title") or ""))
+    url = str(item.get("url") or "").strip()
+    domain = _normalize_domain(url)
+    extracted_citation = _extract_legal_citation(
+        " ".join(
+            fragment
+            for fragment in (
+                citation,
+                title,
+                url,
+                str(item.get("summary") or ""),
+                str(item.get("description") or ""),
+            )
+            if _clean_text(fragment)
+        )
+    )
+    if extracted_citation:
+        return _normalize_prompt_legal_display_text(extracted_citation)
+    lowered_url = url.lower()
+    cfr_title_match = re.search(r"/(?:title-|text/)(\d+)", lowered_url)
+    cfr_section_match = re.search(r"/(?:section-|text/\d+/)([\d.()a-z-]+)", lowered_url)
+    if cfr_title_match and cfr_section_match and any(candidate in domain for candidate in ("ecfr.gov", "law.cornell.edu")):
+        return _normalize_prompt_legal_display_text(f"{cfr_title_match.group(1)} C.F.R. {cfr_section_match.group(1)}")
+    cfr_part_match = re.search(r"/part-([\d.()a-z-]+)", lowered_url)
+    if cfr_title_match and cfr_part_match and any(candidate in domain for candidate in ("ecfr.gov", "law.cornell.edu")):
+        return _normalize_prompt_legal_display_text(f"{cfr_title_match.group(1)} C.F.R. Part {cfr_part_match.group(1)}")
+    if any(candidate in domain for candidate in ("hud.gov", "hudexchange.info", "justice.gov")) and title:
+        normalized_guidance = _normalize_guidance_citation(title=title, domain=domain)
+        if normalized_guidance:
+            return normalized_guidance
+    return _normalize_prompt_legal_display_text(_legal_summary_display_text(item))
+
+
 def _json_safe(value: Any) -> Any:
     if isinstance(value, (str, int, float, bool)) or value is None:
         return value
@@ -3057,18 +3200,20 @@ class HACCResearchEngine:
         document_generation_handoff = dict(grounding_signals.get("document_generation_handoff") or {})
         web_discovery = dict(external_research_bundle.get("web_discovery") or {})
         legal_authorities = dict(external_research_bundle.get("legal_authorities") or {})
-        top_web_results = list(web_discovery.get("results") or [])[:3]
-        top_legal_results = list(legal_authorities.get("results") or [])[:3]
-        top_web_titles = [
-            str(item.get("title") or item.get("url") or "").strip()
-            for item in top_web_results
-            if str(item.get("title") or item.get("url") or "").strip()
-        ]
-        top_legal_titles = [
-            str(item.get("citation") or item.get("title") or "").strip()
-            for item in top_legal_results
-            if str(item.get("citation") or item.get("title") or "").strip()
-        ]
+        prompt_web_titles = _ordered_unique_strings(
+            [
+                _prompt_web_research_display_text(item)
+                for item in list(web_discovery.get("results") or [])
+                if isinstance(item, dict) and _is_relevant_prompt_web_research_item(item)
+            ]
+        )[:3]
+        prompt_legal_titles = _ordered_unique_strings(
+            [
+                _prompt_legal_research_display_text(item)
+                for item in list(legal_authorities.get("results") or [])
+                if isinstance(item, dict) and _is_relevant_prompt_legal_research_item(item)
+            ]
+        )[:3]
         blocker_objectives = [str(item) for item in list(grounding_signals.get("blocker_objectives") or []) if str(item)]
         extraction_targets = [str(item) for item in list(grounding_signals.get("extraction_targets") or []) if str(item)]
         workflow_phase_priorities = [
@@ -3110,10 +3255,10 @@ class HACCResearchEngine:
         evidence_summary = str(grounding_overview.get("evidence_summary") or "").strip()
         anchor_note = f" Prioritize these anchor sections: {', '.join(anchor_sections)}." if anchor_sections else ""
         external_research_note = ""
-        if top_web_titles:
-            external_research_note += f" Review these web evidence leads: {', '.join(top_web_titles)}."
-        if top_legal_titles:
-            external_research_note += f" Review these legal or caselaw authorities: {', '.join(top_legal_titles)}."
+        if prompt_web_titles:
+            external_research_note += f" Review these web evidence leads: {', '.join(prompt_web_titles)}."
+        if prompt_legal_titles:
+            external_research_note += f" Review these legal or caselaw authorities: {', '.join(prompt_legal_titles)}."
         chronology_note = ""
         chronology_summary = dict(chronology_analysis.get("chronology_summary") or {})
         timeline_consistency_summary = dict(chronology_analysis.get("timeline_consistency_summary") or {})
@@ -3244,11 +3389,11 @@ class HACCResearchEngine:
             "complaint_manager_interfaces": complaint_manager_interfaces(),
             "web_evidence_research_prompt": (
                 f"Search for internet evidence about '{query_text}' that can corroborate the uploaded facts, and rank results by evidentiary usefulness."
-                + (f" Start with: {', '.join(top_web_titles)}." if top_web_titles else "")
+                + (f" Start with: {', '.join(prompt_web_titles)}." if prompt_web_titles else "")
             ),
             "legal_authority_research_prompt": (
                 f"Search for statutes, regulations, HUD guidance, and caselaw relevant to '{query_text}' and the {claim_type} theory."
-                + (f" Start with: {', '.join(top_legal_titles)}." if top_legal_titles else "")
+                + (f" Start with: {', '.join(prompt_legal_titles)}." if prompt_legal_titles else "")
             ),
             "timeline_anchors": chronology_analysis.get("timeline_anchors", []),
             "timeline_consistency_summary": timeline_consistency_summary,

@@ -173,6 +173,8 @@ If you want to import Gmail evidence into the repo with the `ipfs_datasets_py` e
 
 ```bash
 python3 import_gmail_evidence.py \
+  --auth-mode gmail_oauth \
+  --gmail-oauth-client-secrets /path/to/google-client-secret.json \
   --prompt-credentials \
   --upload-to-workspace \
   --review-after-upload \
@@ -183,11 +185,12 @@ python3 import_gmail_evidence.py \
   --claim-element-id causation \
   --address housing.specialist@example.org \
   --address hearings@example.org \
-  --search 'SINCE "1-Jan-2026"' \
+  --since-date 2026-01-01 \
+  --subject-contains termination \
   --case-slug hacc-email-import
 ```
 
-That creates `evidence/email_imports/<case-slug>/` with raw `.eml` files, extracted attachments, per-message JSON, and `email_import_manifest.json`, uploads the imported messages into the complaint workspace as saved document evidence, returns the updated complaint review payload, generates a draft complaint, and captures packet/markdown export payloads.
+That uses the IMAP email pipeline with the `gmail_oauth` auth backend, opens a browser-based Google OAuth flow, caches the Gmail token locally, creates `evidence/email_imports/<case-slug>/` with raw `.eml` files, extracted attachments, per-message JSON, and `email_import_manifest.json`, uploads the imported messages into the complaint workspace as saved document evidence, returns the updated complaint review payload, generates a draft complaint, and captures packet/markdown export payloads.
 
 Address filtering options:
 
@@ -206,9 +209,26 @@ Preview matching emails before downloading anything:
 
 ```bash
 python3 import_gmail_evidence.py \
+  --auth-mode gmail_oauth \
+  --gmail-oauth-client-secrets /path/to/google-client-secret.json \
   --prompt-credentials \
   --dry-run \
-  --address-file target_addresses.txt
+  --address-file target_addresses.txt \
+  --since-date 2026-01-01 \
+  --subject-contains termination
+```
+
+Auth backend options:
+
+```bash
+# Generic IMAP username/password
+python3 import_gmail_evidence.py --auth-mode imap_password --server mail.example.org --username you@example.org
+
+# Gmail IMAP with app password
+python3 import_gmail_evidence.py --auth-mode gmail_app_password --prompt-credentials
+
+# Gmail IMAP with OAuth
+python3 import_gmail_evidence.py --auth-mode gmail_oauth --gmail-oauth-client-secrets /path/to/google-client-secret.json
 ```
 
 For unattended runs, you can still use environment variables:

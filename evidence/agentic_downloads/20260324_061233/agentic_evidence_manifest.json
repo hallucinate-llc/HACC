@@ -1,0 +1,65 @@
+{
+  "status": "success",
+  "complaint_query": "retaliation grievance complaint appeal hearing due process tenant policy adverse action hearing request notice denial response dates chronology",
+  "complaint_terms": [
+    "hearing",
+    "notice",
+    "decision",
+    "retaliation",
+    "grievance",
+    "appeal",
+    "due",
+    "process",
+    "policy",
+    "adverse",
+    "action",
+    "request",
+    "denial",
+    "response",
+    "dates",
+    "chronology",
+    "review",
+    "complaint",
+    "tenant",
+    "termination",
+    "informal",
+    "reasonable",
+    "accommodation",
+    "exact",
+    "timeline",
+    "housing",
+    "assistance",
+    "lease",
+    "occupancy",
+    "administrative",
+    "plan"
+  ],
+  "queries": [
+    "retaliation grievance complaint appeal hearing due process tenant policy adverse action hearing request notice denial response dates chronology hearing notice",
+    "retaliation grievance complaint appeal hearing due process tenant policy adverse action hearing request notice denial response dates chronology hearing notice site:hud.gov",
+    "retaliation grievance complaint appeal hearing due process tenant policy adverse action hearing request notice denial response dates chronology hearing notice site:ecfr.gov",
+    "retaliation grievance complaint appeal hearing due process tenant policy adverse action hearing request notice denial response dates chronology hearing notice site:haccof.org"
+  ],
+  "candidate_count": 0,
+  "downloaded_count": 0,
+  "output_dir": "/home/barberb/HACC/evidence/agentic_downloads/20260324_061233",
+  "candidates": [],
+  "downloads": [],
+  "quality": {
+    "scraper_name": "agentic_complaint_evidence_scraper",
+    "domain": "caselaw",
+    "status": "failed",
+    "records_scraped": 0,
+    "data_quality_score": 0.0,
+    "quality_issues": [
+      {
+        "type": "empty_fields",
+        "severity": "high",
+        "details": [
+          "No records"
+        ]
+      }
+    ],
+    "sample_data": []
+  }
+}

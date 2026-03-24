@@ -8,10 +8,12 @@ import email
 import email.policy
 import getpass
 import hashlib
+import imaplib
 import json
 import os
 import re
 import sys
+from collections import Counter
 from datetime import UTC, datetime
 from email.message import EmailMessage
 from email.utils import getaddresses
@@ -20,6 +22,7 @@ from typing import Any, Iterable
 
 import anyio
 
+from gmail_oauth import resolve_gmail_oauth_access_token, build_xoauth2_bytes
 
 REPO_ROOT = Path(__file__).resolve().parent
 COMPLAINT_GENERATOR_ROOT = REPO_ROOT / "complaint-generator"
@@ -36,6 +39,7 @@ from upload_email_evidence_manifest import upload_manifest
 DEFAULT_EVIDENCE_ROOT = REPO_ROOT / "evidence" / "email_imports"
 DEFAULT_GMAIL_SERVER = "imap.gmail.com"
 DEFAULT_GMAIL_FOLDER = "[Gmail]/All Mail"
+VALID_AUTH_MODES = ("imap_password", "gmail_app_password", "gmail_oauth")
 
 
 def _slugify(value: str) -> str:
@@ -58,8 +62,90 @@ def _load_address_targets(raw_addresses: list[str], address_files: list[str]) ->
     values = list(raw_addresses)
     for file_path in address_files:
         path = Path(file_path).expanduser().resolve()
-        values.extend(path.read_text(encoding="utf-8").splitlines())
+        values.extend(
+            line
+            for line in path.read_text(encoding="utf-8").splitlines()
+            if line.strip() and not line.lstrip().startswith("#")
+        )
     return _normalize_address_values(values)
+
+
+def _normalize_imap_date(value: str) -> str:
+    parsed = datetime.fromisoformat(str(value).strip())
+    return f"{parsed.day}-{parsed.strftime('%b')}-{parsed.year}"
+
+
+def _build_search_criteria(args: argparse.Namespace) -> str:
+    parts: list[str] = []
+    explicit = str(getattr(args, "search", "") or "").strip()
+    if explicit and explicit.upper() != "ALL":
+        parts.append(f"({explicit})")
+    if getattr(args, "since_date", None):
+        parts.append(f'SINCE "{_normalize_imap_date(args.since_date)}"')
+    if getattr(args, "before_date", None):
+        parts.append(f'BEFORE "{_normalize_imap_date(args.before_date)}"')
+    if getattr(args, "subject_contains", None):
+        parts.append(f'SUBJECT "{str(args.subject_contains).strip()}"')
+    return " ".join(part for part in parts if part) or "ALL"
+
+
+def _quote_imap_mailbox(folder: str) -> str:
+    text = str(folder or "")
+    escaped = text.replace("\\", "\\\\").replace('"', '\\"')
+    return f'"{escaped}"'
+
+
+def _is_oversized_search_error(exc: Exception) -> bool:
+    return "got more than 1000000 bytes" in str(exc or "").lower()
+
+
+def _humanize_connection_error(exc: Exception) -> str:
+    message = str(exc or "").strip()
+    lowered = message.lower()
+    if "application-specific password required" in lowered:
+        return (
+            "Gmail rejected the login because it requires an app password.\n"
+            "Use a Google app password, not your normal Gmail password.\n"
+            "Steps:\n"
+            "1. Turn on 2-Step Verification for the Google account.\n"
+            "2. Create an App Password for Mail.\n"
+            "3. Re-run this command and paste that 16-character app password when prompted."
+        )
+    return message
+
+
+def _resolve_auth_mode(args: argparse.Namespace) -> str:
+    explicit = str(getattr(args, "auth_mode", "") or "").strip().lower()
+    if explicit:
+        if explicit not in VALID_AUTH_MODES:
+            raise SystemExit(
+                f"Unsupported auth mode '{explicit}'. Choose one of: {', '.join(VALID_AUTH_MODES)}."
+            )
+        return explicit
+    if getattr(args, "use_gmail_oauth", False):
+        return "gmail_oauth"
+    if str(getattr(args, "server", "") or "").strip().lower() == DEFAULT_GMAIL_SERVER:
+        return "gmail_app_password"
+    return "imap_password"
+
+
+async def _connect_processor_with_xoauth2(
+    processor: EmailProcessor,
+    *,
+    gmail_user: str,
+    access_token: str,
+) -> None:
+    def _connect() -> Any:
+        if processor.use_ssl:
+            connection = imaplib.IMAP4_SSL(processor.server, processor.port, timeout=processor.timeout)
+        else:
+            connection = imaplib.IMAP4(processor.server, processor.port)
+        auth_bytes = build_xoauth2_bytes(gmail_user, access_token)
+        connection.authenticate("XOAUTH2", lambda _challenge: auth_bytes)
+        return connection
+
+    processor.connection = await anyio.to_thread.run_sync(_connect)
+    processor.connected = True
 
 
 def _message_participants(email_message: EmailMessage) -> set[str]:
@@ -129,6 +215,92 @@ def _sanitize_filename(filename: str, fallback: str) -> str:
 def _extract_attachment_bytes(part: email.message.Message) -> bytes:
     payload = part.get_payload(decode=True)
     return payload or b""
+
+
+def _collect_message_text(email_message: EmailMessage) -> str:
+    parts: list[str] = []
+    for key in ("Subject", "From", "To", "Cc", "Reply-To"):
+        value = email_message.get(key, "")
+        if value:
+            parts.append(str(value))
+    if email_message.is_multipart():
+        for part in email_message.walk():
+            if part.get_content_maintype() == "multipart":
+                continue
+            if part.get_content_disposition() == "attachment":
+                filename = part.get_filename()
+                if filename:
+                    parts.append(filename)
+                continue
+            if part.get_content_type() != "text/plain":
+                continue
+            try:
+                text = part.get_content()
+            except Exception:
+                payload = part.get_payload(decode=True) or b""
+                charset = part.get_content_charset() or "utf-8"
+                text = payload.decode(charset, errors="ignore")
+            if text:
+                parts.append(str(text))
+    else:
+        try:
+            text = email_message.get_content()
+        except Exception:
+            payload = email_message.get_payload(decode=True) or b""
+            charset = email_message.get_content_charset() or "utf-8"
+            text = payload.decode(charset, errors="ignore")
+        if text:
+            parts.append(str(text))
+    return "\n".join(parts)
+
+
+def _tokenize_text(value: str) -> list[str]:
+    return [token for token in re.findall(r"[A-Za-z0-9][A-Za-z0-9'_-]*", str(value or "").lower()) if len(token) >= 3]
+
+
+def _load_keywords(raw_keywords: list[str], keyword_files: list[str]) -> list[str]:
+    values = list(raw_keywords)
+    for file_path in keyword_files:
+        path = Path(file_path).expanduser().resolve()
+        values.extend(
+            line.strip()
+            for line in path.read_text(encoding="utf-8").splitlines()
+            if line.strip() and not line.lstrip().startswith("#")
+        )
+    return values
+
+
+def _build_complaint_terms(args: argparse.Namespace) -> list[str]:
+    terms = _tokenize_text(getattr(args, "complaint_query", "") or "")
+    for keyword in _load_keywords(
+        list(getattr(args, "complaint_keyword", []) or []),
+        list(getattr(args, "complaint_keyword_file", []) or []),
+    ):
+        terms.extend(_tokenize_text(keyword))
+    counts = Counter(terms)
+    return [term for term, _count in counts.most_common()]
+
+
+def _score_message_relevance(email_message: EmailMessage, complaint_terms: list[str]) -> dict[str, Any]:
+    if not complaint_terms:
+        return {"score": 0.0, "matched_terms": [], "matched_fields": []}
+    subject = str(email_message.get("Subject", "") or "")
+    body_text = _collect_message_text(email_message)
+    subject_tokens = set(_tokenize_text(subject))
+    body_tokens = set(_tokenize_text(body_text))
+    matched_subject_terms = [term for term in complaint_terms if term in subject_tokens]
+    matched_body_terms = [term for term in complaint_terms if term in body_tokens and term not in matched_subject_terms]
+    score = float(len(matched_subject_terms) * 3 + len(matched_body_terms))
+    matched_fields: list[str] = []
+    if matched_subject_terms:
+        matched_fields.append("subject")
+    if matched_body_terms:
+        matched_fields.append("body")
+    return {
+        "score": score,
+        "matched_terms": matched_subject_terms + matched_body_terms,
+        "matched_fields": matched_fields,
+    }
 
 
 def _save_email_bundle(
@@ -216,15 +388,22 @@ async def _fetch_folder_messages(
     search_criteria: str,
 ) -> list[tuple[bytes, EmailMessage]]:
     def _fetch() -> list[tuple[bytes, EmailMessage]]:
-        status, _count = processor.connection.select(folder, readonly=True)
+        status, count_data = processor.connection.select(_quote_imap_mailbox(folder), readonly=True)
         if status != "OK":
             raise RuntimeError(f"Failed to select folder {folder!r}: {status}")
-        status, message_ids = processor.connection.search(None, search_criteria or "ALL")
-        if status != "OK":
-            raise RuntimeError(f"Search failed for folder {folder!r}: {status}")
-        ids = message_ids[0].split()
-        if limit:
-            ids = ids[-limit:]
+        total_messages = int((count_data or [b"0"])[0] or b"0")
+        if limit and (search_criteria or "ALL").strip().upper() == "ALL":
+            # Skip SEARCH entirely for broad bounded previews/imports. Gmail can
+            # emit a huge id list for All Mail that exceeds imaplib's line limit.
+            start = max(1, total_messages - limit + 1)
+            ids = [str(value).encode("ascii") for value in range(start, total_messages + 1)]
+        else:
+            status, message_ids = processor.connection.search(None, search_criteria or "ALL")
+            if status != "OK":
+                raise RuntimeError(f"Search failed for folder {folder!r}: {status}")
+            ids = message_ids[0].split()
+            if limit:
+                ids = ids[-limit:]
         rows: list[tuple[bytes, EmailMessage]] = []
         for msg_id in ids:
             status, msg_data = processor.connection.fetch(msg_id, "(RFC822)")
@@ -242,10 +421,13 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
     targets = _load_address_targets(args.address, args.address_file)
     from_targets = _load_address_targets(args.from_address, args.from_address_file)
     recipient_targets = _load_address_targets(args.to_address, args.to_address_file)
+    complaint_terms = _build_complaint_terms(args)
+    search_criteria = _build_search_criteria(args)
     output_root = Path(args.output_dir).expanduser().resolve()
     run_dir = output_root / (args.case_slug or datetime.now(UTC).strftime("%Y%m%d_%H%M%S"))
     run_dir.mkdir(parents=True, exist_ok=True)
 
+    auth_mode = _resolve_auth_mode(args)
     processor = EmailProcessor(
         protocol="imap",
         server=args.server,
@@ -255,7 +437,17 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
         use_ssl=not args.no_ssl,
         timeout=args.timeout,
     )
-    await processor.connect()
+    if auth_mode == "gmail_oauth":
+        access_token, token_payload = resolve_gmail_oauth_access_token(
+            gmail_user=args.username,
+            client_secrets_path=args.gmail_oauth_client_secrets,
+            token_cache_path=getattr(args, "gmail_oauth_token_cache", None),
+            open_browser=not getattr(args, "no_browser", False),
+        )
+        await _connect_processor_with_xoauth2(processor, gmail_user=args.username, access_token=access_token)
+    else:
+        token_payload = None
+        await processor.connect()
 
     matched_records: list[dict[str, Any]] = []
     preview_records: list[dict[str, Any]] = []
@@ -267,7 +459,7 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
                 processor,
                 folder=folder,
                 limit=args.limit,
-                search_criteria=args.search,
+                search_criteria=search_criteria,
             )
             for raw_bytes, email_message in rows:
                 parsed = processor._parse_email_message(email_message, include_attachments=True)
@@ -277,6 +469,9 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
                     from_targets=from_targets,
                     recipient_targets=recipient_targets,
                 ):
+                    continue
+                relevance = _score_message_relevance(email_message, complaint_terms)
+                if complaint_terms and relevance["score"] < float(getattr(args, "min_relevance_score", 1.0)):
                     continue
                 dedupe_key = parsed.get("message_id_header") or hashlib.sha256(raw_bytes).hexdigest()
                 if dedupe_key in seen_keys:
@@ -294,6 +489,9 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
                             "message_id_header": parsed.get("message_id_header", ""),
                             "participants": sorted(_message_participants(email_message)),
                             "attachment_count": len(list(parsed.get("attachments") or [])),
+                            "relevance_score": relevance["score"],
+                            "matched_terms": relevance["matched_terms"],
+                            "matched_fields": relevance["matched_fields"],
                         }
                     )
                     continue
@@ -305,6 +503,9 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
                     parsed_email=parsed,
                     sequence_number=len(matched_records) + 1,
                 )
+                record["relevance_score"] = relevance["score"]
+                record["matched_terms"] = relevance["matched_terms"]
+                record["matched_fields"] = relevance["matched_fields"]
                 matched_records.append(record)
     finally:
         await processor.disconnect()
@@ -313,8 +514,11 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
         "status": "success",
         "server": args.server,
         "username": args.username,
+        "auth_mode": auth_mode,
         "folders": list(args.folder),
-        "search": args.search,
+        "search": search_criteria,
+        "complaint_terms": complaint_terms,
+        "min_relevance_score": float(getattr(args, "min_relevance_score", 1.0)),
         "address_targets": sorted(targets),
         "from_address_targets": sorted(from_targets),
         "recipient_address_targets": sorted(recipient_targets),
@@ -344,14 +548,27 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
             for item in matched_records
         ],
     }
+    if token_payload:
+        manifest["gmail_oauth"] = {
+            "token_cache_path": str(
+                Path(getattr(args, "gmail_oauth_token_cache", "")).expanduser().resolve()
+                if getattr(args, "gmail_oauth_token_cache", None)
+                else ""
+            ),
+            "expires_at": token_payload.get("expires_at"),
+            "has_refresh_token": bool(token_payload.get("refresh_token")),
+        }
     if getattr(args, "dry_run", False):
         return {
             "status": "success",
             "dry_run": True,
             "server": args.server,
             "username": args.username,
+            "auth_mode": auth_mode,
             "folders": list(args.folder),
-            "search": args.search,
+            "search": search_criteria,
+            "complaint_terms": complaint_terms,
+            "min_relevance_score": float(getattr(args, "min_relevance_score", 1.0)),
             "address_targets": sorted(targets),
             "from_address_targets": sorted(from_targets),
             "recipient_address_targets": sorted(recipient_targets),
@@ -372,6 +589,32 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--port", type=int, default=993, help="IMAP server port")
     parser.add_argument("--username", default=None, help="Email account username")
     parser.add_argument("--password", default=None, help="Email account app password")
+    parser.add_argument(
+        "--auth-mode",
+        choices=list(VALID_AUTH_MODES),
+        default=None,
+        help="Authentication backend: plain IMAP password, Gmail app password, or Gmail OAuth.",
+    )
+    parser.add_argument(
+        "--use-gmail-oauth",
+        action="store_true",
+        help="Compatibility alias for --auth-mode gmail_oauth.",
+    )
+    parser.add_argument(
+        "--gmail-oauth-client-secrets",
+        default=os.environ.get("GMAIL_OAUTH_CLIENT_SECRETS"),
+        help="Path to a Google OAuth client secrets JSON file.",
+    )
+    parser.add_argument(
+        "--gmail-oauth-token-cache",
+        default=os.environ.get("GMAIL_OAUTH_TOKEN_CACHE"),
+        help="Optional path to cache Gmail OAuth tokens.",
+    )
+    parser.add_argument(
+        "--no-browser",
+        action="store_true",
+        help="Do not try to open a browser automatically for Gmail OAuth; print the URL instead.",
+    )
     parser.add_argument(
         "--prompt-credentials",
         action="store_true",
@@ -424,7 +667,33 @@ def build_parser() -> argparse.ArgumentParser:
         default=[],
         help="Path to newline-delimited recipient address list.",
     )
-    parser.add_argument("--search", default="ALL", help='IMAP search criteria, e.g. SINCE "1-Jan-2026"')
+    parser.add_argument("--search", default="ALL", help='Raw IMAP search criteria, e.g. FROM "person@example.com"')
+    parser.add_argument("--since-date", default=None, help="ISO date like 2026-01-01 to add a SINCE filter.")
+    parser.add_argument("--before-date", default=None, help="ISO date like 2026-02-01 to add a BEFORE filter.")
+    parser.add_argument("--subject-contains", default=None, help="Add a SUBJECT filter without writing raw IMAP syntax.")
+    parser.add_argument(
+        "--complaint-query",
+        default=None,
+        help="Free-text complaint description used to rank/filter likely relevant emails.",
+    )
+    parser.add_argument(
+        "--complaint-keyword",
+        action="append",
+        default=[],
+        help="Repeatable complaint keyword or phrase used for relevance filtering.",
+    )
+    parser.add_argument(
+        "--complaint-keyword-file",
+        action="append",
+        default=[],
+        help="Path to newline-delimited complaint keywords/phrases.",
+    )
+    parser.add_argument(
+        "--min-relevance-score",
+        type=float,
+        default=1.0,
+        help="Minimum complaint relevance score required when complaint terms are supplied.",
+    )
     parser.add_argument("--limit", type=int, default=None, help="Per-folder message limit")
     parser.add_argument("--timeout", type=int, default=30, help="IMAP timeout seconds")
     parser.add_argument("--no-ssl", action="store_true", help="Disable SSL/TLS")
@@ -484,14 +753,27 @@ async def _run(args: argparse.Namespace) -> int:
         args.folder = [DEFAULT_GMAIL_FOLDER]
     if args.prompt_credentials and not args.username:
         args.username = input("Gmail username: ").strip()
-    if (args.prompt_credentials or args.prompt_password) and not args.password:
+    auth_mode = _resolve_auth_mode(args)
+    if (args.prompt_credentials or args.prompt_password) and not args.password and auth_mode != "gmail_oauth":
         args.password = getpass.getpass("Gmail app password: ")
-    if not args.username or not args.password:
+    if not args.username:
+        raise SystemExit(
+            "Missing Gmail username. Use --prompt-credentials, set GMAIL_USER, or pass --username."
+        )
+    if auth_mode == "gmail_oauth":
+        if not getattr(args, "gmail_oauth_client_secrets", None):
+            raise SystemExit(
+                "Gmail OAuth requires --gmail-oauth-client-secrets or GMAIL_OAUTH_CLIENT_SECRETS."
+            )
+    elif not args.password:
         raise SystemExit(
             "Missing Gmail credentials. Use --prompt-credentials, --prompt-password, or set "
             "GMAIL_USER and GMAIL_APP_PASSWORD."
         )
-    manifest = await import_gmail_evidence(args)
+    try:
+        manifest = await import_gmail_evidence(args)
+    except ConnectionError as exc:
+        raise SystemExit(_humanize_connection_error(exc)) from exc
     if getattr(args, "upload_to_workspace", False) and not getattr(args, "dry_run", False):
         manifest["workspace_upload"] = upload_manifest(
             str(Path(manifest["output_dir"]) / "email_import_manifest.json"),

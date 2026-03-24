@@ -585,6 +585,8 @@ To pull Gmail messages and attachments into the repo evidence store with the `ip
 
 ```bash
 python3 import_gmail_evidence.py \
+  --auth-mode gmail_oauth \
+  --gmail-oauth-client-secrets /path/to/google-client-secret.json \
   --prompt-credentials \
   --upload-to-workspace \
   --review-after-upload \
@@ -595,11 +597,12 @@ python3 import_gmail_evidence.py \
   --claim-element-id causation \
   --address housing.specialist@example.org \
   --address hearings@example.org \
-  --search 'SINCE "1-Jan-2026"' \
+  --since-date 2026-01-01 \
+  --subject-contains termination \
   --case-slug hacc-email-import
 ```
 
-That writes raw `.eml` files, extracted attachment files, per-message JSON, and `email_import_manifest.json` under `evidence/email_imports/<case-slug>/`, uploads those imported emails into the complaint workspace evidence store, returns an updated complaint review snapshot, generates a draft complaint, and captures complaint packet/markdown export payloads in the same run.
+That runs the shared IMAP email pipeline with the `gmail_oauth` auth backend, opens a browser-based Google OAuth flow, caches the Gmail token locally, writes raw `.eml` files, extracted attachment files, per-message JSON, and `email_import_manifest.json` under `evidence/email_imports/<case-slug>/`, uploads those imported emails into the complaint workspace evidence store, returns an updated complaint review snapshot, generates a draft complaint, and captures complaint packet/markdown export payloads in the same run.
 
 If you need non-interactive automation later, the importer also supports `GMAIL_USER` and `GMAIL_APP_PASSWORD` environment variables.
 
@@ -620,9 +623,26 @@ To preview which emails match before downloading files or uploading anything:
 
 ```bash
 python3 import_gmail_evidence.py \
+  --auth-mode gmail_oauth \
+  --gmail-oauth-client-secrets /path/to/google-client-secret.json \
   --prompt-credentials \
   --dry-run \
-  --address-file target_addresses.txt
+  --address-file target_addresses.txt \
+  --since-date 2026-01-01 \
+  --subject-contains termination
+```
+
+Auth backend options:
+
+```bash
+# Generic IMAP username/password
+python3 import_gmail_evidence.py --auth-mode imap_password --server mail.example.org --username you@example.org
+
+# Gmail IMAP with app password
+python3 import_gmail_evidence.py --auth-mode gmail_app_password --prompt-credentials
+
+# Gmail IMAP with OAuth
+python3 import_gmail_evidence.py --auth-mode gmail_oauth --gmail-oauth-client-secrets /path/to/google-client-secret.json
 ```
 
 To upload an already-imported email manifest later as a separate step:

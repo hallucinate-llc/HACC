@@ -7,6 +7,7 @@ import json
 from typing import Dict, Set
 
 from hacc_complaint_manager import (
+    complaint_manager_interfaces,
     list_workspace_tools_via_cli,
     list_workspace_tools_via_mcp,
     list_workspace_tools_via_package,
@@ -24,6 +25,7 @@ def _tool_names(payload: Dict[str, object]) -> Set[str]:
 
 
 def compare_interfaces() -> Dict[str, object]:
+    interfaces_payload = complaint_manager_interfaces()
     package_payload = list_workspace_tools_via_package()
     mcp_payload = list_workspace_tools_via_mcp()
     cli_payload = list_workspace_tools_via_cli()
@@ -34,6 +36,7 @@ def compare_interfaces() -> Dict[str, object]:
     shared = sorted(package_names & mcp_names & cli_names)
     union = package_names | mcp_names | cli_names
     return {
+        "interfaces": interfaces_payload,
         "package_tool_count": len(package_names),
         "mcp_tool_count": len(mcp_names),
         "cli_tool_count": len(cli_names),

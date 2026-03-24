@@ -837,10 +837,10 @@ class HACCResearchEngineTests(unittest.TestCase):
                     "result_count": 1,
                     "results": [
                         {
-                            "title": "Notice Requirements for Informal Hearings",
+                            "title": "Public Housing Notice Requirements for Informal Hearings",
                             "citation": "2024-29824",
                             "authority_source": "federal_register",
-                            "summary": "Federal Register material discussing notice and hearing procedures.",
+                            "summary": "Federal Register material discussing HUD public housing notice and hearing procedures.",
                         }
                     ],
                 }
@@ -861,7 +861,71 @@ class HACCResearchEngineTests(unittest.TestCase):
                 )
 
             self.assertEqual(payload["legal_authorities"]["results"][0]["citation"], "2024-29824")
-            self.assertEqual(payload["summary"]["top_legal_titles"][0], "Notice Requirements for Informal Hearings")
+            self.assertEqual(payload["summary"]["top_legal_titles"][0], "Public Housing Notice Requirements for Informal Hearings")
+
+    def test_build_synthetic_prompts_filters_stale_external_research_titles(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            prompts = engine._build_synthetic_prompts(
+                query_text="retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+                claim_type="housing_discrimination",
+                upload_candidates=[],
+                grounding_overview={},
+                chronology_analysis={},
+                grounding_signals={},
+                external_research_bundle={
+                    "web_discovery": {
+                        "results": [
+                            {
+                                "title": "34 U.S. Code § 12494 - Prohibition on retaliation | U.S. Code | LII / Legal Information Institute",
+                                "url": "https://www.law.cornell.edu/uscode/text/34/12494",
+                                "description": "Federal retaliation authority.",
+                            },
+                            {
+                                "title": "PDFGrievance Procedures - HUD.gov",
+                                "url": "https://www.hud.gov/sites/dfiles/PIH/documents/PHOG_GrievanceProcedures.pdf",
+                                "description": "HUD grievance procedure guidance for public housing tenants.",
+                            },
+                        ]
+                    },
+                    "legal_authorities": {
+                        "results": [
+                            {
+                                "title": "HOME Program allocations notice",
+                                "citation": "2024-29824",
+                                "authority_source": "federal_register",
+                                "url": "https://www.federalregister.gov/documents/2024/11/01/2024-29824/home-program-allocations",
+                            },
+                            {
+                                "title": "Informal hearing for participants",
+                                "citation": "24 C.F.R. 982.555",
+                                "authority_source": "ecfr",
+                                "url": "https://www.law.cornell.edu/cfr/text/24/982.555",
+                            },
+                        ]
+                    },
+                },
+            )
+
+            self.assertIn("Grievance Procedures (HUD guidance)", prompts["complaint_chatbot_prompt"])
+            self.assertIn("24 C.F.R. 982.555", prompts["complaint_chatbot_prompt"])
+            self.assertIn("Grievance Procedures (HUD guidance)", prompts["web_evidence_research_prompt"])
+            self.assertIn("24 C.F.R. 982.555", prompts["legal_authority_research_prompt"])
+            self.assertNotIn("34 U.S. Code § 12494", prompts["complaint_chatbot_prompt"])
+            self.assertNotIn("2024-29824", prompts["complaint_chatbot_prompt"])
+            self.assertNotIn("34 U.S. Code § 12494", prompts["web_evidence_research_prompt"])
+            self.assertNotIn("2024-29824", prompts["legal_authority_research_prompt"])
 
     def test_build_external_research_bundle_ranks_web_and_legal_results_by_claim_and_chronology_fit(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:

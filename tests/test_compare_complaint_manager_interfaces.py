@@ -17,13 +17,20 @@ def test_compare_interfaces_reports_matching_sets():
             {"name": "complaint.review_case"},
         ]
     }
+    interface_payload = {
+        "package": {"module": "complaint_generator", "service_class": "ComplaintWorkspaceService"},
+        "cli": {"module": "complaint_generator.cli", "script_name": "complaint-workspace"},
+        "mcp": {"module": "complaint_generator.mcp_server", "script_name": "complaint-mcp-server"},
+    }
     with (
+        mock.patch.object(module, "complaint_manager_interfaces", return_value=interface_payload),
         mock.patch.object(module, "list_workspace_tools_via_package", return_value=tool_payload),
         mock.patch.object(module, "list_workspace_tools_via_mcp", return_value=tool_payload),
         mock.patch.object(module, "list_workspace_tools_via_cli", return_value=tool_payload),
     ):
         summary = module.compare_interfaces()
 
+    assert summary["interfaces"] == interface_payload
     assert summary["all_interfaces_match"] is True
     assert summary["shared_tool_count"] == 2
     assert summary["package_only"] == []
