@@ -603,6 +603,28 @@ That writes raw `.eml` files, extracted attachment files, per-message JSON, and 
 
 If you need non-interactive automation later, the importer also supports `GMAIL_USER` and `GMAIL_APP_PASSWORD` environment variables.
 
+Address filtering modes:
+
+```bash
+# Match anywhere in From/To/Cc/Reply-To/Sender
+python3 import_gmail_evidence.py --prompt-credentials --address-file target_addresses.txt
+
+# Match only sender-side headers
+python3 import_gmail_evidence.py --prompt-credentials --from-address housing.specialist@example.org
+
+# Match only recipient-side headers
+python3 import_gmail_evidence.py --prompt-credentials --to-address hearings@example.org
+```
+
+To preview which emails match before downloading files or uploading anything:
+
+```bash
+python3 import_gmail_evidence.py \
+  --prompt-credentials \
+  --dry-run \
+  --address-file target_addresses.txt
+```
+
 To upload an already-imported email manifest later as a separate step:
 
 ```bash

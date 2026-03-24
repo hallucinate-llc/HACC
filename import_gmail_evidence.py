@@ -74,10 +74,48 @@ def _message_participants(email_message: EmailMessage) -> set[str]:
     )
 
 
-def _message_matches_addresses(email_message: EmailMessage, targets: set[str]) -> bool:
+def _message_sender_addresses(email_message: EmailMessage) -> set[str]:
+    return _normalize_address_values(
+        [
+            email_message.get("From", ""),
+            email_message.get("Reply-To", ""),
+            email_message.get("Sender", ""),
+        ]
+    )
+
+
+def _message_recipient_addresses(email_message: EmailMessage) -> set[str]:
+    return _normalize_address_values(
+        [
+            email_message.get("To", ""),
+            email_message.get("Cc", ""),
+        ]
+    )
+
+
+def _message_matches_addresses(
+    email_message: EmailMessage,
+    targets: set[str],
+    *,
+    from_targets: set[str] | None = None,
+    recipient_targets: set[str] | None = None,
+) -> bool:
     if not targets:
+        targets = set()
+    from_targets = from_targets or set()
+    recipient_targets = recipient_targets or set()
+    if not targets and not from_targets and not recipient_targets:
         return True
-    return bool(_message_participants(email_message) & targets)
+    participants = _message_participants(email_message)
+    senders = _message_sender_addresses(email_message)
+    recipients = _message_recipient_addresses(email_message)
+    if targets and participants & targets:
+        return True
+    if from_targets and senders & from_targets:
+        return True
+    if recipient_targets and recipients & recipient_targets:
+        return True
+    return False
 
 
 def _sanitize_filename(filename: str, fallback: str) -> str:
@@ -202,6 +240,8 @@ async def _fetch_folder_messages(
 
 async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
     targets = _load_address_targets(args.address, args.address_file)
+    from_targets = _load_address_targets(args.from_address, args.from_address_file)
+    recipient_targets = _load_address_targets(args.to_address, args.to_address_file)
     output_root = Path(args.output_dir).expanduser().resolve()
     run_dir = output_root / (args.case_slug or datetime.now(UTC).strftime("%Y%m%d_%H%M%S"))
     run_dir.mkdir(parents=True, exist_ok=True)
@@ -218,6 +258,7 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
     await processor.connect()
 
     matched_records: list[dict[str, Any]] = []
+    preview_records: list[dict[str, Any]] = []
     seen_keys: set[str] = set()
 
     try:
@@ -230,12 +271,32 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
             )
             for raw_bytes, email_message in rows:
                 parsed = processor._parse_email_message(email_message, include_attachments=True)
-                if not _message_matches_addresses(email_message, targets):
+                if not _message_matches_addresses(
+                    email_message,
+                    targets,
+                    from_targets=from_targets,
+                    recipient_targets=recipient_targets,
+                ):
                     continue
                 dedupe_key = parsed.get("message_id_header") or hashlib.sha256(raw_bytes).hexdigest()
                 if dedupe_key in seen_keys:
                     continue
                 seen_keys.add(dedupe_key)
+                if getattr(args, "dry_run", False):
+                    preview_records.append(
+                        {
+                            "folder": folder,
+                            "subject": parsed.get("subject", ""),
+                            "date": parsed.get("date"),
+                            "from": parsed.get("from", ""),
+                            "to": parsed.get("to", ""),
+                            "cc": parsed.get("cc", ""),
+                            "message_id_header": parsed.get("message_id_header", ""),
+                            "participants": sorted(_message_participants(email_message)),
+                            "attachment_count": len(list(parsed.get("attachments") or [])),
+                        }
+                    )
+                    continue
                 record = _save_email_bundle(
                     root_dir=run_dir,
                     folder_name=folder,
@@ -255,6 +316,8 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
         "folders": list(args.folder),
         "search": args.search,
         "address_targets": sorted(targets),
+        "from_address_targets": sorted(from_targets),
+        "recipient_address_targets": sorted(recipient_targets),
         "matched_email_count": len(matched_records),
         "output_dir": str(run_dir),
         "emails": matched_records,
@@ -281,6 +344,21 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
             for item in matched_records
         ],
     }
+    if getattr(args, "dry_run", False):
+        return {
+            "status": "success",
+            "dry_run": True,
+            "server": args.server,
+            "username": args.username,
+            "folders": list(args.folder),
+            "search": args.search,
+            "address_targets": sorted(targets),
+            "from_address_targets": sorted(from_targets),
+            "recipient_address_targets": sorted(recipient_targets),
+            "matched_email_count": len(preview_records),
+            "preview": preview_records,
+            "output_dir": str(run_dir),
+        }
     manifest_path = run_dir / "email_import_manifest.json"
     manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding="utf-8")
     return manifest
@@ -322,12 +400,41 @@ def build_parser() -> argparse.ArgumentParser:
         default=[],
         help="Path to newline-delimited address list.",
     )
+    parser.add_argument(
+        "--from-address",
+        action="append",
+        default=[],
+        help="Match only sender-side headers (From/Reply-To/Sender). Repeat as needed.",
+    )
+    parser.add_argument(
+        "--from-address-file",
+        action="append",
+        default=[],
+        help="Path to newline-delimited sender address list.",
+    )
+    parser.add_argument(
+        "--to-address",
+        action="append",
+        default=[],
+        help="Match only recipient-side headers (To/Cc). Repeat as needed.",
+    )
+    parser.add_argument(
+        "--to-address-file",
+        action="append",
+        default=[],
+        help="Path to newline-delimited recipient address list.",
+    )
     parser.add_argument("--search", default="ALL", help='IMAP search criteria, e.g. SINCE "1-Jan-2026"')
     parser.add_argument("--limit", type=int, default=None, help="Per-folder message limit")
     parser.add_argument("--timeout", type=int, default=30, help="IMAP timeout seconds")
     parser.add_argument("--no-ssl", action="store_true", help="Disable SSL/TLS")
     parser.add_argument("--output-dir", default=str(DEFAULT_EVIDENCE_ROOT), help="Evidence output root")
     parser.add_argument("--case-slug", default=None, help="Optional folder name under the output root")
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Preview matching emails without saving files or uploading to the workspace.",
+    )
     parser.add_argument(
         "--upload-to-workspace",
         action="store_true",
@@ -385,7 +492,7 @@ async def _run(args: argparse.Namespace) -> int:
             "GMAIL_USER and GMAIL_APP_PASSWORD."
         )
     manifest = await import_gmail_evidence(args)
-    if getattr(args, "upload_to_workspace", False):
+    if getattr(args, "upload_to_workspace", False) and not getattr(args, "dry_run", False):
         manifest["workspace_upload"] = upload_manifest(
             str(Path(manifest["output_dir"]) / "email_import_manifest.json"),
             user_id=getattr(args, "user_id", "demo-user"),

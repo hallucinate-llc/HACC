@@ -189,6 +189,28 @@ python3 import_gmail_evidence.py \
 
 That creates `evidence/email_imports/<case-slug>/` with raw `.eml` files, extracted attachments, per-message JSON, and `email_import_manifest.json`, uploads the imported messages into the complaint workspace as saved document evidence, returns the updated complaint review payload, generates a draft complaint, and captures packet/markdown export payloads.
 
+Address filtering options:
+
+```bash
+# Match anywhere in From/To/Cc/Reply-To/Sender
+python3 import_gmail_evidence.py --prompt-credentials --address-file target_addresses.txt
+
+# Match only sender-side headers
+python3 import_gmail_evidence.py --prompt-credentials --from-address housing.specialist@example.org
+
+# Match only recipient-side headers
+python3 import_gmail_evidence.py --prompt-credentials --to-address hearings@example.org
+```
+
+Preview matching emails before downloading anything:
+
+```bash
+python3 import_gmail_evidence.py \
+  --prompt-credentials \
+  --dry-run \
+  --address-file target_addresses.txt
+```
+
 For unattended runs, you can still use environment variables:
 
 ```bash

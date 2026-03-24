@@ -656,6 +656,25 @@ def _external_research_has_strong_procedural_fit(text: str) -> bool:
     return any(marker in lowered for marker in strong_procedural_markers)
 
 
+def _external_research_has_grievance_process_fit(text: str) -> bool:
+    lowered = str(text or "").lower()
+    grievance_process_markers = (
+        "grievance",
+        "informal hearing",
+        "hearing",
+        "informal review",
+        "appeal",
+        "notice",
+        "due process",
+        "termination",
+        "adverse action",
+        "982.555",
+        "part 966",
+        "1437d(k)",
+    )
+    return any(marker in lowered for marker in grievance_process_markers)
+
+
 def _external_research_has_strong_legal_citation(text: str) -> bool:
     lowered = str(text or "").lower()
     return any(
@@ -3416,6 +3435,7 @@ class HACCResearchEngine:
         matched_query_tokens = sorted(token for token in query_tokens if token in evidence_tokens)
         housing_context = _external_research_has_housing_context(evidence_text)
         procedural_context = _external_research_has_procedural_context(evidence_text)
+        grievance_process_fit = _external_research_has_grievance_process_fit(evidence_text)
         strong_legal_citation = _external_research_has_strong_legal_citation(evidence_text)
         score = float(len(matched_query_tokens))
         score += 1.5 * float(len(matched_claim_tokens))
@@ -3441,7 +3461,8 @@ class HACCResearchEngine:
             reasons.append(f"touches anchor sections: {', '.join(anchor_sections[:4])}")
 
         if result_kind == "legal":
-            domain = _normalize_domain(str(item.get("url") or ""))
+            url = str(item.get("url") or "")
+            domain = _normalize_domain(url)
             citation_text = _clean_text(str(item.get("citation") or ""))
             citation_lower = citation_text.lower()
             authority_source = _clean_text(str(item.get("authority_source") or ""))
@@ -3458,6 +3479,7 @@ class HACCResearchEngine:
             housing_context = _external_research_has_housing_context(legal_relevance_text)
             procedural_context = _external_research_has_procedural_context(legal_relevance_text)
             strong_procedural_fit = _external_research_has_strong_procedural_fit(legal_relevance_text)
+            grievance_process_fit = _external_research_has_grievance_process_fit(evidence_text)
             strong_legal_citation = _external_research_has_strong_legal_citation(legal_relevance_text)
             federal_register_like = authority_source == "federal_register" or "govinfo.gov" in domain or "federalregister.gov" in domain
             opaque_identifier = _is_opaque_external_research_identifier(citation_text)
@@ -3494,6 +3516,9 @@ class HACCResearchEngine:
             if procedural_context:
                 score += 1.5
                 reasons.append("procedural grievance context")
+            if grievance_process_fit:
+                score += 6.0
+                reasons.append("grievance-process authority")
             if domain and any(candidate in domain for candidate in preferred_domains) and not (
                 federal_register_like and opaque_identifier and not (housing_context and procedural_context)
             ):
@@ -3514,6 +3539,12 @@ class HACCResearchEngine:
             if "34 u.s.c." in citation_lower and not housing_legal_hits:
                 score -= 3.0
                 reasons.append("generic retaliation statute")
+            if "uscode.house.gov" in domain and "prelimusc" in url.lower() and not grievance_process_fit:
+                score -= 6.0
+                reasons.append("broad us code releasepoint without grievance-process fit")
+            if "retaliation" in source_text and not grievance_process_fit:
+                score -= 3.5
+                reasons.append("retaliation authority without grievance-process fit")
             if federal_register_like and opaque_identifier and not (housing_context and strong_procedural_fit):
                 score -= 10.0
                 reasons.append("generic federal register item without grievance-process fit")
@@ -3531,6 +3562,16 @@ class HACCResearchEngine:
             if _is_non_housing_grievance_noise(evidence_text, url=url):
                 score -= 8.0
                 reasons.append("non-housing grievance noise")
+                blocked = True
+            complaint_filing_markers = (
+                "file a complaint",
+                "housing discrimination complaint",
+                "/housing-discrimination-complaint",
+                "civil rights division",
+            )
+            if any(marker in source_text or marker in url.lower() for marker in complaint_filing_markers) and not grievance_process_fit:
+                score -= 6.0
+                reasons.append("complaint-filing page without grievance-process fit")
                 blocked = True
             if any(term in source_text for term in _CASE_EVIDENCE_PRIORITY_CUES):
                 score += 2.0
@@ -3551,6 +3592,9 @@ class HACCResearchEngine:
             if housing_context:
                 score += 1.5
                 reasons.append("housing-specific context")
+            if grievance_process_fit:
+                score += 4.5
+                reasons.append("grievance-process web support")
             if domain.endswith(".edu") and not housing_context:
                 score -= 6.0
                 reasons.append("educational grievance page without housing context")

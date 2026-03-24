@@ -1137,6 +1137,106 @@ class HACCResearchEngineTests(unittest.TestCase):
                 [str(item.get("citation") or "") for item in payload["legal_authorities"]["results"]],
             )
 
+    def test_build_external_research_bundle_prefers_grievance_process_authorities_over_broad_statutes_and_complaint_pages(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            def fake_discover(query, *, max_results=10, engines=None, domain_filter=None, scrape=False):
+                return {
+                    "status": "success",
+                    "query": query,
+                    "result_count": 3,
+                    "results": [
+                        {
+                            "title": "34 U.S. Code § 12494 - Prohibition on retaliation | U.S. Code | US Law ...",
+                            "url": "https://www.law.cornell.edu/uscode/text/34/12494",
+                            "description": "Retaliation authority cross-referencing the Fair Housing Act.",
+                        },
+                        {
+                            "title": "BOLI : Housing Discrimination Complaint : Civil Rights : State of Oregon",
+                            "url": "https://www.oregon.gov/boli/civil-rights/Pages/housing-discrimination-complaint.aspx",
+                            "description": "File a housing discrimination complaint with Oregon BOLI.",
+                        },
+                        {
+                            "title": "PDFHCV Grievance Procedures - files.hudexchange.info",
+                            "url": "https://files.hudexchange.info/resources/documents/HCV-Grievance-Procedures.pdf",
+                            "description": "Housing Choice Voucher grievance procedures and informal hearing rights.",
+                        },
+                    ],
+                }
+
+            def fake_discover_legal_authorities(query, *, max_results=10, title=None, court=None, start_date=None, end_date=None):
+                query_lower = query.lower()
+                if "982.555" in query_lower:
+                    return {
+                        "status": "success",
+                        "query": query,
+                        "result_count": 1,
+                        "results": [
+                            {
+                                "title": "Informal hearing for participants",
+                                "citation": "24 C.F.R. 982.555",
+                                "authority_source": "ecfr",
+                                "url": "https://www.ecfr.gov/current/title-24/subtitle-B/chapter-IX/part-982/subpart-L/section-982.555",
+                                "summary": "A PHA must give a participant family an opportunity for an informal hearing.",
+                            }
+                        ],
+                    }
+                if "1437d" in query_lower:
+                    return {
+                        "status": "success",
+                        "query": query,
+                        "result_count": 2,
+                        "results": [
+                            {
+                                "title": "Title 42 § 12705.",
+                                "citation": "Title 42 § 12705.",
+                                "authority_source": "us_code",
+                                "url": "https://uscode.house.gov/download/releasepoints/us/pl/118/158/PRELIMusc42.htm",
+                                "summary": "General housing planning statute without grievance-process language.",
+                            },
+                            {
+                                "title": "Title 42 § 1437d.",
+                                "citation": "Title 42 § 1437d.",
+                                "authority_source": "us_code",
+                                "url": "https://uscode.house.gov/download/releasepoints/us/pl/118/158/PRELIMusc42.htm",
+                                "summary": "Broad public housing statute excerpt without hearing text in this result.",
+                            },
+                        ],
+                    }
+                return {"status": "success", "query": query, "result_count": 0, "results": []}
+
+            with mock.patch.object(engine, "discover", side_effect=fake_discover), mock.patch.object(
+                engine,
+                "discover_legal_authorities",
+                side_effect=fake_discover_legal_authorities,
+            ):
+                payload = engine._build_external_research_bundle(
+                    query_text="retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+                    claim_type="housing_discrimination",
+                    max_results=3,
+                )
+
+            self.assertEqual(payload["legal_authorities"]["results"][0]["citation"], "24 C.F.R. 982.555")
+            self.assertNotIn(
+                "https://www.oregon.gov/boli/civil-rights/Pages/housing-discrimination-complaint.aspx",
+                [str(item.get("url") or "") for item in payload["web_discovery"]["results"]],
+            )
+            self.assertIn(
+                "https://files.hudexchange.info/resources/documents/HCV-Grievance-Procedures.pdf",
+                [str(item.get("url") or "") for item in payload["web_discovery"]["results"]],
+            )
+
     def test_search_local_surfaces_chronology_summary_and_prioritizes_timeline_ready_documents(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
