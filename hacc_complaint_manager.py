@@ -14,8 +14,10 @@ from typing import Any, Dict
 REPO_ROOT = Path(__file__).resolve().parent
 COMPLAINT_GENERATOR_ROOT = REPO_ROOT / "complaint-generator"
 COMPLAINT_GENERATOR_PACKAGE = "complaint_generator"
-COMPLAINT_CLI_IMPLEMENTATION_MODULE = "applications.complaint_cli"
-COMPLAINT_MCP_IMPLEMENTATION_MODULE = "applications.complaint_mcp_server"
+COMPLAINT_CLI_IMPLEMENTATION_MODULE = f"{COMPLAINT_GENERATOR_PACKAGE}.cli"
+COMPLAINT_MCP_IMPLEMENTATION_MODULE = f"{COMPLAINT_GENERATOR_PACKAGE}.mcp_server"
+COMPLAINT_CLI_COMPATIBILITY_MODULE = "applications.complaint_cli"
+COMPLAINT_MCP_COMPATIBILITY_MODULE = "applications.complaint_mcp_server"
 COMPLAINT_WORKSPACE_SCRIPT = "complaint-workspace"
 COMPLAINT_WORKSPACE_ALIASES = ["complaint-generator-workspace"]
 COMPLAINT_MCP_SERVER_SCRIPT = "complaint-mcp-server"
@@ -56,8 +58,8 @@ def complaint_manager_interfaces() -> Dict[str, Any]:
         "cli": {
             "module": COMPLAINT_CLI_IMPLEMENTATION_MODULE,
             "module_entrypoint": f"{COMPLAINT_CLI_IMPLEMENTATION_MODULE}:main",
-            "module_command": "python -m applications.complaint_cli --help",
-            "compatibility_module": f"{COMPLAINT_GENERATOR_PACKAGE}.cli",
+            "module_command": "python -m complaint_generator.cli --help",
+            "compatibility_module": COMPLAINT_CLI_COMPATIBILITY_MODULE,
             "script_name": COMPLAINT_WORKSPACE_SCRIPT,
             "script_aliases": list(COMPLAINT_WORKSPACE_ALIASES),
             "entrypoint": "main",
@@ -70,8 +72,8 @@ def complaint_manager_interfaces() -> Dict[str, Any]:
         "mcp": {
             "module": COMPLAINT_MCP_IMPLEMENTATION_MODULE,
             "module_entrypoint": f"{COMPLAINT_MCP_IMPLEMENTATION_MODULE}:main",
-            "module_command": "python -m applications.complaint_mcp_server",
-            "compatibility_module": f"{COMPLAINT_GENERATOR_PACKAGE}.mcp_server",
+            "module_command": "python -m complaint_generator.mcp_server",
+            "compatibility_module": COMPLAINT_MCP_COMPATIBILITY_MODULE,
             "protocol_module": f"{COMPLAINT_GENERATOR_PACKAGE}.mcp",
             "entrypoint": "main",
             "transport": "stdio-jsonrpc",

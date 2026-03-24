@@ -169,6 +169,47 @@ python3 invoke_complaint_manager.py mcp --tool complaint.list_claim_elements
 python3 invoke_complaint_manager.py cli -- tools
 ```
 
+If you want to import Gmail evidence into the repo with the `ipfs_datasets_py` email processor, use `import_gmail_evidence.py`:
+
+```bash
+python3 import_gmail_evidence.py \
+  --prompt-credentials \
+  --upload-to-workspace \
+  --review-after-upload \
+  --generate-after-upload \
+  --export-packet-after-upload \
+  --export-markdown-after-upload \
+  --user-id demo-user \
+  --claim-element-id causation \
+  --address housing.specialist@example.org \
+  --address hearings@example.org \
+  --search 'SINCE "1-Jan-2026"' \
+  --case-slug hacc-email-import
+```
+
+That creates `evidence/email_imports/<case-slug>/` with raw `.eml` files, extracted attachments, per-message JSON, and `email_import_manifest.json`, uploads the imported messages into the complaint workspace as saved document evidence, returns the updated complaint review payload, generates a draft complaint, and captures packet/markdown export payloads.
+
+For unattended runs, you can still use environment variables:
+
+```bash
+export GMAIL_USER="you@gmail.com"
+export GMAIL_APP_PASSWORD="your-16-char-app-password"
+python3 import_gmail_evidence.py --address hearings@example.org
+```
+
+If you want to push an existing import manifest later as a separate step:
+
+```bash
+python3 upload_email_evidence_manifest.py \
+  evidence/email_imports/hacc-email-import/email_import_manifest.json \
+  --user-id demo-user \
+  --claim-element-id causation \
+  --review-after-upload \
+  --generate-after-upload \
+  --export-packet-after-upload \
+  --export-markdown-after-upload
+```
+
 ### Option A: Manual Evidence Collection (No API Keys Required)
 
 **Best for:** Immediate audit with documents you already have or can request.

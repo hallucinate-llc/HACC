@@ -998,6 +998,145 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertEqual(payload["web_discovery"]["results"][0]["title"], "HUD grievance hearing notice guidance")
             self.assertIn("preferred housing domain", " ".join(payload["web_discovery"]["results"][0]["research_priority_reasons"]).lower())
 
+    def test_build_external_research_bundle_filters_generic_federal_register_and_non_housing_grievance_noise(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            def fake_discover(query, *, max_results=10, engines=None, domain_filter=None, scrape=False):
+                return {
+                    "status": "success",
+                    "query": query,
+                    "result_count": 2,
+                    "results": [
+                        {
+                            "title": "Discrimination, Harassment, Sexual Misconduct, & Retaliation",
+                            "url": "https://www.ucmo.edu/offices/general-counsel/university-policy-library/procedures/discrimination-harassment-and-sexual-misconduct-grievance-process/index.php",
+                            "summary": "University grievance procedures for sexual misconduct investigations and appeals.",
+                        },
+                        {
+                            "title": "HUD grievance hearing notice guidance",
+                            "url": "https://www.hud.gov/example/hearing-rights",
+                            "summary": "HUD guidance about tenant grievance hearing notice, appeal rights, and adverse action timing.",
+                        },
+                    ],
+                }
+
+            def fake_discover_legal_authorities(query, *, max_results=10, title=None, court=None, start_date=None, end_date=None):
+                return {
+                    "status": "success",
+                    "query": query,
+                    "result_count": 2,
+                    "results": [
+                        {
+                            "title": "HOME Investment Partnerships Program: Program Updates and Streamlining",
+                            "citation": "2024-29824",
+                            "authority_source": "federal_register",
+                            "url": "https://www.govinfo.gov/content/pkg/FR-2025-01-06/pdf/2024-29824.pdf",
+                            "summary": "General HOME program updates without grievance or hearing procedures for tenant disputes.",
+                        },
+                        {
+                            "title": "Informal hearing for participants",
+                            "citation": "24 C.F.R. 982.555",
+                            "authority_source": "ecfr",
+                            "url": "https://www.ecfr.gov/current/title-24/subtitle-B/chapter-IX/part-982/subpart-L/section-982.555",
+                            "summary": "Requires notice and an opportunity for an informal hearing for Section 8 participants.",
+                        },
+                    ],
+                }
+
+            with mock.patch.object(engine, "discover", side_effect=fake_discover), mock.patch.object(
+                engine,
+                "discover_legal_authorities",
+                side_effect=fake_discover_legal_authorities,
+            ):
+                payload = engine._build_external_research_bundle(
+                    query_text="retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+                    claim_type="housing_discrimination",
+                    max_results=3,
+                )
+
+            self.assertEqual(payload["web_discovery"]["result_count"], 1)
+            self.assertEqual(payload["web_discovery"]["results"][0]["title"], "HUD grievance hearing notice guidance")
+            self.assertEqual(payload["legal_authorities"]["results"][0]["citation"], "24 C.F.R. 982.555")
+            self.assertNotIn(
+                "2024-29824",
+                [str(item.get("citation") or "") for item in payload["legal_authorities"]["results"]],
+            )
+
+    def test_build_external_research_bundle_promotes_web_legal_authority_when_generic_federal_register_results_are_filtered(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            web_payload = {
+                "status": "success",
+                "query": "fair housing retaliation",
+                "result_count": 2,
+                "results": [
+                    {
+                        "title": "24 CFR Part 966 Subpart B -- Grievance Procedures and Requirements",
+                        "url": "https://www.ecfr.gov/current/title-24/subtitle-B/chapter-IX/part-966/subpart-B",
+                        "description": "Grievance procedures for public housing tenants.",
+                    },
+                    {
+                        "title": "HOME Investment Partnerships Program updates",
+                        "url": "https://www.govinfo.gov/content/pkg/FR-2025-01-06/pdf/2024-29824.pdf",
+                        "description": "General HOME program updates.",
+                    },
+                ],
+            }
+
+            with mock.patch.object(engine, "discover", return_value=web_payload), mock.patch.object(
+                engine,
+                "discover_legal_authorities",
+                return_value={
+                    "status": "success",
+                    "query": "fair housing retaliation",
+                    "result_count": 1,
+                    "results": [
+                        {
+                            "title": "HOME Investment Partnerships Program: Program Updates and Streamlining",
+                            "citation": "2024-29824",
+                            "authority_source": "federal_register",
+                            "url": "https://www.govinfo.gov/content/pkg/FR-2025-01-06/pdf/2024-29824.pdf",
+                            "summary": "General HOME program updates without grievance or hearing procedures for tenant disputes.",
+                        }
+                    ],
+                },
+            ):
+                payload = engine._build_external_research_bundle(
+                    query_text="retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+                    claim_type="housing_discrimination",
+                    max_results=3,
+                )
+
+            self.assertGreater(payload["legal_authorities"]["result_count"], 0)
+            self.assertEqual(payload["legal_authorities"]["results"][0]["authority_source"], "web_fallback")
+            self.assertEqual(payload["legal_authorities"]["results"][0]["citation"], "24 CFR Part 966 Subpart B")
+            self.assertNotIn(
+                "2024-29824",
+                [str(item.get("citation") or "") for item in payload["legal_authorities"]["results"]],
+            )
+
     def test_search_local_surfaces_chronology_summary_and_prioritizes_timeline_ready_documents(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)

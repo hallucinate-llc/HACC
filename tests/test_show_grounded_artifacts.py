@@ -87,14 +87,14 @@ def test_main_prints_human_readable_summary(tmp_path, capsys):
                 "mcp_handler": "handle_jsonrpc_message",
             },
             "cli": {
-                "module": "applications.complaint_cli",
-                "module_entrypoint": "applications.complaint_cli:main",
+                "module": "complaint_generator.cli",
+                "module_entrypoint": "complaint_generator.cli:main",
                 "script_name": "complaint-workspace",
                 "script_aliases": ["complaint-generator-workspace"],
             },
             "mcp": {
-                "module": "applications.complaint_mcp_server",
-                "module_entrypoint": "applications.complaint_mcp_server:main",
+                "module": "complaint_generator.mcp_server",
+                "module_entrypoint": "complaint_generator.mcp_server:main",
                 "script_name": "complaint-mcp-server",
                 "launcher_alias": "complaint-generator-mcp",
                 "server_info_name": "complaint-workspace-mcp",
@@ -117,7 +117,7 @@ def test_main_prints_human_readable_summary(tmp_path, capsys):
     assert "24 CFR Part 966" in output
     assert "Mediator Questions" in output
     assert "exact_dates" in output
-    assert "applications.complaint_cli:main" in output
+    assert "complaint_generator.cli:main" in output
     assert "complaint-workspace-mcp" in output
 
 
@@ -198,14 +198,14 @@ def test_main_can_write_brief(tmp_path, capsys):
                 "mcp_handler": "handle_jsonrpc_message",
             },
             "cli": {
-                "module": "applications.complaint_cli",
-                "module_entrypoint": "applications.complaint_cli:main",
+                "module": "complaint_generator.cli",
+                "module_entrypoint": "complaint_generator.cli:main",
                 "script_name": "complaint-workspace",
                 "script_aliases": ["complaint-generator-workspace"],
             },
             "mcp": {
-                "module": "applications.complaint_mcp_server",
-                "module_entrypoint": "applications.complaint_mcp_server:main",
+                "module": "complaint_generator.mcp_server",
+                "module_entrypoint": "complaint_generator.mcp_server:main",
                 "script_name": "complaint-mcp-server",
                 "launcher_alias": "complaint-generator-mcp",
                 "server_info_name": "complaint-workspace-mcp",
@@ -241,7 +241,7 @@ def test_main_can_write_brief(tmp_path, capsys):
     assert "## Mediator Questions" in brief_text
     assert "## Complaint Manager Interfaces" in brief_text
     assert "24 CFR Part 966" in brief_text
-    assert "applications.complaint_cli:main" in brief_text
+    assert "complaint_generator.cli:main" in brief_text
     assert "complaint-workspace-mcp" in brief_text
 
 

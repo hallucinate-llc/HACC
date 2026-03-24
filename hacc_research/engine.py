@@ -229,6 +229,19 @@ EXTERNAL_RESEARCH_EMPLOYMENT_NOISE_TERMS = (
     "employee retaliation",
     "job discrimination",
 )
+EXTERNAL_RESEARCH_GRIEVANCE_NOISE_TERMS = (
+    "sexual misconduct",
+    "title ix",
+    "student conduct",
+    "student grievance",
+    "sample grievance",
+    "sample grievance appeal",
+    "sample letter",
+    "apttones",
+    "human resources",
+    "employee grievance",
+    "workplace grievance",
+)
 TIMELINE_ISSUE_FAMILY_BY_SECTION = {
     "grievance_hearing": "hearing_process",
     "appeal_rights": "response_timeline",
@@ -587,6 +600,74 @@ def _sentence_split(text: str) -> List[str]:
 def _normalize_domain(value: str) -> str:
     parsed = urlparse(value or "")
     return (parsed.netloc or parsed.path or "").lower()
+
+
+def _external_research_has_housing_context(text: str) -> bool:
+    lowered = str(text or "").lower()
+    housing_markers = (
+        "housing",
+        "hud",
+        "tenant",
+        "voucher",
+        "public housing",
+        "lease",
+        "assistance",
+        "section 8",
+        "hacc",
+        "pha",
+        "continuum of care",
+        "home investment partnerships",
+        "fair housing",
+    )
+    return any(marker in lowered for marker in housing_markers)
+
+
+def _external_research_has_procedural_context(text: str) -> bool:
+    lowered = str(text or "").lower()
+    procedural_markers = (
+        "grievance",
+        "hearing",
+        "informal review",
+        "appeal",
+        "notice",
+        "due process",
+        "termination",
+        "adverse action",
+        "retaliat",
+        "accommodation",
+        "discrimin",
+    )
+    return any(marker in lowered for marker in procedural_markers)
+
+
+def _external_research_has_strong_legal_citation(text: str) -> bool:
+    lowered = str(text or "").lower()
+    return any(
+        marker in lowered
+        for marker in (
+            "c.f.r.",
+            " cfr",
+            "u.s.c.",
+            " usc",
+            "§",
+            "part 966",
+            "part 982",
+            "24 c.f.r.",
+            "24 cfr",
+            "42 u.s.c.",
+            "42 usc",
+        )
+    )
+
+
+def _is_opaque_external_research_identifier(value: str) -> bool:
+    candidate = str(value or "").strip()
+    return bool(candidate) and bool(re.fullmatch(r"\d{4}-\d{4,}", candidate))
+
+
+def _is_non_housing_grievance_noise(text: str, *, url: str = "") -> bool:
+    combined = f"{str(text or '')} {str(url or '')}".lower()
+    return any(marker in combined for marker in EXTERNAL_RESEARCH_GRIEVANCE_NOISE_TERMS)
 
 
 def _safe_json_load(path: Path) -> Dict[str, Any]:
@@ -3270,6 +3351,10 @@ class HACCResearchEngine:
                     result_kind=result_kind,
                 )
             )
+        ranked_results = [
+            item for item in ranked_results
+            if not bool(item.get("research_relevance_blocked"))
+        ]
         ranked_results.sort(
             key=lambda item: (
                 -float(item.get("research_priority_score", 0.0) or 0.0),
@@ -3313,12 +3398,16 @@ class HACCResearchEngine:
         claim_hint_tokens = _semantic_tokens(" ".join(str(value) for value in list(claim_hints.get(result_kind) or [])))
         matched_claim_tokens = sorted(token for token in claim_hint_tokens if token in evidence_tokens)
         matched_query_tokens = sorted(token for token in query_tokens if token in evidence_tokens)
+        housing_context = _external_research_has_housing_context(evidence_text)
+        procedural_context = _external_research_has_procedural_context(evidence_text)
+        strong_legal_citation = _external_research_has_strong_legal_citation(evidence_text)
         score = float(len(matched_query_tokens))
         score += 1.5 * float(len(matched_claim_tokens))
         score += 1.0 * float(len(chronology_hits))
 
         source_text = evidence_text.lower()
         reasons: List[str] = []
+        blocked = False
         if matched_query_tokens:
             reasons.append(f"matched query terms: {', '.join(matched_query_tokens[:6])}")
         if matched_claim_tokens:
@@ -3337,6 +3426,24 @@ class HACCResearchEngine:
 
         if result_kind == "legal":
             domain = _normalize_domain(str(item.get("url") or ""))
+            citation_text = _clean_text(str(item.get("citation") or ""))
+            citation_lower = citation_text.lower()
+            authority_source = _clean_text(str(item.get("authority_source") or ""))
+            legal_relevance_text = " ".join(
+                fragment
+                for fragment in (
+                    str(item.get("citation") or ""),
+                    str(item.get("title") or ""),
+                    str(item.get("url") or ""),
+                    str(item.get("authority_source") or ""),
+                )
+                if _clean_text(fragment)
+            )
+            housing_context = _external_research_has_housing_context(legal_relevance_text)
+            procedural_context = _external_research_has_procedural_context(legal_relevance_text)
+            strong_legal_citation = _external_research_has_strong_legal_citation(legal_relevance_text)
+            federal_register_like = authority_source == "federal_register" or "govinfo.gov" in domain or "federalregister.gov" in domain
+            opaque_identifier = _is_opaque_external_research_identifier(citation_text)
             housing_legal_hits = [
                 term
                 for term in (
@@ -3353,36 +3460,65 @@ class HACCResearchEngine:
                 )
                 if term in source_text
             ]
-            if _clean_text(str(item.get("citation") or "")):
+            if citation_text:
                 score += 3.0
                 reasons.append("has formal citation")
-            authority_source = _clean_text(str(item.get("authority_source") or ""))
             if authority_source:
                 score += 1.5
                 reasons.append(f"authority source: {authority_source}")
+            if authority_source in {"ecfr", "us_code", "recap", "caselaw", "court_opinion"}:
+                score += 3.0
+                reasons.append("primary legal source")
             if any(token in source_text for token in ("u.s.c.", "c.f.r.", "hud", "court", "appeal")):
                 score += 2.0
-            if domain and any(candidate in domain for candidate in preferred_domains):
+            if housing_context:
+                score += 1.5
+                reasons.append("housing-specific context")
+            if procedural_context:
+                score += 1.5
+                reasons.append("procedural grievance context")
+            if domain and any(candidate in domain for candidate in preferred_domains) and not (
+                federal_register_like and opaque_identifier and not (housing_context and procedural_context)
+            ):
                 score += 3.5
                 reasons.append(f"preferred housing domain: {domain}")
             if housing_legal_hits:
                 score += min(5.0, float(len(housing_legal_hits)) * 1.15)
                 reasons.append(f"housing grievance context: {', '.join(housing_legal_hits[:5])}")
-            citation_lower = _clean_text(str(item.get("citation") or "")).lower()
             if "c.f.r." in citation_lower or re.search(r"\b\d+\s+cfr\b", citation_lower):
                 score += 2.5
                 reasons.append("regulatory authority")
+            if strong_legal_citation:
+                score += 2.5
+                reasons.append("strong legal citation")
             if "u.s.c." in citation_lower and not housing_legal_hits:
                 score -= 2.5
                 reasons.append("generic statutory citation without housing fit")
             if "34 u.s.c." in citation_lower and not housing_legal_hits:
                 score -= 3.0
                 reasons.append("generic retaliation statute")
+            if federal_register_like and opaque_identifier and not (housing_context and procedural_context):
+                score -= 10.0
+                reasons.append("generic federal register item without grievance-process fit")
+                blocked = True
+            elif federal_register_like and not strong_legal_citation and not procedural_context:
+                score -= 8.0
+                reasons.append("federal register-like item without grievance-process fit")
+                blocked = True
+            elif federal_register_like and not (housing_context or procedural_context or strong_legal_citation):
+                score -= 6.0
+                reasons.append("federal register item without complaint-specific fit")
+                blocked = True
         else:
+            url = str(item.get("url") or "")
+            if _is_non_housing_grievance_noise(evidence_text, url=url):
+                score -= 8.0
+                reasons.append("non-housing grievance noise")
+                blocked = True
             if any(term in source_text for term in _CASE_EVIDENCE_PRIORITY_CUES):
                 score += 2.0
                 reasons.append("contains evidence-priority cues")
-            domain = _normalize_domain(str(item.get("url") or ""))
+            domain = _normalize_domain(url)
             if domain and any(candidate in domain for candidate in preferred_domains):
                 score += 3.5
                 reasons.append(f"preferred housing domain: {domain}")
@@ -3395,14 +3531,19 @@ class HACCResearchEngine:
             if any(term in source_text for term in EXTERNAL_RESEARCH_EMPLOYMENT_NOISE_TERMS):
                 score -= 3.0
                 reasons.append("employment-focused retaliation context")
-            if any(term in source_text for term in ("fair housing", "public housing", "voucher", "tenant", "hud")):
+            if housing_context:
                 score += 1.5
                 reasons.append("housing-specific context")
+            if domain.endswith(".edu") and not housing_context:
+                score -= 6.0
+                reasons.append("educational grievance page without housing context")
+                blocked = True
 
         scored = dict(item)
         scored["research_priority_score"] = round(score, 3)
         scored["research_priority_reasons"] = _ordered_unique_strings(reasons)
         scored["anchor_sections"] = _ordered_unique_strings(anchor_sections)
+        scored["research_relevance_blocked"] = blocked
         return scored
 
     def _truncate_seed_packet_text(self, text: str, *, max_chars: int = 6000) -> str:
