@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import argparse
 import email.policy
 from email.message import EmailMessage
 from pathlib import Path
@@ -231,67 +232,91 @@ def test_save_email_bundle_writes_eml_and_attachments(tmp_path: Path) -> None:
 
 
 def test_run_prompts_securely_for_missing_credentials() -> None:
-    args = SimpleNamespace(
-        username=None,
-        password=None,
-        prompt_credentials=True,
-        prompt_password=False,
-        folder=None,
-        address=[],
-        address_file=[],
-        search="ALL",
-        case_slug="demo",
-        output_dir="evidence/email_imports",
-        server="imap.gmail.com",
-        port=993,
-        timeout=30,
-        no_ssl=False,
-        limit=None,
-    )
+    parser = module.build_parser()
+    args = parser.parse_args([])
+    args.username = None
+    args.password = None
+    args.prompt_credentials = True
+    args.prompt_password = False
+    args.use_keyring = False
+    args.save_to_keyring = False
+    args.folder = None
+
+    async def _fake_run(_parsed_args):
+        if not _parsed_args.folder:
+            _parsed_args.folder = [module.DEFAULT_GMAIL_FOLDER]
+        return 0
 
     with (
-        mock.patch.object(module, "import_gmail_evidence", return_value={"status": "success"}) as import_mock,
-        mock.patch.object(module, "input", return_value="user@gmail.com"),
-        mock.patch.object(module.getpass, "getpass", return_value="secret-app-password"),
+        mock.patch.object(module, "build_parser", return_value=parser),
+        mock.patch.object(parser, "parse_args", return_value=args),
+        mock.patch.object(
+            module,
+            "resolve_gmail_credentials",
+            return_value=("user@gmail.com", "secret-app-password"),
+        ),
+        mock.patch.object(module, "_run", _fake_run),
     ):
-        result = module.anyio.run(module._run, args)
+        result = module.main([])
 
     assert result == 0
-    forwarded_args = import_mock.call_args.args[0]
-    assert forwarded_args.username == "user@gmail.com"
-    assert forwarded_args.password == "secret-app-password"
-    assert forwarded_args.folder == [module.DEFAULT_GMAIL_FOLDER]
+    assert args.username == "user@gmail.com"
+    assert args.password == "secret-app-password"
+    assert args.folder == [module.DEFAULT_GMAIL_FOLDER]
 
 
 def test_run_uses_prompt_password_when_username_already_set() -> None:
-    args = SimpleNamespace(
-        username="user@gmail.com",
-        password=None,
-        prompt_credentials=False,
-        prompt_password=True,
-        folder=["INBOX"],
-        address=[],
-        address_file=[],
-        search="ALL",
-        case_slug="demo",
-        output_dir="evidence/email_imports",
-        server="imap.gmail.com",
-        port=993,
-        timeout=30,
-        no_ssl=False,
-        limit=None,
-    )
+    parser = module.build_parser()
+    args = parser.parse_args([])
+    args.username = "user@gmail.com"
+    args.password = None
+    args.prompt_credentials = False
+    args.prompt_password = True
+    args.use_keyring = False
+    args.save_to_keyring = False
+    args.folder = ["INBOX"]
+
+    async def _fake_run(_parsed_args):
+        return 0
 
     with (
-        mock.patch.object(module, "import_gmail_evidence", return_value={"status": "success"}) as import_mock,
-        mock.patch.object(module.getpass, "getpass", return_value="secret-app-password"),
+        mock.patch.object(module, "build_parser", return_value=parser),
+        mock.patch.object(parser, "parse_args", return_value=args),
+        mock.patch.object(
+            module,
+            "resolve_gmail_credentials",
+            return_value=("user@gmail.com", "secret-app-password"),
+        ),
+        mock.patch.object(module, "_run", _fake_run),
     ):
-        result = module.anyio.run(module._run, args)
+        result = module.main([])
 
     assert result == 0
-    forwarded_args = import_mock.call_args.args[0]
-    assert forwarded_args.username == "user@gmail.com"
-    assert forwarded_args.password == "secret-app-password"
+    assert args.username == "user@gmail.com"
+    assert args.password == "secret-app-password"
+
+def test_main_can_use_keyring_resolution(monkeypatch) -> None:
+    parser = module.build_parser()
+    args = parser.parse_args([])
+    args.username = "user@gmail.com"
+    args.password = ""
+    args.prompt_credentials = False
+    args.prompt_password = False
+    args.use_keyring = True
+    args.save_to_keyring = False
+    args.folder = ["INBOX"]
+
+    monkeypatch.setattr(module, "build_parser", lambda: parser)
+    monkeypatch.setattr(parser, "parse_args", lambda argv=None: args)
+    monkeypatch.setattr(module, "resolve_gmail_credentials", lambda **kwargs: ("user@gmail.com", "stored-app-password"))
+    async def _fake_run(_parsed_args):
+        return 0
+
+    monkeypatch.setattr(module, "_run", _fake_run)
+
+    result = module.main([])
+
+    assert result == 0
 
 
 def test_run_can_upload_manifest_to_workspace() -> None:

@@ -1,0 +1,77 @@
+{
+  "status": "success",
+  "server": "imap.gmail.com",
+  "username": "starworks5@gmail.com",
+  "auth_mode": "gmail_app_password",
+  "folders": [
+    "[Gmail]/All Mail"
+  ],
+  "search": "ALL",
+  "complaint_terms": [
+    "hcv",
+    "orientation",
+    "voucher",
+    "housing",
+    "clackamas"
+  ],
+  "min_relevance_score": 1.0,
+  "address_targets": [
+    "ktilton@clackamas.us"
+  ],
+  "from_address_targets": [],
+  "recipient_address_targets": [],
+  "matched_email_count": 1,
+  "output_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-hcv-import",
+  "cache_index_path": "/home/barberb/HACC/evidence/email_imports/_email_cache/email_cache_index.json",
+  "emails": [
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-21T17:04:21-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS9NEWAUyCO506wH81m2=8f7gyRPWR6C8RA9FApvMzxDRw@mail.gmail.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 9.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "housing",
+        "clackamas"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "500c4ae11032332286959db7d15906bf9294bcff6e69dfe7969d73c6e46fd8a1",
+      "raw_cid": "bafkreicqbrfocebsgmrinfm5w7ivsbv7skklz73onhp6pfu5opdoi36yue"
+    }
+  ],
+  "mediator_evidence_records": [
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-21T17:04:21-07:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS9NEWAUyCO506wH81m2=8f7gyRPWR6C8RA9FApvMzxDRw@mail.gmail.com>"
+      }
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "status": "success",
+  "complaint_query": "retaliation grievance complaint appeal hearing due process tenant policy adverse action hearing request notice denial response dates chronology",
+  "complaint_terms": [
+    "hearing",
+    "notice",
+    "decision",
+    "retaliation",
+    "grievance",
+    "appeal",
+    "due",
+    "process",
+    "policy",
+    "adverse",
+    "action",
+    "request",
+    "denial",
+    "response",
+    "dates",
+    "chronology",
+    "review",
+    "complaint",
+    "tenant",
+    "termination",
+    "informal",
+    "reasonable",
+    "accommodation",
+    "exact",
+    "timeline",
+    "housing",
+    "assistance",
+    "lease",
+    "occupancy",
+    "administrative",
+    "plan"
+  ],
+  "queries": [
+    "hearing notice",
+    "hearing notice site:hud.gov",
+    "hearing notice site:ecfr.gov",
+    "hearing notice site:haccof.org",
+    "decision retaliation",
+    "decision retaliation site:hud.gov"
+  ],
+  "candidate_count": 6,
+  "downloaded_count": 0,
+  "output_dir": "/home/barberb/HACC/evidence/agentic_downloads/20260324_061450",
+  "candidates": [
+    {
+      "title": "hud.gov",
+      "description": "",
+      "url": "https://hud.gov",
+      "relevance_score": 0.0,
+      "matched_terms": [],
+      "matched_fields": [],
+      "seed_query": "domain_seed_fallback"
+    },
+    {
+      "title": "www.hud.gov",
+      "description": "",
+      "url": "https://www.hud.gov",
+      "relevance_score": 0.0,
+      "matched_terms": [],
+      "matched_fields": [],
+      "seed_query": "domain_seed_fallback"
+    },
+    {
+      "title": "ecfr.gov",
+      "description": "",
+      "url": "https://ecfr.gov",
+      "relevance_score": 0.0,
+      "matched_terms": [],
+      "matched_fields": [],
+      "seed_query": "domain_seed_fallback"
+    },
+    {
+      "title": "www.ecfr.gov",
+      "description": "",
+      "url": "https://www.ecfr.gov",
+      "relevance_score": 0.0,
+      "matched_terms": [],
+      "matched_fields": [],
+      "seed_query": "domain_seed_fallback"
+    },
+    {
+      "title": "haccof.org",
+      "description": "",
+      "url": "https://haccof.org",
+      "relevance_score": 0.0,
+      "matched_terms": [],
+      "matched_fields": [],
+      "seed_query": "domain_seed_fallback"
+    },
+    {
+      "title": "www.haccof.org",
+      "description": "",
+      "url": "https://www.haccof.org",
+      "relevance_score": 0.0,
+      "matched_terms": [],
+      "matched_fields": [],
+      "seed_query": "domain_seed_fallback"
+    }
+  ],
+  "downloads": [],
+  "quality": {
+    "scraper_name": "agentic_complaint_evidence_scraper",
+    "domain": "caselaw",
+    "status": "failed",
+    "records_scraped": 0,
+    "data_quality_score": 0.0,
+    "quality_issues": [
+      {
+        "type": "empty_fields",
+        "severity": "high",
+        "details": [
+          "No records"
+        ]
+      }
+    ],
+    "sample_data": []
+  }
+}

@@ -32,14 +32,27 @@ if str(COMPLAINT_GENERATOR_ROOT) not in sys.path:
 if str(IPFS_DATASETS_ROOT) not in sys.path:
     sys.path.insert(0, str(IPFS_DATASETS_ROOT))
 
+from complaint_generator.email_credentials import resolve_gmail_credentials
 from ipfs_datasets_py.processors.multimedia.email_processor import EmailProcessor
 from upload_email_evidence_manifest import upload_manifest
+
+try:
+    from ipfs_datasets_py import ipfs_backend_router as _ipfs_router  # type: ignore
+except Exception:  # pragma: no cover - optional runtime integration
+    _ipfs_router = None
+
+try:
+    from multiformats import CID as _CID, multihash as _multihash  # type: ignore
+except Exception:  # pragma: no cover - optional runtime integration
+    _CID = None
+    _multihash = None
 
 
 DEFAULT_EVIDENCE_ROOT = REPO_ROOT / "evidence" / "email_imports"
 DEFAULT_GMAIL_SERVER = "imap.gmail.com"
 DEFAULT_GMAIL_FOLDER = "[Gmail]/All Mail"
 VALID_AUTH_MODES = ("imap_password", "gmail_app_password", "gmail_oauth")
+DEFAULT_CACHE_DIRNAME = "_email_cache"
 
 
 def _slugify(value: str) -> str:
@@ -212,6 +225,60 @@ def _sanitize_filename(filename: str, fallback: str) -> str:
     return _slugify(raw)
 
 
+def _cache_root(output_root: Path) -> Path:
+    return output_root / DEFAULT_CACHE_DIRNAME
+
+
+def _cache_index_path(output_root: Path) -> Path:
+    return _cache_root(output_root) / "email_cache_index.json"
+
+
+def _load_email_cache(output_root: Path) -> dict[str, Any]:
+    path = _cache_index_path(output_root)
+    if not path.exists():
+        return {"version": 1, "entries": {}}
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {"version": 1, "entries": {}}
+
+
+def _save_email_cache(output_root: Path, cache_payload: dict[str, Any]) -> None:
+    root = _cache_root(output_root)
+    root.mkdir(parents=True, exist_ok=True)
+    path = _cache_index_path(output_root)
+    path.write_text(json.dumps(cache_payload, indent=2, ensure_ascii=False), encoding="utf-8")
+
+
+def _raw_email_sha256(raw_bytes: bytes) -> str:
+    return hashlib.sha256(raw_bytes).hexdigest()
+
+
+def _build_cache_key(message_id_header: str, raw_sha256: str) -> str:
+    cleaned = str(message_id_header or "").strip()
+    return cleaned or f"sha256:{raw_sha256}"
+
+
+def _ipfs_add_bytes(data: bytes) -> str | None:
+    if _ipfs_router is None:
+        return _offline_raw_cid(data)
+    try:
+        cid = _ipfs_router.add_bytes(data)
+    except Exception:
+        return _offline_raw_cid(data)
+    return str(cid or "").strip() or None
+
+
+def _offline_raw_cid(data: bytes) -> str | None:
+    if _CID is None or _multihash is None:
+        return None
+    try:
+        digest = _multihash.digest(data, "sha2-256")
+        return str(_CID("base32", 1, "raw", digest))
+    except Exception:
+        return None
+
+
 def _extract_attachment_bytes(part: email.message.Message) -> bytes:
     payload = part.get_payload(decode=True)
     return payload or b""
@@ -380,6 +447,42 @@ def _save_email_bundle(
     }
 
 
+def _cache_entry_from_email(
+    *,
+    folder_name: str,
+    email_message: EmailMessage,
+    raw_bytes: bytes,
+    parsed_email: dict[str, Any],
+    relevance: dict[str, Any],
+    bundle_record: dict[str, Any] | None,
+) -> dict[str, Any]:
+    raw_sha256 = _raw_email_sha256(raw_bytes)
+    attachment_shas = []
+    if bundle_record:
+        attachment_shas = [item.get("sha256") for item in bundle_record.get("attachments", []) if item.get("sha256")]
+    return {
+        "message_id_header": parsed_email.get("message_id_header", ""),
+        "folder": folder_name,
+        "subject": parsed_email.get("subject", ""),
+        "date": parsed_email.get("date"),
+        "from": parsed_email.get("from", ""),
+        "to": parsed_email.get("to", ""),
+        "cc": parsed_email.get("cc", ""),
+        "participants": sorted(_message_participants(email_message)),
+        "attachment_count": len(list(parsed_email.get("attachments") or [])),
+        "raw_sha256": raw_sha256,
+        "raw_cid": _ipfs_add_bytes(raw_bytes),
+        "relevance_score": float(relevance.get("score", 0.0) or 0.0),
+        "matched_terms": list(relevance.get("matched_terms") or []),
+        "matched_fields": list(relevance.get("matched_fields") or []),
+        "bundle_dir": (bundle_record or {}).get("bundle_dir"),
+        "email_path": (bundle_record or {}).get("email_path"),
+        "parsed_path": (bundle_record or {}).get("parsed_path"),
+        "attachment_paths": list((bundle_record or {}).get("attachment_paths") or []),
+        "attachment_shas": attachment_shas,
+    }
+
+
 async def _fetch_folder_messages(
     processor: EmailProcessor,
     *,
@@ -417,6 +520,43 @@ async def _fetch_folder_messages(
     return await anyio.to_thread.run_sync(_fetch)
 
 
+async def _fetch_folder_messages_batched(
+    processor: EmailProcessor,
+    *,
+    folder: str,
+    batch_size: int,
+    max_messages: int,
+) -> list[tuple[bytes, EmailMessage]]:
+    def _fetch() -> list[tuple[bytes, EmailMessage]]:
+        status, count_data = processor.connection.select(_quote_imap_mailbox(folder), readonly=True)
+        if status != "OK":
+            raise RuntimeError(f"Failed to select folder {folder!r}: {status}")
+        total_messages = int((count_data or [b"0"])[0] or b"0")
+        if total_messages <= 0:
+            return []
+        remaining = max(0, int(max_messages))
+        rows: list[tuple[bytes, EmailMessage]] = []
+        high = total_messages
+        step = max(1, int(batch_size))
+        while high > 0 and remaining > 0:
+            low = max(1, high - step + 1)
+            ids = [str(value).encode("ascii") for value in range(low, high + 1)]
+            if remaining < len(ids):
+                ids = ids[-remaining:]
+            for msg_id in ids:
+                status, msg_data = processor.connection.fetch(msg_id, "(RFC822)")
+                if status != "OK":
+                    continue
+                raw_bytes = msg_data[0][1]
+                msg = email.message_from_bytes(raw_bytes, policy=email.policy.default)
+                rows.append((raw_bytes, msg))
+            remaining -= len(ids)
+            high = low - 1
+        return rows
+
+    return await anyio.to_thread.run_sync(_fetch)
+
+
 async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
     targets = _load_address_targets(args.address, args.address_file)
     from_targets = _load_address_targets(args.from_address, args.from_address_file)
@@ -426,6 +566,8 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
     output_root = Path(args.output_dir).expanduser().resolve()
     run_dir = output_root / (args.case_slug or datetime.now(UTC).strftime("%Y%m%d_%H%M%S"))
     run_dir.mkdir(parents=True, exist_ok=True)
+    cache_payload = _load_email_cache(output_root)
+    cache_entries = cache_payload.setdefault("entries", {})
 
     auth_mode = _resolve_auth_mode(args)
     processor = EmailProcessor(
@@ -452,16 +594,26 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
     matched_records: list[dict[str, Any]] = []
     preview_records: list[dict[str, Any]] = []
     seen_keys: set[str] = set()
+    scanned_message_count = 0
 
     try:
         for folder in args.folder:
-            rows = await _fetch_folder_messages(
-                processor,
-                folder=folder,
-                limit=args.limit,
-                search_criteria=search_criteria,
-            )
+            if getattr(args, "crawl_max_messages", None):
+                rows = await _fetch_folder_messages_batched(
+                    processor,
+                    folder=folder,
+                    batch_size=int(getattr(args, "crawl_batch_size", 250) or 250),
+                    max_messages=int(getattr(args, "crawl_max_messages", 0) or 0),
+                )
+            else:
+                rows = await _fetch_folder_messages(
+                    processor,
+                    folder=folder,
+                    limit=args.limit,
+                    search_criteria=search_criteria,
+                )
             for raw_bytes, email_message in rows:
+                scanned_message_count += 1
                 parsed = processor._parse_email_message(email_message, include_attachments=True)
                 if not _message_matches_addresses(
                     email_message,
@@ -473,10 +625,18 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
                 relevance = _score_message_relevance(email_message, complaint_terms)
                 if complaint_terms and relevance["score"] < float(getattr(args, "min_relevance_score", 1.0)):
                     continue
-                dedupe_key = parsed.get("message_id_header") or hashlib.sha256(raw_bytes).hexdigest()
+                raw_sha256 = _raw_email_sha256(raw_bytes)
+                dedupe_key = _build_cache_key(parsed.get("message_id_header", ""), raw_sha256)
                 if dedupe_key in seen_keys:
                     continue
                 seen_keys.add(dedupe_key)
+                cached_entry = cache_entries.get(dedupe_key) or {}
+                cached_raw_cid = cached_entry.get("raw_cid")
+                if not cached_raw_cid:
+                    cached_raw_cid = _ipfs_add_bytes(raw_bytes)
+                    if cached_entry:
+                        cached_entry = {**cached_entry, "raw_cid": cached_raw_cid, "raw_sha256": raw_sha256}
+                        cache_entries[dedupe_key] = cached_entry
                 if getattr(args, "dry_run", False):
                     preview_records.append(
                         {
@@ -492,9 +652,55 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
                             "relevance_score": relevance["score"],
                             "matched_terms": relevance["matched_terms"],
                             "matched_fields": relevance["matched_fields"],
+                            "cache_hit": bool(cached_entry),
+                            "raw_sha256": raw_sha256,
+                            "raw_cid": cached_raw_cid,
                         }
                     )
+                    cache_entries[dedupe_key] = _cache_entry_from_email(
+                        folder_name=folder,
+                        email_message=email_message,
+                        raw_bytes=raw_bytes,
+                        parsed_email=parsed,
+                        relevance=relevance,
+                        bundle_record=None,
+                    )
                     continue
+                if cached_entry:
+                    email_path = Path(str(cached_entry.get("email_path") or ""))
+                    parsed_path = Path(str(cached_entry.get("parsed_path") or ""))
+                    attachment_paths = [Path(str(path)) for path in list(cached_entry.get("attachment_paths") or [])]
+                    if email_path.exists() and parsed_path.exists() and all(path.exists() for path in attachment_paths):
+                        record = {
+                            "folder": cached_entry.get("folder", folder),
+                            "bundle_dir": str(cached_entry.get("bundle_dir") or email_path.parent),
+                            "email_path": str(email_path),
+                            "parsed_path": str(parsed_path),
+                            "participants": list(cached_entry.get("participants") or []),
+                            "subject": cached_entry.get("subject", ""),
+                            "date": cached_entry.get("date"),
+                            "from": cached_entry.get("from", ""),
+                            "to": cached_entry.get("to", ""),
+                            "cc": cached_entry.get("cc", ""),
+                            "message_id_header": cached_entry.get("message_id_header", ""),
+                            "attachment_paths": [str(path) for path in attachment_paths],
+                            "attachments": [],
+                            "evidence_title": cached_entry.get("subject") or f"Email from {cached_entry.get('from', '')}",
+                            "relevance_score": relevance["score"],
+                            "matched_terms": relevance["matched_terms"],
+                            "matched_fields": relevance["matched_fields"],
+                            "cache_hit": True,
+                            "raw_sha256": raw_sha256,
+                            "raw_cid": cached_entry.get("raw_cid"),
+                        }
+                        matched_records.append(record)
+                        cache_entries[dedupe_key] = {
+                            **cached_entry,
+                            "relevance_score": float(relevance["score"]),
+                            "matched_terms": list(relevance["matched_terms"]),
+                            "matched_fields": list(relevance["matched_fields"]),
+                        }
+                        continue
                 record = _save_email_bundle(
                     root_dir=run_dir,
                     folder_name=folder,
@@ -506,9 +712,21 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
                 record["relevance_score"] = relevance["score"]
                 record["matched_terms"] = relevance["matched_terms"]
                 record["matched_fields"] = relevance["matched_fields"]
+                record["cache_hit"] = False
+                record["raw_sha256"] = raw_sha256
+                record["raw_cid"] = _ipfs_add_bytes(raw_bytes)
                 matched_records.append(record)
+                cache_entries[dedupe_key] = _cache_entry_from_email(
+                    folder_name=folder,
+                    email_message=email_message,
+                    raw_bytes=raw_bytes,
+                    parsed_email=parsed,
+                    relevance=relevance,
+                    bundle_record=record,
+                )
     finally:
         await processor.disconnect()
+        _save_email_cache(output_root, cache_payload)
 
     manifest = {
         "status": "success",
@@ -522,8 +740,10 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
         "address_targets": sorted(targets),
         "from_address_targets": sorted(from_targets),
         "recipient_address_targets": sorted(recipient_targets),
+        "scanned_message_count": scanned_message_count,
         "matched_email_count": len(matched_records),
         "output_dir": str(run_dir),
+        "cache_index_path": str(_cache_index_path(output_root)),
         "emails": matched_records,
         "mediator_evidence_records": [
             {
@@ -572,6 +792,7 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
             "address_targets": sorted(targets),
             "from_address_targets": sorted(from_targets),
             "recipient_address_targets": sorted(recipient_targets),
+            "scanned_message_count": scanned_message_count,
             "matched_email_count": len(preview_records),
             "preview": preview_records,
             "output_dir": str(run_dir),
@@ -624,6 +845,26 @@ def build_parser() -> argparse.ArgumentParser:
         "--prompt-password",
         action="store_true",
         help="Prompt securely for the password if it is not already available.",
+    )
+    parser.add_argument(
+        "--use-keyring",
+        action="store_true",
+        help="Load the Gmail app password from the OS keyring when available.",
+    )
+    parser.add_argument(
+        "--save-to-keyring",
+        action="store_true",
+        help="Save the resolved Gmail app password to the OS keyring when available.",
+    )
+    parser.add_argument(
+        "--use-ipfs-secrets-vault",
+        action="store_true",
+        help="Load the Gmail app password from the ipfs_datasets_py DID-derived secrets vault.",
+    )
+    parser.add_argument(
+        "--save-to-ipfs-secrets-vault",
+        action="store_true",
+        help="Save the resolved Gmail app password to the ipfs_datasets_py DID-derived secrets vault.",
     )
     parser.add_argument(
         "--folder",
@@ -695,6 +936,18 @@ def build_parser() -> argparse.ArgumentParser:
         help="Minimum complaint relevance score required when complaint terms are supplied.",
     )
     parser.add_argument("--limit", type=int, default=None, help="Per-folder message limit")
+    parser.add_argument(
+        "--crawl-max-messages",
+        type=int,
+        default=None,
+        help="Client-side batched crawl cap. Scans up to this many recent messages directly and ranks locally.",
+    )
+    parser.add_argument(
+        "--crawl-batch-size",
+        type=int,
+        default=250,
+        help="Batch size for client-side batched crawling.",
+    )
     parser.add_argument("--timeout", type=int, default=30, help="IMAP timeout seconds")
     parser.add_argument("--no-ssl", action="store_true", help="Disable SSL/TLS")
     parser.add_argument("--output-dir", default=str(DEFAULT_EVIDENCE_ROOT), help="Evidence output root")
@@ -739,23 +992,9 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 async def _run(args: argparse.Namespace) -> int:
-    if not args.username:
-        args.username = (
-            os.environ.get("GMAIL_USER")
-            or os.environ.get("EMAIL_USER")
-        )
-    if not args.password:
-        args.password = (
-            os.environ.get("GMAIL_APP_PASSWORD")
-            or os.environ.get("EMAIL_PASS")
-        )
     if not args.folder:
         args.folder = [DEFAULT_GMAIL_FOLDER]
-    if args.prompt_credentials and not args.username:
-        args.username = input("Gmail username: ").strip()
     auth_mode = _resolve_auth_mode(args)
-    if (args.prompt_credentials or args.prompt_password) and not args.password and auth_mode != "gmail_oauth":
-        args.password = getpass.getpass("Gmail app password: ")
     if not args.username:
         raise SystemExit(
             "Missing Gmail username. Use --prompt-credentials, set GMAIL_USER, or pass --username."
@@ -792,6 +1031,22 @@ async def _run(args: argparse.Namespace) -> int:
 def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
+    if not args.username:
+        args.username = os.environ.get("GMAIL_USER") or os.environ.get("EMAIL_USER")
+    if not args.password:
+        args.password = os.environ.get("GMAIL_APP_PASSWORD") or os.environ.get("EMAIL_PASS")
+    auth_mode = _resolve_auth_mode(args)
+    if auth_mode != "gmail_oauth":
+        args.username, args.password = resolve_gmail_credentials(
+            gmail_user=str(args.username or ""),
+            gmail_app_password=str(args.password or ""),
+            prompt_for_credentials=bool(args.prompt_credentials or args.prompt_password),
+            use_keyring=bool(getattr(args, "use_keyring", False)),
+            save_to_keyring_flag=bool(getattr(args, "save_to_keyring", False)),
+            use_ipfs_secrets_vault=bool(getattr(args, "use_ipfs_secrets_vault", False)),
+            save_to_ipfs_secrets_vault_flag=bool(getattr(args, "save_to_ipfs_secrets_vault", False)),
+            parser=parser,
+        )
     return anyio.run(_run, args)
 
 

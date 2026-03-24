@@ -1,0 +1,98 @@
+{
+  "status": "success",
+  "complaint_query": "retaliation grievance complaint appeal hearing due process tenant policy adverse action hearing request notice denial response dates chronology",
+  "complaint_terms": [
+    "hearing",
+    "notice",
+    "decision",
+    "retaliation",
+    "grievance",
+    "appeal",
+    "due",
+    "process",
+    "policy",
+    "adverse",
+    "action",
+    "request",
+    "denial",
+    "response",
+    "dates",
+    "chronology",
+    "review",
+    "complaint",
+    "tenant",
+    "termination",
+    "informal",
+    "reasonable",
+    "accommodation",
+    "exact",
+    "timeline",
+    "housing",
+    "assistance",
+    "lease",
+    "occupancy",
+    "administrative",
+    "plan"
+  ],
+  "queries": [
+    "hearing notice",
+    "decision retaliation",
+    "grievance appeal",
+    "retaliation grievance"
+  ],
+  "seed_urls": [
+    "https://www.ecfr.gov/current/title-24/subtitle-B/chapter-IX/part-966/subpart-B",
+    "https://www.hud.gov/sites/dfiles/PIH/documents/PHOG_GrievanceProcedures.pdf",
+    "https://www.govregs.com/regulations/expand/title24_chapterIX_part966_subpartB_section966.56"
+  ],
+  "candidate_count": 3,
+  "downloaded_count": 0,
+  "output_dir": "/home/barberb/HACC/evidence/agentic_downloads/20260324_061948",
+  "candidates": [
+    {
+      "title": "www.ecfr.gov",
+      "description": "",
+      "url": "https://www.ecfr.gov/current/title-24/subtitle-B/chapter-IX/part-966/subpart-B",
+      "relevance_score": 0.0,
+      "matched_terms": [],
+      "matched_fields": [],
+      "seed_query": "explicit_seed_url"
+    },
+    {
+      "title": "www.hud.gov",
+      "description": "",
+      "url": "https://www.hud.gov/sites/dfiles/PIH/documents/PHOG_GrievanceProcedures.pdf",
+      "relevance_score": 0.0,
+      "matched_terms": [],
+      "matched_fields": [],
+      "seed_query": "explicit_seed_url"
+    },
+    {
+      "title": "www.govregs.com",
+      "description": "",
+      "url": "https://www.govregs.com/regulations/expand/title24_chapterIX_part966_subpartB_section966.56",
+      "relevance_score": 0.0,
+      "matched_terms": [],
+      "matched_fields": [],
+      "seed_query": "explicit_seed_url"
+    }
+  ],
+  "downloads": [],
+  "quality": {
+    "scraper_name": "agentic_complaint_evidence_scraper",
+    "domain": "caselaw",
+    "status": "failed",
+    "records_scraped": 0,
+    "data_quality_score": 0.0,
+    "quality_issues": [
+      {
+        "type": "empty_fields",
+        "severity": "high",
+        "details": [
+          "No records"
+        ]
+      }
+    ],
+    "sample_data": []
+  }
+}

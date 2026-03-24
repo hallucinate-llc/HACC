@@ -1,0 +1,256 @@
+Delivered-To: starworks5@gmail.com
+Received: by 2002:a05:7208:6095:b0:fa:5ef1:c6ed with SMTP id j21csp2980243rba;
+        Tue, 17 Mar 2026 12:30:05 -0700 (PDT)
+X-Received: by 2002:a05:620a:3185:b0:8c6:abc5:f169 with SMTP id af79cd13be357-8cfad36dedemr99775285a.73.1773775805442;
+        Tue, 17 Mar 2026 12:30:05 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1773775805; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Pq0I0hr09Kh9o+D8ciJ2xwjeGST5kdT61wpHyRlBA/20hVAIGVGWfHL/VIRw+yle2s
+         j0ooUTm8C4Si5pS/R/PUR58YNOdpOEeJ6fnQIcQXy5Naw0RRzg21fVHwpPY/FqKaB4iS
+         YDOpG/tSUuZIP1S2bPXYsWgXc1AWOxiNfe2JJpkwKmZEsE5o067UHjcKLUGKJr3ZP2ii
+         DKJRUHng+LDeQQB1XOmIBeCaO0MDLgtjNz586IDwhTAj+mjbVPU7OqKVOI0eH0o8oJmK
+         Z9Fj7cN+xYR460XZO4KMjLTGL7suR8Hx1scb2w2InjFSMOlROfOW2s0MTWSi2T58Qgro
+         Id3A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-language:mime-version:accept-language:message-id:date
+         :thread-index:thread-topic:subject:to:from:dkim-signature
+         :dkim-signature;
+        bh=eOMTMYa6bD+DPN5NHKUSTEJV4aj3POgRvJAGgumWhSE=;
+        fh=Q4+NH4vd0FIduByAlHyI0o1uvFh5lX6Eqy04l6XQQ3o=;
+        b=XOvo+Kr+/REUcTpT8JLuY6y2AaQp1jLKlvlNghzRQ5ck4HBp74hHnvtiSDtMMobn+J
+         QiYICZiWx5br5Ch8KnFfjhg2hw3jS5CIY40KFS9FHpknQzsXHI/WyLFoqbSRuihT7oyH
+         0YZlHW+N4ZFQqYAsaYlE3vAj3V62GKkp0oN4qd8aUFXDCNcQyzYgtD4INzT1IsWO8DJP
+         Cp9JAmvN9exBAF1xFkKY2PSYGGhvQXhI42eVffj+tmQ9AZITBwXDMrjRauwgZpLTRLJ1
+         HmSxHycxupM4doDOEqnRRsCabYVFp/+ACkMUlw5266inFj0L405dPJqOfq2/OLdbSkNW
+         xe/g==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@clackamas.us header.s=mimecast20210408 header.b=U505b+Bf;
+       dkim=pass header.i=@dkim.mimecast.org header.s=201912 header.b=BImYBuhr;
+       spf=pass (google.com: domain of ktilton@clackamas.us designates 170.10.129.117 as permitted sender) smtp.mailfrom=ktilton@clackamas.us;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=clackamas.us
+Return-Path: <ktilton@clackamas.us>
+Received: from us-smtp-delivery-117.mimecast.com (us-smtp-delivery-117.mimecast.com. [170.10.129.117])
+        by mx.google.com with ESMTPS id af79cd13be357-8cfad33a07bsi68905185a.552.2026.03.17.12.30.04
+        for <starworks5@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Tue, 17 Mar 2026 12:30:05 -0700 (PDT)
+Received-SPF: pass (google.com: domain of ktilton@clackamas.us designates 170.10.129.117 as permitted sender) client-ip=170.10.129.117;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@clackamas.us header.s=mimecast20210408 header.b=U505b+Bf;
+       dkim=pass header.i=@dkim.mimecast.org header.s=201912 header.b=BImYBuhr;
+       spf=pass (google.com: domain of ktilton@clackamas.us designates 170.10.129.117 as permitted sender) smtp.mailfrom=ktilton@clackamas.us;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=clackamas.us
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=clackamas.us;
+	s=mimecast20210408; t=1773775804;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type;
+	bh=eOMTMYa6bD+DPN5NHKUSTEJV4aj3POgRvJAGgumWhSE=;
+	b=U505b+Bf+KQnu0iAxzu3juJtzPtkAtB1Heo/JCMzyKxT1c4sPNGbfRrJbd6fu2ReLDTI2F
+	PrjJhQIrzA9Pu4anWbF9oW7MOheogQiyR7nvU2ZKFGSa3ln+mwFtC1vEQdddKqtqsmKF50
+	qSUHhlY3IpHWlppPngv/0zSG0H+WLQM=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=dkim.mimecast.org;
+	s=201912; t=1773775804;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type;
+	bh=eOMTMYa6bD+DPN5NHKUSTEJV4aj3POgRvJAGgumWhSE=;
+	b=BImYBuhrlbJaJaLPQzro6Bxm9XgbJ6vq/F1FhBrjB4mcduXZTNXN2cbQI4X57G8F5B+4XA
+	hmhCK0Px3xZQUzUQZHlsKZInkvMDsCrcDVoPg+29uQLfD5jIybRsUaiC3cB7GoBVKL2q4t
+	hz9d84wkgXXNAZAx4u4tiidLj93KxaxNFtNN1sk0z54CE+Q46DlSpxNeLJgyhNDFK2+HEH
+	DG4ACTPret6ZLoq7WbcmZLUjRVmN/dmUzKOTUne1X3550xJN2WjV3YNcu0YwpGJ9UlEvxm
+	AznB9VdjemZagnNnZ5A2JHL9GppWJbdkuAHMrNp0zumDz6OP4NUFtqDim7jlEQ==
+Received: from CH1PR09CU001.outbound.protection.outlook.com
+ (mail-northcentralusazon11011030.outbound.protection.outlook.com
+ [40.107.199.30]) by relay.mimecast.com with ESMTP with STARTTLS
+ (version=TLSv1.3, cipher=TLS_AES_256_GCM_SHA384) id
+ us-mta-493-gJPCgk6VN3-9uSdlZlpgWw-1; Tue, 17 Mar 2026 15:30:01 -0400
+X-MC-Unique: gJPCgk6VN3-9uSdlZlpgWw-1
+X-Mimecast-MFC-AGG-ID: gJPCgk6VN3-9uSdlZlpgWw_1773775800
+Received: from CYXPR09CA0005.namprd09.prod.outlook.com (2603:10b6:930:d4::18)
+ by PH8PR09MB9439.namprd09.prod.outlook.com (2603:10b6:510:189::6) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9700.25; Tue, 17 Mar
+ 2026 19:29:58 +0000
+Received: from BL02EPF0001B419.namprd09.prod.outlook.com
+ (2603:10b6:930:d4:cafe::5) by CYXPR09CA0005.outlook.office365.com
+ (2603:10b6:930:d4::18) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9700.27 via Frontend Transport; Tue,
+ 17 Mar 2026 19:29:55 +0000
+X-MS-Exchange-Authentication-Results: spf=softfail (sender IP is
+ 198.245.132.32) smtp.mailfrom=clackamas.us; dkim=none (message not signed)
+ header.d=none;dmarc=fail action=none header.from=clackamas.us
+Received: from Exch02.county.ds.clackamas.us (198.245.132.32) by
+ BL02EPF0001B419.mail.protection.outlook.com (10.167.242.198) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.9700.17 via Frontend Transport; Tue, 17 Mar 2026 19:29:56 +0000
+Received: from Exch01.county.ds.clackamas.us (10.32.2.129) by
+ Exch02.county.ds.clackamas.us (10.32.2.133) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.2562.17; Tue, 17 Mar 2026 12:29:55 -0700
+Received: from Exch01.county.ds.clackamas.us ([fe80::bd97:bcb3:ee53:432a]) by
+ Exch01.county.ds.clackamas.us ([fe80::bd97:bcb3:ee53:432a%17]) with mapi id
+ 15.02.2562.017; Tue, 17 Mar 2026 12:29:55 -0700
+From: "Tilton, Kati" <KTilton@clackamas.us>
+To: benjamin barber <starworks5@gmail.com>
+Subject: HCV Orientation
+Thread-Topic: HCV Orientation
+Thread-Index: Ady2Qhz2Wem+DtJsQWao0TIzC56ikQ==
+Date: Tue, 17 Mar 2026 19:29:55 +0000
+Message-ID: <92208aa189a24a18ac05be75916b5107@clackamas.us>
+Accept-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+x-originating-ip: [10.38.18.245]
+MIME-Version: 1.0
+Return-Path: KTilton@clackamas.us
+X-EOPAttributedMessage: 0
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: BL02EPF0001B419:EE_|PH8PR09MB9439:EE_
+X-MS-Office365-Filtering-Correlation-Id: e4b8605e-d6bc-4fd7-d1d0-08de845b9271
+X-MS-Exchange-SenderADCheck: 1
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam: BCL:0;ARA:13230040|36860700016|82310400026|1800799024|56012099003|18002099003|80162021|13003099007|8096899003|110056007
+X-Microsoft-Antispam-Message-Info: LN6sL5um8UrviErbq3wVReHEfX9uUev51GNbNRh6L9h5meyE7w2zzOq6LI76uhHxK6SxdRtJsWbloEe7Q/PrQAF7ErEeVSGRaM3pp2Rvr6OwCbO85WVmsq/kQqsJZLaEwFzI/ZjoSVngrmsS8RiZP1464Kf1e7rgWWlFd8HdP5EZQaARbS4lEamwshEpm0JWhcLMhsya0gUGE+sDUAXhAe06NiRa35t+hnfYNZcfzeq2e1Ux5h0ezO8mktRo/FUn7/StF3RGnIYcpKqKWhatI0McAsSvIcGjJytTy9ofFkgqGew/Tpg4tr8I/whKbfESPKlOUqPopHT+wn6v+QEJLhB4AqGEKQxLvk/5jN196yctYbL7zUZOp9uvAAxuf9VI9zXDQFgH7hh6jqnlw3nMnUP41n+sTvsPjk9k6P4HzzGU35C7VtCOWQtjyjP2tcgwJTASeCybEFImDhRJ5zsxX8FofEc44bFp1xJ6EXU+BKR9V5QXixbF5zoCm9AXneUoiqfNpilef8JMbwCoZ2e7cNCUsLr4kob/wJX1+Li6WN6Gt6eta9lzvWtwhrtx1mG1P68F82+bJkoNWX3+S3lLbpUN5Vv0WGELGj6Nbr61B/IQUA549aRQQ7do43zrNWIICifeTFqgdH0rQ+wkjNf879sRAH2UDWcEdBroJBRW9PjmUeRgnH0EqpUxyYPYPSRmNc7Sj7u/YfKQr54EkZstnHLsXGo7Xy96LGOUzGIM3hJ2qjph1mlXwDe2mG6OdFNrpNnfLDk9uCgJ/DvtU2eopGGQhm9NvR6j6qYj5bb+py8=
+X-Forefront-Antispam-Report: CIP:198.245.132.32;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:Exch02.county.ds.clackamas.us;PTR:InfoDomainNonexistent;CAT:NONE;SFS:(13230040)(36860700016)(82310400026)(1800799024)(56012099003)(18002099003)(80162021)(13003099007)(8096899003)(110056007);DIR:OUT;SFP:1101
+X-MS-Exchange-AntiSpam-MessageData-ChunkCount: 1
+X-MS-Exchange-AntiSpam-MessageData-0: /IL46SQnjQ0jEzOasUKeLOQ6l98clKyhyjrTdO2sjHb2bOOeYJW2Curs09WqXpqkdDjuZmX0oYDHSthB9pUT/haIWKvi1Yeg6PzJAKufd7v0nSDOxEvhDkAoJbXR8KvNeWzG+4Jp+vpG9qB++ygUnr8KVi6Vg+D7hrzG5UHNuKee21tpdA7gPkAWda7UIl0JelrJu00jh5LSGhwJvbHrHV/qvRGJ9B7kK08evJG0qLfp4BLWj1TEElZAd7OJv2i5mKA5w8Yh/+Uxd6XvXTE6yqmzyE8lQULF+GPqlihVegJBErgAzkeRy6lS+tY63MAwwxqFLKMZiSOhZe1bZ77aJ6mOrxll9ABxp/lVoO9w0DK6WlIHi/9WqYh1lC0l0yIOFJ7INtBh1fM7DzcavzNQaR0TZzRpupMFyGIs37SA2lrPKzUrPyZABJdfDNSp8pB7
+X-Exchange-RoutingPolicyChecked: QpMfuF5YWg+yaHkzeCdKFSRikdGkpsftc8ZC0ksROWHpP1iYQ9QaiYpN+0sEbML6rUSkuMRRl6a/7FCQFnRnSBJazISgbEoAfjNZ4mtO4MGDT44juodK7y4VvNykMSLXsSuN2d2HufgiM4OuXOrsbmTsXawAgLtLTpRoKc1Xw6l82SHOVZb7/BtwZDZBKhiT5p2f/dp1+K5jwE5TD/O1dyq5iJLKU6UaXqyRK5zfPqKmBUr3fThP5qtYiK3UhOTXoRqduWw1Lcx6fLVC9mGRYmSnNz2r+GsiMdyG8EmZ5xtZqZHxmIWptFIq4jtZLrqnOP8C6slyYp9YuU9t5s1x4Q==
+X-OriginatorOrg: clackamas.us
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 17 Mar 2026 19:29:56.5380
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: e4b8605e-d6bc-4fd7-d1d0-08de845b9271
+X-MS-Exchange-CrossTenant-Id: 11a5f385-e251-4bf1-b266-597e782882a0
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=11a5f385-e251-4bf1-b266-597e782882a0;Ip=[198.245.132.32];Helo=[Exch02.county.ds.clackamas.us]
+X-MS-Exchange-CrossTenant-AuthSource: BL02EPF0001B419.namprd09.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH8PR09MB9439
+X-Mimecast-Spam-Score: 0
+X-Mimecast-MFC-PROC-ID: NVcsMUxsmTOzRNFqhycup8oiGq32ceziAnlnGkpSCB0_1773775800
+X-Mimecast-Originator: clackamas.us
+Content-Language: en-US
+Content-Type: multipart/alternative;
+	boundary="_000_92208aa189a24a18ac05be75916b5107clackamasus_"
+
+--_000_92208aa189a24a18ac05be75916b5107clackamasus_
+Content-Type: text/plain; charset=WINDOWS-1252
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+For your convenience, we would like to schedule a virtual HCV orientation w=
+ith your household on Thursday, March 19th. The two time slots available ar=
+e 10am-11am or 11am-12pm. Once we know your preference for time, we will el=
+ectronically send you the packet of information that we will review during =
+the orientation, and a zoom link.
+
+Thank you,
+
+Kati
+
+Kati Tilton, Operations Manager
+Clackamas County Housing Authority
+13930 S. Gain St.
+Oregon City, OR 97045
+Primary: 971-201-8582
+Secondary: 503-650-3436
+Office: 503-655-8267
+www.clackamas.us<http://www.clackamas.us/>
+Clackamas County Hours of Operation:
+Monday-Thursday 7am-6pm
+
+
+--_000_92208aa189a24a18ac05be75916b5107clackamasus_
+Content-Type: text/html; charset=WINDOWS-1252
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+=09{font-family:"Cambria Math";
+=09panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+=09{font-family:Aptos;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+=09{margin:0in;
+=09font-size:12.0pt;
+=09font-family:"Aptos",sans-serif;
+=09mso-ligatures:standardcontextual;}
+a:link, span.MsoHyperlink
+=09{mso-style-priority:99;
+=09color:#467886;
+=09text-decoration:underline;}
+span.EmailStyle18
+=09{mso-style-type:personal-compose;
+=09font-family:"Aptos",sans-serif;
+=09color:windowtext;}
+.MsoChpDefault
+=09{mso-style-type:export-only;
+=09font-size:10.0pt;
+=09mso-ligatures:none;}
+@page WordSection1
+=09{size:8.5in 11.0in;
+=09margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+=09{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"EN-US" link=3D"#467886" vlink=3D"#96607D" style=3D"word-wrap:=
+break-word">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal">Hello,<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">For your convenience, we would like to schedule a vi=
+rtual HCV orientation with your household on Thursday, March 19<sup>th</sup=
+>. The two time slots available are 10am-11am or 11am-12pm. Once we know yo=
+ur preference for time, we will electronically
+ send you the packet of information that we will review during the orientat=
+ion, and a zoom link.<o:p></o:p></p>
+<p class=3D"MsoNormal"><br>
+Thank you,<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Kati<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Arial&quot;,sans-se=
+rif">Kati Tilton, Operations Manager<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Arial&quot;,sans-se=
+rif">Clackamas County Housing Authority<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Arial&quot;,sans-se=
+rif">13930 S. Gain St.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Arial&quot;,sans-se=
+rif">Oregon City, OR 97045<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Arial&quot;,sans-se=
+rif">Primary: 971-201-8582<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Arial&quot;,sans-se=
+rif">Secondary: 503-650-3436<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Arial&quot;,sans-se=
+rif">Office: 503-655-8267<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><a href=3D"http://www.clackamas.us/"><span style=3D"=
+font-family:&quot;Arial&quot;,sans-serif;color:#467886">www.clackamas.us</s=
+pan></a><span style=3D"font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p=
+></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Arial&quot;,sans-se=
+rif">Clackamas County Hours of Operation:<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Arial&quot;,sans-se=
+rif">Monday-Thursday 7am-6pm<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+</div>
+</body>
+</html>
+
+--_000_92208aa189a24a18ac05be75916b5107clackamasus_--
+

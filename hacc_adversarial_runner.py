@@ -1774,10 +1774,13 @@ def run_hacc_adversarial_batch(
     emit_workflow_phase_autopatches: bool = False,
     apply_workflow_phase_autopatches: Optional[bool] = None,
     reuse_existing_artifacts: bool = False,
+    seed_complaints: Optional[List[Dict[str, Any]]] = None,
 ) -> Dict[str, Any]:
     output_root = Path(output_dir).resolve()
     output_root.mkdir(parents=True, exist_ok=True)
     session_dir = output_root / "sessions"
+    if not reuse_existing_artifacts and session_dir.exists():
+        shutil.rmtree(session_dir)
     session_dir.mkdir(parents=True, exist_ok=True)
     batch_progress_path = output_root / "batch_progress.json"
 
@@ -1868,6 +1871,7 @@ def run_hacc_adversarial_batch(
         ):
             results = harness.run_batch(
                 num_sessions=num_sessions,
+                seed_complaints=seed_complaints,
                 personalities=personalities,
                 max_turns_per_session=max_turns,
                 include_hacc_evidence=True,
