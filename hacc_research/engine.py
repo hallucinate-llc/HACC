@@ -576,8 +576,12 @@ def _is_relevant_prompt_legal_research_item(item: Dict[str, Any]) -> bool:
     has_procedural = _external_research_has_procedural_context(relevance_text)
     has_strong_procedural_fit = _external_research_has_strong_procedural_fit(relevance_text)
     has_grievance_process_fit = _external_research_has_grievance_process_fit(relevance_text)
+    if "broad us code releasepoint without grievance-process fit" in relevance_text:
+        return False
+    if "uscode.house.gov" in url and "prelimusc" in url and not has_grievance_process_fit:
+        return False
     if _external_research_has_strong_legal_citation(relevance_text):
-        return has_procedural or has_grievance_process_fit
+        return has_grievance_process_fit or has_strong_procedural_fit
     if _is_opaque_external_research_identifier(citation):
         if "federal_register" in authority_source or "/fr-" in url or "govinfo.gov" in url:
             return has_housing and has_strong_procedural_fit
@@ -3678,6 +3682,9 @@ class HACCResearchEngine:
             if strong_legal_citation:
                 score += 2.5
                 reasons.append("strong legal citation")
+            if authority_source == "web_fallback" and grievance_process_fit:
+                score += 7.5
+                reasons.append("promoted grievance-process authority")
             if "u.s.c." in citation_lower and not housing_legal_hits:
                 score -= 2.5
                 reasons.append("generic statutory citation without housing fit")
@@ -3685,8 +3692,9 @@ class HACCResearchEngine:
                 score -= 3.0
                 reasons.append("generic retaliation statute")
             if "uscode.house.gov" in domain and "prelimusc" in url.lower() and not grievance_process_fit:
-                score -= 6.0
+                score -= 12.0
                 reasons.append("broad us code releasepoint without grievance-process fit")
+                blocked = True
             if "retaliation" in source_text and not grievance_process_fit:
                 score -= 3.5
                 reasons.append("retaliation authority without grievance-process fit")

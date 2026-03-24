@@ -37,6 +37,14 @@ def test_message_matches_addresses_across_headers() -> None:
     assert not module._message_matches_addresses(message, {"other@example.com"})
 
 
+def test_normalize_address_values_handles_header_objects() -> None:
+    message = _build_sample_message()
+
+    targets = module._normalize_address_values([message["From"], message["To"], message["Cc"]])
+
+    assert targets == {"manager@example.org", "tenant@example.com", "lawyer@example.com"}
+
+
 def test_message_matches_from_address_filter() -> None:
     message = _build_sample_message()
 
