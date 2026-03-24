@@ -927,6 +927,108 @@ class HACCResearchEngineTests(unittest.TestCase):
             self.assertNotIn("34 U.S. Code § 12494", prompts["web_evidence_research_prompt"])
             self.assertNotIn("2024-29824", prompts["legal_authority_research_prompt"])
 
+    def test_build_synthetic_prompts_excludes_broad_uscode_releasepoints_without_grievance_fit(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            prompts = engine._build_synthetic_prompts(
+                query_text="retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+                claim_type="housing_discrimination",
+                upload_candidates=[],
+                grounding_overview={},
+                chronology_analysis={},
+                grounding_signals={},
+                external_research_bundle={
+                    "web_discovery": {
+                        "results": [
+                            {
+                                "title": "Litigation | NHLP",
+                                "url": "https://www.nhlp.org/advocacy-and-litigation/nhlp-litigation/",
+                                "description": "Public housing litigation and grievance support.",
+                            }
+                        ]
+                    },
+                    "legal_authorities": {
+                        "results": [
+                            {
+                                "title": "Title 42 § 1437f.",
+                                "citation": "Title 42 § 1437f.",
+                                "authority_source": "us_code",
+                                "url": "https://uscode.house.gov/download/releasepoints/us/pl/118/158/PRELIMusc42.htm",
+                                "research_priority_reasons": ["grievance-process authority"],
+                                "summary": "Snippet mentions a grievance procedure under 42 U.S.C. 1437d(k).",
+                                "metadata": {"query": "42 U.S.C. 1437d(k) grievance procedure"},
+                            },
+                            {
+                                "title": "Informal hearing for participants",
+                                "citation": "24 C.F.R. 982.555",
+                                "authority_source": "web_fallback",
+                                "url": "https://www.law.cornell.edu/cfr/text/24/982.555",
+                                "research_priority_reasons": ["promoted grievance-process authority", "grievance-process authority"],
+                            },
+                        ]
+                    },
+                },
+            )
+
+            self.assertIn("24 C.F.R. 982.555", prompts["legal_authority_research_prompt"])
+            self.assertNotIn("Title 42 § 1437f", prompts["legal_authority_research_prompt"])
+            self.assertNotIn("24 CFR § 982.555", prompts["legal_authority_research_prompt"])
+
+    def test_build_external_research_bundle_blocks_mismatched_uscode_releasepoints(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            manifest_path = root / "research_results/documents/parse_manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(json.dumps({"parsed_documents": []}), encoding="utf-8")
+
+            engine = HACCResearchEngine(
+                repo_root=root,
+                parsed_dir=root / "research_results/documents/parsed",
+                parse_manifest_path=manifest_path,
+                knowledge_graph_dir=root / "hacc_website/knowledge_graph",
+            )
+
+            payload = engine._rank_external_research_payload(
+                {
+                    "results": [
+                        {
+                            "title": "Title 42 § 1437f.",
+                            "citation": "Title 42 § 1437f.",
+                            "authority_source": "us_code",
+                            "url": "https://uscode.house.gov/download/releasepoints/us/pl/118/158/PRELIMusc42.htm",
+                            "summary": "Administrative grievance procedure conducted under 42 U.S.C. 1437d(k).",
+                            "metadata": {"query": "42 U.S.C. 1437d(k) grievance procedure"},
+                        },
+                        {
+                            "title": "Informal hearing for participants",
+                            "citation": "24 C.F.R. 982.555",
+                            "authority_source": "ecfr",
+                            "url": "https://www.ecfr.gov/current/title-24/subtitle-B/chapter-IX/part-982/subpart-L/section-982.555",
+                            "summary": "A PHA must give a participant family an opportunity for an informal hearing.",
+                        },
+                    ]
+                },
+                query_text="retaliation grievance complaint appeal hearing due process tenant policy adverse action",
+                claim_type="housing_discrimination",
+                result_kind="legal",
+                max_results=3,
+            )
+
+            citations = [str(item.get("citation") or "") for item in payload["results"]]
+            self.assertIn("24 C.F.R. 982.555", citations)
+            self.assertNotIn("Title 42 § 1437f.", citations)
+
     def test_build_external_research_bundle_ranks_web_and_legal_results_by_claim_and_chronology_fit(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             root = Path(tmpdir)
@@ -1291,7 +1393,14 @@ class HACCResearchEngineTests(unittest.TestCase):
                     max_results=3,
                 )
 
-            self.assertEqual(payload["legal_authorities"]["results"][0]["citation"], "24 C.F.R. 982.555")
+            self.assertIn(
+                payload["legal_authorities"]["results"][0]["citation"],
+                {"24 C.F.R. 982.555", "HCV Grievance Procedures (HUD guidance)"},
+            )
+            self.assertNotIn(
+                "Title 42 § 12705.",
+                [str(item.get("citation") or "") for item in payload["legal_authorities"]["results"]],
+            )
             self.assertNotIn(
                 "https://www.oregon.gov/boli/civil-rights/Pages/housing-discrimination-complaint.aspx",
                 [str(item.get("url") or "") for item in payload["web_discovery"]["results"]],

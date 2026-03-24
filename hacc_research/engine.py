@@ -475,6 +475,70 @@ def _extract_legal_citation(value: str) -> str:
     return ""
 
 
+def _canonical_legal_citation_key(value: str) -> str:
+    cleaned = _clean_text(value).lower().strip(" .,")
+    if not cleaned:
+        return ""
+    normalized = cleaned.replace("u.s. code", "u.s.c.").replace("§", " § ")
+    normalized = re.sub(r"\s+", " ", normalized)
+    title_usc_match = re.search(
+        r"\btitle\s+(\d+)\s*(?:§\s*)?([\d\w.()\-]+)",
+        normalized,
+        re.IGNORECASE,
+    )
+    if title_usc_match:
+        return f"usc:{title_usc_match.group(1)}:{title_usc_match.group(2).lower().rstrip('.')}"
+    usc_match = re.search(
+        r"\b(\d+)\s+u\.?s\.?c\.?\s*(?:§\s*)?([\d\w.()\-]+)",
+        normalized,
+        re.IGNORECASE,
+    )
+    if usc_match:
+        return f"usc:{usc_match.group(1)}:{usc_match.group(2).lower().rstrip('.')}"
+    cfr_match = re.search(
+        r"\b(\d+)\s+c\.?f\.?r\.?\s*(?:part\s+)?(?:§\s*)?([\d\w.()\-]+)",
+        normalized,
+        re.IGNORECASE,
+    )
+    if cfr_match:
+        return f"cfr:{cfr_match.group(1)}:{cfr_match.group(2).lower().rstrip('.')}"
+    return ""
+
+
+def _primary_authority_citation_key(item: Dict[str, Any]) -> str:
+    primary_text = " ".join(
+        _clean_text(str(part or ""))
+        for part in (
+            item.get("citation"),
+            item.get("title"),
+            item.get("url"),
+        )
+        if _clean_text(str(part or ""))
+    )
+    return _canonical_legal_citation_key(_extract_legal_citation(primary_text) or primary_text)
+
+
+def _metadata_query_citation_key(item: Dict[str, Any]) -> str:
+    metadata = dict(item.get("metadata") or {})
+    details = dict(metadata.get("details") or {})
+    query_text = _clean_text(str(details.get("query") or metadata.get("query") or ""))
+    if not query_text:
+        return ""
+    return _canonical_legal_citation_key(_extract_legal_citation(query_text) or query_text)
+
+
+def _is_mismatched_uscode_releasepoint(item: Dict[str, Any]) -> bool:
+    authority_source = _clean_text(str(item.get("authority_source") or item.get("source") or "")).lower()
+    url = _clean_text(str(item.get("url") or "")).lower()
+    if authority_source != "us_code":
+        return False
+    if "uscode.house.gov" not in url or "prelimusc" not in url:
+        return False
+    primary_key = _primary_authority_citation_key(item)
+    query_key = _metadata_query_citation_key(item)
+    return bool(primary_key and query_key and primary_key != query_key)
+
+
 def _normalize_guidance_citation(*, title: str, domain: str) -> str:
     cleaned_title = _clean_text(title)
     if not cleaned_title:
@@ -576,6 +640,8 @@ def _is_relevant_prompt_legal_research_item(item: Dict[str, Any]) -> bool:
     has_procedural = _external_research_has_procedural_context(relevance_text)
     has_strong_procedural_fit = _external_research_has_strong_procedural_fit(relevance_text)
     has_grievance_process_fit = _external_research_has_grievance_process_fit(relevance_text)
+    if _is_mismatched_uscode_releasepoint(item):
+        return False
     if "broad us code releasepoint without grievance-process fit" in relevance_text:
         return False
     if "uscode.house.gov" in url and "prelimusc" in url and not has_grievance_process_fit:
@@ -605,10 +671,10 @@ def _normalize_prompt_legal_display_text(value: str) -> str:
     if not cleaned:
         return ""
     cleaned = re.sub(r"--+$", "", cleaned).strip(" .,-")
-    cfr_match = re.fullmatch(r"(\d+)\s+C\.?F\.?R\.?\s+([\d.()a-zA-Z-]+)", cleaned, re.IGNORECASE)
+    cfr_match = re.fullmatch(r"(\d+)\s+C\.?F\.?R\.?\s*(?:§\s*)?([\d.()a-zA-Z-]+)", cleaned, re.IGNORECASE)
     if cfr_match:
         return f"{cfr_match.group(1)} C.F.R. {cfr_match.group(2)}".strip(" .,-")
-    usc_match = re.fullmatch(r"(\d+)\s+U\.?S\.?C\.?\s+([\d.()a-zA-Z-]+)", cleaned, re.IGNORECASE)
+    usc_match = re.fullmatch(r"(\d+)\s+U\.?S\.?C\.?\s*(?:§\s*)?([\d.()a-zA-Z-]+)", cleaned, re.IGNORECASE)
     if usc_match:
         return f"{usc_match.group(1)} U.S.C. {usc_match.group(2)}".strip(" .,-")
     return cleaned
@@ -3630,6 +3696,7 @@ class HACCResearchEngine:
             strong_procedural_fit = _external_research_has_strong_procedural_fit(legal_relevance_text)
             grievance_process_fit = _external_research_has_grievance_process_fit(evidence_text)
             strong_legal_citation = _external_research_has_strong_legal_citation(legal_relevance_text)
+            mismatched_uscode_releasepoint = _is_mismatched_uscode_releasepoint(item)
             federal_register_like = authority_source == "federal_register" or "govinfo.gov" in domain or "federalregister.gov" in domain
             opaque_identifier = _is_opaque_external_research_identifier(citation_text)
             housing_legal_hits = [
@@ -3685,6 +3752,10 @@ class HACCResearchEngine:
             if authority_source == "web_fallback" and grievance_process_fit:
                 score += 7.5
                 reasons.append("promoted grievance-process authority")
+            if mismatched_uscode_releasepoint:
+                score -= 14.0
+                reasons.append("broad us code releasepoint mismatched to targeted grievance citation")
+                blocked = True
             if "u.s.c." in citation_lower and not housing_legal_hits:
                 score -= 2.5
                 reasons.append("generic statutory citation without housing fit")
