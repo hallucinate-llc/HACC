@@ -1,0 +1,1044 @@
+{
+  "status": "success",
+  "server": "imap.gmail.com",
+  "username": "starworks5@gmail.com",
+  "auth_mode": "gmail_app_password",
+  "folders": [
+    "[Gmail]/All Mail"
+  ],
+  "search": "SINCE \"1-Jan-2024\"",
+  "complaint_terms": [
+    "information",
+    "needed",
+    "cortez",
+    "accommodation",
+    "voucher",
+    "clackamas",
+    "release",
+    "port",
+    "additional",
+    "jane",
+    "housing",
+    "authority",
+    "claim",
+    "process"
+  ],
+  "min_relevance_score": 1.5,
+  "address_targets": [
+    "aferron@clackamas.us",
+    "bwilliams@clackamas.us",
+    "jemilahar@clackamas.us",
+    "ktilton@clackamas.us"
+  ],
+  "from_address_targets": [],
+  "recipient_address_targets": [],
+  "scanned_message_count": 2500,
+  "matched_email_count": 20,
+  "output_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-clackamas-followup-import",
+  "cache_index_path": "/home/barberb/HACC/evidence/email_imports/_email_cache/email_cache_index.json",
+  "emails": [
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-21T17:04:21-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS9NEWAUyCO506wH81m2=8f7gyRPWR6C8RA9FApvMzxDRw@mail.gmail.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 12.0,
+      "matched_terms": [
+        "information",
+        "cortez",
+        "accommodation",
+        "voucher",
+        "clackamas",
+        "release",
+        "port",
+        "jane",
+        "housing",
+        "authority",
+        "claim",
+        "process"
+      ],
+      "matched_fields": [
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "500c4ae11032332286959db7d15906bf9294bcff6e69dfe7969d73c6e46fd8a1",
+      "raw_cid": "bafkreicqbrfocebsgmrinfm5w7ivsbv7skklz73onhp6pfu5opdoi36yue"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "RE: HCV Orientation",
+      "date": "2026-03-20T22:54:20+00:00",
+      "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "to": "benjamin barber <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<0cb1a9bce9ce436ba29b873de4aef556@clackamas.us>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "RE: HCV Orientation",
+      "relevance_score": 12.0,
+      "matched_terms": [
+        "information",
+        "cortez",
+        "accommodation",
+        "voucher",
+        "clackamas",
+        "release",
+        "port",
+        "jane",
+        "housing",
+        "authority",
+        "claim",
+        "process"
+      ],
+      "matched_fields": [
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "258597b28a38bcfaa46df02ecd95c88cfb3446b0cdb667925867e25992ce4369",
+      "raw_cid": "bafkreibfqwl3fcryxt5ki3pqf3gzlsem7m2enmgnwztzewdh4jmzftsdne"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-20T16:02:01-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS9baFybogyP5synzuGhf-OV=yAMTgrZNdG=k=9HBKfvhA@mail.gmail.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 9.0,
+      "matched_terms": [
+        "information",
+        "cortez",
+        "accommodation",
+        "voucher",
+        "clackamas",
+        "release",
+        "jane",
+        "housing",
+        "authority"
+      ],
+      "matched_fields": [
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "2a0d38c657121b881a2c28bba90eeb3ccb0e238f12f381bf61251fc81e9554b0",
+      "raw_cid": "bafkreibkbu4mmvysdoebulbixouq52z4zmhchdys6oa36yjfd7eb5fkuwa"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-20T16:09:59-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC=pg@mail.gmail.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 12.0,
+      "matched_terms": [
+        "information",
+        "cortez",
+        "accommodation",
+        "voucher",
+        "clackamas",
+        "release",
+        "port",
+        "jane",
+        "housing",
+        "authority",
+        "claim",
+        "process"
+      ],
+      "matched_fields": [
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "0dc006bae96b8a6defde753a4d1277343f71590c0d72f8d6bcaec1c368e1f803",
+      "raw_cid": "bafkreianyadlv2llrjw67xtvhjgre5zuh5yvsdanol4nnpfoyhbwrypyam"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-20T16:53:12-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4=pY6igg@mail.gmail.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 12.0,
+      "matched_terms": [
+        "information",
+        "cortez",
+        "accommodation",
+        "voucher",
+        "clackamas",
+        "release",
+        "port",
+        "jane",
+        "housing",
+        "authority",
+        "claim",
+        "process"
+      ],
+      "matched_fields": [
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "60a933557bc428903035299b6c1f7d24b90fa55b43951b27f8cbbe6dfc0d5d51",
+      "raw_cid": "bafkreidavezvk66efcidanjjtnwb67jexeh2kw2dsunsp6glxzw7ydk5ke"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-20T14:24:59-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW=NwOC0k23+63LQ@mail.gmail.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 9.0,
+      "matched_terms": [
+        "information",
+        "cortez",
+        "accommodation",
+        "voucher",
+        "clackamas",
+        "release",
+        "jane",
+        "housing",
+        "authority"
+      ],
+      "matched_fields": [
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "88bb2325d71dfe2f9148176b5f21cfbbe91b6745a054e19b602faf7de5a07e94",
+      "raw_cid": "bafkreieixmrslvy57yxzcsaxnnpsdt535enwornaktqzwybpv566lid6sq"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "RE: HCV Orientation",
+      "date": "2026-03-19T17:27:27+00:00",
+      "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "to": "benjamin barber <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<384b5cd567d449f0b12b983bf00d576b@clackamas.us>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "RE: HCV Orientation",
+      "relevance_score": 5.0,
+      "matched_terms": [
+        "information",
+        "voucher",
+        "clackamas",
+        "housing",
+        "authority"
+      ],
+      "matched_fields": [
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "83e85ddea2a6f3c900f10008839352879e108e93e66eb0be645681f201ee3bec",
+      "raw_cid": "bafkreied5bo55ivg6peqb4iabcbzguuhtyii5e7gn2yl4zcwqhzad3r35q"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-19T10:29:07-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS-7kX-ZpOS-JnpgxhpG_Hm7mXxG_feovoA198VvH0V7jQ@mail.gmail.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 5.0,
+      "matched_terms": [
+        "information",
+        "voucher",
+        "clackamas",
+        "housing",
+        "authority"
+      ],
+      "matched_fields": [
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "ab4a5967ecf7922450e158611c302cbcfe0df4b1e8ce8c8ec0fd9756975b3326",
+      "raw_cid": "bafkreifljjmwp3hxsisfbykymeodalf47yg7jmpiz2gi5qh5s5ljowztey"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-19T10:56:12-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS9TCnQZBeKu2Y_Z=P3ORtUVn+8LSkWymHejw61JGu-mxA@mail.gmail.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 5.0,
+      "matched_terms": [
+        "information",
+        "voucher",
+        "clackamas",
+        "housing",
+        "authority"
+      ],
+      "matched_fields": [
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "ce9f64d4a7ef3e6a544ecded4575c1c67e4e3ed02328ff60745934f278ef02bc",
+      "raw_cid": "bafkreigot5snjj7phzvfitwn5vcxlqogpzhd5ubdfd7wa5czgtzhr3ycxq"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "RE: HCV Orientation",
+      "date": "2026-03-19T20:43:19+00:00",
+      "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "to": "benjamin barber <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<f9ca224dab4a4487bb20b9f7ff33afbe@clackamas.us>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "RE: HCV Orientation",
+      "relevance_score": 6.0,
+      "matched_terms": [
+        "information",
+        "voucher",
+        "clackamas",
+        "jane",
+        "housing",
+        "authority"
+      ],
+      "matched_fields": [
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "f6293b9e1f737325c2562ca77b4dac6e2a5e23019eb208e99de10a77d9d1149b",
+      "raw_cid": "bafkreihwfe5z4h3toms4evrmu55u3ldofjpcgam6wieothpbbj35tuiutm"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "bwilliams@clackamas.us",
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: Additional Information Needed",
+      "date": "2026-03-18T11:09:54-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us",
+      "cc": "",
+      "message_id_header": "<CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA@mail.gmail.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Re: Additional Information Needed",
+      "relevance_score": 16.0,
+      "matched_terms": [
+        "information",
+        "needed",
+        "additional",
+        "accommodation",
+        "voucher",
+        "clackamas",
+        "jane",
+        "housing",
+        "authority",
+        "process"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "84ee521a6c3d7c177a564a31fb82e2094c3612d22a83ece06b49925aa37df33e",
+      "raw_cid": "bafkreiee5zjbu3b5pqlxuvskgh5yfyqjjq3bfurkqpwoa22jsjnkg7pthy"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "RE: HCV Orientation",
+      "date": "2026-03-18T20:33:26+00:00",
+      "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "to": "benjamin barber <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<b55920d9a97647479a3c38e12644c076@clackamas.us>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "RE: HCV Orientation",
+      "relevance_score": 5.0,
+      "matched_terms": [
+        "information",
+        "cortez",
+        "clackamas",
+        "housing",
+        "authority"
+      ],
+      "matched_fields": [
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "5890b4e6700a648c406303b18d333fc75489bb98602ee57e00947f31344ca05b",
+      "raw_cid": "bafkreicysc2om4akmsgeayydwggtgp6hkse3xgdaf3sx4aeup4ytitfalm"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "RE: Additional Information Needed",
+      "date": "2026-03-17T16:04:43+00:00",
+      "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "to": "benjamin barber <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<55f61a7b68d240a1833f0ab5afac2469@clackamas.us>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "RE: Additional Information Needed",
+      "relevance_score": 16.0,
+      "matched_terms": [
+        "information",
+        "needed",
+        "additional",
+        "accommodation",
+        "voucher",
+        "clackamas",
+        "jane",
+        "housing",
+        "authority",
+        "process"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "e27e8b03d1eb4a135bb826369282ea001ec9b7746d1326cc95c080638e51f6a4",
+      "raw_cid": "bafkreihcp2fqhupljijvxobgg2jif2qad3e3o5dncmtmzfoaqbry4upwuq"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "bwilliams@clackamas.us",
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: Additional Information Needed",
+      "date": "2026-03-17T09:54:04-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <ktilton@clackamas.us>, bwilliams@clackamas.us",
+      "cc": "",
+      "message_id_header": "<CAMTdTS8rnBQo0=y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg@mail.gmail.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Re: Additional Information Needed",
+      "relevance_score": 16.0,
+      "matched_terms": [
+        "information",
+        "needed",
+        "additional",
+        "accommodation",
+        "voucher",
+        "clackamas",
+        "jane",
+        "housing",
+        "authority",
+        "process"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "e5e99f53f93867334f5d136247ceda42f5490c37f2ce53d9678c8bc38c2cf086",
+      "raw_cid": "bafkreihf5gpvh6jym4zu6xitmjd45wsc6veqyn7szzj5sz4mrpbyylhqqy"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "RE: Additional Information Needed",
+      "date": "2026-03-17T18:58:37+00:00",
+      "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "to": "benjamin barber <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<bed8c9d31d4c47fc8d1ff83b8ccd8eb6@clackamas.us>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "RE: Additional Information Needed",
+      "relevance_score": 16.0,
+      "matched_terms": [
+        "information",
+        "needed",
+        "additional",
+        "accommodation",
+        "voucher",
+        "clackamas",
+        "jane",
+        "housing",
+        "authority",
+        "process"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "495b1da46da6bbc1d5567a8985af82ec67019dc39695931839c222eb322ce3b5",
+      "raw_cid": "bafkreicjlmo2i3ngxpa5kvt2rgc27axmm4az3q4wswjrqoocelvtelhdwu"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "HCV Orientation",
+      "date": "2026-03-17T19:29:55+00:00",
+      "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "to": "benjamin barber <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<92208aa189a24a18ac05be75916b5107@clackamas.us>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "HCV Orientation",
+      "relevance_score": 4.0,
+      "matched_terms": [
+        "information",
+        "clackamas",
+        "housing",
+        "authority"
+      ],
+      "matched_fields": [
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "21c8b207d908694005299c1a99890c739b24b3e4e43a66a86ab14a910993171b",
+      "raw_cid": "bafkreibbzczapwiinfaakkm4dkmysddttmslhzhehjtkq2vrjkiqteyxdm"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: Additional Information Needed",
+      "date": "2026-03-17T17:27:50-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS-NGnRbXO_zyzzak_f-fJR-1wUgdr69qP0YehfvXdAyxg@mail.gmail.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Re: Additional Information Needed",
+      "relevance_score": 16.0,
+      "matched_terms": [
+        "information",
+        "needed",
+        "additional",
+        "accommodation",
+        "voucher",
+        "clackamas",
+        "jane",
+        "housing",
+        "authority",
+        "process"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "9189a93a3e02783a70108b5e7b7f3a527d0edf9f659d983e2f92f9f9b4868ff4",
+      "raw_cid": "bafkreierrgutupqcpa5haeellz5x6osspuhn7h3ftwmd4l4s7h43jbup6q"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "bwilliams@clackamas.us",
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: Additional Information Needed",
+      "date": "2026-03-17T17:31:01-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us",
+      "cc": "",
+      "message_id_header": "<CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9=aZ7Jvz=74gmqGdA@mail.gmail.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Re: Additional Information Needed",
+      "relevance_score": 16.0,
+      "matched_terms": [
+        "information",
+        "needed",
+        "additional",
+        "accommodation",
+        "voucher",
+        "clackamas",
+        "jane",
+        "housing",
+        "authority",
+        "process"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "d59876a52b7e19163b5f83d03ba2951b9a4fc3bf960a6147b9be96f617b36fa6",
+      "raw_cid": "bafkreigvtb3kkk36deldwx4d2a52ffi3tjh4hp4wbjqupon6s33bpm3puy"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-17T17:34:42-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS8OfKupu4q4GPc8CCFK7EfVKmxejh5uvmCHf=9Jrsi5+g@mail.gmail.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 4.0,
+      "matched_terms": [
+        "information",
+        "clackamas",
+        "housing",
+        "authority"
+      ],
+      "matched_fields": [
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "9e5c45d468a5e4c3388a43cf69fcd3e98cd0d91a8255264346d303724e9fe3e2",
+      "raw_cid": "bafkreie6lrc5i2ff4tbtrcsdz5u7zu7jrtinsguckutegrwtanze5h7d4i"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "bwilliams@clackamas.us",
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: Additional Information Needed",
+      "date": "2026-03-17T17:51:59-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us",
+      "cc": "",
+      "message_id_header": "<CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw@mail.gmail.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Re: Additional Information Needed",
+      "relevance_score": 16.0,
+      "matched_terms": [
+        "information",
+        "needed",
+        "additional",
+        "accommodation",
+        "voucher",
+        "clackamas",
+        "jane",
+        "housing",
+        "authority",
+        "process"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "89eb3a01e8c55b3c71b2b3727115316aa3d8723213cba87884f9c701bf4e7d12",
+      "raw_cid": "bafkreiej5m5ad2gflm6hdmvtojyrkmlkupmhemqtzouhrbhzy4a36tt5ci"
+    }
+  ],
+  "mediator_evidence_records": [
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-21T17:04:21-07:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS9NEWAUyCO506wH81m2=8f7gyRPWR6C8RA9FApvMzxDRw@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "RE: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: RE: HCV Orientation\nFrom: \"Tilton, Kati\" <KTilton@clackamas.us>\nTo: benjamin barber <starworks5@gmail.com>\nDate: 2026-03-20T22:54:20+00:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<0cb1a9bce9ce436ba29b873de4aef556@clackamas.us>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-20T16:02:01-07:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS9baFybogyP5synzuGhf-OV=yAMTgrZNdG=k=9HBKfvhA@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-20T16:09:59-07:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC=pg@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-20T16:53:12-07:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4=pY6igg@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-20T14:24:59-07:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW=NwOC0k23+63LQ@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "RE: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: RE: HCV Orientation\nFrom: \"Tilton, Kati\" <KTilton@clackamas.us>\nTo: benjamin barber <starworks5@gmail.com>\nDate: 2026-03-19T17:27:27+00:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<384b5cd567d449f0b12b983bf00d576b@clackamas.us>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-19T10:29:07-07:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS-7kX-ZpOS-JnpgxhpG_Hm7mXxG_feovoA198VvH0V7jQ@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-19T10:56:12-07:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS9TCnQZBeKu2Y_Z=P3ORtUVn+8LSkWymHejw61JGu-mxA@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "RE: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: RE: HCV Orientation\nFrom: \"Tilton, Kati\" <KTilton@clackamas.us>\nTo: benjamin barber <starworks5@gmail.com>\nDate: 2026-03-19T20:43:19+00:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<f9ca224dab4a4487bb20b9f7ff33afbe@clackamas.us>"
+      }
+    },
+    {
+      "title": "Re: Additional Information Needed",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: Additional Information Needed\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us\nDate: 2026-03-18T11:09:54-07:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "RE: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: RE: HCV Orientation\nFrom: \"Tilton, Kati\" <KTilton@clackamas.us>\nTo: benjamin barber <starworks5@gmail.com>\nDate: 2026-03-18T20:33:26+00:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<b55920d9a97647479a3c38e12644c076@clackamas.us>"
+      }
+    },
+    {
+      "title": "RE: Additional Information Needed",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: RE: Additional Information Needed\nFrom: \"Tilton, Kati\" <KTilton@clackamas.us>\nTo: benjamin barber <starworks5@gmail.com>\nDate: 2026-03-17T16:04:43+00:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<55f61a7b68d240a1833f0ab5afac2469@clackamas.us>"
+      }
+    },
+    {
+      "title": "Re: Additional Information Needed",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: Additional Information Needed\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <ktilton@clackamas.us>, bwilliams@clackamas.us\nDate: 2026-03-17T09:54:04-07:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS8rnBQo0=y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "RE: Additional Information Needed",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: RE: Additional Information Needed\nFrom: \"Tilton, Kati\" <KTilton@clackamas.us>\nTo: benjamin barber <starworks5@gmail.com>\nDate: 2026-03-17T18:58:37+00:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<bed8c9d31d4c47fc8d1ff83b8ccd8eb6@clackamas.us>"
+      }
+    },
+    {
+      "title": "HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: HCV Orientation\nFrom: \"Tilton, Kati\" <KTilton@clackamas.us>\nTo: benjamin barber <starworks5@gmail.com>\nDate: 2026-03-17T19:29:55+00:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<92208aa189a24a18ac05be75916b5107@clackamas.us>"
+      }
+    },
+    {
+      "title": "Re: Additional Information Needed",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: Additional Information Needed\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-17T17:27:50-07:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS-NGnRbXO_zyzzak_f-fJR-1wUgdr69qP0YehfvXdAyxg@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "Re: Additional Information Needed",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: Additional Information Needed\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us\nDate: 2026-03-17T17:31:01-07:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9=aZ7Jvz=74gmqGdA@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-17T17:34:42-07:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS8OfKupu4q4GPc8CCFK7EfVKmxejh5uvmCHf=9Jrsi5+g@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "Re: Additional Information Needed",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: Additional Information Needed\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us\nDate: 2026-03-17T17:51:59-07:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw@mail.gmail.com>"
+      }
+    }
+  ]
+}

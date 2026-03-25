@@ -244,6 +244,62 @@ class HACCGroundedPipelineTests(unittest.TestCase):
             upload_candidates_payload = json.loads((output_root / "upload_candidates.json").read_text(encoding="utf-8"))
             self.assertEqual(upload_candidates_payload[0]["relative_path"], "README.md")
 
+    def test_run_grounded_pipeline_passes_grounded_seed_prompts_to_adversarial_batch(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            fake_grounding = {
+                "status": "success",
+                "query": "retaliation grievance appeal",
+                "claim_type": "housing_discrimination",
+                "evidence_summary": "Grounded HACC grievance-hearing evidence.",
+                "anchor_sections": ["grievance_hearing", "appeal_rights"],
+                "anchor_passages": [{"title": "ADMINISTRATIVE PLAN", "snippet": "Informal review rights.", "section_labels": ["grievance_hearing"]}],
+                "upload_candidates": [{"title": "ADMINISTRATIVE PLAN", "relative_path": "ADMINISTRATIVE_PLAN.pdf", "source_path": "/tmp/ADMINISTRATIVE_PLAN.pdf"}],
+                "mediator_evidence_packets": [{"source_path": "/tmp/ADMINISTRATIVE_PLAN.pdf", "document_label": "ADMINISTRATIVE PLAN"}],
+                "external_research_bundle": {"legal_authorities": {"results": [{"citation": "24 C.F.R. 982.555"}]}, "web_discovery": {"results": []}},
+                "synthetic_prompts": {
+                    "complaint_chatbot_prompt": "Ground the complaint chatbot. Review these legal or caselaw authorities: 24 C.F.R. 982.555, Grievance Procedures (HUD guidance).",
+                    "legal_authority_research_prompt": "Search for statutes, regulations, HUD guidance, and caselaw. Start with: 24 C.F.R. 982.555, Grievance Procedures (HUD guidance).",
+                    "workflow_phase_priorities": ["intake_questioning", "document_generation"],
+                    "blocker_objectives": ["hearing_request_timing"],
+                    "extraction_targets": ["response_timeline"],
+                },
+            }
+            fake_upload = {
+                "status": "success",
+                "upload_count": 1,
+                "uploads": [{"title": "ADMINISTRATIVE PLAN"}],
+            }
+            fake_adversarial_summary = {
+                "statistics": {"successful_sessions": 1, "total_sessions": 1},
+                "best_complaint": {"score": 0.91},
+                "artifacts": {"output_dir": str(Path(tmpdir) / "adversarial")},
+            }
+
+            with mock.patch.object(pipeline, "HACCResearchEngine") as engine_cls:
+                engine = engine_cls.return_value
+                engine.build_grounding_bundle.return_value = fake_grounding
+                engine.simulate_evidence_upload.return_value = fake_upload
+                with mock.patch.object(
+                    pipeline,
+                    "run_hacc_adversarial_batch",
+                    return_value=fake_adversarial_summary,
+                ) as batch_mock:
+                    pipeline.run_hacc_grounded_pipeline(
+                        output_dir=tmpdir,
+                        query="retaliation grievance appeal",
+                        hacc_preset="core_hacc_policies",
+                        hacc_search_mode="package",
+                        demo=True,
+                        num_sessions=2,
+                    )
+
+            seed_complaints = batch_mock.call_args.kwargs["seed_complaints"]
+            self.assertEqual(len(seed_complaints), 2)
+            self.assertEqual(seed_complaints[0]["type"], "housing_discrimination")
+            self.assertEqual(seed_complaints[0]["key_facts"]["synthetic_prompts"]["legal_authority_research_prompt"], fake_grounding["synthetic_prompts"]["legal_authority_research_prompt"])
+            self.assertIn("24 C.F.R. 982.555", seed_complaints[0]["key_facts"]["synthetic_prompts"]["complaint_chatbot_prompt"])
+            self.assertEqual(seed_complaints[0]["key_facts"]["workflow_phase_priorities"], ["intake_questioning", "document_generation"])
+
     def test_run_grounded_pipeline_defaults_to_codex_provider_and_model(self) -> None:
         with tempfile.TemporaryDirectory() as tmpdir:
             fake_grounding = {

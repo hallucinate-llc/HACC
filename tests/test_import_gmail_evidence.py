@@ -60,6 +60,23 @@ def test_message_matches_recipient_address_filter() -> None:
     assert not module._message_matches_addresses(message, set(), recipient_targets={"manager@example.org"})
 
 
+def test_message_matches_domain_filter() -> None:
+    message = _build_sample_message()
+
+    assert module._message_matches_addresses(message, set(), domain_targets={"example.org"})
+    assert module._message_matches_addresses(message, set(), domain_targets={"example.com"})
+    assert not module._message_matches_addresses(message, set(), domain_targets={"clackamas.us"})
+
+
+def test_message_matches_from_and_recipient_domain_filters() -> None:
+    message = _build_sample_message()
+
+    assert module._message_matches_addresses(message, set(), from_domain_targets={"example.org"})
+    assert not module._message_matches_addresses(message, set(), from_domain_targets={"example.com"})
+    assert module._message_matches_addresses(message, set(), recipient_domain_targets={"example.com"})
+    assert not module._message_matches_addresses(message, set(), recipient_domain_targets={"example.org"})
+
+
 def test_load_address_targets_supports_file(tmp_path: Path) -> None:
     address_file = tmp_path / "targets.txt"
     address_file.write_text(
@@ -70,6 +87,18 @@ def test_load_address_targets_supports_file(tmp_path: Path) -> None:
     targets = module._load_address_targets(["lawyer@example.com"], [str(address_file)])
 
     assert targets == {"manager@example.org", "tenant@example.com", "lawyer@example.com"}
+
+
+def test_load_domain_targets_supports_file(tmp_path: Path) -> None:
+    domain_file = tmp_path / "domains.txt"
+    domain_file.write_text(
+        "# comment\n@clackamas.us\n\nCLACKAMS.US\n",
+        encoding="utf-8",
+    )
+
+    targets = module._load_domain_targets(["example.org"], [str(domain_file)])
+
+    assert targets == {"clackamas.us", "clackams.us", "example.org"}
 
 
 def test_load_address_targets_handles_empty_inputs() -> None:
@@ -456,6 +485,37 @@ def test_fetch_folder_messages_falls_back_to_recent_sequence_numbers_on_oversize
 
     assert len(rows) == 3
     assert fetched_ids == [b"198", b"199", b"200"]
+
+
+def test_fetch_folder_messages_batched_supports_start_offset() -> None:
+    message = _build_sample_message()
+    raw_bytes = message.as_bytes(policy=email.policy.default)
+    fetched_ids: list[bytes] = []
+
+    class _FakeConnection:
+        def select(self, _folder: str, readonly: bool = True) -> tuple[str, list[bytes]]:
+            assert readonly is True
+            return "OK", [b"20"]
+
+        def fetch(self, msg_id: bytes, _spec: str) -> tuple[str, list[tuple[None, bytes]]]:
+            fetched_ids.append(msg_id)
+            return "OK", [(None, raw_bytes)]
+
+    processor = SimpleNamespace(connection=_FakeConnection())
+
+    async def _run_fetch() -> list[tuple[bytes, EmailMessage]]:
+        return await module._fetch_folder_messages_batched(
+            processor,
+            folder="[Gmail]/All Mail",
+            batch_size=3,
+            max_messages=5,
+            start_offset=4,
+        )
+
+    rows = module.anyio.run(_run_fetch)
+
+    assert len(rows) == 5
+    assert fetched_ids == [b"12", b"13", b"14", b"15", b"16"]
 
 
 def test_import_gmail_evidence_filters_by_complaint_relevance(tmp_path: Path) -> None:

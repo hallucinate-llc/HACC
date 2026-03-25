@@ -1,0 +1,21 @@
+{
+  "manifest_path": "/home/barberb/HACC/evidence/email_imports/starworks5-today-hcv-import/email_import_manifest.json",
+  "graphrag_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-today-hcv-import/graphrag",
+  "email_count": 2,
+  "attachment_total": 0,
+  "knowledge_graph_summary": {
+    "total_entities": 7,
+    "total_relationships": 1,
+    "entity_types": {
+      "fact": 5,
+      "claim": 1,
+      "evidence": 1
+    },
+    "relationship_types": {
+      "supported_by": 1
+    },
+    "gaps": 5
+  },
+  "graph_path": "/home/barberb/HACC/evidence/email_imports/starworks5-today-hcv-import/graphrag/email_knowledge_graph.json",
+  "corpus_records_path": "/home/barberb/HACC/evidence/email_imports/starworks5-today-hcv-import/graphrag/email_corpus_records.json"
+}

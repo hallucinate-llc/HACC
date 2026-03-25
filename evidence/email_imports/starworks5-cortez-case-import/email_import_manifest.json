@@ -1,0 +1,140 @@
+{
+  "status": "success",
+  "server": "imap.gmail.com",
+  "username": "starworks5@gmail.com",
+  "auth_mode": "gmail_app_password",
+  "folders": [
+    "[Gmail]/All Mail"
+  ],
+  "search": "SINCE \"1-Jan-2024\" SUBJECT \"Jane Kay Cortez vs Solomon Samuel Barber\"",
+  "complaint_terms": [
+    "cortez",
+    "barber",
+    "clackamas",
+    "housing",
+    "jane",
+    "kay",
+    "solomon",
+    "samuel",
+    "authority"
+  ],
+  "min_relevance_score": 1.0,
+  "address_targets": [
+    "aferron@clackamas.us",
+    "bwilliams@clackamas.us",
+    "jemilahar@clackamas.us",
+    "ktilton@clackamas.us"
+  ],
+  "from_address_targets": [],
+  "recipient_address_targets": [],
+  "scanned_message_count": 2,
+  "matched_email_count": 2,
+  "output_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-cortez-case-import",
+  "cache_index_path": "/home/barberb/HACC/evidence/email_imports/_email_cache/email_cache_index.json",
+  "emails": [
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "jemilahar@clackamas.us",
+        "jemilahar@clackams.us",
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Jane Kay Cortez vs Solomon Samuel Barber",
+      "date": "2026-03-10T10:23:59-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Hart, Jemila\" <jemilahar@clackamas.us>, jemilahar@clackams.us, \"Tilton, Kati\" <ktilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS_qU7gFwuOu4YECf8qMabwbeC4i0SKyFvA5pPsYg5p41w@mail.gmail.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Jane Kay Cortez vs Solomon Samuel Barber",
+      "relevance_score": 19.0,
+      "matched_terms": [
+        "cortez",
+        "barber",
+        "jane",
+        "kay",
+        "solomon",
+        "samuel",
+        "clackamas"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "976ce4053862c787ce4632e585611a57556f3688c74dec6bd601404a41d33e28",
+      "raw_cid": "bafkreiexntsakodcy6d44rrs4wcwcgsxkvxtncghjxwgxvqbibfeduz6fa"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "jemilahar@clackamas.us",
+        "jemilahar@clackams.us",
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: Jane Kay Cortez vs Solomon Samuel Barber",
+      "date": "2026-03-10T10:34:37-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Hart, Jemila\" <jemilahar@clackamas.us>, jemilahar@clackams.us, \"Tilton, Kati\" <ktilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS_-U7ZEPESJ_fDOmiStMGq6rNW9rXToQPH7ZtkDnSr-cw@mail.gmail.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Re: Jane Kay Cortez vs Solomon Samuel Barber",
+      "relevance_score": 19.0,
+      "matched_terms": [
+        "cortez",
+        "barber",
+        "jane",
+        "kay",
+        "solomon",
+        "samuel",
+        "clackamas"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "97d2d7a8e5b768579e71d9bd55834ed005ab756503e51f1441970b9283e46985",
+      "raw_cid": "bafkreiex2ll2rznxnblz44ozxvkygtwqawvxkzid4upriqmxbojihzdjqu"
+    }
+  ],
+  "mediator_evidence_records": [
+    {
+      "title": "Jane Kay Cortez vs Solomon Samuel Barber",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Jane Kay Cortez vs Solomon Samuel Barber\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Hart, Jemila\" <jemilahar@clackamas.us>, jemilahar@clackams.us, \"Tilton, Kati\" <ktilton@clackamas.us>\nDate: 2026-03-10T10:23:59-07:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS_qU7gFwuOu4YECf8qMabwbeC4i0SKyFvA5pPsYg5p41w@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "Re: Jane Kay Cortez vs Solomon Samuel Barber",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: Jane Kay Cortez vs Solomon Samuel Barber\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Hart, Jemila\" <jemilahar@clackamas.us>, jemilahar@clackams.us, \"Tilton, Kati\" <ktilton@clackamas.us>\nDate: 2026-03-10T10:34:37-07:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS_-U7ZEPESJ_fDOmiStMGq6rNW9rXToQPH7ZtkDnSr-cw@mail.gmail.com>"
+      }
+    }
+  ]
+}

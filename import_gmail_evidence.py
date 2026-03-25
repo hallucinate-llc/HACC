@@ -83,6 +83,23 @@ def _load_address_targets(raw_addresses: list[str], address_files: list[str]) ->
     return _normalize_address_values(values)
 
 
+def _load_domain_targets(raw_domains: list[str], domain_files: list[str]) -> set[str]:
+    values = list(raw_domains)
+    for file_path in domain_files:
+        path = Path(file_path).expanduser().resolve()
+        values.extend(
+            line.strip()
+            for line in path.read_text(encoding="utf-8").splitlines()
+            if line.strip() and not line.lstrip().startswith("#")
+        )
+    normalized: set[str] = set()
+    for value in values:
+        cleaned = str(value or "").strip().lower().lstrip("@")
+        if cleaned:
+            normalized.add(cleaned)
+    return normalized
+
+
 def _normalize_imap_date(value: str) -> str:
     parsed = datetime.fromisoformat(str(value).strip())
     return f"{parsed.day}-{parsed.strftime('%b')}-{parsed.year}"
@@ -192,18 +209,43 @@ def _message_recipient_addresses(email_message: EmailMessage) -> set[str]:
     )
 
 
+def _addresses_match_domains(addresses: set[str], domains: set[str]) -> bool:
+    if not domains:
+        return False
+    for address in addresses:
+        if "@" not in address:
+            continue
+        domain = address.rsplit("@", 1)[-1].lower()
+        if domain in domains:
+            return True
+    return False
+
+
 def _message_matches_addresses(
     email_message: EmailMessage,
     targets: set[str],
     *,
     from_targets: set[str] | None = None,
     recipient_targets: set[str] | None = None,
+    domain_targets: set[str] | None = None,
+    from_domain_targets: set[str] | None = None,
+    recipient_domain_targets: set[str] | None = None,
 ) -> bool:
     if not targets:
         targets = set()
     from_targets = from_targets or set()
     recipient_targets = recipient_targets or set()
-    if not targets and not from_targets and not recipient_targets:
+    domain_targets = domain_targets or set()
+    from_domain_targets = from_domain_targets or set()
+    recipient_domain_targets = recipient_domain_targets or set()
+    if (
+        not targets
+        and not from_targets
+        and not recipient_targets
+        and not domain_targets
+        and not from_domain_targets
+        and not recipient_domain_targets
+    ):
         return True
     participants = _message_participants(email_message)
     senders = _message_sender_addresses(email_message)
@@ -213,6 +255,12 @@ def _message_matches_addresses(
     if from_targets and senders & from_targets:
         return True
     if recipient_targets and recipients & recipient_targets:
+        return True
+    if domain_targets and _addresses_match_domains(participants, domain_targets):
+        return True
+    if from_domain_targets and _addresses_match_domains(senders, from_domain_targets):
+        return True
+    if recipient_domain_targets and _addresses_match_domains(recipients, recipient_domain_targets):
         return True
     return False
 
@@ -526,6 +574,7 @@ async def _fetch_folder_messages_batched(
     folder: str,
     batch_size: int,
     max_messages: int,
+    start_offset: int = 0,
 ) -> list[tuple[bytes, EmailMessage]]:
     def _fetch() -> list[tuple[bytes, EmailMessage]]:
         status, count_data = processor.connection.select(_quote_imap_mailbox(folder), readonly=True)
@@ -534,15 +583,18 @@ async def _fetch_folder_messages_batched(
         total_messages = int((count_data or [b"0"])[0] or b"0")
         if total_messages <= 0:
             return []
-        remaining = max(0, int(max_messages))
+        total_window = max(0, int(max_messages))
+        if total_window <= 0:
+            return []
         rows: list[tuple[bytes, EmailMessage]] = []
-        high = total_messages
+        offset = max(0, int(start_offset))
+        high_bound = max(0, total_messages - offset)
+        low_bound = max(1, high_bound - total_window + 1)
         step = max(1, int(batch_size))
-        while high > 0 and remaining > 0:
-            low = max(1, high - step + 1)
+        low = low_bound
+        while low <= high_bound and high_bound > 0:
+            high = min(high_bound, low + step - 1)
             ids = [str(value).encode("ascii") for value in range(low, high + 1)]
-            if remaining < len(ids):
-                ids = ids[-remaining:]
             for msg_id in ids:
                 status, msg_data = processor.connection.fetch(msg_id, "(RFC822)")
                 if status != "OK":
@@ -550,17 +602,28 @@ async def _fetch_folder_messages_batched(
                 raw_bytes = msg_data[0][1]
                 msg = email.message_from_bytes(raw_bytes, policy=email.policy.default)
                 rows.append((raw_bytes, msg))
-            remaining -= len(ids)
-            high = low - 1
+            low = high + 1
         return rows
 
     return await anyio.to_thread.run_sync(_fetch)
 
 
 async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
-    targets = _load_address_targets(args.address, args.address_file)
-    from_targets = _load_address_targets(args.from_address, args.from_address_file)
-    recipient_targets = _load_address_targets(args.to_address, args.to_address_file)
+    targets = _load_address_targets(getattr(args, "address", []), getattr(args, "address_file", []))
+    from_targets = _load_address_targets(getattr(args, "from_address", []), getattr(args, "from_address_file", []))
+    recipient_targets = _load_address_targets(getattr(args, "to_address", []), getattr(args, "to_address_file", []))
+    domain_targets = _load_domain_targets(
+        getattr(args, "address_domain", []),
+        getattr(args, "address_domain_file", []),
+    )
+    from_domain_targets = _load_domain_targets(
+        getattr(args, "from_domain", []),
+        getattr(args, "from_domain_file", []),
+    )
+    recipient_domain_targets = _load_domain_targets(
+        getattr(args, "to_domain", []),
+        getattr(args, "to_domain_file", []),
+    )
     complaint_terms = _build_complaint_terms(args)
     search_criteria = _build_search_criteria(args)
     output_root = Path(args.output_dir).expanduser().resolve()
@@ -604,6 +667,7 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
                     folder=folder,
                     batch_size=int(getattr(args, "crawl_batch_size", 250) or 250),
                     max_messages=int(getattr(args, "crawl_max_messages", 0) or 0),
+                    start_offset=int(getattr(args, "crawl_start_offset", 0) or 0),
                 )
             else:
                 rows = await _fetch_folder_messages(
@@ -620,6 +684,9 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
                     targets,
                     from_targets=from_targets,
                     recipient_targets=recipient_targets,
+                    domain_targets=domain_targets,
+                    from_domain_targets=from_domain_targets,
+                    recipient_domain_targets=recipient_domain_targets,
                 ):
                     continue
                 relevance = _score_message_relevance(email_message, complaint_terms)
@@ -740,6 +807,9 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
         "address_targets": sorted(targets),
         "from_address_targets": sorted(from_targets),
         "recipient_address_targets": sorted(recipient_targets),
+        "domain_targets": sorted(domain_targets),
+        "from_domain_targets": sorted(from_domain_targets),
+        "recipient_domain_targets": sorted(recipient_domain_targets),
         "scanned_message_count": scanned_message_count,
         "matched_email_count": len(matched_records),
         "output_dir": str(run_dir),
@@ -792,6 +862,9 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
             "address_targets": sorted(targets),
             "from_address_targets": sorted(from_targets),
             "recipient_address_targets": sorted(recipient_targets),
+            "domain_targets": sorted(domain_targets),
+            "from_domain_targets": sorted(from_domain_targets),
+            "recipient_domain_targets": sorted(recipient_domain_targets),
             "scanned_message_count": scanned_message_count,
             "matched_email_count": len(preview_records),
             "preview": preview_records,
@@ -885,6 +958,18 @@ def build_parser() -> argparse.ArgumentParser:
         help="Path to newline-delimited address list.",
     )
     parser.add_argument(
+        "--address-domain",
+        action="append",
+        default=[],
+        help="Email domain to match in any participant header, e.g. clackamas.us. Repeat as needed.",
+    )
+    parser.add_argument(
+        "--address-domain-file",
+        action="append",
+        default=[],
+        help="Path to newline-delimited participant domain list.",
+    )
+    parser.add_argument(
         "--from-address",
         action="append",
         default=[],
@@ -897,6 +982,18 @@ def build_parser() -> argparse.ArgumentParser:
         help="Path to newline-delimited sender address list.",
     )
     parser.add_argument(
+        "--from-domain",
+        action="append",
+        default=[],
+        help="Match only sender-side domains, e.g. clackamas.us. Repeat as needed.",
+    )
+    parser.add_argument(
+        "--from-domain-file",
+        action="append",
+        default=[],
+        help="Path to newline-delimited sender domain list.",
+    )
+    parser.add_argument(
         "--to-address",
         action="append",
         default=[],
@@ -907,6 +1004,18 @@ def build_parser() -> argparse.ArgumentParser:
         action="append",
         default=[],
         help="Path to newline-delimited recipient address list.",
+    )
+    parser.add_argument(
+        "--to-domain",
+        action="append",
+        default=[],
+        help="Match only recipient-side domains, e.g. clackamas.us. Repeat as needed.",
+    )
+    parser.add_argument(
+        "--to-domain-file",
+        action="append",
+        default=[],
+        help="Path to newline-delimited recipient domain list.",
     )
     parser.add_argument("--search", default="ALL", help='Raw IMAP search criteria, e.g. FROM "person@example.com"')
     parser.add_argument("--since-date", default=None, help="ISO date like 2026-01-01 to add a SINCE filter.")
@@ -947,6 +1056,12 @@ def build_parser() -> argparse.ArgumentParser:
         type=int,
         default=250,
         help="Batch size for client-side batched crawling.",
+    )
+    parser.add_argument(
+        "--crawl-start-offset",
+        type=int,
+        default=0,
+        help="Skip this many newest messages before starting a batched crawl.",
     )
     parser.add_argument("--timeout", type=int, default=30, help="IMAP timeout seconds")
     parser.add_argument("--no-ssl", action="store_true", help="Disable SSL/TLS")

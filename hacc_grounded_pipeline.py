@@ -9,7 +9,7 @@ import json
 import sys
 from datetime import UTC, datetime
 from pathlib import Path
-from typing import Any, Dict, Optional
+from typing import Any, Dict, List, Optional
 
 
 REPO_ROOT = Path(__file__).resolve().parent
@@ -77,6 +77,73 @@ def _grounding_overview(grounding_bundle: Dict[str, Any], upload_report: Dict[st
         "uploaded_evidence_count": int(upload_report.get("upload_count") or len(uploads) or 0),
         "top_documents": top_titles,
     }
+
+
+def _build_adversarial_seed_complaints(
+    *,
+    grounding_bundle: Dict[str, Any],
+    grounding_overview: Dict[str, Any],
+    query: str,
+    claim_type: str,
+    count: int,
+) -> List[Dict[str, Any]]:
+    synthetic_prompts = dict(grounding_bundle.get("synthetic_prompts") or {})
+    upload_candidates = [
+        dict(item)
+        for item in list(grounding_bundle.get("upload_candidates") or [])
+        if isinstance(item, dict)
+    ]
+    anchor_passages = [
+        dict(item)
+        for item in list(grounding_bundle.get("anchor_passages") or [])
+        if isinstance(item, dict)
+    ]
+    mediator_packets = [
+        dict(item)
+        for item in list(grounding_bundle.get("mediator_evidence_packets") or [])
+        if isinstance(item, dict)
+    ]
+    anchor_sections = [str(item) for item in list(grounding_bundle.get("anchor_sections") or []) if str(item)]
+    top_documents = [str(item) for item in list(grounding_overview.get("top_documents") or []) if str(item)]
+    evidence_summary = str(grounding_bundle.get("evidence_summary") or grounding_overview.get("evidence_summary") or "").strip()
+    description = evidence_summary or f"Grounded HACC evidence for '{query}'"
+
+    base_seed = {
+        "template_id": f"hacc-grounded::{claim_type}",
+        "type": claim_type,
+        "category": "hacc_grounded",
+        "description": description,
+        "summary": description,
+        "key_facts": {
+            "incident_summary": description,
+            "evidence_query": query,
+            "evidence_summary": evidence_summary,
+            "anchor_sections": anchor_sections,
+            "anchor_passages": anchor_passages,
+            "supporting_evidence": upload_candidates,
+            "mediator_evidence_packets": mediator_packets,
+            "supporting_documents": top_documents,
+            "synthetic_prompts": synthetic_prompts,
+            "search_summary": dict(grounding_bundle.get("search_summary") or {}),
+            "external_research_bundle": dict(grounding_bundle.get("external_research_bundle") or {}),
+            "chronology_analysis": dict(grounding_bundle.get("chronology_analysis") or {}),
+            "claim_support_temporal_handoff": dict(grounding_bundle.get("claim_support_temporal_handoff") or {}),
+            "drafting_readiness": dict(grounding_bundle.get("drafting_readiness") or {}),
+            "document_generation_handoff": dict(grounding_bundle.get("document_generation_handoff") or {}),
+            "workflow_phase_priorities": list(synthetic_prompts.get("workflow_phase_priorities") or []),
+            "blocker_objectives": list(synthetic_prompts.get("blocker_objectives") or []),
+            "extraction_targets": list(synthetic_prompts.get("extraction_targets") or []),
+        },
+    }
+
+    seed_count = max(1, int(count or 1))
+    return [
+        {
+            **base_seed,
+            "template_id": f"{base_seed['template_id']}::{index + 1}",
+        }
+        for index in range(seed_count)
+    ]
 
 
 def _default_grounding_request(hacc_preset: str) -> Dict[str, str]:
@@ -354,6 +421,14 @@ def run_hacc_grounded_pipeline(
             },
         )
 
+    adversarial_seed_complaints = _build_adversarial_seed_complaints(
+        grounding_bundle=grounding_bundle,
+        grounding_overview=grounding_overview,
+        query=grounding_query,
+        claim_type=resolved_claim_type,
+        count=num_sessions,
+    )
+
     adversarial_summary = _load_json_if_exists(adversarial_path) if reuse_existing_artifacts else None
     if adversarial_summary is None and reuse_existing_artifacts:
         adversarial_summary = _load_json_if_exists(output_root / "adversarial" / "run_summary.json")
@@ -382,6 +457,7 @@ def run_hacc_grounded_pipeline(
             backend_id=backend_id,
             provider=resolved_provider,
             model=resolved_model,
+            seed_complaints=adversarial_seed_complaints,
         )
     else:
         _write_pipeline_progress(

@@ -1,0 +1,131 @@
+{
+  "status": "success",
+  "server": "imap.gmail.com",
+  "username": "starworks5@gmail.com",
+  "auth_mode": "gmail_app_password",
+  "folders": [
+    "[Gmail]/All Mail"
+  ],
+  "search": "SINCE \"24-Mar-2026\" SUBJECT \"HCV Orientation\"",
+  "complaint_terms": [
+    "hcv",
+    "orientation",
+    "voucher",
+    "accommodation",
+    "clackamas",
+    "cortez",
+    "jane"
+  ],
+  "min_relevance_score": 1.0,
+  "address_targets": [
+    "ktilton@clackamas.us"
+  ],
+  "from_address_targets": [],
+  "recipient_address_targets": [],
+  "scanned_message_count": 2,
+  "matched_email_count": 2,
+  "output_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-today-hcv-import",
+  "cache_index_path": "/home/barberb/HACC/evidence/email_imports/_email_cache/email_cache_index.json",
+  "emails": [
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-24T13:32:22-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS9omi8-gsK+_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw@mail.gmail.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 11.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "accommodation",
+        "clackamas",
+        "cortez",
+        "jane"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "105f988e6e8e333f1a91a48b1fcf715af2d5f79ad681157c8d792120aeb148a0",
+      "raw_cid": "bafkreiaql6mi43uogm7rvenermp464k26lk7pgwwqekxzdlzeeqk5mkiua"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": ".",
+      "email_path": ".",
+      "parsed_path": ".",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-24T14:05:28-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw@mail.gmail.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 11.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "accommodation",
+        "clackamas",
+        "cortez",
+        "jane"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": true,
+      "raw_sha256": "3e1db001966afada8a2258e63c42673c948762bc4162c466f7be6aece1d39189",
+      "raw_cid": "bafkreib6dwyadftk7lniuisy4y6eezz4ssdwfpcbmlcgn556nlwodu4rre"
+    }
+  ],
+  "mediator_evidence_records": [
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-24T13:32:22-07:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS9omi8-gsK+_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-24T14:05:28-07:00\nSaved email: .",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": ".",
+        "parsed_path": ".",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw@mail.gmail.com>"
+      }
+    }
+  ]
+}
