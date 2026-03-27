@@ -687,6 +687,118 @@ def _build_pleading_timeline(payload: dict[str, Any], chronology_dir: Path) -> d
     return summary
 
 
+def _source_display_name(source_path: str) -> str:
+    return Path(source_path).stem.replace("_", " ").replace("-", " ")
+
+
+def _clean_fact_text(text: str) -> str:
+    cleaned = _clean_text(text).rstrip(".")
+    cleaned = cleaned.replace("...", "")
+    return cleaned.strip()
+
+
+def _format_fact_date(raw_date: str) -> str:
+    parsed = _parse_human_date(raw_date)
+    if parsed is None:
+        return raw_date
+    if "T" in raw_date:
+        return parsed.strftime("%B %d, %Y at %I:%M %p %z")
+    return raw_date
+
+
+def _excerpt_for_pleading(snippet: str, limit: int = 180) -> str:
+    cleaned = _clean_fact_text(snippet)
+    if len(cleaned) <= limit:
+        return cleaned
+    truncated = cleaned[: limit - 1].rsplit(" ", 1)[0].strip()
+    return f"{truncated}..."
+
+
+def _email_participants(snippet: str) -> tuple[str, str] | None:
+    match = re.search(r"From\s+(.+?)\s+to\s+(.+?)\s+on\s+", snippet, flags=re.IGNORECASE)
+    if not match:
+        return None
+    sender = _clean_text(match.group(1))
+    recipient = _clean_text(match.group(2))
+    return sender, recipient
+
+
+def _document_fact_prefix(classification: str, title: str) -> str:
+    if classification == "notice_or_adverse_action":
+        return f"the document \"{title}\" reflects a notice or adverse action"
+    if classification == "lease_or_occupancy":
+        return f"the document \"{title}\" reflects a lease or occupancy event"
+    if classification == "financial_verification":
+        return f"the document \"{title}\" reflects a financial verification request"
+    if classification == "orientation_or_compliance":
+        return f"the document \"{title}\" reflects an orientation or compliance event"
+    if classification == "protected_status_or_vawa":
+        return f"the document \"{title}\" reflects a protected-status or VAWA-related issue"
+    if classification == "application_or_intake":
+        return f"the document \"{title}\" reflects an application or intake event"
+    return f"the document \"{title}\" reflects a relevant event"
+
+
+def _build_complaint_ready_chronology(pleading_timeline: dict[str, Any], chronology_dir: Path) -> dict[str, Any]:
+    events = list(pleading_timeline.get("events") or [])
+    json_path = chronology_dir / "complaint_ready_chronology.json"
+    md_path = chronology_dir / "complaint_ready_chronology.md"
+
+    paragraphs: list[dict[str, Any]] = []
+    for index, event in enumerate(events, start=1):
+        raw_date = str(event.get("date") or "")
+        date = _format_fact_date(raw_date)
+        source_path = str(event.get("source_path") or "")
+        label = str(event.get("event_label") or _source_display_name(source_path))
+        snippet = _clean_fact_text(str(event.get("snippet") or ""))
+        classification = str(event.get("classification") or "")
+        if label.startswith("Email thread:"):
+            subject = label.replace("Email thread:", "", 1).strip() or "Email"
+            participants = _email_participants(snippet)
+            if participants:
+                sender, recipient = participants
+                sentence = (
+                    f"On {date}, an email regarding \"{subject}\" was sent from {sender} to {recipient}. "
+                    f"Source: {source_path}."
+                )
+            else:
+                sentence = (
+                    f"On {date}, an email thread regarding \"{subject}\" reflects: \"{_excerpt_for_pleading(snippet)}\". "
+                    f"Source: {source_path}."
+                )
+        else:
+            title = _source_display_name(source_path)
+            prefix = _document_fact_prefix(classification, title)
+            sentence = (
+                f"On {date}, {prefix} stating: \"{_excerpt_for_pleading(snippet)}\". "
+                f"Source: {source_path}."
+            )
+        paragraphs.append({
+            "number": index,
+            "date": raw_date,
+            "source_path": source_path,
+            "event_label": label,
+            "paragraph": sentence,
+        })
+
+    summary = {
+        "status": "success",
+        "paragraph_count": len(paragraphs),
+        "paragraphs": paragraphs,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = ["# Complaint-Ready Chronology", "", f"Paragraph count: {len(paragraphs)}", ""]
+    if paragraphs:
+        md_lines.extend(f"{entry['number']}. {entry['paragraph']}" for entry in paragraphs)
+    else:
+        md_lines.append("No complaint-ready chronology paragraphs generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
 def _event_label_for_item(item: dict[str, Any]) -> str:
     path = str(item.get("path") or "")
     classifier = str(item.get("classification", {}).get("primary_class") or "")
@@ -953,6 +1065,7 @@ def _build_chronology_report(payload: dict[str, Any], output_dir: Path) -> dict[
     md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
     summary["litigation_timeline"] = _build_litigation_timeline(deduped, chronology_dir)
     summary["pleading_timeline"] = _build_pleading_timeline(payload, chronology_dir)
+    summary["complaint_ready_chronology"] = _build_complaint_ready_chronology(summary["pleading_timeline"], chronology_dir)
     return summary
 
 
@@ -1303,6 +1416,9 @@ def _markdown_report(payload: dict[str, Any]) -> str:
         pleading = chronology.get("pleading_timeline") or {}
         if pleading:
             lines.append(f"- Pleading timeline events extracted: {pleading.get('event_count', 0)}")
+        complaint_ready = chronology.get("complaint_ready_chronology") or {}
+        if complaint_ready:
+            lines.append(f"- Complaint-ready chronology paragraphs generated: {complaint_ready.get('paragraph_count', 0)}")
     return "\n".join(lines).strip() + "\n"
 
 
