@@ -1,0 +1,719 @@
+{
+  "metadata": {
+    "created_at": "2026-03-27T06:41:06.787466+00:00",
+    "last_updated": "2026-03-27T06:41:06.789983+00:00",
+    "version": "1.0",
+    "actor_critic": {
+      "enabled": true,
+      "entity_count": 31,
+      "relationship_count": 20,
+      "avg_entity_score": 1.9171,
+      "avg_relationship_score": 1.86,
+      "entity_score_floor": -0.3,
+      "relationship_score_floor": -0.1
+    }
+  },
+  "entities": {
+    "entity_1": {
+      "id": "entity_1",
+      "type": "fact",
+      "name": "Notice event: 8911 \u2014please text or leave a voicemail",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "8911 \u2014please text or leave a voicemail",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_2": {
+      "id": "entity_2",
+      "type": "fact",
+      "name": "Notice event: Actual notice of the proposed entry has been given Reside...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "Actual notice of the proposed entry has been given Resident as follows",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_3": {
+      "id": "entity_3",
+      "type": "fact",
+      "name": "Notice event: During all properly noticed entries, Resident shall keep ...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "During all properly noticed entries, Resident shall keep all animals under control or remove from the unit.",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_4": {
+      "id": "entity_4",
+      "type": "fact",
+      "name": "Notice event: EMAIL haccpm@clackamas.us",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "EMAIL haccpm@clackamas.us",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_5": {
+      "id": "entity_5",
+      "type": "fact",
+      "name": "Notice event: Email: \"ACCoyy @ es accamas.us",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "Email: \"ACCoyy @ es accamas.us",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_6": {
+      "id": "entity_6",
+      "type": "fact",
+      "name": "Notice event: Ey Lett message on Resident\u2019s answering machine at",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "Ey Lett message on Resident\u2019s answering machine at",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_7": {
+      "id": "entity_7",
+      "type": "fact",
+      "name": "Notice event: FIA 24-HOUR NOTICE",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "FIA 24-HOUR NOTICE",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_8": {
+      "id": "entity_8",
+      "type": "fact",
+      "name": "Notice event: IX Notice mailed to Resident by first class mail on",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "IX Notice mailed to Resident by first class mail on",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_9": {
+      "id": "entity_9",
+      "type": "fact",
+      "name": "Notice event: NOTICE TO RESIDENTS",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "NOTICE TO RESIDENTS",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_10": {
+      "id": "entity_10",
+      "type": "fact",
+      "name": "Notice event: X\\} Notice posted on door of unit at",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "X\\} Notice posted on door of unit at",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_11": {
+      "id": "entity_11",
+      "type": "fact",
+      "name": "Notice event: __ Notice given by other method allowed by written rental...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "__ Notice given by other method allowed by written rental agreement al",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_12": {
+      "id": "entity_12",
+      "type": "fact",
+      "name": "Hearing event: Estate) program, which reviews the condition of housing u...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "hearing_process",
+        "event_label": "Hearing/appeal event",
+        "description": "Estate) program, which reviews the condition of housing units and common areas to ensure",
+        "actor_score": 2.13,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.13
+      },
+      "confidence": 0.8942857142857142,
+      "source": "complaint"
+    },
+    "entity_13": {
+      "id": "entity_13",
+      "type": "date",
+      "name": "March 17, 2026",
+      "attributes": {
+        "actor_score": 2.12,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.12
+      },
+      "confidence": 0.8914285714285715,
+      "source": "complaint"
+    },
+    "entity_14": {
+      "id": "entity_14",
+      "type": "date",
+      "name": "March 23, 2026",
+      "attributes": {
+        "actor_score": 2.12,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.12
+      },
+      "confidence": 0.8914285714285715,
+      "source": "complaint"
+    },
+    "entity_15": {
+      "id": "entity_15",
+      "type": "person",
+      "name": "Dear Residents",
+      "attributes": {
+        "role": "the u",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_16": {
+      "id": "entity_16",
+      "type": "person",
+      "name": "Executive Ojrector",
+      "attributes": {
+        "role": "shannon callahan\nmarch",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_17": {
+      "id": "entity_17",
+      "type": "person",
+      "name": "Gain St",
+      "attributes": {
+        "role": "po box",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_18": {
+      "id": "entity_18",
+      "type": "date",
+      "name": "03/17/2026",
+      "attributes": {
+        "actor_score": 2.0,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.0
+      },
+      "confidence": 0.8571428571428571,
+      "source": "complaint"
+    },
+    "entity_19": {
+      "id": "entity_19",
+      "type": "date",
+      "name": "03/23/2026",
+      "attributes": {
+        "actor_score": 2.0,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.0
+      },
+      "confidence": 0.8571428571428571,
+      "source": "complaint"
+    },
+    "entity_20": {
+      "id": "entity_20",
+      "type": "date",
+      "name": "03/47/2026",
+      "attributes": {
+        "actor_score": 2.0,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.0
+      },
+      "confidence": 0.8571428571428571,
+      "source": "complaint"
+    },
+    "entity_21": {
+      "id": "entity_21",
+      "type": "date",
+      "name": "9/18/2023",
+      "attributes": {
+        "actor_score": 2.0,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.0
+      },
+      "confidence": 0.8571428571428571,
+      "source": "complaint"
+    },
+    "entity_22": {
+      "id": "entity_22",
+      "type": "organization",
+      "name": "Hillside Park",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_23": {
+      "id": "entity_23",
+      "type": "organization",
+      "name": "Housing\nL&Human Services",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_24": {
+      "id": "entity_24",
+      "type": "organization",
+      "name": "The U.S. Department",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_25": {
+      "id": "entity_25",
+      "type": "claim",
+      "name": "Complaint Claim",
+      "attributes": {
+        "claim_type": "unknown",
+        "description": "Health, Housing L&Human Services ial psnnsn Executive Ojrector, Shannon Callahan March 17, 2026 NOTICE TO RESIDENTS HUD NSPIRE INSPECTION Dear Residents, The U.S. Department of Housing and Urban Development (HUD) will be conducting a pro...",
+        "actor_score": 2.22,
+        "critic_penalty": 0.7,
+        "actor_critic_score": 1.5200000000000002
+      },
+      "confidence": 0.7200000000000001,
+      "source": "complaint"
+    },
+    "entity_26": {
+      "id": "entity_26",
+      "type": "organization",
+      "name": "Property Management",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.8199999999999998,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.4699999999999998
+      },
+      "confidence": 0.7057142857142856,
+      "source": "complaint"
+    },
+    "entity_27": {
+      "id": "entity_27",
+      "type": "evidence",
+      "name": "Agreement",
+      "attributes": {
+        "evidence_type": "agreement",
+        "description": "Health, Housing L&Human Services ial psnnsn Executive Ojrector, Shannon Callahan March 17, 2026 NOTICE TO RESIDENTS HUD NSPIRE INSPECTION Dear Residents, The U.S. Department of Housing and Urban Development (HUD) will be conducting a pro...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_28": {
+      "id": "entity_28",
+      "type": "evidence",
+      "name": "Lease",
+      "attributes": {
+        "evidence_type": "lease",
+        "description": "Health, Housing L&Human Services ial psnnsn Executive Ojrector, Shannon Callahan March 17, 2026 NOTICE TO RESIDENTS HUD NSPIRE INSPECTION Dear Residents, The U.S. Department of Housing and Urban Development (HUD) will be conducting a pro...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_29": {
+      "id": "entity_29",
+      "type": "evidence",
+      "name": "Notice",
+      "attributes": {
+        "evidence_type": "notice",
+        "description": "Health, Housing L&Human Services ial psnnsn Executive Ojrector, Shannon Callahan March 17, 2026 NOTICE TO RESIDENTS HUD NSPIRE INSPECTION Dear Residents, The U.S. Department of Housing and Urban Development (HUD) will be conducting a pro...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_30": {
+      "id": "entity_30",
+      "type": "evidence",
+      "name": "Voicemail",
+      "attributes": {
+        "evidence_type": "voicemail",
+        "description": "Health, Housing L&Human Services ial psnnsn Executive Ojrector, Shannon Callahan March 17, 2026 NOTICE TO RESIDENTS HUD NSPIRE INSPECTION Dear Residents, The U.S. Department of Housing and Urban Development (HUD) will be conducting a pro...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_31": {
+      "id": "entity_31",
+      "type": "evidence",
+      "name": "Email communication",
+      "attributes": {
+        "evidence_type": "email communication",
+        "description": "Health, Housing L&Human Services ial psnnsn Executive Ojrector, Shannon Callahan March 17, 2026 NOTICE TO RESIDENTS HUD NSPIRE INSPECTION Dear Residents, The U.S. Department of Housing and Urban Development (HUD) will be conducting a pro...",
+        "actor_score": 1.62,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.27
+      },
+      "confidence": 0.6485714285714286,
+      "source": "complaint"
+    }
+  },
+  "relationships": {
+    "rel_1": {
+      "id": "rel_1",
+      "source_id": "entity_25",
+      "target_id": "entity_13",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_2": {
+      "id": "rel_2",
+      "source_id": "entity_25",
+      "target_id": "entity_14",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_3": {
+      "id": "rel_3",
+      "source_id": "entity_25",
+      "target_id": "entity_18",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_4": {
+      "id": "rel_4",
+      "source_id": "entity_25",
+      "target_id": "entity_19",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_5": {
+      "id": "rel_5",
+      "source_id": "entity_25",
+      "target_id": "entity_20",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_6": {
+      "id": "rel_6",
+      "source_id": "entity_25",
+      "target_id": "entity_21",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_7": {
+      "id": "rel_7",
+      "source_id": "entity_25",
+      "target_id": "entity_27",
+      "relation_type": "supported_by",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_8": {
+      "id": "rel_8",
+      "source_id": "entity_25",
+      "target_id": "entity_28",
+      "relation_type": "supported_by",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_9": {
+      "id": "rel_9",
+      "source_id": "entity_15",
+      "target_id": "entity_22",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_10": {
+      "id": "rel_10",
+      "source_id": "entity_15",
+      "target_id": "entity_23",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_11": {
+      "id": "rel_11",
+      "source_id": "entity_15",
+      "target_id": "entity_24",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_12": {
+      "id": "rel_12",
+      "source_id": "entity_15",
+      "target_id": "entity_26",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_13": {
+      "id": "rel_13",
+      "source_id": "entity_16",
+      "target_id": "entity_22",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_14": {
+      "id": "rel_14",
+      "source_id": "entity_16",
+      "target_id": "entity_23",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_15": {
+      "id": "rel_15",
+      "source_id": "entity_16",
+      "target_id": "entity_24",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_16": {
+      "id": "rel_16",
+      "source_id": "entity_16",
+      "target_id": "entity_26",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_17": {
+      "id": "rel_17",
+      "source_id": "entity_17",
+      "target_id": "entity_22",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_18": {
+      "id": "rel_18",
+      "source_id": "entity_17",
+      "target_id": "entity_23",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_19": {
+      "id": "rel_19",
+      "source_id": "entity_17",
+      "target_id": "entity_24",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_20": {
+      "id": "rel_20",
+      "source_id": "entity_17",
+      "target_id": "entity_26",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    }
+  }
+}

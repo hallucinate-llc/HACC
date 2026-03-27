@@ -1,0 +1,2614 @@
+{
+  "metadata": {
+    "created_at": "2026-03-27T06:41:06.755750+00:00",
+    "last_updated": "2026-03-27T06:41:06.769240+00:00",
+    "version": "1.0",
+    "actor_critic": {
+      "enabled": true,
+      "entity_count": 80,
+      "relationship_count": 111,
+      "avg_entity_score": 2.0023,
+      "avg_relationship_score": 1.7467,
+      "entity_score_floor": -0.3,
+      "relationship_score_floor": -0.1
+    }
+  },
+  "entities": {
+    "entity_1": {
+      "id": "entity_1",
+      "type": "claim",
+      "name": "Retaliation Claim",
+      "attributes": {
+        "claim_type": "retaliation",
+        "description": "Health,Housing &Human Services Februa ry 4, 2026 Executive Director, Shannon Callahan Jane Cortez and Benjamin Barber 10043 SE 32nd Avenue Milwaukie, OR 97222 30 Day for Cause Lease Termination Notice with Option to Cure Option to cure i...",
+        "actor_score": 2.5700000000000003,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.5700000000000003
+      },
+      "confidence": 0.98,
+      "source": "complaint"
+    },
+    "entity_2": {
+      "id": "entity_2",
+      "type": "claim",
+      "name": "Accommodation Request",
+      "attributes": {
+        "claim_type": "accommodation",
+        "description": "Health,Housing &Human Services Februa ry 4, 2026 Executive Director, Shannon Callahan Jane Cortez and Benjamin Barber 10043 SE 32nd Avenue Milwaukie, OR 97222 30 Day for Cause Lease Termination Notice with Option to Cure Option to cure i...",
+        "actor_score": 2.52,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.52
+      },
+      "confidence": 0.98,
+      "source": "complaint"
+    },
+    "entity_3": {
+      "id": "entity_3",
+      "type": "claim",
+      "name": "Denial/Refusal Claim",
+      "attributes": {
+        "claim_type": "denial",
+        "description": "Health,Housing &Human Services Februa ry 4, 2026 Executive Director, Shannon Callahan Jane Cortez and Benjamin Barber 10043 SE 32nd Avenue Milwaukie, OR 97222 30 Day for Cause Lease Termination Notice with Option to Cure Option to cure i...",
+        "actor_score": 2.42,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.42
+      },
+      "confidence": 0.9771428571428571,
+      "source": "complaint"
+    },
+    "entity_4": {
+      "id": "entity_4",
+      "type": "fact",
+      "name": "Adverse action event: lease that is in effect when the qualifying member is evi...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "adverse_action",
+        "event_label": "Adverse action",
+        "description": "lease that is in effect when the qualifying member is evicted",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_5": {
+      "id": "entity_5",
+      "type": "fact",
+      "name": "Protected activity event: VAWA complaint, visit https://wiww.",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "protected_activity",
+        "event_label": "Protected activity",
+        "description": "VAWA complaint, visit https://wiww.",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_6": {
+      "id": "entity_6",
+      "type": "fact",
+      "name": "Protected activity event: You can also find additional information on filing VAWA c...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "protected_activity",
+        "event_label": "Protected activity",
+        "description": "You can also find additional information on filing VAWA complaints at",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_7": {
+      "id": "entity_7",
+      "type": "fact",
+      "name": "Protected activity event: disclosed to a person who committed or threatened to comm...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "protected_activity",
+        "event_label": "Protected activity",
+        "description": "disclosed to a person who committed or threatened to commit VAWA violence/abuse against you (or a household",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_8": {
+      "id": "entity_8",
+      "type": "fact",
+      "name": "Protected activity event: gow\u2019fairhousine/fileacomplaint.",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "protected_activity",
+        "event_label": "Protected activity",
+        "description": "gow\u2019fairhousine/fileacomplaint.",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_9": {
+      "id": "entity_9",
+      "type": "fact",
+      "name": "Response event: Have your protections under VAWA been denied?",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "response_timeline",
+        "event_label": "Response event",
+        "description": "Have your protections under VAWA been denied?",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_10": {
+      "id": "entity_10",
+      "type": "fact",
+      "name": "Response event: Public reporting burden for this collection of informatio...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "response_timeline",
+        "event_label": "Response event",
+        "description": "Public reporting burden for this collection of information is estimated to range from 45 to 90 minutes per each covered housingprovider's response, depending on the program.",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_11": {
+      "id": "entity_11",
+      "type": "fact",
+      "name": "Response event: eviction or termination notice and prior to termination o...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "response_timeline",
+        "event_label": "Response event",
+        "description": "eviction or termination notice and prior to termination of tenancy, or when you are denied as an applicant.",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_12": {
+      "id": "entity_12",
+      "type": "fact",
+      "name": "Notice event: 30 Day for Cause Lease Termination Notice with Option to ...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "30 Day for Cause Lease Termination Notice with Option to Cure",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_13": {
+      "id": "entity_13",
+      "type": "fact",
+      "name": "Notice event: A covered housing provider must provide a copy of the Not...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "A covered housing provider must provide a copy of the Notice of Occupancy Rights",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_14": {
+      "id": "entity_14",
+      "type": "fact",
+      "name": "Notice event: Additionally, the email included an image of a woman in a...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "Additionally, the email included an image of a woman in a suggestive context.",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_15": {
+      "id": "entity_15",
+      "type": "fact",
+      "name": "Notice event: Covered housing providers must give this notice to",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "Covered housing providers must give this notice to",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_16": {
+      "id": "entity_16",
+      "type": "fact",
+      "name": "Notice event: Furthermore, in that same email chain, he included unnece...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "Furthermore, in that same email chain, he included unnecessary and explicit references to",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_17": {
+      "id": "entity_17",
+      "type": "fact",
+      "name": "Notice event: In that same email he wrote, \u201cLet me know if you need me ...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "In that same email he wrote, \u201cLet me know if you need me to make some sex",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_18": {
+      "id": "entity_18",
+      "type": "fact",
+      "name": "Notice event: NOTICE OF OCCUPANCY RIGHTS UNDER",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "NOTICE OF OCCUPANCY RIGHTS UNDER",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_19": {
+      "id": "entity_19",
+      "type": "fact",
+      "name": "Notice event: NOTICE OF OCCUPANCY RIGHTS UNDER THE U.S.",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "NOTICE OF OCCUPANCY RIGHTS UNDER THE U.S.",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_20": {
+      "id": "entity_20",
+      "type": "fact",
+      "name": "Notice event: NOTICE OF OCCUPANCY RIGHTS UNDER U.S.",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "NOTICE OF OCCUPANCY RIGHTS UNDER U.S.",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_21": {
+      "id": "entity_21",
+      "type": "fact",
+      "name": "Notice event: NOTICE!",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "NOTICE!",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_22": {
+      "id": "entity_22",
+      "type": "fact",
+      "name": "Notice event: Option to cure immediately upon delivery of this notice",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "Option to cure immediately upon delivery of this notice",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_23": {
+      "id": "entity_23",
+      "type": "fact",
+      "name": "Notice event: Specifically, Benjamin Barber emailed a Housing Authority...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "Specifically, Benjamin Barber emailed a Housing Authority staff member and attached a",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_24": {
+      "id": "entity_24",
+      "type": "fact",
+      "name": "Notice event: This is a model notice, and no",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "This is a model notice, and no",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_25": {
+      "id": "entity_25",
+      "type": "fact",
+      "name": "Notice event: This letter is a formal notice that you are in violation ...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "This letter is a formal notice that you are in violation of your Lease, Section 7(B)(vii), in the",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_26": {
+      "id": "entity_26",
+      "type": "fact",
+      "name": "Notice event: This notice describes protections that may apply to you a...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "This notice describes protections that may apply to you as an",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_27": {
+      "id": "entity_27",
+      "type": "fact",
+      "name": "Notice event: This notice is required forcovered housing programs under...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "This notice is required forcovered housing programs under section 41411 of VAWA and 24 CFR 5.2003.",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_28": {
+      "id": "entity_28",
+      "type": "fact",
+      "name": "Notice event: What do the words in this notice mean?",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "What do the words in this notice mean?",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_29": {
+      "id": "entity_29",
+      "type": "fact",
+      "name": "Notice event: accompanied by a \"Notice of Occupancy Rights Under the Vi...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "accompanied by a \"Notice of Occupancy Rights Under the Violence Against Women Act,\" Form HUD-5380.",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_30": {
+      "id": "entity_30",
+      "type": "fact",
+      "name": "Notice event: accuracy of this burden estimate and any suggestions for ...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "accuracy of this burden estimate and any suggestions for reducing this burden can be sent to the Reports Management Officer.",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_31": {
+      "id": "entity_31",
+      "type": "fact",
+      "name": "Notice event: burden can be sent to the Reports Management Officer, QDA...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "burden can be sent to the Reports Management Officer, QDAM, Department of Housing and Urban Development, 451 7th Street.",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_32": {
+      "id": "entity_32",
+      "type": "fact",
+      "name": "Notice event: eviction or termination notice and prior to termination o...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "eviction or termination notice and prior to termination of tenancy, or when you are denied as an applicant.",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_33": {
+      "id": "entity_33",
+      "type": "fact",
+      "name": "Notice event: understanding what this letter says, please contact 503-6...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "understanding what this letter says, please contact 503-655-8267.",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_34": {
+      "id": "entity_34",
+      "type": "fact",
+      "name": "Notice event: victim lacks capacity to consent.",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "victim lacks capacity to consent.",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_35": {
+      "id": "entity_35",
+      "type": "fact",
+      "name": "Notice event: violence/abuse other than as stated in \"Notice of Occupan...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "violence/abuse other than as stated in \"Notice of Occupancy Rights Under the Violence Against Women Act,\" Form",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_36": {
+      "id": "entity_36",
+      "type": "fact",
+      "name": "Hearing event: collecting, reviewing, and reporting.",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "hearing_process",
+        "event_label": "Hearing/appeal event",
+        "description": "collecting, reviewing, and reporting.",
+        "actor_score": 2.13,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.13
+      },
+      "confidence": 0.8942857142857142,
+      "source": "complaint"
+    },
+    "entity_37": {
+      "id": "entity_37",
+      "type": "fact",
+      "name": "Hearing event: required to do so as part of an eviction or termination h...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "hearing_process",
+        "event_label": "Hearing/appeal event",
+        "description": "required to do so as part of an eviction or termination hearing, or (3) is required to do so by law.",
+        "actor_score": 2.13,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.13
+      },
+      "confidence": 0.8942857142857142,
+      "source": "complaint"
+    },
+    "entity_38": {
+      "id": "entity_38",
+      "type": "date",
+      "name": "January 29, 2026",
+      "attributes": {
+        "actor_score": 2.12,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.12
+      },
+      "confidence": 0.8914285714285715,
+      "source": "complaint"
+    },
+    "entity_39": {
+      "id": "entity_39",
+      "type": "date",
+      "name": "March 10, 2026",
+      "attributes": {
+        "actor_score": 2.12,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.12
+      },
+      "confidence": 0.8914285714285715,
+      "source": "complaint"
+    },
+    "entity_40": {
+      "id": "entity_40",
+      "type": "fact",
+      "name": "Retaliation causation link",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "causation",
+        "event_label": "Causation sequence",
+        "description": "Health,Housing &Human Services Februa ry 4, 2026 Executive Director, Shannon Callahan Jane Cortez and Benjamin Barber 10043 SE 32nd Avenue Milwaukie, OR 97222 30 Day for Cause Lease Termination Notice with Option to Cure Option to cure i...",
+        "actor_score": 2.12,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.12
+      },
+      "confidence": 0.8914285714285715,
+      "source": "complaint"
+    },
+    "entity_41": {
+      "id": "entity_41",
+      "type": "person",
+      "name": "Avenue\nMilwaukie",
+      "attributes": {
+        "role": "or",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_42": {
+      "id": "entity_42",
+      "type": "person",
+      "name": "Benjamin Barber",
+      "attributes": {
+        "role": "and all other occupants or persons unknown\nclaimingany right",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_43": {
+      "id": "entity_43",
+      "type": "person",
+      "name": "Clackamas County\nCharley",
+      "attributes": {
+        "role": "shee",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_44": {
+      "id": "entity_44",
+      "type": "person",
+      "name": "Domestic Violence",
+      "attributes": {
+        "role": "dating violence",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_45": {
+      "id": "entity_45",
+      "type": "person",
+      "name": "Executive Director",
+      "attributes": {
+        "role": "shannon callahan\njane cortez and benjamin barber",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_46": {
+      "id": "entity_46",
+      "type": "person",
+      "name": "Gain Street",
+      "attributes": {
+        "role": "oregon city",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_47": {
+      "id": "entity_47",
+      "type": "person",
+      "name": "Housing Choice Voucher",
+      "attributes": {
+        "role": "project-based voucher",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_48": {
+      "id": "entity_48",
+      "type": "person",
+      "name": "Housing Trust\nPund",
+      "attributes": {
+        "role": "continuum of care\nprogram",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_49": {
+      "id": "entity_49",
+      "type": "person",
+      "name": "Receive\nAssistance",
+      "attributes": {
+        "role": "establish eligibility",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_50": {
+      "id": "entity_50",
+      "type": "person",
+      "name": "Reports Management Officer",
+      "attributes": {
+        "role": "qdam",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_51": {
+      "id": "entity_51",
+      "type": "person",
+      "name": "Sexual Assault",
+      "attributes": {
+        "role": "or stalking",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_52": {
+      "id": "entity_52",
+      "type": "date",
+      "name": "1/31/2028",
+      "attributes": {
+        "actor_score": 2.0,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.0
+      },
+      "confidence": 0.8571428571428571,
+      "source": "complaint"
+    },
+    "entity_53": {
+      "id": "entity_53",
+      "type": "date",
+      "name": "2/4/2026",
+      "attributes": {
+        "actor_score": 2.0,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.0
+      },
+      "confidence": 0.8571428571428571,
+      "source": "complaint"
+    },
+    "entity_54": {
+      "id": "entity_54",
+      "type": "organization",
+      "name": "Cause Lease Termination Notice",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_55": {
+      "id": "entity_55",
+      "type": "organization",
+      "name": "Disabilities\nSection",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_56": {
+      "id": "entity_56",
+      "type": "organization",
+      "name": "Housing Authority",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_57": {
+      "id": "entity_57",
+      "type": "organization",
+      "name": "Human Services",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_58": {
+      "id": "entity_58",
+      "type": "organization",
+      "name": "Legal Aid Services",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_59": {
+      "id": "entity_59",
+      "type": "organization",
+      "name": "OCCUPANCY RIGHTS UNDER THE U.S. Department",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_60": {
+      "id": "entity_60",
+      "type": "organization",
+      "name": "OF OCCUPANCY RIGHTS UNDER U.S. Department",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_61": {
+      "id": "entity_61",
+      "type": "organization",
+      "name": "Persons With AIDS",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_62": {
+      "id": "entity_62",
+      "type": "organization",
+      "name": "Remaining Household Members",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_63": {
+      "id": "entity_63",
+      "type": "organization",
+      "name": "Special Purpose\nVouchers",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_64": {
+      "id": "entity_64",
+      "type": "organization",
+      "name": "Survivors\nU.S. Department",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_65": {
+      "id": "entity_65",
+      "type": "organization",
+      "name": "Survivors Expires",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_66": {
+      "id": "entity_66",
+      "type": "organization",
+      "name": "Victims Expires",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_67": {
+      "id": "entity_67",
+      "type": "organization",
+      "name": "Option",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.8499999999999999,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8499999999999999
+      },
+      "confidence": 0.8142857142857142,
+      "source": "complaint"
+    },
+    "entity_68": {
+      "id": "entity_68",
+      "type": "organization",
+      "name": "Persons",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.8499999999999999,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8499999999999999
+      },
+      "confidence": 0.8142857142857142,
+      "source": "complaint"
+    },
+    "entity_69": {
+      "id": "entity_69",
+      "type": "organization",
+      "name": "VAWA",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.8499999999999999,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8499999999999999
+      },
+      "confidence": 0.8142857142857142,
+      "source": "complaint"
+    },
+    "entity_70": {
+      "id": "entity_70",
+      "type": "organization",
+      "name": "Victims",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.8499999999999999,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8499999999999999
+      },
+      "confidence": 0.8142857142857142,
+      "source": "complaint"
+    },
+    "entity_71": {
+      "id": "entity_71",
+      "type": "person",
+      "name": "Complainant",
+      "attributes": {
+        "role": "complainant",
+        "actor_score": 2.0,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.65
+      },
+      "confidence": 0.81,
+      "source": "complaint"
+    },
+    "entity_72": {
+      "id": "entity_72",
+      "type": "person",
+      "name": "Landlord",
+      "attributes": {
+        "role": "landlord",
+        "actor_score": 1.8499999999999999,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.5
+      },
+      "confidence": 0.7142857142857143,
+      "source": "complaint"
+    },
+    "entity_73": {
+      "id": "entity_73",
+      "type": "organization",
+      "name": "Property Management",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.8199999999999998,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.4699999999999998
+      },
+      "confidence": 0.7057142857142856,
+      "source": "complaint"
+    },
+    "entity_74": {
+      "id": "entity_74",
+      "type": "fact",
+      "name": "Impact: Health,Housing &Human Services Februa ry 4, 2026 Executiv...",
+      "attributes": {
+        "fact_type": "impact",
+        "description": "Health,Housing &Human Services Februa ry 4, 2026 Executive Director, Shannon Callahan Jane Cortez and Benjamin Barber 10043 SE 32nd Avenue Milwaukie, OR 97222 30 Day for Cause Lease Termination Notice with Option to Cure Option to cure i...",
+        "actor_score": 1.77,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.42
+      },
+      "confidence": 0.6914285714285714,
+      "source": "complaint"
+    },
+    "entity_75": {
+      "id": "entity_75",
+      "type": "fact",
+      "name": "Requested remedy: Health,Housing &Human Services Februa ry 4, 2026 Executiv...",
+      "attributes": {
+        "fact_type": "remedy",
+        "description": "Health,Housing &Human Services Februa ry 4, 2026 Executive Director, Shannon Callahan Jane Cortez and Benjamin Barber 10043 SE 32nd Avenue Milwaukie, OR 97222 30 Day for Cause Lease Termination Notice with Option to Cure Option to cure i...",
+        "actor_score": 1.77,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.42
+      },
+      "confidence": 0.6914285714285714,
+      "source": "complaint"
+    },
+    "entity_76": {
+      "id": "entity_76",
+      "type": "evidence",
+      "name": "Estimate",
+      "attributes": {
+        "evidence_type": "estimate",
+        "description": "Health,Housing &Human Services Februa ry 4, 2026 Executive Director, Shannon Callahan Jane Cortez and Benjamin Barber 10043 SE 32nd Avenue Milwaukie, OR 97222 30 Day for Cause Lease Termination Notice with Option to Cure Option to cure i...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_77": {
+      "id": "entity_77",
+      "type": "evidence",
+      "name": "Lease",
+      "attributes": {
+        "evidence_type": "lease",
+        "description": "Health,Housing &Human Services Februa ry 4, 2026 Executive Director, Shannon Callahan Jane Cortez and Benjamin Barber 10043 SE 32nd Avenue Milwaukie, OR 97222 30 Day for Cause Lease Termination Notice with Option to Cure Option to cure i...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_78": {
+      "id": "entity_78",
+      "type": "evidence",
+      "name": "Letter",
+      "attributes": {
+        "evidence_type": "letter",
+        "description": "Health,Housing &Human Services Februa ry 4, 2026 Executive Director, Shannon Callahan Jane Cortez and Benjamin Barber 10043 SE 32nd Avenue Milwaukie, OR 97222 30 Day for Cause Lease Termination Notice with Option to Cure Option to cure i...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_79": {
+      "id": "entity_79",
+      "type": "evidence",
+      "name": "Notice",
+      "attributes": {
+        "evidence_type": "notice",
+        "description": "Health,Housing &Human Services Februa ry 4, 2026 Executive Director, Shannon Callahan Jane Cortez and Benjamin Barber 10043 SE 32nd Avenue Milwaukie, OR 97222 30 Day for Cause Lease Termination Notice with Option to Cure Option to cure i...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_80": {
+      "id": "entity_80",
+      "type": "evidence",
+      "name": "Email communication",
+      "attributes": {
+        "evidence_type": "email communication",
+        "description": "Health,Housing &Human Services Februa ry 4, 2026 Executive Director, Shannon Callahan Jane Cortez and Benjamin Barber 10043 SE 32nd Avenue Milwaukie, OR 97222 30 Day for Cause Lease Termination Notice with Option to Cure Option to cure i...",
+        "actor_score": 1.62,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.27
+      },
+      "confidence": 0.6485714285714286,
+      "source": "complaint"
+    }
+  },
+  "relationships": {
+    "rel_1": {
+      "id": "rel_1",
+      "source_id": "entity_71",
+      "target_id": "entity_1",
+      "relation_type": "makes_claim",
+      "attributes": {
+        "actor_score": 2.35,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.35
+      },
+      "confidence": 0.9571428571428572,
+      "source": "complaint"
+    },
+    "rel_2": {
+      "id": "rel_2",
+      "source_id": "entity_71",
+      "target_id": "entity_2",
+      "relation_type": "makes_claim",
+      "attributes": {
+        "actor_score": 2.35,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.35
+      },
+      "confidence": 0.9571428571428572,
+      "source": "complaint"
+    },
+    "rel_3": {
+      "id": "rel_3",
+      "source_id": "entity_71",
+      "target_id": "entity_3",
+      "relation_type": "makes_claim",
+      "attributes": {
+        "actor_score": 2.35,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.35
+      },
+      "confidence": 0.9571428571428572,
+      "source": "complaint"
+    },
+    "rel_4": {
+      "id": "rel_4",
+      "source_id": "entity_1",
+      "target_id": "entity_38",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_5": {
+      "id": "rel_5",
+      "source_id": "entity_1",
+      "target_id": "entity_39",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_6": {
+      "id": "rel_6",
+      "source_id": "entity_1",
+      "target_id": "entity_52",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_7": {
+      "id": "rel_7",
+      "source_id": "entity_1",
+      "target_id": "entity_53",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_8": {
+      "id": "rel_8",
+      "source_id": "entity_2",
+      "target_id": "entity_38",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_9": {
+      "id": "rel_9",
+      "source_id": "entity_2",
+      "target_id": "entity_39",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_10": {
+      "id": "rel_10",
+      "source_id": "entity_2",
+      "target_id": "entity_52",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_11": {
+      "id": "rel_11",
+      "source_id": "entity_2",
+      "target_id": "entity_53",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_12": {
+      "id": "rel_12",
+      "source_id": "entity_3",
+      "target_id": "entity_38",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_13": {
+      "id": "rel_13",
+      "source_id": "entity_3",
+      "target_id": "entity_39",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_14": {
+      "id": "rel_14",
+      "source_id": "entity_3",
+      "target_id": "entity_52",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_15": {
+      "id": "rel_15",
+      "source_id": "entity_3",
+      "target_id": "entity_53",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_16": {
+      "id": "rel_16",
+      "source_id": "entity_41",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_17": {
+      "id": "rel_17",
+      "source_id": "entity_41",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_18": {
+      "id": "rel_18",
+      "source_id": "entity_41",
+      "target_id": "entity_56",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_19": {
+      "id": "rel_19",
+      "source_id": "entity_41",
+      "target_id": "entity_57",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_20": {
+      "id": "rel_20",
+      "source_id": "entity_41",
+      "target_id": "entity_58",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_21": {
+      "id": "rel_21",
+      "source_id": "entity_41",
+      "target_id": "entity_59",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_22": {
+      "id": "rel_22",
+      "source_id": "entity_42",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_23": {
+      "id": "rel_23",
+      "source_id": "entity_42",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_24": {
+      "id": "rel_24",
+      "source_id": "entity_42",
+      "target_id": "entity_56",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_25": {
+      "id": "rel_25",
+      "source_id": "entity_42",
+      "target_id": "entity_57",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_26": {
+      "id": "rel_26",
+      "source_id": "entity_42",
+      "target_id": "entity_58",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_27": {
+      "id": "rel_27",
+      "source_id": "entity_42",
+      "target_id": "entity_59",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_28": {
+      "id": "rel_28",
+      "source_id": "entity_43",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_29": {
+      "id": "rel_29",
+      "source_id": "entity_43",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_30": {
+      "id": "rel_30",
+      "source_id": "entity_43",
+      "target_id": "entity_56",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_31": {
+      "id": "rel_31",
+      "source_id": "entity_43",
+      "target_id": "entity_57",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_32": {
+      "id": "rel_32",
+      "source_id": "entity_43",
+      "target_id": "entity_58",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_33": {
+      "id": "rel_33",
+      "source_id": "entity_43",
+      "target_id": "entity_59",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_34": {
+      "id": "rel_34",
+      "source_id": "entity_44",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_35": {
+      "id": "rel_35",
+      "source_id": "entity_44",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_36": {
+      "id": "rel_36",
+      "source_id": "entity_44",
+      "target_id": "entity_56",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_37": {
+      "id": "rel_37",
+      "source_id": "entity_44",
+      "target_id": "entity_57",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_38": {
+      "id": "rel_38",
+      "source_id": "entity_44",
+      "target_id": "entity_58",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_39": {
+      "id": "rel_39",
+      "source_id": "entity_44",
+      "target_id": "entity_59",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_40": {
+      "id": "rel_40",
+      "source_id": "entity_45",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_41": {
+      "id": "rel_41",
+      "source_id": "entity_45",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_42": {
+      "id": "rel_42",
+      "source_id": "entity_45",
+      "target_id": "entity_56",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_43": {
+      "id": "rel_43",
+      "source_id": "entity_45",
+      "target_id": "entity_57",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_44": {
+      "id": "rel_44",
+      "source_id": "entity_45",
+      "target_id": "entity_58",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_45": {
+      "id": "rel_45",
+      "source_id": "entity_45",
+      "target_id": "entity_59",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_46": {
+      "id": "rel_46",
+      "source_id": "entity_46",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_47": {
+      "id": "rel_47",
+      "source_id": "entity_46",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_48": {
+      "id": "rel_48",
+      "source_id": "entity_46",
+      "target_id": "entity_56",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_49": {
+      "id": "rel_49",
+      "source_id": "entity_46",
+      "target_id": "entity_57",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_50": {
+      "id": "rel_50",
+      "source_id": "entity_46",
+      "target_id": "entity_58",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_51": {
+      "id": "rel_51",
+      "source_id": "entity_46",
+      "target_id": "entity_59",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_52": {
+      "id": "rel_52",
+      "source_id": "entity_47",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_53": {
+      "id": "rel_53",
+      "source_id": "entity_47",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_54": {
+      "id": "rel_54",
+      "source_id": "entity_47",
+      "target_id": "entity_56",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_55": {
+      "id": "rel_55",
+      "source_id": "entity_47",
+      "target_id": "entity_57",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_56": {
+      "id": "rel_56",
+      "source_id": "entity_47",
+      "target_id": "entity_58",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_57": {
+      "id": "rel_57",
+      "source_id": "entity_47",
+      "target_id": "entity_59",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_58": {
+      "id": "rel_58",
+      "source_id": "entity_48",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_59": {
+      "id": "rel_59",
+      "source_id": "entity_48",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_60": {
+      "id": "rel_60",
+      "source_id": "entity_48",
+      "target_id": "entity_56",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_61": {
+      "id": "rel_61",
+      "source_id": "entity_48",
+      "target_id": "entity_57",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_62": {
+      "id": "rel_62",
+      "source_id": "entity_48",
+      "target_id": "entity_58",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_63": {
+      "id": "rel_63",
+      "source_id": "entity_48",
+      "target_id": "entity_59",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_64": {
+      "id": "rel_64",
+      "source_id": "entity_49",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_65": {
+      "id": "rel_65",
+      "source_id": "entity_49",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_66": {
+      "id": "rel_66",
+      "source_id": "entity_49",
+      "target_id": "entity_56",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_67": {
+      "id": "rel_67",
+      "source_id": "entity_49",
+      "target_id": "entity_57",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_68": {
+      "id": "rel_68",
+      "source_id": "entity_49",
+      "target_id": "entity_58",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_69": {
+      "id": "rel_69",
+      "source_id": "entity_49",
+      "target_id": "entity_59",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_70": {
+      "id": "rel_70",
+      "source_id": "entity_50",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_71": {
+      "id": "rel_71",
+      "source_id": "entity_50",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_72": {
+      "id": "rel_72",
+      "source_id": "entity_50",
+      "target_id": "entity_56",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_73": {
+      "id": "rel_73",
+      "source_id": "entity_50",
+      "target_id": "entity_57",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_74": {
+      "id": "rel_74",
+      "source_id": "entity_50",
+      "target_id": "entity_58",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_75": {
+      "id": "rel_75",
+      "source_id": "entity_50",
+      "target_id": "entity_59",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_76": {
+      "id": "rel_76",
+      "source_id": "entity_51",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_77": {
+      "id": "rel_77",
+      "source_id": "entity_51",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_78": {
+      "id": "rel_78",
+      "source_id": "entity_51",
+      "target_id": "entity_56",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_79": {
+      "id": "rel_79",
+      "source_id": "entity_51",
+      "target_id": "entity_57",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_80": {
+      "id": "rel_80",
+      "source_id": "entity_51",
+      "target_id": "entity_58",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_81": {
+      "id": "rel_81",
+      "source_id": "entity_51",
+      "target_id": "entity_59",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_82": {
+      "id": "rel_82",
+      "source_id": "entity_71",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_83": {
+      "id": "rel_83",
+      "source_id": "entity_71",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_84": {
+      "id": "rel_84",
+      "source_id": "entity_71",
+      "target_id": "entity_56",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_85": {
+      "id": "rel_85",
+      "source_id": "entity_71",
+      "target_id": "entity_57",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_86": {
+      "id": "rel_86",
+      "source_id": "entity_71",
+      "target_id": "entity_58",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_87": {
+      "id": "rel_87",
+      "source_id": "entity_72",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_88": {
+      "id": "rel_88",
+      "source_id": "entity_72",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_89": {
+      "id": "rel_89",
+      "source_id": "entity_72",
+      "target_id": "entity_56",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_90": {
+      "id": "rel_90",
+      "source_id": "entity_72",
+      "target_id": "entity_57",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_91": {
+      "id": "rel_91",
+      "source_id": "entity_72",
+      "target_id": "entity_58",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_92": {
+      "id": "rel_92",
+      "source_id": "entity_72",
+      "target_id": "entity_59",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_93": {
+      "id": "rel_93",
+      "source_id": "entity_4",
+      "target_id": "entity_5",
+      "relation_type": "follows_protected_activity",
+      "attributes": {
+        "actor_score": 1.75,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.75
+      },
+      "confidence": 0.7857142857142857,
+      "source": "complaint"
+    },
+    "rel_94": {
+      "id": "rel_94",
+      "source_id": "entity_4",
+      "target_id": "entity_6",
+      "relation_type": "follows_protected_activity",
+      "attributes": {
+        "actor_score": 1.75,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.75
+      },
+      "confidence": 0.7857142857142857,
+      "source": "complaint"
+    },
+    "rel_95": {
+      "id": "rel_95",
+      "source_id": "entity_4",
+      "target_id": "entity_7",
+      "relation_type": "follows_protected_activity",
+      "attributes": {
+        "actor_score": 1.75,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.75
+      },
+      "confidence": 0.7857142857142857,
+      "source": "complaint"
+    },
+    "rel_96": {
+      "id": "rel_96",
+      "source_id": "entity_4",
+      "target_id": "entity_8",
+      "relation_type": "follows_protected_activity",
+      "attributes": {
+        "actor_score": 1.75,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.75
+      },
+      "confidence": 0.7857142857142857,
+      "source": "complaint"
+    },
+    "rel_97": {
+      "id": "rel_97",
+      "source_id": "entity_1",
+      "target_id": "entity_72",
+      "relation_type": "involves",
+      "attributes": {
+        "actor_score": 1.5499999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.5499999999999998
+      },
+      "confidence": 0.7285714285714285,
+      "source": "complaint"
+    },
+    "rel_98": {
+      "id": "rel_98",
+      "source_id": "entity_2",
+      "target_id": "entity_72",
+      "relation_type": "involves",
+      "attributes": {
+        "actor_score": 1.5499999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.5499999999999998
+      },
+      "confidence": 0.7285714285714285,
+      "source": "complaint"
+    },
+    "rel_99": {
+      "id": "rel_99",
+      "source_id": "entity_3",
+      "target_id": "entity_72",
+      "relation_type": "involves",
+      "attributes": {
+        "actor_score": 1.5499999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.5499999999999998
+      },
+      "confidence": 0.7285714285714285,
+      "source": "complaint"
+    },
+    "rel_100": {
+      "id": "rel_100",
+      "source_id": "entity_1",
+      "target_id": "entity_5",
+      "relation_type": "causal_link",
+      "attributes": {
+        "actor_score": 1.8499999999999999,
+        "critic_penalty": 0.4,
+        "actor_critic_score": 1.4499999999999997
+      },
+      "confidence": 0.7,
+      "source": "complaint"
+    },
+    "rel_101": {
+      "id": "rel_101",
+      "source_id": "entity_1",
+      "target_id": "entity_6",
+      "relation_type": "causal_link",
+      "attributes": {
+        "actor_score": 1.8499999999999999,
+        "critic_penalty": 0.4,
+        "actor_critic_score": 1.4499999999999997
+      },
+      "confidence": 0.7,
+      "source": "complaint"
+    },
+    "rel_102": {
+      "id": "rel_102",
+      "source_id": "entity_1",
+      "target_id": "entity_7",
+      "relation_type": "causal_link",
+      "attributes": {
+        "actor_score": 1.8499999999999999,
+        "critic_penalty": 0.4,
+        "actor_critic_score": 1.4499999999999997
+      },
+      "confidence": 0.7,
+      "source": "complaint"
+    },
+    "rel_103": {
+      "id": "rel_103",
+      "source_id": "entity_4",
+      "target_id": "entity_5",
+      "relation_type": "occurred_after",
+      "attributes": {
+        "actor_score": 1.67,
+        "critic_penalty": 0.4,
+        "actor_critic_score": 1.27
+      },
+      "confidence": 0.6485714285714286,
+      "source": "complaint"
+    },
+    "rel_104": {
+      "id": "rel_104",
+      "source_id": "entity_4",
+      "target_id": "entity_6",
+      "relation_type": "occurred_after",
+      "attributes": {
+        "actor_score": 1.67,
+        "critic_penalty": 0.4,
+        "actor_critic_score": 1.27
+      },
+      "confidence": 0.6485714285714286,
+      "source": "complaint"
+    },
+    "rel_105": {
+      "id": "rel_105",
+      "source_id": "entity_4",
+      "target_id": "entity_7",
+      "relation_type": "occurred_after",
+      "attributes": {
+        "actor_score": 1.67,
+        "critic_penalty": 0.4,
+        "actor_critic_score": 1.27
+      },
+      "confidence": 0.6485714285714286,
+      "source": "complaint"
+    },
+    "rel_106": {
+      "id": "rel_106",
+      "source_id": "entity_4",
+      "target_id": "entity_8",
+      "relation_type": "occurred_after",
+      "attributes": {
+        "actor_score": 1.67,
+        "critic_penalty": 0.4,
+        "actor_critic_score": 1.27
+      },
+      "confidence": 0.6485714285714286,
+      "source": "complaint"
+    },
+    "rel_107": {
+      "id": "rel_107",
+      "source_id": "entity_76",
+      "target_id": "entity_72",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    },
+    "rel_108": {
+      "id": "rel_108",
+      "source_id": "entity_77",
+      "target_id": "entity_72",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    },
+    "rel_109": {
+      "id": "rel_109",
+      "source_id": "entity_78",
+      "target_id": "entity_72",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    },
+    "rel_110": {
+      "id": "rel_110",
+      "source_id": "entity_79",
+      "target_id": "entity_72",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    },
+    "rel_111": {
+      "id": "rel_111",
+      "source_id": "entity_80",
+      "target_id": "entity_72",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    }
+  }
+}

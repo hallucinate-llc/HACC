@@ -1,0 +1,26 @@
+{
+  "document_path": "/home/barberb/HACC/evidence/paper documents/HACC phase2 2024.pdf",
+  "graphrag_dir": "/home/barberb/HACC/evidence/paper documents/graphrag/HACC_phase2_2024",
+  "status": "generated",
+  "knowledge_graph_summary": {
+    "total_entities": 30,
+    "total_relationships": 25,
+    "entity_types": {
+      "fact": 12,
+      "date": 2,
+      "person": 2,
+      "organization": 8,
+      "claim": 1,
+      "evidence": 5
+    },
+    "relationship_types": {
+      "occurred_on": 2,
+      "supported_by": 5,
+      "employed_by": 12,
+      "involves": 1,
+      "associated_with": 5
+    },
+    "gaps": 11
+  },
+  "graph_path": "/home/barberb/HACC/evidence/paper documents/graphrag/HACC_phase2_2024/document_knowledge_graph.json"
+}

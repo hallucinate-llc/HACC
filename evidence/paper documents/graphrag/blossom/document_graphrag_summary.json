@@ -1,0 +1,21 @@
+{
+  "document_path": "/home/barberb/HACC/evidence/paper documents/blossom.pdf",
+  "graphrag_dir": "/home/barberb/HACC/evidence/paper documents/graphrag/blossom",
+  "status": "generated",
+  "knowledge_graph_summary": {
+    "total_entities": 8,
+    "total_relationships": 6,
+    "entity_types": {
+      "fact": 1,
+      "organization": 5,
+      "claim": 1,
+      "evidence": 1
+    },
+    "relationship_types": {
+      "supported_by": 1,
+      "involves": 5
+    },
+    "gaps": 3
+  },
+  "graph_path": "/home/barberb/HACC/evidence/paper documents/graphrag/blossom/document_knowledge_graph.json"
+}

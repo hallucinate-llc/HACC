@@ -1,0 +1,24 @@
+{
+  "document_path": "/home/barberb/HACC/evidence/paper documents/HACC steering.pdf",
+  "graphrag_dir": "/home/barberb/HACC/evidence/paper documents/graphrag/HACC_steering",
+  "status": "generated",
+  "knowledge_graph_summary": {
+    "total_entities": 32,
+    "total_relationships": 38,
+    "entity_types": {
+      "fact": 8,
+      "date": 5,
+      "person": 5,
+      "organization": 6,
+      "claim": 1,
+      "evidence": 7
+    },
+    "relationship_types": {
+      "occurred_on": 5,
+      "supported_by": 3,
+      "employed_by": 30
+    },
+    "gaps": 11
+  },
+  "graph_path": "/home/barberb/HACC/evidence/paper documents/graphrag/HACC_steering/document_knowledge_graph.json"
+}

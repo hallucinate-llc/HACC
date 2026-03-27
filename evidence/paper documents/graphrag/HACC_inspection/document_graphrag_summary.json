@@ -1,0 +1,24 @@
+{
+  "document_path": "/home/barberb/HACC/evidence/paper documents/HACC inspection.pdf",
+  "graphrag_dir": "/home/barberb/HACC/evidence/paper documents/graphrag/HACC_inspection",
+  "status": "generated",
+  "knowledge_graph_summary": {
+    "total_entities": 31,
+    "total_relationships": 20,
+    "entity_types": {
+      "fact": 12,
+      "date": 6,
+      "person": 3,
+      "organization": 4,
+      "claim": 1,
+      "evidence": 5
+    },
+    "relationship_types": {
+      "occurred_on": 6,
+      "supported_by": 2,
+      "employed_by": 12
+    },
+    "gaps": 9
+  },
+  "graph_path": "/home/barberb/HACC/evidence/paper documents/graphrag/HACC_inspection/document_knowledge_graph.json"
+}

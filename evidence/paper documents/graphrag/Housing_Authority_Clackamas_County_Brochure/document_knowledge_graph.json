@@ -1,0 +1,2516 @@
+{
+  "metadata": {
+    "created_at": "2026-03-27T06:41:06.919622+00:00",
+    "last_updated": "2026-03-27T06:41:06.933599+00:00",
+    "version": "1.0",
+    "actor_critic": {
+      "enabled": true,
+      "entity_count": 102,
+      "relationship_count": 83,
+      "avg_entity_score": 1.9545,
+      "avg_relationship_score": 1.7006,
+      "entity_score_floor": -0.3,
+      "relationship_score_floor": -0.1
+    }
+  },
+  "entities": {
+    "entity_1": {
+      "id": "entity_1",
+      "type": "fact",
+      "name": "Protected activity event: located at 13930 South Gain Street, is scheduled to go th...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "protected_activity",
+        "event_label": "Protected activity",
+        "description": "located at 13930 South Gain Street, is scheduled to go through the end of April 2024.",
+        "event_date_or_range": "April 2024",
+        "actor_score": 2.5,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.5
+      },
+      "confidence": 0.98,
+      "source": "complaint"
+    },
+    "entity_2": {
+      "id": "entity_2",
+      "type": "fact",
+      "name": "Hearing event: review from January 30-March 15, 2024",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "hearing_process",
+        "event_label": "Hearing/appeal event",
+        "description": "review from January 30-March 15, 2024",
+        "event_date_or_range": "March 15, 2024",
+        "actor_score": 2.48,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.48
+      },
+      "confidence": 0.98,
+      "source": "complaint"
+    },
+    "entity_3": {
+      "id": "entity_3",
+      "type": "fact",
+      "name": "Protected activity event: Catch-Ail Chronicle Page 7",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "protected_activity",
+        "event_label": "Protected activity",
+        "description": "Catch-Ail Chronicle Page 7",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_4": {
+      "id": "entity_4",
+      "type": "fact",
+      "name": "Protected activity event: Catch-All Chronicle",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "protected_activity",
+        "event_label": "Protected activity",
+        "description": "Catch-All Chronicle",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_5": {
+      "id": "entity_5",
+      "type": "fact",
+      "name": "Protected activity event: Chris Aiosa",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "protected_activity",
+        "event_label": "Protected activity",
+        "description": "Chris Aiosa",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_6": {
+      "id": "entity_6",
+      "type": "fact",
+      "name": "Protected activity event: Page 2 Catch-All Chronicle",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "protected_activity",
+        "event_label": "Protected activity",
+        "description": "Page 2 Catch-All Chronicle",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_7": {
+      "id": "entity_7",
+      "type": "fact",
+      "name": "Protected activity event: Page 4 Catch-All Chronicle",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "protected_activity",
+        "event_label": "Protected activity",
+        "description": "Page 4 Catch-All Chronicle",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_8": {
+      "id": "entity_8",
+      "type": "fact",
+      "name": "Protected activity event: all during the first three weeks of July to prepare for",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "protected_activity",
+        "event_label": "Protected activity",
+        "description": "all during the first three weeks of July to prepare for",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_9": {
+      "id": "entity_9",
+      "type": "fact",
+      "name": "Protected activity event: rent reported in this way increases your credit score",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "protected_activity",
+        "event_label": "Protected activity",
+        "description": "rent reported in this way increases your credit score",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_10": {
+      "id": "entity_10",
+      "type": "fact",
+      "name": "Protected activity event: three 4-story apartment buildings, totaling 275",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "protected_activity",
+        "event_label": "Protected activity",
+        "description": "three 4-story apartment buildings, totaling 275",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_11": {
+      "id": "entity_11",
+      "type": "fact",
+      "name": "Protected activity event: through virtual appointments.",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "protected_activity",
+        "event_label": "Protected activity",
+        "description": "through virtual appointments.",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_12": {
+      "id": "entity_12",
+      "type": "fact",
+      "name": "Response event: and if approved, sends your RTA to HACC.",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "response_timeline",
+        "event_label": "Response event",
+        "description": "and if approved, sends your RTA to HACC.",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_13": {
+      "id": "entity_13",
+      "type": "fact",
+      "name": "Notice event: 1510, Oregon City, OR 97045, or by email",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "1510, Oregon City, OR 97045, or by email",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_14": {
+      "id": "entity_14",
+      "type": "fact",
+      "name": "Notice event: Call and leave a message with the work order line",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "Call and leave a message with the work order line",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_15": {
+      "id": "entity_15",
+      "type": "fact",
+      "name": "Notice event: Contact Gloria LaFleur at 971-930-3184 or by email",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "Contact Gloria LaFleur at 971-930-3184 or by email",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_16": {
+      "id": "entity_16",
+      "type": "fact",
+      "name": "Notice event: Did you notice you received a notice?",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "Did you notice you received a notice?",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_17": {
+      "id": "entity_17",
+      "type": "fact",
+      "name": "Notice event: Featured presenters from the",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "Featured presenters from the",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_18": {
+      "id": "entity_18",
+      "type": "fact",
+      "name": "Notice event: If you receive a notice and don\u2019t respond promptly",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "If you receive a notice and don\u2019t respond promptly",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_19": {
+      "id": "entity_19",
+      "type": "fact",
+      "name": "Notice event: Maintenance issued 24-notices for pre-inspections",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "Maintenance issued 24-notices for pre-inspections",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_20": {
+      "id": "entity_20",
+      "type": "fact",
+      "name": "Notice event: Public Hearing on HACC HACC Operations Updates & Notices",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "Public Hearing on HACC HACC Operations Updates & Notices",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_21": {
+      "id": "entity_21",
+      "type": "fact",
+      "name": "Notice event: Reach me at 971-803-9202 or by email at: nscott@clackamas...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "Reach me at 971-803-9202 or by email at: nscott@clackamas.us if",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_22": {
+      "id": "entity_22",
+      "type": "fact",
+      "name": "Notice event: or email: jon.schmidt@providence.org",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "or email: jon.schmidt@providence.org",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_23": {
+      "id": "entity_23",
+      "type": "fact",
+      "name": "Notice event: the relocation process and reach out to staff listed in t...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "the relocation process and reach out to staff listed in this newsletter to get any questions you have answered.",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_24": {
+      "id": "entity_24",
+      "type": "fact",
+      "name": "Hearing event: A Public Hearing to comment on",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "hearing_process",
+        "event_label": "Hearing/appeal event",
+        "description": "A Public Hearing to comment on",
+        "actor_score": 2.13,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.13
+      },
+      "confidence": 0.8942857142857142,
+      "source": "complaint"
+    },
+    "entity_25": {
+      "id": "entity_25",
+      "type": "fact",
+      "name": "Hearing event: Hearing zoom link contact Erin Fernald",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "hearing_process",
+        "event_label": "Hearing/appeal event",
+        "description": "Hearing zoom link contact Erin Fernald",
+        "actor_score": 2.13,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.13
+      },
+      "confidence": 0.8942857142857142,
+      "source": "complaint"
+    },
+    "entity_26": {
+      "id": "entity_26",
+      "type": "fact",
+      "name": "Hearing event: Public Hearing on HACC HACC Operations Updates & Notices",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "hearing_process",
+        "event_label": "Hearing/appeal event",
+        "description": "Public Hearing on HACC HACC Operations Updates & Notices",
+        "actor_score": 2.13,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.13
+      },
+      "confidence": 0.8942857142857142,
+      "source": "complaint"
+    },
+    "entity_27": {
+      "id": "entity_27",
+      "type": "fact",
+      "name": "Hearing event: connect to resources and review their financial goals.",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "hearing_process",
+        "event_label": "Hearing/appeal event",
+        "description": "connect to resources and review their financial goals.",
+        "actor_score": 2.13,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.13
+      },
+      "confidence": 0.8942857142857142,
+      "source": "complaint"
+    },
+    "entity_28": {
+      "id": "entity_28",
+      "type": "fact",
+      "name": "Hearing event: review at HACC\u2019s administrative office",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "hearing_process",
+        "event_label": "Hearing/appeal event",
+        "description": "review at HACC\u2019s administrative office",
+        "actor_score": 2.13,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.13
+      },
+      "confidence": 0.8942857142857142,
+      "source": "complaint"
+    },
+    "entity_29": {
+      "id": "entity_29",
+      "type": "date",
+      "name": "April 2024",
+      "attributes": {
+        "actor_score": 2.12,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.12
+      },
+      "confidence": 0.8914285714285715,
+      "source": "complaint"
+    },
+    "entity_30": {
+      "id": "entity_30",
+      "type": "date",
+      "name": "February 22, 2024",
+      "attributes": {
+        "actor_score": 2.12,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.12
+      },
+      "confidence": 0.8914285714285715,
+      "source": "complaint"
+    },
+    "entity_31": {
+      "id": "entity_31",
+      "type": "date",
+      "name": "June 2024",
+      "attributes": {
+        "actor_score": 2.12,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.12
+      },
+      "confidence": 0.8914285714285715,
+      "source": "complaint"
+    },
+    "entity_32": {
+      "id": "entity_32",
+      "type": "date",
+      "name": "March 15, 2023",
+      "attributes": {
+        "actor_score": 2.12,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.12
+      },
+      "confidence": 0.8914285714285715,
+      "source": "complaint"
+    },
+    "entity_33": {
+      "id": "entity_33",
+      "type": "date",
+      "name": "March 15, 2024",
+      "attributes": {
+        "actor_score": 2.12,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.12
+      },
+      "confidence": 0.8914285714285715,
+      "source": "complaint"
+    },
+    "entity_34": {
+      "id": "entity_34",
+      "type": "date",
+      "name": "March 2024",
+      "attributes": {
+        "actor_score": 2.12,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.12
+      },
+      "confidence": 0.8914285714285715,
+      "source": "complaint"
+    },
+    "entity_35": {
+      "id": "entity_35",
+      "type": "date",
+      "name": "May 2024",
+      "attributes": {
+        "actor_score": 2.12,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.12
+      },
+      "confidence": 0.8914285714285715,
+      "source": "complaint"
+    },
+    "entity_36": {
+      "id": "entity_36",
+      "type": "date",
+      "name": "November 2023",
+      "attributes": {
+        "actor_score": 2.12,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.12
+      },
+      "confidence": 0.8914285714285715,
+      "source": "complaint"
+    },
+    "entity_37": {
+      "id": "entity_37",
+      "type": "date",
+      "name": "since 2019",
+      "attributes": {
+        "actor_score": 2.12,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.12
+      },
+      "confidence": 0.8914285714285715,
+      "source": "complaint"
+    },
+    "entity_38": {
+      "id": "entity_38",
+      "type": "date",
+      "name": "this year",
+      "attributes": {
+        "actor_score": 2.12,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.12
+      },
+      "confidence": 0.8914285714285715,
+      "source": "complaint"
+    },
+    "entity_39": {
+      "id": "entity_39",
+      "type": "fact",
+      "name": "Retaliation causation link",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "causation",
+        "event_label": "Causation sequence",
+        "description": "A Relocation Road Map: Finding Your New Home with Your Voucher The following is a road map to help you know what to expect when you use your relocation voucher to find your new home. Please look at the table on page 2 for a reminder of w...",
+        "actor_score": 2.12,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.12
+      },
+      "confidence": 0.8914285714285715,
+      "source": "complaint"
+    },
+    "entity_40": {
+      "id": "entity_40",
+      "type": "person",
+      "name": "Clackamas\nCounty",
+      "attributes": {
+        "role": "attn",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_41": {
+      "id": "entity_41",
+      "type": "person",
+      "name": "Clackamas Heights",
+      "attributes": {
+        "role": "and oregon city\nview manor at end of june",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_42": {
+      "id": "entity_42",
+      "type": "person",
+      "name": "Growing Gardens\nSaturday",
+      "attributes": {
+        "role": "july",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_43": {
+      "id": "entity_43",
+      "type": "person",
+      "name": "Housing\nOpportunity\nHealth",
+      "attributes": {
+        "role": "housing\n& human services\nck s countama\nthe park place",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_44": {
+      "id": "entity_44",
+      "type": "person",
+      "name": "Nichole Scott",
+      "attributes": {
+        "role": "an hacc\nresident",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_45": {
+      "id": "entity_45",
+      "type": "person",
+      "name": "Oregon City",
+      "attributes": {
+        "role": "or",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_46": {
+      "id": "entity_46",
+      "type": "person",
+      "name": "Resident Services\nCoordinator",
+      "attributes": {
+        "role": "kellie\ngoodwin",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_47": {
+      "id": "entity_47",
+      "type": "person",
+      "name": "School\nSupport",
+      "attributes": {
+        "role": "free play",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_48": {
+      "id": "entity_48",
+      "type": "person",
+      "name": "South Gain Street",
+      "attributes": {
+        "role": "is scheduled to go through the end of april",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_49": {
+      "id": "entity_49",
+      "type": "person",
+      "name": "Street\nOregon City",
+      "attributes": {
+        "role": "oregon",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_50": {
+      "id": "entity_50",
+      "type": "organization",
+      "name": "CASH Oregon",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_51": {
+      "id": "entity_51",
+      "type": "organization",
+      "name": "Call Resident Services",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_52": {
+      "id": "entity_52",
+      "type": "organization",
+      "name": "Catch-All Chronicle\n\nAfter School",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_53": {
+      "id": "entity_53",
+      "type": "organization",
+      "name": "Clackamas\nHeights",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_54": {
+      "id": "entity_54",
+      "type": "organization",
+      "name": "Clackamas Heights",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_55": {
+      "id": "entity_55",
+      "type": "organization",
+      "name": "Clackamas Heights\nIn",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_56": {
+      "id": "entity_56",
+      "type": "organization",
+      "name": "Common Scams",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_57": {
+      "id": "entity_57",
+      "type": "organization",
+      "name": "Free Tax-sites",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_58": {
+      "id": "entity_58",
+      "type": "organization",
+      "name": "Growing Gardens\nSaturday",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_59": {
+      "id": "entity_59",
+      "type": "organization",
+      "name": "HUD REAC",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_60": {
+      "id": "entity_60",
+      "type": "organization",
+      "name": "Hillside\nPark Phase",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_61": {
+      "id": "entity_61",
+      "type": "organization",
+      "name": "Hillside Park",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_62": {
+      "id": "entity_62",
+      "type": "organization",
+      "name": "Home Ownership\nWith",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_63": {
+      "id": "entity_63",
+      "type": "organization",
+      "name": "Human Services",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_64": {
+      "id": "entity_64",
+      "type": "organization",
+      "name": "Impact NW\nDavid Jacobs\nResident Services",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_65": {
+      "id": "entity_65",
+      "type": "organization",
+      "name": "Nissa\nFrom Trash",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_66": {
+      "id": "entity_66",
+      "type": "organization",
+      "name": "OCVM\nIn",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_67": {
+      "id": "entity_67",
+      "type": "organization",
+      "name": "OCVM\nKelly Goodwin\nResident Services",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_68": {
+      "id": "entity_68",
+      "type": "organization",
+      "name": "Oregon City",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_69": {
+      "id": "entity_69",
+      "type": "organization",
+      "name": "Providence Milwaukie Hospital",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_70": {
+      "id": "entity_70",
+      "type": "organization",
+      "name": "Resident Services",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_71": {
+      "id": "entity_71",
+      "type": "organization",
+      "name": "Scattered Sites",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_72": {
+      "id": "entity_72",
+      "type": "organization",
+      "name": "Scattered Sites\nBernadette Stetz\nResident",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_73": {
+      "id": "entity_73",
+      "type": "organization",
+      "name": "Scattered Sites\nBernadette Stetz\nResident Services",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_74": {
+      "id": "entity_74",
+      "type": "organization",
+      "name": "Tenancy Approval",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_75": {
+      "id": "entity_75",
+      "type": "organization",
+      "name": "The\nCity",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_76": {
+      "id": "entity_76",
+      "type": "organization",
+      "name": "Your\nRelocation Counselor.\nThe",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_77": {
+      "id": "entity_77",
+      "type": "organization",
+      "name": "Your Voucher\nThe",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_78": {
+      "id": "entity_78",
+      "type": "organization",
+      "name": "Your Voucher.\nYou",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_79": {
+      "id": "entity_79",
+      "type": "organization",
+      "name": "B-Town",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.8499999999999999,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8499999999999999
+      },
+      "confidence": 0.8142857142857142,
+      "source": "complaint"
+    },
+    "entity_80": {
+      "id": "entity_80",
+      "type": "organization",
+      "name": "EFernald",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.8499999999999999,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8499999999999999
+      },
+      "confidence": 0.8142857142857142,
+      "source": "complaint"
+    },
+    "entity_81": {
+      "id": "entity_81",
+      "type": "organization",
+      "name": "FREE",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.8499999999999999,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8499999999999999
+      },
+      "confidence": 0.8142857142857142,
+      "source": "complaint"
+    },
+    "entity_82": {
+      "id": "entity_82",
+      "type": "organization",
+      "name": "GLaFleur",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.8499999999999999,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8499999999999999
+      },
+      "confidence": 0.8142857142857142,
+      "source": "complaint"
+    },
+    "entity_83": {
+      "id": "entity_83",
+      "type": "organization",
+      "name": "HACC",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.8499999999999999,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8499999999999999
+      },
+      "confidence": 0.8142857142857142,
+      "source": "complaint"
+    },
+    "entity_84": {
+      "id": "entity_84",
+      "type": "organization",
+      "name": "Housing",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.8499999999999999,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8499999999999999
+      },
+      "confidence": 0.8142857142857142,
+      "source": "complaint"
+    },
+    "entity_85": {
+      "id": "entity_85",
+      "type": "organization",
+      "name": "Nissa.J",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.8499999999999999,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8499999999999999
+      },
+      "confidence": 0.8142857142857142,
+      "source": "complaint"
+    },
+    "entity_86": {
+      "id": "entity_86",
+      "type": "organization",
+      "name": "OCVM",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.8499999999999999,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8499999999999999
+      },
+      "confidence": 0.8142857142857142,
+      "source": "complaint"
+    },
+    "entity_87": {
+      "id": "entity_87",
+      "type": "organization",
+      "name": "Peace",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.8499999999999999,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8499999999999999
+      },
+      "confidence": 0.8142857142857142,
+      "source": "complaint"
+    },
+    "entity_88": {
+      "id": "entity_88",
+      "type": "organization",
+      "name": "Relocation",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.8499999999999999,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8499999999999999
+      },
+      "confidence": 0.8142857142857142,
+      "source": "complaint"
+    },
+    "entity_89": {
+      "id": "entity_89",
+      "type": "organization",
+      "name": "Property Management",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.6199999999999997
+      },
+      "confidence": 0.7485714285714284,
+      "source": "complaint"
+    },
+    "entity_90": {
+      "id": "entity_90",
+      "type": "claim",
+      "name": "Complaint Claim",
+      "attributes": {
+        "claim_type": "unknown",
+        "description": "A Relocation Road Map: Finding Your New Home with Your Voucher The following is a road map to help you know what to expect when you use your relocation voucher to find your new home. Please look at the table on page 2 for a reminder of w...",
+        "actor_score": 2.22,
+        "critic_penalty": 0.7,
+        "actor_critic_score": 1.5200000000000002
+      },
+      "confidence": 0.7200000000000001,
+      "source": "complaint"
+    },
+    "entity_91": {
+      "id": "entity_91",
+      "type": "person",
+      "name": "Landlord",
+      "attributes": {
+        "role": "landlord",
+        "actor_score": 1.8499999999999999,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.5
+      },
+      "confidence": 0.7142857142857143,
+      "source": "complaint"
+    },
+    "entity_92": {
+      "id": "entity_92",
+      "type": "evidence",
+      "name": "Work order",
+      "attributes": {
+        "evidence_type": "work order",
+        "description": "A Relocation Road Map: Finding Your New Home with Your Voucher The following is a road map to help you know what to expect when you use your relocation voucher to find your new home. Please look at the table on page 2 for a reminder of w...",
+        "actor_score": 1.77,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.42
+      },
+      "confidence": 0.6914285714285714,
+      "source": "complaint"
+    },
+    "entity_93": {
+      "id": "entity_93",
+      "type": "fact",
+      "name": "Impact: A Relocation Road Map: Finding Your New Home with Your Vo...",
+      "attributes": {
+        "fact_type": "impact",
+        "description": "A Relocation Road Map: Finding Your New Home with Your Voucher The following is a road map to help you know what to expect when you use your relocation voucher to find your new home. Please look at the table on page 2 for a reminder of w...",
+        "actor_score": 1.77,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.42
+      },
+      "confidence": 0.6914285714285714,
+      "source": "complaint"
+    },
+    "entity_94": {
+      "id": "entity_94",
+      "type": "fact",
+      "name": "Requested remedy: A Relocation Road Map: Finding Your New Home with Your Vo...",
+      "attributes": {
+        "fact_type": "remedy",
+        "description": "A Relocation Road Map: Finding Your New Home with Your Voucher The following is a road map to help you know what to expect when you use your relocation voucher to find your new home. Please look at the table on page 2 for a reminder of w...",
+        "actor_score": 1.77,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.42
+      },
+      "confidence": 0.6914285714285714,
+      "source": "complaint"
+    },
+    "entity_95": {
+      "id": "entity_95",
+      "type": "evidence",
+      "name": "Application",
+      "attributes": {
+        "evidence_type": "application",
+        "description": "A Relocation Road Map: Finding Your New Home with Your Voucher The following is a road map to help you know what to expect when you use your relocation voucher to find your new home. Please look at the table on page 2 for a reminder of w...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_96": {
+      "id": "entity_96",
+      "type": "evidence",
+      "name": "Contract",
+      "attributes": {
+        "evidence_type": "contract",
+        "description": "A Relocation Road Map: Finding Your New Home with Your Voucher The following is a road map to help you know what to expect when you use your relocation voucher to find your new home. Please look at the table on page 2 for a reminder of w...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_97": {
+      "id": "entity_97",
+      "type": "evidence",
+      "name": "Estimate",
+      "attributes": {
+        "evidence_type": "estimate",
+        "description": "A Relocation Road Map: Finding Your New Home with Your Voucher The following is a road map to help you know what to expect when you use your relocation voucher to find your new home. Please look at the table on page 2 for a reminder of w...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_98": {
+      "id": "entity_98",
+      "type": "evidence",
+      "name": "Lease",
+      "attributes": {
+        "evidence_type": "lease",
+        "description": "A Relocation Road Map: Finding Your New Home with Your Voucher The following is a road map to help you know what to expect when you use your relocation voucher to find your new home. Please look at the table on page 2 for a reminder of w...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_99": {
+      "id": "entity_99",
+      "type": "evidence",
+      "name": "Letter",
+      "attributes": {
+        "evidence_type": "letter",
+        "description": "A Relocation Road Map: Finding Your New Home with Your Voucher The following is a road map to help you know what to expect when you use your relocation voucher to find your new home. Please look at the table on page 2 for a reminder of w...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_100": {
+      "id": "entity_100",
+      "type": "evidence",
+      "name": "Notice",
+      "attributes": {
+        "evidence_type": "notice",
+        "description": "A Relocation Road Map: Finding Your New Home with Your Voucher The following is a road map to help you know what to expect when you use your relocation voucher to find your new home. Please look at the table on page 2 for a reminder of w...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_101": {
+      "id": "entity_101",
+      "type": "evidence",
+      "name": "Email communication",
+      "attributes": {
+        "evidence_type": "email communication",
+        "description": "A Relocation Road Map: Finding Your New Home with Your Voucher The following is a road map to help you know what to expect when you use your relocation voucher to find your new home. Please look at the table on page 2 for a reminder of w...",
+        "actor_score": 1.62,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.27
+      },
+      "confidence": 0.6485714285714286,
+      "source": "complaint"
+    },
+    "entity_102": {
+      "id": "entity_102",
+      "type": "evidence",
+      "name": "Payment record",
+      "attributes": {
+        "evidence_type": "payment record",
+        "description": "A Relocation Road Map: Finding Your New Home with Your Voucher The following is a road map to help you know what to expect when you use your relocation voucher to find your new home. Please look at the table on page 2 for a reminder of w...",
+        "actor_score": 1.62,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.27
+      },
+      "confidence": 0.6485714285714286,
+      "source": "complaint"
+    }
+  },
+  "relationships": {
+    "rel_1": {
+      "id": "rel_1",
+      "source_id": "entity_90",
+      "target_id": "entity_29",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_2": {
+      "id": "rel_2",
+      "source_id": "entity_90",
+      "target_id": "entity_30",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_3": {
+      "id": "rel_3",
+      "source_id": "entity_90",
+      "target_id": "entity_31",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_4": {
+      "id": "rel_4",
+      "source_id": "entity_90",
+      "target_id": "entity_32",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_5": {
+      "id": "rel_5",
+      "source_id": "entity_90",
+      "target_id": "entity_33",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_6": {
+      "id": "rel_6",
+      "source_id": "entity_90",
+      "target_id": "entity_34",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_7": {
+      "id": "rel_7",
+      "source_id": "entity_90",
+      "target_id": "entity_92",
+      "relation_type": "supported_by",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_8": {
+      "id": "rel_8",
+      "source_id": "entity_90",
+      "target_id": "entity_95",
+      "relation_type": "supported_by",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_9": {
+      "id": "rel_9",
+      "source_id": "entity_40",
+      "target_id": "entity_50",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_10": {
+      "id": "rel_10",
+      "source_id": "entity_40",
+      "target_id": "entity_51",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_11": {
+      "id": "rel_11",
+      "source_id": "entity_40",
+      "target_id": "entity_52",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_12": {
+      "id": "rel_12",
+      "source_id": "entity_40",
+      "target_id": "entity_53",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_13": {
+      "id": "rel_13",
+      "source_id": "entity_40",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_14": {
+      "id": "rel_14",
+      "source_id": "entity_40",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_15": {
+      "id": "rel_15",
+      "source_id": "entity_41",
+      "target_id": "entity_50",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_16": {
+      "id": "rel_16",
+      "source_id": "entity_41",
+      "target_id": "entity_51",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_17": {
+      "id": "rel_17",
+      "source_id": "entity_41",
+      "target_id": "entity_52",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_18": {
+      "id": "rel_18",
+      "source_id": "entity_41",
+      "target_id": "entity_53",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_19": {
+      "id": "rel_19",
+      "source_id": "entity_41",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_20": {
+      "id": "rel_20",
+      "source_id": "entity_41",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_21": {
+      "id": "rel_21",
+      "source_id": "entity_42",
+      "target_id": "entity_50",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_22": {
+      "id": "rel_22",
+      "source_id": "entity_42",
+      "target_id": "entity_51",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_23": {
+      "id": "rel_23",
+      "source_id": "entity_42",
+      "target_id": "entity_52",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_24": {
+      "id": "rel_24",
+      "source_id": "entity_42",
+      "target_id": "entity_53",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_25": {
+      "id": "rel_25",
+      "source_id": "entity_42",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_26": {
+      "id": "rel_26",
+      "source_id": "entity_42",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_27": {
+      "id": "rel_27",
+      "source_id": "entity_43",
+      "target_id": "entity_50",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_28": {
+      "id": "rel_28",
+      "source_id": "entity_43",
+      "target_id": "entity_51",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_29": {
+      "id": "rel_29",
+      "source_id": "entity_43",
+      "target_id": "entity_52",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_30": {
+      "id": "rel_30",
+      "source_id": "entity_43",
+      "target_id": "entity_53",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_31": {
+      "id": "rel_31",
+      "source_id": "entity_43",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_32": {
+      "id": "rel_32",
+      "source_id": "entity_43",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_33": {
+      "id": "rel_33",
+      "source_id": "entity_44",
+      "target_id": "entity_50",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_34": {
+      "id": "rel_34",
+      "source_id": "entity_44",
+      "target_id": "entity_51",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_35": {
+      "id": "rel_35",
+      "source_id": "entity_44",
+      "target_id": "entity_52",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_36": {
+      "id": "rel_36",
+      "source_id": "entity_44",
+      "target_id": "entity_53",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_37": {
+      "id": "rel_37",
+      "source_id": "entity_44",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_38": {
+      "id": "rel_38",
+      "source_id": "entity_44",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_39": {
+      "id": "rel_39",
+      "source_id": "entity_45",
+      "target_id": "entity_50",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_40": {
+      "id": "rel_40",
+      "source_id": "entity_45",
+      "target_id": "entity_51",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_41": {
+      "id": "rel_41",
+      "source_id": "entity_45",
+      "target_id": "entity_52",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_42": {
+      "id": "rel_42",
+      "source_id": "entity_45",
+      "target_id": "entity_53",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_43": {
+      "id": "rel_43",
+      "source_id": "entity_45",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_44": {
+      "id": "rel_44",
+      "source_id": "entity_45",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_45": {
+      "id": "rel_45",
+      "source_id": "entity_46",
+      "target_id": "entity_50",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_46": {
+      "id": "rel_46",
+      "source_id": "entity_46",
+      "target_id": "entity_51",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_47": {
+      "id": "rel_47",
+      "source_id": "entity_46",
+      "target_id": "entity_52",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_48": {
+      "id": "rel_48",
+      "source_id": "entity_46",
+      "target_id": "entity_53",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_49": {
+      "id": "rel_49",
+      "source_id": "entity_46",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_50": {
+      "id": "rel_50",
+      "source_id": "entity_46",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_51": {
+      "id": "rel_51",
+      "source_id": "entity_47",
+      "target_id": "entity_50",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_52": {
+      "id": "rel_52",
+      "source_id": "entity_47",
+      "target_id": "entity_51",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_53": {
+      "id": "rel_53",
+      "source_id": "entity_47",
+      "target_id": "entity_52",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_54": {
+      "id": "rel_54",
+      "source_id": "entity_47",
+      "target_id": "entity_53",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_55": {
+      "id": "rel_55",
+      "source_id": "entity_47",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_56": {
+      "id": "rel_56",
+      "source_id": "entity_47",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_57": {
+      "id": "rel_57",
+      "source_id": "entity_48",
+      "target_id": "entity_50",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_58": {
+      "id": "rel_58",
+      "source_id": "entity_48",
+      "target_id": "entity_51",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_59": {
+      "id": "rel_59",
+      "source_id": "entity_48",
+      "target_id": "entity_52",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_60": {
+      "id": "rel_60",
+      "source_id": "entity_48",
+      "target_id": "entity_53",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_61": {
+      "id": "rel_61",
+      "source_id": "entity_48",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_62": {
+      "id": "rel_62",
+      "source_id": "entity_48",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_63": {
+      "id": "rel_63",
+      "source_id": "entity_49",
+      "target_id": "entity_50",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_64": {
+      "id": "rel_64",
+      "source_id": "entity_49",
+      "target_id": "entity_51",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_65": {
+      "id": "rel_65",
+      "source_id": "entity_49",
+      "target_id": "entity_52",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_66": {
+      "id": "rel_66",
+      "source_id": "entity_49",
+      "target_id": "entity_53",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_67": {
+      "id": "rel_67",
+      "source_id": "entity_49",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_68": {
+      "id": "rel_68",
+      "source_id": "entity_49",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_69": {
+      "id": "rel_69",
+      "source_id": "entity_91",
+      "target_id": "entity_50",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_70": {
+      "id": "rel_70",
+      "source_id": "entity_91",
+      "target_id": "entity_51",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_71": {
+      "id": "rel_71",
+      "source_id": "entity_91",
+      "target_id": "entity_52",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_72": {
+      "id": "rel_72",
+      "source_id": "entity_91",
+      "target_id": "entity_53",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_73": {
+      "id": "rel_73",
+      "source_id": "entity_91",
+      "target_id": "entity_54",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_74": {
+      "id": "rel_74",
+      "source_id": "entity_91",
+      "target_id": "entity_55",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_75": {
+      "id": "rel_75",
+      "source_id": "entity_92",
+      "target_id": "entity_91",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    },
+    "rel_76": {
+      "id": "rel_76",
+      "source_id": "entity_95",
+      "target_id": "entity_91",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    },
+    "rel_77": {
+      "id": "rel_77",
+      "source_id": "entity_96",
+      "target_id": "entity_91",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    },
+    "rel_78": {
+      "id": "rel_78",
+      "source_id": "entity_97",
+      "target_id": "entity_91",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    },
+    "rel_79": {
+      "id": "rel_79",
+      "source_id": "entity_98",
+      "target_id": "entity_91",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    },
+    "rel_80": {
+      "id": "rel_80",
+      "source_id": "entity_99",
+      "target_id": "entity_91",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    },
+    "rel_81": {
+      "id": "rel_81",
+      "source_id": "entity_100",
+      "target_id": "entity_91",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    },
+    "rel_82": {
+      "id": "rel_82",
+      "source_id": "entity_101",
+      "target_id": "entity_91",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    },
+    "rel_83": {
+      "id": "rel_83",
+      "source_id": "entity_102",
+      "target_id": "entity_91",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    }
+  }
+}

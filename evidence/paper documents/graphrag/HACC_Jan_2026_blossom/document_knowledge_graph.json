@@ -1,0 +1,449 @@
+{
+  "metadata": {
+    "created_at": "2026-03-27T06:41:06.661124+00:00",
+    "last_updated": "2026-03-27T06:41:06.662679+00:00",
+    "version": "1.0",
+    "actor_critic": {
+      "enabled": true,
+      "entity_count": 16,
+      "relationship_count": 16,
+      "avg_entity_score": 1.8019,
+      "avg_relationship_score": 1.8062,
+      "entity_score_floor": -0.3,
+      "relationship_score_floor": -0.1
+    }
+  },
+  "entities": {
+    "entity_1": {
+      "id": "entity_1",
+      "type": "fact",
+      "name": "Response event: We know these decisions can feel overwhelming.",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "response_timeline",
+        "event_label": "Response event",
+        "description": "We know these decisions can feel overwhelming.",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_2": {
+      "id": "entity_2",
+      "type": "fact",
+      "name": "Notice event: If you received this letter, the Tenant Protection Vouche...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "If you received this letter, the Tenant Protection Voucher process has not yet started for you",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_3": {
+      "id": "entity_3",
+      "type": "fact",
+      "name": "Hearing event: Please take time to review your options, and reach out if...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "hearing_process",
+        "event_label": "Hearing/appeal event",
+        "description": "Please take time to review your options, and reach out if you have",
+        "actor_score": 2.13,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.13
+      },
+      "confidence": 0.8942857142857142,
+      "source": "complaint"
+    },
+    "entity_4": {
+      "id": "entity_4",
+      "type": "person",
+      "name": "Avenue\nMilwaukie",
+      "attributes": {
+        "role": "or",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_5": {
+      "id": "entity_5",
+      "type": "person",
+      "name": "Community Apartments",
+      "attributes": {
+        "role": "or\noption",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_6": {
+      "id": "entity_6",
+      "type": "person",
+      "name": "County\nHealthy Families",
+      "attributes": {
+        "role": "strong cormmunities",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_7": {
+      "id": "entity_7",
+      "type": "person",
+      "name": "Dear Jane Cortez",
+      "attributes": {
+        "role": "we are writing to share important information about your",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_8": {
+      "id": "entity_8",
+      "type": "person",
+      "name": "Tenant Protection Voucher",
+      "attributes": {
+        "role": "please contact ashley ferron to start that\nprocess",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_9": {
+      "id": "entity_9",
+      "type": "date",
+      "name": "01/08/2026",
+      "attributes": {
+        "actor_score": 2.0,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.0
+      },
+      "confidence": 0.8571428571428571,
+      "source": "complaint"
+    },
+    "entity_10": {
+      "id": "entity_10",
+      "type": "organization",
+      "name": "Blossom",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.8499999999999999,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8499999999999999
+      },
+      "confidence": 0.8142857142857142,
+      "source": "complaint"
+    },
+    "entity_11": {
+      "id": "entity_11",
+      "type": "claim",
+      "name": "Complaint Claim",
+      "attributes": {
+        "claim_type": "unknown",
+        "description": "Health, Housing : &HumanservicesSS Housing Authority of Clackamas County \u2014 APPR TING Jane Cortez 10043 SE 324 Avenue Milwaukie, OR 97222 IMPORTANT: ACTION REQUIRED Dear Jane Cortez, We are writing to share important information about you...",
+        "actor_score": 2.22,
+        "critic_penalty": 0.7,
+        "actor_critic_score": 1.5200000000000002
+      },
+      "confidence": 0.7200000000000001,
+      "source": "complaint"
+    },
+    "entity_12": {
+      "id": "entity_12",
+      "type": "organization",
+      "name": "Property Management",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.8199999999999998,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.4699999999999998
+      },
+      "confidence": 0.7057142857142856,
+      "source": "complaint"
+    },
+    "entity_13": {
+      "id": "entity_13",
+      "type": "fact",
+      "name": "Impact: Health, Housing : &HumanservicesSS Housing Authority of C...",
+      "attributes": {
+        "fact_type": "impact",
+        "description": "Health, Housing : &HumanservicesSS Housing Authority of Clackamas County \u2014 APPR TING Jane Cortez 10043 SE 324 Avenue Milwaukie, OR 97222 IMPORTANT: ACTION REQUIRED Dear Jane Cortez, We are writing to share important information about you...",
+        "actor_score": 1.77,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.42
+      },
+      "confidence": 0.6914285714285714,
+      "source": "complaint"
+    },
+    "entity_14": {
+      "id": "entity_14",
+      "type": "evidence",
+      "name": "Application",
+      "attributes": {
+        "evidence_type": "application",
+        "description": "Health, Housing : &HumanservicesSS Housing Authority of Clackamas County \u2014 APPR TING Jane Cortez 10043 SE 324 Avenue Milwaukie, OR 97222 IMPORTANT: ACTION REQUIRED Dear Jane Cortez, We are writing to share important information about you...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_15": {
+      "id": "entity_15",
+      "type": "evidence",
+      "name": "Lease",
+      "attributes": {
+        "evidence_type": "lease",
+        "description": "Health, Housing : &HumanservicesSS Housing Authority of Clackamas County \u2014 APPR TING Jane Cortez 10043 SE 324 Avenue Milwaukie, OR 97222 IMPORTANT: ACTION REQUIRED Dear Jane Cortez, We are writing to share important information about you...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_16": {
+      "id": "entity_16",
+      "type": "evidence",
+      "name": "Letter",
+      "attributes": {
+        "evidence_type": "letter",
+        "description": "Health, Housing : &HumanservicesSS Housing Authority of Clackamas County \u2014 APPR TING Jane Cortez 10043 SE 324 Avenue Milwaukie, OR 97222 IMPORTANT: ACTION REQUIRED Dear Jane Cortez, We are writing to share important information about you...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    }
+  },
+  "relationships": {
+    "rel_1": {
+      "id": "rel_1",
+      "source_id": "entity_11",
+      "target_id": "entity_9",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_2": {
+      "id": "rel_2",
+      "source_id": "entity_11",
+      "target_id": "entity_14",
+      "relation_type": "supported_by",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_3": {
+      "id": "rel_3",
+      "source_id": "entity_11",
+      "target_id": "entity_15",
+      "relation_type": "supported_by",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_4": {
+      "id": "rel_4",
+      "source_id": "entity_11",
+      "target_id": "entity_16",
+      "relation_type": "supported_by",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_5": {
+      "id": "rel_5",
+      "source_id": "entity_4",
+      "target_id": "entity_10",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_6": {
+      "id": "rel_6",
+      "source_id": "entity_4",
+      "target_id": "entity_12",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_7": {
+      "id": "rel_7",
+      "source_id": "entity_5",
+      "target_id": "entity_10",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_8": {
+      "id": "rel_8",
+      "source_id": "entity_5",
+      "target_id": "entity_12",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_9": {
+      "id": "rel_9",
+      "source_id": "entity_6",
+      "target_id": "entity_10",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_10": {
+      "id": "rel_10",
+      "source_id": "entity_6",
+      "target_id": "entity_12",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_11": {
+      "id": "rel_11",
+      "source_id": "entity_7",
+      "target_id": "entity_10",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_12": {
+      "id": "rel_12",
+      "source_id": "entity_7",
+      "target_id": "entity_12",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_13": {
+      "id": "rel_13",
+      "source_id": "entity_8",
+      "target_id": "entity_10",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_14": {
+      "id": "rel_14",
+      "source_id": "entity_8",
+      "target_id": "entity_12",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_15": {
+      "id": "rel_15",
+      "source_id": "entity_11",
+      "target_id": "entity_10",
+      "relation_type": "involves",
+      "attributes": {
+        "actor_score": 1.5499999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.5499999999999998
+      },
+      "confidence": 0.7285714285714285,
+      "source": "complaint"
+    },
+    "rel_16": {
+      "id": "rel_16",
+      "source_id": "entity_11",
+      "target_id": "entity_12",
+      "relation_type": "involves",
+      "attributes": {
+        "actor_score": 1.5499999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.5499999999999998
+      },
+      "confidence": 0.7285714285714285,
+      "source": "complaint"
+    }
+  }
+}

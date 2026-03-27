@@ -1,0 +1,29 @@
+{
+  "document_path": "/home/barberb/HACC/evidence/paper documents/HACC first amendment.pdf",
+  "graphrag_dir": "/home/barberb/HACC/evidence/paper documents/graphrag/HACC_first_amendment",
+  "status": "generated",
+  "knowledge_graph_summary": {
+    "total_entities": 80,
+    "total_relationships": 111,
+    "entity_types": {
+      "claim": 3,
+      "fact": 37,
+      "date": 4,
+      "person": 13,
+      "organization": 18,
+      "evidence": 5
+    },
+    "relationship_types": {
+      "makes_claim": 3,
+      "occurred_on": 12,
+      "employed_by": 77,
+      "follows_protected_activity": 4,
+      "involves": 3,
+      "causal_link": 3,
+      "occurred_after": 4,
+      "associated_with": 5
+    },
+    "gaps": 27
+  },
+  "graph_path": "/home/barberb/HACC/evidence/paper documents/graphrag/HACC_first_amendment/document_knowledge_graph.json"
+}

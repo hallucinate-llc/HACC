@@ -1,0 +1,25 @@
+{
+  "document_path": "/home/barberb/HACC/evidence/paper documents/Housing Authority Clackamas County Brochure.pdf",
+  "graphrag_dir": "/home/barberb/HACC/evidence/paper documents/graphrag/Housing_Authority_Clackamas_County_Brochure",
+  "status": "generated",
+  "knowledge_graph_summary": {
+    "total_entities": 102,
+    "total_relationships": 83,
+    "entity_types": {
+      "fact": 31,
+      "date": 10,
+      "person": 11,
+      "organization": 40,
+      "claim": 1,
+      "evidence": 9
+    },
+    "relationship_types": {
+      "occurred_on": 6,
+      "supported_by": 2,
+      "employed_by": 66,
+      "associated_with": 9
+    },
+    "gaps": 48
+  },
+  "graph_path": "/home/barberb/HACC/evidence/paper documents/graphrag/Housing_Authority_Clackamas_County_Brochure/document_knowledge_graph.json"
+}

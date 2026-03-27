@@ -1,0 +1,1233 @@
+{
+  "metadata": {
+    "created_at": "2026-03-27T06:41:07.098338+00:00",
+    "last_updated": "2026-03-27T06:41:07.107095+00:00",
+    "version": "1.0",
+    "actor_critic": {
+      "enabled": true,
+      "entity_count": 43,
+      "relationship_count": 45,
+      "avg_entity_score": 1.9116,
+      "avg_relationship_score": 1.6544,
+      "entity_score_floor": -0.3,
+      "relationship_score_floor": -0.1
+    }
+  },
+  "entities": {
+    "entity_1": {
+      "id": "entity_1",
+      "type": "claim",
+      "name": "Accommodation Request",
+      "attributes": {
+        "claim_type": "accommodation",
+        "description": "Health, Housing & HumanService Housing Authority of Clackamas County PROJECT BASED VOUCHER PROGRAM PBV Thank you for your interest and/or continued participation in the Housing Authority of Clackamas County\u2019s (HACC) rental assistance pro...",
+        "actor_score": 2.52,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.52
+      },
+      "confidence": 0.98,
+      "source": "complaint"
+    },
+    "entity_2": {
+      "id": "entity_2",
+      "type": "fact",
+      "name": "Protected activity event: Bedrooms Bathrooms Bathrooms",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "protected_activity",
+        "event_label": "Protected activity",
+        "description": "Bedrooms Bathrooms Bathrooms",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_3": {
+      "id": "entity_3",
+      "type": "fact",
+      "name": "Protected activity event: If the property has more then four (4) units, owners must...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "protected_activity",
+        "event_label": "Protected activity",
+        "description": "If the property has more then four (4) units, owners must list at least three most recently leased",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_4": {
+      "id": "entity_4",
+      "type": "fact",
+      "name": "Response event: Tenants must receive a federally approved pamphlet on lea...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "response_timeline",
+        "event_label": "Response event",
+        "description": "Tenants must receive a federally approved pamphlet on lead poisoning prevention.",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_5": {
+      "id": "entity_5",
+      "type": "fact",
+      "name": "Response event: The start date of the tenancy will be coordinated with yo...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "response_timeline",
+        "event_label": "Response event",
+        "description": "The start date of the tenancy will be coordinated with you and MUST be approved by HACC.",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_6": {
+      "id": "entity_6",
+      "type": "fact",
+      "name": "Response event: of the tenancy cannot be approved, the lease agreement wi...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "response_timeline",
+        "event_label": "Response event",
+        "description": "of the tenancy cannot be approved, the lease agreement will be returned.",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_7": {
+      "id": "entity_7",
+      "type": "fact",
+      "name": "Notice event: ARGS Yoo Worx 7 | Telephone Number (Home and messages)",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "ARGS Yoo Worx 7 | Telephone Number (Home and messages)",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_8": {
+      "id": "entity_8",
+      "type": "fact",
+      "name": "Notice event: Email Address",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "Email Address",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_9": {
+      "id": "entity_9",
+      "type": "fact",
+      "name": "Notice event: Email: HACCLEASING@clackamas.us",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "Email: HACCLEASING@clackamas.us",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_10": {
+      "id": "entity_10",
+      "type": "fact",
+      "name": "Notice event: HA Representative: Date RTA rec'd: Jurisdiction: L_| maw)...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "HA Representative: Date RTA rec'd: Jurisdiction: L_| maw) LE] out (oJ)",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_11": {
+      "id": "entity_11",
+      "type": "fact",
+      "name": "Notice event: Present Address of Family (Number, Street, Apt/Suite)",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "Present Address of Family (Number, Street, Apt/Suite)",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_12": {
+      "id": "entity_12",
+      "type": "fact",
+      "name": "Notice event: Signature of Family Representative Date",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "Signature of Family Representative Date",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_13": {
+      "id": "entity_13",
+      "type": "fact",
+      "name": "Notice event: The property owner should be present for the inspection a...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "The property owner should be present for the inspection and the unit must",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_14": {
+      "id": "entity_14",
+      "type": "fact",
+      "name": "Notice event: [f our records reveal new information is necessary, a HAC...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "[f our records reveal new information is necessary, a HACC representative will",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_15": {
+      "id": "entity_15",
+      "type": "fact",
+      "name": "Notice event: appliances present in the unit must remain in place for t...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "appliances present in the unit must remain in place for the assisted tenancy.",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_16": {
+      "id": "entity_16",
+      "type": "fact",
+      "name": "Notice event: one for this tenancy, you may use the attached Letter of ...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "one for this tenancy, you may use the attached Letter of Authorization form and submit",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_17": {
+      "id": "entity_17",
+      "type": "fact",
+      "name": "Notice event: |_| Known lead-based paint and/or lead-based paint hazard...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "|_| Known lead-based paint and/or lead-based paint hazards are present in the unit.",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_18": {
+      "id": "entity_18",
+      "type": "fact",
+      "name": "Notice event: \u00ab All utilities must be turned on and appliances must pre...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "\u00ab All utilities must be turned on and appliances must present and operable.",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_19": {
+      "id": "entity_19",
+      "type": "fact",
+      "name": "Hearing event: The following party has reviewed the information above an...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "hearing_process",
+        "event_label": "Hearing/appeal event",
+        "description": "The following party has reviewed the information above and certify, to the best of their knowledge, that the",
+        "actor_score": 2.13,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.13
+      },
+      "confidence": 0.8942857142857142,
+      "source": "complaint"
+    },
+    "entity_20": {
+      "id": "entity_20",
+      "type": "fact",
+      "name": "Hearing event: We kindly ask that you review your lease for any errors a...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "hearing_process",
+        "event_label": "Hearing/appeal event",
+        "description": "We kindly ask that you review your lease for any errors and omissions.",
+        "actor_score": 2.13,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.13
+      },
+      "confidence": 0.8942857142857142,
+      "source": "complaint"
+    },
+    "entity_21": {
+      "id": "entity_21",
+      "type": "fact",
+      "name": "Retaliation causation link",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "causation",
+        "event_label": "Causation sequence",
+        "description": "Health, Housing & HumanService Housing Authority of Clackamas County PROJECT BASED VOUCHER PROGRAM PBV Thank you for your interest and/or continued participation in the Housing Authority of Clackamas County\u2019s (HACC) rental assistance pro...",
+        "actor_score": 2.12,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.12
+      },
+      "confidence": 0.8914285714285715,
+      "source": "complaint"
+    },
+    "entity_22": {
+      "id": "entity_22",
+      "type": "person",
+      "name": "Gain Street",
+      "attributes": {
+        "role": "oregon city",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_23": {
+      "id": "entity_23",
+      "type": "person",
+      "name": "Oregon City",
+      "attributes": {
+        "role": "or",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_24": {
+      "id": "entity_24",
+      "type": "person",
+      "name": "Oregon Gity",
+      "attributes": {
+        "role": "or",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_25": {
+      "id": "entity_25",
+      "type": "person",
+      "name": "Yes Not\nIfyes",
+      "attributes": {
+        "role": "what is the contract rent of identical units of the same size",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_26": {
+      "id": "entity_26",
+      "type": "date",
+      "name": "03/20/2025",
+      "attributes": {
+        "actor_score": 2.0,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.0
+      },
+      "confidence": 0.8571428571428571,
+      "source": "complaint"
+    },
+    "entity_27": {
+      "id": "entity_27",
+      "type": "organization",
+      "name": "Direct Deposit",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_28": {
+      "id": "entity_28",
+      "type": "organization",
+      "name": "HACC. The U.S.\nDepartment",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_29": {
+      "id": "entity_29",
+      "type": "organization",
+      "name": "Housing Quality\nStandards",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_30": {
+      "id": "entity_30",
+      "type": "organization",
+      "name": "Limited Liability Company",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_31": {
+      "id": "entity_31",
+      "type": "organization",
+      "name": "Tenancy Approval",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_32": {
+      "id": "entity_32",
+      "type": "organization",
+      "name": "U.S. Environment Protection Agency",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_33": {
+      "id": "entity_33",
+      "type": "person",
+      "name": "Landlord",
+      "attributes": {
+        "role": "landlord",
+        "actor_score": 1.8499999999999999,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.5
+      },
+      "confidence": 0.7142857142857143,
+      "source": "complaint"
+    },
+    "entity_34": {
+      "id": "entity_34",
+      "type": "organization",
+      "name": "Property Management",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.8199999999999998,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.4699999999999998
+      },
+      "confidence": 0.7057142857142856,
+      "source": "complaint"
+    },
+    "entity_35": {
+      "id": "entity_35",
+      "type": "fact",
+      "name": "Impact: Health, Housing & HumanService Housing Authority of Clack...",
+      "attributes": {
+        "fact_type": "impact",
+        "description": "Health, Housing & HumanService Housing Authority of Clackamas County PROJECT BASED VOUCHER PROGRAM PBV Thank you for your interest and/or continued participation in the Housing Authority of Clackamas County\u2019s (HACC) rental assistance pro...",
+        "actor_score": 1.77,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.42
+      },
+      "confidence": 0.6914285714285714,
+      "source": "complaint"
+    },
+    "entity_36": {
+      "id": "entity_36",
+      "type": "fact",
+      "name": "Requested remedy: Health, Housing & HumanService Housing Authority of Clack...",
+      "attributes": {
+        "fact_type": "remedy",
+        "description": "Health, Housing & HumanService Housing Authority of Clackamas County PROJECT BASED VOUCHER PROGRAM PBV Thank you for your interest and/or continued participation in the Housing Authority of Clackamas County\u2019s (HACC) rental assistance pro...",
+        "actor_score": 1.77,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.42
+      },
+      "confidence": 0.6914285714285714,
+      "source": "complaint"
+    },
+    "entity_37": {
+      "id": "entity_37",
+      "type": "evidence",
+      "name": "Agreement",
+      "attributes": {
+        "evidence_type": "agreement",
+        "description": "Health, Housing & HumanService Housing Authority of Clackamas County PROJECT BASED VOUCHER PROGRAM PBV Thank you for your interest and/or continued participation in the Housing Authority of Clackamas County\u2019s (HACC) rental assistance pro...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_38": {
+      "id": "entity_38",
+      "type": "evidence",
+      "name": "Contract",
+      "attributes": {
+        "evidence_type": "contract",
+        "description": "Health, Housing & HumanService Housing Authority of Clackamas County PROJECT BASED VOUCHER PROGRAM PBV Thank you for your interest and/or continued participation in the Housing Authority of Clackamas County\u2019s (HACC) rental assistance pro...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_39": {
+      "id": "entity_39",
+      "type": "evidence",
+      "name": "Lease",
+      "attributes": {
+        "evidence_type": "lease",
+        "description": "Health, Housing & HumanService Housing Authority of Clackamas County PROJECT BASED VOUCHER PROGRAM PBV Thank you for your interest and/or continued participation in the Housing Authority of Clackamas County\u2019s (HACC) rental assistance pro...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_40": {
+      "id": "entity_40",
+      "type": "evidence",
+      "name": "Letter",
+      "attributes": {
+        "evidence_type": "letter",
+        "description": "Health, Housing & HumanService Housing Authority of Clackamas County PROJECT BASED VOUCHER PROGRAM PBV Thank you for your interest and/or continued participation in the Housing Authority of Clackamas County\u2019s (HACC) rental assistance pro...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_41": {
+      "id": "entity_41",
+      "type": "evidence",
+      "name": "Receipt",
+      "attributes": {
+        "evidence_type": "receipt",
+        "description": "Health, Housing & HumanService Housing Authority of Clackamas County PROJECT BASED VOUCHER PROGRAM PBV Thank you for your interest and/or continued participation in the Housing Authority of Clackamas County\u2019s (HACC) rental assistance pro...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_42": {
+      "id": "entity_42",
+      "type": "evidence",
+      "name": "Email communication",
+      "attributes": {
+        "evidence_type": "email communication",
+        "description": "Health, Housing & HumanService Housing Authority of Clackamas County PROJECT BASED VOUCHER PROGRAM PBV Thank you for your interest and/or continued participation in the Housing Authority of Clackamas County\u2019s (HACC) rental assistance pro...",
+        "actor_score": 1.62,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.27
+      },
+      "confidence": 0.6485714285714286,
+      "source": "complaint"
+    },
+    "entity_43": {
+      "id": "entity_43",
+      "type": "evidence",
+      "name": "Payment record",
+      "attributes": {
+        "evidence_type": "payment record",
+        "description": "Health, Housing & HumanService Housing Authority of Clackamas County PROJECT BASED VOUCHER PROGRAM PBV Thank you for your interest and/or continued participation in the Housing Authority of Clackamas County\u2019s (HACC) rental assistance pro...",
+        "actor_score": 1.62,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.27
+      },
+      "confidence": 0.6485714285714286,
+      "source": "complaint"
+    }
+  },
+  "relationships": {
+    "rel_1": {
+      "id": "rel_1",
+      "source_id": "entity_1",
+      "target_id": "entity_26",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_2": {
+      "id": "rel_2",
+      "source_id": "entity_1",
+      "target_id": "entity_37",
+      "relation_type": "supported_by",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_3": {
+      "id": "rel_3",
+      "source_id": "entity_1",
+      "target_id": "entity_38",
+      "relation_type": "supported_by",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_4": {
+      "id": "rel_4",
+      "source_id": "entity_1",
+      "target_id": "entity_39",
+      "relation_type": "supported_by",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_5": {
+      "id": "rel_5",
+      "source_id": "entity_1",
+      "target_id": "entity_40",
+      "relation_type": "supported_by",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_6": {
+      "id": "rel_6",
+      "source_id": "entity_1",
+      "target_id": "entity_41",
+      "relation_type": "supported_by",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_7": {
+      "id": "rel_7",
+      "source_id": "entity_1",
+      "target_id": "entity_42",
+      "relation_type": "supported_by",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_8": {
+      "id": "rel_8",
+      "source_id": "entity_22",
+      "target_id": "entity_27",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_9": {
+      "id": "rel_9",
+      "source_id": "entity_22",
+      "target_id": "entity_28",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_10": {
+      "id": "rel_10",
+      "source_id": "entity_22",
+      "target_id": "entity_29",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_11": {
+      "id": "rel_11",
+      "source_id": "entity_22",
+      "target_id": "entity_30",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_12": {
+      "id": "rel_12",
+      "source_id": "entity_22",
+      "target_id": "entity_31",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_13": {
+      "id": "rel_13",
+      "source_id": "entity_22",
+      "target_id": "entity_32",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_14": {
+      "id": "rel_14",
+      "source_id": "entity_23",
+      "target_id": "entity_27",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_15": {
+      "id": "rel_15",
+      "source_id": "entity_23",
+      "target_id": "entity_28",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_16": {
+      "id": "rel_16",
+      "source_id": "entity_23",
+      "target_id": "entity_29",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_17": {
+      "id": "rel_17",
+      "source_id": "entity_23",
+      "target_id": "entity_30",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_18": {
+      "id": "rel_18",
+      "source_id": "entity_23",
+      "target_id": "entity_31",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_19": {
+      "id": "rel_19",
+      "source_id": "entity_23",
+      "target_id": "entity_32",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_20": {
+      "id": "rel_20",
+      "source_id": "entity_24",
+      "target_id": "entity_27",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_21": {
+      "id": "rel_21",
+      "source_id": "entity_24",
+      "target_id": "entity_28",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_22": {
+      "id": "rel_22",
+      "source_id": "entity_24",
+      "target_id": "entity_29",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_23": {
+      "id": "rel_23",
+      "source_id": "entity_24",
+      "target_id": "entity_30",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_24": {
+      "id": "rel_24",
+      "source_id": "entity_24",
+      "target_id": "entity_31",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_25": {
+      "id": "rel_25",
+      "source_id": "entity_24",
+      "target_id": "entity_32",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_26": {
+      "id": "rel_26",
+      "source_id": "entity_25",
+      "target_id": "entity_27",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_27": {
+      "id": "rel_27",
+      "source_id": "entity_25",
+      "target_id": "entity_28",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_28": {
+      "id": "rel_28",
+      "source_id": "entity_25",
+      "target_id": "entity_29",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_29": {
+      "id": "rel_29",
+      "source_id": "entity_25",
+      "target_id": "entity_30",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_30": {
+      "id": "rel_30",
+      "source_id": "entity_25",
+      "target_id": "entity_31",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_31": {
+      "id": "rel_31",
+      "source_id": "entity_25",
+      "target_id": "entity_32",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_32": {
+      "id": "rel_32",
+      "source_id": "entity_33",
+      "target_id": "entity_27",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_33": {
+      "id": "rel_33",
+      "source_id": "entity_33",
+      "target_id": "entity_28",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_34": {
+      "id": "rel_34",
+      "source_id": "entity_33",
+      "target_id": "entity_29",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_35": {
+      "id": "rel_35",
+      "source_id": "entity_33",
+      "target_id": "entity_30",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_36": {
+      "id": "rel_36",
+      "source_id": "entity_33",
+      "target_id": "entity_31",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_37": {
+      "id": "rel_37",
+      "source_id": "entity_33",
+      "target_id": "entity_32",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_38": {
+      "id": "rel_38",
+      "source_id": "entity_1",
+      "target_id": "entity_27",
+      "relation_type": "involves",
+      "attributes": {
+        "actor_score": 1.5499999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.5499999999999998
+      },
+      "confidence": 0.7285714285714285,
+      "source": "complaint"
+    },
+    "rel_39": {
+      "id": "rel_39",
+      "source_id": "entity_37",
+      "target_id": "entity_33",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    },
+    "rel_40": {
+      "id": "rel_40",
+      "source_id": "entity_38",
+      "target_id": "entity_33",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    },
+    "rel_41": {
+      "id": "rel_41",
+      "source_id": "entity_39",
+      "target_id": "entity_33",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    },
+    "rel_42": {
+      "id": "rel_42",
+      "source_id": "entity_40",
+      "target_id": "entity_33",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    },
+    "rel_43": {
+      "id": "rel_43",
+      "source_id": "entity_41",
+      "target_id": "entity_33",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    },
+    "rel_44": {
+      "id": "rel_44",
+      "source_id": "entity_42",
+      "target_id": "entity_33",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    },
+    "rel_45": {
+      "id": "rel_45",
+      "source_id": "entity_43",
+      "target_id": "entity_33",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    }
+  }
+}

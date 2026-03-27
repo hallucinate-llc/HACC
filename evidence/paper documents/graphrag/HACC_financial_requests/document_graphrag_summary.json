@@ -1,0 +1,26 @@
+{
+  "document_path": "/home/barberb/HACC/evidence/paper documents/HACC financial requests.pdf",
+  "graphrag_dir": "/home/barberb/HACC/evidence/paper documents/graphrag/HACC_financial_requests",
+  "status": "generated",
+  "knowledge_graph_summary": {
+    "total_entities": 13,
+    "total_relationships": 11,
+    "entity_types": {
+      "fact": 4,
+      "date": 1,
+      "person": 3,
+      "claim": 1,
+      "organization": 1,
+      "evidence": 3
+    },
+    "relationship_types": {
+      "occurred_on": 1,
+      "supported_by": 3,
+      "employed_by": 3,
+      "involves": 1,
+      "associated_with": 3
+    },
+    "gaps": 7
+  },
+  "graph_path": "/home/barberb/HACC/evidence/paper documents/graphrag/HACC_financial_requests/document_knowledge_graph.json"
+}

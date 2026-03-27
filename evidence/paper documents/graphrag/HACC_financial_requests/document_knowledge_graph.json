@@ -1,0 +1,347 @@
+{
+  "metadata": {
+    "created_at": "2026-03-27T06:41:06.689225+00:00",
+    "last_updated": "2026-03-27T06:41:06.690298+00:00",
+    "version": "1.0",
+    "actor_critic": {
+      "enabled": true,
+      "entity_count": 13,
+      "relationship_count": 11,
+      "avg_entity_score": 1.8231,
+      "avg_relationship_score": 1.5455,
+      "entity_score_floor": -0.3,
+      "relationship_score_floor": -0.1
+    }
+  },
+  "entities": {
+    "entity_1": {
+      "id": "entity_1",
+      "type": "fact",
+      "name": "Protected activity event: All profit and loss forms related to the information repo...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "protected_activity",
+        "event_label": "Protected activity",
+        "description": "All profit and loss forms related to the information reported in your",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_2": {
+      "id": "entity_2",
+      "type": "fact",
+      "name": "Notice event: Please call me if you have any questions or concerns rega...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "Please call me if you have any questions or concerns regarding this letter.",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_3": {
+      "id": "entity_3",
+      "type": "fact",
+      "name": "Hearing event: After reviewing the packet of information you provided, i...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "hearing_process",
+        "event_label": "Hearing/appeal event",
+        "description": "After reviewing the packet of information you provided, it was determined that you or a",
+        "actor_score": 2.13,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.13
+      },
+      "confidence": 0.8942857142857142,
+      "source": "complaint"
+    },
+    "entity_4": {
+      "id": "entity_4",
+      "type": "date",
+      "name": "February 9, 2026",
+      "attributes": {
+        "actor_score": 2.12,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.12
+      },
+      "confidence": 0.8914285714285715,
+      "source": "complaint"
+    },
+    "entity_5": {
+      "id": "entity_5",
+      "type": "fact",
+      "name": "Retaliation causation link",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "causation",
+        "event_label": "Causation sequence",
+        "description": "Health, Housing &Humanservices.& Housing Authority of Clackamas County LSIURL, HOUGING OPPORTUNITY February 9, 2026 Jane Cortez 10043 SE 32nd Avenue Milwaukie, OR 97222 RE: Additional information required Dear Jane: After reviewing the p...",
+        "actor_score": 2.12,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.12
+      },
+      "confidence": 0.8914285714285715,
+      "source": "complaint"
+    },
+    "entity_6": {
+      "id": "entity_6",
+      "type": "person",
+      "name": "Avenue\nMilwaukie",
+      "attributes": {
+        "role": "or",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_7": {
+      "id": "entity_7",
+      "type": "person",
+      "name": "Manager\nHealthy Families",
+      "attributes": {
+        "role": "strong communities",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_8": {
+      "id": "entity_8",
+      "type": "person",
+      "name": "Verified Complete",
+      "attributes": {
+        "role": "filed",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_9": {
+      "id": "entity_9",
+      "type": "claim",
+      "name": "Complaint Claim",
+      "attributes": {
+        "claim_type": "unknown",
+        "description": "Health, Housing &Humanservices.& Housing Authority of Clackamas County LSIURL, HOUGING OPPORTUNITY February 9, 2026 Jane Cortez 10043 SE 32nd Avenue Milwaukie, OR 97222 RE: Additional information required Dear Jane: After reviewing the p...",
+        "actor_score": 2.22,
+        "critic_penalty": 0.7,
+        "actor_critic_score": 1.5200000000000002
+      },
+      "confidence": 0.7200000000000001,
+      "source": "complaint"
+    },
+    "entity_10": {
+      "id": "entity_10",
+      "type": "organization",
+      "name": "Property Management",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.8199999999999998,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.4699999999999998
+      },
+      "confidence": 0.7057142857142856,
+      "source": "complaint"
+    },
+    "entity_11": {
+      "id": "entity_11",
+      "type": "evidence",
+      "name": "Application",
+      "attributes": {
+        "evidence_type": "application",
+        "description": "Health, Housing &Humanservices.& Housing Authority of Clackamas County LSIURL, HOUGING OPPORTUNITY February 9, 2026 Jane Cortez 10043 SE 32nd Avenue Milwaukie, OR 97222 RE: Additional information required Dear Jane: After reviewing the p...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_12": {
+      "id": "entity_12",
+      "type": "evidence",
+      "name": "Lease",
+      "attributes": {
+        "evidence_type": "lease",
+        "description": "Health, Housing &Humanservices.& Housing Authority of Clackamas County LSIURL, HOUGING OPPORTUNITY February 9, 2026 Jane Cortez 10043 SE 32nd Avenue Milwaukie, OR 97222 RE: Additional information required Dear Jane: After reviewing the p...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_13": {
+      "id": "entity_13",
+      "type": "evidence",
+      "name": "Letter",
+      "attributes": {
+        "evidence_type": "letter",
+        "description": "Health, Housing &Humanservices.& Housing Authority of Clackamas County LSIURL, HOUGING OPPORTUNITY February 9, 2026 Jane Cortez 10043 SE 32nd Avenue Milwaukie, OR 97222 RE: Additional information required Dear Jane: After reviewing the p...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    }
+  },
+  "relationships": {
+    "rel_1": {
+      "id": "rel_1",
+      "source_id": "entity_9",
+      "target_id": "entity_4",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_2": {
+      "id": "rel_2",
+      "source_id": "entity_9",
+      "target_id": "entity_11",
+      "relation_type": "supported_by",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_3": {
+      "id": "rel_3",
+      "source_id": "entity_9",
+      "target_id": "entity_12",
+      "relation_type": "supported_by",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_4": {
+      "id": "rel_4",
+      "source_id": "entity_9",
+      "target_id": "entity_13",
+      "relation_type": "supported_by",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_5": {
+      "id": "rel_5",
+      "source_id": "entity_6",
+      "target_id": "entity_10",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_6": {
+      "id": "rel_6",
+      "source_id": "entity_7",
+      "target_id": "entity_10",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_7": {
+      "id": "rel_7",
+      "source_id": "entity_8",
+      "target_id": "entity_10",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_8": {
+      "id": "rel_8",
+      "source_id": "entity_9",
+      "target_id": "entity_10",
+      "relation_type": "involves",
+      "attributes": {
+        "actor_score": 1.5499999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.5499999999999998
+      },
+      "confidence": 0.7285714285714285,
+      "source": "complaint"
+    },
+    "rel_9": {
+      "id": "rel_9",
+      "source_id": "entity_11",
+      "target_id": "entity_10",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    },
+    "rel_10": {
+      "id": "rel_10",
+      "source_id": "entity_12",
+      "target_id": "entity_10",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    },
+    "rel_11": {
+      "id": "rel_11",
+      "source_id": "entity_13",
+      "target_id": "entity_10",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "document_path": "/home/barberb/HACC/evidence/paper documents/HACC 2024 relocation.pdf",
+  "graphrag_dir": "/home/barberb/HACC/evidence/paper documents/graphrag/HACC_2024_relocation",
+  "status": "generated",
+  "knowledge_graph_summary": {
+    "total_entities": 11,
+    "total_relationships": 6,
+    "entity_types": {
+      "fact": 4,
+      "organization": 3,
+      "claim": 1,
+      "evidence": 3
+    },
+    "relationship_types": {
+      "supported_by": 3,
+      "involves": 3
+    },
+    "gaps": 7
+  },
+  "graph_path": "/home/barberb/HACC/evidence/paper documents/graphrag/HACC_2024_relocation/document_knowledge_graph.json"
+}

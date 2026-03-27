@@ -1,0 +1,998 @@
+{
+  "metadata": {
+    "created_at": "2026-03-27T06:41:06.647555+00:00",
+    "last_updated": "2026-03-27T06:41:06.650184+00:00",
+    "version": "1.0",
+    "actor_critic": {
+      "enabled": true,
+      "entity_count": 37,
+      "relationship_count": 34,
+      "avg_entity_score": 1.9951,
+      "avg_relationship_score": 1.6971,
+      "entity_score_floor": -0.3,
+      "relationship_score_floor": -0.1
+    }
+  },
+  "entities": {
+    "entity_1": {
+      "id": "entity_1",
+      "type": "claim",
+      "name": "Accommodation Request",
+      "attributes": {
+        "claim_type": "accommodation",
+        "description": "Health, Housing & Human Services Executive Director, Shannan Callahan 90 Day Lease Termination Notice without Cause December 23, 2025 Jane Cortez 10043 SE 32nd Ave Milwaukie, OR 97222 LEASE TERMINATION AND UNIT VACATE DATE: 03/31/2026 Se...",
+        "actor_score": 2.52,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.52
+      },
+      "confidence": 0.98,
+      "source": "complaint"
+    },
+    "entity_2": {
+      "id": "entity_2",
+      "type": "claim",
+      "name": "Termination Claim",
+      "attributes": {
+        "claim_type": "termination",
+        "description": "Health, Housing & Human Services Executive Director, Shannan Callahan 90 Day Lease Termination Notice without Cause December 23, 2025 Jane Cortez 10043 SE 32nd Ave Milwaukie, OR 97222 LEASE TERMINATION AND UNIT VACATE DATE: 03/31/2026 Se...",
+        "actor_score": 2.52,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.52
+      },
+      "confidence": 0.98,
+      "source": "complaint"
+    },
+    "entity_3": {
+      "id": "entity_3",
+      "type": "fact",
+      "name": "Adverse action event: Your lease will be terminated on 03/31/2026, and you must...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "adverse_action",
+        "event_label": "Adverse action",
+        "description": "Your lease will be terminated on 03/31/2026, and you must vacate your unit",
+        "event_date_or_range": "03/31/2026",
+        "actor_score": 2.5,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.5
+      },
+      "confidence": 0.98,
+      "source": "complaint"
+    },
+    "entity_4": {
+      "id": "entity_4",
+      "type": "fact",
+      "name": "Adverse action event: above, is being terminated.",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "adverse_action",
+        "event_label": "Adverse action",
+        "description": "above, is being terminated.",
+        "actor_score": 2.15,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.15
+      },
+      "confidence": 0.9,
+      "source": "complaint"
+    },
+    "entity_5": {
+      "id": "entity_5",
+      "type": "fact",
+      "name": "Notice event: 90 Day Lease Termination Notice without Cause",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "90 Day Lease Termination Notice without Cause",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_6": {
+      "id": "entity_6",
+      "type": "fact",
+      "name": "Notice event: Email: cskee@clackamas.us | haccom@ciackamas.us",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "Email: cskee@clackamas.us | haccom@ciackamas.us",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_7": {
+      "id": "entity_7",
+      "type": "fact",
+      "name": "Notice event: NOTICE!",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "NOTICE!",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_8": {
+      "id": "entity_8",
+      "type": "fact",
+      "name": "Notice event: Pursuant to ORS 90.427, this no-cause lease termination n...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "Pursuant to ORS 90.427, this no-cause lease termination notice is issued because in",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_9": {
+      "id": "entity_9",
+      "type": "fact",
+      "name": "Notice event: Sent by First Class Mail and Posted to Front Door of Unit",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "Sent by First Class Mail and Posted to Front Door of Unit",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_10": {
+      "id": "entity_10",
+      "type": "fact",
+      "name": "Notice event: This letter is a formal notice that your lease with the H...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "This letter is a formal notice that your lease with the Housing Authority of",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_11": {
+      "id": "entity_11",
+      "type": "fact",
+      "name": "Notice event: This notice is given without stated cause.",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "This notice is given without stated cause.",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_12": {
+      "id": "entity_12",
+      "type": "fact",
+      "name": "Notice event: of the date of this Notice.",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "of the date of this Notice.",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_13": {
+      "id": "entity_13",
+      "type": "fact",
+      "name": "Notice event: of this notice.",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "of this notice.",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_14": {
+      "id": "entity_14",
+      "type": "fact",
+      "name": "Notice event: the earlier of the day this Notice is hand-delivered to y...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "the earlier of the day this Notice is hand-delivered to your unit or the day after it is mailed.",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_15": {
+      "id": "entity_15",
+      "type": "fact",
+      "name": "Notice event: the termination only by bringing a judicial action at whi...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "the termination only by bringing a judicial action at which time you may present a defense.",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_16": {
+      "id": "entity_16",
+      "type": "fact",
+      "name": "Notice event: what this letter says, please contact 503-655-8267.",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "what this letter says, please contact 503-655-8267.",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_17": {
+      "id": "entity_17",
+      "type": "fact",
+      "name": "Notice event: with this notice should contact the 504 Coordinator at 50...",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "notice_chain",
+        "event_label": "Notice communication",
+        "description": "with this notice should contact the 504 Coordinator at 503-655-8267 or email at",
+        "actor_score": 2.14,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.14
+      },
+      "confidence": 0.8971428571428571,
+      "source": "complaint"
+    },
+    "entity_18": {
+      "id": "entity_18",
+      "type": "fact",
+      "name": "Hearing event: to participate in the hearing process.",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "hearing_process",
+        "event_label": "Hearing/appeal event",
+        "description": "to participate in the hearing process.",
+        "actor_score": 2.13,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.13
+      },
+      "confidence": 0.8942857142857142,
+      "source": "complaint"
+    },
+    "entity_19": {
+      "id": "entity_19",
+      "type": "date",
+      "name": "90 days after",
+      "attributes": {
+        "actor_score": 2.12,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.12
+      },
+      "confidence": 0.8914285714285715,
+      "source": "complaint"
+    },
+    "entity_20": {
+      "id": "entity_20",
+      "type": "date",
+      "name": "December 23, 2025",
+      "attributes": {
+        "actor_score": 2.12,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.12
+      },
+      "confidence": 0.8914285714285715,
+      "source": "complaint"
+    },
+    "entity_21": {
+      "id": "entity_21",
+      "type": "date",
+      "name": "May 2026",
+      "attributes": {
+        "actor_score": 2.12,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.12
+      },
+      "confidence": 0.8914285714285715,
+      "source": "complaint"
+    },
+    "entity_22": {
+      "id": "entity_22",
+      "type": "fact",
+      "name": "Retaliation causation link",
+      "attributes": {
+        "fact_type": "timeline",
+        "predicate_family": "causation",
+        "event_label": "Causation sequence",
+        "description": "Health, Housing & Human Services Executive Director, Shannan Callahan 90 Day Lease Termination Notice without Cause December 23, 2025 Jane Cortez 10043 SE 32nd Ave Milwaukie, OR 97222 LEASE TERMINATION AND UNIT VACATE DATE: 03/31/2026 Se...",
+        "actor_score": 2.12,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.12
+      },
+      "confidence": 0.8914285714285715,
+      "source": "complaint"
+    },
+    "entity_23": {
+      "id": "entity_23",
+      "type": "person",
+      "name": "Ave\nMilwaukie",
+      "attributes": {
+        "role": "or",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_24": {
+      "id": "entity_24",
+      "type": "person",
+      "name": "Gain Street",
+      "attributes": {
+        "role": "oregon city",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_25": {
+      "id": "entity_25",
+      "type": "person",
+      "name": "Oregon City",
+      "attributes": {
+        "role": "or",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_26": {
+      "id": "entity_26",
+      "type": "person",
+      "name": "Services\nExecutive Director",
+      "attributes": {
+        "role": "shannan callahan",
+        "actor_score": 2.05,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.05
+      },
+      "confidence": 0.8714285714285713,
+      "source": "complaint"
+    },
+    "entity_27": {
+      "id": "entity_27",
+      "type": "date",
+      "name": "03/31/2026",
+      "attributes": {
+        "actor_score": 2.0,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 2.0
+      },
+      "confidence": 0.8571428571428571,
+      "source": "complaint"
+    },
+    "entity_28": {
+      "id": "entity_28",
+      "type": "organization",
+      "name": "Human Services",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_29": {
+      "id": "entity_29",
+      "type": "organization",
+      "name": "PO BOX",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.9699999999999998
+      },
+      "confidence": 0.8485714285714285,
+      "source": "complaint"
+    },
+    "entity_30": {
+      "id": "entity_30",
+      "type": "organization",
+      "name": "HACC",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.8499999999999999,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8499999999999999
+      },
+      "confidence": 0.8142857142857142,
+      "source": "complaint"
+    },
+    "entity_31": {
+      "id": "entity_31",
+      "type": "organization",
+      "name": "Property Management",
+      "attributes": {
+        "role": "respondent",
+        "actor_score": 1.9699999999999998,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.6199999999999997
+      },
+      "confidence": 0.7485714285714284,
+      "source": "complaint"
+    },
+    "entity_32": {
+      "id": "entity_32",
+      "type": "person",
+      "name": "Landlord",
+      "attributes": {
+        "role": "landlord",
+        "actor_score": 1.8499999999999999,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.5
+      },
+      "confidence": 0.7142857142857143,
+      "source": "complaint"
+    },
+    "entity_33": {
+      "id": "entity_33",
+      "type": "fact",
+      "name": "Requested remedy: Health, Housing & Human Services Executive Director, Shan...",
+      "attributes": {
+        "fact_type": "remedy",
+        "description": "Health, Housing & Human Services Executive Director, Shannan Callahan 90 Day Lease Termination Notice without Cause December 23, 2025 Jane Cortez 10043 SE 32nd Ave Milwaukie, OR 97222 LEASE TERMINATION AND UNIT VACATE DATE: 03/31/2026 Se...",
+        "actor_score": 1.77,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.42
+      },
+      "confidence": 0.6914285714285714,
+      "source": "complaint"
+    },
+    "entity_34": {
+      "id": "entity_34",
+      "type": "evidence",
+      "name": "Lease",
+      "attributes": {
+        "evidence_type": "lease",
+        "description": "Health, Housing & Human Services Executive Director, Shannan Callahan 90 Day Lease Termination Notice without Cause December 23, 2025 Jane Cortez 10043 SE 32nd Ave Milwaukie, OR 97222 LEASE TERMINATION AND UNIT VACATE DATE: 03/31/2026 Se...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_35": {
+      "id": "entity_35",
+      "type": "evidence",
+      "name": "Letter",
+      "attributes": {
+        "evidence_type": "letter",
+        "description": "Health, Housing & Human Services Executive Director, Shannan Callahan 90 Day Lease Termination Notice without Cause December 23, 2025 Jane Cortez 10043 SE 32nd Ave Milwaukie, OR 97222 LEASE TERMINATION AND UNIT VACATE DATE: 03/31/2026 Se...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_36": {
+      "id": "entity_36",
+      "type": "evidence",
+      "name": "Notice",
+      "attributes": {
+        "evidence_type": "notice",
+        "description": "Health, Housing & Human Services Executive Director, Shannan Callahan 90 Day Lease Termination Notice without Cause December 23, 2025 Jane Cortez 10043 SE 32nd Ave Milwaukie, OR 97222 LEASE TERMINATION AND UNIT VACATE DATE: 03/31/2026 Se...",
+        "actor_score": 1.65,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.2999999999999998
+      },
+      "confidence": 0.6571428571428571,
+      "source": "complaint"
+    },
+    "entity_37": {
+      "id": "entity_37",
+      "type": "evidence",
+      "name": "Email communication",
+      "attributes": {
+        "evidence_type": "email communication",
+        "description": "Health, Housing & Human Services Executive Director, Shannan Callahan 90 Day Lease Termination Notice without Cause December 23, 2025 Jane Cortez 10043 SE 32nd Ave Milwaukie, OR 97222 LEASE TERMINATION AND UNIT VACATE DATE: 03/31/2026 Se...",
+        "actor_score": 1.62,
+        "critic_penalty": 0.35,
+        "actor_critic_score": 1.27
+      },
+      "confidence": 0.6485714285714286,
+      "source": "complaint"
+    }
+  },
+  "relationships": {
+    "rel_1": {
+      "id": "rel_1",
+      "source_id": "entity_1",
+      "target_id": "entity_19",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_2": {
+      "id": "rel_2",
+      "source_id": "entity_1",
+      "target_id": "entity_20",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_3": {
+      "id": "rel_3",
+      "source_id": "entity_1",
+      "target_id": "entity_21",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_4": {
+      "id": "rel_4",
+      "source_id": "entity_1",
+      "target_id": "entity_27",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_5": {
+      "id": "rel_5",
+      "source_id": "entity_2",
+      "target_id": "entity_19",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_6": {
+      "id": "rel_6",
+      "source_id": "entity_2",
+      "target_id": "entity_20",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_7": {
+      "id": "rel_7",
+      "source_id": "entity_2",
+      "target_id": "entity_21",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_8": {
+      "id": "rel_8",
+      "source_id": "entity_2",
+      "target_id": "entity_27",
+      "relation_type": "occurred_on",
+      "attributes": {
+        "actor_score": 1.95,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.95
+      },
+      "confidence": 0.8428571428571429,
+      "source": "complaint"
+    },
+    "rel_9": {
+      "id": "rel_9",
+      "source_id": "entity_23",
+      "target_id": "entity_28",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_10": {
+      "id": "rel_10",
+      "source_id": "entity_23",
+      "target_id": "entity_29",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_11": {
+      "id": "rel_11",
+      "source_id": "entity_23",
+      "target_id": "entity_30",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_12": {
+      "id": "rel_12",
+      "source_id": "entity_23",
+      "target_id": "entity_31",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_13": {
+      "id": "rel_13",
+      "source_id": "entity_24",
+      "target_id": "entity_28",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_14": {
+      "id": "rel_14",
+      "source_id": "entity_24",
+      "target_id": "entity_29",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_15": {
+      "id": "rel_15",
+      "source_id": "entity_24",
+      "target_id": "entity_30",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_16": {
+      "id": "rel_16",
+      "source_id": "entity_24",
+      "target_id": "entity_31",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_17": {
+      "id": "rel_17",
+      "source_id": "entity_25",
+      "target_id": "entity_28",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_18": {
+      "id": "rel_18",
+      "source_id": "entity_25",
+      "target_id": "entity_29",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_19": {
+      "id": "rel_19",
+      "source_id": "entity_25",
+      "target_id": "entity_30",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_20": {
+      "id": "rel_20",
+      "source_id": "entity_25",
+      "target_id": "entity_31",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_21": {
+      "id": "rel_21",
+      "source_id": "entity_26",
+      "target_id": "entity_28",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_22": {
+      "id": "rel_22",
+      "source_id": "entity_26",
+      "target_id": "entity_29",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_23": {
+      "id": "rel_23",
+      "source_id": "entity_26",
+      "target_id": "entity_30",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_24": {
+      "id": "rel_24",
+      "source_id": "entity_26",
+      "target_id": "entity_31",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_25": {
+      "id": "rel_25",
+      "source_id": "entity_32",
+      "target_id": "entity_28",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_26": {
+      "id": "rel_26",
+      "source_id": "entity_32",
+      "target_id": "entity_29",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_27": {
+      "id": "rel_27",
+      "source_id": "entity_32",
+      "target_id": "entity_30",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_28": {
+      "id": "rel_28",
+      "source_id": "entity_32",
+      "target_id": "entity_31",
+      "relation_type": "employed_by",
+      "attributes": {
+        "actor_score": 1.8,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.8
+      },
+      "confidence": 0.7999999999999999,
+      "source": "complaint"
+    },
+    "rel_29": {
+      "id": "rel_29",
+      "source_id": "entity_1",
+      "target_id": "entity_32",
+      "relation_type": "involves",
+      "attributes": {
+        "actor_score": 1.5499999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.5499999999999998
+      },
+      "confidence": 0.7285714285714285,
+      "source": "complaint"
+    },
+    "rel_30": {
+      "id": "rel_30",
+      "source_id": "entity_2",
+      "target_id": "entity_32",
+      "relation_type": "involves",
+      "attributes": {
+        "actor_score": 1.5499999999999998,
+        "critic_penalty": 0.0,
+        "actor_critic_score": 1.5499999999999998
+      },
+      "confidence": 0.7285714285714285,
+      "source": "complaint"
+    },
+    "rel_31": {
+      "id": "rel_31",
+      "source_id": "entity_34",
+      "target_id": "entity_32",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    },
+    "rel_32": {
+      "id": "rel_32",
+      "source_id": "entity_35",
+      "target_id": "entity_32",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    },
+    "rel_33": {
+      "id": "rel_33",
+      "source_id": "entity_36",
+      "target_id": "entity_32",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    },
+    "rel_34": {
+      "id": "rel_34",
+      "source_id": "entity_37",
+      "target_id": "entity_32",
+      "relation_type": "associated_with",
+      "attributes": {
+        "actor_score": 1.35,
+        "critic_penalty": 0.6000000000000001,
+        "actor_critic_score": 0.75
+      },
+      "confidence": 0.5,
+      "source": "complaint"
+    }
+  }
+}

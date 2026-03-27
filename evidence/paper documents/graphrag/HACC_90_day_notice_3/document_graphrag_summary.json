@@ -1,0 +1,25 @@
+{
+  "document_path": "/home/barberb/HACC/evidence/paper documents/HACC 90 day notice 3.pdf",
+  "graphrag_dir": "/home/barberb/HACC/evidence/paper documents/graphrag/HACC_90_day_notice_3",
+  "status": "generated",
+  "knowledge_graph_summary": {
+    "total_entities": 19,
+    "total_relationships": 11,
+    "entity_types": {
+      "fact": 8,
+      "date": 3,
+      "person": 1,
+      "organization": 3,
+      "claim": 1,
+      "evidence": 3
+    },
+    "relationship_types": {
+      "occurred_on": 3,
+      "supported_by": 3,
+      "employed_by": 3,
+      "involves": 2
+    },
+    "gaps": 6
+  },
+  "graph_path": "/home/barberb/HACC/evidence/paper documents/graphrag/HACC_90_day_notice_3/document_knowledge_graph.json"
+}

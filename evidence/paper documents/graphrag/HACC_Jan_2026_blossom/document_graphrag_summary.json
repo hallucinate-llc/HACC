@@ -1,0 +1,25 @@
+{
+  "document_path": "/home/barberb/HACC/evidence/paper documents/HACC Jan 2026 blossom.pdf",
+  "graphrag_dir": "/home/barberb/HACC/evidence/paper documents/graphrag/HACC_Jan_2026_blossom",
+  "status": "generated",
+  "knowledge_graph_summary": {
+    "total_entities": 16,
+    "total_relationships": 16,
+    "entity_types": {
+      "fact": 4,
+      "person": 5,
+      "date": 1,
+      "organization": 2,
+      "claim": 1,
+      "evidence": 3
+    },
+    "relationship_types": {
+      "occurred_on": 1,
+      "supported_by": 3,
+      "employed_by": 10,
+      "involves": 2
+    },
+    "gaps": 9
+  },
+  "graph_path": "/home/barberb/HACC/evidence/paper documents/graphrag/HACC_Jan_2026_blossom/document_knowledge_graph.json"
+}

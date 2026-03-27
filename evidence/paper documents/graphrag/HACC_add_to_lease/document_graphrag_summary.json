@@ -1,0 +1,26 @@
+{
+  "document_path": "/home/barberb/HACC/evidence/paper documents/HACC add to lease.pdf",
+  "graphrag_dir": "/home/barberb/HACC/evidence/paper documents/graphrag/HACC_add_to_lease",
+  "status": "generated",
+  "knowledge_graph_summary": {
+    "total_entities": 19,
+    "total_relationships": 15,
+    "entity_types": {
+      "claim": 1,
+      "fact": 7,
+      "person": 4,
+      "date": 3,
+      "organization": 1,
+      "evidence": 3
+    },
+    "relationship_types": {
+      "occurred_on": 3,
+      "supported_by": 3,
+      "employed_by": 4,
+      "involves": 2,
+      "associated_with": 3
+    },
+    "gaps": 7
+  },
+  "graph_path": "/home/barberb/HACC/evidence/paper documents/graphrag/HACC_add_to_lease/document_knowledge_graph.json"
+}

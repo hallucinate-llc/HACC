@@ -1,0 +1,27 @@
+{
+  "document_path": "/home/barberb/HACC/evidence/paper documents/Vera Application.pdf",
+  "graphrag_dir": "/home/barberb/HACC/evidence/paper documents/graphrag/Vera_Application",
+  "status": "generated",
+  "knowledge_graph_summary": {
+    "total_entities": 75,
+    "total_relationships": 54,
+    "entity_types": {
+      "claim": 3,
+      "fact": 46,
+      "date": 5,
+      "person": 5,
+      "organization": 4,
+      "evidence": 12
+    },
+    "relationship_types": {
+      "makes_claim": 3,
+      "occurred_on": 15,
+      "employed_by": 20,
+      "involves": 3,
+      "communicated_with": 1,
+      "associated_with": 12
+    },
+    "gaps": 21
+  },
+  "graph_path": "/home/barberb/HACC/evidence/paper documents/graphrag/Vera_Application/document_knowledge_graph.json"
+}

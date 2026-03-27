@@ -1,0 +1,26 @@
+{
+  "document_path": "/home/barberb/HACC/evidence/paper documents/housing authority project based voucher.pdf",
+  "graphrag_dir": "/home/barberb/HACC/evidence/paper documents/graphrag/housing_authority_project_based_voucher",
+  "status": "generated",
+  "knowledge_graph_summary": {
+    "total_entities": 43,
+    "total_relationships": 45,
+    "entity_types": {
+      "claim": 1,
+      "fact": 22,
+      "person": 5,
+      "date": 1,
+      "organization": 7,
+      "evidence": 7
+    },
+    "relationship_types": {
+      "occurred_on": 1,
+      "supported_by": 6,
+      "employed_by": 30,
+      "involves": 1,
+      "associated_with": 7
+    },
+    "gaps": 14
+  },
+  "graph_path": "/home/barberb/HACC/evidence/paper documents/graphrag/housing_authority_project_based_voucher/document_knowledge_graph.json"
+}

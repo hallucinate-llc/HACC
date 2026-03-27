@@ -1,0 +1,26 @@
+{
+  "document_path": "/home/barberb/HACC/evidence/paper documents/HACC vawa violation.pdf",
+  "graphrag_dir": "/home/barberb/HACC/evidence/paper documents/graphrag/HACC_vawa_violation",
+  "status": "generated",
+  "knowledge_graph_summary": {
+    "total_entities": 12,
+    "total_relationships": 14,
+    "entity_types": {
+      "fact": 3,
+      "person": 3,
+      "date": 1,
+      "organization": 2,
+      "claim": 1,
+      "evidence": 2
+    },
+    "relationship_types": {
+      "occurred_on": 1,
+      "supported_by": 2,
+      "employed_by": 6,
+      "involves": 3,
+      "associated_with": 2
+    },
+    "gaps": 5
+  },
+  "graph_path": "/home/barberb/HACC/evidence/paper documents/graphrag/HACC_vawa_violation/document_knowledge_graph.json"
+}
