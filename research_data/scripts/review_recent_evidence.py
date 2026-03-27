@@ -739,6 +739,18 @@ def _document_fact_prefix(classification: str, title: str) -> str:
     return f"the document \"{title}\" reflects a relevant event"
 
 
+def _allegation_section_title(classification: str) -> str:
+    mapping = {
+        "notice_or_adverse_action": "Notices and Adverse Actions",
+        "lease_or_occupancy": "Lease and Occupancy",
+        "financial_verification": "Financial Verification and Intake Barriers",
+        "orientation_or_compliance": "Orientation and Compliance",
+        "protected_status_or_vawa": "Protected Status and VAWA",
+        "application_or_intake": "Application and Intake",
+    }
+    return mapping.get(classification, "Other Supporting Facts")
+
+
 def _build_complaint_ready_chronology(pleading_timeline: dict[str, Any], chronology_dir: Path) -> dict[str, Any]:
     events = list(pleading_timeline.get("events") or [])
     json_path = chronology_dir / "complaint_ready_chronology.json"
@@ -778,6 +790,7 @@ def _build_complaint_ready_chronology(pleading_timeline: dict[str, Any], chronol
             "date": raw_date,
             "source_path": source_path,
             "event_label": label,
+            "classification": classification,
             "paragraph": sentence,
         })
 
@@ -795,6 +808,58 @@ def _build_complaint_ready_chronology(pleading_timeline: dict[str, Any], chronol
         md_lines.extend(f"{entry['number']}. {entry['paragraph']}" for entry in paragraphs)
     else:
         md_lines.append("No complaint-ready chronology paragraphs generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_claim_grouped_allegations(complaint_ready: dict[str, Any], chronology_dir: Path) -> dict[str, Any]:
+    paragraphs = list(complaint_ready.get("paragraphs") or [])
+    grouped: dict[str, list[dict[str, Any]]] = {}
+    for paragraph in paragraphs:
+        classification = str(paragraph.get("classification") or "")
+        grouped.setdefault(_allegation_section_title(classification), []).append(paragraph)
+
+    section_order = [
+        "Notices and Adverse Actions",
+        "Lease and Occupancy",
+        "Financial Verification and Intake Barriers",
+        "Protected Status and VAWA",
+        "Orientation and Compliance",
+        "Application and Intake",
+        "Other Supporting Facts",
+    ]
+    json_path = chronology_dir / "claim_grouped_allegations.json"
+    md_path = chronology_dir / "claim_grouped_allegations.md"
+
+    sections: list[dict[str, Any]] = []
+    for title in section_order:
+        entries = grouped.get(title) or []
+        if not entries:
+            continue
+        sections.append({
+            "title": title,
+            "paragraph_count": len(entries),
+            "paragraphs": entries,
+        })
+
+    summary = {
+        "status": "success",
+        "section_count": len(sections),
+        "paragraph_count": len(paragraphs),
+        "sections": sections,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = ["# Claim-Grouped Allegations", "", f"Section count: {len(sections)}", f"Paragraph count: {len(paragraphs)}", ""]
+    if sections:
+        for section in sections:
+            md_lines.extend([f"## {section['title']}", ""])
+            md_lines.extend(f"{entry['number']}. {entry['paragraph']}" for entry in section["paragraphs"])
+            md_lines.append("")
+    else:
+        md_lines.append("No claim-grouped allegations generated.")
     md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
     return summary
 
@@ -1066,6 +1131,7 @@ def _build_chronology_report(payload: dict[str, Any], output_dir: Path) -> dict[
     summary["litigation_timeline"] = _build_litigation_timeline(deduped, chronology_dir)
     summary["pleading_timeline"] = _build_pleading_timeline(payload, chronology_dir)
     summary["complaint_ready_chronology"] = _build_complaint_ready_chronology(summary["pleading_timeline"], chronology_dir)
+    summary["claim_grouped_allegations"] = _build_claim_grouped_allegations(summary["complaint_ready_chronology"], chronology_dir)
     return summary
 
 
@@ -1419,6 +1485,11 @@ def _markdown_report(payload: dict[str, Any]) -> str:
         complaint_ready = chronology.get("complaint_ready_chronology") or {}
         if complaint_ready:
             lines.append(f"- Complaint-ready chronology paragraphs generated: {complaint_ready.get('paragraph_count', 0)}")
+        grouped_allegations = chronology.get("claim_grouped_allegations") or {}
+        if grouped_allegations:
+            lines.append(
+                f"- Claim-grouped allegation sections generated: {grouped_allegations.get('section_count', 0)}"
+            )
     return "\n".join(lines).strip() + "\n"
 
 
