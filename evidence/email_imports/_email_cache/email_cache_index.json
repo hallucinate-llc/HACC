@@ -16,22 +16,21 @@
       "attachment_count": 6,
       "raw_sha256": "500c4ae11032332286959db7d15906bf9294bcff6e69dfe7969d73c6e46fd8a1",
       "raw_cid": "bafkreicqbrfocebsgmrinfm5w7ivsbv7skklz73onhp6pfu5opdoi36yue",
-      "relevance_score": 12.0,
+      "relevance_score": 14.0,
       "matched_terms": [
-        "information",
-        "cortez",
-        "accommodation",
+        "hcv",
+        "orientation",
         "voucher",
         "clackamas",
-        "release",
-        "port",
-        "jane",
+        "cortez",
+        "accommodation",
+        "information",
         "housing",
         "authority",
-        "claim",
-        "process"
+        "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -204,14 +203,18 @@
       "attachment_count": 0,
       "raw_sha256": "21c8b207d908694005299c1a99890c739b24b3e4e43a66a86ab14a910993171b",
       "raw_cid": "bafkreibbzczapwiinfaakkm4dkmysddttmslhzhehjtkq2vrjkiqteyxdm",
-      "relevance_score": 4.0,
+      "relevance_score": 11.0,
       "matched_terms": [
-        "information",
+        "hcv",
+        "orientation",
         "clackamas",
+        "information",
         "housing",
-        "authority"
+        "authority",
+        "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -235,14 +238,18 @@
       "attachment_count": 0,
       "raw_sha256": "9e5c45d468a5e4c3388a43cf69fcd3e98cd0d91a8255264346d303724e9fe3e2",
       "raw_cid": "bafkreie6lrc5i2ff4tbtrcsdz5u7zu7jrtinsguckutegrwtanze5h7d4i",
-      "relevance_score": 4.0,
+      "relevance_score": 11.0,
       "matched_terms": [
-        "information",
+        "hcv",
+        "orientation",
         "clackamas",
+        "information",
         "housing",
-        "authority"
+        "authority",
+        "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -266,15 +273,19 @@
       "attachment_count": 3,
       "raw_sha256": "5890b4e6700a648c406303b18d333fc75489bb98602ee57e00947f31344ca05b",
       "raw_cid": "bafkreicysc2om4akmsgeayydwggtgp6hkse3xgdaf3sx4aeup4ytitfalm",
-      "relevance_score": 5.0,
+      "relevance_score": 12.0,
       "matched_terms": [
-        "information",
-        "cortez",
+        "hcv",
+        "orientation",
         "clackamas",
+        "cortez",
+        "information",
         "housing",
-        "authority"
+        "authority",
+        "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -298,15 +309,19 @@
       "attachment_count": 2,
       "raw_sha256": "83e85ddea2a6f3c900f10008839352879e108e93e66eb0be645681f201ee3bec",
       "raw_cid": "bafkreied5bo55ivg6peqb4iabcbzguuhtyii5e7gn2yl4zcwqhzad3r35q",
-      "relevance_score": 5.0,
+      "relevance_score": 12.0,
       "matched_terms": [
-        "information",
+        "hcv",
+        "orientation",
         "voucher",
         "clackamas",
+        "information",
         "housing",
-        "authority"
+        "authority",
+        "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -330,15 +345,19 @@
       "attachment_count": 0,
       "raw_sha256": "ab4a5967ecf7922450e158611c302cbcfe0df4b1e8ce8c8ec0fd9756975b3326",
       "raw_cid": "bafkreifljjmwp3hxsisfbykymeodalf47yg7jmpiz2gi5qh5s5ljowztey",
-      "relevance_score": 5.0,
+      "relevance_score": 12.0,
       "matched_terms": [
-        "information",
+        "hcv",
+        "orientation",
         "voucher",
         "clackamas",
+        "information",
         "housing",
-        "authority"
+        "authority",
+        "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -362,15 +381,19 @@
       "attachment_count": 0,
       "raw_sha256": "ce9f64d4a7ef3e6a544ecded4575c1c67e4e3ed02328ff60745934f278ef02bc",
       "raw_cid": "bafkreigot5snjj7phzvfitwn5vcxlqogpzhd5ubdfd7wa5czgtzhr3ycxq",
-      "relevance_score": 5.0,
+      "relevance_score": 12.0,
       "matched_terms": [
-        "information",
+        "hcv",
+        "orientation",
         "voucher",
         "clackamas",
+        "information",
         "housing",
-        "authority"
+        "authority",
+        "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -394,16 +417,19 @@
       "attachment_count": 1,
       "raw_sha256": "f6293b9e1f737325c2562ca77b4dac6e2a5e23019eb208e99de10a77d9d1149b",
       "raw_cid": "bafkreihwfe5z4h3toms4evrmu55u3ldofjpcgam6wieothpbbj35tuiutm",
-      "relevance_score": 6.0,
+      "relevance_score": 12.0,
       "matched_terms": [
-        "information",
+        "hcv",
+        "orientation",
         "voucher",
         "clackamas",
-        "jane",
+        "information",
         "housing",
-        "authority"
+        "authority",
+        "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -427,19 +453,21 @@
       "attachment_count": 3,
       "raw_sha256": "88bb2325d71dfe2f9148176b5f21cfbbe91b6745a054e19b602faf7de5a07e94",
       "raw_cid": "bafkreieixmrslvy57yxzcsaxnnpsdt535enwornaktqzwybpv566lid6sq",
-      "relevance_score": 9.0,
+      "relevance_score": 14.0,
       "matched_terms": [
-        "information",
-        "cortez",
-        "accommodation",
+        "hcv",
+        "orientation",
         "voucher",
         "clackamas",
-        "release",
-        "jane",
+        "cortez",
+        "accommodation",
+        "information",
         "housing",
-        "authority"
+        "authority",
+        "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -463,22 +491,21 @@
       "attachment_count": 3,
       "raw_sha256": "258597b28a38bcfaa46df02ecd95c88cfb3446b0cdb667925867e25992ce4369",
       "raw_cid": "bafkreibfqwl3fcryxt5ki3pqf3gzlsem7m2enmgnwztzewdh4jmzftsdne",
-      "relevance_score": 12.0,
+      "relevance_score": 14.0,
       "matched_terms": [
-        "information",
-        "cortez",
-        "accommodation",
+        "hcv",
+        "orientation",
         "voucher",
         "clackamas",
-        "release",
-        "port",
-        "jane",
+        "cortez",
+        "accommodation",
+        "information",
         "housing",
         "authority",
-        "claim",
-        "process"
+        "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -502,19 +529,21 @@
       "attachment_count": 4,
       "raw_sha256": "2a0d38c657121b881a2c28bba90eeb3ccb0e238f12f381bf61251fc81e9554b0",
       "raw_cid": "bafkreibkbu4mmvysdoebulbixouq52z4zmhchdys6oa36yjfd7eb5fkuwa",
-      "relevance_score": 9.0,
+      "relevance_score": 14.0,
       "matched_terms": [
-        "information",
-        "cortez",
-        "accommodation",
+        "hcv",
+        "orientation",
         "voucher",
         "clackamas",
-        "release",
-        "jane",
+        "cortez",
+        "accommodation",
+        "information",
         "housing",
-        "authority"
+        "authority",
+        "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -538,22 +567,21 @@
       "attachment_count": 4,
       "raw_sha256": "0dc006bae96b8a6defde753a4d1277343f71590c0d72f8d6bcaec1c368e1f803",
       "raw_cid": "bafkreianyadlv2llrjw67xtvhjgre5zuh5yvsdanol4nnpfoyhbwrypyam",
-      "relevance_score": 12.0,
+      "relevance_score": 14.0,
       "matched_terms": [
-        "information",
-        "cortez",
-        "accommodation",
+        "hcv",
+        "orientation",
         "voucher",
         "clackamas",
-        "release",
-        "port",
-        "jane",
+        "cortez",
+        "accommodation",
+        "information",
         "housing",
         "authority",
-        "claim",
-        "process"
+        "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -577,22 +605,21 @@
       "attachment_count": 5,
       "raw_sha256": "60a933557bc428903035299b6c1f7d24b90fa55b43951b27f8cbbe6dfc0d5d51",
       "raw_cid": "bafkreidavezvk66efcidanjjtnwb67jexeh2kw2dsunsp6glxzw7ydk5ke",
-      "relevance_score": 12.0,
+      "relevance_score": 14.0,
       "matched_terms": [
-        "information",
-        "cortez",
-        "accommodation",
+        "hcv",
+        "orientation",
         "voucher",
         "clackamas",
-        "release",
-        "port",
-        "jane",
+        "cortez",
+        "accommodation",
+        "information",
         "housing",
         "authority",
-        "claim",
-        "process"
+        "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -619,16 +646,16 @@
       "raw_cid": "bafkreiee5zjbu3b5pqlxuvskgh5yfyqjjq3bfurkqpwoa22jsjnkg7pthy",
       "relevance_score": 16.0,
       "matched_terms": [
+        "additional",
         "information",
         "needed",
-        "additional",
-        "accommodation",
+        "orientation",
         "voucher",
         "clackamas",
-        "jane",
+        "accommodation",
         "housing",
         "authority",
-        "process"
+        "review"
       ],
       "matched_fields": [
         "subject",
@@ -655,18 +682,17 @@
       "attachment_count": 12,
       "raw_sha256": "e27e8b03d1eb4a135bb826369282ea001ec9b7746d1326cc95c080638e51f6a4",
       "raw_cid": "bafkreihcp2fqhupljijvxobgg2jif2qad3e3o5dncmtmzfoaqbry4upwuq",
-      "relevance_score": 16.0,
+      "relevance_score": 15.0,
       "matched_terms": [
+        "additional",
         "information",
         "needed",
-        "additional",
-        "accommodation",
         "voucher",
         "clackamas",
-        "jane",
+        "accommodation",
         "housing",
         "authority",
-        "process"
+        "review"
       ],
       "matched_fields": [
         "subject",
@@ -694,18 +720,17 @@
       "attachment_count": 11,
       "raw_sha256": "e5e99f53f93867334f5d136247ceda42f5490c37f2ce53d9678c8bc38c2cf086",
       "raw_cid": "bafkreihf5gpvh6jym4zu6xitmjd45wsc6veqyn7szzj5sz4mrpbyylhqqy",
-      "relevance_score": 16.0,
+      "relevance_score": 15.0,
       "matched_terms": [
+        "additional",
         "information",
         "needed",
-        "additional",
-        "accommodation",
         "voucher",
         "clackamas",
-        "jane",
+        "accommodation",
         "housing",
         "authority",
-        "process"
+        "review"
       ],
       "matched_fields": [
         "subject",
@@ -734,16 +759,16 @@
       "raw_cid": "bafkreicjlmo2i3ngxpa5kvt2rgc27axmm4az3q4wswjrqoocelvtelhdwu",
       "relevance_score": 16.0,
       "matched_terms": [
+        "additional",
         "information",
         "needed",
-        "additional",
-        "accommodation",
+        "orientation",
         "voucher",
         "clackamas",
-        "jane",
+        "accommodation",
         "housing",
         "authority",
-        "process"
+        "review"
       ],
       "matched_fields": [
         "subject",
@@ -772,16 +797,16 @@
       "raw_cid": "bafkreierrgutupqcpa5haeellz5x6osspuhn7h3ftwmd4l4s7h43jbup6q",
       "relevance_score": 16.0,
       "matched_terms": [
+        "additional",
         "information",
         "needed",
-        "additional",
-        "accommodation",
+        "orientation",
         "voucher",
         "clackamas",
-        "jane",
+        "accommodation",
         "housing",
         "authority",
-        "process"
+        "review"
       ],
       "matched_fields": [
         "subject",
@@ -811,16 +836,16 @@
       "raw_cid": "bafkreigvtb3kkk36deldwx4d2a52ffi3tjh4hp4wbjqupon6s33bpm3puy",
       "relevance_score": 16.0,
       "matched_terms": [
+        "additional",
         "information",
         "needed",
-        "additional",
-        "accommodation",
+        "orientation",
         "voucher",
         "clackamas",
-        "jane",
+        "accommodation",
         "housing",
         "authority",
-        "process"
+        "review"
       ],
       "matched_fields": [
         "subject",
@@ -850,16 +875,16 @@
       "raw_cid": "bafkreiej5m5ad2gflm6hdmvtojyrkmlkupmhemqtzouhrbhzy4a36tt5ci",
       "relevance_score": 16.0,
       "matched_terms": [
+        "additional",
         "information",
         "needed",
-        "additional",
-        "accommodation",
+        "orientation",
         "voucher",
         "clackamas",
-        "jane",
+        "accommodation",
         "housing",
         "authority",
-        "process"
+        "review"
       ],
       "matched_fields": [
         "subject",
@@ -887,14 +912,20 @@
       "attachment_count": 11,
       "raw_sha256": "1b1f9d29f1ef2144960450226c78ae547dad2692253048f559be3bcf53985608",
       "raw_cid": "bafkreia3d6ost4ppefcjmbcqejwhrlsupwwsnerfgbepkwn6hphvhgcwba",
-      "relevance_score": 4.0,
+      "relevance_score": 15.0,
       "matched_terms": [
+        "additional",
+        "information",
+        "needed",
         "voucher",
         "clackamas",
-        "review",
-        "required"
+        "accommodation",
+        "housing",
+        "authority",
+        "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -918,14 +949,20 @@
       "attachment_count": 8,
       "raw_sha256": "eff0c5f64fdb59f7c32a83815cf9a86a2200cfefbd03c292d75fda82c14f6ce9",
       "raw_cid": "bafkreihp6dc7mt63lh34gkudqfoptkdkeiam7355apbjfv273kbmct3m5e",
-      "relevance_score": 4.0,
+      "relevance_score": 15.0,
       "matched_terms": [
+        "additional",
+        "information",
+        "needed",
         "voucher",
         "clackamas",
-        "review",
-        "required"
+        "accommodation",
+        "housing",
+        "authority",
+        "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -949,14 +986,20 @@
       "attachment_count": 8,
       "raw_sha256": "157271eb2d6771fadf34b795d892d383cac2251ed1b8fcc9b0de91d4ad8214d1",
       "raw_cid": "bafkreiavojy6wllhoh5n6nfxsxmjfu4dzlbckhwrxd6mtmg6shkk3aqu2e",
-      "relevance_score": 4.0,
+      "relevance_score": 15.0,
       "matched_terms": [
+        "additional",
+        "information",
+        "needed",
         "voucher",
         "clackamas",
-        "review",
-        "required"
+        "accommodation",
+        "housing",
+        "authority",
+        "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -980,14 +1023,20 @@
       "attachment_count": 11,
       "raw_sha256": "9f1b8543d43e148b638f4ac75a0bb0cabb45bfe369a167deb969c9e7eddafac3",
       "raw_cid": "bafkreie7docuhvb6csfwhd2ky5naxmgkxnc37y3juft55oljzht63wx2ym",
-      "relevance_score": 4.0,
+      "relevance_score": 15.0,
       "matched_terms": [
+        "additional",
+        "information",
+        "needed",
         "voucher",
         "clackamas",
-        "review",
-        "required"
+        "accommodation",
+        "housing",
+        "authority",
+        "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -1011,15 +1060,21 @@
       "attachment_count": 9,
       "raw_sha256": "34d805916b4966f049bb8ec7cad5acc5d97e937c7564fe5cd000eaf159a85d72",
       "raw_cid": "bafkreibu3aczc22jm3yeto4oy7fnllgf3f7jg7dvmt7fzuaa5lyvtkc5oi",
-      "relevance_score": 5.0,
+      "relevance_score": 16.0,
       "matched_terms": [
+        "additional",
+        "information",
+        "needed",
         "voucher",
         "clackamas",
         "cortez",
-        "review",
-        "required"
+        "accommodation",
+        "housing",
+        "authority",
+        "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -1043,14 +1098,20 @@
       "attachment_count": 8,
       "raw_sha256": "8fcdeb7f01a2987da11f1d0f3238d3efd775a7c849515fd3e237801974302250",
       "raw_cid": "bafkreiepzxvx6anctb62chy5b4zdru7p2522pscjkfp5hyrxqamximbcka",
-      "relevance_score": 4.0,
+      "relevance_score": 15.0,
       "matched_terms": [
+        "additional",
+        "information",
+        "needed",
         "voucher",
         "clackamas",
-        "review",
-        "required"
+        "accommodation",
+        "housing",
+        "authority",
+        "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -1074,14 +1135,20 @@
       "attachment_count": 8,
       "raw_sha256": "0c058f1540d62b577ad2a897058ac3a54733b8fb589aafa322ee17b878a56269",
       "raw_cid": "bafkreiamawhrkqgwfnlxvuvis4cyvq5fi4z3r62ytkx2gixoc64hrjlcne",
-      "relevance_score": 4.0,
+      "relevance_score": 15.0,
       "matched_terms": [
+        "additional",
+        "information",
+        "needed",
         "voucher",
         "clackamas",
-        "review",
-        "required"
+        "accommodation",
+        "housing",
+        "authority",
+        "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -1171,13 +1238,19 @@
       "attachment_count": 8,
       "raw_sha256": "381ddf9c6158ce3fb6901ec56fc7793c016eee13b87c6e47a6aad4cd7cff6e51",
       "raw_cid": "bafkreibydxpzyykyzy73nea6yvx4o6j4afxo4e5yprxepjvk2tgxz73oke",
-      "relevance_score": 3.0,
+      "relevance_score": 14.0,
       "matched_terms": [
+        "additional",
+        "information",
+        "needed",
         "voucher",
         "clackamas",
+        "housing",
+        "authority",
         "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -1201,14 +1274,21 @@
       "attachment_count": 10,
       "raw_sha256": "20fb03ad0f97e7126bd4cd47ccf16d63388540fef5b5043c953f552cd8d00fb9",
       "raw_cid": "bafkreiba7mb22d4x44jgxvgni7gpc3ldhccub7xvwucdzfj7kuwnruapxe",
-      "relevance_score": 4.0,
+      "relevance_score": 16.0,
       "matched_terms": [
+        "additional",
+        "information",
+        "needed",
         "voucher",
         "clackamas",
         "cortez",
+        "accommodation",
+        "housing",
+        "authority",
         "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -1232,13 +1312,20 @@
       "attachment_count": 9,
       "raw_sha256": "4b9cde71deaa35a8990104047101f3c80b9844e8ab0703922093fbaf7efae208",
       "raw_cid": "bafkreiclttphdxvkgwujsaiearyqd46ibomej2fla4bzeiet7oxx56xcba",
-      "relevance_score": 3.0,
+      "relevance_score": 15.0,
       "matched_terms": [
+        "additional",
+        "information",
+        "needed",
         "voucher",
         "clackamas",
+        "accommodation",
+        "housing",
+        "authority",
         "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -1262,13 +1349,20 @@
       "attachment_count": 8,
       "raw_sha256": "ece27389f3a1f4d229448f941b707edd90a0b5fe0eeadd4d70d2c3a4a24aaafc",
       "raw_cid": "bafkreihm4jzyt45b6tjcsrepsqnxa7w5scqll7qo5lou24gsyoskesvk7q",
-      "relevance_score": 3.0,
+      "relevance_score": 15.0,
       "matched_terms": [
+        "additional",
+        "information",
+        "needed",
         "voucher",
         "clackamas",
+        "accommodation",
+        "housing",
+        "authority",
         "review"
       ],
       "matched_fields": [
+        "subject",
         "body"
       ],
       "bundle_dir": null,
@@ -1292,15 +1386,18 @@
       "attachment_count": 7,
       "raw_sha256": "105f988e6e8e333f1a91a48b1fcf715af2d5f79ad681157c8d792120aeb148a0",
       "raw_cid": "bafkreiaql6mi43uogm7rvenermp464k26lk7pgwwqekxzdlzeeqk5mkiua",
-      "relevance_score": 11.0,
+      "relevance_score": 14.0,
       "matched_terms": [
         "hcv",
         "orientation",
         "voucher",
-        "accommodation",
         "clackamas",
         "cortez",
-        "jane"
+        "accommodation",
+        "information",
+        "housing",
+        "authority",
+        "review"
       ],
       "matched_fields": [
         "subject",
@@ -1327,15 +1424,18 @@
       "attachment_count": 7,
       "raw_sha256": "3e1db001966afada8a2258e63c42673c948762bc4162c466f7be6aece1d39189",
       "raw_cid": "bafkreib6dwyadftk7lniuisy4y6eezz4ssdwfpcbmlcgn556nlwodu4rre",
-      "relevance_score": 11.0,
+      "relevance_score": 14.0,
       "matched_terms": [
         "hcv",
         "orientation",
         "voucher",
-        "accommodation",
         "clackamas",
         "cortez",
-        "jane"
+        "accommodation",
+        "information",
+        "housing",
+        "authority",
+        "review"
       ],
       "matched_fields": [
         "subject",
@@ -1347,11 +1447,11 @@
       "attachment_paths": [],
       "attachment_shas": []
     },
-    "<bfd53bf4f3614e6db61d9a9d4cfaebf9@clackamas.us>": {
-      "message_id_header": "<bfd53bf4f3614e6db61d9a9d4cfaebf9@clackamas.us>",
+    "<1991703a31e34f8ab6242102a2ed5368@Exch01.county.ds.clackamas.us>": {
+      "message_id_header": "<1991703a31e34f8ab6242102a2ed5368@Exch01.county.ds.clackamas.us>",
       "folder": "[Gmail]/All Mail",
-      "subject": "RE: Additional Information Needed",
-      "date": "2026-02-25T17:51:41+00:00",
+      "subject": "Automatic reply: Additional Information Needed",
+      "date": "2026-03-11T05:53:58+00:00",
       "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
       "to": "benjamin barber <starworks5@gmail.com>",
       "cc": "",
@@ -1359,53 +1459,15 @@
         "ktilton@clackamas.us",
         "starworks5@gmail.com"
       ],
-      "attachment_count": 1,
-      "raw_sha256": "e170a75d4490fde1e67a7ac2d023ea039b28d36d1a0a04d96e63db4267ae04a6",
-      "raw_cid": "bafkreihboctv2req7xq6m6t2ylich2qdtmung3i2bicns3td3nbgplqeuy",
-      "relevance_score": 13.0,
-      "matched_terms": [
-        "additional",
-        "information",
-        "needed",
-        "clackamas",
-        "housing",
-        "authority",
-        "review"
-      ],
-      "matched_fields": [
-        "subject",
-        "body"
-      ],
-      "bundle_dir": null,
-      "email_path": null,
-      "parsed_path": null,
-      "attachment_paths": [],
-      "attachment_shas": []
-    },
-    "<CAMTdTS_ymVr22NmekKTeKh6V=jjyFDYWiemxgeEFOOv-2XxmDg@mail.gmail.com>": {
-      "message_id_header": "<CAMTdTS_ymVr22NmekKTeKh6V=jjyFDYWiemxgeEFOOv-2XxmDg@mail.gmail.com>",
-      "folder": "[Gmail]/All Mail",
-      "subject": "Re: Additional Information Needed",
-      "date": "2026-02-25T11:23:15-08:00",
-      "from": "benjamin barber <starworks5@gmail.com>",
-      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
-      "cc": "",
-      "participants": [
-        "ktilton@clackamas.us",
-        "starworks5@gmail.com"
-      ],
       "attachment_count": 0,
-      "raw_sha256": "f9fbd583d6e1c22a52f48ea9eb89dd3b905ad00ab5985d3e97e558bb410293dc",
-      "raw_cid": "bafkreihz7pkyhvxbyivff5eovhvytxj3sbnnacvvtbot5f7flc5ucaut3q",
-      "relevance_score": 13.0,
+      "raw_sha256": "bc3b7b7b18605e09fc9f1b68fa047cae2723760644097e46bcdd49b97a4333a6",
+      "raw_cid": "bafkreif4hn5xwgdalye7zhy3nd5ai7foe4rxmbsebf7enpg5jg4xuqztuy",
+      "relevance_score": 10.0,
       "matched_terms": [
         "additional",
         "information",
         "needed",
-        "clackamas",
-        "housing",
-        "authority",
-        "review"
+        "clackamas"
       ],
       "matched_fields": [
         "subject",
@@ -1417,186 +1479,11 @@
       "attachment_paths": [],
       "attachment_shas": []
     },
-    "<CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66+_DyiA@mail.gmail.com>": {
-      "message_id_header": "<CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66+_DyiA@mail.gmail.com>",
+    "<CAMTdTS_aghRN0G5nwdnU6BxS+Jx9ZU45kOsj0EC4txrk_8oA6A@mail.gmail.com>": {
+      "message_id_header": "<CAMTdTS_aghRN0G5nwdnU6BxS+Jx9ZU45kOsj0EC4txrk_8oA6A@mail.gmail.com>",
       "folder": "[Gmail]/All Mail",
       "subject": "Re: Additional Information Needed",
-      "date": "2026-02-25T11:38:00-08:00",
-      "from": "benjamin barber <starworks5@gmail.com>",
-      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
-      "cc": "",
-      "participants": [
-        "ktilton@clackamas.us",
-        "starworks5@gmail.com"
-      ],
-      "attachment_count": 3,
-      "raw_sha256": "9cfb5e51d5bd3ba6c204f4aba0125005658a098a626ea7e1ed518e7bca263d20",
-      "raw_cid": "bafkreie47npfdvn5hotmebhuvoqbeuafmwfatctcn2t6d3krrz54ujr5ea",
-      "relevance_score": 13.0,
-      "matched_terms": [
-        "additional",
-        "information",
-        "needed",
-        "clackamas",
-        "housing",
-        "authority",
-        "review"
-      ],
-      "matched_fields": [
-        "subject",
-        "body"
-      ],
-      "bundle_dir": null,
-      "email_path": null,
-      "parsed_path": null,
-      "attachment_paths": [],
-      "attachment_shas": []
-    },
-    "<CAMTdTS-g9Ra=apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw@mail.gmail.com>": {
-      "message_id_header": "<CAMTdTS-g9Ra=apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw@mail.gmail.com>",
-      "folder": "[Gmail]/All Mail",
-      "subject": "Re: Additional Information Needed",
-      "date": "2026-02-25T12:47:26-08:00",
-      "from": "benjamin barber <starworks5@gmail.com>",
-      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
-      "cc": "",
-      "participants": [
-        "ktilton@clackamas.us",
-        "starworks5@gmail.com"
-      ],
-      "attachment_count": 6,
-      "raw_sha256": "3447ff891f85712cf008e81f02450ced7760bff49dc316b72baa15beffa1ade9",
-      "raw_cid": "bafkreibui77ysh4foewpachid4bekdhno5ql75e5ymllok5kcw7p7inn5e",
-      "relevance_score": 13.0,
-      "matched_terms": [
-        "additional",
-        "information",
-        "needed",
-        "clackamas",
-        "housing",
-        "authority",
-        "review"
-      ],
-      "matched_fields": [
-        "subject",
-        "body"
-      ],
-      "bundle_dir": null,
-      "email_path": null,
-      "parsed_path": null,
-      "attachment_paths": [],
-      "attachment_shas": []
-    },
-    "<CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ@mail.gmail.com>": {
-      "message_id_header": "<CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ@mail.gmail.com>",
-      "folder": "[Gmail]/All Mail",
-      "subject": "Re: Additional Information Needed",
-      "date": "2026-02-25T12:53:08-08:00",
-      "from": "benjamin barber <starworks5@gmail.com>",
-      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
-      "cc": "",
-      "participants": [
-        "ktilton@clackamas.us",
-        "starworks5@gmail.com"
-      ],
-      "attachment_count": 6,
-      "raw_sha256": "9fa6bec19223bf4f5135c200cc1f4df29cb85090d7021462d8e7613496005dd6",
-      "raw_cid": "bafkreie7u27mderdx5hvcnocadgb6tpsts4fbegxaikgfwhhme2jmac52y",
-      "relevance_score": 13.0,
-      "matched_terms": [
-        "additional",
-        "information",
-        "needed",
-        "clackamas",
-        "housing",
-        "authority",
-        "review"
-      ],
-      "matched_fields": [
-        "subject",
-        "body"
-      ],
-      "bundle_dir": null,
-      "email_path": null,
-      "parsed_path": null,
-      "attachment_paths": [],
-      "attachment_shas": []
-    },
-    "<CAMTdTS_RK=eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g@mail.gmail.com>": {
-      "message_id_header": "<CAMTdTS_RK=eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g@mail.gmail.com>",
-      "folder": "[Gmail]/All Mail",
-      "subject": "Re: Additional Information Needed",
-      "date": "2026-02-25T13:18:51-08:00",
-      "from": "benjamin barber <starworks5@gmail.com>",
-      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
-      "cc": "",
-      "participants": [
-        "ktilton@clackamas.us",
-        "starworks5@gmail.com"
-      ],
-      "attachment_count": 7,
-      "raw_sha256": "6c451fe6235fa21b0a66b8eb0d11aef1d7f12b95bfd9c860a7eedab0e86ea822",
-      "raw_cid": "bafkreidmiup6mi27uinquzvy5mgrdlxr27ysxfn73hegbj7o3kyoq3viei",
-      "relevance_score": 13.0,
-      "matched_terms": [
-        "additional",
-        "information",
-        "needed",
-        "clackamas",
-        "housing",
-        "authority",
-        "review"
-      ],
-      "matched_fields": [
-        "subject",
-        "body"
-      ],
-      "bundle_dir": null,
-      "email_path": null,
-      "parsed_path": null,
-      "attachment_paths": [],
-      "attachment_shas": []
-    },
-    "<CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q@mail.gmail.com>": {
-      "message_id_header": "<CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q@mail.gmail.com>",
-      "folder": "[Gmail]/All Mail",
-      "subject": "Re: Additional Information Needed",
-      "date": "2026-02-25T13:37:28-08:00",
-      "from": "benjamin barber <starworks5@gmail.com>",
-      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
-      "cc": "",
-      "participants": [
-        "ktilton@clackamas.us",
-        "starworks5@gmail.com"
-      ],
-      "attachment_count": 5,
-      "raw_sha256": "6da6c641540471d4aeb64042e0528d17bd8aa40f9501f29201615a3c68ff9a33",
-      "raw_cid": "bafkreidnu3decvaeohkk5nsailqffdixxwfkid4vahzjealbli6gr742gm",
-      "relevance_score": 13.0,
-      "matched_terms": [
-        "additional",
-        "information",
-        "needed",
-        "clackamas",
-        "housing",
-        "authority",
-        "review"
-      ],
-      "matched_fields": [
-        "subject",
-        "body"
-      ],
-      "bundle_dir": null,
-      "email_path": null,
-      "parsed_path": null,
-      "attachment_paths": [],
-      "attachment_shas": []
-    },
-    "<CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8=OKR7mZk6g@mail.gmail.com>": {
-      "message_id_header": "<CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8=OKR7mZk6g@mail.gmail.com>",
-      "folder": "[Gmail]/All Mail",
-      "subject": "Re: Additional Information Needed",
-      "date": "2026-02-26T17:48:44-08:00",
+      "date": "2026-03-09T10:34:52-07:00",
       "from": "benjamin barber <starworks5@gmail.com>",
       "to": "\"Tilton, Kati\" <ktilton@clackamas.us>, \"Ferron, Ashley\" <AFerron@clackamas.us>, charity@magikcorp.com",
       "cc": "",
@@ -1606,9 +1493,9 @@
         "ktilton@clackamas.us",
         "starworks5@gmail.com"
       ],
-      "attachment_count": 5,
-      "raw_sha256": "b7d235e13e813243e763f62ff40fa43e54984e90924c584d3a28384868509aa8",
-      "raw_cid": "bafkreifx2i26cpubgjb6oy7wf72a7jb6ksme5eesjrme2orihbegque2va",
+      "attachment_count": 8,
+      "raw_sha256": "b6cf8fcff16726bc3ff88f0983ec25474522a03ce02ac247763f3bfbcb35cf1a",
+      "raw_cid": "bafkreifwz6h474lhe26d76epbgb6yjkhiurkaphaflbeo5r7hp54wnopdi",
       "relevance_score": 13.0,
       "matched_terms": [
         "additional",
@@ -1629,11 +1516,11 @@
       "attachment_paths": [],
       "attachment_shas": []
     },
-    "<CAMTdTS_ROF=SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw@mail.gmail.com>": {
-      "message_id_header": "<CAMTdTS_ROF=SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw@mail.gmail.com>",
+    "<CAMTdTS_JCWuHb=Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA@mail.gmail.com>": {
+      "message_id_header": "<CAMTdTS_JCWuHb=Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA@mail.gmail.com>",
       "folder": "[Gmail]/All Mail",
       "subject": "Re: Additional Information Needed",
-      "date": "2026-02-26T17:51:39-08:00",
+      "date": "2026-03-09T11:06:56-07:00",
       "from": "benjamin barber <starworks5@gmail.com>",
       "to": "\"Tilton, Kati\" <ktilton@clackamas.us>, \"Ferron, Ashley\" <AFerron@clackamas.us>, charity@magikcorp.com",
       "cc": "",
@@ -1643,51 +1530,15 @@
         "ktilton@clackamas.us",
         "starworks5@gmail.com"
       ],
-      "attachment_count": 6,
-      "raw_sha256": "401a8555443e8625b34e7c544e98b35670b51fd6d54a740423d04c0d627feeeb",
-      "raw_cid": "bafkreicadkcvkrb6qys3gtt4krhjrm2woc2r7vwvjj2aii6qjqgwe77o5m",
-      "relevance_score": 13.0,
+      "attachment_count": 8,
+      "raw_sha256": "d08bcdaf5f0eff59409be20a30b3f2adbc77910b2253575375016a6fa2f0a636",
+      "raw_cid": "bafkreigqrpg26xyo75mubg7cbiylh4vnxr3zcczcknlvg5ibnjx2f4fggy",
+      "relevance_score": 14.0,
       "matched_terms": [
         "additional",
         "information",
         "needed",
-        "clackamas",
-        "housing",
-        "authority",
-        "review"
-      ],
-      "matched_fields": [
-        "subject",
-        "body"
-      ],
-      "bundle_dir": null,
-      "email_path": null,
-      "parsed_path": null,
-      "attachment_paths": [],
-      "attachment_shas": []
-    },
-    "<CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy=kCVPFe9Z+gqwJsiw@mail.gmail.com>": {
-      "message_id_header": "<CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy=kCVPFe9Z+gqwJsiw@mail.gmail.com>",
-      "folder": "[Gmail]/All Mail",
-      "subject": "Re: Additional Information Needed",
-      "date": "2026-03-02T12:29:53-08:00",
-      "from": "benjamin barber <starworks5@gmail.com>",
-      "to": "\"Tilton, Kati\" <ktilton@clackamas.us>, \"Ferron, Ashley\" <AFerron@clackamas.us>, charity@magikcorp.com",
-      "cc": "",
-      "participants": [
-        "aferron@clackamas.us",
-        "charity@magikcorp.com",
-        "ktilton@clackamas.us",
-        "starworks5@gmail.com"
-      ],
-      "attachment_count": 7,
-      "raw_sha256": "e1e52bb3503a459ef03867327fe6c69d17aab0e37e2a804fa619e80272d2b56d",
-      "raw_cid": "bafkreihb4uv3gub2iwppaodhgj76nru5c6vlby36fkae7jqz5abhfuvvnu",
-      "relevance_score": 13.0,
-      "matched_terms": [
-        "additional",
-        "information",
-        "needed",
+        "voucher",
         "clackamas",
         "housing",
         "authority",
