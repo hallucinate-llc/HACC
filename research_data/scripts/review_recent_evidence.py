@@ -382,7 +382,7 @@ def _is_low_signal_entity(entity: Entity) -> bool:
 
 
 def _parse_human_date(value: str) -> datetime | None:
-    raw = _clean_text(value)
+    raw = _normalize_ocr_month_tokens(_clean_text(value))
     if not raw:
         return None
     candidates = [
@@ -412,8 +412,29 @@ def _parsed_date_in_scope(parsed: datetime) -> bool:
     return minimum <= normalized <= maximum
 
 
+def _normalize_ocr_month_tokens(text: str) -> str:
+    normalized = text
+    for month in (
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    ):
+        pattern = r"\b" + r"\s*".join(re.escape(char) for char in month) + r"\b"
+        normalized = re.sub(pattern, month, normalized, flags=re.IGNORECASE)
+    return normalized
+
+
 def _extract_dates_from_text(text: str) -> list[str]:
-    limited = text[:6000]
+    limited = _normalize_ocr_month_tokens(text[:6000])
     patterns = [
         rf"\b{MONTH_PATTERN}\s+\d{{1,2}},\s+\d{{4}}\b",
         r"\b\d{4}-\d{2}-\d{2}\b",
@@ -429,7 +450,7 @@ def _extract_dates_from_text(text: str) -> list[str]:
 
 
 def _extract_scored_dates_from_text(text: str) -> list[dict[str, Any]]:
-    limited = text[:6000]
+    limited = _normalize_ocr_month_tokens(text[:6000])
     pattern = rf"\b(?:{MONTH_PATTERN}\s+\d{{1,2}},\s+\d{{4}}|\d{{4}}-\d{{2}}-\d{{2}}|\d{{1,2}}/\d{{1,2}}/\d{{2,4}})\b"
     scored: list[dict[str, Any]] = []
     for match in re.finditer(pattern, limited, flags=re.IGNORECASE):
@@ -466,6 +487,9 @@ def _score_paper_dates_for_item(text: str, item: dict[str, Any]) -> list[dict[st
         if position <= 400:
             score += 3
 
+        if "on or about" in context:
+            score -= 6
+
         if "brochure" in stem:
             if any(keyword in context for keyword in (
                 "annual plan",
@@ -491,6 +515,15 @@ def _score_paper_dates_for_item(text: str, item: dict[str, Any]) -> list[dict[st
                 "within 10 business days from the date of this notice",
                 "request a hearing",
                 "your lease will be terminated on",
+            )):
+                score -= 8
+
+        if "first amendment" in stem:
+            if any(keyword in context for keyword in (
+                "option to cure",
+                "vacate premises by",
+                "lease termination notice with option to cure",
+                "upon delivery of this notice",
             )):
                 score -= 8
 
@@ -777,6 +810,176 @@ def _cause_of_action_intro(section_title: str) -> str:
     return mapping.get(section_title, "These facts may support additional claim development after manual review.")
 
 
+def _cause_of_action_element_prompts(section_title: str) -> list[str]:
+    mapping = {
+        "Notices and Adverse Actions": [
+            "Identify the specific notice requirements imposed by the lease, program rules, ORS chapter 90, HUD guidance, or relocation rules.",
+            "State how the notices were deficient, inconsistent, untimely, or misleading.",
+            "Explain the concrete housing harm threatened or imposed by the adverse action.",
+        ],
+        "Lease and Occupancy": [
+            "Identify the lease, occupancy, inspection, transfer, or displacement obligation at issue.",
+            "State how HACC's conduct departed from that obligation or from ordinary housing process requirements.",
+            "Explain the resulting loss of housing stability, access, or tenancy rights.",
+        ],
+        "Financial Verification and Intake Barriers": [
+            "Describe the specific documentation demands or intake conditions imposed on plaintiff.",
+            "State why those demands were unreasonable, inconsistently applied, retaliatory, discriminatory, or otherwise improper.",
+            "Explain how the demands delayed, burdened, or obstructed housing access or retention.",
+        ],
+        "Protected Status and VAWA": [
+            "Identify the protected status, VAWA protection, or related legal protection implicated by the facts.",
+            "Connect the protected status facts to the challenged notice, lease action, or housing decision.",
+            "State the resulting discriminatory, retaliatory, or procedurally unlawful harm.",
+        ],
+        "Orientation and Compliance": [
+            "Identify the orientation or compliance requirement and the source of that requirement.",
+            "Explain how the timing or administration of the requirement affected plaintiff's housing position.",
+            "State the concrete delay, denial, or prejudice caused by that process.",
+        ],
+        "Application and Intake": [
+            "Identify the application or intake rule at issue.",
+            "State how the process was mishandled or inconsistently applied.",
+            "Explain the resulting denial, delay, or loss of housing opportunity.",
+        ],
+        "Other Supporting Facts": [
+            "State how these facts connect to a recognized claim or defense.",
+            "Explain the injury or prejudice flowing from those facts.",
+        ],
+    }
+    return mapping.get(section_title, [
+        "State the governing rule or duty.",
+        "State how the conduct violated that rule or duty.",
+        "State the resulting harm.",
+    ])
+
+
+def _classification_narrative_phrase(classification: str) -> str:
+    mapping = {
+        "notice_or_adverse_action": "a notice or adverse housing action",
+        "lease_or_occupancy": "a lease, occupancy, inspection, or displacement-related housing event",
+        "financial_verification": "a documentation or financial verification demand",
+        "orientation_or_compliance": "an orientation or compliance requirement",
+        "protected_status_or_vawa": "a protected-status or VAWA-related housing issue",
+        "application_or_intake": "an application or intake event",
+    }
+    return mapping.get(classification, "a relevant housing-related event")
+
+
+def _narrative_fact_from_entry(entry: dict[str, Any]) -> str:
+    paragraph = str(entry.get("paragraph") or "").strip()
+    if paragraph.startswith("Between "):
+        return paragraph
+    classification = str(entry.get("classification") or "")
+    source_path = str(entry.get("source_path") or "")
+    date = _format_fact_date(str(entry.get("date") or ""))
+    title = _source_display_name(source_path)
+    phrase = _classification_narrative_phrase(classification)
+    return (
+        f"On {date}, HACC generated or used the document \"{title}\" in connection with {phrase}. "
+        f"Source: {source_path}."
+    )
+
+
+def _entry_is_email(entry: dict[str, Any]) -> bool:
+    return str(entry.get("event_label") or "").startswith("Email thread:")
+
+
+def _entry_email_subject(entry: dict[str, Any]) -> str:
+    label = str(entry.get("event_label") or "")
+    return label.replace("Email thread:", "", 1).strip() or "Email"
+
+
+def _entry_date_for_grouping(entry: dict[str, Any]) -> datetime | None:
+    return _parse_human_date(str(entry.get("date") or ""))
+
+
+def _extract_email_participants_from_paragraph(paragraph: str) -> tuple[str, str] | None:
+    match = re.search(r"was sent from\s+(.+?)\s+to\s+(.+?)\.\s+Source:", paragraph, flags=re.IGNORECASE)
+    if not match:
+        return None
+    return _clean_text(match.group(1)), _clean_text(match.group(2))
+
+
+def _format_grouped_date(parsed: datetime | None) -> str:
+    if parsed is None:
+        return ""
+    return parsed.strftime("%B %d, %Y")
+
+
+def _participants_summary(entries: list[dict[str, Any]]) -> str:
+    participants: list[str] = []
+    for entry in entries:
+        parsed = _extract_email_participants_from_paragraph(str(entry.get("paragraph") or ""))
+        if not parsed:
+            continue
+        sender, recipient = parsed
+        for participant in (sender, recipient):
+            if participant not in participants:
+                participants.append(participant)
+    if not participants:
+        return "the captured participants"
+    if len(participants) == 1:
+        return participants[0]
+    if len(participants) == 2:
+        return f"{participants[0]} and {participants[1]}"
+    preview = ", ".join(participants[:3])
+    if len(participants) > 3:
+        return f"{preview}, and others"
+    return preview
+
+
+def _compress_email_entries(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    compressed: list[dict[str, Any]] = []
+    index = 0
+    while index < len(entries):
+        entry = entries[index]
+        if not _entry_is_email(entry):
+            compressed.append(entry)
+            index += 1
+            continue
+
+        subject = _entry_email_subject(entry)
+        classification = str(entry.get("classification") or "")
+        source_path = str(entry.get("source_path") or "")
+        group = [entry]
+        look_ahead = index + 1
+        while look_ahead < len(entries):
+            candidate = entries[look_ahead]
+            if not _entry_is_email(candidate):
+                break
+            if _entry_email_subject(candidate) != subject:
+                break
+            if str(candidate.get("classification") or "") != classification:
+                break
+            if str(candidate.get("source_path") or "") != source_path:
+                break
+            group.append(candidate)
+            look_ahead += 1
+
+        if len(group) == 1:
+            compressed.append(entry)
+            index = look_ahead
+            continue
+
+        first_date = _entry_date_for_grouping(group[0])
+        last_date = _entry_date_for_grouping(group[-1])
+        date_span = _format_grouped_date(first_date)
+        last_date_text = _format_grouped_date(last_date)
+        if last_date_text and last_date_text != date_span:
+            date_span = f"{date_span} and {last_date_text}"
+        participants = _participants_summary(group)
+        summary_entry = dict(group[0])
+        summary_entry["paragraph"] = (
+            f"Between {date_span}, the email thread \"{subject}\" included {len(group)} captured messages involving {participants}. "
+            f"Source: {source_path}."
+        )
+        compressed.append(summary_entry)
+        index = look_ahead
+
+    return compressed
+
+
 def _build_complaint_ready_chronology(pleading_timeline: dict[str, Any], chronology_dir: Path) -> dict[str, Any]:
     events = list(pleading_timeline.get("events") or [])
     json_path = chronology_dir / "complaint_ready_chronology.json"
@@ -897,13 +1100,15 @@ def _build_cause_of_action_draft(grouped_allegations: dict[str, Any], chronology
 
     drafted_sections: list[dict[str, Any]] = []
     for section in sections:
+        section_paragraphs = _compress_email_entries(list(section.get("paragraphs") or []))
         section_title = str(section.get("title") or "Other Supporting Facts")
         drafted_sections.append({
             "title": _cause_of_action_title(section_title),
             "source_section": section_title,
             "intro": _cause_of_action_intro(section_title),
-            "paragraph_count": int(section.get("paragraph_count") or 0),
-            "paragraphs": list(section.get("paragraphs") or []),
+            "element_prompts": _cause_of_action_element_prompts(section_title),
+            "paragraph_count": len(section_paragraphs),
+            "paragraphs": section_paragraphs,
         })
 
     summary = {
@@ -926,12 +1131,538 @@ def _build_cause_of_action_draft(grouped_allegations: dict[str, Any], chronology
                 "",
                 f"Source allegation group: {section['source_section']}",
                 "",
+                "Elements to Plead:",
+                "",
             ])
+            md_lines.extend(f"- {prompt}" for prompt in section["element_prompts"])
+            md_lines.append("")
             md_lines.extend(f"{entry['number']}. {entry['paragraph']}" for entry in section["paragraphs"])
             md_lines.append("")
     else:
         md_lines.append("No cause-of-action draft sections generated.")
     md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_complaint_skeleton(cause_draft: dict[str, Any], complaint_ready: dict[str, Any], chronology_dir: Path) -> dict[str, Any]:
+    cause_sections = list(cause_draft.get("sections") or [])
+    chronology_paragraphs = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    json_path = chronology_dir / "complaint_skeleton.json"
+    md_path = chronology_dir / "complaint_skeleton.md"
+
+    factual_background = chronology_paragraphs[: min(12, len(chronology_paragraphs))]
+    cause_blocks = []
+    for section in cause_sections:
+        cause_blocks.append({
+            "title": str(section.get("title") or "Potential Claim Theme"),
+            "intro": str(section.get("intro") or ""),
+            "source_section": str(section.get("source_section") or ""),
+            "element_prompts": list(section.get("element_prompts") or []),
+            "paragraphs": list(section.get("paragraphs") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "cause_section_count": len(cause_blocks),
+        "factual_background_count": len(factual_background),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps(
+            {
+                **summary,
+                "factual_background": factual_background,
+                "cause_sections": cause_blocks,
+            },
+            indent=2,
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+
+    md_lines = [
+        "# Complaint Skeleton",
+        "",
+        "## Caption",
+        "",
+        "[Plaintiff],",
+        "",
+        "v.",
+        "",
+        "Housing Authority of Clackamas County and Doe Defendants,",
+        "",
+        "## Preliminary Statement",
+        "",
+        "This draft skeleton organizes the currently extracted evidence into pleading-ready sections. It is a drafting aid and should be checked against the underlying evidence before filing.",
+        "",
+        "## Parties",
+        "",
+        "1. Plaintiff: [fill in].",
+        "2. Defendant Housing Authority of Clackamas County: [fill in].",
+        "3. Additional defendants if supported by evidence: [fill in].",
+        "",
+        "## Jurisdiction and Venue",
+        "",
+        "1. Jurisdiction basis: [fill in].",
+        "2. Venue basis: [fill in].",
+        "",
+        "## Factual Background",
+        "",
+    ]
+    if factual_background:
+        md_lines.extend(f"{entry['number']}. {entry['paragraph']}" for entry in factual_background)
+    else:
+        md_lines.append("No factual background paragraphs generated.")
+
+    md_lines.extend(["", "## Causes of Action", ""])
+    if cause_blocks:
+        for idx, block in enumerate(cause_blocks, start=1):
+            md_lines.extend([
+                f"### Count {idx}: {block['title']}",
+                "",
+                block["intro"],
+                "",
+                f"Supporting source group: {block['source_section']}",
+                "",
+                "Elements to Plead:",
+            ])
+            md_lines.extend(f"- {prompt}" for prompt in block["element_prompts"])
+            md_lines.append("")
+            md_lines.extend(f"{entry['number']}. {entry['paragraph']}" for entry in block["paragraphs"])
+            md_lines.extend([
+                "",
+                "Requested theory language: [fill in legal elements and requested relief].",
+                "",
+            ])
+    else:
+        md_lines.append("No cause-of-action sections generated.")
+
+    md_lines.extend([
+        "## Prayer for Relief",
+        "",
+        "1. Declaratory relief: [fill in].",
+        "2. Injunctive relief: [fill in].",
+        "3. Damages, fees, and costs if applicable: [fill in].",
+        "",
+        "## Jury Demand",
+        "",
+        "[Fill in if applicable].",
+    ])
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_narrative_complaint_draft(
+    complaint_ready: dict[str, Any],
+    cause_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    cause_sections = list(cause_draft.get("sections") or [])
+    json_path = chronology_dir / "narrative_complaint_draft.json"
+    md_path = chronology_dir / "narrative_complaint_draft.md"
+
+    factual_background = [_narrative_fact_from_entry(entry) for entry in factual_entries[:10]]
+    count_summaries = []
+    for section in cause_sections:
+        entries = list(section.get("paragraphs") or [])
+        count_summaries.append({
+            "title": str(section.get("title") or "Potential Claim Theme"),
+            "intro": str(section.get("intro") or ""),
+            "element_prompts": list(section.get("element_prompts") or []),
+            "facts": [_narrative_fact_from_entry(entry) for entry in entries[:3]],
+        })
+
+    summary = {
+        "status": "success",
+        "factual_background_count": len(factual_background),
+        "count_count": len(count_summaries),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps(
+            {
+                **summary,
+                "factual_background": factual_background,
+                "counts": count_summaries,
+            },
+            indent=2,
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+
+    md_lines = [
+        "# Narrative Complaint Draft",
+        "",
+        "## Preliminary Statement",
+        "",
+        "This narrative draft converts the extracted evidence into shorter pleading-style prose. It remains a drafting aid and should be checked against the underlying evidence before filing.",
+        "",
+        "## Factual Allegations",
+        "",
+    ]
+    if factual_background:
+        md_lines.extend(f"{index}. {fact}" for index, fact in enumerate(factual_background, start=1))
+    else:
+        md_lines.append("No factual allegations generated.")
+
+    md_lines.extend(["", "## Counts", ""])
+    if count_summaries:
+        for idx, count in enumerate(count_summaries, start=1):
+            md_lines.extend([
+                f"### Count {idx}: {count['title']}",
+                "",
+                count["intro"],
+                "",
+                "Elements to Plead:",
+            ])
+            md_lines.extend(f"- {prompt}" for prompt in count["element_prompts"])
+            md_lines.extend(["", "Representative Allegations:"])
+            md_lines.extend(f"- {fact}" for fact in count["facts"])
+            md_lines.extend(["", "Draft theory paragraph: [fill in].", ""])
+    else:
+        md_lines.append("No count summaries generated.")
+
+    md_lines.extend([
+        "## Relief Requested",
+        "",
+        "- Declaratory relief: [fill in].",
+        "- Injunctive relief: [fill in].",
+        "- Damages, fees, and costs if applicable: [fill in].",
+    ])
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _roman_count_label(value: int) -> str:
+    numerals = {
+        1: "I",
+        2: "II",
+        3: "III",
+        4: "IV",
+        5: "V",
+        6: "VI",
+        7: "VII",
+        8: "VIII",
+        9: "IX",
+        10: "X",
+    }
+    return numerals.get(value, str(value))
+
+
+def _alpha_exhibit_label(value: int) -> str:
+    if value <= 0:
+        return str(value)
+    label = ""
+    current = value
+    while current > 0:
+        current -= 1
+        label = chr(ord("A") + (current % 26)) + label
+        current //= 26
+    return label
+
+
+def _build_exhibit_map(
+    factual_entries: list[dict[str, Any]],
+    cause_sections: list[dict[str, Any]],
+) -> dict[str, str]:
+    ordered_paths: list[str] = []
+    for entry in factual_entries:
+        source_path = str(entry.get("source_path") or "")
+        if source_path and source_path not in ordered_paths:
+            ordered_paths.append(source_path)
+    for section in cause_sections:
+        for entry in list(section.get("paragraphs") or []):
+            source_path = str(entry.get("source_path") or "")
+            if source_path and source_path not in ordered_paths:
+                ordered_paths.append(source_path)
+    return {
+        source_path: _alpha_exhibit_label(index)
+        for index, source_path in enumerate(ordered_paths, start=1)
+    }
+
+
+def _paragraph_with_exhibit_tag(paragraph: str, exhibit_label: str | None) -> str:
+    if not exhibit_label:
+        return paragraph
+    stripped = paragraph.rstrip()
+    if stripped.endswith("."):
+        return stripped[:-1] + f" [Exhibit {exhibit_label}]."
+    return stripped + f" [Exhibit {exhibit_label}]"
+
+
+def _source_type_for_path(source_path: str) -> str:
+    lowered = source_path.lower()
+    if lowered.endswith(".pdf"):
+        return "paper_pdf"
+    if lowered.endswith("email_import_manifest.json"):
+        return "email_manifest"
+    if lowered.endswith(".json"):
+        return "json_record"
+    return "file"
+
+
+def _suggested_exhibit_title(source_path: str, source_name: str) -> str:
+    source_type = _source_type_for_path(source_path)
+    if source_type == "paper_pdf":
+        return f"{source_name} PDF"
+    if source_type == "email_manifest":
+        parent = Path(source_path).parent.name.replace("-", " ")
+        return f"Email Thread Export: {parent}"
+    return source_name
+
+
+def _exhibit_handling_note(source_path: str) -> str:
+    source_type = _source_type_for_path(source_path)
+    if source_type == "paper_pdf":
+        return "Attach the underlying PDF as the exhibit file."
+    if source_type == "email_manifest":
+        return "Use the manifest with underlying saved messages or representative thread exports if filing requires message-level exhibits."
+    return "Verify filing format before attaching this source."
+
+
+def _build_formal_complaint_draft(
+    complaint_ready: dict[str, Any],
+    cause_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    cause_sections = list(cause_draft.get("sections") or [])
+    json_path = chronology_dir / "formal_complaint_draft.json"
+    md_path = chronology_dir / "formal_complaint_draft.md"
+    exhibit_json_path = chronology_dir / "formal_complaint_exhibit_index.json"
+    exhibit_md_path = chronology_dir / "formal_complaint_exhibit_index.md"
+    citation_json_path = chronology_dir / "formal_complaint_citation_map.json"
+    citation_md_path = chronology_dir / "formal_complaint_citation_map.md"
+    packet_json_path = chronology_dir / "formal_complaint_exhibit_packet.json"
+    packet_md_path = chronology_dir / "formal_complaint_exhibit_packet.md"
+
+    factual_background = factual_entries[: min(14, len(factual_entries))]
+    exhibit_map = _build_exhibit_map(factual_background, cause_sections)
+    count_blocks = []
+    for section in cause_sections:
+        section_entries = list(section.get("paragraphs") or [])[:3]
+        count_blocks.append({
+            "title": str(section.get("title") or "Potential Claim Theme"),
+            "intro": str(section.get("intro") or ""),
+            "source_section": str(section.get("source_section") or ""),
+            "element_prompts": list(section.get("element_prompts") or []),
+            "entries": section_entries,
+            "paragraphs": [
+                _paragraph_with_exhibit_tag(
+                    _narrative_fact_from_entry(entry),
+                    exhibit_map.get(str(entry.get("source_path") or "")),
+                )
+                for entry in section_entries
+            ],
+        })
+
+    exhibit_index = [
+        {
+            "label": label,
+            "source_path": source_path,
+            "source_name": _source_display_name(source_path),
+            "source_type": _source_type_for_path(source_path),
+            "suggested_title": _suggested_exhibit_title(source_path, _source_display_name(source_path)),
+            "handling_note": _exhibit_handling_note(source_path),
+        }
+        for source_path, label in exhibit_map.items()
+    ]
+
+    exhibit_packet = [
+        {
+            "packet_order": index,
+            **entry,
+        }
+        for index, entry in enumerate(exhibit_index, start=1)
+    ]
+
+    citation_map: list[dict[str, Any]] = []
+
+    summary = {
+        "status": "success",
+        "factual_background_count": len(factual_background),
+        "count_count": len(count_blocks),
+        "exhibit_count": len(exhibit_index),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "exhibit_json_path": str(exhibit_json_path),
+        "exhibit_markdown_path": str(exhibit_md_path),
+        "citation_json_path": str(citation_json_path),
+        "citation_markdown_path": str(citation_md_path),
+        "packet_json_path": str(packet_json_path),
+        "packet_markdown_path": str(packet_md_path),
+    }
+
+    md_lines = [
+        "# Formal Complaint Draft",
+        "",
+        "IN THE [COURT NAME]",
+        "",
+        "Jane Cortez and Benjamin Barber,",
+        "Plaintiffs,",
+        "",
+        "v.",
+        "",
+        "Housing Authority of Clackamas County; DOES 1-10,",
+        "Defendants.",
+        "",
+        "## Nature of Action",
+        "",
+        "1. This draft complaint organizes the currently extracted evidence into a more conventional complaint format.",
+        "2. It remains a drafting aid and should be checked against the underlying evidence, governing claims, and filing requirements before use.",
+        "",
+        "## Parties",
+        "",
+        "3. Plaintiffs are Jane Cortez and Benjamin Barber, subject to confirmation of full legal names, capacity, and proper party alignment.",
+        "4. Defendant Housing Authority of Clackamas County is alleged to have issued the housing-related notices, amendments, requests, and communications reflected in the evidence summarized below.",
+        "5. Doe defendants may be named if later investigation supports individual-capacity or agency-role allegations.",
+        "",
+        "## Jurisdiction and Venue",
+        "",
+        "6. Jurisdiction basis: [fill in federal question, state-law, supplemental, or other basis].",
+        "7. Venue basis: [fill in county, district, and operative-events basis].",
+        "",
+        "## General Allegations",
+        "",
+    ]
+
+    paragraph_number = 8
+    if factual_background:
+        for entry in factual_background:
+            source_path = str(entry.get("source_path") or "")
+            tagged = _paragraph_with_exhibit_tag(
+                str(entry.get("paragraph") or ""),
+                exhibit_map.get(source_path),
+            )
+            md_lines.append(f"{paragraph_number}. {tagged}")
+            citation_map.append({
+                "paragraph_number": paragraph_number,
+                "section": "General Allegations",
+                "source_path": source_path,
+                "source_name": _source_display_name(source_path) if source_path else "",
+                "exhibit_label": exhibit_map.get(source_path),
+                "event_label": str(entry.get("event_label") or ""),
+            })
+            paragraph_number += 1
+    else:
+        md_lines.append(f"{paragraph_number}. No general allegations were generated from the current evidence set.")
+        paragraph_number += 1
+
+    md_lines.extend(["", "## Counts", ""])
+    factual_end = paragraph_number - 1
+    if count_blocks:
+        for idx, block in enumerate(count_blocks, start=1):
+            md_lines.extend([
+                f"### Count {_roman_count_label(idx)}: {block['title']}",
+                "",
+                f"{paragraph_number}. Plaintiffs repeat and reallege Paragraphs 1 through {factual_end} as if fully set out here.",
+            ])
+            paragraph_number += 1
+            md_lines.append(f"{paragraph_number}. {block['intro']}")
+            paragraph_number += 1
+            md_lines.append(
+                f"{paragraph_number}. This count is presently organized around the evidence group labeled \"{block['source_section']}\"."
+            )
+            paragraph_number += 1
+            for entry, fact in zip(block["entries"], block["paragraphs"]):
+                md_lines.append(f"{paragraph_number}. {fact}")
+                source_path = str(entry.get("source_path") or "")
+                citation_map.append({
+                    "paragraph_number": paragraph_number,
+                    "section": block["title"],
+                    "source_path": source_path,
+                    "source_name": _source_display_name(source_path) if source_path else "",
+                    "exhibit_label": exhibit_map.get(source_path),
+                    "event_label": str(entry.get("event_label") or ""),
+                })
+                paragraph_number += 1
+            md_lines.append(f"{paragraph_number}. Legal elements and claim language to be added: [fill in].")
+            paragraph_number += 1
+            md_lines.append("")
+            md_lines.append("Elements to Plead:")
+            md_lines.extend(f"- {prompt}" for prompt in block["element_prompts"])
+            md_lines.append("")
+    else:
+        md_lines.append(f"{paragraph_number}. No counts were generated from the current evidence set.")
+        paragraph_number += 1
+
+    md_lines.extend([
+        "## Prayer for Relief",
+        "",
+        f"{paragraph_number}. Plaintiffs request declaratory relief as permitted by law. [fill in specific declaration].",
+        f"{paragraph_number + 1}. Plaintiffs request injunctive or equitable relief as permitted by law. [fill in specific injunction].",
+        f"{paragraph_number + 2}. Plaintiffs request damages, fees, costs, and any additional relief authorized by law. [fill in].",
+        "",
+        "## Jury Demand",
+        "",
+        f"{paragraph_number + 3}. Plaintiffs demand a jury on all issues so triable, if applicable.",
+    ])
+
+    json_path.write_text(
+        json.dumps(
+            {
+                **summary,
+                "factual_background": factual_background,
+                "counts": count_blocks,
+                "exhibit_index": exhibit_index,
+                "exhibit_packet": exhibit_packet,
+                "citation_map": citation_map,
+            },
+            indent=2,
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+
+    exhibit_json_path.write_text(
+        json.dumps({"status": "success", "exhibit_count": len(exhibit_index), "exhibits": exhibit_index}, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+    exhibit_md_lines = ["# Formal Complaint Exhibit Index", "", f"Exhibit count: {len(exhibit_index)}", ""]
+    if exhibit_index:
+        exhibit_md_lines.extend(
+            f"- Exhibit {entry['label']}: {entry['source_path']} ({entry['source_name']})"
+            for entry in exhibit_index
+        )
+    else:
+        exhibit_md_lines.append("No exhibits indexed.")
+    exhibit_md_path.write_text("\n".join(exhibit_md_lines).strip() + "\n", encoding="utf-8")
+
+    packet_json_path.write_text(
+        json.dumps({"status": "success", "packet_count": len(exhibit_packet), "packet": exhibit_packet}, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+    packet_md_lines = ["# Formal Complaint Exhibit Packet", "", f"Packet count: {len(exhibit_packet)}", ""]
+    if exhibit_packet:
+        packet_md_lines.extend(
+            (
+                f"- {entry['packet_order']}. Exhibit {entry['label']} | {entry['suggested_title']} | "
+                f"{entry['source_path']} | type={entry['source_type']} | {entry['handling_note']}"
+            )
+            for entry in exhibit_packet
+        )
+    else:
+        packet_md_lines.append("No exhibit packet entries generated.")
+    packet_md_path.write_text("\n".join(packet_md_lines).strip() + "\n", encoding="utf-8")
+
+    citation_json_path.write_text(
+        json.dumps({"status": "success", "citation_count": len(citation_map), "citations": citation_map}, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+    citation_md_lines = ["# Formal Complaint Citation Map", "", f"Citation count: {len(citation_map)}", ""]
+    if citation_map:
+        citation_md_lines.extend(
+            f"- Paragraph {entry['paragraph_number']}: Exhibit {entry['exhibit_label'] or '?'} | {entry['source_path']} | {entry['section']}"
+            for entry in citation_map
+        )
+    else:
+        citation_md_lines.append("No paragraph-to-source citations generated.")
+    citation_md_path.write_text("\n".join(citation_md_lines).strip() + "\n", encoding="utf-8")
     return summary
 
 
@@ -1204,6 +1935,21 @@ def _build_chronology_report(payload: dict[str, Any], output_dir: Path) -> dict[
     summary["complaint_ready_chronology"] = _build_complaint_ready_chronology(summary["pleading_timeline"], chronology_dir)
     summary["claim_grouped_allegations"] = _build_claim_grouped_allegations(summary["complaint_ready_chronology"], chronology_dir)
     summary["cause_of_action_draft"] = _build_cause_of_action_draft(summary["claim_grouped_allegations"], chronology_dir)
+    summary["complaint_skeleton"] = _build_complaint_skeleton(
+        summary["cause_of_action_draft"],
+        summary["complaint_ready_chronology"],
+        chronology_dir,
+    )
+    summary["narrative_complaint_draft"] = _build_narrative_complaint_draft(
+        summary["complaint_ready_chronology"],
+        summary["cause_of_action_draft"],
+        chronology_dir,
+    )
+    summary["formal_complaint_draft"] = _build_formal_complaint_draft(
+        summary["complaint_ready_chronology"],
+        summary["cause_of_action_draft"],
+        chronology_dir,
+    )
     return summary
 
 
@@ -1565,6 +2311,24 @@ def _markdown_report(payload: dict[str, Any]) -> str:
         cause_draft = chronology.get("cause_of_action_draft") or {}
         if cause_draft:
             lines.append(f"- Cause-of-action draft sections generated: {cause_draft.get('section_count', 0)}")
+        complaint_skeleton = chronology.get("complaint_skeleton") or {}
+        if complaint_skeleton:
+            lines.append(
+                f"- Complaint skeleton cause sections generated: {complaint_skeleton.get('cause_section_count', 0)}"
+            )
+        narrative_draft = chronology.get("narrative_complaint_draft") or {}
+        if narrative_draft:
+            lines.append(
+                f"- Narrative complaint counts generated: {narrative_draft.get('count_count', 0)}"
+            )
+        formal_draft = chronology.get("formal_complaint_draft") or {}
+        if formal_draft:
+            lines.append(
+                f"- Formal complaint counts generated: {formal_draft.get('count_count', 0)}"
+            )
+            lines.append(
+                f"- Formal complaint exhibits indexed: {formal_draft.get('exhibit_count', 0)}"
+            )
     return "\n".join(lines).strip() + "\n"
 
 

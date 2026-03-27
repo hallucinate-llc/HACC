@@ -1,0 +1,271 @@
+{
+  "status": "success",
+  "cause_section_count": 5,
+  "factual_background_count": 12,
+  "json_path": "/home/barberb/HACC/research_results/evidence_review_20260327_085226/chronology/complaint_skeleton.json",
+  "markdown_path": "/home/barberb/HACC/research_results/evidence_review_20260327_085226/chronology/complaint_skeleton.md",
+  "factual_background": [
+    {
+      "number": 1,
+      "date": "8/5/2024",
+      "source_path": "evidence/paper documents/HACC add to lease.pdf",
+      "event_label": "Lease or occupancy event: HACC add to lease",
+      "classification": "lease_or_occupancy",
+      "paragraph": "On 8/5/2024, the document \"HACC add to lease\" reflects a lease or occupancy event stating: \"Health, Housing &Human ServicesCLACKAMAS COUNTY Housing Authority of Clackamas County EQUAL HOUSING OPPORTUNITY LEASE AMENDMENT — RENT ADJUSTMENT AND/OR ADD OR REMOVE TENANTS...\". Source: evidence/paper documents/HACC add to lease.pdf."
+    },
+    {
+      "number": 2,
+      "date": "September 19, 2024",
+      "source_path": "evidence/paper documents/HACC phase2 2024.pdf",
+      "event_label": "Notice or adverse action: HACC phase2 2024",
+      "classification": "notice_or_adverse_action",
+      "paragraph": "On September 19, 2024, the document \"HACC phase2 2024\" reflects a notice or adverse action stating: \"HAND DELIVERED O CERTIFIED MAIL Hillside Park Apartments Phase II General Information Notice September 19, 2024 Dear Resident: The Housing Authority of Clackamas County (HACC)...\". Source: evidence/paper documents/HACC phase2 2024.pdf."
+    },
+    {
+      "number": 3,
+      "date": "December 23, 2025",
+      "source_path": "evidence/paper documents/HACC 90 day notice 2.pdf",
+      "event_label": "Notice or adverse action: HACC 90 day notice 2",
+      "classification": "notice_or_adverse_action",
+      "paragraph": "On December 23, 2025, the document \"HACC 90 day notice 2\" reflects a notice or adverse action stating: \"Health,Housing & Human Servi Executive Director, Shannon Callahan 30 Day Lease Termination Notice without Cause December 23, 2025 Jane Cortez 10043 SE 32nd Ave Milwaukie, OR...\". Source: evidence/paper documents/HACC 90 day notice 2.pdf."
+    },
+    {
+      "number": 4,
+      "date": "December 23, 2025",
+      "source_path": "evidence/paper documents/HACC 90 day notice.pdf",
+      "event_label": "Notice or adverse action: HACC 90 day notice",
+      "classification": "notice_or_adverse_action",
+      "paragraph": "On December 23, 2025, the document \"HACC 90 day notice\" reflects a notice or adverse action stating: \"Health, Housing & Human Services Executive Director, Shannan Callahan 90 Day Lease Termination Notice without Cause December 23, 2025 Jane Cortez 10043 SE 32nd Ave Milwaukie, OR...\". Source: evidence/paper documents/HACC 90 day notice.pdf."
+    },
+    {
+      "number": 5,
+      "date": "December 31, 2025",
+      "source_path": "evidence/paper documents/HACC 90 day notice 3.pdf",
+      "event_label": "Notice or adverse action: HACC 90 day notice 3",
+      "classification": "notice_or_adverse_action",
+      "paragraph": "On December 31, 2025, the document \"HACC 90 day notice 3\" reflects a notice or adverse action stating: \"NOTICE OF ELIGIBILITY AND 90 DAY NOTICE RESIDENTIAL TENANT TO BE DISPLACED O HAND DELIVERED C] CERTIFIED MAIL December 31, 2025 Jane Cortez 10043 SE 32nd Avenue Milwaukie, OR...\". Source: evidence/paper documents/HACC 90 day notice 3.pdf."
+    },
+    {
+      "number": 6,
+      "date": "1/1/2026",
+      "source_path": "evidence/paper documents/HACC vawa violation.pdf",
+      "event_label": "Lease or occupancy event: HACC vawa violation",
+      "classification": "lease_or_occupancy",
+      "paragraph": "On 1/1/2026, the document \"HACC vawa violation\" reflects a lease or occupancy event stating: \"Shannon Callahan, Executive Director Housing Authority of Clackamas County Health, Housing & Human Services EQUAL HOUSING OPPORTUNITY LEASE AMENDMENT — RENT ADJUSTMENT AND/OR ADD...\". Source: evidence/paper documents/HACC vawa violation.pdf."
+    },
+    {
+      "number": 7,
+      "date": "01/08/2026",
+      "source_path": "evidence/paper documents/HACC Jan 2026 blossom.pdf",
+      "event_label": "Lease or occupancy event: HACC Jan 2026 blossom",
+      "classification": "lease_or_occupancy",
+      "paragraph": "On 01/08/2026, the document \"HACC Jan 2026 blossom\" reflects a lease or occupancy event stating: \"Health, Housing : &HumanservicesSS Housing Authority of Clackamas County — APPR TING Jane Cortez 10043 SE 324 Avenue Milwaukie, OR 97222 IMPORTANT: ACTION REQUIRED Dear Jane...\". Source: evidence/paper documents/HACC Jan 2026 blossom.pdf."
+    },
+    {
+      "number": 8,
+      "date": "February 4, 2026",
+      "source_path": "evidence/paper documents/HACC first amendment.pdf",
+      "event_label": "Protected-status or VAWA issue: HACC first amendment",
+      "classification": "protected_status_or_vawa",
+      "paragraph": "On February 4, 2026, the document \"HACC first amendment\" reflects a protected-status or VAWA-related issue stating: \"Health,Housing &Human Services Februa ry 4, 2026 Executive Director, Shannon Callahan Jane Cortez and Benjamin Barber 10043 SE 32nd Avenue Milwaukie, OR 97222 30 Day for Cause...\". Source: evidence/paper documents/HACC first amendment.pdf."
+    },
+    {
+      "number": 9,
+      "date": "February 9, 2026",
+      "source_path": "evidence/paper documents/HACC financial requests.pdf",
+      "event_label": "Financial verification request: HACC financial requests",
+      "classification": "financial_verification",
+      "paragraph": "On February 9, 2026, the document \"HACC financial requests\" reflects a financial verification request stating: \"Health, Housing &Humanservices.& Housing Authority of Clackamas County LSIURL, HOUGING OPPORTUNITY February 9, 2026 Jane Cortez 10043 SE 32nd Avenue Milwaukie, OR 97222 RE:...\". Source: evidence/paper documents/HACC financial requests.pdf."
+    },
+    {
+      "number": 10,
+      "date": "2026-02-09T17:57:35+00:00",
+      "source_path": "evidence/email_imports/starworks5-additional-info-import/email_import_manifest.json",
+      "event_label": "Email thread: Additional Information Needed",
+      "classification": "financial_verification",
+      "paragraph": "Between February 09, 2026 and February 25, 2026, the email thread \"Additional Information Needed\" included 3 captured messages involving \"Tilton, Kati\" <KTilton@clackamas.us> and benjamin barber <starworks5@gmail.com>. Source: evidence/email_imports/starworks5-additional-info-import/email_import_manifest.json."
+    },
+    {
+      "number": 13,
+      "date": "February 26, 2026",
+      "source_path": "evidence/paper documents/HACC steering.pdf",
+      "event_label": "Notice or adverse action: HACC steering",
+      "classification": "notice_or_adverse_action",
+      "paragraph": "On February 26, 2026, the document \"HACC steering\" reflects a notice or adverse action stating: \"Health,Housing & Human Services 4. Housing Authority of Clackamas County . Jane Cortez February 26, 2026 10043 SE 32nd Avenue Milwaukie, OR 97222 Dear Jane Cortez and all other,...\". Source: evidence/paper documents/HACC steering.pdf."
+    },
+    {
+      "number": 14,
+      "date": "2026-02-26T17:48:44-08:00",
+      "source_path": "evidence/email_imports/starworks5-additional-info-import/email_import_manifest.json",
+      "event_label": "Email thread: Additional Information Needed",
+      "classification": "financial_verification",
+      "paragraph": "Between February 26, 2026 and March 11, 2026, the email thread \"Additional Information Needed\" included 5 captured messages involving benjamin barber <starworks5@gmail.com>, \"Tilton, Kati\" <ktilton@clackamas.us>, \"Ferron, Ashley\" <AFerron@clackamas.us>, charity@magikcorp.com, \"Tilton, Kati\" <KTilton@clackamas.us>. Source: evidence/email_imports/starworks5-additional-info-import/email_import_manifest.json."
+    }
+  ],
+  "cause_sections": [
+    {
+      "title": "Potential Claim Theme: Deficient Notice and Adverse Housing Action",
+      "intro": "These facts support a draft theory that HACC issued or escalated adverse housing actions through notices and displacement-related communications.",
+      "source_section": "Notices and Adverse Actions",
+      "element_prompts": [
+        "Identify the specific notice requirements imposed by the lease, program rules, ORS chapter 90, HUD guidance, or relocation rules.",
+        "State how the notices were deficient, inconsistent, untimely, or misleading.",
+        "Explain the concrete housing harm threatened or imposed by the adverse action."
+      ],
+      "paragraphs": [
+        {
+          "number": 2,
+          "date": "September 19, 2024",
+          "source_path": "evidence/paper documents/HACC phase2 2024.pdf",
+          "event_label": "Notice or adverse action: HACC phase2 2024",
+          "classification": "notice_or_adverse_action",
+          "paragraph": "On September 19, 2024, the document \"HACC phase2 2024\" reflects a notice or adverse action stating: \"HAND DELIVERED O CERTIFIED MAIL Hillside Park Apartments Phase II General Information Notice September 19, 2024 Dear Resident: The Housing Authority of Clackamas County (HACC)...\". Source: evidence/paper documents/HACC phase2 2024.pdf."
+        },
+        {
+          "number": 3,
+          "date": "December 23, 2025",
+          "source_path": "evidence/paper documents/HACC 90 day notice 2.pdf",
+          "event_label": "Notice or adverse action: HACC 90 day notice 2",
+          "classification": "notice_or_adverse_action",
+          "paragraph": "On December 23, 2025, the document \"HACC 90 day notice 2\" reflects a notice or adverse action stating: \"Health,Housing & Human Servi Executive Director, Shannon Callahan 30 Day Lease Termination Notice without Cause December 23, 2025 Jane Cortez 10043 SE 32nd Ave Milwaukie, OR...\". Source: evidence/paper documents/HACC 90 day notice 2.pdf."
+        },
+        {
+          "number": 4,
+          "date": "December 23, 2025",
+          "source_path": "evidence/paper documents/HACC 90 day notice.pdf",
+          "event_label": "Notice or adverse action: HACC 90 day notice",
+          "classification": "notice_or_adverse_action",
+          "paragraph": "On December 23, 2025, the document \"HACC 90 day notice\" reflects a notice or adverse action stating: \"Health, Housing & Human Services Executive Director, Shannan Callahan 90 Day Lease Termination Notice without Cause December 23, 2025 Jane Cortez 10043 SE 32nd Ave Milwaukie, OR...\". Source: evidence/paper documents/HACC 90 day notice.pdf."
+        },
+        {
+          "number": 5,
+          "date": "December 31, 2025",
+          "source_path": "evidence/paper documents/HACC 90 day notice 3.pdf",
+          "event_label": "Notice or adverse action: HACC 90 day notice 3",
+          "classification": "notice_or_adverse_action",
+          "paragraph": "On December 31, 2025, the document \"HACC 90 day notice 3\" reflects a notice or adverse action stating: \"NOTICE OF ELIGIBILITY AND 90 DAY NOTICE RESIDENTIAL TENANT TO BE DISPLACED O HAND DELIVERED C] CERTIFIED MAIL December 31, 2025 Jane Cortez 10043 SE 32nd Avenue Milwaukie, OR...\". Source: evidence/paper documents/HACC 90 day notice 3.pdf."
+        },
+        {
+          "number": 13,
+          "date": "February 26, 2026",
+          "source_path": "evidence/paper documents/HACC steering.pdf",
+          "event_label": "Notice or adverse action: HACC steering",
+          "classification": "notice_or_adverse_action",
+          "paragraph": "On February 26, 2026, the document \"HACC steering\" reflects a notice or adverse action stating: \"Health,Housing & Human Services 4. Housing Authority of Clackamas County . Jane Cortez February 26, 2026 10043 SE 32nd Avenue Milwaukie, OR 97222 Dear Jane Cortez and all other,...\". Source: evidence/paper documents/HACC steering.pdf."
+        }
+      ]
+    },
+    {
+      "title": "Potential Claim Theme: Lease, Occupancy, and Displacement Conduct",
+      "intro": "These facts support a draft theory centered on lease amendments, occupancy changes, inspections, and relocation-related housing conditions.",
+      "source_section": "Lease and Occupancy",
+      "element_prompts": [
+        "Identify the lease, occupancy, inspection, transfer, or displacement obligation at issue.",
+        "State how HACC's conduct departed from that obligation or from ordinary housing process requirements.",
+        "Explain the resulting loss of housing stability, access, or tenancy rights."
+      ],
+      "paragraphs": [
+        {
+          "number": 1,
+          "date": "8/5/2024",
+          "source_path": "evidence/paper documents/HACC add to lease.pdf",
+          "event_label": "Lease or occupancy event: HACC add to lease",
+          "classification": "lease_or_occupancy",
+          "paragraph": "On 8/5/2024, the document \"HACC add to lease\" reflects a lease or occupancy event stating: \"Health, Housing &Human ServicesCLACKAMAS COUNTY Housing Authority of Clackamas County EQUAL HOUSING OPPORTUNITY LEASE AMENDMENT — RENT ADJUSTMENT AND/OR ADD OR REMOVE TENANTS...\". Source: evidence/paper documents/HACC add to lease.pdf."
+        },
+        {
+          "number": 6,
+          "date": "1/1/2026",
+          "source_path": "evidence/paper documents/HACC vawa violation.pdf",
+          "event_label": "Lease or occupancy event: HACC vawa violation",
+          "classification": "lease_or_occupancy",
+          "paragraph": "On 1/1/2026, the document \"HACC vawa violation\" reflects a lease or occupancy event stating: \"Shannon Callahan, Executive Director Housing Authority of Clackamas County Health, Housing & Human Services EQUAL HOUSING OPPORTUNITY LEASE AMENDMENT — RENT ADJUSTMENT AND/OR ADD...\". Source: evidence/paper documents/HACC vawa violation.pdf."
+        },
+        {
+          "number": 7,
+          "date": "01/08/2026",
+          "source_path": "evidence/paper documents/HACC Jan 2026 blossom.pdf",
+          "event_label": "Lease or occupancy event: HACC Jan 2026 blossom",
+          "classification": "lease_or_occupancy",
+          "paragraph": "On 01/08/2026, the document \"HACC Jan 2026 blossom\" reflects a lease or occupancy event stating: \"Health, Housing : &HumanservicesSS Housing Authority of Clackamas County — APPR TING Jane Cortez 10043 SE 324 Avenue Milwaukie, OR 97222 IMPORTANT: ACTION REQUIRED Dear Jane...\". Source: evidence/paper documents/HACC Jan 2026 blossom.pdf."
+        },
+        {
+          "number": 19,
+          "date": "March 17, 2026",
+          "source_path": "evidence/paper documents/HACC inspection.pdf",
+          "event_label": "Lease or occupancy event: HACC inspection",
+          "classification": "lease_or_occupancy",
+          "paragraph": "On March 17, 2026, the document \"HACC inspection\" reflects a lease or occupancy event stating: \"Health, Housing L&Human Services ial psnnsn Executive Ojrector, Shannon Callahan March 17, 2026 NOTICE TO RESIDENTS HUD NSPIRE INSPECTION Dear Residents, The U.S. Department of...\". Source: evidence/paper documents/HACC inspection.pdf."
+        }
+      ]
+    },
+    {
+      "title": "Potential Claim Theme: Documentation Demands and Intake Barriers",
+      "intro": "These facts support a draft theory that repeated documentation demands and related email exchanges created material barriers in the housing process.",
+      "source_section": "Financial Verification and Intake Barriers",
+      "element_prompts": [
+        "Describe the specific documentation demands or intake conditions imposed on plaintiff.",
+        "State why those demands were unreasonable, inconsistently applied, retaliatory, discriminatory, or otherwise improper.",
+        "Explain how the demands delayed, burdened, or obstructed housing access or retention."
+      ],
+      "paragraphs": [
+        {
+          "number": 9,
+          "date": "February 9, 2026",
+          "source_path": "evidence/paper documents/HACC financial requests.pdf",
+          "event_label": "Financial verification request: HACC financial requests",
+          "classification": "financial_verification",
+          "paragraph": "On February 9, 2026, the document \"HACC financial requests\" reflects a financial verification request stating: \"Health, Housing &Humanservices.& Housing Authority of Clackamas County LSIURL, HOUGING OPPORTUNITY February 9, 2026 Jane Cortez 10043 SE 32nd Avenue Milwaukie, OR 97222 RE:...\". Source: evidence/paper documents/HACC financial requests.pdf."
+        },
+        {
+          "number": 10,
+          "date": "2026-02-09T17:57:35+00:00",
+          "source_path": "evidence/email_imports/starworks5-additional-info-import/email_import_manifest.json",
+          "event_label": "Email thread: Additional Information Needed",
+          "classification": "financial_verification",
+          "paragraph": "Between February 09, 2026 and March 11, 2026, the email thread \"Additional Information Needed\" included 8 captured messages involving \"Tilton, Kati\" <KTilton@clackamas.us>, benjamin barber <starworks5@gmail.com>, \"Tilton, Kati\" <ktilton@clackamas.us>, \"Ferron, Ashley\" <AFerron@clackamas.us>, charity@magikcorp.com. Source: evidence/email_imports/starworks5-additional-info-import/email_import_manifest.json."
+        }
+      ]
+    },
+    {
+      "title": "Potential Claim Theme: Protected Status and VAWA-Related Conduct",
+      "intro": "These facts support a draft theory that protected-status and VAWA-related issues were implicated in later housing actions.",
+      "source_section": "Protected Status and VAWA",
+      "element_prompts": [
+        "Identify the protected status, VAWA protection, or related legal protection implicated by the facts.",
+        "Connect the protected status facts to the challenged notice, lease action, or housing decision.",
+        "State the resulting discriminatory, retaliatory, or procedurally unlawful harm."
+      ],
+      "paragraphs": [
+        {
+          "number": 8,
+          "date": "February 4, 2026",
+          "source_path": "evidence/paper documents/HACC first amendment.pdf",
+          "event_label": "Protected-status or VAWA issue: HACC first amendment",
+          "classification": "protected_status_or_vawa",
+          "paragraph": "On February 4, 2026, the document \"HACC first amendment\" reflects a protected-status or VAWA-related issue stating: \"Health,Housing &Human Services Februa ry 4, 2026 Executive Director, Shannon Callahan Jane Cortez and Benjamin Barber 10043 SE 32nd Avenue Milwaukie, OR 97222 30 Day for Cause...\". Source: evidence/paper documents/HACC first amendment.pdf."
+        }
+      ]
+    },
+    {
+      "title": "Potential Claim Theme: Orientation and Compliance Delays",
+      "intro": "These facts support a draft theory that orientation and compliance requirements became a distinct procedural track affecting housing progression.",
+      "source_section": "Orientation and Compliance",
+      "element_prompts": [
+        "Identify the orientation or compliance requirement and the source of that requirement.",
+        "Explain how the timing or administration of the requirement affected plaintiff's housing position.",
+        "State the concrete delay, denial, or prejudice caused by that process."
+      ],
+      "paragraphs": [
+        {
+          "number": 20,
+          "date": "2026-03-17T19:29:55+00:00",
+          "source_path": "evidence/email_imports/starworks5-ktilton-orientation-import/email_import_manifest.json",
+          "event_label": "Email thread: HCV Orientation",
+          "classification": "orientation_or_compliance",
+          "paragraph": "Between March 17, 2026 and March 21, 2026, the email thread \"HCV Orientation\" included 5 captured messages involving \"Tilton, Kati\" <KTilton@clackamas.us> and benjamin barber <starworks5@gmail.com>. Source: evidence/email_imports/starworks5-ktilton-orientation-import/email_import_manifest.json."
+        }
+      ]
+    }
+  ]
+}

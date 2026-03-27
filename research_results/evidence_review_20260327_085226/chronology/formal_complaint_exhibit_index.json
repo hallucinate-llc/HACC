@@ -1,0 +1,110 @@
+{
+  "status": "success",
+  "exhibit_count": 13,
+  "exhibits": [
+    {
+      "label": "A",
+      "source_path": "evidence/paper documents/HACC add to lease.pdf",
+      "source_name": "HACC add to lease",
+      "source_type": "paper_pdf",
+      "suggested_title": "HACC add to lease PDF",
+      "handling_note": "Attach the underlying PDF as the exhibit file."
+    },
+    {
+      "label": "B",
+      "source_path": "evidence/paper documents/HACC phase2 2024.pdf",
+      "source_name": "HACC phase2 2024",
+      "source_type": "paper_pdf",
+      "suggested_title": "HACC phase2 2024 PDF",
+      "handling_note": "Attach the underlying PDF as the exhibit file."
+    },
+    {
+      "label": "C",
+      "source_path": "evidence/paper documents/HACC 90 day notice 2.pdf",
+      "source_name": "HACC 90 day notice 2",
+      "source_type": "paper_pdf",
+      "suggested_title": "HACC 90 day notice 2 PDF",
+      "handling_note": "Attach the underlying PDF as the exhibit file."
+    },
+    {
+      "label": "D",
+      "source_path": "evidence/paper documents/HACC 90 day notice.pdf",
+      "source_name": "HACC 90 day notice",
+      "source_type": "paper_pdf",
+      "suggested_title": "HACC 90 day notice PDF",
+      "handling_note": "Attach the underlying PDF as the exhibit file."
+    },
+    {
+      "label": "E",
+      "source_path": "evidence/paper documents/HACC 90 day notice 3.pdf",
+      "source_name": "HACC 90 day notice 3",
+      "source_type": "paper_pdf",
+      "suggested_title": "HACC 90 day notice 3 PDF",
+      "handling_note": "Attach the underlying PDF as the exhibit file."
+    },
+    {
+      "label": "F",
+      "source_path": "evidence/paper documents/HACC vawa violation.pdf",
+      "source_name": "HACC vawa violation",
+      "source_type": "paper_pdf",
+      "suggested_title": "HACC vawa violation PDF",
+      "handling_note": "Attach the underlying PDF as the exhibit file."
+    },
+    {
+      "label": "G",
+      "source_path": "evidence/paper documents/HACC Jan 2026 blossom.pdf",
+      "source_name": "HACC Jan 2026 blossom",
+      "source_type": "paper_pdf",
+      "suggested_title": "HACC Jan 2026 blossom PDF",
+      "handling_note": "Attach the underlying PDF as the exhibit file."
+    },
+    {
+      "label": "H",
+      "source_path": "evidence/paper documents/HACC first amendment.pdf",
+      "source_name": "HACC first amendment",
+      "source_type": "paper_pdf",
+      "suggested_title": "HACC first amendment PDF",
+      "handling_note": "Attach the underlying PDF as the exhibit file."
+    },
+    {
+      "label": "I",
+      "source_path": "evidence/paper documents/HACC financial requests.pdf",
+      "source_name": "HACC financial requests",
+      "source_type": "paper_pdf",
+      "suggested_title": "HACC financial requests PDF",
+      "handling_note": "Attach the underlying PDF as the exhibit file."
+    },
+    {
+      "label": "J",
+      "source_path": "evidence/email_imports/starworks5-additional-info-import/email_import_manifest.json",
+      "source_name": "email import manifest",
+      "source_type": "email_manifest",
+      "suggested_title": "Email Thread Export: starworks5 additional info import",
+      "handling_note": "Use the manifest with underlying saved messages or representative thread exports if filing requires message-level exhibits."
+    },
+    {
+      "label": "K",
+      "source_path": "evidence/paper documents/HACC steering.pdf",
+      "source_name": "HACC steering",
+      "source_type": "paper_pdf",
+      "suggested_title": "HACC steering PDF",
+      "handling_note": "Attach the underlying PDF as the exhibit file."
+    },
+    {
+      "label": "L",
+      "source_path": "evidence/paper documents/HACC inspection.pdf",
+      "source_name": "HACC inspection",
+      "source_type": "paper_pdf",
+      "suggested_title": "HACC inspection PDF",
+      "handling_note": "Attach the underlying PDF as the exhibit file."
+    },
+    {
+      "label": "M",
+      "source_path": "evidence/email_imports/starworks5-ktilton-orientation-import/email_import_manifest.json",
+      "source_name": "email import manifest",
+      "source_type": "email_manifest",
+      "suggested_title": "Email Thread Export: starworks5 ktilton orientation import",
+      "handling_note": "Use the manifest with underlying saved messages or representative thread exports if filing requires message-level exhibits."
+    }
+  ]
+}

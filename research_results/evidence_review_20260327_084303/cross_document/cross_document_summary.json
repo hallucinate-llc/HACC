@@ -1,0 +1,293 @@
+{
+  "status": "success",
+  "source_count": 18,
+  "sources": [
+    "evidence/email_imports/starworks5-additional-info-import/email_import_manifest.json",
+    "evidence/email_imports/starworks5-ktilton-orientation-import/email_import_manifest.json",
+    "evidence/paper documents/HACC 2024 relocation.pdf",
+    "evidence/paper documents/HACC 90 day notice 2.pdf",
+    "evidence/paper documents/HACC 90 day notice 3.pdf",
+    "evidence/paper documents/HACC 90 day notice.pdf",
+    "evidence/paper documents/HACC Jan 2026 blossom.pdf",
+    "evidence/paper documents/HACC add to lease.pdf",
+    "evidence/paper documents/HACC financial requests.pdf",
+    "evidence/paper documents/HACC first amendment.pdf",
+    "evidence/paper documents/HACC inspection.pdf",
+    "evidence/paper documents/HACC phase2 2024.pdf",
+    "evidence/paper documents/HACC steering.pdf",
+    "evidence/paper documents/HACC vawa violation.pdf",
+    "evidence/paper documents/Housing Authority Clackamas County Brochure.pdf",
+    "evidence/paper documents/Vera Application.pdf",
+    "evidence/paper documents/blossom.pdf",
+    "evidence/paper documents/housing authority project based voucher.pdf"
+  ],
+  "graph_path": "/home/barberb/HACC/research_results/evidence_review_20260327_084303/cross_document/cross_document_knowledge_graph.json",
+  "knowledge_graph_summary": {
+    "total_entities": 404,
+    "total_relationships": 169,
+    "entity_types": {
+      "claim": 2,
+      "fact": 161,
+      "date": 176,
+      "person": 14,
+      "organization": 40,
+      "evidence": 11
+    },
+    "relationship_types": {
+      "makes_claim": 2,
+      "occurred_on": 12,
+      "employed_by": 126,
+      "involves": 5,
+      "occurred_after": 9,
+      "causal_link": 4,
+      "associated_with": 11
+    },
+    "gaps": 52
+  },
+  "gap_count": 52,
+  "gaps": [
+    {
+      "type": "low_confidence_entity",
+      "entity_id": "entity_392",
+      "entity_type": "evidence",
+      "entity_name": "Bank statement",
+      "confidence": 0.6914285714285714,
+      "suggested_question": "Can you provide more details about Bank statement?"
+    },
+    {
+      "type": "low_confidence_entity",
+      "entity_id": "entity_393",
+      "entity_type": "fact",
+      "entity_name": "Impact: Email record 1 Email subject: Additional Information Need...",
+      "confidence": 0.6914285714285714,
+      "suggested_question": "Can you provide more details about Impact: Email record 1 Email subject: Additional Information Need...?"
+    },
+    {
+      "type": "low_confidence_entity",
+      "entity_id": "entity_394",
+      "entity_type": "fact",
+      "entity_name": "Requested remedy: Email record 1 Email subject: Additional Information Need...",
+      "confidence": 0.6914285714285714,
+      "suggested_question": "Can you provide more details about Requested remedy: Email record 1 Email subject: Additional Information Need...?"
+    },
+    {
+      "type": "low_confidence_entity",
+      "entity_id": "entity_395",
+      "entity_type": "evidence",
+      "entity_name": "Agreement",
+      "confidence": 0.6571428571428571,
+      "suggested_question": "Can you provide more details about Agreement?"
+    },
+    {
+      "type": "low_confidence_entity",
+      "entity_id": "entity_396",
+      "entity_type": "evidence",
+      "entity_name": "Application",
+      "confidence": 0.6571428571428571,
+      "suggested_question": "Can you provide more details about Application?"
+    },
+    {
+      "type": "low_confidence_entity",
+      "entity_id": "entity_397",
+      "entity_type": "evidence",
+      "entity_name": "Contract",
+      "confidence": 0.6571428571428571,
+      "suggested_question": "Can you provide more details about Contract?"
+    },
+    {
+      "type": "low_confidence_entity",
+      "entity_id": "entity_398",
+      "entity_type": "evidence",
+      "entity_name": "Estimate",
+      "confidence": 0.6571428571428571,
+      "suggested_question": "Can you provide more details about Estimate?"
+    },
+    {
+      "type": "low_confidence_entity",
+      "entity_id": "entity_399",
+      "entity_type": "evidence",
+      "entity_name": "Lease",
+      "confidence": 0.6571428571428571,
+      "suggested_question": "Can you provide more details about Lease?"
+    },
+    {
+      "type": "low_confidence_entity",
+      "entity_id": "entity_400",
+      "entity_type": "evidence",
+      "entity_name": "Letter",
+      "confidence": 0.6571428571428571,
+      "suggested_question": "Can you provide more details about Letter?"
+    },
+    {
+      "type": "low_confidence_entity",
+      "entity_id": "entity_401",
+      "entity_type": "evidence",
+      "entity_name": "Notice",
+      "confidence": 0.6571428571428571,
+      "suggested_question": "Can you provide more details about Notice?"
+    },
+    {
+      "type": "low_confidence_entity",
+      "entity_id": "entity_402",
+      "entity_type": "evidence",
+      "entity_name": "Receipt",
+      "confidence": 0.6571428571428571,
+      "suggested_question": "Can you provide more details about Receipt?"
+    },
+    {
+      "type": "low_confidence_entity",
+      "entity_id": "entity_403",
+      "entity_type": "evidence",
+      "entity_name": "Email communication",
+      "confidence": 0.6485714285714286,
+      "suggested_question": "Can you provide more details about Email communication?"
+    },
+    {
+      "type": "low_confidence_entity",
+      "entity_id": "entity_404",
+      "entity_type": "evidence",
+      "entity_name": "Payment record",
+      "confidence": 0.6485714285714286,
+      "suggested_question": "Can you provide more details about Payment record?"
+    },
+    {
+      "type": "isolated_entity",
+      "entity_id": "entity_357",
+      "entity_type": "organization",
+      "entity_name": "Hallucinate LLC.\nHallucinate LLC",
+      "suggested_question": "What is the relationship between Hallucinate LLC.\nHallucinate LLC and the complaint?"
+    },
+    {
+      "type": "isolated_entity",
+      "entity_id": "entity_358",
+      "entity_type": "organization",
+      "entity_name": "Hallucinate LLC. Please",
+      "suggested_question": "What is the relationship between Hallucinate LLC. Please and the complaint?"
+    },
+    {
+      "type": "isolated_entity",
+      "entity_id": "entity_359",
+      "entity_type": "organization",
+      "entity_name": "History\nThe Linux Foundation",
+      "suggested_question": "What is the relationship between History\nThe Linux Foundation and the complaint?"
+    },
+    {
+      "type": "isolated_entity",
+      "entity_id": "entity_360",
+      "entity_type": "organization",
+      "entity_name": "JP Morgan Chase Bank",
+      "suggested_question": "What is the relationship between JP Morgan Chase Bank and the complaint?"
+    },
+    {
+      "type": "isolated_entity",
+      "entity_id": "entity_361",
+      "entity_type": "organization",
+      "entity_name": "Labs\nFree Standards Group",
+      "suggested_question": "What is the relationship between Labs\nFree Standards Group and the complaint?"
+    },
+    {
+      "type": "isolated_entity",
+      "entity_id": "entity_362",
+      "entity_type": "organization",
+      "entity_name": "Linux Foundation",
+      "suggested_question": "What is the relationship between Linux Foundation and the complaint?"
+    },
+    {
+      "type": "isolated_entity",
+      "entity_id": "entity_363",
+      "entity_type": "organization",
+      "entity_name": "Linux Foundation\nThe Linux Foundation",
+      "suggested_question": "What is the relationship between Linux Foundation\nThe Linux Foundation and the complaint?"
+    }
+  ],
+  "filtered_graph": {
+    "status": "success",
+    "source_count": 18,
+    "sources": [
+      "evidence/email_imports/starworks5-additional-info-import/email_import_manifest.json",
+      "evidence/email_imports/starworks5-ktilton-orientation-import/email_import_manifest.json",
+      "evidence/paper documents/HACC 2024 relocation.pdf",
+      "evidence/paper documents/HACC 90 day notice 2.pdf",
+      "evidence/paper documents/HACC 90 day notice 3.pdf",
+      "evidence/paper documents/HACC 90 day notice.pdf",
+      "evidence/paper documents/HACC Jan 2026 blossom.pdf",
+      "evidence/paper documents/HACC add to lease.pdf",
+      "evidence/paper documents/HACC financial requests.pdf",
+      "evidence/paper documents/HACC first amendment.pdf",
+      "evidence/paper documents/HACC inspection.pdf",
+      "evidence/paper documents/HACC phase2 2024.pdf",
+      "evidence/paper documents/HACC steering.pdf",
+      "evidence/paper documents/HACC vawa violation.pdf",
+      "evidence/paper documents/Housing Authority Clackamas County Brochure.pdf",
+      "evidence/paper documents/Vera Application.pdf",
+      "evidence/paper documents/blossom.pdf",
+      "evidence/paper documents/housing authority project based voucher.pdf"
+    ],
+    "graph_path": "/home/barberb/HACC/research_results/evidence_review_20260327_084303/cross_document/cross_document_filtered_knowledge_graph.json",
+    "knowledge_graph_summary": {
+      "total_entities": 143,
+      "total_relationships": 68,
+      "entity_types": {
+        "fact": 123,
+        "claim": 2,
+        "date": 18
+      },
+      "relationship_types": {
+        "occurred_on": 12,
+        "employed_by": 42,
+        "involves": 3,
+        "associated_with": 11
+      },
+      "gaps": 8
+    },
+    "gap_count": 8,
+    "gaps": [
+      {
+        "type": "unsupported_claim",
+        "entity_id": "entity_1",
+        "claim_name": "Discrimination Claim",
+        "suggested_question": "What evidence supports the claim: Discrimination Claim?"
+      },
+      {
+        "type": "unsupported_claim",
+        "entity_id": "entity_2",
+        "claim_name": "Accommodation Request",
+        "suggested_question": "What evidence supports the claim: Accommodation Request?"
+      },
+      {
+        "type": "missing_responsible_party",
+        "suggested_question": "Who is the person or organization you believe is responsible (e.g., employer, manager, agency)?"
+      },
+      {
+        "type": "missing_impact_remedy",
+        "missing_impact": true,
+        "missing_remedy": true,
+        "suggested_question": "What harm did you experience, and what outcome or remedy are you seeking?"
+      },
+      {
+        "type": "missing_written_notice",
+        "suggested_question": "What written notice, letter, email, or message did you receive, who sent it, and what date is on it?"
+      },
+      {
+        "type": "missing_hearing_request_date",
+        "suggested_question": "When did you request a hearing, grievance, or appeal, and when (if ever) did they respond?"
+      },
+      {
+        "type": "missing_response_dates",
+        "suggested_question": "When did each response occur (including any non-response), who gave it, and what exactly did they say?"
+      },
+      {
+        "type": "missing_exact_action_dates",
+        "suggested_question": "What are the exact dates for each key action (or your best day-level estimate), including decisions, notices, and responses?"
+      }
+    ],
+    "filtering": {
+      "kept_entities": 143,
+      "kept_relationships": 68,
+      "dropped_entities": 261,
+      "dropped_relationships": 101
+    },
+    "summary_json_path": "/home/barberb/HACC/research_results/evidence_review_20260327_084303/cross_document/cross_document_filtered_summary.json",
+    "summary_markdown_path": "/home/barberb/HACC/research_results/evidence_review_20260327_084303/cross_document/cross_document_filtered_summary.md"
+  }
+}
