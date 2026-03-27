@@ -751,6 +751,32 @@ def _allegation_section_title(classification: str) -> str:
     return mapping.get(classification, "Other Supporting Facts")
 
 
+def _cause_of_action_title(section_title: str) -> str:
+    mapping = {
+        "Notices and Adverse Actions": "Potential Claim Theme: Deficient Notice and Adverse Housing Action",
+        "Lease and Occupancy": "Potential Claim Theme: Lease, Occupancy, and Displacement Conduct",
+        "Financial Verification and Intake Barriers": "Potential Claim Theme: Documentation Demands and Intake Barriers",
+        "Protected Status and VAWA": "Potential Claim Theme: Protected Status and VAWA-Related Conduct",
+        "Orientation and Compliance": "Potential Claim Theme: Orientation and Compliance Delays",
+        "Application and Intake": "Potential Claim Theme: Application and Intake Process Issues",
+        "Other Supporting Facts": "Potential Claim Theme: Additional Supporting Facts",
+    }
+    return mapping.get(section_title, f"Potential Claim Theme: {section_title}")
+
+
+def _cause_of_action_intro(section_title: str) -> str:
+    mapping = {
+        "Notices and Adverse Actions": "These facts support a draft theory that HACC issued or escalated adverse housing actions through notices and displacement-related communications.",
+        "Lease and Occupancy": "These facts support a draft theory centered on lease amendments, occupancy changes, inspections, and relocation-related housing conditions.",
+        "Financial Verification and Intake Barriers": "These facts support a draft theory that repeated documentation demands and related email exchanges created material barriers in the housing process.",
+        "Protected Status and VAWA": "These facts support a draft theory that protected-status and VAWA-related issues were implicated in later housing actions.",
+        "Orientation and Compliance": "These facts support a draft theory that orientation and compliance requirements became a distinct procedural track affecting housing progression.",
+        "Application and Intake": "These facts support a draft theory involving application and intake-stage process defects.",
+        "Other Supporting Facts": "These facts may support additional claim development after manual review.",
+    }
+    return mapping.get(section_title, "These facts may support additional claim development after manual review.")
+
+
 def _build_complaint_ready_chronology(pleading_timeline: dict[str, Any], chronology_dir: Path) -> dict[str, Any]:
     events = list(pleading_timeline.get("events") or [])
     json_path = chronology_dir / "complaint_ready_chronology.json"
@@ -860,6 +886,51 @@ def _build_claim_grouped_allegations(complaint_ready: dict[str, Any], chronology
             md_lines.append("")
     else:
         md_lines.append("No claim-grouped allegations generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_cause_of_action_draft(grouped_allegations: dict[str, Any], chronology_dir: Path) -> dict[str, Any]:
+    sections = list(grouped_allegations.get("sections") or [])
+    json_path = chronology_dir / "cause_of_action_draft.json"
+    md_path = chronology_dir / "cause_of_action_draft.md"
+
+    drafted_sections: list[dict[str, Any]] = []
+    for section in sections:
+        section_title = str(section.get("title") or "Other Supporting Facts")
+        drafted_sections.append({
+            "title": _cause_of_action_title(section_title),
+            "source_section": section_title,
+            "intro": _cause_of_action_intro(section_title),
+            "paragraph_count": int(section.get("paragraph_count") or 0),
+            "paragraphs": list(section.get("paragraphs") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "section_count": len(drafted_sections),
+        "paragraph_count": sum(int(section.get("paragraph_count") or 0) for section in drafted_sections),
+        "sections": drafted_sections,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = ["# Cause-of-Action Draft", "", f"Section count: {len(drafted_sections)}", ""]
+    if drafted_sections:
+        for section in drafted_sections:
+            md_lines.extend([
+                f"## {section['title']}",
+                "",
+                section["intro"],
+                "",
+                f"Source allegation group: {section['source_section']}",
+                "",
+            ])
+            md_lines.extend(f"{entry['number']}. {entry['paragraph']}" for entry in section["paragraphs"])
+            md_lines.append("")
+    else:
+        md_lines.append("No cause-of-action draft sections generated.")
     md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
     return summary
 
@@ -1132,6 +1203,7 @@ def _build_chronology_report(payload: dict[str, Any], output_dir: Path) -> dict[
     summary["pleading_timeline"] = _build_pleading_timeline(payload, chronology_dir)
     summary["complaint_ready_chronology"] = _build_complaint_ready_chronology(summary["pleading_timeline"], chronology_dir)
     summary["claim_grouped_allegations"] = _build_claim_grouped_allegations(summary["complaint_ready_chronology"], chronology_dir)
+    summary["cause_of_action_draft"] = _build_cause_of_action_draft(summary["claim_grouped_allegations"], chronology_dir)
     return summary
 
 
@@ -1490,6 +1562,9 @@ def _markdown_report(payload: dict[str, Any]) -> str:
             lines.append(
                 f"- Claim-grouped allegation sections generated: {grouped_allegations.get('section_count', 0)}"
             )
+        cause_draft = chronology.get("cause_of_action_draft") or {}
+        if cause_draft:
+            lines.append(f"- Cause-of-action draft sections generated: {cause_draft.get('section_count', 0)}")
     return "\n".join(lines).strip() + "\n"
 
 
