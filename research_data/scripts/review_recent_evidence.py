@@ -1986,6 +1986,114 @@ def _build_formal_complaint_proposed_filing_packet(
     return summary
 
 
+def _build_formal_complaint_cite_check_matrix(
+    proposed_filing_packet: dict[str, Any],
+    citation_map: list[dict[str, Any]],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_cite_check_matrix.json"
+    md_path = chronology_dir / "formal_complaint_cite_check_matrix.md"
+
+    citations_by_label: dict[str, list[dict[str, Any]]] = {}
+    for citation in citation_map:
+        label = str(citation.get("exhibit_label") or "")
+        citations_by_label.setdefault(label, []).append(citation)
+
+    matrix_entries: list[dict[str, Any]] = []
+    for packet_entry in list(proposed_filing_packet.get("entries") or []):
+        label = str(packet_entry.get("label") or "")
+        citations = list(citations_by_label.get(label) or [])
+        paragraphs = sorted(int(citation.get("paragraph_number") or 0) for citation in citations)
+        sections: list[str] = []
+        for citation in citations:
+            section = str(citation.get("section") or "")
+            if section and section not in sections:
+                sections.append(section)
+
+        materials = []
+        for material in list(packet_entry.get("proposed_materials") or []):
+            if str(material.get("kind") or "") == "exhibit_file":
+                materials.append({
+                    "kind": "exhibit_file",
+                    "path": str(material.get("path") or ""),
+                    "note": str(material.get("note") or ""),
+                })
+                continue
+
+            materials.append({
+                "kind": str(material.get("kind") or ""),
+                "subexhibit": str(material.get("subexhibit") or ""),
+                "date": str(material.get("date") or ""),
+                "subject": str(material.get("subject") or ""),
+                "email_path": str(material.get("email_path") or ""),
+                "selection_reasons": list(material.get("selection_reasons") or []),
+                "retained_attachment_count": len(list(material.get("retained_attachments") or [])),
+                "retained_attachment_paths": [
+                    str(attachment.get("path") or "")
+                    for attachment in list(material.get("retained_attachments") or [])
+                ],
+            })
+
+        matrix_entries.append({
+            "packet_order": int(packet_entry.get("packet_order") or 0),
+            "label": label,
+            "suggested_title": str(packet_entry.get("suggested_title") or ""),
+            "source_type": str(packet_entry.get("source_type") or ""),
+            "source_path": str(packet_entry.get("source_path") or ""),
+            "citation_count": len(citations),
+            "paragraph_numbers": paragraphs,
+            "sections": sections,
+            "materials": materials,
+        })
+
+    summary = {
+        "status": "success",
+        "entry_count": len(matrix_entries),
+        "citation_count": len(citation_map),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "entries": matrix_entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Cite-Check Matrix",
+        "",
+        f"Entry count: {len(matrix_entries)}",
+        f"Citation count: {len(citation_map)}",
+        "",
+    ]
+    if matrix_entries:
+        for entry in matrix_entries:
+            paragraphs = ", ".join(str(number) for number in entry["paragraph_numbers"]) or "not cited"
+            sections = ", ".join(entry["sections"]) or "not cited"
+            md_lines.extend([
+                f"## {entry['packet_order']}. Exhibit {entry['label']}: {entry['suggested_title']}",
+                "",
+                f"Source: {entry['source_path']}",
+                f"Type: {entry['source_type']}",
+                f"Paragraphs: {paragraphs}",
+                f"Sections: {sections}",
+                f"Citation count: {entry['citation_count']}",
+                "",
+            ])
+            for material in list(entry.get("materials") or []):
+                if material.get("kind") == "exhibit_file":
+                    md_lines.append(f"- file: {material.get('path')} | note={material.get('note')}")
+                    continue
+                reasons = ", ".join(list(material.get("selection_reasons") or [])) or "none"
+                md_lines.append(
+                    f"- message: {material.get('subexhibit')} | {material.get('date')} | {material.get('subject')} | attachments={material.get('retained_attachment_count')} | reasons={reasons} | eml={material.get('email_path') or 'unavailable (metadata-only entry)'}"
+                )
+                for attachment_path in list(material.get("retained_attachment_paths") or []):
+                    md_lines.append(f"- attachment: {attachment_path}")
+            md_lines.append("")
+    else:
+        md_lines.append("No cite-check entries generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
 def _build_formal_complaint_draft(
     complaint_ready: dict[str, Any],
     cause_draft: dict[str, Any],
@@ -2190,6 +2298,11 @@ def _build_formal_complaint_draft(
         email_exhibit_recommendations,
         chronology_dir,
     )
+    cite_check_matrix = _build_formal_complaint_cite_check_matrix(
+        proposed_filing_packet,
+        citation_map,
+        chronology_dir,
+    )
 
     summary["filing_checklist_json_path"] = str(filing_checklist.get("json_path") or "")
     summary["filing_checklist_markdown_path"] = str(filing_checklist.get("markdown_path") or "")
@@ -2201,6 +2314,9 @@ def _build_formal_complaint_draft(
     summary["proposed_filing_packet_markdown_path"] = str(proposed_filing_packet.get("markdown_path") or "")
     summary["proposed_filing_packet_message_count"] = int(proposed_filing_packet.get("representative_message_count") or 0)
     summary["proposed_filing_packet_attachment_count"] = int(proposed_filing_packet.get("retained_attachment_count") or 0)
+    summary["cite_check_matrix_json_path"] = str(cite_check_matrix.get("json_path") or "")
+    summary["cite_check_matrix_markdown_path"] = str(cite_check_matrix.get("markdown_path") or "")
+    summary["cite_check_matrix_entry_count"] = int(cite_check_matrix.get("entry_count") or 0)
 
     json_path.write_text(
         json.dumps(
@@ -2215,6 +2331,7 @@ def _build_formal_complaint_draft(
                 "attachment_triage": attachment_triage,
                 "email_exhibit_recommendations": email_exhibit_recommendations,
                 "proposed_filing_packet": proposed_filing_packet,
+                "cite_check_matrix": cite_check_matrix,
                 "citation_map": citation_map,
             },
             indent=2,
@@ -2945,6 +3062,9 @@ def _markdown_report(payload: dict[str, Any]) -> str:
             )
             lines.append(
                 f"- Formal complaint proposed filing packet representative messages/attachments: {formal_draft.get('proposed_filing_packet_message_count', 0)}/{formal_draft.get('proposed_filing_packet_attachment_count', 0)}"
+            )
+            lines.append(
+                f"- Formal complaint cite-check matrix entries: {formal_draft.get('cite_check_matrix_entry_count', 0)}"
             )
     return "\n".join(lines).strip() + "\n"
 
