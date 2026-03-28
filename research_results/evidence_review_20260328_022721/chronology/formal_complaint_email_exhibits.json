@@ -1,0 +1,1313 @@
+{
+  "status": "success",
+  "thread_count": 2,
+  "message_count": 47,
+  "attachment_count": 93,
+  "saved_message_count": 28,
+  "json_path": "/home/barberb/HACC/research_results/evidence_review_20260328_022721/chronology/formal_complaint_email_exhibits.json",
+  "markdown_path": "/home/barberb/HACC/research_results/evidence_review_20260328_022721/chronology/formal_complaint_email_exhibits.md",
+  "threads": [
+    {
+      "exhibit_label": "J",
+      "source_path": "evidence/email_imports/starworks5-additional-info-import/email_import_manifest.json",
+      "source_name": "email import manifest",
+      "suggested_title": "Email Thread Export: starworks5 additional info import",
+      "message_count": 34,
+      "messages": [
+        {
+          "subexhibit": "J-1",
+          "date": "2026-02-09T17:57:35+00:00",
+          "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "to": "benjamin barber <starworks5@gmail.com>",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0001-Additional-Information-Needed-4c07ec4dace2422fa79c8f83358cf6d8-clackamas.us/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0001-Additional-Information-Needed-4c07ec4dace2422fa79c8f83358cf6d8-clackamas.us/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0001-Additional-Information-Needed-4c07ec4dace2422fa79c8f83358cf6d8-clackamas.us",
+          "has_saved_message": true,
+          "attachment_count": 1,
+          "attachments": [
+            {
+              "filename": "Additional-Information-Needed-02.09.2026.pdf",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0001-Additional-Information-Needed-4c07ec4dace2422fa79c8f83358cf6d8-clackamas.us/attachments/Additional-Information-Needed-02.09.2026.pdf",
+              "content_type": "application/pdf",
+              "size": 268547,
+              "sha256": "edc143eb3d31eafed2324cf419bc0135d25dcd4c6692c6d245546fb3f2b169a9"
+            }
+          ]
+        },
+        {
+          "subexhibit": "J-2",
+          "date": "2026-02-09T10:40:29-08:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0002-Re-Additional-Information-Needed-CAMTdTS-2c7Mk_ZR-9SYGkoR-Dy99ETRUn7-tGiiqh4ujFoHZ3g-mail.gmail.com/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0002-Re-Additional-Information-Needed-CAMTdTS-2c7Mk_ZR-9SYGkoR-Dy99ETRUn7-tGiiqh4ujFoHZ3g-mail.gmail.com/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0002-Re-Additional-Information-Needed-CAMTdTS-2c7Mk_ZR-9SYGkoR-Dy99ETRUn7-tGiiqh4ujFoHZ3g-mail.gmail.com",
+          "has_saved_message": true,
+          "attachment_count": 4,
+          "attachments": [
+            {
+              "filename": "image.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0002-Re-Additional-Information-Needed-CAMTdTS-2c7Mk_ZR-9SYGkoR-Dy99ETRUn7-tGiiqh4ujFoHZ3g-mail.gmail.com/attachments/image.png",
+              "content_type": "image/png",
+              "size": 41594,
+              "sha256": "7bb9fae1b55400d7ea1e81d1a52278047b0503df0244aa97921b019ecb593d00"
+            },
+            {
+              "filename": "image-2.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0002-Re-Additional-Information-Needed-CAMTdTS-2c7Mk_ZR-9SYGkoR-Dy99ETRUn7-tGiiqh4ujFoHZ3g-mail.gmail.com/attachments/image-2.png",
+              "content_type": "image/png",
+              "size": 43667,
+              "sha256": "d0d0ddfd6c3a80f42f17a07ecbe05f90daa3557ee993d1b3dd0cc71e97815102"
+            },
+            {
+              "filename": "image-3.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0002-Re-Additional-Information-Needed-CAMTdTS-2c7Mk_ZR-9SYGkoR-Dy99ETRUn7-tGiiqh4ujFoHZ3g-mail.gmail.com/attachments/image-3.png",
+              "content_type": "image/png",
+              "size": 33103,
+              "sha256": "58791f5649042b0944fd1dee0374b36d418036b64354e59d297f6e1f272df15f"
+            },
+            {
+              "filename": "image-4.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0002-Re-Additional-Information-Needed-CAMTdTS-2c7Mk_ZR-9SYGkoR-Dy99ETRUn7-tGiiqh4ujFoHZ3g-mail.gmail.com/attachments/image-4.png",
+              "content_type": "image/png",
+              "size": 18560,
+              "sha256": "c5e55005077838077e662a74f682c0223f9598ae664f3c624ff179653793037f"
+            }
+          ]
+        },
+        {
+          "subexhibit": "J-3",
+          "date": "2026-02-09T11:08:22-08:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0003-Re-Additional-Information-Needed-CAMTdTS9OHyWMenPz-igNONh3j-kv1tHXa0qZxb8TBV3y7aE7yA-mail.gmail.com/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0003-Re-Additional-Information-Needed-CAMTdTS9OHyWMenPz-igNONh3j-kv1tHXa0qZxb8TBV3y7aE7yA-mail.gmail.com/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0003-Re-Additional-Information-Needed-CAMTdTS9OHyWMenPz-igNONh3j-kv1tHXa0qZxb8TBV3y7aE7yA-mail.gmail.com",
+          "has_saved_message": true,
+          "attachment_count": 0,
+          "attachments": []
+        },
+        {
+          "subexhibit": "J-4",
+          "date": "2026-02-19T21:33:12-08:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0004-Re-Additional-Information-Needed-CAMTdTS-DUCf7WDU_-dTA-FAd6qg7LN7OpzEzFCkLGwz-TADTZw-mail.gmail.com/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0004-Re-Additional-Information-Needed-CAMTdTS-DUCf7WDU_-dTA-FAd6qg7LN7OpzEzFCkLGwz-TADTZw-mail.gmail.com/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0004-Re-Additional-Information-Needed-CAMTdTS-DUCf7WDU_-dTA-FAd6qg7LN7OpzEzFCkLGwz-TADTZw-mail.gmail.com",
+          "has_saved_message": true,
+          "attachment_count": 1,
+          "attachments": [
+            {
+              "filename": "form-1040-barber-2026.pdf",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0004-Re-Additional-Information-Needed-CAMTdTS-DUCf7WDU_-dTA-FAd6qg7LN7OpzEzFCkLGwz-TADTZw-mail.gmail.com/attachments/form-1040-barber-2026.pdf",
+              "content_type": "application/pdf",
+              "size": 176926,
+              "sha256": "7538b6b90d91bc349298e7bf2d9c68a6e2a8839e84daf177cc501ba168414eab"
+            }
+          ]
+        },
+        {
+          "subexhibit": "J-5",
+          "date": "2026-02-25T17:51:41+00:00",
+          "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "to": "benjamin barber <starworks5@gmail.com>",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0005-RE-Additional-Information-Needed-bfd53bf4f3614e6db61d9a9d4cfaebf9-clackamas.us/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0005-RE-Additional-Information-Needed-bfd53bf4f3614e6db61d9a9d4cfaebf9-clackamas.us/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0005-RE-Additional-Information-Needed-bfd53bf4f3614e6db61d9a9d4cfaebf9-clackamas.us",
+          "has_saved_message": true,
+          "attachment_count": 1,
+          "attachments": [
+            {
+              "filename": "Additional-Information-Needed-02.25.2026.pdf",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0005-RE-Additional-Information-Needed-bfd53bf4f3614e6db61d9a9d4cfaebf9-clackamas.us/attachments/Additional-Information-Needed-02.25.2026.pdf",
+              "content_type": "application/pdf",
+              "size": 224061,
+              "sha256": "4444c8d051405b8a272e7c1959ba7b3af6c0bce3109231c6bf72d2634b4cab15"
+            }
+          ]
+        },
+        {
+          "subexhibit": "J-6",
+          "date": "2026-02-25T11:23:15-08:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0006-Re-Additional-Information-Needed-CAMTdTS_ymVr22NmekKTeKh6V-jjyFDYWiemxgeEFOOv-2XxmDg-mail.gmail.com/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0006-Re-Additional-Information-Needed-CAMTdTS_ymVr22NmekKTeKh6V-jjyFDYWiemxgeEFOOv-2XxmDg-mail.gmail.com/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0006-Re-Additional-Information-Needed-CAMTdTS_ymVr22NmekKTeKh6V-jjyFDYWiemxgeEFOOv-2XxmDg-mail.gmail.com",
+          "has_saved_message": true,
+          "attachment_count": 0,
+          "attachments": []
+        },
+        {
+          "subexhibit": "J-7",
+          "date": "2026-02-25T11:38:00-08:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0007-Re-Additional-Information-Needed-CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66-_DyiA-mail.gmail.com/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0007-Re-Additional-Information-Needed-CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66-_DyiA-mail.gmail.com/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0007-Re-Additional-Information-Needed-CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66-_DyiA-mail.gmail.com",
+          "has_saved_message": true,
+          "attachment_count": 3,
+          "attachments": [
+            {
+              "filename": "IMG_1981.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0007-Re-Additional-Information-Needed-CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66-_DyiA-mail.gmail.com/attachments/IMG_1981.png",
+              "content_type": "image/png",
+              "size": 1031165,
+              "sha256": "92a8e01bf4bf33f8fe73ba48ad44062f9fe7f934d23369e37e71208e9e36b621"
+            },
+            {
+              "filename": "IMG_1982.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0007-Re-Additional-Information-Needed-CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66-_DyiA-mail.gmail.com/attachments/IMG_1982.png",
+              "content_type": "image/png",
+              "size": 424190,
+              "sha256": "76126c6f056a5c01e1ceb1e6a896944dbbd76e44230f585dc679d88e24df748c"
+            },
+            {
+              "filename": "IMG_1980.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0007-Re-Additional-Information-Needed-CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66-_DyiA-mail.gmail.com/attachments/IMG_1980.png",
+              "content_type": "image/png",
+              "size": 385902,
+              "sha256": "5846d14ddb1accc5113f9037f04cf0678916bcce06bb95680d3c3b53588c6fe2"
+            }
+          ]
+        },
+        {
+          "subexhibit": "J-8",
+          "date": "2026-02-25T12:47:26-08:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com",
+          "has_saved_message": true,
+          "attachment_count": 6,
+          "attachments": [
+            {
+              "filename": "IMG_1981.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/attachments/IMG_1981.png",
+              "content_type": "image/png",
+              "size": 1031165,
+              "sha256": "92a8e01bf4bf33f8fe73ba48ad44062f9fe7f934d23369e37e71208e9e36b621"
+            },
+            {
+              "filename": "IMG_1982.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/attachments/IMG_1982.png",
+              "content_type": "image/png",
+              "size": 424190,
+              "sha256": "76126c6f056a5c01e1ceb1e6a896944dbbd76e44230f585dc679d88e24df748c"
+            },
+            {
+              "filename": "IMG_1980.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/attachments/IMG_1980.png",
+              "content_type": "image/png",
+              "size": 385902,
+              "sha256": "5846d14ddb1accc5113f9037f04cf0678916bcce06bb95680d3c3b53588c6fe2"
+            },
+            {
+              "filename": "Transactions-Coinbase.pdf",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/attachments/Transactions-Coinbase.pdf",
+              "content_type": "application/pdf",
+              "size": 605607,
+              "sha256": "5c1095e7ea8fc635834218c1212497a42c8fb1716373fd72a8163baa5de0494d"
+            },
+            {
+              "filename": "Home-Coinbase.pdf",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/attachments/Home-Coinbase.pdf",
+              "content_type": "application/pdf",
+              "size": 340837,
+              "sha256": "29732700780733067fa7f9b5850f2a1a6a78e69f7f90361461067677a0eac7f8"
+            },
+            {
+              "filename": "Gmail---Congratulations-on-Winning-the-Storacha-Prize-from-the-Encode-AI-Filecoin-Hackathon-Next-Steps-for-Your-Prize.pdf",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/attachments/Gmail---Congratulations-on-Winning-the-Storacha-Prize-from-the-Encode-AI-Filecoin-Hackathon-Next-Steps-for-Your-Prize.pdf",
+              "content_type": "application/pdf",
+              "size": 3584890,
+              "sha256": "03d2346d0c65f4735b22545ca2c8c5408126f209563be656f973865781b8a960"
+            }
+          ]
+        },
+        {
+          "subexhibit": "J-9",
+          "date": "2026-02-25T12:53:08-08:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com",
+          "has_saved_message": true,
+          "attachment_count": 6,
+          "attachments": [
+            {
+              "filename": "IMG_1981.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/attachments/IMG_1981.png",
+              "content_type": "image/png",
+              "size": 1031165,
+              "sha256": "92a8e01bf4bf33f8fe73ba48ad44062f9fe7f934d23369e37e71208e9e36b621"
+            },
+            {
+              "filename": "IMG_1982.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/attachments/IMG_1982.png",
+              "content_type": "image/png",
+              "size": 424190,
+              "sha256": "76126c6f056a5c01e1ceb1e6a896944dbbd76e44230f585dc679d88e24df748c"
+            },
+            {
+              "filename": "IMG_1980.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/attachments/IMG_1980.png",
+              "content_type": "image/png",
+              "size": 385902,
+              "sha256": "5846d14ddb1accc5113f9037f04cf0678916bcce06bb95680d3c3b53588c6fe2"
+            },
+            {
+              "filename": "Rivermark-bank-memo.pdf",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/attachments/Rivermark-bank-memo.pdf",
+              "content_type": "application/pdf",
+              "size": 37533,
+              "sha256": "ee4aa3564c6c71a4ea465d5452643776953ed8f83270f598cdce56ffe8b716bd"
+            },
+            {
+              "filename": "Chase-Debanking-Memo.pdf",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/attachments/Chase-Debanking-Memo.pdf",
+              "content_type": "application/pdf",
+              "size": 43464,
+              "sha256": "60982b878429f95c4ef16859d422379a49f123728ed6ef96c033a2452d127d37"
+            },
+            {
+              "filename": "Gmail---Rivermark-CU-Meeting.pdf",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/attachments/Gmail---Rivermark-CU-Meeting.pdf",
+              "content_type": "application/pdf",
+              "size": 141173,
+              "sha256": "2e0861b7d83f12ea878931ea23dd66931ab08e8e831a2f90b3872a88fc5dc119"
+            }
+          ]
+        },
+        {
+          "subexhibit": "J-10",
+          "date": "2026-02-25T13:18:51-08:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com",
+          "has_saved_message": true,
+          "attachment_count": 7,
+          "attachments": [
+            {
+              "filename": "IMG_1981.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com/attachments/IMG_1981.png",
+              "content_type": "image/png",
+              "size": 1031165,
+              "sha256": "92a8e01bf4bf33f8fe73ba48ad44062f9fe7f934d23369e37e71208e9e36b621"
+            },
+            {
+              "filename": "IMG_1982.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com/attachments/IMG_1982.png",
+              "content_type": "image/png",
+              "size": 424190,
+              "sha256": "76126c6f056a5c01e1ceb1e6a896944dbbd76e44230f585dc679d88e24df748c"
+            },
+            {
+              "filename": "IMG_1980.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com/attachments/IMG_1980.png",
+              "content_type": "image/png",
+              "size": 385902,
+              "sha256": "5846d14ddb1accc5113f9037f04cf0678916bcce06bb95680d3c3b53588c6fe2"
+            },
+            {
+              "filename": "IMG_1986.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com/attachments/IMG_1986.png",
+              "content_type": "image/png",
+              "size": 282657,
+              "sha256": "749a4e032a7bb28c93e726679256fe1de0980124243ef8b6a15cc41bd14f7725"
+            },
+            {
+              "filename": "IMG_1985.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com/attachments/IMG_1985.png",
+              "content_type": "image/png",
+              "size": 249299,
+              "sha256": "a3ddc571cf5b42f6439a2edd803565589a58820227074f083996fee727fd8e9f"
+            },
+            {
+              "filename": "IMG_1983.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com/attachments/IMG_1983.png",
+              "content_type": "image/png",
+              "size": 259108,
+              "sha256": "7807d65466995f909da5cbfc06e38f258b8dbbb667c4060591b5ea730062e1ca"
+            },
+            {
+              "filename": "IMG_1984.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com/attachments/IMG_1984.png",
+              "content_type": "image/png",
+              "size": 241950,
+              "sha256": "a924202181b8ca8039a134d1b9b7774083f0432dd288d2be7a9f3744cd423d6c"
+            }
+          ]
+        },
+        {
+          "subexhibit": "J-11",
+          "date": "2026-02-25T13:37:28-08:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0011-Re-Additional-Information-Needed-CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q-mail.gmail.com/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0011-Re-Additional-Information-Needed-CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q-mail.gmail.com/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0011-Re-Additional-Information-Needed-CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q-mail.gmail.com",
+          "has_saved_message": true,
+          "attachment_count": 5,
+          "attachments": [
+            {
+              "filename": "IMG_1981.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0011-Re-Additional-Information-Needed-CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q-mail.gmail.com/attachments/IMG_1981.png",
+              "content_type": "image/png",
+              "size": 1031165,
+              "sha256": "92a8e01bf4bf33f8fe73ba48ad44062f9fe7f934d23369e37e71208e9e36b621"
+            },
+            {
+              "filename": "IMG_1982.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0011-Re-Additional-Information-Needed-CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q-mail.gmail.com/attachments/IMG_1982.png",
+              "content_type": "image/png",
+              "size": 424190,
+              "sha256": "76126c6f056a5c01e1ceb1e6a896944dbbd76e44230f585dc679d88e24df748c"
+            },
+            {
+              "filename": "IMG_1980.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0011-Re-Additional-Information-Needed-CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q-mail.gmail.com/attachments/IMG_1980.png",
+              "content_type": "image/png",
+              "size": 385902,
+              "sha256": "5846d14ddb1accc5113f9037f04cf0678916bcce06bb95680d3c3b53588c6fe2"
+            },
+            {
+              "filename": "Linux-Foundation---Wikipedia.pdf",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0011-Re-Additional-Information-Needed-CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q-mail.gmail.com/attachments/Linux-Foundation---Wikipedia.pdf",
+              "content_type": "application/pdf",
+              "size": 252368,
+              "sha256": "56c3e69d8e79ef1502ca61af68b8386b97ad86ffff34ec380f3f762703c655fe"
+            },
+            {
+              "filename": "Re_-InifiniEdge-AI-Release-3.0-Votes-seeking-.pdf",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0011-Re-Additional-Information-Needed-CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q-mail.gmail.com/attachments/Re_-InifiniEdge-AI-Release-3.0-Votes-seeking-.pdf",
+              "content_type": "application/pdf",
+              "size": 84678,
+              "sha256": "92e51663069a6e3c3757b9ac686fa66597f46064aa9036f33f0d72722c949bcb"
+            }
+          ]
+        },
+        {
+          "subexhibit": "J-12",
+          "date": "2026-02-26T17:48:44-08:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <ktilton@clackamas.us>, \"Ferron, Ashley\" <AFerron@clackamas.us>, charity@magikcorp.com",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com",
+          "has_saved_message": true,
+          "attachment_count": 5,
+          "attachments": [
+            {
+              "filename": "IMG_1981.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/attachments/IMG_1981.png",
+              "content_type": "image/png",
+              "size": 1031165,
+              "sha256": "92a8e01bf4bf33f8fe73ba48ad44062f9fe7f934d23369e37e71208e9e36b621"
+            },
+            {
+              "filename": "Image_260226_173852.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/attachments/Image_260226_173852.jpeg",
+              "content_type": "image/jpeg",
+              "size": 2533423,
+              "sha256": "dfb1c3a8aec49f483978de5f826a3a3f74b6ed41888fbb2fb6b5fb03768e76e2"
+            },
+            {
+              "filename": "IMG_1980.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/attachments/IMG_1980.png",
+              "content_type": "image/png",
+              "size": 385902,
+              "sha256": "5846d14ddb1accc5113f9037f04cf0678916bcce06bb95680d3c3b53588c6fe2"
+            },
+            {
+              "filename": "IMG_1982.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/attachments/IMG_1982.png",
+              "content_type": "image/png",
+              "size": 424190,
+              "sha256": "76126c6f056a5c01e1ceb1e6a896944dbbd76e44230f585dc679d88e24df748c"
+            },
+            {
+              "filename": "Image_260226_173823.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/attachments/Image_260226_173823.jpeg",
+              "content_type": "image/jpeg",
+              "size": 2465765,
+              "sha256": "e20136a55615cf6f69aa71b70e847a8bab9b2bb690078525e6bd476f9de29fb0"
+            }
+          ]
+        },
+        {
+          "subexhibit": "J-13",
+          "date": "2026-02-26T17:51:39-08:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <ktilton@clackamas.us>, \"Ferron, Ashley\" <AFerron@clackamas.us>, charity@magikcorp.com",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com",
+          "has_saved_message": true,
+          "attachment_count": 6,
+          "attachments": [
+            {
+              "filename": "IMG_1981.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/attachments/IMG_1981.png",
+              "content_type": "image/png",
+              "size": 1031165,
+              "sha256": "92a8e01bf4bf33f8fe73ba48ad44062f9fe7f934d23369e37e71208e9e36b621"
+            },
+            {
+              "filename": "Image_260226_173852.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/attachments/Image_260226_173852.jpeg",
+              "content_type": "image/jpeg",
+              "size": 2533423,
+              "sha256": "dfb1c3a8aec49f483978de5f826a3a3f74b6ed41888fbb2fb6b5fb03768e76e2"
+            },
+            {
+              "filename": "IMG_1980.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/attachments/IMG_1980.png",
+              "content_type": "image/png",
+              "size": 385902,
+              "sha256": "5846d14ddb1accc5113f9037f04cf0678916bcce06bb95680d3c3b53588c6fe2"
+            },
+            {
+              "filename": "IMG_1982.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/attachments/IMG_1982.png",
+              "content_type": "image/png",
+              "size": 424190,
+              "sha256": "76126c6f056a5c01e1ceb1e6a896944dbbd76e44230f585dc679d88e24df748c"
+            },
+            {
+              "filename": "Image_260226_173823.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/attachments/Image_260226_173823.jpeg",
+              "content_type": "image/jpeg",
+              "size": 2465765,
+              "sha256": "e20136a55615cf6f69aa71b70e847a8bab9b2bb690078525e6bd476f9de29fb0"
+            },
+            {
+              "filename": "image.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/attachments/image.png",
+              "content_type": "image/png",
+              "size": 69863,
+              "sha256": "16a0add8ed11c96f50f80bf4f5a4a9b3ee340ac307d8327dd1638c2aceeab814"
+            }
+          ]
+        },
+        {
+          "subexhibit": "J-14",
+          "date": "2026-03-02T12:29:53-08:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <ktilton@clackamas.us>, \"Ferron, Ashley\" <AFerron@clackamas.us>, charity@magikcorp.com",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com",
+          "has_saved_message": true,
+          "attachment_count": 7,
+          "attachments": [
+            {
+              "filename": "IMG_1981.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/attachments/IMG_1981.png",
+              "content_type": "image/png",
+              "size": 1031165,
+              "sha256": "92a8e01bf4bf33f8fe73ba48ad44062f9fe7f934d23369e37e71208e9e36b621"
+            },
+            {
+              "filename": "Image_260226_173852.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/attachments/Image_260226_173852.jpeg",
+              "content_type": "image/jpeg",
+              "size": 2533423,
+              "sha256": "dfb1c3a8aec49f483978de5f826a3a3f74b6ed41888fbb2fb6b5fb03768e76e2"
+            },
+            {
+              "filename": "IMG_1980.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/attachments/IMG_1980.png",
+              "content_type": "image/png",
+              "size": 385902,
+              "sha256": "5846d14ddb1accc5113f9037f04cf0678916bcce06bb95680d3c3b53588c6fe2"
+            },
+            {
+              "filename": "IMG_1982.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/attachments/IMG_1982.png",
+              "content_type": "image/png",
+              "size": 424190,
+              "sha256": "76126c6f056a5c01e1ceb1e6a896944dbbd76e44230f585dc679d88e24df748c"
+            },
+            {
+              "filename": "Image_260226_173823.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/attachments/Image_260226_173823.jpeg",
+              "content_type": "image/jpeg",
+              "size": 2465765,
+              "sha256": "e20136a55615cf6f69aa71b70e847a8bab9b2bb690078525e6bd476f9de29fb0"
+            },
+            {
+              "filename": "image.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/attachments/image.png",
+              "content_type": "image/png",
+              "size": 69863,
+              "sha256": "16a0add8ed11c96f50f80bf4f5a4a9b3ee340ac307d8327dd1638c2aceeab814"
+            },
+            {
+              "filename": "IMG_2008.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/attachments/IMG_2008.jpeg",
+              "content_type": "image/jpeg",
+              "size": 3163929,
+              "sha256": "e777f0cb4c03053ca2db357a7fa74f95820d88dd2e0962fa1f7aad21f3a01362"
+            }
+          ]
+        },
+        {
+          "subexhibit": "J-15",
+          "date": "2026-03-09T10:34:52-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <ktilton@clackamas.us>, \"Ferron, Ashley\" <AFerron@clackamas.us>, charity@magikcorp.com",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com",
+          "has_saved_message": true,
+          "attachment_count": 8,
+          "attachments": [
+            {
+              "filename": "IMG_1980.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/IMG_1980.png",
+              "content_type": "image/png",
+              "size": 385902,
+              "sha256": "5846d14ddb1accc5113f9037f04cf0678916bcce06bb95680d3c3b53588c6fe2"
+            },
+            {
+              "filename": "IMG_1982.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/IMG_1982.png",
+              "content_type": "image/png",
+              "size": 424190,
+              "sha256": "76126c6f056a5c01e1ceb1e6a896944dbbd76e44230f585dc679d88e24df748c"
+            },
+            {
+              "filename": "Image_260226_173852.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/Image_260226_173852.jpeg",
+              "content_type": "image/jpeg",
+              "size": 2533423,
+              "sha256": "dfb1c3a8aec49f483978de5f826a3a3f74b6ed41888fbb2fb6b5fb03768e76e2"
+            },
+            {
+              "filename": "IMG_2008.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/IMG_2008.jpeg",
+              "content_type": "image/jpeg",
+              "size": 3163929,
+              "sha256": "e777f0cb4c03053ca2db357a7fa74f95820d88dd2e0962fa1f7aad21f3a01362"
+            },
+            {
+              "filename": "image.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/image.png",
+              "content_type": "image/png",
+              "size": 69863,
+              "sha256": "16a0add8ed11c96f50f80bf4f5a4a9b3ee340ac307d8327dd1638c2aceeab814"
+            },
+            {
+              "filename": "Image_260226_173823.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/Image_260226_173823.jpeg",
+              "content_type": "image/jpeg",
+              "size": 2465765,
+              "sha256": "e20136a55615cf6f69aa71b70e847a8bab9b2bb690078525e6bd476f9de29fb0"
+            },
+            {
+              "filename": "IMG_1981.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/IMG_1981.png",
+              "content_type": "image/png",
+              "size": 1031165,
+              "sha256": "92a8e01bf4bf33f8fe73ba48ad44062f9fe7f934d23369e37e71208e9e36b621"
+            },
+            {
+              "filename": "Image_260309_103446.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/Image_260309_103446.jpeg",
+              "content_type": "image/jpeg",
+              "size": 2983366,
+              "sha256": "310377d8367035e714415763acd760625dbc9b1fd31fcbec1f93fe55a824caba"
+            }
+          ]
+        },
+        {
+          "subexhibit": "J-16",
+          "date": "2026-03-09T11:06:56-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <ktilton@clackamas.us>, \"Ferron, Ashley\" <AFerron@clackamas.us>, charity@magikcorp.com",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com",
+          "has_saved_message": true,
+          "attachment_count": 8,
+          "attachments": [
+            {
+              "filename": "IMG_1980.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/IMG_1980.png",
+              "content_type": "image/png",
+              "size": 385902,
+              "sha256": "5846d14ddb1accc5113f9037f04cf0678916bcce06bb95680d3c3b53588c6fe2"
+            },
+            {
+              "filename": "IMG_1982.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/IMG_1982.png",
+              "content_type": "image/png",
+              "size": 424190,
+              "sha256": "76126c6f056a5c01e1ceb1e6a896944dbbd76e44230f585dc679d88e24df748c"
+            },
+            {
+              "filename": "Image_260226_173852.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/Image_260226_173852.jpeg",
+              "content_type": "image/jpeg",
+              "size": 2533423,
+              "sha256": "dfb1c3a8aec49f483978de5f826a3a3f74b6ed41888fbb2fb6b5fb03768e76e2"
+            },
+            {
+              "filename": "IMG_2008.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/IMG_2008.jpeg",
+              "content_type": "image/jpeg",
+              "size": 3163929,
+              "sha256": "e777f0cb4c03053ca2db357a7fa74f95820d88dd2e0962fa1f7aad21f3a01362"
+            },
+            {
+              "filename": "Image_260309_103446.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/Image_260309_103446.jpeg",
+              "content_type": "image/jpeg",
+              "size": 2983366,
+              "sha256": "310377d8367035e714415763acd760625dbc9b1fd31fcbec1f93fe55a824caba"
+            },
+            {
+              "filename": "image.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/image.png",
+              "content_type": "image/png",
+              "size": 69863,
+              "sha256": "16a0add8ed11c96f50f80bf4f5a4a9b3ee340ac307d8327dd1638c2aceeab814"
+            },
+            {
+              "filename": "Image_260226_173823.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/Image_260226_173823.jpeg",
+              "content_type": "image/jpeg",
+              "size": 2465765,
+              "sha256": "e20136a55615cf6f69aa71b70e847a8bab9b2bb690078525e6bd476f9de29fb0"
+            },
+            {
+              "filename": "IMG_1981.png",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/IMG_1981.png",
+              "content_type": "image/png",
+              "size": 1031165,
+              "sha256": "92a8e01bf4bf33f8fe73ba48ad44062f9fe7f934d23369e37e71208e9e36b621"
+            }
+          ]
+        },
+        {
+          "subexhibit": "J-17",
+          "date": "2026-03-10T11:59:38-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <ktilton@clackamas.us>, \"Ferron, Ashley\" <AFerron@clackamas.us>, charity@magikcorp.com",
+          "subject": "Additional Information Needed",
+          "email_path": "",
+          "parsed_path": "",
+          "bundle_dir": ".",
+          "has_saved_message": false,
+          "attachment_count": 0,
+          "attachments": []
+        },
+        {
+          "subexhibit": "J-18",
+          "date": "2026-03-11T01:34:19+00:00",
+          "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "to": "benjamin barber <starworks5@gmail.com>",
+          "subject": "Additional Information Needed",
+          "email_path": "",
+          "parsed_path": "",
+          "bundle_dir": ".",
+          "has_saved_message": false,
+          "attachment_count": 0,
+          "attachments": []
+        },
+        {
+          "subexhibit": "J-19",
+          "date": "2026-03-10T22:51:37-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "Additional Information Needed",
+          "email_path": "",
+          "parsed_path": "",
+          "bundle_dir": ".",
+          "has_saved_message": false,
+          "attachment_count": 0,
+          "attachments": []
+        },
+        {
+          "subexhibit": "J-20",
+          "date": "2026-03-11T14:16:26-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "Additional Information Needed",
+          "email_path": "",
+          "parsed_path": "",
+          "bundle_dir": ".",
+          "has_saved_message": false,
+          "attachment_count": 0,
+          "attachments": []
+        },
+        {
+          "subexhibit": "J-21",
+          "date": "2026-03-13T00:03:52+00:00",
+          "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "to": "benjamin barber <starworks5@gmail.com>",
+          "subject": "Additional Information Needed",
+          "email_path": "",
+          "parsed_path": "",
+          "bundle_dir": ".",
+          "has_saved_message": false,
+          "attachment_count": 0,
+          "attachments": []
+        },
+        {
+          "subexhibit": "J-22",
+          "date": "2026-03-12T18:14:05-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "Additional Information Needed",
+          "email_path": "",
+          "parsed_path": "",
+          "bundle_dir": ".",
+          "has_saved_message": false,
+          "attachment_count": 0,
+          "attachments": []
+        },
+        {
+          "subexhibit": "J-23",
+          "date": "2026-03-12T18:58:42-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "Additional Information Needed",
+          "email_path": "",
+          "parsed_path": "",
+          "bundle_dir": ".",
+          "has_saved_message": false,
+          "attachment_count": 0,
+          "attachments": []
+        },
+        {
+          "subexhibit": "J-24",
+          "date": "2026-03-13T11:00:57-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "Additional Information Needed",
+          "email_path": "",
+          "parsed_path": "",
+          "bundle_dir": ".",
+          "has_saved_message": false,
+          "attachment_count": 0,
+          "attachments": []
+        },
+        {
+          "subexhibit": "J-25",
+          "date": "2026-03-13T14:30:19-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "Additional Information Needed",
+          "email_path": "",
+          "parsed_path": "",
+          "bundle_dir": ".",
+          "has_saved_message": false,
+          "attachment_count": 0,
+          "attachments": []
+        },
+        {
+          "subexhibit": "J-26",
+          "date": "2026-03-13T15:26:36-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "Additional Information Needed",
+          "email_path": "",
+          "parsed_path": "",
+          "bundle_dir": ".",
+          "has_saved_message": false,
+          "attachment_count": 0,
+          "attachments": []
+        },
+        {
+          "subexhibit": "J-27",
+          "date": "2026-03-16T08:26:00-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <ktilton@clackamas.us>, bwilliams@clackamas.us",
+          "subject": "Additional Information Needed",
+          "email_path": "",
+          "parsed_path": "",
+          "bundle_dir": ".",
+          "has_saved_message": false,
+          "attachment_count": 0,
+          "attachments": []
+        },
+        {
+          "subexhibit": "J-28",
+          "date": "2026-03-17T16:04:43+00:00",
+          "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "to": "benjamin barber <starworks5@gmail.com>",
+          "subject": "Additional Information Needed",
+          "email_path": "",
+          "parsed_path": "",
+          "bundle_dir": ".",
+          "has_saved_message": false,
+          "attachment_count": 0,
+          "attachments": []
+        },
+        {
+          "subexhibit": "J-29",
+          "date": "2026-03-17T09:54:04-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <ktilton@clackamas.us>, bwilliams@clackamas.us",
+          "subject": "Additional Information Needed",
+          "email_path": "",
+          "parsed_path": "",
+          "bundle_dir": ".",
+          "has_saved_message": false,
+          "attachment_count": 0,
+          "attachments": []
+        },
+        {
+          "subexhibit": "J-30",
+          "date": "2026-03-17T18:58:37+00:00",
+          "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "to": "benjamin barber <starworks5@gmail.com>",
+          "subject": "Additional Information Needed",
+          "email_path": "",
+          "parsed_path": "",
+          "bundle_dir": ".",
+          "has_saved_message": false,
+          "attachment_count": 0,
+          "attachments": []
+        },
+        {
+          "subexhibit": "J-31",
+          "date": "2026-03-17T17:27:50-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "Additional Information Needed",
+          "email_path": "",
+          "parsed_path": "",
+          "bundle_dir": ".",
+          "has_saved_message": false,
+          "attachment_count": 0,
+          "attachments": []
+        },
+        {
+          "subexhibit": "J-32",
+          "date": "2026-03-17T17:31:01-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us",
+          "subject": "Additional Information Needed",
+          "email_path": "",
+          "parsed_path": "",
+          "bundle_dir": ".",
+          "has_saved_message": false,
+          "attachment_count": 0,
+          "attachments": []
+        },
+        {
+          "subexhibit": "J-33",
+          "date": "2026-03-17T17:51:59-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us",
+          "subject": "Additional Information Needed",
+          "email_path": "",
+          "parsed_path": "",
+          "bundle_dir": ".",
+          "has_saved_message": false,
+          "attachment_count": 0,
+          "attachments": []
+        },
+        {
+          "subexhibit": "J-34",
+          "date": "2026-03-18T11:09:54-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us",
+          "subject": "Additional Information Needed",
+          "email_path": "",
+          "parsed_path": "",
+          "bundle_dir": ".",
+          "has_saved_message": false,
+          "attachment_count": 0,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "exhibit_label": "M",
+      "source_path": "evidence/email_imports/starworks5-ktilton-orientation-import/email_import_manifest.json",
+      "source_name": "email import manifest",
+      "suggested_title": "Email Thread Export: starworks5 ktilton orientation import",
+      "message_count": 13,
+      "messages": [
+        {
+          "subexhibit": "M-1",
+          "date": "2026-03-17T19:29:55+00:00",
+          "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "to": "benjamin barber <starworks5@gmail.com>",
+          "subject": "HCV Orientation",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0001-HCV-Orientation-92208aa189a24a18ac05be75916b5107-clackamas.us/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0001-HCV-Orientation-92208aa189a24a18ac05be75916b5107-clackamas.us/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0001-HCV-Orientation-92208aa189a24a18ac05be75916b5107-clackamas.us",
+          "has_saved_message": true,
+          "attachment_count": 0,
+          "attachments": []
+        },
+        {
+          "subexhibit": "M-2",
+          "date": "2026-03-17T17:34:42-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "HCV Orientation",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0002-Re-HCV-Orientation-CAMTdTS8OfKupu4q4GPc8CCFK7EfVKmxejh5uvmCHf-9Jrsi5-g-mail.gmail.com/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0002-Re-HCV-Orientation-CAMTdTS8OfKupu4q4GPc8CCFK7EfVKmxejh5uvmCHf-9Jrsi5-g-mail.gmail.com/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0002-Re-HCV-Orientation-CAMTdTS8OfKupu4q4GPc8CCFK7EfVKmxejh5uvmCHf-9Jrsi5-g-mail.gmail.com",
+          "has_saved_message": true,
+          "attachment_count": 0,
+          "attachments": []
+        },
+        {
+          "subexhibit": "M-3",
+          "date": "2026-03-18T20:33:26+00:00",
+          "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "to": "benjamin barber <starworks5@gmail.com>",
+          "subject": "HCV Orientation",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us",
+          "has_saved_message": true,
+          "attachment_count": 3,
+          "attachments": [
+            {
+              "filename": "Cortez-TRSW-3.18.26.pdf",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/attachments/Cortez-TRSW-3.18.26.pdf",
+              "content_type": "application/pdf",
+              "size": 1052667,
+              "sha256": "1154ffc327d7899d13f3ec9ed724c856d4ccd5ac2d3ae2680be65e18fc527f01"
+            },
+            {
+              "filename": "9.-Left-Side-Combined_5.22.25-1.pdf",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/attachments/9.-Left-Side-Combined_5.22.25-1.pdf",
+              "content_type": "application/pdf",
+              "size": 3471646,
+              "sha256": "7530bdb2bc7427932bceea678a3579d66c6d4262c1ba7e91dafba1e58e317a44"
+            },
+            {
+              "filename": "11.-Right-Side-Combined_5.22.25.pdf",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/attachments/11.-Right-Side-Combined_5.22.25.pdf",
+              "content_type": "application/pdf",
+              "size": 4888446,
+              "sha256": "c0528895d2994ff7ad5eddba9d3725f471f9cea6520854687e0dc44aae007cd4"
+            }
+          ]
+        },
+        {
+          "subexhibit": "M-4",
+          "date": "2026-03-19T17:27:27+00:00",
+          "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "to": "benjamin barber <starworks5@gmail.com>",
+          "subject": "HCV Orientation",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us",
+          "has_saved_message": true,
+          "attachment_count": 2,
+          "attachments": [
+            {
+              "filename": "TRSW---JC---03.19.2026.pdf",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us/attachments/TRSW---JC---03.19.2026.pdf",
+              "content_type": "application/pdf",
+              "size": 215574,
+              "sha256": "57d8476874f5326daa38196cc0bf124bd2ba5f382fdedc70f92b5a8da42d093d"
+            },
+            {
+              "filename": "VO---JC---03.19.2026.pdf",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us/attachments/VO---JC---03.19.2026.pdf",
+              "content_type": "application/pdf",
+              "size": 289458,
+              "sha256": "e03bfce8c682cfb8fbe3b525d3e56b4f6ff2450767090c5902b62a76f9fdc9b6"
+            }
+          ]
+        },
+        {
+          "subexhibit": "M-5",
+          "date": "2026-03-19T10:29:07-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "HCV Orientation",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0005-Re-HCV-Orientation-CAMTdTS-7kX-ZpOS-JnpgxhpG_Hm7mXxG_feovoA198VvH0V7jQ-mail.gmail.com/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0005-Re-HCV-Orientation-CAMTdTS-7kX-ZpOS-JnpgxhpG_Hm7mXxG_feovoA198VvH0V7jQ-mail.gmail.com/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0005-Re-HCV-Orientation-CAMTdTS-7kX-ZpOS-JnpgxhpG_Hm7mXxG_feovoA198VvH0V7jQ-mail.gmail.com",
+          "has_saved_message": true,
+          "attachment_count": 0,
+          "attachments": []
+        },
+        {
+          "subexhibit": "M-6",
+          "date": "2026-03-19T10:56:12-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "HCV Orientation",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0006-Re-HCV-Orientation-CAMTdTS9TCnQZBeKu2Y_Z-P3ORtUVn-8LSkWymHejw61JGu-mxA-mail.gmail.com/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0006-Re-HCV-Orientation-CAMTdTS9TCnQZBeKu2Y_Z-P3ORtUVn-8LSkWymHejw61JGu-mxA-mail.gmail.com/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0006-Re-HCV-Orientation-CAMTdTS9TCnQZBeKu2Y_Z-P3ORtUVn-8LSkWymHejw61JGu-mxA-mail.gmail.com",
+          "has_saved_message": true,
+          "attachment_count": 0,
+          "attachments": []
+        },
+        {
+          "subexhibit": "M-7",
+          "date": "2026-03-19T20:43:19+00:00",
+          "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "to": "benjamin barber <starworks5@gmail.com>",
+          "subject": "HCV Orientation",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0007-RE-HCV-Orientation-f9ca224dab4a4487bb20b9f7ff33afbe-clackamas.us/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0007-RE-HCV-Orientation-f9ca224dab4a4487bb20b9f7ff33afbe-clackamas.us/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0007-RE-HCV-Orientation-f9ca224dab4a4487bb20b9f7ff33afbe-clackamas.us",
+          "has_saved_message": true,
+          "attachment_count": 1,
+          "attachments": [
+            {
+              "filename": "Orientation---Required-Signatures-03.19.2026.pdf",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0007-RE-HCV-Orientation-f9ca224dab4a4487bb20b9f7ff33afbe-clackamas.us/attachments/Orientation---Required-Signatures-03.19.2026.pdf",
+              "content_type": "application/pdf",
+              "size": 1056367,
+              "sha256": "79e565c9b3d52e2906374de8d113ff345ffa757fac32934466fcc2a2391f1e1a"
+            }
+          ]
+        },
+        {
+          "subexhibit": "M-8",
+          "date": "2026-03-20T14:24:59-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "HCV Orientation",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com",
+          "has_saved_message": true,
+          "attachment_count": 3,
+          "attachments": [
+            {
+              "filename": "Image_260320_142321.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/attachments/Image_260320_142321.jpeg",
+              "content_type": "image/jpeg",
+              "size": 2818328,
+              "sha256": "b816e1a4626469ba5c624cfda3084483c77bcaf077aa5c4cdedce6575c6072b6"
+            },
+            {
+              "filename": "Image_260320_142448.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/attachments/Image_260320_142448.jpeg",
+              "content_type": "image/jpeg",
+              "size": 2304704,
+              "sha256": "be04d3f3baa3692a9c8eb852dcd1007ec5784fd209fc16d2e0c079f5cfcc8f48"
+            },
+            {
+              "filename": "Image_260320_142045.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/attachments/Image_260320_142045.jpeg",
+              "content_type": "image/jpeg",
+              "size": 2435692,
+              "sha256": "72f9c711e3c3a4f23e66bf6e26f743cb623fbb27fd6909739598f52d5cb0dc4e"
+            }
+          ]
+        },
+        {
+          "subexhibit": "M-9",
+          "date": "2026-03-20T22:54:20+00:00",
+          "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "to": "benjamin barber <starworks5@gmail.com>",
+          "subject": "HCV Orientation",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us",
+          "has_saved_message": true,
+          "attachment_count": 3,
+          "attachments": [
+            {
+              "filename": "image001.jpg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/attachments/image001.jpg",
+              "content_type": "image/jpeg",
+              "size": 3287761,
+              "sha256": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f"
+            },
+            {
+              "filename": "image002.jpg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/attachments/image002.jpg",
+              "content_type": "image/jpeg",
+              "size": 3756568,
+              "sha256": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943"
+            },
+            {
+              "filename": "image003.jpg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/attachments/image003.jpg",
+              "content_type": "image/jpeg",
+              "size": 3111479,
+              "sha256": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095"
+            }
+          ]
+        },
+        {
+          "subexhibit": "M-10",
+          "date": "2026-03-20T16:02:01-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "HCV Orientation",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com",
+          "has_saved_message": true,
+          "attachment_count": 4,
+          "attachments": [
+            {
+              "filename": "Image_260320_142321.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/attachments/Image_260320_142321.jpeg",
+              "content_type": "image/jpeg",
+              "size": 2818328,
+              "sha256": "b816e1a4626469ba5c624cfda3084483c77bcaf077aa5c4cdedce6575c6072b6"
+            },
+            {
+              "filename": "Image_260320_142448.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/attachments/Image_260320_142448.jpeg",
+              "content_type": "image/jpeg",
+              "size": 2304704,
+              "sha256": "be04d3f3baa3692a9c8eb852dcd1007ec5784fd209fc16d2e0c079f5cfcc8f48"
+            },
+            {
+              "filename": "Image_260320_142045.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/attachments/Image_260320_142045.jpeg",
+              "content_type": "image/jpeg",
+              "size": 2435692,
+              "sha256": "72f9c711e3c3a4f23e66bf6e26f743cb623fbb27fd6909739598f52d5cb0dc4e"
+            },
+            {
+              "filename": "output.pdf",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/attachments/output.pdf",
+              "content_type": "application/pdf",
+              "size": 231236,
+              "sha256": "f2049ebcdb4d905af66793314c672ab6f762d591c8f0616225ae14e6302c2a1d"
+            }
+          ]
+        },
+        {
+          "subexhibit": "M-11",
+          "date": "2026-03-20T16:09:59-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "HCV Orientation",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com",
+          "has_saved_message": true,
+          "attachment_count": 4,
+          "attachments": [
+            {
+              "filename": "image001.jpg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/attachments/image001.jpg",
+              "content_type": "image/jpeg",
+              "size": 3287761,
+              "sha256": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f"
+            },
+            {
+              "filename": "Image_260320_160954.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/attachments/Image_260320_160954.jpeg",
+              "content_type": "image/jpeg",
+              "size": 2910640,
+              "sha256": "5d5477ec937e21a3d23d005f423be2e484a30363418a9bad3474d26f6016e0fe"
+            },
+            {
+              "filename": "image002.jpg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/attachments/image002.jpg",
+              "content_type": "image/jpeg",
+              "size": 3756568,
+              "sha256": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943"
+            },
+            {
+              "filename": "image003.jpg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/attachments/image003.jpg",
+              "content_type": "image/jpeg",
+              "size": 3111479,
+              "sha256": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095"
+            }
+          ]
+        },
+        {
+          "subexhibit": "M-12",
+          "date": "2026-03-20T16:53:12-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "HCV Orientation",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/message.eml",
+          "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/message.json",
+          "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com",
+          "has_saved_message": true,
+          "attachment_count": 5,
+          "attachments": [
+            {
+              "filename": "Image_260320_160954.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/Image_260320_160954.jpeg",
+              "content_type": "image/jpeg",
+              "size": 2910640,
+              "sha256": "5d5477ec937e21a3d23d005f423be2e484a30363418a9bad3474d26f6016e0fe"
+            },
+            {
+              "filename": "image001.jpg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/image001.jpg",
+              "content_type": "image/jpeg",
+              "size": 3287761,
+              "sha256": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f"
+            },
+            {
+              "filename": "IMG_2106.jpeg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/IMG_2106.jpeg",
+              "content_type": "image/jpeg",
+              "size": 2630954,
+              "sha256": "30818854e2a9aba1d51fbdd06218497848a2fe5c0a71e400a6d403295cb7f7ad"
+            },
+            {
+              "filename": "image002.jpg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/image002.jpg",
+              "content_type": "image/jpeg",
+              "size": 3756568,
+              "sha256": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943"
+            },
+            {
+              "filename": "image003.jpg",
+              "path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/image003.jpg",
+              "content_type": "image/jpeg",
+              "size": 3111479,
+              "sha256": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095"
+            }
+          ]
+        },
+        {
+          "subexhibit": "M-13",
+          "date": "2026-03-21T17:04:21-07:00",
+          "from": "benjamin barber <starworks5@gmail.com>",
+          "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+          "subject": "HCV Orientation",
+          "email_path": "",
+          "parsed_path": "",
+          "bundle_dir": ".",
+          "has_saved_message": false,
+          "attachment_count": 0,
+          "attachments": []
+        }
+      ]
+    }
+  ]
+}

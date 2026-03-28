@@ -1464,6 +1464,7 @@ def _build_email_exhibit_manifest(
                     "path": str(attachment.get("path") or ""),
                     "content_type": str(attachment.get("content_type") or ""),
                     "size": int(attachment.get("size") or 0),
+                    "sha256": str(attachment.get("sha256") or ""),
                 })
             email_path = _normalized_saved_email_path(str(email.get("email_path") or ""))
             parsed_path = _normalized_saved_email_path(str(email.get("parsed_path") or ""))
@@ -1539,6 +1540,452 @@ def _build_email_exhibit_manifest(
     return summary
 
 
+def _build_formal_complaint_filing_checklist(
+    exhibit_packet: list[dict[str, Any]],
+    citation_map: list[dict[str, Any]],
+    email_exhibit_manifest: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_filing_checklist.json"
+    md_path = chronology_dir / "formal_complaint_filing_checklist.md"
+
+    email_threads = {
+        str(thread.get("exhibit_label") or ""): thread
+        for thread in list(email_exhibit_manifest.get("threads") or [])
+    }
+    checklist_entries: list[dict[str, Any]] = []
+    for exhibit in exhibit_packet:
+        label = str(exhibit.get("label") or "")
+        citations = [
+            entry for entry in citation_map
+            if str(entry.get("exhibit_label") or "") == label
+        ]
+        paragraphs = sorted(int(entry.get("paragraph_number") or 0) for entry in citations)
+        sections = []
+        for entry in citations:
+            section = str(entry.get("section") or "")
+            if section and section not in sections:
+                sections.append(section)
+        source_path = str(exhibit.get("source_path") or "")
+        source_exists = (REPO_ROOT / source_path).exists()
+        thread = email_threads.get(label) or {}
+        checklist_entries.append({
+            "label": label,
+            "packet_order": int(exhibit.get("packet_order") or 0),
+            "suggested_title": str(exhibit.get("suggested_title") or ""),
+            "source_path": source_path,
+            "source_type": str(exhibit.get("source_type") or ""),
+            "source_exists": source_exists,
+            "paragraph_numbers": paragraphs,
+            "section_names": sections,
+            "citation_count": len(citations),
+            "message_count": int(thread.get("message_count") or 0),
+            "saved_message_count": sum(1 for message in list(thread.get("messages") or []) if message.get("has_saved_message")),
+            "handling_note": str(exhibit.get("handling_note") or ""),
+        })
+
+    summary = {
+        "status": "success",
+        "entry_count": len(checklist_entries),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "entries": checklist_entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = ["# Formal Complaint Filing Checklist", "", f"Entry count: {len(checklist_entries)}", ""]
+    if checklist_entries:
+        for entry in checklist_entries:
+            paragraphs = ", ".join(str(number) for number in entry["paragraph_numbers"]) or "not cited"
+            sections = ", ".join(entry["section_names"]) or "not cited"
+            email_detail = ""
+            if entry["source_type"] == "email_manifest":
+                email_detail = (
+                    f" | messages={entry['message_count']}"
+                    f" | saved_messages={entry['saved_message_count']}"
+                )
+            md_lines.append(
+                f"- Exhibit {entry['label']} | order={entry['packet_order']} | paragraphs={paragraphs} | sections={sections} | exists={entry['source_exists']}{email_detail} | {entry['handling_note']}"
+            )
+    else:
+        md_lines.append("No filing checklist entries generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _attachment_triage_reasons(attachment: dict[str, Any], duplicate_count: int) -> list[str]:
+    reasons: list[str] = []
+    filename = str(attachment.get("filename") or "")
+    content_type = str(attachment.get("content_type") or "")
+    if duplicate_count > 1:
+        reasons.append("duplicate-content")
+    if content_type.startswith("image/") and re.search(r"^(image\d*|img[_-]?\d+|image[_-]?\d+)", filename, flags=re.IGNORECASE):
+        reasons.append("generic-image-name")
+    if content_type.startswith("image/"):
+        reasons.append("image-attachment")
+    return reasons
+
+
+def _attachment_triage_action(attachment: dict[str, Any], duplicate_count: int) -> str:
+    content_type = str(attachment.get("content_type") or "")
+    filename = str(attachment.get("filename") or "")
+    if duplicate_count > 1 and content_type.startswith("image/"):
+        return "review_for_deduplication"
+    if duplicate_count > 1:
+        return "review_duplicate_document"
+    if content_type == "application/pdf":
+        return "likely_keep"
+    if content_type.startswith("image/") and re.search(r"^(image\d*|img[_-]?\d+|image[_-]?\d+)", filename, flags=re.IGNORECASE):
+        return "review_low_signal_image"
+    if content_type.startswith("image/"):
+        return "review_image_attachment"
+    return "review_other_attachment"
+
+
+def _build_formal_complaint_attachment_triage(
+    email_exhibit_manifest: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_attachment_triage.json"
+    md_path = chronology_dir / "formal_complaint_attachment_triage.md"
+
+    attachments: list[dict[str, Any]] = []
+    duplicate_counts: dict[str, int] = {}
+    for thread in list(email_exhibit_manifest.get("threads") or []):
+        exhibit_label = str(thread.get("exhibit_label") or "")
+        for message in list(thread.get("messages") or []):
+            for attachment in list(message.get("attachments") or []):
+                key = str(attachment.get("sha256") or "") or f"{attachment.get('filename')}|{attachment.get('size')}|{attachment.get('content_type')}"
+                duplicate_counts[key] = duplicate_counts.get(key, 0) + 1
+                attachments.append({
+                    "exhibit_label": exhibit_label,
+                    "subexhibit": str(message.get("subexhibit") or ""),
+                    "date": str(message.get("date") or ""),
+                    **attachment,
+                    "duplicate_key": key,
+                })
+
+    triaged: list[dict[str, Any]] = []
+    for attachment in attachments:
+        duplicate_count = duplicate_counts.get(str(attachment.get("duplicate_key") or ""), 1)
+        triaged.append({
+            **attachment,
+            "duplicate_count": duplicate_count,
+            "reasons": _attachment_triage_reasons(attachment, duplicate_count),
+            "recommended_action": _attachment_triage_action(attachment, duplicate_count),
+        })
+
+    triaged.sort(key=lambda entry: (str(entry.get("recommended_action") or ""), str(entry.get("exhibit_label") or ""), str(entry.get("filename") or "")))
+    flagged_count = sum(1 for entry in triaged if str(entry.get("recommended_action") or "") != "likely_keep")
+    summary = {
+        "status": "success",
+        "attachment_count": len(triaged),
+        "flagged_count": flagged_count,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "attachments": triaged,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Attachment Triage",
+        "",
+        f"Attachment count: {len(triaged)}",
+        f"Flagged count: {flagged_count}",
+        "",
+    ]
+    if triaged:
+        for entry in triaged:
+            reasons = ", ".join(list(entry.get("reasons") or [])) or "none"
+            md_lines.append(
+                f"- {entry['subexhibit']} | {entry['filename']} | {entry['content_type']} | size={entry['size']} | action={entry['recommended_action']} | duplicates={entry['duplicate_count']} | reasons={reasons} | {entry['path']}"
+            )
+    else:
+        md_lines.append("No attachment triage entries generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_formal_complaint_email_exhibit_recommendations(
+    email_exhibit_manifest: dict[str, Any],
+    attachment_triage: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_email_exhibit_recommendations.json"
+    md_path = chronology_dir / "formal_complaint_email_exhibit_recommendations.md"
+
+    triaged_attachments = list(attachment_triage.get("attachments") or [])
+    representative_keys: set[str] = set()
+    representative_lookup: dict[tuple[str, str], dict[str, Any]] = {}
+    deferred_lookup: dict[tuple[str, str], list[dict[str, Any]]] = {}
+    for entry in triaged_attachments:
+        duplicate_key = str(entry.get("duplicate_key") or "")
+        subexhibit = str(entry.get("subexhibit") or "")
+        attachment_path = str(entry.get("path") or "")
+        recommended_action = str(entry.get("recommended_action") or "")
+        pair = (subexhibit, attachment_path)
+
+        if recommended_action == "likely_keep":
+            representative_lookup[pair] = entry
+            continue
+
+        if recommended_action == "review_for_deduplication" and duplicate_key and duplicate_key not in representative_keys:
+            representative_keys.add(duplicate_key)
+            representative_lookup[pair] = {
+                **entry,
+                "recommended_action": "keep_representative_duplicate",
+            }
+            continue
+
+        deferred_lookup.setdefault(pair, []).append(entry)
+
+    thread_recommendations: list[dict[str, Any]] = []
+    retained_count = 0
+    deferred_count = 0
+    for thread in list(email_exhibit_manifest.get("threads") or []):
+        exhibit_label = str(thread.get("exhibit_label") or "")
+        recommended_messages: list[dict[str, Any]] = []
+        thread_retained = 0
+        thread_deferred = 0
+        for message in list(thread.get("messages") or []):
+            subexhibit = str(message.get("subexhibit") or "")
+            recommended_attachments: list[dict[str, Any]] = []
+            deferred_attachments: list[dict[str, Any]] = []
+            for attachment in list(message.get("attachments") or []):
+                pair = (subexhibit, str(attachment.get("path") or ""))
+                if pair in representative_lookup:
+                    recommended_attachments.append(representative_lookup[pair])
+                deferred_attachments.extend(deferred_lookup.get(pair, []))
+
+            thread_retained += len(recommended_attachments)
+            thread_deferred += len(deferred_attachments)
+            if not recommended_attachments and not deferred_attachments and not message.get("has_saved_message"):
+                continue
+
+            recommended_messages.append({
+                "subexhibit": subexhibit,
+                "date": str(message.get("date") or ""),
+                "subject": str(message.get("subject") or ""),
+                "has_saved_message": bool(message.get("has_saved_message")),
+                "email_path": str(message.get("email_path") or ""),
+                "recommended_attachments": recommended_attachments,
+                "deferred_attachments": deferred_attachments,
+            })
+
+        retained_count += thread_retained
+        deferred_count += thread_deferred
+        thread_recommendations.append({
+            "exhibit_label": exhibit_label,
+            "suggested_title": str(thread.get("suggested_title") or ""),
+            "message_count": int(thread.get("message_count") or 0),
+            "recommended_attachment_count": thread_retained,
+            "deferred_attachment_count": thread_deferred,
+            "messages": recommended_messages,
+        })
+
+    summary = {
+        "status": "success",
+        "thread_count": len(thread_recommendations),
+        "retained_attachment_count": retained_count,
+        "deferred_attachment_count": deferred_count,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "threads": thread_recommendations,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Email Exhibit Recommendations",
+        "",
+        f"Thread count: {len(thread_recommendations)}",
+        f"Retained attachment count: {retained_count}",
+        f"Deferred attachment count: {deferred_count}",
+        "",
+    ]
+    if thread_recommendations:
+        for thread in thread_recommendations:
+            md_lines.extend([
+                f"## Exhibit {thread['exhibit_label']}: {thread['suggested_title']}",
+                "",
+                f"Recommended attachments: {thread['recommended_attachment_count']}",
+                f"Deferred attachments: {thread['deferred_attachment_count']}",
+                "",
+            ])
+            for message in list(thread.get("messages") or []):
+                md_lines.append(
+                    f"- {message['subexhibit']} | {message['date']} | {message['subject']} | saved_message={message['has_saved_message']}"
+                )
+                for attachment in list(message.get("recommended_attachments") or []):
+                    md_lines.append(
+                        f"- keep: {attachment['filename']} | {attachment['content_type']} | action={attachment['recommended_action']} | duplicates={attachment['duplicate_count']} | {attachment['path']}"
+                    )
+                for attachment in list(message.get("deferred_attachments") or []):
+                    md_lines.append(
+                        f"- defer: {attachment['filename']} | {attachment['content_type']} | action={attachment['recommended_action']} | duplicates={attachment['duplicate_count']}"
+                    )
+                if not message.get("recommended_attachments") and not message.get("deferred_attachments"):
+                    md_lines.append("- no attachment recommendation entries for this message")
+            md_lines.append("")
+    else:
+        md_lines.append("No email exhibit recommendations generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_formal_complaint_proposed_filing_packet(
+    exhibit_packet: list[dict[str, Any]],
+    email_exhibit_manifest: dict[str, Any],
+    email_exhibit_recommendations: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_proposed_filing_packet.json"
+    md_path = chronology_dir / "formal_complaint_proposed_filing_packet.md"
+
+    manifest_threads = {
+        str(thread.get("exhibit_label") or ""): thread
+        for thread in list(email_exhibit_manifest.get("threads") or [])
+    }
+    recommendation_threads = {
+        str(thread.get("exhibit_label") or ""): thread
+        for thread in list(email_exhibit_recommendations.get("threads") or [])
+    }
+
+    packet_entries: list[dict[str, Any]] = []
+    total_representative_messages = 0
+    total_retained_attachments = 0
+    for exhibit in exhibit_packet:
+        label = str(exhibit.get("label") or "")
+        source_type = str(exhibit.get("source_type") or "")
+        entry = {
+            "packet_order": int(exhibit.get("packet_order") or 0),
+            "label": label,
+            "suggested_title": str(exhibit.get("suggested_title") or ""),
+            "source_path": str(exhibit.get("source_path") or ""),
+            "source_type": source_type,
+            "handling_note": str(exhibit.get("handling_note") or ""),
+        }
+        if source_type != "email_manifest":
+            entry["proposed_materials"] = [
+                {
+                    "kind": "exhibit_file",
+                    "path": str(exhibit.get("source_path") or ""),
+                    "note": str(exhibit.get("handling_note") or ""),
+                }
+            ]
+            packet_entries.append(entry)
+            continue
+
+        manifest_thread = manifest_threads.get(label) or {}
+        recommendation_thread = recommendation_threads.get(label) or {}
+        manifest_messages = {
+            str(message.get("subexhibit") or ""): message
+            for message in list(manifest_thread.get("messages") or [])
+        }
+        recommendation_messages = list(recommendation_thread.get("messages") or [])
+        representative_messages: list[dict[str, Any]] = []
+        if recommendation_messages:
+            first_subexhibit = str(recommendation_messages[0].get("subexhibit") or "")
+            last_subexhibit = str(recommendation_messages[-1].get("subexhibit") or "")
+            for message in recommendation_messages:
+                subexhibit = str(message.get("subexhibit") or "")
+                manifest_message = manifest_messages.get(subexhibit) or {}
+                recommended_attachments = list(message.get("recommended_attachments") or [])
+                selection_reasons: list[str] = []
+                if recommended_attachments:
+                    selection_reasons.append("retained-attachment")
+                if subexhibit == first_subexhibit:
+                    selection_reasons.append("thread-start")
+                if subexhibit == last_subexhibit and last_subexhibit != first_subexhibit:
+                    selection_reasons.append("thread-end")
+                if not selection_reasons:
+                    continue
+                representative_messages.append({
+                    "subexhibit": subexhibit,
+                    "date": str(message.get("date") or ""),
+                    "subject": str(message.get("subject") or ""),
+                    "email_path": str(manifest_message.get("email_path") or message.get("email_path") or ""),
+                    "has_saved_message": bool(manifest_message.get("has_saved_message") or message.get("has_saved_message")),
+                    "selection_reasons": selection_reasons,
+                    "retained_attachments": recommended_attachments,
+                })
+
+        total_representative_messages += len(representative_messages)
+        total_retained_attachments += sum(
+            len(list(message.get("retained_attachments") or []))
+            for message in representative_messages
+        )
+        entry["representative_message_count"] = len(representative_messages)
+        entry["retained_attachment_count"] = sum(
+            len(list(message.get("retained_attachments") or []))
+            for message in representative_messages
+        )
+        entry["proposed_materials"] = [
+            {
+                "kind": "representative_saved_message",
+                "subexhibit": message.get("subexhibit"),
+                "date": message.get("date"),
+                "subject": message.get("subject"),
+                "email_path": message.get("email_path"),
+                "has_saved_message": message.get("has_saved_message"),
+                "selection_reasons": message.get("selection_reasons"),
+                "retained_attachments": message.get("retained_attachments"),
+            }
+            for message in representative_messages
+        ]
+        packet_entries.append(entry)
+
+    summary = {
+        "status": "success",
+        "packet_count": len(packet_entries),
+        "representative_message_count": total_representative_messages,
+        "retained_attachment_count": total_retained_attachments,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "entries": packet_entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Proposed Filing Packet",
+        "",
+        f"Packet count: {len(packet_entries)}",
+        f"Representative saved messages: {total_representative_messages}",
+        f"Retained email attachments: {total_retained_attachments}",
+        "",
+    ]
+    if packet_entries:
+        for entry in packet_entries:
+            md_lines.append(
+                f"## {entry['packet_order']}. Exhibit {entry['label']}: {entry['suggested_title']}"
+            )
+            md_lines.append("")
+            md_lines.append(f"Source: {entry['source_path']}")
+            md_lines.append(f"Type: {entry['source_type']}")
+            md_lines.append(f"Handling: {entry['handling_note']}")
+            if entry["source_type"] != "email_manifest":
+                md_lines.append("- include: underlying exhibit file")
+                md_lines.append("")
+                continue
+            md_lines.append(f"Representative saved messages: {entry.get('representative_message_count', 0)}")
+            md_lines.append(f"Retained attachments: {entry.get('retained_attachment_count', 0)}")
+            md_lines.append("")
+            for material in list(entry.get("proposed_materials") or []):
+                reasons = ", ".join(list(material.get("selection_reasons") or [])) or "none"
+                email_path = str(material.get("email_path") or "unavailable (metadata-only entry)")
+                md_lines.append(
+                    f"- message: {material.get('subexhibit')} | {material.get('date')} | {material.get('subject')} | reasons={reasons} | eml={email_path}"
+                )
+                for attachment in list(material.get("retained_attachments") or []):
+                    md_lines.append(
+                        f"- attachment: {attachment['filename']} | {attachment['content_type']} | action={attachment['recommended_action']} | {attachment['path']}"
+                    )
+            md_lines.append("")
+    else:
+        md_lines.append("No proposed filing packet entries generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
 def _build_formal_complaint_draft(
     complaint_ready: dict[str, Any],
     cause_draft: dict[str, Any],
@@ -1595,6 +2042,7 @@ def _build_formal_complaint_draft(
         for index, entry in enumerate(exhibit_index, start=1)
     ]
     email_exhibit_manifest = _build_email_exhibit_manifest(exhibit_packet, chronology_dir)
+    attachment_triage = _build_formal_complaint_attachment_triage(email_exhibit_manifest, chronology_dir)
 
     citation_map: list[dict[str, Any]] = []
 
@@ -1615,6 +2063,9 @@ def _build_formal_complaint_draft(
         "email_exhibit_markdown_path": str(email_exhibit_manifest.get("markdown_path") or ""),
         "email_exhibit_thread_count": int(email_exhibit_manifest.get("thread_count") or 0),
         "email_exhibit_message_count": int(email_exhibit_manifest.get("message_count") or 0),
+        "attachment_triage_json_path": str(attachment_triage.get("json_path") or ""),
+        "attachment_triage_markdown_path": str(attachment_triage.get("markdown_path") or ""),
+        "attachment_triage_flagged_count": int(attachment_triage.get("flagged_count") or 0),
     }
 
     md_lines = [
@@ -1722,6 +2173,35 @@ def _build_formal_complaint_draft(
         f"{paragraph_number + 3}. Plaintiffs demand a jury on all issues so triable, if applicable.",
     ])
 
+    filing_checklist = _build_formal_complaint_filing_checklist(
+        exhibit_packet,
+        citation_map,
+        email_exhibit_manifest,
+        chronology_dir,
+    )
+    email_exhibit_recommendations = _build_formal_complaint_email_exhibit_recommendations(
+        email_exhibit_manifest,
+        attachment_triage,
+        chronology_dir,
+    )
+    proposed_filing_packet = _build_formal_complaint_proposed_filing_packet(
+        exhibit_packet,
+        email_exhibit_manifest,
+        email_exhibit_recommendations,
+        chronology_dir,
+    )
+
+    summary["filing_checklist_json_path"] = str(filing_checklist.get("json_path") or "")
+    summary["filing_checklist_markdown_path"] = str(filing_checklist.get("markdown_path") or "")
+    summary["email_exhibit_recommendations_json_path"] = str(email_exhibit_recommendations.get("json_path") or "")
+    summary["email_exhibit_recommendations_markdown_path"] = str(email_exhibit_recommendations.get("markdown_path") or "")
+    summary["email_exhibit_recommendations_retained_count"] = int(email_exhibit_recommendations.get("retained_attachment_count") or 0)
+    summary["email_exhibit_recommendations_deferred_count"] = int(email_exhibit_recommendations.get("deferred_attachment_count") or 0)
+    summary["proposed_filing_packet_json_path"] = str(proposed_filing_packet.get("json_path") or "")
+    summary["proposed_filing_packet_markdown_path"] = str(proposed_filing_packet.get("markdown_path") or "")
+    summary["proposed_filing_packet_message_count"] = int(proposed_filing_packet.get("representative_message_count") or 0)
+    summary["proposed_filing_packet_attachment_count"] = int(proposed_filing_packet.get("retained_attachment_count") or 0)
+
     json_path.write_text(
         json.dumps(
             {
@@ -1731,6 +2211,10 @@ def _build_formal_complaint_draft(
                 "exhibit_index": exhibit_index,
                 "exhibit_packet": exhibit_packet,
                 "email_exhibit_manifest": email_exhibit_manifest,
+                "filing_checklist": filing_checklist,
+                "attachment_triage": attachment_triage,
+                "email_exhibit_recommendations": email_exhibit_recommendations,
+                "proposed_filing_packet": proposed_filing_packet,
                 "citation_map": citation_map,
             },
             indent=2,
@@ -2452,6 +2936,15 @@ def _markdown_report(payload: dict[str, Any]) -> str:
             )
             lines.append(
                 f"- Formal complaint email exhibit messages indexed: {formal_draft.get('email_exhibit_message_count', 0)}"
+            )
+            lines.append(
+                f"- Formal complaint attachment triage flagged items: {formal_draft.get('attachment_triage_flagged_count', 0)}"
+            )
+            lines.append(
+                f"- Formal complaint email exhibit recommendations retained/deferred: {formal_draft.get('email_exhibit_recommendations_retained_count', 0)}/{formal_draft.get('email_exhibit_recommendations_deferred_count', 0)}"
+            )
+            lines.append(
+                f"- Formal complaint proposed filing packet representative messages/attachments: {formal_draft.get('proposed_filing_packet_message_count', 0)}/{formal_draft.get('proposed_filing_packet_attachment_count', 0)}"
             )
     return "\n".join(lines).strip() + "\n"
 
