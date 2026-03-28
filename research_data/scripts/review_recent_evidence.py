@@ -3023,6 +3023,682 @@ def _build_formal_complaint_attorney_recommendation_memo(
     return summary
 
 
+def _build_formal_complaint_recommended_filing_manifest(
+    ready_to_file_manifest: dict[str, Any],
+    candidate_final_packet: dict[str, Any],
+    withheld_decision_queue: dict[str, Any],
+    attorney_recommendation_memo: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_recommended_filing_manifest.json"
+    md_path = chronology_dir / "formal_complaint_recommended_filing_manifest.md"
+
+    included_entries = list(ready_to_file_manifest.get("included_entries") or [])
+    candidate_email_entries = list(candidate_final_packet.get("candidate_email_entries") or [])
+    queue_counts = dict(withheld_decision_queue.get("disposition_counts") or {})
+
+    recommended_entries: list[dict[str, Any]] = []
+    for entry in included_entries:
+        recommended_entries.append({
+            "packet_order": int(entry.get("packet_order") or 0),
+            "label": str(entry.get("label") or ""),
+            "suggested_title": str(entry.get("suggested_title") or ""),
+            "source_type": str(entry.get("source_type") or ""),
+            "source_path": str(entry.get("source_path") or ""),
+            "recommendation_basis": "included_in_ready_to_file_manifest",
+        })
+
+    for entry in candidate_email_entries:
+        recommended_entries.append({
+            "packet_order": int(entry.get("packet_order") or 0),
+            "label": str(entry.get("label") or ""),
+            "suggested_title": str(entry.get("suggested_title") or ""),
+            "source_type": "candidate_email_exhibit",
+            "source_path": str(entry.get("exhibit_dir") or ""),
+            "recommendation_basis": "promoted_from_withheld_queue_via_candidate_packet",
+            "representative_message_count": int(entry.get("representative_message_count") or 0),
+            "retained_attachment_count": int(entry.get("retained_attachment_count") or 0),
+            "excluded_decision_count": int(entry.get("excluded_decision_count") or 0),
+            "excluded_duplicate_count": int(entry.get("excluded_duplicate_count") or 0),
+            "excluded_low_signal_count": int(entry.get("excluded_low_signal_count") or 0),
+        })
+
+    recommended_entries.sort(key=lambda entry: (int(entry.get("packet_order") or 0), str(entry.get("label") or "")))
+
+    summary = {
+        "status": "success",
+        "recommended_exhibit_count": len(recommended_entries),
+        "paper_exhibit_count": len(included_entries),
+        "candidate_email_exhibit_count": len(candidate_email_entries),
+        "copied_file_count": int(candidate_final_packet.get("copied_file_count") or 0),
+        "supersedes": {
+            "ready_to_file_manifest": str(ready_to_file_manifest.get("markdown_path") or ""),
+            "candidate_final_packet": str(candidate_final_packet.get("readme_path") or ""),
+            "attorney_recommendation_memo": str(attorney_recommendation_memo.get("markdown_path") or ""),
+        },
+        "withheld_queue_disposition_counts": queue_counts,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "entries": recommended_entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Recommended Filing Manifest",
+        "",
+        f"Recommended exhibits: {summary['recommended_exhibit_count']}",
+        f"Paper exhibits retained from ready-to-file set: {summary['paper_exhibit_count']}",
+        f"Curated email exhibits promoted from withheld queue: {summary['candidate_email_exhibit_count']}",
+        f"Total copied files in candidate packet: {summary['copied_file_count']}",
+        "",
+        "This manifest is the operative filing-set summary. It supersedes the earlier ready-to-file versus withheld split by adopting the candidate final packet together with the attorney recommendation memo.",
+        "",
+        "## Superseded Inputs",
+        "",
+        f"- Ready-to-file manifest: {summary['supersedes']['ready_to_file_manifest']}",
+        f"- Candidate final packet: {summary['supersedes']['candidate_final_packet']}",
+        f"- Attorney recommendation memo: {summary['supersedes']['attorney_recommendation_memo']}",
+        "",
+    ]
+    if queue_counts:
+        md_lines.extend(["## Queue Dispositions", ""])
+        for disposition, count in sorted(queue_counts.items()):
+            md_lines.append(f"- {disposition}: {count}")
+        md_lines.append("")
+
+    md_lines.extend(["## Recommended Exhibits", ""])
+    if recommended_entries:
+        for entry in recommended_entries:
+            line = (
+                f"- {entry['packet_order']}. Exhibit {entry['label']} | {entry['suggested_title']} | "
+                f"{entry['source_type']} | basis={entry['recommendation_basis']}"
+            )
+            if entry["source_type"] == "candidate_email_exhibit":
+                line += (
+                    f" | representative_messages={int(entry.get('representative_message_count') or 0)}"
+                    f" | retained_attachments={int(entry.get('retained_attachment_count') or 0)}"
+                    f" | excluded_decisions={int(entry.get('excluded_decision_count') or 0)}"
+                )
+            else:
+                line += f" | source={entry['source_path']}"
+            md_lines.append(line)
+    else:
+        md_lines.append("No recommended exhibits generated.")
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _materialize_recommended_filing_packet(
+    recommended_filing_manifest: dict[str, Any],
+    candidate_final_packet: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    packet_dir = chronology_dir / "formal_complaint_recommended_filing_packet"
+    included_dir = packet_dir / "included"
+    email_dir = packet_dir / "candidate_email_exhibits"
+    docs_dir = packet_dir / "supporting_documents"
+    packet_dir.mkdir(parents=True, exist_ok=True)
+    included_dir.mkdir(parents=True, exist_ok=True)
+    email_dir.mkdir(parents=True, exist_ok=True)
+    docs_dir.mkdir(parents=True, exist_ok=True)
+
+    copied_files: list[dict[str, Any]] = []
+    paper_exhibit_count = 0
+    candidate_email_exhibit_count = 0
+
+    for entry in list(recommended_filing_manifest.get("entries") or []):
+        source_type = str(entry.get("source_type") or "")
+        label = str(entry.get("label") or "")
+        packet_order = int(entry.get("packet_order") or 0)
+        if source_type == "paper_pdf":
+            source_path = REPO_ROOT / str(entry.get("source_path") or "")
+            if not source_path.exists() or not source_path.is_file():
+                continue
+            filename = (
+                f"{packet_order:02d}_Exhibit_{_safe_packet_name(label)}_"
+                f"{_safe_packet_name(source_path.name)}"
+            )
+            destination = included_dir / filename
+            shutil.copy2(source_path, destination)
+            paper_exhibit_count += 1
+            copied_files.append({
+                "label": label,
+                "kind": "paper_exhibit",
+                "source_path": str(source_path),
+                "destination_path": str(destination),
+            })
+            continue
+
+        if source_type != "candidate_email_exhibit":
+            continue
+
+        source_dir = Path(str(entry.get("source_path") or ""))
+        if not source_dir.exists() or not source_dir.is_dir():
+            continue
+        destination_dir = email_dir / source_dir.name
+        shutil.copytree(source_dir, destination_dir, dirs_exist_ok=True)
+        candidate_email_exhibit_count += 1
+        copied_files.append({
+            "label": label,
+            "kind": "candidate_email_exhibit_dir",
+            "source_path": str(source_dir),
+            "destination_path": str(destination_dir),
+        })
+
+    docs_to_copy = {
+        "recommended_manifest": chronology_dir / "formal_complaint_recommended_filing_manifest.md",
+        "attorney_recommendation_memo": chronology_dir / "formal_complaint_attorney_recommendation_memo.md",
+        "excluded_withheld_items": Path(str(candidate_final_packet.get("excluded_manifest_path") or "")),
+    }
+    copied_docs: list[dict[str, Any]] = []
+    for name, source_path in docs_to_copy.items():
+        if not source_path.exists() or not source_path.is_file():
+            continue
+        destination = docs_dir / f"{name}{source_path.suffix}"
+        shutil.copy2(source_path, destination)
+        copied_docs.append({
+            "name": name,
+            "source_path": str(source_path),
+            "destination_path": str(destination),
+        })
+        copied_files.append({
+            "label": name,
+            "kind": "supporting_document",
+            "source_path": str(source_path),
+            "destination_path": str(destination),
+        })
+
+    readme_path = packet_dir / "README.md"
+    summary_lines = [
+        "# Recommended Filing Packet",
+        "",
+        f"Recommended exhibits copied: {paper_exhibit_count + candidate_email_exhibit_count}",
+        f"Paper exhibits copied: {paper_exhibit_count}",
+        f"Curated email exhibit folders copied: {candidate_email_exhibit_count}",
+        f"Supporting documents copied: {len(copied_docs)}",
+        f"Total copied items: {len(copied_files)}",
+        "",
+        "This packet materializes the operative filing set described by the recommended filing manifest.",
+        "Paper exhibits are in ./included, curated email exhibit folders are in ./candidate_email_exhibits, and supporting recommendation documents are in ./supporting_documents.",
+    ]
+    readme_path.write_text("\n".join(summary_lines).strip() + "\n", encoding="utf-8")
+
+    return {
+        "status": "success",
+        "packet_dir": str(packet_dir),
+        "included_dir": str(included_dir),
+        "candidate_email_dir": str(email_dir),
+        "supporting_docs_dir": str(docs_dir),
+        "recommended_exhibit_count": paper_exhibit_count + candidate_email_exhibit_count,
+        "paper_exhibit_count": paper_exhibit_count,
+        "candidate_email_exhibit_count": candidate_email_exhibit_count,
+        "supporting_document_count": len(copied_docs),
+        "copied_file_count": len(copied_files),
+        "copied_files": copied_files,
+        "readme_path": str(readme_path),
+    }
+
+
+def _build_formal_complaint_recommended_filing_checklist(
+    recommended_filing_manifest: dict[str, Any],
+    recommended_filing_packet: dict[str, Any],
+    citation_map: list[dict[str, Any]],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_recommended_filing_checklist.json"
+    md_path = chronology_dir / "formal_complaint_recommended_filing_checklist.md"
+
+    citations_by_label: dict[str, list[dict[str, Any]]] = {}
+    for citation in citation_map:
+        label = str(citation.get("exhibit_label") or "")
+        citations_by_label.setdefault(label, []).append(citation)
+
+    packet_dir = Path(str(recommended_filing_packet.get("packet_dir") or ""))
+    included_dir = packet_dir / "included"
+    email_dir = packet_dir / "candidate_email_exhibits"
+
+    checklist_entries: list[dict[str, Any]] = []
+    flagged_count = 0
+    for entry in list(recommended_filing_manifest.get("entries") or []):
+        label = str(entry.get("label") or "")
+        source_type = str(entry.get("source_type") or "")
+        packet_order = int(entry.get("packet_order") or 0)
+        suggested_title = str(entry.get("suggested_title") or "")
+        citations = list(citations_by_label.get(label) or [])
+        paragraph_numbers = sorted(int(item.get("paragraph_number") or 0) for item in citations)
+        sections: list[str] = []
+        for item in citations:
+            section = str(item.get("section") or "")
+            if section and section not in sections:
+                sections.append(section)
+
+        packet_material_exists = False
+        packet_material_path = ""
+        if source_type == "paper_pdf":
+            expected_prefix = f"{packet_order:02d}_Exhibit_{_safe_packet_name(label)}_"
+            matches = [child for child in included_dir.iterdir()] if included_dir.exists() else []
+            matched = next((child for child in matches if child.name.startswith(expected_prefix)), None)
+            if matched is not None:
+                packet_material_exists = True
+                packet_material_path = str(matched)
+        elif source_type == "candidate_email_exhibit":
+            source_path = Path(str(entry.get("source_path") or ""))
+            destination = email_dir / source_path.name
+            if destination.exists() and destination.is_dir():
+                packet_material_exists = True
+                packet_material_path = str(destination)
+
+        issues: list[str] = []
+        if not packet_material_exists:
+            issues.append("missing-packet-material")
+        if not citations:
+            issues.append("uncited-exhibit")
+
+        severity = "ok" if not issues else "review"
+        if "missing-packet-material" in issues:
+            severity = "critical"
+        if severity != "ok":
+            flagged_count += 1
+
+        checklist_entry = {
+            "packet_order": packet_order,
+            "label": label,
+            "suggested_title": suggested_title,
+            "source_type": source_type,
+            "citation_count": len(citations),
+            "paragraph_numbers": paragraph_numbers,
+            "sections": sections,
+            "packet_material_exists": packet_material_exists,
+            "packet_material_path": packet_material_path,
+            "severity": severity,
+            "issues": issues,
+        }
+        if source_type == "candidate_email_exhibit":
+            checklist_entry["representative_message_count"] = int(entry.get("representative_message_count") or 0)
+            checklist_entry["retained_attachment_count"] = int(entry.get("retained_attachment_count") or 0)
+            checklist_entry["excluded_decision_count"] = int(entry.get("excluded_decision_count") or 0)
+        checklist_entries.append(checklist_entry)
+
+    summary = {
+        "status": "success",
+        "entry_count": len(checklist_entries),
+        "flagged_count": flagged_count,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "entries": checklist_entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Recommended Filing Checklist",
+        "",
+        f"Entry count: {len(checklist_entries)}",
+        f"Flagged count: {flagged_count}",
+        "",
+    ]
+    if checklist_entries:
+        for entry in checklist_entries:
+            paragraphs = ", ".join(str(number) for number in list(entry.get("paragraph_numbers") or [])) or "not cited"
+            sections = ", ".join(list(entry.get("sections") or [])) or "not cited"
+            issues = ", ".join(list(entry.get("issues") or [])) or "none"
+            line = (
+                f"- Exhibit {entry['label']} | order={entry['packet_order']} | severity={entry['severity']}"
+                f" | paragraphs={paragraphs} | sections={sections} | packet_material_exists={entry['packet_material_exists']}"
+                f" | issues={issues}"
+            )
+            if entry["source_type"] == "candidate_email_exhibit":
+                line += (
+                    f" | representative_messages={int(entry.get('representative_message_count') or 0)}"
+                    f" | retained_attachments={int(entry.get('retained_attachment_count') or 0)}"
+                    f" | excluded_decisions={int(entry.get('excluded_decision_count') or 0)}"
+                )
+            md_lines.append(line)
+    else:
+        md_lines.append("No recommended filing checklist entries generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_formal_complaint_court_submission_memo(
+    formal_draft_summary: dict[str, Any],
+    recommended_filing_manifest: dict[str, Any],
+    recommended_filing_packet: dict[str, Any],
+    recommended_filing_checklist: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_court_submission_memo.json"
+    md_path = chronology_dir / "formal_complaint_court_submission_memo.md"
+
+    forum_dependent_items = [
+        "Replace the caption placeholder 'IN THE [COURT NAME]' with the selected court.",
+        "Choose whether the complaint will proceed in federal court, Oregon circuit court, or another forum and conform jurisdiction allegations accordingly.",
+        "Conform venue allegations and any county-specific filing language to the chosen court.",
+        "Confirm final party names, party capacity, and any non-Doe defendants before filing.",
+        "Confirm the final causes of action and tailor the prayer for relief to the selected legal theories and forum rules.",
+    ]
+
+    ready_now_items = [
+        "Recent evidence review completed for the past-week additions and remaining evidence classified.",
+        "GraphRAG and cross-document chronology artifacts generated or reused for substantive evidence.",
+        "Operative recommended filing manifest assembled with 13 recommended exhibits.",
+        "Recommended filing packet materialized with 11 paper exhibits, 2 curated email exhibit folders, and supporting recommendation documents.",
+        f"Recommended filing checklist completed with flagged count {int(recommended_filing_checklist.get('flagged_count') or 0)}.",
+    ]
+
+    summary = {
+        "status": "success",
+        "recommended_exhibit_count": int(recommended_filing_manifest.get("recommended_exhibit_count") or 0),
+        "recommended_packet_dir": str(recommended_filing_packet.get("packet_dir") or ""),
+        "recommended_packet_copied_file_count": int(recommended_filing_packet.get("copied_file_count") or 0),
+        "recommended_checklist_flagged_count": int(recommended_filing_checklist.get("flagged_count") or 0),
+        "forum_dependent_item_count": len(forum_dependent_items),
+        "formal_draft_path": str(formal_draft_summary.get("markdown_path") or ""),
+        "recommended_manifest_path": str(recommended_filing_manifest.get("markdown_path") or ""),
+        "recommended_checklist_path": str(recommended_filing_checklist.get("markdown_path") or ""),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "ready_now_items": ready_now_items,
+        "forum_dependent_items": forum_dependent_items,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Court Submission Memo",
+        "",
+        "## Current Filing State",
+        "",
+        f"- Recommended exhibits: {summary['recommended_exhibit_count']}",
+        f"- Recommended packet copied items: {summary['recommended_packet_copied_file_count']}",
+        f"- Recommended checklist flagged exhibits: {summary['recommended_checklist_flagged_count']}",
+        f"- Operative packet directory: {summary['recommended_packet_dir']}",
+        "",
+        "## Ready Now",
+        "",
+    ]
+    for item in ready_now_items:
+        md_lines.append(f"- {item}")
+
+    md_lines.extend([
+        "",
+        "## Forum-Dependent Items",
+        "",
+    ])
+    for item in forum_dependent_items:
+        md_lines.append(f"- {item}")
+
+    md_lines.extend([
+        "",
+        "## Operative References",
+        "",
+        f"- Formal complaint draft: {summary['formal_draft_path']}",
+        f"- Recommended filing manifest: {summary['recommended_manifest_path']}",
+        f"- Recommended filing checklist: {summary['recommended_checklist_path']}",
+        "",
+        "## Recommendation",
+        "",
+        "Use the recommended filing packet as the operative exhibit set and treat remaining work as forum-selection and claim-selection refinement rather than additional evidence assembly.",
+    ])
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_formal_complaint_forum_selection_memo(
+    formal_draft_summary: dict[str, Any],
+    recommended_filing_manifest: dict[str, Any],
+    recommended_filing_checklist: dict[str, Any],
+    court_submission_memo: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_forum_selection_memo.json"
+    md_path = chronology_dir / "formal_complaint_forum_selection_memo.md"
+
+    common_strengths = [
+        "The operative exhibit set is already assembled and checked, with 13 recommended exhibits and 0 flagged packet-check issues.",
+        "The current evidence supports a chronology centered on notice, lease, documentation, VAWA-related, and orientation events in Clackamas County.",
+        "The complaint draft already contains a usable factual narrative and count structure that can be conformed to either forum.",
+    ]
+    federal_track = {
+        "title": "Federal Court Track",
+        "advantages": [
+            "The current draft already contains placeholder federal-question language keyed to federal housing, fair-housing, VAWA, due-process, or Section 1983 theories.",
+            "Federal pleading may fit best if the final claim set centers on constitutional process, federal housing rights, or federally grounded anti-discrimination theories.",
+            "Supplemental jurisdiction can keep related Oregon-law claims bundled if viable federal claims are selected.",
+        ],
+        "requirements": [
+            "Identify at least one well-supported federal cause of action and align each count to that theory.",
+            "Replace the generic jurisdiction paragraph with a precise federal subject-matter statement.",
+            "Confirm the proper federal district and division for events centered in Clackamas County, Oregon.",
+        ],
+        "risks": [
+            "A weak or underdeveloped federal claim can invite dismissal pressure or remand/declination issues for the remaining state-law theories.",
+            "Federal standards may require more exact theory selection earlier in the drafting cycle.",
+        ],
+    }
+    state_track = {
+        "title": "Oregon State Court Track",
+        "advantages": [
+            "The evidence is geographically concentrated in Clackamas County and the current venue facts map naturally to an Oregon trial-court filing.",
+            "State pleading may fit best if the final claim set emphasizes Oregon statutory, landlord-tenant, relocation, contract, or administrative-law theories.",
+            "This path avoids depending on a federal anchor claim if the strongest available theories are primarily state or local in character.",
+        ],
+        "requirements": [
+            "Replace the draft federal-jurisdiction placeholder with the specific Oregon court and county basis.",
+            "Conform the caption, venue allegations, and requested relief to Oregon trial-court practice.",
+            "Map each current draft count to a specific Oregon or local-law cause of action before filing.",
+        ],
+        "risks": [
+            "Any intended federal constitutional or statutory theories may need to be omitted, reframed, or carefully pleaded under concurrent-jurisdiction principles.",
+            "If the final theory mix remains heavily federal, a state-court path may create a less direct complaint structure than a federal filing.",
+        ],
+    }
+    decision_pivots = [
+        "Choose federal court if the strongest final claims are federal housing, federal anti-discrimination, VAWA, due-process, or Section 1983 claims.",
+        "Choose Oregon state court if the strongest final claims are Oregon housing, lease, relocation, contract, or state administrative claims.",
+        "In either forum, the exhibit package is ready; the main remaining work is legal-theory selection and forum-specific pleading conversion.",
+    ]
+
+    summary = {
+        "status": "success",
+        "recommended_exhibit_count": int(recommended_filing_manifest.get("recommended_exhibit_count") or 0),
+        "recommended_checklist_flagged_count": int(recommended_filing_checklist.get("flagged_count") or 0),
+        "forum_dependent_item_count": int(court_submission_memo.get("forum_dependent_item_count") or 0),
+        "option_count": 2,
+        "formal_draft_path": str(formal_draft_summary.get("markdown_path") or ""),
+        "court_submission_memo_path": str(court_submission_memo.get("markdown_path") or ""),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "common_strengths": common_strengths,
+        "federal_track": federal_track,
+        "state_track": state_track,
+        "decision_pivots": decision_pivots,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Forum Selection Memo",
+        "",
+        "## Shared Starting Point",
+        "",
+        f"- Recommended exhibits assembled: {summary['recommended_exhibit_count']}",
+        f"- Recommended checklist flagged exhibits: {summary['recommended_checklist_flagged_count']}",
+        f"- Remaining forum-dependent items identified in submission memo: {summary['forum_dependent_item_count']}",
+        "",
+    ]
+    for item in common_strengths:
+        md_lines.append(f"- {item}")
+
+    for track in (federal_track, state_track):
+        md_lines.extend(["", f"## {track['title']}", "", "Advantages:"])
+        for item in track["advantages"]:
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Requirements:"])
+        for item in track["requirements"]:
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Risks:"])
+        for item in track["risks"]:
+            md_lines.append(f"- {item}")
+
+    md_lines.extend(["", "## Decision Pivots", ""])
+    for item in decision_pivots:
+        md_lines.append(f"- {item}")
+
+    md_lines.extend([
+        "",
+        "## References",
+        "",
+        f"- Formal complaint draft: {summary['formal_draft_path']}",
+        f"- Court submission memo: {summary['court_submission_memo_path']}",
+    ])
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_formal_complaint_claim_mapping_memo(
+    cause_draft: dict[str, Any],
+    recommended_filing_manifest: dict[str, Any],
+    recommended_filing_checklist: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_claim_mapping_memo.json"
+    md_path = chronology_dir / "formal_complaint_claim_mapping_memo.md"
+
+    theory_map = {
+        "Notices and Adverse Actions": {
+            "federal_candidates": [
+                "procedural due-process theory under 42 U.S.C. section 1983 if protected housing interests and state action are adequately supported",
+                "federal fair-housing or federally funded housing-process theory if notice defects are tied to discrimination or federally regulated housing protections",
+            ],
+            "state_candidates": [
+                "Oregon landlord-tenant or relocation-notice theory",
+                "state declaratory or injunctive relief tied to defective notice or unlawful displacement process",
+            ],
+            "proof_gaps": [
+                "identify the exact notice and hearing rules that governed each challenged notice",
+                "connect each notice defect to a concrete threatened or realized housing loss",
+            ],
+        },
+        "Lease and Occupancy": {
+            "federal_candidates": [
+                "federally regulated housing-program compliance theory if the lease, inspection, or occupancy decisions violated federal program rules",
+                "Section 1983 theory only if a federal housing entitlement or due-process interest is clearly implicated",
+            ],
+            "state_candidates": [
+                "breach of lease or wrongful housing-process theory",
+                "Oregon housing or tenancy-rights theory tied to occupancy, inspection, transfer, or displacement conduct",
+            ],
+            "proof_gaps": [
+                "pinpoint the governing lease and program provisions for each occupancy-related event",
+                "show how the challenged conduct changed tenancy status or housing stability",
+            ],
+        },
+        "Financial Verification and Intake Barriers": {
+            "federal_candidates": [
+                "federal fair-housing or anti-retaliation theory if documentation demands were discriminatory, retaliatory, or selectively imposed",
+                "federal housing-program administration theory if the demands contradicted controlling federal program rules",
+            ],
+            "state_candidates": [
+                "state discrimination, retaliation, or unfair housing-process theory",
+                "state declaratory or injunctive theory challenging unsupported administrative barriers",
+            ],
+            "proof_gaps": [
+                "separate required documentation from repetitive or unsupported requests",
+                "show how the demands delayed or burdened voucher progression, placement, or retention",
+            ],
+        },
+        "Protected Status and VAWA": {
+            "federal_candidates": [
+                "VAWA-related federal protection theory if the February 4, 2026 materials implicate covered protections",
+                "federal fair-housing discrimination or retaliation theory if protected-status treatment can be tied to later housing actions",
+            ],
+            "state_candidates": [
+                "Oregon discrimination or retaliation theory if the same facts fit state anti-discrimination protections",
+                "state declaratory or injunctive theory keyed to protected-status misuse in housing decisions",
+            ],
+            "proof_gaps": [
+                "identify the exact protected status or VAWA protection implicated by the evidence",
+                "tie the protected-status facts to a later adverse housing decision or threat",
+            ],
+        },
+        "Orientation and Compliance": {
+            "federal_candidates": [
+                "federal housing-program administration theory if orientation procedures were applied in a federally improper way",
+                "retaliation or due-process-adjacent theory only if the orientation delay is linked to a broader protected federal claim",
+            ],
+            "state_candidates": [
+                "state administrative-barrier or unfair housing-process theory",
+                "state injunctive theory focused on delay, obstruction, or arbitrary compliance administration",
+            ],
+            "proof_gaps": [
+                "identify the source and required timing of the orientation process",
+                "show how the delay caused a concrete missed opportunity, denial, or housing prejudice",
+            ],
+        },
+    }
+
+    sections = []
+    for section in list(cause_draft.get("sections") or []):
+        source_section = str(section.get("source_section") or "")
+        mapped = theory_map.get(source_section, {
+            "federal_candidates": ["federal theory requires further legal mapping"],
+            "state_candidates": ["state-law theory requires further legal mapping"],
+            "proof_gaps": ["count-specific theory selection remains open"],
+        })
+        sections.append({
+            "title": str(section.get("title") or "Potential Claim Theme"),
+            "source_section": source_section,
+            "intro": str(section.get("intro") or ""),
+            "element_prompts": list(section.get("element_prompts") or []),
+            "federal_candidates": list(mapped.get("federal_candidates") or []),
+            "state_candidates": list(mapped.get("state_candidates") or []),
+            "proof_gaps": list(mapped.get("proof_gaps") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "section_count": len(sections),
+        "recommended_exhibit_count": int(recommended_filing_manifest.get("recommended_exhibit_count") or 0),
+        "recommended_checklist_flagged_count": int(recommended_filing_checklist.get("flagged_count") or 0),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "sections": sections,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Claim Mapping Memo",
+        "",
+        f"Section count: {len(sections)}",
+        f"Recommended exhibits assembled: {summary['recommended_exhibit_count']}",
+        f"Recommended checklist flagged exhibits: {summary['recommended_checklist_flagged_count']}",
+        "",
+    ]
+    for section in sections:
+        md_lines.extend([
+            f"## {section['title']}",
+            "",
+            f"Source allegation group: {section['source_section']}",
+            f"Current draft theory summary: {section['intro']}",
+            "",
+            "Federal candidate theories:",
+        ])
+        for item in list(section.get("federal_candidates") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Oregon/state candidate theories:"])
+        for item in list(section.get("state_candidates") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Key proof gaps or decisions:"])
+        for item in list(section.get("proof_gaps") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Existing element prompts:"])
+        for item in list(section.get("element_prompts") or []):
+            md_lines.append(f"- {item}")
+        md_lines.append("")
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
 def _draft_jurisdiction_and_venue_lines() -> list[str]:
     return [
         "6. This draft assumes the pleaded claims may include federal housing, fair-housing, VAWA, due-process, or Section 1983 theories arising from the notices, lease actions, documentation demands, and orientation-related conduct reflected in the exhibits, subject to confirmation after attorney review.",
@@ -3362,6 +4038,44 @@ def _build_formal_complaint_draft(
         candidate_final_packet,
         chronology_dir,
     )
+    recommended_filing_manifest = _build_formal_complaint_recommended_filing_manifest(
+        ready_to_file_manifest,
+        candidate_final_packet,
+        withheld_decision_queue,
+        attorney_recommendation_memo,
+        chronology_dir,
+    )
+    recommended_filing_packet = _materialize_recommended_filing_packet(
+        recommended_filing_manifest,
+        candidate_final_packet,
+        chronology_dir,
+    )
+    recommended_filing_checklist = _build_formal_complaint_recommended_filing_checklist(
+        recommended_filing_manifest,
+        recommended_filing_packet,
+        citation_map,
+        chronology_dir,
+    )
+    court_submission_memo = _build_formal_complaint_court_submission_memo(
+        summary,
+        recommended_filing_manifest,
+        recommended_filing_packet,
+        recommended_filing_checklist,
+        chronology_dir,
+    )
+    forum_selection_memo = _build_formal_complaint_forum_selection_memo(
+        summary,
+        recommended_filing_manifest,
+        recommended_filing_checklist,
+        court_submission_memo,
+        chronology_dir,
+    )
+    claim_mapping_memo = _build_formal_complaint_claim_mapping_memo(
+        cause_draft,
+        recommended_filing_manifest,
+        recommended_filing_checklist,
+        chronology_dir,
+    )
 
     summary["filing_checklist_json_path"] = str(filing_checklist.get("json_path") or "")
     summary["filing_checklist_markdown_path"] = str(filing_checklist.get("markdown_path") or "")
@@ -3398,6 +4112,26 @@ def _build_formal_complaint_draft(
     summary["candidate_final_packet_copied_file_count"] = int(candidate_final_packet.get("copied_file_count") or 0)
     summary["attorney_recommendation_memo_json_path"] = str(attorney_recommendation_memo.get("json_path") or "")
     summary["attorney_recommendation_memo_markdown_path"] = str(attorney_recommendation_memo.get("markdown_path") or "")
+    summary["recommended_filing_manifest_json_path"] = str(recommended_filing_manifest.get("json_path") or "")
+    summary["recommended_filing_manifest_markdown_path"] = str(recommended_filing_manifest.get("markdown_path") or "")
+    summary["recommended_filing_manifest_exhibit_count"] = int(recommended_filing_manifest.get("recommended_exhibit_count") or 0)
+    summary["recommended_filing_manifest_email_exhibit_count"] = int(recommended_filing_manifest.get("candidate_email_exhibit_count") or 0)
+    summary["recommended_filing_packet_dir"] = str(recommended_filing_packet.get("packet_dir") or "")
+    summary["recommended_filing_packet_exhibit_count"] = int(recommended_filing_packet.get("recommended_exhibit_count") or 0)
+    summary["recommended_filing_packet_supporting_document_count"] = int(recommended_filing_packet.get("supporting_document_count") or 0)
+    summary["recommended_filing_packet_copied_file_count"] = int(recommended_filing_packet.get("copied_file_count") or 0)
+    summary["recommended_filing_checklist_json_path"] = str(recommended_filing_checklist.get("json_path") or "")
+    summary["recommended_filing_checklist_markdown_path"] = str(recommended_filing_checklist.get("markdown_path") or "")
+    summary["recommended_filing_checklist_flagged_count"] = int(recommended_filing_checklist.get("flagged_count") or 0)
+    summary["court_submission_memo_json_path"] = str(court_submission_memo.get("json_path") or "")
+    summary["court_submission_memo_markdown_path"] = str(court_submission_memo.get("markdown_path") or "")
+    summary["court_submission_memo_forum_item_count"] = int(court_submission_memo.get("forum_dependent_item_count") or 0)
+    summary["forum_selection_memo_json_path"] = str(forum_selection_memo.get("json_path") or "")
+    summary["forum_selection_memo_markdown_path"] = str(forum_selection_memo.get("markdown_path") or "")
+    summary["forum_selection_memo_option_count"] = int(forum_selection_memo.get("option_count") or 0)
+    summary["claim_mapping_memo_json_path"] = str(claim_mapping_memo.get("json_path") or "")
+    summary["claim_mapping_memo_markdown_path"] = str(claim_mapping_memo.get("markdown_path") or "")
+    summary["claim_mapping_memo_section_count"] = int(claim_mapping_memo.get("section_count") or 0)
 
     json_path.write_text(
         json.dumps(
@@ -3420,6 +4154,12 @@ def _build_formal_complaint_draft(
                 "withheld_decision_queue": withheld_decision_queue,
                 "candidate_final_packet": candidate_final_packet,
                 "attorney_recommendation_memo": attorney_recommendation_memo,
+                "recommended_filing_manifest": recommended_filing_manifest,
+                "recommended_filing_packet": recommended_filing_packet,
+                "recommended_filing_checklist": recommended_filing_checklist,
+                "court_submission_memo": court_submission_memo,
+                "forum_selection_memo": forum_selection_memo,
+                "claim_mapping_memo": claim_mapping_memo,
                 "citation_map": citation_map,
             },
             indent=2,
@@ -4171,6 +4911,24 @@ def _markdown_report(payload: dict[str, Any]) -> str:
             )
             lines.append(
                 f"- Candidate final packet paper/email/files: {formal_draft.get('candidate_final_packet_paper_count', 0)}/{formal_draft.get('candidate_final_packet_email_exhibit_count', 0)}/{formal_draft.get('candidate_final_packet_copied_file_count', 0)}"
+            )
+            lines.append(
+                f"- Recommended filing manifest exhibits/email exhibits: {formal_draft.get('recommended_filing_manifest_exhibit_count', 0)}/{formal_draft.get('recommended_filing_manifest_email_exhibit_count', 0)}"
+            )
+            lines.append(
+                f"- Recommended filing packet exhibits/supporting docs/files: {formal_draft.get('recommended_filing_packet_exhibit_count', 0)}/{formal_draft.get('recommended_filing_packet_supporting_document_count', 0)}/{formal_draft.get('recommended_filing_packet_copied_file_count', 0)}"
+            )
+            lines.append(
+                f"- Recommended filing checklist flagged exhibits: {formal_draft.get('recommended_filing_checklist_flagged_count', 0)}"
+            )
+            lines.append(
+                f"- Court submission memo forum-dependent items: {formal_draft.get('court_submission_memo_forum_item_count', 0)}"
+            )
+            lines.append(
+                f"- Forum selection memo options compared: {formal_draft.get('forum_selection_memo_option_count', 0)}"
+            )
+            lines.append(
+                f"- Claim mapping memo sections: {formal_draft.get('claim_mapping_memo_section_count', 0)}"
             )
     return "\n".join(lines).strip() + "\n"
 
