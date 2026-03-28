@@ -24,4 +24,6 @@ research_results/search_indexes/*.summary.json
 research_results/search_indexes/*.vectors.npy
 research_results/adversarial_runs/*
 research_results/grounded_runs/*
-evidence/email_imports/starworks5-gmail-smoke
+research_results/*
+research_results/
+research_results

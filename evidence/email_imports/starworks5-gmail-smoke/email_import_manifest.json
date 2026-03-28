@@ -1,0 +1,507 @@
+{
+  "status": "success",
+  "server": "imap.gmail.com",
+  "username": "starworks5@gmail.com",
+  "auth_mode": "gmail_app_password",
+  "folders": [
+    "[Gmail]/All Mail"
+  ],
+  "search": "ALL",
+  "address_targets": [
+    "starworks5@gmail.com"
+  ],
+  "from_address_targets": [],
+  "recipient_address_targets": [],
+  "matched_email_count": 14,
+  "output_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke",
+  "emails": [
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0001-A-Masterclass-in-Ribbed-Essentials-69c1d8e7.5d0a0220.12f939.9e04SMTPIN_ADDED_BROKEN-mx.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0001-A-Masterclass-in-Ribbed-Essentials-69c1d8e7.5d0a0220.12f939.9e04SMTPIN_ADDED_BROKEN-mx.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0001-A-Masterclass-in-Ribbed-Essentials-69c1d8e7.5d0a0220.12f939.9e04SMTPIN_ADDED_BROKEN-mx.google.com/message.json",
+      "participants": [
+        "hello@universalstandard.com",
+        "info@universalstandard.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "A Masterclass in Ribbed Essentials.",
+      "date": "2026-03-24T00:18:06",
+      "from": "Universal Standard <hello@universalstandard.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<69c1d8e7.5d0a0220.12f939.9e04SMTPIN_ADDED_BROKEN@mx.google.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "A Masterclass in Ribbed Essentials."
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0002-Nvidia-The-Inference-Kingdom-Expands-20260324002746.3.34fac98855d5c87b-mg-d1.substack.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0002-Nvidia-The-Inference-Kingdom-Expands-20260324002746.3.34fac98855d5c87b-mg-d1.substack.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0002-Nvidia-The-Inference-Kingdom-Expands-20260324002746.3.34fac98855d5c87b-mg-d1.substack.com/message.json",
+      "participants": [
+        "reply+361tf4&hk4tx&&ff2da1d6d70b63432998d7825e29a5c915e8a1401b5b40e6ab3cd1bc613d6bf7@mg1.substack.com",
+        "semianalysis@substack.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Nvidia – The Inference Kingdom Expands",
+      "date": "2026-03-24T00:27:46+00:00",
+      "from": "SemiAnalysis <semianalysis@substack.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<20260324002746.3.34fac98855d5c87b@mg-d1.substack.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Nvidia – The Inference Kingdom Expands"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0003-Passenger-rail-wrong-fit-wrong-century-for-Portland-1916678697.624403.1774312319536-cell-3-757846948c-6t7rv",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0003-Passenger-rail-wrong-fit-wrong-century-for-Portland-1916678697.624403.1774312319536-cell-3-757846948c-6t7rv/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0003-Passenger-rail-wrong-fit-wrong-century-for-Portland-1916678697.624403.1774312319536-cell-3-757846948c-6t7rv/message.json",
+      "participants": [
+        "naomi@cascadepolicy.org",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Passenger rail wrong fit, wrong century, for Portland",
+      "date": "2026-03-24T00:31:59+00:00",
+      "from": "Naomi Inman at Cascade Policy Institute <naomi@cascadepolicy.org>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<1916678697.624403.1774312319536@cell-3-757846948c-6t7rv>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Passenger rail wrong fit, wrong century, for Portland"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0004-Breaking-news-Mullin-confirmed-as-homeland-security-secretary-77.3C.47832.C5FD1C96-i-0d75052724a39f4db.mta2vrest.sd.prd.sparkpost",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0004-Breaking-news-Mullin-confirmed-as-homeland-security-secretary-77.3C.47832.C5FD1C96-i-0d75052724a39f4db.mta2vrest.sd.prd.sparkpost/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0004-Breaking-news-Mullin-confirmed-as-homeland-security-secretary-77.3C.47832.C5FD1C96-i-0d75052724a39f4db.mta2vrest.sd.prd.sparkpost/message.json",
+      "participants": [
+        "breakingnews@nytimes.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Breaking news: Mullin confirmed as homeland security secretary",
+      "date": "2026-03-24T00:48:28+00:00",
+      "from": "The New York Times <breakingnews@nytimes.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<77.3C.47832.C5FD1C96@i-0d75052724a39f4db.mta2vrest.sd.prd.sparkpost>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Breaking news: Mullin confirmed as homeland security secretary"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0005-Today-s-deals-curated-for-you-0100019d1d6543f5-b15cc0a9-79b2-4bc3-b2f7-abd2f20694b4-000000-email.amazonses.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0005-Today-s-deals-curated-for-you-0100019d1d6543f5-b15cc0a9-79b2-4bc3-b2f7-abd2f20694b4-000000-email.amazonses.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0005-Today-s-deals-curated-for-you-0100019d1d6543f5-b15cc0a9-79b2-4bc3-b2f7-abd2f20694b4-000000-email.amazonses.com/message.json",
+      "participants": [
+        "starworks5@gmail.com",
+        "store-news@amazon.com"
+      ],
+      "subject": "Today’s deals, curated for you",
+      "date": "2026-03-24T01:11:09+00:00",
+      "from": "\"Amazon.com\" <store-news@amazon.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<0100019d1d6543f5-b15cc0a9-79b2-4bc3-b2f7-abd2f20694b4-000000@email.amazonses.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Today’s deals, curated for you"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0006-Please-advise-Babyxduck-CAMTdTS-Nz3N-zUa9inexB-EC-9cb-F_cVS_t5CQjRNeKqPeszw-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0006-Please-advise-Babyxduck-CAMTdTS-Nz3N-zUa9inexB-EC-9cb-F_cVS_t5CQjRNeKqPeszw-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0006-Please-advise-Babyxduck-CAMTdTS-Nz3N-zUa9inexB-EC-9cb-F_cVS_t5CQjRNeKqPeszw-mail.gmail.com/message.json",
+      "participants": [
+        "jillianmbirkbeck@gmail.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Please advise Babyxduck",
+      "date": "2026-03-23T18:29:39-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "Maltan Lava <Jillianmbirkbeck@gmail.com>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS-Nz3N-zUa9inexB-EC-9cb-F_cVS_t5CQjRNeKqPeszw@mail.gmail.com>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0006-Please-advise-Babyxduck-CAMTdTS-Nz3N-zUa9inexB-EC-9cb-F_cVS_t5CQjRNeKqPeszw-mail.gmail.com/attachments/image.png"
+      ],
+      "attachments": [
+        {
+          "filename": "image.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0006-Please-advise-Babyxduck-CAMTdTS-Nz3N-zUa9inexB-EC-9cb-F_cVS_t5CQjRNeKqPeszw-mail.gmail.com/attachments/image.png",
+          "size": 226720,
+          "content_type": "image/png",
+          "sha256": "7f5ee3f625473d93e56124a188f78a74f74defd31b46a05cff763b0b0d79a637"
+        }
+      ],
+      "evidence_title": "Please advise Babyxduck"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0007-SystemD-Forked-to-Remove-Age-Verification-20260324013043.3.68c0988afddf576f-mg-d1.substack.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0007-SystemD-Forked-to-Remove-Age-Verification-20260324013043.3.68c0988afddf576f-mg-d1.substack.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0007-SystemD-Forked-to-Remove-Age-Verification-20260324013043.3.68c0988afddf576f-mg-d1.substack.com/message.json",
+      "participants": [
+        "lunduke@substack.com",
+        "reply+369tgr&hk4tx&&09f48b5c18707b50dc6d9b08e5d78b949dc5093cd11666f7cdd10f752f14564c@mg1.substack.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "SystemD Forked to Remove Age Verification",
+      "date": "2026-03-24T01:30:43+00:00",
+      "from": "The Lunduke Journal of Technology <lunduke@substack.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<20260324013043.3.68c0988afddf576f@mg-d1.substack.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "SystemD Forked to Remove Age Verification"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0008-3-months-of-Spotify-Premium-for-0-Yes-please-9xgk12r9TvimAzS3V9RT6w-geopod-ismtpd-1",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0008-3-months-of-Spotify-Premium-for-0-Yes-please-9xgk12r9TvimAzS3V9RT6w-geopod-ismtpd-1/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0008-3-months-of-Spotify-Premium-for-0-Yes-please-9xgk12r9TvimAzS3V9RT6w-geopod-ismtpd-1/message.json",
+      "participants": [
+        "no-reply@spotify.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "3 months of Spotify Premium for $0? Yes, please.",
+      "date": "2026-03-24T01:43:54+00:00",
+      "from": "Spotify <no-reply@spotify.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<9xgk12r9TvimAzS3V9RT6w@geopod-ismtpd-1>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "3 months of Spotify Premium for $0? Yes, please."
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0009-New-text-message-from-855-952-2377-19712700855.369638067c3c310ac3d078b042fec5d865a2a258-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0009-New-text-message-from-855-952-2377-19712700855.369638067c3c310ac3d078b042fec5d865a2a258-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0009-New-text-message-from-855-952-2377-19712700855.369638067c3c310ac3d078b042fec5d865a2a258-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.18559522377.qmbx6-tnqt@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from (855) 952-2377",
+      "date": "2026-03-24T03:49:40+00:00",
+      "from": "\"(855) 952-2377\" <19712700855.18559522377.qmbx6-tNqt@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.369638067c3c310ac3d078b042fec5d865a2a258@txt.voice.google.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from (855) 952-2377"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0010-Vintage-Audio-Repair-and-Restoration-and-7-others-are-new-Group-suggestions-for-you-e808f96f-4109-4bb5-9da5-023272a6b5c6-facebookmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0010-Vintage-Audio-Repair-and-Restoration-and-7-others-are-new-Group-suggestions-for-you-e808f96f-4109-4bb5-9da5-023272a6b5c6-facebookmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0010-Vintage-Audio-Repair-and-Restoration-and-7-others-are-new-Group-suggestions-for-you-e808f96f-4109-4bb5-9da5-023272a6b5c6-facebookmail.com/message.json",
+      "participants": [
+        "groupupdates@facebookmail.com",
+        "noreply@facebookmail.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Vintage Audio Repair and Restoration and 7 others are new Group suggestions for you",
+      "date": "2026-03-23T20:55:33-07:00",
+      "from": "Facebook <groupupdates@facebookmail.com>",
+      "to": "Benjamin Barker <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<e808f96f-4109-4bb5-9da5-023272a6b5c6@facebookmail.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Vintage Audio Repair and Restoration and 7 others are new Group suggestions for you"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0011-Joseph-Sadoski-commented-on-Anurag-Saxena-s-post-I-m-going-to-take-another-1006696591.19029842.1774324538719-lva1-app118020.prod.linkedin.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0011-Joseph-Sadoski-commented-on-Anurag-Saxena-s-post-I-m-going-to-take-another-1006696591.19029842.1774324538719-lva1-app118020.prod.linkedin.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0011-Joseph-Sadoski-commented-on-Anurag-Saxena-s-post-I-m-going-to-take-another-1006696591.19029842.1774324538719-lva1-app118020.prod.linkedin.com/message.json",
+      "participants": [
+        "notifications-noreply@linkedin.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Joseph Sadoski commented on Anurag Saxena’s post: I’m going to take another…",
+      "date": "2026-03-24T03:55:38+00:00",
+      "from": "LinkedIn <notifications-noreply@linkedin.com>",
+      "to": "Benjamin Barber <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<1006696591.19029842.1774324538719@lva1-app118020.prod.linkedin.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Joseph Sadoski commented on Anurag Saxena’s post: I’m going to take another…"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0012-Registration-confirmed-for-LLM-x-Law-Hackathon-6-0101019d1e325aeb-ae7e5e9b-e7c2-4b95-8542-34532820c3a5-000000-us-west-2.amazonses.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0012-Registration-confirmed-for-LLM-x-Law-Hackathon-6-0101019d1e325aeb-ae7e5e9b-e7c2-4b95-8542-34532820c3a5-000000-us-west-2.amazonses.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0012-Registration-confirmed-for-LLM-x-Law-Hackathon-6-0101019d1e325aeb-ae7e5e9b-e7c2-4b95-8542-34532820c3a5-000000-us-west-2.amazonses.com/message.json",
+      "participants": [
+        "cal-ca227y3pbfohfmb@calendar.luma-mail.com",
+        "kelaita@law.stanford.edu",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Registration confirmed for LLM x Law Hackathon #6",
+      "date": "2026-03-24T04:55:09+00:00",
+      "from": "LLM x Law Hackathon #6 <cal-Ca227Y3pBfohFmB@calendar.luma-mail.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<0101019d1e325aeb-ae7e5e9b-e7c2-4b95-8542-34532820c3a5-000000@us-west-2.amazonses.com>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0012-Registration-confirmed-for-LLM-x-Law-Hackathon-6-0101019d1e325aeb-ae7e5e9b-e7c2-4b95-8542-34532820c3a5-000000-us-west-2.amazonses.com/attachments/LLM-x-Law-Hackathon-6.pkpass",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0012-Registration-confirmed-for-LLM-x-Law-Hackathon-6-0101019d1e325aeb-ae7e5e9b-e7c2-4b95-8542-34532820c3a5-000000-us-west-2.amazonses.com/attachments/invite.ics"
+      ],
+      "attachments": [
+        {
+          "filename": "LLM-x-Law-Hackathon-6.pkpass",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0012-Registration-confirmed-for-LLM-x-Law-Hackathon-6-0101019d1e325aeb-ae7e5e9b-e7c2-4b95-8542-34532820c3a5-000000-us-west-2.amazonses.com/attachments/LLM-x-Law-Hackathon-6.pkpass",
+          "size": 13358,
+          "content_type": "application/vnd.apple.pkpass",
+          "sha256": "4845d0ba28347f60473eaa55ecc76bcda48bb1ef491672b8bfe313aadf3f269a"
+        },
+        {
+          "filename": "invite.ics",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0012-Registration-confirmed-for-LLM-x-Law-Hackathon-6-0101019d1e325aeb-ae7e5e9b-e7c2-4b95-8542-34532820c3a5-000000-us-west-2.amazonses.com/attachments/invite.ics",
+          "size": 1456,
+          "content_type": "text/calendar",
+          "sha256": "22863efa00af4ac34b58f7aca97e2d6366cb682779d83cf0f71ad01c3e83e974"
+        }
+      ],
+      "evidence_title": "Registration confirmed for LLM x Law Hackathon #6"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0013-New-text-message-from-844-946-0698-19712700855.ea3f2b25ce7e168b94660c6b59989b9facf8b84c-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0013-New-text-message-from-844-946-0698-19712700855.ea3f2b25ce7e168b94660c6b59989b9facf8b84c-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0013-New-text-message-from-844-946-0698-19712700855.ea3f2b25ce7e168b94660c6b59989b9facf8b84c-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.18449460698.9r9stfzl1f@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from (844) 946-0698",
+      "date": "2026-03-24T04:56:14+00:00",
+      "from": "\"(844) 946-0698\" <19712700855.18449460698.9R9sTfzL1F@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.ea3f2b25ce7e168b94660c6b59989b9facf8b84c@txt.voice.google.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from (844) 946-0698"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0014-Security-alert-NxqZFItx_qS8N97xGidk6g-notifications.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0014-Security-alert-NxqZFItx_qS8N97xGidk6g-notifications.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0014-Security-alert-NxqZFItx_qS8N97xGidk6g-notifications.google.com/message.json",
+      "participants": [
+        "no-reply@accounts.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Security alert",
+      "date": "2026-03-24T05:30:04+00:00",
+      "from": "Google <no-reply@accounts.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<NxqZFItx_qS8N97xGidk6g@notifications.google.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Security alert"
+    }
+  ],
+  "mediator_evidence_records": [
+    {
+      "title": "A Masterclass in Ribbed Essentials.",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: A Masterclass in Ribbed Essentials.\nFrom: Universal Standard <hello@universalstandard.com>\nTo: starworks5@gmail.com\nDate: 2026-03-24T00:18:06\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0001-A-Masterclass-in-Ribbed-Essentials-69c1d8e7.5d0a0220.12f939.9e04SMTPIN_ADDED_BROKEN-mx.google.com/message.eml",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0001-A-Masterclass-in-Ribbed-Essentials-69c1d8e7.5d0a0220.12f939.9e04SMTPIN_ADDED_BROKEN-mx.google.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0001-A-Masterclass-in-Ribbed-Essentials-69c1d8e7.5d0a0220.12f939.9e04SMTPIN_ADDED_BROKEN-mx.google.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<69c1d8e7.5d0a0220.12f939.9e04SMTPIN_ADDED_BROKEN@mx.google.com>"
+      }
+    },
+    {
+      "title": "Nvidia – The Inference Kingdom Expands",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Nvidia – The Inference Kingdom Expands\nFrom: SemiAnalysis <semianalysis@substack.com>\nTo: starworks5@gmail.com\nDate: 2026-03-24T00:27:46+00:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0002-Nvidia-The-Inference-Kingdom-Expands-20260324002746.3.34fac98855d5c87b-mg-d1.substack.com/message.eml",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0002-Nvidia-The-Inference-Kingdom-Expands-20260324002746.3.34fac98855d5c87b-mg-d1.substack.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0002-Nvidia-The-Inference-Kingdom-Expands-20260324002746.3.34fac98855d5c87b-mg-d1.substack.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<20260324002746.3.34fac98855d5c87b@mg-d1.substack.com>"
+      }
+    },
+    {
+      "title": "Passenger rail wrong fit, wrong century, for Portland",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Passenger rail wrong fit, wrong century, for Portland\nFrom: Naomi Inman at Cascade Policy Institute <naomi@cascadepolicy.org>\nTo: starworks5@gmail.com\nDate: 2026-03-24T00:31:59+00:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0003-Passenger-rail-wrong-fit-wrong-century-for-Portland-1916678697.624403.1774312319536-cell-3-757846948c-6t7rv/message.eml",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0003-Passenger-rail-wrong-fit-wrong-century-for-Portland-1916678697.624403.1774312319536-cell-3-757846948c-6t7rv/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0003-Passenger-rail-wrong-fit-wrong-century-for-Portland-1916678697.624403.1774312319536-cell-3-757846948c-6t7rv/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<1916678697.624403.1774312319536@cell-3-757846948c-6t7rv>"
+      }
+    },
+    {
+      "title": "Breaking news: Mullin confirmed as homeland security secretary",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Breaking news: Mullin confirmed as homeland security secretary\nFrom: The New York Times <breakingnews@nytimes.com>\nTo: starworks5@gmail.com\nDate: 2026-03-24T00:48:28+00:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0004-Breaking-news-Mullin-confirmed-as-homeland-security-secretary-77.3C.47832.C5FD1C96-i-0d75052724a39f4db.mta2vrest.sd.prd.sparkpost/message.eml",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0004-Breaking-news-Mullin-confirmed-as-homeland-security-secretary-77.3C.47832.C5FD1C96-i-0d75052724a39f4db.mta2vrest.sd.prd.sparkpost/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0004-Breaking-news-Mullin-confirmed-as-homeland-security-secretary-77.3C.47832.C5FD1C96-i-0d75052724a39f4db.mta2vrest.sd.prd.sparkpost/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<77.3C.47832.C5FD1C96@i-0d75052724a39f4db.mta2vrest.sd.prd.sparkpost>"
+      }
+    },
+    {
+      "title": "Today’s deals, curated for you",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Today’s deals, curated for you\nFrom: \"Amazon.com\" <store-news@amazon.com>\nTo: starworks5@gmail.com\nDate: 2026-03-24T01:11:09+00:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0005-Today-s-deals-curated-for-you-0100019d1d6543f5-b15cc0a9-79b2-4bc3-b2f7-abd2f20694b4-000000-email.amazonses.com/message.eml",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0005-Today-s-deals-curated-for-you-0100019d1d6543f5-b15cc0a9-79b2-4bc3-b2f7-abd2f20694b4-000000-email.amazonses.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0005-Today-s-deals-curated-for-you-0100019d1d6543f5-b15cc0a9-79b2-4bc3-b2f7-abd2f20694b4-000000-email.amazonses.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<0100019d1d6543f5-b15cc0a9-79b2-4bc3-b2f7-abd2f20694b4-000000@email.amazonses.com>"
+      }
+    },
+    {
+      "title": "Please advise Babyxduck",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Please advise Babyxduck\nFrom: benjamin barber <starworks5@gmail.com>\nTo: Maltan Lava <Jillianmbirkbeck@gmail.com>\nDate: 2026-03-23T18:29:39-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0006-Please-advise-Babyxduck-CAMTdTS-Nz3N-zUa9inexB-EC-9cb-F_cVS_t5CQjRNeKqPeszw-mail.gmail.com/message.eml",
+      "attachment_names": [
+        "image.png"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0006-Please-advise-Babyxduck-CAMTdTS-Nz3N-zUa9inexB-EC-9cb-F_cVS_t5CQjRNeKqPeszw-mail.gmail.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0006-Please-advise-Babyxduck-CAMTdTS-Nz3N-zUa9inexB-EC-9cb-F_cVS_t5CQjRNeKqPeszw-mail.gmail.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS-Nz3N-zUa9inexB-EC-9cb-F_cVS_t5CQjRNeKqPeszw@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "SystemD Forked to Remove Age Verification",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: SystemD Forked to Remove Age Verification\nFrom: The Lunduke Journal of Technology <lunduke@substack.com>\nTo: starworks5@gmail.com\nDate: 2026-03-24T01:30:43+00:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0007-SystemD-Forked-to-Remove-Age-Verification-20260324013043.3.68c0988afddf576f-mg-d1.substack.com/message.eml",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0007-SystemD-Forked-to-Remove-Age-Verification-20260324013043.3.68c0988afddf576f-mg-d1.substack.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0007-SystemD-Forked-to-Remove-Age-Verification-20260324013043.3.68c0988afddf576f-mg-d1.substack.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<20260324013043.3.68c0988afddf576f@mg-d1.substack.com>"
+      }
+    },
+    {
+      "title": "3 months of Spotify Premium for $0? Yes, please.",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: 3 months of Spotify Premium for $0? Yes, please.\nFrom: Spotify <no-reply@spotify.com>\nTo: starworks5@gmail.com\nDate: 2026-03-24T01:43:54+00:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0008-3-months-of-Spotify-Premium-for-0-Yes-please-9xgk12r9TvimAzS3V9RT6w-geopod-ismtpd-1/message.eml",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0008-3-months-of-Spotify-Premium-for-0-Yes-please-9xgk12r9TvimAzS3V9RT6w-geopod-ismtpd-1/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0008-3-months-of-Spotify-Premium-for-0-Yes-please-9xgk12r9TvimAzS3V9RT6w-geopod-ismtpd-1/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<9xgk12r9TvimAzS3V9RT6w@geopod-ismtpd-1>"
+      }
+    },
+    {
+      "title": "New text message from (855) 952-2377",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: New text message from (855) 952-2377\nFrom: \"(855) 952-2377\" <19712700855.18559522377.qmbx6-tNqt@txt.voice.google.com>\nTo: starworks5@gmail.com\nDate: 2026-03-24T03:49:40+00:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0009-New-text-message-from-855-952-2377-19712700855.369638067c3c310ac3d078b042fec5d865a2a258-txt.voice.google.com/message.eml",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0009-New-text-message-from-855-952-2377-19712700855.369638067c3c310ac3d078b042fec5d865a2a258-txt.voice.google.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0009-New-text-message-from-855-952-2377-19712700855.369638067c3c310ac3d078b042fec5d865a2a258-txt.voice.google.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<+19712700855.369638067c3c310ac3d078b042fec5d865a2a258@txt.voice.google.com>"
+      }
+    },
+    {
+      "title": "Vintage Audio Repair and Restoration and 7 others are new Group suggestions for you",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Vintage Audio Repair and Restoration and 7 others are new Group suggestions for you\nFrom: Facebook <groupupdates@facebookmail.com>\nTo: Benjamin Barker <starworks5@gmail.com>\nDate: 2026-03-23T20:55:33-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0010-Vintage-Audio-Repair-and-Restoration-and-7-others-are-new-Group-suggestions-for-you-e808f96f-4109-4bb5-9da5-023272a6b5c6-facebookmail.com/message.eml",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0010-Vintage-Audio-Repair-and-Restoration-and-7-others-are-new-Group-suggestions-for-you-e808f96f-4109-4bb5-9da5-023272a6b5c6-facebookmail.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0010-Vintage-Audio-Repair-and-Restoration-and-7-others-are-new-Group-suggestions-for-you-e808f96f-4109-4bb5-9da5-023272a6b5c6-facebookmail.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<e808f96f-4109-4bb5-9da5-023272a6b5c6@facebookmail.com>"
+      }
+    },
+    {
+      "title": "Joseph Sadoski commented on Anurag Saxena’s post: I’m going to take another…",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Joseph Sadoski commented on Anurag Saxena’s post: I’m going to take another…\nFrom: LinkedIn <notifications-noreply@linkedin.com>\nTo: Benjamin Barber <starworks5@gmail.com>\nDate: 2026-03-24T03:55:38+00:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0011-Joseph-Sadoski-commented-on-Anurag-Saxena-s-post-I-m-going-to-take-another-1006696591.19029842.1774324538719-lva1-app118020.prod.linkedin.com/message.eml",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0011-Joseph-Sadoski-commented-on-Anurag-Saxena-s-post-I-m-going-to-take-another-1006696591.19029842.1774324538719-lva1-app118020.prod.linkedin.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0011-Joseph-Sadoski-commented-on-Anurag-Saxena-s-post-I-m-going-to-take-another-1006696591.19029842.1774324538719-lva1-app118020.prod.linkedin.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<1006696591.19029842.1774324538719@lva1-app118020.prod.linkedin.com>"
+      }
+    },
+    {
+      "title": "Registration confirmed for LLM x Law Hackathon #6",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Registration confirmed for LLM x Law Hackathon #6\nFrom: LLM x Law Hackathon #6 <cal-Ca227Y3pBfohFmB@calendar.luma-mail.com>\nTo: starworks5@gmail.com\nDate: 2026-03-24T04:55:09+00:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0012-Registration-confirmed-for-LLM-x-Law-Hackathon-6-0101019d1e325aeb-ae7e5e9b-e7c2-4b95-8542-34532820c3a5-000000-us-west-2.amazonses.com/message.eml",
+      "attachment_names": [
+        "LLM-x-Law-Hackathon-6.pkpass",
+        "invite.ics"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0012-Registration-confirmed-for-LLM-x-Law-Hackathon-6-0101019d1e325aeb-ae7e5e9b-e7c2-4b95-8542-34532820c3a5-000000-us-west-2.amazonses.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0012-Registration-confirmed-for-LLM-x-Law-Hackathon-6-0101019d1e325aeb-ae7e5e9b-e7c2-4b95-8542-34532820c3a5-000000-us-west-2.amazonses.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<0101019d1e325aeb-ae7e5e9b-e7c2-4b95-8542-34532820c3a5-000000@us-west-2.amazonses.com>"
+      }
+    },
+    {
+      "title": "New text message from (844) 946-0698",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: New text message from (844) 946-0698\nFrom: \"(844) 946-0698\" <19712700855.18449460698.9R9sTfzL1F@txt.voice.google.com>\nTo: starworks5@gmail.com\nDate: 2026-03-24T04:56:14+00:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0013-New-text-message-from-844-946-0698-19712700855.ea3f2b25ce7e168b94660c6b59989b9facf8b84c-txt.voice.google.com/message.eml",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0013-New-text-message-from-844-946-0698-19712700855.ea3f2b25ce7e168b94660c6b59989b9facf8b84c-txt.voice.google.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0013-New-text-message-from-844-946-0698-19712700855.ea3f2b25ce7e168b94660c6b59989b9facf8b84c-txt.voice.google.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<+19712700855.ea3f2b25ce7e168b94660c6b59989b9facf8b84c@txt.voice.google.com>"
+      }
+    },
+    {
+      "title": "Security alert",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Security alert\nFrom: Google <no-reply@accounts.google.com>\nTo: starworks5@gmail.com\nDate: 2026-03-24T05:30:04+00:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0014-Security-alert-NxqZFItx_qS8N97xGidk6g-notifications.google.com/message.eml",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0014-Security-alert-NxqZFItx_qS8N97xGidk6g-notifications.google.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-gmail-smoke/0014-Security-alert-NxqZFItx_qS8N97xGidk6g-notifications.google.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<NxqZFItx_qS8N97xGidk6g@notifications.google.com>"
+      }
+    }
+  ]
+}

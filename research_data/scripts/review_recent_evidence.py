@@ -2216,6 +2216,81 @@ def _build_formal_complaint_attorney_review_checklist(
     return summary
 
 
+def _build_formal_complaint_ready_to_file_manifest(
+    proposed_filing_packet: dict[str, Any],
+    attorney_review_checklist: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_ready_to_file_manifest.json"
+    md_path = chronology_dir / "formal_complaint_ready_to_file_manifest.md"
+
+    review_by_label = {
+        str(entry.get("label") or ""): entry
+        for entry in list(attorney_review_checklist.get("entries") or [])
+    }
+
+    included_entries: list[dict[str, Any]] = []
+    withheld_entries: list[dict[str, Any]] = []
+    for packet_entry in list(proposed_filing_packet.get("entries") or []):
+        label = str(packet_entry.get("label") or "")
+        review_entry = review_by_label.get(label) or {}
+        severity = str(review_entry.get("severity") or "ok")
+        base_entry = {
+            "packet_order": int(packet_entry.get("packet_order") or 0),
+            "label": label,
+            "suggested_title": str(packet_entry.get("suggested_title") or ""),
+            "source_type": str(packet_entry.get("source_type") or ""),
+            "source_path": str(packet_entry.get("source_path") or ""),
+            "severity": severity,
+            "issues": list(review_entry.get("issues") or []),
+            "materials": list(packet_entry.get("proposed_materials") or []),
+        }
+        if severity == "ok":
+            included_entries.append(base_entry)
+        else:
+            withheld_entries.append(base_entry)
+
+    summary = {
+        "status": "success",
+        "included_count": len(included_entries),
+        "withheld_count": len(withheld_entries),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "included_entries": included_entries,
+        "withheld_entries": withheld_entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Ready-to-File Manifest",
+        "",
+        f"Included exhibits: {len(included_entries)}",
+        f"Withheld exhibits pending review: {len(withheld_entries)}",
+        "",
+        "## Included",
+        "",
+    ]
+    if included_entries:
+        for entry in included_entries:
+            md_lines.append(
+                f"- {entry['packet_order']}. Exhibit {entry['label']} | {entry['suggested_title']} | {entry['source_type']} | {entry['source_path']}"
+            )
+    else:
+        md_lines.append("No exhibits currently auto-included.")
+
+    md_lines.extend(["", "## Withheld Pending Review", ""])
+    if withheld_entries:
+        for entry in withheld_entries:
+            issues = ", ".join(list(entry.get("issues") or [])) or "none"
+            md_lines.append(
+                f"- {entry['packet_order']}. Exhibit {entry['label']} | {entry['suggested_title']} | severity={entry['severity']} | issues={issues}"
+            )
+    else:
+        md_lines.append("No exhibits are currently withheld.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
 def _build_formal_complaint_draft(
     complaint_ready: dict[str, Any],
     cause_draft: dict[str, Any],
@@ -2433,6 +2508,11 @@ def _build_formal_complaint_draft(
         cite_check_matrix,
         chronology_dir,
     )
+    ready_to_file_manifest = _build_formal_complaint_ready_to_file_manifest(
+        proposed_filing_packet,
+        attorney_review_checklist,
+        chronology_dir,
+    )
 
     summary["filing_checklist_json_path"] = str(filing_checklist.get("json_path") or "")
     summary["filing_checklist_markdown_path"] = str(filing_checklist.get("markdown_path") or "")
@@ -2450,6 +2530,10 @@ def _build_formal_complaint_draft(
     summary["attorney_review_checklist_json_path"] = str(attorney_review_checklist.get("json_path") or "")
     summary["attorney_review_checklist_markdown_path"] = str(attorney_review_checklist.get("markdown_path") or "")
     summary["attorney_review_checklist_flagged_count"] = int(attorney_review_checklist.get("flagged_count") or 0)
+    summary["ready_to_file_manifest_json_path"] = str(ready_to_file_manifest.get("json_path") or "")
+    summary["ready_to_file_manifest_markdown_path"] = str(ready_to_file_manifest.get("markdown_path") or "")
+    summary["ready_to_file_manifest_included_count"] = int(ready_to_file_manifest.get("included_count") or 0)
+    summary["ready_to_file_manifest_withheld_count"] = int(ready_to_file_manifest.get("withheld_count") or 0)
 
     json_path.write_text(
         json.dumps(
@@ -2466,6 +2550,7 @@ def _build_formal_complaint_draft(
                 "proposed_filing_packet": proposed_filing_packet,
                 "cite_check_matrix": cite_check_matrix,
                 "attorney_review_checklist": attorney_review_checklist,
+                "ready_to_file_manifest": ready_to_file_manifest,
                 "citation_map": citation_map,
             },
             indent=2,
@@ -3202,6 +3287,9 @@ def _markdown_report(payload: dict[str, Any]) -> str:
             )
             lines.append(
                 f"- Formal complaint attorney review checklist flagged exhibits: {formal_draft.get('attorney_review_checklist_flagged_count', 0)}"
+            )
+            lines.append(
+                f"- Formal complaint ready-to-file manifest included/withheld: {formal_draft.get('ready_to_file_manifest_included_count', 0)}/{formal_draft.get('ready_to_file_manifest_withheld_count', 0)}"
             )
     return "\n".join(lines).strip() + "\n"
 

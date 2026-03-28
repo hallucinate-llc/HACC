@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VEVENT
+DTSTART:20260412T153000Z
+DTEND:20260413T040000Z
+DTSTAMP:20260324T045509Z
+ORGANIZER;CN="LLM x Law Hackathon #6":MAILTO:calendar-invite@lu.ma
+UID:evt-kQ4BhGnuXG6nCMQ@events.lu.ma
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=starw
+ orks5@gmail.com;X-NUM-GUESTS=0:mailto:starworks5@gmail.com
+SUMMARY:LLM x Law Hackathon #6
+DESCRIPTION:Get up-to-date information at: https://luma.com/event/evt-kQ4B
+ hGnuXG6nCMQ?pk=g-ftEadpamiYyfc4u\n\nAddress:\nStanford Law School\nStanfor
+ d, California\nUnited States\n\nAs AI continues to push the frontier of in
+ dustries across the globe, the legal sector is no exception. LLMs, a found
+ ation model capable of understanding and generating natural language text,
+  are already transforming the legal industry as we know it. It is now esse
+ ntial to stay on the cutting edge to be competitive.\nThis hackathon aims 
+ to build solutions that consider the safe and trustworthy integration of L
+ LMs for legal work. Join us for the sixth edition of the LLM x Law Hackath
+ on! We encourage you to think boldly, creatively, and across multiple dime
+ nsions!\nHosted by: Stanford Center for…\n\nHosted by Pierre-Loic Doulce
+ t & Roland Vogl
+LOCATION:Stanford Law School, 559 Nathan Abbott Way, Stanford, CA 94305, U
+ SA
+GEO:37.423876799999995;-122.1674405
+SEQUENCE:0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
