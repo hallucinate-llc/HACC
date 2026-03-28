@@ -1,0 +1,249 @@
+{
+  "status": "success",
+  "entry_count": 13,
+  "flagged_count": 2,
+  "json_path": "/home/barberb/HACC/research_results/evidence_review_20260328_032529/chronology/formal_complaint_attorney_review_checklist.json",
+  "markdown_path": "/home/barberb/HACC/research_results/evidence_review_20260328_032529/chronology/formal_complaint_attorney_review_checklist.md",
+  "entries": [
+    {
+      "label": "A",
+      "packet_order": 1,
+      "suggested_title": "HACC add to lease PDF",
+      "source_type": "paper_pdf",
+      "paragraph_numbers": [
+        8,
+        32
+      ],
+      "citation_count": 2,
+      "severity": "ok",
+      "issues": [],
+      "deferred_attachment_count": 0,
+      "duplicate_heavy_count": 0,
+      "low_signal_count": 0,
+      "representative_message_count": 0,
+      "retained_attachment_count": 0
+    },
+    {
+      "label": "B",
+      "packet_order": 2,
+      "suggested_title": "HACC phase2 2024 PDF",
+      "source_type": "paper_pdf",
+      "paragraph_numbers": [
+        9,
+        25
+      ],
+      "citation_count": 2,
+      "severity": "ok",
+      "issues": [],
+      "deferred_attachment_count": 0,
+      "duplicate_heavy_count": 0,
+      "low_signal_count": 0,
+      "representative_message_count": 0,
+      "retained_attachment_count": 0
+    },
+    {
+      "label": "C",
+      "packet_order": 3,
+      "suggested_title": "HACC 90 day notice 2 PDF",
+      "source_type": "paper_pdf",
+      "paragraph_numbers": [
+        10,
+        26
+      ],
+      "citation_count": 2,
+      "severity": "ok",
+      "issues": [],
+      "deferred_attachment_count": 0,
+      "duplicate_heavy_count": 0,
+      "low_signal_count": 0,
+      "representative_message_count": 0,
+      "retained_attachment_count": 0
+    },
+    {
+      "label": "D",
+      "packet_order": 4,
+      "suggested_title": "HACC 90 day notice PDF",
+      "source_type": "paper_pdf",
+      "paragraph_numbers": [
+        11,
+        27
+      ],
+      "citation_count": 2,
+      "severity": "ok",
+      "issues": [],
+      "deferred_attachment_count": 0,
+      "duplicate_heavy_count": 0,
+      "low_signal_count": 0,
+      "representative_message_count": 0,
+      "retained_attachment_count": 0
+    },
+    {
+      "label": "E",
+      "packet_order": 5,
+      "suggested_title": "HACC 90 day notice 3 PDF",
+      "source_type": "paper_pdf",
+      "paragraph_numbers": [
+        12
+      ],
+      "citation_count": 1,
+      "severity": "ok",
+      "issues": [],
+      "deferred_attachment_count": 0,
+      "duplicate_heavy_count": 0,
+      "low_signal_count": 0,
+      "representative_message_count": 0,
+      "retained_attachment_count": 0
+    },
+    {
+      "label": "F",
+      "packet_order": 6,
+      "suggested_title": "HACC vawa violation PDF",
+      "source_type": "paper_pdf",
+      "paragraph_numbers": [
+        13,
+        33
+      ],
+      "citation_count": 2,
+      "severity": "ok",
+      "issues": [],
+      "deferred_attachment_count": 0,
+      "duplicate_heavy_count": 0,
+      "low_signal_count": 0,
+      "representative_message_count": 0,
+      "retained_attachment_count": 0
+    },
+    {
+      "label": "G",
+      "packet_order": 7,
+      "suggested_title": "HACC Jan 2026 blossom PDF",
+      "source_type": "paper_pdf",
+      "paragraph_numbers": [
+        14,
+        34
+      ],
+      "citation_count": 2,
+      "severity": "ok",
+      "issues": [],
+      "deferred_attachment_count": 0,
+      "duplicate_heavy_count": 0,
+      "low_signal_count": 0,
+      "representative_message_count": 0,
+      "retained_attachment_count": 0
+    },
+    {
+      "label": "H",
+      "packet_order": 8,
+      "suggested_title": "HACC first amendment PDF",
+      "source_type": "paper_pdf",
+      "paragraph_numbers": [
+        15,
+        45
+      ],
+      "citation_count": 2,
+      "severity": "ok",
+      "issues": [],
+      "deferred_attachment_count": 0,
+      "duplicate_heavy_count": 0,
+      "low_signal_count": 0,
+      "representative_message_count": 0,
+      "retained_attachment_count": 0
+    },
+    {
+      "label": "I",
+      "packet_order": 9,
+      "suggested_title": "HACC financial requests PDF",
+      "source_type": "paper_pdf",
+      "paragraph_numbers": [
+        16,
+        39
+      ],
+      "citation_count": 2,
+      "severity": "ok",
+      "issues": [],
+      "deferred_attachment_count": 0,
+      "duplicate_heavy_count": 0,
+      "low_signal_count": 0,
+      "representative_message_count": 0,
+      "retained_attachment_count": 0
+    },
+    {
+      "label": "J",
+      "packet_order": 10,
+      "suggested_title": "Email Thread Export: starworks5 additional info import",
+      "source_type": "email_manifest",
+      "paragraph_numbers": [
+        17,
+        19,
+        40
+      ],
+      "citation_count": 3,
+      "severity": "high",
+      "issues": [
+        "metadata-only-email-entries-present",
+        "deferred-attachments-exceed-retained",
+        "high-duplicate-pressure",
+        "many-low-signal-images"
+      ],
+      "deferred_attachment_count": 57,
+      "duplicate_heavy_count": 49,
+      "low_signal_count": 8,
+      "representative_message_count": 12,
+      "retained_attachment_count": 19
+    },
+    {
+      "label": "K",
+      "packet_order": 11,
+      "suggested_title": "HACC steering PDF",
+      "source_type": "paper_pdf",
+      "paragraph_numbers": [
+        18
+      ],
+      "citation_count": 1,
+      "severity": "ok",
+      "issues": [],
+      "deferred_attachment_count": 0,
+      "duplicate_heavy_count": 0,
+      "low_signal_count": 0,
+      "representative_message_count": 0,
+      "retained_attachment_count": 0
+    },
+    {
+      "label": "L",
+      "packet_order": 12,
+      "suggested_title": "HACC inspection PDF",
+      "source_type": "paper_pdf",
+      "paragraph_numbers": [
+        20
+      ],
+      "citation_count": 1,
+      "severity": "ok",
+      "issues": [],
+      "deferred_attachment_count": 0,
+      "duplicate_heavy_count": 0,
+      "low_signal_count": 0,
+      "representative_message_count": 0,
+      "retained_attachment_count": 0
+    },
+    {
+      "label": "M",
+      "packet_order": 13,
+      "suggested_title": "Email Thread Export: starworks5 ktilton orientation import",
+      "source_type": "email_manifest",
+      "paragraph_numbers": [
+        21,
+        50
+      ],
+      "citation_count": 2,
+      "severity": "high",
+      "issues": [
+        "metadata-only-email-entries-present",
+        "high-duplicate-pressure"
+      ],
+      "deferred_attachment_count": 18,
+      "duplicate_heavy_count": 17,
+      "low_signal_count": 1,
+      "representative_message_count": 9,
+      "retained_attachment_count": 14
+    }
+  ]
+}

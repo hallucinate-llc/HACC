@@ -2094,6 +2094,128 @@ def _build_formal_complaint_cite_check_matrix(
     return summary
 
 
+def _build_formal_complaint_attorney_review_checklist(
+    filing_checklist: dict[str, Any],
+    attachment_triage: dict[str, Any],
+    email_exhibit_recommendations: dict[str, Any],
+    proposed_filing_packet: dict[str, Any],
+    cite_check_matrix: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_attorney_review_checklist.json"
+    md_path = chronology_dir / "formal_complaint_attorney_review_checklist.md"
+
+    triage_by_exhibit: dict[str, list[dict[str, Any]]] = {}
+    for entry in list(attachment_triage.get("attachments") or []):
+        triage_by_exhibit.setdefault(str(entry.get("exhibit_label") or ""), []).append(entry)
+
+    recommendation_by_exhibit = {
+        str(thread.get("exhibit_label") or ""): thread
+        for thread in list(email_exhibit_recommendations.get("threads") or [])
+    }
+    packet_by_exhibit = {
+        str(entry.get("label") or ""): entry
+        for entry in list(proposed_filing_packet.get("entries") or [])
+    }
+    cite_check_by_exhibit = {
+        str(entry.get("label") or ""): entry
+        for entry in list(cite_check_matrix.get("entries") or [])
+    }
+
+    checklist_entries: list[dict[str, Any]] = []
+    flagged_count = 0
+    for entry in list(filing_checklist.get("entries") or []):
+        label = str(entry.get("label") or "")
+        source_type = str(entry.get("source_type") or "")
+        triage_entries = list(triage_by_exhibit.get(label) or [])
+        deferred_count = sum(1 for item in triage_entries if str(item.get("recommended_action") or "") != "likely_keep")
+        duplicate_heavy_count = sum(1 for item in triage_entries if int(item.get("duplicate_count") or 0) > 1)
+        low_signal_count = sum(1 for item in triage_entries if str(item.get("recommended_action") or "") == "review_low_signal_image")
+        recommendation_thread = recommendation_by_exhibit.get(label) or {}
+        packet_entry = packet_by_exhibit.get(label) or {}
+        cite_check_entry = cite_check_by_exhibit.get(label) or {}
+
+        issues: list[str] = []
+        if not bool(entry.get("source_exists")):
+            issues.append("missing-source-file")
+        if int(entry.get("citation_count") or 0) == 0:
+            issues.append("uncited-exhibit")
+        if source_type == "email_manifest":
+            saved_message_count = int(entry.get("saved_message_count") or 0)
+            message_count = int(entry.get("message_count") or 0)
+            retained_count = int(recommendation_thread.get("recommended_attachment_count") or 0)
+            recommendation_deferred_count = int(recommendation_thread.get("deferred_attachment_count") or 0)
+            representative_message_count = int(packet_entry.get("representative_message_count") or 0)
+            if saved_message_count < message_count:
+                issues.append("metadata-only-email-entries-present")
+            if recommendation_deferred_count > retained_count:
+                issues.append("deferred-attachments-exceed-retained")
+            if duplicate_heavy_count >= 10:
+                issues.append("high-duplicate-pressure")
+            if low_signal_count >= 3:
+                issues.append("many-low-signal-images")
+            if representative_message_count == 0:
+                issues.append("no-representative-email-messages")
+        if len(list(cite_check_entry.get("materials") or [])) == 0:
+            issues.append("no-packet-materials")
+
+        severity = "ok"
+        if issues:
+            severity = "review"
+        if "missing-source-file" in issues or "no-packet-materials" in issues:
+            severity = "critical"
+        elif "metadata-only-email-entries-present" in issues or "high-duplicate-pressure" in issues:
+            severity = "high"
+
+        if severity != "ok":
+            flagged_count += 1
+
+        checklist_entries.append({
+            "label": label,
+            "packet_order": int(entry.get("packet_order") or 0),
+            "suggested_title": str(entry.get("suggested_title") or ""),
+            "source_type": source_type,
+            "paragraph_numbers": list(entry.get("paragraph_numbers") or []),
+            "citation_count": int(entry.get("citation_count") or 0),
+            "severity": severity,
+            "issues": issues,
+            "deferred_attachment_count": deferred_count,
+            "duplicate_heavy_count": duplicate_heavy_count,
+            "low_signal_count": low_signal_count,
+            "representative_message_count": int(packet_entry.get("representative_message_count") or 0),
+            "retained_attachment_count": int(packet_entry.get("retained_attachment_count") or 0),
+        })
+
+    summary = {
+        "status": "success",
+        "entry_count": len(checklist_entries),
+        "flagged_count": flagged_count,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "entries": checklist_entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Attorney Review Checklist",
+        "",
+        f"Entry count: {len(checklist_entries)}",
+        f"Flagged count: {flagged_count}",
+        "",
+    ]
+    if checklist_entries:
+        for entry in checklist_entries:
+            paragraphs = ", ".join(str(number) for number in list(entry.get("paragraph_numbers") or [])) or "not cited"
+            issues = ", ".join(list(entry.get("issues") or [])) or "none"
+            md_lines.append(
+                f"- Exhibit {entry['label']} | severity={entry['severity']} | paragraphs={paragraphs} | citations={entry['citation_count']} | representative_messages={entry['representative_message_count']} | retained_attachments={entry['retained_attachment_count']} | deferred_attachments={entry['deferred_attachment_count']} | issues={issues}"
+            )
+    else:
+        md_lines.append("No attorney review checklist entries generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
 def _build_formal_complaint_draft(
     complaint_ready: dict[str, Any],
     cause_draft: dict[str, Any],
@@ -2303,6 +2425,14 @@ def _build_formal_complaint_draft(
         citation_map,
         chronology_dir,
     )
+    attorney_review_checklist = _build_formal_complaint_attorney_review_checklist(
+        filing_checklist,
+        attachment_triage,
+        email_exhibit_recommendations,
+        proposed_filing_packet,
+        cite_check_matrix,
+        chronology_dir,
+    )
 
     summary["filing_checklist_json_path"] = str(filing_checklist.get("json_path") or "")
     summary["filing_checklist_markdown_path"] = str(filing_checklist.get("markdown_path") or "")
@@ -2317,6 +2447,9 @@ def _build_formal_complaint_draft(
     summary["cite_check_matrix_json_path"] = str(cite_check_matrix.get("json_path") or "")
     summary["cite_check_matrix_markdown_path"] = str(cite_check_matrix.get("markdown_path") or "")
     summary["cite_check_matrix_entry_count"] = int(cite_check_matrix.get("entry_count") or 0)
+    summary["attorney_review_checklist_json_path"] = str(attorney_review_checklist.get("json_path") or "")
+    summary["attorney_review_checklist_markdown_path"] = str(attorney_review_checklist.get("markdown_path") or "")
+    summary["attorney_review_checklist_flagged_count"] = int(attorney_review_checklist.get("flagged_count") or 0)
 
     json_path.write_text(
         json.dumps(
@@ -2332,6 +2465,7 @@ def _build_formal_complaint_draft(
                 "email_exhibit_recommendations": email_exhibit_recommendations,
                 "proposed_filing_packet": proposed_filing_packet,
                 "cite_check_matrix": cite_check_matrix,
+                "attorney_review_checklist": attorney_review_checklist,
                 "citation_map": citation_map,
             },
             indent=2,
@@ -3065,6 +3199,9 @@ def _markdown_report(payload: dict[str, Any]) -> str:
             )
             lines.append(
                 f"- Formal complaint cite-check matrix entries: {formal_draft.get('cite_check_matrix_entry_count', 0)}"
+            )
+            lines.append(
+                f"- Formal complaint attorney review checklist flagged exhibits: {formal_draft.get('attorney_review_checklist_flagged_count', 0)}"
             )
     return "\n".join(lines).strip() + "\n"
 
