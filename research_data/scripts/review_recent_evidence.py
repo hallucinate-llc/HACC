@@ -1420,8 +1420,123 @@ def _exhibit_handling_note(source_path: str) -> str:
     if source_type == "paper_pdf":
         return "Attach the underlying PDF as the exhibit file."
     if source_type == "email_manifest":
-        return "Use the manifest with underlying saved messages or representative thread exports if filing requires message-level exhibits."
+        return "Use the manifest with underlying saved messages or representative thread exports; see the email exhibit manifest for message-level detail."
     return "Verify filing format before attaching this source."
+
+
+def _subexhibit_label(exhibit_label: str, value: int) -> str:
+    return f"{exhibit_label}-{value}"
+
+
+def _normalized_saved_email_path(value: str) -> str:
+    cleaned = str(value or "").strip()
+    if cleaned in {"", "."}:
+        return ""
+    return cleaned
+
+
+def _build_email_exhibit_manifest(
+    exhibit_packet: list[dict[str, Any]],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_email_exhibits.json"
+    md_path = chronology_dir / "formal_complaint_email_exhibits.md"
+
+    threads: list[dict[str, Any]] = []
+    total_messages = 0
+    total_attachments = 0
+    total_saved_messages = 0
+    for packet_entry in exhibit_packet:
+        if str(packet_entry.get("source_type") or "") != "email_manifest":
+            continue
+        source_path = str(packet_entry.get("source_path") or "")
+        manifest_path = REPO_ROOT / source_path
+        manifest = _read_json(manifest_path)
+        messages: list[dict[str, Any]] = []
+        for index, email in enumerate(list(manifest.get("emails") or []), start=1):
+            subject = _normalize_email_subject(str(email.get("subject") or ""))
+            if subject.lower().startswith("automatic reply"):
+                continue
+            attachments = []
+            for attachment in list(email.get("attachments") or []):
+                attachments.append({
+                    "filename": str(attachment.get("filename") or ""),
+                    "path": str(attachment.get("path") or ""),
+                    "content_type": str(attachment.get("content_type") or ""),
+                    "size": int(attachment.get("size") or 0),
+                })
+            email_path = _normalized_saved_email_path(str(email.get("email_path") or ""))
+            parsed_path = _normalized_saved_email_path(str(email.get("parsed_path") or ""))
+            if email_path:
+                total_saved_messages += 1
+            messages.append({
+                "subexhibit": _subexhibit_label(str(packet_entry.get("label") or "?"), len(messages) + 1),
+                "date": str(email.get("date") or ""),
+                "from": str(email.get("from") or ""),
+                "to": str(email.get("to") or ""),
+                "subject": subject,
+                "email_path": email_path,
+                "parsed_path": parsed_path,
+                "bundle_dir": str(email.get("bundle_dir") or ""),
+                "has_saved_message": bool(email_path),
+                "attachment_count": len(attachments),
+                "attachments": attachments,
+            })
+        total_messages += len(messages)
+        total_attachments += sum(int(message.get("attachment_count") or 0) for message in messages)
+        threads.append({
+            "exhibit_label": str(packet_entry.get("label") or ""),
+            "source_path": source_path,
+            "source_name": str(packet_entry.get("source_name") or ""),
+            "suggested_title": str(packet_entry.get("suggested_title") or ""),
+            "message_count": len(messages),
+            "messages": messages,
+        })
+
+    summary = {
+        "status": "success",
+        "thread_count": len(threads),
+        "message_count": total_messages,
+        "attachment_count": total_attachments,
+        "saved_message_count": total_saved_messages,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "threads": threads,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Email Exhibits",
+        "",
+        f"Thread count: {len(threads)}",
+        f"Message count: {total_messages}",
+        f"Saved message files: {total_saved_messages}",
+        f"Attachment count: {total_attachments}",
+        "",
+    ]
+    if threads:
+        for thread in threads:
+            md_lines.extend([
+                f"## Exhibit {thread['exhibit_label']}: {thread['suggested_title']}",
+                "",
+                f"Source: {thread['source_path']}",
+                f"Message count: {thread['message_count']}",
+                "",
+            ])
+            for message in thread["messages"]:
+                email_path_display = message["email_path"] or "unavailable (metadata-only entry)"
+                md_lines.append(
+                    f"- {message['subexhibit']} | {message['date']} | {message['subject']} | from {message['from']} | to {message['to']} | attachments={message['attachment_count']} | eml={email_path_display}"
+                )
+                for attachment in message["attachments"]:
+                    md_lines.append(
+                        f"- attachment: {attachment['filename']} | {attachment['content_type']} | size={attachment['size']} | {attachment['path']}"
+                    )
+            md_lines.append("")
+    else:
+        md_lines.append("No email exhibit threads generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
 
 
 def _build_formal_complaint_draft(
@@ -1479,6 +1594,7 @@ def _build_formal_complaint_draft(
         }
         for index, entry in enumerate(exhibit_index, start=1)
     ]
+    email_exhibit_manifest = _build_email_exhibit_manifest(exhibit_packet, chronology_dir)
 
     citation_map: list[dict[str, Any]] = []
 
@@ -1495,6 +1611,10 @@ def _build_formal_complaint_draft(
         "citation_markdown_path": str(citation_md_path),
         "packet_json_path": str(packet_json_path),
         "packet_markdown_path": str(packet_md_path),
+        "email_exhibit_json_path": str(email_exhibit_manifest.get("json_path") or ""),
+        "email_exhibit_markdown_path": str(email_exhibit_manifest.get("markdown_path") or ""),
+        "email_exhibit_thread_count": int(email_exhibit_manifest.get("thread_count") or 0),
+        "email_exhibit_message_count": int(email_exhibit_manifest.get("message_count") or 0),
     }
 
     md_lines = [
@@ -1610,6 +1730,7 @@ def _build_formal_complaint_draft(
                 "counts": count_blocks,
                 "exhibit_index": exhibit_index,
                 "exhibit_packet": exhibit_packet,
+                "email_exhibit_manifest": email_exhibit_manifest,
                 "citation_map": citation_map,
             },
             indent=2,
@@ -2328,6 +2449,9 @@ def _markdown_report(payload: dict[str, Any]) -> str:
             )
             lines.append(
                 f"- Formal complaint exhibits indexed: {formal_draft.get('exhibit_count', 0)}"
+            )
+            lines.append(
+                f"- Formal complaint email exhibit messages indexed: {formal_draft.get('email_exhibit_message_count', 0)}"
             )
     return "\n".join(lines).strip() + "\n"
 
