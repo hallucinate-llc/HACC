@@ -5,6 +5,7 @@ import argparse
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 from dataclasses import dataclass
@@ -1149,6 +1150,8 @@ def _build_complaint_skeleton(cause_draft: dict[str, Any], complaint_ready: dict
     chronology_paragraphs = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
     json_path = chronology_dir / "complaint_skeleton.json"
     md_path = chronology_dir / "complaint_skeleton.md"
+    jurisdiction_lines = [re.sub(r"^\d+\.\s*", "", line) for line in _draft_jurisdiction_and_venue_lines()]
+    prayer_lines = _draft_prayer_for_relief_lines()
 
     factual_background = chronology_paragraphs[: min(12, len(chronology_paragraphs))]
     cause_blocks = []
@@ -1198,14 +1201,13 @@ def _build_complaint_skeleton(cause_draft: dict[str, Any], complaint_ready: dict
         "",
         "## Parties",
         "",
-        "1. Plaintiff: [fill in].",
-        "2. Defendant Housing Authority of Clackamas County: [fill in].",
-        "3. Additional defendants if supported by evidence: [fill in].",
+        "1. Plaintiffs are Jane Cortez and Benjamin Barber, subject to confirmation of full legal names, capacity, and proper party alignment.",
+        "2. Defendant Housing Authority of Clackamas County is the public housing authority alleged to have issued the challenged notices, lease actions, documentation demands, and orientation-related communications reflected in the evidence set.",
+        "3. Additional defendants may be named if discovery supports individual-capacity, supervisory, or agency-role allegations tied to the housing decisions summarized below.",
         "",
         "## Jurisdiction and Venue",
         "",
-        "1. Jurisdiction basis: [fill in].",
-        "2. Venue basis: [fill in].",
+        *[f"{index}. {line}" for index, line in enumerate(jurisdiction_lines, start=1)],
         "",
         "## Factual Background",
         "",
@@ -1218,6 +1220,7 @@ def _build_complaint_skeleton(cause_draft: dict[str, Any], complaint_ready: dict
     md_lines.extend(["", "## Causes of Action", ""])
     if cause_blocks:
         for idx, block in enumerate(cause_blocks, start=1):
+            theory = _draft_count_theory(block)
             md_lines.extend([
                 f"### Count {idx}: {block['title']}",
                 "",
@@ -1232,7 +1235,7 @@ def _build_complaint_skeleton(cause_draft: dict[str, Any], complaint_ready: dict
             md_lines.extend(f"{entry['number']}. {entry['paragraph']}" for entry in block["paragraphs"])
             md_lines.extend([
                 "",
-                "Requested theory language: [fill in legal elements and requested relief].",
+                f"Requested theory language: {theory['claim_label']}. {theory['theory']}",
                 "",
             ])
     else:
@@ -1241,13 +1244,13 @@ def _build_complaint_skeleton(cause_draft: dict[str, Any], complaint_ready: dict
     md_lines.extend([
         "## Prayer for Relief",
         "",
-        "1. Declaratory relief: [fill in].",
-        "2. Injunctive relief: [fill in].",
-        "3. Damages, fees, and costs if applicable: [fill in].",
+        f"1. {prayer_lines[0]}",
+        f"2. {prayer_lines[1]}",
+        f"3. {prayer_lines[2]}",
         "",
         "## Jury Demand",
         "",
-        "[Fill in if applicable].",
+        "Plaintiffs demand a jury on all issues so triable, if applicable.",
     ])
     md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
     return summary
@@ -1267,12 +1270,19 @@ def _build_narrative_complaint_draft(
     count_summaries = []
     for section in cause_sections:
         entries = list(section.get("paragraphs") or [])
+        theory = _draft_count_theory({
+            "title": str(section.get("title") or "Potential Claim Theme"),
+            "source_section": str(section.get("source_section") or ""),
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
         count_summaries.append({
             "title": str(section.get("title") or "Potential Claim Theme"),
             "intro": str(section.get("intro") or ""),
             "element_prompts": list(section.get("element_prompts") or []),
             "facts": [_narrative_fact_from_entry(entry) for entry in entries[:3]],
+            "theory": theory,
         })
+    prayer_lines = _draft_prayer_for_relief_lines()
 
     summary = {
         "status": "success",
@@ -1322,16 +1332,20 @@ def _build_narrative_complaint_draft(
             md_lines.extend(f"- {prompt}" for prompt in count["element_prompts"])
             md_lines.extend(["", "Representative Allegations:"])
             md_lines.extend(f"- {fact}" for fact in count["facts"])
-            md_lines.extend(["", "Draft theory paragraph: [fill in].", ""])
+            md_lines.extend([
+                "",
+                f"Draft theory paragraph: {count['theory']['claim_label']}. {count['theory']['theory']}",
+                "",
+            ])
     else:
         md_lines.append("No count summaries generated.")
 
     md_lines.extend([
         "## Relief Requested",
         "",
-        "- Declaratory relief: [fill in].",
-        "- Injunctive relief: [fill in].",
-        "- Damages, fees, and costs if applicable: [fill in].",
+        f"- {prayer_lines[0]}",
+        f"- {prayer_lines[1]}",
+        f"- {prayer_lines[2]}",
     ])
     md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
     return summary
@@ -2291,6 +2305,801 @@ def _build_formal_complaint_ready_to_file_manifest(
     return summary
 
 
+def _safe_packet_name(value: str) -> str:
+    cleaned = re.sub(r"[^A-Za-z0-9._-]+", "_", value.strip())
+    cleaned = cleaned.strip("._")
+    return cleaned or "item"
+
+
+def _materialize_ready_to_file_packet(
+    ready_to_file_manifest: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    packet_dir = chronology_dir / "formal_complaint_ready_to_file_packet"
+    included_dir = packet_dir / "included"
+    withheld_dir = packet_dir / "withheld"
+    included_dir.mkdir(parents=True, exist_ok=True)
+    withheld_dir.mkdir(parents=True, exist_ok=True)
+
+    copied_files: list[dict[str, Any]] = []
+    for entry in list(ready_to_file_manifest.get("included_entries") or []):
+        source_type = str(entry.get("source_type") or "")
+        if source_type != "paper_pdf":
+            continue
+        source_path = REPO_ROOT / str(entry.get("source_path") or "")
+        if not source_path.exists() or not source_path.is_file():
+            continue
+        filename = f"{int(entry.get('packet_order') or 0):02d}_Exhibit_{_safe_packet_name(str(entry.get('label') or ''))}_{_safe_packet_name(source_path.name)}"
+        destination = included_dir / filename
+        shutil.copy2(source_path, destination)
+        copied_files.append({
+            "label": str(entry.get("label") or ""),
+            "source_path": str(source_path),
+            "destination_path": str(destination),
+        })
+
+    withheld_lines = ["# Withheld Exhibits", ""]
+    for entry in list(ready_to_file_manifest.get("withheld_entries") or []):
+        issues = ", ".join(list(entry.get("issues") or [])) or "none"
+        withheld_lines.append(
+            f"- Exhibit {entry.get('label')} | severity={entry.get('severity')} | {entry.get('suggested_title')} | issues={issues}"
+        )
+    if len(withheld_lines) == 2:
+        withheld_lines.append("No withheld exhibits.")
+    withheld_manifest_path = withheld_dir / "WITHHELD_EXHIBITS.md"
+    withheld_manifest_path.write_text("\n".join(withheld_lines).strip() + "\n", encoding="utf-8")
+
+    summary_path = packet_dir / "README.md"
+    summary_lines = [
+        "# Ready-to-File Packet",
+        "",
+        f"Included paper exhibits copied: {len(copied_files)}",
+        f"Withheld exhibits: {len(list(ready_to_file_manifest.get('withheld_entries') or []))}",
+        "",
+        "See ./included for copied exhibit files and ./withheld/WITHHELD_EXHIBITS.md for exhibits held back pending review.",
+    ]
+    summary_path.write_text("\n".join(summary_lines).strip() + "\n", encoding="utf-8")
+
+    return {
+        "status": "success",
+        "packet_dir": str(packet_dir),
+        "included_dir": str(included_dir),
+        "withheld_dir": str(withheld_dir),
+        "copied_file_count": len(copied_files),
+        "copied_files": copied_files,
+        "withheld_manifest_path": str(withheld_manifest_path),
+        "readme_path": str(summary_path),
+    }
+
+
+def _materialize_withheld_review_packet(
+    ready_to_file_manifest: dict[str, Any],
+    attorney_review_checklist: dict[str, Any],
+    email_exhibit_recommendations: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    packet_dir = chronology_dir / "formal_complaint_withheld_review_packet"
+    packet_dir.mkdir(parents=True, exist_ok=True)
+
+    review_by_label = {
+        str(entry.get("label") or ""): entry
+        for entry in list(attorney_review_checklist.get("entries") or [])
+    }
+    recommendations_by_label = {
+        str(thread.get("exhibit_label") or ""): thread
+        for thread in list(email_exhibit_recommendations.get("threads") or [])
+    }
+
+    packet_entries: list[dict[str, Any]] = []
+    copied_files: list[dict[str, Any]] = []
+    withheld_entries = list(ready_to_file_manifest.get("withheld_entries") or [])
+    for entry in withheld_entries:
+        label = str(entry.get("label") or "")
+        review_entry = review_by_label.get(label) or {}
+        recommendation_thread = recommendations_by_label.get(label) or {}
+        exhibit_dir = packet_dir / (
+            f"{int(entry.get('packet_order') or 0):02d}_Exhibit_{_safe_packet_name(label)}_"
+            f"{_safe_packet_name(str(entry.get('suggested_title') or 'review'))}"
+        )
+        representative_dir = exhibit_dir / "representative_messages"
+        retained_dir = exhibit_dir / "retained_attachments"
+        deferred_dir = exhibit_dir / "deferred_attachments"
+        representative_dir.mkdir(parents=True, exist_ok=True)
+        retained_dir.mkdir(parents=True, exist_ok=True)
+        deferred_dir.mkdir(parents=True, exist_ok=True)
+
+        copied_representative_messages: list[dict[str, Any]] = []
+        copied_retained_attachments: list[dict[str, Any]] = []
+        copied_deferred_attachments: list[dict[str, Any]] = []
+
+        for material in list(entry.get("materials") or []):
+            kind = str(material.get("kind") or "")
+            if kind == "exhibit_file":
+                source_path = REPO_ROOT / str(material.get("path") or "")
+                if source_path.exists() and source_path.is_file():
+                    destination = exhibit_dir / f"source_{_safe_packet_name(source_path.name)}"
+                    shutil.copy2(source_path, destination)
+                    copied_files.append({
+                        "label": label,
+                        "kind": kind,
+                        "source_path": str(source_path),
+                        "destination_path": str(destination),
+                    })
+                continue
+
+            if kind != "representative_saved_message":
+                continue
+
+            subexhibit = str(material.get("subexhibit") or "")
+            email_path_value = str(material.get("email_path") or "")
+            if email_path_value:
+                email_path = Path(email_path_value)
+                if email_path.exists() and email_path.is_file():
+                    destination = representative_dir / f"{_safe_packet_name(subexhibit)}_{_safe_packet_name(email_path.name)}"
+                    shutil.copy2(email_path, destination)
+                    copied_entry = {
+                        "subexhibit": subexhibit,
+                        "source_path": str(email_path),
+                        "destination_path": str(destination),
+                    }
+                    copied_representative_messages.append(copied_entry)
+                    copied_files.append({
+                        "label": label,
+                        "kind": "representative_saved_message",
+                        **copied_entry,
+                    })
+
+            for attachment in list(material.get("retained_attachments") or []):
+                attachment_path_value = str(attachment.get("path") or "")
+                if not attachment_path_value:
+                    continue
+                attachment_path = Path(attachment_path_value)
+                if not attachment_path.exists() or not attachment_path.is_file():
+                    continue
+                destination = retained_dir / (
+                    f"{_safe_packet_name(subexhibit)}_{_safe_packet_name(str(attachment.get('filename') or attachment_path.name))}"
+                )
+                shutil.copy2(attachment_path, destination)
+                copied_entry = {
+                    "subexhibit": subexhibit,
+                    "filename": str(attachment.get("filename") or attachment_path.name),
+                    "source_path": str(attachment_path),
+                    "destination_path": str(destination),
+                    "recommended_action": str(attachment.get("recommended_action") or ""),
+                    "duplicate_count": int(attachment.get("duplicate_count") or 0),
+                }
+                copied_retained_attachments.append(copied_entry)
+                copied_files.append({
+                    "label": label,
+                    "kind": "retained_attachment",
+                    **copied_entry,
+                })
+
+        deferred_manifest_lines = [
+            f"# Exhibit {label} Deferred Attachments",
+            "",
+        ]
+        for message in list(recommendation_thread.get("messages") or []):
+            subexhibit = str(message.get("subexhibit") or "")
+            deferred_manifest_lines.append(
+                f"- {subexhibit} | {message.get('date') or ''} | {message.get('subject') or ''}"
+            )
+            deferred_items = list(message.get("deferred_attachments") or [])
+            if not deferred_items:
+                deferred_manifest_lines.append("- no deferred attachments")
+                continue
+            for attachment in deferred_items:
+                attachment_path_value = str(attachment.get("path") or "")
+                copied_destination = ""
+                if attachment_path_value:
+                    attachment_path = Path(attachment_path_value)
+                    if attachment_path.exists() and attachment_path.is_file():
+                        destination = deferred_dir / (
+                            f"{_safe_packet_name(subexhibit)}_{_safe_packet_name(str(attachment.get('filename') or attachment_path.name))}"
+                        )
+                        shutil.copy2(attachment_path, destination)
+                        copied_destination = str(destination)
+                        copied_entry = {
+                            "subexhibit": subexhibit,
+                            "filename": str(attachment.get("filename") or attachment_path.name),
+                            "source_path": str(attachment_path),
+                            "destination_path": copied_destination,
+                            "recommended_action": str(attachment.get("recommended_action") or ""),
+                            "duplicate_count": int(attachment.get("duplicate_count") or 0),
+                            "reasons": list(attachment.get("reasons") or []),
+                        }
+                        copied_deferred_attachments.append(copied_entry)
+                        copied_files.append({
+                            "label": label,
+                            "kind": "deferred_attachment",
+                            **copied_entry,
+                        })
+                reasons = ", ".join(list(attachment.get("reasons") or [])) or "none"
+                deferred_manifest_lines.append(
+                    f"- defer: {attachment.get('filename') or ''} | action={attachment.get('recommended_action') or ''} | duplicates={int(attachment.get('duplicate_count') or 0)} | reasons={reasons} | copied_to={copied_destination or 'not-copied'}"
+                )
+
+        deferred_manifest_path = exhibit_dir / "DEFERRED_ATTACHMENTS.md"
+        deferred_manifest_path.write_text("\n".join(deferred_manifest_lines).strip() + "\n", encoding="utf-8")
+
+        readme_lines = [
+            f"# Exhibit {label} Withheld Review Packet",
+            "",
+            f"Title: {entry.get('suggested_title') or ''}",
+            f"Severity: {review_entry.get('severity') or entry.get('severity') or 'review'}",
+            f"Issues: {', '.join(list(review_entry.get('issues') or entry.get('issues') or [])) or 'none'}",
+            f"Paragraphs: {', '.join(str(number) for number in list(review_entry.get('paragraph_numbers') or [])) or 'not cited'}",
+            f"Representative messages copied: {len(copied_representative_messages)}",
+            f"Retained attachments copied: {len(copied_retained_attachments)}",
+            f"Deferred attachments copied: {len(copied_deferred_attachments)}",
+            "",
+            "Contents:",
+            "- representative_messages/: saved .eml files selected for packet-level review.",
+            "- retained_attachments/: attachments currently recommended to keep.",
+            "- deferred_attachments/: attachments withheld for manual review.",
+            "- DEFERRED_ATTACHMENTS.md: per-message deferred attachment log.",
+        ]
+        readme_path = exhibit_dir / "README.md"
+        readme_path.write_text("\n".join(readme_lines).strip() + "\n", encoding="utf-8")
+
+        packet_entries.append({
+            "packet_order": int(entry.get("packet_order") or 0),
+            "label": label,
+            "suggested_title": str(entry.get("suggested_title") or ""),
+            "severity": str(review_entry.get("severity") or entry.get("severity") or "review"),
+            "issues": list(review_entry.get("issues") or entry.get("issues") or []),
+            "paragraph_numbers": list(review_entry.get("paragraph_numbers") or []),
+            "exhibit_dir": str(exhibit_dir),
+            "readme_path": str(readme_path),
+            "deferred_manifest_path": str(deferred_manifest_path),
+            "representative_message_count": len(copied_representative_messages),
+            "retained_attachment_count": len(copied_retained_attachments),
+            "deferred_attachment_count": len(copied_deferred_attachments),
+        })
+
+    summary_readme_path = packet_dir / "README.md"
+    summary_lines = [
+        "# Withheld Review Packet",
+        "",
+        f"Withheld exhibits: {len(packet_entries)}",
+        f"Copied review files: {len(copied_files)}",
+        "",
+        "This packet isolates only exhibits that remain withheld from the ready-to-file packet so manual review can focus on representative saved emails, currently retained attachments, and deferred attachments.",
+        "",
+    ]
+    if packet_entries:
+        for entry in packet_entries:
+            issues = ", ".join(list(entry.get("issues") or [])) or "none"
+            summary_lines.append(
+                f"- Exhibit {entry['label']} | severity={entry['severity']} | paragraphs={', '.join(str(number) for number in list(entry.get('paragraph_numbers') or [])) or 'not cited'} | representative_messages={entry['representative_message_count']} | retained_attachments={entry['retained_attachment_count']} | deferred_attachments={entry['deferred_attachment_count']} | issues={issues} | dir={entry['exhibit_dir']}"
+            )
+    else:
+        summary_lines.append("No withheld exhibits required a review packet.")
+    summary_readme_path.write_text("\n".join(summary_lines).strip() + "\n", encoding="utf-8")
+
+    json_path = chronology_dir / "formal_complaint_withheld_review_packet.json"
+    summary = {
+        "status": "success",
+        "packet_dir": str(packet_dir),
+        "readme_path": str(summary_readme_path),
+        "withheld_exhibit_count": len(packet_entries),
+        "copied_file_count": len(copied_files),
+        "entries": packet_entries,
+        "copied_files": copied_files,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+    summary["json_path"] = str(json_path)
+    return summary
+
+
+def _build_formal_complaint_withheld_decision_queue(
+    ready_to_file_manifest: dict[str, Any],
+    attachment_triage: dict[str, Any],
+    email_exhibit_recommendations: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_withheld_decision_queue.json"
+    md_path = chronology_dir / "formal_complaint_withheld_decision_queue.md"
+
+    withheld_labels = {
+        str(entry.get("label") or "")
+        for entry in list(ready_to_file_manifest.get("withheld_entries") or [])
+    }
+    recommendation_threads = {
+        str(thread.get("exhibit_label") or ""): thread
+        for thread in list(email_exhibit_recommendations.get("threads") or [])
+    }
+
+    retained_duplicate_keys_by_label: dict[str, set[str]] = {}
+    for label in withheld_labels:
+        thread = recommendation_threads.get(label) or {}
+        for message in list(thread.get("messages") or []):
+            for attachment in list(message.get("recommended_attachments") or []):
+                duplicate_key = str(attachment.get("duplicate_key") or "")
+                if duplicate_key:
+                    retained_duplicate_keys_by_label.setdefault(label, set()).add(duplicate_key)
+
+    grouped: dict[tuple[str, str], dict[str, Any]] = {}
+    for attachment in list(attachment_triage.get("attachments") or []):
+        label = str(attachment.get("exhibit_label") or "")
+        if label not in withheld_labels:
+            continue
+        action = str(attachment.get("recommended_action") or "")
+        if action == "likely_keep":
+            continue
+
+        duplicate_key = str(attachment.get("duplicate_key") or "")
+        group_key = duplicate_key or str(attachment.get("path") or "") or str(attachment.get("filename") or "")
+        bucket = grouped.setdefault(
+            (label, group_key),
+            {
+                "exhibit_label": label,
+                "filename": str(attachment.get("filename") or ""),
+                "content_type": str(attachment.get("content_type") or ""),
+                "recommended_action": action,
+                "duplicate_count": int(attachment.get("duplicate_count") or 0),
+                "duplicate_key": duplicate_key,
+                "reasons": list(attachment.get("reasons") or []),
+                "paths": [],
+                "subexhibits": [],
+                "dates": [],
+            },
+        )
+        path = str(attachment.get("path") or "")
+        subexhibit = str(attachment.get("subexhibit") or "")
+        date = str(attachment.get("date") or "")
+        if path and path not in bucket["paths"]:
+            bucket["paths"].append(path)
+        if subexhibit and subexhibit not in bucket["subexhibits"]:
+            bucket["subexhibits"].append(subexhibit)
+        if date and date not in bucket["dates"]:
+            bucket["dates"].append(date)
+
+    entries: list[dict[str, Any]] = []
+    for (label, _group_key), bucket in grouped.items():
+        retained_duplicate = bool(bucket.get("duplicate_key")) and bucket.get("duplicate_key") in retained_duplicate_keys_by_label.get(label, set())
+        action = str(bucket.get("recommended_action") or "")
+        disposition = "manual_review_required"
+        rationale = "Attachment requires individualized review."
+        if action == "review_for_deduplication" and retained_duplicate:
+            disposition = "exclude_duplicate_copy"
+            rationale = "A representative copy for this duplicate image set is already retained in the exhibit packet materials."
+        elif action == "review_for_deduplication":
+            disposition = "review_for_single_representative"
+            rationale = "Duplicate image set appears multiple times without an already-confirmed retained representative in this grouped view."
+        elif action == "review_low_signal_image":
+            disposition = "exclude_unless_substantive_image"
+            rationale = "Single generic image with no current signal beyond being an image attachment; exclude unless it contains independently material evidence."
+        elif action == "review_duplicate_document":
+            disposition = "exclude_duplicate_document"
+            rationale = "Duplicate document appears unnecessary unless this copy has materially better completeness or legibility."
+
+        entries.append({
+            **bucket,
+            "occurrence_count": len(list(bucket.get("paths") or [])),
+            "recommended_disposition": disposition,
+            "decision_rationale": rationale,
+            "retained_representative_exists": retained_duplicate,
+        })
+
+    entries.sort(
+        key=lambda entry: (
+            str(entry.get("exhibit_label") or ""),
+            0 if str(entry.get("recommended_disposition") or "") == "review_for_single_representative" else 1,
+            -int(entry.get("duplicate_count") or 0),
+            str(entry.get("filename") or ""),
+        )
+    )
+
+    disposition_counts: dict[str, int] = {}
+    for entry in entries:
+        disposition = str(entry.get("recommended_disposition") or "")
+        disposition_counts[disposition] = disposition_counts.get(disposition, 0) + 1
+
+    summary = {
+        "status": "success",
+        "entry_count": len(entries),
+        "exhibit_count": len(withheld_labels),
+        "disposition_counts": disposition_counts,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "entries": entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Withheld Decision Queue",
+        "",
+        f"Withheld exhibits: {len(withheld_labels)}",
+        f"Unique decision entries: {len(entries)}",
+        "",
+    ]
+    if disposition_counts:
+        md_lines.append("## Disposition Summary")
+        md_lines.append("")
+        for disposition, count in sorted(disposition_counts.items()):
+            md_lines.append(f"- {disposition}: {count}")
+        md_lines.append("")
+
+    if entries:
+        current_label = ""
+        for entry in entries:
+            label = str(entry.get("exhibit_label") or "")
+            if label != current_label:
+                current_label = label
+                md_lines.extend([f"## Exhibit {label}", ""])
+            reasons = ", ".join(list(entry.get("reasons") or [])) or "none"
+            subexhibits = ", ".join(list(entry.get("subexhibits") or [])) or "none"
+            md_lines.append(
+                f"- {entry['filename']} | disposition={entry['recommended_disposition']} | triage_action={entry['recommended_action']} | duplicates={entry['duplicate_count']} | occurrences={entry['occurrence_count']} | representative_retained={entry['retained_representative_exists']} | subexhibits={subexhibits}"
+            )
+            md_lines.append(f"- rationale: {entry['decision_rationale']}")
+            md_lines.append(f"- reasons: {reasons}")
+        md_lines.append("")
+    else:
+        md_lines.append("No withheld decision entries generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _materialize_candidate_final_packet(
+    ready_to_file_manifest: dict[str, Any],
+    proposed_filing_packet: dict[str, Any],
+    withheld_decision_queue: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    packet_dir = chronology_dir / "formal_complaint_candidate_final_packet"
+    included_dir = packet_dir / "included"
+    email_dir = packet_dir / "candidate_email_exhibits"
+    excluded_manifest_path = packet_dir / "EXCLUDED_WITHHELD_ITEMS.md"
+    readme_path = packet_dir / "README.md"
+    included_dir.mkdir(parents=True, exist_ok=True)
+    email_dir.mkdir(parents=True, exist_ok=True)
+
+    copied_files: list[dict[str, Any]] = []
+    paper_exhibit_count = 0
+    for entry in list(ready_to_file_manifest.get("included_entries") or []):
+        source_type = str(entry.get("source_type") or "")
+        if source_type != "paper_pdf":
+            continue
+        source_path = REPO_ROOT / str(entry.get("source_path") or "")
+        if not source_path.exists() or not source_path.is_file():
+            continue
+        filename = f"{int(entry.get('packet_order') or 0):02d}_Exhibit_{_safe_packet_name(str(entry.get('label') or ''))}_{_safe_packet_name(source_path.name)}"
+        destination = included_dir / filename
+        shutil.copy2(source_path, destination)
+        paper_exhibit_count += 1
+        copied_files.append({
+            "label": str(entry.get("label") or ""),
+            "kind": "paper_exhibit",
+            "source_path": str(source_path),
+            "destination_path": str(destination),
+        })
+
+    queue_by_label: dict[str, list[dict[str, Any]]] = {}
+    for entry in list(withheld_decision_queue.get("entries") or []):
+        queue_by_label.setdefault(str(entry.get("exhibit_label") or ""), []).append(entry)
+
+    candidate_email_entries: list[dict[str, Any]] = []
+    for packet_entry in list(proposed_filing_packet.get("entries") or []):
+        label = str(packet_entry.get("label") or "")
+        if str(packet_entry.get("source_type") or "") != "email_manifest":
+            continue
+        exhibit_queue_entries = list(queue_by_label.get(label) or [])
+        if not exhibit_queue_entries:
+            continue
+
+        exhibit_dir = email_dir / (
+            f"{int(packet_entry.get('packet_order') or 0):02d}_Exhibit_{_safe_packet_name(label)}_"
+            f"{_safe_packet_name(str(packet_entry.get('suggested_title') or 'email_exhibit'))}"
+        )
+        representative_dir = exhibit_dir / "representative_messages"
+        retained_dir = exhibit_dir / "retained_attachments"
+        representative_dir.mkdir(parents=True, exist_ok=True)
+        retained_dir.mkdir(parents=True, exist_ok=True)
+
+        copied_message_count = 0
+        copied_attachment_count = 0
+        copied_subexhibits: list[str] = []
+        for material in list(packet_entry.get("proposed_materials") or []):
+            if str(material.get("kind") or "") != "representative_saved_message":
+                continue
+            subexhibit = str(material.get("subexhibit") or "")
+            if subexhibit and subexhibit not in copied_subexhibits:
+                copied_subexhibits.append(subexhibit)
+            email_path_value = str(material.get("email_path") or "")
+            if email_path_value:
+                email_path = Path(email_path_value)
+                if email_path.exists() and email_path.is_file():
+                    destination = representative_dir / f"{_safe_packet_name(subexhibit)}_{_safe_packet_name(email_path.name)}"
+                    shutil.copy2(email_path, destination)
+                    copied_message_count += 1
+                    copied_files.append({
+                        "label": label,
+                        "kind": "candidate_email_message",
+                        "source_path": str(email_path),
+                        "destination_path": str(destination),
+                    })
+            for attachment in list(material.get("retained_attachments") or []):
+                attachment_path_value = str(attachment.get("path") or "")
+                if not attachment_path_value:
+                    continue
+                attachment_path = Path(attachment_path_value)
+                if not attachment_path.exists() or not attachment_path.is_file():
+                    continue
+                destination = retained_dir / (
+                    f"{_safe_packet_name(subexhibit)}_{_safe_packet_name(str(attachment.get('filename') or attachment_path.name))}"
+                )
+                shutil.copy2(attachment_path, destination)
+                copied_attachment_count += 1
+                copied_files.append({
+                    "label": label,
+                    "kind": "candidate_email_attachment",
+                    "source_path": str(attachment_path),
+                    "destination_path": str(destination),
+                })
+
+        excluded_count = len(exhibit_queue_entries)
+        excluded_duplicates = sum(
+            1
+            for entry in exhibit_queue_entries
+            if str(entry.get("recommended_disposition") or "") == "exclude_duplicate_copy"
+        )
+        excluded_low_signal = sum(
+            1
+            for entry in exhibit_queue_entries
+            if str(entry.get("recommended_disposition") or "") == "exclude_unless_substantive_image"
+        )
+        exhibit_readme_path = exhibit_dir / "README.md"
+        exhibit_readme_lines = [
+            f"# Candidate Exhibit {label}",
+            "",
+            f"Title: {packet_entry.get('suggested_title') or ''}",
+            f"Representative saved messages copied: {copied_message_count}",
+            f"Retained attachments copied: {copied_attachment_count}",
+            f"Excluded withheld decision entries: {excluded_count}",
+            f"Excluded duplicate copies: {excluded_duplicates}",
+            f"Excluded low-signal images: {excluded_low_signal}",
+            "",
+            "This folder contains the curated materials that remain after excluding duplicate copies already represented by retained materials and excluding low-signal generic images unless later found substantive.",
+        ]
+        exhibit_readme_path.write_text("\n".join(exhibit_readme_lines).strip() + "\n", encoding="utf-8")
+
+        candidate_email_entries.append({
+            "label": label,
+            "packet_order": int(packet_entry.get("packet_order") or 0),
+            "suggested_title": str(packet_entry.get("suggested_title") or ""),
+            "exhibit_dir": str(exhibit_dir),
+            "representative_message_count": copied_message_count,
+            "retained_attachment_count": copied_attachment_count,
+            "excluded_decision_count": excluded_count,
+            "excluded_duplicate_count": excluded_duplicates,
+            "excluded_low_signal_count": excluded_low_signal,
+            "included_subexhibits": copied_subexhibits,
+        })
+
+    excluded_lines = [
+        "# Excluded Withheld Items",
+        "",
+        "These withheld items were not promoted into the candidate final packet because they were either duplicate copies already represented by retained materials or low-signal generic images.",
+        "",
+    ]
+    for label in sorted(queue_by_label):
+        excluded_lines.extend([f"## Exhibit {label}", ""])
+        for entry in list(queue_by_label.get(label) or []):
+            subexhibits = ", ".join(list(entry.get("subexhibits") or [])) or "none"
+            excluded_lines.append(
+                f"- {entry.get('filename') or ''} | disposition={entry.get('recommended_disposition') or ''} | duplicates={int(entry.get('duplicate_count') or 0)} | occurrences={int(entry.get('occurrence_count') or 0)} | subexhibits={subexhibits}"
+            )
+            excluded_lines.append(f"- rationale: {entry.get('decision_rationale') or ''}")
+        excluded_lines.append("")
+    excluded_manifest_path.write_text("\n".join(excluded_lines).strip() + "\n", encoding="utf-8")
+
+    summary_lines = [
+        "# Candidate Final Packet",
+        "",
+        f"Included paper exhibits copied: {paper_exhibit_count}",
+        f"Candidate email exhibits added: {len(candidate_email_entries)}",
+        f"Total copied files: {len(copied_files)}",
+        "",
+        "This candidate packet keeps the ready-to-file paper exhibits and adds curated email exhibit folders for withheld threads using only representative saved messages and retained attachments.",
+        "Excluded withheld items are summarized in EXCLUDED_WITHHELD_ITEMS.md.",
+        "",
+    ]
+    if candidate_email_entries:
+        for entry in candidate_email_entries:
+            summary_lines.append(
+                f"- Exhibit {entry['label']} | representative_messages={entry['representative_message_count']} | retained_attachments={entry['retained_attachment_count']} | excluded_decisions={entry['excluded_decision_count']} | dir={entry['exhibit_dir']}"
+            )
+    else:
+        summary_lines.append("No candidate email exhibits were materialized.")
+    readme_path.write_text("\n".join(summary_lines).strip() + "\n", encoding="utf-8")
+
+    return {
+        "status": "success",
+        "packet_dir": str(packet_dir),
+        "included_dir": str(included_dir),
+        "candidate_email_dir": str(email_dir),
+        "paper_exhibit_count": paper_exhibit_count,
+        "candidate_email_exhibit_count": len(candidate_email_entries),
+        "copied_file_count": len(copied_files),
+        "candidate_email_entries": candidate_email_entries,
+        "excluded_manifest_path": str(excluded_manifest_path),
+        "readme_path": str(readme_path),
+    }
+
+
+def _build_formal_complaint_attorney_recommendation_memo(
+    ready_to_file_manifest: dict[str, Any],
+    withheld_decision_queue: dict[str, Any],
+    candidate_final_packet: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_attorney_recommendation_memo.json"
+    md_path = chronology_dir / "formal_complaint_attorney_recommendation_memo.md"
+
+    withheld_entries = list(ready_to_file_manifest.get("withheld_entries") or [])
+    queue_entries = list(withheld_decision_queue.get("entries") or [])
+    disposition_counts = dict(withheld_decision_queue.get("disposition_counts") or {})
+    candidate_email_entries = list(candidate_final_packet.get("candidate_email_entries") or [])
+
+    memo_entries = []
+    queue_by_label: dict[str, list[dict[str, Any]]] = {}
+    for entry in queue_entries:
+        queue_by_label.setdefault(str(entry.get("exhibit_label") or ""), []).append(entry)
+
+    candidate_by_label = {
+        str(entry.get("label") or ""): entry
+        for entry in candidate_email_entries
+    }
+
+    for withheld in withheld_entries:
+        label = str(withheld.get("label") or "")
+        candidate = candidate_by_label.get(label) or {}
+        exhibit_queue_entries = list(queue_by_label.get(label) or [])
+        memo_entries.append({
+            "label": label,
+            "suggested_title": str(withheld.get("suggested_title") or ""),
+            "issues": list(withheld.get("issues") or []),
+            "candidate_representative_message_count": int(candidate.get("representative_message_count") or 0),
+            "candidate_retained_attachment_count": int(candidate.get("retained_attachment_count") or 0),
+            "excluded_decision_count": int(candidate.get("excluded_decision_count") or 0),
+            "excluded_duplicate_count": int(candidate.get("excluded_duplicate_count") or 0),
+            "excluded_low_signal_count": int(candidate.get("excluded_low_signal_count") or 0),
+            "queue_entries": exhibit_queue_entries,
+        })
+
+    summary = {
+        "status": "success",
+        "included_paper_exhibit_count": int(candidate_final_packet.get("paper_exhibit_count") or 0),
+        "candidate_email_exhibit_count": int(candidate_final_packet.get("candidate_email_exhibit_count") or 0),
+        "copied_file_count": int(candidate_final_packet.get("copied_file_count") or 0),
+        "withheld_decision_entry_count": len(queue_entries),
+        "disposition_counts": disposition_counts,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "entries": memo_entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Attorney Recommendation Memo",
+        "",
+        "## Recommended Filing Set",
+        "",
+        f"- Paper exhibits recommended for inclusion: {summary['included_paper_exhibit_count']}",
+        f"- Curated email exhibits recommended for inclusion: {summary['candidate_email_exhibit_count']}",
+        f"- Total files in candidate packet: {summary['copied_file_count']}",
+        "",
+        "## Withheld Queue Resolution",
+        "",
+        f"- Unique withheld decision entries: {summary['withheld_decision_entry_count']}",
+    ]
+    for disposition, count in sorted(disposition_counts.items()):
+        md_lines.append(f"- {disposition}: {count}")
+    md_lines.extend([
+        "",
+        "## Recommendation",
+        "",
+        "Use the candidate final packet as the operative filing set unless attorney review identifies a specific excluded image that carries unique evidentiary value not already preserved in the retained representative materials.",
+        "The current queue analysis supports excluding repeated duplicate images where a representative copy is already retained and excluding low-signal generic images unless later shown to be substantive.",
+        "",
+    ])
+
+    for entry in memo_entries:
+        issues = ", ".join(list(entry.get("issues") or [])) or "none"
+        md_lines.extend([
+            f"## Exhibit {entry['label']}: {entry['suggested_title']}",
+            "",
+            f"- Original issues: {issues}",
+            f"- Candidate representative messages: {entry['candidate_representative_message_count']}",
+            f"- Candidate retained attachments: {entry['candidate_retained_attachment_count']}",
+            f"- Excluded decision entries: {entry['excluded_decision_count']}",
+            f"- Excluded duplicate copies: {entry['excluded_duplicate_count']}",
+            f"- Excluded low-signal images: {entry['excluded_low_signal_count']}",
+            "",
+        ])
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _draft_jurisdiction_and_venue_lines() -> list[str]:
+    return [
+        "6. This draft assumes the pleaded claims may include federal housing, fair-housing, VAWA, due-process, or Section 1983 theories arising from the notices, lease actions, documentation demands, and orientation-related conduct reflected in the exhibits, subject to confirmation after attorney review.",
+        "7. If federal statutory or constitutional claims are pleaded, subject-matter jurisdiction may be alleged under 28 U.S.C. section 1331, with supplemental jurisdiction over related state-law claims under 28 U.S.C. section 1367.",
+        "8. If the complaint proceeds only on Oregon statutory, contract, relocation, landlord-tenant, or administrative-law theories, this section should be conformed to the appropriate Oregon trial-court jurisdictional basis instead of federal-question pleading.",
+        "9. Venue appears supportable in Oregon because the housing unit, the alleged notices, the relocation and orientation process, and the operative communications all concern property and agency conduct in Clackamas County, including Milwaukie, Oregon.",
+    ]
+
+
+def _draft_count_theory(block: dict[str, Any]) -> dict[str, Any]:
+    source_section = str(block.get("source_section") or "")
+    title = str(block.get("title") or "Potential Claim Theme")
+    mappings = {
+        "Notices and Adverse Actions": {
+            "claim_label": "Declaratory and injunctive relief for defective notice and wrongful displacement process",
+            "theory": "Plaintiffs can frame this count as a challenge to whether HACC used notices, relocation communications, or termination materials that were inconsistent with the governing lease, voucher, relocation, landlord-tenant, or constitutional process requirements.",
+            "proof_points": [
+                "Identify the exact notice, hearing, relocation, or cure procedures required by the controlling lease, voucher rules, ORS chapter 90, HUD materials, or due-process authority.",
+                "Compare those requirements to the dates, contents, and sequence reflected in Exhibits B, C, D, E, and K.",
+                "State the housing loss, threatened displacement, or coercive effect caused by the challenged notices.",
+            ],
+        },
+        "Lease and Occupancy": {
+            "claim_label": "Breach of lease or program obligations and interference with housing stability",
+            "theory": "Plaintiffs can frame this count around lease amendments, occupancy status changes, inspections, or relocation-related decisions that allegedly departed from the governing tenancy or voucher rules and destabilized continued occupancy.",
+            "proof_points": [
+                "Pinpoint the lease, occupancy, inspection, or transfer rule that governed each challenged act.",
+                "Allege how the amendment, inspection, or displacement-related conduct departed from that rule or was applied unfairly.",
+                "Tie the conduct to concrete loss of housing security, possession, or program benefits.",
+            ],
+        },
+        "Financial Verification and Intake Barriers": {
+            "claim_label": "Unreasonable documentation demands and administrative barrier theory",
+            "theory": "Plaintiffs can frame this count as an evidence-based challenge to repeated documentation demands and intake barriers that allegedly burdened or obstructed housing access, voucher progression, or retention.",
+            "proof_points": [
+                "Identify which documentation requests were required, discretionary, repetitive, or allegedly unsupported by governing rules.",
+                "Explain why the sequence and volume of the demands can be characterized as unreasonable, discriminatory, retaliatory, or procedurally improper.",
+                "Describe how the demands delayed orientation, placement, approval, or retention of housing benefits.",
+            ],
+        },
+        "Protected Status and VAWA": {
+            "claim_label": "VAWA and protected-status discrimination or retaliation theory",
+            "theory": "Plaintiffs can frame this count around whether protected-status facts or VAWA-related protections were ignored, used adversely, or insufficiently accommodated in later housing decisions and notices.",
+            "proof_points": [
+                "Specify the protected status, VAWA protection, or anti-retaliation rule implicated by the February 4, 2026 materials.",
+                "Connect that protected conduct or status to the later lease, notice, or displacement actions.",
+                "State the discriminatory, retaliatory, or procedurally unlawful harm that followed.",
+            ],
+        },
+        "Orientation and Compliance": {
+            "claim_label": "Orientation-delay and compliance-obstruction theory",
+            "theory": "Plaintiffs can frame this count as a challenge to whether orientation or compliance requirements were administered in a way that created avoidable delay, blocked program progression, or compounded earlier housing instability.",
+            "proof_points": [
+                "Identify the source and timing requirements for the orientation or signature process.",
+                "Describe the delay, repetition, or administrative friction shown by Exhibit M and its attachments.",
+                "Explain how that process affected voucher use, move-in timing, or other housing opportunities.",
+            ],
+        },
+    }
+    theory = mappings.get(source_section)
+    if theory is None:
+        return {
+            "claim_label": title,
+            "theory": "Plaintiffs can use this count as a draft organizing section for a claim supported by the grouped evidence, with the final cause of action to be confirmed after legal review.",
+            "proof_points": list(block.get("element_prompts") or []),
+        }
+    return theory
+
+
+def _draft_prayer_for_relief_lines() -> list[str]:
+    return [
+        "Plaintiffs request a declaration identifying which notices, lease actions, documentation demands, and orientation-related requirements were unlawful, unenforceable, retaliatory, discriminatory, or otherwise procedurally defective.",
+        "Plaintiffs request temporary, preliminary, and permanent injunctive relief preventing eviction, displacement, benefit interruption, or other adverse housing action unless and until defendants comply with the governing lease, voucher, notice, hearing, relocation, and anti-discrimination requirements.",
+        "Plaintiffs request compensatory damages, consequential housing-loss damages, statutory damages where available, attorney fees, expert fees, taxable costs, and further relief authorized by the ultimately selected causes of action.",
+    ]
+
+
 def _build_formal_complaint_draft(
     complaint_ready: dict[str, Any],
     cause_draft: dict[str, Any],
@@ -2346,6 +3155,8 @@ def _build_formal_complaint_draft(
         }
         for index, entry in enumerate(exhibit_index, start=1)
     ]
+    jurisdiction_and_venue_lines = _draft_jurisdiction_and_venue_lines()
+    prayer_for_relief_lines = _draft_prayer_for_relief_lines()
     email_exhibit_manifest = _build_email_exhibit_manifest(exhibit_packet, chronology_dir)
     attachment_triage = _build_formal_complaint_attachment_triage(email_exhibit_manifest, chronology_dir)
 
@@ -2399,14 +3210,13 @@ def _build_formal_complaint_draft(
         "",
         "## Jurisdiction and Venue",
         "",
-        "6. Jurisdiction basis: [fill in federal question, state-law, supplemental, or other basis].",
-        "7. Venue basis: [fill in county, district, and operative-events basis].",
+        *jurisdiction_and_venue_lines,
         "",
         "## General Allegations",
         "",
     ]
 
-    paragraph_number = 8
+    paragraph_number = 10
     if factual_background:
         for entry in factual_background:
             source_path = str(entry.get("source_path") or "")
@@ -2428,10 +3238,16 @@ def _build_formal_complaint_draft(
         md_lines.append(f"{paragraph_number}. No general allegations were generated from the current evidence set.")
         paragraph_number += 1
 
+    md_lines.append(
+        f"{paragraph_number}. For draft exhibit-management purposes, Exhibits J and M are currently treated as curated candidate email exhibits composed of representative saved messages and retained attachments, while repeated duplicate image copies and low-signal generic images are separately excluded in the candidate packet unless later review identifies a specific excluded image as independently material."
+    )
+    paragraph_number += 1
+
     md_lines.extend(["", "## Counts", ""])
     factual_end = paragraph_number - 1
     if count_blocks:
         for idx, block in enumerate(count_blocks, start=1):
+            theory = _draft_count_theory(block)
             md_lines.extend([
                 f"### Count {_roman_count_label(idx)}: {block['title']}",
                 "",
@@ -2456,8 +3272,13 @@ def _build_formal_complaint_draft(
                     "event_label": str(entry.get("event_label") or ""),
                 })
                 paragraph_number += 1
-            md_lines.append(f"{paragraph_number}. Legal elements and claim language to be added: [fill in].")
+            md_lines.append(
+                f"{paragraph_number}. Current draft claim framing: {theory['claim_label']}. {theory['theory']}"
+            )
             paragraph_number += 1
+            for proof_point in list(theory.get("proof_points") or []):
+                md_lines.append(f"{paragraph_number}. Filing refinement point: {proof_point}")
+                paragraph_number += 1
             md_lines.append("")
             md_lines.append("Elements to Plead:")
             md_lines.extend(f"- {prompt}" for prompt in block["element_prompts"])
@@ -2469,9 +3290,9 @@ def _build_formal_complaint_draft(
     md_lines.extend([
         "## Prayer for Relief",
         "",
-        f"{paragraph_number}. Plaintiffs request declaratory relief as permitted by law. [fill in specific declaration].",
-        f"{paragraph_number + 1}. Plaintiffs request injunctive or equitable relief as permitted by law. [fill in specific injunction].",
-        f"{paragraph_number + 2}. Plaintiffs request damages, fees, costs, and any additional relief authorized by law. [fill in].",
+        f"{paragraph_number}. {prayer_for_relief_lines[0]}",
+        f"{paragraph_number + 1}. {prayer_for_relief_lines[1]}",
+        f"{paragraph_number + 2}. {prayer_for_relief_lines[2]}",
         "",
         "## Jury Demand",
         "",
@@ -2513,6 +3334,34 @@ def _build_formal_complaint_draft(
         attorney_review_checklist,
         chronology_dir,
     )
+    ready_to_file_packet = _materialize_ready_to_file_packet(
+        ready_to_file_manifest,
+        chronology_dir,
+    )
+    withheld_review_packet = _materialize_withheld_review_packet(
+        ready_to_file_manifest,
+        attorney_review_checklist,
+        email_exhibit_recommendations,
+        chronology_dir,
+    )
+    withheld_decision_queue = _build_formal_complaint_withheld_decision_queue(
+        ready_to_file_manifest,
+        attachment_triage,
+        email_exhibit_recommendations,
+        chronology_dir,
+    )
+    candidate_final_packet = _materialize_candidate_final_packet(
+        ready_to_file_manifest,
+        proposed_filing_packet,
+        withheld_decision_queue,
+        chronology_dir,
+    )
+    attorney_recommendation_memo = _build_formal_complaint_attorney_recommendation_memo(
+        ready_to_file_manifest,
+        withheld_decision_queue,
+        candidate_final_packet,
+        chronology_dir,
+    )
 
     summary["filing_checklist_json_path"] = str(filing_checklist.get("json_path") or "")
     summary["filing_checklist_markdown_path"] = str(filing_checklist.get("markdown_path") or "")
@@ -2534,6 +3383,21 @@ def _build_formal_complaint_draft(
     summary["ready_to_file_manifest_markdown_path"] = str(ready_to_file_manifest.get("markdown_path") or "")
     summary["ready_to_file_manifest_included_count"] = int(ready_to_file_manifest.get("included_count") or 0)
     summary["ready_to_file_manifest_withheld_count"] = int(ready_to_file_manifest.get("withheld_count") or 0)
+    summary["ready_to_file_packet_dir"] = str(ready_to_file_packet.get("packet_dir") or "")
+    summary["ready_to_file_packet_copied_file_count"] = int(ready_to_file_packet.get("copied_file_count") or 0)
+    summary["withheld_review_packet_json_path"] = str(withheld_review_packet.get("json_path") or "")
+    summary["withheld_review_packet_dir"] = str(withheld_review_packet.get("packet_dir") or "")
+    summary["withheld_review_packet_exhibit_count"] = int(withheld_review_packet.get("withheld_exhibit_count") or 0)
+    summary["withheld_review_packet_copied_file_count"] = int(withheld_review_packet.get("copied_file_count") or 0)
+    summary["withheld_decision_queue_json_path"] = str(withheld_decision_queue.get("json_path") or "")
+    summary["withheld_decision_queue_markdown_path"] = str(withheld_decision_queue.get("markdown_path") or "")
+    summary["withheld_decision_queue_entry_count"] = int(withheld_decision_queue.get("entry_count") or 0)
+    summary["candidate_final_packet_dir"] = str(candidate_final_packet.get("packet_dir") or "")
+    summary["candidate_final_packet_paper_count"] = int(candidate_final_packet.get("paper_exhibit_count") or 0)
+    summary["candidate_final_packet_email_exhibit_count"] = int(candidate_final_packet.get("candidate_email_exhibit_count") or 0)
+    summary["candidate_final_packet_copied_file_count"] = int(candidate_final_packet.get("copied_file_count") or 0)
+    summary["attorney_recommendation_memo_json_path"] = str(attorney_recommendation_memo.get("json_path") or "")
+    summary["attorney_recommendation_memo_markdown_path"] = str(attorney_recommendation_memo.get("markdown_path") or "")
 
     json_path.write_text(
         json.dumps(
@@ -2551,6 +3415,11 @@ def _build_formal_complaint_draft(
                 "cite_check_matrix": cite_check_matrix,
                 "attorney_review_checklist": attorney_review_checklist,
                 "ready_to_file_manifest": ready_to_file_manifest,
+                "ready_to_file_packet": ready_to_file_packet,
+                "withheld_review_packet": withheld_review_packet,
+                "withheld_decision_queue": withheld_decision_queue,
+                "candidate_final_packet": candidate_final_packet,
+                "attorney_recommendation_memo": attorney_recommendation_memo,
                 "citation_map": citation_map,
             },
             indent=2,
@@ -3290,6 +4159,18 @@ def _markdown_report(payload: dict[str, Any]) -> str:
             )
             lines.append(
                 f"- Formal complaint ready-to-file manifest included/withheld: {formal_draft.get('ready_to_file_manifest_included_count', 0)}/{formal_draft.get('ready_to_file_manifest_withheld_count', 0)}"
+            )
+            lines.append(
+                f"- Formal complaint ready-to-file packet copied files: {formal_draft.get('ready_to_file_packet_copied_file_count', 0)}"
+            )
+            lines.append(
+                f"- Formal complaint withheld review packet exhibits/files: {formal_draft.get('withheld_review_packet_exhibit_count', 0)}/{formal_draft.get('withheld_review_packet_copied_file_count', 0)}"
+            )
+            lines.append(
+                f"- Formal complaint withheld decision queue unique entries: {formal_draft.get('withheld_decision_queue_entry_count', 0)}"
+            )
+            lines.append(
+                f"- Candidate final packet paper/email/files: {formal_draft.get('candidate_final_packet_paper_count', 0)}/{formal_draft.get('candidate_final_packet_email_exhibit_count', 0)}/{formal_draft.get('candidate_final_packet_copied_file_count', 0)}"
             )
     return "\n".join(lines).strip() + "\n"
 
