@@ -4722,6 +4722,1904 @@ def _build_oregon_state_named_claim_complaint_draft(
     return summary
 
 
+def _build_federal_named_claim_complaint_draft(
+    complaint_ready: dict[str, Any],
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_federal_named_claim_draft.json"
+    md_path = chronology_dir / "formal_complaint_federal_named_claim_draft.md"
+
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    factual_background = factual_entries[: min(16, len(factual_entries))]
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    reserve_sections = list(lead_count_draft.get("reserve_sections") or [])
+    prayer_lines = _draft_prayer_for_relief_lines()
+
+    named_count_map = [
+        {
+            "count_title": "42 U.S.C. section 1983 Due Process or Federally Regulated Housing Notice Claim",
+            "theory_basis": [
+                "Use this count only if plaintiffs can identify a protected housing interest, action under color of state law, and a constitutionally inadequate notice, hearing, or deprivation process.",
+                "If the better theory is statutory or program-based rather than constitutional, replace this label with the specific federal housing notice or displacement claim actually supported.",
+            ],
+        },
+        {
+            "count_title": "Federal Fair Housing, Retaliation, or Federally Improper Housing Administration Claim Based on Documentation Demands and Intake Barriers",
+            "theory_basis": [
+                "Use this count if the documentation demands and intake barriers are best framed as discriminatory, retaliatory, selectively imposed, or contrary to governing federal housing-program administration rules.",
+                "If the proof separates cleanly into discrimination and program-administration theories, split them into separate counts rather than relying on a single combined claim.",
+            ],
+        },
+        {
+            "count_title": "Federal Housing Program Compliance Claim Based on Lease, Occupancy, Inspection, or Displacement Conduct",
+            "theory_basis": [
+                "Use this count only if the lease, occupancy, inspection, transfer, or displacement conduct can be tied to a concrete federal housing-program obligation or federally protected housing interest.",
+                "If the federal hook remains weak, reserve this conduct for supplemental Oregon-law counts rather than forcing it into a federal standalone claim.",
+            ],
+        },
+    ]
+
+    mapped_counts: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        mapped = named_count_map[idx] if idx < len(named_count_map) else {
+            "count_title": str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "theory_basis": [
+                "Confirm the exact federal cause-of-action label and its elements before filing.",
+            ],
+        }
+        mapped_counts.append({
+            "count_number": idx + 1,
+            "source_title": str(section.get("title") or ""),
+            "source_section": str(section.get("source_section") or ""),
+            "intro": str(section.get("intro") or ""),
+            "count_title": mapped["count_title"],
+            "theory_basis": list(mapped.get("theory_basis") or []),
+            "element_prompts": list(section.get("element_prompts") or []),
+            "paragraphs": list(section.get("paragraphs") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "lead_count_count": len(mapped_counts),
+        "reserve_count_count": len(reserve_sections),
+        "factual_background_count": len(factual_background),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps(
+            {
+                **summary,
+                "mapped_counts": mapped_counts,
+                "reserve_sections": reserve_sections,
+                "factual_background": factual_background,
+            },
+            indent=2,
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+
+    md_lines = [
+        "# Federal Named-Claim Complaint Draft",
+        "",
+        "IN THE UNITED STATES DISTRICT COURT",
+        "FOR THE DISTRICT OF OREGON",
+        "",
+        "Jane Cortez and Benjamin Barber,",
+        "Plaintiffs,",
+        "",
+        "v.",
+        "",
+        "Housing Authority of Clackamas County; DOES 1-10,",
+        "Defendants.",
+        "",
+        "## Draft Status",
+        "",
+        "This draft advances the federal track from provisional count framing to candidate named federal claims.",
+        "It remains a drafting aid and must be conformed to the final federal cause-of-action selection, jurisdiction allegations, and proof record before filing.",
+        "",
+        "## Nature of Action",
+        "",
+        "1. Plaintiffs bring this civil action arising from housing notices, documentation demands, lease-related conduct, occupancy-related directives, and displacement-related actions allegedly affecting federally regulated housing interests in Clackamas County, Oregon.",
+        "2. This draft names candidate federal claim structures for the three strongest current evidence themes while preserving theory-sensitive issues for final conformance.",
+        "",
+        "## Parties",
+        "",
+        "3. Plaintiffs are Jane Cortez and Benjamin Barber, subject to confirmation of full legal names, party status, and alignment of claims and requested relief.",
+        "4. Defendant Housing Authority of Clackamas County is alleged to have issued the operative notices, demands, and housing-administration communications summarized in this draft.",
+        "5. Plaintiffs reserve the ability to identify additional responsible persons or entities if later investigation supports amendment.",
+        "",
+        "## Jurisdiction and Venue",
+        "",
+        "6. This draft assumes federal-question jurisdiction under 28 U.S.C. section 1331 based on one or more specifically identified federal statutory or constitutional housing-related claims.",
+        "7. Any Oregon-law theories included in a federal complaint should be pleaded only to the extent supplemental jurisdiction under 28 U.S.C. section 1367 is properly available and strategically appropriate.",
+        "8. Venue is provisionally stated in the District of Oregon because the housing unit, operative notices, and principal housing-administration events at issue are centered in Clackamas County, Oregon.",
+        "",
+        "## General Allegations",
+        "",
+    ]
+
+    paragraph_number = 9
+    for entry in factual_background:
+        md_lines.append(f"{paragraph_number}. {entry.get('paragraph') or ''}")
+        paragraph_number += 1
+    md_lines.append(
+        f"{paragraph_number}. Plaintiffs allege that these events formed a connected housing process in which notices, documentation demands, lease or occupancy directives, and displacement-related actions were imposed in a manner that deprived or threatened federally protected housing interests, or otherwise violated governing federal housing rules, if the federal theories are ultimately substantiated."
+    )
+    paragraph_number += 1
+
+    factual_end = paragraph_number - 1
+    md_lines.extend(["", "## Claims for Relief", ""])
+    for mapped in mapped_counts:
+        md_lines.extend([
+            f"### Count {_roman_count_label(int(mapped.get('count_number') or 0))}: {mapped.get('count_title') or ''}",
+            "",
+            f"{paragraph_number}. Plaintiffs repeat and reallege Paragraphs 1 through {factual_end} as if fully set out here.",
+        ])
+        paragraph_number += 1
+        md_lines.append(f"{paragraph_number}. {mapped.get('intro') or ''}")
+        paragraph_number += 1
+        md_lines.append(
+            f"{paragraph_number}. This count is mapped from the evidence group '{mapped.get('source_section') or ''}' and is presented as a candidate named federal claim structure for final legal refinement."
+        )
+        paragraph_number += 1
+        for paragraph in list(mapped.get("paragraphs") or [])[:3]:
+            if isinstance(paragraph, dict):
+                text = str(paragraph.get("paragraph") or "")
+            else:
+                text = str(paragraph)
+            md_lines.append(f"{paragraph_number}. {text}")
+            paragraph_number += 1
+        md_lines.append("")
+        md_lines.append("Candidate theory basis:")
+        for note in list(mapped.get("theory_basis") or []):
+            md_lines.append(f"- {note}")
+        md_lines.append("")
+        md_lines.append("Elements to plead or verify:")
+        for prompt in list(mapped.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_lines.extend(["## Reserve or Supporting Theories", ""])
+    if reserve_sections:
+        for section in reserve_sections:
+            md_lines.append(
+                f"- {section.get('title') or 'Potential Claim Theme'} | source group={section.get('source_section') or ''} | preserve as support or reserve unless a specific federal basis materially strengthens"
+            )
+    else:
+        md_lines.append("No reserve theories identified.")
+
+    md_lines.extend([
+        "",
+        "## Prayer for Relief",
+        "",
+        f"{paragraph_number}. {prayer_lines[0]}",
+        f"{paragraph_number + 1}. {prayer_lines[1]}",
+        f"{paragraph_number + 2}. {prayer_lines[2]}",
+        f"{paragraph_number + 3}. Plaintiffs further request declaratory, injunctive, equitable, statutory, fee-shifting, and cost relief authorized by the final selected federal causes of action and any properly joined supplemental claims.",
+        "",
+        "## Jury Demand",
+        "",
+        f"{paragraph_number + 4}. Plaintiffs demand a jury on all issues so triable in federal court.",
+        "",
+        "## Final Conformance Before Filing",
+        "",
+        "- Replace candidate count names with the exact federal cause-of-action names selected for filing.",
+        "- Add the specific federal statutory, constitutional, fair-housing, or housing-program authorities supporting each count.",
+        "- Confirm whether any reserve theories should be elevated, split, or omitted, and whether any Oregon-law theories should remain supplemental.",
+    ])
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_oregon_state_authority_placeholder_draft(
+    complaint_ready: dict[str, Any],
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_oregon_state_authority_placeholder_draft.json"
+    md_path = chronology_dir / "formal_complaint_oregon_state_authority_placeholder_draft.md"
+
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    factual_background = factual_entries[: min(12, len(factual_entries))]
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+
+    authority_map = [
+        {
+            "count_title": "Defective Termination, Displacement, and Adverse Notice Process",
+            "authority_placeholders": [
+                "Insert controlling lease notice and termination clause(s).",
+                "Insert the governing Oregon termination, displacement, relocation, or tenant-notice authority from ORS chapter 90 or the controlling housing-program rules.",
+                "Insert any required hearing, appeal, or relocation-process authority if the challenged notices triggered those procedures.",
+            ],
+        },
+        {
+            "count_title": "Documentation Demands, Intake Barriers, and Oregon Housing Administration Misconduct",
+            "authority_placeholders": [
+                "Insert the Oregon discrimination, retaliation, or unfair housing-process authority actually supported by the proof.",
+                "Insert the governing documentation, verification, or intake rule that limited what HACC could demand.",
+                "Insert any lease, voucher, or program source showing the challenged demands were unsupported, selective, or excessive.",
+            ],
+        },
+        {
+            "count_title": "Lease, Occupancy, Inspection, and Housing-Program Obligation Violations",
+            "authority_placeholders": [
+                "Insert the controlling lease amendment, occupancy, inspection, or transfer clause(s).",
+                "Insert any Oregon contract, tenancy, or housing-program authority that defines the duty allegedly breached.",
+                "Insert the remedy source for damages, declaratory relief, injunction, or other relief tied to the lease or program violation.",
+            ],
+        },
+    ]
+
+    counts: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        mapped = authority_map[idx] if idx < len(authority_map) else {
+            "count_title": str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "authority_placeholders": ["Insert the controlling Oregon statutory, contractual, or program authority for this count."],
+        }
+        counts.append({
+            "count_number": idx + 1,
+            "count_title": mapped["count_title"],
+            "source_section": str(section.get("source_section") or ""),
+            "intro": str(section.get("intro") or ""),
+            "authority_placeholders": list(mapped.get("authority_placeholders") or []),
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "lead_count_count": len(counts),
+        "authority_block_count": sum(len(count.get("authority_placeholders") or []) for count in counts),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps({**summary, "counts": counts, "factual_background": factual_background}, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    md_lines = [
+        "# Oregon State Authority-Placeholder Complaint Draft",
+        "",
+        "Use this draft to insert the precise Oregon statutory, lease, relocation, and housing-program authorities before finalizing the Oregon complaint.",
+        "",
+        "## Factual Anchor",
+        "",
+    ]
+    for entry in factual_background:
+        md_lines.append(f"- {entry.get('paragraph') or ''}")
+
+    md_lines.extend(["", "## Count-Level Authority Placeholders", ""])
+    for count in counts:
+        md_lines.extend([
+            f"### Count {_roman_count_label(int(count.get('count_number') or 0))}: {count.get('count_title') or ''}",
+            "",
+            f"Source allegation group: {count.get('source_section') or ''}",
+            f"Draft theory summary: {count.get('intro') or ''}",
+            "",
+            "Authorities to insert:",
+        ])
+        for placeholder in list(count.get("authority_placeholders") or []):
+            md_lines.append(f"- {placeholder}")
+        md_lines.append("")
+        md_lines.append("Elements still to verify:")
+        for prompt in list(count.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_lines.extend([
+        "## Final Oregon Conformance",
+        "",
+        "- Add exact ORS, lease, relocation, or administrative authorities under each count.",
+        "- Confirm whether the strongest remedy is declaratory, injunctive, damages-based, or some combination.",
+        "- Split any count that depends on materially different legal duties or remedies.",
+    ])
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_federal_authority_placeholder_draft(
+    complaint_ready: dict[str, Any],
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_federal_authority_placeholder_draft.json"
+    md_path = chronology_dir / "formal_complaint_federal_authority_placeholder_draft.md"
+
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    factual_background = factual_entries[: min(12, len(factual_entries))]
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+
+    authority_map = [
+        {
+            "count_title": "42 U.S.C. section 1983 Due Process or Federal Housing Notice Claim",
+            "authority_placeholders": [
+                "Insert 28 U.S.C. section 1331 and the exact federal anchor authority for subject-matter jurisdiction.",
+                "Insert 42 U.S.C. section 1983 and the underlying constitutional or federal housing right only if state action and a protected housing interest can be pleaded in good faith.",
+                "If proceeding on a statutory or program-based notice theory instead, insert the specific federal housing regulation, statute, or guidance source actually governing the challenged notices.",
+            ],
+        },
+        {
+            "count_title": "Federal Fair Housing, Retaliation, or Improper Housing Administration Claim",
+            "authority_placeholders": [
+                "Insert the specific federal discrimination, retaliation, or fair-housing authority actually supported by the evidence.",
+                "Insert the governing federal housing-program verification, intake, or administration rule that the challenged demands allegedly violated.",
+                "If Oregon-law theories remain in the case, insert 28 U.S.C. section 1367 only where supplemental pleading is strategically warranted.",
+            ],
+        },
+        {
+            "count_title": "Federal Housing Program Compliance Claim Based on Lease, Occupancy, Inspection, or Displacement Conduct",
+            "authority_placeholders": [
+                "Insert the specific federal housing-program regulation, handbook, contract condition, or administrative rule governing the lease, occupancy, inspection, transfer, or displacement conduct at issue.",
+                "Insert the precise federally protected housing interest, benefit, or program entitlement implicated by the challenged conduct.",
+                "If no sufficiently concrete federal authority exists, move this conduct to supplemental Oregon-law pleading rather than preserving it as a federal standalone count.",
+            ],
+        },
+    ]
+
+    counts: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        mapped = authority_map[idx] if idx < len(authority_map) else {
+            "count_title": str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "authority_placeholders": ["Insert the controlling federal statutory, constitutional, or program authority for this count."],
+        }
+        counts.append({
+            "count_number": idx + 1,
+            "count_title": mapped["count_title"],
+            "source_section": str(section.get("source_section") or ""),
+            "intro": str(section.get("intro") or ""),
+            "authority_placeholders": list(mapped.get("authority_placeholders") or []),
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "lead_count_count": len(counts),
+        "authority_block_count": sum(len(count.get("authority_placeholders") or []) for count in counts),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps({**summary, "counts": counts, "factual_background": factual_background}, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    md_lines = [
+        "# Federal Authority-Placeholder Complaint Draft",
+        "",
+        "Use this draft to insert the precise federal jurisdictional, statutory, constitutional, regulatory, and program authorities before finalizing the federal complaint.",
+        "",
+        "## Factual Anchor",
+        "",
+    ]
+    for entry in factual_background:
+        md_lines.append(f"- {entry.get('paragraph') or ''}")
+
+    md_lines.extend(["", "## Count-Level Authority Placeholders", ""])
+    for count in counts:
+        md_lines.extend([
+            f"### Count {_roman_count_label(int(count.get('count_number') or 0))}: {count.get('count_title') or ''}",
+            "",
+            f"Source allegation group: {count.get('source_section') or ''}",
+            f"Draft theory summary: {count.get('intro') or ''}",
+            "",
+            "Authorities to insert:",
+        ])
+        for placeholder in list(count.get("authority_placeholders") or []):
+            md_lines.append(f"- {placeholder}")
+        md_lines.append("")
+        md_lines.append("Elements still to verify:")
+        for prompt in list(count.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_lines.extend([
+        "## Final Federal Conformance",
+        "",
+        "- Add exact federal authorities under each count and in the jurisdiction section.",
+        "- Confirm whether section 1983, a federal housing statute, a federal program rule, or a mixed theory is actually the strongest anchor.",
+        "- Move weakly grounded federal theories into supplemental Oregon-law pleading instead of preserving them as standalone federal counts.",
+    ])
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_forum_authority_research_queue(
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_forum_authority_research_queue.json"
+    md_path = chronology_dir / "formal_complaint_forum_authority_research_queue.md"
+
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    queue_templates = [
+        {
+            "oregon": [
+                "Identify the precise Oregon notice, termination, displacement, relocation, and hearing authorities governing the challenged notices.",
+                "Locate the controlling lease clause or voucher/program document that set the notice requirements actually applicable to plaintiffs.",
+            ],
+            "federal": [
+                "Identify whether Count I is best anchored in section 1983 due process, a federal housing statute, or a federal program-rule notice theory.",
+                "Locate the exact federal housing regulation, statute, handbook, or guidance source governing the challenged notice or displacement process.",
+            ],
+        },
+        {
+            "oregon": [
+                "Identify the strongest Oregon discrimination, retaliation, or unfair housing-process authority applicable to documentation demands and intake barriers.",
+                "Locate the rule, lease term, or program condition that limited what documentation HACC could require from plaintiffs.",
+            ],
+            "federal": [
+                "Identify the strongest federal fair-housing, retaliation, or federally improper administration authority applicable to the documentation demands.",
+                "Locate the federal housing-program verification or intake rule that the challenged demands allegedly exceeded or violated.",
+            ],
+        },
+        {
+            "oregon": [
+                "Identify the lease, occupancy, inspection, transfer, and housing-program authorities that defined HACC's obligations for the challenged conduct.",
+                "Determine whether this count should be split into separate lease-breach and housing-process counts under Oregon law.",
+            ],
+            "federal": [
+                "Identify the exact federal housing-program regulation, contract condition, or program guidance governing the lease, occupancy, inspection, or displacement conduct at issue.",
+                "Determine whether Count III has a sufficiently concrete federal hook or should instead be preserved only as supplemental Oregon-law pleading.",
+            ],
+        },
+    ]
+
+    entries: list[dict[str, Any]] = []
+    priority = 1
+    for idx, section in enumerate(lead_sections):
+        template = queue_templates[idx] if idx < len(queue_templates) else {"oregon": [], "federal": []}
+        title = str(section.get("title") or f"Lead Count {idx + 1}")
+        source_section = str(section.get("source_section") or "")
+        for forum in ("oregon", "federal"):
+            for item in list(template.get(forum) or []):
+                entries.append({
+                    "priority": priority,
+                    "forum": forum,
+                    "lead_count": idx + 1,
+                    "title": title,
+                    "source_section": source_section,
+                    "task": item,
+                })
+                priority += 1
+
+    summary = {
+        "status": "success",
+        "entry_count": len(entries),
+        "oregon_entry_count": sum(1 for entry in entries if entry.get("forum") == "oregon"),
+        "federal_entry_count": sum(1 for entry in entries if entry.get("forum") == "federal"),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "entries": entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Forum Authority Research Queue",
+        "",
+        f"Total research tasks: {summary['entry_count']}",
+        f"Oregon tasks: {summary['oregon_entry_count']}",
+        f"Federal tasks: {summary['federal_entry_count']}",
+        "",
+        "Use this queue to resolve the remaining legal-authority insertion gaps before selecting the final forum-specific complaint for filing.",
+        "",
+        "## Queue",
+        "",
+    ]
+    for entry in entries:
+        md_lines.append(
+            f"- P{entry['priority']} | forum={entry['forum']} | count={entry['lead_count']} | {entry['title']} | source={entry['source_section']} | task={entry['task']}"
+        )
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_oregon_authority_insertion_worksheet(
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_oregon_authority_insertion_worksheet.json"
+    md_path = chronology_dir / "formal_complaint_oregon_authority_insertion_worksheet.md"
+
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    titles = [
+        "Defective Termination, Displacement, and Adverse Notice Process",
+        "Documentation Demands, Intake Barriers, and Oregon Housing Administration Misconduct",
+        "Lease, Occupancy, Inspection, and Housing-Program Obligation Violations",
+    ]
+    worksheets: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        paragraphs = list(section.get("paragraphs") or [])
+        representative_facts: list[str] = []
+        for paragraph in paragraphs[:3]:
+            if isinstance(paragraph, dict):
+                representative_facts.append(str(paragraph.get("paragraph") or ""))
+            else:
+                representative_facts.append(str(paragraph))
+        worksheets.append({
+            "count_number": idx + 1,
+            "count_title": titles[idx] if idx < len(titles) else str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "source_section": str(section.get("source_section") or ""),
+            "draft_theory_summary": str(section.get("intro") or ""),
+            "authority_slots": [
+                "Exact Oregon cause-of-action label or claim heading",
+                "Primary Oregon statutory, regulatory, relocation, or tenant-process authority",
+                "Lease clause, voucher term, or housing-program document authority",
+                "Remedy authority for declaratory, injunctive, damages, or fee relief",
+                "Authority-to-fact linkage sentence tying the cited rule to the representative evidence",
+            ],
+            "representative_facts": representative_facts,
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "count_count": len(worksheets),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "worksheets": worksheets,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Oregon Authority Insertion Worksheet",
+        "",
+        "Use this worksheet to turn the Oregon draft from authority placeholders into pleading-ready count sections.",
+        "",
+    ]
+    for worksheet in worksheets:
+        md_lines.extend([
+            f"## Count {_roman_count_label(int(worksheet.get('count_number') or 0))}: {worksheet.get('count_title') or ''}",
+            "",
+            f"Source allegation group: {worksheet.get('source_section') or ''}",
+            f"Draft theory summary: {worksheet.get('draft_theory_summary') or ''}",
+            "",
+            "Authority insertion slots:",
+        ])
+        for slot in list(worksheet.get("authority_slots") or []):
+            md_lines.append(f"- {slot}: [INSERT]")
+        md_lines.extend(["", "Representative facts to connect:"])
+        for fact in list(worksheet.get("representative_facts") or []):
+            md_lines.append(f"- {fact}")
+        md_lines.extend(["", "Elements still to prove or verify:"])
+        for prompt in list(worksheet.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_federal_authority_insertion_worksheet(
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_federal_authority_insertion_worksheet.json"
+    md_path = chronology_dir / "formal_complaint_federal_authority_insertion_worksheet.md"
+
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    titles = [
+        "42 U.S.C. section 1983 Due Process or Federal Housing Notice Claim",
+        "Federal Fair Housing, Retaliation, or Improper Housing Administration Claim",
+        "Federal Housing Program Compliance Claim Based on Lease, Occupancy, Inspection, or Displacement Conduct",
+    ]
+    worksheets: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        paragraphs = list(section.get("paragraphs") or [])
+        representative_facts: list[str] = []
+        for paragraph in paragraphs[:3]:
+            if isinstance(paragraph, dict):
+                representative_facts.append(str(paragraph.get("paragraph") or ""))
+            else:
+                representative_facts.append(str(paragraph))
+        worksheets.append({
+            "count_number": idx + 1,
+            "count_title": titles[idx] if idx < len(titles) else str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "source_section": str(section.get("source_section") or ""),
+            "draft_theory_summary": str(section.get("intro") or ""),
+            "authority_slots": [
+                "Federal cause-of-action label",
+                "Jurisdictional authority and anchor claim citation",
+                "Primary federal statutory, regulatory, constitutional, or program-rule authority",
+                "State-action, federal-program, or protected-interest allegation source",
+                "Supplemental jurisdiction decision for any Oregon-law component",
+                "Authority-to-fact linkage sentence tying the cited rule to the representative evidence",
+            ],
+            "representative_facts": representative_facts,
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "count_count": len(worksheets),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "worksheets": worksheets,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Federal Authority Insertion Worksheet",
+        "",
+        "Use this worksheet to turn the federal draft from authority placeholders into pleading-ready count sections.",
+        "",
+    ]
+    for worksheet in worksheets:
+        md_lines.extend([
+            f"## Count {_roman_count_label(int(worksheet.get('count_number') or 0))}: {worksheet.get('count_title') or ''}",
+            "",
+            f"Source allegation group: {worksheet.get('source_section') or ''}",
+            f"Draft theory summary: {worksheet.get('draft_theory_summary') or ''}",
+            "",
+            "Authority insertion slots:",
+        ])
+        for slot in list(worksheet.get("authority_slots") or []):
+            md_lines.append(f"- {slot}: [INSERT]")
+        md_lines.extend(["", "Representative facts to connect:"])
+        for fact in list(worksheet.get("representative_facts") or []):
+            md_lines.append(f"- {fact}")
+        md_lines.extend(["", "Elements still to prove or verify:"])
+        for prompt in list(worksheet.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_oregon_candidate_authority_scaffold(
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_oregon_candidate_authority_scaffold.json"
+    md_path = chronology_dir / "formal_complaint_oregon_candidate_authority_scaffold.md"
+
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    scaffold_map = [
+        {
+            "count_title": "Defective Termination, Displacement, and Adverse Notice Process",
+            "candidate_authority_families": [
+                "ORS chapter 90 termination, notice, tenancy, and displacement provisions: confirm the exact section(s) actually governing the tenancy status and notice type.",
+                "Oregon relocation, hearing, or housing-program procedural authorities: confirm whether the challenged notices triggered any relocation or appeal framework.",
+                "Lease notice, termination, or occupancy clauses from the operative lease amendment or voucher/program packet.",
+            ],
+        },
+        {
+            "count_title": "Documentation Demands, Intake Barriers, and Oregon Housing Administration Misconduct",
+            "candidate_authority_families": [
+                "Oregon housing discrimination, retaliation, or unfair-process authorities: confirm the exact statutory or administrative source actually supported by the proof.",
+                "Voucher, subsidy, or program verification rules limiting what documentation could be demanded.",
+                "Lease, policy, or application materials showing the challenged intake conditions were unsupported or selectively imposed.",
+            ],
+        },
+        {
+            "count_title": "Lease, Occupancy, Inspection, and Housing-Program Obligation Violations",
+            "candidate_authority_families": [
+                "Lease amendment, occupancy, inspection, transfer, or household-composition clauses from the operative housing documents.",
+                "Oregon contract or tenancy-duty authorities: confirm the exact state-law source governing breach, performance, or improper housing administration.",
+                "Housing-program obligations or administrative materials governing inspections, occupancy changes, or relocation-related conduct.",
+            ],
+        },
+    ]
+
+    entries: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        mapped = scaffold_map[idx] if idx < len(scaffold_map) else {
+            "count_title": str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "candidate_authority_families": ["Identify the likely Oregon statutory, lease, and program authorities for this count."],
+        }
+        entries.append({
+            "count_number": idx + 1,
+            "count_title": mapped["count_title"],
+            "source_section": str(section.get("source_section") or ""),
+            "candidate_authority_families": list(mapped.get("candidate_authority_families") or []),
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "count_count": len(entries),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "entries": entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Oregon Candidate Authority Scaffold",
+        "",
+        "Use this scaffold to decide which Oregon authority families should be researched and inserted under each count before finalizing the Oregon complaint.",
+        "",
+    ]
+    for entry in entries:
+        md_lines.extend([
+            f"## Count {_roman_count_label(int(entry.get('count_number') or 0))}: {entry.get('count_title') or ''}",
+            "",
+            f"Source allegation group: {entry.get('source_section') or ''}",
+            "",
+            "Candidate authority families:",
+        ])
+        for item in list(entry.get("candidate_authority_families") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Questions to close:"])
+        for prompt in list(entry.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_federal_candidate_authority_scaffold(
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_federal_candidate_authority_scaffold.json"
+    md_path = chronology_dir / "formal_complaint_federal_candidate_authority_scaffold.md"
+
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    scaffold_map = [
+        {
+            "count_title": "42 U.S.C. section 1983 Due Process or Federal Housing Notice Claim",
+            "candidate_authority_families": [
+                "28 U.S.C. section 1331 and, if needed, 28 U.S.C. section 1367: confirm the precise federal-jurisdiction structure.",
+                "42 U.S.C. section 1983 plus the specific constitutional or federally protected housing interest, if state action and deprivation can be pleaded in good faith.",
+                "Alternative federal housing notice or displacement authorities, including applicable HUD regulations, statutes, or handbook provisions: confirm the exact source actually governing the challenged notices.",
+            ],
+        },
+        {
+            "count_title": "Federal Fair Housing, Retaliation, or Improper Housing Administration Claim",
+            "candidate_authority_families": [
+                "Federal Fair Housing Act, retaliation, or anti-discrimination authorities: confirm the exact statutory and regulatory provisions actually implicated.",
+                "Federal housing-program verification, intake, or administration rules limiting what documentation could be demanded.",
+                "Supplemental-jurisdiction analysis for any related Oregon-law component if the strongest theory is mixed federal/state.",
+            ],
+        },
+        {
+            "count_title": "Federal Housing Program Compliance Claim Based on Lease, Occupancy, Inspection, or Displacement Conduct",
+            "candidate_authority_families": [
+                "Federal housing-program regulations, handbook provisions, or contract conditions governing lease, occupancy, inspection, transfer, or displacement conduct.",
+                "Authorities defining the federally protected housing interest, entitlement, or benefit allegedly impaired.",
+                "Fallback decision point: if the federal hook remains weak, move this conduct to supplemental Oregon-law pleading instead of a standalone federal count.",
+            ],
+        },
+    ]
+
+    entries: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        mapped = scaffold_map[idx] if idx < len(scaffold_map) else {
+            "count_title": str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "candidate_authority_families": ["Identify the likely federal statutory, constitutional, and program authorities for this count."],
+        }
+        entries.append({
+            "count_number": idx + 1,
+            "count_title": mapped["count_title"],
+            "source_section": str(section.get("source_section") or ""),
+            "candidate_authority_families": list(mapped.get("candidate_authority_families") or []),
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "count_count": len(entries),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "entries": entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Federal Candidate Authority Scaffold",
+        "",
+        "Use this scaffold to decide which federal authority families should be researched and inserted under each count before finalizing the federal complaint.",
+        "",
+    ]
+    for entry in entries:
+        md_lines.extend([
+            f"## Count {_roman_count_label(int(entry.get('count_number') or 0))}: {entry.get('count_title') or ''}",
+            "",
+            f"Source allegation group: {entry.get('source_section') or ''}",
+            "",
+            "Candidate authority families:",
+        ])
+        for item in list(entry.get("candidate_authority_families") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Questions to close:"])
+        for prompt in list(entry.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_authority_infused_complaint_draft(
+    forum: str,
+    complaint_ready: dict[str, Any],
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    factual_background = factual_entries[: min(10, len(factual_entries))]
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    reserve_sections = list(lead_count_draft.get("reserve_sections") or [])
+    prayer_lines = _draft_prayer_for_relief_lines()
+
+    if forum == "oregon":
+        json_path = chronology_dir / "formal_complaint_oregon_authority_infused_draft.json"
+        md_path = chronology_dir / "formal_complaint_oregon_authority_infused_draft.md"
+        title = "# Oregon Authority-Infused Complaint Draft"
+        caption_lines = [
+            "IN THE CIRCUIT COURT OF THE STATE OF OREGON",
+            "FOR THE COUNTY OF CLACKAMAS",
+        ]
+        intro_lines = [
+            "This draft combines the Oregon count structure with candidate authority families and pleading insertion points.",
+            "It is intended to make final Oregon pleading conversion faster once the exact authorities are selected.",
+        ]
+        count_map = [
+            {
+                "count_title": "Defective Termination, Displacement, and Adverse Notice Process",
+                "authorities": [
+                    "ORS chapter 90 termination, notice, tenancy, and displacement provisions: select the exact section(s) governing the challenged notices.",
+                    "Any Oregon relocation, hearing, or housing-program procedural authority triggered by the notices.",
+                    "The controlling lease notice, termination, or occupancy clause from the operative housing documents.",
+                ],
+                "insertion_sentence": "Plaintiffs will insert the exact Oregon notice, tenancy, relocation, and lease authorities showing that the challenged notices were legally deficient and threatened concrete housing harm.",
+            },
+            {
+                "count_title": "Documentation Demands, Intake Barriers, and Oregon Housing Administration Misconduct",
+                "authorities": [
+                    "Oregon discrimination, retaliation, or unfair housing-process authority supported by the documentation-demand record.",
+                    "The governing verification, subsidy, voucher, or intake rule limiting what HACC could demand.",
+                    "Any lease, policy, or application material showing the challenged conditions were unsupported or selectively imposed.",
+                ],
+                "insertion_sentence": "Plaintiffs will insert the Oregon authority showing that the challenged documentation demands exceeded the governing intake or administration rules and caused unlawful housing-process harm.",
+            },
+            {
+                "count_title": "Lease, Occupancy, Inspection, and Housing-Program Obligation Violations",
+                "authorities": [
+                    "The controlling lease amendment, occupancy, inspection, transfer, or household-composition clause(s).",
+                    "Oregon contract, tenancy-duty, or housing-program authority defining the obligation allegedly breached.",
+                    "Any remedy source supporting declaratory, injunctive, contractual, or damages relief for the challenged conduct.",
+                ],
+                "insertion_sentence": "Plaintiffs will insert the lease, Oregon duty, and program-authority sources showing that the occupancy, inspection, or related conduct departed from governing obligations.",
+            },
+        ]
+    else:
+        json_path = chronology_dir / "formal_complaint_federal_authority_infused_draft.json"
+        md_path = chronology_dir / "formal_complaint_federal_authority_infused_draft.md"
+        title = "# Federal Authority-Infused Complaint Draft"
+        caption_lines = [
+            "IN THE UNITED STATES DISTRICT COURT",
+            "FOR THE DISTRICT OF OREGON",
+        ]
+        intro_lines = [
+            "This draft combines the federal count structure with candidate authority families and pleading insertion points.",
+            "It is intended to make final federal pleading conversion faster once the precise anchor theory is selected.",
+        ]
+        count_map = [
+            {
+                "count_title": "42 U.S.C. section 1983 Due Process or Federal Housing Notice Claim",
+                "authorities": [
+                    "28 U.S.C. section 1331 and any necessary supplemental-jurisdiction authority under 28 U.S.C. section 1367.",
+                    "42 U.S.C. section 1983 and the exact constitutional or federally protected housing interest, if state action and deprivation can be pleaded in good faith.",
+                    "Any alternative federal housing notice, displacement, or program authority actually governing the challenged notices.",
+                ],
+                "insertion_sentence": "Plaintiffs will insert the federal jurisdictional and substantive authorities showing that the challenged notices deprived or threatened a federally protected housing interest through inadequate process or noncompliant federal housing administration.",
+            },
+            {
+                "count_title": "Federal Fair Housing, Retaliation, or Improper Housing Administration Claim",
+                "authorities": [
+                    "Federal Fair Housing Act, retaliation, discrimination, or anti-interference authorities actually supported by the proof.",
+                    "The governing federal verification, intake, subsidy, or program-administration rule limiting what HACC could demand.",
+                    "Any supplemental-jurisdiction authority needed for related Oregon-law allegations.",
+                ],
+                "insertion_sentence": "Plaintiffs will insert the federal statutory and program-rule authorities showing that the challenged documentation demands were discriminatory, retaliatory, or inconsistent with governing federal housing administration rules.",
+            },
+            {
+                "count_title": "Federal Housing Program Compliance Claim Based on Lease, Occupancy, Inspection, or Displacement Conduct",
+                "authorities": [
+                    "The precise federal housing-program regulation, handbook provision, contract condition, or administrative rule governing the challenged lease, occupancy, inspection, or displacement conduct.",
+                    "The federally protected housing interest, benefit, or entitlement allegedly impaired by the conduct.",
+                    "If the federal hook is weak, the supplemental Oregon-law fallback path that should replace a standalone federal count.",
+                ],
+                "insertion_sentence": "Plaintiffs will insert the specific federal housing-program and entitlement authorities showing that the lease, occupancy, inspection, or related conduct violated federal housing obligations or otherwise belongs only as supplemental state-law pleading.",
+            },
+        ]
+
+    counts: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        mapped = count_map[idx] if idx < len(count_map) else {
+            "count_title": str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "authorities": ["Insert the controlling authority family for this count."],
+            "insertion_sentence": "Insert the authority-to-fact linkage for this count.",
+        }
+        paragraphs = list(section.get("paragraphs") or [])
+        representative_facts: list[str] = []
+        for paragraph in paragraphs[:3]:
+            if isinstance(paragraph, dict):
+                representative_facts.append(str(paragraph.get("paragraph") or ""))
+            else:
+                representative_facts.append(str(paragraph))
+        counts.append({
+            "count_number": idx + 1,
+            "count_title": mapped["count_title"],
+            "source_section": str(section.get("source_section") or ""),
+            "draft_theory_summary": str(section.get("intro") or ""),
+            "authority_families": list(mapped.get("authorities") or []),
+            "insertion_sentence": str(mapped.get("insertion_sentence") or ""),
+            "representative_facts": representative_facts,
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "forum": forum,
+        "lead_count_count": len(counts),
+        "reserve_count_count": len(reserve_sections),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps({**summary, "counts": counts, "factual_background": factual_background}, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    md_lines = [title, "", *caption_lines, "", "Jane Cortez and Benjamin Barber,", "Plaintiffs,", "", "v.", "", "Housing Authority of Clackamas County; DOES 1-10,", "Defendants.", "", "## Draft Status", ""]
+    md_lines.extend(intro_lines)
+    md_lines.extend(["", "## General Allegation Snapshot", ""])
+    for entry in factual_background:
+        md_lines.append(f"- {entry.get('paragraph') or ''}")
+
+    md_lines.extend(["", "## Claims for Relief", ""])
+    for count in counts:
+        md_lines.extend([
+            f"### Count {_roman_count_label(int(count.get('count_number') or 0))}: {count.get('count_title') or ''}",
+            "",
+            f"Source allegation group: {count.get('source_section') or ''}",
+            f"Draft theory summary: {count.get('draft_theory_summary') or ''}",
+            "",
+            "Candidate authority families:",
+        ])
+        for item in list(count.get("authority_families") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend([
+            "",
+            "Draft authority insertion sentence:",
+            f"- {count.get('insertion_sentence') or ''}",
+            "",
+            "Representative facts to connect:",
+        ])
+        for fact in list(count.get("representative_facts") or []):
+            md_lines.append(f"- {fact}")
+        md_lines.extend(["", "Elements still to prove or verify:"])
+        for prompt in list(count.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_lines.extend(["## Reserve Counts", ""])
+    if reserve_sections:
+        for section in reserve_sections:
+            md_lines.append(
+                f"- {section.get('title') or 'Potential Claim Theme'} | source group={section.get('source_section') or ''}"
+            )
+    else:
+        md_lines.append("No reserve counts identified.")
+
+    md_lines.extend(["", "## Prayer for Relief Anchor", ""])
+    for line in prayer_lines:
+        md_lines.append(f"- {line}")
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_oregon_near_final_candidate_draft(
+    complaint_ready: dict[str, Any],
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_oregon_near_final_candidate_draft.json"
+    md_path = chronology_dir / "formal_complaint_oregon_near_final_candidate_draft.md"
+
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    factual_background = factual_entries[: min(12, len(factual_entries))]
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    reserve_sections = list(lead_count_draft.get("reserve_sections") or [])
+    prayer_lines = _draft_prayer_for_relief_lines()
+
+    count_map = [
+        {
+            "count_title": "Declaratory and Injunctive Relief Based on Defective Termination, Displacement, and Adverse Notice Process",
+            "candidate_authorities": [
+                "ORS chapter 90 notice, termination, displacement, or tenancy provisions: insert exact section(s) after tenancy-status confirmation.",
+                "Any Oregon relocation, hearing, or housing-program procedural authority triggered by the challenged notices.",
+                "The operative lease, voucher, or program notice clause(s) governing notice content, timing, and delivery.",
+            ],
+            "candidate_linkage": "Plaintiffs allege that the challenged 2024-2025 notices failed to comply with the governing Oregon notice and housing-process authorities and therefore threatened displacement or other concrete housing harm.",
+        },
+        {
+            "count_title": "Oregon Housing Discrimination, Retaliation, or Unfair Housing Administration Based on Documentation Demands and Intake Barriers",
+            "candidate_authorities": [
+                "Oregon discrimination, retaliation, or unfair housing-process authority actually supported by the documentation-demand record.",
+                "The governing verification, subsidy, voucher, or intake rule limiting the documentation HACC could require.",
+                "Any lease, policy, or application material showing the challenged intake conditions were unsupported, excessive, or selectively imposed.",
+            ],
+            "candidate_linkage": "Plaintiffs allege that the documentation demands and related intake barriers exceeded the governing Oregon-compatible housing-process rules and materially burdened housing access or retention.",
+        },
+        {
+            "count_title": "Breach of Lease, Breach of Housing Program Obligations, and Wrongful Occupancy or Inspection Administration",
+            "candidate_authorities": [
+                "The controlling lease amendment, occupancy, inspection, transfer, or household-composition clause(s).",
+                "Oregon contract, tenancy-duty, or housing-program authority defining the obligations allegedly breached.",
+                "Any remedy source supporting declaratory, injunctive, contractual, or damages relief for the challenged conduct.",
+            ],
+            "candidate_linkage": "Plaintiffs allege that the challenged occupancy, inspection, and related housing-administration conduct departed from the lease and housing-program obligations that governed the tenancy and household status.",
+        },
+    ]
+
+    mapped_counts: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        mapped = count_map[idx] if idx < len(count_map) else {
+            "count_title": str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "candidate_authorities": ["Insert the controlling Oregon authority family for this count."],
+            "candidate_linkage": "Insert the authority-to-fact linkage sentence for this count.",
+        }
+        paragraphs = list(section.get("paragraphs") or [])
+        representative_facts: list[str] = []
+        for paragraph in paragraphs[:3]:
+            if isinstance(paragraph, dict):
+                representative_facts.append(str(paragraph.get("paragraph") or ""))
+            else:
+                representative_facts.append(str(paragraph))
+        mapped_counts.append({
+            "count_number": idx + 1,
+            "count_title": mapped["count_title"],
+            "source_section": str(section.get("source_section") or ""),
+            "draft_theory_summary": str(section.get("intro") or ""),
+            "candidate_authorities": list(mapped.get("candidate_authorities") or []),
+            "candidate_linkage": str(mapped.get("candidate_linkage") or ""),
+            "representative_facts": representative_facts,
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "lead_count_count": len(mapped_counts),
+        "reserve_count_count": len(reserve_sections),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps({**summary, "counts": mapped_counts, "factual_background": factual_background}, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    md_lines = [
+        "# Oregon Near-Final Candidate Complaint Draft",
+        "",
+        "IN THE CIRCUIT COURT OF THE STATE OF OREGON",
+        "FOR THE COUNTY OF CLACKAMAS",
+        "",
+        "Jane Cortez and Benjamin Barber,",
+        "Plaintiffs,",
+        "",
+        "v.",
+        "",
+        "Housing Authority of Clackamas County; DOES 1-10,",
+        "Defendants.",
+        "",
+        "## Draft Status",
+        "",
+        "This Oregon draft is a near-final candidate structure built from the selected lead counts, representative evidence, and candidate authority families.",
+        "It still requires final authority selection, party confirmation, and remedy refinement before filing.",
+        "",
+        "## Nature of Action",
+        "",
+        "1. Plaintiffs bring this Oregon civil action arising from housing notices, documentation demands, lease-related conduct, occupancy-related directives, and displacement-related actions centered in Clackamas County, Oregon.",
+        "2. This draft narrows the case to three lead counts and embeds the authority families most likely to support final Oregon pleading conversion.",
+        "",
+        "## Parties and Venue",
+        "",
+        "3. Plaintiffs are Jane Cortez and Benjamin Barber, subject to confirmation of full legal names, claim alignment, and party capacity.",
+        "4. Defendant Housing Authority of Clackamas County is alleged to have issued the notices, demands, and housing-administration communications described below.",
+        "5. Venue is laid in Clackamas County because the housing unit, operative notices, and principal housing-administration events at issue are centered in Clackamas County, Oregon.",
+        "",
+        "## General Allegations",
+        "",
+    ]
+
+    paragraph_number = 6
+    for entry in factual_background:
+        md_lines.append(f"{paragraph_number}. {entry.get('paragraph') or ''}")
+        paragraph_number += 1
+
+    md_lines.extend(["", "## Claims for Relief", ""])
+    for count in mapped_counts:
+        md_lines.extend([
+            f"### Count {_roman_count_label(int(count.get('count_number') or 0))}: {count.get('count_title') or ''}",
+            "",
+            f"{paragraph_number}. Plaintiffs repeat and reallege the preceding paragraphs as if fully set out here.",
+            f"{paragraph_number + 1}. {count.get('draft_theory_summary') or ''}",
+            f"{paragraph_number + 2}. {count.get('candidate_linkage') or ''}",
+            "",
+            "Candidate authorities to insert:",
+        ])
+        paragraph_number += 3
+        for item in list(count.get("candidate_authorities") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Representative facts:"])
+        for fact in list(count.get("representative_facts") or []):
+            md_lines.append(f"- {fact}")
+        md_lines.extend(["", "Elements still to prove or verify:"])
+        for prompt in list(count.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_lines.extend(["## Reserve Counts", ""])
+    if reserve_sections:
+        for section in reserve_sections:
+            md_lines.append(
+                f"- {section.get('title') or 'Potential Claim Theme'} | source group={section.get('source_section') or ''} | preserve as reserve unless later elevated"
+            )
+    else:
+        md_lines.append("No reserve counts identified.")
+
+    md_lines.extend(["", "## Prayer for Relief", ""])
+    for line in prayer_lines:
+        md_lines.append(f"- {line}")
+    md_lines.extend([
+        "- Plaintiffs further request Oregon-law declaratory, injunctive, restitutionary, contractual, statutory, equitable, fee-shifting, and cost relief authorized by the final selected causes of action.",
+        "",
+        "## Final Oregon Conformance Before Filing",
+        "",
+        "- Replace each candidate authority family with the exact Oregon statutory, lease, relocation, or program authority selected after legal review.",
+        "- Confirm whether Count II is best framed as discrimination, retaliation, unfair housing administration, or a split set of counts.",
+        "- Confirm whether Count III should remain a combined lease/program count or be separated into distinct breach and process theories.",
+    ])
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_federal_near_final_candidate_draft(
+    complaint_ready: dict[str, Any],
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_federal_near_final_candidate_draft.json"
+    md_path = chronology_dir / "formal_complaint_federal_near_final_candidate_draft.md"
+
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    factual_background = factual_entries[: min(12, len(factual_entries))]
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    reserve_sections = list(lead_count_draft.get("reserve_sections") or [])
+    prayer_lines = _draft_prayer_for_relief_lines()
+
+    count_map = [
+        {
+            "count_title": "Declaratory and Injunctive Relief Under Federal Housing Program, Due Process, and Notice-Based Theories",
+            "candidate_authorities": [
+                "The federal housing-program authority governing notice, termination, hearing, grievance, or displacement rights implicated by the challenged communications.",
+                "Any HUD regulation, handbook, or relocation authority incorporated into the tenancy or voucher relationship.",
+                "The specific federal due-process or federally enforceable notice rule, if one is supportable on final review.",
+            ],
+            "candidate_linkage": "Plaintiffs allege that the challenged notices and displacement-related actions violated federally anchored notice, hearing, relocation, or due-process protections tied to the tenancy or housing assistance relationship.",
+        },
+        {
+            "count_title": "Federal Housing Discrimination, Retaliation, or Program-Administration Theory Based on Documentation Demands and Intake Barriers",
+            "candidate_authorities": [
+                "The best-supported federal discrimination, retaliation, or housing-program administration authority implicated by the documentation-demand record.",
+                "Any federal verification, subsidy, voucher, or program rule limiting the documentation HACC could require.",
+                "Any federally enforceable policy, lease term, or program obligation showing arbitrary or selective intake administration.",
+            ],
+            "candidate_linkage": "Plaintiffs allege that the repeated documentation demands and intake barriers burdened federally protected housing access, retention, or program participation under the final selected federal theory.",
+        },
+        {
+            "count_title": "Federal Contract, Program-Obligation, or Federally Anchored Occupancy and Inspection Administration Theory",
+            "candidate_authorities": [
+                "The lease, HAP, voucher, occupancy, inspection, transfer, or household-composition provisions with a viable federal enforcement hook.",
+                "The strongest federal source for enforcing the relevant housing-program obligations, whether statutory, regulatory, contractual, or incorporated HUD guidance.",
+                "The remedy authority supporting declaratory, injunctive, contractual, statutory, or damages relief in federal court.",
+            ],
+            "candidate_linkage": "Plaintiffs allege that the challenged occupancy, inspection, and housing-administration conduct departed from federally anchored program or contract obligations governing the tenancy and household status.",
+        },
+    ]
+
+    mapped_counts: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        mapped = count_map[idx] if idx < len(count_map) else {
+            "count_title": str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "candidate_authorities": ["Insert the controlling federal authority family for this count."],
+            "candidate_linkage": "Insert the federal authority-to-fact linkage sentence for this count.",
+        }
+        paragraphs = list(section.get("paragraphs") or [])
+        representative_facts: list[str] = []
+        for paragraph in paragraphs[:3]:
+            if isinstance(paragraph, dict):
+                representative_facts.append(str(paragraph.get("paragraph") or ""))
+            else:
+                representative_facts.append(str(paragraph))
+        mapped_counts.append({
+            "count_number": idx + 1,
+            "count_title": mapped["count_title"],
+            "source_section": str(section.get("source_section") or ""),
+            "draft_theory_summary": str(section.get("intro") or ""),
+            "candidate_authorities": list(mapped.get("candidate_authorities") or []),
+            "candidate_linkage": str(mapped.get("candidate_linkage") or ""),
+            "representative_facts": representative_facts,
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "lead_count_count": len(mapped_counts),
+        "reserve_count_count": len(reserve_sections),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps({**summary, "counts": mapped_counts, "factual_background": factual_background}, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    md_lines = [
+        "# Federal Near-Final Candidate Complaint Draft",
+        "",
+        "IN THE UNITED STATES DISTRICT COURT",
+        "FOR THE DISTRICT OF OREGON",
+        "",
+        "Jane Cortez and Benjamin Barber,",
+        "Plaintiffs,",
+        "",
+        "v.",
+        "",
+        "Housing Authority of Clackamas County; DOES 1-10,",
+        "Defendants.",
+        "",
+        "## Draft Status",
+        "",
+        "This federal draft is a near-final candidate structure built from the selected lead counts, representative evidence, and candidate federal authority families.",
+        "It still requires final jurisdictional theory selection, cause-of-action confirmation, and remedy refinement before filing.",
+        "",
+        "## Jurisdiction and Venue",
+        "",
+        "1. Plaintiffs intend to invoke federal-question jurisdiction only if the final selected claims arise under federal housing, civil-rights, due-process, or federally enforceable housing-program authority.",
+        "2. Venue would lie in the District of Oregon because the housing unit, operative notices, and principal events at issue are centered in Clackamas County, Oregon.",
+        "",
+        "## Parties",
+        "",
+        "3. Plaintiffs are Jane Cortez and Benjamin Barber, subject to confirmation of full legal names, claim alignment, and standing by count.",
+        "4. Defendant Housing Authority of Clackamas County is alleged to have issued the notices, demands, and housing-administration communications described below.",
+        "",
+        "## Factual Allegations",
+        "",
+    ]
+
+    paragraph_number = 5
+    for entry in factual_background:
+        md_lines.append(f"{paragraph_number}. {entry.get('paragraph') or ''}")
+        paragraph_number += 1
+
+    md_lines.extend(["", "## Claims for Relief", ""])
+    for count in mapped_counts:
+        md_lines.extend([
+            f"### Count {_roman_count_label(int(count.get('count_number') or 0))}: {count.get('count_title') or ''}",
+            "",
+            f"{paragraph_number}. Plaintiffs repeat and reallege the preceding paragraphs as if fully set out here.",
+            f"{paragraph_number + 1}. {count.get('draft_theory_summary') or ''}",
+            f"{paragraph_number + 2}. {count.get('candidate_linkage') or ''}",
+            "",
+            "Candidate federal authorities to insert:",
+        ])
+        paragraph_number += 3
+        for item in list(count.get("candidate_authorities") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Representative facts:"])
+        for fact in list(count.get("representative_facts") or []):
+            md_lines.append(f"- {fact}")
+        md_lines.extend(["", "Elements still to prove or verify:"])
+        for prompt in list(count.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_lines.extend(["## Reserve Counts", ""])
+    if reserve_sections:
+        for section in reserve_sections:
+            md_lines.append(
+                f"- {section.get('title') or 'Potential Claim Theme'} | source group={section.get('source_section') or ''} | preserve unless later matched to a concrete federal hook"
+            )
+    else:
+        md_lines.append("No reserve counts identified.")
+
+    md_lines.extend(["", "## Prayer for Relief", ""])
+    for line in prayer_lines:
+        md_lines.append(f"- {line}")
+    md_lines.extend([
+        "- Plaintiffs further request all declaratory, injunctive, statutory, contractual, constitutional, equitable, fee-shifting, and cost relief authorized by the final selected federal causes of action.",
+        "",
+        "## Final Federal Conformance Before Filing",
+        "",
+        "- Select and confirm the single strongest federal anchor theory for Count I and the complaint as a whole.",
+        "- Confirm whether Count II is best framed through Fair Housing, retaliation, due-process-plus-program-administration, or another narrower federal theory.",
+        "- Confirm whether Count III has a viable independent federal enforcement hook or should remain secondary to Oregon-law claims.",
+    ])
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_near_final_forum_recommendation_memo(
+    forum_selection_memo: dict[str, Any],
+    claim_priority_memo: dict[str, Any],
+    oregon_near_final_candidate_draft: dict[str, Any],
+    federal_near_final_candidate_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_near_final_forum_recommendation_memo.json"
+    md_path = chronology_dir / "formal_complaint_near_final_forum_recommendation_memo.md"
+
+    score_rows = [
+        {
+            "criterion": "Claim-authority readiness",
+            "oregon_score": 5,
+            "federal_score": 2,
+            "oregon_reason": "The Oregon track can be completed by selecting exact Oregon tenancy, lease, relocation, or housing-process authorities already reflected by the current evidence pattern.",
+            "federal_reason": "The federal track still depends on selecting and defending a concrete federal anchor theory before final pleading conversion is safe.",
+        },
+        {
+            "criterion": "Jurisdiction and venue certainty",
+            "oregon_score": 5,
+            "federal_score": 2,
+            "oregon_reason": "The venue facts are already centered in Clackamas County and fit an Oregon trial-court path without additional jurisdictional theory work.",
+            "federal_reason": "Federal jurisdiction remains conditional on a viable federal question or enforceable federal housing-program theory.",
+        },
+        {
+            "criterion": "Evidence-to-count fit",
+            "oregon_score": 4,
+            "federal_score": 3,
+            "oregon_reason": "The notice, documentation, lease, and occupancy evidence aligns naturally with Oregon notice, lease, and housing-administration theories.",
+            "federal_reason": "The same evidence can support a federal track, but only after the strongest federal count framing is narrowed and validated.",
+        },
+        {
+            "criterion": "Drafting risk",
+            "oregon_score": 4,
+            "federal_score": 2,
+            "oregon_reason": "The Oregon track mainly requires authority insertion and cause-of-action conformance, not a threshold jurisdictional gamble.",
+            "federal_reason": "The federal track risks over-pleading speculative theories if the complaint outruns the currently confirmed federal hook.",
+        },
+    ]
+
+    oregon_total = sum(int(row.get("oregon_score") or 0) for row in score_rows)
+    federal_total = sum(int(row.get("federal_score") or 0) for row in score_rows)
+    recommended_forum = "oregon_state" if oregon_total >= federal_total else "federal"
+    recommended_label = "Oregon State Court Track" if recommended_forum == "oregon_state" else "Federal Court Track"
+
+    recommendation_basis = [
+        "The top-ranked claim group remains deficient notice and adverse housing action, which currently maps more directly to Oregon notice, tenancy, and housing-process theories.",
+        "The Oregon near-final draft is closer to a filing-grade complaint because it does not depend on first proving an unresolved federal anchor theory.",
+        "The federal track should remain preserved as an alternative only if later authority research confirms a concrete federal question with strong count-by-count fit.",
+    ]
+    federal_trigger_conditions = [
+        "A specific federally enforceable housing-program notice, hearing, relocation, or entitlement right is identified and cleanly matches Count I.",
+        "Count II can be anchored in a concrete federal anti-discrimination, retaliation, or program-administration theory supported by the current record.",
+        "Count III has either its own federal enforcement hook or can safely remain secondary without weakening subject-matter jurisdiction.",
+    ]
+
+    summary = {
+        "status": "success",
+        "option_count": 2,
+        "recommended_forum": recommended_forum,
+        "recommended_label": recommended_label,
+        "oregon_total_score": oregon_total,
+        "federal_total_score": federal_total,
+        "lead_count_count": int(oregon_near_final_candidate_draft.get("lead_count_count") or 0),
+        "top_ranked_group": str(claim_priority_memo.get("top_ranked_title") or ""),
+        "forum_selection_memo_path": str(forum_selection_memo.get("markdown_path") or ""),
+        "oregon_draft_path": str(oregon_near_final_candidate_draft.get("markdown_path") or ""),
+        "federal_draft_path": str(federal_near_final_candidate_draft.get("markdown_path") or ""),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "score_rows": score_rows,
+        "recommendation_basis": recommendation_basis,
+        "federal_trigger_conditions": federal_trigger_conditions,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Near-Final Forum Recommendation Memo",
+        "",
+        f"Current recommendation: {recommended_label}",
+        f"Oregon score: {oregon_total}",
+        f"Federal score: {federal_total}",
+        f"Top-ranked claim group: {summary['top_ranked_group']}",
+        f"Lead counts compared: {summary['lead_count_count']}",
+        "",
+        "## Scorecard",
+        "",
+    ]
+    for row in score_rows:
+        md_lines.extend([
+            f"### {row['criterion']}",
+            "",
+            f"- Oregon score: {row['oregon_score']}",
+            f"- Oregon rationale: {row['oregon_reason']}",
+            f"- Federal score: {row['federal_score']}",
+            f"- Federal rationale: {row['federal_reason']}",
+            "",
+        ])
+
+    md_lines.extend(["## Recommendation Basis", ""])
+    for item in recommendation_basis:
+        md_lines.append(f"- {item}")
+
+    md_lines.extend(["", "## When To Reopen The Federal Track", ""])
+    for item in federal_trigger_conditions:
+        md_lines.append(f"- {item}")
+
+    md_lines.extend([
+        "",
+        "## References",
+        "",
+        f"- Forum selection memo: {summary['forum_selection_memo_path']}",
+        f"- Oregon near-final draft: {summary['oregon_draft_path']}",
+        f"- Federal near-final draft: {summary['federal_draft_path']}",
+    ])
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_oregon_concrete_authority_candidates() -> list[dict[str, Any]]:
+    return [
+        {
+            "count_number": 1,
+            "count_title": "Declaratory and Injunctive Relief Based on Defective Termination, Displacement, and Adverse Notice Process",
+            "candidate_claim_label": "Declaratory and injunctive relief for defective lease-termination and displacement notice process",
+            "authorities": [
+                "ORS 90.427, expressly cited in the December 23, 2025 90-day termination notices, as the candidate Oregon termination-notice anchor to verify against the tenancy status and notice type.",
+                "HACC ACOP 13-IV.D, Lease Termination Notice [24 CFR 966.4(l)(3)], requiring written notice stating specific grounds, termination date, right to reply, right to inspect relevant documents, and grievance-hearing notice when applicable.",
+                "HACC ACOP 13-IV.D timing language stating HACC generally gives 30 days written notice and combines any Notice to Vacate or Notice to Quit required by state or local law with the lease-termination notice.",
+                "HACC Phase II General Information Notice and HACC Relocation Road Map materials as candidate program-document authorities concerning displacement notice and relocation assistance expectations.",
+                "RLRA project-based policy language stating that existing tenants displaced by new development are provided relocation assistance in accordance with applicable local and federal laws, if that framework applies to the displacement sequence here.",
+            ],
+            "linkage": "Plaintiffs can plead that HACC invoked ORS 90.427 and its own ACOP lease-termination procedures but failed to provide the notice content, grounds, access-to-documents rights, grievance-hearing disclosure, or relocation-process clarity required by the governing notice framework.",
+            "remedies": [
+                "Declaratory relief identifying which notices were ineffective or noncompliant.",
+                "Preliminary and permanent injunctive relief against displacement or eviction absent compliant notice and process.",
+                "Any relocation or equitable relief supported by the final displacement theory and applicable program documents.",
+            ],
+        },
+        {
+            "count_number": 2,
+            "count_title": "Oregon Housing Discrimination, Retaliation, or Unfair Housing Administration Based on Documentation Demands and Intake Barriers",
+            "candidate_claim_label": "Oregon source-of-income discrimination, adverse-impact housing policy, retaliation, or unfair housing-administration count",
+            "authorities": [
+                "ORS 659A.421, which defines source of income to include federal rent subsidy payments under 42 U.S.C. 1437f and bars refusing to lease or rent real property because of source of income, subject to lawful screening limits.",
+                "ORS 659A.425, addressing facially neutral housing policies that adversely impact a protected class in a residential tenancy subject to ORS chapter 90.",
+                "ORS 659A.885, authorizing a civil action and equitable relief for unlawful practices under ORS chapter 659A.",
+                "HACC ACOP Chapter 2 fair-housing policy stating protected classes include source of income and that retaliation by staff or tenants against a person who complains of discriminatory harassment or intimidation will not be tolerated.",
+                "HACC ACOP income-verification and annual-reexamination policies at pages 6-15 and 9-3, stating HACC will use written or oral third-party verification when additional information is needed and that required documentation deadlines are communicated through the reexamination packet.",
+            ],
+            "linkage": "Plaintiffs can plead that the challenged documentation demands functioned either as source-of-income discrimination, a facially neutral policy with protected-class adverse impact, retaliation for protected complaints, or unfair housing administration because the demands exceeded the verification rules HACC identified in its own ACOP and materially burdened continued housing access or retention.",
+            "remedies": [
+                "Injunctive and equitable relief under ORS 659A.885.",
+                "Actual damages, fee-shifting, and other relief available under the final ORS chapter 659A cause selection.",
+                "Declaratory relief that unsupported documentation demands or retaliatory barriers were unlawful.",
+            ],
+        },
+        {
+            "count_number": 3,
+            "count_title": "Breach of Lease, Breach of Housing Program Obligations, and Wrongful Occupancy or Inspection Administration",
+            "candidate_claim_label": "Breach of lease, program-policy, reasonable-accommodation, and occupancy-administration obligations",
+            "authorities": [
+                "The August 5, 2024 and January 1, 2026 lease amendment and add/remove-tenant documents as the first-line written contract authorities governing household composition, rent adjustment, and occupancy changes.",
+                "HACC ACOP 2-II.B through 2-II.D, defining reasonable accommodation, requiring HACC to treat disability-related requests as accommodation requests even without a formal written request, and limiting disability verification to information necessary to evaluate the accommodation need.",
+                "HACC ACOP verification policy at page 6-15 requiring written and/or oral third-party verification when EIV is unavailable, disputed, or additional information is needed, along with a clear audit trail for annualized income decisions.",
+                "HACC ACOP annual reexamination policy at page 9-3 stating the family must be informed of required documentation and that failure to submit required documentation may be treated as a lease violation under Chapter 13.",
+                "RLRA household-change and relocation-assistance policy language providing that new household members are added to the lease if eligibility and unit-capacity requirements remain satisfied, and that the administrator will support transfer where household-size changes make the existing unit unsuitable.",
+            ],
+            "linkage": "Plaintiffs can plead that HACC's occupancy, inspection, and household-composition administration departed from the operative lease amendments and HACC's own accommodation, verification, and household-change procedures, producing wrongful instability in continued occupancy and program participation.",
+            "remedies": [
+                "Contractual and equitable relief based on the final selected lease or program-obligation theory.",
+                "Declaratory relief clarifying household-composition, accommodation, and inspection obligations.",
+                "Damages or restitutionary relief if the evidence supports quantifiable housing loss or added expense.",
+            ],
+        },
+    ]
+
+
+def _build_oregon_concrete_authority_memo(chronology_dir: Path) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_oregon_concrete_authority_memo.json"
+    md_path = chronology_dir / "formal_complaint_oregon_concrete_authority_memo.md"
+    counts = _build_oregon_concrete_authority_candidates()
+
+    summary = {
+        "status": "success",
+        "count_count": len(counts),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "counts": counts,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Oregon Concrete Authority Memo",
+        "",
+        "This memo names concrete Oregon and HACC policy authorities that currently fit the Oregon pleading track best.",
+        "Each item remains a candidate authority for attorney verification before filing.",
+        "",
+    ]
+    for count in counts:
+        md_lines.extend([
+            f"## Count {_roman_count_label(int(count.get('count_number') or 0))}: {count.get('count_title') or ''}",
+            "",
+            f"Candidate claim label: {count.get('candidate_claim_label') or ''}",
+            "",
+            "Concrete candidate authorities:",
+        ])
+        for item in list(count.get("authorities") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend([
+            "",
+            "Draft linkage sentence:",
+            f"- {count.get('linkage') or ''}",
+            "",
+            "Candidate remedy hooks:",
+        ])
+        for item in list(count.get("remedies") or []):
+            md_lines.append(f"- {item}")
+        md_lines.append("")
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_oregon_authority_candidate_inserted_draft(
+    complaint_ready: dict[str, Any],
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_oregon_authority_candidate_inserted_draft.json"
+    md_path = chronology_dir / "formal_complaint_oregon_authority_candidate_inserted_draft.md"
+
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    factual_background = factual_entries[: min(12, len(factual_entries))]
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    reserve_sections = list(lead_count_draft.get("reserve_sections") or [])
+    prayer_lines = _draft_prayer_for_relief_lines()
+    authority_map = _build_oregon_concrete_authority_candidates()
+
+    counts: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        mapped = authority_map[idx] if idx < len(authority_map) else {
+            "count_number": idx + 1,
+            "count_title": str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "candidate_claim_label": str(section.get("title") or "Candidate Oregon count"),
+            "authorities": ["Insert concrete Oregon or HACC policy authorities for this count."],
+            "linkage": "Insert a fact-to-authority linkage sentence.",
+            "remedies": ["Insert remedy hooks for this count."],
+        }
+        paragraphs = list(section.get("paragraphs") or [])
+        representative_facts: list[str] = []
+        for paragraph in paragraphs[:3]:
+            if isinstance(paragraph, dict):
+                representative_facts.append(str(paragraph.get("paragraph") or ""))
+            else:
+                representative_facts.append(str(paragraph))
+        counts.append({
+            "count_number": idx + 1,
+            "count_title": mapped["count_title"],
+            "source_section": str(section.get("source_section") or ""),
+            "draft_theory_summary": str(section.get("intro") or ""),
+            "candidate_claim_label": str(mapped.get("candidate_claim_label") or ""),
+            "authorities": list(mapped.get("authorities") or []),
+            "linkage": str(mapped.get("linkage") or ""),
+            "remedies": list(mapped.get("remedies") or []),
+            "representative_facts": representative_facts,
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "lead_count_count": len(counts),
+        "reserve_count_count": len(reserve_sections),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps({**summary, "counts": counts, "factual_background": factual_background}, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    md_lines = [
+        "# Oregon Authority-Candidate Inserted Complaint Draft",
+        "",
+        "IN THE CIRCUIT COURT OF THE STATE OF OREGON",
+        "FOR THE COUNTY OF CLACKAMAS",
+        "",
+        "Jane Cortez and Benjamin Barber,",
+        "Plaintiffs,",
+        "",
+        "v.",
+        "",
+        "Housing Authority of Clackamas County; DOES 1-10,",
+        "Defendants.",
+        "",
+        "## Draft Status",
+        "",
+        "This Oregon draft inserts concrete candidate statutes and HACC policy sections into the lead counts.",
+        "Each cited source remains subject to attorney verification, count-splitting, and final claim-label selection before filing.",
+        "",
+        "## General Allegations",
+        "",
+    ]
+
+    paragraph_number = 1
+    for entry in factual_background:
+        md_lines.append(f"{paragraph_number}. {entry.get('paragraph') or ''}")
+        paragraph_number += 1
+
+    md_lines.extend(["", "## Claims for Relief", ""])
+    for count in counts:
+        md_lines.extend([
+            f"### Count {_roman_count_label(int(count.get('count_number') or 0))}: {count.get('count_title') or ''}",
+            "",
+            f"Candidate claim label: {count.get('candidate_claim_label') or ''}",
+            "",
+            f"{paragraph_number}. Plaintiffs repeat and reallege the preceding paragraphs as if fully set out here.",
+            f"{paragraph_number + 1}. {count.get('draft_theory_summary') or ''}",
+            f"{paragraph_number + 2}. {count.get('linkage') or ''}",
+            "",
+            "Concrete candidate authorities for verification:",
+        ])
+        paragraph_number += 3
+        for item in list(count.get("authorities") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Representative facts:"])
+        for fact in list(count.get("representative_facts") or []):
+            md_lines.append(f"- {fact}")
+        md_lines.extend(["", "Candidate remedy hooks:"])
+        for item in list(count.get("remedies") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Elements still to prove or verify:"])
+        for prompt in list(count.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_lines.extend(["## Reserve Counts", ""])
+    if reserve_sections:
+        for section in reserve_sections:
+            md_lines.append(
+                f"- {section.get('title') or 'Potential Claim Theme'} | source group={section.get('source_section') or ''} | reserve unless stronger Oregon authority support emerges"
+            )
+    else:
+        md_lines.append("No reserve counts identified.")
+
+    md_lines.extend(["", "## Prayer for Relief", ""])
+    for line in prayer_lines:
+        md_lines.append(f"- {line}")
+    md_lines.extend([
+        "- Plaintiffs further request the declaratory, injunctive, equitable, statutory, contractual, and fee-related relief authorized by the final Oregon claim mix actually selected after verification.",
+        "",
+        "## Oregon Verification Checklist Before Filing",
+        "",
+        "- Confirm whether Count I remains anchored in ORS 90.427, a public-housing grievance theory, relocation process obligations, or a combination of those authorities.",
+        "- Confirm whether Count II should proceed as source-of-income discrimination, adverse-impact policy, retaliation, unfair housing administration, or split counts under ORS chapter 659A and HACC policy.",
+        "- Confirm whether Count III is best pleaded as breach of lease, breach of program obligations, reasonable-accommodation/process violations, or separately stated counts.",
+    ])
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_oregon_selected_claims_filing_candidate(
+    complaint_ready: dict[str, Any],
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_oregon_selected_claims_filing_candidate.json"
+    md_path = chronology_dir / "formal_complaint_oregon_selected_claims_filing_candidate.md"
+
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    factual_background = factual_entries[: min(12, len(factual_entries))]
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    reserve_sections = list(lead_count_draft.get("reserve_sections") or [])
+    prayer_lines = _draft_prayer_for_relief_lines()
+
+    selected_map = [
+        {
+            "count_title": "Declaratory and Injunctive Relief for Defective Termination and Displacement Notice Process",
+            "selected_claim_label": "Selected Oregon Count I",
+            "selection_rationale": [
+                "This count is kept as the lead Oregon theory because the strongest current evidence cluster is still the notice and adverse-action sequence.",
+                "The record already contains notices expressly invoking ORS 90.427 plus HACC lease-termination policy language describing required notice content and grievance-hearing disclosure.",
+            ],
+            "selected_authorities": [
+                "ORS 90.427 as the current statutory notice anchor to verify against the tenancy type and exact no-cause/cause notice posture.",
+                "HACC ACOP 13-IV.D lease-termination notice requirements, including specific grounds, termination date, right to reply, right to inspect relevant documents, and grievance-hearing disclosure when applicable.",
+                "HACC ACOP 13-IV.D timing and combined notice language, plus any applicable relocation-assistance source reflected in the displacement notices and relocation materials.",
+            ],
+            "selected_linkage": "Plaintiffs allege that HACC served termination and displacement-related notices that invoked Oregon and HACC notice authority but did not satisfy the content, process, hearing, document-access, or relocation clarity required by the governing notice framework.",
+            "remaining_questions": [
+                "Confirm whether ORS 90.427 is the correct live statutory anchor for every challenged notice or only for the December 23, 2025 notices.",
+                "Confirm whether grievance-hearing and relocation obligations apply to each challenged notice sequence.",
+            ],
+        },
+        {
+            "count_title": "Oregon Source-of-Income Discrimination, Adverse-Impact Housing Policy, and Retaliatory Intake Barrier Claim",
+            "selected_claim_label": "Selected Oregon Count II",
+            "selection_rationale": [
+                "This count is retained as a combined Oregon discrimination and unfair-process count because the current record repeatedly centers on documentation demands affecting subsidized housing access and retention.",
+                "The source-of-income and adverse-impact theories are better grounded than a free-standing generic retaliation count at the current proof stage, but retaliation remains preserved within the same count unless later split.",
+            ],
+            "selected_authorities": [
+                "ORS 659A.421 for source-of-income discrimination in real-property leasing and renting, including federal rent subsidy payments under 42 U.S.C. 1437f.",
+                "ORS 659A.425 for a facially neutral housing policy that adversely impacts a protected class in a residential tenancy subject to ORS chapter 90.",
+                "ORS 659A.885 for civil action, injunctive relief, equitable relief, and related remedies.",
+                "HACC ACOP Chapter 2 fair-housing and anti-retaliation language plus HACC verification/reexamination policies describing when additional information may be required and how required documentation is requested.",
+            ],
+            "selected_linkage": "Plaintiffs allege that HACC imposed documentation and verification demands in a manner that either discriminated on the basis of source of income, applied a facially neutral policy with unlawful adverse impact, or operated as retaliatory and unfair housing administration that materially burdened housing access or retention.",
+            "remaining_questions": [
+                "Decide whether Count II should remain combined or be split into source-of-income discrimination and retaliation/process counts.",
+                "Confirm the strongest damages theory and whether the record shows a comparison class or adverse-impact proof sufficient for ORS 659A.425.",
+            ],
+        },
+        {
+            "count_title": "Breach of Lease and Housing Program Obligations Governing Occupancy, Accommodation, and Household Administration",
+            "selected_claim_label": "Selected Oregon Count III",
+            "selection_rationale": [
+                "This count is kept as a contract and program-obligation count because the lease amendments, household-composition changes, and accommodation-related administration fit most naturally in a written-obligation framework.",
+                "The current evidence supports a cleaner Oregon breach/process count than a more speculative standalone inspection tort or federal program theory.",
+            ],
+            "selected_authorities": [
+                "The August 5, 2024 and January 1, 2026 lease amendment and add/remove-tenant materials as the current written contract anchors.",
+                "HACC ACOP 2-II.B through 2-II.D regarding reasonable accommodation requests and disability verification limits.",
+                "HACC verification and reexamination policies at pages 6-15 and 9-3, including required documentation and third-party verification rules.",
+                "Any household-change or relocation-support language from the project-based program materials that governed additions to the lease or transfers when household composition changed.",
+            ],
+            "selected_linkage": "Plaintiffs allege that HACC departed from the operative lease amendments and governing accommodation, verification, and household-administration rules when handling occupancy, documentation, and household-composition issues, thereby destabilizing continued tenancy and program participation.",
+            "remaining_questions": [
+                "Confirm whether Count III should remain a single breach/process count or split into lease breach and accommodation/process subcounts.",
+                "Confirm whether inspections belong in this count or should remain merely factual support.",
+            ],
+        },
+    ]
+
+    counts: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        mapped = selected_map[idx] if idx < len(selected_map) else {
+            "count_title": str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "selected_claim_label": "Selected Oregon Count",
+            "selection_rationale": ["Confirm the final Oregon claim structure for this count."],
+            "selected_authorities": ["Insert the selected Oregon authorities for this count."],
+            "selected_linkage": "Insert the chosen authority-to-fact linkage.",
+            "remaining_questions": ["Confirm whether this count remains in the filing candidate."],
+        }
+        paragraphs = list(section.get("paragraphs") or [])
+        representative_facts: list[str] = []
+        for paragraph in paragraphs[:3]:
+            if isinstance(paragraph, dict):
+                representative_facts.append(str(paragraph.get("paragraph") or ""))
+            else:
+                representative_facts.append(str(paragraph))
+        counts.append({
+            "count_number": idx + 1,
+            "count_title": mapped["count_title"],
+            "selected_claim_label": mapped["selected_claim_label"],
+            "source_section": str(section.get("source_section") or ""),
+            "draft_theory_summary": str(section.get("intro") or ""),
+            "selection_rationale": list(mapped.get("selection_rationale") or []),
+            "selected_authorities": list(mapped.get("selected_authorities") or []),
+            "selected_linkage": str(mapped.get("selected_linkage") or ""),
+            "remaining_questions": list(mapped.get("remaining_questions") or []),
+            "representative_facts": representative_facts,
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "lead_count_count": len(counts),
+        "reserve_count_count": len(reserve_sections),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps({**summary, "counts": counts, "factual_background": factual_background}, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    md_lines = [
+        "# Oregon Selected-Claims Filing Candidate",
+        "",
+        "IN THE CIRCUIT COURT OF THE STATE OF OREGON",
+        "FOR THE COUNTY OF CLACKAMAS",
+        "",
+        "Jane Cortez and Benjamin Barber,",
+        "Plaintiffs,",
+        "",
+        "v.",
+        "",
+        "Housing Authority of Clackamas County; DOES 1-10,",
+        "Defendants.",
+        "",
+        "## Draft Status",
+        "",
+        "This draft selects the current Oregon filing path and collapses the main alternatives into one working count structure.",
+        "It is still not final: each selected count requires final attorney confirmation of statutory fit, count splitting, and remedies.",
+        "",
+        "## General Allegations",
+        "",
+    ]
+
+    paragraph_number = 1
+    for entry in factual_background:
+        md_lines.append(f"{paragraph_number}. {entry.get('paragraph') or ''}")
+        paragraph_number += 1
+
+    md_lines.extend(["", "## Selected Claims for Relief", ""])
+    for count in counts:
+        md_lines.extend([
+            f"### Count {_roman_count_label(int(count.get('count_number') or 0))}: {count.get('count_title') or ''}",
+            "",
+            f"Working claim label: {count.get('selected_claim_label') or ''}",
+            "",
+            f"{paragraph_number}. Plaintiffs repeat and reallege the preceding paragraphs as if fully set out here.",
+            f"{paragraph_number + 1}. {count.get('draft_theory_summary') or ''}",
+            f"{paragraph_number + 2}. {count.get('selected_linkage') or ''}",
+            "",
+            "Why this count is selected now:",
+        ])
+        paragraph_number += 3
+        for item in list(count.get("selection_rationale") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Selected authorities to carry forward:"])
+        for item in list(count.get("selected_authorities") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Representative facts:"])
+        for fact in list(count.get("representative_facts") or []):
+            md_lines.append(f"- {fact}")
+        md_lines.extend(["", "Remaining verification questions:"])
+        for item in list(count.get("remaining_questions") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Elements still to prove or verify:"])
+        for prompt in list(count.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_lines.extend(["## Reserve Theories Held Back", ""])
+    if reserve_sections:
+        for section in reserve_sections:
+            md_lines.append(
+                f"- {section.get('title') or 'Potential Claim Theme'} | source group={section.get('source_section') or ''} | reserve only, not part of the selected filing candidate"
+            )
+    else:
+        md_lines.append("No reserve theories identified.")
+
+    md_lines.extend(["", "## Prayer for Relief", ""])
+    for line in prayer_lines:
+        md_lines.append(f"- {line}")
+    md_lines.extend([
+        "- Plaintiffs further request the Oregon-law declaratory, injunctive, equitable, contractual, statutory, damages, fee, and cost relief authorized by the final selected count structure.",
+        "",
+        "## Next Oregon Cleanup",
+        "",
+        "- Convert Count I from a selected notice-process count into a finalized Oregon cause of action with exact statutory and policy citations.",
+        "- Decide whether Count II should remain combined or split into source-of-income discrimination and retaliation/process counts.",
+        "- Confirm whether Count III should stay as one lease/program-obligations count or be separated into breach and accommodation/process theories.",
+    ])
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
 def _draft_jurisdiction_and_venue_lines() -> list[str]:
     return [
         "6. This draft assumes the pleaded claims may include federal housing, fair-housing, VAWA, due-process, or Section 1983 theories arising from the notices, lease actions, documentation demands, and orientation-related conduct reflected in the exhibits, subject to confirmation after attorney review.",
@@ -5141,6 +7039,81 @@ def _build_formal_complaint_draft(
         lead_count_draft,
         chronology_dir,
     )
+    federal_named_claim_draft = _build_federal_named_claim_complaint_draft(
+        complaint_ready,
+        lead_count_draft,
+        chronology_dir,
+    )
+    oregon_state_authority_placeholder_draft = _build_oregon_state_authority_placeholder_draft(
+        complaint_ready,
+        lead_count_draft,
+        chronology_dir,
+    )
+    federal_authority_placeholder_draft = _build_federal_authority_placeholder_draft(
+        complaint_ready,
+        lead_count_draft,
+        chronology_dir,
+    )
+    forum_authority_research_queue = _build_forum_authority_research_queue(
+        lead_count_draft,
+        chronology_dir,
+    )
+    oregon_authority_insertion_worksheet = _build_oregon_authority_insertion_worksheet(
+        lead_count_draft,
+        chronology_dir,
+    )
+    federal_authority_insertion_worksheet = _build_federal_authority_insertion_worksheet(
+        lead_count_draft,
+        chronology_dir,
+    )
+    oregon_candidate_authority_scaffold = _build_oregon_candidate_authority_scaffold(
+        lead_count_draft,
+        chronology_dir,
+    )
+    federal_candidate_authority_scaffold = _build_federal_candidate_authority_scaffold(
+        lead_count_draft,
+        chronology_dir,
+    )
+    oregon_authority_infused_draft = _build_authority_infused_complaint_draft(
+        "oregon",
+        complaint_ready,
+        lead_count_draft,
+        chronology_dir,
+    )
+    federal_authority_infused_draft = _build_authority_infused_complaint_draft(
+        "federal",
+        complaint_ready,
+        lead_count_draft,
+        chronology_dir,
+    )
+    oregon_near_final_candidate_draft = _build_oregon_near_final_candidate_draft(
+        complaint_ready,
+        lead_count_draft,
+        chronology_dir,
+    )
+    federal_near_final_candidate_draft = _build_federal_near_final_candidate_draft(
+        complaint_ready,
+        lead_count_draft,
+        chronology_dir,
+    )
+    near_final_forum_recommendation_memo = _build_near_final_forum_recommendation_memo(
+        forum_selection_memo,
+        claim_priority_memo,
+        oregon_near_final_candidate_draft,
+        federal_near_final_candidate_draft,
+        chronology_dir,
+    )
+    oregon_concrete_authority_memo = _build_oregon_concrete_authority_memo(chronology_dir)
+    oregon_authority_candidate_inserted_draft = _build_oregon_authority_candidate_inserted_draft(
+        complaint_ready,
+        lead_count_draft,
+        chronology_dir,
+    )
+    oregon_selected_claims_filing_candidate = _build_oregon_selected_claims_filing_candidate(
+        complaint_ready,
+        lead_count_draft,
+        chronology_dir,
+    )
 
     summary["filing_checklist_json_path"] = str(filing_checklist.get("json_path") or "")
     summary["filing_checklist_markdown_path"] = str(filing_checklist.get("markdown_path") or "")
@@ -5221,6 +7194,55 @@ def _build_formal_complaint_draft(
     summary["oregon_state_named_claim_draft_json_path"] = str(oregon_state_named_claim_draft.get("json_path") or "")
     summary["oregon_state_named_claim_draft_markdown_path"] = str(oregon_state_named_claim_draft.get("markdown_path") or "")
     summary["oregon_state_named_claim_draft_count"] = int(oregon_state_named_claim_draft.get("lead_count_count") or 0)
+    summary["federal_named_claim_draft_json_path"] = str(federal_named_claim_draft.get("json_path") or "")
+    summary["federal_named_claim_draft_markdown_path"] = str(federal_named_claim_draft.get("markdown_path") or "")
+    summary["federal_named_claim_draft_count"] = int(federal_named_claim_draft.get("lead_count_count") or 0)
+    summary["oregon_state_authority_placeholder_draft_json_path"] = str(oregon_state_authority_placeholder_draft.get("json_path") or "")
+    summary["oregon_state_authority_placeholder_draft_markdown_path"] = str(oregon_state_authority_placeholder_draft.get("markdown_path") or "")
+    summary["oregon_state_authority_placeholder_draft_count"] = int(oregon_state_authority_placeholder_draft.get("lead_count_count") or 0)
+    summary["federal_authority_placeholder_draft_json_path"] = str(federal_authority_placeholder_draft.get("json_path") or "")
+    summary["federal_authority_placeholder_draft_markdown_path"] = str(federal_authority_placeholder_draft.get("markdown_path") or "")
+    summary["federal_authority_placeholder_draft_count"] = int(federal_authority_placeholder_draft.get("lead_count_count") or 0)
+    summary["forum_authority_research_queue_json_path"] = str(forum_authority_research_queue.get("json_path") or "")
+    summary["forum_authority_research_queue_markdown_path"] = str(forum_authority_research_queue.get("markdown_path") or "")
+    summary["forum_authority_research_queue_count"] = int(forum_authority_research_queue.get("entry_count") or 0)
+    summary["oregon_authority_insertion_worksheet_json_path"] = str(oregon_authority_insertion_worksheet.get("json_path") or "")
+    summary["oregon_authority_insertion_worksheet_markdown_path"] = str(oregon_authority_insertion_worksheet.get("markdown_path") or "")
+    summary["oregon_authority_insertion_worksheet_count"] = int(oregon_authority_insertion_worksheet.get("count_count") or 0)
+    summary["federal_authority_insertion_worksheet_json_path"] = str(federal_authority_insertion_worksheet.get("json_path") or "")
+    summary["federal_authority_insertion_worksheet_markdown_path"] = str(federal_authority_insertion_worksheet.get("markdown_path") or "")
+    summary["federal_authority_insertion_worksheet_count"] = int(federal_authority_insertion_worksheet.get("count_count") or 0)
+    summary["oregon_candidate_authority_scaffold_json_path"] = str(oregon_candidate_authority_scaffold.get("json_path") or "")
+    summary["oregon_candidate_authority_scaffold_markdown_path"] = str(oregon_candidate_authority_scaffold.get("markdown_path") or "")
+    summary["oregon_candidate_authority_scaffold_count"] = int(oregon_candidate_authority_scaffold.get("count_count") or 0)
+    summary["federal_candidate_authority_scaffold_json_path"] = str(federal_candidate_authority_scaffold.get("json_path") or "")
+    summary["federal_candidate_authority_scaffold_markdown_path"] = str(federal_candidate_authority_scaffold.get("markdown_path") or "")
+    summary["federal_candidate_authority_scaffold_count"] = int(federal_candidate_authority_scaffold.get("count_count") or 0)
+    summary["oregon_authority_infused_draft_json_path"] = str(oregon_authority_infused_draft.get("json_path") or "")
+    summary["oregon_authority_infused_draft_markdown_path"] = str(oregon_authority_infused_draft.get("markdown_path") or "")
+    summary["oregon_authority_infused_draft_count"] = int(oregon_authority_infused_draft.get("lead_count_count") or 0)
+    summary["federal_authority_infused_draft_json_path"] = str(federal_authority_infused_draft.get("json_path") or "")
+    summary["federal_authority_infused_draft_markdown_path"] = str(federal_authority_infused_draft.get("markdown_path") or "")
+    summary["federal_authority_infused_draft_count"] = int(federal_authority_infused_draft.get("lead_count_count") or 0)
+    summary["oregon_near_final_candidate_draft_json_path"] = str(oregon_near_final_candidate_draft.get("json_path") or "")
+    summary["oregon_near_final_candidate_draft_markdown_path"] = str(oregon_near_final_candidate_draft.get("markdown_path") or "")
+    summary["oregon_near_final_candidate_draft_count"] = int(oregon_near_final_candidate_draft.get("lead_count_count") or 0)
+    summary["federal_near_final_candidate_draft_json_path"] = str(federal_near_final_candidate_draft.get("json_path") or "")
+    summary["federal_near_final_candidate_draft_markdown_path"] = str(federal_near_final_candidate_draft.get("markdown_path") or "")
+    summary["federal_near_final_candidate_draft_count"] = int(federal_near_final_candidate_draft.get("lead_count_count") or 0)
+    summary["near_final_forum_recommendation_memo_json_path"] = str(near_final_forum_recommendation_memo.get("json_path") or "")
+    summary["near_final_forum_recommendation_memo_markdown_path"] = str(near_final_forum_recommendation_memo.get("markdown_path") or "")
+    summary["near_final_forum_recommendation_memo_option_count"] = int(near_final_forum_recommendation_memo.get("option_count") or 0)
+    summary["near_final_forum_recommendation_memo_recommended_forum"] = str(near_final_forum_recommendation_memo.get("recommended_forum") or "")
+    summary["oregon_concrete_authority_memo_json_path"] = str(oregon_concrete_authority_memo.get("json_path") or "")
+    summary["oregon_concrete_authority_memo_markdown_path"] = str(oregon_concrete_authority_memo.get("markdown_path") or "")
+    summary["oregon_concrete_authority_memo_count"] = int(oregon_concrete_authority_memo.get("count_count") or 0)
+    summary["oregon_authority_candidate_inserted_draft_json_path"] = str(oregon_authority_candidate_inserted_draft.get("json_path") or "")
+    summary["oregon_authority_candidate_inserted_draft_markdown_path"] = str(oregon_authority_candidate_inserted_draft.get("markdown_path") or "")
+    summary["oregon_authority_candidate_inserted_draft_count"] = int(oregon_authority_candidate_inserted_draft.get("lead_count_count") or 0)
+    summary["oregon_selected_claims_filing_candidate_json_path"] = str(oregon_selected_claims_filing_candidate.get("json_path") or "")
+    summary["oregon_selected_claims_filing_candidate_markdown_path"] = str(oregon_selected_claims_filing_candidate.get("markdown_path") or "")
+    summary["oregon_selected_claims_filing_candidate_count"] = int(oregon_selected_claims_filing_candidate.get("lead_count_count") or 0)
 
     json_path.write_text(
         json.dumps(
@@ -5257,6 +7279,22 @@ def _build_formal_complaint_draft(
                 "oregon_state_filing_ready_draft": oregon_state_filing_ready_draft,
                 "federal_filing_ready_draft": federal_filing_ready_draft,
                 "oregon_state_named_claim_draft": oregon_state_named_claim_draft,
+                "federal_named_claim_draft": federal_named_claim_draft,
+                "oregon_state_authority_placeholder_draft": oregon_state_authority_placeholder_draft,
+                "federal_authority_placeholder_draft": federal_authority_placeholder_draft,
+                "forum_authority_research_queue": forum_authority_research_queue,
+                "oregon_authority_insertion_worksheet": oregon_authority_insertion_worksheet,
+                "federal_authority_insertion_worksheet": federal_authority_insertion_worksheet,
+                "oregon_candidate_authority_scaffold": oregon_candidate_authority_scaffold,
+                "federal_candidate_authority_scaffold": federal_candidate_authority_scaffold,
+                "oregon_authority_infused_draft": oregon_authority_infused_draft,
+                "federal_authority_infused_draft": federal_authority_infused_draft,
+                "oregon_near_final_candidate_draft": oregon_near_final_candidate_draft,
+                "federal_near_final_candidate_draft": federal_near_final_candidate_draft,
+                "near_final_forum_recommendation_memo": near_final_forum_recommendation_memo,
+                "oregon_concrete_authority_memo": oregon_concrete_authority_memo,
+                "oregon_authority_candidate_inserted_draft": oregon_authority_candidate_inserted_draft,
+                "oregon_selected_claims_filing_candidate": oregon_selected_claims_filing_candidate,
                 "citation_map": citation_map,
             },
             indent=2,
@@ -6047,6 +8085,42 @@ def _markdown_report(payload: dict[str, Any]) -> str:
             )
             lines.append(
                 f"- Oregon named-claim complaint draft: {formal_draft.get('oregon_state_named_claim_draft_count', 0)}"
+            )
+            lines.append(
+                f"- Federal named-claim complaint draft: {formal_draft.get('federal_named_claim_draft_count', 0)}"
+            )
+            lines.append(
+                f"- Oregon/Federal authority-placeholder drafts: {formal_draft.get('oregon_state_authority_placeholder_draft_count', 0)}/{formal_draft.get('federal_authority_placeholder_draft_count', 0)}"
+            )
+            lines.append(
+                f"- Forum authority research queue entries: {formal_draft.get('forum_authority_research_queue_count', 0)}"
+            )
+            lines.append(
+                f"- Oregon/Federal authority insertion worksheets: {formal_draft.get('oregon_authority_insertion_worksheet_count', 0)}/{formal_draft.get('federal_authority_insertion_worksheet_count', 0)}"
+            )
+            lines.append(
+                f"- Oregon/Federal candidate authority scaffolds: {formal_draft.get('oregon_candidate_authority_scaffold_count', 0)}/{formal_draft.get('federal_candidate_authority_scaffold_count', 0)}"
+            )
+            lines.append(
+                f"- Oregon/Federal authority-infused drafts: {formal_draft.get('oregon_authority_infused_draft_count', 0)}/{formal_draft.get('federal_authority_infused_draft_count', 0)}"
+            )
+            lines.append(
+                f"- Oregon near-final candidate draft: {formal_draft.get('oregon_near_final_candidate_draft_count', 0)}"
+            )
+            lines.append(
+                f"- Federal near-final candidate draft: {formal_draft.get('federal_near_final_candidate_draft_count', 0)}"
+            )
+            lines.append(
+                f"- Near-final forum recommendation options/recommended forum: {formal_draft.get('near_final_forum_recommendation_memo_option_count', 0)}/{formal_draft.get('near_final_forum_recommendation_memo_recommended_forum', '')}"
+            )
+            lines.append(
+                f"- Oregon concrete authority memo: {formal_draft.get('oregon_concrete_authority_memo_count', 0)}"
+            )
+            lines.append(
+                f"- Oregon authority-candidate inserted draft: {formal_draft.get('oregon_authority_candidate_inserted_draft_count', 0)}"
+            )
+            lines.append(
+                f"- Oregon selected-claims filing candidate: {formal_draft.get('oregon_selected_claims_filing_candidate_count', 0)}"
             )
     return "\n".join(lines).strip() + "\n"
 
