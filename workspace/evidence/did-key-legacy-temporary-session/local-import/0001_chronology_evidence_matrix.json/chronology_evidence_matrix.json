@@ -1,0 +1,239 @@
+{
+  "statefile": "/home/barberb/HACC/complaint-generator/statefiles/temporary-cli-session-latest.json",
+  "complaint_draft": "/home/barberb/HACC/workspace/improved-complaint-from-temporary-session.md",
+  "workspace_root": "/home/barberb/HACC/workspace",
+  "generated_on": "2026-03-31",
+  "events": [
+    {
+      "id": "evt-000",
+      "complaint_paragraphs": [
+        27,
+        28,
+        31,
+        32
+      ],
+      "date_or_period": "February 25 to February 26, 2026",
+      "event": "Plaintiffs made written discrimination, service-animal, Blossom-processing, and relocation-delay complaints while responding to escalating documentation demands.",
+      "primary_exhibits": [
+        "temporary-cli-session-migration/prior-research-results/emergency_motion_packet/exhibits/Exhibit J - starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/message.json"
+      ],
+      "secondary_support": [
+        "temporary-cli-session-migration/workspace-generated/email_evidence_memo.md",
+        "temporary-cli-session-migration/paper-exhibits/HACC financial requests.pdf"
+      ],
+      "evidentiary_status": "strong",
+      "remaining_gaps": [
+        "Need independent corroboration for each underlying accusation, including Blossom non-processing and service-animal refusal, if those facts are pleaded as proven events rather than complaints made.",
+        "Need a tighter decision-maker response chain if retaliation timing will be emphasized as direct causation rather than circumstantial timing."
+      ]
+    },
+    {
+      "id": "evt-001",
+      "complaint_paragraphs": [
+        18
+      ],
+      "date_or_period": "October 2025",
+      "event": "Plaintiff says he raised abuse concerns and requested lease bifurcation.",
+      "primary_exhibits": [
+        "temporary-cli-session-migration/paper-exhibits/HACC vawa violation.pdf",
+        "temporary-cli-session-migration/paper-exhibits/HACC add to lease.pdf"
+      ],
+      "secondary_support": [
+        "migrated_sources/hacc_website/housing-for-success-h4s-program-policies"
+      ],
+      "evidentiary_status": "partial_direct_support",
+      "remaining_gaps": [
+        "Need the October 2025 email, letter, or request memorializing bifurcation or safety concerns.",
+        "Need the restraining-order linkage to the requested household-change action."
+      ]
+    },
+    {
+      "id": "evt-002",
+      "complaint_paragraphs": [
+        18,
+        19
+      ],
+      "date_or_period": "November to December 2025",
+      "event": "Plaintiff says bifurcation and later household-composition events were tied to restraining-order and safety concerns.",
+      "primary_exhibits": [],
+      "secondary_support": [
+        "temporary-cli-session-migration/paper-exhibits/HACC vawa violation.pdf",
+        "migrated_sources/research_results/evidence_review_20260328_022708/cross_document/cross_document_filtered_summary.md"
+      ],
+      "evidentiary_status": "gap",
+      "remaining_gaps": [
+        "Need restraining-order filings or the court order itself.",
+        "Need the December hearing notice or continued-order document."
+      ]
+    },
+    {
+      "id": "evt-003",
+      "complaint_paragraphs": [
+        21,
+        22
+      ],
+      "date_or_period": "December 2025 to January 2026",
+      "event": "Plaintiff says the Blossom application was submitted but not processed.",
+      "primary_exhibits": [
+        "temporary-cli-session-migration/paper-exhibits/HACC Jan 2026 blossom.pdf",
+        "temporary-cli-session-migration/paper-exhibits/blossom.pdf",
+        "temporary-cli-session-migration/paper-exhibits/Vera Application.pdf"
+      ],
+      "secondary_support": [
+        "temporary-cli-session-migration/paper-exhibits/housing authority project based voucher.pdf",
+        "migrated_sources/research_results/evidence_review_20260328_045748/evidence_review.md"
+      ],
+      "evidentiary_status": "strong",
+      "remaining_gaps": [
+        "Need pinpoint language showing whether the application was received but not forwarded or never processed by a specific actor."
+      ]
+    },
+    {
+      "id": "evt-004",
+      "complaint_paragraphs": [
+        19
+      ],
+      "date_or_period": "January 2026",
+      "event": "Plaintiff says Benjamin Barber was removed from the lease while the restrained party was restored.",
+      "primary_exhibits": [
+        "temporary-cli-session-migration/paper-exhibits/HACC add to lease.pdf",
+        "temporary-cli-session-migration/paper-exhibits/HACC vawa violation.pdf"
+      ],
+      "secondary_support": [
+        "migrated_sources/research_results/evidence_review_20260328_045748/evidence_review.md",
+        "migrated_sources/hacc_website/housing-for-success-h4s-program-policies"
+      ],
+      "evidentiary_status": "strong",
+      "remaining_gaps": [
+        "Need the exact effective date and named occupant fields from the lease-amendment forms."
+      ]
+    },
+    {
+      "id": "evt-005",
+      "complaint_paragraphs": [
+        23,
+        24,
+        25
+      ],
+      "date_or_period": "February 4, 2026 and after",
+      "event": "Plaintiff says the household received February 2026 termination notices and encountered hearing-access problems during the same housing-instability period.",
+      "primary_exhibits": [
+        "temporary-cli-session-migration/paper-exhibits/HACC first amendment.pdf"
+      ],
+      "secondary_support": [
+        "temporary-cli-session-migration/prior-research-results/emergency_motion_packet/exhibits/Exhibit J - starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/message.json",
+        "temporary-cli-session-migration/workspace-generated/email_evidence_memo.md",
+        "temporary-cli-session-migration/paper-exhibits/HACC steering.pdf",
+        "migrated_sources/hacc_website/knowledge_graph/texts/a38c7914-ea37-4c2f-a815-711d4a97c92b.txt",
+        "migrated_sources/hacc_website/knowledge_graph/texts/8ee6f7d1-0c36-48e4-9677-336b95fb9858.txt"
+      ],
+      "evidentiary_status": "strong",
+      "remaining_gaps": [
+        "The February 26 complaint email helps prove protected activity, but a tighter chain tying the protected complaints to the specific decision-maker behind the February 4 notice is still needed."
+      ]
+    },
+    {
+      "id": "evt-006",
+      "complaint_paragraphs": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        51,
+        53,
+        54
+      ],
+      "date_or_period": "March 17 to March 24, 2026, with alleged earlier February 2026 request activity",
+      "event": "Plaintiff says a two-bedroom first-floor accommodation was actively pursued, a two-bedroom voucher was reversed to one bedroom, HACC conditioned reissuance on accommodation approval, and by March 24, 2026 provider verification supported disability status, service-animal need, stair-related accessibility limits, caregiver privacy, and the necessity of ADL/IADL assistance. The March 26, 2026 denial letter now carried in the filing packet as Exhibit P then denied the two-bedroom increase while stating that plaintiffs could use the one-bedroom voucher for a two-bedroom ground-floor unit within the affordability range, leaving the two-bedroom increase as the remaining denied accommodation.",
+      "primary_exhibits": [
+        "temporary-cli-session-migration/paper-exhibits/Reasonable accomidation.pdf",
+        "temporary-cli-session-migration/prior-research-results/emergency_motion_packet/exhibits/Exhibit M - starworks5-ktilton-orientation-import/0007-RE-HCV-Orientation-f9ca224dab4a4487bb20b9f7ff33afbe-clackamas.us/message.json",
+        "temporary-cli-session-migration/prior-research-results/emergency_motion_packet/exhibits/Exhibit M - starworks5-ktilton-orientation-import/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/message.json"
+      ],
+      "secondary_support": [
+        "temporary-cli-session-migration/workspace-generated/email_evidence_memo.md",
+        "temporary-cli-session-migration/workspace-generated/reasonable_accommodation_ocr_memo.md",
+        "migrated_sources/hacc_website/knowledge_graph/texts/8ee6f7d1-0c36-48e4-9677-336b95fb9858.txt",
+        "migrated_sources/hacc_website/housing-for-success-h4s-program-policies"
+      ],
+      "evidentiary_status": "strong_with_limits",
+      "remaining_gaps": [
+        "The March 19 and March 20 emails strongly show accommodation-linked bedroom sizing, but they do not by themselves prove the earliest request date.",
+        "EX-13 now supports provider verification and necessity, but it still does not establish a final written approval or denial by HACC.",
+        "Exhibit P supports the narrower point that HACC allowed use of the one-bedroom voucher for a ground-floor unit, but it should not be overstated as approval of the full two-bedroom accommodation request.",
+        "If the handwritten EX-13 text will be excerpted verbatim in a filing exhibit, a cleaner scan or annotated page image would still help authentication and readability."
+      ]
+    },
+    {
+      "id": "evt-007",
+      "complaint_paragraphs": [
+        20,
+        33,
+        34,
+        37,
+        39
+      ],
+      "date_or_period": "November 2025 to March 20, 2026",
+      "event": "Plaintiff says the tenant protection voucher was requested earlier but not issued until March 20, 2026.",
+      "primary_exhibits": [
+        "temporary-cli-session-migration/prior-research-results/emergency_motion_packet/exhibits/Exhibit M - starworks5-ktilton-orientation-import/0007-RE-HCV-Orientation-f9ca224dab4a4487bb20b9f7ff33afbe-clackamas.us/message.json",
+        "temporary-cli-session-migration/prior-research-results/emergency_motion_packet/exhibits/Exhibit M - starworks5-ktilton-orientation-import/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/message.json",
+        "temporary-cli-session-migration/paper-exhibits/Housing Authority Clackamas County Brochure.pdf",
+        "temporary-cli-session-migration/paper-exhibits/housing authority project based voucher.pdf",
+        "temporary-cli-session-migration/paper-exhibits/HACC 90 day notice 3.pdf"
+      ],
+      "secondary_support": [
+        "temporary-cli-session-migration/workspace-generated/email_evidence_memo.md",
+        "migrated_sources/research_results/evidence_review_20260328_181601/evidence_review.md",
+        "migrated_sources/research_results/evidence_review_20260328_022708/cross_document/cross_document_filtered_summary.md"
+      ],
+      "evidentiary_status": "partial_direct_support",
+      "remaining_gaps": [
+        "Need the original TPV request email or intake record.",
+        "The March 19 and March 20 emails prove the timing of the one-bedroom issuance and reissuance conditions more clearly, but the actual voucher notice and the earliest request date are still missing."
+      ]
+    },
+    {
+      "id": "evt-008",
+      "complaint_paragraphs": [
+        25,
+        67
+      ],
+      "date_or_period": "Unspecified, after household-change dispute",
+      "event": "Plaintiffs say Julio Regal Florez-Cortez was denied a hearing after an oral request.",
+      "primary_exhibits": [],
+      "secondary_support": [
+        "migrated_sources/research_results/evidence_review_20260328_022708/cross_document/cross_document_filtered_summary.md",
+        "migrated_sources/hacc_website/knowledge_graph/texts/a38c7914-ea37-4c2f-a815-711d4a97c92b.txt",
+        "migrated_sources/hacc_website/knowledge_graph/texts/8ee6f7d1-0c36-48e4-9677-336b95fb9858.txt",
+        "migrated_sources/hacc_website/housing-for-success-h4s-program-policies"
+      ],
+      "evidentiary_status": "gap",
+      "remaining_gaps": [
+        "Need the oral request memorialization, witness statement, or follow-up email.",
+        "Need any HACC response refusing a hearing because the request was not written.",
+        "Need a date anchor for the request and denial."
+      ]
+    },
+    {
+      "id": "evt-009",
+      "complaint_paragraphs": [
+        42
+      ],
+      "date_or_period": "Ongoing through threatened displacement",
+      "event": "Plaintiffs claim financial loss, emotional distress, and future relocation damages.",
+      "primary_exhibits": [
+        "temporary-cli-session-migration/paper-exhibits/Housing Authority Clackamas County Brochure.pdf"
+      ],
+      "secondary_support": [
+        "migrated_sources/research_results/evidence_review_20260328_022708/cross_document/cross_document_filtered_summary.md"
+      ],
+      "evidentiary_status": "testimony_weighted",
+      "remaining_gaps": [
+        "Need pay stubs, employer records, hotel estimates, moving quotes, or other damages documents.",
+        "Need any medical or counseling records if emotional distress damages will be expanded."
+      ]
+    }
+  ]
+}

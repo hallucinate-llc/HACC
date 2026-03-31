@@ -1,0 +1,71 @@
+# Federal Authority-Placeholder Complaint Draft
+
+Use this draft to insert the precise federal jurisdictional, statutory, constitutional, regulatory, and program authorities before finalizing the federal complaint.
+
+## Factual Anchor
+
+- On 8/5/2024, the document "HACC add to lease" reflects a lease or occupancy event stating: "Health, Housing &Human ServicesCLACKAMAS COUNTY Housing Authority of Clackamas County EQUAL HOUSING OPPORTUNITY LEASE AMENDMENT — RENT ADJUSTMENT AND/OR ADD OR REMOVE TENANTS...". Source: evidence/paper documents/HACC add to lease.pdf.
+- On September 19, 2024, the document "HACC phase2 2024" reflects a notice or adverse action stating: "HAND DELIVERED O CERTIFIED MAIL Hillside Park Apartments Phase II General Information Notice September 19, 2024 Dear Resident: The Housing Authority of Clackamas County (HACC)...". Source: evidence/paper documents/HACC phase2 2024.pdf.
+- On December 23, 2025, the document "HACC 90 day notice 2" reflects a notice or adverse action stating: "Health,Housing & Human Servi Executive Director, Shannon Callahan 30 Day Lease Termination Notice without Cause December 23, 2025 Jane Cortez 10043 SE 32nd Ave Milwaukie, OR...". Source: evidence/paper documents/HACC 90 day notice 2.pdf.
+- On December 23, 2025, the document "HACC 90 day notice" reflects a notice or adverse action stating: "Health, Housing & Human Services Executive Director, Shannan Callahan 90 Day Lease Termination Notice without Cause December 23, 2025 Jane Cortez 10043 SE 32nd Ave Milwaukie, OR...". Source: evidence/paper documents/HACC 90 day notice.pdf.
+- On December 31, 2025, the document "HACC 90 day notice 3" reflects a notice or adverse action stating: "NOTICE OF ELIGIBILITY AND 90 DAY NOTICE RESIDENTIAL TENANT TO BE DISPLACED O HAND DELIVERED C] CERTIFIED MAIL December 31, 2025 Jane Cortez 10043 SE 32nd Avenue Milwaukie, OR...". Source: evidence/paper documents/HACC 90 day notice 3.pdf.
+- On 1/1/2026, the document "HACC vawa violation" reflects a lease or occupancy event stating: "Shannon Callahan, Executive Director Housing Authority of Clackamas County Health, Housing & Human Services EQUAL HOUSING OPPORTUNITY LEASE AMENDMENT — RENT ADJUSTMENT AND/OR ADD...". Source: evidence/paper documents/HACC vawa violation.pdf.
+- On 01/08/2026, the document "HACC Jan 2026 blossom" reflects a lease or occupancy event stating: "Health, Housing : &HumanservicesSS Housing Authority of Clackamas County — APPR TING Jane Cortez 10043 SE 324 Avenue Milwaukie, OR 97222 IMPORTANT: ACTION REQUIRED Dear Jane...". Source: evidence/paper documents/HACC Jan 2026 blossom.pdf.
+- On February 4, 2026, the document "HACC first amendment" reflects a protected-status or VAWA-related issue stating: "Health,Housing &Human Services Februa ry 4, 2026 Executive Director, Shannon Callahan Jane Cortez and Benjamin Barber 10043 SE 32nd Avenue Milwaukie, OR 97222 30 Day for Cause...". Source: evidence/paper documents/HACC first amendment.pdf.
+- On February 9, 2026, the document "HACC financial requests" reflects a financial verification request stating: "Health, Housing &Humanservices.& Housing Authority of Clackamas County LSIURL, HOUGING OPPORTUNITY February 9, 2026 Jane Cortez 10043 SE 32nd Avenue Milwaukie, OR 97222 RE:...". Source: evidence/paper documents/HACC financial requests.pdf.
+- Between February 09, 2026 and February 25, 2026, the email thread "Additional Information Needed" included 3 captured messages involving "Tilton, Kati" <KTilton@clackamas.us> and benjamin barber <starworks5@gmail.com>. Source: evidence/email_imports/starworks5-additional-info-import/email_import_manifest.json.
+- On February 26, 2026, the document "HACC steering" reflects a notice or adverse action stating: "Health,Housing & Human Services 4. Housing Authority of Clackamas County . Jane Cortez February 26, 2026 10043 SE 32nd Avenue Milwaukie, OR 97222 Dear Jane Cortez and all other,...". Source: evidence/paper documents/HACC steering.pdf.
+- Between February 26, 2026 and March 11, 2026, the email thread "Additional Information Needed" included 5 captured messages involving benjamin barber <starworks5@gmail.com>, "Tilton, Kati" <ktilton@clackamas.us>, "Ferron, Ashley" <AFerron@clackamas.us>, charity@magikcorp.com, "Tilton, Kati" <KTilton@clackamas.us>. Source: evidence/email_imports/starworks5-additional-info-import/email_import_manifest.json.
+
+## Count-Level Authority Placeholders
+
+### Count I: 42 U.S.C. section 1983 Due Process or Federal Housing Notice Claim
+
+Source allegation group: Notices and Adverse Actions
+Draft theory summary: These facts support a draft theory that HACC issued or escalated adverse housing actions through notices and displacement-related communications.
+
+Authorities to insert:
+- Insert 28 U.S.C. section 1331 and the exact federal anchor authority for subject-matter jurisdiction.
+- Insert 42 U.S.C. section 1983 and the underlying constitutional or federal housing right only if state action and a protected housing interest can be pleaded in good faith.
+- If proceeding on a statutory or program-based notice theory instead, insert the specific federal housing regulation, statute, or guidance source actually governing the challenged notices.
+
+Elements still to verify:
+- Identify the specific notice requirements imposed by the lease, program rules, ORS chapter 90, HUD guidance, or relocation rules.
+- State how the notices were deficient, inconsistent, untimely, or misleading.
+- Explain the concrete housing harm threatened or imposed by the adverse action.
+
+### Count II: Federal Fair Housing, Retaliation, or Improper Housing Administration Claim
+
+Source allegation group: Financial Verification and Intake Barriers
+Draft theory summary: These facts support a draft theory that repeated documentation demands and related email exchanges created material barriers in the housing process.
+
+Authorities to insert:
+- Insert the specific federal discrimination, retaliation, or fair-housing authority actually supported by the evidence.
+- Insert the governing federal housing-program verification, intake, or administration rule that the challenged demands allegedly violated.
+- If Oregon-law theories remain in the case, insert 28 U.S.C. section 1367 only where supplemental pleading is strategically warranted.
+
+Elements still to verify:
+- Describe the specific documentation demands or intake conditions imposed on plaintiff.
+- State why those demands were unreasonable, inconsistently applied, retaliatory, discriminatory, or otherwise improper.
+- Explain how the demands delayed, burdened, or obstructed housing access or retention.
+
+### Count III: Federal Housing Program Compliance Claim Based on Lease, Occupancy, Inspection, or Displacement Conduct
+
+Source allegation group: Lease and Occupancy
+Draft theory summary: These facts support a draft theory centered on lease amendments, occupancy changes, inspections, and relocation-related housing conditions.
+
+Authorities to insert:
+- Insert the specific federal housing-program regulation, handbook, contract condition, or administrative rule governing the lease, occupancy, inspection, transfer, or displacement conduct at issue.
+- Insert the precise federally protected housing interest, benefit, or program entitlement implicated by the challenged conduct.
+- If no sufficiently concrete federal authority exists, move this conduct to supplemental Oregon-law pleading rather than preserving it as a federal standalone count.
+
+Elements still to verify:
+- Identify the lease, occupancy, inspection, transfer, or displacement obligation at issue.
+- State how HACC's conduct departed from that obligation or from ordinary housing process requirements.
+- Explain the resulting loss of housing stability, access, or tenancy rights.
+
+## Final Federal Conformance
+
+- Add exact federal authorities under each count and in the jurisdiction section.
+- Confirm whether section 1983, a federal housing statute, a federal program rule, or a mixed theory is actually the strongest anchor.
+- Move weakly grounded federal theories into supplemental Oregon-law pleading instead of preserving them as standalone federal counts.

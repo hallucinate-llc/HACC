@@ -1,0 +1,9 @@
+{
+  "dimension": 384,
+  "document_count": 3811,
+  "index_name": "hacc_text_chunks",
+  "model_name": "",
+  "provider": "ipfs_datasets_py.auto",
+  "records_path": "/home/barberb/HACC/hacc_website/knowledge_graph/embeddings/hacc_text_chunks.records.jsonl",
+  "vectors_path": "/home/barberb/HACC/hacc_website/knowledge_graph/embeddings/hacc_text_chunks.vectors.npy"
+}

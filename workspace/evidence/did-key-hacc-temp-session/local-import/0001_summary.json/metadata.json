@@ -1,0 +1,22 @@
+{
+  "artifact_dir": "/home/barberb/HACC/workspace/evidence/did-key-hacc-temp-session/local-import/0001_summary.json",
+  "copied_path": "/home/barberb/HACC/workspace/evidence/did-key-hacc-temp-session/local-import/0001_summary.json/summary.json",
+  "effective_claim_element_id": "causation",
+  "filename": "summary.json",
+  "import_origin_label": "file",
+  "import_strategy": "file_copy",
+  "media_type": "application/json",
+  "original_path": "/home/barberb/HACC/workspace/migrated_sources/hacc_website/knowledge_graph/summary.json",
+  "preview_text": "{\n  \"document_count\": 8,\n  \"error_count\": 0,\n  \"output_dir\": \"/home/barberb/HACC/hacc_website/knowledge_graph\",\n  \"status\": \"success\"\n}",
+  "requested_claim_element_id": "causation",
+  "size": 135,
+  "suffix": ".json",
+  "suggested_claim_element_id": "employer_knowledge",
+  "suggested_claim_element_scores": {
+    "adverse_action": 0,
+    "causation": 0,
+    "employer_knowledge": 1,
+    "harm": 0,
+    "protected_activity": 0
+  }
+}

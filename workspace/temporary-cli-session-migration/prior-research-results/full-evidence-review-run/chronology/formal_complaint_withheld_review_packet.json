@@ -1,0 +1,1422 @@
+{
+  "status": "success",
+  "packet_dir": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet",
+  "readme_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/README.md",
+  "withheld_exhibit_count": 2,
+  "copied_file_count": 114,
+  "entries": [
+    {
+      "packet_order": 10,
+      "label": "J",
+      "suggested_title": "Email Thread Export: starworks5 additional info import",
+      "severity": "high",
+      "issues": [
+        "metadata-only-email-entries-present",
+        "deferred-attachments-exceed-retained",
+        "high-duplicate-pressure",
+        "many-low-signal-images"
+      ],
+      "paragraph_numbers": [
+        19,
+        21,
+        49
+      ],
+      "exhibit_dir": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import",
+      "readme_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/README.md",
+      "deferred_manifest_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/DEFERRED_ATTACHMENTS.md",
+      "representative_message_count": 12,
+      "retained_attachment_count": 19,
+      "deferred_attachment_count": 49
+    },
+    {
+      "packet_order": 13,
+      "label": "M",
+      "suggested_title": "Email Thread Export: starworks5 ktilton orientation import",
+      "severity": "high",
+      "issues": [
+        "metadata-only-email-entries-present",
+        "high-duplicate-pressure"
+      ],
+      "paragraph_numbers": [
+        23,
+        65
+      ],
+      "exhibit_dir": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import",
+      "readme_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/README.md",
+      "deferred_manifest_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/DEFERRED_ATTACHMENTS.md",
+      "representative_message_count": 9,
+      "retained_attachment_count": 14,
+      "deferred_attachment_count": 11
+    }
+  ],
+  "copied_files": [
+    {
+      "label": "J",
+      "kind": "representative_saved_message",
+      "subexhibit": "J-1",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0001-Additional-Information-Needed-4c07ec4dace2422fa79c8f83358cf6d8-clackamas.us/message.eml",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/representative_messages/J-1_message.eml"
+    },
+    {
+      "label": "J",
+      "kind": "retained_attachment",
+      "subexhibit": "J-1",
+      "filename": "Additional-Information-Needed-02.09.2026.pdf",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0001-Additional-Information-Needed-4c07ec4dace2422fa79c8f83358cf6d8-clackamas.us/attachments/Additional-Information-Needed-02.09.2026.pdf",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/retained_attachments/J-1_Additional-Information-Needed-02.09.2026.pdf",
+      "recommended_action": "likely_keep",
+      "duplicate_count": 1
+    },
+    {
+      "label": "J",
+      "kind": "representative_saved_message",
+      "subexhibit": "J-4",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0004-Re-Additional-Information-Needed-CAMTdTS-DUCf7WDU_-dTA-FAd6qg7LN7OpzEzFCkLGwz-TADTZw-mail.gmail.com/message.eml",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/representative_messages/J-4_message.eml"
+    },
+    {
+      "label": "J",
+      "kind": "retained_attachment",
+      "subexhibit": "J-4",
+      "filename": "form-1040-barber-2026.pdf",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0004-Re-Additional-Information-Needed-CAMTdTS-DUCf7WDU_-dTA-FAd6qg7LN7OpzEzFCkLGwz-TADTZw-mail.gmail.com/attachments/form-1040-barber-2026.pdf",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/retained_attachments/J-4_form-1040-barber-2026.pdf",
+      "recommended_action": "likely_keep",
+      "duplicate_count": 1
+    },
+    {
+      "label": "J",
+      "kind": "representative_saved_message",
+      "subexhibit": "J-5",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0005-RE-Additional-Information-Needed-bfd53bf4f3614e6db61d9a9d4cfaebf9-clackamas.us/message.eml",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/representative_messages/J-5_message.eml"
+    },
+    {
+      "label": "J",
+      "kind": "retained_attachment",
+      "subexhibit": "J-5",
+      "filename": "Additional-Information-Needed-02.25.2026.pdf",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0005-RE-Additional-Information-Needed-bfd53bf4f3614e6db61d9a9d4cfaebf9-clackamas.us/attachments/Additional-Information-Needed-02.25.2026.pdf",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/retained_attachments/J-5_Additional-Information-Needed-02.25.2026.pdf",
+      "recommended_action": "likely_keep",
+      "duplicate_count": 1
+    },
+    {
+      "label": "J",
+      "kind": "representative_saved_message",
+      "subexhibit": "J-7",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0007-Re-Additional-Information-Needed-CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66-_DyiA-mail.gmail.com/message.eml",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/representative_messages/J-7_message.eml"
+    },
+    {
+      "label": "J",
+      "kind": "retained_attachment",
+      "subexhibit": "J-7",
+      "filename": "IMG_1981.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0007-Re-Additional-Information-Needed-CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66-_DyiA-mail.gmail.com/attachments/IMG_1981.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/retained_attachments/J-7_IMG_1981.png",
+      "recommended_action": "keep_representative_duplicate",
+      "duplicate_count": 10
+    },
+    {
+      "label": "J",
+      "kind": "retained_attachment",
+      "subexhibit": "J-7",
+      "filename": "IMG_1982.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0007-Re-Additional-Information-Needed-CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66-_DyiA-mail.gmail.com/attachments/IMG_1982.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/retained_attachments/J-7_IMG_1982.png",
+      "recommended_action": "keep_representative_duplicate",
+      "duplicate_count": 10
+    },
+    {
+      "label": "J",
+      "kind": "retained_attachment",
+      "subexhibit": "J-7",
+      "filename": "IMG_1980.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0007-Re-Additional-Information-Needed-CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66-_DyiA-mail.gmail.com/attachments/IMG_1980.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/retained_attachments/J-7_IMG_1980.png",
+      "recommended_action": "keep_representative_duplicate",
+      "duplicate_count": 10
+    },
+    {
+      "label": "J",
+      "kind": "representative_saved_message",
+      "subexhibit": "J-8",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/message.eml",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/representative_messages/J-8_message.eml"
+    },
+    {
+      "label": "J",
+      "kind": "retained_attachment",
+      "subexhibit": "J-8",
+      "filename": "Transactions-Coinbase.pdf",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/attachments/Transactions-Coinbase.pdf",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/retained_attachments/J-8_Transactions-Coinbase.pdf",
+      "recommended_action": "likely_keep",
+      "duplicate_count": 1
+    },
+    {
+      "label": "J",
+      "kind": "retained_attachment",
+      "subexhibit": "J-8",
+      "filename": "Home-Coinbase.pdf",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/attachments/Home-Coinbase.pdf",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/retained_attachments/J-8_Home-Coinbase.pdf",
+      "recommended_action": "likely_keep",
+      "duplicate_count": 1
+    },
+    {
+      "label": "J",
+      "kind": "retained_attachment",
+      "subexhibit": "J-8",
+      "filename": "Gmail---Congratulations-on-Winning-the-Storacha-Prize-from-the-Encode-AI-Filecoin-Hackathon-Next-Steps-for-Your-Prize.pdf",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/attachments/Gmail---Congratulations-on-Winning-the-Storacha-Prize-from-the-Encode-AI-Filecoin-Hackathon-Next-Steps-for-Your-Prize.pdf",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/retained_attachments/J-8_Gmail---Congratulations-on-Winning-the-Storacha-Prize-from-the-Encode-AI-Filecoin-Hackathon-Next-Steps-for-Your-Prize.pdf",
+      "recommended_action": "likely_keep",
+      "duplicate_count": 1
+    },
+    {
+      "label": "J",
+      "kind": "representative_saved_message",
+      "subexhibit": "J-9",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/message.eml",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/representative_messages/J-9_message.eml"
+    },
+    {
+      "label": "J",
+      "kind": "retained_attachment",
+      "subexhibit": "J-9",
+      "filename": "Rivermark-bank-memo.pdf",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/attachments/Rivermark-bank-memo.pdf",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/retained_attachments/J-9_Rivermark-bank-memo.pdf",
+      "recommended_action": "likely_keep",
+      "duplicate_count": 1
+    },
+    {
+      "label": "J",
+      "kind": "retained_attachment",
+      "subexhibit": "J-9",
+      "filename": "Chase-Debanking-Memo.pdf",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/attachments/Chase-Debanking-Memo.pdf",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/retained_attachments/J-9_Chase-Debanking-Memo.pdf",
+      "recommended_action": "likely_keep",
+      "duplicate_count": 1
+    },
+    {
+      "label": "J",
+      "kind": "retained_attachment",
+      "subexhibit": "J-9",
+      "filename": "Gmail---Rivermark-CU-Meeting.pdf",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/attachments/Gmail---Rivermark-CU-Meeting.pdf",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/retained_attachments/J-9_Gmail---Rivermark-CU-Meeting.pdf",
+      "recommended_action": "likely_keep",
+      "duplicate_count": 1
+    },
+    {
+      "label": "J",
+      "kind": "representative_saved_message",
+      "subexhibit": "J-11",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0011-Re-Additional-Information-Needed-CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q-mail.gmail.com/message.eml",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/representative_messages/J-11_message.eml"
+    },
+    {
+      "label": "J",
+      "kind": "retained_attachment",
+      "subexhibit": "J-11",
+      "filename": "Linux-Foundation---Wikipedia.pdf",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0011-Re-Additional-Information-Needed-CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q-mail.gmail.com/attachments/Linux-Foundation---Wikipedia.pdf",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/retained_attachments/J-11_Linux-Foundation---Wikipedia.pdf",
+      "recommended_action": "likely_keep",
+      "duplicate_count": 1
+    },
+    {
+      "label": "J",
+      "kind": "retained_attachment",
+      "subexhibit": "J-11",
+      "filename": "Re_-InifiniEdge-AI-Release-3.0-Votes-seeking-.pdf",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0011-Re-Additional-Information-Needed-CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q-mail.gmail.com/attachments/Re_-InifiniEdge-AI-Release-3.0-Votes-seeking-.pdf",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/retained_attachments/J-11_Re_-InifiniEdge-AI-Release-3.0-Votes-seeking-.pdf",
+      "recommended_action": "likely_keep",
+      "duplicate_count": 1
+    },
+    {
+      "label": "J",
+      "kind": "representative_saved_message",
+      "subexhibit": "J-12",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/message.eml",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/representative_messages/J-12_message.eml"
+    },
+    {
+      "label": "J",
+      "kind": "retained_attachment",
+      "subexhibit": "J-12",
+      "filename": "Image_260226_173852.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/attachments/Image_260226_173852.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/retained_attachments/J-12_Image_260226_173852.jpeg",
+      "recommended_action": "keep_representative_duplicate",
+      "duplicate_count": 5
+    },
+    {
+      "label": "J",
+      "kind": "retained_attachment",
+      "subexhibit": "J-12",
+      "filename": "Image_260226_173823.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/attachments/Image_260226_173823.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/retained_attachments/J-12_Image_260226_173823.jpeg",
+      "recommended_action": "keep_representative_duplicate",
+      "duplicate_count": 5
+    },
+    {
+      "label": "J",
+      "kind": "representative_saved_message",
+      "subexhibit": "J-13",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/message.eml",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/representative_messages/J-13_message.eml"
+    },
+    {
+      "label": "J",
+      "kind": "retained_attachment",
+      "subexhibit": "J-13",
+      "filename": "image.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/attachments/image.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/retained_attachments/J-13_image.png",
+      "recommended_action": "keep_representative_duplicate",
+      "duplicate_count": 4
+    },
+    {
+      "label": "J",
+      "kind": "representative_saved_message",
+      "subexhibit": "J-14",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/message.eml",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/representative_messages/J-14_message.eml"
+    },
+    {
+      "label": "J",
+      "kind": "retained_attachment",
+      "subexhibit": "J-14",
+      "filename": "IMG_2008.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/attachments/IMG_2008.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/retained_attachments/J-14_IMG_2008.jpeg",
+      "recommended_action": "keep_representative_duplicate",
+      "duplicate_count": 3
+    },
+    {
+      "label": "J",
+      "kind": "representative_saved_message",
+      "subexhibit": "J-15",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/message.eml",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/representative_messages/J-15_message.eml"
+    },
+    {
+      "label": "J",
+      "kind": "retained_attachment",
+      "subexhibit": "J-15",
+      "filename": "Image_260309_103446.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/Image_260309_103446.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/retained_attachments/J-15_Image_260309_103446.jpeg",
+      "recommended_action": "keep_representative_duplicate",
+      "duplicate_count": 2
+    },
+    {
+      "label": "J",
+      "kind": "representative_saved_message",
+      "subexhibit": "J-16",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/message.eml",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/representative_messages/J-16_message.eml"
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-2",
+      "filename": "image.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0002-Re-Additional-Information-Needed-CAMTdTS-2c7Mk_ZR-9SYGkoR-Dy99ETRUn7-tGiiqh4ujFoHZ3g-mail.gmail.com/attachments/image.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-2_image.png",
+      "recommended_action": "review_low_signal_image",
+      "duplicate_count": 1,
+      "reasons": [
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-2",
+      "filename": "image-2.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0002-Re-Additional-Information-Needed-CAMTdTS-2c7Mk_ZR-9SYGkoR-Dy99ETRUn7-tGiiqh4ujFoHZ3g-mail.gmail.com/attachments/image-2.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-2_image-2.png",
+      "recommended_action": "review_low_signal_image",
+      "duplicate_count": 1,
+      "reasons": [
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-2",
+      "filename": "image-3.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0002-Re-Additional-Information-Needed-CAMTdTS-2c7Mk_ZR-9SYGkoR-Dy99ETRUn7-tGiiqh4ujFoHZ3g-mail.gmail.com/attachments/image-3.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-2_image-3.png",
+      "recommended_action": "review_low_signal_image",
+      "duplicate_count": 1,
+      "reasons": [
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-2",
+      "filename": "image-4.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0002-Re-Additional-Information-Needed-CAMTdTS-2c7Mk_ZR-9SYGkoR-Dy99ETRUn7-tGiiqh4ujFoHZ3g-mail.gmail.com/attachments/image-4.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-2_image-4.png",
+      "recommended_action": "review_low_signal_image",
+      "duplicate_count": 1,
+      "reasons": [
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-8",
+      "filename": "IMG_1981.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/attachments/IMG_1981.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-8_IMG_1981.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-8",
+      "filename": "IMG_1982.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/attachments/IMG_1982.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-8_IMG_1982.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-8",
+      "filename": "IMG_1980.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/attachments/IMG_1980.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-8_IMG_1980.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-9",
+      "filename": "IMG_1981.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/attachments/IMG_1981.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-9_IMG_1981.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-9",
+      "filename": "IMG_1982.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/attachments/IMG_1982.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-9_IMG_1982.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-9",
+      "filename": "IMG_1980.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/attachments/IMG_1980.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-9_IMG_1980.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-10",
+      "filename": "IMG_1981.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com/attachments/IMG_1981.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-10_IMG_1981.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-10",
+      "filename": "IMG_1982.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com/attachments/IMG_1982.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-10_IMG_1982.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-10",
+      "filename": "IMG_1980.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com/attachments/IMG_1980.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-10_IMG_1980.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-10",
+      "filename": "IMG_1986.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com/attachments/IMG_1986.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-10_IMG_1986.png",
+      "recommended_action": "review_low_signal_image",
+      "duplicate_count": 1,
+      "reasons": [
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-10",
+      "filename": "IMG_1985.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com/attachments/IMG_1985.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-10_IMG_1985.png",
+      "recommended_action": "review_low_signal_image",
+      "duplicate_count": 1,
+      "reasons": [
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-10",
+      "filename": "IMG_1983.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com/attachments/IMG_1983.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-10_IMG_1983.png",
+      "recommended_action": "review_low_signal_image",
+      "duplicate_count": 1,
+      "reasons": [
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-10",
+      "filename": "IMG_1984.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com/attachments/IMG_1984.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-10_IMG_1984.png",
+      "recommended_action": "review_low_signal_image",
+      "duplicate_count": 1,
+      "reasons": [
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-11",
+      "filename": "IMG_1981.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0011-Re-Additional-Information-Needed-CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q-mail.gmail.com/attachments/IMG_1981.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-11_IMG_1981.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-11",
+      "filename": "IMG_1982.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0011-Re-Additional-Information-Needed-CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q-mail.gmail.com/attachments/IMG_1982.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-11_IMG_1982.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-11",
+      "filename": "IMG_1980.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0011-Re-Additional-Information-Needed-CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q-mail.gmail.com/attachments/IMG_1980.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-11_IMG_1980.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-12",
+      "filename": "IMG_1981.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/attachments/IMG_1981.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-12_IMG_1981.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-12",
+      "filename": "IMG_1980.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/attachments/IMG_1980.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-12_IMG_1980.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-12",
+      "filename": "IMG_1982.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/attachments/IMG_1982.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-12_IMG_1982.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-13",
+      "filename": "IMG_1981.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/attachments/IMG_1981.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-13_IMG_1981.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-13",
+      "filename": "Image_260226_173852.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/attachments/Image_260226_173852.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-13_Image_260226_173852.jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 5,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-13",
+      "filename": "IMG_1980.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/attachments/IMG_1980.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-13_IMG_1980.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-13",
+      "filename": "IMG_1982.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/attachments/IMG_1982.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-13_IMG_1982.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-13",
+      "filename": "Image_260226_173823.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/attachments/Image_260226_173823.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-13_Image_260226_173823.jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 5,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-14",
+      "filename": "IMG_1981.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/attachments/IMG_1981.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-14_IMG_1981.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-14",
+      "filename": "Image_260226_173852.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/attachments/Image_260226_173852.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-14_Image_260226_173852.jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 5,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-14",
+      "filename": "IMG_1980.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/attachments/IMG_1980.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-14_IMG_1980.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-14",
+      "filename": "IMG_1982.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/attachments/IMG_1982.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-14_IMG_1982.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-14",
+      "filename": "Image_260226_173823.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/attachments/Image_260226_173823.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-14_Image_260226_173823.jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 5,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-14",
+      "filename": "image.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/attachments/image.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-14_image.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 4,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-15",
+      "filename": "IMG_1980.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/IMG_1980.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-15_IMG_1980.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-15",
+      "filename": "IMG_1982.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/IMG_1982.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-15_IMG_1982.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-15",
+      "filename": "Image_260226_173852.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/Image_260226_173852.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-15_Image_260226_173852.jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 5,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-15",
+      "filename": "IMG_2008.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/IMG_2008.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-15_IMG_2008.jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 3,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-15",
+      "filename": "image.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/image.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-15_image.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 4,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-15",
+      "filename": "Image_260226_173823.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/Image_260226_173823.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-15_Image_260226_173823.jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 5,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-15",
+      "filename": "IMG_1981.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/IMG_1981.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-15_IMG_1981.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-16",
+      "filename": "IMG_1980.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/IMG_1980.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-16_IMG_1980.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-16",
+      "filename": "IMG_1982.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/IMG_1982.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-16_IMG_1982.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-16",
+      "filename": "Image_260226_173852.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/Image_260226_173852.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-16_Image_260226_173852.jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 5,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-16",
+      "filename": "IMG_2008.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/IMG_2008.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-16_IMG_2008.jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 3,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-16",
+      "filename": "Image_260309_103446.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/Image_260309_103446.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-16_Image_260309_103446.jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 2,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-16",
+      "filename": "image.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/image.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-16_image.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 4,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-16",
+      "filename": "Image_260226_173823.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/Image_260226_173823.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-16_Image_260226_173823.jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 5,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "J",
+      "kind": "deferred_attachment",
+      "subexhibit": "J-16",
+      "filename": "IMG_1981.png",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/IMG_1981.png",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import/deferred_attachments/J-16_IMG_1981.png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "M",
+      "kind": "representative_saved_message",
+      "subexhibit": "M-1",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0001-HCV-Orientation-92208aa189a24a18ac05be75916b5107-clackamas.us/message.eml",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/representative_messages/M-1_message.eml"
+    },
+    {
+      "label": "M",
+      "kind": "representative_saved_message",
+      "subexhibit": "M-3",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/message.eml",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/representative_messages/M-3_message.eml"
+    },
+    {
+      "label": "M",
+      "kind": "retained_attachment",
+      "subexhibit": "M-3",
+      "filename": "Cortez-TRSW-3.18.26.pdf",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/attachments/Cortez-TRSW-3.18.26.pdf",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/retained_attachments/M-3_Cortez-TRSW-3.18.26.pdf",
+      "recommended_action": "likely_keep",
+      "duplicate_count": 1
+    },
+    {
+      "label": "M",
+      "kind": "retained_attachment",
+      "subexhibit": "M-3",
+      "filename": "9.-Left-Side-Combined_5.22.25-1.pdf",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/attachments/9.-Left-Side-Combined_5.22.25-1.pdf",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/retained_attachments/M-3_9.-Left-Side-Combined_5.22.25-1.pdf",
+      "recommended_action": "likely_keep",
+      "duplicate_count": 1
+    },
+    {
+      "label": "M",
+      "kind": "retained_attachment",
+      "subexhibit": "M-3",
+      "filename": "11.-Right-Side-Combined_5.22.25.pdf",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/attachments/11.-Right-Side-Combined_5.22.25.pdf",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/retained_attachments/M-3_11.-Right-Side-Combined_5.22.25.pdf",
+      "recommended_action": "likely_keep",
+      "duplicate_count": 1
+    },
+    {
+      "label": "M",
+      "kind": "representative_saved_message",
+      "subexhibit": "M-4",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us/message.eml",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/representative_messages/M-4_message.eml"
+    },
+    {
+      "label": "M",
+      "kind": "retained_attachment",
+      "subexhibit": "M-4",
+      "filename": "TRSW---JC---03.19.2026.pdf",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us/attachments/TRSW---JC---03.19.2026.pdf",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/retained_attachments/M-4_TRSW---JC---03.19.2026.pdf",
+      "recommended_action": "likely_keep",
+      "duplicate_count": 1
+    },
+    {
+      "label": "M",
+      "kind": "retained_attachment",
+      "subexhibit": "M-4",
+      "filename": "VO---JC---03.19.2026.pdf",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us/attachments/VO---JC---03.19.2026.pdf",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/retained_attachments/M-4_VO---JC---03.19.2026.pdf",
+      "recommended_action": "likely_keep",
+      "duplicate_count": 1
+    },
+    {
+      "label": "M",
+      "kind": "representative_saved_message",
+      "subexhibit": "M-7",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0007-RE-HCV-Orientation-f9ca224dab4a4487bb20b9f7ff33afbe-clackamas.us/message.eml",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/representative_messages/M-7_message.eml"
+    },
+    {
+      "label": "M",
+      "kind": "retained_attachment",
+      "subexhibit": "M-7",
+      "filename": "Orientation---Required-Signatures-03.19.2026.pdf",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0007-RE-HCV-Orientation-f9ca224dab4a4487bb20b9f7ff33afbe-clackamas.us/attachments/Orientation---Required-Signatures-03.19.2026.pdf",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/retained_attachments/M-7_Orientation---Required-Signatures-03.19.2026.pdf",
+      "recommended_action": "likely_keep",
+      "duplicate_count": 1
+    },
+    {
+      "label": "M",
+      "kind": "representative_saved_message",
+      "subexhibit": "M-8",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/message.eml",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/representative_messages/M-8_message.eml"
+    },
+    {
+      "label": "M",
+      "kind": "retained_attachment",
+      "subexhibit": "M-8",
+      "filename": "Image_260320_142321.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/attachments/Image_260320_142321.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/retained_attachments/M-8_Image_260320_142321.jpeg",
+      "recommended_action": "keep_representative_duplicate",
+      "duplicate_count": 2
+    },
+    {
+      "label": "M",
+      "kind": "retained_attachment",
+      "subexhibit": "M-8",
+      "filename": "Image_260320_142448.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/attachments/Image_260320_142448.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/retained_attachments/M-8_Image_260320_142448.jpeg",
+      "recommended_action": "keep_representative_duplicate",
+      "duplicate_count": 2
+    },
+    {
+      "label": "M",
+      "kind": "retained_attachment",
+      "subexhibit": "M-8",
+      "filename": "Image_260320_142045.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/attachments/Image_260320_142045.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/retained_attachments/M-8_Image_260320_142045.jpeg",
+      "recommended_action": "keep_representative_duplicate",
+      "duplicate_count": 2
+    },
+    {
+      "label": "M",
+      "kind": "representative_saved_message",
+      "subexhibit": "M-9",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/message.eml",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/representative_messages/M-9_message.eml"
+    },
+    {
+      "label": "M",
+      "kind": "retained_attachment",
+      "subexhibit": "M-9",
+      "filename": "image001.jpg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/attachments/image001.jpg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/retained_attachments/M-9_image001.jpg",
+      "recommended_action": "keep_representative_duplicate",
+      "duplicate_count": 3
+    },
+    {
+      "label": "M",
+      "kind": "retained_attachment",
+      "subexhibit": "M-9",
+      "filename": "image002.jpg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/attachments/image002.jpg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/retained_attachments/M-9_image002.jpg",
+      "recommended_action": "keep_representative_duplicate",
+      "duplicate_count": 3
+    },
+    {
+      "label": "M",
+      "kind": "retained_attachment",
+      "subexhibit": "M-9",
+      "filename": "image003.jpg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/attachments/image003.jpg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/retained_attachments/M-9_image003.jpg",
+      "recommended_action": "keep_representative_duplicate",
+      "duplicate_count": 3
+    },
+    {
+      "label": "M",
+      "kind": "representative_saved_message",
+      "subexhibit": "M-10",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/message.eml",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/representative_messages/M-10_message.eml"
+    },
+    {
+      "label": "M",
+      "kind": "retained_attachment",
+      "subexhibit": "M-10",
+      "filename": "output.pdf",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/attachments/output.pdf",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/retained_attachments/M-10_output.pdf",
+      "recommended_action": "likely_keep",
+      "duplicate_count": 1
+    },
+    {
+      "label": "M",
+      "kind": "representative_saved_message",
+      "subexhibit": "M-11",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/message.eml",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/representative_messages/M-11_message.eml"
+    },
+    {
+      "label": "M",
+      "kind": "retained_attachment",
+      "subexhibit": "M-11",
+      "filename": "Image_260320_160954.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/attachments/Image_260320_160954.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/retained_attachments/M-11_Image_260320_160954.jpeg",
+      "recommended_action": "keep_representative_duplicate",
+      "duplicate_count": 2
+    },
+    {
+      "label": "M",
+      "kind": "representative_saved_message",
+      "subexhibit": "M-12",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/message.eml",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/representative_messages/M-12_message.eml"
+    },
+    {
+      "label": "M",
+      "kind": "deferred_attachment",
+      "subexhibit": "M-10",
+      "filename": "Image_260320_142321.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/attachments/Image_260320_142321.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/deferred_attachments/M-10_Image_260320_142321.jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 2,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "M",
+      "kind": "deferred_attachment",
+      "subexhibit": "M-10",
+      "filename": "Image_260320_142448.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/attachments/Image_260320_142448.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/deferred_attachments/M-10_Image_260320_142448.jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 2,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "M",
+      "kind": "deferred_attachment",
+      "subexhibit": "M-10",
+      "filename": "Image_260320_142045.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/attachments/Image_260320_142045.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/deferred_attachments/M-10_Image_260320_142045.jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 2,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "M",
+      "kind": "deferred_attachment",
+      "subexhibit": "M-11",
+      "filename": "image001.jpg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/attachments/image001.jpg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/deferred_attachments/M-11_image001.jpg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 3,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "M",
+      "kind": "deferred_attachment",
+      "subexhibit": "M-11",
+      "filename": "image002.jpg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/attachments/image002.jpg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/deferred_attachments/M-11_image002.jpg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 3,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "M",
+      "kind": "deferred_attachment",
+      "subexhibit": "M-11",
+      "filename": "image003.jpg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/attachments/image003.jpg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/deferred_attachments/M-11_image003.jpg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 3,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "M",
+      "kind": "deferred_attachment",
+      "subexhibit": "M-12",
+      "filename": "Image_260320_160954.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/Image_260320_160954.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/deferred_attachments/M-12_Image_260320_160954.jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 2,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "M",
+      "kind": "deferred_attachment",
+      "subexhibit": "M-12",
+      "filename": "image001.jpg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/image001.jpg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/deferred_attachments/M-12_image001.jpg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 3,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "M",
+      "kind": "deferred_attachment",
+      "subexhibit": "M-12",
+      "filename": "IMG_2106.jpeg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/IMG_2106.jpeg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/deferred_attachments/M-12_IMG_2106.jpeg",
+      "recommended_action": "review_low_signal_image",
+      "duplicate_count": 1,
+      "reasons": [
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "M",
+      "kind": "deferred_attachment",
+      "subexhibit": "M-12",
+      "filename": "image002.jpg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/image002.jpg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/deferred_attachments/M-12_image002.jpg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 3,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    },
+    {
+      "label": "M",
+      "kind": "deferred_attachment",
+      "subexhibit": "M-12",
+      "filename": "image003.jpg",
+      "source_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/image003.jpg",
+      "destination_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/deferred_attachments/M-12_image003.jpg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 3,
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ]
+    }
+  ]
+}

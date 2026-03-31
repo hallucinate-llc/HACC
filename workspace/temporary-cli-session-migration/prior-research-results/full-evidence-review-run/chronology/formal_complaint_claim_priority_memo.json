@@ -1,0 +1,54 @@
+{
+  "status": "success",
+  "section_count": 5,
+  "top_ranked_title": "Potential Claim Theme: Deficient Notice and Adverse Housing Action",
+  "json_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_claim_priority_memo.json",
+  "markdown_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_claim_priority_memo.md",
+  "sections": [
+    {
+      "title": "Potential Claim Theme: Deficient Notice and Adverse Housing Action",
+      "source_section": "Notices and Adverse Actions",
+      "rank": 1,
+      "strength": "high",
+      "why": "This group has the broadest dated paper trail, multiple notice documents, and the clearest direct connection to threatened or actual housing harm.",
+      "fit": "Best early anchor for either state notice/displacement theories or a federal due-process style claim if state action and protected housing interests are developed.",
+      "element_prompt_count": 3
+    },
+    {
+      "title": "Potential Claim Theme: Documentation Demands and Intake Barriers",
+      "source_section": "Financial Verification and Intake Barriers",
+      "rank": 2,
+      "strength": "high",
+      "why": "This group combines a formal paper demand with a substantial curated email thread, giving both documentary and process evidence of repeated administrative barriers.",
+      "fit": "Strong candidate for discrimination, retaliation, unfair-process, or administrative-barrier theories in either forum once required versus unsupported demands are separated.",
+      "element_prompt_count": 3
+    },
+    {
+      "title": "Potential Claim Theme: Lease, Occupancy, and Displacement Conduct",
+      "source_section": "Lease and Occupancy",
+      "rank": 3,
+      "strength": "medium-high",
+      "why": "This group has several paper exhibits covering lease amendments, occupancy issues, and inspection-related conduct, but the legal theory still depends on pinning down the exact governing lease and program obligations.",
+      "fit": "Potentially strong in state court and still useful in federal court if tied to federally regulated housing-program obligations.",
+      "element_prompt_count": 3
+    },
+    {
+      "title": "Potential Claim Theme: Orientation and Compliance Delays",
+      "source_section": "Orientation and Compliance",
+      "rank": 4,
+      "strength": "medium",
+      "why": "The exhibit set is clean and the email thread is usable, but the group appears narrower and more likely to support a supporting-process theory than a lead claim unless the delay caused concrete lost housing opportunity.",
+      "fit": "Best used as a reinforcing administrative-delay count or factual support for broader housing-process theories.",
+      "element_prompt_count": 3
+    },
+    {
+      "title": "Potential Claim Theme: Protected Status and VAWA-Related Conduct",
+      "source_section": "Protected Status and VAWA",
+      "rank": 5,
+      "strength": "medium-uncertain",
+      "why": "This group could become significant, but it currently rests on a smaller evidentiary slice and has the most explicit unresolved proof question: identifying the exact protected-status or VAWA protection implicated and connecting it to later adverse action.",
+      "fit": "Potentially important but should be treated as theory-sensitive until the protected-status and causal linkage proof is tightened.",
+      "element_prompt_count": 3
+    }
+  ]
+}

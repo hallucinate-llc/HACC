@@ -1,0 +1,597 @@
+{
+  "status": "success",
+  "entry_count": 13,
+  "citation_count": 24,
+  "json_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_cite_check_matrix.json",
+  "markdown_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_cite_check_matrix.md",
+  "entries": [
+    {
+      "packet_order": 1,
+      "label": "A",
+      "suggested_title": "HACC add to lease PDF",
+      "source_type": "paper_pdf",
+      "source_path": "evidence/paper documents/HACC add to lease.pdf",
+      "citation_count": 2,
+      "paragraph_numbers": [
+        10,
+        38
+      ],
+      "sections": [
+        "General Allegations",
+        "Potential Claim Theme: Lease, Occupancy, and Displacement Conduct"
+      ],
+      "materials": [
+        {
+          "kind": "exhibit_file",
+          "path": "evidence/paper documents/HACC add to lease.pdf",
+          "note": "Attach the underlying PDF as the exhibit file."
+        }
+      ]
+    },
+    {
+      "packet_order": 2,
+      "label": "B",
+      "suggested_title": "HACC phase2 2024 PDF",
+      "source_type": "paper_pdf",
+      "source_path": "evidence/paper documents/HACC phase2 2024.pdf",
+      "citation_count": 2,
+      "paragraph_numbers": [
+        11,
+        28
+      ],
+      "sections": [
+        "General Allegations",
+        "Potential Claim Theme: Deficient Notice and Adverse Housing Action"
+      ],
+      "materials": [
+        {
+          "kind": "exhibit_file",
+          "path": "evidence/paper documents/HACC phase2 2024.pdf",
+          "note": "Attach the underlying PDF as the exhibit file."
+        }
+      ]
+    },
+    {
+      "packet_order": 3,
+      "label": "C",
+      "suggested_title": "HACC 90 day notice 2 PDF",
+      "source_type": "paper_pdf",
+      "source_path": "evidence/paper documents/HACC 90 day notice 2.pdf",
+      "citation_count": 2,
+      "paragraph_numbers": [
+        12,
+        29
+      ],
+      "sections": [
+        "General Allegations",
+        "Potential Claim Theme: Deficient Notice and Adverse Housing Action"
+      ],
+      "materials": [
+        {
+          "kind": "exhibit_file",
+          "path": "evidence/paper documents/HACC 90 day notice 2.pdf",
+          "note": "Attach the underlying PDF as the exhibit file."
+        }
+      ]
+    },
+    {
+      "packet_order": 4,
+      "label": "D",
+      "suggested_title": "HACC 90 day notice PDF",
+      "source_type": "paper_pdf",
+      "source_path": "evidence/paper documents/HACC 90 day notice.pdf",
+      "citation_count": 2,
+      "paragraph_numbers": [
+        13,
+        30
+      ],
+      "sections": [
+        "General Allegations",
+        "Potential Claim Theme: Deficient Notice and Adverse Housing Action"
+      ],
+      "materials": [
+        {
+          "kind": "exhibit_file",
+          "path": "evidence/paper documents/HACC 90 day notice.pdf",
+          "note": "Attach the underlying PDF as the exhibit file."
+        }
+      ]
+    },
+    {
+      "packet_order": 5,
+      "label": "E",
+      "suggested_title": "HACC 90 day notice 3 PDF",
+      "source_type": "paper_pdf",
+      "source_path": "evidence/paper documents/HACC 90 day notice 3.pdf",
+      "citation_count": 1,
+      "paragraph_numbers": [
+        14
+      ],
+      "sections": [
+        "General Allegations"
+      ],
+      "materials": [
+        {
+          "kind": "exhibit_file",
+          "path": "evidence/paper documents/HACC 90 day notice 3.pdf",
+          "note": "Attach the underlying PDF as the exhibit file."
+        }
+      ]
+    },
+    {
+      "packet_order": 6,
+      "label": "F",
+      "suggested_title": "HACC vawa violation PDF",
+      "source_type": "paper_pdf",
+      "source_path": "evidence/paper documents/HACC vawa violation.pdf",
+      "citation_count": 2,
+      "paragraph_numbers": [
+        15,
+        39
+      ],
+      "sections": [
+        "General Allegations",
+        "Potential Claim Theme: Lease, Occupancy, and Displacement Conduct"
+      ],
+      "materials": [
+        {
+          "kind": "exhibit_file",
+          "path": "evidence/paper documents/HACC vawa violation.pdf",
+          "note": "Attach the underlying PDF as the exhibit file."
+        }
+      ]
+    },
+    {
+      "packet_order": 7,
+      "label": "G",
+      "suggested_title": "HACC Jan 2026 blossom PDF",
+      "source_type": "paper_pdf",
+      "source_path": "evidence/paper documents/HACC Jan 2026 blossom.pdf",
+      "citation_count": 2,
+      "paragraph_numbers": [
+        16,
+        40
+      ],
+      "sections": [
+        "General Allegations",
+        "Potential Claim Theme: Lease, Occupancy, and Displacement Conduct"
+      ],
+      "materials": [
+        {
+          "kind": "exhibit_file",
+          "path": "evidence/paper documents/HACC Jan 2026 blossom.pdf",
+          "note": "Attach the underlying PDF as the exhibit file."
+        }
+      ]
+    },
+    {
+      "packet_order": 8,
+      "label": "H",
+      "suggested_title": "HACC first amendment PDF",
+      "source_type": "paper_pdf",
+      "source_path": "evidence/paper documents/HACC first amendment.pdf",
+      "citation_count": 2,
+      "paragraph_numbers": [
+        17,
+        57
+      ],
+      "sections": [
+        "General Allegations",
+        "Potential Claim Theme: Protected Status and VAWA-Related Conduct"
+      ],
+      "materials": [
+        {
+          "kind": "exhibit_file",
+          "path": "evidence/paper documents/HACC first amendment.pdf",
+          "note": "Attach the underlying PDF as the exhibit file."
+        }
+      ]
+    },
+    {
+      "packet_order": 9,
+      "label": "I",
+      "suggested_title": "HACC financial requests PDF",
+      "source_type": "paper_pdf",
+      "source_path": "evidence/paper documents/HACC financial requests.pdf",
+      "citation_count": 2,
+      "paragraph_numbers": [
+        18,
+        48
+      ],
+      "sections": [
+        "General Allegations",
+        "Potential Claim Theme: Documentation Demands and Intake Barriers"
+      ],
+      "materials": [
+        {
+          "kind": "exhibit_file",
+          "path": "evidence/paper documents/HACC financial requests.pdf",
+          "note": "Attach the underlying PDF as the exhibit file."
+        }
+      ]
+    },
+    {
+      "packet_order": 10,
+      "label": "J",
+      "suggested_title": "Email Thread Export: starworks5 additional info import",
+      "source_type": "email_manifest",
+      "source_path": "evidence/email_imports/starworks5-additional-info-import/email_import_manifest.json",
+      "citation_count": 3,
+      "paragraph_numbers": [
+        19,
+        21,
+        49
+      ],
+      "sections": [
+        "General Allegations",
+        "Potential Claim Theme: Documentation Demands and Intake Barriers"
+      ],
+      "materials": [
+        {
+          "kind": "representative_saved_message",
+          "subexhibit": "J-1",
+          "date": "2026-02-09T17:57:35+00:00",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0001-Additional-Information-Needed-4c07ec4dace2422fa79c8f83358cf6d8-clackamas.us/message.eml",
+          "selection_reasons": [
+            "retained-attachment",
+            "thread-start"
+          ],
+          "retained_attachment_count": 1,
+          "retained_attachment_paths": [
+            "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0001-Additional-Information-Needed-4c07ec4dace2422fa79c8f83358cf6d8-clackamas.us/attachments/Additional-Information-Needed-02.09.2026.pdf"
+          ]
+        },
+        {
+          "kind": "representative_saved_message",
+          "subexhibit": "J-4",
+          "date": "2026-02-19T21:33:12-08:00",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0004-Re-Additional-Information-Needed-CAMTdTS-DUCf7WDU_-dTA-FAd6qg7LN7OpzEzFCkLGwz-TADTZw-mail.gmail.com/message.eml",
+          "selection_reasons": [
+            "retained-attachment"
+          ],
+          "retained_attachment_count": 1,
+          "retained_attachment_paths": [
+            "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0004-Re-Additional-Information-Needed-CAMTdTS-DUCf7WDU_-dTA-FAd6qg7LN7OpzEzFCkLGwz-TADTZw-mail.gmail.com/attachments/form-1040-barber-2026.pdf"
+          ]
+        },
+        {
+          "kind": "representative_saved_message",
+          "subexhibit": "J-5",
+          "date": "2026-02-25T17:51:41+00:00",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0005-RE-Additional-Information-Needed-bfd53bf4f3614e6db61d9a9d4cfaebf9-clackamas.us/message.eml",
+          "selection_reasons": [
+            "retained-attachment"
+          ],
+          "retained_attachment_count": 1,
+          "retained_attachment_paths": [
+            "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0005-RE-Additional-Information-Needed-bfd53bf4f3614e6db61d9a9d4cfaebf9-clackamas.us/attachments/Additional-Information-Needed-02.25.2026.pdf"
+          ]
+        },
+        {
+          "kind": "representative_saved_message",
+          "subexhibit": "J-7",
+          "date": "2026-02-25T11:38:00-08:00",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0007-Re-Additional-Information-Needed-CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66-_DyiA-mail.gmail.com/message.eml",
+          "selection_reasons": [
+            "retained-attachment"
+          ],
+          "retained_attachment_count": 3,
+          "retained_attachment_paths": [
+            "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0007-Re-Additional-Information-Needed-CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66-_DyiA-mail.gmail.com/attachments/IMG_1981.png",
+            "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0007-Re-Additional-Information-Needed-CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66-_DyiA-mail.gmail.com/attachments/IMG_1982.png",
+            "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0007-Re-Additional-Information-Needed-CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66-_DyiA-mail.gmail.com/attachments/IMG_1980.png"
+          ]
+        },
+        {
+          "kind": "representative_saved_message",
+          "subexhibit": "J-8",
+          "date": "2026-02-25T12:47:26-08:00",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/message.eml",
+          "selection_reasons": [
+            "retained-attachment"
+          ],
+          "retained_attachment_count": 3,
+          "retained_attachment_paths": [
+            "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/attachments/Transactions-Coinbase.pdf",
+            "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/attachments/Home-Coinbase.pdf",
+            "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/attachments/Gmail---Congratulations-on-Winning-the-Storacha-Prize-from-the-Encode-AI-Filecoin-Hackathon-Next-Steps-for-Your-Prize.pdf"
+          ]
+        },
+        {
+          "kind": "representative_saved_message",
+          "subexhibit": "J-9",
+          "date": "2026-02-25T12:53:08-08:00",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/message.eml",
+          "selection_reasons": [
+            "retained-attachment"
+          ],
+          "retained_attachment_count": 3,
+          "retained_attachment_paths": [
+            "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/attachments/Rivermark-bank-memo.pdf",
+            "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/attachments/Chase-Debanking-Memo.pdf",
+            "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/attachments/Gmail---Rivermark-CU-Meeting.pdf"
+          ]
+        },
+        {
+          "kind": "representative_saved_message",
+          "subexhibit": "J-11",
+          "date": "2026-02-25T13:37:28-08:00",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0011-Re-Additional-Information-Needed-CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q-mail.gmail.com/message.eml",
+          "selection_reasons": [
+            "retained-attachment"
+          ],
+          "retained_attachment_count": 2,
+          "retained_attachment_paths": [
+            "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0011-Re-Additional-Information-Needed-CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q-mail.gmail.com/attachments/Linux-Foundation---Wikipedia.pdf",
+            "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0011-Re-Additional-Information-Needed-CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q-mail.gmail.com/attachments/Re_-InifiniEdge-AI-Release-3.0-Votes-seeking-.pdf"
+          ]
+        },
+        {
+          "kind": "representative_saved_message",
+          "subexhibit": "J-12",
+          "date": "2026-02-26T17:48:44-08:00",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/message.eml",
+          "selection_reasons": [
+            "retained-attachment"
+          ],
+          "retained_attachment_count": 2,
+          "retained_attachment_paths": [
+            "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/attachments/Image_260226_173852.jpeg",
+            "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/attachments/Image_260226_173823.jpeg"
+          ]
+        },
+        {
+          "kind": "representative_saved_message",
+          "subexhibit": "J-13",
+          "date": "2026-02-26T17:51:39-08:00",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/message.eml",
+          "selection_reasons": [
+            "retained-attachment"
+          ],
+          "retained_attachment_count": 1,
+          "retained_attachment_paths": [
+            "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/attachments/image.png"
+          ]
+        },
+        {
+          "kind": "representative_saved_message",
+          "subexhibit": "J-14",
+          "date": "2026-03-02T12:29:53-08:00",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/message.eml",
+          "selection_reasons": [
+            "retained-attachment"
+          ],
+          "retained_attachment_count": 1,
+          "retained_attachment_paths": [
+            "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/attachments/IMG_2008.jpeg"
+          ]
+        },
+        {
+          "kind": "representative_saved_message",
+          "subexhibit": "J-15",
+          "date": "2026-03-09T10:34:52-07:00",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/message.eml",
+          "selection_reasons": [
+            "retained-attachment"
+          ],
+          "retained_attachment_count": 1,
+          "retained_attachment_paths": [
+            "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/Image_260309_103446.jpeg"
+          ]
+        },
+        {
+          "kind": "representative_saved_message",
+          "subexhibit": "J-16",
+          "date": "2026-03-09T11:06:56-07:00",
+          "subject": "Additional Information Needed",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/message.eml",
+          "selection_reasons": [
+            "thread-end"
+          ],
+          "retained_attachment_count": 0,
+          "retained_attachment_paths": []
+        }
+      ]
+    },
+    {
+      "packet_order": 11,
+      "label": "K",
+      "suggested_title": "HACC steering PDF",
+      "source_type": "paper_pdf",
+      "source_path": "evidence/paper documents/HACC steering.pdf",
+      "citation_count": 1,
+      "paragraph_numbers": [
+        20
+      ],
+      "sections": [
+        "General Allegations"
+      ],
+      "materials": [
+        {
+          "kind": "exhibit_file",
+          "path": "evidence/paper documents/HACC steering.pdf",
+          "note": "Attach the underlying PDF as the exhibit file."
+        }
+      ]
+    },
+    {
+      "packet_order": 12,
+      "label": "L",
+      "suggested_title": "HACC inspection PDF",
+      "source_type": "paper_pdf",
+      "source_path": "evidence/paper documents/HACC inspection.pdf",
+      "citation_count": 1,
+      "paragraph_numbers": [
+        22
+      ],
+      "sections": [
+        "General Allegations"
+      ],
+      "materials": [
+        {
+          "kind": "exhibit_file",
+          "path": "evidence/paper documents/HACC inspection.pdf",
+          "note": "Attach the underlying PDF as the exhibit file."
+        }
+      ]
+    },
+    {
+      "packet_order": 13,
+      "label": "M",
+      "suggested_title": "Email Thread Export: starworks5 ktilton orientation import",
+      "source_type": "email_manifest",
+      "source_path": "evidence/email_imports/starworks5-ktilton-orientation-import/email_import_manifest.json",
+      "citation_count": 2,
+      "paragraph_numbers": [
+        23,
+        65
+      ],
+      "sections": [
+        "General Allegations",
+        "Potential Claim Theme: Orientation and Compliance Delays"
+      ],
+      "materials": [
+        {
+          "kind": "representative_saved_message",
+          "subexhibit": "M-1",
+          "date": "2026-03-17T19:29:55+00:00",
+          "subject": "HCV Orientation",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0001-HCV-Orientation-92208aa189a24a18ac05be75916b5107-clackamas.us/message.eml",
+          "selection_reasons": [
+            "thread-start"
+          ],
+          "retained_attachment_count": 0,
+          "retained_attachment_paths": []
+        },
+        {
+          "kind": "representative_saved_message",
+          "subexhibit": "M-3",
+          "date": "2026-03-18T20:33:26+00:00",
+          "subject": "HCV Orientation",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/message.eml",
+          "selection_reasons": [
+            "retained-attachment"
+          ],
+          "retained_attachment_count": 3,
+          "retained_attachment_paths": [
+            "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/attachments/Cortez-TRSW-3.18.26.pdf",
+            "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/attachments/9.-Left-Side-Combined_5.22.25-1.pdf",
+            "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/attachments/11.-Right-Side-Combined_5.22.25.pdf"
+          ]
+        },
+        {
+          "kind": "representative_saved_message",
+          "subexhibit": "M-4",
+          "date": "2026-03-19T17:27:27+00:00",
+          "subject": "HCV Orientation",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us/message.eml",
+          "selection_reasons": [
+            "retained-attachment"
+          ],
+          "retained_attachment_count": 2,
+          "retained_attachment_paths": [
+            "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us/attachments/TRSW---JC---03.19.2026.pdf",
+            "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us/attachments/VO---JC---03.19.2026.pdf"
+          ]
+        },
+        {
+          "kind": "representative_saved_message",
+          "subexhibit": "M-7",
+          "date": "2026-03-19T20:43:19+00:00",
+          "subject": "HCV Orientation",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0007-RE-HCV-Orientation-f9ca224dab4a4487bb20b9f7ff33afbe-clackamas.us/message.eml",
+          "selection_reasons": [
+            "retained-attachment"
+          ],
+          "retained_attachment_count": 1,
+          "retained_attachment_paths": [
+            "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0007-RE-HCV-Orientation-f9ca224dab4a4487bb20b9f7ff33afbe-clackamas.us/attachments/Orientation---Required-Signatures-03.19.2026.pdf"
+          ]
+        },
+        {
+          "kind": "representative_saved_message",
+          "subexhibit": "M-8",
+          "date": "2026-03-20T14:24:59-07:00",
+          "subject": "HCV Orientation",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/message.eml",
+          "selection_reasons": [
+            "retained-attachment"
+          ],
+          "retained_attachment_count": 3,
+          "retained_attachment_paths": [
+            "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/attachments/Image_260320_142321.jpeg",
+            "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/attachments/Image_260320_142448.jpeg",
+            "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/attachments/Image_260320_142045.jpeg"
+          ]
+        },
+        {
+          "kind": "representative_saved_message",
+          "subexhibit": "M-9",
+          "date": "2026-03-20T22:54:20+00:00",
+          "subject": "HCV Orientation",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/message.eml",
+          "selection_reasons": [
+            "retained-attachment"
+          ],
+          "retained_attachment_count": 3,
+          "retained_attachment_paths": [
+            "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/attachments/image001.jpg",
+            "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/attachments/image002.jpg",
+            "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/attachments/image003.jpg"
+          ]
+        },
+        {
+          "kind": "representative_saved_message",
+          "subexhibit": "M-10",
+          "date": "2026-03-20T16:02:01-07:00",
+          "subject": "HCV Orientation",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/message.eml",
+          "selection_reasons": [
+            "retained-attachment"
+          ],
+          "retained_attachment_count": 1,
+          "retained_attachment_paths": [
+            "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/attachments/output.pdf"
+          ]
+        },
+        {
+          "kind": "representative_saved_message",
+          "subexhibit": "M-11",
+          "date": "2026-03-20T16:09:59-07:00",
+          "subject": "HCV Orientation",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/message.eml",
+          "selection_reasons": [
+            "retained-attachment"
+          ],
+          "retained_attachment_count": 1,
+          "retained_attachment_paths": [
+            "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/attachments/Image_260320_160954.jpeg"
+          ]
+        },
+        {
+          "kind": "representative_saved_message",
+          "subexhibit": "M-12",
+          "date": "2026-03-20T16:53:12-07:00",
+          "subject": "HCV Orientation",
+          "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/message.eml",
+          "selection_reasons": [
+            "thread-end"
+          ],
+          "retained_attachment_count": 0,
+          "retained_attachment_paths": []
+        }
+      ]
+    }
+  ]
+}

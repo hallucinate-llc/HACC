@@ -1,0 +1,9 @@
+{
+  "dimension": 384,
+  "document_count": 14792,
+  "index_name": "hacc_policy_graph",
+  "model_name": "",
+  "provider": "ipfs_datasets_py.auto",
+  "records_path": "/home/barberb/HACC/hacc_website/knowledge_graph/embeddings/hacc_policy_graph.records.jsonl",
+  "vectors_path": "/home/barberb/HACC/hacc_website/knowledge_graph/embeddings/hacc_policy_graph.vectors.npy"
+}

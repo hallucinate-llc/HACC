@@ -1,0 +1,22 @@
+{
+  "artifact_dir": "/home/barberb/HACC/workspace/evidence/did-key-hacc-temp-session/local-import/0001_P3_Regulatory_housing-counseling.aspx",
+  "copied_path": "/home/barberb/HACC/workspace/evidence/did-key-hacc-temp-session/local-import/0001_P3_Regulatory_housing-counseling.aspx/P3_Regulatory_housing-counseling.aspx",
+  "effective_claim_element_id": "causation",
+  "filename": "P3_Regulatory_housing-counseling.aspx",
+  "import_origin_label": "file",
+  "import_strategy": "file_copy",
+  "media_type": "application/octet-stream",
+  "original_path": "/home/barberb/HACC/workspace/migrated_sources/research_results/oregon_documents/P3_Regulatory_housing-counseling.aspx",
+  "preview_text": "",
+  "requested_claim_element_id": "causation",
+  "size": 75023,
+  "suffix": ".aspx",
+  "suggested_claim_element_id": "causation",
+  "suggested_claim_element_scores": {
+    "adverse_action": 0,
+    "causation": 0,
+    "employer_knowledge": 0,
+    "harm": 0,
+    "protected_activity": 0
+  }
+}

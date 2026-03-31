@@ -1,0 +1,26 @@
+{
+  "manifest_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/email_import_manifest.json",
+  "graphrag_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/graphrag",
+  "email_count": 35,
+  "attachment_total": 68,
+  "knowledge_graph_summary": {
+    "total_entities": 404,
+    "total_relationships": 98,
+    "entity_types": {
+      "claim": 2,
+      "fact": 161,
+      "date": 176,
+      "person": 14,
+      "organization": 40,
+      "evidence": 11
+    },
+    "relationship_types": {
+      "makes_claim": 2,
+      "occurred_on": 12,
+      "employed_by": 84
+    },
+    "gaps": 52
+  },
+  "graph_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/graphrag/email_knowledge_graph.json",
+  "corpus_records_path": "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/graphrag/email_corpus_records.json"
+}

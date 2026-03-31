@@ -1,0 +1,61 @@
+# Oregon Concrete Authority Memo
+
+This memo names concrete Oregon and HACC policy authorities that currently fit the Oregon pleading track best.
+Each item remains a candidate authority for attorney verification before filing.
+
+## Count I: Declaratory and Injunctive Relief Based on Defective Termination, Displacement, and Adverse Notice Process
+
+Candidate claim label: Declaratory and injunctive relief for defective lease-termination and displacement notice process
+
+Concrete candidate authorities:
+- ORS 90.427, expressly cited in the December 23, 2025 90-day termination notices, as the candidate Oregon termination-notice anchor to verify against the tenancy status and notice type.
+- HACC ACOP 13-IV.D, Lease Termination Notice [24 CFR 966.4(l)(3)], requiring written notice stating specific grounds, termination date, right to reply, right to inspect relevant documents, and grievance-hearing notice when applicable.
+- HACC ACOP 13-IV.D timing language stating HACC generally gives 30 days written notice and combines any Notice to Vacate or Notice to Quit required by state or local law with the lease-termination notice.
+- HACC Phase II General Information Notice and HACC Relocation Road Map materials as candidate program-document authorities concerning displacement notice and relocation assistance expectations.
+- RLRA project-based policy language stating that existing tenants displaced by new development are provided relocation assistance in accordance with applicable local and federal laws, if that framework applies to the displacement sequence here.
+
+Draft linkage sentence:
+- Plaintiffs can plead that HACC invoked ORS 90.427 and its own ACOP lease-termination procedures but failed to provide the notice content, grounds, access-to-documents rights, grievance-hearing disclosure, or relocation-process clarity required by the governing notice framework.
+
+Candidate remedy hooks:
+- Declaratory relief identifying which notices were ineffective or noncompliant.
+- Preliminary and permanent injunctive relief against displacement or eviction absent compliant notice and process.
+- Any relocation or equitable relief supported by the final displacement theory and applicable program documents.
+
+## Count II: Oregon Housing Discrimination, Retaliation, or Unfair Housing Administration Based on Documentation Demands and Intake Barriers
+
+Candidate claim label: Oregon source-of-income discrimination, adverse-impact housing policy, retaliation, or unfair housing-administration count
+
+Concrete candidate authorities:
+- ORS 659A.421, which defines source of income to include federal rent subsidy payments under 42 U.S.C. 1437f and bars refusing to lease or rent real property because of source of income, subject to lawful screening limits.
+- ORS 659A.425, addressing facially neutral housing policies that adversely impact a protected class in a residential tenancy subject to ORS chapter 90.
+- ORS 659A.885, authorizing a civil action and equitable relief for unlawful practices under ORS chapter 659A.
+- HACC ACOP Chapter 2 fair-housing policy stating protected classes include source of income and that retaliation by staff or tenants against a person who complains of discriminatory harassment or intimidation will not be tolerated.
+- HACC ACOP income-verification and annual-reexamination policies at pages 6-15 and 9-3, stating HACC will use written or oral third-party verification when additional information is needed and that required documentation deadlines are communicated through the reexamination packet.
+
+Draft linkage sentence:
+- Plaintiffs can plead that the challenged documentation demands functioned either as source-of-income discrimination, a facially neutral policy with protected-class adverse impact, retaliation for protected complaints, or unfair housing administration because the demands exceeded the verification rules HACC identified in its own ACOP and materially burdened continued housing access or retention.
+
+Candidate remedy hooks:
+- Injunctive and equitable relief under ORS 659A.885.
+- Actual damages, fee-shifting, and other relief available under the final ORS chapter 659A cause selection.
+- Declaratory relief that unsupported documentation demands or retaliatory barriers were unlawful.
+
+## Count III: Breach of Lease, Breach of Housing Program Obligations, and Wrongful Occupancy or Inspection Administration
+
+Candidate claim label: Breach of lease, program-policy, reasonable-accommodation, and occupancy-administration obligations
+
+Concrete candidate authorities:
+- The August 5, 2024 and January 1, 2026 lease amendment and add/remove-tenant documents as the first-line written contract authorities governing household composition, rent adjustment, and occupancy changes.
+- HACC ACOP 2-II.B through 2-II.D, defining reasonable accommodation, requiring HACC to treat disability-related requests as accommodation requests even without a formal written request, and limiting disability verification to information necessary to evaluate the accommodation need.
+- HACC ACOP verification policy at page 6-15 requiring written and/or oral third-party verification when EIV is unavailable, disputed, or additional information is needed, along with a clear audit trail for annualized income decisions.
+- HACC ACOP annual reexamination policy at page 9-3 stating the family must be informed of required documentation and that failure to submit required documentation may be treated as a lease violation under Chapter 13.
+- RLRA household-change and relocation-assistance policy language providing that new household members are added to the lease if eligibility and unit-capacity requirements remain satisfied, and that the administrator will support transfer where household-size changes make the existing unit unsuitable.
+
+Draft linkage sentence:
+- Plaintiffs can plead that HACC's occupancy, inspection, and household-composition administration departed from the operative lease amendments and HACC's own accommodation, verification, and household-change procedures, producing wrongful instability in continued occupancy and program participation.
+
+Candidate remedy hooks:
+- Contractual and equitable relief based on the final selected lease or program-obligation theory.
+- Declaratory relief clarifying household-composition, accommodation, and inspection obligations.
+- Damages or restitutionary relief if the evidence supports quantifiable housing loss or added expense.

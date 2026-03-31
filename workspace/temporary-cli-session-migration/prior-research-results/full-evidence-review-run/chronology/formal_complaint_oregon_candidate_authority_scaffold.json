@@ -1,0 +1,53 @@
+{
+  "status": "success",
+  "count_count": 3,
+  "json_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_oregon_candidate_authority_scaffold.json",
+  "markdown_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_oregon_candidate_authority_scaffold.md",
+  "entries": [
+    {
+      "count_number": 1,
+      "count_title": "Defective Termination, Displacement, and Adverse Notice Process",
+      "source_section": "Notices and Adverse Actions",
+      "candidate_authority_families": [
+        "ORS chapter 90 termination, notice, tenancy, and displacement provisions: confirm the exact section(s) actually governing the tenancy status and notice type.",
+        "Oregon relocation, hearing, or housing-program procedural authorities: confirm whether the challenged notices triggered any relocation or appeal framework.",
+        "Lease notice, termination, or occupancy clauses from the operative lease amendment or voucher/program packet."
+      ],
+      "element_prompts": [
+        "Identify the specific notice requirements imposed by the lease, program rules, ORS chapter 90, HUD guidance, or relocation rules.",
+        "State how the notices were deficient, inconsistent, untimely, or misleading.",
+        "Explain the concrete housing harm threatened or imposed by the adverse action."
+      ]
+    },
+    {
+      "count_number": 2,
+      "count_title": "Documentation Demands, Intake Barriers, and Oregon Housing Administration Misconduct",
+      "source_section": "Financial Verification and Intake Barriers",
+      "candidate_authority_families": [
+        "Oregon housing discrimination, retaliation, or unfair-process authorities: confirm the exact statutory or administrative source actually supported by the proof.",
+        "Voucher, subsidy, or program verification rules limiting what documentation could be demanded.",
+        "Lease, policy, or application materials showing the challenged intake conditions were unsupported or selectively imposed."
+      ],
+      "element_prompts": [
+        "Describe the specific documentation demands or intake conditions imposed on plaintiff.",
+        "State why those demands were unreasonable, inconsistently applied, retaliatory, discriminatory, or otherwise improper.",
+        "Explain how the demands delayed, burdened, or obstructed housing access or retention."
+      ]
+    },
+    {
+      "count_number": 3,
+      "count_title": "Lease, Occupancy, Inspection, and Housing-Program Obligation Violations",
+      "source_section": "Lease and Occupancy",
+      "candidate_authority_families": [
+        "Lease amendment, occupancy, inspection, transfer, or household-composition clauses from the operative housing documents.",
+        "Oregon contract or tenancy-duty authorities: confirm the exact state-law source governing breach, performance, or improper housing administration.",
+        "Housing-program obligations or administrative materials governing inspections, occupancy changes, or relocation-related conduct."
+      ],
+      "element_prompts": [
+        "Identify the lease, occupancy, inspection, transfer, or displacement obligation at issue.",
+        "State how HACC's conduct departed from that obligation or from ordinary housing process requirements.",
+        "Explain the resulting loss of housing stability, access, or tenancy rights."
+      ]
+    }
+  ]
+}

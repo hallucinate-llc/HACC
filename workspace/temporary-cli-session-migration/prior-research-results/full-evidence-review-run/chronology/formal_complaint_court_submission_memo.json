@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "recommended_exhibit_count": 13,
+  "recommended_packet_dir": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_recommended_filing_packet",
+  "recommended_packet_copied_file_count": 16,
+  "recommended_checklist_flagged_count": 0,
+  "forum_dependent_item_count": 5,
+  "formal_draft_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_draft.md",
+  "recommended_manifest_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_recommended_filing_manifest.md",
+  "recommended_checklist_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_recommended_filing_checklist.md",
+  "json_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_court_submission_memo.json",
+  "markdown_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_court_submission_memo.md",
+  "ready_now_items": [
+    "Recent evidence review completed for the past-week additions and remaining evidence classified.",
+    "GraphRAG and cross-document chronology artifacts generated or reused for substantive evidence.",
+    "Operative recommended filing manifest assembled with 13 recommended exhibits.",
+    "Recommended filing packet materialized with 11 paper exhibits, 2 curated email exhibit folders, and supporting recommendation documents.",
+    "Recommended filing checklist completed with flagged count 0."
+  ],
+  "forum_dependent_items": [
+    "Replace the caption placeholder 'IN THE [COURT NAME]' with the selected court.",
+    "Choose whether the complaint will proceed in federal court, Oregon circuit court, or another forum and conform jurisdiction allegations accordingly.",
+    "Conform venue allegations and any county-specific filing language to the chosen court.",
+    "Confirm final party names, party capacity, and any non-Doe defendants before filing.",
+    "Confirm the final causes of action and tailor the prayer for relief to the selected legal theories and forum rules."
+  ]
+}

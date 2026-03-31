@@ -1,0 +1,170 @@
+# Formal Complaint Proposed Filing Packet
+
+Packet count: 15
+Representative saved messages: 21
+Retained email attachments: 33
+
+This packet list covers the copied recommended filing packet itself. The current workspace-integrated complaint and related emergency materials also rely on supplemental exhibits outside that copied packet, including Exhibit N, Exhibit Q, and Exhibit R.
+
+## 1. Exhibit A: HACC add to lease PDF
+
+Source: evidence/paper documents/HACC add to lease.pdf
+Type: paper_pdf
+Handling: Attach the underlying PDF as the exhibit file.
+- include: underlying exhibit file
+
+## 2. Exhibit B: HACC phase2 2024 PDF
+
+Source: evidence/paper documents/HACC phase2 2024.pdf
+Type: paper_pdf
+Handling: Attach the underlying PDF as the exhibit file.
+- include: underlying exhibit file
+
+## 3. Exhibit C: HACC 90 day notice 2 PDF
+
+Source: evidence/paper documents/HACC 90 day notice 2.pdf
+Type: paper_pdf
+Handling: Attach the underlying PDF as the exhibit file.
+- include: underlying exhibit file
+
+## 4. Exhibit D: HACC 90 day notice PDF
+
+Source: evidence/paper documents/HACC 90 day notice.pdf
+Type: paper_pdf
+Handling: Attach the underlying PDF as the exhibit file.
+- include: underlying exhibit file
+
+## 5. Exhibit E: HACC 90 day notice 3 PDF
+
+Source: evidence/paper documents/HACC 90 day notice 3.pdf
+Type: paper_pdf
+Handling: Attach the underlying PDF as the exhibit file.
+- include: underlying exhibit file
+
+## 6. Exhibit F: HACC vawa violation PDF
+
+Source: evidence/paper documents/HACC vawa violation.pdf
+Type: paper_pdf
+Handling: Attach the underlying PDF as the exhibit file.
+- include: underlying exhibit file
+
+## 7. Exhibit G: HACC Jan 2026 blossom PDF
+
+Source: evidence/paper documents/HACC Jan 2026 blossom.pdf
+Type: paper_pdf
+Handling: Attach the underlying PDF as the exhibit file.
+- include: underlying exhibit file
+
+## 8. Exhibit H: HACC first amendment PDF
+
+Source: evidence/paper documents/HACC first amendment.pdf
+Type: paper_pdf
+Handling: Attach the underlying PDF as the exhibit file.
+- include: underlying exhibit file
+
+## 9. Exhibit I: HACC financial requests PDF
+
+Source: evidence/paper documents/HACC financial requests.pdf
+Type: paper_pdf
+Handling: Attach the underlying PDF as the exhibit file.
+- include: underlying exhibit file
+
+## 10. Exhibit J: Email Thread Export: starworks5 additional info import
+
+Source: evidence/email_imports/starworks5-additional-info-import/email_import_manifest.json
+Type: email_manifest
+Handling: Use the manifest with underlying saved messages or representative thread exports; see the email exhibit manifest for message-level detail.
+Representative saved messages: 12
+Retained attachments: 19
+
+- message: J-1 | 2026-02-09T17:57:35+00:00 | Additional Information Needed | reasons=retained-attachment, thread-start | eml=/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0001-Additional-Information-Needed-4c07ec4dace2422fa79c8f83358cf6d8-clackamas.us/message.eml
+- attachment: Additional-Information-Needed-02.09.2026.pdf | application/pdf | action=likely_keep | /home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0001-Additional-Information-Needed-4c07ec4dace2422fa79c8f83358cf6d8-clackamas.us/attachments/Additional-Information-Needed-02.09.2026.pdf
+- message: J-4 | 2026-02-19T21:33:12-08:00 | Additional Information Needed | reasons=retained-attachment | eml=/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0004-Re-Additional-Information-Needed-CAMTdTS-DUCf7WDU_-dTA-FAd6qg7LN7OpzEzFCkLGwz-TADTZw-mail.gmail.com/message.eml
+- attachment: form-1040-barber-2026.pdf | application/pdf | action=likely_keep | /home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0004-Re-Additional-Information-Needed-CAMTdTS-DUCf7WDU_-dTA-FAd6qg7LN7OpzEzFCkLGwz-TADTZw-mail.gmail.com/attachments/form-1040-barber-2026.pdf
+- message: J-5 | 2026-02-25T17:51:41+00:00 | Additional Information Needed | reasons=retained-attachment | eml=/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0005-RE-Additional-Information-Needed-bfd53bf4f3614e6db61d9a9d4cfaebf9-clackamas.us/message.eml
+- attachment: Additional-Information-Needed-02.25.2026.pdf | application/pdf | action=likely_keep | /home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0005-RE-Additional-Information-Needed-bfd53bf4f3614e6db61d9a9d4cfaebf9-clackamas.us/attachments/Additional-Information-Needed-02.25.2026.pdf
+- message: J-7 | 2026-02-25T11:38:00-08:00 | Additional Information Needed | reasons=retained-attachment | eml=/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0007-Re-Additional-Information-Needed-CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66-_DyiA-mail.gmail.com/message.eml
+- attachment: IMG_1981.png | image/png | action=keep_representative_duplicate | /home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0007-Re-Additional-Information-Needed-CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66-_DyiA-mail.gmail.com/attachments/IMG_1981.png
+- attachment: IMG_1982.png | image/png | action=keep_representative_duplicate | /home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0007-Re-Additional-Information-Needed-CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66-_DyiA-mail.gmail.com/attachments/IMG_1982.png
+- attachment: IMG_1980.png | image/png | action=keep_representative_duplicate | /home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0007-Re-Additional-Information-Needed-CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66-_DyiA-mail.gmail.com/attachments/IMG_1980.png
+- message: J-8 | 2026-02-25T12:47:26-08:00 | Additional Information Needed | reasons=retained-attachment | eml=/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/message.eml
+- attachment: Transactions-Coinbase.pdf | application/pdf | action=likely_keep | /home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/attachments/Transactions-Coinbase.pdf
+- attachment: Home-Coinbase.pdf | application/pdf | action=likely_keep | /home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/attachments/Home-Coinbase.pdf
+- attachment: Gmail---Congratulations-on-Winning-the-Storacha-Prize-from-the-Encode-AI-Filecoin-Hackathon-Next-Steps-for-Your-Prize.pdf | application/pdf | action=likely_keep | /home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/attachments/Gmail---Congratulations-on-Winning-the-Storacha-Prize-from-the-Encode-AI-Filecoin-Hackathon-Next-Steps-for-Your-Prize.pdf
+- message: J-9 | 2026-02-25T12:53:08-08:00 | Additional Information Needed | reasons=retained-attachment | eml=/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/message.eml
+- attachment: Rivermark-bank-memo.pdf | application/pdf | action=likely_keep | /home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/attachments/Rivermark-bank-memo.pdf
+- attachment: Chase-Debanking-Memo.pdf | application/pdf | action=likely_keep | /home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/attachments/Chase-Debanking-Memo.pdf
+- attachment: Gmail---Rivermark-CU-Meeting.pdf | application/pdf | action=likely_keep | /home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/attachments/Gmail---Rivermark-CU-Meeting.pdf
+- message: J-11 | 2026-02-25T13:37:28-08:00 | Additional Information Needed | reasons=retained-attachment | eml=/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0011-Re-Additional-Information-Needed-CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q-mail.gmail.com/message.eml
+- attachment: Linux-Foundation---Wikipedia.pdf | application/pdf | action=likely_keep | /home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0011-Re-Additional-Information-Needed-CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q-mail.gmail.com/attachments/Linux-Foundation---Wikipedia.pdf
+- attachment: Re_-InifiniEdge-AI-Release-3.0-Votes-seeking-.pdf | application/pdf | action=likely_keep | /home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0011-Re-Additional-Information-Needed-CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q-mail.gmail.com/attachments/Re_-InifiniEdge-AI-Release-3.0-Votes-seeking-.pdf
+- message: J-12 | 2026-02-26T17:48:44-08:00 | Additional Information Needed | reasons=retained-attachment | eml=/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/message.eml
+- attachment: Image_260226_173852.jpeg | image/jpeg | action=keep_representative_duplicate | /home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/attachments/Image_260226_173852.jpeg
+- attachment: Image_260226_173823.jpeg | image/jpeg | action=keep_representative_duplicate | /home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/attachments/Image_260226_173823.jpeg
+- message: J-13 | 2026-02-26T17:51:39-08:00 | Additional Information Needed | reasons=retained-attachment | eml=/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/message.eml
+- attachment: image.png | image/png | action=keep_representative_duplicate | /home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/attachments/image.png
+- message: J-14 | 2026-03-02T12:29:53-08:00 | Additional Information Needed | reasons=retained-attachment | eml=/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/message.eml
+- attachment: IMG_2008.jpeg | image/jpeg | action=keep_representative_duplicate | /home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/attachments/IMG_2008.jpeg
+- message: J-15 | 2026-03-09T10:34:52-07:00 | Additional Information Needed | reasons=retained-attachment | eml=/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/message.eml
+- attachment: Image_260309_103446.jpeg | image/jpeg | action=keep_representative_duplicate | /home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/Image_260309_103446.jpeg
+- message: J-16 | 2026-03-09T11:06:56-07:00 | Additional Information Needed | reasons=thread-end | eml=/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/message.eml
+
+## 11. Exhibit K: HACC steering PDF
+
+Source: evidence/paper documents/HACC steering.pdf
+Type: paper_pdf
+Handling: Attach the underlying PDF as the exhibit file.
+- include: underlying exhibit file
+
+## 12. Exhibit L: HACC inspection PDF
+
+Source: evidence/paper documents/HACC inspection.pdf
+Type: paper_pdf
+Handling: Attach the underlying PDF as the exhibit file.
+- include: underlying exhibit file
+
+## 13. Exhibit M: Email Thread Export: starworks5 ktilton orientation import
+
+Source: evidence/email_imports/starworks5-ktilton-orientation-import/email_import_manifest.json
+Type: email_manifest
+Handling: Use the manifest with underlying saved messages or representative thread exports; see the email exhibit manifest for message-level detail.
+Representative saved messages: 9
+Retained attachments: 14
+
+- message: M-1 | 2026-03-17T19:29:55+00:00 | HCV Orientation | reasons=thread-start | eml=/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0001-HCV-Orientation-92208aa189a24a18ac05be75916b5107-clackamas.us/message.eml
+- message: M-3 | 2026-03-18T20:33:26+00:00 | HCV Orientation | reasons=retained-attachment | eml=/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/message.eml
+- attachment: Cortez-TRSW-3.18.26.pdf | application/pdf | action=likely_keep | /home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/attachments/Cortez-TRSW-3.18.26.pdf
+- attachment: 9.-Left-Side-Combined_5.22.25-1.pdf | application/pdf | action=likely_keep | /home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/attachments/9.-Left-Side-Combined_5.22.25-1.pdf
+- attachment: 11.-Right-Side-Combined_5.22.25.pdf | application/pdf | action=likely_keep | /home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/attachments/11.-Right-Side-Combined_5.22.25.pdf
+- message: M-4 | 2026-03-19T17:27:27+00:00 | HCV Orientation | reasons=retained-attachment | eml=/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us/message.eml
+- attachment: TRSW---JC---03.19.2026.pdf | application/pdf | action=likely_keep | /home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us/attachments/TRSW---JC---03.19.2026.pdf
+- attachment: VO---JC---03.19.2026.pdf | application/pdf | action=likely_keep | /home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us/attachments/VO---JC---03.19.2026.pdf
+- message: M-7 | 2026-03-19T20:43:19+00:00 | HCV Orientation | reasons=retained-attachment | eml=/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0007-RE-HCV-Orientation-f9ca224dab4a4487bb20b9f7ff33afbe-clackamas.us/message.eml
+- attachment: Orientation---Required-Signatures-03.19.2026.pdf | application/pdf | action=likely_keep | /home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0007-RE-HCV-Orientation-f9ca224dab4a4487bb20b9f7ff33afbe-clackamas.us/attachments/Orientation---Required-Signatures-03.19.2026.pdf
+- message: M-8 | 2026-03-20T14:24:59-07:00 | HCV Orientation | reasons=retained-attachment | eml=/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/message.eml
+- attachment: Image_260320_142321.jpeg | image/jpeg | action=keep_representative_duplicate | /home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/attachments/Image_260320_142321.jpeg
+- attachment: Image_260320_142448.jpeg | image/jpeg | action=keep_representative_duplicate | /home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/attachments/Image_260320_142448.jpeg
+- attachment: Image_260320_142045.jpeg | image/jpeg | action=keep_representative_duplicate | /home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/attachments/Image_260320_142045.jpeg
+- message: M-9 | 2026-03-20T22:54:20+00:00 | HCV Orientation | reasons=retained-attachment | eml=/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/message.eml
+- attachment: image001.jpg | image/jpeg | action=keep_representative_duplicate | /home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/attachments/image001.jpg
+- attachment: image002.jpg | image/jpeg | action=keep_representative_duplicate | /home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/attachments/image002.jpg
+- attachment: image003.jpg | image/jpeg | action=keep_representative_duplicate | /home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/attachments/image003.jpg
+- message: M-10 | 2026-03-20T16:02:01-07:00 | HCV Orientation | reasons=retained-attachment | eml=/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/message.eml
+- attachment: output.pdf | application/pdf | action=likely_keep | /home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/attachments/output.pdf
+- message: M-11 | 2026-03-20T16:09:59-07:00 | HCV Orientation | reasons=retained-attachment | eml=/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/message.eml
+- attachment: Image_260320_160954.jpeg | image/jpeg | action=keep_representative_duplicate | /home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/attachments/Image_260320_160954.jpeg
+- message: M-12 | 2026-03-20T16:53:12-07:00 | HCV Orientation | reasons=thread-end | eml=/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/message.eml
+
+## 14. Exhibit O: Reasonable accommodation PDF
+
+Source: evidence/paper documents/Reasonable accommodation.pdf
+Type: paper_pdf
+Handling: Attach the underlying PDF as the exhibit file.
+- include: underlying exhibit file
+
+## 15. Exhibit P: HACC RA denial 03/26/2026 PDF
+
+Source: evidence/email exports/HCV Orientation [reply]/attachments/HACC RA denial 03.26.2026.pdf
+Type: paper_pdf
+Handling: Attach the underlying PDF as the exhibit file.
+- include: underlying exhibit file

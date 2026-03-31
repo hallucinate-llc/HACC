@@ -1,0 +1,60 @@
+{
+  "status": "success",
+  "lead_count_count": 3,
+  "forum_option_count": 2,
+  "json_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_lead_count_forum_outline.json",
+  "markdown_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_lead_count_forum_outline.md",
+  "lead_titles": [
+    "Potential Claim Theme: Deficient Notice and Adverse Housing Action",
+    "Potential Claim Theme: Documentation Demands and Intake Barriers",
+    "Potential Claim Theme: Lease, Occupancy, and Displacement Conduct"
+  ],
+  "federal_outline": [
+    {
+      "heading": "Caption and Jurisdiction",
+      "points": [
+        "Use a federal district caption and replace the placeholder court name with the proper District of Oregon court designation.",
+        "Anchor jurisdiction in a specific federal-question theory and use supplemental jurisdiction only for truly related Oregon-law counts."
+      ]
+    },
+    {
+      "heading": "Lead Count Structure",
+      "points": [
+        "Lead Count 1 should frame the notice/adverse-action evidence as a due-process, federally regulated housing-process, or federal anti-discrimination claim only if the federal hook is concrete.",
+        "Lead Count 2 should frame the documentation-demand record as discriminatory, retaliatory, or contrary to governing federal housing-program administration rules if supported.",
+        "Lead Count 3 should remain only if the lease/occupancy record can be tied to a federal housing-program obligation or a federal-protected housing interest."
+      ]
+    },
+    {
+      "heading": "Reserve Counts",
+      "points": [
+        "Treat protected-status/VAWA and orientation-delay theories as reserve counts unless their federal basis is specifically identified and supported.",
+        "If the federal anchor is weak, reduce the number of standalone federal counts rather than over-pleading speculative federal theories."
+      ]
+    }
+  ],
+  "state_outline": [
+    {
+      "heading": "Caption and Venue",
+      "points": [
+        "Use an Oregon trial-court caption and conform venue allegations to Clackamas County-based events and property facts.",
+        "Replace the draft federal-jurisdiction placeholder with Oregon court authority and county-specific pleading language."
+      ]
+    },
+    {
+      "heading": "Lead Count Structure",
+      "points": [
+        "Lead Count 1 should frame the notice/adverse-action record as defective notice, wrongful displacement process, or related Oregon housing/tenant process claims.",
+        "Lead Count 2 should frame the documentation-demand record as an unfair housing-process, discrimination, retaliation, or unsupported administrative-barrier theory under Oregon-compatible causes of action.",
+        "Lead Count 3 should frame the lease/occupancy record as breach of lease, wrongful housing-process administration, or related Oregon tenancy/program-obligation claims."
+      ]
+    },
+    {
+      "heading": "Reserve Counts",
+      "points": [
+        "Protected-status/VAWA and orientation-delay theories can be preserved as supporting or reserve counts unless state-law mapping is strengthened.",
+        "State court is the cleaner path if the strongest final theories remain grounded in Oregon housing, lease, relocation, or administrative practice rather than federal rights."
+      ]
+    }
+  ]
+}

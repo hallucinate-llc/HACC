@@ -1,0 +1,53 @@
+{
+  "status": "success",
+  "count_count": 3,
+  "json_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_federal_candidate_authority_scaffold.json",
+  "markdown_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_federal_candidate_authority_scaffold.md",
+  "entries": [
+    {
+      "count_number": 1,
+      "count_title": "42 U.S.C. section 1983 Due Process or Federal Housing Notice Claim",
+      "source_section": "Notices and Adverse Actions",
+      "candidate_authority_families": [
+        "28 U.S.C. section 1331 and, if needed, 28 U.S.C. section 1367: confirm the precise federal-jurisdiction structure.",
+        "42 U.S.C. section 1983 plus the specific constitutional or federally protected housing interest, if state action and deprivation can be pleaded in good faith.",
+        "Alternative federal housing notice or displacement authorities, including applicable HUD regulations, statutes, or handbook provisions: confirm the exact source actually governing the challenged notices."
+      ],
+      "element_prompts": [
+        "Identify the specific notice requirements imposed by the lease, program rules, ORS chapter 90, HUD guidance, or relocation rules.",
+        "State how the notices were deficient, inconsistent, untimely, or misleading.",
+        "Explain the concrete housing harm threatened or imposed by the adverse action."
+      ]
+    },
+    {
+      "count_number": 2,
+      "count_title": "Federal Fair Housing, Retaliation, or Improper Housing Administration Claim",
+      "source_section": "Financial Verification and Intake Barriers",
+      "candidate_authority_families": [
+        "Federal Fair Housing Act, retaliation, or anti-discrimination authorities: confirm the exact statutory and regulatory provisions actually implicated.",
+        "Federal housing-program verification, intake, or administration rules limiting what documentation could be demanded.",
+        "Supplemental-jurisdiction analysis for any related Oregon-law component if the strongest theory is mixed federal/state."
+      ],
+      "element_prompts": [
+        "Describe the specific documentation demands or intake conditions imposed on plaintiff.",
+        "State why those demands were unreasonable, inconsistently applied, retaliatory, discriminatory, or otherwise improper.",
+        "Explain how the demands delayed, burdened, or obstructed housing access or retention."
+      ]
+    },
+    {
+      "count_number": 3,
+      "count_title": "Federal Housing Program Compliance Claim Based on Lease, Occupancy, Inspection, or Displacement Conduct",
+      "source_section": "Lease and Occupancy",
+      "candidate_authority_families": [
+        "Federal housing-program regulations, handbook provisions, or contract conditions governing lease, occupancy, inspection, transfer, or displacement conduct.",
+        "Authorities defining the federally protected housing interest, entitlement, or benefit allegedly impaired.",
+        "Fallback decision point: if the federal hook remains weak, move this conduct to supplemental Oregon-law pleading instead of a standalone federal count."
+      ],
+      "element_prompts": [
+        "Identify the lease, occupancy, inspection, transfer, or displacement obligation at issue.",
+        "State how HACC's conduct departed from that obligation or from ordinary housing process requirements.",
+        "Explain the resulting loss of housing stability, access, or tenancy rights."
+      ]
+    }
+  ]
+}

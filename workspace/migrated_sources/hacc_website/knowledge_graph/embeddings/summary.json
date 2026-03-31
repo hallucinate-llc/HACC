@@ -1,0 +1,55 @@
+{
+  "graph_index": {
+    "dimension": 384,
+    "document_count": 14792,
+    "files": {
+      "manifest_path": "/home/barberb/HACC/hacc_website/knowledge_graph/embeddings/hacc_policy_graph.manifest.json",
+      "records_path": "/home/barberb/HACC/hacc_website/knowledge_graph/embeddings/hacc_policy_graph.records.jsonl",
+      "vectors_path": "/home/barberb/HACC/hacc_website/knowledge_graph/embeddings/hacc_policy_graph.vectors.npy"
+    },
+    "index_name": "hacc_policy_graph",
+    "metadata": {
+      "backend_available": true,
+      "batch_size": 32,
+      "details": {
+        "backend_available": true,
+        "batch_size": 32,
+        "implementation_status": "implemented",
+        "operation": "create_vector_index"
+      },
+      "implementation_status": "implemented",
+      "operation": "create_vector_index",
+      "provider": "ipfs_datasets_py"
+    },
+    "model_name": "",
+    "provider": "ipfs_datasets_py.auto",
+    "status": "success"
+  },
+  "output_dir": "/home/barberb/HACC/hacc_website/knowledge_graph/embeddings",
+  "text_index": {
+    "dimension": 384,
+    "document_count": 3811,
+    "files": {
+      "manifest_path": "/home/barberb/HACC/hacc_website/knowledge_graph/embeddings/hacc_text_chunks.manifest.json",
+      "records_path": "/home/barberb/HACC/hacc_website/knowledge_graph/embeddings/hacc_text_chunks.records.jsonl",
+      "vectors_path": "/home/barberb/HACC/hacc_website/knowledge_graph/embeddings/hacc_text_chunks.vectors.npy"
+    },
+    "index_name": "hacc_text_chunks",
+    "metadata": {
+      "backend_available": true,
+      "batch_size": 32,
+      "details": {
+        "backend_available": true,
+        "batch_size": 32,
+        "implementation_status": "implemented",
+        "operation": "create_vector_index"
+      },
+      "implementation_status": "implemented",
+      "operation": "create_vector_index",
+      "provider": "ipfs_datasets_py"
+    },
+    "model_name": "",
+    "provider": "ipfs_datasets_py.auto",
+    "status": "success"
+  }
+}
