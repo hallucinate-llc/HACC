@@ -1,0 +1,42 @@
+{
+  "created_at_utc": "2026-03-31T06:04:04Z",
+  "migration_mode": "per-tree",
+  "sources": [
+    {
+      "exists": true,
+      "migration_mode": "existing",
+      "name": "hacc_research",
+      "path": "/home/barberb/HACC/workspace/migrated_sources/hacc_research",
+      "source": "/home/barberb/HACC/hacc_research"
+    },
+    {
+      "exists": true,
+      "migration_mode": "existing",
+      "name": "hacc_website",
+      "path": "/home/barberb/HACC/workspace/migrated_sources/hacc_website",
+      "source": "/home/barberb/HACC/hacc_website"
+    },
+    {
+      "exists": true,
+      "migration_mode": "existing",
+      "name": "legal_data",
+      "path": "/home/barberb/HACC/workspace/migrated_sources/legal_data",
+      "source": "/home/barberb/HACC/legal_data"
+    },
+    {
+      "exists": true,
+      "migration_mode": "existing",
+      "name": "research_data",
+      "path": "/home/barberb/HACC/workspace/migrated_sources/research_data",
+      "source": "/home/barberb/HACC/research_data"
+    },
+    {
+      "exists": true,
+      "migration_mode": "existing",
+      "name": "research_results",
+      "path": "/home/barberb/HACC/workspace/migrated_sources/research_results",
+      "source": "/home/barberb/HACC/research_results"
+    }
+  ],
+  "workspace": "/home/barberb/HACC/workspace"
+}

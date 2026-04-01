@@ -1,0 +1,134 @@
+{
+  "status": "success",
+  "recommended_exhibit_count": 13,
+  "paper_exhibit_count": 11,
+  "candidate_email_exhibit_count": 2,
+  "copied_file_count": 65,
+  "supersedes": {
+    "ready_to_file_manifest": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_ready_to_file_manifest.md",
+    "candidate_final_packet": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_candidate_final_packet/README.md",
+    "attorney_recommendation_memo": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_attorney_recommendation_memo.md"
+  },
+  "withheld_queue_disposition_counts": {
+    "exclude_duplicate_copy": 15,
+    "exclude_unless_substantive_image": 9
+  },
+  "json_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_recommended_filing_manifest.json",
+  "markdown_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_recommended_filing_manifest.md",
+  "entries": [
+    {
+      "packet_order": 1,
+      "label": "A",
+      "suggested_title": "HACC add to lease PDF",
+      "source_type": "paper_pdf",
+      "source_path": "evidence/paper documents/HACC add to lease.pdf",
+      "recommendation_basis": "included_in_ready_to_file_manifest"
+    },
+    {
+      "packet_order": 2,
+      "label": "B",
+      "suggested_title": "HACC phase2 2024 PDF",
+      "source_type": "paper_pdf",
+      "source_path": "evidence/paper documents/HACC phase2 2024.pdf",
+      "recommendation_basis": "included_in_ready_to_file_manifest"
+    },
+    {
+      "packet_order": 3,
+      "label": "C",
+      "suggested_title": "HACC 90 day notice 2 PDF",
+      "source_type": "paper_pdf",
+      "source_path": "evidence/paper documents/HACC 90 day notice 2.pdf",
+      "recommendation_basis": "included_in_ready_to_file_manifest"
+    },
+    {
+      "packet_order": 4,
+      "label": "D",
+      "suggested_title": "HACC 90 day notice PDF",
+      "source_type": "paper_pdf",
+      "source_path": "evidence/paper documents/HACC 90 day notice.pdf",
+      "recommendation_basis": "included_in_ready_to_file_manifest"
+    },
+    {
+      "packet_order": 5,
+      "label": "E",
+      "suggested_title": "HACC 90 day notice 3 PDF",
+      "source_type": "paper_pdf",
+      "source_path": "evidence/paper documents/HACC 90 day notice 3.pdf",
+      "recommendation_basis": "included_in_ready_to_file_manifest"
+    },
+    {
+      "packet_order": 6,
+      "label": "F",
+      "suggested_title": "HACC vawa violation PDF",
+      "source_type": "paper_pdf",
+      "source_path": "evidence/paper documents/HACC vawa violation.pdf",
+      "recommendation_basis": "included_in_ready_to_file_manifest"
+    },
+    {
+      "packet_order": 7,
+      "label": "G",
+      "suggested_title": "HACC Jan 2026 blossom PDF",
+      "source_type": "paper_pdf",
+      "source_path": "evidence/paper documents/HACC Jan 2026 blossom.pdf",
+      "recommendation_basis": "included_in_ready_to_file_manifest"
+    },
+    {
+      "packet_order": 8,
+      "label": "H",
+      "suggested_title": "HACC first amendment PDF",
+      "source_type": "paper_pdf",
+      "source_path": "evidence/paper documents/HACC first amendment.pdf",
+      "recommendation_basis": "included_in_ready_to_file_manifest"
+    },
+    {
+      "packet_order": 9,
+      "label": "I",
+      "suggested_title": "HACC financial requests PDF",
+      "source_type": "paper_pdf",
+      "source_path": "evidence/paper documents/HACC financial requests.pdf",
+      "recommendation_basis": "included_in_ready_to_file_manifest"
+    },
+    {
+      "packet_order": 10,
+      "label": "J",
+      "suggested_title": "Email Thread Export: starworks5 additional info import",
+      "source_type": "candidate_email_exhibit",
+      "source_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_candidate_final_packet/candidate_email_exhibits/10_Exhibit_J_Email_Thread_Export_starworks5_additional_info_import",
+      "recommendation_basis": "promoted_from_withheld_queue_via_candidate_packet",
+      "representative_message_count": 12,
+      "retained_attachment_count": 19,
+      "excluded_decision_count": 16,
+      "excluded_duplicate_count": 8,
+      "excluded_low_signal_count": 8
+    },
+    {
+      "packet_order": 11,
+      "label": "K",
+      "suggested_title": "HACC steering PDF",
+      "source_type": "paper_pdf",
+      "source_path": "evidence/paper documents/HACC steering.pdf",
+      "recommendation_basis": "included_in_ready_to_file_manifest"
+    },
+    {
+      "packet_order": 12,
+      "label": "L",
+      "suggested_title": "HACC inspection PDF",
+      "source_type": "paper_pdf",
+      "source_path": "evidence/paper documents/HACC inspection.pdf",
+      "recommendation_basis": "included_in_ready_to_file_manifest"
+    },
+    {
+      "packet_order": 13,
+      "label": "M",
+      "suggested_title": "Email Thread Export: starworks5 ktilton orientation import",
+      "source_type": "candidate_email_exhibit",
+      "source_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_candidate_final_packet/candidate_email_exhibits/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import",
+      "recommendation_basis": "promoted_from_withheld_queue_via_candidate_packet",
+      "representative_message_count": 9,
+      "retained_attachment_count": 14,
+      "excluded_decision_count": 8,
+      "excluded_duplicate_count": 7,
+      "excluded_low_signal_count": 1
+    }
+  ]
+}

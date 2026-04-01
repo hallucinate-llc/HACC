@@ -1,0 +1,55 @@
+{
+  "status": "success",
+  "option_count": 2,
+  "recommended_forum": "oregon_state",
+  "recommended_label": "Oregon State Court Track",
+  "oregon_total_score": 18,
+  "federal_total_score": 9,
+  "lead_count_count": 3,
+  "top_ranked_group": "Potential Claim Theme: Deficient Notice and Adverse Housing Action",
+  "forum_selection_memo_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_forum_selection_memo.md",
+  "oregon_draft_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_oregon_near_final_candidate_draft.md",
+  "federal_draft_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_federal_near_final_candidate_draft.md",
+  "json_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_near_final_forum_recommendation_memo.json",
+  "markdown_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_near_final_forum_recommendation_memo.md",
+  "score_rows": [
+    {
+      "criterion": "Claim-authority readiness",
+      "oregon_score": 5,
+      "federal_score": 2,
+      "oregon_reason": "The Oregon track can be completed by selecting exact Oregon tenancy, lease, relocation, or housing-process authorities already reflected by the current evidence pattern.",
+      "federal_reason": "The federal track still depends on selecting and defending a concrete federal anchor theory before final pleading conversion is safe."
+    },
+    {
+      "criterion": "Jurisdiction and venue certainty",
+      "oregon_score": 5,
+      "federal_score": 2,
+      "oregon_reason": "The venue facts are already centered in Clackamas County and fit an Oregon trial-court path without additional jurisdictional theory work.",
+      "federal_reason": "Federal jurisdiction remains conditional on a viable federal question or enforceable federal housing-program theory."
+    },
+    {
+      "criterion": "Evidence-to-count fit",
+      "oregon_score": 4,
+      "federal_score": 3,
+      "oregon_reason": "The notice, documentation, lease, and occupancy evidence aligns naturally with Oregon notice, lease, and housing-administration theories.",
+      "federal_reason": "The same evidence can support a federal track, but only after the strongest federal count framing is narrowed and validated."
+    },
+    {
+      "criterion": "Drafting risk",
+      "oregon_score": 4,
+      "federal_score": 2,
+      "oregon_reason": "The Oregon track mainly requires authority insertion and cause-of-action conformance, not a threshold jurisdictional gamble.",
+      "federal_reason": "The federal track risks over-pleading speculative theories if the complaint outruns the currently confirmed federal hook."
+    }
+  ],
+  "recommendation_basis": [
+    "The top-ranked claim group remains deficient notice and adverse housing action, which currently maps more directly to Oregon notice, tenancy, and housing-process theories.",
+    "The Oregon near-final draft is closer to a filing-grade complaint because it does not depend on first proving an unresolved federal anchor theory.",
+    "The federal track should remain preserved as an alternative only if later authority research confirms a concrete federal question with strong count-by-count fit."
+  ],
+  "federal_trigger_conditions": [
+    "A specific federally enforceable housing-program notice, hearing, relocation, or entitlement right is identified and cleanly matches Count I.",
+    "Count II can be anchored in a concrete federal anti-discrimination, retaliation, or program-administration theory supported by the current record.",
+    "Count III has either its own federal enforcement hook or can safely remain secondary without weakening subject-matter jurisdiction."
+  ]
+}

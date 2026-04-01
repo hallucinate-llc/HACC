@@ -1,0 +1,22 @@
+{
+  "artifact_dir": "/home/barberb/HACC/workspace/evidence/did-key-hacc-temp-session/local-import/0001_engine.py",
+  "copied_path": "/home/barberb/HACC/workspace/evidence/did-key-hacc-temp-session/local-import/0001_engine.py/engine.py",
+  "effective_claim_element_id": "causation",
+  "filename": "engine.py",
+  "import_origin_label": "file",
+  "import_strategy": "file_copy",
+  "media_type": "text/x-python",
+  "original_path": "/home/barberb/HACC/workspace/migrated_sources/hacc_research/engine.py",
+  "preview_text": "",
+  "requested_claim_element_id": "causation",
+  "size": 223681,
+  "suffix": ".py",
+  "suggested_claim_element_id": "causation",
+  "suggested_claim_element_scores": {
+    "adverse_action": 0,
+    "causation": 0,
+    "employer_knowledge": 0,
+    "harm": 0,
+    "protected_activity": 0
+  }
+}

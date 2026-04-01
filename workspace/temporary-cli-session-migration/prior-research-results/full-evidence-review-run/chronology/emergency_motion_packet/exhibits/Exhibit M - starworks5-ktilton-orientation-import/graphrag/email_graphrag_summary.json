@@ -1,0 +1,31 @@
+{
+  "manifest_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/email_import_manifest.json",
+  "graphrag_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/graphrag",
+  "email_count": 13,
+  "attachment_total": 25,
+  "knowledge_graph_summary": {
+    "total_entities": 181,
+    "total_relationships": 169,
+    "entity_types": {
+      "claim": 5,
+      "fact": 103,
+      "date": 3,
+      "person": 18,
+      "organization": 41,
+      "evidence": 11
+    },
+    "relationship_types": {
+      "makes_claim": 5,
+      "follows_protected_activity": 15,
+      "occurred_on": 15,
+      "employed_by": 105,
+      "involves": 5,
+      "occurred_after": 9,
+      "causal_link": 4,
+      "associated_with": 11
+    },
+    "gaps": 57
+  },
+  "graph_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/graphrag/email_knowledge_graph.json",
+  "corpus_records_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/graphrag/email_corpus_records.json"
+}

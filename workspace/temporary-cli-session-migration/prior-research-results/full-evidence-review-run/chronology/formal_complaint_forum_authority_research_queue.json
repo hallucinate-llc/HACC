@@ -1,0 +1,106 @@
+{
+  "status": "success",
+  "entry_count": 12,
+  "oregon_entry_count": 6,
+  "federal_entry_count": 6,
+  "json_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_forum_authority_research_queue.json",
+  "markdown_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_forum_authority_research_queue.md",
+  "entries": [
+    {
+      "priority": 1,
+      "forum": "oregon",
+      "lead_count": 1,
+      "title": "Potential Claim Theme: Deficient Notice and Adverse Housing Action",
+      "source_section": "Notices and Adverse Actions",
+      "task": "Identify the precise Oregon notice, termination, displacement, relocation, and hearing authorities governing the challenged notices."
+    },
+    {
+      "priority": 2,
+      "forum": "oregon",
+      "lead_count": 1,
+      "title": "Potential Claim Theme: Deficient Notice and Adverse Housing Action",
+      "source_section": "Notices and Adverse Actions",
+      "task": "Locate the controlling lease clause or voucher/program document that set the notice requirements actually applicable to plaintiffs."
+    },
+    {
+      "priority": 3,
+      "forum": "federal",
+      "lead_count": 1,
+      "title": "Potential Claim Theme: Deficient Notice and Adverse Housing Action",
+      "source_section": "Notices and Adverse Actions",
+      "task": "Identify whether Count I is best anchored in section 1983 due process, a federal housing statute, or a federal program-rule notice theory."
+    },
+    {
+      "priority": 4,
+      "forum": "federal",
+      "lead_count": 1,
+      "title": "Potential Claim Theme: Deficient Notice and Adverse Housing Action",
+      "source_section": "Notices and Adverse Actions",
+      "task": "Locate the exact federal housing regulation, statute, handbook, or guidance source governing the challenged notice or displacement process."
+    },
+    {
+      "priority": 5,
+      "forum": "oregon",
+      "lead_count": 2,
+      "title": "Potential Claim Theme: Documentation Demands and Intake Barriers",
+      "source_section": "Financial Verification and Intake Barriers",
+      "task": "Identify the strongest Oregon discrimination, retaliation, or unfair housing-process authority applicable to documentation demands and intake barriers."
+    },
+    {
+      "priority": 6,
+      "forum": "oregon",
+      "lead_count": 2,
+      "title": "Potential Claim Theme: Documentation Demands and Intake Barriers",
+      "source_section": "Financial Verification and Intake Barriers",
+      "task": "Locate the rule, lease term, or program condition that limited what documentation HACC could require from plaintiffs."
+    },
+    {
+      "priority": 7,
+      "forum": "federal",
+      "lead_count": 2,
+      "title": "Potential Claim Theme: Documentation Demands and Intake Barriers",
+      "source_section": "Financial Verification and Intake Barriers",
+      "task": "Identify the strongest federal fair-housing, retaliation, or federally improper administration authority applicable to the documentation demands."
+    },
+    {
+      "priority": 8,
+      "forum": "federal",
+      "lead_count": 2,
+      "title": "Potential Claim Theme: Documentation Demands and Intake Barriers",
+      "source_section": "Financial Verification and Intake Barriers",
+      "task": "Locate the federal housing-program verification or intake rule that the challenged demands allegedly exceeded or violated."
+    },
+    {
+      "priority": 9,
+      "forum": "oregon",
+      "lead_count": 3,
+      "title": "Potential Claim Theme: Lease, Occupancy, and Displacement Conduct",
+      "source_section": "Lease and Occupancy",
+      "task": "Identify the lease, occupancy, inspection, transfer, and housing-program authorities that defined HACC's obligations for the challenged conduct."
+    },
+    {
+      "priority": 10,
+      "forum": "oregon",
+      "lead_count": 3,
+      "title": "Potential Claim Theme: Lease, Occupancy, and Displacement Conduct",
+      "source_section": "Lease and Occupancy",
+      "task": "Determine whether this count should be split into separate lease-breach and housing-process counts under Oregon law."
+    },
+    {
+      "priority": 11,
+      "forum": "federal",
+      "lead_count": 3,
+      "title": "Potential Claim Theme: Lease, Occupancy, and Displacement Conduct",
+      "source_section": "Lease and Occupancy",
+      "task": "Identify the exact federal housing-program regulation, contract condition, or program guidance governing the lease, occupancy, inspection, or displacement conduct at issue."
+    },
+    {
+      "priority": 12,
+      "forum": "federal",
+      "lead_count": 3,
+      "title": "Potential Claim Theme: Lease, Occupancy, and Displacement Conduct",
+      "source_section": "Lease and Occupancy",
+      "task": "Determine whether Count III has a sufficiently concrete federal hook or should instead be preserved only as supplemental Oregon-law pleading."
+    }
+  ]
+}

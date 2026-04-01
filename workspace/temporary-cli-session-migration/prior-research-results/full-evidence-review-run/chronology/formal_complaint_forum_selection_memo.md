@@ -1,0 +1,54 @@
+# Formal Complaint Forum Selection Memo
+
+## Shared Starting Point
+
+- Recommended exhibits assembled: 13
+- Recommended checklist flagged exhibits: 0
+- Remaining forum-dependent items identified in submission memo: 5
+
+- The operative exhibit set is already assembled and checked, with 13 recommended exhibits and 0 flagged packet-check issues.
+- The current evidence supports a chronology centered on notice, lease, documentation, VAWA-related, and orientation events in Clackamas County.
+- The complaint draft already contains a usable factual narrative and count structure that can be conformed to either forum.
+
+## Federal Court Track
+
+Advantages:
+- The current draft already contains placeholder federal-question language keyed to federal housing, fair-housing, VAWA, due-process, or Section 1983 theories.
+- Federal pleading may fit best if the final claim set centers on constitutional process, federal housing rights, or federally grounded anti-discrimination theories.
+- Supplemental jurisdiction can keep related Oregon-law claims bundled if viable federal claims are selected.
+
+Requirements:
+- Identify at least one well-supported federal cause of action and align each count to that theory.
+- Replace the generic jurisdiction paragraph with a precise federal subject-matter statement.
+- Confirm the proper federal district and division for events centered in Clackamas County, Oregon.
+
+Risks:
+- A weak or underdeveloped federal claim can invite dismissal pressure or remand/declination issues for the remaining state-law theories.
+- Federal standards may require more exact theory selection earlier in the drafting cycle.
+
+## Oregon State Court Track
+
+Advantages:
+- The evidence is geographically concentrated in Clackamas County and the current venue facts map naturally to an Oregon trial-court filing.
+- State pleading may fit best if the final claim set emphasizes Oregon statutory, landlord-tenant, relocation, contract, or administrative-law theories.
+- This path avoids depending on a federal anchor claim if the strongest available theories are primarily state or local in character.
+
+Requirements:
+- Replace the draft federal-jurisdiction placeholder with the specific Oregon court and county basis.
+- Conform the caption, venue allegations, and requested relief to Oregon trial-court practice.
+- Map each current draft count to a specific Oregon or local-law cause of action before filing.
+
+Risks:
+- Any intended federal constitutional or statutory theories may need to be omitted, reframed, or carefully pleaded under concurrent-jurisdiction principles.
+- If the final theory mix remains heavily federal, a state-court path may create a less direct complaint structure than a federal filing.
+
+## Decision Pivots
+
+- Choose federal court if the strongest final claims are federal housing, federal anti-discrimination, VAWA, due-process, or Section 1983 claims.
+- Choose Oregon state court if the strongest final claims are Oregon housing, lease, relocation, contract, or state administrative claims.
+- In either forum, the exhibit package is ready; the main remaining work is legal-theory selection and forum-specific pleading conversion.
+
+## References
+
+- Formal complaint draft: /home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_draft.md
+- Court submission memo: /home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_court_submission_memo.md

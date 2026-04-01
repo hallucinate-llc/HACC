@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-03-31T03:03:43.370625+00:00",
+  "source_roots": {
+    "hacc_research": "/home/barberb/HACC/workspace/migrated_sources/hacc_research",
+    "hacc_website": "/home/barberb/HACC/workspace/migrated_sources/hacc_website",
+    "legal_data": "/home/barberb/HACC/workspace/migrated_sources/legal_data",
+    "research_data": "/home/barberb/HACC/workspace/migrated_sources/research_data",
+    "research_results": "/home/barberb/HACC/workspace/migrated_sources/research_results"
+  },
+  "file_counts": {
+    "hacc_research": 5,
+    "hacc_website": 43,
+    "legal_data": 0,
+    "research_data": 141,
+    "research_results": 20989
+  }
+}

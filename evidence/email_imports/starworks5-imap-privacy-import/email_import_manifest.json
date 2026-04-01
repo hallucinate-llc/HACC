@@ -1,0 +1,35 @@
+{
+  "status": "success",
+  "server": "imap.gmail.com",
+  "username": "starworks5@gmail.com",
+  "auth_mode": "gmail_app_password",
+  "folders": [
+    "[Gmail]/All Mail"
+  ],
+  "search": "SINCE \"1-Feb-2026\" BEFORE \"15-Feb-2026\"",
+  "complaint_terms": [
+    "sexually",
+    "active",
+    "privacy",
+    "allegations",
+    "fraud",
+    "household",
+    "kati",
+    "tilton"
+  ],
+  "min_relevance_score": 1.0,
+  "address_targets": [],
+  "from_address_targets": [],
+  "recipient_address_targets": [],
+  "domain_targets": [],
+  "from_domain_targets": [
+    "clackamas.us"
+  ],
+  "recipient_domain_targets": [],
+  "scanned_message_count": 5,
+  "matched_email_count": 0,
+  "output_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-imap-privacy-import",
+  "cache_index_path": "/home/barberb/HACC/evidence/email_imports/_email_cache/email_cache_index.json",
+  "emails": [],
+  "mediator_evidence_records": []
+}

@@ -1,0 +1,781 @@
+{
+  "status": "success",
+  "entry_count": 24,
+  "exhibit_count": 2,
+  "disposition_counts": {
+    "exclude_duplicate_copy": 15,
+    "exclude_unless_substantive_image": 9
+  },
+  "json_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_decision_queue.json",
+  "markdown_path": "/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_decision_queue.md",
+  "entries": [
+    {
+      "exhibit_label": "J",
+      "filename": "IMG_1980.png",
+      "content_type": "image/png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "duplicate_key": "5846d14ddb1accc5113f9037f04cf0678916bcce06bb95680d3c3b53588c6fe2",
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0007-Re-Additional-Information-Needed-CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66-_DyiA-mail.gmail.com/attachments/IMG_1980.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/attachments/IMG_1980.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/attachments/IMG_1980.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com/attachments/IMG_1980.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0011-Re-Additional-Information-Needed-CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q-mail.gmail.com/attachments/IMG_1980.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/attachments/IMG_1980.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/attachments/IMG_1980.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/attachments/IMG_1980.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/IMG_1980.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/IMG_1980.png"
+      ],
+      "subexhibits": [
+        "J-7",
+        "J-8",
+        "J-9",
+        "J-10",
+        "J-11",
+        "J-12",
+        "J-13",
+        "J-14",
+        "J-15",
+        "J-16"
+      ],
+      "dates": [
+        "2026-02-25T11:38:00-08:00",
+        "2026-02-25T12:47:26-08:00",
+        "2026-02-25T12:53:08-08:00",
+        "2026-02-25T13:18:51-08:00",
+        "2026-02-25T13:37:28-08:00",
+        "2026-02-26T17:48:44-08:00",
+        "2026-02-26T17:51:39-08:00",
+        "2026-03-02T12:29:53-08:00",
+        "2026-03-09T10:34:52-07:00",
+        "2026-03-09T11:06:56-07:00"
+      ],
+      "occurrence_count": 10,
+      "recommended_disposition": "exclude_duplicate_copy",
+      "decision_rationale": "A representative copy for this duplicate image set is already retained in the exhibit packet materials.",
+      "retained_representative_exists": true
+    },
+    {
+      "exhibit_label": "J",
+      "filename": "IMG_1981.png",
+      "content_type": "image/png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "duplicate_key": "92a8e01bf4bf33f8fe73ba48ad44062f9fe7f934d23369e37e71208e9e36b621",
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0007-Re-Additional-Information-Needed-CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66-_DyiA-mail.gmail.com/attachments/IMG_1981.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/attachments/IMG_1981.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/attachments/IMG_1981.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com/attachments/IMG_1981.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0011-Re-Additional-Information-Needed-CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q-mail.gmail.com/attachments/IMG_1981.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/attachments/IMG_1981.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/attachments/IMG_1981.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/attachments/IMG_1981.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/IMG_1981.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/IMG_1981.png"
+      ],
+      "subexhibits": [
+        "J-7",
+        "J-8",
+        "J-9",
+        "J-10",
+        "J-11",
+        "J-12",
+        "J-13",
+        "J-14",
+        "J-15",
+        "J-16"
+      ],
+      "dates": [
+        "2026-02-25T11:38:00-08:00",
+        "2026-02-25T12:47:26-08:00",
+        "2026-02-25T12:53:08-08:00",
+        "2026-02-25T13:18:51-08:00",
+        "2026-02-25T13:37:28-08:00",
+        "2026-02-26T17:48:44-08:00",
+        "2026-02-26T17:51:39-08:00",
+        "2026-03-02T12:29:53-08:00",
+        "2026-03-09T10:34:52-07:00",
+        "2026-03-09T11:06:56-07:00"
+      ],
+      "occurrence_count": 10,
+      "recommended_disposition": "exclude_duplicate_copy",
+      "decision_rationale": "A representative copy for this duplicate image set is already retained in the exhibit packet materials.",
+      "retained_representative_exists": true
+    },
+    {
+      "exhibit_label": "J",
+      "filename": "IMG_1982.png",
+      "content_type": "image/png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 10,
+      "duplicate_key": "76126c6f056a5c01e1ceb1e6a896944dbbd76e44230f585dc679d88e24df748c",
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0007-Re-Additional-Information-Needed-CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66-_DyiA-mail.gmail.com/attachments/IMG_1982.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0008-Re-Additional-Information-Needed-CAMTdTS-g9Ra-apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw-mail.gmail.com/attachments/IMG_1982.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0009-Re-Additional-Information-Needed-CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ-mail.gmail.com/attachments/IMG_1982.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com/attachments/IMG_1982.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0011-Re-Additional-Information-Needed-CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q-mail.gmail.com/attachments/IMG_1982.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/attachments/IMG_1982.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/attachments/IMG_1982.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/attachments/IMG_1982.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/IMG_1982.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/IMG_1982.png"
+      ],
+      "subexhibits": [
+        "J-7",
+        "J-8",
+        "J-9",
+        "J-10",
+        "J-11",
+        "J-12",
+        "J-13",
+        "J-14",
+        "J-15",
+        "J-16"
+      ],
+      "dates": [
+        "2026-02-25T11:38:00-08:00",
+        "2026-02-25T12:47:26-08:00",
+        "2026-02-25T12:53:08-08:00",
+        "2026-02-25T13:18:51-08:00",
+        "2026-02-25T13:37:28-08:00",
+        "2026-02-26T17:48:44-08:00",
+        "2026-02-26T17:51:39-08:00",
+        "2026-03-02T12:29:53-08:00",
+        "2026-03-09T10:34:52-07:00",
+        "2026-03-09T11:06:56-07:00"
+      ],
+      "occurrence_count": 10,
+      "recommended_disposition": "exclude_duplicate_copy",
+      "decision_rationale": "A representative copy for this duplicate image set is already retained in the exhibit packet materials.",
+      "retained_representative_exists": true
+    },
+    {
+      "exhibit_label": "J",
+      "filename": "Image_260226_173823.jpeg",
+      "content_type": "image/jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 5,
+      "duplicate_key": "e20136a55615cf6f69aa71b70e847a8bab9b2bb690078525e6bd476f9de29fb0",
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/attachments/Image_260226_173823.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/attachments/Image_260226_173823.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/attachments/Image_260226_173823.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/Image_260226_173823.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/Image_260226_173823.jpeg"
+      ],
+      "subexhibits": [
+        "J-12",
+        "J-13",
+        "J-14",
+        "J-15",
+        "J-16"
+      ],
+      "dates": [
+        "2026-02-26T17:48:44-08:00",
+        "2026-02-26T17:51:39-08:00",
+        "2026-03-02T12:29:53-08:00",
+        "2026-03-09T10:34:52-07:00",
+        "2026-03-09T11:06:56-07:00"
+      ],
+      "occurrence_count": 5,
+      "recommended_disposition": "exclude_duplicate_copy",
+      "decision_rationale": "A representative copy for this duplicate image set is already retained in the exhibit packet materials.",
+      "retained_representative_exists": true
+    },
+    {
+      "exhibit_label": "J",
+      "filename": "Image_260226_173852.jpeg",
+      "content_type": "image/jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 5,
+      "duplicate_key": "dfb1c3a8aec49f483978de5f826a3a3f74b6ed41888fbb2fb6b5fb03768e76e2",
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0012-Re-Additional-Information-Needed-CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8-OKR7mZk6g-mail.gmail.com/attachments/Image_260226_173852.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/attachments/Image_260226_173852.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/attachments/Image_260226_173852.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/Image_260226_173852.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/Image_260226_173852.jpeg"
+      ],
+      "subexhibits": [
+        "J-12",
+        "J-13",
+        "J-14",
+        "J-15",
+        "J-16"
+      ],
+      "dates": [
+        "2026-02-26T17:48:44-08:00",
+        "2026-02-26T17:51:39-08:00",
+        "2026-03-02T12:29:53-08:00",
+        "2026-03-09T10:34:52-07:00",
+        "2026-03-09T11:06:56-07:00"
+      ],
+      "occurrence_count": 5,
+      "recommended_disposition": "exclude_duplicate_copy",
+      "decision_rationale": "A representative copy for this duplicate image set is already retained in the exhibit packet materials.",
+      "retained_representative_exists": true
+    },
+    {
+      "exhibit_label": "J",
+      "filename": "image.png",
+      "content_type": "image/png",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 4,
+      "duplicate_key": "16a0add8ed11c96f50f80bf4f5a4a9b3ee340ac307d8327dd1638c2aceeab814",
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0013-Re-Additional-Information-Needed-CAMTdTS_ROF-SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw-mail.gmail.com/attachments/image.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/attachments/image.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/image.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/image.png"
+      ],
+      "subexhibits": [
+        "J-13",
+        "J-14",
+        "J-15",
+        "J-16"
+      ],
+      "dates": [
+        "2026-02-26T17:51:39-08:00",
+        "2026-03-02T12:29:53-08:00",
+        "2026-03-09T10:34:52-07:00",
+        "2026-03-09T11:06:56-07:00"
+      ],
+      "occurrence_count": 4,
+      "recommended_disposition": "exclude_duplicate_copy",
+      "decision_rationale": "A representative copy for this duplicate image set is already retained in the exhibit packet materials.",
+      "retained_representative_exists": true
+    },
+    {
+      "exhibit_label": "J",
+      "filename": "IMG_2008.jpeg",
+      "content_type": "image/jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 3,
+      "duplicate_key": "e777f0cb4c03053ca2db357a7fa74f95820d88dd2e0962fa1f7aad21f3a01362",
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0014-Re-Additional-Information-Needed-CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy-kCVPFe9Z-gqwJsiw-mail.gmail.com/attachments/IMG_2008.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/IMG_2008.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/IMG_2008.jpeg"
+      ],
+      "subexhibits": [
+        "J-14",
+        "J-15",
+        "J-16"
+      ],
+      "dates": [
+        "2026-03-02T12:29:53-08:00",
+        "2026-03-09T10:34:52-07:00",
+        "2026-03-09T11:06:56-07:00"
+      ],
+      "occurrence_count": 3,
+      "recommended_disposition": "exclude_duplicate_copy",
+      "decision_rationale": "A representative copy for this duplicate image set is already retained in the exhibit packet materials.",
+      "retained_representative_exists": true
+    },
+    {
+      "exhibit_label": "J",
+      "filename": "Image_260309_103446.jpeg",
+      "content_type": "image/jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 2,
+      "duplicate_key": "310377d8367035e714415763acd760625dbc9b1fd31fcbec1f93fe55a824caba",
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0015-Re-Additional-Information-Needed-CAMTdTS_aghRN0G5nwdnU6BxS-Jx9ZU45kOsj0EC4txrk_8oA6A-mail.gmail.com/attachments/Image_260309_103446.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0016-Re-Additional-Information-Needed-CAMTdTS_JCWuHb-Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA-mail.gmail.com/attachments/Image_260309_103446.jpeg"
+      ],
+      "subexhibits": [
+        "J-15",
+        "J-16"
+      ],
+      "dates": [
+        "2026-03-09T10:34:52-07:00",
+        "2026-03-09T11:06:56-07:00"
+      ],
+      "occurrence_count": 2,
+      "recommended_disposition": "exclude_duplicate_copy",
+      "decision_rationale": "A representative copy for this duplicate image set is already retained in the exhibit packet materials.",
+      "retained_representative_exists": true
+    },
+    {
+      "exhibit_label": "J",
+      "filename": "IMG_1983.png",
+      "content_type": "image/png",
+      "recommended_action": "review_low_signal_image",
+      "duplicate_count": 1,
+      "duplicate_key": "7807d65466995f909da5cbfc06e38f258b8dbbb667c4060591b5ea730062e1ca",
+      "reasons": [
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com/attachments/IMG_1983.png"
+      ],
+      "subexhibits": [
+        "J-10"
+      ],
+      "dates": [
+        "2026-02-25T13:18:51-08:00"
+      ],
+      "occurrence_count": 1,
+      "recommended_disposition": "exclude_unless_substantive_image",
+      "decision_rationale": "Single generic image with no current signal beyond being an image attachment; exclude unless it contains independently material evidence.",
+      "retained_representative_exists": false
+    },
+    {
+      "exhibit_label": "J",
+      "filename": "IMG_1984.png",
+      "content_type": "image/png",
+      "recommended_action": "review_low_signal_image",
+      "duplicate_count": 1,
+      "duplicate_key": "a924202181b8ca8039a134d1b9b7774083f0432dd288d2be7a9f3744cd423d6c",
+      "reasons": [
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com/attachments/IMG_1984.png"
+      ],
+      "subexhibits": [
+        "J-10"
+      ],
+      "dates": [
+        "2026-02-25T13:18:51-08:00"
+      ],
+      "occurrence_count": 1,
+      "recommended_disposition": "exclude_unless_substantive_image",
+      "decision_rationale": "Single generic image with no current signal beyond being an image attachment; exclude unless it contains independently material evidence.",
+      "retained_representative_exists": false
+    },
+    {
+      "exhibit_label": "J",
+      "filename": "IMG_1985.png",
+      "content_type": "image/png",
+      "recommended_action": "review_low_signal_image",
+      "duplicate_count": 1,
+      "duplicate_key": "a3ddc571cf5b42f6439a2edd803565589a58820227074f083996fee727fd8e9f",
+      "reasons": [
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com/attachments/IMG_1985.png"
+      ],
+      "subexhibits": [
+        "J-10"
+      ],
+      "dates": [
+        "2026-02-25T13:18:51-08:00"
+      ],
+      "occurrence_count": 1,
+      "recommended_disposition": "exclude_unless_substantive_image",
+      "decision_rationale": "Single generic image with no current signal beyond being an image attachment; exclude unless it contains independently material evidence.",
+      "retained_representative_exists": false
+    },
+    {
+      "exhibit_label": "J",
+      "filename": "IMG_1986.png",
+      "content_type": "image/png",
+      "recommended_action": "review_low_signal_image",
+      "duplicate_count": 1,
+      "duplicate_key": "749a4e032a7bb28c93e726679256fe1de0980124243ef8b6a15cc41bd14f7725",
+      "reasons": [
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0010-Re-Additional-Information-Needed-CAMTdTS_RK-eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g-mail.gmail.com/attachments/IMG_1986.png"
+      ],
+      "subexhibits": [
+        "J-10"
+      ],
+      "dates": [
+        "2026-02-25T13:18:51-08:00"
+      ],
+      "occurrence_count": 1,
+      "recommended_disposition": "exclude_unless_substantive_image",
+      "decision_rationale": "Single generic image with no current signal beyond being an image attachment; exclude unless it contains independently material evidence.",
+      "retained_representative_exists": false
+    },
+    {
+      "exhibit_label": "J",
+      "filename": "image-2.png",
+      "content_type": "image/png",
+      "recommended_action": "review_low_signal_image",
+      "duplicate_count": 1,
+      "duplicate_key": "d0d0ddfd6c3a80f42f17a07ecbe05f90daa3557ee993d1b3dd0cc71e97815102",
+      "reasons": [
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0002-Re-Additional-Information-Needed-CAMTdTS-2c7Mk_ZR-9SYGkoR-Dy99ETRUn7-tGiiqh4ujFoHZ3g-mail.gmail.com/attachments/image-2.png"
+      ],
+      "subexhibits": [
+        "J-2"
+      ],
+      "dates": [
+        "2026-02-09T10:40:29-08:00"
+      ],
+      "occurrence_count": 1,
+      "recommended_disposition": "exclude_unless_substantive_image",
+      "decision_rationale": "Single generic image with no current signal beyond being an image attachment; exclude unless it contains independently material evidence.",
+      "retained_representative_exists": false
+    },
+    {
+      "exhibit_label": "J",
+      "filename": "image-3.png",
+      "content_type": "image/png",
+      "recommended_action": "review_low_signal_image",
+      "duplicate_count": 1,
+      "duplicate_key": "58791f5649042b0944fd1dee0374b36d418036b64354e59d297f6e1f272df15f",
+      "reasons": [
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0002-Re-Additional-Information-Needed-CAMTdTS-2c7Mk_ZR-9SYGkoR-Dy99ETRUn7-tGiiqh4ujFoHZ3g-mail.gmail.com/attachments/image-3.png"
+      ],
+      "subexhibits": [
+        "J-2"
+      ],
+      "dates": [
+        "2026-02-09T10:40:29-08:00"
+      ],
+      "occurrence_count": 1,
+      "recommended_disposition": "exclude_unless_substantive_image",
+      "decision_rationale": "Single generic image with no current signal beyond being an image attachment; exclude unless it contains independently material evidence.",
+      "retained_representative_exists": false
+    },
+    {
+      "exhibit_label": "J",
+      "filename": "image-4.png",
+      "content_type": "image/png",
+      "recommended_action": "review_low_signal_image",
+      "duplicate_count": 1,
+      "duplicate_key": "c5e55005077838077e662a74f682c0223f9598ae664f3c624ff179653793037f",
+      "reasons": [
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0002-Re-Additional-Information-Needed-CAMTdTS-2c7Mk_ZR-9SYGkoR-Dy99ETRUn7-tGiiqh4ujFoHZ3g-mail.gmail.com/attachments/image-4.png"
+      ],
+      "subexhibits": [
+        "J-2"
+      ],
+      "dates": [
+        "2026-02-09T10:40:29-08:00"
+      ],
+      "occurrence_count": 1,
+      "recommended_disposition": "exclude_unless_substantive_image",
+      "decision_rationale": "Single generic image with no current signal beyond being an image attachment; exclude unless it contains independently material evidence.",
+      "retained_representative_exists": false
+    },
+    {
+      "exhibit_label": "J",
+      "filename": "image.png",
+      "content_type": "image/png",
+      "recommended_action": "review_low_signal_image",
+      "duplicate_count": 1,
+      "duplicate_key": "7bb9fae1b55400d7ea1e81d1a52278047b0503df0244aa97921b019ecb593d00",
+      "reasons": [
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-additional-info-import/0002-Re-Additional-Information-Needed-CAMTdTS-2c7Mk_ZR-9SYGkoR-Dy99ETRUn7-tGiiqh4ujFoHZ3g-mail.gmail.com/attachments/image.png"
+      ],
+      "subexhibits": [
+        "J-2"
+      ],
+      "dates": [
+        "2026-02-09T10:40:29-08:00"
+      ],
+      "occurrence_count": 1,
+      "recommended_disposition": "exclude_unless_substantive_image",
+      "decision_rationale": "Single generic image with no current signal beyond being an image attachment; exclude unless it contains independently material evidence.",
+      "retained_representative_exists": false
+    },
+    {
+      "exhibit_label": "M",
+      "filename": "image001.jpg",
+      "content_type": "image/jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 3,
+      "duplicate_key": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f",
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/attachments/image001.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/attachments/image001.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/image001.jpg"
+      ],
+      "subexhibits": [
+        "M-9",
+        "M-11",
+        "M-12"
+      ],
+      "dates": [
+        "2026-03-20T22:54:20+00:00",
+        "2026-03-20T16:09:59-07:00",
+        "2026-03-20T16:53:12-07:00"
+      ],
+      "occurrence_count": 3,
+      "recommended_disposition": "exclude_duplicate_copy",
+      "decision_rationale": "A representative copy for this duplicate image set is already retained in the exhibit packet materials.",
+      "retained_representative_exists": true
+    },
+    {
+      "exhibit_label": "M",
+      "filename": "image002.jpg",
+      "content_type": "image/jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 3,
+      "duplicate_key": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943",
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/attachments/image002.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/attachments/image002.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/image002.jpg"
+      ],
+      "subexhibits": [
+        "M-9",
+        "M-11",
+        "M-12"
+      ],
+      "dates": [
+        "2026-03-20T22:54:20+00:00",
+        "2026-03-20T16:09:59-07:00",
+        "2026-03-20T16:53:12-07:00"
+      ],
+      "occurrence_count": 3,
+      "recommended_disposition": "exclude_duplicate_copy",
+      "decision_rationale": "A representative copy for this duplicate image set is already retained in the exhibit packet materials.",
+      "retained_representative_exists": true
+    },
+    {
+      "exhibit_label": "M",
+      "filename": "image003.jpg",
+      "content_type": "image/jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 3,
+      "duplicate_key": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095",
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/attachments/image003.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/attachments/image003.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/image003.jpg"
+      ],
+      "subexhibits": [
+        "M-9",
+        "M-11",
+        "M-12"
+      ],
+      "dates": [
+        "2026-03-20T22:54:20+00:00",
+        "2026-03-20T16:09:59-07:00",
+        "2026-03-20T16:53:12-07:00"
+      ],
+      "occurrence_count": 3,
+      "recommended_disposition": "exclude_duplicate_copy",
+      "decision_rationale": "A representative copy for this duplicate image set is already retained in the exhibit packet materials.",
+      "retained_representative_exists": true
+    },
+    {
+      "exhibit_label": "M",
+      "filename": "Image_260320_142045.jpeg",
+      "content_type": "image/jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 2,
+      "duplicate_key": "72f9c711e3c3a4f23e66bf6e26f743cb623fbb27fd6909739598f52d5cb0dc4e",
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/attachments/Image_260320_142045.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/attachments/Image_260320_142045.jpeg"
+      ],
+      "subexhibits": [
+        "M-8",
+        "M-10"
+      ],
+      "dates": [
+        "2026-03-20T14:24:59-07:00",
+        "2026-03-20T16:02:01-07:00"
+      ],
+      "occurrence_count": 2,
+      "recommended_disposition": "exclude_duplicate_copy",
+      "decision_rationale": "A representative copy for this duplicate image set is already retained in the exhibit packet materials.",
+      "retained_representative_exists": true
+    },
+    {
+      "exhibit_label": "M",
+      "filename": "Image_260320_142321.jpeg",
+      "content_type": "image/jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 2,
+      "duplicate_key": "b816e1a4626469ba5c624cfda3084483c77bcaf077aa5c4cdedce6575c6072b6",
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/attachments/Image_260320_142321.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/attachments/Image_260320_142321.jpeg"
+      ],
+      "subexhibits": [
+        "M-8",
+        "M-10"
+      ],
+      "dates": [
+        "2026-03-20T14:24:59-07:00",
+        "2026-03-20T16:02:01-07:00"
+      ],
+      "occurrence_count": 2,
+      "recommended_disposition": "exclude_duplicate_copy",
+      "decision_rationale": "A representative copy for this duplicate image set is already retained in the exhibit packet materials.",
+      "retained_representative_exists": true
+    },
+    {
+      "exhibit_label": "M",
+      "filename": "Image_260320_142448.jpeg",
+      "content_type": "image/jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 2,
+      "duplicate_key": "be04d3f3baa3692a9c8eb852dcd1007ec5784fd209fc16d2e0c079f5cfcc8f48",
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/attachments/Image_260320_142448.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/attachments/Image_260320_142448.jpeg"
+      ],
+      "subexhibits": [
+        "M-8",
+        "M-10"
+      ],
+      "dates": [
+        "2026-03-20T14:24:59-07:00",
+        "2026-03-20T16:02:01-07:00"
+      ],
+      "occurrence_count": 2,
+      "recommended_disposition": "exclude_duplicate_copy",
+      "decision_rationale": "A representative copy for this duplicate image set is already retained in the exhibit packet materials.",
+      "retained_representative_exists": true
+    },
+    {
+      "exhibit_label": "M",
+      "filename": "Image_260320_160954.jpeg",
+      "content_type": "image/jpeg",
+      "recommended_action": "review_for_deduplication",
+      "duplicate_count": 2,
+      "duplicate_key": "5d5477ec937e21a3d23d005f423be2e484a30363418a9bad3474d26f6016e0fe",
+      "reasons": [
+        "duplicate-content",
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/attachments/Image_260320_160954.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/Image_260320_160954.jpeg"
+      ],
+      "subexhibits": [
+        "M-11",
+        "M-12"
+      ],
+      "dates": [
+        "2026-03-20T16:09:59-07:00",
+        "2026-03-20T16:53:12-07:00"
+      ],
+      "occurrence_count": 2,
+      "recommended_disposition": "exclude_duplicate_copy",
+      "decision_rationale": "A representative copy for this duplicate image set is already retained in the exhibit packet materials.",
+      "retained_representative_exists": true
+    },
+    {
+      "exhibit_label": "M",
+      "filename": "IMG_2106.jpeg",
+      "content_type": "image/jpeg",
+      "recommended_action": "review_low_signal_image",
+      "duplicate_count": 1,
+      "duplicate_key": "30818854e2a9aba1d51fbdd06218497848a2fe5c0a71e400a6d403295cb7f7ad",
+      "reasons": [
+        "generic-image-name",
+        "image-attachment"
+      ],
+      "paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/IMG_2106.jpeg"
+      ],
+      "subexhibits": [
+        "M-12"
+      ],
+      "dates": [
+        "2026-03-20T16:53:12-07:00"
+      ],
+      "occurrence_count": 1,
+      "recommended_disposition": "exclude_unless_substantive_image",
+      "decision_rationale": "Single generic image with no current signal beyond being an image attachment; exclude unless it contains independently material evidence.",
+      "retained_representative_exists": false
+    }
+  ]
+}

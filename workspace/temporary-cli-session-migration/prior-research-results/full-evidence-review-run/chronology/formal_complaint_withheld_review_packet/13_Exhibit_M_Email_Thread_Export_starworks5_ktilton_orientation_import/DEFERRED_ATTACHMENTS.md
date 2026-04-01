@@ -1,0 +1,34 @@
+# Exhibit M Deferred Attachments
+
+- M-1 | 2026-03-17T19:29:55+00:00 | HCV Orientation
+- no deferred attachments
+- M-2 | 2026-03-17T17:34:42-07:00 | HCV Orientation
+- no deferred attachments
+- M-3 | 2026-03-18T20:33:26+00:00 | HCV Orientation
+- no deferred attachments
+- M-4 | 2026-03-19T17:27:27+00:00 | HCV Orientation
+- no deferred attachments
+- M-5 | 2026-03-19T10:29:07-07:00 | HCV Orientation
+- no deferred attachments
+- M-6 | 2026-03-19T10:56:12-07:00 | HCV Orientation
+- no deferred attachments
+- M-7 | 2026-03-19T20:43:19+00:00 | HCV Orientation
+- no deferred attachments
+- M-8 | 2026-03-20T14:24:59-07:00 | HCV Orientation
+- no deferred attachments
+- M-9 | 2026-03-20T22:54:20+00:00 | HCV Orientation
+- no deferred attachments
+- M-10 | 2026-03-20T16:02:01-07:00 | HCV Orientation
+- defer: Image_260320_142321.jpeg | action=review_for_deduplication | duplicates=2 | reasons=duplicate-content, generic-image-name, image-attachment | copied_to=/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/deferred_attachments/M-10_Image_260320_142321.jpeg
+- defer: Image_260320_142448.jpeg | action=review_for_deduplication | duplicates=2 | reasons=duplicate-content, generic-image-name, image-attachment | copied_to=/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/deferred_attachments/M-10_Image_260320_142448.jpeg
+- defer: Image_260320_142045.jpeg | action=review_for_deduplication | duplicates=2 | reasons=duplicate-content, generic-image-name, image-attachment | copied_to=/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/deferred_attachments/M-10_Image_260320_142045.jpeg
+- M-11 | 2026-03-20T16:09:59-07:00 | HCV Orientation
+- defer: image001.jpg | action=review_for_deduplication | duplicates=3 | reasons=duplicate-content, generic-image-name, image-attachment | copied_to=/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/deferred_attachments/M-11_image001.jpg
+- defer: image002.jpg | action=review_for_deduplication | duplicates=3 | reasons=duplicate-content, generic-image-name, image-attachment | copied_to=/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/deferred_attachments/M-11_image002.jpg
+- defer: image003.jpg | action=review_for_deduplication | duplicates=3 | reasons=duplicate-content, generic-image-name, image-attachment | copied_to=/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/deferred_attachments/M-11_image003.jpg
+- M-12 | 2026-03-20T16:53:12-07:00 | HCV Orientation
+- defer: Image_260320_160954.jpeg | action=review_for_deduplication | duplicates=2 | reasons=duplicate-content, generic-image-name, image-attachment | copied_to=/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/deferred_attachments/M-12_Image_260320_160954.jpeg
+- defer: image001.jpg | action=review_for_deduplication | duplicates=3 | reasons=duplicate-content, generic-image-name, image-attachment | copied_to=/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/deferred_attachments/M-12_image001.jpg
+- defer: IMG_2106.jpeg | action=review_low_signal_image | duplicates=1 | reasons=generic-image-name, image-attachment | copied_to=/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/deferred_attachments/M-12_IMG_2106.jpeg
+- defer: image002.jpg | action=review_for_deduplication | duplicates=3 | reasons=duplicate-content, generic-image-name, image-attachment | copied_to=/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/deferred_attachments/M-12_image002.jpg
+- defer: image003.jpg | action=review_for_deduplication | duplicates=3 | reasons=duplicate-content, generic-image-name, image-attachment | copied_to=/home/barberb/HACC/research_results/evidence_review_20260328_181601/chronology/formal_complaint_withheld_review_packet/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import/deferred_attachments/M-12_image003.jpg

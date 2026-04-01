@@ -1,0 +1,8166 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import re
+import shutil
+import subprocess
+import sys
+from dataclasses import dataclass
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+
+from pypdf import PdfReader
+
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+EVIDENCE_ROOT = REPO_ROOT / "evidence"
+EMAIL_ROOT = EVIDENCE_ROOT / "email_imports"
+AGENTIC_ROOT = EVIDENCE_ROOT / "agentic_downloads"
+PAPER_ROOT = EVIDENCE_ROOT / "paper documents"
+RESULTS_ROOT = REPO_ROOT / "research_results"
+COMPLAINT_GENERATOR_ROOT = REPO_ROOT / "complaint-generator"
+
+if str(COMPLAINT_GENERATOR_ROOT) not in sys.path:
+    sys.path.insert(0, str(COMPLAINT_GENERATOR_ROOT))
+
+from complaint_generator.email_graphrag import build_email_graphrag_artifacts  # noqa: E402
+
+try:  # noqa: E402
+    from complaint_phases.knowledge_graph import Entity, KnowledgeGraph, KnowledgeGraphBuilder, Relationship
+except Exception:  # pragma: no cover - defensive fallback for partial environments
+    Entity = None
+    KnowledgeGraph = None
+    KnowledgeGraphBuilder = None
+    Relationship = None
+
+
+RECENT_CLASS_KEYWORDS: list[tuple[str, tuple[str, ...]]] = [
+    ("protected_status_or_vawa", ("vawa", "violence against women", "domestic violence")),
+    ("case_caption_or_dispute", ("jane kay cortez", "solomon samuel barber", "cortez vs", " vs ")),
+    ("orientation_or_compliance", ("orientation", "required signatures", "hcv", "voucher orientation")),
+    ("application_or_intake", ("application", "vera", "intake", "eligibility")),
+    ("program_policy_or_brochure", ("brochure", "administrative plan", "project based voucher", "relocation road map")),
+    ("lease_or_occupancy", ("lease", "occupancy", "add to lease", "rent adjustment", "tenant")),
+    ("inspection_or_unit_condition", ("inspection", "unit condition", "damages", "nspire")),
+    ("notice_or_adverse_action", ("notice", "termination", "relocation", "adverse", "vacate", "90 day")),
+    ("financial_verification", ("1040", "tax", "income", "asset", "bank", "coinbase", "financial", "additional information required")),
+]
+
+HIGH_SENSITIVITY_KEYWORDS = (
+    "1040",
+    "tax",
+    "bank",
+    "coinbase",
+    "financial",
+    "asset",
+    "application",
+    "vawa",
+)
+
+HOUSING_RELEVANCE_KEYWORDS = (
+    "hacc",
+    "housing",
+    "voucher",
+    "clackamas",
+    "tenant",
+    "lease",
+    "orientation",
+    "hearing",
+    "accommodation",
+    "vawa",
+)
+
+COMPLAINT_FOCUS_KEYWORDS = (
+    "cortez",
+    "barber",
+    "clackamas",
+    "housing",
+    "hacc",
+    "voucher",
+    "lease",
+    "termination",
+    "notice",
+    "inspection",
+    "orientation",
+    "accommodation",
+    "relocation",
+    "vawa",
+    "blossom",
+    "vera",
+    "tilton",
+    "callahan",
+    "jane",
+    "benjamin",
+    "hud",
+)
+
+NOISE_ENTITY_KEYWORDS = (
+    "linux foundation",
+    "jp morgan",
+    "chase bank",
+    "hallucinate llc",
+    "free standards group",
+    "inifiniedge",
+    "storacha prize",
+    "coinbase",
+)
+
+LOW_SIGNAL_ENTITY_EXACT = (
+    "hi benjamin",
+    "hey benjamin",
+    "reduction act notice",
+    "automatic reply",
+)
+
+LOW_SIGNAL_ENTITY_PREFIXES = (
+    "hi ",
+    "hey ",
+    "dear ",
+    "re: ",
+    "fw: ",
+    "fwd: ",
+)
+
+MONTH_PATTERN = (
+    r"(?:jan|january|feb|february|mar|march|apr|april|may|jun|june|jul|july|aug|august|"
+    r"sep|sept|september|oct|october|nov|november|dec|december)"
+)
+
+LITIGATION_DATE_POSITIVE_KEYWORDS = (
+    "notice",
+    "termination",
+    "eligibility",
+    "displaced",
+    "inspection",
+    "orientation",
+    "additional information",
+    "action required",
+    "dear jane",
+    "dear resident",
+    "hud",
+    "resident",
+    "vacate",
+    "hearing",
+    "relocation",
+)
+
+LITIGATION_DATE_NEGATIVE_KEYWORDS = (
+    "printed on",
+    "paperwork reduction",
+    "privacy act",
+    "instructions",
+    "page ",
+    "unit id",
+    "annual",
+    "interim",
+    "occupation",
+    "identity protection",
+    "tax return",
+    "signature",
+    "form 1040",
+)
+
+
+@dataclass
+class RecentPathRecord:
+    path: str
+    status: str
+    commit: str
+    committed_at: str
+    subject: str
+
+
+def _slugify(value: str) -> str:
+    cleaned = re.sub(r"[^A-Za-z0-9._-]+", "_", value.strip())
+    return cleaned.strip("._-") or "item"
+
+
+def _clean_text(value: str) -> str:
+    return re.sub(r"\s+", " ", value or "").strip()
+
+
+def _read_json(path: Path) -> dict[str, Any]:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _extract_recent_git_paths(days: int) -> dict[str, RecentPathRecord]:
+    cmd = [
+        "git",
+        "-C",
+        str(REPO_ROOT),
+        "log",
+        f"--since={days} days ago",
+        "--name-status",
+        "--format=commit:%H%x09%cI%x09%s",
+        "--",
+        "evidence",
+    ]
+    try:
+        proc = subprocess.run(cmd, capture_output=True, text=True, check=True)
+    except subprocess.CalledProcessError:
+        return {}
+
+    records: dict[str, RecentPathRecord] = {}
+    current_commit = ""
+    current_date = ""
+    current_subject = ""
+    for line in proc.stdout.splitlines():
+        if not line.strip():
+            continue
+        if line.startswith("commit:"):
+            _, payload = line.split(":", 1)
+            parts = payload.split("\t", 2)
+            current_commit = parts[0] if len(parts) > 0 else ""
+            current_date = parts[1] if len(parts) > 1 else ""
+            current_subject = parts[2] if len(parts) > 2 else ""
+            continue
+        status, _, path = line.partition("\t")
+        if not path:
+            continue
+        records.setdefault(
+            path,
+            RecentPathRecord(
+                path=path,
+                status=status.strip(),
+                commit=current_commit,
+                committed_at=current_date,
+                subject=current_subject,
+            ),
+        )
+    return records
+
+
+def _extract_text_from_pdf(path: Path, max_pages: int = 8) -> dict[str, Any]:
+    pages_read = 0
+    page_texts: list[str] = []
+    errors: list[str] = []
+    try:
+        reader = PdfReader(str(path))
+        total_pages = len(reader.pages)
+        for page in reader.pages[:max_pages]:
+            pages_read += 1
+            try:
+                page_texts.append(page.extract_text() or "")
+            except Exception as exc:  # pragma: no cover - per-page fallback
+                errors.append(f"page_{pages_read}: {exc}")
+    except Exception as exc:
+        total_pages = 0
+        errors.append(f"pypdf: {exc}")
+
+    text = "\n".join(fragment for fragment in page_texts if fragment).strip()
+    if text:
+        return {
+            "text": text,
+            "pages_read": pages_read,
+            "total_pages": total_pages,
+            "extractor": "pypdf",
+            "errors": errors,
+        }
+
+    pdftotext = shutil_which("pdftotext")
+    if pdftotext:
+        try:
+            proc = subprocess.run(
+                [pdftotext, "-f", "1", "-l", str(max_pages), str(path), "-"],
+                capture_output=True,
+                text=True,
+                check=True,
+            )
+            text = proc.stdout.strip()
+            if text:
+                return {
+                    "text": text,
+                    "pages_read": max_pages,
+                    "total_pages": total_pages,
+                    "extractor": "pdftotext",
+                    "errors": errors,
+                }
+        except Exception as exc:  # pragma: no cover - binary dependency fallback
+            errors.append(f"pdftotext: {exc}")
+
+    return {
+        "text": "",
+        "pages_read": pages_read,
+        "total_pages": total_pages,
+        "extractor": "none",
+        "errors": errors,
+    }
+
+
+def shutil_which(command: str) -> str | None:
+    for folder in os.environ.get("PATH", "").split(os.pathsep):
+        candidate = Path(folder) / command
+        if candidate.exists() and os.access(candidate, os.X_OK):
+            return str(candidate)
+    return None
+
+
+def _classify_text(text: str, path_hint: str) -> dict[str, Any]:
+    haystack = f"{path_hint}\n{text}".lower()
+    matches: list[str] = []
+    scored_matches: list[tuple[int, int, str]] = []
+    for label, keywords in RECENT_CLASS_KEYWORDS:
+        hit_count = sum(1 for keyword in keywords if keyword in haystack)
+        if hit_count > 0:
+            matches.append(label)
+            scored_matches.append((hit_count, -len(matches), label))
+    primary = max(scored_matches)[2] if scored_matches else "general_housing_evidence"
+    sensitivity = "high" if any(keyword in haystack for keyword in HIGH_SENSITIVITY_KEYWORDS) else "medium"
+    relevance_hits = sum(1 for keyword in HOUSING_RELEVANCE_KEYWORDS if keyword in haystack)
+    if relevance_hits >= 5:
+        relevance = "high"
+    elif relevance_hits >= 2:
+        relevance = "medium"
+    else:
+        relevance = "low"
+    return {
+        "primary_class": primary,
+        "tags": matches,
+        "sensitivity": sensitivity,
+        "housing_relevance": relevance,
+        "keyword_hit_count": relevance_hits,
+    }
+
+
+def _build_document_graphrag(path: Path, text: str) -> dict[str, Any]:
+    graphrag_root = PAPER_ROOT / "graphrag" / _slugify(path.stem)
+    graphrag_root.mkdir(parents=True, exist_ok=True)
+    summary_path = graphrag_root / "document_graphrag_summary.json"
+    if summary_path.exists():
+        return _read_json(summary_path)
+
+    if not text.strip() or KnowledgeGraphBuilder is None:
+        summary = {
+            "document_path": str(path),
+            "graphrag_dir": str(graphrag_root),
+            "status": "unavailable" if KnowledgeGraphBuilder is None else "empty_text",
+            "knowledge_graph_summary": {},
+        }
+        summary_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+        return summary
+
+    graph = KnowledgeGraphBuilder().build_from_text(text[:60000])
+    graph_path = graphrag_root / "document_knowledge_graph.json"
+    graph.to_json(str(graph_path))
+    summary = {
+        "document_path": str(path),
+        "graphrag_dir": str(graphrag_root),
+        "status": "generated",
+        "knowledge_graph_summary": graph.summary(),
+        "graph_path": str(graph_path),
+    }
+    summary_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+    return summary
+
+
+def _summarize_snippet(text: str, limit: int = 220) -> str:
+    cleaned = _clean_text(text)
+    if len(cleaned) <= limit:
+        return cleaned
+    return cleaned[: limit - 3].rstrip() + "..."
+
+
+def _graph_entity_text(entity: Entity) -> str:
+    attributes = entity.attributes if isinstance(entity.attributes, dict) else {}
+    parts = [str(entity.name or "")]
+    for key in ("description", "event_label", "event_date_or_range", "content", "summary"):
+        if key in attributes:
+            parts.append(str(attributes.get(key) or ""))
+    return _clean_text(" ".join(parts)).lower()
+
+
+def _is_low_signal_entity(entity: Entity) -> bool:
+    name = _clean_text(str(entity.name or "")).lower()
+    if not name:
+        return True
+    if name in LOW_SIGNAL_ENTITY_EXACT:
+        return True
+    return any(name.startswith(prefix) for prefix in LOW_SIGNAL_ENTITY_PREFIXES)
+
+
+def _parse_human_date(value: str) -> datetime | None:
+    raw = _normalize_ocr_month_tokens(_clean_text(value))
+    if not raw:
+        return None
+    candidates = [
+        "%Y-%m-%dT%H:%M:%S%z",
+        "%Y-%m-%dT%H:%M:%S",
+        "%Y-%m-%d",
+        "%B %d, %Y",
+        "%b %d, %Y",
+        "%m/%d/%Y",
+        "%m/%d/%y",
+    ]
+    for fmt in candidates:
+        try:
+            parsed = datetime.strptime(raw, fmt)
+            if parsed.tzinfo is None:
+                parsed = parsed.replace(tzinfo=timezone.utc)
+            return parsed
+        except ValueError:
+            continue
+    return None
+
+
+def _parsed_date_in_scope(parsed: datetime) -> bool:
+    minimum = datetime(2024, 1, 1, tzinfo=timezone.utc)
+    maximum = datetime(2026, 12, 31, 23, 59, 59, tzinfo=timezone.utc)
+    normalized = parsed.astimezone(timezone.utc)
+    return minimum <= normalized <= maximum
+
+
+def _normalize_ocr_month_tokens(text: str) -> str:
+    normalized = text
+    for month in (
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    ):
+        pattern = r"\b" + r"\s*".join(re.escape(char) for char in month) + r"\b"
+        normalized = re.sub(pattern, month, normalized, flags=re.IGNORECASE)
+    return normalized
+
+
+def _extract_dates_from_text(text: str) -> list[str]:
+    limited = _normalize_ocr_month_tokens(text[:6000])
+    patterns = [
+        rf"\b{MONTH_PATTERN}\s+\d{{1,2}},\s+\d{{4}}\b",
+        r"\b\d{4}-\d{2}-\d{2}\b",
+        r"\b\d{1,2}/\d{1,2}/\d{2,4}\b",
+    ]
+    matches: list[str] = []
+    for pattern in patterns:
+        for match in re.findall(pattern, limited, flags=re.IGNORECASE):
+            cleaned = _clean_text(match)
+            if cleaned not in matches:
+                matches.append(cleaned)
+    return matches
+
+
+def _extract_scored_dates_from_text(text: str) -> list[dict[str, Any]]:
+    limited = _normalize_ocr_month_tokens(text[:6000])
+    pattern = rf"\b(?:{MONTH_PATTERN}\s+\d{{1,2}},\s+\d{{4}}|\d{{4}}-\d{{2}}-\d{{2}}|\d{{1,2}}/\d{{1,2}}/\d{{2,4}})\b"
+    scored: list[dict[str, Any]] = []
+    for match in re.finditer(pattern, limited, flags=re.IGNORECASE):
+        raw_date = _clean_text(match.group(0))
+        parsed = _parse_human_date(raw_date)
+        if parsed is None or not _parsed_date_in_scope(parsed):
+            continue
+        start = max(0, match.start() - 120)
+        end = min(len(limited), match.end() + 120)
+        context = _clean_text(limited[start:end]).lower()
+        score = 0
+        score += sum(2 for keyword in LITIGATION_DATE_POSITIVE_KEYWORDS if keyword in context)
+        score -= sum(3 for keyword in LITIGATION_DATE_NEGATIVE_KEYWORDS if keyword in context)
+        if raw_date.lower().startswith(("01/", "02/", "03/", "04/", "05/", "06/", "07/", "08/", "09/", "10/", "11/", "12/")):
+            score += 0
+        scored.append({
+            "raw_date": raw_date,
+            "parsed": parsed,
+            "score": score,
+            "context": context,
+            "position": match.start(),
+        })
+    return scored
+
+
+def _score_paper_dates_for_item(text: str, item: dict[str, Any]) -> list[dict[str, Any]]:
+    stem = Path(str(item.get("path") or "")).stem.lower()
+    adjusted: list[dict[str, Any]] = []
+    for entry in _extract_scored_dates_from_text(text):
+        score = int(entry.get("score") or 0)
+        context = str(entry.get("context") or "")
+        position = int(entry.get("position") or 0)
+
+        if position <= 400:
+            score += 3
+
+        if "on or about" in context:
+            score -= 6
+
+        if "brochure" in stem:
+            if any(keyword in context for keyword in (
+                "annual plan",
+                "board of commissioners",
+                "mtw supplement",
+                "scheduled for",
+            )):
+                score -= 8
+
+        if "90 day notice" in stem or "steering" in stem:
+            if any(keyword in context for keyword in (
+                "effective date of your eligibility",
+                "move by",
+                "move out of this unit by",
+                "must vacate your unit by",
+                "vacate the residence by",
+                "unit vacate date",
+                "unit vacate da",
+                "vacate deadline",
+                "previously notified on",
+                "still living in the unit after",
+                "10 business days from the date of this notice",
+                "within 10 business days from the date of this notice",
+                "request a hearing",
+                "your lease will be terminated on",
+            )):
+                score -= 8
+
+        if "first amendment" in stem:
+            if any(keyword in context for keyword in (
+                "option to cure",
+                "vacate premises by",
+                "lease termination notice with option to cure",
+                "upon delivery of this notice",
+            )):
+                score -= 8
+
+        if "inspection" in stem:
+            if any(keyword in context for keyword in (
+                "entry to your unit",
+                "notice mailed to resident",
+            )):
+                score -= 6
+
+        updated = dict(entry)
+        updated["score"] = score
+        adjusted.append(updated)
+    return adjusted
+
+
+def _paper_timeline_item_is_general_reference(text: str, item: dict[str, Any]) -> bool:
+    stem = Path(str(item.get("path") or "")).stem.lower()
+    limited = _clean_text(text[:1600]).lower()
+    if "brochure" in stem and any(keyword in limited for keyword in (
+        "relocation road map",
+        "annual plan",
+        "board of commissioners",
+        "mtw supplement",
+    )):
+        return True
+    return False
+
+
+def _select_paper_chronology_dates(text: str, item: dict[str, Any]) -> list[tuple[str, datetime]]:
+    classifier = str(item.get("classification", {}).get("primary_class") or "")
+    if _paper_timeline_item_is_general_reference(text, item):
+        return []
+    scored_dates = _score_paper_dates_for_item(text, item)
+    if not scored_dates:
+        return []
+
+    limits = {
+        "notice_or_adverse_action": 2,
+        "lease_or_occupancy": 2,
+        "inspection_or_unit_condition": 2,
+        "financial_verification": 1,
+        "orientation_or_compliance": 1,
+        "protected_status_or_vawa": 1,
+        "application_or_intake": 1,
+    }
+    minimum_score = {
+        "notice_or_adverse_action": 1,
+        "lease_or_occupancy": 1,
+        "inspection_or_unit_condition": 1,
+        "financial_verification": 2,
+        "orientation_or_compliance": 2,
+        "protected_status_or_vawa": 1,
+        "application_or_intake": 1,
+    }
+
+    ranked = sorted(
+        scored_dates,
+        key=lambda entry: (entry["score"], -entry["parsed"].timestamp()),
+        reverse=True,
+    )
+    selected: list[tuple[str, datetime]] = []
+    seen_days: set[str] = set()
+    threshold = minimum_score.get(classifier, 1)
+    max_count = limits.get(classifier, 1)
+    for entry in ranked:
+        day_key = entry["parsed"].date().isoformat()
+        if day_key in seen_days:
+            continue
+        if entry["score"] < threshold:
+            continue
+        seen_days.add(day_key)
+        selected.append((str(entry["raw_date"]), entry["parsed"]))
+        if len(selected) >= max_count:
+            break
+
+    if selected:
+        selected.sort(key=lambda pair: pair[1])
+        return selected
+
+    fallback: list[tuple[str, datetime]] = []
+    for entry in sorted(scored_dates, key=lambda entry: entry["parsed"]):
+        day_key = entry["parsed"].date().isoformat()
+        if day_key in seen_days:
+            continue
+        seen_days.add(day_key)
+        fallback.append((str(entry["raw_date"]), entry["parsed"]))
+        if len(fallback) >= 1:
+            break
+    return fallback
+
+
+def _date_has_textual_month(raw_date: str) -> bool:
+    return any(character.isalpha() for character in raw_date)
+
+
+def _select_primary_paper_date(text: str, item: dict[str, Any]) -> tuple[str, datetime] | None:
+    classifier = str(item.get("classification", {}).get("primary_class") or "")
+    if _paper_timeline_item_is_general_reference(text, item):
+        return None
+    scored_dates = _score_paper_dates_for_item(text, item)
+    if not scored_dates:
+        return None
+
+    direction = -1 if classifier in {
+        "notice_or_adverse_action",
+        "protected_status_or_vawa",
+        "financial_verification",
+        "orientation_or_compliance",
+    } else 1
+
+    ranked = sorted(
+        scored_dates,
+        key=lambda entry: (
+            1 if _date_has_textual_month(str(entry["raw_date"])) else 0,
+            entry["score"],
+            direction * entry["parsed"].timestamp(),
+        ),
+        reverse=True,
+    )
+    best = ranked[0]
+    return str(best["raw_date"]), best["parsed"]
+
+
+def _build_pleading_timeline(payload: dict[str, Any], chronology_dir: Path) -> dict[str, Any]:
+    items = _substantive_recent_items(list(payload.get("items") or []))
+    selected: list[dict[str, Any]] = []
+    email_seen: set[tuple[str, str]] = set()
+
+    for item in items:
+        path = REPO_ROOT / str(item.get("path") or "")
+        if item.get("item_type") == "paper_pdf" and path.exists():
+            extraction = _extract_text_from_pdf(path, max_pages=6)
+            text = str(extraction.get("text") or "")
+            chosen = _select_primary_paper_date(text, item)
+            if chosen is None:
+                continue
+            raw_date, parsed = chosen
+            selected.append({
+                "date": raw_date,
+                "sort_key": parsed.isoformat(),
+                "source_path": str(item.get("path") or ""),
+                "event_label": _event_label_for_item(item),
+                "classification": item.get("classification", {}).get("primary_class"),
+                "snippet": _summarize_snippet(text or item.get("snippet") or ""),
+            })
+            continue
+
+        if item.get("item_type") == "email_manifest" and path.exists():
+            manifest = _read_json(path)
+            for email in list(manifest.get("emails") or [])[:20]:
+                raw_date = str(email.get("date") or "").strip()
+                parsed = _parse_human_date(raw_date)
+                if parsed is None or not _parsed_date_in_scope(parsed):
+                    continue
+                subject = _normalize_email_subject(str(email.get("subject") or ""))
+                if subject.lower().startswith("automatic reply"):
+                    continue
+                dedup_key = (parsed.date().isoformat(), subject)
+                if dedup_key in email_seen:
+                    continue
+                email_seen.add(dedup_key)
+                selected.append({
+                    "date": raw_date,
+                    "sort_key": parsed.isoformat(),
+                    "source_path": str(item.get("path") or ""),
+                    "event_label": f"Email thread: {subject}",
+                    "classification": item.get("classification", {}).get("primary_class"),
+                    "snippet": _summarize_snippet(
+                        f"From {email.get('from') or ''} to {email.get('to') or ''} on {raw_date}"
+                    ),
+                })
+
+    selected.sort(key=lambda event: (str(event.get("sort_key") or ""), str(event.get("source_path") or "")))
+    json_path = chronology_dir / "pleading_timeline.json"
+    md_path = chronology_dir / "pleading_timeline.md"
+    summary = {
+        "status": "success",
+        "event_count": len(selected),
+        "events": selected,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+    md_lines = ["# Pleading Timeline", "", f"Event count: {len(selected)}", ""]
+    if selected:
+        md_lines.extend(
+            f"- {event.get('date')}: {event.get('event_label')} ({event.get('source_path')}) - {event.get('snippet')}"
+            for event in selected
+        )
+    else:
+        md_lines.append("- No pleading-ready events extracted.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _source_display_name(source_path: str) -> str:
+    return Path(source_path).stem.replace("_", " ").replace("-", " ")
+
+
+def _clean_fact_text(text: str) -> str:
+    cleaned = _clean_text(text).rstrip(".")
+    cleaned = cleaned.replace("...", "")
+    return cleaned.strip()
+
+
+def _format_fact_date(raw_date: str) -> str:
+    parsed = _parse_human_date(raw_date)
+    if parsed is None:
+        return raw_date
+    if "T" in raw_date:
+        return parsed.strftime("%B %d, %Y at %I:%M %p %z")
+    return raw_date
+
+
+def _excerpt_for_pleading(snippet: str, limit: int = 180) -> str:
+    cleaned = _clean_fact_text(snippet)
+    if len(cleaned) <= limit:
+        return cleaned
+    truncated = cleaned[: limit - 1].rsplit(" ", 1)[0].strip()
+    return f"{truncated}..."
+
+
+def _email_participants(snippet: str) -> tuple[str, str] | None:
+    match = re.search(r"From\s+(.+?)\s+to\s+(.+?)\s+on\s+", snippet, flags=re.IGNORECASE)
+    if not match:
+        return None
+    sender = _clean_text(match.group(1))
+    recipient = _clean_text(match.group(2))
+    return sender, recipient
+
+
+def _document_fact_prefix(classification: str, title: str) -> str:
+    if classification == "notice_or_adverse_action":
+        return f"the document \"{title}\" reflects a notice or adverse action"
+    if classification == "lease_or_occupancy":
+        return f"the document \"{title}\" reflects a lease or occupancy event"
+    if classification == "financial_verification":
+        return f"the document \"{title}\" reflects a financial verification request"
+    if classification == "orientation_or_compliance":
+        return f"the document \"{title}\" reflects an orientation or compliance event"
+    if classification == "protected_status_or_vawa":
+        return f"the document \"{title}\" reflects a protected-status or VAWA-related issue"
+    if classification == "application_or_intake":
+        return f"the document \"{title}\" reflects an application or intake event"
+    return f"the document \"{title}\" reflects a relevant event"
+
+
+def _allegation_section_title(classification: str) -> str:
+    mapping = {
+        "notice_or_adverse_action": "Notices and Adverse Actions",
+        "lease_or_occupancy": "Lease and Occupancy",
+        "financial_verification": "Financial Verification and Intake Barriers",
+        "orientation_or_compliance": "Orientation and Compliance",
+        "protected_status_or_vawa": "Protected Status and VAWA",
+        "application_or_intake": "Application and Intake",
+    }
+    return mapping.get(classification, "Other Supporting Facts")
+
+
+def _cause_of_action_title(section_title: str) -> str:
+    mapping = {
+        "Notices and Adverse Actions": "Potential Claim Theme: Deficient Notice and Adverse Housing Action",
+        "Lease and Occupancy": "Potential Claim Theme: Lease, Occupancy, and Displacement Conduct",
+        "Financial Verification and Intake Barriers": "Potential Claim Theme: Documentation Demands and Intake Barriers",
+        "Protected Status and VAWA": "Potential Claim Theme: Protected Status and VAWA-Related Conduct",
+        "Orientation and Compliance": "Potential Claim Theme: Orientation and Compliance Delays",
+        "Application and Intake": "Potential Claim Theme: Application and Intake Process Issues",
+        "Other Supporting Facts": "Potential Claim Theme: Additional Supporting Facts",
+    }
+    return mapping.get(section_title, f"Potential Claim Theme: {section_title}")
+
+
+def _cause_of_action_intro(section_title: str) -> str:
+    mapping = {
+        "Notices and Adverse Actions": "These facts support a draft theory that HACC issued or escalated adverse housing actions through notices and displacement-related communications.",
+        "Lease and Occupancy": "These facts support a draft theory centered on lease amendments, occupancy changes, inspections, and relocation-related housing conditions.",
+        "Financial Verification and Intake Barriers": "These facts support a draft theory that repeated documentation demands and related email exchanges created material barriers in the housing process.",
+        "Protected Status and VAWA": "These facts support a draft theory that protected-status and VAWA-related issues were implicated in later housing actions.",
+        "Orientation and Compliance": "These facts support a draft theory that orientation and compliance requirements became a distinct procedural track affecting housing progression.",
+        "Application and Intake": "These facts support a draft theory involving application and intake-stage process defects.",
+        "Other Supporting Facts": "These facts may support additional claim development after manual review.",
+    }
+    return mapping.get(section_title, "These facts may support additional claim development after manual review.")
+
+
+def _cause_of_action_element_prompts(section_title: str) -> list[str]:
+    mapping = {
+        "Notices and Adverse Actions": [
+            "Identify the specific notice requirements imposed by the lease, program rules, ORS chapter 90, HUD guidance, or relocation rules.",
+            "State how the notices were deficient, inconsistent, untimely, or misleading.",
+            "Explain the concrete housing harm threatened or imposed by the adverse action.",
+        ],
+        "Lease and Occupancy": [
+            "Identify the lease, occupancy, inspection, transfer, or displacement obligation at issue.",
+            "State how HACC's conduct departed from that obligation or from ordinary housing process requirements.",
+            "Explain the resulting loss of housing stability, access, or tenancy rights.",
+        ],
+        "Financial Verification and Intake Barriers": [
+            "Describe the specific documentation demands or intake conditions imposed on plaintiff.",
+            "State why those demands were unreasonable, inconsistently applied, retaliatory, discriminatory, or otherwise improper.",
+            "Explain how the demands delayed, burdened, or obstructed housing access or retention.",
+        ],
+        "Protected Status and VAWA": [
+            "Identify the protected status, VAWA protection, or related legal protection implicated by the facts.",
+            "Connect the protected status facts to the challenged notice, lease action, or housing decision.",
+            "State the resulting discriminatory, retaliatory, or procedurally unlawful harm.",
+        ],
+        "Orientation and Compliance": [
+            "Identify the orientation or compliance requirement and the source of that requirement.",
+            "Explain how the timing or administration of the requirement affected plaintiff's housing position.",
+            "State the concrete delay, denial, or prejudice caused by that process.",
+        ],
+        "Application and Intake": [
+            "Identify the application or intake rule at issue.",
+            "State how the process was mishandled or inconsistently applied.",
+            "Explain the resulting denial, delay, or loss of housing opportunity.",
+        ],
+        "Other Supporting Facts": [
+            "State how these facts connect to a recognized claim or defense.",
+            "Explain the injury or prejudice flowing from those facts.",
+        ],
+    }
+    return mapping.get(section_title, [
+        "State the governing rule or duty.",
+        "State how the conduct violated that rule or duty.",
+        "State the resulting harm.",
+    ])
+
+
+def _classification_narrative_phrase(classification: str) -> str:
+    mapping = {
+        "notice_or_adverse_action": "a notice or adverse housing action",
+        "lease_or_occupancy": "a lease, occupancy, inspection, or displacement-related housing event",
+        "financial_verification": "a documentation or financial verification demand",
+        "orientation_or_compliance": "an orientation or compliance requirement",
+        "protected_status_or_vawa": "a protected-status or VAWA-related housing issue",
+        "application_or_intake": "an application or intake event",
+    }
+    return mapping.get(classification, "a relevant housing-related event")
+
+
+def _narrative_fact_from_entry(entry: dict[str, Any]) -> str:
+    paragraph = str(entry.get("paragraph") or "").strip()
+    if paragraph.startswith("Between "):
+        return paragraph
+    classification = str(entry.get("classification") or "")
+    source_path = str(entry.get("source_path") or "")
+    date = _format_fact_date(str(entry.get("date") or ""))
+    title = _source_display_name(source_path)
+    phrase = _classification_narrative_phrase(classification)
+    return (
+        f"On {date}, HACC generated or used the document \"{title}\" in connection with {phrase}. "
+        f"Source: {source_path}."
+    )
+
+
+def _entry_is_email(entry: dict[str, Any]) -> bool:
+    return str(entry.get("event_label") or "").startswith("Email thread:")
+
+
+def _entry_email_subject(entry: dict[str, Any]) -> str:
+    label = str(entry.get("event_label") or "")
+    return label.replace("Email thread:", "", 1).strip() or "Email"
+
+
+def _entry_date_for_grouping(entry: dict[str, Any]) -> datetime | None:
+    return _parse_human_date(str(entry.get("date") or ""))
+
+
+def _extract_email_participants_from_paragraph(paragraph: str) -> tuple[str, str] | None:
+    match = re.search(r"was sent from\s+(.+?)\s+to\s+(.+?)\.\s+Source:", paragraph, flags=re.IGNORECASE)
+    if not match:
+        return None
+    return _clean_text(match.group(1)), _clean_text(match.group(2))
+
+
+def _format_grouped_date(parsed: datetime | None) -> str:
+    if parsed is None:
+        return ""
+    return parsed.strftime("%B %d, %Y")
+
+
+def _participants_summary(entries: list[dict[str, Any]]) -> str:
+    participants: list[str] = []
+    for entry in entries:
+        parsed = _extract_email_participants_from_paragraph(str(entry.get("paragraph") or ""))
+        if not parsed:
+            continue
+        sender, recipient = parsed
+        for participant in (sender, recipient):
+            if participant not in participants:
+                participants.append(participant)
+    if not participants:
+        return "the captured participants"
+    if len(participants) == 1:
+        return participants[0]
+    if len(participants) == 2:
+        return f"{participants[0]} and {participants[1]}"
+    preview = ", ".join(participants[:3])
+    if len(participants) > 3:
+        return f"{preview}, and others"
+    return preview
+
+
+def _compress_email_entries(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    compressed: list[dict[str, Any]] = []
+    index = 0
+    while index < len(entries):
+        entry = entries[index]
+        if not _entry_is_email(entry):
+            compressed.append(entry)
+            index += 1
+            continue
+
+        subject = _entry_email_subject(entry)
+        classification = str(entry.get("classification") or "")
+        source_path = str(entry.get("source_path") or "")
+        group = [entry]
+        look_ahead = index + 1
+        while look_ahead < len(entries):
+            candidate = entries[look_ahead]
+            if not _entry_is_email(candidate):
+                break
+            if _entry_email_subject(candidate) != subject:
+                break
+            if str(candidate.get("classification") or "") != classification:
+                break
+            if str(candidate.get("source_path") or "") != source_path:
+                break
+            group.append(candidate)
+            look_ahead += 1
+
+        if len(group) == 1:
+            compressed.append(entry)
+            index = look_ahead
+            continue
+
+        first_date = _entry_date_for_grouping(group[0])
+        last_date = _entry_date_for_grouping(group[-1])
+        date_span = _format_grouped_date(first_date)
+        last_date_text = _format_grouped_date(last_date)
+        if last_date_text and last_date_text != date_span:
+            date_span = f"{date_span} and {last_date_text}"
+        participants = _participants_summary(group)
+        summary_entry = dict(group[0])
+        summary_entry["paragraph"] = (
+            f"Between {date_span}, the email thread \"{subject}\" included {len(group)} captured messages involving {participants}. "
+            f"Source: {source_path}."
+        )
+        compressed.append(summary_entry)
+        index = look_ahead
+
+    return compressed
+
+
+def _build_complaint_ready_chronology(pleading_timeline: dict[str, Any], chronology_dir: Path) -> dict[str, Any]:
+    events = list(pleading_timeline.get("events") or [])
+    json_path = chronology_dir / "complaint_ready_chronology.json"
+    md_path = chronology_dir / "complaint_ready_chronology.md"
+
+    paragraphs: list[dict[str, Any]] = []
+    for index, event in enumerate(events, start=1):
+        raw_date = str(event.get("date") or "")
+        date = _format_fact_date(raw_date)
+        source_path = str(event.get("source_path") or "")
+        label = str(event.get("event_label") or _source_display_name(source_path))
+        snippet = _clean_fact_text(str(event.get("snippet") or ""))
+        classification = str(event.get("classification") or "")
+        if label.startswith("Email thread:"):
+            subject = label.replace("Email thread:", "", 1).strip() or "Email"
+            participants = _email_participants(snippet)
+            if participants:
+                sender, recipient = participants
+                sentence = (
+                    f"On {date}, an email regarding \"{subject}\" was sent from {sender} to {recipient}. "
+                    f"Source: {source_path}."
+                )
+            else:
+                sentence = (
+                    f"On {date}, an email thread regarding \"{subject}\" reflects: \"{_excerpt_for_pleading(snippet)}\". "
+                    f"Source: {source_path}."
+                )
+        else:
+            title = _source_display_name(source_path)
+            prefix = _document_fact_prefix(classification, title)
+            sentence = (
+                f"On {date}, {prefix} stating: \"{_excerpt_for_pleading(snippet)}\". "
+                f"Source: {source_path}."
+            )
+        paragraphs.append({
+            "number": index,
+            "date": raw_date,
+            "source_path": source_path,
+            "event_label": label,
+            "classification": classification,
+            "paragraph": sentence,
+        })
+
+    summary = {
+        "status": "success",
+        "paragraph_count": len(paragraphs),
+        "paragraphs": paragraphs,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = ["# Complaint-Ready Chronology", "", f"Paragraph count: {len(paragraphs)}", ""]
+    if paragraphs:
+        md_lines.extend(f"{entry['number']}. {entry['paragraph']}" for entry in paragraphs)
+    else:
+        md_lines.append("No complaint-ready chronology paragraphs generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_claim_grouped_allegations(complaint_ready: dict[str, Any], chronology_dir: Path) -> dict[str, Any]:
+    paragraphs = list(complaint_ready.get("paragraphs") or [])
+    grouped: dict[str, list[dict[str, Any]]] = {}
+    for paragraph in paragraphs:
+        classification = str(paragraph.get("classification") or "")
+        grouped.setdefault(_allegation_section_title(classification), []).append(paragraph)
+
+    section_order = [
+        "Notices and Adverse Actions",
+        "Lease and Occupancy",
+        "Financial Verification and Intake Barriers",
+        "Protected Status and VAWA",
+        "Orientation and Compliance",
+        "Application and Intake",
+        "Other Supporting Facts",
+    ]
+    json_path = chronology_dir / "claim_grouped_allegations.json"
+    md_path = chronology_dir / "claim_grouped_allegations.md"
+
+    sections: list[dict[str, Any]] = []
+    for title in section_order:
+        entries = grouped.get(title) or []
+        if not entries:
+            continue
+        sections.append({
+            "title": title,
+            "paragraph_count": len(entries),
+            "paragraphs": entries,
+        })
+
+    summary = {
+        "status": "success",
+        "section_count": len(sections),
+        "paragraph_count": len(paragraphs),
+        "sections": sections,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = ["# Claim-Grouped Allegations", "", f"Section count: {len(sections)}", f"Paragraph count: {len(paragraphs)}", ""]
+    if sections:
+        for section in sections:
+            md_lines.extend([f"## {section['title']}", ""])
+            md_lines.extend(f"{entry['number']}. {entry['paragraph']}" for entry in section["paragraphs"])
+            md_lines.append("")
+    else:
+        md_lines.append("No claim-grouped allegations generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_cause_of_action_draft(grouped_allegations: dict[str, Any], chronology_dir: Path) -> dict[str, Any]:
+    sections = list(grouped_allegations.get("sections") or [])
+    json_path = chronology_dir / "cause_of_action_draft.json"
+    md_path = chronology_dir / "cause_of_action_draft.md"
+
+    drafted_sections: list[dict[str, Any]] = []
+    for section in sections:
+        section_paragraphs = _compress_email_entries(list(section.get("paragraphs") or []))
+        section_title = str(section.get("title") or "Other Supporting Facts")
+        drafted_sections.append({
+            "title": _cause_of_action_title(section_title),
+            "source_section": section_title,
+            "intro": _cause_of_action_intro(section_title),
+            "element_prompts": _cause_of_action_element_prompts(section_title),
+            "paragraph_count": len(section_paragraphs),
+            "paragraphs": section_paragraphs,
+        })
+
+    summary = {
+        "status": "success",
+        "section_count": len(drafted_sections),
+        "paragraph_count": sum(int(section.get("paragraph_count") or 0) for section in drafted_sections),
+        "sections": drafted_sections,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = ["# Cause-of-Action Draft", "", f"Section count: {len(drafted_sections)}", ""]
+    if drafted_sections:
+        for section in drafted_sections:
+            md_lines.extend([
+                f"## {section['title']}",
+                "",
+                section["intro"],
+                "",
+                f"Source allegation group: {section['source_section']}",
+                "",
+                "Elements to Plead:",
+                "",
+            ])
+            md_lines.extend(f"- {prompt}" for prompt in section["element_prompts"])
+            md_lines.append("")
+            md_lines.extend(f"{entry['number']}. {entry['paragraph']}" for entry in section["paragraphs"])
+            md_lines.append("")
+    else:
+        md_lines.append("No cause-of-action draft sections generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_complaint_skeleton(cause_draft: dict[str, Any], complaint_ready: dict[str, Any], chronology_dir: Path) -> dict[str, Any]:
+    cause_sections = list(cause_draft.get("sections") or [])
+    chronology_paragraphs = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    json_path = chronology_dir / "complaint_skeleton.json"
+    md_path = chronology_dir / "complaint_skeleton.md"
+    jurisdiction_lines = [re.sub(r"^\d+\.\s*", "", line) for line in _draft_jurisdiction_and_venue_lines()]
+    prayer_lines = _draft_prayer_for_relief_lines()
+
+    factual_background = chronology_paragraphs[: min(12, len(chronology_paragraphs))]
+    cause_blocks = []
+    for section in cause_sections:
+        cause_blocks.append({
+            "title": str(section.get("title") or "Potential Claim Theme"),
+            "intro": str(section.get("intro") or ""),
+            "source_section": str(section.get("source_section") or ""),
+            "element_prompts": list(section.get("element_prompts") or []),
+            "paragraphs": list(section.get("paragraphs") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "cause_section_count": len(cause_blocks),
+        "factual_background_count": len(factual_background),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps(
+            {
+                **summary,
+                "factual_background": factual_background,
+                "cause_sections": cause_blocks,
+            },
+            indent=2,
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+
+    md_lines = [
+        "# Complaint Skeleton",
+        "",
+        "## Caption",
+        "",
+        "[Plaintiff],",
+        "",
+        "v.",
+        "",
+        "Housing Authority of Clackamas County and Doe Defendants,",
+        "",
+        "## Preliminary Statement",
+        "",
+        "This draft skeleton organizes the currently extracted evidence into pleading-ready sections. It is a drafting aid and should be checked against the underlying evidence before filing.",
+        "",
+        "## Parties",
+        "",
+        "1. Plaintiffs are Jane Cortez and Benjamin Barber, subject to confirmation of full legal names, capacity, and proper party alignment.",
+        "2. Defendant Housing Authority of Clackamas County is the public housing authority alleged to have issued the challenged notices, lease actions, documentation demands, and orientation-related communications reflected in the evidence set.",
+        "3. Additional defendants may be named if discovery supports individual-capacity, supervisory, or agency-role allegations tied to the housing decisions summarized below.",
+        "",
+        "## Jurisdiction and Venue",
+        "",
+        *[f"{index}. {line}" for index, line in enumerate(jurisdiction_lines, start=1)],
+        "",
+        "## Factual Background",
+        "",
+    ]
+    if factual_background:
+        md_lines.extend(f"{entry['number']}. {entry['paragraph']}" for entry in factual_background)
+    else:
+        md_lines.append("No factual background paragraphs generated.")
+
+    md_lines.extend(["", "## Causes of Action", ""])
+    if cause_blocks:
+        for idx, block in enumerate(cause_blocks, start=1):
+            theory = _draft_count_theory(block)
+            md_lines.extend([
+                f"### Count {idx}: {block['title']}",
+                "",
+                block["intro"],
+                "",
+                f"Supporting source group: {block['source_section']}",
+                "",
+                "Elements to Plead:",
+            ])
+            md_lines.extend(f"- {prompt}" for prompt in block["element_prompts"])
+            md_lines.append("")
+            md_lines.extend(f"{entry['number']}. {entry['paragraph']}" for entry in block["paragraphs"])
+            md_lines.extend([
+                "",
+                f"Requested theory language: {theory['claim_label']}. {theory['theory']}",
+                "",
+            ])
+    else:
+        md_lines.append("No cause-of-action sections generated.")
+
+    md_lines.extend([
+        "## Prayer for Relief",
+        "",
+        f"1. {prayer_lines[0]}",
+        f"2. {prayer_lines[1]}",
+        f"3. {prayer_lines[2]}",
+        "",
+        "## Jury Demand",
+        "",
+        "Plaintiffs demand a jury on all issues so triable, if applicable.",
+    ])
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_narrative_complaint_draft(
+    complaint_ready: dict[str, Any],
+    cause_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    cause_sections = list(cause_draft.get("sections") or [])
+    json_path = chronology_dir / "narrative_complaint_draft.json"
+    md_path = chronology_dir / "narrative_complaint_draft.md"
+
+    factual_background = [_narrative_fact_from_entry(entry) for entry in factual_entries[:10]]
+    count_summaries = []
+    for section in cause_sections:
+        entries = list(section.get("paragraphs") or [])
+        theory = _draft_count_theory({
+            "title": str(section.get("title") or "Potential Claim Theme"),
+            "source_section": str(section.get("source_section") or ""),
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
+        count_summaries.append({
+            "title": str(section.get("title") or "Potential Claim Theme"),
+            "intro": str(section.get("intro") or ""),
+            "element_prompts": list(section.get("element_prompts") or []),
+            "facts": [_narrative_fact_from_entry(entry) for entry in entries[:3]],
+            "theory": theory,
+        })
+    prayer_lines = _draft_prayer_for_relief_lines()
+
+    summary = {
+        "status": "success",
+        "factual_background_count": len(factual_background),
+        "count_count": len(count_summaries),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps(
+            {
+                **summary,
+                "factual_background": factual_background,
+                "counts": count_summaries,
+            },
+            indent=2,
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+
+    md_lines = [
+        "# Narrative Complaint Draft",
+        "",
+        "## Preliminary Statement",
+        "",
+        "This narrative draft converts the extracted evidence into shorter pleading-style prose. It remains a drafting aid and should be checked against the underlying evidence before filing.",
+        "",
+        "## Factual Allegations",
+        "",
+    ]
+    if factual_background:
+        md_lines.extend(f"{index}. {fact}" for index, fact in enumerate(factual_background, start=1))
+    else:
+        md_lines.append("No factual allegations generated.")
+
+    md_lines.extend(["", "## Counts", ""])
+    if count_summaries:
+        for idx, count in enumerate(count_summaries, start=1):
+            md_lines.extend([
+                f"### Count {idx}: {count['title']}",
+                "",
+                count["intro"],
+                "",
+                "Elements to Plead:",
+            ])
+            md_lines.extend(f"- {prompt}" for prompt in count["element_prompts"])
+            md_lines.extend(["", "Representative Allegations:"])
+            md_lines.extend(f"- {fact}" for fact in count["facts"])
+            md_lines.extend([
+                "",
+                f"Draft theory paragraph: {count['theory']['claim_label']}. {count['theory']['theory']}",
+                "",
+            ])
+    else:
+        md_lines.append("No count summaries generated.")
+
+    md_lines.extend([
+        "## Relief Requested",
+        "",
+        f"- {prayer_lines[0]}",
+        f"- {prayer_lines[1]}",
+        f"- {prayer_lines[2]}",
+    ])
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _roman_count_label(value: int) -> str:
+    numerals = {
+        1: "I",
+        2: "II",
+        3: "III",
+        4: "IV",
+        5: "V",
+        6: "VI",
+        7: "VII",
+        8: "VIII",
+        9: "IX",
+        10: "X",
+    }
+    return numerals.get(value, str(value))
+
+
+def _alpha_exhibit_label(value: int) -> str:
+    if value <= 0:
+        return str(value)
+    label = ""
+    current = value
+    while current > 0:
+        current -= 1
+        label = chr(ord("A") + (current % 26)) + label
+        current //= 26
+    return label
+
+
+def _build_exhibit_map(
+    factual_entries: list[dict[str, Any]],
+    cause_sections: list[dict[str, Any]],
+) -> dict[str, str]:
+    ordered_paths: list[str] = []
+    for entry in factual_entries:
+        source_path = str(entry.get("source_path") or "")
+        if source_path and source_path not in ordered_paths:
+            ordered_paths.append(source_path)
+    for section in cause_sections:
+        for entry in list(section.get("paragraphs") or []):
+            source_path = str(entry.get("source_path") or "")
+            if source_path and source_path not in ordered_paths:
+                ordered_paths.append(source_path)
+    return {
+        source_path: _alpha_exhibit_label(index)
+        for index, source_path in enumerate(ordered_paths, start=1)
+    }
+
+
+def _paragraph_with_exhibit_tag(paragraph: str, exhibit_label: str | None) -> str:
+    if not exhibit_label:
+        return paragraph
+    stripped = paragraph.rstrip()
+    if stripped.endswith("."):
+        return stripped[:-1] + f" [Exhibit {exhibit_label}]."
+    return stripped + f" [Exhibit {exhibit_label}]"
+
+
+def _source_type_for_path(source_path: str) -> str:
+    lowered = source_path.lower()
+    if lowered.endswith(".pdf"):
+        return "paper_pdf"
+    if lowered.endswith("email_import_manifest.json"):
+        return "email_manifest"
+    if lowered.endswith(".json"):
+        return "json_record"
+    return "file"
+
+
+def _suggested_exhibit_title(source_path: str, source_name: str) -> str:
+    source_type = _source_type_for_path(source_path)
+    if source_type == "paper_pdf":
+        return f"{source_name} PDF"
+    if source_type == "email_manifest":
+        parent = Path(source_path).parent.name.replace("-", " ")
+        return f"Email Thread Export: {parent}"
+    return source_name
+
+
+def _exhibit_handling_note(source_path: str) -> str:
+    source_type = _source_type_for_path(source_path)
+    if source_type == "paper_pdf":
+        return "Attach the underlying PDF as the exhibit file."
+    if source_type == "email_manifest":
+        return "Use the manifest with underlying saved messages or representative thread exports; see the email exhibit manifest for message-level detail."
+    return "Verify filing format before attaching this source."
+
+
+def _subexhibit_label(exhibit_label: str, value: int) -> str:
+    return f"{exhibit_label}-{value}"
+
+
+def _normalized_saved_email_path(value: str) -> str:
+    cleaned = str(value or "").strip()
+    if cleaned in {"", "."}:
+        return ""
+    return cleaned
+
+
+def _build_email_exhibit_manifest(
+    exhibit_packet: list[dict[str, Any]],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_email_exhibits.json"
+    md_path = chronology_dir / "formal_complaint_email_exhibits.md"
+
+    threads: list[dict[str, Any]] = []
+    total_messages = 0
+    total_attachments = 0
+    total_saved_messages = 0
+    for packet_entry in exhibit_packet:
+        if str(packet_entry.get("source_type") or "") != "email_manifest":
+            continue
+        source_path = str(packet_entry.get("source_path") or "")
+        manifest_path = REPO_ROOT / source_path
+        manifest = _read_json(manifest_path)
+        messages: list[dict[str, Any]] = []
+        for index, email in enumerate(list(manifest.get("emails") or []), start=1):
+            subject = _normalize_email_subject(str(email.get("subject") or ""))
+            if subject.lower().startswith("automatic reply"):
+                continue
+            attachments = []
+            for attachment in list(email.get("attachments") or []):
+                attachments.append({
+                    "filename": str(attachment.get("filename") or ""),
+                    "path": str(attachment.get("path") or ""),
+                    "content_type": str(attachment.get("content_type") or ""),
+                    "size": int(attachment.get("size") or 0),
+                    "sha256": str(attachment.get("sha256") or ""),
+                })
+            email_path = _normalized_saved_email_path(str(email.get("email_path") or ""))
+            parsed_path = _normalized_saved_email_path(str(email.get("parsed_path") or ""))
+            if email_path:
+                total_saved_messages += 1
+            messages.append({
+                "subexhibit": _subexhibit_label(str(packet_entry.get("label") or "?"), len(messages) + 1),
+                "date": str(email.get("date") or ""),
+                "from": str(email.get("from") or ""),
+                "to": str(email.get("to") or ""),
+                "subject": subject,
+                "email_path": email_path,
+                "parsed_path": parsed_path,
+                "bundle_dir": str(email.get("bundle_dir") or ""),
+                "has_saved_message": bool(email_path),
+                "attachment_count": len(attachments),
+                "attachments": attachments,
+            })
+        total_messages += len(messages)
+        total_attachments += sum(int(message.get("attachment_count") or 0) for message in messages)
+        threads.append({
+            "exhibit_label": str(packet_entry.get("label") or ""),
+            "source_path": source_path,
+            "source_name": str(packet_entry.get("source_name") or ""),
+            "suggested_title": str(packet_entry.get("suggested_title") or ""),
+            "message_count": len(messages),
+            "messages": messages,
+        })
+
+    summary = {
+        "status": "success",
+        "thread_count": len(threads),
+        "message_count": total_messages,
+        "attachment_count": total_attachments,
+        "saved_message_count": total_saved_messages,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "threads": threads,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Email Exhibits",
+        "",
+        f"Thread count: {len(threads)}",
+        f"Message count: {total_messages}",
+        f"Saved message files: {total_saved_messages}",
+        f"Attachment count: {total_attachments}",
+        "",
+    ]
+    if threads:
+        for thread in threads:
+            md_lines.extend([
+                f"## Exhibit {thread['exhibit_label']}: {thread['suggested_title']}",
+                "",
+                f"Source: {thread['source_path']}",
+                f"Message count: {thread['message_count']}",
+                "",
+            ])
+            for message in thread["messages"]:
+                email_path_display = message["email_path"] or "unavailable (metadata-only entry)"
+                md_lines.append(
+                    f"- {message['subexhibit']} | {message['date']} | {message['subject']} | from {message['from']} | to {message['to']} | attachments={message['attachment_count']} | eml={email_path_display}"
+                )
+                for attachment in message["attachments"]:
+                    md_lines.append(
+                        f"- attachment: {attachment['filename']} | {attachment['content_type']} | size={attachment['size']} | {attachment['path']}"
+                    )
+            md_lines.append("")
+    else:
+        md_lines.append("No email exhibit threads generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_formal_complaint_filing_checklist(
+    exhibit_packet: list[dict[str, Any]],
+    citation_map: list[dict[str, Any]],
+    email_exhibit_manifest: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_filing_checklist.json"
+    md_path = chronology_dir / "formal_complaint_filing_checklist.md"
+
+    email_threads = {
+        str(thread.get("exhibit_label") or ""): thread
+        for thread in list(email_exhibit_manifest.get("threads") or [])
+    }
+    checklist_entries: list[dict[str, Any]] = []
+    for exhibit in exhibit_packet:
+        label = str(exhibit.get("label") or "")
+        citations = [
+            entry for entry in citation_map
+            if str(entry.get("exhibit_label") or "") == label
+        ]
+        paragraphs = sorted(int(entry.get("paragraph_number") or 0) for entry in citations)
+        sections = []
+        for entry in citations:
+            section = str(entry.get("section") or "")
+            if section and section not in sections:
+                sections.append(section)
+        source_path = str(exhibit.get("source_path") or "")
+        source_exists = (REPO_ROOT / source_path).exists()
+        thread = email_threads.get(label) or {}
+        checklist_entries.append({
+            "label": label,
+            "packet_order": int(exhibit.get("packet_order") or 0),
+            "suggested_title": str(exhibit.get("suggested_title") or ""),
+            "source_path": source_path,
+            "source_type": str(exhibit.get("source_type") or ""),
+            "source_exists": source_exists,
+            "paragraph_numbers": paragraphs,
+            "section_names": sections,
+            "citation_count": len(citations),
+            "message_count": int(thread.get("message_count") or 0),
+            "saved_message_count": sum(1 for message in list(thread.get("messages") or []) if message.get("has_saved_message")),
+            "handling_note": str(exhibit.get("handling_note") or ""),
+        })
+
+    summary = {
+        "status": "success",
+        "entry_count": len(checklist_entries),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "entries": checklist_entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = ["# Formal Complaint Filing Checklist", "", f"Entry count: {len(checklist_entries)}", ""]
+    if checklist_entries:
+        for entry in checklist_entries:
+            paragraphs = ", ".join(str(number) for number in entry["paragraph_numbers"]) or "not cited"
+            sections = ", ".join(entry["section_names"]) or "not cited"
+            email_detail = ""
+            if entry["source_type"] == "email_manifest":
+                email_detail = (
+                    f" | messages={entry['message_count']}"
+                    f" | saved_messages={entry['saved_message_count']}"
+                )
+            md_lines.append(
+                f"- Exhibit {entry['label']} | order={entry['packet_order']} | paragraphs={paragraphs} | sections={sections} | exists={entry['source_exists']}{email_detail} | {entry['handling_note']}"
+            )
+    else:
+        md_lines.append("No filing checklist entries generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _attachment_triage_reasons(attachment: dict[str, Any], duplicate_count: int) -> list[str]:
+    reasons: list[str] = []
+    filename = str(attachment.get("filename") or "")
+    content_type = str(attachment.get("content_type") or "")
+    if duplicate_count > 1:
+        reasons.append("duplicate-content")
+    if content_type.startswith("image/") and re.search(r"^(image\d*|img[_-]?\d+|image[_-]?\d+)", filename, flags=re.IGNORECASE):
+        reasons.append("generic-image-name")
+    if content_type.startswith("image/"):
+        reasons.append("image-attachment")
+    return reasons
+
+
+def _attachment_triage_action(attachment: dict[str, Any], duplicate_count: int) -> str:
+    content_type = str(attachment.get("content_type") or "")
+    filename = str(attachment.get("filename") or "")
+    if duplicate_count > 1 and content_type.startswith("image/"):
+        return "review_for_deduplication"
+    if duplicate_count > 1:
+        return "review_duplicate_document"
+    if content_type == "application/pdf":
+        return "likely_keep"
+    if content_type.startswith("image/") and re.search(r"^(image\d*|img[_-]?\d+|image[_-]?\d+)", filename, flags=re.IGNORECASE):
+        return "review_low_signal_image"
+    if content_type.startswith("image/"):
+        return "review_image_attachment"
+    return "review_other_attachment"
+
+
+def _build_formal_complaint_attachment_triage(
+    email_exhibit_manifest: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_attachment_triage.json"
+    md_path = chronology_dir / "formal_complaint_attachment_triage.md"
+
+    attachments: list[dict[str, Any]] = []
+    duplicate_counts: dict[str, int] = {}
+    for thread in list(email_exhibit_manifest.get("threads") or []):
+        exhibit_label = str(thread.get("exhibit_label") or "")
+        for message in list(thread.get("messages") or []):
+            for attachment in list(message.get("attachments") or []):
+                key = str(attachment.get("sha256") or "") or f"{attachment.get('filename')}|{attachment.get('size')}|{attachment.get('content_type')}"
+                duplicate_counts[key] = duplicate_counts.get(key, 0) + 1
+                attachments.append({
+                    "exhibit_label": exhibit_label,
+                    "subexhibit": str(message.get("subexhibit") or ""),
+                    "date": str(message.get("date") or ""),
+                    **attachment,
+                    "duplicate_key": key,
+                })
+
+    triaged: list[dict[str, Any]] = []
+    for attachment in attachments:
+        duplicate_count = duplicate_counts.get(str(attachment.get("duplicate_key") or ""), 1)
+        triaged.append({
+            **attachment,
+            "duplicate_count": duplicate_count,
+            "reasons": _attachment_triage_reasons(attachment, duplicate_count),
+            "recommended_action": _attachment_triage_action(attachment, duplicate_count),
+        })
+
+    triaged.sort(key=lambda entry: (str(entry.get("recommended_action") or ""), str(entry.get("exhibit_label") or ""), str(entry.get("filename") or "")))
+    flagged_count = sum(1 for entry in triaged if str(entry.get("recommended_action") or "") != "likely_keep")
+    summary = {
+        "status": "success",
+        "attachment_count": len(triaged),
+        "flagged_count": flagged_count,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "attachments": triaged,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Attachment Triage",
+        "",
+        f"Attachment count: {len(triaged)}",
+        f"Flagged count: {flagged_count}",
+        "",
+    ]
+    if triaged:
+        for entry in triaged:
+            reasons = ", ".join(list(entry.get("reasons") or [])) or "none"
+            md_lines.append(
+                f"- {entry['subexhibit']} | {entry['filename']} | {entry['content_type']} | size={entry['size']} | action={entry['recommended_action']} | duplicates={entry['duplicate_count']} | reasons={reasons} | {entry['path']}"
+            )
+    else:
+        md_lines.append("No attachment triage entries generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_formal_complaint_email_exhibit_recommendations(
+    email_exhibit_manifest: dict[str, Any],
+    attachment_triage: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_email_exhibit_recommendations.json"
+    md_path = chronology_dir / "formal_complaint_email_exhibit_recommendations.md"
+
+    triaged_attachments = list(attachment_triage.get("attachments") or [])
+    representative_keys: set[str] = set()
+    representative_lookup: dict[tuple[str, str], dict[str, Any]] = {}
+    deferred_lookup: dict[tuple[str, str], list[dict[str, Any]]] = {}
+    for entry in triaged_attachments:
+        duplicate_key = str(entry.get("duplicate_key") or "")
+        subexhibit = str(entry.get("subexhibit") or "")
+        attachment_path = str(entry.get("path") or "")
+        recommended_action = str(entry.get("recommended_action") or "")
+        pair = (subexhibit, attachment_path)
+
+        if recommended_action == "likely_keep":
+            representative_lookup[pair] = entry
+            continue
+
+        if recommended_action == "review_for_deduplication" and duplicate_key and duplicate_key not in representative_keys:
+            representative_keys.add(duplicate_key)
+            representative_lookup[pair] = {
+                **entry,
+                "recommended_action": "keep_representative_duplicate",
+            }
+            continue
+
+        deferred_lookup.setdefault(pair, []).append(entry)
+
+    thread_recommendations: list[dict[str, Any]] = []
+    retained_count = 0
+    deferred_count = 0
+    for thread in list(email_exhibit_manifest.get("threads") or []):
+        exhibit_label = str(thread.get("exhibit_label") or "")
+        recommended_messages: list[dict[str, Any]] = []
+        thread_retained = 0
+        thread_deferred = 0
+        for message in list(thread.get("messages") or []):
+            subexhibit = str(message.get("subexhibit") or "")
+            recommended_attachments: list[dict[str, Any]] = []
+            deferred_attachments: list[dict[str, Any]] = []
+            for attachment in list(message.get("attachments") or []):
+                pair = (subexhibit, str(attachment.get("path") or ""))
+                if pair in representative_lookup:
+                    recommended_attachments.append(representative_lookup[pair])
+                deferred_attachments.extend(deferred_lookup.get(pair, []))
+
+            thread_retained += len(recommended_attachments)
+            thread_deferred += len(deferred_attachments)
+            if not recommended_attachments and not deferred_attachments and not message.get("has_saved_message"):
+                continue
+
+            recommended_messages.append({
+                "subexhibit": subexhibit,
+                "date": str(message.get("date") or ""),
+                "subject": str(message.get("subject") or ""),
+                "has_saved_message": bool(message.get("has_saved_message")),
+                "email_path": str(message.get("email_path") or ""),
+                "recommended_attachments": recommended_attachments,
+                "deferred_attachments": deferred_attachments,
+            })
+
+        retained_count += thread_retained
+        deferred_count += thread_deferred
+        thread_recommendations.append({
+            "exhibit_label": exhibit_label,
+            "suggested_title": str(thread.get("suggested_title") or ""),
+            "message_count": int(thread.get("message_count") or 0),
+            "recommended_attachment_count": thread_retained,
+            "deferred_attachment_count": thread_deferred,
+            "messages": recommended_messages,
+        })
+
+    summary = {
+        "status": "success",
+        "thread_count": len(thread_recommendations),
+        "retained_attachment_count": retained_count,
+        "deferred_attachment_count": deferred_count,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "threads": thread_recommendations,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Email Exhibit Recommendations",
+        "",
+        f"Thread count: {len(thread_recommendations)}",
+        f"Retained attachment count: {retained_count}",
+        f"Deferred attachment count: {deferred_count}",
+        "",
+    ]
+    if thread_recommendations:
+        for thread in thread_recommendations:
+            md_lines.extend([
+                f"## Exhibit {thread['exhibit_label']}: {thread['suggested_title']}",
+                "",
+                f"Recommended attachments: {thread['recommended_attachment_count']}",
+                f"Deferred attachments: {thread['deferred_attachment_count']}",
+                "",
+            ])
+            for message in list(thread.get("messages") or []):
+                md_lines.append(
+                    f"- {message['subexhibit']} | {message['date']} | {message['subject']} | saved_message={message['has_saved_message']}"
+                )
+                for attachment in list(message.get("recommended_attachments") or []):
+                    md_lines.append(
+                        f"- keep: {attachment['filename']} | {attachment['content_type']} | action={attachment['recommended_action']} | duplicates={attachment['duplicate_count']} | {attachment['path']}"
+                    )
+                for attachment in list(message.get("deferred_attachments") or []):
+                    md_lines.append(
+                        f"- defer: {attachment['filename']} | {attachment['content_type']} | action={attachment['recommended_action']} | duplicates={attachment['duplicate_count']}"
+                    )
+                if not message.get("recommended_attachments") and not message.get("deferred_attachments"):
+                    md_lines.append("- no attachment recommendation entries for this message")
+            md_lines.append("")
+    else:
+        md_lines.append("No email exhibit recommendations generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_formal_complaint_proposed_filing_packet(
+    exhibit_packet: list[dict[str, Any]],
+    email_exhibit_manifest: dict[str, Any],
+    email_exhibit_recommendations: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_proposed_filing_packet.json"
+    md_path = chronology_dir / "formal_complaint_proposed_filing_packet.md"
+
+    manifest_threads = {
+        str(thread.get("exhibit_label") or ""): thread
+        for thread in list(email_exhibit_manifest.get("threads") or [])
+    }
+    recommendation_threads = {
+        str(thread.get("exhibit_label") or ""): thread
+        for thread in list(email_exhibit_recommendations.get("threads") or [])
+    }
+
+    packet_entries: list[dict[str, Any]] = []
+    total_representative_messages = 0
+    total_retained_attachments = 0
+    for exhibit in exhibit_packet:
+        label = str(exhibit.get("label") or "")
+        source_type = str(exhibit.get("source_type") or "")
+        entry = {
+            "packet_order": int(exhibit.get("packet_order") or 0),
+            "label": label,
+            "suggested_title": str(exhibit.get("suggested_title") or ""),
+            "source_path": str(exhibit.get("source_path") or ""),
+            "source_type": source_type,
+            "handling_note": str(exhibit.get("handling_note") or ""),
+        }
+        if source_type != "email_manifest":
+            entry["proposed_materials"] = [
+                {
+                    "kind": "exhibit_file",
+                    "path": str(exhibit.get("source_path") or ""),
+                    "note": str(exhibit.get("handling_note") or ""),
+                }
+            ]
+            packet_entries.append(entry)
+            continue
+
+        manifest_thread = manifest_threads.get(label) or {}
+        recommendation_thread = recommendation_threads.get(label) or {}
+        manifest_messages = {
+            str(message.get("subexhibit") or ""): message
+            for message in list(manifest_thread.get("messages") or [])
+        }
+        recommendation_messages = list(recommendation_thread.get("messages") or [])
+        representative_messages: list[dict[str, Any]] = []
+        if recommendation_messages:
+            first_subexhibit = str(recommendation_messages[0].get("subexhibit") or "")
+            last_subexhibit = str(recommendation_messages[-1].get("subexhibit") or "")
+            for message in recommendation_messages:
+                subexhibit = str(message.get("subexhibit") or "")
+                manifest_message = manifest_messages.get(subexhibit) or {}
+                recommended_attachments = list(message.get("recommended_attachments") or [])
+                selection_reasons: list[str] = []
+                if recommended_attachments:
+                    selection_reasons.append("retained-attachment")
+                if subexhibit == first_subexhibit:
+                    selection_reasons.append("thread-start")
+                if subexhibit == last_subexhibit and last_subexhibit != first_subexhibit:
+                    selection_reasons.append("thread-end")
+                if not selection_reasons:
+                    continue
+                representative_messages.append({
+                    "subexhibit": subexhibit,
+                    "date": str(message.get("date") or ""),
+                    "subject": str(message.get("subject") or ""),
+                    "email_path": str(manifest_message.get("email_path") or message.get("email_path") or ""),
+                    "has_saved_message": bool(manifest_message.get("has_saved_message") or message.get("has_saved_message")),
+                    "selection_reasons": selection_reasons,
+                    "retained_attachments": recommended_attachments,
+                })
+
+        total_representative_messages += len(representative_messages)
+        total_retained_attachments += sum(
+            len(list(message.get("retained_attachments") or []))
+            for message in representative_messages
+        )
+        entry["representative_message_count"] = len(representative_messages)
+        entry["retained_attachment_count"] = sum(
+            len(list(message.get("retained_attachments") or []))
+            for message in representative_messages
+        )
+        entry["proposed_materials"] = [
+            {
+                "kind": "representative_saved_message",
+                "subexhibit": message.get("subexhibit"),
+                "date": message.get("date"),
+                "subject": message.get("subject"),
+                "email_path": message.get("email_path"),
+                "has_saved_message": message.get("has_saved_message"),
+                "selection_reasons": message.get("selection_reasons"),
+                "retained_attachments": message.get("retained_attachments"),
+            }
+            for message in representative_messages
+        ]
+        packet_entries.append(entry)
+
+    summary = {
+        "status": "success",
+        "packet_count": len(packet_entries),
+        "representative_message_count": total_representative_messages,
+        "retained_attachment_count": total_retained_attachments,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "entries": packet_entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Proposed Filing Packet",
+        "",
+        f"Packet count: {len(packet_entries)}",
+        f"Representative saved messages: {total_representative_messages}",
+        f"Retained email attachments: {total_retained_attachments}",
+        "",
+    ]
+    if packet_entries:
+        for entry in packet_entries:
+            md_lines.append(
+                f"## {entry['packet_order']}. Exhibit {entry['label']}: {entry['suggested_title']}"
+            )
+            md_lines.append("")
+            md_lines.append(f"Source: {entry['source_path']}")
+            md_lines.append(f"Type: {entry['source_type']}")
+            md_lines.append(f"Handling: {entry['handling_note']}")
+            if entry["source_type"] != "email_manifest":
+                md_lines.append("- include: underlying exhibit file")
+                md_lines.append("")
+                continue
+            md_lines.append(f"Representative saved messages: {entry.get('representative_message_count', 0)}")
+            md_lines.append(f"Retained attachments: {entry.get('retained_attachment_count', 0)}")
+            md_lines.append("")
+            for material in list(entry.get("proposed_materials") or []):
+                reasons = ", ".join(list(material.get("selection_reasons") or [])) or "none"
+                email_path = str(material.get("email_path") or "unavailable (metadata-only entry)")
+                md_lines.append(
+                    f"- message: {material.get('subexhibit')} | {material.get('date')} | {material.get('subject')} | reasons={reasons} | eml={email_path}"
+                )
+                for attachment in list(material.get("retained_attachments") or []):
+                    md_lines.append(
+                        f"- attachment: {attachment['filename']} | {attachment['content_type']} | action={attachment['recommended_action']} | {attachment['path']}"
+                    )
+            md_lines.append("")
+    else:
+        md_lines.append("No proposed filing packet entries generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_formal_complaint_cite_check_matrix(
+    proposed_filing_packet: dict[str, Any],
+    citation_map: list[dict[str, Any]],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_cite_check_matrix.json"
+    md_path = chronology_dir / "formal_complaint_cite_check_matrix.md"
+
+    citations_by_label: dict[str, list[dict[str, Any]]] = {}
+    for citation in citation_map:
+        label = str(citation.get("exhibit_label") or "")
+        citations_by_label.setdefault(label, []).append(citation)
+
+    matrix_entries: list[dict[str, Any]] = []
+    for packet_entry in list(proposed_filing_packet.get("entries") or []):
+        label = str(packet_entry.get("label") or "")
+        citations = list(citations_by_label.get(label) or [])
+        paragraphs = sorted(int(citation.get("paragraph_number") or 0) for citation in citations)
+        sections: list[str] = []
+        for citation in citations:
+            section = str(citation.get("section") or "")
+            if section and section not in sections:
+                sections.append(section)
+
+        materials = []
+        for material in list(packet_entry.get("proposed_materials") or []):
+            if str(material.get("kind") or "") == "exhibit_file":
+                materials.append({
+                    "kind": "exhibit_file",
+                    "path": str(material.get("path") or ""),
+                    "note": str(material.get("note") or ""),
+                })
+                continue
+
+            materials.append({
+                "kind": str(material.get("kind") or ""),
+                "subexhibit": str(material.get("subexhibit") or ""),
+                "date": str(material.get("date") or ""),
+                "subject": str(material.get("subject") or ""),
+                "email_path": str(material.get("email_path") or ""),
+                "selection_reasons": list(material.get("selection_reasons") or []),
+                "retained_attachment_count": len(list(material.get("retained_attachments") or [])),
+                "retained_attachment_paths": [
+                    str(attachment.get("path") or "")
+                    for attachment in list(material.get("retained_attachments") or [])
+                ],
+            })
+
+        matrix_entries.append({
+            "packet_order": int(packet_entry.get("packet_order") or 0),
+            "label": label,
+            "suggested_title": str(packet_entry.get("suggested_title") or ""),
+            "source_type": str(packet_entry.get("source_type") or ""),
+            "source_path": str(packet_entry.get("source_path") or ""),
+            "citation_count": len(citations),
+            "paragraph_numbers": paragraphs,
+            "sections": sections,
+            "materials": materials,
+        })
+
+    summary = {
+        "status": "success",
+        "entry_count": len(matrix_entries),
+        "citation_count": len(citation_map),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "entries": matrix_entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Cite-Check Matrix",
+        "",
+        f"Entry count: {len(matrix_entries)}",
+        f"Citation count: {len(citation_map)}",
+        "",
+    ]
+    if matrix_entries:
+        for entry in matrix_entries:
+            paragraphs = ", ".join(str(number) for number in entry["paragraph_numbers"]) or "not cited"
+            sections = ", ".join(entry["sections"]) or "not cited"
+            md_lines.extend([
+                f"## {entry['packet_order']}. Exhibit {entry['label']}: {entry['suggested_title']}",
+                "",
+                f"Source: {entry['source_path']}",
+                f"Type: {entry['source_type']}",
+                f"Paragraphs: {paragraphs}",
+                f"Sections: {sections}",
+                f"Citation count: {entry['citation_count']}",
+                "",
+            ])
+            for material in list(entry.get("materials") or []):
+                if material.get("kind") == "exhibit_file":
+                    md_lines.append(f"- file: {material.get('path')} | note={material.get('note')}")
+                    continue
+                reasons = ", ".join(list(material.get("selection_reasons") or [])) or "none"
+                md_lines.append(
+                    f"- message: {material.get('subexhibit')} | {material.get('date')} | {material.get('subject')} | attachments={material.get('retained_attachment_count')} | reasons={reasons} | eml={material.get('email_path') or 'unavailable (metadata-only entry)'}"
+                )
+                for attachment_path in list(material.get("retained_attachment_paths") or []):
+                    md_lines.append(f"- attachment: {attachment_path}")
+            md_lines.append("")
+    else:
+        md_lines.append("No cite-check entries generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_formal_complaint_attorney_review_checklist(
+    filing_checklist: dict[str, Any],
+    attachment_triage: dict[str, Any],
+    email_exhibit_recommendations: dict[str, Any],
+    proposed_filing_packet: dict[str, Any],
+    cite_check_matrix: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_attorney_review_checklist.json"
+    md_path = chronology_dir / "formal_complaint_attorney_review_checklist.md"
+
+    triage_by_exhibit: dict[str, list[dict[str, Any]]] = {}
+    for entry in list(attachment_triage.get("attachments") or []):
+        triage_by_exhibit.setdefault(str(entry.get("exhibit_label") or ""), []).append(entry)
+
+    recommendation_by_exhibit = {
+        str(thread.get("exhibit_label") or ""): thread
+        for thread in list(email_exhibit_recommendations.get("threads") or [])
+    }
+    packet_by_exhibit = {
+        str(entry.get("label") or ""): entry
+        for entry in list(proposed_filing_packet.get("entries") or [])
+    }
+    cite_check_by_exhibit = {
+        str(entry.get("label") or ""): entry
+        for entry in list(cite_check_matrix.get("entries") or [])
+    }
+
+    checklist_entries: list[dict[str, Any]] = []
+    flagged_count = 0
+    for entry in list(filing_checklist.get("entries") or []):
+        label = str(entry.get("label") or "")
+        source_type = str(entry.get("source_type") or "")
+        triage_entries = list(triage_by_exhibit.get(label) or [])
+        deferred_count = sum(1 for item in triage_entries if str(item.get("recommended_action") or "") != "likely_keep")
+        duplicate_heavy_count = sum(1 for item in triage_entries if int(item.get("duplicate_count") or 0) > 1)
+        low_signal_count = sum(1 for item in triage_entries if str(item.get("recommended_action") or "") == "review_low_signal_image")
+        recommendation_thread = recommendation_by_exhibit.get(label) or {}
+        packet_entry = packet_by_exhibit.get(label) or {}
+        cite_check_entry = cite_check_by_exhibit.get(label) or {}
+
+        issues: list[str] = []
+        if not bool(entry.get("source_exists")):
+            issues.append("missing-source-file")
+        if int(entry.get("citation_count") or 0) == 0:
+            issues.append("uncited-exhibit")
+        if source_type == "email_manifest":
+            saved_message_count = int(entry.get("saved_message_count") or 0)
+            message_count = int(entry.get("message_count") or 0)
+            retained_count = int(recommendation_thread.get("recommended_attachment_count") or 0)
+            recommendation_deferred_count = int(recommendation_thread.get("deferred_attachment_count") or 0)
+            representative_message_count = int(packet_entry.get("representative_message_count") or 0)
+            if saved_message_count < message_count:
+                issues.append("metadata-only-email-entries-present")
+            if recommendation_deferred_count > retained_count:
+                issues.append("deferred-attachments-exceed-retained")
+            if duplicate_heavy_count >= 10:
+                issues.append("high-duplicate-pressure")
+            if low_signal_count >= 3:
+                issues.append("many-low-signal-images")
+            if representative_message_count == 0:
+                issues.append("no-representative-email-messages")
+        if len(list(cite_check_entry.get("materials") or [])) == 0:
+            issues.append("no-packet-materials")
+
+        severity = "ok"
+        if issues:
+            severity = "review"
+        if "missing-source-file" in issues or "no-packet-materials" in issues:
+            severity = "critical"
+        elif "metadata-only-email-entries-present" in issues or "high-duplicate-pressure" in issues:
+            severity = "high"
+
+        if severity != "ok":
+            flagged_count += 1
+
+        checklist_entries.append({
+            "label": label,
+            "packet_order": int(entry.get("packet_order") or 0),
+            "suggested_title": str(entry.get("suggested_title") or ""),
+            "source_type": source_type,
+            "paragraph_numbers": list(entry.get("paragraph_numbers") or []),
+            "citation_count": int(entry.get("citation_count") or 0),
+            "severity": severity,
+            "issues": issues,
+            "deferred_attachment_count": deferred_count,
+            "duplicate_heavy_count": duplicate_heavy_count,
+            "low_signal_count": low_signal_count,
+            "representative_message_count": int(packet_entry.get("representative_message_count") or 0),
+            "retained_attachment_count": int(packet_entry.get("retained_attachment_count") or 0),
+        })
+
+    summary = {
+        "status": "success",
+        "entry_count": len(checklist_entries),
+        "flagged_count": flagged_count,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "entries": checklist_entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Attorney Review Checklist",
+        "",
+        f"Entry count: {len(checklist_entries)}",
+        f"Flagged count: {flagged_count}",
+        "",
+    ]
+    if checklist_entries:
+        for entry in checklist_entries:
+            paragraphs = ", ".join(str(number) for number in list(entry.get("paragraph_numbers") or [])) or "not cited"
+            issues = ", ".join(list(entry.get("issues") or [])) or "none"
+            md_lines.append(
+                f"- Exhibit {entry['label']} | severity={entry['severity']} | paragraphs={paragraphs} | citations={entry['citation_count']} | representative_messages={entry['representative_message_count']} | retained_attachments={entry['retained_attachment_count']} | deferred_attachments={entry['deferred_attachment_count']} | issues={issues}"
+            )
+    else:
+        md_lines.append("No attorney review checklist entries generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_formal_complaint_ready_to_file_manifest(
+    proposed_filing_packet: dict[str, Any],
+    attorney_review_checklist: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_ready_to_file_manifest.json"
+    md_path = chronology_dir / "formal_complaint_ready_to_file_manifest.md"
+
+    review_by_label = {
+        str(entry.get("label") or ""): entry
+        for entry in list(attorney_review_checklist.get("entries") or [])
+    }
+
+    included_entries: list[dict[str, Any]] = []
+    withheld_entries: list[dict[str, Any]] = []
+    for packet_entry in list(proposed_filing_packet.get("entries") or []):
+        label = str(packet_entry.get("label") or "")
+        review_entry = review_by_label.get(label) or {}
+        severity = str(review_entry.get("severity") or "ok")
+        base_entry = {
+            "packet_order": int(packet_entry.get("packet_order") or 0),
+            "label": label,
+            "suggested_title": str(packet_entry.get("suggested_title") or ""),
+            "source_type": str(packet_entry.get("source_type") or ""),
+            "source_path": str(packet_entry.get("source_path") or ""),
+            "severity": severity,
+            "issues": list(review_entry.get("issues") or []),
+            "materials": list(packet_entry.get("proposed_materials") or []),
+        }
+        if severity == "ok":
+            included_entries.append(base_entry)
+        else:
+            withheld_entries.append(base_entry)
+
+    summary = {
+        "status": "success",
+        "included_count": len(included_entries),
+        "withheld_count": len(withheld_entries),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "included_entries": included_entries,
+        "withheld_entries": withheld_entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Ready-to-File Manifest",
+        "",
+        f"Included exhibits: {len(included_entries)}",
+        f"Withheld exhibits pending review: {len(withheld_entries)}",
+        "",
+        "## Included",
+        "",
+    ]
+    if included_entries:
+        for entry in included_entries:
+            md_lines.append(
+                f"- {entry['packet_order']}. Exhibit {entry['label']} | {entry['suggested_title']} | {entry['source_type']} | {entry['source_path']}"
+            )
+    else:
+        md_lines.append("No exhibits currently auto-included.")
+
+    md_lines.extend(["", "## Withheld Pending Review", ""])
+    if withheld_entries:
+        for entry in withheld_entries:
+            issues = ", ".join(list(entry.get("issues") or [])) or "none"
+            md_lines.append(
+                f"- {entry['packet_order']}. Exhibit {entry['label']} | {entry['suggested_title']} | severity={entry['severity']} | issues={issues}"
+            )
+    else:
+        md_lines.append("No exhibits are currently withheld.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _safe_packet_name(value: str) -> str:
+    cleaned = re.sub(r"[^A-Za-z0-9._-]+", "_", value.strip())
+    cleaned = cleaned.strip("._")
+    return cleaned or "item"
+
+
+def _materialize_ready_to_file_packet(
+    ready_to_file_manifest: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    packet_dir = chronology_dir / "formal_complaint_ready_to_file_packet"
+    included_dir = packet_dir / "included"
+    withheld_dir = packet_dir / "withheld"
+    included_dir.mkdir(parents=True, exist_ok=True)
+    withheld_dir.mkdir(parents=True, exist_ok=True)
+
+    copied_files: list[dict[str, Any]] = []
+    for entry in list(ready_to_file_manifest.get("included_entries") or []):
+        source_type = str(entry.get("source_type") or "")
+        if source_type != "paper_pdf":
+            continue
+        source_path = REPO_ROOT / str(entry.get("source_path") or "")
+        if not source_path.exists() or not source_path.is_file():
+            continue
+        filename = f"{int(entry.get('packet_order') or 0):02d}_Exhibit_{_safe_packet_name(str(entry.get('label') or ''))}_{_safe_packet_name(source_path.name)}"
+        destination = included_dir / filename
+        shutil.copy2(source_path, destination)
+        copied_files.append({
+            "label": str(entry.get("label") or ""),
+            "source_path": str(source_path),
+            "destination_path": str(destination),
+        })
+
+    withheld_lines = ["# Withheld Exhibits", ""]
+    for entry in list(ready_to_file_manifest.get("withheld_entries") or []):
+        issues = ", ".join(list(entry.get("issues") or [])) or "none"
+        withheld_lines.append(
+            f"- Exhibit {entry.get('label')} | severity={entry.get('severity')} | {entry.get('suggested_title')} | issues={issues}"
+        )
+    if len(withheld_lines) == 2:
+        withheld_lines.append("No withheld exhibits.")
+    withheld_manifest_path = withheld_dir / "WITHHELD_EXHIBITS.md"
+    withheld_manifest_path.write_text("\n".join(withheld_lines).strip() + "\n", encoding="utf-8")
+
+    summary_path = packet_dir / "README.md"
+    summary_lines = [
+        "# Ready-to-File Packet",
+        "",
+        f"Included paper exhibits copied: {len(copied_files)}",
+        f"Withheld exhibits: {len(list(ready_to_file_manifest.get('withheld_entries') or []))}",
+        "",
+        "See ./included for copied exhibit files and ./withheld/WITHHELD_EXHIBITS.md for exhibits held back pending review.",
+    ]
+    summary_path.write_text("\n".join(summary_lines).strip() + "\n", encoding="utf-8")
+
+    return {
+        "status": "success",
+        "packet_dir": str(packet_dir),
+        "included_dir": str(included_dir),
+        "withheld_dir": str(withheld_dir),
+        "copied_file_count": len(copied_files),
+        "copied_files": copied_files,
+        "withheld_manifest_path": str(withheld_manifest_path),
+        "readme_path": str(summary_path),
+    }
+
+
+def _materialize_withheld_review_packet(
+    ready_to_file_manifest: dict[str, Any],
+    attorney_review_checklist: dict[str, Any],
+    email_exhibit_recommendations: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    packet_dir = chronology_dir / "formal_complaint_withheld_review_packet"
+    packet_dir.mkdir(parents=True, exist_ok=True)
+
+    review_by_label = {
+        str(entry.get("label") or ""): entry
+        for entry in list(attorney_review_checklist.get("entries") or [])
+    }
+    recommendations_by_label = {
+        str(thread.get("exhibit_label") or ""): thread
+        for thread in list(email_exhibit_recommendations.get("threads") or [])
+    }
+
+    packet_entries: list[dict[str, Any]] = []
+    copied_files: list[dict[str, Any]] = []
+    withheld_entries = list(ready_to_file_manifest.get("withheld_entries") or [])
+    for entry in withheld_entries:
+        label = str(entry.get("label") or "")
+        review_entry = review_by_label.get(label) or {}
+        recommendation_thread = recommendations_by_label.get(label) or {}
+        exhibit_dir = packet_dir / (
+            f"{int(entry.get('packet_order') or 0):02d}_Exhibit_{_safe_packet_name(label)}_"
+            f"{_safe_packet_name(str(entry.get('suggested_title') or 'review'))}"
+        )
+        representative_dir = exhibit_dir / "representative_messages"
+        retained_dir = exhibit_dir / "retained_attachments"
+        deferred_dir = exhibit_dir / "deferred_attachments"
+        representative_dir.mkdir(parents=True, exist_ok=True)
+        retained_dir.mkdir(parents=True, exist_ok=True)
+        deferred_dir.mkdir(parents=True, exist_ok=True)
+
+        copied_representative_messages: list[dict[str, Any]] = []
+        copied_retained_attachments: list[dict[str, Any]] = []
+        copied_deferred_attachments: list[dict[str, Any]] = []
+
+        for material in list(entry.get("materials") or []):
+            kind = str(material.get("kind") or "")
+            if kind == "exhibit_file":
+                source_path = REPO_ROOT / str(material.get("path") or "")
+                if source_path.exists() and source_path.is_file():
+                    destination = exhibit_dir / f"source_{_safe_packet_name(source_path.name)}"
+                    shutil.copy2(source_path, destination)
+                    copied_files.append({
+                        "label": label,
+                        "kind": kind,
+                        "source_path": str(source_path),
+                        "destination_path": str(destination),
+                    })
+                continue
+
+            if kind != "representative_saved_message":
+                continue
+
+            subexhibit = str(material.get("subexhibit") or "")
+            email_path_value = str(material.get("email_path") or "")
+            if email_path_value:
+                email_path = Path(email_path_value)
+                if email_path.exists() and email_path.is_file():
+                    destination = representative_dir / f"{_safe_packet_name(subexhibit)}_{_safe_packet_name(email_path.name)}"
+                    shutil.copy2(email_path, destination)
+                    copied_entry = {
+                        "subexhibit": subexhibit,
+                        "source_path": str(email_path),
+                        "destination_path": str(destination),
+                    }
+                    copied_representative_messages.append(copied_entry)
+                    copied_files.append({
+                        "label": label,
+                        "kind": "representative_saved_message",
+                        **copied_entry,
+                    })
+
+            for attachment in list(material.get("retained_attachments") or []):
+                attachment_path_value = str(attachment.get("path") or "")
+                if not attachment_path_value:
+                    continue
+                attachment_path = Path(attachment_path_value)
+                if not attachment_path.exists() or not attachment_path.is_file():
+                    continue
+                destination = retained_dir / (
+                    f"{_safe_packet_name(subexhibit)}_{_safe_packet_name(str(attachment.get('filename') or attachment_path.name))}"
+                )
+                shutil.copy2(attachment_path, destination)
+                copied_entry = {
+                    "subexhibit": subexhibit,
+                    "filename": str(attachment.get("filename") or attachment_path.name),
+                    "source_path": str(attachment_path),
+                    "destination_path": str(destination),
+                    "recommended_action": str(attachment.get("recommended_action") or ""),
+                    "duplicate_count": int(attachment.get("duplicate_count") or 0),
+                }
+                copied_retained_attachments.append(copied_entry)
+                copied_files.append({
+                    "label": label,
+                    "kind": "retained_attachment",
+                    **copied_entry,
+                })
+
+        deferred_manifest_lines = [
+            f"# Exhibit {label} Deferred Attachments",
+            "",
+        ]
+        for message in list(recommendation_thread.get("messages") or []):
+            subexhibit = str(message.get("subexhibit") or "")
+            deferred_manifest_lines.append(
+                f"- {subexhibit} | {message.get('date') or ''} | {message.get('subject') or ''}"
+            )
+            deferred_items = list(message.get("deferred_attachments") or [])
+            if not deferred_items:
+                deferred_manifest_lines.append("- no deferred attachments")
+                continue
+            for attachment in deferred_items:
+                attachment_path_value = str(attachment.get("path") or "")
+                copied_destination = ""
+                if attachment_path_value:
+                    attachment_path = Path(attachment_path_value)
+                    if attachment_path.exists() and attachment_path.is_file():
+                        destination = deferred_dir / (
+                            f"{_safe_packet_name(subexhibit)}_{_safe_packet_name(str(attachment.get('filename') or attachment_path.name))}"
+                        )
+                        shutil.copy2(attachment_path, destination)
+                        copied_destination = str(destination)
+                        copied_entry = {
+                            "subexhibit": subexhibit,
+                            "filename": str(attachment.get("filename") or attachment_path.name),
+                            "source_path": str(attachment_path),
+                            "destination_path": copied_destination,
+                            "recommended_action": str(attachment.get("recommended_action") or ""),
+                            "duplicate_count": int(attachment.get("duplicate_count") or 0),
+                            "reasons": list(attachment.get("reasons") or []),
+                        }
+                        copied_deferred_attachments.append(copied_entry)
+                        copied_files.append({
+                            "label": label,
+                            "kind": "deferred_attachment",
+                            **copied_entry,
+                        })
+                reasons = ", ".join(list(attachment.get("reasons") or [])) or "none"
+                deferred_manifest_lines.append(
+                    f"- defer: {attachment.get('filename') or ''} | action={attachment.get('recommended_action') or ''} | duplicates={int(attachment.get('duplicate_count') or 0)} | reasons={reasons} | copied_to={copied_destination or 'not-copied'}"
+                )
+
+        deferred_manifest_path = exhibit_dir / "DEFERRED_ATTACHMENTS.md"
+        deferred_manifest_path.write_text("\n".join(deferred_manifest_lines).strip() + "\n", encoding="utf-8")
+
+        readme_lines = [
+            f"# Exhibit {label} Withheld Review Packet",
+            "",
+            f"Title: {entry.get('suggested_title') or ''}",
+            f"Severity: {review_entry.get('severity') or entry.get('severity') or 'review'}",
+            f"Issues: {', '.join(list(review_entry.get('issues') or entry.get('issues') or [])) or 'none'}",
+            f"Paragraphs: {', '.join(str(number) for number in list(review_entry.get('paragraph_numbers') or [])) or 'not cited'}",
+            f"Representative messages copied: {len(copied_representative_messages)}",
+            f"Retained attachments copied: {len(copied_retained_attachments)}",
+            f"Deferred attachments copied: {len(copied_deferred_attachments)}",
+            "",
+            "Contents:",
+            "- representative_messages/: saved .eml files selected for packet-level review.",
+            "- retained_attachments/: attachments currently recommended to keep.",
+            "- deferred_attachments/: attachments withheld for manual review.",
+            "- DEFERRED_ATTACHMENTS.md: per-message deferred attachment log.",
+        ]
+        readme_path = exhibit_dir / "README.md"
+        readme_path.write_text("\n".join(readme_lines).strip() + "\n", encoding="utf-8")
+
+        packet_entries.append({
+            "packet_order": int(entry.get("packet_order") or 0),
+            "label": label,
+            "suggested_title": str(entry.get("suggested_title") or ""),
+            "severity": str(review_entry.get("severity") or entry.get("severity") or "review"),
+            "issues": list(review_entry.get("issues") or entry.get("issues") or []),
+            "paragraph_numbers": list(review_entry.get("paragraph_numbers") or []),
+            "exhibit_dir": str(exhibit_dir),
+            "readme_path": str(readme_path),
+            "deferred_manifest_path": str(deferred_manifest_path),
+            "representative_message_count": len(copied_representative_messages),
+            "retained_attachment_count": len(copied_retained_attachments),
+            "deferred_attachment_count": len(copied_deferred_attachments),
+        })
+
+    summary_readme_path = packet_dir / "README.md"
+    summary_lines = [
+        "# Withheld Review Packet",
+        "",
+        f"Withheld exhibits: {len(packet_entries)}",
+        f"Copied review files: {len(copied_files)}",
+        "",
+        "This packet isolates only exhibits that remain withheld from the ready-to-file packet so manual review can focus on representative saved emails, currently retained attachments, and deferred attachments.",
+        "",
+    ]
+    if packet_entries:
+        for entry in packet_entries:
+            issues = ", ".join(list(entry.get("issues") or [])) or "none"
+            summary_lines.append(
+                f"- Exhibit {entry['label']} | severity={entry['severity']} | paragraphs={', '.join(str(number) for number in list(entry.get('paragraph_numbers') or [])) or 'not cited'} | representative_messages={entry['representative_message_count']} | retained_attachments={entry['retained_attachment_count']} | deferred_attachments={entry['deferred_attachment_count']} | issues={issues} | dir={entry['exhibit_dir']}"
+            )
+    else:
+        summary_lines.append("No withheld exhibits required a review packet.")
+    summary_readme_path.write_text("\n".join(summary_lines).strip() + "\n", encoding="utf-8")
+
+    json_path = chronology_dir / "formal_complaint_withheld_review_packet.json"
+    summary = {
+        "status": "success",
+        "packet_dir": str(packet_dir),
+        "readme_path": str(summary_readme_path),
+        "withheld_exhibit_count": len(packet_entries),
+        "copied_file_count": len(copied_files),
+        "entries": packet_entries,
+        "copied_files": copied_files,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+    summary["json_path"] = str(json_path)
+    return summary
+
+
+def _build_formal_complaint_withheld_decision_queue(
+    ready_to_file_manifest: dict[str, Any],
+    attachment_triage: dict[str, Any],
+    email_exhibit_recommendations: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_withheld_decision_queue.json"
+    md_path = chronology_dir / "formal_complaint_withheld_decision_queue.md"
+
+    withheld_labels = {
+        str(entry.get("label") or "")
+        for entry in list(ready_to_file_manifest.get("withheld_entries") or [])
+    }
+    recommendation_threads = {
+        str(thread.get("exhibit_label") or ""): thread
+        for thread in list(email_exhibit_recommendations.get("threads") or [])
+    }
+
+    retained_duplicate_keys_by_label: dict[str, set[str]] = {}
+    for label in withheld_labels:
+        thread = recommendation_threads.get(label) or {}
+        for message in list(thread.get("messages") or []):
+            for attachment in list(message.get("recommended_attachments") or []):
+                duplicate_key = str(attachment.get("duplicate_key") or "")
+                if duplicate_key:
+                    retained_duplicate_keys_by_label.setdefault(label, set()).add(duplicate_key)
+
+    grouped: dict[tuple[str, str], dict[str, Any]] = {}
+    for attachment in list(attachment_triage.get("attachments") or []):
+        label = str(attachment.get("exhibit_label") or "")
+        if label not in withheld_labels:
+            continue
+        action = str(attachment.get("recommended_action") or "")
+        if action == "likely_keep":
+            continue
+
+        duplicate_key = str(attachment.get("duplicate_key") or "")
+        group_key = duplicate_key or str(attachment.get("path") or "") or str(attachment.get("filename") or "")
+        bucket = grouped.setdefault(
+            (label, group_key),
+            {
+                "exhibit_label": label,
+                "filename": str(attachment.get("filename") or ""),
+                "content_type": str(attachment.get("content_type") or ""),
+                "recommended_action": action,
+                "duplicate_count": int(attachment.get("duplicate_count") or 0),
+                "duplicate_key": duplicate_key,
+                "reasons": list(attachment.get("reasons") or []),
+                "paths": [],
+                "subexhibits": [],
+                "dates": [],
+            },
+        )
+        path = str(attachment.get("path") or "")
+        subexhibit = str(attachment.get("subexhibit") or "")
+        date = str(attachment.get("date") or "")
+        if path and path not in bucket["paths"]:
+            bucket["paths"].append(path)
+        if subexhibit and subexhibit not in bucket["subexhibits"]:
+            bucket["subexhibits"].append(subexhibit)
+        if date and date not in bucket["dates"]:
+            bucket["dates"].append(date)
+
+    entries: list[dict[str, Any]] = []
+    for (label, _group_key), bucket in grouped.items():
+        retained_duplicate = bool(bucket.get("duplicate_key")) and bucket.get("duplicate_key") in retained_duplicate_keys_by_label.get(label, set())
+        action = str(bucket.get("recommended_action") or "")
+        disposition = "manual_review_required"
+        rationale = "Attachment requires individualized review."
+        if action == "review_for_deduplication" and retained_duplicate:
+            disposition = "exclude_duplicate_copy"
+            rationale = "A representative copy for this duplicate image set is already retained in the exhibit packet materials."
+        elif action == "review_for_deduplication":
+            disposition = "review_for_single_representative"
+            rationale = "Duplicate image set appears multiple times without an already-confirmed retained representative in this grouped view."
+        elif action == "review_low_signal_image":
+            disposition = "exclude_unless_substantive_image"
+            rationale = "Single generic image with no current signal beyond being an image attachment; exclude unless it contains independently material evidence."
+        elif action == "review_duplicate_document":
+            disposition = "exclude_duplicate_document"
+            rationale = "Duplicate document appears unnecessary unless this copy has materially better completeness or legibility."
+
+        entries.append({
+            **bucket,
+            "occurrence_count": len(list(bucket.get("paths") or [])),
+            "recommended_disposition": disposition,
+            "decision_rationale": rationale,
+            "retained_representative_exists": retained_duplicate,
+        })
+
+    entries.sort(
+        key=lambda entry: (
+            str(entry.get("exhibit_label") or ""),
+            0 if str(entry.get("recommended_disposition") or "") == "review_for_single_representative" else 1,
+            -int(entry.get("duplicate_count") or 0),
+            str(entry.get("filename") or ""),
+        )
+    )
+
+    disposition_counts: dict[str, int] = {}
+    for entry in entries:
+        disposition = str(entry.get("recommended_disposition") or "")
+        disposition_counts[disposition] = disposition_counts.get(disposition, 0) + 1
+
+    summary = {
+        "status": "success",
+        "entry_count": len(entries),
+        "exhibit_count": len(withheld_labels),
+        "disposition_counts": disposition_counts,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "entries": entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Withheld Decision Queue",
+        "",
+        f"Withheld exhibits: {len(withheld_labels)}",
+        f"Unique decision entries: {len(entries)}",
+        "",
+    ]
+    if disposition_counts:
+        md_lines.append("## Disposition Summary")
+        md_lines.append("")
+        for disposition, count in sorted(disposition_counts.items()):
+            md_lines.append(f"- {disposition}: {count}")
+        md_lines.append("")
+
+    if entries:
+        current_label = ""
+        for entry in entries:
+            label = str(entry.get("exhibit_label") or "")
+            if label != current_label:
+                current_label = label
+                md_lines.extend([f"## Exhibit {label}", ""])
+            reasons = ", ".join(list(entry.get("reasons") or [])) or "none"
+            subexhibits = ", ".join(list(entry.get("subexhibits") or [])) or "none"
+            md_lines.append(
+                f"- {entry['filename']} | disposition={entry['recommended_disposition']} | triage_action={entry['recommended_action']} | duplicates={entry['duplicate_count']} | occurrences={entry['occurrence_count']} | representative_retained={entry['retained_representative_exists']} | subexhibits={subexhibits}"
+            )
+            md_lines.append(f"- rationale: {entry['decision_rationale']}")
+            md_lines.append(f"- reasons: {reasons}")
+        md_lines.append("")
+    else:
+        md_lines.append("No withheld decision entries generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _materialize_candidate_final_packet(
+    ready_to_file_manifest: dict[str, Any],
+    proposed_filing_packet: dict[str, Any],
+    withheld_decision_queue: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    packet_dir = chronology_dir / "formal_complaint_candidate_final_packet"
+    included_dir = packet_dir / "included"
+    email_dir = packet_dir / "candidate_email_exhibits"
+    excluded_manifest_path = packet_dir / "EXCLUDED_WITHHELD_ITEMS.md"
+    readme_path = packet_dir / "README.md"
+    included_dir.mkdir(parents=True, exist_ok=True)
+    email_dir.mkdir(parents=True, exist_ok=True)
+
+    copied_files: list[dict[str, Any]] = []
+    paper_exhibit_count = 0
+    for entry in list(ready_to_file_manifest.get("included_entries") or []):
+        source_type = str(entry.get("source_type") or "")
+        if source_type != "paper_pdf":
+            continue
+        source_path = REPO_ROOT / str(entry.get("source_path") or "")
+        if not source_path.exists() or not source_path.is_file():
+            continue
+        filename = f"{int(entry.get('packet_order') or 0):02d}_Exhibit_{_safe_packet_name(str(entry.get('label') or ''))}_{_safe_packet_name(source_path.name)}"
+        destination = included_dir / filename
+        shutil.copy2(source_path, destination)
+        paper_exhibit_count += 1
+        copied_files.append({
+            "label": str(entry.get("label") or ""),
+            "kind": "paper_exhibit",
+            "source_path": str(source_path),
+            "destination_path": str(destination),
+        })
+
+    queue_by_label: dict[str, list[dict[str, Any]]] = {}
+    for entry in list(withheld_decision_queue.get("entries") or []):
+        queue_by_label.setdefault(str(entry.get("exhibit_label") or ""), []).append(entry)
+
+    candidate_email_entries: list[dict[str, Any]] = []
+    for packet_entry in list(proposed_filing_packet.get("entries") or []):
+        label = str(packet_entry.get("label") or "")
+        if str(packet_entry.get("source_type") or "") != "email_manifest":
+            continue
+        exhibit_queue_entries = list(queue_by_label.get(label) or [])
+        if not exhibit_queue_entries:
+            continue
+
+        exhibit_dir = email_dir / (
+            f"{int(packet_entry.get('packet_order') or 0):02d}_Exhibit_{_safe_packet_name(label)}_"
+            f"{_safe_packet_name(str(packet_entry.get('suggested_title') or 'email_exhibit'))}"
+        )
+        representative_dir = exhibit_dir / "representative_messages"
+        retained_dir = exhibit_dir / "retained_attachments"
+        representative_dir.mkdir(parents=True, exist_ok=True)
+        retained_dir.mkdir(parents=True, exist_ok=True)
+
+        copied_message_count = 0
+        copied_attachment_count = 0
+        copied_subexhibits: list[str] = []
+        for material in list(packet_entry.get("proposed_materials") or []):
+            if str(material.get("kind") or "") != "representative_saved_message":
+                continue
+            subexhibit = str(material.get("subexhibit") or "")
+            if subexhibit and subexhibit not in copied_subexhibits:
+                copied_subexhibits.append(subexhibit)
+            email_path_value = str(material.get("email_path") or "")
+            if email_path_value:
+                email_path = Path(email_path_value)
+                if email_path.exists() and email_path.is_file():
+                    destination = representative_dir / f"{_safe_packet_name(subexhibit)}_{_safe_packet_name(email_path.name)}"
+                    shutil.copy2(email_path, destination)
+                    copied_message_count += 1
+                    copied_files.append({
+                        "label": label,
+                        "kind": "candidate_email_message",
+                        "source_path": str(email_path),
+                        "destination_path": str(destination),
+                    })
+            for attachment in list(material.get("retained_attachments") or []):
+                attachment_path_value = str(attachment.get("path") or "")
+                if not attachment_path_value:
+                    continue
+                attachment_path = Path(attachment_path_value)
+                if not attachment_path.exists() or not attachment_path.is_file():
+                    continue
+                destination = retained_dir / (
+                    f"{_safe_packet_name(subexhibit)}_{_safe_packet_name(str(attachment.get('filename') or attachment_path.name))}"
+                )
+                shutil.copy2(attachment_path, destination)
+                copied_attachment_count += 1
+                copied_files.append({
+                    "label": label,
+                    "kind": "candidate_email_attachment",
+                    "source_path": str(attachment_path),
+                    "destination_path": str(destination),
+                })
+
+        excluded_count = len(exhibit_queue_entries)
+        excluded_duplicates = sum(
+            1
+            for entry in exhibit_queue_entries
+            if str(entry.get("recommended_disposition") or "") == "exclude_duplicate_copy"
+        )
+        excluded_low_signal = sum(
+            1
+            for entry in exhibit_queue_entries
+            if str(entry.get("recommended_disposition") or "") == "exclude_unless_substantive_image"
+        )
+        exhibit_readme_path = exhibit_dir / "README.md"
+        exhibit_readme_lines = [
+            f"# Candidate Exhibit {label}",
+            "",
+            f"Title: {packet_entry.get('suggested_title') or ''}",
+            f"Representative saved messages copied: {copied_message_count}",
+            f"Retained attachments copied: {copied_attachment_count}",
+            f"Excluded withheld decision entries: {excluded_count}",
+            f"Excluded duplicate copies: {excluded_duplicates}",
+            f"Excluded low-signal images: {excluded_low_signal}",
+            "",
+            "This folder contains the curated materials that remain after excluding duplicate copies already represented by retained materials and excluding low-signal generic images unless later found substantive.",
+        ]
+        exhibit_readme_path.write_text("\n".join(exhibit_readme_lines).strip() + "\n", encoding="utf-8")
+
+        candidate_email_entries.append({
+            "label": label,
+            "packet_order": int(packet_entry.get("packet_order") or 0),
+            "suggested_title": str(packet_entry.get("suggested_title") or ""),
+            "exhibit_dir": str(exhibit_dir),
+            "representative_message_count": copied_message_count,
+            "retained_attachment_count": copied_attachment_count,
+            "excluded_decision_count": excluded_count,
+            "excluded_duplicate_count": excluded_duplicates,
+            "excluded_low_signal_count": excluded_low_signal,
+            "included_subexhibits": copied_subexhibits,
+        })
+
+    excluded_lines = [
+        "# Excluded Withheld Items",
+        "",
+        "These withheld items were not promoted into the candidate final packet because they were either duplicate copies already represented by retained materials or low-signal generic images.",
+        "",
+    ]
+    for label in sorted(queue_by_label):
+        excluded_lines.extend([f"## Exhibit {label}", ""])
+        for entry in list(queue_by_label.get(label) or []):
+            subexhibits = ", ".join(list(entry.get("subexhibits") or [])) or "none"
+            excluded_lines.append(
+                f"- {entry.get('filename') or ''} | disposition={entry.get('recommended_disposition') or ''} | duplicates={int(entry.get('duplicate_count') or 0)} | occurrences={int(entry.get('occurrence_count') or 0)} | subexhibits={subexhibits}"
+            )
+            excluded_lines.append(f"- rationale: {entry.get('decision_rationale') or ''}")
+        excluded_lines.append("")
+    excluded_manifest_path.write_text("\n".join(excluded_lines).strip() + "\n", encoding="utf-8")
+
+    summary_lines = [
+        "# Candidate Final Packet",
+        "",
+        f"Included paper exhibits copied: {paper_exhibit_count}",
+        f"Candidate email exhibits added: {len(candidate_email_entries)}",
+        f"Total copied files: {len(copied_files)}",
+        "",
+        "This candidate packet keeps the ready-to-file paper exhibits and adds curated email exhibit folders for withheld threads using only representative saved messages and retained attachments.",
+        "Excluded withheld items are summarized in EXCLUDED_WITHHELD_ITEMS.md.",
+        "",
+    ]
+    if candidate_email_entries:
+        for entry in candidate_email_entries:
+            summary_lines.append(
+                f"- Exhibit {entry['label']} | representative_messages={entry['representative_message_count']} | retained_attachments={entry['retained_attachment_count']} | excluded_decisions={entry['excluded_decision_count']} | dir={entry['exhibit_dir']}"
+            )
+    else:
+        summary_lines.append("No candidate email exhibits were materialized.")
+    readme_path.write_text("\n".join(summary_lines).strip() + "\n", encoding="utf-8")
+
+    return {
+        "status": "success",
+        "packet_dir": str(packet_dir),
+        "included_dir": str(included_dir),
+        "candidate_email_dir": str(email_dir),
+        "paper_exhibit_count": paper_exhibit_count,
+        "candidate_email_exhibit_count": len(candidate_email_entries),
+        "copied_file_count": len(copied_files),
+        "candidate_email_entries": candidate_email_entries,
+        "excluded_manifest_path": str(excluded_manifest_path),
+        "readme_path": str(readme_path),
+    }
+
+
+def _build_formal_complaint_attorney_recommendation_memo(
+    ready_to_file_manifest: dict[str, Any],
+    withheld_decision_queue: dict[str, Any],
+    candidate_final_packet: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_attorney_recommendation_memo.json"
+    md_path = chronology_dir / "formal_complaint_attorney_recommendation_memo.md"
+
+    withheld_entries = list(ready_to_file_manifest.get("withheld_entries") or [])
+    queue_entries = list(withheld_decision_queue.get("entries") or [])
+    disposition_counts = dict(withheld_decision_queue.get("disposition_counts") or {})
+    candidate_email_entries = list(candidate_final_packet.get("candidate_email_entries") or [])
+
+    memo_entries = []
+    queue_by_label: dict[str, list[dict[str, Any]]] = {}
+    for entry in queue_entries:
+        queue_by_label.setdefault(str(entry.get("exhibit_label") or ""), []).append(entry)
+
+    candidate_by_label = {
+        str(entry.get("label") or ""): entry
+        for entry in candidate_email_entries
+    }
+
+    for withheld in withheld_entries:
+        label = str(withheld.get("label") or "")
+        candidate = candidate_by_label.get(label) or {}
+        exhibit_queue_entries = list(queue_by_label.get(label) or [])
+        memo_entries.append({
+            "label": label,
+            "suggested_title": str(withheld.get("suggested_title") or ""),
+            "issues": list(withheld.get("issues") or []),
+            "candidate_representative_message_count": int(candidate.get("representative_message_count") or 0),
+            "candidate_retained_attachment_count": int(candidate.get("retained_attachment_count") or 0),
+            "excluded_decision_count": int(candidate.get("excluded_decision_count") or 0),
+            "excluded_duplicate_count": int(candidate.get("excluded_duplicate_count") or 0),
+            "excluded_low_signal_count": int(candidate.get("excluded_low_signal_count") or 0),
+            "queue_entries": exhibit_queue_entries,
+        })
+
+    summary = {
+        "status": "success",
+        "included_paper_exhibit_count": int(candidate_final_packet.get("paper_exhibit_count") or 0),
+        "candidate_email_exhibit_count": int(candidate_final_packet.get("candidate_email_exhibit_count") or 0),
+        "copied_file_count": int(candidate_final_packet.get("copied_file_count") or 0),
+        "withheld_decision_entry_count": len(queue_entries),
+        "disposition_counts": disposition_counts,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "entries": memo_entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Attorney Recommendation Memo",
+        "",
+        "## Recommended Filing Set",
+        "",
+        f"- Paper exhibits recommended for inclusion: {summary['included_paper_exhibit_count']}",
+        f"- Curated email exhibits recommended for inclusion: {summary['candidate_email_exhibit_count']}",
+        f"- Total files in candidate packet: {summary['copied_file_count']}",
+        "",
+        "## Withheld Queue Resolution",
+        "",
+        f"- Unique withheld decision entries: {summary['withheld_decision_entry_count']}",
+    ]
+    for disposition, count in sorted(disposition_counts.items()):
+        md_lines.append(f"- {disposition}: {count}")
+    md_lines.extend([
+        "",
+        "## Recommendation",
+        "",
+        "Use the candidate final packet as the operative filing set unless attorney review identifies a specific excluded image that carries unique evidentiary value not already preserved in the retained representative materials.",
+        "The current queue analysis supports excluding repeated duplicate images where a representative copy is already retained and excluding low-signal generic images unless later shown to be substantive.",
+        "",
+    ])
+
+    for entry in memo_entries:
+        issues = ", ".join(list(entry.get("issues") or [])) or "none"
+        md_lines.extend([
+            f"## Exhibit {entry['label']}: {entry['suggested_title']}",
+            "",
+            f"- Original issues: {issues}",
+            f"- Candidate representative messages: {entry['candidate_representative_message_count']}",
+            f"- Candidate retained attachments: {entry['candidate_retained_attachment_count']}",
+            f"- Excluded decision entries: {entry['excluded_decision_count']}",
+            f"- Excluded duplicate copies: {entry['excluded_duplicate_count']}",
+            f"- Excluded low-signal images: {entry['excluded_low_signal_count']}",
+            "",
+        ])
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_formal_complaint_recommended_filing_manifest(
+    ready_to_file_manifest: dict[str, Any],
+    candidate_final_packet: dict[str, Any],
+    withheld_decision_queue: dict[str, Any],
+    attorney_recommendation_memo: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_recommended_filing_manifest.json"
+    md_path = chronology_dir / "formal_complaint_recommended_filing_manifest.md"
+
+    included_entries = list(ready_to_file_manifest.get("included_entries") or [])
+    candidate_email_entries = list(candidate_final_packet.get("candidate_email_entries") or [])
+    queue_counts = dict(withheld_decision_queue.get("disposition_counts") or {})
+
+    recommended_entries: list[dict[str, Any]] = []
+    for entry in included_entries:
+        recommended_entries.append({
+            "packet_order": int(entry.get("packet_order") or 0),
+            "label": str(entry.get("label") or ""),
+            "suggested_title": str(entry.get("suggested_title") or ""),
+            "source_type": str(entry.get("source_type") or ""),
+            "source_path": str(entry.get("source_path") or ""),
+            "recommendation_basis": "included_in_ready_to_file_manifest",
+        })
+
+    for entry in candidate_email_entries:
+        recommended_entries.append({
+            "packet_order": int(entry.get("packet_order") or 0),
+            "label": str(entry.get("label") or ""),
+            "suggested_title": str(entry.get("suggested_title") or ""),
+            "source_type": "candidate_email_exhibit",
+            "source_path": str(entry.get("exhibit_dir") or ""),
+            "recommendation_basis": "promoted_from_withheld_queue_via_candidate_packet",
+            "representative_message_count": int(entry.get("representative_message_count") or 0),
+            "retained_attachment_count": int(entry.get("retained_attachment_count") or 0),
+            "excluded_decision_count": int(entry.get("excluded_decision_count") or 0),
+            "excluded_duplicate_count": int(entry.get("excluded_duplicate_count") or 0),
+            "excluded_low_signal_count": int(entry.get("excluded_low_signal_count") or 0),
+        })
+
+    recommended_entries.sort(key=lambda entry: (int(entry.get("packet_order") or 0), str(entry.get("label") or "")))
+
+    summary = {
+        "status": "success",
+        "recommended_exhibit_count": len(recommended_entries),
+        "paper_exhibit_count": len(included_entries),
+        "candidate_email_exhibit_count": len(candidate_email_entries),
+        "copied_file_count": int(candidate_final_packet.get("copied_file_count") or 0),
+        "supersedes": {
+            "ready_to_file_manifest": str(ready_to_file_manifest.get("markdown_path") or ""),
+            "candidate_final_packet": str(candidate_final_packet.get("readme_path") or ""),
+            "attorney_recommendation_memo": str(attorney_recommendation_memo.get("markdown_path") or ""),
+        },
+        "withheld_queue_disposition_counts": queue_counts,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "entries": recommended_entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Recommended Filing Manifest",
+        "",
+        f"Recommended exhibits: {summary['recommended_exhibit_count']}",
+        f"Paper exhibits retained from ready-to-file set: {summary['paper_exhibit_count']}",
+        f"Curated email exhibits promoted from withheld queue: {summary['candidate_email_exhibit_count']}",
+        f"Total copied files in candidate packet: {summary['copied_file_count']}",
+        "",
+        "This manifest is the operative filing-set summary. It supersedes the earlier ready-to-file versus withheld split by adopting the candidate final packet together with the attorney recommendation memo.",
+        "",
+        "## Superseded Inputs",
+        "",
+        f"- Ready-to-file manifest: {summary['supersedes']['ready_to_file_manifest']}",
+        f"- Candidate final packet: {summary['supersedes']['candidate_final_packet']}",
+        f"- Attorney recommendation memo: {summary['supersedes']['attorney_recommendation_memo']}",
+        "",
+    ]
+    if queue_counts:
+        md_lines.extend(["## Queue Dispositions", ""])
+        for disposition, count in sorted(queue_counts.items()):
+            md_lines.append(f"- {disposition}: {count}")
+        md_lines.append("")
+
+    md_lines.extend(["## Recommended Exhibits", ""])
+    if recommended_entries:
+        for entry in recommended_entries:
+            line = (
+                f"- {entry['packet_order']}. Exhibit {entry['label']} | {entry['suggested_title']} | "
+                f"{entry['source_type']} | basis={entry['recommendation_basis']}"
+            )
+            if entry["source_type"] == "candidate_email_exhibit":
+                line += (
+                    f" | representative_messages={int(entry.get('representative_message_count') or 0)}"
+                    f" | retained_attachments={int(entry.get('retained_attachment_count') or 0)}"
+                    f" | excluded_decisions={int(entry.get('excluded_decision_count') or 0)}"
+                )
+            else:
+                line += f" | source={entry['source_path']}"
+            md_lines.append(line)
+    else:
+        md_lines.append("No recommended exhibits generated.")
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _materialize_recommended_filing_packet(
+    recommended_filing_manifest: dict[str, Any],
+    candidate_final_packet: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    packet_dir = chronology_dir / "formal_complaint_recommended_filing_packet"
+    included_dir = packet_dir / "included"
+    email_dir = packet_dir / "candidate_email_exhibits"
+    docs_dir = packet_dir / "supporting_documents"
+    packet_dir.mkdir(parents=True, exist_ok=True)
+    included_dir.mkdir(parents=True, exist_ok=True)
+    email_dir.mkdir(parents=True, exist_ok=True)
+    docs_dir.mkdir(parents=True, exist_ok=True)
+
+    copied_files: list[dict[str, Any]] = []
+    paper_exhibit_count = 0
+    candidate_email_exhibit_count = 0
+
+    for entry in list(recommended_filing_manifest.get("entries") or []):
+        source_type = str(entry.get("source_type") or "")
+        label = str(entry.get("label") or "")
+        packet_order = int(entry.get("packet_order") or 0)
+        if source_type == "paper_pdf":
+            source_path = REPO_ROOT / str(entry.get("source_path") or "")
+            if not source_path.exists() or not source_path.is_file():
+                continue
+            filename = (
+                f"{packet_order:02d}_Exhibit_{_safe_packet_name(label)}_"
+                f"{_safe_packet_name(source_path.name)}"
+            )
+            destination = included_dir / filename
+            shutil.copy2(source_path, destination)
+            paper_exhibit_count += 1
+            copied_files.append({
+                "label": label,
+                "kind": "paper_exhibit",
+                "source_path": str(source_path),
+                "destination_path": str(destination),
+            })
+            continue
+
+        if source_type != "candidate_email_exhibit":
+            continue
+
+        source_dir = Path(str(entry.get("source_path") or ""))
+        if not source_dir.exists() or not source_dir.is_dir():
+            continue
+        destination_dir = email_dir / source_dir.name
+        shutil.copytree(source_dir, destination_dir, dirs_exist_ok=True)
+        candidate_email_exhibit_count += 1
+        copied_files.append({
+            "label": label,
+            "kind": "candidate_email_exhibit_dir",
+            "source_path": str(source_dir),
+            "destination_path": str(destination_dir),
+        })
+
+    docs_to_copy = {
+        "recommended_manifest": chronology_dir / "formal_complaint_recommended_filing_manifest.md",
+        "attorney_recommendation_memo": chronology_dir / "formal_complaint_attorney_recommendation_memo.md",
+        "excluded_withheld_items": Path(str(candidate_final_packet.get("excluded_manifest_path") or "")),
+    }
+    copied_docs: list[dict[str, Any]] = []
+    for name, source_path in docs_to_copy.items():
+        if not source_path.exists() or not source_path.is_file():
+            continue
+        destination = docs_dir / f"{name}{source_path.suffix}"
+        shutil.copy2(source_path, destination)
+        copied_docs.append({
+            "name": name,
+            "source_path": str(source_path),
+            "destination_path": str(destination),
+        })
+        copied_files.append({
+            "label": name,
+            "kind": "supporting_document",
+            "source_path": str(source_path),
+            "destination_path": str(destination),
+        })
+
+    readme_path = packet_dir / "README.md"
+    summary_lines = [
+        "# Recommended Filing Packet",
+        "",
+        f"Recommended exhibits copied: {paper_exhibit_count + candidate_email_exhibit_count}",
+        f"Paper exhibits copied: {paper_exhibit_count}",
+        f"Curated email exhibit folders copied: {candidate_email_exhibit_count}",
+        f"Supporting documents copied: {len(copied_docs)}",
+        f"Total copied items: {len(copied_files)}",
+        "",
+        "This packet materializes the operative filing set described by the recommended filing manifest.",
+        "Paper exhibits are in ./included, curated email exhibit folders are in ./candidate_email_exhibits, and supporting recommendation documents are in ./supporting_documents.",
+    ]
+    readme_path.write_text("\n".join(summary_lines).strip() + "\n", encoding="utf-8")
+
+    return {
+        "status": "success",
+        "packet_dir": str(packet_dir),
+        "included_dir": str(included_dir),
+        "candidate_email_dir": str(email_dir),
+        "supporting_docs_dir": str(docs_dir),
+        "recommended_exhibit_count": paper_exhibit_count + candidate_email_exhibit_count,
+        "paper_exhibit_count": paper_exhibit_count,
+        "candidate_email_exhibit_count": candidate_email_exhibit_count,
+        "supporting_document_count": len(copied_docs),
+        "copied_file_count": len(copied_files),
+        "copied_files": copied_files,
+        "readme_path": str(readme_path),
+    }
+
+
+def _build_formal_complaint_recommended_filing_checklist(
+    recommended_filing_manifest: dict[str, Any],
+    recommended_filing_packet: dict[str, Any],
+    citation_map: list[dict[str, Any]],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_recommended_filing_checklist.json"
+    md_path = chronology_dir / "formal_complaint_recommended_filing_checklist.md"
+
+    citations_by_label: dict[str, list[dict[str, Any]]] = {}
+    for citation in citation_map:
+        label = str(citation.get("exhibit_label") or "")
+        citations_by_label.setdefault(label, []).append(citation)
+
+    packet_dir = Path(str(recommended_filing_packet.get("packet_dir") or ""))
+    included_dir = packet_dir / "included"
+    email_dir = packet_dir / "candidate_email_exhibits"
+
+    checklist_entries: list[dict[str, Any]] = []
+    flagged_count = 0
+    for entry in list(recommended_filing_manifest.get("entries") or []):
+        label = str(entry.get("label") or "")
+        source_type = str(entry.get("source_type") or "")
+        packet_order = int(entry.get("packet_order") or 0)
+        suggested_title = str(entry.get("suggested_title") or "")
+        citations = list(citations_by_label.get(label) or [])
+        paragraph_numbers = sorted(int(item.get("paragraph_number") or 0) for item in citations)
+        sections: list[str] = []
+        for item in citations:
+            section = str(item.get("section") or "")
+            if section and section not in sections:
+                sections.append(section)
+
+        packet_material_exists = False
+        packet_material_path = ""
+        if source_type == "paper_pdf":
+            expected_prefix = f"{packet_order:02d}_Exhibit_{_safe_packet_name(label)}_"
+            matches = [child for child in included_dir.iterdir()] if included_dir.exists() else []
+            matched = next((child for child in matches if child.name.startswith(expected_prefix)), None)
+            if matched is not None:
+                packet_material_exists = True
+                packet_material_path = str(matched)
+        elif source_type == "candidate_email_exhibit":
+            source_path = Path(str(entry.get("source_path") or ""))
+            destination = email_dir / source_path.name
+            if destination.exists() and destination.is_dir():
+                packet_material_exists = True
+                packet_material_path = str(destination)
+
+        issues: list[str] = []
+        if not packet_material_exists:
+            issues.append("missing-packet-material")
+        if not citations:
+            issues.append("uncited-exhibit")
+
+        severity = "ok" if not issues else "review"
+        if "missing-packet-material" in issues:
+            severity = "critical"
+        if severity != "ok":
+            flagged_count += 1
+
+        checklist_entry = {
+            "packet_order": packet_order,
+            "label": label,
+            "suggested_title": suggested_title,
+            "source_type": source_type,
+            "citation_count": len(citations),
+            "paragraph_numbers": paragraph_numbers,
+            "sections": sections,
+            "packet_material_exists": packet_material_exists,
+            "packet_material_path": packet_material_path,
+            "severity": severity,
+            "issues": issues,
+        }
+        if source_type == "candidate_email_exhibit":
+            checklist_entry["representative_message_count"] = int(entry.get("representative_message_count") or 0)
+            checklist_entry["retained_attachment_count"] = int(entry.get("retained_attachment_count") or 0)
+            checklist_entry["excluded_decision_count"] = int(entry.get("excluded_decision_count") or 0)
+        checklist_entries.append(checklist_entry)
+
+    summary = {
+        "status": "success",
+        "entry_count": len(checklist_entries),
+        "flagged_count": flagged_count,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "entries": checklist_entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Recommended Filing Checklist",
+        "",
+        f"Entry count: {len(checklist_entries)}",
+        f"Flagged count: {flagged_count}",
+        "",
+    ]
+    if checklist_entries:
+        for entry in checklist_entries:
+            paragraphs = ", ".join(str(number) for number in list(entry.get("paragraph_numbers") or [])) or "not cited"
+            sections = ", ".join(list(entry.get("sections") or [])) or "not cited"
+            issues = ", ".join(list(entry.get("issues") or [])) or "none"
+            line = (
+                f"- Exhibit {entry['label']} | order={entry['packet_order']} | severity={entry['severity']}"
+                f" | paragraphs={paragraphs} | sections={sections} | packet_material_exists={entry['packet_material_exists']}"
+                f" | issues={issues}"
+            )
+            if entry["source_type"] == "candidate_email_exhibit":
+                line += (
+                    f" | representative_messages={int(entry.get('representative_message_count') or 0)}"
+                    f" | retained_attachments={int(entry.get('retained_attachment_count') or 0)}"
+                    f" | excluded_decisions={int(entry.get('excluded_decision_count') or 0)}"
+                )
+            md_lines.append(line)
+    else:
+        md_lines.append("No recommended filing checklist entries generated.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_formal_complaint_court_submission_memo(
+    formal_draft_summary: dict[str, Any],
+    recommended_filing_manifest: dict[str, Any],
+    recommended_filing_packet: dict[str, Any],
+    recommended_filing_checklist: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_court_submission_memo.json"
+    md_path = chronology_dir / "formal_complaint_court_submission_memo.md"
+
+    forum_dependent_items = [
+        "Replace the caption placeholder 'IN THE [COURT NAME]' with the selected court.",
+        "Choose whether the complaint will proceed in federal court, Oregon circuit court, or another forum and conform jurisdiction allegations accordingly.",
+        "Conform venue allegations and any county-specific filing language to the chosen court.",
+        "Confirm final party names, party capacity, and any non-Doe defendants before filing.",
+        "Confirm the final causes of action and tailor the prayer for relief to the selected legal theories and forum rules.",
+    ]
+
+    ready_now_items = [
+        "Recent evidence review completed for the past-week additions and remaining evidence classified.",
+        "GraphRAG and cross-document chronology artifacts generated or reused for substantive evidence.",
+        "Operative recommended filing manifest assembled with 13 recommended exhibits.",
+        "Recommended filing packet materialized with 11 paper exhibits, 2 curated email exhibit folders, and supporting recommendation documents.",
+        f"Recommended filing checklist completed with flagged count {int(recommended_filing_checklist.get('flagged_count') or 0)}.",
+    ]
+
+    summary = {
+        "status": "success",
+        "recommended_exhibit_count": int(recommended_filing_manifest.get("recommended_exhibit_count") or 0),
+        "recommended_packet_dir": str(recommended_filing_packet.get("packet_dir") or ""),
+        "recommended_packet_copied_file_count": int(recommended_filing_packet.get("copied_file_count") or 0),
+        "recommended_checklist_flagged_count": int(recommended_filing_checklist.get("flagged_count") or 0),
+        "forum_dependent_item_count": len(forum_dependent_items),
+        "formal_draft_path": str(formal_draft_summary.get("markdown_path") or ""),
+        "recommended_manifest_path": str(recommended_filing_manifest.get("markdown_path") or ""),
+        "recommended_checklist_path": str(recommended_filing_checklist.get("markdown_path") or ""),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "ready_now_items": ready_now_items,
+        "forum_dependent_items": forum_dependent_items,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Court Submission Memo",
+        "",
+        "## Current Filing State",
+        "",
+        f"- Recommended exhibits: {summary['recommended_exhibit_count']}",
+        f"- Recommended packet copied items: {summary['recommended_packet_copied_file_count']}",
+        f"- Recommended checklist flagged exhibits: {summary['recommended_checklist_flagged_count']}",
+        f"- Operative packet directory: {summary['recommended_packet_dir']}",
+        "",
+        "## Ready Now",
+        "",
+    ]
+    for item in ready_now_items:
+        md_lines.append(f"- {item}")
+
+    md_lines.extend([
+        "",
+        "## Forum-Dependent Items",
+        "",
+    ])
+    for item in forum_dependent_items:
+        md_lines.append(f"- {item}")
+
+    md_lines.extend([
+        "",
+        "## Operative References",
+        "",
+        f"- Formal complaint draft: {summary['formal_draft_path']}",
+        f"- Recommended filing manifest: {summary['recommended_manifest_path']}",
+        f"- Recommended filing checklist: {summary['recommended_checklist_path']}",
+        "",
+        "## Recommendation",
+        "",
+        "Use the recommended filing packet as the operative exhibit set and treat remaining work as forum-selection and claim-selection refinement rather than additional evidence assembly.",
+    ])
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_formal_complaint_forum_selection_memo(
+    formal_draft_summary: dict[str, Any],
+    recommended_filing_manifest: dict[str, Any],
+    recommended_filing_checklist: dict[str, Any],
+    court_submission_memo: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_forum_selection_memo.json"
+    md_path = chronology_dir / "formal_complaint_forum_selection_memo.md"
+
+    common_strengths = [
+        "The operative exhibit set is already assembled and checked, with 13 recommended exhibits and 0 flagged packet-check issues.",
+        "The current evidence supports a chronology centered on notice, lease, documentation, VAWA-related, and orientation events in Clackamas County.",
+        "The complaint draft already contains a usable factual narrative and count structure that can be conformed to either forum.",
+    ]
+    federal_track = {
+        "title": "Federal Court Track",
+        "advantages": [
+            "The current draft already contains placeholder federal-question language keyed to federal housing, fair-housing, VAWA, due-process, or Section 1983 theories.",
+            "Federal pleading may fit best if the final claim set centers on constitutional process, federal housing rights, or federally grounded anti-discrimination theories.",
+            "Supplemental jurisdiction can keep related Oregon-law claims bundled if viable federal claims are selected.",
+        ],
+        "requirements": [
+            "Identify at least one well-supported federal cause of action and align each count to that theory.",
+            "Replace the generic jurisdiction paragraph with a precise federal subject-matter statement.",
+            "Confirm the proper federal district and division for events centered in Clackamas County, Oregon.",
+        ],
+        "risks": [
+            "A weak or underdeveloped federal claim can invite dismissal pressure or remand/declination issues for the remaining state-law theories.",
+            "Federal standards may require more exact theory selection earlier in the drafting cycle.",
+        ],
+    }
+    state_track = {
+        "title": "Oregon State Court Track",
+        "advantages": [
+            "The evidence is geographically concentrated in Clackamas County and the current venue facts map naturally to an Oregon trial-court filing.",
+            "State pleading may fit best if the final claim set emphasizes Oregon statutory, landlord-tenant, relocation, contract, or administrative-law theories.",
+            "This path avoids depending on a federal anchor claim if the strongest available theories are primarily state or local in character.",
+        ],
+        "requirements": [
+            "Replace the draft federal-jurisdiction placeholder with the specific Oregon court and county basis.",
+            "Conform the caption, venue allegations, and requested relief to Oregon trial-court practice.",
+            "Map each current draft count to a specific Oregon or local-law cause of action before filing.",
+        ],
+        "risks": [
+            "Any intended federal constitutional or statutory theories may need to be omitted, reframed, or carefully pleaded under concurrent-jurisdiction principles.",
+            "If the final theory mix remains heavily federal, a state-court path may create a less direct complaint structure than a federal filing.",
+        ],
+    }
+    decision_pivots = [
+        "Choose federal court if the strongest final claims are federal housing, federal anti-discrimination, VAWA, due-process, or Section 1983 claims.",
+        "Choose Oregon state court if the strongest final claims are Oregon housing, lease, relocation, contract, or state administrative claims.",
+        "In either forum, the exhibit package is ready; the main remaining work is legal-theory selection and forum-specific pleading conversion.",
+    ]
+
+    summary = {
+        "status": "success",
+        "recommended_exhibit_count": int(recommended_filing_manifest.get("recommended_exhibit_count") or 0),
+        "recommended_checklist_flagged_count": int(recommended_filing_checklist.get("flagged_count") or 0),
+        "forum_dependent_item_count": int(court_submission_memo.get("forum_dependent_item_count") or 0),
+        "option_count": 2,
+        "formal_draft_path": str(formal_draft_summary.get("markdown_path") or ""),
+        "court_submission_memo_path": str(court_submission_memo.get("markdown_path") or ""),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "common_strengths": common_strengths,
+        "federal_track": federal_track,
+        "state_track": state_track,
+        "decision_pivots": decision_pivots,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Forum Selection Memo",
+        "",
+        "## Shared Starting Point",
+        "",
+        f"- Recommended exhibits assembled: {summary['recommended_exhibit_count']}",
+        f"- Recommended checklist flagged exhibits: {summary['recommended_checklist_flagged_count']}",
+        f"- Remaining forum-dependent items identified in submission memo: {summary['forum_dependent_item_count']}",
+        "",
+    ]
+    for item in common_strengths:
+        md_lines.append(f"- {item}")
+
+    for track in (federal_track, state_track):
+        md_lines.extend(["", f"## {track['title']}", "", "Advantages:"])
+        for item in track["advantages"]:
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Requirements:"])
+        for item in track["requirements"]:
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Risks:"])
+        for item in track["risks"]:
+            md_lines.append(f"- {item}")
+
+    md_lines.extend(["", "## Decision Pivots", ""])
+    for item in decision_pivots:
+        md_lines.append(f"- {item}")
+
+    md_lines.extend([
+        "",
+        "## References",
+        "",
+        f"- Formal complaint draft: {summary['formal_draft_path']}",
+        f"- Court submission memo: {summary['court_submission_memo_path']}",
+    ])
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_formal_complaint_claim_mapping_memo(
+    cause_draft: dict[str, Any],
+    recommended_filing_manifest: dict[str, Any],
+    recommended_filing_checklist: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_claim_mapping_memo.json"
+    md_path = chronology_dir / "formal_complaint_claim_mapping_memo.md"
+
+    theory_map = {
+        "Notices and Adverse Actions": {
+            "federal_candidates": [
+                "procedural due-process theory under 42 U.S.C. section 1983 if protected housing interests and state action are adequately supported",
+                "federal fair-housing or federally funded housing-process theory if notice defects are tied to discrimination or federally regulated housing protections",
+            ],
+            "state_candidates": [
+                "Oregon landlord-tenant or relocation-notice theory",
+                "state declaratory or injunctive relief tied to defective notice or unlawful displacement process",
+            ],
+            "proof_gaps": [
+                "identify the exact notice and hearing rules that governed each challenged notice",
+                "connect each notice defect to a concrete threatened or realized housing loss",
+            ],
+        },
+        "Lease and Occupancy": {
+            "federal_candidates": [
+                "federally regulated housing-program compliance theory if the lease, inspection, or occupancy decisions violated federal program rules",
+                "Section 1983 theory only if a federal housing entitlement or due-process interest is clearly implicated",
+            ],
+            "state_candidates": [
+                "breach of lease or wrongful housing-process theory",
+                "Oregon housing or tenancy-rights theory tied to occupancy, inspection, transfer, or displacement conduct",
+            ],
+            "proof_gaps": [
+                "pinpoint the governing lease and program provisions for each occupancy-related event",
+                "show how the challenged conduct changed tenancy status or housing stability",
+            ],
+        },
+        "Financial Verification and Intake Barriers": {
+            "federal_candidates": [
+                "federal fair-housing or anti-retaliation theory if documentation demands were discriminatory, retaliatory, or selectively imposed",
+                "federal housing-program administration theory if the demands contradicted controlling federal program rules",
+            ],
+            "state_candidates": [
+                "state discrimination, retaliation, or unfair housing-process theory",
+                "state declaratory or injunctive theory challenging unsupported administrative barriers",
+            ],
+            "proof_gaps": [
+                "separate required documentation from repetitive or unsupported requests",
+                "show how the demands delayed or burdened voucher progression, placement, or retention",
+            ],
+        },
+        "Protected Status and VAWA": {
+            "federal_candidates": [
+                "VAWA-related federal protection theory if the February 4, 2026 materials implicate covered protections",
+                "federal fair-housing discrimination or retaliation theory if protected-status treatment can be tied to later housing actions",
+            ],
+            "state_candidates": [
+                "Oregon discrimination or retaliation theory if the same facts fit state anti-discrimination protections",
+                "state declaratory or injunctive theory keyed to protected-status misuse in housing decisions",
+            ],
+            "proof_gaps": [
+                "identify the exact protected status or VAWA protection implicated by the evidence",
+                "tie the protected-status facts to a later adverse housing decision or threat",
+            ],
+        },
+        "Orientation and Compliance": {
+            "federal_candidates": [
+                "federal housing-program administration theory if orientation procedures were applied in a federally improper way",
+                "retaliation or due-process-adjacent theory only if the orientation delay is linked to a broader protected federal claim",
+            ],
+            "state_candidates": [
+                "state administrative-barrier or unfair housing-process theory",
+                "state injunctive theory focused on delay, obstruction, or arbitrary compliance administration",
+            ],
+            "proof_gaps": [
+                "identify the source and required timing of the orientation process",
+                "show how the delay caused a concrete missed opportunity, denial, or housing prejudice",
+            ],
+        },
+    }
+
+    sections = []
+    for section in list(cause_draft.get("sections") or []):
+        source_section = str(section.get("source_section") or "")
+        mapped = theory_map.get(source_section, {
+            "federal_candidates": ["federal theory requires further legal mapping"],
+            "state_candidates": ["state-law theory requires further legal mapping"],
+            "proof_gaps": ["count-specific theory selection remains open"],
+        })
+        sections.append({
+            "title": str(section.get("title") or "Potential Claim Theme"),
+            "source_section": source_section,
+            "intro": str(section.get("intro") or ""),
+            "element_prompts": list(section.get("element_prompts") or []),
+            "federal_candidates": list(mapped.get("federal_candidates") or []),
+            "state_candidates": list(mapped.get("state_candidates") or []),
+            "proof_gaps": list(mapped.get("proof_gaps") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "section_count": len(sections),
+        "recommended_exhibit_count": int(recommended_filing_manifest.get("recommended_exhibit_count") or 0),
+        "recommended_checklist_flagged_count": int(recommended_filing_checklist.get("flagged_count") or 0),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "sections": sections,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Claim Mapping Memo",
+        "",
+        f"Section count: {len(sections)}",
+        f"Recommended exhibits assembled: {summary['recommended_exhibit_count']}",
+        f"Recommended checklist flagged exhibits: {summary['recommended_checklist_flagged_count']}",
+        "",
+    ]
+    for section in sections:
+        md_lines.extend([
+            f"## {section['title']}",
+            "",
+            f"Source allegation group: {section['source_section']}",
+            f"Current draft theory summary: {section['intro']}",
+            "",
+            "Federal candidate theories:",
+        ])
+        for item in list(section.get("federal_candidates") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Oregon/state candidate theories:"])
+        for item in list(section.get("state_candidates") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Key proof gaps or decisions:"])
+        for item in list(section.get("proof_gaps") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Existing element prompts:"])
+        for item in list(section.get("element_prompts") or []):
+            md_lines.append(f"- {item}")
+        md_lines.append("")
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_formal_complaint_claim_priority_memo(
+    cause_draft: dict[str, Any],
+    claim_mapping_memo: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_claim_priority_memo.json"
+    md_path = chronology_dir / "formal_complaint_claim_priority_memo.md"
+
+    priority_table = {
+        "Notices and Adverse Actions": {
+            "rank": 1,
+            "strength": "high",
+            "why": "This group has the broadest dated paper trail, multiple notice documents, and the clearest direct connection to threatened or actual housing harm.",
+            "fit": "Best early anchor for either state notice/displacement theories or a federal due-process style claim if state action and protected housing interests are developed.",
+        },
+        "Financial Verification and Intake Barriers": {
+            "rank": 2,
+            "strength": "high",
+            "why": "This group combines a formal paper demand with a substantial curated email thread, giving both documentary and process evidence of repeated administrative barriers.",
+            "fit": "Strong candidate for discrimination, retaliation, unfair-process, or administrative-barrier theories in either forum once required versus unsupported demands are separated.",
+        },
+        "Lease and Occupancy": {
+            "rank": 3,
+            "strength": "medium-high",
+            "why": "This group has several paper exhibits covering lease amendments, occupancy issues, and inspection-related conduct, but the legal theory still depends on pinning down the exact governing lease and program obligations.",
+            "fit": "Potentially strong in state court and still useful in federal court if tied to federally regulated housing-program obligations.",
+        },
+        "Orientation and Compliance": {
+            "rank": 4,
+            "strength": "medium",
+            "why": "The exhibit set is clean and the email thread is usable, but the group appears narrower and more likely to support a supporting-process theory than a lead claim unless the delay caused concrete lost housing opportunity.",
+            "fit": "Best used as a reinforcing administrative-delay count or factual support for broader housing-process theories.",
+        },
+        "Protected Status and VAWA": {
+            "rank": 5,
+            "strength": "medium-uncertain",
+            "why": "This group could become significant, but it currently rests on a smaller evidentiary slice and has the most explicit unresolved proof question: identifying the exact protected-status or VAWA protection implicated and connecting it to later adverse action.",
+            "fit": "Potentially important but should be treated as theory-sensitive until the protected-status and causal linkage proof is tightened.",
+        },
+    }
+
+    sections = []
+    for section in list(cause_draft.get("sections") or []):
+        source_section = str(section.get("source_section") or "")
+        mapped = priority_table.get(source_section, {
+            "rank": 99,
+            "strength": "unranked",
+            "why": "No ranking guidance generated.",
+            "fit": "Needs further review.",
+        })
+        sections.append({
+            "title": str(section.get("title") or "Potential Claim Theme"),
+            "source_section": source_section,
+            "rank": int(mapped.get("rank") or 99),
+            "strength": str(mapped.get("strength") or "unranked"),
+            "why": str(mapped.get("why") or ""),
+            "fit": str(mapped.get("fit") or ""),
+            "element_prompt_count": len(list(section.get("element_prompts") or [])),
+        })
+
+    sections.sort(key=lambda item: (int(item.get("rank") or 99), str(item.get("title") or "")))
+
+    summary = {
+        "status": "success",
+        "section_count": len(sections),
+        "top_ranked_title": str(sections[0].get("title") or "") if sections else "",
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "sections": sections,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Claim Priority Memo",
+        "",
+        f"Section count: {len(sections)}",
+        f"Top-ranked claim group: {summary['top_ranked_title']}",
+        "",
+    ]
+    for section in sections:
+        md_lines.extend([
+            f"## Rank {section['rank']}: {section['title']}",
+            "",
+            f"Source allegation group: {section['source_section']}",
+            f"Evidentiary strength: {section['strength']}",
+            f"Why it ranks here: {section['why']}",
+            f"Litigation fit: {section['fit']}",
+            f"Existing element prompt count: {section['element_prompt_count']}",
+            "",
+        ])
+
+    md_lines.extend([
+        "## Use",
+        "",
+        "Use this ranking to choose which counts should lead the complaint, which counts should serve as supporting theories, and which theory-sensitive groups should be held until proof gaps are closed.",
+    ])
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_formal_complaint_lead_count_draft(
+    cause_draft: dict[str, Any],
+    claim_priority_memo: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_lead_count_draft.json"
+    md_path = chronology_dir / "formal_complaint_lead_count_draft.md"
+
+    ranked_sections = list(claim_priority_memo.get("sections") or [])
+    top_ranked = sorted(ranked_sections, key=lambda item: int(item.get("rank") or 99))[:3]
+    top_titles = {str(item.get("title") or "") for item in top_ranked}
+
+    cause_sections = list(cause_draft.get("sections") or [])
+    lead_sections = [
+        section for section in cause_sections
+        if str(section.get("title") or "") in top_titles
+    ]
+    lead_sections.sort(key=lambda section: next(
+        (int(item.get("rank") or 99) for item in top_ranked if str(item.get("title") or "") == str(section.get("title") or "")),
+        99,
+    ))
+    reserve_sections = [
+        section for section in cause_sections
+        if str(section.get("title") or "") not in top_titles
+    ]
+
+    summary = {
+        "status": "success",
+        "lead_count_count": len(lead_sections),
+        "reserve_count_count": len(reserve_sections),
+        "top_ranked_title": str(top_ranked[0].get("title") or "") if top_ranked else "",
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "lead_sections": lead_sections,
+        "reserve_sections": reserve_sections,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Lead-Count Draft",
+        "",
+        f"Lead count groups: {len(lead_sections)}",
+        f"Reserve or supporting groups: {len(reserve_sections)}",
+        f"Top-ranked lead group: {summary['top_ranked_title']}",
+        "",
+        "This draft narrows the complaint structure to the strongest current claim groups without yet choosing a filing forum.",
+        "",
+        "## Lead Counts",
+        "",
+    ]
+    if lead_sections:
+        for idx, section in enumerate(lead_sections, start=1):
+            md_lines.extend([
+                f"### Lead Count {idx}: {section.get('title') or 'Potential Claim Theme'}",
+                "",
+                str(section.get("intro") or ""),
+                "",
+                f"Source allegation group: {section.get('source_section') or ''}",
+                "Elements to Plead:",
+            ])
+            for prompt in list(section.get("element_prompts") or []):
+                md_lines.append(f"- {prompt}")
+            paragraphs = list(section.get("paragraphs") or [])
+            if paragraphs:
+                md_lines.extend(["", "Representative allegations:"])
+                for paragraph in paragraphs[:3]:
+                    if isinstance(paragraph, dict):
+                        md_lines.append(f"- {paragraph.get('paragraph') or ''}")
+                    else:
+                        md_lines.append(f"- {paragraph}")
+            md_lines.append("")
+    else:
+        md_lines.append("No lead counts selected.")
+
+    md_lines.extend(["## Reserve or Supporting Counts", ""])
+    if reserve_sections:
+        for section in reserve_sections:
+            md_lines.append(
+                f"- {section.get('title') or 'Potential Claim Theme'} | source group={section.get('source_section') or ''}"
+            )
+    else:
+        md_lines.append("No reserve counts identified.")
+
+    md_lines.extend([
+        "",
+        "## Use",
+        "",
+        "Use this draft when preparing a tighter complaint that leads with the strongest current theories and treats the remaining claim groups as supporting or reserve allegations pending forum-specific refinement.",
+    ])
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_formal_complaint_lead_count_forum_outline(
+    lead_count_draft: dict[str, Any],
+    forum_selection_memo: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_lead_count_forum_outline.json"
+    md_path = chronology_dir / "formal_complaint_lead_count_forum_outline.md"
+
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    federal_outline = [
+        {
+            "heading": "Caption and Jurisdiction",
+            "points": [
+                "Use a federal district caption and replace the placeholder court name with the proper District of Oregon court designation.",
+                "Anchor jurisdiction in a specific federal-question theory and use supplemental jurisdiction only for truly related Oregon-law counts.",
+            ],
+        },
+        {
+            "heading": "Lead Count Structure",
+            "points": [
+                "Lead Count 1 should frame the notice/adverse-action evidence as a due-process, federally regulated housing-process, or federal anti-discrimination claim only if the federal hook is concrete.",
+                "Lead Count 2 should frame the documentation-demand record as discriminatory, retaliatory, or contrary to governing federal housing-program administration rules if supported.",
+                "Lead Count 3 should remain only if the lease/occupancy record can be tied to a federal housing-program obligation or a federal-protected housing interest.",
+            ],
+        },
+        {
+            "heading": "Reserve Counts",
+            "points": [
+                "Treat protected-status/VAWA and orientation-delay theories as reserve counts unless their federal basis is specifically identified and supported.",
+                "If the federal anchor is weak, reduce the number of standalone federal counts rather than over-pleading speculative federal theories.",
+            ],
+        },
+    ]
+    state_outline = [
+        {
+            "heading": "Caption and Venue",
+            "points": [
+                "Use an Oregon trial-court caption and conform venue allegations to Clackamas County-based events and property facts.",
+                "Replace the draft federal-jurisdiction placeholder with Oregon court authority and county-specific pleading language.",
+            ],
+        },
+        {
+            "heading": "Lead Count Structure",
+            "points": [
+                "Lead Count 1 should frame the notice/adverse-action record as defective notice, wrongful displacement process, or related Oregon housing/tenant process claims.",
+                "Lead Count 2 should frame the documentation-demand record as an unfair housing-process, discrimination, retaliation, or unsupported administrative-barrier theory under Oregon-compatible causes of action.",
+                "Lead Count 3 should frame the lease/occupancy record as breach of lease, wrongful housing-process administration, or related Oregon tenancy/program-obligation claims.",
+            ],
+        },
+        {
+            "heading": "Reserve Counts",
+            "points": [
+                "Protected-status/VAWA and orientation-delay theories can be preserved as supporting or reserve counts unless state-law mapping is strengthened.",
+                "State court is the cleaner path if the strongest final theories remain grounded in Oregon housing, lease, relocation, or administrative practice rather than federal rights.",
+            ],
+        },
+    ]
+
+    summary = {
+        "status": "success",
+        "lead_count_count": len(lead_sections),
+        "forum_option_count": int(forum_selection_memo.get("option_count") or 2),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "lead_titles": [str(section.get("title") or "") for section in lead_sections],
+        "federal_outline": federal_outline,
+        "state_outline": state_outline,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Lead-Count Forum Outline",
+        "",
+        f"Lead count groups compared: {summary['lead_count_count']}",
+        f"Forum options compared: {summary['forum_option_count']}",
+        "",
+        "## Shared Lead Counts",
+        "",
+    ]
+    for title in list(summary.get("lead_titles") or []):
+        md_lines.append(f"- {title}")
+
+    for heading, outline in (("Federal Version", federal_outline), ("Oregon State Version", state_outline)):
+        md_lines.extend(["", f"## {heading}", ""])
+        for block in outline:
+            md_lines.append(f"### {block['heading']}")
+            md_lines.append("")
+            for point in list(block.get("points") or []):
+                md_lines.append(f"- {point}")
+            md_lines.append("")
+
+    md_lines.extend([
+        "## Use",
+        "",
+        "Use this outline to choose whether the narrowed 3-count structure should be converted first into a federal complaint or an Oregon state-court complaint.",
+    ])
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_forum_specific_lead_count_complaint(
+    forum: str,
+    complaint_ready: dict[str, Any],
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    factual_background = factual_entries[: min(14, len(factual_entries))]
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    reserve_sections = list(lead_count_draft.get("reserve_sections") or [])
+
+    if forum == "federal":
+        json_path = chronology_dir / "formal_complaint_federal_lead_count_draft.json"
+        md_path = chronology_dir / "formal_complaint_federal_lead_count_draft.md"
+        title = "# Federal Lead-Count Complaint Draft"
+        caption = "IN THE UNITED STATES DISTRICT COURT FOR THE DISTRICT OF OREGON"
+        jurisdiction_lines = [
+            "6. This federal draft assumes plaintiffs will plead at least one federal-question claim arising from the housing notices, documentation demands, lease-related conduct, or other federally regulated housing actions reflected in the exhibits.",
+            "7. Subject-matter jurisdiction would need to be anchored in a specific federal statutory or constitutional cause of action, with supplemental jurisdiction over related Oregon-law claims only if appropriate.",
+            "8. Venue is drafted for Oregon because the housing unit, operative notices, and relevant agency conduct are centered in Clackamas County, Oregon.",
+        ]
+    else:
+        json_path = chronology_dir / "formal_complaint_oregon_state_lead_count_draft.json"
+        md_path = chronology_dir / "formal_complaint_oregon_state_lead_count_draft.md"
+        title = "# Oregon State Lead-Count Complaint Draft"
+        caption = "IN THE CIRCUIT COURT OF THE STATE OF OREGON FOR THE COUNTY OF CLACKAMAS"
+        jurisdiction_lines = [
+            "6. This Oregon state draft assumes plaintiffs will plead Oregon housing, lease, displacement-process, contract, discrimination, retaliation, administrative, or related state-law causes of action arising from the exhibits.",
+            "7. The draft is structured for a Clackamas County filing because the housing unit, operative notices, and relevant agency conduct are centered in Clackamas County, Oregon.",
+            "8. Any federal theories would need to be omitted, reserved, or carefully conformed if the complaint proceeds solely as a state-court pleading.",
+        ]
+
+    prayer_lines = _draft_prayer_for_relief_lines()
+    summary = {
+        "status": "success",
+        "forum": forum,
+        "lead_count_count": len(lead_sections),
+        "reserve_count_count": len(reserve_sections),
+        "factual_background_count": len(factual_background),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps(
+            {
+                **summary,
+                "lead_sections": lead_sections,
+                "reserve_sections": reserve_sections,
+                "factual_background": factual_background,
+            },
+            indent=2,
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+
+    md_lines = [
+        title,
+        "",
+        caption,
+        "",
+        "Jane Cortez and Benjamin Barber,",
+        "Plaintiffs,",
+        "",
+        "v.",
+        "",
+        "Housing Authority of Clackamas County; DOES 1-10,",
+        "Defendants.",
+        "",
+        "## Nature of Action",
+        "",
+        "1. This draft converts the narrowed lead-count structure into a forum-specific complaint form.",
+        "2. It remains a drafting aid and should be conformed to the final selected causes of action before filing.",
+        "",
+        "## Parties",
+        "",
+        "3. Plaintiffs are Jane Cortez and Benjamin Barber, subject to confirmation of full legal names, capacity, and proper party alignment.",
+        "4. Defendant Housing Authority of Clackamas County is alleged to have issued the housing-related notices, demands, and communications reflected in the evidence summarized below.",
+        "5. Doe defendants may be named if later investigation supports individual-capacity or agency-role allegations.",
+        "",
+        "## Jurisdiction and Venue",
+        "",
+        *jurisdiction_lines,
+        "",
+        "## General Allegations",
+        "",
+    ]
+
+    paragraph_number = 9
+    for entry in factual_background:
+        md_lines.append(f"{paragraph_number}. {entry.get('paragraph') or ''}")
+        paragraph_number += 1
+    md_lines.append(
+        f"{paragraph_number}. This forum-specific draft uses the narrowed lead-count structure and treats the remaining count groups as supporting or reserve theories unless later elevated by attorney review."
+    )
+    paragraph_number += 1
+
+    md_lines.extend(["", "## Lead Counts", ""])
+    factual_end = paragraph_number - 1
+    for idx, section in enumerate(lead_sections, start=1):
+        md_lines.extend([
+            f"### Count {_roman_count_label(idx)}: {section.get('title') or 'Potential Claim Theme'}",
+            "",
+            f"{paragraph_number}. Plaintiffs repeat and reallege Paragraphs 1 through {factual_end} as if fully set out here.",
+        ])
+        paragraph_number += 1
+        md_lines.append(f"{paragraph_number}. {section.get('intro') or ''}")
+        paragraph_number += 1
+        md_lines.append(
+            f"{paragraph_number}. This count is presently organized around the allegation group '{section.get('source_section') or ''}'."
+        )
+        paragraph_number += 1
+        for paragraph in list(section.get("paragraphs") or [])[:3]:
+            if isinstance(paragraph, dict):
+                text = str(paragraph.get("paragraph") or "")
+            else:
+                text = str(paragraph)
+            md_lines.append(f"{paragraph_number}. {text}")
+            paragraph_number += 1
+        md_lines.append("")
+        md_lines.append("Elements to Plead:")
+        for prompt in list(section.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_lines.extend(["## Reserve or Supporting Counts", ""])
+    if reserve_sections:
+        for section in reserve_sections:
+            md_lines.append(
+                f"- {section.get('title') or 'Potential Claim Theme'} | source group={section.get('source_section') or ''}"
+            )
+    else:
+        md_lines.append("No reserve counts identified.")
+
+    md_lines.extend([
+        "",
+        "## Prayer for Relief",
+        "",
+        f"{paragraph_number}. {prayer_lines[0]}",
+        f"{paragraph_number + 1}. {prayer_lines[1]}",
+        f"{paragraph_number + 2}. {prayer_lines[2]}",
+        "",
+        "## Jury Demand",
+        "",
+        f"{paragraph_number + 3}. Plaintiffs demand a jury on all issues so triable, if applicable.",
+    ])
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_oregon_state_filing_ready_complaint_draft(
+    complaint_ready: dict[str, Any],
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_oregon_state_filing_ready_draft.json"
+    md_path = chronology_dir / "formal_complaint_oregon_state_filing_ready_draft.md"
+
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    factual_background = factual_entries[: min(16, len(factual_entries))]
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    reserve_sections = list(lead_count_draft.get("reserve_sections") or [])
+    prayer_lines = _draft_prayer_for_relief_lines()
+
+    count_map = [
+        {
+            "count_title": "Defective Termination, Displacement, and Adverse Notice Process",
+            "oregon_theory_notes": [
+                "Conform this count to the specific Oregon notice, termination, displacement, relocation, voucher-program, or hearing requirements actually governing the tenancy or subsidy status.",
+                "If multiple notices rely on different legal predicates, split them into separate theories rather than forcing a single omnibus notice count.",
+            ],
+        },
+        {
+            "count_title": "Improper Documentation Demands, Intake Barriers, and Retaliatory or Discriminatory Housing Administration",
+            "oregon_theory_notes": [
+                "Conform this count to the Oregon anti-discrimination, retaliation, administrative-fairness, or program-rule theory best supported by the paper demand and curated email thread.",
+                "Separate unsupported verification demands from any distinct retaliation or protected-status theory if the proof develops differently.",
+            ],
+        },
+        {
+            "count_title": "Breach of Lease, Occupancy, Inspection, and Housing-Program Obligations",
+            "oregon_theory_notes": [
+                "Tie this count to the controlling lease amendments, occupancy rules, inspection obligations, transfer requirements, and any related Oregon tenancy or contract duties.",
+                "If the occupancy record reflects multiple discrete breaches, consider breaking inspection or transfer conduct into a separate count.",
+            ],
+        },
+    ]
+
+    mapped_counts: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        mapped = count_map[idx] if idx < len(count_map) else {
+            "count_title": str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "oregon_theory_notes": [
+                "Map this count to the specific Oregon statutory, lease, contract, relocation, or administrative theory selected before filing.",
+            ],
+        }
+        mapped_counts.append({
+            "count_number": idx + 1,
+            "source_title": str(section.get("title") or ""),
+            "source_section": str(section.get("source_section") or ""),
+            "intro": str(section.get("intro") or ""),
+            "count_title": mapped["count_title"],
+            "oregon_theory_notes": list(mapped.get("oregon_theory_notes") or []),
+            "element_prompts": list(section.get("element_prompts") or []),
+            "paragraphs": list(section.get("paragraphs") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "lead_count_count": len(mapped_counts),
+        "reserve_count_count": len(reserve_sections),
+        "factual_background_count": len(factual_background),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps(
+            {
+                **summary,
+                "mapped_counts": mapped_counts,
+                "reserve_sections": reserve_sections,
+                "factual_background": factual_background,
+            },
+            indent=2,
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+
+    md_lines = [
+        "# Oregon State Filing-Ready Complaint Draft",
+        "",
+        "IN THE CIRCUIT COURT OF THE STATE OF OREGON",
+        "FOR THE COUNTY OF CLACKAMAS",
+        "",
+        "Jane Cortez and Benjamin Barber,",
+        "Plaintiffs,",
+        "",
+        "v.",
+        "",
+        "Housing Authority of Clackamas County; DOES 1-10,",
+        "Defendants.",
+        "",
+        "## Draft Status",
+        "",
+        "This is a filing-oriented Oregon complaint draft built from the narrowed lead-count structure.",
+        "It is still a drafting aid and must be conformed to the final Oregon cause-of-action selection before filing.",
+        "",
+        "## Nature of Action",
+        "",
+        "1. Plaintiffs bring this civil action arising from housing notices, documentation demands, lease-related conduct, occupancy-related directives, and displacement-related actions centered in Clackamas County, Oregon.",
+        "2. This draft is organized for an Oregon trial-court filing and treats the strongest current evidence themes as the three lead counts.",
+        "",
+        "## Parties",
+        "",
+        "3. Plaintiffs are Jane Cortez and Benjamin Barber, subject to confirmation of full legal names, party status, and alignment of claims and requested relief.",
+        "4. Defendant Housing Authority of Clackamas County is alleged to have issued the operative notices, demands, and housing-administration communications summarized in this draft.",
+        "5. Plaintiffs reserve the ability to identify additional responsible persons or entities if later investigation supports amendment.",
+        "",
+        "## Venue and Oregon Court Basis",
+        "",
+        "6. Venue is proper in Clackamas County because the housing unit, operative notices, and the principal housing-administration events at issue are centered in Clackamas County, Oregon.",
+        "7. This draft assumes plaintiffs will proceed on Oregon statutory, tenancy, lease, relocation, discrimination, retaliation, contract, or related state-law theories rather than depending on a federal anchor claim.",
+        "8. Any federal theories should be omitted, reserved, or separately conformed if plaintiffs choose to proceed solely in Oregon state court.",
+        "",
+        "## General Allegations",
+        "",
+    ]
+
+    paragraph_number = 9
+    for entry in factual_background:
+        md_lines.append(f"{paragraph_number}. {entry.get('paragraph') or ''}")
+        paragraph_number += 1
+    md_lines.append(
+        f"{paragraph_number}. Plaintiffs allege that these events formed a connected housing process in which notices, documentation demands, lease or occupancy directives, and displacement-related actions were imposed in a manner that caused or threatened concrete housing harm."
+    )
+    paragraph_number += 1
+
+    factual_end = paragraph_number - 1
+    md_lines.extend(["", "## Claims for Relief", ""])
+    for mapped in mapped_counts:
+        md_lines.extend([
+            f"### Count {_roman_count_label(int(mapped.get('count_number') or 0))}: {mapped.get('count_title') or ''}",
+            "",
+            f"{paragraph_number}. Plaintiffs repeat and reallege Paragraphs 1 through {factual_end} as if fully set out here.",
+        ])
+        paragraph_number += 1
+        md_lines.append(f"{paragraph_number}. {mapped.get('intro') or ''}")
+        paragraph_number += 1
+        md_lines.append(
+            f"{paragraph_number}. This count is provisionally mapped from the evidence group '{mapped.get('source_section') or ''}' and must be conformed to the final Oregon cause of action selected for filing."
+        )
+        paragraph_number += 1
+        for paragraph in list(mapped.get("paragraphs") or [])[:3]:
+            if isinstance(paragraph, dict):
+                text = str(paragraph.get("paragraph") or "")
+            else:
+                text = str(paragraph)
+            md_lines.append(f"{paragraph_number}. {text}")
+            paragraph_number += 1
+        md_lines.append("")
+        md_lines.append("Oregon theory notes:")
+        for note in list(mapped.get("oregon_theory_notes") or []):
+            md_lines.append(f"- {note}")
+        md_lines.append("")
+        md_lines.append("Elements to plead or verify:")
+        for prompt in list(mapped.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_lines.extend(["## Reserve or Supporting Theories", ""])
+    if reserve_sections:
+        for section in reserve_sections:
+            md_lines.append(
+                f"- {section.get('title') or 'Potential Claim Theme'} | source group={section.get('source_section') or ''} | hold as reserve unless Oregon-law mapping materially strengthens"
+            )
+    else:
+        md_lines.append("No reserve theories identified.")
+
+    md_lines.extend([
+        "",
+        "## Prayer for Relief",
+        "",
+        f"{paragraph_number}. {prayer_lines[0]}",
+        f"{paragraph_number + 1}. {prayer_lines[1]}",
+        f"{paragraph_number + 2}. {prayer_lines[2]}",
+        f"{paragraph_number + 3}. Plaintiffs further request any Oregon-law declaratory, injunctive, restitutionary, contractual, statutory, equitable, or cost-shifting relief authorized by the final selected causes of action.",
+        "",
+        "## Jury Demand",
+        "",
+        f"{paragraph_number + 4}. Plaintiffs demand a jury on all issues triable to a jury under Oregon law.",
+        "",
+        "## Final Conformance Before Filing",
+        "",
+        "- Replace generic count titles with the exact Oregon cause-of-action names selected for filing.",
+        "- Confirm party names, tenancy status, property description, and any required administrative-exhaustion or notice prerequisites.",
+        "- Decide whether any reserve theories should be elevated, separated, or omitted.",
+    ])
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_federal_filing_ready_complaint_draft(
+    complaint_ready: dict[str, Any],
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_federal_filing_ready_draft.json"
+    md_path = chronology_dir / "formal_complaint_federal_filing_ready_draft.md"
+
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    factual_background = factual_entries[: min(16, len(factual_entries))]
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    reserve_sections = list(lead_count_draft.get("reserve_sections") or [])
+    prayer_lines = _draft_prayer_for_relief_lines()
+
+    count_map = [
+        {
+            "count_title": "Procedural Due Process or Federally Regulated Housing Notice Claim",
+            "federal_theory_notes": [
+                "Confirm that plaintiffs can allege a protected housing interest, action under color of state law, and a concrete deprivation or threatened deprivation before using a 42 U.S.C. section 1983 due-process theory.",
+                "If the strongest theory turns on federally regulated notice or displacement rules rather than constitutional process, rename the count to the specific federal statutory or program-based claim actually supported.",
+            ],
+        },
+        {
+            "count_title": "Federal Housing Administration, Discrimination, or Retaliation Claim Based on Documentation Demands",
+            "federal_theory_notes": [
+                "Tie this count to the specific federal housing-program, fair-housing, anti-retaliation, or federally funded housing-administration rule actually implicated by the demand letters and email record.",
+                "If the evidence supports separate discrimination and program-administration theories, split them rather than relying on a single mixed count.",
+            ],
+        },
+        {
+            "count_title": "Federal Housing Program Compliance Claim Based on Lease, Occupancy, Inspection, or Displacement Conduct",
+            "federal_theory_notes": [
+                "Use this count only if the lease, inspection, occupancy, or displacement conduct can be tied to a specific federal housing-program obligation or federally protected housing interest.",
+                "If no sufficiently concrete federal hook exists for this conduct, move the theory to supplemental Oregon-law claims instead of over-pleading a federal count.",
+            ],
+        },
+    ]
+
+    mapped_counts: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        mapped = count_map[idx] if idx < len(count_map) else {
+            "count_title": str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "federal_theory_notes": [
+                "Identify the specific federal statute, constitutional protection, or federal housing-program rule that supports this count before filing.",
+            ],
+        }
+        mapped_counts.append({
+            "count_number": idx + 1,
+            "source_title": str(section.get("title") or ""),
+            "source_section": str(section.get("source_section") or ""),
+            "intro": str(section.get("intro") or ""),
+            "count_title": mapped["count_title"],
+            "federal_theory_notes": list(mapped.get("federal_theory_notes") or []),
+            "element_prompts": list(section.get("element_prompts") or []),
+            "paragraphs": list(section.get("paragraphs") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "lead_count_count": len(mapped_counts),
+        "reserve_count_count": len(reserve_sections),
+        "factual_background_count": len(factual_background),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps(
+            {
+                **summary,
+                "mapped_counts": mapped_counts,
+                "reserve_sections": reserve_sections,
+                "factual_background": factual_background,
+            },
+            indent=2,
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+
+    md_lines = [
+        "# Federal Filing-Ready Complaint Draft",
+        "",
+        "IN THE UNITED STATES DISTRICT COURT",
+        "FOR THE DISTRICT OF OREGON",
+        "",
+        "Jane Cortez and Benjamin Barber,",
+        "Plaintiffs,",
+        "",
+        "v.",
+        "",
+        "Housing Authority of Clackamas County; DOES 1-10,",
+        "Defendants.",
+        "",
+        "## Draft Status",
+        "",
+        "This is a filing-oriented federal complaint draft built from the narrowed lead-count structure.",
+        "It is still a drafting aid and must be conformed to the final federal cause-of-action selection before filing.",
+        "",
+        "## Nature of Action",
+        "",
+        "1. Plaintiffs bring this civil action arising from housing notices, documentation demands, lease-related conduct, occupancy-related directives, and displacement-related actions allegedly affecting federally regulated housing interests in Clackamas County, Oregon.",
+        "2. This draft is organized for a federal filing and treats the strongest current evidence themes as the three lead counts, with Oregon-law theories reserved for supplemental or alternative pleading only if appropriate.",
+        "",
+        "## Parties",
+        "",
+        "3. Plaintiffs are Jane Cortez and Benjamin Barber, subject to confirmation of full legal names, party status, and alignment of claims and requested relief.",
+        "4. Defendant Housing Authority of Clackamas County is alleged to have issued the operative notices, demands, and housing-administration communications summarized in this draft.",
+        "5. Plaintiffs reserve the ability to identify additional responsible persons or entities if later investigation supports amendment.",
+        "",
+        "## Jurisdiction and Venue",
+        "",
+        "6. This draft assumes federal-question jurisdiction under 28 U.S.C. section 1331 based on one or more federal statutory or constitutional housing-related claims that must be specifically identified before filing.",
+        "7. If Oregon-law claims are retained in a federal complaint, they should be pleaded only to the extent supplemental jurisdiction under 28 U.S.C. section 1367 is properly available and strategically appropriate.",
+        "8. Venue is provisionally stated in the District of Oregon because the housing unit, operative notices, and principal housing-administration events at issue are centered in Clackamas County, Oregon.",
+        "",
+        "## General Allegations",
+        "",
+    ]
+
+    paragraph_number = 9
+    for entry in factual_background:
+        md_lines.append(f"{paragraph_number}. {entry.get('paragraph') or ''}")
+        paragraph_number += 1
+    md_lines.append(
+        f"{paragraph_number}. Plaintiffs allege that these events formed a connected housing process in which notices, documentation demands, lease or occupancy directives, and displacement-related actions were imposed in a manner that deprived or threatened federally protected housing interests, or otherwise violated governing federal housing rules, if the federal theories are ultimately substantiated."
+    )
+    paragraph_number += 1
+
+    factual_end = paragraph_number - 1
+    md_lines.extend(["", "## Claims for Relief", ""])
+    for mapped in mapped_counts:
+        md_lines.extend([
+            f"### Count {_roman_count_label(int(mapped.get('count_number') or 0))}: {mapped.get('count_title') or ''}",
+            "",
+            f"{paragraph_number}. Plaintiffs repeat and reallege Paragraphs 1 through {factual_end} as if fully set out here.",
+        ])
+        paragraph_number += 1
+        md_lines.append(f"{paragraph_number}. {mapped.get('intro') or ''}")
+        paragraph_number += 1
+        md_lines.append(
+            f"{paragraph_number}. This count is provisionally mapped from the evidence group '{mapped.get('source_section') or ''}' and must be conformed to the final federal cause of action selected for filing."
+        )
+        paragraph_number += 1
+        for paragraph in list(mapped.get("paragraphs") or [])[:3]:
+            if isinstance(paragraph, dict):
+                text = str(paragraph.get("paragraph") or "")
+            else:
+                text = str(paragraph)
+            md_lines.append(f"{paragraph_number}. {text}")
+            paragraph_number += 1
+        md_lines.append("")
+        md_lines.append("Federal theory notes:")
+        for note in list(mapped.get("federal_theory_notes") or []):
+            md_lines.append(f"- {note}")
+        md_lines.append("")
+        md_lines.append("Elements to plead or verify:")
+        for prompt in list(mapped.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_lines.extend(["## Reserve or Supporting Theories", ""])
+    if reserve_sections:
+        for section in reserve_sections:
+            md_lines.append(
+                f"- {section.get('title') or 'Potential Claim Theme'} | source group={section.get('source_section') or ''} | hold as reserve unless a specific federal basis is identified and supported"
+            )
+    else:
+        md_lines.append("No reserve theories identified.")
+
+    md_lines.extend([
+        "",
+        "## Prayer for Relief",
+        "",
+        f"{paragraph_number}. {prayer_lines[0]}",
+        f"{paragraph_number + 1}. {prayer_lines[1]}",
+        f"{paragraph_number + 2}. {prayer_lines[2]}",
+        f"{paragraph_number + 3}. Plaintiffs further request declaratory, injunctive, equitable, statutory, fee-shifting, and cost relief available under the final selected federal causes of action and any properly joined supplemental claims.",
+        "",
+        "## Jury Demand",
+        "",
+        f"{paragraph_number + 4}. Plaintiffs demand a jury on all issues so triable in federal court.",
+        "",
+        "## Final Conformance Before Filing",
+        "",
+        "- Replace generic count titles with the exact federal cause-of-action names selected for filing.",
+        "- Confirm the specific federal anchor claim or claims, the basis for state action if a section 1983 theory is used, and the precise federally protected housing interest at issue.",
+        "- Decide whether any Oregon-law theories should remain as supplemental claims or be reserved for a state-court track instead.",
+    ])
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_oregon_state_named_claim_complaint_draft(
+    complaint_ready: dict[str, Any],
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_oregon_state_named_claim_draft.json"
+    md_path = chronology_dir / "formal_complaint_oregon_state_named_claim_draft.md"
+
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    factual_background = factual_entries[: min(16, len(factual_entries))]
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    reserve_sections = list(lead_count_draft.get("reserve_sections") or [])
+    prayer_lines = _draft_prayer_for_relief_lines()
+
+    named_count_map = [
+        {
+            "count_title": "Declaratory and Injunctive Relief Based on Defective Termination, Displacement, and Adverse Notice Process",
+            "theory_basis": [
+                "Use this count to target allegedly defective notices, termination steps, displacement notices, and hearing or relocation deficiencies under the governing Oregon tenancy, relocation, voucher, or program rules.",
+                "If the record supports a damages theory tied to a specific Oregon statutory violation, that theory can be added or split into a separate count after final rule selection.",
+            ],
+        },
+        {
+            "count_title": "Oregon Housing Discrimination, Retaliation, or Unfair Housing Administration Based on Documentation Demands and Intake Barriers",
+            "theory_basis": [
+                "Use this count if the documentation demands and intake barriers are best framed as discriminatory, retaliatory, selectively imposed, or otherwise unfair under Oregon-compatible housing theories.",
+                "If the proof separates cleanly into discrimination and retaliation theories, split them into separate counts rather than relying on a single combined claim.",
+            ],
+        },
+        {
+            "count_title": "Breach of Lease, Breach of Housing Program Obligations, and Wrongful Occupancy or Inspection Administration",
+            "theory_basis": [
+                "Use this count to challenge lease amendments, occupancy directives, inspection conduct, transfer administration, or other housing-program obligations that departed from the controlling lease or Oregon-compatible duties.",
+                "If the lease-based theory and the program-administration theory depend on materially different duties, separate them before filing.",
+            ],
+        },
+    ]
+
+    mapped_counts: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        mapped = named_count_map[idx] if idx < len(named_count_map) else {
+            "count_title": str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "theory_basis": [
+                "Confirm the exact Oregon cause-of-action label and its elements before filing.",
+            ],
+        }
+        mapped_counts.append({
+            "count_number": idx + 1,
+            "source_title": str(section.get("title") or ""),
+            "source_section": str(section.get("source_section") or ""),
+            "intro": str(section.get("intro") or ""),
+            "count_title": mapped["count_title"],
+            "theory_basis": list(mapped.get("theory_basis") or []),
+            "element_prompts": list(section.get("element_prompts") or []),
+            "paragraphs": list(section.get("paragraphs") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "lead_count_count": len(mapped_counts),
+        "reserve_count_count": len(reserve_sections),
+        "factual_background_count": len(factual_background),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps(
+            {
+                **summary,
+                "mapped_counts": mapped_counts,
+                "reserve_sections": reserve_sections,
+                "factual_background": factual_background,
+            },
+            indent=2,
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+
+    md_lines = [
+        "# Oregon State Named-Claim Complaint Draft",
+        "",
+        "IN THE CIRCUIT COURT OF THE STATE OF OREGON",
+        "FOR THE COUNTY OF CLACKAMAS",
+        "",
+        "Jane Cortez and Benjamin Barber,",
+        "Plaintiffs,",
+        "",
+        "v.",
+        "",
+        "Housing Authority of Clackamas County; DOES 1-10,",
+        "Defendants.",
+        "",
+        "## Draft Status",
+        "",
+        "This draft advances the Oregon track from provisional count framing to candidate named Oregon claims.",
+        "It remains a drafting aid and must be conformed to the final Oregon cause-of-action selection, statutory citations, and proof record before filing.",
+        "",
+        "## Nature of Action",
+        "",
+        "1. Plaintiffs bring this civil action arising from housing notices, documentation demands, lease-related conduct, occupancy-related directives, and displacement-related actions centered in Clackamas County, Oregon.",
+        "2. This draft names candidate Oregon claim structures for the three strongest current evidence themes while preserving theory-sensitive issues for final conformance.",
+        "",
+        "## Parties",
+        "",
+        "3. Plaintiffs are Jane Cortez and Benjamin Barber, subject to confirmation of full legal names, party status, and alignment of claims and requested relief.",
+        "4. Defendant Housing Authority of Clackamas County is alleged to have issued the operative notices, demands, and housing-administration communications summarized in this draft.",
+        "5. Plaintiffs reserve the ability to identify additional responsible persons or entities if later investigation supports amendment.",
+        "",
+        "## Venue and Oregon Court Basis",
+        "",
+        "6. Venue is proper in Clackamas County because the housing unit, operative notices, and the principal housing-administration events at issue are centered in Clackamas County, Oregon.",
+        "7. This draft assumes plaintiffs will proceed primarily on Oregon tenancy, lease, relocation, declaratory, injunctive, discrimination, retaliation, contract, or related state-law theories.",
+        "8. Any federal theories should be omitted, reserved, or separately conformed if plaintiffs proceed solely in Oregon state court.",
+        "",
+        "## General Allegations",
+        "",
+    ]
+
+    paragraph_number = 9
+    for entry in factual_background:
+        md_lines.append(f"{paragraph_number}. {entry.get('paragraph') or ''}")
+        paragraph_number += 1
+    md_lines.append(
+        f"{paragraph_number}. Plaintiffs allege that these events formed a connected housing process in which notices, documentation demands, lease or occupancy directives, and displacement-related actions were imposed in a manner that caused or threatened concrete housing harm."
+    )
+    paragraph_number += 1
+
+    factual_end = paragraph_number - 1
+    md_lines.extend(["", "## Claims for Relief", ""])
+    for mapped in mapped_counts:
+        md_lines.extend([
+            f"### Count {_roman_count_label(int(mapped.get('count_number') or 0))}: {mapped.get('count_title') or ''}",
+            "",
+            f"{paragraph_number}. Plaintiffs repeat and reallege Paragraphs 1 through {factual_end} as if fully set out here.",
+        ])
+        paragraph_number += 1
+        md_lines.append(f"{paragraph_number}. {mapped.get('intro') or ''}")
+        paragraph_number += 1
+        md_lines.append(
+            f"{paragraph_number}. This count is mapped from the evidence group '{mapped.get('source_section') or ''}' and is presented as a candidate named Oregon claim structure for final legal refinement."
+        )
+        paragraph_number += 1
+        for paragraph in list(mapped.get("paragraphs") or [])[:3]:
+            if isinstance(paragraph, dict):
+                text = str(paragraph.get("paragraph") or "")
+            else:
+                text = str(paragraph)
+            md_lines.append(f"{paragraph_number}. {text}")
+            paragraph_number += 1
+        md_lines.append("")
+        md_lines.append("Candidate theory basis:")
+        for note in list(mapped.get("theory_basis") or []):
+            md_lines.append(f"- {note}")
+        md_lines.append("")
+        md_lines.append("Elements to plead or verify:")
+        for prompt in list(mapped.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_lines.extend(["## Reserve or Supporting Theories", ""])
+    if reserve_sections:
+        for section in reserve_sections:
+            md_lines.append(
+                f"- {section.get('title') or 'Potential Claim Theme'} | source group={section.get('source_section') or ''} | preserve as support or reserve unless the Oregon-law fit materially strengthens"
+            )
+    else:
+        md_lines.append("No reserve theories identified.")
+
+    md_lines.extend([
+        "",
+        "## Prayer for Relief",
+        "",
+        f"{paragraph_number}. {prayer_lines[0]}",
+        f"{paragraph_number + 1}. {prayer_lines[1]}",
+        f"{paragraph_number + 2}. {prayer_lines[2]}",
+        f"{paragraph_number + 3}. Plaintiffs further request Oregon-law declaratory, injunctive, restitutionary, contractual, statutory, equitable, fee-shifting, and cost relief authorized by the final selected causes of action.",
+        "",
+        "## Jury Demand",
+        "",
+        f"{paragraph_number + 4}. Plaintiffs demand a jury on all issues triable to a jury under Oregon law.",
+        "",
+        "## Final Conformance Before Filing",
+        "",
+        "- Replace candidate count names with the exact Oregon cause-of-action names selected for filing.",
+        "- Add the specific Oregon statutory, lease, relocation, or administrative authorities supporting each count.",
+        "- Confirm whether any reserve theories should be elevated, split, or omitted.",
+    ])
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_federal_named_claim_complaint_draft(
+    complaint_ready: dict[str, Any],
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_federal_named_claim_draft.json"
+    md_path = chronology_dir / "formal_complaint_federal_named_claim_draft.md"
+
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    factual_background = factual_entries[: min(16, len(factual_entries))]
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    reserve_sections = list(lead_count_draft.get("reserve_sections") or [])
+    prayer_lines = _draft_prayer_for_relief_lines()
+
+    named_count_map = [
+        {
+            "count_title": "42 U.S.C. section 1983 Due Process or Federally Regulated Housing Notice Claim",
+            "theory_basis": [
+                "Use this count only if plaintiffs can identify a protected housing interest, action under color of state law, and a constitutionally inadequate notice, hearing, or deprivation process.",
+                "If the better theory is statutory or program-based rather than constitutional, replace this label with the specific federal housing notice or displacement claim actually supported.",
+            ],
+        },
+        {
+            "count_title": "Federal Fair Housing, Retaliation, or Federally Improper Housing Administration Claim Based on Documentation Demands and Intake Barriers",
+            "theory_basis": [
+                "Use this count if the documentation demands and intake barriers are best framed as discriminatory, retaliatory, selectively imposed, or contrary to governing federal housing-program administration rules.",
+                "If the proof separates cleanly into discrimination and program-administration theories, split them into separate counts rather than relying on a single combined claim.",
+            ],
+        },
+        {
+            "count_title": "Federal Housing Program Compliance Claim Based on Lease, Occupancy, Inspection, or Displacement Conduct",
+            "theory_basis": [
+                "Use this count only if the lease, occupancy, inspection, transfer, or displacement conduct can be tied to a concrete federal housing-program obligation or federally protected housing interest.",
+                "If the federal hook remains weak, reserve this conduct for supplemental Oregon-law counts rather than forcing it into a federal standalone claim.",
+            ],
+        },
+    ]
+
+    mapped_counts: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        mapped = named_count_map[idx] if idx < len(named_count_map) else {
+            "count_title": str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "theory_basis": [
+                "Confirm the exact federal cause-of-action label and its elements before filing.",
+            ],
+        }
+        mapped_counts.append({
+            "count_number": idx + 1,
+            "source_title": str(section.get("title") or ""),
+            "source_section": str(section.get("source_section") or ""),
+            "intro": str(section.get("intro") or ""),
+            "count_title": mapped["count_title"],
+            "theory_basis": list(mapped.get("theory_basis") or []),
+            "element_prompts": list(section.get("element_prompts") or []),
+            "paragraphs": list(section.get("paragraphs") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "lead_count_count": len(mapped_counts),
+        "reserve_count_count": len(reserve_sections),
+        "factual_background_count": len(factual_background),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps(
+            {
+                **summary,
+                "mapped_counts": mapped_counts,
+                "reserve_sections": reserve_sections,
+                "factual_background": factual_background,
+            },
+            indent=2,
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+
+    md_lines = [
+        "# Federal Named-Claim Complaint Draft",
+        "",
+        "IN THE UNITED STATES DISTRICT COURT",
+        "FOR THE DISTRICT OF OREGON",
+        "",
+        "Jane Cortez and Benjamin Barber,",
+        "Plaintiffs,",
+        "",
+        "v.",
+        "",
+        "Housing Authority of Clackamas County; DOES 1-10,",
+        "Defendants.",
+        "",
+        "## Draft Status",
+        "",
+        "This draft advances the federal track from provisional count framing to candidate named federal claims.",
+        "It remains a drafting aid and must be conformed to the final federal cause-of-action selection, jurisdiction allegations, and proof record before filing.",
+        "",
+        "## Nature of Action",
+        "",
+        "1. Plaintiffs bring this civil action arising from housing notices, documentation demands, lease-related conduct, occupancy-related directives, and displacement-related actions allegedly affecting federally regulated housing interests in Clackamas County, Oregon.",
+        "2. This draft names candidate federal claim structures for the three strongest current evidence themes while preserving theory-sensitive issues for final conformance.",
+        "",
+        "## Parties",
+        "",
+        "3. Plaintiffs are Jane Cortez and Benjamin Barber, subject to confirmation of full legal names, party status, and alignment of claims and requested relief.",
+        "4. Defendant Housing Authority of Clackamas County is alleged to have issued the operative notices, demands, and housing-administration communications summarized in this draft.",
+        "5. Plaintiffs reserve the ability to identify additional responsible persons or entities if later investigation supports amendment.",
+        "",
+        "## Jurisdiction and Venue",
+        "",
+        "6. This draft assumes federal-question jurisdiction under 28 U.S.C. section 1331 based on one or more specifically identified federal statutory or constitutional housing-related claims.",
+        "7. Any Oregon-law theories included in a federal complaint should be pleaded only to the extent supplemental jurisdiction under 28 U.S.C. section 1367 is properly available and strategically appropriate.",
+        "8. Venue is provisionally stated in the District of Oregon because the housing unit, operative notices, and principal housing-administration events at issue are centered in Clackamas County, Oregon.",
+        "",
+        "## General Allegations",
+        "",
+    ]
+
+    paragraph_number = 9
+    for entry in factual_background:
+        md_lines.append(f"{paragraph_number}. {entry.get('paragraph') or ''}")
+        paragraph_number += 1
+    md_lines.append(
+        f"{paragraph_number}. Plaintiffs allege that these events formed a connected housing process in which notices, documentation demands, lease or occupancy directives, and displacement-related actions were imposed in a manner that deprived or threatened federally protected housing interests, or otherwise violated governing federal housing rules, if the federal theories are ultimately substantiated."
+    )
+    paragraph_number += 1
+
+    factual_end = paragraph_number - 1
+    md_lines.extend(["", "## Claims for Relief", ""])
+    for mapped in mapped_counts:
+        md_lines.extend([
+            f"### Count {_roman_count_label(int(mapped.get('count_number') or 0))}: {mapped.get('count_title') or ''}",
+            "",
+            f"{paragraph_number}. Plaintiffs repeat and reallege Paragraphs 1 through {factual_end} as if fully set out here.",
+        ])
+        paragraph_number += 1
+        md_lines.append(f"{paragraph_number}. {mapped.get('intro') or ''}")
+        paragraph_number += 1
+        md_lines.append(
+            f"{paragraph_number}. This count is mapped from the evidence group '{mapped.get('source_section') or ''}' and is presented as a candidate named federal claim structure for final legal refinement."
+        )
+        paragraph_number += 1
+        for paragraph in list(mapped.get("paragraphs") or [])[:3]:
+            if isinstance(paragraph, dict):
+                text = str(paragraph.get("paragraph") or "")
+            else:
+                text = str(paragraph)
+            md_lines.append(f"{paragraph_number}. {text}")
+            paragraph_number += 1
+        md_lines.append("")
+        md_lines.append("Candidate theory basis:")
+        for note in list(mapped.get("theory_basis") or []):
+            md_lines.append(f"- {note}")
+        md_lines.append("")
+        md_lines.append("Elements to plead or verify:")
+        for prompt in list(mapped.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_lines.extend(["## Reserve or Supporting Theories", ""])
+    if reserve_sections:
+        for section in reserve_sections:
+            md_lines.append(
+                f"- {section.get('title') or 'Potential Claim Theme'} | source group={section.get('source_section') or ''} | preserve as support or reserve unless a specific federal basis materially strengthens"
+            )
+    else:
+        md_lines.append("No reserve theories identified.")
+
+    md_lines.extend([
+        "",
+        "## Prayer for Relief",
+        "",
+        f"{paragraph_number}. {prayer_lines[0]}",
+        f"{paragraph_number + 1}. {prayer_lines[1]}",
+        f"{paragraph_number + 2}. {prayer_lines[2]}",
+        f"{paragraph_number + 3}. Plaintiffs further request declaratory, injunctive, equitable, statutory, fee-shifting, and cost relief authorized by the final selected federal causes of action and any properly joined supplemental claims.",
+        "",
+        "## Jury Demand",
+        "",
+        f"{paragraph_number + 4}. Plaintiffs demand a jury on all issues so triable in federal court.",
+        "",
+        "## Final Conformance Before Filing",
+        "",
+        "- Replace candidate count names with the exact federal cause-of-action names selected for filing.",
+        "- Add the specific federal statutory, constitutional, fair-housing, or housing-program authorities supporting each count.",
+        "- Confirm whether any reserve theories should be elevated, split, or omitted, and whether any Oregon-law theories should remain supplemental.",
+    ])
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_oregon_state_authority_placeholder_draft(
+    complaint_ready: dict[str, Any],
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_oregon_state_authority_placeholder_draft.json"
+    md_path = chronology_dir / "formal_complaint_oregon_state_authority_placeholder_draft.md"
+
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    factual_background = factual_entries[: min(12, len(factual_entries))]
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+
+    authority_map = [
+        {
+            "count_title": "Defective Termination, Displacement, and Adverse Notice Process",
+            "authority_placeholders": [
+                "Insert controlling lease notice and termination clause(s).",
+                "Insert the governing Oregon termination, displacement, relocation, or tenant-notice authority from ORS chapter 90 or the controlling housing-program rules.",
+                "Insert any required hearing, appeal, or relocation-process authority if the challenged notices triggered those procedures.",
+            ],
+        },
+        {
+            "count_title": "Documentation Demands, Intake Barriers, and Oregon Housing Administration Misconduct",
+            "authority_placeholders": [
+                "Insert the Oregon discrimination, retaliation, or unfair housing-process authority actually supported by the proof.",
+                "Insert the governing documentation, verification, or intake rule that limited what HACC could demand.",
+                "Insert any lease, voucher, or program source showing the challenged demands were unsupported, selective, or excessive.",
+            ],
+        },
+        {
+            "count_title": "Lease, Occupancy, Inspection, and Housing-Program Obligation Violations",
+            "authority_placeholders": [
+                "Insert the controlling lease amendment, occupancy, inspection, or transfer clause(s).",
+                "Insert any Oregon contract, tenancy, or housing-program authority that defines the duty allegedly breached.",
+                "Insert the remedy source for damages, declaratory relief, injunction, or other relief tied to the lease or program violation.",
+            ],
+        },
+    ]
+
+    counts: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        mapped = authority_map[idx] if idx < len(authority_map) else {
+            "count_title": str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "authority_placeholders": ["Insert the controlling Oregon statutory, contractual, or program authority for this count."],
+        }
+        counts.append({
+            "count_number": idx + 1,
+            "count_title": mapped["count_title"],
+            "source_section": str(section.get("source_section") or ""),
+            "intro": str(section.get("intro") or ""),
+            "authority_placeholders": list(mapped.get("authority_placeholders") or []),
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "lead_count_count": len(counts),
+        "authority_block_count": sum(len(count.get("authority_placeholders") or []) for count in counts),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps({**summary, "counts": counts, "factual_background": factual_background}, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    md_lines = [
+        "# Oregon State Authority-Placeholder Complaint Draft",
+        "",
+        "Use this draft to insert the precise Oregon statutory, lease, relocation, and housing-program authorities before finalizing the Oregon complaint.",
+        "",
+        "## Factual Anchor",
+        "",
+    ]
+    for entry in factual_background:
+        md_lines.append(f"- {entry.get('paragraph') or ''}")
+
+    md_lines.extend(["", "## Count-Level Authority Placeholders", ""])
+    for count in counts:
+        md_lines.extend([
+            f"### Count {_roman_count_label(int(count.get('count_number') or 0))}: {count.get('count_title') or ''}",
+            "",
+            f"Source allegation group: {count.get('source_section') or ''}",
+            f"Draft theory summary: {count.get('intro') or ''}",
+            "",
+            "Authorities to insert:",
+        ])
+        for placeholder in list(count.get("authority_placeholders") or []):
+            md_lines.append(f"- {placeholder}")
+        md_lines.append("")
+        md_lines.append("Elements still to verify:")
+        for prompt in list(count.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_lines.extend([
+        "## Final Oregon Conformance",
+        "",
+        "- Add exact ORS, lease, relocation, or administrative authorities under each count.",
+        "- Confirm whether the strongest remedy is declaratory, injunctive, damages-based, or some combination.",
+        "- Split any count that depends on materially different legal duties or remedies.",
+    ])
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_federal_authority_placeholder_draft(
+    complaint_ready: dict[str, Any],
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_federal_authority_placeholder_draft.json"
+    md_path = chronology_dir / "formal_complaint_federal_authority_placeholder_draft.md"
+
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    factual_background = factual_entries[: min(12, len(factual_entries))]
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+
+    authority_map = [
+        {
+            "count_title": "42 U.S.C. section 1983 Due Process or Federal Housing Notice Claim",
+            "authority_placeholders": [
+                "Insert 28 U.S.C. section 1331 and the exact federal anchor authority for subject-matter jurisdiction.",
+                "Insert 42 U.S.C. section 1983 and the underlying constitutional or federal housing right only if state action and a protected housing interest can be pleaded in good faith.",
+                "If proceeding on a statutory or program-based notice theory instead, insert the specific federal housing regulation, statute, or guidance source actually governing the challenged notices.",
+            ],
+        },
+        {
+            "count_title": "Federal Fair Housing, Retaliation, or Improper Housing Administration Claim",
+            "authority_placeholders": [
+                "Insert the specific federal discrimination, retaliation, or fair-housing authority actually supported by the evidence.",
+                "Insert the governing federal housing-program verification, intake, or administration rule that the challenged demands allegedly violated.",
+                "If Oregon-law theories remain in the case, insert 28 U.S.C. section 1367 only where supplemental pleading is strategically warranted.",
+            ],
+        },
+        {
+            "count_title": "Federal Housing Program Compliance Claim Based on Lease, Occupancy, Inspection, or Displacement Conduct",
+            "authority_placeholders": [
+                "Insert the specific federal housing-program regulation, handbook, contract condition, or administrative rule governing the lease, occupancy, inspection, transfer, or displacement conduct at issue.",
+                "Insert the precise federally protected housing interest, benefit, or program entitlement implicated by the challenged conduct.",
+                "If no sufficiently concrete federal authority exists, move this conduct to supplemental Oregon-law pleading rather than preserving it as a federal standalone count.",
+            ],
+        },
+    ]
+
+    counts: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        mapped = authority_map[idx] if idx < len(authority_map) else {
+            "count_title": str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "authority_placeholders": ["Insert the controlling federal statutory, constitutional, or program authority for this count."],
+        }
+        counts.append({
+            "count_number": idx + 1,
+            "count_title": mapped["count_title"],
+            "source_section": str(section.get("source_section") or ""),
+            "intro": str(section.get("intro") or ""),
+            "authority_placeholders": list(mapped.get("authority_placeholders") or []),
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "lead_count_count": len(counts),
+        "authority_block_count": sum(len(count.get("authority_placeholders") or []) for count in counts),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps({**summary, "counts": counts, "factual_background": factual_background}, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    md_lines = [
+        "# Federal Authority-Placeholder Complaint Draft",
+        "",
+        "Use this draft to insert the precise federal jurisdictional, statutory, constitutional, regulatory, and program authorities before finalizing the federal complaint.",
+        "",
+        "## Factual Anchor",
+        "",
+    ]
+    for entry in factual_background:
+        md_lines.append(f"- {entry.get('paragraph') or ''}")
+
+    md_lines.extend(["", "## Count-Level Authority Placeholders", ""])
+    for count in counts:
+        md_lines.extend([
+            f"### Count {_roman_count_label(int(count.get('count_number') or 0))}: {count.get('count_title') or ''}",
+            "",
+            f"Source allegation group: {count.get('source_section') or ''}",
+            f"Draft theory summary: {count.get('intro') or ''}",
+            "",
+            "Authorities to insert:",
+        ])
+        for placeholder in list(count.get("authority_placeholders") or []):
+            md_lines.append(f"- {placeholder}")
+        md_lines.append("")
+        md_lines.append("Elements still to verify:")
+        for prompt in list(count.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_lines.extend([
+        "## Final Federal Conformance",
+        "",
+        "- Add exact federal authorities under each count and in the jurisdiction section.",
+        "- Confirm whether section 1983, a federal housing statute, a federal program rule, or a mixed theory is actually the strongest anchor.",
+        "- Move weakly grounded federal theories into supplemental Oregon-law pleading instead of preserving them as standalone federal counts.",
+    ])
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_forum_authority_research_queue(
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_forum_authority_research_queue.json"
+    md_path = chronology_dir / "formal_complaint_forum_authority_research_queue.md"
+
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    queue_templates = [
+        {
+            "oregon": [
+                "Identify the precise Oregon notice, termination, displacement, relocation, and hearing authorities governing the challenged notices.",
+                "Locate the controlling lease clause or voucher/program document that set the notice requirements actually applicable to plaintiffs.",
+            ],
+            "federal": [
+                "Identify whether Count I is best anchored in section 1983 due process, a federal housing statute, or a federal program-rule notice theory.",
+                "Locate the exact federal housing regulation, statute, handbook, or guidance source governing the challenged notice or displacement process.",
+            ],
+        },
+        {
+            "oregon": [
+                "Identify the strongest Oregon discrimination, retaliation, or unfair housing-process authority applicable to documentation demands and intake barriers.",
+                "Locate the rule, lease term, or program condition that limited what documentation HACC could require from plaintiffs.",
+            ],
+            "federal": [
+                "Identify the strongest federal fair-housing, retaliation, or federally improper administration authority applicable to the documentation demands.",
+                "Locate the federal housing-program verification or intake rule that the challenged demands allegedly exceeded or violated.",
+            ],
+        },
+        {
+            "oregon": [
+                "Identify the lease, occupancy, inspection, transfer, and housing-program authorities that defined HACC's obligations for the challenged conduct.",
+                "Determine whether this count should be split into separate lease-breach and housing-process counts under Oregon law.",
+            ],
+            "federal": [
+                "Identify the exact federal housing-program regulation, contract condition, or program guidance governing the lease, occupancy, inspection, or displacement conduct at issue.",
+                "Determine whether Count III has a sufficiently concrete federal hook or should instead be preserved only as supplemental Oregon-law pleading.",
+            ],
+        },
+    ]
+
+    entries: list[dict[str, Any]] = []
+    priority = 1
+    for idx, section in enumerate(lead_sections):
+        template = queue_templates[idx] if idx < len(queue_templates) else {"oregon": [], "federal": []}
+        title = str(section.get("title") or f"Lead Count {idx + 1}")
+        source_section = str(section.get("source_section") or "")
+        for forum in ("oregon", "federal"):
+            for item in list(template.get(forum) or []):
+                entries.append({
+                    "priority": priority,
+                    "forum": forum,
+                    "lead_count": idx + 1,
+                    "title": title,
+                    "source_section": source_section,
+                    "task": item,
+                })
+                priority += 1
+
+    summary = {
+        "status": "success",
+        "entry_count": len(entries),
+        "oregon_entry_count": sum(1 for entry in entries if entry.get("forum") == "oregon"),
+        "federal_entry_count": sum(1 for entry in entries if entry.get("forum") == "federal"),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "entries": entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Formal Complaint Forum Authority Research Queue",
+        "",
+        f"Total research tasks: {summary['entry_count']}",
+        f"Oregon tasks: {summary['oregon_entry_count']}",
+        f"Federal tasks: {summary['federal_entry_count']}",
+        "",
+        "Use this queue to resolve the remaining legal-authority insertion gaps before selecting the final forum-specific complaint for filing.",
+        "",
+        "## Queue",
+        "",
+    ]
+    for entry in entries:
+        md_lines.append(
+            f"- P{entry['priority']} | forum={entry['forum']} | count={entry['lead_count']} | {entry['title']} | source={entry['source_section']} | task={entry['task']}"
+        )
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_oregon_authority_insertion_worksheet(
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_oregon_authority_insertion_worksheet.json"
+    md_path = chronology_dir / "formal_complaint_oregon_authority_insertion_worksheet.md"
+
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    titles = [
+        "Defective Termination, Displacement, and Adverse Notice Process",
+        "Documentation Demands, Intake Barriers, and Oregon Housing Administration Misconduct",
+        "Lease, Occupancy, Inspection, and Housing-Program Obligation Violations",
+    ]
+    worksheets: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        paragraphs = list(section.get("paragraphs") or [])
+        representative_facts: list[str] = []
+        for paragraph in paragraphs[:3]:
+            if isinstance(paragraph, dict):
+                representative_facts.append(str(paragraph.get("paragraph") or ""))
+            else:
+                representative_facts.append(str(paragraph))
+        worksheets.append({
+            "count_number": idx + 1,
+            "count_title": titles[idx] if idx < len(titles) else str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "source_section": str(section.get("source_section") or ""),
+            "draft_theory_summary": str(section.get("intro") or ""),
+            "authority_slots": [
+                "Exact Oregon cause-of-action label or claim heading",
+                "Primary Oregon statutory, regulatory, relocation, or tenant-process authority",
+                "Lease clause, voucher term, or housing-program document authority",
+                "Remedy authority for declaratory, injunctive, damages, or fee relief",
+                "Authority-to-fact linkage sentence tying the cited rule to the representative evidence",
+            ],
+            "representative_facts": representative_facts,
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "count_count": len(worksheets),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "worksheets": worksheets,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Oregon Authority Insertion Worksheet",
+        "",
+        "Use this worksheet to turn the Oregon draft from authority placeholders into pleading-ready count sections.",
+        "",
+    ]
+    for worksheet in worksheets:
+        md_lines.extend([
+            f"## Count {_roman_count_label(int(worksheet.get('count_number') or 0))}: {worksheet.get('count_title') or ''}",
+            "",
+            f"Source allegation group: {worksheet.get('source_section') or ''}",
+            f"Draft theory summary: {worksheet.get('draft_theory_summary') or ''}",
+            "",
+            "Authority insertion slots:",
+        ])
+        for slot in list(worksheet.get("authority_slots") or []):
+            md_lines.append(f"- {slot}: [INSERT]")
+        md_lines.extend(["", "Representative facts to connect:"])
+        for fact in list(worksheet.get("representative_facts") or []):
+            md_lines.append(f"- {fact}")
+        md_lines.extend(["", "Elements still to prove or verify:"])
+        for prompt in list(worksheet.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_federal_authority_insertion_worksheet(
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_federal_authority_insertion_worksheet.json"
+    md_path = chronology_dir / "formal_complaint_federal_authority_insertion_worksheet.md"
+
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    titles = [
+        "42 U.S.C. section 1983 Due Process or Federal Housing Notice Claim",
+        "Federal Fair Housing, Retaliation, or Improper Housing Administration Claim",
+        "Federal Housing Program Compliance Claim Based on Lease, Occupancy, Inspection, or Displacement Conduct",
+    ]
+    worksheets: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        paragraphs = list(section.get("paragraphs") or [])
+        representative_facts: list[str] = []
+        for paragraph in paragraphs[:3]:
+            if isinstance(paragraph, dict):
+                representative_facts.append(str(paragraph.get("paragraph") or ""))
+            else:
+                representative_facts.append(str(paragraph))
+        worksheets.append({
+            "count_number": idx + 1,
+            "count_title": titles[idx] if idx < len(titles) else str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "source_section": str(section.get("source_section") or ""),
+            "draft_theory_summary": str(section.get("intro") or ""),
+            "authority_slots": [
+                "Federal cause-of-action label",
+                "Jurisdictional authority and anchor claim citation",
+                "Primary federal statutory, regulatory, constitutional, or program-rule authority",
+                "State-action, federal-program, or protected-interest allegation source",
+                "Supplemental jurisdiction decision for any Oregon-law component",
+                "Authority-to-fact linkage sentence tying the cited rule to the representative evidence",
+            ],
+            "representative_facts": representative_facts,
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "count_count": len(worksheets),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "worksheets": worksheets,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Federal Authority Insertion Worksheet",
+        "",
+        "Use this worksheet to turn the federal draft from authority placeholders into pleading-ready count sections.",
+        "",
+    ]
+    for worksheet in worksheets:
+        md_lines.extend([
+            f"## Count {_roman_count_label(int(worksheet.get('count_number') or 0))}: {worksheet.get('count_title') or ''}",
+            "",
+            f"Source allegation group: {worksheet.get('source_section') or ''}",
+            f"Draft theory summary: {worksheet.get('draft_theory_summary') or ''}",
+            "",
+            "Authority insertion slots:",
+        ])
+        for slot in list(worksheet.get("authority_slots") or []):
+            md_lines.append(f"- {slot}: [INSERT]")
+        md_lines.extend(["", "Representative facts to connect:"])
+        for fact in list(worksheet.get("representative_facts") or []):
+            md_lines.append(f"- {fact}")
+        md_lines.extend(["", "Elements still to prove or verify:"])
+        for prompt in list(worksheet.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_oregon_candidate_authority_scaffold(
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_oregon_candidate_authority_scaffold.json"
+    md_path = chronology_dir / "formal_complaint_oregon_candidate_authority_scaffold.md"
+
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    scaffold_map = [
+        {
+            "count_title": "Defective Termination, Displacement, and Adverse Notice Process",
+            "candidate_authority_families": [
+                "ORS chapter 90 termination, notice, tenancy, and displacement provisions: confirm the exact section(s) actually governing the tenancy status and notice type.",
+                "Oregon relocation, hearing, or housing-program procedural authorities: confirm whether the challenged notices triggered any relocation or appeal framework.",
+                "Lease notice, termination, or occupancy clauses from the operative lease amendment or voucher/program packet.",
+            ],
+        },
+        {
+            "count_title": "Documentation Demands, Intake Barriers, and Oregon Housing Administration Misconduct",
+            "candidate_authority_families": [
+                "Oregon housing discrimination, retaliation, or unfair-process authorities: confirm the exact statutory or administrative source actually supported by the proof.",
+                "Voucher, subsidy, or program verification rules limiting what documentation could be demanded.",
+                "Lease, policy, or application materials showing the challenged intake conditions were unsupported or selectively imposed.",
+            ],
+        },
+        {
+            "count_title": "Lease, Occupancy, Inspection, and Housing-Program Obligation Violations",
+            "candidate_authority_families": [
+                "Lease amendment, occupancy, inspection, transfer, or household-composition clauses from the operative housing documents.",
+                "Oregon contract or tenancy-duty authorities: confirm the exact state-law source governing breach, performance, or improper housing administration.",
+                "Housing-program obligations or administrative materials governing inspections, occupancy changes, or relocation-related conduct.",
+            ],
+        },
+    ]
+
+    entries: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        mapped = scaffold_map[idx] if idx < len(scaffold_map) else {
+            "count_title": str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "candidate_authority_families": ["Identify the likely Oregon statutory, lease, and program authorities for this count."],
+        }
+        entries.append({
+            "count_number": idx + 1,
+            "count_title": mapped["count_title"],
+            "source_section": str(section.get("source_section") or ""),
+            "candidate_authority_families": list(mapped.get("candidate_authority_families") or []),
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "count_count": len(entries),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "entries": entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Oregon Candidate Authority Scaffold",
+        "",
+        "Use this scaffold to decide which Oregon authority families should be researched and inserted under each count before finalizing the Oregon complaint.",
+        "",
+    ]
+    for entry in entries:
+        md_lines.extend([
+            f"## Count {_roman_count_label(int(entry.get('count_number') or 0))}: {entry.get('count_title') or ''}",
+            "",
+            f"Source allegation group: {entry.get('source_section') or ''}",
+            "",
+            "Candidate authority families:",
+        ])
+        for item in list(entry.get("candidate_authority_families") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Questions to close:"])
+        for prompt in list(entry.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_federal_candidate_authority_scaffold(
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_federal_candidate_authority_scaffold.json"
+    md_path = chronology_dir / "formal_complaint_federal_candidate_authority_scaffold.md"
+
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    scaffold_map = [
+        {
+            "count_title": "42 U.S.C. section 1983 Due Process or Federal Housing Notice Claim",
+            "candidate_authority_families": [
+                "28 U.S.C. section 1331 and, if needed, 28 U.S.C. section 1367: confirm the precise federal-jurisdiction structure.",
+                "42 U.S.C. section 1983 plus the specific constitutional or federally protected housing interest, if state action and deprivation can be pleaded in good faith.",
+                "Alternative federal housing notice or displacement authorities, including applicable HUD regulations, statutes, or handbook provisions: confirm the exact source actually governing the challenged notices.",
+            ],
+        },
+        {
+            "count_title": "Federal Fair Housing, Retaliation, or Improper Housing Administration Claim",
+            "candidate_authority_families": [
+                "Federal Fair Housing Act, retaliation, or anti-discrimination authorities: confirm the exact statutory and regulatory provisions actually implicated.",
+                "Federal housing-program verification, intake, or administration rules limiting what documentation could be demanded.",
+                "Supplemental-jurisdiction analysis for any related Oregon-law component if the strongest theory is mixed federal/state.",
+            ],
+        },
+        {
+            "count_title": "Federal Housing Program Compliance Claim Based on Lease, Occupancy, Inspection, or Displacement Conduct",
+            "candidate_authority_families": [
+                "Federal housing-program regulations, handbook provisions, or contract conditions governing lease, occupancy, inspection, transfer, or displacement conduct.",
+                "Authorities defining the federally protected housing interest, entitlement, or benefit allegedly impaired.",
+                "Fallback decision point: if the federal hook remains weak, move this conduct to supplemental Oregon-law pleading instead of a standalone federal count.",
+            ],
+        },
+    ]
+
+    entries: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        mapped = scaffold_map[idx] if idx < len(scaffold_map) else {
+            "count_title": str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "candidate_authority_families": ["Identify the likely federal statutory, constitutional, and program authorities for this count."],
+        }
+        entries.append({
+            "count_number": idx + 1,
+            "count_title": mapped["count_title"],
+            "source_section": str(section.get("source_section") or ""),
+            "candidate_authority_families": list(mapped.get("candidate_authority_families") or []),
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "count_count": len(entries),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "entries": entries,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Federal Candidate Authority Scaffold",
+        "",
+        "Use this scaffold to decide which federal authority families should be researched and inserted under each count before finalizing the federal complaint.",
+        "",
+    ]
+    for entry in entries:
+        md_lines.extend([
+            f"## Count {_roman_count_label(int(entry.get('count_number') or 0))}: {entry.get('count_title') or ''}",
+            "",
+            f"Source allegation group: {entry.get('source_section') or ''}",
+            "",
+            "Candidate authority families:",
+        ])
+        for item in list(entry.get("candidate_authority_families") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Questions to close:"])
+        for prompt in list(entry.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_authority_infused_complaint_draft(
+    forum: str,
+    complaint_ready: dict[str, Any],
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    factual_background = factual_entries[: min(10, len(factual_entries))]
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    reserve_sections = list(lead_count_draft.get("reserve_sections") or [])
+    prayer_lines = _draft_prayer_for_relief_lines()
+
+    if forum == "oregon":
+        json_path = chronology_dir / "formal_complaint_oregon_authority_infused_draft.json"
+        md_path = chronology_dir / "formal_complaint_oregon_authority_infused_draft.md"
+        title = "# Oregon Authority-Infused Complaint Draft"
+        caption_lines = [
+            "IN THE CIRCUIT COURT OF THE STATE OF OREGON",
+            "FOR THE COUNTY OF CLACKAMAS",
+        ]
+        intro_lines = [
+            "This draft combines the Oregon count structure with candidate authority families and pleading insertion points.",
+            "It is intended to make final Oregon pleading conversion faster once the exact authorities are selected.",
+        ]
+        count_map = [
+            {
+                "count_title": "Defective Termination, Displacement, and Adverse Notice Process",
+                "authorities": [
+                    "ORS chapter 90 termination, notice, tenancy, and displacement provisions: select the exact section(s) governing the challenged notices.",
+                    "Any Oregon relocation, hearing, or housing-program procedural authority triggered by the notices.",
+                    "The controlling lease notice, termination, or occupancy clause from the operative housing documents.",
+                ],
+                "insertion_sentence": "Plaintiffs will insert the exact Oregon notice, tenancy, relocation, and lease authorities showing that the challenged notices were legally deficient and threatened concrete housing harm.",
+            },
+            {
+                "count_title": "Documentation Demands, Intake Barriers, and Oregon Housing Administration Misconduct",
+                "authorities": [
+                    "Oregon discrimination, retaliation, or unfair housing-process authority supported by the documentation-demand record.",
+                    "The governing verification, subsidy, voucher, or intake rule limiting what HACC could demand.",
+                    "Any lease, policy, or application material showing the challenged conditions were unsupported or selectively imposed.",
+                ],
+                "insertion_sentence": "Plaintiffs will insert the Oregon authority showing that the challenged documentation demands exceeded the governing intake or administration rules and caused unlawful housing-process harm.",
+            },
+            {
+                "count_title": "Lease, Occupancy, Inspection, and Housing-Program Obligation Violations",
+                "authorities": [
+                    "The controlling lease amendment, occupancy, inspection, transfer, or household-composition clause(s).",
+                    "Oregon contract, tenancy-duty, or housing-program authority defining the obligation allegedly breached.",
+                    "Any remedy source supporting declaratory, injunctive, contractual, or damages relief for the challenged conduct.",
+                ],
+                "insertion_sentence": "Plaintiffs will insert the lease, Oregon duty, and program-authority sources showing that the occupancy, inspection, or related conduct departed from governing obligations.",
+            },
+        ]
+    else:
+        json_path = chronology_dir / "formal_complaint_federal_authority_infused_draft.json"
+        md_path = chronology_dir / "formal_complaint_federal_authority_infused_draft.md"
+        title = "# Federal Authority-Infused Complaint Draft"
+        caption_lines = [
+            "IN THE UNITED STATES DISTRICT COURT",
+            "FOR THE DISTRICT OF OREGON",
+        ]
+        intro_lines = [
+            "This draft combines the federal count structure with candidate authority families and pleading insertion points.",
+            "It is intended to make final federal pleading conversion faster once the precise anchor theory is selected.",
+        ]
+        count_map = [
+            {
+                "count_title": "42 U.S.C. section 1983 Due Process or Federal Housing Notice Claim",
+                "authorities": [
+                    "28 U.S.C. section 1331 and any necessary supplemental-jurisdiction authority under 28 U.S.C. section 1367.",
+                    "42 U.S.C. section 1983 and the exact constitutional or federally protected housing interest, if state action and deprivation can be pleaded in good faith.",
+                    "Any alternative federal housing notice, displacement, or program authority actually governing the challenged notices.",
+                ],
+                "insertion_sentence": "Plaintiffs will insert the federal jurisdictional and substantive authorities showing that the challenged notices deprived or threatened a federally protected housing interest through inadequate process or noncompliant federal housing administration.",
+            },
+            {
+                "count_title": "Federal Fair Housing, Retaliation, or Improper Housing Administration Claim",
+                "authorities": [
+                    "Federal Fair Housing Act, retaliation, discrimination, or anti-interference authorities actually supported by the proof.",
+                    "The governing federal verification, intake, subsidy, or program-administration rule limiting what HACC could demand.",
+                    "Any supplemental-jurisdiction authority needed for related Oregon-law allegations.",
+                ],
+                "insertion_sentence": "Plaintiffs will insert the federal statutory and program-rule authorities showing that the challenged documentation demands were discriminatory, retaliatory, or inconsistent with governing federal housing administration rules.",
+            },
+            {
+                "count_title": "Federal Housing Program Compliance Claim Based on Lease, Occupancy, Inspection, or Displacement Conduct",
+                "authorities": [
+                    "The precise federal housing-program regulation, handbook provision, contract condition, or administrative rule governing the challenged lease, occupancy, inspection, or displacement conduct.",
+                    "The federally protected housing interest, benefit, or entitlement allegedly impaired by the conduct.",
+                    "If the federal hook is weak, the supplemental Oregon-law fallback path that should replace a standalone federal count.",
+                ],
+                "insertion_sentence": "Plaintiffs will insert the specific federal housing-program and entitlement authorities showing that the lease, occupancy, inspection, or related conduct violated federal housing obligations or otherwise belongs only as supplemental state-law pleading.",
+            },
+        ]
+
+    counts: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        mapped = count_map[idx] if idx < len(count_map) else {
+            "count_title": str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "authorities": ["Insert the controlling authority family for this count."],
+            "insertion_sentence": "Insert the authority-to-fact linkage for this count.",
+        }
+        paragraphs = list(section.get("paragraphs") or [])
+        representative_facts: list[str] = []
+        for paragraph in paragraphs[:3]:
+            if isinstance(paragraph, dict):
+                representative_facts.append(str(paragraph.get("paragraph") or ""))
+            else:
+                representative_facts.append(str(paragraph))
+        counts.append({
+            "count_number": idx + 1,
+            "count_title": mapped["count_title"],
+            "source_section": str(section.get("source_section") or ""),
+            "draft_theory_summary": str(section.get("intro") or ""),
+            "authority_families": list(mapped.get("authorities") or []),
+            "insertion_sentence": str(mapped.get("insertion_sentence") or ""),
+            "representative_facts": representative_facts,
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "forum": forum,
+        "lead_count_count": len(counts),
+        "reserve_count_count": len(reserve_sections),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps({**summary, "counts": counts, "factual_background": factual_background}, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    md_lines = [title, "", *caption_lines, "", "Jane Cortez and Benjamin Barber,", "Plaintiffs,", "", "v.", "", "Housing Authority of Clackamas County; DOES 1-10,", "Defendants.", "", "## Draft Status", ""]
+    md_lines.extend(intro_lines)
+    md_lines.extend(["", "## General Allegation Snapshot", ""])
+    for entry in factual_background:
+        md_lines.append(f"- {entry.get('paragraph') or ''}")
+
+    md_lines.extend(["", "## Claims for Relief", ""])
+    for count in counts:
+        md_lines.extend([
+            f"### Count {_roman_count_label(int(count.get('count_number') or 0))}: {count.get('count_title') or ''}",
+            "",
+            f"Source allegation group: {count.get('source_section') or ''}",
+            f"Draft theory summary: {count.get('draft_theory_summary') or ''}",
+            "",
+            "Candidate authority families:",
+        ])
+        for item in list(count.get("authority_families") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend([
+            "",
+            "Draft authority insertion sentence:",
+            f"- {count.get('insertion_sentence') or ''}",
+            "",
+            "Representative facts to connect:",
+        ])
+        for fact in list(count.get("representative_facts") or []):
+            md_lines.append(f"- {fact}")
+        md_lines.extend(["", "Elements still to prove or verify:"])
+        for prompt in list(count.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_lines.extend(["## Reserve Counts", ""])
+    if reserve_sections:
+        for section in reserve_sections:
+            md_lines.append(
+                f"- {section.get('title') or 'Potential Claim Theme'} | source group={section.get('source_section') or ''}"
+            )
+    else:
+        md_lines.append("No reserve counts identified.")
+
+    md_lines.extend(["", "## Prayer for Relief Anchor", ""])
+    for line in prayer_lines:
+        md_lines.append(f"- {line}")
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_oregon_near_final_candidate_draft(
+    complaint_ready: dict[str, Any],
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_oregon_near_final_candidate_draft.json"
+    md_path = chronology_dir / "formal_complaint_oregon_near_final_candidate_draft.md"
+
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    factual_background = factual_entries[: min(12, len(factual_entries))]
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    reserve_sections = list(lead_count_draft.get("reserve_sections") or [])
+    prayer_lines = _draft_prayer_for_relief_lines()
+
+    count_map = [
+        {
+            "count_title": "Declaratory and Injunctive Relief Based on Defective Termination, Displacement, and Adverse Notice Process",
+            "candidate_authorities": [
+                "ORS chapter 90 notice, termination, displacement, or tenancy provisions: insert exact section(s) after tenancy-status confirmation.",
+                "Any Oregon relocation, hearing, or housing-program procedural authority triggered by the challenged notices.",
+                "The operative lease, voucher, or program notice clause(s) governing notice content, timing, and delivery.",
+            ],
+            "candidate_linkage": "Plaintiffs allege that the challenged 2024-2025 notices failed to comply with the governing Oregon notice and housing-process authorities and therefore threatened displacement or other concrete housing harm.",
+        },
+        {
+            "count_title": "Oregon Housing Discrimination, Retaliation, or Unfair Housing Administration Based on Documentation Demands and Intake Barriers",
+            "candidate_authorities": [
+                "Oregon discrimination, retaliation, or unfair housing-process authority actually supported by the documentation-demand record.",
+                "The governing verification, subsidy, voucher, or intake rule limiting the documentation HACC could require.",
+                "Any lease, policy, or application material showing the challenged intake conditions were unsupported, excessive, or selectively imposed.",
+            ],
+            "candidate_linkage": "Plaintiffs allege that the documentation demands and related intake barriers exceeded the governing Oregon-compatible housing-process rules and materially burdened housing access or retention.",
+        },
+        {
+            "count_title": "Breach of Lease, Breach of Housing Program Obligations, and Wrongful Occupancy or Inspection Administration",
+            "candidate_authorities": [
+                "The controlling lease amendment, occupancy, inspection, transfer, or household-composition clause(s).",
+                "Oregon contract, tenancy-duty, or housing-program authority defining the obligations allegedly breached.",
+                "Any remedy source supporting declaratory, injunctive, contractual, or damages relief for the challenged conduct.",
+            ],
+            "candidate_linkage": "Plaintiffs allege that the challenged occupancy, inspection, and related housing-administration conduct departed from the lease and housing-program obligations that governed the tenancy and household status.",
+        },
+    ]
+
+    mapped_counts: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        mapped = count_map[idx] if idx < len(count_map) else {
+            "count_title": str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "candidate_authorities": ["Insert the controlling Oregon authority family for this count."],
+            "candidate_linkage": "Insert the authority-to-fact linkage sentence for this count.",
+        }
+        paragraphs = list(section.get("paragraphs") or [])
+        representative_facts: list[str] = []
+        for paragraph in paragraphs[:3]:
+            if isinstance(paragraph, dict):
+                representative_facts.append(str(paragraph.get("paragraph") or ""))
+            else:
+                representative_facts.append(str(paragraph))
+        mapped_counts.append({
+            "count_number": idx + 1,
+            "count_title": mapped["count_title"],
+            "source_section": str(section.get("source_section") or ""),
+            "draft_theory_summary": str(section.get("intro") or ""),
+            "candidate_authorities": list(mapped.get("candidate_authorities") or []),
+            "candidate_linkage": str(mapped.get("candidate_linkage") or ""),
+            "representative_facts": representative_facts,
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "lead_count_count": len(mapped_counts),
+        "reserve_count_count": len(reserve_sections),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps({**summary, "counts": mapped_counts, "factual_background": factual_background}, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    md_lines = [
+        "# Oregon Near-Final Candidate Complaint Draft",
+        "",
+        "IN THE CIRCUIT COURT OF THE STATE OF OREGON",
+        "FOR THE COUNTY OF CLACKAMAS",
+        "",
+        "Jane Cortez and Benjamin Barber,",
+        "Plaintiffs,",
+        "",
+        "v.",
+        "",
+        "Housing Authority of Clackamas County; DOES 1-10,",
+        "Defendants.",
+        "",
+        "## Draft Status",
+        "",
+        "This Oregon draft is a near-final candidate structure built from the selected lead counts, representative evidence, and candidate authority families.",
+        "It still requires final authority selection, party confirmation, and remedy refinement before filing.",
+        "",
+        "## Nature of Action",
+        "",
+        "1. Plaintiffs bring this Oregon civil action arising from housing notices, documentation demands, lease-related conduct, occupancy-related directives, and displacement-related actions centered in Clackamas County, Oregon.",
+        "2. This draft narrows the case to three lead counts and embeds the authority families most likely to support final Oregon pleading conversion.",
+        "",
+        "## Parties and Venue",
+        "",
+        "3. Plaintiffs are Jane Cortez and Benjamin Barber, subject to confirmation of full legal names, claim alignment, and party capacity.",
+        "4. Defendant Housing Authority of Clackamas County is alleged to have issued the notices, demands, and housing-administration communications described below.",
+        "5. Venue is laid in Clackamas County because the housing unit, operative notices, and principal housing-administration events at issue are centered in Clackamas County, Oregon.",
+        "",
+        "## General Allegations",
+        "",
+    ]
+
+    paragraph_number = 6
+    for entry in factual_background:
+        md_lines.append(f"{paragraph_number}. {entry.get('paragraph') or ''}")
+        paragraph_number += 1
+
+    md_lines.extend(["", "## Claims for Relief", ""])
+    for count in mapped_counts:
+        md_lines.extend([
+            f"### Count {_roman_count_label(int(count.get('count_number') or 0))}: {count.get('count_title') or ''}",
+            "",
+            f"{paragraph_number}. Plaintiffs repeat and reallege the preceding paragraphs as if fully set out here.",
+            f"{paragraph_number + 1}. {count.get('draft_theory_summary') or ''}",
+            f"{paragraph_number + 2}. {count.get('candidate_linkage') or ''}",
+            "",
+            "Candidate authorities to insert:",
+        ])
+        paragraph_number += 3
+        for item in list(count.get("candidate_authorities") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Representative facts:"])
+        for fact in list(count.get("representative_facts") or []):
+            md_lines.append(f"- {fact}")
+        md_lines.extend(["", "Elements still to prove or verify:"])
+        for prompt in list(count.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_lines.extend(["## Reserve Counts", ""])
+    if reserve_sections:
+        for section in reserve_sections:
+            md_lines.append(
+                f"- {section.get('title') or 'Potential Claim Theme'} | source group={section.get('source_section') or ''} | preserve as reserve unless later elevated"
+            )
+    else:
+        md_lines.append("No reserve counts identified.")
+
+    md_lines.extend(["", "## Prayer for Relief", ""])
+    for line in prayer_lines:
+        md_lines.append(f"- {line}")
+    md_lines.extend([
+        "- Plaintiffs further request Oregon-law declaratory, injunctive, restitutionary, contractual, statutory, equitable, fee-shifting, and cost relief authorized by the final selected causes of action.",
+        "",
+        "## Final Oregon Conformance Before Filing",
+        "",
+        "- Replace each candidate authority family with the exact Oregon statutory, lease, relocation, or program authority selected after legal review.",
+        "- Confirm whether Count II is best framed as discrimination, retaliation, unfair housing administration, or a split set of counts.",
+        "- Confirm whether Count III should remain a combined lease/program count or be separated into distinct breach and process theories.",
+    ])
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_federal_near_final_candidate_draft(
+    complaint_ready: dict[str, Any],
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_federal_near_final_candidate_draft.json"
+    md_path = chronology_dir / "formal_complaint_federal_near_final_candidate_draft.md"
+
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    factual_background = factual_entries[: min(12, len(factual_entries))]
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    reserve_sections = list(lead_count_draft.get("reserve_sections") or [])
+    prayer_lines = _draft_prayer_for_relief_lines()
+
+    count_map = [
+        {
+            "count_title": "Declaratory and Injunctive Relief Under Federal Housing Program, Due Process, and Notice-Based Theories",
+            "candidate_authorities": [
+                "The federal housing-program authority governing notice, termination, hearing, grievance, or displacement rights implicated by the challenged communications.",
+                "Any HUD regulation, handbook, or relocation authority incorporated into the tenancy or voucher relationship.",
+                "The specific federal due-process or federally enforceable notice rule, if one is supportable on final review.",
+            ],
+            "candidate_linkage": "Plaintiffs allege that the challenged notices and displacement-related actions violated federally anchored notice, hearing, relocation, or due-process protections tied to the tenancy or housing assistance relationship.",
+        },
+        {
+            "count_title": "Federal Housing Discrimination, Retaliation, or Program-Administration Theory Based on Documentation Demands and Intake Barriers",
+            "candidate_authorities": [
+                "The best-supported federal discrimination, retaliation, or housing-program administration authority implicated by the documentation-demand record.",
+                "Any federal verification, subsidy, voucher, or program rule limiting the documentation HACC could require.",
+                "Any federally enforceable policy, lease term, or program obligation showing arbitrary or selective intake administration.",
+            ],
+            "candidate_linkage": "Plaintiffs allege that the repeated documentation demands and intake barriers burdened federally protected housing access, retention, or program participation under the final selected federal theory.",
+        },
+        {
+            "count_title": "Federal Contract, Program-Obligation, or Federally Anchored Occupancy and Inspection Administration Theory",
+            "candidate_authorities": [
+                "The lease, HAP, voucher, occupancy, inspection, transfer, or household-composition provisions with a viable federal enforcement hook.",
+                "The strongest federal source for enforcing the relevant housing-program obligations, whether statutory, regulatory, contractual, or incorporated HUD guidance.",
+                "The remedy authority supporting declaratory, injunctive, contractual, statutory, or damages relief in federal court.",
+            ],
+            "candidate_linkage": "Plaintiffs allege that the challenged occupancy, inspection, and housing-administration conduct departed from federally anchored program or contract obligations governing the tenancy and household status.",
+        },
+    ]
+
+    mapped_counts: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        mapped = count_map[idx] if idx < len(count_map) else {
+            "count_title": str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "candidate_authorities": ["Insert the controlling federal authority family for this count."],
+            "candidate_linkage": "Insert the federal authority-to-fact linkage sentence for this count.",
+        }
+        paragraphs = list(section.get("paragraphs") or [])
+        representative_facts: list[str] = []
+        for paragraph in paragraphs[:3]:
+            if isinstance(paragraph, dict):
+                representative_facts.append(str(paragraph.get("paragraph") or ""))
+            else:
+                representative_facts.append(str(paragraph))
+        mapped_counts.append({
+            "count_number": idx + 1,
+            "count_title": mapped["count_title"],
+            "source_section": str(section.get("source_section") or ""),
+            "draft_theory_summary": str(section.get("intro") or ""),
+            "candidate_authorities": list(mapped.get("candidate_authorities") or []),
+            "candidate_linkage": str(mapped.get("candidate_linkage") or ""),
+            "representative_facts": representative_facts,
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "lead_count_count": len(mapped_counts),
+        "reserve_count_count": len(reserve_sections),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps({**summary, "counts": mapped_counts, "factual_background": factual_background}, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    md_lines = [
+        "# Federal Near-Final Candidate Complaint Draft",
+        "",
+        "IN THE UNITED STATES DISTRICT COURT",
+        "FOR THE DISTRICT OF OREGON",
+        "",
+        "Jane Cortez and Benjamin Barber,",
+        "Plaintiffs,",
+        "",
+        "v.",
+        "",
+        "Housing Authority of Clackamas County; DOES 1-10,",
+        "Defendants.",
+        "",
+        "## Draft Status",
+        "",
+        "This federal draft is a near-final candidate structure built from the selected lead counts, representative evidence, and candidate federal authority families.",
+        "It still requires final jurisdictional theory selection, cause-of-action confirmation, and remedy refinement before filing.",
+        "",
+        "## Jurisdiction and Venue",
+        "",
+        "1. Plaintiffs intend to invoke federal-question jurisdiction only if the final selected claims arise under federal housing, civil-rights, due-process, or federally enforceable housing-program authority.",
+        "2. Venue would lie in the District of Oregon because the housing unit, operative notices, and principal events at issue are centered in Clackamas County, Oregon.",
+        "",
+        "## Parties",
+        "",
+        "3. Plaintiffs are Jane Cortez and Benjamin Barber, subject to confirmation of full legal names, claim alignment, and standing by count.",
+        "4. Defendant Housing Authority of Clackamas County is alleged to have issued the notices, demands, and housing-administration communications described below.",
+        "",
+        "## Factual Allegations",
+        "",
+    ]
+
+    paragraph_number = 5
+    for entry in factual_background:
+        md_lines.append(f"{paragraph_number}. {entry.get('paragraph') or ''}")
+        paragraph_number += 1
+
+    md_lines.extend(["", "## Claims for Relief", ""])
+    for count in mapped_counts:
+        md_lines.extend([
+            f"### Count {_roman_count_label(int(count.get('count_number') or 0))}: {count.get('count_title') or ''}",
+            "",
+            f"{paragraph_number}. Plaintiffs repeat and reallege the preceding paragraphs as if fully set out here.",
+            f"{paragraph_number + 1}. {count.get('draft_theory_summary') or ''}",
+            f"{paragraph_number + 2}. {count.get('candidate_linkage') or ''}",
+            "",
+            "Candidate federal authorities to insert:",
+        ])
+        paragraph_number += 3
+        for item in list(count.get("candidate_authorities") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Representative facts:"])
+        for fact in list(count.get("representative_facts") or []):
+            md_lines.append(f"- {fact}")
+        md_lines.extend(["", "Elements still to prove or verify:"])
+        for prompt in list(count.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_lines.extend(["## Reserve Counts", ""])
+    if reserve_sections:
+        for section in reserve_sections:
+            md_lines.append(
+                f"- {section.get('title') or 'Potential Claim Theme'} | source group={section.get('source_section') or ''} | preserve unless later matched to a concrete federal hook"
+            )
+    else:
+        md_lines.append("No reserve counts identified.")
+
+    md_lines.extend(["", "## Prayer for Relief", ""])
+    for line in prayer_lines:
+        md_lines.append(f"- {line}")
+    md_lines.extend([
+        "- Plaintiffs further request all declaratory, injunctive, statutory, contractual, constitutional, equitable, fee-shifting, and cost relief authorized by the final selected federal causes of action.",
+        "",
+        "## Final Federal Conformance Before Filing",
+        "",
+        "- Select and confirm the single strongest federal anchor theory for Count I and the complaint as a whole.",
+        "- Confirm whether Count II is best framed through Fair Housing, retaliation, due-process-plus-program-administration, or another narrower federal theory.",
+        "- Confirm whether Count III has a viable independent federal enforcement hook or should remain secondary to Oregon-law claims.",
+    ])
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_near_final_forum_recommendation_memo(
+    forum_selection_memo: dict[str, Any],
+    claim_priority_memo: dict[str, Any],
+    oregon_near_final_candidate_draft: dict[str, Any],
+    federal_near_final_candidate_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_near_final_forum_recommendation_memo.json"
+    md_path = chronology_dir / "formal_complaint_near_final_forum_recommendation_memo.md"
+
+    score_rows = [
+        {
+            "criterion": "Claim-authority readiness",
+            "oregon_score": 5,
+            "federal_score": 2,
+            "oregon_reason": "The Oregon track can be completed by selecting exact Oregon tenancy, lease, relocation, or housing-process authorities already reflected by the current evidence pattern.",
+            "federal_reason": "The federal track still depends on selecting and defending a concrete federal anchor theory before final pleading conversion is safe.",
+        },
+        {
+            "criterion": "Jurisdiction and venue certainty",
+            "oregon_score": 5,
+            "federal_score": 2,
+            "oregon_reason": "The venue facts are already centered in Clackamas County and fit an Oregon trial-court path without additional jurisdictional theory work.",
+            "federal_reason": "Federal jurisdiction remains conditional on a viable federal question or enforceable federal housing-program theory.",
+        },
+        {
+            "criterion": "Evidence-to-count fit",
+            "oregon_score": 4,
+            "federal_score": 3,
+            "oregon_reason": "The notice, documentation, lease, and occupancy evidence aligns naturally with Oregon notice, lease, and housing-administration theories.",
+            "federal_reason": "The same evidence can support a federal track, but only after the strongest federal count framing is narrowed and validated.",
+        },
+        {
+            "criterion": "Drafting risk",
+            "oregon_score": 4,
+            "federal_score": 2,
+            "oregon_reason": "The Oregon track mainly requires authority insertion and cause-of-action conformance, not a threshold jurisdictional gamble.",
+            "federal_reason": "The federal track risks over-pleading speculative theories if the complaint outruns the currently confirmed federal hook.",
+        },
+    ]
+
+    oregon_total = sum(int(row.get("oregon_score") or 0) for row in score_rows)
+    federal_total = sum(int(row.get("federal_score") or 0) for row in score_rows)
+    recommended_forum = "oregon_state" if oregon_total >= federal_total else "federal"
+    recommended_label = "Oregon State Court Track" if recommended_forum == "oregon_state" else "Federal Court Track"
+
+    recommendation_basis = [
+        "The top-ranked claim group remains deficient notice and adverse housing action, which currently maps more directly to Oregon notice, tenancy, and housing-process theories.",
+        "The Oregon near-final draft is closer to a filing-grade complaint because it does not depend on first proving an unresolved federal anchor theory.",
+        "The federal track should remain preserved as an alternative only if later authority research confirms a concrete federal question with strong count-by-count fit.",
+    ]
+    federal_trigger_conditions = [
+        "A specific federally enforceable housing-program notice, hearing, relocation, or entitlement right is identified and cleanly matches Count I.",
+        "Count II can be anchored in a concrete federal anti-discrimination, retaliation, or program-administration theory supported by the current record.",
+        "Count III has either its own federal enforcement hook or can safely remain secondary without weakening subject-matter jurisdiction.",
+    ]
+
+    summary = {
+        "status": "success",
+        "option_count": 2,
+        "recommended_forum": recommended_forum,
+        "recommended_label": recommended_label,
+        "oregon_total_score": oregon_total,
+        "federal_total_score": federal_total,
+        "lead_count_count": int(oregon_near_final_candidate_draft.get("lead_count_count") or 0),
+        "top_ranked_group": str(claim_priority_memo.get("top_ranked_title") or ""),
+        "forum_selection_memo_path": str(forum_selection_memo.get("markdown_path") or ""),
+        "oregon_draft_path": str(oregon_near_final_candidate_draft.get("markdown_path") or ""),
+        "federal_draft_path": str(federal_near_final_candidate_draft.get("markdown_path") or ""),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "score_rows": score_rows,
+        "recommendation_basis": recommendation_basis,
+        "federal_trigger_conditions": federal_trigger_conditions,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Near-Final Forum Recommendation Memo",
+        "",
+        f"Current recommendation: {recommended_label}",
+        f"Oregon score: {oregon_total}",
+        f"Federal score: {federal_total}",
+        f"Top-ranked claim group: {summary['top_ranked_group']}",
+        f"Lead counts compared: {summary['lead_count_count']}",
+        "",
+        "## Scorecard",
+        "",
+    ]
+    for row in score_rows:
+        md_lines.extend([
+            f"### {row['criterion']}",
+            "",
+            f"- Oregon score: {row['oregon_score']}",
+            f"- Oregon rationale: {row['oregon_reason']}",
+            f"- Federal score: {row['federal_score']}",
+            f"- Federal rationale: {row['federal_reason']}",
+            "",
+        ])
+
+    md_lines.extend(["## Recommendation Basis", ""])
+    for item in recommendation_basis:
+        md_lines.append(f"- {item}")
+
+    md_lines.extend(["", "## When To Reopen The Federal Track", ""])
+    for item in federal_trigger_conditions:
+        md_lines.append(f"- {item}")
+
+    md_lines.extend([
+        "",
+        "## References",
+        "",
+        f"- Forum selection memo: {summary['forum_selection_memo_path']}",
+        f"- Oregon near-final draft: {summary['oregon_draft_path']}",
+        f"- Federal near-final draft: {summary['federal_draft_path']}",
+    ])
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_oregon_concrete_authority_candidates() -> list[dict[str, Any]]:
+    return [
+        {
+            "count_number": 1,
+            "count_title": "Declaratory and Injunctive Relief Based on Defective Termination, Displacement, and Adverse Notice Process",
+            "candidate_claim_label": "Declaratory and injunctive relief for defective lease-termination and displacement notice process",
+            "authorities": [
+                "ORS 90.427, expressly cited in the December 23, 2025 90-day termination notices, as the candidate Oregon termination-notice anchor to verify against the tenancy status and notice type.",
+                "HACC ACOP 13-IV.D, Lease Termination Notice [24 CFR 966.4(l)(3)], requiring written notice stating specific grounds, termination date, right to reply, right to inspect relevant documents, and grievance-hearing notice when applicable.",
+                "HACC ACOP 13-IV.D timing language stating HACC generally gives 30 days written notice and combines any Notice to Vacate or Notice to Quit required by state or local law with the lease-termination notice.",
+                "HACC Phase II General Information Notice and HACC Relocation Road Map materials as candidate program-document authorities concerning displacement notice and relocation assistance expectations.",
+                "RLRA project-based policy language stating that existing tenants displaced by new development are provided relocation assistance in accordance with applicable local and federal laws, if that framework applies to the displacement sequence here.",
+            ],
+            "linkage": "Plaintiffs can plead that HACC invoked ORS 90.427 and its own ACOP lease-termination procedures but failed to provide the notice content, grounds, access-to-documents rights, grievance-hearing disclosure, or relocation-process clarity required by the governing notice framework.",
+            "remedies": [
+                "Declaratory relief identifying which notices were ineffective or noncompliant.",
+                "Preliminary and permanent injunctive relief against displacement or eviction absent compliant notice and process.",
+                "Any relocation or equitable relief supported by the final displacement theory and applicable program documents.",
+            ],
+        },
+        {
+            "count_number": 2,
+            "count_title": "Oregon Housing Discrimination, Retaliation, or Unfair Housing Administration Based on Documentation Demands and Intake Barriers",
+            "candidate_claim_label": "Oregon source-of-income discrimination, adverse-impact housing policy, retaliation, or unfair housing-administration count",
+            "authorities": [
+                "ORS 659A.421, which defines source of income to include federal rent subsidy payments under 42 U.S.C. 1437f and bars refusing to lease or rent real property because of source of income, subject to lawful screening limits.",
+                "ORS 659A.425, addressing facially neutral housing policies that adversely impact a protected class in a residential tenancy subject to ORS chapter 90.",
+                "ORS 659A.885, authorizing a civil action and equitable relief for unlawful practices under ORS chapter 659A.",
+                "HACC ACOP Chapter 2 fair-housing policy stating protected classes include source of income and that retaliation by staff or tenants against a person who complains of discriminatory harassment or intimidation will not be tolerated.",
+                "HACC ACOP income-verification and annual-reexamination policies at pages 6-15 and 9-3, stating HACC will use written or oral third-party verification when additional information is needed and that required documentation deadlines are communicated through the reexamination packet.",
+            ],
+            "linkage": "Plaintiffs can plead that the challenged documentation demands functioned either as source-of-income discrimination, a facially neutral policy with protected-class adverse impact, retaliation for protected complaints, or unfair housing administration because the demands exceeded the verification rules HACC identified in its own ACOP and materially burdened continued housing access or retention.",
+            "remedies": [
+                "Injunctive and equitable relief under ORS 659A.885.",
+                "Actual damages, fee-shifting, and other relief available under the final ORS chapter 659A cause selection.",
+                "Declaratory relief that unsupported documentation demands or retaliatory barriers were unlawful.",
+            ],
+        },
+        {
+            "count_number": 3,
+            "count_title": "Breach of Lease, Breach of Housing Program Obligations, and Wrongful Occupancy or Inspection Administration",
+            "candidate_claim_label": "Breach of lease, program-policy, reasonable-accommodation, and occupancy-administration obligations",
+            "authorities": [
+                "The August 5, 2024 and January 1, 2026 lease amendment and add/remove-tenant documents as the first-line written contract authorities governing household composition, rent adjustment, and occupancy changes.",
+                "HACC ACOP 2-II.B through 2-II.D, defining reasonable accommodation, requiring HACC to treat disability-related requests as accommodation requests even without a formal written request, and limiting disability verification to information necessary to evaluate the accommodation need.",
+                "HACC ACOP verification policy at page 6-15 requiring written and/or oral third-party verification when EIV is unavailable, disputed, or additional information is needed, along with a clear audit trail for annualized income decisions.",
+                "HACC ACOP annual reexamination policy at page 9-3 stating the family must be informed of required documentation and that failure to submit required documentation may be treated as a lease violation under Chapter 13.",
+                "RLRA household-change and relocation-assistance policy language providing that new household members are added to the lease if eligibility and unit-capacity requirements remain satisfied, and that the administrator will support transfer where household-size changes make the existing unit unsuitable.",
+            ],
+            "linkage": "Plaintiffs can plead that HACC's occupancy, inspection, and household-composition administration departed from the operative lease amendments and HACC's own accommodation, verification, and household-change procedures, producing wrongful instability in continued occupancy and program participation.",
+            "remedies": [
+                "Contractual and equitable relief based on the final selected lease or program-obligation theory.",
+                "Declaratory relief clarifying household-composition, accommodation, and inspection obligations.",
+                "Damages or restitutionary relief if the evidence supports quantifiable housing loss or added expense.",
+            ],
+        },
+    ]
+
+
+def _build_oregon_concrete_authority_memo(chronology_dir: Path) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_oregon_concrete_authority_memo.json"
+    md_path = chronology_dir / "formal_complaint_oregon_concrete_authority_memo.md"
+    counts = _build_oregon_concrete_authority_candidates()
+
+    summary = {
+        "status": "success",
+        "count_count": len(counts),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "counts": counts,
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Oregon Concrete Authority Memo",
+        "",
+        "This memo names concrete Oregon and HACC policy authorities that currently fit the Oregon pleading track best.",
+        "Each item remains a candidate authority for attorney verification before filing.",
+        "",
+    ]
+    for count in counts:
+        md_lines.extend([
+            f"## Count {_roman_count_label(int(count.get('count_number') or 0))}: {count.get('count_title') or ''}",
+            "",
+            f"Candidate claim label: {count.get('candidate_claim_label') or ''}",
+            "",
+            "Concrete candidate authorities:",
+        ])
+        for item in list(count.get("authorities") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend([
+            "",
+            "Draft linkage sentence:",
+            f"- {count.get('linkage') or ''}",
+            "",
+            "Candidate remedy hooks:",
+        ])
+        for item in list(count.get("remedies") or []):
+            md_lines.append(f"- {item}")
+        md_lines.append("")
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_oregon_authority_candidate_inserted_draft(
+    complaint_ready: dict[str, Any],
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_oregon_authority_candidate_inserted_draft.json"
+    md_path = chronology_dir / "formal_complaint_oregon_authority_candidate_inserted_draft.md"
+
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    factual_background = factual_entries[: min(12, len(factual_entries))]
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    reserve_sections = list(lead_count_draft.get("reserve_sections") or [])
+    prayer_lines = _draft_prayer_for_relief_lines()
+    authority_map = _build_oregon_concrete_authority_candidates()
+
+    counts: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        mapped = authority_map[idx] if idx < len(authority_map) else {
+            "count_number": idx + 1,
+            "count_title": str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "candidate_claim_label": str(section.get("title") or "Candidate Oregon count"),
+            "authorities": ["Insert concrete Oregon or HACC policy authorities for this count."],
+            "linkage": "Insert a fact-to-authority linkage sentence.",
+            "remedies": ["Insert remedy hooks for this count."],
+        }
+        paragraphs = list(section.get("paragraphs") or [])
+        representative_facts: list[str] = []
+        for paragraph in paragraphs[:3]:
+            if isinstance(paragraph, dict):
+                representative_facts.append(str(paragraph.get("paragraph") or ""))
+            else:
+                representative_facts.append(str(paragraph))
+        counts.append({
+            "count_number": idx + 1,
+            "count_title": mapped["count_title"],
+            "source_section": str(section.get("source_section") or ""),
+            "draft_theory_summary": str(section.get("intro") or ""),
+            "candidate_claim_label": str(mapped.get("candidate_claim_label") or ""),
+            "authorities": list(mapped.get("authorities") or []),
+            "linkage": str(mapped.get("linkage") or ""),
+            "remedies": list(mapped.get("remedies") or []),
+            "representative_facts": representative_facts,
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "lead_count_count": len(counts),
+        "reserve_count_count": len(reserve_sections),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps({**summary, "counts": counts, "factual_background": factual_background}, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    md_lines = [
+        "# Oregon Authority-Candidate Inserted Complaint Draft",
+        "",
+        "IN THE CIRCUIT COURT OF THE STATE OF OREGON",
+        "FOR THE COUNTY OF CLACKAMAS",
+        "",
+        "Jane Cortez and Benjamin Barber,",
+        "Plaintiffs,",
+        "",
+        "v.",
+        "",
+        "Housing Authority of Clackamas County; DOES 1-10,",
+        "Defendants.",
+        "",
+        "## Draft Status",
+        "",
+        "This Oregon draft inserts concrete candidate statutes and HACC policy sections into the lead counts.",
+        "Each cited source remains subject to attorney verification, count-splitting, and final claim-label selection before filing.",
+        "",
+        "## General Allegations",
+        "",
+    ]
+
+    paragraph_number = 1
+    for entry in factual_background:
+        md_lines.append(f"{paragraph_number}. {entry.get('paragraph') or ''}")
+        paragraph_number += 1
+
+    md_lines.extend(["", "## Claims for Relief", ""])
+    for count in counts:
+        md_lines.extend([
+            f"### Count {_roman_count_label(int(count.get('count_number') or 0))}: {count.get('count_title') or ''}",
+            "",
+            f"Candidate claim label: {count.get('candidate_claim_label') or ''}",
+            "",
+            f"{paragraph_number}. Plaintiffs repeat and reallege the preceding paragraphs as if fully set out here.",
+            f"{paragraph_number + 1}. {count.get('draft_theory_summary') or ''}",
+            f"{paragraph_number + 2}. {count.get('linkage') or ''}",
+            "",
+            "Concrete candidate authorities for verification:",
+        ])
+        paragraph_number += 3
+        for item in list(count.get("authorities") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Representative facts:"])
+        for fact in list(count.get("representative_facts") or []):
+            md_lines.append(f"- {fact}")
+        md_lines.extend(["", "Candidate remedy hooks:"])
+        for item in list(count.get("remedies") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Elements still to prove or verify:"])
+        for prompt in list(count.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_lines.extend(["## Reserve Counts", ""])
+    if reserve_sections:
+        for section in reserve_sections:
+            md_lines.append(
+                f"- {section.get('title') or 'Potential Claim Theme'} | source group={section.get('source_section') or ''} | reserve unless stronger Oregon authority support emerges"
+            )
+    else:
+        md_lines.append("No reserve counts identified.")
+
+    md_lines.extend(["", "## Prayer for Relief", ""])
+    for line in prayer_lines:
+        md_lines.append(f"- {line}")
+    md_lines.extend([
+        "- Plaintiffs further request the declaratory, injunctive, equitable, statutory, contractual, and fee-related relief authorized by the final Oregon claim mix actually selected after verification.",
+        "",
+        "## Oregon Verification Checklist Before Filing",
+        "",
+        "- Confirm whether Count I remains anchored in ORS 90.427, a public-housing grievance theory, relocation process obligations, or a combination of those authorities.",
+        "- Confirm whether Count II should proceed as source-of-income discrimination, adverse-impact policy, retaliation, unfair housing administration, or split counts under ORS chapter 659A and HACC policy.",
+        "- Confirm whether Count III is best pleaded as breach of lease, breach of program obligations, reasonable-accommodation/process violations, or separately stated counts.",
+    ])
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _build_oregon_selected_claims_filing_candidate(
+    complaint_ready: dict[str, Any],
+    lead_count_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    json_path = chronology_dir / "formal_complaint_oregon_selected_claims_filing_candidate.json"
+    md_path = chronology_dir / "formal_complaint_oregon_selected_claims_filing_candidate.md"
+
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    factual_background = factual_entries[: min(12, len(factual_entries))]
+    lead_sections = list(lead_count_draft.get("lead_sections") or [])
+    reserve_sections = list(lead_count_draft.get("reserve_sections") or [])
+    prayer_lines = _draft_prayer_for_relief_lines()
+
+    selected_map = [
+        {
+            "count_title": "Declaratory and Injunctive Relief for Defective Termination and Displacement Notice Process",
+            "selected_claim_label": "Selected Oregon Count I",
+            "selection_rationale": [
+                "This count is kept as the lead Oregon theory because the strongest current evidence cluster is still the notice and adverse-action sequence.",
+                "The record already contains notices expressly invoking ORS 90.427 plus HACC lease-termination policy language describing required notice content and grievance-hearing disclosure.",
+            ],
+            "selected_authorities": [
+                "ORS 90.427 as the current statutory notice anchor to verify against the tenancy type and exact no-cause/cause notice posture.",
+                "HACC ACOP 13-IV.D lease-termination notice requirements, including specific grounds, termination date, right to reply, right to inspect relevant documents, and grievance-hearing disclosure when applicable.",
+                "HACC ACOP 13-IV.D timing and combined notice language, plus any applicable relocation-assistance source reflected in the displacement notices and relocation materials.",
+            ],
+            "selected_linkage": "Plaintiffs allege that HACC served termination and displacement-related notices that invoked Oregon and HACC notice authority but did not satisfy the content, process, hearing, document-access, or relocation clarity required by the governing notice framework.",
+            "remaining_questions": [
+                "Confirm whether ORS 90.427 is the correct live statutory anchor for every challenged notice or only for the December 23, 2025 notices.",
+                "Confirm whether grievance-hearing and relocation obligations apply to each challenged notice sequence.",
+            ],
+        },
+        {
+            "count_title": "Oregon Source-of-Income Discrimination, Adverse-Impact Housing Policy, and Retaliatory Intake Barrier Claim",
+            "selected_claim_label": "Selected Oregon Count II",
+            "selection_rationale": [
+                "This count is retained as a combined Oregon discrimination and unfair-process count because the current record repeatedly centers on documentation demands affecting subsidized housing access and retention.",
+                "The source-of-income and adverse-impact theories are better grounded than a free-standing generic retaliation count at the current proof stage, but retaliation remains preserved within the same count unless later split.",
+            ],
+            "selected_authorities": [
+                "ORS 659A.421 for source-of-income discrimination in real-property leasing and renting, including federal rent subsidy payments under 42 U.S.C. 1437f.",
+                "ORS 659A.425 for a facially neutral housing policy that adversely impacts a protected class in a residential tenancy subject to ORS chapter 90.",
+                "ORS 659A.885 for civil action, injunctive relief, equitable relief, and related remedies.",
+                "HACC ACOP Chapter 2 fair-housing and anti-retaliation language plus HACC verification/reexamination policies describing when additional information may be required and how required documentation is requested.",
+            ],
+            "selected_linkage": "Plaintiffs allege that HACC imposed documentation and verification demands in a manner that either discriminated on the basis of source of income, applied a facially neutral policy with unlawful adverse impact, or operated as retaliatory and unfair housing administration that materially burdened housing access or retention.",
+            "remaining_questions": [
+                "Decide whether Count II should remain combined or be split into source-of-income discrimination and retaliation/process counts.",
+                "Confirm the strongest damages theory and whether the record shows a comparison class or adverse-impact proof sufficient for ORS 659A.425.",
+            ],
+        },
+        {
+            "count_title": "Breach of Lease and Housing Program Obligations Governing Occupancy, Accommodation, and Household Administration",
+            "selected_claim_label": "Selected Oregon Count III",
+            "selection_rationale": [
+                "This count is kept as a contract and program-obligation count because the lease amendments, household-composition changes, and accommodation-related administration fit most naturally in a written-obligation framework.",
+                "The current evidence supports a cleaner Oregon breach/process count than a more speculative standalone inspection tort or federal program theory.",
+            ],
+            "selected_authorities": [
+                "The August 5, 2024 and January 1, 2026 lease amendment and add/remove-tenant materials as the current written contract anchors.",
+                "HACC ACOP 2-II.B through 2-II.D regarding reasonable accommodation requests and disability verification limits.",
+                "HACC verification and reexamination policies at pages 6-15 and 9-3, including required documentation and third-party verification rules.",
+                "Any household-change or relocation-support language from the project-based program materials that governed additions to the lease or transfers when household composition changed.",
+            ],
+            "selected_linkage": "Plaintiffs allege that HACC departed from the operative lease amendments and governing accommodation, verification, and household-administration rules when handling occupancy, documentation, and household-composition issues, thereby destabilizing continued tenancy and program participation.",
+            "remaining_questions": [
+                "Confirm whether Count III should remain a single breach/process count or split into lease breach and accommodation/process subcounts.",
+                "Confirm whether inspections belong in this count or should remain merely factual support.",
+            ],
+        },
+    ]
+
+    counts: list[dict[str, Any]] = []
+    for idx, section in enumerate(lead_sections):
+        mapped = selected_map[idx] if idx < len(selected_map) else {
+            "count_title": str(section.get("title") or f"Count {_roman_count_label(idx + 1)}"),
+            "selected_claim_label": "Selected Oregon Count",
+            "selection_rationale": ["Confirm the final Oregon claim structure for this count."],
+            "selected_authorities": ["Insert the selected Oregon authorities for this count."],
+            "selected_linkage": "Insert the chosen authority-to-fact linkage.",
+            "remaining_questions": ["Confirm whether this count remains in the filing candidate."],
+        }
+        paragraphs = list(section.get("paragraphs") or [])
+        representative_facts: list[str] = []
+        for paragraph in paragraphs[:3]:
+            if isinstance(paragraph, dict):
+                representative_facts.append(str(paragraph.get("paragraph") or ""))
+            else:
+                representative_facts.append(str(paragraph))
+        counts.append({
+            "count_number": idx + 1,
+            "count_title": mapped["count_title"],
+            "selected_claim_label": mapped["selected_claim_label"],
+            "source_section": str(section.get("source_section") or ""),
+            "draft_theory_summary": str(section.get("intro") or ""),
+            "selection_rationale": list(mapped.get("selection_rationale") or []),
+            "selected_authorities": list(mapped.get("selected_authorities") or []),
+            "selected_linkage": str(mapped.get("selected_linkage") or ""),
+            "remaining_questions": list(mapped.get("remaining_questions") or []),
+            "representative_facts": representative_facts,
+            "element_prompts": list(section.get("element_prompts") or []),
+        })
+
+    summary = {
+        "status": "success",
+        "lead_count_count": len(counts),
+        "reserve_count_count": len(reserve_sections),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(
+        json.dumps({**summary, "counts": counts, "factual_background": factual_background}, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    md_lines = [
+        "# Oregon Selected-Claims Filing Candidate",
+        "",
+        "IN THE CIRCUIT COURT OF THE STATE OF OREGON",
+        "FOR THE COUNTY OF CLACKAMAS",
+        "",
+        "Jane Cortez and Benjamin Barber,",
+        "Plaintiffs,",
+        "",
+        "v.",
+        "",
+        "Housing Authority of Clackamas County; DOES 1-10,",
+        "Defendants.",
+        "",
+        "## Draft Status",
+        "",
+        "This draft selects the current Oregon filing path and collapses the main alternatives into one working count structure.",
+        "It is still not final: each selected count requires final attorney confirmation of statutory fit, count splitting, and remedies.",
+        "",
+        "## General Allegations",
+        "",
+    ]
+
+    paragraph_number = 1
+    for entry in factual_background:
+        md_lines.append(f"{paragraph_number}. {entry.get('paragraph') or ''}")
+        paragraph_number += 1
+
+    md_lines.extend(["", "## Selected Claims for Relief", ""])
+    for count in counts:
+        md_lines.extend([
+            f"### Count {_roman_count_label(int(count.get('count_number') or 0))}: {count.get('count_title') or ''}",
+            "",
+            f"Working claim label: {count.get('selected_claim_label') or ''}",
+            "",
+            f"{paragraph_number}. Plaintiffs repeat and reallege the preceding paragraphs as if fully set out here.",
+            f"{paragraph_number + 1}. {count.get('draft_theory_summary') or ''}",
+            f"{paragraph_number + 2}. {count.get('selected_linkage') or ''}",
+            "",
+            "Why this count is selected now:",
+        ])
+        paragraph_number += 3
+        for item in list(count.get("selection_rationale") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Selected authorities to carry forward:"])
+        for item in list(count.get("selected_authorities") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Representative facts:"])
+        for fact in list(count.get("representative_facts") or []):
+            md_lines.append(f"- {fact}")
+        md_lines.extend(["", "Remaining verification questions:"])
+        for item in list(count.get("remaining_questions") or []):
+            md_lines.append(f"- {item}")
+        md_lines.extend(["", "Elements still to prove or verify:"])
+        for prompt in list(count.get("element_prompts") or []):
+            md_lines.append(f"- {prompt}")
+        md_lines.append("")
+
+    md_lines.extend(["## Reserve Theories Held Back", ""])
+    if reserve_sections:
+        for section in reserve_sections:
+            md_lines.append(
+                f"- {section.get('title') or 'Potential Claim Theme'} | source group={section.get('source_section') or ''} | reserve only, not part of the selected filing candidate"
+            )
+    else:
+        md_lines.append("No reserve theories identified.")
+
+    md_lines.extend(["", "## Prayer for Relief", ""])
+    for line in prayer_lines:
+        md_lines.append(f"- {line}")
+    md_lines.extend([
+        "- Plaintiffs further request the Oregon-law declaratory, injunctive, equitable, contractual, statutory, damages, fee, and cost relief authorized by the final selected count structure.",
+        "",
+        "## Next Oregon Cleanup",
+        "",
+        "- Convert Count I from a selected notice-process count into a finalized Oregon cause of action with exact statutory and policy citations.",
+        "- Decide whether Count II should remain combined or split into source-of-income discrimination and retaliation/process counts.",
+        "- Confirm whether Count III should stay as one lease/program-obligations count or be separated into breach and accommodation/process theories.",
+    ])
+
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _draft_jurisdiction_and_venue_lines() -> list[str]:
+    return [
+        "6. This draft assumes the pleaded claims may include federal housing, fair-housing, VAWA, due-process, or Section 1983 theories arising from the notices, lease actions, documentation demands, and orientation-related conduct reflected in the exhibits, subject to confirmation after attorney review.",
+        "7. If federal statutory or constitutional claims are pleaded, subject-matter jurisdiction may be alleged under 28 U.S.C. section 1331, with supplemental jurisdiction over related state-law claims under 28 U.S.C. section 1367.",
+        "8. If the complaint proceeds only on Oregon statutory, contract, relocation, landlord-tenant, or administrative-law theories, this section should be conformed to the appropriate Oregon trial-court jurisdictional basis instead of federal-question pleading.",
+        "9. Venue appears supportable in Oregon because the housing unit, the alleged notices, the relocation and orientation process, and the operative communications all concern property and agency conduct in Clackamas County, including Milwaukie, Oregon.",
+    ]
+
+
+def _draft_count_theory(block: dict[str, Any]) -> dict[str, Any]:
+    source_section = str(block.get("source_section") or "")
+    title = str(block.get("title") or "Potential Claim Theme")
+    mappings = {
+        "Notices and Adverse Actions": {
+            "claim_label": "Declaratory and injunctive relief for defective notice and wrongful displacement process",
+            "theory": "Plaintiffs can frame this count as a challenge to whether HACC used notices, relocation communications, or termination materials that were inconsistent with the governing lease, voucher, relocation, landlord-tenant, or constitutional process requirements.",
+            "proof_points": [
+                "Identify the exact notice, hearing, relocation, or cure procedures required by the controlling lease, voucher rules, ORS chapter 90, HUD materials, or due-process authority.",
+                "Compare those requirements to the dates, contents, and sequence reflected in Exhibits B, C, D, E, and K.",
+                "State the housing loss, threatened displacement, or coercive effect caused by the challenged notices.",
+            ],
+        },
+        "Lease and Occupancy": {
+            "claim_label": "Breach of lease or program obligations and interference with housing stability",
+            "theory": "Plaintiffs can frame this count around lease amendments, occupancy status changes, inspections, or relocation-related decisions that allegedly departed from the governing tenancy or voucher rules and destabilized continued occupancy.",
+            "proof_points": [
+                "Pinpoint the lease, occupancy, inspection, or transfer rule that governed each challenged act.",
+                "Allege how the amendment, inspection, or displacement-related conduct departed from that rule or was applied unfairly.",
+                "Tie the conduct to concrete loss of housing security, possession, or program benefits.",
+            ],
+        },
+        "Financial Verification and Intake Barriers": {
+            "claim_label": "Unreasonable documentation demands and administrative barrier theory",
+            "theory": "Plaintiffs can frame this count as an evidence-based challenge to repeated documentation demands and intake barriers that allegedly burdened or obstructed housing access, voucher progression, or retention.",
+            "proof_points": [
+                "Identify which documentation requests were required, discretionary, repetitive, or allegedly unsupported by governing rules.",
+                "Explain why the sequence and volume of the demands can be characterized as unreasonable, discriminatory, retaliatory, or procedurally improper.",
+                "Describe how the demands delayed orientation, placement, approval, or retention of housing benefits.",
+            ],
+        },
+        "Protected Status and VAWA": {
+            "claim_label": "VAWA and protected-status discrimination or retaliation theory",
+            "theory": "Plaintiffs can frame this count around whether protected-status facts or VAWA-related protections were ignored, used adversely, or insufficiently accommodated in later housing decisions and notices.",
+            "proof_points": [
+                "Specify the protected status, VAWA protection, or anti-retaliation rule implicated by the February 4, 2026 materials.",
+                "Connect that protected conduct or status to the later lease, notice, or displacement actions.",
+                "State the discriminatory, retaliatory, or procedurally unlawful harm that followed.",
+            ],
+        },
+        "Orientation and Compliance": {
+            "claim_label": "Orientation-delay and compliance-obstruction theory",
+            "theory": "Plaintiffs can frame this count as a challenge to whether orientation or compliance requirements were administered in a way that created avoidable delay, blocked program progression, or compounded earlier housing instability.",
+            "proof_points": [
+                "Identify the source and timing requirements for the orientation or signature process.",
+                "Describe the delay, repetition, or administrative friction shown by Exhibit M and its attachments.",
+                "Explain how that process affected voucher use, move-in timing, or other housing opportunities.",
+            ],
+        },
+    }
+    theory = mappings.get(source_section)
+    if theory is None:
+        return {
+            "claim_label": title,
+            "theory": "Plaintiffs can use this count as a draft organizing section for a claim supported by the grouped evidence, with the final cause of action to be confirmed after legal review.",
+            "proof_points": list(block.get("element_prompts") or []),
+        }
+    return theory
+
+
+def _draft_prayer_for_relief_lines() -> list[str]:
+    return [
+        "Plaintiffs request a declaration identifying which notices, lease actions, documentation demands, and orientation-related requirements were unlawful, unenforceable, retaliatory, discriminatory, or otherwise procedurally defective.",
+        "Plaintiffs request temporary, preliminary, and permanent injunctive relief preventing eviction, displacement, benefit interruption, or other adverse housing action unless and until defendants comply with the governing lease, voucher, notice, hearing, relocation, and anti-discrimination requirements.",
+        "Plaintiffs request compensatory damages, consequential housing-loss damages, statutory damages where available, attorney fees, expert fees, taxable costs, and further relief authorized by the ultimately selected causes of action.",
+    ]
+
+
+def _build_formal_complaint_draft(
+    complaint_ready: dict[str, Any],
+    cause_draft: dict[str, Any],
+    chronology_dir: Path,
+) -> dict[str, Any]:
+    factual_entries = _compress_email_entries(list(complaint_ready.get("paragraphs") or []))
+    cause_sections = list(cause_draft.get("sections") or [])
+    json_path = chronology_dir / "formal_complaint_draft.json"
+    md_path = chronology_dir / "formal_complaint_draft.md"
+    exhibit_json_path = chronology_dir / "formal_complaint_exhibit_index.json"
+    exhibit_md_path = chronology_dir / "formal_complaint_exhibit_index.md"
+    citation_json_path = chronology_dir / "formal_complaint_citation_map.json"
+    citation_md_path = chronology_dir / "formal_complaint_citation_map.md"
+    packet_json_path = chronology_dir / "formal_complaint_exhibit_packet.json"
+    packet_md_path = chronology_dir / "formal_complaint_exhibit_packet.md"
+
+    factual_background = factual_entries[: min(14, len(factual_entries))]
+    exhibit_map = _build_exhibit_map(factual_background, cause_sections)
+    count_blocks = []
+    for section in cause_sections:
+        section_entries = list(section.get("paragraphs") or [])[:3]
+        count_blocks.append({
+            "title": str(section.get("title") or "Potential Claim Theme"),
+            "intro": str(section.get("intro") or ""),
+            "source_section": str(section.get("source_section") or ""),
+            "element_prompts": list(section.get("element_prompts") or []),
+            "entries": section_entries,
+            "paragraphs": [
+                _paragraph_with_exhibit_tag(
+                    _narrative_fact_from_entry(entry),
+                    exhibit_map.get(str(entry.get("source_path") or "")),
+                )
+                for entry in section_entries
+            ],
+        })
+
+    exhibit_index = [
+        {
+            "label": label,
+            "source_path": source_path,
+            "source_name": _source_display_name(source_path),
+            "source_type": _source_type_for_path(source_path),
+            "suggested_title": _suggested_exhibit_title(source_path, _source_display_name(source_path)),
+            "handling_note": _exhibit_handling_note(source_path),
+        }
+        for source_path, label in exhibit_map.items()
+    ]
+
+    exhibit_packet = [
+        {
+            "packet_order": index,
+            **entry,
+        }
+        for index, entry in enumerate(exhibit_index, start=1)
+    ]
+    jurisdiction_and_venue_lines = _draft_jurisdiction_and_venue_lines()
+    prayer_for_relief_lines = _draft_prayer_for_relief_lines()
+    email_exhibit_manifest = _build_email_exhibit_manifest(exhibit_packet, chronology_dir)
+    attachment_triage = _build_formal_complaint_attachment_triage(email_exhibit_manifest, chronology_dir)
+
+    citation_map: list[dict[str, Any]] = []
+
+    summary = {
+        "status": "success",
+        "factual_background_count": len(factual_background),
+        "count_count": len(count_blocks),
+        "exhibit_count": len(exhibit_index),
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+        "exhibit_json_path": str(exhibit_json_path),
+        "exhibit_markdown_path": str(exhibit_md_path),
+        "citation_json_path": str(citation_json_path),
+        "citation_markdown_path": str(citation_md_path),
+        "packet_json_path": str(packet_json_path),
+        "packet_markdown_path": str(packet_md_path),
+        "email_exhibit_json_path": str(email_exhibit_manifest.get("json_path") or ""),
+        "email_exhibit_markdown_path": str(email_exhibit_manifest.get("markdown_path") or ""),
+        "email_exhibit_thread_count": int(email_exhibit_manifest.get("thread_count") or 0),
+        "email_exhibit_message_count": int(email_exhibit_manifest.get("message_count") or 0),
+        "attachment_triage_json_path": str(attachment_triage.get("json_path") or ""),
+        "attachment_triage_markdown_path": str(attachment_triage.get("markdown_path") or ""),
+        "attachment_triage_flagged_count": int(attachment_triage.get("flagged_count") or 0),
+    }
+
+    md_lines = [
+        "# Formal Complaint Draft",
+        "",
+        "IN THE [COURT NAME]",
+        "",
+        "Jane Cortez and Benjamin Barber,",
+        "Plaintiffs,",
+        "",
+        "v.",
+        "",
+        "Housing Authority of Clackamas County; DOES 1-10,",
+        "Defendants.",
+        "",
+        "## Nature of Action",
+        "",
+        "1. This draft complaint organizes the currently extracted evidence into a more conventional complaint format.",
+        "2. It remains a drafting aid and should be checked against the underlying evidence, governing claims, and filing requirements before use.",
+        "",
+        "## Parties",
+        "",
+        "3. Plaintiffs are Jane Cortez and Benjamin Barber, subject to confirmation of full legal names, capacity, and proper party alignment.",
+        "4. Defendant Housing Authority of Clackamas County is alleged to have issued the housing-related notices, amendments, requests, and communications reflected in the evidence summarized below.",
+        "5. Doe defendants may be named if later investigation supports individual-capacity or agency-role allegations.",
+        "",
+        "## Jurisdiction and Venue",
+        "",
+        *jurisdiction_and_venue_lines,
+        "",
+        "## General Allegations",
+        "",
+    ]
+
+    paragraph_number = 10
+    if factual_background:
+        for entry in factual_background:
+            source_path = str(entry.get("source_path") or "")
+            tagged = _paragraph_with_exhibit_tag(
+                str(entry.get("paragraph") or ""),
+                exhibit_map.get(source_path),
+            )
+            md_lines.append(f"{paragraph_number}. {tagged}")
+            citation_map.append({
+                "paragraph_number": paragraph_number,
+                "section": "General Allegations",
+                "source_path": source_path,
+                "source_name": _source_display_name(source_path) if source_path else "",
+                "exhibit_label": exhibit_map.get(source_path),
+                "event_label": str(entry.get("event_label") or ""),
+            })
+            paragraph_number += 1
+    else:
+        md_lines.append(f"{paragraph_number}. No general allegations were generated from the current evidence set.")
+        paragraph_number += 1
+
+    md_lines.append(
+        f"{paragraph_number}. For draft exhibit-management purposes, Exhibits J and M are currently treated as curated candidate email exhibits composed of representative saved messages and retained attachments, while repeated duplicate image copies and low-signal generic images are separately excluded in the candidate packet unless later review identifies a specific excluded image as independently material."
+    )
+    paragraph_number += 1
+
+    md_lines.extend(["", "## Counts", ""])
+    factual_end = paragraph_number - 1
+    if count_blocks:
+        for idx, block in enumerate(count_blocks, start=1):
+            theory = _draft_count_theory(block)
+            md_lines.extend([
+                f"### Count {_roman_count_label(idx)}: {block['title']}",
+                "",
+                f"{paragraph_number}. Plaintiffs repeat and reallege Paragraphs 1 through {factual_end} as if fully set out here.",
+            ])
+            paragraph_number += 1
+            md_lines.append(f"{paragraph_number}. {block['intro']}")
+            paragraph_number += 1
+            md_lines.append(
+                f"{paragraph_number}. This count is presently organized around the evidence group labeled \"{block['source_section']}\"."
+            )
+            paragraph_number += 1
+            for entry, fact in zip(block["entries"], block["paragraphs"]):
+                md_lines.append(f"{paragraph_number}. {fact}")
+                source_path = str(entry.get("source_path") or "")
+                citation_map.append({
+                    "paragraph_number": paragraph_number,
+                    "section": block["title"],
+                    "source_path": source_path,
+                    "source_name": _source_display_name(source_path) if source_path else "",
+                    "exhibit_label": exhibit_map.get(source_path),
+                    "event_label": str(entry.get("event_label") or ""),
+                })
+                paragraph_number += 1
+            md_lines.append(
+                f"{paragraph_number}. Current draft claim framing: {theory['claim_label']}. {theory['theory']}"
+            )
+            paragraph_number += 1
+            for proof_point in list(theory.get("proof_points") or []):
+                md_lines.append(f"{paragraph_number}. Filing refinement point: {proof_point}")
+                paragraph_number += 1
+            md_lines.append("")
+            md_lines.append("Elements to Plead:")
+            md_lines.extend(f"- {prompt}" for prompt in block["element_prompts"])
+            md_lines.append("")
+    else:
+        md_lines.append(f"{paragraph_number}. No counts were generated from the current evidence set.")
+        paragraph_number += 1
+
+    md_lines.extend([
+        "## Prayer for Relief",
+        "",
+        f"{paragraph_number}. {prayer_for_relief_lines[0]}",
+        f"{paragraph_number + 1}. {prayer_for_relief_lines[1]}",
+        f"{paragraph_number + 2}. {prayer_for_relief_lines[2]}",
+        "",
+        "## Jury Demand",
+        "",
+        f"{paragraph_number + 3}. Plaintiffs demand a jury on all issues so triable, if applicable.",
+    ])
+
+    filing_checklist = _build_formal_complaint_filing_checklist(
+        exhibit_packet,
+        citation_map,
+        email_exhibit_manifest,
+        chronology_dir,
+    )
+    email_exhibit_recommendations = _build_formal_complaint_email_exhibit_recommendations(
+        email_exhibit_manifest,
+        attachment_triage,
+        chronology_dir,
+    )
+    proposed_filing_packet = _build_formal_complaint_proposed_filing_packet(
+        exhibit_packet,
+        email_exhibit_manifest,
+        email_exhibit_recommendations,
+        chronology_dir,
+    )
+    cite_check_matrix = _build_formal_complaint_cite_check_matrix(
+        proposed_filing_packet,
+        citation_map,
+        chronology_dir,
+    )
+    attorney_review_checklist = _build_formal_complaint_attorney_review_checklist(
+        filing_checklist,
+        attachment_triage,
+        email_exhibit_recommendations,
+        proposed_filing_packet,
+        cite_check_matrix,
+        chronology_dir,
+    )
+    ready_to_file_manifest = _build_formal_complaint_ready_to_file_manifest(
+        proposed_filing_packet,
+        attorney_review_checklist,
+        chronology_dir,
+    )
+    ready_to_file_packet = _materialize_ready_to_file_packet(
+        ready_to_file_manifest,
+        chronology_dir,
+    )
+    withheld_review_packet = _materialize_withheld_review_packet(
+        ready_to_file_manifest,
+        attorney_review_checklist,
+        email_exhibit_recommendations,
+        chronology_dir,
+    )
+    withheld_decision_queue = _build_formal_complaint_withheld_decision_queue(
+        ready_to_file_manifest,
+        attachment_triage,
+        email_exhibit_recommendations,
+        chronology_dir,
+    )
+    candidate_final_packet = _materialize_candidate_final_packet(
+        ready_to_file_manifest,
+        proposed_filing_packet,
+        withheld_decision_queue,
+        chronology_dir,
+    )
+    attorney_recommendation_memo = _build_formal_complaint_attorney_recommendation_memo(
+        ready_to_file_manifest,
+        withheld_decision_queue,
+        candidate_final_packet,
+        chronology_dir,
+    )
+    recommended_filing_manifest = _build_formal_complaint_recommended_filing_manifest(
+        ready_to_file_manifest,
+        candidate_final_packet,
+        withheld_decision_queue,
+        attorney_recommendation_memo,
+        chronology_dir,
+    )
+    recommended_filing_packet = _materialize_recommended_filing_packet(
+        recommended_filing_manifest,
+        candidate_final_packet,
+        chronology_dir,
+    )
+    recommended_filing_checklist = _build_formal_complaint_recommended_filing_checklist(
+        recommended_filing_manifest,
+        recommended_filing_packet,
+        citation_map,
+        chronology_dir,
+    )
+    court_submission_memo = _build_formal_complaint_court_submission_memo(
+        summary,
+        recommended_filing_manifest,
+        recommended_filing_packet,
+        recommended_filing_checklist,
+        chronology_dir,
+    )
+    forum_selection_memo = _build_formal_complaint_forum_selection_memo(
+        summary,
+        recommended_filing_manifest,
+        recommended_filing_checklist,
+        court_submission_memo,
+        chronology_dir,
+    )
+    claim_mapping_memo = _build_formal_complaint_claim_mapping_memo(
+        cause_draft,
+        recommended_filing_manifest,
+        recommended_filing_checklist,
+        chronology_dir,
+    )
+    claim_priority_memo = _build_formal_complaint_claim_priority_memo(
+        cause_draft,
+        claim_mapping_memo,
+        chronology_dir,
+    )
+    lead_count_draft = _build_formal_complaint_lead_count_draft(
+        cause_draft,
+        claim_priority_memo,
+        chronology_dir,
+    )
+    lead_count_forum_outline = _build_formal_complaint_lead_count_forum_outline(
+        lead_count_draft,
+        forum_selection_memo,
+        chronology_dir,
+    )
+    federal_lead_count_draft = _build_forum_specific_lead_count_complaint(
+        "federal",
+        complaint_ready,
+        lead_count_draft,
+        chronology_dir,
+    )
+    oregon_state_lead_count_draft = _build_forum_specific_lead_count_complaint(
+        "oregon_state",
+        complaint_ready,
+        lead_count_draft,
+        chronology_dir,
+    )
+    oregon_state_filing_ready_draft = _build_oregon_state_filing_ready_complaint_draft(
+        complaint_ready,
+        lead_count_draft,
+        chronology_dir,
+    )
+    federal_filing_ready_draft = _build_federal_filing_ready_complaint_draft(
+        complaint_ready,
+        lead_count_draft,
+        chronology_dir,
+    )
+    oregon_state_named_claim_draft = _build_oregon_state_named_claim_complaint_draft(
+        complaint_ready,
+        lead_count_draft,
+        chronology_dir,
+    )
+    federal_named_claim_draft = _build_federal_named_claim_complaint_draft(
+        complaint_ready,
+        lead_count_draft,
+        chronology_dir,
+    )
+    oregon_state_authority_placeholder_draft = _build_oregon_state_authority_placeholder_draft(
+        complaint_ready,
+        lead_count_draft,
+        chronology_dir,
+    )
+    federal_authority_placeholder_draft = _build_federal_authority_placeholder_draft(
+        complaint_ready,
+        lead_count_draft,
+        chronology_dir,
+    )
+    forum_authority_research_queue = _build_forum_authority_research_queue(
+        lead_count_draft,
+        chronology_dir,
+    )
+    oregon_authority_insertion_worksheet = _build_oregon_authority_insertion_worksheet(
+        lead_count_draft,
+        chronology_dir,
+    )
+    federal_authority_insertion_worksheet = _build_federal_authority_insertion_worksheet(
+        lead_count_draft,
+        chronology_dir,
+    )
+    oregon_candidate_authority_scaffold = _build_oregon_candidate_authority_scaffold(
+        lead_count_draft,
+        chronology_dir,
+    )
+    federal_candidate_authority_scaffold = _build_federal_candidate_authority_scaffold(
+        lead_count_draft,
+        chronology_dir,
+    )
+    oregon_authority_infused_draft = _build_authority_infused_complaint_draft(
+        "oregon",
+        complaint_ready,
+        lead_count_draft,
+        chronology_dir,
+    )
+    federal_authority_infused_draft = _build_authority_infused_complaint_draft(
+        "federal",
+        complaint_ready,
+        lead_count_draft,
+        chronology_dir,
+    )
+    oregon_near_final_candidate_draft = _build_oregon_near_final_candidate_draft(
+        complaint_ready,
+        lead_count_draft,
+        chronology_dir,
+    )
+    federal_near_final_candidate_draft = _build_federal_near_final_candidate_draft(
+        complaint_ready,
+        lead_count_draft,
+        chronology_dir,
+    )
+    near_final_forum_recommendation_memo = _build_near_final_forum_recommendation_memo(
+        forum_selection_memo,
+        claim_priority_memo,
+        oregon_near_final_candidate_draft,
+        federal_near_final_candidate_draft,
+        chronology_dir,
+    )
+    oregon_concrete_authority_memo = _build_oregon_concrete_authority_memo(chronology_dir)
+    oregon_authority_candidate_inserted_draft = _build_oregon_authority_candidate_inserted_draft(
+        complaint_ready,
+        lead_count_draft,
+        chronology_dir,
+    )
+    oregon_selected_claims_filing_candidate = _build_oregon_selected_claims_filing_candidate(
+        complaint_ready,
+        lead_count_draft,
+        chronology_dir,
+    )
+
+    summary["filing_checklist_json_path"] = str(filing_checklist.get("json_path") or "")
+    summary["filing_checklist_markdown_path"] = str(filing_checklist.get("markdown_path") or "")
+    summary["email_exhibit_recommendations_json_path"] = str(email_exhibit_recommendations.get("json_path") or "")
+    summary["email_exhibit_recommendations_markdown_path"] = str(email_exhibit_recommendations.get("markdown_path") or "")
+    summary["email_exhibit_recommendations_retained_count"] = int(email_exhibit_recommendations.get("retained_attachment_count") or 0)
+    summary["email_exhibit_recommendations_deferred_count"] = int(email_exhibit_recommendations.get("deferred_attachment_count") or 0)
+    summary["proposed_filing_packet_json_path"] = str(proposed_filing_packet.get("json_path") or "")
+    summary["proposed_filing_packet_markdown_path"] = str(proposed_filing_packet.get("markdown_path") or "")
+    summary["proposed_filing_packet_message_count"] = int(proposed_filing_packet.get("representative_message_count") or 0)
+    summary["proposed_filing_packet_attachment_count"] = int(proposed_filing_packet.get("retained_attachment_count") or 0)
+    summary["cite_check_matrix_json_path"] = str(cite_check_matrix.get("json_path") or "")
+    summary["cite_check_matrix_markdown_path"] = str(cite_check_matrix.get("markdown_path") or "")
+    summary["cite_check_matrix_entry_count"] = int(cite_check_matrix.get("entry_count") or 0)
+    summary["attorney_review_checklist_json_path"] = str(attorney_review_checklist.get("json_path") or "")
+    summary["attorney_review_checklist_markdown_path"] = str(attorney_review_checklist.get("markdown_path") or "")
+    summary["attorney_review_checklist_flagged_count"] = int(attorney_review_checklist.get("flagged_count") or 0)
+    summary["ready_to_file_manifest_json_path"] = str(ready_to_file_manifest.get("json_path") or "")
+    summary["ready_to_file_manifest_markdown_path"] = str(ready_to_file_manifest.get("markdown_path") or "")
+    summary["ready_to_file_manifest_included_count"] = int(ready_to_file_manifest.get("included_count") or 0)
+    summary["ready_to_file_manifest_withheld_count"] = int(ready_to_file_manifest.get("withheld_count") or 0)
+    summary["ready_to_file_packet_dir"] = str(ready_to_file_packet.get("packet_dir") or "")
+    summary["ready_to_file_packet_copied_file_count"] = int(ready_to_file_packet.get("copied_file_count") or 0)
+    summary["withheld_review_packet_json_path"] = str(withheld_review_packet.get("json_path") or "")
+    summary["withheld_review_packet_dir"] = str(withheld_review_packet.get("packet_dir") or "")
+    summary["withheld_review_packet_exhibit_count"] = int(withheld_review_packet.get("withheld_exhibit_count") or 0)
+    summary["withheld_review_packet_copied_file_count"] = int(withheld_review_packet.get("copied_file_count") or 0)
+    summary["withheld_decision_queue_json_path"] = str(withheld_decision_queue.get("json_path") or "")
+    summary["withheld_decision_queue_markdown_path"] = str(withheld_decision_queue.get("markdown_path") or "")
+    summary["withheld_decision_queue_entry_count"] = int(withheld_decision_queue.get("entry_count") or 0)
+    summary["candidate_final_packet_dir"] = str(candidate_final_packet.get("packet_dir") or "")
+    summary["candidate_final_packet_paper_count"] = int(candidate_final_packet.get("paper_exhibit_count") or 0)
+    summary["candidate_final_packet_email_exhibit_count"] = int(candidate_final_packet.get("candidate_email_exhibit_count") or 0)
+    summary["candidate_final_packet_copied_file_count"] = int(candidate_final_packet.get("copied_file_count") or 0)
+    summary["attorney_recommendation_memo_json_path"] = str(attorney_recommendation_memo.get("json_path") or "")
+    summary["attorney_recommendation_memo_markdown_path"] = str(attorney_recommendation_memo.get("markdown_path") or "")
+    summary["recommended_filing_manifest_json_path"] = str(recommended_filing_manifest.get("json_path") or "")
+    summary["recommended_filing_manifest_markdown_path"] = str(recommended_filing_manifest.get("markdown_path") or "")
+    summary["recommended_filing_manifest_exhibit_count"] = int(recommended_filing_manifest.get("recommended_exhibit_count") or 0)
+    summary["recommended_filing_manifest_email_exhibit_count"] = int(recommended_filing_manifest.get("candidate_email_exhibit_count") or 0)
+    summary["recommended_filing_packet_dir"] = str(recommended_filing_packet.get("packet_dir") or "")
+    summary["recommended_filing_packet_exhibit_count"] = int(recommended_filing_packet.get("recommended_exhibit_count") or 0)
+    summary["recommended_filing_packet_supporting_document_count"] = int(recommended_filing_packet.get("supporting_document_count") or 0)
+    summary["recommended_filing_packet_copied_file_count"] = int(recommended_filing_packet.get("copied_file_count") or 0)
+    summary["recommended_filing_checklist_json_path"] = str(recommended_filing_checklist.get("json_path") or "")
+    summary["recommended_filing_checklist_markdown_path"] = str(recommended_filing_checklist.get("markdown_path") or "")
+    summary["recommended_filing_checklist_flagged_count"] = int(recommended_filing_checklist.get("flagged_count") or 0)
+    summary["court_submission_memo_json_path"] = str(court_submission_memo.get("json_path") or "")
+    summary["court_submission_memo_markdown_path"] = str(court_submission_memo.get("markdown_path") or "")
+    summary["court_submission_memo_forum_item_count"] = int(court_submission_memo.get("forum_dependent_item_count") or 0)
+    summary["forum_selection_memo_json_path"] = str(forum_selection_memo.get("json_path") or "")
+    summary["forum_selection_memo_markdown_path"] = str(forum_selection_memo.get("markdown_path") or "")
+    summary["forum_selection_memo_option_count"] = int(forum_selection_memo.get("option_count") or 0)
+    summary["claim_mapping_memo_json_path"] = str(claim_mapping_memo.get("json_path") or "")
+    summary["claim_mapping_memo_markdown_path"] = str(claim_mapping_memo.get("markdown_path") or "")
+    summary["claim_mapping_memo_section_count"] = int(claim_mapping_memo.get("section_count") or 0)
+    summary["claim_priority_memo_json_path"] = str(claim_priority_memo.get("json_path") or "")
+    summary["claim_priority_memo_markdown_path"] = str(claim_priority_memo.get("markdown_path") or "")
+    summary["claim_priority_memo_top_ranked_title"] = str(claim_priority_memo.get("top_ranked_title") or "")
+    summary["lead_count_draft_json_path"] = str(lead_count_draft.get("json_path") or "")
+    summary["lead_count_draft_markdown_path"] = str(lead_count_draft.get("markdown_path") or "")
+    summary["lead_count_draft_count"] = int(lead_count_draft.get("lead_count_count") or 0)
+    summary["lead_count_forum_outline_json_path"] = str(lead_count_forum_outline.get("json_path") or "")
+    summary["lead_count_forum_outline_markdown_path"] = str(lead_count_forum_outline.get("markdown_path") or "")
+    summary["lead_count_forum_outline_option_count"] = int(lead_count_forum_outline.get("forum_option_count") or 0)
+    summary["federal_lead_count_draft_json_path"] = str(federal_lead_count_draft.get("json_path") or "")
+    summary["federal_lead_count_draft_markdown_path"] = str(federal_lead_count_draft.get("markdown_path") or "")
+    summary["federal_lead_count_draft_count"] = int(federal_lead_count_draft.get("lead_count_count") or 0)
+    summary["oregon_state_lead_count_draft_json_path"] = str(oregon_state_lead_count_draft.get("json_path") or "")
+    summary["oregon_state_lead_count_draft_markdown_path"] = str(oregon_state_lead_count_draft.get("markdown_path") or "")
+    summary["oregon_state_lead_count_draft_count"] = int(oregon_state_lead_count_draft.get("lead_count_count") or 0)
+    summary["oregon_state_filing_ready_draft_json_path"] = str(oregon_state_filing_ready_draft.get("json_path") or "")
+    summary["oregon_state_filing_ready_draft_markdown_path"] = str(oregon_state_filing_ready_draft.get("markdown_path") or "")
+    summary["oregon_state_filing_ready_draft_count"] = int(oregon_state_filing_ready_draft.get("lead_count_count") or 0)
+    summary["federal_filing_ready_draft_json_path"] = str(federal_filing_ready_draft.get("json_path") or "")
+    summary["federal_filing_ready_draft_markdown_path"] = str(federal_filing_ready_draft.get("markdown_path") or "")
+    summary["federal_filing_ready_draft_count"] = int(federal_filing_ready_draft.get("lead_count_count") or 0)
+    summary["oregon_state_named_claim_draft_json_path"] = str(oregon_state_named_claim_draft.get("json_path") or "")
+    summary["oregon_state_named_claim_draft_markdown_path"] = str(oregon_state_named_claim_draft.get("markdown_path") or "")
+    summary["oregon_state_named_claim_draft_count"] = int(oregon_state_named_claim_draft.get("lead_count_count") or 0)
+    summary["federal_named_claim_draft_json_path"] = str(federal_named_claim_draft.get("json_path") or "")
+    summary["federal_named_claim_draft_markdown_path"] = str(federal_named_claim_draft.get("markdown_path") or "")
+    summary["federal_named_claim_draft_count"] = int(federal_named_claim_draft.get("lead_count_count") or 0)
+    summary["oregon_state_authority_placeholder_draft_json_path"] = str(oregon_state_authority_placeholder_draft.get("json_path") or "")
+    summary["oregon_state_authority_placeholder_draft_markdown_path"] = str(oregon_state_authority_placeholder_draft.get("markdown_path") or "")
+    summary["oregon_state_authority_placeholder_draft_count"] = int(oregon_state_authority_placeholder_draft.get("lead_count_count") or 0)
+    summary["federal_authority_placeholder_draft_json_path"] = str(federal_authority_placeholder_draft.get("json_path") or "")
+    summary["federal_authority_placeholder_draft_markdown_path"] = str(federal_authority_placeholder_draft.get("markdown_path") or "")
+    summary["federal_authority_placeholder_draft_count"] = int(federal_authority_placeholder_draft.get("lead_count_count") or 0)
+    summary["forum_authority_research_queue_json_path"] = str(forum_authority_research_queue.get("json_path") or "")
+    summary["forum_authority_research_queue_markdown_path"] = str(forum_authority_research_queue.get("markdown_path") or "")
+    summary["forum_authority_research_queue_count"] = int(forum_authority_research_queue.get("entry_count") or 0)
+    summary["oregon_authority_insertion_worksheet_json_path"] = str(oregon_authority_insertion_worksheet.get("json_path") or "")
+    summary["oregon_authority_insertion_worksheet_markdown_path"] = str(oregon_authority_insertion_worksheet.get("markdown_path") or "")
+    summary["oregon_authority_insertion_worksheet_count"] = int(oregon_authority_insertion_worksheet.get("count_count") or 0)
+    summary["federal_authority_insertion_worksheet_json_path"] = str(federal_authority_insertion_worksheet.get("json_path") or "")
+    summary["federal_authority_insertion_worksheet_markdown_path"] = str(federal_authority_insertion_worksheet.get("markdown_path") or "")
+    summary["federal_authority_insertion_worksheet_count"] = int(federal_authority_insertion_worksheet.get("count_count") or 0)
+    summary["oregon_candidate_authority_scaffold_json_path"] = str(oregon_candidate_authority_scaffold.get("json_path") or "")
+    summary["oregon_candidate_authority_scaffold_markdown_path"] = str(oregon_candidate_authority_scaffold.get("markdown_path") or "")
+    summary["oregon_candidate_authority_scaffold_count"] = int(oregon_candidate_authority_scaffold.get("count_count") or 0)
+    summary["federal_candidate_authority_scaffold_json_path"] = str(federal_candidate_authority_scaffold.get("json_path") or "")
+    summary["federal_candidate_authority_scaffold_markdown_path"] = str(federal_candidate_authority_scaffold.get("markdown_path") or "")
+    summary["federal_candidate_authority_scaffold_count"] = int(federal_candidate_authority_scaffold.get("count_count") or 0)
+    summary["oregon_authority_infused_draft_json_path"] = str(oregon_authority_infused_draft.get("json_path") or "")
+    summary["oregon_authority_infused_draft_markdown_path"] = str(oregon_authority_infused_draft.get("markdown_path") or "")
+    summary["oregon_authority_infused_draft_count"] = int(oregon_authority_infused_draft.get("lead_count_count") or 0)
+    summary["federal_authority_infused_draft_json_path"] = str(federal_authority_infused_draft.get("json_path") or "")
+    summary["federal_authority_infused_draft_markdown_path"] = str(federal_authority_infused_draft.get("markdown_path") or "")
+    summary["federal_authority_infused_draft_count"] = int(federal_authority_infused_draft.get("lead_count_count") or 0)
+    summary["oregon_near_final_candidate_draft_json_path"] = str(oregon_near_final_candidate_draft.get("json_path") or "")
+    summary["oregon_near_final_candidate_draft_markdown_path"] = str(oregon_near_final_candidate_draft.get("markdown_path") or "")
+    summary["oregon_near_final_candidate_draft_count"] = int(oregon_near_final_candidate_draft.get("lead_count_count") or 0)
+    summary["federal_near_final_candidate_draft_json_path"] = str(federal_near_final_candidate_draft.get("json_path") or "")
+    summary["federal_near_final_candidate_draft_markdown_path"] = str(federal_near_final_candidate_draft.get("markdown_path") or "")
+    summary["federal_near_final_candidate_draft_count"] = int(federal_near_final_candidate_draft.get("lead_count_count") or 0)
+    summary["near_final_forum_recommendation_memo_json_path"] = str(near_final_forum_recommendation_memo.get("json_path") or "")
+    summary["near_final_forum_recommendation_memo_markdown_path"] = str(near_final_forum_recommendation_memo.get("markdown_path") or "")
+    summary["near_final_forum_recommendation_memo_option_count"] = int(near_final_forum_recommendation_memo.get("option_count") or 0)
+    summary["near_final_forum_recommendation_memo_recommended_forum"] = str(near_final_forum_recommendation_memo.get("recommended_forum") or "")
+    summary["oregon_concrete_authority_memo_json_path"] = str(oregon_concrete_authority_memo.get("json_path") or "")
+    summary["oregon_concrete_authority_memo_markdown_path"] = str(oregon_concrete_authority_memo.get("markdown_path") or "")
+    summary["oregon_concrete_authority_memo_count"] = int(oregon_concrete_authority_memo.get("count_count") or 0)
+    summary["oregon_authority_candidate_inserted_draft_json_path"] = str(oregon_authority_candidate_inserted_draft.get("json_path") or "")
+    summary["oregon_authority_candidate_inserted_draft_markdown_path"] = str(oregon_authority_candidate_inserted_draft.get("markdown_path") or "")
+    summary["oregon_authority_candidate_inserted_draft_count"] = int(oregon_authority_candidate_inserted_draft.get("lead_count_count") or 0)
+    summary["oregon_selected_claims_filing_candidate_json_path"] = str(oregon_selected_claims_filing_candidate.get("json_path") or "")
+    summary["oregon_selected_claims_filing_candidate_markdown_path"] = str(oregon_selected_claims_filing_candidate.get("markdown_path") or "")
+    summary["oregon_selected_claims_filing_candidate_count"] = int(oregon_selected_claims_filing_candidate.get("lead_count_count") or 0)
+
+    json_path.write_text(
+        json.dumps(
+            {
+                **summary,
+                "factual_background": factual_background,
+                "counts": count_blocks,
+                "exhibit_index": exhibit_index,
+                "exhibit_packet": exhibit_packet,
+                "email_exhibit_manifest": email_exhibit_manifest,
+                "filing_checklist": filing_checklist,
+                "attachment_triage": attachment_triage,
+                "email_exhibit_recommendations": email_exhibit_recommendations,
+                "proposed_filing_packet": proposed_filing_packet,
+                "cite_check_matrix": cite_check_matrix,
+                "attorney_review_checklist": attorney_review_checklist,
+                "ready_to_file_manifest": ready_to_file_manifest,
+                "ready_to_file_packet": ready_to_file_packet,
+                "withheld_review_packet": withheld_review_packet,
+                "withheld_decision_queue": withheld_decision_queue,
+                "candidate_final_packet": candidate_final_packet,
+                "attorney_recommendation_memo": attorney_recommendation_memo,
+                "recommended_filing_manifest": recommended_filing_manifest,
+                "recommended_filing_packet": recommended_filing_packet,
+                "recommended_filing_checklist": recommended_filing_checklist,
+                "court_submission_memo": court_submission_memo,
+                "forum_selection_memo": forum_selection_memo,
+                "claim_mapping_memo": claim_mapping_memo,
+                "claim_priority_memo": claim_priority_memo,
+                "lead_count_draft": lead_count_draft,
+                "lead_count_forum_outline": lead_count_forum_outline,
+                "federal_lead_count_draft": federal_lead_count_draft,
+                "oregon_state_lead_count_draft": oregon_state_lead_count_draft,
+                "oregon_state_filing_ready_draft": oregon_state_filing_ready_draft,
+                "federal_filing_ready_draft": federal_filing_ready_draft,
+                "oregon_state_named_claim_draft": oregon_state_named_claim_draft,
+                "federal_named_claim_draft": federal_named_claim_draft,
+                "oregon_state_authority_placeholder_draft": oregon_state_authority_placeholder_draft,
+                "federal_authority_placeholder_draft": federal_authority_placeholder_draft,
+                "forum_authority_research_queue": forum_authority_research_queue,
+                "oregon_authority_insertion_worksheet": oregon_authority_insertion_worksheet,
+                "federal_authority_insertion_worksheet": federal_authority_insertion_worksheet,
+                "oregon_candidate_authority_scaffold": oregon_candidate_authority_scaffold,
+                "federal_candidate_authority_scaffold": federal_candidate_authority_scaffold,
+                "oregon_authority_infused_draft": oregon_authority_infused_draft,
+                "federal_authority_infused_draft": federal_authority_infused_draft,
+                "oregon_near_final_candidate_draft": oregon_near_final_candidate_draft,
+                "federal_near_final_candidate_draft": federal_near_final_candidate_draft,
+                "near_final_forum_recommendation_memo": near_final_forum_recommendation_memo,
+                "oregon_concrete_authority_memo": oregon_concrete_authority_memo,
+                "oregon_authority_candidate_inserted_draft": oregon_authority_candidate_inserted_draft,
+                "oregon_selected_claims_filing_candidate": oregon_selected_claims_filing_candidate,
+                "citation_map": citation_map,
+            },
+            indent=2,
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+
+    exhibit_json_path.write_text(
+        json.dumps({"status": "success", "exhibit_count": len(exhibit_index), "exhibits": exhibit_index}, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+    exhibit_md_lines = ["# Formal Complaint Exhibit Index", "", f"Exhibit count: {len(exhibit_index)}", ""]
+    if exhibit_index:
+        exhibit_md_lines.extend(
+            f"- Exhibit {entry['label']}: {entry['source_path']} ({entry['source_name']})"
+            for entry in exhibit_index
+        )
+    else:
+        exhibit_md_lines.append("No exhibits indexed.")
+    exhibit_md_path.write_text("\n".join(exhibit_md_lines).strip() + "\n", encoding="utf-8")
+
+    packet_json_path.write_text(
+        json.dumps({"status": "success", "packet_count": len(exhibit_packet), "packet": exhibit_packet}, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+    packet_md_lines = ["# Formal Complaint Exhibit Packet", "", f"Packet count: {len(exhibit_packet)}", ""]
+    if exhibit_packet:
+        packet_md_lines.extend(
+            (
+                f"- {entry['packet_order']}. Exhibit {entry['label']} | {entry['suggested_title']} | "
+                f"{entry['source_path']} | type={entry['source_type']} | {entry['handling_note']}"
+            )
+            for entry in exhibit_packet
+        )
+    else:
+        packet_md_lines.append("No exhibit packet entries generated.")
+    packet_md_path.write_text("\n".join(packet_md_lines).strip() + "\n", encoding="utf-8")
+
+    citation_json_path.write_text(
+        json.dumps({"status": "success", "citation_count": len(citation_map), "citations": citation_map}, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
+    citation_md_lines = ["# Formal Complaint Citation Map", "", f"Citation count: {len(citation_map)}", ""]
+    if citation_map:
+        citation_md_lines.extend(
+            f"- Paragraph {entry['paragraph_number']}: Exhibit {entry['exhibit_label'] or '?'} | {entry['source_path']} | {entry['section']}"
+            for entry in citation_map
+        )
+    else:
+        citation_md_lines.append("No paragraph-to-source citations generated.")
+    citation_md_path.write_text("\n".join(citation_md_lines).strip() + "\n", encoding="utf-8")
+    return summary
+
+
+def _event_label_for_item(item: dict[str, Any]) -> str:
+    path = str(item.get("path") or "")
+    classifier = str(item.get("classification", {}).get("primary_class") or "")
+    stem = Path(path).stem.replace("_", " ").replace("-", " ")
+    if classifier == "notice_or_adverse_action":
+        return f"Notice or adverse action: {stem}"
+    if classifier == "lease_or_occupancy":
+        return f"Lease or occupancy event: {stem}"
+    if classifier == "financial_verification":
+        return f"Financial verification request: {stem}"
+    if classifier == "orientation_or_compliance":
+        return f"Orientation or compliance event: {stem}"
+    if classifier == "protected_status_or_vawa":
+        return f"Protected-status or VAWA issue: {stem}"
+    if classifier == "application_or_intake":
+        return f"Application or intake event: {stem}"
+    return stem
+
+
+def _litigation_timeline_label(classification: str) -> str:
+    mapping = {
+        "notice_or_adverse_action": "Notices and adverse actions",
+        "lease_or_occupancy": "Lease and occupancy",
+        "inspection_or_unit_condition": "Inspection and unit condition",
+        "financial_verification": "Financial verification",
+        "orientation_or_compliance": "Orientation and compliance",
+        "protected_status_or_vawa": "Protected-status and VAWA",
+        "application_or_intake": "Application and intake",
+    }
+    return mapping.get(classification, "Other events")
+
+
+def _normalize_email_subject(subject: str) -> str:
+    normalized = _clean_text(subject)
+    normalized = re.sub(r"^(?:re|fw|fwd):\s*", "", normalized, flags=re.IGNORECASE)
+    return normalized or "Email"
+
+
+def _build_litigation_timeline(events: list[dict[str, Any]], chronology_dir: Path) -> dict[str, Any]:
+    grouped: dict[str, list[dict[str, Any]]] = {}
+    selected: list[dict[str, Any]] = []
+    seen: set[tuple[str, str, str]] = set()
+
+    for event in events:
+        classification = str(event.get("classification") or "")
+        if classification == "general_housing_evidence":
+            continue
+        label = str(event.get("event_label") or "")
+        source_path = str(event.get("source_path") or "")
+        sort_key = str(event.get("sort_key") or "")
+        if label.startswith("Email:"):
+            subject = _normalize_email_subject(label.replace("Email:", "", 1).strip())
+            if subject.lower().startswith("automatic reply"):
+                continue
+            dedup_key = (classification, sort_key[:10], subject)
+            if dedup_key in seen:
+                continue
+            seen.add(dedup_key)
+            event = dict(event)
+            event["event_label"] = f"Email thread: {subject}"
+        else:
+            dedup_key = (classification, str(event.get("date") or ""), source_path)
+            if dedup_key in seen:
+                continue
+            seen.add(dedup_key)
+        selected.append(event)
+        grouped.setdefault(_litigation_timeline_label(classification), []).append(event)
+
+    section_order = [
+        "Notices and adverse actions",
+        "Lease and occupancy",
+        "Inspection and unit condition",
+        "Financial verification",
+        "Orientation and compliance",
+        "Protected-status and VAWA",
+        "Application and intake",
+        "Other events",
+    ]
+    md_lines = ["# Litigation Timeline", "", f"Event count: {len(selected)}", ""]
+    for section in section_order:
+        section_events = grouped.get(section) or []
+        if not section_events:
+            continue
+        md_lines.extend([f"## {section}", ""])
+        for event in section_events:
+            md_lines.append(
+                f"- {event.get('date')}: {event.get('event_label')} ({event.get('source_path')}) - {event.get('snippet')}"
+            )
+        md_lines.append("")
+    if not selected:
+        md_lines.append("No litigation-style events extracted.")
+
+    timeline_path = chronology_dir / "litigation_timeline.md"
+    timeline_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    return {
+        "event_count": len(selected),
+        "markdown_path": str(timeline_path),
+        "sections": {section: len(grouped.get(section) or []) for section in section_order if grouped.get(section)},
+    }
+
+
+def _build_filtered_cross_document_graph(combined: KnowledgeGraph, loaded_sources: list[str], output_dir: Path) -> dict[str, Any]:
+    cross_dir = output_dir / "cross_document"
+    cross_dir.mkdir(parents=True, exist_ok=True)
+    if KnowledgeGraph is None or Entity is None or Relationship is None:
+        return {
+            "status": "unavailable",
+            "reason": "knowledge_graph_filtering_unavailable",
+            "source_count": len(loaded_sources),
+            "sources": loaded_sources,
+        }
+
+    connected_ids: set[str] = set()
+    for rel in combined.relationships.values():
+        connected_ids.add(rel.source_id)
+        connected_ids.add(rel.target_id)
+
+    keep_ids: set[str] = set()
+    for entity in combined.entities.values():
+        if _is_low_signal_entity(entity):
+            continue
+        text = _graph_entity_text(entity)
+        has_focus = any(keyword in text for keyword in COMPLAINT_FOCUS_KEYWORDS)
+        has_noise = any(keyword in text for keyword in NOISE_ENTITY_KEYWORDS)
+        is_connected = entity.id in connected_ids
+        confidence_ok = float(entity.confidence or 0.0) >= 0.72
+        if has_noise:
+            continue
+        if entity.type == "claim" and is_connected:
+            keep_ids.add(entity.id)
+            continue
+        if entity.type in {"person", "organization", "fact", "evidence"}:
+            if has_focus and (confidence_ok or is_connected):
+                keep_ids.add(entity.id)
+            continue
+        if entity.type == "date" and is_connected:
+            parsed = _parse_human_date(str(entity.name or ""))
+            if parsed is None or _parsed_date_in_scope(parsed):
+                keep_ids.add(entity.id)
+
+    filtered = KnowledgeGraph()
+    for entity_id in keep_ids:
+        entity = combined.entities.get(entity_id)
+        if entity is not None:
+            filtered.add_entity(entity)
+    for rel in combined.relationships.values():
+        if rel.source_id in keep_ids and rel.target_id in keep_ids:
+            filtered.add_relationship(rel)
+
+    filtered_graph_path = cross_dir / "cross_document_filtered_knowledge_graph.json"
+    filtered_summary_path = cross_dir / "cross_document_filtered_summary.json"
+    filtered_md_path = cross_dir / "cross_document_filtered_summary.md"
+    filtered.to_json(str(filtered_graph_path))
+    gaps = filtered.find_gaps()
+    summary = {
+        "status": "success",
+        "source_count": len(loaded_sources),
+        "sources": loaded_sources,
+        "graph_path": str(filtered_graph_path),
+        "knowledge_graph_summary": filtered.summary(),
+        "gap_count": len(gaps),
+        "gaps": gaps[:20],
+        "filtering": {
+            "kept_entities": len(filtered.entities),
+            "kept_relationships": len(filtered.relationships),
+            "dropped_entities": max(0, len(combined.entities) - len(filtered.entities)),
+            "dropped_relationships": max(0, len(combined.relationships) - len(filtered.relationships)),
+        },
+    }
+    filtered_summary_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+    md_lines = [
+        "# Filtered Cross-Document Graph",
+        "",
+        f"Status: {summary['status']}",
+        f"Source count: {summary['source_count']}",
+        f"Total entities: {summary['knowledge_graph_summary'].get('total_entities', 0)}",
+        f"Total relationships: {summary['knowledge_graph_summary'].get('total_relationships', 0)}",
+        f"Dropped entities: {summary['filtering'].get('dropped_entities', 0)}",
+        f"Dropped relationships: {summary['filtering'].get('dropped_relationships', 0)}",
+        f"Gap count: {summary['gap_count']}",
+        "",
+        "## Gaps",
+        "",
+    ]
+    if gaps:
+        md_lines.extend(f"- {gap.get('type')}: {gap.get('suggested_question') or ''}" for gap in gaps[:20])
+    else:
+        md_lines.append("- No graph gaps reported.")
+    filtered_md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    summary["summary_json_path"] = str(filtered_summary_path)
+    summary["summary_markdown_path"] = str(filtered_md_path)
+    return summary
+
+
+def _build_chronology_report(payload: dict[str, Any], output_dir: Path) -> dict[str, Any]:
+    items = _substantive_recent_items(list(payload.get("items") or []))
+    chronology_events: list[dict[str, Any]] = []
+    for item in items:
+        path = REPO_ROOT / str(item.get("path") or "")
+        if item.get("item_type") == "paper_pdf" and path.exists():
+            extraction = _extract_text_from_pdf(path, max_pages=6)
+            text = str(extraction.get("text") or "")
+            for raw_date, parsed in _select_paper_chronology_dates(text, item):
+                chronology_events.append({
+                    "date": raw_date,
+                    "sort_key": parsed.isoformat(),
+                    "source_path": str(item.get("path") or ""),
+                    "event_label": _event_label_for_item(item),
+                    "classification": item.get("classification", {}).get("primary_class"),
+                    "snippet": _summarize_snippet(text or item.get("snippet") or ""),
+                })
+        elif item.get("item_type") == "email_manifest" and path.exists():
+            manifest = _read_json(path)
+            for email in list(manifest.get("emails") or [])[:20]:
+                raw_date = str(email.get("date") or "").strip()
+                if not raw_date:
+                    continue
+                parsed = _parse_human_date(raw_date)
+                if parsed is None:
+                    continue
+                if not _parsed_date_in_scope(parsed):
+                    continue
+                chronology_events.append({
+                    "date": raw_date,
+                    "sort_key": parsed.isoformat(),
+                    "source_path": str(item.get("path") or ""),
+                    "event_label": f"Email: {str(email.get('subject') or '').strip() or item.get('folder')}",
+                    "classification": item.get("classification", {}).get("primary_class"),
+                    "snippet": _summarize_snippet(
+                        f"From {email.get('from') or ''} to {email.get('to') or ''} on {raw_date}"
+                    ),
+                })
+
+    chronology_events.sort(key=lambda event: (event.get("sort_key") or "", event.get("source_path") or ""))
+    deduped: list[dict[str, Any]] = []
+    seen: set[tuple[str, str, str]] = set()
+    for event in chronology_events:
+        key = (str(event.get("date") or ""), str(event.get("event_label") or ""), str(event.get("source_path") or ""))
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(event)
+
+    chronology_dir = output_dir / "chronology"
+    chronology_dir.mkdir(parents=True, exist_ok=True)
+    json_path = chronology_dir / "chronology_report.json"
+    md_path = chronology_dir / "chronology_report.md"
+    summary = {
+        "status": "success",
+        "event_count": len(deduped),
+        "events": deduped,
+        "json_path": str(json_path),
+        "markdown_path": str(md_path),
+    }
+    json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+    md_lines = ["# Chronology Report", "", f"Event count: {len(deduped)}", "", "## Timeline", ""]
+    if deduped:
+        md_lines.extend(
+            f"- {event.get('date')}: {event.get('event_label')} [{event.get('classification')}] ({event.get('source_path')}) - {event.get('snippet')}"
+            for event in deduped
+        )
+    else:
+        md_lines.append("- No chronology events extracted.")
+    md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    summary["litigation_timeline"] = _build_litigation_timeline(deduped, chronology_dir)
+    summary["pleading_timeline"] = _build_pleading_timeline(payload, chronology_dir)
+    summary["complaint_ready_chronology"] = _build_complaint_ready_chronology(summary["pleading_timeline"], chronology_dir)
+    summary["claim_grouped_allegations"] = _build_claim_grouped_allegations(summary["complaint_ready_chronology"], chronology_dir)
+    summary["cause_of_action_draft"] = _build_cause_of_action_draft(summary["claim_grouped_allegations"], chronology_dir)
+    summary["complaint_skeleton"] = _build_complaint_skeleton(
+        summary["cause_of_action_draft"],
+        summary["complaint_ready_chronology"],
+        chronology_dir,
+    )
+    summary["narrative_complaint_draft"] = _build_narrative_complaint_draft(
+        summary["complaint_ready_chronology"],
+        summary["cause_of_action_draft"],
+        chronology_dir,
+    )
+    summary["formal_complaint_draft"] = _build_formal_complaint_draft(
+        summary["complaint_ready_chronology"],
+        summary["cause_of_action_draft"],
+        chronology_dir,
+    )
+    return summary
+
+
+def _email_has_real_bundle(manifest: dict[str, Any], manifest_path: Path) -> bool:
+    for email in manifest.get("emails") or []:
+        bundle_dir_raw = str(email.get("bundle_dir") or "").strip()
+        if not bundle_dir_raw or bundle_dir_raw == ".":
+            continue
+        bundle_dir = Path(bundle_dir_raw)
+        if not bundle_dir.is_absolute():
+            bundle_dir = manifest_path.parent / bundle_dir
+        if (bundle_dir / "message.eml").exists() or (bundle_dir / "message.json").exists():
+            return True
+    return False
+
+
+def _classify_email_manifest(manifest_path: Path, recent_paths: dict[str, RecentPathRecord]) -> dict[str, Any]:
+    manifest = _read_json(manifest_path)
+    relative_manifest = manifest_path.relative_to(REPO_ROOT).as_posix()
+    folder_name = manifest_path.parent.name.lower()
+    has_real_bundle = _email_has_real_bundle(manifest, manifest_path)
+    existing_summary_path = manifest_path.parent / "graphrag" / "email_graphrag_summary.json"
+    graphrag_status = "existing" if existing_summary_path.exists() else "missing"
+    generated_summary: dict[str, Any] | None = None
+
+    if graphrag_status == "missing" and has_real_bundle and "smoke" not in folder_name:
+        try:
+            generated_summary = build_email_graphrag_artifacts(manifest_path=manifest_path)
+            graphrag_status = "generated"
+        except Exception as exc:
+            graphrag_status = f"error: {exc}"
+    elif graphrag_status == "missing" and not has_real_bundle:
+        graphrag_status = "skipped_preview_manifest"
+    elif graphrag_status == "missing" and "smoke" in folder_name:
+        graphrag_status = "skipped_smoke_manifest"
+
+    summary_payload = generated_summary or (_read_json(existing_summary_path) if existing_summary_path.exists() else {})
+    subject_text = " ".join(str(email.get("subject") or "") for email in manifest.get("emails") or [])
+    attachment_names = " ".join(
+        str(attachment.get("filename") or "")
+        for email in manifest.get("emails") or []
+        for attachment in email.get("attachments") or []
+    )
+    search_text = str(manifest.get("search") or "")
+    classifier = _classify_text(f"{subject_text}\n{attachment_names}\n{search_text}", relative_manifest)
+    if "smoke" in folder_name:
+        source_tier = "test_or_noise"
+    elif any(token in folder_name for token in ("preview", "crawl")) or not has_real_bundle:
+        source_tier = "preview_or_cache_only"
+    else:
+        source_tier = "substantive_email_evidence"
+
+    item_paths = [relative_manifest]
+    item_paths.extend(
+        path for path in recent_paths
+        if path.startswith(f"{manifest_path.parent.relative_to(REPO_ROOT).as_posix()}/")
+    )
+    recent_matches = sorted(set(item_paths).intersection(recent_paths))
+    is_recent = bool(recent_matches)
+
+    return {
+        "item_type": "email_manifest",
+        "path": relative_manifest,
+        "folder": manifest_path.parent.name,
+        "is_recent": is_recent,
+        "recent_paths": recent_matches,
+        "matched_email_count": int(manifest.get("matched_email_count") or 0),
+        "scanned_message_count": int(manifest.get("scanned_message_count") or 0),
+        "has_real_bundle": has_real_bundle,
+        "source_tier": source_tier,
+        "classification": classifier,
+        "graphrag_status": graphrag_status,
+        "graphrag_summary": summary_payload,
+        "snippet": _summarize_snippet(subject_text or search_text),
+    }
+
+
+def _classify_agentic_manifest(manifest_path: Path, recent_paths: dict[str, RecentPathRecord]) -> dict[str, Any]:
+    manifest = _read_json(manifest_path)
+    relative_manifest = manifest_path.relative_to(REPO_ROOT).as_posix()
+    complaint_query = str(manifest.get("complaint_query") or "")
+    classifier = _classify_text(complaint_query, relative_manifest)
+    downloaded_count = int(manifest.get("downloaded_count") or 0)
+    candidate_count = int(manifest.get("candidate_count") or 0)
+    if downloaded_count > 0:
+        source_tier = "downloaded_external_evidence"
+    elif candidate_count > 0:
+        source_tier = "download_candidates_only"
+    else:
+        source_tier = "external_research_gap"
+    recent_matches = [path for path in recent_paths if path.startswith(f"{manifest_path.parent.relative_to(REPO_ROOT).as_posix()}/")]
+    return {
+        "item_type": "agentic_manifest",
+        "path": relative_manifest,
+        "folder": manifest_path.parent.name,
+        "is_recent": bool(recent_matches),
+        "recent_paths": recent_matches,
+        "candidate_count": candidate_count,
+        "downloaded_count": downloaded_count,
+        "source_tier": source_tier,
+        "classification": classifier,
+        "graphrag_status": "not_applicable" if downloaded_count == 0 else "not_implemented",
+        "snippet": _summarize_snippet(complaint_query),
+        "quality": manifest.get("quality") or {},
+    }
+
+
+def _classify_paper_pdf(path: Path, recent_paths: dict[str, RecentPathRecord]) -> dict[str, Any]:
+    relative_path = path.relative_to(REPO_ROOT).as_posix()
+    extraction = _extract_text_from_pdf(path)
+    text = str(extraction.get("text") or "")
+    classifier = _classify_text(text or path.stem, relative_path)
+    graphrag_summary = _build_document_graphrag(path, text)
+    recent_matches = [relative_path] if relative_path in recent_paths else []
+    source_tier = "substantive_paper_evidence"
+    if not text.strip():
+        source_tier = "binary_or_ocr_needed"
+    return {
+        "item_type": "paper_pdf",
+        "path": relative_path,
+        "folder": path.parent.name,
+        "is_recent": bool(recent_matches),
+        "recent_paths": recent_matches,
+        "source_tier": source_tier,
+        "classification": classifier,
+        "graphrag_status": graphrag_summary.get("status") or "unknown",
+        "graphrag_summary": graphrag_summary,
+        "text_extraction": {
+            "extractor": extraction.get("extractor"),
+            "pages_read": extraction.get("pages_read"),
+            "total_pages": extraction.get("total_pages"),
+            "errors": extraction.get("errors") or [],
+            "character_count": len(text),
+        },
+        "snippet": _summarize_snippet(text or path.stem),
+    }
+
+
+def _build_inventory(days: int) -> dict[str, Any]:
+    recent_paths = _extract_recent_git_paths(days)
+    items: list[dict[str, Any]] = []
+
+    for manifest_path in sorted(EMAIL_ROOT.glob("*/email_import_manifest.json")):
+        items.append(_classify_email_manifest(manifest_path, recent_paths))
+
+    for manifest_path in sorted(AGENTIC_ROOT.glob("*/agentic_evidence_manifest.json")):
+        items.append(_classify_agentic_manifest(manifest_path, recent_paths))
+
+    for pdf_path in sorted(PAPER_ROOT.glob("*.pdf")):
+        items.append(_classify_paper_pdf(pdf_path, recent_paths))
+
+    recent_items = [item for item in items if item.get("is_recent")]
+    substantive_recent = [
+        item for item in recent_items
+        if item.get("source_tier") in {"substantive_email_evidence", "substantive_paper_evidence", "binary_or_ocr_needed"}
+    ]
+    graph_generated = [item for item in items if str(item.get("graphrag_status") or "").startswith("generated")]
+    graph_existing = [item for item in items if item.get("graphrag_status") == "existing"]
+    graph_skipped = [
+        item for item in items
+        if str(item.get("graphrag_status") or "").startswith("skipped") or item.get("graphrag_status") == "not_applicable"
+    ]
+
+    return {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "days": days,
+        "recent_git_paths": [record.__dict__ for record in recent_paths.values()],
+        "summary": {
+            "inventory_count": len(items),
+            "recent_item_count": len(recent_items),
+            "recent_substantive_count": len(substantive_recent),
+            "graphrag_generated_count": len(graph_generated),
+            "graphrag_existing_count": len(graph_existing),
+            "graphrag_skipped_count": len(graph_skipped),
+        },
+        "items": items,
+    }
+
+
+def _substantive_recent_items(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return [
+        item for item in items
+        if item.get("is_recent")
+        and item.get("source_tier") in {"substantive_email_evidence", "substantive_paper_evidence", "binary_or_ocr_needed"}
+    ]
+
+
+def _build_cross_document_graph(payload: dict[str, Any], output_dir: Path) -> dict[str, Any]:
+    items = list(payload.get("items") or [])
+    substantive_items = _substantive_recent_items(items)
+    graph_candidates: list[tuple[str, Path]] = []
+    for item in substantive_items:
+        summary = item.get("graphrag_summary") or {}
+        graph_path_value = summary.get("graph_path")
+        if not graph_path_value:
+            continue
+        graph_path = Path(str(graph_path_value))
+        if graph_path.exists():
+            graph_candidates.append((str(item.get("path") or ""), graph_path))
+
+    if KnowledgeGraph is None:
+        return {
+            "status": "unavailable",
+            "reason": "knowledge_graph_class_unavailable",
+            "source_count": len(graph_candidates),
+            "sources": [path for path, _ in graph_candidates],
+        }
+
+    if not graph_candidates:
+        return {
+            "status": "empty",
+            "reason": "no_recent_substantive_graphs",
+            "source_count": 0,
+            "sources": [],
+        }
+
+    combined = KnowledgeGraph()
+    loaded_sources: list[str] = []
+    for source_path, graph_path in graph_candidates:
+        try:
+            graph = KnowledgeGraph.from_json(str(graph_path))
+        except Exception:
+            continue
+        combined.merge_with(graph)
+        loaded_sources.append(source_path)
+
+    if not loaded_sources:
+        return {
+            "status": "empty",
+            "reason": "graph_load_failed",
+            "source_count": 0,
+            "sources": [],
+        }
+
+    cross_dir = output_dir / "cross_document"
+    cross_dir.mkdir(parents=True, exist_ok=True)
+    graph_json_path = cross_dir / "cross_document_knowledge_graph.json"
+    summary_json_path = cross_dir / "cross_document_summary.json"
+    summary_md_path = cross_dir / "cross_document_summary.md"
+    combined.to_json(str(graph_json_path))
+    gaps = combined.find_gaps()
+    filtered_summary = _build_filtered_cross_document_graph(combined, loaded_sources, output_dir)
+    summary = {
+        "status": "success",
+        "source_count": len(loaded_sources),
+        "sources": loaded_sources,
+        "graph_path": str(graph_json_path),
+        "knowledge_graph_summary": combined.summary(),
+        "gap_count": len(gaps),
+        "gaps": gaps[:20],
+        "filtered_graph": filtered_summary,
+    }
+    summary_json_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
+    md_lines = [
+        "# Cross-Document Graph",
+        "",
+        f"Status: {summary['status']}",
+        f"Source count: {summary['source_count']}",
+        f"Total entities: {summary['knowledge_graph_summary'].get('total_entities', 0)}",
+        f"Total relationships: {summary['knowledge_graph_summary'].get('total_relationships', 0)}",
+        f"Gap count: {summary['gap_count']}",
+        "",
+        "## Sources",
+        "",
+    ]
+    md_lines.extend(f"- {source}" for source in loaded_sources)
+    md_lines.extend(["", "## Gaps", ""])
+    if gaps:
+        md_lines.extend(
+            f"- {gap.get('type')}: {gap.get('suggested_question') or ''}" for gap in gaps[:20]
+        )
+    else:
+        md_lines.append("- No graph gaps reported.")
+    summary_md_path.write_text("\n".join(md_lines).strip() + "\n", encoding="utf-8")
+    summary["summary_json_path"] = str(summary_json_path)
+    summary["summary_markdown_path"] = str(summary_md_path)
+    return summary
+
+
+def _markdown_report(payload: dict[str, Any]) -> str:
+    lines: list[str] = []
+    summary = payload.get("summary") or {}
+    items = list(payload.get("items") or [])
+    recent_items = [item for item in items if item.get("is_recent")]
+    substantive_recent = _substantive_recent_items(items)
+    substantive_recent.sort(
+        key=lambda item: (
+            0 if item.get("classification", {}).get("housing_relevance") == "high" else 1,
+            item.get("item_type") != "paper_pdf",
+            item.get("path", ""),
+        )
+    )
+
+    lines.append("# Evidence Review")
+    lines.append("")
+    lines.append(f"Generated at: {payload.get('generated_at')}")
+    lines.append(f"Inventory count: {summary.get('inventory_count', 0)}")
+    lines.append(f"Recent item count: {summary.get('recent_item_count', 0)}")
+    lines.append(f"Recent substantive evidence count: {summary.get('recent_substantive_count', 0)}")
+    lines.append(f"GraphRAG generated this run: {summary.get('graphrag_generated_count', 0)}")
+    lines.append(f"GraphRAG already present: {summary.get('graphrag_existing_count', 0)}")
+    lines.append(f"GraphRAG skipped or not applicable: {summary.get('graphrag_skipped_count', 0)}")
+    cross_doc = payload.get("cross_document_graph") or {}
+    if cross_doc:
+        lines.append(f"Cross-document graph status: {cross_doc.get('status')}")
+        lines.append(f"Cross-document graph sources: {cross_doc.get('source_count', 0)}")
+        filtered = cross_doc.get("filtered_graph") or {}
+        if filtered:
+            lines.append(f"Filtered cross-document graph entities: {filtered.get('knowledge_graph_summary', {}).get('total_entities', 0)}")
+    lines.append("")
+    lines.append("## Recent Substantive Evidence")
+    lines.append("")
+    if not substantive_recent:
+        lines.append("No substantive evidence items were added in the selected window.")
+    else:
+        for item in substantive_recent:
+            classifier = item.get("classification") or {}
+            lines.append(
+                "- "
+                f"{item.get('path')}: class={classifier.get('primary_class')}, "
+                f"relevance={classifier.get('housing_relevance')}, "
+                f"graphrag={item.get('graphrag_status')}, "
+                f"snippet={item.get('snippet') or 'n/a'}"
+            )
+    lines.append("")
+    lines.append("## Review Notes")
+    lines.append("")
+
+    preview_count = sum(1 for item in items if item.get("source_tier") == "preview_or_cache_only")
+    gap_count = sum(1 for item in items if item.get("source_tier") == "external_research_gap")
+    binary_count = sum(1 for item in items if item.get("source_tier") == "binary_or_ocr_needed")
+    lines.append(f"- Preview or cache-only email manifests: {preview_count}")
+    lines.append("- Preview manifests cannot be promoted into substantive GraphRAG from the current repo state because the cache index stores metadata only, not saved message bodies.")
+    lines.append(f"- Agentic download runs with no harvested evidence: {gap_count}")
+    lines.append(f"- Paper PDFs that may still need OCR review: {binary_count}")
+    if cross_doc:
+        lines.append(f"- Cross-document graph summary: {cross_doc.get('knowledge_graph_summary', {}).get('total_entities', 0)} entities, {cross_doc.get('knowledge_graph_summary', {}).get('total_relationships', 0)} relationships.")
+        filtered = cross_doc.get("filtered_graph") or {}
+        if filtered:
+            lines.append(f"- Filtered graph summary: {filtered.get('knowledge_graph_summary', {}).get('total_entities', 0)} entities, {filtered.get('knowledge_graph_summary', {}).get('total_relationships', 0)} relationships.")
+    chronology = payload.get("chronology_report") or {}
+    if chronology:
+        lines.append(f"- Chronology report events extracted: {chronology.get('event_count', 0)}")
+        litigation = chronology.get("litigation_timeline") or {}
+        if litigation:
+            lines.append(f"- Litigation timeline events extracted: {litigation.get('event_count', 0)}")
+        pleading = chronology.get("pleading_timeline") or {}
+        if pleading:
+            lines.append(f"- Pleading timeline events extracted: {pleading.get('event_count', 0)}")
+        complaint_ready = chronology.get("complaint_ready_chronology") or {}
+        if complaint_ready:
+            lines.append(f"- Complaint-ready chronology paragraphs generated: {complaint_ready.get('paragraph_count', 0)}")
+        grouped_allegations = chronology.get("claim_grouped_allegations") or {}
+        if grouped_allegations:
+            lines.append(
+                f"- Claim-grouped allegation sections generated: {grouped_allegations.get('section_count', 0)}"
+            )
+        cause_draft = chronology.get("cause_of_action_draft") or {}
+        if cause_draft:
+            lines.append(f"- Cause-of-action draft sections generated: {cause_draft.get('section_count', 0)}")
+        complaint_skeleton = chronology.get("complaint_skeleton") or {}
+        if complaint_skeleton:
+            lines.append(
+                f"- Complaint skeleton cause sections generated: {complaint_skeleton.get('cause_section_count', 0)}"
+            )
+        narrative_draft = chronology.get("narrative_complaint_draft") or {}
+        if narrative_draft:
+            lines.append(
+                f"- Narrative complaint counts generated: {narrative_draft.get('count_count', 0)}"
+            )
+        formal_draft = chronology.get("formal_complaint_draft") or {}
+        if formal_draft:
+            lines.append(
+                f"- Formal complaint counts generated: {formal_draft.get('count_count', 0)}"
+            )
+            lines.append(
+                f"- Formal complaint exhibits indexed: {formal_draft.get('exhibit_count', 0)}"
+            )
+            lines.append(
+                f"- Formal complaint email exhibit messages indexed: {formal_draft.get('email_exhibit_message_count', 0)}"
+            )
+            lines.append(
+                f"- Formal complaint attachment triage flagged items: {formal_draft.get('attachment_triage_flagged_count', 0)}"
+            )
+            lines.append(
+                f"- Formal complaint email exhibit recommendations retained/deferred: {formal_draft.get('email_exhibit_recommendations_retained_count', 0)}/{formal_draft.get('email_exhibit_recommendations_deferred_count', 0)}"
+            )
+            lines.append(
+                f"- Formal complaint proposed filing packet representative messages/attachments: {formal_draft.get('proposed_filing_packet_message_count', 0)}/{formal_draft.get('proposed_filing_packet_attachment_count', 0)}"
+            )
+            lines.append(
+                f"- Formal complaint cite-check matrix entries: {formal_draft.get('cite_check_matrix_entry_count', 0)}"
+            )
+            lines.append(
+                f"- Formal complaint attorney review checklist flagged exhibits: {formal_draft.get('attorney_review_checklist_flagged_count', 0)}"
+            )
+            lines.append(
+                f"- Formal complaint ready-to-file manifest included/withheld: {formal_draft.get('ready_to_file_manifest_included_count', 0)}/{formal_draft.get('ready_to_file_manifest_withheld_count', 0)}"
+            )
+            lines.append(
+                f"- Formal complaint ready-to-file packet copied files: {formal_draft.get('ready_to_file_packet_copied_file_count', 0)}"
+            )
+            lines.append(
+                f"- Formal complaint withheld review packet exhibits/files: {formal_draft.get('withheld_review_packet_exhibit_count', 0)}/{formal_draft.get('withheld_review_packet_copied_file_count', 0)}"
+            )
+            lines.append(
+                f"- Formal complaint withheld decision queue unique entries: {formal_draft.get('withheld_decision_queue_entry_count', 0)}"
+            )
+            lines.append(
+                f"- Candidate final packet paper/email/files: {formal_draft.get('candidate_final_packet_paper_count', 0)}/{formal_draft.get('candidate_final_packet_email_exhibit_count', 0)}/{formal_draft.get('candidate_final_packet_copied_file_count', 0)}"
+            )
+            lines.append(
+                f"- Recommended filing manifest exhibits/email exhibits: {formal_draft.get('recommended_filing_manifest_exhibit_count', 0)}/{formal_draft.get('recommended_filing_manifest_email_exhibit_count', 0)}"
+            )
+            lines.append(
+                f"- Recommended filing packet exhibits/supporting docs/files: {formal_draft.get('recommended_filing_packet_exhibit_count', 0)}/{formal_draft.get('recommended_filing_packet_supporting_document_count', 0)}/{formal_draft.get('recommended_filing_packet_copied_file_count', 0)}"
+            )
+            lines.append(
+                f"- Recommended filing checklist flagged exhibits: {formal_draft.get('recommended_filing_checklist_flagged_count', 0)}"
+            )
+            lines.append(
+                f"- Court submission memo forum-dependent items: {formal_draft.get('court_submission_memo_forum_item_count', 0)}"
+            )
+            lines.append(
+                f"- Forum selection memo options compared: {formal_draft.get('forum_selection_memo_option_count', 0)}"
+            )
+            lines.append(
+                f"- Claim mapping memo sections: {formal_draft.get('claim_mapping_memo_section_count', 0)}"
+            )
+            lines.append(
+                f"- Claim priority memo top-ranked group: {formal_draft.get('claim_priority_memo_top_ranked_title', '')}"
+            )
+            lines.append(
+                f"- Lead-count draft selected groups: {formal_draft.get('lead_count_draft_count', 0)}"
+            )
+            lines.append(
+                f"- Lead-count forum outline options compared: {formal_draft.get('lead_count_forum_outline_option_count', 0)}"
+            )
+            lines.append(
+                f"- Federal/Oregon lead-count drafts: {formal_draft.get('federal_lead_count_draft_count', 0)}/{formal_draft.get('oregon_state_lead_count_draft_count', 0)}"
+            )
+            lines.append(
+                f"- Oregon filing-ready lead-count draft: {formal_draft.get('oregon_state_filing_ready_draft_count', 0)}"
+            )
+            lines.append(
+                f"- Federal filing-ready lead-count draft: {formal_draft.get('federal_filing_ready_draft_count', 0)}"
+            )
+            lines.append(
+                f"- Oregon named-claim complaint draft: {formal_draft.get('oregon_state_named_claim_draft_count', 0)}"
+            )
+            lines.append(
+                f"- Federal named-claim complaint draft: {formal_draft.get('federal_named_claim_draft_count', 0)}"
+            )
+            lines.append(
+                f"- Oregon/Federal authority-placeholder drafts: {formal_draft.get('oregon_state_authority_placeholder_draft_count', 0)}/{formal_draft.get('federal_authority_placeholder_draft_count', 0)}"
+            )
+            lines.append(
+                f"- Forum authority research queue entries: {formal_draft.get('forum_authority_research_queue_count', 0)}"
+            )
+            lines.append(
+                f"- Oregon/Federal authority insertion worksheets: {formal_draft.get('oregon_authority_insertion_worksheet_count', 0)}/{formal_draft.get('federal_authority_insertion_worksheet_count', 0)}"
+            )
+            lines.append(
+                f"- Oregon/Federal candidate authority scaffolds: {formal_draft.get('oregon_candidate_authority_scaffold_count', 0)}/{formal_draft.get('federal_candidate_authority_scaffold_count', 0)}"
+            )
+            lines.append(
+                f"- Oregon/Federal authority-infused drafts: {formal_draft.get('oregon_authority_infused_draft_count', 0)}/{formal_draft.get('federal_authority_infused_draft_count', 0)}"
+            )
+            lines.append(
+                f"- Oregon near-final candidate draft: {formal_draft.get('oregon_near_final_candidate_draft_count', 0)}"
+            )
+            lines.append(
+                f"- Federal near-final candidate draft: {formal_draft.get('federal_near_final_candidate_draft_count', 0)}"
+            )
+            lines.append(
+                f"- Near-final forum recommendation options/recommended forum: {formal_draft.get('near_final_forum_recommendation_memo_option_count', 0)}/{formal_draft.get('near_final_forum_recommendation_memo_recommended_forum', '')}"
+            )
+            lines.append(
+                f"- Oregon concrete authority memo: {formal_draft.get('oregon_concrete_authority_memo_count', 0)}"
+            )
+            lines.append(
+                f"- Oregon authority-candidate inserted draft: {formal_draft.get('oregon_authority_candidate_inserted_draft_count', 0)}"
+            )
+            lines.append(
+                f"- Oregon selected-claims filing candidate: {formal_draft.get('oregon_selected_claims_filing_candidate_count', 0)}"
+            )
+    return "\n".join(lines).strip() + "\n"
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Review recent evidence and classify the current evidence inventory.")
+    parser.add_argument("--days", type=int, default=7, help="Window for recent evidence review.")
+    parser.add_argument("--output-dir", default="", help="Optional output directory under research_results.")
+    args = parser.parse_args(argv)
+
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+    if args.output_dir:
+        output_dir = Path(args.output_dir).expanduser().resolve()
+    else:
+        output_dir = RESULTS_ROOT / f"evidence_review_{timestamp}"
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    payload = _build_inventory(args.days)
+    payload["cross_document_graph"] = _build_cross_document_graph(payload, output_dir)
+    payload["chronology_report"] = _build_chronology_report(payload, output_dir)
+    json_path = output_dir / "evidence_review.json"
+    md_path = output_dir / "evidence_review.md"
+    json_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
+    md_path.write_text(_markdown_report(payload), encoding="utf-8")
+
+    print(
+        json.dumps(
+            {
+                "status": "success",
+                "output_dir": str(output_dir),
+                "json_report": str(json_path),
+                "markdown_report": str(md_path),
+                "summary": payload.get("summary") or {},
+            },
+            indent=2,
+            ensure_ascii=False,
+        )
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

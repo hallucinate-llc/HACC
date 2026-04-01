@@ -1,0 +1,251 @@
+Delivered-To: starworks5@gmail.com
+Received: by 2002:a05:7208:3044:b0:fa:5ef1:c6ed with SMTP id g4csp2268865rba;
+        Tue, 10 Mar 2026 22:54:15 -0700 (PDT)
+X-Received: by 2002:a05:6214:2528:b0:899:f0b1:7338 with SMTP id 6a1803df08f44-89a66a7a1acmr15122576d6.37.1773208455542;
+        Tue, 10 Mar 2026 22:54:15 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1773208455; cv=none;
+        d=google.com; s=arc-20240605;
+        b=BIODGEt7q0mRDVfYlGySmZXM6UxLRAXF/UoroNT1Yx88HCSJmeURKrvWN3n6MGki22
+         7TA5jgr+t5/JtdXvcXy9udC79AxcbVAvaLpxxpjT5FxAmRHRyZCe+FKc4zRJRyqPH/nk
+         MRYZ5XiPy+msFVieWcVSnQ8LwrPbeiAy2m1J241+xjG18Huctp4tJSF9iUsJX5bKAy4e
+         EAMuT4K702fP19zxVh3nuLUCPL3QPy35+jSNEkzCVtxIekMnd+8bHp/qNC2UoFeC8/zy
+         9skoo62DYbfmc8ZXmL3IQsnBYUXGHCfZyooAdmzhMgb3xklFchGJXROZ6OtVu/B7bN3t
+         NMvQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:auto-submitted:in-reply-to:references:message-id:date
+         :thread-index:thread-topic:subject:to:from:dkim-signature
+         :dkim-signature;
+        bh=ORNJrZN/y/4YprpG/JaNAhTflE/jowRSr09VAkePLQ8=;
+        fh=Q4+NH4vd0FIduByAlHyI0o1uvFh5lX6Eqy04l6XQQ3o=;
+        b=Kw/F5i1zRIB5/UhWSOVcLsY6zrke7yF7XV3wp+QEhb9VjHPpA7bLnIgUuzarfATF0b
+         8nVui/AeVX4EYDOwfkHiZySNR9/uk4jzvOypxWHameJ5ozkKb0NzNBTdP4UlFV/Q6mo8
+         OmJa4P45OLlT23Eh6BmGNKJgS3MFgWPxjP9ZC9l7xXE4wEaJTOgpd2QyMpKv7kRVoYZv
+         KqN6AWXdW3+kPapxwmEZciXdl1uqgJETPOA/jDfB4RPKHTJZMoIp58Cmayny/tIDqCfz
+         kPBAeYZpanybmw6FX4xifuLmzJtCnR9AIEV77B1KYU0krtRQ8TRkUOZmFuzTTFENlkYE
+         Zr5A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@clackamas.us header.s=mimecast20210408 header.b=UJKse55f;
+       dkim=pass header.i=@dkim.mimecast.org header.s=201912 header.b=BIpIjtg2;
+       spf=pass (google.com: domain of postmaster@us-smtp-delivery-222.mimecast.com designates 170.10.129.222 as permitted sender) smtp.helo=us-smtp-delivery-222.mimecast.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=clackamas.us
+Return-Path: <>
+Received: from us-smtp-delivery-222.mimecast.com (us-smtp-delivery-222.mimecast.com. [170.10.129.222])
+        by mx.google.com with ESMTPS id 6a1803df08f44-89a65bc8113si13163786d6.15.2026.03.10.22.54.15
+        for <starworks5@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Tue, 10 Mar 2026 22:54:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of postmaster@us-smtp-delivery-222.mimecast.com designates 170.10.129.222 as permitted sender) client-ip=170.10.129.222;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@clackamas.us header.s=mimecast20210408 header.b=UJKse55f;
+       dkim=pass header.i=@dkim.mimecast.org header.s=201912 header.b=BIpIjtg2;
+       spf=pass (google.com: domain of postmaster@us-smtp-delivery-222.mimecast.com designates 170.10.129.222 as permitted sender) smtp.helo=us-smtp-delivery-222.mimecast.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=clackamas.us
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=clackamas.us;
+	s=mimecast20210408; t=1773208455;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type:
+	 in-reply-to:in-reply-to:references:references;
+	bh=ORNJrZN/y/4YprpG/JaNAhTflE/jowRSr09VAkePLQ8=;
+	b=UJKse55fLP7y4BVKiHbQpppEYV0HTdqiSrP31tO86iUFY6qZmVcmCa537Nm0o1Fl+wkOvn
+	dYNU/q7SHCpwK7Is/8imb8EbpEOBgv5zfukRkGDb36sSJ2n2nKI1OxpMZsqLdc4BEuAw2F
+	IL4SCVBPvrgaXnGXy72GY09Ecwz7l28=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=dkim.mimecast.org;
+	s=201912; t=1773208455;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type:
+	 in-reply-to:in-reply-to:references:references;
+	bh=ORNJrZN/y/4YprpG/JaNAhTflE/jowRSr09VAkePLQ8=;
+	b=BIpIjtg2cyWnc3iwjnA7RUu45F9c9m7Pbi0v+VSWfbHcunhHALHMmniMLooy+zvt2KvMmC
+	ZKgjvxMdwcasEf8y0gnb323Upy673Ul1RVqvDNHujfop9b9D/TJMqlaPYRza0Kn5vNmKu5
+	NWms1601iklgyrCJRmJYroVy5fWNRkOUOd9tBeQi0l8EUWI/37kBsoxX3MZOzjxUuh6PhZ
+	SpPEsxRYVe0EQo07SUZbvcDk6fDCeuNz6UZaRp1LVAY0yItIT2OkjgenETgmTgMcvaVVI5
+	4twhjWwrv9Y3uEXXfSTMHsFS12CImgkJ/5y6tvU6Kogj0qNIuZ7VyPZFhQVnCA==
+Received: from CH1PR09CU001.outbound.protection.outlook.com
+ (mail-northcentralusazhn15011023.outbound.protection.outlook.com
+ [52.102.146.23]) by relay.mimecast.com with ESMTP with STARTTLS
+ (version=TLSv1.3, cipher=TLS_AES_256_GCM_SHA384) id
+ us-mta-595-8a3HIJFhPEuqXfs1DcZyYw-1; Wed, 11 Mar 2026 01:54:08 -0400
+X-MC-Unique: 8a3HIJFhPEuqXfs1DcZyYw-1
+X-Mimecast-MFC-AGG-ID: 8a3HIJFhPEuqXfs1DcZyYw_1773208447
+Received: from CYXPR09CA0010.namprd09.prod.outlook.com (2603:10b6:930:d4::15)
+ by MW4PR09MB9616.namprd09.prod.outlook.com (2603:10b6:303:1f8::14) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9700.11; Wed, 11 Mar
+ 2026 05:54:02 +0000
+Received: from BL02EPF0001B419.namprd09.prod.outlook.com
+ (2603:10b6:930:d4:cafe::29) by CYXPR09CA0010.outlook.office365.com
+ (2603:10b6:930:d4::15) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9678.26 via Frontend Transport; Wed,
+ 11 Mar 2026 05:53:57 +0000
+X-MS-Exchange-Authentication-Results: spf=temperror (sender IP is
+ 198.245.132.32) smtp.helo=Exch01.county.ds.clackamas.us; dkim=none (message
+ not signed) header.d=none;dmarc=temperror action=none
+ header.from=clackamas.us
+Received: from Exch01.county.ds.clackamas.us (198.245.132.32) by
+ BL02EPF0001B419.mail.protection.outlook.com (10.167.242.198) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.9678.18 via Frontend Transport; Wed, 11 Mar 2026 05:54:00 +0000
+Received: from Exch01.county.ds.clackamas.us (10.32.2.129) by
+ Exch01.county.ds.clackamas.us (10.32.2.129) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.2.2562.17; Tue, 10 Mar 2026 22:53:58 -0700
+Received: from Exch01.county.ds.clackamas.us ([::1]) by
+ Exch01.county.ds.clackamas.us ([fe80::bd97:bcb3:ee53:432a%17]) with Microsoft
+ SMTP Server id 15.02.2562.017; Tue, 10 Mar 2026 22:53:58 -0700
+From: "Tilton, Kati" <KTilton@clackamas.us>
+To: benjamin barber <starworks5@gmail.com>
+Subject: Automatic reply: Additional Information Needed
+Thread-Topic: Additional Information Needed
+Thread-Index: AdyZ7W/piJjoUvQpStKR5Yixn2TubwASS5yAAAD5TAACDLx6AACp24GwAG6WvYAAAIPgAAACbMkAAAAy9gAAAOXtgAAApnIAADsRGgAAABoUgAC97ZiAAVfVAwAAAR6yAAA0IcgAAAEd3bAAFadSgP//i08p
+Date: Wed, 11 Mar 2026 05:53:58 +0000
+Message-ID: <1991703a31e34f8ab6242102a2ed5368@Exch01.county.ds.clackamas.us>
+References: <4c07ec4dace2422fa79c8f83358cf6d8@clackamas.us>
+ <CAMTdTS-2c7Mk_ZR=9SYGkoR=Dy99ETRUn7-tGiiqh4ujFoHZ3g@mail.gmail.com>
+ <CAMTdTS9OHyWMenPz-igNONh3j+kv1tHXa0qZxb8TBV3y7aE7yA@mail.gmail.com>
+ <CAMTdTS-DUCf7WDU_=dTA=FAd6qg7LN7OpzEzFCkLGwz+TADTZw@mail.gmail.com>
+ <bfd53bf4f3614e6db61d9a9d4cfaebf9@clackamas.us>
+ <CAMTdTS_ymVr22NmekKTeKh6V=jjyFDYWiemxgeEFOOv-2XxmDg@mail.gmail.com>
+ <CAMTdTS-OvfJceG9zsTMe5XSUU3Z3Ke9LdZbprdZ2zV66+_DyiA@mail.gmail.com>
+ <CAMTdTS-g9Ra=apD-MCDsqTk4mbDgrbew9Bcf7t4zhFqEDwS2Lw@mail.gmail.com>
+ <CAMTdTS8dVDSVcChVSstbWszSAVVn3PP6QOkssUet5Hm5-V4tMQ@mail.gmail.com>
+ <CAMTdTS_RK=eiCmcPcxxZwEswZscdMjsXzgoSk0p5ax5k_KOg_g@mail.gmail.com>
+ <CAMTdTS-bpv_DpMaHd1xHuNeHtcZ-vMEMVVKmEqWGocKXKr5m3Q@mail.gmail.com>
+ <CAMTdTS_FhDVzVctv75ZTfNndnL9QiuZyzEkD9bZ8=OKR7mZk6g@mail.gmail.com>
+ <CAMTdTS_ROF=SRx-vYeMuCY_9C6p31Mdnw9AOy_faAz30MeOctw@mail.gmail.com>
+ <CAMTdTS88pFUGLCdwJqR5WJpKnwra077Fy=kCVPFe9Z+gqwJsiw@mail.gmail.com>
+ <CAMTdTS_aghRN0G5nwdnU6BxS+Jx9ZU45kOsj0EC4txrk_8oA6A@mail.gmail.com>
+ <CAMTdTS_JCWuHb=Rhvn4n4QxKbq8YUe8iTX9Sn4u07j5_kbCEBA@mail.gmail.com>
+ <CAMTdTS_FNTXi71cVyu5vy5oRzqwd7t4HJeObgDPrb3Fc48hxFQ@mail.gmail.com>
+ <d65bb2f9c1b649efa57d7f7a6ce7d4a9@clackamas.us>,<CAMTdTS_3a3_Uu_vjDNG=eMnJ-Co3eQXMBjXAH8ee5+BzS1hyYw@mail.gmail.com>
+In-Reply-To: <CAMTdTS_3a3_Uu_vjDNG=eMnJ-Co3eQXMBjXAH8ee5+BzS1hyYw@mail.gmail.com>
+X-MS-Has-Attach: 
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Inbox-Rules-Loop: ktilton@clackamas.us
+X-MS-TNEF-Correlator: 
+x-ms-exchange-parent-message-id: <CAMTdTS_3a3_Uu_vjDNG=eMnJ-Co3eQXMBjXAH8ee5+BzS1hyYw@mail.gmail.com>
+auto-submitted: auto-generated
+x-ms-exchange-generated-message-source: Mailbox Rules Agent
+MIME-Version: 1.0
+Return-Path: <>
+X-EOPAttributedMessage: 0
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: BL02EPF0001B419:EE_|MW4PR09MB9616:EE_
+X-MS-Office365-Filtering-Correlation-Id: c8067909-6b54-4076-e28b-08de7f32979c
+X-MS-Exchange-SenderADCheck: 1
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam: BCL:0;ARA:13230040|50650200027|1800799024|35950700016|82310400026|8096899003|80162021|22082099003|18002099003|56012099003|80100003
+X-Microsoft-Antispam-Message-Info: IcKHWcN6xLnrA3DbUQZz+NeQR3sykwXeKnjPMNWPBElZt/4rkQEaT1mj0+ch7sDZJ0oDPYxWO6vLLNRZSYEPZ4Pm9bGruomRkswPKBS0nhmYlAsN+cSmihJGF7tIQnHxGy56jWvCNLPjbBv12UOzMd95k+3ziFSraKg5AQ1qo+RdM4SXziw1MOD0rYUoHcBKtgQckM4c+E54y/7LOZEQKzkM27LZM3wxwX6s3Abmz73QERkDdyOAASWrZupbj7n9rrsrUv19sUjfCXxiuIERrI+QRLwMghVW5P/j9J/6Cuaa4j6YsNCJEnwh5volcFgZzNfnrXJc9+g8xM/PW9nTZcpb7FPJaYPS1Ne4KJCK1Y7qryigTpegDLeDs2YjT9VJyTOh0lEuFPlfkVBirFY58rvOedu8i2Laz9RKvJzorE+N4OIMD1J48a008ieFhhMSIPCnXJTD0/x7+ysl+B6/wDU5MzCWcX9zb7c95xB0NRKYiX5b0kJHnPcJlYsXsC8H+aYgK8q75t8E4vJlZSS9GKRRAyavH4vx+bJjQuL/VgWJtA5rZO4Wdi5xyFrcYgLObaPWyv+0558ZczXaGa8KvhKTJdt3dRExhyXHG9aehS0+DeH4JxHMAGTccSIfYQAsuwGTylRMXUx3+4jVUwhzDR7ldcVzwSo2WslBUfU0YmOHtAii5a2Or8gaxdExJa0D+pH5M4YEb8ykx2iIJiIuyTKB0C3VEpIPDIRTTT7yYxRsVleXsLD5jbfwvh7lAPYE+uPt7X4uZnn35408wyOOzDVZmznc+YI3yrP5YQ8eEYiLjNUiEMkPtAUtngEeU6Xt
+X-Forefront-Antispam-Report: CIP:198.245.132.32;CTRY:US;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:Exch01.county.ds.clackamas.us;PTR:InfoDomainNonexistent;CAT:NONE;SFS:(13230040)(50650200027)(1800799024)(35950700016)(82310400026)(8096899003)(80162021)(22082099003)(18002099003)(56012099003)(80100003);DIR:OUT;SFP:1501
+X-MS-Exchange-AntiSpam-MessageData-ChunkCount: 1
+X-MS-Exchange-AntiSpam-MessageData-0: As/wfj9jCovOerrKGtBQ49kDRvo1ZZl9zd5ir8Lszvup8/CZR+2W26wN2CpiWyE7oTnEIvpyh8PaC95HC5OFBOqQPAecqU9Ui01jbilXylvBeSueQw5ASG5Hd8dfnmqa3fvGiWs0dZHrfWPV9IIay0py2kdK/W7GTGATs9Ax1gd7QhnKnhW/K0z/TmJ8TtarvdcGnGU2FBLlKHBb0lBB1FD+DIbG/x+2+I6P98LO+4fsoRPCLHooI7rjk2f29TdP5JJa3XvMl+E9eoxbTAF/rDkCKi/Non2+iATMEvFq+P11vhHeJNaBLreBrzvSft482K8XOC79bixe3eSYn7ImKt0qMydT5AiKXDVobWkAM0gU2EMaZ/yMc4F06GUyff1EhHlz0Uz45OU+aofM/cTbbpFNs/TXWv5Yd8S3PKv8+5y4OHyA0DHgeRoUuLLPyDUw
+X-Exchange-RoutingPolicyChecked: i95S54krbngdP6linjb0Xb5R6X/7YGET6GxNqNHfw1t+6W9AXOFKNN/kQQcmdGaR8Qc1Y/sZNAO6VMblqgRXe0oW+BtZxDCk7Sw2uG5ZYf4erSCRpg1al8u9oYK0xTd484SiHVdwYM2IvgAHg3ny9LD/wN/xWv3GKU9OsaDYuzlANMKBDDZwyR8otXN0cP8S4w3Y/KhAmP9HOrOrPCW3PNn90t2B4zbZbTRW296fMS4+QzvrKGKnbhHkxKk4lArBubkqidzIFxgE7jse++CEjTarcP3I4pp/YIKYuN7jqw0bzKJCx5pRKRDHu7JnnwrI4+r/+h4mPOZJ6oUj+7eweQ==
+X-OriginatorOrg: clackamas.us
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 11 Mar 2026 05:54:00.0151
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: c8067909-6b54-4076-e28b-08de7f32979c
+X-MS-Exchange-CrossTenant-Id: 11a5f385-e251-4bf1-b266-597e782882a0
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=11a5f385-e251-4bf1-b266-597e782882a0;Ip=[198.245.132.32];Helo=[Exch01.county.ds.clackamas.us]
+X-MS-Exchange-CrossTenant-AuthSource: BL02EPF0001B419.namprd09.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: MW4PR09MB9616
+X-Mimecast-Spam-Score: 0
+X-Mimecast-MFC-PROC-ID: YY-U7fKjvJMzChRT_uFd1DyMT1fBJsd9dpotTnPwdQ8_1773208447
+X-Mimecast-Originator: clackamas.us
+Content-Type: multipart/alternative;
+	boundary="_000_1991703a31e34f8ab6242102a2ed5368Exch01countydsclackamas_"
+
+--_000_1991703a31e34f8ab6242102a2ed5368Exch01countydsclackamas_
+Content-Type: text/plain; charset=WINDOWS-1252
+Content-Transfer-Encoding: quoted-printable
+
+Hello! Thank you for your email. I am out of the office, returning on Frida=
+y, March 13th. If you have an urgent need, please email hacc@clackamas.us f=
+or assistance from a member of the management team.
+
+Thank you,
+
+Kati
+
+
+
+
+--_000_1991703a31e34f8ab6242102a2ed5368Exch01countydsclackamas_
+Content-Type: text/html; charset=WINDOWS-1252
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:w=3D"urn:sc=
+hemas-microsoft-com:office:word" xmlns:m=3D"http://schemas.microsoft.com/of=
+fice/2004/12/omml" xmlns=3D"http://www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+=09{font-family:"Cambria Math";
+=09panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+=09{font-family:Calibri;
+=09panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+=09{font-family:Aptos;}
+@font-face
+=09{font-family:"Segoe UI";
+=09panose-1:2 11 5 2 4 2 4 2 2 3;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+=09{margin:0in;
+=09font-size:12.0pt;
+=09font-family:"Aptos",sans-serif;
+=09mso-ligatures:standardcontextual;}
+span.EmailStyle17
+=09{mso-style-type:personal-compose;
+=09font-family:"Calibri",sans-serif;}
+.MsoChpDefault
+=09{mso-style-type:export-only;}
+@page WordSection1
+=09{size:8.5in 11.0in;
+=09margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+=09{page:WordSection1;}
+--></style>
+</head>
+<body lang=3D"EN-US" link=3D"#467886" vlink=3D"#96607D" style=3D"word-wrap:=
+break-word">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><span style=3D"font-si=
+ze:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">Hello! Thank you for =
+your email. I am out of the office, returning on Friday, March 13th. If you=
+ have an urgent need, please email hacc@clackamas.us
+ for assistance from a member of the management team.<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><span style=3D"font-si=
+ze:11.0pt;font-family:&quot;Calibri&quot;,sans-serif"><o:p>&nbsp;</o:p></sp=
+an></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><span style=3D"font-si=
+ze:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">Thank you,<o:p></o:p>=
+</span></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><span style=3D"font-si=
+ze:11.0pt;font-family:&quot;Calibri&quot;,sans-serif"><o:p>&nbsp;</o:p></sp=
+an></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><span style=3D"font-si=
+ze:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">Kati
+</span><span style=3D"font-size:8.5pt;font-family:&quot;Segoe UI&quot;,sans=
+-serif"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><span style=3D"font-si=
+ze:11.0pt;font-family:&quot;Calibri&quot;,sans-serif"><o:p>&nbsp;</o:p></sp=
+an></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><span style=3D"font-si=
+ze:11.0pt;font-family:&quot;Calibri&quot;,sans-serif"><o:p>&nbsp;</o:p></sp=
+an></p>
+<p class=3D"MsoNormal" style=3D"text-autospace:none"><span style=3D"font-si=
+ze:11.0pt;font-family:&quot;Calibri&quot;,sans-serif"><o:p>&nbsp;</o:p></sp=
+an></p>
+</div>
+</body>
+</html>
+
+--_000_1991703a31e34f8ab6242102a2ed5368Exch01countydsclackamas_--
+
