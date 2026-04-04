@@ -1,7 +1,7 @@
 {
   "status": "initialized",
-  "updated_at": "2026-04-04T23:45:42Z",
-  "case_slug": "consumer-google-voice-20260404_225405",
+  "updated_at": "2026-04-04T22:53:45Z",
+  "case_slug": "consumer-google-voice-20260404_225345",
   "delivery_destination": "drive",
   "frequency": "one_time",
   "page_source_path": null,
@@ -13,13 +13,11 @@
     "client_secrets_path": null,
     "account_hint": null
   },
-  "product_ids": [
-    "voice"
-  ],
+  "product_ids": [],
   "events": [
     {
       "type": "initialized",
-      "timestamp": "2026-04-04T23:45:42Z"
+      "timestamp": "2026-04-04T22:53:45Z"
     }
   ]
 }

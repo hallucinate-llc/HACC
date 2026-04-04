@@ -1,0 +1,62 @@
+{
+  "status": "pending_archive",
+  "updated_at": "2026-04-04T22:54:08Z",
+  "case_slug": "consumer-google-voice-20260404_225405",
+  "delivery_destination": "drive",
+  "frequency": "one_time",
+  "page_source_path": null,
+  "downloads_dir": "./workspace/starworks5-google-voice-downloads",
+  "capture_json_path": "./workspace/starworks5-google-voice-downloads/takeout_capture.json",
+  "drive_fallback": {
+    "enabled": false,
+    "name_contains": "takeout",
+    "client_secrets_path": null,
+    "account_hint": null
+  },
+  "product_ids": [
+    "voice"
+  ],
+  "events": [
+    {
+      "type": "initialized",
+      "timestamp": "2026-04-04T22:54:05Z"
+    },
+    {
+      "type": "capture_attempted",
+      "timestamp": "2026-04-04T22:54:05Z",
+      "capture_status": "pending"
+    },
+    {
+      "type": "email_poll_attempted",
+      "timestamp": "2026-04-04T22:54:08Z",
+      "matched_email_count": 0
+    },
+    {
+      "type": "pending_archive",
+      "timestamp": "2026-04-04T22:54:08Z",
+      "capture_status": "pending"
+    }
+  ],
+  "capture": {
+    "status": "pending",
+    "takeout_url": "https://takeout.google.com/settings/takeout/custom/voice?dest=drive",
+    "browser_capture": {
+      "status": "pending",
+      "download_status": "not_captured",
+      "started_at": "2026-04-04T22:54:05Z",
+      "launcher": "xdg-open",
+      "mode": "system_browser",
+      "downloads_dir": "./workspace/starworks5-google-voice-downloads",
+      "message": "Takeout URL opened in the desktop browser. Complete Google sign-in/export there, then resume or poll for the archive."
+    }
+  },
+  "email_result": {
+    "status": "success",
+    "folder": "INBOX",
+    "search_criteria": "SUBJECT \"takeout\" FROM \"google\"",
+    "email_count": 0,
+    "matched_email_count": 0,
+    "latest_match": null,
+    "matches": []
+  }
+}

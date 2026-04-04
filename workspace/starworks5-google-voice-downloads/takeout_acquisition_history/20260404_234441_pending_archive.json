@@ -1,0 +1,45 @@
+{
+  "status": "pending_archive",
+  "updated_at": "2026-04-04T23:44:41Z",
+  "case_slug": "consumer-google-voice-20260404_225405",
+  "delivery_destination": "drive",
+  "frequency": "one_time",
+  "page_source_path": null,
+  "downloads_dir": "./workspace/starworks5-google-voice-downloads",
+  "capture_json_path": "./workspace/starworks5-google-voice-downloads/takeout_capture.json",
+  "drive_fallback": {
+    "enabled": false,
+    "name_contains": "takeout",
+    "client_secrets_path": null,
+    "account_hint": null
+  },
+  "product_ids": [
+    "voice"
+  ],
+  "events": [
+    {
+      "type": "initialized",
+      "timestamp": "2026-04-04T23:39:39Z"
+    },
+    {
+      "type": "email_poll_attempted",
+      "timestamp": "2026-04-04T23:44:41Z",
+      "matched_email_count": 0
+    },
+    {
+      "type": "pending_archive",
+      "timestamp": "2026-04-04T23:44:41Z",
+      "capture_status": "pending"
+    }
+  ],
+  "email_result": {
+    "status": "success",
+    "folder": "INBOX",
+    "search_criteria": "SUBJECT \"takeout\" FROM \"google\"",
+    "email_count": 0,
+    "matched_email_count": 0,
+    "stage_counts": {},
+    "latest_match": null,
+    "matches": []
+  }
+}
