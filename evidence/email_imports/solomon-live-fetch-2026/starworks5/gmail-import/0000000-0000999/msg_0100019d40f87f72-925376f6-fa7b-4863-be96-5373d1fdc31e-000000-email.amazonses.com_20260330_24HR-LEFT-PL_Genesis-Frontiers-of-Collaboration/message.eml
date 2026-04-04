@@ -1,0 +1,1291 @@
+Delivered-To: starworks5@gmail.com
+Received: by 2002:a05:7208:552b:b0:fa:5ef1:c6ed with SMTP id t43csp1622815rbf;
+        Mon, 30 Mar 2026 15:58:41 -0700 (PDT)
+X-Received: by 2002:a05:620a:4514:b0:8cb:5176:ef8 with SMTP id af79cd13be357-8d01c60e98emr1979123685a.8.1774911521119;
+        Mon, 30 Mar 2026 15:58:41 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1774911521; cv=none;
+        d=google.com; s=arc-20240605;
+        b=VO6I4+2zw1Xn9hwhvT657FZw5RwNScXxhJTPCjViGqxPddat4FOOOQO4yk24FCU0d3
+         6pyorELKCWhWXbe5QThSInXIV/QW8GXWgpeVd0Q+5h3g8brKwQdYjm7W9nH6JltT9IQf
+         ER6ZQvIf/SD4Kie+VE43SUeU9xsL8OUf84dJA0vTKIHvGfJPaxuKFo2BXAJACMcEUVb2
+         iC5nEbtB/mXFFrXFiLodLtuNXuKKqR6NH+Jn4LEnzQzKlGheYy6Fw1Pr89ZW77mRKIJ/
+         0Z/FKcxC/j+IshiA157gZrLkXeOnc7wMrnJMLfwN6d9KSGx6VoyW6rWUAdaIJxjc8Z9m
+         gKOg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:precedence:list-id:list-unsubscribe-post
+         :list-unsubscribe:mime-version:subject:message-id:cc:to:reply-to
+         :from:date:dkim-signature:dkim-signature;
+        bh=4dCHtruBceE5ADSr1MLkxOMu2sZSPLvJOsHwH6ZQEMY=;
+        fh=gEZAYU6+1+WuVdxoqKs3uo+hBULiAj3LjLbRed3gleY=;
+        b=WW86RVk8qDIPKdgPVZ4yYE02tZvNGGbco9fmf4jPdpGYesDfCnUH2F600cfnXPV0XL
+         zIgifegv3H93n7TlFLPxeSmBG/cjozBLENgZ0RV0FOy0ja9z+21tvVvQkjGN5m801rdr
+         28dLpaA5ofUkLVz5z2AZydxM45OXD+Upu2v9NNB2via7H3+wqW0GZkc8+L92fav6QnWB
+         /c4p9Wwx8MXErzk7keG7bVtzKa++ms9IS4iYoxC0hyDMaWiu8g45NP0Sn0Zp6LxoT2Jp
+         AVrY+4uPbPEO0sEQ2cjS/vPTVbYdjHuvPjeXvSIzLufRTj6Z6FQvqg1OQH0pLOXuGMGA
+         1qIA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@zoe.devspot.app header.s=jg2pflvkgvzq7mbh7zih7rfwbso4nlt3 header.b=QK8vtNPP;
+       dkim=pass header.i=@amazonses.com header.s=224i4yxa5dv7c2xz3womw6peuasteono header.b=BCbFCyzl;
+       spf=pass (google.com: domain of 0100019d40f87f72-925376f6-fa7b-4863-be96-5373d1fdc31e-000000@envelope.zoe.devspot.app designates 24.110.89.109 as permitted sender) smtp.mailfrom=0100019d40f87f72-925376f6-fa7b-4863-be96-5373d1fdc31e-000000@envelope.zoe.devspot.app;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=zoe.devspot.app
+Return-Path: <0100019d40f87f72-925376f6-fa7b-4863-be96-5373d1fdc31e-000000@envelope.zoe.devspot.app>
+Received: from i89-109.smtp-out.amazonses.com (i89-109.smtp-out.amazonses.com. [24.110.89.109])
+        by mx.google.com with ESMTPS id af79cd13be357-8d028075268si972638085a.339.2026.03.30.15.58.40
+        for <starworks5@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 30 Mar 2026 15:58:41 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 0100019d40f87f72-925376f6-fa7b-4863-be96-5373d1fdc31e-000000@envelope.zoe.devspot.app designates 24.110.89.109 as permitted sender) client-ip=24.110.89.109;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@zoe.devspot.app header.s=jg2pflvkgvzq7mbh7zih7rfwbso4nlt3 header.b=QK8vtNPP;
+       dkim=pass header.i=@amazonses.com header.s=224i4yxa5dv7c2xz3womw6peuasteono header.b=BCbFCyzl;
+       spf=pass (google.com: domain of 0100019d40f87f72-925376f6-fa7b-4863-be96-5373d1fdc31e-000000@envelope.zoe.devspot.app designates 24.110.89.109 as permitted sender) smtp.mailfrom=0100019d40f87f72-925376f6-fa7b-4863-be96-5373d1fdc31e-000000@envelope.zoe.devspot.app;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=zoe.devspot.app
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=jg2pflvkgvzq7mbh7zih7rfwbso4nlt3; d=zoe.devspot.app;
+	t=1774911520;
+	h=Date:From:Reply-To:To:Cc:Message-ID:Subject:MIME-Version:List-Unsubscribe:List-Unsubscribe-Post:List-ID:Content-Type;
+	bh=5jqnkxz4eoseEQ9IaVk2/4R1oKZCyzoEMPiPVOYyxWE=;
+	b=QK8vtNPPXui2lYp5NU97fm20AAwP3lbb9ePixNrcExiMtkXjUaRYs11hiV1qxXiO
+	m1HCeLGhlyQF9bpp79x+ByTV3bWoTiZ/vyLA9AuFEnO8ur7QAHbcAIrpuB51GpDSUrp
+	xjU7CLDyVqUsVEcy+MLjsw3OOxX8lCACrXGmT8m+qQ70nyLCs8M0msAbo7RYDSbLBRO
+	m8uzIom0BnQGWEAEnes6wvYMuh77XwX9jd+0mUFnbqqkyl3DxrpDFehIvWDEj9ZMa3x
+	74O5jjNlZEYV/s38sfWawndyPNHcsE1IlKNpGbtXnPFfJtWS7hYFKhWy7ZEFZcEY8AN
+	eGqsXgvZIw==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=224i4yxa5dv7c2xz3womw6peuasteono; d=amazonses.com; t=1774911520;
+	h=Date:From:Reply-To:To:Cc:Message-ID:Subject:MIME-Version:List-Unsubscribe:List-Unsubscribe-Post:List-ID:Content-Type:Feedback-ID;
+	bh=5jqnkxz4eoseEQ9IaVk2/4R1oKZCyzoEMPiPVOYyxWE=;
+	b=BCbFCyzlGxOymUbGLoaFfpLoNgyOwWnSIm0dOvKXzaqpk1CLEOchxcopkb72vQDL
+	dW15Smu6y6D5dc8VhE9CEMGEKR8i8C8SVtLpyLEJd6FdYT2/aWFjxoicVUyARTf/niS
+	oDLNiRMGSNrovM7fZGhHq+lzRWuYlB7BMsVyjaFw=
+Date: Mon, 30 Mar 2026 22:58:40 +0000
+From: DevSpot <devteam@zoe.devspot.app>
+Reply-To: DevSpot <devteam@devspot.app>
+To: starworks5@gmail.com
+Cc: 
+Message-ID: <0100019d40f87f72-925376f6-fa7b-4863-be96-5373d1fdc31e-000000@email.amazonses.com>
+Subject: =?utf-8?B?8J+aqCAyNEhSIExFRlQhIPCfmqggUExfR2VuZXNpczogRnJvbnRpZXJzIG9mIENvbGxhYm9yYXRpb24g?=
+MIME-Version: 1.0
+List-Unsubscribe: <mailto:cmndshqay13vv019wc4r1h0rk+ca8c273926ed1dcff5cf050daa15876cc03465454907fbd7cf9a046fc4d62f979f480669845e677170e863c3c971b5bd12d7be255fbf2b0e62f3d95c@unsubscribe.loops.so?subject=unsubscribe>,<https://app.loops.so/unsubscribe/cmndshqay13vv019wc4r1h0rk/ca8c273926ed1dcff5cf050daa15876cc03465454907fbd7cf9a046fc4d62f979f480669845e677170e863c3c971b5bd12d7be255fbf2b0e62f3d95c>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-ID: "DevSpot" <general.zoe.devspot.app>
+Precedence: Bulk
+X-Auto-Response-Suppress: All
+Content-Type: multipart/alternative; boundary=vntpedj5llj
+Feedback-ID: :1.us-east-1.gqkctAyC+A992z+e8GtV5xMDPca+2dE2VFxAk8GIf5vDyD2ii9M/gp/7ZZvUf6L5VrZValdywntjv+6ORm+kQlFZwcvU3VmHxx0mTiGYoQXh7ltitJgy0v1sEWCyPuIMaD228MegUNaA+OMCHXWYnqG87JXYt95FszuN5f+J408=:1.us-east-1.1nRXWOT+ETvogqnAUaOa7HjKGx1p40xVES7T8DfH/Gc=:AmazonSES
+X-SES-Outgoing: 2026.03.30-24.110.89.109
+
+--vntpedj5llj
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+https://plgenesis.com?utm_source=3Ddevspot&utm_medium=3Dnewsletter&utm_ca=
+mpaign=3Dhackathon&utm_content=3Ddevspot_newsletter
+
+=C2=A0
+Hi, benjamin barber
+=C2=A0
+
+
+Attention Builders
+
+=C2=A0
+
+
+The PL_Genesis: Frontiers of Collaboration Hackathon Deadline is Getting =
+Closer
+
+=C2=A0
+
+https://devspot.app/TO/hackathons/52/analytics/hackathons?=
+activeTab=3Doverview
+
+=C2=A0
+=E2=8F=B3 24 hours left.
+=C2=A0
+The submission window for PL_Genesis: Frontiers of Collaboration is about =
+to close.
+=C2=A0
+Over 1,500 builders have entered the =
+frontier=E2=80=94pushing the boundaries of AI, coordination, and autonomous=
+ systems. Now it=E2=80=99s your
+moment to ship.
+=C2=A0
+=C2=A0
+
+
+Builders =E2=80=94 Quick Reality Check:
+
+https://devspot.=
+app/TO/hackathons/52/analytics/hackathons?activeTab=3Doverview
+
+No sponsor track integration =3D no valid submission. Even if your project =
+is =F0=9F=94=A5.
+=C2=A0
+If you want judges to actually see your build (and =
+compete for $150K+ in prizes), you need at least one sponsor track =
+integration
+wired in.
+We broke it down step-by-step so you don=E2=80=99t =
+fumble it at the finish line.
+
+Watch The Guide [https://drive.google.=
+com/file/d/1NxbyUehxnRGkd_3J-WZlaFyhhqjqXGtI/view?usp=3Dsharing]
+
+=C2=A0
+=C2=A0
+
+
+This is the final stretch
+
+If you=E2=80=99ve started a project, =
+finish it.
+If you=E2=80=99ve been exploring ideas, commit and submit.
+If you=E2=80=99re close, you=E2=80=99re closer than you think.
+=C2=A0
+
+
+Be part of what=E2=80=99s next
+
+PL_Genesis isn=E2=80=99t just a =
+hackathon=E2=80=94it=E2=80=99s the start of a new coordination layer for =
+the internet.
+=C2=A0
+The projects submitted in the next 24 hours will =
+define what that future looks like.
+=C2=A0
+=C2=A0
+=C2=A0
+See you at the frontier,
+
+https://devspot.app/
+
+The DevSpot Team
+=C2=A0
+
+
+
+https://plgenesis.com?utm_source=3Ddevspot&utm_medium=3Dnewsletter&utm_camp=
+aign=3Dhackathon&utm_content=3Ddevspot_newsletter
+
+=C2=A0
+Discord [https://discord.gg/4RY32J5fnr] =E2=80=A2 X [https://x.=
+com/PL__Genesis] =E2=80=A2 plgenesis.com
+[https://plgenesis.com?=
+utm_source=3Ddevspot&utm_medium=3Dnewsletter&utm_campaign=3Dhackathon&utm_c=
+ontent=3Ddevspot_newsletter]
+You're receiving this because you've shown =
+interest in PL_Genesis.
+Unsubscribe [https://app.loops.=
+so/campaigns/cmlfsluuu02tr0i0n08b2e5w3/%7Bunsubscribe_link%7D]
+=C2=A0
+You are receiving this email because you opted-in to receive updates from =
+DevSpot
+DevSpot, 30 N Gould St Ste N Sheridan, Wyoming 82801
+Unsubscribe [https://app.loops.so/unsubscribe/cmndshqay13vv019wc4r1h0rk/ca8=
+c273926ed1dcff5cf050daa15876cc03465454907fbd7cf9a046fc4d62f979f480669845e67=
+7170e863c3c971b5bd12d7be255fbf2b0e62f3d95c]
+
+--vntpedj5llj
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html>
+<html lang=3D"en" dir=3D"auto" xmlns=3D"http://www.w3.org/1999/xhtml" xmlns=
+:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:o=
+ffice:office" style=3D"background-color: #F7F7F7;">
+  <head>
+    <title>=F0=9F=9A=A8 24HR LEFT! =F0=9F=9A=A8 PL_Genesis: Frontiers of Co=
+llaboration</title>
+    <!--[if !mso]><!-->
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+    <!--<![endif]-->
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
+">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1">
+    <style type=3D"text/css">
+      #outlook a { padding:0; }
+      body { margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size=
+-adjust:100%; }
+      table, td { border-collapse:collapse;mso-table-lspace:0pt;mso-table-r=
+space:0pt; }
+      img { border:0;height:auto;line-height:100%; outline:none;text-decora=
+tion:none;-ms-interpolation-mode:bicubic; }
+      p { display:block;margin:13px 0; }
+    </style>
+    <!--[if mso]>
+    <noscript>
+    <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    </xml>
+    </noscript>
+    <![endif]-->
+    <!--[if lte mso 11]>
+    <style type=3D"text/css">
+      .mj-outlook-group-fix { width:100% !important; }
+    </style>
+    <![endif]-->
+   =20
+      <!--[if !mso]><!-->
+        <link href=3D"https://fonts.googleapis.com/css?family=3DSpace%20Gro=
+tesk:400,600" rel=3D"stylesheet" type=3D"text/css">
+        <style type=3D"text/css">
+          @import url(https://fonts.googleapis.com/css?family=3DSpace%20Gro=
+tesk:400,600);
+        </style>
+      <!--<![endif]-->
+
+   =20
+   =20
+    <style type=3D"text/css">
+      @media only screen and (min-width:480px) {
+        .mj-column-per-100 { width:100% !important; max-width: 100%; }
+      }
+    </style>
+    <style media=3D"screen and (min-width:480px)">
+      .moz-text-html .mj-column-per-100 { width:100% !important; max-width:=
+ 100%; }
+    </style>
+   =20
+   =20
+ =20
+   =20
+    <style type=3D"text/css">
+
+    @media only screen and (max-width:479px) {
+      table.mj-full-width-mobile { width: 100% !important; }
+      td.mj-full-width-mobile { width: auto !important; }
+    }
+ =20
+    </style>
+    =20
+    <style type=3D"text/css">
+.wfix {
+          max-width: 600px !important;
+        }
+       =20
+        @media(max-width: 480px) {
+          .body-image-mobile-width-100 td { width: 100px !important; } .bod=
+y-image-mobile-width-552 td { width: 552px !important; } .body-image-mobile=
+-width-117 td { width: 117px !important; }
+          .body-image td  { max-width: 100% !important; }
+          .body-image img  { box-sizing: border-box; }
+          .social-icon-mobile-spacer {
+            display: inline-block !important;
+          }
+        }
+       =20
+    .mobile-only { display: none !important; } .desktop-only { display: blo=
+ck !important; }
+    @media(max-width: 480px) { .column-stack { width: 100% !important; max-=
+width: 100% !important; display: block !important; } .column-stack td,.colu=
+mn-stack th { padding-left: 0 !important; padding-right: 0 !important; } .m=
+obile-only { display: block !important; } .desktop-only { display: none !im=
+portant; } }
+    </style>
+    <style>
+          .wrapper {
+            padding: 0 12px;
+          }
+
+          /* Superhuman selector */
+          .ShadowHTML .wrapper {
+            padding: 0 !important;
+          }
+        =20
+        =20
+        =20
+        =20
+  .ShadowHTML :is(.styleUnquotedContent .unquoted-content, .styleUnquotedCo=
+ntent .sh-unquoted-content, .styleQuotedContent .sh-quoted-content, .sh-sig=
+nature, .Signature-settings) :is(td.column-container, div[class^=3D"mj-colu=
+mn-per-"]){font-size:0!important}
+  html.sh-color :is(td.column-container, div[class^=3D"mj-column-per-"], di=
+v.mj-column-per-100.mj-outlook-group-fix){font-size:0!important}
+  @media(max-width:480px){
+    html.sh-color .column-stack{width:100%!important;max-width:100%!importa=
+nt;display:block!important}
+    html.sh-color :is(.column-stack td,.column-stack th){padding-left:0!imp=
+ortant;padding-right:0!important;width:100%!important;max-width:100%!import=
+ant;display:block!important}
+    html.sh-color :is(.column-stack, .column-stack *){word-break:break-word=
+!important;overflow-wrap:anywhere!important}
+    html.sh-color :is(.column-persist, .column-persist *){word-break:break-=
+word!important;overflow-wrap:anywhere!important}
+  }
+  html.sh-color a[href^=3D"tel:"]{color:inherit!important;text-decoration:n=
+one!important;font-size:inherit!important;line-height:inherit!important;let=
+ter-spacing:inherit!important;vertical-align:baseline!important}
+
+        =20
+      .isMarketing { background-color: #F7F7F7 !important; }
+      .isMarketing .styled-primary-column { background-color: #09102B !impo=
+rtant; border-radius: 10px; }
+   =20
+        =20
+         [class~=3D"x_social-icon-dark-mode"] { display: none !important; m=
+so-hide:all;  width: 0px !important; padding: 0px !important; }
+
+          /* Gmail selectors */
+          u + .body .wrapper {
+            padding: 0 !important;
+          }
+          div > u + .body .wrapper {
+            padding: 0 !important;
+          }
+         =20
+    a { text-decoration: none; color: #F7F7F7; }
+   =20
+ =20
+         =20
+         =20
+          .link-unsubscribe { color: #9ca3af !important; }
+          </style>
+<meta name=3D"color-scheme" content=3D"light">
+          <meta name=3D"supported-color-schemes" content=3D"light">
+  </head>
+  <body class=3D"body" style=3D"word-spacing:normal;background-color:#F7F7F=
+7;">
+   =20
+   =20
+      <div aria-label=3D"=F0=9F=9A=A8 24HR LEFT! =F0=9F=9A=A8 PL_Genesis: F=
+rontiers of Collaboration" aria-roledescription=3D"email" class=3D"email-bo=
+dy" style=3D"background-color:#F7F7F7;" role=3D"article" lang=3D"en" dir=3D=
+"auto">
+        <img alt=3D"" src=3D"http://c.vialoops.com/CI0/0100019d40f87f72-925=
+376f6-fa7b-4863-be96-5373d1fdc31e-000000/2rYauuS_KIap-O5TKyRtwsM4ZPl4hhHg0V=
+-MvZKwvZs=3D450" style=3D"display: none; width: 1px; height: 1px;">
+<!--[if mso]><style type=3D"text/css"> a { text-decoration: underline !impo=
+rtant; } .button a { text-decoration: none !important; } .outlook-list-fix =
+{ margin-left:4px !important; } .outlook-break-full-link { word-break: brea=
+k-all !important; } .outlook-hide-social-icon { display: none !important; m=
+so-hide:all; width: 0px !important; padding: 0px !important; } .outlook-hid=
+e-social-icon * { display: none !important; mso-hide:all; width: 0px !impor=
+tant; padding: 0px !important; } .outlook-hide-social-icon table { display:=
+ none !important; mso-hide:all; width: 0px !important; padding: 0px !import=
+ant; } .outlook-hide-social-icon tbody { display: none !important; mso-hide=
+:all; width: 0px !important; padding: 0px !important; } .outlook-hide-socia=
+l-icon tr { display: none !important; mso-hide:all; width: 0px !important; =
+padding: 0px !important; } .outlook-hide-social-icon td { display: none !im=
+portant; mso-hide:all; width: 0px !important; padding: 0px !important; } .o=
+utlook-hide-social-icon img { display: none !important; mso-hide:all; width=
+: 0px !important; padding: 0px !important; } .outlook-hide-social-icon a { =
+display: none !important; mso-hide:all; width: 0px !important; padding: 0px=
+ !important; }
+</style><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" class=3D"wfix-outlook gmail-no-padding-outlook wrapper-outlook" role=
+=3D"presentation" style=3D"width:600px;" width=3D"600" ><tr><td style=3D"li=
+ne-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+   =20
+     =20
+      <div class=3D"wfix gmail-no-padding wrapper" style=3D"margin:0px auto=
+;max-width:600px;">
+       =20
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"width:100%;">
+          <tbody>
+            <tr>
+              <td style=3D"direction:ltr;font-size:0px;padding:20px 0;paddi=
+ng-top:0;text-align:center;">
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"wfix-outlook" width=
+=3D"600px" ><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" class=3D"wfix-outlook" role=3D"presentation" style=3D"width:600px=
+;" width=3D"600" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-h=
+eight-rule:exactly;"><![endif]-->
+   =20
+     =20
+      <div class=3D"wfix" style=3D"margin:0px auto;max-width:600px;">
+       =20
+        <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"width:100%;">
+          <tbody>
+            <tr>
+              <td style=3D"direction:ltr;font-size:0px;padding:20px 0;paddi=
+ng-bottom:24px;padding-left:0px;padding-right:0px;padding-top:24px;text-ali=
+gn:center;">
+                <!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td align=3D"center" class=3D"wfix=
+-outlook rounded-corners-outlook styled-primary-column-outlook" style=3D"ve=
+rtical-align:top;width:600px;" ><![endif]-->
+           =20
+      <div class=3D"mj-column-per-100 mj-outlook-group-fix wfix rounded-cor=
+ners styled-primary-column" style=3D"font-size:0px;text-align:left;directio=
+n:ltr;display:inline-block;vertical-align:top;width:100%;">
+       =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%" style=3D"border-collapse: separate;">
+        <tbody>
+          <tr>
+            <td style=3D"background-color:#09102B;border-radius:10px;vertic=
+al-align:top;border-collapse:separate;padding-top:32px;padding-right:24px;p=
+adding-bottom:32px;padding-left:24px;">
+             =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style width=3D"100%">
+        <tbody>
+         =20
+              <tr>
+                <td align=3D"center" class=3D"body-image body-image-mobile-=
+width-100" style=3D"font-size:0px;padding:10px 25px;padding-top:0px;padding=
+-right:0px;padding-bottom:0px;padding-left:0px;word-break:break-word;">
+                 =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"border-collapse:collapse;border-spacing:0px;">
+        <tbody>
+          <tr>
+            <td style=3D"width:100px;">
+             =20
+        <a href=3D"https://c.vialoops.com/CL0/https:%2F%2Fplgenesis.com%3Fu=
+tm_source=3Ddevspot%26utm_medium=3Dnewsletter%26utm_campaign=3Dhackathon%26=
+utm_content=3Ddevspot_newsletter/1/0100019d40f87f72-925376f6-fa7b-4863-be96=
+-5373d1fdc31e-000000/1yMGsMDfYFdlrlC78esj6B17TEJAWtjT-lWkE7qZ21I=3D450" tar=
+get=3D"_blank" style=3D"text-decoration: none; color: #F7F7F7;">
+         =20
+      <img alt src=3D"https://images.vialoops.com/cmn44h6lo09nq0izs5roxm916=
+/cmn44h6ps09nu0izsqc08v169.png" style=3D"border:0;border-radius:0px;display=
+:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:1=
+3px;" width=3D"100" height=3D"auto">
+   =20
+        </a>
+     =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"left" style=3D"font-size:0px;padding:10px 25px=
+;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word=
+-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:left;c=
+olor:#F7F7F7;"><span>&nbsp;</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:10px 25=
+px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;wo=
+rd-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:center=
+;color:#F7F7F7;"><span style=3D"line-height: 21px !important; font-size: 14=
+px; font-size: 14px !important; white-space: pre-wrap;">Hi, </span><span st=
+yle=3D"line-height: 21px !important; font-size: 14px; font-size: 14px !impo=
+rtant; white-space: pre-wrap;">benjamin barber</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"left" style=3D"font-size:0px;padding:10px 25px=
+;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word=
+-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:left;c=
+olor:#F7F7F7;"><span>&nbsp;</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:10px 25=
+px;padding-top:12px;padding-right:0px;padding-bottom:4px;padding-left:0px;w=
+ord-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:30px;letter-spacing:0px;line-height:32px !important;text-align:center=
+;color:#F7F7F7;"><h1 style=3D"padding: 0; margin: 0; font-weight: 500; colo=
+r: #F7F7F7; font-size: 30px; line-height: 32px !important; font-size: 30px =
+!important;"><span style=3D"font-weight: 600; font-size: 30px; white-space:=
+ pre-wrap; line-height: 32px !important; font-size: 30px !important;" class=
+=3D"bold">Attention Builders</span></h1></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:10px 25=
+px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;wo=
+rd-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:center=
+;color:#F7F7F7;"><span>&nbsp;</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:10px 25=
+px;padding-top:12px;padding-right:0px;padding-bottom:4px;padding-left:0px;w=
+ord-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:24px;letter-spacing:0px;line-height:32px !important;text-align:center=
+;color:#F7F7F7;"><h2 style=3D"padding: 0; margin: 0; font-weight: 500; colo=
+r: #F7F7F7; font-size: 24px; line-height: 32px !important; font-size: 24px =
+!important;"><span style=3D"font-weight: 600; font-size: 24px; white-space:=
+ pre-wrap; line-height: 32px !important; font-size: 24px !important;" class=
+=3D"bold">The PL_Genesis: Frontiers of Collaboration Hackathon Deadline is =
+Getting Closer</span></h2></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"left" style=3D"font-size:0px;padding:10px 25px=
+;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word=
+-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:12px;letter-spacing:0px;line-height:18px !important;text-align:left;c=
+olor:#F7F7F7;"><span>&nbsp;</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"left" class=3D"body-image body-image-mobile-wi=
+dth-552" style=3D"font-size:0px;padding:10px 25px;padding-top:4px;padding-r=
+ight:0px;padding-bottom:4px;padding-left:0px;word-break:break-word;">
+                 =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"border-collapse:collapse;border-spacing:0px;">
+        <tbody>
+          <tr>
+            <td style=3D"width:552px;">
+             =20
+        <a href=3D"https://c.vialoops.com/CL0/https:%2F%2Fdevspot.app%2FTO%=
+2Fhackathons%2F52%2Fanalytics%2Fhackathons%3FactiveTab=3Doverview/1/0100019=
+d40f87f72-925376f6-fa7b-4863-be96-5373d1fdc31e-000000/4MiN7joS2_M9lUjsxcJqC=
+z2GE0o1GoZEhJgJ_wweGMc=3D450" target=3D"_blank" style=3D"text-decoration: n=
+one; color: #F7F7F7;">
+         =20
+      <img alt=3D"The PL_Genesis Hackathon is Getting Real" src=3D"https://=
+images.vialoops.com/cmn44h6lo09nq0izs5roxm916/cmn47nysm0iyc0i0bny3bva2i.png=
+" style=3D"border:0;border-radius:0px;display:block;outline:none;text-decor=
+ation:none;height:auto;width:100%;font-size:13px;" width=3D"552" height=3D"=
+auto">
+   =20
+        </a>
+     =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"left" style=3D"font-size:0px;padding:10px 25px=
+;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word=
+-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:12px;letter-spacing:0px;line-height:18px !important;text-align:left;c=
+olor:#F7F7F7;"><span>&nbsp;</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:10px 25=
+px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;wo=
+rd-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:center=
+;color:#F7F7F7;"><span style=3D"line-height: 21px !important; font-size: 14=
+px; font-size: 14px !important; white-space: pre-wrap;">=E2=8F=B3 </span><s=
+pan style=3D"font-weight: 600; font-size: 14px; white-space: pre-wrap; line=
+-height: 21px !important; font-size: 14px !important;" class=3D"bold">24 ho=
+urs left.</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"left" style=3D"font-size:0px;padding:10px 25px=
+;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word=
+-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:left;c=
+olor:#F7F7F7;"><span>&nbsp;</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:10px 25=
+px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;wo=
+rd-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:center=
+;color:#F7F7F7;"><span style=3D"line-height: 21px !important; font-size: 14=
+px; font-size: 14px !important; white-space: pre-wrap;">The submission wind=
+ow for </span><span style=3D"font-weight: 600; font-size: 14px; white-space=
+: pre-wrap; line-height: 21px !important; font-size: 14px !important;" clas=
+s=3D"bold">PL_Genesis: Frontiers of Collaboration</span><span style=3D"line=
+-height: 21px !important; font-size: 14px; font-size: 14px !important; whit=
+e-space: pre-wrap;"> is about to close.</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:10px 25=
+px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;wo=
+rd-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:center=
+;color:#F7F7F7;"><span>&nbsp;</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:10px 25=
+px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;wo=
+rd-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:center=
+;color:#F7F7F7;"><span style=3D"line-height: 21px !important; font-size: 14=
+px; font-size: 14px !important; white-space: pre-wrap;">Over </span><span s=
+tyle=3D"font-weight: 600; font-size: 14px; white-space: pre-wrap; line-heig=
+ht: 21px !important; font-size: 14px !important;" class=3D"bold">1,500 buil=
+ders</span><span style=3D"line-height: 21px !important; font-size: 14px; fo=
+nt-size: 14px !important; white-space: pre-wrap;"> have entered the frontie=
+r=E2=80=94pushing the boundaries of AI, coordination, and autonomous system=
+s. Now it=E2=80=99s your moment to ship.</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"left" style=3D"font-size:0px;padding:10px 25px=
+;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word=
+-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:left;c=
+olor:#F7F7F7;"><span>&nbsp;</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"left" style=3D"font-size:0px;padding:10px 25px=
+;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word=
+-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:left;c=
+olor:#F7F7F7;"><span>&nbsp;</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:10px 25=
+px;padding-top:12px;padding-right:0px;padding-bottom:4px;padding-left:0px;w=
+ord-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:24px;letter-spacing:0px;line-height:32px !important;text-align:center=
+;color:#F7F7F7;"><h2 style=3D"padding: 0; margin: 0; font-weight: 500; colo=
+r: #F7F7F7; font-size: 24px; line-height: 32px !important; font-size: 24px =
+!important;"><span style=3D"font-weight: 600; font-size: 24px; white-space:=
+ pre-wrap; line-height: 32px !important; font-size: 24px !important;" class=
+=3D"bold">Builders =E2=80=94 Quick Reality Check:</span></h2></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" class=3D"body-image body-image-mobile-=
+width-552" style=3D"font-size:0px;padding:10px 25px;padding-top:10px;paddin=
+g-right:0px;padding-bottom:20px;padding-left:0px;word-break:break-word;">
+                 =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"border-collapse:collapse;border-spacing:0px;">
+        <tbody>
+          <tr>
+            <td style=3D"width:552px;">
+             =20
+        <a href=3D"https://c.vialoops.com/CL0/https:%2F%2Fdevspot.app%2FTO%=
+2Fhackathons%2F52%2Fanalytics%2Fhackathons%3FactiveTab=3Doverview/2/0100019=
+d40f87f72-925376f6-fa7b-4863-be96-5373d1fdc31e-000000/aUefBuuzkdMfYCz5zwAwv=
+v_3iZzkeoZEs0IF9Yk5mSM=3D450" target=3D"_blank" style=3D"text-decoration: n=
+one; color: #F7F7F7;">
+         =20
+      <img alt=3D"REMINDER INTEGRATE A SPONSOR CHALLENGE" src=3D"https://im=
+ages.vialoops.com/cmn8dg7bi15kg0ixkdlmbii9y/cmn8dscys1h7s0ix67v28fn6y.png" =
+style=3D"border:0;border-radius:10px;display:block;outline:none;text-decora=
+tion:none;height:auto;width:100%;font-size:13px;" width=3D"552" height=3D"a=
+uto">
+   =20
+        </a>
+     =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"left" style=3D"font-size:0px;padding:10px 25px=
+;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word=
+-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:left;c=
+olor:#F7F7F7;"><span style=3D"line-height: 21px !important; font-size: 14px=
+; font-size: 14px !important; white-space: pre-wrap;">No sponsor track inte=
+gration =3D no valid submission. Even if your project is =F0=9F=94=A5.  </s=
+pan></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"left" style=3D"font-size:0px;padding:10px 25px=
+;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word=
+-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:left;c=
+olor:#F7F7F7;"><span>&nbsp;</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"left" style=3D"font-size:0px;padding:10px 25px=
+;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word=
+-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:left;c=
+olor:#F7F7F7;"><span style=3D"line-height: 21px !important; font-size: 14px=
+; font-size: 14px !important; white-space: pre-wrap;">If you want judges to=
+ actually see your build (and compete for $150K+ in prizes), you need at le=
+ast one sponsor track integration wired in.</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"left" style=3D"font-size:0px;padding:10px 25px=
+;padding-top:12px;padding-right:0px;padding-bottom:0px;padding-left:0px;wor=
+d-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:left;c=
+olor:#F7F7F7;"><span style=3D"line-height: 21px !important; font-size: 14px=
+; font-size: 14px !important; white-space: pre-wrap;">We broke it down step=
+-by-step so you don=E2=80=99t fumble it at the finish line.</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" class=3D"button sh-button" style=3D"fo=
+nt-size:0px;padding:10px 25px;padding-top:24px;padding-right:0px;padding-bo=
+ttom:4px;padding-left:0px;word-break:break-word;">
+                 =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"border-collapse:separate;line-height:100%;">
+        <tbody>
+          <tr>
+            <td align=3D"center" bgcolor=3D"#5EA2D7" role=3D"presentation" =
+style=3D"border:1px solid #727272;border-radius:50px;cursor:auto;mso-paddin=
+g-alt:10px=20
+  18px;background:#5EA2D7;" valign=3D"middle">
+              <a href=3D"https://c.vialoops.com/CL0/https:%2F%2Fdrive.googl=
+e.com%2Ffile%2Fd%2F1NxbyUehxnRGkd_3J-WZlaFyhhqjqXGtI%2Fview%3Fusp=3Dsharing=
+/1/0100019d40f87f72-925376f6-fa7b-4863-be96-5373d1fdc31e-000000/1AjZRza5jBm=
+ofSljiuE14Me0-XENwaw1ou3G6u99d4M=3D450" style=3D"display: inline-block; bac=
+kground: #5EA2D7; color: #F7F7F7; font-family: Space Grotesk, ui-monospace,=
+ monospace; font-weight: 600; margin: 0; text-decoration: none; text-transf=
+orm: none; padding: 10px=20
+  18px; mso-padding-alt: 0px; border-radius: 50px; font-size: 16px !importa=
+nt; line-height: 16px !important;" target=3D"_blank" class=3D"sh-preserve-c=
+olor">
+                Watch The Guide
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"left" style=3D"font-size:0px;padding:10px 25px=
+;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word=
+-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:left;c=
+olor:#F7F7F7;"><span>&nbsp;</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:10px 25=
+px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;wo=
+rd-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:center=
+;color:#F7F7F7;"><span>&nbsp;</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:10px 25=
+px;padding-top:12px;padding-right:0px;padding-bottom:4px;padding-left:0px;w=
+ord-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:24px;letter-spacing:0px;line-height:32px !important;text-align:center=
+;color:#F7F7F7;"><h2 style=3D"padding: 0; margin: 0; font-weight: 500; colo=
+r: #F7F7F7; font-size: 24px; line-height: 32px !important; font-size: 24px =
+!important;"><span style=3D"font-weight: 600; font-size: 24px; white-space:=
+ pre-wrap; line-height: 32px !important; font-size: 24px !important;" class=
+=3D"bold">This is the final stretch</span></h2></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:10px 25=
+px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;wo=
+rd-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:center=
+;color:#F7F7F7;"><span style=3D"line-height: 21px !important; font-size: 14=
+px; font-size: 14px !important; white-space: pre-wrap;">If you=E2=80=99ve s=
+tarted a project, </span><span style=3D"font-weight: 600; font-size: 14px; =
+white-space: pre-wrap; line-height: 21px !important; font-size: 14px !impor=
+tant;" class=3D"bold">finish it</span><span style=3D"line-height: 21px !imp=
+ortant; font-size: 14px; font-size: 14px !important; white-space: pre-wrap;=
+">.</span><br><span style=3D"line-height: 21px !important; font-size: 14px;=
+ font-size: 14px !important; white-space: pre-wrap;">If you=E2=80=99ve been=
+ exploring ideas, </span><span style=3D"font-weight: 600; font-size: 14px; =
+white-space: pre-wrap; line-height: 21px !important; font-size: 14px !impor=
+tant;" class=3D"bold">commit and submit</span><span style=3D"line-height: 2=
+1px !important; font-size: 14px; font-size: 14px !important; white-space: p=
+re-wrap;">.</span><br><span style=3D"line-height: 21px !important; font-siz=
+e: 14px; font-size: 14px !important; white-space: pre-wrap;">If you=E2=80=
+=99re close, </span><span style=3D"font-weight: 600; font-size: 14px; white=
+-space: pre-wrap; line-height: 21px !important; font-size: 14px !important;=
+" class=3D"bold">you=E2=80=99re closer than you think</span><span style=3D"=
+line-height: 21px !important; font-size: 14px; font-size: 14px !important; =
+white-space: pre-wrap;">.</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"left" style=3D"font-size:0px;padding:10px 25px=
+;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word=
+-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:left;c=
+olor:#F7F7F7;"><span>&nbsp;</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:10px 25=
+px;padding-top:12px;padding-right:0px;padding-bottom:4px;padding-left:0px;w=
+ord-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:24px;letter-spacing:0px;line-height:32px !important;text-align:center=
+;color:#F7F7F7;"><h2 style=3D"padding: 0; margin: 0; font-weight: 500; colo=
+r: #F7F7F7; font-size: 24px; line-height: 32px !important; font-size: 24px =
+!important;"><span style=3D"font-weight: 600; font-size: 24px; white-space:=
+ pre-wrap; line-height: 32px !important; font-size: 24px !important;" class=
+=3D"bold">Be part of what=E2=80=99s next</span></h2></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:10px 25=
+px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;wo=
+rd-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:center=
+;color:#F7F7F7;"><span style=3D"line-height: 21px !important; font-size: 14=
+px; font-size: 14px !important; white-space: pre-wrap;">PL_Genesis isn=E2=
+=80=99t just a hackathon=E2=80=94it=E2=80=99s the start of a new coordinati=
+on layer for the internet.</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:10px 25=
+px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;wo=
+rd-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:center=
+;color:#F7F7F7;"><span>&nbsp;</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:10px 25=
+px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;wo=
+rd-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:center=
+;color:#F7F7F7;"><span style=3D"line-height: 21px !important; font-size: 14=
+px; font-size: 14px !important; white-space: pre-wrap;">The projects submit=
+ted in the next 24 hours will define what that future looks like.</span></d=
+iv>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:10px 25=
+px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;wo=
+rd-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:center=
+;color:#F7F7F7;"><span>&nbsp;</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"left" style=3D"font-size:0px;padding:10px 25px=
+;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word=
+-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:left;c=
+olor:#F7F7F7;"><span>&nbsp;</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"left" style=3D"font-size:0px;padding:10px 25px=
+;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word=
+-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:left;c=
+olor:#F7F7F7;"><span>&nbsp;</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:10px 25=
+px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;wo=
+rd-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:center=
+;color:#F7F7F7;"><span style=3D"line-height: 21px !important; font-size: 14=
+px; font-size: 14px !important; white-space: pre-wrap;">See you at the fron=
+tier,</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" class=3D"body-image body-image-mobile-=
+width-117" style=3D"font-size:0px;padding:10px 25px;padding-top:8px;padding=
+-right:0px;padding-bottom:8px;padding-left:0px;word-break:break-word;">
+                 =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"border-collapse:collapse;border-spacing:0px;">
+        <tbody>
+          <tr>
+            <td style=3D"width:117px;">
+             =20
+        <a href=3D"https://c.vialoops.com/CL0/https:%2F%2Fdevspot.app%2F/1/=
+0100019d40f87f72-925376f6-fa7b-4863-be96-5373d1fdc31e-000000/UWOrkVL3oV26YF=
+VPtnySN5DxnXwh2RHiE7qEHMNvZKY=3D450" target=3D"_blank" style=3D"text-decora=
+tion: none; color: #F7F7F7;">
+         =20
+      <img alt src=3D"https://images.vialoops.com/cmn44h6lo09nq0izs5roxm916=
+/cmn44h6ok09ns0izsbo8j32f5.png" style=3D"border:0;border-radius:0px;display=
+:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:1=
+3px;" width=3D"117" height=3D"auto">
+   =20
+        </a>
+     =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:10px 25=
+px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;wo=
+rd-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:center=
+;color:#F7F7F7;"><span style=3D"line-height: 21px !important; font-size: 14=
+px; font-size: 14px !important; white-space: pre-wrap;">The DevSpot Team</s=
+pan></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"left" style=3D"font-size:0px;padding:10px 25px=
+;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word=
+-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:left;c=
+olor:#F7F7F7;"><span>&nbsp;</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" class=3D"divider" style=3D"font-size:0=
+px;padding:10px 25px;padding-top:24px;padding-right:0px;padding-bottom:24px=
+;padding-left:0px;word-break:break-word;">
+                 =20
+      <p style=3D"border-top:solid 1px #f5f5f4;font-size:1px;margin:0px aut=
+o;width:100%;">
+      </p>
+     =20
+      <!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" style=3D"border-top:solid 1px #f5f5f4;font-size:1px;m=
+argin:0px auto;width:552px;" role=3D"presentation" width=3D"552px" ><tr><td=
+ style=3D"height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]-->
+   =20
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" class=3D"body-image body-image-mobile-=
+width-100" style=3D"font-size:0px;padding:10px 25px;padding-top:0px;padding=
+-right:0px;padding-bottom:0px;padding-left:0px;word-break:break-word;">
+                 =20
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"border-collapse:collapse;border-spacing:0px;">
+        <tbody>
+          <tr>
+            <td style=3D"width:100px;">
+             =20
+        <a href=3D"https://c.vialoops.com/CL0/https:%2F%2Fplgenesis.com%3Fu=
+tm_source=3Ddevspot%26utm_medium=3Dnewsletter%26utm_campaign=3Dhackathon%26=
+utm_content=3Ddevspot_newsletter/2/0100019d40f87f72-925376f6-fa7b-4863-be96=
+-5373d1fdc31e-000000/LBcIVdpOcVteMECwLqh3k9A87SY4aNuzSKEB02jktso=3D450" tar=
+get=3D"_blank" style=3D"text-decoration: none; color: #F7F7F7;">
+         =20
+      <img alt src=3D"https://images.vialoops.com/cmn44h6lo09nq0izs5roxm916=
+/cmn44h6oa09nr0izsfv4svipm.png" style=3D"border:0;border-radius:0px;display=
+:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:1=
+3px;" width=3D"100" height=3D"auto">
+   =20
+        </a>
+     =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"left" style=3D"font-size:0px;padding:10px 25px=
+;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word=
+-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:left;c=
+olor:#F7F7F7;"><span>&nbsp;</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:10px 25=
+px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;wo=
+rd-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:center=
+;color:#F7F7F7;"><a target=3D"_blank" rel=3D"noopener noreferrer" class=3D"=
+body-link" href=3D"https://c.vialoops.com/CL0/https:%2F%2Fdiscord.gg%2F4RY3=
+2J5fnr/1/0100019d40f87f72-925376f6-fa7b-4863-be96-5373d1fdc31e-000000/xM4zM=
+4ztt9Rq9X_mAtx6I4g16Cy7Klcrn2aN9ZXmrbw=3D450" style=3D"text-decoration: non=
+e; color: #F7F7F7;"><span style=3D"font-size: 14px; white-space: pre-wrap; =
+text-decoration: underline !important; line-height: 21px !important; font-s=
+ize: 14px !important;" class=3D"underline">Discord</span></a><span style=3D=
+"line-height: 21px !important; font-size: 14px; font-size: 14px !important;=
+ white-space: pre-wrap;"> =E2=80=A2 </span><a target=3D"_blank" rel=3D"noop=
+ener noreferrer" class=3D"body-link" href=3D"https://c.vialoops.com/CL0/htt=
+ps:%2F%2Fx.com%2FPL__Genesis/1/0100019d40f87f72-925376f6-fa7b-4863-be96-537=
+3d1fdc31e-000000/DKlDS25Ja_4RehHgND4-6HPEx6m-O29GoUrxQxiuTzk=3D450" style=
+=3D"text-decoration: none; color: #F7F7F7;"><span style=3D"font-size: 14px;=
+ white-space: pre-wrap; text-decoration: underline !important; line-height:=
+ 21px !important; font-size: 14px !important;" class=3D"underline">X</span>=
+</a><span style=3D"line-height: 21px !important; font-size: 14px; font-size=
+: 14px !important; white-space: pre-wrap;"> =E2=80=A2 </span><a target=3D"_=
+blank" rel=3D"noopener noreferrer" class=3D"body-link" href=3D"https://c.vi=
+aloops.com/CL0/https:%2F%2Fplgenesis.com%3Futm_source=3Ddevspot%26utm_mediu=
+m=3Dnewsletter%26utm_campaign=3Dhackathon%26utm_content=3Ddevspot_newslette=
+r/3/0100019d40f87f72-925376f6-fa7b-4863-be96-5373d1fdc31e-000000/2oFsbrsmHM=
+Q-jBN3PK4TeIahvFadg6MUZZVF0qqE0gg=3D450" style=3D"text-decoration: none; co=
+lor: #F7F7F7;"><span style=3D"font-size: 14px; white-space: pre-wrap; text-=
+decoration: underline !important; line-height: 21px !important; font-size: =
+14px !important;" class=3D"underline">plgenesis.com</span></a></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"center" style=3D"font-size:0px;padding:10px 25=
+px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;wo=
+rd-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:center=
+;color:#F7F7F7;"><span style=3D"line-height: 21px !important; font-size: 14=
+px; font-size: 14px !important; white-space: pre-wrap;">You're receiving th=
+is because you've shown interest in PL_Genesis.</span><br><a target=3D"_bla=
+nk" rel=3D"noopener noreferrer" class=3D"body-link" href=3D"https://c.vialo=
+ops.com/CL0/https:%2F%2Fapp.loops.so%2Fcampaigns%2Fcmlfsluuu02tr0i0n08b2e5w=
+3%2F%257Bunsubscribe_link%257D/1/0100019d40f87f72-925376f6-fa7b-4863-be96-5=
+373d1fdc31e-000000/zsHTfxI_0hNkpxcKVGvnUr923eHx6HfGH9qrUipp8qg=3D450" style=
+=3D"text-decoration: none; color: #F7F7F7;"><span style=3D"font-size: 14px;=
+ white-space: pre-wrap; text-decoration: underline !important; line-height:=
+ 21px !important; font-size: 14px !important;" class=3D"underline">Unsubscr=
+ibe</span></a></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"left" style=3D"font-size:0px;padding:10px 25px=
+;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word=
+-break:break-word;">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:14px;letter-spacing:0px;line-height:21px !important;text-align:left;c=
+olor:#F7F7F7;"><span>&nbsp;</span></div>
+   =20
+                </td>
+              </tr>
+           =20
+              <tr>
+                <td align=3D"left" style=3D"font-size:0px;padding:10px 25px=
+;padding-top:24px;padding-right:0px;padding-left:0px;word-break:break-word;=
+">
+                 =20
+      <div style=3D"font-family:Space Grotesk, ui-monospace, monospace;font=
+-size:12px;letter-spacing:0px;line-height:18px !important;text-align:left;c=
+olor:#9ca3af;"><span class=3D"opt-in-explanation" style=3D"color: #9ca3af !=
+important; font-size: 12px !important; line-height: 18px !important;">
+  You are receiving this email because you opted-in to receive updates from=
+ DevSpot<br>
+  DevSpot, 30 N Gould St Ste N Sheridan, Wyoming 82801<br>
+  <a style=3D"font-weight: 600; color: #9ca3af !important; text-decoration:=
+ none !important; font-size: 12px !important; line-height: 18px !important;=
+" href=3D"https://c.vialoops.com/CL0/https:%2F%2Fapp.loops.so%2Funsubscribe=
+%2Fcmndshqay13vv019wc4r1h0rk%2Fca8c273926ed1dcff5cf050daa15876cc03465454907=
+fbd7cf9a046fc4d62f979f480669845e677170e863c3c971b5bd12d7be255fbf2b0e62f3d95=
+c/1/0100019d40f87f72-925376f6-fa7b-4863-be96-5373d1fdc31e-000000/Rp_9wIt6H6=
+Gognu750Xly-qGYkQ1kcm0lJLXW9mH5B4=3D450" target=3D"_blank" rel=3D"noopener =
+noreferrer" class=3D"bold link-unsubscribe">
+  Unsubscribe
+  </a>
+  </span></div>
+   =20
+                </td>
+              </tr>
+           =20
+        </tbody>
+      </table>
+   =20
+            </td>
+          </tr>
+        </tbody>
+      </table>
+   =20
+      </div>
+   =20
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       =20
+      </div>
+   =20
+     =20
+      <!--[if mso | IE]></td></tr></table><![endif]-->
+   =20
+   =20
+      </div>
+   =20
+  </body>
+</html>
+ =20
+
+--vntpedj5llj--

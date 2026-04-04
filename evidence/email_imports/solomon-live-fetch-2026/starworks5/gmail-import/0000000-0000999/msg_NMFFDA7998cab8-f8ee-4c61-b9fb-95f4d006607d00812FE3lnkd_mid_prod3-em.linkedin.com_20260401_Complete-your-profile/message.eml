@@ -1,0 +1,952 @@
+Delivered-To: starworks5@gmail.com
+Received: by 2002:a05:7208:20c8:b0:fa:5ef1:c6ed with SMTP id z8csp173863rbz;
+        Wed, 1 Apr 2026 07:52:17 -0700 (PDT)
+X-Received: by 2002:a05:6a20:729b:b0:39b:fad0:6edc with SMTP id adf61e73a8af0-39ef71fb3d7mr4347129637.6.1775055137667;
+        Wed, 01 Apr 2026 07:52:17 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1775055137; cv=none;
+        d=google.com; s=arc-20240605;
+        b=EhEbqE4u3hGqUAEGXP9n2Fdtq/WTNj6Acov7+86nBIk3ikOXAZlOLxl5slRMDphOwi
+         3yoOvVygkA26COjiGc97HVcRhCOu0Urk5ENp5wVSi93bknS7kIkiZBpkFdfIBiA3W7vu
+         M7y0r2rxIrTMM3+E9R7Po2nKgiqfFw0bhjvI613kdq0/e36NBTFur/pRhN/jHKHrzNDw
+         gkFtloyqB6CbR3Uuu8h7i+aZM+yIy41clp+egoOn8c/Eds9IpAVLu/kpUw2CqzSuBk2U
+         0pqZUl3TuWoG2eL+/+gsN7XoMkaxCwdwKDHZxlYhvfXeAW1ruNqgsi05nAFhgCcGKPyO
+         rNMw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-transfer-encoding:list-unsubscribe-post:list-unsubscribe
+         :message-id:mime-version:reply-to:to:date:subject:from
+         :dkim-signature;
+        bh=I+faxnhuOBmDw9ku+86HBnm5rBP9451BtLiPlib6Vv0=;
+        fh=2cWgZxr3ZTQFvuwFmykEv+kjBencnAUTD29jO6/FMx4=;
+        b=Cn1jOfqDgHmxsAPAaP0CMAdY1+tvPfx9F7WicB5dmFtFL7nzOU/7IIahmS5Nj78YOh
+         pFyxqz5mNdeoPg/g/3+t8UkzUfbkh+P1Sk1CwLLEI1VZdnlhzxC8WcYunrO/V3xZeCBl
+         Kqk8f9F3ZNYeu5kioMlMyMW0pT/v+0dWIdmPc5OOZkdUX9bgClh3l8qiauBhACkXKk5B
+         uw/X8FTLE1oUqw+HLPkxIDfwijEiU2RxCMTbwr+Lt3t+X0y8jWmKmC1OOeSIHzWtm2xe
+         T+u6Nx1BTyhg2Ok3T9xhuJK4BBRoL72WdvzaB2X+YW+NHsnw504jPIZMb9gL0IRoJhr4
+         kPNA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@em.linkedin.com header.s=lnkd header.b=HHt8vQdR;
+       spf=pass (google.com: domain of bounce@em.linkedin.com designates 130.248.165.122 as permitted sender) smtp.mailfrom=bounce@em.linkedin.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=linkedin.com
+Return-Path: <bounce@em.linkedin.com>
+Received: from r122.em.linkedin.com (r122.em.linkedin.com. [130.248.165.122])
+        by mx.google.com with ESMTPS id 41be03b00d2f7-c76c648cc8asi357428a12.81.2026.04.01.07.52.17
+        for <starworks5@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 01 Apr 2026 07:52:17 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce@em.linkedin.com designates 130.248.165.122 as permitted sender) client-ip=130.248.165.122;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@em.linkedin.com header.s=lnkd header.b=HHt8vQdR;
+       spf=pass (google.com: domain of bounce@em.linkedin.com designates 130.248.165.122 as permitted sender) smtp.mailfrom=bounce@em.linkedin.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=linkedin.com
+Return-Path: <bounce@em.linkedin.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=em.linkedin.com;
+	s=lnkd; t=1775055136;
+	bh=I+faxnhuOBmDw9ku+86HBnm5rBP9451BtLiPlib6Vv0=;
+	h=From:Subject:Date:To:MIME-Version:Message-ID:List-Unsubscribe:
+	 List-Unsubscribe-Post:Content-Type;
+	b=HHt8vQdRkx1J8d0M5kgPehLx/Zi0SmOxZLz2zGdZrIqe4Zt6Fa1krmOh4BG7DbI+t
+	 JMx0Hj0wtrueVp0WLKf/0rCkQW16XgwpH8emSNbYi4jzBqJMLioe+LAZt/GvSOJ5Ls
+	 c4PK6wLavA4q4lp3djRR9kOMrNo9pcA+A1jK2eKsRN/zrGV5av6WFjD4UR3Mc57Z4u
+	 hVrNypU8V7E/vOsNL96hJ42tqwjNKfCCCfVyURMfurR/kkHfOuidkl4iDeO0ZTKu6W
+	 4mvXs5j/SE4vnzZZXVZ74EGXJXO+WwqASmJ7/tfTV3FwC6qmtlTH+cUx8VmM6Ypojb
+	 tJkUUuWdyoKxA==
+X-MSFBL: rsTqBDoOcAoP8o6KyZpER6p+fuhz+NyyZOHyia1qNDA=|eyJiIjoibG5rZF8xMzA
+	uMjQ4LjE2NS4xMjJfcHJvZC5kZWZhdWx0Xzg4NDdhZDRhLTVmNGItNGFkNy04ZTZ
+	hLWQ5NzM0NTM3NTU1YyIsImciOiJwcm9kLmRlZmF1bHRfODg0N2FkNGEtNWY0Yi0
+	0YWQ3LThlNmEtZDk3MzQ1Mzc1NTVjIiwicmNwdF9tZXRhIjp7ICJpbiI6ICJsbmt
+	kX21pZF9wcm9kMyIsICJyIjogInN0YXJ3b3JrczVAZ21haWwuY29tIiwgIm0iOiA
+	iNzk5OGNhYjgtZjhlZS00YzYxLWI5ZmItOTVmNGQwMDY2MDdkIiwgImQiOiAiODQ
+	2NjQwMyIsICJpIjogIjE0MjE1RTNENTk5NUM1N0MwQTQ5NUM1NUBBZG9iZU9yZyI
+	gfSwiciI6InN0YXJ3b3JrczVAZ21haWwuY29tIn0=
+Received: from [10.1.1.47] ([10.1.1.47:59913] helo=r110.em.linkedin.com) by or2-prod1-mta-b-i-0b815baeeac073d7f (envelope-from <bounce@em.linkedin.com>) (ecelerity 4.4.1.20033 r(msys-ecelerity:tags/4.4.1.0^0)) with ESMTP id 49/AC-05684-0213DC96; Wed, 01 Apr 2026 14:52:16 +0000
+From: "LinkedIn Jobs" <linkedin@em.linkedin.com>
+Subject: Complete your profile
+Date: Wed, 01 Apr 2026 07:52:16 -0700
+To: <starworks5@gmail.com>
+Reply-To: "LinkedIn" <donotreply@em.linkedin.com>
+MIME-Version: 1.0
+X-mailer: nlserver, Build 8.8.1
+Message-ID: <NMFFDA7998cab8-f8ee-4c61-b9fb-95f4d006607d00812FE3lnkd_mid_prod3@em.linkedin.com>
+List-Unsubscribe: <https://www.linkedin.com/mysettings-api/settingsApiEmailSubscriptionPost?loid=AQFuUPvXwYlq-gAAAZzg6vYnJ0F83JxIzpQd5bcL5IcBq3YlP2o4zC93AHtLyxf5rtWeUYABQZCcJkeV&eID=eml-adobe-unsub%3ACAMPAIGNID%3Alinkedin.4024898%3BLAUNCHID%3A.7858272%3BLAUNCHDATE%3A2026-04-01>, <mailto:bounce@em.linkedin.com?subject=unsubscribe%3CNMFFDA7998cab8-f8ee-4c61-b9fb-95f4d006607d00812FE3lnkd_mid_prod3@em.linkedin.com%3E>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang=3D"en" xml:lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml" xm=
+lns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:v=3D"urn:schemas-mi=
+crosoft-com:vml">
+
+  <head>
+    <meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type=
+" />
+    <meta content=3D"true" name=3D"HandheldFriendly" />
+    <meta content=3D"320" name=3D"MobileOptimized" />
+    <meta content=3D"width=3Ddevice-width" name=3D"viewport" />
+    <title></title>
+    <style type=3D"text/css">
+      span, td, table, div {
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+          }
+          .st-email-body{
+              width:100% !important;
+              -webkit-text-size-adjust: 100%;
+              margin: 0 auto!important;
+              padding: 0px;
+              background-color: #ffffff;
+          }
+      
+          span.st-preheader{
+              display: none!important;
+          }
+      
+          
+          img + div {
+              display: none;
+          }
+      
+          
+          a[href^=3D"tel"],
+          a[href^=3D"sms"]{text-decoration: none; color: inherit !important=
+; pointer-events: none; cursor: default;}
+          u + .st-email-body a {color: inherit; text-decoration: none; font=
+-size: inherit; font-family: inherit; font-weight: inherit; line-height: in=
+herit;}
+          
+          *[x-apple-data-detectors] {color: inherit !important; text-decora=
+tion: none !important; font-size: inherit !important; font-family: inherit =
+!important; font-weight: inherit !important; line-height: inherit !importan=
+t;}
+      
+          a,a:hover,a:link,a:visited {
+              text-decoration:none !important;
+              outline: none;
+          }
+      
+          p {
+              margin: 0;
+              padding: 0;
+          }
+      
+          
+          .st-hide-desktop {
+              display:none;
+              font-size:0;
+              height:0;
+              min-height:0;
+              max-height:0;
+              line-height:0;
+              mso-hide:all;
+          }
+      
+          .st-gmail-fix { display: none !important; }
+      
+              
+      
+          @media  screen and (max-width: 480px) {
+                  
+                                  .st-col,.st-mobile-full-width,.st-module-=
+wrapper-table,.st-wrapper,.st-wrapper-table{width:100%!important}.st-col{pa=
+dding:0!important}.st-resize{width:100%!important}.st-mobile-width-constrai=
+nt,.st-resize{display:block!important;height:auto!important}.st-mobile-widt=
+h-constraint{max-width:100%!important}.st-equal-height,.st-height-auto{heig=
+ht:auto!important}.st-hide-desktop{display:table-row!important}.st-hide-mob=
+ile{display:none!important}.st-mobile-inline{display:inline!important}.show=
+-img-mobile{display:table-row!important;width:100%!important;float:none;ove=
+rflow:visible!important;height:auto!important}
+                      .st-dynamic-966-4 { background-image:none!important; =
+}
+      .st-dynamic-997-6 { width:31px!important; }
+      .st-dynamic-987-7, u + .st-email-body .st-dynamic-987-7 img { width:1=
+00%!important;max-width:445px!important; }
+      .st-dynamic-1005-8 { width:418px!important; }
+      .st-dynamic-1046-18 { width:128px!important; }
+      .st-dynamic-1055-19 { width:286px!important; }
+      .st-dynamic-1110-34, u + .st-email-body .st-dynamic-1110-34 img { wid=
+th:100%!important;max-width:48px!important; }
+      .st-dynamic-1120-35 { width:69px!important; }
+      .st-dynamic-1128-40 { width:411px!important; }                
+                      .st-wrapper-table{
+                          width: 100%!important;
+                          max-width: 480px!important;
+                          margin: 0 auto;
+                      }
+                          }
+                          #MessageViewBody .st-module-wrapper-table  {margi=
+n-top:-1px}
+                  @media (max-width:511px) and (min-width:481px) {.st-modul=
+e-wrapper-table {margin-top:-1px !important;}}
+                  div > u + .body .st-module-wrapper-table {margin-top:0px =
+!important}
+    </style>
+    <style type=3D"text/css">
+      ul, ol {margin-left:15px; padding-left:0px}
+    </style>
+    <style type=3D"text/css">
+      .aligned-bullets ul{list-style-position: outside!important; padding-l=
+eft:20px!important; padding-top:12px !important;}
+      .aligned-bullets ol{list-style-position: outside!important; padding-l=
+eft:20px!important; padding-top:12px !important;}
+      .border-radius {border-radius: 8px;}
+      .border-radius-bs {border-bottom-left-radius:8px!important; border-bo=
+ttom-right-radius:8px!important;}
+      .border-radius-bs img{border-bottom-left-radius:8px!important; border=
+-bottom-right-radius:8px!important;}
+      .border-radius-ts {border-top-left-radius:8px!important; border-top-r=
+ight-radius:8px!important;}
+      .border-radius-ts img{border-top-left-radius:8px!important; border-to=
+p-right-radius:8px!important;}
+      .button td{-webkit-border-radius: 50px!important; -moz-border-radius:=
+ 50px!important; border-radius: 50px!important; overflow: hidden!important;=
+ }
+      .minw-48 img{min-width:48px!important;}
+      .di-fix {mso-padding-top-alt:18pt!important;}
+      .bullets-pb-12 ul li {padding-bottom:12px!important;}
+      .bullets-pb-12 ol li {padding-bottom:12px!important;}
+      @media all and (max-width: 480px) {
+      
+      .mob-pb-0{padding-bottom:0px!important;}
+      .mob-ps-0{padding-right:0px!important;padding-left:0px!important;}
+      .mob-ps-50{padding-right:50px!important;padding-left:50px!important;}=
+ 
+      .center-element td{margin: 0 auto!important; text-align:center!import=
+ant;}
+      .center-element {text-align:center!important;} 
+      .center-element table{margin: 0 auto!important;} 
+      .center-element p{text-align:center!important;} 
+      .center-element span{text-align:center!important;}
+      .center-element img{margin: 0 auto!important;}
+      .mob-w-52{width:52%!important;min-width:52%!important;max-width:52%!i=
+mportant;}
+      .mob-w-52{font-size:12px!important;}
+      .mob-w-52 p{font-size:12px!important;}
+      .mob-w-52 p span{font-size:12px!important;}
+      .mob-w-22{width:22%!important;min-width:22%!important;max-width:22%!i=
+mportant;}
+      .mob-w-2{width:2%!important;min-width:2%!important;max-width:2%!impor=
+tant;}
+      .mob-fs-13{font-size:13px!important;}
+      .mob-fs-13 p{font-size:13px!important;}
+      .mob-fs-13 p span{font-size:13px!important;}
+      
+       }
+    </style>
+  </head>
+
+  <body class=3D"st-email-body st-center-gmail" data-gr-ext-installed=3D"" =
+data-new-gr-c-s-check-loaded=3D"14.1088.0" data-new-gr-c-s-loaded=3D"14.109=
+4.0">
+<div lang=3D"en">
+<div style=3D"font-size: 0px; display: none; visibility: hidden; opacity: 0=
+; color: transparent; max-height: 0px; height: 0; width: 0; mso-hide: all;"=
+>Update your job preferences to get better recommendations. =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C</div>
+<table bgcolor=3D"#F3F2EF" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ class=3D"st-wrapper-table" role=3D"presentation" style=3D"width: 100%;" wi=
+dth=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"st-dynamic-966-4" valign=3D"top" width=3D"100=
+%">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"st-wrapper st-wrapper-background st-module-wrapper-table" role=3D"pr=
+esentation" style=3D"width: 512px;" width=3D"512">
+<tbody>
+<tr>
+<td bgcolor=3D"#FCE2BA" style=3D"width: 100%;" valign=3D"top" width=3D"100%=
+">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-mso-ful=
+l-width st-mobile-full-width" role=3D"presentation" style=3D"width: 512px;"=
+ width=3D"512">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"width: 100%;" valign=3D"top" width=3D"100%">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width: 100%;" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"width: 100%;" valign=3D"top" width=3D"100%"><=
+/td>
+</tr>
+<tr>
+<td align=3D"center" class=3D"padt10m" style=3D"padding-top: 16px; padding-=
+bottom: 16px;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" width=3D"87%">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"padding-right: 12px;" width=3D"100"><a href=3D"=
+https://t1.em.linkedin.com/r/=3Fid=3Dh7998cab8-f8ee-4c61-b9fb-95f4d006607d,=
+77e860,449f62&e=3DbWNpZD03MDk4MzIwNTQwNzQ2MDk2NjQwJnRyaz1lbWxfbGlfbUVNX2dsb=
+2JhbF9jYXJlZXJzX2pvYnNndG1fbWt0Z19PVFdfZW5nX0p1bHkyMDIzJnNyYz1lLWVtbA&s=3Dy=
+I40cLdC_vBx0SeZAoqWXs0gTIKLJutB9WHatQwozII" _label=3D"LOGO" _category=3D"CT=
+A" ><img alt=3D"LinkedIn" src=3D"https://res1.em.linkedin.com/res/tracking/=
+linkedin-blue-200x51.png" style=3D"width: 100%; max-width: 84px; display: b=
+lock; border: 0; color: black; font-size: 20px; font-weight: bold; font-fam=
+ily: sans-serif;" width=3D"100"></a></td>
+<td align=3D"right" class=3D"h3m" style=3D"padding-top: 3px; font-size: 14p=
+x; color: #191919; font-family: Helvetica Neue, Arial, sans-serif;" valign=
+=3D"top" width=3D"150">
+
+<a href=3D"https://t1.em.linkedin.com/r/=3Fid=3Dh7998cab8-f8ee-4c61-b9fb-95=
+f4d006607d,77e860,449f64&e=3DbWNpZD03MDk4MzIwNTQwNzQ2MDk2NjQwJnRyaz1lbWxfbG=
+lfbUVNX2dsb2JhbF9jYXJlZXJzX2pvYnNndG1fbWt0Z19PVFdfZW5nX0p1bHkyMDIzJnNyYz1lL=
+WVtbA&s=3DnO8gCVay1vy-sRl31NUxISZ710Jc1OnEu-e6MtQkw5g" _label=3D"PROFILE" _=
+category=3D"CTA" ><img alt=3D"" src=3D"https://media.licdn.com/dms/image/v2=
+/C4E03AQH8MBZ_iZ3OyA/profile-displayphoto-shrink_400_400/profile-displaypho=
+to-shrink_400_400/0/1516900558546=3Fe=3D1776297600&v=3Dbeta&t=3DoA8cxitZmmm=
+Xv7xOxeDwj1797BIXAWW2SouzlpKfAuE" style=3D"display: block; border: 0; backg=
+round-color: #ffffff; -webkit-border-radius: 50%; -moz-border-radius: 50%; =
+border-radius: 50%; overflow: hidden;" width=3D"32"></a>
+
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"center" class=3D"st-dynamic-966-4" valign=3D"top" width=3D"100=
+%">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"st-wrapper st-wrapper-background st-module-wrapper-table" role=3D"pr=
+esentation" style=3D"width: 512px;" width=3D"512">
+<tbody>
+<tr>
+<td bgcolor=3D"#FCE2BA" style=3D"width: 100%; padding-top: 16px;" valign=3D=
+"top" width=3D"100%">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"width: 100%;" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top" width=3D"100%">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"width: 100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"st-dynamic-997-6" style=3D"width: 33px;" valign=3D"bottom" wid=
+th=3D"33">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"padding: 0px; width: 100%;" valign=3D"top" wi=
+dth=3D"100%">
+<p height=3D"90" style=3D"mso-line-height-rule: exactly; mso-table-lspace: =
+0pt; mso-table-rspace: 0pt; text-size-adjust: 100%; width: 100%; height: 90=
+px; max-height: 90px; background-color: #ffffff; margin: 0px; font-size: 90=
+px; line-height: 90px;" width=3D"100%"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td class=3D"st-dynamic-1005-8" style=3D"width: 445px;" valign=3D"bottom" w=
+idth=3D"445">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"st-dynamic-987-7" style=3D"width: 100%;" vali=
+gn=3D"top" width=3D"100%"><a alt=3D"on the left a women is working. On the =
+right, open to work preferences show an option allowing you to choose who s=
+ee's your open to work." href=3D"https://t1.em.linkedin.com/r/=3Fid=3Dh7998=
+cab8-f8ee-4c61-b9fb-95f4d006607d,77e860,449f65&e=3DbWNpZD03MDk4MzIwNTQwNzQ2=
+MDk2NjQwJnRyaz1lbWxfbGlfbUVNX2dsb2JhbF9jYXJlZXJzX2pvYnNndG1fbWt0Z19PVFdfZW5=
+nX0p1bHkyMDIzJnNyYz1lLWVtbA&s=3DRq8bKCpa0kqLcc7Zhp9WbHHDHCdlEcpZAvbyg64gLSc=
+" _label=3D"Banner_IMG_Complete_your_profile" _category=3D"CTA" style=3D"di=
+splay: block;" target=3D"_blank" rel=3D"noopener" ><img alt=3D"on the left =
+a women is working. On the right, open to work preferences show an option a=
+llowing you to choose who see's your open to work." border=3D"0" class=3D"s=
+t-mobile-width-constraint" src=3D"https://www.emailimagecdntsxk.com/6jv5zyd=
+4c7/en_us/images/62d0388eadd61-1657813134.712.png" style=3D"border: 0px; di=
+splay: block; width: 445px; max-width: 100%;" title=3D"Turn on Open to Work=
+" valign=3D"top" width=3D"445"> </a></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td class=3D"st-dynamic-997-6" style=3D"width: 34px;" valign=3D"bottom" wid=
+th=3D"34">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"padding: 0px; width: 100%;" valign=3D"top" wi=
+dth=3D"100%">
+<p height=3D"90" style=3D"mso-line-height-rule: exactly; mso-table-lspace: =
+0pt; mso-table-rspace: 0pt; text-size-adjust: 100%; width: 100%; height: 90=
+px; max-height: 90px; background-color: #ffffff; margin: 0px; font-size: 90=
+px; line-height: 90px;" width=3D"100%"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"left" bgcolor=3D"#FFFFFF" style=3D"padding-right: 33px; paddin=
+g-left: 33px;" valign=3D"top" width=3D"100%">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-mso-ful=
+l-width st-mobile-full-width" role=3D"presentation" style=3D"width: 446px;"=
+ width=3D"446">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"width: 100%;" valign=3D"top" width=3D"100%">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width: 100%;" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"text-align: left; font-family: Helvetica, Arial=
+, sans-serif; color: #191919; font-size: 24px; font-weight: bold; letter-sp=
+acing: normal; line-height: 29px; padding-top: 16px; width: 100%;" valign=
+=3D"top" width=3D"100%">
+<p style=3D"margin: 0px; text-align: left;">Benjamin, get noticed more ofte=
+n when you're open to=C2=A0work</p>
+</td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"text-align: left; font-family: Helvetica, Arial=
+, sans-serif; color: #191919; font-size: 16px; font-weight: 400; letter-spa=
+cing: normal; line-height: 24px; padding-top: 4px; width: 100%;" valign=3D"=
+top" width=3D"100%">
+<p style=3D"margin: 0px;">Completing your profile is quick and easy</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"left" bgcolor=3D"#FFFFFF" style=3D"padding-right: 33px; paddin=
+g-left: 33px;" valign=3D"top" width=3D"100%">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"width: 100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"st-dynamic-1046-18" style=3D"width: 138px;" valign=3D"top" wid=
+th=3D"138">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%"></table>
+</td>
+<td class=3D"st-dynamic-1055-19" style=3D"width: 308px;" valign=3D"top" wid=
+th=3D"308">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%"></table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"left" bgcolor=3D"#FFFFFF" style=3D"padding-right: 33px; paddin=
+g-left: 33px;" valign=3D"top" width=3D"100%">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-mso-ful=
+l-width st-mobile-full-width" role=3D"presentation" style=3D"width: 446px;"=
+ width=3D"446">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"width: 100%;" valign=3D"top" width=3D"100%">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width: 100%;" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"button" style=3D"padding-top: 16px; padding-bot=
+tom: 16px; width: 100%;" valign=3D"top" width=3D"100%">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"border-collapse: initial;">
+<tbody>
+<tr>
+<td align=3D"center" bgcolor=3D"#0A66C2" height=3D"45" style=3D"mso-padding=
+-alt: 0px 24px 0px 24px; height: 45px; width: 100%; text-align: center; bac=
+kground-color: #0a66c2; vertical-align: middle; border: 1px solid #0a66c2;"=
+ valign=3D"middle" width=3D"100%"><a bgcolor=3D"#0A66C2" href=3D"https://t1=
+.em.linkedin.com/r/=3Fid=3Dh7998cab8-f8ee-4c61-b9fb-95f4d006607d,77e860,449=
+f66&e=3DbWNpZD03MDk4MzIwNTQwNzQ2MDk2NjQwJnRyaz1lbWxfbGlfbUVNX2dsb2JhbF9jYXJ=
+lZXJzX2pvYnNndG1fbWt0Z19PVFdfZW5nX0p1bHkyMDIzJnNyYz1lLWVtbA&s=3D7NWIWTgjz-U=
+fBoZadP4K2-8ONtK-2U6VGpgA_1lM_Ec" _label=3D"TOP_Complete_your_profile" _cat=
+egory=3D"CTA" style=3D"mso-line-height-rule: exactly; text-align: center; f=
+ont-family: Helvetica, Arial, sans-serif; color: #ffffff; font-size: 16px; =
+font-weight: bold; letter-spacing: normal; line-height: 20px; padding-right=
+: 24px; padding-left: 24px; text-decoration: none; display: table-cell; hei=
+ght: 45px; border-radius: 0px; vertical-align: middle;" target=3D"_blank" v=
+align=3D"middle" rel=3D"noopener" ><span style=3D"margin: 0px; color: #ffff=
+ff;"><span style=3D"font-size: 16px; line-height: 20px;">Turn on #OpenToWor=
+k</span></span></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"center" class=3D"st-dynamic-966-4" valign=3D"top" width=3D"100=
+%">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"st-wrapper st-wrapper-background st-module-wrapper-table" role=3D"pr=
+esentation" style=3D"width: 512px;" width=3D"512">
+<tbody>
+<tr>
+<td bgcolor=3D"#FFFFFF" style=3D"width: 100%; padding: 16px 33px;" valign=
+=3D"top" width=3D"100%">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"width: 100%;" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top" width=3D"100%">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-mso-ful=
+l-width st-mobile-full-width" role=3D"presentation" style=3D"width: 446px;"=
+ width=3D"446">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"width: 100%;" valign=3D"top" width=3D"100%">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width: 100%;" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"text-align: left; font-family: Helvetica, Arial=
+, sans-serif; color: #191919; font-size: 20px; font-weight: bold; letter-sp=
+acing: normal; line-height: 24px; width: 100%;" valign=3D"top" width=3D"100=
+%">
+<p style=3D"margin: 0px; text-align: left;">Find the job you want</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"center" class=3D"st-dynamic-966-4" valign=3D"top" width=3D"100=
+%">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"st-wrapper st-wrapper-background st-module-wrapper-table" role=3D"pr=
+esentation" style=3D"width: 512px;" width=3D"512">
+<tbody>
+<tr>
+<td bgcolor=3D"#FFFFFF" style=3D"width: 100%; padding: 16px 33px;" valign=
+=3D"top" width=3D"100%">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"width: 100%;" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top" width=3D"100%">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"width: 100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"st-dynamic-1120-35" style=3D"width: 64px;" valign=3D"top" widt=
+h=3D"64">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"minw-48 st-dynamic-1110-34" style=3D"padding-ri=
+ght: 16px; width: 100%;" valign=3D"top" width=3D"100%"><img alt=3D"Briefcas=
+e Icon" border=3D"0" class=3D"st-mobile-width-constraint" height=3D"48" src=
+=3D"https://www.emailimagecdntsxk.com/6jv5zyd4c7/en_us/images/62d03e5aaaf3c=
+-1657814618.7002.png" style=3D"border: 0px; display: block; width: 48px; ma=
+x-width: 100%;" title=3D"Briefcase Icon" valign=3D"top" width=3D"48"></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td class=3D"st-dynamic-1128-40" style=3D"width: 382px;" valign=3D"top" wid=
+th=3D"382">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"text-align: left; font-family: Helvetica, Arial=
+, sans-serif; color: #191919; font-size: 16px; font-weight: bold; letter-sp=
+acing: normal; line-height: 20px; width: 100%;" valign=3D"top" width=3D"100=
+%">
+<p style=3D"margin: 0px;">Share your interest with recruiters</p>
+</td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"text-align: left; font-family: Helvetica, Arial=
+, sans-serif; color: #191919; font-size: 14px; font-weight: 400; letter-spa=
+cing: normal; line-height: 17px; padding-top: 6px; width: 100%;" valign=3D"=
+top" width=3D"100%">
+<p style=3D"margin: 0px;">Add job titles and locations to let recruiters kn=
+ow what roles you=E2=80=99re interested in</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"left" valign=3D"top" width=3D"100%">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"width: 100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"st-dynamic-1120-35" style=3D"width: 64px;" valign=3D"top" widt=
+h=3D"64">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"minw-48 st-dynamic-1110-34" style=3D"padding-to=
+p: 12px; padding-right: 16px; width: 100%;" valign=3D"top" width=3D"100%"><=
+img alt=3D"Megaphone Icon" border=3D"0" class=3D"st-mobile-width-constraint=
+" height=3D"48" src=3D"https://www.emailimagecdntsxk.com/6jv5zyd4c7/en_us/i=
+mages/62d03e65621fc-1657814629.4019.png" style=3D"border: 0px; display: blo=
+ck; width: 48px; max-width: 100%;" title=3D"Megaphone Icon" valign=3D"top" =
+width=3D"48"></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td class=3D"st-dynamic-1128-40" style=3D"width: 382px;" valign=3D"top" wid=
+th=3D"382">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"text-align: left; font-family: Helvetica, Arial=
+, sans-serif; color: #191919; font-size: 16px; font-weight: bold; letter-sp=
+acing: normal; line-height: 20px; padding-top: 12px; width: 100%;" valign=
+=3D"top" width=3D"100%">
+<p style=3D"margin: 0px;">Share with more people</p>
+</td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"text-align: left; font-family: Helvetica, Arial=
+, sans-serif; color: #191919; font-size: 14px; font-weight: 400; letter-spa=
+cing: normal; line-height: 17px; padding-top: 6px; width: 100%;" valign=3D"=
+top" width=3D"100%">
+<p style=3D"margin: 0px;">Post that you're #OpenToWork and get more support=
+ in your job search</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"left" valign=3D"top" width=3D"100%">
+<table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"width: 100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"st-dynamic-1120-35" style=3D"width: 64px;" valign=3D"top" widt=
+h=3D"64">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"minw-48 st-dynamic-1110-34" style=3D"padding-to=
+p: 12px; padding-right: 16px; width: 100%;" valign=3D"top" width=3D"100%"><=
+img alt=3D"Profile Icon" border=3D"0" class=3D"st-mobile-width-constraint" =
+height=3D"48" src=3D"https://www.emailimagecdntsxk.com/6jv5zyd4c7/en_us/ima=
+ges/62d03fcd6e99a-1657814989.453.png" style=3D"border: 0px; display: block;=
+ width: 48px; max-width: 100%;" title=3D"Profile Icon" valign=3D"top" width=
+=3D"48"></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td class=3D"st-dynamic-1128-40" style=3D"width: 382px;" valign=3D"top" wid=
+th=3D"382">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"text-align: left; font-family: Helvetica, Arial=
+, sans-serif; color: #191919; font-size: 16px; font-weight: bold; letter-sp=
+acing: normal; line-height: 20px; padding-top: 12px; width: 100%;" valign=
+=3D"top" width=3D"100%">
+<p style=3D"margin: 0px;"><span style=3D"font-size: 16px; line-height: 20px=
+;">Control your privacy</span></p>
+</td>
+</tr>
+<tr>
+<td align=3D"left" style=3D"text-align: left; font-family: Helvetica, Arial=
+, sans-serif; color: #191919; font-size: 14px; font-weight: 400; letter-spa=
+cing: normal; line-height: 17px; padding-top: 6px; width: 100%;" valign=3D"=
+top" width=3D"100%">
+<p style=3D"margin: 0px;"><span style=3D"font-size: 14px; line-height: 17px=
+;">Control who sees your status by selecting recruiters only or the LinkedI=
+n community</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"center" class=3D"st-dynamic-966-4" valign=3D"top" width=3D"100=
+%">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"st-wrapper st-wrapper-background st-module-wrapper-table" role=3D"pr=
+esentation" style=3D"width: 512px;" width=3D"512">
+<tbody>
+<tr>
+<td bgcolor=3D"#FFFFFF" style=3D"width: 100%; padding: 16px 33px;" valign=
+=3D"top" width=3D"100%">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"width: 100%;" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top" width=3D"100%">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-mso-ful=
+l-width st-mobile-full-width" role=3D"presentation" style=3D"width: 446px;"=
+ width=3D"446">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"width: 100%;" valign=3D"top" width=3D"100%">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width: 100%;" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"padding-top: 16px; width: 100%;" valign=3D"top"=
+ width=3D"100%">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"border-collapse: initial;">
+<tbody>
+<tr>
+<td align=3D"center" height=3D"45" style=3D"mso-padding-alt: 0px 24px 0px 2=
+4px; border-radius: 50px; height: 45px; width: 100%; text-align: center; ve=
+rtical-align: middle; border: 1px solid #0a66c2;" valign=3D"middle" width=
+=3D"100%"><a href=3D"https://t1.em.linkedin.com/r/=3Fid=3Dh7998cab8-f8ee-4c=
+61-b9fb-95f4d006607d,77e860,449f67&e=3DbWNpZD03MDk4MzIwNTQwNzQ2MDk2NjQwJnRy=
+az1lbWxfbGlfbUVNX2dsb2JhbF9jYXJlZXJzX2pvYnNndG1fbWt0Z19PVFdfZW5nX0p1bHkyMDI=
+zJnNyYz1lLWVtbA&s=3DIYjtI3w_lPNh88eEKMTFtZn7TZq2TRm3l68LqIcDKA4" _label=3D"=
+Bottom_Complete_your_profile" _category=3D"CTA" style=3D"mso-line-height-ru=
+le: exactly; text-align: center; font-family: Helvetica, Arial, sans-serif;=
+ color: #0a66c2; font-size: 16px; font-weight: bold; letter-spacing: normal=
+; line-height: 20px; padding-right: 24px; padding-left: 24px; text-decorati=
+on: none; display: table-cell; height: 45px; border-radius: 50px; vertical-=
+align: middle;" target=3D"_blank" valign=3D"middle" rel=3D"noopener" ><span=
+ style=3D"margin: 0px; color: #0a66c2;"><span style=3D"font-size: 16px; lin=
+e-height: 20px;">Complete your profile</span></span></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"center" class=3D"st-dynamic-966-4" valign=3D"top" width=3D"100=
+%">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"st-wrapper st-wrapper-background st-module-wrapper-table" role=3D"pr=
+esentation" style=3D"width: 512px;" width=3D"512">
+<tbody>
+<tr>
+<td style=3D"width: 100%;" valign=3D"top" width=3D"100%">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"st-mso-ful=
+l-width st-mobile-full-width" role=3D"presentation" style=3D"width: 512px;"=
+ width=3D"512">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"width: 100%;" valign=3D"top" width=3D"100%">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width: 100%;" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"width: 100%;" valign=3D"top" width=3D"100%"><=
+/td>
+</tr>
+<tr>
+<td style=3D"background-color: #f3f2ef; padding-top: 12px; padding-bottom: =
+36px;"><html lang=3D"en">
+<head>
+<title>Footer Mercado English</title>
+</head>
+<body>
+<table role=3D"presentation" width=3D"87%" border=3D"0" align=3D"center" ce=
+llpadding=3D"0" cellspacing=3D"0"><!-- COPY START -->
+<tbody>
+<tr>
+<td style=3D"padding-top: 24px; text-align: left; font-size: 14px; line-hei=
+ght: 1.3em; color: #191919; font-family: Helvetica Neue, Arial, sans-serif;=
+">This email was intended for Benjamin Barber (Civil Rights Litigator and S=
+oftware Engineer) <br><a href=3D"https://t1.em.linkedin.com/r/=3Fid=3Dh7998=
+cab8-f8ee-4c61-b9fb-95f4d006607d,77e860,449f68&e=3DbWNpZD03MDk4MzIwNTQwNzQ2=
+MDk2NjQwJnRyaz1lbWxfbGlfbUVNX2dsb2JhbF9jYXJlZXJzX2pvYnNndG1fbWt0Z19PVFdfZW5=
+nX0p1bHkyMDIzJnNyYz1lLWVtbA&s=3D1orakHeM9JcLKyE4EO3H7ygoC8ATKCk_p0N8FoX-WHU=
+" _label=3D"Security_Footer" _category=3D"Footer" ><span style=3D"color: #0=
+a66c2; text-decoration: underline;">Learn why we included=C2=A0this.</span>=
+</a> <br><br>This is an occasional email to help you get the most out=C2=A0=
+of=C2=A0LinkedIn. <br><br>=C2=A0<a href=3D"https://t1.em.linkedin.com/r/=3F=
+id=3Dh7998cab8-f8ee-4c61-b9fb-95f4d006607d,77e860,449f69&e=3DbWNpZD03MDk4Mz=
+IwNTQwNzQ2MDk2NjQwJnRyaz1lbWxfbGlfbUVNX2dsb2JhbF9jYXJlZXJzX2pvYnNndG1fbWt0Z=
+19PVFdfZW5nX0p1bHkyMDIzJnNyYz1lLWVtbCZwMT1BUUZ1VVB2WHdZbHEtZ0FBQVp6ZzZ2WW5K=
+MEY4M0p4SXpwUWQ1YmNMNUljQnEzWWxQMm80ekM5M0FIdEx5eGY1cnRXZVVZQUJRWkNjSmtlViZ=
+wMj00MDI0ODk4JnAzPTc4NTgyNzImcDQ9MjAyNi0wNC0wMQ&s=3D3ACe_BpH8Cz1JTl32IOk36_=
+7IF926VY325mh3O6ryhg" _label=3D"UNSUB" _category=3D"unsub" _type=3D"optout"=
+ ><span style=3D"color: #0a66c2; text-decoration: underline;">Unsubscribe</=
+span></a>=C2=A0=C2=B7=C2=A0=C2=A0<a href=3D"https://t1.em.linkedin.com/r/=
+=3Fid=3Dh7998cab8-f8ee-4c61-b9fb-95f4d006607d,77e860,449f6a&e=3DbWNpZD03MDk=
+4MzIwNTQwNzQ2MDk2NjQwJnRyaz1lbWxfbGlfbUVNX2dsb2JhbF9jYXJlZXJzX2pvYnNndG1fbW=
+t0Z19PVFdfZW5nX0p1bHkyMDIzJnNyYz1lLWVtbA&s=3DGL2swOlr-TTaxOKkbuEMwbZIgE2j3Q=
+_oDTqBtmoXH3w" _label=3D"HELP_ENGLISH" _category=3D"Footer" ><span style=3D=
+"color: #0a66c2; text-decoration: underline;">Help</span></a></td>
+</tr>
+<!-- COPY END --> <!-- IMAGE START -->
+<tr>
+<td style=3D"padding-top: 24px;"><a href=3D"https://t1.em.linkedin.com/r/=
+=3Fid=3Dh7998cab8-f8ee-4c61-b9fb-95f4d006607d,77e860,449f6b&e=3DbWNpZD03MDk=
+4MzIwNTQwNzQ2MDk2NjQwJnRyaz1lbWxfbGlfbUVNX2dsb2JhbF9jYXJlZXJzX2pvYnNndG1fbW=
+t0Z19PVFdfZW5nX0p1bHkyMDIzJnNyYz1lLWVtbA&s=3DNlSloEUWobS0sURCeprcD49Atejm93=
+m77L5qH80nbnw" _label=3D"LOGO" _category=3D"Footer" ><img src=3D"https://re=
+s1.em.linkedin.com/res/tracking/linkedin-blue-80x20.png" width=3D"80" alt=
+=3D"LinkedIn" style=3D"display: block; border: 0; color: black; font-size: =
+20px; font-weight: bold; font-family: sans-serif;"></a></td>
+</tr>
+<!-- IMAGE END --> <!-- COPY START -->
+<tr>
+<td style=3D"padding-top: 20px;padding-bottom: 24px; text-align: left; font=
+-size: 14px; line-height: 1.3em; color: #191919; font-family: Helvetica Neu=
+e, Arial, sans-serif;">=C2=A92026,
+
+LinkedIn Corporation.
+
+All rights reserved. <br>
+
+LinkedIn Corporation, 1000 West Maude Ave., Sunnyvale, CA 94085.
+
+<br>LinkedIn and the LinkedIn logo are registered trademarks of LinkedIn.</=
+td>
+</tr>
+<!-- COPY END --></tbody>
+</table>
+</body>
+</html></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td class=3D"st-gmail-fix" style=3D"background-color: transparent; line-hei=
+ght: 1px; height: 1px; min-width: 512px;"><img alt=3D"" height=3D"1" src=3D=
+"https://www.emailimagecdntsxk.com/6jv5zyd4c7/en_us/images/spacer.gif" styl=
+e=3D"max-height: 1px; display: block; width: 512px; min-width: 512px; borde=
+r: 0;" width=3D"512"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><grammarly-desktop-integration data-grammarly-shadow-root=3D"true"></gra=
+mmarly-desktop-integration></p>
+<img height=3D'0' width=3D'0' alt=3D'' src=3D'https://t1.em.linkedin.com/r/=
+=3Fid=3Dh7998cab8-f8ee-4c61-b9fb-95f4d006607d,77e860,1'/></body>
+
+</html>
+

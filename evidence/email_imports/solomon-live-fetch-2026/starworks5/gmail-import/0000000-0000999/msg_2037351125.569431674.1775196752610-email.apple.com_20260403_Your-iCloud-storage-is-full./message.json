@@ -1,0 +1,28 @@
+{
+  "artifact_dir": "/home/barberb/HACC/evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_2037351125.569431674.1775196752610-email.apple.com_20260403_Your-iCloud-storage-is-full.",
+  "attachment_count": 0,
+  "attachments": [],
+  "body_preview": "Hello Benjamin Barber,\r\n\r\nYour iCloud storage is full. Because you’ve exceeded your storage plan, your documents, contacts, and device data are no longer backing up to iCloud and your photos and videos are not uploading to iCloud Photos. iCloud Drive and iCloud-enabled apps are not updating across your devices.\r\n\r\nTo continue using these iCloud services, you need to upgrade to iCloud+: https://setup.icloud.com/email/prefs/storage?path=STORAGE_AND_BACKUP/CHANGE_STORAGE_PLAN or reduce the amount of storage you are using.\r\n\r\n\r\nUpgrade to iCloud+ with 50 GB for $0.99 per month: https://setup.icloud.com/email/prefs/storage?path=STORAGE_AND_BACKUP/CHANGE_STORAGE_PLAN\r\n\r\n\r\n    \r\n\r\n\r\n\r\n\r\nThe iCloud Team\r\n\r\niCloud is a service provided by Apple.\r\n\r\nApple Account: https://account.apple.com/choose-your-country/\r\nSupport: https://www.apple.com/support/icloud/ww\r\nTerms and Conditions: https://www.apple.com/legal/internet-services/icloud/ww/\r\nPrivacy Policy: https://www.apple.com/legal/internet-services/privacy/\r\nCopyright 2026 Apple Inc. One Apple Park Way, Cupertino, CA 95014 USA.\r\nAll rights reserved.",
+  "cc": "",
+  "collect_all_messages": true,
+  "date": "Fri, 03 Apr 2026 06:12:32 +0000",
+  "eml_path": "/home/barberb/HACC/evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_2037351125.569431674.1775196752610-email.apple.com_20260403_Your-iCloud-storage-is-full./message.eml",
+  "folder": "[Gmail]/All Mail",
+  "from": "iCloud <noreply@email.apple.com>",
+  "matched_addresses": [],
+  "matched_fields": [
+    "body"
+  ],
+  "matched_terms": [
+    "barber"
+  ],
+  "message_id_header": "<2037351125.569431674.1775196752610@email.apple.com>",
+  "participants": [
+    "noreply@email.apple.com",
+    "starworks5@gmail.com"
+  ],
+  "raw_size_bytes": 29067,
+  "relevance_score": 1.0,
+  "subject": "Your iCloud storage is full.",
+  "to": "starworks5@gmail.com"
+}

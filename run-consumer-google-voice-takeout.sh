@@ -351,6 +351,11 @@ if [[ -z "$ACQUISITION_HISTORY_DIR" ]]; then
     ACQUISITION_HISTORY_DIR="${DOWNLOADS_DIR}/takeout_acquisition_history"
 fi
 
+NO_DISPLAY_BROWSER=false
+if [[ -z "${DISPLAY:-}" && "$HEADLESS" == false && -z "$RESUME_FROM_DOWNLOADS" && "$POLL_ONLY" == false ]]; then
+    NO_DISPLAY_BROWSER=true
+fi
+
 if [[ -z "$BUNDLE_OUTPUT_DIR" && ${#BUNDLE_FORMATS[@]} -gt 0 ]]; then
     BUNDLE_OUTPUT_DIR="${SCRIPT_DIR}/evidence/email_imports/takeout-case-bundles"
 fi
@@ -407,6 +412,45 @@ PY
 done
 if [[ ${#PRODUCT_IDS[@]} -gt 0 ]]; then
     snapshot_manifest "products"
+fi
+
+if [[ "$NO_DISPLAY_BROWSER" == true ]]; then
+    "$VENV_PYTHON" - <<'PY' "$ACQUISITION_MANIFEST" "$CAPTURE_JSON" "$DOWNLOADS_DIR"
+import json, sys
+from datetime import datetime, UTC
+manifest_path, capture_json_path, downloads_dir = sys.argv[1:]
+timestamp = datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+capture_payload = {
+    "status": "pending",
+    "browser_capture": {
+        "status": "manual_browser_required",
+        "reason": "no_display",
+        "message": "No X server / DISPLAY is available for the interactive Google Takeout browser flow.",
+        "downloads_dir": downloads_dir,
+        "started_at": timestamp,
+    },
+}
+with open(capture_json_path, "w", encoding="utf-8") as handle:
+    json.dump(capture_payload, handle, indent=2, ensure_ascii=False)
+manifest = json.load(open(manifest_path, "r", encoding="utf-8"))
+manifest["capture"] = capture_payload
+manifest["status"] = "manual_browser_required"
+manifest["updated_at"] = timestamp
+manifest.setdefault("events", []).append({
+    "type": "manual_browser_required",
+    "timestamp": timestamp,
+    "reason": "no_display",
+})
+json.dump(manifest, open(manifest_path, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+PY
+    snapshot_manifest "manual_browser_required"
+    echo ""
+    echo "Interactive Google Takeout capture requires a desktop browser session."
+    echo "No DISPLAY/X server is available in this environment, so the run was paused safely."
+    echo "Capture JSON: $CAPTURE_JSON"
+    echo "Acquisition manifest: $ACQUISITION_MANIFEST"
+    echo "Next step: rerun this command on a machine with a browser/display, or resume later from the manifest."
+    exit 0
 fi
 
 if [[ -n "$RESUME_FROM_DOWNLOADS" ]]; then

@@ -234,7 +234,30 @@ python3 engine/print_case_matrix.py --trust-matrix --json --warning-label paraph
 
 `--refresh-state` reports `status`, timestamps, computed `elapsedSeconds`, and a small human-friendly elapsed label after a refresh completes. Add `--wait-for-refresh-complete` to block until the sentinel reaches `complete`, or `--fail-if-refresh-running` to exit immediately if refresh is still in progress. While refresh is `running`, the repo’s human-facing summary, findings, and matrix views now prepend a refresh warning banner, including `--summary-index`, `--fit-index`, `--audit-index`, `--dashboard-index`, `--dashboard-overview`, `--warning-summary`, `--warning-label-matrix`, `--warning-entry-matrix`, `--warning-kind-matrix`, `--warning-entry-summary`, `--warning-kind-summary`, `--trust-matrix`, `--source-findings`, `--source-metadata-matrix`, `--fit-matrix`, `--fit-summary`, `--fit-findings`, `--fit-findings-summary`, and `--case-audit-matrix`.
 
+Those same text views now also show a settled-state line, `Stale While Refreshing: yes|no`, so the human-facing output has the same quick refresh guard as the JSON surfaces.
+
 `--summary-index`, `--fit-index`, `--audit-index`, `--dashboard-index`, `--dashboard-overview`, `--trust-matrix`, `--warning-summary`, `--warning-label-matrix`, `--warning-entry-matrix`, `--warning-kind-matrix`, `--warning-entry-summary`, `--warning-kind-summary`, `--source-metadata-matrix`, `--source-findings`, `--fit-matrix`, `--fit-summary`, `--fit-findings`, `--fit-findings-summary`, and `--case-audit-matrix` JSON now include a machine-readable `refreshRuntime` block so consumers can detect running refresh state without opening the sentinel separately.
+
+These discovery and primary audit JSON views also include a lightweight `staleWhileRefreshing` boolean shortcut:
+- `--summary-index --json`
+- `--fit-index --json`
+- `--dashboard-index --json`
+- `--dashboard-overview --json`
+- `--audit-index --json`
+- `--trust-matrix --json`
+- `--warning-summary --json`
+- `--warning-label-matrix --json`
+- `--warning-entry-matrix --json`
+- `--warning-kind-matrix --json`
+- `--warning-entry-summary --json`
+- `--warning-kind-summary --json`
+- `--source-metadata-matrix --json`
+- `--source-findings --json`
+- `--fit-matrix --json`
+- `--fit-summary --json`
+- `--fit-findings --json`
+- `--fit-findings-summary --json`
+- `--case-audit-matrix --json`
 
 Current note:
 - the four sample fixtures now intentionally vary their authority support mix, so cross-case authority summaries can distinguish:

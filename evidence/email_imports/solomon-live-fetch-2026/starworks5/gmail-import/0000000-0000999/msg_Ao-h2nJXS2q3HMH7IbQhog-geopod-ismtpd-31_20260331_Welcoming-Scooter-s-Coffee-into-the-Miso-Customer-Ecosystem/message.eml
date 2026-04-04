@@ -1,0 +1,1032 @@
+Delivered-To: starworks5@gmail.com
+Received: by 2002:a05:7208:552b:b0:fa:5ef1:c6ed with SMTP id t43csp2055835rbf;
+        Tue, 31 Mar 2026 08:34:05 -0700 (PDT)
+X-Received: by 2002:a05:620a:1a01:b0:8cd:8fb7:7b13 with SMTP id af79cd13be357-8d1b5aae5b7mr15229185a.10.1774971245190;
+        Tue, 31 Mar 2026 08:34:05 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1774971245; cv=none;
+        d=google.com; s=arc-20240605;
+        b=UFUCODiAe/sgRPIBQ/o/2Bf4yffrz/mJIq34aB+uxTSBqqjitACeSCXrStIdF/MMG9
+         uzWPu5sNV7xk2zNqEoEdND9ZabWhe5JhOcpUPkbZL7/+oLTWIR9LoRdJW7qWczODdeUz
+         8WnYSBzhxdk/6Xgr3HbJUC1zNYOK3tZEurBpmbyOZfiw4UQfmbR1VC2c10oGKBeb0Qm7
+         bLe0HPJEQ42QS18s5vnM18DlXNKT1/12qangrE3Wt8q6FF5qXfX5qpPzUf7boTy6Nmbo
+         OXqr8Tk3HuzkA9UU5TEJLOAyt/FmBUt7irMbg55cIluAmXEvhyoykBcthlO0KQMAlSUI
+         cw3Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:list-unsubscribe-post:list-unsubscribe:feedback-id:subject
+         :message-id:mime-version:from:date:dkim-signature:dkim-signature;
+        bh=F7eZWLu2/d643KJwl7eQs21pp5mlCfxMzJPypTXsFiY=;
+        fh=TVuDFC8xOklOltvOVOk8z3YHiA2R/axJ8dWH/iSaAKo=;
+        b=UjrJksVLj82vupnxpBWVOLubuWdBDTwWb5Bq9wNMOnumStYk49RHQCs+7XwPFNy/iy
+         EAlVhaU06/tu6l/NRMO5r4dFdWXiH4BN0UYVLJtbsB950BYz1dECzxgtoGEVoJ28ZmmK
+         oxfIRjIuNgqXt2WWStpJb/0BnFLQZ8rY2lOI0DSA8Zer7PUYVMp9ThdU1wy92k5c31K4
+         VaBzqMlnv8lmwdvZ8gZnPzg+u6JNIGTgnTlriqFkWMDsukNR7EwPZNeOQ3ElvrLKlFte
+         WKy3ls9805oYl/h5ZQeYpoCVwk2prx0RH6cE6mEAzyj6TY6txWAoGTz0C3LzzB2sKvcM
+         gxzQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@misorobotics.com header.s=kl2 header.b=sEeepDEY;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=Sf9evcz7;
+       spf=pass (google.com: domain of bounces+13614281-1147-starworks5=gmail.com@send.misorobotics.com designates 198.37.147.189 as permitted sender) smtp.mailfrom="bounces+13614281-1147-starworks5=gmail.com@send.misorobotics.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=misorobotics.com
+Return-Path: <bounces+13614281-1147-starworks5=gmail.com@send.misorobotics.com>
+Received: from o1381.shared.klaviyomail.com (o1381.shared.klaviyomail.com. [198.37.147.189])
+        by mx.google.com with ESMTPS id af79cd13be357-8d02807484bsi1118804485a.295.2026.03.31.08.34.03
+        for <starworks5@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 31 Mar 2026 08:34:04 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+13614281-1147-starworks5=gmail.com@send.misorobotics.com designates 198.37.147.189 as permitted sender) client-ip=198.37.147.189;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@misorobotics.com header.s=kl2 header.b=sEeepDEY;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=Sf9evcz7;
+       spf=pass (google.com: domain of bounces+13614281-1147-starworks5=gmail.com@send.misorobotics.com designates 198.37.147.189 as permitted sender) smtp.mailfrom="bounces+13614281-1147-starworks5=gmail.com@send.misorobotics.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=misorobotics.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=misorobotics.com;
+	h=content-type:date:from:mime-version:subject:feedback-id:
+	list-unsubscribe:list-unsubscribe-post:to:cc:content-type:date:feedback-id:from:
+	subject:to;
+	s=kl2; t=1774971243; bh=F7eZWLu2/d643KJwl7eQs21pp5mlCfxMzJPypTXsFiY=;
+	b=sEeepDEYla3KaQC7YfloI0/roiyKQonVtl5c3skk7yJDDJtXoVYbo49TbhLtxdPPNydP
+	2w5UU1lwqSVSkWh/AuPvTI33j47jYY9nteKxK89o94wCR7MN5Mv1UdOREy3HgVY1+kieMY
+	ftT2CnEb+DF02kdIXrUKC5cGy3P3ykWM+2TPKjUrGXvneLHhH9pmPLg1bleWo7jcyFEnTf
+	sZqHXQ8Bh3n/atpRsX9V641LOnQOXFvMzAH5k1lXTbZj/uA/3YE6BM4+tPitX27dAYKrr7
+	0NF/fHFXHuOGdRLmAgTY/BeOi/+TygNvD14dQCteuDdw1jjeprFkYIz89pB/UAbw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:date:from:mime-version:subject:feedback-id:
+	list-unsubscribe:list-unsubscribe-post:to:cc:content-type:date:feedback-id:from:
+	subject:to;
+	s=smtpapi; t=1774971243; bh=F7eZWLu2/d643KJwl7eQs21pp5mlCfxMzJPypTXsFiY=;
+	b=Sf9evcz7W2xSF1YTLpJ1NRBDCKKscRltunB9krKmk/UY4HVQ7qdkQxik9EIDj7koZRwd
+	zhVEvdzMVnX7E0ZhXmCwFBJhn4RKKBymekd9n4k9bu9fGtW2/26dru1X7qo6HQoX7DTlNG
+	DflAWoY+fXu+5XSKCAIuTyCYeXPFu3wgU=
+Received: by recvd-549bc7c9df-29m25 with SMTP id recvd-549bc7c9df-29m25-1-69CBE96B-7C
+	2026-03-31 15:34:03.534390327 +0000 UTC m=+67049.476369769
+Received: from MTM2MTQyODE (unknown)
+	by geopod-ismtpd-31 (SG) with HTTP
+	id Ao-h2nJXS2q3HMH7IbQhog
+	Tue, 31 Mar 2026 15:34:03.530 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=0a41a4dccbf61e5ab69280bb3d2172dba96de1a958d85df5f3adcbc63aae
+Date: Tue, 31 Mar 2026 15:34:03 +0000 (UTC)
+From: Miso Robotics <invest@misorobotics.com>
+Mime-Version: 1.0
+Message-ID: <Ao-h2nJXS2q3HMH7IbQhog@geopod-ismtpd-31>
+Subject: Welcoming =?UTF-8?B?U2Nvb3RlcuKAmXM=?= Coffee into the Miso Customer
+ Ecosystem
+Feedback-ID: 01KMZP65VE4Q892YKRT3A653D9:LqAUi4:23352870914:kl
+List-Unsubscribe: 
+ =?us-ascii?Q?=3Chttps=3A=2F=2Fmanage=2Ekmail-lists=2Ecom=2Fsubscriptions=2Funsubscribe=3Fa=3DLq?=
+ =?us-ascii?Q?AUi4&c=3D01GJ2JY24V0AXTV2CK5DYYX9P6&k=3D7f7?=
+ =?us-ascii?Q?540ba9c98acd58d909fdae016566b&m=3D01KMZP6?=
+ =?us-ascii?Q?5Z3BJQQD470G19Z4GDB&r=3D01KN27KRWB4DHX08E?=
+ =?us-ascii?Q?YQNTRPE8Y=3E?=
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-Kmail-Account: LqAUi4
+X-Kmail-Message: 01KMZP65Z3BJQQD470G19Z4GDB
+X-Kmail-Ops: 01GJ2JY24V0AXTV2CK5DYYX9P6
+X-Report-Abuse: Please report any spam or abuse to: abuse@klaviyo.com
+X-SG-EID: 
+ =?us-ascii?Q?u001=2E89pEOvhFNGoDzkl0HRG2WU5zuCZsZnyN1JhoAAAZzKxnGPyosXZeViaME?=
+ =?us-ascii?Q?5R+NaKuGfaNJysVHF2TnZuOCRHCdU5fAj77Lkoz?=
+ =?us-ascii?Q?rtCN+dkcfGL2wZHU+k6Xw2j20KhUQzi+3GTdfT8?=
+ =?us-ascii?Q?P31fF6kPpcDrzNyaf1IIeSgK6D0GOdgL4wCYv7I?=
+ =?us-ascii?Q?OyAKIE1MWz2sy7nNIKVQlb8P00u=2F96x398BNY5s?=
+ =?us-ascii?Q?XcrdjrzpKdjS0rbg7Xf7ftdTTpxPI0VRNBI3W4m?= =?us-ascii?Q?7vSf?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3BiU3Zi1S53GtqGa3TWBmqe75yn5aYrkvkfG+Z?=
+ =?us-ascii?Q?GKrHRvqn3sikqN98cZT4VDhY9MI=2FQtN8s0mBTK2?=
+ =?us-ascii?Q?fyoSa9lRQviRG+3WFV7giY5aQUud91ic1HTOO06?=
+ =?us-ascii?Q?tfu0bNqIZ5H03Iaa9zNeVH=2FTycBi9=2FMlG53LVDd?=
+ =?us-ascii?Q?2JEud7KM1W7ougSKECb22TzH2zhp6BWrEJyseI4?=
+ =?us-ascii?Q?oMLkpAEokamY3Amz+h2QFvwuO3MV0c33Sfm2Mqd?=
+ =?us-ascii?Q?hu+iRtInXN77=2FcNoW0t2xhbJ8vSyZAqpk1dc0tj?=
+ =?us-ascii?Q?EMwahY6MRaG8UOjPsKsqQIQVCULEM1vxYwxjdkq?=
+ =?us-ascii?Q?yyJJnPHa7JBLSyzz53nfQcXgUsoWHTAYwfIAcGV?=
+ =?us-ascii?Q?Tl9zaGzVnFM2kvZ?=
+To: Benjamin Barber <starworks5@gmail.com>
+X-Entity-ID: u001.HylD7BdjfRwH/2ODQhG4rA==
+
+--0a41a4dccbf61e5ab69280bb3d2172dba96de1a958d85df5f3adcbc63aae
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+[Miso Welcomes Scooter=E2=80=99s Coffee. Click here to invest now.](https:/=
+/invest.misorobotics.com/)
+
+Hi Benjamin Barber,
+=C2=A0
+We=E2=80=99re thrilled to offer a huge Miso welcome to the Scooter=E2=80=99=
+s Coffee brand! A franchise group of Scooter=E2=80=99s Coffee operators jus=
+t joined the growing Miso customer ecosystem.
+
+Scooter=E2=80=99s is one of the fastest-growing drive-thru coffee brands in=
+ the country: high volume, an army of super-fans, and zero room for operati=
+onal inefficiency. That=E2=80=99s why they now rely on Miso=E2=80=99s Zigny=
+l restaurant operations product.
+
+With Miso=E2=80=99s tech, Scooter=E2=80=99s operators can:
+
+- Take immediate actions based on real-time store data
+
+- Optimize labor scheduling and food throughput instantly
+
+- Incentivize employees to hit daily sales goals to also drive net-new prof=
+its for restaurant operators
+It=E2=80=99s happening now.
+
+Each new customer strengthens the Miso network, expands our footprint, and =
+increases the value of our entire platform, enabling the power of our Flipp=
+y Fry Station AI robot to stretch beyond the fryer. With Miso=E2=80=99s Zig=
+nyl, customers can now streamline their entire business operation.
+
+We=E2=80=99re building the operating system for modern restaurants. And [yo=
+u can join us as an investor](https://invest.misorobotics.com/) and secure =
+up to 7% bonus shares.
+
+[INVEST NOW](https://invest.misorobotics.com/checkout)
+
+https://invest.misorobotics.com/
+
+=C2=A9 2026 - Miso Robotics=C2=AE all rights reserved.
+
+Miso Robotics is offering securities through the use of an Offering Stateme=
+nt that has been qualified by the Securities and Exchange Commission under =
+Tier II of Regulation A. A copy of the Final Offering Circular that forms a=
+ part of the Offering Statement may be obtained from:=C2=A0https://www.sec.=
+gov/Archives/edgar/data/1710670/000110465926001520/tm262179d1_partiiandiii.=
+htm
+
+No longer want to receive these emails? [Unsubscribe](https://manage.kmail-=
+lists.com/subscriptions/unsubscribe?a=3DLqAUi4&c=3D01GJ2JY24V0AXTV2CK5DYYX9=
+P6&k=3D7f7540ba9c98acd58d909fdae016566b&m=3D01KMZP65Z3BJQQD470G19Z4GDB&r=3D=
+01KN27KRWB4DHX08EYQNTRPE8Y).
+Miso Robotics 650 E. Green Street Pasadena, CA 91101
+--0a41a4dccbf61e5ab69280bb3d2172dba96de1a958d85df5f3adcbc63aae
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+<!DOCTYPE html><html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:o=3D"urn:=
+schemas-microsoft-com:office:office" xmlns:v=3D"urn:schemas-microsoft-com:v=
+ml"><head>
+<title>
+</title>
+<!--[if !mso]><!-->
+<meta content=3D"IE=3Dedge" http-equiv=3D"X-UA-Compatible">
+<!--<![endif]-->
+<meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Type">
+<meta content=3D"width=3Ddevice-width, initial-scale=3D1" name=3D"viewport"=
+>
+<!--[if mso]>
+        <noscript>
+        <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+        </xml>
+        </noscript>
+        <![endif]-->
+<!--[if lte mso 11]>
+        <style type=3D"text/css" data-inliner=3D"ignore">
+          .mj-outlook-group-fix { width:100% !important; }
+        </style>
+        <![endif]-->
+<!--[if !mso]><!--><!--<![endif]-->
+<style>a:not([name]) {color:#AB2976;text-decoration:underline}
+a:link {color:#AB2976;text-decoration:underline}
+a:visited {color:#AB2976;text-decoration:underline}
+a:active {color:#AB2976;text-decoration:underline}
+a:hover {color:#AB2976;text-decoration:underline}</style><style>@import url=
+(https://static-forms.klaviyo.com/fonts/api/v1/LqAUi4/custom_fonts.css);
+@import url("https://fonts.googleapis.com/css2?family=3DRoboto+Condensed:wg=
+ht@300;400&family=3DSarala:wght@400;700&display=3Dswap");
+#outlook a {
+    padding: 0
+    }
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+    }
+table, td {
+    border-collapse: collapse;
+    mso-table-lspace: 0;
+    mso-table-rspace: 0
+    }
+img {
+    border: 0;
+    line-height: 100%;
+    outline: none;
+    text-decoration: none;
+    -ms-interpolation-mode: bicubic
+    }
+p {
+    display: block;
+    margin: 13px 0
+    }
+@media only screen and (min-width: 480px) {
+    .mj-column-per-100 {
+        width: 100% !important;
+        max-width: 100%
+        }
+    }
+@media only screen and (max-width: 480px) {
+    div.kl-row.colstack div.kl-column {
+        display: block !important;
+        width: 100% !important
+        }
+    }
+@media only screen and (max-width: 480px) {
+    .component-wrapper .mob-no-spc {
+        padding-left: 0 !important;
+        padding-right: 0 !important
+        }
+    }
+@media only screen and (max-width: 480px) {
+    td.kl-img-base-auto-width {
+        width: 100% !important
+        }
+    }
+@media only screen and (max-width: 480px) {
+    td.mobile-only {
+        display: table-cell !important
+        }
+    div.mobile-only {
+        display: block !important
+        }
+    table.mobile-only {
+        display: table !important
+        }
+    .desktop-only {
+        display: none !important
+        }
+    }
+@media only screen and (max-width: 480px) {
+    .table-mobile-only {
+        display: table-cell !important;
+        max-height: none !important
+        }
+    .table-mobile-only.block {
+        display: block !important
+        }
+    .table-mobile-only.inline-block {
+        display: inline-block !important
+        }
+    .table-desktop-only {
+        max-height: 0 !important;
+        display: none !important;
+        mso-hide: all !important;
+        overflow: hidden !important
+        }
+    }
+@media only screen and (max-width: 480px) {
+    body.mce-content-body, /* NOTE: needed for internal tinymce styles */.k=
+l-text > div, .kl-table-subblock > div, .kl-split-subblock > div {
+        font-size: 14px !important;
+        line-height: 1.3 !important
+        }
+    }
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 40px !important;
+        line-height: 1.1 !important
+        }
+    }
+@media only screen and (max-width: 480px) {
+    h2 {
+        font-size: 32px !important;
+        line-height: 1.1 !important
+        }
+    }
+@media only screen and (max-width: 480px) {
+    h3 {
+        font-size: 24px !important;
+        line-height: 1.1 !important
+        }
+    }
+@media only screen and (max-width: 480px) {
+    h4 {
+        font-size: 18px !important;
+        line-height: 1.1 !important
+        }
+    }
+@media only screen and (max-width: 480px) {
+    .root-container {
+        width: 100% !important
+        }
+    .root-container-spacing {
+        padding: 10px !important
+        }
+    .content-padding {
+        padding-left: 0 !important;
+        padding-right: 0 !important
+        }
+    .content-padding.kl-first {
+        padding-top: 0 !important
+        }
+    .content-padding.kl-last {
+        padding-bottom: 0 !important
+        }
+    .kl-column > .component-wrapper {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: unset !important
+        }
+    .kl-text {
+        padding-right: 18px !important;
+        padding-left: 18px !important
+        }
+    }</style></head>
+<body style=3D"word-spacing:normal;background-color:#FFFFFF;">
+<div style=3D"display:none;font-size:1px;color:#ffffff;line-height:1px;max-=
+height:0px;max-width:0px;opacity:0;overflow:hidden;">
+      Fast-growing coffee brand=E2=80=99s operators adopt Miso=E2=80=99s te=
+ch=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=
+=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=
+=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =
+=E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=
+=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =E2=
+=80=87=CD=8F =E2=80=87=CD=8F =E2=80=87=CD=8F =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =
+=C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=
+=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD =C2=AD
+    </div>
+<!-- TRACKING_PIXEL_TOP -->
+<div class=3D"root-container" id=3D"bodyTable" style=3D"background-position=
+:left top; background-repeat:repeat; background-size:auto; background-color=
+:#FFF">
+<div class=3D"root-container-spacing" style=3D"font-size:0; padding-bottom:=
+20px; padding-top:50px">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"kl-section" role=3D"presentation" style=3D"width:100%;">
+<tbody>
+<tr>
+<td>
+<!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" class=3D"kl-section-outlook" style=3D"width:600px;" width=
+=3D"600" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-ru=
+le:exactly;"><![endif]-->
+<div style=3D"margin:0px auto;max-width:600px;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"width:100%;">
+<tbody>
+<tr>
+<td style=3D"direction:ltr;font-size:0px;padding:0px;text-align:center;">
+<!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0"><table align=3D"center" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" class=3D"" style=3D"width:600px;" width=3D"600" bgcolor=
+=3D"#FFFFFF" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-heigh=
+t-rule:exactly;"><![endif]-->
+<div style=3D"background:#FFFFFF;background-color:#FFFFFF;margin:0px auto;b=
+order-radius:0px 0px 0px 0px;max-width:600px;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"background:#FFFFFF;background-color:#FFFFFF;wi=
+dth:100%;border-radius:0px 0px 0px 0px;">
+<tbody>
+<tr>
+<td style=3D"direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0px;=
+padding-left:35px;padding-right:35px;padding-top:15px;text-align:center;">
+<!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0"><![endif]-->
+<div class=3D"content-padding kl-first" style=3D"padding-left:0; padding-ri=
+ght:0; padding-top:0">
+<!--[if true]><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"530" style=3D"width:530px;direction:ltr"><tr><![endif]-->
+<div class=3D"kl-row colstack" style=3D"display:table;table-layout:fixed;wi=
+dth:100%;">
+<!--[if true]><td style=3D"vertical-align:top;width:530px;"><![endif]-->
+<div class=3D"kl-column" style=3D"display:table-cell;vertical-align:top;wid=
+th:100%;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:0px;padding-right:0p=
+x;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td style=3D"font-size:0px;word-break:break-word;">
+<div style=3D"height:20px;line-height:20px;">=E2=80=8A</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!--[if true]></td><![endif]-->
+</div>
+<!--[if true]></tr></table><![endif]-->
+</div>
+<!--[if mso | IE]></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"kl-section" role=3D"presentation" style=3D"background:#FFFFFF;backgr=
+ound-color:#FFFFFF;width:100%;">
+<tbody>
+<tr>
+<td>
+<!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" class=3D"kl-section-outlook" style=3D"width:600px;" width=
+=3D"600" bgcolor=3D"#FFFFFF" ><tr><td style=3D"line-height:0px;font-size:0p=
+x;mso-line-height-rule:exactly;"><![endif]-->
+<div style=3D"margin:0px auto;max-width:600px;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"width:100%;">
+<tbody>
+<tr>
+<td style=3D"direction:ltr;font-size:0px;padding:0px;text-align:center;">
+<!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0"><table align=3D"center" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" class=3D"" style=3D"width:600px;" width=3D"600" bgcolor=
+=3D"#FFFFFF" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-heigh=
+t-rule:exactly;"><![endif]-->
+<div style=3D"background:#FFFFFF;background-color:#FFFFFF;margin:0px auto;b=
+order-radius:0px 0px 0px 0px;max-width:600px;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"background:#FFFFFF;background-color:#FFFFFF;wi=
+dth:100%;border-radius:0px 0px 0px 0px;">
+<tbody>
+<tr>
+<td style=3D"direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0px;=
+padding-left:0px;padding-right:0px;padding-top:0px;text-align:center;">
+<!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0"><![endif]-->
+<div class=3D"content-padding" style=3D"padding-left:0; padding-right:0">
+<!--[if true]><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"600" style=3D"width:600px;direction:ltr"><tr><![endif]-->
+<div class=3D"kl-row colstack" style=3D"display:table;table-layout:fixed;wi=
+dth:100%;">
+<!--[if true]><td style=3D"vertical-align:top;width:600px;"><![endif]-->
+<div class=3D"kl-column" style=3D"display:table-cell;vertical-align:top;wid=
+th:100%;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:9px;padding-right:18=
+px;padding-bottom:9px;padding-left:18px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"kl-text" style=3D"font-size:0px;padding:0px;pad=
+ding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word-bre=
+ak:break-word;">
+<div style=3D"font-family:'Roboto Condensed', Helvetica, Arial, sans-serif;=
+font-size:15px;font-style:normal;font-weight:400;letter-spacing:0px;line-he=
+ight:1.3;text-align:left;color:#222427;"></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:0px;padding-right:0p=
+x;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"kl-image" style=3D"font-size:0px;word-break:b=
+reak-word;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td class=3D"kl-img-base-auto-width" style=3D"border:0;padding:0px 0px 0px =
+0px;width:600px;" valign=3D"top">
+<a class=3D"kl-img-link" style=3D"color:#AB2976; text-decoration:underline;=
+ display:block" href=3D"https://ctrk.klclick.com/l/01KN27P1G9KAJQ5480EX3H9R=
+36_0">
+<img alt=3D"Miso Welcomes Scooter=E2=80=99s Coffee. Click here to invest no=
+w." src=3D"https://d3k81ch9hvuctc.cloudfront.net/company/LqAUi4/images/a395=
+0266-2233-42bb-b007-7279d37253dc.png" style=3D"border:0; height:auto; line-=
+height:100%; max-width:100%; outline:none; text-decoration:none; display:bl=
+ock; font-size:13px; width:100%" title=3D"Miso Welcomes Scooter=E2=80=99s C=
+offee. Click here to invest now." width=3D"600">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper kl-t=
+ext-table-layout" style=3D"font-size:0px;text-align:left;direction:ltr;vert=
+ical-align:top;width:100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:0px;padding-right:20=
+px;padding-bottom:0px;padding-left:20px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"kl-text" style=3D"font-size:0px;padding:0px;pad=
+ding-top:25px;padding-right:30px;padding-bottom:5px;padding-left:30px;word-=
+break:break-word;">
+<div style=3D"font-family:'Roboto Condensed', Helvetica, Arial, sans-serif;=
+font-size:15px;font-style:normal;font-weight:400;letter-spacing:0px;line-he=
+ight:1.3;text-align:left;color:#222427;"><div><span style=3D"font-family: '=
+Roboto Condensed', Helvetica, Arial, sans-serif; font-weight: 400; font-sty=
+le: normal;">Hi Benjamin Barber,</span></div>
+<div><span style=3D"font-family: 'Roboto Condensed', Helvetica, Arial, sans=
+-serif; font-weight: 400; font-style: normal;">&nbsp;</span></div>
+<div>
+<div>We=E2=80=99re thrilled to offer a huge Miso welcome to the Scooter=E2=
+=80=99s Coffee brand! A franchise group of Scooter=E2=80=99s Coffee operato=
+rs just joined the growing Miso customer ecosystem.</div>
+<div><br>Scooter=E2=80=99s is one of the fastest-growing drive-thru coffee =
+brands in the country: high volume, an army of super-fans, and zero room fo=
+r operational inefficiency. That=E2=80=99s why they now rely on Miso=E2=80=
+=99s Zignyl restaurant operations product.</div>
+<div><br>With Miso=E2=80=99s tech, Scooter=E2=80=99s operators can:</div>
+<ul style=3D"font-family:Roboto Condensed, Helevtica Neue, sans-serif; font=
+-weight:400">
+<li style=3D"font-family:Roboto Condensed, Helevtica Neue, sans-serif; font=
+-weight:400">Take immediate actions based on real-time store data<br><br></=
+li>
+<li style=3D"font-family:Roboto Condensed, Helevtica Neue, sans-serif; font=
+-weight:400">Optimize labor scheduling and food throughput instantly<br><br=
+></li>
+<li style=3D"font-family:Roboto Condensed, Helevtica Neue, sans-serif; font=
+-weight:400">Incentivize employees to hit daily sales goals to also drive n=
+et-new profits for restaurant operators</li>
+</ul>
+<div>It=E2=80=99s happening now.</div>
+<div><br>Each new customer strengthens the Miso network, expands our footpr=
+int, and increases the value of our entire platform, enabling the power of =
+our Flippy Fry Station AI robot to stretch beyond the fryer. With Miso=E2=
+=80=99s Zignyl, customers can now streamline their entire business operatio=
+n.</div>
+<div><br>We=E2=80=99re building the operating system for modern restaurants=
+. And <span style=3D"color: rgb(93, 49, 129);"><a style=3D"color:rgb(93, 49=
+, 129); text-decoration:underline" href=3D"https://ctrk.klclick.com/l/01KN2=
+7P1G9KAJQ5480EX3H9R36_1">you can join us as an investor</a></span> and secu=
+re up to 7% bonus shares.</div>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:20px;padding-right:3=
+5px;padding-bottom:20px;padding-left:35px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"kl-button" style=3D"font-size:0px;padding:0px=
+;word-break:break-word;" vertical-align=3D"middle">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:separate;line-height:100%;">
+<tbody><tr>
+<td align=3D"center" bgcolor=3D"#5D3181" role=3D"presentation" style=3D"bor=
+der:none;border-radius:30px;cursor:auto;mso-padding-alt:15px 30px 15px 30px=
+;background:#5D3181;" valign=3D"middle">
+<a style=3D"color:#FFF; text-decoration:none; font-family:Geneva, Arial; fo=
+nt-weight:700; text-transform:none; display:block; background:#5D3181; font=
+-size:16px; line-height:100%; letter-spacing:0; margin:0; padding:15px 30px=
+ 15px 30px; mso-padding-alt:0; border-radius:30px" target=3D"_blank" href=
+=3D"https://ctrk.klclick.com/l/01KN27P1G9KAJQ5480EX3H9R36_2">
+              INVEST NOW
+            </a>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!--[if true]></td><![endif]-->
+</div>
+<!--[if true]></tr></table><![endif]-->
+</div>
+<!--[if mso | IE]></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"kl-section" role=3D"presentation" style=3D"width:100%;">
+<tbody>
+<tr>
+<td>
+<!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" class=3D"kl-section-outlook" style=3D"width:600px;" width=
+=3D"600" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-ru=
+le:exactly;"><![endif]-->
+<div style=3D"margin:0px auto;max-width:600px;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"width:100%;">
+<tbody>
+<tr>
+<td style=3D"direction:ltr;font-size:0px;padding:0px;text-align:center;">
+<!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0"><table align=3D"center" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" class=3D"" style=3D"width:600px;" width=3D"600" bgcolor=
+=3D"#232323" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-heigh=
+t-rule:exactly;"><![endif]-->
+<div style=3D"background:#232323;background-color:#232323;margin:0px auto;b=
+order-radius:0px 0px 0px 0px;max-width:600px;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"background:#232323;background-color:#232323;wi=
+dth:100%;border-radius:0px 0px 0px 0px;">
+<tbody>
+<tr>
+<td style=3D"direction:ltr;font-size:0px;padding:20px 0;padding-bottom:45px=
+;padding-left:35px;padding-right:35px;padding-top:45px;text-align:center;">
+<!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0"><![endif]-->
+<div class=3D"content-padding" style=3D"padding-left:0; padding-right:0">
+<!--[if true]><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"530" style=3D"width:530px;direction:ltr"><tr><![endif]-->
+<div class=3D"kl-row colstack" style=3D"display:table;table-layout:fixed;wi=
+dth:100%;">
+<!--[if true]><td style=3D"vertical-align:top;width:530px;"><![endif]-->
+<div class=3D"kl-column" style=3D"display:table-cell;vertical-align:top;wid=
+th:100%;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:0px;padding-right:0p=
+x;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"kl-image" style=3D"font-size:0px;word-break:b=
+reak-word;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse:collapse;border-spacing:0px;">
+<tbody>
+<tr>
+<td class=3D"" style=3D"border:0;padding:0px 0px 0px 0px;width:125px;" vali=
+gn=3D"top">
+<a class=3D"kl-img-link" style=3D"color:#AB2976; text-decoration:underline;=
+ display:block" href=3D"https://ctrk.klclick.com/l/01KN27P1G9KAJQ5480EX3H9R=
+36_3">
+<img src=3D"https://d3k81ch9hvuctc.cloudfront.net/company/LqAUi4/images/470=
+cd770-5f58-4c12-b939-b7e6caccc2ae.png" style=3D"border:0; height:auto; line=
+-height:100%; max-width:100%; outline:none; text-decoration:none; display:b=
+lock; font-size:13px; width:100%" width=3D"125">
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:15px;padding-right:1=
+8px;padding-bottom:15px;padding-left:18px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"kl-text" style=3D"font-size:0px;padding:0px;pad=
+ding-top:10px;padding-right:0px;padding-bottom:0px;padding-left:0px;word-br=
+eak:break-word;">
+<div style=3D"font-family:'Roboto Condensed', Helvetica, Arial, sans-serif;=
+font-size:15px;font-style:normal;font-weight:400;letter-spacing:0px;line-he=
+ight:1.3;text-align:left;color:#222427;"><div style=3D"text-align: center;"=
+>
+<p class=3D"p1" style=3D"margin-bottom:0; margin-left:0; margin-right:0; ma=
+rgin-top:0; padding-bottom:0; font-family:Roboto Condensed, Helevtica Neue,=
+ sans-serif; font-weight:400"><span style=3D"color: #ffffff;">=C2=A9 2026 -=
+ Miso Robotics=C2=AE all rights reserved.</span></p>
+</div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:10px;padding-right:1=
+8px;padding-bottom:15px;padding-left:18px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"kl-text" style=3D"font-size:0px;padding:0px;pad=
+ding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word-bre=
+ak:break-word;">
+<div style=3D"font-family:'Roboto Condensed', Helvetica, Arial, sans-serif;=
+font-size:15px;font-style:normal;font-weight:400;letter-spacing:0px;line-he=
+ight:1.3;text-align:left;color:#222427;"><div style=3D"text-align: center;"=
+><span style=3D"color: #75757a; font-size: 8px;">
+<p style=3D"margin-bottom:0; margin-left:0; margin-right:0; margin-top:0; p=
+adding-bottom:0; font-family:Roboto Condensed, Helevtica Neue, sans-serif; =
+font-weight:400; text-align:center"><span style=3D"color: rgb(255, 255, 255=
+);">Miso Robotics is offering securities through the use of an Offering Sta=
+tement that has been qualified by the Securities and Exchange Commission un=
+der Tier II of Regulation A. A copy of the Final Offering Circular that for=
+ms a part of the Offering Statement may be obtained from:&nbsp;<span style=
+=3D"color: rgb(93, 49, 129);"><a style=3D"color:rgb(93, 49, 129); text-deco=
+ration:underline" href=3D"https://ctrk.klclick.com/l/01KN27P1G9KAJQ5480EX3H=
+9R36_4">https://www.sec.gov/Archives/edgar/data/1710670/000110465926001520/=
+tm262179d1_partiiandiii.htm</a></span></span></p>
+</span></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:10px;padding-right:1=
+8px;padding-bottom:10px;padding-left:18px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"kl-text" style=3D"font-size:0px;padding:0px;pad=
+ding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;word-bre=
+ak:break-word;">
+<div style=3D"font-family:'Roboto Condensed', Helvetica, Arial, sans-serif;=
+font-size:15px;font-style:normal;font-weight:400;letter-spacing:0px;line-he=
+ight:1.3;text-align:left;color:#222427;"><div style=3D"text-align: center;"=
+><span style=3D"color: #75757a; font-size: 8px;">No longer want to receive =
+these emails? <a class=3D"unsubscribe-link" style=3D"color:#AB2976;font-wei=
+ght:normal;text-decoration:underline;" href=3D"https://ctrk.klclick.com/l/0=
+1KN27P1G9KAJQ5480EX3H9R36_5">Unsubscribe</a>.</span><br><span style=3D"colo=
+r: #75757a; font-size: 9px;">Miso Robotics 650 E. Green Street Pasadena, CA=
+ 91101</span></div></div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!--[if true]></td><![endif]-->
+</div>
+<!--[if true]></tr></table><![endif]-->
+</div>
+<!--[if mso | IE]></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"kl-section" role=3D"presentation" style=3D"width:100%;">
+<tbody>
+<tr>
+<td>
+<!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" class=3D"kl-section-outlook" style=3D"width:600px;" width=
+=3D"600" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-ru=
+le:exactly;"><![endif]-->
+<div style=3D"margin:0px auto;max-width:600px;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"width:100%;">
+<tbody>
+<tr>
+<td style=3D"direction:ltr;font-size:0px;padding:0px;text-align:center;">
+<!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0"><table align=3D"center" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" class=3D"" style=3D"width:600px;" width=3D"600" bgcolor=
+=3D"#FFFFFF" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-heigh=
+t-rule:exactly;"><![endif]-->
+<div style=3D"background:#FFFFFF;background-color:#FFFFFF;margin:0px auto;b=
+order-radius:0px 0px 0px 0px;max-width:600px;">
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"background:#FFFFFF;background-color:#FFFFFF;wi=
+dth:100%;border-radius:0px 0px 0px 0px;">
+<tbody>
+<tr>
+<td style=3D"direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0px;=
+padding-left:0px;padding-right:0px;padding-top:0px;text-align:center;">
+<!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0"><![endif]-->
+<div class=3D"content-padding kl-last" style=3D"padding-left:0; padding-rig=
+ht:0; padding-bottom:0">
+<!--[if true]><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"600" style=3D"width:600px;direction:ltr"><tr><![endif]-->
+<div class=3D"kl-row colstack" style=3D"display:table;table-layout:fixed;wi=
+dth:100%;">
+<!--[if true]><td style=3D"vertical-align:top;width:600px;"><![endif]-->
+<div class=3D"kl-column" style=3D"display:table-cell;vertical-align:top;wid=
+th:100%;">
+<div class=3D"mj-column-per-100 mj-outlook-group-fix component-wrapper" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:=
+100%;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"width:100%;" width=3D"100%">
+<tbody>
+<tr>
+<td class=3D"" style=3D"vertical-align:top;padding-top:0px;padding-right:0p=
+x;padding-bottom:0px;padding-left:0px;">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"" width=3D"100%">
+<tbody>
+<tr>
+<td style=3D"background:#FFFFFF;font-size:0px;word-break:break-word;">
+<div style=3D"height:20px;line-height:20px;">=E2=80=8A</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!--[if true]></td><![endif]-->
+</div>
+<!--[if true]></tr></table><![endif]-->
+</div>
+<!--[if mso | IE]></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!--[if mso | IE]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<img src=3D"https://ctrk.klclick.com/o/01KN27P1G9KAJQ5480EX3H9R36" alt=3D""=
+ width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !important;width=
+:1px !important;border-width:0 !important;margin-top:0 !important;margin-bo=
+ttom:0 !important;margin-right:0 !important;margin-left:0 !important;paddin=
+g-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;p=
+adding-left:0 !important;"/>
+
+</body></html>
+--0a41a4dccbf61e5ab69280bb3d2172dba96de1a958d85df5f3adcbc63aae--

@@ -1,0 +1,10 @@
+{
+  "status": "pending",
+  "browser_capture": {
+    "status": "manual_browser_required",
+    "reason": "no_display",
+    "message": "No X server / DISPLAY is available for the interactive Google Takeout browser flow.",
+    "downloads_dir": "./workspace/starworks5-google-voice-downloads",
+    "started_at": "2026-04-04T20:34:32Z"
+  }
+}

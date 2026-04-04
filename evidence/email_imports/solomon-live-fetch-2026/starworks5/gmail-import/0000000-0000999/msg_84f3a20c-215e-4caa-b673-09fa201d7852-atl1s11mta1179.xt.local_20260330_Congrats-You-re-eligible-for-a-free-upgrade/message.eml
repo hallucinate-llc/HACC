@@ -1,0 +1,1164 @@
+Delivered-To: starworks5@gmail.com
+Received: by 2002:a05:7208:552b:b0:fa:5ef1:c6ed with SMTP id t43csp1434401rbf;
+        Mon, 30 Mar 2026 09:29:41 -0700 (PDT)
+X-Received: by 2002:a05:6214:3490:b0:895:4bec:c629 with SMTP id 6a1803df08f44-89ce8ee0807mr160339156d6.31.1774888180900;
+        Mon, 30 Mar 2026 09:29:40 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1774888180; cv=none;
+        d=google.com; s=arc-20240605;
+        b=DcOoFXCFXKjZGIAAY/hUjb+lQIcYZC8S3VtUS1V8ydCxCqeBU7AQz9p4HsTSGI8dGt
+         Qu6U9SwGqOrsRnAsYU0wPXPLvClRNBkBu2qkzTyP1JfD5LEJsCm1HyhNIwyfOO9KWN1T
+         InlQJb58LBvuG8AQmwWeSOM5wyAwhqeBUO1xF+PTJE3bFp5opztfPAOc+cYLCNsOcdhq
+         uL0dtzznEsVXtFm/jDW5JUP+xMUMEi2CeacJR9gsMG7gKSdGkwDNJbO7fqpqiItCFfAL
+         a4+CNsZMW/53kx/OhuQgpu9je89UCijavJ5eCcE8Rt8rH9DGan6AmHlDVWGI1yvVDrT9
+         XjLw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:reply-to:mime-version:list-unsubscribe-post
+         :list-unsubscribe:date:subject:to:from:dkim-signature:dkim-signature;
+        bh=mII5vjyVM1lEtADqm1DhyfIZZe3JrGK0932rUO752jw=;
+        fh=2cWgZxr3ZTQFvuwFmykEv+kjBencnAUTD29jO6/FMx4=;
+        b=Ouw6RtN/m+vLB4S0+15o7X2wiQROwLgaJiMpJ0ZmR0Jyn2X9dB3/R5oYjwjiqby2sH
+         ixXuAKOQhmOBG99/9UXAJcyO8zp52NdUV8aG6xGm2z0bdgI03hz397Yla0W1cqDOiN2j
+         U3LgE6Is4cikr6pjgg0jV308qqZaiJD+0c9G5NBu/npMrynHQVDldjdOx/U14ZooRFGq
+         PjGSa6w8wi7UgleCcCAn6uNXzZ2PY6MIXfjsYxIvhQAHzK1qLgi7u6Ah/FeIo2fpCV2f
+         tEmQ7e9adF8Kekq1uN5WG6hDILYrotXwP7XdAoFYTRabcmDBLm9KZBLtto704yljfrTf
+         AtnA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@msg.amazonmusic.com header.s=11dkim1 header.b=S7eLnQM0;
+       dkim=pass header.i=@s11.y.mc.salesforce.com header.s=fbldkim11 header.b=fRz3a9XF;
+       spf=pass (google.com: domain of bounce-tgl66rtz3xkunov7gl5dulx5xi.110053@bounce.msg.amazonmusic.com designates 128.245.70.201 as permitted sender) smtp.mailfrom=bounce-TGL66RTZ3XKUNOV7GL5DULX5XI.110053@bounce.msg.amazonmusic.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=msg.amazonmusic.com
+Return-Path: <bounce-TGL66RTZ3XKUNOV7GL5DULX5XI.110053@bounce.msg.amazonmusic.com>
+Received: from mta4.msg.amazonmusic.com (mta4.msg.amazonmusic.com. [128.245.70.201])
+        by mx.google.com with ESMTPS id 6a1803df08f44-89ecbaac5b6si95257326d6.1.2026.03.30.09.29.40
+        for <starworks5@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 30 Mar 2026 09:29:40 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-tgl66rtz3xkunov7gl5dulx5xi.110053@bounce.msg.amazonmusic.com designates 128.245.70.201 as permitted sender) client-ip=128.245.70.201;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@msg.amazonmusic.com header.s=11dkim1 header.b=S7eLnQM0;
+       dkim=pass header.i=@s11.y.mc.salesforce.com header.s=fbldkim11 header.b=fRz3a9XF;
+       spf=pass (google.com: domain of bounce-tgl66rtz3xkunov7gl5dulx5xi.110053@bounce.msg.amazonmusic.com designates 128.245.70.201 as permitted sender) smtp.mailfrom=bounce-TGL66RTZ3XKUNOV7GL5DULX5XI.110053@bounce.msg.amazonmusic.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=msg.amazonmusic.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=11dkim1; d=msg.amazonmusic.com;
+ h=From:To:Subject:Date:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:
+ Reply-To:Message-ID:Content-Type; i=no-reply@msg.amazonmusic.com;
+ bh=mII5vjyVM1lEtADqm1DhyfIZZe3JrGK0932rUO752jw=;
+ b=S7eLnQM0LuYHijd8dxYjvF8jCXTPtzuwOlDMO0YaAC12+w4k/l38EOiVtFgS+rnjf/e0UGXl4/rP
+   3x4Uuke4iQDJoTF2BILvOv/ONXzrwZeSOKeFM6//VZUeKpOj2sxjxthMxQhRSqCiC7byCWL6JB+f
+   iIOUWiQaKh1Za7/LuaRKvx+Wv4AuzksiRoQFTMGby15TVvQbeucGZGsA7Y95jZ/G7px60mFEygGl
+   Va8Io9pieXbcFm7ESuEFF+ZIkdpfN5KsiGaNFaoSu3VlDDcv/ggkY3kkzs1C9AQHAP/uB6VsXUrh
+   jZ6bJD9gMpwSz7swlzZr0PTr5j2ghQGMgc+GKg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=fbldkim11; d=s11.y.mc.salesforce.com;
+ h=From:To:Subject:Date:List-Unsubscribe:MIME-Version:Reply-To:Message-ID:
+ Content-Type;
+ bh=mII5vjyVM1lEtADqm1DhyfIZZe3JrGK0932rUO752jw=;
+ b=fRz3a9XF7zgmOpu3dplcAhOz7TAlnUL66RPzLynjen63tzgeUrlYDsBBO2XoywizqEm5jcFXeltF
+   3xnj/EZOdwLTSYIUFG5PLc0ONE4IPmwFcpobyAq9E5tmEVtro2c9iI4l5nV0HXXDe8CC8iy0WtsS
+   F70b6FnA/CtciE15DORIiDLEYtm/lYF7PgDWy4cOQberRkMPHLr5rn/rIJree12mMs31VKPidQIS
+   tu35fWadI9y1Pb5a+pfgVfmf3v15g3mPDbL67eXeXrOdV4UOUHhcybtg8dIcEhSUvSdfIC6tpsEH
+   DH/L/62ftbXf4DUALXWGJD28ppUt50DJfnBa5Q==
+Received: by mta4.msg.amazonmusic.com id hpaif82fmd45 for <starworks5@gmail.com>; Mon, 30 Mar 2026 16:29:30 +0000 (envelope-from <bounce-TGL66RTZ3XKUNOV7GL5DULX5XI.110053@bounce.msg.amazonmusic.com>)
+From: "Amazon Music" <no-reply@msg.amazonmusic.com>
+To: <starworks5@gmail.com>
+Subject: =?UTF-8?B?Q29uZ3JhdHMhIFlvdSdyZSBlbGlnaWJsZSBmb3IgYSBmcmVlIHVw?=
+ =?UTF-8?B?Z3JhZGUg8J+OtQ==?=
+Date: Mon, 30 Mar 2026 10:29:30 -0600
+List-Unsubscribe: <https://click.msg.amazonmusic.com/subscription_center.aspx?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtaWQiOiI1MTQwMTgzNzYiLCJzIjoiMzQzMzY2ODAwIiwibGlkIjoiODkwIiwiaiI6Ijg2MjQ5NiIsImpiIjoiODM0NSIsImQiOiIxMTAwNTMifQ.ZsLuamiF2MCFf_fcG0jZO-BucrvDXZicWAQEYRMD50k>, <mailto:leave-5SJCE7ZNSPUEPMYIUX4BVM7LMQ.110053@leave.msg.amazonmusic.com>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+MIME-Version: 1.0
+Reply-To: "Amazon Music" <reply-R76J32FX5GRENCYDP5J2D24H5Y.110053@msg.amazonmusic.com>
+x-messageKey: ceaa147c-3d46-4e24-87e2-fdb607007b12
+X-SFMC-Stack: 11
+x-job: 514018376_862496
+Message-ID: <84f3a20c-215e-4caa-b673-09fa201d7852@atl1s11mta1179.xt.local>
+Feedback-ID: 514018376:862496:128.245.70.201:sfmktgcld
+Content-Type: multipart/alternative;
+	boundary="6VjqObLKL6Ya=_?:"
+
+This is a multi-part message in MIME format.
+
+--6VjqObLKL6Ya=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+ 
+
+
+
+ 
+
+ 
+span, td, table, div {
+ 
+-webkit-font-smoothing: antialiased;
+ 
+-moz-osx-font-smoothing: grayscale;
+    }
+    .st-email-body{
+ 
+width:100% !important;
+ 
+-webkit-text-size-adjust: 100%;
+ 
+margin: 0 auto!important;
+ 
+padding: 0px;
+ 
+background-color: #ffffff;
+    }
+
+    span.st-preheader{
+ 
+display: none!important;
+    }
+
+    td img + div {
+ 
+display: none;
+    }
+
+    a[href^="tel"],
+    a[href^="sms"]{text-decoration: none; color: inherit !important; pointer-events: none; cursor: default;}
+    u + .st-email-body a {color: inherit; text-decoration: none; font-size: inherit; font-family: inherit; font-weight: inherit; line-height: inherit;}
+ 
+*[x-apple-data-detectors] {color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important;}
+
+    a,a:hover,a:link,a:visited {
+ 
+outline: none;
+ 
+text-decoration: underline;
+    }
+
+    p {
+ 
+margin: 0;
+ 
+padding: 0;
+    }
+
+    .st-hide-desktop {
+ 
+display:none;
+ 
+font-size:0;
+ 
+height:0;
+ 
+min-height:0;
+ 
+max-height:0;
+ 
+line-height:0;
+ 
+mso-hide:all;
+    }
+
+    .st-gmail-fix { display: none !important; }
+
+    @media screen and (max-width: 480px) {
+ 
+.st-col,.st-mobile-full-width,.st-module-wrapper-table,.st-wrapper,.st-wrapper-table{width:100%!important}.st-col{padding:0!important}.st-resize{width:100%!important}.st-mobile-width-constraint,.st-resize{display:block!important;height:auto!important}.st-mobile-width-constraint{max-width:100%!important}.st-equal-height,.st-height-auto{height:auto!important}.st-hide-desktop{display:table-row!important}.st-hide-mobile{display:none!important}.st-mobile-inline{display:inline!important}.show-img-mobile{display:table-row!important;width:100%!important;float:none;overflow:visible!important;height:auto!important}
+ 
+.st-dynamic-1301-4 { background-image:none!important; }
+.st-dynamic-1346-20, u + .st-email-body .st-dynamic-1346-20 img { width:100%!important;max-width:29px!important; }
+.st-dynamic-1346-23 { padding-top:0px!important; }
+.st-dynamic-1453-66 { padding-right:20px!important;padding-left:20px!important; }
+.st-dynamic-1447-68 { padding-top:32px!important;padding-bottom:32px!important; }
+.st-dynamic-1486-71 { padding-right:80px!important; }
+ 
+.st-wrapper-table{
+ 
+width: 100%!important;
+ 
+max-width: 480px!important;
+ 
+margin: 0 auto;
+ 
+}
+ 
+}
+ 
+#MessageViewBody .st-module-wrapper-table  {margin-top:-1px}
+ 
+@media (max-width:599px) and (min-width:481px) {.st-module-wrapper-table {margin-top:-1px !important;}}
+ 
+div > u + .body .st-module-wrapper-table {margin-top:0px !important}
+ 
+ul, ol {margin-left:15px; padding-left:0px}
+ 
+.aligned-bullets ul{list-style-position: outside!important;}
+.aligned-bullets ol{list-style-position: outside!important;}  
+.miw-200 a{min-width:180px!important;} 
+.minw-91 {min-width:91px!important;} 
+.underline p {text-decoration: underline!important;}
+ .minh-20 {border-radius: 8px!important;}
+.br0 {border-radius: 0px!important;}
+@media screen and (max-width: 480px) {
+.mob-b-0{border:0px!important;}
+.mob-pb-20{padding-bottom:20px!important;}
+.mob-ps-0{padding-right:0px!important;padding-left:0px!important;}
+ .mob-ps-20{padding-right:20px!important;padding-left:20px!important;} 
+  .mob-ps-70{padding-right:70px!important;padding-left:70px!important;} 
+.miw-200 a{min-width:180px!important;} 
+.minw-32 img{min-width:32px!important;} 
+.center-element td{margin: 0 auto!important; text-align:center!important;}
+.center-element {text-align:center!important;} 
+.center-element table{margin: 0 auto!important;} 
+
+.center-element p{text-align:center!important;} 
+.center-element span{text-align:center!important;}
+
+.center-element img{ margin: 0 auto!important;}
+
+.cta-full-width table{width:100%!important;} 
+.cta-full-width a{width: 390px!important;}
+
+.icw-block img{display: inline-block; border: 0; height: auto;}
+.icw-tbl table{padding: 0;}
+.manual-tbl img{display: inline-block; height: 275px; width: 275px; border: 0;}
+.img-cta table tr td img {margin-top: -20px;}
+  
+}
+ :root {color-scheme: light dark;supported-color-schemes:light dark;}
+
+ @media (prefers-color-scheme: dark) {
+   .light-img {display:none!important;}
+   .dark-img { display:block!important; }
+  .bg-darkmode {background-color:#000000!important;}
+   .bg-darkmode td p span{color:#ffffff!important;}
+ }
+ @media (prefers-color-scheme: light) {
+   .light-img {display:block!important;}
+   .dark-img { display:none!important;}
+
+ }
+[data-ogsc] .dark-img {display:block!important;}
+[data-ogsb] .dark-img {display:block!important;}
+[data-ogsc] .light-img {display:none!important;}
+[data-ogsb] .light-img {display:none!important;}
+[class^="apple-mail"] .dark-img {display:block!important;}
+[class^="apple-mail"] .light-img {display:none!important;}
+ 
+.__scope__d9bplhr3cto .minh-20 {min-height: 20px !important;}
+ 
+Amazon Music Family Plan
+ 
+‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+ 
+https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6ImZhM2QwZDA2LTAzZTItNDI2NS05MGI2LWMwYzdiMGFkODlhZiIsImRla1ZlcnNpb24iOjEsIml2IjoiQkptWkRNQ2pXRFdJQmk1UlFvbkh0UT09IiwiY2lwaGVyVGV4dCI6Ijk1WEcxVytOTWUrMklSVGVjOTNET2NkSGppd1VBazBOeVFreDFQTEUwMDBoVXovZStTQzdCYUF6RlVHczlIdnlTblhDbmpxSGZlaDFVSDJtWS9Za2ZGK28vNk9LOE1pOE1hcEEzQUVFbVprTXdLTllOWWdHTGxGQ2ljZTEiLCJhdXRoVGFnIjoiOWlSOFg2ai9vNHJ3eUx3eHFrRGNBUT09In0%3D
+ 
+https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6ImIzYTI4MTVmLTY5YzUtNDcyNC1iYzExLTkwOTlkOGY4NWYwZCIsImRla1ZlcnNpb24iOjEsIml2IjoidndTdXE4SGVOSnFINjFMdThBbDM2dz09IiwiY2lwaGVyVGV4dCI6InBIYW1OUDVJclJKM3VRQWR3QzNKNVV2cDYyd2hGWGMvSk9nUVpKaEo3OUd1NitwNFAwdDR6ZXpjVEpqODF1cUZ1VWVLVVdMa1d2VWNZRDhNZFhvM1FpVEZ6TlMzUFhvbUJoSklZR2UvQks2cndkNDBtb2ZyVXU3d0NYZnIiLCJhdXRoVGFnIjoiZWpkQ0pNWE0xTGM5ZWlZR0VraGdadz09In0%3D
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+ 
+https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6IjU0ZTU2MzFiLWRkMTMtNDk5OS1hMjE3LWQ5Nzc3MmE4YTE4OCIsImRla1ZlcnNpb24iOjEsIml2Ijoiekx2YitGMlF6c2F5WlYzWkR6Wmd4dz09IiwiY2lwaGVyVGV4dCI6IklJVEREOEQ4a0FtYlB5SjNVZXF2V3I0YzZwVUtpRDhZVmtMT2EwM0ZmVlFiNWkrdXFzbllQVUlzNUZpRHdmdC9KUUtxQUllUHFpcXpFa0tDOU81WWtaYWVTMVNIOE9iYjFPOUVFQW5NdTl2NFhaRE94ckpsWGRrUE5tREgiLCJhdXRoVGFnIjoiN2xpUmxwNUxWSWZ3NXR2VTcwUVFDUT09In0%3D
+ 
+
+ 
+
+ 
+Dear benjamin barber,
+ 
+Upgrade to the Amazon Music Unlimited Family Plan at no additional cost for 2 months when you switch from your current subscription.
+
+You and up to five family members can access million of songs – any time, anywhere – on all of your devices. Subscription continues at $21.99/month. Terms and conditions apply.
+
+Current plan subscription fee applies throughout trial. Renews automatically at $21.99/month after.
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+Try Now 
+https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6ImQ2NjIxOWUxLWZiZDAtNGVhMi1iZDVmLTZlNGUzZTllOTIyYSIsImRla1ZlcnNpb24iOjEsIml2IjoiMktpV3VOUndGbUpWL2JmWk1OYmlKQT09IiwiY2lwaGVyVGV4dCI6IjZPdXd0ZHhqbGFqZVdudEh4UlZzYVhRR1BhWjFZTm8zRHFodW9nUEwyaUQ2SUduNTBCVWFyNkwwYVBvK0ViUWhDRndST2ZMSmdyak9IVjgrYjVGNnN2Mm5aM2NrMkl4WFFhMFBBTWpZcUphNDFIQVdZbFg5dDlrdzF1SWsiLCJhdXRoVGFnIjoia1hxeS9hZG5keVRZakZkQnJROEF5QT09In0%3D
+ 
+Try Now
+https://www.amazon.com/music/unlimited/oneclicksignup
+ 
+
+
+
+
+
+
+ 
+ 
+ 
+
+https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6IjYxYzIyYWRkLTA1MjMtNDVhMi1hZWQyLWIxNzY3NDkyZTY3ZSIsImRla1ZlcnNpb24iOjEsIml2IjoiVFR2eThRYXFGUW1yZytBa1FEOFVsQT09IiwiY2lwaGVyVGV4dCI6IjhWQXkxWnRuTzBwbFZKSWdRTWg3N3k1YkhPNW5zYVhzN29rUmNVSUFFcmhXbURGVC9FU3VYVzAvVzhURkhRRmZrRkJnWXFXRTlvbm5QMENidkpSWXlhNGs0bnJvbGhpSjNrMDc4dkVHcWhVSnE0UGdKRUEvRkpRPSIsImF1dGhUYWciOiJQMENidkpSWXlhNGs0bnJvbGhpSjNnPT0ifQ%3D%3D 
+iOS APP
+
+https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6ImE0Y2QzMTIxLWQ3N2MtNDFmYy05M2JiLTk0NWYwNGFkNmNmYyIsImRla1ZlcnNpb24iOjEsIml2IjoiQnJnMWR0SlZGZHhEUFJETUF2ZUhIdz09IiwiY2lwaGVyVGV4dCI6IlY4bVpIbGhWbnRYaThJYkxUNnU0Z0xzOUgxc1Bha2xrdTlzdlBEVVQxSzR3ZC9SOFVhRXlFaE52RGcwWVZlMWJST1l1SVF4ajNrYWVyRnpSa05lZjE5eEV2U2pSek9SN0xBYTROWGJTVlJYY1F6MFF6QUwzaHg4PSIsImF1dGhUYWciOiJyRnpSa05lZjE5eEV2U2pSek9SN0xBPT0ifQ%3D%3D 
+ANDROID APP
+
+
+  
+ 
+
+https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6IjRhOTM5ODc1LWY4Y2UtNDhmOS1iYmZiLTM1MWMzMzVjNzc4YSIsImRla1ZlcnNpb24iOjEsIml2IjoiTVY2bEkrUS9jWFVBMHhtU2tGVFc0UT09IiwiY2lwaGVyVGV4dCI6Ik04aVNDV2xPd2VVeHBUZktKcjFrTDQzVHVMQVltWDJCeFlUZlZCVW9IWWE2OUZWa29aUCtTQ3pQcUZWelVEVGJoQlNKVHV4K004b01OckVaWUV5UFd4YWpIN2YwL2hucGhERmVwU1BrUDNGMUFOTVprcEJVMXVFPSIsImF1dGhUYWciOiJOckVaWUV5UFd4YWpIN2YwL2hucGhBPT0ifQ%3D%3D 
+
+https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6IjBmZWY0NTAwLTAzMjgtNGVmYy1iYjYzLTM0M2YxMjVmNDJkMiIsImRla1ZlcnNpb24iOjEsIml2IjoiZ3RmMS9hYnEzaUlzbWd1M0JMdlVlUT09IiwiY2lwaGVyVGV4dCI6IjRRL3BOeFNncnczMjdTd2N0YUs5WkwrZGR3Q0xVUXNFdlQvQTNKT0s0TWhFTG82NTIwTWNZRGxCRFpQVlkxM3BqNHloZ2RFYVlhTzBEOWJhNW1vRytJS2J2YXpqbWpmcVJZTFg5ZjJtNnQ0aUxKb0x0d1M3MUhrPSIsImF1dGhUYWciOiJEOWJhNW1vRytJS2J2YXpqbWpmcVJRPT0ifQ%3D%3D 
+
+https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6ImQ5MWRlOWY4LTU4YzEtNGE5Yi1iZGI1LTU1NzZmNzRhNzBhNiIsImRla1ZlcnNpb24iOjEsIml2IjoiZUF1SUtIVVZOdGhMMnhVL2NOWFdnZz09IiwiY2lwaGVyVGV4dCI6IlhrRjBKa0F1VFdmdWJhejVkanRmQkpQRndBb3VyOEtqeUF0azVUeTZtaEJXLzFZQWp3M0M3cmtLUXd1dkQ5WWJZcVVkcFk4d0ZiZDh5NjVrNm85Ly83NUtzcjNjZGo0SkhIZ0xpQ2gxRlRiWVM5c1ZQM0RWMW9JPSIsImF1dGhUYWciOiJ5NjVrNm85Ly83NUtzcjNjZGo0SkhBPT0ifQ%3D%3D 
+
+https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6IjdiMDkzMTAzLWM2MjItNDBhMS04NjBkLWJhYjE2NWE3YjM2MCIsImRla1ZlcnNpb24iOjEsIml2IjoiZGt5ZTJSSzVqek9WclJPbWlnYW10Zz09IiwiY2lwaGVyVGV4dCI6ImZnQXBBNzk5RVFHc3Zsb3ZQZ2VLNW95dC91aS85MnlzcU0veGdQd2pSUGd1U2YzZFRkajM0dVJJWEE5TzVoNXpBNDZvQmc4R3RiRXl6S2RacU41NmQ2UVFCM0NEemo3Q01uWk1udGtTdVk4emxhMFRwb29HcHJZPSIsImF1dGhUYWciOiJ6S2RacU41NmQ2UVFCM0NEemo3Q01nPT0ifQ%3D%3D 
+
+https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6ImU5OWRhYjMyLWI5ZTUtNDFjZC05ZWM0LWNkZTQzMjMyMzQ0MyIsImRla1ZlcnNpb24iOjEsIml2Ijoid0c3YmRZZ2E3RXBrYWx6SHVUaEIyQT09IiwiY2lwaGVyVGV4dCI6IjZhMmwrZTZ3bmIwMkFsVmkzWFlFTnNZaEFaTHd3NEtJc1cwL29HNndxV09zcUt6ckdEQWRObTFiMHNkWEFONUZUcjhwM01HcVNvU0c1Mzh3VGJGRnhZSDlSMTQxZEp2WSs4QnUyM1dJR3V4S1pHcGN4N2s0UWRnPSIsImF1dGhUYWciOiI1Mzh3VGJGRnhZSDlSMTQxZEp2WSt3PT0ifQ%3D%3D 
+
+https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6Ijc1YTNkYjdiLWQ2ZGQtNDYxYy04MmRkLWE1ZTI1NTVhNjU5ZSIsImRla1ZlcnNpb24iOjEsIml2IjoiYmNxdnJXRWFYS0VsdENydDZRVkh4QT09IiwiY2lwaGVyVGV4dCI6IjZoeWtQRG0xeXBEWFl2aldPVFRqQXBmekNPUmZJSzNNSS9tUnlMYXRUZ2VrWDF6MXR1NUVkMHJFVnorZ3F2bUp1MDRGTUM4MklZeElCMG54ZWVZVy9oMWxYbHV1bGhwQXpHM0tyNjFoR2x5aEpiUXE3ZWtGUjhRPSIsImF1dGhUYWciOiJCMG54ZWVZVy9oMWxYbHV1bGhwQXpBPT0ifQ%3D%3D 
+
+https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6ImRmNjA0ZjdmLTZkNDMtNDFiNC1hZDA1LTRhNGRjNWE4NDlkYiIsImRla1ZlcnNpb24iOjEsIml2IjoiejM4a2ZRbU9SSXNyaDRDWXF2eUdZUT09IiwiY2lwaGVyVGV4dCI6Im5XbGtlUjNGOTVlNC9KbmlUaXdsTmxKbHRLQUVDYS9SL09oNm9ubVBBcFU0QklSdXkxZ0hFcDJxZkJVMnpGVWkrSTBPd1pES1ZxRlVIWlhHbHJGSkhGQzk3am1OcFlRTTdjOS9KSDBKamtTTEs0ZUFtS3I4aG1FPSIsImF1dGhUYWciOiJIWlhHbHJGSkhGQzk3am1OcFlRTTdRPT0ifQ%3D%3D 
+
+https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6IjlmYzNlZGVhLWFlOGQtNDFjYi1hNmJkLWYxZjZkNWQ2NjU5OCIsImRla1ZlcnNpb24iOjEsIml2IjoicXJsSkFtUjZ2dFZxNWwwOFozWHVydz09IiwiY2lwaGVyVGV4dCI6IlBZTW8xa04yeDI3RU1iRzJNWGZKMGtMK3o2NVlFM2lYUU96eTBselhFZVRtTHBjc0xvK1I4cEUvQ3VQeTBUL05uUzRzWE9KYlhSN0JodzFQQ1JveVJmNmt5SUZWSXhnZUlxcTVTUUprZXI3VmF1WmRQR2QxN3E4PSIsImF1dGhUYWciOiJodzFQQ1JveVJmNmt5SUZWSXhnZUlnPT0ifQ%3D%3D 
+
+Add no-reply@amazonmusic.com, our new sender e-mail address, to your Safe Senders list to ensure receipt of messages from Amazon Music.
+
+ 
+
+ 
+ 
+ 
+ 
+Amazon Music provides weekly and occasional e-mail updates about new music, podcasts, and other music-related content. It is our intention to be helpful and informative. We're also sensitive to your time and remain committed to limiting our email to important updates as well critical information about your account. If you'd rather not receive any e-mail information from Amazon Music, please modify your Amazon Music preferences 
+https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6ImQxM2VlMGUwLTQ5YzctNGU0Ni05ZmJhLWNlYmRkZjllZDNhNiIsImRla1ZlcnNpb24iOjEsIml2IjoiZ054SGZ5ZmNQdGFvTzl0U1F2cGU4UT09IiwiY2lwaGVyVGV4dCI6IlRuRTk4NEpyalNMTW1NYmd2bkhkQ0NFd25zOGliZkVVZ0MyWkJKaEJ4dzFvb0lyS2JzSkpDQ3F6VE41Sk9BdklJdXFrRjBhL2JCQklNaUZaVG1wdGhmbnBIaUVVS1RaWUpGMG1zeGlBM0VkL0o5dysxcWc3MjFKQytsN3giLCJhdXRoVGFnIjoiYW0yRitla2VJUlFwTmxna1hTYXpHQT09In0%3D 
+here .
+
+ 
+
+ This free upgrade offer is a limited time offer and applies only to the Amazon Music Family plans and is available only to new Amazon Music Family subscribers with an active Amazon Music Unlimited Individual monthly plan. During the upgrade trial, you will continue to pay your current subscription of $12.99 ($11.99 for Prime members) per month and will receive a promotional credit covering the additional cost of your monthly Family Plan upgrade. After the promotional period, your subscription will automatically continue at the monthly price of $21.99 plus any taxes until you cancel. A new billing cycle will begin at sign-up, when you will be charged your current subscription rate of $12.99 ($11.99 for Prime members)  immediately, and will receive a refund of the remaining cycle of your previous plan in a few days. This offer cannot be combined with any other offer. Digital content and services may only be available to customers located in the U.S. and are subject
+ to the terms and conditions of Amazon.com Services LLC. Offer limited to one per customer and account. Amazon reserves the right to modify or cancel the offer at any time. Offer is non-transferable and may not be resold. If you violate any of these terms, the offer will be invalid. 
+
+ 
+
+(c)2026 Amazon.com, Inc. or its affiliates. All rights reserved. Amazon, Amazon Echo, Amazon Music, Prime, and all related logos are trademarks of Amazon.com, Inc. or its affiliates.Amazon.com, 410 Terry Avenue N., Seattle, WA 98109-5210.
+
+ 
+
+Please note that this message was sent to the following e-mail address: starworks5@gmail.com 
+
+ 
+
+Reference: 90831
+
+
+  
+ 
+
+
+
+
+ 
+ 
+ 
+
+
+--6VjqObLKL6Ya=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+      ReadMsgBody{ width: 100%;}
+      .ExternalClass {width: 100%;}
+      .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+      body {-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;margin:0 !important;}
+      p { margin: 1em 0;}
+      table td { border-collapse: collapse;}
+      img {outline:0;}
+      a img {border:none;}
+      @-ms-viewport{ width: device-width;}
+    </style>
+    <style type="text/css">
+      @media only screen and (max-width: 480px) {
+        .container {width: 100% !important;}
+        .footer { width:auto !important; margin-left:0; }
+        .mobile-hidden { display:none !important; }
+        .logo { display:block !important; padding:0 !important; }
+        img { max-width:100% !important; height:auto !important; max-height:auto !important;}
+        .header img{max-width:100% !important;height:auto !important; max-height:auto !important;}
+        .photo img { width:100% !important; max-width:100% !important; height:auto !important;}
+        .drop { display:block !important; width: 100% !important; float:left; clear:both;}
+        .footerlogo { display:block !important; width: 100% !important; padding-top:15px; float:left; clear:both;}
+        .nav4, .nav5, .nav6 { display: none !important; }
+        .tableBlock {width:100% !important;}
+        .responsive-td {width:100% !important; display:block !important; padding:0 !important; }
+        .fluid, .fluid-centered {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        .fluid-centered {
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        /* MOBILE GLOBAL STYLES - DO NOT CHANGE */
+        body { padding: 0px !important; font-size: 16px !important; line-height: 150% !important;}
+        h1 { font-size: 22px !important; line-height: normal !important;}
+        h2 { font-size: 20px !important; line-height: normal !important;}
+        h3 { font-size: 18px !important; line-height: normal !important;}
+        .buttonstyles {
+          font-family:arial,helvetica,sans-serif !important;
+          font-size: 16px !important;
+          color: #FFFFFF !important;
+          padding: 10px !important;
+        }
+        /* END OF MOBILE GLOBAL STYLES - DO NOT CHANGE */
+      }
+      @media only screen and (max-width: 640px) {
+        .container { width:100% !important; }
+        .mobile-hidden { display:none !important; }
+        .logo { display:block !important; padding:0 !important; }
+        .photo img { width:100% !important; height:auto !important;}
+        .nav5, .nav6 { display: none !important;}
+        .fluid, .fluid-centered {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        .fluid-centered {
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+      }
+    </style>
+    <!--[if mso]>       <style type="text/css">           /* Begin Outlook Font Fix */           body, table, td {               font-family: Arial, Helvetica, sans-serif ;               font-size:16px;               color:#000000;               line-height:1;           }           /* End Outlook Font Fix */       </style>     <![endif]-->
+  </head>
+  <body bgcolor="#ffffff" text="#000000" style="background-color: #ffffff; color: #000000; padding: 0px; -webkit-text-size-adjust:none; font-size: 16px; font-family:arial,helvetica,sans-serif;"><style type="text/css">
+div.preheader 
+{ display: none !important; } 
+</style>
+<div class="preheader" style="font-size: 1px; display: none !important;"></div>
+    <div style="font-size:0; line-height:0;"><img src="https://click.msg.amazonmusic.com/open.aspx?72XQ7QXJTRWEZJQMSY6EZVKCSQ.110053&d=110053&bmt=0" width="1" height="1" alt=""></div>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+      <tr>
+        <td align="center" valign="top">
+          
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <table cellspacing="0" cellpadding="0" border="0" width="600" class="container" align="center">
+            <tr>
+              <td>
+                <table class="tb_properties border_style" style="background-color:#FFFFFF;" cellspacing="0" cellpadding="0" bgcolor="#ffffff" width="100%">
+                  <tr>
+                    <td align="center" valign="top">
+                      <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <!-- added padding here -->
+                          <td class="content_padding" style="">
+                            <!-- end of comment -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tr> <!-- top slot -->
+                                <td align="center" class="header" valign="top">
+                                  <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                        <tr>
+                                          <td align="left" valign="top">
+                                            <table cellspacing="0" cellpadding="0" style="width:100%">
+                                              <tbody>
+                                              <tr>
+                                                <td class="responsive-td" valign="top" style="width: 100%;">
+                                                  
+
+
+
+
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+
+ 
+  <!--[if gte mso 9]><xml>    <o:OfficeDocumentSettings>    <o:AllowPNG/>    <o:PixelsPerInch>96</o:PixelsPerInch>    </o:OfficeDocumentSettings>    </xml>   <![endif]-->
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width">
+
+          <title></title>
+
+  <style type="text/css">
+    
+    span, td, table, div {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    .st-email-body{
+        width:100% !important;
+        -webkit-text-size-adjust: 100%;
+        margin: 0 auto!important;
+        padding: 0px;
+        background-color: #ffffff;
+    }
+
+    span.st-preheader{
+        display: none!important;
+    }
+
+    td img + div {
+        display: none;
+    }
+
+    a[href^="tel"],
+    a[href^="sms"]{text-decoration: none; color: inherit !important; pointer-events: none; cursor: default;}
+    u + .st-email-body a {color: inherit; text-decoration: none; font-size: inherit; font-family: inherit; font-weight: inherit; line-height: inherit;}
+    
+    *[x-apple-data-detectors] {color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important;}
+
+    a,a:hover,a:link,a:visited {
+        outline: none;
+        text-decoration: underline;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .st-hide-desktop {
+        display:none;
+        font-size:0;
+        height:0;
+        min-height:0;
+        max-height:0;
+        line-height:0;
+        mso-hide:all;
+    }
+
+    .st-gmail-fix { display: none !important; }
+
+    @media screen and (max-width: 480px) {
+            
+                            .st-col,.st-mobile-full-width,.st-module-wrapper-table,.st-wrapper,.st-wrapper-table{width:100%!important}.st-col{padding:0!important}.st-resize{width:100%!important}.st-mobile-width-constraint,.st-resize{display:block!important;height:auto!important}.st-mobile-width-constraint{max-width:100%!important}.st-equal-height,.st-height-auto{height:auto!important}.st-hide-desktop{display:table-row!important}.st-hide-mobile{display:none!important}.st-mobile-inline{display:inline!important}.show-img-mobile{display:table-row!important;width:100%!important;float:none;overflow:visible!important;height:auto!important}
+                .st-dynamic-1301-4 { background-image:none!important; }
+.st-dynamic-1346-20, u + .st-email-body .st-dynamic-1346-20 img { width:100%!important;max-width:29px!important; }
+.st-dynamic-1346-23 { padding-top:0px!important; }
+.st-dynamic-1453-66 { padding-right:20px!important;padding-left:20px!important; }
+.st-dynamic-1447-68 { padding-top:32px!important;padding-bottom:32px!important; }
+.st-dynamic-1486-71 { padding-right:80px!important; }                
+                .st-wrapper-table{
+                    width: 100%!important;
+                    max-width: 480px!important;
+                    margin: 0 auto;
+                }
+                    }
+                    #MessageViewBody .st-module-wrapper-table  {margin-top:-1px}
+            @media (max-width:599px) and (min-width:481px) {.st-module-wrapper-table {margin-top:-1px !important;}}
+            div > u + .body .st-module-wrapper-table {margin-top:0px !important}
+            </style>
+<!--[if !mso]><!-->
+    <style>
+    ul, ol {margin-left:15px; padding-left:0px}
+    </style>
+<!--<![endif]-->
+<!--[if mso]>     <style>         table{             border-collapse: collapse;         }                  span.MsoHyperlink {             mso-style-priority:99;             color:inherit;         }         span.MsoHyperlinkFollowed {             mso-style-priority:99;             color:inherit;         }         ol li, ul li {margin-top:0px !important;margin-bottom:0px !important;}     </style> <![endif]-->
+
+<!--[if gte mso 9]>     <style>         .st-mso-full-width{             width: 100%;         }             </style> <![endif]-->
+
+<!--[if IEMobile]>     <style type="text/css">         .st-mso-full-width{             width: 100%;         }     </style> <![endif]-->
+
+    <style>
+.aligned-bullets ul{list-style-position: outside!important;}
+.aligned-bullets ol{list-style-position: outside!important;}  
+.miw-200 a{min-width:180px!important;} 
+.minw-91 {min-width:91px!important;} 
+.underline p {text-decoration: underline!important;}
+ .minh-20 {border-radius: 8px!important;}
+.br0 {border-radius: 0px!important;}
+@media screen and (max-width: 480px) {
+.mob-b-0{border:0px!important;}
+.mob-pb-20{padding-bottom:20px!important;}
+.mob-ps-0{padding-right:0px!important;padding-left:0px!important;}
+ .mob-ps-20{padding-right:20px!important;padding-left:20px!important;} 
+  .mob-ps-70{padding-right:70px!important;padding-left:70px!important;} 
+.miw-200 a{min-width:180px!important;} 
+.minw-32 img{min-width:32px!important;} 
+.center-element td{margin: 0 auto!important; text-align:center!important;}
+.center-element {text-align:center!important;} 
+.center-element table{margin: 0 auto!important;} 
+
+.center-element p{text-align:center!important;} 
+.center-element span{text-align:center!important;}
+
+.center-element img{ margin: 0 auto!important;}
+
+.cta-full-width table{width:100%!important;} 
+.cta-full-width a{width: 390px!important;}
+
+.icw-block img{display: inline-block; border: 0; height: auto;}
+.icw-tbl table{padding: 0;}
+.manual-tbl img{display: inline-block; height: 275px; width: 275px; border: 0;}
+.img-cta table tr td img {margin-top: -20px;}
+  
+}
+ :root {color-scheme: light dark;supported-color-schemes:light dark;}
+
+ @media (prefers-color-scheme: dark) {
+   .light-img {display:none!important;}
+   .dark-img { display:block!important; }
+  .bg-darkmode {background-color:#000000!important;}
+   .bg-darkmode td p span{color:#ffffff!important;}
+ }
+ @media (prefers-color-scheme: light) {
+   .light-img {display:block!important;}
+   .dark-img { display:none!important;}
+
+ }
+[data-ogsc] .dark-img {display:block!important;}
+[data-ogsb] .dark-img {display:block!important;}
+[data-ogsc] .light-img {display:none!important;}
+[data-ogsb] .light-img {display:none!important;}
+[class^="apple-mail"] .dark-img {display:block!important;}
+[class^="apple-mail"] .light-img {display:none!important;}
+</style>
+
+<style type="text/css">.__scope__d9bplhr3cto .minh-20 {min-height: 20px !important;}</style>
+
+ 
+ 
+    
+     <table width="640" border="0" cellspacing="0" cellpadding="0" style="margin:0 auto;" align="center">
+        <tr style="display: none;">
+          <td display="none" align="left" style="font-family: Helvetica, Arial, sans-serif; font-size:12px; color:rgba(0, 0, 0, 0); color: transparent; display: none;">Amazon Music Family Plan
+          </td>
+        </tr>
+      </table>  
+            
+      <div style="font-size:0px; display:none; visibility:hidden; opacity:0; color:transparent; max-height:0px; height:0; width:0; mso-hide:all;">
+           &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;
+ &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; 
+              </div>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" class="st-wrapper-table" style="width: 100%;">
+  <tr>
+    <td width="100%" valign="top" bgcolor="#FFFFFF" align="center" class="st-dynamic-1301-4">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="600" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;">
+        <tr>
+          <td width="100%" bgcolor="#FFFFFF" valign="top" class="bg-darkmode" style="width: 100%;">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="st-mso-full-width st-mobile-full-width" style="width: 600px;">
+              <tr>
+                <td width="100%" align="center" valign="top" style="width: 100%;">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
+                    <tr>
+                      <td width="100%" valign="top" align="center" style="width: 100%;">
+
+                        
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" valign="top" bgcolor="#FFFFFF" align="center" class="st-dynamic-2325-4">
+      <!-----Header----->
+
+
+        <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="600" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;">
+          <tr>
+            <td width="100%" bgcolor="#FFFFFF" valign="top" class="bg-darkmode" style="width: 100%; padding-top: 5px; padding-bottom: 5px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="st-mso-full-width st-mobile-full-width" style="width: 600px;">
+                <tr>
+                  <td width="100%" align="center" valign="top" style="width: 100%;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
+                      <tr>
+                        <td width="100%" align="center" valign="top" class="__scope__ik9r6ebcacg" style="width: 100%;">
+                          <table width="100%" class="ce-dark-mode" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td align="center" cellpadding="0" cellspacing="0" border="0" style="text-align: center; font-size: 0px; line-height: 0px; margin:0px; padding:0px; border-collapse: collapse;">
+                                <div class="light-img">
+                                  <a href="https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6ImM1NWM5Y2JmLWUzZmItNGM4Ny05MGY5LTg1MzU1ZWQ1ZmM3OSIsImRla1ZlcnNpb24iOjEsIml2IjoieE1tWCtwVHUvVURjQ1JqeE44amdXZz09IiwiY2lwaGVyVGV4dCI6ImlFRERUaHhVdVpxTTVNL1c0NnZ5bTM4NlgvNXVrMVVYNzIyU083M2lnSGJOdTAzcnBJNFBYZTVSU3JRcEpJamJuOSsxYzZCOUlHd1ZYL0pmTlJZM2dnUE53TWpZNnM4WFlMQ1ZsT1BFeVpmNmxPNzlRTndKR1BFM3lPQmEiLCJhdXRoVGFnIjoiRmplQ0E4M0F5TmpxenhkZ3NKV1U0dz09In0%3D" title="Amazon Music" target="_new">
+                                    <img src="https://m.media-amazon.com/images/G/01/AmazonMusic/2025/GrowthMarketing/Promotions/PD25Promos/PD25_Sitewide_GC-181/Outbound/Untitled_design.png" width="240" alt="Amazon Music" style="width: 240px !important;">
+                                  </a>
+                                </div>
+                                <div class="dark-img">
+                                  <!--[if !mso]><!-->
+                                  <div class="dark-img" style="display:none;">
+                                    <a href="https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6ImUwNGU0MzMxLTc0Y2MtNDZiYy05OTk3LWY4ZDBjOTU5MTRhNiIsImRla1ZlcnNpb24iOjEsIml2IjoiT09xU1ZQRm5leFJtbWJNVmFuck0xQT09IiwiY2lwaGVyVGV4dCI6IkFWYWVGclBpR0RKVXQyS0hGQWx6YkxHdnBmOUVZV0doL09weXg1dFQ1UWpjWXJXaHE0UDBKUVFxWGVYSzBvT0dqTlNDWjRHRHhiRlJ1RmpGQjRNTDBWRStnUGQ0VHpLdHMxajk0aEk0NnBKVThXZDdGR2Fac3hWcWVzelUiLCJhdXRoVGFnIjoiZ3d2UlVUNkE5M2hQTXEyeldQM2lFZz09In0%3D" title="Amazon Music" target="_new">
+                                      <img src="https://m.media-amazon.com/images/G/01/AmazonMusic/2025/GrowthMarketing/Promotions/PD25Promos/PD25_Sitewide_GC-181/Outbound/Untitled_design.png" width="240" alt="Amazon Music" style="width: 240px !important;">
+                                    </a>
+                                  </div>
+                                  <!--<![endif]-->
+                                </div>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <!----END-Header----->
+
+       </td>
+  </tr>
+
+  <tr>
+    <td width="100%" valign="top" bgcolor="#FFFFFF" align="center" class="st-dynamic-1301-4">
+        <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="600" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;">
+
+  <tr>
+    <td width="100%" valign="top" bgcolor="#FFFFFF" align="center" class="st-dynamic-1301-4">
+        <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="600" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;">
+       
+          <tr>
+            <td width="100%" bgcolor="#FFFFFF" valign="top" class="bg-darkmode" style="width: 100%; padding-right: 20px; padding-left: 20px;">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="width: 100%;">
+                <tr>
+                  <td width="100%" valign="top" align="left">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="560" class="st-mso-full-width st-mobile-full-width" style="width: 560px;">
+                      <tr>
+                        <td width="100%" align="center" valign="top" style="width: 100%;">
+
+  
+
+  
+                                                    
+                          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
+                            
+                            
+                            
+                            
+                              
+                           
+                            
+                              
+                            
+
+                                                        
+                            
+                            
+                            
+                           <tr>
+                              <td width="100%" valign="top" align="left" style="text-align: left; font-family: Roboto, Helvetica, sans-serif; color: #727576; font-size: 20px; font-weight: 400; letter-spacing: normal; line-height: 24px; padding-top: 8px; width: 100%;">
+                                <p style="text-align:  left; margin: 0px;"><span style="font-size: 20px; line-height: 30px;"><b>Dear benjamin barber</b>,</span></p>
+                              </td>
+                            </tr>             
+                            
+                            
+                           <tr>
+                              <td width="100%" valign="top" align="left" style="text-align: left; font-family: Roboto, Helvetica, sans-serif; color: #14191a; font-size: 20px; font-weight: 400; letter-spacing: normal; line-height: 30px; padding-top: 12px; width: 100%;">
+                                <p style="text-align: left; margin: 0px;"><span style="font-size: 20px; line-height: 30px;">Upgrade to the Amazon Music Unlimited Family Plan at no additional cost for 2 months when you switch from your current subscription.<br><br>You and up to five family members can access million of songs – any time, anywhere – on all of your devices. Subscription continues at $21.99/month. Terms and conditions apply.<br><br>Current plan subscription fee applies throughout trial. Renews automatically at $21.99/month after.</span></p>
+                              </td>
+                            </tr>
+                            
+                            
+                            
+                            
+               
+                            
+    
+                            
+                
+                            
+                            
+                            
+                  
+                            
+ 
+                
+                            
+                            
+                            
+                            <!-- US Marketplace Button -->
+                            <tr>
+                              <td width="100%" valign="top" align="center" class="miw-200" style="padding-top: 12px; width: 100%;"><!--[if mso]>         <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" style="height:41pt; v-text-anchor:middle; width:165pt; mso-position-horizontal: center" arcsize="183%" strokecolor="#25D1DA" strokeweight="0pt" fillcolor="#25D1DA">           <w:anchorlock/>           <v:textbox inset="0,0,0,0"><p style="text-align: center; font-family: Arial, Helvetica, Sans-serif; color: #14191A; font-size: 20px; font-weight: normal; letter-spacing: normal; mso-line-height-rule: exactly; line-height: 22px"><![endif]-->
+                                <!--[if !mso]><!-->
+                                <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse: initial;">
+                                  <tr>
+                                    <td width="100%" bgcolor="#25D1DA" align="center" height="5" valign="middle" style="mso-padding-alt:16px 40px 16px 40px; border-radius:99px; height: 5px; width: 100%; text-align: center; background-color: #25d1da; vertical-align: middle">
+                                      <!--<![endif]--> <a href="https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6IjIzNWExMWI1LTNjYTMtNDc5YS04ZmExLTU5ZTI2MDNiMzFjMyIsImRla1ZlcnNpb24iOjEsIml2IjoiQXdJc3FBQ3ErSVZiTGQyZDB6RU9FZz09IiwiY2lwaGVyVGV4dCI6Im1SQkZZTzNpYW51YzE3R1VvcytHQUNtY3hSNUFkelVYbmN3ejdCMEJuY21Nc0t2NXNiUkV2WktpZllLYWtwbGhJdktIN01zODd4ZjNvV0RndEs1bFI0QU9lazJ1bTJILy9SdWdpUVlEQWl5b0FLcjRoVnN0M1ozVE1RNFMiLCJhdXRoVGFnIjoicm1WSGdBNTZUYTZiWWYvOUc2Q0pCZz09In0%3D" target="_blank" title="" bgcolor="#25D1DA" valign="middle" style="mso-line-height-rule:exactly; text-align:center; font-family: Arial, Helvetica, sans-serif; color: #14191a; font-size: 20px; font-weight: normal; letter-spacing: normal; line-height: 22px; padding: 16px 40px; text-decoration: none; display: table-cell; height: 5px; border-radius: 99px; vertical-align: middle; box-sizing: content-box"> <span style="margin: 0px; color: #14191a;"><strong>
+<span style="font-size: 20px; line-height: 22px;">Try Now </span></strong></span></a>
+                                      <!--[if !mso]><!-->
+                                    </td>
+                                  </tr>
+                                </table> <!--<![endif]-->
+                                <!--[if mso]>             </p></v:textbox>           </v:roundrect>         <![endif]-->
+                              </td>
+                            </tr>  
+
+  
+
+
+                            
+
+                          
+                          
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+       
+        </table>
+      </td>
+  </tr>
+
+        </table>
+      </td>
+  </tr>
+  <tr>
+    <td width="100%" valign="top" bgcolor="#FFFFFF" align="center" class="st-dynamic-1301-4">
+        <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="600" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;">
+
+    <!----Spacer------>
+          <!----   <tr>     <td width="100%" valign="top" bgcolor="#FFFFFF" align="center" class="st-dynamic-1732-2">       <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="600" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;">         <tr>           <td width="100%" bgcolor="#FFFFFF" valign="top" class="bg-darkmode" style="width: 100%;">             <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="st-mso-full-width st-mobile-full-width" style="width: 600px;">               <tr>                 <td width="100%" align="center" valign="top" style="width: 100%;">                   
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width: 100%;">                     <tr>                       <td width="100%" valign="top" align="center" style="padding: 0px; width: 100%;">                         <p height="20" width="100%" style="mso-line-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-adjust:100%; width: 100%; height: 20px; max-height: 20px; margin: 0px; font-size: 20px; line-height: 20px">                           &nbsp;                         </p>                       </td>                     </tr>                   </table>                 </td>               </tr>             </table>           </td>         </tr>       </table>     </td>   </tr>                <tr>     
+<td width="100%" valign="top" bgcolor="#FFFFFF" align="center" class="st-dynamic-2094-4">       <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="600" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;">         <tr>           <td width="100%" bgcolor="#FFFFFF" valign="top" class="bg-darkmode" style="width: 100%;">             <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="st-mso-full-width st-mobile-full-width" style="width: 600px;">               <tr>                 <td align="center" valign="top" width="600">                   <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">                     <tr>                       
+<td width="100%" valign="top" align="center" style="padding: 0px; width: 100%;">                         <p height="20" width="100%" style="mso-line-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-adjust:100%; width: 100%; height: 20px; max-height: 20px; margin: 0px; font-size: 20px; line-height: 20px">                           &nbsp;                         </p>                       </td>                     </tr>                   </table>                 </td>               </tr>             </table>           </td>         </tr>       </table>     </td>   </tr>---->
+
+  <!--[if false]><!-->
+  <tr>
+    <td class="st-gmail-fix" style="background-color: #FFFFFF;font-size:0; line-height: 0; height: 0; min-width: 600px;">
+      &nbsp;
+    </td>
+  </tr><!--<![endif]-->
+</table>
+
+
+
+</td></tr></table>
+
+</td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">  <!---FOOTER---->
+    
+    
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="600" class="st-wrapper st-wrapper-background st-module-wrapper-table" style="width: 600px;">
+        <tr>
+          <td width="100%" bgcolor="#FFFFFF" valign="top" class="bg-darkmode" style="width: 100%; padding-top: 52px;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="width: 100%;">
+              <tr>
+                <td width="100%" valign="top" align="left" class="st-dynamic-1578-234" style="padding-right: 30px; padding-left: 30px;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="left" width="100%" style="width: 100%;">
+                    <tr>
+                      <td width="270" valign="middle" style="padding-top: 10px; padding-bottom: 10px; width: 270px;">
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                          <tr>
+                            <td width="100%" valign="top" align="left" style="text-align: left; font-family: Helvetica, Arial, sans-serif; color: #000000; font-size: 19px; font-weight: normal; letter-spacing: normal; line-height: 23px; width: 100%;">
+                              <p style="text-align: center; margin: 0px;"><strong><span style="font-size: 19px; line-height: 23px;"><a href="https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6ImRjOWQzNTIxLTRmNWUtNDY5OS04OGJjLWMzYWFmNmI2MWFiNyIsImRla1ZlcnNpb24iOjEsIml2IjoiakxhWTdHZzNNdk1GbnFaSWVGYU1MQT09IiwiY2lwaGVyVGV4dCI6IlRRZVdOMEIzb2ZTU2NUM1lrUFJlS0UvQjBqdjFYa09HN2d0Z1ZIVjBlcitRUmRZY1dvUG5US28zZ0NtbUkzTnVQcUJFbGR0WnFwNGlZVjBsdkI3MW50MEtQREZMeUNicm80eTJtT3hvTnpMekJaNm1TSGhXakN3PSIsImF1dGhUYWciOiJZVjBsdkI3MW50MEtQREZMeUNicm93PT0ifQ%3D%3D" style="color: #000000; text-decoration: none !important;"><span style="color: #000000;">iOS APP</span></a></span></strong></p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td width="269" valign="middle" style="border-left: 1px solid #b9baba; padding-top: 10px; padding-bottom: 10px; width: 269px;">
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                          <tr>
+                            <td width="100%" valign="top" align="left" style="text-align: left; font-family: Helvetica, Arial, sans-serif; color: #000000; font-size: 20px; font-weight: normal; letter-spacing: normal; line-height: 24px; width: 100%;">
+                              <p style="text-align: center; margin: 0px;"><strong><span style="font-size: 20px; line-height: 24px;"><a href="https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6ImUyNmVkODA3LTJiMDAtNGE2MC1hMDExLTdhZDI3ZjYyNTYyNiIsImRla1ZlcnNpb24iOjEsIml2IjoiRit6Zkl2THhIU01WcU44aUM3S0phZz09IiwiY2lwaGVyVGV4dCI6IlJSTzdkS1ZrcmJBNkZCQkNNNWQxR0t1UkcyT2ZSdEJwb2RmMkE5ZnJLNmlJblJVMXpiMExEQUNtc2lIQWl2RHNtS3M4a1lDM001Z0I1VjBFdkdkbC9MUEFBYVhYMWlTbTB4ZnMzeUx5OFIwakZhamZJZ3V5aVdvPSIsImF1dGhUYWciOiI1VjBFdkdkbC9MUEFBYVhYMWlTbTB3PT0ifQ%3D%3D" style="color: #000000; text-decoration: none !important;"><span style="color: #000000;">ANDROID APP</span></a></span></strong></p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td width="100%" valign="top" align="left">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="st-mso-full-width st-mobile-full-width" style="width: 600px;">
+                    <tr>
+                      <td align="center" valign="top" width="600">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                          <tr>
+                            <td width="100%" valign="top" align="center" class="st-dynamic-1574-236" style="padding: 52px 20px; width: 100%;">
+                              <p height="1" width="100%" style="mso-line-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-adjust:100%; width: 100%; height: 1px; max-height: 1px; background-color: #b9baba; margin: 0px; font-size: 1px; line-height: 1px">
+                                &nbsp;
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              
+              
+              
+              <tr>
+                <td width="100%" valign="top" align="left" style="padding-top: 21px; padding-right: 30px; padding-left: 30px;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="left" width="100%" style="width: 100%;">
+                    <tr>
+                      <td width="336" valign="top" class="st-dynamic-1591-239" style="padding-right: 5px; padding-left: 5px; width: 336px;">
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                          <tr>
+                            <td width="100%" align="center" valign="top" class="__scope__kidhq" style="width: 100%;">
+                              <table width="100%" class="ce-dark-mode" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="left" cellpadding="0" cellspacing="0" border="0" style="text-align: left; font-size: 0px; line-height: 0px; margin:0px; padding:0px; border-collapse: collapse;">
+                                    <div class="light-img">
+                                      <a href="https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6IjVhN2I3ZjhiLTE5OWQtNGIyZC04OTNmLWY1OGEyNDAxOGViOSIsImRla1ZlcnNpb24iOjEsIml2IjoiMXZzQkNZSW1QZjdoTTg5Nzd0c0Fadz09IiwiY2lwaGVyVGV4dCI6IitnbDArbjRSejdKa2F5c0l3NEJZeXY3MnFqTlVPeGh2RnhrVFhDTi8ydUJyYTROVVlSNjhWaFVhOG4weWtYVlBkMTlRajFoWHFTV2hzalBnY2hTbHU0OXNpMzNxN2ZrUjY5YjdBUW1DSmozKzRUUFBlKzdiQUdjPSIsImF1dGhUYWciOiJzalBnY2hTbHU0OXNpMzNxN2ZrUjZ3PT0ifQ%3D%3D" title="Amazon Music" target="_new">
+                                        <img src="https://www.emailimagecdnlut9.com/e6jhl3v5kb/en_us/images/645a756645b41-1683649894.2855.png" width="166" alt="Amazon Music" style="width: 166px !important;">
+                                      </a>
+                                    </div>
+                                    <div class="dark-img">
+                                      <!--[if !mso]><!-->
+                                      <div class="dark-img" style="display:none;">
+                                        <a href="https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6ImE1Njg3YTE3LTMxYTktNGQ5Ni1hZjhlLWNjMzhmYmU5YzhiOSIsImRla1ZlcnNpb24iOjEsIml2IjoibjhGMExkNzVmL1cyYzBlK0U0cFIwZz09IiwiY2lwaGVyVGV4dCI6Ik8zWGRVT1NvVkUyNTZIYWptYUdLaVVkSm9Xa1MyWVVERW9SWG0xaGZmSms4UDZ6aDNkaDBYUHBqTVJlcVFKMncwenJqdzNvY01vdEZsRmVaOEUwZ1N4aEVoeHpuVnRSK2I1L0JkQzNlK1gvMXRuTkh2aE9LVWRJPSIsImF1dGhUYWciOiJsRmVaOEUwZ1N4aEVoeHpuVnRSK2J3PT0ifQ%3D%3D" title="Amazon Music" target="_new">
+                                          <img src="https://www.emailimagecdnlut9.com/e6jhl3v5kb/en_us/images/645a7554631ce-1683649876.406.png" width="166" alt="Amazon Music" style="width: 166px !important;">
+                                        </a>
+                                      </div>
+                                      <!--<![endif]-->
+                                    </div>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td width="55" valign="top" style="padding-right: 5px; padding-left: 5px; width: 55px;">
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                          <tr>
+                            <td width="100%" align="center" valign="top" class="__scope__gvre4" style="width: 100%;">
+                              <table width="100%" class="ce-dark-mode" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="center" cellpadding="0" cellspacing="0" border="0" style="text-align: center; font-size: 0px; line-height: 0px; margin:0px; padding:0px; border-collapse: collapse;">
+                                    <div class="light-img">
+                                      <a href="https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6IjQ0OWQyMDBkLThkMTMtNGQ3MC05MmUzLTg0MDE5NDJkNjc4MSIsImRla1ZlcnNpb24iOjEsIml2IjoiaGZSSXdzbHVvV2NLTTJyMHZqZCt6dz09IiwiY2lwaGVyVGV4dCI6IjNsMkd3Tm5sdUQyc2RIWjNtb0tWSzd2UUlrdC8vSkk2emJ4Ky9GQURHVUh0VDhBQUl3YkR2SVgxTnFMWWpVRDgxS1FXdEcvQ0w0SU9vaDVmYmtxK3ZSQmEyUDlBeVRaeTM0WDBTTUxKYnFGbkNqTnE5TDQzZnM4PSIsImF1dGhUYWciOiJvaDVmYmtxK3ZSQmEyUDlBeVRaeTN3PT0ifQ%3D%3D" title="Amazon Music" target="_new">
+                                        <img src="https://m.media-amazon.com/images/G/01/AmazonMusic/2024/Marketing/OutboundAcqTemplateExperiments/Instagram_alpha_1.png" width="45" alt="Amazon Music" style="width: 45px !important;">
+                                      </a>
+                                    </div>
+                                    <div class="dark-img">
+                                      <!--[if !mso]><!-->
+                                      <div class="dark-img" style="display:none;">
+                                        <a href="https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6IjEzMTkxZjUyLTE0YjctNDViYS04YzlmLWFlNzliMWYyMzg3YyIsImRla1ZlcnNpb24iOjEsIml2IjoiT2NrU0hPak1oUlNJWkdkMGZUUDdaZz09IiwiY2lwaGVyVGV4dCI6InB3REFMOFl0YmdUbVBTUXArNFh4QTFKaHBCMnZNTXpjMGhEN3E5eUU2ZjY3c0tHTWJBWGxsUmJWSzMrZitQWGJaNHc5blJKVGlPT25OOVprcFFpY3ZLT0Iwc0hhS1d5ZGp6bkpFaHpveklVVWlHUm5kSDB6KzJZPSIsImF1dGhUYWciOiJOOVprcFFpY3ZLT0Iwc0hhS1d5ZGp3PT0ifQ%3D%3D" title="Amazon Music" target="_new">
+                                        <img src="https://m.media-amazon.com/images/G/01/AmazonMusic/2024/Marketing/OutboundAcqTemplateExperiments/Instagram_alpha.png" width="45" alt="Amazon Music" style="width: 45px !important;">
+                                        </a>
+                                      </div>
+                                      <!--<![endif]-->
+                                    </div>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td width="55" valign="top" style="padding-right: 5px; padding-left: 5px; width: 55px;">
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                          <tr>
+                            <td width="100%" align="center" valign="top" class="__scope__0b20r" style="width: 100%;">
+                              <table width="100%" class="ce-dark-mode" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="center" cellpadding="0" cellspacing="0" border="0" style="text-align: center; font-size: 0px; line-height: 0px; margin:0px; padding:0px; border-collapse: collapse;">
+                                    <div class="light-img">
+                                      <a href="https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6Ijg0YzJhY2U5LTIwYzEtNGMxYS05ZWRhLTJjOTAzOWZmMzMzOSIsImRla1ZlcnNpb24iOjEsIml2IjoiaHFxcDkyYTdtQ1QzS0IyN3N6T1EwZz09IiwiY2lwaGVyVGV4dCI6InRYTk4ycjVLNi9yc2tNUWpkVHJXOVFNSWh5c1Q0TEZlcmlGTzBjZit2ZS9qQTY2S2RlSzhnN0RlZk9Ud3Y1azBxTUFnYXdsZmZNYkF5dlJHcWNnZXJvdFVKVmN4OUdOYy80YXFxZmRtdTVnazl5Z2R1N016a05JPSIsImF1dGhUYWciOiJ5dlJHcWNnZXJvdFVKVmN4OUdOYy93PT0ifQ%3D%3D" title="Amazon Music" target="_new">
+                                        <img src="https://m.media-amazon.com/images/G/01/AmazonMusic/2024/Marketing/OutboundAcqTemplateExperiments/Twitter_alpha_1.png" width="45" alt="Amazon Music" style="width: 45px !important;">
+                                      </a>
+                                    </div>
+                                    <div class="dark-img">
+                                      <!--[if !mso]><!-->
+                                      <div class="dark-img" style="display:none;">
+                                        <a href="https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6ImNlN2U5OWFmLTdhZWQtNDJhOC1hNmZmLTAyZTcxNWU4MDdmYiIsImRla1ZlcnNpb24iOjEsIml2IjoicGFkZERlcUxtRTEvOTBJeC9VdG0vQT09IiwiY2lwaGVyVGV4dCI6ImwwOGV6T1VDWlRQUmt1blZGZ0FwS3dKOFlDTXBkMWc4NnJzd3JwSCsweERlSzA0bVgzOEFWNjB5S0toK1dJeVg3QTcyVmlOTWZjSTh5NS9zSzZIRjdGREt3TmV1N1VjNXU2V25YUTNxaTVoTmYvZENNZjFMWnZ3PSIsImF1dGhUYWciOiJ5NS9zSzZIRjdGREt3TmV1N1VjNXV3PT0ifQ%3D%3D" title="Amazon Music" target="_new">
+                                        <img src="https://m.media-amazon.com/images/G/01/AmazonMusic/2024/Marketing/OutboundAcqTemplateExperiments/Twitter_alpha.png" width="45" alt="Amazon Music" style="width: 45px !important;">
+                                        </a>
+                                      </div>
+                                      <!--<![endif]-->
+                                    </div>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td width="54" valign="top" style="padding-right: 5px; padding-left: 5px; width: 54px;">
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                          <tr>
+                            <td width="100%" align="center" valign="top" class="__scope__jna3r" style="width: 100%;">
+                              <table width="100%" class="ce-dark-mode" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td align="center" cellpadding="0" cellspacing="0" border="0" style="text-align: center; font-size: 0px; line-height: 0px; margin:0px; padding:0px; border-collapse: collapse;">
+                                    <div class="light-img">
+                                      <a href="https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6ImFkNTBkYThiLTM5ZjktNDY5NC1iMjI0LWQwOTAwMGNlNDdlNyIsImRla1ZlcnNpb24iOjEsIml2IjoiYzRzTWhXSFZaOTdQR3F6cjgycmE5UT09IiwiY2lwaGVyVGV4dCI6IjFnWnFjOE9paC83dld1SzZmZjR4dkdQSnZaMVZaK2NKMGdHcVJ0M2Z5MURlcFE1V1IvZGwrMndYMnRaVVRKbXI4dmNYeitIKzRZb3IvWVVWNksvSG92VmFFK21VRTRNa21uT0xESVZoMVdmZXp4cXM2L05xMnZVPSIsImF1dGhUYWciOiIvWVVWNksvSG92VmFFK21VRTRNa21nPT0ifQ%3D%3D" title="Amazon Music" target="_new">
+                                        <img src="https://m.media-amazon.com/images/G/01/AmazonMusic/2024/Marketing/OutboundAcqTemplateExperiments/Facebook_alpha_1.png" width="45" alt="Amazon Music" style="width: 45px !important;">
+                                      </a>
+                                    </div>
+                                    <div class="dark-img">
+                                      <!--[if !mso]><!-->
+                                      <div class="dark-img" style="display:none;">
+                                        <a href="https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6IjY5ODlkYzY2LWM2ZmEtNGU4ZC04MzFmLWJkOGE5MmJiY2VhYSIsImRla1ZlcnNpb24iOjEsIml2IjoiSEM3blRGWGt0UFlOTFVvMVYvTFhHdz09IiwiY2lwaGVyVGV4dCI6IllvN1ZDV3NmcERUS3p0amQyN3EzWDRWcXY3SE1vekFpYVA2QTdvUXFCdkN5cUlZb2JqMjUxWnh1S0VwYlV0WW9MS3VOai80M2FrQXNHR2lzRU1pMitkOWxRTUJjSE5CbnRSd3U1MHhWNUxUMkRTMUtOVmZ5MXhzPSIsImF1dGhUYWciOiJHR2lzRU1pMitkOWxRTUJjSE5CbnRRPT0ifQ%3D%3D" title="Amazon Music" target="_new">
+                                        <img src="https://m.media-amazon.com/images/G/01/AmazonMusic/2024/Marketing/OutboundAcqTemplateExperiments/Facebook_alpha.png" width="45" alt="Amazon Music" style="width: 45px !important;">
+                                        </a>
+                                      </div>
+                                      <!--<![endif]-->
+                                    </div>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td width="100%" valign="top" align="left">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" class="st-mso-full-width st-mobile-full-width" style="width: 600px;">
+                    <tr>
+                      <td align="center" valign="top" width="600">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                          <tr>
+                          
+
+    
+                                <td width="100%" valign="top" align="left" style="text-align: left; font-family: Arial, Helvetica, sans-serif; color: #727576; font-size: 14px; font-weight: normal; letter-spacing: normal; line-height: 17px; padding-top: 20px; padding-right: 20px; padding-left: 20px; width: 100%;">
+                                  <p style="margin: 0px;"><span style="font-size: 14px; line-height: 17px;"></span></p>
+                                  
+                                  
+                                  
+ <p style="margin: 0px;"><span style="font-size: 14px; line-height: 17px;">Add no-reply@amazonmusic.com, our new sender e-mail address, to your Safe Senders list to ensure receipt of messages from Amazon Music.</span></p>
+                                  
+                                   <p style="margin: 0px;"><span style="font-size: 14px; line-height: 17px;">&nbsp;</span></p>
+                                  
+                                  
+                                  
+                                  <p style="margin: 0px;"><span style="font-size: 14px; line-height: 17px;">Amazon Music provides weekly and occasional e-mail updates about new music, podcasts, and other music-related content. It is our intention to be helpful and informative. We're also sensitive to your time and remain committed to limiting our email to important updates as well critical information about your account. If you'd rather not receive any e-mail information from Amazon Music, please modify your Amazon Music preferences <span style="text-decoration: underline;"><span style="text-decoration: underline;">
+<a style="text-decoration: underline;" href="https://click.msg.amazonmusic.com/?qs=eyJkZWtJZCI6ImFmMTUzNDMzLTJkZGMtNDQ4OS1hZTYxLTBiY2Q3YWE2ZWJmNyIsImRla1ZlcnNpb24iOjEsIml2IjoiUmJpdlhhUjhuaDFBQ0hab0lPVXlndz09IiwiY2lwaGVyVGV4dCI6IjgzVXFreHU1SHYwcXNhMTYyOU5aaXg1eThqVkhZOU1wRk1EaWp2NnhmOTlHRGVmWjNCYUxlV2U4c2xXVy9jSzVoRTFiZGcyOExlSXVwamRVb3JFUXVycE8yY25ZNG9CS1RwQkJLUkJGdUs5ZHBIeWVIVUFJZG1nZzVUS0QiLCJhdXRoVGFnIjoic1JDNnVrN1p5ZGppZ0VwT2tFRXBFQT09In0%3D">here</a></span></span>.</span></p>
+                                  
+     <p style="margin: 0px;"><span style="font-size: 14px; line-height: 17px;">&nbsp;</span></p>
+     <p style="margin: 0px;">
+<span style="font-size: 14px; line-height: 17px;"> This free upgrade offer is a limited time offer and applies only to the Amazon Music Family plans and is available only to new Amazon Music Family subscribers with an active Amazon Music Unlimited Individual monthly plan. During the upgrade trial, you will continue to pay your current subscription of $12.99 ($11.99 for Prime members) per month and will receive a promotional credit covering the additional cost of your monthly Family Plan upgrade. After the promotional period, your subscription will automatically continue at the monthly price of $21.99 plus any taxes until you cancel. A new billing cycle will begin at sign-up, when you will be charged your current subscription rate of $12.99 ($11.99 for Prime members)  immediately, and will receive a refund of the remaining cycle of your previous plan in a few days. This offer cannot be combined with any other offer. Digital content and services may only be available
+ to customers located in the U.S. and are subject to the terms and conditions of Amazon.com Services LLC. Offer limited to one per customer and account. Amazon reserves the right to modify or cancel the offer at any time. Offer is non-transferable and may not be resold. If you violate any of these terms, the offer will be invalid. </span></p>
+     <p style="margin: 0px;"><span style="font-size: 14px; line-height: 17px;">&nbsp;</span></p>
+                                  
+    <p style="margin: 0px;"><span style="font-size: 14px; line-height: 17px;">&copy;2026 Amazon.com, Inc. or its affiliates. All rights reserved. Amazon, Amazon Echo, Amazon Music, Prime, and all related logos are trademarks of Amazon.com, Inc. or its affiliates.Amazon.com, 410 Terry Avenue N., Seattle, WA 98109-5210.</span></p>
+    
+                                  <p style="margin: 0px;"><span style="font-size: 14px; line-height: 17px;">&nbsp;</span></p>
+                                  <p style="margin: 0px;"><span style="font-size: 14px; line-height: 17px;">Please note that this message was sent to the following e-mail address:  starworks5@gmail.com </span></p>
+     <p style="margin: 0px;"><span style="font-size: 14px; line-height: 17px;">&nbsp;</span></p>
+    <p style="margin: 0px;"><span style="font-size: 14px; line-height: 17px;">Reference: 90831</span></p>
+    
+                                             
+                              
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" valign="top" align="center" style="padding: 0px; width: 100%;">
+                              <p height="52" width="100%" style="mso-line-height-rule:exactly; mso-table-lspace:0pt; mso-table-rspace:0pt; text-size-adjust:100%; width: 100%; height: 52px; max-height: 52px; margin: 0px; font-size: 52px; line-height: 52px">
+                                &nbsp;
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    
+
+  <!---FOOTER----></td></tr></table>
+
+</td></tr></table>
+												  
+                                                </td>
+                                              </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr> <!-- main slot -->
+                                <td align="center" class="header" valign="top">
+                                  <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tbody>
+                                    <tr>
+                                      <td align="left" valign="top">
+                                        <table cellspacing="0" cellpadding="0" style="width:100%">
+                                          <tbody>
+                                          <tr>
+                                            <td class="responsive-td" valign="top" style="width: 100%;">
+                                              <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"> </td></tr></table>
+											  
+                                            </td>
+                                          </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+--6VjqObLKL6Ya=_?:--
+

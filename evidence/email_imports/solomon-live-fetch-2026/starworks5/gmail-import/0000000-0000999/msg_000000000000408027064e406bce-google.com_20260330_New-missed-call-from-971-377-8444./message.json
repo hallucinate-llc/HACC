@@ -1,0 +1,28 @@
+{
+  "artifact_dir": "/home/barberb/HACC/evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_000000000000408027064e406bce-google.com_20260330_New-missed-call-from-971-377-8444.",
+  "attachment_count": 0,
+  "attachments": [],
+  "body_preview": "<https://voice.google.com>\r\nHello benjamin barber,\r\n\r\nYou missed a call from (971) 377-8444.\r\ncall back\r\n<https://voice.google.com/calls?a=nc,%2B19713778444&e=starworks5@gmail.com&source=callback_email>\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for missed calls. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#calling>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA",
+  "cc": "",
+  "collect_all_messages": true,
+  "date": "Mon, 30 Mar 2026 16:34:04 +0000",
+  "eml_path": "/home/barberb/HACC/evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_000000000000408027064e406bce-google.com_20260330_New-missed-call-from-971-377-8444./message.eml",
+  "folder": "[Gmail]/All Mail",
+  "from": "Google Voice <voice-noreply@google.com>",
+  "matched_addresses": [],
+  "matched_fields": [
+    "body"
+  ],
+  "matched_terms": [
+    "barber"
+  ],
+  "message_id_header": "<000000000000408027064e406bce@google.com>",
+  "participants": [
+    "starworks5@gmail.com",
+    "voice-noreply@google.com"
+  ],
+  "raw_size_bytes": 10441,
+  "relevance_score": 1.0,
+  "subject": "New missed call from (971) 377-8444.",
+  "to": "starworks5@gmail.com"
+}

@@ -17,6 +17,40 @@ INTERVAL_SECONDS=30
 MAX_ITERATIONS=120
 RESUME_ARGS=()
 
+run_doctor_json() {
+    "$VENV_PYTHON" - <<'PY' "$VENV_PYTHON" "$IPFS_DATASETS_CLI" "$MANIFEST"
+import json
+import subprocess
+import sys
+
+python_bin, cli_path, manifest_path = sys.argv[1:]
+proc = subprocess.run(
+    [python_bin, cli_path, "email", "google-voice-takeout-doctor", manifest_path, "--json"],
+    capture_output=True,
+    text=True,
+    check=False,
+)
+combined = (proc.stdout or "").strip()
+if not combined:
+    combined = (proc.stderr or "").strip()
+start = combined.find("{")
+end = combined.rfind("}")
+if start != -1 and end != -1 and end >= start:
+    payload = json.loads(combined[start:end+1])
+else:
+    payload = {}
+    for line in combined.splitlines():
+        if ":" not in line:
+            continue
+        key, value = line.split(":", 1)
+        normalized = key.strip().lower().replace(" ", "_")
+        payload[normalized] = value.strip()
+    if not payload:
+        raise SystemExit(f"Could not parse doctor output: {combined}")
+print(json.dumps(payload))
+PY
+}
+
 while [[ $# -gt 0 ]]; do
     case "$1" in
         --manifest)
@@ -76,7 +110,7 @@ fi
 
 for (( iteration=1; iteration<=MAX_ITERATIONS; iteration++ )); do
     echo "=== Takeout watch iteration ${iteration}/${MAX_ITERATIONS} ==="
-    DIAGNOSIS_JSON="$("$VENV_PYTHON" "$IPFS_DATASETS_CLI" email google-voice-takeout-doctor "$MANIFEST" --json)"
+    DIAGNOSIS_JSON="$(run_doctor_json)"
     DIAGNOSIS="$("$VENV_PYTHON" - <<'PY' "$DIAGNOSIS_JSON"
 import json, sys
 payload = json.loads(sys.argv[1])
@@ -104,10 +138,14 @@ PY
         echo "Takeout acquisition is complete."
         exit 0
     fi
+    if [[ "$DIAGNOSIS" == "manual_browser_required" ]]; then
+        echo "Takeout acquisition requires a desktop browser session before it can continue."
+        exit 0
+    fi
 
     "$CONSUMER_WRAPPER" --resume-from-manifest "$MANIFEST" "${RESUME_ARGS[@]}"
 
-    POST_JSON="$("$VENV_PYTHON" "$IPFS_DATASETS_CLI" email google-voice-takeout-doctor "$MANIFEST" --json)"
+    POST_JSON="$(run_doctor_json)"
     POST_DIAGNOSIS="$("$VENV_PYTHON" - <<'PY' "$POST_JSON"
 import json, sys
 payload = json.loads(sys.argv[1])
@@ -116,6 +154,10 @@ PY
 )"
     if [[ "$POST_DIAGNOSIS" == "complete" ]]; then
         echo "Takeout acquisition completed during watch iteration ${iteration}."
+        exit 0
+    fi
+    if [[ "$POST_DIAGNOSIS" == "manual_browser_required" ]]; then
+        echo "Takeout acquisition is waiting for a desktop browser session."
         exit 0
     fi
 

@@ -1,0 +1,479 @@
+Delivered-To: starworks5@gmail.com
+Received: by 2002:a05:7208:20c8:b0:fa:5ef1:c6ed with SMTP id z8csp20774rbz;
+        Wed, 1 Apr 2026 03:41:28 -0700 (PDT)
+X-Received: by 2002:a05:690c:6d0f:b0:79a:55f5:a3f6 with SMTP id 00721157ae682-7a211c4943amr34736147b3.26.1775040088183;
+        Wed, 01 Apr 2026 03:41:28 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1775040088; cv=fail;
+        d=google.com; s=arc-20240605;
+        b=L1EGbUYACwK+oyNExnla7iv23Y5XHUxDirUapwJeOpvtZFQ5d0w6oRD58amPEzj1AB
+         ttoLyd4NYzsbhr9vkpOAp8kjdXiDFWrDssnzIbC9fjU4OLITVCtkP2AEaBE6XOmFNI3m
+         Qft8+MEyauYAkAj6wFy9uLmsZCWXRrHWAS1ggEFn38WZxurQ68RTSKkBHupJ5zyl3tHc
+         nu2oODfLX91UhFj3rmtilY+htJ+Z+YIqUrYKSaOxcpsdK4IftgG3RBkadwM93enJ+DSs
+         gxKoH+AHwxDfbTVc1rvl20dloxm7GJ765xYeHkxndsFpO4V+UjuDKKx84shx7OGTgHCs
+         rx0A==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:dkim-signature:dkim-signature;
+        bh=gRWaE0wgoVD50CeRoNhwGQKc/n4ohjHyO7j5YYC0oTI=;
+        fh=/GYdPL78wpHOnKlGGd5UPb5C8buvfYH9XM7oTXJN7Qw=;
+        b=fYjj1Ifjvjtm1Pkf68Mz4myZb6wh7JNyLVuJjpEpJ3Y1Rr7SS5oG/4Rkr+h9qTFisY
+         ekuqlrjOjX036VCDxGoIWyrINnEMz6rUv//2ul/4SF8z8BB51s5F4TdIMLq+GW4HkCiL
+         QNnwF7cwhnrH0/bBQg0KS9JpudWdMwH7Y1YdEWFTGShzdT7jlLXvyA3/QjkfMVqkg7ff
+         g/ixNmdq2A92VifCA9Etapx+WeNdHMOKl5eDuhRjN1x9ByjzxbEnRwUHmxXeyqXHcF3S
+         5cvO90DTAgA1muEMv3YKlsYpcUt3ShnvofYQ4oPopcbnpo71Qf3KRnFSbslkilUd8DY4
+         uoYQ==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@coreweave.com header.s=pps05102023 header.b=LXOKpGaR;
+       dkim=neutral (body hash did not verify) header.i=@coreweave.com header.s=google header.b=CyMv2WzP;
+       arc=fail (body hash mismatch);
+       spf=pass (google.com: domain of ext_kjedrzejczyk@coreweave.com designates 148.163.152.74 as permitted sender) smtp.mailfrom=ext_kjedrzejczyk@coreweave.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=coreweave.com;
+       dara=neutral header.i=@gmail.com
+Return-Path: <ext_kjedrzejczyk@coreweave.com>
+Received: from mx0b-0072dd01.pphosted.com (mx0b-0072dd01.pphosted.com. [148.163.152.74])
+        by mx.google.com with ESMTPS id 00721157ae682-7a1a31acdc4si42319397b3.182.2026.04.01.03.41.27
+        for <starworks5@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Wed, 01 Apr 2026 03:41:28 -0700 (PDT)
+Received-SPF: pass (google.com: domain of ext_kjedrzejczyk@coreweave.com designates 148.163.152.74 as permitted sender) client-ip=148.163.152.74;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@coreweave.com header.s=pps05102023 header.b=LXOKpGaR;
+       dkim=neutral (body hash did not verify) header.i=@coreweave.com header.s=google header.b=CyMv2WzP;
+       arc=fail (body hash mismatch);
+       spf=pass (google.com: domain of ext_kjedrzejczyk@coreweave.com designates 148.163.152.74 as permitted sender) smtp.mailfrom=ext_kjedrzejczyk@coreweave.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=coreweave.com;
+       dara=neutral header.i=@gmail.com
+Received: from pps.filterd (m0355331.ppops.net [127.0.0.1])
+	by mx0b-0072dd01.pphosted.com (8.18.1.11/8.18.1.11) with ESMTP id 6319hoNq3002508
+	for <starworks5@gmail.com>; Wed, 1 Apr 2026 10:41:27 GMT
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=coreweave.com;
+	 h=cc:content-type:date:from:in-reply-to:message-id:mime-version
+	:references:subject:to; s=pps05102023; bh=gRWaE0wgoVD50CeRoNhwGQ
+	Kc/n4ohjHyO7j5YYC0oTI=; b=LXOKpGaR1LYUWCt8MzrXd8UReL+Z2/j0tbDVga
+	YFCQnxmqVX3gz3mEepLk9ikLv3S0+9cMTzk+jputN9wnvVXqBUHUmjw9tPkJ1LTj
+	sJfY6TxydoPJRbGuLe2xvUEXhWKq1SvYRYiG9gAjXZ5mja38p7GYO5xw8NsGoKAA
+	XNa4jC4jXnpRBGfPcU7nHGjG8h2mebh1DS+3tyDDDmMpotCIa9CJpEfFvSCnl6fv
+	I7zKTo4nSpGzxkv+125gcStc7ChlJKYnTc3UILOVdHlyAyj5uI4SgGk8lKZxxq4A
+	shhlTAS4w61X2HxCB6pRy2dSfM2fHmHJ6F/GuabI+eE/bgtw==
+Received: from mail-pl1-f199.google.com (mail-pl1-f199.google.com [209.85.214.199])
+	by mx0b-0072dd01.pphosted.com (PPS) with ESMTPS id 4d8d0umwdu-1
+	(version=TLSv1.3 cipher=TLS_AES_128_GCM_SHA256 bits=128 verify=NOT)
+	for <starworks5@gmail.com>; Wed, 01 Apr 2026 10:41:27 +0000 (GMT)
+Received: by mail-pl1-f199.google.com with SMTP id d9443c01a7336-2b23af7d7e8so157299245ad.0
+        for <starworks5@gmail.com>; Wed, 01 Apr 2026 03:41:27 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1775040086; cv=none;
+        d=google.com; s=arc-20240605;
+        b=lSupWxdJpuvlO4EFuQs4zqtxTIp+Mf4jPlSvtJ7EVU2VB3JbzF7qabR+bt902vy34W
+         BaMeex2bvmfufTYvYuibnEAgyFVV0EdSYag0n697dXz97OnAlH5T6m8wv3eRVrqtupOn
+         CbtcEi7RedjHjvckwZmdDPyjJOXlXoAWtXU6fk6Bb9g+hQ4fRZPzcSsaYBu3RLUqiUUh
+         LiJVpNY/Mje21OxCXRU4NYeyBfyuSex4TBfjXzVO5k63zecMZlK/usxS9lpcvRFVcgq1
+         m5JsnzX0BYnLzOmDwp8jGfJ6FnAg9VzljHEqft+tTI+aLMWRfN6TCAdn9pz4/NXNIvgP
+         eFAA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:dkim-signature;
+        bh=tBwt1AmXI9htKeWvH/uflNRrXiVtBFBRZcH9ZkuBVxg=;
+        fh=/GYdPL78wpHOnKlGGd5UPb5C8buvfYH9XM7oTXJN7Qw=;
+        b=eQmZciYCcTZooAzR5MxUOaPgVC3Mj/c9H5U7xkT5ohgs8Xr+eX8LOv4X30IrzIVM8F
+         A1iDiAslfeU2QRKFppb9vOHxZK1kY9IGvznQxpokGr60Ojd90DnlC8a9+M8j/6eGZpa6
+         2ZsgBgDPJT3e5bSl0rycvnLFSqk2mkKk4RGx6lB4YKkUedwdl9eTn3YlknaC7qiUlvx7
+         ioR3dKqswAv/+ZygIdrDCEz0f6CsqhTJ/LhWXaByIj5DuSnHqcImn9fGU8ID9P6tcio2
+         CTQsn9nEGwLdWZyY7utTCRpWlMZZg1cPm60q6sC5m/+aywFboGq9m+BtmPVPjnymuHLt
+         ZGUw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=coreweave.com; s=google; t=1775040086; x=1775644886; dara=google.com;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:from:to:cc:subject:date:message-id:reply-to;
+        bh=tBwt1AmXI9htKeWvH/uflNRrXiVtBFBRZcH9ZkuBVxg=;
+        b=CyMv2WzPXIZ/bLLb04XVd1HLAteg1QVrV83pmMGu2Dnl+kaTCpOZQleeCvuUkYFkpM
+         CSY5Hr1yio9+sEr7DmeA5g/NsGpinWJAeTfqQXcFIhdYlYVWHO9fCaGVRhbxbiA/qAM/
+         HtVxbBHGJKpz7rJjmnMdAWBqKkFOaJrJhynwsHe3nKSaqGIc4vfybyctOjHPa69dPbbX
+         djj9m5J/oAFgFLEH0Sbqdk9LbeTmMpGTX3ca9SYG+DTiJG/UJRkwmZphOlIxsOiHGy7t
+         bQ9NxPLItbVx0nYAyVQdvyx9AzBKaJaUl+5K6yTo2fgQxu7S86t6MqduzjcObnqDaegH
+         8+qw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1775040086; x=1775644886;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:x-gm-gg:x-gm-message-state:from:to:cc:subject:date
+         :message-id:reply-to;
+        bh=tBwt1AmXI9htKeWvH/uflNRrXiVtBFBRZcH9ZkuBVxg=;
+        b=AaOP0Celf5gResfe9TzbVV0PCg2aRPEMbeepBy3wPkLWwJSo3yykZMun3r+W9dUzax
+         /gxoqrvcD232TJ3zWete0H3F/HgD/ZoJ6ud4gtiKJoN9WX8K2QyaxuRD/ZZZtJgKEaWT
+         Kvj0301/NRjs5KaHQaG56YK4EjOnB9Ijxz7X1YGl1gXHQ/FYwWNnCbBSDu0L/h/G4IFi
+         jkMHx8TXs2KxfJ6Pxvt2R74n/u/w05SHwBKc496gVvBu1B0UC+gtEhRs62o+M0XpV4kE
+         An+ZV1Ss3Dg2uexTvEK59JuOuNRZ0ShcIUB2VQHwFsT1i9PSlUE87YCG+oDMjo4Gykxe
+         xWuQ==
+X-Gm-Message-State: AOJu0YxrbAxSe4iDBgSThd2/ZuezSQ4Aj14JyrHYt9vl+kZTbpk+Q1Ss
+	fTP0mism1CpqfXmlBRdUh9OH/yeZ8Kn8++h7D65mPDno6B+e3N1QDodQgytuPI2r2d3BVKG1xl6
+	wW4wMjnnk+CBIU+8RT+0M83+CK8yVFNWbcxMsXUVJGTQg6HCocCVtJwb/vBcgEieCyolTanwY83
+	4XYioI73wmiH5Nb8YtxKaP/GY5zr/7gLNiNSm5/is+Xw==
+X-Gm-Gg: ATEYQzwxNZaIU3Eg5v0rPKRQOPfSdV811TuQcvmTQYrbIHm1EABj41SdE7TOvnkZ7LR
+	DwAGqRc0eGhyU4XlNhiP41gRHDNbQBCd0/9T2LGiFNhd9Q/sJW5KRLaeGbs9/+smvGTiSOTScaN
+	V/7QFkS/7WMJ3lzcGZQ1gLxR/mRD6/DOmuUQe8ulbrnEMlwgPZNMBIgz20EgwuqmPEEw3nadfP1
+	J47
+X-Received: by 2002:a17:903:1247:b0:2ae:c529:a13f with SMTP id d9443c01a7336-2b269b2614fmr31148665ad.14.1775040085914;
+        Wed, 01 Apr 2026 03:41:25 -0700 (PDT)
+X-Received: by 2002:a17:903:1247:b0:2ae:c529:a13f with SMTP id
+ d9443c01a7336-2b269b2614fmr31148385ad.14.1775040085187; Wed, 01 Apr 2026
+ 03:41:25 -0700 (PDT)
+MIME-Version: 1.0
+References: <CACTNmWJ9aKE-YdtVcmk3Pmt_72i6Fe=iPV5AcVPKRykVkKY74g@mail.gmail.com>
+ <CAMTdTS9YmRLnVoM1iREOE_OW+PDn0k2EQefhaJJL4xzqzkvAfA@mail.gmail.com>
+In-Reply-To: <CAMTdTS9YmRLnVoM1iREOE_OW+PDn0k2EQefhaJJL4xzqzkvAfA@mail.gmail.com>
+From: Kamil Jedrzejczyk <AR@coreweave.com>
+Date: Wed, 1 Apr 2026 12:41:09 +0200
+X-Gm-Features: AQROBzDQTdtly1W8i2CD1LkqK2ibi75bFsjWN9EjJzF4SX_Rv-p6l2wUGmhPAVI
+Message-ID: <CACTNmW+zD3iuCRNnYDNqn3F4OOi2O5EheXHZ0p_bH9mfxN1jJw@mail.gmail.com>
+Subject: Re: 2nd Attempt RE: CoreWeave Past Due - JusticeDAO
+To: benjamin barber <starworks5@gmail.com>
+Cc: Accounts Receivable <ar@coreweave.com>,
+        "Kamil Jedrzejczyk [C]" <ext_kjedrzejczyk@coreweave.com>
+Content-Type: multipart/related; boundary="000000000000bd84b9064e63b989"
+X-Proofpoint-ORIG-GUID: WfCwc1G8r5t9pncA5CFktMZpQeB47Q3-
+X-Authority-Analysis: v=2.4 cv=apy/yCZV c=1 sm=1 tr=0 ts=69ccf657 cx=c_pps
+ a=JL+w9abYAAE89/QcEU+0QA==:117 a=A5OVakUREuEA:10 a=l-fz8MELSNkA:10
+ a=VkNPw1HP01LnGYTKEx00:22 a=ahbaqjHlhroLXWnmo6YI:22 a=49RLrBNox7jfN7ZIe-09:22
+ a=pGLkceISAAAA:8 a=59x7OiLhAAAA:8 a=5oW94o6NmbAkXik0NekA:9 a=QEXdDO2ut3YA:10
+ a=iSBprb2jcBUmuXftAnUA:9 a=2q4O/K3rjNU7EHYdBHB6dYyilSc=:19
+ a=ZQFhZH1db4L7ycb9:21 a=lqcHg5cX4UMA:10 a=HXjIzolwW10A:10 a=T6a71-JsGAwA:10
+ a=324X-CrmTo6CU4MGRt3R:22 a=zY0JdQc1-4EAyPf5TuXT:22 a=r0nIxo0k5eNsyZar2h_5:22
+X-Proofpoint-GUID: WfCwc1G8r5t9pncA5CFktMZpQeB47Q3-
+X-Proofpoint-Spam-Details-Enc: AW1haW4tMjYwNDAxMDA5NyBTYWx0ZWRfX5C8vjuxgiGEA
+ ZgTmDBbSBTVoUqp9kn8Qt3VWo3q3sDrxHr0rm1dn6ReOCz5uD/REAZ8zquAFBehoTrs5Uuf48qU
+ hVY3FByzmQCDHnD7Z19JwnBUC9TaMmjw5Qy9rLFkmtPN8XvGRi0uXNhUzpgEG85ehZSby4rfGt9
+ d9oTZ+DUwPmr+tHo+n9zWK+MdaRfyqC2NMSD2gieaDMNddmuX76evqywI6KmmZmiRJ1XGdZthV7
+ +Sd6IlVhD7VXfJ1N4rQqB4essBDixTio6gI/r53kj3LGUC17ZceFBqVGEgc5Ev7fy9dEt+pRHvq
+ sMCjPO2YEJ630O5Qvn6Pw5Ox9abuOXfxtcT6jln2ndGcodTJYxQp/RL8hr57NrlAv7+nmd8UG+F
+ jE8mhlovZUMGOn4jtJE8GqPDZBDlwpJrRoETaCymsTJ+KZa734lCj2qJ91VBko1kcxVWvJXKfCf
+ i+sWGXO7PgPBetb76dw==
+X-Proofpoint-Virus-Version: 
+
+--000000000000bd84b9064e63b989
+Content-Type: multipart/alternative; boundary="000000000000bd84b8064e63b988"
+
+--000000000000bd84b8064e63b988
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Benjamin,
+
+Thank you for letting me know about the portal issue.
+
+Please be informed that the payment for invoice INV-144189 ($41.24)
+Date: 03/29/2026
+06:24PM EDT  has been declined due to insufficient funds. Could you please
+try again?
+
+Regarding the issue portal, could you please specify which one isn't
+working for you?
+
+I look forward to hearing from you soon!
+
+Best regards,
+Kamil Jedrzejczyk
+
+On Tue, 31 Mar 2026 at 15:15, benjamin barber <starworks5@gmail.com> wrote:
+
+> You have two types of payment portals, one of which works and one of which
+> doesn=E2=80=99t work even trying to process payments, specially the past =
+due
+> payment portal On Tue, Mar 31, 2026 at 2: 10 AM Kamil Jedrzejczyk <AR@
+> coreweave. com> wrote:
+>=20
+> You have two types of payment portals, one of which works and one of which
+> doesn=E2=80=99t work even trying to process payments, specially the past =
+due
+> payment portal
+>
+> On Tue, Mar 31, 2026 at 2:10=E2=80=AFAM Kamil Jedrzejczyk <AR@coreweave.c=
+om>
+> wrote:
+>
+>> Dear JusticeDAO,
+>>
+>> I hope this email finds you well.
+>>
+>> We are writing to follow up on the outstanding invoice that has yet to be
+>> settled despite previous reminders.
+>>
+>> [image: image.png]
+>>
+>> We kindly request that the payment status be shared urgently.
+>>
+>> Thank you for your prompt attention to this matter.
+>>
+>> Best regards,
+>> Kamil Jedrzejczyk
+>>
+>
+
+--000000000000bd84b8064e63b988
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><font face=3D"arial, sans-serif">Dear Benjamin,<br><br>Tha=
+nk you for letting me know about the portal issue.<br><br>Please be informe=
+d that the payment for invoice INV-144189 ($41.24) Date:=C2=A0</font>03/29/=
+2026 06:24PM EDT<font color=3D"rgba(26, 40, 61, 0.8)">=C2=A0</font><font fa=
+ce=3D"arial, sans-serif">=C2=A0has been declined due to insufficient funds.=
+ Could you please try again?<br><br>Regarding the issue portal, could you p=
+lease specify which one isn&#39;t working for you?<br><br>I look forward to=
+ hearing from you soon!<br><br>Best regards,<br>Kamil Jedrzejczyk</font></d=
+iv><br><div class=3D"gmail_quote gmail_quote_container"><div dir=3D"ltr" cl=
+ass=3D"gmail_attr">On Tue, 31 Mar 2026 at 15:15, benjamin barber &lt;<a hre=
+f=3D"mailto:starworks5@gmail.com">starworks5@gmail.com</a>&gt; wrote:<br></=
+div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;bor=
+der-left:1px solid rgb(204,204,204);padding-left:1ex"><div class=3D"msg-216=
+6531060407710711">
+
+
+
+
+
+<div style=3D"font-size:1px;color:rgb(255,255,255);line-height:1px;max-heig=
+ht:0px;opacity:0;overflow:hidden;display:none">
+You have two types of payment portals, one of which works and one of which =
+doesn=E2=80=99t work even trying to process payments, specially the past du=
+e payment portal On Tue, Mar 31, 2026 at 2:=E2=80=8A10 AM Kamil Jedrzejczyk=
+ &lt;AR@=E2=80=8Acoreweave.=E2=80=8Acom&gt; wrote:=E2=80=8A</div>
+
+
+
+<div style=3D"font-size:1px;color:rgb(255,255,255);line-height:1px;max-heig=
+ht:0px;opacity:0;overflow:hidden;display:none"></div>
+
+
+
+<div dir=3D"auto">You have two types of payment portals, one of which works=
+ and one of which doesn=E2=80=99t work even trying to process payments, spe=
+cially the past due payment portal<br></div><div><br><div class=3D"gmail_qu=
+ote"><div dir=3D"ltr" class=3D"gmail_attr">On Tue, Mar 31, 2026 at 2:10=E2=
+=80=AFAM Kamil Jedrzejczyk &lt;<a href=3D"mailto:AR@coreweave.com" target=
+=3D"_blank">AR@coreweave.com</a>&gt; wrote:<br></div><blockquote class=3D"g=
+mail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204=
+,204,204);padding-left:1ex"><div dir=3D"ltr">Dear JusticeDAO,<br><br>I hope=
+ this email finds you well.<br><br>We are writing to follow up on the outst=
+anding=C2=A0invoice that has yet to be settled despite previous reminders.<=
+br><br><img src=3D"cid:ii_mnee7f6c0" alt=3D"image.png" style=3D"width: 686p=
+x; max-width: 100%;"><br><br>We kindly request that the payment status be s=
+hared urgently.<br><br>Thank you for your prompt attention to this matter.<=
+br><br>Best regards,<br>Kamil Jedrzejczyk<br></div>
+</blockquote></div></div>
+</div></blockquote></div>
+
+--000000000000bd84b8064e63b988--
+--000000000000bd84b9064e63b989
+Content-Type: image/png; name="image.png"
+Content-Disposition: inline; filename="image.png"
+Content-Transfer-Encoding: base64
+Content-ID: <ii_mnee7f6c0>
+X-Attachment-Id: ii_mnee7f6c0
+
+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
+YII=
+--000000000000bd84b9064e63b989--

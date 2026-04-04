@@ -6,6 +6,7 @@
   "required": ["generatedAt", "summary", "singleCaseGuide", "kinds"],
   "properties": {
     "generatedAt": { "type": "string" },
+    "staleWhileRefreshing": { "type": "boolean" },
     "refreshRuntime": {
       "type": "object",
       "required": ["status", "running", "startedAt", "completedAt", "elapsedSeconds", "elapsedHuman"],

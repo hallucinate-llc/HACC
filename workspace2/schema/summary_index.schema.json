@@ -8,6 +8,7 @@
     "generatedAt": { "type": "string" },
     "recommendedFirstStop": { "type": "string" },
     "whyOpenThis": { "type": "string" },
+    "staleWhileRefreshing": { "type": "boolean" },
     "refreshRuntime": {
       "type": "object",
       "required": ["status", "running", "startedAt", "completedAt", "elapsedSeconds", "elapsedHuman"],

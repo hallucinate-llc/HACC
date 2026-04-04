@@ -364,6 +364,7 @@ Important:
 - This is still human-assisted browser automation, not an official consumer Takeout archive-creation API.
 - Google may require login, 2FA, re-authentication, or extra confirmation before export creation.
 - If the export is still processing after timeout, the wrapper stops after writing `takeout_capture.json`; rerun later or point the archive into the normal ingest path directly.
+- If no desktop display is available, the consumer wrapper now records a `manual_browser_required` state in the acquisition manifest instead of crashing, so you can resume later on a machine with a browser session.
 - The Drive fallback uses Drive read-only OAuth and searches for files whose names contain `takeout` by default; adjust the wrapper/CLI if your Drive export naming differs.
 - If Google Drive first exposes a Takeout folder and only later places zip parts inside it, the Drive fallback now traverses that folder automatically to find downloadable archive files.
 - When the wrapper has a recorded export kickoff time, the Drive fallback also narrows its search to artifacts modified after that timestamp so older unrelated Takeout files are less likely to match.

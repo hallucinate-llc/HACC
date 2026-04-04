@@ -1,0 +1,1341 @@
+Delivered-To: starworks5@gmail.com
+Received: by 2002:a05:7208:552b:b0:fa:5ef1:c6ed with SMTP id t43csp2239315rbf;
+        Tue, 31 Mar 2026 13:53:02 -0700 (PDT)
+X-Received: by 2002:ad4:5d68:0:b0:89c:47a0:390b with SMTP id 6a1803df08f44-8a439c9378emr15890346d6.47.1774990382049;
+        Tue, 31 Mar 2026 13:53:02 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1774990382; cv=none;
+        d=google.com; s=arc-20240605;
+        b=OCVdQN/6Hp5UQiuvdF6orErhYodzosbqwxFbZnoKDViakHyeIv4hfo++2zlU0ACI3c
+         TDYgXYL5oSa3MErs1dLR+FrhpRCDsN0rUVsBwHyVHhPx3z2mKYLloLvpUaHm5zNCsEEa
+         hf8FbHJ+7TFNFMf32YecKY3LIrvE1OlS2P6cohTcOdRQZ4CY28x4hW3RoFShnNiK095N
+         54mn1Ok529s5eEN0r3pgwKPejOXQfVU/c/Dradr4Tb2JcaSHNPMW8l4HpOJptcahEVZD
+         +gvKq/JjKa8rhNxStTq1XzcMSpoyXD7MalMD8EcwUQtB+SsaNMkrJTQ8M61UER9JM8BW
+         3OrQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:reply-to:subject:message-id:mime-version:from:date
+         :dkim-signature:dkim-signature;
+        bh=gbsL1DyYI3h3MG0CoLiNhlB2iRotKxyEAoMgXLpKK68=;
+        fh=gPPrbYv6bjiCeSNOMtV7+ATcg7xOVeWRNeqU1P80kc4=;
+        b=LqQXr5+MtQxcptuQkc0sirmWFEFzSQIJ028eS/TjeT9NAi7nLuM66Tkoc7mEuZme8O
+         QZZIQoQ/yLHSc31NgFdUVjpyvg5iJzi/VdAhqPKCJeadUdqNHV57RETqBqnxpkOzD+W9
+         3ubDZY4hrbhWTX71rc2NJ+lL/EsNCFoitrRdwgF9inBbvdih9GpRh9PvpkZkD1sNh5gc
+         FTyds1rBhx5AqSMTXS7uRhI2uTcwDVHj8rKzoMOyCfkLSf3SUf67uueKhoXdeQi6Ru+E
+         FfOGErKBXJCYwBAJym0yxJIiuDCSbmqAvOtI/Iux9AfJUhydDlzy1zFaPPViNdWrBARn
+         /Jbw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gotowebinar.com header.s=s1 header.b=Q2QvzQrZ;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=qHaI6wyM;
+       spf=pass (google.com: domain of bounces+2129455-8ebf-starworks5=gmail.com@msg.gotowebinar.com designates 149.72.66.116 as permitted sender) smtp.mailfrom="bounces+2129455-8ebf-starworks5=gmail.com@msg.gotowebinar.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gotowebinar.com
+Return-Path: <bounces+2129455-8ebf-starworks5=gmail.com@msg.gotowebinar.com>
+Received: from o26.logmeininc.com (o26.logmeininc.com. [149.72.66.116])
+        by mx.google.com with ESMTPS id 6a1803df08f44-89ecf56c715si134422796d6.167.2026.03.31.13.53.01
+        for <starworks5@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 31 Mar 2026 13:53:02 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+2129455-8ebf-starworks5=gmail.com@msg.gotowebinar.com designates 149.72.66.116 as permitted sender) client-ip=149.72.66.116;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gotowebinar.com header.s=s1 header.b=Q2QvzQrZ;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=qHaI6wyM;
+       spf=pass (google.com: domain of bounces+2129455-8ebf-starworks5=gmail.com@msg.gotowebinar.com designates 149.72.66.116 as permitted sender) smtp.mailfrom="bounces+2129455-8ebf-starworks5=gmail.com@msg.gotowebinar.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=gotowebinar.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gotowebinar.com;
+	h=content-type:date:from:mime-version:subject:reply-to:to:cc:
+	content-type:date:feedback-id:from:subject:to;
+	s=s1; t=1774990381; bh=gbsL1DyYI3h3MG0CoLiNhlB2iRotKxyEAoMgXLpKK68=;
+	b=Q2QvzQrZZgnVU1nLptzTJ3ttJKKd1/wy1dOlNWt69p7iJeD1A1DMeAJFtfV2SQi+OZ9m
+	EqDEvMuVXSAsSABuRXFI+QfqwIIF4wWnx6aDlTmATf9YwFKJ4GlpmfXjj/foBGjXXHRWcK
+	mStLgBv9diJrRC+xgslja+r3LFLvcISBe7pJEYZpvASFyk1A9SL+3h02u3roq0xbPfSyQM
+	uVqYpRTDYG+YGpLi5yhPTsCesjvPTHFmHzslVrLr1PZ1T2FV3YeazpqAHLvNjTuT4uV8cq
+	Wb+gzJfxNSUxa13bCv5PzRiCuwdj+5JAVCBsIoB24XWKRY3SduhGiSjcYrIX86tg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:date:from:mime-version:subject:reply-to:to:cc:
+	content-type:date:feedback-id:from:subject:to;
+	s=smtpapi; t=1774990381; bh=gbsL1DyYI3h3MG0CoLiNhlB2iRotKxyEAoMgXLpKK68=;
+	b=qHaI6wyMzfrtV2Nkz2IYFC9VO7wouEBb96UsHjHSr1E4iiJQs+jJ+zeO7cfHBkY1N0NM
+	zUsIL0tPf2lZ0ERIgf5q1fLMexH4imNzLozZBa39MPeXbEdmMHz4uzBhjWkk4vVtRvlG+J
+	u670y85kzDZ9P9e9HpRIgDgwhDJRBl8X8=
+Received: by recvd-5666f54c97-q4nqm with SMTP id recvd-5666f54c97-q4nqm-1-69CC342D-1E
+	2026-03-31 20:53:01.451112073 +0000 UTC m=+86169.786036060
+Received: from MjEyOTQ1NQ (unknown)
+	by geopod-ismtpd-3 (SG) with HTTP
+	id -eIMXgwNRyyn7MDnbyvagQ
+	Tue, 31 Mar 2026 20:53:01.440 +0000 (UTC)
+Content-Type: multipart/related; boundary=7d2c69bd326667a8779c2a77b0ce8d34b30a9539dbae69e49ef5b4ed284c
+Date: Tue, 31 Mar 2026 20:53:01 +0000 (UTC)
+From: Pamela Bierau <customercare@gotowebinar.com>
+Mime-Version: 1.0
+Message-ID: <-eIMXgwNRyyn7MDnbyvagQ@geopod-ismtpd-3>
+Subject: 2021 RED SKY ALLIANCE REDSHORT REPORTING Confirmation
+Reply-To: pbierau@redskyalliance.com
+X-RcptEnc: c3RhcndvcmtzNUBnbWFpbC5jb20=
+X-campaignid: g2w_registrantConfirmation
+X-organizerEmail: pbierau@wapacklabs.com
+X-SG-EID: 
+ =?us-ascii?Q?u001=2EoIptC1Hjtwqj=2FSD9uO2Rwcvquvv01s7YptkCXV35ahERdzaVlWxIpHvVP?=
+ =?us-ascii?Q?v5px6d56Wez9NE+n57SOgKql3IE0oLlonRwRhOr?=
+ =?us-ascii?Q?vvBoGmgFKfCX4J=2FTJg7zYL7ExJMHFVjcMKbvc6T?=
+ =?us-ascii?Q?EDVKmOydU5i2xLjJYDpK5HHBKSseGPp6FFr6zZi?=
+ =?us-ascii?Q?XQflsOM9YS+Keb5qLREu1Y=2FUPxo5uu=2F0694qu9u?=
+ =?us-ascii?Q?5V0=2Frs5ST2u6spGdFvPurdtphHCbSTNOC8nFDoM?= =?us-ascii?Q?bYTI?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3Br+HiaWg7GI3He=2FVAGdnlMHbqWUoLicLMrBoJ?=
+ =?us-ascii?Q?KSPKBEiCgVWA7WoqqO0DryRqqPy8NmDxRSkpR7G?=
+ =?us-ascii?Q?PBsYPaJdkQDYBserp6wsuDbU0eZABqSo4drXIOG?=
+ =?us-ascii?Q?UTuSxmpswrPZxTNOsPdnQaAPT+pfIimTbKR2WiT?=
+ =?us-ascii?Q?KIk4vrhYIQPmy5k097ePlCnidgSZmH3MGt4e6er?=
+ =?us-ascii?Q?YQaJMi6wzqz=2FIaHI1k0MS1y4I0oqPHNlpW2YDAJ?=
+ =?us-ascii?Q?aZ9l0hrb9t14CbU+NXKhO5m+DQpa59PBAZGpiMO?=
+ =?us-ascii?Q?VqPkH2ydwlp1T4JEaGSf+MYKdDOoJ?=
+To: starworks5@gmail.com
+X-Entity-ID: u001.P37izW7OvCCuO5lubfbKMQ==
+
+--7d2c69bd326667a8779c2a77b0ce8d34b30a9539dbae69e49ef5b4ed284c
+Content-Type: multipart/alternative; boundary=63f1e98312abca048986506fdbcc41838ce911f2313c9c7fad7613392634
+
+--63f1e98312abca048986506fdbcc41838ce911f2313c9c7fad7613392634
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+
+The description for this webinar has changed.
+
+-----------------------------------------------------------
+
+Hello <b>Benjamin Barber</b>, thanks for registering for "2026 RED SKY ALLI=
+ANCE REDSHORT REPORTING."
+    Welcome to our REDSHORT webinar. 'RED' As In Something Important From R=
+ed Sky Alliance & 'SHORT' As In Once A Week In 10 Minutes Or Less. %0D%0A%0=
+D%0AAPRIL 1ST, REDSHORT =E2=80=94 AI NOW & IN THE FUTURE: MORALS & ETHICS =
+=E2=80=94 Our webinar will explore the critical intersection of Artificial =
+Intelligence, morals, and ethics. Hosts Bill Schenkelberg and Aaron Birnbau=
+m examine the integrity of AI creators and the necessity of enforceable gua=
+rdrails. Key discussions include AI=E2=80=99s potential for harm=E2=80=94re=
+ferencing Asimov=E2=80=99s rules=E2=80=94and its impact on childhood develo=
+pment and basic skill acquisition. Ultimately, the session evaluates long-t=
+erm social effects and our collective digital future.  Join Us To Find Out =
+More.
+
+
+Please send your questions, comments and feedback to:
+pbierau@redskyalliance.com
+
+***********************************************************
+    After registering, you will receive a confirmation email containing inf=
+ormation about joining the webinar.
+***********************************************************
+
+This webinar meets 9 times.
+             Wed, Apr 1, 2026 6:30 AM - 7:00 AM PDT
+             Wed, Apr 8, 2026 6:30 AM - 7:00 AM PDT
+             Wed, Apr 15, 2026 6:30 AM - 7:00 AM PDT
+             Wed, Apr 22, 2026 6:30 AM - 7:00 AM PDT
+             Wed, Apr 29, 2026 6:30 AM - 7:00 AM PDT
+             Wed, May 6, 2026 6:30 AM - 7:00 AM PDT
+             Wed, May 13, 2026 6:30 AM - 7:00 AM PDT
+             Wed, May 20, 2026 6:30 AM - 7:00 AM PDT
+             Wed, May 27, 2026 6:30 AM - 7:00 AM PDT
+   =20
+1. Click the button to join the webinar at the specified time and date:
+https://global.gotowebinar.com/join/5207428251321676122/685641350
+
+https://link.gotowebinar.com/email-welcome?role=3Dattendee&source=3Dregistr=
+ationConfirmationEmail&language=3Denglish&experienceType=3DCLASSIC
+
+Note: This link is unique to you and should not be shared. If you cannot cl=
+ick the button, right-click it to copy and paste the link directly into you=
+r browser.
+Before joining, be sure to check system requirements to avoid any connectio=
+n issues.
+2. Choose one of the following audio options:
+
+<p style=3D "margin-top: 10px; font-weight: 600;">To use your computer's au=
+dio: </p>
+
+<p style=3D"margin-bottom: 10px";>When the webinar begins, you will be conn=
+ected to audio using your computer's microphone and speakers (VoIP). A head=
+set is recommended.</p>
+
+
+<span style=3D"margin-bottom: 10px";>or</span>
+
+
+<strong>To use your telephone:</strong>
+<span style=3D"margin-bottom: 10px";>If you prefer to use your phone, you m=
+ust select "Use Telephone" after joining the webinar and call in using the =
+numbers below.</span>
+
+   =20
+            <a style=3D"color: #25282d !important; text-decoration: none !i=
+mportant; cursor: default">United States: +1 (631) 992-3221</a>
+   =20
+<a style=3D"color: #25282d !important; text-decoration: none !important; cu=
+rsor: default">Access Code: 758-814-562</a>
+
+Audio PIN: Shown after joining the webinar
+
+
+***********************************************************
+
+
+To cancel this registration
+
+If you can't attend this webinar, you may cancel your registration at any t=
+ime.
+https://attendee.gotowebinar.com/cancel/5207428251321676122/417643159808653=
+6542
+
+
+***********************************************************
+
+   =20
+This email was sent on behalf of the event organizer by GoTo Webinar. To re=
+view the organizer's privacy policy, exercise any applicable privacy rights=
+, or stop receiving their communications, please contact the organizer dire=
+ctly.
+   =20
+Cancel registration (https://attendee.gotowebinar.com/cancel/52074282513216=
+76122/4176431598086536542)
+   =20
+Stop emails from this event organizer (https://attendee.gotowebinar.com/sub=
+scription.tmpl?organizer=3D5733714932715793158&token=3DtfsGgE9T1XBVzRWyUk00=
+Yg%3D%3D&organizerEmail=3Dpbierau%40wapacklabs.com&attendeeEmail=3Dstarwork=
+s5%40gmail.com&locale=3Den_US)
+
+Report spam (https://attendee.gotowebinar.com/reportSpam.tmpl?organizer=3D5=
+733714932715793158&token=3DtfsGgE9T1XBVzRWyUk00Yg%3D%3D&userEmail=3Dstarwor=
+ks5%40gmail.com&webinarId=3D761088507&webinarName=3D2026+RED+SKY+ALLIANCE+R=
+EDSHORT+REPORTING&organizerEmail=3Dpbierau%40wapacklabs.com&locale=3Den_US)
+
+
+GoTo, Inc. | 333 Summer Street | Boston, MA 02210
+Privacy Policy (https://www.goto.com/en/company/legal/privacy/us)
+Anti-spam Policy (https://www.goto.com/company/legal/anti-spam-policy)
+www.goto.com/webinar =C2=A92026 GoTo, Inc. All rights reserved.
+--63f1e98312abca048986506fdbcc41838ce911f2313c9c7fad7613392634
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/htm=
+l4/strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xml:lang=3D"en">
+    <head>
+        <meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-=
+Type" />
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <!--general stylesheet-->
+        <style type=3D"text/css">
+            p { padding: 0; margin: 0; line-height: 1.25em; }
+            h1, h2, h3, p, li, a { font-family: BlinkMacSystemFont, Segoe U=
+I, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,=
+ Segoe UI Symbol; }
+            td { vertical-align: top; }
+            ul, ol { margin: 0; padding: 0; }
+            .webinar-name {
+                margin-bottom: 8px;
+                margin-left:26px;
+            }
+            .logo-asset {
+                width: 240px;
+                height: 240px;
+                background-image: url(https://static.gotowebinar.com/images=
+/logo-background.png);
+                background-repeat: no-repeat;
+                background-size: 250px 250px;
+                background-position: center;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+            .cover-container {
+                text-align: center; =20
+            }
+            .webinar-details-container{
+                text-align: center;
+                padding: 36px 36px 0
+            }
+            .footer-address a, .footer-address a[x-apple-data-detectors], .=
+webinarTimeStyle a, .webinarTimeStyle a[x-apple-data-detectors] {
+                color: #6A6D71 !important;
+                text-decoration: none !important;
+                cursor: default;
+            }
+            .logo-container-with-theme-image {
+                margin-top: 16px;
+            }
+                @media screen and (max-width: 500px) {
+                    .mobile-button-padding {
+                      padding: 15px 0 !important;
+                    }
+                    .logo-container {
+                        display: block !important;
+                    }
+                    .webinar-name {
+                        margin-top: 0% !important;
+                        margin-left: 0 !important;
+                    }
+                    .mobile-button-container {
+                      width: 100%;
+                      max-width: 100%;
+                    }
+                    .mobile-button {
+                      display: block !important;
+                    }
+                    .registrant-email-container {
+                        margin: auto !important;
+                    }
+                    .webinar-details-container {
+                        padding: 36px 8px 0
+                    }
+                    .restrant-email-content {
+                        padding-right: 8px !important;
+                        padding-left: 8px !important;
+                        padding-top: 36px !important;
+                    }
+                }
+                 @media screen and (min-width: 501px) {
+                     .webinar-name-container {
+                        display: table-cell;
+                        vertical-align: middle;
+                    }
+                    .cover-container {
+                        margin: auto;
+                    }
+                    .logo-container-with-theme-image {
+                        margin-left: 24px;
+                    }
+                }
+                @media screen and (max-width: 760px) {
+                    .contentWrapper, .footer {
+                      width: 100% !important;
+                      max-width: 100% !important;
+                    }
+                    #paddingFooter1, #paddingFooter2 {
+                      display: none;
+                    }
+                }
+        </style>
+    </head>
+   =20
+        <body marginheight=3D"0" topmargin=3D"0" marginwidth=3D"0" leftmarg=
+in=3D"0" background=3D"" style=3D"margin: 0; background-color: #FFFFFF;" bg=
+color=3D"#FFFFFF">
+        <table cellspacing=3D"0" border=3D"0" cellpadding=3D"0" width=3D"10=
+0%" bgcolor=3D"#eeeee7" style=3D"background-color: #eeeee7;
+                background: -moz-linear-gradient(#eeeee7, #eeeee7);
+                background: -webkit-gradient(linear, top, bottom, from(#eee=
+ee7), to(#eeeee7));
+                background: -webkit-linear-gradient(#eeeee7, #eeeee7);
+                background: -o-linear-gradient(#eeeee7, #eeeee7);
+                background: -ms-linear-gradient(#eeeee7, #eeeee7);
+                background: linear-gradient(#eeeee7, #eeeee7);
+                border-color: #cccccc;
+                color:#114c7f;
+                padding: 20px;">
+            <tbody>
+                <tr valign=3D"top">
+                    <td>
+
+                        <!--container-->
+                        <table class=3D"contentWrapper registrant-email-con=
+tainer" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center" w=
+idth=3D"100%" bgcolor=3D"#FFFFFF" style=3D"padding-bottom: 15px; max-width:=
+ 750px; background-color:#FFFFFF; border-width: 2px; border-style: solid; b=
+order-color: #cccccc;">
+                            <tbody><!--content-->
+                            <!--[if !mso]> <!---->
+                                <tr>
+                                    <td align=3D"center" class=3D"webinar-d=
+etails-container">
+                                        <table class=3D"imgWrapper" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"15" border=3D"0";" style=3D"bord=
+er-bottom-color: #C5C5C5; border-bottom-width: 1px; border-bottom-style: so=
+lid; padding-bottom: 36px;">
+                                            <tr>
+                                                <td style=3D"padding: 0; te=
+xt-align: left;">
+                                                    <div>
+                                                        <div class=3D"cover=
+-container">
+                                                            <div class=3D"f=
+eature-asset">
+                                                                <img  style=
+=3D"width:auto; height: auto; margin: auto; margin-top: 4px;" src=3D"cid:lo=
+go-30329a4a-0871-4547-9680-f2f4099fcc14.jpeg" alt=3D"" />
+                                                            </div>
+                                                        </div>
+                                                            <div class=3D"l=
+ogo-container logo-container-with-theme-image">
+                                                                <div class=
+=3D"logo-asset">
+                                                                <img src=3D=
+"cid:theme-4d3768c7-3e07-4351-95a0-5953949b8ed3.jpeg" alt=3D"" style=3D"hei=
+ght: auto; width: auto; margin-bottom: 8px;" />
+                                                                 </div>
+                                                                 <div class=
+=3D"webinar-name-container">
+                                                                        <di=
+v class=3D"webinar-name">
+                                                                       =20
+
+
+<p style=3D"color: #114c7f; font-size: 28px; font-weight: 600; word-break: =
+break-word; margin-bottom: 12px;">
+    2026 RED SKY ALLIANCE REDSHORT REPORTING
+</p>
+
+             <p style=3D"color: #6A6D71; font-size: 16px; line-height: 16px=
+;" class=3D"webinarTimeStyle"><a>Wed, Apr 1, 2026 6:30 AM - 7:00 AM PDT</a>=
+</p>
+                    <p style =3D "color: #6A6D71; font-size: 14px; margin-t=
+op: 8px; " >This is a webinar in a series. <a href=3D "https://register.got=
+owebinar.com/showConfirmation?webinarKey=3D5207428251321676122&email=3Dstar=
+works5@gmail.com" target=3D"_blank" style=3D "text-decoration: underline !i=
+mportant; font-family: BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Ari=
+al, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol; "> View=
+ more in this series</a></p>
+           =20
+
+                                                                        </d=
+iv>
+                                                                    </div>
+                                                            </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            <!-- <![endif]-->                             =20
+                            <!--[if mso]>
+                            <tr>
+                                <td style=3D"padding: 36px 36px 0;">
+                                    <table style=3D"width: 100%;">
+                                        <tr>
+                                            <td style=3D "text-align: cente=
+r; width: 100%;">
+                                                <img src=3D"cid:logo-30329a=
+4a-0871-4547-9680-f2f4099fcc14.jpeg" width=3D"auto" height=3D"auto" />
+                                            </td>
+                                        </tr>
+                                    </table>=20
+                                    <table style=3D"border-bottom-color: #C=
+5C5C5; border-bottom-width: 1px; border-bottom-style: solid; padding-bottom=
+: 36px; width: 100%; padding-left: 24px; padding-top: 16px;">
+                                        <tr>
+                                            <td>
+                                                <table>
+                                                    <tr>
+                                                        <td style=3D"vertic=
+al-align: middle; text-align: center; border-width: 1px; border-style: dott=
+ed; border-color: #c0bec0; height: 200px; width: 200px; padding: 0">
+                                                            <img src=3D"cid=
+:theme-4d3768c7-3e07-4351-95a0-5953949b8ed3.jpeg" width=3D"auto" height=3D"=
+auto" />
+                                                        </td>
+                                                    <tr/>
+                                                </table>
+                                            </td>
+                                            <td style=3D"vertical-align: mi=
+ddle; padding: 0">
+                                                <table>
+                                                    <tr>
+                                                        <td style=3D"max-wi=
+dth: 450px">
+
+
+<p style=3D"color: #114c7f; font-size: 28px; font-weight: 600; word-break: =
+break-word; margin-bottom: 12px;">
+    2026 RED SKY ALLIANCE REDSHORT REPORTING
+</p>
+
+             <p style=3D"color: #6A6D71; font-size: 16px; line-height: 16px=
+;" class=3D"webinarTimeStyle"><a>Wed, Apr 1, 2026 6:30 AM - 7:00 AM PDT</a>=
+</p>
+                    <p style =3D "color: #6A6D71; font-size: 14px; margin-t=
+op: 8px; " >This is a webinar in a series. <a href=3D "https://register.got=
+owebinar.com/showConfirmation?webinarKey=3D5207428251321676122&email=3Dstar=
+works5@gmail.com" target=3D"_blank" style=3D "text-decoration: underline !i=
+mportant; font-family: BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Ari=
+al, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol; "> View=
+ more in this series</a></p>
+           =20
+
+</td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>=20
+                                </td>    =20
+                            </tr>                   =20
+                            <!-- <![endif]-->=20
+                                <tr>
+                                    <td>
+                                        <table class=3D"restrant-email-cont=
+ent" style=3D"padding-right: 36px; padding-left: 36px; padding-top: 36px; "=
+>
+                                            <tr>
+                                                <td>
+                                                   =20
+
+
+
+    <p style=3D"margin: 0 0 0 0; font-size: 16px; font-weight: normal; colo=
+r: #25282D; text-align: left; font-family: BlinkMacSystemFont, Segoe UI, Ro=
+boto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Sego=
+e UI Symbol;">
+        The description for this webinar has changed.    </p>
+<p style=3D"margin: 24px 0 24px 0; font-size: 16px; color: #25282D; text-al=
+ign: left; word-break: break-word;">
+    Hello <b>Benjamin Barber</b>, thanks for registering for "2026 RED SKY =
+ALLIANCE REDSHORT REPORTING."</p>
+<p style=3D"margin: 24px 0 24px 0; font-size: 16px; color: #25282D; text-al=
+ign: left;" class=3D"webinar-description custom-text">
+   Welcome to our REDSHORT webinar. 'RED' As In Something Important From Re=
+d Sky Alliance & 'SHORT' As In Once A Week In 10 Minutes Or Less. <br/><br/=
+>APRIL 1ST, REDSHORT =E2=80=94 AI NOW & IN THE FUTURE: MORALS & ETHICS =E2=
+=80=94 Our webinar will explore the critical intersection of Artificial Int=
+elligence, morals, and ethics. Hosts Bill Schenkelberg and Aaron Birnbaum e=
+xamine the integrity of AI creators and the necessity of enforceable guardr=
+ails. Key discussions include AI=E2=80=99s potential for harm=E2=80=94refer=
+encing Asimov=E2=80=99s rules=E2=80=94and its impact on childhood developme=
+nt and basic skill acquisition. Ultimately, the session evaluates long-term=
+ social effects and our collective digital future.  Join Us To Find Out Mor=
+e.
+</p>
+<p style=3D"margin: 24px 0 24px 0; font-size: 16px; color: #25282D; text-al=
+ign: left; margin-bottom: 36px;">
+            Before joining, be sure to <a id=3D'joinCheckAppLink' style=3D'=
+text-decoration: none;' target=3D'_blank' href=3Dhttps://link.gotowebinar.c=
+om/email-welcome?role=3Dattendee&source=3DregistrationConfirmationEmail&lan=
+guage=3Denglish&experienceType=3DCLASSIC>check system requirements</a> to a=
+void any connection issues. Learn more about your attendee experience <a id=
+=3D'learnMoreLink' style=3D'text-decoration: none;' target=3D'_blank' href=
+=3Dhttps://support.goto.com/webinar/help/attendee-overview-guide>here</a>. =
+   </p>
+<table style=3D"border-width:1px; border-style: solid; border-color: #ddd; =
+padding: 16px 20px; margin-bottom: 32px; color: #25282D; width: 100%; color=
+: #25282D;">
+    <tr>
+        <td>
+<p style=3D"color: #114c7f; font-size: 20px; font-weight: 600; text-align: =
+left; font-family: BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, =
+sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;">
+            How to join the webinar    </p>
+        <p style=3D"margin: 16px 0 0 0; font-size: 14px; color: #25282D; te=
+xt-align: left;">
+        This webinar meets 9 times.    </p>
+                <p style=3D"margin: 16px 0 0 0; font-size: 14px; color: #25=
+282D; text-align: left;">
+            <span class=3D"webinarTimeStyle"><a>Wed, Apr 1, 2026 6:30 AM - =
+7:00 AM PDT</a></span>
+                            <span>
+                | <span style=3D"font-size: 14px; color: #25282D; text-alig=
+n: left; font-weight: 600;" >
+                        <a style=3D"color: #25282d !important; font-size: 1=
+4px; text-decoration: none !important; cursor: default;">Webinar ID: 761-08=
+8-507</a>
+                    </span>
+                </span>
+                    </p>
+    <p style=3D"margin: 16px 0 0 0; font-size: 14px; color: #25282D; text-a=
+lign: left;">
+    <span style=3D"font-weight: 600">
+    Add to calendar:
+    </span>
+    <a href=3D"https://global.gotowebinar.com/icsCalendar.tmpl?webinar=3D52=
+07428251321676122&user=3D685641350&cal=3Doutlook"
+       style=3D"text-decoration: none;">Outlook<sup>&reg;</sup> Calendar</a=
+> |
+    <a href=3D"https://global.gotowebinar.com/icsCalendar.tmpl?webinar=3D52=
+07428251321676122&user=3D685641350&cal=3Dical"
+       style=3D"text-decoration: none;">iCal<sup>&reg;</sup></a>
+
+</p>
+
+
+
+<p style=3D"margin: 24px 0 0 0; font-size: 16px; font-weight: 600; color: #=
+25282D; text-align: left; font-family: BlinkMacSystemFont, Segoe UI, Roboto=
+, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI=
+ Symbol; color: #25282D;">
+   1. Click the button to join the webinar at the specified time and date:<=
+/p>
+
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+  <tr style =3D "display: flex; justify-content: left" align=3D"left">
+    <td align=3D"left" style=3D"padding: 16px 16px 8px;" class=3D"mobile-bu=
+tton-padding">
+      <table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" style=3D"margin: 0 auto;" class=3D"mobile-button-container">
+        <tr align=3D"left">
+          <td align=3D"left" bgcolor=3D"#114c7f" style=3D"background-color:=
+ #114c7f ;border-radius: 4px;" class=3D"mobile-button">
+                <a href=3D"https://global.gotowebinar.com/join/520742825132=
+1676122/685641350" target=3D"_blank" style=3D" background: #114c7f;font-siz=
+e: 14px; font-weight: 600; color: #FFF !important; text-decoration: none;bo=
+rder-radius: 4px; padding: 8px 16px; border: 1px solid #114c7f; display: in=
+line-block;" class=3D"mobile-button">
+                    Join Webinar
+                </a>
+           </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<p style=3D"margin: 0px 0 0 18px; font-size: 12px; font-weight: normal; col=
+or: #6A6D71; text-align: left; line-height: 17px; font-family: BlinkMacSyst=
+emFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, =
+Segoe UI Emoji, Segoe UI Symbol;">
+    Note: This link is unique to you and should not be shared. If you canno=
+t click the button, right-click it to copy and paste the link directly into=
+ your browser.</p>
+<ul style=3D"margin-top: 16px; padding-left: 30px;">
+    <li style=3D"display: none"></li>
+        <li style=3D"margin-bottom: 16px; color: #25282D; font-size:16px; l=
+ine-height: 22px;">A browser tab will open and redirect you to the GoTo Web=
+inar app.</li>
+        <li style=3D"margin-bottom: 16px; color: #25282D; font-size:16px; l=
+ine-height: 22px;">
+                To <a id=3D'joinSupportLink' style=3D'text-decoration: none=
+;' href=3Dhttps://link.gotowebinar.com/ce_join_mobile>join</a> on your mobi=
+le device, <a href=3D'https://link.gotowebinar.com/GoTo_confirmation_email_=
+mobile' target=3D'_blank' style=3D'text-decoration: none;'>download</a> our=
+ free GoTo mobile app. No account or sign-in is required. All you need is t=
+he webinar ID above.    </li>
+</ul>
+
+<p style=3D"margin: 24px 0 0 0; font-size: 16px; font-weight: 600; color: #=
+25282D; text-align: left; font-family: BlinkMacSystemFont, Segoe UI, Roboto=
+, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI=
+ Symbol;">
+      2. Choose one of the following audio options:   </p>
+            <p style=3D"margin: 16px 0 0 18px; font-size: 16px; font-weight=
+: normal; color: #25282D; text-align: left; font-family: BlinkMacSystemFont=
+, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe =
+UI Emoji, Segoe UI Symbol;">
+            <p style=3D"margin: 16px 0 0 18px; font-size: 16px; font-weight=
+: normal; color: #25282D; text-align: left; font-family: BlinkMacSystemFont=
+, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe =
+UI Emoji, Segoe UI Symbol; font-weight: 600;" >To use your computer's audio=
+:</p>
+            <p style=3D "margin: 16px 0 0 18px; font-size: 16px; font-weigh=
+t: normal; color: #25282D; text-align: left; font-family: BlinkMacSystemFon=
+t, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe=
+ UI Emoji, Segoe UI Symbol; margin: 16px 0 0 18px ;" > When the webinar beg=
+ins, you will be connected to audio using your computer's microphone and sp=
+eakers (VoIP). A headset is recommended.</p>
+</p>
+                <p style=3D"margin: 16px 0 0 18px; font-size: 16px; font-we=
+ight: normal; color: #25282D; text-align: left; font-family: BlinkMacSystem=
+Font, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Se=
+goe UI Emoji, Segoe UI Symbol; margin: 16px 0 16px 18px; font-style: italic=
+; color: #6A6D71;">
+    or</p>
+                <p style=3D"margin: 16px 0 0 18px; font-size: 16px; font-we=
+ight: normal; color: #25282D; text-align: left; font-family: BlinkMacSystem=
+Font, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Se=
+goe UI Emoji, Segoe UI Symbol; margin: 16px 0px 16px 18px" >
+    <strong style=3D"font-weight: 600; color: #25282D;">To use your telepho=
+ne:</strong>
+    <p style=3D"margin: 16px 0 0 18px; color: #25282d; font-size: 16px">If =
+you prefer to use your phone, you must select "Use Telephone" after joining=
+ the webinar and call in using the numbers below.</p>
+
+                   =20
+                        <p style=3D"margin: 16px 0 0 18px; color: #25282d; =
+font-size: 16px">
+                <a style=3D"color: #25282d !important; text-decoration: non=
+e !important; cursor: default">United States: +1 (631) 992-3221</a>
+            </p>
+                <p style=3D"margin: 0px 0 0 18px; color: #25282d; font-size=
+: 16px">
+            <a style=3D"color: #25282d !important; text-decoration: none !i=
+mportant; cursor: default">Access Code: 758-814-562<a><br>
+   =20
+    <span style=3D"color: #25282d; font-size: 16px;">Audio PIN: Shown after=
+ joining the webinar<span><br>
+                </p>
+                        <p style=3D"margin: 24px 0 24px 0; font-size: 16px;=
+ color: #25282D; text-align: left; font-style: italic; margin-left: 18px;">=
+Upon joining, you'll be muted automatically and placed in "listen-only mode=
+." </p>
+        <p style=3D"margin: 16px 0 0 0px; font-size: 16px; font-weight: nor=
+mal; line-height: 22px; color: #25282D; text-align: left;  font-family: Bli=
+nkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Colo=
+r Emoji, Segoe UI Emoji, Segoe UI Symbol; margin: 0;">Check out our <a href=
+=3D'https://link.gotowebinar.com/v10_confirmation_email_guide' target=3D'_b=
+lank' style=3D'text-decoration: none;'>Attendee Guide</a> for further help =
+and tips on participating in your session, such as asking questions or chat=
+ting, managing your audio, etc.</p>
+<p style=3D"margin: 16px 0 0 0px; font-size: 16px; font-weight: normal; lin=
+e-height: 22px; color: #25282D; text-align: left;  font-family: BlinkMacSys=
+temFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji,=
+ Segoe UI Emoji, Segoe UI Symbol;">
+    Please send your questions, comments and feedback to: <a href=3D"mailto=
+:pbierau@redskyalliance.com" style=3D"text-decoration: none">pbierau@redsky=
+alliance.com</a>
+</p>
+</td>
+</tr>
+</table>
+<p style=3D"color:#114c7f; margin: 32px 0 0 0; font-size: 20px; font-weight=
+: 600; text-align: left;">
+    To cancel this registration</p>
+<p style=3D"margin: 10px 0 0 0; font-size: 16px; font-weight: normal; color=
+: #25282D; text-align: left;">
+        If you can't attend this webinar, you may <a style=3D'text-decorati=
+on: none;' name=3D'lnkCancelRegistration' href=3Dhttps://attendee.gotowebin=
+ar.com/cancel/5207428251321676122/4176431598086536542>cancel your registrat=
+ion</a> at any time.</p>
+                                                                           =
+                                =20
+
+
+<table cellspacing=3D"0" border=3D"0" cellpadding=3D"0" id=3D"footer" style=
+=3D"background-color: #FFF;" align=3D"left" width=3D"100%">
+<tr>
+<td style=3D"padding-top: 36px">
+<table class=3D"footer" cellspacing=3D"0" border=3D"0" cellpadding=3D"0" al=
+ign=3D"center" width=3D"100%" style=3D"border-top: 1px solid; border-color:=
+ #AAA;">
+
+                        <tr>
+               <td valign=3D"top" style=3D"vertical-align: top;" id=3D"lega=
+l">
+                    <p style=3D"font-size: 12px; font-weight: normal; color=
+: #6A6D71 !important; text-decoration: none; text-align: left; font-family:=
+ BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple =
+Color Emoji, Segoe UI Emoji, Segoe UI Symbol;;margin: 20px 0 0;">This email=
+ was sent on behalf of the event organizer by GoTo Webinar. To review the o=
+rganizer's privacy policy, exercise any applicable privacy rights, or stop =
+receiving their communications, please contact the organizer directly.</p>
+               </td>
+        </tr>
+
+                               =20
+            <tr>
+                <td valign=3D"top" style=3D"vertical-align: top;" id=3D"unR=
+egisterUnSubscribe">
+                    <p style=3D"font-size: 12px; font-weight: normal; color=
+: #6A6D71 !important; text-decoration: none; text-align: left; font-family:=
+ BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple =
+Color Emoji, Segoe UI Emoji, Segoe UI Symbol;;margin: 20px 0 0;"><a href=3D=
+'https://attendee.gotowebinar.com/subscription.tmpl?organizer=3D57337149327=
+15793158&token=3DtfsGgE9T1XBVzRWyUk00Yg%3D%3D&organizerEmail=3Dpbierau%40wa=
+packlabs.com&attendeeEmail=3Dstarworks5%40gmail.com&locale=3Den_US' id=3D'u=
+nsubscribeLink' style=3D'text-decoration: underline;'>Stop emails from this=
+ event organizer</a> . <a href=3D'https://attendee.gotowebinar.com/reportSp=
+am.tmpl?organizer=3D5733714932715793158&token=3DtfsGgE9T1XBVzRWyUk00Yg%3D%3=
+D&userEmail=3Dstarworks5%40gmail.com&webinarId=3D761088507&webinarName=3D20=
+26+RED+SKY+ALLIANCE+REDSHORT+REPORTING&organizerEmail=3Dpbierau%40wapacklab=
+s.com&locale=3Den_US' id=3D'reportSpamLink' style=3D'text-decoration: under=
+line;'>Report spam</a></p>
+                </td>
+            </tr>
+
+       =20
+    <tr>
+       <td valign=3D"top" style=3D"vertical-align: top;" id=3D"legal3">
+            <p class=3D"footer-address" style=3D"font-size: 12px; font-weig=
+ht: normal; color: #6A6D71 !important; text-decoration: none; text-align: l=
+eft; font-family: BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, s=
+ans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;;margin: 20px=
+ 0 15px;"><a>333 Summer Street . Boston, MA 02210 . <a href=3D'https://www.=
+goto.com/en/company/legal/privacy/us' id=3D'privacyLink' style=3D'color: #6=
+A6D71 !important; text-decoration: none !important; font-family: BlinkMacSy=
+stemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji=
+, Segoe UI Emoji, Segoe UI Symbol;'>Privacy Policy</a> . <a href=3Dhttps://=
+www.goto.com/company/legal/anti-spam-policy id=3D'antiSpamLink' style=3D'co=
+lor: #6A6D71 !important; text-decoration: none !important; font-family: Bli=
+nkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Colo=
+r Emoji, Segoe UI Emoji, Segoe UI Symbol;'>Anti-spam Policy</a> . <a href=
+=3D'http://www.goto.com/webinar' id=3D'gtmLink' style=3D'color: #6A6D71 !im=
+portant; text-decoration: none !important; font-family: BlinkMacSystemFont,=
+ Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe U=
+I Emoji, Segoe UI Symbol;'>www.goto.com/webinar</a> =C2=A92026 GoTo, Inc.</=
+a></p>
+       </td>
+    </tr>
+
+</table>
+</td>
+</tr>
+
+</table>                                                                   =
+                                 </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!--/container-->
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+--63f1e98312abca048986506fdbcc41838ce911f2313c9c7fad7613392634--
+
+--7d2c69bd326667a8779c2a77b0ce8d34b30a9539dbae69e49ef5b4ed284c
+Content-Disposition: inline; filename="logo-30329a4a-0871-4547-9680-f2f4099fcc14.jpeg"
+Content-ID: <logo-30329a4a-0871-4547-9680-f2f4099fcc14.jpeg>
+Content-Transfer-Encoding: base64
+Content-Type: image/jpeg; name="logo-30329a4a-0871-4547-9680-f2f4099fcc14.jpeg"
+
+/9j/4AAQSkZJRgABAQAAAQABAAD/4QB0RXhpZgAASUkqAAgAAAAEABoBBQABAAAAPgAAABsBBQAB
+AAAARgAAACgBAwABAAAAAgAAAGmHBAABAAAATgAAAAAAAAAH/P//7G2OAwf8///sbY4DAgACoAQA
+AQAAAJABAAADoAQAAQAAAMgAAAAAAAAA/9sAQwACAQEBAQECAQEBAgICAgIEAwICAgIFBAQDBAYF
+BgYGBQYGBgcJCAYHCQcGBggLCAkKCgoKCgYICwwLCgwJCgoK/9sAQwECAgICAgIFAwMFCgcGBwoK
+CgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoK/8AAEQgAyAGQ
+AwEiAAIRAQMRAf/EAB4AAQABBAMBAQAAAAAAAAAAAAAGBQcICQEDCgQC/8QAYRAAAQMDAwIDBQMH
+BQkJCg8AAQIDBAAFBgcIEQkSEyExChQiQVFhcYEVIzJykaGxFzNCUpIWJDQ5YnOCorJTVHeWtLXB
+wtUYKEOUlaTE0dPxGiU1RUZIY3iHk6OztsXS/8QAHQEBAAEFAQEBAAAAAAAAAAAAAAYDBAUHCAIB
+Cf/EAEYRAAEDAgQBCgMFBAkCBwAAAAEAAgMEEQUGEiExBxMiQVFhcYGRoRSxwQgjMlLRFUJikhYz
+Q4KissLS4RdyU2ODk7PT8P/aAAwDAQACEQMRAD8A3+UpSiJSlKIlKUoiUpSiJSlKIlKUoiUpSiJS
+lKIlKUoiUpSiJSlKIlKUoiUpSiJSlKIlKUoiUpSiJSlKIlKUoiUpSiJSlKIlKUoiUpSiJSlKIlKU
+oiUpSiJSlKIlKUoiUoSB6muOR6j91EXNK47x9D/ZNcn7qIlK+C/ZTjeLRDPya/Qrcwn1enS22UD8
+VkCrd5bvl2U4CpSM63g6W2UoX2LF31BtsYpV9D4jw4P2URXTpWPNw6uHSutsVUuR1J9BVIQOSGNX
+bO6v8EokFR/AVAMs9oE6NOFoWu89QXBHvDT3K/JDsi4cj7PdWXO4/YPOiLMWlYATfaiehfCW40d8
+aXFtkgpZ02yVYUfsULd2n7+eKgeW+11dGrG0FVn1CzvICEqIFnwKQjnj0H99FnzPy+/z4oi2d0rU
+HN9tP6WMd5bUbQ7XyQE/ouN4rZQlX9q7A/tFdA9tW6XnPnoBr7/xZsn/AGvRFuDpWn8e2q9LTj4t
+BdwA+7FrH/2xXZG9tP6V77wbc0O19aST5uOYpZSkff23cn91EW3ylascd9sJ6P8AevD/ACnI1QtA
+WrhRuOEIV2D6nwJDnl93Jq4Fh9qj6HN3jF+47wZtrWFEeDO01yBSiPr+ZguJ4/GiLYdSsMcD9oa6
+L+o4R/c71AMNj954T+X48208eQPn77Ha49fnV4cM6lvTn1FuCLPgW/rRW9THEhSIVq1TtMh4g+n5
+tEgq/dRFe2lfNarva77bmrvZbixMiPo72JMV5LjbifqlSSQofdX0dw+Z4++iLmlKURKUpREpSlES
+lKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpRFSs4zrCdMsQuWoOpGY2rH7DZ4i
+5V3vd8uDcSHBYQOVuvPOqShpCR5lSiAB6mtRG8z2yrZFo/eZOF7OtGMn1kuTL3hi9Pvmw2ZwFP6T
+LjrTkp4pV8JSqM0lXBKXCCDWMPthvUg1SzjXe19LvRrJZicXxuyRcg1Pt1oKiu5XN3++IkSUlKe4
+sRowYlBHcW1rloWtJVHaUnTfo7rBjenTSo9zw1JedUrvvUFw+9dh4+DhZ7e37EFHPz7vKrWrnmhh
+c6Fmtw6rgfP/AJKz+XsKw/E8SjixKqFLA6/3jmOcLi2wDevcbktaBuSNr7LNYvao+uNrirw9Icdw
+/TCOl4qYkY1giX3VtdxKUuO3lcppR7eAVIQgHjkBPNY5ZR1DOtbqleXcizPqUan2d6SsKdZs+pM2
+3tpI/qMW1SGkfckAVBMbzXFM5HfjORMzXSOTGWookJ+vLa/iP3p5H21U0NOOL8JtpSlf1UpJP7Kh
+NTmbFWvLNAYR1EG49T9F09gvIdkOaBlQKiSpaeBa9nNu8NDSfR6+m/a99SLMk9mcdTXV25jgjibq
+NfJI4I4P85I+nlVvcn0s1HzklWd7jchvJUntV+Ui/J5T68fnZBqa3GVCszZevVxiwUD1VNlIZ/2y
+KpTuounLCe93P7Rx/kSu8/sSDVq3HMemF43k+DQf9JWdm5LuSnDnaKunYw/xzyMPvK1Qlja1jKf8
+JzWev/N29Cf4uGvqa2x6fpH56/XlZ/ySyn/qmq/I1k0pjfzmdxlf5qLIX/BuumLrRhN0fMXGoV9v
+Do9W7XZis/f8SgR+yvRrMyvFyXgdumw9dICosy5yJ07xHG2mc48AJuccfBvOuJ9FTWdtumLR5W9e
+nfsXOaH8Gq+xnb/pMz+lZJrv+duav+qkVJIF4lzuPGxG8wQRzzcGGUfuS6VD9lfbVhJieKA2dM7y
+d+hUqpMkZGLA+LDorfxRD5PbdRVGh+kaP/oWFfr3GR/0LFfUzpLpbHHDeAwD+u48r/acNSClUDX1
+7uMz/wCZ36rKR5UypCbsw6nB7oIv9ipLWAaesjhrALMP1oKVf7XNfs4PghHBwOx/+Smv/VVTpVP4
+ioPF59Sr5uEYQwWbTRgd0bB9FSjgeAH1wGy/hbkD+FdbmnOnDo4Xp/aP9GMU/wACKrNK+ipqRwkd
+6n9V5dguCvHSpYj4xsP+lR17SLSuRz4mAwhz/ubz6f4OV8zuhmkjo4GIKbP1auT/ACP7SjUrr5rp
+dotmj++TY01bXJ71woC5HhgDnlQRyUj7eOKqsrsRuA2V/wDM79VjqnK+TxGZJ6CmAHEmGIWHedO3
+iodM25aYSjy0bxH/AM1PQofsU2f41TZ213F3RxbMxnsfT3iC27+9K01ITrnpKlXYrLXAQeDzbHvL
+/Vr9J1v0kWeBmyR+tbpA/g2aybKnMsf4ec82k/MFQmowXkSrLiU0f92djP8AJI1RnHtE9U9N7yjJ
+dJ9Yl2m4tfzU+BMlW+Qj5+TjXJHp9av1pd1TOudtzuKrpp9vo1Mu3YlISi+ZSnJmEpSOAExrn7wl
+I4+QQKtrG1V0wlkBnP7eCfQOh1H+0gVU4GRYxdl+HasptUpXyQxcmlK/Z3c/uq4bj2O039ay4/iY
+R8tKxE3JNyVYybUE+knhzNQx/s7nSfUeKzd0B9sc6mWi8uDYN0OiGC6hwmOTPfkWqRYLzL/RH88w
+pUVvjg+kQ+avoAK2I7PvbBembr2qFj+4mzZZoxe32Ue8PXuCbtZg+pQSGW5kJJeI5PJcejMtgAkq
+FaIJrDzsQw7pFD0dY4LMtkONqH3LBBqA6iaVaLR4ZueROt40twFTb8R0jxPujnuKx+oEj7aylHmu
+KZ4ZLEQT+Xpe2x9LqC5j5Aa7DYH1FDWscxouRN91Yf8AfdzPNxjC9sGmWqumGteEwdS9HNRrDluO
+XNKlW3IMZu7M+DKCVFCi2+wpTa+FJUk8E8FJHqKr9eInY91JN2HTE1t/lJ2b62TGIRmsuXewz2XD
+Z8lab9Gp0ErAWO1TiAtJS82HFFpxtR7h7FOn/vExLf8A7NtPt4OFY+9aIWc2FMx2zvvl5VvltuLY
+lRfFKEeMGpDTzYd7EeIEBfanu4Era4OaHDr8vY7rn2aJ0EzonEXaSDYhw222c0lpHYQSDxBIV4qU
+pXpU0pSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESuFAFJSfn5VzXCuSPL6j+NEXk
+Z6n+Zp1M6y26HUVp1wrg5+5j7TpUeQYfbDUAT5+XuIH049PKrJXbQrCNWEPzr/GXAkJJSi621pAd
+W4R6uJPCXQPInnhR5A7h51Jt1d+lYh1JdxmmGpE8jIZOuuSuruDvwtTXvynKBA5A7Svu70E8BQVx
+5HtBqeIuNmzCMPJxh5YfQRwUkq5BI+7y/A1q7MtTW0WKvmjJYdrHusPUEjwuu7+RLBMsZmyDS4dV
+sZPGBIZGHf7zW42I4tcGuBBFjYAg23WNec7VNWcMle9Y/bVZBDC+WZdkQpx1PzHez/OIP28FPPoo
+1Gsnz7V1spx/KsivMZcZoNqhyFrYV2gcDvT8JUfL1VyT9azM+2vzc2Yt8hfk2/wY1xjfKPcYyJCB
+9yXAQPwrxT5znOn4uBsluvgfHgR6WV1i/wBmjCwJjl7E5qMScYzd8ZtwabOjdYdRcZCN+Kw2xS4a
+QNMJdzqw5DKlEnxVw7kyltfn5HtU33f69SmzXDaoVd0mx3xPJ/8AnFSlJT/+QsHir5Xvb5ojkCy7
+M06jxnD6uWuU7H/1Qoo/1ahGQ7KMSmyy/imfTre0Qf72uUFMkg8/JxCkeX3o5rKNzJgtYTzkksV+
+828tOr5BQWXkV5T8tRtFHRYfiAbwvGwPI7XGUQgnt6bj4r4bLke2tspRaf7nmVD0My1OlQP6zyFf
+xqVwcwxGU0IVpzKylv5R41yZbT/Y5H8Kt7cdk2eNKP5HzbH5KePIOuPsqP4KaI/fVBuO0nXOCviL
+jEWanjnuh3eMvn/RKwr91eHU2Xqs3Fdv/GR9dKrw4zyxZfbpkyt0eB+Gjfa3/pmUfRXxaivPp74r
+Xip+SmSFj9qea4cYfZ/nmFo/XQRWO0vQXXKyrDzml2QJI9Fx7a45+9ANdT0jXDEWi7Kdyq2NtjlX
+imS0lI+3ngcV9GXYZf6mqY70+jiqT+WHEqAH9p4DUQAcSdW3iHRR29VkZyPrQkD1NY7w9etWoZSB
+mLzyQRymWy29z9h70k1WomrO4DNl9mIwZSxxwpFksYWfv7ghSgfx+deJMsV8W7nsDe0kj/Srmj5c
+spV3Qhp6l0h4MbGxxPhaXq6+vsBV8G2H3UlTTC1AepSgkCvzVic5xPchjlhTm+eN5BGhCWhpL8ye
+oKbdUFKT+b7+5HIQrg9oHlxzzXL24TV2EwyZhip7mUdjr9oRy6O0cLJKfiJHmT8+efnXluXJ5mB1
+PMx43BsdgR1XF7+1lVl5ZMLw2pfBjGH1NK4Brmh8Y1Oa69nFrizSDbY3cHb2OyvrSrDJ3J6nBQUZ
+FtI+htbXn+wV+ZO4/VF/nwp8Bnn0DVrZPH9pJr1/RbFL2u31P+1eDy75DDbgTnu5tl//AJbe6v3y
+PrX6ZS8tYVHQsqB8i2DyP2VjyNfNYZK/CZypXcryCWbewD+Ha3X5M7X7KeSy7ls1KvVLAkrSfwSO
+K9f0Xqmf10rGjxP1AVuOXTAakgYdQ1MruzSwe7XyH2WQd4sMC7J8TJsfhSgB/OXOG2oj/ScHP76i
+F5w/bylajeI+Nx1jzKWb0pCv7Lbp/hVqo+heud9c8caYZEtR9XJFtdRz+KwKrNt2la6XBxKZOLRo
+SVJ58SbdoyO370hZUD9nHNVo6Cgoh0sRDe5rg3/V9FYVebs15ldeDJ0k5P70sTph5nmBb+bzVXul
+n2ntqU0b8+2eD/gD8lzj7ipog/tq3WZwdP4Ugf3CZDc5rZV8SLhbUM9g+xSXFd/9lNXHt+yrUmQo
+G6ZTj0RPcQQqW66rgeh/NtEef38/WpFadkNmaPdkOpzznw+bdutHHn+u44PL/Rq7hxnBMPdqNa9/
+cbuB9G/VR3EOTTlRzhFzbMs09L2Obpgc3xDpxfwLD3AFWQxzOsxxJfdjeSzYY8+W2ZBCDz9U/on8
+RVfwPR7VXWq4Lu0CK85HW5xLv12eUlhJ/wAp1XJcV5fooClfZWROJbcdGMOWmRHxJV0kI9JF+f8A
+eAPuaAS1/aSqpw4866lCHF8pbT2tIA4ShP8AVSB5JH2DyrFV+dIGuJoYekeLnAD2G58yPBT/ACn9
+mbFZoY25qxEmBhuIIXOIv13e8BrD1HQx1xweFYfVHbTplpxopcshbuN1m3qAhgonqfQ0w644+2gp
+8DtJCQgr4+PuJHJ8vhHrM6FGQLybo+7d7k5aoMIt6Y2+IGbfFLLahHSWA4Un1cWG/EWv+m4tav6V
+eXXcDhk7OtKrhbYV8agi3hd1fDyFqElEeO8vwR2A8FRPkT5cgcketem/2efKFZf0X9v11VJDvhYa
+5C7g6V8e7TZMbt5P08Ljj5ccfKs5lGunrqCR08he/UePUCBYdlr3O2y1d9orKuFZVzZSQYXRtp6c
+wNA08Hua9+px3Li4AsaS7pG1yTe6zNpUC3VauXXQDbBqPrvYrPHuE7CcCvF/hwJbqkNSXYcJ2Qhp
+ak/ElKlNhJI8wCeK1AN+1R7kXEhSdpWEHkc8DJZ3/s6y+IYxQYW5rah1tXDa61xlDk4zZnqGWXB4
+RIIiA7pBtidxxI7Ct3lK139NL2gPTDexq1D276zaU/yd5fd0KTjMlm9e/wBsvL6ElaowcU00uM+U
+hSkIWFIc7FJDniFDa+vq7daPVvpx7jMf0WwLRDG8mhXnCGr25Pu93kx3W3VzJLBbCWkFJSEsJPPP
+PKj9Bz8ONYb8F8WH3Ze1x1Hw4r23kzzqc0DLz6UtqiC4NcQAWgXuHX0kW7D3cdlsUpWkT/4VBuT4
+5/7knCP+Mk7/ANnWRWTdc3Wqw9LLG9/qNAcXXe75qq9ir2PLvUoRWo6EyyHw54feXOYyR2kdvCie
+fQVbwZjwmoDix99IudjwWYxPkX5QcHdA2rpg0zPEbOm03c69hse5bMaVpQsPtVWuMW5tSMn2a4rN
+ghX59i3ZnKjOqH+StyM4kH7Cnz9OR61s92DdQPQXqIaOK1W0WnyY0q3yBFybF7qEJuFllEdyUOpQ
+SlTa0/E28glDieQCFocQi4oMbwzEn6IJLu7OB91ic1cmGd8l0oqsVpCyIm2sEOaCeAJaTbuvYHgN
+1fKlYJ7mOp7uszDcrkuzvpZbVrbqhlGA+D/KJmWSXhMew2N9wHiDyHmQ9I9QoB5KkqadQG3C26Wq
+ls26mO4m47lYmxvqU7ZWNK9Tsgtz1wwO52OZ73Y8paZSpx9lhwOOhp9ttPf2+K4CErC/CX4aHa4x
+CmM3N78bXsdN+zVwusQ/KGMsw41ZDNm6zHzjOdDLX1mK+sNtuTbYbnbdZtUqwGyfd/lu6LULXLDs
+mwy22pjSrV6biFrfgS3HFT47DDTgfdCwAhwlw8hPw/s5N/lE8fCOT8uTV1FKyaMPZwKwdfQ1GG1T
+qecWe21/MA/IrmlYp7Q+pjj2p/SwtPUr3N2+2YdblWe6XC/Q7VIW+yymLcpMNppku8KcdeLLaUN+
+qnXQhPPIrH2x9Rvrk69Y+zuF2z9LnGGtMLiwmbYIGX5MhF8ukDjkPoBmMdnioHege7qBC09hfSUr
+XayYhBG1psTqFwACTbt26lnKPKGLVc0zC6OMRPMbnSSNjbrB3a0uIu7a9h1ceIvsupWPeyXqEYJv
+g27XjVrEcQn43lWJyZdrzvT3Iu5ufjt4joUXIj3KEqKCR8LvYkkcpUht1DjSMS9AuqF1rdzOjth1
+50V6VOIX/FsihqkWq7M6pwowkJQtTayGpMlDqOFtrTwpAJ45HIIJ+vxCnYGkXdqFxYE7C3Z4r5S5
+RxeodMJCyLmXBrudkZGNTgSAC4gG4aSLE3G4uFs4pWu/EesVu21igZJt+0w6esq1blMQmRJN20ky
+7LGYsebY1nseucSc94CHQ24tjls8ApkIW2t8BZTFdYOqX1ndABip1k6WmH2L+7fM4OJYr4uqUN/3
++8zO/wB2iDwJC/DK/DX+cc7G09vxLTyKpOxWlDdQDiO0NcfI7cVfxZBx18/MPdEyQ7hrpomki1w5
+t3dJpG4IuCtnVKwe0U3W9bXKNY8YxnWrpaY1jGIT74xHybI42qVulOWyEokOSEtNylqcKR59oSSf
+TjzrOEEkAkcHj0q7gnbOCQ0jxBHzUexTCZsJkaySSN9xxjkZIB4lpNvNKUpVdYpKEAjgilKIvLl7
+Wrorhb3WYs9swyy2+xTcy0ltd0v05iOrifcEv3FkSHgD5rLMSO0VJA+FpJ4KuSrX1adWtT9GpTFs
+1OsMiVH824V4ZWCp1tPAIDh5RISBx8KuFDngkeQGzb2s+M5b+tfpjIWrkS9FLSUfYDdL01/FJrEG
+wQ4kzDWrPdIMeZDlpLkiFMYS6y4So8EoUCCQPQ+o+RFQfNOIx0tS2KeISRkDbgQbuuQfIXB2Pcup
+uQXJtXj2CT12E1r6SsjkcA8DXG9obEWskjJsQC5xa4Wc0knpWAEcwfXvTnN+2PFvzLMk8fmHx4Sy
+fp2KPmf1FLqZsvsSDww+hZ/qpV8X7D5/uq12Z7QdMMjfMzFrjNx11R5Uy2j3uN/opWpK0f21fdUQ
+e0R3PacOk4Nfk3uG2eGmoM0OgpHy92f4Vz+qk/YT61FDh+BVxvS1PNn8sgt/i4eQut/tzjyr5Wbo
+x/BPi4x/bUTtZIHXzJ+8Futzg0LIL58UqyFo3DarYvEDmpelN4jsNeTsxMB1CE8fVDyfI/ctP3VM
+Mf3L6TXxlCnchREWrgFuSlTZSft7h2/j3EfbVlPgOKQDUGa29rekPa6lGE8rGRMVcI3VQp5SL6Jw
+YXeQeBfxFx3qf0IB9RVOtmW41eY5l2u8NPtAclxohxI/FBUK7275ZHjw3eIxP0Lvb/HisUYpWmxa
+fRTyKvoZmB8crSDws4b+G6+oDt80+X3eVdybhPQgtonPBKhwpPingj6EehFfO28w8OWJDbn+bdSf
+4GuzwneOfDVx+qapkN61fRvkAuwnyXDq0yElEiNHcB9Q5FbUD+1NdN/yCVZ8ek3By6wmGojHLYut
+wMWIk8gJQpYB7AfRIA8zwPnXbUWzXSrVDcmnKtMNKLBZ3rfpzhUjPtSL7frkIsW2W6I3yhnu7gpb
+rxeZaQ02FOuuSW0pCQlxQyWE4a7FK9lO0bcT3NHE/TxIUK5Q86wZDylU4vM7pAaGC+75HA6G8D1g
+uNwRpa49StJqzuNwfU3RBWPIgzYWQSLgwt+ChgLjIQ2V8qDxX3HkFPCSkkHnz8gT9uO6+apbiM2s
+elkfM5GH2VuI2l9NkkOh58RYgHBWDySoNHsR8LSCofD8IrIjVTq075MksDGs2ObHNsmDQIMBh+23
+nFdvWPvLtsVSkMs+EZ6JTjaBy2hIPoO0fSrb7YtFNc9324LVLMLjnF2a3HS7RJzvEMBXhDakajeM
+lyfdojIYW2Iz6oDjkqMwxHWl9KFtt+CoNd2zmYPhPwT46HS541llyHBryAD28OjxBI81wvPyi8oA
+zPTVeaRNBTyClbUBkboTNTse5wO2g/eXlI0OY15vYWbYTN2BaXkht6zw5CQhKO+dBYeccCQAFOLL
+f5xZ45KiPM8n51+BarGkcIxm0J8uPhs8cf8AUrpxrJbNmmNwcwx1ZMK5Rw6yhSwpTJ54W0oj+khQ
+Uk+nPAUPIivtrUjxLG8sdcEGxHYRxX6HU3wFZTx1MGl7HtDmuG4c0i7SD1gggjuK7WJsuKhLUN8s
+ISAEojgNgAegASBxXLtxuL3m9cJC/wBZ5R/6a6acgepqjpbfgsjz02nTqNvEor4v0vP7/OnAHoK/
+ceNJlK7IsZx0/RtBV/CqLkuoOn2GOFjLc7tUB5P6UZyV4jyfvbaClp/ECqscckz9EbS49gFz6BWV
+bWUeHU5qayVsUf53uDG+bnED3VXpVsMr3daSWBBax5q4X9/tPaY7XurHP0K3QV/sb/GoxG133Hat
+xn4Ok2nDcFpSeF3G3xnFuMjnj/CHleG2fl3AJV68EedZmHLuKyR85IwRs/M8hoHiDv7LWmJ8suQa
+Kq+Do6h1bUb2ipWOnc7ua5g5s+T9utX1uDsez283i9zGIEMesye+lhr+2sgE/YPOraZnu00mxfvj
+Y/75kUpPIAhpMeMCPq64nuP+ijg/JVQuNtM1YzSd+WtU9RYzDzo7nFPy3LjK5PyPaez/APU+VTfG
+dpmjVg4cusa5Xx0ccmfK8Bkn6+Gzwr8C4au2UmWaE3qZ3TH8sYsP5r7+Th4KO1OYeXDNI0YLhUeG
+xn+1q3h8g7CIg0lhtxD4pB3q02V7oNZNRHVYxjRTa2Lj3RE22wx1F6UHfg8IuHudWVA9pSCAruI7
+fPivW37PdoFrpti6QGjmi243AJuL5XbIN2kzLDc1p96iMS7xNmRkvIBPguFiQ0Syo97fPYsIWlSE
+6Jeki5YMY6z21TF7Xjdti29q/wB8ebhRrayEB122yGkuEFJ7lJLYUFq5UkjuSQoA16qGzygE/MVs
+fL7qOXDGzU0Qja6+3XsSLk9Z27/FcXcrsWZKHO8+HY1iDqyWEMGs3DRrjbIWsaSQ1oLrWAaDa+kX
+srLdSX/F26+f8CuVf80Sa0/+zmbTdtO7DOdW7LuP0TsOZMWWy2J60JvkZTnua3XpyXS3woAd4bb5
+PBPwDggcg7gOpL/i7dfP+BXKv+aJNaFOk71RInTFyHOMkf0KdzheZ2+2RkNN5Mm2iGIq5Kyokx3v
+E7/eB/V7ew+vd5YjHpqSnxulkqbaAH3uLj03WxOSfDMw4xyXY9S4IHGpdJBpDHaHbEk2cS221778
+F+uqtoHinTh6l8iBtxZctFpssixZjh0L3lbyrU74iXQ2lbhUopTJjOKQFEkJWlPmBV7vanlqb3xY
+c4hXCk6NtFJHyIuVw4qzeOPaydb7qtQcln4CYMXJr7b5GQW22vOSI+NYxB8JLvfIUgDuLSCnxFJQ
+l2VKAShAWEJvP7UolDm+vCUOj4VaPxwsH6G6XDmo7LodhNbNELROkbp7NjvYei3Hh5q4eUDLWG4h
+Jqr4aOUTEm7gXNbpDnAkkizt79pHFbHtDukd00Mu0Vw/KL7swwZ+dcMVt0mY+q3L5cdXFaUpR+Pz
+JJJJPmeeTyfOsc/aD9vmi22TpbYrpZoHpxbMVx5rWmDKbtNpZKGQ87DuKnF8Ek8qP21gLY+sX1ls
+UxiFjuN7h8lj263W5qPbmRpVaHAhhDYS2AtVsUVjtCfiJJPqSfWs5Ot9m2Zal9DvQXUfUa5Ozchy
+C7Yfcr9MfiIjrfmv2GW6+4ppCEJbUpxaiUJSkJJ4CQBxWcdiGG12EVAp4tLms3JaB8lqyLKGdcq8
+omEPxeuE0U1SNLWzPkAsb7hwAGx249aonRd6ZGyXe703pd6190TiTcik5heYDOXW6S7FukVCC2Gl
+tvIVxy33cpQtKmyR8SFAqCrA9DvMM32cdYqftTvF8TIjXu4ZDg2T9ilIjvy7WqU/HlBAPBX4kJ1C
+Cee1MxwD9Lms+fZo/wDFtf8A4i3v/aZrXXoyAz7R4/4I7P8Avmsg/R8vWRO5/byf21aviipqbDqi
+NoD9TQSNrgje/as7T1+IY3jmcsGrJXSQCKR7WuJcGPa7oloJ6NuO3YFsy9n/AHYs7aVnt5uzil5h
+O18y9/URT/Pjfloy09/ic+i/A93J++p31WNrOre4fGNIs6284RBu2caX622HKbe5JnsRFogMuqE1
+oPO8fm1o8NS2wfj8JHkopAqzO5vYzvn2c7pco38dJ6Zab61nznvuquiWSOhEW8TeSVToiitseKor
+W6QXG3EulwpU8h4x03X6f/V90k3oZ5P26ajaa37STWaysrXdtNMxQpDzgQO5aojq0Nqf7WylakLb
+adCSpQQptJcqTQujEIoai7TwB6nb3BB4X7jvfqWj8QirZMSdmnB9M0f43sH4ort0ubJGCHBg3AeO
+hptcjgo/0igRrdvE5P8A9aS7/wDI4tZuH1H31qP26azdTjTHc5uotmxTZdi2pdjk7jby9e7vfMyj
+212LN8FhPu6W3pTXckNBtfcE+rigSeAE3ma3Ze0OeIPE6UmnoH1/lTgeX/n9fKGuZFTNaWPNr8Gk
+jieuy9ZnypUVuOSziqp26gw2dPG1w6DeLS64PcViht4tsbWrpS9P/ZPdo6pFm1O1tuMvLLcpag1c
+rNabtdZkqG6EkcoXy0fsLYI4I5rdwngp7gPXz9K0rdO5DCMJ6XLcZwraGRardiiPUcz+DW6lH6A+
+6qmEdKIu7mDy0NP1KtOUT7qtZCOGupcd7jUamVpI6uEbeHGywENqg6CdcXUvGcXJh2jWvbInJ77E
+QAG5N9tk5UJDoSAAD7otZJHmVLWo8881OugSAekFolyAf/iKb/znLqC7oldvXQ058/L/ALmLKOf/
+ABlVWG6TvW86cG0vp36W7eta9bJ9uynHbPIbvMBjELjJTHW5OkPJT4jTKkL+BxCuUkj4uPUEC2iq
+IafEDzjg0DnALm3WwrNYjg+J4rlKMUcTpXuFI5wa0uNhHUsubDgAGi57gsiepNardgXUu2Xa9Y7A
+Yavz+eXjEZ8hDKQ5Lt023LHhuK9VIaKnVoSeQlTyyOCo1UutJ/N7Sz9d7GBc/wDntW929ao5R1eu
+o3hG7nDdN75Y9A9AbbdlYXfsitimHMyyKe37o6402o8BhhtCilQ7lNuNAL4U8UNXD60wATtMA+W9
+jAv/AE6qwcJYJpmfgcRbvsGgnzI87XWNMMlDiuGYfUC08MbxIL3LdTpHtYe9rXAkfu6tJsQQs2Al
+Pr2jnn6VzQen40rNrWKUpSiJSlKIvNF7X9IVA6y2j80JBH8jNiTwQfnf70D+5VYk2BIRYoaAf0Y4
+H7zWbXtnWIP2rf8A6B6mqQkM3HBTb0L48yqJdXHVDn7BMT+2sI8ecK7UlB/8E863+xZ4/ca1vntv
+3sLu79f1Xa32UJ70GIQk8HA+ob/t9l9tCAfUUrlSVJUUqBBB4IPyrX66+XYzOmx/5iY6jy4+Fwjy
++lUW7YDp7f3jJvmnlhlOq/SeXam0rV96kBJP41VaV6je+J2qMlp7QbH2VCrpaXEIhFVxtkaP3XtD
+h6OBHsoyjRXRxq4s3aPpnbWZMdXcy4w7IQEq55B7UuhJI+0Gqq5ilgd5JgrTz/UkLH8SaqNKqvqq
+qS2uRxt2uJ+ZVhTZfy/RBwpqOGPUbnRFG257TpaLnvKpC8HsC/NIkJ+50H+KaMYZb2FhSLlOA+aU
+PBHP4pHNVelfPiJ7W1FVP2NhQdqELQe4W+S4CUobCEg8JTwOST5fefWprpNfWHenLv7wIpSJeVZr
+pBZ4LnvC0dqhc7g6CpKTw4kJjkdqhwCoH1SniHR22nn0NyHkttk/nXVnhKEDzUon5ADkk/QV2act
+XzDukRr1vPvcUG36k7m8NxvEnXEnuL1qYul2kBSPm34T0ZIJHHLakg8hQqW5KimNZPLHxDCPMkEf
+5Sud/tPV2HR5awugqjZslU15A46I2Oa8jw51tvFR3U/Gok3THIcQs0NCGmrA7Ht7CEeQTHQFNIA+
+p8JIH2ml+1Evm33KcG3haZKMbK9Jshs94sj4WUePHbfaPujpHmpoqIBSeR2uPJIIWRUhuCUJnvhr
+nt8VRRyefInkfuqA7ko86foxcbRbIy3pNwuUGLHZbHKnFqeBSkfUkpFYPA6mduI0zWH+0B8dWkO9
+QFtXlSwPCpsmY3LURgj4R7QLCzTAJpIiOzTI+48AsoupVpFg+hfUk3C6aacW4w7Oxqs7c48IEeHH
+cuNtgXB9tsJAShsPSHexAACE9qflVlavb1RMvazHqu7nJUcjsi6mxovHJ/SYtjEZXqB84/8A7/Wr
+JV6zC3TjlQP4vmAfqqPI3N8RyWYQ/wD8q38r3M/0qj5K5qe2lRwWFiTw7PIXyRMQ73fYGwG+PvUK
+iEy37wbun8xk+GWME+aYraFqH+kWnVfsNXHpVnBWmnbYRMd3ubqPubeykmK5Xbi8xe+vqogf3YZj
+E31Y0P8A8as7dNv2vGYNqbzfcUl5twcOR25Mx1vj6BBQhP7q5xjZdgltcL2XZhcrr5/AzAYTEQP1
+lK8RSvwCfvq8NKvjmLFxHzccgY3sa1rfkL+6ireRnk7kqxVVlI6plH70800p8w+QtPgWkKO49pBp
+Lia0u2DTe1IdRx2vy2lSlgj58vlYB+0AVJn5UmSlKJEha0oHCEKV8KR9g9B+FddKxE001Q/VK4uP
+aSSfUrYmH4bhuEU/w9BAyGP8sbGxt/lYAPZKUoTwOapq9V0ekXEdyP2gLbfYmkrX7izNfUhr1BRb
+brJJP2doBP2CvVs35NpH2CvK30DLNcso9o706nxUlTGN2a8PSeRz2N/3Lyo5P2fnZCf216pQOAB9
+lbwy/HzWCU47WA+ov9V+WPK9WfHcp+MP/LUSM8o3GMf5VZXqS/4u3Xz/AIFcq/5ok1pR6G3T+289
+QP8AlqwnW/GHZNysuI23+4y8NXeXH/I06UZ7fvPhsOoTIKVNMKCHQtH5vjtIUed3XUDxzIsw2Ga2
+4liGPzrtdrppDksO12q1w1yJM2Q7a5CG2WWmwVuOLWpKUoSCpSiAASa1y+zL7edw2iGpGsMnW7b7
+neFM3Ow2FFtfzDD5tsRLW2/OLiWlSWkBwpC0EhPJAUOfUVj8VpBU47Sh7NTLPvtccOv6KY5AzA/A
+uSvHXUtTzNSZKcss/S82dvpFwSLcbbW47LHT2dHXrI9u/UWkbe87TJtzWolmmY/dbXIdDSI18txc
+ksF0H1WkNXCOlPke+SAPoa77VAQd72HqB9dGWuP/AClcapvU92TbwdufVhvm4zahtZ1Ayu3OZZbN
+Q8buOL4ZPusX8ol1EiUw87GaWhK1TWJKlNE8huQjkcKBM99od0F3H7m91Wnmp+h+1nVHJ7LN0che
+M9aNO7lJMN1ydNd91kpaZV4EhKHEd7K+Fp7hyBUfkhq4sCnoSwkxvGnY7tvfbt/5W36PEcv4hyq4
+VmiOpjY2rpXc7d7ehKI9JD9+iSCAAbX0nZbhttzrru3nBHZC1qWrDLWVKWSSomG1yST6nmsFfahP
+8XrjP/C7a/8AkFxrWXBnde61wGLXbLfvFjRozKWo0aPaMoQhptICUoSkN8AAAAAfSsltfNLN/wBr
+j0KMSxrVrSfWrMdSGdf3JMy1ZFjN2nX1u3IYnpbeWy40p8RwFoCVkdg7wAfMVlZsWfiOGS07YHtO
+g8Rx7vFa/wAP5PafJudsPxiXFKaVhqW3EcgJaCSdTt7ADrKy29ml+Hpsd6vIDUS9kkn0+Jmtcmwy
++2bcN1716zYc3LumOydU8yzOLIgs9y3Lc01cpEVfaSOPEKoyByQOXkj51ajEtv3WDhafPbe8N0L3
+L2zELw46iZiUfGr7AtMrx/J0PNqQ2wUr/p+IQlX9Lyrbb0LOkdl+wuw3vXrcVEhs6m5ZbkW1m0QZ
+qZCMetQcS6uKp1slt1951DSnVJK0JEdpLaj8al2NCKvFDSU/MuY2Eguc4WuRwAUqzQcvZDbmDGTi
+EVRPiIdHDHE4OLWvPSc4i/Dbw7yRbL/Zxuo073tbacV3RaU2i8Qcfy2I89b4eQMMtzGQ1IdjrS6l
+l11sKC2lforUOOPPnkDFHrp4HjeneNaR7+cRtEeJqFpXq/jqId8YUpuTOtMqYWZFrcUgguMOF0Ep
+Vz2pLwT2h1wKg+n2pG4XoW5Pk2gOX7W871Q223HIpt80vy7TS2/lCfiDMp0vPWaZFU4EoZQ+4Sh5
+S2wsrWsF1TimY/6ueoO4Drc6/wCmuP4/tgzXTLbrppmULM8pyHU20iDOy+fEJMS3RYwKkrZ8TxA4
+pLi0dhKlqbcQ007Jp6kVFL8O4ffbC1usfvdluu/DzWjsKwV2E45+14iP2cNTtesbxkEc2QDq5wg6
+Cy2q+9tO6ur0ihzrdvE58/8AvpLv/wAji1m2QOR5fOsPOlpp1qLgesm6+fnWnd/sUa/7kLpcrBJv
+Vmfit3SEuLHSmVGU6hIfZKkqAcQVJJB4NZhqPA5PPl9BV9hzXNo2gjt+ZUWzhJHLmOdzCCOjuNx+
+Bq0n7GnThG1zphaz3FsptcLVbMcZefP6KZV4k3OPGR96lNK4+6t2CAQgA+vHnWsbaZ07tVdx3s9+
+nm1/J7PeNNdU8clTr/hcjKbXKt03H79Fv86TDedaWlLzAcbWUeIUKUluT4iULISDVsZ65+vWlOMI
+0e3XdLvW9OtMBswlWrDMYEu0X6Ygdnjx5KVFQadcCiCwiUhIPwOO+tY+kmZQMHPXAc1pGx4hoBHc
+dht19SluYMOqM2VL/wBmaZJIZZ2ubqaDodM+RjxcgObd7gXD8NrusCCZdrhHbzDru2iDCUFHEdoN
+5uUxSTyEmVdjGQg/QnzUB68efpUu6CUCFM6ReiM2RCZW8iwzexxTSSocXOXxwSORVG6cu2ncmhjW
+Df8Ab0MUbtWq+tsdCYmHRUh1eL2CJGWiDbgEjlLyuQpxAJKuxkrCXvESJr0QcAz7S7pXaP4Dqhgl
+6xm/W2zTEXGxZFanoM2Io3GUoJdYeSlxslKkqAUByFA+hFVKSNxrBKWkBwed+9zLX7yBeytsw1UL
+MvPomyh5hfTR3adiWxT69Pa1rnadXXx6wrfdKuWva7ur3DdMa6yvCtmKZWM70oiLW6UJxq8kOuRY
+yV+QYiSlBtRHq7IcPn5mqr1p/Tab/wDfZwL/ANOrjqDaZ6naS7+9unUB0X04yLI0xLu9p3qrBxi0
+S58g45ce5xmY8zFbWr3aFI8V9auP01ND6cVnq6ac6jajJ2w/yeafX3IPyDu/wq7338h2d6X+Tbcx
+75482R4SVeBHb7k97y+EI7hyRyK96HspZILfhO3gSCPTh5K35+nqMeo8ULx98wl9yNpGtLH37NRA
+fvx1rMAen40oKVllr1KUpREpSlEWgn24BoR7xtVuaGuCmTmKVucfRVhKQf8AW/fWtrGXQUz44/8A
+B3BZH3K/9xra57btjMaTtd0OzgqSH7bqBcYTY8ue2RBS4rj8Yyf3VqbxZ0flW4sfM9q/9Yg/xqAZ
+6beOI/8Ad82/quvPspzltXiEfVeL3ZP9WhVulKVrZdsJSlKIlKUoiUpSiKK6zT5asL/uDx64Q0ZD
+mUpmy2CFKmIY8cvupbdUXXSltlsJV2KccWhA8TzPAVxeDq+61aMXBvQzok7McwTfdOdv7K4uVZhD
+WVxsly2Wsu3Sezy853R2VuSSnzSErkSm0hTTbK1WxkZ1luCSM8xPAtDbbcsl1RxSBjNn1WuT63Dg
+1m4kIvkeOz2ltD05pxtlchX51MZUlloKMxfbRNLdA8H0eu0y9WC6TbnNkIWwxOnR0MllhR80pbQp
+QClDyUruPlykAAnmfYdimH4BgP3b9U0oLrDexOwB7A23XxINlyLnDImceVvlaJq6Yw4ZQvbCXOJG
+tjSZHFg4vdKHbFos1ro9R2uZvLeRIlOPtJKUKWShJ9Qn5D9lVTQ/T+DrFvb226MX1TBs+S682Fu9
+sSZqY6H4zctjxGwtRHxqacdShI81LWlKQVECqPVC1HxK65ji4jYxfXLVfrZOZueN3diQplyHOZPc
+hSXUEKaJ9AsEdqghX9HkRPBaiGjxWGWX8LTv3bWv5Xv5LoPlOwfEsy5BxPD6HeeWM6R+YhweWjve
+Glg6ru32urm7+2bzpt1kN0ekuozYt13vWqEq9WSM+r/CWJClyo4Sf6zkSUy6lJ45AKR5lKTD67bP
+dt0XUtyTKNF92eQtXLcNfGGcu0Pzm9IYbuF4mW1hTMnFEPxWCAmXGb8eK0taG250BtCEoXdH3FUL
+T/OYupeEW3OIyEocmscT2E+jMpB7Xk8D0BUO9I+SXEipDm+gj59uIwODmS7Eg3GoCwsR1ED1B7Vp
+77Ombaw4XLk3FYXQ1VEC5rXtLXGJ7y4hzXWIcx8g7Lte2w6JJrFKUqGLphKUpREpSlESuFeh+6ua
+5bbU84llA81qCQPtJ4pwX0Ak2Cy29lQtlrv3XN1Xuc+I269atHLw9BcUkEsui6WWOVD6Hw3HE/co
+ivSjXmp9kQkflXrSa1XhhfcyrSPIOxRPmUnIrP2/uTXpWrfeGs5vDoWdjGj0AX5I51qhW5yxKoH7
+9RM7+aRx+qjmrmrumGgum141g1nz21Yxi9ghmTeL7epiY8aI0CEgrWo8clRSlKR5qUpKUgkgHG3R
+ProdKrcXp9nep2iu7KJf7bppjzt+zSNGxW8IuMC1NFIenpgOREy5EZrvR4rzLTiGu9PiFPIqxftX
+enmrOfdI68StNrVc7haMdzmy3nUO3Wtau+RYGVuh7uQgguNtvrivq+SEsl08JaKk1jDN1/Rp389T
+7BrFolo4rWLUa16OzCjVDFIzcjHMaxqSzKbctl0SqW2CViQtkRVxHlNrnhJDZLnZeqMLJjIeptsW
+xeyaLZDedwEJMbcPOhxNHAxapzzuRuyfA8LtabYU5HSDJYS4uQlpLKnUpdKD5Va3RT2gvo6bhtU7
+VovpVvgsMnIr3MTEtUS7WS6WtqS+o9qGkSJsVpkuLVwlCO/lalJSkEqAOD3Qk2W27F+rFrVpVkuq
+UzJsO2QOysY0CsUtlIFmayidc5smSt1vs8aWhpD8VxbiVBz3gkdgZaSnWBo7qjZbz0itLdF8p3PY
+tqLCg7jYdwTs7s2HOx8oyNSpBQpLN5jB6QyX23XG0FLCTw+UIdW4EMKIvQ1rn7Qv0eNturmRaE60
+bxGrPleJ3V225BakYPfpXukprjxG/EjwXG1kE8coUocgjnkEV9mq3X76Q+iGss3b9qtvJt9kyu3S
+mI86BMxa8eDHceZbeb75KYZYSktuoUVlztTyQogpUBq10t1ryPSzqy75JGJ9aTBNqrMjVyCZTGU6
+e2rIFZQpv34FLXvz7SmhGPc24Gu4kyEglJCebfbsc+3oYzq51Uss2r2LTvI9NrvNxmNq4q8WyXc7
+wmzT2ZzMafZUx1iMfCafkPuuvkhtCW3UFPhqIIvRnH1M08n6at6xWrM7dcMUfsYvMXILZLTKiSbe
+WfHTKZcaKkvNKa4WlaO4KSQU88irCYd1h+m9ncHRq5Y3uZhqj7grjcLfpC/Nx65xEZBKhTBCkMgv
+xkCMsSSllCZHhF1akhvv7hz17bcb0TwDpF4njG37UtWWYLatB2mMbyyQFNqukNFpV2ylocPcwpfm
+pTSuC0SW+E9nA0T6IbU8Z3y7TOlttRyTP7hi5yy264otmR2k8yLTcmbhKk2+WEhaCtLc1iOtSAtB
+WlCkpWgkKBFvY3EdY7pt7U8jzzEdwG5JvHrjpneLHas2jLxW7yDb5l3hPTrc0DHiLD/ixmHnOWSt
+LYQQ4UHgGD6X+0PdHPWW93PG9NN5LFzm2fF7rkVwYGEX5ot222wnZ014F2CkLLcZh1zw0kuKCCEJ
+UfKsPfZztetd9w/VM3kZ3uowhGM6nM2LCLFn9lRLZdH5Ys0J20TX0lgBrsdfhreCWu5tAfCULcSE
+rVCejpeWp/sq+6dw3Nt7sseqCVKS8FcKVYu4AkH1PiA/b3g/MURZ5abe0YdGjV3IpmJ6d7zGrjcI
+GO3a+yo4wPIGu2BbLe/cZzwU5ASlXhxIz7vYklaw2UoSpRCTkU1vN21PbSTvpa1LSdKxhxyo5V+S
+ZnH5JDJeMj3bwfeOewE+H4Xic+Xbz5Vpr2oblhJ6Q+caU5z1tcC1RTcdimR2zF9t1vwG02u5YzLj
+4sp7wlTmXlSpjkKLFlMLStCfEBW8rzQDV19Od9WzPUT2bmdtJwLdFg941Lg7NrkiZhEHIG1XNl2H
+YHXJTRYVwrvZQhxS0gEhLa1DlI7qIto8zdnt9t+1RO9uXqB2aYKwRGZDJza5Z5si4gmJl+7+F7x5
+sKC/C8PxfPt7O7yq2mvvVx6c21/QHA9z+u+5+2Y9hup9sj3HAZj1rnvS71EeYbkIfagMsLl+GG3W
+itSmQGi82lzsUtKThNje+3ZrrH7Oncdrmlu5rC77qLYtiTrd4wy3X5pdxiOQcUQiY2tnnuCmlJUF
+p/SHao8cAkY/aV6t6e7UN5OzzcnrTd8SxZu/9L2x4zolqLqVAcGNWvN2WfECZclCkKZQmNIW28pC
+0L8K4BsKT4wNEW0nOutF0xdONreM70sq3YWlOmeYXo2iw5NbrNcZodnhl18xXY8aMuRGdS2ysqQ8
+2gpIAPBUkGIY17Q30cst05mat2PehCOOW/LLXjU+6ysPvcduLcrizMfhtOB6ElTaFtwJii+oBlHg
+K71pPAOojP8AcrB1k6c2E6q2O/aM6LS7L1WILX8ouk2MyhjSHmbR4qst9yuklwvISVof8MllpTLT
+aFNtkk1ePqV5tpvu52PaMaBa2dVLGt2CJ2+vC4WZZRgWOWzHn7JYrla7lGTB8CC462lR8Gc63JWe
+VKWpPozRFuXvO8jbZYN2Fv2O3nUtEfVG6YUrLYGMLtcv87Z0vusKk+8hr3YcOMOjwy6HOEFXb28E
+2o0F613Sz3P7indqWhG8rGchzlEh9mNa48aY1HuDjJIWmHNdZRFnHgFSfd3XO9CVLR3JBUNMljxP
+dAx1D9a+nzrXi9yyXUHSfp853pRp3dmIzbkrOLaj3uXYZjUeOCEvu26cxHLSVvOFxlXiLLpcSMsN
+k29fou6v7PdgG1q5YA5qbqjaLxjQw7DtOrW4brheVW9pBuN8uTbDzC48FuUh6W+p3xEyEAyfBfba
+W42RZYD2kHotHUROlI3rRzfl3r8kphjBL+U+9+P4Hh+L7h4YHieXf3dnHxd3b51nACCOQa89HRL3
+KuaS5Vm8m89b7TrRfFTutvE29aLX7A7TNkZjFLsHxn0XGQ+iRDalNj3dC20FLamFOAqPckehcEHz
+BoiUpSiJSlKItLHts6VObItIWkg/HqysDyPH/wAmSfn6Vp6sD4ZytxpR8ng62P1vUD9qa2xe2zZh
+4WmO3DS1DpCr3mt6uAb4PCvdWYTPP08vff31qLmuuJuLsiOvtWmQpbavoQrkGoLnIc4YWdzvfSuq
+/s1SGjZiFVa9nweekSkj0Km1K6oE1m5Qmp7H6LqeSB/RV/ST+B5rtrWRBBsV3Ox7JGB7DcEXB7Qe
+CUpSvi9JSlKIlKUoicnjjk8H1FKUoiUpSiKKaw6av6m47AjWi9fku72i6ImWm5hSkljkpDoBR8SS
+QltaSP6TSRyOeRIbHYbJilih4rjcXwYFujhmMkgdygPNTi+PVa1FS1fLlR48gAPqpVw+rqH0raZz
+ug0kgdhPH6+p7VhoMvYNS49PjUUIFVMxkb39bms/CO7qBtxDGX/CEpSlW6zKUpSiJSldcuUxBiuT
+JSyG2k8qI9T9APtJ8hQAk2C+Oc1jS5xsBuT2Bdld9sANzjA/74R/tCqFjs+8Xl925S1paip5QzHb
+QOFK8vMn1PaPn9TVdthAuUYn/fCP9oV9mYY7tPFfMMqY6wxysBDSRa4tcX427D1XseuyyX9jVmKd
+6tOqQUnkv6I3l1SufmL/AGb/AP1+6vTVXmQ9jfSi39XjU+C8sJWNEb40lJPmVC/WY8ffwCfwr031
+0FDbmW27B8l+PeJh4xKYP463X8bm6puWZliWCWdWQZtlFus8BDiG1zbpObjspWo9qUlbigkEk8Ac
++ZqgaK2PQSz45KXt6s+IxLRInrXMOGx4iIzkrhPepfuoCS5wU8k/FwR9la9/a5GWnejVk63GUqLe
+bY+ptSkglB96I5H0PBI+4mrH9GDTiBcOu1rHdtNNptl2oRtMtHLfj2oGhEfM27nKyC5zJAkx7s22
+w2I3uyI4YC3GVqCVKiqBV76521VYrcnExvCMQm3bMIVitdskXEJfvdzaitMLk+Ek8LfdABX2JKuC
+sntHPoKgWneQbMo2Twm9Kr1pk3eJJU1bk4/JtgkulSSSlvwT3q5SCSE+oBr9b4I7EvZdq7Fkx0Ot
+uaYZAlbTiApKwbbIBBB8iCPLitTPs1u0K9ZRt32+675L0y9A5OORkXqanXV27hzLxKYuFyTHeMUw
+v5xL6G2EkyFFLSEuBSSlLQItxl40K0VyK4SrvftI8XmypyyuZJl49FdcfURwVLUpslZIHHJJ8qpe
+G5Vtizy73e24DkOCXmdkcUG+s2iZBku3NhDfhjx0tEqfQEKKPj7gEq49DxU+4A4AHlXmC6evT23L
+74emHpBYdoPTWtOMZvB1WXd4W8tWoNst8u2e63N0l33Zpabi6I/CGko7VpCmA42O7gpIvTdYsUxf
+GMfaxTG8cgW+1sNqbZt0GG2yw2lRJUlLaAEgEkkgDz5P1qH5MrbBokvFUZgrA8TVFmPQ8KFy9xgF
+qRI/nWYXidnatzn4ktea+fMGp+okIUR68HjgVpu0u297S99vWY6gEPql4tjl5OnuJ49asJi5pfyh
+vF8RXAkvTJ8FLroTCSE+5y1y2wkx3Zq1pW2ZLniEW4G34li1qyC4ZZbMbgR7pdUtC53FiE2h+WG0
+9rYdcSApztT5J7ieB5Dio1kDu3nSDGDhOTuYbjNnvnvKDaZ5hwo0/vA8ceEvtQ73BQ7xweQr4vWs
+M/ZftQtUtR+irpFc9UZ8mabd+V7TYLhMlKedetcS5yI8ZBKlEpQylCozaBwEtRm0gcAVjd7UfjyM
+p3mbC7Arb9G1UM3Ua/xxp5LuEeI3kXe9Yh7gp+Tw02l3ySS4Qj+t5URbW8U0n27Xm1t5LhenOGSo
+c6G6y1PtlmhLakMOJU24gLbQQtCklSFDkggkHkciui/4Ftj0rtbt8yfD8Fx6FMZXbnpc+3QYbTzb
+ySFxytaUhSVpBBbJIUAeQQK1vey8YrDuj26HcBp7ptH0pwPK9WY1rs239u9zZT2BXW2x3EXIPtyU
+ISw9JMiMoobSAkMJa4SlltCNk+v22XbzurxCHp/uV0UxjPLFAuzVzh2fLLKzPjNTG0ONofDbqVJ7
+wh11HPH6Lix6KIoiouEnZlfr05jenqtMplwulvfiOwLN+THHpcVSeXmShrlTjZSkd6eCkgeY4FS/
+LdMNJskwFOA5zgGPT8XhR2wmy3a0x3YDLTKfgHguJLaUoSkceQCQPLjitTXsl21TbPeNp193NXDb
+9iCtQ8Z1uya3WDNDYmjc4ERUKI0WGpJBcQ34bzyAkHgJdWP6audo27hhmTtX1KjyGUuNuYBekuNr
+SClQMB8EEH1B+lEVUs+L6F6o6e2hiw2DFMgxaNwqxJiRIkuA14YW0CwEhTSe0d6Pg9PiT9RXxXLC
+NtOFz7TjF3xTB7VKul2bk2O3yYEFhyVOYHCHWG1JBcebDnAUgFaQvyI588PPZcv8RToZ92T/AP8A
+J7rWMvtSOjOabhd7exDRrTPVV/Bspv2V5czieXRg732m7JNhcgvhTRDjfbJQz+cR8TY5WASkAkW3
+Nh/SK6arPpjPY5IzW2WpLckIVGXdIsJau9KVccvNsqUruAPCSVc/Ou6w6U6Y4rl9z1CxnTuxW+/X
+ocXi9QbOwzLnAEEeM8hAW75gfpE+laXOhXuVn7xfaAdcNwmd4JJxvPZW3i2WnUvH51j9xctGS252
+zW26xm0F11YZ96hKUgLWVhvw0rAUggbOerln2qelvTD171D0Wuc6Bktn0ovcm2XS1ynGJVuKYi/E
+lsutKStp1lsuPIcSQUKbCh6URTrG7Fs5y3P7phmJWnTW5ZRYpPvF6tVuj216fbnvECvEfaQC4yrv
+IPcoA9x59auhWgDR7R3ZrtjxTpo6xaV7MrpAcyy7YM01uJ0s1gt1umXHL7y6pq82G7xFMyJdxhoL
+bwfTy2lCHHIKHY4U42vf8n08qIuaUpREpSlEWhz21OP71n20GOpYCF3rLUq7lf8A2uP/AC/b+2tU
+Dqit1az6lRJ/bW6P20zRq53jZ3pBuZsdrfkSdP8AU1yA68zHUtMSPcYpcLrpA+Bvx7fGb7iQO91C
+fMqFaSsXzCw55aRkOOykLQoBUqN38uRFq9ULHr68gK9FAeXzAhGbYZecjlt0bEX7Dfr8erwXUP2e
+8SoRSVuHl4Exc14aTu5oaQSB16bb9gcDwvav2C+Lsz6kupUuM4eXG0+ZSf66R9fqPmPuFSqPIYlx
+0y4jyXGl/ouI9D9n2H7DUGrthTptteMiBJU2o/pD1Sv7FD0NQSelEp1N2PzXWGEY9Jh7RDKNUfuP
+DtHdt49s3pVJtuX2+WUsz0e6uH+kpXLZP3+qfx/bVW444P1HIP1FYx8b4zZwsp3S1dNWx64Hhw+X
+iOI80pSleFcJSlKIlKUoipeW5pjOCQotzy2euJEmTkw0S/AK223VJUpPiEeaEkJV58H0Pl5E1VnW
+nGHVMup4UhRChz86hG46LbpWhORm5p5EdqM9GIA5S/7y0hJHP+S4sH7Ca79BsxOc6P2W7PulcqG0
+bbOUpzuJcYACSfn5tKaPn8+ayBogcKFY2+zyx3ZwDgR7g+Sh0eZ3R5/ky5Pp6VMyoiIuHW5x8UjX
+XJBNw17LAbawb22l1KUrHqYpSlKIlKV0XG5wrUwJE10pCv5tCRypw/RI/wCn0FfQC42C8SSRxML3
+mwHEngu/6nkAAckk8AD6n6Copkl9/K74jwiTGbV+bH+7L9O77vkB+Pzr83jIpt4SY/b4Mcn+ZSrk
+r/WPz+70pjibcm4ibc5zTKI47m0uq471/L8B6/fxWRhg5gGR4uR1f/utQzEsXGKyto6Z2ljju47X
+9eAHHfcnaw65PboQtsBm3jglpHCyPmr1Uf28103u8iyQveUEeOo8Rk/5X9b7h6/fwPnXTLyuyxmi
+tiT7yvj4W2QfP71EeQ/fUMzTNLXYYTmVZncgwyQUsoQnlbnHo0yjn4j9vkBzyoiqVNSTVMwu0m54
+W3J7LK9xvMWHYNhzjHK0BjfxahpjaBbUXcBYcN+O57Dkz7M5l0rAPaAMdxZl9wJy235PAe7VEd6D
+bJFwAPHkRzFSfPy5APrxXq0B5HNeUP2X3Ds/3B9djDNZMPxVCLVg+P3y85MsyU/3nBXZ37S0vlRH
+iuKkTYySlI5+Ja+3tQoj1dpHCQD8hW8qNsjKONsgs4NF/G26/K7Mk1FU5irJqN2qJ0shYbEXaXkt
+NjYi4txF+1Wy3c7Nttu+3RqTt+3WabJyvEZc6PMkWlV2lwu59hXe0sOxHWnU9pJ8gsA8kEEeVdMr
+ZRtmlbuo++4abKY1Wj4ocaVlMK9zo/vNqK1L92kRWnkxpIClAhbzS1gttcKHhN9t1KVcrCql5zhW
+L6k4Xd9O83tKZ9mv1rkW67wVuKSmRFfaU062SghQCkLUnkEEc+RBrEbQP2fDpA7YdZce3A6HbQW7
+Jl2KT0zbBdjnV+lCK+lJSlzwpE5xpZAJ/TQoc+fqAazNpRFwEgAADyHpVtdpez7bnsY0Wg7edrGn
+KcWw+2ypEmHaBdZc0odfcLjqi9LdddV3LJPxLIHoOAAKuXSiJWOG83pG9ObqDZnZ9Rd3m1yz5bfr
+FH93t95Fxm2+UWAruSy87BfZVJaSoqKW3itCCtfaB3q5yPpRFTcNwzENOsStmBYBi1usdjssBmDZ
+7NaITcaLBitICGmGWmwENNoSAlKEgBIAAHFW61/2P7Wt0mqWmutOvOlDOQZPpBfV3nTm6O3OWwbP
+NWuO4p0IYdQh7lcWOrteStILSSB61delEVqNE9j+1jbjrbqPuJ0O0kjY3lurk6PO1En264ygzeZT
+JdUiQqKp0x2nSp99anGm0KcW84tZUpaibr0pRFavaJsn2wbDtNZ+kG03SpnEMcueQSL3OtrFylSg
+7PfS2h17vlOuLHKWW0hIUEpCAEgCrh5fiePZ5ilzwjLbambarxb34NyhrWpIfjvNqbcQSkggKQpQ
+5BB8/IiqjSiKAbXtruhWzDQuxbattOCjGsJxoSRZLILlJme7e8SXZT356U446vuefdX8a1cd3A4A
+AFK132TbYNzOrWmuueuOlrd9yrSC8P3TTq6uXWWx+SJbxYU46G2XUNv8mKwe15LiQWwQB583UpRF
+aDTvYRtG0m3Y5jvj060Yh2rVLP7Wi3ZdlMe4SiZ8dPgHt93U6Y7RUYzClLbbSpam+5RUSom7cuJF
+nxXIU6M28y82pDrLqApK0kcFJB8iCCQQfrXZSiLEfSLoQ9JDQjcExuh0q2Q4tbMzh3U3O3TVy5si
+HbpniB1D8WA++uHEW24EqaLLKPBKUlvsKRxlxSlESlKURKUpRFb/AHUbY9IN5e3nLNsGvOO/lTE8
+ytSoN2jJUEuI+JLjT7SiCEPNOobebXwe1xtCuDxXlR6qvQM3y9IPJ5mseJKk5zpO06PdNR8ehKJt
+zbi+xLF2i/EYpKuxPee+MsuNAOBxfhJ9d1dU2FDuUN233GI2/HfbU2+w8gKQ4hQ4UlST5EEEgg+R
+ry9jJGFrxcHiDwVanqaijnbPA8se0ghzSQQRwII3BHaF4hMC3AYtlSm7bkyW7PPXwPFW5/ejqv1i
+eWuT8lcp/wAoelT1SFISlZHwrHKFA8pUPqCPIj7q3c9VH2RbbLuefuGr3T+vNs0ezaQsuv4nJZX/
+AHK3FZUoqKW2kqctaj3j+YS4wEtJQmOgqU5WhPcxtN37dLzUcaYbnNHb3iDshZVCbubaZVpuyQlK
+lLiymlKjyOAtHcWXO9BV2r7VApERr8qseS+kdb+E8PI8R538l0PlLl6qYA2nzBFzg4c6wAO/vM2a
+7xaWnrs4qZV9VsvVytHCYb4LXPJjujlB+7+r94q2eMbksKuxTHymBIs7xHxPNgyI/P18h4ifu4X9
+9T203G15AwZOO3eJcW08dy4MhLnb8/iA80/iBUQq8PqqXaojIHfw9eHuuicu5vwLHXCTB6xr39jT
+Z4Hew2eB23bYqWQswtMkBMzuir+fifEg/cof9IqpsPMykhcV9t0H5tOBX8Kgp+E9qvI/Q1+S02T3
+FA5+vHnWJfRRk9E291sOnzVVxi0zA/v/AAnz2I9AFPyhYPBbUP8ARNccEeqT+yoOiZObT2Nz5CQP
+QCQoD+NfoXK6D0u0v/xlf/rql8C78yvxmyn64j6j9FNw26r0aV/ZNfh95iKguypDbSR6qccA4qDu
+vSHzy/LeX+u8o/8ATXWG2knu7Ejj58V6FB2u9v8AlUpM2i3Qh9XfTT9V0aymVqZEsGkdgnpiJyvM
+bdave3keRLiyAsjy+BKlIPHkT9lfDpBjmT7dNTdTNsep8XwLvhWXv226NNKDnu8yK+9Dkj4SQpPe
+2gcpJ/RBHIqt6O2qLqXv3296GRLl4cu76wY9Hl9iuDGMq5w2W+T59quCpXHHkCk/OpR1LcYGg3Wo
+3LYlm94jwxdtSL5dGXpLgQjtuEsXNgFXoPzUhI8+Bz86nlPhjXZQfGG/iOrv2I38wPTuXJ2LZ5qI
+PtFQVjpm2iaICSRoGuJ12HewDXyWIvcOBudW6+2NIjzWvHhSEPI/rNK54+/5j8a/dQVlt4JRPhqU
+UqHLcmMvkKH1C0ngj7jX3MZVfo4CFzEPAf75aCj+0cGoA+idfoG664p80wFo+IjLT2jceO9iPdSy
+gBIJA8h6n5D7/pUWXmV5UOEJioP9YMk/xJr45M663c9kqW8+Pk2P0R/op8q+NopT+IgKrLmmhaLR
+Mc4+QHrufZSC7ZZBhpUzblpkv+gKfNtB+pP9L7h+2o3JlSZ0gypr6nXSOCtXyH0A9APsFcSWjBb8
+WcURkD+nJcS0B+KiKj161U02x9KvyjmcNxxA58CATIWfsBRyjn71CslSUTnbQtLj3C59lB8wZliY
+NeJTshYOAc4Mb/iIuffstwVfr8yXY8KIbhcJbMWMk8Lkynkttj7O5RA5+yrS5VufdWhUXBceDJIP
+9+3PhxYH1S0PgSf1iuu/bptP3rdRHUwYHtx0cyzUe9oW2iSbZFKottS6SEKkyVlMeC0opUAt1baO
+RxzUno8sV0/SmIYPU+g29/JaMzJy55Wwq8WGtdVSdouyMf3nDUbdgZY9T19mb7kbBZyuBhEEXKQk
+8e/SUlMdJ+qUeSnPvPaPsIrt2k7Jt6/U/wBaDpzts0uu+aXpIb/Ktx4Szb7MwoLKXJUlfaxEb4Q5
+2JJBWUlDaVrISdzHTX9jNtFsetuqPU+1URcVANyP5LMCnLQz5htfgz7nwlavVxpxqIE8EBTcpQ9d
+3+g+3vQ/a/plb9GtvGlNiw3FrWjiFZMetyIzCVcAKcUEjlx1XAK3VlS1q5UpSiSamNBhNFhw+6b0
+u07n/jwFgucM2Z/zNnKS1fLaIG4jZ0Yx5blxHU55c4XsDbZYu9Dvo+YR0gdrL2nb2RRcj1FzCQzc
+dScqhsFEeRJbQpLEKKFALMSMHHEoU4AtxbrzpS0HQy3mnSlZJQpKUpREpSlESlKURKUpREpSlESl
+KURKUpREpSlESlKURKUpREpSlESlKURKUpREqOaraQaVa64JO0v1q02sOXY3c0pFwsGS2lmdCk9q
+gpPey8lSFFKgFAkcggEeYFSOlEWlzqB+xr7VNXxMznYFqhN0qvikqWjEMhW9dbA+sIASht1SjMhd
+y+VLcKpKRzwhpIFadd4fQT6sWw26zLtnu2C/3yxW9bq28403Su825TLY5VJUqMnx4bXHPxSmmT5e
+ley2nA554r4QCLFemPcxwc02I4ELwXWjWzVSzIDUbM5T6Af5ub2yB93DoVx+FSKFuhzJkhNzxy0S
+AB5qDLjSj9vwr4/dXtJ3G9O3Ynu6fkXDcttG09zO4SmAw5e71isZy5JbAACUTQgSG/IAfA4PQVhj
+rF7JD0ZtTmOzDdMM208cKSFPYbnkp1SiTz3cXT3xIPy4AA+ysfLhOGTG74m37hY+ospfh/KFnfDG
+htPiEukcA5xe0eDX6gPReZYbq2uPi07Rz8+LqoD/APbrhe6tPH5rTxsH/LuiiP3IFehxXsVXS9J+
+HcBr8B9uTWQ//wBRXA9iq6X3PnuA19/4zWT/ALJq1/o7g/8A4f8Aid+qz3/WTlHIt8aP/ag/+ted
+x7dPelf4NhFtT/nH3lfwUK+YbitUciktWHF8egNzpjyGIabdBcekLcUQlKG0rUvlRJAHCSeSOPOv
+TlpB7Il0btNSTmmDZ/qHyOAMxzx9jt8uOR+Skw/v8/4eVZl7Zumf0/8AZxPiXzbNs+0/xC7wY7jE
+XI7djbKrslpaQlaDPdCpKkqAAILhB+fqaqswLCWG4iHnc/MlWNRyqcoNS0tdXvF/yhrD5FjQR4gh
+avPZo/Z7sz23X+B1It+2MS4eokmKt7TvBLt3CRj6JCCF3K4oV8QnuNrUlEdfnHS4tTqfeClMav8A
+Xc9l9zPqC6/ZLvl2ma4QYOe5FGhfl/CMxbLdvuC4kJqIhcSYykqjLLMdlPhOtrQtxSlF5pPlW5al
+ZUAAWCgDnOe4ucbkrxFblunJ1K9gj0xvcLtl1EweBGcQJV+ZhuvWdS1D4Qm4w1ORHFfYl0kfPirN
+xNW9UYv8zqDdzx/ulxWr/aJr3sdoHp5fdVvM32h7TtTLmu96k7YdPMhmuK7nJl8wqBLdUfqVutKJ
+PmaoyU1NKbvYD4gFZKlxzGqFgbTVMjAOAa9zQPCxC8O6NedXmU9ozV5Xl6uNNLP7SkmuqHl2s2od
+1bsdnvuQXWZIPa1b7e484tw/RLTXr+Ar3C41ss2c4ZLTPw7abpnaX0L70P2zA7cwtKuOO4FDIIPB
+I5+2rh2q0WuxQGrVZbcxEisp7WY0VlLbbY+gSkAAfdVNlBQxuu2JoPc0foryozbmqri5uevme3sd
+K8j0LrLxV6MdGPqx7jLtHiac7A9U3TNQlce5ZDjD1nhOpJ4ChMuPgsEfb3+VZu7YvY0eo9qo5Bum
+5DU7AtKbW/8A4fDM5d9u8T09I8TtiufP0lj0+3mvT/2p9COfvrmrvgsASXG5WrHZx7Iv0utufumQ
+65RMk1nyBlppTq8tuBhWluQhfcXWYEMoJQryBakvSUEfLzrZjpvpdppo3hsLTnSHTyx4rj1tQUW6
+w43aWYMKKknkpbYYSlCBySeAB61XaUXxKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKU
+pREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSl
+ESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKUR
+KUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREp
+SlESlKURKUpREpSlESlKURf/2Q==
+--7d2c69bd326667a8779c2a77b0ce8d34b30a9539dbae69e49ef5b4ed284c
+Content-Disposition: inline; filename="theme-4d3768c7-3e07-4351-95a0-5953949b8ed3.jpeg"
+Content-ID: <theme-4d3768c7-3e07-4351-95a0-5953949b8ed3.jpeg>
+Content-Transfer-Encoding: base64
+Content-Type: image/jpeg; name="theme-4d3768c7-3e07-4351-95a0-5953949b8ed3.jpeg"
+
+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
+CEIQB//Z
+--7d2c69bd326667a8779c2a77b0ce8d34b30a9539dbae69e49ef5b4ed284c--

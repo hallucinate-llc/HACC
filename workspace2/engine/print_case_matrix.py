@@ -868,9 +868,8 @@ def build_source_metadata_matrix_data(
             for case in _load_case_rows(root=root, trust=trust, warning_label=warning_label)
         }
         cases = [case for case in cases if case["caseId"] in allowed]
-    return {
+    return _attach_refresh_metadata({
         "generatedAt": payload["generatedAt"],
-        "refreshRuntime": build_refresh_runtime_data(root),
         "summary": {
             "caseCount": len(cases),
             "authorityCount": sum(case["authorityCount"] for case in cases),
@@ -878,7 +877,7 @@ def build_source_metadata_matrix_data(
             "sourceNormalizedCount": sum(case["sourceNormalizedCount"] for case in cases),
         },
         "cases": cases,
-    }
+    }, root=root)
 
 
 def render_source_metadata_matrix(
@@ -890,6 +889,7 @@ def render_source_metadata_matrix(
     lines = [
         "Source Metadata Matrix",
         "",
+        f"Stale While Refreshing: {_stale_while_refreshing_text(payload)}",
         f"Trust Filter: {trust or 'any'}",
         f"Warning Label Filter: {warning_label or 'any'}",
         f"Case Count: {payload['summary']['caseCount']}",
@@ -953,7 +953,7 @@ def build_fit_matrix_data(
         cases = [case for case in cases if case["analogicalCount"] > 0]
     elif fit_kind == "record_support":
         cases = [case for case in cases if case["recordSupportCount"] > 0]
-    return {
+    return _attach_refresh_metadata({
         "generatedAt": payload["generatedAt"],
         "summary": {
             "caseCount": len(cases),
@@ -963,7 +963,7 @@ def build_fit_matrix_data(
             "recordSupportCount": sum(case["recordSupportCount"] for case in cases),
         },
         "cases": cases,
-    }
+    }, root=root)
 
 
 def render_fit_matrix(
@@ -983,6 +983,7 @@ def render_fit_matrix(
     lines = [
         "Fit Matrix",
         "",
+        f"Stale While Refreshing: {_stale_while_refreshing_text(payload)}",
         f"Trust Filter: {trust or 'any'}",
         f"Warning Label Filter: {warning_label or 'any'}",
         f"Fit Filter: {fit_kind or 'any'}",
@@ -1068,9 +1069,8 @@ def build_fit_summary_data(
                 "recommendedFirstStop": case_row["recommendedFirstStop"],
                 "whyOpenThis": case_row["whyOpenThis"],
             }
-    return {
+    return _attach_refresh_metadata({
         "generatedAt": payload["generatedAt"],
-        "refreshRuntime": build_refresh_runtime_data(root),
         "summary": {
             "caseCount": len(cases),
             "authorityCount": sum(
@@ -1083,7 +1083,7 @@ def build_fit_summary_data(
         },
         "singleCaseGuide": single_case_guide,
         "cases": cases,
-    }
+    }, root=root)
 
 
 def render_fit_summary(
@@ -1108,6 +1108,7 @@ def render_fit_summary(
     lines = [
         "Fit Summary",
         f"Generated At: {payload['generatedAt']}",
+        f"Stale While Refreshing: {_stale_while_refreshing_text(payload)}",
         f"Trust Filter: {trust or 'any'}",
         f"Warning Label Filter: {warning_label or 'any'}",
         f"Fit Filter: {fit_kind or 'any'}",
@@ -1190,9 +1191,8 @@ def build_fit_findings_data(
             )
         }
         findings = [item for item in findings if item["caseId"] in allowed]
-    return {
+    return _attach_refresh_metadata({
         "generatedAt": report["generatedAt"],
-        "refreshRuntime": build_refresh_runtime_data(root),
         "summary": {
             "caseCount": len(findings),
             "directOnlyCases": sum(1 for item in findings if item["title"] == "Direct-fit authority baseline"),
@@ -1200,7 +1200,7 @@ def build_fit_findings_data(
             "recordSupportCases": sum(1 for item in findings if item["title"] == "Record-support-heavy fit posture"),
         },
         "findings": findings,
-    }
+    }, root=root)
 
 
 def build_fit_findings_summary_data(
@@ -1249,9 +1249,8 @@ def build_fit_findings_summary_data(
                 "recommendedFirstStop": case_row["recommendedFirstStop"],
                 "whyOpenThis": case_row["whyOpenThis"],
             }
-    return {
+    return _attach_refresh_metadata({
         "generatedAt": payload["generatedAt"],
-        "refreshRuntime": build_refresh_runtime_data(root),
         "summary": {
             "caseCount": len(cases),
             "directOnlyCases": sum(1 for item in cases if item["title"] == "Direct-fit authority baseline"),
@@ -1261,7 +1260,7 @@ def build_fit_findings_summary_data(
         },
         "singleCaseGuide": single_case_guide,
         "cases": cases,
-    }
+    }, root=root)
 
 
 def render_fit_findings(
@@ -1285,6 +1284,7 @@ def render_fit_findings(
     lines = [
         "Fit Findings",
         f"Generated At: {payload['generatedAt']}",
+        f"Stale While Refreshing: {_stale_while_refreshing_text(payload)}",
         f"Severity Filter: {severity or 'any'}",
         f"Trust Filter: {trust or 'any'}",
         f"Warning Label Filter: {warning_label or 'any'}",
@@ -1329,6 +1329,7 @@ def render_fit_findings_summary(
     lines = [
         "Fit Findings Summary",
         f"Generated At: {payload['generatedAt']}",
+        f"Stale While Refreshing: {_stale_while_refreshing_text(payload)}",
         f"Severity Filter: {severity or 'any'}",
         f"Trust Filter: {trust or 'any'}",
         f"Warning Label Filter: {warning_label or 'any'}",
@@ -1384,12 +1385,11 @@ def build_source_findings_data(
             for case in _load_case_rows(root=root, branch=branch, trust=trust, warning_label=warning_label)
         }
         findings = [item for item in findings if item["caseId"] in allowed_case_ids]
-    return {
+    return _attach_refresh_metadata({
         "generatedAt": report["generatedAt"],
-        "refreshRuntime": build_refresh_runtime_data(root),
         "summary": report["summary"],
         "findings": findings,
-    }
+    }, root=root)
 
 
 def render_source_findings(
@@ -1411,6 +1411,7 @@ def render_source_findings(
     lines = [
         "Source Findings",
         f"Generated At: {payload['generatedAt']}",
+        f"Stale While Refreshing: {_stale_while_refreshing_text(payload)}",
         f"Case Count: {payload['summary']['caseCount']}",
         f"Fully Normalized Cases: {payload['summary']['fullyNormalizedCases']}",
         f"Partially Normalized Cases: {payload['summary']['partiallyNormalizedCases']}",
@@ -1480,6 +1481,17 @@ def build_refresh_runtime_data(root: Path = ROOT) -> Dict[str, Any]:
         "elapsedSeconds": payload["elapsedSeconds"],
         "elapsedHuman": payload["elapsedHuman"],
     }
+
+
+def _attach_refresh_metadata(payload: Dict[str, Any], root: Path = ROOT) -> Dict[str, Any]:
+    refresh_runtime = build_refresh_runtime_data(root)
+    payload["refreshRuntime"] = refresh_runtime
+    payload["staleWhileRefreshing"] = refresh_runtime["running"]
+    return payload
+
+
+def _stale_while_refreshing_text(payload: Dict[str, Any]) -> str:
+    return "yes" if payload.get("staleWhileRefreshing") else "no"
 
 
 def render_refresh_state(root: Path = ROOT) -> str:
@@ -1608,11 +1620,10 @@ def build_trust_matrix_data(
         cases = [item for item in cases if item["authorityTrust"] == warning_label]
     if warned_only:
         cases = [item for item in cases if item["hasEntryWarnings"]]
-    return {
+    return _attach_refresh_metadata({
         "generatedAt": payload["generatedAt"],
-        "refreshRuntime": build_refresh_runtime_data(root),
         "cases": _sort_cases(cases, sort_key),
-    }
+    }, root=root)
 
 
 def render_trust_matrix(
@@ -1635,6 +1646,7 @@ def render_trust_matrix(
     )
     lines = [
         f"Warning Label Filter: {warning_label or 'any'}",
+        f"Stale While Refreshing: {_stale_while_refreshing_text(payload)}",
         "",
         "Case ID | Branch | Outcome | Trust | WarnLabels | Primary | Entry Warnings | Warning Count | Package",
         "--- | --- | --- | --- | --- | --- | --- | --- | ---",
@@ -1696,16 +1708,15 @@ def build_warning_summary_data(
                 "packagePath": case["packagePath"],
             }
         )
-    return {
+    return _attach_refresh_metadata({
         "generatedAt": payload["generatedAt"],
-        "refreshRuntime": build_refresh_runtime_data(root),
         "summary": {
             "caseCount": len(payload["cases"]),
             "warnedCaseCount": len(cases),
             "warningCounts": dict(sorted(warning_counts.items())),
         },
         "cases": cases,
-    }
+    }, root=root)
 
 
 def render_warning_summary(
@@ -1727,6 +1738,7 @@ def render_warning_summary(
     lines = [
         "Warning Summary",
         f"Generated At: {payload['generatedAt']}",
+        f"Stale While Refreshing: {_stale_while_refreshing_text(payload)}",
         f"Warned Cases: {payload['summary']['warnedCaseCount']}",
         f"Warning Labels: {payload['summary']['warningCounts'] or {}}",
         f"Warning Label Filter: {warning_label or 'any'}",
@@ -1761,11 +1773,9 @@ def build_warning_label_matrix_data(
     if warning_label:
         return {
             "generatedAt": payload["generatedAt"],
-            "refreshRuntime": build_refresh_runtime_data(root),
             "labels": {warning_label: payload["labels"][warning_label]},
-        }
-    payload["refreshRuntime"] = build_refresh_runtime_data(root)
-    return payload
+        } | _attach_refresh_metadata({}, root=root)
+    return _attach_refresh_metadata(payload, root=root)
 
 
 def render_warning_label_matrix(
@@ -1776,6 +1786,7 @@ def render_warning_label_matrix(
     lines = [
         "Warning Label Matrix",
         f"Generated At: {payload['generatedAt']}",
+        f"Stale While Refreshing: {_stale_while_refreshing_text(payload)}",
         f"Warning Label Filter: {warning_label or 'any'}",
         "",
     ]
@@ -1831,11 +1842,10 @@ def build_warning_entry_matrix_data(
     sorted_cases = _sort_cases(cases, sort_key)
     if top_n is not None:
         sorted_cases = sorted_cases[:top_n]
-    return {
+    return _attach_refresh_metadata({
         "generatedAt": payload["generatedAt"],
-        "refreshRuntime": build_refresh_runtime_data(root),
         "cases": sorted_cases,
-    }
+    }, root=root)
 
 
 def render_warning_entry_matrix(
@@ -1857,6 +1867,7 @@ def render_warning_entry_matrix(
     lines = [
         "Warning Entry Matrix",
         f"Generated At: {payload['generatedAt']}",
+        f"Stale While Refreshing: {_stale_while_refreshing_text(payload)}",
         f"Trust Filter: {trust or 'any'}",
         f"Warning Label Filter: {warning_label or 'any'}",
         f"Warned Kind Filter: {warned_kind or 'any'}",
@@ -1913,15 +1924,14 @@ def build_warning_kind_matrix_data(
     sorted_kinds = _sort_kind_rows(kinds, sort_key)
     if top_n is not None:
         sorted_kinds = sorted_kinds[:top_n]
-    return {
+    return _attach_refresh_metadata({
         "generatedAt": payload["generatedAt"],
-        "refreshRuntime": build_refresh_runtime_data(root),
         "summary": {
             "kindCount": len(sorted_kinds),
             "caseCount": len({case["caseId"] for item in sorted_kinds for case in item["cases"]}),
         },
         "kinds": sorted_kinds,
-    }
+    }, root=root)
 
 
 def render_warning_kind_matrix(
@@ -1941,6 +1951,7 @@ def render_warning_kind_matrix(
     lines = [
         "Warning Kind Matrix",
         f"Generated At: {payload['generatedAt']}",
+        f"Stale While Refreshing: {_stale_while_refreshing_text(payload)}",
         f"Trust Filter: {trust or 'any'}",
         f"Warned Kind Filter: {warned_kind or 'any'}",
         f"Sort: {sort_key}",
@@ -1996,16 +2007,15 @@ def build_warning_entry_summary_data(
                 "recommendedFirstStop": case_row["recommendedFirstStop"],
                 "whyOpenThis": case_row["whyOpenThis"],
             }
-    return {
+    return _attach_refresh_metadata({
         "generatedAt": payload["generatedAt"],
-        "refreshRuntime": build_refresh_runtime_data(root),
         "summary": {
             "caseCount": len(cases),
             "warningLabels": _count_labels(cases, "warningLabel"),
         },
         "singleCaseGuide": single_case_guide,
         "cases": cases,
-    }
+    }, root=root)
 
 
 def render_warning_entry_summary(
@@ -2026,6 +2036,7 @@ def render_warning_entry_summary(
     lines = [
         "Warning Entry Summary",
         f"Generated At: {payload['generatedAt']}",
+        f"Stale While Refreshing: {_stale_while_refreshing_text(payload)}",
         f"Trust Filter: {trust or 'any'}",
         f"Warning Label Filter: {warning_label or 'any'}",
         f"Sort: {sort_key}",
@@ -2144,16 +2155,15 @@ def build_warning_kind_summary_data(
             }
     else:
         single_case_guide = None
-    return {
+    return _attach_refresh_metadata({
         "generatedAt": payload["generatedAt"],
-        "refreshRuntime": build_refresh_runtime_data(root),
         "summary": {
             "kindCount": len(kinds),
             "caseCount": case_count,
         },
         "singleCaseGuide": single_case_guide,
         "kinds": kinds,
-    }
+    }, root=root)
 
 
 def render_warning_kind_summary(
@@ -2174,6 +2184,7 @@ def render_warning_kind_summary(
     lines = [
         "Warning Kind Summary",
         f"Generated At: {payload['generatedAt']}",
+        f"Stale While Refreshing: {_stale_while_refreshing_text(payload)}",
         f"Trust Filter: {trust or 'any'}",
         f"Warning Label Filter: {warning_label or 'any'}",
         f"Sort: {sort_key}",
@@ -2213,8 +2224,7 @@ def render_warning_kind_summary(
 
 def build_summary_index_data(root: Path = ROOT) -> Dict[str, Any]:
     payload = _load_json(root / "outputs" / "summary_index.json")
-    payload["refreshRuntime"] = build_refresh_runtime_data(root)
-    return payload
+    return _attach_refresh_metadata(payload, root)
 
 
 def render_summary_index(root: Path = ROOT) -> str:
@@ -2226,6 +2236,7 @@ def render_summary_index(root: Path = ROOT) -> str:
         f"Recommended First Stop: {payload['recommendedFirstStop']}",
         f"Why Open This: {payload['whyOpenThis']}",
         f"Refresh Runtime: {payload['refreshRuntime']['status']} ({payload['refreshRuntime']['elapsedHuman'] or 'pending'})",
+        f"Stale While Refreshing: {_stale_while_refreshing_text(payload)}",
         "",
         "Priority | Kind | JSON | Markdown | Why Open This | Description",
         "--- | --- | --- | --- | --- | ---",
@@ -2248,8 +2259,7 @@ def render_summary_index(root: Path = ROOT) -> str:
 
 def build_fit_index_data(root: Path = ROOT) -> Dict[str, Any]:
     payload = _load_json(root / "outputs" / "fit_index.json")
-    payload["refreshRuntime"] = build_refresh_runtime_data(root)
-    return payload
+    return _attach_refresh_metadata(payload, root)
 
 
 def render_fit_index(root: Path = ROOT) -> str:
@@ -2261,6 +2271,7 @@ def render_fit_index(root: Path = ROOT) -> str:
         f"Recommended First Stop: {payload['recommendedFirstStop']}",
         f"Why Open This: {payload['whyOpenThis']}",
         f"Refresh Runtime: {payload['refreshRuntime']['status']} ({payload['refreshRuntime']['elapsedHuman'] or 'pending'})",
+        f"Stale While Refreshing: {_stale_while_refreshing_text(payload)}",
         "",
         "Priority | Kind | JSON | Markdown | Why Open This | Description",
         "--- | --- | --- | --- | --- | ---",
@@ -2283,8 +2294,7 @@ def render_fit_index(root: Path = ROOT) -> str:
 
 def build_dashboard_index_data(root: Path = ROOT) -> Dict[str, Any]:
     payload = _load_json(root / "outputs" / "dashboard_index.json")
-    payload["refreshRuntime"] = build_refresh_runtime_data(root)
-    return payload
+    return _attach_refresh_metadata(payload, root)
 
 
 def render_dashboard_index(root: Path = ROOT) -> str:
@@ -2296,6 +2306,7 @@ def render_dashboard_index(root: Path = ROOT) -> str:
         f"Recommended First Stop: {payload['recommendedFirstStop']}",
         f"Why Open This: {payload['whyOpenThis']}",
         f"Refresh Runtime: {payload['refreshRuntime']['status']} ({payload['refreshRuntime']['elapsedHuman'] or 'pending'})",
+        f"Stale While Refreshing: {_stale_while_refreshing_text(payload)}",
         "",
         "Priority | Kind | JSON | Markdown | Why Open This | Description",
         "--- | --- | --- | --- | --- | ---",
@@ -2325,8 +2336,7 @@ def build_dashboard_overview_data(
 ) -> Dict[str, Any]:
     payload = _load_json(root / "outputs" / "dashboard_overview.json")
     if not any([trust, warning_label, fit_kind, fit_finding]):
-        payload["refreshRuntime"] = build_refresh_runtime_data(root)
-        return payload
+        return _attach_refresh_metadata(payload, root)
     case_rows = _load_case_rows(root=root, trust=trust, warning_label=warning_label)
     if fit_kind:
         fit_payload = build_fit_matrix_data(root=root, trust=trust, warning_label=warning_label, fit_kind=fit_kind)
@@ -2407,6 +2417,7 @@ def build_dashboard_overview_data(
         }
     else:
         featured = payload["featured"]
+    refresh_runtime = build_refresh_runtime_data(root)
     return {
         "generatedAt": payload["generatedAt"],
         "summary": {
@@ -2436,7 +2447,8 @@ def build_dashboard_overview_data(
             "fitStatus": payload["summary"]["fitStatus"],
         },
         "discovery": payload["discovery"],
-        "refreshRuntime": build_refresh_runtime_data(root),
+        "refreshRuntime": refresh_runtime,
+        "staleWhileRefreshing": refresh_runtime["running"],
         "featured": featured,
     }
 
@@ -2465,6 +2477,7 @@ def render_dashboard_overview(
         f"- Fit Filter: {fit_kind or 'any'}",
         f"- Fit Finding Filter: {fit_finding or 'any'}",
         f"- Refresh Runtime: {payload['refreshRuntime']['status']} ({payload['refreshRuntime']['elapsedHuman'] or 'pending'})",
+        f"- Stale While Refreshing: {_stale_while_refreshing_text(payload)}",
         f"- Case Count: {payload['summary']['caseCount']}",
         f"- Violation Count: {payload['summary']['violationCount']}",
         f"- No-Violation Count: {payload['summary']['noViolationCount']}",
@@ -2526,8 +2539,7 @@ def render_dashboard_overview(
 
 def build_audit_index_data(root: Path = ROOT) -> Dict[str, Any]:
     payload = _load_json(root / "outputs" / "audit_index.json")
-    payload["refreshRuntime"] = build_refresh_runtime_data(root)
-    return payload
+    return _attach_refresh_metadata(payload, root)
 
 
 def render_audit_index(root: Path = ROOT) -> str:
@@ -2539,6 +2551,7 @@ def render_audit_index(root: Path = ROOT) -> str:
         f"Recommended First Stop: {payload['recommendedFirstStop']}",
         f"Why Open This: {payload['whyOpenThis']}",
         f"Refresh Runtime: {payload['refreshRuntime']['status']} ({payload['refreshRuntime']['elapsedHuman'] or 'pending'})",
+        f"Stale While Refreshing: {_stale_while_refreshing_text(payload)}",
         "",
         "Priority | Kind | JSON | Markdown | Why Open This | Description",
         "--- | --- | --- | --- | --- | ---",
@@ -2588,11 +2601,10 @@ def build_case_audit_matrix_data(
         cases = [case for case in cases if case["fitFinding"] == fit_finding]
     if warned_only:
         cases = [case for case in cases if case["hasWarnings"]]
-    return {
+    return _attach_refresh_metadata({
         "generatedAt": payload["generatedAt"],
-        "refreshRuntime": build_refresh_runtime_data(root),
         "cases": _sort_cases(cases, sort_key),
-    }
+    }, root=root)
 
 
 def render_case_audit_matrix(
@@ -2614,6 +2626,7 @@ def render_case_audit_matrix(
     lines = [
         "Case Audit Matrix",
         f"Generated At: {payload['generatedAt']}",
+        f"Stale While Refreshing: {_stale_while_refreshing_text(payload)}",
         f"Trust Filter: {trust or 'any'}",
         f"Warning Label Filter: {warning_label or 'any'}",
         f"Fit Finding Filter: {fit_finding or 'any'}",

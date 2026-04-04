@@ -1,0 +1,2442 @@
+Delivered-To: starworks5@gmail.com
+Received: by 2002:a05:7208:552b:b0:fa:5ef1:c6ed with SMTP id t43csp2142463rbf;
+        Tue, 31 Mar 2026 10:52:59 -0700 (PDT)
+X-Received: by 2002:a05:6a00:3687:b0:82c:e210:646d with SMTP id d2e1a72fcca58-82ce8b0b9c6mr427195b3a.57.1774979579246;
+        Tue, 31 Mar 2026 10:52:59 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1774979579; cv=none;
+        d=google.com; s=arc-20240605;
+        b=c6aNdvtHgwRCxOleG0VOmob/EILuAODaQbhkR1Z8tZ0/W1RjtbDZjFpImTjJnVIYbk
+         zTVBSuf3UovAb44P2TZtEBEGBPe9mam0rflWKchpJK/shykXpE+Ntecje0MzWfZZQ5ml
+         4d0vU+PQBt3EC/Av4BFj7OmnYVfq30WqZgmXofQ+qXX0ABR5mFKQj65WThhbtIUXltGV
+         GBr7VNewZ+x3vN7rmAtWYuCLsfcTPar111XKdgo/wKtQXuLcjV159b+BdjiXev9OECwq
+         kYaIxu5O3CgCmTj3q0eKyaBkINQINaMAJZb7n4L+ksRZy0hZOJ/50brjaNMtTRt3iuU+
+         7fLQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:date:message-id:subject:emailmessageid:subscriber_id
+         :bulletin_recipient_id:errors-to:list-unsubscribe:open_flag
+         :list-unsubscribe-post:to:from:mime-version:dkim-signature
+         :dkim-signature;
+        bh=w34fdWSpfTkh4z6H4jDs3p49nPs1v2rKRcTYUHz/+9c=;
+        fh=gPPrbYv6bjiCeSNOMtV7+ATcg7xOVeWRNeqU1P80kc4=;
+        b=IVzco2MkZGAiny21OqEjOGzvQ4ss0EJHVekyhNiOIbORoWH0rgTZBTtm+xMjg6w2nM
+         U7P5I/B1fq0FSiqm/7r4Tq2qCLk/7e/K50EqD33U49oOQ52wnVowqZtoahHUSial+K5i
+         MNZUgYoTOHaesMQyqxsKeiCkia5HGAjhEFqhxOZ2y366Zr3wwssU8KAo0iCRZE7fMZNy
+         KfzkY0M1xuxmBcEAycLYD7VeRONoNB1B5l+M210hyYnvYVwAm/AQSUqCemC2Buol6AtK
+         AvWmXXBTa9+u2AjoDDMY7AwGf6QQX8qYYJ77Hi6AttdB2vyKR0m65TQDnk14eiUTfVY1
+         wtDg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@subscriptions.dc.gov header.s=iz45vl5imtghvatprk6x2by5lok2syfx header.b=h4ePgpXa;
+       dkim=pass header.i=@messagingfabric.com header.s=sdwquzu2a4io5lomurvncbcrpryr42dn header.b=iGVWczej;
+       spf=pass (google.com: domain of 0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000@us-west.subscriptions.dc.gov designates 66.179.16.37 as permitted sender) smtp.mailfrom=0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000@us-west.subscriptions.dc.gov;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=dc.gov
+Return-Path: <0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000@us-west.subscriptions.dc.gov>
+Received: from mailer016037.govd1.service.govdelivery.com (mailer016037.govd1.service.govdelivery.com. [66.179.16.37])
+        by mx.google.com with ESMTPS id d2e1a72fcca58-82ca86ba7aesi27384419b3a.100.2026.03.31.10.52.58
+        for <starworks5@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 31 Mar 2026 10:52:59 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000@us-west.subscriptions.dc.gov designates 66.179.16.37 as permitted sender) client-ip=66.179.16.37;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@subscriptions.dc.gov header.s=iz45vl5imtghvatprk6x2by5lok2syfx header.b=h4ePgpXa;
+       dkim=pass header.i=@messagingfabric.com header.s=sdwquzu2a4io5lomurvncbcrpryr42dn header.b=iGVWczej;
+       spf=pass (google.com: domain of 0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000@us-west.subscriptions.dc.gov designates 66.179.16.37 as permitted sender) smtp.mailfrom=0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000@us-west.subscriptions.dc.gov;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=dc.gov
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=iz45vl5imtghvatprk6x2by5lok2syfx; d=subscriptions.dc.gov;
+	t=1774979578;
+	h=Content-Type:MIME-Version:From:To:List-Unsubscribe-Post:List-Unsubscribe:Subject:Message-ID:Date;
+	bh=/jkk+dEa2JWJqylz3i+x2JQ5RBYjaw6zmi2QrIyl+yY=;
+	b=h4ePgpXabbHiGvvtb6h2r7CQIvL+PwK5nVi+Z4UisVLgTcEKkyehMY8wStbSFic0
+	kMzUhFLTs9Dmi9Eskx9ZBMWxIurOmbrXc2JL55uN+OEdRyzRKAjRHiVn6kID3kttIt6
+	mM/7SDZzXhyPW3H1FRoFMozbny6LVs/bdxqFkoUQM5L3pr47+R1xsoOvanG0ac4NBvi
+	72VRUNA8sHit2G25neBrre/VyS4f/vmF+byzBk1F8Ypik1zZazbZDLgcOm9Qua7rLis
+	EDuQfYoPLhGAJWaL+nruIuXc8yEHddPkArXbvZxcEpsiU1mfE2zdhI2QqmdNU/YQ0Uk
+	7n+UYdCgZw==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=sdwquzu2a4io5lomurvncbcrpryr42dn; d=messagingfabric.com;
+	t=1774979578;
+	h=Content-Type:MIME-Version:From:To:List-Unsubscribe-Post:List-Unsubscribe:Subject:Message-ID:Date:Feedback-ID;
+	bh=/jkk+dEa2JWJqylz3i+x2JQ5RBYjaw6zmi2QrIyl+yY=;
+	b=iGVWczeja7ipKeM81YxBVQ3l19xxVo3LGf765Fd1JERNksEvls6EWL9GtmDliFSl
+	Z7UAk4tP/1PHVqZ4MDnTEqkUOGaFPLC6xNOoGKreHNBWqtE1ZQLstLkSRxQLhIYDFL4
+	aZhfjxSUQi2lzIumjeMgw13F7mzy8DesWRAQ47yg=
+Content-Type: multipart/mixed; boundary="===============1023772194813220619=="
+MIME-Version: 1.0
+From: Department of Licensing and Consumer Protection <DLCPCommunications@subscriptions.dc.gov>
+To: starworks5@gmail.com
+X-Accountcode: DCWASH
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+open_flag: true
+List-Unsubscribe: <https://public.govdelivery.com/accounts/DCWASH/subscriber/one_click_unsubscribe?verification=5.2e5e0c18e87201eded9096e1f1cbeff8&destination=starworks5%40gmail.com>
+Errors-To: messages@subscriptions.dc.gov
+bulletin_recipient_id: 289606952874
+x-subscriber: 3.KSmsHosYFTE5twfU2qgrlu/CHioLXtTRCdKogfuAncO+pLuDPksXiQ7tpNeg9PJ7lmx2dHSnJSpcheQXPSbpjDPDON66AW9SpTuL+OMdN6UKh/1rvwBrMHv+ZrzxOX67POCaDD7PISf+ovyKfRIeIA==
+subscriber_id: 1506209807
+emailMessageID: 20260331.27490001::BP3
+Subject: =?Cp1252?Q?DLCP_News_=96_March_|_Momentum,_L?= =?Cp1252?Q?eadership,_and_Community_Impact?=
+Message-ID: <0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000@us-west-2.messagingfabric.com>
+Date: Tue, 31 Mar 2026 17:52:58 +0000
+Feedback-ID: ::1.us-west-2.p6s0dOSD/Bh2d1AskdlzeN80W4aso1ZElT3TVYD5Rrc=:AmazonSES
+X-SES-Outgoing: 2026.03.31-66.179.16.37
+
+--===============1023772194813220619==
+Content-Type: multipart/alternative; boundary="===============9005717176234396579=="
+MIME-Version: 1.0
+
+--===============9005717176234396579==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+
+View as a webpage / Share [ https://content.govdelivery.com/accounts/DCWASH=
+/bulletins/40eb57b ]
+
+ =20
+DLCP sign [ https://dlcp.dc.gov/ ] =20
+*March 2026*
+White Space=20
+  * A Message from the Director [ #link_1 ]=20
+  * Consumer News You Can Use [ #link_7 ]=20
+  * DLCP Participates in Key Council Hearings Throughout March [ #link_10 ]=
+=20
+  * Director Crowe Speaks at Women Mean Business Summit  [ #link_6 ]=20
+  * DLCP Joins District Leaders at the 12th Annual DMPED March Madness [ #l=
+ink_3 ]=20
+  * Connecting With Students at the Washington School for Girls [ #link_4 ]=
+=20
+  * DLCP in the Community | Outreach Highlights [ #link_9 ]=20
+  * Apply Now for Sidewalk Vending Near Nationals Park This Baseball Season=
+ [ #link_8 ]=20
+  * What You Need to Know | 2026 License Renewals [ #link_13 ]=20
+  * Legislative Updates | In Case You Missed It [ #link_5 ]=20
+  * Contact Us [ #link_2 ]=20
+
+A Message from the Director
+
+tiffany  [ https://dlcp.dc.gov/jobs ]=20
+
+Dear Customers, Colleagues, and Friends,
+
+Spring has officially arrived, bringing with it a renewed sense of momentum=
+ across the District. This season always reminds me that growth doesn=E2=80=
+=99t happen all at once=E2=80=94it happens through steady progress, new par=
+tnerships, and the collective energy of our community. That spirit of forwa=
+rd movement has been at the center of our work this month.
+
+I recently attended the 12th Annual DMPED March Madness, an event that brin=
+gs together District agencies, developers, and community partners to previe=
+w upcoming projects and investments across DC. It was important for DLCP to=
+ be in the room, not only to stay aligned with the District=E2=80=99s econo=
+mic development priorities but also to help position the businesses we serv=
+e to benefit from the growth ahead. You can read more about our participati=
+on below.
+
+This year=E2=80=99s Women Mean Business Summit, I joined an inspiring group=
+ of leaders and entrepreneurs. During my remarks, I shared where we are=E2=
+=80=94and where we=E2=80=99re going=E2=80=94in both the federal and local b=
+usiness landscape. It was a moment to highlight the progress we=E2=80=99ve =
+made, the challenges we continue to navigate, and the opportunities emergin=
+g for women=E2=80=91owned businesses across the District. You=E2=80=99ll fi=
+nd more about that below as well.
+
+This month also included the introduction of the Short=E2=80=91Term Rental =
+Regulation Amendment Act of 2026 [ https://mayor.dc.gov/sites/default/files=
+/dc/sites/mayormb/publication/attachments/ShortTermRentalAmendementActof202=
+6.pdf ], which modernizes the District=E2=80=99s short=E2=80=91term rental =
+rules and expands opportunities for residents. The bill creates a new speci=
+al event license, clarifies definitions, and streamlines existing requireme=
+nts. You can read more in our press release here [ https://dlcp.dc.gov/rele=
+ase/mayor-bowser-announces-new-short-term-rental-legislation-create-more-ec=
+onomic-opportunities ].
+
+As we close out Women=E2=80=99s History Month, I encourage you to visit the=
+ DLCP Hub [ https://dlcp.dc.gov/blog/femme-fatale-dc-tribute-women-who-crea=
+te-and-lead ] to read our feature on Femme Fatale DC co=E2=80=91owners Cee =
+Smith and Adriana Mendoza, who reflect the creativity and resilience we cel=
+ebrate this month.
+
+I am proud that DLCP is helping expand access, opportunity, and support for=
+ women in business, and I look forward to the continued progress we will ma=
+ke together.=C2=A0
+
+=20
+signature
+
+Tiffany Crowe
+Director
+
+________________________________________________________________________
+
+=20
+
+Consumer News You Can Use
+
+Spring brings an increase in marketplace activity across the District, and =
+DLCP=E2=80=99s Consumer Protection Unit is sharing important reminders to h=
+elp residents make informed decisions and avoid deceptive practices. Below =
+are two key advisories now available on our website.
+
+Transparency at Used Car Dealerships=C2=A0
+
+The District is home to more than 40 licensed used car dealerships, and tra=
+nsparency is essential when purchasing a vehicle. DLCP is reminding consume=
+rs and dealerships about required price disclosures, federal =E2=80=9CBuyer=
+=E2=80=99s Guide=E2=80=9D rules, and District regulations that protect buye=
+rs from unfair or deceptive practices.
+
+Read more about your rights and dealership requirements here [ https://dlcp=
+.dc.gov/release/transparency-used-car-dealerships ].
+
+*Beware of Unlicensed Vending During Cherry Blossom Season*
+
+Cherry Blossom Season brings many residents and visitors to the Tidal Basin=
+ and National Mall, and with the increase in foot traffic, unlicensed vendo=
+rs often appear in busy areas. These vendors may operate without proper per=
+mits, skip required health and safety standards, or engage in deceptive pri=
+cing. DLCP encourages consumers to verify licenses, ask for prices upfront,=
+ and report illegal vending activity.
+
+Learn how to protect yourself and file a complaint here [ https://dlcp.dc.g=
+ov/release/cherry-blossoms-vending-consumer-tips ].
+
+________________________________________________________________________
+
+=20
+
+DLCP Participates in Key Council Hearings Throughout March
+
+dlcp =20
+
+This month, DLCP participated in several public hearings before the Council=
+ of the District of Columbia, providing updates, expertise, and testimony o=
+n legislation impacting District residents and businesses.
+
+On Monday, March 23, DLCP Director Tiffany Crowe, joined by John McGuire, C=
+hairperson of the Board of Funeral Directors, testified before Councilmembe=
+r Christina Henderson, Chairperson of the Committee on Health, on:
+
+
+  *=20
+
+B26=E2=80=910047 =E2=80=93 Funeral Directors Licensing Reform Amendment Act=
+ of 2025
+
+
+  *=20
+
+B26=E2=80=910547 =E2=80=93 Green Death Care Options Amendment Act of 2025
+
+On Wednesday, March 25, Andrew Huff, Chairperson of the D.C. Combat Sports =
+Commission, testified before Councilmember Zachary Parker, Chairperson of t=
+he Committee on Youth Affairs, on:
+
+
+  *=20
+
+B26=E2=80=910026 =E2=80=93 Theatrical Wrestling Regulation Amendment Act of=
+ 2025
+
+On Thursday, March 26, Robert Todero, Chairperson of the D.C. Board of Acco=
+untancy, and DLCP Legislative Director April Randall testified before Counc=
+ilmember Brianne K. Nadeau, Chairperson of the Committee on Public Works an=
+d Operations, on:
+
+
+  *=20
+
+B26=E2=80=910494 =E2=80=93 Accountancy Practices Amendment Act of 2025
+
+DLCP continues to prioritize transparency and public engagement, sharing th=
+e agency=E2=80=99s expertise to help inform legislation that supports consu=
+mers, licensees, and businesses across the District.
+
+To view the testimonies, click the links below.
+
+Click Here for Board of Funeral Directors Testimony [ https://dlcp.dc.gov/s=
+ites/default/files/dc/sites/dlcp/release_content/attachments/B26-47%20and%2=
+0B26-547%20Testimony%20-%20Final.pdf ]
+
+Click Here for Board of Combat Sports Testimony=C2=A0 [ https://dlcp.dc.gov=
+/sites/default/files/dc/sites/dlcp/release_content/attachments/B26-26%20The=
+atrical%20Wrestling%20Regulation%20Amendment%20Act%20Testimony.pdf ]=C2=A0
+
+Click Here for Board of Accountancy Testimony [ https://dlcp.dc.gov/sites/d=
+efault/files/dc/sites/dlcp/release_content/attachments/Accountancy%20Practi=
+ces%20Amendment%20Act%20of%202025%20Testimony.pdf ]
+
+________________________________________________________________________
+
+=20
+
+Director Crowe Speaks at Women Mean Business Summit=20
+
+Summit =20
+
+Director Crowe took part in the Women Mean Business Summit on Friday, March=
+ 20th at MGM National Harbor, joining a panel of influential women leaders =
+for a conversation on business growth, leadership, and economic opportunity=
+. Hosted by the Women=E2=80=99s Business Enterprise Council (WBEC) Greater =
+DMV, the Summit offered an immersive experience filled with high=E2=80=91im=
+pact networking, strategic introductions, and opportunities for women to le=
+arn from one another and build meaningful partnerships.
+
+Summit 3=20
+
+Her participation carried added importance as the event took place during W=
+omen=E2=80=99s History Month, a time dedicated to recognizing women=E2=80=
+=99s achievements and expanding opportunities for future generations. By sh=
+aring her experience and perspective, Director Crowe contributed to a broad=
+er effort to support women=E2=80=99s advancement in business and public ser=
+vice.
+
+________________________________________________________________________
+
+=20
+
+DLCP Joins District Leaders at the 12th Annual DMPED March Madness
+
+DMPED 1  =20
+
+The District=E2=80=99s 12th annual DMPED March Madness event took place on =
+Thursday, March 19, at Nationals Park, bringing together District leaders, =
+developers, community partners, and agency teams for a dynamic showcase of =
+upcoming real estate, housing, and workforce initiatives. The strong turnou=
+t reflected the city=E2=80=99s momentum as it heads into another year of gr=
+owth and opportunity.
+
+=20
+
+DLCP leaders and staff were proud to be in attendance, demonstrating the ag=
+ency=E2=80=99s commitment to supporting the District=E2=80=99s economic dev=
+elopment pipeline. Our participation highlights the essential role DLCP pla=
+ys in helping businesses start, grow, and thrive, a key part of the Mayor=
+=E2=80=99s strategy to strengthen neighborhoods and expand opportunity acro=
+ss all eight wards.
+
+  DMPED 2 =20
+
+DMPED 3  =20
+
+The event opened with remarks from Jason Sinnarajah, President of Business =
+Operations for the Washington Nationals, followed by Deputy Mayor Nina Albe=
+rt, who outlined the District=E2=80=99s vision for the year ahead. Attendee=
+s were then introduced to a series of development opportunities and initiat=
+ives designed to drive investment, create jobs, and strengthen all Wards in=
+ the District.
+
+=20
+
+DLCP is glad to be part of helping Mayor Muriel Bowser =E2=80=9Crun through=
+ the tape,=E2=80=9D pushing forward with determination, collaboration, and =
+a shared commitment to delivering results for residents and businesses.
+
+________________________________________________________________________
+
+=20
+
+Connecting With Students at the Washington School for Girls
+
+Career Day =20
+
+The Washington School for Girls hosted a special visit on Friday, March 20t=
+h, bringing together students and representatives from various DC Professio=
+nal Licensing Boards, Commission leaders, and DLCP staff. Throughout the da=
+y, guests spoke with the girls about the value of education, the confidence=
+ it builds, and the many directions their interests and talents can take th=
+em.
+
+Career Day 2=20
+
+The students were curious and eager to learn how different careers shape th=
+e District. Their questions showed how powerful it is when young people are=
+ encouraged to imagine their futures and meet adults who believe in their p=
+otential. Supporting girls=E2=80=99 education strengthens communities, and =
+moments like this help spark ideas that stay with students long after the d=
+ay ends.
+
+________________________________________________________________________
+
+=20
+
+DLCP in the Community | Outreach Highlights
+
+Week 3  =20
+
+The outreach events held in recognition of National Weights and Measures We=
+ek and National Consumer Protection Week were a great success. DLCP staff c=
+onnected with residents across the District, setting up informational table=
+s at several grocery stores and engaging shoppers throughout the week.
+
+=20
+
+The Consumer Protection Unit (CPU) and the Office of Weights and Measures (=
+OWM) provided guidance on consumer rights, scam prevention, reporting viola=
+tions, and the importance of accurate weighing, measuring, and scanning dev=
+ices. Shoppers also asked questions, and expressed appreciation for DLCP=E2=
+=80=99s presence in their neighborhoods.
+
+=20
+  CPU week 2 =20
+
+CPU Week  =20
+
+These events demonstrated DLCP=E2=80=99s strong dedication to protecting Di=
+strict residents through business licensing enforcement, consumer protectio=
+n investigations, and marketplace accuracy. We thank the CPU, OWM teams, an=
+d all staff who contributed to making this week=E2=80=99s outreach efforts =
+meaningful and effective.=C2=A0
+
+=20
+=20
+
+________________________________________________________________________
+
+=20
+
+Apply Now for Sidewalk Vending Near Nationals Park This Baseball Season
+
+Washington Nationals Opening Day will take place on April 3, 2026. DLCP is =
+sharing important information for Class A and Class B sidewalk vendors inte=
+rested in participating during the 2026 Washington Nationals Baseball Seaso=
+n.=C2=A0
+
+*Available Vending Locations*
+
+A total of fourteen sidewalk vending spaces will be available near National=
+s Park. These include:
+
+
+  * Six merchandise vendor locations on Half Street SE=20
+  * Eight food vendor locations on 1st Street SE between M Street and N Str=
+eet SE=20
+
+*PLEASE NOTE: Vending is permitted exclusively on gamedays only.*
+
+Lottery =20
+
+*License and Safety Requirements*
+
+All vendors must be fully licensed and in compliance before submitting a lo=
+ttery application. Required approvals include:
+
+
+  * A valid DLCP license=20
+  * DC Health approval for food vendors=20
+  * Fire and Emergency Medical Services requirements=20
+  * Micro Enterprise Vendors are not permitted to enter the lottery=20
+  * Ice Cream and Food Trucks are not eligible to participate in the lotter=
+y=20
+
+Vendors who are not compliant may not be able to vend during the season.
+
+Before applying, vendors are encouraged to review the DLCP website for lice=
+nsing and lottery information and to consult the=C2=A0Nationals Park map [ =
+https://links-2.govdelivery.com/CL0/https:%2F%2Fviewer.mapme.com%2Fdlcp_nat=
+s_stadium/1/0101019ca060c19d-1455f6e3-26a7-4f75-9259-905aa5e8f325-000000/b7=
+GWjXEiwYPlAlxRWH75Zn0vI_7cMxH5heWHYSv5SSQ=3D446 ]=C2=A0to view approved ven=
+ding locations.
+
+For additional information, please visit the=C2=A0DLCP website [ https://li=
+nks-2.govdelivery.com/CL0/https:%2F%2Fdlcp.dc.gov%2F/2/0101019ca060c19d-145=
+5f6e3-26a7-4f75-9259-905aa5e8f325-000000/6o5g-JDWf1OBn_JTKZjdw-lc2-ZXTT509L=
+yCfkjVtGo=3D446 ]=C2=A0or contact Business Licensing Manager Kelechi Ukwuom=
+a at=C2=A0kelechi.ukwuoma@dc.gov.
+
+Vendors should also visit the Nationals Baseball Lottery page for specific =
+registration dates.
+
+Click Here to Apply [ https://eservices.dcra.dc.gov/SRVPAY/Home ]
+
+________________________________________________________________________
+
+=20
+
+What You Need to Know | 2026 License Renewals
+
+DLCP reminds licensees across multiple Boards and Commissions to review upc=
+oming renewal deadlines and requirements for the 2026 cycle. Please see the=
+ summaries below to support timely submission of your renewal application.
+
+Architecture License Renewal
+
+Opens: February 1, 2026 Deadline: April 30, 2026
+
+
+  *=20
+
+Renew online through Access DC [ https://accessdc.dcra.dc.gov/oauth2/defaul=
+t/v1/authorize?client_id=3D0oaemezwiKDGfdZaE4h6&redirect_uri=3Dhttps%3A%2F%=
+2Fgovservices.dcra.dc.gov%2Foplarenewallicense%2Fauthorization-code%2Fcallb=
+ack&response_type=3Dcode&scope=3Dopenid%20profile%20email&code_challenge=3D=
+c_OCMQVLyNbLL8GNsaxUpKJw_5jrL2a5gzo_6Vgfzew&code_challenge_method=3DS256&re=
+sponse_mode=3Dform_post&nonce=3D639016844449841250.OWYxNzJiNDctMDRjZi00MmIy=
+LTk4MmMtZTM2YzY5Njc3OWYzNjVkMDdjM2MtNTRhZi00ZDM4LWI2MjQtNDIxMmIyYTQ3NTE2&st=
+ate=3DCfDJ8Dbd9NjZ1kJMnB3pRFVagngysyW_HVP1HNToveme3r0PtAB8PjhDq8BM78hP7PCoW=
+jFTaWYbH2mg7mNg7YNerpF-kuyUkMLBG_Hw7wyZV3xuobYsg7oE8_fxjUrQaCcvVnWXL8oVo-Gk=
+F_4-g_l7mtZeSyuQEiLRQv_A8QDQFvwlxFG4KZ6sRiN4JWAwagLuzU3ghVj0RLQfIfSVFBst44u=
+7LtDd4JhVa-ewcE3kfXbKxxE_NMH8wB5bxMHr5ZlxakAsOfKKuaBvDlJfsNo9tmLigGWHDU_Nc2=
+oqoNKUgN6qH9z15pAXONWH9sWOGQDrYpR1n0Gb-8kW9tOwQGxzRWLXi3d__YJQnz3PWtvZtoEYi=
+rhJ5VOdANL0PzRDDuuRnQKgXj2ZvBJA4fLCavio-pGdFVNY3JftoHcFjUu184ATAGJOERfEBw0E=
+GGAFGG-AD51AuyxZ8M9JMDv265a9OX0&x-client-SKU=3DID_NETSTANDARD2_0&x-client-v=
+er=3D5.5.0.0 ] (Sign Up [ https://accessdc.dcra.dc.gov/oauth2/v1/authorize?=
+client_id=3Dokta.2b1959c8-bcc0-56eb-a589-cfcfb7422f26&code_challenge=3DTMg7=
+2bBhNdZ2SkQMUDUs3WNnQS7ohgfD98W18p3SWrU&code_challenge_method=3DS256&nonce=
+=3DtzAdnpAgwXKkgdbcNKwlbipZ2L2JP6bFVKH0LQ7PdNOhdYRDwT6CLMyYZfBILKR7&redirec=
+t_uri=3Dhttps%3A%2F%2Faccessdc.dcra.dc.gov%2Fenduser%2Fcallback&response_ty=
+pe=3Dcode&state=3DZKD78RW9yYTl4nyqppDWlEE776BopGTCgWJh4xCe00XSyFFsZ0GBcBy9F=
+kzNzYx8&scope=3Dopenid%20profile%20email%20okta.users.read.self%20okta.user=
+s.manage.self%20okta.internal.enduser.read%20okta.internal.enduser.manage%2=
+0okta.enduser.dashboard.read%20okta.enduser.dashboard.manage%20okta.myAccou=
+nt.sessions.manage%20okta.internal.navigation.enduser.read ] required for n=
+ew users).
+
+
+  *=20
+
+CE Requirement: 24 hours of Health, Safety, and Welfare (HSW) approved by A=
+IA or NCARB, unless this is your first renewal by examination.
+
+
+  *=20
+
+Licenses not renewed by June 30, 2026 convert to Inactive =E2=80=93 Reinsta=
+tement Eligible.
+
+
+  *=20
+
+More information available at dlcp.dc.gov [ https://dlcp.dc.gov/ ].
+
+Industrial Trades License Renewal
+
+Deadline: March 31, 2026
+
+
+  *=20
+
+Renew online through Access DC [ https://govservices.dcra.dc.gov/oplarenewa=
+llicense ] (Sign Up [ https://accessdc.dcra.dc.gov/ ] and email verificatio=
+n required).
+
+
+  *=20
+
+Approved licensees may view and download their digital license through the =
+My Licenses tab in Access DC.
+
+
+  *=20
+
+Important for Plumbers:
+
+
+  *=20
+
+Master Plumbers designated to a Plumber Contractor company must submit:
+
+
+  *=20
+
+$5,000 bond for the Master Plumber, and
+
+
+  *=20
+
+$5,000 bond for the contracting company.
+
+
+  *=20
+
+Licenses not renewed by March 31, 2026 convert to Inactive.
+
+
+  *=20
+
+More information available at dcra.dc.gov/industrial-trade [ https://dcra.d=
+c.gov/industrial-trade ].
+
+Combat Sports License Renewal
+
+Deadline: March 31, 2026
+
+
+  *=20
+
+Renew online through Access DC [ https://govservices.dcra.dc.gov/oplarenewa=
+llicense ] (Sign Up and email verification required).
+
+
+  *=20
+
+Licensees are encouraged to renew early to avoid additional fees.
+
+
+  *=20
+
+Licenses not renewed by March 31, 2026 require reinstatement.
+
+
+  *=20
+
+Reinstatement is allowed for up to five years; after that, applicants must =
+reapply as first=E2=80=91time licensees.
+
+
+  *=20
+
+Approved licensees may view and download their digital license through Acce=
+ss DC.
+
+
+  *=20
+
+More information available at dlcp.dc.gov [ https://dlcp.dc.gov/ ].
+
+Barber and Cosmetology License Renewal
+
+Opened: January 15, 2026 Deadline: April 15, 2026
+
+
+  *=20
+
+Renew online through Access DC [ https://govservices.dcra.dc.gov/oplarenewa=
+llicense ] (Sign Up [ http://accessdc.dcra.dc.gov/ ] required for new users=
+).
+
+
+  *=20
+
+CE Requirement: 6 hours total, including
+
+
+  *=20
+
+2 hours Health, Safety, and Welfare, and
+
+
+  *=20
+
+4 hours General Electives
+
+
+  *=20
+
+CE is waived for first=E2=80=91time renewals and owner license renewals.
+
+
+  *=20
+
+All licenses in this category expire April 15 of even=E2=80=91numbered year=
+s.
+
+
+  *=20
+
+Licenses not renewed by June 15, 2026 convert to Inactive =E2=80=93 Reinsta=
+tement Eligible.
+
+
+  *=20
+
+More information and approved CE providers available at dlcp.dc.gov [ https=
+://dlcp.dc.gov/ ].
+
+________________________________________________________________________
+
+=20
+
+Legislative Updates | In Case You Missed It
+
+*On March 23, 2026, the Committee on Health, chaired by Councilmember Chris=
+tina Henderson, held a hearing on the following related to the Board of Fun=
+eral Directors:*
+
+
+  * The Funeral Directors Licensing Reform Amendment Act of 2025 (B26-0047)=
+ [ https://lims.dccouncil.gov/Legislation/B26-0047 ] to create an embalmers=
+ license, update the funeral director=E2=80=99s license given the creation =
+of an embalmers license, and establish requirements for a funeral directing=
+ and embalming internship;=20
+  * The Green Death Care Option Amendment Act of 2025 (B26- 0547) [ https:/=
+/lims.dccouncil.gov/Legislation/B26-0547 ] to (i) allow funeral services es=
+tablishments to use reduction by alkaline hydrolysis in addition to burial =
+and cremation and (ii) expand the Board of Funeral Directors by one consume=
+r member and one member with expertise in cremation or alkaline hydrolysis;=
+ and=20
+  * Oversight of the Board of Funeral Directors to review its Fiscal Year 2=
+025 performance.=20
+
+DLCP and the Board of Funeral Directors testified about B26-0047 and B26-05=
+47. They also testified about the accomplishments of the Board during Fisca=
+l Year 2025 and the Board=E2=80=99s priorities for the remainder of Fiscal =
+Year 2026. *Visit the **DLCP Legislative Affairs and Policy Division page* =
+[ https://dlcp.dc.gov/page/legislative-affairs-and-policy ]* to access the =
+Chairperson=E2=80=99s testimony and a link to the Council=E2=80=99s recordi=
+ng of the hearing! For more information on the DC Board of Funeral Director=
+s or to apply for a license, visit **here* [ https://dlcp.dc.gov/node/16173=
+86 ]*.*
+
+*On March 25, 2026, the Committee on Youth Affairs, chaired by Councilmembe=
+r Zachary Parker, held a hearing on the **Theatrical Wrestling Regulation A=
+mendment Act of 2025 (B26-0026)* [ https://lims.dccouncil.gov/Legislation/B=
+26-0026 ]*. *The bill would update the combat sports that are exempt from t=
+he authority of the Combat Sports Commission to include theatrical wrestlin=
+g. Combat Sports Commission Chairperson Andrew Huff testified about the hea=
+lth and safety importance of regulating combat sports and the impact of the=
+ bill on wrestling events. *Visit the **DLCP Legislative Affairs and Policy=
+ Division page* [ https://dlcp.dc.gov/page/legislative-affairs-and-policy ]=
+* to access the Chairperson=E2=80=99s testimony and a link to the Council=
+=E2=80=99s recording of the hearing! Visit **here* [ https://dlcp.dc.gov/no=
+de/1617416 ] *for more information on the Combat Sports Commission or to ap=
+ply for a license.*
+
+*On March 26, 2026, the Committee on Public Works and Operations, chaired b=
+y Councilmember Brianne Nadeau, held a hearing on the **Accountancy Practic=
+e Amendment Act of 2025 (B26-0494)* [ https://lims.dccouncil.gov/Legislatio=
+n/B26-0494 ]*.=C2=A0*The bill would revise both the eligibility requirement=
+s for accountancy licensure and the mobility requirements for accountants w=
+ho are licensed in another jurisdiction and want to practice in the Distric=
+t. DLCP and the Board of Accountancy testified about the bill and the oppor=
+tunity to expand licensure pathways for accountants. *Visit the **DLCP Legi=
+slative Affairs and Policy Division page* [ https://dlcp.dc.gov/page/legisl=
+ative-affairs-and-policy ]* to access the Chairperson=E2=80=99s testimony a=
+nd a link to the Council=E2=80=99s recording of the hearing! For more infor=
+mation on the Board of Accountancy or to apply for a license, visit **here*=
+ [ https://dlcp.dc.gov/node/1617381 ]*.*
+
+________________________________________________________________________
+
+=20
+
+Contact Us
+
+Contact DLCP via=C2=A0email <dlcp@dc.gov>, or our=C2=A0online inquiry form =
+[ https://lnks.gd/l/eyJhbGciOiJIUzI1NiJ9.eyJidWxsZXRpbl9saW5rX2lkIjoxMDcsIn=
+VyaSI6ImJwMjpjbGljayIsImJ1bGxldGluX2lkIjoiMjAyMjEwMDMuNjQ2MDYzMDEiLCJ1cmwiO=
+iJodHRwczovL2RjcmEua3VzdG9tZXIuaGVscC9jb250YWN0L2NvbnRhY3R1cy1Ta293Q09qWDgi=
+fQ.HWRPt19-ZthO7jqzxgzu_d4Qe_BfnZfjaDg8mnxfNTg/s/2576383920/br/145144335325=
+-l ]=C2=A0at any time. We=E2=80=99re also available through the live chat o=
+n=C2=A0dlcp.dc.gov [ https://lnks.gd/l/eyJhbGciOiJIUzI1NiJ9.eyJidWxsZXRpbl9=
+saW5rX2lkIjoxMDgsInVyaSI6ImJwMjpjbGljayIsImJ1bGxldGluX2lkIjoiMjAyMjEwMDMuNj=
+Q2MDYzMDEiLCJ1cmwiOiJodHRwczovL2RsY3AuZGMuZ292LyJ9.G-OKgOK1Bs0iHX0BPQEzVDzM=
+enTTVdkS7arKHBEVmjU/s/2576383920/br/145144335325-l ]=C2=A0or by phone at 20=
+2-671-4500 during normal business hours.=C2=A0
+
+________________________________________________________________________
+
+=20
+=20
+=20
+=20
+
+Government of the District of Columbia - Muriel Bowser, Mayor=20
+
+*Department of Licensing and Consumer Protection*
+
+1100 4th Street SW, Washington, DC 20024 =C7=80 202.671.4500 =C7=80 dlcp.dc=
+.gov [ https://dlcp.dc.gov/ ]
+
+ LinkedIn [ https://www.linkedin.com/company/licensingandconsumerprotection=
+/ ]instagram [ https://www.instagram.com/dc_dlcp?igshid=3DYmMyMTA2M2Y ] =C2=
+=A0X [ https://twitter.com/DC_DLCP ] =C2=A0facebook [ https://www.facebook.=
+com/LicensingandConsumerProtection ]email us <dlcp@dc.gov> =20
+*Subscriber Preferences
+*
+
+Manage Preferences [ http://public.govdelivery.com/accounts/DCWASH/subscrib=
+ers/new?preferences=3Dtrue ] =C2=A0|=C2=A0 Unsubscribe [ https://public.gov=
+delivery.com/accounts/DCWASH/subscriber/one_click_unsubscribe?verification=
+=3D5.2e5e0c18e87201eded9096e1f1cbeff8&destination=3Dstarworks5%40gmail.com =
+] =C2=A0|=C2=A0 Help [ https://subscriberhelp.govdelivery.com/ ] =C2=A0|=C2=
+=A0 Contact Us <dlcp@dc.gov>
+
+=20
+=20
+
+________________________________________________________________________
+
+ This message has been sent by the District of Columbia =C2=B7 Washington, =
+D.C. 20004 GovDelivery logo [ https://subscriberhelp.granicus.com/ ]=20
+=20
+body .abe-column-block { min-height: 5px; } table.gd_combo_table img {margi=
+n-left:10px; margin-right:10px;} table.gd_combo_table div.govd_image_displa=
+y img, table.gd_combo_table td.gd_combo_image_cell img {margin-left:0px; ma=
+rgin-right:0px;} table.govd_hr {min-width: 100%;} p, li, h1, h2, h3 { overf=
+low-wrap: normal; word-wrap: normal; word-break: keep-all; -moz-hyphens: no=
+ne; -ms-hyphens: none; -webkit-hyphens: none; hyphens: none; mso-hyphenate:=
+ none; }
+
+--===============9005717176234396579==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xml:lang=3D"en" lang=3D"en">
+<head>
+<title>    DLCP News =E2=80=93 March | Momentum, Leadership, and Community =
+Impact
+</title>
+    <meta content=3D"text/html; charset=3DUTF-8">
+<meta name=3D"viewport" content=3D"initial-scale=3D1.0">
+<meta name=3D"format-detection" content=3D"telephone=3Dno">
+<style type=3D"text/css">
+  * { font-family: "Century Gothic", "Apple Gothic", sans-serif;}
+/*start reset css*/
+div { line-height: 1; }
+body, table, td, p, a, li, blockquote { -webkit-text-size-adjust: 100%; -ms=
+-text-size-adjust: 100%; }
+body { -webkit-text-size-adjust: none; -ms-text-size-adjust: none; }
+table { border-spacing: 0; }
+table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+img { -ms-interpolation-mode: bicubic; }
+body { margin: 0; padding: 0; }
+img { border: none !important; height: auto; line-height: 1; outline: none;=
+ text-decoration: none; }
+table td { border-collapse: collapse !important; }
+.preheader { display: none !important; visibility: hidden; opacity: 0; colo=
+r: transparent; height: 0; width: 0; }
+/*end reset css*/
+a[x-apple-data-detectors] {
+color: inherit !important;
+text-decoration: none !important;
+font-size: inherit !important;
+font-family: inherit !important;
+font-weight: inherit !important;
+line-height: inherit !important;
+}
+
+/* Sets the line height in everything but Outlook */
+table#yahoo body, table#yahoo p, table#yahoo .gd_p, table#yahoo p span, tab=
+le#yahoo li, table#yahoo li span { line-height: 1.4; }
+
+/* outlook.com line-height control */
+.ExternalClass p,=20
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td
+{line-height: 100%}
+@media only screen and (max-device-width: 480px) {
+table#yahoo, table#yahoo table { position: relative; }
+table#yahoo .govd_header { max-width: 480px !important; }
+table#yahoo .govd_hr img, table#yahoo .govd_hr_inner img { display:none !im=
+portant; }
+table#yahoo img { max-width: 400px !important; width: 100% !important; }
+table#yahoo .govd_template_image { height: auto !important; max-width: 100%=
+ !important; width: auto !important; margin:0 !important; }
+table#yahoo table.gd_combo_table .govd_template_image { margin:0 auto 10px =
+auto !important; display:block !important; float:none !important; text-alig=
+n:center; }
+table#yahoo table.gd_combo_table td.gd_combo_image_cell .govd_template_imag=
+e { margin:0 !important; text-align:left; }
+table#yahoo #main-header .govd_template_image { max-width: 480px !important=
+; width: 100% !important; }
+table#yahoo .govd_content_container .govd_image_display { margin-left:0 !im=
+portant; }
+table#yahoo .container-fill, table.gd_tbl_wrap, table.gd_tbl_wrap table { m=
+ax-width: 480px !important; }
+.main-table, .mobile-footer, .mobile-tagline, table.gd_tbl_wrap, table.gd_t=
+bl_wrap table { width:100% !important; min-width:100% !important; max-width=
+:480px !important; }
+table#yahoo .tablecell, .tablecell { width:100% !important; display: block =
+!important; max-width:100% !important; min-width: 100% !important; }
+table#yahoo p, table#yahoo p span, table#yahoo .gd_p, table#yahoo li { font=
+-size:13pt !important; }
+table#yahoo #view-in-browser p, table#yahoo #view-in-browser p span, table#=
+yahoo #view-in-browser .gd_p, table#yahoo #view-in-browser li { font-size:8=
+pt !important; }
+table#yahoo h1 { font-size:18pt !important; }
+table#yahoo h2 { font-size:16pt !important; }
+table#yahoo h3 { font-size:14pt !important; }
+table#yahoo #main-body .govd_hr {background:transparent none !important;}
+.mobile-hide {display:none !important;}
+.mobile-padding {padding:0 !important;}
+.mobile-columns {padding:10px 20px !important;}
+}
+</style>
+
+</head>
+<body style=3D"line-height:1.4;font-family:&quot;Century Gothic&quot; , &qu=
+ot;Apple Gothic&quot; , sans-serif;margin:0;padding:0;width:100% !important=
+;">
+
+
+<!--[if (gte mso 9)|(IE)]>
+  <table style=3D"display:none"><tr><td><a name=3D"gd_top" id=3D"gd_top"></=
+a></td></tr></table>
+<![endif]-->
+<a name=3D"gd_top" id=3D"gd_top"></a>
+
+ =20
+
+
+
+ =20
+  <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" al=
+ign=3D"center" class=3D"gd_tbl_wrap"><tr><td style=3D"margin: 0; padding: 0=
+; width: 100% !important"><table class=3D"main-table" width=3D"600" align=
+=3D"center" cellpadding=3D"0" cellspacing=3D"0" id=3D"yahoo" style=3D'width=
+: 600px; font-family: "Century Gothic", "Apple Gothic", sans-serif; border-=
+collapse: collapse;'>
+
+<tr style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>
+<td id=3D"view-in-browser" width=3D"100%" data-govdstyle=3D"all" data-govdt=
+itle=3D"View in Browser" class=3D"thin" style=3D'font-family: "Century Goth=
+ic", "Apple Gothic", sans-serif;'>
+<p style=3D'line-height: 1.1; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 0; margin-bottom: 0;'><a href=3D"https://links-2.=
+govdelivery.com/CL0/https:%2F%2Fcontent.govdelivery.com%2Faccounts%2FDCWASH=
+%2Fbulletins%2F40eb57b/1/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8=
+551-000000/tA8OQLN9kPOVsXqJRVEpNqOhSX8wlbHb-Bd97Vhzkog=3D450" target=3D"_bl=
+ank" title=3D"" rel=3D"noopener" style=3D'font-family: "Century Gothic", "A=
+pple Gothic", sans-serif; color: #31394F; text-decoration: underline; -ms-w=
+ord-break: break-all; word-break: break-word; -webkit-hyphens: none; -moz-h=
+yphens: none; hyphens: none;'>View as a webpage / Share</a></p>
+</td>
+</tr>
+
+<tr style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>
+<td id=3D"main-header" width=3D"100%" data-govdstyle=3D"all" data-govdtitle=
+=3D"Main Header" align=3D"center" style=3D'font-family: "Century Gothic", "=
+Apple Gothic", sans-serif;'>
+
+</td>
+</tr>
+
+<tr style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>
+<td width=3D"100%" style=3D'font-family: "Century Gothic", "Apple Gothic", =
+sans-serif; padding: 0 0 20px;' class=3D"mobile-padding">
+<table class=3D"main-table" width=3D"100%" align=3D"center" cellpadding=3D"=
+0" cellspacing=3D"0" bgcolor=3D"#FFFFFF" style=3D'background-color: #FFFFFF=
+; font-family: "Century Gothic", "Apple Gothic", sans-serif; border-collaps=
+e: collapse; border: none;'>
+
+  <tr style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>
+<td id=3D"main-image" width=3D"100%" data-govdstyle=3D"all" data-govdtitle=
+=3D"Main Image" align=3D"center" style=3D'font-family: "Century Gothic", "A=
+pple Gothic", sans-serif;'>
+<a href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2Fdlcp.dc.gov%2F/1=
+/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000/gaTI-ZjeGFpfI=
+BayFz9m3mp4gpOu3NTFBEqkstgzb8Y=3D450" target=3D"_blank" rel=3D"noopener nor=
+eferrer" style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif=
+; color: #31394F; text-decoration: underline; -ms-word-break: break-all; wo=
+rd-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: n=
+one;'><img class=3D"govd_template_image" src=3D"https://content.govdelivery=
+.com/attachments/fancy_images/DCWASH/2022/09/6518231/4353010/dlcp-email-hea=
+der_crop.png" style=3D'width: 600px; height: auto !important; font-family: =
+"Century Gothic", "Apple Gothic", sans-serif; max-height: auto !important; =
+border: none;' alt=3D"DLCP sign" width=3D"600" height=3D"124"></a>
+</td>
+</tr>
+ =20
+<tr style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>
+<td id=3D"main-body" width=3D"100%" data-govdstyle=3D"all" data-govdtitle=
+=3D"Main Body" style=3D'font-family: "Century Gothic", "Apple Gothic", sans=
+-serif;'>
+<h2 style=3D'text-align: right; font-family: "Century Gothic", "Apple Gothi=
+c", sans-serif; margin-top: 25px; margin-bottom: 20px; line-height: 1.1; fo=
+nt-weight: bold;' align=3D"right"><strong style=3D'font-family: "Century Go=
+thic", "Apple Gothic", sans-serif;'>March 2026</strong></h2>
+<img class=3D"govd_template_image" src=3D"https://content.govdelivery.com/a=
+ttachments/fancy_images/DCWASH/2021/02/4151654/white-space-for-govdelivery_=
+original.png" style=3D'width: 600px; height: auto !important; font-family: =
+"Century Gothic", "Apple Gothic", sans-serif; max-height: auto !important; =
+border: none;' alt=3D"White Space" width=3D"600" height=3D"33"><ul class=3D=
+"govd_toc" style=3D'font-family: "Century Gothic", "Apple Gothic", sans-ser=
+if;'>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'><a href=3D"#link_1" style=3D'font-famil=
+y: "Century Gothic", "Apple Gothic", sans-serif; color: #31394F; text-decor=
+ation: underline; -ms-word-break: break-all; word-break: break-word; -webki=
+t-hyphens: none; -moz-hyphens: none; hyphens: none;'>A Message from the Dir=
+ector</a></li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'><a href=3D"#link_7" style=3D'font-famil=
+y: "Century Gothic", "Apple Gothic", sans-serif; color: #31394F; text-decor=
+ation: underline; -ms-word-break: break-all; word-break: break-word; -webki=
+t-hyphens: none; -moz-hyphens: none; hyphens: none;'>Consumer News You Can =
+Use</a></li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'><a href=3D"#link_10" style=3D'font-fami=
+ly: "Century Gothic", "Apple Gothic", sans-serif; color: #31394F; text-deco=
+ration: underline; -ms-word-break: break-all; word-break: break-word; -webk=
+it-hyphens: none; -moz-hyphens: none; hyphens: none;'>DLCP Participates in =
+Key Council Hearings Throughout March</a></li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'><a href=3D"#link_6" style=3D'font-famil=
+y: "Century Gothic", "Apple Gothic", sans-serif; color: #31394F; text-decor=
+ation: underline; -ms-word-break: break-all; word-break: break-word; -webki=
+t-hyphens: none; -moz-hyphens: none; hyphens: none;'>Director Crowe Speaks =
+at Women Mean Business Summit </a></li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'><a href=3D"#link_3" style=3D'font-famil=
+y: "Century Gothic", "Apple Gothic", sans-serif; color: #31394F; text-decor=
+ation: underline; -ms-word-break: break-all; word-break: break-word; -webki=
+t-hyphens: none; -moz-hyphens: none; hyphens: none;'>DLCP Joins District Le=
+aders at the 12th Annual DMPED March Madness</a></li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'><a href=3D"#link_4" style=3D'font-famil=
+y: "Century Gothic", "Apple Gothic", sans-serif; color: #31394F; text-decor=
+ation: underline; -ms-word-break: break-all; word-break: break-word; -webki=
+t-hyphens: none; -moz-hyphens: none; hyphens: none;'>Connecting With Studen=
+ts at the Washington School for Girls</a></li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'><a href=3D"#link_9" style=3D'font-famil=
+y: "Century Gothic", "Apple Gothic", sans-serif; color: #31394F; text-decor=
+ation: underline; -ms-word-break: break-all; word-break: break-word; -webki=
+t-hyphens: none; -moz-hyphens: none; hyphens: none;'>DLCP in the Community =
+| Outreach Highlights</a></li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'><a href=3D"#link_8" style=3D'font-famil=
+y: "Century Gothic", "Apple Gothic", sans-serif; color: #31394F; text-decor=
+ation: underline; -ms-word-break: break-all; word-break: break-word; -webki=
+t-hyphens: none; -moz-hyphens: none; hyphens: none;'>Apply Now for Sidewalk=
+ Vending Near Nationals Park This Baseball Season</a></li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'><a href=3D"#link_13" style=3D'font-fami=
+ly: "Century Gothic", "Apple Gothic", sans-serif; color: #31394F; text-deco=
+ration: underline; -ms-word-break: break-all; word-break: break-word; -webk=
+it-hyphens: none; -moz-hyphens: none; hyphens: none;'>What You Need to Know=
+ |  2026 License Renewals</a></li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'><a href=3D"#link_5" style=3D'font-famil=
+y: "Century Gothic", "Apple Gothic", sans-serif; color: #31394F; text-decor=
+ation: underline; -ms-word-break: break-all; word-break: break-word; -webki=
+t-hyphens: none; -moz-hyphens: none; hyphens: none;'>Legislative Updates | =
+In Case You Missed It</a></li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'><a href=3D"#link_2" style=3D'font-famil=
+y: "Century Gothic", "Apple Gothic", sans-serif; color: #31394F; text-decor=
+ation: underline; -ms-word-break: break-all; word-break: break-word; -webki=
+t-hyphens: none; -moz-hyphens: none; hyphens: none;'>Contact Us</a></li>
+</ul>
+<h1 class=3D"govd_header" style=3D'font-family: "Century Gothic", "Apple Go=
+thic", sans-serif; margin-top: 0px; margin-bottom: 25px; line-height: 1.1; =
+font-weight: bold;'><a class=3D"gd_anchor" name=3D"link_1" id=3D"link_1" st=
+yle=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; color: #3=
+1394F; text-decoration: none; -ms-word-break: break-all; word-break: break-=
+word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;'>A Message =
+from the Director</a></h1>
+<table class=3D"gd_combo_table" width=3D"100%" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" style=3D'font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; border-collapse: collapse;'>
+  <tr style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>
+    <td style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;=
+'>
+      <a href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2Fdlcp.dc.go=
+v%2Fjobs/1/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000/4OX=
+U1DRqqS_GXY7A8L3IfJ5BMkhQVylrPw3dvqDH-lA=3D450" target=3D"_blank" rel=3D"no=
+opener noreferrer" title=3D"DLCP Jobs page" style=3D'font-family: "Century =
+Gothic", "Apple Gothic", sans-serif; color: #31394F; text-decoration: under=
+line; -ms-word-break: break-all; word-break: break-word; -webkit-hyphens: n=
+one; -moz-hyphens: none; hyphens: none;'><img class=3D"govd_template_image"=
+ src=3D"https://content.govdelivery.com/attachments/fancy_images/DCWASH/202=
+3/09/8196635/picture2_original.png" style=3D'width: 199px; height: auto !im=
+portant; float: right; font-family: "Century Gothic", "Apple Gothic", sans-=
+serif; max-height: auto !important; border: none;' alt=3D"tiffany " width=
+=3D"199" height=3D"186" align=3D"right" hspace=3D"7"></a>
+      <p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple G=
+othic", sans-serif; margin-top: 0; margin-bottom: 20px;'>Dear Customers, Co=
+lleagues, and Friends,</p>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 0; margin-bottom: 20px;'>Spring has officially ar=
+rived, bringing with it a renewed sense of momentum across the District. Th=
+is season always reminds me that growth doesn=E2=80=99t happen all at once=
+=E2=80=94it happens through steady progress, new partnerships, and the coll=
+ective energy of our community. That spirit of forward movement has been at=
+ the center of our work this month.</p>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 0; margin-bottom: 20px;'>I recently attended the =
+12th Annual DMPED March Madness, an event that brings together District age=
+ncies, developers, and community partners to preview upcoming projects and =
+investments across DC. It was important for DLCP to be in the room, not onl=
+y to stay aligned with the District=E2=80=99s economic development prioriti=
+es but also to help position the businesses we serve to benefit from the gr=
+owth ahead. You can read more about our participation below.</p>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 0; margin-bottom: 20px;'>This year=E2=80=99s Wome=
+n Mean Business Summit, I joined an inspiring group of leaders and entrepre=
+neurs. During my remarks, I shared where we are=E2=80=94and where we=E2=80=
+=99re going=E2=80=94in both the federal and local business landscape. It wa=
+s a moment to highlight the progress we=E2=80=99ve made, the challenges we =
+continue to navigate, and the opportunities emerging for women=E2=80=91owne=
+d businesses across the District. You=E2=80=99ll find more about that below=
+ as well.</p>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 0; margin-bottom: 20px;'>This month also included=
+ the introduction of the <a href=3D"https://links-2.govdelivery.com/CL0/htt=
+ps:%2F%2Fmayor.dc.gov%2Fsites%2Fdefault%2Ffiles%2Fdc%2Fsites%2Fmayormb%2Fpu=
+blication%2Fattachments%2FShortTermRentalAmendementActof2026.pdf/1/0101019d=
+4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000/EaLrQLQD35qZTuvWUvXLNu=
+dDM-4Dx80fJSC1KKVVXKQ=3D450" target=3D"_blank" rel=3D"noopener" style=3D'fo=
+nt-family: "Century Gothic", "Apple Gothic", sans-serif; color: #31394F; te=
+xt-decoration: underline; -ms-word-break: break-all; word-break: break-word=
+; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;'>Short=E2=80=91=
+Term Rental Regulation Amendment Act of 2026</a>, which modernizes the Dist=
+rict=E2=80=99s short=E2=80=91term rental rules and expands opportunities fo=
+r residents. The bill creates a new special event license, clarifies defini=
+tions, and streamlines existing requirements. You can read more in our pres=
+s release <a href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2Fdlcp.d=
+c.gov%2Frelease%2Fmayor-bowser-announces-new-short-term-rental-legislation-=
+create-more-economic-opportunities/1/0101019d4506fa64-0037a9b9-6d6a-40e2-9d=
+b0-8508fabe8551-000000/ZGBwGLeFxnZCLQCKqB8RxkBqhq_e84WXYFGxBj2XGmw=3D450" t=
+arget=3D"_blank" rel=3D"noopener" style=3D'font-family: "Century Gothic", "=
+Apple Gothic", sans-serif; color: #31394F; text-decoration: underline; -ms-=
+word-break: break-all; word-break: break-word; -webkit-hyphens: none; -moz-=
+hyphens: none; hyphens: none;'>here</a>.</p>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 0; margin-bottom: 20px;'>As we close out Women=E2=
+=80=99s History Month, I encourage you to visit the <a href=3D"https://link=
+s-2.govdelivery.com/CL0/https:%2F%2Fdlcp.dc.gov%2Fblog%2Ffemme-fatale-dc-tr=
+ibute-women-who-create-and-lead/1/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-=
+8508fabe8551-000000/y1YD1XRS-eejNVR_EJvIshK3_d4OUxGIrO-sfXak-vY=3D450" targ=
+et=3D"_blank" rel=3D"noopener" style=3D'font-family: "Century Gothic", "App=
+le Gothic", sans-serif; color: #31394F; text-decoration: underline; -ms-wor=
+d-break: break-all; word-break: break-word; -webkit-hyphens: none; -moz-hyp=
+hens: none; hyphens: none;'>DLCP Hub</a> to read our feature on Femme Fatal=
+e DC co=E2=80=91owners Cee Smith and Adriana Mendoza, who reflect the creat=
+ivity and resilience we celebrate this month.</p>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 0; margin-bottom: 20px;'>I am proud that DLCP is =
+helping expand access, opportunity, and support for women in business, and =
+I look forward to the continued progress we will make together.=C2=A0</p>
+    </td>
+  </tr>
+</table>
+<img class=3D"govd_template_image" src=3D"https://content.govdelivery.com/a=
+ttachments/fancy_images/DCWASH/2024/01/8912137/f-tiffany-signature_original=
+.png" style=3D'width: 163px; height: auto !important; font-family: "Century=
+ Gothic", "Apple Gothic", sans-serif; max-height: auto !important; border: =
+none;' alt=3D"signature" width=3D"163" height=3D"67"><p style=3D'line-heigh=
+t: 1.4; font-family: "Century Gothic", "Apple Gothic", sans-serif; margin-t=
+op: 20px; margin-bottom: 20px;'>Tiffany Crowe<br style=3D'font-family: "Cen=
+tury Gothic", "Apple Gothic", sans-serif;'>Director</p>
+<table class=3D"govd_hr" cellspacing=3D"0" border=3D"0" align=3D"center" wi=
+dth=3D"100%" cellpadding=3D"0" style=3D'font-family: "Century Gothic", "App=
+le Gothic", sans-serif; border-collapse: collapse;'><tr class=3D"govd_hr_in=
+ner" style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'><=
+td width=3D"100%" style=3D'font-family: "Century Gothic", "Apple Gothic", s=
+ans-serif;'><hr style=3D'font-family: "Century Gothic", "Apple Gothic", san=
+s-serif;'></td></tr></table>
+<h1 class=3D"govd_header" style=3D'font-family: "Century Gothic", "Apple Go=
+thic", sans-serif; margin-top: 0px; margin-bottom: 25px; line-height: 1.1; =
+font-weight: bold;'><a class=3D"gd_anchor" name=3D"link_7" id=3D"link_7" st=
+yle=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; color: #3=
+1394F; text-decoration: none; -ms-word-break: break-all; word-break: break-=
+word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;'>Consumer N=
+ews You Can Use</a></h1>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Spring brings an incr=
+ease in marketplace activity across the District, and DLCP=E2=80=99s Consum=
+er Protection Unit is sharing important reminders to help residents make in=
+formed decisions and avoid deceptive practices. Below are two key advisorie=
+s now available on our website.</p>
+<h2 style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; mar=
+gin-top: 25px; margin-bottom: 20px; line-height: 1.1; font-weight: bold;'>T=
+ransparency at Used Car Dealerships=C2=A0</h2>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>The District is home =
+to more than 40 licensed used car dealerships, and transparency is essentia=
+l when purchasing a vehicle. DLCP is reminding consumers and dealerships ab=
+out required price disclosures, federal =E2=80=9CBuyer=E2=80=99s Guide=E2=
+=80=9D rules, and District regulations that protect buyers from unfair or d=
+eceptive practices.</p>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Read more about your =
+rights and dealership requirements <a href=3D"https://links-2.govdelivery.c=
+om/CL0/https:%2F%2Fdlcp.dc.gov%2Frelease%2Ftransparency-used-car-dealership=
+s/1/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000/COhHk4UubM=
+2CaU01l1DNIXsWxhJvY--_JrdMOuHx6es=3D450" target=3D"_blank" rel=3D"noopener"=
+ style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; color:=
+ #31394F; text-decoration: underline; -ms-word-break: break-all; word-break=
+: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;'>he=
+re</a>.</p>
+<h2 style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; mar=
+gin-top: 25px; margin-bottom: 20px; line-height: 1.1; font-weight: bold;'><=
+strong style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'=
+>Beware of Unlicensed Vending During Cherry Blossom Season</strong></h2>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Cherry Blossom Season=
+ brings many residents and visitors to the Tidal Basin and National Mall, a=
+nd with the increase in foot traffic, unlicensed vendors often appear in bu=
+sy areas. These vendors may operate without proper permits, skip required h=
+ealth and safety standards, or engage in deceptive pricing. DLCP encourages=
+ consumers to verify licenses, ask for prices upfront, and report illegal v=
+ending activity.</p>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Learn how to protect =
+yourself and file a complaint <a href=3D"https://links-2.govdelivery.com/CL=
+0/https:%2F%2Fdlcp.dc.gov%2Frelease%2Fcherry-blossoms-vending-consumer-tips=
+/1/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000/qEM0Lb6iuNs=
+aJGxcSwg4FN3rh_sd2M82ReA8tU_zItw=3D450" target=3D"_blank" rel=3D"noopener" =
+style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; color: =
+#31394F; text-decoration: underline; -ms-word-break: break-all; word-break:=
+ break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;'>her=
+e</a>.</p>
+<table class=3D"govd_hr" cellspacing=3D"0" border=3D"0" align=3D"center" wi=
+dth=3D"100%" cellpadding=3D"0" style=3D'font-family: "Century Gothic", "App=
+le Gothic", sans-serif; border-collapse: collapse;'><tr class=3D"govd_hr_in=
+ner" style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'><=
+td width=3D"100%" style=3D'font-family: "Century Gothic", "Apple Gothic", s=
+ans-serif;'><hr style=3D'font-family: "Century Gothic", "Apple Gothic", san=
+s-serif;'></td></tr></table>
+<h1 class=3D"govd_header" style=3D'font-family: "Century Gothic", "Apple Go=
+thic", sans-serif; margin-top: 0px; margin-bottom: 25px; line-height: 1.1; =
+font-weight: bold;'><a class=3D"gd_anchor" name=3D"link_10" id=3D"link_10" =
+style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; color: =
+#31394F; text-decoration: none; -ms-word-break: break-all; word-break: brea=
+k-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;'>DLCP Par=
+ticipates in Key Council Hearings Throughout March</a></h1>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; border-coll=
+apse: collapse;'><tr style=3D'font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif;'><td align=3D"center" style=3D'font-family: "Century Gothic",=
+ "Apple Gothic", sans-serif;'><img class=3D"govd_template_image" src=3D"htt=
+ps://content.govdelivery.com/attachments/fancy_images/DCWASH/2026/03/134188=
+91/6801340/dlcp-logo_crop.png" style=3D'width: 406px; height: auto !importa=
+nt; font-family: "Century Gothic", "Apple Gothic", sans-serif; max-height: =
+auto !important; border: none;' alt=3D"dlcp " width=3D"406" height=3D"290">=
+</td></tr></table>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>This month, DLCP part=
+icipated in several public hearings before the Council of the District of C=
+olumbia, providing updates, expertise, and testimony on legislation impacti=
+ng District residents and businesses.</p>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>On Monday, March 23, =
+DLCP Director Tiffany Crowe, joined by John McGuire, Chairperson of the Boa=
+rd of Funeral Directors, testified before Councilmember Christina Henderson=
+, Chairperson of the Committee on Health, on:</p>
+<ul style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>B26=E2=80=910047 =E2=
+=80=93 Funeral Directors Licensing Reform Amendment Act of 2025</p>
+</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>B26=E2=80=910547 =E2=
+=80=93 Green Death Care Options Amendment Act of 2025</p>
+</li>
+</ul>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>On Wednesday, March 2=
+5, Andrew Huff, Chairperson of the D.C. Combat Sports Commission, testified=
+ before Councilmember Zachary Parker, Chairperson of the Committee on Youth=
+ Affairs, on:</p>
+<ul style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>B26=E2=80=910026 =E2=
+=80=93 Theatrical Wrestling Regulation Amendment Act of 2025</p>
+</li>
+</ul>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>On Thursday, March 26=
+, Robert Todero, Chairperson of the D.C. Board of Accountancy, and DLCP Leg=
+islative Director April Randall testified before Councilmember Brianne K. N=
+adeau, Chairperson of the Committee on Public Works and Operations, on:</p>
+<ul style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>B26=E2=80=910494 =E2=
+=80=93 Accountancy Practices Amendment Act of 2025</p>
+</li>
+</ul>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>DLCP continues to pri=
+oritize transparency and public engagement, sharing the agency=E2=80=99s ex=
+pertise to help inform legislation that supports consumers, licensees, and =
+businesses across the District.</p>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>To view the testimoni=
+es, click the links below.</p>
+<h3 align=3D"center" style=3D'font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; line-height: 1.1; font-weight: bold; margin-top: 40px; margin=
+-bottom: 40px;'><a href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2F=
+dlcp.dc.gov%2Fsites%2Fdefault%2Ffiles%2Fdc%2Fsites%2Fdlcp%2Frelease_content=
+%2Fattachments%2FB26-47%2520and%2520B26-547%2520Testimony%2520-%2520Final.p=
+df/1/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000/PKo_yVHz0=
+La2nEZqX-nBivmrmiT77EuDpKOtRnnIZDQ=3D450" target=3D"_blank" rel=3D"noopener=
+" style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; color=
+: #FFFFFF; text-decoration: none; -ms-word-break: break-all; word-break: br=
+eak-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; backgro=
+und-color: #31394F; border-radius: 4px; border-color: #31394f; border-style=
+: solid; border-width: 10px 22px;'>Click Here for Board of Funeral Director=
+s Testimony</a></h3>
+<h3 align=3D"center" style=3D'font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; line-height: 1.1; font-weight: bold; margin-top: 40px; margin=
+-bottom: 40px;'>
+<a href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2Fdlcp.dc.gov%2Fsi=
+tes%2Fdefault%2Ffiles%2Fdc%2Fsites%2Fdlcp%2Frelease_content%2Fattachments%2=
+FB26-26%2520Theatrical%2520Wrestling%2520Regulation%2520Amendment%2520Act%2=
+520Testimony.pdf/1/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-00=
+0000/1SKOy9u_D_17Y0CL2pL_LgpvtxhSjStgVSd68uWsxVU=3D450" target=3D"_blank" r=
+el=3D"noopener" style=3D'font-family: "Century Gothic", "Apple Gothic", san=
+s-serif; color: #FFFFFF; text-decoration: none; -ms-word-break: break-all; =
+word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens:=
+ none; background-color: #31394F; border-radius: 4px; border-color: #31394f=
+; border-style: solid; border-width: 10px 22px;'>Click Here for Board of Co=
+mbat Sports Testimony=C2=A0</a>=C2=A0</h3>
+<h3 align=3D"center" style=3D'font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; line-height: 1.1; font-weight: bold; margin-top: 40px; margin=
+-bottom: 40px;'><a href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2F=
+dlcp.dc.gov%2Fsites%2Fdefault%2Ffiles%2Fdc%2Fsites%2Fdlcp%2Frelease_content=
+%2Fattachments%2FAccountancy%2520Practices%2520Amendment%2520Act%2520of%252=
+02025%2520Testimony.pdf/1/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe=
+8551-000000/ge1G9_s93Az-zQ35gxnMU1ri9Louxn4GcphLYPjKWL8=3D450" target=3D"_b=
+lank" rel=3D"noopener" style=3D'font-family: "Century Gothic", "Apple Gothi=
+c", sans-serif; color: #FFFFFF; text-decoration: none; -ms-word-break: brea=
+k-all; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; h=
+yphens: none; background-color: #31394F; border-radius: 4px; border-color: =
+#31394f; border-style: solid; border-width: 10px 22px;'>Click Here for Boar=
+d of Accountancy Testimony</a></h3>
+<table class=3D"govd_hr" cellspacing=3D"0" border=3D"0" align=3D"center" wi=
+dth=3D"100%" cellpadding=3D"0" style=3D'font-family: "Century Gothic", "App=
+le Gothic", sans-serif; border-collapse: collapse;'><tr class=3D"govd_hr_in=
+ner" style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'><=
+td width=3D"100%" style=3D'font-family: "Century Gothic", "Apple Gothic", s=
+ans-serif;'><hr style=3D'font-family: "Century Gothic", "Apple Gothic", san=
+s-serif;'></td></tr></table>
+<h1 class=3D"govd_header" style=3D'font-family: "Century Gothic", "Apple Go=
+thic", sans-serif; margin-top: 0px; margin-bottom: 25px; line-height: 1.1; =
+font-weight: bold;'><a class=3D"gd_anchor" name=3D"link_6" id=3D"link_6" st=
+yle=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; color: #3=
+1394F; text-decoration: none; -ms-word-break: break-all; word-break: break-=
+word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;'>Director C=
+rowe Speaks at Women Mean Business Summit </a></h1>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; border-coll=
+apse: collapse;'><tr style=3D'font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif;'><td align=3D"center" style=3D'font-family: "Century Gothic",=
+ "Apple Gothic", sans-serif;'><img class=3D"govd_template_image" src=3D"htt=
+ps://content.govdelivery.com/attachments/fancy_images/DCWASH/2026/03/133875=
+16/image-18_original.jpg" style=3D'width: 521px; height: auto !important; f=
+ont-family: "Century Gothic", "Apple Gothic", sans-serif; max-height: auto =
+!important; border: none;' alt=3D"Summit " width=3D"521" height=3D"391"></t=
+d></tr></table>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Director Crowe took p=
+art in the Women Mean Business Summit on Friday, March 20th at MGM National=
+ Harbor, joining a panel of influential women leaders for a conversation on=
+ business growth, leadership, and economic opportunity. Hosted by the Women=
+=E2=80=99s Business Enterprise Council (WBEC) Greater DMV, the Summit offer=
+ed an immersive experience filled with high=E2=80=91impact networking, stra=
+tegic introductions, and opportunities for women to learn from one another =
+and build meaningful partnerships.</p>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; border-coll=
+apse: collapse;'><tr style=3D'font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif;'><td align=3D"center" style=3D'font-family: "Century Gothic",=
+ "Apple Gothic", sans-serif;'><img class=3D"govd_template_image" src=3D"htt=
+ps://content.govdelivery.com/attachments/fancy_images/DCWASH/2026/03/133876=
+90/6788742/image-19_crop.jpg" style=3D'width: 468px; height: auto !importan=
+t; font-family: "Century Gothic", "Apple Gothic", sans-serif; max-height: a=
+uto !important; border: none;' alt=3D"Summit 3" width=3D"468" height=3D"264=
+"></td></tr></table>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Her participation car=
+ried added importance as the event took place during Women=E2=80=99s Histor=
+y Month, a time dedicated to recognizing women=E2=80=99s achievements and e=
+xpanding opportunities for future generations. By sharing her experience an=
+d perspective, Director Crowe contributed to a broader effort to support wo=
+men=E2=80=99s advancement in business and public service.</p>
+<table class=3D"govd_hr" cellspacing=3D"0" border=3D"0" align=3D"center" wi=
+dth=3D"100%" cellpadding=3D"0" style=3D'font-family: "Century Gothic", "App=
+le Gothic", sans-serif; border-collapse: collapse;'><tr class=3D"govd_hr_in=
+ner" style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'><=
+td width=3D"100%" style=3D'font-family: "Century Gothic", "Apple Gothic", s=
+ans-serif;'><hr style=3D'font-family: "Century Gothic", "Apple Gothic", san=
+s-serif;'></td></tr></table>
+<h1 class=3D"govd_header" style=3D'font-family: "Century Gothic", "Apple Go=
+thic", sans-serif; margin-top: 0px; margin-bottom: 25px; line-height: 1.1; =
+font-weight: bold;'><a class=3D"gd_anchor" name=3D"link_3" id=3D"link_3" st=
+yle=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; color: #3=
+1394F; text-decoration: none; -ms-word-break: break-all; word-break: break-=
+word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;'>DLCP Joins=
+ District Leaders at the 12th Annual DMPED March Madness</a></h1>
+<table class=3D"gd_combo_table" width=3D"100%" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" style=3D'font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; border-collapse: collapse;'>
+  <tr class=3D"gd_combo_first_image" style=3D'font-family: "Century Gothic"=
+, "Apple Gothic", sans-serif;'>
+    <td class=3D"gd_combo_image_cell" width=3D"230" style=3D'font-family: "=
+Century Gothic", "Apple Gothic", sans-serif;'><img class=3D"govd_template_i=
+mage" src=3D"https://content.govdelivery.com/attachments/fancy_images/DCWAS=
+H/2026/03/13387694/6788743/dsc03807_crop.jpg" style=3D'width: 230px; height=
+: auto !important; font-family: "Century Gothic", "Apple Gothic", sans-seri=
+f; max-height: auto !important; border: none;' alt=3D"DMPED 1 " width=3D"23=
+0" height=3D"153"></td>
+<td class=3D"gd_combo_spacer" width=3D"4" style=3D'font-family: "Century Go=
+thic", "Apple Gothic", sans-serif;'></td>
+<td class=3D"gd_combo_text_cell" style=3D'font-family: "Century Gothic", "A=
+pple Gothic", sans-serif;'><p style=3D'line-height: 1.4; font-family: "Cent=
+ury Gothic", "Apple Gothic", sans-serif; margin-top: 0; margin-bottom: 20px=
+;'>The District=E2=80=99s 12th annual DMPED March Madness event took place =
+on Thursday, March 19, at Nationals Park, bringing together District leader=
+s, developers, community partners, and agency teams for a dynamic showcase =
+of upcoming real estate, housing, and workforce initiatives. The strong tur=
+nout reflected the city=E2=80=99s momentum as it heads into another year of=
+ growth and opportunity.</p></td>
+  </tr>
+</table>
+<table class=3D"gd_combo_table" width=3D"100%" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" style=3D'font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; border-collapse: collapse;'>
+  <tr class=3D"gd_combo_first_text" style=3D'font-family: "Century Gothic",=
+ "Apple Gothic", sans-serif;'>
+    <td class=3D"gd_combo_text_cell" style=3D'font-family: "Century Gothic"=
+, "Apple Gothic", sans-serif;'><p style=3D'line-height: 1.4; font-family: "=
+Century Gothic", "Apple Gothic", sans-serif; margin-top: 0; margin-bottom: =
+20px;'>DLCP leaders and staff were proud to be in attendance, demonstrating=
+ the agency=E2=80=99s commitment to supporting the District=E2=80=99s econo=
+mic development pipeline. Our participation highlights the essential role D=
+LCP plays in helping businesses start, grow, and thrive, a key part of the =
+Mayor=E2=80=99s strategy to strengthen neighborhoods and expand opportunity=
+ across all eight wards.</p></td>
+<td class=3D"gd_combo_spacer" width=3D"4" style=3D'font-family: "Century Go=
+thic", "Apple Gothic", sans-serif;'></td>
+<td class=3D"gd_combo_image_cell" width=3D"275" style=3D'font-family: "Cent=
+ury Gothic", "Apple Gothic", sans-serif;'><img class=3D"govd_template_image=
+" src=3D"https://content.govdelivery.com/attachments/fancy_images/DCWASH/20=
+26/03/13387707/6788744/dsc03811_crop.jpg" style=3D'width: 275px; height: au=
+to !important; font-family: "Century Gothic", "Apple Gothic", sans-serif; m=
+ax-height: auto !important; border: none;' alt=3D"DMPED 2 " width=3D"275" h=
+eight=3D"183"></td>
+  </tr>
+</table>
+<table class=3D"gd_combo_table" width=3D"100%" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" style=3D'font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; border-collapse: collapse;'>
+  <tr class=3D"gd_combo_first_image" style=3D'font-family: "Century Gothic"=
+, "Apple Gothic", sans-serif;'>
+    <td class=3D"gd_combo_image_cell" width=3D"258" style=3D'font-family: "=
+Century Gothic", "Apple Gothic", sans-serif;'><img class=3D"govd_template_i=
+mage" src=3D"https://content.govdelivery.com/attachments/fancy_images/DCWAS=
+H/2026/03/13387729/6788745/dsc03818_crop.jpg" style=3D'width: 258px; height=
+: auto !important; font-family: "Century Gothic", "Apple Gothic", sans-seri=
+f; max-height: auto !important; border: none;' alt=3D"DMPED 3 " width=3D"25=
+8" height=3D"172"></td>
+<td class=3D"gd_combo_spacer" width=3D"4" style=3D'font-family: "Century Go=
+thic", "Apple Gothic", sans-serif;'></td>
+<td class=3D"gd_combo_text_cell" style=3D'font-family: "Century Gothic", "A=
+pple Gothic", sans-serif;'><p style=3D'line-height: 1.4; font-family: "Cent=
+ury Gothic", "Apple Gothic", sans-serif; margin-top: 0; margin-bottom: 20px=
+;'>The event opened with remarks from Jason Sinnarajah, President of Busine=
+ss Operations for the Washington Nationals, followed by Deputy Mayor Nina A=
+lbert, who outlined the District=E2=80=99s vision for the year ahead. Atten=
+dees were then introduced to a series of development opportunities and init=
+iatives designed to drive investment, create jobs, and strengthen all Wards=
+ in the District.</p></td>
+  </tr>
+</table>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>DLCP is glad to be pa=
+rt of helping Mayor Muriel Bowser =E2=80=9Crun through the tape,=E2=80=9D p=
+ushing forward with determination, collaboration, and a shared commitment t=
+o delivering results for residents and businesses.</p>
+<table class=3D"govd_hr" cellspacing=3D"0" border=3D"0" align=3D"center" wi=
+dth=3D"100%" cellpadding=3D"0" style=3D'font-family: "Century Gothic", "App=
+le Gothic", sans-serif; border-collapse: collapse;'><tr class=3D"govd_hr_in=
+ner" style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'><=
+td width=3D"100%" style=3D'font-family: "Century Gothic", "Apple Gothic", s=
+ans-serif;'><hr style=3D'font-family: "Century Gothic", "Apple Gothic", san=
+s-serif;'></td></tr></table>
+<h1 class=3D"govd_header" style=3D'font-family: "Century Gothic", "Apple Go=
+thic", sans-serif; margin-top: 0px; margin-bottom: 25px; line-height: 1.1; =
+font-weight: bold;'><a class=3D"gd_anchor" name=3D"link_4" id=3D"link_4" st=
+yle=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; color: #3=
+1394F; text-decoration: none; -ms-word-break: break-all; word-break: break-=
+word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;'>Connecting=
+ With Students at the Washington School for Girls</a></h1>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; border-coll=
+apse: collapse;'><tr style=3D'font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif;'><td align=3D"center" style=3D'font-family: "Century Gothic",=
+ "Apple Gothic", sans-serif;'><img class=3D"govd_template_image" src=3D"htt=
+ps://content.govdelivery.com/attachments/fancy_images/DCWASH/2026/03/133877=
+34/6788746/dsc03916_crop.jpg" style=3D'width: 600px; height: auto !importan=
+t; font-family: "Century Gothic", "Apple Gothic", sans-serif; max-height: a=
+uto !important; border: none;' alt=3D"Career Day " width=3D"600" height=3D"=
+400"></td></tr></table>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>The Washington School=
+ for Girls hosted a special visit on Friday, March 20th, bringing together =
+students and representatives from various DC Professional Licensing Boards,=
+ Commission leaders, and DLCP staff. Throughout the day, guests spoke with =
+the girls about the value of education, the confidence it builds, and the m=
+any directions their interests and talents can take them.</p>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; border-coll=
+apse: collapse;'><tr style=3D'font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif;'><td align=3D"center" style=3D'font-family: "Century Gothic",=
+ "Apple Gothic", sans-serif;'><img class=3D"govd_template_image" src=3D"htt=
+ps://content.govdelivery.com/attachments/fancy_images/DCWASH/2026/03/133877=
+41/6788747/dsc03959_crop.jpg" style=3D'width: 450px; height: auto !importan=
+t; font-family: "Century Gothic", "Apple Gothic", sans-serif; max-height: a=
+uto !important; border: none;' alt=3D"Career Day 2" width=3D"450" height=3D=
+"300"></td></tr></table>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>The students were cur=
+ious and eager to learn how different careers shape the District. Their que=
+stions showed how powerful it is when young people are encouraged to imagin=
+e their futures and meet adults who believe in their potential. Supporting =
+girls=E2=80=99 education strengthens communities, and moments like this hel=
+p spark ideas that stay with students long after the day ends.</p>
+<table class=3D"govd_hr" cellspacing=3D"0" border=3D"0" align=3D"center" wi=
+dth=3D"100%" cellpadding=3D"0" style=3D'font-family: "Century Gothic", "App=
+le Gothic", sans-serif; border-collapse: collapse;'><tr class=3D"govd_hr_in=
+ner" style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'><=
+td width=3D"100%" style=3D'font-family: "Century Gothic", "Apple Gothic", s=
+ans-serif;'><hr style=3D'font-family: "Century Gothic", "Apple Gothic", san=
+s-serif;'></td></tr></table>
+<h1 class=3D"govd_header" style=3D'font-family: "Century Gothic", "Apple Go=
+thic", sans-serif; margin-top: 0px; margin-bottom: 25px; line-height: 1.1; =
+font-weight: bold;'><a class=3D"gd_anchor" name=3D"link_9" id=3D"link_9" st=
+yle=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; color: #3=
+1394F; text-decoration: none; -ms-word-break: break-all; word-break: break-=
+word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;'>DLCP in th=
+e Community | Outreach Highlights</a></h1>
+<table class=3D"gd_combo_table" width=3D"100%" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" style=3D'font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; border-collapse: collapse;'>
+  <tr class=3D"gd_combo_first_image" style=3D'font-family: "Century Gothic"=
+, "Apple Gothic", sans-serif;'>
+    <td class=3D"gd_combo_image_cell" width=3D"267" style=3D'font-family: "=
+Century Gothic", "Apple Gothic", sans-serif;'><img class=3D"govd_template_i=
+mage" src=3D"https://content.govdelivery.com/attachments/fancy_images/DCWAS=
+H/2026/03/13389155/6788837/dsc03641_crop.jpg" style=3D'width: 267px; height=
+: auto !important; font-family: "Century Gothic", "Apple Gothic", sans-seri=
+f; max-height: auto !important; border: none;' alt=3D"Week 3 " width=3D"267=
+" height=3D"178"></td>
+<td class=3D"gd_combo_spacer" width=3D"4" style=3D'font-family: "Century Go=
+thic", "Apple Gothic", sans-serif;'></td>
+<td class=3D"gd_combo_text_cell" style=3D'font-family: "Century Gothic", "A=
+pple Gothic", sans-serif;'><p style=3D'line-height: 1.4; font-family: "Cent=
+ury Gothic", "Apple Gothic", sans-serif; margin-top: 0; margin-bottom: 20px=
+;'>The outreach events held in recognition of National Weights and Measures=
+ Week and National Consumer Protection Week were a great success. DLCP staf=
+f connected with residents across the District, setting up informational ta=
+bles at several grocery stores and engaging shoppers throughout the week.</=
+p></td>
+  </tr>
+</table>
+<table class=3D"gd_combo_table" width=3D"100%" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" style=3D'font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; border-collapse: collapse;'>
+  <tr class=3D"gd_combo_first_text" style=3D'font-family: "Century Gothic",=
+ "Apple Gothic", sans-serif;'>
+    <td class=3D"gd_combo_text_cell" style=3D'font-family: "Century Gothic"=
+, "Apple Gothic", sans-serif;'><table class=3D"gd_combo_table" border=3D"0"=
+ width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" style=3D'font-family: "=
+Century Gothic", "Apple Gothic", sans-serif; border-collapse: collapse;'>
+<tbody style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'=
+>
+<tr class=3D"gd_combo_first_text" style=3D'font-family: "Century Gothic", "=
+Apple Gothic", sans-serif;'>
+<td class=3D"gd_combo_text_cell" style=3D'font-family: "Century Gothic", "A=
+pple Gothic", sans-serif;'>
+<p align=3D"left" style=3D'line-height: 1.4; font-family: "Century Gothic",=
+ "Apple Gothic", sans-serif; margin-top: 0; margin-bottom: 20px;'>The Consu=
+mer Protection Unit (CPU) and the Office of Weights and Measures (OWM) prov=
+ided guidance on consumer rights, scam prevention, reporting violations, an=
+d the importance of accurate weighing, measuring, and scanning devices. Sho=
+ppers also asked questions, and expressed appreciation for DLCP=E2=80=99s p=
+resence in their neighborhoods.</p>
+</td>
+</tr>
+</tbody>
+</table></td>
+<td class=3D"gd_combo_spacer" width=3D"4" style=3D'font-family: "Century Go=
+thic", "Apple Gothic", sans-serif;'></td>
+<td class=3D"gd_combo_image_cell" width=3D"243" style=3D'font-family: "Cent=
+ury Gothic", "Apple Gothic", sans-serif;'><img class=3D"govd_template_image=
+" src=3D"https://content.govdelivery.com/attachments/fancy_images/DCWASH/20=
+26/03/13389154/6788838/dsc03640_crop.jpg" style=3D'width: 243px; height: au=
+to !important; font-family: "Century Gothic", "Apple Gothic", sans-serif; m=
+ax-height: auto !important; border: none;' alt=3D"CPU week 2 " width=3D"243=
+" height=3D"162"></td>
+  </tr>
+</table>
+<table class=3D"gd_combo_table" width=3D"100%" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" style=3D'font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; border-collapse: collapse;'>
+  <tr class=3D"gd_combo_first_image" style=3D'font-family: "Century Gothic"=
+, "Apple Gothic", sans-serif;'>
+    <td class=3D"gd_combo_image_cell" width=3D"244" style=3D'font-family: "=
+Century Gothic", "Apple Gothic", sans-serif;'><img class=3D"govd_template_i=
+mage" src=3D"https://content.govdelivery.com/attachments/fancy_images/DCWAS=
+H/2026/03/13389102/6788839/dsc03629_crop.jpg" style=3D'width: 244px; height=
+: auto !important; font-family: "Century Gothic", "Apple Gothic", sans-seri=
+f; max-height: auto !important; border: none;' alt=3D"CPU Week " width=3D"2=
+44" height=3D"163"></td>
+<td class=3D"gd_combo_spacer" width=3D"4" style=3D'font-family: "Century Go=
+thic", "Apple Gothic", sans-serif;'></td>
+<td class=3D"gd_combo_text_cell" style=3D'font-family: "Century Gothic", "A=
+pple Gothic", sans-serif;'><table class=3D"gd_combo_table" border=3D"0" wid=
+th=3D"100%" cellspacing=3D"0" cellpadding=3D"0" style=3D'font-family: "Cent=
+ury Gothic", "Apple Gothic", sans-serif; border-collapse: collapse;'>
+<tbody style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'=
+>
+<tr class=3D"gd_combo_first_image" style=3D'font-family: "Century Gothic", =
+"Apple Gothic", sans-serif;'>
+<td class=3D"gd_combo_text_cell" style=3D'font-family: "Century Gothic", "A=
+pple Gothic", sans-serif;'>
+<p align=3D"left" style=3D'line-height: 1.4; font-family: "Century Gothic",=
+ "Apple Gothic", sans-serif; margin-top: 0; margin-bottom: 20px;'>These eve=
+nts demonstrated DLCP=E2=80=99s strong dedication to protecting District re=
+sidents through business licensing enforcement, consumer protection investi=
+gations, and marketplace accuracy. We thank the CPU, OWM teams, and all sta=
+ff who contributed to making this week=E2=80=99s outreach efforts meaningfu=
+l and effective.=C2=A0</p>
+</td>
+</tr>
+</tbody>
+</table></td>
+  </tr>
+</table>
+<table class=3D"govd_hr" cellspacing=3D"0" border=3D"0" align=3D"center" wi=
+dth=3D"100%" cellpadding=3D"0" style=3D'font-family: "Century Gothic", "App=
+le Gothic", sans-serif; border-collapse: collapse;'><tr class=3D"govd_hr_in=
+ner" style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'><=
+td width=3D"100%" style=3D'font-family: "Century Gothic", "Apple Gothic", s=
+ans-serif;'><hr style=3D'font-family: "Century Gothic", "Apple Gothic", san=
+s-serif;'></td></tr></table>
+<h1 class=3D"govd_header" style=3D'font-family: "Century Gothic", "Apple Go=
+thic", sans-serif; margin-top: 0px; margin-bottom: 25px; line-height: 1.1; =
+font-weight: bold;'><a class=3D"gd_anchor" name=3D"link_8" id=3D"link_8" st=
+yle=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; color: #3=
+1394F; text-decoration: none; -ms-word-break: break-all; word-break: break-=
+word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;'>Apply Now =
+for Sidewalk Vending Near Nationals Park This Baseball Season</a></h1>
+<p align=3D"left" style=3D'line-height: 1.4; font-family: "Century Gothic",=
+ "Apple Gothic", sans-serif; margin-top: 20px; margin-bottom: 20px;'>Washin=
+gton Nationals Opening Day will take place on April 3, 2026. DLCP is sharin=
+g important information for Class A and Class B sidewalk vendors interested=
+ in participating during the 2026 Washington Nationals Baseball Season.=C2=
+=A0</p>
+<p align=3D"left" style=3D'line-height: 1.4; font-family: "Century Gothic",=
+ "Apple Gothic", sans-serif; margin-top: 20px; margin-bottom: 20px;'><stron=
+g style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>Avai=
+lable Vending Locations</strong></p>
+<p align=3D"left" style=3D'line-height: 1.4; font-family: "Century Gothic",=
+ "Apple Gothic", sans-serif; margin-top: 20px; margin-bottom: 20px;'>A tota=
+l of fourteen sidewalk vending spaces will be available near Nationals Park=
+. These include:</p>
+<ul style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>Six merchandise vendor locations on Hal=
+f Street SE</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>Eight food vendor locations on 1st Stre=
+et SE between M Street and N Street SE</li>
+</ul>
+<p align=3D"center" style=3D'line-height: 1.4; font-family: "Century Gothic=
+", "Apple Gothic", sans-serif; margin-top: 20px; margin-bottom: 20px;'><str=
+ong style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>PL=
+EASE NOTE: Vending is permitted exclusively on gamedays only.</strong></p>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" styl=
+e=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; border-coll=
+apse: collapse;'><tr style=3D'font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif;'><td align=3D"center" style=3D'font-family: "Century Gothic",=
+ "Apple Gothic", sans-serif;'><img class=3D"govd_template_image" src=3D"htt=
+ps://content.govdelivery.com/attachments/fancy_images/DCWASH/2026/03/133888=
+93/6788748/nationals-vending-lottery-instagram-post-45-sm-1_crop.png" style=
+=3D'width: 484px; height: auto !important; font-family: "Century Gothic", "=
+Apple Gothic", sans-serif; max-height: auto !important; border: none;' alt=
+=3D"Lottery " width=3D"484" height=3D"605"></td></tr></table>
+<p align=3D"left" style=3D'line-height: 1.4; font-family: "Century Gothic",=
+ "Apple Gothic", sans-serif; margin-top: 20px; margin-bottom: 20px;'><stron=
+g style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>Lice=
+nse and Safety Requirements</strong></p>
+<p align=3D"left" style=3D'line-height: 1.4; font-family: "Century Gothic",=
+ "Apple Gothic", sans-serif; margin-top: 20px; margin-bottom: 20px;'>All ve=
+ndors must be fully licensed and in compliance before submitting a lottery =
+application. Required approvals include:</p>
+<ul style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>A valid DLCP license</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>DC Health approval for food vendors</li=
+>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>Fire and Emergency Medical Services req=
+uirements</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>Micro Enterprise Vendors are not permit=
+ted to enter the lottery</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>Ice Cream and Food Trucks are not eligi=
+ble to participate in the lottery</li>
+</ul>
+<p align=3D"left" style=3D'line-height: 1.4; font-family: "Century Gothic",=
+ "Apple Gothic", sans-serif; margin-top: 20px; margin-bottom: 20px;'>Vendor=
+s who are not compliant may not be able to vend during the season.</p>
+<p align=3D"left" style=3D'line-height: 1.4; font-family: "Century Gothic",=
+ "Apple Gothic", sans-serif; margin-top: 20px; margin-bottom: 20px;'>Before=
+ applying, vendors are encouraged to review the DLCP website for licensing =
+and lottery information and to consult the=C2=A0<a href=3D"https://links-2.=
+govdelivery.com/CL0/https:%2F%2Flinks-2.govdelivery.com%2FCL0%2Fhttps:%252F=
+%252Fviewer.mapme.com%252Fdlcp_nats_stadium%2F1%2F0101019ca060c19d-1455f6e3=
+-26a7-4f75-9259-905aa5e8f325-000000%2Fb7GWjXEiwYPlAlxRWH75Zn0vI_7cMxH5heWHY=
+Sv5SSQ=3D446/1/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000=
+/EcJ5h83bQKgZ0Vxi56HGx8Vwva2Fkh5QY80zW2kkgME=3D450" target=3D"_blank" rel=
+=3D"noopener" style=3D'font-family: "Century Gothic", "Apple Gothic", sans-=
+serif; color: #31394F; text-decoration: underline; -ms-word-break: break-al=
+l; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphe=
+ns: none;'>Nationals Park map</a>=C2=A0to view approved vending locations.<=
+/p>
+<p align=3D"left" style=3D'line-height: 1.4; font-family: "Century Gothic",=
+ "Apple Gothic", sans-serif; margin-top: 20px; margin-bottom: 20px;'>For ad=
+ditional information, please visit the=C2=A0<a href=3D"https://links-2.govd=
+elivery.com/CL0/https:%2F%2Flinks-2.govdelivery.com%2FCL0%2Fhttps:%252F%252=
+Fdlcp.dc.gov%252F%2F2%2F0101019ca060c19d-1455f6e3-26a7-4f75-9259-905aa5e8f3=
+25-000000%2F6o5g-JDWf1OBn_JTKZjdw-lc2-ZXTT509LyCfkjVtGo=3D446/1/0101019d450=
+6fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000/QJuV_eXJNRxUzSLVIOgjDS_m-=
+bny77cQ0hiGNtIotfo=3D450" target=3D"_blank" rel=3D"noopener" style=3D'font-=
+family: "Century Gothic", "Apple Gothic", sans-serif; color: #31394F; text-=
+decoration: underline; -ms-word-break: break-all; word-break: break-word; -=
+webkit-hyphens: none; -moz-hyphens: none; hyphens: none;'>DLCP website</a>=
+=C2=A0or contact Business Licensing Manager Kelechi Ukwuoma at=C2=A0<a href=
+=3D"mailto:kelechi.ukwuoma@dc.gov" target=3D"_blank" rel=3D"noopener" style=
+=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; color: #3139=
+4F; text-decoration: underline; -ms-word-break: break-all; word-break: brea=
+k-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;'>kelechi.=
+ukwuoma@dc.gov</a>.</p>
+<p align=3D"left" style=3D'line-height: 1.4; font-family: "Century Gothic",=
+ "Apple Gothic", sans-serif; margin-top: 20px; margin-bottom: 20px;'>Vendor=
+s should also visit the Nationals Baseball Lottery page for specific regist=
+ration dates.</p>
+<h3 align=3D"center" style=3D'font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; line-height: 1.1; font-weight: bold; margin-top: 40px; margin=
+-bottom: 40px;'><a href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2F=
+eservices.dcra.dc.gov%2FSRVPAY%2FHome/1/0101019d4506fa64-0037a9b9-6d6a-40e2=
+-9db0-8508fabe8551-000000/az3KIYSCn22ayQaOv3bHkXsgCwxco2mynu8Coq-UdgY=3D450=
+" target=3D"_blank" rel=3D"noopener" style=3D'font-family: "Century Gothic"=
+, "Apple Gothic", sans-serif; color: #FFFFFF; text-decoration: none; -ms-wo=
+rd-break: break-all; word-break: break-word; -webkit-hyphens: none; -moz-hy=
+phens: none; hyphens: none; background-color: #31394F; border-radius: 4px; =
+border-color: #31394f; border-style: solid; border-width: 10px 22px;'>Click=
+ Here to Apply</a></h3>
+<table class=3D"govd_hr" cellspacing=3D"0" border=3D"0" align=3D"center" wi=
+dth=3D"100%" cellpadding=3D"0" style=3D'font-family: "Century Gothic", "App=
+le Gothic", sans-serif; border-collapse: collapse;'><tr class=3D"govd_hr_in=
+ner" style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'><=
+td width=3D"100%" style=3D'font-family: "Century Gothic", "Apple Gothic", s=
+ans-serif;'><hr style=3D'font-family: "Century Gothic", "Apple Gothic", san=
+s-serif;'></td></tr></table>
+<h1 class=3D"govd_header" style=3D'font-family: "Century Gothic", "Apple Go=
+thic", sans-serif; margin-top: 0px; margin-bottom: 25px; line-height: 1.1; =
+font-weight: bold;'><a class=3D"gd_anchor" name=3D"link_13" id=3D"link_13" =
+style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; color: =
+#31394F; text-decoration: none; -ms-word-break: break-all; word-break: brea=
+k-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;'>What You=
+ Need to Know |  2026 License Renewals</a></h1>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>DLCP reminds licensee=
+s across multiple Boards and Commissions to review upcoming renewal deadlin=
+es and requirements for the 2026 cycle. Please see the summaries below to s=
+upport timely submission of your renewal application.</p>
+<h3 style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; lin=
+e-height: 1.1; font-weight: bold; margin-top: 40px; margin-bottom: 40px;'>A=
+rchitecture License Renewal</h3>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Opens: February 1, 20=
+26 Deadline: April 30, 2026</p>
+<ul style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Renew online through =
+<a href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2Faccessdc.dcra.dc=
+.gov%2Foauth2%2Fdefault%2Fv1%2Fauthorize%3Fclient_id=3D0oaemezwiKDGfdZaE4h6=
+%26redirect_uri=3Dhttps%253A%252F%252Fgovservices.dcra.dc.gov%252Foplarenew=
+allicense%252Fauthorization-code%252Fcallback%26response_type=3Dcode%26scop=
+e=3Dopenid%2520profile%2520email%26code_challenge=3Dc_OCMQVLyNbLL8GNsaxUpKJ=
+w_5jrL2a5gzo_6Vgfzew%26code_challenge_method=3DS256%26response_mode=3Dform_=
+post%26nonce=3D639016844449841250.OWYxNzJiNDctMDRjZi00MmIyLTk4MmMtZTM2YzY5N=
+jc3OWYzNjVkMDdjM2MtNTRhZi00ZDM4LWI2MjQtNDIxMmIyYTQ3NTE2%26state=3DCfDJ8Dbd9=
+NjZ1kJMnB3pRFVagngysyW_HVP1HNToveme3r0PtAB8PjhDq8BM78hP7PCoWjFTaWYbH2mg7mNg=
+7YNerpF-kuyUkMLBG_Hw7wyZV3xuobYsg7oE8_fxjUrQaCcvVnWXL8oVo-GkF_4-g_l7mtZeSyu=
+QEiLRQv_A8QDQFvwlxFG4KZ6sRiN4JWAwagLuzU3ghVj0RLQfIfSVFBst44u7LtDd4JhVa-ewcE=
+3kfXbKxxE_NMH8wB5bxMHr5ZlxakAsOfKKuaBvDlJfsNo9tmLigGWHDU_Nc2oqoNKUgN6qH9z15=
+pAXONWH9sWOGQDrYpR1n0Gb-8kW9tOwQGxzRWLXi3d__YJQnz3PWtvZtoEYirhJ5VOdANL0PzRD=
+DuuRnQKgXj2ZvBJA4fLCavio-pGdFVNY3JftoHcFjUu184ATAGJOERfEBw0EGGAFGG-AD51Auyx=
+Z8M9JMDv265a9OX0%26x-client-SKU=3DID_NETSTANDARD2_0%26x-client-ver=3D5.5.0.=
+0/1/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000/K3Buqa7DUY=
+aXgoB-z7_IippDaf_Rd0gKwhD7OrVdnUY=3D450" target=3D"_blank" title=3D"Access =
+DC" rel=3D"noopener" style=3D'font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; color: #31394F; text-decoration: underline; -ms-word-break: b=
+reak-all; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none=
+; hyphens: none;'>Access DC</a> (<a href=3D"https://links-2.govdelivery.com=
+/CL0/https:%2F%2Faccessdc.dcra.dc.gov%2Foauth2%2Fv1%2Fauthorize%3Fclient_id=
+=3Dokta.2b1959c8-bcc0-56eb-a589-cfcfb7422f26%26code_challenge=3DTMg72bBhNdZ=
+2SkQMUDUs3WNnQS7ohgfD98W18p3SWrU%26code_challenge_method=3DS256%26nonce=3Dt=
+zAdnpAgwXKkgdbcNKwlbipZ2L2JP6bFVKH0LQ7PdNOhdYRDwT6CLMyYZfBILKR7%26redirect_=
+uri=3Dhttps%253A%252F%252Faccessdc.dcra.dc.gov%252Fenduser%252Fcallback%26r=
+esponse_type=3Dcode%26state=3DZKD78RW9yYTl4nyqppDWlEE776BopGTCgWJh4xCe00XSy=
+FFsZ0GBcBy9FkzNzYx8%26scope=3Dopenid%2520profile%2520email%2520okta.users.r=
+ead.self%2520okta.users.manage.self%2520okta.internal.enduser.read%2520okta=
+.internal.enduser.manage%2520okta.enduser.dashboard.read%2520okta.enduser.d=
+ashboard.manage%2520okta.myAccount.sessions.manage%2520okta.internal.naviga=
+tion.enduser.read/1/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-0=
+00000/BrCGm9YLlqgN2YGaXCBLxznMrxb9LC1aBsFOPvenxdc=3D450" target=3D"_blank" =
+rel=3D"noopener" style=3D'font-family: "Century Gothic", "Apple Gothic", sa=
+ns-serif; color: #31394F; text-decoration: underline; -ms-word-break: break=
+-all; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hy=
+phens: none;'>Sign Up</a> required for new users).</p>
+</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>CE Requirement: 24 ho=
+urs of Health, Safety, and Welfare (HSW) approved by AIA or NCARB, unless t=
+his is your first renewal by examination.</p>
+</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Licenses not renewed =
+by June 30, 2026 convert to Inactive =E2=80=93 Reinstatement Eligible.</p>
+</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>More information avai=
+lable at <span tabindex=3D"0" role=3D"button" data-url=3D"https://dlcp.dc.g=
+ov" aria-label=3D"dlcp.dc.gov, this will take you to dlcp.dc.gov" style=3D'=
+line-height: 1.4; font-family: "Century Gothic", "Apple Gothic", sans-serif=
+;'><a href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2Fdlcp.dc.gov%2=
+F/2/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000/cnVyYjyGoA=
+xbxZqxnY1_0d46PaPjYDOCtDhArqa8U7o=3D450" target=3D"_blank" rel=3D"noopener"=
+ style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; color:=
+ #31394F; text-decoration: underline; -ms-word-break: break-all; word-break=
+: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;'>dl=
+cp.dc.gov</a></span>.</p>
+</li>
+</ul>
+<h3 style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; lin=
+e-height: 1.1; font-weight: bold; margin-top: 40px; margin-bottom: 40px;'>I=
+ndustrial Trades License Renewal</h3>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Deadline: March 31, 2=
+026</p>
+<ul style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Renew online through =
+<a href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2Fgovservices.dcra=
+.dc.gov%2Foplarenewallicense/1/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-850=
+8fabe8551-000000/2ze4vJfpBpcid970f7nLbUmQ549rLceCu_PmtvV6dPY=3D450" target=
+=3D"_blank" rel=3D"noopener" style=3D'font-family: "Century Gothic", "Apple=
+ Gothic", sans-serif; color: #31394F; text-decoration: underline; -ms-word-=
+break: break-all; word-break: break-word; -webkit-hyphens: none; -moz-hyphe=
+ns: none; hyphens: none;'>Access DC</a> (<a href=3D"https://links-2.govdeli=
+very.com/CL0/https:%2F%2Faccessdc.dcra.dc.gov%2F/1/0101019d4506fa64-0037a9b=
+9-6d6a-40e2-9db0-8508fabe8551-000000/Lk1KrQxhTy43-tYnbkFwV5yoBjkbMndD4YA8nS=
+_qOmY=3D450" target=3D"_blank" rel=3D"noopener" style=3D'font-family: "Cent=
+ury Gothic", "Apple Gothic", sans-serif; color: #31394F; text-decoration: u=
+nderline; -ms-word-break: break-all; word-break: break-word; -webkit-hyphen=
+s: none; -moz-hyphens: none; hyphens: none;'>Sign Up</a> and email verifica=
+tion required).</p>
+</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Approved licensees ma=
+y view and download their digital license through the My Licenses tab in Ac=
+cess DC.</p>
+</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Important for Plumber=
+s:</p>
+<ul style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Master Plumbers desig=
+nated to a Plumber Contractor company must submit:</p>
+<ul style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>$5,000 bond for the M=
+aster Plumber, and</p>
+</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>$5,000 bond for the c=
+ontracting company.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Licenses not renewed =
+by March 31, 2026 convert to Inactive.</p>
+</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>More information avai=
+lable at <span tabindex=3D"0" role=3D"button" data-url=3D"https://dcra.dc.g=
+ov/industrial-trade" aria-label=3D"dcra.dc.gov/industrial-trade, this will =
+take you to dcra.dc.gov" style=3D'line-height: 1.4; font-family: "Century G=
+othic", "Apple Gothic", sans-serif;'><a href=3D"https://links-2.govdelivery=
+.com/CL0/https:%2F%2Fdcra.dc.gov%2Findustrial-trade/1/0101019d4506fa64-0037=
+a9b9-6d6a-40e2-9db0-8508fabe8551-000000/UHHNezLeC8CPeVBkZvQnf2mV9C-ahS49H8i=
+9F6F18Uc=3D450" target=3D"_blank" rel=3D"noopener" style=3D'font-family: "C=
+entury Gothic", "Apple Gothic", sans-serif; color: #31394F; text-decoration=
+: underline; -ms-word-break: break-all; word-break: break-word; -webkit-hyp=
+hens: none; -moz-hyphens: none; hyphens: none;'>dcra.dc.gov/industrial-trad=
+e</a></span>.</p>
+</li>
+</ul>
+<h3 style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; lin=
+e-height: 1.1; font-weight: bold; margin-top: 40px; margin-bottom: 40px;'>C=
+ombat Sports License Renewal</h3>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Deadline: March 31, 2=
+026</p>
+<ul style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Renew online through =
+<a href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2Fgovservices.dcra=
+.dc.gov%2Foplarenewallicense/2/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-850=
+8fabe8551-000000/I0IWOKUTLkrfb_mwnZF0LEECj-hvrW1RHoTlCD4_sX8=3D450" target=
+=3D"_blank" rel=3D"noopener" style=3D'font-family: "Century Gothic", "Apple=
+ Gothic", sans-serif; color: #31394F; text-decoration: underline; -ms-word-=
+break: break-all; word-break: break-word; -webkit-hyphens: none; -moz-hyphe=
+ns: none; hyphens: none;'>Access DC</a> (Sign Up and email verification req=
+uired).</p>
+</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Licensees are encoura=
+ged to renew early to avoid additional fees.</p>
+</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Licenses not renewed =
+by March 31, 2026 require reinstatement.</p>
+</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Reinstatement is allo=
+wed for up to five years; after that, applicants must reapply as first=E2=
+=80=91time licensees.</p>
+</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Approved licensees ma=
+y view and download their digital license through Access DC.</p>
+</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>More information avai=
+lable at <span tabindex=3D"0" role=3D"button" data-url=3D"https://dlcp.dc.g=
+ov" aria-label=3D"dlcp.dc.gov, this will take you to dlcp.dc.gov" style=3D'=
+line-height: 1.4; font-family: "Century Gothic", "Apple Gothic", sans-serif=
+;'><a href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2Fdlcp.dc.gov%2=
+F/3/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000/B5wB29GwJu=
+E49CgDeYlywjNRZWHG0GldTWq5oFlZwQI=3D450" target=3D"_blank" rel=3D"noopener"=
+ style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; color:=
+ #31394F; text-decoration: underline; -ms-word-break: break-all; word-break=
+: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;'>dl=
+cp.dc.gov</a>.</span></p>
+</li>
+</ul>
+<h3 style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; lin=
+e-height: 1.1; font-weight: bold; margin-top: 40px; margin-bottom: 40px;'><=
+span tabindex=3D"0" role=3D"button" data-url=3D"https://dlcp.dc.gov" aria-l=
+abel=3D"dlcp.dc.gov, this will take you to dlcp.dc.gov" style=3D'font-famil=
+y: "Century Gothic", "Apple Gothic", sans-serif; line-height: 1.1; font-wei=
+ght: bold;'>Barber and Cosmetology License Renewal</span></h3>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Opened: January 15, 2=
+026 Deadline: April 15, 2026</p>
+<ul style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Renew online through =
+<a href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2Fgovservices.dcra=
+.dc.gov%2Foplarenewallicense/3/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-850=
+8fabe8551-000000/hCH968mrWF2CZIeyBnWt5pwiy4mwTAX0fTM08v3-v1A=3D450" target=
+=3D"_blank" rel=3D"noopener" style=3D'font-family: "Century Gothic", "Apple=
+ Gothic", sans-serif; color: #31394F; text-decoration: underline; -ms-word-=
+break: break-all; word-break: break-word; -webkit-hyphens: none; -moz-hyphe=
+ns: none; hyphens: none;'>Access DC</a> (<a href=3D"https://links-2.govdeli=
+very.com/CL0/http:%2F%2Faccessdc.dcra.dc.gov%2F/1/0101019d4506fa64-0037a9b9=
+-6d6a-40e2-9db0-8508fabe8551-000000/2DUu5z_vPcrC76zR0v9Cm63TK4zEWgcOaHsOeIo=
+PxoQ=3D450" target=3D"_blank" rel=3D"noopener" style=3D'font-family: "Centu=
+ry Gothic", "Apple Gothic", sans-serif; color: #31394F; text-decoration: un=
+derline; -ms-word-break: break-all; word-break: break-word; -webkit-hyphens=
+: none; -moz-hyphens: none; hyphens: none;'>Sign Up</a> required for new us=
+ers).</p>
+</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>CE Requirement: 6 hou=
+rs total, including</p>
+<ul style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>2 hours Health, Safet=
+y, and Welfare, and</p>
+</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>4 hours General Elect=
+ives</p>
+</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>CE is waived for firs=
+t=E2=80=91time renewals and owner license renewals.</p>
+</li>
+</ul>
+</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>All licenses in this =
+category expire April 15 of even=E2=80=91numbered years.</p>
+</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Licenses not renewed =
+by June 15, 2026 convert to Inactive =E2=80=93 Reinstatement Eligible.</p>
+</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>More information and =
+approved CE providers available at <span tabindex=3D"0" role=3D"button" dat=
+a-url=3D"https://dlcp.dc.gov" aria-label=3D"dlcp.dc.gov, this will take you=
+ to dlcp.dc.gov" style=3D'line-height: 1.4; font-family: "Century Gothic", =
+"Apple Gothic", sans-serif;'><a href=3D"https://links-2.govdelivery.com/CL0=
+/https:%2F%2Fdlcp.dc.gov%2F/4/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508=
+fabe8551-000000/b7hkLBECp_nIjNPb1_ODP8L3GhDeE7btsfgyqI5gXBA=3D450" target=
+=3D"_blank" rel=3D"noopener" style=3D'font-family: "Century Gothic", "Apple=
+ Gothic", sans-serif; color: #31394F; text-decoration: underline; -ms-word-=
+break: break-all; word-break: break-word; -webkit-hyphens: none; -moz-hyphe=
+ns: none; hyphens: none;'>dlcp.dc.gov</a>.</span></p>
+</li>
+</ul>
+<table class=3D"govd_hr" cellspacing=3D"0" border=3D"0" align=3D"center" wi=
+dth=3D"100%" cellpadding=3D"0" style=3D'font-family: "Century Gothic", "App=
+le Gothic", sans-serif; border-collapse: collapse;'><tr class=3D"govd_hr_in=
+ner" style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'><=
+td width=3D"100%" style=3D'font-family: "Century Gothic", "Apple Gothic", s=
+ans-serif;'><hr style=3D'font-family: "Century Gothic", "Apple Gothic", san=
+s-serif;'></td></tr></table>
+<h1 class=3D"govd_header" style=3D'font-family: "Century Gothic", "Apple Go=
+thic", sans-serif; margin-top: 0px; margin-bottom: 25px; line-height: 1.1; =
+font-weight: bold;'><a class=3D"gd_anchor" name=3D"link_5" id=3D"link_5" st=
+yle=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; color: #3=
+1394F; text-decoration: none; -ms-word-break: break-all; word-break: break-=
+word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;'>Legislativ=
+e Updates | In Case You Missed It</a></h1>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'><strong style=3D'font=
+-family: "Century Gothic", "Apple Gothic", sans-serif;'>On March 23, 2026, =
+the Committee on Health, chaired by Councilmember Christina Henderson, held=
+ a hearing on the following related to the Board of Funeral Directors:</str=
+ong></p>
+<ul style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<a href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2Flims.dccouncil.g=
+ov%2FLegislation%2FB26-0047/1/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508=
+fabe8551-000000/omTwn_r6XNLxNrFp4Y6wO3g3BUHdhjrkh_QUNZ36APs=3D450" style=3D=
+'font-family: "Century Gothic", "Apple Gothic", sans-serif; color: #31394F;=
+ text-decoration: underline; -ms-word-break: break-all; word-break: break-w=
+ord; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;'>The Funeral=
+ Directors Licensing Reform Amendment Act of 2025 (B26-0047)</a> to create =
+an embalmers license, update the funeral director=E2=80=99s license given t=
+he creation of an embalmers license, and establish requirements for a funer=
+al directing and embalming internship;</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>
+<a href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2Flims.dccouncil.g=
+ov%2FLegislation%2FB26-0547/1/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508=
+fabe8551-000000/cQKpnn9tQonqt47xiK7gjy0-8KpbBCX_-XO6K_TjNs8=3D450" style=3D=
+'font-family: "Century Gothic", "Apple Gothic", sans-serif; color: #31394F;=
+ text-decoration: underline; -ms-word-break: break-all; word-break: break-w=
+ord; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;'>The Green D=
+eath Care Option Amendment Act of 2025 (B26- 0547)</a> to (i) allow funeral=
+ services establishments to use reduction by alkaline hydrolysis in additio=
+n to burial and cremation and (ii) expand the Board of Funeral Directors by=
+ one consumer member and one member with expertise in cremation or alkaline=
+ hydrolysis; and</li>
+<li style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic=
+", sans-serif; margin-bottom: 7px;'>Oversight of the Board of Funeral Direc=
+tors to review its Fiscal Year 2025 performance.</li>
+</ul>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>DLCP and the Board of=
+ Funeral Directors testified about B26-0047 and B26-0547. They also testifi=
+ed about the accomplishments of the Board during Fiscal Year 2025 and the B=
+oard=E2=80=99s priorities for the remainder of Fiscal Year 2026. <strong st=
+yle=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>Visit th=
+e </strong><a href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2Fdlcp.=
+dc.gov%2Fpage%2Flegislative-affairs-and-policy/1/0101019d4506fa64-0037a9b9-=
+6d6a-40e2-9db0-8508fabe8551-000000/WD3cygzSQb7dFo8UqAfdGcHBF-_piENK6dN3takS=
+brE=3D450" style=3D'font-family: "Century Gothic", "Apple Gothic", sans-ser=
+if; color: #31394F; text-decoration: underline; -ms-word-break: break-all; =
+word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens:=
+ none;'><strong style=3D'font-family: "Century Gothic", "Apple Gothic", san=
+s-serif;'>DLCP Legislative Affairs and Policy Division page</strong></a><st=
+rong style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'> =
+to access the Chairperson=E2=80=99s testimony and a link to the Council=E2=
+=80=99s recording of the hearing! For more information on the DC Board of F=
+uneral Directors or to apply for a license, visit </strong><a href=3D"https=
+://links-2.govdelivery.com/CL0/https:%2F%2Fdlcp.dc.gov%2Fnode%2F1617386/1/0=
+101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000/DrJd74IHfJMnsfQ=
+OT8kxPY24fdBK_r8jWC5RraIxxtg=3D450" style=3D'font-family: "Century Gothic",=
+ "Apple Gothic", sans-serif; color: #31394F; text-decoration: underline; -m=
+s-word-break: break-all; word-break: break-word; -webkit-hyphens: none; -mo=
+z-hyphens: none; hyphens: none;'><strong style=3D'font-family: "Century Got=
+hic", "Apple Gothic", sans-serif;'>here</strong></a><strong style=3D'font-f=
+amily: "Century Gothic", "Apple Gothic", sans-serif;'>.</strong></p>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'><strong style=3D'font=
+-family: "Century Gothic", "Apple Gothic", sans-serif;'>On March 25, 2026, =
+the Committee on Youth Affairs, chaired by Councilmember Zachary Parker, he=
+ld a hearing on the </strong><a href=3D"https://links-2.govdelivery.com/CL0=
+/https:%2F%2Flims.dccouncil.gov%2FLegislation%2FB26-0026/1/0101019d4506fa64=
+-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000/qYXx9pII0DwlJaEDA6pyfHcpUcurCu=
+zp5O3euVZQBL8=3D450" style=3D'font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; color: #31394F; text-decoration: underline; -ms-word-break: b=
+reak-all; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none=
+; hyphens: none;'><strong style=3D'font-family: "Century Gothic", "Apple Go=
+thic", sans-serif;'>Theatrical Wrestling Regulation Amendment Act of 2025 (=
+B26-0026)</strong></a><strong style=3D'font-family: "Century Gothic", "Appl=
+e Gothic", sans-serif;'>. </strong>The bill would update the combat sports =
+that are exempt from the authority of the Combat Sports Commission to inclu=
+de theatrical wrestling. Combat Sports Commission Chairperson Andrew Huff t=
+estified about the health and safety importance of regulating combat sports=
+ and the impact of the bill on wrestling events. <strong style=3D'font-fami=
+ly: "Century Gothic", "Apple Gothic", sans-serif;'>Visit the </strong><a hr=
+ef=3D"https://links-2.govdelivery.com/CL0/https:%2F%2Fdlcp.dc.gov%2Fpage%2F=
+legislative-affairs-and-policy/2/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8=
+508fabe8551-000000/gQiEA3f8Dh1P0_cgLXtVbXz17yAMHKtMegSy-Ha398M=3D450" style=
+=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; color: #3139=
+4F; text-decoration: underline; -ms-word-break: break-all; word-break: brea=
+k-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;'><strong =
+style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'>DLCP L=
+egislative Affairs and Policy Division page</strong></a><strong style=3D'fo=
+nt-family: "Century Gothic", "Apple Gothic", sans-serif;'> to access the Ch=
+airperson=E2=80=99s testimony and a link to the Council=E2=80=99s recording=
+ of the hearing! Visit </strong><a href=3D"https://links-2.govdelivery.com/=
+CL0/https:%2F%2Fdlcp.dc.gov%2Fnode%2F1617416/1/0101019d4506fa64-0037a9b9-6d=
+6a-40e2-9db0-8508fabe8551-000000/-Wh8gF9wHwSzc1MAF_cb3UpDw5phF-XlwtpQoX0bgd=
+g=3D450" style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif=
+; color: #31394F; text-decoration: underline; -ms-word-break: break-all; wo=
+rd-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: n=
+one;'><strong style=3D'font-family: "Century Gothic", "Apple Gothic", sans-=
+serif;'>here</strong></a> <strong style=3D'font-family: "Century Gothic", "=
+Apple Gothic", sans-serif;'>for more information on the Combat Sports Commi=
+ssion or to apply for a license.</strong></p>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'><strong style=3D'font=
+-family: "Century Gothic", "Apple Gothic", sans-serif;'>On March 26, 2026, =
+the Committee on Public Works and Operations, chaired by Councilmember Bria=
+nne Nadeau, held a hearing on the </strong><a href=3D"https://links-2.govde=
+livery.com/CL0/https:%2F%2Flims.dccouncil.gov%2FLegislation%2FB26-0494/1/01=
+01019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000/n-PlXIBVwYfTdu_E=
+cmYUbQJE1B-7UAn87jMEmOBIpIo=3D450" style=3D'font-family: "Century Gothic", =
+"Apple Gothic", sans-serif; color: #31394F; text-decoration: underline; -ms=
+-word-break: break-all; word-break: break-word; -webkit-hyphens: none; -moz=
+-hyphens: none; hyphens: none;'><strong style=3D'font-family: "Century Goth=
+ic", "Apple Gothic", sans-serif;'>Accountancy Practice Amendment Act of 202=
+5 (B26-0494)</strong></a><strong style=3D'font-family: "Century Gothic", "A=
+pple Gothic", sans-serif;'>.=C2=A0</strong>The bill would revise both the e=
+ligibility requirements for accountancy licensure and the mobility requirem=
+ents for accountants who are licensed in another jurisdiction and want to p=
+ractice in the District. DLCP and the Board of Accountancy testified about =
+the bill and the opportunity to expand licensure pathways for accountants. =
+<strong style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;=
+'>Visit the </strong><a href=3D"https://links-2.govdelivery.com/CL0/https:%=
+2F%2Fdlcp.dc.gov%2Fpage%2Flegislative-affairs-and-policy/3/0101019d4506fa64=
+-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000/NMwN1ew1LxYcbTdmFiY9YiZHm2IsZu=
+WoV_iAKzxLN0Q=3D450" style=3D'font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; color: #31394F; text-decoration: underline; -ms-word-break: b=
+reak-all; word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none=
+; hyphens: none;'><strong style=3D'font-family: "Century Gothic", "Apple Go=
+thic", sans-serif;'>DLCP Legislative Affairs and Policy Division page</stro=
+ng></a><strong style=3D'font-family: "Century Gothic", "Apple Gothic", sans=
+-serif;'> to access the Chairperson=E2=80=99s testimony and a link to the C=
+ouncil=E2=80=99s recording of the hearing! For more information on the Boar=
+d of Accountancy or to apply for a license, visit </strong><a href=3D"https=
+://links-2.govdelivery.com/CL0/https:%2F%2Fdlcp.dc.gov%2Fnode%2F1617381/1/0=
+101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000/LkBAPuaOvUR8lbA=
+PfnXiaxVyaIU-k1GPYn7q7tbj1ZA=3D450" style=3D'font-family: "Century Gothic",=
+ "Apple Gothic", sans-serif; color: #31394F; text-decoration: underline; -m=
+s-word-break: break-all; word-break: break-word; -webkit-hyphens: none; -mo=
+z-hyphens: none; hyphens: none;'><strong style=3D'font-family: "Century Got=
+hic", "Apple Gothic", sans-serif;'>here</strong></a><strong style=3D'font-f=
+amily: "Century Gothic", "Apple Gothic", sans-serif;'>.</strong></p>
+<table class=3D"govd_hr" cellspacing=3D"0" border=3D"0" align=3D"center" wi=
+dth=3D"100%" cellpadding=3D"0" style=3D'font-family: "Century Gothic", "App=
+le Gothic", sans-serif; border-collapse: collapse;'><tr class=3D"govd_hr_in=
+ner" style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'><=
+td width=3D"100%" style=3D'font-family: "Century Gothic", "Apple Gothic", s=
+ans-serif;'><hr style=3D'font-family: "Century Gothic", "Apple Gothic", san=
+s-serif;'></td></tr></table>
+<h1 class=3D"govd_header" style=3D'font-family: "Century Gothic", "Apple Go=
+thic", sans-serif; margin-top: 0px; margin-bottom: 25px; line-height: 1.1; =
+font-weight: bold;'><a class=3D"gd_anchor" name=3D"link_2" id=3D"link_2" st=
+yle=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; color: #3=
+1394F; text-decoration: none; -ms-word-break: break-all; word-break: break-=
+word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;'>Contact Us=
+</a></h1>
+<p style=3D'line-height: 1.4; font-family: "Century Gothic", "Apple Gothic"=
+, sans-serif; margin-top: 20px; margin-bottom: 20px;'>Contact DLCP via=C2=
+=A0<a href=3D"mailto:dlcp@dc.gov" target=3D"_blank" rel=3D"noopener" style=
+=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; color: #3139=
+4F; text-decoration: underline; -ms-word-break: break-all; word-break: brea=
+k-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;'>email</a=
+>, or our=C2=A0<a href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2Fl=
+nks.gd%2Fl%2FeyJhbGciOiJIUzI1NiJ9.eyJidWxsZXRpbl9saW5rX2lkIjoxMDcsInVyaSI6I=
+mJwMjpjbGljayIsImJ1bGxldGluX2lkIjoiMjAyMjEwMDMuNjQ2MDYzMDEiLCJ1cmwiOiJodHRw=
+czovL2RjcmEua3VzdG9tZXIuaGVscC9jb250YWN0L2NvbnRhY3R1cy1Ta293Q09qWDgifQ.HWRP=
+t19-ZthO7jqzxgzu_d4Qe_BfnZfjaDg8mnxfNTg%2Fs%2F2576383920%2Fbr%2F14514433532=
+5-l/1/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000/EAlk6YRk=
+D72o0iPiRbXojSlv0gflQPBgKHPIlxcojwY=3D450" target=3D"_blank" rel=3D"noopene=
+r" style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif; colo=
+r: #31394F; text-decoration: underline; -ms-word-break: break-all; word-bre=
+ak: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;'>=
+online inquiry form</a>=C2=A0at any time. We=E2=80=99re also available thro=
+ugh the live chat on=C2=A0<a href=3D"https://links-2.govdelivery.com/CL0/ht=
+tps:%2F%2Flnks.gd%2Fl%2FeyJhbGciOiJIUzI1NiJ9.eyJidWxsZXRpbl9saW5rX2lkIjoxMD=
+gsInVyaSI6ImJwMjpjbGljayIsImJ1bGxldGluX2lkIjoiMjAyMjEwMDMuNjQ2MDYzMDEiLCJ1c=
+mwiOiJodHRwczovL2RsY3AuZGMuZ292LyJ9.G-OKgOK1Bs0iHX0BPQEzVDzMenTTVdkS7arKHBE=
+VmjU%2Fs%2F2576383920%2Fbr%2F145144335325-l/1/0101019d4506fa64-0037a9b9-6d6=
+a-40e2-9db0-8508fabe8551-000000/Cq8ot-RMUo6r70dQ3otC7YSdlTyMi4yREQRfedFf2RQ=
+=3D450" target=3D"_blank" rel=3D"noopener" style=3D'font-family: "Century G=
+othic", "Apple Gothic", sans-serif; color: #31394F; text-decoration: underl=
+ine; -ms-word-break: break-all; word-break: break-word; -webkit-hyphens: no=
+ne; -moz-hyphens: none; hyphens: none;'>dlcp.dc.gov</a>=C2=A0or by phone at=
+ 202-671-4500 during normal business hours.=C2=A0</p>
+<table class=3D"govd_hr" cellspacing=3D"0" border=3D"0" align=3D"center" wi=
+dth=3D"100%" cellpadding=3D"0" style=3D'font-family: "Century Gothic", "App=
+le Gothic", sans-serif; border-collapse: collapse;'><tr class=3D"govd_hr_in=
+ner" style=3D'font-family: "Century Gothic", "Apple Gothic", sans-serif;'><=
+td width=3D"100%" style=3D'font-family: "Century Gothic", "Apple Gothic", s=
+ans-serif;'><hr style=3D'font-family: "Century Gothic", "Apple Gothic", san=
+s-serif;'></td></tr></table>
+</td>
+</tr>
+
+</table>
+</td>
+</tr>
+
+</table></td></tr></table>
+ =20
+
+
+<div id=3D"mail_footer">
+    <table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" =
+align=3D"center">
+<tbody>
+<tr>
+<td style=3D"background-color: #ffffff; margin: 0; padding: 0; width: 100% =
+!important;" bgcolor=3D"#ffffff">
+<table style=3D"border-collapse: collapse;" width=3D"100%" cellspacing=3D"0=
+" cellpadding=3D"0" align=3D"center">
+<tbody>
+<tr>
+<td style=3D"background-color: #ffffff; padding: 10px 30px 0px;" bgcolor=3D=
+"#ffffff" width=3D"100%">
+<table style=3D"border-collapse: collapse;" border=3D"0" width=3D"100%" cel=
+lspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center"><img class=3D"govd_template_image" src=3D"https://cont=
+ent.govdelivery.com/attachments/fancy_images/DCWASH/2020/02/3141940/new-mmb=
+-branding-j-01-1_original.png" alt=3D"Government of the District of Columbi=
+a - Muriel Bowser, Mayor" width=3D"267" height=3D"52" style=3D"width: 267px=
+; height: 52px; border: none;"></td>
+</tr>
+</tbody>
+</table>
+<h2 style=3D"margin-top: 25px; margin-bottom: 20px; line-height: 1.1; font-=
+weight: bold; color: #000000; font-family: 'Century Gothic', 'Apple Gothic'=
+, sans-serif; font-size: 17px; text-align: center;" align=3D"center"><stron=
+g>Department of Licensing and Consumer Protection</strong></h2>
+<p style=3D"line-height: 1.4; margin-top: 20px; margin-bottom: 20px; color:=
+ #000000; font-family: 'Century Gothic', 'Apple Gothic', sans-serif; font-s=
+ize: 13px; text-align: center;" align=3D"center">1100 4th Street SW, Washin=
+gton, DC 20024 =C7=80 202.671.4500 =C7=80 <a href=3D"https://links-2.govdel=
+ivery.com/CL0/https:%2F%2Fdlcp.dc.gov%2F/5/0101019d4506fa64-0037a9b9-6d6a-4=
+0e2-9db0-8508fabe8551-000000/YlnkZ04MRWvYsbciSWpY0JKtWWpFJ9sax7HBOkx2efg=3D=
+450">dlcp.dc.gov</a></p>
+</td>
+</tr>
+<tr>
+<td style=3D"background-color: #ffffff; padding: 10px 30px;" align=3D"cente=
+r" bgcolor=3D"#ffffff" width=3D"100%">
+<a href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2Fwww.linkedin.com=
+%2Fcompany%2Flicensingandconsumerprotection%2F/1/0101019d4506fa64-0037a9b9-=
+6d6a-40e2-9db0-8508fabe8551-000000/G32aRwSo4IJ_mMNfpFnGEScAKlmPk5SN6pS1tBhP=
+qcE=3D450" target=3D"_blank" style=3D"color: #31394f; text-decoration: unde=
+rline; -ms-word-break: break-all; word-break: break-word; -webkit-hyphens: =
+none; -moz-hyphens: none; hyphens: none;" rel=3D"noopener"><img class=3D"go=
+vd_template_image" src=3D"https://content.govdelivery.com/attachments/fancy=
+_images/DCWASH/2021/01/4057327/linkedin_original.png" alt=3D"LinkedIn" heig=
+ht=3D"38" style=3D"height: 38px; width: auto;"></a><a href=3D"https://links=
+-2.govdelivery.com/CL0/https:%2F%2Fwww.instagram.com%2Fdc_dlcp%3Figshid=3DY=
+mMyMTA2M2Y/1/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000/N=
+ArDJKCcih5mL7fPI_Hm8KpyE0zvOQW-KDUi5loJKE8=3D450" target=3D"_blank" style=
+=3D"color: #31394f; text-decoration: underline; -ms-word-break: break-all; =
+word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens:=
+ none;" rel=3D"noopener"><img class=3D"govd_template_image" src=3D"https://=
+content.govdelivery.com/attachments/fancy_images/DCWASH/2020/02/3128882/bla=
+ck-03_original.png" alt=3D"instagram" height=3D"38" style=3D"height: 38px; =
+width: auto;"></a> =C2=A0<a href=3D"https://links-2.govdelivery.com/CL0/htt=
+ps:%2F%2Ftwitter.com%2FDC_DLCP/1/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8=
+508fabe8551-000000/jLb67GV2Ok3T20UaJIinYEZBXt_dfMs4H2-ZCgmQxaU=3D450" targe=
+t=3D"_blank" style=3D"color: #31394f; text-decoration: underline; -ms-word-=
+break: break-all; word-break: break-word; -webkit-hyphens: none; -moz-hyphe=
+ns: none; hyphens: none;" rel=3D"noopener"><img class=3D"govd_template_imag=
+e" src=3D"https://content.govdelivery.com/attachments/fancy_images/DCWASH/2=
+024/01/8831720/twitter-x-logo_original.png" alt=3D"X" height=3D"38" style=
+=3D"height: 38px; width: auto;"></a> =C2=A0<a href=3D"https://links-2.govde=
+livery.com/CL0/https:%2F%2Fwww.facebook.com%2FLicensingandConsumerProtectio=
+n/1/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000/BcqE6lOdge=
+_f4CR0AX0V1Yh6jEx45EDi7jK_kpJyn0Q=3D450" target=3D"_blank" style=3D"color: =
+#31394f; text-decoration: underline; -ms-word-break: break-all; word-break:=
+ break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;" rel=
+=3D"noopener"><img class=3D"govd_template_image" src=3D"https://content.gov=
+delivery.com/attachments/fancy_images/DCWASH/2020/02/3128878/black-01_origi=
+nal.png" alt=3D"facebook" height=3D"38" style=3D"height: 38px; width: auto;=
+"></a><a href=3D"mailto:dlcp@dc.gov" target=3D"_blank" style=3D"color: #000=
+000; text-decoration: underline; -ms-word-break: break-all; word-break: bre=
+ak-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;" rel=3D"=
+noopener"><img class=3D"govd_template_image" src=3D"https://content.govdeli=
+very.com/attachments/fancy_images/DCWASH/2020/02/3128885/black-05_original.=
+png" alt=3D"email us" height=3D"38" style=3D"height: 38px; width: auto;"></=
+a>
+</td>
+</tr>
+<tr>
+<td style=3D"background-color: #ffffff; padding: 10px 30px 30px;" bgcolor=
+=3D"#ffffff" width=3D"100%">
+<h2 style=3D"margin-top: 0px; margin-bottom: 20px; line-height: 1.1; font-w=
+eight: bold; color: #000000; font-family: 'Century Gothic', 'Apple Gothic',=
+ sans-serif; font-size: 17px; text-align: center;" align=3D"center"><strong=
+>Subscriber Preferences<br></strong></h2>
+<p class=3D"gd_p" style=3D"line-height: 1.4; margin-top: 20px; margin-botto=
+m: 20px; color: #000000; font-family: 'Century Gothic', 'Apple Gothic', san=
+s-serif; font-size: 13px; text-align: center;" align=3D"center"><a href=3D"=
+https://links-2.govdelivery.com/CL0/http:%2F%2Fpublic.govdelivery.com%2Facc=
+ounts%2FDCWASH%2Fsubscribers%2Fnew%3Fpreferences=3Dtrue/1/0101019d4506fa64-=
+0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000/Yqsc6ilWixLHXjdR2ZVoYE08459S4_n=
+4vztsbzuafuU=3D450" style=3D"color: #000000; text-decoration: underline; -m=
+s-word-break: break-all; word-break: break-word; -webkit-hyphens: none; -mo=
+z-hyphens: none; hyphens: none;">Manage Preferences</a> =C2=A0|=C2=A0 <a hr=
+ef=3D"https://links-2.govdelivery.com/CL0/https:%2F%2Fpublic.govdelivery.co=
+m%2Faccounts%2FDCWASH%2Fsubscriber%2Fone_click_unsubscribe%3Fverification=
+=3D5.2e5e0c18e87201eded9096e1f1cbeff8%26destination=3Dstarworks5%2540gmail.=
+com/1/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-8508fabe8551-000000/eDoByRed=
+yPhIrcX-5xNw9EnPZqUgkXMRpK10Sz16Mkg=3D450" style=3D"color: #000000; text-de=
+coration: underline; -ms-word-break: break-all; word-break: break-word; -we=
+bkit-hyphens: none; -moz-hyphens: none; hyphens: none;">Unsubscribe</a> =C2=
+=A0|=C2=A0 <a href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2Fsubsc=
+riberhelp.govdelivery.com%2F/1/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-850=
+8fabe8551-000000/M2nKqbbqcGeusYm4L3Wo3dqrTIkNzY71gVLy5q2pj-4=3D450" style=
+=3D"color: #000000; text-decoration: underline; -ms-word-break: break-all; =
+word-break: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens:=
+ none;">Help</a> =C2=A0|=C2=A0 <a href=3D"mailto:dlcp@dc.gov" style=3D"colo=
+r: #000000; text-decoration: underline; -ms-word-break: break-all; word-bre=
+ak: break-word; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none;">=
+Contact Us</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<div id=3D"tagline">
+    <table style=3D"border-collapse: collapse; margin: 0px auto; width: 100=
+%;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td style=3D"padding: 0 10px 0 10px;" valign=3D"top">
+<table class=3D"mobile-tagline" style=3D"border-collapse: collapse; margin:=
+ 0px auto; width: 100%;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" a=
+lign=3D"right">
+<tbody>
+<tr>
+<td style=3D"padding: 10px 0 0 0;" colspan=3D"2" valign=3D"top"><hr></td>
+</tr>
+<tr>
+<td style=3D"padding: 10px 5px 10px 0;" align=3D"left" valign=3D"top"><span=
+ style=3D"color: #757575; font-size: 10px; font-family: arial, helvetica, s=
+ans-serif;">This message has been sent by the District of Columbia =C2=B7 W=
+ashington, D.C. 20004</span></td>
+<td style=3D"width: 95px; padding-top: 10px;" align=3D"right" valign=3D"top=
+" width=3D"95"><a href=3D"https://links-2.govdelivery.com/CL0/https:%2F%2Fs=
+ubscriberhelp.granicus.com%2F/1/0101019d4506fa64-0037a9b9-6d6a-40e2-9db0-85=
+08fabe8551-000000/FvxfRmzxK-l8jv6CqCtBaSvR1DYVTJnV0n3XuasKPBA=3D450" target=
+=3D"_blank" rel=3D"noopener"><img src=3D"https://content.govdelivery.com/im=
+ages/govd-logo-dark.png" border=3D"0" alt=3D"GovDelivery logo" width=3D"95"=
+ height=3D"27" align=3D"right"></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<style type=3D"text/css">body .abe-column-block { min-height: 5px; } table.=
+gd_combo_table img {margin-left:10px; margin-right:10px;} table.gd_combo_ta=
+ble div.govd_image_display img, table.gd_combo_table td.gd_combo_image_cell=
+ img {margin-left:0px; margin-right:0px;} table.govd_hr {min-width: 100%;} =
+p, li, h1, h2, h3 { overflow-wrap: normal; word-wrap: normal; word-break: k=
+eep-all; -moz-hyphens: none; -ms-hyphens: none; -webkit-hyphens: none; hyph=
+ens: none; mso-hyphenate: none; }</style>
+
+</div>
+
+<img alt=3D"" src=3D"https://links-2.govdelivery.com/CI0/0101019d4506fa64-0=
+037a9b9-6d6a-40e2-9db0-8508fabe8551-000000/wBQfsedwDqXuVu_cQFK2gWtGBGX4ZYhH=
+-sckLihiztc=3D450" style=3D"display: none; width: 1px; height: 1px;">
+</body>
+</html>
+
+--===============9005717176234396579==--
+
+--===============1023772194813220619==--

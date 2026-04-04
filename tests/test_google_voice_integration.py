@@ -790,6 +790,42 @@ def test_run_consumer_google_voice_takeout_wrapper_resume_from_manifest(tmp_path
 
 
 @pytest.mark.communications_smoke
+def test_run_consumer_google_voice_takeout_wrapper_no_display_falls_back_cleanly(tmp_path: Path) -> None:
+    repo_root = Path("/home/barberb/HACC")
+    downloads_dir = tmp_path / "downloads"
+    downloads_dir.mkdir()
+    manifest_path = downloads_dir / "acquisition.json"
+
+    result = subprocess.run(
+        [
+            str(repo_root / "run-consumer-google-voice-takeout.sh"),
+            "--product-id",
+            "voice",
+            "--downloads-dir",
+            str(downloads_dir),
+            "--acquisition-manifest",
+            str(manifest_path),
+            "--skip-index",
+        ],
+        cwd=repo_root,
+        capture_output=True,
+        text=True,
+        timeout=120,
+        check=False,
+        env={
+            **os.environ,
+            "DISPLAY": "",
+        },
+    )
+
+    assert result.returncode == 0, result.stderr or result.stdout
+    assert "paused safely" in result.stdout
+    payload = json.loads(manifest_path.read_text(encoding="utf-8"))
+    assert payload["status"] == "manual_browser_required"
+    assert payload["capture"]["browser_capture"]["status"] == "manual_browser_required"
+
+
+@pytest.mark.communications_smoke
 def test_watch_consumer_google_voice_takeout_wrapper_advances_to_complete(tmp_path: Path) -> None:
     repo_root = Path("/home/barberb/HACC")
     manifest_path = tmp_path / "takeout_acquisition_manifest.json"
@@ -863,6 +899,43 @@ def test_watch_consumer_google_voice_takeout_wrapper_advances_to_complete(tmp_pa
     assert "Takeout acquisition completed" in result.stdout
     payload = json.loads(manifest_path.read_text(encoding="utf-8"))
     assert payload["status"] == "hydrated"
+
+
+@pytest.mark.communications_smoke
+def test_watch_consumer_google_voice_takeout_wrapper_stops_cleanly_for_manual_browser_required(tmp_path: Path) -> None:
+    repo_root = Path("/home/barberb/HACC")
+    manifest_path = tmp_path / "takeout_acquisition_manifest.json"
+    manifest_path.write_text(
+        json.dumps(
+            {
+                "status": "manual_browser_required",
+                "downloads_dir": str(tmp_path / "downloads"),
+                "events": [{"type": "manual_browser_required", "timestamp": "2026-04-04T12:00:00Z"}],
+            },
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+
+    result = subprocess.run(
+        [
+            str(repo_root / "watch-consumer-google-voice-takeout.sh"),
+            "--manifest",
+            str(manifest_path),
+            "--interval-seconds",
+            "0",
+            "--max-iterations",
+            "2",
+        ],
+        cwd=repo_root,
+        capture_output=True,
+        text=True,
+        timeout=120,
+        check=False,
+    )
+
+    assert result.returncode == 0, result.stderr or result.stdout
+    assert "requires a desktop browser session" in result.stdout
 
 
 @pytest.mark.communications_smoke

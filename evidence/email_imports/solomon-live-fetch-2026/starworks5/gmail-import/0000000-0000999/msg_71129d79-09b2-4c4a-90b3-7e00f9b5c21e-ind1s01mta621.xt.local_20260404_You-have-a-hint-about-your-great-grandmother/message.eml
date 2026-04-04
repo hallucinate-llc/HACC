@@ -1,0 +1,1313 @@
+Delivered-To: starworks5@gmail.com
+Received: by 2002:a05:7208:248:b0:fa:5ef1:c6ed with SMTP id j8csp214577rbj;
+        Sat, 4 Apr 2026 04:13:34 -0700 (PDT)
+X-Received: by 2002:a05:6871:e023:b0:40f:812:d1d with SMTP id 586e51a60fabf-4230fcb1c13mr3280640fac.8.1775301214515;
+        Sat, 04 Apr 2026 04:13:34 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1775301214; cv=none;
+        d=google.com; s=arc-20240605;
+        b=M477e+yKG+Jm/ao0f/JMSliD6ARQCgpQEyBVmAb8j4py5jaiGpKlHcsZP+AbOuM7X7
+         f/ApV01zrF/62VzrmXaN4Jppq382qMDBJv77V3K+ZzBIwwkeamAsDO+quI30F4Y2Ecze
+         j5kfUTay6erzH9V5hB0dWsPiyBFa4QzScMqRirXgkWwQ0Bg+L8ufSzdX5nReoDrIDQWM
+         cVc0o8KhhmNsRunaVHM7Tio0/6ovzbKqQ3iRz0XS2t3VVZnLg73h21s75omTPbNwMU0H
+         wq9EkYYaIqcij1sBO2P2MSvJ2UH3/Cm335QiUemvvLrD2sowjiAaQOa7wF38HDhg+DsQ
+         pIbA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:reply-to:mime-version:list-unsubscribe-post
+         :list-unsubscribe:date:subject:to:from:dkim-signature:dkim-signature;
+        bh=8NAdGPnS6Y/YlliKSzvHCYLOpT6KCFDf5Y5olYxpZZ0=;
+        fh=2cWgZxr3ZTQFvuwFmykEv+kjBencnAUTD29jO6/FMx4=;
+        b=RbRk1Gx9358J/Wc8dk7IG6gTmEOjj+16Vo1/QJonOG6wJzYIkOC+guNNe0J6W2FCXh
+         fqXwDLtBm6OjFef3N608B4gZeus1e9XpRcSGnzruMENqqs4OdWBjdPFBQ0AGzOloWCs8
+         41PNEfWTBdCGsjGV2IMv/ijkqMYM5/5eDqF6ikXy48HhbvDu3o7tEuaRf/myRwLQm7Wr
+         VhSE8YxPaeKeNhxFeMFSTR54K548rS6bfML6GIuhSTqtGcuO0FST19zc0yHDIzoVf+eA
+         zk3GA3/anAPUx+6f7qqvqcsgUS9WCcb45Ky6WC3Qi1E1b6mE2eVi9d7L0QMDGwCdw1vo
+         19LQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@email.ancestry.com header.s=200608 header.b=el7jPoB+;
+       dkim=pass header.i=@s1.y.mc.salesforce.com header.s=fbldkim1 header.b=Ay0h0Y3p;
+       spf=pass (google.com: domain of bounce-lvufsit37pwevfw2zzc2zncgay.10190@bounce.email.ancestry.com designates 13.111.33.35 as permitted sender) smtp.mailfrom=bounce-LVUFSIT37PWEVFW2ZZC2ZNCGAY.10190@bounce.email.ancestry.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=email.ancestry.com
+Return-Path: <bounce-LVUFSIT37PWEVFW2ZZC2ZNCGAY.10190@bounce.email.ancestry.com>
+Received: from mta9.email.ancestry.com (mta9.email.ancestry.com. [13.111.33.35])
+        by mx.google.com with ESMTPS id 586e51a60fabf-422eb26339bsi7072880fac.114.2026.04.04.04.13.34
+        for <starworks5@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 04 Apr 2026 04:13:34 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-lvufsit37pwevfw2zzc2zncgay.10190@bounce.email.ancestry.com designates 13.111.33.35 as permitted sender) client-ip=13.111.33.35;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@email.ancestry.com header.s=200608 header.b=el7jPoB+;
+       dkim=pass header.i=@s1.y.mc.salesforce.com header.s=fbldkim1 header.b=Ay0h0Y3p;
+       spf=pass (google.com: domain of bounce-lvufsit37pwevfw2zzc2zncgay.10190@bounce.email.ancestry.com designates 13.111.33.35 as permitted sender) smtp.mailfrom=bounce-LVUFSIT37PWEVFW2ZZC2ZNCGAY.10190@bounce.email.ancestry.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=email.ancestry.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=200608; d=email.ancestry.com;
+ h=From:To:Subject:Date:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:
+ Reply-To:Message-ID:Content-Type; i=ancestry@email.ancestry.com;
+ bh=8NAdGPnS6Y/YlliKSzvHCYLOpT6KCFDf5Y5olYxpZZ0=;
+ b=el7jPoB+UQHtMUfAIOIpCvHdg5y13ulZRmgpyIMSsrqrpCcZMzjIfy94oqA1g2b6XPAgTo3qOGxr
+   itZksrJg1c01kiZKL9YwliFJwQjNexk0G5PbC8TeBloFzdUJHwZq3vGRfreAXWaHiCfMaqdlfeBv
+   1hC1OULKsqOgVquwqwY=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=fbldkim1; d=s1.y.mc.salesforce.com;
+ h=From:To:Subject:Date:List-Unsubscribe:MIME-Version:Reply-To:Message-ID:
+ Content-Type;
+ bh=8NAdGPnS6Y/YlliKSzvHCYLOpT6KCFDf5Y5olYxpZZ0=;
+ b=Ay0h0Y3pyolWB9JO6Uon0wsvQXcwc8qA+Y9jRwsnxouhuXUhO8cbs9Am8KOoIwZ0x52bYhM3oDka
+   ooAa+Lc5qPWO+/G3OWHKv0Qz1GQInaFTn+K3TQwkqmHp5STH88p0IdRVSvy1zv/8XwpiBoUBY3f8
+   rFfvThCVwOExL/7Ps5iCYWAP/A1/ZkqSpTUGyWSf60X/uOj7w6Co3H/9j71lxyUttFSBOyLoau8Y
+   mtKiXulUDfzXD7VKMRqVdrgtgcSQEdPyapmifwKtlFOXTHzGcTWCMQZjwdnD9zG39rsLB9Yi+LS5
+   cHOBmi0BN4d07qzBhyAxp+RHeDuCTWWsZ31seg==
+Received: by mta9.email.ancestry.com id hq3p5s2fmd4q for <starworks5@gmail.com>; Sat, 4 Apr 2026 11:13:33 +0000 (envelope-from <bounce-LVUFSIT37PWEVFW2ZZC2ZNCGAY.10190@bounce.email.ancestry.com>)
+From: "Ancestry" <ancestry@email.ancestry.com>
+To: <starworks5@gmail.com>
+Subject: You have a hint about your great-grandmother
+Date: Sat, 04 Apr 2026 05:13:32 -0600
+List-Unsubscribe: <https://click.email.ancestry.com/subscription_center.aspx?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtaWQiOiIxMDk1ODQ3OCIsInMiOiIxMzQ3NTgzMjEiLCJsaWQiOiIxMSIsImoiOiIyMjU0NTgiLCJqYiI6IjE1ODI1IiwiZCI6IjEwMTkwIn0.BbUrxahCLBlqRWk4UXvpzGTNX9CPC725RBiu1dq0gys>, <mailto:leave-ZBZISTVC4XAUPDESND3XMIKFBQ.10190@leave.email.ancestry.com>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+MIME-Version: 1.0
+Reply-To: "Ancestry" <reply-NYRE7HCDW74UZEIADDSK26RI6M.10190@email.ancestry.com>
+X-SFMC-Stack: 1
+x-job: 10958478_225458
+Message-ID: <71129d79-09b2-4c4a-90b3-7e00f9b5c21e@ind1s01mta621.xt.local>
+Feedback-ID: 10958478:225458:13.111.33.35:sfmktgcld
+Content-Type: multipart/alternative;
+	boundary="rRnjYfok54Fy=_?:"
+
+This is a multi-part message in MIME format.
+
+--rRnjYfok54Fy=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Make new discoveries with hints. 
+  &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;
+ &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj; &zwnj;
+   
+
+
+
+
+
+
+
+
+
+
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjkzMTkwMDY3LTUwZjgtNDU3Ni1iMjIzLWY3YjIwNzI2YjE5NCIsImRla1ZlcnNpb24iOjEsIml2IjoicmE0cEU1TG5xbGVHWXdONHZMN1h3UT09IiwiY2lwaGVyVGV4dCI6Imh5R1BXbWtxTnAwMXlxaEtjTUg4ZjNmTEtwWFFSQ1RINjlrQTlJSDNoaUFkNDVRR0FGN04vbWxNb0k1ZGd5UGF2ZmtML25aWlgvdEZjbzR2ZmZWNXY3VlJWMnFpRTdKcG1ra2I0NjJ1S1JPUzU2cFhobU1EZUx5KzE4RT0iLCJhdXRoVGFnIjoiZmZWNXY3VlJWMnFpRTdKcG1ra2I0dz09In0%3D 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+ 
+ 
+
+
+
+
+
+ 
+ 
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjczZTE2YTQ3LTFhZTQtNDU3Yy1iNDZmLTBlYWNhZDg1ZGEyYyIsImRla1ZlcnNpb24iOjEsIml2IjoiTzFQTEtWbDBCRXViRG8xMi9EQk1RUT09IiwiY2lwaGVyVGV4dCI6IlBzTCtyVU1abTQwSWVnV1F4bm9MTXJkSk5lOUI0TnpJTXM0aHB1NG5JbHNGN3NHMWNmQ1FTT0ZRVXRpa05iWHJNOXpOMCt2aFhIaWpvU3V6NDBTWVBjeUhEakRpK0IrRVdNMUNnanRUeXlsWmRBUkxtdzZOZHZ3d1RFRT0iLCJhdXRoVGFnIjoiNDBTWVBjeUhEakRpK0IrRVdNMUNnZz09In0%3D 
+
+ 
+ See what we’ve uncovered about Annie Ripley and others. 
+ 
+
+ 
+ 
+
+
+
+
+
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjBmN2IwOWEzLWYyYWEtNGRmNi05YmE0LTI2ZTYxOGM4N2UyNiIsImRla1ZlcnNpb24iOjEsIml2IjoiSmF3aVMrbmxsREloSGRsUlVNL0dOdz09IiwiY2lwaGVyVGV4dCI6InptSlpTeTZMK05DSHFxM3Bpbk9nWUtwQ2Y2akZTVkpQSUkzQ0Y1cDB6V0xkOWpJeEFZdWFXbHRqNVRZWFpOTUFaY1VKOHhZaGZXcnZKdTU3QVdiWXhCcWNST0hSWTlFRHh0dmRSaVdzSWt2cDVaUXlJUjNaVVZEUHhqYz0iLCJhdXRoVGFnIjoiQVdiWXhCcWNST0hSWTlFRHh0dmRSZz09In0%3D 
+View all hints 
+
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+ 
+ 
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjdkMmE4MmQyLTA4ZWMtNDk4ZC05MjA2LWJmZjI0ZGM2YjAyZSIsImRla1ZlcnNpb24iOjEsIml2IjoiVEFBcDRwVkRyd2lRYmhkcmZZVG1FQT09IiwiY2lwaGVyVGV4dCI6Ik4zRzlKeXpTc29NL1IxaVUxeGZ1TVQzcjJmejVicmJYbWc2UzFLeU5QK2tkcTI1dTU0ekhycTE3dDYwblkwb2t4cDRzYXBoNlYxUHpsNk1aTjR0MXFXV2pFODBlbnF3NGRwUzB4VXdBS2VLVlE2OElrRzRYYTMyRTVoQT0iLCJhdXRoVGFnIjoiTjR0MXFXV2pFODBlbnF3NGRwUzB4UT09In0%3D 
+
+ 
+ This hint could connect you to our latest DNAupdate! 
+ 
+  
+ 
+ 
+
+
+
+
+
+
+
+
+We searched records from our US DNA journeys and found something for your tree.
+
+
+
+
+
+
+
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImI4NDJjOWVhLTZlYTMtNDQ3Yi1hZjg1LTJkOGM5NjBjNDVlNyIsImRla1ZlcnNpb24iOjEsIml2IjoidU80cnBZVjNnOXhuWHNCRDdZMjF4UT09IiwiY2lwaGVyVGV4dCI6InpNWjZ5Um5tZENhMlU2cUhpLzFINTV2ZXRGWkpqYkN4QzF3aEl6dXczZFRVaEplY0RRbFpjSjRGTHRFcWVYWHR2bFdPTU9QSzVQMUtxbmhNN3NmZ05BTDcveXlOT1dUVHN6TnY3Ymp1SzZXRmQ0UGNaMTdBUSsyTnRjVT0iLCJhdXRoVGFnIjoiN3NmZ05BTDcveXlOT1dUVHN6TnY3UT09In0%3D 
+View hints 
+
+
+
+
+ 
+
+
+
+ 
+
+
+ 
+ 
+ 
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImFkYThkYmM3LTgzNWMtNDFlMi1hZTFlLWY3OTYxZmYzYjQzNSIsImRla1ZlcnNpb24iOjEsIml2IjoiSGxvc1ppZ2ZIODk1R1BBazRjWlpQZz09IiwiY2lwaGVyVGV4dCI6IjZvampaY3lwMDJIUFJlMkhJMHhoWEJJOVpYY2pKUTJsWnZwQWQ1NVpiRlVHd3pCa2ZzMm1FYzBkdUhITURJNmdzeXh0KzU3VDFpbFFPVXNLOTErbXJHd0FsQ1hpT3ZsZ0tuSEI1eDVhTEdZb0h4L1BlUmp3Sk9IR1dUND0iLCJhdXRoVGFnIjoiOTErbXJHd0FsQ1hpT3ZsZ0tuSEI1dz09In0%3D 
+
+ 
+ This hint could connect you to our latest DNAupdate! 
+ 
+
+ 
+ 
+
+ 
+
+
+
+
+
+
+
+ We searched records from our US DNA journeys and found something for your tree.
+
+
+
+
+
+
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjdmYTlkMTUzLTY4ZDYtNGYwYy04NGU0LWExMDk5N2E1NDk3OCIsImRla1ZlcnNpb24iOjEsIml2IjoiWlc3bnRYRnJLNkJMSmI3dGVzbWxVUT09IiwiY2lwaGVyVGV4dCI6InZoSkR5UE9xMUFad0k2bmdFN0kxckJBcEM4V1YrYlUwdEpJZlIvUEsrU3E1VTAyclVhQkJsa1VpSVpGOCtFMkNxUDNFWGdEanEvRjJWeERkQjdGaktHY0lkVDZueWUva1QyMVUxMlZ1NTdWeGF5dWdTeVcrN1hySnBWRT0iLCJhdXRoVGFnIjoiQjdGaktHY0lkVDZueWUva1QyMVUxdz09In0%3D 
+View hints 
+
+ 
+
+ 
+ 
+ 
+
+
+ 
+
+ 
+ 
+
+
+
+
+
+ 
+ 
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjM3OTA5MjZkLTg2M2EtNDJiMS04OTNmLWFmMzBmMmZiZjI5YSIsImRla1ZlcnNpb24iOjEsIml2IjoiQ2o4UDFPTm1lMjBrYW9JWllub2YvZz09IiwiY2lwaGVyVGV4dCI6IjROcHU2Y2tIcVZ2ZHF5cTRiNmxmenMzNUQ1NzhsajFZYjdnT28reHBYTit3UWdFRVI5YURSeWZSRU9YSXVJbytnZWx6WGh1VUkvakgrU2R2ZlIyWkI1ZDBYQnNnL0hYd3lNblp3Z28vRDlUalpudHRKR3FDR1dKNkgvND0iLCJhdXRoVGFnIjoiZlIyWkI1ZDBYQnNnL0hYd3lNblp3Zz09In0%3D 
+
+ 
+  
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+Here are your most intriguinghints about your directrelatives:
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+ https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjNkMjc1YjRlLTY5Y2MtNDhlNC1hOGJiLTIwNDc1OGZkZjU2YSIsImRla1ZlcnNpb24iOjEsIml2IjoiSUx1M1FDdXRCSVlMWjRjU281Vy91dz09IiwiY2lwaGVyVGV4dCI6IlRBWjRJTzFTMklMdWdWdm9YMFloaWxkN0lmejJFcG03aVBoNzVMZW1ELzFKLytWeHdqdXRjdkJ4aEpiRDNuUnhUbjlST0VHZDRRTkplZlVxNldmRFBkN205KythUS94dWp2emdraUM3dDBBcnJRU0dDMmVIRXFPVnY3cz0iLCJhdXRoVGFnIjoiNldmRFBkN205KythUS94dWp2emdrZz09In0%3D 
+Annie Ripley 
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImYyMDBjOGFhLTUxZGMtNGZmNy05ZTVmLTFiYTU1NDUxZWQzNiIsImRla1ZlcnNpb24iOjEsIml2IjoiV0JVMDYzWnlVeTZkOUVNMCttQXNKdz09IiwiY2lwaGVyVGV4dCI6ImVyL3dET2ZZTDIzMmZ1WU1IZytjSVV5TXRRK1VSYnNhTVQ0MmhRVmdDQzFGbzdkVkVxRG44MWRuTDAycjBQV0lkRjJndHFjdXozSG40bkRSNUV2WEZ1aVR6WUdyQU90blZUY2ErMWdWTk90MmNsTXVuZlJETlBwZ0xDYz0iLCJhdXRoVGFnIjoiNUV2WEZ1aVR6WUdyQU90blZUY2Erdz09In0%3D 
+Great-grandmother 
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjBiODM1OTMwLTM4MzItNDJmNi1iN2JhLTczMWM4YmEzOGFlMyIsImRla1ZlcnNpb24iOjEsIml2IjoiaXFieGNTRCtJdGU0RmpGWmJta3NzQT09IiwiY2lwaGVyVGV4dCI6IndmSmNEeGhPalpzVVBJV0JIY3pRNWdKblpjYnIzWnNGdjJPVWRVek9CQW1zQjZuL2h6K2RJaGI4VitteUZkY0IxeUpaaWJiTXpKMml3V2VobkNIL3pjT2ttU1dKNWdNR3JNb0t1b3FtOFhFZy9pTFh1Qll4V1c1cExMQT0iLCJhdXRoVGFnIjoibkNIL3pjT2ttU1dKNWdNR3JNb0t1Zz09In0%3D 
+Member Photo 
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjU5Nzg0ZWFjLTg2NDYtNDkyOS1iNTQ2LWZlZTU0NDY3NzAyZiIsImRla1ZlcnNpb24iOjEsIml2Ijoid1FoN3RaYXdoa3IxNjNpTmlNTFBzdz09IiwiY2lwaGVyVGV4dCI6IjhYVllSSnRkS1lnSWcyNzRLR2JHQnp3SC96SGROdTkwYndRSFFSaDFFYW5NSUVybDBGaXFKR1pJckVFMnZENGpjc0kxTnVTbThpMjY5SVRyU2xMSS9ZZ0gvcEZWT1FJZkdMU3hWTUVJZTdXV3NJWks5ZXQ0allqQ3o3TT0iLCJhdXRoVGFnIjoiU2xMSS9ZZ0gvcEZWT1FJZkdMU3hWQT09In0%3D 
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjQzMGRmYjRhLTI3MmMtNGM5MC04NzM4LTJmNGRkZDMxNTQ2NCIsImRla1ZlcnNpb24iOjEsIml2IjoiakxKOXBiY1dGRUM4M1IwamNJSXVHZz09IiwiY2lwaGVyVGV4dCI6InRibGVtekY5SlJzTUg2YmZXaTBXSnpUYzBlZEVMSmlWN01ib3pGdGh0QU9GckV2YTAySnA2L3cwSUF3RFNBa2R3TmR6M1dJTlhpbEViSkZPQUprQmpFai9naTBmUVBESC9WZkR6NHl5ZmFXM0ZoUkF2TjBkSTNDQ0xobz0iLCJhdXRoVGFnIjoiQUprQmpFai9naTBmUVBESC9WZkR6dz09In0%3D 
+View photo hint
+ 
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImY2ZmI5Y2I3LTQ5ZjctNDliYi1hMjhmLTMxYzI0NjlkM2QxMyIsImRla1ZlcnNpb24iOjEsIml2IjoiTDJHb0ZqZmFydUFhQktjNmhOb0UyQT09IiwiY2lwaGVyVGV4dCI6InFTSmZuMURsR0RjTFFMZkxsRXY2ME91K3Z6Zkx1Nm9QUnV2WHJWQ2ordEtvTGhlRkRZUjl6dkl2ZnNyaGxVYnlZbzY0KzJrUU9uL0hWNVIwdFZ5UlM1eUd5YUR4MVg3YXJMN2ZQUzlocUJZMzJxN2dHZ1NuT29UYUJOZz0iLCJhdXRoVGFnIjoidFZ5UlM1eUd5YUR4MVg3YXJMN2ZQUT09In0%3D 
+Annie Ripley 
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImRkOTRhYTE4LWIwY2YtNGFhYi1iNzIzLTBjOGM1OWIwOGJhZCIsImRla1ZlcnNpb24iOjEsIml2IjoiUHViSzdhVFlwRjlqVXZmTjYxQUpPdz09IiwiY2lwaGVyVGV4dCI6IjllZWxSV0k4U0ZUWmJYUW5zRXNsS2I3a3FPY08wUTltSjZPdFdhbG81dkdIR1B1ZkE2aWI2aElQVHZkalVhR1lWRXJkNFprMGhiVjJpbTEzSDZ6TGZSUm9rRCt5QjhJY0wzYWdCVDdteXUyazJLUmZZMUwzemV0UUNUcz0iLCJhdXRoVGFnIjoiSDZ6TGZSUm9rRCt5QjhJY0wzYWdCUT09In0%3D 
+Great-grandmother 
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjUzOTU3NmI2LTEzODMtNDFjZi1hYTQxLTg5ODFiMDdlYzQ1ZiIsImRla1ZlcnNpb24iOjEsIml2IjoiNWVRTThPM2paSlBTMmsvcDAxQVF5Zz09IiwiY2lwaGVyVGV4dCI6InlvWEMrU3U4VGxaRkVWem1jQ282TmdzNVByM25QSWtFTWtZSTJESHh2YUxTNTl0b0E1bHRRSERMZUVCK0pqc0xxaDhteHZIS1VQMnNqTHRaNlMvYTViN2ozVTI3bklFSGgyaEZaZVhrRFBEdDQyU1QwdHBQNmROUUVNbz0iLCJhdXRoVGFnIjoiNlMvYTViN2ozVTI3bklFSGgyaEZaUT09In0%3D 
+Oregon, U.S., County Births and Deaths, 1855-1949 
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjczZGU3ZDQwLWNkMTMtNDg2MC04MmNlLThiZGM2NmVlNzI0YiIsImRla1ZlcnNpb24iOjEsIml2IjoiS1lQRklnQXVaQUdaYXF1bk1ick1jQT09IiwiY2lwaGVyVGV4dCI6IjZmZHNDeTVqQWJ1OWFaVkhUWWl3ZGt6L0VRRzlVd0NhT1cydVZRNUdOTW0zZWpnS0pxbmgySmhmdklWcG9qd1EvMWQrTjlRdHhBb1RnanFDV3BEeGpNcHZaN01iYUtzM0k5YzBSU21EeFNJQUxtUUJtV3FycHpHNnpIQT0iLCJhdXRoVGFnIjoiV3BEeGpNcHZaN01iYUtzM0k5YzBSUT09In0%3D 
+See your hinthttps://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjUyZDE5ZTg0LTk1MTAtNGM2Yi04ZDc2LTMzZDc3NGRlMGFlOCIsImRla1ZlcnNpb24iOjEsIml2IjoiK2xhTjBLb2grQVN1VkowZUpDSUQrUT09IiwiY2lwaGVyVGV4dCI6IjI3V3VtNDN0WXBWMGhvUURiaVl1UGUvT3g5WDFLMEphTU80VG5KQ2cwYWZLRTdpN3ZLOW9mYXc2c1JBYnA4d3d4bnZvZHppalVXb3BhNXhONUNmUW9DcWVKMUlsTGhTSzBORVU4dnBXamRDcUlmZ0VybFNkSGlRaUEvaz0iLCJhdXRoVGFnIjoiNUNmUW9DcWVKMUlsTGhTSzBORVU4Zz09In0%3D 
+Hugh barber 
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjAxZWViMzVlLTFlM2EtNGY0Yy1iNzA1LTNlM2MyMzY5ZjA0MCIsImRla1ZlcnNpb24iOjEsIml2IjoiTVhZeC9iM3RTSzhjcXFXQ29HVWYyUT09IiwiY2lwaGVyVGV4dCI6IkNhVUxtY0JidC9iUEJzaWg2SEQ0cmxBRGQ0dzVuTHB2RndVZWRsVGo4MGhqb2RaY0ozdDJtZUh0YXEvc3pJMlJ6ZG1vbFJWeFBUY0VzVE0rVWZ5Rm4yR1U5eFpJYkExeElwNjlhVEYyTWYyOTdVaXZIS3FsZ3FCbEg5az0iLCJhdXRoVGFnIjoiVWZ5Rm4yR1U5eFpJYkExeElwNjlhUT09In0%3D 
+Great-grandfather 
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImY3NTVlMjgzLTBiM2MtNGY4ZC1iOGIyLTI4MmNkYzZlOWIwNSIsImRla1ZlcnNpb24iOjEsIml2IjoicGR1K2E1UGcwamVEL1RPckxPdVc4QT09IiwiY2lwaGVyVGV4dCI6IlpMa0tEOGdGaTMxbXpsK0pTL2J4ZmxlOWwrYVF4VThLUVlodU01Nm4wSExVSnVtbDBDbXJ5R0FzTUJqVVpWYUNCNUxnU1dMUWxhS0NZbmVhckxNUnpuMjF2MkorcmNkWXRhQWFhS1hidm11VDROSTNnLzB6cXl6cmx2QT0iLCJhdXRoVGFnIjoickxNUnpuMjF2MkorcmNkWXRhQWFhQT09In0%3D 
+Oregon, U.S., County Births and Deaths, 1855-1949 
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjM1YzdjNDEzLTRmNjgtNDVjNi04MGNiLTFmZDJjZTkzNmNlYSIsImRla1ZlcnNpb24iOjEsIml2Ijoid3hkVUQ3MW5ocXJXVm9CMWF1d0lDQT09IiwiY2lwaGVyVGV4dCI6Im9MUTFhVkVVZGVXUHFlbHJsTjJYQ0NmK1U1cUhFbnhzdy81UzdVZjBGRmtLeTJubFlpQjVsaEd5R0NyNVNYek5MVUFsa3NCNnBIR2pYZTBuQU1WdU5xYnVPaGZURzdKU0dIMXNjTU1YVkErOVo0YXExbGFBZFdyc0NBZz0iLCJhdXRoVGFnIjoiQU1WdU5xYnVPaGZURzdKU0dIMXNjQT09In0%3D 
+See your hint
+
+
+
+ 
+  
+
+ 
+ 
+ 
+ 
+
+ https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjNkMjc1YjRlLTY5Y2MtNDhlNC1hOGJiLTIwNDc1OGZkZjU2YSIsImRla1ZlcnNpb24iOjEsIml2IjoiSUx1M1FDdXRCSVlMWjRjU281Vy91dz09IiwiY2lwaGVyVGV4dCI6IlRBWjRJTzFTMklMdWdWdm9YMFloaWxkN0lmejJFcG03aVBoNzVMZW1ELzFKLytWeHdqdXRjdkJ4aEpiRDNuUnhUbjlST0VHZDRRTkplZlVxNldmRFBkN205KythUS94dWp2emdraUM3dDBBcnJRU0dDMmVIRXFPVnY3cz0iLCJhdXRoVGFnIjoiNldmRFBkN205KythUS94dWp2emdrZz09In0%3D 
+Annie Ripley 
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImYyMDBjOGFhLTUxZGMtNGZmNy05ZTVmLTFiYTU1NDUxZWQzNiIsImRla1ZlcnNpb24iOjEsIml2IjoiV0JVMDYzWnlVeTZkOUVNMCttQXNKdz09IiwiY2lwaGVyVGV4dCI6ImVyL3dET2ZZTDIzMmZ1WU1IZytjSVV5TXRRK1VSYnNhTVQ0MmhRVmdDQzFGbzdkVkVxRG44MWRuTDAycjBQV0lkRjJndHFjdXozSG40bkRSNUV2WEZ1aVR6WUdyQU90blZUY2ErMWdWTk90MmNsTXVuZlJETlBwZ0xDYz0iLCJhdXRoVGFnIjoiNUV2WEZ1aVR6WUdyQU90blZUY2Erdz09In0%3D 
+Great-grandmother 
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjBiODM1OTMwLTM4MzItNDJmNi1iN2JhLTczMWM4YmEzOGFlMyIsImRla1ZlcnNpb24iOjEsIml2IjoiaXFieGNTRCtJdGU0RmpGWmJta3NzQT09IiwiY2lwaGVyVGV4dCI6IndmSmNEeGhPalpzVVBJV0JIY3pRNWdKblpjYnIzWnNGdjJPVWRVek9CQW1zQjZuL2h6K2RJaGI4VitteUZkY0IxeUpaaWJiTXpKMml3V2VobkNIL3pjT2ttU1dKNWdNR3JNb0t1b3FtOFhFZy9pTFh1Qll4V1c1cExMQT0iLCJhdXRoVGFnIjoibkNIL3pjT2ttU1dKNWdNR3JNb0t1Zz09In0%3D 
+Member Photo 
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjU5Nzg0ZWFjLTg2NDYtNDkyOS1iNTQ2LWZlZTU0NDY3NzAyZiIsImRla1ZlcnNpb24iOjEsIml2Ijoid1FoN3RaYXdoa3IxNjNpTmlNTFBzdz09IiwiY2lwaGVyVGV4dCI6IjhYVllSSnRkS1lnSWcyNzRLR2JHQnp3SC96SGROdTkwYndRSFFSaDFFYW5NSUVybDBGaXFKR1pJckVFMnZENGpjc0kxTnVTbThpMjY5SVRyU2xMSS9ZZ0gvcEZWT1FJZkdMU3hWTUVJZTdXV3NJWks5ZXQ0allqQ3o3TT0iLCJhdXRoVGFnIjoiU2xMSS9ZZ0gvcEZWT1FJZkdMU3hWQT09In0%3D 
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjQzMGRmYjRhLTI3MmMtNGM5MC04NzM4LTJmNGRkZDMxNTQ2NCIsImRla1ZlcnNpb24iOjEsIml2IjoiakxKOXBiY1dGRUM4M1IwamNJSXVHZz09IiwiY2lwaGVyVGV4dCI6InRibGVtekY5SlJzTUg2YmZXaTBXSnpUYzBlZEVMSmlWN01ib3pGdGh0QU9GckV2YTAySnA2L3cwSUF3RFNBa2R3TmR6M1dJTlhpbEViSkZPQUprQmpFai9naTBmUVBESC9WZkR6NHl5ZmFXM0ZoUkF2TjBkSTNDQ0xobz0iLCJhdXRoVGFnIjoiQUprQmpFai9naTBmUVBESC9WZkR6dz09In0%3D 
+View photo hint 
+ 
+
+ 
+ https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImY2ZmI5Y2I3LTQ5ZjctNDliYi1hMjhmLTMxYzI0NjlkM2QxMyIsImRla1ZlcnNpb24iOjEsIml2IjoiTDJHb0ZqZmFydUFhQktjNmhOb0UyQT09IiwiY2lwaGVyVGV4dCI6InFTSmZuMURsR0RjTFFMZkxsRXY2ME91K3Z6Zkx1Nm9QUnV2WHJWQ2ordEtvTGhlRkRZUjl6dkl2ZnNyaGxVYnlZbzY0KzJrUU9uL0hWNVIwdFZ5UlM1eUd5YUR4MVg3YXJMN2ZQUzlocUJZMzJxN2dHZ1NuT29UYUJOZz0iLCJhdXRoVGFnIjoidFZ5UlM1eUd5YUR4MVg3YXJMN2ZQUT09In0%3D 
+Annie Ripley 
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImRkOTRhYTE4LWIwY2YtNGFhYi1iNzIzLTBjOGM1OWIwOGJhZCIsImRla1ZlcnNpb24iOjEsIml2IjoiUHViSzdhVFlwRjlqVXZmTjYxQUpPdz09IiwiY2lwaGVyVGV4dCI6IjllZWxSV0k4U0ZUWmJYUW5zRXNsS2I3a3FPY08wUTltSjZPdFdhbG81dkdIR1B1ZkE2aWI2aElQVHZkalVhR1lWRXJkNFprMGhiVjJpbTEzSDZ6TGZSUm9rRCt5QjhJY0wzYWdCVDdteXUyazJLUmZZMUwzemV0UUNUcz0iLCJhdXRoVGFnIjoiSDZ6TGZSUm9rRCt5QjhJY0wzYWdCUT09In0%3D 
+Great-grandmother 
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjUzOTU3NmI2LTEzODMtNDFjZi1hYTQxLTg5ODFiMDdlYzQ1ZiIsImRla1ZlcnNpb24iOjEsIml2IjoiNWVRTThPM2paSlBTMmsvcDAxQVF5Zz09IiwiY2lwaGVyVGV4dCI6InlvWEMrU3U4VGxaRkVWem1jQ282TmdzNVByM25QSWtFTWtZSTJESHh2YUxTNTl0b0E1bHRRSERMZUVCK0pqc0xxaDhteHZIS1VQMnNqTHRaNlMvYTViN2ozVTI3bklFSGgyaEZaZVhrRFBEdDQyU1QwdHBQNmROUUVNbz0iLCJhdXRoVGFnIjoiNlMvYTViN2ozVTI3bklFSGgyaEZaUT09In0%3D 
+Oregon, U.S., County Births and Deaths, 1855-1949 
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjczZGU3ZDQwLWNkMTMtNDg2MC04MmNlLThiZGM2NmVlNzI0YiIsImRla1ZlcnNpb24iOjEsIml2IjoiS1lQRklnQXVaQUdaYXF1bk1ick1jQT09IiwiY2lwaGVyVGV4dCI6IjZmZHNDeTVqQWJ1OWFaVkhUWWl3ZGt6L0VRRzlVd0NhT1cydVZRNUdOTW0zZWpnS0pxbmgySmhmdklWcG9qd1EvMWQrTjlRdHhBb1RnanFDV3BEeGpNcHZaN01iYUtzM0k5YzBSU21EeFNJQUxtUUJtV3FycHpHNnpIQT0iLCJhdXRoVGFnIjoiV3BEeGpNcHZaN01iYUtzM0k5YzBSUT09In0%3D 
+See your hint 
+ 
+
+ 
+ https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjUyZDE5ZTg0LTk1MTAtNGM2Yi04ZDc2LTMzZDc3NGRlMGFlOCIsImRla1ZlcnNpb24iOjEsIml2IjoiK2xhTjBLb2grQVN1VkowZUpDSUQrUT09IiwiY2lwaGVyVGV4dCI6IjI3V3VtNDN0WXBWMGhvUURiaVl1UGUvT3g5WDFLMEphTU80VG5KQ2cwYWZLRTdpN3ZLOW9mYXc2c1JBYnA4d3d4bnZvZHppalVXb3BhNXhONUNmUW9DcWVKMUlsTGhTSzBORVU4dnBXamRDcUlmZ0VybFNkSGlRaUEvaz0iLCJhdXRoVGFnIjoiNUNmUW9DcWVKMUlsTGhTSzBORVU4Zz09In0%3D 
+Hugh barber 
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjAxZWViMzVlLTFlM2EtNGY0Yy1iNzA1LTNlM2MyMzY5ZjA0MCIsImRla1ZlcnNpb24iOjEsIml2IjoiTVhZeC9iM3RTSzhjcXFXQ29HVWYyUT09IiwiY2lwaGVyVGV4dCI6IkNhVUxtY0JidC9iUEJzaWg2SEQ0cmxBRGQ0dzVuTHB2RndVZWRsVGo4MGhqb2RaY0ozdDJtZUh0YXEvc3pJMlJ6ZG1vbFJWeFBUY0VzVE0rVWZ5Rm4yR1U5eFpJYkExeElwNjlhVEYyTWYyOTdVaXZIS3FsZ3FCbEg5az0iLCJhdXRoVGFnIjoiVWZ5Rm4yR1U5eFpJYkExeElwNjlhUT09In0%3D 
+Great-grandfather 
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImY3NTVlMjgzLTBiM2MtNGY4ZC1iOGIyLTI4MmNkYzZlOWIwNSIsImRla1ZlcnNpb24iOjEsIml2IjoicGR1K2E1UGcwamVEL1RPckxPdVc4QT09IiwiY2lwaGVyVGV4dCI6IlpMa0tEOGdGaTMxbXpsK0pTL2J4ZmxlOWwrYVF4VThLUVlodU01Nm4wSExVSnVtbDBDbXJ5R0FzTUJqVVpWYUNCNUxnU1dMUWxhS0NZbmVhckxNUnpuMjF2MkorcmNkWXRhQWFhS1hidm11VDROSTNnLzB6cXl6cmx2QT0iLCJhdXRoVGFnIjoickxNUnpuMjF2MkorcmNkWXRhQWFhQT09In0%3D 
+Oregon, U.S., County Births and Deaths, 1855-1949 
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjM1YzdjNDEzLTRmNjgtNDVjNi04MGNiLTFmZDJjZTkzNmNlYSIsImRla1ZlcnNpb24iOjEsIml2Ijoid3hkVUQ3MW5ocXJXVm9CMWF1d0lDQT09IiwiY2lwaGVyVGV4dCI6Im9MUTFhVkVVZGVXUHFlbHJsTjJYQ0NmK1U1cUhFbnhzdy81UzdVZjBGRmtLeTJubFlpQjVsaEd5R0NyNVNYek5MVUFsa3NCNnBIR2pYZTBuQU1WdU5xYnVPaGZURzdKU0dIMXNjTU1YVkErOVo0YXExbGFBZFdyc0NBZz0iLCJhdXRoVGFnIjoiQU1WdU5xYnVPaGZURzdKU0dIMXNjQT09In0%3D 
+See your hint 
+ 
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+ 
+ 
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjQ3NGZjM2ExLWI5MWUtNDI3Ni1hMDVhLTJlYThjNzFhYWZhNCIsImRla1ZlcnNpb24iOjEsIml2IjoiSGNBMXVxU3JGcmp2Q3hsRU9IcWk0QT09IiwiY2lwaGVyVGV4dCI6InlLV1Z1cU9WTmFCZWJjOXBka0VsZ3ZKb2RCYzFWYkFEcjVNaGxwQ3Zuc0NqVVRKbDEvd1Zaczk0dlhsRWtaaFltUHdIcW16T0hTcGRQNm1SejQ1RjgxZWw2RjJJUU5HZmZaK2c0aDNBTmJxa3F4YTQ3d3NaUkRoNm91QT0iLCJhdXRoVGFnIjoiejQ1RjgxZWw2RjJJUU5HZmZaK2c0Zz09In0%3D 
+
+ 
+ How do hints help you discovermore? 
+ 
+  
+ 
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+Every time you add a name, date, or location to your tree, we search our massive collection for records that may match. When we find a match, you get ahint. 
+
+
+
+
+Each hint could be a record, a photo, or a story that can contain interesting new details you haven’t yet unearthed. These details make up the intricate tapestry of yourstory.
+
+
+
+
+
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjRhNTM4OTI5LWJmOTktNGExYS05ZTNlLWJmODU4NTg5OWYxYyIsImRla1ZlcnNpb24iOjEsIml2IjoiZCtOSWJBOERXS1poTEtnNnUyTFpOQT09IiwiY2lwaGVyVGV4dCI6ImgvaG15NExsanc3ZHhLY1dCNVBiYlNPV043MjE3U1Y4RURzcFdzRGRUTlBZNDRSM3pxTnFRTnl2aWgyeWljakxTK21JMUxsSkNkTXVzTzYxbytRTHV0L3FUSjQybGcxc1F4UlpFbmZqU0d3UEExaW1ZU3lvT3J0aTJUUT0iLCJhdXRoVGFnIjoibytRTHV0L3FUSjQybGcxc1F4UlpFZz09In0%3D 
+Discover more about how hintswork 
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+ 
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjEyODZlZDNmLTViNmEtNGQzZC1iMTJkLWY4NTUxYjM5NWU3YSIsImRla1ZlcnNpb24iOjEsIml2IjoidlQxUWczY2NFaDZsUHBPUEpLa0FmUT09IiwiY2lwaGVyVGV4dCI6IjlPNStESFA0YllLdStPYXREelhLcG10MzF3bG9VNW1Cd3ptZEY0MVFTeTRxWnpuUnp3ZGVLVHVwSCtpUXFwcXl2M1BjMTZjSjRPUTdvS1huTTBhMmROa1NQSGFEdHZZVXpuQzRGNzA5VUlOM0hCSWVwVDZUanlTcEFIMD0iLCJhdXRoVGFnIjoiTTBhMmROa1NQSGFEdHZZVXpuQzRGdz09In0%3D 
+
+ 
+ Renew your Ancestry membership to access your hints. 
+ 
+  
+ 
+ 
+
+ 
+
+
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjNkNzVmNTcxLTUyNzgtNDdjMi04YTMzLTkzZTVkYmMxZDJkMCIsImRla1ZlcnNpb24iOjEsIml2IjoiRmsvNVdaeEhWdkU1R0hValBYY2lPQT09IiwiY2lwaGVyVGV4dCI6IkdrdE9BOWgyTW0vVWN2MDFicC9oc05WVUo1VFo0NFY3MlQ4NEtXYjRBeXVKNkNMdzFJMk54cWRzMzNhK2VISXNHMXhsMUd1L2IrMUY5Q01ZYXVmcWtxa2NEYWk2QTJteVdvUllKQlpQK1ZtY1IxYnhPUmgxSXoxM0lqZz0iLCJhdXRoVGFnIjoiYXVmcWtxa2NEYWk2QTJteVdvUllKQT09In0%3D 
+Become a member again 
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjVjNWM2OThkLWFlZGQtNDc3YS1hZDk5LThlODNhMDA3YThkZSIsImRla1ZlcnNpb24iOjEsIml2IjoiOUNEOFpqcFRYTUkwbUNqMGxoeC9DZz09IiwiY2lwaGVyVGV4dCI6InNVdmdsenphdENCekVWdktpV0UzeVMxaldJeUZ2NENVNGFwOTVycjQ5SFlLejRTdnFwb2JQMW5VNGo4b2hJSGJ2OFVlSG9tM0NZSTNmT0JDWFRzK3Z1MkRGdU9xenF6RUovVUs2L1FnL0dZNlUxekNOSmdvOUpZY2Z3bz0iLCJhdXRoVGFnIjoiWFRzK3Z1MkRGdU9xenF6RUovVUs2dz09In0%3D 
+
+ 
+ 
+ 
+ 
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6Ijg4OWY1YjRiLWU0ZjUtNDI3MC1hNWIxLWVmMTYyNDJiMWU5NCIsImRla1ZlcnNpb24iOjEsIml2IjoieXVVK2ZiYXp4OGh6cmJncEErL0dPdz09IiwiY2lwaGVyVGV4dCI6IlBtQ210ZlNpM2FpTXltM091QmZkSzN6Q2N5NVcwMGNJZFNxUkdzWU40NlJSSUh3dFd0WW94TUdYUjE0ZjEvcEpjNlZORXN0KzhFTFppSGE3WGE0YlJacGdFL3Z1MFBJV2UyUUk2Y3JsUG4yMnM4ZkljNjI0S1FQdnhqcz0iLCJhdXRoVGFnIjoiWGE0YlJacGdFL3Z1MFBJV2UyUUk2UT09In0%3D 
+
+ 
+ 
+ 
+ 
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImZkNjc4ZDhmLTYzYzktNDRiOS1iZGQ5LTNiMTE4MDYyZjA1YiIsImRla1ZlcnNpb24iOjEsIml2IjoiODZNMnR1S2djRnFscEJiUHk0aXB2QT09IiwiY2lwaGVyVGV4dCI6IjArSUhOdEVka0E3Z0tNY05CNk4xT0VWaTNWK2RrUkdHMFI0bVlheGxHQkpPU2JZakl5SGVPZExlTzIwNExJNnJjSmZCYWRZdGdwenFYT3Z0c20vOGJJTi8rTUlxd2YzMUsvZnY4dk9qTnJiaW9IQmFwYVFXejh1SXFidz0iLCJhdXRoVGFnIjoic20vOGJJTi8rTUlxd2YzMUsvZnY4Zz09In0%3D 
+
+ 
+ 
+ 
+ 
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6Ijc2MWU4MjA2LTE0YjEtNDlkOS04NjBhLTI2Mzg2YmEwYjY1YSIsImRla1ZlcnNpb24iOjEsIml2IjoiYnllM2xLS3hiSkdCNUxzQ2dmREVQQT09IiwiY2lwaGVyVGV4dCI6IkpPb0VrRHN4a29DdmRWTlM5VndYaVlBUzMyQ05USkoxUjBvV2pJYTMzWnhSQ1gxdDdwUlJOOTczcG5mZ0t3cGg5TEFjekVoRXMxTVoxUFBYR2VSUm9OY1JOaEtxbWFlVVVjRlIzMjhudDVTaXNXeVJnZVM3QW9Id3hEdz0iLCJhdXRoVGFnIjoiR2VSUm9OY1JOaEtxbWFlVVVjRlIzdz09In0%3D 
+
+ 
+ 
+ 
+
+
+
+
+ 
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjI4YjBmMjhlLTBkNzAtNDlmYi1iMTZhLWMwNzQ5MGM0ZmNjYiIsImRla1ZlcnNpb24iOjEsIml2IjoiQkhFUndleWlHaVA4U3BLUWx1dVVFUT09IiwiY2lwaGVyVGV4dCI6IjdPbWVyK09Ta1ZmUDZXTnJLZTArQ0N3UWhwM1dINzBqekszT3BXNm9ka282eWJDQnVNQWh0cDFrVmtyMkgwdTNFeTdCWHJIOEIvLzZMM3FmamNlMEJEblQzOE9PRUFGaklOYU9zUVJ4RWNIc29ob2ovRXFTa0picmxCRT0iLCJhdXRoVGFnIjoiamNlMEJEblQzOE9PRUFGaklOYU9zUT09In0%3D 
+SupportCenter  
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjkwNTU4MzAzLTMyODgtNDZmYi1iZmZmLTUyODBjMjAzNjUyMiIsImRla1ZlcnNpb24iOjEsIml2IjoiL01zMDdKOHJXRHF2RWZ1QVpyeUl5QT09IiwiY2lwaGVyVGV4dCI6Im5XeWNxc3laWnNrOEZTTlYrR09CNlV4ekt4VGQ4VlJkRFJNQTYzQU83VFliU1JOWWcwRUovYnNRUEFGTTN2V1c0a1pBVGlLUU1NTnJHYkJnSExlY0VaNVNLVjVKUlRjNWZHMFhPdnpMTk95ZksxZzZyeEg3Z0dhOGlNZz0iLCJhdXRoVGFnIjoiSExlY0VaNVNLVjVKUlRjNWZHMFhPZz09In0%3D 
+GettheApp  
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImZkNzRiOGQ4LWZmZGItNDBmYi05YzA1LWVhOTA3YmNlZGNmYiIsImRla1ZlcnNpb24iOjEsIml2IjoiYUkrSGJDaEM0NU8zSWRzeEJwUHVwZz09IiwiY2lwaGVyVGV4dCI6IlA1K0RjUUJXN3gvZVVhbzZHMEdaTnh2YU53V3hMSWtyRFJmaVlIblZ0dFFROE5VYnJqREppbE9Fa21nNmtqS3owN24yS0NwZVFIWVkvZ2g5ak1HNEcwcFkrdkhaVEN2S2JMQ1dMR2lQaDJ3b1F1T1R0eUhiTVFhVDdxWT0iLCJhdXRoVGFnIjoiak1HNEcwcFkrdkhaVEN2S2JMQ1dMQT09In0%3D 
+Viewthisemailonline 
+
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImQ3MjYxNWZmLWQyYjgtNDRjMS05MjczLTVlYjQ1OWJlNmE0MCIsImRla1ZlcnNpb24iOjEsIml2IjoiWXVlRGpENFE0UXg4VU5iQ3hQRlF0UT09IiwiY2lwaGVyVGV4dCI6InVJRlc4b0ErNUtxZ1Z2K0x6Uzd3TVNZUzhLRXFmamdHT2lYaGNsVnk5UGY1d2Z4c0FqZFV1alltSHZPQnQvdXVaYm0zNStmbldEWldtMk5qR1RBaHRDb2I0Nno1dTZhL2FQUjY3MkxuZzR3K0VPRU1mRkRXd3NUeFVMVT0iLCJhdXRoVGFnIjoiR1RBaHRDb2I0Nno1dTZhL2FQUjY3dz09In0%3D 
+EmailPreferences  
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjcxZmU0YzAwLWFhMjYtNGRiOS05MGY0LTk4MDIyZTBkYmEzOCIsImRla1ZlcnNpb24iOjEsIml2IjoidEZqdTBWOGx2bVc4dUNmdHEvam5tdz09IiwiY2lwaGVyVGV4dCI6ImR4K29ZWkFWU1BrS2pRWk5VYnFPQlFSQ29sZ2s4RUhSME93RVVRdDFIRElXWU9URER5Z0lCTzVzekJUOHl6c3dSc0ZhSGRRR0F5WVhmdStoK2k1MHBVY1o3YzBidGFxa0FpNU1mN1JZN3RGZkpiNWx2TGduN2F2NDU1cz0iLCJhdXRoVGFnIjoiK2k1MHBVY1o3YzBidGFxa0FpNU1mdz09In0%3D 
+PrivacyStatement   
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjMyYmI0ZTE3LTBjMDYtNGMxNC04NzFiLTM4NTAwZmQ0Mzg5NCIsImRla1ZlcnNpb24iOjEsIml2IjoicWw2RFZpS29Fazk1WW1iUWNlMUUyUT09IiwiY2lwaGVyVGV4dCI6IkJZUHM1cmdWZVRMV0xTc0U4Y0QrV05aa2p2QXEvSmN4MGNBd2Zjc2pvMW5lWVpwTlBJYlpRU2xpT2JUZEMxNU44TEdaenVtdFVTMmI1MU5mR0kzUVBjQXVRR1FsYjN3WlB2UHhqS3BlZzFZaXFCSlBlV0ptMEhIdFJOaz0iLCJhdXRoVGFnIjoiR0kzUVBjQXVRR1FsYjN3WlB2UHhqQT09In0%3D 
+TermsandConditions  
+https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjVkNzc0MzY3LTE0MDctNGIyNS1hNGEwLTZmMWRkYjNlMTljMyIsImRla1ZlcnNpb24iOjEsIml2IjoiNFRaWDV5bmVISGU2bGdzZmM4bHh1UT09IiwiY2lwaGVyVGV4dCI6Ijc0Q2pYVU1IbStER2taRlcycVoyelV5ejBlL0hrWWNtV2JicHZhTkVQQjlUUXpUUGU1dndmQ2ZpQzZ4eU04amUrb0Y2SVArQUVCdkp0a0dYaEZuZGo4RCs4TEtWL21PR0NWNERhdUUyVitjcDNoeDN1cFlMSDNQSmNiaz0iLCJhdXRoVGFnIjoiaEZuZGo4RCs4TEtWL21PR0NWNERhZz09In0%3D 
+Unsubscribe 
+(c)2026
+ 
+ANCESTRY 
+ 
+Ancestry.com Operations, L.P. 1300W.TraverseParkway,Lehi,UT84043,USA
+
+
+
+
+--rRnjYfok54Fy=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+<img src="https://click.email.ancestry.com/open.aspx?HZ6I32LGKFOU7MLK54RJPS5IXI.10190&d=10190&bmt=0" width="1" height="1" alt="">
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"></td></tr></table>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 9]><xml>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+  <o:PixelsPerInch>96</o:PixelsPerInch>
+ </o:OfficeDocumentSettings>
+</xml><![endif]--><!--[if !mso]><!-->
+<style type="text/css">
+    @font-face {
+    font-family: "SangBleu";
+    font-style: normal;
+    src: local("SangBleu Republic-Medium"),url(https://www.ancestrycdn.com/ui-static/redwood/fonts/sang-bleu-republic-medium-web-s.woff2) format("woff2")
+ }
+ 
+ @font-face {
+    font-family: "SangBleu";
+    font-weight: 700;
+    font-style: bold;
+    src: local("SangBleu Republic-Bold"),url(https://www.ancestrycdn.com/ui-static/redwood/fonts/sang-bleu-republic-bold-web-s.woff2) format("woff2")
+ }
+ 
+     @font-face {
+    font-family: "Gelica";
+    font-style: normal;
+    src: url(https://www.ancestrycdn.com/dna/static/petdna/fonts/gelica-regular-webfont.woff2) format("woff2")
+ }
+ 
+ @font-face {
+    font-family: "Gelica";
+    font-weight: 700;
+    font-style: bold;
+    src: url(https://www.ancestrycdn.com/dna/static/petdna/fonts/gelica-bold-webfont.woff2) format("woff2")
+ }
+ <!--<![endif]-->
+</style>
+
+<style>
+td, span { -webkit-text-size-adjust:none; }
+sup { font-size:75%; -mso-font-size:100% !important; line-height:0; vertical-align:super; }
+a { text-decoration:none; }
+.ExternalClass { width:100%; }
+.applelink a, .applelinks a, .applelink, .applelinks, a[x-apple-data-detectors] { color: inherit !important; cursor:text !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important; text-decoration: none !important; }
+.mobshow, .mobicon { display:none !important; }
+.toolong { word-wrap: break-word; word-break: break-all; }
+
+@media only screen and (max-width: 480px) {
+.fullwidth { width:100% !important; }
+.mobhide { display:none !important; }
+.show480 { display:inherit !important; font-size:inherit !important; height:auto !important; line-height:1.5 !important; max-height:none !important; visibility:visible !important; width:auto !important; }
+.show480block { display:block !important; font-size:inherit !important; height:auto !important; line-height:1.5 !important; max-height:none !important; visibility:visible !important; width:auto !important; }
+.mobshow { display:block !important; font-size:12px !important; height:auto !important; line-height:1.5 !important; max-height:none !important; visibility:visible !important; width:100% !important; }
+.mobshowtable { display:table !important; font-size:12px !important; height:auto !important; line-height:1.5 !important; max-height:none !important; visibility:visible !important; width:100% !important; }
+.mobicon { display:inline-block !important; font-size:12px !important; height:auto !important; line-height:1.5 !important; max-height:none !important; vertical-align:middle !important; visibility:visible !important; }
+.gfix { min-width:0 !important; }
+.mobcenter { margin:0 auto; text-align:center !important; }
+.notoppadding { padding-top:0 !important; }
+.mobpadding { padding:0 30px 15px 30px !important; }
+.nopadding { padding:0 !important; }
+.toolong { word-wrap: break-word !important; word-break: break-all !important; }
+.override1 { display:table-cell !important; font-size:18px !important; height:40px !important; line-height:17px !important; max-height:none !important; padding-bottom:5px !important; width:40px !important; visibility:visible !important; }
+}
+</style>
+
+  </head>
+<body bgcolor="#f5f5f5" spellcheck="false" style="background-color:#f5f5f5; background-position:left top; background-repeat:repeat; padding:0px; margin:0px;">
+<table align="center" bgcolor="#f5f5f5" cellspacing="0" cellpadding="0" border="0" style="background-color:#f5f5f5; table-layout:fixed;" width="100%">
+  <!--<tr>
+    <td style="font-size:1px; line-height:1px;"><img src="https://pixel.app.returnpath.net/pixel.gif?r=6ad4f5782ae445df07bd3663dd45c9a1b7d6eeae" width="1" height="1" /></td>
+  </tr>-->
+  <tr>
+    <td class="gfix" valign="top" style="font-family:Helvetica, Arial, sans-serif; min-width:600px;">
+      <table class="fullwidth" cellspacing="0" cellpadding="0" border="0" align="center" width="600">
+        <tr>
+          <td valign="top" style="background-color:#ffffff; color:#443f39; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:normal; line-height:24px;">
+
+
+
+
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+
+
+
+
+
+
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+
+<div style="display:none; max-height:0px; overflow:hidden; mso-hide:all;">
+   Make new discoveries with hints. 
+ &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+</div>
+
+<table bgcolor="#f8f7f3" cellspacing="0" cellpadding="0" border="0" style="background-color:#f8f7f3;" width="100%">
+  <tr>
+    <td width="30" style="border-bottom:1px solid #9cbe30; font-size:1px; line-height:1px;">&nbsp;</td>
+    <td style="border-bottom:1px solid #9cbe30; font-size:1px; line-height:1px;">&nbsp;</td>
+    <td width="30" style="border-bottom:1px solid #9cbe30; font-size:1px; line-height:1px;">&nbsp;</td>
+  </tr>
+</table></td></tr></table>
+
+
+
+
+
+
+
+<table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+  <tr>
+    <td valign="top"><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImI2Mzc1MjU0LTZmNjgtNGNmNS1iNWUwLTgxZWE3ZDczYWYxZSIsImRla1ZlcnNpb24iOjEsIml2IjoiVDFuYjlndHV6dlRMb3Jhei92WUhmdz09IiwiY2lwaGVyVGV4dCI6InFxelVPVzlXYTRPYUZmd09TYXU3OVA5V2FWaFgxUjdON284UU5la0tFM01xejFXMndaMDV2ZTgveXQ4VEtRZHpMM1V2RHRCVkREbTJjWXVzNnBaYzVmMlBuNDVxMzIwdmlZbmRXVTlaMi9ZTGJzNzB5Nksycy83MkIzOD0iLCJhdXRoVGFnIjoiNnBaYzVmMlBuNDVxMzIwdmlZbmRXUT09In0%3D"><img alt="Ancestry" border="0" hspace="0" src="https://www.ancestrycdn.com/email/_shared/logo/ancestry2x.png" vspace="0" style="vertical-align:top;" width="200"></a></td>
+  </tr>
+</table>
+</td></tr></table>
+
+
+
+
+
+
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+
+
+</td></tr></table>
+
+
+
+
+
+<table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table align="center" class="" cellspacing="0" cellpadding="0" border="0" style="background-color:inherit; margin:0 auto;" width="100%">
+  <tr>
+    <td style="font-size:1px; line-height:1px; text-align:center; padding-top:0px; padding-bottom:0px;">
+ 
+      <img alt="" border="0" class="" hspace="0" src="https://www.ancestrycdn.com/email/_triggered/hints/2025/hint_leaf_icon.png" vspace="0" style="color:#443f39; vertical-align:top;" width="7%">
+ 
+    </td>
+  </tr>
+</table></td></tr></table>
+
+
+<table class="fullwidth noclass" style="margin:0 auto;" width="80%" cellspacing="0" cellpadding="0" border="0" align="center">
+  <tr>
+    <td style="border-top:none; border-bottom:none; padding-top:15px; padding-bottom:15px; width:30px;"></td>
+    <td class="" style="border-top:none; border-bottom:none; color:#443f39; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:26px; font-weight:bold; line-height:34px; text-align:center; padding-top:15px; padding-bottom:15px;">
+ 
+      <a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImEwYTRkMTQ3LTc4YjUtNGJlMy1iYTk0LTgwODM4OGZlMjNlOSIsImRla1ZlcnNpb24iOjEsIml2IjoiSWJ4VFMraFh3MGd0S25OVnZxSUg1QT09IiwiY2lwaGVyVGV4dCI6IjZ6YUo4YnNJdkFNL211TkxiWmk5ZTZuQUZKd3lXU2NoSkhvcHBaQUtUMTBaVnc0akFGK3l6ZmlRREVjNUxSendoMWdKaDhadXNpbmp5NmRlVTB6bkNsamlodFExQkQ5cW93Y2FNaUc4VTB2b1Y4TklMU3B6VmI2aUIrUT0iLCJhdXRoVGFnIjoiVTB6bkNsamlodFExQkQ5cW93Y2FNZz09In0%3D" style="color:#443f39; text-decoration:none;">
+ 
+      See what we’ve uncovered about Annie Ripley and others. 
+ 
+      </a>
+ 
+    </td>
+    <td style="border-top:none; border-bottom:none; padding-top:15px; padding-bottom:15px; width:30px;"></td>
+</tr></table>
+
+
+
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table class="" align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+  <tr>
+    <td align="center" bgcolor="#ffffff" style="-moz-border-radius:26px; -webkit-border-radius:26px; border-radius:26px; vertical-align:middle;" valign="middle">
+      <a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjY1Y2IxMGZiLTAxZjItNDYwYS04YjEwLTJjNGQzZDQ1YWRkZSIsImRla1ZlcnNpb24iOjEsIml2IjoiKzZ3eEVvSVFJbisvOG5RaDloZWQwQT09IiwiY2lwaGVyVGV4dCI6IkJUUHhVd3daOEx6RkpqdWRiMTdIcG9ReTUxRkJyKzd3NlJqeDU1Y2kxY2xtZDhlT3F6djlURmt5dkVOallzTTUrZXg1c1k5MUdKUnJUMHU3a1Z3aEFzYjUwVGRiRnVHZnFISWtRL3VzTVJLQ0VDSi92L0owSWZZWG5kQT0iLCJhdXRoVGFnIjoia1Z3aEFzYjUwVGRiRnVHZnFISWtRdz09In0%3D" style="padding:16px 30px; display: block; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:18px; font-weight:bold; text-align:center; text-decoration:none; color:#328800; background:#ffffff; border: 1px solid #328800; -moz-border-radius: 26px; -webkit-border-radius: 26px; border-radius: 26px; line-height:17px; vertical-align:middle;" valign="middle">View all hints</a>
+    </td>
+  </tr>
+</table></td></tr></table>
+<div data-marker="wrapper" style="" class="stylingblock-content-wrapper"><table cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td style="background-color:inherit; font-size:25px; line-height:25px;">&nbsp;</td></tr></table></div>
+
+
+
+
+
+<table align="center" cellspacing="0" cellpadding="0" border="0" style="background-color:#ECE9E4;" width="100%"><tr><td style="background-color:#ECE9E4; padding-top:0px; padding-bottom:0px;">
+
+
+<div data-marker="wrapper" style="" class="stylingblock-content-wrapper"><table cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td style="background-color:inherit; font-size:15px; line-height:15px;">&nbsp;</td></tr></table></div>
+
+
+
+
+
+<table class="fullwidth" align="center" cellspacing="0" cellpadding="0" border="0" style="margin:0 auto; width:600px;"><tr><td style="width:0px;"></td><td>
+ <table align="left" class="fullwidth " cellspacing="0" cellpadding="0" border="0" style="float: left; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:275px; "><tr><td valign="top" class="" style="padding-bottom:0px; padding-top:0px; text-align:center;">
+
+
+
+
+<table align="center" class="fullwidth mobhide" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin:0 auto;"><tr><td style="border-top:none; border-bottom:none; color:#000000; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:16px; font-weight:normal; line-height:24px; text-align:left; padding-top:0px; padding-bottom:20px; width:30px;"></td><td class="mobcenter" style="border-top:none; border-bottom:none; color:#000000; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:16px; font-weight:normal; line-height:24px; text-align:left; padding-top:0px; padding-bottom:20px;"> 
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table align="center" class="fullwidth mobhide" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin:0 auto;">
+  <tr>
+    <td style="border-top:none; border-bottom:none; padding-top:20px; padding-bottom:5px; width:0px;"></td>
+    <td class="mobcenter" style="border-top:none; border-bottom:none; color:#000000; font-family:Sangbleu,helvetica,arial,sans-serif; font-size:23px; font-weight:bold; line-height:29px; text-align:left; padding-top:20px; padding-bottom:5px;">
+ 
+      <a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImJkM2E3ZTk2LWQ0ZTctNGRmOC05M2MyLTU2NDUyYmMyYmJkNyIsImRla1ZlcnNpb24iOjEsIml2IjoidHYzb1hERy9vdVBZZ2pCVmxZd05Edz09IiwiY2lwaGVyVGV4dCI6IktjVlQvQ1lHTiszWGk4YmhyVVoya3d1bTNDZFovcWRzbThEWkp4eTNlbFpMTHpOWExSajRkYStzVkxJbXZuNWkyblFGOVNTSmtqb25xeHJ2aEYxU2pGOGduNWZxTnFnU2JOejh5YmI5NkZ3eHY2TGoySUl3VlpXTURROD0iLCJhdXRoVGFnIjoiaEYxU2pGOGduNWZxTnFnU2JOejh5UT09In0%3D" style="color:#000000; text-decoration:none;">
+ 
+      This hint could connect you to our latest DNA&#160;update! 
+ 
+      </a>
+ 
+    </td>
+    <td style="border-top:none; border-bottom:none; padding-top:20px; padding-bottom:5px; width:0px;"></td>
+  
+</tr></table></td></tr></table>
+</td><td style="border-top:none; border-bottom:none; color:#000000; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:16px; font-weight:normal; line-height:24px; text-align:left; padding-top:0px; padding-bottom:20px; width:0px;"></td></tr></table>
+
+
+
+
+<table align="center" class="fullwidth mobhide" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin:0 auto;"><tr><td style="border-top:none; border-bottom:none; color:#000000; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:16px; font-weight:normal; line-height:24px; text-align:left; padding-top:0px; padding-bottom:20px; width:30px;"></td><td class="mobcenter" style="border-top:none; border-bottom:none; color:#000000; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:16px; font-weight:normal; line-height:24px; text-align:left; padding-top:0px; padding-bottom:20px;">
+We searched records from our <strong>US&nbsp;DNA&nbsp;journeys</strong> and found something for your&nbsp;tree.
+</td><td style="border-top:none; border-bottom:none; color:#000000; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:16px; font-weight:normal; line-height:24px; text-align:left; padding-top:0px; padding-bottom:20px; width:0px;"></td></tr></table>
+
+
+
+
+<table align="center" class="fullwidth mobhide" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin:0 auto;"><tr><td style="border-top:none; border-bottom:none; color:#000000; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:16px; font-weight:normal; line-height:24px; text-align:left; padding-top:0px; padding-bottom:20px; width:30px;"></td><td class="mobcenter" style="border-top:none; border-bottom:none; color:#000000; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:16px; font-weight:normal; line-height:24px; text-align:left; padding-top:0px; padding-bottom:20px;">
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table class="" align="left" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+  <tr>
+    <td align="left" bgcolor="#328800" style="-moz-border-radius:26px; -webkit-border-radius:26px; border-radius:26px; vertical-align:middle;" valign="middle">
+      <a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImM3ZWRkOTI2LWY1NzQtNGFhYS1iYTIyLWM5YTUxYjNjOTI5MCIsImRla1ZlcnNpb24iOjEsIml2IjoiQVlibC9JMGR2cFNhNEc1WEpxMFd1Zz09IiwiY2lwaGVyVGV4dCI6InBJY2VLNHdqa1BraU02MUk1bWRDR2lESnJlQ2JIaUdrTkZjUEd1cnpMbUxId1JmbWxWWTZlYXpqeEYrd2M3Zjl3NnFGc0RVQ0NBVGVrQndNa0NxKy9EcEJnMW9LM2NEeWtJTVNyd0dHNWZ5TkhiNlVtdUJ1VnlhdEZybz0iLCJhdXRoVGFnIjoia0NxKy9EcEJnMW9LM2NEeWtJTVNydz09In0%3D" style="padding:16px 35px; display: block; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; text-align:center; text-decoration:none; color:#ffffff; background:#328800; border: 1px solid #328800; -moz-border-radius: 26px; -webkit-border-radius: 26px; border-radius: 26px; line-height:17px; vertical-align:middle;" valign="middle">View hints</a>
+    </td>
+  </tr>
+</table></td></tr></table>
+</td><td style="border-top:none; border-bottom:none; color:#000000; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:16px; font-weight:normal; line-height:24px; text-align:left; padding-top:0px; padding-bottom:20px; width:0px;"></td></tr></table>
+
+ <!-- Mobile code -->
+  <!--[if lte mso 9]><!-->
+
+
+
+ 
+<table align="center" class="fullwidth mobshow" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin:0 auto;"><tr><td style="border-top:none; border-bottom:none; color:#000000; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:16px; font-weight:normal; line-height:24px; text-align:left; padding-top:0px; padding-bottom:20px; width:30px;"></td><td class="mobcenter" style="border-top:none; border-bottom:none; color:#000000; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:16px; font-weight:normal; line-height:24px; text-align:left; padding-top:0px; padding-bottom:20px;">
+
+  <table class="mobshow" cellspacing="0" cellpadding="0" border="0" style="display:none; font-size:1px; max-height:0; line-height:1px; mso-hide:all; visibility:hidden; width:0;">
+  <tr>
+    <td style="mso-hide:all; border-top:0px; border-bottom:0px; padding-top:0px; padding-bottom:0px; width:0px;font-size: 1px; line-height: 1px;"></td>
+    <td class="mobcenter" style="border-top:none; border-bottom:none; color:#000000; font-family:Sangbleu,helvetica,arial,sans-serif; font-size:26px; font-weight:bold; line-height:32px; text-align:center; padding-top:25px; padding-bottom:5px;">
+ 
+      <a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjdlZDJjYTQ5LWQ4YjAtNDlkYi05Mjg5LTIwMTM2NTVjMmE2MSIsImRla1ZlcnNpb24iOjEsIml2IjoibitkTGVrNm9YV1dsbXNWVVVJak9xQT09IiwiY2lwaGVyVGV4dCI6InBjZVJHQkhDV1dxTXZjc0s5bmg5QzZkQnJOQ2s2YW1Td0F0TEFiUjJWM1p6WnpqNWs4ai9ZcUcweWJZRjVvT3JaTmdMNUdSWjRCY1gyY3I1UThPc0VJdmF3K0NVdTc4b0h4UGlQSi9uUzNwT3FGMWxwWnJGVkZDSXpxZz0iLCJhdXRoVGFnIjoiUThPc0VJdmF3K0NVdTc4b0h4UGlQQT09In0%3D" style="color:#000000; text-decoration:none;">
+ 
+      This hint could connect you to our latest DNA&#160;update! 
+ 
+      </a>
+ 
+    </td>
+    <td style="mso-hide:all; border-top:none; border-bottom:none; padding-top:25px; padding-bottom:5px; width:10px;width:30px;font-size: 1px; line-height: 1px;"></td>
+  
+</tr></table>
+ 
+
+</td><td style="border-top:none; border-bottom:none; color:#000000; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:16px; font-weight:normal; line-height:24px; text-align:left; padding-top:0px; padding-bottom:20px; width:0px;"></td></tr></table>
+
+
+
+
+
+  <span class="mobshow" style="display:none; font-size:0; max-height:0; line-height:0; mso-hide:all; visibility:hidden; width:0;">
+    <table class="mobshow" cellspacing="0" cellpadding="0" border="0" style="display:none; font-size:0; max-height:0; line-height:0; mso-hide:all; visibility:hidden; width:0;">
+  <tr>
+    <td style="border-top:none; border-bottom:none; color:#000000; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:16px; font-weight:normal; line-height:24px; text-align:center; padding-top:0px; padding-bottom:20px; width:10px;"></td>
+    <td class="mobcenter" style="border-top:none; border-bottom:none; color:#000000; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:16px; font-weight:normal; line-height:24px; text-align:center; padding-top:0px; padding-bottom:20px;">We searched records from our <strong>US DNA journeys</strong> and found something for your&nbsp;tree.</td>
+    <td style="border-top:none; border-bottom:none; color:#000000; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:16px; font-weight:normal; line-height:24px; text-align:center; padding-top:0px; padding-bottom:20px; width:10px;"></td>
+  </tr>
+</table>
+
+
+
+
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table class="" align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+  <tr>
+    <td align="center" bgcolor="#328800" style="-moz-border-radius:26px; -webkit-border-radius:26px; border-radius:26px; vertical-align:middle;" valign="middle">
+      <a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImJlYTUzYWViLTA5Y2ItNDA0OC04MGUxLWI1MjA5ZDdkMTAxZSIsImRla1ZlcnNpb24iOjEsIml2IjoiSWVURnF6WTRFc2NEZFZQZE5XR0ZwQT09IiwiY2lwaGVyVGV4dCI6IlRmeVE5dE0rdmRoWHFyYk9ickVxSGZoV1cwQzF1d3FUZGRsU3Z0OFlWdUt4bGFneWVxU0tTT1lYUG9jV2hSbi9ET0dUYkVFdkhBSG5adDYvREFTeUFGUjlycUtUWXcvT1c0Unk1U0hreGFzMk9CTEhBM1ZUM1RWaGhhUT0iLCJhdXRoVGFnIjoiREFTeUFGUjlycUtUWXcvT1c0Unk1UT09In0%3D" style="padding:16px 35px; display: block; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; text-align:center; text-decoration:none; color:#ffffff; background:#328800; border: 1px solid #328800; -moz-border-radius: 26px; -webkit-border-radius: 26px; border-radius: 26px; line-height:17px; vertical-align:middle;" valign="middle">View hints</a>
+    </td>
+  </tr>
+</table></td></tr></table> 
+
+     </span>
+    
+<div data-marker="wrapper" style="" class="stylingblock-content-wrapper"><table cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td style="background-color:inherit; font-size:15px; line-height:15px;">&nbsp;</td></tr></table></div>
+
+  <!--<![endif]-->
+
+ </td><td></tr></table>
+ <table align="right" class="fullwidth" cellspacing="0" cellpadding="0" border="0" style="float: right; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; width:320px;"><tr><td valign="top" style="padding-bottom:0px; padding-top:0px; text-align:left;">
+
+
+
+<table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table cellspacing="0" cellpadding="0" border="0" width="100%">
+  <tr>
+    <td style="font-size:14px; line-height:14px; padding-top:0px; padding-bottom:0px;">
+ 
+      <a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjgzMTllNjU3LTJhNjYtNGYxMi05NzMzLWMwNGZiMjE0Yjc1MSIsImRla1ZlcnNpb24iOjEsIml2IjoiSnZiMklKNzdyZ1gyUjNmWVg4V3hUdz09IiwiY2lwaGVyVGV4dCI6InFiL1B2VkovTC9XWnNUWFM1dVQvYWJqOE0vNVZHM0oyZ1ZxYmtUWVlpMElFNVRPa1lYYVdaMm05L1k4eitVaG4ybk9tVDVmRGlyYWhaQ1pobVAzYmtRRldFYi8ydHE3NkpTaWs4aWIyOWlDZSs2NEY5a2QzMkYvRnNVOD0iLCJhdXRoVGFnIjoibVAzYmtRRldFYi8ydHE3NkpTaWs4Zz09In0%3D">
+ 
+      <img alt="U.S. Story Photo" border="0" class="mobhide" hspace="0" src="https://www.ancestrycdn.com/email/_triggered/hints/2026/ushintsweekly-dnajourneys.png" vspace="0" style="color:#443f39; text-align:center; vertical-align:top;" width="100%" height="auto"><span class="mobshow" style="display:none; font-size:0; max-height:0; line-height:0; mso-hide:all; visibility:hidden; width:0;"><img alt="U.S. Story Photo" border="0" class="mobshow" hspace="0" src="https://www.ancestrycdn.com/email/_triggered/hints/2026/ushintsweekly-dnajourneys.png" vspace="0" style="color:#443f39; display:none; font-size:0; max-height:0; line-height:0; mso-hide:all; text-align:center; visibility:hidden; width:0;"></span>
+ 
+      </a>
+ 
+    </td>
+  </tr>
+</table></td></tr></table>
+
+
+
+</td><td></tr></table>
+</td><td style="width:0px;"></td></tr></table>
+
+
+<div data-marker="wrapper" style="" class="stylingblock-content-wrapper"><table cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td style="background-color:inherit; font-size:15px; line-height:15px;">&nbsp;</td></tr></table></div>
+
+
+
+<table align="center" cellspacing="0" cellpadding="0" border="0" style="background-color:#2d3136;" width="100%"><tr><td style="background-color:#2d3136; padding-top:0px; padding-bottom:0px;">
+
+
+<div data-marker="wrapper" style="" class="stylingblock-content-wrapper"><table cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td style="background-color:inherit; font-size:25px; line-height:25px;">&nbsp;</td></tr></table></div>
+
+
+
+<table align="center" class="fullwidth " cellspacing="0" cellpadding="0" border="0" width="100%" style="margin:0 auto;"><tr><td style="border-top:none; border-bottom:none; color:#ffffff; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:22px; font-weight:normal; line-height:24px; text-align:center; padding-top:0px; padding-bottom:20px; width:10px;"></td><td class="mobcenter" style="border-top:none; border-bottom:none; color:#ffffff; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:22px; font-weight:normal; line-height:24px; text-align:center; padding-top:0px; padding-bottom:20px;">
+Here are your most intriguing&#160;hints about your direct&#160;relatives:
+</td><td style="border-top:none; border-bottom:none; color:#ffffff; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:22px; font-weight:normal; line-height:24px; text-align:center; padding-top:0px; padding-bottom:20px; width:10px;"></td></tr></table>
+
+
+
+
+
+
+
+
+
+<!--Desktop-->
+  <table class="mobhide" width="600" cellspacing="0" cellpadding="0" border="0" bgcolor="#2d3136" align="center">
+  
+
+    <tr>
+      <td width="20">&#160;</td>
+      <td colspan="3" style="background-color:#ffffff; border:1px solid #ffffff; border-radius:5px; -moz-border-radius:5px; padding-top:22px; padding-right:10px; padding-bottom:25px; padding-left:10px;" valign="top">
+        <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+
+
+
+
+<table align="center" cellspacing="0" cellpadding="0" border="0" style="background-color:#ffffff;" width="100%">
+  <tr>
+    <td valign="top" style="color:#181a1c; font-family: Source Sans Pro, Helvetica, Arial, sans-serif; font-size: 22px; font-weight:bold; line-height: 25px; text-align:center;"><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImRiNDM1MDhmLTg5YmUtNDY0YS05MGFmLTkxMmFhMjZhNWIyNyIsImRla1ZlcnNpb24iOjEsIml2IjoiNmEwdDFZcGc0cEY3Q0NpaUJ1dWgvQT09IiwiY2lwaGVyVGV4dCI6ImczMjJma2ZDK1d2TEtTVStKWDF6RHFwTFovczNOUiszYXdrNjg4YnBhcnY3SDJkeEpjK2NpZEFRMkMwOCsrL3VLSUU5MVIreTljRzVnYzJBRDg2ZWJXMVI1TTdRVzc3VFNwdjdIZW10TGRXS1lPS1Jld2dvb2dicm9mdz0iLCJhdXRoVGFnIjoiRDg2ZWJXMVI1TTdRVzc3VFNwdjdIUT09In0%3D" style="color:#181a1c; text-decoration:none;">Annie Ripley</a></td>
+  </tr>
+  <tr>
+    <td valign="top" style="color:#474d54; font-family: Source Sans Pro, Helvetica, Arial, sans-serif; font-size: 16px; font-weight:bold; line-height:21px; padding-bottom:7px; text-align:center;"><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjAzZWY0MzM2LTRmZmYtNDg1My05YWE2LTQzZTZjOTNiZmEzOCIsImRla1ZlcnNpb24iOjEsIml2IjoiaXUxWi9qY2ZoU3hPREtXclNkU0tQQT09IiwiY2lwaGVyVGV4dCI6IjhoWlNhVkF2L2Qyb2lVUWVtOXZhWGRKczVDVktiVUJqZXJxSVZ0YmFOQ0FIc1BaRHVsOUVyVFYzd2xKUTRyaXE2OEdCYWw1RDhvb3pFN3ZPNGxyRTljRVp6c1VSUXBZVlpIcFdoWXJ0V2Y0M0g0VXNUZ3lscTBuVWlqdz0iLCJhdXRoVGFnIjoiNGxyRTljRVp6c1VSUXBZVlpIcFdoUT09In0%3D" style="text-decoration:none; color:#474d54;">Great-grandmother</a></td>
+  </tr>
+  <tr>
+    <td valign="top" style="color:#777777; font-family: Source Sans Pro, Helvetica, Arial, sans-serif; font-size: 18px; font-style: italic; line-height: 29px; text-align:center; padding-bottom:15px;"><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjJjOGE2OTRmLWIxMWUtNGRhYS04NzE0LTA4NTVhZTUwNmI0MyIsImRla1ZlcnNpb24iOjEsIml2IjoiZVJVSW1OYWtVQVpkNTZDN1EwQ0NNZz09IiwiY2lwaGVyVGV4dCI6InE4YnhjalVPRlVncE5KTW9jemZsTk9HaHM4OEMzVnBJTnB0UEthelhYUGxHVzFQRUl0Q0xpNHF3U0ozNUlFNmdPOGxXSWF2WS9HVnk2SDdNSTJKK3BBOWZBYnlVMXlMUktPTlZyWGtWQ0pqV3BGQUdYZWVndTBOQWdqST0iLCJhdXRoVGFnIjoiSTJKK3BBOWZBYnlVMXlMUktPTlZyUT09In0%3D" style="color:#777777; text-decoration:none;">Member Photo</a></td>
+  </tr>
+  <tr>
+    <td valign="top" style="color:#777777; font-family: Source Sans Pro, Helvetica, Arial, sans-serif; font-size: 18px; font-style: italic; line-height: 29px; text-align:center; padding-bottom:15px;"><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjdiODM4Y2QyLTNmMDgtNGZlZC1iYTkxLWI2MzRiMDZjOGViOSIsImRla1ZlcnNpb24iOjEsIml2IjoiNFFoUDNzT3F3TkNNT2UrSnBhK20rdz09IiwiY2lwaGVyVGV4dCI6IkVKMGR1OXUvWWRjakdEWjVieVl5MjRBdGJaVW9IUVhIMzRkenRrajFBZTYvMGhzcm5pL001cjU2Mktac2NYUTlQaXJKc1dLUTFRMWVodE52azRvZXBFTjN2NHBhUTQzdzB1TUIxK0VJVDk3RHFzRFFqRG52aWFXdnB2cz0iLCJhdXRoVGFnIjoiazRvZXBFTjN2NHBhUTQzdzB1TUIxdz09In0%3D"><img alt="" border="0" hspace="0" vspace="0" src="http://mediasvc.ancestry.com/v2/thumbnail/namespaces/1093/media/06011AE0-1F6C-4CFB-9B82-0CEDC9CB814A?client=PersonUI&amp;maxwidth=85&amp;maxheight=85&amp;suppressnotfound=true" style="vertical-align: top;"></a></td>
+  </tr>
+</table>
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+  <tr>
+    <td align="center" bgcolor="#328801" style="-moz-border-radius:26px; -webkit-border-radius:26px; border-radius:26px; vertical-align:middle;" valign="middle">
+<a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjJiNGVjOWVjLTlmMjQtNGYxZC04NDg4LWY3ZmQ1Nzg5YTcxYiIsImRla1ZlcnNpb24iOjEsIml2Ijoia0h4SWpUWVBZK1FNcU11cVozMUZNUT09IiwiY2lwaGVyVGV4dCI6IkREVVBXYnplazZjdU5IbGUwa3J3am9kYmJRSW85bGVnVzR1RGRkbTZpOEcrSHhvaFlRUVpIV3d1bmhJaERkY296c2dIOTZVYUVKdlBJY2hDeTc4NG5pS2dHbEFCbDlmUlVrYkF5SkI4U0kwMkQyUGtES2pMcW1kOVJURT0iLCJhdXRoVGFnIjoieTc4NG5pS2dHbEFCbDlmUlVrYkF5QT09In0%3D" style="padding:16px 30px; display: block; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:18px; font-weight:bold; text-align:center; text-decoration:none; color:#ffffff; background:#328801; border: 1px solid #328801; -moz-border-radius: 26px; -webkit-border-radius: 26px; border-radius: 26px; line-height:17px; vertical-align:middle;" valign="middle">View photo hint</a>
+</td>
+  </tr>
+</table>
+
+
+</td></tr></table>
+      </td>
+      <td width="20">&#160;</td>
+    </tr>
+    <tr><td colspan="5" style="font-size:20px; line-height:20px;">&#160;</td></tr>
+    <tr>
+      <td width="20">&#160;</td>
+      <td style="background-color:#ffffff; border:1px solid #ffffff; border-radius:5px; -moz-border-radius:5px; padding-top:22px; padding-right:10px; padding-bottom:25px; padding-left:10px;" width="260" valign="top"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+
+
+
+
+<table style="background-color:#ffffff;" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+  <tr>
+    <td style="color:#181a1c; font-family: Source Sans Pro, Helvetica, Arial, sans-serif; font-size: 22px; font-weight:bold; line-height: 25px; text-align:center;" valign="top"><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjYwZTlkNTAzLTU1ZDgtNDAwOC04ZjA4LWYzOTA5NDJlODg1YSIsImRla1ZlcnNpb24iOjEsIml2IjoiOTVCbHJXS3ZSTFRNc1g4cGlsbm9Kdz09IiwiY2lwaGVyVGV4dCI6ImpVbEttTW1ZWHNRVjZIUWZYai9TWXVrdld4eFI0eUE4YjNzV1pQRjBweGJiL29VWHpaQ0J3Q2NRbG1QaEttNy8rb2JBN01GZ2NxYmNiS3hIcXJLakR5Q0NDTkNqQWNPc0R3THo4ZmVRWmExaXIwUzB6TEYvS1lwWjZDYz0iLCJhdXRoVGFnIjoicXJLakR5Q0NDTkNqQWNPc0R3THo4UT09In0%3D" style="text-decoration:none; color:#181a1c;">Annie Ripley</a></td>
+  </tr>
+  <tr>
+    <td style="color:#474d54; font-family: Source Sans Pro, Helvetica, Arial, sans-serif; font-size: 16px; font-weight:bold; line-height:21px; padding-bottom:7px; text-align:center;" valign="top"><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImEzNDIyNDgxLWNmNmUtNGM5NC1iMjlhLTFmNTcyZjlkZWM3ZiIsImRla1ZlcnNpb24iOjEsIml2IjoiTVBSSHV4MGJXOU11cStSd3d4VmUwQT09IiwiY2lwaGVyVGV4dCI6ImdCTkNWN0RiWS9jdHA1M2R1Q3llSDdDZFRUb25QaUwxYURWOVdJNDZxeXNhcytUTWdJaXNkVTg3bWZ1NlF2WWpaV0FHcjBFa1pzWjVBYmJZRktGWDVJci9ROE5QMm50cEJBbFRkekQwUjdzZEcxdlRMcXZrY01NVlh0QT0iLCJhdXRoVGFnIjoiRktGWDVJci9ROE5QMm50cEJBbFRkdz09In0%3D" style="text-decoration:none; color:#474d54;">Great-grandmother</a></td>
+  </tr>
+  <tr>
+    <td style="color:#777777; font-family: Source Sans Pro, Helvetica, Arial, sans-serif; font-size: 18px; font-style: italic; line-height: 29px; text-align:center; padding-bottom:15px;" valign="top"><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjBlMjgyMTI0LTlmZGQtNGQ4NS1hZGNjLTAxMDNjNmIyZTJhMiIsImRla1ZlcnNpb24iOjEsIml2IjoibEd4M1duYmNkblp4MzlJSGNybHJyQT09IiwiY2lwaGVyVGV4dCI6IjZLWHJJUGxGUDFOWkxLVjRGaDUzcGFRRldVMnE3S1BLSHkrMkhFaFVwb0ZpRG9GNENEelo3NDBpZUtKSVhsYm00TS9NeU13SXhPT2p4bVZMS21WTzVPUDhSY29VdERzTnlnU29oSlJzZDFwMjNIWjJjZC9TQjNLNWE2dz0iLCJhdXRoVGFnIjoiS21WTzVPUDhSY29VdERzTnlnU29oQT09In0%3D" style="text-decoration:none; color:#777777;">Oregon, U.S., County Births and Deaths, 1855-1949</a></td>
+  </tr>
+</table>
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+<tr>
+<td align="center" bgcolor="#328801" style="-moz-border-radius:26px; -webkit-border-radius:26px; border-radius:26px; vertical-align:middle;" valign="middle">
+<a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImYyMGUzNzk3LTc3M2EtNDlkMC04YTgzLTI4ZWMwYTg3MTRhYyIsImRla1ZlcnNpb24iOjEsIml2IjoiamYvRzNCZm4yc3RXSUFJRG5vZEhZdz09IiwiY2lwaGVyVGV4dCI6IjFlL1dqNUtiNWRsNkd4RHIrbG5KWU9KRmVaeUFHRituT3pubE56UDdSQU80aDl2QVc5WHpoc0xwaVZ1Vzh1NS9iOGpiVFRhSnQ0ZXNOa1VzenVBa3NiZUJzeERHVFlPek5STGtxWTMveHR3WDU5ckxWaUFDQTU2SFIyTT0iLCJhdXRoVGFnIjoienVBa3NiZUJzeERHVFlPek5STGtxUT09In0%3D" style="padding:16px 30px; display: block; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:18px; font-weight:bold; text-align:center; text-decoration:none; color:#ffffff; background:#328801; border: 1px solid #328801; -moz-border-radius: 26px; -webkit-border-radius: 26px; border-radius: 26px; line-height:17px; vertical-align:middle;" valign="middle">See your hint</a>
+</td>
+</tr>
+</table>
+
+
+
+
+</td></tr></table></td>
+      <td width="20">&#160;</td>
+      <td style="background-color:#ffffff; border:1px solid #ffffff; border-radius:5px; -moz-border-radius:5px; padding-top:22px; padding-right:10px; padding-bottom:25px; padding-left:10px;" width="260" valign="top"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+
+
+
+<table align="center" cellspacing="0" cellpadding="0" border="0" style="background-color:#ffffff;" width="100%">
+  <tr>
+    <td valign="top" style="color:#181a1c; font-family: Source Sans Pro, Helvetica, Arial, sans-serif; font-size: 22px; font-weight:bold; line-height: 25px; text-align:center;"><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImU5YzRhYmVjLWY1MDItNDg1Mi1iZTNmLTc5MjE2ZTBiZWVmMiIsImRla1ZlcnNpb24iOjEsIml2IjoiOVVyRHNESEVTRFNobkIvWXZ4K0xJQT09IiwiY2lwaGVyVGV4dCI6InRwcjg5NnFYZ1QvR05oRzNkSzlnVDNQVnpUY1dwbDRBTHJXLzJaT1VHUnpVcEkyb2xUZGJVUUlRYVQ0U3dMTlAwNWRkVXhidisxQmdOKzZUTzk3eHdhclVBUW1kUWVrY0hHRzJUUFZLdzdBeHhFZzBvWndmMkw4Zml5QT0iLCJhdXRoVGFnIjoiTzk3eHdhclVBUW1kUWVrY0hHRzJUQT09In0%3D" style="text-decoration:none; color:#181a1c;">Hugh barber</a></td>
+  </tr>
+  <tr>
+    <td valign="top" style="color:#474d54; font-family: Source Sans Pro, Helvetica, Arial, sans-serif; font-size: 16px; font-weight:bold; line-height:21px; padding-bottom:7px; text-align:center;"><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImRjOWFjZmZiLWVlNDAtNGMwZi04NjRlLTEzNzhhYWYzYWRhMSIsImRla1ZlcnNpb24iOjEsIml2IjoibndOdHVNalJRSllMbnlLcExqL3RSQT09IiwiY2lwaGVyVGV4dCI6InF5d0toazVNbXFUNUdFV3J5T2hHZ1BQWFhnbWE3cjI1R1ZyaGNrQ1kwUEFRZVhwNlp6Z01zc3NEZnE3d0txV0p5WjN6eHpsTWtrc1NNUE1GamVZSlhlaVAyNnMwaVpmbkZtNFJzNThEYmJqSTBVQ1dDNThpcVM0LzdVUT0iLCJhdXRoVGFnIjoiamVZSlhlaVAyNnMwaVpmbkZtNFJzdz09In0%3D" style="text-decoration:none; color:#474d54;">Great-grandfather</a></td>
+  </tr>
+  <tr>
+    <td valign="top" style="color:#777777; font-family: Source Sans Pro, Helvetica, Arial, sans-serif; font-size: 18px; font-style: italic; line-height: 29px; text-align:center; padding-bottom:15px;"><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjNiNWUyZjIxLWNiM2UtNDNiNi1iNGQyLWU3OTJhYzJiMmU4MiIsImRla1ZlcnNpb24iOjEsIml2IjoiUWNWa3VKTVlZc3lBR3puM0FpVS85QT09IiwiY2lwaGVyVGV4dCI6IlV3REVxV0l4UFdtL3JTdzVuU3V0c0FHQzdVRDU2VjREa2VZbFlwd1FveWtHbWFnTmh2QWZxbGFFNkJvZDZMSzhxOEd3NTlWaDZjM1N1RzlueDRaenU4blUxM3UyTlc1dm5vbE10RUhGWkxpVEdHTE1nQnM1OXdJbFAvUT0iLCJhdXRoVGFnIjoieDRaenU4blUxM3UyTlc1dm5vbE10QT09In0%3D" style="text-decoration:none; color:#777777;">Oregon, U.S., County Births and Deaths, 1855-1949</a></td>
+  </tr>
+</table>
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+<tr>
+<td align="center" bgcolor="#328801" style="-moz-border-radius:26px; -webkit-border-radius:26px; border-radius:26px; vertical-align:middle;" valign="middle">
+<a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImE2NzBhM2Y5LTlmNTEtNGRlMy1hNTU5LTRiNWM1NDg5ZTgxZSIsImRla1ZlcnNpb24iOjEsIml2IjoiRm54c05oNkRHb0ZyZktMOU9ycHZOQT09IiwiY2lwaGVyVGV4dCI6IlhXZnV1M1hkNG83bHpMcmhiayttMzZucDhPdXRTemJyZGJFWnpHRkpHSGpTSGdJNkpKaWYxZzdocGluMk5HMDg3c1ZkTHBRbFFwalZPVktsQlVtSHJWRHlwYXdHV1lmdDJkTlREeFo4YkRZZWd4cUJhM3lpL1RxNmJ6UT0iLCJhdXRoVGFnIjoiQlVtSHJWRHlwYXdHV1lmdDJkTlREdz09In0%3D" style="padding:16px 30px; display: block; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:18px; font-weight:bold; text-align:center; text-decoration:none; color:#ffffff; background:#328801; border: 1px solid #328801; -moz-border-radius: 26px; -webkit-border-radius: 26px; border-radius: 26px; line-height:17px; vertical-align:middle;" valign="middle">See your hint</a>
+</td>
+</tr>
+</table>
+
+</td></tr></table></td>
+      <td width="20">&#160;</td>
+    </tr>
+
+
+  </table>
+  <div data-marker="wrapper" style="" class="stylingblock-content-wrapper"><table cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td style="background-color:inherit; font-size:25px; line-height:25px;">&nbsp;</td></tr></table></div>
+  
+  <!--Mobile-->
+  <!--[if lte mso 9]><!-->
+  <span class="mobshow" style="display:none; font-size:0; max-height:0; line-height:0; mso-hide:all; visibility:hidden; width:0;">
+    
+    <table class="mobshowtable" style="display:none; font-size:0; max-height:0; line-height:0; mso-hide:all; visibility:hidden; width:0;" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#2d3136" align="center">
+      
+      
+      <tr>
+        <td width="20">&nbsp;</td>
+        <td colspan="3" style="background-color:#ffffff; border:1px solid #ffffff; border-radius:5px; -moz-border-radius:5px; padding-top:20px; padding-right:10px; padding-bottom:22px; padding-left:10px;" valign="top">
+           <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+
+
+
+
+<table align="center" cellspacing="0" cellpadding="0" border="0" style="background-color:#ffffff;" width="100%">
+  <tr>
+    <td valign="top" style="color:#181a1c; font-family: Source Sans Pro, Helvetica, Arial, sans-serif; font-size: 22px; font-weight:bold; line-height: 25px; text-align:center;"><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImRiNDM1MDhmLTg5YmUtNDY0YS05MGFmLTkxMmFhMjZhNWIyNyIsImRla1ZlcnNpb24iOjEsIml2IjoiNmEwdDFZcGc0cEY3Q0NpaUJ1dWgvQT09IiwiY2lwaGVyVGV4dCI6ImczMjJma2ZDK1d2TEtTVStKWDF6RHFwTFovczNOUiszYXdrNjg4YnBhcnY3SDJkeEpjK2NpZEFRMkMwOCsrL3VLSUU5MVIreTljRzVnYzJBRDg2ZWJXMVI1TTdRVzc3VFNwdjdIZW10TGRXS1lPS1Jld2dvb2dicm9mdz0iLCJhdXRoVGFnIjoiRDg2ZWJXMVI1TTdRVzc3VFNwdjdIUT09In0%3D" style="color:#181a1c; text-decoration:none;">Annie Ripley</a></td>
+  </tr>
+  <tr>
+    <td valign="top" style="color:#474d54; font-family: Source Sans Pro, Helvetica, Arial, sans-serif; font-size: 16px; font-weight:bold; line-height:21px; padding-bottom:7px; text-align:center;"><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjAzZWY0MzM2LTRmZmYtNDg1My05YWE2LTQzZTZjOTNiZmEzOCIsImRla1ZlcnNpb24iOjEsIml2IjoiaXUxWi9qY2ZoU3hPREtXclNkU0tQQT09IiwiY2lwaGVyVGV4dCI6IjhoWlNhVkF2L2Qyb2lVUWVtOXZhWGRKczVDVktiVUJqZXJxSVZ0YmFOQ0FIc1BaRHVsOUVyVFYzd2xKUTRyaXE2OEdCYWw1RDhvb3pFN3ZPNGxyRTljRVp6c1VSUXBZVlpIcFdoWXJ0V2Y0M0g0VXNUZ3lscTBuVWlqdz0iLCJhdXRoVGFnIjoiNGxyRTljRVp6c1VSUXBZVlpIcFdoUT09In0%3D" style="text-decoration:none; color:#474d54;">Great-grandmother</a></td>
+  </tr>
+  <tr>
+    <td valign="top" style="color:#777777; font-family: Source Sans Pro, Helvetica, Arial, sans-serif; font-size: 18px; font-style: italic; line-height: 29px; text-align:center; padding-bottom:15px;"><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjJjOGE2OTRmLWIxMWUtNGRhYS04NzE0LTA4NTVhZTUwNmI0MyIsImRla1ZlcnNpb24iOjEsIml2IjoiZVJVSW1OYWtVQVpkNTZDN1EwQ0NNZz09IiwiY2lwaGVyVGV4dCI6InE4YnhjalVPRlVncE5KTW9jemZsTk9HaHM4OEMzVnBJTnB0UEthelhYUGxHVzFQRUl0Q0xpNHF3U0ozNUlFNmdPOGxXSWF2WS9HVnk2SDdNSTJKK3BBOWZBYnlVMXlMUktPTlZyWGtWQ0pqV3BGQUdYZWVndTBOQWdqST0iLCJhdXRoVGFnIjoiSTJKK3BBOWZBYnlVMXlMUktPTlZyUT09In0%3D" style="color:#777777; text-decoration:none;">Member Photo</a></td>
+  </tr>
+  <tr>
+    <td valign="top" style="color:#777777; font-family: Source Sans Pro, Helvetica, Arial, sans-serif; font-size: 18px; font-style: italic; line-height: 29px; text-align:center; padding-bottom:15px;"><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjdiODM4Y2QyLTNmMDgtNGZlZC1iYTkxLWI2MzRiMDZjOGViOSIsImRla1ZlcnNpb24iOjEsIml2IjoiNFFoUDNzT3F3TkNNT2UrSnBhK20rdz09IiwiY2lwaGVyVGV4dCI6IkVKMGR1OXUvWWRjakdEWjVieVl5MjRBdGJaVW9IUVhIMzRkenRrajFBZTYvMGhzcm5pL001cjU2Mktac2NYUTlQaXJKc1dLUTFRMWVodE52azRvZXBFTjN2NHBhUTQzdzB1TUIxK0VJVDk3RHFzRFFqRG52aWFXdnB2cz0iLCJhdXRoVGFnIjoiazRvZXBFTjN2NHBhUTQzdzB1TUIxdz09In0%3D"><img alt="" border="0" hspace="0" vspace="0" src="http://mediasvc.ancestry.com/v2/thumbnail/namespaces/1093/media/06011AE0-1F6C-4CFB-9B82-0CEDC9CB814A?client=PersonUI&amp;maxwidth=85&amp;maxheight=85&amp;suppressnotfound=true" style="vertical-align: top;"></a></td>
+  </tr>
+</table>
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+  <tr>
+    <td align="center" bgcolor="#328801" style="-moz-border-radius:26px; -webkit-border-radius:26px; border-radius:26px; vertical-align:middle;" valign="middle">
+<a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjJiNGVjOWVjLTlmMjQtNGYxZC04NDg4LWY3ZmQ1Nzg5YTcxYiIsImRla1ZlcnNpb24iOjEsIml2Ijoia0h4SWpUWVBZK1FNcU11cVozMUZNUT09IiwiY2lwaGVyVGV4dCI6IkREVVBXYnplazZjdU5IbGUwa3J3am9kYmJRSW85bGVnVzR1RGRkbTZpOEcrSHhvaFlRUVpIV3d1bmhJaERkY296c2dIOTZVYUVKdlBJY2hDeTc4NG5pS2dHbEFCbDlmUlVrYkF5SkI4U0kwMkQyUGtES2pMcW1kOVJURT0iLCJhdXRoVGFnIjoieTc4NG5pS2dHbEFCbDlmUlVrYkF5QT09In0%3D" style="padding:16px 30px; display: block; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:18px; font-weight:bold; text-align:center; text-decoration:none; color:#ffffff; background:#328801; border: 1px solid #328801; -moz-border-radius: 26px; -webkit-border-radius: 26px; border-radius: 26px; line-height:17px; vertical-align:middle;" valign="middle">View photo hint</a>
+</td>
+  </tr>
+</table>
+
+
+</td></tr></table>         
+        </td>
+        <td width="20">&#160;</td>
+      </tr>
+      <tr><td colspan="5" style="font-size:20px; line-height:20px;">&#160;</td></tr>
+      <tr>
+        <td width="20">&nbsp;</td>
+        <td colspan="3" style="background-color:#ffffff; border:1px solid #ffffff; border-radius:5px; -moz-border-radius:5px; padding-top:20px; padding-right:10px; padding-bottom:22px; padding-left:10px;" valign="top">
+           <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+
+
+
+
+<table style="background-color:#ffffff;" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+  <tr>
+    <td style="color:#181a1c; font-family: Source Sans Pro, Helvetica, Arial, sans-serif; font-size: 22px; font-weight:bold; line-height: 25px; text-align:center;" valign="top"><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjYwZTlkNTAzLTU1ZDgtNDAwOC04ZjA4LWYzOTA5NDJlODg1YSIsImRla1ZlcnNpb24iOjEsIml2IjoiOTVCbHJXS3ZSTFRNc1g4cGlsbm9Kdz09IiwiY2lwaGVyVGV4dCI6ImpVbEttTW1ZWHNRVjZIUWZYai9TWXVrdld4eFI0eUE4YjNzV1pQRjBweGJiL29VWHpaQ0J3Q2NRbG1QaEttNy8rb2JBN01GZ2NxYmNiS3hIcXJLakR5Q0NDTkNqQWNPc0R3THo4ZmVRWmExaXIwUzB6TEYvS1lwWjZDYz0iLCJhdXRoVGFnIjoicXJLakR5Q0NDTkNqQWNPc0R3THo4UT09In0%3D" style="text-decoration:none; color:#181a1c;">Annie Ripley</a></td>
+  </tr>
+  <tr>
+    <td style="color:#474d54; font-family: Source Sans Pro, Helvetica, Arial, sans-serif; font-size: 16px; font-weight:bold; line-height:21px; padding-bottom:7px; text-align:center;" valign="top"><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImEzNDIyNDgxLWNmNmUtNGM5NC1iMjlhLTFmNTcyZjlkZWM3ZiIsImRla1ZlcnNpb24iOjEsIml2IjoiTVBSSHV4MGJXOU11cStSd3d4VmUwQT09IiwiY2lwaGVyVGV4dCI6ImdCTkNWN0RiWS9jdHA1M2R1Q3llSDdDZFRUb25QaUwxYURWOVdJNDZxeXNhcytUTWdJaXNkVTg3bWZ1NlF2WWpaV0FHcjBFa1pzWjVBYmJZRktGWDVJci9ROE5QMm50cEJBbFRkekQwUjdzZEcxdlRMcXZrY01NVlh0QT0iLCJhdXRoVGFnIjoiRktGWDVJci9ROE5QMm50cEJBbFRkdz09In0%3D" style="text-decoration:none; color:#474d54;">Great-grandmother</a></td>
+  </tr>
+  <tr>
+    <td style="color:#777777; font-family: Source Sans Pro, Helvetica, Arial, sans-serif; font-size: 18px; font-style: italic; line-height: 29px; text-align:center; padding-bottom:15px;" valign="top"><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjBlMjgyMTI0LTlmZGQtNGQ4NS1hZGNjLTAxMDNjNmIyZTJhMiIsImRla1ZlcnNpb24iOjEsIml2IjoibEd4M1duYmNkblp4MzlJSGNybHJyQT09IiwiY2lwaGVyVGV4dCI6IjZLWHJJUGxGUDFOWkxLVjRGaDUzcGFRRldVMnE3S1BLSHkrMkhFaFVwb0ZpRG9GNENEelo3NDBpZUtKSVhsYm00TS9NeU13SXhPT2p4bVZMS21WTzVPUDhSY29VdERzTnlnU29oSlJzZDFwMjNIWjJjZC9TQjNLNWE2dz0iLCJhdXRoVGFnIjoiS21WTzVPUDhSY29VdERzTnlnU29oQT09In0%3D" style="text-decoration:none; color:#777777;">Oregon, U.S., County Births and Deaths, 1855-1949</a></td>
+  </tr>
+</table>
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+<tr>
+<td align="center" bgcolor="#328801" style="-moz-border-radius:26px; -webkit-border-radius:26px; border-radius:26px; vertical-align:middle;" valign="middle">
+<a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImYyMGUzNzk3LTc3M2EtNDlkMC04YTgzLTI4ZWMwYTg3MTRhYyIsImRla1ZlcnNpb24iOjEsIml2IjoiamYvRzNCZm4yc3RXSUFJRG5vZEhZdz09IiwiY2lwaGVyVGV4dCI6IjFlL1dqNUtiNWRsNkd4RHIrbG5KWU9KRmVaeUFHRituT3pubE56UDdSQU80aDl2QVc5WHpoc0xwaVZ1Vzh1NS9iOGpiVFRhSnQ0ZXNOa1VzenVBa3NiZUJzeERHVFlPek5STGtxWTMveHR3WDU5ckxWaUFDQTU2SFIyTT0iLCJhdXRoVGFnIjoienVBa3NiZUJzeERHVFlPek5STGtxUT09In0%3D" style="padding:16px 30px; display: block; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:18px; font-weight:bold; text-align:center; text-decoration:none; color:#ffffff; background:#328801; border: 1px solid #328801; -moz-border-radius: 26px; -webkit-border-radius: 26px; border-radius: 26px; line-height:17px; vertical-align:middle;" valign="middle">See your hint</a>
+</td>
+</tr>
+</table>
+
+
+
+
+</td></tr></table>         
+        </td>
+        <td width="20">&#160;</td>
+      </tr>
+      <tr><td colspan="5" style="font-size:20px; line-height:20px;">&#160;</td></tr>
+      <tr>
+        <td width="20">&nbsp;</td>
+        <td colspan="3" style="background-color:#ffffff; border:1px solid #ffffff; border-radius:5px; -moz-border-radius:5px; padding-top:20px; padding-right:10px; padding-bottom:22px; padding-left:10px;" valign="top">
+           <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+
+
+
+<table align="center" cellspacing="0" cellpadding="0" border="0" style="background-color:#ffffff;" width="100%">
+  <tr>
+    <td valign="top" style="color:#181a1c; font-family: Source Sans Pro, Helvetica, Arial, sans-serif; font-size: 22px; font-weight:bold; line-height: 25px; text-align:center;"><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImU5YzRhYmVjLWY1MDItNDg1Mi1iZTNmLTc5MjE2ZTBiZWVmMiIsImRla1ZlcnNpb24iOjEsIml2IjoiOVVyRHNESEVTRFNobkIvWXZ4K0xJQT09IiwiY2lwaGVyVGV4dCI6InRwcjg5NnFYZ1QvR05oRzNkSzlnVDNQVnpUY1dwbDRBTHJXLzJaT1VHUnpVcEkyb2xUZGJVUUlRYVQ0U3dMTlAwNWRkVXhidisxQmdOKzZUTzk3eHdhclVBUW1kUWVrY0hHRzJUUFZLdzdBeHhFZzBvWndmMkw4Zml5QT0iLCJhdXRoVGFnIjoiTzk3eHdhclVBUW1kUWVrY0hHRzJUQT09In0%3D" style="text-decoration:none; color:#181a1c;">Hugh barber</a></td>
+  </tr>
+  <tr>
+    <td valign="top" style="color:#474d54; font-family: Source Sans Pro, Helvetica, Arial, sans-serif; font-size: 16px; font-weight:bold; line-height:21px; padding-bottom:7px; text-align:center;"><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImRjOWFjZmZiLWVlNDAtNGMwZi04NjRlLTEzNzhhYWYzYWRhMSIsImRla1ZlcnNpb24iOjEsIml2IjoibndOdHVNalJRSllMbnlLcExqL3RSQT09IiwiY2lwaGVyVGV4dCI6InF5d0toazVNbXFUNUdFV3J5T2hHZ1BQWFhnbWE3cjI1R1ZyaGNrQ1kwUEFRZVhwNlp6Z01zc3NEZnE3d0txV0p5WjN6eHpsTWtrc1NNUE1GamVZSlhlaVAyNnMwaVpmbkZtNFJzNThEYmJqSTBVQ1dDNThpcVM0LzdVUT0iLCJhdXRoVGFnIjoiamVZSlhlaVAyNnMwaVpmbkZtNFJzdz09In0%3D" style="text-decoration:none; color:#474d54;">Great-grandfather</a></td>
+  </tr>
+  <tr>
+    <td valign="top" style="color:#777777; font-family: Source Sans Pro, Helvetica, Arial, sans-serif; font-size: 18px; font-style: italic; line-height: 29px; text-align:center; padding-bottom:15px;"><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjNiNWUyZjIxLWNiM2UtNDNiNi1iNGQyLWU3OTJhYzJiMmU4MiIsImRla1ZlcnNpb24iOjEsIml2IjoiUWNWa3VKTVlZc3lBR3puM0FpVS85QT09IiwiY2lwaGVyVGV4dCI6IlV3REVxV0l4UFdtL3JTdzVuU3V0c0FHQzdVRDU2VjREa2VZbFlwd1FveWtHbWFnTmh2QWZxbGFFNkJvZDZMSzhxOEd3NTlWaDZjM1N1RzlueDRaenU4blUxM3UyTlc1dm5vbE10RUhGWkxpVEdHTE1nQnM1OXdJbFAvUT0iLCJhdXRoVGFnIjoieDRaenU4blUxM3UyTlc1dm5vbE10QT09In0%3D" style="text-decoration:none; color:#777777;">Oregon, U.S., County Births and Deaths, 1855-1949</a></td>
+  </tr>
+</table>
+<table align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+<tr>
+<td align="center" bgcolor="#328801" style="-moz-border-radius:26px; -webkit-border-radius:26px; border-radius:26px; vertical-align:middle;" valign="middle">
+<a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImE2NzBhM2Y5LTlmNTEtNGRlMy1hNTU5LTRiNWM1NDg5ZTgxZSIsImRla1ZlcnNpb24iOjEsIml2IjoiRm54c05oNkRHb0ZyZktMOU9ycHZOQT09IiwiY2lwaGVyVGV4dCI6IlhXZnV1M1hkNG83bHpMcmhiayttMzZucDhPdXRTemJyZGJFWnpHRkpHSGpTSGdJNkpKaWYxZzdocGluMk5HMDg3c1ZkTHBRbFFwalZPVktsQlVtSHJWRHlwYXdHV1lmdDJkTlREeFo4YkRZZWd4cUJhM3lpL1RxNmJ6UT0iLCJhdXRoVGFnIjoiQlVtSHJWRHlwYXdHV1lmdDJkTlREdz09In0%3D" style="padding:16px 30px; display: block; font-family:Source Sans Pro, Helvetica, Arial, sans-serif; font-size:18px; font-weight:bold; text-align:center; text-decoration:none; color:#ffffff; background:#328801; border: 1px solid #328801; -moz-border-radius: 26px; -webkit-border-radius: 26px; border-radius: 26px; line-height:17px; vertical-align:middle;" valign="middle">See your hint</a>
+</td>
+</tr>
+</table>
+
+</td></tr></table>         
+        </td>
+        <td width="20">&#160;</td>
+      </tr>
+      <tr><td colspan="5" style="font-size:20px; line-height:20px;">&#160;</td></tr>
+      
+      
+    </table>
+  </span>
+  <!--<![endif]-->
+
+
+
+
+
+<div data-marker="wrapper" style="" class="stylingblock-content-wrapper">
+<table align="center" class="fullwidth noclass" cellspacing="0" cellpadding="0" border="0" width="60%" style="margin:0 auto;">
+  <tr>
+    <td style="border-top:none; border-bottom:none; padding-top:25px; padding-bottom:5px; width:10px;"></td>
+    <td class="mobcenter" style="border-top:none; border-bottom:none; color:#ffffff; font-family:sangbleu,helvetica,arial,sans-serif; font-size:26px; font-weight:bold; line-height:32px; text-align:center; padding-top:25px; padding-bottom:5px;">
+ 
+      <a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImQ5MzAzZWVkLWE3N2QtNDUwMC1iZjZkLWI2MzYxMjQwYzkxNiIsImRla1ZlcnNpb24iOjEsIml2IjoiSXd3RXRXT1k0ZmlMNUFYNVY0ZTN3Zz09IiwiY2lwaGVyVGV4dCI6Im12TXVURmJwRHA3T3FDWUMxcmwxNVJCV2pIdHRXSDIyREgrWmk1NGVTZGxpWERGUjVQVTVlNjQwaFpRWVZmQVlna0x1QkxCMUlrdndiMFJaRVVlSVhRbkZSMHEwdFR2aysyR3pnU01NQkxWam1PSDRpK1FGK1ZlSHQ4ST0iLCJhdXRoVGFnIjoiRVVlSVhRbkZSMHEwdFR2aysyR3pnUT09In0%3D" style="color:#ffffff; text-decoration:none;">
+ 
+      How do hints help you discover&#160;more? 
+ 
+      </a>
+ 
+    </td>
+    <td style="border-top:none; border-bottom:none; padding-top:25px; padding-bottom:5px; width:10px;"></td>
+  
+</tr></table></div>
+
+
+<table align="center" class="fullwidth " cellspacing="0" cellpadding="0" border="0" width="55%" style="margin:0 auto;"><tr><td style="border-top:none; border-bottom:none; color:#ffffff; font-family:sangbleu,helvetica,arial,sans-serif; font-size:22px; font-weight:normal; line-height:24px; text-align:center; padding-top:0px; padding-bottom:20px; width:10px;"></td><td class="mobcenter" style="border-top:none; border-bottom:none; color:#ffffff; font-family:sangbleu,helvetica,arial,sans-serif; font-size:22px; font-weight:normal; line-height:24px; text-align:center; padding-top:0px; padding-bottom:20px;">
+
+<table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table align="center" class="fullwidth" cellspacing="0" cellpadding="0" border="0" width="100%">
+  <tr>
+    <td style="border-top:4px solid #b8d94c; border-bottom:none; font-size:0px; line-height:0px;">&nbsp;</td>
+  </tr>
+</table></td></tr></table>
+</td><td style="border-top:none; border-bottom:none; color:#ffffff; font-family:sangbleu,helvetica,arial,sans-serif; font-size:22px; font-weight:normal; line-height:24px; text-align:center; padding-top:0px; padding-bottom:20px; width:10px;"></td></tr></table>
+
+
+
+<table align="center" class="fullwidth " cellspacing="0" cellpadding="0" border="0" width="85%" style="margin:0 auto;"><tr><td style="border-top:none; border-bottom:none; color:#ffffff; font-family:helvetica,arial,sans-serif; font-size:18px; font-weight:normal; line-height:24px; text-align:center; padding-top:0px; padding-bottom:20px; width:10px;"></td><td class="mobcenter" style="border-top:none; border-bottom:none; color:#ffffff; font-family:helvetica,arial,sans-serif; font-size:18px; font-weight:normal; line-height:24px; text-align:center; padding-top:0px; padding-bottom:20px;">
+Every time you add a name, date, or location to your tree, we search our massive collection for records that may match. When we find a match, you get a&#160;hint. 
+</td><td style="border-top:none; border-bottom:none; color:#ffffff; font-family:helvetica,arial,sans-serif; font-size:18px; font-weight:normal; line-height:24px; text-align:center; padding-top:0px; padding-bottom:20px; width:10px;"></td></tr></table>
+
+
+<table align="center" class="fullwidth " cellspacing="0" cellpadding="0" border="0" width="85%" style="margin:0 auto;"><tr><td style="border-top:none; border-bottom:none; color:#ffffff; font-family:helvetica,arial,sans-serif; font-size:18px; font-weight:normal; line-height:24px; text-align:center; padding-top:0px; padding-bottom:20px; width:10px;"></td><td class="mobcenter" style="border-top:none; border-bottom:none; color:#ffffff; font-family:helvetica,arial,sans-serif; font-size:18px; font-weight:normal; line-height:24px; text-align:center; padding-top:0px; padding-bottom:20px;">
+Each hint could be a record, a photo, or a story that can contain interesting new details you haven’t yet unearthed. These details make up the intricate tapestry of your&#160;story.
+</td><td style="border-top:none; border-bottom:none; color:#ffffff; font-family:helvetica,arial,sans-serif; font-size:18px; font-weight:normal; line-height:24px; text-align:center; padding-top:0px; padding-bottom:20px; width:10px;"></td></tr></table>
+
+
+
+<table align="center" class="fullwidth " cellspacing="0" cellpadding="0" border="0" width="85%" style="margin:0 auto;"><tr><td style="border-top:none; border-bottom:none; color:#b8d94c; font-family:helvetica,arial,sans-serif; font-size:20px; font-weight:normal; line-height:24px; text-align:center; padding-top:0px; padding-bottom:20px; width:10px;"></td><td class="mobcenter" style="border-top:none; border-bottom:none; color:#b8d94c; font-family:helvetica,arial,sans-serif; font-size:20px; font-weight:normal; line-height:24px; text-align:center; padding-top:0px; padding-bottom:20px;">
+<a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjY0YzU4ZWMyLTYzOTktNDNkMi1hNjcxLTUyOWIxYjAyZTY5YiIsImRla1ZlcnNpb24iOjEsIml2IjoiN1Z4Zk4zK3lCRnMxcTNDQ3pYdnFzZz09IiwiY2lwaGVyVGV4dCI6IjlWWVBsbHFpQUdlTWZKdDBXVzA0b0ZYWmk0elBWRWhXekZBSExqTEZ3TnUzYjVjeGwvOE5WcmxsZFhNYTJTUnl1SWVxRmVHVG9ReWZTRnRvTmlMSVhrc01pSWoxTXZiMG9PVURvTzFjWHpkL3NnUmJOYXR3Z3MxNzZyST0iLCJhdXRoVGFnIjoiTmlMSVhrc01pSWoxTXZiMG9PVURvQT09In0%3D" style="color:#b8d94c; font-weight:bold; text-decoration:underline;">Discover more about how hints&#160;work</a>
+</td><td style="border-top:none; border-bottom:none; color:#b8d94c; font-family:helvetica,arial,sans-serif; font-size:20px; font-weight:normal; line-height:24px; text-align:center; padding-top:0px; padding-bottom:20px; width:10px;"></td></tr></table>
+<div data-marker="wrapper" style="" class="stylingblock-content-wrapper"><table cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td style="background-color:inherit; font-size:25px; line-height:25px;">&nbsp;</td></tr></table></div>
+<div data-marker="wrapper" style="" class="stylingblock-content-wrapper"><table cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td style="background-color:inherit; font-size:25px; line-height:25px;">&nbsp;</td></tr></table></div>
+
+
+</td></tr></table>
+
+
+
+
+<table align="center" cellspacing="0" cellpadding="0" border="0" style="background-color:#dedede;" width="100%"><tr><td style="background-color:#dedede; padding-top:0px; padding-bottom:0px;">
+<div data-marker="wrapper" style="" class="stylingblock-content-wrapper"><table cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td style="background-color:inherit; font-size:25px; line-height:25px;">&nbsp;</td></tr></table></div>
+<div data-marker="wrapper" style="" class="stylingblock-content-wrapper">
+<table align="center" class="fullwidth noclass" cellspacing="0" cellpadding="0" border="0" width="90%" style="margin:0 auto;">
+  <tr>
+    <td style="border-top:none; border-bottom:none; padding-top:25px; padding-bottom:5px; width:10px;"></td>
+    <td class="mobcenter" style="border-top:none; border-bottom:none; color:#181a1c; font-family:helvetica,arial,sans-serif; font-size:30px; font-weight:bold; line-height:36px; text-align:center; padding-top:25px; padding-bottom:5px;">
+ 
+      <a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjU3ZjgzNzBiLWIwMTctNGMxZi1hY2IwLTY4NGIxY2ZhMjljNCIsImRla1ZlcnNpb24iOjEsIml2IjoiN1VHMUdXVnlLaFltMWs4emo0c0lVUT09IiwiY2lwaGVyVGV4dCI6Ilg4cnViM0pEVS9aZG02c2dEVDQ5Qm8rS3RkOGNZREdhMWlPa1d2VVAzbUxDeFAyMVZpVjdHd0xDcDZJYWZQVUVKTUVob20zOWhLemtrd0pwOGYyODh6cDkvMjcxS21VUDNnMkkvdTFCdFJsbGNpb1dKdFpQTTQrTENGRT0iLCJhdXRoVGFnIjoiOGYyODh6cDkvMjcxS21VUDNnMkkvZz09In0%3D" style="color:#181a1c; text-decoration:none;">
+ 
+      Renew your Ancestry membership to access your&nbsp;hints. 
+ 
+      </a>
+ 
+    </td>
+    <td style="border-top:none; border-bottom:none; padding-top:25px; padding-bottom:5px; width:10px;"></td>
+  
+</tr></table></div>
+<div data-marker="wrapper" style="" class="stylingblock-content-wrapper"><table cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td style="background-color:inherit; font-size:25px; line-height:25px;">&nbsp;</td></tr></table></div>
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+<table class="" align="center" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+  <tr>
+    <td align="center" bgcolor="#328801" style="-moz-border-radius:26px; -webkit-border-radius:26px; border-radius:26px; vertical-align:middle;" valign="middle">
+      <a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjI3NTNhZDRhLWZlY2UtNGIxMS1iODk1LTlkNzNhY2YzYzVhNSIsImRla1ZlcnNpb24iOjEsIml2IjoiQVhJa0RzQmpPd09lcUpPckNzZDhYQT09IiwiY2lwaGVyVGV4dCI6IlM0SU52THoxMHptS3B6M0xMUEd5bGNucExBclk5WUxhbmd4ei9oMHRQcVRST0cxMkdHK1cvdWp1Wi9XS3crakc0d3VxK0ltelFuQ2hxU3hVVVBjakxvbkhxVTR6MUVFVmp6ZStQUUZ5SkE3QVl6c0RucWlUcXdySGZGdz0iLCJhdXRoVGFnIjoiVVBjakxvbkhxVTR6MUVFVmp6ZStQUT09In0%3D" style="padding:16px 35px; display: block; font-family:helvetica,arial,sans-serif; font-size:16px; font-weight:bold; text-align:center; text-decoration:none; color:#ffffff; background:#328801; border: 1px solid #328801; -moz-border-radius: 26px; -webkit-border-radius: 26px; border-radius: 26px; line-height:17px; vertical-align:middle;" valign="middle">Become a member again</a>
+    </td>
+  </tr>
+</table></td></tr></table>
+<div data-marker="wrapper" style="" class="stylingblock-content-wrapper"><table cellpadding="0" cellspacing="0" border="0" style="background-color:inherit;"><tr><td style="background-color:inherit; font-size:25px; line-height:25px;">&nbsp;</td></tr></table></div>
+</td></tr></table>
+
+      
+
+
+
+
+
+
+
+</td></tr></table>
+
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner">
+
+
+<table class="fullwidth" cellspacing="0" cellpadding="0" border="0" width="600" align="center" style="background-color:#f5f5f5;" bgcolor="#f5f5f5">
+  
+  <tr>
+   <td width="30" style="border-top:1px solid #6ba410;">&#160;</td>
+   <td style="border-top:1px solid #6ba410;">
+    
+    <table align="center" cellspacing="0" cellpadding="0" border="0">
+     <tr>
+      <td colspan="4" style="font-size:15px; line-height:15px;">&#160;</td>
+     </tr>
+     <tr>
+      
+      <td style=""><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImY2MzhlMTMxLTM3ZDYtNDI4OC05ZWVmLTBlMjE1ZDMzNTYzZiIsImRla1ZlcnNpb24iOjEsIml2IjoiQWJDN09ndVp6bGQreGZPOUVoNWhVQT09IiwiY2lwaGVyVGV4dCI6IkJJV0tocEhkdEErc3ZkdElqVkY0Y0drVlp0SzlsRXh2dFVWYU1TRDJpaFdYVTdlR0N2b2pyeHcyUERzcGVwaUs1dkQ3SnJFQ056dG4yNzRMYlRrZGhDcjdLbGtKb3M5MFE0cFdHZ0d3dXpvTG1jNVhmc1h6dlJJZVlWQT0iLCJhdXRoVGFnIjoiYlRrZGhDcjdLbGtKb3M5MFE0cFdHZz09In0%3D"><img alt="Facebook" border="0" hspace="0" src="http://www.ancestrycdn.com/email/_shared/footer/facebook_55x34.png" vspace="0" style="vertical-align:top;"></a></td>
+      
+      
+      
+      <td style=""><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjM1ZmQ0Y2NlLTQxYmUtNDA4Mi05YWYwLTMzZjBhMGZiM2Q1NSIsImRla1ZlcnNpb24iOjEsIml2IjoiYmljajdTS1k1UjZLOXR5TnRsd21Pdz09IiwiY2lwaGVyVGV4dCI6Ijg2SzFMS3VxZmQwRDFJSlNLbHhyVGhlVWh6d2c3bmthbi9mTy9zQWxjK2t1cTFDQk5EbFM2RmpiZTZFVy83Ylg5MVFOVFg4WC9uVHV6dVlvNWVyc1l1MDlZdnJURjl4NVVyMUV4MjRuSSswaW1PVWVpdmJjamJaY0pqcz0iLCJhdXRoVGFnIjoiNWVyc1l1MDlZdnJURjl4NVVyMUV4dz09In0%3D"><img alt="Facebook" border="0" hspace="0" src="http://www.ancestrycdn.com/email/_shared/footer/tiktok_55x34.png" vspace="0" style="vertical-align:top;"></a></td>
+      
+      
+      
+      <td><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImExMmVmMjZlLTA1MmItNDFkNS04ZDZmLWIxN2FkNWIzNjgyNSIsImRla1ZlcnNpb24iOjEsIml2IjoiWnE0d3BDZzhJVGVMVCs4MGQvRFBtZz09IiwiY2lwaGVyVGV4dCI6Im1kbnhvWVZHRmVlNC8xR092WCt4Ukd2eG5paC96Q0NvYkNraWI4aDlUbG5jZjI4ZDA4UHNHbkNkaTZSVkVXdmlFYUpMQXo3ZXVGdWlvOHY5d3pFVGQ3L2FhTkZCdjZmbFBSN0djbWF1TUtRb1BDRTNpMC92Tkhmd3o1bz0iLCJhdXRoVGFnIjoid3pFVGQ3L2FhTkZCdjZmbFBSN0djZz09In0%3D"><img alt="YouTube" border="0" hspace="0" src="http://www.ancestrycdn.com/email/_shared/footer/youtube_55x34.png" vspace="0" style="vertical-align:top;"></a></td>
+      
+       
+      
+      <td style=""><a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImVhMjg1OGVjLTFlODEtNDJlNi1hZjNmLWZjMTUyY2UyMDg5ZiIsImRla1ZlcnNpb24iOjEsIml2IjoiWEVMNWRlRlFMUWpEOHZsdkFIMXordz09IiwiY2lwaGVyVGV4dCI6ImNQbzVhM0Nvc0IzY2MzMHhCNU1iL3N5RTdORXlVSXh3S0tSWTFIMUloZ0ptUk03QlIrOW95WDl3ZXFPU3VHM2JsVFZWQU9NaE1WWFM0RWdPajRBQ09LVmZYSTduVmlGdDRrMXNHbHhDK1hYaFVDMEl3L0w1YndCOWMvcz0iLCJhdXRoVGFnIjoiajRBQ09LVmZYSTduVmlGdDRrMXNHZz09In0%3D"><img alt="Instagram" border="0" hspace="0" src="http://www.ancestrycdn.com/email/_shared/footer/instagram_55x34.png" vspace="0" style="vertical-align:top;"></a></td>
+      
+      
+     </tr>
+    </table>
+   
+   </td>
+   <td width="30" style="border-top:1px solid #6ba410;">&#160;</td>
+  </tr>
+ </table>
+
+
+ <table class="fullwidth" cellspacing="0" cellpadding="0" border="0" width="600" align="center" style="background-color:#f5f5f5;" bgcolor="#f5f5f5">  
+  <tr>
+   <td colspan="3" style="font-size:15px; line-height:15px;">&#160;</td>
+  </tr>
+  <tr>
+   <td colspan="3" style="font-family:Helvetica, Arial, sans-serif; font-size:13px; line-height:21px; text-align:center; padding-bottom:10px;">&#160;&#160;&#160;<a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImRmMGIzYmExLTcxMTEtNDNmMS1iYTE2LTgwY2Y2YzY0Y2YyYyIsImRla1ZlcnNpb24iOjEsIml2IjoieWMyUTRNQmF4OEtTcHFubDhlV1RzZz09IiwiY2lwaGVyVGV4dCI6IjJCQTRTR3pHQ2dkVEpEQVVzMzRWbDR3bnZuRVFmc3BPWE8yRm93VVhxYTZYVW4yR3RLeE1icm5qKzlRVXRNUXQ3VE5ObHAycXVyMno3UTh1TzV2eFlwR0VLTmVDYU5uYTF1Mml3c25Oa09EQVdzZkNrcWFwNWZIbGs3ST0iLCJhdXRoVGFnIjoiTzV2eFlwR0VLTmVDYU5uYTF1Mml3Zz09In0%3D" style="color:#443f39; font-weight:bold; text-decoration:none;">Support&#160;Center</a>&#160;&#160;&#160; &#160;&#160;&#160;
+<a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImU1MDdlOTFjLTg0ZDMtNDkyYi05OTkxLTZhYzI2Y2Y5MWY5ZiIsImRla1ZlcnNpb24iOjEsIml2IjoibTJLaUtlRGxtTjM3RWh3YnpEbW5Ldz09IiwiY2lwaGVyVGV4dCI6ImRRMTFSOFlNYmU3QnprWGFyMDJEd3JWUDBON3NWY04yU3JVcVl6VXVidHA1QVBScm1YbzhwVTRML0R0M3BCK2l5bzJwand5S3lNbFk2UTFpOHp3L0JiNWJwNGVTaHNya1pueE9LSnRpb2luZzVaamQreEljRzh3NXB5cz0iLCJhdXRoVGFnIjoiOHp3L0JiNWJwNGVTaHNya1pueE9LQT09In0%3D" style="color:#443f39; font-weight:bold; text-decoration:none;">Get&#160;the&#160;App</a>&#160;&#160;&#160; &#160;&#160;&#160;
+<a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjczNmRhYmE0LTg4NDgtNDIwYi04YWMzLTNjZjQwMmQ0NzgzNCIsImRla1ZlcnNpb24iOjEsIml2IjoiN1UrT2wxcUp3N2oyVnZqbGxXQmozQT09IiwiY2lwaGVyVGV4dCI6IllPd3NJMmpodmtWcUcwS2tWZ0FDaDdwbklIMm5oWjhUdmRyNHFWRDRVcTBTQ1k5YTFmYlJ4T3lIOHRqOHZwcjlDeFF3bTNvanVlNzYrSlhSWkgvRzRnQmZVWjYyTjQwcTRRaVRQKzFQanBkYWljTzQ5bGI0NVpWZ1k5dz0iLCJhdXRoVGFnIjoiWkgvRzRnQmZVWjYyTjQwcTRRaVRQdz09In0%3D" linkname="View In Browser" style="color:#443f39; font-weight:bold; text-decoration:none;">View&#160;this&#160;email&#160;online</a>&#160;&#160;&#160;</td>
+  </tr>
+  <tr>
+   <td width="20"></td>
+   <td style="border-top:1px solid #e0deda; border-bottom:1px solid #e0deda; font-family:Helvetica, Arial, sans-serif; font-size:13px; line-height:23px; text-align:center; padding-top:8px; padding-bottom:8px;">&#160;&#160;<a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImMwZmI4NzVmLTdhOTEtNDA1My1iNjNhLTI0ZGI4MzhjNTE1MCIsImRla1ZlcnNpb24iOjEsIml2IjoiT1FTNitNemhXTE5uZU9XQWM5ZUM4QT09IiwiY2lwaGVyVGV4dCI6InRLbjYxVmtSem42aDVFeDR6KzB6U05Zd1NUWmZLcFJIeFc3bVZEWmgwT3NUNUMzZUNHNzJtd0J4Skw3RXRyZFZpbCszT2I0b2dydnl5SHFCMFpHbVBXQmdwVlBrVW1lZjBvU3llamtFdXZqTTRWaXpaM2psZ0hQWGd2QT0iLCJhdXRoVGFnIjoiMFpHbVBXQmdwVlBrVW1lZjBvU3llZz09In0%3D" style="color:#443f39; font-weight:bold; text-decoration:none;">Email&#160;Preferences</a>&#160;&#160; &#160;&#160;
+<a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6ImZlMDFhMmMxLTFmYzYtNDcyNy1iOGJkLWI5NzNlZDA2YTZlMiIsImRla1ZlcnNpb24iOjEsIml2Ijoib0p3ekNUVWpzeEZ2QnFvMW1laVJHQT09IiwiY2lwaGVyVGV4dCI6IkczR3lnQ0R6VTNBT05kcFpVcXUvWkx5eUU4VlVKMzJlaWFwaEFkN3VHTE9FWGNONnZ2NmorNkQyVFo1eWtGT0U4bHRDQWpMdmhKNFlEUjJMcjFnbEpPelI2Snh6cGhMN2FXcElmYUNjTXdrMUk3TVJid2FxTlpub2tSZz0iLCJhdXRoVGFnIjoicjFnbEpPelI2Snh6cGhMN2FXcElmUT09In0%3D" style="color:#443f39; font-weight:bold; text-decoration:none;">Privacy&#160;Statement</a>&#160;&#160;  &#160;&#160;
+<a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjcxNDRjMzNjLTMwMjYtNGUxNi04N2Q2LTRmMTg2OTM1NmE2NSIsImRla1ZlcnNpb24iOjEsIml2IjoiMDhacUVzMWx3YVVDL3YzSGR6S1o1Zz09IiwiY2lwaGVyVGV4dCI6IlZUOVJUMmZaTUNSYXI0Y3ZHOEQyVEx1RVNoaFRJWC82b2s0b1N0eXFrNlZYNWNpODY5U2FzMmtiTmc2RXhnK1BWbjdURC9ILzE2VXIxa2tuakVJUFkvcFRZUXA4RkhtOG1FSGFuTlBHYWhMTlpjR2xBdjc5eDNjeW1lWT0iLCJhdXRoVGFnIjoiakVJUFkvcFRZUXA4RkhtOG1FSGFuQT09In0%3D" style="color:#443f39; font-weight:bold; text-decoration:none;">Terms&#160;and&#160;Conditions</a>&#160;&#160; &#160;&#160;
+<a  href="https://click.email.ancestry.com/u/?qs=eyJkZWtJZCI6IjE0ZGMwYjEwLTljOGYtNDkyNi1iMmNmLTUxZGQ2NjE5ZjBmNiIsImRla1ZlcnNpb24iOjEsIml2IjoieWJGZnlOU3dabGxXYnQvMlN6VE1UZz09IiwiY2lwaGVyVGV4dCI6ImVFNzN5bytWbjVNVHZ5WTF3bWFGNHZDRDNuTldEeVFwd0MzUVkxeStMMit0czIwOG1JQmJEMUg3MCt4ZjFMNFREUzJlQ3FJWXh1czNqbktXd1JheVlHeG9HaFloOGhpTVFjdDZxTW14WDhqVXNHWlpWbTdmOWtzMHpFND0iLCJhdXRoVGFnIjoid1JheVlHeG9HaFloOGhpTVFjdDZxQT09In0%3D" style="color:#443f39; font-weight:bold; text-decoration:none;">Unsubscribe</a>&#160;&#160;</td>
+   <td width="20"></td>
+  </tr>
+  <tr>
+   <td width="20"></td>
+   <td style="color:#68655f; font-family:Helvetica, Arial, sans-serif; font-size:11px; line-height:21px; text-align: center; padding-top:10px; padding-bottom:20px;">&copy;2026&#160;<a href="" style="color:#68655f; cursor:text; text-decoration:none;">ANCESTRY</a>&#160;&#160;<a href="" style="color:#68655f; cursor:text; text-decoration:none;">Ancestry.com</a>&#160;Operations,&nbsp;L.P. <span class="applelink">1300&#160;W.&#160;Traverse&#160;Parkway,&#160;Lehi,&#160;UT&#160;84043,&#160;USA</span></td>
+   <td width="20"></td>
+  </tr>
+ </table></td></tr></table>
+
+<div itemscope itemtype="http://schema.org/Organization">
+  <meta itemprop="logo" content="https://www.ancestrycdn.com/email/_shared/icon/leaf_48x48_light.png" />
+</div>
+<div itemscope itemtype="http://schema.org/DiscountOffer">
+  <meta itemprop="description" content="" />
+  <meta itemprop="discountCode" content="" />
+  <meta itemprop="availabilityStarts" content="" />
+  <meta itemprop="availabilityEnds" content="" />
+</div>
+<div itemscope itemtype="http://schema.org/PromotionCard">
+ <meta itemprop="image" content="" />
+</div>
+</td></tr></table></td></tr></table></body></html>
+
+--rRnjYfok54Fy=_?:--
+

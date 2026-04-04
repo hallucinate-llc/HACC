@@ -1,0 +1,183 @@
+Delivered-To: starworks5@gmail.com
+Received: by 2002:a05:7208:20c8:b0:fa:5ef1:c6ed with SMTP id z8csp1142884rbz;
+        Thu, 2 Apr 2026 17:52:40 -0700 (PDT)
+X-Received: by 2002:a05:6820:99a:b0:67e:33d5:76f9 with SMTP id 006d021491bc7-68220848a85mr612632eaf.60.1775177559979;
+        Thu, 02 Apr 2026 17:52:39 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1775177559; cv=none;
+        d=google.com; s=arc-20240605;
+        b=IV2MFntswek0pEFn6BKBkbPd9gEzpPAyaDBdanE4uYl9Zd8AuBsVbVxskG5p/K2nf2
+         rVI0PMnX43rRiCdI98FpuR97/d7nzjeOaPHjgeKAjhta/fvf9Y2Y6XHAJMl/Jmq8cr/6
+         H94K3rpk8j2/UqdYDtMje7EUrnx6zQXsUw/2C/kU5DgXDntPeXqo1J1LcdPMhSFwIS/Y
+         QkKjl3T4UUxOOChFIDEwi4/99n3io+9D/1fuCEKrDMTaWtd1ZLCXRnIdURDyHw3R055D
+         PRuW22k/Mm8T4JCCw2tZnmz/WjpE1xQfbMyXm9EnZjJKMQmlyeTTgrt2IZAIMfOce7cG
+         6RPg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:from:subject:date:message-id:mime-version:dkim-signature;
+        bh=KgRbJt1mJ5kd2z8DHwahj+cBEcn40Q/tsPFXVwOd3G8=;
+        fh=gPPrbYv6bjiCeSNOMtV7+ATcg7xOVeWRNeqU1P80kc4=;
+        b=OB1ETvC8cf+xXRztR85Uuo2UYBQVZvFkvM5mbuAZckUd8+h65moYA2vshNee8Q7qLL
+         h9BVYN0LusoNLtUcwpTheYHz/OajcFgr/E85RXb1+cSOl5wfEJkH9wBySAJ3oU31eQLc
+         rY6GWiWXBk7CR+rbVWPR5UN5ZrVZzkSwEwI5nTrz1KMw7IqDWWtmYsyxryBDbd1dho3E
+         HxBed1etvthu+xQ/1EW78D1vhBgpwJmyt3cYGVUCJjmckAf66Dvr/uYC7t960anD7DcB
+         aW7KgVtnq7+YoNBr0UC6hekbtbTPqENE0e4FHuhRn7mHJuvdiIiIs3k/Cp6DgjJwghC2
+         wbFg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20251104 header.b=BDPehFaN;
+       spf=pass (google.com: domain of 3vw_pasiuaag9hf9af88gdd.9a89d88bdea.jfeneo3rgk151.3wqkm.owwotm.kwu@grandcentral.bounces.google.com designates 209.85.220.73 as permitted sender) smtp.mailfrom=3Vw_PaSIUAAg9HF9AF88GDD.9A89D88BDEA.JFeNeO3rGK151.3wqkm.owwotm.kwu@grandcentral.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <3Vw_PaSIUAAg9HF9AF88GDD.9A89D88BDEA.JFeNeO3rGK151.3wqkm.owwotm.kwu@grandcentral.bounces.google.com>
+Received: from mail-sor-f73.google.com (mail-sor-f73.google.com. [209.85.220.73])
+        by mx.google.com with SMTPS id 006d021491bc7-680a835e636sor1955191eaf.4.2026.04.02.17.52.39
+        for <starworks5@gmail.com>
+        (Google Transport Security);
+        Thu, 02 Apr 2026 17:52:39 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3vw_pasiuaag9hf9af88gdd.9a89d88bdea.jfeneo3rgk151.3wqkm.owwotm.kwu@grandcentral.bounces.google.com designates 209.85.220.73 as permitted sender) client-ip=209.85.220.73;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20251104 header.b=BDPehFaN;
+       spf=pass (google.com: domain of 3vw_pasiuaag9hf9af88gdd.9a89d88bdea.jfeneo3rgk151.3wqkm.owwotm.kwu@grandcentral.bounces.google.com designates 209.85.220.73 as permitted sender) smtp.mailfrom=3Vw_PaSIUAAg9HF9AF88GDD.9A89D88BDEA.JFeNeO3rGK151.3wqkm.owwotm.kwu@grandcentral.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20251104; t=1775177559; x=1775782359; dara=google.com;
+        h=to:from:subject:date:message-id:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=KgRbJt1mJ5kd2z8DHwahj+cBEcn40Q/tsPFXVwOd3G8=;
+        b=BDPehFaNmmkYqivs3ucFecjo4a2e24g+OHGHmNTsq+fCAkgiV5SIO1DbhtkCkeamTk
+         ETRS32JnOcTFCtYspIHCdzbfMLMg5uNY/4KsZqjDSs86r5vIFG8PvkDeG4tEoZZ78iMy
+         WsJjjAh+uBIIcFb8ZvnLpzwoplbFfl/RV8Zu/omnLorYHT0pYE3taktM5OX0cy6N1T/S
+         taFcx+nNsJvDeQFQFpMsaaTNs/JUFutp9nme7oBC8p4VdWV1QCRLbF/Y7YOjwdYng+xR
+         pzlbOHkIJt98cMxUuEQ2Up/bcT/Dzj9qG62B2T7DMmUeHhziN12EFjBr/T6M6AbO5OfU
+         MsjQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1775177559; x=1775782359;
+        h=to:from:subject:date:message-id:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=KgRbJt1mJ5kd2z8DHwahj+cBEcn40Q/tsPFXVwOd3G8=;
+        b=CAapbTTjDL/9a1Fvob69RD4wDEridpAgaELgicDTlMuMSPIfvUuPudeywSXEnvZKRq
+         Gdueim7LpJWbvLuAnv53Fr+kC3QuLot2h29Bg3Q1LZdpiqmIy+/slLmVsrnFD37MgPWh
+         v+jGf7Ox7LbB+h52FN+ObC6iYyDHSq8xrGc7F6q/nYVlpgGl9VkHGVeggDD6JcTz9XAb
+         /vk9S4XIWqfWTl6GSSzDuGr6ReTYlrD9IWreifA2P/B/qsF2fpeHvAvsws+K9vAMdDn5
+         ayClvmbmWC43WKWJN31GX8mk1Zm7yMpaQE9ARcZIKt9dqGmNkSpHaXoBR0Dlxmae9xQ/
+         Qljw==
+X-Gm-Message-State: AOJu0YxVtvwjxmRkIA3EvR/eDNdWsadKPLW3W8ykCi8Kl5eQ72JKtCli
+	RZFHoW/YTrc5SI2gjISRrC4itZsaBpDKizmrYQ0st0DNN+tdNN/FgKzpXMRb0diiQPYlm0YJoWT
+	GdFvgnPZ6zq9JhWl6gIAXdUPIq3i1YLmy+lu0uYL73juGme1dGw==
+MIME-Version: 1.0
+X-Received: by 2002:a05:6820:4d07:b0:67e:16b4:aa06 with SMTP id
+ 006d021491bc7-6821df6adc4mr706727eaf.27.1775177559650; Thu, 02 Apr 2026
+ 17:52:39 -0700 (PDT)
+Message-ID: <+19712700855.5274422e5420e06e36732ffbf20436fca3f4f6dc@txt.voice.google.com>
+Date: Fri, 03 Apr 2026 00:52:39 +0000
+Subject: New text message from (201) 500-3562
+From: "(201) 500-3562" <19712700855.12015003562.B7WFWGvj8C@txt.voice.google.com>
+To: starworks5@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000db318a064e83bb26"
+
+--000000000000db318a064e83bb26
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+
+
+<https://voice.google.com>
+Dear BENJAMIN BARBER, your mark for JUSTICEDAO is currently listed as
+ABANDONED in federal records, and a third-party applicant is has applied to
+register it. Do you wish to retain your federal rights to this name?
+Contact at (551) 417-3676 for immediate assistance.
+Reply STOP to unsubscribe.
+To respond to this text message, reply to this email or visit Google Voice.
+YOUR ACCOUNT <https://voice.google.com> HELP CENTER
+<https://support.google.com/voice#topic=1707989> HELP FORUM
+<https://productforums.google.com/forum/#!forum/voice>
+This email was sent to you because you indicated that you'd like to receive
+email notifications for text messages. If you don't want to receive such
+emails in the future, please update your email notification settings
+<https://voice.google.com/settings#messaging>.
+Google LLC
+1600 Amphitheatre Pkwy
+Mountain View CA 94043 USA
+
+--000000000000db318a064e83bb26
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><style type=3D"text/css">
+    /* Disable the default font adjustment on iOS devices */
+    div, p, a, li, td { -webkit-text-size-adjust:none; }
+    /* Adjust the table width on the small screen */
+    @media only screen
+      and (max-width: 599px) {
+      table[class=3D"content-table"] {
+        max-width: 360px !important;
+      }
+    }
+    /* Enlarge the font size on mobile device */
+    @media only screen
+      and (min-device-width: 320px)
+      and (max-device-width: 736px) {
+      td[class=3D"email-content-header"] {
+        font-size: 20px !important;
+        line-height: 28px !important;
+      }
+      td[class=3D"email-content"] {
+        font-size: 16px !important;
+        line-height: 24px !important;
+      }
+    }
+    /* Avoid the blue links on iOS devices for address, datetime and phone =
+number */
+    .links-date a {
+      color: #000000;
+      text-decoration: none;
+    }
+    .links-footer a {
+      color: #757575;
+      line-height: 12px;
+      text-decoration: none;
+    }
+    .links-phone_number a {
+      color: inherit;
+      text-decoration: none;
+    }
+    /* Stop Gmail from thinking this is a quote from an email it has seen b=
+efore */
+    .im {
+      color: #000 !important;
+    }
+    </style></head><body><table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" style=3D"font-family: Roboto,'Helvetica Neue',Helvetica,Arial,sans-s=
+erif;"><tr><td><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" widt=
+h=3D"600" class=3D"content-table" style=3D"border-bottom: 1px solid #eeeee;=
+"><tr><td align=3D"left" style=3D"padding: 16px 32px;"><a href=3D"https://v=
+oice.google.com" target=3D"_blank" rel=3D"noopener"><img alt=3D"Google Voic=
+e" src=3D"https://www.gstatic.com/voice-fe/icons/voice_lockup_2020q4_48px.p=
+ng" height=3D"32"/></a></td></tr></table><table cellspacing=3D"0" cellpaddi=
+ng=3D"0" border=3D"0" width=3D"600" class=3D"content-table" style=3D"paddin=
+g: 25px 32px; border-bottom: 1px solid #EEEEEE;"><tr><td style=3D"font-size=
+: 14px; line-height: 20px; padding: 25px 0;">Dear BENJAMIN BARBER, your mar=
+k for JUSTICEDAO is currently listed as ABANDONED in federal records, and a=
+ third-party applicant is has applied to register it. Do you wish to retain=
+ your federal rights to this name? Contact at (551) 417-3676 for immediate =
+assistance.<br>Reply STOP to unsubscribe.</td></tr><tr><td style=3D"font-si=
+ze: 14px; font-style: italic; line-height: 20px; color: #757575">To respond=
+ to this text message, reply to this email or visit Google Voice.</td></tr>=
+</table><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"60=
+0" class=3D"content-table" style=3D"padding: 25px 32px; font-size: 9px; col=
+or: #757575;"><tr><td><table cellspacing=3D"0" cellpadding=3D"0" border=3D"=
+0" width=3D"240" style=3D"font-size: 9px; line-height: 14px;" class=3D"foot=
+er-link"><tr><td style=3D"padding-right: 5px;"><a href=3D"https://voice.goo=
+gle.com" target=3D"_blank">YOUR ACCOUNT</a></td><td style=3D"padding-right:=
+ 5px;"><a href=3D"https://support.google.com/voice#topic=3D1707989" target=
+=3D"_blank">HELP CENTER</a></td><td><a href=3D"https://productforums.google=
+.com/forum/#!forum/voice" target=3D"_blank">HELP FORUM</a></td></tr></table=
+></td></tr><tr><td style=3D"padding: 15px 0">This email was sent to you bec=
+ause you indicated that you'd like to receive email notifications for text =
+messages. If you don't want to receive such emails in the future, please up=
+date your <a href=3D"https://voice.google.com/settings#messaging">email not=
+ification settings</a>.</td></tr><tr><td><img alt=3D"Google" src=3D"https:/=
+/www.gstatic.com/images/branding/googlelogo/1x/googlelogo_dark_color_74x24d=
+p.png" height=3D"14" style=3D"opacity: .5;"/></td></tr><tr><td style=3D"pad=
+ding: 15px 0; line-height: 12px;">Google LLC<br><span class=3D"links-footer=
+">1600 Amphitheatre Pkwy<br>Mountain View CA 94043 USA</span></td></tr></ta=
+ble></td></tr></table></body></html>
+--000000000000db318a064e83bb26--

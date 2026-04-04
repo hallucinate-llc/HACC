@@ -1,0 +1,35 @@
+{
+  "artifact_dir": "/home/barberb/HACC/evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_ffeff258-2d45-11f1-b4c7-0a77ee3cd8b3-mailer.chargify.com_20260331_You-have-a-new-CoreWeave-invoice",
+  "attachment_count": 1,
+  "attachments": [
+    {
+      "content_type": "application/pdf",
+      "filename": "invoice-149388.pdf",
+      "path": "/home/barberb/HACC/evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_ffeff258-2d45-11f1-b4c7-0a77ee3cd8b3-mailer.chargify.com_20260331_You-have-a-new-CoreWeave-invoice/attachments/invoice-149388.pdf",
+      "size": 59265
+    }
+  ],
+  "body_preview": "Dear benjamin barber,\r\n\r\nA new invoice for your CoreWeave account is now available.\r\n\r\n**Invoice Number:** 149388<br>\r\n**Issue Date:** 2026-03-31<br>\r\n**Total:** $41.18<br>\r\n**Due:** $41.18<br>\r\n\r\nView Invoice: <https://www.chargifypay.com/invoice/inv_c4nm6pnvjq67w?token=qbdxfzpg62x4fntskgdfrhj3>\r\n\r\nThank you,\r\n\r\nCoreWeave",
+  "cc": "",
+  "collect_all_messages": true,
+  "date": "Tue, 31 Mar 2026 21:10:09 +0000",
+  "eml_path": "/home/barberb/HACC/evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_ffeff258-2d45-11f1-b4c7-0a77ee3cd8b3-mailer.chargify.com_20260331_You-have-a-new-CoreWeave-invoice/message.eml",
+  "folder": "[Gmail]/All Mail",
+  "from": "ar@coreweave.com",
+  "matched_addresses": [],
+  "matched_fields": [
+    "body"
+  ],
+  "matched_terms": [
+    "barber"
+  ],
+  "message_id_header": "<ffeff258-2d45-11f1-b4c7-0a77ee3cd8b3@mailer.chargify.com>",
+  "participants": [
+    "ar@coreweave.com",
+    "starworks5@gmail.com"
+  ],
+  "raw_size_bytes": 88977,
+  "relevance_score": 1.0,
+  "subject": "You have a new CoreWeave invoice",
+  "to": "starworks5@gmail.com"
+}

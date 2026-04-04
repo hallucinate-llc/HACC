@@ -1,0 +1,568 @@
+Delivered-To: starworks5@gmail.com
+Received: by 2002:a05:7208:20c8:b0:fa:5ef1:c6ed with SMTP id z8csp899858rbz;
+        Thu, 2 Apr 2026 09:24:57 -0700 (PDT)
+X-Received: by 2002:a05:690c:7406:b0:79a:cc18:19c6 with SMTP id 00721157ae682-7a211944be7mr96429777b3.34.1775147097065;
+        Thu, 02 Apr 2026 09:24:57 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1775147097; cv=fail;
+        d=google.com; s=arc-20240605;
+        b=VNTpt5gYX/bRCvCvgzzrXqm65UwGQb4J88T9r1MrMi4jndZ59o8X01GtAYvyD9ELl/
+         e5pjEYxu+SCc5rTCcMpZvPqJy/+b+SrCFspFAp+vJw068QlfoSpmr5/xu+6LTp0lE0K6
+         QLHU319cQT5dOYnJqMAKAYZDHlXuwUjGtdx4lI0gsEhSYkQXTDXKU4V1NmGS+IWkyLu8
+         kGzBhxQw8hbzm6iv4Y323iKMhSt1bJuHSXG7gknDl1zqG5SDpOKpN4yPMRtKfvGvl0Bb
+         qMOLGXhtmono2Yzbr8WE/J6nlqpBpNjO63rYWXVJnqeL+lDs7+Ltb8ZJD1ly5wHn+zuL
+         wVeQ==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:authentication-results-original:msip_labels
+         :content-language:accept-language:in-reply-to:references:message-id
+         :date:thread-index:thread-topic:subject:to:from:dkim-signature;
+        bh=k+yxnUbjMJAJ+Fp215c6GmXxtzOUjUNW3U2PgBKMslc=;
+        fh=Q4+NH4vd0FIduByAlHyI0o1uvFh5lX6Eqy04l6XQQ3o=;
+        b=FWMTeb2M+YDwaxVA8kr2f+pRyzM9kiWMMuXDqv6f/HVZuL4kb+FYrIsREDMCkciqz+
+         PHtg+FWVnrba3KG8FWeC+rSHYKEwonLYiR8Z7SAkLhwZx2UaZFxQmDol5VB8Ba2GgeNh
+         U1FhgvssShoeI6+zM2NHwPEiUODb5EDmkoHrM2tu7kABMmbjpUJtR2RwD1Lv0gX3wShy
+         FlcxNwsZsXoM9EeLLoqy1qkN17dnriSU/x38O3rFzLRce+2N9uX058QVwGzF44WDegHw
+         mmScoizpVILRggQTIkIGK9ooCGi/5t5xKbi4RD3Y87GDZqgAW5lR5I2R4MHSxmltjTtE
+         6h7w==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=neutral (body hash did not verify) header.i=@Avanath.onmicrosoft.com header.s=selector2-Avanath-onmicrosoft-com header.b=1fM5XIix;
+       arc=fail (body hash mismatch);
+       spf=pass (google.com: domain of dyallen@brighthaven.com designates 148.163.129.48 as permitted sender) smtp.mailfrom=dyallen@brighthaven.com
+Return-Path: <dyallen@brighthaven.com>
+Received: from dispatch1-us1.ppe-hosted.com (dispatch1-us1.ppe-hosted.com. [148.163.129.48])
+        by mx.google.com with ESMTPS id 00721157ae682-7a3722ba169si29634057b3.179.2026.04.02.09.24.56
+        for <starworks5@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Thu, 02 Apr 2026 09:24:57 -0700 (PDT)
+Received-SPF: pass (google.com: domain of dyallen@brighthaven.com designates 148.163.129.48 as permitted sender) client-ip=148.163.129.48;
+Authentication-Results: mx.google.com;
+       dkim=neutral (body hash did not verify) header.i=@Avanath.onmicrosoft.com header.s=selector2-Avanath-onmicrosoft-com header.b=1fM5XIix;
+       arc=fail (body hash mismatch);
+       spf=pass (google.com: domain of dyallen@brighthaven.com designates 148.163.129.48 as permitted sender) smtp.mailfrom=dyallen@brighthaven.com
+X-Virus-Scanned: Proofpoint Essentials engine
+Received: from BYAPR05CU005.outbound.protection.outlook.com (mail-westusazon11020114.outbound.protection.outlook.com [52.101.85.114])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange ECDHE (P-384) server-signature RSA-PSS (4096 bits) server-digest SHA256)
+	(No client certificate requested)
+	by mx1-us1.ppe-hosted.com (PPE Hosted ESMTP Server) with ESMTPS id 740BFC40079
+	for <starworks5@gmail.com>; Thu,  2 Apr 2026 16:24:54 +0000 (UTC)
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=StimJngcdG3h3LGl3qhzWBdBnKgvTtXAZcAjifQzFBeJRRZzYc8/xeemcoQkA0El1MUJLoEE5Q6qH6r3dzn1n2maIwWn2zO9WYNVVkJVI0ZFE5MHqNli00UqMET4t8lowjSv8ukM/BFyVz0QnUzR7YN9nu3Pwys7HyRZDSaOVoj2H3dJ/lOzf2RoduZ8MmrUEmaMbigTq9cw5znlLXUeAivh8/rLNjUtecDdisMSrckNakXhBvVEUZMuu6JUe5TLL6tS6Jvhz9UL1wSajF2lC8rGC38C/Fx8Omq/R6AL7qVnbF1HyrrzSVK6mJMWoYohBFWHEJ7J52c5yzsz+Y5A+w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=Qwb8E4Vyfx8m8+JsAgA09UXLS+0v/DBh5p699WCxx70=;
+ b=XMPy1eZepgZfyIWzuWCWAZ26UpihdhhahahWQV2CYsUlkAtLuY7kOVtjhukLpsaUPi5WZSqdOAOQSzX5B5gbk/Q8FFFaJtzaZ9/4MD4Xq5j3wkXzEHEscYD1+qG2KDPnGwh3jyIiMKxqJAGvq7H50oCJ1YG42P4+HuRKHIxZOGJCnhTSlCibqrcWwrK0UQpzH4hem3CA0tI41pMKWQ3uezFaw1s1SEjWZKYR3f70RbewqjeQqTBU/nwmPQlfYvFUduKMR/IKVfkn0dhJvGk6LKogqfli1hPcnsGcOu2egnIL5j5yXZr13iN6gHfpWRMd1Pzd45C7lTg/aaQBJHew0g==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass (sender ip is
+ 104.209.35.28) smtp.rcpttodomain=gmail.com smtp.mailfrom=brighthaven.com;
+ dmarc=bestguesspass action=none header.from=brighthaven.com; dkim=none
+ (message not signed); arc=none (0)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=Avanath.onmicrosoft.com; s=selector2-Avanath-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=Qwb8E4Vyfx8m8+JsAgA09UXLS+0v/DBh5p699WCxx70=;
+ b=1fM5XIix8f42MP7z695EZ1rgaXLwdpVuzfm/+TdjDfEQ7VWoH1X8owPjo6vNry8qYBq3RxcZMycLetmEHlzCM1JaCi6UEcHPxSWvqWlDSI/zWKHvwNrjEvO7002sZWpNn/VyKPSOKS4Tg+1UZkXClli7iOGcuKDgcsEO2T/vmEk=
+Received: from BLAPR03CA0089.namprd03.prod.outlook.com (2603:10b6:208:329::34)
+ by BY3PR08MB7010.namprd08.prod.outlook.com (2603:10b6:a03:36c::15) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9769.20; Thu, 2 Apr
+ 2026 16:24:51 +0000
+Received: from BL02EPF00029927.namprd02.prod.outlook.com
+ (2603:10b6:208:329:cafe::de) by BLAPR03CA0089.outlook.office365.com
+ (2603:10b6:208:329::34) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9769.18 via Frontend Transport; Thu,
+ 2 Apr 2026 16:24:50 +0000
+X-MS-Exchange-Authentication-Results: spf=pass (sender IP is 104.209.35.28)
+ smtp.mailfrom=brighthaven.com; dkim=none (message not signed)
+ header.d=none;dmarc=bestguesspass action=none header.from=brighthaven.com;
+Received-SPF: Pass (protection.outlook.com: domain of brighthaven.com
+ designates 104.209.35.28 as permitted sender)
+ receiver=protection.outlook.com; client-ip=104.209.35.28;
+ helo=us2.smtp.exclaimer.net; pr=C
+Received: from us2.smtp.exclaimer.net (104.209.35.28) by
+ BL02EPF00029927.mail.protection.outlook.com (10.167.249.52) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.9769.17 via Frontend Transport; Thu, 2 Apr 2026 16:24:50 +0000
+Received: from BYAPR08CU003.outbound.protection.outlook.com (40.93.1.105) by
+	 us2.smtp.exclaimer.net (104.209.35.28) with Exclaimer Signature Manager
+	 ESMTP Proxy us2.smtp.exclaimer.net (tlsversion=TLS12,
+	 tlscipher=TLS_DIFFIEHELLMAN_WITH_AES256_NONE); Thu, 2 Apr 2026 16:24:50
+	 +0000
+X-ExclaimerHostedSignatures-MessageProcessed: true
+X-ExclaimerProxyLatency: 17007281
+X-ExclaimerImprintLatency: 1739833
+X-ExclaimerImprintAction: 4a606fa10c6f46a8b2c2d77e1821d8c9
+Received: from DS7PR08MB6974.namprd08.prod.outlook.com (2603:10b6:5:3a0::14)
+ by BL3PR08MB7529.namprd08.prod.outlook.com (2603:10b6:208:344::16) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9769.21; Thu, 2 Apr
+ 2026 16:24:46 +0000
+Received: from DS7PR08MB6974.namprd08.prod.outlook.com
+ ([fe80::5d92:ef72:92a4:ead2]) by DS7PR08MB6974.namprd08.prod.outlook.com
+ ([fe80::5d92:ef72:92a4:ead2%5]) with mapi id 15.20.9745.027; Thu, 2 Apr 2026
+ 16:24:45 +0000
+From: Dyanna Allen <dyallen@brighthaven.com>
+To: benjamin barber <starworks5@gmail.com>
+Subject: Re: 2 bedroom 60% application
+Thread-Topic: 2 bedroom 60% application
+Thread-Index: AQHcwi6ZANNqs78rLEa8Ct2vBEd42rXL9axX
+Date: Thu, 2 Apr 2026 16:24:45 +0000
+Message-ID:
+ <DS7PR08MB6974AF084A97FF4ADC443FE4B451A@DS7PR08MB6974.namprd08.prod.outlook.com>
+References:
+ <CAMTdTS8yN-GZONyeQOwrS93drNdF7QHojAfD3vGC_tUk=nffaA@mail.gmail.com>
+In-Reply-To:
+ <CAMTdTS8yN-GZONyeQOwrS93drNdF7QHojAfD3vGC_tUk=nffaA@mail.gmail.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+msip_labels:
+Authentication-Results-Original: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=brighthaven.com;
+x-ms-traffictypediagnostic:
+	DS7PR08MB6974:EE_|BL3PR08MB7529:EE_|BL02EPF00029927:EE_|BY3PR08MB7010:EE_
+X-MS-Office365-Filtering-Correlation-Id: de59eddd-0518-47f5-96ea-08de90d45d85
+X-MS-Exchange-SenderADCheck: 1
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam-Untrusted:
+ BCL:0;ARA:13230040|376014|366016|1800799024|38070700021|13003099007|56012099003|18002099003|22082099003|8096899003;
+X-Microsoft-Antispam-Message-Info-Original:
+ flzEP62gi/Qw4a+J4hpcd1jouO5xsIBuSISmMPsJjl6LmiJ/jMTmTKscFg7qWDMtIFImSrNm76TOHUfiC+f60iYGu7G03dJIOK/1mr/H8fJ57l7ueu+hQwLBLEoW7ajJv4EyrhqUD4EMVUwdVe8yoIZXIQt6N4tpfbWZSpkMQk5tyS9HbFMtEOKjrgBq/xtss21jz6TSV8e3+nylCK8k/dP7LUJqGtNDo9TkRDTMfDdi13nUISYEqqogdc7yuaJLySzRkQIDMXyd7wvhjrZ1dtmUC22jyt89c8btFLHS7Khe3rtL6O2GHQQWzwVNCQ4Q2cWYemNQcwpY1Wo9UEziogexKg2bIxBI3KKqn9t1kzefk1ibvfMTlW52ofmpTsEzVgbqMQn+6p9UCzo6fLbKClH687ZgCkzcaTizXHZUBQSorsSy8g8zgge1FRwlZRwwHQqeBg2tYwW69+fp5rfN4Oq2yzJGiLuy4eRWezZJuw8C+4pNBr5jYcKDD3n/C+mnoGKVnxgV1EGrKWXXFGO7dUj2qhccIVWQdVmwZW31iQ4B4YfwWPOa+4XxeMBAfiBRtkEAVVdsHCb7L4EXGjNeJjGULWwTp7zkhmaWX3QzDNiW6/xcHFgJDk52GLJJ/BXNm+3CLu30m4uWnRESKm8r98yluwsdzbKbhUBzONWNvD4ON6eoB6vI+gsX/adWZU1dR08D39D/F82RC4Xg32hxujx0UD8+SB0ZLwcvp6LOzU+ZyYCgbip2RZ8d3F5TjLG/CfEFRcYMVGE9PAdVdr8/sus4jPtjWsv6mG0rfJY/NV0=
+X-Forefront-Antispam-Report-Untrusted:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:DS7PR08MB6974.namprd08.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230040)(376014)(366016)(1800799024)(38070700021)(13003099007)(56012099003)(18002099003)(22082099003)(8096899003);DIR:OUT;SFP:1102;
+Content-Type: multipart/alternative;
+	boundary="_000_DS7PR08MB6974AF084A97FF4ADC443FE4B451ADS7PR08MB6974namp_"
+MIME-Version: 1.0
+X-Exchange-RoutingPolicyChecked:
+ ZgUQ/W4wXnGYEz8/7jLcRiYmnVvXbgyy0N9K/08eoEC13JgxFT/J6+PbeS3IrkztlU9cDR+Pqw6Y5Fqv9aXAuWYPJ0lc+useekxcti/R4YzGF5oWYlimyEmzKRnQvvtF/N1sOG5Mo+zpCyPKFaxtu9dGz6pexNvCJCVgEii0e3Bu5lfEyJEZcTzLx3MncF4s6S9uMxfy/rmGFRWEU9v5biXymve4CL04X8N1XcClDPMXusljM8r1CUD0fzbJPs2Ed+x0WUzNChBrTvw2yVJidjhP6TUPzHUpymf4xio4ciYNDASAaY3dZrt6SuAeJwRgiXDJXQBbp79TVTGGNKcyuA==
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BL3PR08MB7529
+X-EOPAttributedMessage: 0
+X-MS-Exchange-Transport-CrossTenantHeadersStripped:
+ BL02EPF00029927.namprd02.prod.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id-Prvs:
+	662dcbf1-a3d6-4e2f-9e0a-08de90d45a14
+X-Microsoft-Antispam:
+	BCL:0;ARA:13230040|35042699022|82310400026|6049299003|1800799024|36860700016|376014|14060799003|4053099003|13003099007|4013099003|22082099003|18002099003|56012099003|8096899003;
+X-Microsoft-Antispam-Message-Info:
+	ZjrUvbsy1fOHhr5+1qfBhl1q/royZFRjrLZiSf1yEYGDRT/6EVsbLjLLd+ULcgndr5D03HW9K3ElyqO1GURh1zxiB88VhrUKLp+m4OgV/qBRqFcUOVdSF77B8h3SFM+lQV0Vu7uem30gDU336Uda6c3QYucwc+BAP0wjnAH4SgVF+zVzkH55QIqqQrAjhIJ2W2ll+DJvgMfevtsADQRexNgwRfcmPnMA+VPKkUirG+GdY8MywdTCP3PLY/q3DcEpMXbzHCDS64H2qHp7zvl2jWyRcg8oI4p+Psw9Aik5Lxp5mKoaDN0w/SxGIfI2AAQgX5gad4gOI1gVZlztWBae9nfb3NTl4jBTXsxzSu4oPxWUu0nhl3SEb1y88JSNfz+LQr6iMkdwwFIWbDnqioJX6yrR7TOemAXfI/uIa6DA/wjMuVyAybRws8Xf4HfYaHhwSDPUds7V41gEi/b+jmRmYpauPZUsbSHlP5MVN7vAq+5u6D8fTZtOz2M9chWwxKosX0q/PWNKk7LDvBZvv0lGGUgM1Ml9/evyqLQ1EY8FryVr/geLr3miOf7V6FYmhmp2ovOlNvgkpAnCkYbDqZefNkgni1JqTD/GRvnTbo9/UMr+bIoEApL1jB04SZVm4HoTG+Ol+SvkS+0NcJA+npqW7m693oG/BM8ytfc4AYhzUV1UVctmPl2qLP+jzMVwjQnpdux3u7Ji/pGYAf6D58dt75FxxJp1m+kHRjdaNfo+0mg=
+X-Forefront-Antispam-Report:
+	CIP:104.209.35.28;CTRY:US;LANG:en;SCL:1;SRV:;IPV:CAL;SFV:NSPM;H:us2.smtp.exclaimer.net;PTR:us2.smtp.exclaimer.net;CAT:NONE;SFS:(13230040)(35042699022)(82310400026)(6049299003)(1800799024)(36860700016)(376014)(14060799003)(4053099003)(13003099007)(4013099003)(22082099003)(18002099003)(56012099003)(8096899003);DIR:OUT;SFP:1102;
+X-MS-Exchange-AntiSpam-MessageData-ChunkCount: 1
+X-MS-Exchange-AntiSpam-MessageData-0:
+	75XAP4hr8qxcuuEw7YmnkcvVVWfNlegA2GvrANRcKWKxkGPbkRjtm4i51qOZpPgmq1tfDfWxClD6cZQKVoeryVzkGJL4GxkfIrYu9JD8knSTuR5OiS74yCcJEUqzBQl93BG69NQwB+qpV6WjAbX+Xlcfo5l6++A/53ErAs7mphEJKc925jevI9sNeevEKCzo0ob95YudLWEb8oPF9JiwCzSmdAK5yGQYSH1WpFNj3y0BMsmr6U47kkKzZc9Toj7jbsxtBpMbfmaShqLus02BtOqi9T4nND0eH7a5KlCFVNTTyBT4EoU513Z6dazqisV0sEXnSfbhjGlIIuasou9ayD7Xq7c0mMjSRpeutUgYBxd7oHLZXm5/gT2P/E2sl/gKT5wfrCCEfAV4ZgVSIubwgJBgHZvsOng244PSTca6y+E3yNiCW0F5JRJ8rOPgiZX+
+X-OriginatorOrg: brighthaven.com
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 02 Apr 2026 16:24:50.5418
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: de59eddd-0518-47f5-96ea-08de90d45d85
+X-MS-Exchange-CrossTenant-Id: fb1958b5-be67-4243-a348-919062759d4f
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=fb1958b5-be67-4243-a348-919062759d4f;Ip=[104.209.35.28];Helo=[us2.smtp.exclaimer.net]
+X-MS-Exchange-CrossTenant-AuthSource:
+	BL02EPF00029927.namprd02.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BY3PR08MB7010
+X-MDID: 1775147095-MnvnD2gVtfDV
+X-PPE-STACK: {"stack":"us1"}
+X-MDID-O:
+ us1;ut7;1775147095;MnvnD2gVtfDV;<dyallen@brighthaven.com>;6c5cd4087b66a13c2c4537883595a9fa
+X-PPE-TRUSTED: V=1;DIR=OUT;
+
+--_000_DS7PR08MB6974AF084A97FF4ADC443FE4B451ADS7PR08MB6974namp_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Hello Benjamin, I hope you=E2=80=99re doing well. I just wanted to follow u=
+p and let you know that I sent the application yesterday for the 2-bedroom.=
+ Please let me know if you received it or if there=E2=80=99s anything else =
+you need from me. Thanks so much!
+-Dyanna
+
+Dyanna Allen
+Temp CM
+Sitka
+1115 NW Northrup StPortlandOR97209
+D (503) 306-3400
+W brighthavencommunities.com
+________________________________
+From: benjamin barber <starworks5@gmail.com>
+Sent: Wednesday, April 1, 2026 4:23 PM
+To: Dyanna Allen <dyallen@brighthaven.com>
+Subject: 2 bedroom 60% application
+
+I was wondering if I can move into a 2 bedroom fairly soon, please send me =
+an application form. =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=
+=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=
+=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =
+=E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=
+=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=
+=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =
+=E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=
+=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=
+=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =
+=E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=
+=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=
+=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =
+=E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=
+=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=
+=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =
+=E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=
+=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=
+=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =
+=E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=
+=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D
+NkdkJdXPPEBannerStart
+External Sender - From: (benjamin barber <starworks5@gmail.com>)<https://us=
+1.proofpointessentials.com/email-details/?k=3Dk1&payload=3D53616c7465645f5f=
+5823661ef1ef22de188fce396d79f3cb1bcfe59eae8025608baaeb5a449c96fa6641367cf6c=
+d6bebc60609b7e957e765b99a1031af3ece0bbd57ddd93f3d206252c48639b5c295e3d2251b=
+62695ed49e79e1e218ccc0b8184c5e2c2fc069f48d5bfaf9df0bcef366beeafe389bd70df41=
+a01b01c0bafb2608e9335d778680b664534197b66d306c857b68749636f4002fd43a6235390=
+0fdbd1b475377f2e49bed81b1bb9881ce1f4ff133f29bd2c4fb237e45d9ad6f98c5318c61aa=
+75e957dc2330a2d8d5edd2779ad808cd044dbf200ee22b141b7bf2d469bb730528885d3d060=
+bbc1ab36380c49>
+This message came from outside your organization.
+Learn More<https://us1.proofpointessentials.com/email-details/?k=3Dk1&paylo=
+ad=3D53616c7465645f5f5823661ef1ef22de188fce396d79f3cb1bcfe59eae8025608baaeb=
+5a449c96fa6641367cf6cd6bebc60609b7e957e765b99a1031af3ece0bbd57ddd93f3d20625=
+2c48639b5c295e3d2251b62695ed49e79e1e218ccc0b8184c5e2c2fc069f48d5bfaf9df0bce=
+f366beeafe389bd70df41a01b01c0bafb2608e9335d778680b664534197b66d306c857b6874=
+9636f4002fd43a62353900fdbd1b475377f2e49bed81b1bb9881ce1f4ff133f29bd2c4fb237=
+e45d9ad6f98c5318c61aa75e957dc2330a2d8d5edd2779ad808cd044dbf200ee22b141b7bf2=
+d469bb730528885d3d060bbc1ab36380c49>
+NkdkJdXPPEBannerEnd
+I was wondering if I can move into a 2 bedroom fairly soon, please send me =
+an application form.
+
+--_000_DS7PR08MB6974AF084A97FF4ADC443FE4B451ADS7PR08MB6974namp_
+Content-Type: multipart/related; boundary="=-xqMtX4r5oZsQdZ/rDAy87Q=="
+
+--=-xqMtX4r5oZsQdZ/rDAy87Q==
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+Content-length: 8863
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<style type=3D"text/css" style=3D"display:none;"> P {margin-top:0;margin-bo=
+ttom:0;} </style>
+</head>
+<body dir=3D"ltr">
+<div style=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, =
+Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+Hello Benjamin, I hope you=E2=80=99re doing well. I just wanted to follow u=
+p and let you know that I sent the application yesterday for the 2-bedroom.=
+ Please let me know if you received it or if there=E2=80=99s anything else =
+you need from me. Thanks so much!</div>
+<div class=3D"elementToProof" style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; c=
+olor: rgb(0, 0, 0);">
+-Dyanna</div>
+<div dir=3D"ltr" style=3D"mso-line-height-rule:exactly;-webkit-text-size-ad=
+just:100%;font-size:1px;direction:ltr;"><table dir=3D"ltr" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0" style=3D"width:100%;direction:ltr;border-c=
+ollapse:collapse;font-size:1px;"><tr style=3D"font-size:0;"><td align=3D"le=
+ft" style=3D"vertical-align:top;"><table cellpadding=3D"0" cellspacing=3D"0=
+" border=3D"0" style=3D"border-collapse:collapse;font-size:0;"><tr style=3D=
+"font-size:0;"><td align=3D"left" style=3D"padding:30px 0 0;vertical-align:=
+top;"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"bord=
+er-collapse:collapse;font-size:0;"><tr style=3D"font-size:0;"><td align=3D"=
+left" style=3D"padding:0;vertical-align:top;"><table cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" style=3D"border-collapse:collapse;font-size:0;co=
+lor:#655D9A;font-style:normal;font-weight:700;white-space:nowrap;"><tr styl=
+e=3D"font-size:13px;"><td align=3D"left" style=3D"vertical-align:top;font-f=
+amily:Verdana;">Dyanna&nbsp;Allen</td><td style=3D"font-size:0;"><span styl=
+e=3D"font-family:remialcxesans;font-size:1px;color:#FFFFFF;line-height:1px;=
+">&#8203;<span style=3D"font-family:&#39;template-enWw775zEfCBlGBFve5Ehw&#3=
+9;;">&#8203;</span><span style=3D"font-family:&#39;zone-1&#39;;">&#8203;</s=
+pan><span style=3D"font-family:&#39;zones-AQ&#39;;">&#8203;</span></span></=
+td></tr><tr style=3D"font-size:12px;font-weight:400;"><td align=3D"left" st=
+yle=3D"vertical-align:top;font-family:Verdana;">Temp&nbsp;CM</td></tr></tab=
+le></td></tr><tr style=3D"font-size:0;"><td align=3D"left" style=3D"padding=
+:13px 0 0;vertical-align:top;"><table cellpadding=3D"0" cellspacing=3D"0" b=
+order=3D"0" style=3D"border-collapse:collapse;font-size:0;font-style:normal=
+;white-space:nowrap;"><tr style=3D"font-size:12px;color:#6D6969;font-weight=
+:400;"><td align=3D"left" style=3D"vertical-align:top;font-family:Verdana;"=
+>Sitka</td></tr><tr style=3D"font-size:0;"><td align=3D"left" style=3D"vert=
+ical-align:top;"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"border-collapse:collapse;font-size:0;"><tr style=3D"font-size:0;"><t=
+d align=3D"left" style=3D"vertical-align:top;"><table cellpadding=3D"0" cel=
+lspacing=3D"0" border=3D"0" style=3D"border-collapse:collapse;font-size:0;c=
+olor:#6D6969;font-style:normal;font-weight:400;white-space:nowrap;"><tr sty=
+le=3D"font-size:12px;"><td align=3D"left" style=3D"padding:0 5px 0 0;vertic=
+al-align:top;font-family:Verdana;">1115&nbsp;NW&nbsp;Northrup&nbsp;St</td><=
+/tr></table></td><td align=3D"left" style=3D"vertical-align:top;"><table ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:col=
+lapse;font-size:0;color:#6D6969;font-style:normal;font-weight:400;white-spa=
+ce:nowrap;"><tr style=3D"font-size:12px;"><td align=3D"left" style=3D"paddi=
+ng:0 5px 0 0;vertical-align:top;font-family:Verdana;">Portland</td></tr></t=
+able></td><td align=3D"left" style=3D"vertical-align:top;"><table cellpaddi=
+ng=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:collapse;f=
+ont-size:0;color:#6D6969;font-style:normal;font-weight:400;white-space:nowr=
+ap;"><tr style=3D"font-size:12px;"><td align=3D"left" style=3D"padding:0 5p=
+x 0 0;vertical-align:top;font-family:Verdana;">OR</td></tr></table></td><td=
+ align=3D"left" style=3D"vertical-align:top;font-size:12px;color:#6D6969;fo=
+nt-family:Verdana;font-style:normal;font-weight:400;white-space:nowrap;">97=
+209</td></tr></table></td></tr><tr style=3D"font-size:0;"><td align=3D"left=
+" style=3D"vertical-align:top;"><table cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0" style=3D"border-collapse:collapse;font-size:0;color:#655D9A;fo=
+nt-style:normal;font-weight:700;white-space:nowrap;"><tr style=3D"font-size=
+:8.67px;"><td align=3D"left" style=3D"vertical-align:top;font-family:Verdan=
+a;">D&nbsp;<a href=3D"tel:(503)%20306-3400" target=3D"_blank" id=3D"LPlnk68=
+9713" style=3D"text-decoration:none;color:#6D6969;font-size:12px;font-weigh=
+t:400;">(503)&nbsp;306-3400</a></td></tr></table></td></tr><tr style=3D"fon=
+t-size:8.67px;color:#655D9A;font-weight:700;"><td align=3D"left" style=3D"v=
+ertical-align:top;font-family:Verdana;">W&nbsp;<a href=3D"http://avanath.co=
+m/" target=3D"_blank" id=3D"LPlnk689713" style=3D"text-decoration:none;colo=
+r:#6D6969;font-size:12px;font-weight:400;">brighthavencommunities.com</a></=
+td></tr></table></td></tr><tr style=3D"font-size:0;line-height:normal;"><td=
+ align=3D"left" style=3D"padding:15px 0 0;vertical-align:top;"><a href=3D"h=
+ttp://www.avanath.com/" target=3D"_blank" id=3D"LPlnk689713" style=3D"text-=
+decoration:none;"><img src=3D"cid:image977432.png@F6F97562.4378A721" width=
+=3D"215" height=3D"75" border=3D"0" alt=3D"" style=3D"width:215px;min-width=
+:215px;max-width:215px;height:75px;min-height:75px;max-height:75px;font-siz=
+e:0;" /></a></td></tr></table></td></tr></table></td></tr></table></div><di=
+v id=3D"appendonsend"></div>
+<hr style=3D"display:inline-block;width:98%" tabindex=3D"-1">
+<div id=3D"divRplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" st=
+yle=3D"font-size:11pt" color=3D"#000000"><b>From:</b> benjamin barber &lt;s=
+tarworks5@gmail.com&gt;<br>
+<b>Sent:</b> Wednesday, April 1, 2026 4:23 PM<br>
+<b>To:</b> Dyanna Allen &lt;dyallen@brighthaven.com&gt;<br>
+<b>Subject:</b> 2 bedroom 60% application</font>
+<div>&nbsp;</div>
+</div>
+<style>
+<!--
+div
+	{margin:0!important;
+	padding:16px!important}
+.x_ExternalClass
+	{width:100%}
+.x_ExternalClass, .x_ExternalClass p, .x_ExternalClass span, .x_ExternalCla=
+ss font, .x_ExternalClass td, .x_ExternalClass div
+	{line-height:100%}
+#x_outlook a
+	{padding:0}
+table
+	{}
+table, td
+	{border-collapse:collapse}
+.x_pfptPreheader10EBA3
+	{display:none!important;
+	visibility:hidden;
+	font-size:1px;
+	line-height:1px;
+	max-height:0px;
+	max-width:0px;
+	opacity:0;
+	overflow:hidden}
+.x_pfptFooter10EBA3
+	{margin-bottom:50px!important}
+-->
+</style>
+<div><span class=3D"x_pfptPreheader10EBA3" style=3D"display:none!important;=
+ visibility:hidden; font-size:1px; color:#ffffff; line-height:1px; max-heig=
+ht:0px; max-width:0px; opacity:0; overflow:hidden">I was wondering if I can=
+ move into a 2 bedroom fairly soon,
+ please send me an application form. =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=
+=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =
+=E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=
+=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=
+=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =
+=E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=
+=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=
+=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =
+=E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=
+=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=
+=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =
+=E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=
+=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=
+=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =
+=E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=
+=80=8D =E2=80=8D =E2=80=8D =E2=80=8D
+ =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=
+=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=
+=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =
+=E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=80=8D =E2=
+=80=8D =E2=80=8D =E2=80=8D =E2=80=8D </span>
+<div style=3D"display:none!important; display:none; visibility:hidden; font=
+-size:1px; color:#ffffff; line-height:1px; height:0px; max-height:0px; opac=
+ity:0; overflow:hidden">
+</div>
+<div dir=3D"ltr">I was wondering if I can move into a 2 bedroom fairly soon=
+, please send me an application form.</div>
+</div>
+</body>
+</html>
+
+--=-xqMtX4r5oZsQdZ/rDAy87Q==
+Content-Type: image/png; name=image977432.png
+Content-Transfer-Encoding: base64
+Content-ID: <image977432.png@F6F97562.4378A721>
+Content-Description: image977432.png
+Content-Disposition: inline; creation-date="Thu, 02 Apr 2026 16:24:50 +0000";
+	filename=image977432.png;
+	modification-date="Thu, 02 Apr 2026 16:24:50 +0000"; size=6955
+
+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
+cfnu/D/RUTs1qaqkeQAAAABJRU5ErkJggg==
+
+--=-xqMtX4r5oZsQdZ/rDAy87Q==--
+
+--_000_DS7PR08MB6974AF084A97FF4ADC443FE4B451ADS7PR08MB6974namp_--

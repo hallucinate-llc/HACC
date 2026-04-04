@@ -879,6 +879,7 @@ def test_case_matrix_cli_supports_trust_matrix_mode():
     validate_with_schema(payload, load_schema("trust_matrix.schema.json"))
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     filtered = build_trust_matrix_data(ROOT, trust="mixed_support")
     assert len(filtered["cases"]) == 2
     assert filtered["cases"][0]["authorityTrust"] == "mixed_support"
@@ -907,6 +908,7 @@ def test_case_matrix_cli_supports_warning_summary_mode():
     assert filtered["refreshRuntime"]["status"] == "complete"
     assert filtered["refreshRuntime"]["running"] is False
     assert filtered["refreshRuntime"]["elapsedHuman"] is not None
+    assert filtered["staleWhileRefreshing"] is False
     assert filtered["summary"]["warnedCaseCount"] == 2
     assert filtered["summary"]["warningCounts"]["mixed_support"] == 2
     label_filtered = build_warning_summary_data(ROOT, warning_label="paraphrase_heavy")
@@ -924,6 +926,7 @@ def test_case_matrix_cli_supports_warning_label_matrix_mode():
     validate_with_schema(filtered, load_schema("warning_label_matrix.schema.json"))
     assert filtered["refreshRuntime"]["status"] == "complete"
     assert filtered["refreshRuntime"]["running"] is False
+    assert filtered["staleWhileRefreshing"] is False
     assert list(filtered["labels"].keys()) == ["paraphrase_heavy"]
     assert filtered["labels"]["paraphrase_heavy"]["cases"][0]["caseId"] == "live_in_aide_case_no_violation_001"
 
@@ -942,6 +945,7 @@ def test_case_matrix_cli_supports_warning_entry_matrix_mode():
     validate_with_schema(trust_filtered, load_schema("warning_entry_matrix.schema.json"))
     assert trust_filtered["refreshRuntime"]["status"] == "complete"
     assert trust_filtered["refreshRuntime"]["running"] is False
+    assert trust_filtered["staleWhileRefreshing"] is False
     assert len(trust_filtered["cases"]) == 2
     assert all(item["authorityTrust"] == "mixed_support" for item in trust_filtered["cases"])
     warning_sorted = build_warning_entry_matrix_data(ROOT, sort_key="warningCount")
@@ -971,6 +975,7 @@ def test_case_matrix_cli_supports_warning_kind_matrix_mode():
     validate_with_schema(trust_filtered, load_schema("warning_kind_matrix.schema.json"))
     assert trust_filtered["refreshRuntime"]["status"] == "complete"
     assert trust_filtered["refreshRuntime"]["running"] is False
+    assert trust_filtered["staleWhileRefreshing"] is False
     assert trust_filtered["summary"]["caseCount"] == 2
     assert all(
         all(case["authorityTrust"] == "mixed_support" for case in item["cases"])
@@ -1000,6 +1005,7 @@ def test_case_matrix_cli_supports_warning_entry_summary_mode():
     validate_with_schema(payload, load_schema("warning_entry_summary.schema.json"))
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     assert payload["summary"]["caseCount"] == 3
     trust_filtered = build_warning_entry_summary_data(ROOT, trust="mixed_support")
     assert trust_filtered["summary"]["caseCount"] == 2
@@ -1037,6 +1043,7 @@ def test_case_matrix_cli_supports_warning_kind_summary_mode():
     validate_with_schema(payload, load_schema("warning_kind_summary.schema.json"))
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     assert payload["summary"]["kindCount"] == 16
     trust_filtered = build_warning_kind_summary_data(ROOT, trust="mixed_support")
     assert trust_filtered["summary"]["caseCount"] == 2
@@ -1064,6 +1071,7 @@ def test_case_matrix_cli_supports_summary_index_mode():
     summary_index = render_summary_index(ROOT)
     assert "Summary Index" in summary_index
     assert "Recommended First Stop: outputs/warning_entry_summary.json" in summary_index
+    assert "Stale While Refreshing: no" in summary_index
     assert (
         "Why Open This: Start with the warning-entry summary because it is the quickest dashboard-style orientation to which cases currently carry lower-trust warning posture."
         in summary_index
@@ -1074,6 +1082,7 @@ def test_case_matrix_cli_supports_summary_index_mode():
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
     assert payload["refreshRuntime"]["elapsedHuman"] is not None
+    assert payload["staleWhileRefreshing"] is False
     assert payload["recommendedFirstStop"] == "outputs/warning_entry_summary.json"
     assert (
         payload["whyOpenThis"]
@@ -1093,6 +1102,7 @@ def test_case_matrix_cli_supports_fit_index_mode():
     fit_index = render_fit_index(ROOT)
     assert "Fit Index" in fit_index
     assert "Recommended First Stop: outputs/fit_summary.json" in fit_index
+    assert "Stale While Refreshing: no" in fit_index
     assert (
         "Why Open This: Start with the fit summary because it is the quickest dashboard-style orientation to direct, analogical, and record-support posture across the current case set."
         in fit_index
@@ -1103,6 +1113,7 @@ def test_case_matrix_cli_supports_fit_index_mode():
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
     assert payload["refreshRuntime"]["elapsedHuman"] is not None
+    assert payload["staleWhileRefreshing"] is False
     assert payload["recommendedFirstStop"] == "outputs/fit_summary.json"
     assert (
         payload["whyOpenThis"]
@@ -1123,6 +1134,7 @@ def test_case_matrix_cli_supports_dashboard_index_mode():
     dashboard_index = render_dashboard_index(ROOT)
     assert "Dashboard Index" in dashboard_index
     assert "Recommended First Stop: outputs/dashboard_overview.json" in dashboard_index
+    assert "Stale While Refreshing: no" in dashboard_index
     assert (
         "Why Open This: Start with the dashboard overview because it is the single best top-level entry point into counts, warnings, fit posture, and the main discovery surfaces."
         in dashboard_index
@@ -1134,6 +1146,7 @@ def test_case_matrix_cli_supports_dashboard_index_mode():
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
     assert payload["refreshRuntime"]["elapsedHuman"] is not None
+    assert payload["staleWhileRefreshing"] is False
     assert (
         payload["whyOpenThis"]
         == "Start with the dashboard overview because it is the single best top-level entry point into counts, warnings, fit posture, and the main discovery surfaces."
@@ -1156,6 +1169,7 @@ def test_case_matrix_cli_supports_dashboard_overview_mode():
     assert "Summary" in overview
     assert "Fit Finding Filter: any" in overview
     assert "Refresh Runtime: complete" in overview
+    assert "Stale While Refreshing: no" in overview
     assert "Source Normalized Count" in overview
     assert "Source Status" in overview
     assert "Recommended First Stop: outputs/dashboard_overview.json" in overview
@@ -1177,6 +1191,7 @@ def test_case_matrix_cli_supports_dashboard_overview_mode():
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
     assert payload["refreshRuntime"]["elapsedHuman"] is not None
+    assert payload["staleWhileRefreshing"] is False
     assert payload["summary"]["caseCount"] == 4
     assert payload["discovery"]["recommendedFirstStop"] == "outputs/dashboard_overview.json"
     assert (
@@ -1242,6 +1257,7 @@ def test_case_matrix_cli_supports_dashboard_overview_mode():
 def test_case_matrix_cli_supports_source_metadata_matrix_mode():
     matrix = render_source_metadata_matrix(ROOT)
     assert "Source Metadata Matrix" in matrix
+    assert "Stale While Refreshing: no" in matrix
     assert "Case Count: 4" in matrix
     assert "Source Verified Count: 20" in matrix
     payload = build_source_metadata_matrix_data(ROOT)
@@ -1249,6 +1265,7 @@ def test_case_matrix_cli_supports_source_metadata_matrix_mode():
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
     assert payload["refreshRuntime"]["elapsedHuman"] is not None
+    assert payload["staleWhileRefreshing"] is False
     filtered = build_source_metadata_matrix_data(ROOT, trust="paraphrase_heavy")
     assert filtered["summary"]["caseCount"] == 1
     assert filtered["cases"][0]["caseId"] == "live_in_aide_case_no_violation_001"
@@ -1339,6 +1356,75 @@ def test_prepend_refresh_warning_wraps_remaining_text_audit_views():
             assert "may reflect a mid-refresh state" in warned
 
 
+def test_top_level_json_views_mark_stale_while_refresh_running():
+    with TemporaryDirectory() as tmpdir:
+        temp_root = Path(tmpdir)
+        outputs_dir = temp_root / "outputs"
+        outputs_dir.mkdir(parents=True, exist_ok=True)
+        (outputs_dir / ".refresh_state.json").write_text(
+            json.dumps(
+                {
+                    "status": "running",
+                    "startedAt": "2026-04-04T19:00:00+00:00",
+                    "completedAt": None,
+                }
+            )
+        )
+        (outputs_dir / "summary_index.json").write_text(
+            json.dumps(
+                {
+                    "generatedAt": "2026-04-04T19:00:00+00:00",
+                    "recommendedFirstStop": "outputs/warning_entry_summary.json",
+                    "whyOpenThis": "Start with the warning-entry summary because it is the quickest dashboard-style orientation to which cases currently carry lower-trust warning posture.",
+                    "entries": [
+                        {
+                            "kind": "warning_entry_summary",
+                            "jsonPath": "outputs/warning_entry_summary.json",
+                            "markdownPath": "outputs/warning_entry_summary.md",
+                            "description": "Compact case-first warning summary.",
+                            "priorityHint": "recommended",
+                            "whyOpenThis": "Open this first when you want the fastest compact view of which cases currently carry warning posture.",
+                        },
+                        {
+                            "kind": "warning_kind_summary",
+                            "jsonPath": "outputs/warning_kind_summary.json",
+                            "markdownPath": "outputs/warning_kind_summary.md",
+                            "description": "Compact kind-first warning summary.",
+                            "priorityHint": "primary",
+                            "whyOpenThis": "Open this when you want the fastest compact view of which artifact kinds most often carry warning posture.",
+                        },
+                    ],
+                }
+            )
+        )
+        payload = build_summary_index_data(temp_root)
+        validate_with_schema(payload, load_schema("summary_index.schema.json"))
+        assert payload["refreshRuntime"]["status"] == "running"
+        assert payload["refreshRuntime"]["running"] is True
+        assert payload["staleWhileRefreshing"] is True
+        (outputs_dir / "fit_summary.json").write_text(
+            json.dumps(
+                {
+                    "generatedAt": "2026-04-04T19:00:00+00:00",
+                    "summary": {
+                        "caseCount": 0,
+                        "authorityCount": 0,
+                        "directCount": 0,
+                        "analogicalCount": 0,
+                        "recordSupportCount": 0,
+                    },
+                    "singleCaseGuide": None,
+                    "cases": [],
+                }
+            )
+        )
+        fit_payload = build_fit_summary_data(temp_root)
+        validate_with_schema(fit_payload, load_schema("fit_summary.schema.json"))
+        assert fit_payload["refreshRuntime"]["status"] == "running"
+        assert fit_payload["refreshRuntime"]["running"] is True
+        assert fit_payload["staleWhileRefreshing"] is True
+
+
 def test_fail_if_refresh_running_raises_for_running_state():
     with TemporaryDirectory() as tmpdir:
         temp_root = Path(tmpdir)
@@ -1369,6 +1455,9 @@ def test_case_matrix_cli_supports_fit_matrix_mode():
     assert "Fit Finding Filter: any" in matrix
     payload = build_fit_matrix_data(ROOT)
     validate_with_schema(payload, load_schema("fit_matrix.schema.json"))
+    assert payload["refreshRuntime"]["status"] == "complete"
+    assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     filtered = build_fit_matrix_data(ROOT, trust="paraphrase_heavy")
     assert filtered["summary"]["caseCount"] == 1
     assert filtered["summary"]["directCount"] == 1
@@ -1386,6 +1475,7 @@ def test_case_matrix_cli_supports_fit_matrix_mode():
 def test_case_matrix_cli_supports_fit_summary_mode():
     summary = render_fit_summary(ROOT)
     assert "Fit Summary" in summary
+    assert "Stale While Refreshing: no" in summary
     assert "Case Count: 4" in summary
     assert "Direct Count: 10" in summary
     assert "Fit Finding Filter: any" in summary
@@ -1393,6 +1483,7 @@ def test_case_matrix_cli_supports_fit_summary_mode():
     validate_with_schema(payload, load_schema("fit_summary.schema.json"))
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     filtered = build_fit_summary_data(ROOT, trust="paraphrase_heavy")
     assert filtered["summary"]["caseCount"] == 1
     assert filtered["summary"]["recordSupportCount"] == 3
@@ -1426,6 +1517,7 @@ def test_case_matrix_cli_supports_fit_findings_mode():
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
     assert payload["refreshRuntime"]["elapsedHuman"] is not None
+    assert payload["staleWhileRefreshing"] is False
     warning_only = build_fit_findings_data(ROOT, severity="warning")
     assert warning_only["summary"]["caseCount"] == 4
     gap_only = build_fit_findings_data(ROOT, case_id="live_in_aide_case_no_violation_001")
@@ -1447,6 +1539,7 @@ def test_case_matrix_cli_supports_fit_findings_summary_mode():
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
     assert payload["refreshRuntime"]["elapsedHuman"] is not None
+    assert payload["staleWhileRefreshing"] is False
     warning_only = build_fit_findings_summary_data(ROOT, severity="warning")
     assert warning_only["summary"]["caseCount"] == 4
     gap_only = build_fit_findings_summary_data(ROOT, case_id="live_in_aide_case_no_violation_001")
@@ -1468,6 +1561,7 @@ def test_case_matrix_cli_supports_fit_findings_summary_mode():
 def test_case_matrix_cli_supports_audit_index_mode():
     audit_index = render_audit_index(ROOT)
     assert "Audit Index" in audit_index
+    assert "Stale While Refreshing: no" in audit_index
     assert "Recommended First Stop: outputs/case_audit_matrix.json" in audit_index
     assert (
         "Why Open This: Start with the case-audit matrix because it is the strongest joined repo-level view of confidence, trust, fit findings, warnings, and package posture."
@@ -1479,6 +1573,7 @@ def test_case_matrix_cli_supports_audit_index_mode():
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
     assert payload["refreshRuntime"]["elapsedHuman"] is not None
+    assert payload["staleWhileRefreshing"] is False
     assert payload["recommendedFirstStop"] == "outputs/case_audit_matrix.json"
     assert (
         payload["whyOpenThis"]
@@ -1499,6 +1594,7 @@ def test_case_matrix_cli_supports_audit_index_mode():
 def test_case_matrix_cli_supports_case_audit_matrix_mode():
     matrix = render_case_audit_matrix(ROOT)
     assert "Case Audit Matrix" in matrix
+    assert "Stale While Refreshing: no" in matrix
     assert "Trust Filter: any" in matrix
     assert "Warning Label Filter: any" in matrix
     assert "Fit Finding Filter: any" in matrix
@@ -1508,6 +1604,7 @@ def test_case_matrix_cli_supports_case_audit_matrix_mode():
     validate_with_schema(payload, load_schema("case_audit_matrix.schema.json"))
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     by_case = {item["caseId"]: item for item in payload["cases"]}
     assert by_case["live_in_aide_case_001"]["fitFinding"] == "analogical_support"
     assert (
@@ -2326,6 +2423,9 @@ def test_case_matrix_cli_subprocess_supports_trust_matrix_json_mode():
     )
     payload = json.loads(result.stdout)
     validate_with_schema(payload, load_schema("trust_matrix.schema.json"))
+    assert payload["refreshRuntime"]["status"] == "complete"
+    assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     assert len(payload["cases"]) == 1
     assert payload["cases"][0]["caseId"] == "live_in_aide_case_no_violation_001"
 
@@ -2370,6 +2470,7 @@ def test_case_matrix_cli_subprocess_supports_warning_summary_json_mode():
     validate_with_schema(payload, load_schema("warning_summary.schema.json"))
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     assert payload["summary"]["warnedCaseCount"] == 2
     assert payload["summary"]["warningCounts"]["mixed_support"] == 2
 
@@ -2414,6 +2515,7 @@ def test_case_matrix_cli_subprocess_supports_warning_label_matrix_json_mode():
     validate_with_schema(payload, load_schema("warning_label_matrix.schema.json"))
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     assert list(payload["labels"].keys()) == ["paraphrase_heavy"]
     assert payload["labels"]["paraphrase_heavy"]["summary"]["warnedCaseCount"] == 1
 
@@ -2437,6 +2539,7 @@ def test_case_matrix_cli_subprocess_supports_warning_entry_matrix_json_mode():
     validate_with_schema(payload, load_schema("warning_entry_matrix.schema.json"))
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     assert len(payload["cases"]) == 1
     assert payload["cases"][0]["caseId"] == "live_in_aide_case_no_violation_001"
 
@@ -2548,6 +2651,7 @@ def test_case_matrix_cli_subprocess_supports_warning_kind_matrix_json_mode():
     validate_with_schema(payload, load_schema("warning_kind_matrix.schema.json"))
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     assert payload["summary"]["kindCount"] == 1
     assert payload["kinds"][0]["kind"] == "summary"
 
@@ -2636,6 +2740,7 @@ def test_case_matrix_cli_subprocess_supports_warning_entry_summary_json_mode():
     validate_with_schema(payload, load_schema("warning_entry_summary.schema.json"))
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     assert payload["summary"]["caseCount"] == 3
     assert payload["singleCaseGuide"] is None
 
@@ -2701,6 +2806,7 @@ def test_case_matrix_cli_subprocess_supports_warning_kind_summary_json_mode():
     validate_with_schema(payload, load_schema("warning_kind_summary.schema.json"))
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     assert payload["summary"]["kindCount"] == 16
     assert payload["singleCaseGuide"] is None
 
@@ -2782,6 +2888,7 @@ def test_case_matrix_cli_subprocess_supports_summary_index_json_mode():
     validate_with_schema(payload, load_schema("summary_index.schema.json"))
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     entries = {item["kind"] for item in payload["entries"]}
     assert entries == {"warning_entry_summary", "warning_kind_summary"}
 
@@ -2803,6 +2910,7 @@ def test_case_matrix_cli_subprocess_supports_fit_index_json_mode():
     validate_with_schema(payload, load_schema("fit_index.schema.json"))
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     entries = {item["kind"] for item in payload["entries"]}
     assert entries == {"fit_matrix", "fit_summary", "fit_findings", "fit_findings_summary"}
 
@@ -2824,6 +2932,7 @@ def test_case_matrix_cli_subprocess_supports_dashboard_index_json_mode():
     validate_with_schema(payload, load_schema("dashboard_index.schema.json"))
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     entries = {item["kind"] for item in payload["entries"]}
     assert entries == {"outputs_index", "summary_index", "fit_index", "fit_findings", "fit_findings_summary", "refresh_state", "audit_index", "dashboard_overview"}
 
@@ -2845,6 +2954,7 @@ def test_case_matrix_cli_subprocess_supports_trust_matrix_json_mode():
     validate_with_schema(payload, load_schema("trust_matrix.schema.json"))
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
 
 
 def test_case_matrix_cli_subprocess_supports_fit_summary_json_refresh_runtime():
@@ -2864,6 +2974,7 @@ def test_case_matrix_cli_subprocess_supports_fit_summary_json_refresh_runtime():
     validate_with_schema(payload, load_schema("fit_summary.schema.json"))
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
 
 
 def test_case_matrix_cli_subprocess_supports_case_audit_matrix_refresh_runtime():
@@ -2883,6 +2994,7 @@ def test_case_matrix_cli_subprocess_supports_case_audit_matrix_refresh_runtime()
     validate_with_schema(payload, load_schema("case_audit_matrix.schema.json"))
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
 
 
 def test_case_matrix_cli_subprocess_supports_dashboard_overview_json_mode():
@@ -2902,6 +3014,7 @@ def test_case_matrix_cli_subprocess_supports_dashboard_overview_json_mode():
     validate_with_schema(payload, load_schema("dashboard_overview.schema.json"))
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     assert payload["summary"]["caseCount"] == 4
 
 
@@ -2968,6 +3081,7 @@ def test_case_matrix_cli_subprocess_supports_source_metadata_matrix_json_mode():
     validate_with_schema(payload, load_schema("source_metadata_matrix.schema.json"))
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     assert payload["summary"]["caseCount"] == 1
     assert payload["cases"][0]["caseId"] == "live_in_aide_case_no_violation_001"
 
@@ -2989,6 +3103,9 @@ def test_case_matrix_cli_subprocess_supports_fit_matrix_json_mode():
     )
     payload = json.loads(result.stdout)
     validate_with_schema(payload, load_schema("fit_matrix.schema.json"))
+    assert payload["refreshRuntime"]["status"] == "complete"
+    assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     assert payload["summary"]["caseCount"] == 1
     assert payload["summary"]["directCount"] == 1
     assert payload["summary"]["recordSupportCount"] == 3
@@ -3055,6 +3172,9 @@ def test_case_matrix_cli_subprocess_supports_fit_summary_json_mode():
     )
     payload = json.loads(result.stdout)
     validate_with_schema(payload, load_schema("fit_summary.schema.json"))
+    assert payload["refreshRuntime"]["status"] == "complete"
+    assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     assert payload["summary"]["caseCount"] == 1
     assert payload["summary"]["recordSupportCount"] == 3
     assert payload["cases"][0]["caseId"] == "live_in_aide_case_no_violation_001"
@@ -3123,6 +3243,7 @@ def test_case_matrix_cli_subprocess_supports_fit_findings_json_mode():
     validate_with_schema(payload, load_schema("fit_findings.schema.json"))
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     assert payload["summary"]["caseCount"] == 1
     assert payload["summary"]["recordSupportCases"] == 1
     assert payload["findings"][0]["caseId"] == "live_in_aide_case_no_violation_001"
@@ -3168,6 +3289,7 @@ def test_case_matrix_cli_subprocess_supports_fit_findings_summary_json_mode():
     validate_with_schema(payload, load_schema("fit_findings_summary.schema.json"))
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     assert payload["summary"]["caseCount"] == 1
     assert payload["summary"]["recordSupportCases"] == 1
     assert payload["cases"][0]["caseId"] == "live_in_aide_case_no_violation_001"
@@ -3214,6 +3336,7 @@ def test_case_matrix_cli_subprocess_supports_source_findings_json_mode():
     validate_with_schema(payload, load_schema("source_findings.schema.json"))
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     assert payload["summary"]["fullyNormalizedCases"] == 4
     assert len(payload["findings"]) == 4
     assert all(item["severity"] == "info" for item in payload["findings"])
@@ -3300,6 +3423,7 @@ def test_case_matrix_cli_subprocess_supports_audit_index_json_mode():
     validate_with_schema(payload, load_schema("audit_index.schema.json"))
     assert payload["refreshRuntime"]["status"] == "complete"
     assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     entries = {item["kind"] for item in payload["entries"]}
     assert "trust_matrix" in entries
     assert "warning_summary" in entries
@@ -3320,6 +3444,9 @@ def test_case_matrix_cli_subprocess_supports_case_audit_matrix_json_mode():
     )
     payload = json.loads(result.stdout)
     validate_with_schema(payload, load_schema("case_audit_matrix.schema.json"))
+    assert payload["refreshRuntime"]["status"] == "complete"
+    assert payload["refreshRuntime"]["running"] is False
+    assert payload["staleWhileRefreshing"] is False
     by_case = {item["caseId"]: item for item in payload["cases"]}
     assert by_case["live_in_aide_case_effective_accommodation_001"]["warningLabel"] == "mixed_support"
     assert (
@@ -4271,6 +4398,7 @@ def main() -> int:
         test_case_matrix_cli_supports_refresh_state_mode,
         test_prepend_refresh_warning_only_when_running,
         test_prepend_refresh_warning_wraps_remaining_text_audit_views,
+        test_top_level_json_views_mark_stale_while_refresh_running,
         test_fail_if_refresh_running_raises_for_running_state,
         test_case_matrix_cli_supports_fit_matrix_mode,
         test_case_matrix_cli_supports_fit_summary_mode,
