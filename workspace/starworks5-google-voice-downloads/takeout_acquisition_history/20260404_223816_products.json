@@ -1,0 +1,25 @@
+{
+  "status": "initialized",
+  "updated_at": "2026-04-04T22:38:16Z",
+  "case_slug": "consumer-google-voice-20260404_203432",
+  "delivery_destination": "drive",
+  "frequency": "one_time",
+  "page_source_path": null,
+  "downloads_dir": "./workspace/starworks5-google-voice-downloads",
+  "capture_json_path": "./workspace/starworks5-google-voice-downloads/takeout_capture.json",
+  "drive_fallback": {
+    "enabled": false,
+    "name_contains": "takeout",
+    "client_secrets_path": null,
+    "account_hint": null
+  },
+  "product_ids": [
+    "voice"
+  ],
+  "events": [
+    {
+      "type": "initialized",
+      "timestamp": "2026-04-04T22:38:16Z"
+    }
+  ]
+}

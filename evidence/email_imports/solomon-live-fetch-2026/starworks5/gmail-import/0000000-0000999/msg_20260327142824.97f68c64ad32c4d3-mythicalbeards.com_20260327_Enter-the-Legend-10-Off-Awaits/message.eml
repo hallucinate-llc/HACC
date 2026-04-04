@@ -1,0 +1,867 @@
+Delivered-To: starworks5@gmail.com
+Received: by 2002:a05:7208:3010:b0:fa:5ef1:c6ed with SMTP id f16csp1791559rba;
+        Fri, 27 Mar 2026 07:28:24 -0700 (PDT)
+X-Received: by 2002:a05:6214:29e8:b0:899:c469:8943 with SMTP id 6a1803df08f44-89ce8f5c90fmr34420506d6.55.1774621704632;
+        Fri, 27 Mar 2026 07:28:24 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1774621704; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Rx6Al3obuMRvIS5aKoGMBhx6OyeVYb+dl7uRi+xeKtwb1nAzX21aKJKJtVbte7u9yZ
+         g7QBdrl94j7Cxz2+4KQwQvj+X8zVlu8+D8ViTeKp+90sWXTIqByycA9y2xJWaDiBKDxX
+         zykIXLIgUrysknAYSjSc612cALJZPqwZrlWNEv5+K8KLXJMNfikmaS3i1EEYWdcN/xDa
+         OiZZz4kTndWSQkzlsRVg7CIAmteZna9m3EebKe8pMPcc7Ymomr0OcHzaFEYffidZzqoR
+         qpWyNbML6a40okYYsA7/S9nJE+bYdrRk7Uvnvh5Q2bNt25OnNl0MQzcDSmwaYauG9EA0
+         wlLw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-transfer-encoding:message-id:list-unsubscribe
+         :list-unsubscribe-post:feedback-id:to:from:subject:mime-version:date
+         :sender:dkim-signature:dkim-signature;
+        bh=SCb6I8P6l0beS8A+DjwcmZw5p7Wyhrb0dPuSRNOrdKY=;
+        fh=gPPrbYv6bjiCeSNOMtV7+ATcg7xOVeWRNeqU1P80kc4=;
+        b=ZqoSfS4XC68LIxIavVrX0BHAyqKEs0b29p8Oq8JLBcJ3F5AUdV5biZd7Qh3bI3g5lA
+         UDV0uKKPgSf176NHqNJenGxZqgBFrMqSND8kiHEvbSNtzfe9CgxutFH/IskctppTAvS2
+         IUUcAXMnV/eNDgxLiTI+gEG3PI5TvClE/hOLxjmQlhEA5OJoEpVjWm2pV/fEDBi82vuc
+         Te6iKly1hn6bVfLTO7tDlo1uswIUmZXRmkMZjI1/1+uwQJAWJwm2ji9tAfju8UkBdWiM
+         Am49VR6GpMifWIZQY/tJiYm7Ivhx1B407K2+1y5cKZfnCgcR7UO3L0IyWvSstAObDEjM
+         wV6A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mythicalbeards.com header.s=pic header.b=XN8+49mE;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=YNR1WNH2;
+       spf=pass (google.com: domain of bounce+ab657f.716cc1-starworks5=gmail.com@mythicalbeards.com designates 204.220.169.3 as permitted sender) smtp.mailfrom="bounce+ab657f.716cc1-starworks5=gmail.com@mythicalbeards.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mythicalbeards.com
+Return-Path: <bounce+ab657f.716cc1-starworks5=gmail.com@mythicalbeards.com>
+Received: from g3.gb126d70.use4.send.mailgun.net (g3.gb126d70.use4.send.mailgun.net. [204.220.169.3])
+        by mx.google.com with UTF8SMTPS id 6a1803df08f44-89cede7d2b4si12726556d6.584.2026.03.27.07.28.24
+        for <starworks5@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 27 Mar 2026 07:28:24 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce+ab657f.716cc1-starworks5=gmail.com@mythicalbeards.com designates 204.220.169.3 as permitted sender) client-ip=204.220.169.3;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mythicalbeards.com header.s=pic header.b=XN8+49mE;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=YNR1WNH2;
+       spf=pass (google.com: domain of bounce+ab657f.716cc1-starworks5=gmail.com@mythicalbeards.com designates 204.220.169.3 as permitted sender) smtp.mailfrom="bounce+ab657f.716cc1-starworks5=gmail.com@mythicalbeards.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mythicalbeards.com
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mythicalbeards.com; q=dns/txt; s=pic; t=1774621704; x=1774628904;
+ h=Content-Type: Content-Transfer-Encoding: Message-Id: List-Unsubscribe: List-Unsubscribe-Post: To: To: From: From: Subject: Subject: Mime-Version: Date: Sender: Sender: X-Feedback-Id;
+ bh=SCb6I8P6l0beS8A+DjwcmZw5p7Wyhrb0dPuSRNOrdKY=;
+ b=XN8+49mEqHswzs9hS3ugXF+LdbzfeP0SyWTcBfFwg91+0yNX4ScStsRh90fJd9q808GSydtZbdm+Acs+pSme60B4FSCnGz+RxNfFM1hMnjJSsDJWlpdy2Ipy2ZNjrkncWdbOCbl4GxhJtbEhwcBUwF5Ahv4rq7pHxqnlaI9GrWE=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg; t=1774621704; x=1774628904;
+ h=Content-Type: Content-Transfer-Encoding: Message-Id: List-Unsubscribe: List-Unsubscribe-Post: To: To: From: From: Subject: Subject: Mime-Version: Date: Sender: Sender: X-Feedback-Id;
+ bh=SCb6I8P6l0beS8A+DjwcmZw5p7Wyhrb0dPuSRNOrdKY=;
+ b=YNR1WNH252dY5gGFFBG0sWbJvReBFOCeiESnQgXICDcVFYmSEAnyVH5nrFDaWNCYRbeoXsmpPOJBWggapPX0NfFtFkLLNWm3h9w2uc0p7SAbQ206XCHpGUYuFF1Dmw/W8mLM3BbfaN3VmrP+uwwk3DahYLVeqDsj85U/OqCYfBI=
+X-Mailgun-Sid: WyIyMjUyNyIsInN0YXJ3b3JrczVAZ21haWwuY29tIiwiNzE2Y2MxIl0=
+X-Feedback-Id: andrew@mythicalbeards.com::68a74e2f30799b0f0a97ae81:mailgun
+Received: by ae4f8ec9f1599aaeb5b38b42c8da487b4d091e30481d8c688c11329ffcbf43b5 with HTTP
+ id 69c694081ce21d56f19112c5; Fri, 27 Mar 2026 14:28:24 GMT
+X-Mailgun-Sending-Ip-Pool-Name: BstS
+X-Mailgun-Sending-Ip-Pool: 665596289f43bfa346f3584f
+X-Mailgun-Sending-Ip: 204.220.169.3
+Sender: andrew@mythicalbeards.com
+Date: Fri, 27 Mar 2026 14:28:24 +0000
+Mime-Version: 1.0
+Subject: Enter the Legend: 10% Off Awaits
+From: Mythical Beards <andrew@mythicalbeards.com>
+To: starworks5@gmail.com
+X-Mailgun-Track: false
+Feedback-Id: 68a5a0b61a3943d4823d492e:68a0d595f6803fa40ed65dd6:automation:omnisend
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: <https://mvk.soundestlink.com/contactsPreferences/v2/unsubscribe/?b=68a0d595f6803fa40ed65dd6&c=69c693d2c2021a48232c9da6&payload=FPTEGfzbTDRY7mgyg1FAeHC9VoQ2FRs_e4yFciiV3nLbZuqp67pg_6Lwzdof0SiqPI1vrcpPkfmReLDblww_HWLAeYQqXP-gu8vEqA8MQOTq9uKlE6S9yL-AIXzwAZqZrDFDpjGd-KAnY7-h-1tmmLfwmgq5&headerUnsub=true>
+X-Mailgun-Variables: {"brandID": "68a0d595f6803fa40ed65dd6", "contactFlowID":
+ "69c693d24521cf16424482f7", "contactID": "69c693d2c2021a48232c9da6",
+ "flowBlockID": "ET7IwSwI", "flowID": "69c693d24521cf16424482f7", "letterID":
+ "68a5a0b61a3943d4823d492e", "letterSentID": "69c694087845691c8cd53bd3"}
+Message-Id: <20260327142824.97f68c64ad32c4d3@mythicalbeards.com>
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html>
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+<head><!-- Used for outlook versions from 9 and greater -->
+<!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPer=
+Inch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml>
+<![endif]-->
+<title>Enter the Legend: 10% Off Awaits</title>
+<meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Type"/>
+<meta content=3D"width=3Ddevice-width, initial-scale=3D1" name=3D"viewport"=
+/>
+<meta content=3D"telephone=3Dno" name=3D"format-detection"/>
+<link rel=3D"icon" href=3D"data:,">
+<link rel=3D"stylesheet" type=3D"text/css" href=3D"https://fonts.soundestli=
+nk.com/fonts/css/Poppins"/>
+<link rel=3D"stylesheet" type=3D"text/css" href=3D"https://fonts.soundestli=
+nk.com/fonts/css/Rubik"/>
+<style type=3D"text/css">
+html,body{width:100%!important;height:100%!important;margin:0 auto!importan=
+t;padding:0!important;-webkit-font-smoothing:antialiased;-webkit-text-size-=
+adjust:none;-ms-text-size-adjust:none;}body,table,td,a{-webkit-text-size-ad=
+just:100%;-ms-text-size-adjust:100%;}table{border-collapse:collapse;}table,=
+td{mso-table-lspace:0pt;mso-table-rspace:0pt;}th{font-weight:300;}img{-ms-i=
+nterpolation-mode:bicubic;}a[x-apple-data-detectors]{text-decoration:none!i=
+mportant;font-size:
+inherit!important;font-family:inherit!important;font-weight:inherit!importa=
+nt;line-height:inherit!important;color:inherit;}a:link,span.MsoHyperlink{te=
+xt-decoration:none;color:inherit;}u+#body a{text-decoration:none;font-size:=
+inherit;font-family:inherit;font-weight:inherit;line-height:inherit;color:i=
+nherit;}.appleFooterLinks a{text-decoration:none;color:inherit;}.desktop-wr=
+apper{display:table-cell;}.default-margin p{margin:0!important;}.centered-b=
+lock{display:block;margin:0 auto!important;}
+=2Emobile{display:none!important;}.side=
+-by-side{width:50%;max-width:50%;}.pro=
+duct-description-table th{mso-line-height-rule:exactly}.no-margin{margin:0;=
+}.margin-top{margin:4px 0 0 0;}p{word-spacing:normal;}
+@media screen and (max-width:600px){body{min-width:1px!important;}.desktop{=
+display:none!important;}.mobile{display:table!important;}.mobile-body-conta=
+iner{min-width:1px!important;}.mobile-container{width:100%!important;displa=
+y:table!important;}.mobile-container-half{width:50%!important;display:inlin=
+e-block!important;}.mobile-image{width:100%!important;height:auto!important=
+;}.mobile-bounded-image{max-width:100%!important;width:auto!important;heigh=
+t:auto!important;}.mobile-image-stacked{max-width:
+100%!important;max-height:552px!important;width:auto!important;}.mobile-ima=
+ge-stacked-height{height:auto!important;}.mobile-table{width:100%!important=
+;}.padding-left{padding-left:12px!important;}.padding-right{padding-right:1=
+2px!important;}.padding-top{padding-top:12px!important;}.padding-bottom{pad=
+ding-bottom:12px!important;}.mobile-hidden{display:none!important;}.placeho=
+lder-image-block-table-cell{height:150px!important;}/* STARTS Order confirm=
+ation */ .order-product-table-responsive-cell{
+display:block!important;width:100%;}.order-product-image-responsive-element=
+{width:80px!important;height:auto;}.placeholder-image-block-table-cell.orde=
+r-product-image-responsive-element{height:80px!important;}/* ENDS Order con=
+firmation */ /* STARTS Order billing & shipping */ .order-billing-and-shipp=
+ing-responsive-cell{display:table-row!important;}/* ENDS Order billing & sh=
+ipping */ .desktop-wrapper{display:inline-block!important;} }
+@media screen and (max-width:480px){.stack-column{display:block!important;w=
+idth:100%!important;min-width:100%!important;direction:ltr!important;paddin=
+g:12px 0px!important;box-sizing:border-box;} }
+@media screen and (max-width:600px){.n2-col-image-height{height:276px!impor=
+tant;}.n2-col-image-max-height{max-height:276px!important;}.n3-col-image-he=
+ight{height:176px!important;}.n3-col-image-max-height{max-height:176px!impo=
+rtant;}.n4-col-image-height{height:126px!important;}.n4-col-image-max-heigh=
+t{max-height:126px!important;} }
+@media screen and (max-width:480px){.n2-col-image-height{height:216px!impor=
+tant;}.n2-col-image-max-height{max-height:216px!important;}.n3-col-image-he=
+ight{height:136px!important;}.n3-col-image-max-height{max-height:136px!impo=
+rtant;}.n4-col-image-height{height:96px!important;}.n4-col-image-max-height=
+{max-height:96px!important;} }
+@media screen and (max-width:425px){.n2-col-image-height{height:188.5px!imp=
+ortant;}.n2-col-image-max-height{max-height:188.5px!important;}.n3-col-imag=
+e-height{height:117.66666666666666px!important;}.n3-col-image-max-height{ma=
+x-height:117.66666666666666px!important;}.n4-col-image-height{height:82.25p=
+x!important;}.n4-col-image-max-height{max-height:82.25px!important;} }
+@media screen and (max-width:375px){.n2-col-image-height{height:163.5px!imp=
+ortant;}.n2-col-image-max-height{max-height:163.5px!important;}.n3-col-imag=
+e-height{height:101px!important;}.n3-col-image-max-height{max-height:101px!=
+important;}.n4-col-image-height{height:69.75px!important;}.n4-col-image-max=
+-height{max-height:69.75px!important;} }
+@media screen and (max-width:320px){.n2-col-image-height{height:136px!impor=
+tant;}.n2-col-image-max-height{max-height:136px!important;}.n3-col-image-he=
+ight{height:82.66666666666667px!important;}.n3-col-image-max-height{max-hei=
+ght:82.66666666666667px!important;}.n4-col-image-height{height:56px!importa=
+nt;}.n4-col-image-max-height{max-height:56px!important;} }
+</style>
+</head>
+<body id=3D"body"
+style=3D"padding:0px;margin:0px"><p
+style=3D"max-height:0;font-size:0;line-height:0;margin:0;overflow:hidden;">=
+ Your beard=E2=80=99s next chapter begins with Mythical Beards. Claim your =
+gift inside. </p><div
+style=3D"display:none;width:0px;height:0px;max-height:0px;overflow:hidden;"=
+> &#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&=
+#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#84=
+7;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&=
+nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbs=
+p;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&=
+#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#84=
+7;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&=
+nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbs=
+p;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&=
+#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#84=
+7;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&=
+nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbs=
+p;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&=
+#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#84=
+7;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&=
+nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbs=
+p;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&=
+#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#84=
+7;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&=
+nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbs=
+p;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&=
+#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#84=
+7;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&=
+nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbsp;&#847;&nbs=
+p;
+&shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &sh=
+y; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; =
+&shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &sh=
+y; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; =
+&shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &sh=
+y; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; =
+&shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;
+&shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &sh=
+y; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; =
+&shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &sh=
+y; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; =
+&shy; &shy; &shy; &shy; &shy; </div><p
+style=3D"max-height:0;font-size:0;line-height:0;margin:0;overflow:hidden;">=
+ <img alt=3D"" border=3D"0" src=3D"https://mvk.soundestlink.com/ae/o/68a0d5=
+95f6803fa40ed65dd6/69c693d2c2021a48232c9da6/68a5a0561be60a467a5acff8/69c693=
+d24521cf16424482f7/ET7IwSwI?sig=3D2a66a03220ef0e41864ade69d51b60fef2d4a4ce7=
+c8db15caea338dfc2d80e64" width=3D"1" height=3D"1"/></p>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"
+      height=3D"100%"
+style=3D"background-color:#EDEEF0;" class=3D"mobile-body-container"><tr><td=
+>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"
+style=3D"min-width:290px"><tr><td>
+<table width=3D"600" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=
+=3D"center"
+style=3D"width:600px;margin:0px auto;background-color:#FFFFFF;" class=3D"mo=
+bile-container"><tr><td>
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr>=
+<td>
+<table id=3D"61028cb493050faf571d9b92" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D""><tr><td background=3D""
+style=3D"padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:=
+0px;background-repeat:no-repeat;background-size:cover;background-position:u=
+nset;">
+<table id=3D"61028cb493050faf571d9b93" background=3D"" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D"width:100%"><tr><td id=3D"61028cb493050faf571d9b94" class=3D"mobil=
+e-container"
+style=3D"width:600px;vertical-align:top;">
+<table id=3D"68a72b785718593672df8896" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"600" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:=
+0px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;"><a target=3D"_blank" data-link-id=3D"68a72b785=
+718593672df8896" href=3D"https://wgvw.omniaut1.com/ae/c/68a0d595f6803fa40ed=
+65dd6/69c693d2c2021a48232c9da6/68a5a0561be60a467a5acff8/69c693d24521cf16424=
+482f7/ET7IwSwI/aHR0cHM6Ly9teXRoaWNhbGJlYXJkcy5jb20vZGlzY291bnQvTVlUSDEw?sig=
+=3D8c006c6135b11f195e2cd46a8e3e0dbbdce5c097c7eaf876c6a4ae14df05c7ae"><img a=
+lt=3D"Welcome to the Myth"
+                                 class=3D"mobile-image centered-block"width=
+=3D"600"=20
+                                    height=3D"333"border=3D"0"src=3D"https:=
+//mvk.soundestlink.com/image/newsletter/68b2c22d93b91b4cfebc54ff"
+style=3D"max-width:600px;height:auto;margin:0 0;vertical-align:middle;font-=
+family:Arial,sans-serif;font-size:12px;color:#2b2120;line-height:150%;width=
+:600px;"></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"68a73583ce59301990bf2ca4" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D""><tr><td class=3D"padding-left padding-right" background=3D""
+style=3D"padding-left:40px;padding-right:40px;padding-top:0px;padding-botto=
+m:12px;background-repeat:no-repeat;background-size:cover;background-positio=
+n:unset;">
+<table id=3D"68a73583ce59301990bf2ca5" background=3D"" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D"width:100%"><tr><td id=3D"68a73583ce59301990bf2ca6" class=3D"mobil=
+e-container"
+style=3D"width:520px;vertical-align:top;">
+<table id=3D"68a73533ce59301990bf2ca3" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#2b2120;font-family:Arial,sans-serif;font-size:14px;line-hei=
+ght:1.5;mso-line-height-alt:150%;padding-top:12px;padding-right:0px;padding=
+-bottom:12px;padding-left:0px;" bgcolor=3D"" class=3D"mobile-table"><p
+style=3D"text-align:center;margin-top:0px;margin-bottom:0px;"><span
+style=3D"font-size:16px;font-family:Poppins,'Helvetica Neue',Helvetica,Aria=
+l,sans-serif;"><strong>Hi there,</strong></span></p>
+</td></tr></table>
+<table id=3D"68a73721ce59301990bf2cad" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#2b2120;font-family:Arial,sans-serif;font-size:14px;line-hei=
+ght:1.5;mso-line-height-alt:150%;padding-top:12px;padding-right:12px;paddin=
+g-bottom:12px;padding-left:12px;" bgcolor=3D"" class=3D"mobile-table"><p
+style=3D"text-align:center;margin-top:0px;margin-bottom:0px;" id=3D"isPaste=
+d"><span
+style=3D"font-size:24px;color:rgb(181,150,119);font-weight:400;font-style:n=
+ormal;text-decoration:none;font-family:Rubik,'Helvetica Neue',Helvetica,Ari=
+al,sans-serif;">You=E2=80=99ve officially joined the brotherhood of&nbsp;</=
+span><span
+style=3D"font-size:24px;color:rgb(181,150,119);font-style:normal;text-decor=
+ation:none;font-family:Rubik,'Helvetica Neue',Helvetica,Arial,sans-serif;">=
+<strong>legendary beards</strong></span><span
+style=3D"font-size:24px;color:rgb(181,150,119);font-weight:400;font-style:n=
+ormal;text-decoration:none;font-family:Rubik,'Helvetica Neue',Helvetica,Ari=
+al,sans-serif;">.</span></p>
+</td></tr></table>
+<table id=3D"68a735c1ce59301990bf2cab" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#2b2120;font-family:Arial,sans-serif;font-size:14px;line-hei=
+ght:1.5;mso-line-height-alt:150%;padding-top:12px;padding-right:12px;paddin=
+g-bottom:24px;padding-left:12px;" bgcolor=3D"" class=3D"mobile-table"><p
+style=3D"text-align:center;margin-top:0px;margin-bottom:0px;"><span
+style=3D"font-size:16px;color:rgb(0,0,0);font-weight:400;font-style:normal;=
+text-decoration:none;font-family:Poppins,'Helvetica Neue',Helvetica,Arial,s=
+ans-serif;">At Mythical Beards, every drop is crafted in small batches with=
+&nbsp;</span><span
+style=3D"font-size:16px;color:rgb(0,0,0);font-style:normal;text-decoration:=
+none;font-family:Poppins,'Helvetica Neue',Helvetica,Arial,sans-serif;"><str=
+ong>premium, natural ingredients</strong></span><span
+style=3D"font-size:16px;color:rgb(0,0,0);font-weight:400;font-style:normal;=
+text-decoration:none;font-family:Poppins,'Helvetica Neue',Helvetica,Arial,s=
+ans-serif;">&nbsp;designed to give your beard more than just care =E2=80=94=
+ it gives it a story.</span></p>
+</td></tr></table><!--Line/space content block starts -->
+<table id=3D"68a73af99125b4c7faa58818" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"><tr><td align=3D"center"
+style=3D"padding-top:6px;padding-right:12px;padding-bottom:6px;padding-left=
+:12px;">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"80%"><tr><=
+td
+style=3D"font-size:0;line-height:0;border-top:1px solid #B59677;">&nbsp;
+</td></tr></table>
+</td></tr></table><!--Line/space content block ends -->
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"68a73756ce59301990bf2cae" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D""><tr><td class=3D"padding-left padding-right padding-bottom" back=
+ground=3D"https://mvk.soundestlink.com/image/newsletter/68a73975ab20897a575=
+67ded"
+style=3D"padding-left:40px;padding-right:40px;padding-top:0px;padding-botto=
+m:24px;background:url('https://mvk.soundestlink.com/image/newsletter/68a739=
+75ab20897a57567ded');background-repeat:no-repeat;background-size:cover;back=
+ground-position:unset;">
+<table id=3D"68a73756ce59301990bf2caf" background=3D"" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D"width:100%"><tr><td id=3D"68a73756ce59301990bf2cb0" class=3D"mobil=
+e-container"
+style=3D"width:520px;vertical-align:top;">
+<table id=3D"68a7375dce59301990bf2cb4" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#6E3D1F;font-family:Arial,sans-serif;font-size:14px;line-hei=
+ght:1.5;mso-line-height-alt:150%;padding-top:12px;padding-right:12px;paddin=
+g-bottom:12px;padding-left:12px;" bgcolor=3D"" class=3D"mobile-table"><p
+style=3D"text-align:center;margin-top:0px;margin-bottom:0px;"><span
+style=3D"font-size:26px;color:rgb(110,61,31);font-weight:400;font-style:nor=
+mal;text-decoration:none;font-family:Rubik,'Helvetica Neue',Helvetica,Arial=
+,sans-serif;" id=3D"isPasted"><strong>As your welcome gift</strong></span><=
+/p>
+</td></tr></table>
+<table id=3D"68a737f3ce59301990bf2cb6" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#B59677;font-family:Arial,sans-serif;font-size:14px;line-hei=
+ght:1.5;mso-line-height-alt:150%;padding-top:0px;padding-right:12px;padding=
+-bottom:16px;padding-left:12px;" bgcolor=3D"" class=3D"mobile-table"><p
+style=3D"text-align:center;margin-top:0px;margin-bottom:0px;" id=3D"isPaste=
+d"><span
+style=3D"font-size:16px;color:rgb(0,0,0);font-weight:400;font-style:normal;=
+text-decoration:none;font-family:Poppins,'Helvetica Neue',Helvetica,Arial,s=
+ans-serif;">Here=E2=80=99s&nbsp;</span><span
+style=3D"font-size:16px;color:rgb(0,0,0);font-style:normal;text-decoration:=
+none;font-family:Poppins,'Helvetica Neue',Helvetica,Arial,sans-serif;"><str=
+ong>10% off your first order</strong></span><span
+style=3D"font-size:16px;color:rgb(0,0,0);font-weight:400;font-style:normal;=
+text-decoration:none;font-family:Poppins,'Helvetica Neue',Helvetica,Arial,s=
+ans-serif;">:</span></p>
+</td></tr></table>
+<table id=3D"68a739cb8a7a52bfa10dcda6" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"520" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:=
+0px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;"><a target=3D"_blank" data-link-id=3D"68a739cb8=
+a7a52bfa10dcda6" href=3D"https://wgvw.omniaut1.com/ae/c/68a0d595f6803fa40ed=
+65dd6/69c693d2c2021a48232c9da6/68a5a0561be60a467a5acff8/69c693d24521cf16424=
+482f7/ET7IwSwI/aHR0cHM6Ly9teXRoaWNhbGJlYXJkcy5jb20vZGlzY291bnQvTVlUSDIw?sig=
+=3D2ebc4f4c0b214c09b628edcd613e518295fa331512b5eaefc497fb0a3062f1f6"><img a=
+lt=3D""
+                                 class=3D"mobile-image"width=3D"245"=20
+                                    height=3D"68"border=3D"0"src=3D"https:/=
+/mvk.soundestlink.com/image/newsletter/68b2c59b3b54c2f55433668d"
+style=3D"max-width:245px;height:auto;margin:0 0;vertical-align:middle;font-=
+family:Arial,sans-serif;font-size:12px;color:#2b2120;line-height:150%;width=
+:245px;"></a>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"68a73acf9125b4c7faa58811" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D""><tr><td class=3D"padding-left padding-right padding-bottom" back=
+ground=3D""
+style=3D"padding-left:40px;padding-right:40px;padding-top:12px;padding-bott=
+om:24px;">
+<table id=3D"68a73acf9125b4c7faa58812" background=3D"" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D"width:100%"><tr><td id=3D"68a73acf9125b4c7faa58813" class=3D"mobil=
+e-container"
+style=3D"width:520px;vertical-align:top;"><!--Line/space content block star=
+ts -->
+<table id=3D"68a73798ce59301990bf2cb5" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"><tr><td align=3D"center"
+style=3D"padding-top:6px;padding-right:12px;padding-bottom:6px;padding-left=
+:12px;">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"80%"><tr><=
+td
+style=3D"font-size:0;line-height:0;border-top:1px solid #B59677;">&nbsp;
+</td></tr></table>
+</td></tr></table><!--Line/space content block ends -->
+<table id=3D"68a73ad69125b4c7faa58817" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#2b2120;font-family:Arial,sans-serif;font-size:14px;line-hei=
+ght:1.5;mso-line-height-alt:150%;padding-top:12px;padding-right:12px;paddin=
+g-bottom:12px;padding-left:12px;" bgcolor=3D"" class=3D"mobile-table"><p
+style=3D"text-align:center;margin-top:0px;margin-bottom:0px;"><span
+style=3D"font-size:16px;color:rgb(0,0,0);font-weight:400;font-style:normal;=
+text-decoration:none;font-family:Poppins,'Helvetica Neue',Helvetica,Arial,s=
+ans-serif;" id=3D"isPasted">Step into the realm of softer, fuller, more myt=
+hical beards.</span></p>
+</td></tr></table>
+<table id=3D"68a73b0e9125b4c7faa58819" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-top:12px;padding-right:12px;padding-bottom:12px;padding-le=
+ft:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"width=3D"100%"
+style=3D"background-color:#B59677;border:0px solid #FFFFFF;border-radius:0p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"font-family:Poppins,Helvetica Neue,Helvetica,Arial,sans-serif;font=
+-size:16px;color:#FFFFFF;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"font-family:Poppins,Helvetica Neue,Helvetica,Arial,sans-serif;font=
+-size:16px;color:#FFFFFF;padding-left:16px;padding-right:16px;padding-top:1=
+6px;padding-bottom:16px;">
+<![endif]--> <a target=3D"_blank"data-link-id=3D"68a73b0e9125b4c7faa58819" =
+href=3D"https://wgvw.omniaut1.com/ae/c/68a0d595f6803fa40ed65dd6/69c693d2c20=
+21a48232c9da6/68a5a0561be60a467a5acff8/69c693d24521cf16424482f7/ET7IwSwI/aH=
+R0cHM6Ly9teXRoaWNhbGJlYXJkcy5jb20vZGlzY291bnQvTVlUSDEw?sig=3D8c006c6135b11f=
+195e2cd46a8e3e0dbbdce5c097c7eaf876c6a4ae14df05c7ae"
+style=3D"text-decoration:none;;display:inline-block;width:100%;padding-top:=
+16px;padding-bottom:16px;text-align:center;font-family:Poppins,Helvetica Ne=
+ue,Helvetica,Arial,sans-serif;font-size:16px;color:#FFFFFF;line-height:1.2;=
+"> Unlock 10% Off Now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<table id=3D"68a73ba19125b4c7faa5881a" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#2b2120;font-family:Arial,sans-serif;font-size:14px;line-hei=
+ght:1.5;mso-line-height-alt:150%;padding-top:24px;padding-right:12px;paddin=
+g-bottom:12px;padding-left:12px;" bgcolor=3D"" class=3D"mobile-table"><p
+style=3D"margin-top:0px;margin-bottom:0px;"><span
+style=3D"font-size:16px;color:rgb(0,0,0);font-weight:400;font-style:normal;=
+text-decoration:none;font-family:Poppins,'Helvetica Neue',Helvetica,Arial,s=
+ans-serif;" id=3D"isPasted">Stay Mythical,</span></p><p
+style=3D"margin-top:0px;margin-bottom:0px;"><span
+style=3D"font-size:16px;color:rgb(0,0,0);font-weight:400;font-style:normal;=
+text-decoration:none;font-family:Poppins,'Helvetica Neue',Helvetica,Arial,s=
+ans-serif;">Andrew &amp; The Mythical Beards Crew</span></p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"68a73bca9125b4c7faa5881b" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D""><tr><td background=3D""
+style=3D"padding-left:12px;padding-right:12px;padding-top:6px;padding-botto=
+m:6px;background-repeat:no-repeat;background-size:cover;background-position=
+:unset;background-color:#B59677;">
+<table id=3D"68a73bca9125b4c7faa5881c" background=3D"" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D"width:100%"><tr><td id=3D"68a73bca9125b4c7faa5881d" class=3D"mobil=
+e-container"
+style=3D"width:576px;vertical-align:top;">
+<table id=3D"68a73bd79125b4c7faa58821" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D""
+style=3D"color:#FFFFFF;font-family:Arial,sans-serif;font-size:14px;line-hei=
+ght:1.5;mso-line-height-alt:150%;padding-top:12px;padding-right:12px;paddin=
+g-bottom:12px;padding-left:12px;" bgcolor=3D"" class=3D"mobile-table"><p
+style=3D"margin-top:0px;margin-bottom:0px;"><span
+style=3D"font-family:Rubik,Helvetica Neue,Helvetica,Arial,sans-serif;"><str=
+ong><span
+style=3D"font-size:36px;color:rgb(255,255,255);">Recommended For You...</sp=
+an></strong></span></p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"68a73c079125b4c7faa58822" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D""><tr><td class=3D"padding-left padding-right padding-top padding-=
+bottom" background=3D""
+style=3D"padding-left:24px;padding-right:24px;padding-top:24px;padding-bott=
+om:24px;background-repeat:no-repeat;background-size:cover;background-positi=
+on:unset;background-color:#FFFFFF;">
+<table id=3D"68a73c199125b4c7faa58930" background=3D"" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D"width:100%"><tr><td id=3D"68a73c199125b4c7faa58931" class=3D"mobil=
+e-container"
+style=3D"width:184px;vertical-align:top;">
+<table id=3D"68a73c079125b4c7faa58879" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;overflow-wrap:anywhere;word-wrap:anywhere;"><tr=
+><td>
+<table id=3D"68a73c079125b4c7faa58826" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"184" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-top:12px;padding-right:12px;padding-bottom:12px;padding-le=
+ft:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;height:160px;" class=3D"mobile-image-stacked-hei=
+ght"><a target=3D"_blank" data-link-id=3D"68a73c079125b4c7faa58826" href=3D=
+"https://wgvw.omniaut1.com/ae/c/68a0d595f6803fa40ed65dd6/69c693d2c2021a4823=
+2c9da6/68a5a0561be60a467a5acff8/69c693d24521cf16424482f7/ET7IwSwI/aHR0cHM6L=
+y9teXRoaWNhbC1iZWFyZHMubXlzaG9waWZ5LmNvbS9wcm9kdWN0cy9teXRoaWNhbC1iZWFyZHMt=
+YmFyYmVyLXRyaWFsLXBhY2s=3D?sig=3D26015533b65db01c02b1cf7c6d710894abc1726fc0=
+abd940a78a4f19b1204208">
+<!--[if mso]> <img alt=3D""
+                                     width=3D"160"class=3D"mobile-image" bo=
+rder=3D"0"src=3D"https://cdn.shopify.com/s/files/1/0459/5643/2035/files/Leg=
+end_-_Invisible_reMan.png?v=3D1736976317"
+style=3D"max-width:100% !important;height:auto;margin:0 0;vertical-align:mi=
+ddle;font-family:Arial,sans-serif;font-size:12px;color:#2b2120;line-height:=
+150%;width:160px;">
+<![endif]-->
+<!--[if !mso]><!--><img alt=3D""
+                                 class=3D"mobile-image mobile-image-stacked=
+"border=3D"0"src=3D"https://cdn.shopify.com/s/files/1/0459/5643/2035/files/=
+Legend_-_Invisible_reMan.png?v=3D1736976317"
+style=3D"max-width:100%;height:auto;margin:0 0;vertical-align:middle;font-f=
+amily:Arial,sans-serif;font-size:12px;color:#2b2120;line-height:150%;max-he=
+ight:160px;">
+<!--<![endif]--></a>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"68a73c209125b4c7faa58941" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#2b2120;font-family:Arial,sans-serif;font-size:14px;line-hei=
+ght:150%;mso-line-height-alt:150%;padding-top:12px;padding-right:12px;paddi=
+ng-bottom:12px;padding-left:12px;" bgcolor=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;text-align:center;">Mythical Beards - B=
+arber Trial Pack</p>
+</td></tr></table>
+<table id=3D"68a73c079125b4c7faa5884d" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-top:12px;padding-right:12px;padding-bottom:12px;padding-le=
+ft:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#B59677;border:0px solid #FFFFFF;border-radius:0p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"font-family:Poppins,Helvetica Neue,Helvetica,Arial,sans-serif;font=
+-size:16px;color:#FFFFFF;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"font-family:Poppins,Helvetica Neue,Helvetica,Arial,sans-serif;font=
+-size:16px;color:#FFFFFF;padding-left:16px;padding-right:16px;padding-top:1=
+6px;padding-bottom:16px;">
+<![endif]--> <a target=3D"_blank"data-link-id=3D"68a73c079125b4c7faa5884d" =
+href=3D"https://wgvw.omniaut1.com/ae/c/68a0d595f6803fa40ed65dd6/69c693d2c20=
+21a48232c9da6/68a5a0561be60a467a5acff8/69c693d24521cf16424482f7/ET7IwSwI/aH=
+R0cHM6Ly9teXRoaWNhbC1iZWFyZHMubXlzaG9waWZ5LmNvbS9wcm9kdWN0cy9teXRoaWNhbC1iZ=
+WFyZHMtYmFyYmVyLXRyaWFsLXBhY2s=3D?sig=3D26015533b65db01c02b1cf7c6d710894abc=
+1726fc0abd940a78a4f19b1204208"
+style=3D"text-decoration:none;padding-left:16px;padding-right:16px;padding-=
+top:16px;padding-bottom:16px;;display:inline-block;font-family:Poppins,Helv=
+etica Neue,Helvetica,Arial,sans-serif;font-size:16px;color:#FFFFFF;line-hei=
+ght:1.2;"> Shop now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table>
+</td><td id=3D"68a73c199125b4c7faa58932" class=3D"mobile-container"
+style=3D"width:184px;vertical-align:top;">
+<table id=3D"68a73c079125b4c7faa5887b" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;overflow-wrap:anywhere;word-wrap:anywhere;"><tr=
+><td>
+<table id=3D"68a73c079125b4c7faa58850" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"184" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-top:12px;padding-right:12px;padding-bottom:12px;padding-le=
+ft:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;height:160px;" class=3D"mobile-image-stacked-hei=
+ght"><a target=3D"_blank" data-link-id=3D"68a73c079125b4c7faa58850" href=3D=
+"https://wgvw.omniaut1.com/ae/c/68a0d595f6803fa40ed65dd6/69c693d2c2021a4823=
+2c9da6/68a5a0561be60a467a5acff8/69c693d24521cf16424482f7/ET7IwSwI/aHR0cHM6L=
+y9teXRoaWNhbC1iZWFyZHMubXlzaG9waWZ5LmNvbS9wcm9kdWN0cy9yb2MtY2l0cnVzLXNlYS1t=
+aW5lcmFscy1pbmNlbnNlLW91ZC13b29kcw=3D=3D?sig=3D001d932ce71c39e5943be27267f8=
+730ce1453e295e41ed4d573c930e01a6cacc">
+<!--[if mso]> <img alt=3D""
+                                     width=3D"160"class=3D"mobile-image" bo=
+rder=3D"0"src=3D"https://cdn.shopify.com/s/files/1/0459/5643/2035/files/Cop=
+yofxoxo_76.png?v=3D1772201375"
+style=3D"max-width:100% !important;height:auto;margin:0 0;vertical-align:mi=
+ddle;font-family:Arial,sans-serif;font-size:12px;color:#2b2120;line-height:=
+150%;width:160px;">
+<![endif]-->
+<!--[if !mso]><!--><img alt=3D""
+                                 class=3D"mobile-image mobile-image-stacked=
+"border=3D"0"src=3D"https://cdn.shopify.com/s/files/1/0459/5643/2035/files/=
+Copyofxoxo_76.png?v=3D1772201375"
+style=3D"max-width:100%;height:auto;margin:0 0;vertical-align:middle;font-f=
+amily:Arial,sans-serif;font-size:12px;color:#2b2120;line-height:150%;max-he=
+ight:160px;">
+<!--<![endif]--></a>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"68a73c209125b4c7faa58949" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#2b2120;font-family:Arial,sans-serif;font-size:14px;line-hei=
+ght:150%;mso-line-height-alt:150%;padding-top:12px;padding-right:12px;paddi=
+ng-bottom:12px;padding-left:12px;" bgcolor=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;text-align:center;">Roc - Citrus, Sea M=
+inerals, Incense, Oud, Woods</p>
+</td></tr></table>
+<table id=3D"68a73c079125b4c7faa58877" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-top:12px;padding-right:12px;padding-bottom:12px;padding-le=
+ft:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#B59677;border:0px solid #FFFFFF;border-radius:0p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"font-family:Poppins,Helvetica Neue,Helvetica,Arial,sans-serif;font=
+-size:16px;color:#FFFFFF;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"font-family:Poppins,Helvetica Neue,Helvetica,Arial,sans-serif;font=
+-size:16px;color:#FFFFFF;padding-left:16px;padding-right:16px;padding-top:1=
+6px;padding-bottom:16px;">
+<![endif]--> <a target=3D"_blank"data-link-id=3D"68a73c079125b4c7faa58877" =
+href=3D"https://wgvw.omniaut1.com/ae/c/68a0d595f6803fa40ed65dd6/69c693d2c20=
+21a48232c9da6/68a5a0561be60a467a5acff8/69c693d24521cf16424482f7/ET7IwSwI/aH=
+R0cHM6Ly9teXRoaWNhbC1iZWFyZHMubXlzaG9waWZ5LmNvbS9wcm9kdWN0cy9yb2MtY2l0cnVzL=
+XNlYS1taW5lcmFscy1pbmNlbnNlLW91ZC13b29kcw=3D=3D?sig=3D001d932ce71c39e5943be=
+27267f8730ce1453e295e41ed4d573c930e01a6cacc"
+style=3D"text-decoration:none;padding-left:16px;padding-right:16px;padding-=
+top:16px;padding-bottom:16px;;display:inline-block;font-family:Poppins,Helv=
+etica Neue,Helvetica,Arial,sans-serif;font-size:16px;color:#FFFFFF;line-hei=
+ght:1.2;"> Shop now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table>
+</td><td id=3D"68a73c199125b4c7faa58933" class=3D"mobile-container"
+style=3D"width:184px;vertical-align:top;">
+<table id=3D"68a73c179125b4c7faa58882" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;overflow-wrap:anywhere;word-wrap:anywhere;"><tr=
+><td>
+<table id=3D"68a73c179125b4c7faa58883" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"184" align=3D"center" class=3D"mobile-table"><tr><td
+style=3D"padding-top:12px;padding-right:12px;padding-bottom:12px;padding-le=
+ft:12px;" align=3D"center">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"
+style=3D"width:100%;"><tr><td
+style=3D"text-align:center;height:160px;" class=3D"mobile-image-stacked-hei=
+ght"><a target=3D"_blank" data-link-id=3D"68a73c179125b4c7faa58883" href=3D=
+"https://wgvw.omniaut1.com/ae/c/68a0d595f6803fa40ed65dd6/69c693d2c2021a4823=
+2c9da6/68a5a0561be60a467a5acff8/69c693d24521cf16424482f7/ET7IwSwI/aHR0cHM6L=
+y9teXRoaWNhbC1iZWFyZHMubXlzaG9waWZ5LmNvbS9wcm9kdWN0cy9hYm9taW5hdGlvbi1leHBl=
+cmltZW50LWJ1cmllZC10cmVhc3VyZS1wZXRyaWNob3ItbGltZS1taW50?sig=3D4158cd741873=
+4894405c8d6301c3c056fdfd8dd324076e25f87478c99fc9a9f3">
+<!--[if mso]> <img alt=3D""
+                                     width=3D"160"class=3D"mobile-image" bo=
+rder=3D"0"src=3D"https://cdn.shopify.com/s/files/1/0459/5643/2035/files/IMG=
+-1117.png?v=3D1771586265"
+style=3D"max-width:100% !important;height:auto;margin:0 0;vertical-align:mi=
+ddle;font-family:Arial,sans-serif;font-size:12px;color:#2b2120;line-height:=
+150%;width:160px;">
+<![endif]-->
+<!--[if !mso]><!--><img alt=3D""
+                                 class=3D"mobile-image mobile-image-stacked=
+"border=3D"0"src=3D"https://cdn.shopify.com/s/files/1/0459/5643/2035/files/=
+IMG-1117.png?v=3D1771586265"
+style=3D"max-width:100%;height:auto;margin:0 0;vertical-align:middle;font-f=
+amily:Arial,sans-serif;font-size:12px;color:#2b2120;line-height:150%;max-he=
+ight:160px;">
+<!--<![endif]--></a>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"68a73c209125b4c7faa58951" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#2b2120;font-family:Arial,sans-serif;font-size:14px;line-hei=
+ght:150%;mso-line-height-alt:150%;padding-top:12px;padding-right:12px;paddi=
+ng-bottom:12px;padding-left:12px;" bgcolor=3D"" class=3D"mobile-table"><p
+style=3D"margin:0px;font-weight:700;text-align:center;">Experiment "Buried =
+Treasure"- Petrichor Lime Mint</p>
+</td></tr></table>
+<table id=3D"68a73c179125b4c7faa588aa" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"table-layout:fixed;"><tbody><tr><td align=3D"center" class=3D"mobi=
+le-table"
+style=3D"padding-top:12px;padding-right:12px;padding-bottom:12px;padding-le=
+ft:12px;" valign=3D"top">
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+style=3D"background-color:#B59677;border:0px solid #FFFFFF;border-radius:0p=
+x;border-collapse:separate;"><tbody><tr>
+<!--[if !mso]><!--><td align=3D"center" valign=3D"middle"
+style=3D"font-family:Poppins,Helvetica Neue,Helvetica,Arial,sans-serif;font=
+-size:16px;color:#FFFFFF;">
+<!--<![endif]-->
+<!--[if mso]><td align=3D"center" valign=3D"middle"
+style=3D"font-family:Poppins,Helvetica Neue,Helvetica,Arial,sans-serif;font=
+-size:16px;color:#FFFFFF;padding-left:16px;padding-right:16px;padding-top:1=
+6px;padding-bottom:16px;">
+<![endif]--> <a target=3D"_blank"data-link-id=3D"68a73c179125b4c7faa588aa" =
+href=3D"https://wgvw.omniaut1.com/ae/c/68a0d595f6803fa40ed65dd6/69c693d2c20=
+21a48232c9da6/68a5a0561be60a467a5acff8/69c693d24521cf16424482f7/ET7IwSwI/aH=
+R0cHM6Ly9teXRoaWNhbC1iZWFyZHMubXlzaG9waWZ5LmNvbS9wcm9kdWN0cy9hYm9taW5hdGlvb=
+i1leHBlcmltZW50LWJ1cmllZC10cmVhc3VyZS1wZXRyaWNob3ItbGltZS1taW50?sig=3D4158c=
+d7418734894405c8d6301c3c056fdfd8dd324076e25f87478c99fc9a9f3"
+style=3D"text-decoration:none;padding-left:16px;padding-right:16px;padding-=
+top:16px;padding-bottom:16px;;display:inline-block;font-family:Poppins,Helv=
+etica Neue,Helvetica,Arial,sans-serif;font-size:16px;color:#FFFFFF;line-hei=
+ght:1.2;"> Shop now </a>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"60a2848e82afed275df5da7d" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D""><tr><td class=3D"padding-left padding-right padding-top padding-=
+bottom" background=3D""
+style=3D"padding:24px;padding-left:24px;padding-right:24px;padding-top:24px=
+;padding-bottom:24px;background-repeat:no-repeat;background-size:cover;back=
+ground-position:unset;background-color:#B59677;">
+<table id=3D"60adf7a3af90f419e5127b25" background=3D"" border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D""><tr><td>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"
+style=3D"width:100%"><tr><td id=3D"60adf7a3af90f419e5127b26" class=3D"mobil=
+e-container"
+style=3D"width:552px;vertical-align:top;">
+<table id=3D"68b2c26b94bbfa3b4469aba8" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"><tr><td align=3D"center"
+style=3D"0;">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td
+style=3D"padding-top:12px;padding-right:12px;padding-bottom:12px;padding-le=
+ft:12px;"><a target=3D"_blank" href=3D"https://wgvw.omniaut1.com/ae/c/68a0d=
+595f6803fa40ed65dd6/69c693d2c2021a48232c9da6/68a5a0561be60a467a5acff8/69c69=
+3d24521cf16424482f7/ET7IwSwI/aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL015dGhpY2FsQm=
+VhcmRzLw=3D=3D?sig=3D4ea2a32bf5143fa9512ffdfc4cd2c85416fcd9d542fa6ff9558e98=
+2cfa3ce7a5"><img width=3D"36" height=3D"36" alt=3D"facebook" border=3D"0" s=
+rc=3D"https://mvk.soundestlink.com/dynamicImage/social/facebook/72/0/000000=
+"
+style=3D"width:36px;height:auto;display:block;margin:0 auto;font-family:Ari=
+al,sans-serif;font-size:14px;color:#2b2120;line-height:150%;"></a>
+</td><td
+style=3D"padding-top:12px;padding-right:12px;padding-bottom:12px;padding-le=
+ft:12px;"><a target=3D"_blank" href=3D"https://wgvw.omniaut1.com/ae/c/68a0d=
+595f6803fa40ed65dd6/69c693d2c2021a48232c9da6/68a5a0561be60a467a5acff8/69c69=
+3d24521cf16424482f7/ET7IwSwI/aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9teXRoaWNhbF=
+9iZWFyZHMvIw=3D=3D?sig=3Dd6c94dbd14e13a925082c091998d08c1c1e2e2d585233778f1=
+27e9d5754a0410"><img width=3D"36" height=3D"36" alt=3D"instagram" border=3D=
+"0" src=3D"https://mvk.soundestlink.com/dynamicImage/social/instagram/72/0/=
+000000"
+style=3D"width:36px;height:auto;display:block;margin:0 auto;font-family:Ari=
+al,sans-serif;font-size:14px;color:#2b2120;line-height:150%;"></a>
+</td><td
+style=3D"padding-top:12px;padding-right:12px;padding-bottom:12px;padding-le=
+ft:12px;"><a target=3D"_blank" href=3D"https://wgvw.omniaut1.com/ae/c/68a0d=
+595f6803fa40ed65dd6/69c693d2c2021a48232c9da6/68a5a0561be60a467a5acff8/69c69=
+3d24521cf16424482f7/ET7IwSwI/aHR0cHM6Ly94LmNvbS9iZWFyZHNteXRoaWNhbA=3D=3D?s=
+ig=3D80651e96cd04632411a56573192f4fb0dc3066931c50fd17587456be599dea9a"><img=
+ width=3D"36" height=3D"36" alt=3D"x" border=3D"0" src=3D"https://mvk.sound=
+estlink.com/dynamicImage/social/x/72/0/000000"
+style=3D"width:36px;height:auto;display:block;margin:0 auto;font-family:Ari=
+al,sans-serif;font-size:14px;color:#2b2120;line-height:150%;"></a>
+</td><td
+style=3D"padding-top:12px;padding-right:12px;padding-bottom:12px;padding-le=
+ft:12px;"><a target=3D"_blank" href=3D"https://wgvw.omniaut1.com/ae/c/68a0d=
+595f6803fa40ed65dd6/69c693d2c2021a48232c9da6/68a5a0561be60a467a5acff8/69c69=
+3d24521cf16424482f7/ET7IwSwI/aHR0cHM6Ly93d3cueW91dHViZS5jb20vQERhbkNCZWFyZG=
+Vk?sig=3D8be4f5990b6fcbb906500f3416e8b2be1db9d6d5d2b2c853aa430c11ddfb018a">=
+<img width=3D"36" height=3D"36" alt=3D"youtube" border=3D"0" src=3D"https:/=
+/mvk.soundestlink.com/dynamicImage/social/youtube/72/0/000000"
+style=3D"width:36px;height:auto;display:block;margin:0 auto;font-family:Ari=
+al,sans-serif;font-size:14px;color:#2b2120;line-height:150%;"></a>
+</td></tr></table>
+</td></tr></table>
+<table id=3D"60fe70a85f1f48039ea14053" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"100%"
+style=3D"overflow-wrap:anywhere;word-wrap:anywhere"><tr><td align=3D"center=
+"
+style=3D"color:#000;font-family:Poppins,Helvetica Neue,Helvetica,Arial,sans=
+-serif;font-size:12px;line-height:1.5;mso-line-height-alt:150%;padding:12px=
+;" bgcolor=3D"" class=3D"mobile-table"><p id=3D"isPasted"
+style=3D"text-align:center;margin:0px;"><span
+style=3D"color:#000;">=C2=A9 Mythical Beards</span></p><p
+style=3D"text-align:center;margin:0px;"><span
+style=3D"color:#000;"><br/></span></p><p
+style=3D"text-align:center;margin:0px;"><span
+style=3D"color:#000;">PO Box 4083, DeLand, United States, 32724</span></p><=
+p
+style=3D"text-align:center;margin:0px;"><span
+style=3D"color:#000;"><br/></span></p><p
+style=3D"text-align:center;margin:0px;"><span
+style=3D"color:#000;">This email was sent to starworks5@gmail.com because y=
+ou&#39;ve subscribed on our site or made a purchase.</span></p><p
+style=3D"text-align:center;margin:0px;"><span
+style=3D"color:#000;"><br/></span></p><p
+style=3D"text-align:center;margin:0px;"><span
+style=3D"color:#000;"><a
+style=3D"color:#000" href=3D"https://mvk.soundestlink.com/contactsPreferenc=
+es/v2/?b=3D68a0d595f6803fa40ed65dd6&c=3D69c693d2c2021a48232c9da6&payload=3D=
+v5rgZL5JuL6X2eeZ2VPNEuPUlEUv7wWvkUr2dEzfFHjwpzbGpl7dFzSWy-9qPbvK-Aaw3GrLU_M=
+zgJ6VYiWOTRTMH-FNUhOgNkMrNuzz-buBMGCwwB0JQ8BA7McCPPMPMYTlqOL24jRpx94Ran-az5=
+PxH_e-" target=3D"_blank" data-translation-key=3D"preference">Edit preferen=
+ces</a> | <a
+style=3D"color:#000" href=3D"https://mvk.soundestlink.com/contactsPreferenc=
+es/v2/unsubscribe/?b=3D68a0d595f6803fa40ed65dd6&c=3D69c693d2c2021a48232c9da=
+6&payload=3DFPTEGfzbTDRY7mgyg1FAeHC9VoQ2FRs_e4yFciiV3nLbZuqp67pg_6Lwzdof0Si=
+qPI1vrcpPkfmReLDblww_HWLAeYQqXP-gu8vEqA8MQOTq9uKlE6S9yL-AIXzwAZqZrDFDpjGd-K=
+AnY7-h-1tmmLfwmgq5" target=3D"_blank" data-translation-key=3D"unsubscribe">=
+Unsubscribe</a></span></p>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</body>
+</html>

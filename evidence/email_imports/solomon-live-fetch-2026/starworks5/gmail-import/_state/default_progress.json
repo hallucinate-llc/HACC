@@ -1,0 +1,21 @@
+{
+  "status": "completed",
+  "user_id": "starworks5",
+  "gmail_user": "starworks5@gmail.com",
+  "folder": "[Gmail]/All Mail",
+  "folders": [
+    "[Gmail]/All Mail"
+  ],
+  "matched_addresses": [],
+  "collect_all_messages": true,
+  "searched_message_count": 1000,
+  "imported_count": 113,
+  "skipped_count": 0,
+  "relevance_filtered_count": 887,
+  "raw_email_total_bytes": 268534765,
+  "estimated_total_messages": null,
+  "estimated_total_messages_exact": false,
+  "checkpoint_path": null,
+  "manifest_path": "/home/barberb/HACC/evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/email_import_manifest.json",
+  "updated_at": "2026-04-04T20:44:11.414159+00:00"
+}

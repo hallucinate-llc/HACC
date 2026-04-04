@@ -16,6 +16,9 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 VENV_PYTHON="${HACC_VENV_PYTHON:-${SCRIPT_DIR}/.venv/bin/python}"
 IPFS_DATASETS_CLI="${HACC_IPFS_DATASETS_CLI:-${SCRIPT_DIR}/complaint-generator/ipfs_datasets_py/ipfs_datasets_cli.py}"
 VOICE_WRAPPER="${HACC_VOICE_WRAPPER:-${SCRIPT_DIR}/run-google-voice-ingest.sh}"
+DISPLAY_ENV="${HACC_X_DISPLAY:-${DISPLAY:-}}"
+XAUTHORITY_ENV="${HACC_XAUTHORITY:-${XAUTHORITY:-}}"
+DISABLE_X_DISPLAY_AUTO_DETECT="${HACC_DISABLE_X_DISPLAY_AUTO_DETECT:-0}"
 
 PAGE_SOURCE=""
 CASE_SLUG=""
@@ -23,6 +26,7 @@ DEST="drive"
 FREQUENCY="one_time"
 AUTO_SUBMIT=false
 HEADLESS=false
+SYSTEM_BROWSER=false
 RUN_INDEX=true
 DOWNLOAD_TIMEOUT_MS=300000
 POLL_ONLY=false
@@ -38,6 +42,17 @@ DRIVE_CLIENT_SECRETS=""
 DRIVE_ACCOUNT_HINT=""
 DRIVE_TOKEN_CACHE=""
 DRIVE_NAME_CONTAINS="takeout"
+EMAIL_POLL=false
+EMAIL_OPEN_LINK=false
+EMAIL_SERVER="imap.gmail.com"
+EMAIL_PORT=""
+EMAIL_USERNAME=""
+EMAIL_PASSWORD=""
+EMAIL_FOLDER="INBOX"
+EMAIL_SEARCH="ALL"
+EMAIL_LIMIT="25"
+EMAIL_FROM_CONTAINS="google"
+EMAIL_SUBJECT_CONTAINS="takeout"
 ACQUISITION_MANIFEST=""
 RESUME_FROM_MANIFEST=""
 ACQUISITION_HISTORY_DIR=""
@@ -111,6 +126,10 @@ while [[ $# -gt 0 ]]; do
             ;;
         --headless)
             HEADLESS=true
+            shift
+            ;;
+        --system-browser)
+            SYSTEM_BROWSER=true
             shift
             ;;
         --poll-only)
@@ -193,6 +212,86 @@ while [[ $# -gt 0 ]]; do
             DRIVE_NAME_CONTAINS="${1#*=}"
             shift
             ;;
+        --email-poll)
+            EMAIL_POLL=true
+            shift
+            ;;
+        --email-open-link)
+            EMAIL_OPEN_LINK=true
+            shift
+            ;;
+        --email-server)
+            EMAIL_SERVER="$2"
+            shift 2
+            ;;
+        --email-server=*)
+            EMAIL_SERVER="${1#*=}"
+            shift
+            ;;
+        --email-port)
+            EMAIL_PORT="$2"
+            shift 2
+            ;;
+        --email-port=*)
+            EMAIL_PORT="${1#*=}"
+            shift
+            ;;
+        --email-username)
+            EMAIL_USERNAME="$2"
+            shift 2
+            ;;
+        --email-username=*)
+            EMAIL_USERNAME="${1#*=}"
+            shift
+            ;;
+        --email-password)
+            EMAIL_PASSWORD="$2"
+            shift 2
+            ;;
+        --email-password=*)
+            EMAIL_PASSWORD="${1#*=}"
+            shift
+            ;;
+        --email-folder)
+            EMAIL_FOLDER="$2"
+            shift 2
+            ;;
+        --email-folder=*)
+            EMAIL_FOLDER="${1#*=}"
+            shift
+            ;;
+        --email-search)
+            EMAIL_SEARCH="$2"
+            shift 2
+            ;;
+        --email-search=*)
+            EMAIL_SEARCH="${1#*=}"
+            shift
+            ;;
+        --email-limit)
+            EMAIL_LIMIT="$2"
+            shift 2
+            ;;
+        --email-limit=*)
+            EMAIL_LIMIT="${1#*=}"
+            shift
+            ;;
+        --email-from-contains)
+            EMAIL_FROM_CONTAINS="$2"
+            shift 2
+            ;;
+        --email-from-contains=*)
+            EMAIL_FROM_CONTAINS="${1#*=}"
+            shift
+            ;;
+        --email-subject-contains)
+            EMAIL_SUBJECT_CONTAINS="$2"
+            shift 2
+            ;;
+        --email-subject-contains=*)
+            EMAIL_SUBJECT_CONTAINS="${1#*=}"
+            shift
+            ;;
         --acquisition-manifest)
             ACQUISITION_MANIFEST="$2"
             shift 2
@@ -251,6 +350,59 @@ done
 if [[ ! -x "$VENV_PYTHON" ]]; then
     echo "ERROR: venv python not found at $VENV_PYTHON" >&2
     exit 2
+fi
+
+if [[ -z "$DISPLAY_ENV" && "$HEADLESS" == false && "$DISABLE_X_DISPLAY_AUTO_DETECT" != "1" ]]; then
+    DETECTED_DISPLAY="$("$VENV_PYTHON" - <<'PY'
+import getpass
+import os
+import pwd
+import re
+import subprocess
+
+username = getpass.getuser()
+try:
+    uid = pwd.getpwnam(username).pw_uid
+except KeyError:
+    uid = os.getuid()
+
+best = ""
+best_pid = -1
+pattern = re.compile(r"/Xorg\s+(:\d+)\b")
+try:
+    proc = subprocess.run(["ps", "-eo", "pid=,uid=,args="], capture_output=True, text=True, check=False)
+    for line in proc.stdout.splitlines():
+        match = pattern.search(line)
+        if not match:
+            continue
+        parts = line.strip().split(None, 2)
+        if len(parts) < 3:
+            continue
+        pid, proc_uid = int(parts[0]), int(parts[1])
+        if proc_uid != uid:
+            continue
+        if pid > best_pid:
+            best_pid = pid
+            best = match.group(1)
+except Exception:
+    pass
+print(best)
+PY
+)"
+    if [[ -n "$DETECTED_DISPLAY" ]]; then
+        DISPLAY_ENV="$DETECTED_DISPLAY"
+    fi
+fi
+
+if [[ -z "$XAUTHORITY_ENV" && -f "${HOME}/.Xauthority" ]]; then
+    XAUTHORITY_ENV="${HOME}/.Xauthority"
+fi
+
+if [[ -n "$DISPLAY_ENV" ]]; then
+    export DISPLAY="$DISPLAY_ENV"
+fi
+if [[ -n "$XAUTHORITY_ENV" ]]; then
+    export XAUTHORITY="$XAUTHORITY_ENV"
 fi
 
 if [[ -n "$RESUME_FROM_MANIFEST" ]]; then
@@ -352,7 +504,7 @@ if [[ -z "$ACQUISITION_HISTORY_DIR" ]]; then
 fi
 
 NO_DISPLAY_BROWSER=false
-if [[ -z "${DISPLAY:-}" && "$HEADLESS" == false && -z "$RESUME_FROM_DOWNLOADS" && "$POLL_ONLY" == false ]]; then
+if [[ -z "$DISPLAY_ENV" && "$HEADLESS" == false && -z "$RESUME_FROM_DOWNLOADS" && "$POLL_ONLY" == false ]]; then
     NO_DISPLAY_BROWSER=true
 fi
 
@@ -492,33 +644,97 @@ PY
     fi
 
     if [[ "$POLL_ONLY" == false ]]; then
-        CAPTURE_CMD=(
-            "$VENV_PYTHON" "$IPFS_DATASETS_CLI" email google-voice-takeout-capture
-            --dest "$DEST"
-            --frequency "$FREQUENCY"
-            --downloads-dir "$DOWNLOADS_DIR"
-            --download-timeout-ms "$DOWNLOAD_TIMEOUT_MS"
-            --output "$CAPTURE_JSON"
-        )
+        if [[ "$SYSTEM_BROWSER" == true ]]; then
+            URL_PLAN_JSON="$(mktemp)"
+            trap 'rm -f "$URL_PLAN_JSON"' EXIT
+            URL_CMD=(
+                "$VENV_PYTHON" "$IPFS_DATASETS_CLI" email google-voice-takeout-url
+                --dest "$DEST"
+                --frequency "$FREQUENCY"
+                --output "$URL_PLAN_JSON"
+            )
+            for product_id in "${PRODUCT_IDS[@]}"; do
+                URL_CMD+=(--product-id "$product_id")
+            done
+            if [[ -n "$PAGE_SOURCE" ]]; then
+                URL_CMD+=(--page-source "$PAGE_SOURCE")
+            fi
 
-        for product_id in "${PRODUCT_IDS[@]}"; do
-            CAPTURE_CMD+=(--product-id "$product_id")
-        done
-        if [[ -n "$PAGE_SOURCE" ]]; then
-            CAPTURE_CMD+=(--page-source "$PAGE_SOURCE")
-        fi
-        if [[ "$AUTO_SUBMIT" == true ]]; then
-            CAPTURE_CMD+=(--auto-submit)
-        fi
-        if [[ "$HEADLESS" == true ]]; then
-            CAPTURE_CMD+=(--headless)
-        fi
-        if [[ -n "$USER_DATA_DIR" ]]; then
-            CAPTURE_CMD+=(--user-data-dir "$USER_DATA_DIR")
-        fi
+            echo "=== Opening Google Takeout in your desktop browser ==="
+            "${URL_CMD[@]}"
+            TAKEOUT_URL="$("$VENV_PYTHON" - <<'PY' "$URL_PLAN_JSON"
+import json, sys
+payload = json.load(open(sys.argv[1], "r", encoding="utf-8"))
+print(payload.get("takeout_url") or "")
+PY
+)"
+            if [[ -z "$TAKEOUT_URL" ]]; then
+                echo "ERROR: Failed to compute Google Takeout URL." >&2
+                exit 1
+            fi
+            if [[ -z "$DISPLAY_ENV" ]]; then
+                echo "ERROR: --system-browser requires a desktop DISPLAY." >&2
+                exit 2
+            fi
+            if command -v xdg-open >/dev/null 2>&1; then
+                env DISPLAY="$DISPLAY_ENV" XAUTHORITY="$XAUTHORITY_ENV" xdg-open "$TAKEOUT_URL" >/dev/null 2>&1 &
+                LAUNCHER="xdg-open"
+            else
+                echo "ERROR: xdg-open is not available for --system-browser mode." >&2
+                exit 2
+            fi
+            "$VENV_PYTHON" - <<'PY' "$CAPTURE_JSON" "$TAKEOUT_URL" "$LAUNCHER" "$DOWNLOADS_DIR"
+import json, sys
+from datetime import datetime, UTC
 
-        echo "=== Opening Google Takeout and waiting for download ==="
-        "${CAPTURE_CMD[@]}"
+capture_json, takeout_url, launcher, downloads_dir = sys.argv[1:]
+started_at = datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+payload = {
+    "status": "pending",
+    "takeout_url": takeout_url,
+    "browser_capture": {
+        "status": "pending",
+        "download_status": "not_captured",
+        "started_at": started_at,
+        "launcher": launcher,
+        "mode": "system_browser",
+        "downloads_dir": downloads_dir,
+        "message": "Takeout URL opened in the desktop browser. Complete Google sign-in/export there, then resume or poll for the archive.",
+    },
+}
+json.dump(payload, open(capture_json, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+PY
+            rm -f "$URL_PLAN_JSON"
+            trap - EXIT
+        else
+            CAPTURE_CMD=(
+                "$VENV_PYTHON" "$IPFS_DATASETS_CLI" email google-voice-takeout-capture
+                --dest "$DEST"
+                --frequency "$FREQUENCY"
+                --downloads-dir "$DOWNLOADS_DIR"
+                --download-timeout-ms "$DOWNLOAD_TIMEOUT_MS"
+                --output "$CAPTURE_JSON"
+            )
+
+            for product_id in "${PRODUCT_IDS[@]}"; do
+                CAPTURE_CMD+=(--product-id "$product_id")
+            done
+            if [[ -n "$PAGE_SOURCE" ]]; then
+                CAPTURE_CMD+=(--page-source "$PAGE_SOURCE")
+            fi
+            if [[ "$AUTO_SUBMIT" == true ]]; then
+                CAPTURE_CMD+=(--auto-submit)
+            fi
+            if [[ "$HEADLESS" == true ]]; then
+                CAPTURE_CMD+=(--headless)
+            fi
+            if [[ -n "$USER_DATA_DIR" ]]; then
+                CAPTURE_CMD+=(--user-data-dir "$USER_DATA_DIR")
+            fi
+
+            echo "=== Opening Google Takeout and waiting for download ==="
+            "${CAPTURE_CMD[@]}"
+        fi
         "$VENV_PYTHON" - <<'PY' "$ACQUISITION_MANIFEST" "$CAPTURE_JSON"
 import json, sys
 from datetime import datetime, UTC
@@ -581,6 +797,61 @@ PY
 )"
 
 if [[ -z "$DOWNLOAD_PATH" || ! -f "$DOWNLOAD_PATH" ]]; then
+    if [[ "$EMAIL_POLL" == true ]]; then
+        echo ""
+        echo "=== No local archive yet; polling email for Google Takeout notifications ==="
+        EMAIL_JSON="${DOWNLOADS_DIR}/takeout_email_poll.json"
+        EMAIL_CMD=(
+            "$VENV_PYTHON" "$IPFS_DATASETS_CLI" email google-voice-takeout-email
+            --server "$EMAIL_SERVER"
+            --folder "$EMAIL_FOLDER"
+            --search "$EMAIL_SEARCH"
+            --limit "$EMAIL_LIMIT"
+            --from-contains "$EMAIL_FROM_CONTAINS"
+            --subject-contains "$EMAIL_SUBJECT_CONTAINS"
+            --output "$EMAIL_JSON"
+        )
+        if [[ -n "$EMAIL_PORT" ]]; then
+            EMAIL_CMD+=(--port "$EMAIL_PORT")
+        fi
+        if [[ -n "$EMAIL_USERNAME" ]]; then
+            EMAIL_CMD+=(--username "$EMAIL_USERNAME")
+        fi
+        if [[ -n "$EMAIL_PASSWORD" ]]; then
+            EMAIL_CMD+=(--password "$EMAIL_PASSWORD")
+        fi
+        if [[ -n "$DRIVE_ACCOUNT_HINT" ]]; then
+            EMAIL_CMD+=(--account-hint "$DRIVE_ACCOUNT_HINT")
+        fi
+        "${EMAIL_CMD[@]}"
+        "$VENV_PYTHON" - <<'PY' "$ACQUISITION_MANIFEST" "$EMAIL_JSON"
+import json, sys
+from datetime import datetime, UTC
+manifest_path, email_json = sys.argv[1:]
+manifest = json.load(open(manifest_path, "r", encoding="utf-8"))
+email_payload = json.load(open(email_json, "r", encoding="utf-8"))
+manifest["email_result"] = email_payload
+manifest["updated_at"] = datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+manifest.setdefault("events", []).append({
+    "type": "email_poll_attempted",
+    "timestamp": manifest["updated_at"],
+    "matched_email_count": email_payload.get("matched_email_count"),
+})
+json.dump(manifest, open(manifest_path, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+PY
+        snapshot_manifest "email_poll_attempted"
+        EMAIL_LINK="$("$VENV_PYTHON" - <<'PY' "$EMAIL_JSON"
+import json, sys
+payload = json.load(open(sys.argv[1], "r", encoding="utf-8"))
+latest = payload.get("latest_match") or {}
+print(latest.get("best_download_link") or "")
+PY
+)"
+        if [[ -n "$EMAIL_LINK" && "$EMAIL_OPEN_LINK" == true && -n "$DISPLAY_ENV" ]]; then
+            echo "=== Opening Takeout link from email in desktop browser ==="
+            env DISPLAY="$DISPLAY_ENV" XAUTHORITY="$XAUTHORITY_ENV" xdg-open "$EMAIL_LINK" >/dev/null 2>&1 &
+        fi
+    fi
     if [[ "$DEST" == "drive" && -n "$DRIVE_CLIENT_SECRETS" && -n "$DRIVE_ACCOUNT_HINT" ]]; then
         echo ""
         echo "=== No local download captured yet; polling Google Drive ==="

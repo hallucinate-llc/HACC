@@ -1,0 +1,182 @@
+Delivered-To: starworks5@gmail.com
+Received: by 2002:a05:7208:3156:b0:f2:1355:7203 with SMTP id c22csp167501rba;
+        Mon, 17 Nov 2025 14:59:37 -0800 (PST)
+X-Received: by 2002:a05:6808:4497:b0:450:d693:4d3e with SMTP id 5614622812f47-450d693549fmr1428897b6e.18.1763420376950;
+        Mon, 17 Nov 2025 14:59:36 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1763420376; cv=none;
+        d=google.com; s=arc-20240605;
+        b=LLbpxPkdDjw2nYpQef45p0UziMsWBv8VQDJcVTIpMuPowOQVH0VGlq9OK996CME7pT
+         XxqVwva6n4CSMLMOmcxk9oPcD5rFd6WIiiPUZVb8c3yVjnhbQvI0Vf0DfIpHscroeeIK
+         zoAfEVSVS6FDh4jH5ow5p+DphhJkyrX2imznruXhQJZh25CABj1fUKWqunTgGBpyAo3q
+         Q6WZ2ix8kJ9pXx3AXO94p8xB/7HmzMy+JCzN18DjwDQchRGL+i4Dgn9KkCfoQuRS3YVz
+         Yv4h5SH/5mDqGqytt5TBdmWfPyJFLUangD9xJFQh4jLqH7foOU6lRbIlSsw232Ny/uyE
+         CCRQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:from:subject:date:message-id:references:mime-version
+         :dkim-signature;
+        bh=wX7igbXDlm4OMuNwwNWDYpX9dW+Kc9dDyCyzVWJ1aJk=;
+        fh=gPPrbYv6bjiCeSNOMtV7+ATcg7xOVeWRNeqU1P80kc4=;
+        b=cCVcnfmlYqamJCV9GZbYm80HtqNntpDS0pm8Bm+kXcNRnbeSFmb5hWDZcvqVC0KUVo
+         f0dGRssmByPn8/R6NaHQPgi8IQPVA/dSxS9QXd+rmCnVhxHixbnh1Lnxd8a86VQ0Mtn9
+         z9XnO21z25mEhTYJZT1ilsLj9YtGcFjOmCC1FhiGK6awguOveKD/37IBUcquALXO3d8X
+         WDtdlksZdHfTVgZgY6dXO+5Fgr7D1wP/1jEgc0obG1f3SFo2v1YOXFDIQtJ6VjunsaWU
+         w2iPz0MEREnpIQ8Gl00u44UIhRrzgAQ6d/FnrdaO3N6QKK/xjZwHqsHF5C1o8LiW4ko3
+         +0sQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b="eOfW/glH";
+       spf=pass (google.com: domain of 32kgbasiuaocksqklqjjroo.kojmmrkpskk.cp0bllweticgc.exrln.pxxpun.lxv@grandcentral.bounces.google.com designates 209.85.220.73 as permitted sender) smtp.mailfrom=32KgbaSIUAOcksqklqjjroo.kojmmrkpskk.cp0BLlweTIcgc.eXRLN.PXXPUN.LXV@grandcentral.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <32KgbaSIUAOcksqklqjjroo.kojmmrkpskk.cp0BLlweTIcgc.eXRLN.PXXPUN.LXV@grandcentral.bounces.google.com>
+Received: from mail-sor-f73.google.com (mail-sor-f73.google.com. [209.85.220.73])
+        by mx.google.com with SMTPS id 5614622812f47-450c47f7f06sor1066147b6e.7.2025.11.17.14.59.36
+        for <starworks5@gmail.com>
+        (Google Transport Security);
+        Mon, 17 Nov 2025 14:59:36 -0800 (PST)
+Received-SPF: pass (google.com: domain of 32kgbasiuaocksqklqjjroo.kojmmrkpskk.cp0bllweticgc.exrln.pxxpun.lxv@grandcentral.bounces.google.com designates 209.85.220.73 as permitted sender) client-ip=209.85.220.73;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b="eOfW/glH";
+       spf=pass (google.com: domain of 32kgbasiuaocksqklqjjroo.kojmmrkpskk.cp0bllweticgc.exrln.pxxpun.lxv@grandcentral.bounces.google.com designates 209.85.220.73 as permitted sender) smtp.mailfrom=32KgbaSIUAOcksqklqjjroo.kojmmrkpskk.cp0BLlweTIcgc.eXRLN.PXXPUN.LXV@grandcentral.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20230601; t=1763420376; x=1764025176; dara=google.com;
+        h=to:from:subject:date:message-id:references:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=wX7igbXDlm4OMuNwwNWDYpX9dW+Kc9dDyCyzVWJ1aJk=;
+        b=eOfW/glHKQSEfuqC+Qhdgm7L0C4YPNW/Z854+HEgPDL2rlxpzM0SPuAm+C5M5ar07i
+         UZKIN+9qCKV7oFXpFj8wYQTJzLEpa34AMzS4m1K6P/IAczZwDiruM+bNkm7juuTGT7TO
+         8fVNmen0GzUMIjNdfU+2vPW/eSaIMjZvyA2OgE8PdbuwWcLe+ZhdPaT8pNALX9zqN76I
+         /H4Eo64jDRhgqE+uyLo5W44q6HKyeQgUpWhosPqMo7+1U5ggFERuBRozXGsTA+jmtXw9
+         zKMBQ1py8rrOuPIKUfmr0c79Wo3ZUT1nvJVWOWFyUFZ0cKgvcWWUj67Lp+5nOJyvaiv1
+         vDOA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1763420376; x=1764025176;
+        h=to:from:subject:date:message-id:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=wX7igbXDlm4OMuNwwNWDYpX9dW+Kc9dDyCyzVWJ1aJk=;
+        b=GZy+D0yTVx0U/WFuWbAuovqk32tNLvD7S62WjlI9FxubEKH552UPiPlPTo5GJ16Xsa
+         YuRXy5v9A/H6slT3S3e6nooWNcQ0z5UXIY6RhHxyvEIuerJjPZFosMADqNuPOy7qXLPS
+         HtxmxmKxsyLjHM8vhe2IMpkL7jGrND8qsceYakXL8yK2TQ1ZI/kIGRXFtADCzkDxONAu
+         7oAziKNLwHp+rPezDwCz6eVpEsXRoyVa1xVgDplHrlZJuBQdLomtVpVG/OyArtllpnfP
+         DD3bVkjesUe5uP/DMuGhOB0b52O7Ltp1rkdA3zXcv8Cefm3SmNHhLwh9HnmOLJzyj5ei
+         nA8A==
+X-Gm-Message-State: AOJu0YwYXGQBugGeemVJsFJ4/I8VNjUKmiECjA0VawwC6/+4rCt8qPW5
+	49Psf48XC+JnI5sskO248VQYN6i5U0qzyJsGCCYFDTgQ2afmw1XFWdnwAgmNZybmD8fkPR0xON8
+	W9L7hQ8SdiI/z1W9UzBilmB/kRG7GVgXjnxGKhZw2+zfbDZRBrQ==
+X-Google-Smtp-Source: AGHT+IFwnR077tpvQA5xxhNw2A4z0CucjIz8jrM9dAn3eu3ElZXXyRDW8WWWOsfZuS0jYuiiAmdqY4xQZDCVsvurkOvAOW8oYIlv
+MIME-Version: 1.0
+X-Received: by 2002:a05:6808:4494:b0:450:c79d:92de with SMTP id
+ 5614622812f47-450c79d9f90mr2804657b6e.41.1763420376608; Mon, 17 Nov 2025
+ 14:59:36 -0800 (PST)
+References: <+19712700855.65225f7f72954b293879a2ad7cb69de0708b9c3d@txt.voice.google.com>
+Message-ID: <+19712700855.19c3d9697e3cc4d88f91e56c6e58d4c84ad9a417@txt.voice.google.com>
+Date: Mon, 17 Nov 2025 22:59:36 +0000
+Subject: New text message from solomon (503) 381-6911
+From: "solomon (SMS)" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>
+To: starworks5@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000232ddb0643d24ded"
+
+--000000000000232ddb0643d24ded
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+
+
+<https://voice.google.com>
+Yes, and frankly Jane's disability trust is between her and the estate. You
+have no legal claim to it. I have nothing to inform you of as I do not know
+any details regarding the trust. I'm just trying to get her rep payee and
+the trust in contact.
+YOUR ACCOUNT <https://voice.google.com> HELP CENTER
+<https://support.google.com/voice#topic=1707989> HELP FORUM
+<https://productforums.google.com/forum/#!forum/voice>
+This email was sent to you because you indicated that you'd like to receive
+email notifications for text messages. If you don't want to receive such
+emails in the future, please update your email notification settings
+<https://voice.google.com/settings#messaging>.
+Google LLC
+1600 Amphitheatre Pkwy
+Mountain View CA 94043 USA
+
+--000000000000232ddb0643d24ded
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><style type=3D"text/css">
+    /* Disable the default font adjustment on iOS devices */
+    div, p, a, li, td { -webkit-text-size-adjust:none; }
+    /* Adjust the table width on the small screen */
+    @media only screen
+      and (max-width: 599px) {
+      table[class=3D"content-table"] {
+        max-width: 360px !important;
+      }
+    }
+    /* Enlarge the font size on mobile device */
+    @media only screen
+      and (min-device-width: 320px)
+      and (max-device-width: 736px) {
+      td[class=3D"email-content-header"] {
+        font-size: 20px !important;
+        line-height: 28px !important;
+      }
+      td[class=3D"email-content"] {
+        font-size: 16px !important;
+        line-height: 24px !important;
+      }
+    }
+    /* Avoid the blue links on iOS devices for address, datetime and phone =
+number */
+    .links-date a {
+      color: #000000;
+      text-decoration: none;
+    }
+    .links-footer a {
+      color: #757575;
+      line-height: 12px;
+      text-decoration: none;
+    }
+    .links-phone_number a {
+      color: inherit;
+      text-decoration: none;
+    }
+    /* Stop Gmail from thinking this is a quote from an email it has seen b=
+efore */
+    .im {
+      color: #000 !important;
+    }
+    </style></head><body><table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" style=3D"font-family: Roboto,'Helvetica Neue',Helvetica,Arial,sans-s=
+erif;"><tr><td><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" widt=
+h=3D"600" class=3D"content-table" style=3D"border-bottom: 1px solid #eeeee;=
+"><tr><td align=3D"left" style=3D"padding: 16px 32px;"><a href=3D"https://v=
+oice.google.com" target=3D"_blank" rel=3D"noopener"><img alt=3D"Google Voic=
+e" src=3D"https://www.gstatic.com/voice-fe/icons/voice_lockup_2020q4_48px.p=
+ng" height=3D"32"/></a></td></tr></table><table cellspacing=3D"0" cellpaddi=
+ng=3D"0" border=3D"0" width=3D"600" class=3D"content-table" style=3D"paddin=
+g: 25px 32px; border-bottom: 1px solid #EEEEEE;"><tr><td style=3D"font-size=
+: 14px; line-height: 20px; padding: 25px 0;">Yes, and frankly Jane&#39;s di=
+sability trust is between her and the estate. You have no legal claim to it=
+. I have nothing to inform you of as I do not know any details regarding th=
+e trust. I&#39;m just trying to get her rep payee and the trust in contact.=
+ </td></tr><tr><td style=3D"font-size: 14px; font-style: italic; line-heigh=
+t: 20px; color: #757575"></td></tr></table><table cellspacing=3D"0" cellpad=
+ding=3D"0" border=3D"0" width=3D"600" class=3D"content-table" style=3D"padd=
+ing: 25px 32px; font-size: 9px; color: #757575;"><tr><td><table cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" width=3D"240" style=3D"font-size: 9px=
+; line-height: 14px;" class=3D"footer-link"><tr><td style=3D"padding-right:=
+ 5px;"><a href=3D"https://voice.google.com" target=3D"_blank">YOUR ACCOUNT<=
+/a></td><td style=3D"padding-right: 5px;"><a href=3D"https://support.google=
+.com/voice#topic=3D1707989" target=3D"_blank">HELP CENTER</a></td><td><a hr=
+ef=3D"https://productforums.google.com/forum/#!forum/voice" target=3D"_blan=
+k">HELP FORUM</a></td></tr></table></td></tr><tr><td style=3D"padding: 15px=
+ 0">This email was sent to you because you indicated that you'd like to rec=
+eive email notifications for text messages. If you don't want to receive su=
+ch emails in the future, please update your <a href=3D"https://voice.google=
+.com/settings#messaging">email notification settings</a>.</td></tr><tr><td>=
+<img alt=3D"Google" src=3D"https://www.gstatic.com/images/branding/googlelo=
+go/1x/googlelogo_dark_color_74x24dp.png" height=3D"14" style=3D"opacity: .5=
+;"/></td></tr><tr><td style=3D"padding: 15px 0; line-height: 12px;">Google =
+LLC<br><span class=3D"links-footer">1600 Amphitheatre Pkwy<br>Mountain View=
+ CA 94043 USA</span></td></tr></table></td></tr></table></body></html>
+--000000000000232ddb0643d24ded--

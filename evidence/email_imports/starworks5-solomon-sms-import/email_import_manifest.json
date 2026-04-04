@@ -1,0 +1,1315 @@
+{
+  "status": "success",
+  "server": "local_workspace",
+  "username": "",
+  "auth_mode": "local_eml_import",
+  "folders": [
+    "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04"
+  ],
+  "search": "LOCAL_EML_DIRECTORY_IMPORT",
+  "complaint_terms": [
+    "solomon",
+    "samuel",
+    "barber",
+    "jane",
+    "order",
+    "kay",
+    "cortez",
+    "restraining",
+    "juliet",
+    "court",
+    "comply",
+    "pickup"
+  ],
+  "min_relevance_score": 1.0,
+  "address_targets": [],
+  "from_address_targets": [],
+  "recipient_address_targets": [],
+  "domain_targets": [],
+  "from_domain_targets": [],
+  "recipient_domain_targets": [],
+  "scanned_message_count": 39,
+  "matched_email_count": 39,
+  "output_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import",
+  "cache_index_path": "",
+  "emails": [
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0001-New-text-message-from-solomon-503-381-6911-19712700855.0fe4ac1c4e9b2e6445b98f8230f2e1d164ce4663-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0001-New-text-message-from-solomon-503-381-6911-19712700855.0fe4ac1c4e9b2e6445b98f8230f2e1d164ce4663-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0001-New-text-message-from-solomon-503-381-6911-19712700855.0fe4ac1c4e9b2e6445b98f8230f2e1d164ce4663-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2021-01-21T01:42:47+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.0fe4ac1c4e9b2e6445b98f8230f2e1d164ce4663@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nSurgery was successful. Grafts went well and he's breathing normally, which\r\nis good as his lungs were the main point of concern. The doctor in charge\r\nof ICU is a Pulmonologist so surgeon has advised doctor to keep an eye on\r\nmy dad given his history with asthma. Overall the surgeon seems optimistic\r\nit'll be a smooth recovery.\r\nTo respond to this text message, reply to this email or visit Google Voice.\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "6171c821e6c5bde053a0a82689564907027624d0244c124cd6d82c2924ac77f2",
+      "raw_cid": "bafkreidbohecdzwfxxqfhifie2evmsihaj3cjubejqjezvwyfqusjldx6i",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_468832_Thu--21-Jan-2021-01-42-47--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0002-New-text-message-from-solomon-503-381-6911-19712700855.399e6eced892ecd08c8dc0d501f2ce360d232a8b-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0002-New-text-message-from-solomon-503-381-6911-19712700855.399e6eced892ecd08c8dc0d501f2ce360d232a8b-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0002-New-text-message-from-solomon-503-381-6911-19712700855.399e6eced892ecd08c8dc0d501f2ce360d232a8b-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2021-01-21T02:15:43+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.399e6eced892ecd08c8dc0d501f2ce360d232a8b@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nNope. He's sleeping for next few hours and will have a tube down his throat\r\ntomorrow\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "b2368b71e76dba1cf422ab049bca2b1be0568a1c3450e16ad9a8848c2bc38679",
+      "raw_cid": "bafkreifsg2fxdz3nxiopiivlasn4uky34bliuhbukdqwvwniqsgcxq4gpe",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_468833_Thu--21-Jan-2021-02-15-43--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0003-New-text-message-from-solomon-503-381-6911-19712700855.3c942fc2d0fd201a4992e29561286fa88fa735fa-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0003-New-text-message-from-solomon-503-381-6911-19712700855.3c942fc2d0fd201a4992e29561286fa88fa735fa-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0003-New-text-message-from-solomon-503-381-6911-19712700855.3c942fc2d0fd201a4992e29561286fa88fa735fa-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2021-01-21T19:53:58+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.3c942fc2d0fd201a4992e29561286fa88fa735fa@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nHe's awake and currently eating lunch. Doctor says his blood sugar, blood\r\npressure, oxygen is good. He's got a couple tubes in his side draining\r\nfluid that makes it painful to breathe, but I understand that's normal and\r\nthey'll be removed tomorrow. He's on track to be moved to IMCU tomorrow.\r\nTo respond to this text message, reply to this email or visit Google Voice.\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "edcc3a00675e75a8fe711663e317657b926b36c619d035f8bbe0f09f6cbd97d1",
+      "raw_cid": "bafkreihnzq5aaz26owup44iwmprrozl3sjvtnrqz2a27ro7a6cpwzpmx2e",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_468871_Thu--21-Jan-2021-19-53-58--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0004-New-text-message-from-solomon-503-381-6911-19712700855.d453228be12ea162d894d3347c0e29d440cfac1a-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0004-New-text-message-from-solomon-503-381-6911-19712700855.d453228be12ea162d894d3347c0e29d440cfac1a-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0004-New-text-message-from-solomon-503-381-6911-19712700855.d453228be12ea162d894d3347c0e29d440cfac1a-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2021-01-22T21:59:27+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.d453228be12ea162d894d3347c0e29d440cfac1a@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nMatt's phone: 5039914087\r\nTo respond to this text message, reply to this email or visit Google Voice.\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "8d46582f9a142895d0f0cd73de601202417a7546cc4ec3d35a7b7f8076a7a7b1",
+      "raw_cid": "bafkreienizmc7gqufck5b4gnoppgaeqcif5hkrwmj3b5gwt3p6ahnj5hwe",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_468947_Fri--22-Jan-2021-21-59-27--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0005-New-text-message-from-solomon-503-381-6911-19712700855.464538acf025ec7deea45f32ed7d2c377642c12c-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0005-New-text-message-from-solomon-503-381-6911-19712700855.464538acf025ec7deea45f32ed7d2c377642c12c-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0005-New-text-message-from-solomon-503-381-6911-19712700855.464538acf025ec7deea45f32ed7d2c377642c12c-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-06-09T01:18:24+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.464538acf025ec7deea45f32ed7d2c377642c12c@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nHow am I supposed to get them in contact? Did you get his number? You sure\r\nhe wasn't just being polite?\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "930f23e6411047c982d06310e9dc4a2e0e68a80f884e912f45a9908792f17228",
+      "raw_cid": "bafkreietb4r6mqiqi7eyfuddcdu5ysrobzukqd4ij2is6rnjscdzf4lsfa",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_627019_Mon--09-Jun-2025-01-18-24--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0006-New-text-message-from-solomon-503-381-6911-19712700855.65225f7f72954b293879a2ad7cb69de0708b9c3d-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0006-New-text-message-from-solomon-503-381-6911-19712700855.65225f7f72954b293879a2ad7cb69de0708b9c3d-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0006-New-text-message-from-solomon-503-381-6911-19712700855.65225f7f72954b293879a2ad7cb69de0708b9c3d-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-17T20:38:24+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.65225f7f72954b293879a2ad7cb69de0708b9c3d@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nHey, can you give me your side of what's going on? Everyone is blowing up\r\nmy phone. Cheryl claims you're moving to Tacoma and taking Jane with you. I\r\nheard about the restraining order.\r\nTo respond to this text message, reply to this email or visit Google Voice.\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 6.0,
+      "matched_terms": [
+        "solomon",
+        "jane",
+        "order",
+        "restraining"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "3a4415462507d0559204e9145cedbaac266d56abf4ffd288634edc65b94e2f35",
+      "raw_cid": "bafkreib2iqkumjih2bkzebhjcroo3ovmezwvnk7u77jiqy2o3rs3strpgu",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660669_Mon--17-Nov-2025-20-38-24--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0007-New-text-message-from-solomon-503-381-6911-19712700855.32e02e6c5eaf146ad4f7b9201c73d10c2d99a36b-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0007-New-text-message-from-solomon-503-381-6911-19712700855.32e02e6c5eaf146ad4f7b9201c73d10c2d99a36b-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0007-New-text-message-from-solomon-503-381-6911-19712700855.32e02e6c5eaf146ad4f7b9201c73d10c2d99a36b-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-17T20:52:12+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.32e02e6c5eaf146ad4f7b9201c73d10c2d99a36b@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\n\"Ben told the next door neighbor that he moving to tacoma and taking call\r\nyour mom\"\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "071dd7b3a4d9ac36b7f82289c093901d65dd54183e1ef6fd2942bf8b0a2c8d76",
+      "raw_cid": "bafkreiahdxl3hjgzvq3lp6bcrhajhea5mxovigb6d33p2kkcx6fqulenoy",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660684_Mon--17-Nov-2025-20-52-12--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0008-New-text-message-from-solomon-503-381-6911-19712700855.76c6c04e04f72258e247a66af803d7d4fd0a5c75-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0008-New-text-message-from-solomon-503-381-6911-19712700855.76c6c04e04f72258e247a66af803d7d4fd0a5c75-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0008-New-text-message-from-solomon-503-381-6911-19712700855.76c6c04e04f72258e247a66af803d7d4fd0a5c75-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-17T20:53:31+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.76c6c04e04f72258e247a66af803d7d4fd0a5c75@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nI figured. Which is why I went straight to you\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "43089365c60608036ce9adfce86a81d783c0c11ef045af47fafc6ebf5cb20676",
+      "raw_cid": "bafkreicdbcjwlrqgbabwz2nn7tugvaoxqpamchxqiwxup6x4n27vzmqgoy",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660685_Mon--17-Nov-2025-20-53-31--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0009-New-text-message-from-solomon-503-381-6911-19712700855.b25d7ecf23bafaceff89be149088e17d69b52d31-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0009-New-text-message-from-solomon-503-381-6911-19712700855.b25d7ecf23bafaceff89be149088e17d69b52d31-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0009-New-text-message-from-solomon-503-381-6911-19712700855.b25d7ecf23bafaceff89be149088e17d69b52d31-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-17T20:54:37+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.b25d7ecf23bafaceff89be149088e17d69b52d31@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nto get the facts\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "8c266589582bb1c41c7b3bc6f1aeb97f3368a34359bbc64cdf44f34b7f3d0e3a",
+      "raw_cid": "bafkreiemezsyswblwhcby6z3y3y25ol7gnukgq2zxpdezx2e6nfx6piohi",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660687_Mon--17-Nov-2025-20-54-37--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0010-New-text-message-from-solomon-503-381-6911-19712700855.9e5ba3a01fca7b7034f0f9882a32b4ee9553ffe3-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0010-New-text-message-from-solomon-503-381-6911-19712700855.9e5ba3a01fca7b7034f0f9882a32b4ee9553ffe3-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0010-New-text-message-from-solomon-503-381-6911-19712700855.9e5ba3a01fca7b7034f0f9882a32b4ee9553ffe3-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-17T20:56:22+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.9e5ba3a01fca7b7034f0f9882a32b4ee9553ffe3@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nWhat's going to the court room? Don't you already have the restraining\r\norder?\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 6.0,
+      "matched_terms": [
+        "solomon",
+        "order",
+        "restraining",
+        "court"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "c80a4469179164cbaa3ade3fd92e76df39c502b53333ed1b85d9896212c3fbc3",
+      "raw_cid": "bafkreigibjcgsf4rmtf2uow6h7ms45w7hhcqfnjtgpwrxbozrfrbfq73ym",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660690_Mon--17-Nov-2025-20-56-22--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0011-New-text-message-from-solomon-503-381-6911-19712700855.9cc8ef426543eba9eac4ab51ab396ccdb390b12a-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0011-New-text-message-from-solomon-503-381-6911-19712700855.9cc8ef426543eba9eac4ab51ab396ccdb390b12a-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0011-New-text-message-from-solomon-503-381-6911-19712700855.9cc8ef426543eba9eac4ab51ab396ccdb390b12a-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-17T20:58:29+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.9cc8ef426543eba9eac4ab51ab396ccdb390b12a@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nOuch. In the meantime you've been picking up mom's medicine? Ramona\r\nmessaged worried about her medicine.\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "b668f27c4b84f5ed6f9fcafa4363ee15c249ee6f927a0fe42fe43ff8b77591fb",
+      "raw_cid": "bafkreifwndzhys4e6xww7h6k7jbwh3qvyje6434spih6il7eh74lo5mr7m",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660694_Mon--17-Nov-2025-20-58-29--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0012-New-text-message-from-solomon-503-381-6911-19712700855.c4d58273a48c1bbef35b573df9de90e53b3906cb-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0012-New-text-message-from-solomon-503-381-6911-19712700855.c4d58273a48c1bbef35b573df9de90e53b3906cb-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0012-New-text-message-from-solomon-503-381-6911-19712700855.c4d58273a48c1bbef35b573df9de90e53b3906cb-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-17T20:59:33+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.c4d58273a48c1bbef35b573df9de90e53b3906cb@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nI understand. Well thank you for your side of the story\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "257d8552a2e3ec4c4fe42438d019ff267eed21f9bc4529b1ae4840759fb61a24",
+      "raw_cid": "bafkreibfpwcvfixd5rge7zbehdibt7zgp3wsd6n4iuu3dlsiib2z7nq2eq",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660695_Mon--17-Nov-2025-20-59-33--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0013-New-text-message-from-solomon-503-381-6911-19712700855.fcf06e278a8cc7638786037b4148f12ebfb13605-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0013-New-text-message-from-solomon-503-381-6911-19712700855.fcf06e278a8cc7638786037b4148f12ebfb13605-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0013-New-text-message-from-solomon-503-381-6911-19712700855.fcf06e278a8cc7638786037b4148f12ebfb13605-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-17T21:02:00+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.fcf06e278a8cc7638786037b4148f12ebfb13605@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nI'm concerned about rent with Julio out of the picture. Do you have a plan\r\nfor that? What's the rent shortfall going to be as he won't be contributing?\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "6c2a29e3b9967672de2229e830841468f779c43a1cedad8337efa90d3dea38c4",
+      "raw_cid": "bafkreidmfiu6homwozzn4irj5ayiifdi6544ioq45wwygn7pvegt32ryyq",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660699_Mon--17-Nov-2025-21-02-00--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0014-New-text-message-from-solomon-503-381-6911-19712700855.93d6d13ea6a44bda7fe072f8c3cf12816e7849cb-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0014-New-text-message-from-solomon-503-381-6911-19712700855.93d6d13ea6a44bda7fe072f8c3cf12816e7849cb-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0014-New-text-message-from-solomon-503-381-6911-19712700855.93d6d13ea6a44bda7fe072f8c3cf12816e7849cb-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-17T21:03:03+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.93d6d13ea6a44bda7fe072f8c3cf12816e7849cb@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nYes, but it's not your business partner's responsibility to pay mom's rent\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "e93ecd2a67e84e2ca08aafd3fed45d6e52d7999d192099f6d99d3ef776a5e258",
+      "raw_cid": "bafkreihjh3gsuz7ijywkbcvp2p7nixlokllzthizecm7nwm5h33xnjpcla",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660700_Mon--17-Nov-2025-21-03-03--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0015-New-text-message-from-solomon-503-381-6911-19712700855.7b28d1405eeab04d3b7fb3883f16a999c8878e1f-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0015-New-text-message-from-solomon-503-381-6911-19712700855.7b28d1405eeab04d3b7fb3883f16a999c8878e1f-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0015-New-text-message-from-solomon-503-381-6911-19712700855.7b28d1405eeab04d3b7fb3883f16a999c8878e1f-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-17T21:03:51+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.7b28d1405eeab04d3b7fb3883f16a999c8878e1f@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nRent is due every month, not next year\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "715c0ce8819d7550c3042b404e2e1f7b0f2e82bb5352503805a749570038c161",
+      "raw_cid": "bafkreidrlqgoram5ovimgbblibhc4h33b4xifo2tkjidqbnhjflqaogbme",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660703_Mon--17-Nov-2025-21-03-51--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0016-New-text-message-from-solomon-503-381-6911-19712700855.820237ba510423bdb296a19e0ad384cc0f464629-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0016-New-text-message-from-solomon-503-381-6911-19712700855.820237ba510423bdb296a19e0ad384cc0f464629-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0016-New-text-message-from-solomon-503-381-6911-19712700855.820237ba510423bdb296a19e0ad384cc0f464629-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-17T21:05:05+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.820237ba510423bdb296a19e0ad384cc0f464629@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nMarcella (payee) said mom doesn't get enough to pay rent on her own. Julio\r\nmade up the difference and you just kicked him out\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "4520612c47651a0b51b395aef90e1eb628a7c61adff3de61fbf9104627b3ec2f",
+      "raw_cid": "bafkreicfebqsyr3fdifvdm4vv34q4hvwfct4mgw76ppgd67zcbdcpm7mf4",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660704_Mon--17-Nov-2025-21-05-05--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0017-New-text-message-from-solomon-503-381-6911-19712700855.1a64c3db0c4f7b5c8cbf3b2640804c47fcef6467-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0017-New-text-message-from-solomon-503-381-6911-19712700855.1a64c3db0c4f7b5c8cbf3b2640804c47fcef6467-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0017-New-text-message-from-solomon-503-381-6911-19712700855.1a64c3db0c4f7b5c8cbf3b2640804c47fcef6467-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-17T21:06:06+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.1a64c3db0c4f7b5c8cbf3b2640804c47fcef6467@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nYou don't pull cash out of a business to pay personal rent expenses\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "b1966779798f7f4c4cd1ce62cda5461a34e4100f48351e45fa3101c44ca88b4e",
+      "raw_cid": "bafkreifrsztxs6mpp5gezuoomlg2krq2gtsbad2igupel6rrahcezkeljy",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660705_Mon--17-Nov-2025-21-06-06--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0018-New-text-message-from-solomon-503-381-6911-19712700855.44fbea51b1da475ee81b6e3a7186dba017989bde-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0018-New-text-message-from-solomon-503-381-6911-19712700855.44fbea51b1da475ee81b6e3a7186dba017989bde-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0018-New-text-message-from-solomon-503-381-6911-19712700855.44fbea51b1da475ee81b6e3a7186dba017989bde-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-17T21:07:58+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.44fbea51b1da475ee81b6e3a7186dba017989bde@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nSo you have enough RIGHT NOW to pay rent if I put you in touch with\r\nMarcella?\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "ac47d67bf944d038df76ffd294e19d1abe03edcd9abbcc478076738ee6122b17",
+      "raw_cid": "bafkreifmi7lhx6ke2a4n65x72kkodhi2xyb63tm2xpgepadwoohomerlc4",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660707_Mon--17-Nov-2025-21-07-58--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0019-New-text-message-from-solomon-503-381-6911-19712700855.7361a7b65e2712c069cb924d354a25bd95b70317-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0019-New-text-message-from-solomon-503-381-6911-19712700855.7361a7b65e2712c069cb924d354a25bd95b70317-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0019-New-text-message-from-solomon-503-381-6911-19712700855.7361a7b65e2712c069cb924d354a25bd95b70317-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-17T21:08:22+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.7361a7b65e2712c069cb924d354a25bd95b70317@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nOk thanks. I'll let her know\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "5244c7a958d20bd1f9507ce30291325a57f881390f4b064402125927c821b096",
+      "raw_cid": "bafkreicsitd2swgsbpi7sud44mbjcms2k74icoipjmdeiaqslet4qinqsy",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660708_Mon--17-Nov-2025-21-08-22--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0020-New-text-message-from-solomon-503-381-6911-19712700855.33d6ed8afab5b6d9be73a3d80d6dcdd53f71e191-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0020-New-text-message-from-solomon-503-381-6911-19712700855.33d6ed8afab5b6d9be73a3d80d6dcdd53f71e191-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0020-New-text-message-from-solomon-503-381-6911-19712700855.33d6ed8afab5b6d9be73a3d80d6dcdd53f71e191-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-17T21:15:35+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.33d6ed8afab5b6d9be73a3d80d6dcdd53f71e191@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nNope, go for it. Tho I'd like to move Jane to Tillamook to be near\r\nJuaneta/Rebekah as Rebekah & Jason used to work as case workers and now\r\nJason works for DHS.\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 4.0,
+      "matched_terms": [
+        "solomon",
+        "jane"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "7225fc80ad348dfe6f2d6ada558c0ea28521e907886819203c42e2f255046d84",
+      "raw_cid": "bafkreidsex6ibljurx7g6llk3jkyydvcquq6sb4inamsapcc4lzfkbdnqq",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660712_Mon--17-Nov-2025-21-15-35--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0021-New-text-message-from-solomon-503-381-6911-19712700855.7e5fd55214496ef3fbbaf6f7612ffa0e4bcdc0fb-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0021-New-text-message-from-solomon-503-381-6911-19712700855.7e5fd55214496ef3fbbaf6f7612ffa0e4bcdc0fb-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0021-New-text-message-from-solomon-503-381-6911-19712700855.7e5fd55214496ef3fbbaf6f7612ffa0e4bcdc0fb-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-17T21:18:24+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.7e5fd55214496ef3fbbaf6f7612ffa0e4bcdc0fb@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nYou don't have to buy a house for her right now. Let Rebekah and I help mom\r\nwhen we get things lined up. You can go live your life w/ your girlfriend\r\nwithout having to worry about mom constantly.\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "e8215bb330daac2039aaa157305431d0e08498963195900a02def8dda0c52f95",
+      "raw_cid": "bafkreihiefn3gmg2vqqdtkvbk4yfimoq4ccjrfrrswiauaw67do2brjpsu",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660715_Mon--17-Nov-2025-21-18-24--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0022-New-text-message-from-solomon-503-381-6911-19712700855.18a9f046c34f5e7efe40a6241cd4e61766b2d063-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0022-New-text-message-from-solomon-503-381-6911-19712700855.18a9f046c34f5e7efe40a6241cd4e61766b2d063-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0022-New-text-message-from-solomon-503-381-6911-19712700855.18a9f046c34f5e7efe40a6241cd4e61766b2d063-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-17T22:50:07+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.18a9f046c34f5e7efe40a6241cd4e61766b2d063@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nYou sending this to the correct person?\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "6b7734db6f42144d4c50dfb56e74bc4097c792605a6aca86f37d6446458046e0",
+      "raw_cid": "bafkreidlo42nw32ccrguyug7wvxhjpcas7dzeyc2nlfin435mrdelacg4a",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660746_Mon--17-Nov-2025-22-50-07--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0023-New-text-message-from-solomon-503-381-6911-19712700855.af549d54c67ef3b6c2e0ba93d02980b9476d863d-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0023-New-text-message-from-solomon-503-381-6911-19712700855.af549d54c67ef3b6c2e0ba93d02980b9476d863d-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0023-New-text-message-from-solomon-503-381-6911-19712700855.af549d54c67ef3b6c2e0ba93d02980b9476d863d-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-17T22:51:44+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.af549d54c67ef3b6c2e0ba93d02980b9476d863d@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nWhich request?\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "8dbdefa3229b31d1dadbfab3114f7ea538faffc67b7ead8b6a98d967e578e777",
+      "raw_cid": "bafkreienxxx2giu3ghi5vw72wmiu67vfhd5p7rt3p2wyw2uy3ft6k6hho4",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660747_Mon--17-Nov-2025-22-51-44--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0024-New-text-message-from-solomon-503-381-6911-19712700855.19c3d9697e3cc4d88f91e56c6e58d4c84ad9a417-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0024-New-text-message-from-solomon-503-381-6911-19712700855.19c3d9697e3cc4d88f91e56c6e58d4c84ad9a417-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0024-New-text-message-from-solomon-503-381-6911-19712700855.19c3d9697e3cc4d88f91e56c6e58d4c84ad9a417-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-17T22:59:36+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.19c3d9697e3cc4d88f91e56c6e58d4c84ad9a417@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nYes, and frankly Jane's disability trust is between her and the estate. You\r\nhave no legal claim to it. I have nothing to inform you of as I do not know\r\nany details regarding the trust. I'm just trying to get her rep payee and\r\nthe trust in contact.\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "955d24e9e44818b8e93a769440bf1284d54562e1d304d7e464eaf783432c5c2a",
+      "raw_cid": "bafkreievlusotzcidc4osotwsral6eue2vcwfyotatl6izhk66buglc4fi",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660753_Mon--17-Nov-2025-22-59-36--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0025-New-text-message-from-solomon-503-381-6911-19712700855.eff5056ad654f93abc449a65c51a8e735dd3f558-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0025-New-text-message-from-solomon-503-381-6911-19712700855.eff5056ad654f93abc449a65c51a8e735dd3f558-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0025-New-text-message-from-solomon-503-381-6911-19712700855.eff5056ad654f93abc449a65c51a8e735dd3f558-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-17T23:17:23+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.eff5056ad654f93abc449a65c51a8e735dd3f558@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nI'm at work, we'll have to talk later\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "9c67ab355d3a2620739a9e84ad5c188f24cadbbae948f2595361aa878c197425",
+      "raw_cid": "bafkreie4m6vtkxj2eyqhhgu6qswvygepetfnxoxjjdzfsu3bvkdyyglueu",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660764_Mon--17-Nov-2025-23-17-23--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0026-New-text-message-from-solomon-503-381-6911-19712700855.052cabe798f993237f21133c47348cf8b37b1013-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0026-New-text-message-from-solomon-503-381-6911-19712700855.052cabe798f993237f21133c47348cf8b37b1013-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0026-New-text-message-from-solomon-503-381-6911-19712700855.052cabe798f993237f21133c47348cf8b37b1013-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-19T01:39:25+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.052cabe798f993237f21133c47348cf8b37b1013@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nJane has an appointment tomorrow with Adult Protective Services tomorrow at\r\n12pm. I will be coming by at 11:30pm to pick her up.\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 4.0,
+      "matched_terms": [
+        "solomon",
+        "jane"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "353ac1607fdcd3900503ef1dc6ee257f1b2deaffb2b3edfe59a163a53f26c35e",
+      "raw_cid": "bafkreibvhlawa7642oiaka7pdxdo4jl7dmw6v75swpw74wnbmost6jwdly",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_661177_Wed--19-Nov-2025-01-39-25--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0027-New-text-message-from-solomon-503-381-6911-19712700855.849c25a74809c52de73831f3b9f0cdc68424b8ef-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0027-New-text-message-from-solomon-503-381-6911-19712700855.849c25a74809c52de73831f3b9f0cdc68424b8ef-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0027-New-text-message-from-solomon-503-381-6911-19712700855.849c25a74809c52de73831f3b9f0cdc68424b8ef-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-19T01:42:39+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.849c25a74809c52de73831f3b9f0cdc68424b8ef@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nAPS has asked that Jane have her interview at their facility.\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 4.0,
+      "matched_terms": [
+        "solomon",
+        "jane"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "8f6a1938d0adc6f39c7ff1ff4b6306bc0b6c153b846d8a2ec8160b66944ffcba",
+      "raw_cid": "bafkreiepnimtrufny3zzy77r75fwgbv4bnwbko4enwfc5sawbntjit74xi",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_661178_Wed--19-Nov-2025-01-42-39--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0028-New-text-message-from-solomon-503-381-6911-19712700855.be0bca387b6ae5a77d9c4408b3243e6d52d42c01-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0028-New-text-message-from-solomon-503-381-6911-19712700855.be0bca387b6ae5a77d9c4408b3243e6d52d42c01-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0028-New-text-message-from-solomon-503-381-6911-19712700855.be0bca387b6ae5a77d9c4408b3243e6d52d42c01-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-19T01:43:35+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.be0bca387b6ae5a77d9c4408b3243e6d52d42c01@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nYou're free to contact them\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "f5475f8ce74052f46415a075fcf3594e4743441d2f55e2c4252975fd3c6f654d",
+      "raw_cid": "bafkreihvi5pyzz2akl2gifnaox6pgwkoi5buihjpkxrmijjjox6ty33fju",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_661179_Wed--19-Nov-2025-01-43-35--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0029-New-text-message-from-solomon-503-381-6911-19712700855.43509356622ea9bc1402a70df3af2da248b6900b-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0029-New-text-message-from-solomon-503-381-6911-19712700855.43509356622ea9bc1402a70df3af2da248b6900b-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0029-New-text-message-from-solomon-503-381-6911-19712700855.43509356622ea9bc1402a70df3af2da248b6900b-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-19T01:43:39+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.43509356622ea9bc1402a70df3af2da248b6900b@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nJuliet Sutherland\r\nAPSS investigator\r\n971-501-9448\r\n\r\n221 Mollala Ave\r\nOregon City OR\r\n12:00\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 4.0,
+      "matched_terms": [
+        "solomon",
+        "juliet"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "2b4693f0bb6c4040928b4fcc43b2769dd01d8f2f053bb6469c31580b0d5aeb93",
+      "raw_cid": "bafkreibli2j7bo3mibajfc2pzrb3e5u52aoy6lyfho3enhbrlafq2wxlsm",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_661180_Wed--19-Nov-2025-01-43-39--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0030-New-text-message-from-solomon-503-381-6911-19712700855.12e369ca7663d7ad5787469d09d68887d82d7637-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0030-New-text-message-from-solomon-503-381-6911-19712700855.12e369ca7663d7ad5787469d09d68887d82d7637-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0030-New-text-message-from-solomon-503-381-6911-19712700855.12e369ca7663d7ad5787469d09d68887d82d7637-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-19T01:44:03+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.12e369ca7663d7ad5787469d09d68887d82d7637@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nAPS reference # 00439866\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "dda76e03204e443a269edc219dc52da418049f100244c4751a0084a88092ace4",
+      "raw_cid": "bafkreig5u5xagicoiq5cnhw4ego4klnedacj6eacitchkgqaqsuibevm4q",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_661181_Wed--19-Nov-2025-01-44-03--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0031-New-text-message-from-solomon-503-381-6911-19712700855.13e9fbbc3ae605900bfe64662d7c1c86ea1943d0-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0031-New-text-message-from-solomon-503-381-6911-19712700855.13e9fbbc3ae605900bfe64662d7c1c86ea1943d0-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0031-New-text-message-from-solomon-503-381-6911-19712700855.13e9fbbc3ae605900bfe64662d7c1c86ea1943d0-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-19T01:44:55+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.13e9fbbc3ae605900bfe64662d7c1c86ea1943d0@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nIf she agrees to conduct the interview at your place, please ask her to let\r\nme know so I don't have to pick up Jane\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 4.0,
+      "matched_terms": [
+        "solomon",
+        "jane"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "7325db175db7af9b67a5e3017b2e12ee5bbd18f23978824271b0fa3ad8d22c45",
+      "raw_cid": "bafkreidtexnroxnxv6nwpjpdaf5s4exolo6rr4rzpcbee4nq7i5nrurmiu",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_661182_Wed--19-Nov-2025-01-44-55--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0032-New-text-message-from-solomon-503-381-6911-19712700855.6abcf87745ffbc28d3a2d6ec5bd01b13cac8423d-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0032-New-text-message-from-solomon-503-381-6911-19712700855.6abcf87745ffbc28d3a2d6ec5bd01b13cac8423d-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0032-New-text-message-from-solomon-503-381-6911-19712700855.6abcf87745ffbc28d3a2d6ec5bd01b13cac8423d-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-19T02:25:36+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.6abcf87745ffbc28d3a2d6ec5bd01b13cac8423d@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nI tried to make her aware but you hung up on me\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "c04d5998996f52f69a276d25d0e9ef2505064fb4f4071b3cef17118231757cb6",
+      "raw_cid": "bafkreigajvmzrglpkl3juj3nexiot3zfaude7nhua4ntz3yxcgbdc5l4wy",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_661191_Wed--19-Nov-2025-02-25-36--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0033-New-text-message-from-solomon-503-381-6911-19712700855.b6f8a1fd758c06c299725523c18017b3e1225b5a-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0033-New-text-message-from-solomon-503-381-6911-19712700855.b6f8a1fd758c06c299725523c18017b3e1225b5a-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0033-New-text-message-from-solomon-503-381-6911-19712700855.b6f8a1fd758c06c299725523c18017b3e1225b5a-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-19T02:27:03+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.b6f8a1fd758c06c299725523c18017b3e1225b5a@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nAnyway, I'll be there at 11:30. I don't need to go in, I'm just there to\r\npickup Jane.\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 5.0,
+      "matched_terms": [
+        "solomon",
+        "jane",
+        "pickup"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "b6ff71fa51d5a49b1d628627bfeb4c33f085e11ed65ab3deb2e339159b2dbcba",
+      "raw_cid": "bafkreifw75y7uuovusnr2yuge676wtbt6cc6chwwlkz55mxdhekzwln4xi",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_661192_Wed--19-Nov-2025-02-27-03--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0034-New-text-message-from-solomon-503-381-6911-19712700855.c685227b570b8b83d4628e90e7dbb6b1d0d18a0d-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0034-New-text-message-from-solomon-503-381-6911-19712700855.c685227b570b8b83d4628e90e7dbb6b1d0d18a0d-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0034-New-text-message-from-solomon-503-381-6911-19712700855.c685227b570b8b83d4628e90e7dbb6b1d0d18a0d-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2025-11-19T02:29:16+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.c685227b570b8b83d4628e90e7dbb6b1d0d18a0d@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nI will advise Juliet of your statement above.\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 4.0,
+      "matched_terms": [
+        "solomon",
+        "juliet"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "39ecd4d1c67751614380ebc1c1c5cf9aa8c017ae62ae6bb251adef9f89ce5204",
+      "raw_cid": "bafkreibz5tkndrtxkfquhahlyha4lt42vdabpltcvzv3eunn56pyttssaq",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_661193_Wed--19-Nov-2025-02-29-16--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0035-New-text-message-from-solomon-503-381-6911-19712700855.4ed56e5d132f0e7b0bb785ff0181b2a27c21f0ea-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0035-New-text-message-from-solomon-503-381-6911-19712700855.4ed56e5d132f0e7b0bb785ff0181b2a27c21f0ea-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0035-New-text-message-from-solomon-503-381-6911-19712700855.4ed56e5d132f0e7b0bb785ff0181b2a27c21f0ea-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2026-03-10T17:39:27+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.4ed56e5d132f0e7b0bb785ff0181b2a27c21f0ea@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nOh I understand, I'm just not incentivized to cooperate. I'd just have the\r\njudge overturn anyway *shrug*\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "07513a519ec7cf326d8ebd9c97eb5ff2600ae2238b8eb43df8b5ab6365a0bc2b",
+      "raw_cid": "bafkreiahke5fdhwhz4zg3dv5tsl6wx7smafoei4lr22d36fvvnrwlif4fm",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743129_Tue--10-Mar-2026-17-39-27--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0036-New-text-message-from-solomon-503-381-6911-19712700855.e6aaa1447d9b6b26f2682f01939de8532de38447-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0036-New-text-message-from-solomon-503-381-6911-19712700855.e6aaa1447d9b6b26f2682f01939de8532de38447-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0036-New-text-message-from-solomon-503-381-6911-19712700855.e6aaa1447d9b6b26f2682f01939de8532de38447-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2026-03-10T17:45:54+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.e6aaa1447d9b6b26f2682f01939de8532de38447@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nOnce I get served and it goes into effect, I will comply with whatever the\r\norder states. But it is not in effect. Btw, why do you keep texting me if\r\nit's in effect? that would be against the court order.\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 6.0,
+      "matched_terms": [
+        "solomon",
+        "order",
+        "court",
+        "comply"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "e7eebd32d2c39f7f7a111864ead7250bcc5b9b7c1e5ba1c0b20b70e03b78bca6",
+      "raw_cid": "bafkreihh526tfuwdt57xueiymtvnojilzrnzw7a6loq4bmqlodqdw6f4uy",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743131_Tue--10-Mar-2026-17-45-54--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0037-New-text-message-from-solomon-503-381-6911-19712700855.25b6aa883e1ca12a7361db2d7283f686734bfc11-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0037-New-text-message-from-solomon-503-381-6911-19712700855.25b6aa883e1ca12a7361db2d7283f686734bfc11-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0037-New-text-message-from-solomon-503-381-6911-19712700855.25b6aa883e1ca12a7361db2d7283f686734bfc11-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2026-03-10T17:48:55+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.25b6aa883e1ca12a7361db2d7283f686734bfc11@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nlol, but I wouldn't be allowed to text you if it's in effect. So why are\r\nyou texting me? Are you texting me in bad faith trying to entrap me into\r\nviolating a court order?\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 5.0,
+      "matched_terms": [
+        "solomon",
+        "order",
+        "court"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "49d12d8ba5879fe866e1bf5aeb720874ac17c1a6cc67fbd538212b1dd82f0b38",
+      "raw_cid": "bafkreicj2ewyxjmht7ugnyn7llvxecduvql4djwmm755kobbfmo5qlylha",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743134_Tue--10-Mar-2026-17-48-55--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0038-New-text-message-from-solomon-503-381-6911-19712700855.c5568b7a7faf99869709234a6c97c0c39c75ea85-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0038-New-text-message-from-solomon-503-381-6911-19712700855.c5568b7a7faf99869709234a6c97c0c39c75ea85-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0038-New-text-message-from-solomon-503-381-6911-19712700855.c5568b7a7faf99869709234a6c97c0c39c75ea85-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2026-03-10T17:51:15+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.c5568b7a7faf99869709234a6c97c0c39c75ea85@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nBut we're talking about me, not her. So again, you trying to entrap me?\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "e790688b8e6ec77f233629f24adcc82b18556624c3c6667b8d3e1febcbcf2e56",
+      "raw_cid": "bafkreihhsbuixdtoy57sgnrj6jfnzsbldbkwmjgdyzthxdj6d7v4xtzoky",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743136_Tue--10-Mar-2026-17-51-15--0000_New-text-message-from-solomon--503--381-6911.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0039-New-text-message-from-solomon-503-381-6911-19712700855.3561dba2d87a6f1a6d06cd8dfe3f799e44720c46-txt.voice.google.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0039-New-text-message-from-solomon-503-381-6911-19712700855.3561dba2d87a6f1a6d06cd8dfe3f799e44720c46-txt.voice.google.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0039-New-text-message-from-solomon-503-381-6911-19712700855.3561dba2d87a6f1a6d06cd8dfe3f799e44720c46-txt.voice.google.com/message.json",
+      "participants": [
+        "19712700855.15033816911.t6hsc2dvkz@txt.voice.google.com",
+        "starworks5@gmail.com"
+      ],
+      "subject": "New text message from solomon (503) 381-6911",
+      "date": "2026-03-10T17:52:06+00:00",
+      "from": "\"solomon (SMS)\" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>",
+      "to": "starworks5@gmail.com",
+      "cc": "",
+      "message_id_header": "<+19712700855.3561dba2d87a6f1a6d06cd8dfe3f799e44720c46@txt.voice.google.com>",
+      "text_content": "\r\n<https://voice.google.com>\r\nI don't do drugs\r\nYOUR ACCOUNT <https://voice.google.com> HELP CENTER\r\n<https://support.google.com/voice#topic=1707989> HELP FORUM\r\n<https://productforums.google.com/forum/#!forum/voice>\r\nThis email was sent to you because you indicated that you'd like to receive\r\nemail notifications for text messages. If you don't want to receive such\r\nemails in the future, please update your email notification settings\r\n<https://voice.google.com/settings#messaging>.\r\nGoogle LLC\r\n1600 Amphitheatre Pkwy\r\nMountain View CA 94043 USA\r\n",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "New text message from solomon (503) 381-6911",
+      "relevance_score": 3.0,
+      "matched_terms": [
+        "solomon"
+      ],
+      "matched_fields": [
+        "subject"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "432f2f3368f62d8e81025b490b36ac496826f4f74fe14272ae4e8231bf415638",
+      "raw_cid": "bafkreicdf4xtg2hwfwhicas3jeftnlcjnatpj52p4fbhflsoqiy36qkwha",
+      "source_eml_path": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743137_Tue--10-Mar-2026-17-52-06--0000_New-text-message-from-solomon--503--381-6911.eml"
+    }
+  ]
+}

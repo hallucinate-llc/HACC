@@ -815,6 +815,7 @@ def test_run_consumer_google_voice_takeout_wrapper_no_display_falls_back_cleanly
         env={
             **os.environ,
             "DISPLAY": "",
+            "HACC_DISABLE_X_DISPLAY_AUTO_DETECT": "1",
         },
     )
 
@@ -823,6 +824,162 @@ def test_run_consumer_google_voice_takeout_wrapper_no_display_falls_back_cleanly
     payload = json.loads(manifest_path.read_text(encoding="utf-8"))
     assert payload["status"] == "manual_browser_required"
     assert payload["capture"]["browser_capture"]["status"] == "manual_browser_required"
+
+
+@pytest.mark.communications_smoke
+def test_run_consumer_google_voice_takeout_wrapper_system_browser_handoff(tmp_path: Path) -> None:
+    repo_root = Path("/home/barberb/HACC")
+    downloads_dir = tmp_path / "downloads"
+    downloads_dir.mkdir()
+    manifest_path = downloads_dir / "acquisition.json"
+
+    cli_stub = tmp_path / "ipfs-cli-url-stub.py"
+    cli_stub.write_text(
+        "#!/usr/bin/env python3\n"
+        "import json, pathlib, sys\n"
+        "args = sys.argv[1:]\n"
+        "output = None\n"
+        "command = ' '.join(args)\n"
+        "for idx, arg in enumerate(args):\n"
+        "    if arg in ('--output', '-o') and idx + 1 < len(args):\n"
+        "        output = args[idx + 1]\n"
+        "if 'google-voice-takeout-url' in command:\n"
+        "    payload = {\n"
+        "      'status': 'success',\n"
+        "      'product_ids': ['voice'],\n"
+        "      'takeout_url': 'https://takeout.google.com/settings/takeout/custom/voice?dest=drive'\n"
+        "    }\n"
+        "else:\n"
+        "    payload = {'status': 'success'}\n"
+        "if output:\n"
+        "    pathlib.Path(output).write_text(json.dumps(payload), encoding='utf-8')\n"
+        "print(json.dumps(payload))\n",
+        encoding="utf-8",
+    )
+    cli_stub.chmod(0o755)
+
+    xdg_stub = tmp_path / "xdg-open"
+    xdg_stub.write_text(
+        "#!/usr/bin/env bash\n"
+        "echo \"XDG_OPEN_STUB $*\"\n",
+        encoding="utf-8",
+    )
+    xdg_stub.chmod(0o755)
+
+    result = subprocess.run(
+        [
+            str(repo_root / "run-consumer-google-voice-takeout.sh"),
+            "--product-id",
+            "voice",
+            "--downloads-dir",
+            str(downloads_dir),
+            "--acquisition-manifest",
+            str(manifest_path),
+            "--skip-index",
+            "--system-browser",
+        ],
+        cwd=repo_root,
+        capture_output=True,
+        text=True,
+        timeout=120,
+        check=False,
+        env={
+            **os.environ,
+            "HACC_IPFS_DATASETS_CLI": str(cli_stub),
+            "PATH": f"{tmp_path}:{os.environ['PATH']}",
+            "DISPLAY": ":10",
+            "XAUTHORITY": str(tmp_path / ".Xauthority"),
+        },
+    )
+
+    assert result.returncode == 0, result.stderr or result.stdout
+    assert "desktop browser" in result.stdout
+    payload = json.loads(manifest_path.read_text(encoding="utf-8"))
+    assert payload["status"] == "pending_archive"
+    assert payload["capture"]["browser_capture"]["mode"] == "system_browser"
+    assert payload["capture"]["browser_capture"]["launcher"] == "xdg-open"
+
+
+@pytest.mark.communications_smoke
+def test_run_consumer_google_voice_takeout_wrapper_email_poll_records_match(tmp_path: Path) -> None:
+    repo_root = Path("/home/barberb/HACC")
+    downloads_dir = tmp_path / "downloads"
+    downloads_dir.mkdir()
+    manifest_path = downloads_dir / "acquisition.json"
+
+    cli_stub = tmp_path / "ipfs-cli-email-stub.py"
+    cli_stub.write_text(
+        "#!/usr/bin/env python3\n"
+        "import json, pathlib, sys\n"
+        "args = sys.argv[1:]\n"
+        "output = None\n"
+        "command = ' '.join(args)\n"
+        "for idx, arg in enumerate(args):\n"
+        "    if arg in ('--output', '-o') and idx + 1 < len(args):\n"
+        "        output = args[idx + 1]\n"
+        "if 'google-voice-takeout-email' in command:\n"
+        "    payload = {\n"
+        "      'status': 'success',\n"
+        "      'matched_email_count': 1,\n"
+        "      'latest_match': {\n"
+        "        'subject': 'Your Google data is ready to download',\n"
+        "        'best_download_link': 'https://takeout.google.com/downloads/example'\n"
+        "      }\n"
+        "    }\n"
+        "else:\n"
+        "    payload = {'status': 'pending'}\n"
+        "if output:\n"
+        "    pathlib.Path(output).write_text(json.dumps(payload), encoding='utf-8')\n"
+        "print(json.dumps(payload))\n",
+        encoding="utf-8",
+    )
+    cli_stub.chmod(0o755)
+
+    xdg_stub = tmp_path / "xdg-open"
+    xdg_stub.write_text(
+        "#!/usr/bin/env bash\n"
+        "echo \"XDG_OPEN_STUB $*\"\n",
+        encoding="utf-8",
+    )
+    xdg_stub.chmod(0o755)
+
+    result = subprocess.run(
+        [
+            str(repo_root / "run-consumer-google-voice-takeout.sh"),
+            "--product-id",
+            "voice",
+            "--downloads-dir",
+            str(downloads_dir),
+            "--acquisition-manifest",
+            str(manifest_path),
+            "--skip-index",
+            "--email-poll",
+            "--email-open-link",
+            "--email-username",
+            "user@gmail.com",
+            "--email-password",
+            "app-pass",
+        ],
+        cwd=repo_root,
+        capture_output=True,
+        text=True,
+        timeout=120,
+        check=False,
+        env={
+            **os.environ,
+            "HACC_IPFS_DATASETS_CLI": str(cli_stub),
+            "PATH": f"{tmp_path}:{os.environ['PATH']}",
+            "DISPLAY": ":10",
+            "XAUTHORITY": str(tmp_path / ".Xauthority"),
+            "HACC_DISABLE_X_DISPLAY_AUTO_DETECT": "1",
+        },
+    )
+
+    assert result.returncode == 0, result.stderr or result.stdout
+    assert "polling email" in result.stdout.lower()
+    payload = json.loads(manifest_path.read_text(encoding="utf-8"))
+    assert payload["email_result"]["matched_email_count"] == 1
+    assert payload["email_result"]["latest_match"]["best_download_link"].startswith("https://takeout.google.com/")
 
 
 @pytest.mark.communications_smoke

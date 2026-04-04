@@ -1,0 +1,179 @@
+Delivered-To: starworks5@gmail.com
+Received: by 2002:a05:7208:3156:b0:f2:1355:7203 with SMTP id c22csp111097rba;
+        Mon, 17 Nov 2025 13:02:01 -0800 (PST)
+X-Received: by 2002:a05:6808:10d3:b0:44d:ba5b:ad34 with SMTP id 5614622812f47-4509766f384mr6797149b6e.65.1763413320812;
+        Mon, 17 Nov 2025 13:02:00 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1763413320; cv=none;
+        d=google.com; s=arc-20240605;
+        b=QH6n+qWRgkYsRF/SqpgAJs3Pk6rEWULakEYNK2nx2o2pOmcTHC8/ILDkdnpe/dW7/W
+         jh1aE8tzi13d7qm8hcXYtn1j38STJxJM+VPixk2q5XHkOGfxgQTK/TArIwAWHej5z4BV
+         dRqolyHL9ZUNAEDh35exkTysCvhMX+zo8JLalFupUkmQO2gCh+AgBZfpbNMj4xfji8SY
+         Rlxbtc24zaeYy5H4+EFX5I4d/tw8y1GJlKx7LMxhvGtsClKEq1QCik7G1PbMuZHRvZGQ
+         9Rxj84yzmDXZ7KIPfzEJ9z5ukfrGhMFm99CBVlv6AGDHst0Z4nYWG7DoH/V8/n/i8vep
+         9Wtg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:from:subject:date:message-id:references:mime-version
+         :dkim-signature;
+        bh=ogEJWvaibcMEGi4XzA54D3xedngw1Eud7dtEs1z+OIQ=;
+        fh=gPPrbYv6bjiCeSNOMtV7+ATcg7xOVeWRNeqU1P80kc4=;
+        b=T5t1l+gMYRJz1Env8woeoTvzZ5PwfrIruNk9utnsmxDNIrog1n0/yeIZ4cjrfszKoe
+         AMSg/ynnhlQ6jD+O8Iono9XJnW4bq+a3zx/fiqA8syg7YOFOTVdOpUZFtkrE1Qcj0VeC
+         Mhzc8/JCsUMJrr64QzpqcN9XMwl9vcPQm2iCG2e4uQiG4BCU6x7Nz4y71DfkHE5/nPOP
+         +T9XcMPIrJ4h0sCjf8wQOELDc78TouX7VHAAnO3sryf4Kk4Tuf8WpbFoPJ+Hy9A5rPjy
+         /WXA7VtPddGbMWtT4bivB5QC9vFyPICOKNvbgFX/xJ9tDA/TY5mIvktXYbEm9s+93iUL
+         eyYQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=FokkXHDT;
+       spf=pass (google.com: domain of 3si0basiuaceygeyzexxfcc.ycxaafydgyy.qdoz9zksh6quq.slf9b.dlldib.9lj@grandcentral.bounces.google.com designates 209.85.220.73 as permitted sender) smtp.mailfrom=3SI0baSIUACEYgeYZeXXfcc.YcXaafYdgYY.Qdoz9ZkSH6QUQ.SLF9B.DLLDIB.9LJ@grandcentral.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <3SI0baSIUACEYgeYZeXXfcc.YcXaafYdgYY.Qdoz9ZkSH6QUQ.SLF9B.DLLDIB.9LJ@grandcentral.bounces.google.com>
+Received: from mail-sor-f73.google.com (mail-sor-f73.google.com. [209.85.220.73])
+        by mx.google.com with SMTPS id 006d021491bc7-65757f28e24sor608563eaf.0.2025.11.17.13.02.00
+        for <starworks5@gmail.com>
+        (Google Transport Security);
+        Mon, 17 Nov 2025 13:02:00 -0800 (PST)
+Received-SPF: pass (google.com: domain of 3si0basiuaceygeyzexxfcc.ycxaafydgyy.qdoz9zksh6quq.slf9b.dlldib.9lj@grandcentral.bounces.google.com designates 209.85.220.73 as permitted sender) client-ip=209.85.220.73;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=FokkXHDT;
+       spf=pass (google.com: domain of 3si0basiuaceygeyzexxfcc.ycxaafydgyy.qdoz9zksh6quq.slf9b.dlldib.9lj@grandcentral.bounces.google.com designates 209.85.220.73 as permitted sender) smtp.mailfrom=3SI0baSIUACEYgeYZeXXfcc.YcXaafYdgYY.Qdoz9ZkSH6QUQ.SLF9B.DLLDIB.9LJ@grandcentral.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20230601; t=1763413320; x=1764018120; dara=google.com;
+        h=to:from:subject:date:message-id:references:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=ogEJWvaibcMEGi4XzA54D3xedngw1Eud7dtEs1z+OIQ=;
+        b=FokkXHDTS4MGd79m2pKCXzALMkW4niaZECZMyPWFptvSQzvzw20ABBljxxlXUA6Rqa
+         e+MTnTyZluR/rYB/tHsFeDxO6Dak+3FoFBwJJ1TbFkJBUxx3cz/FapHV1xX9oXaMXt0u
+         vq7OQmpcwIdnUwI+d5Mpi1tCWpYF6Wcysq8alOf7S7ckJfb8QyIP0AKFiNo1xFbqlz2I
+         L3/SayiyWwgNFsazDPBU2H1watpGurvypNzjkZL7z6wDlLawVkT5S3/njNjr6riE38Pk
+         jt3FPiUw/f1Pc9hdhroY0vGJ5e3ph2VqQsR+QeGkiGzQ09p7BVqKIl5ObHQ8txmW28aQ
+         GhIw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1763413320; x=1764018120;
+        h=to:from:subject:date:message-id:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=ogEJWvaibcMEGi4XzA54D3xedngw1Eud7dtEs1z+OIQ=;
+        b=QO6SDZ2/FwZRamHF3jOTl52Fqv1PsCbGMxQfQbJwPQYs0njVU1PNrI+Yy+tcTiCw5C
+         +UxKO3VE3q8odAJVOYtizmY26E1h2YtEqYZ8LBYAwy3bMSVbNaXxadcG6PKzCEqzWwrl
+         gvCFOJfGq8UYcKwWYb3Of67UmkD8jXm76hd5aSYGVvWMnoF6MOgGtBMalfPqB5sajraz
+         D5uoUDd7puQD+eUhxoxrAeeK88m1JZAuUd0ctA2RDa68zhjDkJifPI5wKQTRHWxx31MS
+         Ow0ArMjbxlM1YL0pDtBRwloCsQHuYqXJfGWKlPqOC6doieiXU7r14FsCQ5G9XXUxEIxS
+         +Wzg==
+X-Gm-Message-State: AOJu0Yw6cpT3sIRaDYZY7rvNExo3OejpBNvhrimYo5XwSYX6fumbsDeC
+	2/kmacXs6igcWMvURIFoaCi1E/nicBpgTBJsn7JgNVln+nrbzm765W/UVFqcFVourTffJKsc6D+
+	fDypiNXCzJr6iHMuaeXSTkmu4LSEi61Eb/22unlplpIkwohmRBg==
+X-Google-Smtp-Source: AGHT+IFrPcAg30utYjx7CSSby1v4X73G/KJkH5CGd5as4FDMAzPpPEOUTJMI/EVjtRWTfXekIeg/K0Tw9L92EnvxzU8FSQsUdD9b
+MIME-Version: 1.0
+X-Received: by 2002:a05:6820:1b19:b0:657:5629:2cef with SMTP id
+ 006d021491bc7-65756292e47mr2408037eaf.4.1763413320485; Mon, 17 Nov 2025
+ 13:02:00 -0800 (PST)
+References: <+19712700855.65225f7f72954b293879a2ad7cb69de0708b9c3d@txt.voice.google.com>
+Message-ID: <+19712700855.fcf06e278a8cc7638786037b4148f12ebfb13605@txt.voice.google.com>
+Date: Mon, 17 Nov 2025 21:02:00 +0000
+Subject: New text message from solomon (503) 381-6911
+From: "solomon (SMS)" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>
+To: starworks5@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000008f4cfb0643d0a801"
+
+--0000000000008f4cfb0643d0a801
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+
+
+<https://voice.google.com>
+I'm concerned about rent with Julio out of the picture. Do you have a plan
+for that? What's the rent shortfall going to be as he won't be contributing?
+YOUR ACCOUNT <https://voice.google.com> HELP CENTER
+<https://support.google.com/voice#topic=1707989> HELP FORUM
+<https://productforums.google.com/forum/#!forum/voice>
+This email was sent to you because you indicated that you'd like to receive
+email notifications for text messages. If you don't want to receive such
+emails in the future, please update your email notification settings
+<https://voice.google.com/settings#messaging>.
+Google LLC
+1600 Amphitheatre Pkwy
+Mountain View CA 94043 USA
+
+--0000000000008f4cfb0643d0a801
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><style type=3D"text/css">
+    /* Disable the default font adjustment on iOS devices */
+    div, p, a, li, td { -webkit-text-size-adjust:none; }
+    /* Adjust the table width on the small screen */
+    @media only screen
+      and (max-width: 599px) {
+      table[class=3D"content-table"] {
+        max-width: 360px !important;
+      }
+    }
+    /* Enlarge the font size on mobile device */
+    @media only screen
+      and (min-device-width: 320px)
+      and (max-device-width: 736px) {
+      td[class=3D"email-content-header"] {
+        font-size: 20px !important;
+        line-height: 28px !important;
+      }
+      td[class=3D"email-content"] {
+        font-size: 16px !important;
+        line-height: 24px !important;
+      }
+    }
+    /* Avoid the blue links on iOS devices for address, datetime and phone =
+number */
+    .links-date a {
+      color: #000000;
+      text-decoration: none;
+    }
+    .links-footer a {
+      color: #757575;
+      line-height: 12px;
+      text-decoration: none;
+    }
+    .links-phone_number a {
+      color: inherit;
+      text-decoration: none;
+    }
+    /* Stop Gmail from thinking this is a quote from an email it has seen b=
+efore */
+    .im {
+      color: #000 !important;
+    }
+    </style></head><body><table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" style=3D"font-family: Roboto,'Helvetica Neue',Helvetica,Arial,sans-s=
+erif;"><tr><td><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" widt=
+h=3D"600" class=3D"content-table" style=3D"border-bottom: 1px solid #eeeee;=
+"><tr><td align=3D"left" style=3D"padding: 16px 32px;"><a href=3D"https://v=
+oice.google.com" target=3D"_blank" rel=3D"noopener"><img alt=3D"Google Voic=
+e" src=3D"https://www.gstatic.com/voice-fe/icons/voice_lockup_2020q4_48px.p=
+ng" height=3D"32"/></a></td></tr></table><table cellspacing=3D"0" cellpaddi=
+ng=3D"0" border=3D"0" width=3D"600" class=3D"content-table" style=3D"paddin=
+g: 25px 32px; border-bottom: 1px solid #EEEEEE;"><tr><td style=3D"font-size=
+: 14px; line-height: 20px; padding: 25px 0;">I&#39;m concerned about rent w=
+ith Julio out of the picture. Do you have a plan for that? What&#39;s the r=
+ent shortfall going to be as he won&#39;t be contributing?</td></tr><tr><td=
+ style=3D"font-size: 14px; font-style: italic; line-height: 20px; color: #7=
+57575"></td></tr></table><table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" width=3D"600" class=3D"content-table" style=3D"padding: 25px 32px; f=
+ont-size: 9px; color: #757575;"><tr><td><table cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0" width=3D"240" style=3D"font-size: 9px; line-height: 14=
+px;" class=3D"footer-link"><tr><td style=3D"padding-right: 5px;"><a href=3D=
+"https://voice.google.com" target=3D"_blank">YOUR ACCOUNT</a></td><td style=
+=3D"padding-right: 5px;"><a href=3D"https://support.google.com/voice#topic=
+=3D1707989" target=3D"_blank">HELP CENTER</a></td><td><a href=3D"https://pr=
+oductforums.google.com/forum/#!forum/voice" target=3D"_blank">HELP FORUM</a=
+></td></tr></table></td></tr><tr><td style=3D"padding: 15px 0">This email w=
+as sent to you because you indicated that you'd like to receive email notif=
+ications for text messages. If you don't want to receive such emails in the=
+ future, please update your <a href=3D"https://voice.google.com/settings#me=
+ssaging">email notification settings</a>.</td></tr><tr><td><img alt=3D"Goog=
+le" src=3D"https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo=
+_dark_color_74x24dp.png" height=3D"14" style=3D"opacity: .5;"/></td></tr><t=
+r><td style=3D"padding: 15px 0; line-height: 12px;">Google LLC<br><span cla=
+ss=3D"links-footer">1600 Amphitheatre Pkwy<br>Mountain View CA 94043 USA</s=
+pan></td></tr></table></td></tr></table></body></html>
+--0000000000008f4cfb0643d0a801--

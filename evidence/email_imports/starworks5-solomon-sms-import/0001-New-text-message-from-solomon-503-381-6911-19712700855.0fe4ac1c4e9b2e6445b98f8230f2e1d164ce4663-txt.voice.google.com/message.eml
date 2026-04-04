@@ -1,0 +1,176 @@
+Delivered-To: starworks5@gmail.com
+Received: by 2002:a1c:417:0:0:0:0:0 with SMTP id 23csp623235wme;
+        Wed, 20 Jan 2021 17:42:48 -0800 (PST)
+X-Received: by 2002:a05:622a:2d4:: with SMTP id a20mr6454040qtx.217.1611193368347;
+        Wed, 20 Jan 2021 17:42:48 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1611193368; cv=none;
+        d=google.com; s=arc-20160816;
+        b=yzPKiPADhP36MJaypQae13GA/yfX8eVr2Q3RGL2nbgUW5F3/qtCx5Onnd2YT9WRvk3
+         WuJmGYmk0oQineyp0OmZwmrIPNnDkOZoJIpgbz+dFTRn5LzdhgVW6Y0Bm55tdE9C55+m
+         QloF7dwsqV2prVZobJW6o8MISFNDXY/OoTUYVv3f3namYIEhlcm4ytAk09pczsS+aSiw
+         9w7BeAam8Zg6NgvW8OIXHQnLdt1Tq5RAvOBZiG6RiekaBvmvm/PsuODVisuZaF6zuiKe
+         V0lLmobS4uzRaL+MDPSFeVqXt5pdFxRXd+QgaGwj5+QWwx9FUvT0CHP+PXBJmRXs6Vbo
+         jO2w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:from:subject:date:message-id:mime-version:dkim-signature;
+        bh=kp+Pmx1HYqYFLK2HrRA48YparYr3F/EUNK8Khf6NHt8=;
+        b=OXzLDSrklRmXKsMPQVQg69WqJ27bckYk0kq1HFFr6CCCBZwd43bZ5GTSeeqjTXvh2p
+         NgRl9jY0nFOnHycSoJR4EG645jYISTI/0byp8Ut+mDwDXiJqPzcbTL62QkApeLWyEYqI
+         MKWRmTlAS+7M7cl4RunpTHdT77yu+AOzEO9Fefhoq1I9Kw96v9K2jJfzzghkIyB3xSMa
+         D0uKfYpw7GvwwmsKWfiNW+4Hgw4fENpSOeFu+eYtoAgTyiMS+YgUdH4h7GZVffSlgQzj
+         HJuOwyMu248W6ayIYbFyjvQA9byQUAm9NbaI4NQyW4xBysUM1FixTBlDR8CCFEr8FZSr
+         BLNg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20161025 header.b=NlhDLPMl;
+       spf=pass (google.com: domain of 3f9wiyciuapg6ec67c55daa.6a588d6be66.ybmxh7i0pey2y.0tnhj.lttlqj.htr@grandcentral.bounces.google.com designates 209.85.220.73 as permitted sender) smtp.mailfrom=3F9wIYCIUAPg6EC67C55DAA.6A588D6BE66.yBMXh7I0pey2y.0tnhj.lttlqj.htr@grandcentral.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+Return-Path: <3F9wIYCIUAPg6EC67C55DAA.6A588D6BE66.yBMXh7I0pey2y.0tnhj.lttlqj.htr@grandcentral.bounces.google.com>
+Received: from mail-sor-f73.google.com (mail-sor-f73.google.com. [209.85.220.73])
+        by mx.google.com with SMTPS id t17sor2955657qtq.64.2021.01.20.17.42.47
+        for <starworks5@gmail.com>
+        (Google Transport Security);
+        Wed, 20 Jan 2021 17:42:48 -0800 (PST)
+Received-SPF: pass (google.com: domain of 3f9wiyciuapg6ec67c55daa.6a588d6be66.ybmxh7i0pey2y.0tnhj.lttlqj.htr@grandcentral.bounces.google.com designates 209.85.220.73 as permitted sender) client-ip=209.85.220.73;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20161025 header.b=NlhDLPMl;
+       spf=pass (google.com: domain of 3f9wiyciuapg6ec67c55daa.6a588d6be66.ybmxh7i0pey2y.0tnhj.lttlqj.htr@grandcentral.bounces.google.com designates 209.85.220.73 as permitted sender) smtp.mailfrom=3F9wIYCIUAPg6EC67C55DAA.6A588D6BE66.yBMXh7I0pey2y.0tnhj.lttlqj.htr@grandcentral.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20161025;
+        h=mime-version:message-id:date:subject:from:to;
+        bh=kp+Pmx1HYqYFLK2HrRA48YparYr3F/EUNK8Khf6NHt8=;
+        b=NlhDLPMlMmt10n5Bf/en+tYWUW3WC+iKBKTbo4fgOSEIlEIB6Ka4rxysHDUjsWHfLG
+         aUzg87eC31urDJyN0dteCK2j8ULx4O4MGA61yh6AnYauUMzm7X/VyxVwNWuSiDq0iZlk
+         6Dz86Fu/Aey5PmQqQhLJ5K3sxzvrL0mi8plzqr9uuC2KgaKQJPx3nK3fxlJQdGBHyPGk
+         4LyaRvkZhVxRTUXocgiyFqMO4chlgQhvmZwQRWPp1hPdIK7Owq/8K36E3moapim66T1n
+         pNW437t9N89xSqZWuQrcGXoBjhDmWHXfM2sxOzZNNMQDZ/JueIRGPTnhpoGjYp1tig9d
+         ACuQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:message-id:date:subject:from:to;
+        bh=kp+Pmx1HYqYFLK2HrRA48YparYr3F/EUNK8Khf6NHt8=;
+        b=jx1Yq9m7Ewnpceqfxs5560pYSONui3zi8PhdWw4KRNAryMkArvYARydvagV3GPGrSZ
+         yaH+Rc15L8eRluU/J+Ab3aRJ0P0lzAeOTfxy8wInsVNjAcUM7fOGZb+AfG0OA9WjbkRI
+         oZZDpPWHxyg/YLGukql/7Q5HlIHf2VXZbAmxi6/2FilE+HOqSXfmzBjeAs9MtLKaQRdr
+         ghFjjrhXBAILstQIptdgxRqbl3NjtiQ7Hv54Zp8oz+vT3ruptGuMnVsSZZYBqzZBMr8O
+         mrMJDBoEcAv1CPFQJNZRtrxDudKNupUAT+jDXs3zSJnhsYHg7va6sOh5EuiqXomfr4i9
+         Btcg==
+X-Gm-Message-State: AOAM53290F2sm+eq78AfzyWrh24GSD32WSbLpjeyx+bQG6rmmJotpuc4
+	Bpw0ro5nlxk8aDSLCV+j0wpcW3prCbis4kKi08c=
+X-Google-Smtp-Source: ABdhPJxkf6wZcFDTUNRjPhvmNvlSudeSuKlOrH1S+u7m3Ml+n80MT2INRn0GuLPOq7lyc7sLR8PVGWXTbe4Y9+VZTVeSYmCeazoz
+MIME-Version: 1.0
+X-Received: by 2002:ac8:3571:: with SMTP id z46mr11944735qtb.83.1611193367839;
+ Wed, 20 Jan 2021 17:42:47 -0800 (PST)
+Message-ID: <+19712700855.0fe4ac1c4e9b2e6445b98f8230f2e1d164ce4663@txt.voice.google.com>
+Date: Thu, 21 Jan 2021 01:42:47 +0000
+Subject: New text message from solomon (503) 381-6911
+From: "solomon (SMS)" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>
+To: starworks5@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000005ac2ff05b95f30cf"
+
+--0000000000005ac2ff05b95f30cf
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+
+
+<https://voice.google.com>
+Surgery was successful. Grafts went well and he's breathing normally, which
+is good as his lungs were the main point of concern. The doctor in charge
+of ICU is a Pulmonologist so surgeon has advised doctor to keep an eye on
+my dad given his history with asthma. Overall the surgeon seems optimistic
+it'll be a smooth recovery.
+To respond to this text message, reply to this email or visit Google Voice.
+YOUR ACCOUNT <https://voice.google.com> HELP CENTER
+<https://support.google.com/voice#topic=1707989> HELP FORUM
+<https://productforums.google.com/forum/#!forum/voice>
+This email was sent to you because you indicated that you'd like to receive
+email notifications for text messages. If you don't want to receive such
+emails in the future, please update your email notification settings
+<https://voice.google.com/settings#messaging>.
+Google LLC
+1600 Amphitheatre Pkwy
+Mountain View CA 94043 USA
+
+--0000000000005ac2ff05b95f30cf
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><style type=3D"text/css">
+    /* Disable the default font adjustment on iOS devices */
+    div, p, a, li, td { -webkit-text-size-adjust:none; }
+    /* Adjust the table width on the small screen */
+    @media only screen
+      and (max-width: 599px) {
+      table[class=3D"content-table"] {
+        max-width: 360px !important;
+      }
+    }
+    /* Enlarge the font size on mobile device */
+    @media only screen
+      and (min-device-width: 320px)
+      and (max-device-width: 736px) {
+      td[class=3D"email-content-header"] {
+        font-size: 20px !important;
+        line-height: 28px !important;
+      }
+      td[class=3D"email-content"] {
+        font-size: 16px !important;
+        line-height: 24px !important;
+      }
+    }
+    /* Avoid the blue links on iOS devices for address, datetime and phone =
+number */
+    .links-date a {
+      color: #000000;
+      text-decoration: none;
+    }
+    .links-footer a {
+      color: #757575;
+      line-height: 12px;
+      text-decoration: none;
+    }
+    .links-phone_number a {
+      color: inherit;
+      text-decoration: none;
+    }
+    /* Stop Gmail from thinking this is a quote from an email it has seen b=
+efore */
+    .im {
+      color: #000 !important;
+    }
+    </style></head><body><table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" style=3D"font-family: Roboto,'Helvetica Neue',Helvetica,Arial,sans-s=
+erif;"><tr><td><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" widt=
+h=3D"600" class=3D"content-table" style=3D"border-bottom: 1px solid #eeeee;=
+"><tr><td align=3D"left" style=3D"padding: 16px 32px;"><a href=3D"https://v=
+oice.google.com" target=3D"_blank" rel=3D"noopener"><img alt=3D"Google Voic=
+e" src=3D"https://www.gstatic.com/voice-fe/icons/voice_lockup_2020q4_48px.p=
+ng" height=3D"32"/></a></td></tr></table><table cellspacing=3D"0" cellpaddi=
+ng=3D"0" border=3D"0" width=3D"600" class=3D"content-table" style=3D"paddin=
+g: 25px 32px; border-bottom: 1px solid #EEEEEE;"><tr><td style=3D"font-size=
+: 14px; line-height: 20px; padding: 25px 0;">Surgery was successful. Grafts=
+ went well and he&#39;s breathing normally, which is good as his lungs were=
+ the main point of concern. The doctor in charge of ICU is a Pulmonologist =
+so surgeon has advised doctor to keep an eye on my dad given his history wi=
+th asthma. Overall the surgeon seems optimistic it&#39;ll be a smooth recov=
+ery. </td></tr><tr><td style=3D"font-size: 14px; font-style: italic; line-h=
+eight: 20px; color: #757575">To respond to this text message, reply to this=
+ email or visit Google Voice.</td></tr></table><table cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0" width=3D"600" class=3D"content-table" style=3D"=
+padding: 25px 32px; font-size: 9px; color: #757575;"><tr><td><table cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"240" style=3D"font-size:=
+ 9px; line-height: 14px;" class=3D"footer-link"><tr><td style=3D"padding-ri=
+ght: 5px;"><a href=3D"https://voice.google.com" target=3D"_blank">YOUR ACCO=
+UNT</a></td><td style=3D"padding-right: 5px;"><a href=3D"https://support.go=
+ogle.com/voice#topic=3D1707989" target=3D"_blank">HELP CENTER</a></td><td><=
+a href=3D"https://productforums.google.com/forum/#!forum/voice" target=3D"_=
+blank">HELP FORUM</a></td></tr></table></td></tr><tr><td style=3D"padding: =
+15px 0">This email was sent to you because you indicated that you'd like to=
+ receive email notifications for text messages. If you don't want to receiv=
+e such emails in the future, please update your <a href=3D"https://voice.go=
+ogle.com/settings#messaging">email notification settings</a>.</td></tr><tr>=
+<td><img alt=3D"Google" src=3D"https://www.gstatic.com/images/branding/goog=
+lelogo/1x/googlelogo_dark_color_74x24dp.png" height=3D"14" style=3D"opacity=
+: .5;"/></td></tr><tr><td style=3D"padding: 15px 0; line-height: 12px;">Goo=
+gle LLC<br><span class=3D"links-footer">1600 Amphitheatre Pkwy<br>Mountain =
+View CA 94043 USA</span></td></tr></table></td></tr></table></body></html>
+--0000000000005ac2ff05b95f30cf--

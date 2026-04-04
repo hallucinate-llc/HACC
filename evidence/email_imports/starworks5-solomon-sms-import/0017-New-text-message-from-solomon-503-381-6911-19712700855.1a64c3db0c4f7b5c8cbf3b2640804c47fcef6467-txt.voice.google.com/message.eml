@@ -1,0 +1,177 @@
+Delivered-To: starworks5@gmail.com
+Received: by 2002:a05:7208:3156:b0:f2:1355:7203 with SMTP id c22csp113634rba;
+        Mon, 17 Nov 2025 13:06:07 -0800 (PST)
+X-Received: by 2002:a05:6808:2e46:b0:450:dd1b:ff4f with SMTP id 5614622812f47-450dd1c0a54mr464658b6e.36.1763413567229;
+        Mon, 17 Nov 2025 13:06:07 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1763413567; cv=none;
+        d=google.com; s=arc-20240605;
+        b=hWtm61uvr65lA97/+gvbttakU6JfrFWt212vlt6E4jr4z8Xd3XEa3xm9VzoutPmiAa
+         2vmbnui3kqt7pdPOTIi/rpBD2CuE9/Wvy7VB5f9gJ8lNkijQX5ylctJe2bpHqukktkXk
+         kxS0G2U9IFAAWOgVZDb/XsesZnY+X3I4Wkdbyu8SQ0eCM/smmn6f/wGzYj0iGw1wbyjY
+         F1CVT6Ed5XGqyWgKEG8T7dvEgEjQ/3o8jAAxVhOKI2c6SUbUzDzRbrfZkyIpDGf61xd0
+         WnuwfRXEDy49zUIm0kETdOtulGU2WMIsB7yy7tgmaUFOcZcxjett0YjBMAnQgGU28qhf
+         p7mw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:from:subject:date:message-id:references:mime-version
+         :dkim-signature;
+        bh=LCcBoGofVIS6TlYW+TcaFxEOgdMZ5hge3qGpxHR5l6Y=;
+        fh=gPPrbYv6bjiCeSNOMtV7+ATcg7xOVeWRNeqU1P80kc4=;
+        b=cc4V5Vs7CHSIxekDrO6whdWF0Ll3fhfJqkLhF1hJBTfqOWYXoOlNAW+j80O0xsHH0e
+         SRwnZRxySJcfLRTAAehngMHKyfmJw38bJrQy6Lcz046Y2Vmiqc6AddEy+ZU/Xk6+4XLF
+         wl+1NU4ey/sNzjZswYmyRfuLVpbl3ftv709nBBC7sAqysnGk+WxFzTqGrcoJz3XHwsNJ
+         q/6hlHTIXfrhaE77d8tp9L9y9Mg9YH+eeT6fOwzo4j3LXaP4esnZDyQfYELnGRD2Ke+q
+         Wtiy+ZcvHGVRB2mx6b4EVpZ2Kyjc1EN90hHUicL7OeMJWZKKS0PDVlfFzlpLXSozATN6
+         eHdQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=dwwIV+Lu;
+       spf=pass (google.com: domain of 3po4basiuabkqywqrwppxuu.qupssxqvyqq.ivgr1rck9yimi.kd713.5dd5a3.1db@grandcentral.bounces.google.com designates 209.85.220.73 as permitted sender) smtp.mailfrom=3Po4baSIUABkQYWQRWPPXUU.QUPSSXQVYQQ.IVgr1RcK9yIMI.KD713.5DD5A3.1DB@grandcentral.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <3Po4baSIUABkQYWQRWPPXUU.QUPSSXQVYQQ.IVgr1RcK9yIMI.KD713.5DD5A3.1DB@grandcentral.bounces.google.com>
+Received: from mail-sor-f73.google.com (mail-sor-f73.google.com. [209.85.220.73])
+        by mx.google.com with SMTPS id 006d021491bc7-65756207f28sor861849eaf.3.2025.11.17.13.06.07
+        for <starworks5@gmail.com>
+        (Google Transport Security);
+        Mon, 17 Nov 2025 13:06:07 -0800 (PST)
+Received-SPF: pass (google.com: domain of 3po4basiuabkqywqrwppxuu.qupssxqvyqq.ivgr1rck9yimi.kd713.5dd5a3.1db@grandcentral.bounces.google.com designates 209.85.220.73 as permitted sender) client-ip=209.85.220.73;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=dwwIV+Lu;
+       spf=pass (google.com: domain of 3po4basiuabkqywqrwppxuu.qupssxqvyqq.ivgr1rck9yimi.kd713.5dd5a3.1db@grandcentral.bounces.google.com designates 209.85.220.73 as permitted sender) smtp.mailfrom=3Po4baSIUABkQYWQRWPPXUU.QUPSSXQVYQQ.IVgr1RcK9yIMI.KD713.5DD5A3.1DB@grandcentral.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20230601; t=1763413567; x=1764018367; dara=google.com;
+        h=to:from:subject:date:message-id:references:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=LCcBoGofVIS6TlYW+TcaFxEOgdMZ5hge3qGpxHR5l6Y=;
+        b=dwwIV+LuSHqUoqZrOHzE3QKNERi+2CIGd6ckqmC2bz1tUtJ3qYZEP4Y15QQB4tfrm2
+         2UcR/M4T4NiUcoea6B5bxYRRvaBcEFwl6GWDmwfUVULzhu/wUpVMmzZHUIlwibMKmMvk
+         WS3piembNWsdklv0AliK72S1YJJKKxFDyoRYidIExp8kGrS8C0uePvX/IcxwYpGJjEhZ
+         wr9+teHzuWLuQEbp/p8OdNTkZJ4mMI+sSnEkPzbLKhW/dEK2zs1IrErxsoCYizMSfavX
+         VOhwmMgz7VVFHdA4amyLxCC4nWHMI7KLbawnb7zI0qDFvc49yAXqEIIrQNrwAq10DS7j
+         x70g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1763413567; x=1764018367;
+        h=to:from:subject:date:message-id:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=LCcBoGofVIS6TlYW+TcaFxEOgdMZ5hge3qGpxHR5l6Y=;
+        b=Hs6rIy9AKOg6po3JPr1CBtrRAOe696FKBrJ3UYzaXC5SyTCHDmJyeYISo5eWjzMRqB
+         pW/3DMColhyt5c0TlNlZZ+2kpXOrrrWKEVfF1SN9IMTiYyPyz4t2JG8Xvc0bijVRY2cv
+         HRHitJHqHkB2uKxQxWBH31BPoMTkM/OXgTBHz8s2o5Ji2SMyxJWW5FEH468Zu7HDJ2UQ
+         FdCO06y4D4ONmSo7oLWmEMoAzHt6fw5htCzHiiYhQvDkGVo2pLGxTGc5fOGxeWGHw95Q
+         WFMqwdNcMSUSDJqCYhtzY+6mxFTvoP+pbfCysF8hOguFt8i98TnP7CilB/GrC79XNaSe
+         yLvg==
+X-Gm-Message-State: AOJu0YwLDCfNDzP+FoOTUbLKE4Vqv8RD/8tBFS/kKoMti1UpRkDtb779
+	STjmlemm4n8mSUsws0qsslJkQ5P6L20Oy1UXK6rE2YHIpdK5HOdtU6XzteiH1JANIXy+P9C5p58
+	9uu6N0SrIXPbMX4i+C3Pt4H7kh/Xc3zz3Cea1XoWqnmP3BX9csA==
+X-Google-Smtp-Source: AGHT+IENoNfeiGnOtnvX7kMZd8IFPHXcajUMQYkYf9Jg0wnlaXMuL/gsDZ4jyfJMZp9vp00f5KxTeiktbZ4DLc9iqfUiwNkU/0ZM
+MIME-Version: 1.0
+X-Received: by 2002:a05:6820:c09c:20b0:657:63b1:658 with SMTP id
+ 006d021491bc7-65763b10950mr180814eaf.7.1763413566892; Mon, 17 Nov 2025
+ 13:06:06 -0800 (PST)
+References: <+19712700855.65225f7f72954b293879a2ad7cb69de0708b9c3d@txt.voice.google.com>
+Message-ID: <+19712700855.1a64c3db0c4f7b5c8cbf3b2640804c47fcef6467@txt.voice.google.com>
+Date: Mon, 17 Nov 2025 21:06:06 +0000
+Subject: New text message from solomon (503) 381-6911
+From: "solomon (SMS)" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>
+To: starworks5@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000003f2c000643d0b746"
+
+--0000000000003f2c000643d0b746
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+
+
+<https://voice.google.com>
+You don't pull cash out of a business to pay personal rent expenses
+YOUR ACCOUNT <https://voice.google.com> HELP CENTER
+<https://support.google.com/voice#topic=1707989> HELP FORUM
+<https://productforums.google.com/forum/#!forum/voice>
+This email was sent to you because you indicated that you'd like to receive
+email notifications for text messages. If you don't want to receive such
+emails in the future, please update your email notification settings
+<https://voice.google.com/settings#messaging>.
+Google LLC
+1600 Amphitheatre Pkwy
+Mountain View CA 94043 USA
+
+--0000000000003f2c000643d0b746
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><style type=3D"text/css">
+    /* Disable the default font adjustment on iOS devices */
+    div, p, a, li, td { -webkit-text-size-adjust:none; }
+    /* Adjust the table width on the small screen */
+    @media only screen
+      and (max-width: 599px) {
+      table[class=3D"content-table"] {
+        max-width: 360px !important;
+      }
+    }
+    /* Enlarge the font size on mobile device */
+    @media only screen
+      and (min-device-width: 320px)
+      and (max-device-width: 736px) {
+      td[class=3D"email-content-header"] {
+        font-size: 20px !important;
+        line-height: 28px !important;
+      }
+      td[class=3D"email-content"] {
+        font-size: 16px !important;
+        line-height: 24px !important;
+      }
+    }
+    /* Avoid the blue links on iOS devices for address, datetime and phone =
+number */
+    .links-date a {
+      color: #000000;
+      text-decoration: none;
+    }
+    .links-footer a {
+      color: #757575;
+      line-height: 12px;
+      text-decoration: none;
+    }
+    .links-phone_number a {
+      color: inherit;
+      text-decoration: none;
+    }
+    /* Stop Gmail from thinking this is a quote from an email it has seen b=
+efore */
+    .im {
+      color: #000 !important;
+    }
+    </style></head><body><table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" style=3D"font-family: Roboto,'Helvetica Neue',Helvetica,Arial,sans-s=
+erif;"><tr><td><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" widt=
+h=3D"600" class=3D"content-table" style=3D"border-bottom: 1px solid #eeeee;=
+"><tr><td align=3D"left" style=3D"padding: 16px 32px;"><a href=3D"https://v=
+oice.google.com" target=3D"_blank" rel=3D"noopener"><img alt=3D"Google Voic=
+e" src=3D"https://www.gstatic.com/voice-fe/icons/voice_lockup_2020q4_48px.p=
+ng" height=3D"32"/></a></td></tr></table><table cellspacing=3D"0" cellpaddi=
+ng=3D"0" border=3D"0" width=3D"600" class=3D"content-table" style=3D"paddin=
+g: 25px 32px; border-bottom: 1px solid #EEEEEE;"><tr><td style=3D"font-size=
+: 14px; line-height: 20px; padding: 25px 0;">You don&#39;t pull cash out of=
+ a business to pay personal rent expenses </td></tr><tr><td style=3D"font-s=
+ize: 14px; font-style: italic; line-height: 20px; color: #757575"></td></tr=
+></table><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"6=
+00" class=3D"content-table" style=3D"padding: 25px 32px; font-size: 9px; co=
+lor: #757575;"><tr><td><table cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0" width=3D"240" style=3D"font-size: 9px; line-height: 14px;" class=3D"foo=
+ter-link"><tr><td style=3D"padding-right: 5px;"><a href=3D"https://voice.go=
+ogle.com" target=3D"_blank">YOUR ACCOUNT</a></td><td style=3D"padding-right=
+: 5px;"><a href=3D"https://support.google.com/voice#topic=3D1707989" target=
+=3D"_blank">HELP CENTER</a></td><td><a href=3D"https://productforums.google=
+.com/forum/#!forum/voice" target=3D"_blank">HELP FORUM</a></td></tr></table=
+></td></tr><tr><td style=3D"padding: 15px 0">This email was sent to you bec=
+ause you indicated that you'd like to receive email notifications for text =
+messages. If you don't want to receive such emails in the future, please up=
+date your <a href=3D"https://voice.google.com/settings#messaging">email not=
+ification settings</a>.</td></tr><tr><td><img alt=3D"Google" src=3D"https:/=
+/www.gstatic.com/images/branding/googlelogo/1x/googlelogo_dark_color_74x24d=
+p.png" height=3D"14" style=3D"opacity: .5;"/></td></tr><tr><td style=3D"pad=
+ding: 15px 0; line-height: 12px;">Google LLC<br><span class=3D"links-footer=
+">1600 Amphitheatre Pkwy<br>Mountain View CA 94043 USA</span></td></tr></ta=
+ble></td></tr></table></body></html>
+--0000000000003f2c000643d0b746--

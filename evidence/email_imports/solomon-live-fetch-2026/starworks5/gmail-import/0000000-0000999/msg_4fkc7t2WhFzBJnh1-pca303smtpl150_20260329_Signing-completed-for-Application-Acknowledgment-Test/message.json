@@ -1,0 +1,36 @@
+{
+  "artifact_dir": "/home/barberb/HACC/evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_4fkc7t2WhFzBJnh1-pca303smtpl150_20260329_Signing-completed-for-Application-Acknowledgment-Test",
+  "attachment_count": 1,
+  "attachments": [
+    {
+      "content_type": "application/octet-stream",
+      "filename": "Addendum_Benjamin-Barber_3292026.pdf",
+      "path": "/home/barberb/HACC/evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_4fkc7t2WhFzBJnh1-pca303smtpl150_20260329_Signing-completed-for-Application-Acknowledgment-Test/attachments/Addendum_Benjamin-Barber_3292026.pdf",
+      "size": 191556
+    }
+  ],
+  "body_preview": "",
+  "cc": "",
+  "collect_all_messages": true,
+  "date": "Sun, 29 Mar 2026 22:25:14 -0500",
+  "eml_path": "/home/barberb/HACC/evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_4fkc7t2WhFzBJnh1-pca303smtpl150_20260329_Signing-completed-for-Application-Acknowledgment-Test/message.eml",
+  "folder": "[Gmail]/All Mail",
+  "from": "Cyan/PDX Property Management <no-reply@rentcafe.com>",
+  "matched_addresses": [],
+  "matched_fields": [
+    "attachments"
+  ],
+  "matched_terms": [
+    "barber"
+  ],
+  "message_id_header": "<4fkc7t2WhFzBJnh1@pca303smtpl150>",
+  "participants": [
+    "cyanpdx@greystar.com",
+    "no-reply@rentcafe.com",
+    "starworks5@gmail.com"
+  ],
+  "raw_size_bytes": 287023,
+  "relevance_score": 2.0,
+  "subject": "Signing completed for Application Acknowledgment Test",
+  "to": "starworks5@gmail.com"
+}

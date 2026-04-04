@@ -1,0 +1,2318 @@
+Delivered-To: starworks5@gmail.com
+Received: by 2002:a05:7208:3010:b0:fa:5ef1:c6ed with SMTP id f16csp1892053rba;
+        Fri, 27 Mar 2026 10:04:49 -0700 (PDT)
+X-Received: by 2002:a05:620a:4116:b0:8cf:e015:afee with SMTP id af79cd13be357-8d01c7960demr441057985a.41.1774631088823;
+        Fri, 27 Mar 2026 10:04:48 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1774631088; cv=none;
+        d=google.com; s=arc-20240605;
+        b=liEvYFaQVN3yS42IB6txFnHAEZaSSXlDo3Esv19RhzXFjQH8V83KlciyT0sOsxIwAY
+         2MCTFARi3sxo6lLdpR+BZ6EPI5mkhEDyjjuLFkTUYLIFzoyCl+5Wxyj0hd/pXKaOsywl
+         tK/DeMOt6kP2MnzSH9dhSGu48c3AGCDDT1k2p3XeJdtMXDlp/T6FLuTn3dlKJQ6T6Mmz
+         vD30UepWAt+mSTHkTOl8xFO7cIRBU6hLnxXKEBKL3QPgZ36aMqwnVRB4WimZFPwTt81V
+         088ByL5LjP9XT2Rtj9oAK3fLpt4TkrvbmufZivAxShvUdFwvKZ6YjevXPgeU14b0sv55
+         h1lQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:list-unsubscribe-post:list-unsubscribe:list-id
+         :feedback-id:message-id:date:to:reply-to:from:subject:dkim-signature
+         :dkim-signature;
+        bh=7QYgHZ/+UVGJshFQoI5KqFdE91PEPGe2n39gED2iG5U=;
+        fh=2cWgZxr3ZTQFvuwFmykEv+kjBencnAUTD29jO6/FMx4=;
+        b=PH3G9vhbT0Iet2tGe8RvR8GMfrMOv3QfzXeBxCu1L/SfV95KDwEkNpcnX168oNGfYe
+         ZyxVgvNjckeRId9WhOCQ7Y6nM396IQMzqZBiwDxahTst9hY6K8qlxsOLJVGtu2aZdTpZ
+         4fre/UPFpItxaQghqozYOCA0IzPBtAc4YDc1O7xkuD+HjGiLEzpZc1/0Nm/XVy7fNBNe
+         pVD8fr0b0RftEXJidftQcrI17Rrhi/L0VPE4xjVmMaMloK3uC+B83Y4mFUWNF/79Flfp
+         IZyVu5GieQeebRdZZgwZQQEsQDvYKeAEf1kasxTm9BccOr1j029ET/vIJIPkSwdJTiAu
+         4L/A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.mcsv.net header.s=k2 header.b=c9i4zq5y;
+       dkim=pass header.i=@oregoncatalyst.com header.s=k3 header.b=Z46tKlG8;
+       spf=pass (google.com: domain of bounce-mc.us19_101479606.15549214-68a6393ac8@mail191.suw16.rsgsv.net designates 198.2.182.191 as permitted sender) smtp.mailfrom=bounce-mc.us19_101479606.15549214-68a6393ac8@mail191.suw16.rsgsv.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=oregoncatalyst.com
+Return-Path: <bounce-mc.us19_101479606.15549214-68a6393ac8@mail191.suw16.rsgsv.net>
+Received: from mail191.suw16.rsgsv.net (mail191.suw16.rsgsv.net. [198.2.182.191])
+        by mx.google.com with ESMTPS id af79cd13be357-8d00e59f739si730579885a.427.2026.03.27.10.04.48
+        for <starworks5@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 27 Mar 2026 10:04:48 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-mc.us19_101479606.15549214-68a6393ac8@mail191.suw16.rsgsv.net designates 198.2.182.191 as permitted sender) client-ip=198.2.182.191;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.mcsv.net header.s=k2 header.b=c9i4zq5y;
+       dkim=pass header.i=@oregoncatalyst.com header.s=k3 header.b=Z46tKlG8;
+       spf=pass (google.com: domain of bounce-mc.us19_101479606.15549214-68a6393ac8@mail191.suw16.rsgsv.net designates 198.2.182.191 as permitted sender) smtp.mailfrom=bounce-mc.us19_101479606.15549214-68a6393ac8@mail191.suw16.rsgsv.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=oregoncatalyst.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.mcsv.net;
+	s=k2; t=1774631070; x=1774717470;
+	bh=7QYgHZ/+UVGJshFQoI5KqFdE91PEPGe2n39gED2iG5U=;
+	h=Subject:From:Reply-To:To:Date:Message-ID:X-MC-User:Feedback-ID:
+	 List-ID:List-Unsubscribe:List-Unsubscribe-Post:Content-Type:
+	 MIME-Version:CC:Date:Subject:From;
+	b=c9i4zq5yK74uRU5aRsUkeH5W5yU4XdVUwVpO5nvZ9U2X5kZ64U45yyjD7ECSG21hE
+	 l6P9MpQ/k5KlHFHuwkLQsVhROn4257uOjSsbVE5BnQVKOaTBJzvlTLPCcY4S1fF54O
+	 nN6Isl1bD8fBfXYwxs81E+1/pl0XaZQBSVw2VlOk+1BVtLo8Khf7z4hjk5fJqPHoPh
+	 OT/Bo7Xh3pHy/FEP0XlJlbnBXMo2zTJVBWGB6wzI0sLkRbZdybzTHk44omgF+m5Qx2
+	 UmgtqfM1HJac6GuVHzHy4NwKUst4HIs8t+np/JDmMJW+mGmcyzkib2r3S/WhxAP6Ks
+	 swstiic0iBZDQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=oregoncatalyst.com;
+	s=k3; t=1774631070; x=1774901070; i=editor@oregoncatalyst.com;
+	bh=7QYgHZ/+UVGJshFQoI5KqFdE91PEPGe2n39gED2iG5U=;
+	h=Subject:From:Reply-To:To:Date:Message-ID:X-MC-User:Feedback-ID:
+	 List-ID:List-Unsubscribe:List-Unsubscribe-Post:Content-Type:
+	 MIME-Version:CC:Date:Subject:From;
+	b=Z46tKlG8VRTMXicwFjOOAJNRWTyZfXnrF4ULt3XoMqvQR7EHrPNZhTsCiLey5l1Pk
+	 Khvlr3LHPDl5ZWH+7IbTgKiES1835c6c2ba8WL1/vjFC8fSfoksWPUvI7JgoxwKV0j
+	 aZ5Kf/OWWAx1lNnqEiAq4jTlrBx+cvKWuEZLLlvISIzdeVLiduN8FoybOjguZHqV2x
+	 Csl7z6fJfX/NA0nknPdv3RhYGj93rJ2EYdAlsHMsHjVy6XKGDoV3rIJalKtXJJl/Gv
+	 mpTxhp7pLM8g57fKUdZn6WeDtrJdV1kOOKTh1eKnJ2kYtG2bsrY0O3W0avcGERaP+q
+	 gQVMAPWkDQoQw==
+Received: from localhost (localhost [127.0.0.1])
+	by mail191.suw16.rsgsv.net (Mailchimp) with ESMTP id 4fj6SZ2npFzLfJ702
+	for <starworks5@gmail.com>; Fri, 27 Mar 2026 17:04:30 +0000 (UTC)
+Subject: =?utf-8?Q?677=20of=20most=20wealthy=20flee=20county?=
+From: Oregon Catalyst <Editor@oregoncatalyst.com>
+Reply-To: =?utf-8?Q?Oregon=20Catalyst?= <Editor@oregoncatalyst.com>
+To: <starworks5@gmail.com>
+Date: Fri, 27 Mar 2026 17:04:22 +0000
+Message-ID: <a87f3bde94b788cb6aaff54b0.68a6393ac8.20260327170413.2128bb03a8.b061b558@mail191.suw16.rsgsv.net>
+X-Mailer: Mailchimp Mailer - **CID2128bb03a868a6393ac8**
+X-Campaign: mailchimpa87f3bde94b788cb6aaff54b0.2128bb03a8
+X-campaignid: mailchimpa87f3bde94b788cb6aaff54b0.2128bb03a8
+X-Report-Abuse: Please report abuse for this campaign here: https://mailchimp.com/contact/abuse/?u=a87f3bde94b788cb6aaff54b0&id=2128bb03a8&e=68a6393ac8
+X-MC-User: a87f3bde94b788cb6aaff54b0
+Feedback-ID: 101479606:101479606.15549214:us19:mc
+List-ID: a87f3bde94b788cb6aaff54b0mc list <a87f3bde94b788cb6aaff54b0.20453.list-id.mcsv.net>
+X-Accounttype: pr
+List-Unsubscribe: <https://oregoncatalyst.us19.list-manage.com/unsubscribe?u=a87f3bde94b788cb6aaff54b0&id=0eb42aa161&t=h&e=68a6393ac8&c=2128bb03a8>, <mailto:unsubscribe-mc.us19_a87f3bde94b788cb6aaff54b0.2128bb03a8-68a6393ac8@unsubscribe.mailchimpapp.net?subject=unsubscribe>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Content-Type: multipart/alternative; boundary="_----------=_MCPart_414798198"
+MIME-Version: 1.0
+
+This is a multi-part message in MIME format
+
+--_----------=_MCPart_414798198
+Content-Type: text/plain; charset="utf-8"; format="fixed"
+Content-Transfer-Encoding: quoted-printable
+
+** 677 of most wealthy flee county (https://oregoncatalyst.us19.list-manag=
+e.com/track/click?u=3Da87f3bde94b788cb6aaff54b0&id=3D4c14c07264&e=3D68a6393ac8)
+------------------------------------------------------------
+
+By Taxpayers Association of Oregon OregonWatchdog.com The Oregonian has a=
+ story about the dramatic change in Multnomah County taxpayer migration si=
+nce a big income tax increase was passed in 2020. The Preschool-for-All ba=
+llot measure raised income taxes by 1.5% to 3%.  A second big income tax w=
+as passed in the same year with the Homeless [=E2=80=A6]
+
+The post 677 of most wealthy flee county (https://oregoncatalyst.us19.list=
+-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0&id=3D28a171cc1e&e=3D=
+68a6393ac8) first appeared on Oregon Catalyst (https://oregoncatalys=
+t.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0&id=3Db04e=
+f9716f&e=3D68a6393ac8) .
+Read on =C2=BB (https://oregoncatalyst.us19.list-manage.com/track/click?u=
+=3Da87f3bde94b788cb6aaff54b0&id=3Dc5d0575622&e=3D68a6393ac8)
+
+
+
+** More AI Hallucinations in an Oregon Court (https://oregoncatalyst.us19.=
+list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0&id=3Df656eb54cd&=
+e=3D68a6393ac8)
+------------------------------------------------------------
+
+Last fall=2C I wrote about an instance where a lawyer was caught using fak=
+e citations that were generated from artificial intelligence. It happened=
+ again in Oregon District Court=2C where Magistrate Judge Mark Clarke sanc=
+tioned a lawyer fairly severely in Couvrette v. Wisnovsky. The Judge quest=
+ioned whether the lawyer meaningfully participated in the case: At issue [=
+=E2=80=A6]
+
+The post More AI Hallucinations in an Oregon Court (https://oregoncatalyst=
+=2Eus19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0&id=3D4cb86=
+e9966&e=3D68a6393ac8) first appeared on Oregon Catalyst (https://ore=
+goncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0=
+&id=3Dfaf42fa927&e=3D68a6393ac8) .
+Read on =C2=BB (https://oregoncatalyst.us19.list-manage.com/track/click?u=
+=3Da87f3bde94b788cb6aaff54b0&id=3Dbd6a1bd59e&e=3D68a6393ac8)
+
+
+
+** What a 3=2C500 pot plant bust looks like (photo) (https://oregoncatalys=
+t.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0&id=3Df478=
+dae874&e=3D68a6393ac8)
+------------------------------------------------------------
+
+By Taxpayers Association of Oregon Foundation=2C The Clackamas County Inte=
+ragency Task Force has just seized 3=2C500 marijuana plants=2C $100=2C000=
+ cash=2C three firearms=2C during an illegal grow operation bust. See more=
+=2E We were told that if we legalized marijuana=2C the black market would di=
+sappear.  Instead it feels like it is growing.  The $100=2C000 cash discov=
+ered is [=E2=80=A6]
+
+The post What a 3=2C500 pot plant bust looks like (photo) (https://oregonc=
+atalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0&id=
+=3D562cf49879&e=3D68a6393ac8) first appeared on Oregon Catalyst (htt=
+ps://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6=
+aaff54b0&id=3D79a8950b28&e=3D68a6393ac8) .
+Read on =C2=BB (https://oregoncatalyst.us19.list-manage.com/track/click?u=
+=3Da87f3bde94b788cb6aaff54b0&id=3Dea268c3382&e=3D68a6393ac8)
+
+
+
+** 6 memes to make your day (https://oregoncatalyst.us19.list-manage.com/t=
+rack/click?u=3Da87f3bde94b788cb6aaff54b0&id=3De9322aad4d&e=3D68a6393ac8)
+------------------------------------------------------------
+
+By Guest Submission meme=2C More memes below:
+
+The post 6 memes to make your day (https://oregoncatalyst.us19.list-manage=
+=2Ecom/track/click?u=3Da87f3bde94b788cb6aaff54b0&id=3Db27d9ef7f8&e=3D68a6393ac8) first appeared on Oregon Catalyst (https://oregoncatalyst.us19.=
+list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0&id=3Ded56a80a84&=
+e=3D68a6393ac8) .
+Read on =C2=BB (https://oregoncatalyst.us19.list-manage.com/track/click?u=
+=3Da87f3bde94b788cb6aaff54b0&id=3De50b211f93&e=3D68a6393ac8)
+
+
+
+** Sen. Drazan: Kotek must veto $311M tax on business (https://oregoncatal=
+yst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0&id=3D1f=
+df720c3f&e=3D68a6393ac8)
+------------------------------------------------------------
+
+SEN. CHRISTINE DRAZAN CALLS ON GOV. KOTEK TO VETO $311 MILLION TAX HIKE ON=
+ OREGON BUSINESSES By Oregon State Senator Christine Drazan=2C   CANBY=2C=
+ Ore. =E2=80=93 Last month=2C Democrats in the Oregon State Legislature pa=
+ssed Senate Bill 1507=2C a bill that would increase the tax burden on loca=
+l employers by $311 million. The bill currently sits [=E2=80=A6]
+
+The post Sen. Drazan: Kotek must veto $311M tax on business (https://orego=
+ncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0&i=
+d=3D8ede6e2679&e=3D68a6393ac8) first appeared on Oregon Catalyst (ht=
+tps://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb=
+6aaff54b0&id=3D5683b38b9b&e=3D68a6393ac8) .
+Read on =C2=BB (https://oregoncatalyst.us19.list-manage.com/track/click?u=
+=3Da87f3bde94b788cb6aaff54b0&id=3De566dce4e0&e=3D68a6393ac8)
+
+
+
+** Lars Larson: Election date=2C vote-by-mail=2C fraud =E2=80=A6 (https://=
+oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff5=
+4b0&id=3D08efe19ace&e=3D68a6393ac8)
+------------------------------------------------------------
+
+By Lars Larson NW and national radio host=2C The Northwest Nonsense I gues=
+s you could call the Democrat Party=E2=80=99s approach to elections=2C bac=
+k to the future. Fraud in elections was a big problem about 180 years ago.=
+ States held the Presidential election on various dates spanning more than=
+ a month. That meant early voting influenced voting [=E2=80=A6]
+
+The post Lars Larson: Election date=2C vote-by-mail=2C fraud =E2=80=A6 (ht=
+tps://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb=
+6aaff54b0&id=3D5bac8504bc&e=3D68a6393ac8) first appeared on Oregon C=
+atalyst (https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3=
+bde94b788cb6aaff54b0&id=3D5a1b973d1b&e=3D68a6393ac8) .
+Read on =C2=BB (https://oregoncatalyst.us19.list-manage.com/track/click?u=
+=3Da87f3bde94b788cb6aaff54b0&id=3D3255dfb49f&e=3D68a6393ac8)
+
+
+
+** Persuading Gov. Kotek (https://oregoncatalyst.us19.list-manage.com/trac=
+k/click?u=3Da87f3bde94b788cb6aaff54b0&id=3D8dd3eb0a96&e=3D68a6393ac8=
+)
+------------------------------------------------------------
+
+By Rob Kremer As seen in the Oregon Transformation Newsletter=2C  How do w=
+e persuade Gov. Kotek to opt into the federal scholarship tax credit? The=
+ new federal scholarship tax credit legislation=2C known as the Educationa=
+l Choice for Children Act (ECCA)=2C is going to result in billions of doll=
+ars becoming available to families of both public [=E2=80=A6]
+
+The post Persuading Gov. Kotek (https://oregoncatalyst.us19.list-manage.co=
+m/track/click?u=3Da87f3bde94b788cb6aaff54b0&id=3D36e42d2208&e=3D68a6393ac8) first appeared on Oregon Catalyst (https://oregoncatalyst.us19.lis=
+t-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0&id=3D9924ac3679&e=
+=3D68a6393ac8) .
+Read on =C2=BB (https://oregoncatalyst.us19.list-manage.com/track/click?u=
+=3Da87f3bde94b788cb6aaff54b0&id=3Dfbbd34db00&e=3D68a6393ac8)
+
+
+
+** Full-page ad ($250K!) touts No Kings March 4/28 (https://oregoncatalyst=
+=2Eus19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0&id=3Df6a6f=
+831a1&e=3D68a6393ac8)
+------------------------------------------------------------
+
+By Taxpayers Association of Oregon OregonWatchdog.com The anti-Trump No Ki=
+ngs March scheduled nationwide for March 28=2C may  involve a lot of parti=
+cipants=2C but let the record show=2C it also involves a lot of money.   T=
+his full-page ad seen in the Wall Street Journal is advertising the march=
+=2C and such ads can cost up to a [=E2=80=A6]
+
+The post Full-page ad ($250K!) touts No Kings March 4/28 (https://oregonca=
+talyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0&id=
+=3D44445f50bf&e=3D68a6393ac8) first appeared on Oregon Catalyst (htt=
+ps://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6=
+aaff54b0&id=3Da62365da28&e=3D68a6393ac8) .
+Read on =C2=BB (https://oregoncatalyst.us19.list-manage.com/track/click?u=
+=3Da87f3bde94b788cb6aaff54b0&id=3Dcd17be7048&e=3D68a6393ac8)
+
+
+
+** USA 250: Nation=E2=80=99s 1st war casualty was boy who stirred nation (=
+https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788=
+cb6aaff54b0&id=3D48825eb820&e=3D68a6393ac8)
+------------------------------------------------------------
+
+By Jason Williams Oregon 250 Resolution=2C This story brought to you by th=
+e Oregon 250 Resolution project to honor America=E2=80=99s 250th. The firs=
+t victim of the American Revolution was a 12-year-old boy who was shot. Al=
+so=2C a painter Samuel Gore was hit with a different bullet but survived=
+=2C and became part of the revolution. Here [=E2=80=A6]
+
+The post USA 250: Nation=E2=80=99s 1st war casualty was boy who stirred na=
+tion (https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde=
+94b788cb6aaff54b0&id=3Db2e13a9bfd&e=3D68a6393ac8) first appeared on=
+ Oregon Catalyst (https://oregoncatalyst.us19.list-manage.com/track/click?=
+u=3Da87f3bde94b788cb6aaff54b0&id=3Ddf03796459&e=3D68a6393ac8) .
+Read on =C2=BB (https://oregoncatalyst.us19.list-manage.com/track/click?u=
+=3Da87f3bde94b788cb6aaff54b0&id=3D68afddb101&e=3D68a6393ac8)
+
+Other Recent Posts
+*|FEED:https://www.oregoncatalyst.com/feed/ [$count=3D5=2C$content=3Dtitle=
+s=2C$format=3Dtext]|*
+https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788=
+cb6aaff54b0&id=3D1239ad384f&e=3D68a6393ac8 Share (https://oregoncata=
+lyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0&id=3Da=
+ba23b5d90&e=3D68a6393ac8)
+https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788=
+cb6aaff54b0&id=3Dbddfd8f362&e=3D68a6393ac8 http%3A%2F%2Feepurl.com%2=
+FjCIPFs Tweet (https://oregoncatalyst.us19.list-manage.com/track/click?u=
+=3Da87f3bde94b788cb6aaff54b0&id=3D4e9e779020&e=3D68a6393ac8 http%3A%=
+2F%2Feepurl.com%2FjCIPFs)
+https://us19.forward-to-friend.com/forward?u=3Da87f3bde94b788cb6aaff54b0&i=
+d=3D2128bb03a8&e=3D68a6393ac8 Forward (https://us19.forward-to-friend.com/fo=
+rward?u=3Da87f3bde94b788cb6aaff54b0&id=3D2128bb03a8&e=3D68a6393ac8)
+
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+About this Email
+Oregon Catalyst started in 2005 as place for conservative Oregonians to ga=
+ther and share news=2C commentary=2C and gossip. Today=2C it is the larges=
+t Conservative political blog in Oregon. This email sends out regular Cata=
+lyst article updates on Mondays=2C Wednesdays=2C and Fridays.
+** (https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94=
+b788cb6aaff54b0&id=3D1be9850ed2&e=3D68a6393ac8)
+** (https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94=
+b788cb6aaff54b0&id=3De90cb1c457&e=3D68a6393ac8)
+** (https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94=
+b788cb6aaff54b0&id=3D053495b07e&e=3D68a6393ac8)
+** (https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94=
+b788cb6aaff54b0&id=3D4f38237432&e=3D68a6393ac8)
+** (mailto:editor@oregoncatalyst.com)
+Copyright =C2=A9 2026 Oregon Catalyst=2C All rights reserved.
+ You are receiving this email because you opted in via our website.
+Our mailing address is:
+Oregon Catalyst
+11080 SW Allen Blvd Ste 400B
+Beaverton=2C OR 97005-4822
+USA
+Want to change how you receive these emails?
+You can ** update your preferences (https://oregoncatalyst.us19.list-manag=
+e.com/profile?u=3Da87f3bde94b788cb6aaff54b0&id=3D0eb42aa161&e=3D68a6393ac8&c=
+=3D2128bb03a8)
+or ** unsubscribe from this list (https://oregoncatalyst.us19.list-manage.=
+com/unsubscribe?u=3Da87f3bde94b788cb6aaff54b0&id=3D0eb42aa161&t=3Db&e=3D68a6393ac8&c=3D2128bb03a8)
+=2E
+--_----------=_MCPart_414798198
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www=
+=2Ew3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!doctype html>
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-micros=
+oft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" style=3D"=
+font-family: Helvetica=2C sans-serif;">
+    <head style=3D"font-family: Helvetica=2C sans-serif;">
+        <!-- NAME: EDUCATE -->
+        <!--[if gte mso 15]>
+        <xml>
+            <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+            </o:OfficeDocumentSettings>
+        </xml>
+        <![endif]-->
+        <meta charset=3D"UTF-8" style=3D"font-family: Helvetica=2C sans-se=
+rif;">
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" style=
+=3D"font-family: Helvetica=2C sans-serif;">
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width=2C initial=
+-scale=3D1" style=3D"font-family: Helvetica=2C sans-serif;">
+        <title style=3D"font-family: Helvetica=2C sans-serif;">677 of most=
+ wealthy flee county</title>
+
+    <style type=3D"text/css" style=3D"font-family: Helvetica=2C sans-serif=
+;">
+=09=09p{
+=09=09=09margin:10px 0;
+=09=09=09padding:0;
+=09=09}
+=09=09table{
+=09=09=09border-collapse:collapse;
+=09=09}
+=09=09h1=2Ch2=2Ch3=2Ch4=2Ch5=2Ch6{
+=09=09=09display:block;
+=09=09=09margin:0;
+=09=09=09padding:0;
+=09=09}
+=09=09img=2Ca img{
+=09=09=09border:0;
+=09=09=09height:auto;
+=09=09=09outline:none;
+=09=09=09text-decoration:none;
+=09=09}
+=09=09body=2C#bodyTable=2C#bodyCell{
+=09=09=09height:100%;
+=09=09=09margin:0;
+=09=09=09padding:0;
+=09=09=09width:100%;
+=09=09}
+=09=09.mcnPreviewText{
+=09=09=09display:none !important;
+=09=09}
+=09=09#outlook a{
+=09=09=09padding:0;
+=09=09}
+=09=09img{
+=09=09=09-ms-interpolation-mode:bicubic;
+=09=09}
+=09=09table{
+=09=09=09mso-table-lspace:0pt;
+=09=09=09mso-table-rspace:0pt;
+=09=09}
+=09=09.ReadMsgBody{
+=09=09=09width:100%;
+=09=09}
+=09=09.ExternalClass{
+=09=09=09width:100%;
+=09=09}
+=09=09p=2Ca=2Cli=2Ctd=2Cblockquote{
+=09=09=09mso-line-height-rule:exactly;
+=09=09}
+=09=09a[href^=3Dtel]=2Ca[href^=3Dsms]{
+=09=09=09color:inherit;
+=09=09=09cursor:default;
+=09=09=09text-decoration:none;
+=09=09}
+=09=09p=2Ca=2Cli=2Ctd=2Cbody=2Ctable=2Cblockquote{
+=09=09=09-ms-text-size-adjust:100%;
+=09=09=09-webkit-text-size-adjust:100%;
+=09=09}
+=09=09.ExternalClass=2C.ExternalClass p=2C.ExternalClass td=2C.ExternalCla=
+ss div=2C.ExternalClass span=2C.ExternalClass font{
+=09=09=09line-height:100%;
+=09=09}
+=09=09a[x-apple-data-detectors]{
+=09=09=09color:inherit !important;
+=09=09=09text-decoration:none !important;
+=09=09=09font-size:inherit !important;
+=09=09=09font-family:inherit !important;
+=09=09=09font-weight:inherit !important;
+=09=09=09line-height:inherit !important;
+=09=09}
+=09=09table[align=3Dleft]{
+=09=09=09float:left;
+=09=09}
+=09=09table[align=3Dright]{
+=09=09=09float:right;
+=09=09}
+=09=09.templateContainer{
+=09=09=09max-width:600px !important;
+=09=09}
+=09=09a.mcnButton{
+=09=09=09display:block;
+=09=09}
+=09=09.mcnImage=2C.mcnRetinaImage{
+=09=09=09vertical-align:bottom;
+=09=09}
+=09=09.mcnTextContent{
+=09=09=09word-break:break-word;
+=09=09}
+=09=09.mcnTextContent img{
+=09=09=09height:auto !important;
+=09=09}
+=09=09.mcnDividerBlock{
+=09=09=09table-layout:fixed !important;
+=09=09}
+=09=09h1{
+=09=09=09color:#222222;
+=09=09=09font-family:'Helvetica Neue'=2C Helvetica=2C Arial=2C Verdana=2C=
+ sans-serif;
+=09=09=09font-size:40px;
+=09=09=09font-style:normal;
+=09=09=09font-weight:bold;
+=09=09=09line-height:150%;
+=09=09=09letter-spacing:normal;
+=09=09=09text-align:left;
+=09=09}
+=09=09h2{
+=09=09=09color:#222222;
+=09=09=09font-family:'Helvetica Neue'=2C Helvetica=2C Arial=2C Verdana=2C=
+ sans-serif;
+=09=09=09font-size:28px;
+=09=09=09font-style:normal;
+=09=09=09font-weight:bold;
+=09=09=09line-height:150%;
+=09=09=09letter-spacing:normal;
+=09=09=09text-align:left;
+=09=09}
+=09=09h3{
+=09=09=09color:#444444;
+=09=09=09font-family:'Helvetica Neue'=2C Helvetica=2C Arial=2C Verdana=2C=
+ sans-serif;
+=09=09=09font-size:22px;
+=09=09=09font-style:normal;
+=09=09=09font-weight:bold;
+=09=09=09line-height:150%;
+=09=09=09letter-spacing:normal;
+=09=09=09text-align:left;
+=09=09}
+=09=09h4{
+=09=09=09color:#949494;
+=09=09=09font-family:'Helvetica Neue'=2C Helvetica=2C Arial=2C Verdana=2C=
+ sans-serif;
+=09=09=09font-size:20px;
+=09=09=09font-style:italic;
+=09=09=09font-weight:normal;
+=09=09=09line-height:125%;
+=09=09=09letter-spacing:normal;
+=09=09=09text-align:left;
+=09=09}
+=09=09#templateHeader{
+=09=09=09background-color:#f7f7f7;
+=09=09=09background-image:url("https://gallery.mailchimp.com/a87f3bde94b78=
+8cb6aaff54b0/_compresseds/2ab2e0c3-0d7d-4220-87aa-8a878ad84407.jpg");
+=09=09=09background-repeat:no-repeat;
+=09=09=09background-position:center;
+=09=09=09background-size:cover;
+=09=09=09border-top:0;
+=09=09=09border-bottom:0;
+=09=09=09padding-top:54px;
+=09=09=09padding-bottom:54px;
+=09=09}
+=09=09.headerContainer{
+=09=09=09background-color:#transparent;
+=09=09=09background-image:none;
+=09=09=09background-repeat:no-repeat;
+=09=09=09background-position:center;
+=09=09=09background-size:cover;
+=09=09=09border-top:0;
+=09=09=09border-bottom:0;
+=09=09=09padding-top:0;
+=09=09=09padding-bottom:0;
+=09=09}
+=09=09.headerContainer .mcnTextContent=2C.headerContainer .mcnTextContent=
+ p{
+=09=09=09color:#757575;
+=09=09=09font-family:Helvetica;
+=09=09=09font-size:16px;
+=09=09=09line-height:150%;
+=09=09=09text-align:left;
+=09=09}
+=09=09.headerContainer .mcnTextContent a=2C.headerContainer .mcnTextConten=
+t p a{
+=09=09=09color:#007C89;
+=09=09=09font-weight:normal;
+=09=09=09text-decoration:underline;
+=09=09}
+=09=09#templateBody{
+=09=09=09background-color:#ffffff;
+=09=09=09background-image:none;
+=09=09=09background-repeat:no-repeat;
+=09=09=09background-position:center;
+=09=09=09background-size:cover;
+=09=09=09border-top:0;
+=09=09=09border-bottom:0;
+=09=09=09padding-top:27px;
+=09=09=09padding-bottom:63px;
+=09=09}
+=09=09.bodyContainer{
+=09=09=09background-color:#transparent;
+=09=09=09background-image:none;
+=09=09=09background-repeat:no-repeat;
+=09=09=09background-position:center;
+=09=09=09background-size:cover;
+=09=09=09border-top:0;
+=09=09=09border-bottom:0;
+=09=09=09padding-top:0;
+=09=09=09padding-bottom:0;
+=09=09}
+=09=09.bodyContainer .mcnTextContent=2C.bodyContainer .mcnTextContent p{
+=09=09=09color:#757575;
+=09=09=09font-family:'Helvetica Neue'=2C Helvetica=2C Arial=2C Verdana=2C=
+ sans-serif;
+=09=09=09font-size:18px;
+=09=09=09line-height:150%;
+=09=09=09text-align:left;
+=09=09}
+=09=09.bodyContainer .mcnTextContent a=2C.bodyContainer .mcnTextContent p=
+ a{
+=09=09=09color:#007C89;
+=09=09=09font-weight:normal;
+=09=09=09text-decoration:underline;
+=09=09}
+=09=09#templateFooter{
+=09=09=09background-color:#0e314e;
+=09=09=09background-image:none;
+=09=09=09background-repeat:no-repeat;
+=09=09=09background-position:50% 50%;
+=09=09=09background-size:cover;
+=09=09=09border-top:0;
+=09=09=09border-bottom:0;
+=09=09=09padding-top:45px;
+=09=09=09padding-bottom:63px;
+=09=09}
+=09=09.footerContainer{
+=09=09=09background-color:#transparent;
+=09=09=09background-image:none;
+=09=09=09background-repeat:no-repeat;
+=09=09=09background-position:center;
+=09=09=09background-size:cover;
+=09=09=09border-top:0;
+=09=09=09border-bottom:0;
+=09=09=09padding-top:0;
+=09=09=09padding-bottom:0;
+=09=09}
+=09=09.footerContainer .mcnTextContent=2C.footerContainer .mcnTextContent=
+ p{
+=09=09=09color:#FFFFFF;
+=09=09=09font-family:'Helvetica Neue'=2C Helvetica=2C Arial=2C Verdana=2C=
+ sans-serif;
+=09=09=09font-size:13px;
+=09=09=09line-height:150%;
+=09=09=09text-align:center;
+=09=09}
+=09=09.footerContainer .mcnTextContent a=2C.footerContainer .mcnTextConten=
+t p a{
+=09=09=09color:#FFFFFF;
+=09=09=09font-weight:normal;
+=09=09=09text-decoration:underline;
+=09=09}
+=09@media only screen and (min-width:768px){
+=09=09.templateContainer{
+=09=09=09width:600px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09body=2Ctable=2Ctd=2Cp=2Ca=2Cli=2Cblockquote{
+=09=09=09-webkit-text-size-adjust:none !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09body{
+=09=09=09width:100% !important;
+=09=09=09min-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnRetinaImage{
+=09=09=09max-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnImage{
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnCartContainer=2C.mcnCaptionTopContent=2C.mcnRecContentContainer=
+=2C.mcnCaptionBottomContent=2C.mcnTextContentContainer=2C.mcnBoxedTextCont=
+entContainer=2C.mcnImageGroupContentContainer=2C.mcnCaptionLeftTextContent=
+Container=2C.mcnCaptionRightTextContentContainer=2C.mcnCaptionLeftImageCon=
+tentContainer=2C.mcnCaptionRightImageContentContainer=2C.mcnImageCardLeftT=
+extContentContainer=2C.mcnImageCardRightTextContentContainer=2C.mcnImageCa=
+rdLeftImageContentContainer=2C.mcnImageCardRightImageContentContainer{
+=09=09=09max-width:100% !important;
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnBoxedTextContentContainer{
+=09=09=09min-width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnImageGroupContent{
+=09=09=09padding:9px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnCaptionLeftContentOuter .mcnTextContent=2C.mcnCaptionRightConten=
+tOuter .mcnTextContent{
+=09=09=09padding-top:9px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnImageCardTopImageContent=2C.mcnCaptionBottomContent:last-child .=
+mcnCaptionBottomImageContent=2C.mcnCaptionBlockInner .mcnCaptionTopContent=
+:last-child .mcnTextContent{
+=09=09=09padding-top:18px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnImageCardBottomImageContent{
+=09=09=09padding-bottom:9px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnImageGroupBlockInner{
+=09=09=09padding-top:0 !important;
+=09=09=09padding-bottom:0 !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnImageGroupBlockOuter{
+=09=09=09padding-top:9px !important;
+=09=09=09padding-bottom:9px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnTextContent=2C.mcnBoxedTextContentColumn{
+=09=09=09padding-right:18px !important;
+=09=09=09padding-left:18px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnImageCardLeftImageContent=2C.mcnImageCardRightImageContent{
+=09=09=09padding-right:18px !important;
+=09=09=09padding-bottom:0 !important;
+=09=09=09padding-left:18px !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcpreview-image-uploader{
+=09=09=09display:none !important;
+=09=09=09width:100% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09h1{
+=09=09=09font-size:30px !important;
+=09=09=09line-height:125% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09h2{
+=09=09=09font-size:26px !important;
+=09=09=09line-height:125% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09h3{
+=09=09=09font-size:20px !important;
+=09=09=09line-height:150% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09h4{
+=09=09=09font-size:18px !important;
+=09=09=09line-height:150% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.mcnBoxedTextContentContainer .mcnTextContent=2C.mcnBoxedTextContent=
+Container .mcnTextContent p{
+=09=09=09font-size:14px !important;
+=09=09=09line-height:150% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.headerContainer .mcnTextContent=2C.headerContainer .mcnTextContent=
+ p{
+=09=09=09font-size:16px !important;
+=09=09=09line-height:150% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.bodyContainer .mcnTextContent=2C.bodyContainer .mcnTextContent p{
+=09=09=09font-size:16px !important;
+=09=09=09line-height:150% !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.footerContainer .mcnTextContent=2C.footerContainer .mcnTextContent=
+ p{
+=09=09=09font-size:14px !important;
+=09=09=09line-height:150% !important;
+=09=09}
+
+}</style></head>
+    <body style=3D"font-family: Helvetica=2C sans-serif;height: 100%;margi=
+n: 0;padding: 0;width: 100%;-ms-text-size-adjust: 100%;-webkit-text-size-a=
+djust: 100%;">
+        <!--
+-->
+        <center style=3D"font-family: Helvetica=2C sans-serif;">
+            <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" height=3D"100%" width=3D"100%" id=3D"bodyTable" style=3D"font-f=
+amily: Helvetica=2C sans-serif;border-collapse: collapse;mso-table-lspace:=
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-ad=
+just: 100%;height: 100%;margin: 0;padding: 0;width: 100%;">
+                <tr style=3D"font-family: Helvetica=2C sans-serif;">
+                    <td align=3D"center" valign=3D"top" id=3D"bodyCell" st=
+yle=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: exactly;=
+-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100%;mar=
+gin: 0;padding: 0;width: 100%;">
+                        <!-- BEGIN TEMPLATE // -->
+                        <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" style=3D"font-family: Helvetica=2C sans-serif;border=
+-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-s=
+ize-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                            <tr style=3D"font-family: Helvetica=2C sans-se=
+rif;">
+                                <td align=3D"center" valign=3D"top" id=3D"=
+templateHeader" data-template-container=3D"" style=3D"background: #f7f7f7=
+ url(&quot;https://gallery.mailchimp.com/a87f3bde94b788cb6aaff54b0/_compre=
+sseds/2ab2e0c3-0d7d-4220-87aa-8a878ad84407.jpg&quot;) no-repeat center/cov=
+er;font-family: Helvetica=2C sans-serif;mso-line-height-rule: exactly;-ms-=
+text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #f=
+7f7f7;background-image: url(https://gallery.mailchimp.com/a87f3bde94b788cb=
+6aaff54b0/_compresseds/2ab2e0c3-0d7d-4220-87aa-8a878ad84407.jpg);backgroun=
+d-repeat: no-repeat;background-position: center;background-size: cover;bor=
+der-top: 0;border-bottom: 0;padding-top: 54px;padding-bottom: 54px;">
+                                    <!--[if (gte mso 9)|(IE)]>
+                                    <table align=3D"center" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"600" style=3D"width:600px;">
+                                    <tr>
+                                    <td align=3D"center" valign=3D"top" wi=
+dth=3D"600" style=3D"width:600px;">
+                                    <![endif]-->
+                                    <table align=3D"center" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"templateContain=
+er" style=3D"font-family: Helvetica=2C sans-serif;border-collapse: collaps=
+e;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-=
+webkit-text-size-adjust: 100%;max-width: 600px !important;">
+                                        <tr style=3D"font-family: Helvetic=
+a=2C sans-serif;">
+                                            <td valign=3D"top" class=3D"he=
+aderContainer" style=3D"background: #transparent none no-repeat center/cov=
+er;font-family: Helvetica=2C sans-serif;mso-line-height-rule: exactly;-ms-=
+text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #t=
+ransparent;background-image: none;background-repeat: no-repeat;background-=
+position: center;background-size: cover;border-top: 0;border-bottom: 0;pad=
+ding-top: 0;padding-bottom: 0;"><table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%" class=3D"mcnImageBlock" style=3D"min-width: 1=
+00%;font-family: Helvetica=2C sans-serif;border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-te=
+xt-size-adjust: 100%;">
+    <tbody class=3D"mcnImageBlockOuter" style=3D"font-family: Helvetica=2C=
+ sans-serif;">
+            <tr style=3D"font-family: Helvetica=2C sans-serif;">
+                <td valign=3D"top" style=3D"padding: 9px;font-family: Helv=
+etica=2C sans-serif;mso-line-height-rule: exactly;-ms-text-size-adjust: 10=
+0%;-webkit-text-size-adjust: 100%;" class=3D"mcnImageBlockInner">
+                    <table align=3D"left" width=3D"100%" border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" class=3D"mcnImageContentContainer" style=
+=3D"min-width: 100%;font-family: Helvetica=2C sans-serif;border-collapse:=
+ collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust=
+: 100%;-webkit-text-size-adjust: 100%;float: left;">
+                        <tbody style=3D"font-family: Helvetica=2C sans-ser=
+if;"><tr style=3D"font-family: Helvetica=2C sans-serif;">
+                            <td class=3D"mcnImageContent" valign=3D"top" s=
+tyle=3D"padding-right: 9px;padding-left: 9px;padding-top: 0;padding-bottom=
+: 0;text-align: center;font-family: Helvetica=2C sans-serif;mso-line-heigh=
+t-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;=
+">
+
+
+                                        <img align=3D"center" alt=3D"" src=
+=3D"https://gallery.mailchimp.com/a87f3bde94b788cb6aaff54b0/images/98a1ad7=
+f-bcc0-49e5-a7b8-41e311b9a3dc.png" width=3D"564" style=3D"max-width: 1024p=
+x;padding-bottom: 0;display: inline !important;vertical-align: bottom;font=
+-family: Helvetica=2C sans-serif;border: 0;height: auto;outline: none;text=
+-decoration: none;-ms-interpolation-mode: bicubic;" class=3D"mcnImage">
+
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+    </tbody>
+</table></td>
+                                        </tr>
+                                    </table>
+                                    <!--[if (gte mso 9)|(IE)]>
+                                    </td>
+                                    </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                            </tr>
+                            <tr style=3D"font-family: Helvetica=2C sans-se=
+rif;">
+                                <td align=3D"center" valign=3D"top" id=3D"=
+templateBody" data-template-container=3D"" style=3D"background: #ffffff no=
+ne no-repeat center/cover;font-family: Helvetica=2C sans-serif;mso-line-he=
+ight-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 10=
+0%;background-color: #ffffff;background-image: none;background-repeat: no-=
+repeat;background-position: center;background-size: cover;border-top: 0;bo=
+rder-bottom: 0;padding-top: 27px;padding-bottom: 63px;">
+                                    <!--[if (gte mso 9)|(IE)]>
+                                    <table align=3D"center" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"600" style=3D"width:600px;">
+                                    <tr>
+                                    <td align=3D"center" valign=3D"top" wi=
+dth=3D"600" style=3D"width:600px;">
+                                    <![endif]-->
+                                    <table align=3D"center" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"templateContain=
+er" style=3D"font-family: Helvetica=2C sans-serif;border-collapse: collaps=
+e;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-=
+webkit-text-size-adjust: 100%;max-width: 600px !important;">
+                                        <tr style=3D"font-family: Helvetic=
+a=2C sans-serif;">
+                                            <td valign=3D"top" class=3D"bo=
+dyContainer" style=3D"background: #transparent none no-repeat center/cover=
+;font-family: Helvetica=2C sans-serif;mso-line-height-rule: exactly;-ms-te=
+xt-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #tra=
+nsparent;background-image: none;background-repeat: no-repeat;background-po=
+sition: center;background-size: cover;border-top: 0;border-bottom: 0;paddi=
+ng-top: 0;padding-bottom: 0;"><table border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" width=3D"100%" class=3D"mcnCodeBlock" style=3D"font-family: He=
+lvetica=2C sans-serif;border-collapse: collapse;mso-table-lspace: 0pt;mso-=
+table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100=
+%;">
+    <tbody class=3D"mcnTextBlockOuter" style=3D"font-family: Helvetica=2C=
+ sans-serif;">
+        <tr style=3D"font-family: Helvetica=2C sans-serif;">
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"font-f=
+amily: Helvetica=2C sans-serif;mso-line-height-rule: exactly;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <style style=3D"font-family: Helvetica=2C sans-serif;" typ=
+e=3D"text/css">
+*{font-family: Helvetica=2C sans-serif;}
+p{font-size:18px!important;}
+</style>
+
+
+<h2 class=3D"mc-toc-title" style=3D"font-family: 'Helvetica Neue'=2C Helve=
+tica=2C Arial=2C Verdana=2C sans-serif;display: block;margin: 0;padding: 0=
+;color: #222222;font-size: 28px;font-style: normal;font-weight: bold;line-=
+height: 150%;letter-spacing: normal;text-align: left;"><a href=3D"https://=
+oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff5=
+4b0&id=3D8ab64c0a3e&e=3D68a6393ac8" target=3D"_blank" style=3D"font-famil=
+y: Helvetica=2C sans-serif;mso-line-height-rule: exactly;-ms-text-size-adj=
+ust: 100%;-webkit-text-size-adjust: 100%;">677 of most wealthy flee county=
+</a></h2>
+<div style=3D"font-family: Helvetica=2C sans-serif;"><p style=3D"font-size=
+: 18px;font-family: Helvetica=2C sans-serif;margin: 10px 0;padding: 0;mso-=
+line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adj=
+ust: 100%;"></p><p style=3D"font-family: Helvetica=2C sans-serif;margin: 1=
+0px 0;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;=
+-webkit-text-size-adjust: 100%;font-size: 18px!important;">By Taxpayers As=
+sociation of Oregon OregonWatchdog.com The Oregonian has a story about the=
+ dramatic change in Multnomah County taxpayer migration since a big income=
+ tax increase was passed in 2020. The Preschool-for-All ballot measure rai=
+sed income taxes by 1.5% to 3%.=C2=A0 A second big income tax was passed i=
+n the same year with the Homeless [&#8230;]</p>
+<p style=3D"font-family: Helvetica=2C sans-serif;margin: 10px 0;padding: 0=
+;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-siz=
+e-adjust: 100%;font-size: 18px!important;">The post <a href=3D"https://ore=
+goncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0=
+&id=3D02734a4c99&e=3D68a6393ac8" style=3D"font-family: Helvetica=2C sans-=
+serif;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-tex=
+t-size-adjust: 100%;">677 of most wealthy flee county</a> first appeared o=
+n <a href=3D"https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da=
+87f3bde94b788cb6aaff54b0&id=3D16ad8c8ebd&e=3D68a6393ac8" style=3D"font-fa=
+mily: Helvetica=2C sans-serif;mso-line-height-rule: exactly;-ms-text-size-=
+adjust: 100%;-webkit-text-size-adjust: 100%;">Oregon Catalyst</a>.</p></di=
+v>
+<br style=3D"font-family: Helvetica=2C sans-serif;">
+<a href=3D"https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87=
+f3bde94b788cb6aaff54b0&id=3D3f9adf5deb&e=3D68a6393ac8" target=3D"_blank"=
+ style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: exact=
+ly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Read on =C2=
+=BB</a><br style=3D"font-family: Helvetica=2C sans-serif;">
+<br style=3D"font-family: Helvetica=2C sans-serif;">
+
+
+<h2 class=3D"mc-toc-title" style=3D"font-family: 'Helvetica Neue'=2C Helve=
+tica=2C Arial=2C Verdana=2C sans-serif;display: block;margin: 0;padding: 0=
+;color: #222222;font-size: 28px;font-style: normal;font-weight: bold;line-=
+height: 150%;letter-spacing: normal;text-align: left;"><a href=3D"https://=
+oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff5=
+4b0&id=3D71fb2a3319&e=3D68a6393ac8" target=3D"_blank" style=3D"font-famil=
+y: Helvetica=2C sans-serif;mso-line-height-rule: exactly;-ms-text-size-adj=
+ust: 100%;-webkit-text-size-adjust: 100%;">More AI Hallucinations in an Or=
+egon Court</a></h2>
+<div style=3D"font-family: Helvetica=2C sans-serif;"><p style=3D"font-size=
+: 18px;font-family: Helvetica=2C sans-serif;margin: 10px 0;padding: 0;mso-=
+line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adj=
+ust: 100%;"></p><p style=3D"font-family: Helvetica=2C sans-serif;margin: 1=
+0px 0;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;=
+-webkit-text-size-adjust: 100%;font-size: 18px!important;">Last fall=2C I=
+ wrote about an instance where a lawyer was caught using fake citations th=
+at were generated from artificial intelligence. It happened again in Orego=
+n District Court=2C where Magistrate Judge Mark Clarke sanctioned a lawyer=
+ fairly severely in Couvrette v. Wisnovsky. The Judge questioned whether t=
+he lawyer meaningfully participated in the case: At issue [&#8230;]</p>
+<p style=3D"font-family: Helvetica=2C sans-serif;margin: 10px 0;padding: 0=
+;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-siz=
+e-adjust: 100%;font-size: 18px!important;">The post <a href=3D"https://ore=
+goncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0=
+&id=3Df745d2804c&e=3D68a6393ac8" style=3D"font-family: Helvetica=2C sans-=
+serif;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-tex=
+t-size-adjust: 100%;">More AI Hallucinations in an Oregon Court</a> first=
+ appeared on <a href=3D"https://oregoncatalyst.us19.list-manage.com/track/=
+click?u=3Da87f3bde94b788cb6aaff54b0&id=3Dc49af04162&e=3D68a6393ac8" style=
+=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: exactly;-ms=
+-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Oregon Catalyst</=
+a>.</p></div>
+<br style=3D"font-family: Helvetica=2C sans-serif;">
+<a href=3D"https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87=
+f3bde94b788cb6aaff54b0&id=3D3b6eed31e6&e=3D68a6393ac8" target=3D"_blank"=
+ style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: exact=
+ly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Read on =C2=
+=BB</a><br style=3D"font-family: Helvetica=2C sans-serif;">
+<br style=3D"font-family: Helvetica=2C sans-serif;">
+
+
+<h2 class=3D"mc-toc-title" style=3D"font-family: 'Helvetica Neue'=2C Helve=
+tica=2C Arial=2C Verdana=2C sans-serif;display: block;margin: 0;padding: 0=
+;color: #222222;font-size: 28px;font-style: normal;font-weight: bold;line-=
+height: 150%;letter-spacing: normal;text-align: left;"><a href=3D"https://=
+oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff5=
+4b0&id=3D16fba4d116&e=3D68a6393ac8" target=3D"_blank" style=3D"font-famil=
+y: Helvetica=2C sans-serif;mso-line-height-rule: exactly;-ms-text-size-adj=
+ust: 100%;-webkit-text-size-adjust: 100%;">What a 3=2C500 pot plant bust l=
+ooks like (photo)</a></h2>
+<div style=3D"font-family: Helvetica=2C sans-serif;"><p style=3D"font-size=
+: 18px;font-family: Helvetica=2C sans-serif;margin: 10px 0;padding: 0;mso-=
+line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adj=
+ust: 100%;"></p><p style=3D"font-family: Helvetica=2C sans-serif;margin: 1=
+0px 0;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;=
+-webkit-text-size-adjust: 100%;font-size: 18px!important;">By Taxpayers As=
+sociation of Oregon Foundation=2C The Clackamas County Interagency Task Fo=
+rce has just seized 3=2C500 marijuana plants=2C $100=2C000 cash=2C three f=
+irearms=2C during an illegal grow operation bust. See more. We were told t=
+hat if we legalized marijuana=2C the black market would disappear.=C2=A0 I=
+nstead it feels like it is growing.=C2=A0 The $100=2C000 cash discovered i=
+s [&#8230;]</p>
+<p style=3D"font-family: Helvetica=2C sans-serif;margin: 10px 0;padding: 0=
+;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-siz=
+e-adjust: 100%;font-size: 18px!important;">The post <a href=3D"https://ore=
+goncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0=
+&id=3Dbd5678c2e0&e=3D68a6393ac8" style=3D"font-family: Helvetica=2C sans-=
+serif;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-tex=
+t-size-adjust: 100%;">What a 3=2C500 pot plant bust looks like (photo)</a>=
+ first appeared on <a href=3D"https://oregoncatalyst.us19.list-manage.com/=
+track/click?u=3Da87f3bde94b788cb6aaff54b0&id=3D7ce57aea3b&e=3D68a6393ac8"=
+ style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: exact=
+ly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Oregon Cata=
+lyst</a>.</p></div>
+<br style=3D"font-family: Helvetica=2C sans-serif;">
+<a href=3D"https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87=
+f3bde94b788cb6aaff54b0&id=3De73bb6c089&e=3D68a6393ac8" target=3D"_blank"=
+ style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: exact=
+ly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Read on =C2=
+=BB</a><br style=3D"font-family: Helvetica=2C sans-serif;">
+<br style=3D"font-family: Helvetica=2C sans-serif;">
+
+
+<h2 class=3D"mc-toc-title" style=3D"font-family: 'Helvetica Neue'=2C Helve=
+tica=2C Arial=2C Verdana=2C sans-serif;display: block;margin: 0;padding: 0=
+;color: #222222;font-size: 28px;font-style: normal;font-weight: bold;line-=
+height: 150%;letter-spacing: normal;text-align: left;"><a href=3D"https://=
+oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff5=
+4b0&id=3De1a5284676&e=3D68a6393ac8" target=3D"_blank" style=3D"font-famil=
+y: Helvetica=2C sans-serif;mso-line-height-rule: exactly;-ms-text-size-adj=
+ust: 100%;-webkit-text-size-adjust: 100%;">6 memes to make your day</a></h=
+2>
+<div style=3D"font-family: Helvetica=2C sans-serif;"><p style=3D"font-size=
+: 18px;font-family: Helvetica=2C sans-serif;margin: 10px 0;padding: 0;mso-=
+line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adj=
+ust: 100%;"></p><p style=3D"font-family: Helvetica=2C sans-serif;margin: 1=
+0px 0;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;=
+-webkit-text-size-adjust: 100%;font-size: 18px!important;">By Guest Submis=
+sion meme=2C More memes below: &#160; &#160; &#160;</p>
+<p style=3D"font-family: Helvetica=2C sans-serif;margin: 10px 0;padding: 0=
+;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-siz=
+e-adjust: 100%;font-size: 18px!important;">The post <a href=3D"https://ore=
+goncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0=
+&id=3Df92be804d2&e=3D68a6393ac8" style=3D"font-family: Helvetica=2C sans-=
+serif;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-tex=
+t-size-adjust: 100%;">6 memes to make your day</a> first appeared on <a hr=
+ef=3D"https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde=
+94b788cb6aaff54b0&id=3D4583430ca8&e=3D68a6393ac8" style=3D"font-family: H=
+elvetica=2C sans-serif;mso-line-height-rule: exactly;-ms-text-size-adjust:=
+ 100%;-webkit-text-size-adjust: 100%;">Oregon Catalyst</a>.</p></div>
+<br style=3D"font-family: Helvetica=2C sans-serif;">
+<a href=3D"https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87=
+f3bde94b788cb6aaff54b0&id=3D411eb1fa1a&e=3D68a6393ac8" target=3D"_blank"=
+ style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: exact=
+ly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Read on =C2=
+=BB</a><br style=3D"font-family: Helvetica=2C sans-serif;">
+<br style=3D"font-family: Helvetica=2C sans-serif;">
+
+
+<h2 class=3D"mc-toc-title" style=3D"font-family: 'Helvetica Neue'=2C Helve=
+tica=2C Arial=2C Verdana=2C sans-serif;display: block;margin: 0;padding: 0=
+;color: #222222;font-size: 28px;font-style: normal;font-weight: bold;line-=
+height: 150%;letter-spacing: normal;text-align: left;"><a href=3D"https://=
+oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff5=
+4b0&id=3Db66b467fab&e=3D68a6393ac8" target=3D"_blank" style=3D"font-famil=
+y: Helvetica=2C sans-serif;mso-line-height-rule: exactly;-ms-text-size-adj=
+ust: 100%;-webkit-text-size-adjust: 100%;">Sen. Drazan: Kotek must veto $3=
+11M tax on business</a></h2>
+<div style=3D"font-family: Helvetica=2C sans-serif;"><p style=3D"font-size=
+: 18px;font-family: Helvetica=2C sans-serif;margin: 10px 0;padding: 0;mso-=
+line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adj=
+ust: 100%;"></p><p style=3D"font-family: Helvetica=2C sans-serif;margin: 1=
+0px 0;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;=
+-webkit-text-size-adjust: 100%;font-size: 18px!important;">SEN. CHRISTINE=
+ DRAZAN CALLS ON GOV. KOTEK TO VETO=C2=A0$311 MILLION TAX HIKE ON OREGON B=
+USINESSES By Oregon State Senator Christine Drazan=2C &#160; CANBY=2C Ore.=
+ =E2=80=93 Last month=2C Democrats in the Oregon State Legislature passed=
+ Senate Bill 1507=2C a bill that would increase the tax burden on local em=
+ployers by $311 million. The bill currently sits [&#8230;]</p>
+<p style=3D"font-family: Helvetica=2C sans-serif;margin: 10px 0;padding: 0=
+;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-siz=
+e-adjust: 100%;font-size: 18px!important;">The post <a href=3D"https://ore=
+goncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0=
+&id=3D15bb8c863e&e=3D68a6393ac8" style=3D"font-family: Helvetica=2C sans-=
+serif;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-tex=
+t-size-adjust: 100%;">Sen. Drazan: Kotek must veto $311M tax on business</=
+a> first appeared on <a href=3D"https://oregoncatalyst.us19.list-manage.co=
+m/track/click?u=3Da87f3bde94b788cb6aaff54b0&id=3D0cde60564b&e=3D68a6393ac8" style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: exa=
+ctly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Oregon Ca=
+talyst</a>.</p></div>
+<br style=3D"font-family: Helvetica=2C sans-serif;">
+<a href=3D"https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87=
+f3bde94b788cb6aaff54b0&id=3D03ae4a38ed&e=3D68a6393ac8" target=3D"_blank"=
+ style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: exact=
+ly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Read on =C2=
+=BB</a><br style=3D"font-family: Helvetica=2C sans-serif;">
+<br style=3D"font-family: Helvetica=2C sans-serif;">
+
+
+<h2 class=3D"mc-toc-title" style=3D"font-family: 'Helvetica Neue'=2C Helve=
+tica=2C Arial=2C Verdana=2C sans-serif;display: block;margin: 0;padding: 0=
+;color: #222222;font-size: 28px;font-style: normal;font-weight: bold;line-=
+height: 150%;letter-spacing: normal;text-align: left;"><a href=3D"https://=
+oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff5=
+4b0&id=3D00b32b69cb&e=3D68a6393ac8" target=3D"_blank" style=3D"font-famil=
+y: Helvetica=2C sans-serif;mso-line-height-rule: exactly;-ms-text-size-adj=
+ust: 100%;-webkit-text-size-adjust: 100%;">Lars Larson: Election date=2C v=
+ote-by-mail=2C fraud =E2=80=A6</a></h2>
+<div style=3D"font-family: Helvetica=2C sans-serif;"><p style=3D"font-size=
+: 18px;font-family: Helvetica=2C sans-serif;margin: 10px 0;padding: 0;mso-=
+line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adj=
+ust: 100%;"></p><p style=3D"font-family: Helvetica=2C sans-serif;margin: 1=
+0px 0;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;=
+-webkit-text-size-adjust: 100%;font-size: 18px!important;">By=C2=A0Lars La=
+rson NW and national radio host=2C The Northwest Nonsense I guess you coul=
+d call the Democrat Party=E2=80=99s approach to elections=2C back to the f=
+uture. Fraud in elections was a big problem about 180 years ago. States he=
+ld the Presidential election on various dates spanning more than a month.=
+ That meant early voting influenced voting [&#8230;]</p>
+<p style=3D"font-family: Helvetica=2C sans-serif;margin: 10px 0;padding: 0=
+;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-siz=
+e-adjust: 100%;font-size: 18px!important;">The post <a href=3D"https://ore=
+goncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0=
+&id=3D63688de8a7&e=3D68a6393ac8" style=3D"font-family: Helvetica=2C sans-=
+serif;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-tex=
+t-size-adjust: 100%;">Lars Larson: Election date=2C vote-by-mail=2C fraud=
+ =E2=80=A6</a> first appeared on <a href=3D"https://oregoncatalyst.us19.li=
+st-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0&id=3D1c3b856781&e=
+=3D68a6393ac8" style=3D"font-family: Helvetica=2C sans-serif;mso-line-hei=
+ght-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100=
+%;">Oregon Catalyst</a>.</p></div>
+<br style=3D"font-family: Helvetica=2C sans-serif;">
+<a href=3D"https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87=
+f3bde94b788cb6aaff54b0&id=3Dab321b4aee&e=3D68a6393ac8" target=3D"_blank"=
+ style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: exact=
+ly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Read on =C2=
+=BB</a><br style=3D"font-family: Helvetica=2C sans-serif;">
+<br style=3D"font-family: Helvetica=2C sans-serif;">
+
+
+<h2 class=3D"mc-toc-title" style=3D"font-family: 'Helvetica Neue'=2C Helve=
+tica=2C Arial=2C Verdana=2C sans-serif;display: block;margin: 0;padding: 0=
+;color: #222222;font-size: 28px;font-style: normal;font-weight: bold;line-=
+height: 150%;letter-spacing: normal;text-align: left;"><a href=3D"https://=
+oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff5=
+4b0&id=3D2683bf8388&e=3D68a6393ac8" target=3D"_blank" style=3D"font-famil=
+y: Helvetica=2C sans-serif;mso-line-height-rule: exactly;-ms-text-size-adj=
+ust: 100%;-webkit-text-size-adjust: 100%;">Persuading Gov. Kotek</a></h2>
+<div style=3D"font-family: Helvetica=2C sans-serif;"><p style=3D"font-size=
+: 18px;font-family: Helvetica=2C sans-serif;margin: 10px 0;padding: 0;mso-=
+line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adj=
+ust: 100%;"></p><p style=3D"font-family: Helvetica=2C sans-serif;margin: 1=
+0px 0;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;=
+-webkit-text-size-adjust: 100%;font-size: 18px!important;">By Rob Kremer A=
+s seen in the Oregon Transformation Newsletter=2C=C2=A0 How do we persuade=
+ Gov. Kotek to opt into the federal scholarship tax credit? The new federa=
+l scholarship tax credit legislation=2C known as the Educational Choice fo=
+r Children Act (ECCA)=2C is going to result in billions of dollars becomin=
+g available to families of both public [&#8230;]</p>
+<p style=3D"font-family: Helvetica=2C sans-serif;margin: 10px 0;padding: 0=
+;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-siz=
+e-adjust: 100%;font-size: 18px!important;">The post <a href=3D"https://ore=
+goncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0=
+&id=3Df79bebe348&e=3D68a6393ac8" style=3D"font-family: Helvetica=2C sans-=
+serif;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-tex=
+t-size-adjust: 100%;">Persuading Gov. Kotek</a> first appeared on <a href=
+=3D"https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94=
+b788cb6aaff54b0&id=3D3e0ad86132&e=3D68a6393ac8" style=3D"font-family: Hel=
+vetica=2C sans-serif;mso-line-height-rule: exactly;-ms-text-size-adjust: 1=
+00%;-webkit-text-size-adjust: 100%;">Oregon Catalyst</a>.</p></div>
+<br style=3D"font-family: Helvetica=2C sans-serif;">
+<a href=3D"https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87=
+f3bde94b788cb6aaff54b0&id=3D793c3e3109&e=3D68a6393ac8" target=3D"_blank"=
+ style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: exact=
+ly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Read on =C2=
+=BB</a><br style=3D"font-family: Helvetica=2C sans-serif;">
+<br style=3D"font-family: Helvetica=2C sans-serif;">
+
+
+<h2 class=3D"mc-toc-title" style=3D"font-family: 'Helvetica Neue'=2C Helve=
+tica=2C Arial=2C Verdana=2C sans-serif;display: block;margin: 0;padding: 0=
+;color: #222222;font-size: 28px;font-style: normal;font-weight: bold;line-=
+height: 150%;letter-spacing: normal;text-align: left;"><a href=3D"https://=
+oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff5=
+4b0&id=3D5279eb98d4&e=3D68a6393ac8" target=3D"_blank" style=3D"font-famil=
+y: Helvetica=2C sans-serif;mso-line-height-rule: exactly;-ms-text-size-adj=
+ust: 100%;-webkit-text-size-adjust: 100%;">Full-page ad ($250K!) touts No=
+ Kings March 4/28</a></h2>
+<div style=3D"font-family: Helvetica=2C sans-serif;"><p style=3D"font-size=
+: 18px;font-family: Helvetica=2C sans-serif;margin: 10px 0;padding: 0;mso-=
+line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adj=
+ust: 100%;"></p><p style=3D"font-family: Helvetica=2C sans-serif;margin: 1=
+0px 0;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;=
+-webkit-text-size-adjust: 100%;font-size: 18px!important;">By Taxpayers As=
+sociation of Oregon OregonWatchdog.com The anti-Trump No Kings March sched=
+uled nationwide for March 28=2C may=C2=A0 involve a lot of participants=2C=
+ but let the record show=2C it also involves a lot of money.=C2=A0 =C2=A0T=
+his full-page ad seen in the Wall Street Journal is advertising the march=
+=2C and such ads can cost up to a [&#8230;]</p>
+<p style=3D"font-family: Helvetica=2C sans-serif;margin: 10px 0;padding: 0=
+;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-siz=
+e-adjust: 100%;font-size: 18px!important;">The post <a href=3D"https://ore=
+goncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0=
+&id=3D2b1a8301ac&e=3D68a6393ac8" style=3D"font-family: Helvetica=2C sans-=
+serif;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-tex=
+t-size-adjust: 100%;">Full-page ad ($250K!) touts No Kings March 4/28</a>=
+ first appeared on <a href=3D"https://oregoncatalyst.us19.list-manage.com/=
+track/click?u=3Da87f3bde94b788cb6aaff54b0&id=3D3285869e29&e=3D68a6393ac8"=
+ style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: exact=
+ly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Oregon Cata=
+lyst</a>.</p></div>
+<br style=3D"font-family: Helvetica=2C sans-serif;">
+<a href=3D"https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87=
+f3bde94b788cb6aaff54b0&id=3D6a5a04863b&e=3D68a6393ac8" target=3D"_blank"=
+ style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: exact=
+ly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Read on =C2=
+=BB</a><br style=3D"font-family: Helvetica=2C sans-serif;">
+<br style=3D"font-family: Helvetica=2C sans-serif;">
+
+
+<h2 class=3D"mc-toc-title" style=3D"font-family: 'Helvetica Neue'=2C Helve=
+tica=2C Arial=2C Verdana=2C sans-serif;display: block;margin: 0;padding: 0=
+;color: #222222;font-size: 28px;font-style: normal;font-weight: bold;line-=
+height: 150%;letter-spacing: normal;text-align: left;"><a href=3D"https://=
+oregoncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff5=
+4b0&id=3D25eb5a5963&e=3D68a6393ac8" target=3D"_blank" style=3D"font-famil=
+y: Helvetica=2C sans-serif;mso-line-height-rule: exactly;-ms-text-size-adj=
+ust: 100%;-webkit-text-size-adjust: 100%;">USA 250: Nation=E2=80=99s 1st w=
+ar casualty was boy who stirred nation</a></h2>
+<div style=3D"font-family: Helvetica=2C sans-serif;"><p style=3D"font-size=
+: 18px;font-family: Helvetica=2C sans-serif;margin: 10px 0;padding: 0;mso-=
+line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adj=
+ust: 100%;"></p><p style=3D"font-family: Helvetica=2C sans-serif;margin: 1=
+0px 0;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;=
+-webkit-text-size-adjust: 100%;font-size: 18px!important;">By Jason Willia=
+ms Oregon 250 Resolution=2C This story brought to you by the Oregon 250 Re=
+solution project to honor America&#8217;s 250th. The first victim of the A=
+merican Revolution was a 12-year-old boy who was shot. Also=2C a painter S=
+amuel Gore was hit with a different bullet but survived=2C and became part=
+ of the revolution. Here [&#8230;]</p>
+<p style=3D"font-family: Helvetica=2C sans-serif;margin: 10px 0;padding: 0=
+;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-siz=
+e-adjust: 100%;font-size: 18px!important;">The post <a href=3D"https://ore=
+goncatalyst.us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0=
+&id=3Dda5c271627&e=3D68a6393ac8" style=3D"font-family: Helvetica=2C sans-=
+serif;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-tex=
+t-size-adjust: 100%;">USA 250: Nation=E2=80=99s 1st war casualty was boy w=
+ho stirred nation</a> first appeared on <a href=3D"https://oregoncatalyst.=
+us19.list-manage.com/track/click?u=3Da87f3bde94b788cb6aaff54b0&id=3Dbca07f=
+f361&e=3D68a6393ac8" style=3D"font-family: Helvetica=2C sans-serif;mso-li=
+ne-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjus=
+t: 100%;">Oregon Catalyst</a>.</p></div>
+<br style=3D"font-family: Helvetica=2C sans-serif;">
+<a href=3D"https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87=
+f3bde94b788cb6aaff54b0&id=3Db8151b81a9&e=3D68a6393ac8" target=3D"_blank"=
+ style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: exact=
+ly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Read on =C2=
+=BB</a><br style=3D"font-family: Helvetica=2C sans-serif;">
+<br style=3D"font-family: Helvetica=2C sans-serif;">
+
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnCodeBlock" style=3D"font-family: Helvetica=2C sans-serif;=
+border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-=
+text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+    <tbody class=3D"mcnTextBlockOuter" style=3D"font-family: Helvetica=2C=
+ sans-serif;">
+        <tr style=3D"font-family: Helvetica=2C sans-serif;">
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"font-f=
+amily: Helvetica=2C sans-serif;mso-line-height-rule: exactly;-ms-text-size=
+-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <div class=3D"mcnTextContent" style=3D"font-family: 'Helve=
+tica Neue'=2C Helvetica=2C Arial=2C Verdana=2C sans-serif;word-break: brea=
+k-word;color: #757575;font-size: 18px;line-height: 150%;text-align: left;"=
+>Other Recent Posts</div>
+<div class=3D"rssPosts" style=3D"font-family: Helvetica=2C sans-serif;">
+<div class=3D"rssPost" style=3D"font-family: Helvetica=2C sans-serif;">
+<div class=3D"rssTitle" style=3D"font-family: Helvetica=2C sans-serif;">
+<a href=3D"https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87=
+f3bde94b788cb6aaff54b0&id=3D5f2541ef0d&e=3D68a6393ac8" class=3D"rssLinkTi=
+tle" style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: e=
+xactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">677 of=
+ most wealthy flee county</a>
+</div>
+</div><br style=3D"font-family: Helvetica=2C sans-serif;">
+<div class=3D"rssPost" style=3D"font-family: Helvetica=2C sans-serif;">
+<div class=3D"rssTitle" style=3D"font-family: Helvetica=2C sans-serif;">
+<a href=3D"https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87=
+f3bde94b788cb6aaff54b0&id=3D054e06b0b5&e=3D68a6393ac8" class=3D"rssLinkTi=
+tle" style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: e=
+xactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">More AI=
+ Hallucinations in an Oregon Court</a>
+</div>
+</div><br style=3D"font-family: Helvetica=2C sans-serif;">
+<div class=3D"rssPost" style=3D"font-family: Helvetica=2C sans-serif;">
+<div class=3D"rssTitle" style=3D"font-family: Helvetica=2C sans-serif;">
+<a href=3D"https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87=
+f3bde94b788cb6aaff54b0&id=3D2d6e20a6b6&e=3D68a6393ac8" class=3D"rssLinkTi=
+tle" style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: e=
+xactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">What a=
+ 3=2C500 pot plant bust looks like (photo)</a>
+</div>
+</div><br style=3D"font-family: Helvetica=2C sans-serif;">
+<div class=3D"rssPost" style=3D"font-family: Helvetica=2C sans-serif;">
+<div class=3D"rssTitle" style=3D"font-family: Helvetica=2C sans-serif;">
+<a href=3D"https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87=
+f3bde94b788cb6aaff54b0&id=3Dd47e2a922e&e=3D68a6393ac8" class=3D"rssLinkTi=
+tle" style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: e=
+xactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">6 memes=
+ to make your day</a>
+</div>
+</div><br style=3D"font-family: Helvetica=2C sans-serif;">
+<div class=3D"rssPost" style=3D"font-family: Helvetica=2C sans-serif;">
+<div class=3D"rssTitle" style=3D"font-family: Helvetica=2C sans-serif;">
+<a href=3D"https://oregoncatalyst.us19.list-manage.com/track/click?u=3Da87=
+f3bde94b788cb6aaff54b0&id=3Dd424ed014f&e=3D68a6393ac8" class=3D"rssLinkTi=
+tle" style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: e=
+xactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Sen. Dr=
+azan: Kotek must veto $311M tax on business</a>
+</div>
+</div><br style=3D"font-family: Helvetica=2C sans-serif;"></div>
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnDividerBlock" style=3D"min-width: 100%;font-family: Helve=
+tica=2C sans-serif;border-collapse: collapse;mso-table-lspace: 0pt;mso-tab=
+le-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;t=
+able-layout: fixed !important;">
+    <tbody class=3D"mcnDividerBlockOuter" style=3D"font-family: Helvetica=
+=2C sans-serif;">
+        <tr style=3D"font-family: Helvetica=2C sans-serif;">
+            <td class=3D"mcnDividerBlockInner" style=3D"min-width: 100%;pa=
+dding: 18px 18px 0px;font-family: Helvetica=2C sans-serif;mso-line-height-=
+rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <table class=3D"mcnDividerContent" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;font-fam=
+ily: Helvetica=2C sans-serif;border-collapse: collapse;mso-table-lspace: 0=
+pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adju=
+st: 100%;">
+                    <tbody style=3D"font-family: Helvetica=2C sans-serif;"=
+><tr style=3D"font-family: Helvetica=2C sans-serif;">
+                        <td style=3D"font-family: Helvetica=2C sans-serif;=
+mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size=
+-adjust: 100%;">
+                            <span style=3D"font-family: Helvetica=2C sans-=
+serif;"></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--
+                <td class=3D"mcnDividerBlockInner" style=3D"padding: 18px;=
+">
+                <hr class=3D"mcnDividerContent" style=3D"border-bottom-col=
+or:none; border-left-color:none; border-right-color:none; border-bottom-wi=
+dth:0; border-left-width:0; border-right-width:0; margin-top:0; margin-rig=
+ht:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnDividerBlock" style=3D"min-width: 100%;font-family: Helve=
+tica=2C sans-serif;border-collapse: collapse;mso-table-lspace: 0pt;mso-tab=
+le-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;t=
+able-layout: fixed !important;">
+    <tbody class=3D"mcnDividerBlockOuter" style=3D"font-family: Helvetica=
+=2C sans-serif;">
+        <tr style=3D"font-family: Helvetica=2C sans-serif;">
+            <td class=3D"mcnDividerBlockInner" style=3D"min-width: 100%;pa=
+dding: 18px 18px 0px;font-family: Helvetica=2C sans-serif;mso-line-height-=
+rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                <table class=3D"mcnDividerContent" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;font-fam=
+ily: Helvetica=2C sans-serif;border-collapse: collapse;mso-table-lspace: 0=
+pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adju=
+st: 100%;">
+                    <tbody style=3D"font-family: Helvetica=2C sans-serif;"=
+><tr style=3D"font-family: Helvetica=2C sans-serif;">
+                        <td style=3D"font-family: Helvetica=2C sans-serif;=
+mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size=
+-adjust: 100%;">
+                            <span style=3D"font-family: Helvetica=2C sans-=
+serif;"></span>
+                        </td>
+                    </tr>
+                </tbody></table>
+<!--
+                <td class=3D"mcnDividerBlockInner" style=3D"padding: 18px;=
+">
+                <hr class=3D"mcnDividerContent" style=3D"border-bottom-col=
+or:none; border-left-color:none; border-right-color:none; border-bottom-wi=
+dth:0; border-left-width:0; border-right-width:0; margin-top:0; margin-rig=
+ht:0; margin-bottom:0; margin-left:0;" />
+-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnShareBlock" style=3D"min-width: 100%;font-family: Helveti=
+ca=2C sans-serif;border-collapse: collapse;mso-table-lspace: 0pt;mso-table=
+-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+    <tbody class=3D"mcnShareBlockOuter" style=3D"font-family: Helvetica=2C=
+ sans-serif;">
+            <tr style=3D"font-family: Helvetica=2C sans-serif;">
+                <td valign=3D"top" style=3D"padding: 9px;font-family: Helv=
+etica=2C sans-serif;mso-line-height-rule: exactly;-ms-text-size-adjust: 10=
+0%;-webkit-text-size-adjust: 100%;" class=3D"mcnShareBlockInner">
+                    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" width=3D"100%" class=3D"mcnShareContentContainer" style=3D"min-width: 10=
+0%;font-family: Helvetica=2C sans-serif;border-collapse: collapse;mso-tabl=
+e-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-tex=
+t-size-adjust: 100%;">
+    <tbody style=3D"font-family: Helvetica=2C sans-serif;"><tr style=3D"fo=
+nt-family: Helvetica=2C sans-serif;">
+        <td align=3D"center" style=3D"padding-top: 0;padding-left: 9px;pad=
+ding-bottom: 0;padding-right: 9px;font-family: Helvetica=2C sans-serif;mso=
+-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-ad=
+just: 100%;">
+            <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%" style=3D"min-width: 100%;font-family: Helvetica=
+=2C sans-serif;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-r=
+space: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" cla=
+ss=3D"mcnShareContent">
+                <tbody style=3D"font-family: Helvetica=2C sans-serif;"><tr=
+ style=3D"font-family: Helvetica=2C sans-serif;">
+                    <td align=3D"center" valign=3D"top" class=3D"mcnShareC=
+ontentItemContainer" style=3D"padding-top: 9px;padding-right: 9px;padding-=
+left: 9px;font-family: Helvetica=2C sans-serif;mso-line-height-rule: exact=
+ly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                        <table align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" style=3D"font-family: Helvetica=2C sans-serif;bor=
+der-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-tex=
+t-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                            <tbody style=3D"font-family: Helvetica=2C sans=
+-serif;"><tr style=3D"font-family: Helvetica=2C sans-serif;">
+                                <td align=3D"left" valign=3D"top" style=3D=
+"font-family: Helvetica=2C sans-serif;mso-line-height-rule: exactly;-ms-te=
+xt-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                    <!--[if mso]>
+                                    <table align=3D"center" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0">
+                                    <tr>
+                                    <![endif]-->
+
+                                        <!--[if mso]>
+                                        <td align=3D"center" valign=3D"top=
+">
+                                        <![endif]-->
+                                        <table align=3D"left" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" style=3D"font-family: Helvetica=2C sa=
+ns-serif;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:=
+ 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;float: left=
+;">
+                                            <tbody style=3D"font-family: H=
+elvetica=2C sans-serif;"><tr style=3D"font-family: Helvetica=2C sans-serif=
+;">
+                                                <td valign=3D"top" style=
+=3D"padding-right: 9px;padding-bottom: 9px;font-family: Helvetica=2C sans-=
+serif;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-tex=
+t-size-adjust: 100%;" class=3D"mcnShareContentItemContainer">
+                                                    <table border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"" class=3D"mcnShareContentItem"=
+ style=3D"border-collapse: separate;border-radius: 3px;font-family: Helvet=
+ica=2C sans-serif;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-siz=
+e-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                        <tbody style=3D"fo=
+nt-family: Helvetica=2C sans-serif;"><tr style=3D"font-family: Helvetica=
+=2C sans-serif;">
+                                                            <td align=3D"l=
+eft" valign=3D"middle" style=3D"padding-top: 5px;padding-right: 9px;paddin=
+g-bottom: 5px;padding-left: 9px;font-family: Helvetica=2C sans-serif;mso-l=
+ine-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adju=
+st: 100%;">
+                                                                <table ali=
+gn=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"" st=
+yle=3D"font-family: Helvetica=2C sans-serif;border-collapse: collapse;mso-=
+table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit=
+-text-size-adjust: 100%;float: left;">
+                                                                    <tbody=
+ style=3D"font-family: Helvetica=2C sans-serif;"><tr style=3D"font-family:=
+ Helvetica=2C sans-serif;">
+                                                                        <t=
+d align=3D"center" valign=3D"middle" width=3D"24" class=3D"mcnShareIconCon=
+tent" style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule:=
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                         =
+   <a href=3D"https://oregoncatalyst.us19.list-manage.com/track/click?u=3D=
+a87f3bde94b788cb6aaff54b0&id=3D51ab076448&e=3D68a6393ac8" target=3D"_blan=
+k" style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: exa=
+ctly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=
+=3D"https://cdn-images.mailchimp.com/icons/social-block-v2/outline-dark-fa=
+cebook-48.png" style=3D"display: block;font-family: Helvetica=2C sans-seri=
+f;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpola=
+tion-mode: bicubic;" height=3D"24" width=3D"24" class=3D""></a>
+                                                                        </=
+td>
+                                                                        <t=
+d align=3D"left" valign=3D"middle" class=3D"mcnShareTextContent" style=3D"=
+padding-left: 5px;font-family: Helvetica=2C sans-serif;mso-line-height-rul=
+e: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                         =
+   <a href=3D"https://oregoncatalyst.us19.list-manage.com/track/click?u=3D=
+a87f3bde94b788cb6aaff54b0&id=3D1f6c10be14&e=3D68a6393ac8" target=3D"" sty=
+le=3D"color: #202020;font-family: Arial;font-size: 12px;font-weight: norma=
+l;line-height: normal;text-align: center;text-decoration: none;mso-line-he=
+ight-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 10=
+0%;">Share</a>
+                                                                        </=
+td>
+                                                                    </tr>
+                                                                </tbody></=
+table>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                        <!--[if mso]>
+                                        </td>
+                                        <![endif]-->
+
+                                        <!--[if mso]>
+                                        <td align=3D"center" valign=3D"top=
+">
+                                        <![endif]-->
+                                        <table align=3D"left" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" style=3D"font-family: Helvetica=2C sa=
+ns-serif;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:=
+ 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;float: left=
+;">
+                                            <tbody style=3D"font-family: H=
+elvetica=2C sans-serif;"><tr style=3D"font-family: Helvetica=2C sans-serif=
+;">
+                                                <td valign=3D"top" style=
+=3D"padding-right: 9px;padding-bottom: 9px;font-family: Helvetica=2C sans-=
+serif;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-tex=
+t-size-adjust: 100%;" class=3D"mcnShareContentItemContainer">
+                                                    <table border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"" class=3D"mcnShareContentItem"=
+ style=3D"border-collapse: separate;border-radius: 3px;font-family: Helvet=
+ica=2C sans-serif;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-siz=
+e-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                        <tbody style=3D"fo=
+nt-family: Helvetica=2C sans-serif;"><tr style=3D"font-family: Helvetica=
+=2C sans-serif;">
+                                                            <td align=3D"l=
+eft" valign=3D"middle" style=3D"padding-top: 5px;padding-right: 9px;paddin=
+g-bottom: 5px;padding-left: 9px;font-family: Helvetica=2C sans-serif;mso-l=
+ine-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adju=
+st: 100%;">
+                                                                <table ali=
+gn=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"" st=
+yle=3D"font-family: Helvetica=2C sans-serif;border-collapse: collapse;mso-=
+table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit=
+-text-size-adjust: 100%;float: left;">
+                                                                    <tbody=
+ style=3D"font-family: Helvetica=2C sans-serif;"><tr style=3D"font-family:=
+ Helvetica=2C sans-serif;">
+                                                                        <t=
+d align=3D"center" valign=3D"middle" width=3D"24" class=3D"mcnShareIconCon=
+tent" style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule:=
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                         =
+   <a href=3D"https://oregoncatalyst.us19.list-manage.com/track/click?u=3D=
+a87f3bde94b788cb6aaff54b0&id=3D6c962c5644&e=3D68a6393ac8" target=3D"_blan=
+k" style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: exa=
+ctly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=
+=3D"https://cdn-images.mailchimp.com/icons/social-block-v2/outline-dark-tw=
+itter-48.png" style=3D"display: block;font-family: Helvetica=2C sans-serif=
+;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolat=
+ion-mode: bicubic;" height=3D"24" width=3D"24" class=3D""></a>
+                                                                        </=
+td>
+                                                                        <t=
+d align=3D"left" valign=3D"middle" class=3D"mcnShareTextContent" style=3D"=
+padding-left: 5px;font-family: Helvetica=2C sans-serif;mso-line-height-rul=
+e: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                         =
+   <a href=3D"https://oregoncatalyst.us19.list-manage.com/track/click?u=3D=
+a87f3bde94b788cb6aaff54b0&id=3D1e9bec3885&e=3D68a6393ac8" target=3D"" sty=
+le=3D"color: #202020;font-family: Arial;font-size: 12px;font-weight: norma=
+l;line-height: normal;text-align: center;text-decoration: none;mso-line-he=
+ight-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 10=
+0%;">Tweet</a>
+                                                                        </=
+td>
+                                                                    </tr>
+                                                                </tbody></=
+table>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                        <!--[if mso]>
+                                        </td>
+                                        <![endif]-->
+
+                                        <!--[if mso]>
+                                        <td align=3D"center" valign=3D"top=
+">
+                                        <![endif]-->
+                                        <table align=3D"left" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" style=3D"font-family: Helvetica=2C sa=
+ns-serif;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace:=
+ 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;float: left=
+;">
+                                            <tbody style=3D"font-family: H=
+elvetica=2C sans-serif;"><tr style=3D"font-family: Helvetica=2C sans-serif=
+;">
+                                                <td valign=3D"top" style=
+=3D"padding-right: 0;padding-bottom: 9px;font-family: Helvetica=2C sans-se=
+rif;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-=
+size-adjust: 100%;" class=3D"mcnShareContentItemContainer">
+                                                    <table border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"" class=3D"mcnShareContentItem"=
+ style=3D"border-collapse: separate;border-radius: 3px;font-family: Helvet=
+ica=2C sans-serif;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-siz=
+e-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                        <tbody style=3D"fo=
+nt-family: Helvetica=2C sans-serif;"><tr style=3D"font-family: Helvetica=
+=2C sans-serif;">
+                                                            <td align=3D"l=
+eft" valign=3D"middle" style=3D"padding-top: 5px;padding-right: 9px;paddin=
+g-bottom: 5px;padding-left: 9px;font-family: Helvetica=2C sans-serif;mso-l=
+ine-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adju=
+st: 100%;">
+                                                                <table ali=
+gn=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"" st=
+yle=3D"font-family: Helvetica=2C sans-serif;border-collapse: collapse;mso-=
+table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit=
+-text-size-adjust: 100%;float: left;">
+                                                                    <tbody=
+ style=3D"font-family: Helvetica=2C sans-serif;"><tr style=3D"font-family:=
+ Helvetica=2C sans-serif;">
+                                                                        <t=
+d align=3D"center" valign=3D"middle" width=3D"24" class=3D"mcnShareIconCon=
+tent" style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule:=
+ exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                         =
+   <a href=3D"https://us19.forward-to-friend.com/forward?u=3Da87f3bde94b78=
+8cb6aaff54b0&id=3D2128bb03a8&e=3D68a6393ac8" target=3D"_blank" style=3D"font=
+-family: Helvetica=2C sans-serif;mso-line-height-rule: exactly;-ms-text-si=
+ze-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=3D"https://cdn-i=
+mages.mailchimp.com/icons/social-block-v2/outline-dark-forwardtofriend-48.=
+png" style=3D"display: block;font-family: Helvetica=2C sans-serif;border:=
+ 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode=
+: bicubic;" height=3D"24" width=3D"24" class=3D""></a>
+                                                                        </=
+td>
+                                                                        <t=
+d align=3D"left" valign=3D"middle" class=3D"mcnShareTextContent" style=3D"=
+padding-left: 5px;font-family: Helvetica=2C sans-serif;mso-line-height-rul=
+e: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                         =
+   <a href=3D"https://us19.forward-to-friend.com/forward?u=3Da87f3bde94b78=
+8cb6aaff54b0&id=3D2128bb03a8&e=3D68a6393ac8" target=3D"" style=3D"color: #20=
+2020;font-family: Arial;font-size: 12px;font-weight: normal;line-height: n=
+ormal;text-align: center;text-decoration: none;mso-line-height-rule: exact=
+ly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">Forward</a>
+                                                                        </=
+td>
+                                                                    </tr>
+                                                                </tbody></=
+table>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody></table>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                        <!--[if mso]>
+                                        </td>
+                                        <![endif]-->
+
+                                    <!--[if mso]>
+                                    </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table>
+        </td>
+    </tr>
+</tbody></table>
+
+                </td>
+            </tr>
+    </tbody>
+</table></td>
+                                        </tr>
+                                    </table>
+                                    <!--[if (gte mso 9)|(IE)]>
+                                    </td>
+                                    </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                            </tr>
+                            <tr style=3D"font-family: Helvetica=2C sans-se=
+rif;">
+                                <td align=3D"center" valign=3D"top" id=3D"=
+templateFooter" data-template-container=3D"" style=3D"background: #0e314e=
+ none no-repeat 50% 50%/cover;font-family: Helvetica=2C sans-serif;mso-lin=
+e-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust=
+: 100%;background-color: #0e314e;background-image: none;background-repeat:=
+ no-repeat;background-position: 50% 50%;background-size: cover;border-top:=
+ 0;border-bottom: 0;padding-top: 45px;padding-bottom: 63px;">
+                                    <!--[if (gte mso 9)|(IE)]>
+                                    <table align=3D"center" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"600" style=3D"width:600px;">
+                                    <tr>
+                                    <td align=3D"center" valign=3D"top" wi=
+dth=3D"600" style=3D"width:600px;">
+                                    <![endif]-->
+                                    <table align=3D"center" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"templateContain=
+er" style=3D"font-family: Helvetica=2C sans-serif;border-collapse: collaps=
+e;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-=
+webkit-text-size-adjust: 100%;max-width: 600px !important;">
+                                        <tr style=3D"font-family: Helvetic=
+a=2C sans-serif;">
+                                            <td valign=3D"top" class=3D"fo=
+oterContainer" style=3D"background: #transparent none no-repeat center/cov=
+er;font-family: Helvetica=2C sans-serif;mso-line-height-rule: exactly;-ms-=
+text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #t=
+ransparent;background-image: none;background-repeat: no-repeat;background-=
+position: center;background-size: cover;border-top: 0;border-bottom: 0;pad=
+ding-top: 0;padding-bottom: 0;"><table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%" class=3D"mcnTextBlock" style=3D"min-width: 10=
+0%;font-family: Helvetica=2C sans-serif;border-collapse: collapse;mso-tabl=
+e-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-tex=
+t-size-adjust: 100%;">
+    <tbody class=3D"mcnTextBlockOuter" style=3D"font-family: Helvetica=2C=
+ sans-serif;">
+        <tr style=3D"font-family: Helvetica=2C sans-serif;">
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddin=
+g-top: 9px;font-family: Helvetica=2C sans-serif;mso-line-height-rule: exac=
+tly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+              =09<!--[if mso]>
+=09=09=09=09<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"100%" style=3D"width:100%;">
+=09=09=09=09<tr>
+=09=09=09=09<![endif]-->
+=09=09=09
+=09=09=09=09<!--[if mso]>
+=09=09=09=09<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+=09=09=09=09<![endif]-->
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"max-width: 100%;min-width: 100%;font-family: Helveti=
+ca=2C sans-serif;border-collapse: collapse;mso-table-lspace: 0pt;mso-table=
+-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;flo=
+at: left;" width=3D"100%" class=3D"mcnTextContentContainer">
+                    <tbody style=3D"font-family: Helvetica=2C sans-serif;"=
+><tr style=3D"font-family: Helvetica=2C sans-serif;">
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 1=
+8px;font-family: 'Helvetica Neue'=2C Helvetica=2C Arial=2C Verdana=2C sans=
+-serif;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-te=
+xt-size-adjust: 100%;word-break: break-word;color: #FFFFFF;font-size: 13px=
+;line-height: 150%;text-align: center;">
+
+                            <strong style=3D"font-family: Helvetica=2C san=
+s-serif;">About this Email</strong><br style=3D"font-family: Helvetica=2C=
+ sans-serif;">
+Oregon Catalyst started in 2005 as place for conservative Oregonians to ga=
+ther and share news=2C commentary=2C and gossip. Today=2C it is the larges=
+t Conservative political blog in Oregon. This email sends out regular Cata=
+lyst article updates on Mondays=2C Wednesdays=2C and Fridays.&nbsp;
+                        </td>
+                    </tr>
+                </tbody></table>
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</tr>
+=09=09=09=09</table>
+=09=09=09=09<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnFollowBlock" style=3D"min-width: 100%;font-family: Helvet=
+ica=2C sans-serif;border-collapse: collapse;mso-table-lspace: 0pt;mso-tabl=
+e-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+    <tbody class=3D"mcnFollowBlockOuter" style=3D"font-family: Helvetica=
+=2C sans-serif;">
+        <tr style=3D"font-family: Helvetica=2C sans-serif;">
+            <td align=3D"center" valign=3D"top" style=3D"padding: 9px;font=
+-family: Helvetica=2C sans-serif;mso-line-height-rule: exactly;-ms-text-si=
+ze-adjust: 100%;-webkit-text-size-adjust: 100%;" class=3D"mcnFollowBlockIn=
+ner">
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%" class=3D"mcnFollowContentContainer" style=3D"min-width: 100%;=
+font-family: Helvetica=2C sans-serif;border-collapse: collapse;mso-table-l=
+space: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-s=
+ize-adjust: 100%;">
+    <tbody style=3D"font-family: Helvetica=2C sans-serif;"><tr style=3D"fo=
+nt-family: Helvetica=2C sans-serif;">
+        <td align=3D"center" style=3D"padding-left: 9px;padding-right: 9px=
+;font-family: Helvetica=2C sans-serif;mso-line-height-rule: exactly;-ms-te=
+xt-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+            <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" style=3D"min-width: 100%;font-family: Helvetica=2C sans-serif;bo=
+rder-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-te=
+xt-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class=3D"mcnFollowCo=
+ntent">
+                <tbody style=3D"font-family: Helvetica=2C sans-serif;"><tr=
+ style=3D"font-family: Helvetica=2C sans-serif;">
+                    <td align=3D"center" valign=3D"top" style=3D"padding-t=
+op: 9px;padding-right: 9px;padding-left: 9px;font-family: Helvetica=2C san=
+s-serif;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-t=
+ext-size-adjust: 100%;">
+                        <table align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" style=3D"font-family: Helvetica=2C sans-serif;bor=
+der-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-tex=
+t-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                            <tbody style=3D"font-family: Helvetica=2C sans=
+-serif;"><tr style=3D"font-family: Helvetica=2C sans-serif;">
+                                <td align=3D"center" valign=3D"top" style=
+=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: exactly;-ms=
+-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                    <!--[if mso]>
+                                    <table align=3D"center" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0">
+                                    <tr>
+                                    <![endif]-->
+
+                                        <!--[if mso]>
+                                        <td align=3D"center" valign=3D"top=
+">
+                                        <![endif]-->
+
+
+                                            <table align=3D"left" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"display: inline;font-f=
+amily: Helvetica=2C sans-serif;border-collapse: collapse;mso-table-lspace:=
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-ad=
+just: 100%;float: left;">
+                                                <tbody style=3D"font-famil=
+y: Helvetica=2C sans-serif;"><tr style=3D"font-family: Helvetica=2C sans-s=
+erif;">
+                                                    <td valign=3D"top" sty=
+le=3D"padding-right: 10px;padding-bottom: 9px;font-family: Helvetica=2C sa=
+ns-serif;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-=
+text-size-adjust: 100%;" class=3D"mcnFollowContentItemContainer">
+                                                        <table border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnFollowCon=
+tentItem" style=3D"font-family: Helvetica=2C sans-serif;border-collapse: c=
+ollapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:=
+ 100%;-webkit-text-size-adjust: 100%;">
+                                                            <tbody style=
+=3D"font-family: Helvetica=2C sans-serif;"><tr style=3D"font-family: Helve=
+tica=2C sans-serif;">
+                                                                <td align=
+=3D"left" valign=3D"middle" style=3D"padding-top: 5px;padding-right: 10px;=
+padding-bottom: 5px;padding-left: 9px;font-family: Helvetica=2C sans-serif=
+;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-siz=
+e-adjust: 100%;">
+                                                                    <table=
+ align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+" style=3D"font-family: Helvetica=2C sans-serif;border-collapse: collapse;=
+mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-we=
+bkit-text-size-adjust: 100%;float: left;">
+                                                                        <t=
+body style=3D"font-family: Helvetica=2C sans-serif;"><tr style=3D"font-fam=
+ily: Helvetica=2C sans-serif;">
+
+                                                                         =
+       <td align=3D"center" valign=3D"middle" width=3D"24" class=3D"mcnFol=
+lowIconContent" style=3D"font-family: Helvetica=2C sans-serif;mso-line-hei=
+ght-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100=
+%;">
+                                                                         =
+           <a href=3D"https://oregoncatalyst.us19.list-manage.com/track/cl=
+ick?u=3Da87f3bde94b788cb6aaff54b0&id=3D73cbdee24d&e=3D68a6393ac8" target=
+=3D"_blank" style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-=
+rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">=
+<img src=3D"https://cdn-images.mailchimp.com/icons/social-block-v2/light-f=
+acebook-48.png" style=3D"display: block;font-family: Helvetica=2C sans-ser=
+if;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpol=
+ation-mode: bicubic;" height=3D"24" width=3D"24" class=3D""></a>
+                                                                         =
+       </td>
+
+
+                                                                        </=
+tr>
+                                                                    </tbod=
+y></table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+
+                                        <!--[if mso]>
+                                        </td>
+                                        <![endif]-->
+
+                                        <!--[if mso]>
+                                        <td align=3D"center" valign=3D"top=
+">
+                                        <![endif]-->
+
+
+                                            <table align=3D"left" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"display: inline;font-f=
+amily: Helvetica=2C sans-serif;border-collapse: collapse;mso-table-lspace:=
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-ad=
+just: 100%;float: left;">
+                                                <tbody style=3D"font-famil=
+y: Helvetica=2C sans-serif;"><tr style=3D"font-family: Helvetica=2C sans-s=
+erif;">
+                                                    <td valign=3D"top" sty=
+le=3D"padding-right: 10px;padding-bottom: 9px;font-family: Helvetica=2C sa=
+ns-serif;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-=
+text-size-adjust: 100%;" class=3D"mcnFollowContentItemContainer">
+                                                        <table border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnFollowCon=
+tentItem" style=3D"font-family: Helvetica=2C sans-serif;border-collapse: c=
+ollapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:=
+ 100%;-webkit-text-size-adjust: 100%;">
+                                                            <tbody style=
+=3D"font-family: Helvetica=2C sans-serif;"><tr style=3D"font-family: Helve=
+tica=2C sans-serif;">
+                                                                <td align=
+=3D"left" valign=3D"middle" style=3D"padding-top: 5px;padding-right: 10px;=
+padding-bottom: 5px;padding-left: 9px;font-family: Helvetica=2C sans-serif=
+;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-siz=
+e-adjust: 100%;">
+                                                                    <table=
+ align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+" style=3D"font-family: Helvetica=2C sans-serif;border-collapse: collapse;=
+mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-we=
+bkit-text-size-adjust: 100%;float: left;">
+                                                                        <t=
+body style=3D"font-family: Helvetica=2C sans-serif;"><tr style=3D"font-fam=
+ily: Helvetica=2C sans-serif;">
+
+                                                                         =
+       <td align=3D"center" valign=3D"middle" width=3D"24" class=3D"mcnFol=
+lowIconContent" style=3D"font-family: Helvetica=2C sans-serif;mso-line-hei=
+ght-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100=
+%;">
+                                                                         =
+           <a href=3D"https://oregoncatalyst.us19.list-manage.com/track/cl=
+ick?u=3Da87f3bde94b788cb6aaff54b0&id=3D72e50c8e02&e=3D68a6393ac8" target=
+=3D"_blank" style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-=
+rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">=
+<img src=3D"https://cdn-images.mailchimp.com/icons/social-block-v2/light-t=
+witter-48.png" style=3D"display: block;font-family: Helvetica=2C sans-seri=
+f;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpola=
+tion-mode: bicubic;" height=3D"24" width=3D"24" class=3D""></a>
+                                                                         =
+       </td>
+
+
+                                                                        </=
+tr>
+                                                                    </tbod=
+y></table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+
+                                        <!--[if mso]>
+                                        </td>
+                                        <![endif]-->
+
+                                        <!--[if mso]>
+                                        <td align=3D"center" valign=3D"top=
+">
+                                        <![endif]-->
+
+
+                                            <table align=3D"left" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"display: inline;font-f=
+amily: Helvetica=2C sans-serif;border-collapse: collapse;mso-table-lspace:=
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-ad=
+just: 100%;float: left;">
+                                                <tbody style=3D"font-famil=
+y: Helvetica=2C sans-serif;"><tr style=3D"font-family: Helvetica=2C sans-s=
+erif;">
+                                                    <td valign=3D"top" sty=
+le=3D"padding-right: 10px;padding-bottom: 9px;font-family: Helvetica=2C sa=
+ns-serif;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-=
+text-size-adjust: 100%;" class=3D"mcnFollowContentItemContainer">
+                                                        <table border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnFollowCon=
+tentItem" style=3D"font-family: Helvetica=2C sans-serif;border-collapse: c=
+ollapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:=
+ 100%;-webkit-text-size-adjust: 100%;">
+                                                            <tbody style=
+=3D"font-family: Helvetica=2C sans-serif;"><tr style=3D"font-family: Helve=
+tica=2C sans-serif;">
+                                                                <td align=
+=3D"left" valign=3D"middle" style=3D"padding-top: 5px;padding-right: 10px;=
+padding-bottom: 5px;padding-left: 9px;font-family: Helvetica=2C sans-serif=
+;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-siz=
+e-adjust: 100%;">
+                                                                    <table=
+ align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+" style=3D"font-family: Helvetica=2C sans-serif;border-collapse: collapse;=
+mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-we=
+bkit-text-size-adjust: 100%;float: left;">
+                                                                        <t=
+body style=3D"font-family: Helvetica=2C sans-serif;"><tr style=3D"font-fam=
+ily: Helvetica=2C sans-serif;">
+
+                                                                         =
+       <td align=3D"center" valign=3D"middle" width=3D"24" class=3D"mcnFol=
+lowIconContent" style=3D"font-family: Helvetica=2C sans-serif;mso-line-hei=
+ght-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100=
+%;">
+                                                                         =
+           <a href=3D"https://oregoncatalyst.us19.list-manage.com/track/cl=
+ick?u=3Da87f3bde94b788cb6aaff54b0&id=3D818f665308&e=3D68a6393ac8" target=
+=3D"_blank" style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-=
+rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">=
+<img src=3D"https://cdn-images.mailchimp.com/icons/social-block-v2/light-i=
+nstagram-48.png" style=3D"display: block;font-family: Helvetica=2C sans-se=
+rif;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpo=
+lation-mode: bicubic;" height=3D"24" width=3D"24" class=3D""></a>
+                                                                         =
+       </td>
+
+
+                                                                        </=
+tr>
+                                                                    </tbod=
+y></table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+
+                                        <!--[if mso]>
+                                        </td>
+                                        <![endif]-->
+
+                                        <!--[if mso]>
+                                        <td align=3D"center" valign=3D"top=
+">
+                                        <![endif]-->
+
+
+                                            <table align=3D"left" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"display: inline;font-f=
+amily: Helvetica=2C sans-serif;border-collapse: collapse;mso-table-lspace:=
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-ad=
+just: 100%;float: left;">
+                                                <tbody style=3D"font-famil=
+y: Helvetica=2C sans-serif;"><tr style=3D"font-family: Helvetica=2C sans-s=
+erif;">
+                                                    <td valign=3D"top" sty=
+le=3D"padding-right: 10px;padding-bottom: 9px;font-family: Helvetica=2C sa=
+ns-serif;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-=
+text-size-adjust: 100%;" class=3D"mcnFollowContentItemContainer">
+                                                        <table border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnFollowCon=
+tentItem" style=3D"font-family: Helvetica=2C sans-serif;border-collapse: c=
+ollapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:=
+ 100%;-webkit-text-size-adjust: 100%;">
+                                                            <tbody style=
+=3D"font-family: Helvetica=2C sans-serif;"><tr style=3D"font-family: Helve=
+tica=2C sans-serif;">
+                                                                <td align=
+=3D"left" valign=3D"middle" style=3D"padding-top: 5px;padding-right: 10px;=
+padding-bottom: 5px;padding-left: 9px;font-family: Helvetica=2C sans-serif=
+;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-siz=
+e-adjust: 100%;">
+                                                                    <table=
+ align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+" style=3D"font-family: Helvetica=2C sans-serif;border-collapse: collapse;=
+mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-we=
+bkit-text-size-adjust: 100%;float: left;">
+                                                                        <t=
+body style=3D"font-family: Helvetica=2C sans-serif;"><tr style=3D"font-fam=
+ily: Helvetica=2C sans-serif;">
+
+                                                                         =
+       <td align=3D"center" valign=3D"middle" width=3D"24" class=3D"mcnFol=
+lowIconContent" style=3D"font-family: Helvetica=2C sans-serif;mso-line-hei=
+ght-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100=
+%;">
+                                                                         =
+           <a href=3D"https://oregoncatalyst.us19.list-manage.com/track/cl=
+ick?u=3Da87f3bde94b788cb6aaff54b0&id=3De4c6b331a3&e=3D68a6393ac8" target=
+=3D"_blank" style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-=
+rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">=
+<img src=3D"https://cdn-images.mailchimp.com/icons/social-block-v2/light-l=
+ink-48.png" style=3D"display: block;font-family: Helvetica=2C sans-serif;b=
+order: 0;height: auto;outline: none;text-decoration: none;-ms-interpolatio=
+n-mode: bicubic;" height=3D"24" width=3D"24" class=3D""></a>
+                                                                         =
+       </td>
+
+
+                                                                        </=
+tr>
+                                                                    </tbod=
+y></table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+
+                                        <!--[if mso]>
+                                        </td>
+                                        <![endif]-->
+
+                                        <!--[if mso]>
+                                        <td align=3D"center" valign=3D"top=
+">
+                                        <![endif]-->
+
+
+                                            <table align=3D"left" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"display: inline;font-f=
+amily: Helvetica=2C sans-serif;border-collapse: collapse;mso-table-lspace:=
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-ad=
+just: 100%;float: left;">
+                                                <tbody style=3D"font-famil=
+y: Helvetica=2C sans-serif;"><tr style=3D"font-family: Helvetica=2C sans-s=
+erif;">
+                                                    <td valign=3D"top" sty=
+le=3D"padding-right: 0;padding-bottom: 9px;font-family: Helvetica=2C sans-=
+serif;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-tex=
+t-size-adjust: 100%;" class=3D"mcnFollowContentItemContainer">
+                                                        <table border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnFollowCon=
+tentItem" style=3D"font-family: Helvetica=2C sans-serif;border-collapse: c=
+ollapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust:=
+ 100%;-webkit-text-size-adjust: 100%;">
+                                                            <tbody style=
+=3D"font-family: Helvetica=2C sans-serif;"><tr style=3D"font-family: Helve=
+tica=2C sans-serif;">
+                                                                <td align=
+=3D"left" valign=3D"middle" style=3D"padding-top: 5px;padding-right: 10px;=
+padding-bottom: 5px;padding-left: 9px;font-family: Helvetica=2C sans-serif=
+;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-siz=
+e-adjust: 100%;">
+                                                                    <table=
+ align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+" style=3D"font-family: Helvetica=2C sans-serif;border-collapse: collapse;=
+mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-we=
+bkit-text-size-adjust: 100%;float: left;">
+                                                                        <t=
+body style=3D"font-family: Helvetica=2C sans-serif;"><tr style=3D"font-fam=
+ily: Helvetica=2C sans-serif;">
+
+                                                                         =
+       <td align=3D"center" valign=3D"middle" width=3D"24" class=3D"mcnFol=
+lowIconContent" style=3D"font-family: Helvetica=2C sans-serif;mso-line-hei=
+ght-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100=
+%;">
+                                                                         =
+           <a href=3D"mailto:editor@oregoncatalyst.com" target=3D"_blank"=
+ style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: exact=
+ly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src=3D=
+"https://cdn-images.mailchimp.com/icons/social-block-v2/light-forwardtofri=
+end-48.png" style=3D"display: block;font-family: Helvetica=2C sans-serif;b=
+order: 0;height: auto;outline: none;text-decoration: none;-ms-interpolatio=
+n-mode: bicubic;" height=3D"24" width=3D"24" class=3D""></a>
+                                                                         =
+       </td>
+
+
+                                                                        </=
+tr>
+                                                                    </tbod=
+y></table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody></table>
+                                                    </td>
+                                                </tr>
+                                            </tbody></table>
+
+                                        <!--[if mso]>
+                                        </td>
+                                        <![endif]-->
+
+                                    <!--[if mso]>
+                                    </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    </td>
+                </tr>
+            </tbody></table>
+        </td>
+    </tr>
+</tbody></table>
+
+            </td>
+        </tr>
+    </tbody>
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" class=3D"mcnTextBlock" style=3D"min-width: 100%;font-family: Helvetic=
+a=2C sans-serif;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-=
+rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+    <tbody class=3D"mcnTextBlockOuter" style=3D"font-family: Helvetica=2C=
+ sans-serif;">
+        <tr style=3D"font-family: Helvetica=2C sans-serif;">
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddin=
+g-top: 9px;font-family: Helvetica=2C sans-serif;mso-line-height-rule: exac=
+tly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+              =09<!--[if mso]>
+=09=09=09=09<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"100%" style=3D"width:100%;">
+=09=09=09=09<tr>
+=09=09=09=09<![endif]-->
+=09=09=09
+=09=09=09=09<!--[if mso]>
+=09=09=09=09<td valign=3D"top" width=3D"600" style=3D"width:600px;">
+=09=09=09=09<![endif]-->
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"max-width: 100%;min-width: 100%;font-family: Helveti=
+ca=2C sans-serif;border-collapse: collapse;mso-table-lspace: 0pt;mso-table=
+-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;flo=
+at: left;" width=3D"100%" class=3D"mcnTextContentContainer">
+                    <tbody style=3D"font-family: Helvetica=2C sans-serif;"=
+><tr style=3D"font-family: Helvetica=2C sans-serif;">
+
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 1=
+8px;font-family: 'Helvetica Neue'=2C Helvetica=2C Arial=2C Verdana=2C sans=
+-serif;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-te=
+xt-size-adjust: 100%;word-break: break-word;color: #FFFFFF;font-size: 13px=
+;line-height: 150%;text-align: center;">
+
+                            <em style=3D"font-family: Helvetica=2C sans-se=
+rif;">Copyright =C2=A9 2026 Oregon Catalyst=2C All rights reserved.</em><b=
+r style=3D"font-family: Helvetica=2C sans-serif;">
+ You are receiving this email because you opted in via our website.<br sty=
+le=3D"font-family: Helvetica=2C sans-serif;">
+<br style=3D"font-family: Helvetica=2C sans-serif;">
+<strong style=3D"font-family: Helvetica=2C sans-serif;">Our mailing addres=
+s is:</strong><br style=3D"font-family: Helvetica=2C sans-serif;">
+<div class=3D"vcard"><span class=3D"org fn">Oregon Catalyst</span><div cla=
+ss=3D"adr"><div class=3D"street-address">11080 SW Allen Blvd Ste 400B</div=
+><span class=3D"locality">Beaverton</span>=2C <span class=3D"region">OR</s=
+pan> <span class=3D"postal-code">97005-4822</span></div><br><a href=3D"htt=
+ps://oregoncatalyst.us19.list-manage.com/vcard?u=3Da87f3bde94b788cb6aaff54=
+b0&id=3D0eb42aa161" class=3D"hcard-download">Add us to your address book</=
+a></div>
+<br style=3D"font-family: Helvetica=2C sans-serif;">
+<br style=3D"font-family: Helvetica=2C sans-serif;">
+Want to change how you receive these emails?<br style=3D"font-family: Helv=
+etica=2C sans-serif;">
+You can <a href=3D"https://oregoncatalyst.us19.list-manage.com/profile?u=
+=3Da87f3bde94b788cb6aaff54b0&id=3D0eb42aa161&e=3D68a6393ac8&c=3D2128bb03a8"=
+ style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule: exact=
+ly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #FFFFF=
+F;font-weight: normal;text-decoration: underline;">update your preferences=
+</a> or <a href=3D"https://oregoncatalyst.us19.list-manage.com/unsubscribe=
+?u=3Da87f3bde94b788cb6aaff54b0&id=3D0eb42aa161&t=3Db&e=3D68a6393ac8&c=3D2128=
+bb03a8" style=3D"font-family: Helvetica=2C sans-serif;mso-line-height-rule=
+: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color:=
+ #FFFFFF;font-weight: normal;text-decoration: underline;">unsubscribe from=
+ this list</a>.
+                        </td>
+                    </tr>
+                </tbody></table>
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</td>
+=09=09=09=09<![endif]-->
+
+=09=09=09=09<!--[if mso]>
+=09=09=09=09</tr>
+=09=09=09=09</table>
+=09=09=09=09<![endif]-->
+            </td>
+        </tr>
+    </tbody>
+</table></td>
+                                        </tr>
+                                    </table>
+                                    <!--[if (gte mso 9)|(IE)]>
+                                    </td>
+                                    </tr>
+                                    </table>
+                                    <![endif]-->
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- // END TEMPLATE -->
+                    </td>
+                </tr>
+            </table>
+        </center>
+    <div style=3D"display:none;"><img src=3D"https://oregoncatalyst.us19.l=
+ist-manage.com/track/open.php?u=3Da87f3bde94b788cb6aaff54b0&id=3D2128bb03a=
+8&e=3D68a6393ac8" height=3D"1" width=3D"1" style=3D"display:none;" alt=3D=
+""></div></body>
+</html>
+--_----------=_MCPart_414798198--

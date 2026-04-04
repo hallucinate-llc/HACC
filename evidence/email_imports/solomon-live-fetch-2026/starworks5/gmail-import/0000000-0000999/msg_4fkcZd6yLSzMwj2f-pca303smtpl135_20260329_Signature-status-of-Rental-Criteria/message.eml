@@ -1,0 +1,710 @@
+Delivered-To: starworks5@gmail.com
+Received: by 2002:a05:7208:552b:b0:fa:5ef1:c6ed with SMTP id t43csp1081812rbf;
+        Sun, 29 Mar 2026 20:44:58 -0700 (PDT)
+X-Received: by 2002:a05:6870:c0cf:b0:417:d068:6029 with SMTP id 586e51a60fabf-41cec412c03mr5463738fac.36.1774842298286;
+        Sun, 29 Mar 2026 20:44:58 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1774842298; cv=none;
+        d=google.com; s=arc-20240605;
+        b=KpMLvIrUw/OY2sUJbWaawxJQEc4dXd3MR2lT6E+4v7Hu54jgNKI3WXAG4+U0kTI1lE
+         +O5Z5DZDcFudi5Hk00iI4jntQiSeEKcS8QG0A8o9KxLrdmfmwB9ba90wuvY2St5je/0m
+         K/W8LvF4R9kCtOfRvRt+zy4+SpKHecRJDIcvlPIDc4hSVBUtfM8yBGqpSKGTchDVGUOt
+         JL1WvZvTzTi7MQXTWinHk3rG7kCT3ChwBglVC/KwuSpY0QaIYe7ZJ+SH9JoVeyA9vx8M
+         W/dTrDfCYDnYU/6ZY8YgHB+ZQZg5JEKB52qL65tUkksH8da82qFZ9wkYDzAmmYBUuCf7
+         hlxw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=date:message-id:content-transfer-encoding:mime-version:subject:cc
+         :to:reply-to:from:dkim-signature:feedback-id;
+        bh=GsomJnKosRoJbQyE3lhsf5Eh6ZJgpm3BTshxwxTuzYE=;
+        fh=gEZAYU6+1+WuVdxoqKs3uo+hBULiAj3LjLbRed3gleY=;
+        b=LG43uH5bCWnzXaMjREFkW7wiXiUTfeJM9pYKipmhcBc6IlmdCEfwQYLwBitmkm6skU
+         V/UMvF6NUte4278ptImhrbNdcUR3bwjdmNR4Kk3DIZfrZQTFm0izEObWus4/RaqXlmGi
+         XvnQ+R7FpD3pBg/iUIePt9R3zxt+neK9HztQ48zThEKP+5aIPbyciGqUVZBaWyC/jwQk
+         hJ57KetIMQW+s8HD7dwyn4WU3yL1QKuI5ceBLyiUGTHaieXg5jjxy8OnLOAMCV/GHbAZ
+         Mw81i/X7QU9gUAYoYWu5lYv/rNAdF70M670m7APiB9Fbn0Owx1eZ83oLWQfQseKpNadS
+         cHIA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@rentcafe.com header.s=yardi-asp-dkim2 header.b=rfcoqflq;
+       spf=pass (google.com: domain of no-reply@rentcafe.com designates 104.156.175.231 as permitted sender) smtp.mailfrom=no-reply@rentcafe.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=rentcafe.com
+Return-Path: <no-reply@rentcafe.com>
+Received: from smtp231us.rentcafe.com (smtp231us.rentcafe.com. [104.156.175.231])
+        by mx.google.com with ESMTPS id 586e51a60fabf-41d04cb161dsi4990966fac.184.2026.03.29.20.44.58
+        for <starworks5@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sun, 29 Mar 2026 20:44:58 -0700 (PDT)
+Received-SPF: pass (google.com: domain of no-reply@rentcafe.com designates 104.156.175.231 as permitted sender) client-ip=104.156.175.231;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@rentcafe.com header.s=yardi-asp-dkim2 header.b=rfcoqflq;
+       spf=pass (google.com: domain of no-reply@rentcafe.com designates 104.156.175.231 as permitted sender) smtp.mailfrom=no-reply@rentcafe.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=rentcafe.com
+Feedback-ID: 3264781:92891::R3n7C@f3FI3L
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=rentcafe.com;
+	s=yardi-asp-dkim2; t=1774842298;
+	bh=GsomJnKosRoJbQyE3lhsf5Eh6ZJgpm3BTshxwxTuzYE=;
+	h=From:Reply-To:To:Cc:Subject:Date:From;
+	b=rfcoqflq3E0eymrDBV3RoI2x/6e7KHZMcbf0rAvUpHkHFgvXkzYfpTypypFvAWKvh
+	 lswqVixx3lzp3lPMTRcWvQMnhSYMY5OUIGEWOOmwSzAKxTkNHWT3MDugxC9id6QbNk
+	 hPQIy0hwhScf26KNWLgxSSlns8BSMYuBygvNZ874a7T4WbOCScsY2NWugoz6seS3Ly
+	 Al6VpiHNAXiwvTk4+UW95pK3paCsP5cJK8xqp0K+e6or3RUoR+zsko4dQzSdDfr7jn
+	 DYIZziErsRWP4Z7yqaQPHHxk1deufffZqJwXObi5FHJgGpfO2/tYVcbjNB+rqVZwwa
+	 J2M8jrGhTCwKA==
+From: The Douglas <no-reply@rentcafe.com>
+Reply-To: thedouglas@avenue5apt.com
+To: starworks5@gmail.com
+Cc: 
+Subject: Signature status of Rental Criteria
+MIME-Version: 1.0
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <4fkcZd6yLSzMwj2f@pca303smtpl135>
+Date: Sun, 29 Mar 2026 22:44:57 -0500 (CDT)
+X-YWM-PCA303MAIL-ID: 4fkcZd6yLSzMwj2f@pca303smtpl135
+
+<title></title>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-=
+8" /><meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-=
+scale=3D1.0, maximum-scale=3D1.0" />
+<style type=3D"text/css">html {
+	width: 100%;
+}
+::-moz-selection {
+background:#5b794e;
+color:#ffffff;
+}
+::selection {
+	background: #5b794e;
+	color: #ffffff;
+}
+body {
+	background-color: #ffffff;
+	margin: 0;
+	padding: 0;
+}
+.ReadMsgBody {
+	width: 100%;
+	background-color: #ffffff;
+}
+.ExternalClass {
+	width: 100%;
+	background-color: #ffffff;
+}
+a {
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 400;
+	font-style: normal;
+}
+a:hover {
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 400;
+	font-style: normal;
+}
+p, div {
+	margin: 0!important;
+}
+table {
+	border-collapse: collapse;
+}
+
+@media only screen and (max-width:640px) {
+body {
+	width: auto!important;
+}
+table table {
+	width: 100%!important;
+}
+td[class=3Dfull_width] {
+	width: 100%!important;
+}
+.reHideMedium {
+	display: none !important;
+}
+.reShowMedium {
+	display: block !important;
+}
+.reCenterMedium {
+	text-align: center !important;
+}
+div[class=3Ddiv_scale] {
+	width: 440px!important;
+	margin: 0 auto!important;
+}
+table[class=3Dtable_scale] {
+	width: 440px!important;
+	margin: 0 auto!important;
+}
+td[class=3Dtd_scale] {
+	width: 440px!important;
+	margin: 0 auto!important;
+}
+img[class=3Dimg_scale] {
+	width: 100%!important;
+	height: auto!important;
+}
+td[class=3Dspacer] {
+	display: none!important;
+}
+td[class=3Dspacer_spec] {
+	display: none!important;
+}
+td[class=3Ddivider] {
+	width: 100%!important;
+	display: block!important;
+	float: left;
+	text-align: inherit!important;
+}
+td[class=3Dcenter] {
+	text-align: center!important;
+}
+td[class=3Dsocial_left] {
+	float: left;
+	width: 400px;
+	display: block!important;
+	text-align: center!important;
+	padding: 20px!important;
+}
+td[class=3Dsocial_right] {
+	float: left;
+	width: 400px;
+	display: block!important;
+	text-align: center!important;
+	padding: 0 20px 20px!important;
+}
+td[class=3Done_one] {
+	width: 440px!important;
+	display: block!important;
+	float: left;
+	text-align: inherit!important;
+}
+td[class=3Done_half] {
+	width: 440px!important;
+	padding-bottom: 0!important;
+	display: block!important;
+	float: left;
+	text-align: inherit!important;
+}
+td[class=3Done_half_last] {
+	width: 440px!important;
+	margin-top: 40px!important;
+	display: block!important;
+	float: left;
+	text-align: inherit!important;
+	padding: 0!important;
+}
+td[class=3Done_half_alt_last] {
+	width: 440px!important;
+	margin-top: 0!important;
+	display: block!important;
+	float: left;
+	text-align: inherit!important;
+	padding: 0!important;
+}
+td[class=3Done_third] {
+	width: 440px!important;
+	display: block!important;
+	float: left;
+	text-align: inherit!important;
+}
+td[class=3Dtwo_third] {
+	width: 440px!important;
+	display: block!important;
+	float: left;
+	text-align: inherit!important;
+}
+td[class=3Dtwo_third_last] {
+	width: 440px!important;
+	margin-top: 40px!important;
+	display: block!important;
+	float: left;
+	text-align: inherit!important;
+}
+td[class=3Dtwo_third_alt_last] {
+	width: 440px!important;
+	margin-top: 0!important;
+	display: block!important;
+	float: left;
+	text-align: inherit!important;
+}
+td[class=3Done_third_last] {
+	width: 440px!important;
+	margin-top: 40px!important;
+	display: block!important;
+	float: left;
+	text-align: inherit!important;
+}
+td[class=3Done_third_alt_last] {
+	width: 440px!important;
+	margin-top: 0!important;
+	display: block!important;
+	float: left;
+	text-align: inherit!important;
+}
+td[class=3Done_fourth] {
+	width: 85px!important;
+	display: block!important;
+	padding-left: 20px!important;
+	padding-bottom: 0!important;
+	float: left;
+	text-align: inherit!important
+}
+td[class=3Done_fourth_last] {
+	width: 85px!important;
+	margin-top: 0!important;
+	display: block!important;
+	padding-top: 20px!important;
+	padding-left: 20px!important;
+	float: left;
+	text-align: inherit!important;
+}
+}
+
+@media only screen and (max-width:479px) {
+body {
+	width: auto!important;
+}
+table table {
+	width: 100%!important;
+}
+td[class=3Dfull_width] {
+	width: 100%!important;
+}
+.reHideSmall {
+	display: none !important;
+}
+div[class=3Ddiv_scale] {
+	width: 280px!important;
+	margin: 0 auto!important;
+}
+table[class=3Dtable_scale] {
+	width: 280px!important;
+	margin: 0 auto!important;
+}
+td[class=3Dtd_scale] {
+	width: 280px!important;
+	margin: 0 auto!important;
+}
+img[class=3Dimg_scale] {
+	width: 100%!important;
+	height: auto!important;
+}
+td[class=3Dspacer] {
+	display: none!important;
+}
+td[class=3Dspacer_spec] {
+	display: none!important;
+}
+td[class=3Ddivider] {
+	width: 100%!important;
+	display: block!important;
+	float: left;
+	text-align: inherit!important;
+}
+td[class=3Dcenter] {
+	text-align: center!important;
+}
+td[class=3Dsocial_left] {
+	float: left;
+	width: 240px;
+	display: block!important;
+	text-align: center!important;
+	padding: 20px!important;
+}
+td[class=3Dsocial_right] {
+	float: left;
+	width: 240px;
+	display: block!important;
+	text-align: center!important;
+	padding: 0 20px 20px!important;
+}
+td[class=3Done_one] {
+	width: 280px!important;
+	display: block!important;
+	float: left;
+	text-align: inherit!important;
+}
+td[class=3Done_half] {
+	width: 280px!important;
+	padding-bottom: 0!important;
+	display: block!important;
+	float: left;
+	text-align: inherit!important;
+}
+td[class=3Done_half_last] {
+	width: 280px!important;
+	margin-top: 40px!important;
+	display: block!important;
+	float: left;
+	text-align: inherit!important;
+	padding: 0!important;
+}
+td[class=3Done_half_alt_last] {
+	width: 280px!important;
+	margin-top: 0!important;
+	display: block!important;
+	float: left;
+	text-align: inherit!important;
+	padding: 0!important;
+}
+td[class=3Done_third] {
+	width: 280px!important;
+	display: block!important;
+	float: left;
+	text-align: inherit!important;
+}
+td[class=3Dtwo_third] {
+	width: 280px!important;
+	display: block!important;
+	float: left;
+	text-align: inherit!important;
+}
+td[class=3Dtwo_third_last] {
+	width: 280px!important;
+	margin-top: 40px!important;
+	display: block!important;
+	float: left;
+	text-align: inherit!important;
+}
+td[class=3Dtwo_third_alt_last] {
+	width: 280px!important;
+	margin-top: 0!important;
+	display: block!important;
+	float: left;
+	text-align: inherit!important;
+}
+td[class=3Done_third_last] {
+	width: 280px!important;
+	margin-top: 40px!important;
+	display: block!important;
+	float: left;
+	text-align: inherit!important;
+}
+td[class=3Done_third_alt_last] {
+	width: 280px!important;
+	margin-top: 0!important;
+	display: block!important;
+	float: left;
+	text-align: inherit!important;
+}
+td[class=3Done_fourth] {
+	width: 110px!important;
+	display: block!important;
+	padding-left: 20px!important;
+	padding-bottom: 0!important;
+	float: left;
+	text-align: inherit!important;
+}
+td[class=3Done_fourth_last] {
+	width: 110px!important;
+	margin-top: 0!important;
+	display: block!important;
+	padding-top: 20px!important;
+	padding-left: 20px!important;
+	float: left;
+	text-align: inherit!important;
+}
+}
+</style>
+<table align=3D"center" bgcolor=3D"#ffffff" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" style=3D"padding: 0; margin: 0;" width=3D"100%">=
+<!-- Top Title Section Start--><!-- Change the text and color hex code=
+ as needed -->
+	<tbody>
+		<tr>
+			<td align=3D"center" bgcolor=3D"#ffffff" class=3D"full_width" style=
+=3D"" width=3D"100%">
+			<div class=3D"div_scale" style=3D"width:600px;">
+			<table align=3D"center" bgcolor=3D"#5b794e" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" class=3D"table_scale" style=3D"padding:0; ma=
+rgin:0;" width=3D"600">
+				<tbody>
+					<tr>
+						<td align=3D"center" bgcolor=3D"#5b794e" class=3D"one_one" style=
+=3D"padding-top:10px; padding-bottom:10px;" valign=3D"middle" width=3D=
+"600">
+						<table width=3D"100%">
+							<tbody>
+								<tr>
+									<td align=3D"center" class=3D"center" style=3D"font-family:Ar=
+ial, sans-serif; font-style:normal; color:#5b794e; font-size:14px; lin=
+e-height:24px; text-transform: uppercase;" valign=3D"middle">&nbsp;</t=
+d>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+			</td>
+		</tr>
+		<!-- Top Title Section End--><!-- Property Logo Section Start--><!--=
+ Change the color hex code only if needed, don't change the token -->
+		<tr>
+			<td align=3D"center" bgcolor=3D"#ffffff" class=3D"full_width" style=
+=3D"" width=3D"100%">
+			<div class=3D"div_scale" style=3D"width:600px;">
+			<table align=3D"center" bgcolor=3D"#ffffff" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" class=3D"table_scale" style=3D"padding:0; ma=
+rgin:0;" width=3D"600">
+				<tbody>
+					<tr>
+						<td align=3D"center" bgcolor=3D"#ffffff" class=3D"one_one" style=
+=3D"padding-top:10px; padding-bottom:10px;" valign=3D"middle" width=3D=
+"600">
+						<table width=3D"100%">
+							<tbody>
+								<tr>
+									<td align=3D"center" class=3D"center" valign=3D"middle">
+									<div style=3D"text-align:center"><img alt=3D"" height=3D"90" =
+src=3D"https://cdngeneral.rentcafe.com//dmslivecafe/UploadedImages/6a3=
+dfda4-cd2d-4f81-998d-7b591c071de1.png" width=3D"300" /></div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+			</td>
+		</tr>
+		<!-- Property Logo Section End--><!-- Email Content Section Start-->
+		<tr>
+			<td align=3D"center" bgcolor=3D"#ffffff" class=3D"full_width" style=
+=3D"" width=3D"100%">
+			<div class=3D"div_scale" style=3D"width:600px;">
+			<table align=3D"center" bgcolor=3D"#FFFFFF" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" class=3D"table_scale" width=3D"">
+				<tbody>
+					<tr>
+						<td align=3D"center" bgcolor=3D"#5b794e" class=3D"full_width" st=
+yle=3D"" valign=3D"top" width=3D"600">
+						<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%"><!-- Banner Image Section-->
+							<tbody>
+								<tr>
+									<td align=3D"left" bgcolor=3D"#5b794e" style=3D"padding: 0;" =
+valign=3D"top"><!-- Texture Image, Do Not Change This--><!-- Main Bann=
+er Image, Change the image path only as Required-->
+									<div style=3D"text-align:center"><img alt=3D"Property Photo" =
+border=3D"0" class=3D"img_scale" height=3D"400" src=3D"https://cdngene=
+ral.rentcafe.com//dmslivecafe/UploadedImages/53be3eac-5b3a-4d44-a106-d=
+58cf4c0ce05.jpg" style=3D"display: inline-block; margin:0" width=3D"60=
+0" /></div>
+									</td>
+								</tr>
+								<!-- Email Title --><!-- Email Body -->
+								<tr>
+									<td style=3D"font-family: Helvetica, Arial, sans-serif; color=
+:#ffffff; line-height:24px; font-size:13px; padding:12px 30px 0px 30px=
+;" valign=3D"top"><span style=3D"color:#ffffff;"><p class=3D"dear">Dea=
+r <span data-selenium-id=3D'ProspectName'>Benjamin</span>,<br /> <br /=
+> <span data-selenium-id=3D'ApplicantName'>Jane has</span> signed the =
+&quot;<span data-selenium-id=3D'DocumentName'>Rental Criteria</span>&q=
+uot; document in the Prospect Portal.</p>  <p class=3D"normaltext">Sig=
+nature status for <span data-selenium-id=3D'DocumentName'>Rental Crite=
+ria</span>:&nbsp;<span data-selenium-id=3D'ApplicationSignStatus'><br>=
+ Benjamin Barber: Completed <br> Jane Cortez: Completed </span></p>  <=
+div class=3D"normaltext"><strong><span data-selenium-id=3D'PropertyNam=
+e'>The Douglas</span></strong></div>  <div class=3D"normaltext"><span =
+data-selenium-id=3D'PropertyAddress'>1811 S. River Drive</span></div> =
+ <div class=3D"normaltext"><span data-selenium-id=3D'PropertyCity'>Por=
+tland</span>,<span data-selenium-id=3D'PropertyState'>OR</span> <span =
+data-selenium-id=3D'PropertyZip'>97201</span><br /> (503) 228-1800.</d=
+iv>  <div class=3D"normaltext">thedouglas@avenue5apt.com</div>  <p><br=
+ /> &nbsp;</p>  <p class=3D"normaltext">&nbsp;</p></span></td>
+								</tr>
+								<!-- Bottom Buttons -->
+								<tr>
+									<td align=3D"center" style=3D"padding-top:16px; padding-right=
+:30px; padding-bottom:0; padding-left:30px; font-size:14px ; color:#ff=
+ffff; font-family:Helvetica, Arial, sans-serif; line-height:24px;" val=
+ign=3D"top" width=3D"">&nbsp;</td>
+								</tr>
+								<tr>
+									<td height=3D"40">&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+			</td>
+		</tr>
+		<!-- Email Content Section Start--><!-- Footer Top Section Start-->
+		<tr>
+			<td align=3D"center" bgcolor=3D"#ffffff" class=3D"full_width" style=
+=3D"" width=3D"100%">
+			<div class=3D"div_scale" style=3D"width:600px;">
+			<table align=3D"center" bgcolor=3D"#000000" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" class=3D"table_scale" width=3D"">
+				<tbody>
+					<tr>
+						<td align=3D"left" class=3D"full_width" style=3D"background:#000=
+000;" valign=3D"top" width=3D"400">
+						<table align=3D"center" width=3D"100%">
+							<tbody>
+								<tr>
+									<td height=3D"40">&nbsp;</td>
+								</tr>
+								<!-- Footer Heading-->
+								<tr>
+									<td align=3D"left" style=3D"padding-right: 30px; padding-left=
+: 30px; font-size:18px ; color:#5b794e; font-family: Helvetica, Arial,=
+ sans-serif; line-height: 24px; text-transform:uppercase;" valign=3D"t=
+op"><strong><span style=3D"color:#ffffff;">Let&#39;s Connect</span></s=
+trong></td>
+								</tr>
+								<tr>
+									<td height=3D"10">&nbsp;</td>
+								</tr>
+								<!-- Footer Address-->
+								<tr>
+									<td align=3D"left" style=3D"padding-right: 10px; padding-left=
+: 30px; font-size:14px ; color:#E8E8E8; font-family: Helvetica, Arial,=
+ sans-serif; line-height: 24px;" valign=3D"top">(503) 228-1800<br />
+									<span style=3D"color:#ffffff;">thedouglas@avenue5apt.com</spa=
+n><br />
+									<br />
+									<span data-selenium-id=3D'PropertyAddress'>1811 S. River Driv=
+e</span><br />
+									<span data-selenium-id=3D'PropertyCity'>Portland</span>,&nbsp=
+;<span data-selenium-id=3D'PropertyState'>OR</span>&nbsp;<span data-se=
+lenium-id=3D'PropertyZip'>97201</span><br />
+									&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+						<!-- Footer Map Image-->
+						<td align=3D"right" class=3D"full_width" style=3D"background:#00=
+0000;" valign=3D"top" width=3D"200">
+						<table align=3D"right" width=3D"100%">
+							<tbody>
+								<tr>
+									<td align=3D"right" style=3D"padding-right: 0; padding-left: =
+0;" valign=3D"top"><a href=3D"https://www.northmountainvillageapts.com=
+/mapsanddirections.aspx
+
+"></a></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+			</td>
+		</tr>
+		<!-- Footer Top Section End--><!-- Footer Bottom Section Start-->
+		<tr>
+			<td align=3D"center" bgcolor=3D"#ffffff" class=3D"full_width" style=
+=3D"" width=3D"100%">
+			<div class=3D"div_scale" style=3D"width:600px;">
+			<table align=3D"center" bgcolor=3D"#333333" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" class=3D"table_scale" width=3D"">
+				<tbody>
+					<tr><!-- Social media icons-->
+						<td align=3D"center" class=3D"full_width" style=3D"background:#3=
+33333;" valign=3D"middle" width=3D"200">
+						<table align=3D"center" width=3D"100%">
+							<tbody>
+								<tr>
+									<td align=3D"left" style=3D"padding-left: 30px;" valign=3D"mi=
+ddle"><!-- Facebook Icon, Change the href link as needed--><a href=3D"=
+https://www.rentcafe.com/t/el?ref=3DNjU0Nzk5MzYxNQ%3d%3d-RSQiPBzV8Hg%3=
+d,aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL1RoZURvdWdsYXNQb3J0bGFuZC8%3d-A2MgK=
+wVvTQs%3d"  target=3D"_blank"><img alt=3D"" src=3D"https://sitemanager=
+.rentcafe.com/dmslivecafe/3/892291/fbIcon.png" width=3D"22" /></a> <!-=
+- Instagram Icon, Change the href link as needed-- <a href=3D"https://=
+www.rentcafe.com/t/el?ref=3DNjU0Nzk5MzYxNQ%3d%3d-RSQiPBzV8Hg%3d,aHR0cH=
+M6Ly93d3cuaW5zdGFncmFtLmNvbS9DeWFuQXRHcmVlblZhbGxleS8%3d-UvDR3qRDR3c%3=
+d" ><img src=3D"https://sitemanager.rentcafe.com/dmslivecafe/3/892291/=
+instagram.png" width=3D"22" /></a>--></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+						<!-- Company Logo -->
+						<td align=3D"center" class=3D"full_width" style=3D"background:#3=
+33333;" valign=3D"middle" width=3D"200">
+						<table align=3D"center" width=3D"100%">
+							<tbody>
+								<tr>
+									<td align=3D"center" valign=3D"middle"><a href=3D"https://www=
+.rentcafe.com/t/el?ref=3DNjU0Nzk5MzYxNQ%3d%3d-RSQiPBzV8Hg%3d,aHR0cDovL=
+w%3d%3d-nm018iqyYuU%3d" ><img src=3D'http://www.rentcafe.com/dmsliveca=
+fe/2/92891/Avenue5-Logo2.png?width=3D186&height=3D58&mode=3Dpad&crop=3D=
+(0,0,300,124)&cropxunits=3D300&cropyunits=3D124' title=3D'' border=3D'=
+0' alt=3D'corp_92891_0'  style=3D"background-color:transparent; font-f=
+amily:'Raleway', Helvetica, Arial, sans-serif; font-size:14px; text-al=
+ign:left; vertical-align:middle;"/></a></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+						<!-- Equal Housing Logo,-->
+						<td align=3D"center" class=3D"full_width" style=3D"background:#3=
+33333;" valign=3D"middle" width=3D"200">
+						<table align=3D"center" width=3D"100%">
+							<tbody>
+								<tr>
+									<td align=3D"right" style=3D"padding-right: 30px;" valign=3D"=
+middle"><img alt=3D"" src=3D"https://sitemanager.rentcafe.com/dmslivec=
+afe/3/892291/eho.png" width=3D"22" /></td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+			</td>
+		</tr>
+		<!-- Footer Bottom Section End-->
+	</tbody>
+</table><table align=3D"center">
+	<tr>
+		<td align=3D"center">
+			<table>
+				<tbody>
+					<tr>
+                        <td align=3D"center" bgcolor=3D"#ffffff" colsp=
+an=3D"3" style=3D"padding:15px;font: 10px Helvetica,Arial; color: #696=
+969;border-bottom:1px solid #ebebeb;" valign=3D"middle">
+                            <p><span data-selenium-id=3D'PropertyAddre=
+ss'>1811 S. River Drive</span>, <span data-selenium-id=3D'PropertyCity=
+'>Portland</span>, <span data-selenium-id=3D'PropertyState'>OR</span> =
+<span data-selenium-id=3D'PropertyZip'>97201</span></p>
+                        </td>
+                    </tr>
+					<tr>
+						<td align=3D"center" bgcolor=3D"#ffffff" colspan=3D"3" style=3D"=
+padding:15px;font: 10px Helvetica,Arial; color: #696969" valign=3D"mid=
+dle">
+							<p>This email was sent to starworks5@gmail.com. To ensure you c=
+ontinue receiving our emails, please add us to your address book or sa=
+fe list. You can opt out of email notifications by <a style=3D"text-de=
+coration:underline;" href=3D"https://www.rentcafe.com/t/el?ref=3DNjU0N=
+zk5MzYxNQ%3d%3d-RSQiPBzV8Hg%3d,aHR0cHM6Ly93d3cucmVudGNhZmUuY29tL29ubGl=
+uZWxlYXNpbmcvYXBhcnRtZW50c2ZvcnJlbnQvZW1haWxub3RpZmljYXRpb25zLmFzcHg%2=
+fZWg9YzNSaGNuZHZjbXR6TlVCbmJXRnBiQzVqYjIwJTNkLUJ6WEY2d01JazJZJTNkJnJUe=
+XBlPTEwMyZvYmp0eXBlPTMmb2JqcG9pbnRlcj0xMzI3MzQw-voqXY4WSTrM%3d" >click=
+ing here</a>.</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+	</tr>
+</table><img width=3D"1" height=3D"1" src=3D"https://www.rentcafe.com/=
+t/teo?ref=3DNjU0Nzk5MzYxNQ%3d%3d-RSQiPBzV8Hg%3d"/>=
+

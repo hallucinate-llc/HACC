@@ -1,1 +1,4 @@
-{}
+{
+  "tests/test_google_voice_integration.py::test_run_consumer_google_voice_takeout_wrapper_no_display_falls_back_cleanly": true,
+  "tests/test_google_voice_integration.py": true
+}

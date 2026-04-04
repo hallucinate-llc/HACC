@@ -1,0 +1,176 @@
+Delivered-To: starworks5@gmail.com
+Received: by 2002:a05:7208:3156:b0:f2:1355:7203 with SMTP id c22csp976654rba;
+        Tue, 18 Nov 2025 17:44:04 -0800 (PST)
+X-Received: by 2002:a05:6808:2f1b:b0:450:d9ce:7d71 with SMTP id 5614622812f47-450d9ce7fa0mr2902062b6e.46.1763516644241;
+        Tue, 18 Nov 2025 17:44:04 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1763516644; cv=none;
+        d=google.com; s=arc-20240605;
+        b=BekyQicT6rbV5o4YfWaSXJsPbpCAhFLQNShwnt5W1A9QflsPh/0HIBPKDWyYBG4bMu
+         zkikwbsC3VxBzIcBBvek5CxJSOG56VGWo3oylyZiClfsTEM9FgaxKw/KMtFEaGiZAjgI
+         +fIwAHofoRxPnVanOEtrOfE92C+13fUxO0EFU0+nC4HT5Ov7h2cBMOF9qr+wa3w2Mify
+         MFiVD3rk/zX7kCcIqIDn82VheIsD++ynBqfRRrgHE5f1QTeNFJ8yoaBYf7qkUCmAFric
+         yExPUo7b2HR1fVCRSYU7dKC25x9Dmzw3qO/7v+WVgI3LhbTocBwatZta9mawmhfiuCoE
+         KVCg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:from:subject:date:message-id:references:mime-version
+         :dkim-signature;
+        bh=Pa4ADsPc+EtUp2Xlw4V2QHYTHbYpaVhoNFvXiimAZvI=;
+        fh=gPPrbYv6bjiCeSNOMtV7+ATcg7xOVeWRNeqU1P80kc4=;
+        b=bz78gkanqyfto6Nc03jjLCgeXuYrtmViei+9nga2RglNYh6D2qrEITUlw4YlQMftij
+         RoaTnMwwZL7NjQKYOM+ChH0T9gQXjiWepmfmHwx7gaeMPvxi7g52PJXSVpHpjv2FAI52
+         en/OAG2b2OgdViTG5eRvYKIYcb55N4WE/psfE5ysfJYxLU2C/OtsFcZELSJ1T7kPNcmF
+         BwY2QqwdQs2VIBUeiW9E6Wffdg9QUKIIFL0f96sa45Fac9y1AbKp0VJeQbmsz2NQfCXt
+         6mWNCRlV6HXbZf570CNfFLlOn+816Cy5tZ32mgp7yK97UO6Av1HN7h9WVPRddmsglZh1
+         jRNA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=y9wywAe9;
+       spf=pass (google.com: domain of 34yadasiuaogltrlmrkkspp.lpknnslqtll.dq1cmmxfujdhd.fysmo.qyyqvo.myw@grandcentral.bounces.google.com designates 209.85.220.73 as permitted sender) smtp.mailfrom=34yAdaSIUAOgltrlmrkkspp.lpknnslqtll.dq1CMmxfUJdhd.fYSMO.QYYQVO.MYW@grandcentral.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <34yAdaSIUAOgltrlmrkkspp.lpknnslqtll.dq1CMmxfUJdhd.fYSMO.QYYQVO.MYW@grandcentral.bounces.google.com>
+Received: from mail-sor-f73.google.com (mail-sor-f73.google.com. [209.85.220.73])
+        by mx.google.com with SMTPS id 5614622812f47-450eebaaf64sor235882b6e.7.2025.11.18.17.44.04
+        for <starworks5@gmail.com>
+        (Google Transport Security);
+        Tue, 18 Nov 2025 17:44:04 -0800 (PST)
+Received-SPF: pass (google.com: domain of 34yadasiuaogltrlmrkkspp.lpknnslqtll.dq1cmmxfujdhd.fysmo.qyyqvo.myw@grandcentral.bounces.google.com designates 209.85.220.73 as permitted sender) client-ip=209.85.220.73;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b=y9wywAe9;
+       spf=pass (google.com: domain of 34yadasiuaogltrlmrkkspp.lpknnslqtll.dq1cmmxfujdhd.fysmo.qyyqvo.myw@grandcentral.bounces.google.com designates 209.85.220.73 as permitted sender) smtp.mailfrom=34yAdaSIUAOgltrlmrkkspp.lpknnslqtll.dq1CMmxfUJdhd.fYSMO.QYYQVO.MYW@grandcentral.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20230601; t=1763516644; x=1764121444; dara=google.com;
+        h=to:from:subject:date:message-id:references:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=Pa4ADsPc+EtUp2Xlw4V2QHYTHbYpaVhoNFvXiimAZvI=;
+        b=y9wywAe9VuVIrbTbmG76wFqznAxFeDBSnA6lGb2KFj1fKl+qXWZCooekbhLcN4UfbG
+         ck1mquYXlqRbg8A0b/ItpSU2+L4dPZZfa05XoF58K+JZnrSFX2LSlc2jaeyl57uKMeu2
+         fCg2fkXxYFiLCQi59laf76HEIH/05FCRYNjXnzTwGgv57Dsy8YEWCzKUGFjn3JYJQSxs
+         3GwYtkdup38il93d3HlpE6gqR7uUCbmh/BaAmHpJR8mSgHz5i77sdZjF2MHuRe1SsMN1
+         WAekL3HNwTsI4mEzLo4dpFhnmU8RfdNH68svBP/DsTNHbhZquUHxyoI76CbAL2fQL3RU
+         5Ndw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1763516644; x=1764121444;
+        h=to:from:subject:date:message-id:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=Pa4ADsPc+EtUp2Xlw4V2QHYTHbYpaVhoNFvXiimAZvI=;
+        b=Bwyj0QSSMKYu3uak+JPvR8fPTKY30uycty+duKSgZQZrVbaAYxUwTSyaECRmlgftTO
+         Bwt5lxATsxsL99ZbC6ww57XEb2Ezde76lM3MQV4jkGyWwX4jfHlWewH6SsDVAIz12hMs
+         R1S3tDsY1JKSShtlt2py0WJKpyT7xxPlc7UGl8qrRzja3h5LlH8oLpwKUm32JQctp/dZ
+         DAuD9T+SIC+0S+2U+wrsH/LrwNy7SAcWABeCRJ1H9MMcdyULmb27E3kWIoj30Vydwmy+
+         PRI8Vp22pzJ6ipyaawwkDiD5YT1YK05io8Mvj0vW6WiatYsNG3qMmdbqK3012VQSQ63b
+         dC+w==
+X-Gm-Message-State: AOJu0Yx8tWq4XaAVyUWSl08LXA1slGpP8v+vm1UHtu9VI19Ii38CsWS5
+	asKZNXYlkWr72GdwqjBoaHm5ZcZpCmWcgnXfn4j6e7T2dgvN8CeRnGjs5U3eG0qRBDbVusu+cNX
+	vtBB6pEt0iMfOllW7f3pk/+YgohIf8wcew28A246WStquslTQAw==
+X-Google-Smtp-Source: AGHT+IE55EQ4olhx4fgV6OuOe50fRltljV/PWSiQXoICsp6nc4k6IMwlUX0ckOSs3quppVuQsVhTmFDv8zItnqGn2K5U39iooKSV
+MIME-Version: 1.0
+X-Received: by 2002:a05:6808:191d:b0:44d:b847:ee7e with SMTP id
+ 5614622812f47-450f0f5fbb9mr408701b6e.1.1763516643885; Tue, 18 Nov 2025
+ 17:44:03 -0800 (PST)
+References: <+19712700855.290feee84b57becf17ada9458479e19e1a01f98b@txt.voice.google.com>
+Message-ID: <+19712700855.12e369ca7663d7ad5787469d09d68887d82d7637@txt.voice.google.com>
+Date: Wed, 19 Nov 2025 01:44:03 +0000
+Subject: New text message from solomon (503) 381-6911
+From: "solomon (SMS)" <19712700855.15033816911.t6HSc2DvkZ@txt.voice.google.com>
+To: starworks5@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000001d42420643e8b718"
+
+--0000000000001d42420643e8b718
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+
+
+<https://voice.google.com>
+APS reference # 00439866
+YOUR ACCOUNT <https://voice.google.com> HELP CENTER
+<https://support.google.com/voice#topic=1707989> HELP FORUM
+<https://productforums.google.com/forum/#!forum/voice>
+This email was sent to you because you indicated that you'd like to receive
+email notifications for text messages. If you don't want to receive such
+emails in the future, please update your email notification settings
+<https://voice.google.com/settings#messaging>.
+Google LLC
+1600 Amphitheatre Pkwy
+Mountain View CA 94043 USA
+
+--0000000000001d42420643e8b718
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><style type=3D"text/css">
+    /* Disable the default font adjustment on iOS devices */
+    div, p, a, li, td { -webkit-text-size-adjust:none; }
+    /* Adjust the table width on the small screen */
+    @media only screen
+      and (max-width: 599px) {
+      table[class=3D"content-table"] {
+        max-width: 360px !important;
+      }
+    }
+    /* Enlarge the font size on mobile device */
+    @media only screen
+      and (min-device-width: 320px)
+      and (max-device-width: 736px) {
+      td[class=3D"email-content-header"] {
+        font-size: 20px !important;
+        line-height: 28px !important;
+      }
+      td[class=3D"email-content"] {
+        font-size: 16px !important;
+        line-height: 24px !important;
+      }
+    }
+    /* Avoid the blue links on iOS devices for address, datetime and phone =
+number */
+    .links-date a {
+      color: #000000;
+      text-decoration: none;
+    }
+    .links-footer a {
+      color: #757575;
+      line-height: 12px;
+      text-decoration: none;
+    }
+    .links-phone_number a {
+      color: inherit;
+      text-decoration: none;
+    }
+    /* Stop Gmail from thinking this is a quote from an email it has seen b=
+efore */
+    .im {
+      color: #000 !important;
+    }
+    </style></head><body><table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" style=3D"font-family: Roboto,'Helvetica Neue',Helvetica,Arial,sans-s=
+erif;"><tr><td><table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" widt=
+h=3D"600" class=3D"content-table" style=3D"border-bottom: 1px solid #eeeee;=
+"><tr><td align=3D"left" style=3D"padding: 16px 32px;"><a href=3D"https://v=
+oice.google.com" target=3D"_blank" rel=3D"noopener"><img alt=3D"Google Voic=
+e" src=3D"https://www.gstatic.com/voice-fe/icons/voice_lockup_2020q4_48px.p=
+ng" height=3D"32"/></a></td></tr></table><table cellspacing=3D"0" cellpaddi=
+ng=3D"0" border=3D"0" width=3D"600" class=3D"content-table" style=3D"paddin=
+g: 25px 32px; border-bottom: 1px solid #EEEEEE;"><tr><td style=3D"font-size=
+: 14px; line-height: 20px; padding: 25px 0;">APS reference # 00439866</td><=
+/tr><tr><td style=3D"font-size: 14px; font-style: italic; line-height: 20px=
+; color: #757575"></td></tr></table><table cellspacing=3D"0" cellpadding=3D=
+"0" border=3D"0" width=3D"600" class=3D"content-table" style=3D"padding: 25=
+px 32px; font-size: 9px; color: #757575;"><tr><td><table cellspacing=3D"0" =
+cellpadding=3D"0" border=3D"0" width=3D"240" style=3D"font-size: 9px; line-=
+height: 14px;" class=3D"footer-link"><tr><td style=3D"padding-right: 5px;">=
+<a href=3D"https://voice.google.com" target=3D"_blank">YOUR ACCOUNT</a></td=
+><td style=3D"padding-right: 5px;"><a href=3D"https://support.google.com/vo=
+ice#topic=3D1707989" target=3D"_blank">HELP CENTER</a></td><td><a href=3D"h=
+ttps://productforums.google.com/forum/#!forum/voice" target=3D"_blank">HELP=
+ FORUM</a></td></tr></table></td></tr><tr><td style=3D"padding: 15px 0">Thi=
+s email was sent to you because you indicated that you'd like to receive em=
+ail notifications for text messages. If you don't want to receive such emai=
+ls in the future, please update your <a href=3D"https://voice.google.com/se=
+ttings#messaging">email notification settings</a>.</td></tr><tr><td><img al=
+t=3D"Google" src=3D"https://www.gstatic.com/images/branding/googlelogo/1x/g=
+ooglelogo_dark_color_74x24dp.png" height=3D"14" style=3D"opacity: .5;"/></t=
+d></tr><tr><td style=3D"padding: 15px 0; line-height: 12px;">Google LLC<br>=
+<span class=3D"links-footer">1600 Amphitheatre Pkwy<br>Mountain View CA 940=
+43 USA</span></td></tr></table></td></tr></table></body></html>
+--0000000000001d42420643e8b718--
