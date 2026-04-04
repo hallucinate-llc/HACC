@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-04-04T19:25:40.094684+00:00",
+  "summary": {
+    "caseCount": 4,
+    "fullyNormalizedCases": 4,
+    "partiallyNormalizedCases": 0
+  },
+  "findings": [
+    {
+      "caseId": "live_in_aide_case_001",
+      "branch": "constructive_denial",
+      "severity": "info",
+      "title": "All authority metadata normalized",
+      "detail": "Every authority entry in this case is marked as sourceNormalized."
+    },
+    {
+      "caseId": "live_in_aide_case_effective_accommodation_001",
+      "branch": "effective_accommodation",
+      "severity": "info",
+      "title": "All authority metadata normalized",
+      "detail": "Every authority entry in this case is marked as sourceNormalized."
+    },
+    {
+      "caseId": "live_in_aide_case_no_violation_001",
+      "branch": "evidentiary_gap",
+      "severity": "info",
+      "title": "All authority metadata normalized",
+      "detail": "Every authority entry in this case is marked as sourceNormalized."
+    },
+    {
+      "caseId": "live_in_aide_case_undue_burden_001",
+      "branch": "undue_burden_constructive_denial",
+      "severity": "info",
+      "title": "All authority metadata normalized",
+      "detail": "Every authority entry in this case is marked as sourceNormalized."
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "generatedAt": "2026-04-04T19:25:40.096385+00:00",
+  "recommendedFirstStop": "outputs/case_audit_matrix.json",
+  "whyOpenThis": "Start with the case-audit matrix because it is the strongest joined repo-level view of confidence, trust, fit findings, warnings, and package posture.",
+  "entries": [
+    {
+      "kind": "authority_summary_matrix",
+      "jsonPath": "outputs/authority_summary_matrix.json",
+      "markdownPath": "outputs/authority_summary_matrix.md",
+      "description": "Cross-case authority support counts by status and reasoning bucket.",
+      "priorityHint": "primary",
+      "whyOpenThis": "Open this when you want cross-case authority support counts before reading findings prose."
+    },
+    {
+      "kind": "authority_findings",
+      "jsonPath": "outputs/authority_findings.json",
+      "markdownPath": "outputs/authority_findings.md",
+      "description": "Repo-level findings report for authority trust and support quality.",
+      "priorityHint": "primary",
+      "whyOpenThis": "Open this when you want case-level authority-support warnings rather than just support counts."
+    },
+    {
+      "kind": "source_findings",
+      "jsonPath": "outputs/source_findings.json",
+      "markdownPath": "outputs/source_findings.md",
+      "description": "Repo-level findings report for normalized versus unnormalized source metadata.",
+      "priorityHint": "secondary",
+      "whyOpenThis": "Open this when you want source-hardening findings rather than the raw source metadata rollup."
+    },
+    {
+      "kind": "source_metadata_matrix",
+      "jsonPath": "outputs/source_metadata_matrix.json",
+      "markdownPath": "outputs/source_metadata_matrix.md",
+      "description": "Cross-case rollup of sourceVerified and sourceNormalized authority metadata.",
+      "priorityHint": "secondary",
+      "whyOpenThis": "Open this when you want the raw cross-case source-hardening counts and unnormalized IDs."
+    },
+    {
+      "kind": "fit_matrix",
+      "jsonPath": "outputs/fit_matrix.json",
+      "markdownPath": "outputs/fit_matrix.md",
+      "description": "Cross-case fit-quality matrix showing direct, analogical, and record-support counts.",
+      "priorityHint": "secondary",
+      "whyOpenThis": "Open this when you want the fuller cross-case fit breakdown instead of the compact fit summary."
+    },
+    {
+      "kind": "fit_summary",
+      "jsonPath": "outputs/fit_summary.json",
+      "markdownPath": "outputs/fit_summary.md",
+      "description": "Compact fit-quality summary for dashboard-style audit views.",
+      "priorityHint": "secondary",
+      "whyOpenThis": "Open this when you want a compact fit rollup from the broader audit surface."
+    },
+    {
+      "kind": "fit_findings",
+      "jsonPath": "outputs/fit_findings.json",
+      "markdownPath": "outputs/fit_findings.md",
+      "description": "Repo-level findings report for direct, analogical, and record-support fit posture.",
+      "priorityHint": "primary",
+      "whyOpenThis": "Open this when you want case-level fit findings from the broader audit surface."
+    },
+    {
+      "kind": "fit_findings_summary",
+      "jsonPath": "outputs/fit_findings_summary.json",
+      "markdownPath": "outputs/fit_findings_summary.md",
+      "description": "Compact case-first summary of fit findings severity and posture.",
+      "priorityHint": "secondary",
+      "whyOpenThis": "Open this when you want a lighter fit findings view from the audit surface."
+    },
+    {
+      "kind": "trust_matrix",
+      "jsonPath": "outputs/trust_matrix.json",
+      "markdownPath": "outputs/trust_matrix.md",
+      "description": "Cross-case trust overview with primary artifact and warning counts.",
+      "priorityHint": "primary",
+      "whyOpenThis": "Open this when you want the clearest cross-case trust overview before drilling into warning details."
+    },
+    {
+      "kind": "warning_summary",
+      "jsonPath": "outputs/warning_summary.json",
+      "markdownPath": "outputs/warning_summary.md",
+      "description": "Warned-case summary across all lower-trust packages.",
+      "priorityHint": "secondary",
+      "whyOpenThis": "Open this when you want the compact warned-case rollup instead of the more detailed warning matrices."
+    },
+    {
+      "kind": "warning_label_matrix",
+      "jsonPath": "outputs/warning_label_matrix.json",
+      "markdownPath": "outputs/warning_label_matrix.md",
+      "description": "Label-sliced warning summaries for mixed-support and paraphrase-heavy cases.",
+      "priorityHint": "supporting",
+      "whyOpenThis": "Open this when you want warning posture sliced directly by label."
+    },
+    {
+      "kind": "warning_entry_matrix",
+      "jsonPath": "outputs/warning_entry_matrix.json",
+      "markdownPath": "outputs/warning_entry_matrix.md",
+      "description": "Per-case warned artifact kinds and warning-label counts across package entries.",
+      "priorityHint": "supporting",
+      "whyOpenThis": "Open this when you want to see which artifact kinds are warned inside each package."
+    },
+    {
+      "kind": "warning_entry_summary",
+      "jsonPath": "outputs/warning_entry_summary.json",
+      "markdownPath": "outputs/warning_entry_summary.md",
+      "description": "Compact ranked warning-entry summary without per-case warned-kind lists.",
+      "priorityHint": "supporting",
+      "whyOpenThis": "Open this when you want the lightest case-first warning summary from the audit surface."
+    },
+    {
+      "kind": "warning_kind_matrix",
+      "jsonPath": "outputs/warning_kind_matrix.json",
+      "markdownPath": "outputs/warning_kind_matrix.md",
+      "description": "Artifact-kind-first warning matrix showing which warned cases include each kind.",
+      "priorityHint": "supporting",
+      "whyOpenThis": "Open this when you want the warning surface grouped by artifact kind instead of by case."
+    },
+    {
+      "kind": "warning_kind_summary",
+      "jsonPath": "outputs/warning_kind_summary.json",
+      "markdownPath": "outputs/warning_kind_summary.md",
+      "description": "Compact ranked warning-kind summary without per-case detail rows.",
+      "priorityHint": "supporting",
+      "whyOpenThis": "Open this when you want the lightest kind-first warning summary."
+    },
+    {
+      "kind": "summary_index",
+      "jsonPath": "outputs/summary_index.json",
+      "markdownPath": "outputs/summary_index.md",
+      "description": "Compact discovery file for lightweight audit summary artifacts.",
+      "priorityHint": "secondary",
+      "whyOpenThis": "Open this when you want the lightweight warning-summary discovery path from within the broader audit surface."
+    },
+    {
+      "kind": "case_audit_matrix",
+      "jsonPath": "outputs/case_audit_matrix.json",
+      "markdownPath": "outputs/case_audit_matrix.md",
+      "description": "Joined case-level audit matrix with confidence, trust, primary artifact, and warning posture.",
+      "priorityHint": "recommended",
+      "whyOpenThis": "Open this first when you want the strongest joined repo-level audit view before following narrower reports."
+    }
+  ]
+}

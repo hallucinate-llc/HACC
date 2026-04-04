@@ -1,0 +1,28 @@
+{
+  "caseId": "live_in_aide_case_no_violation_001",
+  "branch": "evidentiary_gap",
+  "placeholders": {
+    "requesting_party": "[Requesting Party]",
+    "recipient": "[Housing Authority or Decision-Maker]",
+    "tenant_name": "[Tenant Name]",
+    "aide_name": "[Aide Name]",
+    "requested_remedy": "[Approve a separate bedroom for the live-in aide]",
+    "response_deadline": "[10 business days]"
+  },
+  "supportedModes": [
+    "hearing_script",
+    "complaint_outline",
+    "demand_letter",
+    "negotiation_summary"
+  ],
+  "confidence": 0.57,
+  "authorityTrust": {
+    "authorityCount": 5,
+    "verifiedQuoteCount": 2,
+    "paraphraseCount": 3,
+    "missingCount": 0,
+    "severity": "warning",
+    "label": "paraphrase_heavy",
+    "advisory": "This case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust."
+  }
+}

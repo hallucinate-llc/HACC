@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/fit_findings_summary.schema.json",
+  "title": "FitFindingsSummary",
+  "type": "object",
+  "required": ["generatedAt", "summary", "singleCaseGuide", "cases"],
+  "properties": {
+    "generatedAt": { "type": "string" },
+    "summary": {
+      "type": "object",
+      "required": ["caseCount", "directOnlyCases", "analogicalCases", "recordSupportCases", "severityCounts"],
+      "properties": {
+        "caseCount": { "type": "integer", "minimum": 0 },
+        "directOnlyCases": { "type": "integer", "minimum": 0 },
+        "analogicalCases": { "type": "integer", "minimum": 0 },
+        "recordSupportCases": { "type": "integer", "minimum": 0 },
+        "severityCounts": {
+          "type": "object",
+          "propertyNames": { "enum": ["info", "warning"] },
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        }
+      },
+      "additionalProperties": false
+    },
+    "singleCaseGuide": {
+      "type": ["object", "null"],
+      "required": ["caseId", "recommendedFirstStop", "whyOpenThis"],
+      "properties": {
+        "caseId": { "type": "string" },
+        "recommendedFirstStop": { "type": "string" },
+        "whyOpenThis": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["caseId", "branch", "severity", "title"],
+        "properties": {
+          "caseId": { "type": "string" },
+          "branch": { "type": "string" },
+          "severity": { "type": "string", "enum": ["info", "warning"] },
+          "title": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

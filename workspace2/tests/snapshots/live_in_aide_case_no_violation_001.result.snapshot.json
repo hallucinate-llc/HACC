@@ -1,0 +1,495 @@
+{
+  "caseId": "live_in_aide_case_no_violation_001",
+  "branch": "evidentiary_gap",
+  "policy": {
+    "privacy_mode": "explicit_only"
+  },
+  "facts": {
+    "asserted": {
+      "disabled_tenant": true,
+      "needs_live_in_aide": true,
+      "medical_verification": true,
+      "requested_separate_bedroom": true,
+      "approved_aide_in_principle": true,
+      "denied_separate_bedroom": true,
+      "aide_sleeps_in_living_room": false,
+      "night_access_needed": false,
+      "works_remotely": false,
+      "privacy_loss": false,
+      "guest_management_problem": false,
+      "dog_isolation_problem": false,
+      "undue_burden": false,
+      "fundamental_alteration": false
+    },
+    "accepted": {
+      "disabled_tenant": true,
+      "needs_live_in_aide": true,
+      "medical_verification": true,
+      "requested_separate_bedroom": true,
+      "approved_aide_in_principle": true,
+      "denied_separate_bedroom": true,
+      "aide_sleeps_in_living_room": false,
+      "night_access_needed": false,
+      "works_remotely": false,
+      "privacy_loss": false,
+      "guest_management_problem": false,
+      "dog_isolation_problem": false,
+      "undue_burden": false,
+      "fundamental_alteration": false
+    },
+    "resolved": {
+      "disabled_tenant": true,
+      "needs_live_in_aide": true,
+      "medical_verification": true,
+      "requested_separate_bedroom": true,
+      "approved_aide_in_principle": true,
+      "denied_separate_bedroom": true,
+      "aide_sleeps_in_living_room": false,
+      "night_access_needed": false,
+      "works_remotely": false,
+      "privacy_loss": false,
+      "guest_management_problem": false,
+      "dog_isolation_problem": false,
+      "undue_burden": false,
+      "fundamental_alteration": false
+    },
+    "conflicts": []
+  },
+  "outcome": {
+    "sleepInterruption": false,
+    "workInterference": false,
+    "caregivingImpairment": false,
+    "privacyLoss": false,
+    "necessary": false,
+    "reasonable": false,
+    "dutyToGrant": false,
+    "notEffective": false,
+    "constructiveDenial": false,
+    "violation": false
+  },
+  "proofTrace": [],
+  "narrative": "Case live_in_aide_case_no_violation_001 was evaluated using privacy mode `explicit_only`. The current rule set does not conclude a violation on the accepted findings. Missing or failed elements: functional_harm.",
+  "explanations": {},
+  "missingEvidence": [
+    "functional_harm"
+  ],
+  "defeatersConsidered": {
+    "undueBurden": false,
+    "fundamentalAlteration": false
+  },
+  "authoritySupport": {
+    "necessary": [
+      {
+        "id": "mcgary",
+        "label": "McGary v. City of Portland",
+        "weight": "binding"
+      },
+      {
+        "id": "hud_joint_statement",
+        "label": "HUD/DOJ Joint Statement on Reasonable Accommodations",
+        "weight": "guidance"
+      }
+    ],
+    "reasonable": [
+      {
+        "id": "giebeler",
+        "label": "Giebeler v. M&B Associates",
+        "weight": "binding"
+      },
+      {
+        "id": "california_mobile_home",
+        "label": "United States v. California Mobile Home Park Management Co.",
+        "weight": "binding"
+      },
+      {
+        "id": "hud_joint_statement",
+        "label": "HUD/DOJ Joint Statement on Reasonable Accommodations",
+        "weight": "guidance"
+      },
+      {
+        "id": "cfr_982_316",
+        "label": "24 CFR 982.316",
+        "weight": "binding"
+      }
+    ],
+    "dutyToGrant": [
+      {
+        "id": "cfr_982_316",
+        "label": "24 CFR 982.316",
+        "weight": "binding"
+      }
+    ],
+    "constructiveDenial": [],
+    "violation": []
+  },
+  "evidenceSupport": {
+    "medical_verification": [
+      {
+        "id": "evidence:medical_verification",
+        "type": "MedicalVerification",
+        "status": "accepted",
+        "confidence": 0.9
+      }
+    ],
+    "needs_live_in_aide": [
+      {
+        "id": "evidence:medical_verification",
+        "type": "MedicalVerification",
+        "status": "accepted",
+        "confidence": 0.9
+      }
+    ],
+    "aide_sleeps_in_living_room": [
+      {
+        "id": "evidence:alternative_sleeping_space",
+        "type": "HousingLayoutRecord",
+        "status": "accepted",
+        "confidence": 0.85
+      }
+    ]
+  },
+  "eventSupport": {
+    "requested_separate_bedroom": [
+      {
+        "id": "evt:t1",
+        "event": "request_accommodation",
+        "time": "t1"
+      }
+    ],
+    "medical_verification": [
+      {
+        "id": "evt:t2",
+        "event": "submit_medical_verification",
+        "time": "t2"
+      }
+    ],
+    "approved_aide_in_principle": [
+      {
+        "id": "evt:t3",
+        "event": "approve_aide_in_principle",
+        "time": "t3"
+      }
+    ],
+    "denied_separate_bedroom": [
+      {
+        "id": "evt:t4",
+        "event": "deny_separate_bedroom",
+        "time": "t4"
+      }
+    ]
+  },
+  "findingEvidence": {
+    "sleepInterruption": [],
+    "workInterference": [],
+    "caregivingImpairment": [],
+    "privacyLoss": [],
+    "necessary": [],
+    "reasonable": [],
+    "dutyToGrant": [],
+    "notEffective": [],
+    "constructiveDenial": [],
+    "violation": []
+  },
+  "findingEvents": {
+    "sleepInterruption": [],
+    "workInterference": [],
+    "caregivingImpairment": [],
+    "privacyLoss": [],
+    "necessary": [],
+    "reasonable": [],
+    "dutyToGrant": [],
+    "notEffective": [],
+    "constructiveDenial": [],
+    "violation": []
+  },
+  "findingAuthorities": {
+    "sleepInterruption": [],
+    "workInterference": [],
+    "caregivingImpairment": [],
+    "privacyLoss": [],
+    "necessary": [],
+    "reasonable": [],
+    "dutyToGrant": [],
+    "notEffective": [],
+    "constructiveDenial": [],
+    "violation": []
+  },
+  "provenance": {
+    "sleepInterruption": {
+      "active": false,
+      "facts": [
+        {
+          "fact": "night_access_needed",
+          "value": false
+        },
+        {
+          "fact": "aide_sleeps_in_living_room",
+          "value": false
+        }
+      ],
+      "evidenceIds": [],
+      "eventIds": [],
+      "authorityIds": [],
+      "proofSteps": []
+    },
+    "workInterference": {
+      "active": false,
+      "facts": [
+        {
+          "fact": "night_access_needed",
+          "value": false
+        },
+        {
+          "fact": "aide_sleeps_in_living_room",
+          "value": false
+        },
+        {
+          "fact": "works_remotely",
+          "value": false
+        }
+      ],
+      "evidenceIds": [],
+      "eventIds": [],
+      "authorityIds": [],
+      "proofSteps": []
+    },
+    "caregivingImpairment": {
+      "active": false,
+      "facts": [
+        {
+          "fact": "night_access_needed",
+          "value": false
+        },
+        {
+          "fact": "aide_sleeps_in_living_room",
+          "value": false
+        }
+      ],
+      "evidenceIds": [],
+      "eventIds": [],
+      "authorityIds": [],
+      "proofSteps": []
+    },
+    "privacyLoss": {
+      "active": false,
+      "facts": [
+        {
+          "fact": "privacy_loss",
+          "value": false
+        },
+        {
+          "fact": "aide_sleeps_in_living_room",
+          "value": false
+        }
+      ],
+      "evidenceIds": [],
+      "eventIds": [],
+      "authorityIds": [],
+      "proofSteps": []
+    },
+    "necessary": {
+      "active": false,
+      "facts": [
+        {
+          "fact": "night_access_needed",
+          "value": false
+        },
+        {
+          "fact": "aide_sleeps_in_living_room",
+          "value": false
+        },
+        {
+          "fact": "works_remotely",
+          "value": false
+        },
+        {
+          "fact": "privacy_loss",
+          "value": false
+        }
+      ],
+      "evidenceIds": [],
+      "eventIds": [],
+      "authorityIds": [],
+      "proofSteps": []
+    },
+    "reasonable": {
+      "active": false,
+      "facts": [
+        {
+          "fact": "medical_verification",
+          "value": true
+        },
+        {
+          "fact": "undue_burden",
+          "value": false
+        },
+        {
+          "fact": "fundamental_alteration",
+          "value": false
+        }
+      ],
+      "evidenceIds": [],
+      "eventIds": [],
+      "authorityIds": [],
+      "proofSteps": []
+    },
+    "dutyToGrant": {
+      "active": false,
+      "facts": [
+        {
+          "fact": "disabled_tenant",
+          "value": true
+        },
+        {
+          "fact": "needs_live_in_aide",
+          "value": true
+        },
+        {
+          "fact": "requested_separate_bedroom",
+          "value": true
+        },
+        {
+          "fact": "medical_verification",
+          "value": true
+        }
+      ],
+      "evidenceIds": [],
+      "eventIds": [],
+      "authorityIds": [],
+      "proofSteps": []
+    },
+    "notEffective": {
+      "active": false,
+      "facts": [
+        {
+          "fact": "denied_separate_bedroom",
+          "value": true
+        },
+        {
+          "fact": "night_access_needed",
+          "value": false
+        },
+        {
+          "fact": "aide_sleeps_in_living_room",
+          "value": false
+        }
+      ],
+      "evidenceIds": [],
+      "eventIds": [],
+      "authorityIds": [],
+      "proofSteps": []
+    },
+    "constructiveDenial": {
+      "active": false,
+      "facts": [
+        {
+          "fact": "approved_aide_in_principle",
+          "value": true
+        },
+        {
+          "fact": "denied_separate_bedroom",
+          "value": true
+        },
+        {
+          "fact": "night_access_needed",
+          "value": false
+        },
+        {
+          "fact": "aide_sleeps_in_living_room",
+          "value": false
+        }
+      ],
+      "evidenceIds": [],
+      "eventIds": [],
+      "authorityIds": [],
+      "proofSteps": []
+    },
+    "violation": {
+      "active": false,
+      "facts": [
+        {
+          "fact": "disabled_tenant",
+          "value": true
+        },
+        {
+          "fact": "needs_live_in_aide",
+          "value": true
+        },
+        {
+          "fact": "requested_separate_bedroom",
+          "value": true
+        },
+        {
+          "fact": "medical_verification",
+          "value": true
+        },
+        {
+          "fact": "approved_aide_in_principle",
+          "value": true
+        },
+        {
+          "fact": "denied_separate_bedroom",
+          "value": true
+        },
+        {
+          "fact": "night_access_needed",
+          "value": false
+        },
+        {
+          "fact": "aide_sleeps_in_living_room",
+          "value": false
+        }
+      ],
+      "evidenceIds": [],
+      "eventIds": [],
+      "authorityIds": [],
+      "proofSteps": []
+    }
+  },
+  "timeline": [
+    {
+      "id": "evt:t1",
+      "event": "request_accommodation",
+      "time": "t1",
+      "actors": [
+        "person:mother",
+        "person:aide",
+        "org:ha1"
+      ],
+      "details": {
+        "request": "separate_bedroom_for_aide"
+      }
+    },
+    {
+      "id": "evt:t2",
+      "event": "submit_medical_verification",
+      "time": "t2",
+      "actors": [
+        "person:mother"
+      ],
+      "details": {
+        "evidenceId": "evidence:medical_verification"
+      }
+    },
+    {
+      "id": "evt:t3",
+      "event": "approve_aide_in_principle",
+      "time": "t3",
+      "actors": [
+        "org:ha1",
+        "person:aide",
+        "person:mother"
+      ]
+    },
+    {
+      "id": "evt:t4",
+      "event": "deny_separate_bedroom",
+      "time": "t4",
+      "actors": [
+        "org:ha1",
+        "person:aide"
+      ]
+    }
+  ],
+  "confidence": 0.57
+}

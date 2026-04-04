@@ -1,0 +1,190 @@
+{
+  "caseId": "live_in_aide_case_001",
+  "branch": "constructive_denial",
+  "authorityTrust": {
+    "authorityCount": 5,
+    "verifiedQuoteCount": 5,
+    "paraphraseCount": 0,
+    "missingCount": 0,
+    "severity": "info",
+    "label": "fully_verified",
+    "advisory": "All currently attached authority support is marked as verified_quote."
+  },
+  "sourceSummary": {
+    "authorityCount": 5,
+    "sourceVerifiedCount": 5,
+    "sourceNormalizedCount": 5,
+    "fullySourceVerified": true,
+    "fullySourceNormalized": true,
+    "sourceStatus": "All authority entries are sourceVerified and sourceNormalized."
+  },
+  "fitSummary": {
+    "authorityCount": 5,
+    "directCount": 3,
+    "analogicalCount": 2,
+    "recordSupportCount": 0,
+    "fitStatus": "This package includes analogical authority mappings."
+  },
+  "fitFindingSummary": {
+    "hasFitFinding": true,
+    "fitFinding": "analogical_support",
+    "fitFindingNote": "This package includes analogical mappings, so the legal fit should be described as mixed direct and analogical support."
+  },
+  "recommendedFirstStop": "memorandum_of_law.pdf",
+  "whyOpenThis": "Start with the printable memorandum because it is the strongest branch-aligned narrative for constructive_denial review.",
+  "artifactBundle": "live_in_aide_reasoning_package",
+  "artifacts": [
+    "README.md",
+    "legal_reasoning.pl",
+    "event_calculus.pl",
+    "context.json",
+    "case_instance.jsonld",
+    "hearing_script.txt",
+    "hearing_script.md",
+    "complaint_outline.txt",
+    "complaint_outline.md",
+    "demand_letter.txt",
+    "demand_letter.md",
+    "negotiation_summary.txt",
+    "negotiation_summary.md",
+    "advocacy_bundle.json",
+    "memorandum.json",
+    "memorandum.md",
+    "memorandum_of_law.pdf",
+    "dependency_graph.json",
+    "dependency_citations.jsonld",
+    "authority_review.json",
+    "authority_review.md",
+    "authority_research_note.json",
+    "authority_research_note.md",
+    "authority_summary.json",
+    "decision_tree.json",
+    "summary.json",
+    "brief_index.json",
+    "tests.json",
+    "manifest.json"
+  ],
+  "artifactGuidance": [
+    {
+      "path": "README.md",
+      "whyOpenThis": "Open this when you want the package landing page with branch, trust, source, fit, and first-stop guidance in one place."
+    },
+    {
+      "path": "legal_reasoning.pl",
+      "whyOpenThis": "Open this when you want the rule-based legal formalization for constructive_denial review."
+    },
+    {
+      "path": "event_calculus.pl",
+      "whyOpenThis": "Open this when you want the event-calculus export for constructive_denial review."
+    },
+    {
+      "path": "context.json",
+      "whyOpenThis": "Open this when you want the JSON-LD context aliases and type mappings used by the package."
+    },
+    {
+      "path": "case_instance.jsonld",
+      "whyOpenThis": "Open this when you want the JSON-LD case instance representation instead of the prose-facing drafts."
+    },
+    {
+      "path": "hearing_script.txt",
+      "whyOpenThis": "Open this when you want the hearing-oriented draft rather than the fuller memorandum package."
+    },
+    {
+      "path": "hearing_script.md",
+      "whyOpenThis": "Open this when you want the hearing-oriented draft rather than the fuller memorandum package."
+    },
+    {
+      "path": "complaint_outline.txt",
+      "whyOpenThis": "Open this when you want the complaint framing and issue outline instead of prose briefing."
+    },
+    {
+      "path": "complaint_outline.md",
+      "whyOpenThis": "Open this when you want the complaint framing and issue outline instead of prose briefing."
+    },
+    {
+      "path": "demand_letter.txt",
+      "whyOpenThis": "Open this when you want the demand-letter posture and requested remedy framing."
+    },
+    {
+      "path": "demand_letter.md",
+      "whyOpenThis": "Open this when you want the demand-letter posture and requested remedy framing."
+    },
+    {
+      "path": "negotiation_summary.txt",
+      "whyOpenThis": "Open this when you want the shortest negotiation-oriented leverage summary."
+    },
+    {
+      "path": "negotiation_summary.md",
+      "whyOpenThis": "Open this when you want the shortest negotiation-oriented leverage summary."
+    },
+    {
+      "path": "advocacy_bundle.json",
+      "whyOpenThis": "Open this when you want the structured drafting and citation payload that drives the advocacy outputs."
+    },
+    {
+      "path": "memorandum.json",
+      "whyOpenThis": "Open this when you want the structured memorandum bundle for downstream tooling instead of the human-readable draft."
+    },
+    {
+      "path": "memorandum.md",
+      "whyOpenThis": "Open this when you want the editable human-readable memorandum draft."
+    },
+    {
+      "path": "memorandum_of_law.pdf",
+      "whyOpenThis": "Start with the printable memorandum because it is the strongest branch-aligned narrative for constructive_denial review."
+    },
+    {
+      "path": "dependency_graph.json",
+      "whyOpenThis": "Open this when you want the reasoning graph behind the active branch analysis."
+    },
+    {
+      "path": "dependency_citations.jsonld",
+      "whyOpenThis": "Open this when you want the JSON-LD grounding that links dependency targets to authority excerpts."
+    },
+    {
+      "path": "authority_review.json",
+      "whyOpenThis": "Open this when you want the authority audit view with support status, excerpts, and source metadata."
+    },
+    {
+      "path": "authority_review.md",
+      "whyOpenThis": "Open this when you want the authority audit view with support status, excerpts, and source metadata."
+    },
+    {
+      "path": "authority_research_note.json",
+      "whyOpenThis": "Open this when you want the source-verification and proposition-mapping research note."
+    },
+    {
+      "path": "authority_research_note.md",
+      "whyOpenThis": "Open this when you want the source-verification and proposition-mapping research note."
+    },
+    {
+      "path": "authority_summary.json",
+      "whyOpenThis": "Open this when you want the compact authority count view instead of the fuller authority audit."
+    },
+    {
+      "path": "decision_tree.json",
+      "whyOpenThis": "Open this when you want the compact decision-tree representation of the accommodation analysis."
+    },
+    {
+      "path": "summary.json",
+      "whyOpenThis": "Open this when you want the quickest branch-aware orientation for constructive_denial review."
+    },
+    {
+      "path": "brief_index.json",
+      "whyOpenThis": "Open this when you want the package-local discovery index with entry priorities, warnings, and rationale."
+    },
+    {
+      "path": "tests.json",
+      "whyOpenThis": "Open this when you want the regression fixture inventory that accompanies the package exports."
+    },
+    {
+      "path": "manifest.json",
+      "whyOpenThis": "Open this when you want the package contract and artifact inventory for validation and downstream tooling."
+    }
+  ],
+  "notes": [
+    "This package is generated from the canonical workspace2 fixture.",
+    "The manifest exists so exported bundles can be validated without relying on repo conventions.",
+    "Canonical branch for this package: constructive_denial."
+  ]
+}

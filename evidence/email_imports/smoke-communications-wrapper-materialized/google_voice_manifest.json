@@ -1,0 +1,74 @@
+{
+  "status": "success",
+  "source": "/tmp/pytest-of-barberb/pytest-74/test_run_communications_ingest0/source",
+  "source_kind": "takeout",
+  "output_dir": "/home/barberb/HACC/evidence/email_imports/smoke-communications-wrapper-materialized",
+  "event_count": 1,
+  "bundles": [
+    {
+      "source_type": "google_voice",
+      "event_id": "gv:8e847c9e49538dc9",
+      "event_type": "text_message",
+      "title": "Text conversation with (503) 555-0100",
+      "subject": "Text conversation with (503) 555-0100",
+      "timestamp": "2026-03-24T04:56:14+00:00",
+      "date": "2026-03-24T04:56:14+00:00",
+      "phone_numbers": [
+        "(503) 555-0100"
+      ],
+      "participants": [
+        "(503) 555-0100"
+      ],
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/smoke-communications-wrapper-materialized/0001-Text-conversation-with-503-555-0100-gv-8e847c9e49538dc9",
+      "event_json_path": "/home/barberb/HACC/evidence/email_imports/smoke-communications-wrapper-materialized/0001-Text-conversation-with-503-555-0100-gv-8e847c9e49538dc9/event.json",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/smoke-communications-wrapper-materialized/0001-Text-conversation-with-503-555-0100-gv-8e847c9e49538dc9/event.json",
+      "transcript_path": "/home/barberb/HACC/evidence/email_imports/smoke-communications-wrapper-materialized/0001-Text-conversation-with-503-555-0100-gv-8e847c9e49538dc9/transcript.txt",
+      "source_html_path": "/home/barberb/HACC/evidence/email_imports/smoke-communications-wrapper-materialized/0001-Text-conversation-with-503-555-0100-gv-8e847c9e49538dc9/source.html",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/smoke-communications-wrapper-materialized/0001-Text-conversation-with-503-555-0100-gv-8e847c9e49538dc9/attachments/metadata.json",
+        "/home/barberb/HACC/evidence/email_imports/smoke-communications-wrapper-materialized/0001-Text-conversation-with-503-555-0100-gv-8e847c9e49538dc9/attachments/voicemail.mp3"
+      ],
+      "attachments": [
+        {
+          "filename": "metadata.json",
+          "path": "/home/barberb/HACC/evidence/email_imports/smoke-communications-wrapper-materialized/0001-Text-conversation-with-503-555-0100-gv-8e847c9e49538dc9/attachments/metadata.json",
+          "size": 56,
+          "content_type": "application/json",
+          "sha256": "be43cb1b2c37082a68e93fcd1e5ac1d477b2034c67d1587e17c8bffe615a4f53",
+          "source_path": "/tmp/pytest-of-barberb/pytest-74/test_run_communications_ingest0/source/Takeout/Voice/Messages/thread-001/metadata.json"
+        },
+        {
+          "filename": "voicemail.mp3",
+          "path": "/home/barberb/HACC/evidence/email_imports/smoke-communications-wrapper-materialized/0001-Text-conversation-with-503-555-0100-gv-8e847c9e49538dc9/attachments/voicemail.mp3",
+          "size": 8,
+          "content_type": "audio/mpeg",
+          "sha256": "ff1841dbe7125016304d5364a77707adb67e0931c7923555badb71f797b18580",
+          "source_path": "/tmp/pytest-of-barberb/pytest-74/test_run_communications_ingest0/source/Takeout/Voice/Messages/thread-001/voicemail.mp3"
+        }
+      ],
+      "text_content": "Text conversation with (503) 555-0100 2026-03-24T04:56:14Z Tenant: Please send the inspection notice. Advocate: I will send it tonight.",
+      "deduped_gmail_message_ids": [],
+      "evidence_title": "Text conversation with (503) 555-0100",
+      "source_kind": "takeout"
+    }
+  ],
+  "mediator_evidence_records": [
+    {
+      "title": "Text conversation with (503) 555-0100",
+      "kind": "document",
+      "source": "google_voice_takeout",
+      "content": "Title: Text conversation with (503) 555-0100\nEvent type: text_message\nDate: 2026-03-24T04:56:14+00:00\nParticipants: (503) 555-0100\nTranscript path: /home/barberb/HACC/evidence/email_imports/smoke-communications-wrapper-materialized/0001-Text-conversation-with-503-555-0100-gv-8e847c9e49538dc9/transcript.txt",
+      "attachment_names": [
+        "metadata.json",
+        "voicemail.mp3"
+      ],
+      "metadata": {
+        "event_id": "gv:8e847c9e49538dc9",
+        "event_type": "text_message",
+        "event_json_path": "/home/barberb/HACC/evidence/email_imports/smoke-communications-wrapper-materialized/0001-Text-conversation-with-503-555-0100-gv-8e847c9e49538dc9/event.json",
+        "transcript_path": "/home/barberb/HACC/evidence/email_imports/smoke-communications-wrapper-materialized/0001-Text-conversation-with-503-555-0100-gv-8e847c9e49538dc9/transcript.txt",
+        "source_html_path": "/home/barberb/HACC/evidence/email_imports/smoke-communications-wrapper-materialized/0001-Text-conversation-with-503-555-0100-gv-8e847c9e49538dc9/source.html"
+      }
+    }
+  ]
+}

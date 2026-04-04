@@ -1,0 +1,49 @@
+{
+  "generatedAt": "2026-04-04T19:25:40.092264+00:00",
+  "cases": [
+    {
+      "fixture": "live_in_aide_case.json",
+      "caseId": "live_in_aide_case_001",
+      "branch": "constructive_denial",
+      "confidence": 0.93,
+      "activeOutcome": "violation",
+      "resultPath": "outputs/live_in_aide_case_001.result.json",
+      "packagePath": "outputs/live_in_aide_case_001_package",
+      "advocacyPath": "outputs/live_in_aide_case_advocacy",
+      "memorandumPath": "outputs/live_in_aide_case_memorandum"
+    },
+    {
+      "fixture": "live_in_aide_case_effective_accommodation.json",
+      "caseId": "live_in_aide_case_effective_accommodation_001",
+      "branch": "effective_accommodation",
+      "confidence": 0.58,
+      "activeOutcome": "no_violation",
+      "resultPath": "outputs/live_in_aide_case_effective_accommodation_001.result.json",
+      "packagePath": "outputs/live_in_aide_case_effective_accommodation_001_package",
+      "advocacyPath": "outputs/live_in_aide_case_effective_accommodation_advocacy",
+      "memorandumPath": "outputs/live_in_aide_case_effective_accommodation_memorandum"
+    },
+    {
+      "fixture": "live_in_aide_case_no_violation.json",
+      "caseId": "live_in_aide_case_no_violation_001",
+      "branch": "evidentiary_gap",
+      "confidence": 0.57,
+      "activeOutcome": "no_violation",
+      "resultPath": "outputs/live_in_aide_case_no_violation_001.result.json",
+      "packagePath": "outputs/live_in_aide_case_no_violation_001_package",
+      "advocacyPath": "outputs/live_in_aide_case_no_violation_advocacy",
+      "memorandumPath": "outputs/live_in_aide_case_no_violation_memorandum"
+    },
+    {
+      "fixture": "live_in_aide_case_undue_burden.json",
+      "caseId": "live_in_aide_case_undue_burden_001",
+      "branch": "undue_burden_constructive_denial",
+      "confidence": 0.8300000000000001,
+      "activeOutcome": "violation",
+      "resultPath": "outputs/live_in_aide_case_undue_burden_001.result.json",
+      "packagePath": "outputs/live_in_aide_case_undue_burden_001_package",
+      "advocacyPath": "outputs/live_in_aide_case_undue_burden_advocacy",
+      "memorandumPath": "outputs/live_in_aide_case_undue_burden_memorandum"
+    }
+  ]
+}

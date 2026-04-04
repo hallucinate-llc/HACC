@@ -1,0 +1,138 @@
+{
+  "generatedAt": "2026-04-04T19:25:40.095923+00:00",
+  "summary": {
+    "kindCount": 16,
+    "caseCount": 3
+  },
+  "singleCaseGuide": null,
+  "kinds": [
+    {
+      "kind": "advocacy_bundle",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      }
+    },
+    {
+      "kind": "authority_research_note",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      }
+    },
+    {
+      "kind": "authority_review",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      }
+    },
+    {
+      "kind": "authority_summary",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      }
+    },
+    {
+      "kind": "complaint_outline_markdown",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      }
+    },
+    {
+      "kind": "decision_tree",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      }
+    },
+    {
+      "kind": "demand_letter_markdown",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      }
+    },
+    {
+      "kind": "dependency_citations",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      }
+    },
+    {
+      "kind": "dependency_graph",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      }
+    },
+    {
+      "kind": "hearing_script_markdown",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      }
+    },
+    {
+      "kind": "memorandum_json",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      }
+    },
+    {
+      "kind": "memorandum_markdown",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      }
+    },
+    {
+      "kind": "memorandum_pdf",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      }
+    },
+    {
+      "kind": "negotiation_summary_markdown",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      }
+    },
+    {
+      "kind": "result",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      }
+    },
+    {
+      "kind": "summary",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      }
+    }
+  ]
+}

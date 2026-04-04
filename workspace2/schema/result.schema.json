@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/result.schema.json",
+  "title": "EvaluationResult",
+  "type": "object",
+  "required": [
+    "caseId",
+    "branch",
+    "policy",
+    "facts",
+    "outcome",
+    "proofTrace",
+    "narrative",
+    "explanations",
+    "missingEvidence",
+    "defeatersConsidered",
+    "authoritySupport",
+    "evidenceSupport",
+    "eventSupport",
+    "findingEvidence",
+    "findingEvents",
+    "findingAuthorities",
+    "provenance",
+    "timeline",
+    "confidence"
+  ],
+  "properties": {
+    "caseId": { "type": "string" },
+    "branch": { "type": "string" },
+    "policy": { "type": "object" },
+    "facts": { "type": "object" },
+    "outcome": { "type": "object" },
+    "proofTrace": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "narrative": { "type": "string" },
+    "explanations": { "type": "object" },
+    "missingEvidence": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "defeatersConsidered": { "type": "object" },
+    "authoritySupport": { "type": "object" },
+    "evidenceSupport": { "type": "object" },
+    "eventSupport": { "type": "object" },
+    "findingEvidence": { "type": "object" },
+    "findingEvents": { "type": "object" },
+    "findingAuthorities": { "type": "object" },
+    "provenance": { "type": "object" },
+    "timeline": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "confidence": { "type": "number" }
+  },
+  "additionalProperties": false
+}

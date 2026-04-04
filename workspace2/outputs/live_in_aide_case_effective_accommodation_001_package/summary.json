@@ -1,0 +1,20 @@
+{
+  "caseId": "live_in_aide_case_effective_accommodation_001",
+  "branch": "effective_accommodation",
+  "confidence": 0.58,
+  "activeOutcome": "no_violation",
+  "topFindings": {
+    "necessary": false,
+    "reasonable": false,
+    "dutyToGrant": false,
+    "constructiveDenial": false,
+    "violation": false
+  },
+  "defeatersConsidered": {
+    "undueBurden": false,
+    "fundamentalAlteration": false
+  },
+  "missingEvidence": [
+    "functional_harm"
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "caseId": "live_in_aide_case_001",
+  "branch": "constructive_denial",
+  "activeOutcome": "violation",
+  "primaryKind": "memorandum_pdf",
+  "recommendedFirstStop": "memorandum_of_law.pdf",
+  "whyOpenThis": "Start with the printable memorandum because it is the strongest branch-aligned narrative for constructive_denial review.",
+  "authorityTrust": {
+    "authorityCount": 5,
+    "verifiedQuoteCount": 5,
+    "paraphraseCount": 0,
+    "missingCount": 0,
+    "severity": "info",
+    "label": "fully_verified",
+    "advisory": "All currently attached authority support is marked as verified_quote."
+  },
+  "sourceSummary": {
+    "authorityCount": 5,
+    "sourceVerifiedCount": 5,
+    "sourceNormalizedCount": 5,
+    "fullySourceVerified": true,
+    "fullySourceNormalized": true,
+    "sourceStatus": "All authority entries are sourceVerified and sourceNormalized."
+  },
+  "fitSummary": {
+    "authorityCount": 5,
+    "directCount": 3,
+    "analogicalCount": 2,
+    "recordSupportCount": 0,
+    "fitStatus": "This package includes analogical authority mappings."
+  },
+  "fitFindingSummary": {
+    "hasFitFinding": true,
+    "fitFinding": "analogical_support",
+    "fitFindingNote": "This package includes analogical mappings, so the legal fit should be described as mixed direct and analogical support."
+  },
+  "warningSummary": {
+    "hasWarnings": false,
+    "warningEntryCount": 0,
+    "warningCounts": {}
+  },
+  "warningLabelSummary": {
+    "hasWarningLabel": false,
+    "warningLabel": null,
+    "warningEntryCount": 0
+  },
+  "entries": [
+    {
+      "kind": "summary",
+      "path": "summary.json",
+      "format": "json",
+      "description": "Compact branch-aware summary for downstream tooling.",
+      "priority": 3,
+      "priorityLabel": "secondary",
+      "whyOpenThis": "Open this when you want the quickest branch-aware orientation for constructive_denial review."
+    },
+    {
+      "kind": "result",
+      "path": "../live_in_aide_case_001.result.json",
+      "format": "json",
+      "description": "Full evaluator output with findings, explanations, and provenance.",
+      "priority": 4,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the full evaluator output with resolved facts, explanations, and provenance."
+    },
+    {
+      "kind": "advocacy_bundle",
+      "path": "advocacy_bundle.json",
+      "format": "json",
+      "description": "Structured advocacy citations and drafting metadata.",
+      "priority": 5,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the structured drafting and citation payload that drives the advocacy outputs."
+    },
+    {
+      "kind": "hearing_script_markdown",
+      "path": "hearing_script.md",
+      "format": "markdown",
+      "description": "Hearing script draft grounded in the evaluated case state.",
+      "priority": 8,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the hearing-oriented draft rather than the fuller memorandum package."
+    },
+    {
+      "kind": "complaint_outline_markdown",
+      "path": "complaint_outline.md",
+      "format": "markdown",
+      "description": "Complaint outline draft for the current branch posture.",
+      "priority": 9,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the complaint framing and issue outline instead of prose briefing."
+    },
+    {
+      "kind": "demand_letter_markdown",
+      "path": "demand_letter.md",
+      "format": "markdown",
+      "description": "Demand-letter draft for the current branch posture.",
+      "priority": 6,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the demand-letter posture and requested remedy framing."
+    },
+    {
+      "kind": "negotiation_summary_markdown",
+      "path": "negotiation_summary.md",
+      "format": "markdown",
+      "description": "Negotiation summary draft with branch-aware leverage framing.",
+      "priority": 7,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the shortest negotiation-oriented leverage summary."
+    },
+    {
+      "kind": "memorandum_json",
+      "path": "memorandum.json",
+      "format": "json",
+      "description": "Structured memorandum sections with citation rollups and paragraph support.",
+      "priority": 11,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the structured memorandum bundle for downstream tooling instead of the human-readable draft."
+    },
+    {
+      "kind": "memorandum_markdown",
+      "path": "memorandum.md",
+      "format": "markdown",
+      "description": "Human-readable memorandum with visible section and paragraph support blocks.",
+      "priority": 2,
+      "priorityLabel": "secondary",
+      "whyOpenThis": "Open this when you want the editable human-readable memorandum draft."
+    },
+    {
+      "kind": "memorandum_pdf",
+      "path": "memorandum_of_law.pdf",
+      "format": "pdf",
+      "description": "Printable memorandum of law with paragraph-level support lines.",
+      "priority": 1,
+      "priorityLabel": "primary",
+      "whyOpenThis": "Start with the printable memorandum because it is the strongest branch-aligned narrative for constructive_denial review."
+    },
+    {
+      "kind": "dependency_graph",
+      "path": "dependency_graph.json",
+      "format": "json",
+      "description": "Dependency graph nodes and edges for the active reasoning branch.",
+      "priority": 10,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the reasoning graph behind the active branch analysis."
+    },
+    {
+      "kind": "dependency_citations",
+      "path": "dependency_citations.jsonld",
+      "format": "jsonld",
+      "description": "JSON-LD grounding that links dependency targets to authority excerpts.",
+      "priority": 12,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the JSON-LD grounding that links dependency targets to authority excerpts."
+    },
+    {
+      "kind": "authority_review",
+      "path": "authority_review.json",
+      "format": "json",
+      "description": "Audit view of authority excerpts, propositions, source URLs, and support status.",
+      "priority": 13,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the authority audit view with support status, excerpts, and source metadata."
+    },
+    {
+      "kind": "authority_research_note",
+      "path": "authority_research_note.json",
+      "format": "json",
+      "description": "Research-note view of verified source references, excerpts, fit, and proposition mapping.",
+      "priority": 14,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the source-verification and proposition-mapping research note."
+    },
+    {
+      "kind": "authority_summary",
+      "path": "authority_summary.json",
+      "format": "json",
+      "description": "Compact counts by authority support status and reasoning bucket.",
+      "priority": 15,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the compact authority count view instead of the fuller authority audit."
+    },
+    {
+      "kind": "decision_tree",
+      "path": "decision_tree.json",
+      "format": "json",
+      "description": "Decision-tree representation of the accommodation analysis.",
+      "priority": 16,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the compact decision-tree representation of the accommodation analysis."
+    }
+  ]
+}

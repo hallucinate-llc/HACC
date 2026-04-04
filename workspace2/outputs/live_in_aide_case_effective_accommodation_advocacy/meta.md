@@ -1,0 +1,21 @@
+# Meta
+
+{
+"caseId": "live_in_aide_case_effective_accommodation_001",
+"branch": "effective_accommodation",
+"placeholders": {
+"requesting_party": "[Requesting Party]",
+"recipient": "[Housing Authority or Decision-Maker]",
+"tenant_name": "[Tenant Name]",
+"aide_name": "[Aide Name]",
+"requested_remedy": "[Maintain the effective separate-bedroom accommodation for the live-in aide]",
+"response_deadline": "[10 business days]"
+},
+"supportedModes": [
+"hearing_script",
+"complaint_outline",
+"demand_letter",
+"negotiation_summary"
+],
+"confidence": 0.58
+}

@@ -1,0 +1,762 @@
+{
+  "caseId": "live_in_aide_case_001",
+  "policy": {
+    "privacy_mode": "inferred_from_living_room_sleeping"
+  },
+  "facts": {
+    "asserted": {
+      "disabled_tenant": true,
+      "needs_live_in_aide": true,
+      "medical_verification": true,
+      "requested_separate_bedroom": true,
+      "approved_aide_in_principle": true,
+      "denied_separate_bedroom": true,
+      "aide_sleeps_in_living_room": true,
+      "night_access_needed": true,
+      "works_remotely": true,
+      "privacy_loss": true,
+      "guest_management_problem": true,
+      "dog_isolation_problem": true,
+      "undue_burden": false,
+      "fundamental_alteration": false
+    },
+    "accepted": {
+      "disabled_tenant": true,
+      "needs_live_in_aide": true,
+      "medical_verification": true,
+      "requested_separate_bedroom": true,
+      "approved_aide_in_principle": true,
+      "denied_separate_bedroom": true,
+      "aide_sleeps_in_living_room": true,
+      "night_access_needed": true,
+      "works_remotely": true,
+      "privacy_loss": true,
+      "guest_management_problem": true,
+      "dog_isolation_problem": true,
+      "undue_burden": false,
+      "fundamental_alteration": false
+    },
+    "resolved": {
+      "disabled_tenant": true,
+      "needs_live_in_aide": true,
+      "medical_verification": true,
+      "requested_separate_bedroom": true,
+      "approved_aide_in_principle": true,
+      "denied_separate_bedroom": true,
+      "aide_sleeps_in_living_room": true,
+      "night_access_needed": true,
+      "works_remotely": true,
+      "privacy_loss": true,
+      "guest_management_problem": true,
+      "dog_isolation_problem": true,
+      "undue_burden": false,
+      "fundamental_alteration": false
+    },
+    "conflicts": []
+  },
+  "outcome": {
+    "sleepInterruption": true,
+    "workInterference": true,
+    "caregivingImpairment": true,
+    "privacyLoss": true,
+    "necessary": true,
+    "reasonable": true,
+    "dutyToGrant": true,
+    "notEffective": true,
+    "constructiveDenial": true,
+    "violation": true
+  },
+  "proofTrace": [
+    "aide_sleeps_in_living_room + night_access_needed -> sleep_interruption",
+    "sleep_interruption + works_remotely -> work_interference",
+    "sleep_interruption -> caregiving_impairment",
+    "privacy_loss or living_room_sleeping -> privacy_loss",
+    "sleep_interruption/work_interference/caregiving_impairment/privacy_loss -> necessary",
+    "medical_verification + necessary + no defenses -> reasonable",
+    "disabled_tenant + needs_live_in_aide + requested_separate_bedroom + reasonable -> duty_to_grant",
+    "denied_separate_bedroom + sleep_interruption -> not_effective",
+    "approved_aide_in_principle + denied_separate_bedroom + not_effective -> constructive_denial",
+    "denied duty_to_grant or constructive_denial -> violation"
+  ],
+  "narrative": "Case live_in_aide_case_001 was evaluated using privacy mode `inferred_from_living_room_sleeping`. The current rule set concludes that the housing arrangement results in a violation. The strongest theory triggered is constructive denial of accommodation. Sleep interruption was established from living-room sleeping plus night access needs. Privacy loss was treated as a relevant harm in the necessity analysis.",
+  "explanations": {
+    "necessary": "Necessity was triggered because the accepted facts established one or more functional harms. Supporting authorities: McGary v. City of Portland, HUD/DOJ Joint Statement on Reasonable Accommodations",
+    "reasonable": "Reasonableness was satisfied because medical support and necessity were present and no defenses defeated the request. Supporting authorities: Giebeler v. M&B Associates, United States v. California Mobile Home Park Management Co., HUD/DOJ Joint Statement on Reasonable Accommodations, 24 CFR 982.316",
+    "dutyToGrant": "The evaluator found a duty to grant because disability, live-in aide need, request, and reasonableness were all present. Supporting authorities: Giebeler v. M&B Associates, United States v. California Mobile Home Park Management Co., McGary v. City of Portland, 24 CFR 982.316",
+    "constructiveDenial": "Constructive denial was triggered because approval in principle was followed by denial of an effective functional arrangement. Supporting authorities: United States v. California Mobile Home Park Management Co., McGary v. City of Portland",
+    "violation": "Violation was triggered by either denied duty-to-grant logic or constructive denial logic. Supporting authorities: Giebeler v. M&B Associates, United States v. California Mobile Home Park Management Co., McGary v. City of Portland, 24 CFR 982.316"
+  },
+  "missingEvidence": [],
+  "defeatersConsidered": {
+    "undueBurden": false,
+    "fundamentalAlteration": false
+  },
+  "authoritySupport": {
+    "necessary": [
+      {
+        "id": "mcgary",
+        "label": "McGary v. City of Portland",
+        "weight": "binding"
+      },
+      {
+        "id": "hud_joint_statement",
+        "label": "HUD/DOJ Joint Statement on Reasonable Accommodations",
+        "weight": "guidance"
+      }
+    ],
+    "reasonable": [
+      {
+        "id": "giebeler",
+        "label": "Giebeler v. M&B Associates",
+        "weight": "binding"
+      },
+      {
+        "id": "california_mobile_home",
+        "label": "United States v. California Mobile Home Park Management Co.",
+        "weight": "binding"
+      },
+      {
+        "id": "hud_joint_statement",
+        "label": "HUD/DOJ Joint Statement on Reasonable Accommodations",
+        "weight": "guidance"
+      },
+      {
+        "id": "cfr_982_316",
+        "label": "24 CFR 982.316",
+        "weight": "binding"
+      }
+    ],
+    "dutyToGrant": [
+      {
+        "id": "giebeler",
+        "label": "Giebeler v. M&B Associates",
+        "weight": "binding"
+      },
+      {
+        "id": "california_mobile_home",
+        "label": "United States v. California Mobile Home Park Management Co.",
+        "weight": "binding"
+      },
+      {
+        "id": "mcgary",
+        "label": "McGary v. City of Portland",
+        "weight": "binding"
+      },
+      {
+        "id": "cfr_982_316",
+        "label": "24 CFR 982.316",
+        "weight": "binding"
+      }
+    ],
+    "constructiveDenial": [
+      {
+        "id": "california_mobile_home",
+        "label": "United States v. California Mobile Home Park Management Co.",
+        "weight": "binding"
+      },
+      {
+        "id": "mcgary",
+        "label": "McGary v. City of Portland",
+        "weight": "binding"
+      }
+    ],
+    "violation": [
+      {
+        "id": "giebeler",
+        "label": "Giebeler v. M&B Associates",
+        "weight": "binding"
+      },
+      {
+        "id": "california_mobile_home",
+        "label": "United States v. California Mobile Home Park Management Co.",
+        "weight": "binding"
+      },
+      {
+        "id": "mcgary",
+        "label": "McGary v. City of Portland",
+        "weight": "binding"
+      },
+      {
+        "id": "cfr_982_316",
+        "label": "24 CFR 982.316",
+        "weight": "binding"
+      }
+    ]
+  },
+  "evidenceSupport": {
+    "medical_verification": [
+      {
+        "id": "evidence:medical_verification",
+        "type": "MedicalVerification",
+        "status": "accepted",
+        "confidence": 0.9
+      }
+    ],
+    "needs_live_in_aide": [
+      {
+        "id": "evidence:medical_verification",
+        "type": "MedicalVerification",
+        "status": "accepted",
+        "confidence": 0.9
+      }
+    ],
+    "night_access_needed": [
+      {
+        "id": "evidence:sleep_log_1",
+        "type": "SleepLog",
+        "status": "accepted",
+        "confidence": 0.8
+      }
+    ],
+    "aide_sleeps_in_living_room": [
+      {
+        "id": "evidence:sleep_log_1",
+        "type": "SleepLog",
+        "status": "accepted",
+        "confidence": 0.8
+      }
+    ],
+    "privacy_loss": [
+      {
+        "id": "evidence:layout_diagram_1",
+        "type": "LayoutDiagram",
+        "status": "alleged",
+        "confidence": 0.7
+      }
+    ],
+    "dog_isolation_problem": [
+      {
+        "id": "evidence:layout_diagram_1",
+        "type": "LayoutDiagram",
+        "status": "alleged",
+        "confidence": 0.7
+      }
+    ],
+    "guest_management_problem": [
+      {
+        "id": "evidence:layout_diagram_1",
+        "type": "LayoutDiagram",
+        "status": "alleged",
+        "confidence": 0.7
+      }
+    ]
+  },
+  "eventSupport": {
+    "requested_separate_bedroom": [
+      {
+        "id": "evt:t1",
+        "event": "request_accommodation",
+        "time": "t1"
+      }
+    ],
+    "medical_verification": [
+      {
+        "id": "evt:t2",
+        "event": "submit_medical_verification",
+        "time": "t2"
+      }
+    ],
+    "approved_aide_in_principle": [
+      {
+        "id": "evt:t3",
+        "event": "approve_aide_in_principle",
+        "time": "t3"
+      }
+    ],
+    "denied_separate_bedroom": [
+      {
+        "id": "evt:t4",
+        "event": "deny_separate_bedroom",
+        "time": "t4"
+      }
+    ],
+    "night_access_needed": [
+      {
+        "id": "evt:t5",
+        "event": "night_use",
+        "time": "t5"
+      }
+    ]
+  },
+  "findingEvidence": {
+    "sleepInterruption": [
+      "evidence:sleep_log_1"
+    ],
+    "workInterference": [
+      "evidence:sleep_log_1"
+    ],
+    "caregivingImpairment": [
+      "evidence:sleep_log_1"
+    ],
+    "privacyLoss": [
+      "evidence:layout_diagram_1",
+      "evidence:sleep_log_1"
+    ],
+    "necessary": [
+      "evidence:layout_diagram_1",
+      "evidence:sleep_log_1"
+    ],
+    "reasonable": [
+      "evidence:medical_verification"
+    ],
+    "dutyToGrant": [
+      "evidence:medical_verification"
+    ],
+    "notEffective": [
+      "evidence:sleep_log_1"
+    ],
+    "constructiveDenial": [
+      "evidence:sleep_log_1"
+    ],
+    "violation": [
+      "evidence:medical_verification",
+      "evidence:sleep_log_1"
+    ]
+  },
+  "findingEvents": {
+    "sleepInterruption": [
+      "evt:t5"
+    ],
+    "workInterference": [
+      "evt:t5"
+    ],
+    "caregivingImpairment": [
+      "evt:t5"
+    ],
+    "privacyLoss": [],
+    "necessary": [],
+    "reasonable": [
+      "evt:t2"
+    ],
+    "dutyToGrant": [
+      "evt:t1",
+      "evt:t2"
+    ],
+    "notEffective": [],
+    "constructiveDenial": [
+      "evt:t3",
+      "evt:t4",
+      "evt:t5"
+    ],
+    "violation": [
+      "evt:t1",
+      "evt:t4"
+    ]
+  },
+  "findingAuthorities": {
+    "sleepInterruption": [],
+    "workInterference": [],
+    "caregivingImpairment": [],
+    "privacyLoss": [],
+    "necessary": [
+      "hud_joint_statement",
+      "mcgary"
+    ],
+    "reasonable": [
+      "california_mobile_home",
+      "cfr_982_316",
+      "giebeler",
+      "hud_joint_statement"
+    ],
+    "dutyToGrant": [
+      "california_mobile_home",
+      "cfr_982_316",
+      "giebeler",
+      "mcgary"
+    ],
+    "notEffective": [],
+    "constructiveDenial": [
+      "california_mobile_home",
+      "mcgary"
+    ],
+    "violation": [
+      "california_mobile_home",
+      "cfr_982_316",
+      "giebeler",
+      "mcgary"
+    ]
+  },
+  "provenance": {
+    "sleepInterruption": {
+      "active": true,
+      "facts": [
+        {
+          "fact": "night_access_needed",
+          "value": true
+        },
+        {
+          "fact": "aide_sleeps_in_living_room",
+          "value": true
+        }
+      ],
+      "evidenceIds": [
+        "evidence:sleep_log_1"
+      ],
+      "eventIds": [
+        "evt:t5"
+      ],
+      "authorityIds": [],
+      "proofSteps": [
+        "aide_sleeps_in_living_room + night_access_needed -> sleep_interruption",
+        "denied_separate_bedroom + sleep_interruption -> not_effective",
+        "sleep_interruption + works_remotely -> work_interference",
+        "sleep_interruption -> caregiving_impairment",
+        "sleep_interruption/work_interference/caregiving_impairment/privacy_loss -> necessary"
+      ]
+    },
+    "workInterference": {
+      "active": true,
+      "facts": [
+        {
+          "fact": "night_access_needed",
+          "value": true
+        },
+        {
+          "fact": "aide_sleeps_in_living_room",
+          "value": true
+        },
+        {
+          "fact": "works_remotely",
+          "value": true
+        }
+      ],
+      "evidenceIds": [
+        "evidence:sleep_log_1"
+      ],
+      "eventIds": [
+        "evt:t5"
+      ],
+      "authorityIds": [],
+      "proofSteps": [
+        "sleep_interruption + works_remotely -> work_interference",
+        "sleep_interruption/work_interference/caregiving_impairment/privacy_loss -> necessary"
+      ]
+    },
+    "caregivingImpairment": {
+      "active": true,
+      "facts": [
+        {
+          "fact": "night_access_needed",
+          "value": true
+        },
+        {
+          "fact": "aide_sleeps_in_living_room",
+          "value": true
+        }
+      ],
+      "evidenceIds": [
+        "evidence:sleep_log_1"
+      ],
+      "eventIds": [
+        "evt:t5"
+      ],
+      "authorityIds": [],
+      "proofSteps": [
+        "sleep_interruption -> caregiving_impairment",
+        "sleep_interruption/work_interference/caregiving_impairment/privacy_loss -> necessary"
+      ]
+    },
+    "privacyLoss": {
+      "active": true,
+      "facts": [
+        {
+          "fact": "privacy_loss",
+          "value": true
+        },
+        {
+          "fact": "aide_sleeps_in_living_room",
+          "value": true
+        }
+      ],
+      "evidenceIds": [
+        "evidence:layout_diagram_1",
+        "evidence:sleep_log_1"
+      ],
+      "eventIds": [],
+      "authorityIds": [],
+      "proofSteps": [
+        "privacy_loss or living_room_sleeping -> privacy_loss",
+        "sleep_interruption/work_interference/caregiving_impairment/privacy_loss -> necessary"
+      ]
+    },
+    "necessary": {
+      "active": true,
+      "facts": [
+        {
+          "fact": "night_access_needed",
+          "value": true
+        },
+        {
+          "fact": "aide_sleeps_in_living_room",
+          "value": true
+        },
+        {
+          "fact": "works_remotely",
+          "value": true
+        },
+        {
+          "fact": "privacy_loss",
+          "value": true
+        }
+      ],
+      "evidenceIds": [
+        "evidence:layout_diagram_1",
+        "evidence:sleep_log_1"
+      ],
+      "eventIds": [],
+      "authorityIds": [
+        "hud_joint_statement",
+        "mcgary"
+      ],
+      "proofSteps": [
+        "medical_verification + necessary + no defenses -> reasonable",
+        "sleep_interruption/work_interference/caregiving_impairment/privacy_loss -> necessary"
+      ]
+    },
+    "reasonable": {
+      "active": true,
+      "facts": [
+        {
+          "fact": "medical_verification",
+          "value": true
+        },
+        {
+          "fact": "undue_burden",
+          "value": false
+        },
+        {
+          "fact": "fundamental_alteration",
+          "value": false
+        }
+      ],
+      "evidenceIds": [
+        "evidence:medical_verification"
+      ],
+      "eventIds": [
+        "evt:t2"
+      ],
+      "authorityIds": [
+        "california_mobile_home",
+        "cfr_982_316",
+        "giebeler",
+        "hud_joint_statement"
+      ],
+      "proofSteps": [
+        "disabled_tenant + needs_live_in_aide + requested_separate_bedroom + reasonable -> duty_to_grant",
+        "medical_verification + necessary + no defenses -> reasonable"
+      ]
+    },
+    "dutyToGrant": {
+      "active": true,
+      "facts": [
+        {
+          "fact": "disabled_tenant",
+          "value": true
+        },
+        {
+          "fact": "needs_live_in_aide",
+          "value": true
+        },
+        {
+          "fact": "requested_separate_bedroom",
+          "value": true
+        },
+        {
+          "fact": "medical_verification",
+          "value": true
+        }
+      ],
+      "evidenceIds": [
+        "evidence:medical_verification"
+      ],
+      "eventIds": [
+        "evt:t1",
+        "evt:t2"
+      ],
+      "authorityIds": [
+        "california_mobile_home",
+        "cfr_982_316",
+        "giebeler",
+        "mcgary"
+      ],
+      "proofSteps": [
+        "denied duty_to_grant or constructive_denial -> violation",
+        "disabled_tenant + needs_live_in_aide + requested_separate_bedroom + reasonable -> duty_to_grant"
+      ]
+    },
+    "notEffective": {
+      "active": true,
+      "facts": [
+        {
+          "fact": "denied_separate_bedroom",
+          "value": true
+        },
+        {
+          "fact": "night_access_needed",
+          "value": true
+        },
+        {
+          "fact": "aide_sleeps_in_living_room",
+          "value": true
+        }
+      ],
+      "evidenceIds": [
+        "evidence:sleep_log_1"
+      ],
+      "eventIds": [],
+      "authorityIds": [],
+      "proofSteps": [
+        "approved_aide_in_principle + denied_separate_bedroom + not_effective -> constructive_denial",
+        "denied_separate_bedroom + sleep_interruption -> not_effective"
+      ]
+    },
+    "constructiveDenial": {
+      "active": true,
+      "facts": [
+        {
+          "fact": "approved_aide_in_principle",
+          "value": true
+        },
+        {
+          "fact": "denied_separate_bedroom",
+          "value": true
+        },
+        {
+          "fact": "night_access_needed",
+          "value": true
+        },
+        {
+          "fact": "aide_sleeps_in_living_room",
+          "value": true
+        }
+      ],
+      "evidenceIds": [
+        "evidence:sleep_log_1"
+      ],
+      "eventIds": [
+        "evt:t3",
+        "evt:t4",
+        "evt:t5"
+      ],
+      "authorityIds": [
+        "california_mobile_home",
+        "mcgary"
+      ],
+      "proofSteps": [
+        "approved_aide_in_principle + denied_separate_bedroom + not_effective -> constructive_denial",
+        "denied duty_to_grant or constructive_denial -> violation"
+      ]
+    },
+    "violation": {
+      "active": true,
+      "facts": [
+        {
+          "fact": "disabled_tenant",
+          "value": true
+        },
+        {
+          "fact": "needs_live_in_aide",
+          "value": true
+        },
+        {
+          "fact": "requested_separate_bedroom",
+          "value": true
+        },
+        {
+          "fact": "medical_verification",
+          "value": true
+        },
+        {
+          "fact": "approved_aide_in_principle",
+          "value": true
+        },
+        {
+          "fact": "denied_separate_bedroom",
+          "value": true
+        },
+        {
+          "fact": "night_access_needed",
+          "value": true
+        },
+        {
+          "fact": "aide_sleeps_in_living_room",
+          "value": true
+        }
+      ],
+      "evidenceIds": [
+        "evidence:medical_verification",
+        "evidence:sleep_log_1"
+      ],
+      "eventIds": [
+        "evt:t1",
+        "evt:t4"
+      ],
+      "authorityIds": [
+        "california_mobile_home",
+        "cfr_982_316",
+        "giebeler",
+        "mcgary"
+      ],
+      "proofSteps": [
+        "denied duty_to_grant or constructive_denial -> violation"
+      ]
+    }
+  },
+  "timeline": [
+    {
+      "id": "evt:t1",
+      "event": "request_accommodation",
+      "time": "t1",
+      "actors": [
+        "person:mother",
+        "person:aide",
+        "org:ha1"
+      ],
+      "details": {
+        "request": "separate_bedroom_for_aide"
+      }
+    },
+    {
+      "id": "evt:t2",
+      "event": "submit_medical_verification",
+      "time": "t2",
+      "actors": [
+        "person:mother"
+      ],
+      "details": {
+        "evidenceId": "evidence:medical_verification"
+      }
+    },
+    {
+      "id": "evt:t3",
+      "event": "approve_aide_in_principle",
+      "time": "t3",
+      "actors": [
+        "org:ha1",
+        "person:aide",
+        "person:mother"
+      ]
+    },
+    {
+      "id": "evt:t4",
+      "event": "deny_separate_bedroom",
+      "time": "t4",
+      "actors": [
+        "org:ha1",
+        "person:aide"
+      ]
+    },
+    {
+      "id": "evt:t5",
+      "event": "night_use",
+      "time": "t5",
+      "actors": [
+        "person:mother"
+      ],
+      "details": {
+        "room": "living1"
+      }
+    }
+  ],
+  "confidence": 0.93
+}

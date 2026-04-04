@@ -1,0 +1,18 @@
+{
+  "caseId": "live_in_aide_case_undue_burden_001",
+  "branch": "undue_burden_constructive_denial",
+  "confidence": 0.8300000000000001,
+  "activeOutcome": "violation",
+  "topFindings": {
+    "necessary": true,
+    "reasonable": false,
+    "dutyToGrant": false,
+    "constructiveDenial": true,
+    "violation": true
+  },
+  "defeatersConsidered": {
+    "undueBurden": true,
+    "fundamentalAlteration": false
+  },
+  "missingEvidence": []
+}

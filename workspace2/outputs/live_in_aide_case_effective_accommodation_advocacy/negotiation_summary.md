@@ -1,0 +1,17 @@
+# Negotiation Summary
+
+Case: live_in_aide_case_effective_accommodation_001
+Requested remedy: [Maintain the effective separate-bedroom accommodation for the live-in aide]
+Requesting party: [Requesting Party]
+
+Negotiation Summary For live_in_aide_case_effective_accommodation_001
+
+## Leverage points
+
+- The issue is whether the accommodation is effective in practice.
+- The current record indicates the accommodation is functioning in practice, so negotiations should focus on maintaining compliance and documenting the effective arrangement.
+
+Citations: findings=reasonable, constructiveDenial, violation; authorities=none; evidence=none; events=none
+- The evaluator confidence score is 0.58.
+- Missing elements or evidence gaps: functional_harm.
+- Authorities currently grouped under violation: Giebeler v. M&B Associates, United States v. California Mobile Home Park Management Co., McGary v. City of Portland, 24 CFR 982.316.

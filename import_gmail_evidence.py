@@ -34,6 +34,10 @@ if str(IPFS_DATASETS_ROOT) not in sys.path:
 
 from complaint_generator.email_credentials import resolve_gmail_credentials
 from ipfs_datasets_py.processors.multimedia.email_processor import EmailProcessor
+from ipfs_datasets_py.processors.multimedia.google_voice_processor import (
+    GoogleVoiceProcessor,
+    materialize_google_voice_events,
+)
 from upload_email_evidence_manifest import upload_manifest
 
 try:
@@ -369,6 +373,79 @@ def _collect_message_text(email_message: EmailMessage) -> str:
     return "\n".join(parts)
 
 
+def _normalize_voice_text(value: str) -> str:
+    text = str(value or "")
+    markers = [
+        "To respond to this text message, reply to this email or visit Google Voice.",
+        "YOUR ACCOUNT",
+        "HELP CENTER",
+        "HELP FORUM",
+        "This email was sent to you because you indicated that you'd like to receive",
+        "Google LLC",
+        "1600 Amphitheatre Pkwy",
+        "<https://voice.google.com>",
+    ]
+    for marker in markers:
+        index = text.find(marker)
+        if index >= 0:
+            text = text[:index]
+    text = re.sub(r"https?://\S+", " ", text)
+    text = re.sub(r"<[^>]+>", " ", text)
+    return re.sub(r"\s+", " ", text).strip().lower()
+
+
+def _extract_phone_candidates(*values: str) -> set[str]:
+    candidates: set[str] = set()
+    for value in values:
+        for match in re.findall(r"\+?\d[\d().\-\s]{6,}\d|\(\d{3}\)\s*\d{3}[-.\s]?\d{4}", str(value or "")):
+            digits = "".join(char for char in match if char.isdigit())
+            if 7 <= len(digits) <= 15:
+                candidates.add(digits)
+    return candidates
+
+
+def _is_google_voice_gmail_record(record: dict[str, Any]) -> bool:
+    participants = [str(item or "").lower() for item in list(record.get("participants") or [])]
+    from_value = str(record.get("from") or "").lower()
+    message_id = str(record.get("message_id_header") or "").lower()
+    return any("voice.google.com" in value for value in participants) or "voice.google.com" in from_value or "voice.google.com" in message_id
+
+
+def _find_matching_google_voice_event(
+    email_record: dict[str, Any],
+    voice_records: list[dict[str, Any]],
+) -> dict[str, Any] | None:
+    if not _is_google_voice_gmail_record(email_record):
+        return None
+    email_text_source = str(email_record.get("text_content") or "")
+    if not email_text_source and email_record.get("email_path") and Path(str(email_record["email_path"])).is_file():
+        email_text_source = _collect_message_text(
+            email.message_from_bytes(Path(email_record["email_path"]).read_bytes(), policy=email.policy.default)
+        )
+    email_text = _normalize_voice_text(email_text_source)
+    if not email_text:
+        return None
+    email_numbers = _extract_phone_candidates(
+        email_record.get("subject", ""),
+        email_record.get("from", ""),
+        *list(email_record.get("participants") or []),
+    )
+    for voice_record in voice_records:
+        voice_text = _normalize_voice_text(str(voice_record.get("text_content") or ""))
+        if not voice_text:
+            continue
+        voice_numbers = _extract_phone_candidates(
+            voice_record.get("title", ""),
+            *list(voice_record.get("participants") or []),
+            *list(voice_record.get("phone_numbers") or []),
+        )
+        phone_match = not email_numbers or not voice_numbers or bool(email_numbers & voice_numbers)
+        text_match = email_text == voice_text or email_text in voice_text or voice_text in email_text
+        if phone_match and text_match:
+            return voice_record
+    return None
+
+
 def _tokenize_text(value: str) -> list[str]:
     return [token for token in re.findall(r"[A-Za-z0-9][A-Za-z0-9'_-]*", str(value or "").lower()) if len(token) >= 3]
 
@@ -479,6 +556,7 @@ def _save_email_bundle(
 
     return {
         "folder": folder_name,
+        "source_type": "gmail_email",
         "bundle_dir": str(bundle_dir),
         "email_path": str(eml_path),
         "parsed_path": str(parsed_path),
@@ -489,6 +567,7 @@ def _save_email_bundle(
         "to": parsed_email.get("to", ""),
         "cc": parsed_email.get("cc", ""),
         "message_id_header": parsed_email.get("message_id_header", ""),
+        "text_content": parsed_email.get("body_text", ""),
         "attachment_paths": [item["path"] for item in attachment_records],
         "attachments": attachment_records,
         "evidence_title": parsed_email.get("subject") or f"Email from {parsed_email.get('from', '')}",
@@ -518,6 +597,7 @@ def _cache_entry_from_email(
         "cc": parsed_email.get("cc", ""),
         "participants": sorted(_message_participants(email_message)),
         "attachment_count": len(list(parsed_email.get("attachments") or [])),
+        "text_content": parsed_email.get("body_text", ""),
         "raw_sha256": raw_sha256,
         "raw_cid": _ipfs_add_bytes(raw_bytes),
         "relevance_score": float(relevance.get("score", 0.0) or 0.0),
@@ -529,6 +609,66 @@ def _cache_entry_from_email(
         "attachment_paths": list((bundle_record or {}).get("attachment_paths") or []),
         "attachment_shas": attachment_shas,
     }
+
+
+def _cached_bundle_paths(cached_entry: dict[str, Any]) -> tuple[Path | None, Path | None, list[Path]]:
+    email_raw = str(cached_entry.get("email_path") or "").strip()
+    parsed_raw = str(cached_entry.get("parsed_path") or "").strip()
+    attachment_values = [str(path or "").strip() for path in list(cached_entry.get("attachment_paths") or [])]
+
+    def _clean_file_path(raw_value: str) -> Path | None:
+        if not raw_value or raw_value == ".":
+            return None
+        path = Path(raw_value)
+        if path.name in {"", "."}:
+            return None
+        return path
+
+    email_path = _clean_file_path(email_raw)
+    parsed_path = _clean_file_path(parsed_raw)
+    attachment_paths = [path for path in (_clean_file_path(value) for value in attachment_values) if path is not None]
+    return email_path, parsed_path, attachment_paths
+
+
+def _cached_bundle_is_materialized(cached_entry: dict[str, Any]) -> bool:
+    email_path, parsed_path, attachment_paths = _cached_bundle_paths(cached_entry)
+    if email_path is None or parsed_path is None:
+        return False
+    if not email_path.is_file() or not parsed_path.is_file():
+        return False
+    return all(path.is_file() for path in attachment_paths)
+
+
+def _resolve_google_voice_manifest_path(source: str | os.PathLike[str]) -> Path | None:
+    path = Path(source).expanduser().resolve()
+    if path.is_file() and path.name == "google_voice_manifest.json":
+        return path
+    if path.is_dir():
+        candidate = path / "google_voice_manifest.json"
+        if candidate.is_file():
+            return candidate
+    return None
+
+
+def _load_google_voice_manifest_bundles(source: str | os.PathLike[str]) -> list[dict[str, Any]] | None:
+    manifest_path = _resolve_google_voice_manifest_path(source)
+    if manifest_path is None:
+        return None
+    payload = json.loads(manifest_path.read_text(encoding="utf-8"))
+    bundles = []
+    for bundle in list(payload.get("bundles") or []):
+        item = dict(bundle)
+        item.setdefault("source_type", "google_voice")
+        item.setdefault("parsed_path", item.get("event_json_path", ""))
+        item.setdefault("subject", item.get("title", ""))
+        item.setdefault("date", item.get("timestamp"))
+        item.setdefault("participants", list(item.get("phone_numbers") or []))
+        item.setdefault("attachments", [])
+        item.setdefault("text_content", "")
+        item.setdefault("deduped_gmail_message_ids", [])
+        item.setdefault("evidence_title", item.get("title") or item.get("event_type") or "Google Voice event")
+        bundles.append(item)
+    return bundles
 
 
 async def _fetch_folder_messages(
@@ -633,34 +773,39 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
     cache_entries = cache_payload.setdefault("entries", {})
 
     auth_mode = _resolve_auth_mode(args)
-    processor = EmailProcessor(
-        protocol="imap",
-        server=args.server,
-        port=args.port,
-        username=args.username,
-        password=args.password,
-        use_ssl=not args.no_ssl,
-        timeout=args.timeout,
-    )
-    if auth_mode == "gmail_oauth":
-        access_token, token_payload = resolve_gmail_oauth_access_token(
-            gmail_user=args.username,
-            client_secrets_path=args.gmail_oauth_client_secrets,
-            token_cache_path=getattr(args, "gmail_oauth_token_cache", None),
-            open_browser=not getattr(args, "no_browser", False),
+    include_gmail = bool(list(getattr(args, "folder", []) or []))
+    processor: EmailProcessor | None = None
+    token_payload = None
+    if include_gmail:
+        processor = EmailProcessor(
+            protocol="imap",
+            server=args.server,
+            port=args.port,
+            username=args.username,
+            password=args.password,
+            use_ssl=not args.no_ssl,
+            timeout=args.timeout,
         )
-        await _connect_processor_with_xoauth2(processor, gmail_user=args.username, access_token=access_token)
-    else:
-        token_payload = None
-        await processor.connect()
+        if auth_mode == "gmail_oauth":
+            access_token, token_payload = resolve_gmail_oauth_access_token(
+                gmail_user=args.username,
+                client_secrets_path=args.gmail_oauth_client_secrets,
+                token_cache_path=getattr(args, "gmail_oauth_token_cache", None),
+                open_browser=not getattr(args, "no_browser", False),
+            )
+            await _connect_processor_with_xoauth2(processor, gmail_user=args.username, access_token=access_token)
+        else:
+            await processor.connect()
 
     matched_records: list[dict[str, Any]] = []
+    matched_voice_records: list[dict[str, Any]] = []
     preview_records: list[dict[str, Any]] = []
     seen_keys: set[str] = set()
     scanned_message_count = 0
 
     try:
-        for folder in args.folder:
+        for folder in list(getattr(args, "folder", []) or []):
+            assert processor is not None
             if getattr(args, "crawl_max_messages", None):
                 rows = await _fetch_folder_messages_batched(
                     processor,
@@ -734,10 +879,8 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
                     )
                     continue
                 if cached_entry:
-                    email_path = Path(str(cached_entry.get("email_path") or ""))
-                    parsed_path = Path(str(cached_entry.get("parsed_path") or ""))
-                    attachment_paths = [Path(str(path)) for path in list(cached_entry.get("attachment_paths") or [])]
-                    if email_path.exists() and parsed_path.exists() and all(path.exists() for path in attachment_paths):
+                    email_path, parsed_path, attachment_paths = _cached_bundle_paths(cached_entry)
+                    if _cached_bundle_is_materialized(cached_entry) and email_path and parsed_path:
                         record = {
                             "folder": cached_entry.get("folder", folder),
                             "bundle_dir": str(cached_entry.get("bundle_dir") or email_path.parent),
@@ -750,6 +893,7 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
                             "to": cached_entry.get("to", ""),
                             "cc": cached_entry.get("cc", ""),
                             "message_id_header": cached_entry.get("message_id_header", ""),
+                            "text_content": cached_entry.get("text_content", ""),
                             "attachment_paths": [str(path) for path in attachment_paths],
                             "attachments": [],
                             "evidence_title": cached_entry.get("subject") or f"Email from {cached_entry.get('from', '')}",
@@ -791,8 +935,97 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
                     relevance=relevance,
                     bundle_record=record,
                 )
+
+        voice_sources = [str(item or "").strip() for item in list(getattr(args, "google_voice_source", []) or []) if str(item or "").strip()]
+        if voice_sources:
+            voice_processor = GoogleVoiceProcessor()
+            try:
+                seen_voice_ids: set[str] = set()
+                pending_voice_events: list[dict[str, Any]] = []
+                for source in voice_sources:
+                    manifest_bundles = _load_google_voice_manifest_bundles(source)
+                    if manifest_bundles is not None:
+                        for bundle in manifest_bundles:
+                            event_id = str(bundle.get("event_id") or "")
+                            if not event_id or event_id in seen_voice_ids:
+                                continue
+                            seen_voice_ids.add(event_id)
+                            if getattr(args, "dry_run", False):
+                                preview_records.append(
+                                    {
+                                        "source_type": "google_voice",
+                                        "event_id": event_id,
+                                        "event_type": bundle.get("event_type"),
+                                        "subject": bundle.get("title"),
+                                        "date": bundle.get("date"),
+                                        "participants": list(bundle.get("participants") or []),
+                                        "attachment_count": len(list(bundle.get("attachment_paths") or [])),
+                                        "source_html": bundle.get("source_html_path"),
+                                        "manifest_reused": True,
+                                    }
+                                )
+                                continue
+                            matched_voice_records.append(bundle)
+                        continue
+
+                    parsed_voice = voice_processor.parse_takeout(source)
+                    for event in list(parsed_voice.get("events") or []):
+                        event_id = str(event.get("event_id") or "")
+                        if not event_id or event_id in seen_voice_ids:
+                            continue
+                        seen_voice_ids.add(event_id)
+                        if getattr(args, "dry_run", False):
+                            preview_records.append(
+                                {
+                                    "source_type": "google_voice",
+                                    "event_id": event_id,
+                                    "event_type": event.get("event_type"),
+                                    "subject": event.get("title"),
+                                    "date": event.get("timestamp"),
+                                    "participants": list(event.get("phone_numbers") or []),
+                                    "attachment_count": len(list(event.get("sidecar_paths") or [])),
+                                    "source_html": event.get("source_html"),
+                                    "manifest_reused": False,
+                                }
+                            )
+                            continue
+                        pending_voice_events.append(event)
+                if pending_voice_events:
+                    materialized = materialize_google_voice_events(
+                        pending_voice_events,
+                        output_dir=run_dir,
+                        start_index=1,
+                        filename_prefix="voice",
+                        manifest_name="google_voice_manifest.json",
+                        source=", ".join(voice_sources),
+                    )
+                    matched_voice_records.extend(list(materialized.get("bundles") or []))
+            finally:
+                voice_processor.close()
+
+        deduped_email_records: list[dict[str, Any]] = []
+        deduped_gmail_records: list[dict[str, Any]] = []
+        if matched_voice_records:
+            for email_record in matched_records:
+                matched_voice = _find_matching_google_voice_event(email_record, matched_voice_records)
+                if matched_voice is None:
+                    deduped_email_records.append(email_record)
+                    continue
+                dedupe_metadata = {
+                    "duplicate_of_source_type": "google_voice",
+                    "duplicate_of_event_id": matched_voice.get("event_id"),
+                    "duplicate_reason": "google_voice_takeout_match",
+                }
+                email_record["deduped"] = True
+                email_record["dedupe_metadata"] = dedupe_metadata
+                deduped_gmail_records.append(email_record)
+                matched_voice.setdefault("deduped_gmail_message_ids", []).append(email_record.get("message_id_header", ""))
+            matched_records = deduped_email_records
+        else:
+            deduped_gmail_records = []
     finally:
-        await processor.disconnect()
+        if processor is not None:
+            await processor.disconnect()
         _save_email_cache(output_root, cache_payload)
 
     manifest = {
@@ -800,7 +1033,7 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
         "server": args.server,
         "username": args.username,
         "auth_mode": auth_mode,
-        "folders": list(args.folder),
+        "folders": list(getattr(args, "folder", []) or []),
         "search": search_criteria,
         "complaint_terms": complaint_terms,
         "min_relevance_score": float(getattr(args, "min_relevance_score", 1.0)),
@@ -812,9 +1045,14 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
         "recipient_domain_targets": sorted(recipient_domain_targets),
         "scanned_message_count": scanned_message_count,
         "matched_email_count": len(matched_records),
+        "matched_google_voice_count": len(matched_voice_records),
+        "deduped_gmail_google_voice_count": len(deduped_gmail_records),
+        "google_voice_sources": [str(item or "") for item in list(getattr(args, "google_voice_source", []) or [])],
         "output_dir": str(run_dir),
         "cache_index_path": str(_cache_index_path(output_root)),
         "emails": matched_records,
+        "google_voice_events": matched_voice_records,
+        "deduped_gmail_google_voice_records": deduped_gmail_records,
         "mediator_evidence_records": [
             {
                 "title": item["evidence_title"],
@@ -836,6 +1074,29 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
                 },
             }
             for item in matched_records
+        ]
+        + [
+            {
+                "title": item["evidence_title"],
+                "kind": "document",
+                "source": "google_voice_import",
+                "content": (
+                    f"Title: {item['title']}\n"
+                    f"Event type: {item['event_type']}\n"
+                    f"Date: {item['date']}\n"
+                    f"Participants: {', '.join(item['participants'])}\n"
+                    f"Transcript path: {item['transcript_path']}"
+                ),
+                "attachment_names": [Path(path).name for path in item["attachment_paths"]],
+                "metadata": {
+                    "event_id": item["event_id"],
+                    "parsed_path": item["parsed_path"],
+                    "transcript_path": item["transcript_path"],
+                    "source_html_path": item["source_html_path"],
+                    "event_type": item["event_type"],
+                },
+            }
+            for item in matched_voice_records
         ],
     }
     if token_payload:
@@ -855,7 +1116,7 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
             "server": args.server,
             "username": args.username,
             "auth_mode": auth_mode,
-            "folders": list(args.folder),
+            "folders": list(getattr(args, "folder", []) or []),
             "search": search_criteria,
             "complaint_terms": complaint_terms,
             "min_relevance_score": float(getattr(args, "min_relevance_score", 1.0)),
@@ -866,8 +1127,11 @@ async def import_gmail_evidence(args: argparse.Namespace) -> dict[str, Any]:
             "from_domain_targets": sorted(from_domain_targets),
             "recipient_domain_targets": sorted(recipient_domain_targets),
             "scanned_message_count": scanned_message_count,
-            "matched_email_count": len(preview_records),
+            "matched_email_count": len([item for item in preview_records if item.get("source_type") != "google_voice"]),
+            "matched_google_voice_count": len([item for item in preview_records if item.get("source_type") == "google_voice"]),
+            "deduped_gmail_google_voice_count": 0,
             "preview": preview_records,
+            "google_voice_sources": [str(item or "") for item in list(getattr(args, "google_voice_source", []) or [])],
             "output_dir": str(run_dir),
         }
     manifest_path = run_dir / "email_import_manifest.json"
@@ -944,6 +1208,12 @@ def build_parser() -> argparse.ArgumentParser:
         action="append",
         default=None,
         help="IMAP folder to scan. Repeat to include multiple folders.",
+    )
+    parser.add_argument(
+        "--google-voice-source",
+        action="append",
+        default=[],
+        help="Path to a Google Voice Takeout directory or zip archive. Repeat to include multiple exports.",
     )
     parser.add_argument(
         "--address",
@@ -1107,23 +1377,25 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 async def _run(args: argparse.Namespace) -> int:
-    if not args.folder:
+    if not args.folder and not list(getattr(args, "google_voice_source", []) or []):
         args.folder = [DEFAULT_GMAIL_FOLDER]
+    include_gmail = bool(list(getattr(args, "folder", []) or []))
     auth_mode = _resolve_auth_mode(args)
-    if not args.username:
-        raise SystemExit(
-            "Missing Gmail username. Use --prompt-credentials, set GMAIL_USER, or pass --username."
-        )
-    if auth_mode == "gmail_oauth":
-        if not getattr(args, "gmail_oauth_client_secrets", None):
+    if include_gmail:
+        if not args.username:
             raise SystemExit(
-                "Gmail OAuth requires --gmail-oauth-client-secrets or GMAIL_OAUTH_CLIENT_SECRETS."
+                "Missing Gmail username. Use --prompt-credentials, set GMAIL_USER, or pass --username."
             )
-    elif not args.password:
-        raise SystemExit(
-            "Missing Gmail credentials. Use --prompt-credentials, --prompt-password, or set "
-            "GMAIL_USER and GMAIL_APP_PASSWORD."
-        )
+        if auth_mode == "gmail_oauth":
+            if not getattr(args, "gmail_oauth_client_secrets", None):
+                raise SystemExit(
+                    "Gmail OAuth requires --gmail-oauth-client-secrets or GMAIL_OAUTH_CLIENT_SECRETS."
+                )
+        elif not args.password:
+            raise SystemExit(
+                "Missing Gmail credentials. Use --prompt-credentials, --prompt-password, or set "
+                "GMAIL_USER and GMAIL_APP_PASSWORD."
+            )
     try:
         manifest = await import_gmail_evidence(args)
     except ConnectionError as exc:
@@ -1151,7 +1423,8 @@ def main(argv: list[str] | None = None) -> int:
     if not args.password:
         args.password = os.environ.get("GMAIL_APP_PASSWORD") or os.environ.get("EMAIL_PASS")
     auth_mode = _resolve_auth_mode(args)
-    if auth_mode != "gmail_oauth":
+    include_gmail = bool(list(getattr(args, "folder", []) or [])) or not list(getattr(args, "google_voice_source", []) or [])
+    if include_gmail and auth_mode != "gmail_oauth":
         args.username, args.password = resolve_gmail_credentials(
             gmail_user=str(args.username or ""),
             gmail_app_password=str(args.password or ""),

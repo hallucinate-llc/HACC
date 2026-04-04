@@ -1,0 +1,45 @@
+{
+  "manifest_path": "/home/barberb/HACC/evidence/email_imports/starworks5-master-case-email-import/email_import_manifest.json",
+  "graphrag_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-master-case-email-import/graphrag",
+  "email_count": 33,
+  "attachment_total": 206,
+  "knowledge_graph_summary": {
+    "total_entities": 1084,
+    "total_relationships": 486,
+    "entity_types": {
+      "claim": 5,
+      "fact": 635,
+      "date": 241,
+      "person": 55,
+      "organization": 134,
+      "evidence": 14
+    },
+    "relationship_types": {
+      "makes_claim": 5,
+      "follows_protected_activity": 78,
+      "occurred_on": 30,
+      "employed_by": 327,
+      "involves": 5,
+      "occurred_after": 26,
+      "causal_link": 1,
+      "associated_with": 14
+    },
+    "gaps": 151
+  },
+  "graph_path": "/home/barberb/HACC/evidence/email_imports/starworks5-master-case-email-import/graphrag/email_knowledge_graph.json",
+  "corpus_records_path": "/home/barberb/HACC/evidence/email_imports/starworks5-master-case-email-import/graphrag/email_corpus_records.json",
+  "duckdb_index": {
+    "status": "created",
+    "manifest_path": "/home/barberb/HACC/evidence/email_imports/starworks5-master-case-email-import/email_import_manifest.json",
+    "output_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-master-case-email-import/graphrag/duckdb",
+    "email_count": 33,
+    "append_mode": false,
+    "include_attachment_text": true,
+    "bm25_distinct_term_count": 7218,
+    "duckdb_path": "/home/barberb/HACC/evidence/email_imports/starworks5-master-case-email-import/graphrag/duckdb/email_search.duckdb",
+    "messages_parquet_path": "/home/barberb/HACC/evidence/email_imports/starworks5-master-case-email-import/graphrag/duckdb/email_messages.parquet",
+    "terms_parquet_path": "/home/barberb/HACC/evidence/email_imports/starworks5-master-case-email-import/graphrag/duckdb/email_terms.parquet",
+    "bm25_terms_parquet_path": "/home/barberb/HACC/evidence/email_imports/starworks5-master-case-email-import/graphrag/duckdb/email_bm25_terms.parquet"
+  },
+  "include_attachment_text_in_search": true
+}

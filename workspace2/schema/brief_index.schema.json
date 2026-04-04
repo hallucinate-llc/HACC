@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/brief_index.schema.json",
+  "title": "PackageBriefIndex",
+  "type": "object",
+  "required": [
+    "caseId",
+    "branch",
+    "activeOutcome",
+    "primaryKind",
+    "recommendedFirstStop",
+    "whyOpenThis",
+    "authorityTrust",
+    "sourceSummary",
+    "fitSummary",
+    "fitFindingSummary",
+    "warningSummary",
+    "warningLabelSummary",
+    "entries"
+  ],
+  "properties": {
+    "caseId": { "type": "string" },
+    "branch": { "type": "string" },
+    "activeOutcome": { "type": "string" },
+    "primaryKind": { "type": "string" },
+    "recommendedFirstStop": { "type": "string" },
+    "whyOpenThis": { "type": "string" },
+    "authorityTrust": {
+      "type": "object",
+      "required": [
+        "authorityCount",
+        "verifiedQuoteCount",
+        "paraphraseCount",
+        "missingCount",
+        "severity",
+        "label",
+        "advisory"
+      ],
+      "properties": {
+        "authorityCount": { "type": "integer", "minimum": 0 },
+        "verifiedQuoteCount": { "type": "integer", "minimum": 0 },
+        "paraphraseCount": { "type": "integer", "minimum": 0 },
+        "missingCount": { "type": "integer", "minimum": 0 },
+        "severity": { "type": "string", "enum": ["info", "warning"] },
+        "label": {
+          "type": "string",
+          "enum": ["fully_verified", "mixed_support", "paraphrase_heavy"]
+        },
+        "advisory": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "sourceSummary": {
+      "type": "object",
+      "required": [
+        "authorityCount",
+        "sourceVerifiedCount",
+        "sourceNormalizedCount",
+        "fullySourceVerified",
+        "fullySourceNormalized",
+        "sourceStatus"
+      ],
+      "properties": {
+        "authorityCount": { "type": "integer", "minimum": 0 },
+        "sourceVerifiedCount": { "type": "integer", "minimum": 0 },
+        "sourceNormalizedCount": { "type": "integer", "minimum": 0 },
+        "fullySourceVerified": { "type": "boolean" },
+        "fullySourceNormalized": { "type": "boolean" },
+        "sourceStatus": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "fitSummary": {
+      "type": "object",
+      "required": [
+        "authorityCount",
+        "directCount",
+        "analogicalCount",
+        "recordSupportCount",
+        "fitStatus"
+      ],
+      "properties": {
+        "authorityCount": { "type": "integer", "minimum": 0 },
+        "directCount": { "type": "integer", "minimum": 0 },
+        "analogicalCount": { "type": "integer", "minimum": 0 },
+        "recordSupportCount": { "type": "integer", "minimum": 0 },
+        "fitStatus": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "fitFindingSummary": {
+      "type": "object",
+      "required": ["hasFitFinding", "fitFinding", "fitFindingNote"],
+      "properties": {
+        "hasFitFinding": { "type": "boolean" },
+        "fitFinding": {
+          "type": "string",
+          "enum": ["direct_only", "analogical_support", "record_support_heavy", "unclassified"]
+        },
+        "fitFindingNote": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "warningSummary": {
+      "type": "object",
+      "required": ["hasWarnings", "warningEntryCount", "warningCounts"],
+      "properties": {
+        "hasWarnings": { "type": "boolean" },
+        "warningEntryCount": { "type": "integer", "minimum": 0 },
+        "warningCounts": {
+          "type": "object",
+          "propertyNames": {
+            "enum": ["mixed_support", "paraphrase_heavy"]
+          },
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        }
+      },
+      "additionalProperties": false
+    },
+    "warningLabelSummary": {
+      "type": "object",
+      "required": ["hasWarningLabel", "warningLabel", "warningEntryCount"],
+      "properties": {
+        "hasWarningLabel": { "type": "boolean" },
+        "warningLabel": {
+          "type": ["string", "null"],
+          "enum": ["mixed_support", "paraphrase_heavy", null]
+        },
+        "warningEntryCount": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "path", "format", "description", "whyOpenThis", "priority", "priorityLabel"],
+        "properties": {
+          "kind": { "type": "string" },
+          "path": { "type": "string" },
+          "format": { "type": "string" },
+          "description": { "type": "string" },
+          "whyOpenThis": { "type": "string" },
+          "priority": { "type": "integer", "minimum": 1 },
+          "priorityLabel": {
+            "type": "string",
+            "enum": ["primary", "secondary", "supporting"]
+          },
+          "trustWarning": {
+            "type": "object",
+            "required": ["severity", "label", "message"],
+            "properties": {
+              "severity": { "type": "string", "enum": ["warning"] },
+              "label": {
+                "type": "string",
+                "enum": ["mixed_support", "paraphrase_heavy"]
+              },
+              "message": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-04-04T19:25:40.094587+00:00",
+  "summary": {
+    "caseCount": 4,
+    "fullyVerifiedCases": 1,
+    "mixedSupportCases": 3,
+    "paraphraseHeavyCases": 1
+  },
+  "findings": [
+    {
+      "caseId": "live_in_aide_case_001",
+      "branch": "constructive_denial",
+      "severity": "info",
+      "title": "Fully verified authority baseline",
+      "detail": "All currently attached authority support is marked as verified_quote."
+    },
+    {
+      "caseId": "live_in_aide_case_effective_accommodation_001",
+      "branch": "effective_accommodation",
+      "severity": "warning",
+      "title": "Mixed authority support",
+      "detail": "This case mixes 3 verified quotes with 2 paraphrase supports, so downstream consumers should distinguish direct support from fallback grounding."
+    },
+    {
+      "caseId": "live_in_aide_case_no_violation_001",
+      "branch": "evidentiary_gap",
+      "severity": "warning",
+      "title": "Paraphrase-heavy authority support",
+      "detail": "This case uses 3 paraphrase supports and 2 verified quotes, so advocacy and memorandum outputs should be presented as lower-trust authority grounding."
+    },
+    {
+      "caseId": "live_in_aide_case_undue_burden_001",
+      "branch": "undue_burden_constructive_denial",
+      "severity": "warning",
+      "title": "Mixed authority support",
+      "detail": "This case mixes 4 verified quotes with 1 paraphrase supports, so downstream consumers should distinguish direct support from fallback grounding."
+    }
+  ]
+}

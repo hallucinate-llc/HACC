@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/authority_review.schema.json",
+  "title": "AuthorityReview",
+  "type": "object",
+  "required": ["caseId", "branch", "authorities"],
+  "properties": {
+    "caseId": { "type": "string" },
+    "branch": { "type": "string" },
+    "authorities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "label",
+          "kind",
+          "citation",
+          "court",
+          "year",
+          "pincite",
+          "sourceUrl",
+          "excerptKind",
+          "excerptText",
+          "proposition",
+          "fitKind",
+          "sourceVerified",
+          "sourceNormalized",
+          "supportStatus"
+        ],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "kind": { "type": "string" },
+          "citation": { "type": ["string", "null"] },
+          "court": { "type": ["string", "null"] },
+          "year": { "type": ["string", "null"] },
+          "pincite": { "type": ["string", "null"] },
+          "sourceUrl": { "type": ["string", "null"] },
+          "excerptKind": { "type": "string" },
+          "excerptText": { "type": "string" },
+          "proposition": { "type": "string" },
+          "fitKind": {
+            "type": "string",
+            "enum": ["direct", "analogical", "record_support"]
+          },
+          "sourceVerified": { "type": "boolean" },
+          "sourceNormalized": { "type": "boolean" },
+          "supportStatus": {
+            "type": "string",
+            "enum": ["verified_quote", "paraphrase", "missing"]
+          },
+          "buckets": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -604,3 +604,83 @@ def test_import_gmail_evidence_filters_by_complaint_relevance(tmp_path: Path) ->
 
     assert result["matched_email_count"] == 1
     assert result["preview"][0]["subject"] == "Termination hearing request"
+
+
+def test_import_gmail_evidence_materializes_bundles_after_dry_run_cache(tmp_path: Path) -> None:
+    message = _build_sample_message()
+    raw_bytes = message.as_bytes(policy=email.policy.default)
+
+    class _FakeProcessor:
+        def __init__(self, **_kwargs: object) -> None:
+            self.connection = object()
+
+        async def connect(self) -> None:
+            return None
+
+        async def disconnect(self) -> None:
+            return None
+
+        def _parse_email_message(self, parsed_message: EmailMessage, include_attachments: bool = True) -> dict[str, object]:
+            return {
+                "subject": parsed_message.get("Subject", ""),
+                "from": parsed_message.get("From", ""),
+                "to": parsed_message.get("To", ""),
+                "cc": parsed_message.get("Cc", ""),
+                "date": "2026-03-24T00:00:00+00:00",
+                "message_id_header": parsed_message.get("Message-ID", ""),
+                "attachments": [{"filename": "notice.pdf"}] if include_attachments else [],
+            }
+
+    base_args = dict(
+        address=["tenant@example.com"],
+        address_file=[],
+        from_address=[],
+        from_address_file=[],
+        to_address=[],
+        to_address_file=[],
+        complaint_query="termination notice",
+        complaint_keyword=[],
+        complaint_keyword_file=[],
+        min_relevance_score=1.0,
+        search="ALL",
+        since_date=None,
+        before_date=None,
+        subject_contains=None,
+        output_dir=str(tmp_path),
+        case_slug="demo",
+        server="imap.gmail.com",
+        port=993,
+        username="starworks5@gmail.com",
+        password="secret",
+        no_ssl=False,
+        timeout=30,
+        auth_mode="gmail_app_password",
+        gmail_oauth_client_secrets=None,
+        gmail_oauth_token_cache=None,
+        no_browser=False,
+        folder=["[Gmail]/All Mail"],
+        limit=10,
+    )
+
+    async def _run_import(dry_run: bool) -> dict[str, object]:
+        args = SimpleNamespace(**base_args, dry_run=dry_run)
+        with (
+            mock.patch.object(module, "EmailProcessor", _FakeProcessor),
+            mock.patch.object(
+                module,
+                "_fetch_folder_messages",
+                return_value=[(raw_bytes, message)],
+            ),
+        ):
+            return await module.import_gmail_evidence(args)
+
+    preview_result = module.anyio.run(lambda: _run_import(True))
+    assert preview_result["matched_email_count"] == 1
+
+    import_result = module.anyio.run(lambda: _run_import(False))
+    assert import_result["matched_email_count"] == 1
+    record = import_result["emails"][0]
+    assert record["bundle_dir"] != "."
+    assert Path(record["email_path"]).is_file()
+    assert Path(record["parsed_path"]).is_file()
+    assert Path(record["attachment_paths"][0]).is_file()

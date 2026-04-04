@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/audit_index.schema.json",
+  "title": "AuditIndex",
+  "type": "object",
+  "required": ["generatedAt", "recommendedFirstStop", "whyOpenThis", "entries"],
+  "properties": {
+    "generatedAt": { "type": "string" },
+    "recommendedFirstStop": { "type": "string" },
+    "whyOpenThis": { "type": "string" },
+    "refreshRuntime": {
+      "type": "object",
+      "required": ["status", "running", "startedAt", "completedAt", "elapsedSeconds", "elapsedHuman"],
+      "properties": {
+        "status": { "type": "string" },
+        "running": { "type": "boolean" },
+        "startedAt": { "type": "string" },
+        "completedAt": { "type": ["string", "null"] },
+        "elapsedSeconds": { "type": ["number", "null"] },
+        "elapsedHuman": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 16,
+      "items": {
+        "type": "object",
+        "required": ["kind", "jsonPath", "markdownPath", "description", "priorityHint", "whyOpenThis"],
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "authority_summary_matrix",
+              "authority_findings",
+              "source_findings",
+              "source_metadata_matrix",
+              "fit_matrix",
+              "fit_summary",
+              "fit_findings",
+              "fit_findings_summary",
+              "trust_matrix",
+              "warning_summary",
+              "warning_label_matrix",
+              "warning_entry_matrix",
+              "warning_entry_summary",
+              "warning_kind_matrix",
+              "warning_kind_summary",
+              "summary_index",
+              "case_audit_matrix"
+            ]
+          },
+          "jsonPath": { "type": "string" },
+          "markdownPath": { "type": "string" },
+          "description": { "type": "string" },
+          "whyOpenThis": { "type": "string" },
+          "priorityHint": {
+            "type": "string",
+            "enum": ["recommended", "primary", "secondary", "supporting"]
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

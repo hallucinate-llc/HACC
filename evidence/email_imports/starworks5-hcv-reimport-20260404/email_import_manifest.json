@@ -1,0 +1,3035 @@
+{
+  "status": "success",
+  "server": "imap.gmail.com",
+  "username": "starworks5@gmail.com",
+  "auth_mode": "gmail_app_password",
+  "folders": [
+    "[Gmail]/All Mail"
+  ],
+  "search": "SINCE \"1-Jan-2026\" SUBJECT \"HCV Orientation\"",
+  "complaint_terms": [
+    "hcv",
+    "orientation",
+    "voucher",
+    "accommodation",
+    "clackamas",
+    "living",
+    "room",
+    "transfer",
+    "portability",
+    "move"
+  ],
+  "min_relevance_score": 1.0,
+  "address_targets": [
+    "ktilton@clackamas.us"
+  ],
+  "from_address_targets": [],
+  "recipient_address_targets": [],
+  "domain_targets": [
+    "clackamas.us"
+  ],
+  "from_domain_targets": [],
+  "recipient_domain_targets": [],
+  "scanned_message_count": 28,
+  "matched_email_count": 28,
+  "output_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404",
+  "cache_index_path": "/home/barberb/HACC/evidence/email_imports/_email_cache/email_cache_index.json",
+  "emails": [
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0001-HCV-Orientation-92208aa189a24a18ac05be75916b5107-clackamas.us",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0001-HCV-Orientation-92208aa189a24a18ac05be75916b5107-clackamas.us/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0001-HCV-Orientation-92208aa189a24a18ac05be75916b5107-clackamas.us/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "HCV Orientation",
+      "date": "2026-03-17T19:29:55+00:00",
+      "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "to": "benjamin barber <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<92208aa189a24a18ac05be75916b5107@clackamas.us>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "HCV Orientation",
+      "relevance_score": 7.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "clackamas"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "21c8b207d908694005299c1a99890c739b24b3e4e43a66a86ab14a910993171b",
+      "raw_cid": "bafkreibbzczapwiinfaakkm4dkmysddttmslhzhehjtkq2vrjkiqteyxdm"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0002-Re-HCV-Orientation-CAMTdTS8OfKupu4q4GPc8CCFK7EfVKmxejh5uvmCHf-9Jrsi5-g-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0002-Re-HCV-Orientation-CAMTdTS8OfKupu4q4GPc8CCFK7EfVKmxejh5uvmCHf-9Jrsi5-g-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0002-Re-HCV-Orientation-CAMTdTS8OfKupu4q4GPc8CCFK7EfVKmxejh5uvmCHf-9Jrsi5-g-mail.gmail.com/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-17T17:34:42-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS8OfKupu4q4GPc8CCFK7EfVKmxejh5uvmCHf=9Jrsi5+g@mail.gmail.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 7.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "clackamas"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "9e5c45d468a5e4c3388a43cf69fcd3e98cd0d91a8255264346d303724e9fe3e2",
+      "raw_cid": "bafkreie6lrc5i2ff4tbtrcsdz5u7zu7jrtinsguckutegrwtanze5h7d4i"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "RE: HCV Orientation",
+      "date": "2026-03-18T20:33:26+00:00",
+      "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "to": "benjamin barber <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<b55920d9a97647479a3c38e12644c076@clackamas.us>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/attachments/Cortez-TRSW-3.18.26.pdf",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/attachments/9.-Left-Side-Combined_5.22.25-1.pdf",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/attachments/11.-Right-Side-Combined_5.22.25.pdf"
+      ],
+      "attachments": [
+        {
+          "filename": "Cortez-TRSW-3.18.26.pdf",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/attachments/Cortez-TRSW-3.18.26.pdf",
+          "size": 1052667,
+          "content_type": "application/pdf",
+          "sha256": "1154ffc327d7899d13f3ec9ed724c856d4ccd5ac2d3ae2680be65e18fc527f01"
+        },
+        {
+          "filename": "9.-Left-Side-Combined_5.22.25-1.pdf",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/attachments/9.-Left-Side-Combined_5.22.25-1.pdf",
+          "size": 3471646,
+          "content_type": "application/pdf",
+          "sha256": "7530bdb2bc7427932bceea678a3579d66c6d4262c1ba7e91dafba1e58e317a44"
+        },
+        {
+          "filename": "11.-Right-Side-Combined_5.22.25.pdf",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/attachments/11.-Right-Side-Combined_5.22.25.pdf",
+          "size": 4888446,
+          "content_type": "application/pdf",
+          "sha256": "c0528895d2994ff7ad5eddba9d3725f471f9cea6520854687e0dc44aae007cd4"
+        }
+      ],
+      "evidence_title": "RE: HCV Orientation",
+      "relevance_score": 7.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "clackamas"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "5890b4e6700a648c406303b18d333fc75489bb98602ee57e00947f31344ca05b",
+      "raw_cid": "bafkreicysc2om4akmsgeayydwggtgp6hkse3xgdaf3sx4aeup4ytitfalm"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "RE: HCV Orientation",
+      "date": "2026-03-19T17:27:27+00:00",
+      "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "to": "benjamin barber <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<384b5cd567d449f0b12b983bf00d576b@clackamas.us>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us/attachments/TRSW---JC---03.19.2026.pdf",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us/attachments/VO---JC---03.19.2026.pdf"
+      ],
+      "attachments": [
+        {
+          "filename": "TRSW---JC---03.19.2026.pdf",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us/attachments/TRSW---JC---03.19.2026.pdf",
+          "size": 215574,
+          "content_type": "application/pdf",
+          "sha256": "57d8476874f5326daa38196cc0bf124bd2ba5f382fdedc70f92b5a8da42d093d"
+        },
+        {
+          "filename": "VO---JC---03.19.2026.pdf",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us/attachments/VO---JC---03.19.2026.pdf",
+          "size": 289458,
+          "content_type": "application/pdf",
+          "sha256": "e03bfce8c682cfb8fbe3b525d3e56b4f6ff2450767090c5902b62a76f9fdc9b6"
+        }
+      ],
+      "evidence_title": "RE: HCV Orientation",
+      "relevance_score": 8.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "clackamas"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "83e85ddea2a6f3c900f10008839352879e108e93e66eb0be645681f201ee3bec",
+      "raw_cid": "bafkreied5bo55ivg6peqb4iabcbzguuhtyii5e7gn2yl4zcwqhzad3r35q"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0005-Re-HCV-Orientation-CAMTdTS-7kX-ZpOS-JnpgxhpG_Hm7mXxG_feovoA198VvH0V7jQ-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0005-Re-HCV-Orientation-CAMTdTS-7kX-ZpOS-JnpgxhpG_Hm7mXxG_feovoA198VvH0V7jQ-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0005-Re-HCV-Orientation-CAMTdTS-7kX-ZpOS-JnpgxhpG_Hm7mXxG_feovoA198VvH0V7jQ-mail.gmail.com/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-19T10:29:07-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS-7kX-ZpOS-JnpgxhpG_Hm7mXxG_feovoA198VvH0V7jQ@mail.gmail.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 8.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "clackamas"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "ab4a5967ecf7922450e158611c302cbcfe0df4b1e8ce8c8ec0fd9756975b3326",
+      "raw_cid": "bafkreifljjmwp3hxsisfbykymeodalf47yg7jmpiz2gi5qh5s5ljowztey"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0006-Re-HCV-Orientation-CAMTdTS9TCnQZBeKu2Y_Z-P3ORtUVn-8LSkWymHejw61JGu-mxA-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0006-Re-HCV-Orientation-CAMTdTS9TCnQZBeKu2Y_Z-P3ORtUVn-8LSkWymHejw61JGu-mxA-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0006-Re-HCV-Orientation-CAMTdTS9TCnQZBeKu2Y_Z-P3ORtUVn-8LSkWymHejw61JGu-mxA-mail.gmail.com/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-19T10:56:12-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS9TCnQZBeKu2Y_Z=P3ORtUVn+8LSkWymHejw61JGu-mxA@mail.gmail.com>",
+      "attachment_paths": [],
+      "attachments": [],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 8.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "clackamas"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "ce9f64d4a7ef3e6a544ecded4575c1c67e4e3ed02328ff60745934f278ef02bc",
+      "raw_cid": "bafkreigot5snjj7phzvfitwn5vcxlqogpzhd5ubdfd7wa5czgtzhr3ycxq"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0007-RE-HCV-Orientation-f9ca224dab4a4487bb20b9f7ff33afbe-clackamas.us",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0007-RE-HCV-Orientation-f9ca224dab4a4487bb20b9f7ff33afbe-clackamas.us/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0007-RE-HCV-Orientation-f9ca224dab4a4487bb20b9f7ff33afbe-clackamas.us/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "RE: HCV Orientation",
+      "date": "2026-03-19T20:43:19+00:00",
+      "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "to": "benjamin barber <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<f9ca224dab4a4487bb20b9f7ff33afbe@clackamas.us>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0007-RE-HCV-Orientation-f9ca224dab4a4487bb20b9f7ff33afbe-clackamas.us/attachments/Orientation---Required-Signatures-03.19.2026.pdf"
+      ],
+      "attachments": [
+        {
+          "filename": "Orientation---Required-Signatures-03.19.2026.pdf",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0007-RE-HCV-Orientation-f9ca224dab4a4487bb20b9f7ff33afbe-clackamas.us/attachments/Orientation---Required-Signatures-03.19.2026.pdf",
+          "size": 1056367,
+          "content_type": "application/pdf",
+          "sha256": "79e565c9b3d52e2906374de8d113ff345ffa757fac32934466fcc2a2391f1e1a"
+        }
+      ],
+      "evidence_title": "RE: HCV Orientation",
+      "relevance_score": 8.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "clackamas"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "f6293b9e1f737325c2562ca77b4dac6e2a5e23019eb208e99de10a77d9d1149b",
+      "raw_cid": "bafkreihwfe5z4h3toms4evrmu55u3ldofjpcgam6wieothpbbj35tuiutm"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-20T14:24:59-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW=NwOC0k23+63LQ@mail.gmail.com>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/attachments/Image_260320_142321.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/attachments/Image_260320_142448.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/attachments/Image_260320_142045.jpeg"
+      ],
+      "attachments": [
+        {
+          "filename": "Image_260320_142321.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/attachments/Image_260320_142321.jpeg",
+          "size": 2818328,
+          "content_type": "image/jpeg",
+          "sha256": "b816e1a4626469ba5c624cfda3084483c77bcaf077aa5c4cdedce6575c6072b6"
+        },
+        {
+          "filename": "Image_260320_142448.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/attachments/Image_260320_142448.jpeg",
+          "size": 2304704,
+          "content_type": "image/jpeg",
+          "sha256": "be04d3f3baa3692a9c8eb852dcd1007ec5784fd209fc16d2e0c079f5cfcc8f48"
+        },
+        {
+          "filename": "Image_260320_142045.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/attachments/Image_260320_142045.jpeg",
+          "size": 2435692,
+          "content_type": "image/jpeg",
+          "sha256": "72f9c711e3c3a4f23e66bf6e26f743cb623fbb27fd6909739598f52d5cb0dc4e"
+        }
+      ],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 9.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "accommodation",
+        "clackamas"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "88bb2325d71dfe2f9148176b5f21cfbbe91b6745a054e19b602faf7de5a07e94",
+      "raw_cid": "bafkreieixmrslvy57yxzcsaxnnpsdt535enwornaktqzwybpv566lid6sq"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "RE: HCV Orientation",
+      "date": "2026-03-20T22:54:20+00:00",
+      "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "to": "benjamin barber <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<0cb1a9bce9ce436ba29b873de4aef556@clackamas.us>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/attachments/image001.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/attachments/image002.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/attachments/image003.jpg"
+      ],
+      "attachments": [
+        {
+          "filename": "image001.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/attachments/image001.jpg",
+          "size": 3287761,
+          "content_type": "image/jpeg",
+          "sha256": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f"
+        },
+        {
+          "filename": "image002.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/attachments/image002.jpg",
+          "size": 3756568,
+          "content_type": "image/jpeg",
+          "sha256": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943"
+        },
+        {
+          "filename": "image003.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/attachments/image003.jpg",
+          "size": 3111479,
+          "content_type": "image/jpeg",
+          "sha256": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095"
+        }
+      ],
+      "evidence_title": "RE: HCV Orientation",
+      "relevance_score": 9.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "accommodation",
+        "clackamas"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "258597b28a38bcfaa46df02ecd95c88cfb3446b0cdb667925867e25992ce4369",
+      "raw_cid": "bafkreibfqwl3fcryxt5ki3pqf3gzlsem7m2enmgnwztzewdh4jmzftsdne"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-20T16:02:01-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS9baFybogyP5synzuGhf-OV=yAMTgrZNdG=k=9HBKfvhA@mail.gmail.com>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/attachments/Image_260320_142321.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/attachments/Image_260320_142448.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/attachments/Image_260320_142045.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/attachments/output.pdf"
+      ],
+      "attachments": [
+        {
+          "filename": "Image_260320_142321.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/attachments/Image_260320_142321.jpeg",
+          "size": 2818328,
+          "content_type": "image/jpeg",
+          "sha256": "b816e1a4626469ba5c624cfda3084483c77bcaf077aa5c4cdedce6575c6072b6"
+        },
+        {
+          "filename": "Image_260320_142448.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/attachments/Image_260320_142448.jpeg",
+          "size": 2304704,
+          "content_type": "image/jpeg",
+          "sha256": "be04d3f3baa3692a9c8eb852dcd1007ec5784fd209fc16d2e0c079f5cfcc8f48"
+        },
+        {
+          "filename": "Image_260320_142045.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/attachments/Image_260320_142045.jpeg",
+          "size": 2435692,
+          "content_type": "image/jpeg",
+          "sha256": "72f9c711e3c3a4f23e66bf6e26f743cb623fbb27fd6909739598f52d5cb0dc4e"
+        },
+        {
+          "filename": "output.pdf",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/attachments/output.pdf",
+          "size": 231236,
+          "content_type": "application/pdf",
+          "sha256": "f2049ebcdb4d905af66793314c672ab6f762d591c8f0616225ae14e6302c2a1d"
+        }
+      ],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 9.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "accommodation",
+        "clackamas"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "2a0d38c657121b881a2c28bba90eeb3ccb0e238f12f381bf61251fc81e9554b0",
+      "raw_cid": "bafkreibkbu4mmvysdoebulbixouq52z4zmhchdys6oa36yjfd7eb5fkuwa"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-20T16:09:59-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC=pg@mail.gmail.com>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/attachments/image001.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/attachments/Image_260320_160954.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/attachments/image002.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/attachments/image003.jpg"
+      ],
+      "attachments": [
+        {
+          "filename": "image001.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/attachments/image001.jpg",
+          "size": 3287761,
+          "content_type": "image/jpeg",
+          "sha256": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f"
+        },
+        {
+          "filename": "Image_260320_160954.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/attachments/Image_260320_160954.jpeg",
+          "size": 2910640,
+          "content_type": "image/jpeg",
+          "sha256": "5d5477ec937e21a3d23d005f423be2e484a30363418a9bad3474d26f6016e0fe"
+        },
+        {
+          "filename": "image002.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/attachments/image002.jpg",
+          "size": 3756568,
+          "content_type": "image/jpeg",
+          "sha256": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943"
+        },
+        {
+          "filename": "image003.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/attachments/image003.jpg",
+          "size": 3111479,
+          "content_type": "image/jpeg",
+          "sha256": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095"
+        }
+      ],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 9.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "accommodation",
+        "clackamas"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "0dc006bae96b8a6defde753a4d1277343f71590c0d72f8d6bcaec1c368e1f803",
+      "raw_cid": "bafkreianyadlv2llrjw67xtvhjgre5zuh5yvsdanol4nnpfoyhbwrypyam"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-20T16:53:12-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4=pY6igg@mail.gmail.com>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/Image_260320_160954.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/image001.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/IMG_2106.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/image002.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/image003.jpg"
+      ],
+      "attachments": [
+        {
+          "filename": "Image_260320_160954.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/Image_260320_160954.jpeg",
+          "size": 2910640,
+          "content_type": "image/jpeg",
+          "sha256": "5d5477ec937e21a3d23d005f423be2e484a30363418a9bad3474d26f6016e0fe"
+        },
+        {
+          "filename": "image001.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/image001.jpg",
+          "size": 3287761,
+          "content_type": "image/jpeg",
+          "sha256": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f"
+        },
+        {
+          "filename": "IMG_2106.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/IMG_2106.jpeg",
+          "size": 2630954,
+          "content_type": "image/jpeg",
+          "sha256": "30818854e2a9aba1d51fbdd06218497848a2fe5c0a71e400a6d403295cb7f7ad"
+        },
+        {
+          "filename": "image002.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/image002.jpg",
+          "size": 3756568,
+          "content_type": "image/jpeg",
+          "sha256": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943"
+        },
+        {
+          "filename": "image003.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/attachments/image003.jpg",
+          "size": 3111479,
+          "content_type": "image/jpeg",
+          "sha256": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095"
+        }
+      ],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 9.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "accommodation",
+        "clackamas"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "60a933557bc428903035299b6c1f7d24b90fa55b43951b27f8cbbe6dfc0d5d51",
+      "raw_cid": "bafkreidavezvk66efcidanjjtnwb67jexeh2kw2dsunsp6glxzw7ydk5ke"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0013-Re-HCV-Orientation-CAMTdTS9NEWAUyCO506wH81m2-8f7gyRPWR6C8RA9FApvMzxDRw-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0013-Re-HCV-Orientation-CAMTdTS9NEWAUyCO506wH81m2-8f7gyRPWR6C8RA9FApvMzxDRw-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0013-Re-HCV-Orientation-CAMTdTS9NEWAUyCO506wH81m2-8f7gyRPWR6C8RA9FApvMzxDRw-mail.gmail.com/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-21T17:04:21-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS9NEWAUyCO506wH81m2=8f7gyRPWR6C8RA9FApvMzxDRw@mail.gmail.com>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0013-Re-HCV-Orientation-CAMTdTS9NEWAUyCO506wH81m2-8f7gyRPWR6C8RA9FApvMzxDRw-mail.gmail.com/attachments/Image_260320_160954.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0013-Re-HCV-Orientation-CAMTdTS9NEWAUyCO506wH81m2-8f7gyRPWR6C8RA9FApvMzxDRw-mail.gmail.com/attachments/image001.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0013-Re-HCV-Orientation-CAMTdTS9NEWAUyCO506wH81m2-8f7gyRPWR6C8RA9FApvMzxDRw-mail.gmail.com/attachments/IMG_2106.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0013-Re-HCV-Orientation-CAMTdTS9NEWAUyCO506wH81m2-8f7gyRPWR6C8RA9FApvMzxDRw-mail.gmail.com/attachments/image002.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0013-Re-HCV-Orientation-CAMTdTS9NEWAUyCO506wH81m2-8f7gyRPWR6C8RA9FApvMzxDRw-mail.gmail.com/attachments/image003.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0013-Re-HCV-Orientation-CAMTdTS9NEWAUyCO506wH81m2-8f7gyRPWR6C8RA9FApvMzxDRw-mail.gmail.com/attachments/image.png"
+      ],
+      "attachments": [
+        {
+          "filename": "Image_260320_160954.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0013-Re-HCV-Orientation-CAMTdTS9NEWAUyCO506wH81m2-8f7gyRPWR6C8RA9FApvMzxDRw-mail.gmail.com/attachments/Image_260320_160954.jpeg",
+          "size": 2910640,
+          "content_type": "image/jpeg",
+          "sha256": "5d5477ec937e21a3d23d005f423be2e484a30363418a9bad3474d26f6016e0fe"
+        },
+        {
+          "filename": "image001.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0013-Re-HCV-Orientation-CAMTdTS9NEWAUyCO506wH81m2-8f7gyRPWR6C8RA9FApvMzxDRw-mail.gmail.com/attachments/image001.jpg",
+          "size": 3287761,
+          "content_type": "image/jpeg",
+          "sha256": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f"
+        },
+        {
+          "filename": "IMG_2106.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0013-Re-HCV-Orientation-CAMTdTS9NEWAUyCO506wH81m2-8f7gyRPWR6C8RA9FApvMzxDRw-mail.gmail.com/attachments/IMG_2106.jpeg",
+          "size": 2630954,
+          "content_type": "image/jpeg",
+          "sha256": "30818854e2a9aba1d51fbdd06218497848a2fe5c0a71e400a6d403295cb7f7ad"
+        },
+        {
+          "filename": "image002.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0013-Re-HCV-Orientation-CAMTdTS9NEWAUyCO506wH81m2-8f7gyRPWR6C8RA9FApvMzxDRw-mail.gmail.com/attachments/image002.jpg",
+          "size": 3756568,
+          "content_type": "image/jpeg",
+          "sha256": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943"
+        },
+        {
+          "filename": "image003.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0013-Re-HCV-Orientation-CAMTdTS9NEWAUyCO506wH81m2-8f7gyRPWR6C8RA9FApvMzxDRw-mail.gmail.com/attachments/image003.jpg",
+          "size": 3111479,
+          "content_type": "image/jpeg",
+          "sha256": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095"
+        },
+        {
+          "filename": "image.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0013-Re-HCV-Orientation-CAMTdTS9NEWAUyCO506wH81m2-8f7gyRPWR6C8RA9FApvMzxDRw-mail.gmail.com/attachments/image.png",
+          "size": 856705,
+          "content_type": "image/png",
+          "sha256": "0569034f41829527a39574e75f6b158a67ac55e051621a90f4ba3f2f9e44bfd6"
+        }
+      ],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 9.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "accommodation",
+        "clackamas"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "500c4ae11032332286959db7d15906bf9294bcff6e69dfe7969d73c6e46fd8a1",
+      "raw_cid": "bafkreicqbrfocebsgmrinfm5w7ivsbv7skklz73onhp6pfu5opdoi36yue"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0014-Re-HCV-Orientation-CAMTdTS9omi8-gsK-_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0014-Re-HCV-Orientation-CAMTdTS9omi8-gsK-_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0014-Re-HCV-Orientation-CAMTdTS9omi8-gsK-_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw-mail.gmail.com/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-24T13:32:22-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS9omi8-gsK+_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw@mail.gmail.com>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0014-Re-HCV-Orientation-CAMTdTS9omi8-gsK-_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw-mail.gmail.com/attachments/Image_260320_160954.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0014-Re-HCV-Orientation-CAMTdTS9omi8-gsK-_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw-mail.gmail.com/attachments/image001.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0014-Re-HCV-Orientation-CAMTdTS9omi8-gsK-_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw-mail.gmail.com/attachments/IMG_2106.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0014-Re-HCV-Orientation-CAMTdTS9omi8-gsK-_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw-mail.gmail.com/attachments/image002.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0014-Re-HCV-Orientation-CAMTdTS9omi8-gsK-_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw-mail.gmail.com/attachments/image003.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0014-Re-HCV-Orientation-CAMTdTS9omi8-gsK-_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw-mail.gmail.com/attachments/image.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0014-Re-HCV-Orientation-CAMTdTS9omi8-gsK-_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw-mail.gmail.com/attachments/Reasonable-accomidation.pdf"
+      ],
+      "attachments": [
+        {
+          "filename": "Image_260320_160954.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0014-Re-HCV-Orientation-CAMTdTS9omi8-gsK-_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw-mail.gmail.com/attachments/Image_260320_160954.jpeg",
+          "size": 2910640,
+          "content_type": "image/jpeg",
+          "sha256": "5d5477ec937e21a3d23d005f423be2e484a30363418a9bad3474d26f6016e0fe"
+        },
+        {
+          "filename": "image001.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0014-Re-HCV-Orientation-CAMTdTS9omi8-gsK-_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw-mail.gmail.com/attachments/image001.jpg",
+          "size": 3287761,
+          "content_type": "image/jpeg",
+          "sha256": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f"
+        },
+        {
+          "filename": "IMG_2106.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0014-Re-HCV-Orientation-CAMTdTS9omi8-gsK-_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw-mail.gmail.com/attachments/IMG_2106.jpeg",
+          "size": 2630954,
+          "content_type": "image/jpeg",
+          "sha256": "30818854e2a9aba1d51fbdd06218497848a2fe5c0a71e400a6d403295cb7f7ad"
+        },
+        {
+          "filename": "image002.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0014-Re-HCV-Orientation-CAMTdTS9omi8-gsK-_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw-mail.gmail.com/attachments/image002.jpg",
+          "size": 3756568,
+          "content_type": "image/jpeg",
+          "sha256": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943"
+        },
+        {
+          "filename": "image003.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0014-Re-HCV-Orientation-CAMTdTS9omi8-gsK-_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw-mail.gmail.com/attachments/image003.jpg",
+          "size": 3111479,
+          "content_type": "image/jpeg",
+          "sha256": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095"
+        },
+        {
+          "filename": "image.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0014-Re-HCV-Orientation-CAMTdTS9omi8-gsK-_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw-mail.gmail.com/attachments/image.png",
+          "size": 856705,
+          "content_type": "image/png",
+          "sha256": "0569034f41829527a39574e75f6b158a67ac55e051621a90f4ba3f2f9e44bfd6"
+        },
+        {
+          "filename": "Reasonable-accomidation.pdf",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0014-Re-HCV-Orientation-CAMTdTS9omi8-gsK-_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw-mail.gmail.com/attachments/Reasonable-accomidation.pdf",
+          "size": 5323115,
+          "content_type": "application/pdf",
+          "sha256": "143e7cb505aa11c1e5172f616cd7dd8f871cc4ef7fec1671e5c6567ab794090e"
+        }
+      ],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 9.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "accommodation",
+        "clackamas"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "105f988e6e8e333f1a91a48b1fcf715af2d5f79ad681157c8d792120aeb148a0",
+      "raw_cid": "bafkreiaql6mi43uogm7rvenermp464k26lk7pgwwqekxzdlzeeqk5mkiua"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0015-Re-HCV-Orientation-CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0015-Re-HCV-Orientation-CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0015-Re-HCV-Orientation-CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw-mail.gmail.com/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-24T14:05:28-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw@mail.gmail.com>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0015-Re-HCV-Orientation-CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw-mail.gmail.com/attachments/image001.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0015-Re-HCV-Orientation-CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw-mail.gmail.com/attachments/image003.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0015-Re-HCV-Orientation-CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw-mail.gmail.com/attachments/IMG_2106.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0015-Re-HCV-Orientation-CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw-mail.gmail.com/attachments/IMG_2113.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0015-Re-HCV-Orientation-CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw-mail.gmail.com/attachments/image002.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0015-Re-HCV-Orientation-CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw-mail.gmail.com/attachments/image.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0015-Re-HCV-Orientation-CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw-mail.gmail.com/attachments/Image_260320_160954.jpeg"
+      ],
+      "attachments": [
+        {
+          "filename": "image001.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0015-Re-HCV-Orientation-CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw-mail.gmail.com/attachments/image001.jpg",
+          "size": 3287761,
+          "content_type": "image/jpeg",
+          "sha256": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f"
+        },
+        {
+          "filename": "image003.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0015-Re-HCV-Orientation-CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw-mail.gmail.com/attachments/image003.jpg",
+          "size": 3111479,
+          "content_type": "image/jpeg",
+          "sha256": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095"
+        },
+        {
+          "filename": "IMG_2106.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0015-Re-HCV-Orientation-CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw-mail.gmail.com/attachments/IMG_2106.jpeg",
+          "size": 2630954,
+          "content_type": "image/jpeg",
+          "sha256": "30818854e2a9aba1d51fbdd06218497848a2fe5c0a71e400a6d403295cb7f7ad"
+        },
+        {
+          "filename": "IMG_2113.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0015-Re-HCV-Orientation-CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw-mail.gmail.com/attachments/IMG_2113.jpeg",
+          "size": 2583521,
+          "content_type": "image/jpeg",
+          "sha256": "f3ece7262929406203ac50c169a6ef0a170a17c20c0f101eddf249d6dbdcb1f5"
+        },
+        {
+          "filename": "image002.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0015-Re-HCV-Orientation-CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw-mail.gmail.com/attachments/image002.jpg",
+          "size": 3756568,
+          "content_type": "image/jpeg",
+          "sha256": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943"
+        },
+        {
+          "filename": "image.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0015-Re-HCV-Orientation-CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw-mail.gmail.com/attachments/image.png",
+          "size": 856705,
+          "content_type": "image/png",
+          "sha256": "0569034f41829527a39574e75f6b158a67ac55e051621a90f4ba3f2f9e44bfd6"
+        },
+        {
+          "filename": "Image_260320_160954.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0015-Re-HCV-Orientation-CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw-mail.gmail.com/attachments/Image_260320_160954.jpeg",
+          "size": 2910640,
+          "content_type": "image/jpeg",
+          "sha256": "5d5477ec937e21a3d23d005f423be2e484a30363418a9bad3474d26f6016e0fe"
+        }
+      ],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 9.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "accommodation",
+        "clackamas"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "3e1db001966afada8a2258e63c42673c948762bc4162c466f7be6aece1d39189",
+      "raw_cid": "bafkreib6dwyadftk7lniuisy4y6eezz4ssdwfpcbmlcgn556nlwodu4rre"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0016-Re-HCV-Orientation-CAMTdTS8krRLqrv62_DYwGHwvNiuLomQBb6guRUxLxFqbOv16ZA-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0016-Re-HCV-Orientation-CAMTdTS8krRLqrv62_DYwGHwvNiuLomQBb6guRUxLxFqbOv16ZA-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0016-Re-HCV-Orientation-CAMTdTS8krRLqrv62_DYwGHwvNiuLomQBb6guRUxLxFqbOv16ZA-mail.gmail.com/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-25T12:47:03-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS8krRLqrv62_DYwGHwvNiuLomQBb6guRUxLxFqbOv16ZA@mail.gmail.com>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0016-Re-HCV-Orientation-CAMTdTS8krRLqrv62_DYwGHwvNiuLomQBb6guRUxLxFqbOv16ZA-mail.gmail.com/attachments/image001.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0016-Re-HCV-Orientation-CAMTdTS8krRLqrv62_DYwGHwvNiuLomQBb6guRUxLxFqbOv16ZA-mail.gmail.com/attachments/image003.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0016-Re-HCV-Orientation-CAMTdTS8krRLqrv62_DYwGHwvNiuLomQBb6guRUxLxFqbOv16ZA-mail.gmail.com/attachments/IMG_2106.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0016-Re-HCV-Orientation-CAMTdTS8krRLqrv62_DYwGHwvNiuLomQBb6guRUxLxFqbOv16ZA-mail.gmail.com/attachments/IMG_2113.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0016-Re-HCV-Orientation-CAMTdTS8krRLqrv62_DYwGHwvNiuLomQBb6guRUxLxFqbOv16ZA-mail.gmail.com/attachments/image002.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0016-Re-HCV-Orientation-CAMTdTS8krRLqrv62_DYwGHwvNiuLomQBb6guRUxLxFqbOv16ZA-mail.gmail.com/attachments/image.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0016-Re-HCV-Orientation-CAMTdTS8krRLqrv62_DYwGHwvNiuLomQBb6guRUxLxFqbOv16ZA-mail.gmail.com/attachments/Image_260320_160954.jpeg"
+      ],
+      "attachments": [
+        {
+          "filename": "image001.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0016-Re-HCV-Orientation-CAMTdTS8krRLqrv62_DYwGHwvNiuLomQBb6guRUxLxFqbOv16ZA-mail.gmail.com/attachments/image001.jpg",
+          "size": 3287761,
+          "content_type": "image/jpeg",
+          "sha256": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f"
+        },
+        {
+          "filename": "image003.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0016-Re-HCV-Orientation-CAMTdTS8krRLqrv62_DYwGHwvNiuLomQBb6guRUxLxFqbOv16ZA-mail.gmail.com/attachments/image003.jpg",
+          "size": 3111479,
+          "content_type": "image/jpeg",
+          "sha256": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095"
+        },
+        {
+          "filename": "IMG_2106.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0016-Re-HCV-Orientation-CAMTdTS8krRLqrv62_DYwGHwvNiuLomQBb6guRUxLxFqbOv16ZA-mail.gmail.com/attachments/IMG_2106.jpeg",
+          "size": 2630954,
+          "content_type": "image/jpeg",
+          "sha256": "30818854e2a9aba1d51fbdd06218497848a2fe5c0a71e400a6d403295cb7f7ad"
+        },
+        {
+          "filename": "IMG_2113.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0016-Re-HCV-Orientation-CAMTdTS8krRLqrv62_DYwGHwvNiuLomQBb6guRUxLxFqbOv16ZA-mail.gmail.com/attachments/IMG_2113.jpeg",
+          "size": 2583521,
+          "content_type": "image/jpeg",
+          "sha256": "f3ece7262929406203ac50c169a6ef0a170a17c20c0f101eddf249d6dbdcb1f5"
+        },
+        {
+          "filename": "image002.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0016-Re-HCV-Orientation-CAMTdTS8krRLqrv62_DYwGHwvNiuLomQBb6guRUxLxFqbOv16ZA-mail.gmail.com/attachments/image002.jpg",
+          "size": 3756568,
+          "content_type": "image/jpeg",
+          "sha256": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943"
+        },
+        {
+          "filename": "image.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0016-Re-HCV-Orientation-CAMTdTS8krRLqrv62_DYwGHwvNiuLomQBb6guRUxLxFqbOv16ZA-mail.gmail.com/attachments/image.png",
+          "size": 856705,
+          "content_type": "image/png",
+          "sha256": "0569034f41829527a39574e75f6b158a67ac55e051621a90f4ba3f2f9e44bfd6"
+        },
+        {
+          "filename": "Image_260320_160954.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0016-Re-HCV-Orientation-CAMTdTS8krRLqrv62_DYwGHwvNiuLomQBb6guRUxLxFqbOv16ZA-mail.gmail.com/attachments/Image_260320_160954.jpeg",
+          "size": 2910640,
+          "content_type": "image/jpeg",
+          "sha256": "5d5477ec937e21a3d23d005f423be2e484a30363418a9bad3474d26f6016e0fe"
+        }
+      ],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 9.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "accommodation",
+        "clackamas"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "e58181bc1af1f1dc54cda236a0f4078d2a3013be39acec167471ca12a91c63e1",
+      "raw_cid": "bafkreihfqga3ygxr6hofjtncg2qpib4nfiybhprzvtwbm5drzijkshdd4e"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "RE: HCV Orientation",
+      "date": "2026-03-26T02:39:04+00:00",
+      "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "to": "benjamin barber <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<a0136cad0c5f44b984403575346f8d34@clackamas.us>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image001.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image002.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image003.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image004.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image005.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image006.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image007.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/Voucher-3.20.26.pdf"
+      ],
+      "attachments": [
+        {
+          "filename": "image001.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image001.jpg",
+          "size": 2694789,
+          "content_type": "image/jpeg",
+          "sha256": "3c861b15574b1bf7a33e9b142909c336fbee4cc1c3caad8dc410d8cc1e3e4274"
+        },
+        {
+          "filename": "image002.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image002.png",
+          "size": 856705,
+          "content_type": "image/png",
+          "sha256": "0569034f41829527a39574e75f6b158a67ac55e051621a90f4ba3f2f9e44bfd6"
+        },
+        {
+          "filename": "image003.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image003.jpg",
+          "size": 2764615,
+          "content_type": "image/jpeg",
+          "sha256": "b7951488e788e37eb172d9c3eb0f218856e82f9bc1fac462dca911c2664550a8"
+        },
+        {
+          "filename": "image004.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image004.jpg",
+          "size": 3897410,
+          "content_type": "image/jpeg",
+          "sha256": "b1a2d6e4c9bf0d0f698ad665c243a2c2f03c5d883ac8d2a81a8758084bbd7ced"
+        },
+        {
+          "filename": "image005.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image005.jpg",
+          "size": 3287761,
+          "content_type": "image/jpeg",
+          "sha256": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f"
+        },
+        {
+          "filename": "image006.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image006.jpg",
+          "size": 3756568,
+          "content_type": "image/jpeg",
+          "sha256": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943"
+        },
+        {
+          "filename": "image007.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image007.jpg",
+          "size": 3111479,
+          "content_type": "image/jpeg",
+          "sha256": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095"
+        },
+        {
+          "filename": "Voucher-3.20.26.pdf",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/Voucher-3.20.26.pdf",
+          "size": 394331,
+          "content_type": "application/pdf",
+          "sha256": "6ba8531a16e790019f1db9331a4608946241cfa429a9189ffcd82ca4facb2241"
+        }
+      ],
+      "evidence_title": "RE: HCV Orientation",
+      "relevance_score": 10.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "accommodation",
+        "clackamas",
+        "move"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "a1784c2e08853f682ae3115dc004dbe107e86e8612344bee60c3af34364ccb4b",
+      "raw_cid": "bafkreifbpbgc4cefh5ucvyyrlxaajw7ba7ug5bqsgrf64ygdv42dmtgljm"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0018-Re-HCV-Orientation-CAMTdTS_8qnH3NG-ZNPUa-uAJG6tCH2aBdJZ7RA-TccPo-e5vQ-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0018-Re-HCV-Orientation-CAMTdTS_8qnH3NG-ZNPUa-uAJG6tCH2aBdJZ7RA-TccPo-e5vQ-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0018-Re-HCV-Orientation-CAMTdTS_8qnH3NG-ZNPUa-uAJG6tCH2aBdJZ7RA-TccPo-e5vQ-mail.gmail.com/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-25T19:46:06-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<CAMTdTS_8qnH3NG+ZNPUa=uAJG6tCH2aBdJZ7RA++TccPo-e5vQ@mail.gmail.com>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0018-Re-HCV-Orientation-CAMTdTS_8qnH3NG-ZNPUa-uAJG6tCH2aBdJZ7RA-TccPo-e5vQ-mail.gmail.com/attachments/image001.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0018-Re-HCV-Orientation-CAMTdTS_8qnH3NG-ZNPUa-uAJG6tCH2aBdJZ7RA-TccPo-e5vQ-mail.gmail.com/attachments/image002.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0018-Re-HCV-Orientation-CAMTdTS_8qnH3NG-ZNPUa-uAJG6tCH2aBdJZ7RA-TccPo-e5vQ-mail.gmail.com/attachments/image003.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0018-Re-HCV-Orientation-CAMTdTS_8qnH3NG-ZNPUa-uAJG6tCH2aBdJZ7RA-TccPo-e5vQ-mail.gmail.com/attachments/image004.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0018-Re-HCV-Orientation-CAMTdTS_8qnH3NG-ZNPUa-uAJG6tCH2aBdJZ7RA-TccPo-e5vQ-mail.gmail.com/attachments/image005.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0018-Re-HCV-Orientation-CAMTdTS_8qnH3NG-ZNPUa-uAJG6tCH2aBdJZ7RA-TccPo-e5vQ-mail.gmail.com/attachments/image006.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0018-Re-HCV-Orientation-CAMTdTS_8qnH3NG-ZNPUa-uAJG6tCH2aBdJZ7RA-TccPo-e5vQ-mail.gmail.com/attachments/image007.jpg"
+      ],
+      "attachments": [
+        {
+          "filename": "image001.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0018-Re-HCV-Orientation-CAMTdTS_8qnH3NG-ZNPUa-uAJG6tCH2aBdJZ7RA-TccPo-e5vQ-mail.gmail.com/attachments/image001.jpg",
+          "size": 2694789,
+          "content_type": "image/jpeg",
+          "sha256": "3c861b15574b1bf7a33e9b142909c336fbee4cc1c3caad8dc410d8cc1e3e4274"
+        },
+        {
+          "filename": "image002.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0018-Re-HCV-Orientation-CAMTdTS_8qnH3NG-ZNPUa-uAJG6tCH2aBdJZ7RA-TccPo-e5vQ-mail.gmail.com/attachments/image002.png",
+          "size": 856705,
+          "content_type": "image/png",
+          "sha256": "0569034f41829527a39574e75f6b158a67ac55e051621a90f4ba3f2f9e44bfd6"
+        },
+        {
+          "filename": "image003.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0018-Re-HCV-Orientation-CAMTdTS_8qnH3NG-ZNPUa-uAJG6tCH2aBdJZ7RA-TccPo-e5vQ-mail.gmail.com/attachments/image003.jpg",
+          "size": 2764615,
+          "content_type": "image/jpeg",
+          "sha256": "b7951488e788e37eb172d9c3eb0f218856e82f9bc1fac462dca911c2664550a8"
+        },
+        {
+          "filename": "image004.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0018-Re-HCV-Orientation-CAMTdTS_8qnH3NG-ZNPUa-uAJG6tCH2aBdJZ7RA-TccPo-e5vQ-mail.gmail.com/attachments/image004.jpg",
+          "size": 3897410,
+          "content_type": "image/jpeg",
+          "sha256": "b1a2d6e4c9bf0d0f698ad665c243a2c2f03c5d883ac8d2a81a8758084bbd7ced"
+        },
+        {
+          "filename": "image005.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0018-Re-HCV-Orientation-CAMTdTS_8qnH3NG-ZNPUa-uAJG6tCH2aBdJZ7RA-TccPo-e5vQ-mail.gmail.com/attachments/image005.jpg",
+          "size": 3287761,
+          "content_type": "image/jpeg",
+          "sha256": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f"
+        },
+        {
+          "filename": "image006.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0018-Re-HCV-Orientation-CAMTdTS_8qnH3NG-ZNPUa-uAJG6tCH2aBdJZ7RA-TccPo-e5vQ-mail.gmail.com/attachments/image006.jpg",
+          "size": 3756568,
+          "content_type": "image/jpeg",
+          "sha256": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943"
+        },
+        {
+          "filename": "image007.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0018-Re-HCV-Orientation-CAMTdTS_8qnH3NG-ZNPUa-uAJG6tCH2aBdJZ7RA-TccPo-e5vQ-mail.gmail.com/attachments/image007.jpg",
+          "size": 3111479,
+          "content_type": "image/jpeg",
+          "sha256": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095"
+        }
+      ],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 10.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "accommodation",
+        "clackamas",
+        "move"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "d49808bf1ffe051c0c113a491c6c006b7a9990448664db84de5aa66787827de8",
+      "raw_cid": "bafkreigutael6h76auoayej2jeogyadlpkmzaregmtnyjxs2uztypat55a"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0019-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0019-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0019-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "RE: HCV Orientation",
+      "date": "2026-03-26T16:36:46+00:00",
+      "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "to": "benjamin barber <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<07246b509c0f4d7c8d69f58da8f5e205@clackamas.us>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0019-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image001.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0019-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image002.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0019-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image003.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0019-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image004.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0019-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image005.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0019-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image006.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0019-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image007.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0019-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/Cortez-J-RA-Denial-3.26.26.pdf"
+      ],
+      "attachments": [
+        {
+          "filename": "image001.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0019-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image001.jpg",
+          "size": 2694789,
+          "content_type": "image/jpeg",
+          "sha256": "3c861b15574b1bf7a33e9b142909c336fbee4cc1c3caad8dc410d8cc1e3e4274"
+        },
+        {
+          "filename": "image002.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0019-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image002.png",
+          "size": 856705,
+          "content_type": "image/png",
+          "sha256": "0569034f41829527a39574e75f6b158a67ac55e051621a90f4ba3f2f9e44bfd6"
+        },
+        {
+          "filename": "image003.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0019-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image003.jpg",
+          "size": 2764615,
+          "content_type": "image/jpeg",
+          "sha256": "b7951488e788e37eb172d9c3eb0f218856e82f9bc1fac462dca911c2664550a8"
+        },
+        {
+          "filename": "image004.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0019-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image004.jpg",
+          "size": 3897410,
+          "content_type": "image/jpeg",
+          "sha256": "b1a2d6e4c9bf0d0f698ad665c243a2c2f03c5d883ac8d2a81a8758084bbd7ced"
+        },
+        {
+          "filename": "image005.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0019-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image005.jpg",
+          "size": 3287761,
+          "content_type": "image/jpeg",
+          "sha256": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f"
+        },
+        {
+          "filename": "image006.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0019-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image006.jpg",
+          "size": 3756568,
+          "content_type": "image/jpeg",
+          "sha256": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943"
+        },
+        {
+          "filename": "image007.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0019-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image007.jpg",
+          "size": 3111479,
+          "content_type": "image/jpeg",
+          "sha256": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095"
+        },
+        {
+          "filename": "Cortez-J-RA-Denial-3.26.26.pdf",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0019-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/Cortez-J-RA-Denial-3.26.26.pdf",
+          "size": 298605,
+          "content_type": "application/pdf",
+          "sha256": "3a5fd05c8f1ff2007d87d2f2ed6d9aa8c9234c4e4c9e2f4203f5d27d6b571ddb"
+        }
+      ],
+      "evidence_title": "RE: HCV Orientation",
+      "relevance_score": 10.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "accommodation",
+        "clackamas",
+        "move"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "ec783d1822a8e68ef890efb38f6c8ec0086f46019f6b2aac98d9deb00b3628bc",
+      "raw_cid": "bafkreihmpa6rqivi42hprehpwohwzdwabbxumam7nmvkzggz32yawnrixq"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/message.json",
+      "participants": [
+        "bwilliams@clackamas.us",
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-26T10:37:18-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us",
+      "cc": "",
+      "message_id_header": "<CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc+P78V_wRTQkDN7hg@mail.gmail.com>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image001.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image002.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image003.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image004.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image005.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image006.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image007.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image-2.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image-3.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image-4.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image-5.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image-6.png"
+      ],
+      "attachments": [
+        {
+          "filename": "image001.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image001.jpg",
+          "size": 2694789,
+          "content_type": "image/jpeg",
+          "sha256": "3c861b15574b1bf7a33e9b142909c336fbee4cc1c3caad8dc410d8cc1e3e4274"
+        },
+        {
+          "filename": "image002.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image002.png",
+          "size": 856705,
+          "content_type": "image/png",
+          "sha256": "0569034f41829527a39574e75f6b158a67ac55e051621a90f4ba3f2f9e44bfd6"
+        },
+        {
+          "filename": "image003.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image003.jpg",
+          "size": 2764615,
+          "content_type": "image/jpeg",
+          "sha256": "b7951488e788e37eb172d9c3eb0f218856e82f9bc1fac462dca911c2664550a8"
+        },
+        {
+          "filename": "image004.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image004.jpg",
+          "size": 3897410,
+          "content_type": "image/jpeg",
+          "sha256": "b1a2d6e4c9bf0d0f698ad665c243a2c2f03c5d883ac8d2a81a8758084bbd7ced"
+        },
+        {
+          "filename": "image005.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image005.jpg",
+          "size": 3287761,
+          "content_type": "image/jpeg",
+          "sha256": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f"
+        },
+        {
+          "filename": "image006.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image006.jpg",
+          "size": 3756568,
+          "content_type": "image/jpeg",
+          "sha256": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943"
+        },
+        {
+          "filename": "image007.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image007.jpg",
+          "size": 3111479,
+          "content_type": "image/jpeg",
+          "sha256": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095"
+        },
+        {
+          "filename": "image.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image.png",
+          "size": 204364,
+          "content_type": "image/png",
+          "sha256": "070863321860273a09c5c183d32be530d22d1767e7770220fd9bf02cf3d49ca7"
+        },
+        {
+          "filename": "image-2.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image-2.png",
+          "size": 231662,
+          "content_type": "image/png",
+          "sha256": "a5eb1cf767f2a7fe08a7d4327558dfaf7f089190bc442cd90693d88e43bd0949"
+        },
+        {
+          "filename": "image-3.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image-3.png",
+          "size": 180277,
+          "content_type": "image/png",
+          "sha256": "46bf7e7c3530f8bc3bc131af05afbe281ff63d795beeaa7c4cb77386df91a36e"
+        },
+        {
+          "filename": "image-4.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image-4.png",
+          "size": 65507,
+          "content_type": "image/png",
+          "sha256": "d53866032ceb78f848ea328df5de9363f832c9850447fa1613f822feeb366ce6"
+        },
+        {
+          "filename": "image-5.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image-5.png",
+          "size": 160884,
+          "content_type": "image/png",
+          "sha256": "4dbdd731900da9ac632b54595e07022bbf5fe789ccac6baf68936b92718581ca"
+        },
+        {
+          "filename": "image-6.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/attachments/image-6.png",
+          "size": 151834,
+          "content_type": "image/png",
+          "sha256": "4f7e1011365c53a48275c186bac5b874dfe1425f0156ff76e4cd57dc1824a6af"
+        }
+      ],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 10.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "accommodation",
+        "clackamas",
+        "move"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "d424e667b82ce25c08430428a063746684b0a7f778a92bc2010fa4e71c44fba4",
+      "raw_cid": "bafkreiguettgpobm4joaqqyefcqgg5dgqsykp53yvev4eaiputtryrh3uq"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "RE: HCV Orientation",
+      "date": "2026-03-26T19:21:32+00:00",
+      "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "to": "benjamin barber <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<f1e37f0f59304f0d8bcbcb606ee2f8be@clackamas.us>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image001.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image002.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image003.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image004.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image005.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image006.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image007.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image008.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image009.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image010.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image011.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image012.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image013.jpg"
+      ],
+      "attachments": [
+        {
+          "filename": "image001.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image001.png",
+          "size": 180277,
+          "content_type": "image/png",
+          "sha256": "46bf7e7c3530f8bc3bc131af05afbe281ff63d795beeaa7c4cb77386df91a36e"
+        },
+        {
+          "filename": "image002.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image002.png",
+          "size": 204364,
+          "content_type": "image/png",
+          "sha256": "070863321860273a09c5c183d32be530d22d1767e7770220fd9bf02cf3d49ca7"
+        },
+        {
+          "filename": "image003.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image003.png",
+          "size": 231662,
+          "content_type": "image/png",
+          "sha256": "a5eb1cf767f2a7fe08a7d4327558dfaf7f089190bc442cd90693d88e43bd0949"
+        },
+        {
+          "filename": "image004.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image004.png",
+          "size": 65507,
+          "content_type": "image/png",
+          "sha256": "d53866032ceb78f848ea328df5de9363f832c9850447fa1613f822feeb366ce6"
+        },
+        {
+          "filename": "image005.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image005.png",
+          "size": 160884,
+          "content_type": "image/png",
+          "sha256": "4dbdd731900da9ac632b54595e07022bbf5fe789ccac6baf68936b92718581ca"
+        },
+        {
+          "filename": "image006.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image006.png",
+          "size": 151834,
+          "content_type": "image/png",
+          "sha256": "4f7e1011365c53a48275c186bac5b874dfe1425f0156ff76e4cd57dc1824a6af"
+        },
+        {
+          "filename": "image007.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image007.jpg",
+          "size": 2694789,
+          "content_type": "image/jpeg",
+          "sha256": "3c861b15574b1bf7a33e9b142909c336fbee4cc1c3caad8dc410d8cc1e3e4274"
+        },
+        {
+          "filename": "image008.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image008.png",
+          "size": 856705,
+          "content_type": "image/png",
+          "sha256": "0569034f41829527a39574e75f6b158a67ac55e051621a90f4ba3f2f9e44bfd6"
+        },
+        {
+          "filename": "image009.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image009.jpg",
+          "size": 2764615,
+          "content_type": "image/jpeg",
+          "sha256": "b7951488e788e37eb172d9c3eb0f218856e82f9bc1fac462dca911c2664550a8"
+        },
+        {
+          "filename": "image010.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image010.jpg",
+          "size": 3897410,
+          "content_type": "image/jpeg",
+          "sha256": "b1a2d6e4c9bf0d0f698ad665c243a2c2f03c5d883ac8d2a81a8758084bbd7ced"
+        },
+        {
+          "filename": "image011.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image011.jpg",
+          "size": 3287761,
+          "content_type": "image/jpeg",
+          "sha256": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f"
+        },
+        {
+          "filename": "image012.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image012.jpg",
+          "size": 3756568,
+          "content_type": "image/jpeg",
+          "sha256": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943"
+        },
+        {
+          "filename": "image013.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image013.jpg",
+          "size": 3111479,
+          "content_type": "image/jpeg",
+          "sha256": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095"
+        }
+      ],
+      "evidence_title": "RE: HCV Orientation",
+      "relevance_score": 10.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "accommodation",
+        "clackamas",
+        "move"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "d3c04acd877722d137bceb21a5169e74386f30c043cff7b9061479dd78985ede",
+      "raw_cid": "bafkreigtybfm3b3xelitpphlegsrnhtuhbxtbqcdz733sbquphoxrgc63y"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/message.json",
+      "participants": [
+        "bwilliams@clackamas.us",
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-26T13:58:10-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us",
+      "cc": "",
+      "message_id_header": "<CAMTdTS8ufb7ONCc=MorzA4j49Wc_DZj1sXURpHSut+uyAE7QdA@mail.gmail.com>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image001.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image002.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image003.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image004.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image005.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image006.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image007.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image008.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image009.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image010.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image011.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image012.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image013.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image.png"
+      ],
+      "attachments": [
+        {
+          "filename": "image001.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image001.png",
+          "size": 180277,
+          "content_type": "image/png",
+          "sha256": "46bf7e7c3530f8bc3bc131af05afbe281ff63d795beeaa7c4cb77386df91a36e"
+        },
+        {
+          "filename": "image002.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image002.png",
+          "size": 204364,
+          "content_type": "image/png",
+          "sha256": "070863321860273a09c5c183d32be530d22d1767e7770220fd9bf02cf3d49ca7"
+        },
+        {
+          "filename": "image003.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image003.png",
+          "size": 231662,
+          "content_type": "image/png",
+          "sha256": "a5eb1cf767f2a7fe08a7d4327558dfaf7f089190bc442cd90693d88e43bd0949"
+        },
+        {
+          "filename": "image004.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image004.png",
+          "size": 65507,
+          "content_type": "image/png",
+          "sha256": "d53866032ceb78f848ea328df5de9363f832c9850447fa1613f822feeb366ce6"
+        },
+        {
+          "filename": "image005.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image005.png",
+          "size": 160884,
+          "content_type": "image/png",
+          "sha256": "4dbdd731900da9ac632b54595e07022bbf5fe789ccac6baf68936b92718581ca"
+        },
+        {
+          "filename": "image006.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image006.png",
+          "size": 151834,
+          "content_type": "image/png",
+          "sha256": "4f7e1011365c53a48275c186bac5b874dfe1425f0156ff76e4cd57dc1824a6af"
+        },
+        {
+          "filename": "image007.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image007.jpg",
+          "size": 2694789,
+          "content_type": "image/jpeg",
+          "sha256": "3c861b15574b1bf7a33e9b142909c336fbee4cc1c3caad8dc410d8cc1e3e4274"
+        },
+        {
+          "filename": "image008.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image008.png",
+          "size": 856705,
+          "content_type": "image/png",
+          "sha256": "0569034f41829527a39574e75f6b158a67ac55e051621a90f4ba3f2f9e44bfd6"
+        },
+        {
+          "filename": "image009.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image009.jpg",
+          "size": 2764615,
+          "content_type": "image/jpeg",
+          "sha256": "b7951488e788e37eb172d9c3eb0f218856e82f9bc1fac462dca911c2664550a8"
+        },
+        {
+          "filename": "image010.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image010.jpg",
+          "size": 3897410,
+          "content_type": "image/jpeg",
+          "sha256": "b1a2d6e4c9bf0d0f698ad665c243a2c2f03c5d883ac8d2a81a8758084bbd7ced"
+        },
+        {
+          "filename": "image011.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image011.jpg",
+          "size": 3287761,
+          "content_type": "image/jpeg",
+          "sha256": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f"
+        },
+        {
+          "filename": "image012.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image012.jpg",
+          "size": 3756568,
+          "content_type": "image/jpeg",
+          "sha256": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943"
+        },
+        {
+          "filename": "image013.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image013.jpg",
+          "size": 3111479,
+          "content_type": "image/jpeg",
+          "sha256": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095"
+        },
+        {
+          "filename": "image.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/attachments/image.png",
+          "size": 167896,
+          "content_type": "image/png",
+          "sha256": "1e9e1cda67f4172c9ee993c5cc2288fb5773944fb0fe93f475b321e86434df48"
+        }
+      ],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 10.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "accommodation",
+        "clackamas",
+        "move"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "a03a1a6656d0e8b19397c1e697c0ff1b0a2b5168f68bf1fac35fc4bd066955a4",
+      "raw_cid": "bafkreifahingmvwq5cyzhf6b42l4b7y3bivvc2hwrpy7vq27ys6qm2kvuq"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/message.json",
+      "participants": [
+        "bwilliams@clackamas.us",
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-27T12:40:40-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us",
+      "cc": "",
+      "message_id_header": "<CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr+LsfQR+wGbZckgYnKMyfQ@mail.gmail.com>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image004.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image012.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image008.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image007.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image001.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image003.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image011.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image005.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image009.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image002.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image013.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image010.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image006.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image.png"
+      ],
+      "attachments": [
+        {
+          "filename": "image004.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image004.png",
+          "size": 65507,
+          "content_type": "image/png",
+          "sha256": "d53866032ceb78f848ea328df5de9363f832c9850447fa1613f822feeb366ce6"
+        },
+        {
+          "filename": "image012.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image012.jpg",
+          "size": 3756568,
+          "content_type": "image/jpeg",
+          "sha256": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943"
+        },
+        {
+          "filename": "image008.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image008.png",
+          "size": 856705,
+          "content_type": "image/png",
+          "sha256": "0569034f41829527a39574e75f6b158a67ac55e051621a90f4ba3f2f9e44bfd6"
+        },
+        {
+          "filename": "image007.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image007.jpg",
+          "size": 2694789,
+          "content_type": "image/jpeg",
+          "sha256": "3c861b15574b1bf7a33e9b142909c336fbee4cc1c3caad8dc410d8cc1e3e4274"
+        },
+        {
+          "filename": "image001.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image001.png",
+          "size": 180277,
+          "content_type": "image/png",
+          "sha256": "46bf7e7c3530f8bc3bc131af05afbe281ff63d795beeaa7c4cb77386df91a36e"
+        },
+        {
+          "filename": "image003.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image003.png",
+          "size": 231662,
+          "content_type": "image/png",
+          "sha256": "a5eb1cf767f2a7fe08a7d4327558dfaf7f089190bc442cd90693d88e43bd0949"
+        },
+        {
+          "filename": "image011.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image011.jpg",
+          "size": 3287761,
+          "content_type": "image/jpeg",
+          "sha256": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f"
+        },
+        {
+          "filename": "image005.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image005.png",
+          "size": 160884,
+          "content_type": "image/png",
+          "sha256": "4dbdd731900da9ac632b54595e07022bbf5fe789ccac6baf68936b92718581ca"
+        },
+        {
+          "filename": "image009.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image009.jpg",
+          "size": 2764615,
+          "content_type": "image/jpeg",
+          "sha256": "b7951488e788e37eb172d9c3eb0f218856e82f9bc1fac462dca911c2664550a8"
+        },
+        {
+          "filename": "image002.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image002.png",
+          "size": 204364,
+          "content_type": "image/png",
+          "sha256": "070863321860273a09c5c183d32be530d22d1767e7770220fd9bf02cf3d49ca7"
+        },
+        {
+          "filename": "image013.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image013.jpg",
+          "size": 3111479,
+          "content_type": "image/jpeg",
+          "sha256": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095"
+        },
+        {
+          "filename": "image010.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image010.jpg",
+          "size": 3897410,
+          "content_type": "image/jpeg",
+          "sha256": "b1a2d6e4c9bf0d0f698ad665c243a2c2f03c5d883ac8d2a81a8758084bbd7ced"
+        },
+        {
+          "filename": "image006.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image006.png",
+          "size": 151834,
+          "content_type": "image/png",
+          "sha256": "4f7e1011365c53a48275c186bac5b874dfe1425f0156ff76e4cd57dc1824a6af"
+        },
+        {
+          "filename": "image.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/attachments/image.png",
+          "size": 167896,
+          "content_type": "image/png",
+          "sha256": "1e9e1cda67f4172c9ee993c5cc2288fb5773944fb0fe93f475b321e86434df48"
+        }
+      ],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 10.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "accommodation",
+        "clackamas",
+        "move"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "b6a899eba6f856d6a16abb7ca33ed418c08106500ee11cae75e3702a39487200",
+      "raw_cid": "bafkreifwvcm6xjxyk3lkc2v3psrt5vayycaqmuao4eok45pdoavdssdsaa"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/message.json",
+      "participants": [
+        "bwilliams@clackamas.us",
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-27T19:16:07-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us",
+      "cc": "",
+      "message_id_header": "<CAMTdTS9bg00mw8vaCYD5PrG_sc+6Piz_Ws17GmeD+4-tPZHx-A@mail.gmail.com>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image004.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image012.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image008.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image007.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image001.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image003.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image011.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image005.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image009.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image002.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image013.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image010.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image006.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/IMG_2125.jpeg"
+      ],
+      "attachments": [
+        {
+          "filename": "image004.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image004.png",
+          "size": 65507,
+          "content_type": "image/png",
+          "sha256": "d53866032ceb78f848ea328df5de9363f832c9850447fa1613f822feeb366ce6"
+        },
+        {
+          "filename": "image012.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image012.jpg",
+          "size": 3756568,
+          "content_type": "image/jpeg",
+          "sha256": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943"
+        },
+        {
+          "filename": "image008.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image008.png",
+          "size": 856705,
+          "content_type": "image/png",
+          "sha256": "0569034f41829527a39574e75f6b158a67ac55e051621a90f4ba3f2f9e44bfd6"
+        },
+        {
+          "filename": "image007.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image007.jpg",
+          "size": 2694789,
+          "content_type": "image/jpeg",
+          "sha256": "3c861b15574b1bf7a33e9b142909c336fbee4cc1c3caad8dc410d8cc1e3e4274"
+        },
+        {
+          "filename": "image001.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image001.png",
+          "size": 180277,
+          "content_type": "image/png",
+          "sha256": "46bf7e7c3530f8bc3bc131af05afbe281ff63d795beeaa7c4cb77386df91a36e"
+        },
+        {
+          "filename": "image003.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image003.png",
+          "size": 231662,
+          "content_type": "image/png",
+          "sha256": "a5eb1cf767f2a7fe08a7d4327558dfaf7f089190bc442cd90693d88e43bd0949"
+        },
+        {
+          "filename": "image011.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image011.jpg",
+          "size": 3287761,
+          "content_type": "image/jpeg",
+          "sha256": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f"
+        },
+        {
+          "filename": "image005.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image005.png",
+          "size": 160884,
+          "content_type": "image/png",
+          "sha256": "4dbdd731900da9ac632b54595e07022bbf5fe789ccac6baf68936b92718581ca"
+        },
+        {
+          "filename": "image009.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image009.jpg",
+          "size": 2764615,
+          "content_type": "image/jpeg",
+          "sha256": "b7951488e788e37eb172d9c3eb0f218856e82f9bc1fac462dca911c2664550a8"
+        },
+        {
+          "filename": "image002.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image002.png",
+          "size": 204364,
+          "content_type": "image/png",
+          "sha256": "070863321860273a09c5c183d32be530d22d1767e7770220fd9bf02cf3d49ca7"
+        },
+        {
+          "filename": "image013.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image013.jpg",
+          "size": 3111479,
+          "content_type": "image/jpeg",
+          "sha256": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095"
+        },
+        {
+          "filename": "image010.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image010.jpg",
+          "size": 3897410,
+          "content_type": "image/jpeg",
+          "sha256": "b1a2d6e4c9bf0d0f698ad665c243a2c2f03c5d883ac8d2a81a8758084bbd7ced"
+        },
+        {
+          "filename": "image006.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image006.png",
+          "size": 151834,
+          "content_type": "image/png",
+          "sha256": "4f7e1011365c53a48275c186bac5b874dfe1425f0156ff76e4cd57dc1824a6af"
+        },
+        {
+          "filename": "image.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/image.png",
+          "size": 167896,
+          "content_type": "image/png",
+          "sha256": "1e9e1cda67f4172c9ee993c5cc2288fb5773944fb0fe93f475b321e86434df48"
+        },
+        {
+          "filename": "IMG_2125.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/attachments/IMG_2125.jpeg",
+          "size": 2742573,
+          "content_type": "image/jpeg",
+          "sha256": "74e2730b354b04a9e95b30395a198f31dd40041dbac904e42dcd7b21a02e4c71"
+        }
+      ],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 10.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "accommodation",
+        "clackamas",
+        "move"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "b06a7ec047f52a2dd350a3093ff1ef4a794720a6572fb72bb4f3e3ec67c670b5",
+      "raw_cid": "bafkreifqnj7mar7vfiw5gufdbe77d32kpfdsbjsxf63sxnht4pwgprtqwu"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/message.json",
+      "participants": [
+        "bwilliams@clackamas.us",
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-28T13:41:57-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us",
+      "cc": "",
+      "message_id_header": "<CAMTdTS8NwnM6aAhiY=HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ@mail.gmail.com>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image004.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image012.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image008.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image007.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image001.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image003.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image011.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image005.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image009.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image002.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image013.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image010.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/IMG_2125.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image006.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image.png"
+      ],
+      "attachments": [
+        {
+          "filename": "image004.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image004.png",
+          "size": 65507,
+          "content_type": "image/png",
+          "sha256": "d53866032ceb78f848ea328df5de9363f832c9850447fa1613f822feeb366ce6"
+        },
+        {
+          "filename": "image012.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image012.jpg",
+          "size": 3756568,
+          "content_type": "image/jpeg",
+          "sha256": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943"
+        },
+        {
+          "filename": "image008.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image008.png",
+          "size": 856705,
+          "content_type": "image/png",
+          "sha256": "0569034f41829527a39574e75f6b158a67ac55e051621a90f4ba3f2f9e44bfd6"
+        },
+        {
+          "filename": "image007.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image007.jpg",
+          "size": 2694789,
+          "content_type": "image/jpeg",
+          "sha256": "3c861b15574b1bf7a33e9b142909c336fbee4cc1c3caad8dc410d8cc1e3e4274"
+        },
+        {
+          "filename": "image001.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image001.png",
+          "size": 180277,
+          "content_type": "image/png",
+          "sha256": "46bf7e7c3530f8bc3bc131af05afbe281ff63d795beeaa7c4cb77386df91a36e"
+        },
+        {
+          "filename": "image003.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image003.png",
+          "size": 231662,
+          "content_type": "image/png",
+          "sha256": "a5eb1cf767f2a7fe08a7d4327558dfaf7f089190bc442cd90693d88e43bd0949"
+        },
+        {
+          "filename": "image011.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image011.jpg",
+          "size": 3287761,
+          "content_type": "image/jpeg",
+          "sha256": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f"
+        },
+        {
+          "filename": "image005.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image005.png",
+          "size": 160884,
+          "content_type": "image/png",
+          "sha256": "4dbdd731900da9ac632b54595e07022bbf5fe789ccac6baf68936b92718581ca"
+        },
+        {
+          "filename": "image009.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image009.jpg",
+          "size": 2764615,
+          "content_type": "image/jpeg",
+          "sha256": "b7951488e788e37eb172d9c3eb0f218856e82f9bc1fac462dca911c2664550a8"
+        },
+        {
+          "filename": "image002.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image002.png",
+          "size": 204364,
+          "content_type": "image/png",
+          "sha256": "070863321860273a09c5c183d32be530d22d1767e7770220fd9bf02cf3d49ca7"
+        },
+        {
+          "filename": "image013.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image013.jpg",
+          "size": 3111479,
+          "content_type": "image/jpeg",
+          "sha256": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095"
+        },
+        {
+          "filename": "image010.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image010.jpg",
+          "size": 3897410,
+          "content_type": "image/jpeg",
+          "sha256": "b1a2d6e4c9bf0d0f698ad665c243a2c2f03c5d883ac8d2a81a8758084bbd7ced"
+        },
+        {
+          "filename": "IMG_2125.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/IMG_2125.jpeg",
+          "size": 2742573,
+          "content_type": "image/jpeg",
+          "sha256": "74e2730b354b04a9e95b30395a198f31dd40041dbac904e42dcd7b21a02e4c71"
+        },
+        {
+          "filename": "image006.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image006.png",
+          "size": 151834,
+          "content_type": "image/png",
+          "sha256": "4f7e1011365c53a48275c186bac5b874dfe1425f0156ff76e4cd57dc1824a6af"
+        },
+        {
+          "filename": "image.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/attachments/image.png",
+          "size": 167896,
+          "content_type": "image/png",
+          "sha256": "1e9e1cda67f4172c9ee993c5cc2288fb5773944fb0fe93f475b321e86434df48"
+        }
+      ],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 10.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "accommodation",
+        "clackamas",
+        "move"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "c3cadb874501154bc882e2fbc9f9a93c067bc23a4c9c1ade8dea03b8c6087921",
+      "raw_cid": "bafkreigdzlnyoribcvf4raxc7pe7tkj4az54eosmtqnn5dpkao4mmcdzee"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/message.json",
+      "participants": [
+        "bwilliams@clackamas.us",
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-29T21:00:37-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us",
+      "cc": "",
+      "message_id_header": "<CAMTdTS_jUi7EBW+d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA@mail.gmail.com>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image004.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image012.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image008.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image007.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image001.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image003.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image011.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image005.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image009.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image002.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image013.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image010.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/IMG_2125.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image006.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image-2.png"
+      ],
+      "attachments": [
+        {
+          "filename": "image004.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image004.png",
+          "size": 65507,
+          "content_type": "image/png",
+          "sha256": "d53866032ceb78f848ea328df5de9363f832c9850447fa1613f822feeb366ce6"
+        },
+        {
+          "filename": "image012.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image012.jpg",
+          "size": 3756568,
+          "content_type": "image/jpeg",
+          "sha256": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943"
+        },
+        {
+          "filename": "image008.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image008.png",
+          "size": 856705,
+          "content_type": "image/png",
+          "sha256": "0569034f41829527a39574e75f6b158a67ac55e051621a90f4ba3f2f9e44bfd6"
+        },
+        {
+          "filename": "image007.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image007.jpg",
+          "size": 2694789,
+          "content_type": "image/jpeg",
+          "sha256": "3c861b15574b1bf7a33e9b142909c336fbee4cc1c3caad8dc410d8cc1e3e4274"
+        },
+        {
+          "filename": "image001.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image001.png",
+          "size": 180277,
+          "content_type": "image/png",
+          "sha256": "46bf7e7c3530f8bc3bc131af05afbe281ff63d795beeaa7c4cb77386df91a36e"
+        },
+        {
+          "filename": "image003.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image003.png",
+          "size": 231662,
+          "content_type": "image/png",
+          "sha256": "a5eb1cf767f2a7fe08a7d4327558dfaf7f089190bc442cd90693d88e43bd0949"
+        },
+        {
+          "filename": "image011.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image011.jpg",
+          "size": 3287761,
+          "content_type": "image/jpeg",
+          "sha256": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f"
+        },
+        {
+          "filename": "image005.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image005.png",
+          "size": 160884,
+          "content_type": "image/png",
+          "sha256": "4dbdd731900da9ac632b54595e07022bbf5fe789ccac6baf68936b92718581ca"
+        },
+        {
+          "filename": "image009.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image009.jpg",
+          "size": 2764615,
+          "content_type": "image/jpeg",
+          "sha256": "b7951488e788e37eb172d9c3eb0f218856e82f9bc1fac462dca911c2664550a8"
+        },
+        {
+          "filename": "image002.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image002.png",
+          "size": 204364,
+          "content_type": "image/png",
+          "sha256": "070863321860273a09c5c183d32be530d22d1767e7770220fd9bf02cf3d49ca7"
+        },
+        {
+          "filename": "image013.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image013.jpg",
+          "size": 3111479,
+          "content_type": "image/jpeg",
+          "sha256": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095"
+        },
+        {
+          "filename": "image010.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image010.jpg",
+          "size": 3897410,
+          "content_type": "image/jpeg",
+          "sha256": "b1a2d6e4c9bf0d0f698ad665c243a2c2f03c5d883ac8d2a81a8758084bbd7ced"
+        },
+        {
+          "filename": "IMG_2125.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/IMG_2125.jpeg",
+          "size": 2742573,
+          "content_type": "image/jpeg",
+          "sha256": "74e2730b354b04a9e95b30395a198f31dd40041dbac904e42dcd7b21a02e4c71"
+        },
+        {
+          "filename": "image006.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image006.png",
+          "size": 151834,
+          "content_type": "image/png",
+          "sha256": "4f7e1011365c53a48275c186bac5b874dfe1425f0156ff76e4cd57dc1824a6af"
+        },
+        {
+          "filename": "image.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image.png",
+          "size": 167896,
+          "content_type": "image/png",
+          "sha256": "1e9e1cda67f4172c9ee993c5cc2288fb5773944fb0fe93f475b321e86434df48"
+        },
+        {
+          "filename": "image-2.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/attachments/image-2.png",
+          "size": 421214,
+          "content_type": "image/png",
+          "sha256": "da1ea47f7264a21a2e9d99772c1a68d808862770dcdc690df04e673875e2e123"
+        }
+      ],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 10.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "voucher",
+        "accommodation",
+        "clackamas",
+        "move"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "2b96e905a3f47f5c52b393e02dc54d163fbcd979c35e8fd568c9a708b06bd843",
+      "raw_cid": "bafkreibls3uqli7up5offm4t4aw4ktiwh66ns6odl2h5k2gju4ela26yim"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0027-Re-HCV-Orientation-CAMTdTS9PMpfqacMORkM8crYMAFgSEh96FUNYjY9utFOzAuQrbA-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0027-Re-HCV-Orientation-CAMTdTS9PMpfqacMORkM8crYMAFgSEh96FUNYjY9utFOzAuQrbA-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0027-Re-HCV-Orientation-CAMTdTS9PMpfqacMORkM8crYMAFgSEh96FUNYjY9utFOzAuQrbA-mail.gmail.com/message.json",
+      "participants": [
+        "bwilliams@clackamas.us",
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-31T11:21:24-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us",
+      "cc": "",
+      "message_id_header": "<CAMTdTS9PMpfqacMORkM8crYMAFgSEh96FUNYjY9utFOzAuQrbA@mail.gmail.com>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0027-Re-HCV-Orientation-CAMTdTS9PMpfqacMORkM8crYMAFgSEh96FUNYjY9utFOzAuQrbA-mail.gmail.com/attachments/full-packet-merged-courtstyle-curated-covered.pdf"
+      ],
+      "attachments": [
+        {
+          "filename": "full-packet-merged-courtstyle-curated-covered.pdf",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0027-Re-HCV-Orientation-CAMTdTS9PMpfqacMORkM8crYMAFgSEh96FUNYjY9utFOzAuQrbA-mail.gmail.com/attachments/full-packet-merged-courtstyle-curated-covered.pdf",
+          "size": 14797895,
+          "content_type": "application/pdf",
+          "sha256": "779d35bb0e5fff0838d2477cf15dd48d66001de55f983b883c4d673a94f1238e"
+        }
+      ],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 7.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "clackamas"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "2495b262b59dbcb4cfd8c1be0561020d7c9c381a0f395b0827de21c623d05b8d",
+      "raw_cid": "bafkreibeswzgfnm5xs2m7wgbxycwcaqnpsodqgqphfnqqj66ehdchuc3ru"
+    },
+    {
+      "folder": "[Gmail]/All Mail",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0028-Re-HCV-Orientation-CAMTdTS_JhzONEcVQdj-MB-eTtKHdMqLWpg2PZrr7Pkf5k7iJQQ-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0028-Re-HCV-Orientation-CAMTdTS_JhzONEcVQdj-MB-eTtKHdMqLWpg2PZrr7Pkf5k7iJQQ-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0028-Re-HCV-Orientation-CAMTdTS_JhzONEcVQdj-MB-eTtKHdMqLWpg2PZrr7Pkf5k7iJQQ-mail.gmail.com/message.json",
+      "participants": [
+        "bwilliams@clackamas.us",
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: HCV Orientation",
+      "date": "2026-03-31T13:16:27-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us",
+      "cc": "",
+      "message_id_header": "<CAMTdTS_JhzONEcVQdj+MB=eTtKHdMqLWpg2PZrr7Pkf5k7iJQQ@mail.gmail.com>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0028-Re-HCV-Orientation-CAMTdTS_JhzONEcVQdj-MB-eTtKHdMqLWpg2PZrr7Pkf5k7iJQQ-mail.gmail.com/attachments/photo-1775_singular_display_fullPicture.jpeg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0028-Re-HCV-Orientation-CAMTdTS_JhzONEcVQdj-MB-eTtKHdMqLWpg2PZrr7Pkf5k7iJQQ-mail.gmail.com/attachments/IMG_2150.jpeg"
+      ],
+      "attachments": [
+        {
+          "filename": "photo-1775_singular_display_fullPicture.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0028-Re-HCV-Orientation-CAMTdTS_JhzONEcVQdj-MB-eTtKHdMqLWpg2PZrr7Pkf5k7iJQQ-mail.gmail.com/attachments/photo-1775_singular_display_fullPicture.jpeg",
+          "size": 1663522,
+          "content_type": "image/jpeg",
+          "sha256": "8df32cfeb0bcc410897ed07c4e09a0df9789202fa857a0bcca76a22b0610f737"
+        },
+        {
+          "filename": "IMG_2150.jpeg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0028-Re-HCV-Orientation-CAMTdTS_JhzONEcVQdj-MB-eTtKHdMqLWpg2PZrr7Pkf5k7iJQQ-mail.gmail.com/attachments/IMG_2150.jpeg",
+          "size": 3173591,
+          "content_type": "image/jpeg",
+          "sha256": "3433055835a14d7ffe0048b2f2353328742d8e0bf5ce065b9766008c541507be"
+        }
+      ],
+      "evidence_title": "Re: HCV Orientation",
+      "relevance_score": 7.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "clackamas"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "8f7dacf206397510bf708ea2f1a340ff316abdf3dc6b19db3ee48cd86cefdd0d",
+      "raw_cid": "bafkreieppwwpebrzouil64eouly2gqh7gfvl3464nmm5wpxertmgz365bu"
+    }
+  ],
+  "mediator_evidence_records": [
+    {
+      "title": "HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: HCV Orientation\nFrom: \"Tilton, Kati\" <KTilton@clackamas.us>\nTo: benjamin barber <starworks5@gmail.com>\nDate: 2026-03-17T19:29:55+00:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0001-HCV-Orientation-92208aa189a24a18ac05be75916b5107-clackamas.us/message.eml",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0001-HCV-Orientation-92208aa189a24a18ac05be75916b5107-clackamas.us/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0001-HCV-Orientation-92208aa189a24a18ac05be75916b5107-clackamas.us/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<92208aa189a24a18ac05be75916b5107@clackamas.us>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-17T17:34:42-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0002-Re-HCV-Orientation-CAMTdTS8OfKupu4q4GPc8CCFK7EfVKmxejh5uvmCHf-9Jrsi5-g-mail.gmail.com/message.eml",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0002-Re-HCV-Orientation-CAMTdTS8OfKupu4q4GPc8CCFK7EfVKmxejh5uvmCHf-9Jrsi5-g-mail.gmail.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0002-Re-HCV-Orientation-CAMTdTS8OfKupu4q4GPc8CCFK7EfVKmxejh5uvmCHf-9Jrsi5-g-mail.gmail.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS8OfKupu4q4GPc8CCFK7EfVKmxejh5uvmCHf=9Jrsi5+g@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "RE: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: RE: HCV Orientation\nFrom: \"Tilton, Kati\" <KTilton@clackamas.us>\nTo: benjamin barber <starworks5@gmail.com>\nDate: 2026-03-18T20:33:26+00:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/message.eml",
+      "attachment_names": [
+        "Cortez-TRSW-3.18.26.pdf",
+        "9.-Left-Side-Combined_5.22.25-1.pdf",
+        "11.-Right-Side-Combined_5.22.25.pdf"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0003-RE-HCV-Orientation-b55920d9a97647479a3c38e12644c076-clackamas.us/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<b55920d9a97647479a3c38e12644c076@clackamas.us>"
+      }
+    },
+    {
+      "title": "RE: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: RE: HCV Orientation\nFrom: \"Tilton, Kati\" <KTilton@clackamas.us>\nTo: benjamin barber <starworks5@gmail.com>\nDate: 2026-03-19T17:27:27+00:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us/message.eml",
+      "attachment_names": [
+        "TRSW---JC---03.19.2026.pdf",
+        "VO---JC---03.19.2026.pdf"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0004-RE-HCV-Orientation-384b5cd567d449f0b12b983bf00d576b-clackamas.us/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<384b5cd567d449f0b12b983bf00d576b@clackamas.us>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-19T10:29:07-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0005-Re-HCV-Orientation-CAMTdTS-7kX-ZpOS-JnpgxhpG_Hm7mXxG_feovoA198VvH0V7jQ-mail.gmail.com/message.eml",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0005-Re-HCV-Orientation-CAMTdTS-7kX-ZpOS-JnpgxhpG_Hm7mXxG_feovoA198VvH0V7jQ-mail.gmail.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0005-Re-HCV-Orientation-CAMTdTS-7kX-ZpOS-JnpgxhpG_Hm7mXxG_feovoA198VvH0V7jQ-mail.gmail.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS-7kX-ZpOS-JnpgxhpG_Hm7mXxG_feovoA198VvH0V7jQ@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-19T10:56:12-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0006-Re-HCV-Orientation-CAMTdTS9TCnQZBeKu2Y_Z-P3ORtUVn-8LSkWymHejw61JGu-mxA-mail.gmail.com/message.eml",
+      "attachment_names": [],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0006-Re-HCV-Orientation-CAMTdTS9TCnQZBeKu2Y_Z-P3ORtUVn-8LSkWymHejw61JGu-mxA-mail.gmail.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0006-Re-HCV-Orientation-CAMTdTS9TCnQZBeKu2Y_Z-P3ORtUVn-8LSkWymHejw61JGu-mxA-mail.gmail.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS9TCnQZBeKu2Y_Z=P3ORtUVn+8LSkWymHejw61JGu-mxA@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "RE: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: RE: HCV Orientation\nFrom: \"Tilton, Kati\" <KTilton@clackamas.us>\nTo: benjamin barber <starworks5@gmail.com>\nDate: 2026-03-19T20:43:19+00:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0007-RE-HCV-Orientation-f9ca224dab4a4487bb20b9f7ff33afbe-clackamas.us/message.eml",
+      "attachment_names": [
+        "Orientation---Required-Signatures-03.19.2026.pdf"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0007-RE-HCV-Orientation-f9ca224dab4a4487bb20b9f7ff33afbe-clackamas.us/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0007-RE-HCV-Orientation-f9ca224dab4a4487bb20b9f7ff33afbe-clackamas.us/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<f9ca224dab4a4487bb20b9f7ff33afbe@clackamas.us>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-20T14:24:59-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/message.eml",
+      "attachment_names": [
+        "Image_260320_142321.jpeg",
+        "Image_260320_142448.jpeg",
+        "Image_260320_142045.jpeg"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0008-Re-HCV-Orientation-CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW-NwOC0k23-63LQ-mail.gmail.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS_hM81x2YFGZBGX3tGzBJjMjn5WhiFW=NwOC0k23+63LQ@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "RE: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: RE: HCV Orientation\nFrom: \"Tilton, Kati\" <KTilton@clackamas.us>\nTo: benjamin barber <starworks5@gmail.com>\nDate: 2026-03-20T22:54:20+00:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/message.eml",
+      "attachment_names": [
+        "image001.jpg",
+        "image002.jpg",
+        "image003.jpg"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0009-RE-HCV-Orientation-0cb1a9bce9ce436ba29b873de4aef556-clackamas.us/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<0cb1a9bce9ce436ba29b873de4aef556@clackamas.us>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-20T16:02:01-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/message.eml",
+      "attachment_names": [
+        "Image_260320_142321.jpeg",
+        "Image_260320_142448.jpeg",
+        "Image_260320_142045.jpeg",
+        "output.pdf"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0010-Re-HCV-Orientation-CAMTdTS9baFybogyP5synzuGhf-OV-yAMTgrZNdG-k-9HBKfvhA-mail.gmail.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS9baFybogyP5synzuGhf-OV=yAMTgrZNdG=k=9HBKfvhA@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-20T16:09:59-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/message.eml",
+      "attachment_names": [
+        "image001.jpg",
+        "Image_260320_160954.jpeg",
+        "image002.jpg",
+        "image003.jpg"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0011-Re-HCV-Orientation-CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC-pg-mail.gmail.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS8jOtqgVAOvgZKygU-bgHsae7rhEp7wO4RJu1TStOC=pg@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-20T16:53:12-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/message.eml",
+      "attachment_names": [
+        "Image_260320_160954.jpeg",
+        "image001.jpg",
+        "IMG_2106.jpeg",
+        "image002.jpg",
+        "image003.jpg"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0012-Re-HCV-Orientation-CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4-pY6igg-mail.gmail.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS9ABp3V9E81KQx5QtpuzFaveco72iuzqUycnw4=pY6igg@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-21T17:04:21-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0013-Re-HCV-Orientation-CAMTdTS9NEWAUyCO506wH81m2-8f7gyRPWR6C8RA9FApvMzxDRw-mail.gmail.com/message.eml",
+      "attachment_names": [
+        "Image_260320_160954.jpeg",
+        "image001.jpg",
+        "IMG_2106.jpeg",
+        "image002.jpg",
+        "image003.jpg",
+        "image.png"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0013-Re-HCV-Orientation-CAMTdTS9NEWAUyCO506wH81m2-8f7gyRPWR6C8RA9FApvMzxDRw-mail.gmail.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0013-Re-HCV-Orientation-CAMTdTS9NEWAUyCO506wH81m2-8f7gyRPWR6C8RA9FApvMzxDRw-mail.gmail.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS9NEWAUyCO506wH81m2=8f7gyRPWR6C8RA9FApvMzxDRw@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-24T13:32:22-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0014-Re-HCV-Orientation-CAMTdTS9omi8-gsK-_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw-mail.gmail.com/message.eml",
+      "attachment_names": [
+        "Image_260320_160954.jpeg",
+        "image001.jpg",
+        "IMG_2106.jpeg",
+        "image002.jpg",
+        "image003.jpg",
+        "image.png",
+        "Reasonable-accomidation.pdf"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0014-Re-HCV-Orientation-CAMTdTS9omi8-gsK-_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw-mail.gmail.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0014-Re-HCV-Orientation-CAMTdTS9omi8-gsK-_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw-mail.gmail.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS9omi8-gsK+_sW4YNW2DD2PsdDKffjrbuigTYtBrc4Rmw@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-24T14:05:28-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0015-Re-HCV-Orientation-CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw-mail.gmail.com/message.eml",
+      "attachment_names": [
+        "image001.jpg",
+        "image003.jpg",
+        "IMG_2106.jpeg",
+        "IMG_2113.jpeg",
+        "image002.jpg",
+        "image.png",
+        "Image_260320_160954.jpeg"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0015-Re-HCV-Orientation-CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw-mail.gmail.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0015-Re-HCV-Orientation-CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw-mail.gmail.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS903KFx0s3rDCjW9LgXd-RbbO9U68sxDE7W-qAkfxCPOw@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-25T12:47:03-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0016-Re-HCV-Orientation-CAMTdTS8krRLqrv62_DYwGHwvNiuLomQBb6guRUxLxFqbOv16ZA-mail.gmail.com/message.eml",
+      "attachment_names": [
+        "image001.jpg",
+        "image003.jpg",
+        "IMG_2106.jpeg",
+        "IMG_2113.jpeg",
+        "image002.jpg",
+        "image.png",
+        "Image_260320_160954.jpeg"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0016-Re-HCV-Orientation-CAMTdTS8krRLqrv62_DYwGHwvNiuLomQBb6guRUxLxFqbOv16ZA-mail.gmail.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0016-Re-HCV-Orientation-CAMTdTS8krRLqrv62_DYwGHwvNiuLomQBb6guRUxLxFqbOv16ZA-mail.gmail.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS8krRLqrv62_DYwGHwvNiuLomQBb6guRUxLxFqbOv16ZA@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "RE: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: RE: HCV Orientation\nFrom: \"Tilton, Kati\" <KTilton@clackamas.us>\nTo: benjamin barber <starworks5@gmail.com>\nDate: 2026-03-26T02:39:04+00:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/message.eml",
+      "attachment_names": [
+        "image001.jpg",
+        "image002.png",
+        "image003.jpg",
+        "image004.jpg",
+        "image005.jpg",
+        "image006.jpg",
+        "image007.jpg",
+        "Voucher-3.20.26.pdf"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<a0136cad0c5f44b984403575346f8d34@clackamas.us>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nDate: 2026-03-25T19:46:06-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0018-Re-HCV-Orientation-CAMTdTS_8qnH3NG-ZNPUa-uAJG6tCH2aBdJZ7RA-TccPo-e5vQ-mail.gmail.com/message.eml",
+      "attachment_names": [
+        "image001.jpg",
+        "image002.png",
+        "image003.jpg",
+        "image004.jpg",
+        "image005.jpg",
+        "image006.jpg",
+        "image007.jpg"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0018-Re-HCV-Orientation-CAMTdTS_8qnH3NG-ZNPUa-uAJG6tCH2aBdJZ7RA-TccPo-e5vQ-mail.gmail.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0018-Re-HCV-Orientation-CAMTdTS_8qnH3NG-ZNPUa-uAJG6tCH2aBdJZ7RA-TccPo-e5vQ-mail.gmail.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS_8qnH3NG+ZNPUa=uAJG6tCH2aBdJZ7RA++TccPo-e5vQ@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "RE: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: RE: HCV Orientation\nFrom: \"Tilton, Kati\" <KTilton@clackamas.us>\nTo: benjamin barber <starworks5@gmail.com>\nDate: 2026-03-26T16:36:46+00:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0019-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/message.eml",
+      "attachment_names": [
+        "image001.jpg",
+        "image002.png",
+        "image003.jpg",
+        "image004.jpg",
+        "image005.jpg",
+        "image006.jpg",
+        "image007.jpg",
+        "Cortez-J-RA-Denial-3.26.26.pdf"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0019-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0019-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<07246b509c0f4d7c8d69f58da8f5e205@clackamas.us>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us\nDate: 2026-03-26T10:37:18-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/message.eml",
+      "attachment_names": [
+        "image001.jpg",
+        "image002.png",
+        "image003.jpg",
+        "image004.jpg",
+        "image005.jpg",
+        "image006.jpg",
+        "image007.jpg",
+        "image.png",
+        "image-2.png",
+        "image-3.png",
+        "image-4.png",
+        "image-5.png",
+        "image-6.png"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0020-Re-HCV-Orientation-CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc-P78V_wRTQkDN7hg-mail.gmail.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS8wxYC9a01Qyhgzhk7C19ocZ2gpEc+P78V_wRTQkDN7hg@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "RE: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: RE: HCV Orientation\nFrom: \"Tilton, Kati\" <KTilton@clackamas.us>\nTo: benjamin barber <starworks5@gmail.com>\nDate: 2026-03-26T19:21:32+00:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/message.eml",
+      "attachment_names": [
+        "image001.png",
+        "image002.png",
+        "image003.png",
+        "image004.png",
+        "image005.png",
+        "image006.png",
+        "image007.jpg",
+        "image008.png",
+        "image009.jpg",
+        "image010.jpg",
+        "image011.jpg",
+        "image012.jpg",
+        "image013.jpg"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<f1e37f0f59304f0d8bcbcb606ee2f8be@clackamas.us>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us\nDate: 2026-03-26T13:58:10-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/message.eml",
+      "attachment_names": [
+        "image001.png",
+        "image002.png",
+        "image003.png",
+        "image004.png",
+        "image005.png",
+        "image006.png",
+        "image007.jpg",
+        "image008.png",
+        "image009.jpg",
+        "image010.jpg",
+        "image011.jpg",
+        "image012.jpg",
+        "image013.jpg",
+        "image.png"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0022-Re-HCV-Orientation-CAMTdTS8ufb7ONCc-MorzA4j49Wc_DZj1sXURpHSut-uyAE7QdA-mail.gmail.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS8ufb7ONCc=MorzA4j49Wc_DZj1sXURpHSut+uyAE7QdA@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us\nDate: 2026-03-27T12:40:40-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/message.eml",
+      "attachment_names": [
+        "image004.png",
+        "image012.jpg",
+        "image008.png",
+        "image007.jpg",
+        "image001.png",
+        "image003.png",
+        "image011.jpg",
+        "image005.png",
+        "image009.jpg",
+        "image002.png",
+        "image013.jpg",
+        "image010.jpg",
+        "image006.png",
+        "image.png"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0023-Re-HCV-Orientation-CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr+LsfQR+wGbZckgYnKMyfQ@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us\nDate: 2026-03-27T19:16:07-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/message.eml",
+      "attachment_names": [
+        "image004.png",
+        "image012.jpg",
+        "image008.png",
+        "image007.jpg",
+        "image001.png",
+        "image003.png",
+        "image011.jpg",
+        "image005.png",
+        "image009.jpg",
+        "image002.png",
+        "image013.jpg",
+        "image010.jpg",
+        "image006.png",
+        "image.png",
+        "IMG_2125.jpeg"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0024-Re-HCV-Orientation-CAMTdTS9bg00mw8vaCYD5PrG_sc-6Piz_Ws17GmeD-4-tPZHx-A-mail.gmail.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS9bg00mw8vaCYD5PrG_sc+6Piz_Ws17GmeD+4-tPZHx-A@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us\nDate: 2026-03-28T13:41:57-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/message.eml",
+      "attachment_names": [
+        "image004.png",
+        "image012.jpg",
+        "image008.png",
+        "image007.jpg",
+        "image001.png",
+        "image003.png",
+        "image011.jpg",
+        "image005.png",
+        "image009.jpg",
+        "image002.png",
+        "image013.jpg",
+        "image010.jpg",
+        "IMG_2125.jpeg",
+        "image006.png",
+        "image.png"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0025-Re-HCV-Orientation-CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS8NwnM6aAhiY=HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us\nDate: 2026-03-29T21:00:37-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/message.eml",
+      "attachment_names": [
+        "image004.png",
+        "image012.jpg",
+        "image008.png",
+        "image007.jpg",
+        "image001.png",
+        "image003.png",
+        "image011.jpg",
+        "image005.png",
+        "image009.jpg",
+        "image002.png",
+        "image013.jpg",
+        "image010.jpg",
+        "IMG_2125.jpeg",
+        "image006.png",
+        "image.png",
+        "image-2.png"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0026-Re-HCV-Orientation-CAMTdTS_jUi7EBW-d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA-mail.gmail.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS_jUi7EBW+d4uabncxb0bNXeOuJUp59T-d1nJFwnymZbA@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us\nDate: 2026-03-31T11:21:24-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0027-Re-HCV-Orientation-CAMTdTS9PMpfqacMORkM8crYMAFgSEh96FUNYjY9utFOzAuQrbA-mail.gmail.com/message.eml",
+      "attachment_names": [
+        "full-packet-merged-courtstyle-curated-covered.pdf"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0027-Re-HCV-Orientation-CAMTdTS9PMpfqacMORkM8crYMAFgSEh96FUNYjY9utFOzAuQrbA-mail.gmail.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0027-Re-HCV-Orientation-CAMTdTS9PMpfqacMORkM8crYMAFgSEh96FUNYjY9utFOzAuQrbA-mail.gmail.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS9PMpfqacMORkM8crYMAFgSEh96FUNYjY9utFOzAuQrbA@mail.gmail.com>"
+      }
+    },
+    {
+      "title": "Re: HCV Orientation",
+      "kind": "document",
+      "source": "gmail_import",
+      "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us\nDate: 2026-03-31T13:16:27-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0028-Re-HCV-Orientation-CAMTdTS_JhzONEcVQdj-MB-eTtKHdMqLWpg2PZrr7Pkf5k7iJQQ-mail.gmail.com/message.eml",
+      "attachment_names": [
+        "photo-1775_singular_display_fullPicture.jpeg",
+        "IMG_2150.jpeg"
+      ],
+      "metadata": {
+        "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0028-Re-HCV-Orientation-CAMTdTS_JhzONEcVQdj-MB-eTtKHdMqLWpg2PZrr7Pkf5k7iJQQ-mail.gmail.com/message.eml",
+        "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0028-Re-HCV-Orientation-CAMTdTS_JhzONEcVQdj-MB-eTtKHdMqLWpg2PZrr7Pkf5k7iJQQ-mail.gmail.com/message.json",
+        "folder": "[Gmail]/All Mail",
+        "message_id_header": "<CAMTdTS_JhzONEcVQdj+MB=eTtKHdMqLWpg2PZrr7Pkf5k7iJQQ@mail.gmail.com>"
+      }
+    }
+  ]
+}

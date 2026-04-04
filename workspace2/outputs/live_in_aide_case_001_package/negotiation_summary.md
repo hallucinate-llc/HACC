@@ -1,0 +1,18 @@
+# Negotiation Summary
+
+Case: live_in_aide_case_001
+Requested remedy: [Approve a separate bedroom for the live-in aide]
+Requesting party: [Requesting Party]
+
+Negotiation Summary For live_in_aide_case_001
+
+## Leverage points
+
+- The issue is whether the accommodation is effective in practice.
+- The strongest current theory is constructive denial.
+- Authority grounding note: All currently attached authority support is marked as verified_quote.
+
+Citations: findings=reasonable, constructiveDenial, violation; authorities=United States v. California Mobile Home Park Management Co., 24 CFR 982.316, Giebeler v. M&B Associates, HUD/DOJ Joint Statement on Reasonable Accommodations; evidence=evidence:medical_verification, evidence:sleep_log_1; events=evt:t1, evt:t2, evt:t3, evt:t4, evt:t5
+- The evaluator confidence score is 0.93.
+- Missing elements or evidence gaps: none.
+- Authorities currently grouped under violation: Giebeler v. M&B Associates, United States v. California Mobile Home Park Management Co., 24 CFR 982.316.

@@ -1,0 +1,22 @@
+# Demand Letter
+
+Subject: Demand to Cure Constructive Denial of Live-In Aide Accommodation
+
+To: [Housing Authority or Decision-Maker]
+
+From: [Requesting Party]
+Requested remedy: [Approve a separate bedroom for the live-in aide]
+Requested response deadline: [10 business days]
+
+This letter requests prompt approval of an accommodation that is effective in practice, not merely nominal.
+The current evaluated record supports the conclusion that the separate-bedroom denial amounts to constructive denial of accommodation.
+Authority grounding note: All currently attached authority support is marked as verified_quote.
+Citations: findings=constructiveDenial, violation; authorities=United States v. California Mobile Home Park Management Co., 24 CFR 982.316, Giebeler v. M&B Associates; evidence=evidence:medical_verification, evidence:sleep_log_1; events=evt:t1, evt:t3, evt:t4, evt:t5
+The present reasoning output identifies these harms: The aide's sleep is disrupted because the sleeping space is shared and used at night. The shared sleeping arrangement interferes with the aide's remote software work. Fatigue from the arrangement undermines caregiving effectiveness. The arrangement creates a meaningful privacy loss within the home.
+Supporting authorities include Giebeler v. M&B Associates, United States v. California Mobile Home Park Management Co., 24 CFR 982.316.
+
+Please confirm in writing whether the approved accommodation includes a separate bedroom for the live-in aide.
+Please provide that confirmation by the requested deadline so this matter can be resolved without further escalation.
+
+Sincerely,
+[Requesting Party]

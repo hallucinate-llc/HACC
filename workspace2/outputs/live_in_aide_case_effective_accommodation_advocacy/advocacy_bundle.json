@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "caseId": "live_in_aide_case_effective_accommodation_001",
+    "branch": "effective_accommodation",
+    "placeholders": {
+      "requesting_party": "[Requesting Party]",
+      "recipient": "[Housing Authority or Decision-Maker]",
+      "tenant_name": "[Tenant Name]",
+      "aide_name": "[Aide Name]",
+      "requested_remedy": "[Maintain the effective separate-bedroom accommodation for the live-in aide]",
+      "response_deadline": "[10 business days]"
+    },
+    "supportedModes": [
+      "hearing_script",
+      "complaint_outline",
+      "demand_letter",
+      "negotiation_summary"
+    ],
+    "confidence": 0.58
+  },
+  "citations": {
+    "hearing_script": {
+      "findingIds": [
+        "dutyToGrant",
+        "constructiveDenial",
+        "violation"
+      ],
+      "authorityIds": [],
+      "authorityLabels": [],
+      "evidenceIds": [],
+      "eventIds": [],
+      "proofSteps": []
+    },
+    "complaint_outline": {
+      "findingIds": [
+        "necessary",
+        "reasonable",
+        "constructiveDenial",
+        "violation"
+      ],
+      "authorityIds": [],
+      "authorityLabels": [],
+      "evidenceIds": [],
+      "eventIds": [],
+      "proofSteps": []
+    },
+    "demand_letter": {
+      "findingIds": [
+        "constructiveDenial",
+        "violation"
+      ],
+      "authorityIds": [],
+      "authorityLabels": [],
+      "evidenceIds": [],
+      "eventIds": [],
+      "proofSteps": []
+    },
+    "negotiation_summary": {
+      "findingIds": [
+        "reasonable",
+        "constructiveDenial",
+        "violation"
+      ],
+      "authorityIds": [],
+      "authorityLabels": [],
+      "evidenceIds": [],
+      "eventIds": [],
+      "proofSteps": []
+    }
+  },
+  "texts": {
+    "hearing_script": "Case: live_in_aide_case_effective_accommodation_001\nRequested remedy: [Maintain the effective separate-bedroom accommodation for the live-in aide]\nRequesting party: [Requesting Party]\n\nOpening:\nThis case asks whether the approved live-in aide accommodation is effective in practice.\nThe current evaluated record reflects that the provider recognized the accommodation duty and implemented an arrangement that appears effective in practice.\nCitations: findings=dutyToGrant, constructiveDenial, violation; authorities=none; evidence=none; events=none\n\nCore points:\n- No functional harms were established on the accepted findings.\n- Supporting authorities for the accommodation duty include: Giebeler v. M&B Associates, United States v. California Mobile Home Park Management Co., McGary v. City of Portland, 24 CFR 982.316.\n\nClosing:\nOn the accepted findings, this record looks more like a successfully implemented accommodation than a denial.",
+    "complaint_outline": "Case: live_in_aide_case_effective_accommodation_001\nRequested remedy: [Maintain the effective separate-bedroom accommodation for the live-in aide]\nRequesting party: [Requesting Party]\n\nComplaint Outline For live_in_aide_case_effective_accommodation_001\n\nClaim:\nFailure to provide a reasonable accommodation under the Fair Housing Act.\nCitations: findings=necessary, reasonable, constructiveDenial, violation; authorities=none; evidence=none; events=none\n\nCore allegations:\n- The tenant is disabled and needs a live-in aide.\n- Medical verification supports the requested accommodation.\n- A separate bedroom was requested for the aide.\n- The housing provider approved the aide in principle and the current record indicates the separate-bedroom request was satisfied in practice.\n- No functional harms were established on the accepted findings.\n\nTheory:\nThe accepted findings currently point away from a denial theory because the requested accommodation appears to have been satisfied in effective form.\n\nAuthorities to cite: Giebeler v. M&B Associates, United States v. California Mobile Home Park Management Co., McGary v. City of Portland, 24 CFR 982.316.",
+    "demand_letter": "Subject: Request to Preserve Effective Live-In Aide Accommodation\n\nTo: [Housing Authority or Decision-Maker]\n\nFrom: [Requesting Party]\nRequested remedy: [Maintain the effective separate-bedroom accommodation for the live-in aide]\nRequested response deadline: [10 business days]\n\nThis letter requests prompt approval of an accommodation that is effective in practice, not merely nominal.\nThe current evaluated record suggests the accommodation has been implemented in a workable form, so the immediate focus should be preserving that arrangement rather than escalating a denial claim.\nCitations: findings=constructiveDenial, violation; authorities=none; evidence=none; events=none\nThe present reasoning output identifies these harms: No functional harms were established on the accepted findings.\nSupporting authorities include Giebeler v. M&B Associates, United States v. California Mobile Home Park Management Co., McGary v. City of Portland, 24 CFR 982.316.\n\nPlease confirm in writing that the current separate-bedroom arrangement for the live-in aide will be maintained.\nPlease preserve the current arrangement and identify any future changes early enough for the household to respond without disruption.\n\nSincerely,\n[Requesting Party]",
+    "negotiation_summary": "Case: live_in_aide_case_effective_accommodation_001\nRequested remedy: [Maintain the effective separate-bedroom accommodation for the live-in aide]\nRequesting party: [Requesting Party]\n\nNegotiation Summary For live_in_aide_case_effective_accommodation_001\n\nLeverage points:\n- The issue is whether the accommodation is effective in practice.\n- The current record indicates the accommodation is functioning in practice, so negotiations should focus on maintaining compliance and documenting the effective arrangement.\nCitations: findings=reasonable, constructiveDenial, violation; authorities=none; evidence=none; events=none\n- The evaluator confidence score is 0.58.\n- Missing elements or evidence gaps: functional_harm.\n- Authorities currently grouped under violation: Giebeler v. M&B Associates, United States v. California Mobile Home Park Management Co., McGary v. City of Portland, 24 CFR 982.316."
+  }
+}

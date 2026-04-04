@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/warning_summary.schema.json",
+  "title": "WarningSummary",
+  "type": "object",
+  "required": ["generatedAt", "summary", "cases"],
+  "properties": {
+    "generatedAt": { "type": "string" },
+    "summary": {
+      "type": "object",
+      "required": ["caseCount", "warnedCaseCount", "warningCounts"],
+      "properties": {
+        "caseCount": { "type": "integer", "minimum": 0 },
+        "warnedCaseCount": { "type": "integer", "minimum": 0 },
+        "warningCounts": {
+          "type": "object",
+          "propertyNames": {
+            "enum": ["mixed_support", "paraphrase_heavy"]
+          },
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        }
+      },
+      "additionalProperties": false
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "caseId",
+          "branch",
+          "activeOutcome",
+          "authorityTrust",
+          "primaryKind",
+          "warningEntryCount",
+          "warningCounts",
+          "packagePath"
+        ],
+        "properties": {
+          "caseId": { "type": "string" },
+          "branch": { "type": "string" },
+          "activeOutcome": { "type": "string" },
+          "authorityTrust": {
+            "type": "string",
+            "enum": ["mixed_support", "paraphrase_heavy"]
+          },
+          "primaryKind": { "type": "string" },
+          "warningEntryCount": { "type": "integer", "minimum": 1 },
+          "warningCounts": {
+            "type": "object",
+            "propertyNames": {
+              "enum": ["mixed_support", "paraphrase_heavy"]
+            },
+            "additionalProperties": { "type": "integer", "minimum": 0 }
+          },
+          "packagePath": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

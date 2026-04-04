@@ -1,0 +1,45 @@
+{
+  "manifest_path": "/home/barberb/HACC/evidence/email_imports/starworks5-recommended-packet-email-import/email_import_manifest.json",
+  "graphrag_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-recommended-packet-email-import/graphrag",
+  "email_count": 21,
+  "attachment_total": 82,
+  "knowledge_graph_summary": {
+    "total_entities": 671,
+    "total_relationships": 315,
+    "entity_types": {
+      "claim": 5,
+      "fact": 325,
+      "date": 193,
+      "person": 40,
+      "organization": 95,
+      "evidence": 13
+    },
+    "relationship_types": {
+      "makes_claim": 5,
+      "follows_protected_activity": 18,
+      "occurred_on": 30,
+      "employed_by": 237,
+      "involves": 5,
+      "occurred_after": 6,
+      "causal_link": 1,
+      "associated_with": 13
+    },
+    "gaps": 113
+  },
+  "graph_path": "/home/barberb/HACC/evidence/email_imports/starworks5-recommended-packet-email-import/graphrag/email_knowledge_graph.json",
+  "corpus_records_path": "/home/barberb/HACC/evidence/email_imports/starworks5-recommended-packet-email-import/graphrag/email_corpus_records.json",
+  "duckdb_index": {
+    "status": "created",
+    "manifest_path": "/home/barberb/HACC/evidence/email_imports/starworks5-recommended-packet-email-import/email_import_manifest.json",
+    "output_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-recommended-packet-email-import/graphrag/duckdb",
+    "email_count": 21,
+    "append_mode": false,
+    "include_attachment_text": true,
+    "bm25_distinct_term_count": 4744,
+    "duckdb_path": "/home/barberb/HACC/evidence/email_imports/starworks5-recommended-packet-email-import/graphrag/duckdb/email_search.duckdb",
+    "messages_parquet_path": "/home/barberb/HACC/evidence/email_imports/starworks5-recommended-packet-email-import/graphrag/duckdb/email_messages.parquet",
+    "terms_parquet_path": "/home/barberb/HACC/evidence/email_imports/starworks5-recommended-packet-email-import/graphrag/duckdb/email_terms.parquet",
+    "bm25_terms_parquet_path": "/home/barberb/HACC/evidence/email_imports/starworks5-recommended-packet-email-import/graphrag/duckdb/email_bm25_terms.parquet"
+  },
+  "include_attachment_text_in_search": true
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/index.schema.json",
+  "title": "OutputsIndex",
+  "type": "object",
+  "required": ["generatedAt", "cases"],
+  "properties": {
+    "generatedAt": { "type": "string" },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "fixture",
+          "caseId",
+          "branch",
+          "confidence",
+          "activeOutcome",
+          "resultPath",
+          "packagePath",
+          "advocacyPath",
+          "memorandumPath"
+        ],
+        "properties": {
+          "fixture": { "type": "string" },
+          "caseId": { "type": "string" },
+          "branch": { "type": "string" },
+          "confidence": { "type": "number" },
+          "activeOutcome": { "type": "string" },
+          "resultPath": { "type": "string" },
+          "packagePath": { "type": "string" },
+          "advocacyPath": { "type": "string" },
+          "memorandumPath": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

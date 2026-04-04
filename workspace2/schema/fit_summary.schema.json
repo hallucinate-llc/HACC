@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/fit_summary.schema.json",
+  "title": "FitSummary",
+  "type": "object",
+  "required": ["generatedAt", "summary", "singleCaseGuide", "cases"],
+  "properties": {
+    "generatedAt": { "type": "string" },
+    "refreshRuntime": {
+      "type": "object",
+      "required": ["status", "running", "startedAt", "completedAt", "elapsedSeconds", "elapsedHuman"],
+      "properties": {
+        "status": { "type": "string" },
+        "running": { "type": "boolean" },
+        "startedAt": { "type": "string" },
+        "completedAt": { "type": ["string", "null"] },
+        "elapsedSeconds": { "type": ["number", "null"] },
+        "elapsedHuman": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "summary": {
+      "type": "object",
+      "required": ["caseCount", "authorityCount", "directCount", "analogicalCount", "recordSupportCount"],
+      "properties": {
+        "caseCount": { "type": "integer", "minimum": 0 },
+        "authorityCount": { "type": "integer", "minimum": 0 },
+        "directCount": { "type": "integer", "minimum": 0 },
+        "analogicalCount": { "type": "integer", "minimum": 0 },
+        "recordSupportCount": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "singleCaseGuide": {
+      "type": ["object", "null"],
+      "required": ["caseId", "recommendedFirstStop", "whyOpenThis"],
+      "properties": {
+        "caseId": { "type": "string" },
+        "recommendedFirstStop": { "type": "string" },
+        "whyOpenThis": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "caseId",
+          "branch",
+          "directCount",
+          "analogicalCount",
+          "recordSupportCount",
+          "fitStatus"
+        ],
+        "properties": {
+          "caseId": { "type": "string" },
+          "branch": { "type": "string" },
+          "directCount": { "type": "integer", "minimum": 0 },
+          "analogicalCount": { "type": "integer", "minimum": 0 },
+          "recordSupportCount": { "type": "integer", "minimum": 0 },
+          "fitStatus": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

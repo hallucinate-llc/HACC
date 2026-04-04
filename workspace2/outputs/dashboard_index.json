@@ -1,0 +1,71 @@
+{
+  "generatedAt": "2026-04-04T19:25:40.096278+00:00",
+  "recommendedFirstStop": "outputs/dashboard_overview.json",
+  "whyOpenThis": "Start with the dashboard overview because it is the single best top-level entry point into counts, warnings, fit posture, and the main discovery surfaces.",
+  "entries": [
+    {
+      "kind": "outputs_index",
+      "jsonPath": "outputs/index.json",
+      "markdownPath": "outputs/index.md",
+      "description": "Primary generated case index across all fixtures and package paths.",
+      "priorityHint": "primary",
+      "whyOpenThis": "Open this when you want the complete generated case inventory before drilling into audit surfaces."
+    },
+    {
+      "kind": "summary_index",
+      "jsonPath": "outputs/summary_index.json",
+      "markdownPath": "outputs/summary_index.md",
+      "description": "Compact discovery file for lightweight warning summary artifacts.",
+      "priorityHint": "secondary",
+      "whyOpenThis": "Open this when you want the lightweight warning-summary discovery path instead of the broader dashboard surface."
+    },
+    {
+      "kind": "fit_index",
+      "jsonPath": "outputs/fit_index.json",
+      "markdownPath": "outputs/fit_index.md",
+      "description": "Compact discovery file for fit-quality matrix and summary artifacts.",
+      "priorityHint": "primary",
+      "whyOpenThis": "Open this when you want the compact fit discovery path without scanning the full audit index."
+    },
+    {
+      "kind": "fit_findings",
+      "jsonPath": "outputs/fit_findings.json",
+      "markdownPath": "outputs/fit_findings.md",
+      "description": "Repo-level findings report for analogical and record-support fit posture.",
+      "priorityHint": "primary",
+      "whyOpenThis": "Open this when you want immediate case-level fit-risk findings from the dashboard layer."
+    },
+    {
+      "kind": "fit_findings_summary",
+      "jsonPath": "outputs/fit_findings_summary.json",
+      "markdownPath": "outputs/fit_findings_summary.md",
+      "description": "Compact case-first summary of fit findings severity and posture.",
+      "priorityHint": "secondary",
+      "whyOpenThis": "Open this when you want a lighter fit findings view from the dashboard layer."
+    },
+    {
+      "kind": "refresh_state",
+      "jsonPath": "outputs/.refresh_state.json",
+      "markdownPath": "outputs/dashboard_overview.md",
+      "description": "Snapshot refresh sentinel showing whether generation is running or complete.",
+      "priorityHint": "supporting",
+      "whyOpenThis": "Open this when you want the current refresh state and timing without scanning the larger dashboard rollup."
+    },
+    {
+      "kind": "audit_index",
+      "jsonPath": "outputs/audit_index.json",
+      "markdownPath": "outputs/audit_index.md",
+      "description": "Broader discovery file for the full repo-level audit surface.",
+      "priorityHint": "secondary",
+      "whyOpenThis": "Open this when you want the broadest audit discovery path across trust, warning, source, and fit reports."
+    },
+    {
+      "kind": "dashboard_overview",
+      "jsonPath": "outputs/dashboard_overview.json",
+      "markdownPath": "outputs/dashboard_overview.md",
+      "description": "Single-file dashboard rollup of case counts, trust posture, warnings, and discovery entry points.",
+      "priorityHint": "recommended",
+      "whyOpenThis": "Open this first when you want the strongest single top-level dashboard rollup before following linked surfaces."
+    }
+  ]
+}

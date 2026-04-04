@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/case_audit_matrix.schema.json",
+  "title": "CaseAuditMatrix",
+  "type": "object",
+  "required": ["generatedAt", "cases"],
+  "properties": {
+    "generatedAt": { "type": "string" },
+    "refreshRuntime": {
+      "type": "object",
+      "required": ["status", "running", "startedAt", "completedAt", "elapsedSeconds", "elapsedHuman"],
+      "properties": {
+        "status": { "type": "string" },
+        "running": { "type": "boolean" },
+        "startedAt": { "type": "string" },
+        "completedAt": { "type": ["string", "null"] },
+        "elapsedSeconds": { "type": ["number", "null"] },
+        "elapsedHuman": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "caseId",
+          "branch",
+          "activeOutcome",
+          "confidence",
+          "authorityTrust",
+          "fitFinding",
+          "primaryKind",
+          "primaryWhy",
+          "hasWarnings",
+          "warningEntryCount",
+          "warningLabel",
+          "packagePath"
+        ],
+        "properties": {
+          "caseId": { "type": "string" },
+          "branch": { "type": "string" },
+          "activeOutcome": { "type": "string" },
+          "confidence": { "type": "number" },
+          "authorityTrust": {
+            "type": "string",
+            "enum": ["fully_verified", "mixed_support", "paraphrase_heavy"]
+          },
+          "fitFinding": {
+            "type": "string",
+            "enum": ["direct_only", "analogical_support", "record_support_heavy", "unclassified"]
+          },
+          "primaryKind": { "type": "string" },
+          "primaryWhy": { "type": "string" },
+          "hasWarnings": { "type": "boolean" },
+          "warningEntryCount": { "type": "integer", "minimum": 0 },
+          "warningLabel": {
+            "type": ["string", "null"],
+            "enum": ["mixed_support", "paraphrase_heavy", null]
+          },
+          "packagePath": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

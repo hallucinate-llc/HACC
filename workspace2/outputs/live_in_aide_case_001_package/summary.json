@@ -1,0 +1,18 @@
+{
+  "caseId": "live_in_aide_case_001",
+  "branch": "constructive_denial",
+  "confidence": 0.93,
+  "activeOutcome": "violation",
+  "topFindings": {
+    "necessary": true,
+    "reasonable": true,
+    "dutyToGrant": true,
+    "constructiveDenial": true,
+    "violation": true
+  },
+  "defeatersConsidered": {
+    "undueBurden": false,
+    "fundamentalAlteration": false
+  },
+  "missingEvidence": []
+}

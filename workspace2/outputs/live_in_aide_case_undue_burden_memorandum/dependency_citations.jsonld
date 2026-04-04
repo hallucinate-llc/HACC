@@ -1,0 +1,1068 @@
+{
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+    "caseId": "https://example.org/legal/caseId",
+    "branch": "https://example.org/legal/branch",
+    "activeOutcome": "https://example.org/legal/activeOutcome",
+    "nodeId": "https://example.org/legal/nodeId",
+    "edgeId": "https://example.org/legal/edgeId",
+    "fromNode": {
+      "@id": "https://example.org/legal/fromNode",
+      "@type": "@id"
+    },
+    "toNode": {
+      "@id": "https://example.org/legal/toNode",
+      "@type": "@id"
+    },
+    "edgeRole": "https://example.org/legal/edgeRole",
+    "label": "https://example.org/legal/label",
+    "citation": "https://example.org/legal/citation",
+    "weight": "https://example.org/legal/weight",
+    "jurisdiction": "https://example.org/legal/jurisdiction",
+    "court": "https://example.org/legal/court",
+    "year": "https://example.org/legal/year",
+    "pincite": "https://example.org/legal/pincite",
+    "sourceUrl": "https://example.org/legal/sourceUrl",
+    "fitKind": "https://example.org/legal/fitKind",
+    "authority": {
+      "@id": "https://example.org/legal/authority",
+      "@type": "@id"
+    },
+    "authorityExcerpt": {
+      "@id": "https://example.org/legal/authorityExcerpt",
+      "@type": "@id"
+    },
+    "excerptText": "https://example.org/legal/excerptText",
+    "proposition": "https://example.org/legal/proposition",
+    "excerptKind": "https://example.org/legal/excerptKind",
+    "supportKind": "https://example.org/legal/supportKind",
+    "findingBucket": "https://example.org/legal/findingBucket",
+    "target": {
+      "@id": "https://example.org/legal/target",
+      "@type": "@id"
+    }
+  },
+  "@graph": [
+    {
+      "id": "case:live_in_aide_case_undue_burden_001",
+      "type": "ReasoningCase",
+      "caseId": "live_in_aide_case_undue_burden_001",
+      "branch": "undue_burden_constructive_denial",
+      "activeOutcome": "violation"
+    },
+    {
+      "id": "dep:node:disabled_tenant",
+      "type": "DependencyNode",
+      "nodeId": "disabled_tenant",
+      "label": "disabled tenant"
+    },
+    {
+      "id": "dep:node:needs_live_in_aide",
+      "type": "DependencyNode",
+      "nodeId": "needs_live_in_aide",
+      "label": "needs live in aide"
+    },
+    {
+      "id": "dep:node:medical_verification",
+      "type": "DependencyNode",
+      "nodeId": "medical_verification",
+      "label": "medical verification"
+    },
+    {
+      "id": "dep:node:requested_separate_bedroom",
+      "type": "DependencyNode",
+      "nodeId": "requested_separate_bedroom",
+      "label": "requested separate bedroom"
+    },
+    {
+      "id": "dep:node:approved_aide_in_principle",
+      "type": "DependencyNode",
+      "nodeId": "approved_aide_in_principle",
+      "label": "approved aide in principle"
+    },
+    {
+      "id": "dep:node:denied_separate_bedroom",
+      "type": "DependencyNode",
+      "nodeId": "denied_separate_bedroom",
+      "label": "denied separate bedroom"
+    },
+    {
+      "id": "dep:node:aide_sleeps_in_living_room",
+      "type": "DependencyNode",
+      "nodeId": "aide_sleeps_in_living_room",
+      "label": "aide sleeps in living room"
+    },
+    {
+      "id": "dep:node:night_access_needed",
+      "type": "DependencyNode",
+      "nodeId": "night_access_needed",
+      "label": "night access needed"
+    },
+    {
+      "id": "dep:node:sleep_interruption",
+      "type": "DependencyNode",
+      "nodeId": "sleep_interruption",
+      "label": "sleep interruption"
+    },
+    {
+      "id": "dep:node:work_interference",
+      "type": "DependencyNode",
+      "nodeId": "work_interference",
+      "label": "work interference"
+    },
+    {
+      "id": "dep:node:caregiving_impairment",
+      "type": "DependencyNode",
+      "nodeId": "caregiving_impairment",
+      "label": "caregiving impairment"
+    },
+    {
+      "id": "dep:node:privacy_loss",
+      "type": "DependencyNode",
+      "nodeId": "privacy_loss",
+      "label": "privacy loss"
+    },
+    {
+      "id": "dep:node:necessary",
+      "type": "DependencyNode",
+      "nodeId": "necessary",
+      "label": "necessary"
+    },
+    {
+      "id": "dep:node:reasonable",
+      "type": "DependencyNode",
+      "nodeId": "reasonable",
+      "label": "reasonable"
+    },
+    {
+      "id": "dep:node:duty_to_grant",
+      "type": "DependencyNode",
+      "nodeId": "duty_to_grant",
+      "label": "duty to grant"
+    },
+    {
+      "id": "dep:node:not_effective",
+      "type": "DependencyNode",
+      "nodeId": "not_effective",
+      "label": "not effective"
+    },
+    {
+      "id": "dep:node:constructive_denial",
+      "type": "DependencyNode",
+      "nodeId": "constructive_denial",
+      "label": "constructive denial"
+    },
+    {
+      "id": "dep:node:undue_burden",
+      "type": "DependencyNode",
+      "nodeId": "undue_burden",
+      "label": "undue burden"
+    },
+    {
+      "id": "dep:node:fundamental_alteration",
+      "type": "DependencyNode",
+      "nodeId": "fundamental_alteration",
+      "label": "fundamental alteration"
+    },
+    {
+      "id": "dep:node:violation",
+      "type": "DependencyNode",
+      "nodeId": "violation",
+      "label": "violation"
+    },
+    {
+      "id": "dep:edge:aide_sleeps_in_living_room->sleep_interruption",
+      "type": "DependencyEdge",
+      "edgeId": "aide_sleeps_in_living_room->sleep_interruption",
+      "fromNode": "dep:node:aide_sleeps_in_living_room",
+      "toNode": "dep:node:sleep_interruption",
+      "edgeRole": "support"
+    },
+    {
+      "id": "dep:edge:night_access_needed->sleep_interruption",
+      "type": "DependencyEdge",
+      "edgeId": "night_access_needed->sleep_interruption",
+      "fromNode": "dep:node:night_access_needed",
+      "toNode": "dep:node:sleep_interruption",
+      "edgeRole": "support"
+    },
+    {
+      "id": "dep:edge:sleep_interruption->work_interference",
+      "type": "DependencyEdge",
+      "edgeId": "sleep_interruption->work_interference",
+      "fromNode": "dep:node:sleep_interruption",
+      "toNode": "dep:node:work_interference",
+      "edgeRole": "support"
+    },
+    {
+      "id": "dep:edge:sleep_interruption->caregiving_impairment",
+      "type": "DependencyEdge",
+      "edgeId": "sleep_interruption->caregiving_impairment",
+      "fromNode": "dep:node:sleep_interruption",
+      "toNode": "dep:node:caregiving_impairment",
+      "edgeRole": "support"
+    },
+    {
+      "id": "dep:edge:sleep_interruption->necessary",
+      "type": "DependencyEdge",
+      "edgeId": "sleep_interruption->necessary",
+      "fromNode": "dep:node:sleep_interruption",
+      "toNode": "dep:node:necessary",
+      "edgeRole": "support"
+    },
+    {
+      "id": "dep:edge:work_interference->necessary",
+      "type": "DependencyEdge",
+      "edgeId": "work_interference->necessary",
+      "fromNode": "dep:node:work_interference",
+      "toNode": "dep:node:necessary",
+      "edgeRole": "support"
+    },
+    {
+      "id": "dep:edge:caregiving_impairment->necessary",
+      "type": "DependencyEdge",
+      "edgeId": "caregiving_impairment->necessary",
+      "fromNode": "dep:node:caregiving_impairment",
+      "toNode": "dep:node:necessary",
+      "edgeRole": "support"
+    },
+    {
+      "id": "dep:edge:privacy_loss->necessary",
+      "type": "DependencyEdge",
+      "edgeId": "privacy_loss->necessary",
+      "fromNode": "dep:node:privacy_loss",
+      "toNode": "dep:node:necessary",
+      "edgeRole": "support"
+    },
+    {
+      "id": "dep:edge:medical_verification->reasonable",
+      "type": "DependencyEdge",
+      "edgeId": "medical_verification->reasonable",
+      "fromNode": "dep:node:medical_verification",
+      "toNode": "dep:node:reasonable",
+      "edgeRole": "support"
+    },
+    {
+      "id": "dep:edge:necessary->reasonable",
+      "type": "DependencyEdge",
+      "edgeId": "necessary->reasonable",
+      "fromNode": "dep:node:necessary",
+      "toNode": "dep:node:reasonable",
+      "edgeRole": "support"
+    },
+    {
+      "id": "dep:edge:undue_burden->reasonable",
+      "type": "DependencyEdge",
+      "edgeId": "undue_burden->reasonable",
+      "fromNode": "dep:node:undue_burden",
+      "toNode": "dep:node:reasonable",
+      "edgeRole": "defeater"
+    },
+    {
+      "id": "dep:edge:fundamental_alteration->reasonable",
+      "type": "DependencyEdge",
+      "edgeId": "fundamental_alteration->reasonable",
+      "fromNode": "dep:node:fundamental_alteration",
+      "toNode": "dep:node:reasonable",
+      "edgeRole": "defeater"
+    },
+    {
+      "id": "dep:edge:disabled_tenant->duty_to_grant",
+      "type": "DependencyEdge",
+      "edgeId": "disabled_tenant->duty_to_grant",
+      "fromNode": "dep:node:disabled_tenant",
+      "toNode": "dep:node:duty_to_grant",
+      "edgeRole": "support"
+    },
+    {
+      "id": "dep:edge:needs_live_in_aide->duty_to_grant",
+      "type": "DependencyEdge",
+      "edgeId": "needs_live_in_aide->duty_to_grant",
+      "fromNode": "dep:node:needs_live_in_aide",
+      "toNode": "dep:node:duty_to_grant",
+      "edgeRole": "support"
+    },
+    {
+      "id": "dep:edge:requested_separate_bedroom->duty_to_grant",
+      "type": "DependencyEdge",
+      "edgeId": "requested_separate_bedroom->duty_to_grant",
+      "fromNode": "dep:node:requested_separate_bedroom",
+      "toNode": "dep:node:duty_to_grant",
+      "edgeRole": "support"
+    },
+    {
+      "id": "dep:edge:reasonable->duty_to_grant",
+      "type": "DependencyEdge",
+      "edgeId": "reasonable->duty_to_grant",
+      "fromNode": "dep:node:reasonable",
+      "toNode": "dep:node:duty_to_grant",
+      "edgeRole": "support"
+    },
+    {
+      "id": "dep:edge:denied_separate_bedroom->not_effective",
+      "type": "DependencyEdge",
+      "edgeId": "denied_separate_bedroom->not_effective",
+      "fromNode": "dep:node:denied_separate_bedroom",
+      "toNode": "dep:node:not_effective",
+      "edgeRole": "support"
+    },
+    {
+      "id": "dep:edge:sleep_interruption->not_effective",
+      "type": "DependencyEdge",
+      "edgeId": "sleep_interruption->not_effective",
+      "fromNode": "dep:node:sleep_interruption",
+      "toNode": "dep:node:not_effective",
+      "edgeRole": "support"
+    },
+    {
+      "id": "dep:edge:approved_aide_in_principle->constructive_denial",
+      "type": "DependencyEdge",
+      "edgeId": "approved_aide_in_principle->constructive_denial",
+      "fromNode": "dep:node:approved_aide_in_principle",
+      "toNode": "dep:node:constructive_denial",
+      "edgeRole": "support"
+    },
+    {
+      "id": "dep:edge:denied_separate_bedroom->constructive_denial",
+      "type": "DependencyEdge",
+      "edgeId": "denied_separate_bedroom->constructive_denial",
+      "fromNode": "dep:node:denied_separate_bedroom",
+      "toNode": "dep:node:constructive_denial",
+      "edgeRole": "support"
+    },
+    {
+      "id": "dep:edge:not_effective->constructive_denial",
+      "type": "DependencyEdge",
+      "edgeId": "not_effective->constructive_denial",
+      "fromNode": "dep:node:not_effective",
+      "toNode": "dep:node:constructive_denial",
+      "edgeRole": "support"
+    },
+    {
+      "id": "dep:edge:duty_to_grant->violation",
+      "type": "DependencyEdge",
+      "edgeId": "duty_to_grant->violation",
+      "fromNode": "dep:node:duty_to_grant",
+      "toNode": "dep:node:violation",
+      "edgeRole": "support"
+    },
+    {
+      "id": "dep:edge:denied_separate_bedroom->violation",
+      "type": "DependencyEdge",
+      "edgeId": "denied_separate_bedroom->violation",
+      "fromNode": "dep:node:denied_separate_bedroom",
+      "toNode": "dep:node:violation",
+      "edgeRole": "support"
+    },
+    {
+      "id": "dep:edge:constructive_denial->violation",
+      "type": "DependencyEdge",
+      "edgeId": "constructive_denial->violation",
+      "fromNode": "dep:node:constructive_denial",
+      "toNode": "dep:node:violation",
+      "edgeRole": "support"
+    },
+    {
+      "id": "authority:mcgary",
+      "type": "LegalAuthority",
+      "label": "McGary v. City of Portland",
+      "citation": "386 F.3d 1259 (9th Cir. 2004)",
+      "weight": "binding",
+      "jurisdiction": "Ninth Circuit / Oregon",
+      "court": "9th Cir.",
+      "year": "2004",
+      "pincite": "1265",
+      "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/386/1259/632471/"
+    },
+    {
+      "id": "excerpt:mcgary",
+      "type": "AuthorityExcerpt",
+      "authority": "authority:mcgary",
+      "excerptText": "The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+      "proposition": "Housing-related financial burdens can impair the full use and enjoyment of a dwelling.",
+      "excerptKind": "verified_quote",
+      "fitKind": "analogical",
+      "court": "9th Cir.",
+      "year": "2004",
+      "pincite": "1265",
+      "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/386/1259/632471/"
+    },
+    {
+      "id": "support:necessary:mcgary:node:necessary",
+      "type": "DependencySupport",
+      "supportKind": "node",
+      "findingBucket": "necessary",
+      "target": "dep:node:necessary",
+      "authority": "authority:mcgary",
+      "authorityExcerpt": "excerpt:mcgary"
+    },
+    {
+      "id": "support:necessary:mcgary:edge:sleep_interruption->necessary",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "necessary",
+      "target": "dep:edge:sleep_interruption->necessary",
+      "authority": "authority:mcgary",
+      "authorityExcerpt": "excerpt:mcgary"
+    },
+    {
+      "id": "support:necessary:mcgary:edge:work_interference->necessary",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "necessary",
+      "target": "dep:edge:work_interference->necessary",
+      "authority": "authority:mcgary",
+      "authorityExcerpt": "excerpt:mcgary"
+    },
+    {
+      "id": "support:necessary:mcgary:edge:caregiving_impairment->necessary",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "necessary",
+      "target": "dep:edge:caregiving_impairment->necessary",
+      "authority": "authority:mcgary",
+      "authorityExcerpt": "excerpt:mcgary"
+    },
+    {
+      "id": "support:necessary:mcgary:edge:privacy_loss->necessary",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "necessary",
+      "target": "dep:edge:privacy_loss->necessary",
+      "authority": "authority:mcgary",
+      "authorityExcerpt": "excerpt:mcgary"
+    },
+    {
+      "id": "authority:hud_joint_statement",
+      "type": "LegalAuthority",
+      "label": "HUD/DOJ Joint Statement on Reasonable Accommodations",
+      "citation": "Joint Statement of the Department of Housing and Urban Development and the Department of Justice, Reasonable Accommodations under the Fair Housing Act (May 2004)",
+      "weight": "guidance",
+      "jurisdiction": "Federal",
+      "court": "HUD/DOJ",
+      "year": "2004",
+      "pincite": "Question 1, p. 2",
+      "sourceUrl": "https://www.justice.gov/crt/about/hce/joint_statement_ra.pdf"
+    },
+    {
+      "id": "excerpt:hud_joint_statement",
+      "type": "AuthorityExcerpt",
+      "authority": "authority:hud_joint_statement",
+      "excerptText": "The joint statement is paraphrased here to support the proposition that equal use and enjoyment may require accommodation changes even when implementation burden is disputed.",
+      "proposition": "Equal use and enjoyment may require accommodation changes even when implementation burden is disputed.",
+      "excerptKind": "paraphrase",
+      "fitKind": "direct",
+      "court": "HUD/DOJ",
+      "year": "2004",
+      "pincite": "Question 1, p. 2",
+      "sourceUrl": "https://www.justice.gov/crt/about/hce/joint_statement_ra.pdf"
+    },
+    {
+      "id": "support:necessary:hud_joint_statement:node:necessary",
+      "type": "DependencySupport",
+      "supportKind": "node",
+      "findingBucket": "necessary",
+      "target": "dep:node:necessary",
+      "authority": "authority:hud_joint_statement",
+      "authorityExcerpt": "excerpt:hud_joint_statement"
+    },
+    {
+      "id": "support:necessary:hud_joint_statement:edge:sleep_interruption->necessary",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "necessary",
+      "target": "dep:edge:sleep_interruption->necessary",
+      "authority": "authority:hud_joint_statement",
+      "authorityExcerpt": "excerpt:hud_joint_statement"
+    },
+    {
+      "id": "support:necessary:hud_joint_statement:edge:work_interference->necessary",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "necessary",
+      "target": "dep:edge:work_interference->necessary",
+      "authority": "authority:hud_joint_statement",
+      "authorityExcerpt": "excerpt:hud_joint_statement"
+    },
+    {
+      "id": "support:necessary:hud_joint_statement:edge:caregiving_impairment->necessary",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "necessary",
+      "target": "dep:edge:caregiving_impairment->necessary",
+      "authority": "authority:hud_joint_statement",
+      "authorityExcerpt": "excerpt:hud_joint_statement"
+    },
+    {
+      "id": "support:necessary:hud_joint_statement:edge:privacy_loss->necessary",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "necessary",
+      "target": "dep:edge:privacy_loss->necessary",
+      "authority": "authority:hud_joint_statement",
+      "authorityExcerpt": "excerpt:hud_joint_statement"
+    },
+    {
+      "id": "authority:giebeler",
+      "type": "LegalAuthority",
+      "label": "Giebeler v. M&B Associates",
+      "citation": "343 F.3d 1143 (9th Cir. 2003)",
+      "weight": "binding",
+      "jurisdiction": "Ninth Circuit",
+      "court": "9th Cir.",
+      "year": "2003",
+      "pincite": "1155",
+      "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/343/1143/636375/"
+    },
+    {
+      "id": "excerpt:giebeler",
+      "type": "AuthorityExcerpt",
+      "authority": "authority:giebeler",
+      "excerptText": "Imposition of burdensome policies can interfere with disabled persons' right to use and enjoyment of their dwellings.",
+      "proposition": "Burdensome housing policies may require accommodation when they interfere with use and enjoyment.",
+      "excerptKind": "verified_quote",
+      "fitKind": "analogical",
+      "court": "9th Cir.",
+      "year": "2003",
+      "pincite": "1155",
+      "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/343/1143/636375/"
+    },
+    {
+      "id": "support:reasonable:giebeler:node:reasonable",
+      "type": "DependencySupport",
+      "supportKind": "node",
+      "findingBucket": "reasonable",
+      "target": "dep:node:reasonable",
+      "authority": "authority:giebeler",
+      "authorityExcerpt": "excerpt:giebeler"
+    },
+    {
+      "id": "support:reasonable:giebeler:edge:medical_verification->reasonable",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "reasonable",
+      "target": "dep:edge:medical_verification->reasonable",
+      "authority": "authority:giebeler",
+      "authorityExcerpt": "excerpt:giebeler"
+    },
+    {
+      "id": "support:reasonable:giebeler:edge:necessary->reasonable",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "reasonable",
+      "target": "dep:edge:necessary->reasonable",
+      "authority": "authority:giebeler",
+      "authorityExcerpt": "excerpt:giebeler"
+    },
+    {
+      "id": "support:reasonable:giebeler:edge:undue_burden->reasonable",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "reasonable",
+      "target": "dep:edge:undue_burden->reasonable",
+      "authority": "authority:giebeler",
+      "authorityExcerpt": "excerpt:giebeler"
+    },
+    {
+      "id": "support:reasonable:giebeler:edge:fundamental_alteration->reasonable",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "reasonable",
+      "target": "dep:edge:fundamental_alteration->reasonable",
+      "authority": "authority:giebeler",
+      "authorityExcerpt": "excerpt:giebeler"
+    },
+    {
+      "id": "authority:california_mobile_home",
+      "type": "LegalAuthority",
+      "label": "United States v. California Mobile Home Park Management Co.",
+      "citation": "29 F.3d 1413 (9th Cir. 1994)",
+      "weight": "binding",
+      "jurisdiction": "Ninth Circuit",
+      "court": "9th Cir.",
+      "year": "1994",
+      "pincite": "1416",
+      "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/29/1413/479940/"
+    },
+    {
+      "id": "excerpt:california_mobile_home",
+      "type": "AuthorityExcerpt",
+      "authority": "authority:california_mobile_home",
+      "excerptText": "The FHAA imposes an affirmative duty upon landlords reasonably to accommodate the needs of handicapped persons.",
+      "proposition": "Reasonable accommodation may require landlords to shoulder reasonable financial burdens.",
+      "excerptKind": "verified_quote",
+      "fitKind": "direct",
+      "court": "9th Cir.",
+      "year": "1994",
+      "pincite": "1416",
+      "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/29/1413/479940/"
+    },
+    {
+      "id": "support:reasonable:california_mobile_home:node:reasonable",
+      "type": "DependencySupport",
+      "supportKind": "node",
+      "findingBucket": "reasonable",
+      "target": "dep:node:reasonable",
+      "authority": "authority:california_mobile_home",
+      "authorityExcerpt": "excerpt:california_mobile_home"
+    },
+    {
+      "id": "support:reasonable:california_mobile_home:edge:medical_verification->reasonable",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "reasonable",
+      "target": "dep:edge:medical_verification->reasonable",
+      "authority": "authority:california_mobile_home",
+      "authorityExcerpt": "excerpt:california_mobile_home"
+    },
+    {
+      "id": "support:reasonable:california_mobile_home:edge:necessary->reasonable",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "reasonable",
+      "target": "dep:edge:necessary->reasonable",
+      "authority": "authority:california_mobile_home",
+      "authorityExcerpt": "excerpt:california_mobile_home"
+    },
+    {
+      "id": "support:reasonable:california_mobile_home:edge:undue_burden->reasonable",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "reasonable",
+      "target": "dep:edge:undue_burden->reasonable",
+      "authority": "authority:california_mobile_home",
+      "authorityExcerpt": "excerpt:california_mobile_home"
+    },
+    {
+      "id": "support:reasonable:california_mobile_home:edge:fundamental_alteration->reasonable",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "reasonable",
+      "target": "dep:edge:fundamental_alteration->reasonable",
+      "authority": "authority:california_mobile_home",
+      "authorityExcerpt": "excerpt:california_mobile_home"
+    },
+    {
+      "id": "support:reasonable:hud_joint_statement:node:reasonable",
+      "type": "DependencySupport",
+      "supportKind": "node",
+      "findingBucket": "reasonable",
+      "target": "dep:node:reasonable",
+      "authority": "authority:hud_joint_statement",
+      "authorityExcerpt": "excerpt:hud_joint_statement"
+    },
+    {
+      "id": "support:reasonable:hud_joint_statement:edge:medical_verification->reasonable",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "reasonable",
+      "target": "dep:edge:medical_verification->reasonable",
+      "authority": "authority:hud_joint_statement",
+      "authorityExcerpt": "excerpt:hud_joint_statement"
+    },
+    {
+      "id": "support:reasonable:hud_joint_statement:edge:necessary->reasonable",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "reasonable",
+      "target": "dep:edge:necessary->reasonable",
+      "authority": "authority:hud_joint_statement",
+      "authorityExcerpt": "excerpt:hud_joint_statement"
+    },
+    {
+      "id": "support:reasonable:hud_joint_statement:edge:undue_burden->reasonable",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "reasonable",
+      "target": "dep:edge:undue_burden->reasonable",
+      "authority": "authority:hud_joint_statement",
+      "authorityExcerpt": "excerpt:hud_joint_statement"
+    },
+    {
+      "id": "support:reasonable:hud_joint_statement:edge:fundamental_alteration->reasonable",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "reasonable",
+      "target": "dep:edge:fundamental_alteration->reasonable",
+      "authority": "authority:hud_joint_statement",
+      "authorityExcerpt": "excerpt:hud_joint_statement"
+    },
+    {
+      "id": "authority:cfr_982_316",
+      "type": "LegalAuthority",
+      "label": "24 CFR 982.316",
+      "citation": "24 C.F.R. \u00a7 982.316(a)",
+      "weight": "binding",
+      "jurisdiction": "Federal",
+      "court": "24 C.F.R.",
+      "year": "current",
+      "pincite": "(a)",
+      "sourceUrl": "https://www.law.cornell.edu/cfr/text/24/982.316"
+    },
+    {
+      "id": "excerpt:cfr_982_316",
+      "type": "AuthorityExcerpt",
+      "authority": "authority:cfr_982_316",
+      "excerptText": "The PHA must approve a live-in aide if needed as a reasonable accommodation.",
+      "proposition": "A PHA must approve a live-in aide when needed as a reasonable accommodation.",
+      "excerptKind": "verified_quote",
+      "fitKind": "direct",
+      "court": "24 C.F.R.",
+      "year": "current",
+      "pincite": "(a)",
+      "sourceUrl": "https://www.law.cornell.edu/cfr/text/24/982.316"
+    },
+    {
+      "id": "support:reasonable:cfr_982_316:node:reasonable",
+      "type": "DependencySupport",
+      "supportKind": "node",
+      "findingBucket": "reasonable",
+      "target": "dep:node:reasonable",
+      "authority": "authority:cfr_982_316",
+      "authorityExcerpt": "excerpt:cfr_982_316"
+    },
+    {
+      "id": "support:reasonable:cfr_982_316:edge:medical_verification->reasonable",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "reasonable",
+      "target": "dep:edge:medical_verification->reasonable",
+      "authority": "authority:cfr_982_316",
+      "authorityExcerpt": "excerpt:cfr_982_316"
+    },
+    {
+      "id": "support:reasonable:cfr_982_316:edge:necessary->reasonable",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "reasonable",
+      "target": "dep:edge:necessary->reasonable",
+      "authority": "authority:cfr_982_316",
+      "authorityExcerpt": "excerpt:cfr_982_316"
+    },
+    {
+      "id": "support:reasonable:cfr_982_316:edge:undue_burden->reasonable",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "reasonable",
+      "target": "dep:edge:undue_burden->reasonable",
+      "authority": "authority:cfr_982_316",
+      "authorityExcerpt": "excerpt:cfr_982_316"
+    },
+    {
+      "id": "support:reasonable:cfr_982_316:edge:fundamental_alteration->reasonable",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "reasonable",
+      "target": "dep:edge:fundamental_alteration->reasonable",
+      "authority": "authority:cfr_982_316",
+      "authorityExcerpt": "excerpt:cfr_982_316"
+    },
+    {
+      "id": "support:dutyToGrant:giebeler:node:duty_to_grant",
+      "type": "DependencySupport",
+      "supportKind": "node",
+      "findingBucket": "dutyToGrant",
+      "target": "dep:node:duty_to_grant",
+      "authority": "authority:giebeler",
+      "authorityExcerpt": "excerpt:giebeler"
+    },
+    {
+      "id": "support:dutyToGrant:giebeler:edge:disabled_tenant->duty_to_grant",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "dutyToGrant",
+      "target": "dep:edge:disabled_tenant->duty_to_grant",
+      "authority": "authority:giebeler",
+      "authorityExcerpt": "excerpt:giebeler"
+    },
+    {
+      "id": "support:dutyToGrant:giebeler:edge:needs_live_in_aide->duty_to_grant",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "dutyToGrant",
+      "target": "dep:edge:needs_live_in_aide->duty_to_grant",
+      "authority": "authority:giebeler",
+      "authorityExcerpt": "excerpt:giebeler"
+    },
+    {
+      "id": "support:dutyToGrant:giebeler:edge:requested_separate_bedroom->duty_to_grant",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "dutyToGrant",
+      "target": "dep:edge:requested_separate_bedroom->duty_to_grant",
+      "authority": "authority:giebeler",
+      "authorityExcerpt": "excerpt:giebeler"
+    },
+    {
+      "id": "support:dutyToGrant:giebeler:edge:reasonable->duty_to_grant",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "dutyToGrant",
+      "target": "dep:edge:reasonable->duty_to_grant",
+      "authority": "authority:giebeler",
+      "authorityExcerpt": "excerpt:giebeler"
+    },
+    {
+      "id": "support:dutyToGrant:california_mobile_home:node:duty_to_grant",
+      "type": "DependencySupport",
+      "supportKind": "node",
+      "findingBucket": "dutyToGrant",
+      "target": "dep:node:duty_to_grant",
+      "authority": "authority:california_mobile_home",
+      "authorityExcerpt": "excerpt:california_mobile_home"
+    },
+    {
+      "id": "support:dutyToGrant:california_mobile_home:edge:disabled_tenant->duty_to_grant",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "dutyToGrant",
+      "target": "dep:edge:disabled_tenant->duty_to_grant",
+      "authority": "authority:california_mobile_home",
+      "authorityExcerpt": "excerpt:california_mobile_home"
+    },
+    {
+      "id": "support:dutyToGrant:california_mobile_home:edge:needs_live_in_aide->duty_to_grant",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "dutyToGrant",
+      "target": "dep:edge:needs_live_in_aide->duty_to_grant",
+      "authority": "authority:california_mobile_home",
+      "authorityExcerpt": "excerpt:california_mobile_home"
+    },
+    {
+      "id": "support:dutyToGrant:california_mobile_home:edge:requested_separate_bedroom->duty_to_grant",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "dutyToGrant",
+      "target": "dep:edge:requested_separate_bedroom->duty_to_grant",
+      "authority": "authority:california_mobile_home",
+      "authorityExcerpt": "excerpt:california_mobile_home"
+    },
+    {
+      "id": "support:dutyToGrant:california_mobile_home:edge:reasonable->duty_to_grant",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "dutyToGrant",
+      "target": "dep:edge:reasonable->duty_to_grant",
+      "authority": "authority:california_mobile_home",
+      "authorityExcerpt": "excerpt:california_mobile_home"
+    },
+    {
+      "id": "support:dutyToGrant:cfr_982_316:node:duty_to_grant",
+      "type": "DependencySupport",
+      "supportKind": "node",
+      "findingBucket": "dutyToGrant",
+      "target": "dep:node:duty_to_grant",
+      "authority": "authority:cfr_982_316",
+      "authorityExcerpt": "excerpt:cfr_982_316"
+    },
+    {
+      "id": "support:dutyToGrant:cfr_982_316:edge:disabled_tenant->duty_to_grant",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "dutyToGrant",
+      "target": "dep:edge:disabled_tenant->duty_to_grant",
+      "authority": "authority:cfr_982_316",
+      "authorityExcerpt": "excerpt:cfr_982_316"
+    },
+    {
+      "id": "support:dutyToGrant:cfr_982_316:edge:needs_live_in_aide->duty_to_grant",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "dutyToGrant",
+      "target": "dep:edge:needs_live_in_aide->duty_to_grant",
+      "authority": "authority:cfr_982_316",
+      "authorityExcerpt": "excerpt:cfr_982_316"
+    },
+    {
+      "id": "support:dutyToGrant:cfr_982_316:edge:requested_separate_bedroom->duty_to_grant",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "dutyToGrant",
+      "target": "dep:edge:requested_separate_bedroom->duty_to_grant",
+      "authority": "authority:cfr_982_316",
+      "authorityExcerpt": "excerpt:cfr_982_316"
+    },
+    {
+      "id": "support:dutyToGrant:cfr_982_316:edge:reasonable->duty_to_grant",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "dutyToGrant",
+      "target": "dep:edge:reasonable->duty_to_grant",
+      "authority": "authority:cfr_982_316",
+      "authorityExcerpt": "excerpt:cfr_982_316"
+    },
+    {
+      "id": "support:constructiveDenial:california_mobile_home:node:constructive_denial",
+      "type": "DependencySupport",
+      "supportKind": "node",
+      "findingBucket": "constructiveDenial",
+      "target": "dep:node:constructive_denial",
+      "authority": "authority:california_mobile_home",
+      "authorityExcerpt": "excerpt:california_mobile_home"
+    },
+    {
+      "id": "support:constructiveDenial:california_mobile_home:node:not_effective",
+      "type": "DependencySupport",
+      "supportKind": "node",
+      "findingBucket": "constructiveDenial",
+      "target": "dep:node:not_effective",
+      "authority": "authority:california_mobile_home",
+      "authorityExcerpt": "excerpt:california_mobile_home"
+    },
+    {
+      "id": "support:constructiveDenial:california_mobile_home:edge:approved_aide_in_principle->constructive_denial",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "constructiveDenial",
+      "target": "dep:edge:approved_aide_in_principle->constructive_denial",
+      "authority": "authority:california_mobile_home",
+      "authorityExcerpt": "excerpt:california_mobile_home"
+    },
+    {
+      "id": "support:constructiveDenial:california_mobile_home:edge:denied_separate_bedroom->constructive_denial",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "constructiveDenial",
+      "target": "dep:edge:denied_separate_bedroom->constructive_denial",
+      "authority": "authority:california_mobile_home",
+      "authorityExcerpt": "excerpt:california_mobile_home"
+    },
+    {
+      "id": "support:constructiveDenial:california_mobile_home:edge:not_effective->constructive_denial",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "constructiveDenial",
+      "target": "dep:edge:not_effective->constructive_denial",
+      "authority": "authority:california_mobile_home",
+      "authorityExcerpt": "excerpt:california_mobile_home"
+    },
+    {
+      "id": "support:constructiveDenial:california_mobile_home:edge:denied_separate_bedroom->not_effective",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "constructiveDenial",
+      "target": "dep:edge:denied_separate_bedroom->not_effective",
+      "authority": "authority:california_mobile_home",
+      "authorityExcerpt": "excerpt:california_mobile_home"
+    },
+    {
+      "id": "support:constructiveDenial:california_mobile_home:edge:sleep_interruption->not_effective",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "constructiveDenial",
+      "target": "dep:edge:sleep_interruption->not_effective",
+      "authority": "authority:california_mobile_home",
+      "authorityExcerpt": "excerpt:california_mobile_home"
+    },
+    {
+      "id": "support:violation:giebeler:node:violation",
+      "type": "DependencySupport",
+      "supportKind": "node",
+      "findingBucket": "violation",
+      "target": "dep:node:violation",
+      "authority": "authority:giebeler",
+      "authorityExcerpt": "excerpt:giebeler"
+    },
+    {
+      "id": "support:violation:giebeler:edge:duty_to_grant->violation",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "violation",
+      "target": "dep:edge:duty_to_grant->violation",
+      "authority": "authority:giebeler",
+      "authorityExcerpt": "excerpt:giebeler"
+    },
+    {
+      "id": "support:violation:giebeler:edge:denied_separate_bedroom->violation",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "violation",
+      "target": "dep:edge:denied_separate_bedroom->violation",
+      "authority": "authority:giebeler",
+      "authorityExcerpt": "excerpt:giebeler"
+    },
+    {
+      "id": "support:violation:giebeler:edge:constructive_denial->violation",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "violation",
+      "target": "dep:edge:constructive_denial->violation",
+      "authority": "authority:giebeler",
+      "authorityExcerpt": "excerpt:giebeler"
+    },
+    {
+      "id": "support:violation:california_mobile_home:node:violation",
+      "type": "DependencySupport",
+      "supportKind": "node",
+      "findingBucket": "violation",
+      "target": "dep:node:violation",
+      "authority": "authority:california_mobile_home",
+      "authorityExcerpt": "excerpt:california_mobile_home"
+    },
+    {
+      "id": "support:violation:california_mobile_home:edge:duty_to_grant->violation",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "violation",
+      "target": "dep:edge:duty_to_grant->violation",
+      "authority": "authority:california_mobile_home",
+      "authorityExcerpt": "excerpt:california_mobile_home"
+    },
+    {
+      "id": "support:violation:california_mobile_home:edge:denied_separate_bedroom->violation",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "violation",
+      "target": "dep:edge:denied_separate_bedroom->violation",
+      "authority": "authority:california_mobile_home",
+      "authorityExcerpt": "excerpt:california_mobile_home"
+    },
+    {
+      "id": "support:violation:california_mobile_home:edge:constructive_denial->violation",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "violation",
+      "target": "dep:edge:constructive_denial->violation",
+      "authority": "authority:california_mobile_home",
+      "authorityExcerpt": "excerpt:california_mobile_home"
+    },
+    {
+      "id": "support:violation:cfr_982_316:node:violation",
+      "type": "DependencySupport",
+      "supportKind": "node",
+      "findingBucket": "violation",
+      "target": "dep:node:violation",
+      "authority": "authority:cfr_982_316",
+      "authorityExcerpt": "excerpt:cfr_982_316"
+    },
+    {
+      "id": "support:violation:cfr_982_316:edge:duty_to_grant->violation",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "violation",
+      "target": "dep:edge:duty_to_grant->violation",
+      "authority": "authority:cfr_982_316",
+      "authorityExcerpt": "excerpt:cfr_982_316"
+    },
+    {
+      "id": "support:violation:cfr_982_316:edge:denied_separate_bedroom->violation",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "violation",
+      "target": "dep:edge:denied_separate_bedroom->violation",
+      "authority": "authority:cfr_982_316",
+      "authorityExcerpt": "excerpt:cfr_982_316"
+    },
+    {
+      "id": "support:violation:cfr_982_316:edge:constructive_denial->violation",
+      "type": "DependencySupport",
+      "supportKind": "edge",
+      "findingBucket": "violation",
+      "target": "dep:edge:constructive_denial->violation",
+      "authority": "authority:cfr_982_316",
+      "authorityExcerpt": "excerpt:cfr_982_316"
+    }
+  ]
+}

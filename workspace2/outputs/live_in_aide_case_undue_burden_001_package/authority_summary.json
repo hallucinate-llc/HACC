@@ -1,0 +1,19 @@
+{
+  "caseId": "live_in_aide_case_undue_burden_001",
+  "branch": "undue_burden_constructive_denial",
+  "verifiedOnly": false,
+  "supportStatus": null,
+  "fitKind": null,
+  "authorityCount": 5,
+  "statusCounts": {
+    "paraphrase": 1,
+    "verified_quote": 4
+  },
+  "bucketCounts": {
+    "constructiveDenial": 1,
+    "dutyToGrant": 3,
+    "necessary": 2,
+    "reasonable": 4,
+    "violation": 3
+  }
+}

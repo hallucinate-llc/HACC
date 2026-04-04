@@ -1,0 +1,275 @@
+{
+  "caseId": "live_in_aide_case_no_violation_001",
+  "branch": "evidentiary_gap",
+  "activeOutcome": "no_violation",
+  "primaryKind": "summary",
+  "recommendedFirstStop": "summary.json",
+  "whyOpenThis": "Start with the summary because it is the quickest branch-aligned orientation for evidentiary_gap review.",
+  "authorityTrust": {
+    "authorityCount": 5,
+    "verifiedQuoteCount": 2,
+    "paraphraseCount": 3,
+    "missingCount": 0,
+    "severity": "warning",
+    "label": "paraphrase_heavy",
+    "advisory": "This case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust."
+  },
+  "sourceSummary": {
+    "authorityCount": 5,
+    "sourceVerifiedCount": 5,
+    "sourceNormalizedCount": 5,
+    "fullySourceVerified": true,
+    "fullySourceNormalized": true,
+    "sourceStatus": "All authority entries are sourceVerified and sourceNormalized."
+  },
+  "fitSummary": {
+    "authorityCount": 5,
+    "directCount": 1,
+    "analogicalCount": 1,
+    "recordSupportCount": 3,
+    "fitStatus": "This package includes analogical authority mappings."
+  },
+  "fitFindingSummary": {
+    "hasFitFinding": true,
+    "fitFinding": "record_support_heavy",
+    "fitFindingNote": "This package relies in part on record-support mappings, so direct controlling authority should be distinguished from factual or background support."
+  },
+  "warningSummary": {
+    "hasWarnings": true,
+    "warningEntryCount": 16,
+    "warningCounts": {
+      "paraphrase_heavy": 16
+    }
+  },
+  "warningLabelSummary": {
+    "hasWarningLabel": true,
+    "warningLabel": "paraphrase_heavy",
+    "warningEntryCount": 16
+  },
+  "entries": [
+    {
+      "kind": "summary",
+      "path": "summary.json",
+      "format": "json",
+      "description": "Compact branch-aware summary for downstream tooling.",
+      "priority": 1,
+      "priorityLabel": "primary",
+      "whyOpenThis": "Start with the summary because it is the quickest branch-aligned orientation for evidentiary_gap review.",
+      "trustWarning": {
+        "severity": "warning",
+        "label": "paraphrase_heavy",
+        "message": "This case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust."
+      }
+    },
+    {
+      "kind": "result",
+      "path": "../live_in_aide_case_no_violation_001.result.json",
+      "format": "json",
+      "description": "Full evaluator output with findings, explanations, and provenance.",
+      "priority": 4,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the full evaluator output with resolved facts, explanations, and provenance.",
+      "trustWarning": {
+        "severity": "warning",
+        "label": "paraphrase_heavy",
+        "message": "This case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust."
+      }
+    },
+    {
+      "kind": "advocacy_bundle",
+      "path": "advocacy_bundle.json",
+      "format": "json",
+      "description": "Structured advocacy citations and drafting metadata.",
+      "priority": 5,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the structured drafting and citation payload that drives the advocacy outputs.",
+      "trustWarning": {
+        "severity": "warning",
+        "label": "paraphrase_heavy",
+        "message": "This case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust."
+      }
+    },
+    {
+      "kind": "hearing_script_markdown",
+      "path": "hearing_script.md",
+      "format": "markdown",
+      "description": "Hearing script draft grounded in the evaluated case state.",
+      "priority": 6,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the hearing-oriented draft rather than the fuller memorandum package.",
+      "trustWarning": {
+        "severity": "warning",
+        "label": "paraphrase_heavy",
+        "message": "This case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust."
+      }
+    },
+    {
+      "kind": "complaint_outline_markdown",
+      "path": "complaint_outline.md",
+      "format": "markdown",
+      "description": "Complaint outline draft for the current branch posture.",
+      "priority": 8,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the complaint framing and issue outline instead of prose briefing.",
+      "trustWarning": {
+        "severity": "warning",
+        "label": "paraphrase_heavy",
+        "message": "This case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust."
+      }
+    },
+    {
+      "kind": "demand_letter_markdown",
+      "path": "demand_letter.md",
+      "format": "markdown",
+      "description": "Demand-letter draft for the current branch posture.",
+      "priority": 2,
+      "priorityLabel": "secondary",
+      "whyOpenThis": "Open this when you want the demand-letter posture and requested remedy framing.",
+      "trustWarning": {
+        "severity": "warning",
+        "label": "paraphrase_heavy",
+        "message": "This case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust."
+      }
+    },
+    {
+      "kind": "negotiation_summary_markdown",
+      "path": "negotiation_summary.md",
+      "format": "markdown",
+      "description": "Negotiation summary draft with branch-aware leverage framing.",
+      "priority": 7,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the shortest negotiation-oriented leverage summary.",
+      "trustWarning": {
+        "severity": "warning",
+        "label": "paraphrase_heavy",
+        "message": "This case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust."
+      }
+    },
+    {
+      "kind": "memorandum_json",
+      "path": "memorandum.json",
+      "format": "json",
+      "description": "Structured memorandum sections with citation rollups and paragraph support.",
+      "priority": 11,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the structured memorandum bundle for downstream tooling instead of the human-readable draft.",
+      "trustWarning": {
+        "severity": "warning",
+        "label": "paraphrase_heavy",
+        "message": "This case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust."
+      }
+    },
+    {
+      "kind": "memorandum_markdown",
+      "path": "memorandum.md",
+      "format": "markdown",
+      "description": "Human-readable memorandum with visible section and paragraph support blocks.",
+      "priority": 3,
+      "priorityLabel": "secondary",
+      "whyOpenThis": "Open this when you want the editable human-readable memorandum draft.",
+      "trustWarning": {
+        "severity": "warning",
+        "label": "paraphrase_heavy",
+        "message": "This case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust."
+      }
+    },
+    {
+      "kind": "memorandum_pdf",
+      "path": "memorandum_of_law.pdf",
+      "format": "pdf",
+      "description": "Printable memorandum of law with paragraph-level support lines.",
+      "priority": 9,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the printable memorandum with paragraph-level support lines.",
+      "trustWarning": {
+        "severity": "warning",
+        "label": "paraphrase_heavy",
+        "message": "This case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust."
+      }
+    },
+    {
+      "kind": "dependency_graph",
+      "path": "dependency_graph.json",
+      "format": "json",
+      "description": "Dependency graph nodes and edges for the active reasoning branch.",
+      "priority": 10,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the reasoning graph behind the active branch analysis.",
+      "trustWarning": {
+        "severity": "warning",
+        "label": "paraphrase_heavy",
+        "message": "This case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust."
+      }
+    },
+    {
+      "kind": "dependency_citations",
+      "path": "dependency_citations.jsonld",
+      "format": "jsonld",
+      "description": "JSON-LD grounding that links dependency targets to authority excerpts.",
+      "priority": 12,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the JSON-LD grounding that links dependency targets to authority excerpts.",
+      "trustWarning": {
+        "severity": "warning",
+        "label": "paraphrase_heavy",
+        "message": "This case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust."
+      }
+    },
+    {
+      "kind": "authority_review",
+      "path": "authority_review.json",
+      "format": "json",
+      "description": "Audit view of authority excerpts, propositions, source URLs, and support status.",
+      "priority": 13,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the authority audit view with support status, excerpts, and source metadata.",
+      "trustWarning": {
+        "severity": "warning",
+        "label": "paraphrase_heavy",
+        "message": "This case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust."
+      }
+    },
+    {
+      "kind": "authority_research_note",
+      "path": "authority_research_note.json",
+      "format": "json",
+      "description": "Research-note view of verified source references, excerpts, fit, and proposition mapping.",
+      "priority": 14,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the source-verification and proposition-mapping research note.",
+      "trustWarning": {
+        "severity": "warning",
+        "label": "paraphrase_heavy",
+        "message": "This case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust."
+      }
+    },
+    {
+      "kind": "authority_summary",
+      "path": "authority_summary.json",
+      "format": "json",
+      "description": "Compact counts by authority support status and reasoning bucket.",
+      "priority": 15,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the compact authority count view instead of the fuller authority audit.",
+      "trustWarning": {
+        "severity": "warning",
+        "label": "paraphrase_heavy",
+        "message": "This case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust."
+      }
+    },
+    {
+      "kind": "decision_tree",
+      "path": "decision_tree.json",
+      "format": "json",
+      "description": "Decision-tree representation of the accommodation analysis.",
+      "priority": 16,
+      "priorityLabel": "supporting",
+      "whyOpenThis": "Open this when you want the compact decision-tree representation of the accommodation analysis.",
+      "trustWarning": {
+        "severity": "warning",
+        "label": "paraphrase_heavy",
+        "message": "This case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust."
+      }
+    }
+  ]
+}

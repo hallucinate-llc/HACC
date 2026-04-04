@@ -1,0 +1,505 @@
+{
+  "generatedAt": "2026-04-04T19:25:40.095620+00:00",
+  "summary": {
+    "kindCount": 16,
+    "caseCount": 3
+  },
+  "kinds": [
+    {
+      "kind": "advocacy_bundle",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      },
+      "cases": [
+        {
+          "caseId": "live_in_aide_case_effective_accommodation_001",
+          "branch": "effective_accommodation",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_effective_accommodation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_no_violation_001",
+          "branch": "evidentiary_gap",
+          "authorityTrust": "paraphrase_heavy",
+          "warningLabel": "paraphrase_heavy",
+          "packagePath": "outputs/live_in_aide_case_no_violation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_undue_burden_001",
+          "branch": "undue_burden_constructive_denial",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_undue_burden_001_package"
+        }
+      ]
+    },
+    {
+      "kind": "authority_research_note",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      },
+      "cases": [
+        {
+          "caseId": "live_in_aide_case_effective_accommodation_001",
+          "branch": "effective_accommodation",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_effective_accommodation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_no_violation_001",
+          "branch": "evidentiary_gap",
+          "authorityTrust": "paraphrase_heavy",
+          "warningLabel": "paraphrase_heavy",
+          "packagePath": "outputs/live_in_aide_case_no_violation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_undue_burden_001",
+          "branch": "undue_burden_constructive_denial",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_undue_burden_001_package"
+        }
+      ]
+    },
+    {
+      "kind": "authority_review",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      },
+      "cases": [
+        {
+          "caseId": "live_in_aide_case_effective_accommodation_001",
+          "branch": "effective_accommodation",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_effective_accommodation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_no_violation_001",
+          "branch": "evidentiary_gap",
+          "authorityTrust": "paraphrase_heavy",
+          "warningLabel": "paraphrase_heavy",
+          "packagePath": "outputs/live_in_aide_case_no_violation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_undue_burden_001",
+          "branch": "undue_burden_constructive_denial",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_undue_burden_001_package"
+        }
+      ]
+    },
+    {
+      "kind": "authority_summary",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      },
+      "cases": [
+        {
+          "caseId": "live_in_aide_case_effective_accommodation_001",
+          "branch": "effective_accommodation",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_effective_accommodation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_no_violation_001",
+          "branch": "evidentiary_gap",
+          "authorityTrust": "paraphrase_heavy",
+          "warningLabel": "paraphrase_heavy",
+          "packagePath": "outputs/live_in_aide_case_no_violation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_undue_burden_001",
+          "branch": "undue_burden_constructive_denial",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_undue_burden_001_package"
+        }
+      ]
+    },
+    {
+      "kind": "complaint_outline_markdown",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      },
+      "cases": [
+        {
+          "caseId": "live_in_aide_case_effective_accommodation_001",
+          "branch": "effective_accommodation",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_effective_accommodation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_no_violation_001",
+          "branch": "evidentiary_gap",
+          "authorityTrust": "paraphrase_heavy",
+          "warningLabel": "paraphrase_heavy",
+          "packagePath": "outputs/live_in_aide_case_no_violation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_undue_burden_001",
+          "branch": "undue_burden_constructive_denial",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_undue_burden_001_package"
+        }
+      ]
+    },
+    {
+      "kind": "decision_tree",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      },
+      "cases": [
+        {
+          "caseId": "live_in_aide_case_effective_accommodation_001",
+          "branch": "effective_accommodation",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_effective_accommodation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_no_violation_001",
+          "branch": "evidentiary_gap",
+          "authorityTrust": "paraphrase_heavy",
+          "warningLabel": "paraphrase_heavy",
+          "packagePath": "outputs/live_in_aide_case_no_violation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_undue_burden_001",
+          "branch": "undue_burden_constructive_denial",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_undue_burden_001_package"
+        }
+      ]
+    },
+    {
+      "kind": "demand_letter_markdown",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      },
+      "cases": [
+        {
+          "caseId": "live_in_aide_case_effective_accommodation_001",
+          "branch": "effective_accommodation",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_effective_accommodation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_no_violation_001",
+          "branch": "evidentiary_gap",
+          "authorityTrust": "paraphrase_heavy",
+          "warningLabel": "paraphrase_heavy",
+          "packagePath": "outputs/live_in_aide_case_no_violation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_undue_burden_001",
+          "branch": "undue_burden_constructive_denial",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_undue_burden_001_package"
+        }
+      ]
+    },
+    {
+      "kind": "dependency_citations",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      },
+      "cases": [
+        {
+          "caseId": "live_in_aide_case_effective_accommodation_001",
+          "branch": "effective_accommodation",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_effective_accommodation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_no_violation_001",
+          "branch": "evidentiary_gap",
+          "authorityTrust": "paraphrase_heavy",
+          "warningLabel": "paraphrase_heavy",
+          "packagePath": "outputs/live_in_aide_case_no_violation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_undue_burden_001",
+          "branch": "undue_burden_constructive_denial",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_undue_burden_001_package"
+        }
+      ]
+    },
+    {
+      "kind": "dependency_graph",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      },
+      "cases": [
+        {
+          "caseId": "live_in_aide_case_effective_accommodation_001",
+          "branch": "effective_accommodation",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_effective_accommodation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_no_violation_001",
+          "branch": "evidentiary_gap",
+          "authorityTrust": "paraphrase_heavy",
+          "warningLabel": "paraphrase_heavy",
+          "packagePath": "outputs/live_in_aide_case_no_violation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_undue_burden_001",
+          "branch": "undue_burden_constructive_denial",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_undue_burden_001_package"
+        }
+      ]
+    },
+    {
+      "kind": "hearing_script_markdown",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      },
+      "cases": [
+        {
+          "caseId": "live_in_aide_case_effective_accommodation_001",
+          "branch": "effective_accommodation",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_effective_accommodation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_no_violation_001",
+          "branch": "evidentiary_gap",
+          "authorityTrust": "paraphrase_heavy",
+          "warningLabel": "paraphrase_heavy",
+          "packagePath": "outputs/live_in_aide_case_no_violation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_undue_burden_001",
+          "branch": "undue_burden_constructive_denial",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_undue_burden_001_package"
+        }
+      ]
+    },
+    {
+      "kind": "memorandum_json",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      },
+      "cases": [
+        {
+          "caseId": "live_in_aide_case_effective_accommodation_001",
+          "branch": "effective_accommodation",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_effective_accommodation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_no_violation_001",
+          "branch": "evidentiary_gap",
+          "authorityTrust": "paraphrase_heavy",
+          "warningLabel": "paraphrase_heavy",
+          "packagePath": "outputs/live_in_aide_case_no_violation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_undue_burden_001",
+          "branch": "undue_burden_constructive_denial",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_undue_burden_001_package"
+        }
+      ]
+    },
+    {
+      "kind": "memorandum_markdown",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      },
+      "cases": [
+        {
+          "caseId": "live_in_aide_case_effective_accommodation_001",
+          "branch": "effective_accommodation",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_effective_accommodation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_no_violation_001",
+          "branch": "evidentiary_gap",
+          "authorityTrust": "paraphrase_heavy",
+          "warningLabel": "paraphrase_heavy",
+          "packagePath": "outputs/live_in_aide_case_no_violation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_undue_burden_001",
+          "branch": "undue_burden_constructive_denial",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_undue_burden_001_package"
+        }
+      ]
+    },
+    {
+      "kind": "memorandum_pdf",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      },
+      "cases": [
+        {
+          "caseId": "live_in_aide_case_effective_accommodation_001",
+          "branch": "effective_accommodation",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_effective_accommodation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_no_violation_001",
+          "branch": "evidentiary_gap",
+          "authorityTrust": "paraphrase_heavy",
+          "warningLabel": "paraphrase_heavy",
+          "packagePath": "outputs/live_in_aide_case_no_violation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_undue_burden_001",
+          "branch": "undue_burden_constructive_denial",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_undue_burden_001_package"
+        }
+      ]
+    },
+    {
+      "kind": "negotiation_summary_markdown",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      },
+      "cases": [
+        {
+          "caseId": "live_in_aide_case_effective_accommodation_001",
+          "branch": "effective_accommodation",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_effective_accommodation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_no_violation_001",
+          "branch": "evidentiary_gap",
+          "authorityTrust": "paraphrase_heavy",
+          "warningLabel": "paraphrase_heavy",
+          "packagePath": "outputs/live_in_aide_case_no_violation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_undue_burden_001",
+          "branch": "undue_burden_constructive_denial",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_undue_burden_001_package"
+        }
+      ]
+    },
+    {
+      "kind": "result",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      },
+      "cases": [
+        {
+          "caseId": "live_in_aide_case_effective_accommodation_001",
+          "branch": "effective_accommodation",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_effective_accommodation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_no_violation_001",
+          "branch": "evidentiary_gap",
+          "authorityTrust": "paraphrase_heavy",
+          "warningLabel": "paraphrase_heavy",
+          "packagePath": "outputs/live_in_aide_case_no_violation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_undue_burden_001",
+          "branch": "undue_burden_constructive_denial",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_undue_burden_001_package"
+        }
+      ]
+    },
+    {
+      "kind": "summary",
+      "warningCaseCount": 3,
+      "warningLabels": {
+        "mixed_support": 2,
+        "paraphrase_heavy": 1
+      },
+      "cases": [
+        {
+          "caseId": "live_in_aide_case_effective_accommodation_001",
+          "branch": "effective_accommodation",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_effective_accommodation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_no_violation_001",
+          "branch": "evidentiary_gap",
+          "authorityTrust": "paraphrase_heavy",
+          "warningLabel": "paraphrase_heavy",
+          "packagePath": "outputs/live_in_aide_case_no_violation_001_package"
+        },
+        {
+          "caseId": "live_in_aide_case_undue_burden_001",
+          "branch": "undue_burden_constructive_denial",
+          "authorityTrust": "mixed_support",
+          "warningLabel": "mixed_support",
+          "packagePath": "outputs/live_in_aide_case_undue_burden_001_package"
+        }
+      ]
+    }
+  ]
+}

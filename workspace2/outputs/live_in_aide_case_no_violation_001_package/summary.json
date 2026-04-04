@@ -1,0 +1,20 @@
+{
+  "caseId": "live_in_aide_case_no_violation_001",
+  "branch": "evidentiary_gap",
+  "confidence": 0.57,
+  "activeOutcome": "no_violation",
+  "topFindings": {
+    "necessary": false,
+    "reasonable": false,
+    "dutyToGrant": false,
+    "constructiveDenial": false,
+    "violation": false
+  },
+  "defeatersConsidered": {
+    "undueBurden": false,
+    "fundamentalAlteration": false
+  },
+  "missingEvidence": [
+    "functional_harm"
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "caseId": "live_in_aide_case_001",
+  "policy": {
+    "privacy_mode": "inferred_from_living_room_sleeping"
+  },
+  "assertedFacts": {
+    "disabled_tenant": true,
+    "needs_live_in_aide": true,
+    "medical_verification": true,
+    "requested_separate_bedroom": true,
+    "approved_aide_in_principle": true,
+    "denied_separate_bedroom": true,
+    "aide_sleeps_in_living_room": true,
+    "night_access_needed": true,
+    "works_remotely": true,
+    "privacy_loss": true,
+    "guest_management_problem": true,
+    "dog_isolation_problem": true,
+    "undue_burden": false,
+    "fundamental_alteration": false
+  },
+  "acceptedFindings": {
+    "disabled_tenant": true,
+    "needs_live_in_aide": true,
+    "medical_verification": true,
+    "requested_separate_bedroom": true,
+    "approved_aide_in_principle": true,
+    "denied_separate_bedroom": true,
+    "aide_sleeps_in_living_room": true,
+    "night_access_needed": true,
+    "works_remotely": true,
+    "privacy_loss": true,
+    "guest_management_problem": true,
+    "dog_isolation_problem": true,
+    "undue_burden": false,
+    "fundamental_alteration": false
+  },
+  "evidence": [
+    {
+      "id": "evidence:medical_verification",
+      "type": "MedicalVerification",
+      "supports": [
+        "medical_verification",
+        "needs_live_in_aide"
+      ],
+      "status": "accepted",
+      "sourceText": "Physician verified need for a live-in aide and separate functional arrangement.",
+      "assertedBy": "person:mother",
+      "confidence": 0.9
+    },
+    {
+      "id": "evidence:sleep_log_1",
+      "type": "SleepLog",
+      "supports": [
+        "night_access_needed",
+        "aide_sleeps_in_living_room"
+      ],
+      "status": "accepted",
+      "sourceText": "Sleep log records night disruption when common-area access is needed.",
+      "assertedBy": "person:aide",
+      "confidence": 0.8
+    },
+    {
+      "id": "evidence:layout_diagram_1",
+      "type": "LayoutDiagram",
+      "supports": [
+        "privacy_loss",
+        "dog_isolation_problem",
+        "guest_management_problem"
+      ],
+      "status": "alleged",
+      "sourceText": "Apartment layout shows a single bedroom and shared living room sleeping space.",
+      "assertedBy": "person:aide",
+      "confidence": 0.7
+    }
+  ],
+  "events": [
+    {
+      "id": "evt:t1",
+      "event": "request_accommodation",
+      "time": "t1",
+      "actors": [
+        "person:mother",
+        "person:aide",
+        "org:ha1"
+      ],
+      "details": {
+        "request": "separate_bedroom_for_aide"
+      }
+    },
+    {
+      "id": "evt:t2",
+      "event": "submit_medical_verification",
+      "time": "t2",
+      "actors": [
+        "person:mother"
+      ],
+      "details": {
+        "evidenceId": "evidence:medical_verification"
+      }
+    },
+    {
+      "id": "evt:t3",
+      "event": "approve_aide_in_principle",
+      "time": "t3",
+      "actors": [
+        "org:ha1",
+        "person:aide",
+        "person:mother"
+      ]
+    },
+    {
+      "id": "evt:t4",
+      "event": "deny_separate_bedroom",
+      "time": "t4",
+      "actors": [
+        "org:ha1",
+        "person:aide"
+      ]
+    },
+    {
+      "id": "evt:t5",
+      "event": "night_use",
+      "time": "t5",
+      "actors": [
+        "person:mother"
+      ],
+      "details": {
+        "room": "living1"
+      }
+    }
+  ],
+  "authorities": [
+    {
+      "id": "giebeler",
+      "label": "Giebeler v. M&B Associates",
+      "kind": "case",
+      "jurisdiction": "Ninth Circuit",
+      "weight": "binding",
+      "citation": "343 F.3d 1143 (9th Cir. 2003)",
+      "notes": "Accommodation rules must bend where necessary for disability-related housing access.",
+      "court": "9th Cir.",
+      "year": "2003",
+      "pincite": "1155",
+      "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/343/1143/636375/",
+      "excerptText": "Imposition of burdensome policies can interfere with disabled persons' right to use and enjoyment of their dwellings.",
+      "excerptKind": "verified_quote",
+      "proposition": "Burdensome housing policies may require accommodation when they interfere with use and enjoyment."
+    },
+    {
+      "id": "california_mobile_home",
+      "label": "United States v. California Mobile Home Park Management Co.",
+      "kind": "case",
+      "jurisdiction": "Ninth Circuit",
+      "weight": "binding",
+      "citation": "29 F.3d 1413 (9th Cir. 1994)",
+      "notes": "Refusal of reasonable accommodation can violate the FHA.",
+      "court": "9th Cir.",
+      "year": "1994",
+      "pincite": "1416",
+      "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/29/1413/479940/",
+      "excerptText": "The FHAA imposes an affirmative duty upon landlords reasonably to accommodate the needs of handicapped persons.",
+      "excerptKind": "verified_quote",
+      "proposition": "Reasonable accommodation may require landlords to shoulder reasonable financial burdens."
+    },
+    {
+      "id": "mcgary",
+      "label": "McGary v. City of Portland",
+      "kind": "case",
+      "jurisdiction": "Ninth Circuit / Oregon",
+      "weight": "binding",
+      "citation": "386 F.3d 1259 (9th Cir. 2004)",
+      "notes": "Housing-related financial burdens can impair the full use and enjoyment of a dwelling.",
+      "court": "9th Cir.",
+      "year": "2004",
+      "pincite": "1265",
+      "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/386/1259/632471/",
+      "excerptText": "The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+      "excerptKind": "verified_quote",
+      "proposition": "Housing-related financial burdens can impair the full use and enjoyment of a dwelling."
+    },
+    {
+      "id": "hud_joint_statement",
+      "label": "HUD/DOJ Joint Statement on Reasonable Accommodations",
+      "kind": "guidance",
+      "jurisdiction": "Federal",
+      "weight": "guidance",
+      "notes": "Equal use and enjoyment requires necessary accommodation changes.",
+      "court": "HUD/DOJ",
+      "year": "2004",
+      "pincite": "Question 1, p. 2",
+      "sourceUrl": "https://www.justice.gov/crt/about/hce/joint_statement_ra.pdf",
+      "excerptText": "Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.",
+      "excerptKind": "verified_quote",
+      "proposition": "Equal use and enjoyment may require necessary accommodation changes.",
+      "citation": "Joint Statement of the Department of Housing and Urban Development and the Department of Justice, Reasonable Accommodations under the Fair Housing Act (May 2004)"
+    },
+    {
+      "id": "cfr_982_316",
+      "label": "24 CFR 982.316",
+      "kind": "regulation",
+      "jurisdiction": "Federal",
+      "weight": "binding",
+      "citation": "24 C.F.R. \u00a7 982.316(a)",
+      "notes": "PHAs must allow a live-in aide when needed as a reasonable accommodation.",
+      "court": "24 C.F.R.",
+      "year": "current",
+      "pincite": "(a)",
+      "sourceUrl": "https://www.law.cornell.edu/cfr/text/24/982.316",
+      "excerptText": "The PHA must approve a live-in aide if needed as a reasonable accommodation.",
+      "excerptKind": "verified_quote",
+      "proposition": "A PHA must approve a live-in aide when needed as a reasonable accommodation."
+    }
+  ],
+  "notes": "Fixture derived from the extracted shared chat fact pattern."
+}

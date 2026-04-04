@@ -1,0 +1,61 @@
+{
+  "generatedAt": "2026-04-04T19:25:40.092712+00:00",
+  "cases": [
+    {
+      "caseId": "live_in_aide_case_001",
+      "branch": "constructive_denial",
+      "activeOutcome": "violation",
+      "confidence": 0.93,
+      "authorityTrust": "fully_verified",
+      "primaryKind": "memorandum_pdf",
+      "primaryWhy": "Start with the printable memorandum because it is the strongest branch-aligned narrative for constructive_denial review.",
+      "hasWarnings": false,
+      "warningEntryCount": 0,
+      "warningLabel": null,
+      "fitFinding": "analogical_support",
+      "packagePath": "outputs/live_in_aide_case_001_package"
+    },
+    {
+      "caseId": "live_in_aide_case_effective_accommodation_001",
+      "branch": "effective_accommodation",
+      "activeOutcome": "no_violation",
+      "confidence": 0.58,
+      "authorityTrust": "mixed_support",
+      "primaryKind": "memorandum_markdown",
+      "primaryWhy": "Start with the editable memorandum because it is the clearest working draft for effective_accommodation review.",
+      "hasWarnings": true,
+      "warningEntryCount": 16,
+      "warningLabel": "mixed_support",
+      "fitFinding": "analogical_support",
+      "packagePath": "outputs/live_in_aide_case_effective_accommodation_001_package"
+    },
+    {
+      "caseId": "live_in_aide_case_no_violation_001",
+      "branch": "evidentiary_gap",
+      "activeOutcome": "no_violation",
+      "confidence": 0.57,
+      "authorityTrust": "paraphrase_heavy",
+      "primaryKind": "summary",
+      "primaryWhy": "Start with the summary because it is the quickest branch-aligned orientation for evidentiary_gap review.",
+      "hasWarnings": true,
+      "warningEntryCount": 16,
+      "warningLabel": "paraphrase_heavy",
+      "fitFinding": "record_support_heavy",
+      "packagePath": "outputs/live_in_aide_case_no_violation_001_package"
+    },
+    {
+      "caseId": "live_in_aide_case_undue_burden_001",
+      "branch": "undue_burden_constructive_denial",
+      "activeOutcome": "violation",
+      "confidence": 0.8300000000000001,
+      "authorityTrust": "mixed_support",
+      "primaryKind": "memorandum_pdf",
+      "primaryWhy": "Start with the printable memorandum because it is the strongest branch-aligned narrative for undue_burden_constructive_denial review.",
+      "hasWarnings": true,
+      "warningEntryCount": 16,
+      "warningLabel": "mixed_support",
+      "fitFinding": "analogical_support",
+      "packagePath": "outputs/live_in_aide_case_undue_burden_001_package"
+    }
+  ]
+}

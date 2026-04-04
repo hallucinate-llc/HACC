@@ -1,0 +1,73 @@
+{
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+    "Person": "https://example.org/legal/Person",
+    "Tenant": "https://example.org/legal/Tenant",
+    "LiveInAide": "https://example.org/legal/LiveInAide",
+    "HousingAuthority": "https://example.org/legal/HousingAuthority",
+    "DwellingUnit": "https://example.org/legal/DwellingUnit",
+    "Room": "https://example.org/legal/Room",
+    "Bedroom": "https://example.org/legal/Bedroom",
+    "LivingRoom": "https://example.org/legal/LivingRoom",
+    "AccommodationRequest": "https://example.org/legal/AccommodationRequest",
+    "MedicalVerification": "https://example.org/legal/MedicalVerification",
+    "Evidence": "https://example.org/legal/Evidence",
+    "Decision": "https://example.org/legal/Decision",
+    "Event": "https://example.org/legal/Event",
+    "hasDisability": "https://example.org/legal/hasDisability",
+    "needsLiveInAide": "https://example.org/legal/needsLiveInAide",
+    "liveInAideFor": {
+      "@id": "https://example.org/legal/liveInAideFor",
+      "@type": "@id"
+    },
+    "occupies": {
+      "@id": "https://example.org/legal/occupies",
+      "@type": "@id"
+    },
+    "requestedBy": {
+      "@id": "https://example.org/legal/requestedBy",
+      "@type": "@id"
+    },
+    "forAccommodation": {
+      "@id": "https://example.org/legal/forAccommodation",
+      "@type": "@id"
+    },
+    "supportedBy": {
+      "@id": "https://example.org/legal/supportedBy",
+      "@type": "@id"
+    },
+    "deniedBy": {
+      "@id": "https://example.org/legal/deniedBy",
+      "@type": "@id"
+    },
+    "approvedInPrincipleBy": {
+      "@id": "https://example.org/legal/approvedInPrincipleBy",
+      "@type": "@id"
+    },
+    "sleepsIn": {
+      "@id": "https://example.org/legal/sleepsIn",
+      "@type": "@id"
+    },
+    "sharedSpace": "https://example.org/legal/sharedSpace",
+    "nightAccessNeeded": {
+      "@id": "https://example.org/legal/nightAccessNeeded",
+      "@type": "@id"
+    },
+    "worksRemotely": "https://example.org/legal/worksRemotely",
+    "workInterference": "https://example.org/legal/workInterference",
+    "sleepInterruption": "https://example.org/legal/sleepInterruption",
+    "caregivingImpairment": "https://example.org/legal/caregivingImpairment",
+    "privacyLoss": "https://example.org/legal/privacyLoss",
+    "necessaryForEqualUseEnjoyment": "https://example.org/legal/necessaryForEqualUseEnjoyment",
+    "reasonable": "https://example.org/legal/reasonable",
+    "effective": "https://example.org/legal/effective",
+    "constructiveDenial": "https://example.org/legal/constructiveDenial",
+    "undueBurden": "https://example.org/legal/undueBurden",
+    "fundamentalAlteration": "https://example.org/legal/fundamentalAlteration",
+    "triggersDutyToGrant": "https://example.org/legal/triggersDutyToGrant",
+    "violatesDutyToAccommodate": "https://example.org/legal/violatesDutyToAccommodate",
+    "time": "https://example.org/legal/time",
+    "eventType": "https://example.org/legal/eventType"
+  }
+}

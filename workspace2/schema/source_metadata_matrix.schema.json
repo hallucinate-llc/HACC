@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/source_metadata_matrix.schema.json",
+  "title": "SourceMetadataMatrix",
+  "type": "object",
+  "required": ["generatedAt", "summary", "cases"],
+  "properties": {
+    "generatedAt": { "type": "string" },
+    "summary": {
+      "type": "object",
+      "required": ["caseCount", "authorityCount", "sourceVerifiedCount", "sourceNormalizedCount"],
+      "properties": {
+        "caseCount": { "type": "integer" },
+        "authorityCount": { "type": "integer" },
+        "sourceVerifiedCount": { "type": "integer" },
+        "sourceNormalizedCount": { "type": "integer" }
+      },
+      "additionalProperties": false
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "caseId",
+          "branch",
+          "authorityCount",
+          "sourceVerifiedCount",
+          "sourceNormalizedCount",
+          "unnormalizedAuthorityIds"
+        ],
+        "properties": {
+          "caseId": { "type": "string" },
+          "branch": { "type": "string" },
+          "authorityCount": { "type": "integer" },
+          "sourceVerifiedCount": { "type": "integer" },
+          "sourceNormalizedCount": { "type": "integer" },
+          "unnormalizedAuthorityIds": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

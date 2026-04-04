@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/context.schema.json",
+  "title": "JsonLdContext",
+  "type": "object",
+  "required": ["@context"],
+  "properties": {
+    "@context": {
+      "type": "object",
+      "minProperties": 1,
+      "required": ["id", "type"],
+      "properties": {
+        "id": { "const": "@id" },
+        "type": { "const": "@type" }
+      },
+      "additionalProperties": {
+        "oneOf": [
+          { "type": "string", "minLength": 1 },
+          {
+            "type": "object",
+            "required": ["@id", "@type"],
+            "properties": {
+              "@id": { "type": "string", "minLength": 1 },
+              "@type": { "type": "string", "minLength": 1 }
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-04-04T19:25:40.092813+00:00",
+  "summary": {
+    "caseCount": 4,
+    "authorityCount": 20,
+    "sourceVerifiedCount": 20,
+    "sourceNormalizedCount": 20
+  },
+  "cases": [
+    {
+      "caseId": "live_in_aide_case_001",
+      "branch": "constructive_denial",
+      "authorityCount": 5,
+      "sourceVerifiedCount": 5,
+      "sourceNormalizedCount": 5,
+      "unnormalizedAuthorityIds": []
+    },
+    {
+      "caseId": "live_in_aide_case_effective_accommodation_001",
+      "branch": "effective_accommodation",
+      "authorityCount": 5,
+      "sourceVerifiedCount": 5,
+      "sourceNormalizedCount": 5,
+      "unnormalizedAuthorityIds": []
+    },
+    {
+      "caseId": "live_in_aide_case_no_violation_001",
+      "branch": "evidentiary_gap",
+      "authorityCount": 5,
+      "sourceVerifiedCount": 5,
+      "sourceNormalizedCount": 5,
+      "unnormalizedAuthorityIds": []
+    },
+    {
+      "caseId": "live_in_aide_case_undue_burden_001",
+      "branch": "undue_burden_constructive_denial",
+      "authorityCount": 5,
+      "sourceVerifiedCount": 5,
+      "sourceNormalizedCount": 5,
+      "unnormalizedAuthorityIds": []
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "caseId": "live_in_aide_case_effective_accommodation_001",
+  "branch": "effective_accommodation",
+  "verifiedOnly": false,
+  "supportStatus": null,
+  "fitKind": null,
+  "authorityCount": 5,
+  "statusCounts": {
+    "paraphrase": 2,
+    "verified_quote": 3
+  },
+  "bucketCounts": {
+    "dutyToGrant": 2,
+    "necessary": 2,
+    "reasonable": 4,
+    "violation": 1
+  }
+}

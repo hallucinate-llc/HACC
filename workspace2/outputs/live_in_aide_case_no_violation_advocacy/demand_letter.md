@@ -1,0 +1,22 @@
+# Demand Letter
+
+Subject: Request for Clarification and Completion of Live-In Aide Accommodation
+
+To: [Housing Authority or Decision-Maker]
+
+From: [Requesting Party]
+Requested remedy: [Approve a separate bedroom for the live-in aide]
+Requested response deadline: [10 business days]
+
+This letter requests prompt approval of an accommodation that is effective in practice, not merely nominal.
+The current evaluated record shows accommodation concerns and evidentiary gaps that should be resolved cooperatively without further escalation.
+Authority grounding note: This case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust.
+Citations: findings=constructiveDenial, violation; authorities=none; evidence=none; events=none
+The present reasoning output identifies these harms: No functional harms were established on the accepted findings.
+Supporting authorities include McGary v. City of Portland.
+
+Please confirm in writing what effective accommodation is currently being provided and what additional information is needed to complete the request.
+If additional documentation is needed, please identify it specifically so the record can be completed promptly.
+
+Sincerely,
+[Requesting Party]

@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/advocacy_bundle.schema.json",
+  "title": "AdvocacyBundle",
+  "type": "object",
+  "required": ["meta", "citations", "texts"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["caseId", "branch", "placeholders", "supportedModes", "confidence", "authorityTrust"],
+      "properties": {
+        "caseId": { "type": "string" },
+        "branch": { "type": "string" },
+        "placeholders": {
+          "type": "object",
+          "required": [
+            "requesting_party",
+            "recipient",
+            "tenant_name",
+            "aide_name",
+            "requested_remedy",
+            "response_deadline"
+          ],
+          "properties": {
+            "requesting_party": { "type": "string" },
+            "recipient": { "type": "string" },
+            "tenant_name": { "type": "string" },
+            "aide_name": { "type": "string" },
+            "requested_remedy": { "type": "string" },
+            "response_deadline": { "type": "string" }
+          },
+          "additionalProperties": false
+        },
+        "supportedModes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "confidence": { "type": "number" },
+        "authorityTrust": {
+          "type": "object",
+          "required": [
+            "authorityCount",
+            "verifiedQuoteCount",
+            "paraphraseCount",
+            "missingCount",
+            "severity",
+            "label",
+            "advisory"
+          ],
+          "properties": {
+            "authorityCount": { "type": "integer" },
+            "verifiedQuoteCount": { "type": "integer" },
+            "paraphraseCount": { "type": "integer" },
+            "missingCount": { "type": "integer" },
+            "severity": { "type": "string" },
+            "label": { "type": "string" },
+            "advisory": { "type": "string" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "citations": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "findingIds",
+          "authorityIds",
+          "authorityLabels",
+          "authorityDetails",
+          "evidenceIds",
+          "eventIds",
+          "proofSteps"
+        ],
+        "properties": {
+          "findingIds": { "type": "array", "items": { "type": "string" } },
+          "authorityIds": { "type": "array", "items": { "type": "string" } },
+          "authorityLabels": { "type": "array", "items": { "type": "string" } },
+          "authorityDetails": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "label",
+                "court",
+                "year",
+                "pincite",
+                "sourceUrl",
+                "excerptKind",
+                "excerptText",
+                "proposition",
+                "fitKind"
+              ],
+              "properties": {
+                "id": { "type": "string" },
+                "label": { "type": "string" },
+                "court": { "type": ["string", "null"] },
+                "year": { "type": ["string", "null"] },
+                "pincite": { "type": ["string", "null"] },
+                "sourceUrl": { "type": ["string", "null"] },
+                "excerptKind": { "type": "string" },
+                "excerptText": { "type": "string" },
+                "proposition": { "type": "string" },
+                "fitKind": {
+                  "type": "string",
+                  "enum": ["direct", "analogical", "record_support"]
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "evidenceIds": { "type": "array", "items": { "type": "string" } },
+          "eventIds": { "type": "array", "items": { "type": "string" } },
+          "proofSteps": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false
+      }
+    },
+    "texts": {
+      "type": "object",
+      "required": [
+        "hearing_script",
+        "complaint_outline",
+        "demand_letter",
+        "negotiation_summary"
+      ],
+      "properties": {
+        "hearing_script": { "type": "string" },
+        "complaint_outline": { "type": "string" },
+        "demand_letter": { "type": "string" },
+        "negotiation_summary": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

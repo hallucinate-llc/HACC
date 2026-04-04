@@ -1,0 +1,7 @@
+# Warning Entry Matrix
+
+Case ID | Branch | Trust | Warning Label | Warning Count | Warned Kinds | Package
+--- | --- | --- | --- | --- | --- | ---
+live_in_aide_case_effective_accommodation_001 | effective_accommodation | mixed_support | mixed_support | 16 | memorandum_markdown, summary, hearing_script_markdown, memorandum_pdf, result, advocacy_bundle, negotiation_summary_markdown, demand_letter_markdown, complaint_outline_markdown, dependency_graph, memorandum_json, dependency_citations, authority_review, authority_research_note, authority_summary, decision_tree | outputs/live_in_aide_case_effective_accommodation_001_package
+live_in_aide_case_no_violation_001 | evidentiary_gap | paraphrase_heavy | paraphrase_heavy | 16 | summary, demand_letter_markdown, memorandum_markdown, result, advocacy_bundle, hearing_script_markdown, negotiation_summary_markdown, complaint_outline_markdown, memorandum_pdf, dependency_graph, memorandum_json, dependency_citations, authority_review, authority_research_note, authority_summary, decision_tree | outputs/live_in_aide_case_no_violation_001_package
+live_in_aide_case_undue_burden_001 | undue_burden_constructive_denial | mixed_support | mixed_support | 16 | memorandum_pdf, memorandum_markdown, summary, result, advocacy_bundle, demand_letter_markdown, negotiation_summary_markdown, hearing_script_markdown, complaint_outline_markdown, dependency_graph, memorandum_json, dependency_citations, authority_review, authority_research_note, authority_summary, decision_tree | outputs/live_in_aide_case_undue_burden_001_package

@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/warning_entry_summary.schema.json",
+  "title": "WarningEntrySummary",
+  "type": "object",
+  "required": ["generatedAt", "summary", "singleCaseGuide", "cases"],
+  "properties": {
+    "generatedAt": { "type": "string" },
+    "summary": {
+      "type": "object",
+      "required": ["caseCount", "warningLabels"],
+      "properties": {
+        "caseCount": { "type": "integer", "minimum": 0 },
+        "warningLabels": {
+          "type": "object",
+          "propertyNames": {
+            "enum": ["mixed_support", "paraphrase_heavy"]
+          },
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        }
+      },
+      "additionalProperties": false
+    },
+    "singleCaseGuide": {
+      "type": ["object", "null"],
+      "required": ["caseId", "recommendedFirstStop", "whyOpenThis"],
+      "properties": {
+        "caseId": { "type": "string" },
+        "recommendedFirstStop": { "type": "string" },
+        "whyOpenThis": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "caseId",
+          "branch",
+          "authorityTrust",
+          "warningLabel",
+          "warningEntryCount"
+        ],
+        "properties": {
+          "caseId": { "type": "string" },
+          "branch": { "type": "string" },
+          "authorityTrust": {
+            "type": "string",
+            "enum": ["mixed_support", "paraphrase_heavy"]
+          },
+          "warningLabel": {
+            "type": "string",
+            "enum": ["mixed_support", "paraphrase_heavy"]
+          },
+          "warningEntryCount": { "type": "integer", "minimum": 1 }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

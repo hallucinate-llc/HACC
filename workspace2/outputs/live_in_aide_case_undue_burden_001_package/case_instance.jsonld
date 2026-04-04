@@ -1,0 +1,179 @@
+{
+  "@context": "context.json",
+  "@graph": [
+    {
+      "id": "person:mother",
+      "type": [
+        "Person",
+        "Tenant"
+      ],
+      "hasDisability": true,
+      "needsLiveInAide": true,
+      "occupies": "unit:u1"
+    },
+    {
+      "id": "person:aide",
+      "type": [
+        "Person",
+        "LiveInAide"
+      ],
+      "liveInAideFor": "person:mother",
+      "worksRemotely": true,
+      "sleepsIn": "room:living1",
+      "workInterference": true,
+      "sleepInterruption": true,
+      "caregivingImpairment": true,
+      "privacyLoss": true
+    },
+    {
+      "id": "org:ha1",
+      "type": "HousingAuthority"
+    },
+    {
+      "id": "unit:u1",
+      "type": "DwellingUnit"
+    },
+    {
+      "id": "room:bed1",
+      "type": [
+        "Room",
+        "Bedroom"
+      ]
+    },
+    {
+      "id": "room:living1",
+      "type": [
+        "Room",
+        "LivingRoom"
+      ],
+      "sharedSpace": true
+    },
+    {
+      "id": "req:sep-bedroom-aide",
+      "type": "AccommodationRequest",
+      "requestedBy": "person:mother",
+      "forAccommodation": "acc:separate-bedroom-for-aide",
+      "supportedBy": "med:mv1",
+      "deniedBy": "org:ha1",
+      "approvedInPrincipleBy": "org:ha1"
+    },
+    {
+      "id": "med:mv1",
+      "type": "MedicalVerification",
+      "sourceText": "Physician verified need for live-in aide and separate functional arrangement.",
+      "confidence": 0.9
+    },
+    {
+      "id": "evidence:medical_verification",
+      "type": [
+        "Evidence"
+      ],
+      "supports": [
+        "medical_verification",
+        "needs_live_in_aide"
+      ],
+      "status": "accepted",
+      "sourceText": "Physician verified need for a live-in aide and separate functional arrangement.",
+      "assertedBy": "person:mother",
+      "confidence": 0.9
+    },
+    {
+      "id": "evidence:sleep_log_1",
+      "type": [
+        "Evidence"
+      ],
+      "supports": [
+        "night_access_needed",
+        "aide_sleeps_in_living_room"
+      ],
+      "status": "accepted",
+      "sourceText": "Sleep log records night disruption when common-area access is needed.",
+      "assertedBy": "person:aide",
+      "confidence": 0.8
+    },
+    {
+      "id": "evidence:budget_memo_1",
+      "type": [
+        "Evidence"
+      ],
+      "supports": [
+        "undue_burden"
+      ],
+      "status": "accepted",
+      "sourceText": "Provider asserts that granting the separate bedroom would exceed available program resources.",
+      "assertedBy": "org:ha1",
+      "confidence": 0.75
+    },
+    {
+      "id": "evt:t1",
+      "type": [
+        "Event"
+      ],
+      "eventType": "request_accommodation",
+      "time": "t1",
+      "actors": [
+        "person:mother",
+        "person:aide",
+        "org:ha1"
+      ],
+      "details": {
+        "request": "separate_bedroom_for_aide"
+      }
+    },
+    {
+      "id": "evt:t2",
+      "type": [
+        "Event"
+      ],
+      "eventType": "submit_medical_verification",
+      "time": "t2",
+      "actors": [
+        "person:mother"
+      ],
+      "details": {
+        "evidenceId": "evidence:medical_verification"
+      }
+    },
+    {
+      "id": "evt:t3",
+      "type": [
+        "Event"
+      ],
+      "eventType": "approve_aide_in_principle",
+      "time": "t3",
+      "actors": [
+        "org:ha1",
+        "person:aide",
+        "person:mother"
+      ],
+      "details": {}
+    },
+    {
+      "id": "evt:t4",
+      "type": [
+        "Event"
+      ],
+      "eventType": "deny_separate_bedroom",
+      "time": "t4",
+      "actors": [
+        "org:ha1",
+        "person:aide"
+      ],
+      "details": {}
+    },
+    {
+      "id": "evt:t5",
+      "type": [
+        "Event"
+      ],
+      "eventType": "night_use",
+      "time": "t5",
+      "actors": [
+        "person:mother"
+      ],
+      "details": {
+        "room": "living1"
+      }
+    }
+  ]
+}

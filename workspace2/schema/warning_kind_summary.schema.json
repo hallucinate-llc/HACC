@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/warning_kind_summary.schema.json",
+  "title": "WarningKindSummary",
+  "type": "object",
+  "required": ["generatedAt", "summary", "singleCaseGuide", "kinds"],
+  "properties": {
+    "generatedAt": { "type": "string" },
+    "summary": {
+      "type": "object",
+      "required": ["kindCount", "caseCount"],
+      "properties": {
+        "kindCount": { "type": "integer", "minimum": 0 },
+        "caseCount": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "singleCaseGuide": {
+      "type": ["object", "null"],
+      "required": ["caseId", "recommendedFirstStop", "whyOpenThis"],
+      "properties": {
+        "caseId": { "type": "string" },
+        "recommendedFirstStop": { "type": "string" },
+        "whyOpenThis": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "kinds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "warningCaseCount", "warningLabels"],
+        "properties": {
+          "kind": { "type": "string" },
+          "warningCaseCount": { "type": "integer", "minimum": 1 },
+          "warningLabels": {
+            "type": "object",
+            "propertyNames": {
+              "enum": ["mixed_support", "paraphrase_heavy"]
+            },
+            "additionalProperties": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

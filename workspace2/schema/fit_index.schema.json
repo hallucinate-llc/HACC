@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/fit_index.schema.json",
+  "title": "FitIndex",
+  "type": "object",
+  "required": ["generatedAt", "recommendedFirstStop", "whyOpenThis", "entries"],
+  "properties": {
+    "generatedAt": { "type": "string" },
+    "recommendedFirstStop": { "type": "string" },
+    "whyOpenThis": { "type": "string" },
+    "refreshRuntime": {
+      "type": "object",
+      "required": ["status", "running", "startedAt", "completedAt", "elapsedSeconds", "elapsedHuman"],
+      "properties": {
+        "status": { "type": "string" },
+        "running": { "type": "boolean" },
+        "startedAt": { "type": "string" },
+        "completedAt": { "type": ["string", "null"] },
+        "elapsedSeconds": { "type": ["number", "null"] },
+        "elapsedHuman": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "required": ["kind", "jsonPath", "markdownPath", "description", "priorityHint", "whyOpenThis"],
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": ["fit_matrix", "fit_summary", "fit_findings", "fit_findings_summary"]
+          },
+          "jsonPath": { "type": "string" },
+          "markdownPath": { "type": "string" },
+          "description": { "type": "string" },
+          "whyOpenThis": { "type": "string" },
+          "priorityHint": {
+            "type": "string",
+            "enum": ["recommended", "primary", "secondary", "supporting"]
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

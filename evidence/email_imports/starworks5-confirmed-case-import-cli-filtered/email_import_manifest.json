@@ -1,0 +1,1576 @@
+{
+  "status": "success",
+  "server": "local_workspace",
+  "username": "",
+  "auth_mode": "local_eml_import",
+  "folders": [
+    "/home/barberb/HACC/workspace/imap-confirmed-messages"
+  ],
+  "search": "LOCAL_EML_DIRECTORY_IMPORT",
+  "complaint_terms": [
+    "fraud",
+    "privacy",
+    "retaliation",
+    "additional",
+    "information",
+    "needed",
+    "accommodation",
+    "voucher",
+    "hcv",
+    "orientation",
+    "living",
+    "room",
+    "clackamas",
+    "housing",
+    "authority",
+    "cortez",
+    "county",
+    "counsel"
+  ],
+  "min_relevance_score": 1.0,
+  "address_targets": [],
+  "from_address_targets": [],
+  "recipient_address_targets": [],
+  "domain_targets": [],
+  "from_domain_targets": [],
+  "recipient_domain_targets": [],
+  "scanned_message_count": 15,
+  "matched_email_count": 12,
+  "output_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered",
+  "cache_index_path": "",
+  "emails": [
+    {
+      "folder": "/home/barberb/HACC/workspace/imap-confirmed-messages",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0001-RE-Allegations-of-Fraud---JC-Household-88246644b2924275bad7d62be838b1c3-clackamas.us",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0001-RE-Allegations-of-Fraud---JC-Household-88246644b2924275bad7d62be838b1c3-clackamas.us/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0001-RE-Allegations-of-Fraud---JC-Household-88246644b2924275bad7d62be838b1c3-clackamas.us/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "RE: Allegations of Fraud - JC Household",
+      "date": "2026-02-04T22:37:07+00:00",
+      "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "to": "\"starworks5@gmail.com\" <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<88246644b2924275bad7d62be838b1c3@clackamas.us>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0001-RE-Allegations-of-Fraud---JC-Household-88246644b2924275bad7d62be838b1c3-clackamas.us/attachments/image001.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0001-RE-Allegations-of-Fraud---JC-Household-88246644b2924275bad7d62be838b1c3-clackamas.us/attachments/image002.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0001-RE-Allegations-of-Fraud---JC-Household-88246644b2924275bad7d62be838b1c3-clackamas.us/attachments/image003.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0001-RE-Allegations-of-Fraud---JC-Household-88246644b2924275bad7d62be838b1c3-clackamas.us/attachments/image004.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0001-RE-Allegations-of-Fraud---JC-Household-88246644b2924275bad7d62be838b1c3-clackamas.us/attachments/image005.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0001-RE-Allegations-of-Fraud---JC-Household-88246644b2924275bad7d62be838b1c3-clackamas.us/attachments/image006.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0001-RE-Allegations-of-Fraud---JC-Household-88246644b2924275bad7d62be838b1c3-clackamas.us/attachments/2026.02.04_Cortez_Remedy-Behavior.pdf"
+      ],
+      "attachments": [
+        {
+          "filename": "image001.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0001-RE-Allegations-of-Fraud---JC-Household-88246644b2924275bad7d62be838b1c3-clackamas.us/attachments/image001.png",
+          "size": 108316,
+          "content_type": "image/png",
+          "sha256": "e409664a8868ac71e137d3c470dd5f30f52a64c735d46a90fc5ea57449ef46e7"
+        },
+        {
+          "filename": "image002.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0001-RE-Allegations-of-Fraud---JC-Household-88246644b2924275bad7d62be838b1c3-clackamas.us/attachments/image002.jpg",
+          "size": 3402250,
+          "content_type": "image/jpeg",
+          "sha256": "d4002f93635e7f4029b856c6a4150315720a5e05edf22b0ee61b0c37ffb56d70"
+        },
+        {
+          "filename": "image003.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0001-RE-Allegations-of-Fraud---JC-Household-88246644b2924275bad7d62be838b1c3-clackamas.us/attachments/image003.jpg",
+          "size": 3630709,
+          "content_type": "image/jpeg",
+          "sha256": "314916f76463e1622aa83c1f7ed61cab2e5e4216f9e5d23e676a5a42842c1738"
+        },
+        {
+          "filename": "image004.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0001-RE-Allegations-of-Fraud---JC-Household-88246644b2924275bad7d62be838b1c3-clackamas.us/attachments/image004.jpg",
+          "size": 276352,
+          "content_type": "image/jpeg",
+          "sha256": "ab71d3e644173bb5404828220ee0797069e5c5756bed02a91725d02cfc0edfb0"
+        },
+        {
+          "filename": "image005.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0001-RE-Allegations-of-Fraud---JC-Household-88246644b2924275bad7d62be838b1c3-clackamas.us/attachments/image005.jpg",
+          "size": 2013438,
+          "content_type": "image/jpeg",
+          "sha256": "bb2a67e6696886143ac40a46099f99bc927c72883b1a0de46aa639bcb56e07b5"
+        },
+        {
+          "filename": "image006.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0001-RE-Allegations-of-Fraud---JC-Household-88246644b2924275bad7d62be838b1c3-clackamas.us/attachments/image006.jpg",
+          "size": 4525848,
+          "content_type": "image/jpeg",
+          "sha256": "7e78a0e191b4cd58263a7f42381131ac9f7bcef1ab2a87f61222cc1e65a1bbb2"
+        },
+        {
+          "filename": "2026.02.04_Cortez_Remedy-Behavior.pdf",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0001-RE-Allegations-of-Fraud---JC-Household-88246644b2924275bad7d62be838b1c3-clackamas.us/attachments/2026.02.04_Cortez_Remedy-Behavior.pdf",
+          "size": 1857582,
+          "content_type": "application/pdf",
+          "sha256": "6e5f046f2b478cd939c32e34140b644c5e440755d3aedfcf40107a81c46c5a40"
+        }
+      ],
+      "evidence_title": "RE: Allegations of Fraud - JC Household",
+      "relevance_score": 13.0,
+      "matched_terms": [
+        "fraud",
+        "information",
+        "needed",
+        "voucher",
+        "orientation",
+        "room",
+        "clackamas",
+        "housing",
+        "authority",
+        "cortez",
+        "county"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "531ad839355c460d402d45812517fa5da875240efeeeecd17278c4a680810ab0",
+      "raw_cid": "bafkreictdlmdsnk4iygualkfqesrp6s5vb2sidx653wnc4tyystibaikwa",
+      "source_eml_path": "/home/barberb/HACC/workspace/imap-confirmed-messages/2026-02-04_allegations-of-fraud_notice-retaliation_hacc.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/imap-confirmed-messages",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0002-RE-Allegations-of-Fraud---JC-Household-72787eff4e5c4548bd1588bd9666f7c6-clackamas.us",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0002-RE-Allegations-of-Fraud---JC-Household-72787eff4e5c4548bd1588bd9666f7c6-clackamas.us/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0002-RE-Allegations-of-Fraud---JC-Household-72787eff4e5c4548bd1588bd9666f7c6-clackamas.us/message.json",
+      "participants": [
+        "bwilliams@clackamas.us",
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "RE: Allegations of Fraud - JC Household",
+      "date": "2026-02-05T16:35:18+00:00",
+      "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "to": "benjamin barber <starworks5@gmail.com>, \"Williams, Billy\" <BWilliams@clackamas.us>",
+      "cc": "",
+      "message_id_header": "<72787eff4e5c4548bd1588bd9666f7c6@clackamas.us>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0002-RE-Allegations-of-Fraud---JC-Household-72787eff4e5c4548bd1588bd9666f7c6-clackamas.us/attachments/image001.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0002-RE-Allegations-of-Fraud---JC-Household-72787eff4e5c4548bd1588bd9666f7c6-clackamas.us/attachments/image002.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0002-RE-Allegations-of-Fraud---JC-Household-72787eff4e5c4548bd1588bd9666f7c6-clackamas.us/attachments/image003.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0002-RE-Allegations-of-Fraud---JC-Household-72787eff4e5c4548bd1588bd9666f7c6-clackamas.us/attachments/image004.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0002-RE-Allegations-of-Fraud---JC-Household-72787eff4e5c4548bd1588bd9666f7c6-clackamas.us/attachments/image005.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0002-RE-Allegations-of-Fraud---JC-Household-72787eff4e5c4548bd1588bd9666f7c6-clackamas.us/attachments/image006.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0002-RE-Allegations-of-Fraud---JC-Household-72787eff4e5c4548bd1588bd9666f7c6-clackamas.us/attachments/image007.jpg"
+      ],
+      "attachments": [
+        {
+          "filename": "image001.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0002-RE-Allegations-of-Fraud---JC-Household-72787eff4e5c4548bd1588bd9666f7c6-clackamas.us/attachments/image001.png",
+          "size": 40100,
+          "content_type": "image/png",
+          "sha256": "6f64469d674fb975fe92e96bd11562661715643e05e16b3ca74a0c087d3082f3"
+        },
+        {
+          "filename": "image002.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0002-RE-Allegations-of-Fraud---JC-Household-72787eff4e5c4548bd1588bd9666f7c6-clackamas.us/attachments/image002.png",
+          "size": 108316,
+          "content_type": "image/png",
+          "sha256": "e409664a8868ac71e137d3c470dd5f30f52a64c735d46a90fc5ea57449ef46e7"
+        },
+        {
+          "filename": "image003.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0002-RE-Allegations-of-Fraud---JC-Household-72787eff4e5c4548bd1588bd9666f7c6-clackamas.us/attachments/image003.jpg",
+          "size": 3402250,
+          "content_type": "image/jpeg",
+          "sha256": "d4002f93635e7f4029b856c6a4150315720a5e05edf22b0ee61b0c37ffb56d70"
+        },
+        {
+          "filename": "image004.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0002-RE-Allegations-of-Fraud---JC-Household-72787eff4e5c4548bd1588bd9666f7c6-clackamas.us/attachments/image004.jpg",
+          "size": 3630709,
+          "content_type": "image/jpeg",
+          "sha256": "314916f76463e1622aa83c1f7ed61cab2e5e4216f9e5d23e676a5a42842c1738"
+        },
+        {
+          "filename": "image005.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0002-RE-Allegations-of-Fraud---JC-Household-72787eff4e5c4548bd1588bd9666f7c6-clackamas.us/attachments/image005.jpg",
+          "size": 276352,
+          "content_type": "image/jpeg",
+          "sha256": "ab71d3e644173bb5404828220ee0797069e5c5756bed02a91725d02cfc0edfb0"
+        },
+        {
+          "filename": "image006.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0002-RE-Allegations-of-Fraud---JC-Household-72787eff4e5c4548bd1588bd9666f7c6-clackamas.us/attachments/image006.jpg",
+          "size": 2013438,
+          "content_type": "image/jpeg",
+          "sha256": "bb2a67e6696886143ac40a46099f99bc927c72883b1a0de46aa639bcb56e07b5"
+        },
+        {
+          "filename": "image007.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0002-RE-Allegations-of-Fraud---JC-Household-72787eff4e5c4548bd1588bd9666f7c6-clackamas.us/attachments/image007.jpg",
+          "size": 4525848,
+          "content_type": "image/jpeg",
+          "sha256": "7e78a0e191b4cd58263a7f42381131ac9f7bcef1ab2a87f61222cc1e65a1bbb2"
+        }
+      ],
+      "evidence_title": "RE: Allegations of Fraud - JC Household",
+      "relevance_score": 15.0,
+      "matched_terms": [
+        "fraud",
+        "retaliation",
+        "information",
+        "needed",
+        "voucher",
+        "orientation",
+        "room",
+        "clackamas",
+        "housing",
+        "authority",
+        "cortez",
+        "county",
+        "counsel"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "568326a25150a119de7c0163d0bd4ca666893ef6834ffecfe532104e22831bf6",
+      "raw_cid": "bafkreicwqmtkeukquem547abmpil2tfgm2et55udj77m7zjscbhcfay36y",
+      "source_eml_path": "/home/barberb/HACC/workspace/imap-confirmed-messages/2026-02-05_allegations-of-fraud_privacy_1.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/imap-confirmed-messages",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0003-RE-Allegations-of-Fraud---JC-Household-8c104fe9322e4b528564e0cce04bab16-clackamas.us",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0003-RE-Allegations-of-Fraud---JC-Household-8c104fe9322e4b528564e0cce04bab16-clackamas.us/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0003-RE-Allegations-of-Fraud---JC-Household-8c104fe9322e4b528564e0cce04bab16-clackamas.us/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "RE: Allegations of Fraud - JC Household",
+      "date": "2026-02-10T18:00:59+00:00",
+      "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "to": "benjamin barber <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<8c104fe9322e4b528564e0cce04bab16@clackamas.us>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0003-RE-Allegations-of-Fraud---JC-Household-8c104fe9322e4b528564e0cce04bab16-clackamas.us/attachments/image001.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0003-RE-Allegations-of-Fraud---JC-Household-8c104fe9322e4b528564e0cce04bab16-clackamas.us/attachments/image002.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0003-RE-Allegations-of-Fraud---JC-Household-8c104fe9322e4b528564e0cce04bab16-clackamas.us/attachments/image003.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0003-RE-Allegations-of-Fraud---JC-Household-8c104fe9322e4b528564e0cce04bab16-clackamas.us/attachments/image004.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0003-RE-Allegations-of-Fraud---JC-Household-8c104fe9322e4b528564e0cce04bab16-clackamas.us/attachments/image005.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0003-RE-Allegations-of-Fraud---JC-Household-8c104fe9322e4b528564e0cce04bab16-clackamas.us/attachments/image006.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0003-RE-Allegations-of-Fraud---JC-Household-8c104fe9322e4b528564e0cce04bab16-clackamas.us/attachments/image007.jpg"
+      ],
+      "attachments": [
+        {
+          "filename": "image001.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0003-RE-Allegations-of-Fraud---JC-Household-8c104fe9322e4b528564e0cce04bab16-clackamas.us/attachments/image001.png",
+          "size": 40100,
+          "content_type": "image/png",
+          "sha256": "6f64469d674fb975fe92e96bd11562661715643e05e16b3ca74a0c087d3082f3"
+        },
+        {
+          "filename": "image002.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0003-RE-Allegations-of-Fraud---JC-Household-8c104fe9322e4b528564e0cce04bab16-clackamas.us/attachments/image002.png",
+          "size": 108316,
+          "content_type": "image/png",
+          "sha256": "e409664a8868ac71e137d3c470dd5f30f52a64c735d46a90fc5ea57449ef46e7"
+        },
+        {
+          "filename": "image003.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0003-RE-Allegations-of-Fraud---JC-Household-8c104fe9322e4b528564e0cce04bab16-clackamas.us/attachments/image003.jpg",
+          "size": 3402250,
+          "content_type": "image/jpeg",
+          "sha256": "d4002f93635e7f4029b856c6a4150315720a5e05edf22b0ee61b0c37ffb56d70"
+        },
+        {
+          "filename": "image004.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0003-RE-Allegations-of-Fraud---JC-Household-8c104fe9322e4b528564e0cce04bab16-clackamas.us/attachments/image004.jpg",
+          "size": 3630709,
+          "content_type": "image/jpeg",
+          "sha256": "314916f76463e1622aa83c1f7ed61cab2e5e4216f9e5d23e676a5a42842c1738"
+        },
+        {
+          "filename": "image005.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0003-RE-Allegations-of-Fraud---JC-Household-8c104fe9322e4b528564e0cce04bab16-clackamas.us/attachments/image005.jpg",
+          "size": 276352,
+          "content_type": "image/jpeg",
+          "sha256": "ab71d3e644173bb5404828220ee0797069e5c5756bed02a91725d02cfc0edfb0"
+        },
+        {
+          "filename": "image006.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0003-RE-Allegations-of-Fraud---JC-Household-8c104fe9322e4b528564e0cce04bab16-clackamas.us/attachments/image006.jpg",
+          "size": 2013438,
+          "content_type": "image/jpeg",
+          "sha256": "bb2a67e6696886143ac40a46099f99bc927c72883b1a0de46aa639bcb56e07b5"
+        },
+        {
+          "filename": "image007.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0003-RE-Allegations-of-Fraud---JC-Household-8c104fe9322e4b528564e0cce04bab16-clackamas.us/attachments/image007.jpg",
+          "size": 4525848,
+          "content_type": "image/jpeg",
+          "sha256": "7e78a0e191b4cd58263a7f42381131ac9f7bcef1ab2a87f61222cc1e65a1bbb2"
+        }
+      ],
+      "evidence_title": "RE: Allegations of Fraud - JC Household",
+      "relevance_score": 15.0,
+      "matched_terms": [
+        "fraud",
+        "retaliation",
+        "information",
+        "needed",
+        "voucher",
+        "orientation",
+        "room",
+        "clackamas",
+        "housing",
+        "authority",
+        "cortez",
+        "county",
+        "counsel"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "3ddabbc60a658f6c901875b10af096f1dbbfe0c58f9ca5c15b27c5e6b2850158",
+      "raw_cid": "bafkreib53k54mctfr5wjagdvwefpbfxr3o76brmptss4cwzhyxtlfbibla",
+      "source_eml_path": "/home/barberb/HACC/workspace/imap-confirmed-messages/2026-02-10_allegations-of-fraud_privacy_2.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/imap-confirmed-messages",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/message.json",
+      "participants": [
+        "bwilliams@clackamas.us",
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: Additional Information Needed",
+      "date": "2026-03-17T09:54:04-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <ktilton@clackamas.us>, bwilliams@clackamas.us",
+      "cc": "",
+      "message_id_header": "<CAMTdTS8rnBQo0=y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg@mail.gmail.com>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/attachments/image003.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/attachments/image009.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/attachments/image002.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/attachments/image008.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/attachments/image011.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/attachments/image004.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/attachments/image005.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/attachments/image006.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/attachments/image001.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/attachments/image007.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/attachments/image010.png"
+      ],
+      "attachments": [
+        {
+          "filename": "image003.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/attachments/image003.jpg",
+          "size": 3052797,
+          "content_type": "image/jpeg",
+          "sha256": "858081d0a5e68e6c45e148431c6aa297e486127aa6d6ae121e38720b428b4704"
+        },
+        {
+          "filename": "image009.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/attachments/image009.png",
+          "size": 385902,
+          "content_type": "image/png",
+          "sha256": "5846d14ddb1accc5113f9037f04cf0678916bcce06bb95680d3c3b53588c6fe2"
+        },
+        {
+          "filename": "image002.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/attachments/image002.jpg",
+          "size": 3565052,
+          "content_type": "image/jpeg",
+          "sha256": "4464c83b35e4d68f9eefb0fa5b27f20a80623a438bbb282426e325ef7e9250aa"
+        },
+        {
+          "filename": "image008.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/attachments/image008.jpg",
+          "size": 3421680,
+          "content_type": "image/jpeg",
+          "sha256": "eaf01e70c94e677ed0924db62bc6065e3fe3a462ab5031d7b3bc953c99911c9b"
+        },
+        {
+          "filename": "image011.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/attachments/image011.png",
+          "size": 424190,
+          "content_type": "image/png",
+          "sha256": "76126c6f056a5c01e1ceb1e6a896944dbbd76e44230f585dc679d88e24df748c"
+        },
+        {
+          "filename": "image004.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/attachments/image004.jpg",
+          "size": 3988076,
+          "content_type": "image/jpeg",
+          "sha256": "dd0fa12d2f75230a3bb3b50bcd4c6584a74880c31aa9edd5097ffc85991f6f75"
+        },
+        {
+          "filename": "image005.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/attachments/image005.jpg",
+          "size": 3539234,
+          "content_type": "image/jpeg",
+          "sha256": "e644a68f8815fafb3b6bb34b3bdf67d605322af8dfdd2067151c17f3e53d241f"
+        },
+        {
+          "filename": "image006.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/attachments/image006.png",
+          "size": 69863,
+          "content_type": "image/png",
+          "sha256": "16a0add8ed11c96f50f80bf4f5a4a9b3ee340ac307d8327dd1638c2aceeab814"
+        },
+        {
+          "filename": "image001.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/attachments/image001.jpg",
+          "size": 1638148,
+          "content_type": "image/jpeg",
+          "sha256": "3d1324fdc16614cea50fd9db576cbdfae249514892d9ba786f9ecc5b2325ff16"
+        },
+        {
+          "filename": "image007.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/attachments/image007.jpg",
+          "size": 3334826,
+          "content_type": "image/jpeg",
+          "sha256": "a5f72e76cffca111c4351cb51cbd3e6c03eaf817b46269e68ce6338f769fd837"
+        },
+        {
+          "filename": "image010.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0004-Re-Additional-Information-Needed-CAMTdTS8rnBQo0-y_YNwNiNx7XGfao_m5eTPYSoD8JbMW6zWTeg-mail.gmail.com/attachments/image010.png",
+          "size": 1031165,
+          "content_type": "image/png",
+          "sha256": "92a8e01bf4bf33f8fe73ba48ad44062f9fe7f934d23369e37e71208e9e36b621"
+        }
+      ],
+      "evidence_title": "Re: Additional Information Needed",
+      "relevance_score": 17.0,
+      "matched_terms": [
+        "additional",
+        "information",
+        "needed",
+        "privacy",
+        "accommodation",
+        "voucher",
+        "clackamas",
+        "housing",
+        "authority",
+        "county",
+        "counsel"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "e5e99f53f93867334f5d136247ceda42f5490c37f2ce53d9678c8bc38c2cf086",
+      "raw_cid": "bafkreihf5gpvh6jym4zu6xitmjd45wsc6veqyn7szzj5sz4mrpbyylhqqy",
+      "source_eml_path": "/home/barberb/HACC/workspace/imap-confirmed-messages/2026-03-17_additional-info_bwilliams_1.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/imap-confirmed-messages",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/message.json",
+      "participants": [
+        "bwilliams@clackamas.us",
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: Additional Information Needed",
+      "date": "2026-03-17T17:31:01-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us",
+      "cc": "",
+      "message_id_header": "<CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9=aZ7Jvz=74gmqGdA@mail.gmail.com>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image001.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image002.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image003.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image004.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image005.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image006.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image007.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image008.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image009.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image010.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image011.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image-2.png"
+      ],
+      "attachments": [
+        {
+          "filename": "image001.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image001.jpg",
+          "size": 1638148,
+          "content_type": "image/jpeg",
+          "sha256": "3d1324fdc16614cea50fd9db576cbdfae249514892d9ba786f9ecc5b2325ff16"
+        },
+        {
+          "filename": "image002.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image002.jpg",
+          "size": 3565052,
+          "content_type": "image/jpeg",
+          "sha256": "4464c83b35e4d68f9eefb0fa5b27f20a80623a438bbb282426e325ef7e9250aa"
+        },
+        {
+          "filename": "image003.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image003.jpg",
+          "size": 3052797,
+          "content_type": "image/jpeg",
+          "sha256": "858081d0a5e68e6c45e148431c6aa297e486127aa6d6ae121e38720b428b4704"
+        },
+        {
+          "filename": "image004.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image004.jpg",
+          "size": 3988076,
+          "content_type": "image/jpeg",
+          "sha256": "dd0fa12d2f75230a3bb3b50bcd4c6584a74880c31aa9edd5097ffc85991f6f75"
+        },
+        {
+          "filename": "image005.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image005.jpg",
+          "size": 3539234,
+          "content_type": "image/jpeg",
+          "sha256": "e644a68f8815fafb3b6bb34b3bdf67d605322af8dfdd2067151c17f3e53d241f"
+        },
+        {
+          "filename": "image006.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image006.png",
+          "size": 69863,
+          "content_type": "image/png",
+          "sha256": "16a0add8ed11c96f50f80bf4f5a4a9b3ee340ac307d8327dd1638c2aceeab814"
+        },
+        {
+          "filename": "image007.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image007.jpg",
+          "size": 3334826,
+          "content_type": "image/jpeg",
+          "sha256": "a5f72e76cffca111c4351cb51cbd3e6c03eaf817b46269e68ce6338f769fd837"
+        },
+        {
+          "filename": "image008.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image008.jpg",
+          "size": 3421680,
+          "content_type": "image/jpeg",
+          "sha256": "eaf01e70c94e677ed0924db62bc6065e3fe3a462ab5031d7b3bc953c99911c9b"
+        },
+        {
+          "filename": "image009.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image009.png",
+          "size": 385902,
+          "content_type": "image/png",
+          "sha256": "5846d14ddb1accc5113f9037f04cf0678916bcce06bb95680d3c3b53588c6fe2"
+        },
+        {
+          "filename": "image010.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image010.png",
+          "size": 1031165,
+          "content_type": "image/png",
+          "sha256": "92a8e01bf4bf33f8fe73ba48ad44062f9fe7f934d23369e37e71208e9e36b621"
+        },
+        {
+          "filename": "image011.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image011.png",
+          "size": 424190,
+          "content_type": "image/png",
+          "sha256": "76126c6f056a5c01e1ceb1e6a896944dbbd76e44230f585dc679d88e24df748c"
+        },
+        {
+          "filename": "image.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image.png",
+          "size": 110371,
+          "content_type": "image/png",
+          "sha256": "72596affde7f5b9069e72ae0b5e6f2c0c678e245f51524e1e65faca32ace5ca2"
+        },
+        {
+          "filename": "image-2.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0005-Re-Additional-Information-Needed-CAMTdTS83ocm2akm6F9UWysjF6nz3pna0q9-aZ7Jvz-74gmqGdA-mail.gmail.com/attachments/image-2.png",
+          "size": 145372,
+          "content_type": "image/png",
+          "sha256": "343955c9bfc21a79110a38097885321ee4558642e50eb1d929687fab621513ec"
+        }
+      ],
+      "evidence_title": "Re: Additional Information Needed",
+      "relevance_score": 19.0,
+      "matched_terms": [
+        "additional",
+        "information",
+        "needed",
+        "fraud",
+        "privacy",
+        "accommodation",
+        "voucher",
+        "orientation",
+        "clackamas",
+        "housing",
+        "authority",
+        "county",
+        "counsel"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "d59876a52b7e19163b5f83d03ba2951b9a4fc3bf960a6147b9be96f617b36fa6",
+      "raw_cid": "bafkreigvtb3kkk36deldwx4d2a52ffi3tjh4hp4wbjqupon6s33bpm3puy",
+      "source_eml_path": "/home/barberb/HACC/workspace/imap-confirmed-messages/2026-03-17_additional-info_bwilliams_2.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/imap-confirmed-messages",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/message.json",
+      "participants": [
+        "bwilliams@clackamas.us",
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: Additional Information Needed",
+      "date": "2026-03-17T17:51:59-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us",
+      "cc": "",
+      "message_id_header": "<CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw@mail.gmail.com>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image001.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image002.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image003.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image004.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image005.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image006.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image007.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image008.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image009.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image010.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image011.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image-2.png"
+      ],
+      "attachments": [
+        {
+          "filename": "image001.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image001.jpg",
+          "size": 1638148,
+          "content_type": "image/jpeg",
+          "sha256": "3d1324fdc16614cea50fd9db576cbdfae249514892d9ba786f9ecc5b2325ff16"
+        },
+        {
+          "filename": "image002.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image002.jpg",
+          "size": 3565052,
+          "content_type": "image/jpeg",
+          "sha256": "4464c83b35e4d68f9eefb0fa5b27f20a80623a438bbb282426e325ef7e9250aa"
+        },
+        {
+          "filename": "image003.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image003.jpg",
+          "size": 3052797,
+          "content_type": "image/jpeg",
+          "sha256": "858081d0a5e68e6c45e148431c6aa297e486127aa6d6ae121e38720b428b4704"
+        },
+        {
+          "filename": "image004.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image004.jpg",
+          "size": 3988076,
+          "content_type": "image/jpeg",
+          "sha256": "dd0fa12d2f75230a3bb3b50bcd4c6584a74880c31aa9edd5097ffc85991f6f75"
+        },
+        {
+          "filename": "image005.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image005.jpg",
+          "size": 3539234,
+          "content_type": "image/jpeg",
+          "sha256": "e644a68f8815fafb3b6bb34b3bdf67d605322af8dfdd2067151c17f3e53d241f"
+        },
+        {
+          "filename": "image006.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image006.png",
+          "size": 69863,
+          "content_type": "image/png",
+          "sha256": "16a0add8ed11c96f50f80bf4f5a4a9b3ee340ac307d8327dd1638c2aceeab814"
+        },
+        {
+          "filename": "image007.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image007.jpg",
+          "size": 3334826,
+          "content_type": "image/jpeg",
+          "sha256": "a5f72e76cffca111c4351cb51cbd3e6c03eaf817b46269e68ce6338f769fd837"
+        },
+        {
+          "filename": "image008.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image008.jpg",
+          "size": 3421680,
+          "content_type": "image/jpeg",
+          "sha256": "eaf01e70c94e677ed0924db62bc6065e3fe3a462ab5031d7b3bc953c99911c9b"
+        },
+        {
+          "filename": "image009.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image009.png",
+          "size": 385902,
+          "content_type": "image/png",
+          "sha256": "5846d14ddb1accc5113f9037f04cf0678916bcce06bb95680d3c3b53588c6fe2"
+        },
+        {
+          "filename": "image010.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image010.png",
+          "size": 1031165,
+          "content_type": "image/png",
+          "sha256": "92a8e01bf4bf33f8fe73ba48ad44062f9fe7f934d23369e37e71208e9e36b621"
+        },
+        {
+          "filename": "image011.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image011.png",
+          "size": 424190,
+          "content_type": "image/png",
+          "sha256": "76126c6f056a5c01e1ceb1e6a896944dbbd76e44230f585dc679d88e24df748c"
+        },
+        {
+          "filename": "image.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image.png",
+          "size": 110371,
+          "content_type": "image/png",
+          "sha256": "72596affde7f5b9069e72ae0b5e6f2c0c678e245f51524e1e65faca32ace5ca2"
+        },
+        {
+          "filename": "image-2.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0006-Re-Additional-Information-Needed-CAMTdTS8PJBemAGgLrSov4AcGUQyokAi8hVr768y915Rrcrqbyw-mail.gmail.com/attachments/image-2.png",
+          "size": 145372,
+          "content_type": "image/png",
+          "sha256": "343955c9bfc21a79110a38097885321ee4558642e50eb1d929687fab621513ec"
+        }
+      ],
+      "evidence_title": "Re: Additional Information Needed",
+      "relevance_score": 19.0,
+      "matched_terms": [
+        "additional",
+        "information",
+        "needed",
+        "fraud",
+        "privacy",
+        "accommodation",
+        "voucher",
+        "orientation",
+        "clackamas",
+        "housing",
+        "authority",
+        "county",
+        "counsel"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "89eb3a01e8c55b3c71b2b3727115316aa3d8723213cba87884f9c701bf4e7d12",
+      "raw_cid": "bafkreiej5m5ad2gflm6hdmvtojyrkmlkupmhemqtzouhrbhzy4a36tt5ci",
+      "source_eml_path": "/home/barberb/HACC/workspace/imap-confirmed-messages/2026-03-17_additional-info_bwilliams_3.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/imap-confirmed-messages",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "RE: Additional Information Needed",
+      "date": "2026-03-17T16:04:43+00:00",
+      "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "to": "benjamin barber <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<55f61a7b68d240a1833f0ab5afac2469@clackamas.us>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/image001.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/image002.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/image003.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/image004.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/image005.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/image006.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/image007.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/image008.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/image009.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/image010.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/image011.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/HACC-504-Verification-Form-05122025.pdf"
+      ],
+      "attachments": [
+        {
+          "filename": "image001.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/image001.jpg",
+          "size": 1638148,
+          "content_type": "image/jpeg",
+          "sha256": "3d1324fdc16614cea50fd9db576cbdfae249514892d9ba786f9ecc5b2325ff16"
+        },
+        {
+          "filename": "image002.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/image002.jpg",
+          "size": 3565052,
+          "content_type": "image/jpeg",
+          "sha256": "4464c83b35e4d68f9eefb0fa5b27f20a80623a438bbb282426e325ef7e9250aa"
+        },
+        {
+          "filename": "image003.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/image003.jpg",
+          "size": 3052797,
+          "content_type": "image/jpeg",
+          "sha256": "858081d0a5e68e6c45e148431c6aa297e486127aa6d6ae121e38720b428b4704"
+        },
+        {
+          "filename": "image004.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/image004.jpg",
+          "size": 3988076,
+          "content_type": "image/jpeg",
+          "sha256": "dd0fa12d2f75230a3bb3b50bcd4c6584a74880c31aa9edd5097ffc85991f6f75"
+        },
+        {
+          "filename": "image005.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/image005.jpg",
+          "size": 3539234,
+          "content_type": "image/jpeg",
+          "sha256": "e644a68f8815fafb3b6bb34b3bdf67d605322af8dfdd2067151c17f3e53d241f"
+        },
+        {
+          "filename": "image006.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/image006.png",
+          "size": 69863,
+          "content_type": "image/png",
+          "sha256": "16a0add8ed11c96f50f80bf4f5a4a9b3ee340ac307d8327dd1638c2aceeab814"
+        },
+        {
+          "filename": "image007.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/image007.jpg",
+          "size": 3334826,
+          "content_type": "image/jpeg",
+          "sha256": "a5f72e76cffca111c4351cb51cbd3e6c03eaf817b46269e68ce6338f769fd837"
+        },
+        {
+          "filename": "image008.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/image008.jpg",
+          "size": 3421680,
+          "content_type": "image/jpeg",
+          "sha256": "eaf01e70c94e677ed0924db62bc6065e3fe3a462ab5031d7b3bc953c99911c9b"
+        },
+        {
+          "filename": "image009.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/image009.png",
+          "size": 385902,
+          "content_type": "image/png",
+          "sha256": "5846d14ddb1accc5113f9037f04cf0678916bcce06bb95680d3c3b53588c6fe2"
+        },
+        {
+          "filename": "image010.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/image010.png",
+          "size": 1031165,
+          "content_type": "image/png",
+          "sha256": "92a8e01bf4bf33f8fe73ba48ad44062f9fe7f934d23369e37e71208e9e36b621"
+        },
+        {
+          "filename": "image011.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/image011.png",
+          "size": 424190,
+          "content_type": "image/png",
+          "sha256": "76126c6f056a5c01e1ceb1e6a896944dbbd76e44230f585dc679d88e24df748c"
+        },
+        {
+          "filename": "HACC-504-Verification-Form-05122025.pdf",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0007-RE-Additional-Information-Needed-55f61a7b68d240a1833f0ab5afac2469-clackamas.us/attachments/HACC-504-Verification-Form-05122025.pdf",
+          "size": 164861,
+          "content_type": "application/pdf",
+          "sha256": "90173b9794a4dfd019483e990534c7c39235613120265615e6f94644b3bf22c1"
+        }
+      ],
+      "evidence_title": "RE: Additional Information Needed",
+      "relevance_score": 17.0,
+      "matched_terms": [
+        "additional",
+        "information",
+        "needed",
+        "privacy",
+        "accommodation",
+        "voucher",
+        "clackamas",
+        "housing",
+        "authority",
+        "county",
+        "counsel"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "e27e8b03d1eb4a135bb826369282ea001ec9b7746d1326cc95c080638e51f6a4",
+      "raw_cid": "bafkreihcp2fqhupljijvxobgg2jif2qad3e3o5dncmtmzfoaqbry4upwuq",
+      "source_eml_path": "/home/barberb/HACC/workspace/imap-confirmed-messages/2026-03-17_additional-info_county-counsel_hacc_1.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/imap-confirmed-messages",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "RE: Additional Information Needed",
+      "date": "2026-03-17T18:58:37+00:00",
+      "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "to": "benjamin barber <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<bed8c9d31d4c47fc8d1ff83b8ccd8eb6@clackamas.us>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/attachments/image001.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/attachments/image002.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/attachments/image003.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/attachments/image004.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/attachments/image005.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/attachments/image006.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/attachments/image007.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/attachments/image008.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/attachments/image009.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/attachments/image010.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/attachments/image011.png"
+      ],
+      "attachments": [
+        {
+          "filename": "image001.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/attachments/image001.jpg",
+          "size": 1638148,
+          "content_type": "image/jpeg",
+          "sha256": "3d1324fdc16614cea50fd9db576cbdfae249514892d9ba786f9ecc5b2325ff16"
+        },
+        {
+          "filename": "image002.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/attachments/image002.jpg",
+          "size": 3565052,
+          "content_type": "image/jpeg",
+          "sha256": "4464c83b35e4d68f9eefb0fa5b27f20a80623a438bbb282426e325ef7e9250aa"
+        },
+        {
+          "filename": "image003.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/attachments/image003.jpg",
+          "size": 3052797,
+          "content_type": "image/jpeg",
+          "sha256": "858081d0a5e68e6c45e148431c6aa297e486127aa6d6ae121e38720b428b4704"
+        },
+        {
+          "filename": "image004.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/attachments/image004.jpg",
+          "size": 3988076,
+          "content_type": "image/jpeg",
+          "sha256": "dd0fa12d2f75230a3bb3b50bcd4c6584a74880c31aa9edd5097ffc85991f6f75"
+        },
+        {
+          "filename": "image005.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/attachments/image005.jpg",
+          "size": 3539234,
+          "content_type": "image/jpeg",
+          "sha256": "e644a68f8815fafb3b6bb34b3bdf67d605322af8dfdd2067151c17f3e53d241f"
+        },
+        {
+          "filename": "image006.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/attachments/image006.png",
+          "size": 69863,
+          "content_type": "image/png",
+          "sha256": "16a0add8ed11c96f50f80bf4f5a4a9b3ee340ac307d8327dd1638c2aceeab814"
+        },
+        {
+          "filename": "image007.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/attachments/image007.jpg",
+          "size": 3334826,
+          "content_type": "image/jpeg",
+          "sha256": "a5f72e76cffca111c4351cb51cbd3e6c03eaf817b46269e68ce6338f769fd837"
+        },
+        {
+          "filename": "image008.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/attachments/image008.jpg",
+          "size": 3421680,
+          "content_type": "image/jpeg",
+          "sha256": "eaf01e70c94e677ed0924db62bc6065e3fe3a462ab5031d7b3bc953c99911c9b"
+        },
+        {
+          "filename": "image009.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/attachments/image009.png",
+          "size": 385902,
+          "content_type": "image/png",
+          "sha256": "5846d14ddb1accc5113f9037f04cf0678916bcce06bb95680d3c3b53588c6fe2"
+        },
+        {
+          "filename": "image010.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/attachments/image010.png",
+          "size": 1031165,
+          "content_type": "image/png",
+          "sha256": "92a8e01bf4bf33f8fe73ba48ad44062f9fe7f934d23369e37e71208e9e36b621"
+        },
+        {
+          "filename": "image011.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0008-RE-Additional-Information-Needed-bed8c9d31d4c47fc8d1ff83b8ccd8eb6-clackamas.us/attachments/image011.png",
+          "size": 424190,
+          "content_type": "image/png",
+          "sha256": "76126c6f056a5c01e1ceb1e6a896944dbbd76e44230f585dc679d88e24df748c"
+        }
+      ],
+      "evidence_title": "RE: Additional Information Needed",
+      "relevance_score": 18.0,
+      "matched_terms": [
+        "additional",
+        "information",
+        "needed",
+        "privacy",
+        "accommodation",
+        "voucher",
+        "orientation",
+        "clackamas",
+        "housing",
+        "authority",
+        "county",
+        "counsel"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "495b1da46da6bbc1d5567a8985af82ec67019dc39695931839c222eb322ce3b5",
+      "raw_cid": "bafkreicjlmo2i3ngxpa5kvt2rgc27axmm4az3q4wswjrqoocelvtelhdwu",
+      "source_eml_path": "/home/barberb/HACC/workspace/imap-confirmed-messages/2026-03-17_additional-info_county-counsel_hacc_2.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/imap-confirmed-messages",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/message.json",
+      "participants": [
+        "bwilliams@clackamas.us",
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "Re: Additional Information Needed",
+      "date": "2026-03-18T11:09:54-07:00",
+      "from": "benjamin barber <starworks5@gmail.com>",
+      "to": "\"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us",
+      "cc": "",
+      "message_id_header": "<CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA@mail.gmail.com>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image001.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image002.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image003.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image004.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image005.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image006.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image007.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image008.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image009.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image010.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image011.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image-2.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/form-5044-filled.pdf"
+      ],
+      "attachments": [
+        {
+          "filename": "image001.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image001.jpg",
+          "size": 1638148,
+          "content_type": "image/jpeg",
+          "sha256": "3d1324fdc16614cea50fd9db576cbdfae249514892d9ba786f9ecc5b2325ff16"
+        },
+        {
+          "filename": "image002.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image002.jpg",
+          "size": 3565052,
+          "content_type": "image/jpeg",
+          "sha256": "4464c83b35e4d68f9eefb0fa5b27f20a80623a438bbb282426e325ef7e9250aa"
+        },
+        {
+          "filename": "image003.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image003.jpg",
+          "size": 3052797,
+          "content_type": "image/jpeg",
+          "sha256": "858081d0a5e68e6c45e148431c6aa297e486127aa6d6ae121e38720b428b4704"
+        },
+        {
+          "filename": "image004.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image004.jpg",
+          "size": 3988076,
+          "content_type": "image/jpeg",
+          "sha256": "dd0fa12d2f75230a3bb3b50bcd4c6584a74880c31aa9edd5097ffc85991f6f75"
+        },
+        {
+          "filename": "image005.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image005.jpg",
+          "size": 3539234,
+          "content_type": "image/jpeg",
+          "sha256": "e644a68f8815fafb3b6bb34b3bdf67d605322af8dfdd2067151c17f3e53d241f"
+        },
+        {
+          "filename": "image006.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image006.png",
+          "size": 69863,
+          "content_type": "image/png",
+          "sha256": "16a0add8ed11c96f50f80bf4f5a4a9b3ee340ac307d8327dd1638c2aceeab814"
+        },
+        {
+          "filename": "image007.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image007.jpg",
+          "size": 3334826,
+          "content_type": "image/jpeg",
+          "sha256": "a5f72e76cffca111c4351cb51cbd3e6c03eaf817b46269e68ce6338f769fd837"
+        },
+        {
+          "filename": "image008.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image008.jpg",
+          "size": 3421680,
+          "content_type": "image/jpeg",
+          "sha256": "eaf01e70c94e677ed0924db62bc6065e3fe3a462ab5031d7b3bc953c99911c9b"
+        },
+        {
+          "filename": "image009.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image009.png",
+          "size": 385902,
+          "content_type": "image/png",
+          "sha256": "5846d14ddb1accc5113f9037f04cf0678916bcce06bb95680d3c3b53588c6fe2"
+        },
+        {
+          "filename": "image010.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image010.png",
+          "size": 1031165,
+          "content_type": "image/png",
+          "sha256": "92a8e01bf4bf33f8fe73ba48ad44062f9fe7f934d23369e37e71208e9e36b621"
+        },
+        {
+          "filename": "image011.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image011.png",
+          "size": 424190,
+          "content_type": "image/png",
+          "sha256": "76126c6f056a5c01e1ceb1e6a896944dbbd76e44230f585dc679d88e24df748c"
+        },
+        {
+          "filename": "image.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image.png",
+          "size": 110371,
+          "content_type": "image/png",
+          "sha256": "72596affde7f5b9069e72ae0b5e6f2c0c678e245f51524e1e65faca32ace5ca2"
+        },
+        {
+          "filename": "image-2.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/image-2.png",
+          "size": 145372,
+          "content_type": "image/png",
+          "sha256": "343955c9bfc21a79110a38097885321ee4558642e50eb1d929687fab621513ec"
+        },
+        {
+          "filename": "form-5044-filled.pdf",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0009-Re-Additional-Information-Needed-CAMTdTS9-_UtXTEBVmvh9sP3J3Hp2n1iFghSNJi97XukevU5aaA-mail.gmail.com/attachments/form-5044-filled.pdf",
+          "size": 92845,
+          "content_type": "application/pdf",
+          "sha256": "02a14471215e516160db6a4e70876d2c6673b9847f16e31a20e731e6c10d6f5a"
+        }
+      ],
+      "evidence_title": "Re: Additional Information Needed",
+      "relevance_score": 19.0,
+      "matched_terms": [
+        "additional",
+        "information",
+        "needed",
+        "fraud",
+        "privacy",
+        "accommodation",
+        "voucher",
+        "orientation",
+        "clackamas",
+        "housing",
+        "authority",
+        "county",
+        "counsel"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "84ee521a6c3d7c177a564a31fb82e2094c3612d22a83ece06b49925aa37df33e",
+      "raw_cid": "bafkreiee5zjbu3b5pqlxuvskgh5yfyqjjq3bfurkqpwoa22jsjnkg7pthy",
+      "source_eml_path": "/home/barberb/HACC/workspace/imap-confirmed-messages/2026-03-18_additional-info_bwilliams_1.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/imap-confirmed-messages",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "RE: HCV Orientation",
+      "date": "2026-03-26T19:21:32+00:00",
+      "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "to": "benjamin barber <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<f1e37f0f59304f0d8bcbcb606ee2f8be@clackamas.us>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image001.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image002.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image003.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image004.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image005.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image006.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image007.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image008.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image009.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image010.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image011.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image012.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image013.jpg"
+      ],
+      "attachments": [
+        {
+          "filename": "image001.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image001.png",
+          "size": 180277,
+          "content_type": "image/png",
+          "sha256": "46bf7e7c3530f8bc3bc131af05afbe281ff63d795beeaa7c4cb77386df91a36e"
+        },
+        {
+          "filename": "image002.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image002.png",
+          "size": 204364,
+          "content_type": "image/png",
+          "sha256": "070863321860273a09c5c183d32be530d22d1767e7770220fd9bf02cf3d49ca7"
+        },
+        {
+          "filename": "image003.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image003.png",
+          "size": 231662,
+          "content_type": "image/png",
+          "sha256": "a5eb1cf767f2a7fe08a7d4327558dfaf7f089190bc442cd90693d88e43bd0949"
+        },
+        {
+          "filename": "image004.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image004.png",
+          "size": 65507,
+          "content_type": "image/png",
+          "sha256": "d53866032ceb78f848ea328df5de9363f832c9850447fa1613f822feeb366ce6"
+        },
+        {
+          "filename": "image005.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image005.png",
+          "size": 160884,
+          "content_type": "image/png",
+          "sha256": "4dbdd731900da9ac632b54595e07022bbf5fe789ccac6baf68936b92718581ca"
+        },
+        {
+          "filename": "image006.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image006.png",
+          "size": 151834,
+          "content_type": "image/png",
+          "sha256": "4f7e1011365c53a48275c186bac5b874dfe1425f0156ff76e4cd57dc1824a6af"
+        },
+        {
+          "filename": "image007.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image007.jpg",
+          "size": 2694789,
+          "content_type": "image/jpeg",
+          "sha256": "3c861b15574b1bf7a33e9b142909c336fbee4cc1c3caad8dc410d8cc1e3e4274"
+        },
+        {
+          "filename": "image008.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image008.png",
+          "size": 856705,
+          "content_type": "image/png",
+          "sha256": "0569034f41829527a39574e75f6b158a67ac55e051621a90f4ba3f2f9e44bfd6"
+        },
+        {
+          "filename": "image009.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image009.jpg",
+          "size": 2764615,
+          "content_type": "image/jpeg",
+          "sha256": "b7951488e788e37eb172d9c3eb0f218856e82f9bc1fac462dca911c2664550a8"
+        },
+        {
+          "filename": "image010.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image010.jpg",
+          "size": 3897410,
+          "content_type": "image/jpeg",
+          "sha256": "b1a2d6e4c9bf0d0f698ad665c243a2c2f03c5d883ac8d2a81a8758084bbd7ced"
+        },
+        {
+          "filename": "image011.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image011.jpg",
+          "size": 3287761,
+          "content_type": "image/jpeg",
+          "sha256": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f"
+        },
+        {
+          "filename": "image012.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image012.jpg",
+          "size": 3756568,
+          "content_type": "image/jpeg",
+          "sha256": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943"
+        },
+        {
+          "filename": "image013.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0010-RE-HCV-Orientation-f1e37f0f59304f0d8bcbcb606ee2f8be-clackamas.us/attachments/image013.jpg",
+          "size": 3111479,
+          "content_type": "image/jpeg",
+          "sha256": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095"
+        }
+      ],
+      "evidence_title": "RE: HCV Orientation",
+      "relevance_score": 14.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "information",
+        "accommodation",
+        "voucher",
+        "clackamas",
+        "housing",
+        "authority",
+        "cortez",
+        "county"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "d3c04acd877722d137bceb21a5169e74386f30c043cff7b9061479dd78985ede",
+      "raw_cid": "bafkreigtybfm3b3xelitpphlegsrnhtuhbxtbqcdz733sbquphoxrgc63y",
+      "source_eml_path": "/home/barberb/HACC/workspace/imap-confirmed-messages/2026-03-26_hcv-orientation_living-room_1.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/imap-confirmed-messages",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0011-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0011-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0011-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "RE: HCV Orientation",
+      "date": "2026-03-26T16:36:46+00:00",
+      "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "to": "benjamin barber <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<07246b509c0f4d7c8d69f58da8f5e205@clackamas.us>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0011-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image001.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0011-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image002.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0011-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image003.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0011-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image004.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0011-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image005.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0011-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image006.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0011-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image007.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0011-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/Cortez-J-RA-Denial-3.26.26.pdf"
+      ],
+      "attachments": [
+        {
+          "filename": "image001.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0011-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image001.jpg",
+          "size": 2694789,
+          "content_type": "image/jpeg",
+          "sha256": "3c861b15574b1bf7a33e9b142909c336fbee4cc1c3caad8dc410d8cc1e3e4274"
+        },
+        {
+          "filename": "image002.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0011-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image002.png",
+          "size": 856705,
+          "content_type": "image/png",
+          "sha256": "0569034f41829527a39574e75f6b158a67ac55e051621a90f4ba3f2f9e44bfd6"
+        },
+        {
+          "filename": "image003.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0011-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image003.jpg",
+          "size": 2764615,
+          "content_type": "image/jpeg",
+          "sha256": "b7951488e788e37eb172d9c3eb0f218856e82f9bc1fac462dca911c2664550a8"
+        },
+        {
+          "filename": "image004.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0011-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image004.jpg",
+          "size": 3897410,
+          "content_type": "image/jpeg",
+          "sha256": "b1a2d6e4c9bf0d0f698ad665c243a2c2f03c5d883ac8d2a81a8758084bbd7ced"
+        },
+        {
+          "filename": "image005.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0011-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image005.jpg",
+          "size": 3287761,
+          "content_type": "image/jpeg",
+          "sha256": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f"
+        },
+        {
+          "filename": "image006.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0011-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image006.jpg",
+          "size": 3756568,
+          "content_type": "image/jpeg",
+          "sha256": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943"
+        },
+        {
+          "filename": "image007.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0011-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/image007.jpg",
+          "size": 3111479,
+          "content_type": "image/jpeg",
+          "sha256": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095"
+        },
+        {
+          "filename": "Cortez-J-RA-Denial-3.26.26.pdf",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0011-RE-HCV-Orientation-07246b509c0f4d7c8d69f58da8f5e205-clackamas.us/attachments/Cortez-J-RA-Denial-3.26.26.pdf",
+          "size": 298605,
+          "content_type": "application/pdf",
+          "sha256": "3a5fd05c8f1ff2007d87d2f2ed6d9aa8c9234c4e4c9e2f4203f5d27d6b571ddb"
+        }
+      ],
+      "evidence_title": "RE: HCV Orientation",
+      "relevance_score": 14.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "information",
+        "accommodation",
+        "voucher",
+        "clackamas",
+        "housing",
+        "authority",
+        "cortez",
+        "county"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "ec783d1822a8e68ef890efb38f6c8ec0086f46019f6b2aac98d9deb00b3628bc",
+      "raw_cid": "bafkreihmpa6rqivi42hprehpwohwzdwabbxumam7nmvkzggz32yawnrixq",
+      "source_eml_path": "/home/barberb/HACC/workspace/imap-confirmed-messages/2026-03-26_hcv-orientation_living-room_2.eml"
+    },
+    {
+      "folder": "/home/barberb/HACC/workspace/imap-confirmed-messages",
+      "source_type": "gmail_email",
+      "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0012-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us",
+      "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0012-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/message.eml",
+      "parsed_path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0012-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/message.json",
+      "participants": [
+        "ktilton@clackamas.us",
+        "starworks5@gmail.com"
+      ],
+      "subject": "RE: HCV Orientation",
+      "date": "2026-03-26T02:39:04+00:00",
+      "from": "\"Tilton, Kati\" <KTilton@clackamas.us>",
+      "to": "benjamin barber <starworks5@gmail.com>",
+      "cc": "",
+      "message_id_header": "<a0136cad0c5f44b984403575346f8d34@clackamas.us>",
+      "attachment_paths": [
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0012-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image001.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0012-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image002.png",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0012-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image003.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0012-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image004.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0012-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image005.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0012-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image006.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0012-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image007.jpg",
+        "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0012-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/Voucher-3.20.26.pdf"
+      ],
+      "attachments": [
+        {
+          "filename": "image001.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0012-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image001.jpg",
+          "size": 2694789,
+          "content_type": "image/jpeg",
+          "sha256": "3c861b15574b1bf7a33e9b142909c336fbee4cc1c3caad8dc410d8cc1e3e4274"
+        },
+        {
+          "filename": "image002.png",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0012-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image002.png",
+          "size": 856705,
+          "content_type": "image/png",
+          "sha256": "0569034f41829527a39574e75f6b158a67ac55e051621a90f4ba3f2f9e44bfd6"
+        },
+        {
+          "filename": "image003.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0012-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image003.jpg",
+          "size": 2764615,
+          "content_type": "image/jpeg",
+          "sha256": "b7951488e788e37eb172d9c3eb0f218856e82f9bc1fac462dca911c2664550a8"
+        },
+        {
+          "filename": "image004.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0012-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image004.jpg",
+          "size": 3897410,
+          "content_type": "image/jpeg",
+          "sha256": "b1a2d6e4c9bf0d0f698ad665c243a2c2f03c5d883ac8d2a81a8758084bbd7ced"
+        },
+        {
+          "filename": "image005.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0012-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image005.jpg",
+          "size": 3287761,
+          "content_type": "image/jpeg",
+          "sha256": "239597ac870c86e2f0f6df970c5f9a162cb147412a394bf37344d44684c1436f"
+        },
+        {
+          "filename": "image006.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0012-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image006.jpg",
+          "size": 3756568,
+          "content_type": "image/jpeg",
+          "sha256": "7f1f8c4599c984226f1ed0d1824c0b4eebd83fc487bb8341e6d93261ba780943"
+        },
+        {
+          "filename": "image007.jpg",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0012-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/image007.jpg",
+          "size": 3111479,
+          "content_type": "image/jpeg",
+          "sha256": "8a8efd3c4d3748971efa6d79967e8399fc429863e2ce9178ef0849d353dd4095"
+        },
+        {
+          "filename": "Voucher-3.20.26.pdf",
+          "path": "/home/barberb/HACC/evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/0012-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/attachments/Voucher-3.20.26.pdf",
+          "size": 394331,
+          "content_type": "application/pdf",
+          "sha256": "6ba8531a16e790019f1db9331a4608946241cfa429a9189ffcd82ca4facb2241"
+        }
+      ],
+      "evidence_title": "RE: HCV Orientation",
+      "relevance_score": 14.0,
+      "matched_terms": [
+        "hcv",
+        "orientation",
+        "information",
+        "accommodation",
+        "voucher",
+        "clackamas",
+        "housing",
+        "authority",
+        "cortez",
+        "county"
+      ],
+      "matched_fields": [
+        "subject",
+        "body"
+      ],
+      "cache_hit": false,
+      "raw_sha256": "a1784c2e08853f682ae3115dc004dbe107e86e8612344bee60c3af34364ccb4b",
+      "raw_cid": "bafkreifbpbgc4cefh5ucvyyrlxaajw7ba7ug5bqsgrf64ygdv42dmtgljm",
+      "source_eml_path": "/home/barberb/HACC/workspace/imap-confirmed-messages/2026-03-26_hcv-orientation_living-room_3.eml"
+    }
+  ]
+}

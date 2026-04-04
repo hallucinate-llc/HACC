@@ -1,0 +1,17 @@
+{
+  "caseId": "live_in_aide_case_no_violation_001",
+  "branch": "evidentiary_gap",
+  "verifiedOnly": false,
+  "supportStatus": null,
+  "fitKind": null,
+  "authorityCount": 5,
+  "statusCounts": {
+    "paraphrase": 3,
+    "verified_quote": 2
+  },
+  "bucketCounts": {
+    "dutyToGrant": 1,
+    "necessary": 2,
+    "reasonable": 4
+  }
+}

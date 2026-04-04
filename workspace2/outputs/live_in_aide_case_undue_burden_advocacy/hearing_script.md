@@ -1,0 +1,24 @@
+# Hearing Script
+
+Case: live_in_aide_case_undue_burden_001
+Requested remedy: [Approve a separate bedroom for the live-in aide]
+Requesting party: [Requesting Party]
+
+## Opening
+
+This case asks whether the approved live-in aide accommodation is effective in practice.
+The evaluated record supports constructive denial even though the provider has raised an undue-burden defense to the requested configuration.
+Citations: findings=dutyToGrant, constructiveDenial, violation; authorities=United States v. California Mobile Home Park Management Co., 24 CFR 982.316, Giebeler v. M&B Associates, McGary v. City of Portland; evidence=evidence:medical_verification, evidence:sleep_log_1; events=evt:t1, evt:t3, evt:t4, evt:t5
+
+## Core points
+
+- The aide's sleep is disrupted because the sleeping space is shared and used at night.
+- The shared sleeping arrangement interferes with the aide's remote software work.
+- Fatigue from the arrangement undermines caregiving effectiveness.
+- The arrangement creates a meaningful privacy loss within the home.
+- The provider asserts an undue-burden defense against the requested accommodation.
+- Supporting authorities for the accommodation duty include: Giebeler v. M&B Associates, United States v. California Mobile Home Park Management Co., McGary v. City of Portland, 24 CFR 982.316.
+
+## Closing
+
+Even with that asserted defense, an accommodation that exists on paper but fails in practice is not an effective accommodation.

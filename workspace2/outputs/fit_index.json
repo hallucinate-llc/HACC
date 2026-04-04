@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-04-04T19:25:40.096186+00:00",
+  "recommendedFirstStop": "outputs/fit_summary.json",
+  "whyOpenThis": "Start with the fit summary because it is the quickest dashboard-style orientation to direct, analogical, and record-support posture across the current case set.",
+  "entries": [
+    {
+      "kind": "fit_matrix",
+      "jsonPath": "outputs/fit_matrix.json",
+      "markdownPath": "outputs/fit_matrix.md",
+      "description": "Cross-case fit-quality matrix with per-case direct, analogical, and record-support counts.",
+      "priorityHint": "secondary",
+      "whyOpenThis": "Open this when you want the fuller cross-case fit breakdown instead of the compact summary."
+    },
+    {
+      "kind": "fit_summary",
+      "jsonPath": "outputs/fit_summary.json",
+      "markdownPath": "outputs/fit_summary.md",
+      "description": "Compact fit-quality summary for dashboard-style audit views.",
+      "priorityHint": "recommended",
+      "whyOpenThis": "Open this first when you want the quickest compact view of direct, analogical, and record-support posture."
+    },
+    {
+      "kind": "fit_findings",
+      "jsonPath": "outputs/fit_findings.json",
+      "markdownPath": "outputs/fit_findings.md",
+      "description": "Repo-level findings report for analogical and record-support fit posture.",
+      "priorityHint": "primary",
+      "whyOpenThis": "Open this when you want case-level interpretation of fit risk rather than just fit counts."
+    },
+    {
+      "kind": "fit_findings_summary",
+      "jsonPath": "outputs/fit_findings_summary.json",
+      "markdownPath": "outputs/fit_findings_summary.md",
+      "description": "Compact case-first summary of fit findings severity and posture.",
+      "priorityHint": "primary",
+      "whyOpenThis": "Open this when you want a lighter case-first fit findings view without the full report detail."
+    }
+  ]
+}

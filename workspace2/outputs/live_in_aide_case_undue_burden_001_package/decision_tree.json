@@ -1,0 +1,55 @@
+{
+  "decisionTree": {
+    "id": "dt_reasonable_accommodation_live_in_aide",
+    "root": "q1",
+    "branch": "undue_burden_constructive_denial",
+    "nodes": {
+      "q1": {
+        "question": "Is the tenant disabled?",
+        "yes": "q2",
+        "no": "deny_no_disability"
+      },
+      "q2": {
+        "question": "Is a live-in aide needed?",
+        "yes": "q3",
+        "no": "deny_no_aide_need"
+      },
+      "q3": {
+        "question": "Was a separate bedroom requested?",
+        "yes": "q4",
+        "no": "insufficient_no_request"
+      },
+      "q4": {
+        "question": "Is the request medically or functionally supported?",
+        "yes": "q5",
+        "no": "insufficient_support"
+      },
+      "q5": {
+        "question": "Does denial create sleep, work, privacy, or caregiving impairment?",
+        "yes": "q6",
+        "no": "deny_no_necessity"
+      },
+      "q6": {
+        "question": "Did the provider prove undue burden or fundamental alteration?",
+        "yes": "balancing_required",
+        "no": "q7"
+      },
+      "q7": {
+        "question": "Was the accommodation denied or only nominally approved?",
+        "yes": "violation",
+        "no": "no_violation"
+      }
+    },
+    "outcomes": {
+      "deny_no_disability": "Claim fails at disability element",
+      "deny_no_aide_need": "Claim fails at necessity of aide",
+      "insufficient_no_request": "Need accommodation request",
+      "insufficient_support": "Need medical or functional support",
+      "deny_no_necessity": "No functional necessity shown",
+      "balancing_required": "Provider defense requires further analysis",
+      "violation": "Duty to accommodate violated or constructively denied",
+      "no_violation": "No denial shown"
+    },
+    "activeOutcome": "violation"
+  }
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "testId": "positive_constructive_denial",
+    "branch": "constructive_denial",
+    "policy": {
+      "privacy_mode": "inferred_from_living_room_sleeping"
+    },
+    "facts": {
+      "disabled_tenant": true,
+      "needs_live_in_aide": true,
+      "medical_verification": true,
+      "requested_separate_bedroom": true,
+      "approved_aide_in_principle": true,
+      "denied_separate_bedroom": true,
+      "aide_sleeps_in_living_room": true,
+      "night_access_needed": true,
+      "undue_burden": false,
+      "fundamental_alteration": false
+    },
+    "expected": {
+      "sleep_interruption": true,
+      "necessary": true,
+      "reasonable": true,
+      "duty_to_grant": true,
+      "not_effective": true,
+      "constructive_denial": true,
+      "violation": true
+    }
+  },
+  {
+    "testId": "defeated_by_undue_burden",
+    "branch": "undue_burden_constructive_denial",
+    "policy": {
+      "privacy_mode": "inferred_from_living_room_sleeping"
+    },
+    "facts": {
+      "disabled_tenant": true,
+      "needs_live_in_aide": true,
+      "medical_verification": true,
+      "requested_separate_bedroom": true,
+      "approved_aide_in_principle": true,
+      "denied_separate_bedroom": true,
+      "aide_sleeps_in_living_room": true,
+      "night_access_needed": true,
+      "undue_burden": true,
+      "fundamental_alteration": false
+    },
+    "expected": {
+      "sleep_interruption": true,
+      "necessary": true,
+      "reasonable": false,
+      "duty_to_grant": false,
+      "constructive_denial": true,
+      "violation": true
+    }
+  },
+  {
+    "testId": "nominal_approval_no_harm_shown",
+    "branch": "evidentiary_gap",
+    "policy": {
+      "privacy_mode": "explicit_only"
+    },
+    "facts": {
+      "disabled_tenant": true,
+      "needs_live_in_aide": true,
+      "medical_verification": true,
+      "requested_separate_bedroom": true,
+      "approved_aide_in_principle": true,
+      "denied_separate_bedroom": true,
+      "aide_sleeps_in_living_room": true,
+      "night_access_needed": false,
+      "privacy_loss": false,
+      "undue_burden": false,
+      "fundamental_alteration": false
+    },
+    "expected": {
+      "sleep_interruption": false,
+      "necessary": false,
+      "reasonable": false,
+      "duty_to_grant": false,
+      "constructive_denial": false,
+      "violation": false
+    },
+    "notes": "This fixture uses explicit_only privacy mode to preserve the original chat expectation."
+  },
+  {
+    "testId": "alternative_private_sleeping_space",
+    "branch": "evidentiary_gap",
+    "policy": {
+      "privacy_mode": "inferred_from_living_room_sleeping"
+    },
+    "facts": {
+      "disabled_tenant": true,
+      "needs_live_in_aide": true,
+      "medical_verification": true,
+      "requested_separate_bedroom": true,
+      "approved_aide_in_principle": true,
+      "denied_separate_bedroom": true,
+      "aide_sleeps_in_living_room": false,
+      "night_access_needed": false,
+      "undue_burden": false,
+      "fundamental_alteration": false
+    },
+    "expected": {
+      "sleep_interruption": false,
+      "necessary": false,
+      "constructive_denial": false
+    }
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-04-04T19:25:40.093370+00:00",
+  "summary": {
+    "caseCount": 4,
+    "directOnlyCases": 0,
+    "analogicalCases": 3,
+    "recordSupportCases": 1,
+    "severityCounts": {
+      "warning": 4
+    }
+  },
+  "singleCaseGuide": null,
+  "cases": [
+    {
+      "caseId": "live_in_aide_case_001",
+      "branch": "constructive_denial",
+      "severity": "warning",
+      "title": "Analogical fit posture"
+    },
+    {
+      "caseId": "live_in_aide_case_effective_accommodation_001",
+      "branch": "effective_accommodation",
+      "severity": "warning",
+      "title": "Analogical fit posture"
+    },
+    {
+      "caseId": "live_in_aide_case_no_violation_001",
+      "branch": "evidentiary_gap",
+      "severity": "warning",
+      "title": "Record-support-heavy fit posture"
+    },
+    {
+      "caseId": "live_in_aide_case_undue_burden_001",
+      "branch": "undue_burden_constructive_denial",
+      "severity": "warning",
+      "title": "Analogical fit posture"
+    }
+  ]
+}

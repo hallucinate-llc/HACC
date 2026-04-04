@@ -1,0 +1,1182 @@
+{
+  "meta": {
+    "caseId": "live_in_aide_case_no_violation_001",
+    "branch": "evidentiary_gap",
+    "confidence": 0.57,
+    "title": "Memorandum of Law: live_in_aide_case_no_violation_001",
+    "authorityTrust": {
+      "authorityCount": 5,
+      "verifiedQuoteCount": 2,
+      "paraphraseCount": 3,
+      "missingCount": 0,
+      "severity": "warning",
+      "label": "paraphrase_heavy",
+      "advisory": "This case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust."
+    },
+    "sourceSummary": {
+      "authorityCount": 5,
+      "sourceVerifiedCount": 5,
+      "sourceNormalizedCount": 5,
+      "sourceStatus": "All listed authorities are sourceVerified and sourceNormalized."
+    },
+    "fitSummary": {
+      "authorityCount": 5,
+      "directCount": 1,
+      "analogicalCount": 1,
+      "recordSupportCount": 3,
+      "fitStatus": "This package includes analogical authority mappings."
+    },
+    "fitFinding": {
+      "label": "record_support_heavy",
+      "note": "This package relies in part on record-support mappings, so direct controlling authority should be distinguished from factual or background support."
+    }
+  },
+  "sections": [
+    {
+      "id": "question_presented",
+      "heading": "Question Presented",
+      "paragraphs": [
+        "Whether the current record establishes an accommodation violation or instead shows either a functioning accommodation or an evidentiary gap that must be resolved."
+      ],
+      "authorityIds": [
+        "giebeler",
+        "california_mobile_home",
+        "mcgary",
+        "hud_joint_statement",
+        "cfr_982_316"
+      ],
+      "targetIds": [
+        "dep:node:violation"
+      ],
+      "citations": {
+        "authorityIds": [
+          "california_mobile_home",
+          "cfr_982_316",
+          "giebeler",
+          "hud_joint_statement",
+          "mcgary"
+        ],
+        "targetIds": [
+          "dep:node:violation"
+        ],
+        "supportLinks": []
+      },
+      "paragraphCitations": [
+        {
+          "paragraphIndex": 0,
+          "text": "Whether the current record establishes an accommodation violation or instead shows either a functioning accommodation or an evidentiary gap that must be resolved.",
+          "targetIds": [
+            "dep:node:violation"
+          ],
+          "authorityIds": [],
+          "supportLinks": []
+        }
+      ]
+    },
+    {
+      "id": "summary_of_conclusion",
+      "heading": "Summary of Conclusion",
+      "paragraphs": [
+        "Under the present rule set, the memorandum does not conclude a violation on the accepted findings.",
+        "The current record is not yet mature enough to support a finished denial theory, so the memorandum should emphasize factual development and clarification of the accommodation's practical operation."
+      ],
+      "authorityIds": [],
+      "targetIds": [
+        "dep:node:violation",
+        "dep:node:constructive_denial"
+      ],
+      "citations": {
+        "authorityIds": [],
+        "targetIds": [
+          "dep:node:constructive_denial",
+          "dep:node:violation"
+        ],
+        "supportLinks": []
+      },
+      "paragraphCitations": [
+        {
+          "paragraphIndex": 0,
+          "text": "Under the present rule set, the memorandum does not conclude a violation on the accepted findings.",
+          "targetIds": [
+            "dep:node:constructive_denial"
+          ],
+          "authorityIds": [],
+          "supportLinks": []
+        },
+        {
+          "paragraphIndex": 1,
+          "text": "The current record is not yet mature enough to support a finished denial theory, so the memorandum should emphasize factual development and clarification of the accommodation's practical operation.",
+          "targetIds": [
+            "dep:node:violation"
+          ],
+          "authorityIds": [],
+          "supportLinks": []
+        }
+      ]
+    },
+    {
+      "id": "accepted_facts",
+      "heading": "Accepted Facts",
+      "paragraphs": [
+        "The tenant is disabled: True.",
+        "A live-in aide is needed: True.",
+        "A separate bedroom was requested: True.",
+        "The aide was approved in principle: True.",
+        "The separate bedroom was denied: True.",
+        "The aide sleeps in the living room: False.",
+        "Night access is needed: False.",
+        "No functional harms were established on the accepted findings."
+      ],
+      "authorityIds": [
+        "giebeler",
+        "california_mobile_home",
+        "mcgary",
+        "hud_joint_statement",
+        "cfr_982_316"
+      ],
+      "targetIds": [
+        "dep:node:disabled_tenant",
+        "dep:node:requested_separate_bedroom"
+      ],
+      "citations": {
+        "authorityIds": [
+          "california_mobile_home",
+          "cfr_982_316",
+          "giebeler",
+          "hud_joint_statement",
+          "mcgary"
+        ],
+        "targetIds": [
+          "dep:node:disabled_tenant",
+          "dep:node:requested_separate_bedroom"
+        ],
+        "supportLinks": []
+      },
+      "paragraphCitations": [
+        {
+          "paragraphIndex": 0,
+          "text": "The tenant is disabled: True.",
+          "targetIds": [
+            "dep:node:disabled_tenant"
+          ],
+          "authorityIds": [],
+          "supportLinks": []
+        },
+        {
+          "paragraphIndex": 1,
+          "text": "A live-in aide is needed: True.",
+          "targetIds": [
+            "dep:node:requested_separate_bedroom"
+          ],
+          "authorityIds": [],
+          "supportLinks": []
+        },
+        {
+          "paragraphIndex": 2,
+          "text": "A separate bedroom was requested: True.",
+          "targetIds": [],
+          "authorityIds": [],
+          "supportLinks": []
+        },
+        {
+          "paragraphIndex": 3,
+          "text": "The aide was approved in principle: True.",
+          "targetIds": [],
+          "authorityIds": [],
+          "supportLinks": []
+        },
+        {
+          "paragraphIndex": 4,
+          "text": "The separate bedroom was denied: True.",
+          "targetIds": [],
+          "authorityIds": [],
+          "supportLinks": []
+        },
+        {
+          "paragraphIndex": 5,
+          "text": "The aide sleeps in the living room: False.",
+          "targetIds": [],
+          "authorityIds": [],
+          "supportLinks": []
+        },
+        {
+          "paragraphIndex": 6,
+          "text": "Night access is needed: False.",
+          "targetIds": [],
+          "authorityIds": [],
+          "supportLinks": []
+        },
+        {
+          "paragraphIndex": 7,
+          "text": "No functional harms were established on the accepted findings.",
+          "targetIds": [],
+          "authorityIds": [],
+          "supportLinks": []
+        }
+      ]
+    },
+    {
+      "id": "dependency_graph_analysis",
+      "heading": "Dependency Graph Analysis",
+      "paragraphs": [
+        "The dependency graph moves from foundational facts into harm findings, then into necessity, reasonableness, duty to grant, effectiveness, constructive denial, and violation.",
+        "Active branch: evidentiary_gap.",
+        "Active outcome: no_violation.",
+        "The graph currently stops before violation because the record does not establish the harm and effectiveness predicates needed to complete the path."
+      ],
+      "authorityIds": [
+        "giebeler",
+        "california_mobile_home",
+        "mcgary",
+        "hud_joint_statement",
+        "cfr_982_316"
+      ],
+      "targetIds": [
+        "dep:node:necessary",
+        "dep:node:reasonable",
+        "dep:node:violation"
+      ],
+      "citations": {
+        "authorityIds": [
+          "california_mobile_home",
+          "cfr_982_316",
+          "giebeler",
+          "hud_joint_statement",
+          "mcgary"
+        ],
+        "targetIds": [
+          "dep:node:necessary",
+          "dep:node:reasonable",
+          "dep:node:violation"
+        ],
+        "supportLinks": [
+          {
+            "target": "dep:node:necessary",
+            "supportKind": "node",
+            "findingBucket": "necessary",
+            "authorityId": "mcgary",
+            "authorityLabel": "McGary v. City of Portland",
+            "authorityExcerpt": "excerpt:mcgary",
+            "excerptText": "The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+            "excerptKind": "verified_quote",
+            "proposition": "Housing-related financial burdens can impair the full use and enjoyment of a dwelling.",
+            "fitKind": "analogical",
+            "court": "9th Cir.",
+            "year": "2004",
+            "pincite": "1265",
+            "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/386/1259/632471/",
+            "sourceVerified": true,
+            "sourceNormalized": true
+          },
+          {
+            "target": "dep:node:necessary",
+            "supportKind": "node",
+            "findingBucket": "necessary",
+            "authorityId": "hud_joint_statement",
+            "authorityLabel": "HUD/DOJ Joint Statement on Reasonable Accommodations",
+            "authorityExcerpt": "excerpt:hud_joint_statement",
+            "excerptText": "Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.",
+            "excerptKind": "verified_quote",
+            "proposition": "Equal use and enjoyment may require necessary accommodation changes.",
+            "fitKind": "direct",
+            "court": "HUD/DOJ",
+            "year": "2004",
+            "pincite": "Question 1, p. 2",
+            "sourceUrl": "https://www.justice.gov/crt/about/hce/joint_statement_ra.pdf",
+            "sourceVerified": true,
+            "sourceNormalized": true
+          },
+          {
+            "target": "dep:node:reasonable",
+            "supportKind": "node",
+            "findingBucket": "reasonable",
+            "authorityId": "giebeler",
+            "authorityLabel": "Giebeler v. M&B Associates",
+            "authorityExcerpt": "excerpt:giebeler",
+            "excerptText": "Giebeler is paraphrased here to emphasize that accommodation analysis should stay connected to disability-related housing access once the relevant facts are established.",
+            "excerptKind": "paraphrase",
+            "proposition": "Accommodation analysis should stay connected to disability-related housing access.",
+            "fitKind": "analogical",
+            "court": "9th Cir.",
+            "year": "2003",
+            "pincite": "1155",
+            "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/343/1143/636375/",
+            "sourceVerified": true,
+            "sourceNormalized": true
+          },
+          {
+            "target": "dep:node:reasonable",
+            "supportKind": "node",
+            "findingBucket": "reasonable",
+            "authorityId": "california_mobile_home",
+            "authorityLabel": "United States v. California Mobile Home Park Management Co.",
+            "authorityExcerpt": "excerpt:california_mobile_home",
+            "excerptText": "California Mobile Home is paraphrased here to support the need for a concrete accommodation record before escalation.",
+            "excerptKind": "paraphrase",
+            "proposition": "Accommodation disputes should be evaluated against a concrete factual record.",
+            "fitKind": "direct",
+            "court": "9th Cir.",
+            "year": "1994",
+            "pincite": "1416",
+            "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/29/1413/479940/",
+            "sourceVerified": true,
+            "sourceNormalized": true
+          },
+          {
+            "target": "dep:node:reasonable",
+            "supportKind": "node",
+            "findingBucket": "reasonable",
+            "authorityId": "hud_joint_statement",
+            "authorityLabel": "HUD/DOJ Joint Statement on Reasonable Accommodations",
+            "authorityExcerpt": "excerpt:hud_joint_statement",
+            "excerptText": "Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.",
+            "excerptKind": "verified_quote",
+            "proposition": "Equal use and enjoyment may require necessary accommodation changes.",
+            "fitKind": "direct",
+            "court": "HUD/DOJ",
+            "year": "2004",
+            "pincite": "Question 1, p. 2",
+            "sourceUrl": "https://www.justice.gov/crt/about/hce/joint_statement_ra.pdf",
+            "sourceVerified": true,
+            "sourceNormalized": true
+          },
+          {
+            "target": "dep:node:reasonable",
+            "supportKind": "node",
+            "findingBucket": "reasonable",
+            "authorityId": "cfr_982_316",
+            "authorityLabel": "24 CFR 982.316",
+            "authorityExcerpt": "excerpt:cfr_982_316",
+            "excerptText": "The regulation is paraphrased here to support the live-in-aide approval principle while the record is still being completed.",
+            "excerptKind": "paraphrase",
+            "proposition": "A live-in aide should be approved when the program-accessibility need is established.",
+            "fitKind": "direct",
+            "court": "24 C.F.R.",
+            "year": "current",
+            "pincite": "(a)",
+            "sourceUrl": "https://www.law.cornell.edu/cfr/text/24/982.316",
+            "sourceVerified": true,
+            "sourceNormalized": true
+          }
+        ]
+      },
+      "paragraphCitations": [
+        {
+          "paragraphIndex": 0,
+          "text": "The dependency graph moves from foundational facts into harm findings, then into necessity, reasonableness, duty to grant, effectiveness, constructive denial, and violation.",
+          "targetIds": [
+            "dep:node:necessary"
+          ],
+          "authorityIds": [
+            "hud_joint_statement",
+            "mcgary"
+          ],
+          "supportLinks": [
+            {
+              "target": "dep:node:necessary",
+              "supportKind": "node",
+              "findingBucket": "necessary",
+              "authorityId": "mcgary",
+              "authorityLabel": "McGary v. City of Portland",
+              "authorityExcerpt": "excerpt:mcgary",
+              "excerptText": "The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+              "excerptKind": "verified_quote",
+              "proposition": "Housing-related financial burdens can impair the full use and enjoyment of a dwelling.",
+              "fitKind": "analogical",
+              "court": "9th Cir.",
+              "year": "2004",
+              "pincite": "1265",
+              "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/386/1259/632471/",
+              "sourceVerified": true,
+              "sourceNormalized": true
+            },
+            {
+              "target": "dep:node:necessary",
+              "supportKind": "node",
+              "findingBucket": "necessary",
+              "authorityId": "hud_joint_statement",
+              "authorityLabel": "HUD/DOJ Joint Statement on Reasonable Accommodations",
+              "authorityExcerpt": "excerpt:hud_joint_statement",
+              "excerptText": "Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.",
+              "excerptKind": "verified_quote",
+              "proposition": "Equal use and enjoyment may require necessary accommodation changes.",
+              "fitKind": "direct",
+              "court": "HUD/DOJ",
+              "year": "2004",
+              "pincite": "Question 1, p. 2",
+              "sourceUrl": "https://www.justice.gov/crt/about/hce/joint_statement_ra.pdf",
+              "sourceVerified": true,
+              "sourceNormalized": true
+            }
+          ]
+        },
+        {
+          "paragraphIndex": 1,
+          "text": "Active branch: evidentiary_gap.",
+          "targetIds": [
+            "dep:node:reasonable"
+          ],
+          "authorityIds": [
+            "california_mobile_home",
+            "cfr_982_316",
+            "giebeler",
+            "hud_joint_statement"
+          ],
+          "supportLinks": [
+            {
+              "target": "dep:node:reasonable",
+              "supportKind": "node",
+              "findingBucket": "reasonable",
+              "authorityId": "giebeler",
+              "authorityLabel": "Giebeler v. M&B Associates",
+              "authorityExcerpt": "excerpt:giebeler",
+              "excerptText": "Giebeler is paraphrased here to emphasize that accommodation analysis should stay connected to disability-related housing access once the relevant facts are established.",
+              "excerptKind": "paraphrase",
+              "proposition": "Accommodation analysis should stay connected to disability-related housing access.",
+              "fitKind": "analogical",
+              "court": "9th Cir.",
+              "year": "2003",
+              "pincite": "1155",
+              "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/343/1143/636375/",
+              "sourceVerified": true,
+              "sourceNormalized": true
+            },
+            {
+              "target": "dep:node:reasonable",
+              "supportKind": "node",
+              "findingBucket": "reasonable",
+              "authorityId": "california_mobile_home",
+              "authorityLabel": "United States v. California Mobile Home Park Management Co.",
+              "authorityExcerpt": "excerpt:california_mobile_home",
+              "excerptText": "California Mobile Home is paraphrased here to support the need for a concrete accommodation record before escalation.",
+              "excerptKind": "paraphrase",
+              "proposition": "Accommodation disputes should be evaluated against a concrete factual record.",
+              "fitKind": "direct",
+              "court": "9th Cir.",
+              "year": "1994",
+              "pincite": "1416",
+              "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/29/1413/479940/",
+              "sourceVerified": true,
+              "sourceNormalized": true
+            },
+            {
+              "target": "dep:node:reasonable",
+              "supportKind": "node",
+              "findingBucket": "reasonable",
+              "authorityId": "hud_joint_statement",
+              "authorityLabel": "HUD/DOJ Joint Statement on Reasonable Accommodations",
+              "authorityExcerpt": "excerpt:hud_joint_statement",
+              "excerptText": "Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.",
+              "excerptKind": "verified_quote",
+              "proposition": "Equal use and enjoyment may require necessary accommodation changes.",
+              "fitKind": "direct",
+              "court": "HUD/DOJ",
+              "year": "2004",
+              "pincite": "Question 1, p. 2",
+              "sourceUrl": "https://www.justice.gov/crt/about/hce/joint_statement_ra.pdf",
+              "sourceVerified": true,
+              "sourceNormalized": true
+            },
+            {
+              "target": "dep:node:reasonable",
+              "supportKind": "node",
+              "findingBucket": "reasonable",
+              "authorityId": "cfr_982_316",
+              "authorityLabel": "24 CFR 982.316",
+              "authorityExcerpt": "excerpt:cfr_982_316",
+              "excerptText": "The regulation is paraphrased here to support the live-in-aide approval principle while the record is still being completed.",
+              "excerptKind": "paraphrase",
+              "proposition": "A live-in aide should be approved when the program-accessibility need is established.",
+              "fitKind": "direct",
+              "court": "24 C.F.R.",
+              "year": "current",
+              "pincite": "(a)",
+              "sourceUrl": "https://www.law.cornell.edu/cfr/text/24/982.316",
+              "sourceVerified": true,
+              "sourceNormalized": true
+            }
+          ]
+        },
+        {
+          "paragraphIndex": 2,
+          "text": "Active outcome: no_violation.",
+          "targetIds": [
+            "dep:node:violation"
+          ],
+          "authorityIds": [],
+          "supportLinks": []
+        },
+        {
+          "paragraphIndex": 3,
+          "text": "The graph currently stops before violation because the record does not establish the harm and effectiveness predicates needed to complete the path.",
+          "targetIds": [],
+          "authorityIds": [],
+          "supportLinks": []
+        }
+      ]
+    },
+    {
+      "id": "authority_grounding",
+      "heading": "Authority Grounding",
+      "paragraphs": [
+        "node:necessary is grounded by McGary v. City of Portland (386 F.3d 1259 (9th Cir. 2004)): The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+        "edge:sleep_interruption->necessary is grounded by McGary v. City of Portland (386 F.3d 1259 (9th Cir. 2004)): The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+        "edge:work_interference->necessary is grounded by McGary v. City of Portland (386 F.3d 1259 (9th Cir. 2004)): The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+        "edge:caregiving_impairment->necessary is grounded by McGary v. City of Portland (386 F.3d 1259 (9th Cir. 2004)): The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+        "edge:privacy_loss->necessary is grounded by McGary v. City of Portland (386 F.3d 1259 (9th Cir. 2004)): The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+        "node:necessary is grounded by HUD/DOJ Joint Statement on Reasonable Accommodations (Joint Statement of the Department of Housing and Urban Development and the Department of Justice, Reasonable Accommodations under the Fair Housing Act (May 2004)): Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.",
+        "edge:sleep_interruption->necessary is grounded by HUD/DOJ Joint Statement on Reasonable Accommodations (Joint Statement of the Department of Housing and Urban Development and the Department of Justice, Reasonable Accommodations under the Fair Housing Act (May 2004)): Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.",
+        "edge:work_interference->necessary is grounded by HUD/DOJ Joint Statement on Reasonable Accommodations (Joint Statement of the Department of Housing and Urban Development and the Department of Justice, Reasonable Accommodations under the Fair Housing Act (May 2004)): Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling."
+      ],
+      "authorityIds": [
+        "giebeler",
+        "california_mobile_home",
+        "mcgary",
+        "hud_joint_statement",
+        "cfr_982_316"
+      ],
+      "targetIds": [
+        "dep:node:necessary",
+        "dep:edge:sleep_interruption->necessary",
+        "dep:edge:work_interference->necessary",
+        "dep:edge:caregiving_impairment->necessary",
+        "dep:edge:privacy_loss->necessary",
+        "dep:node:necessary",
+        "dep:edge:sleep_interruption->necessary",
+        "dep:edge:work_interference->necessary"
+      ],
+      "citations": {
+        "authorityIds": [
+          "california_mobile_home",
+          "cfr_982_316",
+          "giebeler",
+          "hud_joint_statement",
+          "mcgary"
+        ],
+        "targetIds": [
+          "dep:edge:caregiving_impairment->necessary",
+          "dep:edge:privacy_loss->necessary",
+          "dep:edge:sleep_interruption->necessary",
+          "dep:edge:work_interference->necessary",
+          "dep:node:necessary"
+        ],
+        "supportLinks": [
+          {
+            "target": "dep:node:necessary",
+            "supportKind": "node",
+            "findingBucket": "necessary",
+            "authorityId": "mcgary",
+            "authorityLabel": "McGary v. City of Portland",
+            "authorityExcerpt": "excerpt:mcgary",
+            "excerptText": "The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+            "excerptKind": "verified_quote",
+            "proposition": "Housing-related financial burdens can impair the full use and enjoyment of a dwelling.",
+            "fitKind": "analogical",
+            "court": "9th Cir.",
+            "year": "2004",
+            "pincite": "1265",
+            "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/386/1259/632471/",
+            "sourceVerified": true,
+            "sourceNormalized": true
+          },
+          {
+            "target": "dep:edge:sleep_interruption->necessary",
+            "supportKind": "edge",
+            "findingBucket": "necessary",
+            "authorityId": "mcgary",
+            "authorityLabel": "McGary v. City of Portland",
+            "authorityExcerpt": "excerpt:mcgary",
+            "excerptText": "The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+            "excerptKind": "verified_quote",
+            "proposition": "Housing-related financial burdens can impair the full use and enjoyment of a dwelling.",
+            "fitKind": "analogical",
+            "court": "9th Cir.",
+            "year": "2004",
+            "pincite": "1265",
+            "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/386/1259/632471/",
+            "sourceVerified": true,
+            "sourceNormalized": true
+          },
+          {
+            "target": "dep:edge:work_interference->necessary",
+            "supportKind": "edge",
+            "findingBucket": "necessary",
+            "authorityId": "mcgary",
+            "authorityLabel": "McGary v. City of Portland",
+            "authorityExcerpt": "excerpt:mcgary",
+            "excerptText": "The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+            "excerptKind": "verified_quote",
+            "proposition": "Housing-related financial burdens can impair the full use and enjoyment of a dwelling.",
+            "fitKind": "analogical",
+            "court": "9th Cir.",
+            "year": "2004",
+            "pincite": "1265",
+            "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/386/1259/632471/",
+            "sourceVerified": true,
+            "sourceNormalized": true
+          },
+          {
+            "target": "dep:edge:caregiving_impairment->necessary",
+            "supportKind": "edge",
+            "findingBucket": "necessary",
+            "authorityId": "mcgary",
+            "authorityLabel": "McGary v. City of Portland",
+            "authorityExcerpt": "excerpt:mcgary",
+            "excerptText": "The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+            "excerptKind": "verified_quote",
+            "proposition": "Housing-related financial burdens can impair the full use and enjoyment of a dwelling.",
+            "fitKind": "analogical",
+            "court": "9th Cir.",
+            "year": "2004",
+            "pincite": "1265",
+            "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/386/1259/632471/",
+            "sourceVerified": true,
+            "sourceNormalized": true
+          },
+          {
+            "target": "dep:edge:privacy_loss->necessary",
+            "supportKind": "edge",
+            "findingBucket": "necessary",
+            "authorityId": "mcgary",
+            "authorityLabel": "McGary v. City of Portland",
+            "authorityExcerpt": "excerpt:mcgary",
+            "excerptText": "The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+            "excerptKind": "verified_quote",
+            "proposition": "Housing-related financial burdens can impair the full use and enjoyment of a dwelling.",
+            "fitKind": "analogical",
+            "court": "9th Cir.",
+            "year": "2004",
+            "pincite": "1265",
+            "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/386/1259/632471/",
+            "sourceVerified": true,
+            "sourceNormalized": true
+          },
+          {
+            "target": "dep:node:necessary",
+            "supportKind": "node",
+            "findingBucket": "necessary",
+            "authorityId": "hud_joint_statement",
+            "authorityLabel": "HUD/DOJ Joint Statement on Reasonable Accommodations",
+            "authorityExcerpt": "excerpt:hud_joint_statement",
+            "excerptText": "Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.",
+            "excerptKind": "verified_quote",
+            "proposition": "Equal use and enjoyment may require necessary accommodation changes.",
+            "fitKind": "direct",
+            "court": "HUD/DOJ",
+            "year": "2004",
+            "pincite": "Question 1, p. 2",
+            "sourceUrl": "https://www.justice.gov/crt/about/hce/joint_statement_ra.pdf",
+            "sourceVerified": true,
+            "sourceNormalized": true
+          },
+          {
+            "target": "dep:edge:sleep_interruption->necessary",
+            "supportKind": "edge",
+            "findingBucket": "necessary",
+            "authorityId": "hud_joint_statement",
+            "authorityLabel": "HUD/DOJ Joint Statement on Reasonable Accommodations",
+            "authorityExcerpt": "excerpt:hud_joint_statement",
+            "excerptText": "Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.",
+            "excerptKind": "verified_quote",
+            "proposition": "Equal use and enjoyment may require necessary accommodation changes.",
+            "fitKind": "direct",
+            "court": "HUD/DOJ",
+            "year": "2004",
+            "pincite": "Question 1, p. 2",
+            "sourceUrl": "https://www.justice.gov/crt/about/hce/joint_statement_ra.pdf",
+            "sourceVerified": true,
+            "sourceNormalized": true
+          },
+          {
+            "target": "dep:edge:work_interference->necessary",
+            "supportKind": "edge",
+            "findingBucket": "necessary",
+            "authorityId": "hud_joint_statement",
+            "authorityLabel": "HUD/DOJ Joint Statement on Reasonable Accommodations",
+            "authorityExcerpt": "excerpt:hud_joint_statement",
+            "excerptText": "Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.",
+            "excerptKind": "verified_quote",
+            "proposition": "Equal use and enjoyment may require necessary accommodation changes.",
+            "fitKind": "direct",
+            "court": "HUD/DOJ",
+            "year": "2004",
+            "pincite": "Question 1, p. 2",
+            "sourceUrl": "https://www.justice.gov/crt/about/hce/joint_statement_ra.pdf",
+            "sourceVerified": true,
+            "sourceNormalized": true
+          },
+          {
+            "target": "dep:edge:caregiving_impairment->necessary",
+            "supportKind": "edge",
+            "findingBucket": "necessary",
+            "authorityId": "hud_joint_statement",
+            "authorityLabel": "HUD/DOJ Joint Statement on Reasonable Accommodations",
+            "authorityExcerpt": "excerpt:hud_joint_statement",
+            "excerptText": "Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.",
+            "excerptKind": "verified_quote",
+            "proposition": "Equal use and enjoyment may require necessary accommodation changes.",
+            "fitKind": "direct",
+            "court": "HUD/DOJ",
+            "year": "2004",
+            "pincite": "Question 1, p. 2",
+            "sourceUrl": "https://www.justice.gov/crt/about/hce/joint_statement_ra.pdf",
+            "sourceVerified": true,
+            "sourceNormalized": true
+          },
+          {
+            "target": "dep:edge:privacy_loss->necessary",
+            "supportKind": "edge",
+            "findingBucket": "necessary",
+            "authorityId": "hud_joint_statement",
+            "authorityLabel": "HUD/DOJ Joint Statement on Reasonable Accommodations",
+            "authorityExcerpt": "excerpt:hud_joint_statement",
+            "excerptText": "Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.",
+            "excerptKind": "verified_quote",
+            "proposition": "Equal use and enjoyment may require necessary accommodation changes.",
+            "fitKind": "direct",
+            "court": "HUD/DOJ",
+            "year": "2004",
+            "pincite": "Question 1, p. 2",
+            "sourceUrl": "https://www.justice.gov/crt/about/hce/joint_statement_ra.pdf",
+            "sourceVerified": true,
+            "sourceNormalized": true
+          }
+        ]
+      },
+      "paragraphCitations": [
+        {
+          "paragraphIndex": 0,
+          "text": "node:necessary is grounded by McGary v. City of Portland (386 F.3d 1259 (9th Cir. 2004)): The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+          "targetIds": [
+            "dep:edge:caregiving_impairment->necessary"
+          ],
+          "authorityIds": [
+            "hud_joint_statement",
+            "mcgary"
+          ],
+          "supportLinks": [
+            {
+              "target": "dep:edge:caregiving_impairment->necessary",
+              "supportKind": "edge",
+              "findingBucket": "necessary",
+              "authorityId": "mcgary",
+              "authorityLabel": "McGary v. City of Portland",
+              "authorityExcerpt": "excerpt:mcgary",
+              "excerptText": "The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+              "excerptKind": "verified_quote",
+              "proposition": "Housing-related financial burdens can impair the full use and enjoyment of a dwelling.",
+              "fitKind": "analogical",
+              "court": "9th Cir.",
+              "year": "2004",
+              "pincite": "1265",
+              "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/386/1259/632471/",
+              "sourceVerified": true,
+              "sourceNormalized": true
+            },
+            {
+              "target": "dep:edge:caregiving_impairment->necessary",
+              "supportKind": "edge",
+              "findingBucket": "necessary",
+              "authorityId": "hud_joint_statement",
+              "authorityLabel": "HUD/DOJ Joint Statement on Reasonable Accommodations",
+              "authorityExcerpt": "excerpt:hud_joint_statement",
+              "excerptText": "Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.",
+              "excerptKind": "verified_quote",
+              "proposition": "Equal use and enjoyment may require necessary accommodation changes.",
+              "fitKind": "direct",
+              "court": "HUD/DOJ",
+              "year": "2004",
+              "pincite": "Question 1, p. 2",
+              "sourceUrl": "https://www.justice.gov/crt/about/hce/joint_statement_ra.pdf",
+              "sourceVerified": true,
+              "sourceNormalized": true
+            }
+          ]
+        },
+        {
+          "paragraphIndex": 1,
+          "text": "edge:sleep_interruption->necessary is grounded by McGary v. City of Portland (386 F.3d 1259 (9th Cir. 2004)): The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+          "targetIds": [
+            "dep:edge:privacy_loss->necessary"
+          ],
+          "authorityIds": [
+            "hud_joint_statement",
+            "mcgary"
+          ],
+          "supportLinks": [
+            {
+              "target": "dep:edge:privacy_loss->necessary",
+              "supportKind": "edge",
+              "findingBucket": "necessary",
+              "authorityId": "mcgary",
+              "authorityLabel": "McGary v. City of Portland",
+              "authorityExcerpt": "excerpt:mcgary",
+              "excerptText": "The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+              "excerptKind": "verified_quote",
+              "proposition": "Housing-related financial burdens can impair the full use and enjoyment of a dwelling.",
+              "fitKind": "analogical",
+              "court": "9th Cir.",
+              "year": "2004",
+              "pincite": "1265",
+              "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/386/1259/632471/",
+              "sourceVerified": true,
+              "sourceNormalized": true
+            },
+            {
+              "target": "dep:edge:privacy_loss->necessary",
+              "supportKind": "edge",
+              "findingBucket": "necessary",
+              "authorityId": "hud_joint_statement",
+              "authorityLabel": "HUD/DOJ Joint Statement on Reasonable Accommodations",
+              "authorityExcerpt": "excerpt:hud_joint_statement",
+              "excerptText": "Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.",
+              "excerptKind": "verified_quote",
+              "proposition": "Equal use and enjoyment may require necessary accommodation changes.",
+              "fitKind": "direct",
+              "court": "HUD/DOJ",
+              "year": "2004",
+              "pincite": "Question 1, p. 2",
+              "sourceUrl": "https://www.justice.gov/crt/about/hce/joint_statement_ra.pdf",
+              "sourceVerified": true,
+              "sourceNormalized": true
+            }
+          ]
+        },
+        {
+          "paragraphIndex": 2,
+          "text": "edge:work_interference->necessary is grounded by McGary v. City of Portland (386 F.3d 1259 (9th Cir. 2004)): The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+          "targetIds": [
+            "dep:edge:sleep_interruption->necessary"
+          ],
+          "authorityIds": [
+            "hud_joint_statement",
+            "mcgary"
+          ],
+          "supportLinks": [
+            {
+              "target": "dep:edge:sleep_interruption->necessary",
+              "supportKind": "edge",
+              "findingBucket": "necessary",
+              "authorityId": "mcgary",
+              "authorityLabel": "McGary v. City of Portland",
+              "authorityExcerpt": "excerpt:mcgary",
+              "excerptText": "The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+              "excerptKind": "verified_quote",
+              "proposition": "Housing-related financial burdens can impair the full use and enjoyment of a dwelling.",
+              "fitKind": "analogical",
+              "court": "9th Cir.",
+              "year": "2004",
+              "pincite": "1265",
+              "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/386/1259/632471/",
+              "sourceVerified": true,
+              "sourceNormalized": true
+            },
+            {
+              "target": "dep:edge:sleep_interruption->necessary",
+              "supportKind": "edge",
+              "findingBucket": "necessary",
+              "authorityId": "hud_joint_statement",
+              "authorityLabel": "HUD/DOJ Joint Statement on Reasonable Accommodations",
+              "authorityExcerpt": "excerpt:hud_joint_statement",
+              "excerptText": "Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.",
+              "excerptKind": "verified_quote",
+              "proposition": "Equal use and enjoyment may require necessary accommodation changes.",
+              "fitKind": "direct",
+              "court": "HUD/DOJ",
+              "year": "2004",
+              "pincite": "Question 1, p. 2",
+              "sourceUrl": "https://www.justice.gov/crt/about/hce/joint_statement_ra.pdf",
+              "sourceVerified": true,
+              "sourceNormalized": true
+            }
+          ]
+        },
+        {
+          "paragraphIndex": 3,
+          "text": "edge:caregiving_impairment->necessary is grounded by McGary v. City of Portland (386 F.3d 1259 (9th Cir. 2004)): The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+          "targetIds": [
+            "dep:edge:work_interference->necessary"
+          ],
+          "authorityIds": [
+            "hud_joint_statement",
+            "mcgary"
+          ],
+          "supportLinks": [
+            {
+              "target": "dep:edge:work_interference->necessary",
+              "supportKind": "edge",
+              "findingBucket": "necessary",
+              "authorityId": "mcgary",
+              "authorityLabel": "McGary v. City of Portland",
+              "authorityExcerpt": "excerpt:mcgary",
+              "excerptText": "The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+              "excerptKind": "verified_quote",
+              "proposition": "Housing-related financial burdens can impair the full use and enjoyment of a dwelling.",
+              "fitKind": "analogical",
+              "court": "9th Cir.",
+              "year": "2004",
+              "pincite": "1265",
+              "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/386/1259/632471/",
+              "sourceVerified": true,
+              "sourceNormalized": true
+            },
+            {
+              "target": "dep:edge:work_interference->necessary",
+              "supportKind": "edge",
+              "findingBucket": "necessary",
+              "authorityId": "hud_joint_statement",
+              "authorityLabel": "HUD/DOJ Joint Statement on Reasonable Accommodations",
+              "authorityExcerpt": "excerpt:hud_joint_statement",
+              "excerptText": "Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.",
+              "excerptKind": "verified_quote",
+              "proposition": "Equal use and enjoyment may require necessary accommodation changes.",
+              "fitKind": "direct",
+              "court": "HUD/DOJ",
+              "year": "2004",
+              "pincite": "Question 1, p. 2",
+              "sourceUrl": "https://www.justice.gov/crt/about/hce/joint_statement_ra.pdf",
+              "sourceVerified": true,
+              "sourceNormalized": true
+            }
+          ]
+        },
+        {
+          "paragraphIndex": 4,
+          "text": "edge:privacy_loss->necessary is grounded by McGary v. City of Portland (386 F.3d 1259 (9th Cir. 2004)): The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+          "targetIds": [
+            "dep:node:necessary"
+          ],
+          "authorityIds": [
+            "hud_joint_statement",
+            "mcgary"
+          ],
+          "supportLinks": [
+            {
+              "target": "dep:node:necessary",
+              "supportKind": "node",
+              "findingBucket": "necessary",
+              "authorityId": "mcgary",
+              "authorityLabel": "McGary v. City of Portland",
+              "authorityExcerpt": "excerpt:mcgary",
+              "excerptText": "The lien the City put on McGary's house prevents the full use and enjoyment of his property.",
+              "excerptKind": "verified_quote",
+              "proposition": "Housing-related financial burdens can impair the full use and enjoyment of a dwelling.",
+              "fitKind": "analogical",
+              "court": "9th Cir.",
+              "year": "2004",
+              "pincite": "1265",
+              "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/386/1259/632471/",
+              "sourceVerified": true,
+              "sourceNormalized": true
+            },
+            {
+              "target": "dep:node:necessary",
+              "supportKind": "node",
+              "findingBucket": "necessary",
+              "authorityId": "hud_joint_statement",
+              "authorityLabel": "HUD/DOJ Joint Statement on Reasonable Accommodations",
+              "authorityExcerpt": "excerpt:hud_joint_statement",
+              "excerptText": "Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.",
+              "excerptKind": "verified_quote",
+              "proposition": "Equal use and enjoyment may require necessary accommodation changes.",
+              "fitKind": "direct",
+              "court": "HUD/DOJ",
+              "year": "2004",
+              "pincite": "Question 1, p. 2",
+              "sourceUrl": "https://www.justice.gov/crt/about/hce/joint_statement_ra.pdf",
+              "sourceVerified": true,
+              "sourceNormalized": true
+            }
+          ]
+        },
+        {
+          "paragraphIndex": 5,
+          "text": "node:necessary is grounded by HUD/DOJ Joint Statement on Reasonable Accommodations (Joint Statement of the Department of Housing and Urban Development and the Department of Justice, Reasonable Accommodations under the Fair Housing Act (May 2004)): Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.",
+          "targetIds": [],
+          "authorityIds": [],
+          "supportLinks": []
+        },
+        {
+          "paragraphIndex": 6,
+          "text": "edge:sleep_interruption->necessary is grounded by HUD/DOJ Joint Statement on Reasonable Accommodations (Joint Statement of the Department of Housing and Urban Development and the Department of Justice, Reasonable Accommodations under the Fair Housing Act (May 2004)): Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.",
+          "targetIds": [],
+          "authorityIds": [],
+          "supportLinks": []
+        },
+        {
+          "paragraphIndex": 7,
+          "text": "edge:work_interference->necessary is grounded by HUD/DOJ Joint Statement on Reasonable Accommodations (Joint Statement of the Department of Housing and Urban Development and the Department of Justice, Reasonable Accommodations under the Fair Housing Act (May 2004)): Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.",
+          "targetIds": [],
+          "authorityIds": [],
+          "supportLinks": []
+        }
+      ]
+    },
+    {
+      "id": "application",
+      "heading": "Application",
+      "paragraphs": [
+        "The current record is not yet mature enough to support a finished denial theory, so the memorandum should emphasize factual development and clarification of the accommodation's practical operation.",
+        "The evaluator confidence score is 0.57.",
+        "Authority grounding note: This case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust.",
+        "The missing elements remain: functional_harm."
+      ],
+      "authorityIds": [
+        "giebeler",
+        "california_mobile_home",
+        "mcgary",
+        "hud_joint_statement",
+        "cfr_982_316"
+      ],
+      "targetIds": [
+        "dep:node:constructive_denial",
+        "dep:node:violation"
+      ],
+      "citations": {
+        "authorityIds": [
+          "california_mobile_home",
+          "cfr_982_316",
+          "giebeler",
+          "hud_joint_statement",
+          "mcgary"
+        ],
+        "targetIds": [
+          "dep:node:constructive_denial",
+          "dep:node:violation"
+        ],
+        "supportLinks": []
+      },
+      "paragraphCitations": [
+        {
+          "paragraphIndex": 0,
+          "text": "The current record is not yet mature enough to support a finished denial theory, so the memorandum should emphasize factual development and clarification of the accommodation's practical operation.",
+          "targetIds": [
+            "dep:node:constructive_denial"
+          ],
+          "authorityIds": [],
+          "supportLinks": []
+        },
+        {
+          "paragraphIndex": 1,
+          "text": "The evaluator confidence score is 0.57.",
+          "targetIds": [
+            "dep:node:violation"
+          ],
+          "authorityIds": [],
+          "supportLinks": []
+        },
+        {
+          "paragraphIndex": 2,
+          "text": "Authority grounding note: This case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust.",
+          "targetIds": [],
+          "authorityIds": [],
+          "supportLinks": []
+        },
+        {
+          "paragraphIndex": 3,
+          "text": "The missing elements remain: functional_harm.",
+          "targetIds": [],
+          "authorityIds": [],
+          "supportLinks": []
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "heading": "Conclusion",
+      "paragraphs": [
+        "Under the present rule set, the memorandum does not conclude a violation on the accepted findings."
+      ],
+      "authorityIds": [],
+      "targetIds": [
+        "dep:node:violation"
+      ],
+      "citations": {
+        "authorityIds": [],
+        "targetIds": [
+          "dep:node:violation"
+        ],
+        "supportLinks": []
+      },
+      "paragraphCitations": [
+        {
+          "paragraphIndex": 0,
+          "text": "Under the present rule set, the memorandum does not conclude a violation on the accepted findings.",
+          "targetIds": [
+            "dep:node:violation"
+          ],
+          "authorityIds": [],
+          "supportLinks": []
+        }
+      ]
+    },
+    {
+      "id": "authorities_relied_on",
+      "heading": "Authorities Relied On",
+      "paragraphs": [
+        "Giebeler v. M&B Associates (343 F.3d 1143 (9th Cir. 2003)): Accommodation analysis should remain tied to disability-related housing access and a sufficiently developed factual record.",
+        "United States v. California Mobile Home Park Management Co. (29 F.3d 1413 (9th Cir. 1994)): Administrative review should identify the requested accommodation and the factual gaps in the record before the matter hardens into a denial dispute.",
+        "McGary v. City of Portland (386 F.3d 1259 (9th Cir. 2004)): Housing-related financial burdens can impair the full use and enjoyment of a dwelling.",
+        "HUD/DOJ Joint Statement on Reasonable Accommodations (Joint Statement of the Department of Housing and Urban Development and the Department of Justice, Reasonable Accommodations under the Fair Housing Act (May 2004)): Equal use and enjoyment requires necessary accommodation changes.",
+        "24 CFR 982.316 (24 C.F.R. \u00a7 982.316(a)): Program accessibility requires approval of a live-in aide when the accommodation need is established."
+      ],
+      "authorityIds": [
+        "giebeler",
+        "california_mobile_home",
+        "mcgary",
+        "hud_joint_statement",
+        "cfr_982_316"
+      ],
+      "targetIds": [],
+      "citations": {
+        "authorityIds": [
+          "california_mobile_home",
+          "cfr_982_316",
+          "giebeler",
+          "hud_joint_statement",
+          "mcgary"
+        ],
+        "targetIds": [],
+        "supportLinks": []
+      },
+      "paragraphCitations": [
+        {
+          "paragraphIndex": 0,
+          "text": "Giebeler v. M&B Associates (343 F.3d 1143 (9th Cir. 2003)): Accommodation analysis should remain tied to disability-related housing access and a sufficiently developed factual record.",
+          "targetIds": [],
+          "authorityIds": [],
+          "supportLinks": []
+        },
+        {
+          "paragraphIndex": 1,
+          "text": "United States v. California Mobile Home Park Management Co. (29 F.3d 1413 (9th Cir. 1994)): Administrative review should identify the requested accommodation and the factual gaps in the record before the matter hardens into a denial dispute.",
+          "targetIds": [],
+          "authorityIds": [],
+          "supportLinks": []
+        },
+        {
+          "paragraphIndex": 2,
+          "text": "McGary v. City of Portland (386 F.3d 1259 (9th Cir. 2004)): Housing-related financial burdens can impair the full use and enjoyment of a dwelling.",
+          "targetIds": [],
+          "authorityIds": [],
+          "supportLinks": []
+        },
+        {
+          "paragraphIndex": 3,
+          "text": "HUD/DOJ Joint Statement on Reasonable Accommodations (Joint Statement of the Department of Housing and Urban Development and the Department of Justice, Reasonable Accommodations under the Fair Housing Act (May 2004)): Equal use and enjoyment requires necessary accommodation changes.",
+          "targetIds": [],
+          "authorityIds": [],
+          "supportLinks": []
+        },
+        {
+          "paragraphIndex": 4,
+          "text": "24 CFR 982.316 (24 C.F.R. \u00a7 982.316(a)): Program accessibility requires approval of a live-in aide when the accommodation need is established.",
+          "targetIds": [],
+          "authorityIds": [],
+          "supportLinks": []
+        }
+      ]
+    }
+  ],
+  "markdown": "# Memorandum of Law: live_in_aide_case_no_violation_001\n\nBranch: `evidentiary_gap`\nConfidence: `0.57`\nAuthority Trust: `paraphrase_heavy`\nSource Verified Count: `5`\nSource Normalized Count: `5`\nSource Status: All listed authorities are sourceVerified and sourceNormalized.\nDirect Fit Count: `1`\nAnalogical Fit Count: `1`\nRecord-Support Fit Count: `3`\nFit Status: This package includes analogical authority mappings.\nFit Finding: `record_support_heavy`\nFit Finding Note: This package relies in part on record-support mappings, so direct controlling authority should be distinguished from factual or background support.\n\nThis case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust.\n\n## Question Presented\n\nWhether the current record establishes an accommodation violation or instead shows either a functioning accommodation or an evidentiary gap that must be resolved.\n\nAuthorities: giebeler, california_mobile_home, mcgary, hud_joint_statement, cfr_982_316\n\nDependency targets: dep:node:violation\n\n## Summary of Conclusion\n\nUnder the present rule set, the memorandum does not conclude a violation on the accepted findings.\n\nThe current record is not yet mature enough to support a finished denial theory, so the memorandum should emphasize factual development and clarification of the accommodation's practical operation.\n\nDependency targets: dep:node:violation, dep:node:constructive_denial\n\n## Accepted Facts\n\nThe tenant is disabled: True.\n\nA live-in aide is needed: True.\n\nA separate bedroom was requested: True.\n\nThe aide was approved in principle: True.\n\nThe separate bedroom was denied: True.\n\nThe aide sleeps in the living room: False.\n\nNight access is needed: False.\n\nNo functional harms were established on the accepted findings.\n\nAuthorities: giebeler, california_mobile_home, mcgary, hud_joint_statement, cfr_982_316\n\nDependency targets: dep:node:disabled_tenant, dep:node:requested_separate_bedroom\n\n## Dependency Graph Analysis\n\nThe dependency graph moves from foundational facts into harm findings, then into necessity, reasonableness, duty to grant, effectiveness, constructive denial, and violation.\n\nActive branch: evidentiary_gap.\n\nActive outcome: no_violation.\n\nThe graph currently stops before violation because the record does not establish the harm and effectiveness predicates needed to complete the path.\n\n### Section Support\n\n- McGary v. City of Portland (9th Cir., 2004, 1265): \"The lien the City put on McGary's house prevents the full use and enjoyment of his property.\" Housing-related financial burdens can impair the full use and enjoyment of a dwelling. [dep:node:necessary] [fit=analogical] [sourceVerified sourceNormalized]\n- HUD/DOJ Joint Statement on Reasonable Accommodations (HUD/DOJ, 2004, Question 1, p. 2): \"Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.\" Equal use and enjoyment may require necessary accommodation changes. [dep:node:necessary] [fit=direct] [sourceVerified sourceNormalized]\n- Giebeler v. M&B Associates (9th Cir., 2003, 1155): Accommodation analysis should stay connected to disability-related housing access. [dep:node:reasonable] [fit=analogical] [sourceVerified sourceNormalized]\n- United States v. California Mobile Home Park Management Co. (9th Cir., 1994, 1416): Accommodation disputes should be evaluated against a concrete factual record. [dep:node:reasonable] [fit=direct] [sourceVerified sourceNormalized]\n- HUD/DOJ Joint Statement on Reasonable Accommodations (HUD/DOJ, 2004, Question 1, p. 2): \"Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.\" Equal use and enjoyment may require necessary accommodation changes. [dep:node:reasonable] [fit=direct] [sourceVerified sourceNormalized]\n\n### Paragraph Support\n\n- Paragraph 1:\n  - McGary v. City of Portland (9th Cir., 2004, 1265): \"The lien the City put on McGary's house prevents the full use and enjoyment of his property.\" Housing-related financial burdens can impair the full use and enjoyment of a dwelling. [dep:node:necessary] [fit=analogical] [sourceVerified sourceNormalized]\n  - HUD/DOJ Joint Statement on Reasonable Accommodations (HUD/DOJ, 2004, Question 1, p. 2): \"Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.\" Equal use and enjoyment may require necessary accommodation changes. [dep:node:necessary] [fit=direct] [sourceVerified sourceNormalized]\n- Paragraph 2:\n  - Giebeler v. M&B Associates (9th Cir., 2003, 1155): Accommodation analysis should stay connected to disability-related housing access. [dep:node:reasonable] [fit=analogical] [sourceVerified sourceNormalized]\n  - United States v. California Mobile Home Park Management Co. (9th Cir., 1994, 1416): Accommodation disputes should be evaluated against a concrete factual record. [dep:node:reasonable] [fit=direct] [sourceVerified sourceNormalized]\n  - HUD/DOJ Joint Statement on Reasonable Accommodations (HUD/DOJ, 2004, Question 1, p. 2): \"Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.\" Equal use and enjoyment may require necessary accommodation changes. [dep:node:reasonable] [fit=direct] [sourceVerified sourceNormalized]\n\nAuthorities: giebeler, california_mobile_home, mcgary, hud_joint_statement, cfr_982_316\n\nDependency targets: dep:node:necessary, dep:node:reasonable, dep:node:violation\n\n## Authority Grounding\n\nnode:necessary is grounded by McGary v. City of Portland (386 F.3d 1259 (9th Cir. 2004)): The lien the City put on McGary's house prevents the full use and enjoyment of his property.\n\nedge:sleep_interruption->necessary is grounded by McGary v. City of Portland (386 F.3d 1259 (9th Cir. 2004)): The lien the City put on McGary's house prevents the full use and enjoyment of his property.\n\nedge:work_interference->necessary is grounded by McGary v. City of Portland (386 F.3d 1259 (9th Cir. 2004)): The lien the City put on McGary's house prevents the full use and enjoyment of his property.\n\nedge:caregiving_impairment->necessary is grounded by McGary v. City of Portland (386 F.3d 1259 (9th Cir. 2004)): The lien the City put on McGary's house prevents the full use and enjoyment of his property.\n\nedge:privacy_loss->necessary is grounded by McGary v. City of Portland (386 F.3d 1259 (9th Cir. 2004)): The lien the City put on McGary's house prevents the full use and enjoyment of his property.\n\nnode:necessary is grounded by HUD/DOJ Joint Statement on Reasonable Accommodations (Joint Statement of the Department of Housing and Urban Development and the Department of Justice, Reasonable Accommodations under the Fair Housing Act (May 2004)): Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.\n\nedge:sleep_interruption->necessary is grounded by HUD/DOJ Joint Statement on Reasonable Accommodations (Joint Statement of the Department of Housing and Urban Development and the Department of Justice, Reasonable Accommodations under the Fair Housing Act (May 2004)): Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.\n\nedge:work_interference->necessary is grounded by HUD/DOJ Joint Statement on Reasonable Accommodations (Joint Statement of the Department of Housing and Urban Development and the Department of Justice, Reasonable Accommodations under the Fair Housing Act (May 2004)): Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.\n\n### Section Support\n\n- McGary v. City of Portland (9th Cir., 2004, 1265): \"The lien the City put on McGary's house prevents the full use and enjoyment of his property.\" Housing-related financial burdens can impair the full use and enjoyment of a dwelling. [dep:node:necessary] [fit=analogical] [sourceVerified sourceNormalized]\n- McGary v. City of Portland (9th Cir., 2004, 1265): \"The lien the City put on McGary's house prevents the full use and enjoyment of his property.\" Housing-related financial burdens can impair the full use and enjoyment of a dwelling. [dep:edge:sleep_interruption->necessary] [fit=analogical] [sourceVerified sourceNormalized]\n- McGary v. City of Portland (9th Cir., 2004, 1265): \"The lien the City put on McGary's house prevents the full use and enjoyment of his property.\" Housing-related financial burdens can impair the full use and enjoyment of a dwelling. [dep:edge:work_interference->necessary] [fit=analogical] [sourceVerified sourceNormalized]\n- McGary v. City of Portland (9th Cir., 2004, 1265): \"The lien the City put on McGary's house prevents the full use and enjoyment of his property.\" Housing-related financial burdens can impair the full use and enjoyment of a dwelling. [dep:edge:caregiving_impairment->necessary] [fit=analogical] [sourceVerified sourceNormalized]\n- McGary v. City of Portland (9th Cir., 2004, 1265): \"The lien the City put on McGary's house prevents the full use and enjoyment of his property.\" Housing-related financial burdens can impair the full use and enjoyment of a dwelling. [dep:edge:privacy_loss->necessary] [fit=analogical] [sourceVerified sourceNormalized]\n\n### Paragraph Support\n\n- Paragraph 1:\n  - McGary v. City of Portland (9th Cir., 2004, 1265): \"The lien the City put on McGary's house prevents the full use and enjoyment of his property.\" Housing-related financial burdens can impair the full use and enjoyment of a dwelling. [dep:edge:caregiving_impairment->necessary] [fit=analogical] [sourceVerified sourceNormalized]\n  - HUD/DOJ Joint Statement on Reasonable Accommodations (HUD/DOJ, 2004, Question 1, p. 2): \"Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.\" Equal use and enjoyment may require necessary accommodation changes. [dep:edge:caregiving_impairment->necessary] [fit=direct] [sourceVerified sourceNormalized]\n- Paragraph 2:\n  - McGary v. City of Portland (9th Cir., 2004, 1265): \"The lien the City put on McGary's house prevents the full use and enjoyment of his property.\" Housing-related financial burdens can impair the full use and enjoyment of a dwelling. [dep:edge:privacy_loss->necessary] [fit=analogical] [sourceVerified sourceNormalized]\n  - HUD/DOJ Joint Statement on Reasonable Accommodations (HUD/DOJ, 2004, Question 1, p. 2): \"Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.\" Equal use and enjoyment may require necessary accommodation changes. [dep:edge:privacy_loss->necessary] [fit=direct] [sourceVerified sourceNormalized]\n- Paragraph 3:\n  - McGary v. City of Portland (9th Cir., 2004, 1265): \"The lien the City put on McGary's house prevents the full use and enjoyment of his property.\" Housing-related financial burdens can impair the full use and enjoyment of a dwelling. [dep:edge:sleep_interruption->necessary] [fit=analogical] [sourceVerified sourceNormalized]\n  - HUD/DOJ Joint Statement on Reasonable Accommodations (HUD/DOJ, 2004, Question 1, p. 2): \"Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.\" Equal use and enjoyment may require necessary accommodation changes. [dep:edge:sleep_interruption->necessary] [fit=direct] [sourceVerified sourceNormalized]\n- Paragraph 4:\n  - McGary v. City of Portland (9th Cir., 2004, 1265): \"The lien the City put on McGary's house prevents the full use and enjoyment of his property.\" Housing-related financial burdens can impair the full use and enjoyment of a dwelling. [dep:edge:work_interference->necessary] [fit=analogical] [sourceVerified sourceNormalized]\n  - HUD/DOJ Joint Statement on Reasonable Accommodations (HUD/DOJ, 2004, Question 1, p. 2): \"Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.\" Equal use and enjoyment may require necessary accommodation changes. [dep:edge:work_interference->necessary] [fit=direct] [sourceVerified sourceNormalized]\n- Paragraph 5:\n  - McGary v. City of Portland (9th Cir., 2004, 1265): \"The lien the City put on McGary's house prevents the full use and enjoyment of his property.\" Housing-related financial burdens can impair the full use and enjoyment of a dwelling. [dep:node:necessary] [fit=analogical] [sourceVerified sourceNormalized]\n  - HUD/DOJ Joint Statement on Reasonable Accommodations (HUD/DOJ, 2004, Question 1, p. 2): \"Reasonable accommodations may be necessary to afford a person with a disability equal opportunity to use and enjoy a dwelling.\" Equal use and enjoyment may require necessary accommodation changes. [dep:node:necessary] [fit=direct] [sourceVerified sourceNormalized]\n\nAuthorities: giebeler, california_mobile_home, mcgary, hud_joint_statement, cfr_982_316\n\nDependency targets: dep:node:necessary, dep:edge:sleep_interruption->necessary, dep:edge:work_interference->necessary, dep:edge:caregiving_impairment->necessary, dep:edge:privacy_loss->necessary, dep:node:necessary, dep:edge:sleep_interruption->necessary, dep:edge:work_interference->necessary\n\n## Application\n\nThe current record is not yet mature enough to support a finished denial theory, so the memorandum should emphasize factual development and clarification of the accommodation's practical operation.\n\nThe evaluator confidence score is 0.57.\n\nAuthority grounding note: This case relies heavily on paraphrase support, so downstream consumers should present the authority grounding as lower-trust.\n\nThe missing elements remain: functional_harm.\n\nAuthorities: giebeler, california_mobile_home, mcgary, hud_joint_statement, cfr_982_316\n\nDependency targets: dep:node:constructive_denial, dep:node:violation\n\n## Conclusion\n\nUnder the present rule set, the memorandum does not conclude a violation on the accepted findings.\n\nDependency targets: dep:node:violation\n\n## Authorities Relied On\n\nGiebeler v. M&B Associates (343 F.3d 1143 (9th Cir. 2003)): Accommodation analysis should remain tied to disability-related housing access and a sufficiently developed factual record.\n\nUnited States v. California Mobile Home Park Management Co. (29 F.3d 1413 (9th Cir. 1994)): Administrative review should identify the requested accommodation and the factual gaps in the record before the matter hardens into a denial dispute.\n\nMcGary v. City of Portland (386 F.3d 1259 (9th Cir. 2004)): Housing-related financial burdens can impair the full use and enjoyment of a dwelling.\n\nHUD/DOJ Joint Statement on Reasonable Accommodations (Joint Statement of the Department of Housing and Urban Development and the Department of Justice, Reasonable Accommodations under the Fair Housing Act (May 2004)): Equal use and enjoyment requires necessary accommodation changes.\n\n24 CFR 982.316 (24 C.F.R. \u00a7 982.316(a)): Program accessibility requires approval of a live-in aide when the accommodation need is established.\n\nAuthorities: giebeler, california_mobile_home, mcgary, hud_joint_statement, cfr_982_316\n"
+}

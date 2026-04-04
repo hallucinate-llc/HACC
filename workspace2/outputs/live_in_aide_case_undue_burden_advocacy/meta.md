@@ -1,0 +1,21 @@
+# Meta
+
+{
+"caseId": "live_in_aide_case_undue_burden_001",
+"branch": "undue_burden_constructive_denial",
+"placeholders": {
+"requesting_party": "[Requesting Party]",
+"recipient": "[Housing Authority or Decision-Maker]",
+"tenant_name": "[Tenant Name]",
+"aide_name": "[Aide Name]",
+"requested_remedy": "[Approve a separate bedroom for the live-in aide]",
+"response_deadline": "[10 business days]"
+},
+"supportedModes": [
+"hearing_script",
+"complaint_outline",
+"demand_letter",
+"negotiation_summary"
+],
+"confidence": 0.8300000000000001
+}

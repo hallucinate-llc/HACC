@@ -1,0 +1,34 @@
+{
+  "generatedAt": "2026-04-04T19:25:40.095276+00:00",
+  "summary": {
+    "caseCount": 3,
+    "warningLabels": {
+      "mixed_support": 2,
+      "paraphrase_heavy": 1
+    }
+  },
+  "singleCaseGuide": null,
+  "cases": [
+    {
+      "caseId": "live_in_aide_case_effective_accommodation_001",
+      "branch": "effective_accommodation",
+      "authorityTrust": "mixed_support",
+      "warningLabel": "mixed_support",
+      "warningEntryCount": 16
+    },
+    {
+      "caseId": "live_in_aide_case_no_violation_001",
+      "branch": "evidentiary_gap",
+      "authorityTrust": "paraphrase_heavy",
+      "warningLabel": "paraphrase_heavy",
+      "warningEntryCount": 16
+    },
+    {
+      "caseId": "live_in_aide_case_undue_burden_001",
+      "branch": "undue_burden_constructive_denial",
+      "authorityTrust": "mixed_support",
+      "warningLabel": "mixed_support",
+      "warningEntryCount": 16
+    }
+  ]
+}

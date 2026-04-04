@@ -1,0 +1,59 @@
+{
+  "generatedAt": "2026-04-04T19:25:40.093469+00:00",
+  "summary": {
+    "caseCount": 4,
+    "violationCount": 2,
+    "noViolationCount": 2,
+    "warnedCaseCount": 3,
+    "fullyVerifiedCount": 1,
+    "mixedSupportCount": 2,
+    "paraphraseHeavyCount": 1,
+    "sourceVerifiedCount": 20,
+    "sourceNormalizedCount": 20,
+    "sourceStatus": "All authority entries are sourceVerified and sourceNormalized across the current case set.",
+    "directFitCount": 10,
+    "analogicalFitCount": 7,
+    "recordSupportFitCount": 3,
+    "analogicalCases": 3,
+    "recordSupportCases": 1,
+    "fitStatus": "The current case set includes record-support and analogical authority mappings."
+  },
+  "discovery": {
+    "recommendedFirstStop": "outputs/dashboard_overview.json",
+    "recommendedFirstStopWhyOpenThis": "Start here because this overview is the single best top-level entry point into counts, warnings, fit posture, and linked audit surfaces.",
+    "refreshState": "outputs/.refresh_state.json",
+    "refreshStateWhyOpenThis": "Open the refresh state when you want to confirm whether snapshot generation is currently running or has completed cleanly.",
+    "outputsIndex": "outputs/index.json",
+    "outputsIndexWhyOpenThis": "Open the outputs index to see the full generated case inventory across fixtures, packages, advocacy outputs, and memorandum outputs.",
+    "summaryIndex": "outputs/summary_index.json",
+    "summaryIndexWhyOpenThis": "Open the summary index when you want the compact warning-summary discovery path instead of the broader audit surface.",
+    "fitIndex": "outputs/fit_index.json",
+    "fitIndexWhyOpenThis": "Open the fit index when you want the compact discovery path for fit-quality matrix, summary, and findings artifacts.",
+    "auditIndex": "outputs/audit_index.json",
+    "auditIndexWhyOpenThis": "Open the audit index when you want the broadest repo-level audit discovery surface across trust, warning, source, and fit reports.",
+    "dashboardIndex": "outputs/dashboard_index.json",
+    "dashboardIndexWhyOpenThis": "Open the dashboard index when you want the top-level discovery file that links the repo's main human-facing and dashboard-style surfaces.",
+    "fitSummary": "outputs/fit_summary.json",
+    "fitSummaryWhyOpenThis": "Open the fit summary for the quickest compact rollup of direct, analogical, and record-support counts across the current case set.",
+    "fitFindings": "outputs/fit_findings.json",
+    "fitFindingsWhyOpenThis": "Open the fit findings report when you want case-level interpretation of analogical and record-support-heavy posture.",
+    "fitFindingsSummary": "outputs/fit_findings_summary.json",
+    "fitFindingsSummaryWhyOpenThis": "Open the fit findings summary when you want a lighter case-first fit-posture view without the full findings detail."
+  },
+  "featured": {
+    "highestConfidenceCaseId": "live_in_aide_case_001",
+    "highestConfidence": 0.93,
+    "lowestConfidenceCaseId": "live_in_aide_case_no_violation_001",
+    "lowestConfidence": 0.57,
+    "primaryKinds": {
+      "memorandum_pdf": 2,
+      "memorandum_markdown": 1,
+      "summary": 1
+    },
+    "warningLabels": {
+      "mixed_support": 2,
+      "paraphrase_heavy": 1
+    },
+    "singleCaseGuide": null
+  }
+}

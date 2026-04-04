@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-04-04T19:25:40.096099+00:00",
+  "recommendedFirstStop": "outputs/warning_entry_summary.json",
+  "whyOpenThis": "Start with the warning-entry summary because it is the quickest dashboard-style orientation to which cases currently carry lower-trust warning posture.",
+  "entries": [
+    {
+      "kind": "warning_entry_summary",
+      "jsonPath": "outputs/warning_entry_summary.json",
+      "markdownPath": "outputs/warning_entry_summary.md",
+      "description": "Compact case-first warning summary for dashboard-style audit views.",
+      "priorityHint": "recommended",
+      "whyOpenThis": "Open this first when you want the fastest compact view of which cases currently carry warning posture."
+    },
+    {
+      "kind": "warning_kind_summary",
+      "jsonPath": "outputs/warning_kind_summary.json",
+      "markdownPath": "outputs/warning_kind_summary.md",
+      "description": "Compact kind-first warning summary for dashboard-style audit views.",
+      "priorityHint": "secondary",
+      "whyOpenThis": "Open this when you want the warning surface grouped by artifact kind instead of by case."
+    }
+  ]
+}

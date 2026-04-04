@@ -4,28 +4,42 @@
   "email_count": 13,
   "attachment_total": 25,
   "knowledge_graph_summary": {
-    "total_entities": 181,
-    "total_relationships": 169,
+    "total_entities": 252,
+    "total_relationships": 223,
     "entity_types": {
       "claim": 5,
-      "fact": 103,
-      "date": 3,
-      "person": 18,
-      "organization": 41,
+      "fact": 154,
+      "date": 11,
+      "person": 25,
+      "organization": 46,
       "evidence": 11
     },
     "relationship_types": {
       "makes_claim": 5,
-      "follows_protected_activity": 15,
-      "occurred_on": 15,
-      "employed_by": 105,
+      "follows_protected_activity": 18,
+      "occurred_on": 30,
+      "employed_by": 147,
       "involves": 5,
-      "occurred_after": 9,
-      "causal_link": 4,
+      "occurred_after": 6,
+      "causal_link": 1,
       "associated_with": 11
     },
-    "gaps": 57
+    "gaps": 62
   },
   "graph_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/graphrag/email_knowledge_graph.json",
-  "corpus_records_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/graphrag/email_corpus_records.json"
+  "corpus_records_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/graphrag/email_corpus_records.json",
+  "duckdb_index": {
+    "status": "created",
+    "manifest_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/email_import_manifest.json",
+    "output_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/graphrag/duckdb",
+    "email_count": 13,
+    "append_mode": false,
+    "include_attachment_text": true,
+    "bm25_distinct_term_count": 2896,
+    "duckdb_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/graphrag/duckdb/email_search.duckdb",
+    "messages_parquet_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/graphrag/duckdb/email_messages.parquet",
+    "terms_parquet_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/graphrag/duckdb/email_terms.parquet",
+    "bm25_terms_parquet_path": "/home/barberb/HACC/evidence/email_imports/starworks5-ktilton-orientation-import/graphrag/duckdb/email_bm25_terms.parquet"
+  },
+  "include_attachment_text_in_search": true
 }
