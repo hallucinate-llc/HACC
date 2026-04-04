@@ -6,6 +6,19 @@
   "required": ["generatedAt", "summary", "singleCaseGuide", "cases"],
   "properties": {
     "generatedAt": { "type": "string" },
+    "refreshRuntime": {
+      "type": "object",
+      "required": ["status", "running", "startedAt", "completedAt", "elapsedSeconds", "elapsedHuman"],
+      "properties": {
+        "status": { "type": "string" },
+        "running": { "type": "boolean" },
+        "startedAt": { "type": ["string", "null"] },
+        "completedAt": { "type": ["string", "null"] },
+        "elapsedSeconds": { "type": ["number", "null"] },
+        "elapsedHuman": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
     "summary": {
       "type": "object",
       "required": ["caseCount", "warningLabels"],

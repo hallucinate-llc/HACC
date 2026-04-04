@@ -870,6 +870,7 @@ def build_source_metadata_matrix_data(
         cases = [case for case in cases if case["caseId"] in allowed]
     return {
         "generatedAt": payload["generatedAt"],
+        "refreshRuntime": build_refresh_runtime_data(root),
         "summary": {
             "caseCount": len(cases),
             "authorityCount": sum(case["authorityCount"] for case in cases),
@@ -1191,6 +1192,7 @@ def build_fit_findings_data(
         findings = [item for item in findings if item["caseId"] in allowed]
     return {
         "generatedAt": report["generatedAt"],
+        "refreshRuntime": build_refresh_runtime_data(root),
         "summary": {
             "caseCount": len(findings),
             "directOnlyCases": sum(1 for item in findings if item["title"] == "Direct-fit authority baseline"),
@@ -1249,6 +1251,7 @@ def build_fit_findings_summary_data(
             }
     return {
         "generatedAt": payload["generatedAt"],
+        "refreshRuntime": build_refresh_runtime_data(root),
         "summary": {
             "caseCount": len(cases),
             "directOnlyCases": sum(1 for item in cases if item["title"] == "Direct-fit authority baseline"),
@@ -1383,6 +1386,7 @@ def build_source_findings_data(
         findings = [item for item in findings if item["caseId"] in allowed_case_ids]
     return {
         "generatedAt": report["generatedAt"],
+        "refreshRuntime": build_refresh_runtime_data(root),
         "summary": report["summary"],
         "findings": findings,
     }
@@ -1694,6 +1698,7 @@ def build_warning_summary_data(
         )
     return {
         "generatedAt": payload["generatedAt"],
+        "refreshRuntime": build_refresh_runtime_data(root),
         "summary": {
             "caseCount": len(payload["cases"]),
             "warnedCaseCount": len(cases),
@@ -1756,8 +1761,10 @@ def build_warning_label_matrix_data(
     if warning_label:
         return {
             "generatedAt": payload["generatedAt"],
+            "refreshRuntime": build_refresh_runtime_data(root),
             "labels": {warning_label: payload["labels"][warning_label]},
         }
+    payload["refreshRuntime"] = build_refresh_runtime_data(root)
     return payload
 
 
@@ -1826,6 +1833,7 @@ def build_warning_entry_matrix_data(
         sorted_cases = sorted_cases[:top_n]
     return {
         "generatedAt": payload["generatedAt"],
+        "refreshRuntime": build_refresh_runtime_data(root),
         "cases": sorted_cases,
     }
 
@@ -1907,6 +1915,7 @@ def build_warning_kind_matrix_data(
         sorted_kinds = sorted_kinds[:top_n]
     return {
         "generatedAt": payload["generatedAt"],
+        "refreshRuntime": build_refresh_runtime_data(root),
         "summary": {
             "kindCount": len(sorted_kinds),
             "caseCount": len({case["caseId"] for item in sorted_kinds for case in item["cases"]}),
@@ -1989,6 +1998,7 @@ def build_warning_entry_summary_data(
             }
     return {
         "generatedAt": payload["generatedAt"],
+        "refreshRuntime": build_refresh_runtime_data(root),
         "summary": {
             "caseCount": len(cases),
             "warningLabels": _count_labels(cases, "warningLabel"),
@@ -2136,6 +2146,7 @@ def build_warning_kind_summary_data(
         single_case_guide = None
     return {
         "generatedAt": payload["generatedAt"],
+        "refreshRuntime": build_refresh_runtime_data(root),
         "summary": {
             "kindCount": len(kinds),
             "caseCount": case_count,
@@ -2732,13 +2743,16 @@ def main(argv: List[str] | None = None) -> int:
             sys.stdout.write(json.dumps(payload, indent=2) + "\n")
         else:
             sys.stdout.write(
-                render_warning_summary(
+                prepend_refresh_warning(
+                    render_warning_summary(
+                        ROOT,
+                        branch=args.branch,
+                        case_id=args.case_id,
+                        trust=args.trust,
+                        warning_label=args.warning_label,
+                        sort_key=args.sort,
+                    ),
                     ROOT,
-                    branch=args.branch,
-                    case_id=args.case_id,
-                    trust=args.trust,
-                    warning_label=args.warning_label,
-                    sort_key=args.sort,
                 )
             )
         return 0
@@ -2752,9 +2766,12 @@ def main(argv: List[str] | None = None) -> int:
                 sys.stdout.write(json.dumps(payload, indent=2) + "\n")
             else:
                 sys.stdout.write(
-                    render_warning_label_matrix(
+                    prepend_refresh_warning(
+                        render_warning_label_matrix(
+                            ROOT,
+                            warning_label=args.warning_label,
+                        ),
                         ROOT,
-                        warning_label=args.warning_label,
                     )
                 )
         except ValueError as exc:
@@ -2775,13 +2792,16 @@ def main(argv: List[str] | None = None) -> int:
                 sys.stdout.write(json.dumps(payload, indent=2) + "\n")
             else:
                 sys.stdout.write(
-                    render_warning_entry_matrix(
+                    prepend_refresh_warning(
+                        render_warning_entry_matrix(
+                            ROOT,
+                            trust=args.trust,
+                            warning_label=args.warning_label,
+                            warned_kind=args.warned_kind,
+                            sort_key=args.sort,
+                            top_n=args.top_n,
+                        ),
                         ROOT,
-                        trust=args.trust,
-                        warning_label=args.warning_label,
-                        warned_kind=args.warned_kind,
-                        sort_key=args.sort,
-                        top_n=args.top_n,
                     )
                 )
         except ValueError as exc:
@@ -2800,12 +2820,15 @@ def main(argv: List[str] | None = None) -> int:
             sys.stdout.write(json.dumps(payload, indent=2) + "\n")
         else:
             sys.stdout.write(
-                render_warning_kind_matrix(
+                prepend_refresh_warning(
+                    render_warning_kind_matrix(
+                        ROOT,
+                        trust=args.trust,
+                        warned_kind=args.warned_kind,
+                        sort_key="warningCaseCount" if args.sort == "warningCount" else "kind",
+                        top_n=args.top_n,
+                    ),
                     ROOT,
-                    trust=args.trust,
-                    warned_kind=args.warned_kind,
-                    sort_key="warningCaseCount" if args.sort == "warningCount" else "kind",
-                    top_n=args.top_n,
                 )
             )
         return 0
@@ -2822,12 +2845,15 @@ def main(argv: List[str] | None = None) -> int:
                 sys.stdout.write(json.dumps(payload, indent=2) + "\n")
             else:
                 sys.stdout.write(
-                    render_warning_entry_summary(
+                    prepend_refresh_warning(
+                        render_warning_entry_summary(
+                            ROOT,
+                            trust=args.trust,
+                            warning_label=args.warning_label,
+                            sort_key=args.sort,
+                            top_n=args.top_n,
+                        ),
                         ROOT,
-                        trust=args.trust,
-                        warning_label=args.warning_label,
-                        sort_key=args.sort,
-                        top_n=args.top_n,
                     )
                 )
         except ValueError as exc:
@@ -2847,12 +2873,15 @@ def main(argv: List[str] | None = None) -> int:
                 sys.stdout.write(json.dumps(payload, indent=2) + "\n")
             else:
                 sys.stdout.write(
-                    render_warning_kind_summary(
+                    prepend_refresh_warning(
+                        render_warning_kind_summary(
+                            ROOT,
+                            trust=args.trust,
+                            warning_label=args.warning_label,
+                            sort_key="warningCaseCount" if args.sort == "warningCount" else "kind",
+                            top_n=args.top_n,
+                        ),
                         ROOT,
-                        trust=args.trust,
-                        warning_label=args.warning_label,
-                        sort_key="warningCaseCount" if args.sort == "warningCount" else "kind",
-                        top_n=args.top_n,
                     )
                 )
         except ValueError as exc:
@@ -3148,14 +3177,17 @@ def main(argv: List[str] | None = None) -> int:
                 sys.stdout.write(json.dumps(payload, indent=2) + "\n")
             else:
                 sys.stdout.write(
-                    render_fit_findings(
+                    prepend_refresh_warning(
+                        render_fit_findings(
+                            ROOT,
+                            severity=args.severity,
+                            trust=args.trust,
+                            warning_label=args.warning_label,
+                            fit_finding=args.fit_finding,
+                            case_id=args.case_id,
+                            branch=args.branch,
+                        ),
                         ROOT,
-                        severity=args.severity,
-                        trust=args.trust,
-                        warning_label=args.warning_label,
-                        fit_finding=args.fit_finding,
-                        case_id=args.case_id,
-                        branch=args.branch,
                     )
                 )
         except ValueError as exc:
@@ -3177,14 +3209,17 @@ def main(argv: List[str] | None = None) -> int:
                 sys.stdout.write(json.dumps(payload, indent=2) + "\n")
             else:
                 sys.stdout.write(
-                    render_fit_findings_summary(
+                    prepend_refresh_warning(
+                        render_fit_findings_summary(
+                            ROOT,
+                            severity=args.severity,
+                            trust=args.trust,
+                            warning_label=args.warning_label,
+                            fit_finding=args.fit_finding,
+                            case_id=args.case_id,
+                            branch=args.branch,
+                        ),
                         ROOT,
-                        severity=args.severity,
-                        trust=args.trust,
-                        warning_label=args.warning_label,
-                        fit_finding=args.fit_finding,
-                        case_id=args.case_id,
-                        branch=args.branch,
                     )
                 )
         except ValueError as exc:
