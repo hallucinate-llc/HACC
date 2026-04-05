@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import multiprocessing
 import random
 from collections import deque
 from dataclasses import dataclass
@@ -69,6 +70,24 @@ ITEMS: List[Item] = [
 ]
 
 NON_BLOCKING_ITEMS = {"bathroom_fixture_zone"}
+
+ROOM_COLORS = {
+    "ben_room": "#f4d35e",
+    "jane_room": "#9ad1d4",
+    "mother_room": "#f7a399",
+    "living_room": "#c7d3ff",
+    "bathroom": "#d9ead3",
+}
+
+ITEM_COLORS = {
+    "bed": "#ffcc80",
+    "desk": "#90caf9",
+    "storage": "#bcaaa4",
+    "mobility": "#a5d6a7",
+    "dog": "#ffe082",
+    "guest": "#ef9a9a",
+    "other": "#e0e0e0",
+}
 
 
 def _cells_for_rect(rect: Rect) -> Set[Cell]:
@@ -147,6 +166,30 @@ def _neighbors(cell: Cell, width: int, height: int) -> Iterable[Cell]:
             yield (nx, ny)
 
 
+def _l_path(a: Cell, b: Cell) -> Set[Cell]:
+    cells: Set[Cell] = set()
+    ax, ay = a
+    bx, by = b
+    step_x = 1 if bx >= ax else -1
+    for x in range(ax, bx + step_x, step_x):
+        cells.add((x, ay))
+    step_y = 1 if by >= ay else -1
+    for y in range(ay, by + step_y, step_y):
+        cells.add((bx, y))
+    return cells
+
+
+def _inflate(cells: Set[Cell], width: int, height: int, margin: int = 1) -> Set[Cell]:
+    out: Set[Cell] = set()
+    for x, y in cells:
+        for dx in range(-margin, margin + 1):
+            for dy in range(-margin, margin + 1):
+                nx, ny = x + dx, y + dy
+                if 0 <= nx < width and 0 <= ny < height:
+                    out.add((nx, ny))
+    return out
+
+
 def _is_reachable(start: Cell, goal: Cell, blocked: Set[Cell], width: int, height: int) -> bool:
     if start in blocked or goal in blocked:
         return False
@@ -164,9 +207,38 @@ def _is_reachable(start: Cell, goal: Cell, blocked: Set[Cell], width: int, heigh
     return False
 
 
+def _adjacent_walkable_target(rect: Rect, blocked: Set[Cell], width: int, height: int) -> Optional[Cell]:
+    x, y, w, h = rect
+    ring: List[Cell] = []
+    for cx in range(x - 1, x + w + 1):
+        ring.append((cx, y - 1))
+        ring.append((cx, y + h))
+    for cy in range(y, y + h):
+        ring.append((x - 1, cy))
+        ring.append((x + w, cy))
+    for cell in ring:
+        cx, cy = cell
+        if not (0 <= cx < width and 0 <= cy < height):
+            continue
+        if cell in blocked:
+            continue
+        return cell
+    return None
+
+
 def _place_items(candidate: LayoutCandidate, rng: random.Random, tries: int = 200) -> Optional[Dict[str, Rect]]:
     placed: Dict[str, Rect] = {}
     blocked: Set[Cell] = set()
+
+    reserved: Set[Cell] = set()
+    reserved |= _inflate({candidate.entry, candidate.bathroom}, candidate.width, candidate.height, margin=1)
+    for door in candidate.door_cells.values():
+        reserved |= _inflate({door}, candidate.width, candidate.height, margin=1)
+    reserved |= _inflate(_l_path(candidate.entry, candidate.bathroom), candidate.width, candidate.height, margin=1)
+    for key in ("ben_room", "jane_room"):
+        door = candidate.door_cells.get(key)
+        if door is not None:
+            reserved |= _inflate(_l_path(door, candidate.bathroom), candidate.width, candidate.height, margin=0)
 
     for item in ITEMS:
         room = candidate.rooms[item.room]
@@ -183,6 +255,8 @@ def _place_items(candidate: LayoutCandidate, rng: random.Random, tries: int = 20
         for rect in options[:tries]:
             cells = _cells_for_rect(rect)
             if cells & blocked:
+                continue
+            if cells & reserved:
                 continue
             # Dog containment should be away from entry and guests.
             if item.name == "dog_alert_containment_zone":
@@ -260,6 +334,10 @@ def _evaluate_rules(candidate: LayoutCandidate, placed: Dict[str, Rect]) -> Tupl
 
     guest_rect = placed["guest_worker_temp_zone"]
     guest_center = (guest_rect[0] + guest_rect[2] // 2, guest_rect[1] + guest_rect[3] // 2)
+    guest_access_target = _adjacent_walkable_target(guest_rect, blocked, candidate.width, candidate.height)
+    if guest_access_target is None:
+        issues.append("guest_zone_inaccessible")
+
     # Same room is acceptable when there is enough distance to separate dog from the door/guest stream.
     if abs(dog_center[0] - guest_center[0]) + abs(dog_center[1] - guest_center[1]) < 8:
         issues.append("dog_and_guest_same_zone")
@@ -269,8 +347,9 @@ def _evaluate_rules(candidate: LayoutCandidate, placed: Dict[str, Rect]) -> Tupl
         (candidate.entry, candidate.bathroom),
         (candidate.door_cells.get("ben_room"), candidate.bathroom),
         (candidate.door_cells.get("jane_room"), candidate.bathroom),
-        (candidate.entry, guest_center),
     ]
+    if guest_access_target is not None:
+        key_paths.append((candidate.entry, guest_access_target))
     for start, goal in key_paths:
         if start is None:
             continue
@@ -282,7 +361,6 @@ def _evaluate_rules(candidate: LayoutCandidate, placed: Dict[str, Rect]) -> Tupl
 
 
 def _run_layout_type(layout_type: str, attempts_per_size: int, seed: int) -> Dict[str, object]:
-    rng = random.Random(seed)
     if layout_type == "1br":
         candidates = [(w, h) for w in range(28, 45) for h in range(26, 42)]
     else:
@@ -294,33 +372,103 @@ def _run_layout_type(layout_type: str, attempts_per_size: int, seed: int) -> Dic
     first_success: Optional[Dict[str, object]] = None
     example_successes: List[Dict[str, object]] = []
 
-    for width, height in candidates:
-        candidate = _build_candidate(layout_type, width, height)
-        for _ in range(attempts_per_size):
-            tested += 1
-            placed = _place_items(candidate, rng)
-            if placed is None:
-                failures["placement_failed"] = failures.get("placement_failed", 0) + 1
-                continue
-            ok, issues = _evaluate_rules(candidate, placed)
-            if ok:
-                success = {
-                    "sqft": candidate.sqft,
-                    "width": width,
-                    "height": height,
-                    "roomFootprints": candidate.rooms,
-                    "itemFootprints": placed,
-                }
-                if first_success is None:
-                    first_success = success
-                if len(example_successes) < 3:
-                    example_successes.append(success)
-            else:
-                for issue in issues:
-                    failures[issue] = failures.get(issue, 0) + 1
-        if first_success is not None and candidate.sqft > int(first_success["sqft"]) + 80:
-            # Stop scanning much larger options once we have a strong floor estimate.
-            break
+    for idx, (width, height) in enumerate(candidates):
+        partial = _run_candidate_attempts((layout_type, width, height, attempts_per_size, seed + (idx * 9973)))
+        tested += int(partial["testedLayouts"])
+        for reason, count in partial["failureReasons"].items():
+            failures[reason] = failures.get(reason, 0) + int(count)
+        partial_first = partial.get("firstFeasible")
+        if partial_first is not None:
+            if first_success is None or int(partial_first["sqft"]) < int(first_success["sqft"]):
+                first_success = partial_first
+        for success in partial["sampleFeasible"]:
+            if len(example_successes) >= 3:
+                break
+            example_successes.append(success)
+
+    return {
+        "layoutType": layout_type,
+        "testedLayouts": tested,
+        "firstFeasible": first_success,
+        "sampleFeasible": example_successes,
+        "failureReasons": failures,
+    }
+
+
+def _run_candidate_attempts(task: Tuple[str, int, int, int, int]) -> Dict[str, object]:
+    layout_type, width, height, attempts_per_size, seed = task
+    rng = random.Random(seed)
+    candidate = _build_candidate(layout_type, width, height)
+
+    tested = 0
+    failures: Dict[str, int] = {}
+    first_success: Optional[Dict[str, object]] = None
+    example_successes: List[Dict[str, object]] = []
+
+    for _ in range(attempts_per_size):
+        tested += 1
+        placed = _place_items(candidate, rng)
+        if placed is None:
+            failures["placement_failed"] = failures.get("placement_failed", 0) + 1
+            continue
+        ok, issues = _evaluate_rules(candidate, placed)
+        if ok:
+            success = {
+                "sqft": candidate.sqft,
+                "width": width,
+                "height": height,
+                "roomFootprints": candidate.rooms,
+                "itemFootprints": placed,
+            }
+            if first_success is None:
+                first_success = success
+            if len(example_successes) < 3:
+                example_successes.append(success)
+        else:
+            for issue in issues:
+                failures[issue] = failures.get(issue, 0) + 1
+
+    return {
+        "layoutType": layout_type,
+        "width": width,
+        "height": height,
+        "testedLayouts": tested,
+        "firstFeasible": first_success,
+        "sampleFeasible": example_successes,
+        "failureReasons": failures,
+    }
+
+
+def _run_layout_type_parallel(layout_type: str, attempts_per_size: int, seed: int, processes: int) -> Dict[str, object]:
+    if layout_type == "1br":
+        candidates = [(w, h) for w in range(28, 45) for h in range(26, 42)]
+    else:
+        candidates = [(w, h) for w in range(36, 63) for h in range(30, 49)]
+    candidates.sort(key=lambda pair: pair[0] * pair[1])
+
+    tasks = [
+        (layout_type, width, height, attempts_per_size, seed + (idx * 9973))
+        for idx, (width, height) in enumerate(candidates)
+    ]
+
+    tested = 0
+    failures: Dict[str, int] = {}
+    first_success: Optional[Dict[str, object]] = None
+    example_successes: List[Dict[str, object]] = []
+
+    with multiprocessing.Pool(processes=processes) as pool:
+        for partial in pool.imap_unordered(_run_candidate_attempts, tasks, chunksize=8):
+            tested += int(partial["testedLayouts"])
+            for reason, count in partial["failureReasons"].items():
+                failures[reason] = failures.get(reason, 0) + int(count)
+            partial_first = partial.get("firstFeasible")
+            if partial_first is not None:
+                if first_success is None or int(partial_first["sqft"]) < int(first_success["sqft"]):
+                    first_success = partial_first
+            for success in partial["sampleFeasible"]:
+                if len(example_successes) >= 3:
+                    break
+                example_successes.append(success)
 
     return {
         "layoutType": layout_type,
@@ -368,6 +516,171 @@ def _estimate_space_summary(results: List[Dict[str, object]]) -> Dict[str, objec
     return summary
 
 
+def _item_label(name: str) -> str:
+    mapping = {
+        "jane_full_bed": "Jane bed",
+        "jane_recliner": "Jane recliner",
+        "jane_scooter_parking": "Scooter",
+        "jane_tv_desk_40in": "TV desk",
+        "jane_closet_zone": "Jane closet",
+        "jane_standup_ac": "Jane AC",
+        "benjamin_queen_bed": "Ben bed",
+        "benjamin_standing_desk": "Stand desk",
+        "benjamin_desk_bike_treadmill": "Bike+tread",
+        "benjamin_filing_cabinets": "Files",
+        "benjamin_closet_zone": "Ben closet",
+        "benjamin_standup_ac": "Ben AC",
+        "xl_dog_bed": "Dog bed",
+        "guest_worker_temp_zone": "Guest zone",
+        "dog_alert_containment_zone": "Dog alert",
+        "bathroom_fixture_zone": "Bath fix",
+    }
+    return mapping.get(name, name)
+
+
+def _item_style_group(name: str) -> str:
+    if "bed" in name:
+        return "bed"
+    if "desk" in name or "treadmill" in name or "bike" in name:
+        return "desk"
+    if "closet" in name or "cabinets" in name:
+        return "storage"
+    if "scooter" in name:
+        return "mobility"
+    if "dog" in name:
+        return "dog"
+    if "guest" in name:
+        return "guest"
+    return "other"
+
+
+def _xml_escape(text: str) -> str:
+    return (
+        text.replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace('"', "&quot;")
+        .replace("'", "&apos;")
+    )
+
+
+def _render_layout_svg(layout: Dict[str, object], title: str, out_path: Path) -> None:
+    width = int(layout["width"])
+    height = int(layout["height"])
+    rooms = layout["roomFootprints"]
+    items = layout["itemFootprints"]
+
+    cell = 18
+    margin = 24
+    legend_w = 280
+    canvas_w = margin * 2 + width * cell + legend_w
+    canvas_h = margin * 2 + height * cell + 80
+
+    lines: List[str] = []
+    lines.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{canvas_w}" height="{canvas_h}" viewBox="0 0 {canvas_w} {canvas_h}">')
+    lines.append('<rect x="0" y="0" width="100%" height="100%" fill="#ffffff"/>')
+    lines.append(f'<text x="{margin}" y="20" font-family="Arial" font-size="16" font-weight="bold">{_xml_escape(title)}</text>')
+    lines.append(f'<text x="{margin}" y="40" font-family="Arial" font-size="12">{width}ft x {height}ft ({int(layout["sqft"])} sq ft)</text>')
+
+    # Rooms
+    for room_name, rect in rooms.items():
+        x, y, w, h = [int(v) for v in rect]
+        px = margin + x * cell
+        py = margin + 50 + y * cell
+        pw = w * cell
+        ph = h * cell
+        color = ROOM_COLORS.get(room_name, "#eeeeee")
+        lines.append(f'<rect x="{px}" y="{py}" width="{pw}" height="{ph}" fill="{color}" stroke="#4a4a4a" stroke-width="1" fill-opacity="0.35"/>')
+        lines.append(
+            f'<text x="{px + 4}" y="{py + 14}" font-family="Arial" font-size="11" fill="#222">{_xml_escape(room_name)}</text>'
+        )
+
+    # Items
+    for item_name, rect in items.items():
+        x, y, w, h = [int(v) for v in rect]
+        px = margin + x * cell
+        py = margin + 50 + y * cell
+        pw = w * cell
+        ph = h * cell
+        style_group = _item_style_group(item_name)
+        fill = ITEM_COLORS.get(style_group, ITEM_COLORS["other"])
+        lines.append(f'<rect x="{px}" y="{py}" width="{pw}" height="{ph}" fill="{fill}" stroke="#333" stroke-width="1"/>')
+        label = _item_label(item_name)
+        if pw >= 36 and ph >= 16:
+            lines.append(
+                f'<text x="{px + 3}" y="{py + 12}" font-family="Arial" font-size="10" fill="#111">{_xml_escape(label)}</text>'
+            )
+
+    # Boundary
+    lines.append(
+        f'<rect x="{margin}" y="{margin + 50}" width="{width * cell}" height="{height * cell}" fill="none" stroke="#111" stroke-width="2"/>'
+    )
+
+    # Legend
+    lx = margin + width * cell + 24
+    ly = margin + 60
+    lines.append(f'<text x="{lx}" y="{ly - 18}" font-family="Arial" font-size="13" font-weight="bold">Legend</text>')
+    legend_rows = [
+        ("Beds", ITEM_COLORS["bed"]),
+        ("Desk / Exercise", ITEM_COLORS["desk"]),
+        ("Storage", ITEM_COLORS["storage"]),
+        ("Mobility", ITEM_COLORS["mobility"]),
+        ("Dog", ITEM_COLORS["dog"]),
+        ("Guest / Worker", ITEM_COLORS["guest"]),
+    ]
+    for idx, (label, color) in enumerate(legend_rows):
+        y = ly + idx * 22
+        lines.append(f'<rect x="{lx}" y="{y}" width="16" height="16" fill="{color}" stroke="#444"/>')
+        lines.append(f'<text x="{lx + 24}" y="{y + 12}" font-family="Arial" font-size="11">{_xml_escape(label)}</text>')
+
+    lines.append('</svg>')
+    out_path.write_text("\n".join(lines), encoding="utf-8")
+
+
+def _write_diagrams(payload: Dict[str, object], out_dir: Path) -> List[str]:
+    diagrams_dir = out_dir / "sokoban_diagrams"
+    diagrams_dir.mkdir(parents=True, exist_ok=True)
+
+    created: List[str] = []
+    md_lines = [
+        "# Sokoban Layout Diagrams",
+        "",
+        "These diagrams visualize feasible layouts discovered in the experiment run.",
+        "",
+    ]
+
+    for result in payload["results"]:
+        layout_type = result["layoutType"]
+        md_lines.append(f"## {layout_type.upper()}")
+        first = result.get("firstFeasible")
+        if first is None:
+            md_lines.append("No feasible layout found.")
+            md_lines.append("")
+            continue
+
+        first_name = f"{layout_type}_first_feasible.svg"
+        first_path = diagrams_dir / first_name
+        _render_layout_svg(first, f"{layout_type.upper()} first feasible layout", first_path)
+        created.append(f"sokoban_diagrams/{first_name}")
+        md_lines.append(f"### First feasible layout")
+        md_lines.append(f"![{layout_type} first feasible](sokoban_diagrams/{first_name})")
+        md_lines.append("")
+
+        for idx, sample in enumerate(result.get("sampleFeasible", []), start=1):
+            sample_name = f"{layout_type}_sample_{idx}.svg"
+            sample_path = diagrams_dir / sample_name
+            _render_layout_svg(sample, f"{layout_type.upper()} sample #{idx}", sample_path)
+            created.append(f"sokoban_diagrams/{sample_name}")
+            md_lines.append(f"### Sample {idx}")
+            md_lines.append(f"![{layout_type} sample {idx}](sokoban_diagrams/{sample_name})")
+            md_lines.append("")
+
+    md_path = out_dir / "sokoban_layout_diagrams.md"
+    md_path.write_text("\n".join(md_lines), encoding="utf-8")
+    created.append("sokoban_layout_diagrams.md")
+    return created
+
+
 def _write_outputs(payload: Dict[str, object], out_dir: Path) -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     json_path = out_dir / "sokoban_layout_experiments.json"
@@ -409,13 +722,30 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Run Sokoban-style apartment layout experiments.")
     parser.add_argument("--attempts-per-size", type=int, default=140)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument(
+        "--processes",
+        type=int,
+        default=max(1, (multiprocessing.cpu_count() or 2) - 1),
+        help="Worker process count for parallel candidate sweeps (set to 1 for serial mode).",
+    )
     parser.add_argument("--write", action="store_true", help="Write JSON/Markdown outputs under outputs/.")
+    parser.add_argument(
+        "--write-diagrams",
+        action="store_true",
+        help="Write SVG layout diagrams and a diagram markdown index under outputs/.",
+    )
     args = parser.parse_args()
 
-    results = [
-        _run_layout_type("1br", args.attempts_per_size, args.seed),
-        _run_layout_type("2br", args.attempts_per_size, args.seed + 1),
-    ]
+    if args.processes > 1:
+        results = [
+            _run_layout_type_parallel("1br", args.attempts_per_size, args.seed, args.processes),
+            _run_layout_type_parallel("2br", args.attempts_per_size, args.seed + 1, args.processes),
+        ]
+    else:
+        results = [
+            _run_layout_type("1br", args.attempts_per_size, args.seed),
+            _run_layout_type("2br", args.attempts_per_size, args.seed + 1),
+        ]
     summary = _estimate_space_summary(results)
     payload = {
         "generatedAt": datetime.now(timezone.utc).isoformat(),
@@ -423,6 +753,7 @@ def main() -> int:
             "gridCellFeet": 1,
             "walkwayTargetFeet": 3,
             "bathroomCount": 1,
+            "processes": args.processes,
             "ruleSet": [
                 "sex_event_requires_benjamin_and_mother_in_different_rooms",
                 "mother_must_have_bathroom_path_during_sex_event",
@@ -439,7 +770,13 @@ def main() -> int:
 
     if args.write:
         root = Path(__file__).resolve().parent.parent
-        _write_outputs(payload, root / "outputs")
+        out_dir = root / "outputs"
+        _write_outputs(payload, out_dir)
+        if args.write_diagrams:
+            payload["diagramArtifacts"] = _write_diagrams(payload, out_dir)
+            # Persist diagram artifact references back into JSON output.
+            (out_dir / "sokoban_layout_experiments.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
+            print(json.dumps(payload, indent=2))
 
     return 0
 

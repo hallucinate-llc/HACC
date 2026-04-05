@@ -85,6 +85,17 @@ python3 engine/print_case_matrix.py --authority-summary
 python3 engine/print_case_matrix.py --fit-summary
 ```
 
+Run Sokoban-style layout experiments (parallel):
+
+```bash
+cd "/home/barberb/HACC/Invasion of Privacy Memorandum"
+python3 engine/sokoban_layout_experiments.py --attempts-per-size 30 --processes 8 --write
+```
+
+This writes:
+- outputs/sokoban_layout_experiments.json
+- outputs/sokoban_layout_experiments.md
+
 For the full option surface, run:
 
 ```bash
