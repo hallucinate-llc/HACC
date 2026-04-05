@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/dependency_citations.schema.json",
+  "title": "DependencyCitationsJsonLd",
+  "type": "object",
+  "required": ["@context", "@graph"],
+  "properties": {
+    "@context": {
+      "type": "object",
+      "required": ["id", "type", "court", "year", "pincite", "sourceUrl", "fitKind"],
+      "properties": {
+        "id": {"type": "string"},
+        "type": {"type": "string"},
+        "court": {"type": "string"},
+        "year": {"type": "string"},
+        "pincite": {"type": "string"},
+        "sourceUrl": {"type": "string"},
+        "fitKind": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "@graph": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "required": ["id", "type", "caseId", "branch", "activeOutcome"],
+            "properties": {
+              "id": {"type": "string"},
+              "type": {"const": "ReasoningCase"},
+              "caseId": {"type": "string"},
+              "branch": {"type": "string"},
+              "activeOutcome": {"type": "string"}
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "required": ["id", "type", "nodeId", "label"],
+            "properties": {
+              "id": {"type": "string"},
+              "type": {"const": "DependencyNode"},
+              "nodeId": {"type": "string"},
+              "label": {"type": "string"}
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "required": ["id", "type", "edgeId", "fromNode", "toNode", "edgeRole"],
+            "properties": {
+              "id": {"type": "string"},
+              "type": {"const": "DependencyEdge"},
+              "edgeId": {"type": "string"},
+              "fromNode": {"type": "string"},
+              "toNode": {"type": "string"},
+              "edgeRole": {"type": "string"}
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "required": [
+              "id",
+              "type",
+              "label",
+              "citation",
+              "weight",
+              "jurisdiction",
+              "court",
+              "year",
+              "pincite",
+              "sourceUrl"
+            ],
+            "properties": {
+              "id": {"type": "string"},
+              "type": {"const": "LegalAuthority"},
+              "label": {"type": "string"},
+              "citation": {"type": ["string", "null"]},
+              "weight": {"type": ["string", "null"]},
+              "jurisdiction": {"type": ["string", "null"]},
+              "court": {"type": "string"},
+              "year": {"type": "string"},
+              "pincite": {"type": "string"},
+              "sourceUrl": {"type": ["string", "null"]}
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "required": [
+              "id",
+              "type",
+              "authority",
+              "excerptText",
+              "proposition",
+              "excerptKind",
+              "fitKind",
+              "court",
+              "year",
+              "pincite",
+              "sourceUrl"
+            ],
+            "properties": {
+              "id": {"type": "string"},
+              "type": {"const": "AuthorityExcerpt"},
+              "authority": {"type": "string"},
+              "excerptText": {"type": "string"},
+              "proposition": {"type": "string"},
+              "excerptKind": {"type": "string"},
+              "fitKind": {
+                "type": "string",
+                "enum": ["direct", "analogical", "record_support"]
+              },
+              "court": {"type": "string"},
+              "year": {"type": "string"},
+              "pincite": {"type": "string"},
+              "sourceUrl": {"type": ["string", "null"]}
+            },
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "required": [
+              "id",
+              "type",
+              "supportKind",
+              "findingBucket",
+              "target",
+              "authority",
+              "authorityExcerpt"
+            ],
+            "properties": {
+              "id": {"type": "string"},
+              "type": {"const": "DependencySupport"},
+              "supportKind": {"type": "string"},
+              "findingBucket": {"type": "string"},
+              "target": {"type": "string"},
+              "authority": {"type": "string"},
+              "authorityExcerpt": {"type": "string"}
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    }
+  },
+  "additionalProperties": false
+}

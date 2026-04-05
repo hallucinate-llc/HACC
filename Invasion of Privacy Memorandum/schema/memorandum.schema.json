@@ -1,0 +1,220 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/memorandum.schema.json",
+  "title": "MemorandumBundle",
+  "type": "object",
+  "required": ["meta", "sections", "markdown"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["caseId", "branch", "confidence", "title", "authorityTrust", "sourceSummary", "fitSummary", "fitFinding"],
+      "properties": {
+        "caseId": {"type": "string"},
+        "branch": {"type": "string"},
+        "confidence": {"type": "number"},
+        "title": {"type": "string"},
+        "authorityTrust": {
+          "type": "object",
+          "required": [
+            "authorityCount",
+            "verifiedQuoteCount",
+            "paraphraseCount",
+            "missingCount",
+            "severity",
+            "label",
+            "advisory"
+          ],
+          "properties": {
+            "authorityCount": {"type": "integer"},
+            "verifiedQuoteCount": {"type": "integer"},
+            "paraphraseCount": {"type": "integer"},
+            "missingCount": {"type": "integer"},
+            "severity": {"type": "string"},
+            "label": {"type": "string"},
+            "advisory": {"type": "string"}
+          },
+          "additionalProperties": false
+        },
+        "sourceSummary": {
+          "type": "object",
+          "required": [
+            "authorityCount",
+            "sourceVerifiedCount",
+            "sourceNormalizedCount",
+            "sourceStatus"
+          ],
+          "properties": {
+            "authorityCount": {"type": "integer"},
+            "sourceVerifiedCount": {"type": "integer"},
+            "sourceNormalizedCount": {"type": "integer"},
+            "sourceStatus": {"type": "string"}
+          },
+          "additionalProperties": false
+        },
+        "fitSummary": {
+          "type": "object",
+          "required": [
+            "authorityCount",
+            "directCount",
+            "analogicalCount",
+            "recordSupportCount",
+            "fitStatus"
+          ],
+          "properties": {
+            "authorityCount": {"type": "integer"},
+            "directCount": {"type": "integer"},
+            "analogicalCount": {"type": "integer"},
+            "recordSupportCount": {"type": "integer"},
+            "fitStatus": {"type": "string"}
+          },
+          "additionalProperties": false
+        },
+        "fitFinding": {
+          "type": "object",
+          "required": [
+            "label",
+            "note"
+          ],
+          "properties": {
+            "label": {"type": "string"},
+            "note": {"type": "string"}
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "heading", "paragraphs", "authorityIds", "targetIds", "citations", "paragraphCitations"],
+        "properties": {
+          "id": {"type": "string"},
+          "heading": {"type": "string"},
+          "paragraphs": {"type": "array", "items": {"type": "string"}},
+          "authorityIds": {"type": "array", "items": {"type": "string"}},
+          "targetIds": {"type": "array", "items": {"type": "string"}},
+          "citations": {
+            "type": "object",
+            "required": ["authorityIds", "targetIds", "supportLinks"],
+            "properties": {
+              "authorityIds": {"type": "array", "items": {"type": "string"}},
+              "targetIds": {"type": "array", "items": {"type": "string"}},
+              "supportLinks": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "target",
+                    "supportKind",
+                    "findingBucket",
+                    "authorityId",
+                    "authorityLabel",
+                    "authorityExcerpt",
+                    "excerptText",
+                    "excerptKind",
+                    "proposition",
+                    "fitKind",
+                    "court",
+                    "year",
+                    "pincite",
+                    "sourceUrl",
+                    "sourceVerified",
+                    "sourceNormalized"
+                  ],
+                  "properties": {
+                    "target": {"type": "string"},
+                    "supportKind": {"type": "string"},
+                    "findingBucket": {"type": "string"},
+                    "authorityId": {"type": "string"},
+                    "authorityLabel": {"type": "string"},
+                    "authorityExcerpt": {"type": "string"},
+                    "excerptText": {"type": "string"},
+                    "excerptKind": {"type": "string"},
+                    "proposition": {"type": "string"},
+                    "fitKind": {
+                      "type": "string",
+                      "enum": ["direct", "analogical", "record_support"]
+                    },
+                    "court": {"type": "string"},
+                    "year": {"type": "string"},
+                    "pincite": {"type": "string"},
+                    "sourceUrl": {"type": ["string", "null"]},
+                    "sourceVerified": {"type": "boolean"},
+                    "sourceNormalized": {"type": "boolean"}
+                  },
+                  "additionalProperties": false
+                }
+              }
+            },
+            "additionalProperties": false
+          },
+          "paragraphCitations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["paragraphIndex", "text", "targetIds", "authorityIds", "supportLinks"],
+              "properties": {
+                "paragraphIndex": {"type": "integer"},
+                "text": {"type": "string"},
+                "targetIds": {"type": "array", "items": {"type": "string"}},
+                "authorityIds": {"type": "array", "items": {"type": "string"}},
+                "supportLinks": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "target",
+                      "supportKind",
+                      "findingBucket",
+                      "authorityId",
+                      "authorityLabel",
+                      "authorityExcerpt",
+                      "excerptText",
+                      "excerptKind",
+                      "proposition",
+                      "fitKind",
+                      "court",
+                      "year",
+                      "pincite",
+                      "sourceUrl",
+                      "sourceVerified",
+                      "sourceNormalized"
+                    ],
+                    "properties": {
+                      "target": {"type": "string"},
+                      "supportKind": {"type": "string"},
+                      "findingBucket": {"type": "string"},
+                      "authorityId": {"type": "string"},
+                      "authorityLabel": {"type": "string"},
+                      "authorityExcerpt": {"type": "string"},
+                      "excerptText": {"type": "string"},
+                      "excerptKind": {"type": "string"},
+                      "proposition": {"type": "string"},
+                      "fitKind": {
+                        "type": "string",
+                        "enum": ["direct", "analogical", "record_support"]
+                      },
+                      "court": {"type": "string"},
+                      "year": {"type": "string"},
+                      "pincite": {"type": "string"},
+                      "sourceUrl": {"type": ["string", "null"]},
+                      "sourceVerified": {"type": "boolean"},
+                      "sourceNormalized": {"type": "boolean"}
+                    },
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "markdown": {"type": "string"}
+  },
+  "additionalProperties": false
+}

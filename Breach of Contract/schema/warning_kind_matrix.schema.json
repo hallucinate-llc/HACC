@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/warning_kind_matrix.schema.json",
+  "title": "WarningKindMatrix",
+  "type": "object",
+  "required": ["generatedAt", "summary", "kinds"],
+  "properties": {
+    "generatedAt": { "type": "string" },
+    "staleWhileRefreshing": { "type": "boolean" },
+    "refreshRuntime": {
+      "type": "object",
+      "required": ["status", "running", "startedAt", "completedAt", "elapsedSeconds", "elapsedHuman"],
+      "properties": {
+        "status": { "type": "string" },
+        "running": { "type": "boolean" },
+        "startedAt": { "type": ["string", "null"] },
+        "completedAt": { "type": ["string", "null"] },
+        "elapsedSeconds": { "type": ["number", "null"] },
+        "elapsedHuman": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "summary": {
+      "type": "object",
+      "required": ["kindCount", "caseCount"],
+      "properties": {
+        "kindCount": { "type": "integer", "minimum": 0 },
+        "caseCount": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "kinds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "warningCaseCount", "warningLabels", "cases"],
+        "properties": {
+          "kind": { "type": "string" },
+          "warningCaseCount": { "type": "integer", "minimum": 1 },
+          "warningLabels": {
+            "type": "object",
+            "propertyNames": {
+              "enum": ["mixed_support", "paraphrase_heavy"]
+            },
+            "additionalProperties": { "type": "integer", "minimum": 0 }
+          },
+          "cases": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["caseId", "branch", "authorityTrust", "warningLabel", "packagePath"],
+              "properties": {
+                "caseId": { "type": "string" },
+                "branch": { "type": "string" },
+                "authorityTrust": {
+                  "type": "string",
+                  "enum": ["mixed_support", "paraphrase_heavy"]
+                },
+                "warningLabel": {
+                  "type": "string",
+                  "enum": ["mixed_support", "paraphrase_heavy"]
+                },
+                "packagePath": { "type": "string" }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

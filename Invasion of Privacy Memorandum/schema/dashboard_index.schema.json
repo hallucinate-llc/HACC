@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/dashboard_index.schema.json",
+  "title": "DashboardIndex",
+  "type": "object",
+  "required": ["generatedAt", "recommendedFirstStop", "whyOpenThis", "entries"],
+  "properties": {
+    "generatedAt": { "type": "string" },
+    "recommendedFirstStop": { "type": "string" },
+    "whyOpenThis": { "type": "string" },
+    "staleWhileRefreshing": { "type": "boolean" },
+    "refreshRuntime": {
+      "type": "object",
+      "required": ["status", "running", "startedAt", "completedAt", "elapsedSeconds", "elapsedHuman"],
+      "properties": {
+        "status": { "type": "string" },
+        "running": { "type": "boolean" },
+        "startedAt": { "type": "string" },
+        "completedAt": { "type": ["string", "null"] },
+        "elapsedSeconds": { "type": ["number", "null"] },
+        "elapsedHuman": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 8,
+      "items": {
+        "type": "object",
+        "required": ["kind", "jsonPath", "markdownPath", "description", "priorityHint", "whyOpenThis"],
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": ["outputs_index", "summary_index", "fit_index", "fit_findings", "fit_findings_summary", "refresh_state", "audit_index", "dashboard_overview"]
+          },
+          "jsonPath": { "type": "string" },
+          "markdownPath": { "type": "string" },
+          "description": { "type": "string" },
+          "whyOpenThis": { "type": "string" },
+          "priorityHint": {
+            "type": "string",
+            "enum": ["recommended", "primary", "secondary", "supporting"]
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/authority_summary.schema.json",
+  "title": "AuthoritySummary",
+  "type": "object",
+  "required": [
+    "caseId",
+    "branch",
+    "verifiedOnly",
+    "supportStatus",
+    "fitKind",
+    "authorityCount",
+    "statusCounts",
+    "bucketCounts"
+  ],
+  "properties": {
+    "caseId": { "type": "string" },
+    "branch": { "type": "string" },
+    "verifiedOnly": { "type": "boolean" },
+    "supportStatus": {
+      "type": ["string", "null"],
+      "enum": ["verified_quote", "paraphrase", "missing", null]
+    },
+    "fitKind": {
+      "type": ["string", "null"],
+      "enum": ["direct", "analogical", "record_support", null]
+    },
+    "authorityCount": { "type": "integer", "minimum": 0 },
+    "statusCounts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "bucketCounts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/authority_findings.schema.json",
+  "title": "AuthorityFindingsReport",
+  "type": "object",
+  "required": ["generatedAt", "summary", "findings"],
+  "properties": {
+    "generatedAt": { "type": "string" },
+    "summary": {
+      "type": "object",
+      "required": ["caseCount", "fullyVerifiedCases", "mixedSupportCases", "paraphraseHeavyCases"],
+      "properties": {
+        "caseCount": { "type": "integer", "minimum": 0 },
+        "fullyVerifiedCases": { "type": "integer", "minimum": 0 },
+        "mixedSupportCases": { "type": "integer", "minimum": 0 },
+        "paraphraseHeavyCases": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["caseId", "branch", "severity", "title", "detail"],
+        "properties": {
+          "caseId": { "type": "string" },
+          "branch": { "type": "string" },
+          "severity": {
+            "type": "string",
+            "enum": ["info", "warning"]
+          },
+          "title": { "type": "string" },
+          "detail": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/decision_tree.schema.json",
+  "title": "DecisionTreeExport",
+  "type": "object",
+  "required": ["decisionTree"],
+  "properties": {
+    "decisionTree": {
+      "type": "object",
+      "required": ["id", "root", "branch", "nodes", "outcomes", "activeOutcome"],
+      "properties": {
+        "id": { "type": "string" },
+        "root": { "type": "string" },
+        "branch": { "type": "string" },
+        "nodes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": ["question", "yes", "no"],
+            "properties": {
+              "question": { "type": "string" },
+              "yes": { "type": "string" },
+              "no": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "activeOutcome": { "type": "string" },
+        "outcomes": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -9,8 +9,12 @@ __pycache__/
 .venv*
 venv/
 *.py[cod]
-research_results/research.log
-research_results/search_reports/
+evidence/email_imports/*
+Invasion of Privacy Memorandum/tests/snapshots
+Breach of Contract/outputs
+Invasion of Privacy Memorandum/outputs
+Breach of Contract/tests/snapshots
+workspace/starworks5-google-voice-downloads/takeout_acquisition_history
 research_results/seeded_search_results_*.json
 research_results/research_report_*.json
 research_results/comprehensive_report_*.json

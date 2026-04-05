@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/authority.schema.json",
+  "title": "AuthorityReference",
+  "type": "object",
+  "required": ["id", "label", "kind", "weight"],
+  "properties": {
+    "id": {"type": "string"},
+    "label": {"type": "string"},
+    "kind": {
+      "type": "string",
+      "enum": ["case", "statute", "regulation", "guidance", "organization"]
+    },
+    "jurisdiction": {"type": "string"},
+    "weight": {
+      "type": "string",
+      "enum": ["binding", "persuasive", "guidance", "context"]
+    },
+    "citation": {"type": "string"},
+    "notes": {"type": "string"},
+    "court": {"type": "string"},
+    "year": {"type": "string"},
+    "pincite": {"type": "string"},
+    "sourceUrl": {"type": "string"},
+    "excerptText": {"type": "string"},
+    "excerptKind": {
+      "type": "string",
+      "enum": ["verified_quote", "paraphrase"]
+    },
+    "proposition": {"type": "string"},
+    "fitKind": {
+      "type": "string",
+      "enum": ["direct", "analogical", "record_support"]
+    }
+  },
+  "additionalProperties": false
+}

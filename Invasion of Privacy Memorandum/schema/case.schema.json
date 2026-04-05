@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/case.schema.json",
+  "title": "AccommodationCase",
+  "type": "object",
+  "required": ["caseId", "assertedFacts"],
+  "properties": {
+    "caseId": {"type": "string"},
+    "policy": {
+      "type": "object",
+      "properties": {
+        "privacy_mode": {
+          "type": "string",
+          "enum": ["inferred_from_living_room_sleeping", "explicit_only"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "assertedFacts": {
+      "type": "object",
+      "required": [
+        "disabled_tenant",
+        "needs_live_in_aide",
+        "medical_verification",
+        "requested_separate_bedroom",
+        "approved_aide_in_principle",
+        "denied_separate_bedroom",
+        "aide_sleeps_in_living_room",
+        "night_access_needed",
+        "undue_burden",
+        "fundamental_alteration"
+      ],
+      "properties": {
+        "disabled_tenant": {"type": "boolean"},
+        "needs_live_in_aide": {"type": "boolean"},
+        "medical_verification": {"type": "boolean"},
+        "requested_separate_bedroom": {"type": "boolean"},
+        "approved_aide_in_principle": {"type": "boolean"},
+        "denied_separate_bedroom": {"type": "boolean"},
+        "aide_sleeps_in_living_room": {"type": "boolean"},
+        "night_access_needed": {"type": "boolean"},
+        "works_remotely": {"type": "boolean", "default": false},
+        "privacy_loss": {"type": "boolean", "default": false},
+        "guest_management_problem": {"type": "boolean", "default": false},
+        "dog_isolation_problem": {"type": "boolean", "default": false},
+        "undue_burden": {"type": "boolean"},
+        "fundamental_alteration": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    },
+    "acceptedFindings": {
+      "type": "object",
+      "properties": {
+        "disabled_tenant": {"type": "boolean"},
+        "needs_live_in_aide": {"type": "boolean"},
+        "medical_verification": {"type": "boolean"},
+        "requested_separate_bedroom": {"type": "boolean"},
+        "approved_aide_in_principle": {"type": "boolean"},
+        "denied_separate_bedroom": {"type": "boolean"},
+        "aide_sleeps_in_living_room": {"type": "boolean"},
+        "night_access_needed": {"type": "boolean"},
+        "works_remotely": {"type": "boolean"},
+        "privacy_loss": {"type": "boolean"},
+        "guest_management_problem": {"type": "boolean"},
+        "dog_isolation_problem": {"type": "boolean"},
+        "undue_burden": {"type": "boolean"},
+        "fundamental_alteration": {"type": "boolean"}
+      },
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "supports", "status"],
+        "properties": {
+          "id": {"type": "string"},
+          "type": {"type": "string"},
+          "supports": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "status": {
+            "type": "string",
+            "enum": ["alleged", "accepted"]
+          },
+          "sourceText": {"type": "string"},
+          "assertedBy": {"type": "string"},
+          "confidence": {"type": "number"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "event", "time"],
+        "properties": {
+          "id": {"type": "string"},
+          "event": {"type": "string"},
+          "time": {"type": "string"},
+          "actors": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "details": {"type": "object"}
+        },
+        "additionalProperties": true
+      }
+    },
+    "authorities": {
+      "type": "array",
+      "items": {"$ref": "./authority.schema.json"}
+    },
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}

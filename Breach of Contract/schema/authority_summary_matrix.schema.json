@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/authority_summary_matrix.schema.json",
+  "title": "AuthoritySummaryMatrix",
+  "type": "object",
+  "required": ["verifiedOnly", "supportStatus", "cases"],
+  "properties": {
+    "verifiedOnly": { "type": "boolean" },
+    "supportStatus": {
+      "type": ["string", "null"],
+      "enum": ["verified_quote", "paraphrase", "missing", null]
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "caseId",
+          "branch",
+          "verifiedOnly",
+          "supportStatus",
+          "authorityCount",
+          "statusCounts",
+          "bucketCounts"
+        ],
+        "properties": {
+          "caseId": { "type": "string" },
+          "branch": { "type": "string" },
+          "verifiedOnly": { "type": "boolean" },
+          "supportStatus": {
+            "type": ["string", "null"],
+            "enum": ["verified_quote", "paraphrase", "missing", null]
+          },
+          "authorityCount": { "type": "integer", "minimum": 0 },
+          "statusCounts": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "bucketCounts": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

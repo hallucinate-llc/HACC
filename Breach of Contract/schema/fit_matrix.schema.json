@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/fit_matrix.schema.json",
+  "title": "FitMatrix",
+  "type": "object",
+  "required": ["generatedAt", "summary", "cases"],
+  "properties": {
+    "generatedAt": { "type": "string" },
+    "staleWhileRefreshing": { "type": "boolean" },
+    "refreshRuntime": {
+      "type": "object",
+      "required": ["status", "running", "startedAt", "completedAt", "elapsedSeconds", "elapsedHuman"],
+      "properties": {
+        "status": { "type": "string" },
+        "running": { "type": "boolean" },
+        "startedAt": { "type": ["string", "null"] },
+        "completedAt": { "type": ["string", "null"] },
+        "elapsedSeconds": { "type": ["number", "null"] },
+        "elapsedHuman": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "summary": {
+      "type": "object",
+      "required": ["caseCount", "authorityCount", "directCount", "analogicalCount", "recordSupportCount"],
+      "properties": {
+        "caseCount": { "type": "integer" },
+        "authorityCount": { "type": "integer" },
+        "directCount": { "type": "integer" },
+        "analogicalCount": { "type": "integer" },
+        "recordSupportCount": { "type": "integer" }
+      },
+      "additionalProperties": false
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "caseId",
+          "branch",
+          "authorityCount",
+          "directCount",
+          "analogicalCount",
+          "recordSupportCount",
+          "fitStatus"
+        ],
+        "properties": {
+          "caseId": { "type": "string" },
+          "branch": { "type": "string" },
+          "authorityCount": { "type": "integer" },
+          "directCount": { "type": "integer" },
+          "analogicalCount": { "type": "integer" },
+          "recordSupportCount": { "type": "integer" },
+          "fitStatus": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

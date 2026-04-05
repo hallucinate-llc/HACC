@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/summary.schema.json",
+  "title": "PackageSummary",
+  "type": "object",
+  "required": [
+    "caseId",
+    "branch",
+    "confidence",
+    "activeOutcome",
+    "topFindings",
+    "defeatersConsidered",
+    "missingEvidence"
+  ],
+  "properties": {
+    "caseId": { "type": "string" },
+    "branch": { "type": "string" },
+    "confidence": { "type": "number" },
+    "activeOutcome": { "type": "string" },
+    "topFindings": {
+      "type": "object",
+      "required": [
+        "necessary",
+        "reasonable",
+        "dutyToGrant",
+        "constructiveDenial",
+        "violation"
+      ],
+      "properties": {
+        "necessary": { "type": "boolean" },
+        "reasonable": { "type": "boolean" },
+        "dutyToGrant": { "type": "boolean" },
+        "constructiveDenial": { "type": "boolean" },
+        "violation": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "defeatersConsidered": {
+      "type": "object",
+      "required": ["undueBurden", "fundamentalAlteration"],
+      "properties": {
+        "undueBurden": { "type": "boolean" },
+        "fundamentalAlteration": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    },
+    "missingEvidence": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": false
+}

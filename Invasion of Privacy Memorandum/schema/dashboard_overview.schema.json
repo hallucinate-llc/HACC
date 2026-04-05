@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/dashboard_overview.schema.json",
+  "title": "DashboardOverview",
+  "type": "object",
+  "required": ["generatedAt", "summary", "discovery", "featured"],
+  "properties": {
+    "generatedAt": { "type": "string" },
+    "staleWhileRefreshing": { "type": "boolean" },
+    "refreshRuntime": {
+      "type": "object",
+      "required": ["status", "running", "startedAt", "completedAt", "elapsedSeconds", "elapsedHuman"],
+      "properties": {
+        "status": { "type": "string" },
+        "running": { "type": "boolean" },
+        "startedAt": { "type": "string" },
+        "completedAt": { "type": ["string", "null"] },
+        "elapsedSeconds": { "type": ["number", "null"] },
+        "elapsedHuman": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "summary": {
+      "type": "object",
+      "required": [
+        "caseCount",
+        "violationCount",
+        "noViolationCount",
+        "warnedCaseCount",
+        "fullyVerifiedCount",
+        "mixedSupportCount",
+        "paraphraseHeavyCount",
+        "sourceVerifiedCount",
+        "sourceNormalizedCount",
+        "sourceStatus",
+        "directFitCount",
+        "analogicalFitCount",
+        "recordSupportFitCount",
+        "analogicalCases",
+        "recordSupportCases",
+        "fitStatus"
+      ],
+      "properties": {
+        "caseCount": { "type": "integer", "minimum": 0 },
+        "violationCount": { "type": "integer", "minimum": 0 },
+        "noViolationCount": { "type": "integer", "minimum": 0 },
+        "warnedCaseCount": { "type": "integer", "minimum": 0 },
+        "fullyVerifiedCount": { "type": "integer", "minimum": 0 },
+        "mixedSupportCount": { "type": "integer", "minimum": 0 },
+        "paraphraseHeavyCount": { "type": "integer", "minimum": 0 },
+        "sourceVerifiedCount": { "type": "integer", "minimum": 0 },
+        "sourceNormalizedCount": { "type": "integer", "minimum": 0 },
+        "sourceStatus": { "type": "string" },
+        "directFitCount": { "type": "integer", "minimum": 0 },
+        "analogicalFitCount": { "type": "integer", "minimum": 0 },
+        "recordSupportFitCount": { "type": "integer", "minimum": 0 },
+        "analogicalCases": { "type": "integer", "minimum": 0 },
+        "recordSupportCases": { "type": "integer", "minimum": 0 },
+        "fitStatus": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "discovery": {
+      "type": "object",
+      "required": [
+        "recommendedFirstStop",
+        "recommendedFirstStopWhyOpenThis",
+        "refreshState",
+        "refreshStateWhyOpenThis",
+        "outputsIndex",
+        "outputsIndexWhyOpenThis",
+        "summaryIndex",
+        "summaryIndexWhyOpenThis",
+        "fitIndex",
+        "fitIndexWhyOpenThis",
+        "auditIndex",
+        "auditIndexWhyOpenThis",
+        "dashboardIndex",
+        "dashboardIndexWhyOpenThis",
+        "fitSummary",
+        "fitSummaryWhyOpenThis",
+        "fitFindings",
+        "fitFindingsWhyOpenThis",
+        "fitFindingsSummary",
+        "fitFindingsSummaryWhyOpenThis"
+      ],
+      "properties": {
+        "recommendedFirstStop": { "type": "string" },
+        "recommendedFirstStopWhyOpenThis": { "type": "string" },
+        "refreshState": { "type": "string" },
+        "refreshStateWhyOpenThis": { "type": "string" },
+        "outputsIndex": { "type": "string" },
+        "outputsIndexWhyOpenThis": { "type": "string" },
+        "summaryIndex": { "type": "string" },
+        "summaryIndexWhyOpenThis": { "type": "string" },
+        "fitIndex": { "type": "string" },
+        "fitIndexWhyOpenThis": { "type": "string" },
+        "auditIndex": { "type": "string" },
+        "auditIndexWhyOpenThis": { "type": "string" },
+        "dashboardIndex": { "type": "string" },
+        "dashboardIndexWhyOpenThis": { "type": "string" },
+        "fitSummary": { "type": "string" },
+        "fitSummaryWhyOpenThis": { "type": "string" },
+        "fitFindings": { "type": "string" },
+        "fitFindingsWhyOpenThis": { "type": "string" },
+        "fitFindingsSummary": { "type": "string" },
+        "fitFindingsSummaryWhyOpenThis": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "featured": {
+      "type": "object",
+      "required": [
+        "highestConfidenceCaseId",
+        "highestConfidence",
+        "lowestConfidenceCaseId",
+        "lowestConfidence",
+        "primaryKinds",
+        "warningLabels",
+        "singleCaseGuide"
+      ],
+      "properties": {
+        "highestConfidenceCaseId": { "type": "string" },
+        "highestConfidence": { "type": "number" },
+        "lowestConfidenceCaseId": { "type": "string" },
+        "lowestConfidence": { "type": "number" },
+        "primaryKinds": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        },
+        "warningLabels": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        },
+        "singleCaseGuide": {
+          "type": ["object", "null"],
+          "required": ["caseId", "recommendedFirstStop", "whyOpenThis"],
+          "properties": {
+            "caseId": { "type": "string" },
+            "recommendedFirstStop": { "type": "string" },
+            "whyOpenThis": { "type": "string" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

@@ -4,6 +4,7 @@ from pathlib import Path
 from types import SimpleNamespace
 from email.message import EmailMessage
 import email.policy
+import importlib
 import json
 import os
 import subprocess
@@ -35,6 +36,7 @@ def _build_voice_takeout(tmp_path: Path) -> Path:
         '{"participants":["(503) 555-0100"],"labels":["housing"]}',
         encoding="utf-8",
     )
+    (voice_dir / "notice.jpg").write_bytes(b"fake-jpg")
     (voice_dir / "voicemail.mp3").write_bytes(b"fake-mp3")
     return tmp_path
 
@@ -94,6 +96,43 @@ def test_google_voice_processor_parses_takeout_directory(tmp_path: Path) -> None
     assert any(path.endswith("voicemail.mp3") for path in event["sidecar_paths"])
 
 
+def test_google_voice_materialization_appends_attachment_enrichments_to_transcript(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    takeout_root = _build_voice_takeout(tmp_path / "source")
+    voice_module = importlib.import_module("ipfs_datasets_py.processors.multimedia.google_voice_processor")
+
+    def _fake_ocr(path: Path) -> tuple[str, dict[str, object]]:
+        assert path.name == "notice.jpg"
+        return "Scanned inspection notice from image", {"status": "success", "backend": "test_ocr"}
+
+    def _fake_transcribe(path: Path) -> tuple[str, dict[str, object]]:
+        assert path.name == "voicemail.mp3"
+        return "Voicemail says the inspector will arrive at 9 AM", {
+            "status": "success",
+            "backend": "test_whisper",
+        }
+
+    monkeypatch.setattr(voice_module, "_ocr_image_path", _fake_ocr)
+    monkeypatch.setattr(voice_module, "_transcribe_audio_path", _fake_transcribe)
+
+    processor = gmail_module.GoogleVoiceProcessor()
+    try:
+        exported = processor.export_bundles(takeout_root, output_dir=tmp_path / "materialized")
+    finally:
+        processor.close()
+
+    bundle = exported["bundles"][0]
+    transcript_text = Path(bundle["transcript_path"]).read_text(encoding="utf-8")
+    event_payload = json.loads(Path(bundle["event_json_path"]).read_text(encoding="utf-8"))
+
+    assert "inspection notice" in transcript_text.lower()
+    assert "Scanned inspection notice from image" in transcript_text
+    assert "Voicemail says the inspector will arrive at 9 AM" in transcript_text
+    assert len(bundle["enrichments"]) == 2
+    assert all(Path(path).is_file() for path in bundle["enrichment_paths"])
+    assert event_payload["enrichment_count"] == 2
+    assert {item["metadata"]["backend"] for item in event_payload["enrichments"]} == {"test_ocr", "test_whisper"}
+
+
 def test_google_voice_processor_parses_vault_export(tmp_path: Path) -> None:
     export_root = _build_voice_vault_export(tmp_path)
     processor = gmail_module.GoogleVoiceProcessor()
@@ -125,6 +164,22 @@ def test_google_voice_processor_parses_local_data_export(tmp_path: Path) -> None
     event = result["events"][0]
     assert event["event_type"] == "text_message"
     assert "copy of the notice" in event["text_content"].lower()
+
+
+def test_history_index_image_ocr_uses_tesseract_cli_fallback(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    image_path = tmp_path / "notice.png"
+    image_path.write_bytes(b"fake-png")
+
+    def _fake_run(command: list[str], check: bool, capture_output: bool, text: bool, timeout: int):
+        assert command[:2] == ["tesseract", str(image_path)]
+        return SimpleNamespace(returncode=0, stdout="Inspection photo text", stderr="")
+
+    monkeypatch.setattr(history_index_module.shutil, "which", lambda name: "/usr/bin/tesseract" if name == "tesseract" else None)
+    monkeypatch.setattr(history_index_module.subprocess, "run", _fake_run)
+
+    text = history_index_module._extract_image_text_ocr(image_path)
+
+    assert "Inspection photo text" in text
 
 
 def test_import_gmail_evidence_supports_google_voice_without_gmail_login(tmp_path: Path) -> None:

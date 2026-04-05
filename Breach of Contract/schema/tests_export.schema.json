@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/workspace2/tests_export.schema.json",
+  "title": "TestsExport",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["testId", "branch", "policy", "facts", "expected"],
+    "properties": {
+      "testId": { "type": "string" },
+      "branch": { "type": "string" },
+      "policy": {
+        "type": "object",
+        "properties": {
+          "privacy_mode": { "type": "string" }
+        },
+        "required": ["privacy_mode"],
+        "additionalProperties": false
+      },
+      "facts": {
+        "type": "object",
+        "additionalProperties": {
+          "type": ["boolean", "string", "number"]
+        }
+      },
+      "expected": {
+        "type": "object",
+        "additionalProperties": {
+          "type": ["boolean", "string", "number"]
+        }
+      },
+      "notes": { "type": "string" }
+    },
+    "additionalProperties": false
+  }
+}
