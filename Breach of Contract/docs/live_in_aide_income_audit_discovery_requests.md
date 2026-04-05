@@ -22,6 +22,9 @@ This focused discovery set targets a narrow issue:
 13. Produce all case notes, task logs, CRM audit trails, and review history showing how much staff time was spent reviewing, following up on, escalating, or requesting Benjamin Barber's income and business records.
 14. Produce all records showing whether HACC delayed voucher issuance, relocation processing, or accommodation review while waiting for those records.
 15. Produce all records showing whether HACC ever concluded that any of the demanded records were unnecessary, stale, duplicative, or unrelated to a proper family-income calculation.
+16. Produce all records reflecting communications between HACC and any Clackamas County representative-payee, Social Services, or Money Management personnel concerning Jane Cortez's rent, payment status, voucher use, portability, or housing decisions from January 1, 2026 through April 30, 2026.
+17. Produce all records reflecting whether HACC expected, requested, received, tracked, or discussed a payment or check that Clackamas County Money Management personnel allegedly said would be sent on Jane Cortez's behalf.
+18. Produce all records showing whether HACC took any action, delayed any action, or changed any account, rent, voucher, or relocation handling based on the reported statement that Benjamin Barber should stop paying Jane Cortez's rent because a county-side payment would be sent.
 
 ## Interrogatories to HACC
 
@@ -35,6 +38,9 @@ This focused discovery set targets a narrow issue:
 8. State whether HACC delayed any part of the household's voucher, relocation, or accommodation processing because Benjamin Barber did not provide one or more of the demanded financial or business records; if so describe each delay and each missing item.
 9. Identify every company, entity, or financial source for which HACC sought records from Benjamin Barber, and for each one state why HACC believed it was relevant.
 10. State how much staff time HACC estimates was spent on requesting, reviewing, or escalating Benjamin Barber's income and business records.
+11. State when HACC first learned that a Clackamas County representative-payee or Money Management contact was affecting Jane Cortez's rent or housing decisions, and identify every person who received or acted on that information.
+12. State whether HACC contends any county-side representative-payee or Money Management communication affected Benjamin Barber's rent-payment obligations, voucher choices, portability, or relocation processing, and if so describe each effect.
+13. State whether HACC ever verified whether a county-issued payment or check referenced in Benjamin Barber's February 5, 2026 communication was sent or received, and if so identify all supporting records.
 
 ## Requests for Admission to HACC
 
@@ -45,6 +51,8 @@ This focused discovery set targets a narrow issue:
 5. Admit that HACC did not complete voucher or relocation processing before all demanded financial and business records were resolved.
 6. Admit that HACC spent staff time reviewing or pursuing Benjamin Barber's business or company records.
 7. Admit that HACC has no written analysis explaining why records from approximately 10-year-old defunct companies were necessary if Benjamin Barber was being treated as a live-in caregiver.
+8. Admit that by February 5, 2026 HACC had been told that a Clackamas County Money Management contact had said a check would be sent on Jane Cortez's behalf.
+9. Admit that by February 5, 2026 HACC had been told that Benjamin Barber had been instructed not to keep paying Jane Cortez's rent.
 
 ## Best Use
 
@@ -53,4 +61,5 @@ This set is designed to prove one or more of the following:
 - HACC knew Benjamin Barber was being presented as a live-in caregiver;
 - HACC nevertheless audited him like an ordinary income-counted household member;
 - HACC pursued stale and unnecessary records from defunct companies; and
-- those demands materially contributed to delay, burden, or denial in the voucher, accommodation, or relocation process.
+- those demands materially contributed to delay, burden, or denial in the voucher, accommodation, or relocation process; and
+- HACC failed to coherently account for county-side representative-payee and Money Management communications affecting Jane Cortez's rent and housing decisions while continuing to scrutinize Benjamin Barber's finances.
