@@ -14,6 +14,8 @@ from formal_logic.title18_readiness import build_title18_readiness_report
 
 ROOT = Path("/home/barberb/HACC/Breach of Contract")
 OUTPUTS = ROOT / "outputs"
+EDITABLE_HACC_OVERRIDES = ROOT / "title18_hacc_context_overrides.json"
+EDITABLE_QUANTUM_OVERRIDES = ROOT / "title18_quantum_context_overrides.json"
 
 
 def _build_track_template(context: Dict[str, Any], missing_fields: List[str]) -> Dict[str, Any]:
@@ -44,6 +46,10 @@ def build_title18_override_templates(merged_order_track: str = "hacc") -> Dict[s
             "generatedAt": readiness["meta"]["generatedAt"],
             "mergedOrderTrack": merged_order_track,
             "overridePath": readiness["meta"]["overridePath"],
+            "editableOverridePaths": {
+                "hacc": str(EDITABLE_HACC_OVERRIDES),
+                "quantum": str(EDITABLE_QUANTUM_OVERRIDES),
+            },
         },
         "commonMissingFields": readiness["summary"]["commonMissingFields"],
         "templates": {
@@ -58,6 +64,8 @@ def render_title18_override_worksheet_markdown(bundle: Dict[str, Any]) -> str:
     lines.append("# Title 18 Override Worksheet")
     lines.append("")
     lines.append(f"- Override file: {bundle['meta']['overridePath']}")
+    lines.append(f"- Editable HACC override file: {bundle['meta']['editableOverridePaths']['hacc']}")
+    lines.append(f"- Editable Quantum override file: {bundle['meta']['editableOverridePaths']['quantum']}")
     lines.append(f"- Merged order track: {bundle['meta']['mergedOrderTrack']}")
     lines.append("")
     lines.append("## Common Missing Fields")
@@ -88,10 +96,16 @@ def write_title18_override_templates(bundle: Dict[str, Any] | None = None, merge
         "hacc_json": OUTPUTS / "title18_hacc_override_template.json",
         "quantum_json": OUTPUTS / "title18_quantum_override_template.json",
         "worksheet_markdown": OUTPUTS / "title18_override_worksheet.md",
+        "editable_hacc_json": EDITABLE_HACC_OVERRIDES,
+        "editable_quantum_json": EDITABLE_QUANTUM_OVERRIDES,
     }
     outputs["hacc_json"].write_text(json.dumps(bundle["templates"]["hacc"], indent=2) + "\n")
     outputs["quantum_json"].write_text(json.dumps(bundle["templates"]["quantum"], indent=2) + "\n")
     outputs["worksheet_markdown"].write_text(render_title18_override_worksheet_markdown(bundle))
+    if not outputs["editable_hacc_json"].exists():
+        outputs["editable_hacc_json"].write_text(json.dumps(bundle["templates"]["hacc"], indent=2) + "\n")
+    if not outputs["editable_quantum_json"].exists():
+        outputs["editable_quantum_json"].write_text(json.dumps(bundle["templates"]["quantum"], indent=2) + "\n")
     return outputs
 
 

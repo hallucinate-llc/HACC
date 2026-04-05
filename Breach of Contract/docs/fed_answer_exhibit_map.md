@@ -136,6 +136,9 @@ Use this alongside:
 - Fifth Affirmative Defense:
   - Exhibits `O`, `P`, `M`
   - accessibility and accommodation failure
+- Sixth Affirmative Defense:
+  - Exhibits `I`, `J`, `R`, `M`
+  - overbroad verification, stale document demands, written delay complaints, and continuing voucher/accommodation slippage
 - Counterclaim One:
   - Exhibits `B`, `L`, `M`, `O`, `P`
   - HACC breach of relocation and accommodation obligations
@@ -164,6 +167,9 @@ Use this alongside:
   - Exhibits `L`, `M`, `O`, `P`, `10`
 - Fifth Affirmative Defense:
   - Exhibits `O`, `P`, `M`, `13`
+- Sixth Affirmative Defense:
+  - Exhibits `I`, `J`, `R`, `M`
+  - overbroad verification, stale document demands, written delay complaints, and continuing voucher/accommodation slippage
 - Counterclaim One:
   - Exhibits `B`, `M`, `O`, `P`
 - Counterclaim Three:
@@ -183,17 +189,17 @@ If only a limited set of exhibits can be attached fast, use this order:
 4. `Exhibit L` - Quantum packet non-transmission
 5. `Exhibit I` - documentation burden
 6. `Exhibit J` - complaints and service-animal / Blossom issues
-7. `Exhibit 10` - January 1, 2026 lease amendment / household-composition support
-8. `Exhibit 11` - Julio-specific notice / hearing support
-9. `Exhibit 12` - Solomon notice / service-avoidance support
-10. `Exhibit 13` - Jane v. Julio court packet / GAL notice support
-11. `Exhibit 14` - Jane v. Ashley Ferron denied petition
-12. `Exhibit 15` - Benjamin v. Ashley Ferron denied petition
-13. `Exhibit 16` - January 26 attachment-chain email for Ashley exhibits
+7. `Exhibit R` - preserved complaint snippets showing the documentation-delay allegation in real time
+8. `Exhibit 10` - January 1, 2026 lease amendment / household-composition support
+9. `Exhibit 11` - Julio-specific notice / hearing support
+10. `Exhibit 12` - Solomon notice / service-avoidance support
+11. `Exhibit 13` - Jane v. Julio court packet / GAL notice support
+12. `Exhibit 14` - Jane v. Ashley Ferron denied petition
+13. `Exhibit 15` - Benjamin v. Ashley Ferron denied petition
+14. `Exhibit 16` - January 26 attachment-chain email for Ashley exhibits
 
 If the hearing will focus heavily on lease-tampering or unauthorized lease modification, add `Exhibits 14, 15, and 16` even in a lean packet.
-11. `Exhibit 14` - Jane v. Ashley Ferron denied petition
-12. `Exhibit 15` - Benjamin v. Ashley Ferron denied petition
+If the hearing will focus heavily on overbroad verification and accommodation delay, include `Exhibits I, J, and R` together.
 
 ## Final Assembly Note
 

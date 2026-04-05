@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, Iterable, List
 
 from formal_logic.title18_context import build_render_context
 
@@ -23,8 +23,8 @@ def _apply_context(text: str, context: Dict[str, Any]) -> str:
     return rendered
 
 
-def build_title18_service_packet() -> Dict[str, Any]:
-    context = build_render_context()
+def build_title18_service_packet(override_paths: Iterable[Path | str] | None = None) -> Dict[str, Any]:
+    context = build_render_context(override_paths=override_paths)
     certificate_lines = [
         "IN THE CIRCUIT COURT OF THE STATE OF OREGON FOR THE COUNTY OF CLACKAMAS",
         "HOUSING AUTHORITY OF CLACKAMAS COUNTY, Plaintiff,",
@@ -101,8 +101,11 @@ def render_service_checklist_markdown(packet: Dict[str, Any]) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
-def write_title18_service_packet(packet: Dict[str, Any] | None = None) -> Dict[str, Path]:
-    packet = packet or build_title18_service_packet()
+def write_title18_service_packet(
+    packet: Dict[str, Any] | None = None,
+    override_paths: Iterable[Path | str] | None = None,
+) -> Dict[str, Path]:
+    packet = packet or build_title18_service_packet(override_paths=override_paths)
     outputs = {
         "packet_json": OUTPUTS / "title18_service_packet.json",
         "certificate_markdown": OUTPUTS / "title18_certificate_of_service.md",

@@ -107,10 +107,17 @@ These support the argument that you pursued the relocation path and that the Qua
 ### Caregiver / live-in-aide / county payment handling
 
 - [live_in_aide_income_rule_memo.md](/home/barberb/HACC/Breach%20of%20Contract/docs/live_in_aide_income_rule_memo.md)
+- [caregiver_attestation_delay_legal_foundation_memo.md](/home/barberb/HACC/Breach%20of%20Contract/docs/caregiver_attestation_delay_legal_foundation_memo.md)
 - [live_in_aide_income_audit_discovery_requests.md](/home/barberb/HACC/Breach%20of%20Contract/docs/live_in_aide_income_audit_discovery_requests.md)
 - [jemiliah_money_management_timeline.md](/home/barberb/HACC/Breach%20of%20Contract/docs/jemiliah_money_management_timeline.md)
 - [county_money_management_discovery_requests.md](/home/barberb/HACC/Breach%20of%20Contract/docs/county_money_management_discovery_requests.md)
 - [county_money_management_subpoena_draft.md](/home/barberb/HACC/Breach%20of%20Contract/docs/county_money_management_subpoena_draft.md)
+- [county_money_management_discovery_captioned_draft.md](/home/barberb/HACC/Breach%20of%20Contract/docs/county_money_management_discovery_captioned_draft.md)
+- [county_money_management_subpoena_captioned_draft.md](/home/barberb/HACC/Breach%20of%20Contract/docs/county_money_management_subpoena_captioned_draft.md)
+- [county_money_management_filing_sequence_checklist.md](/home/barberb/HACC/Breach%20of%20Contract/docs/county_money_management_filing_sequence_checklist.md)
+- [county_money_management_packet_index_memo.md](/home/barberb/HACC/Breach%20of%20Contract/docs/county_money_management_packet_index_memo.md)
+- [verification_delay_hearing_script.md](/home/barberb/HACC/Breach%20of%20Contract/docs/verification_delay_hearing_script.md)
+- [easton_ridge_accessibility_hearing_script.md](/home/barberb/HACC/Breach%20of%20Contract/docs/easton_ridge_accessibility_hearing_script.md)
 
 Use these if you need the narrower theory that HACC treated Benjamin Barber like an ordinary counted-income household member instead of a live-in caregiver, while also receiving county-side representative-payee and Money Management communications about Jane Cortez's rent and housing decisions.
 

@@ -89,8 +89,11 @@ def _flatten_strings(value: Any) -> List[str]:
     return []
 
 
-def build_rendered_title18_filings(merged_order_track: str = "hacc") -> Dict[str, Any]:
-    context = build_render_context()
+def build_rendered_title18_filings(
+    merged_order_track: str = "hacc",
+    override_paths: Iterable[Path | str] | None = None,
+) -> Dict[str, Any]:
+    context = build_render_context(override_paths=override_paths)
     documents = {
         "merged_motion": {
             "sourceId": "title18_merged_motion_001",
@@ -141,8 +144,15 @@ def build_rendered_title18_filings(merged_order_track: str = "hacc") -> Dict[str
     }
 
 
-def write_rendered_title18_filings(bundle: Dict[str, Any] | None = None, merged_order_track: str = "hacc") -> Dict[str, Path]:
-    bundle = bundle or build_rendered_title18_filings(merged_order_track=merged_order_track)
+def write_rendered_title18_filings(
+    bundle: Dict[str, Any] | None = None,
+    merged_order_track: str = "hacc",
+    override_paths: Iterable[Path | str] | None = None,
+) -> Dict[str, Path]:
+    bundle = bundle or build_rendered_title18_filings(
+        merged_order_track=merged_order_track,
+        override_paths=override_paths,
+    )
     outputs = {
         "context_json": OUTPUTS / "title18_render_context.json",
         "manifest_json": OUTPUTS / "title18_render_manifest.json",

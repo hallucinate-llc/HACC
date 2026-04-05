@@ -187,6 +187,8 @@ If the court expects a very short packet, attach only:
   - `Exhibits 6, 8, 9`
 - Documentation burden / delay:
   - `Exhibits 7, 8`
+- Overbroad verification / accommodation delay:
+  - `Exhibits 4, 7, 8, 9`
 - Julio household-status inconsistency:
   - `Exhibits 4, 10`
 - Julio notice / hearing-specific record:
@@ -199,6 +201,15 @@ If the court expects a very short packet, attach only:
   - `Exhibits 14, 15, 16`
 - Relocation trigger / conditions precedent:
   - `Exhibit 1`
+
+## Hearing Emphasis Note
+
+If the hearing focus shifts toward why the relocation and accommodation process became so delayed, present this sequence together:
+
+1. `Exhibit 4` for ongoing voucher and accommodation timing
+2. `Exhibit 7` for the formal financial-demand letter
+3. `Exhibit 8` for the expanded additional-information thread
+4. `Exhibit 9` for the written real-time complaint that stale and excessive demands were delaying the move
 
 ## Assembly Instruction
 

@@ -7,7 +7,7 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, Iterable, List
 
 from formal_logic.title18_filing_index import build_title18_filing_index, build_title18_proposed_orders, render_proposed_order_markdown
 from formal_logic.title18_rendered_filings import build_rendered_title18_filings
@@ -84,12 +84,15 @@ def _render_packet_motion(document: Dict[str, Any]) -> Dict[str, Any]:
     }
 
 
-def build_title18_final_packet(track: str) -> Dict[str, Any]:
+def build_title18_final_packet(
+    track: str,
+    override_paths: Iterable[Path | str] | None = None,
+) -> Dict[str, Any]:
     spec = _packet_spec(track)
-    rendered = build_rendered_title18_filings()
-    orders = build_title18_proposed_orders()
-    service_packet = build_title18_service_packet()
-    filing_index = build_title18_filing_index()
+    rendered = build_rendered_title18_filings(override_paths=override_paths)
+    orders = build_title18_proposed_orders(override_paths=override_paths)
+    service_packet = build_title18_service_packet(override_paths=override_paths)
+    filing_index = build_title18_filing_index(override_paths=override_paths)
 
     motion = _render_packet_motion(rendered["documents"][spec["documentKey"]])
     order = orders["renderedOrders"][spec["orderKey"]]
@@ -175,9 +178,9 @@ def render_title18_final_packet_markdown(packet: Dict[str, Any]) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
-def write_title18_final_packets() -> Dict[str, Path]:
-    hacc = build_title18_final_packet("hacc")
-    quantum = build_title18_final_packet("quantum")
+def write_title18_final_packets(override_paths: Iterable[Path | str] | None = None) -> Dict[str, Path]:
+    hacc = build_title18_final_packet("hacc", override_paths=override_paths)
+    quantum = build_title18_final_packet("quantum", override_paths=override_paths)
     outputs = {
         "hacc_json": OUTPUTS / "title18_hacc_final_packet.json",
         "hacc_markdown": OUTPUTS / "title18_hacc_final_packet.md",

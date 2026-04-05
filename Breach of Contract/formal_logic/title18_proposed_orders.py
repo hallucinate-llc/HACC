@@ -5,7 +5,8 @@ Shared proposed-order builders for Title 18 filing artifacts.
 from __future__ import annotations
 
 import re
-from typing import Any, Dict, List
+from pathlib import Path
+from typing import Any, Dict, Iterable, List
 
 from formal_logic.title18_context import build_render_context
 
@@ -76,8 +77,8 @@ def _render_order(order: Dict[str, Any], context: Dict[str, Any]) -> Dict[str, A
     return rendered
 
 
-def build_title18_proposed_orders() -> Dict[str, Any]:
-    context = build_render_context()
+def build_title18_proposed_orders(override_paths: Iterable[Path | str] | None = None) -> Dict[str, Any]:
+    context = build_render_context(override_paths=override_paths)
     hacc_order = {
         "orderId": "title18_hacc_proposed_order_001",
         "title": "Proposed Order Staying or Denying Displacement Relief and Compelling Section 18 Discovery",

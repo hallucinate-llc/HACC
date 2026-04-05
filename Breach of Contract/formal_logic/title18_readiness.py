@@ -4,9 +4,10 @@ Build a readiness report for the Title 18 filing packets.
 
 from __future__ import annotations
 
+import argparse
 import json
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, Iterable, List
 
 from formal_logic.title18_context import build_render_context
 from formal_logic.title18_final_packet import build_title18_final_packet
@@ -42,11 +43,17 @@ def _filled_override_fields(context: Dict[str, Any]) -> List[str]:
     return sorted(set(filled))
 
 
-def build_title18_readiness_report(merged_order_track: str = "hacc") -> Dict[str, Any]:
-    context = build_render_context()
-    index = build_title18_filing_index(merged_order_track=merged_order_track)
-    hacc_packet = build_title18_final_packet("hacc")
-    quantum_packet = build_title18_final_packet("quantum")
+def build_title18_readiness_report(
+    merged_order_track: str = "hacc",
+    override_paths: Iterable[Path | str] | None = None,
+) -> Dict[str, Any]:
+    context = build_render_context(override_paths=override_paths)
+    index = build_title18_filing_index(
+        merged_order_track=merged_order_track,
+        override_paths=override_paths,
+    )
+    hacc_packet = build_title18_final_packet("hacc", override_paths=override_paths)
+    quantum_packet = build_title18_final_packet("quantum", override_paths=override_paths)
 
     hacc_missing = hacc_packet["aggregateUnresolvedPlaceholders"]
     quantum_missing = quantum_packet["aggregateUnresolvedPlaceholders"]
@@ -59,6 +66,7 @@ def build_title18_readiness_report(merged_order_track: str = "hacc") -> Dict[str
             "generatedAt": context["substitutions"]["[DATE]"],
             "mergedOrderTrack": merged_order_track,
             "overridePath": context["meta"]["overridePath"],
+            "overridePaths": context["meta"]["overridePaths"],
         },
         "summary": {
             "filledOverrideFieldCount": len(filled_fields),
@@ -89,7 +97,9 @@ def render_title18_readiness_markdown(report: Dict[str, Any]) -> str:
     lines.append("# Title 18 Readiness Report")
     lines.append("")
     lines.append(f"- Merged order track: {report['meta']['mergedOrderTrack']}")
-    lines.append(f"- Override file: {report['meta']['overridePath']}")
+    lines.append(f"- Primary override file: {report['meta']['overridePath']}")
+    if report["meta"].get("overridePaths"):
+        lines.append(f"- Override inputs: {', '.join(report['meta']['overridePaths'])}")
     lines.append(f"- Filled override fields: {report['summary']['filledOverrideFieldCount']}")
     lines.append("")
     lines.append("## Common Missing Fields")
@@ -113,19 +123,39 @@ def render_title18_readiness_markdown(report: Dict[str, Any]) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
-def write_title18_readiness_report(report: Dict[str, Any] | None = None, merged_order_track: str = "hacc") -> Dict[str, Path]:
-    report = report or build_title18_readiness_report(merged_order_track=merged_order_track)
+def write_title18_readiness_report(
+    report: Dict[str, Any] | None = None,
+    merged_order_track: str = "hacc",
+    override_paths: Iterable[Path | str] | None = None,
+) -> Dict[str, Path]:
+    report = report or build_title18_readiness_report(
+        merged_order_track=merged_order_track,
+        override_paths=override_paths,
+    )
     outputs = {
         "json": OUTPUTS / "title18_readiness_report.json",
         "markdown": OUTPUTS / "title18_readiness_report.md",
+        "track_json": OUTPUTS / f"title18_readiness_report_{merged_order_track}.json",
+        "track_markdown": OUTPUTS / f"title18_readiness_report_{merged_order_track}.md",
     }
-    outputs["json"].write_text(json.dumps(report, indent=2) + "\n")
-    outputs["markdown"].write_text(render_title18_readiness_markdown(report))
+    rendered_markdown = render_title18_readiness_markdown(report)
+    rendered_json = json.dumps(report, indent=2) + "\n"
+    outputs["json"].write_text(rendered_json)
+    outputs["markdown"].write_text(rendered_markdown)
+    outputs["track_json"].write_text(rendered_json)
+    outputs["track_markdown"].write_text(rendered_markdown)
     return outputs
 
 
 def main() -> int:
-    outputs = write_title18_readiness_report()
+    parser = argparse.ArgumentParser(description="Build a Title 18 readiness report")
+    parser.add_argument("--merged-order-track", choices=["hacc", "quantum"], default="hacc")
+    parser.add_argument("--override-file", action="append", default=None)
+    args = parser.parse_args()
+    outputs = write_title18_readiness_report(
+        merged_order_track=args.merged_order_track,
+        override_paths=args.override_file,
+    )
     for path in outputs.values():
         print(path)
     return 0

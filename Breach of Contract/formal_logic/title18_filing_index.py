@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, Iterable, List
 
 from formal_logic.title18_proposed_orders import build_title18_proposed_orders, render_proposed_order_markdown
 from formal_logic.title18_rendered_filings import build_rendered_title18_filings
@@ -15,10 +15,16 @@ ROOT = Path("/home/barberb/HACC/Breach of Contract")
 OUTPUTS = ROOT / "outputs"
 
 
-def build_title18_filing_index(merged_order_track: str = "hacc") -> Dict[str, Any]:
-    rendered = build_rendered_title18_filings(merged_order_track=merged_order_track)
-    proposed_orders = build_title18_proposed_orders()
-    service_packet = build_title18_service_packet()
+def build_title18_filing_index(
+    merged_order_track: str = "hacc",
+    override_paths: Iterable[Path | str] | None = None,
+) -> Dict[str, Any]:
+    rendered = build_rendered_title18_filings(
+        merged_order_track=merged_order_track,
+        override_paths=override_paths,
+    )
+    proposed_orders = build_title18_proposed_orders(override_paths=override_paths)
+    service_packet = build_title18_service_packet(override_paths=override_paths)
     unresolved_by_document = {
         item["documentKey"]: item["unresolvedPlaceholders"] for item in rendered["manifest"]["documents"]
     }
@@ -109,9 +115,16 @@ def render_title18_filing_index_markdown(index: Dict[str, Any]) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
-def write_title18_filing_index(bundle: Dict[str, Any] | None = None, merged_order_track: str = "hacc") -> Dict[str, Path]:
-    bundle = bundle or build_title18_filing_index(merged_order_track=merged_order_track)
-    proposed_orders = build_title18_proposed_orders()
+def write_title18_filing_index(
+    bundle: Dict[str, Any] | None = None,
+    merged_order_track: str = "hacc",
+    override_paths: Iterable[Path | str] | None = None,
+) -> Dict[str, Path]:
+    bundle = bundle or build_title18_filing_index(
+        merged_order_track=merged_order_track,
+        override_paths=override_paths,
+    )
+    proposed_orders = build_title18_proposed_orders(override_paths=override_paths)
     outputs = {
         "hacc_order_json": OUTPUTS / "title18_hacc_proposed_order.json",
         "hacc_order_markdown": OUTPUTS / "title18_hacc_proposed_order.md",

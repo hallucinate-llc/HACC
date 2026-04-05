@@ -26,14 +26,23 @@ Use this to turn the current drafts into a hearing-ready filing set.
 
 ## Best Exhibits To Attach First
 
-1. Exhibit M: Phase II notice / approval-trigger record.
-2. Exhibit I: mobility limitation and third-floor incompatibility record.
-3. Exhibit L: Ferron email and packet non-transmission correspondence.
-4. Administrative Plan excerpts:
-   - Hillside Manor PBV entry
-   - Hillside Manor LP / RAD PBV entry
-   - excluded-units entry showing replacement housing
-   - PBV waitlist / Blossom-related entry
+1. Use [fed_exhibit_packet_order.md](/home/barberb/HACC/Breach%20of%20Contract/docs/fed_exhibit_packet_order.md) as the controlling numbering guide.
+2. For accommodation and accessibility, attach:
+   - `Exhibit 2`
+   - `Exhibit 3`
+   - `Exhibit 4`
+   - `Exhibit 5`
+3. For overbroad verification and accommodation delay, attach:
+   - `Exhibit 7`
+   - `Exhibit 8`
+   - `Exhibit 9`
+4. For Quantum packet obstruction, attach:
+   - `Exhibit 6`
+5. For household-status / hearing / interference issues, attach as needed:
+   - `Exhibit 10`
+   - `Exhibit 11`
+   - `Exhibit 12`
+   - `Exhibit 13`
 
 ## Best Short-Form Filing Strategy
 

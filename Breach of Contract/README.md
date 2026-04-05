@@ -4,9 +4,11 @@ This directory contains the Title 18 demolition/relocation analysis pipeline, do
 
 ## Title 18 Packet Regeneration
 
-The Title 18 filing set can now be regenerated from a single override file:
+The Title 18 filing set can now be regenerated from a shared override file and a stable track-specific layered override file:
 
 - Edit `title18_render_context_overrides.json` with case-specific values.
+- Edit `title18_hacc_context_overrides.json` or `title18_quantum_context_overrides.json` for track-specific values.
+- `make prep-title18-overrides` still refreshes the suggestion files in `outputs/`, but it will only seed the editable track files if they do not already exist.
 - Run one of the wrapper commands below from this directory.
 
 HACC-oriented merged packet and final packet set:
@@ -43,7 +45,11 @@ Direct Python entry point if you want to pass the merged track yourself:
 cd "/home/barberb/HACC/Breach of Contract"
 python3 -m formal_logic.title18_regenerate_packets --merged-order-track hacc
 python3 -m formal_logic.title18_regenerate_packets --merged-order-track quantum
+python3 -m formal_logic.title18_regenerate_packets --merged-order-track hacc --override-file title18_render_context_overrides.json --override-file title18_hacc_context_overrides.json
+python3 -m formal_logic.title18_regenerate_packets --merged-order-track quantum --override-file title18_render_context_overrides.json --override-file title18_quantum_context_overrides.json
 ```
+
+When multiple `--override-file` arguments are passed, later files win for any duplicate placeholder.
 
 The most useful outputs after regeneration are:
 
@@ -61,12 +67,31 @@ cd "/home/barberb/HACC/Breach of Contract"
 make check-title18
 ```
 
+This default readiness target now checks the HACC track with the shared file plus `title18_hacc_context_overrides.json`.
+
+For explicit track checks:
+
+```bash
+cd "/home/barberb/HACC/Breach of Contract"
+make check-title18-hacc
+make check-title18-quantum
+```
+
 This writes:
 
 - `outputs/title18_readiness_report.json`
 - `outputs/title18_readiness_report.md`
+- `outputs/title18_readiness_report_hacc.json` or `outputs/title18_readiness_report_quantum.json`
+- `outputs/title18_readiness_report_hacc.md` or `outputs/title18_readiness_report_quantum.md`
 
-VS Code users can run the `Check Title18 Readiness` task for the same report.
+VS Code users can run the `Check Title18 HACC Readiness` or `Check Title18 Quantum Readiness` task for the same report.
+
+You can also point the readiness report at a specific layered override set:
+
+```bash
+cd "/home/barberb/HACC/Breach of Contract"
+python3 -m formal_logic.title18_readiness --merged-order-track hacc --override-file title18_render_context_overrides.json --override-file outputs/title18_hacc_override_template.json
+```
 
 To generate packet-specific missing-only override templates:
 
@@ -80,6 +105,8 @@ This writes:
 - `outputs/title18_hacc_override_template.json`
 - `outputs/title18_quantum_override_template.json`
 - `outputs/title18_override_worksheet.md`
+- `title18_hacc_context_overrides.json` if missing
+- `title18_quantum_context_overrides.json` if missing
 
 VS Code users can run the `Generate Title18 Override Templates` task for the same outputs.
 

@@ -28,12 +28,38 @@
       "problemMatcher": []
     },
     {
-      "label": "Check Title18 Readiness",
+      "label": "Check Title18 HACC Readiness",
       "type": "shell",
       "command": "python3",
       "args": [
         "-m",
-        "formal_logic.title18_readiness"
+        "formal_logic.title18_readiness",
+        "--merged-order-track",
+        "hacc",
+        "--override-file",
+        "title18_render_context_overrides.json",
+        "--override-file",
+        "title18_hacc_context_overrides.json"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/Breach of Contract"
+      },
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check Title18 Quantum Readiness",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "-m",
+        "formal_logic.title18_readiness",
+        "--merged-order-track",
+        "quantum",
+        "--override-file",
+        "title18_render_context_overrides.json",
+        "--override-file",
+        "title18_quantum_context_overrides.json"
       ],
       "options": {
         "cwd": "${workspaceFolder}/Breach of Contract"

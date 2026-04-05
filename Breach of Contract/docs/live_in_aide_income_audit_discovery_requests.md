@@ -11,20 +11,21 @@ This focused discovery set targets a narrow issue:
 2. Produce all records showing whether HACC classified, coded, described, or analyzed Benjamin Barber as a live-in aide, caregiver, household member, family member, income-counted member, or some other category at any time from October 1, 2025 through April 30, 2026.
 3. Produce all policies, desk guides, manuals, training materials, cheat sheets, workflow documents, and internal guidance used by HACC concerning whether the income of a live-in aide or caregiver is counted in family income calculations.
 4. Produce all policies, manuals, or internal guidance used by HACC concerning what income, tax, banking, asset, or business records may be requested from a proposed or approved live-in aide.
-5. Produce all records reflecting why HACC demanded Benjamin Barber's income, tax, banking, asset, business, entity, or company records during the accommodation, voucher, or relocation process.
-6. Produce all records identifying the person or persons who decided to request, review, escalate, or insist upon those income and business records.
-7. Produce all records identifying the legal, regulatory, policy, or procedural authority HACC relied on in requesting those records.
-8. Produce all records showing whether HACC considered the rule that a live-in aide's income is not counted in family income calculations before making those demands.
-9. Produce all records showing whether HACC considered or discussed that Benjamin Barber was acting as Jane Cortez's live-in caregiver when deciding what financial documentation to demand.
-10. Produce all records reflecting any request for tax forms, Schedule C forms, 1099s, business-entity documents, articles of incorporation, banking records, or similar materials relating to any company or entity associated with Benjamin Barber that had ceased operating or had not existed for approximately 10 years.
-11. Produce all records showing why HACC believed records from such old or defunct entities were relevant to subsidy, voucher, relocation, or accommodation decisions.
-12. Produce all emails, notes, comments, internal messages, CRM entries, or memoranda that mention `Nerd Party`, `Hallucinate`, `Schedule C`, `1099`, `Coinbase`, `articles of incorporation`, or similar business-record requests in connection with this household.
-13. Produce all case notes, task logs, CRM audit trails, and review history showing how much staff time was spent reviewing, following up on, escalating, or requesting Benjamin Barber's income and business records.
-14. Produce all records showing whether HACC delayed voucher issuance, relocation processing, or accommodation review while waiting for those records.
-15. Produce all records showing whether HACC ever concluded that any of the demanded records were unnecessary, stale, duplicative, or unrelated to a proper family-income calculation.
-16. Produce all records reflecting communications between HACC and any Clackamas County representative-payee, Social Services, or Money Management personnel concerning Jane Cortez's rent, payment status, voucher use, portability, or housing decisions from January 1, 2026 through April 30, 2026.
-17. Produce all records reflecting whether HACC expected, requested, received, tracked, or discussed a payment or check that Clackamas County Money Management personnel allegedly said would be sent on Jane Cortez's behalf.
-18. Produce all records showing whether HACC took any action, delayed any action, or changed any account, rent, voucher, or relocation handling based on the reported statement that Benjamin Barber should stop paying Jane Cortez's rent because a county-side payment would be sent.
+5. Produce all policies, manuals, training materials, or internal guidance used by HACC concerning what information is the least amount of information necessary to evaluate a disability-related accommodation request, including any guidance concerning when additional disability-related information may not be requested because the disability or disability-related need is already known or readily apparent.
+6. Produce all records reflecting why HACC demanded Benjamin Barber's income, tax, banking, asset, business, entity, or company records during the accommodation, voucher, or relocation process.
+7. Produce all records identifying the person or persons who decided to request, review, escalate, or insist upon those income and business records.
+8. Produce all records identifying the legal, regulatory, policy, or procedural authority HACC relied on in requesting those records.
+9. Produce all records showing whether HACC considered the rule that a live-in aide's income is not counted in family income calculations before making those demands.
+10. Produce all records showing whether HACC considered or discussed that Benjamin Barber was acting as Jane Cortez's live-in caregiver when deciding what financial documentation to demand.
+11. Produce all records reflecting any request for tax forms, Schedule C forms, 1099s, business-entity documents, articles of incorporation, banking records, or similar materials relating to any company or entity associated with Benjamin Barber that had ceased operating or had not existed for approximately 10 years.
+12. Produce all records showing why HACC believed records from such old or defunct entities were relevant to subsidy, voucher, relocation, accommodation, or reasonable-accommodation review decisions.
+13. Produce all emails, notes, comments, internal messages, CRM entries, or memoranda that mention `Nerd Party`, `Hallucinate`, `Schedule C`, `1099`, `Coinbase`, `articles of incorporation`, or similar business-record requests in connection with this household.
+14. Produce all case notes, task logs, CRM audit trails, review history, and accommodation-tracking entries showing how much staff time was spent reviewing, following up on, escalating, or requesting Benjamin Barber's income and business records.
+15. Produce all records showing whether HACC delayed voucher issuance, relocation processing, or accommodation review while waiting for those records.
+16. Produce all records showing whether HACC ever concluded that any of the demanded records were unnecessary, stale, duplicative, or unrelated to a proper family-income calculation or reasonable-accommodation review.
+17. Produce all records reflecting communications between HACC and any Clackamas County representative-payee, Social Services, or Money Management personnel concerning Jane Cortez's rent, payment status, voucher use, portability, or housing decisions from January 1, 2026 through April 30, 2026.
+18. Produce all records reflecting whether HACC expected, requested, received, tracked, or discussed a payment or check that Clackamas County Money Management personnel allegedly said would be sent on Jane Cortez's behalf.
+19. Produce all records showing whether HACC took any action, delayed any action, or changed any account, rent, voucher, or relocation handling based on the reported statement that Benjamin Barber should stop paying Jane Cortez's rent because a county-side payment would be sent.
 
 ## Interrogatories to HACC
 
@@ -41,6 +42,7 @@ This focused discovery set targets a narrow issue:
 11. State when HACC first learned that a Clackamas County representative-payee or Money Management contact was affecting Jane Cortez's rent or housing decisions, and identify every person who received or acted on that information.
 12. State whether HACC contends any county-side representative-payee or Money Management communication affected Benjamin Barber's rent-payment obligations, voucher choices, portability, or relocation processing, and if so describe each effect.
 13. State whether HACC ever verified whether a county-issued payment or check referenced in Benjamin Barber's February 5, 2026 communication was sent or received, and if so identify all supporting records.
+14. State whether HACC contends the scope of financial information requested from Benjamin Barber reflected the least amount of information necessary to evaluate any disability-related accommodation or live-in-aide issue, and if so state all facts and authorities supporting that contention.
 
 ## Requests for Admission to HACC
 
