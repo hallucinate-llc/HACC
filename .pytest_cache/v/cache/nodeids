@@ -21,6 +21,7 @@
   "tests/test_google_voice_integration.py::test_google_voice_processor_parses_local_data_export",
   "tests/test_google_voice_integration.py::test_google_voice_processor_parses_takeout_directory",
   "tests/test_google_voice_integration.py::test_google_voice_processor_parses_vault_export",
+  "tests/test_google_voice_integration.py::test_google_voice_takeout_matches_only_event_local_sidecars",
   "tests/test_google_voice_integration.py::test_history_index_image_ocr_uses_tesseract_cli_fallback",
   "tests/test_google_voice_integration.py::test_import_gmail_evidence_can_reuse_google_voice_manifest",
   "tests/test_google_voice_integration.py::test_import_gmail_evidence_dedupes_google_voice_gmail_notifications",

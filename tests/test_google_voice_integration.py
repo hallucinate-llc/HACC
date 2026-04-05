@@ -18,7 +18,7 @@ import search_history_duckdb as duckdb_search_module
 def _build_voice_takeout(tmp_path: Path) -> Path:
     voice_dir = tmp_path / "Takeout" / "Voice" / "Messages" / "thread-001"
     voice_dir.mkdir(parents=True)
-    html_path = voice_dir / "Text - Housing Advocate.html"
+    html_path = voice_dir / "Housing Advocate - Text - 2026-03-24T04_56_14Z.html"
     html_path.write_text(
         """
         <html>
@@ -36,8 +36,38 @@ def _build_voice_takeout(tmp_path: Path) -> Path:
         '{"participants":["(503) 555-0100"],"labels":["housing"]}',
         encoding="utf-8",
     )
-    (voice_dir / "notice.jpg").write_bytes(b"fake-jpg")
-    (voice_dir / "voicemail.mp3").write_bytes(b"fake-mp3")
+    (voice_dir / "Housing Advocate - Text - 2026-03-24T04_56_14Z-1-1.jpg").write_bytes(b"fake-jpg")
+    (voice_dir / "Housing Advocate - Voicemail - 2026-03-24T04_56_14Z.mp3").write_bytes(b"fake-mp3")
+    return tmp_path
+
+
+def _build_voice_takeout_shared_calls_dir(tmp_path: Path) -> Path:
+    calls_dir = tmp_path / "Takeout" / "Voice" / "Calls"
+    calls_dir.mkdir(parents=True)
+    (calls_dir / "+15035550100 - Text - 2026-03-24T04_56_14Z.html").write_text(
+        """
+        <html>
+          <head><title>Text conversation with +1 (503) 555-0100</title></head>
+          <body>
+            <div>2026-03-24T04:56:14Z</div>
+            <div>Tenant: Please send the inspection notice.</div>
+          </body>
+        </html>
+        """,
+        encoding="utf-8",
+    )
+    (calls_dir / "+15035550100 - Text - 2026-03-24T04_56_14Z-1-1.jpg").write_bytes(b"img-one")
+    (calls_dir / "+15035550100 - Text - 2026-03-24T04_56_14Z-2-1.jpg").write_bytes(b"img-two")
+    (calls_dir / "+15035559999 - Missed - 2026-03-24T05_10_00Z.html").write_text(
+        """
+        <html>
+          <head><title>Missed call from +1 (503) 555-9999</title></head>
+          <body><div>2026-03-24T05:10:00Z</div></body>
+        </html>
+        """,
+        encoding="utf-8",
+    )
+    (calls_dir / "+15035559999 - Voicemail - 2026-03-24T05_10_00Z.mp3").write_bytes(b"audio")
     return tmp_path
 
 
@@ -93,7 +123,7 @@ def test_google_voice_processor_parses_takeout_directory(tmp_path: Path) -> None
     assert "(503) 555-0100" in event["phone_numbers"]
     assert event["timestamp"] == "2026-03-24T04:56:14+00:00"
     assert "inspection notice" in event["text_content"].lower()
-    assert any(path.endswith("voicemail.mp3") for path in event["sidecar_paths"])
+    assert any(path.endswith("Housing Advocate - Voicemail - 2026-03-24T04_56_14Z.mp3") for path in event["sidecar_paths"])
 
 
 def test_google_voice_materialization_appends_attachment_enrichments_to_transcript(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
@@ -101,11 +131,11 @@ def test_google_voice_materialization_appends_attachment_enrichments_to_transcri
     voice_module = importlib.import_module("ipfs_datasets_py.processors.multimedia.google_voice_processor")
 
     def _fake_ocr(path: Path) -> tuple[str, dict[str, object]]:
-        assert path.name == "notice.jpg"
+        assert path.name == "Housing Advocate - Text - 2026-03-24T04_56_14Z-1-1.jpg"
         return "Scanned inspection notice from image", {"status": "success", "backend": "test_ocr"}
 
     def _fake_transcribe(path: Path) -> tuple[str, dict[str, object]]:
-        assert path.name == "voicemail.mp3"
+        assert path.name == "Housing Advocate - Voicemail - 2026-03-24T04_56_14Z.mp3"
         return "Voicemail says the inspector will arrive at 9 AM", {
             "status": "success",
             "backend": "test_whisper",
@@ -131,6 +161,25 @@ def test_google_voice_materialization_appends_attachment_enrichments_to_transcri
     assert all(Path(path).is_file() for path in bundle["enrichment_paths"])
     assert event_payload["enrichment_count"] == 2
     assert {item["metadata"]["backend"] for item in event_payload["enrichments"]} == {"test_ocr", "test_whisper"}
+
+
+def test_google_voice_takeout_matches_only_event_local_sidecars(tmp_path: Path) -> None:
+    takeout_root = _build_voice_takeout_shared_calls_dir(tmp_path)
+    processor = gmail_module.GoogleVoiceProcessor()
+    try:
+        result = processor.parse_takeout(takeout_root)
+    finally:
+        processor.close()
+
+    assert result["event_count"] == 2
+    events_by_title = {event["title"]: event for event in result["events"]}
+    text_event = events_by_title["Text conversation with +1 (503) 555-0100"]
+    missed_event = events_by_title["Missed call from +1 (503) 555-9999"]
+
+    assert len(text_event["sidecar_paths"]) == 2
+    assert all("+15035550100 - Text - 2026-03-24T04_56_14Z" in path for path in text_event["sidecar_paths"])
+    assert len(missed_event["sidecar_paths"]) == 1
+    assert missed_event["sidecar_paths"][0].endswith("+15035559999 - Voicemail - 2026-03-24T05_10_00Z.mp3")
 
 
 def test_google_voice_plain_text_extraction_skips_style_and_script_blocks() -> None:
