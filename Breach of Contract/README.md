@@ -112,6 +112,20 @@ VS Code users can run the `Generate Title18 Override Templates` task for the sam
 
 The worksheet now reflects the current contents of the editable track override files and shows filled-versus-missing counts for each track, so it can be used as a live completion sheet rather than a blank template.
 
+To lint the editable track override files for still-missing and unexpected keys:
+
+```bash
+cd "/home/barberb/HACC/Breach of Contract"
+make audit-title18-overrides
+```
+
+This writes:
+
+- `outputs/title18_override_audit.json`
+- `outputs/title18_override_audit.md`
+
+VS Code users can run the `Audit Title18 Override Files` task for the same outputs.
+
 Below is the earlier workspace2 prototype documentation preserved in place.
 
 # workspace2

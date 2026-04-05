@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Dependency-free regression checks for workspace2."""
+"""Dependency-free regression checks for this workspace."""
 
 import json
 import subprocess
@@ -1820,13 +1820,13 @@ def test_case_matrix_cli_supports_detail_view():
 
 def test_case_matrix_cli_supports_path_only_mode():
     path = resolve_artifact_path(ROOT, case_id="live_in_aide_case_001", kind="memorandum_pdf")
-    assert path.endswith("/workspace2/outputs/live_in_aide_case_001_package/memorandum_of_law.pdf")
+    assert path.endswith("/outputs/live_in_aide_case_001_package/memorandum_of_law.pdf")
     advocacy_path = resolve_artifact_path(ROOT, branch="constructive_denial", kind="advocacy_bundle")
-    assert advocacy_path.endswith("/workspace2/outputs/live_in_aide_case_001_package/advocacy_bundle.json")
+    assert advocacy_path.endswith("/outputs/live_in_aide_case_001_package/advocacy_bundle.json")
     label_filtered_path = resolve_artifact_path(
         ROOT, case_id="live_in_aide_case_no_violation_001", warning_label="paraphrase_heavy", kind="summary"
     )
-    assert label_filtered_path.endswith("/workspace2/outputs/live_in_aide_case_no_violation_001_package/summary.json")
+    assert label_filtered_path.endswith("/outputs/live_in_aide_case_no_violation_001_package/summary.json")
     try:
         resolve_artifact_path(ROOT, case_id="live_in_aide_case_001")
     except ValueError as exc:
@@ -1855,17 +1855,17 @@ def test_case_matrix_cli_supports_kinds_mode():
 
 def test_case_matrix_cli_supports_primary_only_mode():
     path = resolve_primary_artifact_path(ROOT, case_id="live_in_aide_case_001")
-    assert path.endswith("/workspace2/outputs/live_in_aide_case_001_package/memorandum_of_law.pdf")
+    assert path.endswith("/outputs/live_in_aide_case_001_package/memorandum_of_law.pdf")
     effective_path = resolve_primary_artifact_path(ROOT, case_id="live_in_aide_case_effective_accommodation_001")
-    assert effective_path.endswith("/workspace2/outputs/live_in_aide_case_effective_accommodation_001_package/memorandum.md")
+    assert effective_path.endswith("/outputs/live_in_aide_case_effective_accommodation_001_package/memorandum.md")
     gap_path = resolve_primary_artifact_path(ROOT, case_id="live_in_aide_case_no_violation_001")
-    assert gap_path.endswith("/workspace2/outputs/live_in_aide_case_no_violation_001_package/summary.json")
+    assert gap_path.endswith("/outputs/live_in_aide_case_no_violation_001_package/summary.json")
     label_filtered_gap_path = resolve_primary_artifact_path(
         ROOT, case_id="live_in_aide_case_no_violation_001", warning_label="paraphrase_heavy"
     )
-    assert label_filtered_gap_path.endswith("/workspace2/outputs/live_in_aide_case_no_violation_001_package/summary.json")
+    assert label_filtered_gap_path.endswith("/outputs/live_in_aide_case_no_violation_001_package/summary.json")
     warned_gap_path = resolve_primary_artifact_path(ROOT, case_id="live_in_aide_case_no_violation_001", warned_only=True)
-    assert warned_gap_path.endswith("/workspace2/outputs/live_in_aide_case_no_violation_001_package/summary.json")
+    assert warned_gap_path.endswith("/outputs/live_in_aide_case_no_violation_001_package/summary.json")
     try:
         resolve_primary_artifact_path(ROOT)
     except ValueError as exc:
@@ -3699,7 +3699,7 @@ def test_case_matrix_cli_subprocess_supports_warning_label_single_case_modes():
         capture_output=True,
         text=True,
     )
-    assert path_only.stdout.strip().endswith("/workspace2/outputs/live_in_aide_case_no_violation_001_package/summary.json")
+    assert path_only.stdout.strip().endswith("/outputs/live_in_aide_case_no_violation_001_package/summary.json")
 
 
 def test_case_matrix_cli_subprocess_supports_trust_filter():

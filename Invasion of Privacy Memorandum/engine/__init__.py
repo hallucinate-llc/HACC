@@ -1,1 +1,1 @@
-"""workspace2 evaluation engine."""
+"""Evaluation engine for the Invasion of Privacy Memorandum workspace."""

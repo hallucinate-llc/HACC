@@ -30,7 +30,7 @@ The repo now supports:
 17. memorandum generation with PDF output and dependency-to-authority grounding
 
 ## Export targets taken from the updated chat
-`workspace2` now treats these as first-class artifact targets:
+This workspace now treats these as first-class artifact targets:
 - `legal_reasoning.pl`
 - `context.json`
 - `case_instance.jsonld`
@@ -78,7 +78,7 @@ The first implemented reasoning path is:
 - `docs/`: planning and design notes
 
 ## Output modes
-Documented in [output_modes.md](/home/barberb/HACC/workspace2/docs/output_modes.md):
+Documented in [output_modes.md](output_modes.md):
 - `result`
 - `package`
 - `memorandum`
@@ -114,7 +114,7 @@ That branch is now carried through:
 - advocacy outputs are generated from the same evaluated case state rather than from a separate hand-authored layer
 
 ## Important design decisions
-Documented in [design_decisions.md](/home/barberb/HACC/workspace2/docs/design_decisions.md):
+Documented in [design_decisions.md](design_decisions.md):
 - privacy/necessity interpretation is a policy setting
 - accepted findings override asserted facts
 - evidence and event layers are modeled explicitly

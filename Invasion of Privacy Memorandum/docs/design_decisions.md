@@ -5,7 +5,7 @@ The updated shared chat contains a modeling tension:
 - some examples imply that living-room sleeping alone creates privacy loss and therefore necessity
 - one example expected `necessary = false` even when the aide still slept in the living room
 
-For `workspace2`, this is now an explicit policy setting rather than a hidden assumption.
+For this workspace, this is now an explicit policy setting rather than a hidden assumption.
 
 Supported modes:
 - `inferred_from_living_room_sleeping`
@@ -52,7 +52,7 @@ The updated chat described a downloadable artifact package with these outputs:
 - tests JSON
 - README
 
-`workspace2` now treats that package shape as an implementation target.
+This workspace now treats that package shape as an implementation target.
 
 ## 5. Provenance Shape
 The evaluator now preserves provenance in two layers:

@@ -1,7 +1,7 @@
 # Output Modes
 
 ## Purpose
-The updated shared chat now implies that `workspace2` should support more than one kind of output.
+The updated shared chat now implies that this workspace should support more than one kind of output.
 
 The system already produces:
 - `result`
@@ -50,8 +50,8 @@ The next layer is advocacy-oriented output built from the same evaluated case.
 - should identify strongest current theory, evidentiary gaps, and likely pressure points
 
 ## Current Implementation Choice
-`workspace2` now includes a lightweight advocacy generator:
-- [generate_advocacy.py](/home/barberb/HACC/workspace2/engine/generate_advocacy.py)
+This workspace now includes a lightweight advocacy generator:
+- [generate_advocacy.py](../engine/generate_advocacy.py)
 
 This generator is intentionally conservative:
 - it derives text from the evaluated case output

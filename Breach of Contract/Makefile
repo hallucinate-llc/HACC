@@ -1,4 +1,4 @@
-.PHONY: regen-hacc regen-quantum check-title18 check-title18-hacc check-title18-quantum prep-title18-overrides
+.PHONY: regen-hacc regen-quantum check-title18 check-title18-hacc check-title18-quantum prep-title18-overrides audit-title18-overrides
 
 regen-hacc:
 	bash ./regen_title18_hacc.sh
@@ -17,3 +17,6 @@ check-title18-quantum:
 
 prep-title18-overrides:
 	python3 -m formal_logic.title18_override_templates
+
+audit-title18-overrides:
+	python3 -m formal_logic.title18_override_audit
