@@ -8,8 +8,8 @@ Use this as the upload order for e-filing so the docket reads clearly and the ju
 2. Memorandum in Support (if separate event required)
 3. Proposed Third-Party Complaint (attachment or separate event per court rule)
 4. Defendant Declaration in Support
-5. Exhibit Index
-6. Exhibit Packet (single PDF bookmarked A-K if permitted)
+5. Exhibit Index (Exhibits A–M)
+6. Exhibit Packet (single PDF bookmarked A-M if permitted)
 7. Proposed Order
 8. Certificate of Service
 
@@ -22,7 +22,7 @@ Use consistent sortable names:
 3. 03_Proposed_Third_Party_Complaint_Quantum.pdf
 4. 04_Declaration_Barber_Cortez.pdf
 5. 05_Exhibit_Index_Quantum.pdf
-6. 06_Exhibits_A_to_K_Quantum.pdf
+6. 06_Exhibits_A_to_M_Quantum.pdf
 7. 07_Proposed_Order_Joinder_Quantum.pdf
 8. 08_Certificate_of_Service_Quantum.pdf
 

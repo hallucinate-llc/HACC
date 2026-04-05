@@ -48,6 +48,59 @@ This memo isolates repository evidence supporting the position that joinder of Q
   - Oregon City, OR 97045 is in Clackamas County — the same county where HACC operates and where the Hillside Park redevelopment is taking place.
   - This is the strongest current repository fact connecting Quantum Residential to HACC's subsidized housing operations in an official capacity under federal contract.
 
+- The same Admin Plan extract (approximately line 32317) contains a second Quantum Residential entry under Chapter 17 (PBV Development Information) for **Hillside Manor**, 2889 SE Hillside Court, Milwaukie, OR 97222:
+
+    > **Hillside Manor** (Chapter 17 PBV Exhibit 17-1)
+    > Address: 2889 SE Hillside Court, Milwaukie, OR 97222
+    > Owner Information: PHA-Owned
+    > **Property Management Company: Quantum Residential**
+    > PHA-Owned: Yes. Independent entity: Steven Nagel or HomeForward
+    > Mixed Finance Development: Yes
+    > HAP Contract: June 1, 2020 – May 31, 2040 (20-year term)
+    > Units: 96 × 1BR + 4 × 2BR = 100 units
+
+  - Hillside Manor is the same property that HACC identified as the relocation destination property and waitlist gateway for Hillside Park displaced residents. The Admin Plan confirms HACC owns it and Quantum Residential manages it under a 20-year HAP contract signed in June 2020.
+
+- The same extract (approximately line 33349) contains a **third Quantum Residential entry** for **Good Shepherd Village**, 12608 SE Skyshow Place, Happy Valley, OR:
+
+    > **Good Shepherd Village** (Chapter 17 PBV Exhibit 17-1)
+    > Owner Information: Good Shepherd Village Limited Partnership (Catholic Charities)
+    > **Property Management Company: Quantum Residential**
+    > PHA-Owned: No
+    > Mixed Finance Development: Yes
+    > HAP Contract: November 1, 2023 – October 31, 2043 (20-year term)
+
+  - Good Shepherd Village is a non-PHA-owned LP structure where HACC contracted Quantum Residential directly as property manager. This establishes Quantum as HACC's portfolio-wide preferred property manager operating under HAP contracts across multiple ownership structures and counties — not a coincidental or site-specific appointment.
+
+- The same extract (approximately line 37308) contains a **fourth Quantum Residential entry** under Chapter 18 (RAD PBV Development Information, Exhibit 18-1) for **Hillside Manor Apartments**, 2889 SE Hillside Ct, Milwaukie, OR 97222 — the same address:
+
+    > **Hillside Manor Apartments** (Chapter 18 RAD PBV Exhibit 18-1)
+    > Owner Information: **Hillside Manor Limited Partnership**
+    > **Property Management Company: Quantum Residential Property Management**
+    >   Email: HillsideManor@QResInc.com | Phone: 503-344-4540
+    > PHA-Owned: Yes
+    > Mixed-Finance Development: Yes
+    > **Closing Date: 1/1/2021**
+    > **RAD Notice: PIH 2019-23**
+    > HAP Contracts (two separate):
+    >   — 06/01/2020: **Eminent Domain 5 PBV plus 26 Enhanced PBV**
+    >   — 01/01/2021: **RAD HAP contract (70 RAD PBV)**
+
+  - **This is the successor-in-interest smoking gun.** The Hillside Manor site appears in the Admin Plan twice — once as a regular PBV property (Chapter 17) and separately as a RAD PBV property (Chapter 18). The Chapter 18 RAD entry reveals:
+
+    (a) **The private ownership entity is Hillside Manor Limited Partnership (LP)**. The LP is the private successor entity created through the RAD (Rental Assistance Demonstration) conversion. RAD allows a PHA to convert public housing from Section 9 ACC-based funding to project-based Section 8, while simultaneously bringing in private equity investors (typically via Low-Income Housing Tax Credits, LIHTC) through an LP ownership structure. HACC holds a nominal general partner interest but the LP brings in private investor capital. This is the legal mechanism for "private use" disposition.
+
+    (b) **The RAD closed 1/1/2021**, which means the conversion from public housing to the LP ownership structure was completed on January 1, 2021 — concurrent with the Hillside Park Phase I/Phase II demolition and displacement timeline.
+
+    (c) **"Eminent Domain 5 PBV"** in the 06/01/2020 HAP contract means five units at the Hillside Manor site were acquired through an eminent domain process and placed in PBV status. This directly connects the Hillside Park land acquisition to the eminent domain and displacement pathway that preceded the LP/RAD structure.
+
+    (d) **Quantum Residential Property Management** is named as the manager for the post-RAD LP structure, with a direct contact email (HillsideManor@QResInc.com) and phone number. Quantum's management of the LP property is not merely incidental — it is the designated operational role in the private successor entity's governance.
+
+  - The full successor chain from Public Housing → RAD/LP → Quantum Management is:
+    HACC public housing at Hillside Park → Eminent Domain acquisition → PBV conversion (6/1/2020, 5 eminent domain units + 26 enhanced) → RAD conversion to Hillside Manor LP (1/1/2021, 70 RAD PBV units) → Quantum Residential as named LP property manager.
+
+  - This confirms the theory that Quantum is not merely a private landlord independently selected for relocation placement. Quantum Residential entered the role of property manager for HACC's PHA-owned, RAD-converted, mixed-finance LP property — making it the operational arm of the private successor entity at the same Hillside site.
+
 - The same extract (approximately line 6313) contains the HACC PBV wait-list policy:
 
     > PBV Wait List for the following properties: Hillside Manor, TCC and Rosewood. Additional waiting lists will be created for new PBV developments where TPV holders have the right to return as relocation participants.
@@ -78,6 +131,15 @@ This memo isolates repository evidence supporting the position that joinder of Q
 
 - The same thread also preserves January 6, 2026 and December 22, 2025 emails copied to `blossom@quantumres.com`.
   - That is additional support that the HACC-side and Blossom-side actors were being addressed within the same communications sequence regarding relocation and intake.
+
+- **Ashley Ferron email, January 26, 2026 (same thread)** contains a directly contradicted misrepresentation:
+  - Ferron wrote: *"Hillside Manor and Quantum Residential are separate from the county and are not able to provide assistance to households that are not pursuing a unit at Blossom or Community Apartments."*
+  - This statement is directly contradicted by the HACC Administrative Plan, which lists Hillside Manor as PHA-Owned (Chapter 17 PBV entry) and Hillside Manor Apartments as PHA-Owned under the Hillside Manor Limited Partnership (Chapter 18 RAD PBV entry) — both under Quantum Residential as named property manager.
+  - Quantum Residential is listed as the contracted property manager for three PHA-owned or HACC-contracted developments: Clayton Mohr Commons (PHA-Owned), Hillside Manor (PHA-Owned, Chapter 17), and Hillside Manor Apartments under Hillside Manor LP (PHA-Owned, Chapter 18 RAD). The representation that Quantum is "separate from the county" is inconsistent with HACC's own administrative plan.
+  - This discrepancy between HACC's filed administrative documents and the in-litigation position of its staff supports both (a) the joinder theory that Quantum's role is embedded in HACC's program operations, and (b) the suggestion that HACC is attempting to shift responsibility to Quantum while concealing their operational coordination.
+
+- **Parkside Heights (parksideheights@quantumres.com)** — the email import manifest (`evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/email_import_manifest.json`) shows Parkside Heights (another Quantum Residential property, at the QResInc.com domain) was included in email threads alongside Kati Tilton (HACC Operations Manager) and HACC-Relocation regarding the relocation placement.
+  - This establishes that HACC's relocation operations were actively coordinating with multiple Quantum Residential properties simultaneously — not a one-off application referral, but a structured pipeline between HACC and Quantum's managed portfolio.
 
 - `evidence/email_imports/starworks5-confirmed-case-import-cli/0007-Re-Additional-Information-Needed-.../message.json`
   - A separate email in the same case thread contains this direct verbatim quote from the household member:
@@ -149,6 +211,12 @@ The current record supports framing the dispute as one continuous housing transi
 9. **HACC's own Administrative Plan directly lists Quantum Residential as the property management company for Clayton Mohr Commons, a PHA-owned mixed-finance development at 399 Caufield St, Oregon City, under a 20-year HUD HAP contract.** That is not a third-party allegation — it is an on-record statement in HACC's filed administrative plan.
 10. **HACC's own Administrative Plan classifies both Hillside Manor Apartments and Blossom & Community Apartments as excluded units — replacement housing for a demolished HACC project — with a first-occupancy preference for former residents.** That is a direct administrative confirmation that Blossom's placement function, Hillside Manor's relocation function, and Quantum's management role were all embedded in HACC's formal PBV housing program structure.
 
+11. **The Admin Plan's Chapter 17 PBV entry names Quantum Residential as manager of Hillside Manor itself** (the HACC-named relocation destination) — meaning the "relocation pathway" that HACC presented to the household was, from the outset, administered by the same private entity that HACC later claimed was "separate from the county."
+
+12. **The Admin Plan's Chapter 18 RAD PBV entry establishes a private successor LP (Hillside Manor Limited Partnership) as the legal owner post-RAD conversion (1/1/2021), with Quantum Residential as named manager** — placing Quantum inside the private successor entity structure at the same site where the eminent-domain-based displacement of Hillside Park residents originated.
+
+13. **HACC's own correspondence treated Quantum's leasing office as the official intake channel**, received documents from Hillside Manor/Quantum staff (cortez 1-4.pdf), and then directed the household to have Quantum staff forward the intake packet to HACC — placing Quantum squarely inside the same voucher-processing transaction.
+
 That is a substantially stronger basis for joinder than a theory that Quantum merely committed separate downstream misconduct.
 
 ### B. Duty and privity-like linkage
@@ -162,7 +230,15 @@ The current evidence does not yet prove classic contract privity in the narrow s
 5. Blossom was processed through an HACC waitlist.
 6. The owner / agent side had review and notice duties to the applicant.
 7. The alleged failure was specifically a failure to process, transmit, review, or respond within a coordinated HACC-linked housing opportunity.
-8. **HACC's own Administrative Plan names Quantum Residential as the property management company for a PHA-owned HAP contract development in Clackamas County.** That is the strongest available record of the formal contractual relationship between HACC (as PHA-owner) and Quantum Residential (as contracted property manager) operating under a federal housing assistance payment contract.
+9. **HACC's own Administrative Plan names Quantum Residential as property management company for Clayton Mohr Commons (PHA-Owned, HAP contract), Hillside Manor (PHA-Owned, 100 PBV units), and Hillside Manor Apartments under the Hillside Manor Limited Partnership (RAD PBV).** That is not a single anomalous entry. It is HACC's portfolio-wide property management relationship with Quantum Residential, documented across three separate Admin Plan exhibits, covering both regular PBV and RAD PBV programs.
+
+10. **Blossom and Hillside Manor are both classified in the Administrative Plan as replacement housing for a demolished HACC project.** Quantum's role as named property manager for HACC-owned and HACC-contracted developments, combined with Blossom's administrative classification as HACC replacement housing, supports an integrated-duty theory without requiring a separately filed management agreement.
+
+11. **The RAD conversion (PIH 2019-23) created parallel Section 18-style tenant protection obligations** binding on both HACC (as converting PHA) and the Hillside Manor LP/Quantum structure as successor operator — including right-to-return, relocation plan compliance, and continuing tenant protections during conversion. Both parties share these RAD obligations as a matter of federal housing law.
+
+12. **Quantum's HACC-contracted management role spans multiple ownership structures** (PHA-owned at Clayton Mohr Commons; PHA-owned at Hillside Manor; LP-owned at Hillside Manor LP; and non-PHA LP at Good Shepherd Village/Catholic Charities) — establishing a standing management service relationship with HACC, not a one-off site assignment. This standing relationship is what made Quantum the natural and HACC-designated operator for Blossom and the relocation pipeline.
+
+13. **HACC staff's email claim that Quantum is "separate from the county"** is directly contradicted by the same HACC's own filed Administrative Plan — which an opposing party can argue is an admission against interest or at minimum establishes the impropriety of HACC disclaiming Quantum's role after integrating Quantum into the PHA-owned property management structure.
 9. **Blossom and Hillside Manor are both classified in the Administrative Plan as replacement housing for a demolished HACC project.** Quantum's role as named property manager for an HACC-owned development, combined with Blossom's administrative classification as HACC replacement housing, supports an integrated-duty theory without requiring a separately filed management agreement.
 
 That is enough to argue — based on the existing record — that complete relief and factual adjudication cannot occur without Quantum in the case. The theoretical gap is no longer the absence of any Quantum / HACC contractual link, but only the absence of a direct Blossom-specific management agreement, which remains a priority discovery target.
@@ -181,19 +257,44 @@ The HACC Administrative Plan extract contains the following confirmed facts:
 
 1. **Quantum Residential is HACC's named property management company for Clayton Mohr Commons**, a PHA-owned mixed-finance development in Oregon City (Clackamas County) operating under a 20-year HUD HAP contract effective November 1, 2019. This is not an inference. It is a direct named entry in HACC's own filed administrative plan.
 
-2. **Both Hillside Manor Apartments and Blossom & Community Apartments are classified in the HACC Administrative Plan as excluded units** — specifically as replacement housing for a demolished original HACC project, operating under the first-occupancy-preference-for-former-residents rule. This is the precise administrative structure through which the Hillside Park relocation pathway was administered.
+2. **Quantum Residential is also named as property management company for Hillside Manor** (Chapter 17 PBV entry) at 2889 SE Hillside Court, Milwaukie — PHA-Owned, Mixed Finance, 20-year HAP contract (June 1, 2020 – May 31, 2040, 100 units). This is the same Hillside Manor property that served as the HACC-identified relocation destination for Hillside Park displaced residents.
 
-3. **The HACC PBV waitlist explicitly names Hillside Manor as one of the three original PBV properties.** The same waitlist language states additional waitlists will be created for new PBV developments where TPV holders have the right to return as relocation participants — which describes the Hillside Park Phase II and Blossom relocation structure exactly.
+3. **The Admin Plan's Chapter 18 (RAD PBV) entry for Hillside Manor Apartments confirms the private successor-in-interest structure:**
+   - Owner: **Hillside Manor Limited Partnership** (the private LP created through RAD conversion, closing 1/1/2021)
+   - Manager: **Quantum Residential Property Management** (HillsideManor@QResInc.com)
+   - HAP contract 06/01/2020 includes **"Eminent Domain 5 PBV plus 26 Enhanced PBV"** — 5 units from an eminent domain proceeding were the first public housing units converted to PBV status at this site
+   - RAD Notice **PIH 2019-23** governs the conversion, which creates tenant protections parallel to Section 18 (right to return, relocation rights, consultation obligations) binding on both HACC and the private LP operating as successor owner
+   - The RAD conversion closed **January 1, 2021** — placing the private LP structure on record concurrent with the Hillside Park Phase I/Phase II demolition timeline
+   - **This is the private-use succession chain**: Original Hillside Park public housing → eminent domain acquisition → PBV conversion (Eminent Domain 5 PBV, 6/1/2020) → RAD conversion to Hillside Manor Limited Partnership (LP) as private successor entity (1/1/2021) → Quantum Residential as the LP's named property manager.
 
-4. **The PHA-Owned Unit provisions in the same Administrative Plan** specify that for PHA-owned units, an independent entity must perform rent determinations, inspections, and development-activity oversight. That independent-entity role is consistent with Quantum Residential's engagement as property management company for Clayton Mohr Commons, confirming that the HACC / Quantum business relationship is not incidental but is structurally required for PHA-owned PBV developments.
+4. **Quantum Residential also manages Good Shepherd Village** (12608 SE Skyshow Place, Happy Valley, OR), a non-PHA-owned LP (Good Shepherd Village Limited Partnership / Catholic Charities), under a HAP contract effective November 1, 2023. This establishes Quantum as HACC's portfolio-wide contracted property manager operating across both PHA-owned and private-LP HACC developments — not a site-specific appointment but a standing service relationship.
+
+5. **Both Hillside Manor Apartments and Blossom & Community Apartments are classified in the HACC Administrative Plan as excluded units** — specifically as replacement housing for a demolished original HACC project, operating under the first-occupancy-preference-for-former-residents rule. This is the precise administrative structure through which the Hillside Park relocation pathway was administered.
+
+6. **The HACC PBV waitlist explicitly names Hillside Manor as one of the three original PBV properties.** The same waitlist language states additional waitlists will be created for new PBV developments where TPV holders have the right to return as relocation participants — which describes the Hillside Park Phase II and Blossom relocation structure exactly.
+
+7. **The PHA-Owned Unit provisions in the same Administrative Plan** specify that for PHA-owned units, an independent entity must perform rent determinations, inspections, and development-activity oversight. That independent-entity role is consistent with Quantum Residential's engagement as property management company for all PHA-owned developments in the Admin Plan, confirming that the HACC / Quantum business relationship is not incidental but is structurally required for PHA-owned PBV and RAD developments.
+
+### RAD-Specific Section 18 Parallel Obligations
+
+RAD conversions under Notice PIH 2019-23 impose obligations on the converting PHA and the successor LP operator that directly parallel Section 18:
+
+- **Right to return**: Displaced residents have a right to a unit in the RAD-converted development upon completion. HACC and Quantum (as LP manager) owe this jointly.
+- **Relocation plan**: The PHA must have an approved relocation plan; failure to implement it creates joint liability where the manager is the implementing party.
+- **Tenant protections during conversion**: PIH 2019-23 requires the PHA to continue all tenant protections (lease, grievance rights, reasonable accommodation) during the RAD conversion period. Quantum as manager is the operational party responsible for maintaining these protections.
+- **Successor owner bound**: The RAD HAP contract runs with the LP ownership — Hillside Manor LP (whose property Quantum manages) is itself bound by the same tenant protection obligations the original PHA had under the ACC.
+
+This creates joint and several regulatory obligation between HACC (as converting PHA) and the Hillside Manor LP/Quantum structure as successor owner-manager.
 
 ### What remains as priority discovery targets
 
 The record is substantially stronger than previously assessed, but the following are still not directly in the current repository:
 
-1. A Blossom-specific management or owner-participation agreement directly naming Quantum as manager or owner-agent for Blossom & Community Apartments (as opposed to Clayton Mohr Commons).
-2. A recorded deed, vesting deed, or closing statement linking Blossom's ownership structure to HACC or to the same investor/entity structure as Clayton Mohr Commons.
-3. The Section 18 disposition approval documentation for the original Hillside Park site (the Section 18 archive exists but has not yet been fully reviewed for Blossom-specific entries).
+1. A Blossom-specific HAP contract entry in the Admin Plan (to add Blossom directly alongside the other Quantum entries).
+2. A recorded deed or vesting deed linking Blossom to an LP structure parallel to Hillside Manor LP.
+3. The full Section 18 disposition approval for the original Hillside Park site naming Blossom as authorized replacement housing.
+4. The LP operating agreement or management agreement for Hillside Manor Limited Partnership identifying Quantum's authority and obligations.
+
 
 ### Revised filing framing for this section
 

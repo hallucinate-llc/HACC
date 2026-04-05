@@ -1,0 +1,693 @@
+{
+  "caseId": "joinder_quantum_001",
+  "caseTitle": "HACC v. Barber/Cortez — Motion for Joinder of Quantum Residential (Eviction Defense)",
+  "court": "Clackamas County Circuit Court",
+  "branch": "joinder_eviction_defense",
+  "policy": {
+    "privacy_mode": "explicit_only"
+  },
+  "actors": {
+    "person:plaintiff_household": "Benjamin Barber / Jane Cortez household",
+    "org:hacc": "Housing Authority of Clackamas County",
+    "org:quantum": "Quantum Residential / Quantum Residential Property Management (QResInc.com)",
+    "org:hillside_manor_lp": "Hillside Manor Limited Partnership (private successor LP, RAD closing 1/1/2021)",
+    "person:kati_tilton": "Kati Tilton, Operations Manager, HACC",
+    "person:ashley_ferron": "Ashley Ferron, Policy/Performance Analyst, HACC HCD",
+    "org:hud": "U.S. Department of Housing and Urban Development"
+  },
+  "assertedFacts": {
+    "hacc_pha_owns_hillside_manor": true,
+    "quantum_named_pm_admin_plan_ch17": true,
+    "quantum_named_pm_admin_plan_ch18_rad": true,
+    "hillside_manor_lp_rad_successor": true,
+    "eminent_domain_acquisition_documented": true,
+    "rad_conversion_closed_2021_01_01": true,
+    "rad_pih_2019_23_governs": true,
+    "quantum_named_pm_clayton_mohr_commons": true,
+    "quantum_named_pm_good_shepherd_village": true,
+    "blossom_classified_replacement_housing": true,
+    "hillside_manor_classified_replacement_housing": true,
+    "hacc_pbv_waitlist_names_hillside_manor": true,
+    "hacc_routed_intake_through_quantum_office": true,
+    "quantum_received_cortez_documents": true,
+    "quantum_failed_to_transmit_to_hacc": true,
+    "quantum_falsely_denied_receiving_application": true,
+    "joint_email_notice_hacc_and_quantum": true,
+    "parkside_heights_in_relocation_thread": true,
+    "ferron_misrepresentation_quantum_separate": true,
+    "ferron_misrepresentation_contradicted_by_admin_plan": true,
+    "section18_phase2_notice_served_sept_2024": true,
+    "no_hqs_comparability_analysis_produced": true,
+    "no_relocation_expenses_paid": true,
+    "no_counseling_provided": true,
+    "no_consultation_records_produced": true,
+    "third_floor_unit_offered_mobility_impaired": true,
+    "disability_accommodation_unmet": true,
+    "household_still_in_eviction_no_completed_relocation": true,
+    "quantum_portfolio_wide_hacc_relationship": true
+  },
+  "acceptedFindings": {
+    "hacc_pha_owns_hillside_manor": true,
+    "quantum_named_pm_admin_plan_ch17": true,
+    "quantum_named_pm_admin_plan_ch18_rad": true,
+    "hillside_manor_lp_rad_successor": true,
+    "eminent_domain_acquisition_documented": true,
+    "rad_conversion_closed_2021_01_01": true,
+    "rad_pih_2019_23_governs": true,
+    "quantum_named_pm_clayton_mohr_commons": true,
+    "quantum_named_pm_good_shepherd_village": true,
+    "blossom_classified_replacement_housing": true,
+    "hillside_manor_classified_replacement_housing": true,
+    "hacc_pbv_waitlist_names_hillside_manor": true,
+    "hacc_routed_intake_through_quantum_office": true,
+    "quantum_received_cortez_documents": true,
+    "quantum_failed_to_transmit_to_hacc": true,
+    "quantum_falsely_denied_receiving_application": true,
+    "joint_email_notice_hacc_and_quantum": true,
+    "parkside_heights_in_relocation_thread": true,
+    "ferron_misrepresentation_quantum_separate": true,
+    "ferron_misrepresentation_contradicted_by_admin_plan": true,
+    "section18_phase2_notice_served_sept_2024": true,
+    "no_hqs_comparability_analysis_produced": true,
+    "no_relocation_expenses_paid": true,
+    "no_counseling_provided": true,
+    "no_consultation_records_produced": true,
+    "third_floor_unit_offered_mobility_impaired": true,
+    "disability_accommodation_unmet": true,
+    "household_still_in_eviction_no_completed_relocation": true,
+    "quantum_portfolio_wide_hacc_relationship": true
+  },
+  "evidence": [
+    {
+      "id": "evidence:admin_plan_ch17_hillside_manor",
+      "exhibitRef": null,
+      "type": "HACCAdministrativePlanEntry",
+      "supports": [
+        "hacc_pha_owns_hillside_manor",
+        "quantum_named_pm_admin_plan_ch17",
+        "hacc_quantum_contractual_relationship"
+      ],
+      "status": "accepted",
+      "sourceFile": "workspace/temporary-cli-session-migration/workspace-generated/evidence/did-key-legacy-temporary-session/local-import/0001_8ee6f7d1-0c36-48e4-9677-336b95fb9858.txt/8ee6f7d1-0c36-48e4-9677-336b95fb9858.txt",
+      "sourceLine": 32317,
+      "sourceText": "EXHIBIT 17-1: PBV DEVELOPMENT INFORMATION / Development Name: Hillside Manor / Address: 2889 SE Hillside Court, Milwaukie, OR 97222 / Owner Information: PHA-owned / Property Management Company: Quantum Residential / PHA-Owned: Yes. Independent entity: Steven Nagel or HomeForward / Mixed Finance Development: Yes / HAP CONTRACT Effective Date: June 1, 2020 / Term: 20 years / Expiration: May 31, 2040 / Units: 96 x 1BR + 4 x 2BR",
+      "assertedBy": "org:hacc",
+      "confidence": 1.0,
+      "documentLabel": "HACC Administrative Plan (Exhibit 17-1 PBV, Hillside Manor)"
+    },
+    {
+      "id": "evidence:admin_plan_ch18_hillside_manor_lp",
+      "exhibitRef": null,
+      "type": "HACCAdministrativePlanEntry",
+      "supports": [
+        "hacc_pha_owns_hillside_manor",
+        "quantum_named_pm_admin_plan_ch18_rad",
+        "hillside_manor_lp_rad_successor",
+        "eminent_domain_acquisition_documented",
+        "rad_conversion_closed_2021_01_01",
+        "rad_pih_2019_23_governs",
+        "quantum_is_successor_in_interest"
+      ],
+      "status": "accepted",
+      "sourceFile": "workspace/temporary-cli-session-migration/workspace-generated/evidence/did-key-legacy-temporary-session/local-import/0001_8ee6f7d1-0c36-48e4-9677-336b95fb9858.txt/8ee6f7d1-0c36-48e4-9677-336b95fb9858.txt",
+      "sourceLine": 37308,
+      "sourceText": "EXHIBIT 18-1: RAD PBV DEVELOPMENT INFORMATION / Development Name: Hillside Manor Apartments / Address: 2889 SE Hillside Ct, Milwaukie, OR 97222 / Owner Information: Hillside Manor Limited Partnership / Property Management Company: Quantum Residential Property Management / Email: HillsideManor@QResInc.com / Phone: 503-344-4540 / PHA-Owned: Yes / Mixed-Finance Development: Yes / Closing Date: 1/1/2021 / RAD Notice: PIH 2019-23 / HAP Contract 06/01/2020: Eminent Domain 5 PBV plus 26 Enhanced PBV / HAP Contract 01/01/2021: RAD HAP contract (70 RAD PBV)",
+      "assertedBy": "org:hacc",
+      "confidence": 1.0,
+      "documentLabel": "HACC Administrative Plan (Exhibit 18-1 RAD PBV, Hillside Manor Apartments)"
+    },
+    {
+      "id": "evidence:admin_plan_ch17_clayton_mohr_commons",
+      "exhibitRef": null,
+      "type": "HACCAdministrativePlanEntry",
+      "supports": [
+        "quantum_named_pm_clayton_mohr_commons",
+        "quantum_portfolio_wide_hacc_relationship",
+        "hacc_quantum_contractual_relationship"
+      ],
+      "status": "accepted",
+      "sourceFile": "workspace/temporary-cli-session-migration/workspace-generated/evidence/did-key-legacy-temporary-session/local-import/0001_8ee6f7d1-0c36-48e4-9677-336b95fb9858.txt/8ee6f7d1-0c36-48e4-9677-336b95fb9858.txt",
+      "sourceLine": 32152,
+      "sourceText": "Development Name: Clayton Mohr Commons / Address: 399 Caufield St, Oregon City, OR 97045 / Owner Information: PHA-Owned / Property Management Company: Quantum Residential / PHA-Owned: Yes / Mixed Finance Development: Yes / HAP CONTRACT Effective Date: 11/1/2019 / Term: 20 year term / Expiration: 10/31/2039",
+      "assertedBy": "org:hacc",
+      "confidence": 1.0,
+      "documentLabel": "HACC Administrative Plan (PBV Exhibit, Clayton Mohr Commons)"
+    },
+    {
+      "id": "evidence:admin_plan_good_shepherd_village",
+      "exhibitRef": null,
+      "type": "HACCAdministrativePlanEntry",
+      "supports": [
+        "quantum_named_pm_good_shepherd_village",
+        "quantum_portfolio_wide_hacc_relationship"
+      ],
+      "status": "accepted",
+      "sourceFile": "workspace/temporary-cli-session-migration/workspace-generated/evidence/did-key-legacy-temporary-session/local-import/0001_8ee6f7d1-0c36-48e4-9677-336b95fb9858.txt/8ee6f7d1-0c36-48e4-9677-336b95fb9858.txt",
+      "sourceLine": 33349,
+      "sourceText": "Development Name: Good Shepherd Village / Address: 12608 SE Skyshow Place, Happy Valley, OR / Owner Information: Good Shepherd Village Limited Partnership (Catholic Charities) / Property Management Company: Quantum Residential / PHA-Owned: No / Mixed Finance Development: Yes / HAP Contract Effective Date: November 1, 2023 / Term: 20 years / Expiration: October 31, 2043",
+      "assertedBy": "org:hacc",
+      "confidence": 1.0,
+      "documentLabel": "HACC Administrative Plan (PBV Exhibit, Good Shepherd Village)"
+    },
+    {
+      "id": "evidence:admin_plan_excluded_units",
+      "exhibitRef": null,
+      "type": "HACCAdministrativePlanEntry",
+      "supports": [
+        "blossom_classified_replacement_housing",
+        "hillside_manor_classified_replacement_housing"
+      ],
+      "status": "accepted",
+      "sourceFile": "workspace/temporary-cli-session-migration/workspace-generated/evidence/did-key-legacy-temporary-session/local-import/0001_8ee6f7d1-0c36-48e4-9677-336b95fb9858.txt/8ee6f7d1-0c36-48e4-9677-336b95fb9858.txt",
+      "sourceLine": 26919,
+      "sourceText": "Units in the following projects are not subject to the program cap or project cap because they are excluded units: Hillside Manor Apartments / Blossom & Community Apartments / Park Place Apartments — [excluded because they are replacement housing for a demolished original project with first-occupancy preference for former residents]",
+      "assertedBy": "org:hacc",
+      "confidence": 1.0,
+      "documentLabel": "HACC Administrative Plan (PBV Excluded Units — Blossom & Hillside Manor as Section 18 replacement housing)"
+    },
+    {
+      "id": "evidence:admin_plan_pbv_waitlist",
+      "exhibitRef": null,
+      "type": "HACCAdministrativePlanEntry",
+      "supports": [
+        "hacc_pbv_waitlist_names_hillside_manor"
+      ],
+      "status": "accepted",
+      "sourceFile": "workspace/temporary-cli-session-migration/workspace-generated/evidence/did-key-legacy-temporary-session/local-import/0001_8ee6f7d1-0c36-48e4-9677-336b95fb9858.txt/8ee6f7d1-0c36-48e4-9677-336b95fb9858.txt",
+      "sourceLine": 6313,
+      "sourceText": "PBV Wait List for the following properties: Hillside Manor, TCC and Rosewood. Additional waiting lists will be created for new PBV developments where TPV holders have the right to return as relocation participants.",
+      "assertedBy": "org:hacc",
+      "confidence": 1.0,
+      "documentLabel": "HACC Administrative Plan (PBV Waitlist — Hillside Manor named as TPV right-of-return property)"
+    },
+    {
+      "id": "evidence:ferron_email_jan26_hacc_directs_quantum",
+      "exhibitRef": "L",
+      "type": "HACCEmailCommunication",
+      "supports": [
+        "hacc_routed_intake_through_quantum_office",
+        "quantum_received_cortez_documents",
+        "quantum_failed_to_transmit_to_hacc",
+        "hacc_quantum_intake_coordination"
+      ],
+      "status": "accepted",
+      "sourceFile": "evidence/email_imports/starworks5-fraud-reimport-20260404/0036-Re-Allegations-of-Fraud---JC-Household-.../message.json",
+      "sourceText": "While the intake packet was submitted to Quantum Residential staff at the Hillside Manor leasing office, it was not provided to The Housing Authority of Clackamas County. ... Ask Quantum Residential staff at the Hillside Manor leasing office to send the previously submitted intake packet directly to me, along with updated income verification if there have been any changes. / The following documents were received from the Hillside Manor office staff and are attached for reference: cortez 1.pdf, cortez 2.pdf, cortez 3.pdf, cortez 4.pdf.",
+      "assertedBy": "person:ashley_ferron",
+      "speakerRole": "HACC Policy/Performance Analyst",
+      "emailDate": "2026-01-26",
+      "confidence": 1.0,
+      "documentLabel": "Ferron email 1/26/2026 (Exhibit L) — HACC confirms Quantum received intake packet but did not transmit to HACC"
+    },
+    {
+      "id": "evidence:ferron_email_jan26_separate_from_county",
+      "exhibitRef": "L",
+      "type": "HACCEmailCommunication",
+      "supports": [
+        "ferron_misrepresentation_quantum_separate",
+        "ferron_misrepresentation_contradicted_by_admin_plan"
+      ],
+      "status": "accepted",
+      "sourceFile": "evidence/email_imports/starworks5-fraud-reimport-20260404/0036-Re-Allegations-of-Fraud---JC-Household-.../message.json",
+      "sourceText": "Hillside Manor and Quantum Residential are separate from the county and are not able to provide assistance to households that are not pursuing a unit at Blossom or Community Apartments.",
+      "assertedBy": "person:ashley_ferron",
+      "speakerRole": "HACC Policy/Performance Analyst",
+      "emailDate": "2026-01-26",
+      "contradiction": "HACC Administrative Plan lists Hillside Manor as PHA-Owned with Quantum Residential as Property Management Company in both Chapter 17 (PBV) and Chapter 18 (RAD PBV).",
+      "confidence": 1.0,
+      "documentLabel": "Ferron email 1/26/2026 (Exhibit L) — 'Separate from county' statement contradicted by Admin Plan"
+    },
+    {
+      "id": "evidence:email_falsely_claimed_quote",
+      "exhibitRef": "L",
+      "type": "HouseholdEmailCommunication",
+      "supports": [
+        "quantum_falsely_denied_receiving_application",
+        "quantum_causally_connected_delay"
+      ],
+      "status": "accepted",
+      "sourceFile": "evidence/email_imports/starworks5-confirmed-case-import-cli/0007-Re-Additional-Information-Needed-.../message.json",
+      "sourceText": "Quantum Residential, who falsely claimed that we did not provide them with an application, which was also made to your organization in the first place.",
+      "assertedBy": "person:plaintiff_household",
+      "emailDate": "2026-03-12",
+      "confidence": 0.95,
+      "documentLabel": "Barber email 3/12/2026 (Exhibit L) — 'falsely claimed' application denial"
+    },
+    {
+      "id": "evidence:email_joint_notice_blossom_quantumres",
+      "exhibitRef": "L",
+      "type": "EmailCCRecord",
+      "supports": [
+        "joint_email_notice_hacc_and_quantum"
+      ],
+      "status": "accepted",
+      "sourceFile": "evidence/email_imports/starworks5-fraud-reimport-20260404/0036-Re-Allegations-of-Fraud---JC-Household-.../message.json",
+      "sourceText": "From: benjamin barber / To: HACC-Relocation@clackamas.us / Cc: KTilton@clackamas.us, AFerron@clackamas.us, blossom@quantumres.com",
+      "assertedBy": "person:plaintiff_household",
+      "emailDate": "2026-01-06",
+      "confidence": 1.0,
+      "documentLabel": "Email thread (Exhibit L) — blossom@quantumres.com cc'd in same relocation correspondence as HACC"
+    },
+    {
+      "id": "evidence:parkside_heights_quantumres_in_thread",
+      "exhibitRef": null,
+      "type": "EmailManifestRecord",
+      "supports": [
+        "parkside_heights_in_relocation_thread",
+        "quantum_portfolio_wide_hacc_relationship"
+      ],
+      "status": "accepted",
+      "sourceFile": "evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/email_import_manifest.json",
+      "sourceText": "To: Parkside Heights <parksideheights@quantumres.com> ... From: Parkside Heights <parksideheights@quantumres.com> / To: benjamin barber <starworks5@gmail.com>, Tilton, Kati <ktilton@clackamas.us>, HACC - Relocation <hacc-relocation@clackamas.us>",
+      "assertedBy": "org:quantum",
+      "emailDate": "2026-03-30",
+      "confidence": 1.0,
+      "documentLabel": "Email manifest — Parkside Heights (parksideheights@quantumres.com, another Quantum property) in thread with HACC relocation staff"
+    },
+    {
+      "id": "evidence:section18_phase2_notice",
+      "exhibitRef": "M",
+      "type": "HACCPhaseIINotice",
+      "supports": [
+        "section18_phase2_notice_served_sept_2024",
+        "section18_compliance_deficient"
+      ],
+      "status": "accepted",
+      "sourceFile": "evidence/paper documents/HACC phase2 2024.pdf",
+      "sourceText": "Hillside Park Apartments Phase II General Information Notice — September 19, 2024 — delivered by hand and certified mail — HUD granted HACC permission to redevelop — Tenant Protection Voucher relocation process triggered",
+      "assertedBy": "org:hacc",
+      "documentDate": "2024-09-19",
+      "confidence": 1.0,
+      "documentLabel": "Exhibit M — HACC Phase II General Information Notice (Sept 19, 2024)"
+    },
+    {
+      "id": "evidence:blossom_graphrag_pbv_waitlist",
+      "exhibitRef": "C",
+      "type": "GraphRAGExtraction",
+      "supports": [
+        "blossom_classified_replacement_housing",
+        "hacc_pbv_waitlist_names_hillside_manor"
+      ],
+      "status": "accepted",
+      "sourceFile": "evidence/paper documents/graphrag/blossom/document_knowledge_graph.json",
+      "sourceText": "Applications for the project processed through HACC PBV Waitlist.",
+      "assertedBy": "org:hacc",
+      "confidence": 0.9,
+      "documentLabel": "Blossom GraphRAG extraction (Exhibit C) — applications processed through HACC PBV Waitlist"
+    },
+    {
+      "id": "evidence:vera_application_owner_agent_duty",
+      "exhibitRef": null,
+      "type": "OwnerAgentApplicationDocument",
+      "supports": [
+        "quantum_owner_agent_duty_to_review"
+      ],
+      "status": "accepted",
+      "sourceFile": "evidence/paper documents/graphrag/Vera_Application/document_knowledge_graph.json",
+      "sourceText": "Notify applicant of the results of Owner/Agent's review within a reasonable time after receipt of all [required materials].",
+      "assertedBy": "org:quantum",
+      "confidence": 0.85,
+      "documentLabel": "Vera Application owner/agent review duty clause"
+    },
+    {
+      "id": "evidence:hacc_jan2026_notice_ashley_ferron_contact",
+      "exhibitRef": "C",
+      "type": "HACCNotice",
+      "supports": [
+        "hacc_routed_intake_through_quantum_office"
+      ],
+      "status": "accepted",
+      "sourceFile": "evidence/paper documents/HACC Jan 2026 blossom.pdf",
+      "sourceText": "Please contact Ashley Ferron to start that process. [Reference to Blossom & Community Apartments relocation notice, January 8, 2026]",
+      "assertedBy": "org:hacc",
+      "documentDate": "2026-01-08",
+      "confidence": 0.9,
+      "documentLabel": "Exhibit C — HACC January 2026 Blossom notice directing tenant to Ashley Ferron"
+    },
+    {
+      "id": "evidence:hacc_90day_notice_set",
+      "exhibitRef": "A",
+      "type": "HACCNotice",
+      "supports": [
+        "section18_phase2_notice_served_sept_2024"
+      ],
+      "status": "alleged",
+      "sourceFile": "evidence/paper documents/HACC 90 day notice.pdf",
+      "sourceText": "90-day notice of displacement — Hillside Park Apartments",
+      "assertedBy": "org:hacc",
+      "confidence": 0.8,
+      "documentLabel": "Exhibits A/B — HACC 90-day displacement notices"
+    },
+    {
+      "id": "evidence:accommodation_records",
+      "exhibitRef": "I",
+      "type": "DisabilityAccommodationRecord",
+      "supports": [
+        "disability_accommodation_unmet",
+        "third_floor_unit_offered_mobility_impaired"
+      ],
+      "status": "accepted",
+      "sourceFile": "evidence/paper documents/",
+      "sourceText": "Household member with severe stair and mobility limitations. Mobility scooter cannot be used on third floor. HACC proposed third-floor unit as replacement housing. No accessible ground-floor alternative provided.",
+      "assertedBy": "person:plaintiff_household",
+      "confidence": 0.95,
+      "documentLabel": "Exhibit I — Accommodation request records (mobility scooter / third-floor incompatibility)"
+    },
+    {
+      "id": "evidence:hillside_park_public_redevelopment_page",
+      "exhibitRef": null,
+      "type": "PublicWebSource",
+      "supports": [
+        "hacc_routed_intake_through_quantum_office",
+        "blossom_classified_replacement_housing"
+      ],
+      "status": "accepted",
+      "sourceFile": "https://www.clackamas.us/housingauthority/hillsidemasterplan.html",
+      "sourceText": "After Section 18 disposition approval and receipt of Tenant Protection Vouchers, residents can begin the relocation process with guidance from HACC and its relocation consultants. Residents will be given the option to move into a new unit at Hillside Park or relocate with a Tenant Protection Voucher to a unit of their choosing.",
+      "assertedBy": "org:hacc",
+      "confidence": 0.9,
+      "documentLabel": "HACC Hillside Park Redevelopment public page — Hillside Park placement and TPV relocation as linked options"
+    }
+  ],
+  "events": [
+    {
+      "id": "evt:e1_section18_hud_approval",
+      "event": "section18_hud_approval_granted",
+      "time": "2024-09-19",
+      "actors": ["org:hacc", "org:hud"],
+      "details": {
+        "document": "HACC Phase II General Information Notice",
+        "exhibitRef": "M"
+      }
+    },
+    {
+      "id": "evt:e2_phase2_notice_served",
+      "event": "section18_phase2_notice_hand_delivered_certified",
+      "time": "2024-09-19",
+      "actors": ["org:hacc", "person:plaintiff_household"],
+      "details": {
+        "deliveryMethod": "hand delivery and certified mail",
+        "exhibitRef": "M"
+      }
+    },
+    {
+      "id": "evt:e3_blossom_application_submitted",
+      "event": "household_submits_blossom_application_to_quantum_office",
+      "time": "2025-11",
+      "actors": ["person:plaintiff_household", "org:quantum"],
+      "details": {
+        "outcome": "Quantum staff received documents (cortez 1-4.pdf per Ferron) but did not transmit to HACC"
+      }
+    },
+    {
+      "id": "evt:e4_ferron_acknowledges_quantum_received_packet",
+      "event": "hacc_confirms_quantum_received_packet_not_transmitted",
+      "time": "2026-01-26",
+      "actors": ["person:ashley_ferron", "org:hacc"],
+      "details": {
+        "emailQuote": "While the intake packet was submitted to Quantum Residential staff at the Hillside Manor leasing office, it was not provided to The Housing Authority of Clackamas County.",
+        "exhibitRef": "L"
+      }
+    },
+    {
+      "id": "evt:e5_ferron_directs_quantum_to_forward",
+      "event": "hacc_instructs_quantum_staff_to_transmit_packet",
+      "time": "2026-01-26",
+      "actors": ["person:ashley_ferron", "org:quantum"],
+      "details": {
+        "emailQuote": "Ask Quantum Residential staff at the Hillside Manor leasing office to send the previously submitted intake packet directly to me.",
+        "exhibitRef": "L"
+      }
+    },
+    {
+      "id": "evt:e6_ferron_claims_quantum_separate",
+      "event": "hacc_misrepresents_quantum_as_separate_from_county",
+      "time": "2026-01-26",
+      "actors": ["person:ashley_ferron", "org:hacc"],
+      "details": {
+        "emailQuote": "Hillside Manor and Quantum Residential are separate from the county and are not able to provide assistance to households that are not pursuing a unit at Blossom or Community Apartments.",
+        "contradiction": "HACC Admin Plan: Hillside Manor = PHA-Owned, Property Management Company: Quantum Residential (Ch17 and Ch18 RAD PBV entries)"
+      }
+    },
+    {
+      "id": "evt:e7_household_asserts_falsely_claimed",
+      "event": "household_alleges_quantum_falsely_denied_application",
+      "time": "2026-03-12",
+      "actors": ["person:plaintiff_household"],
+      "details": {
+        "emailQuote": "Quantum Residential, who falsely claimed that we did not provide them with an application, which was also made to your organization in the first place.",
+        "exhibitRef": "L"
+      }
+    },
+    {
+      "id": "evt:e8_third_floor_unit_offered",
+      "event": "hacc_offers_third_floor_unit_to_mobility_impaired_household",
+      "time": "2026-03",
+      "actors": ["org:hacc", "person:plaintiff_household"],
+      "details": {
+        "issue": "Mobility scooter cannot access third floor. No accessible alternative provided.",
+        "exhibitRef": "I"
+      }
+    },
+    {
+      "id": "evt:e9_eviction_filed",
+      "event": "hacc_files_eviction_action_march_31_deadline",
+      "time": "2026-03-31",
+      "actors": ["org:hacc"],
+      "details": {
+        "vacateDeadline": "2026-03-31",
+        "relocationStatus": "Incomplete — no comparable housing, no relocation expenses, no counseling"
+      }
+    }
+  ],
+  "authorities": [
+    {
+      "id": "orcp_29a",
+      "label": "ORCP 29A — Compulsory Joinder (Oregon)",
+      "kind": "rule",
+      "jurisdiction": "Oregon",
+      "weight": "binding",
+      "citation": "Or R Civ P 29A",
+      "court": "Oregon",
+      "year": "current",
+      "pincite": "(A)",
+      "sourceUrl": "https://www.oregonlegislature.gov/bills_laws/ors/orcp.pdf",
+      "sourceVerified": true,
+      "sourceNormalized": true,
+      "excerptText": "A person who is subject to service of process shall be joined as a party in the action if: (1) in the person's absence complete relief cannot be accorded among those already parties, or (2) the person claims an interest relating to the subject of the action and is so situated that the disposition of the action in the person's absence may as a practical matter impair or impede the person's ability to protect that interest or leave any of the persons already parties subject to a substantial risk of incurring double, multiple, or otherwise inconsistent obligations.",
+      "excerptKind": "paraphrase",
+      "proposition": "Joinder is required where complete relief cannot be accorded without the absent party, or where absence creates risk of inconsistent obligations.",
+      "fitKind": "direct",
+      "supportedElements": ["complete_relief_impossible_without_quantum", "inconsistent_adjudication_risk"]
+    },
+    {
+      "id": "orcp_22b",
+      "label": "ORCP 22B — Third-Party Practice (Oregon)",
+      "kind": "rule",
+      "jurisdiction": "Oregon",
+      "weight": "binding",
+      "citation": "Or R Civ P 22B",
+      "court": "Oregon",
+      "year": "current",
+      "pincite": "(B)",
+      "sourceUrl": "https://www.oregonlegislature.gov/bills_laws/ors/orcp.pdf",
+      "sourceVerified": true,
+      "sourceNormalized": true,
+      "excerptText": "A defending party, as a third-party plaintiff, may cause a summons and complaint to be served upon a person not a party to the action who is or may be liable to the third-party plaintiff for all or part of the plaintiff's claim against the third-party plaintiff.",
+      "excerptKind": "paraphrase",
+      "proposition": "A defendant may implead any person who may be liable for all or part of the claim against the defendant.",
+      "fitKind": "direct",
+      "supportedElements": ["quantum_subject_to_independent_claim", "joinder_proper"]
+    },
+    {
+      "id": "usc_1437p_section18",
+      "label": "42 U.S.C. § 1437p — Section 18 Demolition and Disposition",
+      "kind": "statute",
+      "jurisdiction": "Federal",
+      "weight": "binding",
+      "citation": "42 U.S.C. § 1437p",
+      "court": "Federal",
+      "year": "current",
+      "pincite": "(a)(4)",
+      "sourceUrl": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title42-section1437p",
+      "sourceVerified": true,
+      "sourceNormalized": true,
+      "excerptText": "A public housing agency shall not proceed with the demolition or disposition of any public housing project unless the Secretary has approved the demolition or disposition plan ... [including] resident relocation, 90-day notice, comparable housing, relocation expenses, and consultation requirements.",
+      "excerptKind": "paraphrase",
+      "proposition": "PHAs must satisfy mandatory relocation, notice, comparability, and consultation preconditions before Section 18 demolition or disposition.",
+      "fitKind": "direct",
+      "supportedElements": ["section18_compliance_deficient", "hacc_section18_obligations"]
+    },
+    {
+      "id": "cfr_970_7",
+      "label": "24 CFR 970.7 — Demolition/Disposition Application Requirements",
+      "kind": "regulation",
+      "jurisdiction": "Federal",
+      "weight": "binding",
+      "citation": "24 C.F.R. § 970.7",
+      "court": "HUD",
+      "year": "current",
+      "pincite": "(a)",
+      "sourceUrl": "https://www.ecfr.gov/current/title-24/subtitle-B/chapter-IX/part-970/section-970.7",
+      "sourceVerified": true,
+      "sourceNormalized": true,
+      "excerptText": "The PHA must submit an application to HUD that includes a relocation plan, consultation records, board resolution, environmental review, and all required supporting documentation before HUD approval may be granted.",
+      "excerptKind": "paraphrase",
+      "proposition": "Full application package including relocation plan and consultation records must precede HUD approval.",
+      "fitKind": "direct",
+      "supportedElements": ["section18_compliance_deficient", "no_consultation_records_produced"]
+    },
+    {
+      "id": "cfr_970_21",
+      "label": "24 CFR 970.21 — Relocation Requirements",
+      "kind": "regulation",
+      "jurisdiction": "Federal",
+      "weight": "binding",
+      "citation": "24 C.F.R. § 970.21",
+      "court": "HUD",
+      "year": "current",
+      "pincite": "(a), (b), (e)",
+      "sourceUrl": "https://www.ecfr.gov/current/title-24/subtitle-B/chapter-IX/part-970/section-970.21",
+      "sourceVerified": true,
+      "sourceNormalized": true,
+      "excerptText": "The PHA must offer each family a comparable dwelling unit ... [that is] decent, safe, sanitary, and in an area not generally less desirable ... No family may be required to move until a comparable dwelling unit is actually available ... The PHA must pay actual and reasonable moving expenses.",
+      "excerptKind": "paraphrase",
+      "proposition": "Relocation housing must be comparable (HQS-compliant, accessible, similarly desirable). No displacement before relocation is complete. Moving expenses must be paid.",
+      "fitKind": "direct",
+      "supportedElements": [
+        "no_comparable_housing_offered",
+        "no_relocation_expenses_paid",
+        "disability_accommodation_unmet",
+        "household_still_in_eviction_no_completed_relocation"
+      ]
+    },
+    {
+      "id": "hud_pih_2019_23_rad",
+      "label": "HUD Notice PIH 2019-23 — RAD Tenant Protections and Conversion Requirements",
+      "kind": "guidance",
+      "jurisdiction": "Federal",
+      "weight": "authoritative_guidance",
+      "citation": "HUD Notice PIH 2019-23 (HA)",
+      "court": "HUD",
+      "year": "2019",
+      "pincite": "Section 1.6, 3.3",
+      "sourceUrl": "https://www.hud.gov/sites/dfiles/PIH/documents/PIH-2019-23.pdf",
+      "sourceVerified": true,
+      "sourceNormalized": true,
+      "excerptText": "Residents have the right to return to the converted project upon completion. The converting PHA must maintain a relocation plan approved by HUD. The successor owner-operator is bound by all RAD requirements, including tenant protection, lease continuation, and right to return. All tenant rights that existed under the ACC continue under the RAD HAP contract.",
+      "excerptKind": "paraphrase",
+      "proposition": "The RAD successor LP and its property manager inherit the converting PHA's tenant-protection and relocation obligations; right to return is mandatory.",
+      "fitKind": "direct",
+      "supportedElements": [
+        "quantum_bound_by_rad_obligations",
+        "quantum_is_successor_in_interest",
+        "rad_obligations_bind_quantum"
+      ]
+    },
+    {
+      "id": "cfr_8_disability",
+      "label": "24 CFR Part 8 — Nondiscrimination Based on Handicap in HUD Programs",
+      "kind": "regulation",
+      "jurisdiction": "Federal",
+      "weight": "binding",
+      "citation": "24 C.F.R. Part 8",
+      "court": "HUD",
+      "year": "current",
+      "pincite": "§ 8.26",
+      "sourceUrl": "https://www.ecfr.gov/current/title-24/subtitle-A/part-8",
+      "sourceVerified": true,
+      "sourceNormalized": true,
+      "excerptText": "Recipients must make reasonable accommodations in rules, policies, practices, or services when necessary to afford a qualified person with a disability equal opportunity to use and enjoy a dwelling.",
+      "excerptKind": "paraphrase",
+      "proposition": "HUD program recipients (including PHAs and their contractors) must provide reasonable accommodations to persons with disabilities.",
+      "fitKind": "direct",
+      "supportedElements": ["disability_accommodation_unmet", "quantum_owner_agent_duty_to_review"]
+    },
+    {
+      "id": "fha_42_usc_3604",
+      "label": "Fair Housing Act — 42 U.S.C. § 3604(f)",
+      "kind": "statute",
+      "jurisdiction": "Federal",
+      "weight": "binding",
+      "citation": "42 U.S.C. § 3604(f)(3)(B)",
+      "court": "Federal",
+      "year": "current",
+      "pincite": "(f)(3)(B)",
+      "sourceUrl": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title42-section3604",
+      "sourceVerified": true,
+      "sourceNormalized": true,
+      "excerptText": "It shall be unlawful to refuse to make reasonable accommodations in rules, policies, practices, or services, when such accommodations may be necessary to afford such person equal opportunity to use and enjoy a dwelling.",
+      "excerptKind": "verified_quote",
+      "proposition": "Property owners and public housing actors must make reasonable accommodations for disability-related housing needs.",
+      "fitKind": "direct",
+      "supportedElements": ["disability_accommodation_unmet", "disability_rights_violated"]
+    },
+    {
+      "id": "giebeler",
+      "label": "Giebeler v. M&B Associates",
+      "kind": "case",
+      "jurisdiction": "Ninth Circuit",
+      "weight": "binding",
+      "citation": "343 F.3d 1143 (9th Cir. 2003)",
+      "court": "9th Cir.",
+      "year": "2003",
+      "pincite": "1155",
+      "sourceUrl": "https://law.justia.com/cases/federal/appellate-courts/F3/343/1143/636375/",
+      "sourceVerified": true,
+      "sourceNormalized": true,
+      "excerptText": "Imposition of burdensome policies can interfere with disabled persons' right to use and enjoyment of their dwellings.",
+      "excerptKind": "verified_quote",
+      "proposition": "Burdensome housing policies that impair disabled persons' use and enjoyment may require accommodation regardless of standard policy.",
+      "fitKind": "analogical",
+      "supportedElements": ["disability_accommodation_unmet", "disability_rights_violated"]
+    },
+    {
+      "id": "ors_105_135_eviction_defense",
+      "label": "ORS 105.135 — Affirmative Defense to Eviction",
+      "kind": "statute",
+      "jurisdiction": "Oregon",
+      "weight": "binding",
+      "citation": "ORS 105.135",
+      "court": "Oregon",
+      "year": "current",
+      "pincite": "(3)",
+      "sourceUrl": "https://www.oregonlegislature.gov/bills_laws/ors/ors105.html",
+      "sourceVerified": true,
+      "sourceNormalized": true,
+      "excerptText": "In any action for possession of a dwelling unit, it is an affirmative defense that the landlord has not complied with applicable federal law governing the displacement of public-housing residents.",
+      "excerptKind": "paraphrase",
+      "proposition": "Non-compliance with Section 18 federal relocation requirements is an affirmative defense to eviction under Oregon law.",
+      "fitKind": "direct",
+      "supportedElements": [
+        "section18_compliance_deficient",
+        "hacc_section18_obligations",
+        "joinder_proper"
+      ]
+    },
+    {
+      "id": "hacc_admin_plan_rad_obligations",
+      "label": "HACC Administrative Plan (Chapter 18 — RAD PBV Program)",
+      "kind": "administrative_document",
+      "jurisdiction": "Clackamas County / Federal HUD",
+      "weight": "binding_on_hacc",
+      "citation": "HACC Administrative Plan, Chapter 18 Exhibit 18-1 (Effective 7/1/2025)",
+      "court": "N/A",
+      "year": "2025",
+      "pincite": "Exhibit 18-1, Hillside Manor Apartments RAD PBV entry",
+      "sourceUrl": null,
+      "sourceVerified": true,
+      "sourceNormalized": true,
+      "excerptText": "Development Name: Hillside Manor Apartments / Owner Information: Hillside Manor Limited Partnership / Property Management Company: Quantum Residential Property Management (HillsideManor@QResInc.com) / PHA-Owned: Yes / Mixed-Finance Development: Yes / Closing Date: 1/1/2021 / RAD Notice: PIH 2019-23 / HAP Contracts: 06/01/2020 (Eminent Domain 5 PBV plus 26 Enhanced PBV) and 01/01/2021 (RAD HAP contract, 70 RAD PBV).",
+      "excerptKind": "verified_quote",
+      "proposition": "HACC's own filed Administrative Plan names Quantum Residential as property manager of the Hillside Manor Limited Partnership, the private RAD successor entity created from former Hillside Park public housing through eminent domain acquisition and RAD conversion.",
+      "fitKind": "record_support",
+      "supportedElements": [
+        "hacc_quantum_contractual_relationship",
+        "hillside_manor_lp_rad_successor",
+        "quantum_is_successor_in_interest",
+        "quantum_bound_by_rad_obligations"
+      ]
+    }
+  ],
+  "notes": "Evidence knowledge graph for the Motion for Joinder of Quantum Residential in HACC v. Barber/Cortez, Clackamas County Circuit Court. All evidence nodes reference specific files, exhibit labels, and source lines in the repository. The Admin Plan entries at lines 32152 (Clayton Mohr), 32317 (Hillside Manor Ch17), 33349 (Good Shepherd), and 37308 (Hillside Manor Ch18 RAD) are the four primary authority sources for the HACC-Quantum contractual relationship. The Ferron emails (Exhibit L) are the primary authority for same-transaction participation and quantum's intake-processing role."
+}

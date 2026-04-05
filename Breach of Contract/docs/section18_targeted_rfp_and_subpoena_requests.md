@@ -38,7 +38,7 @@ Purpose: Obtain records needed to prove or disprove statutory compliance under 4
 ## B. Subpoena Targets and Key Documents
 
 1. HUD Field Office
-- Approval letter, deficiency notices, condition letters, and correspondence log.
+- Approval letter, deficiency notices, condition letters, and correspondence log for the Hillside Park Phase II Section 18 application.
 
 2. Local Government (Chief Executive Office)
 - Consultation letters, response letters, meeting notes.
@@ -46,8 +46,19 @@ Purpose: Obtain records needed to prove or disprove statutory compliance under 4
 3. Appraiser / Valuation Firm (if disposition)
 - Appraisal engagement, final appraisal, assumptions and comps.
 
-4. Property Owner/Manager (if distinct from PHA)
-- Notice generation logs, relocation communications, unit availability logs, accessibility/unit-feature records.
+4. Quantum Residential (Property Manager — confirmed in HACC Administrative Plan as property management company for a PHA-owned HAP contract development in Clackamas County)
+- All management agreements, owner-participation agreements, or operating agreements between Quantum Residential and HACC or any HACC-related entity for any property in Clackamas County.
+- All communications between HACC and Quantum Residential regarding the Blossom & Community Apartments intake, waitlist, and application process.
+- All intake packets received by Quantum Residential from or on behalf of the Barber/Cortez household.
+- All internal communications regarding that intake packet, its receipt, its transmission, or its non-transmission to HACC.
+- All unit-availability, accessibility, and leasing records for Blossom & Community Apartments for the period October 2024 through March 2026.
+- Any HAP contract or owner-participation agreement between Quantum Residential or any related entity and HACC covering Blossom & Community Apartments.
+- Any correspondence or records concerning Quantum Residential's role in the Hillside Park redevelopment relocation program, including Tenant Protection Voucher processing.
+
+5. HACC / Housing Authority of Clackamas County (supplemental to RFP)
+- The complete HACC Administrative Plan entries for Blossom & Community Apartments, Hillside Manor Apartments, and Clayton Mohr Commons, including: PBV waitlist policies, excluded-unit classifications, PHA-owned unit inspection and management arrangements, and all HAP contracts.
+- All management or owner-participation agreements in HACC's possession covering Blossom & Community Apartments.
+- The full Section 18 application submitted to HUD for Hillside Park, including the relocation plan, consultation records, and board resolution.
 
 ## C. Authentication-Ready Metadata to Demand
 
