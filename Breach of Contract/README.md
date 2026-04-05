@@ -8,7 +8,7 @@ The Title 18 filing set can now be regenerated from a shared override file and a
 
 - Edit `title18_render_context_overrides.json` with case-specific values.
 - Edit `title18_hacc_context_overrides.json` or `title18_quantum_context_overrides.json` for track-specific values.
-- `make prep-title18-overrides` still refreshes the suggestion files in `outputs/`, but it will only seed the editable track files if they do not already exist.
+- `make prep-title18-overrides` refreshes the suggestion files in `outputs/` and non-destructively syncs any newly introduced placeholders into the editable track files without overwriting values you have already filled.
 - Run one of the wrapper commands below from this directory.
 
 HACC-oriented merged packet and final packet set:
@@ -105,10 +105,12 @@ This writes:
 - `outputs/title18_hacc_override_template.json`
 - `outputs/title18_quantum_override_template.json`
 - `outputs/title18_override_worksheet.md`
-- `title18_hacc_context_overrides.json` if missing
-- `title18_quantum_context_overrides.json` if missing
+- updated `title18_hacc_context_overrides.json` with any newly introduced missing keys added
+- updated `title18_quantum_context_overrides.json` with any newly introduced missing keys added
 
 VS Code users can run the `Generate Title18 Override Templates` task for the same outputs.
+
+The worksheet now reflects the current contents of the editable track override files and shows filled-versus-missing counts for each track, so it can be used as a live completion sheet rather than a blank template.
 
 Below is the earlier workspace2 prototype documentation preserved in place.
 

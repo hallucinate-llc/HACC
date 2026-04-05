@@ -97,6 +97,7 @@ Use these four if you want the deeper theory stack under the FED papers.
 
 - [parkside_heights_offer_and_contract_analysis.md](/home/barberb/HACC/Breach%20of%20Contract/docs/parkside_heights_offer_and_contract_analysis.md)
 - [parkside_integration_notes_for_fed_drafts.md](/home/barberb/HACC/Breach%20of%20Contract/docs/parkside_integration_notes_for_fed_drafts.md)
+- [illusory_options_promissory_estoppel_memo.md](/home/barberb/HACC/Breach%20of%20Contract/docs/illusory_options_promissory_estoppel_memo.md)
 
 ### Quantum delay pattern theory
 
@@ -118,6 +119,7 @@ These support the argument that you pursued the relocation path and that the Qua
 - [county_money_management_packet_index_memo.md](/home/barberb/HACC/Breach%20of%20Contract/docs/county_money_management_packet_index_memo.md)
 - [verification_delay_hearing_script.md](/home/barberb/HACC/Breach%20of%20Contract/docs/verification_delay_hearing_script.md)
 - [easton_ridge_accessibility_hearing_script.md](/home/barberb/HACC/Breach%20of%20Contract/docs/easton_ridge_accessibility_hearing_script.md)
+- [premature_eviction_hearing_script.md](/home/barberb/HACC/Breach%20of%20Contract/docs/premature_eviction_hearing_script.md)
 
 Use these if you need the narrower theory that HACC treated Benjamin Barber like an ordinary counted-income household member instead of a live-in caregiver, while also receiving county-side representative-payee and Money Management communications about Jane Cortez's rent and housing decisions.
 

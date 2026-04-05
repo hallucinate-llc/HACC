@@ -34,11 +34,56 @@ def _build_track_template(context: Dict[str, Any], missing_fields: List[str]) ->
     }
 
 
+def _merge_template_into_editable(existing: Dict[str, Any], template: Dict[str, Any]) -> Dict[str, Any]:
+    merged = {
+        "substitutions": dict(existing.get("substitutions", {})),
+        "requiredUserInputs": dict(existing.get("requiredUserInputs", {})),
+    }
+    for section in ["substitutions", "requiredUserInputs"]:
+        for key, value in template.get(section, {}).items():
+            if key not in merged[section]:
+                merged[section][key] = value
+    return merged
+
+
+def _load_editable_payload(path: Path) -> Dict[str, Any]:
+    if not path.exists():
+        return {"substitutions": {}, "requiredUserInputs": {}}
+    payload = json.loads(path.read_text())
+    return {
+        "substitutions": dict(payload.get("substitutions", {})),
+        "requiredUserInputs": dict(payload.get("requiredUserInputs", {})),
+    }
+
+
+def _completion_summary(payload: Dict[str, Any]) -> Dict[str, int]:
+    values = [
+        *payload.get("substitutions", {}).values(),
+        *payload.get("requiredUserInputs", {}).values(),
+    ]
+    filled = sum(1 for value in values if value not in {None, ""})
+    total = len(values)
+    return {
+        "filledCount": filled,
+        "missingCount": total - filled,
+        "totalCount": total,
+    }
+
+
 def build_title18_override_templates(merged_order_track: str = "hacc") -> Dict[str, Any]:
     context = build_render_context()
     readiness = build_title18_readiness_report(merged_order_track=merged_order_track)
     hacc_missing = readiness["tracks"]["hacc"]["missingFields"]
     quantum_missing = readiness["tracks"]["quantum"]["missingFields"]
+
+    hacc_editable = _merge_template_into_editable(
+        _load_editable_payload(EDITABLE_HACC_OVERRIDES),
+        _build_track_template(context, hacc_missing),
+    )
+    quantum_editable = _merge_template_into_editable(
+        _load_editable_payload(EDITABLE_QUANTUM_OVERRIDES),
+        _build_track_template(context, quantum_missing),
+    )
 
     return {
         "meta": {
@@ -55,6 +100,14 @@ def build_title18_override_templates(merged_order_track: str = "hacc") -> Dict[s
         "templates": {
             "hacc": _build_track_template(context, hacc_missing),
             "quantum": _build_track_template(context, quantum_missing),
+        },
+        "editable": {
+            "hacc": hacc_editable,
+            "quantum": quantum_editable,
+        },
+        "completion": {
+            "hacc": _completion_summary(hacc_editable),
+            "quantum": _completion_summary(quantum_editable),
         },
     }
 
@@ -79,13 +132,20 @@ def render_title18_override_worksheet_markdown(bundle: Dict[str, Any]) -> str:
     for track in ["hacc", "quantum"]:
         lines.append(f"## {track.upper()} Template")
         lines.append("")
+        lines.append(
+            f"- Filled fields: {bundle['completion'][track]['filledCount']} / {bundle['completion'][track]['totalCount']}"
+        )
+        lines.append(f"- Missing fields: {bundle['completion'][track]['missingCount']}")
+        lines.append("")
         lines.append("Substitutions:")
-        for key in sorted(bundle["templates"][track]["substitutions"]):
-            lines.append(f"- {key}: ")
+        for key in sorted(bundle["editable"][track]["substitutions"]):
+            value = bundle["editable"][track]["substitutions"][key]
+            lines.append(f"- {key}: {'' if value is None else value}")
         lines.append("")
         lines.append("Required user inputs:")
-        for key in sorted(bundle["templates"][track]["requiredUserInputs"]):
-            lines.append(f"- {key}: ")
+        for key in sorted(bundle["editable"][track]["requiredUserInputs"]):
+            value = bundle["editable"][track]["requiredUserInputs"][key]
+            lines.append(f"- {key}: {'' if value is None else value}")
         lines.append("")
     return "\n".join(lines).rstrip() + "\n"
 
@@ -102,10 +162,16 @@ def write_title18_override_templates(bundle: Dict[str, Any] | None = None, merge
     outputs["hacc_json"].write_text(json.dumps(bundle["templates"]["hacc"], indent=2) + "\n")
     outputs["quantum_json"].write_text(json.dumps(bundle["templates"]["quantum"], indent=2) + "\n")
     outputs["worksheet_markdown"].write_text(render_title18_override_worksheet_markdown(bundle))
-    if not outputs["editable_hacc_json"].exists():
-        outputs["editable_hacc_json"].write_text(json.dumps(bundle["templates"]["hacc"], indent=2) + "\n")
-    if not outputs["editable_quantum_json"].exists():
-        outputs["editable_quantum_json"].write_text(json.dumps(bundle["templates"]["quantum"], indent=2) + "\n")
+    hacc_editable = _merge_template_into_editable(
+        _load_editable_payload(outputs["editable_hacc_json"]),
+        bundle["templates"]["hacc"],
+    )
+    quantum_editable = _merge_template_into_editable(
+        _load_editable_payload(outputs["editable_quantum_json"]),
+        bundle["templates"]["quantum"],
+    )
+    outputs["editable_hacc_json"].write_text(json.dumps(hacc_editable, indent=2) + "\n")
+    outputs["editable_quantum_json"].write_text(json.dumps(quantum_editable, indent=2) + "\n")
     return outputs
 
 
