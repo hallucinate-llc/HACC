@@ -21,9 +21,11 @@ from formal_logic.title18_filing_bundle import build_title18_filing_bundle, rend
 from formal_logic.title18_filing_draft import build_title18_filing_draft, render_title18_filing_draft_markdown
 from formal_logic.title18_merged_motion import build_title18_merged_motion, render_title18_merged_motion_markdown
 from formal_logic.title18_filing_index import build_title18_filing_index, build_title18_proposed_orders, render_proposed_order_markdown, render_title18_filing_index_markdown
+from formal_logic.title18_final_packet import build_title18_final_packet, render_title18_final_packet_markdown
 from formal_logic.title18_motion_support import build_motion_support_packet, render_motion_support_markdown
 from formal_logic.title18_party_drafts import build_hacc_party_motion, build_quantum_party_motion, render_party_motion_markdown
 from formal_logic.title18_query import available_presets, build_dashboard, build_query_summary, load_report as load_title18_query_report, query_obligations, render_dashboard_markdown, run_preset
+from formal_logic.title18_regenerate_packets import regenerate_title18_packets
 from formal_logic.title18_rendered_filings import build_render_context, build_rendered_title18_filings
 from formal_logic.title18_service_packet import build_title18_service_packet, render_service_checklist_markdown
 from engine.print_case_matrix import (
@@ -359,6 +361,7 @@ def test_title18_rendered_filings_apply_known_values_and_track_missing_fields():
     assert "Benjamin Jay Barber and Jane Kay Cortez" in rendered["documents"]["quantum_party_motion"]["renderedMarkdown"]
     assert "April 5, 2026" in rendered["documents"]["hacc_party_motion"]["renderedMarkdown"]
     assert "[CASE NUMBER]" in rendered["documents"]["merged_motion"]["unresolvedPlaceholders"]
+    assert rendered["manifest"]["mergedOrderTrack"] == "hacc"
 
 
 def test_title18_proposed_orders_and_filing_index_render_expected_artifacts():
@@ -382,6 +385,34 @@ def test_title18_service_packet_renders_certificate_and_checklist():
     assert "DATED: April 5, 2026" in packet["certificateOfService"]["markdown"]
     assert "[CASE NUMBER]" in packet["certificateOfService"]["unresolvedPlaceholders"]
     assert "# Title 18 Filing Service Checklist" in checklist_markdown
+
+
+def test_title18_final_packet_selector_builds_hacc_and_quantum_sets():
+    hacc = build_title18_final_packet("hacc")
+    quantum = build_title18_final_packet("quantum")
+    hacc_markdown = render_title18_final_packet_markdown(hacc)
+    quantum_markdown = render_title18_final_packet_markdown(quantum)
+
+    assert hacc["meta"]["track"] == "hacc"
+    assert quantum["meta"]["track"] == "quantum"
+    assert "## Motion" in hacc_markdown
+    assert "## Proposed Order" in quantum_markdown
+    assert "[CASE NUMBER]" in quantum["aggregateUnresolvedPlaceholders"]
+
+
+def test_title18_regeneration_entrypoint_returns_expected_outputs():
+    outputs = regenerate_title18_packets()
+
+    assert "rendered_manifest_json" in outputs
+    assert "service_packet_json" in outputs
+    assert "index_index_json" in outputs
+    assert "final_hacc_json" in outputs
+
+
+def test_title18_regeneration_entrypoint_accepts_quantum_merged_order_track():
+    outputs = regenerate_title18_packets(merged_order_track="quantum")
+
+    assert "rendered_merged_markdown" in outputs
 
 
 def test_positive_constructive_denial_case():

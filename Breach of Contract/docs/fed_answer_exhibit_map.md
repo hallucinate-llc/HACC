@@ -103,9 +103,11 @@ Use this alongside:
 - Source paths:
   - [cortez-1.pdf](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/attachments/cortez-1.pdf)
   - [cortez-4.pdf](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/attachments/cortez-4.pdf)
+  - [message.eml](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/message.eml)
 - Use for:
   - proof that separate ORS 124 filings named Ashley Ferron as respondent
   - proof that the filings were in the HACC-related attachment set by January 26, 2026
+  - proof of the attachment-chain provenance itself
   - notice and escalation chronology even though the petitions appear denied
 
 ### Exhibit B - Phase II Notice
@@ -125,6 +127,9 @@ Use this alongside:
 - Paragraphs 23-27:
   - Exhibits `I`, `J`, `R`, `10`, `12`
   - document burdens, complaints, service-animal and Blossom nonprocessing, plus Julio household-status inconsistency and Solomon interference inference
+- Paragraph 30:
+  - Exhibits `14`, `15`, `16`
+  - Ashley Ferron court filings seeking to restrain lease modification / lease-side interference, plus the January 26 attachment-chain email
 - Second Affirmative Defense:
   - Exhibits `L`, `M`, `O`, `P`, `10`
   - prevention / hindrance via packet obstruction, failed accommodation, and inconsistent household-status treatment
@@ -138,8 +143,8 @@ Use this alongside:
   - Exhibits `O`, `P`, `M`
   - comparable and accessible replacement failure
 - Counterclaim Four:
-  - Exhibits `I`, `J`, `M`, `P`, `10`, `N`, `12`, `13`, `14`, `15`
-  - delay, documentation burden, accommodation interference, inconsistent lease/household-status treatment, Julio-specific notice issues, Solomon interference inference, Jane v. Julio / guardian-ad-litem notice, and the Ashley Ferron court-filing chronology
+  - Exhibits `I`, `J`, `M`, `P`, `10`, `N`, `12`, `13`, `14`, `15`, `16`
+  - delay, documentation burden, accommodation interference, inconsistent lease/household-status treatment, Julio-specific notice issues, Solomon interference inference, Jane v. Julio / guardian-ad-litem notice, and the Ashley Ferron court-filing chronology with attachment-chain provenance
 - Quantum claims:
   - Exhibits `L`, `J`, `R`
   - non-transmission, service-animal issues, nonprocessing
@@ -152,6 +157,9 @@ Use this alongside:
 - Paragraphs 22-26:
   - Exhibits `I`, `J`, `R`, `10`, `12`
   - documentation burden, complaints, retaliation sequence, Julio household-status inconsistency, and Solomon interference inference
+- Paragraph 29:
+  - Exhibits `14`, `15`, `16`
+  - Ashley Ferron court filings seeking to restrain lease modification / lease-side interference, plus the January 26 attachment-chain email
 - Second Affirmative Defense:
   - Exhibits `L`, `M`, `O`, `P`, `10`
 - Fifth Affirmative Defense:
@@ -161,7 +169,7 @@ Use this alongside:
 - Counterclaim Three:
   - Exhibits `O`, `P`, `M`, `13`
 - Counterclaim Four:
-  - Exhibits `I`, `J`, `M`, `P`, `10`, `N`, `12`, `13`, `14`, `15`
+  - Exhibits `I`, `J`, `M`, `P`, `10`, `N`, `12`, `13`, `14`, `15`, `16`
 - Joinder / Quantum grounds:
   - Exhibits `L`, `J`, `R`
 
@@ -179,6 +187,11 @@ If only a limited set of exhibits can be attached fast, use this order:
 8. `Exhibit 11` - Julio-specific notice / hearing support
 9. `Exhibit 12` - Solomon notice / service-avoidance support
 10. `Exhibit 13` - Jane v. Julio court packet / GAL notice support
+11. `Exhibit 14` - Jane v. Ashley Ferron denied petition
+12. `Exhibit 15` - Benjamin v. Ashley Ferron denied petition
+13. `Exhibit 16` - January 26 attachment-chain email for Ashley exhibits
+
+If the hearing will focus heavily on lease-tampering or unauthorized lease modification, add `Exhibits 14, 15, and 16` even in a lean packet.
 11. `Exhibit 14` - Jane v. Ashley Ferron denied petition
 12. `Exhibit 15` - Benjamin v. Ashley Ferron denied petition
 

@@ -9,6 +9,7 @@ import re
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Mapping
 
+from formal_logic.title18_context import build_render_context
 from formal_logic.title18_merged_motion import build_title18_merged_motion, render_title18_merged_motion_markdown
 from formal_logic.title18_party_drafts import (
     build_hacc_party_motion,
@@ -29,71 +30,21 @@ PLACEHOLDER_ALIASES = {
     "[Defendant name]": "[DEFENDANT NAME]",
     "[full legal entity name]": "[FULL LEGAL ENTITY NAME]",
     "[PRINTED NAME]": "[NAME]",
+    "[Signature]": "[SIGNATURE]",
+    "[Signature block]": "[SIGNATURE]",
 }
-
-
-def build_render_context() -> Dict[str, Any]:
-    substitutions = {
-        "[DATE]": "April 5, 2026",
-        "[date]": "April 5, 2026",
-        "[COUNTY]": "CLACKAMAS",
-        "[IN THE CIRCUIT COURT OF THE STATE OF OREGON]": "IN THE CIRCUIT COURT OF THE STATE OF OREGON",
-        "[TENANT FIRST NAMES]": "Benjamin Jay Barber and Jane Kay Cortez",
-        "[TENANT NAMES]": "Benjamin Jay Barber and Jane Kay Cortez",
-        "[DEFENDANT NAME]": "Benjamin Jay Barber and Jane Kay Cortez",
-        "[DEFENDANT NAMES]": "Benjamin Jay Barber and Jane Kay Cortez",
-        "[PLAINTIFF NAME]": "HOUSING AUTHORITY OF CLACKAMAS COUNTY",
-        "[STATE OF OREGON / COUNTY / COURT NAME]": "IN THE CIRCUIT COURT OF THE STATE OF OREGON FOR THE COUNTY OF CLACKAMAS",
-        "[Insert third option as reflected in documents/communications]": "Blossom & Community Apartments intake and PBV replacement-housing path",
-    }
-    required_user_inputs = {
-        "[CASE NUMBER]": None,
-        "[COUNTY]": None,
-        "[JUDGE NAME]": None,
-        "[YOUR NAME & BAR NUMBER]": None,
-        "[YOUR ADDRESS]": None,
-        "[YOUR PHONE]": None,
-        "[YOUR EMAIL]": None,
-        "[ADDRESS]": None,
-        "[Address]": None,
-        "[EMAIL]": None,
-        "[Email]": None,
-        "[PHONE]": None,
-        "[Phone]": None,
-        "[HACC COUNSEL NAME]": None,
-        "[HACC COUNSEL ADDRESS]": None,
-        "[HACC COUNSEL PHONE]": None,
-        "[HACC COUNSEL EMAIL]": None,
-        "[QUANTUM'S REGISTERED AGENT NAME]": None,
-        "[QUANTUM'S REGISTERED AGENT ADDRESS]": None,
-        "[FULL LEGAL ENTITY NAME]": None,
-        "[full legal entity name]": None,
-        "[Defendant name]": None,
-        "[insert schedule]": None,
-        "[GRANTED / DENIED]": None,
-        "[IN THE CIRCUIT COURT OF THE STATE OF OREGON]": None,
-        "[SIGNATURE]": None,
-        "[Signature]": None,
-        "[Signature block]": None,
-        "[NAME]": None,
-        "[Name]": None,
-        "[name]": None,
-    }
-    return {
-        "meta": {
-            "contextId": "title18_render_context_001",
-            "description": "Shared placeholder substitutions for generated Title 18 filings.",
-        },
-        "substitutions": substitutions,
-        "requiredUserInputs": required_user_inputs,
-    }
 
 
 def _apply_substitutions(text: str, context: Mapping[str, Any]) -> str:
     substitutions = context["substitutions"]
     required_inputs = context["requiredUserInputs"]
     rendered = text
-    for placeholder, value in {**required_inputs, **substitutions}.items():
+    items = sorted(
+        {**required_inputs, **substitutions}.items(),
+        key=lambda item: len(item[0]),
+        reverse=True,
+    )
+    for placeholder, value in items:
         if value:
             rendered = rendered.replace(placeholder, str(value))
     return rendered
@@ -138,13 +89,13 @@ def _flatten_strings(value: Any) -> List[str]:
     return []
 
 
-def build_rendered_title18_filings() -> Dict[str, Any]:
+def build_rendered_title18_filings(merged_order_track: str = "hacc") -> Dict[str, Any]:
     context = build_render_context()
     documents = {
         "merged_motion": {
             "sourceId": "title18_merged_motion_001",
-            "json": build_title18_merged_motion(),
-            "markdown": render_title18_merged_motion_markdown(build_title18_merged_motion()),
+            "json": build_title18_merged_motion(order_track=merged_order_track),
+            "markdown": render_title18_merged_motion_markdown(build_title18_merged_motion(order_track=merged_order_track)),
         },
         "hacc_party_motion": {
             "sourceId": "title18_hacc_party_motion_001",
@@ -184,13 +135,14 @@ def build_rendered_title18_filings() -> Dict[str, Any]:
         "documents": rendered_documents,
         "manifest": {
             "renderId": "title18_render_manifest_001",
+            "mergedOrderTrack": merged_order_track,
             "documents": manifest_documents,
         },
     }
 
 
-def write_rendered_title18_filings(bundle: Dict[str, Any] | None = None) -> Dict[str, Path]:
-    bundle = bundle or build_rendered_title18_filings()
+def write_rendered_title18_filings(bundle: Dict[str, Any] | None = None, merged_order_track: str = "hacc") -> Dict[str, Path]:
+    bundle = bundle or build_rendered_title18_filings(merged_order_track=merged_order_track)
     outputs = {
         "context_json": OUTPUTS / "title18_render_context.json",
         "manifest_json": OUTPUTS / "title18_render_manifest.json",

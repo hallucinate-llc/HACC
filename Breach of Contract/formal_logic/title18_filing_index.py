@@ -1,151 +1,22 @@
-"""
-Build matched proposed orders and a filing index for rendered Title 18 motion outputs.
-"""
+"""Build matched proposed orders and a filing index for rendered Title 18 motion outputs."""
 
 from __future__ import annotations
 
 import json
-import re
 from pathlib import Path
 from typing import Any, Dict, List
 
-from formal_logic.title18_rendered_filings import build_render_context, build_rendered_title18_filings
+from formal_logic.title18_proposed_orders import build_title18_proposed_orders, render_proposed_order_markdown
+from formal_logic.title18_rendered_filings import build_rendered_title18_filings
 from formal_logic.title18_service_packet import build_title18_service_packet
 
 
 ROOT = Path("/home/barberb/HACC/Breach of Contract")
 OUTPUTS = ROOT / "outputs"
-PLACEHOLDER_PATTERN = re.compile(r"\[[A-Za-z0-9&'._/ -]+\]")
 
 
-def _base_caption() -> List[str]:
-    return [
-        "IN THE CIRCUIT COURT OF THE STATE OF OREGON FOR THE COUNTY OF CLACKAMAS",
-        "HOUSING AUTHORITY OF CLACKAMAS COUNTY v. BENJAMIN JAY BARBER and JANE KAY CORTEZ",
-        "Case No. [CASE NUMBER]",
-    ]
-
-
-def build_title18_proposed_orders() -> Dict[str, Any]:
-    rendered = build_rendered_title18_filings()
-    context = build_render_context()
-    hacc_order = {
-        "orderId": "title18_hacc_proposed_order_001",
-        "title": "Proposed Order Staying or Denying Displacement Relief and Compelling Section 18 Discovery",
-        "caption": _base_caption(),
-        "body": [
-            "The Court, having reviewed Defendants' HACC-Focused Motion to Stay or Deny Displacement Relief, Compel Section 18 Discovery, and Preserve Accessible Relocation Remedies, and being fully advised, ORDERS:",
-            "1. HACC's request for eviction or displacement relief is [GRANTED / DENIED / STAYED] pending resolution of the household-specific Section 18 relocation record.",
-            "2. HACC shall produce the Section 18 approval, relocation-plan, comparability, counseling, accommodation, and payment materials identified in Defendants' motion within [insert schedule].",
-            "3. No displacement or possession transfer shall occur unless and until the Court is satisfied that HACC has established lawful comparable and accessible replacement-housing compliance for this household.",
-            "4. Any further scheduling, evidentiary, or compliance deadlines are set as follows: [insert schedule].",
-            "IT IS SO ORDERED.",
-            "DATED: [DATE]",
-            "__________________________________",
-            "[JUDGE NAME]",
-        ],
-        "submittedBy": [
-            "Submitted by:",
-            "[NAME]",
-            "[ADDRESS]",
-            "[PHONE]",
-            "[EMAIL]",
-            "[Signature]",
-        ],
-        "sourceMotionId": rendered["documents"]["hacc_party_motion"]["sourceId"],
-    }
-    quantum_order = {
-        "orderId": "title18_quantum_proposed_order_001",
-        "title": "Proposed Order Granting Joinder and Leave to File Third-Party Claims Against Quantum Residential",
-        "caption": _base_caption(),
-        "body": [
-            "The Court, having reviewed Defendants' Quantum-Focused Motion for Joinder, Leave to File Third-Party Claims, and Related Discovery, and being fully advised, ORDERS:",
-            "1. Defendants' motion for joinder is [GRANTED / DENIED].",
-            "2. If granted, Quantum Residential [FULL LEGAL ENTITY NAME] is joined as a party in this action.",
-            "3. If granted, Defendants are granted leave to file and serve their related third-party claims within [insert schedule].",
-            "4. Quantum Residential shall respond within the time provided by law after service.",
-            "5. Related discovery and case-management deadlines are set as follows: [insert schedule].",
-            "IT IS SO ORDERED.",
-            "DATED: [DATE]",
-            "__________________________________",
-            "[JUDGE NAME]",
-        ],
-        "submittedBy": [
-            "Submitted by:",
-            "[NAME]",
-            "[ADDRESS]",
-            "[PHONE]",
-            "[EMAIL]",
-            "[Signature]",
-        ],
-        "sourceMotionId": rendered["documents"]["quantum_party_motion"]["sourceId"],
-    }
-    orders = {
-        "meta": {
-            "packetId": "title18_proposed_orders_001",
-            "generatedAt": rendered["context"]["substitutions"]["[DATE]"],
-        },
-        "orders": {
-            "hacc": hacc_order,
-            "quantum": quantum_order,
-        },
-    }
-    rendered_orders = {
-        key: _render_order(order, context) for key, order in orders["orders"].items()
-    }
-    orders["renderContextId"] = context["meta"]["contextId"]
-    orders["renderedOrders"] = rendered_orders
-    return orders
-
-
-def _apply_context(text: str, context: Dict[str, Any]) -> str:
-    rendered = text
-    for placeholder, value in {**context["requiredUserInputs"], **context["substitutions"]}.items():
-        if value:
-            rendered = rendered.replace(placeholder, str(value))
-    return rendered
-
-
-def _collect_placeholders(value: str) -> List[str]:
-    placeholders = set()
-    for match in PLACEHOLDER_PATTERN.findall(value):
-        inner = match[1:-1].strip()
-        if len(inner) < 4:
-            continue
-        if not any(character.isalpha() for character in inner):
-            continue
-        placeholders.add(match)
-    return sorted(placeholders)
-
-
-def _render_order(order: Dict[str, Any], context: Dict[str, Any]) -> Dict[str, Any]:
-    rendered = {
-        **order,
-        "caption": [_apply_context(item, context) for item in order["caption"]],
-        "body": [_apply_context(item, context) for item in order["body"]],
-        "submittedBy": [_apply_context(item, context) for item in order["submittedBy"]],
-    }
-    rendered["unresolvedPlaceholders"] = _collect_placeholders(render_proposed_order_markdown(rendered))
-    return rendered
-
-
-def render_proposed_order_markdown(order: Dict[str, Any]) -> str:
-    lines: List[str] = []
-    lines.append(f"# {order['title']}")
-    lines.append("")
-    for item in order["caption"]:
-        lines.append(item)
-    lines.append("")
-    for item in order["body"]:
-        lines.append(item)
-    lines.append("")
-    for item in order["submittedBy"]:
-        lines.append(item)
-    return "\n".join(lines).rstrip() + "\n"
-
-
-def build_title18_filing_index() -> Dict[str, Any]:
-    rendered = build_rendered_title18_filings()
+def build_title18_filing_index(merged_order_track: str = "hacc") -> Dict[str, Any]:
+    rendered = build_rendered_title18_filings(merged_order_track=merged_order_track)
     proposed_orders = build_title18_proposed_orders()
     service_packet = build_title18_service_packet()
     unresolved_by_document = {
@@ -203,6 +74,7 @@ def build_title18_filing_index() -> Dict[str, Any]:
             "indexId": "title18_filing_index_001",
             "generatedAt": rendered["context"]["substitutions"]["[DATE]"],
             "renderManifestId": rendered["manifest"]["renderId"],
+            "mergedOrderTrack": merged_order_track,
             "proposedOrderPacketId": proposed_orders["meta"]["packetId"],
         },
         "artifacts": artifacts,
@@ -237,8 +109,8 @@ def render_title18_filing_index_markdown(index: Dict[str, Any]) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
-def write_title18_filing_index(bundle: Dict[str, Any] | None = None) -> Dict[str, Path]:
-    bundle = bundle or build_title18_filing_index()
+def write_title18_filing_index(bundle: Dict[str, Any] | None = None, merged_order_track: str = "hacc") -> Dict[str, Path]:
+    bundle = bundle or build_title18_filing_index(merged_order_track=merged_order_track)
     proposed_orders = build_title18_proposed_orders()
     outputs = {
         "hacc_order_json": OUTPUTS / "title18_hacc_proposed_order.json",

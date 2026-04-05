@@ -62,6 +62,9 @@ DEFENDANTS' EXHIBIT INDEX
 15. Exhibit 15 - Benjamin Jay Barber v. Ashley Ferron (in her official capacity), Clackamas County case no. 26P000433, denied petition  
    Source: [cortez-4.pdf](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/attachments/cortez-4.pdf)
 
+16. Exhibit 16 - January 26, 2026 `RE: Allegations of Fraud - JC Household` email carrying the Ashley Ferron court-filing attachments  
+   Source: [message.eml](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/message.eml)
+
 ## Assembly Note
 
 Attach each exhibit behind its matching cover sheet in numerical order.

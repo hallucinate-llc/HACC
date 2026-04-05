@@ -11,3 +11,11 @@ def test_title18_merged_motion_contains_core_sections_and_order():
     assert "proposed_order" in section_ids
     assert motion["exhibitMap"]
     assert "# Title 18 Merged Motion Package" in markdown
+
+
+def test_title18_merged_motion_can_use_hacc_selected_order():
+    motion = build_title18_merged_motion(order_track="hacc")
+    markdown = render_title18_merged_motion_markdown(motion)
+
+    assert motion["meta"]["proposedOrderTrack"] == "hacc"
+    assert "Staying or Denying Displacement Relief" in markdown

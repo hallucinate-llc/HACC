@@ -1,0 +1,26 @@
+{
+  "substitutions": {
+    "[DATE]": null,
+    "[COUNTY]": null,
+    "[PLAINTIFF NAME]": null,
+    "[DEFENDANT NAME]": null,
+    "[FULL LEGAL ENTITY NAME]": null
+  },
+  "requiredUserInputs": {
+    "[CASE NUMBER]": null,
+    "[JUDGE NAME]": null,
+    "[NAME]": null,
+    "[ADDRESS]": null,
+    "[PHONE]": null,
+    "[EMAIL]": null,
+    "[SIGNATURE]": null,
+    "[HACC COUNSEL NAME]": null,
+    "[HACC COUNSEL ADDRESS]": null,
+    "[QUANTUM'S REGISTERED AGENT NAME]": null,
+    "[QUANTUM'S REGISTERED AGENT ADDRESS]": null,
+    "[SERVICE METHOD]": null,
+    "[GRANTED / DENIED]": null,
+    "[GRANTED / DENIED / STAYED]": null,
+    "[insert schedule]": null
+  }
+}

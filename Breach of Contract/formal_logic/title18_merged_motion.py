@@ -10,20 +10,18 @@ from typing import Any, Dict, List
 
 from formal_logic.title18_filing_draft import build_title18_filing_draft
 from formal_logic.title18_motion_support import build_motion_support_packet
+from formal_logic.title18_proposed_orders import build_title18_proposed_orders, render_proposed_order_markdown
 
 
 ROOT = Path("/home/barberb/HACC/Breach of Contract")
 OUTPUTS = ROOT / "outputs"
 
 
-def _load_text(path: Path) -> str:
-    return path.read_text()
-
-
-def build_title18_merged_motion() -> Dict[str, Any]:
+def build_title18_merged_motion(order_track: str = "hacc") -> Dict[str, Any]:
     filing_draft = build_title18_filing_draft()
     motion_packet = build_motion_support_packet()
-    proposed_order = _load_text(ROOT / "docs" / "proposed_order_joinder_quantum.md")
+    proposed_orders = build_title18_proposed_orders()
+    proposed_order = render_proposed_order_markdown(proposed_orders["renderedOrders"][order_track]).rstrip()
 
     sections = [
         {
@@ -90,6 +88,7 @@ def build_title18_merged_motion() -> Dict[str, Any]:
             "generatedAt": motion_packet["meta"]["generatedAt"],
             "sourceDraftId": filing_draft["meta"]["draftId"],
             "sourcePacketId": motion_packet["meta"]["packetId"],
+            "proposedOrderTrack": order_track,
         },
         "sections": sections,
         "headline": motion_packet["headline"],

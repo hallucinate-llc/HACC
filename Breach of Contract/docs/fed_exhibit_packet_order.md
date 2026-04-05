@@ -139,6 +139,7 @@ Use this with:
 - Prior label: `Ashley Ferron court packet 1`
 - Title: Jane Kay Cortez v. Ashley Ferron (in her official capacity), case no. 26P000432, denied petition
 - Source path: [/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/attachments/cortez-1.pdf](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/attachments/cortez-1.pdf)
+- Preserved attachment chain: January 26, 2026 `RE: Allegations of Fraud - JC Household` email thread
 - Main use:
   - proves a separate Ashley Ferron ORS 124 filing existed in the HACC dispute period
   - supports notice and escalation chronology
@@ -149,10 +150,21 @@ Use this with:
 - Prior label: `Ashley Ferron court packet 2`
 - Title: Benjamin Jay Barber v. Ashley Ferron (in her official capacity), case no. 26P000433, denied petition
 - Source path: [/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/attachments/cortez-4.pdf](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/attachments/cortez-4.pdf)
+- Preserved attachment chain: January 26, 2026 `RE: Allegations of Fraud - JC Household` email thread
 - Main use:
   - proves a second Ashley Ferron ORS 124 filing existed in the same dispute sequence
   - supports notice and escalation chronology
   - supports the theory that Benjamin personally pursued court protection related to HACC-side conduct
+
+### Exhibit 16
+
+- Prior label: `January 26 Ashley attachment email`
+- Title: January 26, 2026 `RE: Allegations of Fraud - JC Household` email carrying the Ashley Ferron court-filing attachments
+- Source path: [/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/message.eml](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/message.eml)
+- Main use:
+  - proves the Ashley Ferron court filings were actually attached within the HACC-related email chain
+  - supports provenance and authenticity for Exhibits 14 and 15
+  - supports HACC notice and escalation chronology
 
 ## Short Hearing Packet
 
@@ -184,7 +196,7 @@ If the court expects a very short packet, attach only:
 - Jane v. Julio court-process / GAL notice:
   - `Exhibit 13`
 - Ashley Ferron court filings / notice chronology:
-  - `Exhibits 14, 15`
+  - `Exhibits 14, 15, 16`
 - Relocation trigger / conditions precedent:
   - `Exhibit 1`
 
@@ -205,5 +217,6 @@ If you adopt this renumbered state-court sequence, update the draft references b
 - Jane v. Julio court packet becomes state `Exhibit 13`
 - Ashley Ferron court packet 1 becomes state `Exhibit 14`
 - Ashley Ferron court packet 2 becomes state `Exhibit 15`
+- January 26 Ashley attachment email becomes state `Exhibit 16`
 
 If you want to avoid renumbering edits, keep the federal lettering instead. This document is only for a cleaner state-FED packet format.

@@ -18,3 +18,9 @@ def test_title18_filing_index_tracks_artifacts_and_placeholder_work():
     assert "[CASE NUMBER]" in index["unresolvedPlaceholdersByDocument"]["merged_motion"]
     assert "Proposed Order Staying or Denying Displacement Relief" in hacc_order_markdown
     assert "# Title 18 Filing Index" in index_markdown
+
+
+def test_title18_filing_index_tracks_selected_merged_order():
+    index = build_title18_filing_index(merged_order_track="quantum")
+
+    assert index["meta"]["mergedOrderTrack"] == "quantum"
