@@ -16,6 +16,11 @@ from engine.generate_advocacy import generate_advocacy_bundle, generate_advocacy
 from engine.generate_memorandum import generate_memorandum_bundle, write_memorandum_outputs
 from engine.legal_grounding import build_dependency_citations_jsonld
 from formal_logic.graphrag_obligation_analysis import analyze_title18_corpus
+from formal_logic.reasoning_exports import build_dcec_export, build_flogic_export, build_manifest, build_prolog_export
+from formal_logic.title18_filing_bundle import build_title18_filing_bundle, render_title18_filing_bundle_markdown
+from formal_logic.title18_filing_draft import build_title18_filing_draft, render_title18_filing_draft_markdown
+from formal_logic.title18_motion_support import build_motion_support_packet, render_motion_support_markdown
+from formal_logic.title18_query import available_presets, build_dashboard, build_query_summary, load_report as load_title18_query_report, query_obligations, render_dashboard_markdown, run_preset
 from engine.print_case_matrix import (
     build_audit_index_data,
     build_authority_findings_data,
@@ -255,6 +260,64 @@ def test_graphrag_title18_analysis_builds_obligation_matrix():
     assert any(item["action"] == "forward resident intake/application packets to HACC" for item in matrix["org:quantum"]["org:hacc"])
     assert any(item["action"] == "monitor and enforce Section 18 relocation compliance" for item in matrix["org:hud"]["org:hacc"])
     assert any(item["modality"] == "prohibited" for item in matrix["org:hacc"]["person:benjamin_barber"])
+
+
+def test_graphrag_title18_reasoning_exports_render_expected_formats():
+    report = analyze_title18_corpus(GRAPHRAG_CORPUS_ROOT)
+    prolog = build_prolog_export(report)
+    dcec = build_dcec_export(report)
+    flogic = build_flogic_export(report)
+    manifest = build_manifest(report)
+
+    assert "party(org_hacc)." in prolog
+    assert "overdue_obligation(O)" in prolog
+    assert "Happens(" in dcec
+    assert "Initiates(" in dcec
+    assert ":obligation[" in flogic
+    assert "title18_obligations.flogic" in manifest["exports"]
+
+
+def test_title18_filing_bundle_collects_outputs_into_single_packet():
+    bundle = build_title18_filing_bundle()
+    markdown = render_title18_filing_bundle_markdown(bundle)
+
+    assert bundle["meta"]["bundleId"] == "title18_filing_packet_001"
+    assert bundle["summary"]["obligationCount"] >= 10
+    assert bundle["summary"]["highPriorityDiscoveryCount"] >= 1
+    assert any(item["label"] == "Breach report" for item in bundle["artifacts"])
+    assert "# Title 18 Filing Packet" in markdown
+
+
+def test_title18_query_layer_filters_and_summarizes_obligations():
+    report = analyze_title18_corpus(GRAPHRAG_CORPUS_ROOT)
+    obligations = query_obligations(report, actor="org:hacc", temporal_status="overdue")
+    summary = build_query_summary(obligations, report)
+    dashboard = build_dashboard(report)
+    markdown = render_dashboard_markdown(dashboard)
+
+    assert obligations
+    assert summary["byActor"]["org:hacc"] >= 1
+    assert dashboard["headline"]["overdueObligations"] >= 1
+    assert dashboard["prohibited"]
+    assert "# Title 18 Obligation Dashboard" in markdown
+
+
+def test_title18_query_presets_and_motion_support_packet_render():
+    report = load_title18_query_report()
+    assert "hacc-overdue" in available_presets()
+    preset_payload = run_preset(report, "hacc-overdue")
+    motion_packet = build_motion_support_packet()
+    motion_markdown = render_motion_support_markdown(motion_packet)
+    filing_draft = build_title18_filing_draft()
+    filing_markdown = render_title18_filing_draft_markdown(filing_draft)
+
+    assert preset_payload["summary"]["count"] >= 1
+    assert motion_packet["sections"]
+    assert motion_packet["exhibitMap"]
+    assert "# Title 18 Motion Support Packet" in motion_markdown
+    assert filing_draft["sections"]
+    assert filing_draft["referenceDrafts"]["proposedOrder"]
+    assert "# Title 18 Filing Draft" in filing_markdown
 
 
 def test_positive_constructive_denial_case():

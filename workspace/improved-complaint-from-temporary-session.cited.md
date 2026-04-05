@@ -131,39 +131,40 @@ Against Quantum under 42 U.S.C. section 1981
 78. Plaintiffs allege that they submitted a paper Blossom application in December 2025, that Quantum accepted it in person, and that plaintiffs notified HACC the same day about the submission and service-animal issues, but that no timely approval, denial, ineligibility determination, or lawful written deficiency notice was ever issued. Plaintiffs further allege that they were later told Quantum had never turned the application in to HACC.
 79. Plaintiffs complained in writing, including in Gmail-preserved emails dated February 26, March 2, and March 9, 2026 to Kati Tilton, Ashley Ferron, and `charity@magikcorp.com`, which plaintiffs allege was associated with Quantum or the Blossom-side process, that Blossom had refused to process their application for two months and had engaged in race discrimination. Exhibit R. Plaintiffs further allege that other displaced households were moved into Blossom while plaintiffs' application was never processed at all, and that plaintiffs spoke with a Black family who had been interviewed for Blossom even though plaintiffs' application did not move forward.
 80. Plaintiffs further circulated third-party former-employee review material concerning Quantum that referenced reported retaliation after fair-housing complaints, use of "woke" terminology, and DEI-focused culture. Plaintiffs rely on that material as context for why they believed race discrimination was occurring and for the fact that they communicated those concerns, not as a direct admission by Quantum. Exhibit Q.
-81. Plaintiffs further allege that official HACC and Clackamas County SHS, RLRA, H4S, and AFH policy materials expressly direct housing-program actors to lead with racial equity, use equity criteria, center BIPOC households in program design, and monitor outcomes for BIPOC households and all protected classes, and that Quantum acted as a participant in a county-linked housing-access and contracting pipeline shaped by those official policies.
-82. Plaintiffs allege that Quantum refused to process or honor plaintiffs' housing application and opportunity on unequal racial terms, thereby impairing plaintiffs' right to make and enforce a housing-related contract.
-83. These acts violated 42 U.S.C. section 1981.
+81. Plaintiffs further allege that official HACC and Clackamas County SHS, RLRA, H4S, and AFH policy materials expressly direct housing-program actors to lead with racial equity, use equity criteria, center BIPOC households in program design, and monitor outcomes for BIPOC households and all protected classes, and that Quantum acted as a participant in a county-linked housing-access and contracting pipeline shaped by those official policies. Plaintiffs rely on that policy environment as context and notice, not as the sole proof of discrimination.
+82. Plaintiffs further allege that Quantum's conduct can fairly be understood as a form of selective obstruction or "lemon dropping" in the housing-access context: plaintiffs' application was allegedly accepted, then not processed, not timely transmitted, and not lawfully resolved while the housing opportunity remained open to others. Plaintiffs further allege that if discovery confirms that other displaced households were affirmatively advanced while plaintiffs' application stalled without lawful resolution, that would support the related inference of selective advancement or "cherry picking." Plaintiffs use those terms descriptively, while alleging the actionable wrong as unequal racial treatment in a housing-related contracting opportunity.
+83. Plaintiffs allege that Quantum refused to process or honor plaintiffs' housing application and opportunity on unequal racial terms, thereby impairing plaintiffs' right to make and enforce a housing-related contract.
+84. These acts violated 42 U.S.C. section 1981.
 
 COUNT V
 PROCEDURAL DUE PROCESS AND FEDERAL HEARING VIOLATIONS
 Against HACC
 
-84. Plaintiffs reallege the preceding paragraphs.
-85. HACC acted under color of state law when administering public-housing, displacement, TPV, PBV, HCV, grievance, and hearing processes.
-86. Plaintiffs had protected interests in continued housing benefits, lawful displacement procedures, and the notice and hearing protections attached to HACC-administered housing assistance.
-87. HACC issued or maintained adverse notices and housing-administration decisions affecting plaintiffs' rights, obligations, welfare, or status without providing the clear, timely, and meaningful hearing process required by federal law, including the February 13, 2026 termination notice addressed to Julio Regal Florez-Cortez. Exhibits B, C, D, E, H, K, and N.
-88. Plaintiffs allege that HACC conditioned Julio Regal Florez-Cortez's access to a hearing on a written request even though he was incapable of writing in any language and had specifically requested a hearing orally. Exhibit N; intake responses. Plaintiffs further rely on HACC policy materials stating that transfer requests may be accepted as another written or oral request.
-89. Plaintiffs allege that no meaningful hearing or appeal was scheduled before the threatened loss of housing and that HACC failed to provide sufficient notice, document access, hearing access, accommodation in the hearing-request process, or a timely decision process.
-90. These acts violated the Fourteenth Amendment, actionable under 42 U.S.C. section 1983, together with 42 U.S.C. section 1437d(k) and 24 C.F.R. section 982.555.
+85. Plaintiffs reallege the preceding paragraphs.
+86. HACC acted under color of state law when administering public-housing, displacement, TPV, PBV, HCV, grievance, and hearing processes.
+87. Plaintiffs had protected interests in continued housing benefits, lawful displacement procedures, and the notice and hearing protections attached to HACC-administered housing assistance.
+88. HACC issued or maintained adverse notices and housing-administration decisions affecting plaintiffs' rights, obligations, welfare, or status without providing the clear, timely, and meaningful hearing process required by federal law, including the February 13, 2026 termination notice addressed to Julio Regal Florez-Cortez. Exhibits B, C, D, E, H, K, and N.
+89. Plaintiffs allege that HACC conditioned Julio Regal Florez-Cortez's access to a hearing on a written request even though he was incapable of writing in any language and had specifically requested a hearing orally. Exhibit N; intake responses. Plaintiffs further rely on HACC policy materials stating that transfer requests may be accepted as another written or oral request.
+90. Plaintiffs allege that no meaningful hearing or appeal was scheduled before the threatened loss of housing and that HACC failed to provide sufficient notice, document access, hearing access, accommodation in the hearing-request process, or a timely decision process.
+91. These acts violated the Fourteenth Amendment, actionable under 42 U.S.C. section 1983, together with 42 U.S.C. section 1437d(k) and 24 C.F.R. section 982.555.
 
 COUNT VI
 SUPPLEMENTAL OREGON HOUSING DISCRIMINATION CLAIMS
 Against HACC and Quantum
 
-91. Plaintiffs reallege the preceding paragraphs.
-92. Defendants discriminated in housing-related terms, services, processing, and access on the basis of disability and source of income by refusing or delaying accommodation, failing to process the Blossom application, obstructing voucher-backed housing access, and imposing unreasonable or selectively administered intake barriers. Exhibits G, I, J, and M.
-93. Plaintiffs further allege that Quantum participated in the refusal to process a voucher-linked application and in service-animal or accommodation-related discrimination at Blossom. Exhibit J.
-94. These acts violated ORS 659A.145, ORS 659A.421, ORS 659A.425, and ORS 659A.885.
+92. Plaintiffs reallege the preceding paragraphs.
+93. Defendants discriminated in housing-related terms, services, processing, and access on the basis of disability and source of income by refusing or delaying accommodation, failing to process the Blossom application, obstructing voucher-backed housing access, and imposing unreasonable or selectively administered intake barriers. Exhibits G, I, J, and M.
+94. Plaintiffs further allege that Quantum participated in the refusal to process a voucher-linked application and in service-animal or accommodation-related discrimination at Blossom. Exhibit J.
+95. These acts violated ORS 659A.145, ORS 659A.421, ORS 659A.425, and ORS 659A.885.
 
 COUNT VII
 SUPPLEMENTAL OREGON NOTICE, LEASE, AND PROGRAM CLAIMS
 Against HACC
 
-95. Plaintiffs reallege the preceding paragraphs.
-96. HACC issued or maintained termination and displacement notices while also controlling the relocation and voucher process needed to avoid unlawful housing loss. Exhibits A, C, D, E, F, H, and N.
-97. Plaintiffs further allege that HACC destabilized the household through unlawful lease-administration and household-composition handling despite prior requests for bifurcation, restraining-order-related protections, and relocation assistance, and that HACC effectively evicted Julio Regal Florez-Cortez instead of lawfully handling the requested bifurcation process.
-98. These acts violated ORS 90.427 and the applicable HACC lease and ACOP provisions incorporated into the tenancy and displacement process.
+96. Plaintiffs reallege the preceding paragraphs.
+97. HACC issued or maintained termination and displacement notices while also controlling the relocation and voucher process needed to avoid unlawful housing loss. Exhibits A, C, D, E, F, H, and N.
+98. Plaintiffs further allege that HACC destabilized the household through unlawful lease-administration and household-composition handling despite prior requests for bifurcation, restraining-order-related protections, and relocation assistance, and that HACC effectively evicted Julio Regal Florez-Cortez instead of lawfully handling the requested bifurcation process.
+99. These acts violated ORS 90.427 and the applicable HACC lease and ACOP provisions incorporated into the tenancy and displacement process.
 
 PRAYER FOR RELIEF
 
