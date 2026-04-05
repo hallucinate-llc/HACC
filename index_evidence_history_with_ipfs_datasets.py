@@ -18,6 +18,7 @@ import os
 import sys
 import re
 import shutil
+import subprocess
 import tempfile
 from dataclasses import asdict, is_dataclass
 from datetime import datetime, timezone
@@ -65,7 +66,6 @@ def _extract_pdf_text_ocr(path: Path) -> str:
     """Render each PDF page to an image and OCR with pytesseract."""
     try:
         import pymupdf as fitz  # type: ignore
-        from pytesseract import pytesseract as tess  # type: ignore
         from PIL import Image  # type: ignore
         import io
         pages = []
@@ -74,7 +74,28 @@ def _extract_pdf_text_ocr(path: Path) -> str:
             mat = fitz.Matrix(2.0, 2.0)   # 2× zoom ≈ 144 dpi
             pix = page.get_pixmap(matrix=mat, colorspace=fitz.csRGB)
             img = Image.open(io.BytesIO(pix.tobytes("png"))).convert("RGB")
-            pages.append(tess.image_to_string(img))
+            text = ""
+            try:
+                from pytesseract import pytesseract as tess  # type: ignore
+                text = tess.image_to_string(img)
+            except Exception:
+                if shutil.which("tesseract"):
+                    with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as tmp:
+                        temp_path = Path(tmp.name)
+                        img.save(str(temp_path), format="PNG")
+                    try:
+                        proc = subprocess.run(
+                            ["tesseract", str(temp_path), "stdout"],
+                            check=False,
+                            capture_output=True,
+                            text=True,
+                            timeout=300,
+                        )
+                        if proc.returncode == 0:
+                            text = proc.stdout
+                    finally:
+                        temp_path.unlink(missing_ok=True)
+            pages.append(text)
         doc.close()
         return "\n".join(pages)
     except Exception:
@@ -84,10 +105,23 @@ def _extract_pdf_text_ocr(path: Path) -> str:
 def _extract_image_text_ocr(path: Path) -> str:
     """OCR a raster image file (JPEG, PNG, TIFF, etc.) with pytesseract."""
     try:
-        from pytesseract import pytesseract as tess  # type: ignore
-        from PIL import Image  # type: ignore
-        img = Image.open(str(path)).convert("RGB")
-        return tess.image_to_string(img)
+        try:
+            from pytesseract import pytesseract as tess  # type: ignore
+            from PIL import Image  # type: ignore
+            img = Image.open(str(path)).convert("RGB")
+            return tess.image_to_string(img)
+        except Exception:
+            if shutil.which("tesseract"):
+                proc = subprocess.run(
+                    ["tesseract", str(path), "stdout"],
+                    check=False,
+                    capture_output=True,
+                    text=True,
+                    timeout=300,
+                )
+                if proc.returncode == 0:
+                    return proc.stdout
+            return ""
     except Exception:
         return ""
 
