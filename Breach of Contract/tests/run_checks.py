@@ -19,6 +19,7 @@ from formal_logic.graphrag_obligation_analysis import analyze_title18_corpus
 from formal_logic.reasoning_exports import build_dcec_export, build_flogic_export, build_manifest, build_prolog_export
 from formal_logic.title18_filing_bundle import build_title18_filing_bundle, render_title18_filing_bundle_markdown
 from formal_logic.title18_filing_draft import build_title18_filing_draft, render_title18_filing_draft_markdown
+from formal_logic.title18_merged_motion import build_title18_merged_motion, render_title18_merged_motion_markdown
 from formal_logic.title18_motion_support import build_motion_support_packet, render_motion_support_markdown
 from formal_logic.title18_query import available_presets, build_dashboard, build_query_summary, load_report as load_title18_query_report, query_obligations, render_dashboard_markdown, run_preset
 from engine.print_case_matrix import (
@@ -318,6 +319,16 @@ def test_title18_query_presets_and_motion_support_packet_render():
     assert filing_draft["sections"]
     assert filing_draft["referenceDrafts"]["proposedOrder"]
     assert "# Title 18 Filing Draft" in filing_markdown
+
+
+def test_title18_merged_motion_package_renders_combined_motion():
+    motion = build_title18_merged_motion()
+    markdown = render_title18_merged_motion_markdown(motion)
+
+    assert motion["sections"]
+    assert any(item["id"] == "proposed_order" for item in motion["sections"])
+    assert motion["requestedRelief"]
+    assert "# Title 18 Merged Motion Package" in markdown
 
 
 def test_positive_constructive_denial_case():

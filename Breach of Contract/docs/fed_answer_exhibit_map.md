@@ -76,12 +76,27 @@ Use this alongside:
   - February 9, 2026 document-demand burden
   - support for wrongful delay / process interference
 
+### Lease Amendment / Household-Composition Record
+
+- Source path: [/home/barberb/HACC/workspace/temporary-cli-session-migration/paper-exhibits/HACC vawa violation.pdf](/home/barberb/HACC/workspace/temporary-cli-session-migration/paper-exhibits/HACC%20vawa%20violation.pdf)
+- Use for:
+  - January 1, 2026 effective-date proof for changed household composition
+  - inconsistency between lease-side action and later January 12 statement that Julio remained part of the household
+
 ### Exhibit N - Julio Eviction Notice
 
 - Source path: [/home/barberb/HACC/workspace/temporary-cli-session-migration/prior-research-results/full-evidence-review-run/chronology/emergency_motion_packet/exhibits/Exhibit N - Julio Eviction notice.jpeg](/home/barberb/HACC/workspace/temporary-cli-session-migration/prior-research-results/full-evidence-review-run/chronology/emergency_motion_packet/exhibits/Exhibit%20N%20-%20Julio%20Eviction%20notice.jpeg)
 - Use for:
-  - hearing / process irregularity theory
   - Julio-specific notice sequence
+  - hearing / process irregularity theory
+
+### Solomon Restraining-Order Notice / Service-Avoidance Text Thread
+
+- Source path: [/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14166-Me-to-solomon-gv-0eb16863d122188b/transcript.txt](/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14166-Me-to-solomon-gv-0eb16863d122188b/transcript.txt)
+- Use for:
+  - proof that Solomon had notice of the order and its terms
+  - statements showing claimed service avoidance, noncooperation, and intent to have the order "overturn[ed]"
+  - support for the inference that Solomon continued trying to influence lease-side events despite the restraining-order framework
 
 ### Exhibit B - Phase II Notice
 
@@ -98,11 +113,11 @@ Use this alongside:
   - Exhibits `L`, `M`, `O`, `P`
   - Easton Ridge, provider verification, partial recognition, and denial
 - Paragraphs 23-27:
-  - Exhibits `I`, `J`, `R`
-  - document burdens, complaints, service-animal and Blossom nonprocessing
+  - Exhibits `I`, `J`, `R`, `10`, `12`
+  - document burdens, complaints, service-animal and Blossom nonprocessing, plus Julio household-status inconsistency and Solomon interference inference
 - Second Affirmative Defense:
-  - Exhibits `L`, `M`, `O`, `P`
-  - prevention / hindrance via packet obstruction and failed accommodation
+  - Exhibits `L`, `M`, `O`, `P`, `10`
+  - prevention / hindrance via packet obstruction, failed accommodation, and inconsistent household-status treatment
 - Fifth Affirmative Defense:
   - Exhibits `O`, `P`, `M`
   - accessibility and accommodation failure
@@ -113,8 +128,8 @@ Use this alongside:
   - Exhibits `O`, `P`, `M`
   - comparable and accessible replacement failure
 - Counterclaim Four:
-  - Exhibits `I`, `J`, `M`, `P`, `N`
-  - delay, documentation burden, accommodation interference, hearing issues
+  - Exhibits `I`, `J`, `M`, `P`, `10`, `N`, `12`
+  - delay, documentation burden, accommodation interference, inconsistent lease/household-status treatment, Julio-specific notice issues, and Solomon interference inference
 - Quantum claims:
   - Exhibits `L`, `J`, `R`
   - non-transmission, service-animal issues, nonprocessing
@@ -125,10 +140,10 @@ Use this alongside:
   - Exhibits `M`, `O`, `P`
   - Easton Ridge, accommodation record, partial recognition, denial
 - Paragraphs 22-26:
-  - Exhibits `I`, `J`, `R`
-  - documentation burden, complaints, retaliation sequence
+  - Exhibits `I`, `J`, `R`, `10`, `12`
+  - documentation burden, complaints, retaliation sequence, Julio household-status inconsistency, and Solomon interference inference
 - Second Affirmative Defense:
-  - Exhibits `L`, `M`, `O`, `P`
+  - Exhibits `L`, `M`, `O`, `P`, `10`
 - Fifth Affirmative Defense:
   - Exhibits `O`, `P`
 - Counterclaim One:
@@ -136,7 +151,7 @@ Use this alongside:
 - Counterclaim Three:
   - Exhibits `O`, `P`, `M`
 - Counterclaim Four:
-  - Exhibits `I`, `J`, `M`, `P`, `N`
+  - Exhibits `I`, `J`, `M`, `P`, `10`, `N`, `12`
 - Joinder / Quantum grounds:
   - Exhibits `L`, `J`, `R`
 
@@ -150,7 +165,9 @@ If only a limited set of exhibits can be attached fast, use this order:
 4. `Exhibit L` - Quantum packet non-transmission
 5. `Exhibit I` - documentation burden
 6. `Exhibit J` - complaints and service-animal / Blossom issues
-7. `Exhibit N` - Julio hearing / process irregularity support
+7. `Exhibit 10` - January 1, 2026 lease amendment / household-composition support
+8. `Exhibit 11` - Julio-specific notice / hearing support
+9. `Exhibit 12` - Solomon notice / service-avoidance support
 
 ## Final Assembly Note
 

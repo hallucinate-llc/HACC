@@ -98,12 +98,31 @@ Use this with:
 
 ### Exhibit 10
 
+- Prior label: `lease-side household-composition record`
+- Title: January 1, 2026 lease amendment / household-composition document
+- Source path: [/home/barberb/HACC/workspace/temporary-cli-session-migration/paper-exhibits/HACC vawa violation.pdf](/home/barberb/HACC/workspace/temporary-cli-session-migration/paper-exhibits/HACC%20vawa%20violation.pdf)
+- Main use:
+  - proof that HACC was already acting on changed household composition effective January 1, 2026
+  - supports the inconsistency between lease-side action and later January 12 household-status statements
+
+### Exhibit 11
+
 - Prior label: `Exhibit N`
 - Title: Julio eviction / termination notice
 - Source path: [/home/barberb/HACC/workspace/temporary-cli-session-migration/prior-research-results/full-evidence-review-run/chronology/emergency_motion_packet/exhibits/Exhibit N - Julio Eviction notice.jpeg](/home/barberb/HACC/workspace/temporary-cli-session-migration/prior-research-results/full-evidence-review-run/chronology/emergency_motion_packet/exhibits/Exhibit%20N%20-%20Julio%20Eviction%20notice.jpeg)
 - Main use:
-  - hearing / process irregularity
-  - Julio-specific notice issue
+  - Julio-specific notice sequence
+  - separate hearing / process irregularity support
+
+### Exhibit 12
+
+- Prior label: `Solomon text thread`
+- Title: Solomon restraining-order notice / service-avoidance text thread
+- Source path: [/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14166-Me-to-solomon-gv-0eb16863d122188b/transcript.txt](/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14166-Me-to-solomon-gv-0eb16863d122188b/transcript.txt)
+- Main use:
+  - proof that Solomon had notice of the order and its terms
+  - proof of service-avoidance and noncompliance statements
+  - supports the inference that a restrained non-household actor was still attempting to influence lease handling
 
 ## Short Hearing Packet
 
@@ -126,8 +145,12 @@ If the court expects a very short packet, attach only:
   - `Exhibits 6, 8, 9`
 - Documentation burden / delay:
   - `Exhibits 7, 8`
-- Julio hearing / process issue:
-  - `Exhibit 10`
+- Julio household-status inconsistency:
+  - `Exhibits 4, 10`
+- Julio notice / hearing-specific record:
+  - `Exhibit 11`
+- Solomon notice / service-avoidance record:
+  - `Exhibit 12`
 - Relocation trigger / conditions precedent:
   - `Exhibit 1`
 
@@ -142,6 +165,8 @@ If you adopt this renumbered state-court sequence, update the draft references b
 - federal `Exhibit I` becomes state `Exhibit 7`
 - federal `Exhibit J` becomes state `Exhibit 8`
 - federal `Exhibit R` becomes state `Exhibit 9`
-- federal `Exhibit N` becomes state `Exhibit 10`
+- lease-side household-composition record becomes state `Exhibit 10`
+- federal `Exhibit N` becomes state `Exhibit 11`
+- Solomon text thread becomes state `Exhibit 12`
 
 If you want to avoid renumbering edits, keep the federal lettering instead. This document is only for a cleaner state-FED packet format.

@@ -47,11 +47,15 @@ I, Benjamin Jay Barber, declare under penalty of perjury as follows:
 
 15. Exhibit 9 is a true and correct copy of preserved Gmail complaint snippets and related preserved sent-mail records. I rely on it as evidence that complaints were actually sent to HACC and related recipients about discrimination, service-animal issues, and application nonprocessing.
 
-16. Exhibit 10 is a true and correct copy of the Julio eviction / termination notice. I rely on it as evidence of the separate notice and hearing-process issues affecting Julio Cortez.
+16. Exhibit 10 is a true and correct copy of the January 1, 2026 lease amendment / household-composition document. I rely on it as evidence that HACC was already acting on a changed household composition effective January 1, 2026, even though later communications still treated Julio as a household member unless additional court papers were submitted.
+
+17. Exhibit 11 is a true and correct copy of the Julio eviction / termination notice. I rely on it as evidence of the separate Julio-specific notice and hearing-process issues affecting the household.
+
+18. Exhibit 12 is a true and correct copy of the preserved Solomon text thread and related transcript showing notice of the restraining-order terms, Solomon's statements that he was "not incentivized to cooperate," that he would have the judge "overturn" the order, and that he would comply only once he believed he had been served. I rely on it as evidence of notice, attempted service avoidance, and the inference that Solomon believed he could evade or relitigate the order rather than obey it.
 
 ## Relevance Summary
 
-17. Together, these exhibits are offered to show:
+19. Together, these exhibits are offered to show:
    - that HACC's relocation obligations had been triggered;
    - that Jane Cortez's disability-related accommodation needs were documented and supported;
    - that HACC only partially recognized but did not actually provide the requested accommodation;
@@ -59,7 +63,7 @@ I, Benjamin Jay Barber, declare under penalty of perjury as follows:
    - that Quantum participated in the packet-handling and housing-access pathway;
    - and that the household repeatedly complained about discrimination, service-animal issues, and application nonprocessing.
 
-18. I submit this declaration in support of Defendants' Answer, Affirmative Defenses, Counterclaims, and related exhibit packet.
+20. I submit this declaration in support of Defendants' Answer, Affirmative Defenses, Counterclaims, and related exhibit packet.
 
 I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct.
 

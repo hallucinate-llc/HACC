@@ -44,8 +44,14 @@ DEFENDANTS' EXHIBIT INDEX
 9. Exhibit 9 - Preserved Gmail complaint snippets  
    Source: [manual-imap-download-focused-2026-03-31-snippets](/home/barberb/HACC/workspace/manual-imap-download-focused-2026-03-31-snippets)
 
-10. Exhibit 10 - Julio eviction / termination notice  
+10. Exhibit 10 - January 1, 2026 lease amendment / household-composition document  
+   Source: [HACC vawa violation.pdf](/home/barberb/HACC/workspace/temporary-cli-session-migration/paper-exhibits/HACC%20vawa%20violation.pdf)
+
+11. Exhibit 11 - Julio eviction / termination notice  
    Source: [Exhibit N - Julio Eviction notice.jpeg](/home/barberb/HACC/workspace/temporary-cli-session-migration/prior-research-results/full-evidence-review-run/chronology/emergency_motion_packet/exhibits/Exhibit%20N%20-%20Julio%20Eviction%20notice.jpeg)
+
+12. Exhibit 12 - Solomon restraining-order notice / service-avoidance text thread  
+   Source: [transcript.txt](/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14166-Me-to-solomon-gv-0eb16863d122188b/transcript.txt)
 
 ## Assembly Note
 
