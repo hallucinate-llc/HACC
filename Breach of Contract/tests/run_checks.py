@@ -15,6 +15,7 @@ from engine.export_artifacts import export_package
 from engine.generate_advocacy import generate_advocacy_bundle, generate_advocacy_outputs
 from engine.generate_memorandum import generate_memorandum_bundle, write_memorandum_outputs
 from engine.legal_grounding import build_dependency_citations_jsonld
+from formal_logic.graphrag_obligation_analysis import analyze_title18_corpus
 from engine.print_case_matrix import (
     build_audit_index_data,
     build_authority_findings_data,
@@ -85,6 +86,7 @@ FIXTURE_DIR = Path(__file__).resolve().parent.parent / "fixtures"
 SNAPSHOT_DIR = Path(__file__).resolve().parent / "snapshots"
 SCHEMA_DIR = ROOT / "schema"
 PACKAGE_DIR = ROOT / "outputs" / "live_in_aide_case_001_package"
+GRAPHRAG_CORPUS_ROOT = Path("/home/barberb/HACC/evidence/paper documents/graphrag")
 
 
 def load_fixture(name: str):
@@ -233,6 +235,26 @@ def test_context_schema_rejects_missing_type_alias():
     except Exception:
         return
     raise AssertionError("context schema should reject contexts missing required type alias")
+
+
+def test_graphrag_title18_analysis_extracts_party_mentions_and_events():
+    report = analyze_title18_corpus(GRAPHRAG_CORPUS_ROOT)
+    assert report["metadata"]["documentsScanned"] >= 10
+    assert report["metadata"]["eventsExtracted"] > 0
+    assert report["parties"]["org:hacc"]["mentions"] > 0
+    assert report["parties"]["org:quantum"]["mentions"] > 0
+    assert report["parties"]["person:benjamin_barber"]["mentions"] > 0
+    assert report["parties"]["person:jane_cortez"]["mentions"] > 0
+
+
+def test_graphrag_title18_analysis_builds_obligation_matrix():
+    report = analyze_title18_corpus(GRAPHRAG_CORPUS_ROOT)
+    matrix = report["obligationMatrix"]
+    assert any("relocation counseling" in item["action"] for item in matrix["org:hacc"]["person:benjamin_barber"])
+    assert any("replacement housing" in item["action"] for item in matrix["org:hacc"]["person:jane_cortez"])
+    assert any(item["action"] == "forward resident intake/application packets to HACC" for item in matrix["org:quantum"]["org:hacc"])
+    assert any(item["action"] == "monitor and enforce Section 18 relocation compliance" for item in matrix["org:hud"]["org:hacc"])
+    assert any(item["modality"] == "prohibited" for item in matrix["org:hacc"]["person:benjamin_barber"])
 
 
 def test_positive_constructive_denial_case():
@@ -4363,6 +4385,8 @@ def main() -> int:
         test_generated_positive_advocacy_bundle_matches_schema,
         test_authority_schema_rejects_missing_weight,
         test_context_schema_rejects_missing_type_alias,
+        test_graphrag_title18_analysis_extracts_party_mentions_and_events,
+        test_graphrag_title18_analysis_builds_obligation_matrix,
         test_positive_constructive_denial_case,
         test_snapshot_matches_current_result,
         test_exported_package_matches_snapshot,

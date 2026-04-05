@@ -68,10 +68,26 @@ class TimeInterval:
     start: Optional[datetime] = None
     end: Optional[datetime] = None
     duration_days: Optional[int] = None
+
+    def resolved_end(self) -> Optional[datetime]:
+        if self.end is not None:
+            return self.end
+        if self.start is not None and self.duration_days is not None:
+            return self.start + timedelta(days=self.duration_days)
+        return None
+
+    def contains(self, at_time: datetime) -> bool:
+        resolved_end = self.resolved_end()
+        if self.start is not None and at_time < self.start:
+            return False
+        if resolved_end is not None and at_time > resolved_end:
+            return False
+        return True
     
     def __str__(self):
-        if self.start and self.end:
-            return f"[{self.start.date()} to {self.end.date()}]"
+        resolved_end = self.resolved_end()
+        if self.start and resolved_end:
+            return f"[{self.start.date()} to {resolved_end.date()}]"
         elif self.duration_days:
             return f"{self.duration_days} days from start"
         else:
@@ -322,10 +338,7 @@ class DeonticKnowledgeBase:
         for obligation in obligations:
             if obligation.action == action:
                 if obligation.time_interval:
-                    if (not obligation.time_interval.start or 
-                        at_time >= obligation.time_interval.start) and \
-                       (not obligation.time_interval.end or 
-                        at_time <= obligation.time_interval.end):
+                    if obligation.time_interval.contains(at_time):
                         return (True, f"Complying with {obligation}")
                 else:
                     return (True, f"Complying with {obligation}")
@@ -703,14 +716,15 @@ def detect_breaches(kb: DeonticKnowledgeBase, current_date: datetime = None) -> 
     hacc_obligations = kb.get_obligations_for_party(hacc)
     for obligation in hacc_obligations:
         if obligation.time_interval:
-            if obligation.time_interval.end and current_date > obligation.time_interval.end:
+            resolved_end = obligation.time_interval.resolved_end()
+            if resolved_end and current_date > resolved_end:
                 # Check if obligation was fulfilled
                 if obligation.action.verb == "provide" and \
                    f"{obligation.action.object_noun}_not_provided(hacc)" in kb.facts and \
                    kb.facts.get(f"{obligation.action.object_noun}_not_provided(hacc)", False):
                     breaches.append(
                         f"BREACH by HACC: Failed to {obligation.action} to {obligation.recipient} "
-                        f"by {obligation.time_interval.end.date()}"
+                        f"by {resolved_end.date()}"
                     )
     
     # Check Quantum obligations

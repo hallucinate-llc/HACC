@@ -96,7 +96,7 @@ class EventConstraint:
     
     def evaluates_true(self) -> bool:
         """Check if constraint is satisfied given event dates."""
-        if not event1.occurred_date or not event2.occurred_date:
+        if not self.event1.occurred_date or not self.event2.occurred_date:
             return None  # Cannot evaluate without both dates
         
         if self.relation == "before":
