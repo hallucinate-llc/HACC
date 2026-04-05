@@ -13,9 +13,7 @@
     "client_secrets_path": null,
     "account_hint": null
   },
-  "product_ids": [
-    "voice"
-  ],
+  "product_ids": [],
   "events": [
     {
       "type": "initialized",
