@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Regenerate Title18 HACC Packet",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "./regen_title18_hacc.sh"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/Breach of Contract"
+      },
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Regenerate Title18 Quantum Packet",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "./regen_title18_quantum.sh"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/Breach of Contract"
+      },
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}

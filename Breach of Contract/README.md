@@ -1,3 +1,61 @@
+# Breach of Contract
+
+This directory contains the Title 18 demolition/relocation analysis pipeline, downstream filing artifacts, and the earlier legal reasoning prototype materials.
+
+## Title 18 Packet Regeneration
+
+The Title 18 filing set can now be regenerated from a single override file:
+
+- Edit `title18_render_context_overrides.json` with case-specific values.
+- Run one of the wrapper commands below from this directory.
+
+HACC-oriented merged packet and final packet set:
+
+```bash
+cd "/home/barberb/HACC/Breach of Contract"
+bash ./regen_title18_hacc.sh
+```
+
+Equivalent `make` target:
+
+```bash
+cd "/home/barberb/HACC/Breach of Contract"
+make regen-hacc
+```
+
+Quantum-oriented merged packet and final packet set:
+
+```bash
+cd "/home/barberb/HACC/Breach of Contract"
+bash ./regen_title18_quantum.sh
+```
+
+Equivalent `make` target:
+
+```bash
+cd "/home/barberb/HACC/Breach of Contract"
+make regen-quantum
+```
+
+Direct Python entry point if you want to pass the merged track yourself:
+
+```bash
+cd "/home/barberb/HACC/Breach of Contract"
+python3 -m formal_logic.title18_regenerate_packets --merged-order-track hacc
+python3 -m formal_logic.title18_regenerate_packets --merged-order-track quantum
+```
+
+The most useful outputs after regeneration are:
+
+- `outputs/title18_hacc_final_packet.md`
+- `outputs/title18_quantum_final_packet.md`
+- `outputs/title18_filing_index.md`
+- `outputs/title18_render_context.json`
+
+VS Code users can also run the tasks `Regenerate Title18 HACC Packet` and `Regenerate Title18 Quantum Packet` from the command palette or tasks runner.
+
+Below is the earlier workspace2 prototype documentation preserved in place.
+
 # workspace2
 
 This directory contains an MVP legal reasoning prototype derived from the extracted shared chat.
