@@ -133,6 +133,29 @@ def test_google_voice_materialization_appends_attachment_enrichments_to_transcri
     assert {item["metadata"]["backend"] for item in event_payload["enrichments"]} == {"test_ocr", "test_whisper"}
 
 
+def test_google_voice_plain_text_extraction_skips_style_and_script_blocks() -> None:
+    voice_module = importlib.import_module("ipfs_datasets_py.processors.multimedia.google_voice_processor")
+    html_text = """
+    <html>
+      <head>
+        <style>body { color: red; }</style>
+        <script>console.log('hidden');</script>
+        <title>Missed call from Tenant</title>
+      </head>
+      <body>
+        <div>2026-04-05T01:02:03Z</div>
+        <div>Please call me back about the inspection notice.</div>
+      </body>
+    </html>
+    """
+
+    text = voice_module._extract_plain_text(html_text)
+
+    assert "inspection notice" in text.lower()
+    assert "body { color: red; }" not in text
+    assert "console.log" not in text
+
+
 def test_google_voice_processor_parses_vault_export(tmp_path: Path) -> None:
     export_root = _build_voice_vault_export(tmp_path)
     processor = gmail_module.GoogleVoiceProcessor()

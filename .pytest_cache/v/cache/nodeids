@@ -17,6 +17,7 @@
   "complaint-generator/tests/test_email_graphrag.py::test_build_email_graphrag_artifacts_includes_attachment_extraction_text",
   "complaint-generator/tests/test_email_graphrag.py::test_build_email_graphrag_artifacts_merges_participants_from_eml",
   "tests/test_google_voice_integration.py::test_google_voice_materialization_appends_attachment_enrichments_to_transcript",
+  "tests/test_google_voice_integration.py::test_google_voice_plain_text_extraction_skips_style_and_script_blocks",
   "tests/test_google_voice_integration.py::test_google_voice_processor_parses_local_data_export",
   "tests/test_google_voice_integration.py::test_google_voice_processor_parses_takeout_directory",
   "tests/test_google_voice_integration.py::test_google_voice_processor_parses_vault_export",
