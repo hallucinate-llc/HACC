@@ -26,6 +26,34 @@
       },
       "group": "build",
       "problemMatcher": []
+    },
+    {
+      "label": "Check Title18 Readiness",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "-m",
+        "formal_logic.title18_readiness"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/Breach of Contract"
+      },
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Generate Title18 Override Templates",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "-m",
+        "formal_logic.title18_override_templates"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/Breach of Contract"
+      },
+      "group": "build",
+      "problemMatcher": []
     }
   ]
 }

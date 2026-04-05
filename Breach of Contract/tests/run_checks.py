@@ -25,6 +25,8 @@ from formal_logic.title18_final_packet import build_title18_final_packet, render
 from formal_logic.title18_motion_support import build_motion_support_packet, render_motion_support_markdown
 from formal_logic.title18_party_drafts import build_hacc_party_motion, build_quantum_party_motion, render_party_motion_markdown
 from formal_logic.title18_query import available_presets, build_dashboard, build_query_summary, load_report as load_title18_query_report, query_obligations, render_dashboard_markdown, run_preset
+from formal_logic.title18_override_templates import build_title18_override_templates, render_title18_override_worksheet_markdown
+from formal_logic.title18_readiness import build_title18_readiness_report, render_title18_readiness_markdown
 from formal_logic.title18_regenerate_packets import regenerate_title18_packets
 from formal_logic.title18_rendered_filings import build_render_context, build_rendered_title18_filings
 from formal_logic.title18_service_packet import build_title18_service_packet, render_service_checklist_markdown
@@ -413,6 +415,24 @@ def test_title18_regeneration_entrypoint_accepts_quantum_merged_order_track():
     outputs = regenerate_title18_packets(merged_order_track="quantum")
 
     assert "rendered_merged_markdown" in outputs
+
+
+def test_title18_readiness_report_identifies_missing_fields():
+    report = build_title18_readiness_report()
+    markdown = render_title18_readiness_markdown(report)
+
+    assert report["tracks"]["hacc"]["missingCount"] >= 1
+    assert report["tracks"]["quantum"]["missingCount"] >= 1
+    assert "# Title 18 Readiness Report" in markdown
+
+
+def test_title18_override_templates_follow_readiness_gaps():
+    bundle = build_title18_override_templates()
+    markdown = render_title18_override_worksheet_markdown(bundle)
+
+    assert "[CASE NUMBER]" in bundle["templates"]["hacc"]["requiredUserInputs"]
+    assert "[FULL LEGAL ENTITY NAME]" in bundle["templates"]["quantum"]["requiredUserInputs"]
+    assert "# Title 18 Override Worksheet" in markdown
 
 
 def test_positive_constructive_denial_case():

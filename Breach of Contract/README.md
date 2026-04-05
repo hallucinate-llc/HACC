@@ -54,6 +54,35 @@ The most useful outputs after regeneration are:
 
 VS Code users can also run the tasks `Regenerate Title18 HACC Packet` and `Regenerate Title18 Quantum Packet` from the command palette or tasks runner.
 
+To see whether the packets are actually ready to file, generate the readiness report:
+
+```bash
+cd "/home/barberb/HACC/Breach of Contract"
+make check-title18
+```
+
+This writes:
+
+- `outputs/title18_readiness_report.json`
+- `outputs/title18_readiness_report.md`
+
+VS Code users can run the `Check Title18 Readiness` task for the same report.
+
+To generate packet-specific missing-only override templates:
+
+```bash
+cd "/home/barberb/HACC/Breach of Contract"
+make prep-title18-overrides
+```
+
+This writes:
+
+- `outputs/title18_hacc_override_template.json`
+- `outputs/title18_quantum_override_template.json`
+- `outputs/title18_override_worksheet.md`
+
+VS Code users can run the `Generate Title18 Override Templates` task for the same outputs.
+
 Below is the earlier workspace2 prototype documentation preserved in place.
 
 # workspace2
