@@ -53,6 +53,15 @@ DEFENDANTS' EXHIBIT INDEX
 12. Exhibit 12 - Solomon restraining-order notice / service-avoidance text thread  
    Source: [transcript.txt](/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14166-Me-to-solomon-gv-0eb16863d122188b/transcript.txt)
 
+13. Exhibit 13 - Jane Cortez v. Julio Cortez restraining-order packet, filed by guardian ad litem  
+   Source: [Jane Cortez vs Julio Cortez.pdf](/home/barberb/HACC/evidence/history/Jane%20Cortez%20vs%20Julio%20Cortez.pdf)
+
+14. Exhibit 14 - Jane Kay Cortez v. Ashley Ferron (in her official capacity), Clackamas County case no. 26P000432, denied petition  
+   Source: [cortez-1.pdf](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/attachments/cortez-1.pdf)
+
+15. Exhibit 15 - Benjamin Jay Barber v. Ashley Ferron (in her official capacity), Clackamas County case no. 26P000433, denied petition  
+   Source: [cortez-4.pdf](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/attachments/cortez-4.pdf)
+
 ## Assembly Note
 
 Attach each exhibit behind its matching cover sheet in numerical order.

@@ -124,6 +124,36 @@ Use this with:
   - proof of service-avoidance and noncompliance statements
   - supports the inference that a restrained non-household actor was still attempting to influence lease handling
 
+### Exhibit 13
+
+- Prior label: `Jane v. Julio court packet`
+- Title: Jane Cortez v. Julio Cortez restraining-order packet, filed by guardian ad litem
+- Source path: [/home/barberb/HACC/evidence/history/Jane Cortez vs Julio Cortez.pdf](/home/barberb/HACC/evidence/history/Jane%20Cortez%20vs%20Julio%20Cortez.pdf)
+- Main use:
+  - supports the Jane v. Julio safety and bifurcation timeline
+  - supports the allegation that the Jane v. Julio filing itself was made by guardian ad litem
+  - supports HACC notice of Jane's welfare, safety, and assistance-related issues
+
+### Exhibit 14
+
+- Prior label: `Ashley Ferron court packet 1`
+- Title: Jane Kay Cortez v. Ashley Ferron (in her official capacity), case no. 26P000432, denied petition
+- Source path: [/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/attachments/cortez-1.pdf](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/attachments/cortez-1.pdf)
+- Main use:
+  - proves a separate Ashley Ferron ORS 124 filing existed in the HACC dispute period
+  - supports notice and escalation chronology
+  - supports the theory that the household was invoking court protection against HACC-side conduct
+
+### Exhibit 15
+
+- Prior label: `Ashley Ferron court packet 2`
+- Title: Benjamin Jay Barber v. Ashley Ferron (in her official capacity), case no. 26P000433, denied petition
+- Source path: [/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/attachments/cortez-4.pdf](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/attachments/cortez-4.pdf)
+- Main use:
+  - proves a second Ashley Ferron ORS 124 filing existed in the same dispute sequence
+  - supports notice and escalation chronology
+  - supports the theory that Benjamin personally pursued court protection related to HACC-side conduct
+
 ## Short Hearing Packet
 
 If the court expects a very short packet, attach only:
@@ -151,6 +181,10 @@ If the court expects a very short packet, attach only:
   - `Exhibit 11`
 - Solomon notice / service-avoidance record:
   - `Exhibit 12`
+- Jane v. Julio court-process / GAL notice:
+  - `Exhibit 13`
+- Ashley Ferron court filings / notice chronology:
+  - `Exhibits 14, 15`
 - Relocation trigger / conditions precedent:
   - `Exhibit 1`
 
@@ -168,5 +202,8 @@ If you adopt this renumbered state-court sequence, update the draft references b
 - lease-side household-composition record becomes state `Exhibit 10`
 - federal `Exhibit N` becomes state `Exhibit 11`
 - Solomon text thread becomes state `Exhibit 12`
+- Jane v. Julio court packet becomes state `Exhibit 13`
+- Ashley Ferron court packet 1 becomes state `Exhibit 14`
+- Ashley Ferron court packet 2 becomes state `Exhibit 15`
 
 If you want to avoid renumbering edits, keep the federal lettering instead. This document is only for a cleaner state-FED packet format.

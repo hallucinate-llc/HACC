@@ -3,6 +3,7 @@
 This memo separates:
 
 - the court-side chronology for protective or restraining orders involving Julio Cortez and Solomon Samuel Barber; and
+- the newly confirmed attachment-level record showing restraining-order paperwork naming Ashley Ferron; and
 - the current documentary record showing when Housing Authority of Clackamas County ("HACC") was told or otherwise knew of those orders.
 
 ## 1. Julio Cortez order
@@ -85,7 +86,43 @@ This memo separates:
 - `High confidence`: a direct IMAP search of the preserved HACC mail corpus did not reveal any named message mentioning `Solomon`, `Sam Barber`, or `Samuel Barber`.
 - `Low confidence on exact HACC notice timestamp`: current reviewed record does not yet show the first exact email or communication in which HACC was told of the Solomon order.
 
-## 3. Bottom line
+## 3. Ashley Ferron order attachments
+
+### Attachment-level court record
+
+- A January 26, 2026 HACC email thread contains two attached scanned restraining-order PDFs naming `Ashley Ferron (in her official capacity)` as respondent:
+  - [cortez-1.pdf](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/attachments/cortez-1.pdf)
+  - [cortez-4.pdf](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/attachments/cortez-4.pdf)
+- The email carrying those attachments is [message.eml](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/message.eml). Its headers show it was delivered to Gmail on `January 26, 2026 at 9:53:12 AM Pacific`, and it was sent from `"Ferron, Ashley" <AFerron@clackamas.us>` to `HACC-Relocation@clackamas.us` and `starworks5@gmail.com`.
+- The same attachment names also appear in the broader preserved HACC thread at [message.eml](/home/barberb/HACC/workspace/manual-imap-download-2026-03-31/20260202-164227_Re-Allegations-of-Fraud---JC-Household/message.eml), confirming they were part of the working email chain rather than isolated export artifacts.
+- The MIME parts in that email expressly show the attached filenames `cortez 4.pdf`, `cortez 3.pdf`, `cortez 2.pdf`, and `cortez 1.pdf`.
+- OCR on page 1 of [cortez-1.pdf](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/attachments/cortez-1.pdf) shows:
+  - `IN THE CIRCUIT COURT OF THE STATE OF OREGON`
+  - a caption best read as `Jane Kay Cortez v. Ashley Ferron (in her official capacity)`
+  - petitioner `Jane Kay Cortez`
+  - respondent `Ashley Ferron (in her official capacity) ORS 124`
+  - a restraining order under the `Elderly Persons and Persons with Disabilities Abuse Prevention Act`
+  - a Clackamas County protective-proceeding case number best read as `26P000432`.
+- OCR on page 3 of [cortez-1.pdf](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/attachments/cortez-1.pdf) shows the petition was `DENIED`, with handwritten text that appears to reference removing Julio Cortez from the household consistent with case `25PO11318`.
+- OCR on page 1 of [cortez-4.pdf](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/attachments/cortez-4.pdf) shows:
+  - `IN THE CIRCUIT COURT OF THE STATE OF OREGON`
+  - a caption best read as `Benjamin Jay Barber v. Ashley Ferron (in her official capacity)`
+  - petitioner `Benjamin Jay Barber`
+  - respondent `Ashley Ferron (in her official capacity) ORS 124`
+  - the same Elderly Persons and Persons with Disabilities Abuse Prevention Act form
+  - a Clackamas County protective-proceeding case number best read as `26P000433`.
+- OCR on page 3 of [cortez-4.pdf](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/attachments/cortez-4.pdf) likewise shows the petition was `DENIED`, with similar handwritten language about removing Julio Cortez from the household.
+- The OCR on page 2 of both attachments also shows a property / money section referring to Housing Authority / housing-voucher property, which is consistent with the broader HACC dispute context.
+
+### What this does and does not prove
+
+- `High confidence`: restraining-order paperwork against Ashley Ferron exists in the attachment set and was circulated inside the HACC-related `JC Household` email thread by January 26, 2026.
+- `High confidence`: one attachment is a `Jane Kay Cortez v. Ashley Ferron` filing and another is a `Benjamin Jay Barber v. Ashley Ferron` filing.
+- `Moderate confidence`: these were Clackamas County Circuit Court protective-proceeding filings under ORS 124, because the OCR is strong on the court and form language but the handwritten/typed case captions still have some OCR noise.
+- `High confidence`: both currently reviewed Ashley Ferron filings were `DENIED`, not granted.
+- `Not yet fully pinned down`: whether Ashley Ferron herself attached these files in that January 26 email, or whether they were preserved as embedded prior-thread attachments within the chain. The email definitely contains them as attachment parts, but the current record does not yet resolve the earlier provenance of each file.
+
+## 4. Bottom line
 
 ### Julio
 
@@ -103,8 +140,17 @@ This memo separates:
 - The first exact time HACC was told about the Solomon order has not yet been isolated in the currently reviewed HACC communications.
 - A direct search of the preserved IMAP mail corpus did not find a named HACC message mentioning `Solomon`, so the present gap is best described as `not found in preserved mail`, not as proof that HACC was never told.
 
-## 4. Best next proof targets
+### Ashley Ferron
+
+- The preserved email attachments now establish that Ashley Ferron was the named respondent in at least two ORS 124 protective-proceeding filings tied to the same HACC dispute period.
+- Those filings were in the HACC-related email chain by `January 26, 2026 at 9:53 AM Pacific`.
+- One filing appears to have been brought by `Jane Kay Cortez`; the other appears to have been brought by `Benjamin Jay Barber`.
+- Both currently reviewed Ashley Ferron filings appear to have been `DENIED`.
+- The remaining factual gap is provenance: the current record shows the orders were attached to the January 26 email, but it does not yet fully establish who originally prepared or first circulated each scanned PDF within the thread.
+
+## 5. Best next proof targets
 
 - Search for any November-December 2025 emails to or from `KTilton@clackamas.us`, `AFerron@clackamas.us`, or `HACC-Relocation@clackamas.us` with attached court papers or references to restraining orders, VAWA, or bifurcation.
 - Search for attachments or image files that may contain the Julio order with a readable judge-signature date.
 - Search for any January 2026 HACC household-composition thread that expressly references the order rather than only reflecting its consequences.
+- Determine the earlier provenance of [cortez-1.pdf](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/attachments/cortez-1.pdf) and [cortez-4.pdf](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/attachments/cortez-4.pdf), including whether they were first sent by Benjamin, embedded from an earlier chain, or reattached by Ashley Ferron.

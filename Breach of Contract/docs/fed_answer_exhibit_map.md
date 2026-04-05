@@ -98,6 +98,16 @@ Use this alongside:
   - statements showing claimed service avoidance, noncooperation, and intent to have the order "overturn[ed]"
   - support for the inference that Solomon continued trying to influence lease-side events despite the restraining-order framework
 
+### Ashley Ferron Court Packets
+
+- Source paths:
+  - [cortez-1.pdf](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/attachments/cortez-1.pdf)
+  - [cortez-4.pdf](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0023-RE-Allegations-of-Fraud---JC-Household-afab2672a15446ff849ee9c8d26441ce-clackamas.us/attachments/cortez-4.pdf)
+- Use for:
+  - proof that separate ORS 124 filings named Ashley Ferron as respondent
+  - proof that the filings were in the HACC-related attachment set by January 26, 2026
+  - notice and escalation chronology even though the petitions appear denied
+
 ### Exhibit B - Phase II Notice
 
 - Source path: [/home/barberb/HACC/workspace/temporary-cli-session-migration/prior-research-results/full-evidence-review-run/chronology/formal_complaint_recommended_filing_packet/included/02_Exhibit_B_HACC_phase2_2024.pdf](/home/barberb/HACC/workspace/temporary-cli-session-migration/prior-research-results/full-evidence-review-run/chronology/formal_complaint_recommended_filing_packet/included/02_Exhibit_B_HACC_phase2_2024.pdf)
@@ -128,8 +138,8 @@ Use this alongside:
   - Exhibits `O`, `P`, `M`
   - comparable and accessible replacement failure
 - Counterclaim Four:
-  - Exhibits `I`, `J`, `M`, `P`, `10`, `N`, `12`
-  - delay, documentation burden, accommodation interference, inconsistent lease/household-status treatment, Julio-specific notice issues, and Solomon interference inference
+  - Exhibits `I`, `J`, `M`, `P`, `10`, `N`, `12`, `13`, `14`, `15`
+  - delay, documentation burden, accommodation interference, inconsistent lease/household-status treatment, Julio-specific notice issues, Solomon interference inference, Jane v. Julio / guardian-ad-litem notice, and the Ashley Ferron court-filing chronology
 - Quantum claims:
   - Exhibits `L`, `J`, `R`
   - non-transmission, service-animal issues, nonprocessing
@@ -145,13 +155,13 @@ Use this alongside:
 - Second Affirmative Defense:
   - Exhibits `L`, `M`, `O`, `P`, `10`
 - Fifth Affirmative Defense:
-  - Exhibits `O`, `P`
+  - Exhibits `O`, `P`, `M`, `13`
 - Counterclaim One:
   - Exhibits `B`, `M`, `O`, `P`
 - Counterclaim Three:
-  - Exhibits `O`, `P`, `M`
+  - Exhibits `O`, `P`, `M`, `13`
 - Counterclaim Four:
-  - Exhibits `I`, `J`, `M`, `P`, `10`, `N`, `12`
+  - Exhibits `I`, `J`, `M`, `P`, `10`, `N`, `12`, `13`, `14`, `15`
 - Joinder / Quantum grounds:
   - Exhibits `L`, `J`, `R`
 
@@ -168,6 +178,9 @@ If only a limited set of exhibits can be attached fast, use this order:
 7. `Exhibit 10` - January 1, 2026 lease amendment / household-composition support
 8. `Exhibit 11` - Julio-specific notice / hearing support
 9. `Exhibit 12` - Solomon notice / service-avoidance support
+10. `Exhibit 13` - Jane v. Julio court packet / GAL notice support
+11. `Exhibit 14` - Jane v. Ashley Ferron denied petition
+12. `Exhibit 15` - Benjamin v. Ashley Ferron denied petition
 
 ## Final Assembly Note
 

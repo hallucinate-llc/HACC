@@ -20,8 +20,12 @@ from formal_logic.reasoning_exports import build_dcec_export, build_flogic_expor
 from formal_logic.title18_filing_bundle import build_title18_filing_bundle, render_title18_filing_bundle_markdown
 from formal_logic.title18_filing_draft import build_title18_filing_draft, render_title18_filing_draft_markdown
 from formal_logic.title18_merged_motion import build_title18_merged_motion, render_title18_merged_motion_markdown
+from formal_logic.title18_filing_index import build_title18_filing_index, build_title18_proposed_orders, render_proposed_order_markdown, render_title18_filing_index_markdown
 from formal_logic.title18_motion_support import build_motion_support_packet, render_motion_support_markdown
+from formal_logic.title18_party_drafts import build_hacc_party_motion, build_quantum_party_motion, render_party_motion_markdown
 from formal_logic.title18_query import available_presets, build_dashboard, build_query_summary, load_report as load_title18_query_report, query_obligations, render_dashboard_markdown, run_preset
+from formal_logic.title18_rendered_filings import build_render_context, build_rendered_title18_filings
+from formal_logic.title18_service_packet import build_title18_service_packet, render_service_checklist_markdown
 from engine.print_case_matrix import (
     build_audit_index_data,
     build_authority_findings_data,
@@ -329,6 +333,55 @@ def test_title18_merged_motion_package_renders_combined_motion():
     assert any(item["id"] == "proposed_order" for item in motion["sections"])
     assert motion["requestedRelief"]
     assert "# Title 18 Merged Motion Package" in markdown
+
+
+def test_title18_party_motions_render_distinct_hacc_and_quantum_drafts():
+    hacc = build_hacc_party_motion()
+    quantum = build_quantum_party_motion()
+    hacc_markdown = render_party_motion_markdown(hacc)
+    quantum_markdown = render_party_motion_markdown(quantum)
+
+    assert hacc["meta"]["focusParty"] == "org:hacc"
+    assert quantum["meta"]["focusParty"] == "org:quantum"
+    assert any(section["id"] == "priority_discovery" for section in hacc["sections"])
+    assert any(section["id"] == "joinder_basis" for section in quantum["sections"])
+    assert "HACC-FOCUSED MOTION" in hacc_markdown
+    assert "QUANTUM-FOCUSED MOTION" in quantum_markdown
+
+
+def test_title18_rendered_filings_apply_known_values_and_track_missing_fields():
+    context = build_render_context()
+    rendered = build_rendered_title18_filings()
+
+    assert context["substitutions"]["[DATE]"] == "April 5, 2026"
+    assert context["substitutions"]["[TENANT NAMES]"] == "Benjamin Jay Barber and Jane Kay Cortez"
+    assert rendered["documents"]["merged_motion"]["renderedMarkdown"]
+    assert "Benjamin Jay Barber and Jane Kay Cortez" in rendered["documents"]["quantum_party_motion"]["renderedMarkdown"]
+    assert "April 5, 2026" in rendered["documents"]["hacc_party_motion"]["renderedMarkdown"]
+    assert "[CASE NUMBER]" in rendered["documents"]["merged_motion"]["unresolvedPlaceholders"]
+
+
+def test_title18_proposed_orders_and_filing_index_render_expected_artifacts():
+    orders = build_title18_proposed_orders()
+    index = build_title18_filing_index()
+    quantum_order_markdown = render_proposed_order_markdown(orders["orders"]["quantum"])
+    index_markdown = render_title18_filing_index_markdown(index)
+
+    assert orders["orders"]["hacc"]["title"].startswith("Proposed Order Staying or Denying")
+    assert orders["orders"]["quantum"]["title"].startswith("Proposed Order Granting Joinder")
+    assert "[CASE NUMBER]" in index["unresolvedPlaceholdersByDocument"]["hacc_proposed_order"]
+    assert "# Proposed Order Granting Joinder and Leave to File Third-Party Claims Against Quantum Residential" in quantum_order_markdown
+    assert "# Title 18 Filing Index" in index_markdown
+
+
+def test_title18_service_packet_renders_certificate_and_checklist():
+    packet = build_title18_service_packet()
+    checklist_markdown = render_service_checklist_markdown(packet)
+
+    assert packet["meta"]["packetId"] == "title18_service_packet_001"
+    assert "DATED: April 5, 2026" in packet["certificateOfService"]["markdown"]
+    assert "[CASE NUMBER]" in packet["certificateOfService"]["unresolvedPlaceholders"]
+    assert "# Title 18 Filing Service Checklist" in checklist_markdown
 
 
 def test_positive_constructive_denial_case():
