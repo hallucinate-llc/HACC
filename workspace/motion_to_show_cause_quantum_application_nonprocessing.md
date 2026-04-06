@@ -26,6 +26,7 @@ This request is narrow and record-based.
 3. HACC later acknowledged in writing that the intake packet had been submitted to Quantum Residential staff at the Hillside Manor leasing office but had not been provided to HACC.
 4. Benjamin Barber contemporaneously complained in writing that Blossom had refused to process the application, had refused to house a service animal, and had engaged in discrimination.
 5. The same intake and processing failure is already central to defendants' eviction response, interim-relief request, and motion to join Quantum.
+6. HACC's own public and Administrative Plan materials show that this was part of a PBV/RAD replacement-housing path tied to Hillside redevelopment, not a disconnected private application.
 
 ## Requested Show-Cause Topics
 

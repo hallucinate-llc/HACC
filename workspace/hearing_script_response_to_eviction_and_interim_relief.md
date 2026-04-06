@@ -21,6 +21,7 @@ The shortest correct theme is:
 - Much of that delay was caused by HACC's own actions, including not starting the TPV process earlier, the broken packet-routing chain, repeated document demands, and the March 19 voucher reversal.
 - At the same time, HACC was still mishandling VAWA-related safety issues, restrained-party issues involving Solomon, household-status issues involving Julio, disability / live-in-aide issues, and there is evidence of race-discriminatory obstruction in the same housing path.
 - HACC should not get possession while both of the paths it identified remained unfinished.
+- And the reason that matters legally is not just fairness. HACC's own plan and notices show it had nondiscretionary relocation and hearing duties plus an undertaken replacement-housing process it had to carry through before seeking eviction.
 
 ## Best Exhibit Sequence
 
@@ -81,6 +82,9 @@ The Court can view the case in seven steps:
 If the Court asks for the legal point, the answer is:
 
 - HACC cannot fairly obtain possession while redevelopment-related relocation is still incomplete;
+- under Section 18 and the relocation-process commitments HACC itself undertook, HACC was not just expected but barred from filing eviction while the triggered relocation steps remained materially unfinished;
+- HACC's own Administrative Plan says Hillside Manor is a RAD PBV project, Quantum is the property manager, HACC manages the project waiting-list structure, and the owner must provide an opportunity for an informal hearing before eviction;
+- HACC's own Blossom lease-up page says applications for Blossom and Community Apartments will be processed through HACC's PBV waitlist and that relocation households are priority groups;
 - the Court should not treat the household's situation as simple noncompliance where the record shows the replacement-housing path itself was not processed;
 - the Court should not treat the port-out option as a real completed alternative where HACC's own records show it remained pending across four calendar months, with much of the delay traceable to HACC itself;
 - and the Court should not overlook that this wasted time overlapped with HACC's ongoing mishandling of VAWA-related safety and household-composition issues.
@@ -103,4 +107,4 @@ The narrowest safe ask is:
 
 ## Best One-Sentence Close
 
-HACC should not be allowed to evict the household while the Hillside Park replacement-housing application path it directed us to use was left unprocessed and the alternate out-of-county porting path it identified remained incomplete across four calendar months.
+HACC should not be allowed to evict the household while the Hillside Park replacement-housing application path it directed us to use was left unprocessed and the alternate out-of-county porting path it identified remained incomplete across four calendar months, because under Section 18 and HACC's own undertaken relocation process, eviction was barred while those duties were still unfinished.

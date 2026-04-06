@@ -32,6 +32,15 @@ The current record supports the following:
 
 That record is enough to justify a direct explanation from Quantum once Quantum is in the case.
 
+This is not merely an unexplained apartment application in the abstract. The application was part of a documented replacement-housing process. HACC's own materials show that:
+
+1. the Hillside redevelopment had already triggered relocation obligations rooted in Section 18 and HUD's relocation rule;
+2. HACC's public Blossom materials stated that applications for Blossom and Community Apartments would be processed through HACC's PBV waitlist and that Hillside relocation households were priority groups;
+3. HACC's Administrative Plan identifies Hillside Manor as a RAD PBV project and Quantum as the property management company; and
+4. HACC's January 8, 2026 notice directed the household to choose between the Blossom path and the Tenant Protection Voucher path.
+
+So the application-processing problem the Court is being asked to clarify is not a side issue. It sits inside the same federal-relocation and HACC-administered replacement-housing chain that underlies the eviction response.
+
 ## III. The Show-Cause Request Helps The Court Resolve The Existing Eviction And Interim-Relief Questions
 
 The Court is already being asked to decide whether eviction is premature and whether the housing-processing chain should be preserved. That inquiry is materially aided by knowing:
@@ -55,6 +64,8 @@ The most useful form of relief is a short written show-cause response under appr
 5. what records exist now.
 
 That is narrow enough to fit the present posture while still giving the Court the information it needs to evaluate preservation, joinder, and interim relief.
+
+It is also the least burdensome way to clarify whether the documented intake and forwarding failure occurred inside the very process HACC used to satisfy its relocation and replacement-housing obligations. The supporting source review and duty matrix appear at [title18_statute_and_contract_source_review.md](/home/barberb/HACC/workspace/title18_statute_and_contract_source_review.md) and [title18_contract_source_linked_duty_matrix.md](/home/barberb/HACC/workspace/title18_contract_source_linked_duty_matrix.md).
 
 ## V. Conclusion
 

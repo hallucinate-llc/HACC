@@ -28,6 +28,10 @@ Not as an exact percentage from the current record, but a substantial amount, an
 
 The stronger point is not a fixed short numeric deadline. The stronger point is that Section 18 required HACC to complete the relocation process lawfully before treating displacement as finished, 42 U.S.C. § 1437p(d); 24 C.F.R. § 970.21, and VAWA required HACC to actually administer the emergency transfer path it was using, 24 C.F.R. § 5.2009. So HACC should not obtain possession while those paths were still incomplete.
 
+## If The Court Says: `Are you saying they were actually barred from filing eviction?`
+
+Yes, on the current record and at the time they moved toward possession. The strongest deontic framing is that once Section 18 relocation duties were triggered, and once HACC directed the household into specific replacement-housing and portability paths, HACC was obligated to complete those relocation steps before treating displacement as complete and was therefore barred from filing eviction while those duties remained materially unfinished. The contract and implied-contract findings reinforce the same point because HACC also undertook a household-specific relocation process and then sued for possession before carrying it through.
+
 ## If The Court Says: `Why does Quantum matter in this eviction case?`
 
 Because HACC itself wrote that the intake packet had been submitted to Quantum staff at the Hillside Manor leasing office and had not been forwarded to HACC. That makes Quantum part of the same interrupted relocation chain.

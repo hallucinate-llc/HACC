@@ -4,7 +4,7 @@ Your Honor, this is a narrow record-clarification request.
 
 We are not asking the Court, through this motion alone, to decide every claim against Quantum. We are asking the Court to require Quantum, once joined or otherwise before the Court, to explain what happened to the Blossom / Hillside Manor application materials submitted for Benjamin Barber and Jane Cortez.
 
-The reason that request is concrete is that HACC's own records already place Quantum inside the disputed intake chain.
+The reason that request is concrete is that HACC's own records already place Quantum inside the disputed intake chain, and that intake chain was part of the Hillside replacement-housing process, not a side issue.
 
 First, HACC's January 8, 2026 notice directed the household into the Blossom / Tenant Protection Voucher path.
 
@@ -13,6 +13,8 @@ Second, Benjamin Barber states that he personally delivered the paper Blossom ap
 Third, HACC later acknowledged in writing that the intake packet had been submitted to Quantum staff at the Hillside Manor leasing office but had not been provided to HACC.
 
 Fourth, Benjamin Barber then complained in writing that Blossom had refused to process the application, had refused to house a service animal, and had engaged in discrimination.
+
+And HACC's own materials show why that matters: HACC publicly said Blossom applications would be processed through HACC's PBV waitlist, HACC's Administrative Plan identifies Hillside Manor as a RAD PBV project, and Quantum is identified there as the property manager.
 
 So the Court already has a real application-processing problem in the record. The narrow question is: what did Quantum do with the application?
 

@@ -75,6 +75,17 @@ The case now turns in part on:
 
 The joinder point is not that Quantum necessarily bears all of those duties in the same way as HACC. The joinder point is that Quantum is already inside the factual chain through which the Court will be asked to evaluate and preserve relief on those issues. That makes Quantum's presence materially useful and, on this record, likely necessary.
 
+The source-linked Title 18 and contract-side chain is set out more fully in [title18_statute_and_contract_source_review.md](/home/barberb/HACC/workspace/title18_statute_and_contract_source_review.md) and [title18_contract_source_linked_duty_matrix.md](/home/barberb/HACC/workspace/title18_contract_source_linked_duty_matrix.md). Those materials matter here because they show that the intake and forwarding failures involving Quantum occurred inside a documented federal-relocation and HACC-administered replacement-housing process, not an isolated private rental conversation.
+
+More specifically, HACC's own documents show:
+
+1. Hillside Manor is a RAD PBV project in HACC's Administrative Plan;
+2. Quantum is identified there as the property management company;
+3. HACC publicly stated that applications for Blossom and Community Apartments would be processed through HACC's PBV waitlist and that Hillside relocation households were priority groups; and
+4. HACC later wrote that the packet had been submitted to Quantum staff at the Hillside Manor office but had not reached HACC.
+
+That combination is why Quantum belongs in the case. The Court is not being asked to drag in a stranger to the relocation process. The Court is being asked to join the project-side participant HACC itself placed inside the federally rooted and locally administered replacement-housing chain.
+
 ## VII. Conclusion
 
 The Court should grant the motion to join Quantum Residential Property Management, L.P. The narrower and better-grounded basis is that HACC's own records place Quantum in the exact intake-and-relocation chain the Court is already being asked to evaluate and preserve. At minimum, the Court should permit joinder or equivalent third-party practice so the intake-processing dispute is resolved in one action rather than through partial litigation against only HACC.

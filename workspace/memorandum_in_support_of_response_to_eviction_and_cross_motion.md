@@ -23,6 +23,10 @@ Plaintiff's eviction request should be denied because HACC moved toward possessi
 
 The record assembled in this matter supports that HACC triggered formal redevelopment-related relocation duties no later than September 19, 2024, when the Phase II notice issued. Those duties are not merely asserted here. Section 18 itself requires a public housing agency to provide relocation assistance in connection with demolition or disposition, see 42 U.S.C. § 1437p(d), and HUD's implementing rule requires comparable replacement housing, relocation assistance, and related notice-and-counseling steps in the redevelopment process, see 24 C.F.R. § 970.21. HACC's own materials treated relocation counseling, replacement housing, and relocation assistance as part of the operative process. HACC's later notices show that displacement pressure continued into late 2025 and early 2026. Yet the replacement-housing path remained incomplete through the same period.
 
+Stated in deontic terms, once those duties were triggered, HACC was not merely expected to perform them in a general sense. HACC was obligated to complete the triggered relocation steps before treating displacement as complete, and correspondingly was forbidden to file eviction while counseling, comparable replacement housing, and related relocation performance remained materially unfinished. The current Title 18 and contract analyses point the same way: `O(HACC, complete triggered relocation duties)` and `not completed(triggered relocation duties) -> F(HACC, file eviction)`.
+
+That formulation is not presented here as a bare conclusion. It is grounded in the statute, regulation, Administrative Plan, Blossom lease-up materials, and HACC's own January-February 2026 processing communications, collected in [title18_contract_source_linked_duty_matrix.md](/home/barberb/HACC/workspace/title18_contract_source_linked_duty_matrix.md).
+
 The strongest current record points are:
 
 1. HACC's Phase II redevelopment and relocation notice.
@@ -32,7 +36,29 @@ The strongest current record points are:
 5. HACC's later written acknowledgment that the Blossom intake packet had been submitted to Quantum Residential staff at the Hillside Manor leasing office but had not been provided to HACC.
 6. The March 2026 voucher and accommodation communications showing that even then, the household was still dealing with voucher issuance, bedroom-size reversal, accommodation review, and unresolved relocation status.
 
-Where the relocation process remained incomplete, possession should not be granted as though the household simply refused to move.
+Where the relocation process remained incomplete, possession should not be granted as though the household simply refused to move. On the current record, the better formulation is stronger than simple unfairness: HACC was barred from filing eviction as if the household had defaulted while the relocation conditions precedent remained materially unsatisfied.
+
+## II.A. Title 18 And Undertaken Contract Duties Barred Eviction.
+
+The anti-eviction point can also be stated more directly. This is not just a case where federal relocation law existed in the background. It is a case where direct Section 18 relocation duties and HACC's own undertaken replacement-housing process converged.
+
+On the direct federal side, Section 18 and HUD's relocation rule required HACC to provide relocation and replacement-housing assistance as part of the Hillside redevelopment displacement process. See 42 U.S.C. § 1437p and 24 C.F.R. § 970.21. Those are not discretionary aspirations. They are the governing legal framework for relocation tied to demolition and disposition.
+
+On the local process side, HACC's own documents show that HACC adopted and represented a concrete replacement-housing structure. HACC's July 1, 2025 Administrative Plan identifies Hillside Manor as a RAD PBV project, identifies Quantum Residential Property Management as the property management company, states that HACC will manage separate waiting lists for individual RAD PBV projects including Hillside Manor, and states that the owner must provide an opportunity for an informal hearing before eviction. HACC's public Blossom lease-up page states that applications for Blossom and Community Apartments will be processed through HACC's PBV waitlist and that Hillside relocation households are priority groups. HACC's January 8, 2026 notice then told this household it had to choose between moving forward with Blossom and Community Apartments or using a Tenant Protection Voucher.
+
+Once HACC did those things, HACC was not free to file eviction as though the household had simply failed to secure alternate housing on its own. HACC had undertaken a specific replacement-housing process and directed the household into it. HACC then later admitted that the intake packet submitted through the Hillside Manor / Quantum route had not reached HACC. That means the relevant prohibition here is supported from both directions:
+
+- federal law required completion of the relocation process before displacement was treated as complete; and
+- HACC's own documented process required HACC to administer the Blossom-or-TPV path it directed the household to use rather than convert its own process failure into an eviction default.
+
+In deontic terms, the best current formulation is:
+
+- `O(HACC, perform Section 18 relocation steps required by law)`
+- `O(HACC, administer the PBV/RAD replacement-housing path adopted in its own plan)`
+- `O(HACC, administer the Blossom-or-TPV choice it directed the household to make)`
+- `not completed(relocation and undertaken processing duties) -> F(HACC, file eviction)`
+
+That formulation is source-linked in [title18_contract_source_linked_duty_matrix.md](/home/barberb/HACC/workspace/title18_contract_source_linked_duty_matrix.md) and supported in the fuller review at [title18_statute_and_contract_source_review.md](/home/barberb/HACC/workspace/title18_statute_and_contract_source_review.md). On the present record, that is why eviction was barred.
 
 ## III. The Blossom And Waterleaf Paths Show That The Housing Transition Was Still In Progress.
 
@@ -53,7 +79,7 @@ On the Waterleaf side:
 3. HACC later acknowledged that the household had chosen to port to Multnomah County.
 4. By March 25-26, 2026, Waterleaf still had the household only on the waiting list pending voucher issuance.
 
-That chronology is inconsistent with the theory that the relocation process had already become a completed, household-caused default. It also shows that the alternate port-out route HACC identified did not function as a prompt off-ramp from eviction pressure. On this record, that path stretched across four calendar months, beginning with the December 23, 2025 Waterleaf application, continuing through HACC's January 12 and January 26 portability communications, and still remaining incomplete in late March 2026 when Waterleaf was waiting on voucher issuance. By early April 2026, the same alternate route still had not produced a completed move. Once HACC was administering a safety-linked or emergency-transfer-related portability path, the operative duties were source-linked ones, not merely abstract fairness concerns: 24 C.F.R. § 5.2009 required HACC to maintain and use an emergency transfer plan, and HACC's own 2025 Administrative Plan and the HUD HCV Fair Housing Guidebook require the PHA to actually administer the transfer or portability path rather than let it drift while displacement pressure continues.
+That chronology is inconsistent with the theory that the relocation process had already become a completed, household-caused default. It also shows that the alternate port-out route HACC identified did not function as a prompt off-ramp from eviction pressure. On this record, that path stretched across four calendar months, beginning with the December 23, 2025 Waterleaf application, continuing through HACC's January 12 and January 26 portability communications, and still remaining incomplete in late March 2026 when Waterleaf was waiting on voucher issuance. By early April 2026, the same alternate route still had not produced a completed move. Once HACC was administering a safety-linked or emergency-transfer-related portability path, the operative duties were source-linked ones, not merely abstract fairness concerns: 24 C.F.R. § 5.2009 required HACC to maintain and use an emergency transfer plan, and HACC's own 2025 Administrative Plan and the HUD HCV Fair Housing Guidebook require the PHA to actually administer the transfer or portability path rather than let it drift while displacement pressure continues. That means the legal consequence is not just that the port-out was slow; it is that the prohibition on moving forward with eviction remained in place while the transfer path HACC chose to use was still materially incomplete.
 
 The current record also supports that a substantial share of the delay was causable to HACC itself. Specifically:
 
@@ -65,7 +91,7 @@ The current record also supports that a substantial share of the delay was causa
 
 So this is not merely delay in the abstract. The present record supports substantial delay traceable to HACC's own acts and omissions.
 
-Defendants do not contend that the present record permits a mathematically exact percentage allocation of delay. But the stronger and narrower point is that the record supports a substantial amount, and likely most, of the documented delay from January 8, 2026 through late March 2026 being causable to HACC's own administration rather than to any refusal by the household to participate. That matters because the main delay points in that period involved nondiscretionary or mandatory duties HACC was required to carry out under identified sources: Section 18 relocation completion duties under 42 U.S.C. § 1437p(d) and 24 C.F.R. § 970.21; hearing and adverse-action duties under 42 U.S.C. § 1437d(k) and 24 C.F.R. § 982.555; VAWA emergency-transfer and confidentiality duties under 24 C.F.R. §§ 5.2007 and 5.2009; and fair-housing accommodation duties under 42 U.S.C. § 3604(f)(3)(B) and 24 C.F.R. § 100.204. For convenience, the source-linked duty matrix appears in Section IX below.
+Defendants do not contend that the present record permits a mathematically exact percentage allocation of delay. But the stronger and narrower point is that the record supports a substantial amount, and likely most, of the documented delay from January 8, 2026 through late March 2026 being causable to HACC's own administration rather than to any refusal by the household to participate. That matters because the main delay points in that period involved nondiscretionary or mandatory duties HACC was required to carry out under identified sources: Section 18 relocation completion duties under 42 U.S.C. § 1437p(d) and 24 C.F.R. § 970.21; hearing and adverse-action duties under 42 U.S.C. § 1437d(k) and 24 C.F.R. § 982.555; VAWA emergency-transfer and confidentiality duties under 24 C.F.R. §§ 5.2007 and 5.2009; and fair-housing accommodation duties under 42 U.S.C. § 3604(f)(3)(B) and 24 C.F.R. § 100.204. The contract side reinforces the same prohibition, because HACC's own relocation commitment and implied-in-fact relocation-process undertaking meant HACC was also forbidden to sue for possession on a household-default theory while HACC's own undertaken relocation performance remained unfinished. For convenience, the source-linked duty matrix appears in Section IX below.
 
 ## IV. The Accommodation Path Was Still Unresolved During The Same Time Period.
 
@@ -110,7 +136,7 @@ The Court need not decide every federal claim to rule correctly on the present e
 4. A substantial share of the delay was traceable to HACC's own conduct.
 5. HACC nevertheless pursued eviction.
 
-On that record, the Court should deny possession as premature. At minimum, the Court should stay or abate possession and enter narrow interim orders preserving the application, transfer, relocation, and accommodation path.
+On that record, the Court should deny possession as premature. More precisely, the current Title 18 and contract record supports that HACC was barred from filing eviction while the triggered relocation duties and the undertaken relocation-process commitments remained materially incomplete. At minimum, the Court should stay or abate possession and enter narrow interim orders preserving the application, transfer, relocation, and accommodation path.
 
 ## VIII. If The Court Considers Equitable Relief, It Should Preserve The Subject Matter Rather Than Award Final Relief.
 
@@ -167,6 +193,8 @@ The motion relies on the following duties because each one is tied to an identif
 10. Undertaken intake-routing and application-processing obligation.
    Source: HACC's January 8, 2026 Blossom / TPV notice directing the household into the replacement-housing path, and HACC's later written acknowledgment that the packet had been submitted to Quantum staff at the Hillside Manor office but had not been provided to HACC.
    Why it matters here: this is not framed as a free-floating statute-only duty; it is a concrete processing obligation HACC itself undertook and then failed to carry through in the same relocation chain.
+
+The more detailed Title 18 and contract-side source review, including the distinction between direct federal duties and undertaking-based local duties, appears at [title18_statute_and_contract_source_review.md](/home/barberb/HACC/workspace/title18_statute_and_contract_source_review.md) and [title18_contract_source_linked_duty_matrix.md](/home/barberb/HACC/workspace/title18_contract_source_linked_duty_matrix.md).
 
 ## X. Conclusion
 
