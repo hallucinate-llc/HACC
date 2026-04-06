@@ -1,0 +1,26 @@
+{
+  "layout_type": "realistic_2br_shell",
+  "width": 38,
+  "height": 30,
+  "rooms": {
+    "ben_room": [0, 0, 10, 14],
+    "jane_room": [0, 14, 10, 16],
+    "mother_room": [10, 0, 28, 30],
+    "living_room": [10, 0, 28, 30],
+    "bathroom": [30, 22, 8, 8]
+  },
+  "door_cells": {
+    "ben_room": [9, 7],
+    "jane_room": [9, 22],
+    "living_room": [10, 15],
+    "bathroom": [30, 26]
+  },
+  "windows": {
+    "ben_room": [[0, 3, 1, 4]],
+    "jane_room": [[0, 18, 1, 4]],
+    "living_room": [[37, 6, 1, 6], [37, 18, 1, 5]],
+    "mother_room": [[37, 6, 1, 6], [37, 18, 1, 5]]
+  },
+  "entry": [11, 1],
+  "bathroom": [30, 26]
+}

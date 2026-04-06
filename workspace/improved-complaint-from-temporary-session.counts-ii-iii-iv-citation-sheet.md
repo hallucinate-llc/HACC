@@ -68,6 +68,7 @@ Supporting exhibits:
 - Exhibit Q
 
 Policy-context materials:
+- Public SHS `dochub` documents containing the exact outcome-goal quote
 - Clackamas County SHS materials
 - RLRA materials
 - H4S and related county housing-policy materials
@@ -79,11 +80,14 @@ Direct evidentiary use:
 - Exhibit G and Exhibit J support the transfer or Blossom process and related complaint chronology.
 
 Supporting use:
-- Exhibit Q supports notice, motive, and context only.
+- Exhibit Q supports notice, motive, and context only. It includes third-party review statements that reporting fair-housing violations led to retaliation, alongside separate employee comments about "woke" or DEI-focused culture.
 - County SHS, RLRA, H4S, and related policy materials support the county-linked landlord and voucher pipeline context, including racial-equity program design and landlord participation.
+- The public SHS `dochub` materials independently ground the quoted policy sentence preserved in Exhibit S, so the screenshot is not the only source for that language.
+- The comparator theory that other households, including a Black household, were advanced while plaintiffs' file stalled is now directly grounded to the February 2, 2026 email preserved at [message.eml](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0047-Re-Allegations-of-Fraud---JC-Household-CAMTdTS-00cFTv4dFf8yZ3NpPztCKwr2LB-on4Xxz-BFEv9_5jA-mail.gmail.com/message.eml), which states that Benjamin Barber met a Black couple with one child at Balfour Park, that they had just been granted Section 8, and that they were interviewing for Blossom while plaintiffs' own application had not been sent on to HACC.
 
 Limit:
 - The policy materials do not prove discriminatory intent by themselves and do not show that Oregon or county law required race discrimination.
+- The February 2, 2026 email now preserves the Balfour Park Black-family comparator point and the race-based `lemon dropping` accusation, but it does not by itself prove the full universe of comparator facts beyond what the email actually says.
 - The core section 1981 theory remains intentional impairment of plaintiffs' housing-contracting opportunity on unequal racial terms.
 
 ## Safe Summary

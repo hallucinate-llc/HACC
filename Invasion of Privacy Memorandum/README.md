@@ -96,6 +96,37 @@ This writes:
 - outputs/sokoban_layout_experiments.json
 - outputs/sokoban_layout_experiments.md
 
+Run against an explicit floor shell fixture instead of generated room geometry:
+
+```bash
+cd "/home/barberb/HACC/Invasion of Privacy Memorandum"
+python3 engine/sokoban_layout_experiments.py \
+  --attempts-per-size 30 \
+  --processes 1 \
+  --shell-json fixtures/realistic_2br_shell_example.json \
+  --write \
+  --write-diagrams
+```
+
+This mode uses the exact `rooms`, `door_cells`, `windows`, `entry`, and `bathroom`
+geometry from the shell file, which is the better path when you want the
+simulation tied to a real or proposed unit instead of a generated one.
+
+Run a real `gym-sokoban` engine probe in the local virtualenv:
+
+```bash
+cd /home/barberb/HACC
+python3 -m venv .venv-gym-sokoban
+'./.venv-gym-sokoban/bin/pip' install gym-sokoban 'setuptools<81' 'numpy<2'
+'./.venv-gym-sokoban/bin/python' "/home/barberb/HACC/Invasion of Privacy Memorandum/engine/gym_sokoban_probe.py" --write
+```
+
+This writes:
+- outputs/gym_sokoban_probe.json
+- outputs/gym_sokoban_probe.md
+
+Use this when you want an actual Sokoban engine artifact instead of the custom apartment-layout simulator.
+
 For the full option surface, run:
 
 ```bash

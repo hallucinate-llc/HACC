@@ -30,7 +30,7 @@
     {
       "label": "Check Title18 HACC Readiness",
       "type": "shell",
-      "command": "python3",
+      "command": "${workspaceFolder}/Breach of Contract/.venv/bin/python",
       "args": [
         "-m",
         "formal_logic.title18_readiness",
@@ -50,7 +50,7 @@
     {
       "label": "Check Title18 Quantum Readiness",
       "type": "shell",
-      "command": "python3",
+      "command": "${workspaceFolder}/Breach of Contract/.venv/bin/python",
       "args": [
         "-m",
         "formal_logic.title18_readiness",
@@ -70,7 +70,7 @@
     {
       "label": "Generate Title18 Override Templates",
       "type": "shell",
-      "command": "python3",
+      "command": "${workspaceFolder}/Breach of Contract/.venv/bin/python",
       "args": [
         "-m",
         "formal_logic.title18_override_templates"
@@ -84,10 +84,51 @@
     {
       "label": "Audit Title18 Override Files",
       "type": "shell",
-      "command": "python3",
+      "command": "${workspaceFolder}/Breach of Contract/.venv/bin/python",
       "args": [
         "-m",
         "formal_logic.title18_override_audit"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/Breach of Contract"
+      },
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Build Title18 Status Report",
+      "type": "shell",
+      "command": "${workspaceFolder}/Breach of Contract/.venv/bin/python",
+      "args": [
+        "-m",
+        "formal_logic.title18_status"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/Breach of Contract"
+      },
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Doctor Title18 Workflow",
+      "type": "shell",
+      "command": "make",
+      "args": [
+        "doctor-title18"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/Breach of Contract"
+      },
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Build Contract Breach Report",
+      "type": "shell",
+      "command": "${workspaceFolder}/Breach of Contract/.venv/bin/python",
+      "args": [
+        "-m",
+        "formal_logic.contract_breach_analysis"
       ],
       "options": {
         "cwd": "${workspaceFolder}/Breach of Contract"

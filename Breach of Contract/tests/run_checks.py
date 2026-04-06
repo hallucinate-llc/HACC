@@ -27,6 +27,8 @@ from formal_logic.title18_party_drafts import build_hacc_party_motion, build_qua
 from formal_logic.title18_query import available_presets, build_dashboard, build_query_summary, load_report as load_title18_query_report, query_obligations, render_dashboard_markdown, run_preset
 from formal_logic.title18_override_templates import build_title18_override_templates, render_title18_override_worksheet_markdown
 from formal_logic.title18_override_audit import build_title18_override_audit, render_title18_override_audit_markdown
+from formal_logic.title18_status import build_title18_status_report, render_title18_status_markdown
+from formal_logic.contract_breach_analysis import build_contract_breach_report, render_contract_breach_report_markdown
 from formal_logic.title18_readiness import build_title18_readiness_report, render_title18_readiness_markdown
 from formal_logic.title18_regenerate_packets import regenerate_title18_packets
 from formal_logic.title18_rendered_filings import build_render_context, build_rendered_title18_filings
@@ -443,6 +445,30 @@ def test_title18_override_audit_reports_missing_keys():
     assert report["tracks"]["hacc"]["missingCount"] >= 1
     assert report["tracks"]["quantum"]["missingCount"] >= 1
     assert "# Title 18 Override Audit" in markdown
+
+
+def test_title18_status_report_summarizes_tracks():
+    report = build_title18_status_report()
+    markdown = render_title18_status_markdown(report)
+
+    assert report["tracks"]["hacc"]["overrideCompletion"]["totalCount"] >= 1
+    assert report["tracks"]["quantum"]["readiness"]["missingCount"] >= 1
+    assert report["commands"]["doctor"] == "make doctor-title18"
+    assert "# Title 18 Status Report" in markdown
+
+
+def test_contract_breach_report_surfaces_hacc_and_quantum_theories():
+    report = build_contract_breach_report()
+    markdown = render_contract_breach_report_markdown(report)
+
+    assert report["meta"]["likelyBreachCount"] >= 2
+    assert any(item["findingId"] == "contract:hacc:relocation_commitment" for item in report["findings"])
+    assert any(item["findingId"] == "contract:quantum:intake_processing_commitment" for item in report["findings"])
+    assert report["formalAnalysis"]["frameLogic"]["frameCount"] >= len(report["findings"])
+    assert report["formalAnalysis"]["dcec"]["formulaCount"] >= len(report["findings"])
+    assert report["formalAnalysis"]["temporalDeontic"]["formulaCount"] >= 5
+    assert "# Contract Breach Analysis" in markdown
+    assert "## Formal Analysis" in markdown
 
 
 def test_positive_constructive_denial_case():

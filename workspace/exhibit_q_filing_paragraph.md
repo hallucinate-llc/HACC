@@ -1,0 +1,7 @@
+# Filing-Safe Exhibit Q Paragraph
+
+Plaintiffs further rely on Exhibit Q as limited notice, motive, and context evidence only. Exhibit Q is a preserved Indeed-style former-employee review screenshot concerning Quantum Residential. The review material includes a statement that, if employees "report fair housing violations, safety or missing funds they will retaliate," along with other commentary describing management culture and DEI-related workplace concerns. Plaintiffs do not offer Exhibit Q as a direct admission by Quantum, as proof that every statement in the review is true, or as a substitute for case-specific proof. Instead, plaintiffs offer Exhibit Q for the narrower purpose of showing why plaintiffs' later written complaints about retaliation, fair-housing violations, and discriminatory housing handling were not speculative and why discovery into Quantum's handling of fair-housing complaints, application processing, and retaliatory practices is warranted.
+
+## Narrower Version
+
+Plaintiffs offer Exhibit Q as context and notice evidence only. It is a preserved third-party review screenshot in which a former employee stated that reporting fair-housing violations led to retaliation. Plaintiffs do not offer that review as a direct admission by Quantum or as standalone proof of liability, but as limited support for motive, notice, and the reasonableness of plaintiffs' retaliation concerns.

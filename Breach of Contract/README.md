@@ -126,6 +126,58 @@ This writes:
 
 VS Code users can run the `Audit Title18 Override Files` task for the same outputs.
 
+To build a single consolidated status report that combines editable-override completion, override-audit results, and per-track readiness:
+
+```bash
+cd "/home/barberb/HACC/Breach of Contract"
+make status-title18
+```
+
+This writes:
+
+- `outputs/title18_status_report.json`
+- `outputs/title18_status_report.md`
+
+VS Code users can run the `Build Title18 Status Report` task for the same outputs.
+
+If you want one command that refreshes the editable override templates, audits the editable files, rebuilds the consolidated status report, and refreshes both track-specific readiness reports:
+
+```bash
+cd "/home/barberb/HACC/Breach of Contract"
+make doctor-title18
+```
+
+VS Code users can run the `Doctor Title18 Workflow` task for the same end-to-end refresh.
+
+To generate a dedicated breach-of-contract / relocation-agreement report from the joinder fixture and the existing relocation evidence:
+
+```bash
+cd "/home/barberb/HACC/Breach of Contract"
+python3 -m venv .venv
+. .venv/bin/activate
+make contract-breach-report
+```
+
+This writes:
+
+- `outputs/contract_breach_report.json`
+- `outputs/contract_breach_report.md`
+- `outputs/contract_breach_formal_model.json`
+- `outputs/contract_breach_formal_model.md`
+
+The contract report focuses on whether the current record supports HACC and Quantum being in breach of relocation commitments, application-processing duties, RAD-successor obligations, or related management agreements, separate from the Title 18 statutory-violation layer.
+
+The same command now also emits a formal model layer that:
+
+- frames the knowledge graph in F-logic using the vendored `ipfs_datasets_py` F-logic types
+- expresses the core obligation path in a DCEC-style event calculus
+- emits temporal deontic formulas for the strongest and developing theories
+- records best-effort theorem-prover and temporal-consistency results from the vendored `ipfs_datasets_py` logic stack when those dependencies are available in the environment
+
+VS Code users can run the `Build Contract Breach Report` task for the same outputs.
+
+The `Makefile` now prefers `.venv/bin/python` automatically when that environment exists, and the VS Code tasks are wired to the same local interpreter so the formal logic stack uses the installed workspace dependencies instead of system Python.
+
 Below is the earlier workspace2 prototype documentation preserved in place.
 
 # workspace2
