@@ -1,0 +1,1421 @@
+{
+  "generated_at": "2026-04-07",
+  "ocr_date_index": {
+    "solomon_motion_for_guardianship_ocr.txt": [
+      "2026-03-31"
+    ],
+    "sam_barber_restraining_order_ocr.txt": [
+      "2025-11-17",
+      "2025-11-19"
+    ]
+  },
+  "solomon_event_feed_count": 19,
+  "solomon_repository_hit_count": 1337,
+  "solomon_repository_fact_count": 254,
+  "modes": {
+    "strict": {
+      "active_rules": [
+        {
+          "rule_id": "r4_solomon_forbidden_abuse_contact_property_control",
+          "description": "Given granted in-effect restraining order with property restrictions, Solomon is forbidden to abuse/contact/interfere/control property.",
+          "activation_date_estimate": "2025-11-20",
+          "antecedents": [
+            {
+              "fact_id": "f_solomon_actual_notice_on_2025_11_17",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-17"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_granted",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_in_effect",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_contact_restrictions",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_property_restrictions",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c4_solomon_forbidden_contact_property_control",
+            "modality": "F",
+            "actor": "person:solomon",
+            "action": "abuse_contact_or_control_property",
+            "target": "person:jane_cortez"
+          }
+        },
+        {
+          "rule_id": "r4b_solomon_forbidden_enter_residence",
+          "description": "Given the granted restraining order and residence restriction, Solomon is forbidden from entering or remaining at the protected residence.",
+          "activation_date_estimate": "2025-11-20",
+          "antecedents": [
+            {
+              "fact_id": "f_solomon_actual_notice_on_2025_11_17",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-17"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_granted",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_residence_restrictions",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c4b_solomon_forbidden_enter_residence",
+            "modality": "F",
+            "actor": "person:solomon",
+            "action": "enter_or_remain_at_petitioner_residence",
+            "target": "location:10043_se_32nd_ave"
+          }
+        },
+        {
+          "rule_id": "r5b_solomon_obligated_seek_hearing_or_comply",
+          "description": "If Solomon stated he would comply only once served despite an already in-effect order, he was obligated to seek a hearing or comply rather than self-suspend effectiveness.",
+          "activation_date_estimate": "2026-03-10",
+          "antecedents": [
+            {
+              "fact_id": "f_restraining_order_granted",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_in_effect",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            },
+            {
+              "fact_id": "f_solomon_service_position_statement",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-10"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c5b_solomon_obligated_seek_hearing_or_comply",
+            "modality": "O",
+            "actor": "person:solomon",
+            "action": "seek_hearing_or_comply_with_existing_order",
+            "target": "order:eppdapa_restraining_order"
+          }
+        },
+        {
+          "rule_id": "r5c_solomon_forbidden_self_help_noncooperation",
+          "description": "If Solomon adopted an explicit noncooperation posture after the granted in-effect order, self-help noncooperation is forbidden.",
+          "activation_date_estimate": "2026-03-10",
+          "antecedents": [
+            {
+              "fact_id": "f_restraining_order_granted",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_in_effect",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            },
+            {
+              "fact_id": "f_solomon_noncooperation_statement",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-10"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c5c_solomon_forbidden_self_help_noncooperation",
+            "modality": "F",
+            "actor": "person:solomon",
+            "action": "adopt_self_help_noncooperation_posture",
+            "target": "order:eppdapa_restraining_order"
+          }
+        },
+        {
+          "rule_id": "r6b_hacc_obligated_document_lease_basis",
+          "description": "If HACC implemented a January 1, 2026 lease adjustment, HACC was obligated to document the basis for that household-composition change.",
+          "activation_date_estimate": "2026-01-01",
+          "antecedents": [
+            {
+              "fact_id": "f_hacc_lease_adjustment_effective_2026_01_01",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-01-01"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c6b_hacc_obligated_document_lease_basis",
+            "modality": "O",
+            "actor": "org:hacc",
+            "action": "document_basis_for_household_composition_or_lease_adjustment",
+            "target": "household:jane_cortez_household"
+          }
+        },
+        {
+          "rule_id": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
+          "description": "Because no named HACC notice message about the Solomon order has been found in preserved mail, the HACC-interference theory should presently be treated as an inference rather than direct proof.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_hacc_named_notice_to_solomon_order_not_found",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c6c_solomon_interference_not_yet_directly_proved",
+            "modality": "P",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "treat_solomon_hacc_interference_as_inference_not_direct_proof",
+            "target": "person:solomon"
+          }
+        },
+        {
+          "rule_id": "r8_solomon_notice_ack_triggers_court_relief_path",
+          "description": "If Solomon acknowledged awareness of restraining order and the order is in effect, Solomon is obligated to seek court relief rather than self-help noncompliance.",
+          "activation_date_estimate": "2025-11-20",
+          "antecedents": [
+            {
+              "fact_id": "f_feed_ev_solomon_ack_heard_restraining_order",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-17"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_in_effect",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c8_solomon_obligated_seek_relief_via_court",
+            "modality": "O",
+            "actor": "person:solomon",
+            "action": "seek_clarification_or_relief_through_court",
+            "target": "order:eppdapa_restraining_order"
+          }
+        },
+        {
+          "rule_id": "r9_solomon_wait_for_service_conflicts_with_no_further_service",
+          "description": "If Solomon stated he would wait for service but the order states no further service needed due to appearance, conditioning compliance on extra service is forbidden in this model.",
+          "activation_date_estimate": "2026-03-10",
+          "antecedents": [
+            {
+              "fact_id": "f_feed_ev_solomon_wait_for_service_statement",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-10"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_no_further_service_needed",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c9_solomon_forbidden_condition_compliance_on_extra_service",
+            "modality": "F",
+            "actor": "person:solomon",
+            "action": "condition_compliance_on_additional_service",
+            "target": "order:eppdapa_restraining_order"
+          }
+        },
+        {
+          "rule_id": "r10_solomon_noncooperation_statement_conflicts_with_effective_order",
+          "description": "If Solomon states non-incentivized cooperation while order is in effect, intentional noncooperation is forbidden in this model.",
+          "activation_date_estimate": "2026-03-10",
+          "antecedents": [
+            {
+              "fact_id": "f_feed_ev_solomon_not_incentivized_statement",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-10"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_in_effect",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c10_solomon_forbidden_intentional_noncooperation",
+            "modality": "F",
+            "actor": "person:solomon",
+            "action": "intentional_noncooperation_with_effective_order",
+            "target": "order:eppdapa_restraining_order"
+          }
+        },
+        {
+          "rule_id": "r11_solomon_already_have_order_statement_supports_notice",
+          "description": "If Solomon stated the other party already had the restraining order and order is in effect, Solomon is obligated to recognize existing order status.",
+          "activation_date_estimate": "2025-11-20",
+          "antecedents": [
+            {
+              "fact_id": "f_feed_ev_solomon_ack_already_have_order",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-17"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_in_effect",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c11_solomon_obligated_recognize_existing_order_status",
+            "modality": "O",
+            "actor": "person:solomon",
+            "action": "recognize_existing_order_status",
+            "target": "order:eppdapa_restraining_order"
+          }
+        },
+        {
+          "rule_id": "r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order",
+          "description": "If Solomon states the order is not in effect while the order is in effect, asserting ineffectiveness without court relief is forbidden in this model.",
+          "activation_date_estimate": "2026-03-10",
+          "antecedents": [
+            {
+              "fact_id": "f_feed_ev_solomon_order_not_in_effect_statement",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-10"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_in_effect",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c12_solomon_forbidden_assert_order_ineffective_without_relief",
+            "modality": "F",
+            "actor": "person:solomon",
+            "action": "assert_order_ineffective_without_court_relief",
+            "target": "order:eppdapa_restraining_order"
+          }
+        },
+        {
+          "rule_id": "r13_solomon_judge_overturn_statement_triggers_motion_path",
+          "description": "If Solomon states he would have the judge overturn the order while it is in effect, he is obligated to seek court modification before noncompliance.",
+          "activation_date_estimate": "2026-03-10",
+          "antecedents": [
+            {
+              "fact_id": "f_feed_ev_solomon_judge_overturn_statement",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-10"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_in_effect",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c13_solomon_obligated_file_motion_not_self_help",
+            "modality": "O",
+            "actor": "person:solomon",
+            "action": "file_motion_to_modify_or_vacate_before_noncompliance",
+            "target": "order:eppdapa_restraining_order"
+          }
+        },
+        {
+          "rule_id": "r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
+          "description": "If HACC is told that Jane is receiving calls about a restrained brother and third-party housing contact is occurring with a restrained person, HACC is obligated in this model to stop that contact path and document the response.",
+          "activation_date_estimate": "2026-03-26",
+          "antecedents": [
+            {
+              "fact_id": "f_feed_ev_hacc_notice_brother_calls_after_granted_order",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-26"
+              ]
+            },
+            {
+              "fact_id": "f_feed_ev_hacc_notice_third_party_contact_with_restrained_person",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-26"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c14_hacc_obligated_avoid_third_party_housing_contact_with_restrained_person",
+            "modality": "O",
+            "actor": "org:hacc",
+            "action": "avoid_third_party_housing_contact_with_restrained_person_and_document_response",
+            "target": "person:jane_cortez"
+          }
+        }
+      ],
+      "unresolved_rules": [
+        {
+          "rule_id": "r1_guardian_permission_if_prior_appointment",
+          "description": "If prior appointment exists, Benjamin is permitted to act within valid guardian scope for Jane.",
+          "activation_date_estimate": null,
+          "antecedents": [
+            {
+              "fact_id": "f_client_prior_appointment",
+              "status": "alleged",
+              "value": "true",
+              "dates": []
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c1_benjamin_permitted_guardian_scope",
+            "modality": "P",
+            "actor": "person:benjamin_barber",
+            "action": "act_within_valid_guardian_scope",
+            "target": "person:jane_cortez"
+          }
+        },
+        {
+          "rule_id": "r2_noninterference_prohibition_for_benjamin",
+          "description": "If prior appointment exists and interference is alleged, Benjamin is forbidden from interference.",
+          "activation_date_estimate": null,
+          "antecedents": [
+            {
+              "fact_id": "f_client_prior_appointment",
+              "status": "alleged",
+              "value": "true",
+              "dates": []
+            },
+            {
+              "fact_id": "f_client_benjamin_housing_interference",
+              "status": "alleged",
+              "value": "true",
+              "dates": []
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c2_benjamin_forbidden_interference",
+            "modality": "F",
+            "actor": "person:benjamin_barber",
+            "action": "interfere_with_guardian_or_housing_process",
+            "target": "process:hacc_housing_contract"
+          }
+        },
+        {
+          "rule_id": "r3_benjamin_obligation_comply_or_seek_relief",
+          "description": "If prior appointment is in force and Benjamin disregarded order, Benjamin was obligated to comply or seek relief.",
+          "activation_date_estimate": null,
+          "antecedents": [
+            {
+              "fact_id": "f_client_prior_appointment",
+              "status": "alleged",
+              "value": "true",
+              "dates": []
+            },
+            {
+              "fact_id": "f_client_benjamin_order_disregard",
+              "status": "alleged",
+              "value": "true",
+              "dates": []
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c3_benjamin_obligated_comply_or_seek_relief",
+            "modality": "O",
+            "actor": "person:benjamin_barber",
+            "action": "comply_with_order_or_seek_relief",
+            "target": "order:prior_guardianship_order"
+          }
+        },
+        {
+          "rule_id": "r5_solomon_obligated_appear_and_answer",
+          "description": "If no further service was required because Solomon appeared, later failure to appear supports an obligation to appear and answer.",
+          "activation_date_estimate": "2026-03-10",
+          "antecedents": [
+            {
+              "fact_id": "f_restraining_order_no_further_service_needed",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            },
+            {
+              "fact_id": "f_client_solomon_failed_appearance",
+              "status": "alleged",
+              "value": "true",
+              "dates": [
+                "2026-03-10"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c5_solomon_obligated_appear_and_answer",
+            "modality": "O",
+            "actor": "person:solomon",
+            "action": "appear_and_answer_show_cause",
+            "target": "proceeding:related_order_hearing"
+          }
+        },
+        {
+          "rule_id": "r6_hacc_obligated_process_consistently_with_valid_authority",
+          "description": "If housing process is active and appointment exists, HACC is obligated to process consistently with valid authority.",
+          "activation_date_estimate": null,
+          "antecedents": [
+            {
+              "fact_id": "f_hacc_process_exists",
+              "status": "alleged",
+              "value": "true",
+              "dates": []
+            },
+            {
+              "fact_id": "f_client_prior_appointment",
+              "status": "alleged",
+              "value": "true",
+              "dates": []
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c6_hacc_obligated_process_consistent_with_order",
+            "modality": "O",
+            "actor": "org:hacc",
+            "action": "process_housing_consistent_with_valid_guardian_authority",
+            "target": "person:jane_cortez"
+          }
+        },
+        {
+          "rule_id": "r7_solomon_forbidden_refile_precluded_issue",
+          "description": "If issue preclusion applies, Solomon is forbidden from relitigating the precluded issue.",
+          "activation_date_estimate": "2026-03-31",
+          "antecedents": [
+            {
+              "fact_id": "f_collateral_estoppel_candidate",
+              "status": "theory",
+              "value": "true",
+              "dates": []
+            },
+            {
+              "fact_id": "f_client_solomon_barred_refile",
+              "status": "alleged",
+              "value": "true",
+              "dates": [
+                "2026-03-31"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c7_solomon_forbidden_refile_precluded_issue",
+            "modality": "F",
+            "actor": "person:solomon",
+            "action": "relitigate_precluded_issue",
+            "target": "issue:guardianship_authority"
+          }
+        }
+      ],
+      "party_deontic_state": {
+        "person:solomon": {
+          "O": [
+            {
+              "action": "seek_hearing_or_comply_with_existing_order",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r5b_solomon_obligated_seek_hearing_or_comply",
+              "activation_date_estimate": "2026-03-10"
+            },
+            {
+              "action": "seek_clarification_or_relief_through_court",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r8_solomon_notice_ack_triggers_court_relief_path",
+              "activation_date_estimate": "2025-11-20"
+            },
+            {
+              "action": "recognize_existing_order_status",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r11_solomon_already_have_order_statement_supports_notice",
+              "activation_date_estimate": "2025-11-20"
+            },
+            {
+              "action": "file_motion_to_modify_or_vacate_before_noncompliance",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r13_solomon_judge_overturn_statement_triggers_motion_path",
+              "activation_date_estimate": "2026-03-10"
+            }
+          ],
+          "P": [],
+          "F": [
+            {
+              "action": "abuse_contact_or_control_property",
+              "target": "person:jane_cortez",
+              "rule_id": "r4_solomon_forbidden_abuse_contact_property_control",
+              "activation_date_estimate": "2025-11-20"
+            },
+            {
+              "action": "enter_or_remain_at_petitioner_residence",
+              "target": "location:10043_se_32nd_ave",
+              "rule_id": "r4b_solomon_forbidden_enter_residence",
+              "activation_date_estimate": "2025-11-20"
+            },
+            {
+              "action": "adopt_self_help_noncooperation_posture",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r5c_solomon_forbidden_self_help_noncooperation",
+              "activation_date_estimate": "2026-03-10"
+            },
+            {
+              "action": "condition_compliance_on_additional_service",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r9_solomon_wait_for_service_conflicts_with_no_further_service",
+              "activation_date_estimate": "2026-03-10"
+            },
+            {
+              "action": "intentional_noncooperation_with_effective_order",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r10_solomon_noncooperation_statement_conflicts_with_effective_order",
+              "activation_date_estimate": "2026-03-10"
+            },
+            {
+              "action": "assert_order_ineffective_without_court_relief",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order",
+              "activation_date_estimate": "2026-03-10"
+            }
+          ]
+        },
+        "org:hacc": {
+          "O": [
+            {
+              "action": "document_basis_for_household_composition_or_lease_adjustment",
+              "target": "household:jane_cortez_household",
+              "rule_id": "r6b_hacc_obligated_document_lease_basis",
+              "activation_date_estimate": "2026-01-01"
+            },
+            {
+              "action": "avoid_third_party_housing_contact_with_restrained_person_and_document_response",
+              "target": "person:jane_cortez",
+              "rule_id": "r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
+              "activation_date_estimate": "2026-03-26"
+            }
+          ],
+          "P": [],
+          "F": []
+        },
+        "case:guardianship_collateral_estoppel": {
+          "O": [],
+          "P": [
+            {
+              "action": "treat_solomon_hacc_interference_as_inference_not_direct_proof",
+              "target": "person:solomon",
+              "rule_id": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
+              "activation_date_estimate": "2026-04-07"
+            }
+          ],
+          "F": []
+        }
+      }
+    },
+    "inclusive": {
+      "active_rules": [
+        {
+          "rule_id": "r1_guardian_permission_if_prior_appointment",
+          "description": "If prior appointment exists, Benjamin is permitted to act within valid guardian scope for Jane.",
+          "activation_date_estimate": null,
+          "antecedents": [
+            {
+              "fact_id": "f_client_prior_appointment",
+              "status": "alleged",
+              "value": "true",
+              "dates": []
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c1_benjamin_permitted_guardian_scope",
+            "modality": "P",
+            "actor": "person:benjamin_barber",
+            "action": "act_within_valid_guardian_scope",
+            "target": "person:jane_cortez"
+          }
+        },
+        {
+          "rule_id": "r2_noninterference_prohibition_for_benjamin",
+          "description": "If prior appointment exists and interference is alleged, Benjamin is forbidden from interference.",
+          "activation_date_estimate": null,
+          "antecedents": [
+            {
+              "fact_id": "f_client_prior_appointment",
+              "status": "alleged",
+              "value": "true",
+              "dates": []
+            },
+            {
+              "fact_id": "f_client_benjamin_housing_interference",
+              "status": "alleged",
+              "value": "true",
+              "dates": []
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c2_benjamin_forbidden_interference",
+            "modality": "F",
+            "actor": "person:benjamin_barber",
+            "action": "interfere_with_guardian_or_housing_process",
+            "target": "process:hacc_housing_contract"
+          }
+        },
+        {
+          "rule_id": "r3_benjamin_obligation_comply_or_seek_relief",
+          "description": "If prior appointment is in force and Benjamin disregarded order, Benjamin was obligated to comply or seek relief.",
+          "activation_date_estimate": null,
+          "antecedents": [
+            {
+              "fact_id": "f_client_prior_appointment",
+              "status": "alleged",
+              "value": "true",
+              "dates": []
+            },
+            {
+              "fact_id": "f_client_benjamin_order_disregard",
+              "status": "alleged",
+              "value": "true",
+              "dates": []
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c3_benjamin_obligated_comply_or_seek_relief",
+            "modality": "O",
+            "actor": "person:benjamin_barber",
+            "action": "comply_with_order_or_seek_relief",
+            "target": "order:prior_guardianship_order"
+          }
+        },
+        {
+          "rule_id": "r4_solomon_forbidden_abuse_contact_property_control",
+          "description": "Given granted in-effect restraining order with property restrictions, Solomon is forbidden to abuse/contact/interfere/control property.",
+          "activation_date_estimate": "2025-11-20",
+          "antecedents": [
+            {
+              "fact_id": "f_solomon_actual_notice_on_2025_11_17",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-17"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_granted",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_in_effect",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_contact_restrictions",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_property_restrictions",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c4_solomon_forbidden_contact_property_control",
+            "modality": "F",
+            "actor": "person:solomon",
+            "action": "abuse_contact_or_control_property",
+            "target": "person:jane_cortez"
+          }
+        },
+        {
+          "rule_id": "r4b_solomon_forbidden_enter_residence",
+          "description": "Given the granted restraining order and residence restriction, Solomon is forbidden from entering or remaining at the protected residence.",
+          "activation_date_estimate": "2025-11-20",
+          "antecedents": [
+            {
+              "fact_id": "f_solomon_actual_notice_on_2025_11_17",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-17"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_granted",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_residence_restrictions",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c4b_solomon_forbidden_enter_residence",
+            "modality": "F",
+            "actor": "person:solomon",
+            "action": "enter_or_remain_at_petitioner_residence",
+            "target": "location:10043_se_32nd_ave"
+          }
+        },
+        {
+          "rule_id": "r5_solomon_obligated_appear_and_answer",
+          "description": "If no further service was required because Solomon appeared, later failure to appear supports an obligation to appear and answer.",
+          "activation_date_estimate": "2026-03-10",
+          "antecedents": [
+            {
+              "fact_id": "f_restraining_order_no_further_service_needed",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            },
+            {
+              "fact_id": "f_client_solomon_failed_appearance",
+              "status": "alleged",
+              "value": "true",
+              "dates": [
+                "2026-03-10"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c5_solomon_obligated_appear_and_answer",
+            "modality": "O",
+            "actor": "person:solomon",
+            "action": "appear_and_answer_show_cause",
+            "target": "proceeding:related_order_hearing"
+          }
+        },
+        {
+          "rule_id": "r5b_solomon_obligated_seek_hearing_or_comply",
+          "description": "If Solomon stated he would comply only once served despite an already in-effect order, he was obligated to seek a hearing or comply rather than self-suspend effectiveness.",
+          "activation_date_estimate": "2026-03-10",
+          "antecedents": [
+            {
+              "fact_id": "f_restraining_order_granted",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_in_effect",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            },
+            {
+              "fact_id": "f_solomon_service_position_statement",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-10"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c5b_solomon_obligated_seek_hearing_or_comply",
+            "modality": "O",
+            "actor": "person:solomon",
+            "action": "seek_hearing_or_comply_with_existing_order",
+            "target": "order:eppdapa_restraining_order"
+          }
+        },
+        {
+          "rule_id": "r5c_solomon_forbidden_self_help_noncooperation",
+          "description": "If Solomon adopted an explicit noncooperation posture after the granted in-effect order, self-help noncooperation is forbidden.",
+          "activation_date_estimate": "2026-03-10",
+          "antecedents": [
+            {
+              "fact_id": "f_restraining_order_granted",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_in_effect",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            },
+            {
+              "fact_id": "f_solomon_noncooperation_statement",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-10"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c5c_solomon_forbidden_self_help_noncooperation",
+            "modality": "F",
+            "actor": "person:solomon",
+            "action": "adopt_self_help_noncooperation_posture",
+            "target": "order:eppdapa_restraining_order"
+          }
+        },
+        {
+          "rule_id": "r6_hacc_obligated_process_consistently_with_valid_authority",
+          "description": "If housing process is active and appointment exists, HACC is obligated to process consistently with valid authority.",
+          "activation_date_estimate": null,
+          "antecedents": [
+            {
+              "fact_id": "f_hacc_process_exists",
+              "status": "alleged",
+              "value": "true",
+              "dates": []
+            },
+            {
+              "fact_id": "f_client_prior_appointment",
+              "status": "alleged",
+              "value": "true",
+              "dates": []
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c6_hacc_obligated_process_consistent_with_order",
+            "modality": "O",
+            "actor": "org:hacc",
+            "action": "process_housing_consistent_with_valid_guardian_authority",
+            "target": "person:jane_cortez"
+          }
+        },
+        {
+          "rule_id": "r6b_hacc_obligated_document_lease_basis",
+          "description": "If HACC implemented a January 1, 2026 lease adjustment, HACC was obligated to document the basis for that household-composition change.",
+          "activation_date_estimate": "2026-01-01",
+          "antecedents": [
+            {
+              "fact_id": "f_hacc_lease_adjustment_effective_2026_01_01",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-01-01"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c6b_hacc_obligated_document_lease_basis",
+            "modality": "O",
+            "actor": "org:hacc",
+            "action": "document_basis_for_household_composition_or_lease_adjustment",
+            "target": "household:jane_cortez_household"
+          }
+        },
+        {
+          "rule_id": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
+          "description": "Because no named HACC notice message about the Solomon order has been found in preserved mail, the HACC-interference theory should presently be treated as an inference rather than direct proof.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_hacc_named_notice_to_solomon_order_not_found",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c6c_solomon_interference_not_yet_directly_proved",
+            "modality": "P",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "treat_solomon_hacc_interference_as_inference_not_direct_proof",
+            "target": "person:solomon"
+          }
+        },
+        {
+          "rule_id": "r8_solomon_notice_ack_triggers_court_relief_path",
+          "description": "If Solomon acknowledged awareness of restraining order and the order is in effect, Solomon is obligated to seek court relief rather than self-help noncompliance.",
+          "activation_date_estimate": "2025-11-20",
+          "antecedents": [
+            {
+              "fact_id": "f_feed_ev_solomon_ack_heard_restraining_order",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-17"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_in_effect",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c8_solomon_obligated_seek_relief_via_court",
+            "modality": "O",
+            "actor": "person:solomon",
+            "action": "seek_clarification_or_relief_through_court",
+            "target": "order:eppdapa_restraining_order"
+          }
+        },
+        {
+          "rule_id": "r9_solomon_wait_for_service_conflicts_with_no_further_service",
+          "description": "If Solomon stated he would wait for service but the order states no further service needed due to appearance, conditioning compliance on extra service is forbidden in this model.",
+          "activation_date_estimate": "2026-03-10",
+          "antecedents": [
+            {
+              "fact_id": "f_feed_ev_solomon_wait_for_service_statement",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-10"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_no_further_service_needed",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c9_solomon_forbidden_condition_compliance_on_extra_service",
+            "modality": "F",
+            "actor": "person:solomon",
+            "action": "condition_compliance_on_additional_service",
+            "target": "order:eppdapa_restraining_order"
+          }
+        },
+        {
+          "rule_id": "r10_solomon_noncooperation_statement_conflicts_with_effective_order",
+          "description": "If Solomon states non-incentivized cooperation while order is in effect, intentional noncooperation is forbidden in this model.",
+          "activation_date_estimate": "2026-03-10",
+          "antecedents": [
+            {
+              "fact_id": "f_feed_ev_solomon_not_incentivized_statement",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-10"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_in_effect",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c10_solomon_forbidden_intentional_noncooperation",
+            "modality": "F",
+            "actor": "person:solomon",
+            "action": "intentional_noncooperation_with_effective_order",
+            "target": "order:eppdapa_restraining_order"
+          }
+        },
+        {
+          "rule_id": "r11_solomon_already_have_order_statement_supports_notice",
+          "description": "If Solomon stated the other party already had the restraining order and order is in effect, Solomon is obligated to recognize existing order status.",
+          "activation_date_estimate": "2025-11-20",
+          "antecedents": [
+            {
+              "fact_id": "f_feed_ev_solomon_ack_already_have_order",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-17"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_in_effect",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c11_solomon_obligated_recognize_existing_order_status",
+            "modality": "O",
+            "actor": "person:solomon",
+            "action": "recognize_existing_order_status",
+            "target": "order:eppdapa_restraining_order"
+          }
+        },
+        {
+          "rule_id": "r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order",
+          "description": "If Solomon states the order is not in effect while the order is in effect, asserting ineffectiveness without court relief is forbidden in this model.",
+          "activation_date_estimate": "2026-03-10",
+          "antecedents": [
+            {
+              "fact_id": "f_feed_ev_solomon_order_not_in_effect_statement",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-10"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_in_effect",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c12_solomon_forbidden_assert_order_ineffective_without_relief",
+            "modality": "F",
+            "actor": "person:solomon",
+            "action": "assert_order_ineffective_without_court_relief",
+            "target": "order:eppdapa_restraining_order"
+          }
+        },
+        {
+          "rule_id": "r13_solomon_judge_overturn_statement_triggers_motion_path",
+          "description": "If Solomon states he would have the judge overturn the order while it is in effect, he is obligated to seek court modification before noncompliance.",
+          "activation_date_estimate": "2026-03-10",
+          "antecedents": [
+            {
+              "fact_id": "f_feed_ev_solomon_judge_overturn_statement",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-10"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_in_effect",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c13_solomon_obligated_file_motion_not_self_help",
+            "modality": "O",
+            "actor": "person:solomon",
+            "action": "file_motion_to_modify_or_vacate_before_noncompliance",
+            "target": "order:eppdapa_restraining_order"
+          }
+        },
+        {
+          "rule_id": "r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
+          "description": "If HACC is told that Jane is receiving calls about a restrained brother and third-party housing contact is occurring with a restrained person, HACC is obligated in this model to stop that contact path and document the response.",
+          "activation_date_estimate": "2026-03-26",
+          "antecedents": [
+            {
+              "fact_id": "f_feed_ev_hacc_notice_brother_calls_after_granted_order",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-26"
+              ]
+            },
+            {
+              "fact_id": "f_feed_ev_hacc_notice_third_party_contact_with_restrained_person",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-26"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c14_hacc_obligated_avoid_third_party_housing_contact_with_restrained_person",
+            "modality": "O",
+            "actor": "org:hacc",
+            "action": "avoid_third_party_housing_contact_with_restrained_person_and_document_response",
+            "target": "person:jane_cortez"
+          }
+        }
+      ],
+      "unresolved_rules": [
+        {
+          "rule_id": "r7_solomon_forbidden_refile_precluded_issue",
+          "description": "If issue preclusion applies, Solomon is forbidden from relitigating the precluded issue.",
+          "activation_date_estimate": "2026-03-31",
+          "antecedents": [
+            {
+              "fact_id": "f_collateral_estoppel_candidate",
+              "status": "theory",
+              "value": "true",
+              "dates": []
+            },
+            {
+              "fact_id": "f_client_solomon_barred_refile",
+              "status": "alleged",
+              "value": "true",
+              "dates": [
+                "2026-03-31"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c7_solomon_forbidden_refile_precluded_issue",
+            "modality": "F",
+            "actor": "person:solomon",
+            "action": "relitigate_precluded_issue",
+            "target": "issue:guardianship_authority"
+          }
+        }
+      ],
+      "party_deontic_state": {
+        "person:benjamin_barber": {
+          "O": [
+            {
+              "action": "comply_with_order_or_seek_relief",
+              "target": "order:prior_guardianship_order",
+              "rule_id": "r3_benjamin_obligation_comply_or_seek_relief",
+              "activation_date_estimate": null
+            }
+          ],
+          "P": [
+            {
+              "action": "act_within_valid_guardian_scope",
+              "target": "person:jane_cortez",
+              "rule_id": "r1_guardian_permission_if_prior_appointment",
+              "activation_date_estimate": null
+            }
+          ],
+          "F": [
+            {
+              "action": "interfere_with_guardian_or_housing_process",
+              "target": "process:hacc_housing_contract",
+              "rule_id": "r2_noninterference_prohibition_for_benjamin",
+              "activation_date_estimate": null
+            }
+          ]
+        },
+        "person:solomon": {
+          "O": [
+            {
+              "action": "appear_and_answer_show_cause",
+              "target": "proceeding:related_order_hearing",
+              "rule_id": "r5_solomon_obligated_appear_and_answer",
+              "activation_date_estimate": "2026-03-10"
+            },
+            {
+              "action": "seek_hearing_or_comply_with_existing_order",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r5b_solomon_obligated_seek_hearing_or_comply",
+              "activation_date_estimate": "2026-03-10"
+            },
+            {
+              "action": "seek_clarification_or_relief_through_court",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r8_solomon_notice_ack_triggers_court_relief_path",
+              "activation_date_estimate": "2025-11-20"
+            },
+            {
+              "action": "recognize_existing_order_status",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r11_solomon_already_have_order_statement_supports_notice",
+              "activation_date_estimate": "2025-11-20"
+            },
+            {
+              "action": "file_motion_to_modify_or_vacate_before_noncompliance",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r13_solomon_judge_overturn_statement_triggers_motion_path",
+              "activation_date_estimate": "2026-03-10"
+            }
+          ],
+          "P": [],
+          "F": [
+            {
+              "action": "abuse_contact_or_control_property",
+              "target": "person:jane_cortez",
+              "rule_id": "r4_solomon_forbidden_abuse_contact_property_control",
+              "activation_date_estimate": "2025-11-20"
+            },
+            {
+              "action": "enter_or_remain_at_petitioner_residence",
+              "target": "location:10043_se_32nd_ave",
+              "rule_id": "r4b_solomon_forbidden_enter_residence",
+              "activation_date_estimate": "2025-11-20"
+            },
+            {
+              "action": "adopt_self_help_noncooperation_posture",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r5c_solomon_forbidden_self_help_noncooperation",
+              "activation_date_estimate": "2026-03-10"
+            },
+            {
+              "action": "condition_compliance_on_additional_service",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r9_solomon_wait_for_service_conflicts_with_no_further_service",
+              "activation_date_estimate": "2026-03-10"
+            },
+            {
+              "action": "intentional_noncooperation_with_effective_order",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r10_solomon_noncooperation_statement_conflicts_with_effective_order",
+              "activation_date_estimate": "2026-03-10"
+            },
+            {
+              "action": "assert_order_ineffective_without_court_relief",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order",
+              "activation_date_estimate": "2026-03-10"
+            }
+          ]
+        },
+        "org:hacc": {
+          "O": [
+            {
+              "action": "process_housing_consistent_with_valid_guardian_authority",
+              "target": "person:jane_cortez",
+              "rule_id": "r6_hacc_obligated_process_consistently_with_valid_authority",
+              "activation_date_estimate": null
+            },
+            {
+              "action": "document_basis_for_household_composition_or_lease_adjustment",
+              "target": "household:jane_cortez_household",
+              "rule_id": "r6b_hacc_obligated_document_lease_basis",
+              "activation_date_estimate": "2026-01-01"
+            },
+            {
+              "action": "avoid_third_party_housing_contact_with_restrained_person_and_document_response",
+              "target": "person:jane_cortez",
+              "rule_id": "r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
+              "activation_date_estimate": "2026-03-26"
+            }
+          ],
+          "P": [],
+          "F": []
+        },
+        "case:guardianship_collateral_estoppel": {
+          "O": [],
+          "P": [
+            {
+              "action": "treat_solomon_hacc_interference_as_inference_not_direct_proof",
+              "target": "person:solomon",
+              "rule_id": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
+              "activation_date_estimate": "2026-04-07"
+            }
+          ],
+          "F": []
+        }
+      }
+    }
+  }
+}

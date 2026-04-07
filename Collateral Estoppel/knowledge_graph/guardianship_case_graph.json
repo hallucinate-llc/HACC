@@ -1,0 +1,487 @@
+{
+  "metadata": {
+    "generatedAt": "2026-04-07",
+    "purpose": "Initial guardianship and collateral-estoppel working graph for the Collateral Estoppel folder",
+    "status": "draft_with_client_assertions_and_proof_gates"
+  },
+  "nodes": [
+    {
+      "id": "person:solomon",
+      "kind": "party",
+      "name": "Solomon Barber",
+      "role": "petitioner_and_reported_guardianship_applicant",
+      "verificationStatus": "ocr_supported"
+    },
+    {
+      "id": "person:jane_cortez",
+      "kind": "party",
+      "name": "Jane Cortez",
+      "role": "subject_of_guardianship_related_work",
+      "verificationStatus": "repo_context_supported"
+    },
+    {
+      "id": "person:benjamin_barber",
+      "kind": "party",
+      "name": "Benjamin Barber",
+      "role": "related_actor_and_subject_of_key_allegations",
+      "verificationStatus": "repo_context_supported"
+    },
+    {
+      "id": "org:hacc",
+      "kind": "party",
+      "name": "Housing Authority of Clackamas County",
+      "role": "housing_authority",
+      "verificationStatus": "repo_context_supported"
+    },
+    {
+      "id": "doc:solomon_motion_for_guardianship_pdf",
+      "kind": "document",
+      "name": "Solomon Motion for Guardianship.pdf",
+      "path": "/home/barberb/HACC/evidence/history/Solomon Motion for Guardianship.pdf",
+      "verificationStatus": "ocr_supported"
+    },
+    {
+      "id": "evt:solomon_applies_for_guardianship",
+      "kind": "event",
+      "date": "2026-03-31",
+      "summary": "Solomon Barber filed a first amended petition seeking temporary and indefinite guardianship over Jane Kay Cortez.",
+      "verificationStatus": "ocr_supported"
+    },
+    {
+      "id": "evt:notice_to_respondent_issued",
+      "kind": "event",
+      "date": "2026-04-02",
+      "summary": "A notice to respondent was issued explaining objection rights.",
+      "verificationStatus": "ocr_supported"
+    },
+    {
+      "id": "evt:respondent_objection_form_present",
+      "kind": "event",
+      "date": "2026-04-05",
+      "summary": "The packet includes an apparent respondent objection form.",
+      "verificationStatus": "ocr_supported_but_signature_should_be_visually_checked"
+    },
+    {
+      "id": "evt:petition_asserts_no_prior_guardian",
+      "kind": "event",
+      "date": "2026-03-31",
+      "summary": "The petition states that no guardian had previously been appointed for Jane Cortez.",
+      "verificationStatus": "ocr_supported"
+    },
+    {
+      "id": "evt:client_asserts_prior_appointment_to_benjamin",
+      "kind": "event",
+      "date": null,
+      "summary": "Client asserts that guardianship had already been appointed involving Jane Cortez and Benjamin Barber.",
+      "verificationStatus": "asserted_by_client_pending_documentary_proof"
+    },
+    {
+      "id": "evt:client_asserts_benjamin_avoided_service",
+      "kind": "event",
+      "date": null,
+      "summary": "Client asserts that Benjamin Barber specifically avoided service.",
+      "verificationStatus": "asserted_by_client_pending_documentary_proof"
+    },
+    {
+      "id": "evt:client_asserts_benjamin_disregarded_enforceable_order",
+      "kind": "event",
+      "date": null,
+      "summary": "Client asserts that Benjamin Barber acted as though the order was not enforceable.",
+      "verificationStatus": "asserted_by_client_pending_documentary_proof"
+    },
+    {
+      "id": "evt:client_asserts_benjamin_interfered_housing_contract",
+      "kind": "event",
+      "date": null,
+      "summary": "Client asserts that Benjamin Barber interfered with a housing contract or housing-placement process.",
+      "verificationStatus": "asserted_by_client_pending_documentary_proof"
+    },
+    {
+      "id": "evt:skee_reported_outside_document_flows_caused_lease_removal",
+      "kind": "event",
+      "date": "2026-03-23",
+      "summary": "Benjamin and Jane declarations state that during the March 23, 2026 inspection they heard Charley Skee say in substance that Benjamin had been taken off the lease because Benjamin's brother and stepfather had been emailing documents to HACC.",
+      "verificationStatus": "declaration_supported_statement_of_what_was_heard"
+    },
+    {
+      "id": "evt:inference_solomon_or_stepfather_outside_influence_on_lease_change",
+      "kind": "event",
+      "date": null,
+      "summary": "Current bounded inference that an outside actor, plausibly Solomon or the stepfather, influenced HACC's lease-change handling through document flows or claimed authority.",
+      "verificationStatus": "bounded_inference_pending_source_actor_proof"
+    },
+    {
+      "id": "evt:hacc_internal_review_and_court_document_basis_for_removal",
+      "kind": "event",
+      "date": "2026-01-12",
+      "summary": "HACC stated that Benjamin was no longer listed as a household member effective January 1, 2026, following internal review and based on court documentation on file.",
+      "verificationStatus": "repo_context_supported"
+    },
+    {
+      "id": "proof:prior_appointment_order",
+      "kind": "proof_target",
+      "name": "Prior appointment order involving Jane Cortez and Benjamin Barber",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "proof:service_or_evasion_record",
+      "kind": "proof_target",
+      "name": "Proof of service, attempted service, or evasion evidence",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "proof:order_enforceability_timeline",
+      "kind": "proof_target",
+      "name": "Signed order and timeline establishing enforceability",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "proof:housing_contract_and_interference_record",
+      "kind": "proof_target",
+      "name": "Housing contract/process documents plus interference evidence",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "proof:lease_change_request_source_record",
+      "kind": "proof_target",
+      "name": "Record identifying who requested or caused Benjamin's lease removal",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "proof:claimed_authority_or_poa_record",
+      "kind": "proof_target",
+      "name": "Any power of attorney, representative authority, or HACC note showing claimed authority over Jane's housing decisions",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "issue:collateral_estoppel",
+      "kind": "issue",
+      "name": "Collateral estoppel / issue preclusion",
+      "verificationStatus": "theory_only"
+    },
+    {
+      "id": "issue:sanctions_or_contempt",
+      "kind": "issue",
+      "name": "Sanctions or contempt exposure",
+      "verificationStatus": "theory_only"
+    },
+    {
+      "id": "issue:guardianship_authority_scope",
+      "kind": "issue",
+      "name": "Scope and validity of guardianship authority",
+      "verificationStatus": "theory_only"
+    },
+    {
+      "id": "issue:internal_conflict_prior_guardian_status",
+      "kind": "issue",
+      "name": "Conflict between petition text and client assertion about prior appointment",
+      "verificationStatus": "active_verification_priority"
+    },
+    {
+      "id": "concept:deontic_obligation",
+      "kind": "concept",
+      "name": "Obligation"
+    },
+    {
+      "id": "concept:deontic_permission",
+      "kind": "concept",
+      "name": "Permission"
+    },
+    {
+      "id": "concept:deontic_prohibition",
+      "kind": "concept",
+      "name": "Prohibition"
+    },
+    {
+      "id": "theorem:t1_valid_appointment_confers_guardian_permission",
+      "kind": "deontic_theorem",
+      "statement": "If a valid appointment order exists and is effective at time t, then the appointed guardian is permitted to act within the order's scope at time t.",
+      "status": "model_rule_pending_case_law_mapping"
+    },
+    {
+      "id": "theorem:t2_notice_plus_valid_order_creates_noninterference_prohibition",
+      "kind": "deontic_theorem",
+      "statement": "If a person has notice of an effective order, that person is prohibited from interfering with conduct authorized by the order.",
+      "status": "model_rule_pending_case_law_mapping"
+    },
+    {
+      "id": "theorem:t3_disregard_after_notice_supports_sanctions_path",
+      "kind": "deontic_theorem",
+      "statement": "If a person with notice disregards an enforceable order, sanctions or contempt pathways may be triggered.",
+      "status": "model_rule_pending_case_law_mapping"
+    },
+    {
+      "id": "theorem:t4_housing_interference_against_valid_authority_supports_remedial_request",
+      "kind": "deontic_theorem",
+      "statement": "If housing-contract interference is proven against valid guardianship authority, remedial and sanction requests may be supportable.",
+      "status": "model_rule_pending_case_law_mapping"
+    },
+    {
+      "id": "finding:solomon_guardianship_application_exists",
+      "kind": "finding",
+      "headline": "A Clackamas County guardianship filing exists in case 26PR00641 naming Solomon Barber as petitioner and Jane Kay Cortez as respondent.",
+      "status": "supported_by_ocr"
+    },
+    {
+      "id": "finding:client_assertions_staged_with_proof_gates",
+      "kind": "finding",
+      "headline": "Client assertions about prior appointment, service evasion, enforceability disregard, and housing interference are staged with explicit proof targets.",
+      "status": "supported_as_workplan"
+    },
+    {
+      "id": "finding:prior_guardian_status_conflict_requires_resolution",
+      "kind": "finding",
+      "headline": "The petition's statement that no prior guardian existed conflicts with the current client assertion that prior appointment already existed.",
+      "status": "supported_conflict_needs_resolution"
+    },
+    {
+      "id": "finding:skee_declarations_support_outside_influence_theory_but_not_specific_actor_proof",
+      "kind": "finding",
+      "headline": "The March 23 declarations support that HACC staff linked Benjamin's lease removal to outside document flows from the brother and stepfather, but the current record does not yet directly prove which actor or claimed authority caused the lease change.",
+      "status": "declaration_supported_with_remaining_source_gap"
+    },
+    {
+      "id": "finding:hacc_directly_stated_internal_review_and_court_document_basis_for_removal",
+      "kind": "finding",
+      "headline": "A January 12, 2026 HACC email directly states that Benjamin's removal effective January 1, 2026 followed internal review and court documentation on file, which strengthens the source-authority trail without yet naming the actor behind that documentation.",
+      "status": "repo_context_supported"
+    }
+  ],
+  "edges": [
+    {
+      "from": "person:solomon",
+      "to": "evt:solomon_applies_for_guardianship",
+      "type": "participated_in"
+    },
+    {
+      "from": "person:jane_cortez",
+      "to": "evt:solomon_applies_for_guardianship",
+      "type": "subject_of"
+    },
+    {
+      "from": "doc:solomon_motion_for_guardianship_pdf",
+      "to": "evt:solomon_applies_for_guardianship",
+      "type": "supports"
+    },
+    {
+      "from": "doc:solomon_motion_for_guardianship_pdf",
+      "to": "evt:notice_to_respondent_issued",
+      "type": "supports"
+    },
+    {
+      "from": "doc:solomon_motion_for_guardianship_pdf",
+      "to": "evt:respondent_objection_form_present",
+      "type": "supports"
+    },
+    {
+      "from": "doc:solomon_motion_for_guardianship_pdf",
+      "to": "evt:petition_asserts_no_prior_guardian",
+      "type": "supports"
+    },
+    {
+      "from": "person:jane_cortez",
+      "to": "evt:client_asserts_prior_appointment_to_benjamin",
+      "type": "subject_of"
+    },
+    {
+      "from": "person:benjamin_barber",
+      "to": "evt:client_asserts_prior_appointment_to_benjamin",
+      "type": "related_to"
+    },
+    {
+      "from": "person:benjamin_barber",
+      "to": "evt:client_asserts_benjamin_avoided_service",
+      "type": "alleged_actor"
+    },
+    {
+      "from": "person:benjamin_barber",
+      "to": "evt:client_asserts_benjamin_disregarded_enforceable_order",
+      "type": "alleged_actor"
+    },
+    {
+      "from": "person:benjamin_barber",
+      "to": "evt:client_asserts_benjamin_interfered_housing_contract",
+      "type": "alleged_actor"
+    },
+    {
+      "from": "person:benjamin_barber",
+      "to": "evt:skee_reported_outside_document_flows_caused_lease_removal",
+      "type": "declares_heard"
+    },
+    {
+      "from": "person:jane_cortez",
+      "to": "evt:skee_reported_outside_document_flows_caused_lease_removal",
+      "type": "declares_heard"
+    },
+    {
+      "from": "org:hacc",
+      "to": "evt:skee_reported_outside_document_flows_caused_lease_removal",
+      "type": "institutional_context"
+    },
+    {
+      "from": "org:hacc",
+      "to": "evt:hacc_internal_review_and_court_document_basis_for_removal",
+      "type": "institutional_actor"
+    },
+    {
+      "from": "person:benjamin_barber",
+      "to": "evt:hacc_internal_review_and_court_document_basis_for_removal",
+      "type": "affected_person"
+    },
+    {
+      "from": "evt:skee_reported_outside_document_flows_caused_lease_removal",
+      "to": "evt:inference_solomon_or_stepfather_outside_influence_on_lease_change",
+      "type": "supports_bounded_inference"
+    },
+    {
+      "from": "person:solomon",
+      "to": "evt:inference_solomon_or_stepfather_outside_influence_on_lease_change",
+      "type": "plausible_outside_actor"
+    },
+    {
+      "from": "evt:inference_solomon_or_stepfather_outside_influence_on_lease_change",
+      "to": "proof:lease_change_request_source_record",
+      "type": "requires"
+    },
+    {
+      "from": "evt:inference_solomon_or_stepfather_outside_influence_on_lease_change",
+      "to": "proof:claimed_authority_or_poa_record",
+      "type": "requires"
+    },
+    {
+      "from": "evt:hacc_internal_review_and_court_document_basis_for_removal",
+      "to": "proof:lease_change_request_source_record",
+      "type": "narrows"
+    },
+    {
+      "from": "evt:hacc_internal_review_and_court_document_basis_for_removal",
+      "to": "proof:claimed_authority_or_poa_record",
+      "type": "narrows"
+    },
+    {
+      "from": "evt:skee_reported_outside_document_flows_caused_lease_removal",
+      "to": "finding:skee_declarations_support_outside_influence_theory_but_not_specific_actor_proof",
+      "type": "supports"
+    },
+    {
+      "from": "evt:hacc_internal_review_and_court_document_basis_for_removal",
+      "to": "finding:hacc_directly_stated_internal_review_and_court_document_basis_for_removal",
+      "type": "supports"
+    },
+    {
+      "from": "evt:client_asserts_benjamin_interfered_housing_contract",
+      "to": "org:hacc",
+      "type": "contextually_related_to"
+    },
+    {
+      "from": "evt:client_asserts_prior_appointment_to_benjamin",
+      "to": "proof:prior_appointment_order",
+      "type": "requires"
+    },
+    {
+      "from": "evt:client_asserts_benjamin_avoided_service",
+      "to": "proof:service_or_evasion_record",
+      "type": "requires"
+    },
+    {
+      "from": "evt:client_asserts_benjamin_disregarded_enforceable_order",
+      "to": "proof:order_enforceability_timeline",
+      "type": "requires"
+    },
+    {
+      "from": "evt:client_asserts_benjamin_interfered_housing_contract",
+      "to": "proof:housing_contract_and_interference_record",
+      "type": "requires"
+    },
+    {
+      "from": "evt:client_asserts_prior_appointment_to_benjamin",
+      "to": "issue:guardianship_authority_scope",
+      "type": "raises"
+    },
+    {
+      "from": "evt:client_asserts_benjamin_avoided_service",
+      "to": "issue:sanctions_or_contempt",
+      "type": "raises"
+    },
+    {
+      "from": "evt:client_asserts_benjamin_disregarded_enforceable_order",
+      "to": "issue:sanctions_or_contempt",
+      "type": "raises"
+    },
+    {
+      "from": "evt:client_asserts_benjamin_interfered_housing_contract",
+      "to": "issue:sanctions_or_contempt",
+      "type": "raises"
+    },
+    {
+      "from": "evt:client_asserts_prior_appointment_to_benjamin",
+      "to": "issue:collateral_estoppel",
+      "type": "may_support"
+    },
+    {
+      "from": "evt:petition_asserts_no_prior_guardian",
+      "to": "issue:internal_conflict_prior_guardian_status",
+      "type": "supports"
+    },
+    {
+      "from": "evt:client_asserts_prior_appointment_to_benjamin",
+      "to": "issue:internal_conflict_prior_guardian_status",
+      "type": "supports"
+    },
+    {
+      "from": "concept:deontic_permission",
+      "to": "theorem:t1_valid_appointment_confers_guardian_permission",
+      "type": "classifies"
+    },
+    {
+      "from": "concept:deontic_prohibition",
+      "to": "theorem:t2_notice_plus_valid_order_creates_noninterference_prohibition",
+      "type": "classifies"
+    },
+    {
+      "from": "concept:deontic_obligation",
+      "to": "theorem:t3_disregard_after_notice_supports_sanctions_path",
+      "type": "classifies"
+    },
+    {
+      "from": "theorem:t4_housing_interference_against_valid_authority_supports_remedial_request",
+      "to": "issue:sanctions_or_contempt",
+      "type": "supports_if_proven"
+    },
+    {
+      "from": "doc:solomon_motion_for_guardianship_pdf",
+      "to": "finding:solomon_guardianship_application_exists",
+      "type": "supports"
+    },
+    {
+      "from": "evt:petition_asserts_no_prior_guardian",
+      "to": "finding:prior_guardian_status_conflict_requires_resolution",
+      "type": "supports"
+    },
+    {
+      "from": "evt:client_asserts_prior_appointment_to_benjamin",
+      "to": "finding:prior_guardian_status_conflict_requires_resolution",
+      "type": "supports"
+    },
+    {
+      "from": "finding:client_assertions_staged_with_proof_gates",
+      "to": "proof:prior_appointment_order",
+      "type": "prioritizes"
+    },
+    {
+      "from": "finding:client_assertions_staged_with_proof_gates",
+      "to": "proof:service_or_evasion_record",
+      "type": "prioritizes"
+    },
+    {
+      "from": "finding:client_assertions_staged_with_proof_gates",
+      "to": "proof:order_enforceability_timeline",
+      "type": "prioritizes"
+    },
+    {
+      "from": "finding:client_assertions_staged_with_proof_gates",
+      "to": "proof:housing_contract_and_interference_record",
+      "type": "prioritizes"
+    }
+  ]
+}

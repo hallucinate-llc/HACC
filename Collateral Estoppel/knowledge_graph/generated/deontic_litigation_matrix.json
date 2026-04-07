@@ -1,0 +1,291 @@
+{
+  "generated_at": "2026-04-07",
+  "modes": {
+    "strict": {
+      "active_rule_count": 13,
+      "unresolved_rule_count": 6,
+      "parties": [
+        {
+          "party": "case:guardianship_collateral_estoppel",
+          "obligations": [],
+          "permissions": [
+            {
+              "action": "treat_solomon_hacc_interference_as_inference_not_direct_proof",
+              "target": "person:solomon",
+              "rule_id": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
+              "activation_date_estimate": "2026-04-07"
+            }
+          ],
+          "prohibitions": [],
+          "counts": {
+            "O": 0,
+            "P": 1,
+            "F": 0
+          }
+        },
+        {
+          "party": "org:hacc",
+          "obligations": [
+            {
+              "action": "document_basis_for_household_composition_or_lease_adjustment",
+              "target": "household:jane_cortez_household",
+              "rule_id": "r6b_hacc_obligated_document_lease_basis",
+              "activation_date_estimate": "2026-01-01"
+            },
+            {
+              "action": "avoid_third_party_housing_contact_with_restrained_person_and_document_response",
+              "target": "person:jane_cortez",
+              "rule_id": "r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
+              "activation_date_estimate": "2026-03-26"
+            }
+          ],
+          "permissions": [],
+          "prohibitions": [],
+          "counts": {
+            "O": 2,
+            "P": 0,
+            "F": 0
+          }
+        },
+        {
+          "party": "person:solomon",
+          "obligations": [
+            {
+              "action": "seek_hearing_or_comply_with_existing_order",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r5b_solomon_obligated_seek_hearing_or_comply",
+              "activation_date_estimate": "2026-03-10"
+            },
+            {
+              "action": "seek_clarification_or_relief_through_court",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r8_solomon_notice_ack_triggers_court_relief_path",
+              "activation_date_estimate": "2025-11-20"
+            },
+            {
+              "action": "recognize_existing_order_status",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r11_solomon_already_have_order_statement_supports_notice",
+              "activation_date_estimate": "2025-11-20"
+            },
+            {
+              "action": "file_motion_to_modify_or_vacate_before_noncompliance",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r13_solomon_judge_overturn_statement_triggers_motion_path",
+              "activation_date_estimate": "2026-03-10"
+            }
+          ],
+          "permissions": [],
+          "prohibitions": [
+            {
+              "action": "abuse_contact_or_control_property",
+              "target": "person:jane_cortez",
+              "rule_id": "r4_solomon_forbidden_abuse_contact_property_control",
+              "activation_date_estimate": "2025-11-20"
+            },
+            {
+              "action": "enter_or_remain_at_petitioner_residence",
+              "target": "location:10043_se_32nd_ave",
+              "rule_id": "r4b_solomon_forbidden_enter_residence",
+              "activation_date_estimate": "2025-11-20"
+            },
+            {
+              "action": "adopt_self_help_noncooperation_posture",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r5c_solomon_forbidden_self_help_noncooperation",
+              "activation_date_estimate": "2026-03-10"
+            },
+            {
+              "action": "condition_compliance_on_additional_service",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r9_solomon_wait_for_service_conflicts_with_no_further_service",
+              "activation_date_estimate": "2026-03-10"
+            },
+            {
+              "action": "intentional_noncooperation_with_effective_order",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r10_solomon_noncooperation_statement_conflicts_with_effective_order",
+              "activation_date_estimate": "2026-03-10"
+            },
+            {
+              "action": "assert_order_ineffective_without_court_relief",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order",
+              "activation_date_estimate": "2026-03-10"
+            }
+          ],
+          "counts": {
+            "O": 4,
+            "P": 0,
+            "F": 6
+          }
+        }
+      ]
+    },
+    "inclusive": {
+      "active_rule_count": 18,
+      "unresolved_rule_count": 1,
+      "parties": [
+        {
+          "party": "case:guardianship_collateral_estoppel",
+          "obligations": [],
+          "permissions": [
+            {
+              "action": "treat_solomon_hacc_interference_as_inference_not_direct_proof",
+              "target": "person:solomon",
+              "rule_id": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
+              "activation_date_estimate": "2026-04-07"
+            }
+          ],
+          "prohibitions": [],
+          "counts": {
+            "O": 0,
+            "P": 1,
+            "F": 0
+          }
+        },
+        {
+          "party": "org:hacc",
+          "obligations": [
+            {
+              "action": "process_housing_consistent_with_valid_guardian_authority",
+              "target": "person:jane_cortez",
+              "rule_id": "r6_hacc_obligated_process_consistently_with_valid_authority",
+              "activation_date_estimate": null
+            },
+            {
+              "action": "document_basis_for_household_composition_or_lease_adjustment",
+              "target": "household:jane_cortez_household",
+              "rule_id": "r6b_hacc_obligated_document_lease_basis",
+              "activation_date_estimate": "2026-01-01"
+            },
+            {
+              "action": "avoid_third_party_housing_contact_with_restrained_person_and_document_response",
+              "target": "person:jane_cortez",
+              "rule_id": "r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
+              "activation_date_estimate": "2026-03-26"
+            }
+          ],
+          "permissions": [],
+          "prohibitions": [],
+          "counts": {
+            "O": 3,
+            "P": 0,
+            "F": 0
+          }
+        },
+        {
+          "party": "person:benjamin_barber",
+          "obligations": [
+            {
+              "action": "comply_with_order_or_seek_relief",
+              "target": "order:prior_guardianship_order",
+              "rule_id": "r3_benjamin_obligation_comply_or_seek_relief",
+              "activation_date_estimate": null
+            }
+          ],
+          "permissions": [
+            {
+              "action": "act_within_valid_guardian_scope",
+              "target": "person:jane_cortez",
+              "rule_id": "r1_guardian_permission_if_prior_appointment",
+              "activation_date_estimate": null
+            }
+          ],
+          "prohibitions": [
+            {
+              "action": "interfere_with_guardian_or_housing_process",
+              "target": "process:hacc_housing_contract",
+              "rule_id": "r2_noninterference_prohibition_for_benjamin",
+              "activation_date_estimate": null
+            }
+          ],
+          "counts": {
+            "O": 1,
+            "P": 1,
+            "F": 1
+          }
+        },
+        {
+          "party": "person:solomon",
+          "obligations": [
+            {
+              "action": "appear_and_answer_show_cause",
+              "target": "proceeding:related_order_hearing",
+              "rule_id": "r5_solomon_obligated_appear_and_answer",
+              "activation_date_estimate": "2026-03-10"
+            },
+            {
+              "action": "seek_hearing_or_comply_with_existing_order",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r5b_solomon_obligated_seek_hearing_or_comply",
+              "activation_date_estimate": "2026-03-10"
+            },
+            {
+              "action": "seek_clarification_or_relief_through_court",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r8_solomon_notice_ack_triggers_court_relief_path",
+              "activation_date_estimate": "2025-11-20"
+            },
+            {
+              "action": "recognize_existing_order_status",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r11_solomon_already_have_order_statement_supports_notice",
+              "activation_date_estimate": "2025-11-20"
+            },
+            {
+              "action": "file_motion_to_modify_or_vacate_before_noncompliance",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r13_solomon_judge_overturn_statement_triggers_motion_path",
+              "activation_date_estimate": "2026-03-10"
+            }
+          ],
+          "permissions": [],
+          "prohibitions": [
+            {
+              "action": "abuse_contact_or_control_property",
+              "target": "person:jane_cortez",
+              "rule_id": "r4_solomon_forbidden_abuse_contact_property_control",
+              "activation_date_estimate": "2025-11-20"
+            },
+            {
+              "action": "enter_or_remain_at_petitioner_residence",
+              "target": "location:10043_se_32nd_ave",
+              "rule_id": "r4b_solomon_forbidden_enter_residence",
+              "activation_date_estimate": "2025-11-20"
+            },
+            {
+              "action": "adopt_self_help_noncooperation_posture",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r5c_solomon_forbidden_self_help_noncooperation",
+              "activation_date_estimate": "2026-03-10"
+            },
+            {
+              "action": "condition_compliance_on_additional_service",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r9_solomon_wait_for_service_conflicts_with_no_further_service",
+              "activation_date_estimate": "2026-03-10"
+            },
+            {
+              "action": "intentional_noncooperation_with_effective_order",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r10_solomon_noncooperation_statement_conflicts_with_effective_order",
+              "activation_date_estimate": "2026-03-10"
+            },
+            {
+              "action": "assert_order_ineffective_without_court_relief",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order",
+              "activation_date_estimate": "2026-03-10"
+            }
+          ],
+          "counts": {
+            "O": 5,
+            "P": 0,
+            "F": 6
+          }
+        }
+      ]
+    }
+  }
+}

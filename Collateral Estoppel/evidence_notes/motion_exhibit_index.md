@@ -1,0 +1,56 @@
+# Motion Exhibit Index
+
+This index is the shared exhibit map for the current Solomon contempt and sanctions drafts in this folder.
+
+## Core order and notice exhibits
+
+- `Exhibit A`: [sam barber restraining order.pdf](/home/barberb/HACC/evidence/history/sam%20barber%20restraining%20order.pdf)
+  - Purpose: operative protective-order packet identifying Jane Kay Cortez as petitioner, Solomon Samuel Barber as respondent, grant status, restrictions, and appearance / no-further-service language.
+- `Exhibit B`: [solomon_order_digest.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_order_digest.md)
+  - Purpose: staged digest of the order packet, timing, restrictions, and current metadata confidence limits.
+- `Exhibit C`: [uid_660669_Mon--17-Nov-2025-20-38-24--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660669_Mon--17-Nov-2025-20-38-24--0000_New-text-message-from-solomon--503--381-6911.eml)
+  - Purpose: November 17, 2025 Solomon text acknowledging he heard about the restraining order.
+- `Exhibit D`: [uid_660690_Mon--17-Nov-2025-20-56-22--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660690_Mon--17-Nov-2025-20-56-22--0000_New-text-message-from-solomon--503--381-6911.eml)
+  - Purpose: November 17, 2025 Solomon text asking whether the other side already had the restraining order.
+- `Exhibit E`: [transcript.txt](/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14164-Me-to-solomon-gv-3f38fb3f900d4de1/transcript.txt)
+  - Purpose: November 20, 2025 “restraining order is granted” message support.
+
+## March 10 noncompliance / self-help exhibits
+
+- `Exhibit F`: [uid_743129_Tue--10-Mar-2026-17-39-27--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743129_Tue--10-Mar-2026-17-39-27--0000_New-text-message-from-solomon--503--381-6911.eml)
+  - Purpose: March 10, 2026 “not incentivized to cooperate” / “judge overturn” posture.
+- `Exhibit G`: [uid_743131_Tue--10-Mar-2026-17-45-54--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743131_Tue--10-Mar-2026-17-45-54--0000_New-text-message-from-solomon--503--381-6911.eml)
+  - Purpose: March 10, 2026 statement that the order was not in effect until service.
+- `Exhibit H`: [uid_743136_Tue--10-Mar-2026-17-51-15--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743136_Tue--10-Mar-2026-17-51-15--0000_New-text-message-from-solomon--503--381-6911.eml)
+  - Purpose: March 10, 2026 collateral-contact / entrapment framing.
+
+## Housing interference and prejudice exhibits
+
+- `Exhibit I`: [declaration_of_benjamin_barber_in_support_of_preliminary_injunction.md](/home/barberb/HACC/workspace/declaration_of_benjamin_barber_in_support_of_preliminary_injunction.md)
+  - Purpose: Benjamin declaration including March 23, 2026 inspection account and Skee statement about outside document flows.
+- `Exhibit J`: [declaration_of_jane_cortez_march_23_2026_inspection_court_ready.md](/home/barberb/HACC/workspace/declaration_of_jane_cortez_march_23_2026_inspection_court_ready.md)
+  - Purpose: Jane declaration corroborating the March 23, 2026 Skee discussion from her own hearing.
+- `Exhibit K`: [2026-03-17_additional-info_bwilliams_3.eml](/home/barberb/HACC/workspace/imap-confirmed-messages/2026-03-17_additional-info_bwilliams_3.eml)
+  - Purpose: HACC notice email showing housing delay, missing voucher progress, and continued dispute conditions by March 17, 2026.
+- `Exhibit L`: [hacc_delay_and_lease_removal_damages_memo.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/hacc_delay_and_lease_removal_damages_memo.md)
+  - Purpose: current damages and delay summary, including direct HACC-attributable delay from January 12, 2026 to late March 2026.
+- `Exhibit M`: [skee_declaration_and_lease_removal_inference_memo.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/skee_declaration_and_lease_removal_inference_memo.md)
+  - Purpose: bounded inference memo separating declaration-backed lease-removal influence theory from still-unproven authority / POA claims.
+
+## Pattern and theory support exhibits
+
+- `Exhibit N`: [repeated_usurpation_pattern_memo.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/repeated_usurpation_pattern_memo.md)
+  - Purpose: repeated-pattern bridge across prior-authority and housing-side collateral conduct theories.
+- `Exhibit O`: [solomon_repository_evidence_memo.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_repository_evidence_memo.md)
+  - Purpose: consolidated Solomon evidence memo linking the order record, March 10 statements, and later HACC-facing notices.
+
+## Still-missing or placeholder exhibits
+
+- `Exhibit P`: certified docket or register printout for the restraining-order matter
+  - Purpose: exact case number, exact entry date, and docket-level confirmation.
+- `Exhibit Q`: certified docket or order material for any earlier guardian / guardian ad litem / prior-authority matter
+  - Purpose: if located, would support any issue-preclusion or repeated-usurpation argument at the guardianship side.
+- `Exhibit R`: HACC case note, lease-change metadata, or source-authority record
+  - Purpose: if located, would identify who caused Benjamin's lease removal and what authority HACC thought it was acting on.
+  - Current partial substitute: [message.eml](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0014-Re-Allegations-of-Fraud---JC-Household-CAMTdTS_8pxVnRAMoaQ0n2oi1yBNnLNAiFSu4MFsTet-jJWJogQ-mail.gmail.com/message.eml) and [01_Exhibit_A_HACC_add_to_lease.pdf](/home/barberb/HACC/workspace/migrated_sources/research_results/evidence_review_20260328_175903/chronology/formal_complaint_recommended_filing_packet/included/01_Exhibit_A_HACC_add_to_lease.pdf), which show the January 1, 2026 removal and HACC's statement that the determination followed internal review and court documentation on file.
+  - Current posture: treat the full `Exhibit R` record as a subpoena or compelled-production target rather than a likely local-search recovery item.

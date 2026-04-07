@@ -1,0 +1,698 @@
+{
+  "metadata": {
+    "generated_at": "2026-04-07",
+    "strict_active_rules": [
+      "r10_solomon_noncooperation_statement_conflicts_with_effective_order",
+      "r11_solomon_already_have_order_statement_supports_notice",
+      "r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order",
+      "r13_solomon_judge_overturn_statement_triggers_motion_path",
+      "r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
+      "r4_solomon_forbidden_abuse_contact_property_control",
+      "r4b_solomon_forbidden_enter_residence",
+      "r5b_solomon_obligated_seek_hearing_or_comply",
+      "r5c_solomon_forbidden_self_help_noncooperation",
+      "r6b_hacc_obligated_document_lease_basis",
+      "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
+      "r8_solomon_notice_ack_triggers_court_relief_path",
+      "r9_solomon_wait_for_service_conflicts_with_no_further_service"
+    ],
+    "inclusive_active_rules": [
+      "r10_solomon_noncooperation_statement_conflicts_with_effective_order",
+      "r11_solomon_already_have_order_statement_supports_notice",
+      "r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order",
+      "r13_solomon_judge_overturn_statement_triggers_motion_path",
+      "r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
+      "r1_guardian_permission_if_prior_appointment",
+      "r2_noninterference_prohibition_for_benjamin",
+      "r3_benjamin_obligation_comply_or_seek_relief",
+      "r4_solomon_forbidden_abuse_contact_property_control",
+      "r4b_solomon_forbidden_enter_residence",
+      "r5_solomon_obligated_appear_and_answer",
+      "r5b_solomon_obligated_seek_hearing_or_comply",
+      "r5c_solomon_forbidden_self_help_noncooperation",
+      "r6_hacc_obligated_process_consistently_with_valid_authority",
+      "r6b_hacc_obligated_document_lease_basis",
+      "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
+      "r8_solomon_notice_ack_triggers_court_relief_path",
+      "r9_solomon_wait_for_service_conflicts_with_no_further_service"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "r1_guardian_permission_if_prior_appointment",
+      "kind": "rule",
+      "description": "If prior appointment exists, Benjamin is permitted to act within valid guardian scope for Jane."
+    },
+    {
+      "id": "c1_benjamin_permitted_guardian_scope",
+      "kind": "conclusion",
+      "modality": "P"
+    },
+    {
+      "id": "f_client_prior_appointment",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r2_noninterference_prohibition_for_benjamin",
+      "kind": "rule",
+      "description": "If prior appointment exists and interference is alleged, Benjamin is forbidden from interference."
+    },
+    {
+      "id": "c2_benjamin_forbidden_interference",
+      "kind": "conclusion",
+      "modality": "F"
+    },
+    {
+      "id": "f_client_prior_appointment",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_client_benjamin_housing_interference",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r3_benjamin_obligation_comply_or_seek_relief",
+      "kind": "rule",
+      "description": "If prior appointment is in force and Benjamin disregarded order, Benjamin was obligated to comply or seek relief."
+    },
+    {
+      "id": "c3_benjamin_obligated_comply_or_seek_relief",
+      "kind": "conclusion",
+      "modality": "O"
+    },
+    {
+      "id": "f_client_prior_appointment",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_client_benjamin_order_disregard",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r4_solomon_forbidden_abuse_contact_property_control",
+      "kind": "rule",
+      "description": "Given granted in-effect restraining order with property restrictions, Solomon is forbidden to abuse/contact/interfere/control property."
+    },
+    {
+      "id": "c4_solomon_forbidden_contact_property_control",
+      "kind": "conclusion",
+      "modality": "F"
+    },
+    {
+      "id": "f_solomon_actual_notice_on_2025_11_17",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_restraining_order_granted",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_restraining_order_in_effect",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_restraining_order_contact_restrictions",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_restraining_order_property_restrictions",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r4b_solomon_forbidden_enter_residence",
+      "kind": "rule",
+      "description": "Given the granted restraining order and residence restriction, Solomon is forbidden from entering or remaining at the protected residence."
+    },
+    {
+      "id": "c4b_solomon_forbidden_enter_residence",
+      "kind": "conclusion",
+      "modality": "F"
+    },
+    {
+      "id": "f_solomon_actual_notice_on_2025_11_17",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_restraining_order_granted",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_restraining_order_residence_restrictions",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r5_solomon_obligated_appear_and_answer",
+      "kind": "rule",
+      "description": "If no further service was required because Solomon appeared, later failure to appear supports an obligation to appear and answer."
+    },
+    {
+      "id": "c5_solomon_obligated_appear_and_answer",
+      "kind": "conclusion",
+      "modality": "O"
+    },
+    {
+      "id": "f_restraining_order_no_further_service_needed",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_client_solomon_failed_appearance",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r5b_solomon_obligated_seek_hearing_or_comply",
+      "kind": "rule",
+      "description": "If Solomon stated he would comply only once served despite an already in-effect order, he was obligated to seek a hearing or comply rather than self-suspend effectiveness."
+    },
+    {
+      "id": "c5b_solomon_obligated_seek_hearing_or_comply",
+      "kind": "conclusion",
+      "modality": "O"
+    },
+    {
+      "id": "f_restraining_order_granted",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_restraining_order_in_effect",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_solomon_service_position_statement",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r5c_solomon_forbidden_self_help_noncooperation",
+      "kind": "rule",
+      "description": "If Solomon adopted an explicit noncooperation posture after the granted in-effect order, self-help noncooperation is forbidden."
+    },
+    {
+      "id": "c5c_solomon_forbidden_self_help_noncooperation",
+      "kind": "conclusion",
+      "modality": "F"
+    },
+    {
+      "id": "f_restraining_order_granted",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_restraining_order_in_effect",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_solomon_noncooperation_statement",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r6_hacc_obligated_process_consistently_with_valid_authority",
+      "kind": "rule",
+      "description": "If housing process is active and appointment exists, HACC is obligated to process consistently with valid authority."
+    },
+    {
+      "id": "c6_hacc_obligated_process_consistent_with_order",
+      "kind": "conclusion",
+      "modality": "O"
+    },
+    {
+      "id": "f_hacc_process_exists",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_client_prior_appointment",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r6b_hacc_obligated_document_lease_basis",
+      "kind": "rule",
+      "description": "If HACC implemented a January 1, 2026 lease adjustment, HACC was obligated to document the basis for that household-composition change."
+    },
+    {
+      "id": "c6b_hacc_obligated_document_lease_basis",
+      "kind": "conclusion",
+      "modality": "O"
+    },
+    {
+      "id": "f_hacc_lease_adjustment_effective_2026_01_01",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
+      "kind": "rule",
+      "description": "Because no named HACC notice message about the Solomon order has been found in preserved mail, the HACC-interference theory should presently be treated as an inference rather than direct proof."
+    },
+    {
+      "id": "c6c_solomon_interference_not_yet_directly_proved",
+      "kind": "conclusion",
+      "modality": "P"
+    },
+    {
+      "id": "f_hacc_named_notice_to_solomon_order_not_found",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r7_solomon_forbidden_refile_precluded_issue",
+      "kind": "rule",
+      "description": "If issue preclusion applies, Solomon is forbidden from relitigating the precluded issue."
+    },
+    {
+      "id": "c7_solomon_forbidden_refile_precluded_issue",
+      "kind": "conclusion",
+      "modality": "F"
+    },
+    {
+      "id": "f_collateral_estoppel_candidate",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_client_solomon_barred_refile",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r8_solomon_notice_ack_triggers_court_relief_path",
+      "kind": "rule",
+      "description": "If Solomon acknowledged awareness of restraining order and the order is in effect, Solomon is obligated to seek court relief rather than self-help noncompliance."
+    },
+    {
+      "id": "c8_solomon_obligated_seek_relief_via_court",
+      "kind": "conclusion",
+      "modality": "O"
+    },
+    {
+      "id": "f_feed_ev_solomon_ack_heard_restraining_order",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_restraining_order_in_effect",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r9_solomon_wait_for_service_conflicts_with_no_further_service",
+      "kind": "rule",
+      "description": "If Solomon stated he would wait for service but the order states no further service needed due to appearance, conditioning compliance on extra service is forbidden in this model."
+    },
+    {
+      "id": "c9_solomon_forbidden_condition_compliance_on_extra_service",
+      "kind": "conclusion",
+      "modality": "F"
+    },
+    {
+      "id": "f_feed_ev_solomon_wait_for_service_statement",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_restraining_order_no_further_service_needed",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r10_solomon_noncooperation_statement_conflicts_with_effective_order",
+      "kind": "rule",
+      "description": "If Solomon states non-incentivized cooperation while order is in effect, intentional noncooperation is forbidden in this model."
+    },
+    {
+      "id": "c10_solomon_forbidden_intentional_noncooperation",
+      "kind": "conclusion",
+      "modality": "F"
+    },
+    {
+      "id": "f_feed_ev_solomon_not_incentivized_statement",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_restraining_order_in_effect",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r11_solomon_already_have_order_statement_supports_notice",
+      "kind": "rule",
+      "description": "If Solomon stated the other party already had the restraining order and order is in effect, Solomon is obligated to recognize existing order status."
+    },
+    {
+      "id": "c11_solomon_obligated_recognize_existing_order_status",
+      "kind": "conclusion",
+      "modality": "O"
+    },
+    {
+      "id": "f_feed_ev_solomon_ack_already_have_order",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_restraining_order_in_effect",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order",
+      "kind": "rule",
+      "description": "If Solomon states the order is not in effect while the order is in effect, asserting ineffectiveness without court relief is forbidden in this model."
+    },
+    {
+      "id": "c12_solomon_forbidden_assert_order_ineffective_without_relief",
+      "kind": "conclusion",
+      "modality": "F"
+    },
+    {
+      "id": "f_feed_ev_solomon_order_not_in_effect_statement",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_restraining_order_in_effect",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r13_solomon_judge_overturn_statement_triggers_motion_path",
+      "kind": "rule",
+      "description": "If Solomon states he would have the judge overturn the order while it is in effect, he is obligated to seek court modification before noncompliance."
+    },
+    {
+      "id": "c13_solomon_obligated_file_motion_not_self_help",
+      "kind": "conclusion",
+      "modality": "O"
+    },
+    {
+      "id": "f_feed_ev_solomon_judge_overturn_statement",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_restraining_order_in_effect",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
+      "kind": "rule",
+      "description": "If HACC is told that Jane is receiving calls about a restrained brother and third-party housing contact is occurring with a restrained person, HACC is obligated in this model to stop that contact path and document the response."
+    },
+    {
+      "id": "c14_hacc_obligated_avoid_third_party_housing_contact_with_restrained_person",
+      "kind": "conclusion",
+      "modality": "O"
+    },
+    {
+      "id": "f_feed_ev_hacc_notice_brother_calls_after_granted_order",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_feed_ev_hacc_notice_third_party_contact_with_restrained_person",
+      "kind": "fact_dependency"
+    }
+  ],
+  "edges": [
+    {
+      "from": "r1_guardian_permission_if_prior_appointment",
+      "to": "c1_benjamin_permitted_guardian_scope",
+      "relation": "produces"
+    },
+    {
+      "from": "f_client_prior_appointment",
+      "to": "r1_guardian_permission_if_prior_appointment",
+      "relation": "required_by"
+    },
+    {
+      "from": "r2_noninterference_prohibition_for_benjamin",
+      "to": "c2_benjamin_forbidden_interference",
+      "relation": "produces"
+    },
+    {
+      "from": "f_client_prior_appointment",
+      "to": "r2_noninterference_prohibition_for_benjamin",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_client_benjamin_housing_interference",
+      "to": "r2_noninterference_prohibition_for_benjamin",
+      "relation": "required_by"
+    },
+    {
+      "from": "r3_benjamin_obligation_comply_or_seek_relief",
+      "to": "c3_benjamin_obligated_comply_or_seek_relief",
+      "relation": "produces"
+    },
+    {
+      "from": "f_client_prior_appointment",
+      "to": "r3_benjamin_obligation_comply_or_seek_relief",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_client_benjamin_order_disregard",
+      "to": "r3_benjamin_obligation_comply_or_seek_relief",
+      "relation": "required_by"
+    },
+    {
+      "from": "r4_solomon_forbidden_abuse_contact_property_control",
+      "to": "c4_solomon_forbidden_contact_property_control",
+      "relation": "produces"
+    },
+    {
+      "from": "f_solomon_actual_notice_on_2025_11_17",
+      "to": "r4_solomon_forbidden_abuse_contact_property_control",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_restraining_order_granted",
+      "to": "r4_solomon_forbidden_abuse_contact_property_control",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_restraining_order_in_effect",
+      "to": "r4_solomon_forbidden_abuse_contact_property_control",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_restraining_order_contact_restrictions",
+      "to": "r4_solomon_forbidden_abuse_contact_property_control",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_restraining_order_property_restrictions",
+      "to": "r4_solomon_forbidden_abuse_contact_property_control",
+      "relation": "required_by"
+    },
+    {
+      "from": "r4b_solomon_forbidden_enter_residence",
+      "to": "c4b_solomon_forbidden_enter_residence",
+      "relation": "produces"
+    },
+    {
+      "from": "f_solomon_actual_notice_on_2025_11_17",
+      "to": "r4b_solomon_forbidden_enter_residence",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_restraining_order_granted",
+      "to": "r4b_solomon_forbidden_enter_residence",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_restraining_order_residence_restrictions",
+      "to": "r4b_solomon_forbidden_enter_residence",
+      "relation": "required_by"
+    },
+    {
+      "from": "r5_solomon_obligated_appear_and_answer",
+      "to": "c5_solomon_obligated_appear_and_answer",
+      "relation": "produces"
+    },
+    {
+      "from": "f_restraining_order_no_further_service_needed",
+      "to": "r5_solomon_obligated_appear_and_answer",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_client_solomon_failed_appearance",
+      "to": "r5_solomon_obligated_appear_and_answer",
+      "relation": "required_by"
+    },
+    {
+      "from": "r5b_solomon_obligated_seek_hearing_or_comply",
+      "to": "c5b_solomon_obligated_seek_hearing_or_comply",
+      "relation": "produces"
+    },
+    {
+      "from": "f_restraining_order_granted",
+      "to": "r5b_solomon_obligated_seek_hearing_or_comply",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_restraining_order_in_effect",
+      "to": "r5b_solomon_obligated_seek_hearing_or_comply",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_solomon_service_position_statement",
+      "to": "r5b_solomon_obligated_seek_hearing_or_comply",
+      "relation": "required_by"
+    },
+    {
+      "from": "r5c_solomon_forbidden_self_help_noncooperation",
+      "to": "c5c_solomon_forbidden_self_help_noncooperation",
+      "relation": "produces"
+    },
+    {
+      "from": "f_restraining_order_granted",
+      "to": "r5c_solomon_forbidden_self_help_noncooperation",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_restraining_order_in_effect",
+      "to": "r5c_solomon_forbidden_self_help_noncooperation",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_solomon_noncooperation_statement",
+      "to": "r5c_solomon_forbidden_self_help_noncooperation",
+      "relation": "required_by"
+    },
+    {
+      "from": "r6_hacc_obligated_process_consistently_with_valid_authority",
+      "to": "c6_hacc_obligated_process_consistent_with_order",
+      "relation": "produces"
+    },
+    {
+      "from": "f_hacc_process_exists",
+      "to": "r6_hacc_obligated_process_consistently_with_valid_authority",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_client_prior_appointment",
+      "to": "r6_hacc_obligated_process_consistently_with_valid_authority",
+      "relation": "required_by"
+    },
+    {
+      "from": "r6b_hacc_obligated_document_lease_basis",
+      "to": "c6b_hacc_obligated_document_lease_basis",
+      "relation": "produces"
+    },
+    {
+      "from": "f_hacc_lease_adjustment_effective_2026_01_01",
+      "to": "r6b_hacc_obligated_document_lease_basis",
+      "relation": "required_by"
+    },
+    {
+      "from": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
+      "to": "c6c_solomon_interference_not_yet_directly_proved",
+      "relation": "produces"
+    },
+    {
+      "from": "f_hacc_named_notice_to_solomon_order_not_found",
+      "to": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
+      "relation": "required_by"
+    },
+    {
+      "from": "r7_solomon_forbidden_refile_precluded_issue",
+      "to": "c7_solomon_forbidden_refile_precluded_issue",
+      "relation": "produces"
+    },
+    {
+      "from": "f_collateral_estoppel_candidate",
+      "to": "r7_solomon_forbidden_refile_precluded_issue",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_client_solomon_barred_refile",
+      "to": "r7_solomon_forbidden_refile_precluded_issue",
+      "relation": "required_by"
+    },
+    {
+      "from": "r8_solomon_notice_ack_triggers_court_relief_path",
+      "to": "c8_solomon_obligated_seek_relief_via_court",
+      "relation": "produces"
+    },
+    {
+      "from": "f_feed_ev_solomon_ack_heard_restraining_order",
+      "to": "r8_solomon_notice_ack_triggers_court_relief_path",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_restraining_order_in_effect",
+      "to": "r8_solomon_notice_ack_triggers_court_relief_path",
+      "relation": "required_by"
+    },
+    {
+      "from": "r9_solomon_wait_for_service_conflicts_with_no_further_service",
+      "to": "c9_solomon_forbidden_condition_compliance_on_extra_service",
+      "relation": "produces"
+    },
+    {
+      "from": "f_feed_ev_solomon_wait_for_service_statement",
+      "to": "r9_solomon_wait_for_service_conflicts_with_no_further_service",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_restraining_order_no_further_service_needed",
+      "to": "r9_solomon_wait_for_service_conflicts_with_no_further_service",
+      "relation": "required_by"
+    },
+    {
+      "from": "r10_solomon_noncooperation_statement_conflicts_with_effective_order",
+      "to": "c10_solomon_forbidden_intentional_noncooperation",
+      "relation": "produces"
+    },
+    {
+      "from": "f_feed_ev_solomon_not_incentivized_statement",
+      "to": "r10_solomon_noncooperation_statement_conflicts_with_effective_order",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_restraining_order_in_effect",
+      "to": "r10_solomon_noncooperation_statement_conflicts_with_effective_order",
+      "relation": "required_by"
+    },
+    {
+      "from": "r11_solomon_already_have_order_statement_supports_notice",
+      "to": "c11_solomon_obligated_recognize_existing_order_status",
+      "relation": "produces"
+    },
+    {
+      "from": "f_feed_ev_solomon_ack_already_have_order",
+      "to": "r11_solomon_already_have_order_statement_supports_notice",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_restraining_order_in_effect",
+      "to": "r11_solomon_already_have_order_statement_supports_notice",
+      "relation": "required_by"
+    },
+    {
+      "from": "r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order",
+      "to": "c12_solomon_forbidden_assert_order_ineffective_without_relief",
+      "relation": "produces"
+    },
+    {
+      "from": "f_feed_ev_solomon_order_not_in_effect_statement",
+      "to": "r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_restraining_order_in_effect",
+      "to": "r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order",
+      "relation": "required_by"
+    },
+    {
+      "from": "r13_solomon_judge_overturn_statement_triggers_motion_path",
+      "to": "c13_solomon_obligated_file_motion_not_self_help",
+      "relation": "produces"
+    },
+    {
+      "from": "f_feed_ev_solomon_judge_overturn_statement",
+      "to": "r13_solomon_judge_overturn_statement_triggers_motion_path",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_restraining_order_in_effect",
+      "to": "r13_solomon_judge_overturn_statement_triggers_motion_path",
+      "relation": "required_by"
+    },
+    {
+      "from": "r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
+      "to": "c14_hacc_obligated_avoid_third_party_housing_contact_with_restrained_person",
+      "relation": "produces"
+    },
+    {
+      "from": "f_feed_ev_hacc_notice_brother_calls_after_granted_order",
+      "to": "r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_feed_ev_hacc_notice_third_party_contact_with_restrained_person",
+      "to": "r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
+      "relation": "required_by"
+    }
+  ]
+}
