@@ -155,6 +155,12 @@ Recommended order:
 115. [108_r5_r24_service_evasion_and_notice_evidence_matrix_2026-04-07.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/108_r5_r24_service_evasion_and_notice_evidence_matrix_2026-04-07.md)
 116. [109_service_artifact_inventory_and_field_fill_map_2026-04-07.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/109_service_artifact_inventory_and_field_fill_map_2026-04-07.md)
 117. [110_bulk_service_fact_intake_one_page_2026-04-07.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/110_bulk_service_fact_intake_one_page_2026-04-07.md)
+118. [111_bulk_service_fact_intake_paste_ready_rows_2026-04-07.csv](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/111_bulk_service_fact_intake_paste_ready_rows_2026-04-07.csv)
+119. [112_bulk_service_rows_apply_instructions_2026-04-07.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/112_bulk_service_rows_apply_instructions_2026-04-07.md)
+120. [113_confirmed_service_updates_batch_prefill_2026-04-07.csv](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/113_confirmed_service_updates_batch_prefill_2026-04-07.csv)
+121. [114_confirmed_service_batch_apply_and_validate_runbook_2026-04-07.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/114_confirmed_service_batch_apply_and_validate_runbook_2026-04-07.md)
+122. [115_recipient_compel_promotion_gate_matrix_2026-04-07.csv](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/115_recipient_compel_promotion_gate_matrix_2026-04-07.csv)
+123. [116_service_update_pipeline_quick_run_2026-04-07.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/116_service_update_pipeline_quick_run_2026-04-07.md)
 
 ## Certification and proof checklist
 

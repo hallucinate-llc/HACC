@@ -12,7 +12,9 @@ This memo separates:
 
 - A scanned Oregon abuse-prevention order exists at [Benjamin Barber vs Julio Cortez protective order.pdf](/home/barberb/HACC/evidence/history/Benjamin%20Barber%20vs%20Julio%20Cortez%20protective%20order.pdf).
 - OCR confirms this is an Elderly Persons and Persons with Disabilities Abuse Prevention Act restraining order against `Julio R. Florez-Cortez`, case number appearing as `25PO11318`, in Clackamas County.
-- OCR also confirms the order was granted, with the standard one-year duration language, but the judge-signature date is not cleanly legible from the current scan OCR.
+- OCR also confirms the order was granted, with the standard one-year duration language, and the judge-signature line is best read as `11-17-2025`, though the scan remains imperfect.
+- A separate scanned packet exists at [Jane Cortez vs Julio Cortez.pdf](/home/barberb/HACC/evidence/history/Jane%20Cortez%20vs%20Julio%20Cortez.pdf). Targeted OCR of its first four pages shows it is also an EPPDAPA restraining-order packet against `Julio Regal Florez-Cortez Sr`, filed by `[x] Guardian ad litem`, granted, and directed in part to the residence at `10043 SE 32nd Ave, Milwaukie, Oregon 97222`.
+- The repository also contains [Abuse Protective Order Certificate of Service.pdf](/home/barberb/HACC/evidence/history/Abuse%20Protective%20Order%20Certificate%20of%20Service.pdf), but targeted OCR shows that scan is only a blank certificate-of-service form and does not itself prove completed service.
 - The surrounding workspace narrative repeatedly states that:
   - in October 2025, Benjamin Barber requested bifurcation and HACC said a restraining order was required; and
   - in November 2025, Benjamin Barber obtained the restraining order, later continued after a December 9, 2025 hearing.

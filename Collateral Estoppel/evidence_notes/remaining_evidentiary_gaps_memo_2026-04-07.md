@@ -7,6 +7,7 @@ This memo consolidates the main evidentiary gaps that still remain after the cur
 The file set is now strong on:
 
 1. existence of the Solomon restraining order;
+2. existence of original stored source scans for multiple protective-order matters, including Solomon and Julio packets;
 2. notice to HACC of restraining-order-related concerns;
 3. a real mailing trail to HACC;
 4. HACC's stated January 12 internal-review / court-document basis for Benjamin's lease removal;
@@ -53,7 +54,7 @@ Why it matters:
 
 Best fill:
 
-1. certified docket / register printout;
+1. clerk-certified docket / register printout;
 2. cleaner court copy of the order packet;
 3. hearing / appearance paperwork if available.
 
@@ -68,12 +69,12 @@ What is still missing:
 Why it matters:
 
 1. this is the main documentary gate for issue preclusion, repeated-usurpation arguments, and the strongest `ORCP 17` contradiction theories.
-2. the gap is no longer total: the Solomon restraining-order packet itself already supports that `Benjamin Jay Barber` appeared there as Jane's guardian ad litem / guardian petitioner. What remains missing is the broader certified order / docket layer needed to prove scope, duration, and any separate preclusive prior proceeding.
+2. the gap is no longer total: the repository already contains original stored source scans of real protective-order proceedings, including the Solomon packet and the Julio packets. The Solomon restraining-order packet itself already supports that `Benjamin Jay Barber` appeared there as Jane's guardian ad litem / guardian petitioner. What remains missing is the broader clerk-certified order / docket layer needed to prove scope, duration, and any separate preclusive prior proceeding.
 
 Best fill:
 
-1. certified prior order;
-2. certified docket / register;
+1. prior signed order from the stored source scans, if a separate one exists;
+2. clerk-certified docket / register;
 3. appearance / hearing material for the earlier proceeding.
 
 ## 4. Direct Solomon-to-HACC attribution gap

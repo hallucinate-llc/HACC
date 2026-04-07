@@ -74,6 +74,9 @@ These may not be assigned exact dollar values here, but should still be listed f
 1. fill known mailing costs first;
 2. then fill application, transport, and moving costs;
 3. then add a short declaration summarizing time burden and instability if receipts are unavailable.
+4. use the companion branch-allocation materials if you need to separate Solomon-caused delay from Quantum / HACC-caused delay:
+   - [delay_apportionment_chart_solomon_vs_quantum_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/delay_apportionment_chart_solomon_vs_quantum_2026-04-07.md)
+   - [damages_apportionment_worksheet_solomon_vs_quantum_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/damages_apportionment_worksheet_solomon_vs_quantum_2026-04-07.md)
 
 ## Current subtotal from identified estimates
 

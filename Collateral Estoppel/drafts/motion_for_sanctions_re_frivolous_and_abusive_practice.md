@@ -2,7 +2,7 @@
 # FOR THE COUNTY OF CLACKAMAS
 # PROBATE DEPARTMENT
 
-Case No. `26PR00641` (to confirm)
+Case No. `26PR00641`
 
 In the Matter of:
 Jane Kay Cortez,
@@ -17,7 +17,7 @@ Movant requests sanctions and related corrective relief to the extent the Court 
 
 1. Enter sanctions as authorized by law for frivolous, abusive, or bad-faith motion practice if the Court finds the necessary predicate facts.
 2. Strike, limit, or dismiss any filing or theory the Court finds precluded, duplicative, abusive, or filed for an improper purpose.
-3. Enter protective noninterference directives preventing further extra-record or collateral conduct affecting Jane Cortez, HACC-related housing matters, or any court-authorized authority structure.
+3. Enter only such noninterference or claim-limiting directives as the Court finds directly supported by admissible evidence and authorized by law.
 4. Award fees, costs, evidentiary limitations, claim-limiting relief, or other remedial orders to the extent legally authorized and factually supported.
 
 ### II. Core theory
@@ -35,9 +35,10 @@ Movant requests sanctions and related corrective relief to the extent the Court 
    c. collateral-interference theories that remain partly inferential unless supported by source records.
 9. The present staged chronology supporting that theory includes:
    a. a restraining order granted against Solomon Samuel Barber on or about November 20, 2025, with order language stating that it was in effect and that no further service was necessary because respondent appeared in person before the court;
-   b. Solomon's later March 10, 2026 statements that he was not incentivized to cooperate, that the order was not in effect until service on his terms, and that he would have the judge overturn it;
-   c. declaration testimony that HACC staff later explained Benjamin's lease removal in substance by reference to outside document flows from Benjamin's brother and stepfather; and
-   d. March 2026 written notice to HACC that restrained-party communications and third-party housing contact were still occurring.
+   b. parallel Julio protective-order packets showing that household-control and residence issues involving the same address and protective framework were already being formalized in court before the later lease-removal sequence;
+   c. Solomon's later March 10, 2026 statements that he was not incentivized to cooperate, that the order was not in effect until service on his terms, and that he would have the judge overturn it;
+   d. declaration testimony that HACC staff later explained Benjamin's lease removal in substance by reference to outside document flows from Benjamin's brother and stepfather; and
+   e. March 2026 written notice to HACC that restrained-party communications and third-party housing contact were still occurring.
 
 ### III. Governing authority posture
 
@@ -66,8 +67,7 @@ Movant requests sanctions and related corrective relief to the extent the Court 
    b. the exact person-to-HACC communication chain;
    c. the exact legal rule under which every sanctions component should ultimately issue.
 16. The issue-preclusion doctrine is now authority-grounded, but the actual prior separate proceeding record is still the key missing fact layer. For that reason, preclusion-based sanctions requests must remain conditional.
-17. The generated branch-status summary at [formal_case_state_dashboard.md](/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/formal_case_state_dashboard.md) currently classifies the `ORCP 17` merits branch as proof-gated, the issue-preclusion merits branch as proof-gated, and the HACC Exhibit R production branch as filing-ready for subpoena posture.
-18. The repeated-pattern theory is that Solomon sought practical control by means other than orderly court relief, and that this created unnecessary burden, delay, and instability even if the final proof picture is not yet complete.
+17. The repeated-pattern theory is that Solomon sought practical control by means other than orderly court relief, and that this created unnecessary burden, delay, and instability even if the final proof picture is not yet complete.
 
 ### V. Best current sanctionable-conduct formulation
 
@@ -90,12 +90,13 @@ Movant requests sanctions and related corrective relief to the extent the Court 
 ### VII. Evidentiary predicates before final sanctions ruling
 
 25. Certified docket and prior-order materials: see the shared placeholder exhibits in [motion_exhibit_index.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/motion_exhibit_index.md), especially proposed Exhibits P and Q, to be added when certified records are obtained.
-26. Generated live-status summary:
-   a. [formal_case_state_dashboard.md](/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/formal_case_state_dashboard.md)
-   b. [deontic_reasoning_report.md](/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/deontic_reasoning_report.md)
-27. Signed operative order and digest:
+26. Signed operative order and digest:
    a. [sam barber restraining order.pdf](/home/barberb/HACC/evidence/history/sam%20barber%20restraining%20order.pdf)
    b. [solomon_order_digest.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_order_digest.md)
+27. Related household-control order packets and service-form context:
+   a. [Benjamin Barber vs Julio Cortez protective order.pdf](/home/barberb/HACC/evidence/history/Benjamin%20Barber%20vs%20Julio%20Cortez%20protective%20order.pdf)
+   b. [Jane Cortez vs Julio Cortez.pdf](/home/barberb/HACC/evidence/history/Jane%20Cortez%20vs%20Julio%20Cortez.pdf)
+   c. [Abuse Protective Order Certificate of Service.pdf](/home/barberb/HACC/evidence/history/Abuse%20Protective%20Order%20Certificate%20of%20Service.pdf)
 28. Notice / service / appearance materials:
    a. [uid_660669_Mon--17-Nov-2025-20-38-24--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660669_Mon--17-Nov-2025-20-38-24--0000_New-text-message-from-solomon--503--381-6911.eml)
    b. [uid_660690_Mon--17-Nov-2025-20-56-22--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660690_Mon--17-Nov-2025-20-56-22--0000_New-text-message-from-solomon--503--381-6911.eml)
@@ -119,18 +120,18 @@ Movant requests sanctions and related corrective relief to the extent the Court 
 
 ### VIII. Requested hearing structure
 
-34. Set an evidentiary or threshold sanctions hearing as the Court deems appropriate.
-35. Require pre-hearing production or filing of certified records, operative orders, and any available HACC source records concerning lease-removal and collateral-contact issues.
-36. Permit targeted testimony on improper purpose, preclusion, collateral interference, and prejudice.
-37. If the Court finds the prior separate proceeding record incomplete, limit any preclusion-based sanctions ruling to threshold management and reserve final sanctions adjudication until the source record is complete.
+33. Set an evidentiary or threshold sanctions hearing as the Court deems appropriate.
+34. Require pre-hearing production or filing of certified records, operative orders, and any available HACC source records concerning lease-removal and collateral-contact issues.
+35. Permit targeted testimony on improper purpose, preclusion, collateral interference, and prejudice.
+36. If the Court finds the prior separate proceeding record incomplete, limit any preclusion-based sanctions ruling to threshold management and reserve final sanctions adjudication until the source record is complete.
 
 ### IX. Reservation
 
-38. Movant reserves amendment rights after receipt of certified records and any third-party or HACC records identifying the source, scope, and authority basis of the challenged collateral conduct.
+37. Movant reserves amendment rights after receipt of certified records and any third-party or HACC records identifying the source, scope, and authority basis of the challenged collateral conduct.
 
 ### X. Provisional exhibit map for next draft
 
-39. The current best exhibit sequence for the next court-ready pass is:
+38. The current best exhibit sequence for the next court-ready pass is:
    a. the shared motion exhibit index at [motion_exhibit_index.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/motion_exhibit_index.md);
    b. Exhibits A through O from that index as presently available;
    c. Exhibits P through R if later obtained through certified records or third-party production.
@@ -138,8 +139,8 @@ Movant requests sanctions and related corrective relief to the extent the Court 
 DATED: ____________
 
 ____________________________________
-Name:
-Role:
-Address:
-Phone:
-Email:
+Benjamin Barber, Pro Se
+Address: 10043 SE 32nd Ave
+City/State/Zip: Milwaukie, OR 97222
+Phone: 971-270-0855
+Email: starworks5@gmail.com

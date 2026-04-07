@@ -17,7 +17,7 @@ I, Benjamin Jay Barber, declare as follows:
 4. Our household has been dealing with displacement, voucher delays, accommodation problems, and hearing-access problems connected to the Housing Authority of Clackamas County (`HACC`) and the Blossom relocation process.
 5. HACC issued notices in late 2025 and early 2026 that put our housing stability at risk, including the December 23, 2025 no-cause notices, the December 31, 2025 displacement notice, the February 4, 2026 for-cause notice, and the February 13, 2026 notice directed to Julio Regal Florez-Cortez. Exhibits C, D, E, H, and N.
 6. Instead of lawfully handling the requested bifurcation process involving Julio Regal Florez-Cortez, HACC effectively removed or excluded him from the tenancy and treated him as evicted. Exhibit N is consistent with that treatment.
-7. Julio Regal Florez-Cortez cannot write in any language, to my personal knowledge.
+7. Julio Regal Florez-Cortez cannot read or write in any language, to my personal knowledge.
 8. About one week after the February 13, 2026 termination notice, Julio Regal Florez-Cortez requested a hearing orally by calling Ashley Ferron, to my personal knowledge.
 9. HACC told Julio Regal Florez-Cortez that he could request a hearing in writing.
 10. HACC did not provide Julio Regal Florez-Cortez a hearing after his oral request.

@@ -98,6 +98,7 @@ Purpose:
 - The surrounding housing record also supports a narrower elimination-based inference:
   - Benjamin Barber did not request his own removal from the lease;
   - Jane Cortez did not request Benjamin's removal from the lease;
+  - Julio Regal Florez-Cortez is already described elsewhere in the workspace, by Benjamin's personal-knowledge declaration, as unable to read or write in any language, which materially weakens any theory that Julio was independently preparing written housing demands, packet corrections, or authority assertions in the same period. See [declaration_of_benjamin_jay_barber_workspace_draft.md](/home/barberb/HACC/workspace/declaration_of_benjamin_jay_barber_workspace_draft.md);
   - the deeper `JC Household` chain now shows a same-day internal inconsistency inside HACC:
     - on January 12, 2026 at 10:48 AM, HACC wrote that `Julio is a member of the Household and will need to complete paperwork as well` unless court documentation were submitted;
     - on January 12, 2026 at 12:08 PM, HACC wrote: `Currently, Julio and Jane are the only household members and approved occupants of the unit.`
@@ -109,7 +110,7 @@ Purpose:
 - On that record, the current question becomes who, other than Benjamin or Jane, was exerting or claiming power over Jane's housing decisions.
 - The strongest current proof-gated theory is that Solomon is a plausible remaining outside actor in that chain, potentially acting under some claimed authority or de facto control theory, even though the repository still does not contain a clean power-of-attorney instrument or a direct HACC note confirming that exact basis.
 - The safest current formulation remains:
-  - `On information and belief, if Benjamin and Jane did not request Benjamin's lease removal, and if Julio's status was itself contested, then Solomon is a plausible outside actor who may have continued asserting control over Jane's housing matters through collateral communications or claimed authority.`
+  - `On information and belief, if Benjamin and Jane did not request Benjamin's lease removal, and if Julio was not in a position to generate written housing demands or asserted-authority paperwork on his own, then Solomon is a plausible outside actor who may have continued asserting control over Jane's housing matters through collateral communications or claimed authority.`
 
 ## 2. Safest current show-cause formulation
 

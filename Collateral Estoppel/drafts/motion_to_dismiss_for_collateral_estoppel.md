@@ -2,7 +2,7 @@
 # FOR THE COUNTY OF CLACKAMAS
 # PROBATE DEPARTMENT
 
-Case No. `26PR00641` (to confirm)
+Case No. `26PR00641`
 
 In the Matter of:
 Jane Kay Cortez,
@@ -11,12 +11,12 @@ Protected Person.
 ## MOTION TO DISMISS OR, IN THE ALTERNATIVE,
 ## TO LIMIT ISSUES PENDING THRESHOLD ISSUE-PRECLUSION RECORD
 
-Movant moves to dismiss any claim or issue already shown to be precluded by prior proceedings and, if the Court concludes the certified prior-proceeding record is not yet complete, to limit the case to a threshold issue-preclusion record instead of allowing unrestricted relitigation.
+Movant moves to dismiss any claim or issue already shown to be precluded by prior proceedings and, if the Court concludes the clerk-certified or otherwise final prior-proceeding record is not yet complete, to limit the case to a threshold issue-preclusion record instead of allowing unrestricted relitigation.
 
 ### I. Requested relief
 
-1. Dismiss any claim or issue the Court finds already established as precluded by certified prior-proceeding materials.
-2. In the alternative, strike or limit relitigation of the same authority issue unless and until the parties supply the prior-proceeding materials needed to evaluate issue preclusion.
+1. Dismiss any claim or issue the Court finds already established as precluded by the stored source materials and any additional admissible prior-proceeding record.
+2. In the alternative, strike or limit relitigation of the same authority issue unless and until the parties supply the prior-proceeding materials needed to evaluate issue preclusion, including any clerk-certified docket or order materials the Court deems necessary.
 3. Set a focused threshold schedule or hearing limited to: prior proceeding identity, issue identity, finality, party/privity, and full-and-fair opportunity.
 4. Award further relief the Court deems just and proper.
 
@@ -38,17 +38,17 @@ Movant moves to dismiss any claim or issue already shown to be precluded by prio
 11. The same OCR record reflects a notice dated April 2, 2026 and an apparent respondent objection dated April 5, 2026. See also [guardianship_timeline.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/guardianship_timeline.md).
 12. The earlier Solomon restraining-order packet itself supports that `Benjamin Jay Barber` appeared there in the guardian ad litem / guardian petitioner role for Jane Kay Cortez. See [solomon_order_digest.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_order_digest.md), [solomon_restraining_order_review.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_restraining_order_review.md), and [restraining_order_visual_verification_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/restraining_order_visual_verification_2026-04-07.md).
 13. Prior fact-finding also preserved a broader theory that an earlier authority-related proceeding or appointment may already have addressed the same practical control issue. See [petition_guardianship_working_memo.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/petition_guardianship_working_memo.md) and [repeated_usurpation_pattern_memo.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/repeated_usurpation_pattern_memo.md).
-14. The current record therefore supports a real overlap concern and a need for threshold control, even though the certified prior-proceeding record required for final dismissal is not yet complete.
+14. The current record therefore supports a real overlap concern and a need for threshold control, even though the stronger finality and metadata layer that would ordinarily come from clerk-certified prior-proceeding records is not yet complete.
 
 ### IV. What remains missing for final dismissal
 
-15. Final dismissal still requires a certified prior separate proceeding record sufficient to show:
+15. Final dismissal still requires a prior separate proceeding record sufficient to show:
    a. the exact prior order or judgment;
    b. the exact issue actually determined;
    c. finality;
    d. the party or privity alignment; and
    e. the full-and-fair-opportunity component.
-16. The current repository review does not yet contain that certified prior-order packet. See [source_register.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/source_register.md) and [allegation_proof_matrix.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/allegation_proof_matrix.md).
+16. The current repository review does contain original stored source scans of related protective-order proceedings, but it does not yet contain the broader prior-order and docket layer needed to cleanly establish finality and a separate preclusive proceeding. See [source_register.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/source_register.md), [allegation_proof_matrix.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/allegation_proof_matrix.md), and [original_scans_vs_certified_copies_note_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/original_scans_vs_certified_copies_note_2026-04-07.md).
 
 ### V. Why threshold control is appropriate now
 
@@ -60,7 +60,7 @@ Movant moves to dismiss any claim or issue already shown to be precluded by prio
 
 ### VI. Reservation and supplementation
 
-20. Movant reserves the right to supplement with certified docket printouts, signed orders, transcript excerpts, and any source record necessary to map the issue-preclusion elements to the actual prior proceeding.
+20. Movant reserves the right to supplement with clerk-certified docket printouts, signed orders, transcript excerpts, and any source record necessary to map the issue-preclusion elements to the actual prior proceeding.
 
 ### VII. Working source list
 
@@ -74,8 +74,9 @@ Movant moves to dismiss any claim or issue already shown to be precluded by prio
 7. [solomon_order_digest.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_order_digest.md)
 8. [solomon_restraining_order_review.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_restraining_order_review.md)
 9. [restraining_order_visual_verification_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/restraining_order_visual_verification_2026-04-07.md)
-10. certified prior judgment/order and certified register of actions sufficient to establish finality, identical issue, and party/privity alignment (to be added)
-11. certified hearing/appearance record demonstrating full and fair opportunity in prior proceeding (to be added)
+10. [original_scans_vs_certified_copies_note_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/original_scans_vs_certified_copies_note_2026-04-07.md)
+11. clerk-certified prior judgment/order and register of actions sufficient to establish finality, identical issue, and party/privity alignment (to be added)
+12. clerk-certified hearing/appearance record demonstrating full and fair opportunity in prior proceeding (to be added)
 
 DATED: ____________
 

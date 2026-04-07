@@ -2,27 +2,27 @@
 # FOR THE COUNTY OF CLACKAMAS
 # PROBATE DEPARTMENT
 
-Case No. `26PR00641` (to confirm)
+Case No. `26PR00641`
 
 In the Matter of:
 Jane Kay Cortez,
 Protected Person.
 
 ## MOTION FOR ORDER TO SHOW CAUSE
-## RE: RESPONDENT SOLOMON BARBER'S FAILURE TO TIMELY OPPOSE IN THE ORIGINAL MATTER AND FILING OF PRECLUDED CLAIM
+## RE: RESPONDENT SOLOMON BARBER'S POST-ORDER SELF-HELP POSITION, ORIGINAL-MATTER OPPOSITION PATH, AND PRECLUSION GATEKEEPING
 
 Movant requests an Order requiring Solomon Barber to appear and show cause why appropriate sanctions, claim-limiting relief, or other corrective orders should not be entered.
 
 ### I. Requested relief
 
 1. Issue an Order to Show Cause requiring Solomon Barber to appear on a date certain.
-2. Require Solomon Barber to explain why, after appearing in person in the original restraining-order matter and receiving notice that the order was in effect, he did not timely oppose that order in the original matter through the available hearing process, and instead later took a collateral position inconsistent with the order.
+2. Require Solomon Barber to explain why, after appearing in person in the original restraining-order matter and receiving notice that the order was in effect, he later took a self-help position inconsistent with the order and with the original-matter hearing path described in the packet.
 3. Require Solomon Barber to explain why filing of the present claim is not barred by collateral estoppel.
 4. Enter appropriate remedial orders, including claim limitation/dismissal and any sanctions authorized by law and supported by evidence.
 
 ### II. Grounds
 
-5. The current record strongly supports a show-cause inquiry on notice, order status, original-matter opposition posture, and Solomon's later self-help posture.
+5. The current record strongly supports a show-cause inquiry on notice, order status, the original-matter opposition path described in the packet, and Solomon's later self-help posture.
 6. The current record also supports threshold management of relitigation risk because the doctrine of issue preclusion is now authority-grounded under Oregon law even though the actual prior proceeding record remains incomplete.
 7. Movant does not ask the Court to assume that the preclusion branch is already factually proved in full.
 8. Instead, Movant asks for a show-cause process that separates:
@@ -50,7 +50,7 @@ Movant requests an Order requiring Solomon Barber to appear and show cause why a
 
 15. Notice/service/order-status history supporting the show-cause path: proposed Exhibits A, B, E, and the core chronology materials listed in [motion_exhibit_index.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/motion_exhibit_index.md).
 16. Original-matter opposition path reflected in the restraining-order packet itself: the grant language, the statement that no further service was necessary because Respondent appeared in person before the court, and the attached notice pages explaining the 30-day hearing procedure to oppose the order.
-17. Any certified docket or hearing-minute support showing that Solomon requested a hearing and later failed to attend: to be supplied if obtained.
+17. Any certified docket or hearing-minute support showing that Solomon requested a hearing and later failed to attend: to be supplied if obtained, but not assumed here.
 18. Prior adjudication and final prior separate proceeding record supporting any preclusion-based relief: proposed Exhibit H and placeholder Exhibit Q in [motion_exhibit_index.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/motion_exhibit_index.md).
 19. Issue identity between prior and present claims: to be shown in a comparison chart or declaration after the prior separate proceeding record is produced.
 20. Any declaration or documentary support for collateral housing influence or outside interference: the March 23 declarations, HACC-related notices, and any later source records if produced.
@@ -72,42 +72,27 @@ Movant requests an Order requiring Solomon Barber to appear and show cause why a
    d. `ORS 125.050`, `125.060`, `125.065`, `125.075`, and `125.080` for the protective-proceeding notice, objection, and hearing framework.
 27. The issue-preclusion branch is also now doctrine-grounded through Oregon appellate authority, but remains factually proof-gated pending the prior separate proceeding record.
 
-### VI. Computed strict-mode support (dated findings)
+### VI. Reservation
 
-28. The strict-mode reasoning set (generated April 7, 2026) includes active prohibition and obligation conclusions tied to dated, source-linked facts showing:
-- order-in-effect constraints and no-contact/property-control prohibitions were active by November 20, 2025 (`r4`, `r4b`);
-- notice/statement evidence supports an obligation to seek court relief rather than self-help noncompliance (`r5b`, `r8`, `r11`, `r13`);
-- statement evidence supports prohibition on conditioning compliance on extra service or claiming ineffectiveness without court relief (`r9`, `r10`, `r12`).
-29. The same strict-mode set now also identifies:
-- a HACC authority-chain documentation path (`r6`, `r6b`);
-- a proof-state caution that some Solomon-housing interference assertions remain inference-only unless direct proof is produced (`r6c`);
-- a remedial contempt/show-cause permission path (`r23`);
-- a remedial-sanctions path if later elements are proved (`r25`);
-- an `ORCP 17` sanctions pathway that remains contingent on improper-purpose or unsupported-filing proof (`r26`); and
-- a chapter 125 objection/hearing path for the guardianship branch (`r29`, `r30`, `r31`).
-30. These findings support an immediate show-cause structure focused on enforceability, notice, the original-matter opportunity to oppose, compliance path, statutory objection rights, and preclusion gatekeeping, while preserving proof limits for any inference-level allegations.
+28. Movant reserves amendment rights after receipt of certified docket, complete service/appearance record, and any source proceeding materials needed to map the issue-preclusion elements.
 
-### VII. Reservation
+### VII. Exhibit table (working draft)
 
-31. Movant reserves amendment rights after receipt of certified docket, complete service/appearance record, and any source proceeding materials needed to map the issue-preclusion elements.
-
-### VIII. Exhibit table (working draft)
-
-32. Proposed exhibits for this motion are:
-1. Exhibit A: [sam_barber_restraining_order_ocr.txt](/home/barberb/HACC/Collateral Estoppel/evidence_notes/sam_barber_restraining_order_ocr.txt) (order granted and in-effect findings, November 20, 2025).
-2. Exhibit B: [solomon_evidence_graph_feed.json](/home/barberb/HACC/Collateral Estoppel/evidence_notes/solomon_evidence_graph_feed.json) (event feed for statement/notice evidence with confidence annotations and dates).
-3. Exhibit C: [06_oregon_authority_table_final.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/06_oregon_authority_table_final.md) (working authority table for issue preclusion, contempt, sanctions, probate procedure, service, and subpoena enforcement).
-4. Exhibit D: [oregon_authority_grounding_memo_2026-04-07.md](/home/barberb/HACC/Collateral Estoppel/research/oregon_authority_grounding_memo_2026-04-07.md) (authority-grounding memo).
-5. Exhibit E: [deontic_reasoning_report.json](/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/deontic_reasoning_report.json) (strict-mode active rules including `r23`, `r25`, `r26`, `r29-r31`).
-6. Exhibit F: [motion_support_map.json](/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/motion_support_map.json) (rule-level antecedent traceability).
-7. Exhibit G: [HACC vawa violation.pdf](/home/barberb/HACC/evidence/paper documents/HACC vawa violation.pdf) (January 1, 2026 lease-adjustment-effective source used for the HACC documentation pathway).
+29. Proposed exhibits for this motion are:
+1. Exhibit A: [sam barber restraining order.pdf](/home/barberb/HACC/evidence/history/sam%20barber%20restraining%20order.pdf).
+2. Exhibit B: [sam_barber_restraining_order_ocr.txt](/home/barberb/HACC/Collateral Estoppel/evidence_notes/sam_barber_restraining_order_ocr.txt).
+3. Exhibit C: [solomon_order_digest.md](/home/barberb/HACC/Collateral Estoppel/evidence_notes/solomon_order_digest.md).
+4. Exhibit D: [uid_743129_Tue--10-Mar-2026-17-39-27--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743129_Tue--10-Mar-2026-17-39-27--0000_New-text-message-from-solomon--503--381-6911.eml).
+5. Exhibit E: [uid_743131_Tue--10-Mar-2026-17-45-54--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743131_Tue--10-Mar-2026-17-45-54--0000_New-text-message-from-solomon--503--381-6911.eml).
+6. Exhibit F: [uid_743136_Tue--10-Mar-2026-17-51-15--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743136_Tue--10-Mar-2026-17-51-15--0000_New-text-message-from-solomon--503--381-6911.eml).
+7. Exhibit G: [motion_exhibit_index.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/motion_exhibit_index.md).
 8. Exhibit H: Certified docket, appearance minutes, and signed prior orders for the proceedings at issue (to be added).
 
 DATED: ____________
 
 ____________________________________
-Name:
-Role:
-Address:
-Phone:
-Email:
+Benjamin Barber, Pro Se
+Address: 10043 SE 32nd Ave
+City/State/Zip: Milwaukie, OR 97222
+Phone: 971-270-0855
+Email: starworks5@gmail.com
