@@ -712,30 +712,6 @@
           }
         },
         {
-          "rule_id": "r22_case_obligated_finalize_authority_citations_before_filing",
-          "track": "filing",
-          "authority_refs": [],
-          "description": "If authority table placeholders remain unresolved, the case posture is obligated to finalize governing citations before final filing use.",
-          "activation_date_estimate": "2026-04-07",
-          "antecedents": [
-            {
-              "fact_id": "f_authority_table_placeholders_unresolved",
-              "status": "verified",
-              "value": "true",
-              "dates": [
-                "2026-04-07"
-              ]
-            }
-          ],
-          "conclusion": {
-            "conclusion_id": "c22_case_obligated_finalize_authority_citations_before_filing",
-            "modality": "O",
-            "actor": "case:guardianship_collateral_estoppel",
-            "action": "finalize_governing_authority_citations_before_final_filing",
-            "target": "doc:06_oregon_authority_table_placeholders.md"
-          }
-        },
-        {
           "rule_id": "r23_case_permitted_initiate_remedial_contempt_path",
           "track": "filing",
           "authority_refs": [
@@ -1389,6 +1365,30 @@
             "action": "move_to_compel_and_seek_sanctions_for_subpoena_noncompliance",
             "target": "case:26PR00641"
           }
+        },
+        {
+          "rule_id": "r22_case_obligated_finalize_authority_citations_before_filing",
+          "track": "filing",
+          "authority_refs": [],
+          "description": "If authority table placeholders remain unresolved, the case posture is obligated to finalize governing citations before final filing use.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_table_placeholders_unresolved",
+              "status": "verified",
+              "value": "false",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c22_case_obligated_finalize_authority_citations_before_filing",
+            "modality": "O",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "finalize_governing_authority_citations_before_final_filing",
+            "target": "doc:06_oregon_authority_table_placeholders.md"
+          }
         }
       ],
       "party_deontic_state": {
@@ -1495,12 +1495,6 @@
               "action": "resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record",
               "target": "issue:interference_actor_assignment",
               "rule_id": "r21_case_obligated_resolve_actor_assignment_conflict",
-              "activation_date_estimate": "2026-04-07"
-            },
-            {
-              "action": "finalize_governing_authority_citations_before_final_filing",
-              "target": "doc:06_oregon_authority_table_placeholders.md",
-              "rule_id": "r22_case_obligated_finalize_authority_citations_before_filing",
               "activation_date_estimate": "2026-04-07"
             }
           ],
@@ -2307,30 +2301,6 @@
           }
         },
         {
-          "rule_id": "r22_case_obligated_finalize_authority_citations_before_filing",
-          "track": "filing",
-          "authority_refs": [],
-          "description": "If authority table placeholders remain unresolved, the case posture is obligated to finalize governing citations before final filing use.",
-          "activation_date_estimate": "2026-04-07",
-          "antecedents": [
-            {
-              "fact_id": "f_authority_table_placeholders_unresolved",
-              "status": "verified",
-              "value": "true",
-              "dates": [
-                "2026-04-07"
-              ]
-            }
-          ],
-          "conclusion": {
-            "conclusion_id": "c22_case_obligated_finalize_authority_citations_before_filing",
-            "modality": "O",
-            "actor": "case:guardianship_collateral_estoppel",
-            "action": "finalize_governing_authority_citations_before_final_filing",
-            "target": "doc:06_oregon_authority_table_placeholders.md"
-          }
-        },
-        {
           "rule_id": "r23_case_permitted_initiate_remedial_contempt_path",
           "track": "filing",
           "authority_refs": [
@@ -2984,6 +2954,30 @@
             "action": "move_to_compel_and_seek_sanctions_for_subpoena_noncompliance",
             "target": "case:26PR00641"
           }
+        },
+        {
+          "rule_id": "r22_case_obligated_finalize_authority_citations_before_filing",
+          "track": "filing",
+          "authority_refs": [],
+          "description": "If authority table placeholders remain unresolved, the case posture is obligated to finalize governing citations before final filing use.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_table_placeholders_unresolved",
+              "status": "verified",
+              "value": "false",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c22_case_obligated_finalize_authority_citations_before_filing",
+            "modality": "O",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "finalize_governing_authority_citations_before_final_filing",
+            "target": "doc:06_oregon_authority_table_placeholders.md"
+          }
         }
       ],
       "party_deontic_state": {
@@ -3090,12 +3084,6 @@
               "action": "resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record",
               "target": "issue:interference_actor_assignment",
               "rule_id": "r21_case_obligated_resolve_actor_assignment_conflict",
-              "activation_date_estimate": "2026-04-07"
-            },
-            {
-              "action": "finalize_governing_authority_citations_before_final_filing",
-              "target": "doc:06_oregon_authority_table_placeholders.md",
-              "rule_id": "r22_case_obligated_finalize_authority_citations_before_filing",
               "activation_date_estimate": "2026-04-07"
             }
           ],

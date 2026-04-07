@@ -59,7 +59,6 @@ fact_true('f_collateral_estoppel_candidate').
 fact_true('f_actor_assignment_conflict_benjamin_vs_solomon_interference').
 fact_true('f_subpoena_workflow_components_staged').
 fact_true('f_or_joined_search_protocol_defined').
-fact_true('f_authority_table_placeholders_unresolved').
 fact_true('f_authority_ors_33_055_remedial_contempt_procedure').
 fact_true('f_authority_ors_33_075_compel_appearance').
 fact_true('f_authority_ors_33_105_remedial_sanctions').

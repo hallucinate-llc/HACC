@@ -88,7 +88,7 @@ Movant requests sanctions and related corrective relief to the extent the Court 
 
 ### VII. Evidentiary predicates before final sanctions ruling
 
-24. Certified docket and prior-order materials: `[insert exhibit citations]`.
+24. Certified docket and prior-order materials: see the shared placeholder exhibits in [motion_exhibit_index.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/motion_exhibit_index.md), especially proposed Exhibits P and Q, to be added when certified records are obtained.
 25. Signed operative order and digest:
    a. [sam barber restraining order.pdf](/home/barberb/HACC/evidence/history/sam%20barber%20restraining%20order.pdf)
    b. [solomon_order_digest.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_order_digest.md)
@@ -111,7 +111,7 @@ Movant requests sanctions and related corrective relief to the extent the Court 
 30. Authority-grounding materials:
    a. [06_oregon_authority_table_placeholders.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/06_oregon_authority_table_placeholders.md)
    b. [oregon_authority_grounding_memo_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/research/oregon_authority_grounding_memo_2026-04-07.md)
-31. Any fee, cost, or burden evidence supporting monetary sanctions: `[insert declaration/exhibits]`.
+31. Any fee, cost, or burden evidence supporting monetary sanctions: to be added by declaration, billing summary, or damages worksheet if monetary sanctions are pursued beyond nonmonetary corrective relief.
 
 ### VIII. Requested hearing structure
 

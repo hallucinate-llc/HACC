@@ -41,7 +41,7 @@ At(2026-04-07, PotentialIssuePreclusion(issue:guardianship_authority))  % status
 At(2026-04-07, ActorAssignmentConflict(issue:interference_actor_assignment, person:benjamin_barber, person:solomon))  % status=verified, value=true
 At(2026-04-07, SubpoenaWorkflowComponentsStaged(case:26PR00641))  % status=verified, value=true
 At(2026-04-07, OrJoinedSearchProtocolDefined(doc:11B_attachment_a2_definitions_and_instructions_final.md))  % status=verified, value=true
-At(2026-04-07, AuthorityCitationsUnresolved(doc:06_oregon_authority_table_placeholders.md))  % status=verified, value=true
+At(2026-04-07, AuthorityCitationsUnresolved(doc:06_oregon_authority_table_placeholders.md))  % status=verified, value=false
 At(2026-04-07, AuthorityAvailable(auth:ors_33_055, topic:remedial_contempt_procedure))  % status=verified, value=true
 At(2026-04-07, AuthorityAvailable(auth:ors_33_075, topic:compel_appearance_after_order_to_appear))  % status=verified, value=true
 At(2026-04-07, AuthorityAvailable(auth:ors_33_105, topic:remedial_contempt_sanctions))  % status=verified, value=true

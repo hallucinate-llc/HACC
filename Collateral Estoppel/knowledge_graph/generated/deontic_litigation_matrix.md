@@ -3,9 +3,9 @@
 Generated: 2026-04-07
 
 ## Mode: strict
-- Active rules: 30
+- Active rules: 29
 - Unresolved rules: 6
-- Inactive rules: 3
+- Inactive rules: 4
 - Party: case:26PR00641
 - Counts: O=2 P=2 F=0
 - Obligations:
@@ -16,11 +16,10 @@ Generated: 2026-04-07
 - assert_respondent_right_to_appear_in_person_or_by_counsel -> person:jane_cortez (r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel, at 2026-04-07)
 
 - Party: case:guardianship_collateral_estoppel
-- Counts: O=3 P=8 F=0
+- Counts: O=2 P=8 F=0
 - Obligations:
 - treat_prior_appointment_theory_as_hypothesis_until_source_order_found -> issue:prior_appointment_for_jane_cortez (r6d_case_obligated_treat_prior_appointment_as_hypothesis_only, at 2026-04-07)
 - resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record -> issue:interference_actor_assignment (r21_case_obligated_resolve_actor_assignment_conflict, at 2026-04-07)
-- finalize_governing_authority_citations_before_final_filing -> doc:06_oregon_authority_table_placeholders.md (r22_case_obligated_finalize_authority_citations_before_filing, at 2026-04-07)
 - Permissions:
 - treat_solomon_hacc_interference_as_inference_not_direct_proof -> person:solomon (r6c_solomon_interference_not_proved_by_named_hacc_notice_gap, at 2026-04-07)
 - seek_compelled_production_of_hacc_actor_document_authority_chain -> issue:lease_change_actor_identification (r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain, at 2026-04-07)
@@ -61,9 +60,9 @@ Generated: 2026-04-07
 - assert_order_ineffective_without_court_relief -> order:eppdapa_restraining_order (r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order, at 2026-03-10)
 
 ## Mode: inclusive
-- Active rules: 31
+- Active rules: 30
 - Unresolved rules: 5
-- Inactive rules: 3
+- Inactive rules: 4
 - Party: case:26PR00641
 - Counts: O=2 P=2 F=0
 - Obligations:
@@ -74,11 +73,10 @@ Generated: 2026-04-07
 - assert_respondent_right_to_appear_in_person_or_by_counsel -> person:jane_cortez (r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel, at 2026-04-07)
 
 - Party: case:guardianship_collateral_estoppel
-- Counts: O=3 P=9 F=0
+- Counts: O=2 P=9 F=0
 - Obligations:
 - treat_prior_appointment_theory_as_hypothesis_until_source_order_found -> issue:prior_appointment_for_jane_cortez (r6d_case_obligated_treat_prior_appointment_as_hypothesis_only, at 2026-04-07)
 - resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record -> issue:interference_actor_assignment (r21_case_obligated_resolve_actor_assignment_conflict, at 2026-04-07)
-- finalize_governing_authority_citations_before_final_filing -> doc:06_oregon_authority_table_placeholders.md (r22_case_obligated_finalize_authority_citations_before_filing, at 2026-04-07)
 - Permissions:
 - treat_solomon_hacc_interference_as_inference_not_direct_proof -> person:solomon (r6c_solomon_interference_not_proved_by_named_hacc_notice_gap, at 2026-04-07)
 - seek_compelled_production_of_hacc_actor_document_authority_chain -> issue:lease_change_actor_identification (r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain, at 2026-04-07)

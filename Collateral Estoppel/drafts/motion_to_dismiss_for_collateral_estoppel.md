@@ -31,12 +31,12 @@ Movant moves to dismiss all or part of the current claim set to the extent issue
 
 ### III. Application to this matter (proof-gated)
 
-8. Prior proceeding(s): `[insert case caption/number and court]`.
-9. Issue(s) previously decided: `[insert exact issue statements]`.
-10. Decision/finality proof: `[insert order/judgment date and exhibit cite]`.
-11. Party/privity alignment: `[insert alignment details]`.
-12. Full and fair opportunity: `[insert hearing/notice/appearance details]`.
-13. Current pleading overlap: `[insert comparison showing issue identity]`.
+8. Prior proceeding(s): see proposed Exhibit F and Exhibit G, plus the shared placeholders tracked in [motion_exhibit_index.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/motion_exhibit_index.md) for the certified prior-order and appearance record.
+9. Issue(s) previously decided: to be stated from the certified prior order / judgment and any comparison chart once the source proceeding record is obtained.
+10. Decision/finality proof: to be supplied from the certified order, judgment, or register printout included as proposed Exhibit F.
+11. Party/privity alignment: to be mapped from the certified prior proceeding materials and the present caption once the source record is assembled.
+12. Full and fair opportunity: to be shown from the prior hearing, notice, and appearance record reflected in proposed Exhibit G.
+13. Current pleading overlap: to be shown in a comparison chart or declaration after the source proceeding record is confirmed.
 14. Because the doctrine is now grounded but the source proceeding record is not yet complete, Movant asks the Court to use one of two paths:
    a. dismiss or limit issues now to the extent the Court finds the prior separate proceeding and identical-issue record already established; or
    b. set a focused evidentiary or record-completion path limited to preclusion elements before allowing relitigation of the same authority issue.

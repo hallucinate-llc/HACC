@@ -3,12 +3,12 @@
 Generated: 2026-04-07
 
 ## Mode: strict
-- Active rules: 30
+- Active rules: 29
 - Unresolved rules: 6
-- Inactive rules: 3
+- Inactive rules: 4
 - Party deontic state:
 - case:26PR00641: O=2, P=2, F=0
-- case:guardianship_collateral_estoppel: O=3, P=8, F=0
+- case:guardianship_collateral_estoppel: O=2, P=8, F=0
 - org:hacc: O=3, P=0, F=0
 - person:benjamin_barber: O=1, P=1, F=0
 - person:solomon: O=4, P=0, F=6
@@ -33,7 +33,6 @@ Generated: 2026-04-07
 - r16_benjamin_obligated_track_service_and_deadlines: 2026-04-07
 - r20_case_permitted_treat_enforcement_path_as_pending_pre_service: 2026-04-07
 - r21_case_obligated_resolve_actor_assignment_conflict: 2026-04-07
-- r22_case_obligated_finalize_authority_citations_before_filing: 2026-04-07
 - r23_case_permitted_initiate_remedial_contempt_path: 2026-04-07
 - r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved: 2026-04-07
 - r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown: 2026-04-07
@@ -45,12 +44,12 @@ Generated: 2026-04-07
 - r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines: 2026-04-07
 
 ## Mode: inclusive
-- Active rules: 31
+- Active rules: 30
 - Unresolved rules: 5
-- Inactive rules: 3
+- Inactive rules: 4
 - Party deontic state:
 - case:26PR00641: O=2, P=2, F=0
-- case:guardianship_collateral_estoppel: O=3, P=9, F=0
+- case:guardianship_collateral_estoppel: O=2, P=9, F=0
 - org:hacc: O=3, P=0, F=0
 - person:benjamin_barber: O=1, P=1, F=0
 - person:solomon: O=4, P=0, F=6
@@ -75,7 +74,6 @@ Generated: 2026-04-07
 - r16_benjamin_obligated_track_service_and_deadlines: 2026-04-07
 - r20_case_permitted_treat_enforcement_path_as_pending_pre_service: 2026-04-07
 - r21_case_obligated_resolve_actor_assignment_conflict: 2026-04-07
-- r22_case_obligated_finalize_authority_citations_before_filing: 2026-04-07
 - r23_case_permitted_initiate_remedial_contempt_path: 2026-04-07
 - r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved: 2026-04-07
 - r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved: 2026-04-07

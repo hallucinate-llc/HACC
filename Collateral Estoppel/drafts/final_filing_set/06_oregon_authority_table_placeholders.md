@@ -70,4 +70,6 @@ This table is a working authority register for the current packet. It is grounde
 3. Subpoena obedience / warning language:
    `ORCP 55 A(1)(a)(vi)(A)-(B)`
    Working use: subpoenas must state that they must be obeyed unless a judge orders otherwise and that disobedience is punishable by a fine or jail time.
-4. Any local supplementary rule (Clackamas / UTCR): `[insert authority]`
+4. Clackamas supplementary probate rules:
+   `Clackamas SLR 9.035`, `SLR 9.076`, and related Chapter 9 probate rules in the 2026 Clackamas Supplementary Local Rules
+   Working use: no separate local rule has yet been identified as changing the core show-cause, sanctions, subpoena, service, or issue-preclusion analysis in this packet, but the Clackamas probate SLRs do supply local deficiency/citation practice and probate-administration requirements that may become relevant if the court requests local-rule support or probate-case management detail.

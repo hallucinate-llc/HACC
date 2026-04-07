@@ -47,7 +47,7 @@ fact(f_collateral_estoppel_candidate, PotentialIssuePreclusion(issue:guardianshi
 fact(f_actor_assignment_conflict_benjamin_vs_solomon_interference, ActorAssignmentConflict(issue:interference_actor_assignment, person:benjamin_barber, person:solomon), status(verified), value(true), dates(['2026-04-07'])).
 fact(f_subpoena_workflow_components_staged, SubpoenaWorkflowComponentsStaged(case:26PR00641), status(verified), value(true), dates(['2026-04-07'])).
 fact(f_or_joined_search_protocol_defined, OrJoinedSearchProtocolDefined(doc:11B_attachment_a2_definitions_and_instructions_final.md), status(verified), value(true), dates(['2026-04-07'])).
-fact(f_authority_table_placeholders_unresolved, AuthorityCitationsUnresolved(doc:06_oregon_authority_table_placeholders.md), status(verified), value(true), dates(['2026-04-07'])).
+fact(f_authority_table_placeholders_unresolved, AuthorityCitationsUnresolved(doc:06_oregon_authority_table_placeholders.md), status(verified), value(false), dates(['2026-04-07'])).
 fact(f_authority_ors_33_055_remedial_contempt_procedure, AuthorityAvailable(auth:ors_33_055, topic:remedial_contempt_procedure), status(verified), value(true), dates(['2026-04-07'])).
 fact(f_authority_ors_33_075_compel_appearance, AuthorityAvailable(auth:ors_33_075, topic:compel_appearance_after_order_to_appear), status(verified), value(true), dates(['2026-04-07'])).
 fact(f_authority_ors_33_105_remedial_sanctions, AuthorityAvailable(auth:ors_33_105, topic:remedial_contempt_sanctions), status(verified), value(true), dates(['2026-04-07'])).

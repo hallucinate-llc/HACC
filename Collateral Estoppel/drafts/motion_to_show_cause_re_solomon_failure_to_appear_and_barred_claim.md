@@ -43,11 +43,11 @@ Movant requests an Order requiring Solomon Barber to appear and show cause why a
 
 ### III. Evidentiary predicates to be shown at hearing
 
-13. Notice/service/order-status history supporting the show-cause path: `[insert exhibit citations]`.
-14. Prior adjudication and final prior separate proceeding record supporting any preclusion-based relief: `[insert exhibit citations]`.
-15. Issue identity between prior and present claims: `[insert comparison chart/exhibit]`.
-16. Any declaration or documentary support for collateral housing influence or outside interference: `[insert declaration/exhibits if proven]`.
-17. Resulting prejudice, delay, or burden: `[insert declaration/exhibits]`.
+13. Notice/service/order-status history supporting the show-cause path: proposed Exhibits A, B, E, and the core chronology materials listed in [motion_exhibit_index.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/motion_exhibit_index.md).
+14. Prior adjudication and final prior separate proceeding record supporting any preclusion-based relief: proposed Exhibit H and placeholder Exhibit Q in [motion_exhibit_index.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/motion_exhibit_index.md).
+15. Issue identity between prior and present claims: to be shown in a comparison chart or declaration after the prior separate proceeding record is produced.
+16. Any declaration or documentary support for collateral housing influence or outside interference: the March 23 declarations, HACC-related notices, and any later source records if produced.
+17. Resulting prejudice, delay, or burden: the current damages and delay materials, including the HACC delay memo and shared exhibit set, with supplementation if monetary relief is later sought.
 
 ### IV. Requested hearing structure
 

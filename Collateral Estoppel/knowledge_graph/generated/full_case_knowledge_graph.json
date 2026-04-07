@@ -772,7 +772,7 @@
       "args": [
         "doc:06_oregon_authority_table_placeholders.md"
       ],
-      "value": true,
+      "value": false,
       "status": "verified",
       "source": "06_oregon_authority_table_placeholders.md",
       "dates": [
@@ -8215,7 +8215,7 @@
     {
       "from": "rule:r22_case_obligated_finalize_authority_citations_before_filing",
       "to": "case:guardianship_collateral_estoppel",
-      "relation": "active_verified"
+      "relation": "inactive"
     },
     {
       "from": "rule:r23_case_permitted_initiate_remedial_contempt_path",

@@ -2,9 +2,9 @@
   "generated_at": "2026-04-07",
   "modes": {
     "strict": {
-      "active_rule_count": 30,
+      "active_rule_count": 29,
       "unresolved_rule_count": 6,
-      "inactive_rule_count": 3,
+      "inactive_rule_count": 4,
       "parties": [
         {
           "party": "case:26PR00641",
@@ -56,12 +56,6 @@
               "action": "resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record",
               "target": "issue:interference_actor_assignment",
               "rule_id": "r21_case_obligated_resolve_actor_assignment_conflict",
-              "activation_date_estimate": "2026-04-07"
-            },
-            {
-              "action": "finalize_governing_authority_citations_before_final_filing",
-              "target": "doc:06_oregon_authority_table_placeholders.md",
-              "rule_id": "r22_case_obligated_finalize_authority_citations_before_filing",
               "activation_date_estimate": "2026-04-07"
             }
           ],
@@ -117,7 +111,7 @@
           ],
           "prohibitions": [],
           "counts": {
-            "O": 3,
+            "O": 2,
             "P": 8,
             "F": 0
           }
@@ -253,9 +247,9 @@
       ]
     },
     "inclusive": {
-      "active_rule_count": 31,
+      "active_rule_count": 30,
       "unresolved_rule_count": 5,
-      "inactive_rule_count": 3,
+      "inactive_rule_count": 4,
       "parties": [
         {
           "party": "case:26PR00641",
@@ -307,12 +301,6 @@
               "action": "resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record",
               "target": "issue:interference_actor_assignment",
               "rule_id": "r21_case_obligated_resolve_actor_assignment_conflict",
-              "activation_date_estimate": "2026-04-07"
-            },
-            {
-              "action": "finalize_governing_authority_citations_before_final_filing",
-              "target": "doc:06_oregon_authority_table_placeholders.md",
-              "rule_id": "r22_case_obligated_finalize_authority_citations_before_filing",
               "activation_date_estimate": "2026-04-07"
             }
           ],
@@ -374,7 +362,7 @@
           ],
           "prohibitions": [],
           "counts": {
-            "O": 3,
+            "O": 2,
             "P": 9,
             "F": 0
           }
