@@ -18,23 +18,27 @@ I certify that on ____________, 2026, I served true and correct copies of the fo
 4. Declaration of Benjamin Barber in Support of Motions.
 5. Exhibit Legend and Exhibits.
 
-on the following person(s):
+on the following person(s), with the exact method/date/proof reference stated below:
 
 1. Solomon Barber (Respondent/Petitioner)
    Service address: 4305 NE 125th Ave, Vancouver, WA 98682
    Service phone: (503) 381-6911
-   Service method: First-class U.S. Mail (and additional method as available)
+   Date served: ___________________
+   Service method actually used: ___________________
+   Proof reference (receipt/tracking/affidavit/email log): ___________________
 
 2. Additional party/counsel (if any): ___________________
    Service address: N/A if none
-   Service method: N/A if none
+   Date served: ___________________
+   Service method actually used: ___________________
+   Proof reference (receipt/tracking/affidavit/email log): ___________________
 
-Service was completed by the following method(s):
+Service-method key (select only the method actually used for each recipient entry above):
 
 1. First-class U.S. Mail.
 2. Personal service.
-3. Email/eService (if permitted by rule/order).
-4. Other: __________________________________________.
+3. Email/eService (if permitted by rule/order/acceptance).
+4. Other authorized method: __________________________________________.
 
 I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct.
 

@@ -19,12 +19,14 @@ The strongest current local record supports that at least one restraining / prot
 - an Oregon circuit court form,
 - respondent text best read as `Solomon Samuel Barber`,
 - an order re guardian ad litem / related protective proceeding material,
+- material identifying `Benjamin Jay Barber` as the named guardian ad litem / guardian petitioner for `Jane Kay Cortez`,
 - order language showing a motion marked `GRANTED`,
 - later order language restraining respondent from controlling petitioner's money or property and ordering respondent to follow the instructions of petitioner's guardian or conservator.
 
 4. A later Solomon text thread on `2026-03-10` reflects Solomon discussing whether the order was in effect and whether he had been served, which is consistent with the existence of an already issued order rather than a purely hypothetical dispute.
 
 5. The staged OCR from the scan itself now adds direct support:
+- Pages 1-2 and related packet material support that `Benjamin Jay Barber` appears as the named guardian ad litem / guardian petitioner for `Jane Kay Cortez`.
 - Page 5 identifies the matter as an Oregon `Restraining Order to Prevent Abuse` under the `Elderly Persons and Persons with Disabilities Abuse Prevention Act`, naming `Solomon Samuel Barber` as respondent.
 - Page 6 includes property-control restrictions and states respondent is `ordered to follow the instructions of Petitioner's guardian or conservator`.
 - Page 6 also states `No further service is necessary because Respondent appeared in person before the court`.
@@ -51,6 +53,7 @@ These should not be conflated with the Solomon order.
 - `High confidence`: a restraining / protective order process against Solomon Samuel Barber was underway by `2025-11-19`.
 - `High confidence`: local transcript evidence states the order was granted on `2025-11-20`.
 - `High confidence`: the scanned order materials identify Solomon Samuel Barber as the respondent.
+- `High confidence`: the same packet identifies Benjamin Jay Barber in the guardian ad litem / guardian petitioner role for Jane Kay Cortez.
 - `High confidence`: the order was granted and included restraints on abuse/contact and on control or transfer of petitioner property.
 - `High confidence`: the order text says no further service was necessary because respondent appeared in person before the court.
 - `High confidence`: the filing sequence reflected in the packet is November 19, 2025 filing materials followed by a November 20, 2025 restraining-order grant.

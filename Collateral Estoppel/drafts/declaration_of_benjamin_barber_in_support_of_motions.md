@@ -33,20 +33,20 @@ I, Benjamin Barber, declare as follows:
 
 ### C. Statements tied to collateral-estoppel relief (proof-gated)
 
-10. I believe there is a substantial overlap between issues raised in the present filing posture and issues that may have been addressed in prior proceedings.
-11. I understand that final collateral-estoppel adjudication requires certified proof of prior final decision, issue identity, and full and fair opportunity to be heard.
-12. I request dismissal or narrowing to the extent those required elements are established by certified exhibits.
+10. The March 31, 2026 guardianship petition seeks broad authority over Jane Kay Cortez, including residence-related circumstances, APS interface, and possible law-enforcement transport, while also stating that no prior guardian, trustee, health-care representative, or attorney-in-fact previously existed.
+11. My earlier review of materials in this repository repeatedly raised the possibility that prior authority-related proceedings or appointments may already have addressed overlapping control issues concerning Jane Kay Cortez.
+12. I do not yet claim that final issue preclusion has been proven. I understand that final collateral-estoppel adjudication requires certified proof of prior final decision, issue identity, party/privity, and full and fair opportunity to be heard.
+13. I request dismissal only to the extent those elements are already established by certified exhibits, and otherwise request narrowing or a threshold preclusion record before unrestricted merits litigation proceeds.
 
 ### D. Statements tied to GAL appointment
 
-13. I believe the present record reflects material factual conflicts that affect decision quality for Jane Kay Cortez.
-14. I request appointment of a neutral GAL to review pleadings, service/notice chronology, and any housing-linked influence allegations and to distinguish proven facts from unproven assertions.
+14. I believe the present record reflects material factual conflicts that affect decision quality for Jane Kay Cortez.
+15. I request appointment of a neutral GAL to review pleadings, service/notice chronology, and any housing-linked influence allegations and to distinguish proven facts from unproven assertions.
 
 ### E. Graph-assisted support materials
 
-15. I rely on current generated analytics only as organizational tools and not as a substitute for admissible proof.
-16. The strict-mode reasoning output dated April 7, 2026 identifies active obligation/prohibition pathways tied to dated records, and also flags a proof boundary where some interference assertions remain inference-only absent direct evidence. See [deontic_reasoning_report.json](/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/deontic_reasoning_report.json).
-17. I request that the Court treat these generated outputs as summary aids pending final exhibit authentication.
+16. I rely on current generated analytics only as organizational tools and not as a substitute for admissible proof.
+17. To the extent any generated summary is referenced, I request that it be treated only as a working organizational aid and not as a substitute for certified records, admissible exhibits, and testimony.
 
 I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct to the best of my knowledge.
 

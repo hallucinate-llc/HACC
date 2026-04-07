@@ -1,0 +1,389 @@
+{
+  "generated_at": "2026-04-07",
+  "summary": {
+    "strict_active_count": 39,
+    "strict_unresolved_count": 6,
+    "strict_inactive_count": 4,
+    "closure_items": 10
+  },
+  "execution_sequence": [
+    "1) Confirm and log first subpoena service event to activate r17.",
+    "2) Monitor due dates and log true incomplete-response trigger to activate r18.",
+    "3) Issue and log deficiency notice to activate r19 when criteria are met.",
+    "4) Assemble certified nonappearance packet for r24.",
+    "5) Assemble certified issue-preclusion packet for r7.",
+    "6) Convert remaining hypothesis-track antecedents from alleged/theory to verified as records are obtained."
+  ],
+  "items": [
+    {
+      "mode": "strict",
+      "classification": "inactive",
+      "rule_id": "r17_responding_custodian_obligated_execute_or_query_protocol_upon_service",
+      "track": "workflow",
+      "authority_refs": [
+        "auth:orcp_55"
+      ],
+      "activation_date_estimate": "2026-04-07",
+      "plan": {
+        "priority": "high",
+        "closure_type": "service_event",
+        "action": "Log first confirmed service event in active service log (status/date/method/person served/production due).",
+        "expected_effect": "r17 becomes active."
+      },
+      "antecedents": [
+        {
+          "fact_id": "f_subpoena_service_completed_any",
+          "status": "verified",
+          "value": "false",
+          "dates": [
+            "2026-04-07"
+          ]
+        },
+        {
+          "fact_id": "f_or_joined_search_protocol_defined",
+          "status": "verified",
+          "value": "true",
+          "dates": [
+            "2026-04-07"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "strict",
+      "classification": "inactive",
+      "rule_id": "r18_benjamin_permitted_issue_deficiency_notice_after_incomplete_subpoena_response",
+      "track": "workflow",
+      "authority_refs": [
+        "auth:orcp_46",
+        "auth:orcp_55"
+      ],
+      "activation_date_estimate": "2026-04-07",
+      "plan": {
+        "priority": "high",
+        "closure_type": "response_timing_or_deficiency",
+        "action": "Log true incomplete-response trigger (overdue production, missing required artifacts after production, or deficiency stage).",
+        "expected_effect": "r18 becomes active."
+      },
+      "antecedents": [
+        {
+          "fact_id": "f_subpoena_response_incomplete_any",
+          "status": "verified",
+          "value": "false",
+          "dates": [
+            "2026-04-07"
+          ]
+        },
+        {
+          "fact_id": "f_subpoena_workflow_components_staged",
+          "status": "verified",
+          "value": "true",
+          "dates": [
+            "2026-04-07"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "strict",
+      "classification": "inactive",
+      "rule_id": "r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage",
+      "track": "workflow",
+      "authority_refs": [
+        "auth:orcp_46",
+        "auth:orcp_55"
+      ],
+      "activation_date_estimate": "2026-04-07",
+      "plan": {
+        "priority": "high",
+        "closure_type": "deficiency_notice_event",
+        "action": "Log deficiency notice sent/date (or deficiency stage status).",
+        "expected_effect": "r19 becomes active."
+      },
+      "antecedents": [
+        {
+          "fact_id": "f_deficiency_notice_sent_any",
+          "status": "verified",
+          "value": "false",
+          "dates": [
+            "2026-04-07"
+          ]
+        },
+        {
+          "fact_id": "f_subpoena_workflow_components_staged",
+          "status": "verified",
+          "value": "true",
+          "dates": [
+            "2026-04-07"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "strict",
+      "classification": "unresolved",
+      "rule_id": "r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+      "track": "filing",
+      "authority_refs": [
+        "auth:ors_33_075"
+      ],
+      "activation_date_estimate": "2026-04-07",
+      "plan": {
+        "priority": "high",
+        "closure_type": "certified_nonappearance_record",
+        "action": "Add certified hearing register/minute entry and service/order-to-appear record proving nonappearance.",
+        "expected_effect": "r24 moves from unresolved to active in strict mode."
+      },
+      "antecedents": [
+        {
+          "fact_id": "f_authority_ors_33_075_compel_appearance",
+          "status": "verified",
+          "value": "true",
+          "dates": [
+            "2026-04-07"
+          ]
+        },
+        {
+          "fact_id": "f_client_solomon_failed_appearance",
+          "status": "alleged",
+          "value": "true",
+          "dates": [
+            "2026-03-10",
+            "2026-04-07"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "strict",
+      "classification": "unresolved",
+      "rule_id": "r7_solomon_forbidden_refile_precluded_issue",
+      "track": "hypothesis",
+      "authority_refs": [
+        "auth:oregon_issue_preclusion_cases",
+        "auth:oregon_issue_preclusion_prior_separate_proceeding_cases"
+      ],
+      "activation_date_estimate": "2026-04-07",
+      "plan": {
+        "priority": "high",
+        "closure_type": "issue_preclusion_proof_packet",
+        "action": "Add certified prior final order/judgment, identity-of-issue comparison, and full/fair opportunity record.",
+        "expected_effect": "r7 moves from unresolved to active in strict mode."
+      },
+      "antecedents": [
+        {
+          "fact_id": "f_authority_issue_preclusion_elements_official_oregon_cases",
+          "status": "verified",
+          "value": "true",
+          "dates": [
+            "2026-04-07"
+          ]
+        },
+        {
+          "fact_id": "f_authority_issue_preclusion_requires_prior_separate_proceeding",
+          "status": "verified",
+          "value": "true",
+          "dates": [
+            "2026-04-07"
+          ]
+        },
+        {
+          "fact_id": "f_collateral_estoppel_candidate",
+          "status": "theory",
+          "value": "true",
+          "dates": [
+            "2026-04-07"
+          ]
+        },
+        {
+          "fact_id": "f_client_solomon_barred_refile",
+          "status": "alleged",
+          "value": "true",
+          "dates": [
+            "2026-03-31",
+            "2026-04-07"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "strict",
+      "classification": "unresolved",
+      "rule_id": "r1_guardian_permission_if_prior_appointment",
+      "track": "hypothesis",
+      "authority_refs": [
+        "auth:ors_125_050"
+      ],
+      "activation_date_estimate": "2026-04-07",
+      "plan": {
+        "priority": "medium",
+        "closure_type": "prior_appointment_proof",
+        "action": "Add certified prior guardianship appointment order and supporting service/compliance records.",
+        "expected_effect": "r1-r3 move from unresolved to active in strict mode (if all antecedents verified)."
+      },
+      "antecedents": [
+        {
+          "fact_id": "f_authority_ors_125_050_protective_orcp_oec",
+          "status": "verified",
+          "value": "true",
+          "dates": [
+            "2026-04-07"
+          ]
+        },
+        {
+          "fact_id": "f_client_prior_appointment",
+          "status": "alleged",
+          "value": "true",
+          "dates": [
+            "2026-04-07"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "strict",
+      "classification": "unresolved",
+      "rule_id": "r2_noninterference_prohibition_for_benjamin",
+      "track": "hypothesis",
+      "authority_refs": [
+        "auth:ors_125_050"
+      ],
+      "activation_date_estimate": "2026-04-07",
+      "plan": {
+        "priority": "medium",
+        "closure_type": "prior_appointment_proof",
+        "action": "Add certified prior guardianship appointment order and supporting service/compliance records.",
+        "expected_effect": "r1-r3 move from unresolved to active in strict mode (if all antecedents verified)."
+      },
+      "antecedents": [
+        {
+          "fact_id": "f_authority_ors_125_050_protective_orcp_oec",
+          "status": "verified",
+          "value": "true",
+          "dates": [
+            "2026-04-07"
+          ]
+        },
+        {
+          "fact_id": "f_client_prior_appointment",
+          "status": "alleged",
+          "value": "true",
+          "dates": [
+            "2026-04-07"
+          ]
+        },
+        {
+          "fact_id": "f_client_benjamin_housing_interference",
+          "status": "alleged",
+          "value": "true",
+          "dates": [
+            "2026-04-07"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "strict",
+      "classification": "unresolved",
+      "rule_id": "r3_benjamin_obligation_comply_or_seek_relief",
+      "track": "hypothesis",
+      "authority_refs": [
+        "auth:ors_125_050"
+      ],
+      "activation_date_estimate": "2026-04-07",
+      "plan": {
+        "priority": "medium",
+        "closure_type": "prior_appointment_proof",
+        "action": "Add certified prior guardianship appointment order and supporting service/compliance records.",
+        "expected_effect": "r1-r3 move from unresolved to active in strict mode (if all antecedents verified)."
+      },
+      "antecedents": [
+        {
+          "fact_id": "f_authority_ors_125_050_protective_orcp_oec",
+          "status": "verified",
+          "value": "true",
+          "dates": [
+            "2026-04-07"
+          ]
+        },
+        {
+          "fact_id": "f_client_prior_appointment",
+          "status": "alleged",
+          "value": "true",
+          "dates": [
+            "2026-04-07"
+          ]
+        },
+        {
+          "fact_id": "f_client_benjamin_order_disregard",
+          "status": "alleged",
+          "value": "true",
+          "dates": [
+            "2026-04-07"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "strict",
+      "classification": "unresolved",
+      "rule_id": "r5_solomon_obligated_appear_and_answer",
+      "track": "hypothesis",
+      "authority_refs": [
+        "order:eppdapa_restraining_order"
+      ],
+      "activation_date_estimate": "2026-04-07",
+      "plan": {
+        "priority": "medium",
+        "closure_type": "nonappearance_proof",
+        "action": "Add certified record proving failure to appear in related hearing context.",
+        "expected_effect": "r5 moves from unresolved to active in strict mode."
+      },
+      "antecedents": [
+        {
+          "fact_id": "f_restraining_order_no_further_service_needed",
+          "status": "verified",
+          "value": "true",
+          "dates": [
+            "2025-11-20"
+          ]
+        },
+        {
+          "fact_id": "f_client_solomon_failed_appearance",
+          "status": "alleged",
+          "value": "true",
+          "dates": [
+            "2026-03-10",
+            "2026-04-07"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "strict",
+      "classification": "inactive",
+      "rule_id": "r22_case_obligated_finalize_authority_citations_before_filing",
+      "track": "filing",
+      "authority_refs": [
+        "auth:orcp_17_c"
+      ],
+      "activation_date_estimate": "2026-04-07",
+      "plan": {
+        "priority": "low",
+        "closure_type": "predicate_state_confirmation",
+        "action": "If authority placeholders are now resolved, keep r22 inactive by design; if placeholders reappear, update source file and regenerate.",
+        "expected_effect": "Maintains accurate filing-readiness signal."
+      },
+      "antecedents": [
+        {
+          "fact_id": "f_authority_table_placeholders_unresolved",
+          "status": "verified",
+          "value": "false",
+          "dates": [
+            "2026-04-07"
+          ]
+        }
+      ]
+    }
+  ]
+}

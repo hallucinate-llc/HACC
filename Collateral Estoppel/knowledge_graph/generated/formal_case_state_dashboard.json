@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-04-07",
+  "filing_ready_now": [
+    {
+      "branch_id": "remedial_contempt_show_cause",
+      "label": "Remedial contempt / show-cause timing branch",
+      "status": "substantially_filing_ready",
+      "promotion_trigger": "Stage certified appearance or docket materials to strengthen filing-grade contempt support."
+    },
+    {
+      "branch_id": "probate_objection_hearing",
+      "label": "Probate objection / hearing branch",
+      "status": "filing_ready",
+      "promotion_trigger": "No additional promotion trigger required for baseline hearing posture."
+    },
+    {
+      "branch_id": "hacc_exhibit_r_compelled_production",
+      "label": "HACC Exhibit R compelled-production branch",
+      "status": "filing_ready_for_subpoena",
+      "promotion_trigger": "Serve the nonparty HACC packet and log service in the active service log."
+    }
+  ],
+  "proof_gated_now": [
+    {
+      "branch_id": "orcp17_sanctions_merits",
+      "label": "ORCP 17 sanctions merits branch",
+      "status": "proof_gated",
+      "current_progress": "challenged filing identified; sanctions predicates still proof-gated",
+      "promotion_trigger": "Complete orcp17_filing_mapping.json for a specific challenged filing."
+    },
+    {
+      "branch_id": "issue_preclusion_merits",
+      "label": "Issue-preclusion merits branch",
+      "status": "proof_gated",
+      "current_progress": "doctrine grounded; prior proceeding record and element mapping still incomplete",
+      "promotion_trigger": "Stage certified prior-proceeding materials and complete issue_preclusion_mapping.json."
+    }
+  ],
+  "workflow_open_now": [
+    {
+      "branch_id": "exhibit_r_subpoena_workflow",
+      "label": "Exhibit R subpoena workflow",
+      "status": "workflow_open",
+      "promotion_trigger": "Update 28_active_service_log_2026-04-07.csv as service and later deficiency/compel events occur."
+    },
+    {
+      "branch_id": "certified_prior_proceeding_staging",
+      "label": "Certified prior-proceeding staging hook",
+      "status": "workflow_open",
+      "promotion_trigger": "Place certified prior-order, docket/register, and hearing/appearance files in evidence_notes/certified_records."
+    }
+  ]
+}

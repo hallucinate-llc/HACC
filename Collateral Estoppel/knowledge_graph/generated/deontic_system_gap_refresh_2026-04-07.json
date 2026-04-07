@@ -1,0 +1,197 @@
+{
+  "generated_at": "2026-04-07",
+  "strict_counts": {
+    "active": 42,
+    "unresolved": 6,
+    "inactive": 4
+  },
+  "inclusive_counts": {
+    "active": 43,
+    "unresolved": 5,
+    "inactive": 4
+  },
+  "law_grounding_status": {
+    "rules_without_authority_refs": 0,
+    "local_rule_authority_objects_present": true,
+    "local_rule_workflow_rule_present": true
+  },
+  "remaining_evidence_gaps": {
+    "strict_unresolved": [
+      {
+        "rule_id": "r1_guardian_permission_if_prior_appointment",
+        "track": "hypothesis",
+        "blockers": [
+          {
+            "fact_id": "f_client_prior_appointment",
+            "status": "alleged",
+            "value": "true",
+            "dates": [
+              "2026-04-07"
+            ]
+          }
+        ]
+      },
+      {
+        "rule_id": "r2_noninterference_prohibition_for_benjamin",
+        "track": "hypothesis",
+        "blockers": [
+          {
+            "fact_id": "f_client_prior_appointment",
+            "status": "alleged",
+            "value": "true",
+            "dates": [
+              "2026-04-07"
+            ]
+          },
+          {
+            "fact_id": "f_client_benjamin_housing_interference",
+            "status": "alleged",
+            "value": "true",
+            "dates": [
+              "2026-04-07"
+            ]
+          }
+        ]
+      },
+      {
+        "rule_id": "r3_benjamin_obligation_comply_or_seek_relief",
+        "track": "hypothesis",
+        "blockers": [
+          {
+            "fact_id": "f_client_prior_appointment",
+            "status": "alleged",
+            "value": "true",
+            "dates": [
+              "2026-04-07"
+            ]
+          },
+          {
+            "fact_id": "f_client_benjamin_order_disregard",
+            "status": "alleged",
+            "value": "true",
+            "dates": [
+              "2026-04-07"
+            ]
+          }
+        ]
+      },
+      {
+        "rule_id": "r5_solomon_obligated_appear_and_answer",
+        "track": "hypothesis",
+        "blockers": [
+          {
+            "fact_id": "f_client_solomon_failed_appearance",
+            "status": "alleged",
+            "value": "true",
+            "dates": [
+              "2026-03-10",
+              "2026-04-07"
+            ]
+          }
+        ]
+      },
+      {
+        "rule_id": "r7_solomon_forbidden_refile_precluded_issue",
+        "track": "hypothesis",
+        "blockers": [
+          {
+            "fact_id": "f_collateral_estoppel_candidate",
+            "status": "theory",
+            "value": "true",
+            "dates": [
+              "2026-04-07"
+            ]
+          },
+          {
+            "fact_id": "f_client_solomon_barred_refile",
+            "status": "alleged",
+            "value": "true",
+            "dates": [
+              "2026-03-31",
+              "2026-04-07"
+            ]
+          }
+        ]
+      },
+      {
+        "rule_id": "r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+        "track": "filing",
+        "blockers": [
+          {
+            "fact_id": "f_client_solomon_failed_appearance",
+            "status": "alleged",
+            "value": "true",
+            "dates": [
+              "2026-03-10",
+              "2026-04-07"
+            ]
+          }
+        ]
+      }
+    ],
+    "strict_inactive": [
+      {
+        "rule_id": "r17_responding_custodian_obligated_execute_or_query_protocol_upon_service",
+        "track": "workflow",
+        "blockers": [
+          {
+            "fact_id": "f_subpoena_service_completed_any",
+            "status": "verified",
+            "value": "false",
+            "dates": [
+              "2026-04-07"
+            ]
+          }
+        ]
+      },
+      {
+        "rule_id": "r18_benjamin_permitted_issue_deficiency_notice_after_incomplete_subpoena_response",
+        "track": "workflow",
+        "blockers": [
+          {
+            "fact_id": "f_subpoena_response_incomplete_any",
+            "status": "verified",
+            "value": "false",
+            "dates": [
+              "2026-04-07"
+            ]
+          }
+        ]
+      },
+      {
+        "rule_id": "r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage",
+        "track": "workflow",
+        "blockers": [
+          {
+            "fact_id": "f_deficiency_notice_sent_any",
+            "status": "verified",
+            "value": "false",
+            "dates": [
+              "2026-04-07"
+            ]
+          }
+        ]
+      },
+      {
+        "rule_id": "r22_case_obligated_finalize_authority_citations_before_filing",
+        "track": "filing",
+        "blockers": [
+          {
+            "fact_id": "f_authority_table_placeholders_unresolved",
+            "status": "verified",
+            "value": "false",
+            "dates": [
+              "2026-04-07"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "priority_closure_targets": [
+    "certified_nonappearance_packet_for_f_client_solomon_failed_appearance",
+    "certified_issue_preclusion_packet_for_f_collateral_estoppel_candidate_and_f_client_solomon_barred_refile",
+    "certified_prior_appointment_order_for_f_client_prior_appointment",
+    "active_service_log_updates_to_activate_r17_r18_r19"
+  ]
+}

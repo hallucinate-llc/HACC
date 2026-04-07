@@ -80,6 +80,8 @@ def main() -> None:
                 row_issues.append(f"invalid_date_format:{f}:{raw}")
 
         date_served = parsed_dates.get('date_served')
+        production_due = parsed_dates.get('production_due')
+        production_received = parsed_dates.get('date_production_received')
         deficiency_sent = parsed_dates.get('deficiency_notice_sent')
         compel_filed = parsed_dates.get('motion_to_compel_filed')
 
@@ -98,15 +100,19 @@ def main() -> None:
         if status == 'motion_to_compel_stage' and not compel_filed:
             row_warnings.append('motion_to_compel_stage_without_motion_date')
 
-        if date_served and status in {'served', 'awaiting_production', 'deficiency_notice_stage', 'motion_to_compel_stage'}:
-            if checklist in {'', 'n', 'no', 'false'} or search_report in {'', 'n', 'no', 'false'}:
-                row_warnings.append('served_with_missing_required_return_artifacts')
+        overdue_after_service = bool(date_served and production_due and production_due < str(date.today()))
+        artifacts_missing = checklist in {'', 'n', 'no', 'false'} or search_report in {'', 'n', 'no', 'false'}
+        if status == 'production_received' and artifacts_missing:
+            row_warnings.append('production_received_with_missing_required_return_artifacts')
+        if overdue_after_service and (not production_received or artifacts_missing):
+            row_warnings.append('production_overdue_or_incomplete_after_due_date')
 
         # derived activations (mirror generator semantics)
         row_served = (status in {'served', 'awaiting_production', 'production_received', 'deficiency_notice_stage', 'motion_to_compel_stage'}) or bool(date_served)
         row_incomplete = (
-            status in {'awaiting_production', 'deficiency_notice_stage', 'motion_to_compel_stage'}
-            or (bool(date_served) and (checklist in {'', 'n', 'no', 'false'} or search_report in {'', 'n', 'no', 'false'}))
+            status in {'deficiency_notice_stage', 'motion_to_compel_stage'}
+            or (status == 'production_received' and artifacts_missing)
+            or (overdue_after_service and (not production_received or artifacts_missing))
         )
         row_deficiency = status in {'deficiency_notice_stage', 'motion_to_compel_stage'} or bool(deficiency_sent)
         row_compel = status == 'motion_to_compel_stage' or bool(compel_filed)

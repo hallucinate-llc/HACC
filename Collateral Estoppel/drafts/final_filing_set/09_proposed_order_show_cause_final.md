@@ -20,6 +20,7 @@ The Court, having reviewed the Motion for Order to Show Cause and the file and r
    c. requested sanctions or remedial measures.
 3. The parties shall file certified docket/order materials relevant to notice, appearance, and preclusion issues by: ______________________.
 4. Failure to comply with this Order may result in further sanctions or other relief authorized by law.
+5. The Court notes that counsel-contact emails in the same Jane Cortez guardianship controversy may be considered as notice context only; formal service-validity issues remain reserved for determination on the service record.
 
 IT IS SO ORDERED.
 

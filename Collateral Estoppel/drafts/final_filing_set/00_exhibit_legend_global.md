@@ -1,6 +1,6 @@
 # Global Exhibit Legend (Final Filing Set)
 
-Case No.: `26PR00641` (verify against certified docket before filing)
+Case No.: `26PR00641` (confirm against certified docket at filing)
 
 ## Shared numbering for all motions and declaration
 
@@ -11,11 +11,17 @@ Case No.: `26PR00641` (verify against certified docket before filing)
 5. **Exhibit 5**: [motion_support_map.json](/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/motion_support_map.json)
 6. **Exhibit 6**: [protective_order_and_hacc_notice_timeline.md](/home/barberb/HACC/Collateral Estoppel/evidence_notes/protective_order_and_hacc_notice_timeline.md)
 7. **Exhibit 7**: [HACC vawa violation.pdf](/home/barberb/HACC/evidence/paper documents/HACC vawa violation.pdf)
-8. **Exhibit 8**: Certified docket/register of actions and operative signed orders in case `26PR00641` (to attach)
-9. **Exhibit 9**: Certified prior final order/judgment supporting collateral-estoppel elements (to attach)
-10. **Exhibit 10**: Certified hearing/appearance record showing notice and full and fair opportunity (to attach)
+8. **Exhibit 8**: Certified docket/register of actions for case `26PR00641` (including certification that no signed order was entered, if reflected by the register) (pending certified retrieval)
+9. **Exhibit 9**: Certified signed restraining-order/final-order record for case `25PO11530` (Sam Barber restraining-order matter) supporting collateral-estoppel elements (pending certified retrieval)
+10. **Exhibit 10**: Certified hearing/appearance record showing notice and full and fair opportunity (pending certified retrieval)
 
 Use this numbering unchanged across all filed documents.
+
+Generated live-status appendix:
+- [formal_case_state_dashboard.md](/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/formal_case_state_dashboard.md)
+- [formal_case_state_dashboard.json](/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/formal_case_state_dashboard.json)
+
+Use the generated dashboard as a branch-status aid for internal packet management and proof-gate tracking. Do not treat it as a substitute for admissible exhibits unless separately authenticated and offered.
 
 Related proposed orders:
 - [07_proposed_order_appoint_gal_final.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/07_proposed_order_appoint_gal_final.md)

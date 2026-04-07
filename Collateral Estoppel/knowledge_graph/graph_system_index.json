@@ -1,0 +1,76 @@
+{
+  "generatedAt": "2026-04-07",
+  "purpose": "Top-level registry for the Collateral Estoppel graph and deontic reasoning system",
+  "layers": [
+    {
+      "layerId": "core_case_graph",
+      "label": "Core case graph",
+      "files": [
+        "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/guardianship_case_graph.json",
+        "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/guardianship_case_graph.md"
+      ],
+      "role": "Main graph for parties, events, proof targets, findings, and broad issues"
+    },
+    {
+      "layerId": "workflow_subgraphs",
+      "label": "Workflow subgraphs",
+      "subgraphs": [
+        {
+          "subgraphId": "orcp17",
+          "files": [
+            "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/orcp17_workflow_subgraph.json",
+            "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/orcp17_workflow_subgraph.md"
+          ],
+          "role": "Sanctions-branch predicate gating and promotion workflow"
+        },
+        {
+          "subgraphId": "exhibit_r",
+          "files": [
+            "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/exhibit_r_workflow_subgraph.json",
+            "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/exhibit_r_workflow_subgraph.md"
+          ],
+          "role": "HACC nonparty subpoena workflow and service-state tracking"
+        },
+        {
+          "subgraphId": "issue_preclusion",
+          "files": [
+            "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/issue_preclusion_workflow_subgraph.json",
+            "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/issue_preclusion_workflow_subgraph.md"
+          ],
+          "role": "Certified-record staging and issue-preclusion mapping workflow"
+        }
+      ]
+    },
+    {
+      "layerId": "architecture_notes",
+      "label": "Deontic architecture notes",
+      "files": [
+        "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/authority_and_proof_state_schema.md",
+        "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/deontic_theorem_workbook.md"
+      ],
+      "role": "Schema and theorem-level context for the logic system"
+    },
+    {
+      "layerId": "generators",
+      "label": "Generators",
+      "files": [
+        "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generate_formal_reasoning_artifacts.py",
+        "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generate_motion_support_map.py",
+        "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generate_motion_paragraph_bank.py"
+      ],
+      "role": "Primary scripts that emit live reasoning and drafting outputs"
+    },
+    {
+      "layerId": "generated_outputs",
+      "label": "Generated outputs",
+      "files": [
+        "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/formal_case_state_dashboard.md",
+        "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/orcp17_readiness_snapshot.md",
+        "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/deontic_reasoning_report.md",
+        "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/motion_support_map.md",
+        "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/motion_paragraph_bank.md"
+      ],
+      "role": "Live branch status, audit outputs, and drafting support"
+    }
+  ]
+}

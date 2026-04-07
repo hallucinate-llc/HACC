@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-04-07",
+  "tracker_file": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/45_certified_records_intake_tracker_template_2026-04-07.csv",
+  "known_fact_count": 438,
+  "suggestion_count": 0,
+  "warning_count": 3,
+  "suggestions": [],
+  "warnings": [
+    {
+      "row": 2,
+      "reason": "not_marked_certified",
+      "file_name": "hearing__26PR00641__unknown__nonappearance_minutes.pdf"
+    },
+    {
+      "row": 3,
+      "reason": "not_marked_certified",
+      "file_name": "prior_order__26PR00641__unknown__prior_final_order.pdf"
+    },
+    {
+      "row": 4,
+      "reason": "not_marked_certified",
+      "file_name": "appointment__26PR00641__unknown__appointment_order_benjamin_barber.pdf"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "generated_at": "2026-04-07",
+  "source_tracker": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/57_issue_preclusion_case_request_tracker_2026-04-07.csv",
+  "totals": {
+    "cases_total": 4,
+    "cases_complete": 0,
+    "cases_incomplete": 4
+  },
+  "pending_by_field": {
+    "certified_records_received": 4,
+    "finality_records_complete": 4,
+    "opportunity_records_complete": 4,
+    "party_identity_records_complete": 4,
+    "intake_logged": 4,
+    "mapping_updated": 4
+  },
+  "cases": [
+    {
+      "case_number": "26PR00641",
+      "request_channel": "submitted",
+      "response_due_date": "2026-04-21",
+      "response_received_date": "",
+      "flags": {
+        "certified_records_received": false,
+        "finality_records_complete": false,
+        "opportunity_records_complete": false,
+        "party_identity_records_complete": false,
+        "intake_logged": false,
+        "mapping_updated": false
+      },
+      "complete": false,
+      "pending_fields": [
+        "certified_records_received",
+        "finality_records_complete",
+        "opportunity_records_complete",
+        "party_identity_records_complete",
+        "intake_logged",
+        "mapping_updated"
+      ],
+      "notes": "Initial request queue row."
+    },
+    {
+      "case_number": "25PO11318",
+      "request_channel": "submitted",
+      "response_due_date": "2026-04-21",
+      "response_received_date": "",
+      "flags": {
+        "certified_records_received": false,
+        "finality_records_complete": false,
+        "opportunity_records_complete": false,
+        "party_identity_records_complete": false,
+        "intake_logged": false,
+        "mapping_updated": false
+      },
+      "complete": false,
+      "pending_fields": [
+        "certified_records_received",
+        "finality_records_complete",
+        "opportunity_records_complete",
+        "party_identity_records_complete",
+        "intake_logged",
+        "mapping_updated"
+      ],
+      "notes": "Initial request queue row."
+    },
+    {
+      "case_number": "26P000432",
+      "request_channel": "submitted",
+      "response_due_date": "2026-04-21",
+      "response_received_date": "",
+      "flags": {
+        "certified_records_received": false,
+        "finality_records_complete": false,
+        "opportunity_records_complete": false,
+        "party_identity_records_complete": false,
+        "intake_logged": false,
+        "mapping_updated": false
+      },
+      "complete": false,
+      "pending_fields": [
+        "certified_records_received",
+        "finality_records_complete",
+        "opportunity_records_complete",
+        "party_identity_records_complete",
+        "intake_logged",
+        "mapping_updated"
+      ],
+      "notes": "Initial request queue row."
+    },
+    {
+      "case_number": "26P000433",
+      "request_channel": "submitted",
+      "response_due_date": "2026-04-21",
+      "response_received_date": "",
+      "flags": {
+        "certified_records_received": false,
+        "finality_records_complete": false,
+        "opportunity_records_complete": false,
+        "party_identity_records_complete": false,
+        "intake_logged": false,
+        "mapping_updated": false
+      },
+      "complete": false,
+      "pending_fields": [
+        "certified_records_received",
+        "finality_records_complete",
+        "opportunity_records_complete",
+        "party_identity_records_complete",
+        "intake_logged",
+        "mapping_updated"
+      ],
+      "notes": "Initial request queue row."
+    }
+  ]
+}

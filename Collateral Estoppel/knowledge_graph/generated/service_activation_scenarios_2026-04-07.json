@@ -1,0 +1,179 @@
+{
+  "generated_at": "2026-04-07",
+  "source_log": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/28_active_service_log_2026-04-07.csv",
+  "baseline_derived_flags": {
+    "f_subpoena_service_completed_any": false,
+    "f_subpoena_response_incomplete_any": false,
+    "f_deficiency_notice_sent_any": false
+  },
+  "baseline_expected_rule_state": {
+    "r17": "inactive",
+    "r18": "inactive",
+    "r19": "inactive"
+  },
+  "scenarios": [
+    {
+      "recipient": "Solomon Barber",
+      "scenario_service_only": {
+        "derived_flags": {
+          "f_subpoena_service_completed_any": true,
+          "f_subpoena_response_incomplete_any": false,
+          "f_deficiency_notice_sent_any": false
+        },
+        "expected_rule_state": {
+          "r17": "active",
+          "r18": "inactive",
+          "r19": "inactive"
+        }
+      },
+      "scenario_with_deficiency_notice": {
+        "derived_flags": {
+          "f_subpoena_service_completed_any": true,
+          "f_subpoena_response_incomplete_any": true,
+          "f_deficiency_notice_sent_any": true
+        },
+        "expected_rule_state": {
+          "r17": "active",
+          "r18": "active",
+          "r19": "active"
+        }
+      }
+    },
+    {
+      "recipient": "HACC / Clackamas County Custodian",
+      "scenario_service_only": {
+        "derived_flags": {
+          "f_subpoena_service_completed_any": true,
+          "f_subpoena_response_incomplete_any": false,
+          "f_deficiency_notice_sent_any": false
+        },
+        "expected_rule_state": {
+          "r17": "active",
+          "r18": "inactive",
+          "r19": "inactive"
+        }
+      },
+      "scenario_with_deficiency_notice": {
+        "derived_flags": {
+          "f_subpoena_service_completed_any": true,
+          "f_subpoena_response_incomplete_any": true,
+          "f_deficiency_notice_sent_any": true
+        },
+        "expected_rule_state": {
+          "r17": "active",
+          "r18": "active",
+          "r19": "active"
+        }
+      }
+    },
+    {
+      "recipient": "ODHS / APS Custodian",
+      "scenario_service_only": {
+        "derived_flags": {
+          "f_subpoena_service_completed_any": true,
+          "f_subpoena_response_incomplete_any": false,
+          "f_deficiency_notice_sent_any": false
+        },
+        "expected_rule_state": {
+          "r17": "active",
+          "r18": "inactive",
+          "r19": "inactive"
+        }
+      },
+      "scenario_with_deficiency_notice": {
+        "derived_flags": {
+          "f_subpoena_service_completed_any": true,
+          "f_subpoena_response_incomplete_any": true,
+          "f_deficiency_notice_sent_any": true
+        },
+        "expected_rule_state": {
+          "r17": "active",
+          "r18": "active",
+          "r19": "active"
+        }
+      }
+    },
+    {
+      "recipient": "Jason Hopkins",
+      "scenario_service_only": {
+        "derived_flags": {
+          "f_subpoena_service_completed_any": true,
+          "f_subpoena_response_incomplete_any": false,
+          "f_deficiency_notice_sent_any": false
+        },
+        "expected_rule_state": {
+          "r17": "active",
+          "r18": "inactive",
+          "r19": "inactive"
+        }
+      },
+      "scenario_with_deficiency_notice": {
+        "derived_flags": {
+          "f_subpoena_service_completed_any": true,
+          "f_subpoena_response_incomplete_any": true,
+          "f_deficiency_notice_sent_any": true
+        },
+        "expected_rule_state": {
+          "r17": "active",
+          "r18": "active",
+          "r19": "active"
+        }
+      }
+    },
+    {
+      "recipient": "Tillamook County Sheriff's Office Custodian",
+      "scenario_service_only": {
+        "derived_flags": {
+          "f_subpoena_service_completed_any": true,
+          "f_subpoena_response_incomplete_any": false,
+          "f_deficiency_notice_sent_any": false
+        },
+        "expected_rule_state": {
+          "r17": "active",
+          "r18": "inactive",
+          "r19": "inactive"
+        }
+      },
+      "scenario_with_deficiency_notice": {
+        "derived_flags": {
+          "f_subpoena_service_completed_any": true,
+          "f_subpoena_response_incomplete_any": true,
+          "f_deficiency_notice_sent_any": true
+        },
+        "expected_rule_state": {
+          "r17": "active",
+          "r18": "active",
+          "r19": "active"
+        }
+      }
+    },
+    {
+      "recipient": "Tillamook 911 Custodian",
+      "scenario_service_only": {
+        "derived_flags": {
+          "f_subpoena_service_completed_any": true,
+          "f_subpoena_response_incomplete_any": false,
+          "f_deficiency_notice_sent_any": false
+        },
+        "expected_rule_state": {
+          "r17": "active",
+          "r18": "inactive",
+          "r19": "inactive"
+        }
+      },
+      "scenario_with_deficiency_notice": {
+        "derived_flags": {
+          "f_subpoena_service_completed_any": true,
+          "f_subpoena_response_incomplete_any": true,
+          "f_deficiency_notice_sent_any": true
+        },
+        "expected_rule_state": {
+          "r17": "active",
+          "r18": "active",
+          "r19": "active"
+        }
+      }
+    }
+  ],
+  "note": "Simulation only. No service log rows were modified."
+}

@@ -1,0 +1,224 @@
+{
+  "metadata": {
+    "generatedAt": "2026-04-07",
+    "purpose": "Issue-preclusion certified-records and mapping workflow subgraph",
+    "status": "workflow_graph_with_record_presence_and_mapping_gates"
+  },
+  "nodes": [
+    {
+      "id": "issue:issue_preclusion_merits",
+      "kind": "issue",
+      "name": "Issue-preclusion merits branch",
+      "verificationStatus": "proof_gated"
+    },
+    {
+      "id": "doc:certified_records_staging_readme",
+      "kind": "document",
+      "name": "Certified records staging folder guide",
+      "path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/certified_records/README.md",
+      "verificationStatus": "workflow_support"
+    },
+    {
+      "id": "doc:issue_preclusion_manifest",
+      "kind": "document",
+      "name": "Issue-preclusion mapping manifest",
+      "path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/certified_records/issue_preclusion_mapping.json",
+      "verificationStatus": "live_manifest"
+    },
+    {
+      "id": "doc:issue_preclusion_manifest_guide",
+      "kind": "document",
+      "name": "Issue-preclusion mapping guide",
+      "path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/certified_records/issue_preclusion_mapping_guide.md",
+      "verificationStatus": "workflow_support"
+    },
+    {
+      "id": "doc:issue_preclusion_mapping_layer_note",
+      "kind": "document",
+      "name": "Issue-preclusion mapping layer note",
+      "path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/issue_preclusion_mapping_layer_note_2026-04-07.md",
+      "verificationStatus": "workflow_support"
+    },
+    {
+      "id": "doc:formal_case_state_dashboard",
+      "kind": "document",
+      "name": "Formal case state dashboard",
+      "path": "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/formal_case_state_dashboard.md",
+      "verificationStatus": "generated_live_status"
+    },
+    {
+      "id": "doc:deontic_reasoning_report",
+      "kind": "document",
+      "name": "Deontic reasoning report",
+      "path": "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/deontic_reasoning_report.md",
+      "verificationStatus": "generated_live_status"
+    },
+    {
+      "id": "proof:prior_order_material_present",
+      "kind": "proof_target",
+      "name": "Certified prior-order or judgment material present",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "proof:docket_register_material_present",
+      "kind": "proof_target",
+      "name": "Certified docket or register material present",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "proof:hearing_appearance_material_present",
+      "kind": "proof_target",
+      "name": "Certified hearing or appearance material present",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "pred:prior_separate_proceeding_record",
+      "kind": "predicate",
+      "name": "prior_separate_proceeding_record",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "pred:identical_issue_mapped",
+      "kind": "predicate",
+      "name": "identical_issue_mapped",
+      "verificationStatus": "proof_gated"
+    },
+    {
+      "id": "pred:finality_mapped",
+      "kind": "predicate",
+      "name": "finality_mapped",
+      "verificationStatus": "proof_gated"
+    },
+    {
+      "id": "pred:party_privity_mapped",
+      "kind": "predicate",
+      "name": "party_privity_mapped",
+      "verificationStatus": "proof_gated"
+    },
+    {
+      "id": "pred:full_fair_opportunity_mapped",
+      "kind": "predicate",
+      "name": "full_fair_opportunity_mapped",
+      "verificationStatus": "proof_gated"
+    },
+    {
+      "id": "pred:identical_issue_and_finality_mapping",
+      "kind": "predicate",
+      "name": "identical_issue_and_finality_mapping",
+      "verificationStatus": "proof_gated"
+    },
+    {
+      "id": "finding:issue_preclusion_workflow_staged",
+      "kind": "finding",
+      "headline": "The issue-preclusion branch now has a staged certified-records intake path, a mapping manifest, and separate predicate gates for record presence and element mapping.",
+      "status": "workflow_structured"
+    }
+  ],
+  "edges": [
+    {
+      "from": "issue:issue_preclusion_merits",
+      "to": "doc:certified_records_staging_readme",
+      "type": "staged_by"
+    },
+    {
+      "from": "issue:issue_preclusion_merits",
+      "to": "doc:issue_preclusion_manifest",
+      "type": "mapped_by"
+    },
+    {
+      "from": "issue:issue_preclusion_merits",
+      "to": "doc:deontic_reasoning_report",
+      "type": "audited_in"
+    },
+    {
+      "from": "issue:issue_preclusion_merits",
+      "to": "doc:formal_case_state_dashboard",
+      "type": "status_reported_in"
+    },
+    {
+      "from": "doc:certified_records_staging_readme",
+      "to": "proof:prior_order_material_present",
+      "type": "defines_filename_gate_for"
+    },
+    {
+      "from": "doc:certified_records_staging_readme",
+      "to": "proof:docket_register_material_present",
+      "type": "defines_filename_gate_for"
+    },
+    {
+      "from": "doc:certified_records_staging_readme",
+      "to": "proof:hearing_appearance_material_present",
+      "type": "defines_filename_gate_for"
+    },
+    {
+      "from": "proof:prior_order_material_present",
+      "to": "pred:prior_separate_proceeding_record",
+      "type": "contributes_to"
+    },
+    {
+      "from": "proof:docket_register_material_present",
+      "to": "pred:prior_separate_proceeding_record",
+      "type": "contributes_to"
+    },
+    {
+      "from": "proof:hearing_appearance_material_present",
+      "to": "pred:full_fair_opportunity_mapped",
+      "type": "supports"
+    },
+    {
+      "from": "doc:issue_preclusion_manifest",
+      "to": "pred:identical_issue_mapped",
+      "type": "contains_predicate_state_for"
+    },
+    {
+      "from": "doc:issue_preclusion_manifest",
+      "to": "pred:finality_mapped",
+      "type": "contains_predicate_state_for"
+    },
+    {
+      "from": "doc:issue_preclusion_manifest",
+      "to": "pred:party_privity_mapped",
+      "type": "contains_predicate_state_for"
+    },
+    {
+      "from": "doc:issue_preclusion_manifest",
+      "to": "pred:full_fair_opportunity_mapped",
+      "type": "contains_predicate_state_for"
+    },
+    {
+      "from": "pred:identical_issue_mapped",
+      "to": "pred:identical_issue_and_finality_mapping",
+      "type": "contributes_to"
+    },
+    {
+      "from": "pred:finality_mapped",
+      "to": "pred:identical_issue_and_finality_mapping",
+      "type": "contributes_to"
+    },
+    {
+      "from": "pred:party_privity_mapped",
+      "to": "pred:identical_issue_and_finality_mapping",
+      "type": "contributes_to"
+    },
+    {
+      "from": "pred:full_fair_opportunity_mapped",
+      "to": "pred:identical_issue_and_finality_mapping",
+      "type": "contributes_to"
+    },
+    {
+      "from": "doc:issue_preclusion_manifest_guide",
+      "to": "doc:issue_preclusion_manifest",
+      "type": "explains"
+    },
+    {
+      "from": "doc:issue_preclusion_mapping_layer_note",
+      "to": "issue:issue_preclusion_merits",
+      "type": "describes_promotion_ladder_for"
+    },
+    {
+      "from": "finding:issue_preclusion_workflow_staged",
+      "to": "issue:issue_preclusion_merits",
+      "type": "describes"
+    }
+  ]
+}

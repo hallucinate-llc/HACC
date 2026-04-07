@@ -12,6 +12,9 @@
       "r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
       "r21_case_obligated_resolve_actor_assignment_conflict",
       "r23_case_permitted_initiate_remedial_contempt_path",
+      "r23b_case_permitted_seek_court_direction_on_service_channel_if_evasion_pattern",
+      "r23c_case_permitted_rely_on_court_notice_modification_order_if_documented",
+      "r23d_case_permitted_characterize_counsel_contact_as_same_matter_notice_channel_for_collateral_estoppel_briefing",
       "r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
       "r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
       "r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
@@ -20,6 +23,16 @@
       "r30_case_obligated_schedule_hearing_on_presented_objection",
       "r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
       "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+      "r33_case_permitted_request_special_advocate_or_gal_under_chapter_125",
+      "r34_case_obligated_check_clackamas_probate_slr_requirements_before_filing",
+      "r35_case_obligated_treat_issue_preclusion_as_provisional_until_certified_prior_record_staged",
+      "r36_case_obligated_complete_issue_preclusion_element_mapping_before_merits_reliance",
+      "r37_case_obligated_add_targeted_record_citations_for_finality_and_full_fair_elements",
+      "r38_case_obligated_qualify_overclaim_language_until_elements_are_proved",
+      "r39_case_permitted_seek_targeted_nonparty_production_for_missing_issue_preclusion_elements",
+      "r40_benjamin_permitted_act_as_gal_under_signed_eppdapa_order",
+      "r41_solomon_obligated_follow_petitioner_guardian_or_conservator_instructions",
+      "r42_solomon_forbidden_disobey_guardian_instruction_term_after_appearance",
       "r4_solomon_forbidden_abuse_contact_property_control",
       "r4b_solomon_forbidden_enter_residence",
       "r5b_solomon_obligated_seek_hearing_or_comply",
@@ -43,6 +56,9 @@
       "r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
       "r21_case_obligated_resolve_actor_assignment_conflict",
       "r23_case_permitted_initiate_remedial_contempt_path",
+      "r23b_case_permitted_seek_court_direction_on_service_channel_if_evasion_pattern",
+      "r23c_case_permitted_rely_on_court_notice_modification_order_if_documented",
+      "r23d_case_permitted_characterize_counsel_contact_as_same_matter_notice_channel_for_collateral_estoppel_briefing",
       "r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
       "r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
       "r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
@@ -52,6 +68,16 @@
       "r30_case_obligated_schedule_hearing_on_presented_objection",
       "r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
       "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+      "r33_case_permitted_request_special_advocate_or_gal_under_chapter_125",
+      "r34_case_obligated_check_clackamas_probate_slr_requirements_before_filing",
+      "r35_case_obligated_treat_issue_preclusion_as_provisional_until_certified_prior_record_staged",
+      "r36_case_obligated_complete_issue_preclusion_element_mapping_before_merits_reliance",
+      "r37_case_obligated_add_targeted_record_citations_for_finality_and_full_fair_elements",
+      "r38_case_obligated_qualify_overclaim_language_until_elements_are_proved",
+      "r39_case_permitted_seek_targeted_nonparty_production_for_missing_issue_preclusion_elements",
+      "r40_benjamin_permitted_act_as_gal_under_signed_eppdapa_order",
+      "r41_solomon_obligated_follow_petitioner_guardian_or_conservator_instructions",
+      "r42_solomon_forbidden_disobey_guardian_instruction_term_after_appearance",
       "r4_solomon_forbidden_abuse_contact_property_control",
       "r4b_solomon_forbidden_enter_residence",
       "r5b_solomon_obligated_seek_hearing_or_comply",
@@ -77,6 +103,10 @@
       "modality": "P"
     },
     {
+      "id": "f_authority_ors_125_050_protective_orcp_oec",
+      "kind": "fact_dependency"
+    },
+    {
       "id": "f_client_prior_appointment",
       "kind": "fact_dependency"
     },
@@ -89,6 +119,10 @@
       "id": "c2_benjamin_forbidden_interference",
       "kind": "conclusion",
       "modality": "F"
+    },
+    {
+      "id": "f_authority_ors_125_050_protective_orcp_oec",
+      "kind": "fact_dependency"
     },
     {
       "id": "f_client_prior_appointment",
@@ -109,11 +143,89 @@
       "modality": "O"
     },
     {
+      "id": "f_authority_ors_125_050_protective_orcp_oec",
+      "kind": "fact_dependency"
+    },
+    {
       "id": "f_client_prior_appointment",
       "kind": "fact_dependency"
     },
     {
       "id": "f_client_benjamin_order_disregard",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r40_benjamin_permitted_act_as_gal_under_signed_eppdapa_order",
+      "kind": "rule",
+      "description": "If ORS 124.020 authority is available and the signed EPPDAPA order appoints Benjamin as GAL for Jane, Benjamin is permitted to act within that order scope."
+    },
+    {
+      "id": "c40_benjamin_permitted_act_as_gal_under_signed_eppdapa_order",
+      "kind": "conclusion",
+      "modality": "P"
+    },
+    {
+      "id": "f_authority_ors_124_020_eppdapa_restraining_relief",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_restraining_order_gal_appoints_benjamin_for_jane",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_restraining_order_in_effect",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r41_solomon_obligated_follow_petitioner_guardian_or_conservator_instructions",
+      "kind": "rule",
+      "description": "If ORS 124.020 authority is available and the signed EPPDAPA order requires it, Solomon is obligated to follow petitioner guardian or conservator instructions while the order is in effect."
+    },
+    {
+      "id": "c41_solomon_obligated_follow_petitioner_guardian_or_conservator_instructions",
+      "kind": "conclusion",
+      "modality": "O"
+    },
+    {
+      "id": "f_authority_ors_124_020_eppdapa_restraining_relief",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_restraining_order_solomon_named_respondent",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_restraining_order_requires_follow_guardian_or_conservator_instructions",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_restraining_order_in_effect",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r42_solomon_forbidden_disobey_guardian_instruction_term_after_appearance",
+      "kind": "rule",
+      "description": "If Solomon is the named respondent and no further service was required because he appeared, disobeying the signed guardian-instruction term is forbidden in this model."
+    },
+    {
+      "id": "c42_solomon_forbidden_disobey_guardian_instruction_term_after_appearance",
+      "kind": "conclusion",
+      "modality": "F"
+    },
+    {
+      "id": "f_authority_ors_124_020_eppdapa_restraining_relief",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_restraining_order_solomon_named_respondent",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_restraining_order_requires_follow_guardian_or_conservator_instructions",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_restraining_order_no_further_service_needed",
       "kind": "fact_dependency"
     },
     {
@@ -623,6 +735,72 @@
       "kind": "fact_dependency"
     },
     {
+      "id": "r23b_case_permitted_seek_court_direction_on_service_channel_if_evasion_pattern",
+      "kind": "rule",
+      "description": "If service-channel conflict or evasion pattern is documented, the case posture may seek court direction on proper service mechanics and present documented service attempts."
+    },
+    {
+      "id": "c23b_case_permitted_seek_court_direction_on_service_channel_if_evasion_pattern",
+      "kind": "conclusion",
+      "modality": "P"
+    },
+    {
+      "id": "f_authority_ors_33_055_remedial_contempt_procedure",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_authority_orcp_9_service_of_later_filed_papers",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_service_channel_conflict_or_evasion_pattern_documented",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r23c_case_permitted_rely_on_court_notice_modification_order_if_documented",
+      "kind": "rule",
+      "description": "If a motion to waive/modify notice was filed and a related order granting notice modification is documented, the case posture may rely on that court-approved notice modification in framing service and notice mechanics."
+    },
+    {
+      "id": "c23c_case_permitted_rely_on_court_notice_modification_order_if_documented",
+      "kind": "conclusion",
+      "modality": "P"
+    },
+    {
+      "id": "f_motion_to_waive_or_modify_notice_re_gal_filed_2025_11_20",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_order_on_motion_to_waive_or_modify_notice_re_gal_granted_2025_11_20",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_order_notice_requirements_orcp27_waived_or_modified_2025_11_20",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r23d_case_permitted_characterize_counsel_contact_as_same_matter_notice_channel_for_collateral_estoppel_briefing",
+      "kind": "rule",
+      "description": "If service email was sent to counsel and counsel acknowledged representation in the Jane guardianship matter while disclaiming acceptance of service, the case posture may characterize counsel contact as same-matter notice channel while preserving any service-validity dispute for court determination."
+    },
+    {
+      "id": "c23d_case_permitted_characterize_counsel_contact_as_same_matter_notice_channel_for_collateral_estoppel_briefing",
+      "kind": "conclusion",
+      "modality": "P"
+    },
+    {
+      "id": "f_service_email_sent_to_alex_bluestone_re_jane_solomon_2026_04_03",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_bluestone_acknowledged_representation_for_jane_guardianship_2026_04_04",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_counsel_disclaimed_accepting_service_for_solomon_2026_04_04",
+      "kind": "fact_dependency"
+    },
+    {
       "id": "r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
       "kind": "rule",
       "description": "If compel-appearance authority is available and the claimed nonappearance predicate is later proved, the case posture may seek compelled appearance."
@@ -799,6 +977,172 @@
     {
       "id": "f_petition_exists",
       "kind": "fact_dependency"
+    },
+    {
+      "id": "r33_case_permitted_request_special_advocate_or_gal_under_chapter_125",
+      "kind": "rule",
+      "description": "If ORS 125.120 authority is available and the petition includes unresolved actor-assignment conflict affecting protective-person interests, the case posture may request a special advocate or GAL under chapter 125."
+    },
+    {
+      "id": "c33_case_permitted_request_special_advocate_or_gal_under_chapter_125",
+      "kind": "conclusion",
+      "modality": "P"
+    },
+    {
+      "id": "f_authority_ors_125_120_protected_person_special_advocate",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_petition_exists",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_actor_assignment_conflict_benjamin_vs_solomon_interference",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r34_case_obligated_check_clackamas_probate_slr_requirements_before_filing",
+      "kind": "rule",
+      "description": "If Clackamas SLR 9.035 and 9.076 authority are available and the petition posture is active, the case posture is obligated to check and document local probate-rule requirements before filing."
+    },
+    {
+      "id": "c34_case_obligated_check_clackamas_probate_slr_requirements_before_filing",
+      "kind": "conclusion",
+      "modality": "O"
+    },
+    {
+      "id": "f_authority_clackamas_slr_9_035_probate_practice",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_authority_clackamas_slr_9_076_probate_practice",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_petition_exists",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r35_case_obligated_treat_issue_preclusion_as_provisional_until_certified_prior_record_staged",
+      "kind": "rule",
+      "description": "If prior-proceeding record requirements are recognized and certified prior-order/docket materials are still missing, issue-preclusion merits claims stay provisional pending certified record staging."
+    },
+    {
+      "id": "c35_case_obligated_treat_issue_preclusion_as_provisional_until_certified_prior_record_staged",
+      "kind": "conclusion",
+      "modality": "O"
+    },
+    {
+      "id": "f_authority_issue_preclusion_requires_prior_separate_proceeding",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_authority_case_hayes_oyster_2005",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_authority_case_westwood_2002",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_certified_prior_order_material_missing",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_certified_prior_docket_material_missing",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r36_case_obligated_complete_issue_preclusion_element_mapping_before_merits_reliance",
+      "kind": "rule",
+      "description": "If element authorities are present but the issue-preclusion mapping is incomplete, the case posture is obligated to complete element-by-element mapping before merits-level reliance."
+    },
+    {
+      "id": "c36_case_obligated_complete_issue_preclusion_element_mapping_before_merits_reliance",
+      "kind": "conclusion",
+      "modality": "O"
+    },
+    {
+      "id": "f_authority_issue_preclusion_elements_official_oregon_cases",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_authority_case_nelson_1993",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_authority_case_rawls_2010",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_issue_preclusion_mapping_incomplete",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r37_case_obligated_add_targeted_record_citations_for_finality_and_full_fair_elements",
+      "kind": "rule",
+      "description": "If finality and full-fair element mappings are still missing, the model obligates targeted certified record citation development for those specific elements."
+    },
+    {
+      "id": "c37_case_obligated_add_targeted_record_citations_for_finality_and_full_fair_elements",
+      "kind": "conclusion",
+      "modality": "O"
+    },
+    {
+      "id": "f_authority_issue_preclusion_elements_official_oregon_cases",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_issue_preclusion_finality_element_missing",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_issue_preclusion_full_fair_element_missing",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r38_case_obligated_qualify_overclaim_language_until_elements_are_proved",
+      "kind": "rule",
+      "description": "If overclaim language appears while mapping and certified prior-order support are incomplete, filing language must be qualified as contingent rather than fully proved."
+    },
+    {
+      "id": "c38_case_obligated_qualify_overclaim_language_until_elements_are_proved",
+      "kind": "conclusion",
+      "modality": "O"
+    },
+    {
+      "id": "f_overclaim_issue_preclusion_statement_detected",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_issue_preclusion_mapping_incomplete",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_certified_prior_order_material_missing",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r39_case_permitted_seek_targeted_nonparty_production_for_missing_issue_preclusion_elements",
+      "kind": "rule",
+      "description": "If issue-preclusion mapping remains incomplete and certified hearing material is missing, the case posture may pursue targeted nonparty production for missing element support."
+    },
+    {
+      "id": "c39_case_permitted_seek_targeted_nonparty_production_for_missing_issue_preclusion_elements",
+      "kind": "conclusion",
+      "modality": "P"
+    },
+    {
+      "id": "f_authority_orcp_55_subpoena_obedience",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_issue_preclusion_mapping_incomplete",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_certified_prior_hearing_material_missing",
+      "kind": "fact_dependency"
     }
   ],
   "edges": [
@@ -806,6 +1150,11 @@
       "from": "r1_guardian_permission_if_prior_appointment",
       "to": "c1_benjamin_permitted_guardian_scope",
       "relation": "produces"
+    },
+    {
+      "from": "f_authority_ors_125_050_protective_orcp_oec",
+      "to": "r1_guardian_permission_if_prior_appointment",
+      "relation": "required_by"
     },
     {
       "from": "f_client_prior_appointment",
@@ -816,6 +1165,11 @@
       "from": "r2_noninterference_prohibition_for_benjamin",
       "to": "c2_benjamin_forbidden_interference",
       "relation": "produces"
+    },
+    {
+      "from": "f_authority_ors_125_050_protective_orcp_oec",
+      "to": "r2_noninterference_prohibition_for_benjamin",
+      "relation": "required_by"
     },
     {
       "from": "f_client_prior_appointment",
@@ -833,6 +1187,11 @@
       "relation": "produces"
     },
     {
+      "from": "f_authority_ors_125_050_protective_orcp_oec",
+      "to": "r3_benjamin_obligation_comply_or_seek_relief",
+      "relation": "required_by"
+    },
+    {
       "from": "f_client_prior_appointment",
       "to": "r3_benjamin_obligation_comply_or_seek_relief",
       "relation": "required_by"
@@ -840,6 +1199,76 @@
     {
       "from": "f_client_benjamin_order_disregard",
       "to": "r3_benjamin_obligation_comply_or_seek_relief",
+      "relation": "required_by"
+    },
+    {
+      "from": "r40_benjamin_permitted_act_as_gal_under_signed_eppdapa_order",
+      "to": "c40_benjamin_permitted_act_as_gal_under_signed_eppdapa_order",
+      "relation": "produces"
+    },
+    {
+      "from": "f_authority_ors_124_020_eppdapa_restraining_relief",
+      "to": "r40_benjamin_permitted_act_as_gal_under_signed_eppdapa_order",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_restraining_order_gal_appoints_benjamin_for_jane",
+      "to": "r40_benjamin_permitted_act_as_gal_under_signed_eppdapa_order",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_restraining_order_in_effect",
+      "to": "r40_benjamin_permitted_act_as_gal_under_signed_eppdapa_order",
+      "relation": "required_by"
+    },
+    {
+      "from": "r41_solomon_obligated_follow_petitioner_guardian_or_conservator_instructions",
+      "to": "c41_solomon_obligated_follow_petitioner_guardian_or_conservator_instructions",
+      "relation": "produces"
+    },
+    {
+      "from": "f_authority_ors_124_020_eppdapa_restraining_relief",
+      "to": "r41_solomon_obligated_follow_petitioner_guardian_or_conservator_instructions",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_restraining_order_solomon_named_respondent",
+      "to": "r41_solomon_obligated_follow_petitioner_guardian_or_conservator_instructions",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_restraining_order_requires_follow_guardian_or_conservator_instructions",
+      "to": "r41_solomon_obligated_follow_petitioner_guardian_or_conservator_instructions",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_restraining_order_in_effect",
+      "to": "r41_solomon_obligated_follow_petitioner_guardian_or_conservator_instructions",
+      "relation": "required_by"
+    },
+    {
+      "from": "r42_solomon_forbidden_disobey_guardian_instruction_term_after_appearance",
+      "to": "c42_solomon_forbidden_disobey_guardian_instruction_term_after_appearance",
+      "relation": "produces"
+    },
+    {
+      "from": "f_authority_ors_124_020_eppdapa_restraining_relief",
+      "to": "r42_solomon_forbidden_disobey_guardian_instruction_term_after_appearance",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_restraining_order_solomon_named_respondent",
+      "to": "r42_solomon_forbidden_disobey_guardian_instruction_term_after_appearance",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_restraining_order_requires_follow_guardian_or_conservator_instructions",
+      "to": "r42_solomon_forbidden_disobey_guardian_instruction_term_after_appearance",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_restraining_order_no_further_service_needed",
+      "to": "r42_solomon_forbidden_disobey_guardian_instruction_term_after_appearance",
       "relation": "required_by"
     },
     {
@@ -1273,6 +1702,66 @@
       "relation": "required_by"
     },
     {
+      "from": "r23b_case_permitted_seek_court_direction_on_service_channel_if_evasion_pattern",
+      "to": "c23b_case_permitted_seek_court_direction_on_service_channel_if_evasion_pattern",
+      "relation": "produces"
+    },
+    {
+      "from": "f_authority_ors_33_055_remedial_contempt_procedure",
+      "to": "r23b_case_permitted_seek_court_direction_on_service_channel_if_evasion_pattern",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_authority_orcp_9_service_of_later_filed_papers",
+      "to": "r23b_case_permitted_seek_court_direction_on_service_channel_if_evasion_pattern",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_service_channel_conflict_or_evasion_pattern_documented",
+      "to": "r23b_case_permitted_seek_court_direction_on_service_channel_if_evasion_pattern",
+      "relation": "required_by"
+    },
+    {
+      "from": "r23c_case_permitted_rely_on_court_notice_modification_order_if_documented",
+      "to": "c23c_case_permitted_rely_on_court_notice_modification_order_if_documented",
+      "relation": "produces"
+    },
+    {
+      "from": "f_motion_to_waive_or_modify_notice_re_gal_filed_2025_11_20",
+      "to": "r23c_case_permitted_rely_on_court_notice_modification_order_if_documented",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_order_on_motion_to_waive_or_modify_notice_re_gal_granted_2025_11_20",
+      "to": "r23c_case_permitted_rely_on_court_notice_modification_order_if_documented",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_order_notice_requirements_orcp27_waived_or_modified_2025_11_20",
+      "to": "r23c_case_permitted_rely_on_court_notice_modification_order_if_documented",
+      "relation": "required_by"
+    },
+    {
+      "from": "r23d_case_permitted_characterize_counsel_contact_as_same_matter_notice_channel_for_collateral_estoppel_briefing",
+      "to": "c23d_case_permitted_characterize_counsel_contact_as_same_matter_notice_channel_for_collateral_estoppel_briefing",
+      "relation": "produces"
+    },
+    {
+      "from": "f_service_email_sent_to_alex_bluestone_re_jane_solomon_2026_04_03",
+      "to": "r23d_case_permitted_characterize_counsel_contact_as_same_matter_notice_channel_for_collateral_estoppel_briefing",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_bluestone_acknowledged_representation_for_jane_guardianship_2026_04_04",
+      "to": "r23d_case_permitted_characterize_counsel_contact_as_same_matter_notice_channel_for_collateral_estoppel_briefing",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_counsel_disclaimed_accepting_service_for_solomon_2026_04_04",
+      "to": "r23d_case_permitted_characterize_counsel_contact_as_same_matter_notice_channel_for_collateral_estoppel_briefing",
+      "relation": "required_by"
+    },
+    {
       "from": "r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
       "to": "c24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
       "relation": "produces"
@@ -1425,6 +1914,161 @@
     {
       "from": "f_petition_exists",
       "to": "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+      "relation": "required_by"
+    },
+    {
+      "from": "r33_case_permitted_request_special_advocate_or_gal_under_chapter_125",
+      "to": "c33_case_permitted_request_special_advocate_or_gal_under_chapter_125",
+      "relation": "produces"
+    },
+    {
+      "from": "f_authority_ors_125_120_protected_person_special_advocate",
+      "to": "r33_case_permitted_request_special_advocate_or_gal_under_chapter_125",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_petition_exists",
+      "to": "r33_case_permitted_request_special_advocate_or_gal_under_chapter_125",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_actor_assignment_conflict_benjamin_vs_solomon_interference",
+      "to": "r33_case_permitted_request_special_advocate_or_gal_under_chapter_125",
+      "relation": "required_by"
+    },
+    {
+      "from": "r34_case_obligated_check_clackamas_probate_slr_requirements_before_filing",
+      "to": "c34_case_obligated_check_clackamas_probate_slr_requirements_before_filing",
+      "relation": "produces"
+    },
+    {
+      "from": "f_authority_clackamas_slr_9_035_probate_practice",
+      "to": "r34_case_obligated_check_clackamas_probate_slr_requirements_before_filing",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_authority_clackamas_slr_9_076_probate_practice",
+      "to": "r34_case_obligated_check_clackamas_probate_slr_requirements_before_filing",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_petition_exists",
+      "to": "r34_case_obligated_check_clackamas_probate_slr_requirements_before_filing",
+      "relation": "required_by"
+    },
+    {
+      "from": "r35_case_obligated_treat_issue_preclusion_as_provisional_until_certified_prior_record_staged",
+      "to": "c35_case_obligated_treat_issue_preclusion_as_provisional_until_certified_prior_record_staged",
+      "relation": "produces"
+    },
+    {
+      "from": "f_authority_issue_preclusion_requires_prior_separate_proceeding",
+      "to": "r35_case_obligated_treat_issue_preclusion_as_provisional_until_certified_prior_record_staged",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_authority_case_hayes_oyster_2005",
+      "to": "r35_case_obligated_treat_issue_preclusion_as_provisional_until_certified_prior_record_staged",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_authority_case_westwood_2002",
+      "to": "r35_case_obligated_treat_issue_preclusion_as_provisional_until_certified_prior_record_staged",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_certified_prior_order_material_missing",
+      "to": "r35_case_obligated_treat_issue_preclusion_as_provisional_until_certified_prior_record_staged",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_certified_prior_docket_material_missing",
+      "to": "r35_case_obligated_treat_issue_preclusion_as_provisional_until_certified_prior_record_staged",
+      "relation": "required_by"
+    },
+    {
+      "from": "r36_case_obligated_complete_issue_preclusion_element_mapping_before_merits_reliance",
+      "to": "c36_case_obligated_complete_issue_preclusion_element_mapping_before_merits_reliance",
+      "relation": "produces"
+    },
+    {
+      "from": "f_authority_issue_preclusion_elements_official_oregon_cases",
+      "to": "r36_case_obligated_complete_issue_preclusion_element_mapping_before_merits_reliance",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_authority_case_nelson_1993",
+      "to": "r36_case_obligated_complete_issue_preclusion_element_mapping_before_merits_reliance",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_authority_case_rawls_2010",
+      "to": "r36_case_obligated_complete_issue_preclusion_element_mapping_before_merits_reliance",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_issue_preclusion_mapping_incomplete",
+      "to": "r36_case_obligated_complete_issue_preclusion_element_mapping_before_merits_reliance",
+      "relation": "required_by"
+    },
+    {
+      "from": "r37_case_obligated_add_targeted_record_citations_for_finality_and_full_fair_elements",
+      "to": "c37_case_obligated_add_targeted_record_citations_for_finality_and_full_fair_elements",
+      "relation": "produces"
+    },
+    {
+      "from": "f_authority_issue_preclusion_elements_official_oregon_cases",
+      "to": "r37_case_obligated_add_targeted_record_citations_for_finality_and_full_fair_elements",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_issue_preclusion_finality_element_missing",
+      "to": "r37_case_obligated_add_targeted_record_citations_for_finality_and_full_fair_elements",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_issue_preclusion_full_fair_element_missing",
+      "to": "r37_case_obligated_add_targeted_record_citations_for_finality_and_full_fair_elements",
+      "relation": "required_by"
+    },
+    {
+      "from": "r38_case_obligated_qualify_overclaim_language_until_elements_are_proved",
+      "to": "c38_case_obligated_qualify_overclaim_language_until_elements_are_proved",
+      "relation": "produces"
+    },
+    {
+      "from": "f_overclaim_issue_preclusion_statement_detected",
+      "to": "r38_case_obligated_qualify_overclaim_language_until_elements_are_proved",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_issue_preclusion_mapping_incomplete",
+      "to": "r38_case_obligated_qualify_overclaim_language_until_elements_are_proved",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_certified_prior_order_material_missing",
+      "to": "r38_case_obligated_qualify_overclaim_language_until_elements_are_proved",
+      "relation": "required_by"
+    },
+    {
+      "from": "r39_case_permitted_seek_targeted_nonparty_production_for_missing_issue_preclusion_elements",
+      "to": "c39_case_permitted_seek_targeted_nonparty_production_for_missing_issue_preclusion_elements",
+      "relation": "produces"
+    },
+    {
+      "from": "f_authority_orcp_55_subpoena_obedience",
+      "to": "r39_case_permitted_seek_targeted_nonparty_production_for_missing_issue_preclusion_elements",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_issue_preclusion_mapping_incomplete",
+      "to": "r39_case_permitted_seek_targeted_nonparty_production_for_missing_issue_preclusion_elements",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_certified_prior_hearing_material_missing",
+      "to": "r39_case_permitted_seek_targeted_nonparty_production_for_missing_issue_preclusion_elements",
       "relation": "required_by"
     }
   ]

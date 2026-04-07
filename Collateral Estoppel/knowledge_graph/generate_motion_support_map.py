@@ -95,6 +95,7 @@ def build_map() -> Dict[str, object]:
                     "authority_refs": rule.get("authority_refs", []),
                     "description": rule.get("description"),
                     "activation_date_estimate": rule.get("activation_date_estimate"),
+                    "temporal_profile": rule.get("temporal_profile", {}),
                     "conclusion": c,
                     "antecedents": antecedent_details,
                     "recommended_motions": motions,
@@ -123,6 +124,7 @@ def to_markdown(data: Dict[str, object]) -> str:
             lines.append(f"- Authority refs: {e.get('authority_refs')}")
             lines.append(f"- Conclusion: {c.get('modality')}({c.get('actor')}, {c.get('action')}, {c.get('target')})")
             lines.append(f"- Activation date estimate: {e.get('activation_date_estimate')}")
+            lines.append(f"- Temporal profile: {e.get('temporal_profile')}")
             lines.append("- Antecedent evidence:")
             for ant in e["antecedents"]:
                 lines.append(

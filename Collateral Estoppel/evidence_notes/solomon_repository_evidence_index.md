@@ -1,26 +1,41 @@
 # Solomon Repository Evidence Index
 
-Generated: 2026-04-07T05:13:06.687779+00:00
-Files scanned: 31754
-Hit files: 1400
-High relevance: 67
-Medium relevance: 225
-Low relevance: 1108
+Generated: 2026-04-07T16:13:12.349908+00:00
+Files scanned: 31883
+Hit files: 1495
+High relevance: 80
+Medium relevance: 257
+Low relevance: 1158
 
 ## Collateral Estoppel/evidence_notes/solomon_repository_evidence_index.md
 - Relevance: high
-- Total keyword score: 5186
-- Hit count: 4363
-- Dates found: ['01/03/2026', '01/08/2026', '02/20/2026', '03-31-2026', '03/04/2026', '03/20/2026', '03/29/2026', '03/31/2026', '04-15-2026', '04/15/2026', '1/31/2028', '11-20-2025', '11/17/2025', '11/19/2025', '12-1-2024', '12-1-2025', '12-31-2025', '12/12/2025', '12/16/2025', '12/31/2025', '12/9/2025', '2/2/2025', '2/4/2026', '2021-01-42', '2021-02-15', '2021-19-53', '2021-21-59', '2024-11-25', '2025-01-18', '2025-01-39', '2025-01-42', '2025-01-43', '2025-01-44', '2025-02-25', '2025-02-27', '2025-02-29', '2025-11-17', '2025-11-19', '2025-11-20', '2025-12-23', '2025-12-31', '2025-20-38', '2025-20-52', '2025-20-53', '2025-20-54', '2025-20-56', '2025-20-58', '2025-20-59', '2025-21-02', '2025-21-03', '2025-21-05', '2025-21-06', '2025-21-07', '2025-21-08', '2025-21-15', '2025-21-18', '2025-22-50', '2025-22-51', '2025-22-59', '2025-23-17', '2026-01-01', '2026-01-12', '2026-01-26', '2026-02-05', '2026-02-25', '2026-03-10', '2026-03-17', '2026-03-18', '2026-03-23', '2026-03-25', '2026-03-26', '2026-03-30', '2026-03-31', '2026-04-02', '2026-04-03', '2026-04-04', '2026-04-05', '2026-04-07', '2026-04-09', '2026-04-10', '2026-04-20', '2026-17-39', '2026-17-45', '2026-17-48', '2026-17-51', '2026-17-52', '3/17/2026', '3/18/2026', '3/22/2026', '3/31/2026', '4/1/2026', '9/9/2025']
+- Total keyword score: 5594
+- Hit count: 4664
+- Dates found: ['01/03/2026', '01/08/2026', '02/20/2026', '03-31-2026', '03/04/2026', '03/20/2026', '03/29/2026', '03/31/2026', '04-15-2026', '04/15/2026', '1/31/2028', '11-20-2025', '11/17/2025', '11/19/2025', '12-1-2024', '12-1-2025', '12-31-2025', '12/12/2025', '12/16/2025', '12/31/2025', '12/9/2025', '2/2/2025', '2/4/2026', '2021-01-42', '2021-02-15', '2021-19-53', '2021-21-59', '2024-11-25', '2025-01-18', '2025-01-39', '2025-01-42', '2025-01-43', '2025-01-44', '2025-02-25', '2025-02-27', '2025-02-29', '2025-11-17', '2025-11-19', '2025-11-20', '2025-12-23', '2025-12-31', '2025-20-38', '2025-20-52', '2025-20-53', '2025-20-54', '2025-20-56', '2025-20-58', '2025-20-59', '2025-21-02', '2025-21-03', '2025-21-05', '2025-21-06', '2025-21-07', '2025-21-08', '2025-21-15', '2025-21-18', '2025-22-50', '2025-22-51', '2025-22-59', '2025-23-17', '2026-01-01', '2026-01-12', '2026-01-26', '2026-02-05', '2026-02-25', '2026-03-10', '2026-03-17', '2026-03-18', '2026-03-23', '2026-03-25', '2026-03-26', '2026-03-30', '2026-03-31', '2026-04-02', '2026-04-03', '2026-04-04', '2026-04-05', '2026-04-07', '2026-04-09', '2026-04-10', '2026-04-20', '2026-11-20', '2026-17-39', '2026-17-45', '2026-17-48', '2026-17-51', '2026-17-52', '3/17/2026', '3/18/2026', '3/22/2026', '3/31/2026', '4/1/2026', '9/9/2025']
 - Top snippets:
-- line 946 (score=6, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): - line 14 (score=6, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): 11. Minimum OR-joined identifier set (expand as needed): "Jane Kay Cortez" OR "Jane Cortez" OR "Jane K Cortez" OR "Julio Cortez"
-- line 16 (score=6, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): - line 946 (score=6, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): - line 14 (score=6, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber
-- line 999 (score=5, keywords=['solomon', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): - line 12 (score=5, keywords=['solomon', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): "body_preview": "Mr. Barber,\r\n\r\nPlease be aware that I do not accept service on behalf of my client. I represent my client only as it relates 
-- line 985 (score=5, keywords=['solomon', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): - line 12 (score=5, keywords=['solomon', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): "body_preview": "Guardianship has already been granted, as is on the cover page in this case\r\nwith the same exact parties, and your filling is b
-- line 957 (score=5, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'benjamin barber']): - line 6 (score=5, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'benjamin barber']): 1. All communications to or from Solomon Barber (including Solomon Samuel Barber) concerning Jane Kay Cortez, Julio Cortez, Benjamin Barber, Reb
-- line 21 (score=5, keywords=['solomon', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): - line 16 (score=5, keywords=['solomon', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): - line 930 (score=5, keywords=['solomon', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): - line 12 (score=5, keywords=['
-- line 20 (score=5, keywords=['solomon', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): - line 17 (score=5, keywords=['solomon', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): - line 916 (score=5, keywords=['solomon', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): - line 12 (score=5, keywords=['
-- line 19 (score=5, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'benjamin barber']): - line 957 (score=5, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'benjamin barber']): - line 6 (score=5, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'benjamin barber']): 1. All communications to o
+- line 1141 (score=6, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): - line 14 (score=6, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): 11. Minimum OR-joined identifier set (expand as needed): "Jane Kay Cortez" OR "Jane Cortez" OR "Jane K Cortez" OR "Julio Cortez"
+- line 19 (score=6, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): - line 16 (score=6, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): - line 946 (score=6, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber
+- line 18 (score=6, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): - line 17 (score=6, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): - line 17 (score=6, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber'
+- line 17 (score=6, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): - line 18 (score=6, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): - line 16 (score=6, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber'
+- line 16 (score=6, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): - line 1036 (score=6, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): - line 14 (score=6, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barbe
+- line 1194 (score=5, keywords=['solomon', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): - line 12 (score=5, keywords=['solomon', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): "body_preview": "Mr. Barber,\r\n\r\nPlease be aware that I do not accept service on behalf of my client. I represent my client only as it relates 
+- line 1180 (score=5, keywords=['solomon', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): - line 12 (score=5, keywords=['solomon', 'restraining order', 'guardianship', 'jane cortez', 'benjamin barber']): "body_preview": "Guardianship has already been granted, as is on the cover page in this case\r\nwith the same exact parties, and your filling is b
+- line 1152 (score=5, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'benjamin barber']): - line 6 (score=5, keywords=['solomon', 'solomon barber', 'restraining order', 'guardianship', 'benjamin barber']): 1. All communications to or from Solomon Barber (including Solomon Samuel Barber) concerning Jane Kay Cortez, Julio Cortez, Benjamin Barber, Reb
+
+## Collateral Estoppel/knowledge_graph/generated/full_case_knowledge_graph.json
+- Relevance: high
+- Total keyword score: 1634
+- Hit count: 1624
+- Dates found: ['01/03/2026', '01/08/2026', '02/20/2026', '03-31-2026', '03/04/2026', '03/20/2026', '03/31/2026', '04-15-2026', '04/15/2026', '1/31/2028', '11-20-2025', '11/17/2025', '11/19/2025', '12-1-2024', '12-1-2025', '12-31-2025', '12/12/2025', '12/16/2025', '12/9/2025', '2021-01-42', '2021-02-15', '2021-19-53', '2025-01-39', '2025-01-43', '2025-01-44', '2025-02-27', '2025-11-17', '2025-11-19', '2025-11-20', '2025-20-38', '2025-20-56', '2026-01-01', '2026-01-12', '2026-01-26', '2026-03-10', '2026-03-17', '2026-03-23', '2026-03-25', '2026-03-26', '2026-03-31', '2026-04-02', '2026-04-04', '2026-04-05', '2026-04-07', '2026-11-20', '2026-17-39', '2026-17-45', '2026-17-51', '3/18/2026', '3/22/2026', '3/31/2026']
+- Top snippets:
+- line 7945 (score=2, keywords=['solomon', 'restraining order']): "description": "If Solomon stated the other party already had the restraining order and order is in effect, Solomon is obligated to recognize existing order status.",
+- line 7894 (score=2, keywords=['solomon', 'restraining order']): "description": "If Solomon acknowledged awareness of restraining order and the order is in effect, Solomon is obligated to seek court relief rather than self-help noncompliance.",
+- line 7722 (score=2, keywords=['solomon', 'restraining order']): "description": "Given the granted restraining order and residence restriction, Solomon is forbidden from entering or remaining at the protected residence.",
+- line 7705 (score=2, keywords=['solomon', 'restraining order']): "description": "Given granted in-effect restraining order with property restrictions, Solomon is forbidden to abuse/contact/interfere/control property.",
+- line 2293 (score=2, keywords=['solomon', 'guardianship']): "source": "Collateral Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt",
+- line 2289 (score=2, keywords=['solomon', 'guardianship']): "source:Collateral Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt"
+- line 131 (score=2, keywords=['solomon', 'guardianship']): "source": "solomon_motion_for_guardianship_ocr.txt",
+- line 95 (score=2, keywords=['solomon', 'guardianship']): "source": "solomon_motion_for_guardianship_ocr.txt",
 
 ## evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/email_import_manifest.json
 - Relevance: high
@@ -37,21 +52,6 @@ Low relevance: 1108
 - line 4605 (score=3, keywords=['solomon', 'jane cortez', 'benjamin barber']): "content": "Subject: Re: Automatic reply: Application to live at the Vera - Jane Cortez , Benjamin Barber\nFrom: benjamin barber <starworks5@gmail.com>\nTo: The Vera <thevera@bridgehousing.com>\nDate: Wed, 01 Apr 2026 16:02:06 -0700\nSaved email: /home/barberb
 - line 6464 (score=2, keywords=['jane cortez', 'benjamin barber']): "title": "Email import: Re: Application to live at the Vera - Jane Cortez , Benjamin Barber",
 
-## Collateral Estoppel/knowledge_graph/generated/full_case_knowledge_graph.json
-- Relevance: high
-- Total keyword score: 1452
-- Hit count: 1442
-- Dates found: ['01/03/2026', '01/08/2026', '02/20/2026', '03-31-2026', '03/04/2026', '03/20/2026', '03/31/2026', '04-15-2026', '04/15/2026', '1/31/2028', '11-20-2025', '11/17/2025', '11/19/2025', '12-1-2024', '12-1-2025', '12-31-2025', '12/12/2025', '12/16/2025', '12/9/2025', '2021-01-42', '2021-02-15', '2021-19-53', '2025-01-39', '2025-01-43', '2025-01-44', '2025-02-27', '2025-11-17', '2025-11-19', '2025-11-20', '2025-20-38', '2025-20-56', '2026-01-01', '2026-01-12', '2026-01-26', '2026-03-10', '2026-03-17', '2026-03-23', '2026-03-25', '2026-03-26', '2026-03-31', '2026-04-02', '2026-04-04', '2026-04-05', '2026-04-07', '2026-17-39', '2026-17-45', '2026-17-51', '3/18/2026', '3/22/2026', '3/31/2026']
-- Top snippets:
-- line 6656 (score=2, keywords=['solomon', 'restraining order']): "description": "If Solomon stated the other party already had the restraining order and order is in effect, Solomon is obligated to recognize existing order status.",
-- line 6605 (score=2, keywords=['solomon', 'restraining order']): "description": "If Solomon acknowledged awareness of restraining order and the order is in effect, Solomon is obligated to seek court relief rather than self-help noncompliance.",
-- line 6443 (score=2, keywords=['solomon', 'restraining order']): "description": "Given the granted restraining order and residence restriction, Solomon is forbidden from entering or remaining at the protected residence.",
-- line 6426 (score=2, keywords=['solomon', 'restraining order']): "description": "Given granted in-effect restraining order with property restrictions, Solomon is forbidden to abuse/contact/interfere/control property.",
-- line 1714 (score=2, keywords=['solomon', 'guardianship']): "source": "Collateral Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt",
-- line 1710 (score=2, keywords=['solomon', 'guardianship']): "source:Collateral Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt"
-- line 113 (score=2, keywords=['solomon', 'guardianship']): "source": "solomon_motion_for_guardianship_ocr.txt",
-- line 95 (score=2, keywords=['solomon', 'guardianship']): "source": "solomon_motion_for_guardianship_ocr.txt",
-
 ## evidence/email_imports/starworks5-master-case-email-import/email_import_manifest.json
 - Relevance: high
 - Total keyword score: 426
@@ -66,6 +66,21 @@ Low relevance: 1108
 - line 3914 (score=1, keywords=['benjamin barber']): "from": "benjamin barber <starworks5@gmail.com>",
 - line 3837 (score=1, keywords=['benjamin barber']): "from": "benjamin barber <starworks5@gmail.com>",
 - line 3768 (score=1, keywords=['benjamin barber']): "from": "benjamin barber <starworks5@gmail.com>",
+
+## Collateral Estoppel/knowledge_graph/generated/deontic_reasoning_report.json
+- Relevance: high
+- Total keyword score: 369
+- Hit count: 358
+- Dates found: ['2025-11-17', '2025-11-19', '2025-11-20', '2026-01-01', '2026-01-12', '2026-03-10', '2026-03-26', '2026-03-31', '2026-04-05', '2026-04-07', '2026-11-20']
+- Top snippets:
+- line 360 (score=3, keywords=['solomon', 'solomon barber', 'guardianship']): "note": "Current best candidate target is the Solomon Barber first amended guardianship petition reflected in solomon_motion_for_guardianship_ocr.txt, dated March 31, 2026. This identifies the filing only and does not by itself establish any ORCP 17 predicate.
+- line 4044 (score=2, keywords=['solomon', 'restraining order']): "description": "If Solomon stated the other party already had the restraining order and order is in effect, Solomon is obligated to recognize existing order status.",
+- line 3906 (score=2, keywords=['solomon', 'restraining order']): "description": "If Solomon acknowledged awareness of restraining order and the order is in effect, Solomon is obligated to seek court relief rather than self-help noncompliance.",
+- line 3511 (score=2, keywords=['solomon', 'restraining order']): "description": "Given the granted restraining order and residence restriction, Solomon is forbidden from entering or remaining at the protected residence.",
+- line 3439 (score=2, keywords=['solomon', 'restraining order']): "description": "Given granted in-effect restraining order with property restrictions, Solomon is forbidden to abuse/contact/interfere/control property.",
+- line 1090 (score=2, keywords=['solomon', 'restraining order']): "description": "If Solomon stated the other party already had the restraining order and order is in effect, Solomon is obligated to recognize existing order status.",
+- line 952 (score=2, keywords=['solomon', 'restraining order']): "description": "If Solomon acknowledged awareness of restraining order and the order is in effect, Solomon is obligated to seek court relief rather than self-help noncompliance.",
+- line 557 (score=2, keywords=['solomon', 'restraining order']): "description": "Given the granted restraining order and residence restriction, Solomon is forbidden from entering or remaining at the protected residence.",
 
 ## evidence/email_imports/starworks5-solomon-sms-import/email_import_manifest.json
 - Relevance: high
@@ -82,20 +97,20 @@ Low relevance: 1108
 - line 1286 (score=1, keywords=['solomon']): "email_path": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0039-New-text-message-from-solomon-503-381-6911-19712700855.3561dba2d87a6f1a6d06cd8dfe3f799e44720c46-txt.voice.google.com/message.eml",
 - line 1285 (score=1, keywords=['solomon']): "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-solomon-sms-import/0039-New-text-message-from-solomon-503-381-6911-19712700855.3561dba2d87a6f1a6d06cd8dfe3f799e44720c46-txt.voice.google.com",
 
-## Collateral Estoppel/knowledge_graph/generated/deontic_reasoning_report.json
+## Collateral Estoppel/knowledge_graph/generated/motion_support_map.json
 - Relevance: high
-- Total keyword score: 296
-- Hit count: 287
-- Dates found: ['2025-11-17', '2025-11-19', '2025-11-20', '2026-01-01', '2026-01-12', '2026-03-10', '2026-03-26', '2026-03-31', '2026-04-07']
+- Total keyword score: 310
+- Hit count: 290
+- Dates found: ['2025-11-17', '2025-11-20', '2025-20-38', '2025-20-56', '2026-01-01', '2026-01-12', '2026-03-10', '2026-03-26', '2026-03-31', '2026-04-04', '2026-04-05', '2026-04-07', '2026-17-39', '2026-17-45']
 - Top snippets:
-- line 1809 (score=2, keywords=['solomon', 'restraining order']): "description": "If Solomon stated the other party already had the restraining order and order is in effect, Solomon is obligated to recognize existing order status.",
-- line 1707 (score=2, keywords=['solomon', 'restraining order']): "description": "If Solomon acknowledged awareness of restraining order and the order is in effect, Solomon is obligated to seek court relief rather than self-help noncompliance.",
-- line 1423 (score=2, keywords=['solomon', 'restraining order']): "description": "Given the granted restraining order and residence restriction, Solomon is forbidden from entering or remaining at the protected residence.",
-- line 1365 (score=2, keywords=['solomon', 'restraining order']): "description": "Given granted in-effect restraining order with property restrictions, Solomon is forbidden to abuse/contact/interfere/control property.",
-- line 468 (score=2, keywords=['solomon', 'restraining order']): "description": "If Solomon stated the other party already had the restraining order and order is in effect, Solomon is obligated to recognize existing order status.",
-- line 366 (score=2, keywords=['solomon', 'restraining order']): "description": "If Solomon acknowledged awareness of restraining order and the order is in effect, Solomon is obligated to seek court relief rather than self-help noncompliance.",
-- line 82 (score=2, keywords=['solomon', 'restraining order']): "description": "Given the granted restraining order and residence restriction, Solomon is forbidden from entering or remaining at the protected residence.",
-- line 24 (score=2, keywords=['solomon', 'restraining order']): "description": "Given granted in-effect restraining order with property restrictions, Solomon is forbidden to abuse/contact/interfere/control property.",
+- line 3897 (score=2, keywords=['solomon', 'guardianship']): "source": "solomon_motion_for_guardianship_ocr.txt",
+- line 3817 (score=2, keywords=['solomon', 'guardianship']): "source": "solomon_motion_for_guardianship_ocr.txt",
+- line 3758 (score=2, keywords=['solomon', 'guardianship']): "source": "solomon_motion_for_guardianship_ocr.txt",
+- line 3685 (score=2, keywords=['solomon', 'guardianship']): "source": "solomon_motion_for_guardianship_ocr.txt",
+- line 3556 (score=2, keywords=['solomon', 'guardianship']): "source": "solomon_motion_for_guardianship_ocr.txt",
+- line 3485 (score=2, keywords=['solomon', 'guardianship']): "source": "solomon_motion_for_guardianship_ocr.txt",
+- line 2696 (score=2, keywords=['solomon', 'restraining order']): "description": "If Solomon stated the other party already had the restraining order and order is in effect, Solomon is obligated to recognize existing order status.",
+- line 2525 (score=2, keywords=['solomon', 'restraining order']): "description": "If Solomon acknowledged awareness of restraining order and the order is in effect, Solomon is obligated to seek court relief rather than self-help noncompliance.",
 
 ## evidence/email_imports/starworks5-master-case-email-import/graphrag/email_corpus_records.json
 - Relevance: high
@@ -112,80 +127,65 @@ Low relevance: 1108
 - line 1261 (score=2, keywords=['restraining order', 'benjamin barber']): "corpus_text": "Email subject: RE: HCV Orientation\nFrom: \"Tilton, Kati\" <KTilton@clackamas.us>\nTo: benjamin barber <starworks5@gmail.com>\nCc: \nDate: 2026-03-26T19:21:32+00:00\nParticipants: ktilton@clackamas.us, starworks5@gmail.com\nMessage-ID: <f1e37f0
 - line 1210 (score=2, keywords=['restraining order', 'benjamin barber']): "corpus_text": "Email subject: RE: HCV Orientation\nFrom: \"Tilton, Kati\" <KTilton@clackamas.us>\nTo: benjamin barber <starworks5@gmail.com>\nCc: \nDate: 2026-03-26T02:39:04+00:00\nParticipants: ktilton@clackamas.us, starworks5@gmail.com\nMessage-ID: <a0136ca
 
-## Collateral Estoppel/knowledge_graph/generated/motion_support_map.json
-- Relevance: high
-- Total keyword score: 236
-- Hit count: 228
-- Dates found: ['2025-11-17', '2025-11-20', '2025-20-38', '2025-20-56', '2026-01-01', '2026-01-12', '2026-03-10', '2026-03-26', '2026-04-04', '2026-04-07', '2026-17-39', '2026-17-45']
-- Top snippets:
-- line 1572 (score=2, keywords=['solomon', 'restraining order']): "description": "If Solomon stated the other party already had the restraining order and order is in effect, Solomon is obligated to recognize existing order status.",
-- line 1437 (score=2, keywords=['solomon', 'restraining order']): "description": "If Solomon acknowledged awareness of restraining order and the order is in effect, Solomon is obligated to seek court relief rather than self-help noncompliance.",
-- line 1057 (score=2, keywords=['solomon', 'restraining order']): "description": "Given the granted restraining order and residence restriction, Solomon is forbidden from entering or remaining at the protected residence.",
-- line 976 (score=2, keywords=['solomon', 'restraining order']): "description": "Given granted in-effect restraining order with property restrictions, Solomon is forbidden to abuse/contact/interfere/control property.",
-- line 609 (score=2, keywords=['solomon', 'restraining order']): "description": "If Solomon stated the other party already had the restraining order and order is in effect, Solomon is obligated to recognize existing order status.",
-- line 474 (score=2, keywords=['solomon', 'restraining order']): "description": "If Solomon acknowledged awareness of restraining order and the order is in effect, Solomon is obligated to seek court relief rather than self-help noncompliance.",
-- line 94 (score=2, keywords=['solomon', 'restraining order']): "description": "Given the granted restraining order and residence restriction, Solomon is forbidden from entering or remaining at the protected residence.",
-- line 13 (score=2, keywords=['solomon', 'restraining order']): "description": "Given granted in-effect restraining order with property restrictions, Solomon is forbidden to abuse/contact/interfere/control property.",
-
 ## Collateral Estoppel/knowledge_graph/generated/motion_support_map.md
 - Relevance: high
-- Total keyword score: 160
-- Hit count: 138
-- Dates found: ['2025-11-17', '2025-11-20', '2025-20-38', '2025-20-56', '2026-01-01', '2026-01-12', '2026-03-10', '2026-03-26', '2026-04-04', '2026-04-07', '2026-17-39', '2026-17-45']
+- Total keyword score: 230
+- Hit count: 191
+- Dates found: ['2025-11-17', '2025-11-20', '2025-20-38', '2025-20-56', '2026-01-01', '2026-01-12', '2026-03-10', '2026-03-26', '2026-03-31', '2026-04-04', '2026-04-05', '2026-04-07', '2026-17-39', '2026-17-45']
 - Top snippets:
-- line 473 (score=2, keywords=['solomon', 'guardianship']): - Conclusion: O(case:guardianship_collateral_estoppel, resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record, issue:interference_actor_assignment)
-- line 461 (score=2, keywords=['guardianship', '26pr00641']): - Conclusion: P(case:guardianship_collateral_estoppel, treat_subpoena_enforcement_motion_path_as_pending_until_service, case:26PR00641)
-- line 417 (score=2, keywords=['solomon', 'eppdapa']): - Conclusion: O(person:solomon, file_motion_to_modify_or_vacate_before_noncompliance, order:eppdapa_restraining_order)
-- line 406 (score=2, keywords=['solomon', 'eppdapa']): - Conclusion: F(person:solomon, assert_order_ineffective_without_court_relief, order:eppdapa_restraining_order)
-- line 395 (score=2, keywords=['solomon', 'eppdapa']): - Conclusion: O(person:solomon, recognize_existing_order_status, order:eppdapa_restraining_order)
-- line 384 (score=2, keywords=['solomon', 'eppdapa']): - Conclusion: F(person:solomon, intentional_noncooperation_with_effective_order, order:eppdapa_restraining_order)
-- line 373 (score=2, keywords=['solomon', 'eppdapa']): - Conclusion: F(person:solomon, condition_compliance_on_additional_service, order:eppdapa_restraining_order)
-- line 362 (score=2, keywords=['solomon', 'eppdapa']): - Conclusion: O(person:solomon, seek_clarification_or_relief_through_court, order:eppdapa_restraining_order)
-
-## Collateral Estoppel/knowledge_graph/generated/case_dependency_graph.json
-- Relevance: high
-- Total keyword score: 158
-- Hit count: 154
-- Dates found: ['2026-04-07']
-- Top snippets:
-- line 386 (score=2, keywords=['solomon', 'restraining order']): "description": "If Solomon stated the other party already had the restraining order and order is in effect, Solomon is obligated to recognize existing order status."
-- line 332 (score=2, keywords=['solomon', 'restraining order']): "description": "If Solomon acknowledged awareness of restraining order and the order is in effect, Solomon is obligated to seek court relief rather than self-help noncompliance."
-- line 144 (score=2, keywords=['solomon', 'restraining order']): "description": "Given the granted restraining order and residence restriction, Solomon is forbidden from entering or remaining at the protected residence."
-- line 114 (score=2, keywords=['solomon', 'restraining order']): "description": "Given granted in-effect restraining order with property restrictions, Solomon is forbidden to abuse/contact/interfere/control property."
-- line 1188 (score=1, keywords=['solomon']): "from": "f_hacc_named_notice_to_solomon_order_not_found",
-- line 1158 (score=1, keywords=['solomon']): "from": "f_client_solomon_failed_appearance",
-- line 1143 (score=1, keywords=['solomon']): "from": "f_solomon_service_position_statement",
-- line 1113 (score=1, keywords=['solomon']): "from": "f_actor_assignment_conflict_benjamin_vs_solomon_interference",
+- line 815 (score=2, keywords=['solomon', 'guardianship']): - f_petition_exists [verified] PetitionFiled dates=['2026-03-31'] source=solomon_motion_for_guardianship_ocr.txt confidence=None(None) kind=None
+- line 801 (score=2, keywords=['solomon', 'guardianship']): - f_petition_exists [verified] PetitionFiled dates=['2026-03-31'] source=solomon_motion_for_guardianship_ocr.txt confidence=None(None) kind=None
+- line 787 (score=2, keywords=['solomon', 'guardianship']): - f_petition_exists [verified] PetitionFiled dates=['2026-03-31'] source=solomon_motion_for_guardianship_ocr.txt confidence=None(None) kind=None
+- line 773 (score=2, keywords=['solomon', 'guardianship']): - f_notice_to_respondent [verified] NoticeIssued dates=['2026-03-31'] source=solomon_motion_for_guardianship_ocr.txt confidence=None(None) kind=None
+- line 755 (score=2, keywords=['guardianship', '26pr00641']): - Conclusion: O(case:26PR00641, schedule_and_process_hearing_on_guardianship_objection, person:jane_cortez)
+- line 748 (score=2, keywords=['solomon', 'guardianship']): - f_notice_to_respondent [verified] NoticeIssued dates=['2026-03-31'] source=solomon_motion_for_guardianship_ocr.txt confidence=None(None) kind=None
+- line 735 (score=2, keywords=['solomon', 'guardianship']): - f_petition_exists [verified] PetitionFiled dates=['2026-03-31'] source=solomon_motion_for_guardianship_ocr.txt confidence=None(None) kind=None
+- line 676 (score=2, keywords=['solomon', 'guardianship']): - Conclusion: P(case:guardianship_collateral_estoppel, seek_order_or_warrant_to_compel_appearance_if_order_to_appear_is_served_and_ignored, person:solomon)
 
 ## Collateral Estoppel/knowledge_graph/generated/motion_paragraph_bank.json
 - Relevance: high
-- Total keyword score: 116
-- Hit count: 82
-- Dates found: ['2025-11-17', '2025-11-20', '2025-20-38', '2025-20-56', '2026-01-01', '2026-01-12', '2026-03-10', '2026-03-26', '2026-04-07', '2026-17-39', '2026-17-45']
+- Total keyword score: 198
+- Hit count: 119
+- Dates found: ['2025-11-17', '2025-11-20', '2025-20-38', '2025-20-56', '2026-01-01', '2026-01-12', '2026-03-10', '2026-03-26', '2026-03-31', '2026-04-05', '2026-04-07', '2026-17-39', '2026-17-45']
 - Top snippets:
-- line 314 (score=2, keywords=['solomon', 'guardianship']): "paragraph": "Based on f_actor_assignment_conflict_benjamin_vs_solomon_interference (verified, dates=['2026-04-07'], source=generate_formal_reasoning_artifacts.py, confidence=None(None), kind=None), the rule r21_case_obligated_resolve_actor_assignment_conflict
-- line 309 (score=2, keywords=['guardianship', '26pr00641']): "paragraph": "Based on f_subpoena_pre_service_phase_only (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r20_case_permitted_treat_enforcement_path_as_pending_pre_service yields P(case:gu
-- line 294 (score=2, keywords=['solomon', 'guardianship']): "paragraph": "Based on f_hacc_named_notice_to_solomon_order_not_found (verified, dates=['2026-04-07'], source=protective_order_and_hacc_notice_timeline.md, confidence=None(None), kind=None), the rule r6c_solomon_interference_not_proved_by_named_hacc_notice_gap
-- line 282 (score=2, keywords=['solomon', 'guardianship']): "paragraph": "Based on f_actor_assignment_conflict_benjamin_vs_solomon_interference (verified, dates=['2026-04-07'], source=generate_formal_reasoning_artifacts.py, confidence=None(None), kind=None), the rule r21_case_obligated_resolve_actor_assignment_conflict
-- line 277 (score=2, keywords=['guardianship', '26pr00641']): "paragraph": "Based on f_subpoena_pre_service_phase_only (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r20_case_permitted_treat_enforcement_path_as_pending_pre_service yields P(case:gu
-- line 262 (score=2, keywords=['solomon', 'guardianship']): "paragraph": "Based on f_hacc_named_notice_to_solomon_order_not_found (verified, dates=['2026-04-07'], source=protective_order_and_hacc_notice_timeline.md, confidence=None(None), kind=None), the rule r6c_solomon_interference_not_proved_by_named_hacc_notice_gap
-- line 255 (score=2, keywords=['solomon', 'guardianship']): "paragraph": "Based on f_actor_assignment_conflict_benjamin_vs_solomon_interference (verified, dates=['2026-04-07'], source=generate_formal_reasoning_artifacts.py, confidence=None(None), kind=None), the rule r21_case_obligated_resolve_actor_assignment_conflict
-- line 250 (score=2, keywords=['guardianship', '26pr00641']): "paragraph": "Based on f_subpoena_pre_service_phase_only (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r20_case_permitted_treat_enforcement_path_as_pending_pre_service yields P(case:gu
+- line 1677 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): "paragraph": "Based on f_authority_ors_125_120_protected_person_special_advocate (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_petition_exists (verified, dates=['2026-03-31'], source
+- line 1642 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): "paragraph": "Based on f_authority_ors_125_080_hearing_and_counsel (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_notice_to_respondent (verified, dates=['2026-03-31'], source=solomon_
+- line 1606 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): "paragraph": "Based on f_authority_ors_125_060_notice_recipients (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_ors_125_065_notice_manner_and_timing (verified, dates=['2026-
+- line 1588 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): "paragraph": "Based on f_authority_ors_125_050_protective_orcp_oec (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_petition_exists (verified, dates=['2026-03-31'], source=solomon_motio
+- line 1213 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): "paragraph": "Based on f_authority_clackamas_slr_9_035_probate_practice (verified, dates=['2026-04-07'], source=06_oregon_authority_table_final.md, confidence=None(None), kind=None); f_authority_clackamas_slr_9_076_probate_practice (verified, dates=['20
+- line 1180 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): "paragraph": "Based on f_authority_ors_125_080_hearing_and_counsel (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_notice_to_respondent (verified, dates=['2026-03-31'], source=solomon_
+- line 811 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): "paragraph": "Based on f_authority_ors_125_120_protected_person_special_advocate (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_petition_exists (verified, dates=['2026-03-31'], source
+- line 776 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): "paragraph": "Based on f_authority_ors_125_080_hearing_and_counsel (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_notice_to_respondent (verified, dates=['2026-03-31'], source=solomon_
 
 ## Collateral Estoppel/knowledge_graph/generated/motion_paragraph_bank.md
 - Relevance: high
-- Total keyword score: 116
-- Hit count: 82
-- Dates found: ['2025-11-17', '2025-11-20', '2025-20-38', '2025-20-56', '2026-01-01', '2026-01-12', '2026-03-10', '2026-03-26', '2026-04-07', '2026-17-39', '2026-17-45']
+- Total keyword score: 198
+- Hit count: 119
+- Dates found: ['2025-11-17', '2025-11-20', '2025-20-38', '2025-20-56', '2026-01-01', '2026-01-12', '2026-03-10', '2026-03-26', '2026-03-31', '2026-04-05', '2026-04-07', '2026-17-39', '2026-17-45']
 - Top snippets:
-- line 135 (score=2, keywords=['solomon', 'guardianship']): - Based on f_actor_assignment_conflict_benjamin_vs_solomon_interference (verified, dates=['2026-04-07'], source=generate_formal_reasoning_artifacts.py, confidence=None(None), kind=None), the rule r21_case_obligated_resolve_actor_assignment_conflict yields O(ca
-- line 133 (score=2, keywords=['guardianship', '26pr00641']): - Based on f_subpoena_pre_service_phase_only (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r20_case_permitted_treat_enforcement_path_as_pending_pre_service yields P(case:guardianship_c
-- line 127 (score=2, keywords=['solomon', 'guardianship']): - Based on f_hacc_named_notice_to_solomon_order_not_found (verified, dates=['2026-04-07'], source=protective_order_and_hacc_notice_timeline.md, confidence=None(None), kind=None), the rule r6c_solomon_interference_not_proved_by_named_hacc_notice_gap yields P(ca
-- line 121 (score=2, keywords=['solomon', 'guardianship']): - Based on f_actor_assignment_conflict_benjamin_vs_solomon_interference (verified, dates=['2026-04-07'], source=generate_formal_reasoning_artifacts.py, confidence=None(None), kind=None), the rule r21_case_obligated_resolve_actor_assignment_conflict yields O(ca
-- line 119 (score=2, keywords=['guardianship', '26pr00641']): - Based on f_subpoena_pre_service_phase_only (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r20_case_permitted_treat_enforcement_path_as_pending_pre_service yields P(case:guardianship_c
-- line 113 (score=2, keywords=['solomon', 'guardianship']): - Based on f_hacc_named_notice_to_solomon_order_not_found (verified, dates=['2026-04-07'], source=protective_order_and_hacc_notice_timeline.md, confidence=None(None), kind=None), the rule r6c_solomon_interference_not_proved_by_named_hacc_notice_gap yields P(ca
-- line 109 (score=2, keywords=['solomon', 'guardianship']): - Based on f_actor_assignment_conflict_benjamin_vs_solomon_interference (verified, dates=['2026-04-07'], source=generate_formal_reasoning_artifacts.py, confidence=None(None), kind=None), the rule r21_case_obligated_resolve_actor_assignment_conflict yields O(ca
-- line 107 (score=2, keywords=['guardianship', '26pr00641']): - Based on f_subpoena_pre_service_phase_only (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r20_case_permitted_treat_enforcement_path_as_pending_pre_service yields P(case:guardianship_c
+- line 211 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): - Based on f_authority_ors_125_120_protected_person_special_advocate (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_petition_exists (verified, dates=['2026-03-31'], source=solomon_mot
+- line 207 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): - Based on f_authority_ors_125_080_hearing_and_counsel (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_notice_to_respondent (verified, dates=['2026-03-31'], source=solomon_motion_for_g
+- line 203 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): - Based on f_authority_ors_125_060_notice_recipients (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_ors_125_065_notice_manner_and_timing (verified, dates=['2026-04-07'], sou
+- line 201 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): - Based on f_authority_ors_125_050_protective_orcp_oec (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_petition_exists (verified, dates=['2026-03-31'], source=solomon_motion_for_guardi
+- line 153 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): - Based on f_authority_clackamas_slr_9_035_probate_practice (verified, dates=['2026-04-07'], source=06_oregon_authority_table_final.md, confidence=None(None), kind=None); f_authority_clackamas_slr_9_076_probate_practice (verified, dates=['2026-04-07'], 
+- line 149 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): - Based on f_authority_ors_125_080_hearing_and_counsel (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_notice_to_respondent (verified, dates=['2026-03-31'], source=solomon_motion_for_g
+- line 104 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): - Based on f_authority_ors_125_120_protected_person_special_advocate (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_petition_exists (verified, dates=['2026-03-31'], source=solomon_mot
+- line 100 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): - Based on f_authority_ors_125_080_hearing_and_counsel (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_notice_to_respondent (verified, dates=['2026-03-31'], source=solomon_motion_for_g
+
+## Collateral Estoppel/knowledge_graph/generated/case_dependency_graph.json
+- Relevance: high
+- Total keyword score: 162
+- Hit count: 158
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 428 (score=2, keywords=['solomon', 'restraining order']): "description": "If Solomon stated the other party already had the restraining order and order is in effect, Solomon is obligated to recognize existing order status."
+- line 374 (score=2, keywords=['solomon', 'restraining order']): "description": "If Solomon acknowledged awareness of restraining order and the order is in effect, Solomon is obligated to seek court relief rather than self-help noncompliance."
+- line 178 (score=2, keywords=['solomon', 'restraining order']): "description": "Given the granted restraining order and residence restriction, Solomon is forbidden from entering or remaining at the protected residence."
+- line 148 (score=2, keywords=['solomon', 'restraining order']): "description": "Given granted in-effect restraining order with property restrictions, Solomon is forbidden to abuse/contact/interfere/control property."
+- line 1653 (score=1, keywords=['solomon']): "from": "f_actor_assignment_conflict_benjamin_vs_solomon_interference",
+- line 1523 (score=1, keywords=['solomon']): "from": "f_hacc_named_notice_to_solomon_order_not_found",
+- line 1493 (score=1, keywords=['solomon']): "from": "f_client_solomon_failed_appearance",
+- line 1478 (score=1, keywords=['solomon']): "from": "f_solomon_service_position_statement",
 
 ## evidence/email_imports/starworks5-fraud-reimport-20260404/email_import_manifest.json
 - Relevance: high
@@ -247,6 +247,21 @@ Low relevance: 1108
 - line 1188 (score=1, keywords=['benjamin barber']): To: benjamin barber <starworks5@gmail.com>
 - line 1180 (score=1, keywords=['benjamin barber']): benjamin barber <starworks5@gmail.com> Thu, Oct 16, 2025 at 2:01 PM
 
+## Collateral Estoppel/knowledge_graph/generated/deontic_litigation_matrix.json
+- Relevance: high
+- Total keyword score: 71
+- Hit count: 71
+- Dates found: ['2025-11-17', '2025-11-20', '2026-01-01', '2026-01-12', '2026-03-10', '2026-03-26', '2026-03-31', '2026-04-05', '2026-04-07']
+- Top snippets:
+- line 1415 (score=1, keywords=['solomon']): "rule_id": "r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order",
+- line 1414 (score=1, keywords=['eppdapa']): "target": "order:eppdapa_restraining_order",
+- line 1397 (score=1, keywords=['solomon']): "rule_id": "r10_solomon_noncooperation_statement_conflicts_with_effective_order",
+- line 1396 (score=1, keywords=['eppdapa']): "target": "order:eppdapa_restraining_order",
+- line 1379 (score=1, keywords=['solomon']): "rule_id": "r9_solomon_wait_for_service_conflicts_with_no_further_service",
+- line 1378 (score=1, keywords=['eppdapa']): "target": "order:eppdapa_restraining_order",
+- line 1358 (score=1, keywords=['solomon']): "rule_id": "r5c_solomon_forbidden_self_help_noncooperation",
+- line 1357 (score=1, keywords=['eppdapa']): "target": "order:eppdapa_restraining_order",
+
 ## evidence/email_imports/starworks5-additional-info-import/email_import_manifest.json
 - Relevance: high
 - Total keyword score: 70
@@ -276,6 +291,21 @@ Low relevance: 1108
 - line 3981 (score=1, keywords=['benjamin barber']): "content": "Subject: Re: Additional Information Needed\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <ktilton@clackamas.us>, bwilliams@clackamas.us\nDate: 2026-03-17T09:54:04-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/s
 - line 3955 (score=1, keywords=['benjamin barber']): "content": "Subject: RE: Additional Information Needed\nFrom: \"Tilton, Kati\" <KTilton@clackamas.us>\nTo: benjamin barber <starworks5@gmail.com>\nDate: 2026-03-17T16:04:43+00:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-additional-rei
 - line 3930 (score=1, keywords=['benjamin barber']): "content": "Subject: Re: Additional Information Needed\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <ktilton@clackamas.us>, bwilliams@clackamas.us\nDate: 2026-03-16T08:26:00-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/s
+
+## Collateral Estoppel/knowledge_graph/generated/deontic_litigation_matrix.md
+- Relevance: high
+- Total keyword score: 67
+- Hit count: 51
+- Dates found: ['2025-11-20', '2026-01-12', '2026-03-10', '2026-03-26', '2026-04-07']
+- Top snippets:
+- line 132 (score=2, keywords=['solomon', 'eppdapa']): - assert_order_ineffective_without_court_relief -> order:eppdapa_restraining_order (r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order, at 2026-03-10)
+- line 131 (score=2, keywords=['solomon', 'eppdapa']): - intentional_noncooperation_with_effective_order -> order:eppdapa_restraining_order (r10_solomon_noncooperation_statement_conflicts_with_effective_order, at 2026-03-10)
+- line 130 (score=2, keywords=['solomon', 'eppdapa']): - condition_compliance_on_additional_service -> order:eppdapa_restraining_order (r9_solomon_wait_for_service_conflicts_with_no_further_service, at 2026-03-10)
+- line 129 (score=2, keywords=['solomon', 'eppdapa']): - adopt_self_help_noncooperation_posture -> order:eppdapa_restraining_order (r5c_solomon_forbidden_self_help_noncooperation, at 2026-03-10)
+- line 125 (score=2, keywords=['solomon', 'eppdapa']): - file_motion_to_modify_or_vacate_before_noncompliance -> order:eppdapa_restraining_order (r13_solomon_judge_overturn_statement_triggers_motion_path, at 2026-03-10)
+- line 124 (score=2, keywords=['solomon', 'eppdapa']): - recognize_existing_order_status -> order:eppdapa_restraining_order (r11_solomon_already_have_order_statement_supports_notice, at 2025-11-20)
+- line 123 (score=2, keywords=['solomon', 'eppdapa']): - seek_clarification_or_relief_through_court -> order:eppdapa_restraining_order (r8_solomon_notice_ack_triggers_court_relief_path, at 2025-11-20)
+- line 122 (score=2, keywords=['solomon', 'eppdapa']): - seek_hearing_or_comply_with_existing_order -> order:eppdapa_restraining_order (r5b_solomon_obligated_seek_hearing_or_comply, at 2026-03-10)
 
 ## Collateral Estoppel/knowledge_graph/guardianship_case_graph.json
 - Relevance: high
@@ -337,21 +367,6 @@ Low relevance: 1108
 - line 3077 (score=1, keywords=['benjamin barber']): "from": "benjamin barber <starworks5@gmail.com>",
 - line 3014 (score=1, keywords=['benjamin barber']): "from": "benjamin barber <starworks5@gmail.com>",
 
-## Collateral Estoppel/knowledge_graph/generated/deontic_litigation_matrix.json
-- Relevance: high
-- Total keyword score: 57
-- Hit count: 57
-- Dates found: ['2025-11-20', '2026-01-12', '2026-03-10', '2026-03-26', '2026-04-07']
-- Top snippets:
-- line 414 (score=1, keywords=['solomon']): "rule_id": "r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order",
-- line 413 (score=1, keywords=['eppdapa']): "target": "order:eppdapa_restraining_order",
-- line 408 (score=1, keywords=['solomon']): "rule_id": "r10_solomon_noncooperation_statement_conflicts_with_effective_order",
-- line 407 (score=1, keywords=['eppdapa']): "target": "order:eppdapa_restraining_order",
-- line 402 (score=1, keywords=['solomon']): "rule_id": "r9_solomon_wait_for_service_conflicts_with_no_further_service",
-- line 401 (score=1, keywords=['eppdapa']): "target": "order:eppdapa_restraining_order",
-- line 396 (score=1, keywords=['solomon']): "rule_id": "r5c_solomon_forbidden_self_help_noncooperation",
-- line 395 (score=1, keywords=['eppdapa']): "target": "order:eppdapa_restraining_order",
-
 ## evidence/email_imports/starworks5-hcv-reimport-20260404-narrow/email_import_manifest.json
 - Relevance: high
 - Total keyword score: 56
@@ -382,20 +397,35 @@ Low relevance: 1108
 - line 2863 (score=1, keywords=['benjamin barber']): "content": "Subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us\nDate: 2026-03-26T13:58:10-07:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-
 - line 2836 (score=1, keywords=['benjamin barber']): "content": "Subject: RE: HCV Orientation\nFrom: \"Tilton, Kati\" <KTilton@clackamas.us>\nTo: benjamin barber <starworks5@gmail.com>\nDate: 2026-03-26T19:21:32+00:00\nSaved email: /home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404/0021-R
 
-## Collateral Estoppel/knowledge_graph/generated/deontic_litigation_matrix.md
+## Collateral Estoppel/evidence_notes/protective_order_and_hacc_notice_timeline.md
 - Relevance: high
-- Total keyword score: 53
-- Hit count: 37
-- Dates found: ['2025-11-20', '2026-01-12', '2026-03-10', '2026-03-26', '2026-04-07']
+- Total keyword score: 52
+- Hit count: 40
+- Dates found: ['11-20-2025', '12/9/2025', '2025-20-56', '2026-03-31', '2026-04-04']
 - Top snippets:
-- line 100 (score=2, keywords=['solomon', 'eppdapa']): - assert_order_ineffective_without_court_relief -> order:eppdapa_restraining_order (r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order, at 2026-03-10)
-- line 99 (score=2, keywords=['solomon', 'eppdapa']): - intentional_noncooperation_with_effective_order -> order:eppdapa_restraining_order (r10_solomon_noncooperation_statement_conflicts_with_effective_order, at 2026-03-10)
-- line 98 (score=2, keywords=['solomon', 'eppdapa']): - condition_compliance_on_additional_service -> order:eppdapa_restraining_order (r9_solomon_wait_for_service_conflicts_with_no_further_service, at 2026-03-10)
-- line 97 (score=2, keywords=['solomon', 'eppdapa']): - adopt_self_help_noncooperation_posture -> order:eppdapa_restraining_order (r5c_solomon_forbidden_self_help_noncooperation, at 2026-03-10)
-- line 93 (score=2, keywords=['solomon', 'eppdapa']): - file_motion_to_modify_or_vacate_before_noncompliance -> order:eppdapa_restraining_order (r13_solomon_judge_overturn_statement_triggers_motion_path, at 2026-03-10)
-- line 92 (score=2, keywords=['solomon', 'eppdapa']): - recognize_existing_order_status -> order:eppdapa_restraining_order (r11_solomon_already_have_order_statement_supports_notice, at 2025-11-20)
-- line 91 (score=2, keywords=['solomon', 'eppdapa']): - seek_clarification_or_relief_through_court -> order:eppdapa_restraining_order (r8_solomon_notice_ack_triggers_court_relief_path, at 2025-11-20)
-- line 90 (score=2, keywords=['solomon', 'eppdapa']): - seek_hearing_or_comply_with_existing_order -> order:eppdapa_restraining_order (r5b_solomon_obligated_seek_hearing_or_comply, at 2026-03-10)
+- line 149 (score=2, keywords=['solomon', 'restraining order']): - The record strongly supports that the Solomon restraining order was granted on `November 20, 2025`.
+- line 96 (score=2, keywords=['solomon', 'restraining order']): - `High confidence`: Solomon restraining order was granted on November 20, 2025.
+- line 85 (score=2, keywords=['solomon', 'restraining order']): - `November 20, 2025, 1:52:21 PM Pacific`: Benjamin texted Solomon that the restraining order had been granted.
+- line 84 (score=2, keywords=['solomon', 'restraining order']): - `November 20, 2025`: Solomon restraining order granted.
+- line 80 (score=2, keywords=['solomon', 'restraining order']): - Independent same-day support appears in the Google Voice export: at `November 20, 2025, 1:52:21 PM Pacific Time`, Benjamin texted Solomon, "The restraining order is granted." See [event.json](/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-
+- line 78 (score=2, keywords=['solomon', 'restraining order']): - OCR confirms this is an Elderly Persons and Persons with Disabilities Abuse Prevention Act restraining order against `Solomon Samuel Barber`.
+- line 47 (score=2, keywords=['restraining order', 'jane cortez']): - On `January 12, 2026 at 2:20 PM`, Benjamin replied: `I am going to fill out the Jane Cortez vs Julio Cortez restraining order tonight, and will fill out the Port Out request which I intend to send to you tomorrow.` See [message.eml](/home/barberb/HACC/worksp
+- line 20 (score=2, keywords=['solomon', 'restraining order']): - A November 17, 2025 text from Solomon says, "Don't you already have the restraining order?" which strongly indicates the Julio-related order already existed by `November 17, 2025`. See [uid_660690_Mon--17-Nov-2025-20-56-22--0000_New-text-message-from-solomon
+
+## Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/inclusive__motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_md.md
+- Relevance: high
+- Total keyword score: 50
+- Hit count: 32
+- Dates found: ['2025-11-17', '2025-11-20', '2025-20-38', '2025-20-56', '2026-01-01', '2026-01-12', '2026-03-10', '2026-03-26', '2026-03-31', '2026-04-07', '2026-17-39', '2026-17-45']
+- Top snippets:
+- line 166 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): Based on f_authority_clackamas_slr_9_035_probate_practice (verified, dates=['2026-04-07'], source=06_oregon_authority_table_final.md, confidence=None(None), kind=None); f_authority_clackamas_slr_9_076_probate_practice (verified, dates=['2026-04-07'], so
+- line 152 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): Based on f_authority_ors_125_080_hearing_and_counsel (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_notice_to_respondent (verified, dates=['2026-03-31'], source=solomon_motion_for_gua
+- line 159 (score=2, keywords=['solomon', 'guardianship']): Based on f_authority_orcp_9_service_of_later_filed_papers (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_orcp_10_time_computation (verified, dates=['2026-04-07'], source=ore
+- line 145 (score=2, keywords=['solomon', 'guardianship']): Based on f_authority_ors_33_075_compel_appearance (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_client_solomon_failed_appearance (alleged, dates=['2026-03-10', '2026-04-07'], source=
+- line 138 (score=2, keywords=['solomon', 'guardianship']): Based on f_authority_ors_33_055_remedial_contempt_procedure (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_restraining_order_in_effect (verified, dates=['2025-11-20'], source=sam_barb
+- line 131 (score=2, keywords=['solomon', 'guardianship']): Based on f_actor_assignment_conflict_benjamin_vs_solomon_interference (verified, dates=['2026-04-07'], source=generate_formal_reasoning_artifacts.py, confidence=None(None), kind=None), the rule r21_case_obligated_resolve_actor_assignment_conflict yields O(case
+- line 124 (score=2, keywords=['guardianship', '26pr00641']): Based on f_subpoena_pre_service_phase_only (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r20_case_permitted_treat_enforcement_path_as_pending_pre_service yields P(case:guardianship_col
+- line 96 (score=2, keywords=['solomon', 'eppdapa']): Based on f_feed_ev_solomon_judge_overturn_statement (verified, dates=['2026-03-10'], source=uid_743129_Tue--10-Mar-2026-17-39-27--0000_New-text-message-from-solomon--503--381-6911.eml, confidence=medium_high(0.8), kind=transcript_extract); f_restraining_order_
 
 ## Collateral Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt
 - Relevance: high
@@ -412,6 +442,21 @@ Low relevance: 1108
 - line 348 (score=2, keywords=['solomon', 'solomon barber']): Solomon Barber
 - line 299 (score=2, keywords=['solomon', 'solomon barber']): 7 E. Appointing Solomon Barber as Indefinite Guardian for Jane Kay Cortez;
 
+## Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/strict__motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_md.md
+- Relevance: high
+- Total keyword score: 48
+- Hit count: 31
+- Dates found: ['2025-11-17', '2025-11-20', '2025-20-38', '2025-20-56', '2026-01-01', '2026-01-12', '2026-03-10', '2026-03-26', '2026-03-31', '2026-04-07', '2026-17-39', '2026-17-45']
+- Top snippets:
+- line 159 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): Based on f_authority_clackamas_slr_9_035_probate_practice (verified, dates=['2026-04-07'], source=06_oregon_authority_table_final.md, confidence=None(None), kind=None); f_authority_clackamas_slr_9_076_probate_practice (verified, dates=['2026-04-07'], so
+- line 145 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): Based on f_authority_ors_125_080_hearing_and_counsel (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_notice_to_respondent (verified, dates=['2026-03-31'], source=solomon_motion_for_gua
+- line 152 (score=2, keywords=['solomon', 'guardianship']): Based on f_authority_orcp_9_service_of_later_filed_papers (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_orcp_10_time_computation (verified, dates=['2026-04-07'], source=ore
+- line 138 (score=2, keywords=['solomon', 'guardianship']): Based on f_authority_ors_33_055_remedial_contempt_procedure (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_restraining_order_in_effect (verified, dates=['2025-11-20'], source=sam_barb
+- line 131 (score=2, keywords=['solomon', 'guardianship']): Based on f_actor_assignment_conflict_benjamin_vs_solomon_interference (verified, dates=['2026-04-07'], source=generate_formal_reasoning_artifacts.py, confidence=None(None), kind=None), the rule r21_case_obligated_resolve_actor_assignment_conflict yields O(case
+- line 124 (score=2, keywords=['guardianship', '26pr00641']): Based on f_subpoena_pre_service_phase_only (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r20_case_permitted_treat_enforcement_path_as_pending_pre_service yields P(case:guardianship_col
+- line 96 (score=2, keywords=['solomon', 'eppdapa']): Based on f_feed_ev_solomon_judge_overturn_statement (verified, dates=['2026-03-10'], source=uid_743129_Tue--10-Mar-2026-17-39-27--0000_New-text-message-from-solomon--503--381-6911.eml, confidence=medium_high(0.8), kind=transcript_extract); f_restraining_order_
+- line 89 (score=2, keywords=['solomon', 'eppdapa']): Based on f_feed_ev_solomon_order_not_in_effect_statement (verified, dates=['2026-03-10'], source=uid_743131_Tue--10-Mar-2026-17-45-54--0000_New-text-message-from-solomon--503--381-6911.eml, confidence=medium_high(0.8), kind=transcript_extract); f_restraining_o
+
 ## evidence/email_imports/starworks5-recommended-packet-email-import/graphrag/email_corpus_records.json
 - Relevance: high
 - Total keyword score: 48
@@ -426,6 +471,21 @@ Low relevance: 1108
 - line 394 (score=1, keywords=['benjamin barber']): "to": "benjamin barber <starworks5@gmail.com>",
 - line 388 (score=1, keywords=['benjamin barber']): "corpus_text": "Email subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nCc: \nDate: 2026-03-20T14:24:59-07:00\nParticipants: ktilton@clackamas.us, starworks5@gmail.com\nMessage-ID: <CAMTdTS
 - line 375 (score=1, keywords=['benjamin barber']): "from": "benjamin barber <starworks5@gmail.com>",
+
+## Collateral Estoppel/drafts/final_filing_set/34_strict_mode_evidentiary_addendum_bundle_2026-04-07.md
+- Relevance: high
+- Total keyword score: 45
+- Hit count: 37
+- Dates found: ['2025-11-20', '2026-01-12', '2026-03-10', '2026-03-26', '2026-04-07']
+- Top snippets:
+- line 124 (score=2, keywords=['solomon', 'eppdapa']): - r9_solomon_wait_for_service_conflicts_with_no_further_service (F): condition_compliance_on_additional_service -> order:eppdapa_restraining_order (activation 2026-03-10)
+- line 123 (score=2, keywords=['solomon', 'eppdapa']): - r8_solomon_notice_ack_triggers_court_relief_path (O): seek_clarification_or_relief_through_court -> order:eppdapa_restraining_order (activation 2025-11-20)
+- line 119 (score=2, keywords=['solomon', 'eppdapa']): - r5c_solomon_forbidden_self_help_noncooperation (F): adopt_self_help_noncooperation_posture -> order:eppdapa_restraining_order (activation 2026-03-10)
+- line 118 (score=2, keywords=['solomon', 'eppdapa']): - r5b_solomon_obligated_seek_hearing_or_comply (O): seek_hearing_or_comply_with_existing_order -> order:eppdapa_restraining_order (activation 2026-03-10)
+- line 107 (score=2, keywords=['solomon', 'eppdapa']): - r13_solomon_judge_overturn_statement_triggers_motion_path (O): file_motion_to_modify_or_vacate_before_noncompliance -> order:eppdapa_restraining_order (activation 2026-03-10)
+- line 106 (score=2, keywords=['solomon', 'eppdapa']): - r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order (F): assert_order_ineffective_without_court_relief -> order:eppdapa_restraining_order (activation 2026-03-10)
+- line 105 (score=2, keywords=['solomon', 'eppdapa']): - r11_solomon_already_have_order_statement_supports_notice (O): recognize_existing_order_status -> order:eppdapa_restraining_order (activation 2025-11-20)
+- line 104 (score=2, keywords=['solomon', 'eppdapa']): - r10_solomon_noncooperation_statement_conflicts_with_effective_order (F): intentional_noncooperation_with_effective_order -> order:eppdapa_restraining_order (activation 2026-03-10)
 
 ## evidence/email_imports/starworks5-clackamas-followup-import/email_import_manifest.json
 - Relevance: high
@@ -457,36 +517,6 @@ Low relevance: 1108
 - line 25 (score=2, keywords=['solomon', 'solomon barber']): 5. Movant alleges that an enforceable order or authority structure existed and that Solomon Barber had notice of it.
 - line 19 (score=2, keywords=['solomon', 'solomon barber']): 2. Require Solomon Barber to explain why his conduct does not amount to contempt or contempt-like noncompliance with operative court orders, if the Court finds a valid enforceable order and notice.
 
-## Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/inclusive__motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_md.md
-- Relevance: high
-- Total keyword score: 38
-- Hit count: 27
-- Dates found: ['2025-11-17', '2025-11-20', '2025-20-38', '2025-20-56', '2026-01-01', '2026-01-12', '2026-03-10', '2026-03-26', '2026-04-07', '2026-17-39', '2026-17-45']
-- Top snippets:
-- line 113 (score=2, keywords=['solomon', 'guardianship']): Based on f_actor_assignment_conflict_benjamin_vs_solomon_interference (verified, dates=['2026-04-07'], source=generate_formal_reasoning_artifacts.py, confidence=None(None), kind=None), the rule r21_case_obligated_resolve_actor_assignment_conflict yields O(case
-- line 107 (score=2, keywords=['guardianship', '26pr00641']): Based on f_subpoena_pre_service_phase_only (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r20_case_permitted_treat_enforcement_path_as_pending_pre_service yields P(case:guardianship_col
-- line 83 (score=2, keywords=['solomon', 'eppdapa']): Based on f_feed_ev_solomon_judge_overturn_statement (verified, dates=['2026-03-10'], source=uid_743129_Tue--10-Mar-2026-17-39-27--0000_New-text-message-from-solomon--503--381-6911.eml, confidence=medium_high(0.8), kind=transcript_extract); f_restraining_order_
-- line 77 (score=2, keywords=['solomon', 'eppdapa']): Based on f_feed_ev_solomon_order_not_in_effect_statement (verified, dates=['2026-03-10'], source=uid_743131_Tue--10-Mar-2026-17-45-54--0000_New-text-message-from-solomon--503--381-6911.eml, confidence=medium_high(0.8), kind=transcript_extract); f_restraining_o
-- line 71 (score=2, keywords=['solomon', 'eppdapa']): Based on f_feed_ev_solomon_ack_already_have_order (verified, dates=['2025-11-17'], source=uid_660690_Mon--17-Nov-2025-20-56-22--0000_New-text-message-from-solomon--503--381-6911.eml, confidence=high(0.9), kind=direct_message); f_restraining_order_in_effect (ve
-- line 65 (score=2, keywords=['solomon', 'eppdapa']): Based on f_feed_ev_solomon_not_incentivized_statement (verified, dates=['2026-03-10'], source=transcript.txt, confidence=medium_high(0.8), kind=transcript_extract); f_restraining_order_in_effect (verified, dates=['2025-11-20'], source=sam_barber_restraining_or
-- line 59 (score=2, keywords=['solomon', 'eppdapa']): Based on f_feed_ev_solomon_wait_for_service_statement (verified, dates=['2026-03-10'], source=transcript.txt, confidence=medium_high(0.8), kind=transcript_extract); f_restraining_order_no_further_service_needed (verified, dates=['2025-11-20'], source=sam_barbe
-- line 53 (score=2, keywords=['solomon', 'eppdapa']): Based on f_feed_ev_solomon_ack_heard_restraining_order (verified, dates=['2025-11-17'], source=uid_660669_Mon--17-Nov-2025-20-38-24--0000_New-text-message-from-solomon--503--381-6911.eml, confidence=high(0.9), kind=direct_message); f_restraining_order_in_effec
-
-## Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/strict__motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_md.md
-- Relevance: high
-- Total keyword score: 38
-- Hit count: 27
-- Dates found: ['2025-11-17', '2025-11-20', '2025-20-38', '2025-20-56', '2026-01-01', '2026-01-12', '2026-03-10', '2026-03-26', '2026-04-07', '2026-17-39', '2026-17-45']
-- Top snippets:
-- line 113 (score=2, keywords=['solomon', 'guardianship']): Based on f_actor_assignment_conflict_benjamin_vs_solomon_interference (verified, dates=['2026-04-07'], source=generate_formal_reasoning_artifacts.py, confidence=None(None), kind=None), the rule r21_case_obligated_resolve_actor_assignment_conflict yields O(case
-- line 107 (score=2, keywords=['guardianship', '26pr00641']): Based on f_subpoena_pre_service_phase_only (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r20_case_permitted_treat_enforcement_path_as_pending_pre_service yields P(case:guardianship_col
-- line 83 (score=2, keywords=['solomon', 'eppdapa']): Based on f_feed_ev_solomon_judge_overturn_statement (verified, dates=['2026-03-10'], source=uid_743129_Tue--10-Mar-2026-17-39-27--0000_New-text-message-from-solomon--503--381-6911.eml, confidence=medium_high(0.8), kind=transcript_extract); f_restraining_order_
-- line 77 (score=2, keywords=['solomon', 'eppdapa']): Based on f_feed_ev_solomon_order_not_in_effect_statement (verified, dates=['2026-03-10'], source=uid_743131_Tue--10-Mar-2026-17-45-54--0000_New-text-message-from-solomon--503--381-6911.eml, confidence=medium_high(0.8), kind=transcript_extract); f_restraining_o
-- line 71 (score=2, keywords=['solomon', 'eppdapa']): Based on f_feed_ev_solomon_ack_already_have_order (verified, dates=['2025-11-17'], source=uid_660690_Mon--17-Nov-2025-20-56-22--0000_New-text-message-from-solomon--503--381-6911.eml, confidence=high(0.9), kind=direct_message); f_restraining_order_in_effect (ve
-- line 65 (score=2, keywords=['solomon', 'eppdapa']): Based on f_feed_ev_solomon_not_incentivized_statement (verified, dates=['2026-03-10'], source=transcript.txt, confidence=medium_high(0.8), kind=transcript_extract); f_restraining_order_in_effect (verified, dates=['2025-11-20'], source=sam_barber_restraining_or
-- line 59 (score=2, keywords=['solomon', 'eppdapa']): Based on f_feed_ev_solomon_wait_for_service_statement (verified, dates=['2026-03-10'], source=transcript.txt, confidence=medium_high(0.8), kind=transcript_extract); f_restraining_order_no_further_service_needed (verified, dates=['2025-11-20'], source=sam_barbe
-- line 53 (score=2, keywords=['solomon', 'eppdapa']): Based on f_feed_ev_solomon_ack_heard_restraining_order (verified, dates=['2025-11-17'], source=uid_660669_Mon--17-Nov-2025-20-38-24--0000_New-text-message-from-solomon--503--381-6911.eml, confidence=high(0.9), kind=direct_message); f_restraining_order_in_effec
-
 ## evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14166-Me-to-solomon-gv-0eb16863d122188b/event.json
 - Relevance: high
 - Total keyword score: 38
@@ -501,6 +531,21 @@ Low relevance: 1108
 - line 96 (score=1, keywords=['solomon']): "path": "/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14166-Me-to-solomon-gv-0eb16863d122188b/enrichments/solomon - Text - 2026-03-10T17_36_48Z-4-1.image_ocr.txt",
 - line 95 (score=1, keywords=['solomon']): "source_attachment": "/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14166-Me-to-solomon-gv-0eb16863d122188b/attachments/solomon - Text - 2026-03-10T17_36_48Z-4-1.jpg",
 - line 85 (score=1, keywords=['solomon']): "path": "/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14166-Me-to-solomon-gv-0eb16863d122188b/enrichments/solomon - Text - 2026-03-10T17_36_48Z-3-1.image_ocr.txt",
+
+## Collateral Estoppel/knowledge_graph/generated/deontic_reasoning_report.md
+- Relevance: high
+- Total keyword score: 37
+- Hit count: 35
+- Dates found: ['2025-11-17', '2025-11-20', '2026-01-01', '2026-01-12', '2026-03-10', '2026-03-26', '2026-03-31', '2026-04-05', '2026-04-07', '2026-11-20']
+- Top snippets:
+- line 59 (score=3, keywords=['solomon', 'solomon barber', 'guardianship']): - Note: Current best candidate target is the Solomon Barber first amended guardianship petition reflected in solomon_motion_for_guardianship_ocr.txt, dated March 31, 2026. This identifies the filing only and does not by itself establish any ORCP 17 predicate.
+- line 159 (score=1, keywords=['solomon']): - r13_solomon_judge_overturn_statement_triggers_motion_path: 2026-03-10 [window 2025-11-20 -> 2026-03-10; tags: multi_date_window; intervals: ti_restraining_order_effective_period]
+- line 158 (score=1, keywords=['solomon']): - r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order: 2026-03-10 [window 2025-11-20 -> 2026-03-10; tags: multi_date_window; intervals: ti_restraining_order_effective_period]
+- line 157 (score=1, keywords=['solomon']): - r11_solomon_already_have_order_statement_supports_notice: 2025-11-20 [window 2025-11-17 -> 2025-11-20; tags: multi_date_window; intervals: ti_restraining_order_effective_period]
+- line 156 (score=1, keywords=['solomon']): - r10_solomon_noncooperation_statement_conflicts_with_effective_order: 2026-03-10 [window 2025-11-20 -> 2026-03-10; tags: multi_date_window; intervals: ti_restraining_order_effective_period]
+- line 155 (score=1, keywords=['solomon']): - r9_solomon_wait_for_service_conflicts_with_no_further_service: 2026-03-10 [window 2025-11-20 -> 2026-03-10; tags: multi_date_window; intervals: ti_restraining_order_effective_period]
+- line 154 (score=1, keywords=['solomon']): - r8_solomon_notice_ack_triggers_court_relief_path: 2025-11-20 [window 2025-11-17 -> 2025-11-20; tags: multi_date_window; intervals: ti_restraining_order_effective_period]
+- line 151 (score=1, keywords=['solomon']): - r6c_solomon_interference_not_proved_by_named_hacc_notice_gap: 2026-04-07 [window 2026-04-07 -> 2026-04-07; tags: post_hacc_lease_change; intervals: ti_restraining_order_effective_period]
 
 ## evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/graphrag/email_corpus_records.json
 - Relevance: high
@@ -547,6 +592,66 @@ Low relevance: 1108
 - line 308 (score=2, keywords=['restraining order', 'benjamin barber']): "corpus_text": "Email subject: RE: HCV Orientation\nFrom: \"Tilton, Kati\" <KTilton@clackamas.us>\nTo: benjamin barber <starworks5@gmail.com>\nCc: \nDate: 2026-03-26T19:21:32+00:00\nParticipants: ktilton@clackamas.us, starworks5@gmail.com\nMessage-ID: <f1e37f0
 - line 167 (score=2, keywords=['restraining order', 'benjamin barber']): "corpus_text": "Email subject: Re: Additional Information Needed\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>, bwilliams@clackamas.us\nCc: \nDate: 2026-03-17T17:51:59-07:00\nParticipants: bwilliams@clackamas.us, kt
 
+## Collateral Estoppel/knowledge_graph/generated/issue_preclusion_evidence_candidates_2026-04-07.json
+- Relevance: high
+- Total keyword score: 36
+- Hit count: 34
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 152 (score=2, keywords=['solomon', 'guardianship']): "relative_path": "Collateral Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt",
+- line 151 (score=2, keywords=['solomon', 'guardianship']): "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt",
+- line 844 (score=1, keywords=['solomon']): "relative_path": "Collateral Estoppel/evidence_notes/solomon_order_digest.md",
+- line 843 (score=1, keywords=['solomon']): "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/solomon_order_digest.md",
+- line 704 (score=1, keywords=['solomon']): "relative_path": "Collateral Estoppel/evidence_notes/solomon_order_completeness_checklist.md",
+- line 703 (score=1, keywords=['solomon']): "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/solomon_order_completeness_checklist.md",
+- line 618 (score=1, keywords=['guardianship']): "relative_path": "Collateral Estoppel/evidence_notes/guardianship_timeline.md",
+- line 617 (score=1, keywords=['guardianship']): "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/guardianship_timeline.md",
+
+## Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/inclusive__motion_for_appointment_and_appearance_of_guardian_ad_litem_md.md
+- Relevance: high
+- Total keyword score: 33
+- Hit count: 17
+- Dates found: ['2025-11-20', '2026-01-01', '2026-01-12', '2026-03-10', '2026-03-31', '2026-04-05', '2026-04-07']
+- Top snippets:
+- line 117 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): Based on f_authority_ors_125_120_protected_person_special_advocate (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_petition_exists (verified, dates=['2026-03-31'], source=solomon_motio
+- line 103 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): Based on f_authority_ors_125_080_hearing_and_counsel (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_notice_to_respondent (verified, dates=['2026-03-31'], source=solomon_motion_for_gua
+- line 89 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): Based on f_authority_ors_125_060_notice_recipients (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_ors_125_065_notice_manner_and_timing (verified, dates=['2026-04-07'], sourc
+- line 82 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): Based on f_authority_ors_125_050_protective_orcp_oec (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_petition_exists (verified, dates=['2026-03-31'], source=solomon_motion_for_guardian
+- line 110 (score=2, keywords=['solomon', 'guardianship']): Based on f_authority_orcp_9_service_of_later_filed_papers (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_orcp_10_time_computation (verified, dates=['2026-04-07'], source=ore
+- line 96 (score=2, keywords=['guardianship', '26pr00641']): Based on f_authority_ors_125_075_objections (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_ors_125_080_hearing_and_counsel (verified, dates=['2026-04-07'], source=oregon_aut
+- line 68 (score=2, keywords=['solomon', 'guardianship']): Based on f_authority_orcp_17_improper_purpose_and_support (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_hacc_named_notice_to_solomon_order_not_found (verified, dates=['2026-04-07'], 
+- line 54 (score=2, keywords=['solomon', 'guardianship']): Based on f_authority_ors_33_075_compel_appearance (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_client_solomon_failed_appearance (alleged, dates=['2026-03-10', '2026-04-07'], source=
+
+## Collateral Estoppel/knowledge_graph/generated/deontic_gap_closure_matrix_2026-04-07.json
+- Relevance: high
+- Total keyword score: 31
+- Hit count: 31
+- Dates found: ['2026-03-10', '2026-03-31', '2026-04-07']
+- Top snippets:
+- line 572 (score=1, keywords=['solomon']): "f_client_solomon_barred_refile"
+- line 554 (score=1, keywords=['jane cortez']): "note": "Current candidate theory only: the petition-side statement that no guardian had previously been appointed for Jane Cortez may become a contradicted factual assertion if a certified prior appointment order is later staged and verified. This remains pro
+- line 530 (score=1, keywords=['solomon']): "f_client_solomon_barred_refile"
+- line 297 (score=1, keywords=['solomon']): "requires_holds_at(f_client_solomon_failed_appearance, true, T)."
+- line 294 (score=1, keywords=['solomon']): "requires_need_verified(r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved, f_client_solomon_failed_appearance)."
+- line 291 (score=1, keywords=['solomon']): "need_verified(f_client_solomon_failed_appearance)."
+- line 281 (score=1, keywords=['solomon']): "fact_id": "f_client_solomon_failed_appearance",
+- line 270 (score=1, keywords=['solomon']): "fact_id": "f_client_solomon_failed_appearance",
+
+## Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/strict__motion_for_appointment_and_appearance_of_guardian_ad_litem_md.md
+- Relevance: high
+- Total keyword score: 31
+- Hit count: 16
+- Dates found: ['2025-11-20', '2026-01-01', '2026-01-12', '2026-03-10', '2026-03-31', '2026-04-05', '2026-04-07']
+- Top snippets:
+- line 110 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): Based on f_authority_ors_125_120_protected_person_special_advocate (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_petition_exists (verified, dates=['2026-03-31'], source=solomon_motio
+- line 96 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): Based on f_authority_ors_125_080_hearing_and_counsel (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_notice_to_respondent (verified, dates=['2026-03-31'], source=solomon_motion_for_gua
+- line 82 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): Based on f_authority_ors_125_060_notice_recipients (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_ors_125_065_notice_manner_and_timing (verified, dates=['2026-04-07'], sourc
+- line 75 (score=3, keywords=['solomon', 'guardianship', '26pr00641']): Based on f_authority_ors_125_050_protective_orcp_oec (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_petition_exists (verified, dates=['2026-03-31'], source=solomon_motion_for_guardian
+- line 103 (score=2, keywords=['solomon', 'guardianship']): Based on f_authority_orcp_9_service_of_later_filed_papers (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_orcp_10_time_computation (verified, dates=['2026-04-07'], source=ore
+- line 89 (score=2, keywords=['guardianship', '26pr00641']): Based on f_authority_ors_125_075_objections (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_ors_125_080_hearing_and_counsel (verified, dates=['2026-04-07'], source=oregon_aut
+- line 61 (score=2, keywords=['solomon', 'guardianship']): Based on f_authority_orcp_17_improper_purpose_and_support (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_hacc_named_notice_to_solomon_order_not_found (verified, dates=['2026-04-07'], 
+- line 47 (score=2, keywords=['solomon', 'guardianship']): Based on f_authority_ors_33_055_remedial_contempt_procedure (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_restraining_order_in_effect (verified, dates=['2025-11-20'], source=sam_barb
+
 ## evidence/email_imports/starworks5-ktilton-orientation-import/graphrag/email_corpus_records.json
 - Relevance: high
 - Total keyword score: 30
@@ -561,6 +666,36 @@ Low relevance: 1108
 - line 186 (score=1, keywords=['benjamin barber']): "from": "benjamin barber <starworks5@gmail.com>",
 - line 181 (score=1, keywords=['benjamin barber']): "corpus_text": "Email subject: Re: HCV Orientation\nFrom: benjamin barber <starworks5@gmail.com>\nTo: \"Tilton, Kati\" <KTilton@clackamas.us>\nCc: \nDate: 2026-03-20T16:09:59-07:00\nParticipants: ktilton@clackamas.us, starworks5@gmail.com\nMessage-ID: <CAMTdTS
 - line 167 (score=1, keywords=['benjamin barber']): "from": "benjamin barber <starworks5@gmail.com>",
+
+## Collateral Estoppel/knowledge_graph/generated/proof_intake_map_2026-04-07.json
+- Relevance: high
+- Total keyword score: 29
+- Hit count: 29
+- Dates found: ['2025-11-20', '2026-03-10', '2026-03-31', '2026-04-07']
+- Top snippets:
+- line 639 (score=1, keywords=['solomon']): "fact_id": "f_client_solomon_barred_refile",
+- line 595 (score=1, keywords=['solomon']): "description": "If issue preclusion applies, Solomon is forbidden from relitigating the precluded issue.",
+- line 593 (score=1, keywords=['solomon']): "rule_id": "r7_solomon_forbidden_refile_precluded_issue",
+- line 577 (score=1, keywords=['solomon']): "fact_id": "f_client_solomon_failed_appearance",
+- line 560 (score=1, keywords=['eppdapa']): "order:eppdapa_restraining_order"
+- line 558 (score=1, keywords=['solomon']): "description": "If no further service was required because Solomon appeared, later failure to appear supports an obligation to appear and answer.",
+- line 556 (score=1, keywords=['solomon']): "rule_id": "r5_solomon_obligated_appear_and_answer",
+- line 545 (score=1, keywords=['guardianship']): "source": "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/guardianship_case_graph.md",
+
+## Collateral Estoppel/knowledge_graph/generated/proof_intake_map_2026-04-07.md
+- Relevance: high
+- Total keyword score: 29
+- Hit count: 29
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 191 (score=1, keywords=['solomon']): - f_client_solomon_barred_refile: value=True status=alleged source=/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/42_issue_preclusion_certified_packet_checklist_r7_2026-04-07.md
+- line 181 (score=1, keywords=['solomon']): - Description: If issue preclusion applies, Solomon is forbidden from relitigating the precluded issue.
+- line 179 (score=1, keywords=['solomon']): ### UNRESOLVED - r7_solomon_forbidden_refile_precluded_issue
+- line 176 (score=1, keywords=['solomon']): - f_client_solomon_failed_appearance: value=True status=alleged source=/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/41_certified_nonappearance_packet_checklist_r24_2026-04-07.md
+- line 171 (score=1, keywords=['eppdapa']): - Authority refs: order:eppdapa_restraining_order
+- line 170 (score=1, keywords=['solomon']): - Description: If no further service was required because Solomon appeared, later failure to appear supports an obligation to appear and answer.
+- line 168 (score=1, keywords=['solomon']): ### UNRESOLVED - r5_solomon_obligated_appear_and_answer
+- line 165 (score=1, keywords=['guardianship']): - f_client_benjamin_order_disregard: value=True status=alleged source=/home/barberb/HACC/Collateral Estoppel/knowledge_graph/guardianship_case_graph.md
 
 ## evidence/email_imports/starworks5-master-case-email-import/graphrag/email_knowledge_graph.json
 - Relevance: high
@@ -592,20 +727,20 @@ Low relevance: 1108
 - line 69 (score=1, keywords=['solomon']): - do not treat as the Solomon order
 - line 65 (score=1, keywords=['benjamin barber']): 1. [Benjamin Barber vs Julio Cortez protective order.pdf](/home/barberb/HACC/evidence/history/Benjamin%20Barber%20vs%20Julio%20Cortez%20protective%20order.pdf)
 
-## Collateral Estoppel/knowledge_graph/generated/deontic_reasoning_report.md
+## Collateral Estoppel/knowledge_graph/generated/deontic_gap_closure_matrix_2026-04-07.md
 - Relevance: high
 - Total keyword score: 26
 - Hit count: 26
-- Dates found: ['2025-11-20', '2026-01-12', '2026-03-10', '2026-03-26', '2026-04-07']
+- Dates found: ['2026-04-07']
 - Top snippets:
-- line 65 (score=1, keywords=['solomon']): - r13_solomon_judge_overturn_statement_triggers_motion_path: 2026-03-10
-- line 64 (score=1, keywords=['solomon']): - r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order: 2026-03-10
-- line 63 (score=1, keywords=['solomon']): - r11_solomon_already_have_order_statement_supports_notice: 2025-11-20
-- line 62 (score=1, keywords=['solomon']): - r10_solomon_noncooperation_statement_conflicts_with_effective_order: 2026-03-10
-- line 61 (score=1, keywords=['solomon']): - r9_solomon_wait_for_service_conflicts_with_no_further_service: 2026-03-10
-- line 60 (score=1, keywords=['solomon']): - r8_solomon_notice_ack_triggers_court_relief_path: 2025-11-20
-- line 57 (score=1, keywords=['solomon']): - r6c_solomon_interference_not_proved_by_named_hacc_notice_gap: 2026-04-07
-- line 54 (score=1, keywords=['solomon']): - r5c_solomon_forbidden_self_help_noncooperation: 2026-03-10
+- line 208 (score=1, keywords=['jane cortez']): - unsupported_factual_assertion_mapped status=proof_gated note=Current candidate theory only: the petition-side statement that no guardian had previously been appointed for Jane Cortez may become a contradicted factual assertion if a certified prior appointmen
+- line 118 (score=1, keywords=['solomon']): - `requires_holds_at(f_client_solomon_failed_appearance, true, T).`
+- line 116 (score=1, keywords=['solomon']): - `requires_need_verified(r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved, f_client_solomon_failed_appearance).`
+- line 114 (score=1, keywords=['solomon']): - `need_verified(f_client_solomon_failed_appearance).`
+- line 111 (score=1, keywords=['solomon']): - f_client_solomon_failed_appearance: Collect hearing register, appearance minute entry, and proof of service/order-to-appear documentation. (source: /home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/41_certified_nonappearance_packet_checklist_r24
+- line 109 (score=1, keywords=['solomon']): - f_client_solomon_failed_appearance status=alleged value=true
+- line 101 (score=1, keywords=['solomon']): - `requires_holds_at(f_client_solomon_barred_refile, true, T).`
+- line 99 (score=1, keywords=['solomon']): - `requires_need_verified(r7_solomon_forbidden_refile_precluded_issue, f_collateral_estoppel_candidate).`
 
 ## evidence/email_imports/starworks5-ktilton-orientation-import/email_import_manifest.json
 - Relevance: high
@@ -628,14 +763,14 @@ Low relevance: 1108
 - Hit count: 20
 - Dates found: ['2025-20-38', '2025-20-56', '2026-04-04', '2026-17-39', '2026-17-45', '2026-17-51']
 - Top snippets:
-- line 60 (score=3, keywords=['solomon', 'solomon barber', 'jane cortez']): `On information and belief, Solomon Barber pursued a course of conduct that combined proof-gated preclusion problems, post-notice self-help conduct, and collateral interference with housing or authority matters involving Jane Cortez, thereby imposing unnecessa
-- line 33 (score=2, keywords=['solomon', 'restraining order']): a. a restraining order granted against Solomon Samuel Barber on or about November 20, 2025, with order language stating that it was in effect and that no further service was necessary because respondent appeared in person before the court;
+- line 75 (score=3, keywords=['solomon', 'solomon barber', 'jane cortez']): `On information and belief, Solomon Barber pursued a course of conduct that combined proof-gated preclusion problems, post-notice self-help conduct, and collateral interference with housing or authority matters involving Jane Cortez, thereby imposing unnecessa
+- line 37 (score=2, keywords=['solomon', 'restraining order']): a. a restraining order granted against Solomon Samuel Barber on or about November 20, 2025, with order language stating that it was in effect and that no further service was necessary because respondent appeared in person before the court;
 - line 25 (score=2, keywords=['solomon', 'solomon barber']): 5. Movant's present theory is not merely that Solomon Barber filed a weak claim.
 - line 14 (score=2, keywords=['solomon', 'solomon barber']): Movant requests sanctions and related corrective relief to the extent the Court finds that Solomon Barber has pursued frivolous, abusive, duplicative, or interfering practice in this matter or related connected proceedings.
-- line 86 (score=1, keywords=['solomon']): c. [uid_743136_Tue--10-Mar-2026-17-51-15--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743136_Tue--10-Mar-2026-17-51-15--0000_New-text-message-from-solomon--503--381-6911.eml)
-- line 85 (score=1, keywords=['solomon']): b. [uid_743131_Tue--10-Mar-2026-17-45-54--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743131_Tue--10-Mar-2026-17-45-54--0000_New-text-message-from-solomon--503--381-6911.eml)
-- line 84 (score=1, keywords=['solomon']): a. [uid_743129_Tue--10-Mar-2026-17-39-27--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743129_Tue--10-Mar-2026-17-39-27--0000_New-text-message-from-solomon--503--381-6911.eml)
-- line 83 (score=1, keywords=['solomon']): 21. Solomon-side statements showing self-help or bad-faith posture:
+- line 106 (score=1, keywords=['solomon']): c. [uid_743136_Tue--10-Mar-2026-17-51-15--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743136_Tue--10-Mar-2026-17-51-15--0000_New-text-message-from-solomon--503--381-6911.eml)
+- line 105 (score=1, keywords=['solomon']): b. [uid_743131_Tue--10-Mar-2026-17-45-54--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743131_Tue--10-Mar-2026-17-45-54--0000_New-text-message-from-solomon--503--381-6911.eml)
+- line 104 (score=1, keywords=['solomon']): a. [uid_743129_Tue--10-Mar-2026-17-39-27--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743129_Tue--10-Mar-2026-17-39-27--0000_New-text-message-from-solomon--503--381-6911.eml)
+- line 103 (score=1, keywords=['solomon']): 29. Solomon-side statements showing self-help or bad-faith posture:
 
 ## Collateral Estoppel/README.md
 - Relevance: high
@@ -651,21 +786,6 @@ Low relevance: 1108
 - line 94 (score=1, keywords=['solomon']): - `evidence_notes/solomon_evidence_graph_feed.json`
 - line 79 (score=1, keywords=['solomon']): - `knowledge_graph/marshal_solomon_repository_evidence.py`
 - line 78 (score=1, keywords=['solomon']): - `knowledge_graph/collect_solomon_evidence_events.py`
-
-## Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
-- Relevance: high
-- Total keyword score: 24
-- Hit count: 14
-- Dates found: []
-- Top snippets:
-- line 35 (score=2, keywords=['solomon', 'solomon barber']): c. instead of seeking timely modification or relief, Solomon Barber allegedly continued through collateral channels; and
-- line 34 (score=2, keywords=['solomon', 'solomon barber']): b. Solomon Barber had notice of the order or proceedings;
-- line 28 (score=2, keywords=['solomon', 'solomon barber']): 8. On information and belief, Solomon Barber also continued seeking practical control through collateral channels rather than through orderly court relief, including collateral housing-related influence if later proven by records or testimony.
-- line 26 (score=2, keywords=['solomon', 'solomon barber']): 6. Movant alleges Solomon Barber failed to appear when required and proceeded with filing that re-raises precluded issues.
-- line 25 (score=2, keywords=['solomon', 'solomon barber']): 5. Movant alleges Solomon Barber had notice of relevant proceedings and operative orders.
-- line 20 (score=2, keywords=['solomon', 'solomon barber']): 3. Require Solomon Barber to explain why filing of the present claim is not barred by collateral estoppel.
-- line 19 (score=2, keywords=['solomon', 'solomon barber']): 2. Require Solomon Barber to explain failure to appear as required in prior/related proceedings (if proven by docket).
-- line 18 (score=2, keywords=['solomon', 'solomon barber']): 1. Issue an Order to Show Cause requiring Solomon Barber to appear on a date certain.
 
 ## Collateral Estoppel/drafts/petition_guardianship_packet_stage1.md
 - Relevance: high
@@ -696,6 +816,21 @@ Low relevance: 1108
 - line 9504 (score=1, keywords=['benjamin barber']): "description": "Email record 1 Email subject: Re: Additional Information Needed From: benjamin barber <starworks5@gmail.com> To: \"Tilton, Kati\" <KTilton@clackamas.us> Cc: Date: 2026-02-25T13:37:28-08:00 Participants: ktilton@clackamas.us, starworks5@gma...",
 - line 9490 (score=1, keywords=['benjamin barber']): "description": "Email record 1 Email subject: Re: Additional Information Needed From: benjamin barber <starworks5@gmail.com> To: \"Tilton, Kati\" <KTilton@clackamas.us> Cc: Date: 2026-02-25T13:37:28-08:00 Participants: ktilton@clackamas.us, starworks5@gma...",
 - line 9476 (score=1, keywords=['benjamin barber']): "description": "Email record 1 Email subject: Re: Additional Information Needed From: benjamin barber <starworks5@gmail.com> To: \"Tilton, Kati\" <KTilton@clackamas.us> Cc: Date: 2026-02-25T13:37:28-08:00 Participants: ktilton@clackamas.us, starworks5@gma...",
+
+## Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+- Relevance: high
+- Total keyword score: 22
+- Hit count: 14
+- Dates found: []
+- Top snippets:
+- line 39 (score=2, keywords=['solomon', 'solomon barber']): c. instead of seeking timely modification or relief, Solomon Barber allegedly continued through collateral channels; and
+- line 38 (score=2, keywords=['solomon', 'solomon barber']): b. Solomon Barber had notice of the order or proceedings;
+- line 32 (score=2, keywords=['solomon', 'solomon barber']): 9. On information and belief, Solomon Barber also continued seeking practical control through collateral channels rather than through orderly court relief, including collateral housing-related influence if later proven by records or testimony.
+- line 20 (score=2, keywords=['solomon', 'solomon barber']): 3. Require Solomon Barber to explain why filing of the present claim is not barred by collateral estoppel.
+- line 19 (score=2, keywords=['solomon', 'solomon barber']): 2. Require Solomon Barber to explain failure to appear as required in prior/related proceedings (if proven by docket).
+- line 18 (score=2, keywords=['solomon', 'solomon barber']): 1. Issue an Order to Show Cause requiring Solomon Barber to appear on a date certain.
+- line 14 (score=2, keywords=['solomon', 'solomon barber']): Movant requests an Order requiring Solomon Barber to appear and show cause why appropriate sanctions, claim-limiting relief, or other corrective orders should not be entered.
+- line 12 (score=2, keywords=['solomon', 'solomon barber']): ## RE: RESPONDENT SOLOMON BARBER'S FAILURE TO APPEAR AND FILING OF PRECLUDED CLAIM
 
 ## Collateral Estoppel/evidence_notes/guardianship_timeline.md
 - Relevance: high
@@ -787,6 +922,36 @@ Low relevance: 1108
 - line 1176 (score=1, keywords=['benjamin barber']): "from": "benjamin barber <starworks5@gmail.com>",
 - line 1100 (score=1, keywords=['benjamin barber']): "from": "benjamin barber <starworks5@gmail.com>",
 
+## Collateral Estoppel/knowledge_graph/generated/certification_packet_manifests_2026-04-07.json
+- Relevance: high
+- Total keyword score: 20
+- Hit count: 19
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 18 (score=2, keywords=['solomon', 'solomon barber']): "identity tie-in showing entry pertains to Solomon Barber"
+- line 80 (score=1, keywords=['26pr00641']): "enforcement__26PR00641__YYYYMMDD__order_disregard_record.pdf"
+- line 79 (score=1, keywords=['26pr00641']): "other_certified__26PR00641__YYYYMMDD__housing_interference_record.pdf",
+- line 78 (score=1, keywords=['26pr00641']): "docket__26PR00641__YYYYMMDD__appointment_status_extract.pdf",
+- line 77 (score=1, keywords=['26pr00641']): "appointment__26PR00641__YYYYMMDD__appointment_order_benjamin_barber.pdf",
+- line 71 (score=1, keywords=['benjamin barber']): "certified appointment/authority order naming Benjamin Barber (if it exists)",
+- line 54 (score=1, keywords=['solomon']): "r7_solomon_forbidden_refile_precluded_issue"
+- line 51 (score=1, keywords=['26pr00641']): "other_certified__26PR00641__YYYYMMDD__issue_identity_chart.pdf"
+
+## Collateral Estoppel/knowledge_graph/generated/certification_packet_manifests_2026-04-07.md
+- Relevance: high
+- Total keyword score: 20
+- Hit count: 19
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 13 (score=2, keywords=['solomon', 'solomon barber']): - identity tie-in showing entry pertains to Solomon Barber
+- line 48 (score=1, keywords=['26pr00641']): - enforcement__26PR00641__YYYYMMDD__order_disregard_record.pdf
+- line 47 (score=1, keywords=['26pr00641']): - other_certified__26PR00641__YYYYMMDD__housing_interference_record.pdf
+- line 46 (score=1, keywords=['26pr00641']): - docket__26PR00641__YYYYMMDD__appointment_status_extract.pdf
+- line 45 (score=1, keywords=['26pr00641']): - appointment__26PR00641__YYYYMMDD__appointment_order_benjamin_barber.pdf
+- line 40 (score=1, keywords=['benjamin barber']): - certified appointment/authority order naming Benjamin Barber (if it exists)
+- line 33 (score=1, keywords=['26pr00641']): - other_certified__26PR00641__YYYYMMDD__issue_identity_chart.pdf
+- line 32 (score=1, keywords=['26pr00641']): - hearing__26PR00641__YYYYMMDD__appearance_minutes_or_transcript.pdf
+
 ## evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_CAMTdTS8NwnM6aAhiY-HeY2Bs4EosOn2W790KYdvq-tzDKZUwPQ-mail.gmail.com_20260328_Re-HCV-Orientation/message.json
 - Relevance: high
 - Total keyword score: 20
@@ -862,6 +1027,21 @@ Low relevance: 1108
 - line 5 (score=2, keywords=['solomon', 'guardianship']): 1. `/home/barberb/HACC/evidence/history/Solomon Motion for Guardianship.pdf`
 - line 42 (score=1, keywords=['26pr00641']): - Case number appears as `26PR00641`
 
+## Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/inclusive__motion_to_dismiss_for_collateral_estoppel_md.md
+- Relevance: high
+- Total keyword score: 19
+- Hit count: 12
+- Dates found: ['2025-11-20', '2026-01-01', '2026-01-12', '2026-03-10', '2026-03-31', '2026-04-07']
+- Top snippets:
+- line 82 (score=2, keywords=['solomon', 'guardianship']): Based on f_authority_orcp_9_service_of_later_filed_papers (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_orcp_10_time_computation (verified, dates=['2026-04-07'], source=ore
+- line 68 (score=2, keywords=['solomon', 'guardianship']): Based on f_authority_orcp_17_improper_purpose_and_support (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_hacc_named_notice_to_solomon_order_not_found (verified, dates=['2026-04-07'], 
+- line 54 (score=2, keywords=['solomon', 'guardianship']): Based on f_authority_ors_33_075_compel_appearance (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_client_solomon_failed_appearance (alleged, dates=['2026-03-10', '2026-04-07'], source=
+- line 47 (score=2, keywords=['solomon', 'guardianship']): Based on f_authority_ors_33_055_remedial_contempt_procedure (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_restraining_order_in_effect (verified, dates=['2025-11-20'], source=sam_barb
+- line 40 (score=2, keywords=['solomon', 'guardianship']): Based on f_actor_assignment_conflict_benjamin_vs_solomon_interference (verified, dates=['2026-04-07'], source=generate_formal_reasoning_artifacts.py, confidence=None(None), kind=None), the rule r21_case_obligated_resolve_actor_assignment_conflict yields O(case
+- line 33 (score=2, keywords=['guardianship', '26pr00641']): Based on f_subpoena_pre_service_phase_only (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r20_case_permitted_treat_enforcement_path_as_pending_pre_service yields P(case:guardianship_col
+- line 12 (score=2, keywords=['solomon', 'guardianship']): Based on f_hacc_named_notice_to_solomon_order_not_found (verified, dates=['2026-04-07'], source=protective_order_and_hacc_notice_timeline.md, confidence=None(None), kind=None), the rule r6c_solomon_interference_not_proved_by_named_hacc_notice_gap yields P(case
+- line 75 (score=1, keywords=['guardianship']): Based on f_authority_orcp_55_subpoena_obedience (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_orcp_46_discovery_sanctions (verified, dates=['2026-04-07'], source=oregon_aut
+
 ## evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_CAMTdTS-P2WrnnNn7ZHJVGwyxmidnr-LsfQR-wGbZckgYnKMyfQ-mail.gmail.com_20260327_Re-HCV-Orientation/message.json
 - Relevance: high
 - Total keyword score: 19
@@ -915,12 +1095,27 @@ Low relevance: 1108
 - Top snippets:
 - line 14 (score=2, keywords=['solomon', 'restraining order']): - Purpose: November 17, 2025 Solomon text asking whether the other side already had the restraining order.
 - line 12 (score=2, keywords=['solomon', 'restraining order']): - Purpose: November 17, 2025 Solomon text acknowledging he heard about the restraining order.
-- line 52 (score=1, keywords=['guardianship']): - Purpose: if located, would support any issue-preclusion or repeated-usurpation argument at the guardianship side.
+- line 59 (score=1, keywords=['guardianship']): - Purpose: if located, would support any issue-preclusion or repeated-usurpation argument at the guardianship side.
 - line 45 (score=1, keywords=['solomon']): - Purpose: consolidated Solomon evidence memo linking the order record, March 10 statements, and later HACC-facing notices.
 - line 44 (score=1, keywords=['solomon']): - `Exhibit O`: [solomon_repository_evidence_memo.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_repository_evidence_memo.md)
 - line 24 (score=1, keywords=['solomon']): - `Exhibit H`: [uid_743136_Tue--10-Mar-2026-17-51-15--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743136_Tue--10-Mar-2026-17-51-15--0000_New-text-message-from-solomon--503--381-6911.eml)
 - line 22 (score=1, keywords=['solomon']): - `Exhibit G`: [uid_743131_Tue--10-Mar-2026-17-45-54--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743131_Tue--10-Mar-2026-17-45-54--0000_New-text-message-from-solomon--503--381-6911.eml)
 - line 20 (score=1, keywords=['solomon']): - `Exhibit F`: [uid_743129_Tue--10-Mar-2026-17-39-27--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743129_Tue--10-Mar-2026-17-39-27--0000_New-text-message-from-solomon--503--381-6911.eml)
+
+## Collateral Estoppel/knowledge_graph/generated/issue_preclusion_evidence_candidates_2026-04-07.md
+- Relevance: high
+- Total keyword score: 18
+- Hit count: 17
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 18 (score=2, keywords=['solomon', 'guardianship']): - path:Collateral Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt | score=4
+- line 76 (score=1, keywords=['solomon']): - path:Collateral Estoppel/evidence_notes/solomon_order_digest.md | score=4
+- line 66 (score=1, keywords=['solomon']): - path:Collateral Estoppel/evidence_notes/solomon_order_completeness_checklist.md | score=5
+- line 57 (score=1, keywords=['guardianship']): - path:Collateral Estoppel/evidence_notes/guardianship_timeline.md | score=3
+- line 56 (score=1, keywords=['guardianship']): - path:Collateral Estoppel/drafts/petition_guardianship_working_memo.md | score=4
+- line 52 (score=1, keywords=['guardianship']): - path:Collateral Estoppel/drafts/petition_guardianship_packet_stage1.md | score=4
+- line 50 (score=1, keywords=['solomon']): - path:Collateral Estoppel/evidence_notes/solomon_repository_evidence_index.json | score=4
+- line 45 (score=1, keywords=['solomon']): - path:Collateral Estoppel/evidence_notes/solomon_repository_evidence_index.md | score=5
 
 ## evidence/email_imports/starworks5-fraud-reimport-20260404/0027-Fwd-Allegations-of-Fraud---JC-Household-CAMTdTS8Qs6qAUfLmxrRp6h8BsEgpXTKn9sf6d5bgg9RjJrjvHA-mail.gmail.com/message.eml
 - Relevance: high
@@ -963,18 +1158,18 @@ Low relevance: 1108
 
 ## Collateral Estoppel/knowledge_graph/guardianship_case_graph.md
 - Relevance: high
-- Total keyword score: 12
-- Hit count: 8
+- Total keyword score: 14
+- Hit count: 10
 - Dates found: ['2026-03-31', '2026-04-02', '2026-04-05']
 - Top snippets:
-- line 12 (score=4, keywords=['solomon', 'solomon barber', 'guardianship', '26pr00641']): 1. On `2026-03-31`, Solomon Barber filed a first amended petition seeking temporary and indefinite guardianship over Jane Kay Cortez in case `26PR00641`.
-- line 16 (score=2, keywords=['jane cortez', 'benjamin barber']): 5. Client-side allegations assert that a prior appointment involving Jane Cortez and Benjamin Barber already existed, and that Benjamin Barber avoided service, disregarded enforceability, and interfered with housing contract processes.
-- line 54 (score=1, keywords=['solomon']): - preserve the Solomon / claimed-authority proposition as a bounded inference and discovery target.
-- line 49 (score=1, keywords=['solomon']): - It does not yet directly prove that Solomon specifically exercised lawful or unlawful authority, or that HACC relied on a power of attorney.
-- line 31 (score=1, keywords=['solomon']): - the `solomon_or_stepfather_outside_influence` node is tracked as `bounded_inference_pending_source_actor_proof`
-- line 26 (score=1, keywords=['solomon']): - `evt:inference_solomon_or_stepfather_outside_influence_on_lease_change`
-- line 5 (score=1, keywords=['solomon']): - `person:solomon`
-- line 1 (score=1, keywords=['guardianship']): # Guardianship Case Graph Notes
+- line 16 (score=4, keywords=['solomon', 'solomon barber', 'guardianship', '26pr00641']): 1. On `2026-03-31`, Solomon Barber filed a first amended petition seeking temporary and indefinite guardianship over Jane Kay Cortez in case `26PR00641`.
+- line 20 (score=2, keywords=['jane cortez', 'benjamin barber']): 5. Client-side allegations assert that a prior appointment involving Jane Cortez and Benjamin Barber already existed, and that Benjamin Barber avoided service, disregarded enforceability, and interfered with housing contract processes.
+- line 109 (score=1, keywords=['solomon']): 2. the narrower claim that Benjamin emailed the actual Solomon protective order to HACC remains client-supported pending identification of the preserved order-transmission message.
+- line 86 (score=1, keywords=['guardianship']): - keep the main guardianship graph focused on parties, events, proof targets, and deontic issues;
+- line 58 (score=1, keywords=['solomon']): - preserve the Solomon / claimed-authority proposition as a bounded inference and discovery target.
+- line 53 (score=1, keywords=['solomon']): - It does not yet directly prove that Solomon specifically exercised lawful or unlawful authority, or that HACC relied on a power of attorney.
+- line 35 (score=1, keywords=['solomon']): - the `solomon_or_stepfather_outside_influence` node is tracked as `bounded_inference_pending_source_actor_proof`
+- line 30 (score=1, keywords=['solomon']): - `evt:inference_solomon_or_stepfather_outside_influence_on_lease_change`
 
 ## evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_CAMTdTS_cvnTsxdNGtjzvAtUPDj31MU--P3vsRFenpigq-kWWuw-mail.gmail.com_20260404_Re-SERVICE-Jane-Kay-Cortez-vs-Solomon-Samuel-Barber-Benjamin-Jay-Barber-vs-Solom/message.json
 - Relevance: high
@@ -1004,6 +1199,36 @@ Low relevance: 1108
 - line 8 (score=1, keywords=['solomon']): "path": "/home/barberb/HACC/evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_CO1PR10MB44826703707F0BD1A5D81F64AC5FA-CO1PR10MB4482.namprd10.prod.outlook.com_20260404_Re-SERVICE-Jane-Kay-Cortez-vs-Solomon-Samuel-Barber-B
 - line 2 (score=1, keywords=['solomon']): "artifact_dir": "/home/barberb/HACC/evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_CO1PR10MB44826703707F0BD1A5D81F64AC5FA-CO1PR10MB4482.namprd10.prod.outlook.com_20260404_Re-SERVICE-Jane-Kay-Cortez-vs-Solomon-Samuel-
 
+## Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/strict__motion_to_dismiss_for_collateral_estoppel_md.md
+- Relevance: medium
+- Total keyword score: 17
+- Hit count: 11
+- Dates found: ['2025-11-20', '2026-01-01', '2026-01-12', '2026-03-10', '2026-03-31', '2026-04-07']
+- Top snippets:
+- line 75 (score=2, keywords=['solomon', 'guardianship']): Based on f_authority_orcp_9_service_of_later_filed_papers (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_orcp_10_time_computation (verified, dates=['2026-04-07'], source=ore
+- line 61 (score=2, keywords=['solomon', 'guardianship']): Based on f_authority_orcp_17_improper_purpose_and_support (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_hacc_named_notice_to_solomon_order_not_found (verified, dates=['2026-04-07'], 
+- line 47 (score=2, keywords=['solomon', 'guardianship']): Based on f_authority_ors_33_055_remedial_contempt_procedure (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_restraining_order_in_effect (verified, dates=['2025-11-20'], source=sam_barb
+- line 40 (score=2, keywords=['solomon', 'guardianship']): Based on f_actor_assignment_conflict_benjamin_vs_solomon_interference (verified, dates=['2026-04-07'], source=generate_formal_reasoning_artifacts.py, confidence=None(None), kind=None), the rule r21_case_obligated_resolve_actor_assignment_conflict yields O(case
+- line 33 (score=2, keywords=['guardianship', '26pr00641']): Based on f_subpoena_pre_service_phase_only (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r20_case_permitted_treat_enforcement_path_as_pending_pre_service yields P(case:guardianship_col
+- line 12 (score=2, keywords=['solomon', 'guardianship']): Based on f_hacc_named_notice_to_solomon_order_not_found (verified, dates=['2026-04-07'], source=protective_order_and_hacc_notice_timeline.md, confidence=None(None), kind=None), the rule r6c_solomon_interference_not_proved_by_named_hacc_notice_gap yields P(case
+- line 68 (score=1, keywords=['guardianship']): Based on f_authority_orcp_55_subpoena_obedience (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_orcp_46_discovery_sanctions (verified, dates=['2026-04-07'], source=oregon_aut
+- line 54 (score=1, keywords=['guardianship']): Based on f_authority_ors_33_105_remedial_sanctions (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_hacc_removed_benjamin_effective_2026_01_01 (verified, dates=['2026-01-01', '2026-01-1
+
+## Collateral Estoppel/drafts/final_filing_set/53_issue_preclusion_mapping_prefill_review_packet_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 16
+- Hit count: 14
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 52 (score=2, keywords=['solomon', 'guardianship']): "finality_note": "Current index did not yield reliable finality artifacts; certified final order and register are still required. Candidate references: Collateral Estoppel/evidence_notes/sam_barber_restraining_order_ocr.txt; Collateral Estoppel/evidence_notes/
+- line 24 (score=2, keywords=['solomon', 'guardianship']): - Proposed note: Current index did not yield reliable finality artifacts; certified final order and register are still required. Candidate references: Collateral Estoppel/evidence_notes/sam_barber_restraining_order_ocr.txt; Collateral Estoppel/evidence_notes/s
+- line 56 (score=1, keywords=['solomon']): "full_fair_opportunity_note": "Current index did not yield reliable hearing/opportunity artifacts; certified appearance/hearing records are still required. Candidate references: Collateral Estoppel/drafts/final_filing_set/06_oregon_authority_table_placeholders
+- line 54 (score=1, keywords=['solomon']): "party_privity_note": "Candidate sources indicate party-name overlap, but party/privity mapping remains uncertified. Candidate references: Collateral Estoppel/evidence_notes/solomon_repository_evidence_index.md; Collateral Estoppel/drafts/motion_for_leave_or_t
+- line 50 (score=1, keywords=['guardianship']): "identical_issue_note": "Candidate sources indicate potential overlap of the guardianship authority issue across filings. Candidate references: Collateral Estoppel/evidence_notes/missing_exhibit_search_status_2026-04-07.md; Collateral Estoppel/evidence_notes/r
+- line 42 (score=1, keywords=['solomon']): - Proposed note: Current index did not yield reliable hearing/opportunity artifacts; certified appearance/hearing records are still required. Candidate references: Collateral Estoppel/drafts/final_filing_set/06_oregon_authority_table_final.md; Collatera
+- line 41 (score=1, keywords=['solomon']): - Collateral Estoppel/evidence_notes/solomon_order_completeness_checklist.md
+- line 33 (score=1, keywords=['solomon']): - Proposed note: Candidate sources indicate party-name overlap, but party/privity mapping remains uncertified. Candidate references: Collateral Estoppel/evidence_notes/solomon_repository_evidence_index.md; Collateral Estoppel/drafts/motion_for_leave_or_to_comp
+
 ## Collateral Estoppel/evidence_notes/solomon_restraining_order_review.md
 - Relevance: medium
 - Total keyword score: 16
@@ -1018,6 +1243,36 @@ Low relevance: 1108
 - line 47 (score=1, keywords=['solomon']): These should not be conflated with the Solomon order.
 - line 44 (score=1, keywords=['benjamin barber']): - A separate order against `Julio R. Florez-Cortez` appears supported in `/home/barberb/HACC/evidence/history/Benjamin Barber vs Julio Cortez protective order.pdf`.
 - line 32 (score=1, keywords=['restraining order']): - Pages 10-11 state the restraining order `is now in effect`, explain contempt consequences for violation, and describe the 30-day hearing-request period.
+
+## Collateral Estoppel/knowledge_graph/generated/certified_promotion_what_if_scenarios_2026-04-07.json
+- Relevance: medium
+- Total keyword score: 16
+- Hit count: 16
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 114 (score=1, keywords=['solomon']): "r7_solomon_forbidden_refile_precluded_issue": "active",
+- line 113 (score=1, keywords=['solomon']): "r5_solomon_obligated_appear_and_answer": "active",
+- line 99 (score=1, keywords=['solomon']): "f_client_solomon_barred_refile",
+- line 97 (score=1, keywords=['solomon']): "f_client_solomon_failed_appearance",
+- line 89 (score=1, keywords=['solomon']): "r7_solomon_forbidden_refile_precluded_issue": "unresolved",
+- line 88 (score=1, keywords=['solomon']): "r5_solomon_obligated_appear_and_answer": "unresolved",
+- line 67 (score=1, keywords=['solomon']): "r7_solomon_forbidden_refile_precluded_issue": "active",
+- line 66 (score=1, keywords=['solomon']): "r5_solomon_obligated_appear_and_answer": "unresolved",
+
+## Collateral Estoppel/knowledge_graph/generated/issue_preclusion_mapping_prefill_2026-04-07.json
+- Relevance: medium
+- Total keyword score: 16
+- Hit count: 14
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 58 (score=2, keywords=['solomon', 'guardianship']): "finality_note": "Current index did not yield reliable finality artifacts; certified final order and register are still required. Candidate references: Collateral Estoppel/evidence_notes/sam_barber_restraining_order_ocr.txt; Collateral Estoppel/evidence_notes/
+- line 26 (score=2, keywords=['solomon', 'guardianship']): "proposed_note": "Current index did not yield reliable finality artifacts; certified final order and register are still required. Candidate references: Collateral Estoppel/evidence_notes/sam_barber_restraining_order_ocr.txt; Collateral Estoppel/evidence_notes/
+- line 62 (score=1, keywords=['solomon']): "full_fair_opportunity_note": "Current index did not yield reliable hearing/opportunity artifacts; certified appearance/hearing records are still required. Candidate references: Collateral Estoppel/drafts/final_filing_set/06_oregon_authority_table_placeholders
+- line 60 (score=1, keywords=['solomon']): "party_privity_note": "Candidate sources indicate party-name overlap, but party/privity mapping remains uncertified. Candidate references: Collateral Estoppel/evidence_notes/solomon_repository_evidence_index.md; Collateral Estoppel/drafts/motion_for_leave_or_t
+- line 56 (score=1, keywords=['guardianship']): "identical_issue_note": "Candidate sources indicate potential overlap of the guardianship authority issue across filings. Candidate references: Collateral Estoppel/evidence_notes/missing_exhibit_search_status_2026-04-07.md; Collateral Estoppel/evidence_notes/r
+- line 48 (score=1, keywords=['solomon']): "proposed_note": "Current index did not yield reliable hearing/opportunity artifacts; certified appearance/hearing records are still required. Candidate references: Collateral Estoppel/drafts/final_filing_set/06_oregon_authority_table_final.md; Collater
+- line 46 (score=1, keywords=['solomon']): "Collateral Estoppel/evidence_notes/solomon_order_completeness_checklist.md"
+- line 37 (score=1, keywords=['solomon']): "proposed_note": "Candidate sources indicate party-name overlap, but party/privity mapping remains uncertified. Candidate references: Collateral Estoppel/evidence_notes/solomon_repository_evidence_index.md; Collateral Estoppel/drafts/motion_for_leave_or_to_com
 
 ## evidence/email_imports/starworks5-cortez-case-import/email_import_manifest.json
 - Relevance: medium
@@ -1046,7 +1301,7 @@ Low relevance: 1108
 - line 19 (score=2, keywords=['solomon', 'solomon barber']): 2. Require Solomon Barber to explain failure to appear as required in prior/related proceedings, as established by certified record.
 - line 18 (score=2, keywords=['solomon', 'solomon barber']): 1. Issue an Order to Show Cause requiring Solomon Barber to appear on a date certain.
 - line 12 (score=2, keywords=['solomon', 'solomon barber']): RE: RESPONDENT SOLOMON BARBER'S FAILURE TO APPEAR AND FILING OF PRECLUDED CLAIM
-- line 56 (score=1, keywords=['benjamin barber']): Benjamin Barber, Pro Se
+- line 58 (score=1, keywords=['benjamin barber']): Benjamin Barber, Pro Se
 - line 5 (score=1, keywords=['26pr00641']): Case No. 26PR00641
 
 ## Collateral Estoppel/drafts/memorandum_in_support_of_show_cause_and_sanctions.md
@@ -1055,14 +1310,44 @@ Low relevance: 1108
 - Hit count: 10
 - Dates found: ['2025-20-38', '2025-20-56', '2026-04-04', '2026-17-39', '2026-17-45', '2026-17-51']
 - Top snippets:
-- line 59 (score=3, keywords=['solomon', 'solomon barber', 'jane cortez']): `On information and belief, Solomon Barber pursued a course of conduct that combined post-notice self-help theories, possible collateral interference with housing or authority matters involving Jane Cortez, and unnecessary burden or delay.`
-- line 68 (score=2, keywords=['jane cortez', 'benjamin barber']): 2. any earlier guardian, guardian ad litem, or related authority order involving Jane Cortez and Benjamin Barber; and
-- line 20 (score=2, keywords=['jane cortez', 'benjamin barber']): 4. On March 23, 2026, Benjamin Barber and Jane Cortez separately declared that during a housing inspection, Charley Skee explained in substance that Benjamin had been removed from the lease because Benjamin's brother and stepfather had been emailing documents 
-- line 17 (score=2, keywords=['solomon', 'restraining order']): 1. An elderly-persons / persons-with-disabilities abuse prevention restraining order was granted against Solomon Samuel Barber on or about November 20, 2025. The order packet identifies Jane Kay Cortez as petitioner and states that no further service was neces
-- line 53 (score=1, keywords=['jane cortez']): 5. instability to Jane Cortez during a period when protective and authority boundaries should have reduced, not increased, uncertainty.
-- line 43 (score=1, keywords=['solomon']): The present record is strongest on notice, self-help posture, and downstream prejudice. It is weaker on the exact prior-authority order and the exact Solomon-to-HACC communication chain. For that reason, the better present request is a sanctions framework that
-- line 30 (score=1, keywords=['jane cortez']): 4. there is at least a substantial question whether collateral conduct continued in a way that affected housing or authority outcomes involving Jane Cortez.
-- line 25 (score=1, keywords=['solomon']): At the present stage, the central question is not whether every final contempt element has already been adjudicated. The narrower and presently supported request is that Solomon be required to explain his conduct if the Court finds:
+- line 79 (score=3, keywords=['solomon', 'solomon barber', 'jane cortez']): `On information and belief, Solomon Barber pursued a course of conduct that combined post-notice self-help theories, possible collateral interference with housing or authority matters involving Jane Cortez, and unnecessary burden or delay.`
+- line 92 (score=2, keywords=['jane cortez', 'benjamin barber']): 2. any earlier guardian, guardian ad litem, or related authority order involving Jane Cortez and Benjamin Barber; and
+- line 29 (score=2, keywords=['jane cortez', 'benjamin barber']): 4. On March 23, 2026, Benjamin Barber and Jane Cortez separately declared that during a housing inspection, Charley Skee explained in substance that Benjamin had been removed from the lease because Benjamin's brother and stepfather had been emailing documents 
+- line 26 (score=2, keywords=['solomon', 'restraining order']): 1. An elderly-persons / persons-with-disabilities abuse prevention restraining order was granted against Solomon Samuel Barber on or about November 20, 2025. The order packet identifies Jane Kay Cortez as petitioner and states that no further service was neces
+- line 73 (score=1, keywords=['jane cortez']): 5. instability to Jane Cortez during a period when protective and authority boundaries should have reduced, not increased, uncertainty.
+- line 59 (score=1, keywords=['solomon']): The present record is strongest on notice, self-help posture, and downstream prejudice. It is weaker on the exact prior-authority order and the exact Solomon-to-HACC communication chain. For that reason, the better present request is a sanctions framework that
+- line 39 (score=1, keywords=['jane cortez']): 4. there is at least a substantial question whether collateral conduct continued in a way that affected housing or authority outcomes involving Jane Cortez.
+- line 34 (score=1, keywords=['solomon']): At the present stage, the central question is not whether every final contempt element has already been adjudicated. The narrower and presently supported request is that Solomon be required to explain his conduct if the Court finds:
+
+## Collateral Estoppel/knowledge_graph/generated/rule_closure_trace_matrix_2026-04-07.json
+- Relevance: medium
+- Total keyword score: 15
+- Hit count: 15
+- Dates found: ['2025-11-20', '2026-03-10', '2026-03-31', '2026-04-07']
+- Top snippets:
+- line 248 (score=1, keywords=['solomon']): "fact_id": "f_client_solomon_failed_appearance",
+- line 213 (score=1, keywords=['solomon']): "fact_id": "f_client_solomon_barred_refile",
+- line 176 (score=1, keywords=['solomon']): "description": "If issue preclusion applies, Solomon is forbidden from relitigating the precluded issue.",
+- line 170 (score=1, keywords=['solomon']): "rule_id": "r7_solomon_forbidden_refile_precluded_issue",
+- line 155 (score=1, keywords=['solomon']): "fact_id": "f_client_solomon_failed_appearance",
+- line 140 (score=1, keywords=['solomon']): "description": "If no further service was required because Solomon appeared, later failure to appear supports an obligation to appear and answer.",
+- line 138 (score=1, keywords=['eppdapa']): "order:eppdapa_restraining_order"
+- line 135 (score=1, keywords=['solomon']): "rule_id": "r5_solomon_obligated_appear_and_answer",
+
+## Collateral Estoppel/knowledge_graph/generated/rule_closure_trace_matrix_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 15
+- Hit count: 15
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 70 (score=1, keywords=['solomon']): - f_client_solomon_failed_appearance :: FailedToAppear :: status=alleged value=true source=/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/41_certified_nonappearance_packet_checklist_r24_2026-04-07.md
+- line 60 (score=1, keywords=['solomon']): - f_client_solomon_barred_refile :: RefiledBarredIssue :: status=alleged value=true source=/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/42_issue_preclusion_certified_packet_checklist_r7_2026-04-07.md
+- line 51 (score=1, keywords=['solomon']): - Description: If issue preclusion applies, Solomon is forbidden from relitigating the precluded issue.
+- line 49 (score=1, keywords=['solomon']): ## [unresolved] r7_solomon_forbidden_refile_precluded_issue (hypothesis)
+- line 46 (score=1, keywords=['solomon']): - f_client_solomon_failed_appearance :: FailedToAppear :: status=alleged value=true source=/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/41_certified_nonappearance_packet_checklist_r24_2026-04-07.md
+- line 41 (score=1, keywords=['solomon']): - Description: If no further service was required because Solomon appeared, later failure to appear supports an obligation to appear and answer.
+- line 40 (score=1, keywords=['eppdapa']): - Authority refs: order:eppdapa_restraining_order
+- line 39 (score=1, keywords=['solomon']): ## [unresolved] r5_solomon_obligated_appear_and_answer (hypothesis)
 
 ## evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14164-Me-to-solomon-gv-3f38fb3f900d4de1/transcript.txt
 - Relevance: medium
@@ -1093,6 +1378,21 @@ Low relevance: 1108
 - line 13 (score=1, keywords=['benjamin barber']): - confirms the filing includes allegations against Benjamin Barber
 - line 11 (score=1, keywords=['guardianship']): - confirms request for temporary and indefinite guardianship
 - line 8 (score=1, keywords=['26pr00641']): - confirms case number `26PR00641`
+
+## Collateral Estoppel/evidence_notes/search_results_hacc_service_and_prior_order_candidates_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 14
+- Hit count: 12
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 89 (score=2, keywords=['solomon', 'guardianship']): 1. [Solomon Motion for Guardianship.pdf](/home/barberb/HACC/evidence/history/Solomon%20Motion%20for%20Guardianship.pdf)
+- line 50 (score=2, keywords=['solomon', 'restraining order']): 1. that the actual Solomon protective or restraining order PDF was attached to that HACC email thread;
+- line 103 (score=1, keywords=['solomon']): 3. treating the Solomon service emails as separate evidence about communications with probate counsel, not as HACC service proof.
+- line 90 (score=1, keywords=['restraining order']): 2. [sam barber restraining order.pdf](/home/barberb/HACC/evidence/history/sam%20barber%20restraining%20order.pdf)
+- line 64 (score=1, keywords=['restraining order']): 2. the email says a paper copy of the restraining order was sent to counsel's office via `FedEx`;
+- line 59 (score=1, keywords=['solomon']): 2. [message.json](/home/barberb/HACC/evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_CAMTdTS_cvnTsxdNGtjzvAtUPDj31MU--P3vsRFenpigq-kWWuw-mail.gmail.com_20260404_Re-SERVICE-Jane-Kay-Cortez-vs-Solomon-Samuel-Barber-Benj
+- line 58 (score=1, keywords=['solomon']): 1. [message.json](/home/barberb/HACC/evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_CAMTdTS--K-3f4FAEGwKV5TY9qYTnsswDvLK_1XjMwQ50VY4ENw-mail.gmail.com_20260403_SERVICE-Jane-Kay-Cortez-vs-Solomon-Samuel-Barber-Benjami
+- line 56 (score=1, keywords=['solomon']): The repo does contain service-related emails, but they concern Solomon-related counsel, not HACC:
 
 ## Collateral Estoppel/evidence_notes/skee_declaration_and_lease_removal_inference_memo.md
 - Relevance: medium
@@ -1154,6 +1454,21 @@ Low relevance: 1108
 - line 22 (score=1, keywords=['solomon']): "source_html_path": "/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14165-Me-to-solomon-gv-e6594297d713efde/source.html",
 - line 21 (score=1, keywords=['solomon']): "transcript_path": "/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14165-Me-to-solomon-gv-e6594297d713efde/transcript.txt",
 
+## Collateral Estoppel/knowledge_graph/generated/certified_promotion_what_if_scenarios_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 13
+- Hit count: 13
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 57 (score=1, keywords=['solomon']): - r7_solomon_forbidden_refile_precluded_issue: active
+- line 56 (score=1, keywords=['solomon']): - r5_solomon_obligated_appear_and_answer: active
+- line 50 (score=1, keywords=['solomon']): - promotions: 6 (f_client_solomon_failed_appearance, f_collateral_estoppel_candidate, f_client_solomon_barred_refile, f_client_prior_appointment, f_client_benjamin_housing_interference, f_client_benjamin_order_disregard)
+- line 46 (score=1, keywords=['solomon']): - r7_solomon_forbidden_refile_precluded_issue: unresolved
+- line 45 (score=1, keywords=['solomon']): - r5_solomon_obligated_appear_and_answer: unresolved
+- line 35 (score=1, keywords=['solomon']): - r7_solomon_forbidden_refile_precluded_issue: active
+- line 34 (score=1, keywords=['solomon']): - r5_solomon_obligated_appear_and_answer: unresolved
+- line 28 (score=1, keywords=['solomon']): - promotions: 2 (f_collateral_estoppel_candidate, f_client_solomon_barred_refile)
+
 ## evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_CAMTdTS8RGx6e6geqARYxO6Qgy71ggYc9hVCeVcJJ11TKsL3u5A-mail.gmail.com_20260401_Re-Request-for-additional-information-Cortez---DUE-04-15-2026/message.json
 - Relevance: medium
 - Total keyword score: 13
@@ -1198,6 +1513,21 @@ Low relevance: 1108
 - line 22 (score=1, keywords=['solomon']): "source_html_path": "/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14158-Me-to-solomon-gv-9ec3655706570c02/source.html",
 - line 21 (score=1, keywords=['solomon']): "transcript_path": "/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14158-Me-to-solomon-gv-9ec3655706570c02/transcript.txt",
 - line 20 (score=1, keywords=['solomon']): "bundle_dir": "/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14158-Me-to-solomon-gv-9ec3655706570c02",
+
+## Collateral Estoppel/drafts/final_filing_set/60_issue_preclusion_tracker_row_update_command_sheet_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 12
+- Hit count: 12
+- Dates found: ['2026-04-07', '2026-04-18', '2026-04-21']
+- Top snippets:
+- line 97 (score=1, keywords=['26pr00641']): --case-number 26PR00641 \
+- line 89 (score=1, keywords=['26pr00641']): --case-number 26PR00641 \
+- line 81 (score=1, keywords=['26pr00641']): --case-number 26PR00641 \
+- line 73 (score=1, keywords=['26pr00641']): --case-number 26PR00641 \
+- line 63 (score=1, keywords=['26pr00641']): --case-number 26PR00641 \
+- line 55 (score=1, keywords=['26pr00641']): --case-number 26PR00641 \
+- line 47 (score=1, keywords=['26pr00641']): --case-number 26PR00641 \
+- line 37 (score=1, keywords=['26pr00641']): --case-number 26PR00641 \
 
 ## evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_CAMTdTS-ycD2U_DWV5a_FGyXonCu2RWwkO_ve4see6S_fbH0JJg-mail.gmail.com_20260401_Re-Additional-Information-Needed/message.eml
 - Relevance: medium
@@ -1319,6 +1649,21 @@ Low relevance: 1108
 - line 56 (score=1, keywords=['solomon']): - any writing showing whether Benjamin, Jane, Julio, Solomon, or the stepfather was treated as the source of authority
 - line 29 (score=1, keywords=['benjamin barber']): ## A4: Benjamin Barber interfered with housing contract/process
 
+## Collateral Estoppel/evidence_notes/hacc_order_notice_candidate_note_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 11
+- Hit count: 8
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 3 (score=3, keywords=['solomon', 'restraining order', 'benjamin barber']): This note preserves the current position that Benjamin Barber reports having emailed the Solomon protective or restraining order to the Housing Authority of Clackamas County.
+- line 39 (score=2, keywords=['solomon', 'benjamin barber']): - Benjamin Barber reports that he emailed the Solomon protective order to HACC; the current repo independently proves HACC received written restraining-order-related notice by March 17, 2026; and the specific order-transmission claim should remain pending iden
+- line 44 (score=1, keywords=['solomon']): - the actual Solomon order attachment to HACC has already been proved from preserved mail.
+- line 32 (score=1, keywords=['solomon']): 3. no local preserved email yet identified showing the Solomon protective-order PDF itself was sent directly to HACC;
+- line 28 (score=1, keywords=['restraining order']): 2. preserved March 17, 2026 HACC emails in which Benjamin directly asked HACC whether it was still communicating with parties who had restraining orders against them in the courts:
+- line 27 (score=1, keywords=['solomon']): 1. service-related emails to Solomon's probate counsel on April 3-4, 2026;
+- line 19 (score=1, keywords=['solomon']): 2. prior notice to HACC about the Solomon protective-order situation.
+- line 12 (score=1, keywords=['solomon']): 4. not yet a preserved-mail confirmation sufficient to mark the actual Solomon order transmission as directly proved.
+
 ## Collateral Estoppel/evidence_notes/solomon_evidence_graph_bridge.md
 - Relevance: medium
 - Total keyword score: 11
@@ -1333,6 +1678,21 @@ Low relevance: 1108
 - line 10 (score=1, keywords=['solomon']): - `/home/barberb/HACC/Collateral Estoppel/knowledge_graph/collect_solomon_evidence_events.py`
 - line 7 (score=1, keywords=['solomon']): - `/home/barberb/HACC/Collateral Estoppel/evidence_notes/solomon_evidence_graph_feed.json`
 - line 3 (score=1, keywords=['solomon']): This note links Solomon-specific repository evidence to computable graph inputs.
+
+## Collateral Estoppel/knowledge_graph/generated/deontic_readiness_dashboard_2026-04-07.json
+- Relevance: medium
+- Total keyword score: 11
+- Hit count: 11
+- Dates found: ['2025-11-20', '2026-03-10', '2026-03-31', '2026-04-07']
+- Top snippets:
+- line 396 (score=1, keywords=['solomon']): "r7_solomon_forbidden_refile_precluded_issue",
+- line 395 (score=1, keywords=['solomon']): "r5_solomon_obligated_appear_and_answer",
+- line 380 (score=1, keywords=['solomon']): "fact_id": "f_client_solomon_failed_appearance",
+- line 361 (score=1, keywords=['eppdapa']): "order:eppdapa_restraining_order"
+- line 358 (score=1, keywords=['solomon']): "rule_id": "r5_solomon_obligated_appear_and_answer",
+- line 325 (score=1, keywords=['guardianship']): "action": "Add certified prior guardianship appointment order and supporting service/compliance records.",
+- line 283 (score=1, keywords=['guardianship']): "action": "Add certified prior guardianship appointment order and supporting service/compliance records.",
+- line 249 (score=1, keywords=['guardianship']): "action": "Add certified prior guardianship appointment order and supporting service/compliance records.",
 
 ## evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_CAMTdTS-MWcr-C4pH93xkp7-ASGd99A2dZU1nxUe6BsDnJq-97Q-mail.gmail.com_20260401_Fwd-Annual-Certification-Income-Verification/message.json
 - Relevance: medium
@@ -1452,6 +1812,21 @@ Low relevance: 1108
 - line 31 (score=1, keywords=['benjamin barber']): c. Benjamin Barber;
 - line 5 (score=1, keywords=['26pr00641']): Case No. 26PR00641
 
+## Collateral Estoppel/drafts/final_filing_set/64_issue_preclusion_outreach_packet_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 10
+- Hit count: 10
+- Dates found: ['2026-04-07', '2026-04-21']
+- Top snippets:
+- line 68 (score=1, keywords=['25po11318']): This is a follow-up regarding the certified-records request for case 25PO11318.
+- line 64 (score=1, keywords=['25po11318']): Subject: Follow-Up: Certified Records Request - Case 25PO11318
+- line 53 (score=1, keywords=['25po11318']): I am writing to confirm receipt and processing status for our certified-records request in case 25PO11318.
+- line 49 (score=1, keywords=['25po11318']): Subject: Certified Records Request Status - Case 25PO11318
+- line 43 (score=1, keywords=['25po11318']): ## Case `25PO11318`
+- line 32 (score=1, keywords=['26pr00641']): This is a follow-up regarding the certified-records request for case 26PR00641.
+- line 28 (score=1, keywords=['26pr00641']): Subject: Follow-Up: Certified Records Request - Case 26PR00641
+- line 17 (score=1, keywords=['26pr00641']): I am writing to confirm receipt and processing status for our certified-records request in case 26PR00641.
+
 ## Collateral Estoppel/evidence_notes/missing_exhibit_search_status_2026-04-07.md
 - Relevance: medium
 - Total keyword score: 10
@@ -1481,62 +1856,6 @@ Low relevance: 1108
 - line 16 (score=1, keywords=['solomon']): - Solomon Samuel Barber had notice of the restraining-order matter by at least `2025-11-17`.
 - line 5 (score=1, keywords=['solomon']): - a scanned Solomon restraining-order packet
 - line 1 (score=1, keywords=['solomon']): # Solomon Order Completeness Checklist
-
-## Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/inclusive__motion_for_appointment_and_appearance_of_guardian_ad_litem_md.md
-- Relevance: medium
-- Total keyword score: 10
-- Hit count: 7
-- Dates found: ['2026-04-07']
-- Top snippets:
-- line 35 (score=2, keywords=['solomon', 'guardianship']): Based on f_actor_assignment_conflict_benjamin_vs_solomon_interference (verified, dates=['2026-04-07'], source=generate_formal_reasoning_artifacts.py, confidence=None(None), kind=None), the rule r21_case_obligated_resolve_actor_assignment_conflict yields O(case
-- line 29 (score=2, keywords=['guardianship', '26pr00641']): Based on f_subpoena_pre_service_phase_only (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r20_case_permitted_treat_enforcement_path_as_pending_pre_service yields P(case:guardianship_col
-- line 11 (score=2, keywords=['solomon', 'guardianship']): Based on f_hacc_named_notice_to_solomon_order_not_found (verified, dates=['2026-04-07'], source=protective_order_and_hacc_notice_timeline.md, confidence=None(None), kind=None), the rule r6c_solomon_interference_not_proved_by_named_hacc_notice_gap yields P(case
-- line 41 (score=1, keywords=['guardianship']): Based on f_authority_table_placeholders_unresolved (verified, dates=['2026-04-07'], source=06_oregon_authority_table_placeholders.md, confidence=None(None), kind=None), the rule r22_case_obligated_finalize_authority_citations_before_filing yields O(case:guardi
-- line 23 (score=1, keywords=['guardianship']): Based on f_hacc_actor_identification_record_not_found_locally (verified, dates=['2026-04-07'], source=missing_exhibit_search_status_2026-04-07.md, confidence=None(None), kind=None); f_hacc_exhibit_r_requires_compelled_production (verified, dates=['2026-04-07']
-- line 17 (score=1, keywords=['guardianship']): Based on f_prior_appointment_source_order_not_found (verified, dates=['2026-04-07'], source=deontic_logic_gap_review_2026-04-07.md, confidence=None(None), kind=None), the rule r6d_case_obligated_treat_prior_appointment_as_hypothesis_only yields O(case:guardian
-- line 8 (score=1, keywords=['solomon']): Rule: r6c_solomon_interference_not_proved_by_named_hacc_notice_gap
-
-## Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/inclusive__motion_to_dismiss_for_collateral_estoppel_md.md
-- Relevance: medium
-- Total keyword score: 10
-- Hit count: 7
-- Dates found: ['2026-04-07']
-- Top snippets:
-- line 35 (score=2, keywords=['solomon', 'guardianship']): Based on f_actor_assignment_conflict_benjamin_vs_solomon_interference (verified, dates=['2026-04-07'], source=generate_formal_reasoning_artifacts.py, confidence=None(None), kind=None), the rule r21_case_obligated_resolve_actor_assignment_conflict yields O(case
-- line 29 (score=2, keywords=['guardianship', '26pr00641']): Based on f_subpoena_pre_service_phase_only (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r20_case_permitted_treat_enforcement_path_as_pending_pre_service yields P(case:guardianship_col
-- line 11 (score=2, keywords=['solomon', 'guardianship']): Based on f_hacc_named_notice_to_solomon_order_not_found (verified, dates=['2026-04-07'], source=protective_order_and_hacc_notice_timeline.md, confidence=None(None), kind=None), the rule r6c_solomon_interference_not_proved_by_named_hacc_notice_gap yields P(case
-- line 41 (score=1, keywords=['guardianship']): Based on f_authority_table_placeholders_unresolved (verified, dates=['2026-04-07'], source=06_oregon_authority_table_placeholders.md, confidence=None(None), kind=None), the rule r22_case_obligated_finalize_authority_citations_before_filing yields O(case:guardi
-- line 23 (score=1, keywords=['guardianship']): Based on f_hacc_actor_identification_record_not_found_locally (verified, dates=['2026-04-07'], source=missing_exhibit_search_status_2026-04-07.md, confidence=None(None), kind=None); f_hacc_exhibit_r_requires_compelled_production (verified, dates=['2026-04-07']
-- line 17 (score=1, keywords=['guardianship']): Based on f_prior_appointment_source_order_not_found (verified, dates=['2026-04-07'], source=deontic_logic_gap_review_2026-04-07.md, confidence=None(None), kind=None), the rule r6d_case_obligated_treat_prior_appointment_as_hypothesis_only yields O(case:guardian
-- line 8 (score=1, keywords=['solomon']): Rule: r6c_solomon_interference_not_proved_by_named_hacc_notice_gap
-
-## Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/strict__motion_for_appointment_and_appearance_of_guardian_ad_litem_md.md
-- Relevance: medium
-- Total keyword score: 10
-- Hit count: 7
-- Dates found: ['2026-04-07']
-- Top snippets:
-- line 35 (score=2, keywords=['solomon', 'guardianship']): Based on f_actor_assignment_conflict_benjamin_vs_solomon_interference (verified, dates=['2026-04-07'], source=generate_formal_reasoning_artifacts.py, confidence=None(None), kind=None), the rule r21_case_obligated_resolve_actor_assignment_conflict yields O(case
-- line 29 (score=2, keywords=['guardianship', '26pr00641']): Based on f_subpoena_pre_service_phase_only (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r20_case_permitted_treat_enforcement_path_as_pending_pre_service yields P(case:guardianship_col
-- line 11 (score=2, keywords=['solomon', 'guardianship']): Based on f_hacc_named_notice_to_solomon_order_not_found (verified, dates=['2026-04-07'], source=protective_order_and_hacc_notice_timeline.md, confidence=None(None), kind=None), the rule r6c_solomon_interference_not_proved_by_named_hacc_notice_gap yields P(case
-- line 41 (score=1, keywords=['guardianship']): Based on f_authority_table_placeholders_unresolved (verified, dates=['2026-04-07'], source=06_oregon_authority_table_placeholders.md, confidence=None(None), kind=None), the rule r22_case_obligated_finalize_authority_citations_before_filing yields O(case:guardi
-- line 23 (score=1, keywords=['guardianship']): Based on f_hacc_actor_identification_record_not_found_locally (verified, dates=['2026-04-07'], source=missing_exhibit_search_status_2026-04-07.md, confidence=None(None), kind=None); f_hacc_exhibit_r_requires_compelled_production (verified, dates=['2026-04-07']
-- line 17 (score=1, keywords=['guardianship']): Based on f_prior_appointment_source_order_not_found (verified, dates=['2026-04-07'], source=deontic_logic_gap_review_2026-04-07.md, confidence=None(None), kind=None), the rule r6d_case_obligated_treat_prior_appointment_as_hypothesis_only yields O(case:guardian
-- line 8 (score=1, keywords=['solomon']): Rule: r6c_solomon_interference_not_proved_by_named_hacc_notice_gap
-
-## Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/strict__motion_to_dismiss_for_collateral_estoppel_md.md
-- Relevance: medium
-- Total keyword score: 10
-- Hit count: 7
-- Dates found: ['2026-04-07']
-- Top snippets:
-- line 35 (score=2, keywords=['solomon', 'guardianship']): Based on f_actor_assignment_conflict_benjamin_vs_solomon_interference (verified, dates=['2026-04-07'], source=generate_formal_reasoning_artifacts.py, confidence=None(None), kind=None), the rule r21_case_obligated_resolve_actor_assignment_conflict yields O(case
-- line 29 (score=2, keywords=['guardianship', '26pr00641']): Based on f_subpoena_pre_service_phase_only (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r20_case_permitted_treat_enforcement_path_as_pending_pre_service yields P(case:guardianship_col
-- line 11 (score=2, keywords=['solomon', 'guardianship']): Based on f_hacc_named_notice_to_solomon_order_not_found (verified, dates=['2026-04-07'], source=protective_order_and_hacc_notice_timeline.md, confidence=None(None), kind=None), the rule r6c_solomon_interference_not_proved_by_named_hacc_notice_gap yields P(case
-- line 41 (score=1, keywords=['guardianship']): Based on f_authority_table_placeholders_unresolved (verified, dates=['2026-04-07'], source=06_oregon_authority_table_placeholders.md, confidence=None(None), kind=None), the rule r22_case_obligated_finalize_authority_citations_before_filing yields O(case:guardi
-- line 23 (score=1, keywords=['guardianship']): Based on f_hacc_actor_identification_record_not_found_locally (verified, dates=['2026-04-07'], source=missing_exhibit_search_status_2026-04-07.md, confidence=None(None), kind=None); f_hacc_exhibit_r_requires_compelled_production (verified, dates=['2026-04-07']
-- line 17 (score=1, keywords=['guardianship']): Based on f_prior_appointment_source_order_not_found (verified, dates=['2026-04-07'], source=deontic_logic_gap_review_2026-04-07.md, confidence=None(None), kind=None), the rule r6d_case_obligated_treat_prior_appointment_as_hypothesis_only yields O(case:guardian
-- line 8 (score=1, keywords=['solomon']): Rule: r6c_solomon_interference_not_proved_by_named_hacc_notice_gap
 
 ## evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_CAMTdTS-s81pANZQM_LBw2UPOuS-HYVmUU-Ru-ncu79k-G_ophw-mail.gmail.com_20260327_Re-Application-to-live-at-the-Vera---Jane-Cortez-Benjamin-Barber/message.json
 - Relevance: medium
@@ -1716,6 +2035,21 @@ Low relevance: 1108
 - line 12 (score=1, keywords=['benjamin barber']): 2) Benjamin Barber email used in signature blocks
 - line 5 (score=1, keywords=['benjamin barber']): 1) Benjamin Barber address/phone used in signature blocks
 
+## Collateral Estoppel/drafts/final_filing_set/56_issue_preclusion_case_specific_clerk_request_packets_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 9
+- Hit count: 9
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 54 (score=1, keywords=['25po11318']): - `hearing__25PO11318__YYYYMMDD__appearance_minutes_or_transcript.pdf`
+- line 53 (score=1, keywords=['25po11318']): - `docket__25PO11318__YYYYMMDD__register_of_actions.pdf`
+- line 52 (score=1, keywords=['25po11318']): - `prior_order__25PO11318__YYYYMMDD__final_or_disposition_order.pdf`
+- line 41 (score=1, keywords=['25po11318']): ## Case packet B: `25PO11318`
+- line 39 (score=1, keywords=['26pr00641']): - `hearing__26PR00641__YYYYMMDD__appearance_minutes_or_transcript.pdf`
+- line 38 (score=1, keywords=['26pr00641']): - `docket__26PR00641__YYYYMMDD__register_of_actions.pdf`
+- line 37 (score=1, keywords=['26pr00641']): - `prior_order__26PR00641__YYYYMMDD__prior_final_order.pdf`
+- line 29 (score=1, keywords=['guardianship']): - Current guardianship proceeding context and relation to later-filed issue-preclusion assertions.
+
 ## Collateral Estoppel/drafts/motion_for_leave_or_to_compel_exhibit_r_production.md
 - Relevance: medium
 - Total keyword score: 9
@@ -1757,6 +2091,21 @@ Low relevance: 1108
 - line 9 (score=1, keywords=['benjamin barber']): - `B` = Benjamin Barber
 - line 8 (score=1, keywords=['jane cortez']): - `J` = Jane Cortez
 - line 1 (score=1, keywords=['guardianship']): # Deontic Theorem Workbook (Guardianship Track)
+
+## Collateral Estoppel/knowledge_graph/generated/deontic_closure_workplan_2026-04-07.json
+- Relevance: medium
+- Total keyword score: 9
+- Hit count: 9
+- Dates found: ['2025-11-20', '2026-03-10', '2026-03-31', '2026-04-07']
+- Top snippets:
+- line 352 (score=1, keywords=['solomon']): "fact_id": "f_client_solomon_failed_appearance",
+- line 333 (score=1, keywords=['eppdapa']): "order:eppdapa_restraining_order"
+- line 330 (score=1, keywords=['solomon']): "rule_id": "r5_solomon_obligated_appear_and_answer",
+- line 297 (score=1, keywords=['guardianship']): "action": "Add certified prior guardianship appointment order and supporting service/compliance records.",
+- line 255 (score=1, keywords=['guardianship']): "action": "Add certified prior guardianship appointment order and supporting service/compliance records.",
+- line 221 (score=1, keywords=['guardianship']): "action": "Add certified prior guardianship appointment order and supporting service/compliance records.",
+- line 199 (score=1, keywords=['solomon']): "fact_id": "f_client_solomon_barred_refile",
+- line 160 (score=1, keywords=['solomon']): "rule_id": "r7_solomon_forbidden_refile_precluded_issue",
 
 ## evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_CAMTdTS-ycD2U_DWV5a_FGyXonCu2RWwkO_ve4see6S_fbH0JJg-mail.gmail.com_20260401_Re-Additional-Information-Needed/message.json
 - Relevance: medium
@@ -2005,10 +2354,49 @@ Low relevance: 1108
 - Top snippets:
 - line 30 (score=2, keywords=['solomon', 'solomon barber']): 7. Based on Exhibits 1 and 3, I understand there is record support for notice and compliance-path disputes involving Solomon Barber.
 - line 25 (score=2, keywords=['guardianship', '26pr00641']): 5. Exhibit 2 reflects guardianship filing/notice timeline entries associated with case 26PR00641 (including March 31, 2026 and April 2, 2026 references).
-- line 54 (score=1, keywords=['benjamin barber']): Benjamin Barber
+- line 55 (score=1, keywords=['benjamin barber']): Benjamin Barber
 - line 16 (score=1, keywords=['benjamin barber']): I, Benjamin Barber, declare as follows:
 - line 11 (score=1, keywords=['benjamin barber']): DECLARATION OF BENJAMIN BARBER IN SUPPORT OF
 - line 5 (score=1, keywords=['26pr00641']): Case No. 26PR00641
+
+## Collateral Estoppel/drafts/final_filing_set/44_certified_records_filename_convention_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 8
+- Hit count: 6
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 21 (score=2, keywords=['guardianship', '26pr00641']): - `appointment__26PR00641__20260409__letters_of_guardianship.pdf`
+- line 18 (score=2, keywords=['guardianship', '26pr00641']): - `prior_order__26PR00641__20260409__signed_order_guardianship.pdf`
+- line 39 (score=1, keywords=['solomon']): - supports `f_client_solomon_failed_appearance`
+- line 22 (score=1, keywords=['26pr00641']): - `service__26PR00641__20260409__proof_of_service.pdf`
+- line 20 (score=1, keywords=['26pr00641']): - `hearing__26PR00641__20260409__appearance_minutes.pdf`
+- line 19 (score=1, keywords=['26pr00641']): - `docket__26PR00641__20260409__register_of_actions.pdf`
+
+## Collateral Estoppel/drafts/final_filing_set/59_issue_preclusion_clerk_request_letters_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 8
+- Hit count: 8
+- Dates found: ['2026-04-07', '2026-04-21']
+- Top snippets:
+- line 129 (score=1, keywords=['guardianship']): - These records are requested to complete issue-preclusion element mapping (finality and full/fair opportunity) in related guardianship litigation support materials.
+- line 96 (score=1, keywords=['guardianship']): - These records are requested to complete issue-preclusion element mapping (finality and full/fair opportunity) in related guardianship litigation support materials.
+- line 63 (score=1, keywords=['guardianship']): - These records are requested to complete issue-preclusion element mapping (finality and full/fair opportunity) in related guardianship litigation support materials.
+- line 46 (score=1, keywords=['25po11318']): Case Number: `25PO11318`
+- line 40 (score=1, keywords=['25po11318']): ## Clerk Request Letter - Case `25PO11318`
+- line 30 (score=1, keywords=['guardianship']): - These records are requested to complete issue-preclusion element mapping (finality and full/fair opportunity) in related guardianship litigation support materials.
+- line 13 (score=1, keywords=['26pr00641']): Case Number: `26PR00641`
+- line 7 (score=1, keywords=['26pr00641']): ## Clerk Request Letter - Case `26PR00641`
+
+## Collateral Estoppel/evidence_notes/orcp17_target_selection_note_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 8
+- Hit count: 4
+- Dates found: []
+- Top snippets:
+- line 7 (score=3, keywords=['solomon', 'solomon barber', 'guardianship']): The strongest present candidate for initial `ORCP 17` mapping is Solomon Barber's first amended guardianship petition reflected in:
+- line 14 (score=2, keywords=['solomon', 'solomon barber']): 2. Solomon Barber named as petitioner;
+- line 9 (score=2, keywords=['solomon', 'guardianship']): - [solomon_motion_for_guardianship_ocr.txt](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt)
+- line 15 (score=1, keywords=['guardianship']): 3. the filing seeks temporary and indefinite guardianship, waiver of notice, and a writ of assistance.
 
 ## evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_CAMTdTS8XHfbEop7LSQB4MfGq3xJC-eQaWXyf-Bhptq1-scrM-w-mail.gmail.com_20260401_Fwd-Additional-Information-Needed/message.json
 - Relevance: medium
@@ -2863,6 +3251,19 @@ Low relevance: 1108
 - line 25 (score=1, keywords=['solomon']): 2. 11_subpoena_duces_tecum_to_solomon_barber_final.md
 - line 3 (score=1, keywords=['26pr00641']): Case: 26PR00641
 
+## Collateral Estoppel/drafts/final_filing_set/43_certified_records_clerk_request_checklist_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 7
+- Hit count: 6
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 36 (score=2, keywords=['solomon', 'solomon barber']): 3. Identity tie-in showing the entry pertains to Solomon Barber.
+- line 45 (score=1, keywords=['guardianship']): 2. Any letters of guardianship/conservatorship or equivalent authority instrument.
+- line 44 (score=1, keywords=['benjamin barber']): 1. Appointment order or fiduciary authority order naming Benjamin Barber (if it exists).
+- line 39 (score=1, keywords=['solomon']): - `f_client_solomon_failed_appearance`
+- line 29 (score=1, keywords=['solomon']): - `f_client_solomon_barred_refile`
+- line 4 (score=1, keywords=['26pr00641']): Working target case: `26PR00641` (confirm from certified docket before filing)
+
 ## Collateral Estoppel/drafts/subpoena_schedule_hacc_re_exhibit_r.md
 - Relevance: medium
 - Total keyword score: 7
@@ -2875,6 +3276,16 @@ Low relevance: 1108
 - line 19 (score=1, keywords=['benjamin barber']): You are commanded to produce the following records for the period October 1, 2025 through March 31, 2026 concerning the household of Jane Kay Cortez, Benjamin Barber, and Julio Cortez, including the unit at 10043 SE 32nd Ave, Milwaukie, Oregon 97222.
 - line 12 (score=1, keywords=['26pr00641']): Case No. `26PR00641` (to confirm from certified docket)
 - line 7 (score=1, keywords=['guardianship']): In the Matter of the Guardianship of:
+
+## Collateral Estoppel/evidence_notes/certified_records/orcp17_filing_mapping.json
+- Relevance: medium
+- Total keyword score: 7
+- Hit count: 3
+- Dates found: ['2026-03-31', '2026-04-07']
+- Top snippets:
+- line 5 (score=3, keywords=['solomon', 'solomon barber', 'guardianship']): "challenged_filing_note": "Current best candidate target is the Solomon Barber first amended guardianship petition reflected in solomon_motion_for_guardianship_ocr.txt, dated March 31, 2026. This identifies the filing only and does not by itself establish any 
+- line 2 (score=3, keywords=['solomon', 'solomon barber', 'guardianship']): "challenged_filing_caption": "First Amended Petition for Appointment of Guardian and Conservator / guardianship petition filed by Solomon Barber on behalf of or concerning Jane Kay Cortez",
+- line 11 (score=1, keywords=['jane cortez']): "unsupported_factual_assertion_note": "Current candidate theory only: the petition-side statement that no guardian had previously been appointed for Jane Cortez may become a contradicted factual assertion if a certified prior appointment order is later staged 
 
 ## Collateral Estoppel/evidence_notes/motion_exhibit_crosswalk.md
 - Relevance: medium
@@ -2916,6 +3327,28 @@ Low relevance: 1108
 - line 10 (score=3, keywords=['solomon', 'solomon barber', 'guardianship']): 5. All records concerning communications with Solomon Barber about service, appearances, compliance with court orders, guardianship, or related housing-contract matters.
 - line 6 (score=3, keywords=['solomon', 'solomon barber', 'benjamin barber']): 1. All communications to or from Jason Hopkins in district custody (including board, committee, administrative, and operational channels) regarding Jane Kay Cortez, Julio Cortez, Benjamin Barber, Solomon Barber, Rebekah Hopkins, Ramona Cortez, Ranondo Cortez, 
 
+## Collateral Estoppel/drafts/final_filing_set/48_orcp17_unsupported_factual_assertion_worksheet_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 6
+- Hit count: 5
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 11 (score=2, keywords=['solomon', 'guardianship']): 1. [solomon_motion_for_guardianship_ocr.txt](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt)
+- line 34 (score=1, keywords=['jane cortez']): - `The challenged filing asserted that no guardian had previously been appointed for Jane Cortez, but certified prior-order materials show a prior appointment entered before the petition date.`
+- line 17 (score=1, keywords=['jane cortez']): 2. identity match showing the order concerns Jane Cortez and the relevant prior authority question
+- line 12 (score=1, keywords=['guardianship']): 2. [petition_guardianship_working_memo.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/petition_guardianship_working_memo.md)
+- line 7 (score=1, keywords=['jane cortez']): - Petition-side statement that no guardian had previously been appointed for Jane Cortez
+
+## Collateral Estoppel/drafts/final_filing_set/49_orcp17_unsupported_legal_position_worksheet_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 6
+- Hit count: 3
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 7 (score=3, keywords=['solomon', 'solomon barber', 'guardianship']): - Petition-side request by Solomon Barber to obtain guardianship authority despite the unresolved prior-authority / issue-preclusion conflict
+- line 11 (score=2, keywords=['solomon', 'guardianship']): 1. [solomon_motion_for_guardianship_ocr.txt](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt)
+- line 12 (score=1, keywords=['guardianship']): 2. [petition_guardianship_working_memo.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/petition_guardianship_working_memo.md)
+
 ## Collateral Estoppel/drafts/hacc_subpoena_target_list_re_exhibit_r.md
 - Relevance: medium
 - Total keyword score: 6
@@ -2928,15 +3361,25 @@ Low relevance: 1108
 - line 26 (score=1, keywords=['jane cortez']): - HACC Relocation staff assigned to Jane Cortez household
 - line 3 (score=1, keywords=['benjamin barber']): This draft is a working target list for subpoena or compelled production aimed at the missing HACC actor-identification and authority-chain record behind Benjamin Barber's January 2026 lease removal.
 
+## Collateral Estoppel/evidence_notes/orcp17_unsupported_legal_position_candidate_note_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 6
+- Hit count: 3
+- Dates found: []
+- Top snippets:
+- line 7 (score=3, keywords=['solomon', 'solomon barber', 'jane cortez']): The clearest current candidate legal position is the petition-side request by Solomon Barber to be appointed temporary and indefinite guardian for Jane Cortez despite the unresolved theory that prior authority may already have existed.
+- line 11 (score=2, keywords=['solomon', 'guardianship']): 1. [solomon_motion_for_guardianship_ocr.txt](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt)
+- line 12 (score=1, keywords=['guardianship']): 2. [petition_guardianship_working_memo.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/petition_guardianship_working_memo.md)
+
 ## Collateral Estoppel/knowledge_graph/generated/README.md
 - Relevance: medium
 - Total keyword score: 6
 - Hit count: 5
-- Dates found: []
+- Dates found: ['2026-04-10']
 - Top snippets:
-- line 47 (score=2, keywords=['solomon', 'guardianship']): - `evidence_notes/solomon_motion_for_guardianship_ocr.txt`
-- line 13 (score=1, keywords=['solomon']): python3 "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/collect_solomon_evidence_events.py"
-- line 12 (score=1, keywords=['solomon']): python3 "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/marshal_solomon_repository_evidence.py"
+- line 145 (score=2, keywords=['solomon', 'guardianship']): - `evidence_notes/solomon_motion_for_guardianship_ocr.txt`
+- line 16 (score=1, keywords=['solomon']): python3 "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/collect_solomon_evidence_events.py"
+- line 15 (score=1, keywords=['solomon']): python3 "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/marshal_solomon_repository_evidence.py"
 - line 7 (score=1, keywords=['solomon']): - `/home/barberb/HACC/Collateral Estoppel/evidence_notes/solomon_repository_evidence_index.json`
 - line 6 (score=1, keywords=['solomon']): - `/home/barberb/HACC/Collateral Estoppel/evidence_notes/solomon_evidence_graph_feed.json`
 
@@ -3481,6 +3924,37 @@ Low relevance: 1108
 - line 19 (score=1, keywords=['solomon']): - `11_subpoena_duces_tecum_to_solomon_barber_final.md`
 - line 3 (score=1, keywords=['26pr00641']): Case: `26PR00641`
 
+## Collateral Estoppel/drafts/final_filing_set/41_certified_nonappearance_packet_checklist_r24_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 5
+- Hit count: 4
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 14 (score=2, keywords=['solomon', 'solomon barber']): 4. Identity tie-in (name/case number/date alignment) showing the nonappearance record pertains to Solomon Barber.
+- line 26 (score=1, keywords=['solomon']): - `f_client_solomon_failed_appearance`
+- line 18 (score=1, keywords=['26pr00641']): 1. Case number matches (`26PR00641` or linked proceeding documented with relation statement).
+- line 7 (score=1, keywords=['solomon']): - Convert `f_client_solomon_failed_appearance` from `alleged` to `verified` for strict-mode activation.
+
+## Collateral Estoppel/drafts/final_filing_set/47_orcp17_target_selection_worksheet_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 5
+- Hit count: 2
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 7 (score=3, keywords=['solomon', 'solomon barber', 'guardianship']): - Filing: Solomon Barber first amended guardianship petition
+- line 9 (score=2, keywords=['solomon', 'guardianship']): - Primary source: [solomon_motion_for_guardianship_ocr.txt](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt)
+
+## Collateral Estoppel/evidence_notes/orcp17_prior_order_contradiction_intake_note_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 5
+- Hit count: 4
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 20 (score=2, keywords=['solomon', 'guardianship']): 1. [solomon_motion_for_guardianship_ocr.txt](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt)
+- line 47 (score=1, keywords=['jane cortez']): 2. the order does not clearly match Jane Cortez;
+- line 27 (score=1, keywords=['jane cortez']): 1. Does the prior order actually concern Jane Cortez?
+- line 16 (score=1, keywords=['jane cortez']): 1. the petition-side statement that no guardian had previously been appointed for Jane Cortez
+
 ## evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_CAMTdTS8rowgBct-5GFqbfUtOoJ3GBJFK10x7u2ieGTrH7nMojw-mail.gmail.com_20260327_Re-Application-to-live-at-the-Vera---Jane-Cortez-Benjamin-Barber/message.eml
 - Relevance: medium
 - Total keyword score: 5
@@ -3533,15 +4007,33 @@ Low relevance: 1108
 - line 59 (score=1, keywords=['benjamin barber']): | 2026-04-07 | All recipients | initialization | 28_active_service_log_2026-04-07.csv | none | Benjamin Barber | Ready-to-serve baseline created |
 - line 5 (score=1, keywords=['26pr00641']): Case: 26PR00641
 
-## Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
+## Collateral Estoppel/evidence_notes/orcp17_unsupported_factual_assertion_candidate_note_2026-04-07.md
 - Relevance: medium
 - Total keyword score: 4
 - Hit count: 3
 - Dates found: []
 - Top snippets:
-- line 53 (score=2, keywords=['solomon', 'guardianship']): 1. Exhibit A: [solomon_motion_for_guardianship_ocr.txt](/home/barberb/HACC/Collateral Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt) (petition statements and date anchors including March 31, 2026 and April 2, 2026 notice line).
-- line 44 (score=1, keywords=['solomon']): 16. In parallel, the model expressly cautions that some collateral housing-interference content should remain inference-only unless direct proof is supplied (`r6c_solomon_interference_not_proved_by_named_hacc_notice_gap`), which further supports targeted issue
-- line 5 (score=1, keywords=['26pr00641']): Case No. `26PR00641` (to confirm)
+- line 13 (score=2, keywords=['solomon', 'guardianship']): 1. [solomon_motion_for_guardianship_ocr.txt](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt)
+- line 14 (score=1, keywords=['guardianship']): 2. [petition_guardianship_working_memo.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/petition_guardianship_working_memo.md)
+- line 9 (score=1, keywords=['jane cortez']): - no guardian had previously been appointed for Jane Cortez
+
+## Collateral Estoppel/knowledge_graph/generated/orcp17_readiness_snapshot.json
+- Relevance: medium
+- Total keyword score: 4
+- Hit count: 2
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 12 (score=3, keywords=['solomon', 'solomon barber', 'guardianship']): "note": "Current best candidate target is the Solomon Barber first amended guardianship petition reflected in solomon_motion_for_guardianship_ocr.txt, dated March 31, 2026. This identifies the filing only and does not by itself establish any ORCP 17 predicate.
+- line 18 (score=1, keywords=['jane cortez']): "note": "Current candidate theory only: the petition-side statement that no guardian had previously been appointed for Jane Cortez may become a contradicted factual assertion if a certified prior appointment order is later staged and verified. This remains pro
+
+## Collateral Estoppel/knowledge_graph/generated/orcp17_readiness_snapshot.md
+- Relevance: medium
+- Total keyword score: 4
+- Hit count: 2
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 13 (score=3, keywords=['solomon', 'solomon barber', 'guardianship']): - Note: Current best candidate target is the Solomon Barber first amended guardianship petition reflected in solomon_motion_for_guardianship_ocr.txt, dated March 31, 2026. This identifies the filing only and does not by itself establish any ORCP 17 predicate.
+- line 17 (score=1, keywords=['jane cortez']): - Note: Current candidate theory only: the petition-side statement that no guardian had previously been appointed for Jane Cortez may become a contradicted factual assertion if a certified prior appointment order is later staged and verified. This remains proo
 
 ## evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14160-Me-to-solomon-gv-7cb858000dea7723/transcript.txt
 - Relevance: medium
@@ -3571,6 +4063,50 @@ Low relevance: 1108
 - Top snippets:
 - line 6 (score=3, keywords=['solomon', 'solomon barber', 'benjamin barber']): 1. All communications to or from Juliet Sutherland (including Mrs. Juliet Sutherland) regarding Jane Kay Cortez, Julio Cortez, Benjamin Barber, Solomon Barber, Rebekah Hopkins, Ramona Cortez, Ranondo Cortez, or Jason Hopkins.
 
+## Collateral Estoppel/drafts/final_filing_set/55_issue_preclusion_certified_retrieval_queue_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 3
+- Hit count: 2
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 8 (score=2, keywords=['guardianship', '26pr00641']): 1. `26PR00641` (current guardianship proceeding context)
+- line 9 (score=1, keywords=['25po11318']): 2. `25PO11318` (Julio-related protective order record referenced in timeline)
+
+## Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
+- Relevance: medium
+- Total keyword score: 3
+- Hit count: 2
+- Dates found: []
+- Top snippets:
+- line 69 (score=2, keywords=['solomon', 'guardianship']): 1. Exhibit A: [solomon_motion_for_guardianship_ocr.txt](/home/barberb/HACC/Collateral Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt) (petition statements and date anchors including March 31, 2026 and April 2, 2026 notice line).
+- line 5 (score=1, keywords=['26pr00641']): Case No. `26PR00641` (to confirm)
+
+## Collateral Estoppel/evidence_notes/formal_reasoning_status_after_authority_cleanup_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 3
+- Hit count: 2
+- Dates found: []
+- Top snippets:
+- line 21 (score=2, keywords=['jane cortez', 'benjamin barber']): 1. any claimed prior appointment or prior authority structure involving Benjamin Barber and Jane Cortez;
+- line 23 (score=1, keywords=['solomon']): 3. any direct Solomon-to-HACC actor chain proving exactly who caused the lease-removal decision; and
+
+## Collateral Estoppel/evidence_notes/orcp17_improper_purpose_candidate_note_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 3
+- Hit count: 2
+- Dates found: []
+- Top snippets:
+- line 7 (score=2, keywords=['solomon', 'solomon barber']): The current candidate improper-purpose theory is that Solomon Barber's filing and related conduct may have functioned to obtain practical control, create delay, or apply collateral pressure rather than to pursue only a properly bounded merits determination.
+- line 14 (score=1, keywords=['solomon']): 4. [solomon_repository_evidence_memo.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_repository_evidence_memo.md)
+
+## Collateral Estoppel/evidence_notes/orcp17_issue_preclusion_bridge_intake_note_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 3
+- Hit count: 1
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 16 (score=3, keywords=['solomon', 'solomon barber', 'guardianship']): 1. the petition-side request by Solomon Barber to obtain guardianship authority despite the unresolved prior-authority / issue-preclusion conflict
+
 ## evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14163-Me-to-solomon-gv-7540e6c07566a84a/transcript.txt
 - Relevance: medium
 - Total keyword score: 3
@@ -3587,6 +4123,38 @@ Low relevance: 1108
 - Dates found: ['2026-04-07']
 - Top snippets:
 - line 18 (score=2, keywords=['solomon', 'solomon barber']): | Solomon Barber | 11/11A/11B/18/19/21 | ready_to_serve | Serve packet using Manifest A |
+
+## Collateral Estoppel/drafts/final_filing_set/33_service_log_rule_activation_plan_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 2
+- Hit count: 1
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 62 (score=2, keywords=['solomon', 'solomon barber']): 1. Solomon Barber (`Manifest A`)
+
+## Collateral Estoppel/drafts/final_filing_set/36_confirmed_service_intake_form_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 2
+- Hit count: 1
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 7 (score=2, keywords=['solomon', 'solomon barber']): 1. Solomon Barber
+
+## Collateral Estoppel/knowledge_graph/generated/service_activation_scenarios_2026-04-07.json
+- Relevance: medium
+- Total keyword score: 2
+- Hit count: 1
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 16 (score=2, keywords=['solomon', 'solomon barber']): "recipient": "Solomon Barber",
+
+## Collateral Estoppel/knowledge_graph/generated/service_activation_scenarios_2026-04-07.md
+- Relevance: medium
+- Total keyword score: 2
+- Hit count: 1
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 11 (score=2, keywords=['solomon', 'solomon barber']): ### Solomon Barber
 
 ## Collateral Estoppel/knowledge_graph/generated/service_log_validation_report_2026-04-07.json
 - Relevance: medium
@@ -3713,6 +4281,34 @@ Low relevance: 1108
 - line 22 (score=1, keywords=['benjamin barber']): 7. All case notes, CRM entries, internal notes, or communication logs concerning the basis for removing Benjamin Barber from the household.
 - line 16 (score=1, keywords=['benjamin barber']): 1. Records sufficient to show the decision path for removing Benjamin Barber from the household effective January 1, 2026.
 - line 9 (score=1, keywords=['benjamin barber']): 1. why Benjamin Barber was removed from the household effective January 1, 2026;
+
+## Collateral Estoppel/knowledge_graph/generated/deontic_system_gap_refresh_2026-04-07.json
+- Relevance: low
+- Total keyword score: 7
+- Hit count: 7
+- Dates found: ['2026-03-10', '2026-03-31', '2026-04-07']
+- Top snippets:
+- line 193 (score=1, keywords=['solomon']): "certified_issue_preclusion_packet_for_f_collateral_estoppel_candidate_and_f_client_solomon_barred_refile",
+- line 192 (score=1, keywords=['solomon']): "certified_nonappearance_packet_for_f_client_solomon_failed_appearance",
+- line 121 (score=1, keywords=['solomon']): "fact_id": "f_client_solomon_failed_appearance",
+- line 106 (score=1, keywords=['solomon']): "fact_id": "f_client_solomon_barred_refile",
+- line 94 (score=1, keywords=['solomon']): "rule_id": "r7_solomon_forbidden_refile_precluded_issue",
+- line 83 (score=1, keywords=['solomon']): "fact_id": "f_client_solomon_failed_appearance",
+- line 79 (score=1, keywords=['solomon']): "rule_id": "r5_solomon_obligated_appear_and_answer",
+
+## Collateral Estoppel/knowledge_graph/generated/deontic_system_gap_refresh_2026-04-07.md
+- Relevance: low
+- Total keyword score: 7
+- Hit count: 7
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 44 (score=1, keywords=['solomon']): - certified_issue_preclusion_packet_for_f_collateral_estoppel_candidate_and_f_client_solomon_barred_refile
+- line 43 (score=1, keywords=['solomon']): - certified_nonappearance_packet_for_f_client_solomon_failed_appearance
+- line 30 (score=1, keywords=['solomon']): - antecedent f_client_solomon_failed_appearance status=alleged value=true
+- line 28 (score=1, keywords=['solomon']): - antecedent f_client_solomon_barred_refile status=alleged value=true
+- line 26 (score=1, keywords=['solomon']): - r7_solomon_forbidden_refile_precluded_issue (hypothesis)
+- line 25 (score=1, keywords=['solomon']): - antecedent f_client_solomon_failed_appearance status=alleged value=true
+- line 24 (score=1, keywords=['solomon']): - r5_solomon_obligated_appear_and_answer (hypothesis)
 
 ## evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_CAMTdTS--K-3f4FAEGwKV5TY9qYTnsswDvLK_1XjMwQ50VY4ENw-mail.gmail.com_20260403_SERVICE-Jane-Kay-Cortez-vs-Solomon-Samuel-Barber-Benjamin-Jay-Barber-vs-Solomon-/message.json
 - Relevance: low
@@ -4218,6 +4814,32 @@ Low relevance: 1108
 - line 9 (score=1, keywords=['solomon']): "subject": "New text message from solomon (503) 381-6911",
 - line 2 (score=1, keywords=['solomon']): "folder": "/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04",
 
+## Collateral Estoppel/drafts/final_filing_set/61_issue_preclusion_followup_calendar_and_templates_2026-04-07.md
+- Relevance: low
+- Total keyword score: 6
+- Hit count: 6
+- Dates found: ['2026-04-07', '2026-04-10', '2026-04-14', '2026-04-21', '2026-04-23']
+- Top snippets:
+- line 45 (score=1, keywords=['25po11318']): This is a follow-up regarding our certified records request for case 25PO11318.
+- line 41 (score=1, keywords=['25po11318']): Subject: Follow-Up Request for Certified Records - Case 25PO11318
+- line 30 (score=1, keywords=['25po11318']): ## Case `25PO11318`
+- line 20 (score=1, keywords=['26pr00641']): This is a follow-up regarding our certified records request for case 26PR00641.
+- line 16 (score=1, keywords=['26pr00641']): Subject: Follow-Up Request for Certified Records - Case 26PR00641
+- line 5 (score=1, keywords=['26pr00641']): ## Case `26PR00641`
+
+## Collateral Estoppel/drafts/final_filing_set/65_issue_preclusion_followup_send_queue_2026-04-10.md
+- Relevance: low
+- Total keyword score: 6
+- Hit count: 6
+- Dates found: ['2026-04-07', '2026-04-10', '2026-04-21']
+- Top snippets:
+- line 37 (score=1, keywords=['25po11318']): This is a scheduled follow-up regarding the certified-records request for case 25PO11318.
+- line 33 (score=1, keywords=['25po11318']): Subject: Follow-Up: Certified Records Request - Case 25PO11318
+- line 26 (score=1, keywords=['25po11318']): ## Case `25PO11318`
+- line 18 (score=1, keywords=['26pr00641']): This is a scheduled follow-up regarding the certified-records request for case 26PR00641.
+- line 14 (score=1, keywords=['26pr00641']): Subject: Follow-Up: Certified Records Request - Case 26PR00641
+- line 7 (score=1, keywords=['26pr00641']): ## Case `26PR00641`
+
 ## Collateral Estoppel/evidence_notes/lease_removal_authority_discovery_memo.md
 - Relevance: low
 - Total keyword score: 6
@@ -4230,6 +4852,32 @@ Low relevance: 1108
 - line 19 (score=1, keywords=['solomon']): See [solomon_repository_evidence_memo.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_repository_evidence_memo.md).
 - line 16 (score=1, keywords=['solomon']): - The Solomon record supports:
 - line 5 (score=1, keywords=['benjamin barber']): - who caused or requested Benjamin Barber's lease removal, and what claimed authority did HACC rely on?
+
+## Collateral Estoppel/knowledge_graph/generated/certified_intake_tracker_validation_2026-04-07.json
+- Relevance: low
+- Total keyword score: 6
+- Hit count: 6
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 43 (score=1, keywords=['26pr00641']): "case_number": "26PR00641",
+- line 42 (score=1, keywords=['26pr00641']): "file_name": "appointment__26PR00641__unknown__appointment_order_benjamin_barber.pdf",
+- line 30 (score=1, keywords=['26pr00641']): "case_number": "26PR00641",
+- line 29 (score=1, keywords=['26pr00641']): "file_name": "prior_order__26PR00641__unknown__prior_final_order.pdf",
+- line 17 (score=1, keywords=['26pr00641']): "case_number": "26PR00641",
+- line 16 (score=1, keywords=['26pr00641']): "file_name": "hearing__26PR00641__unknown__nonappearance_minutes.pdf",
+
+## Collateral Estoppel/knowledge_graph/generated/deontic_closure_workplan_2026-04-07.md
+- Relevance: low
+- Total keyword score: 6
+- Hit count: 6
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 55 (score=1, keywords=['eppdapa']): - Authority refs: order:eppdapa_restraining_order
+- line 52 (score=1, keywords=['solomon']): - [unresolved] r5_solomon_obligated_appear_and_answer (hypothesis)
+- line 49 (score=1, keywords=['guardianship']): - Action: Add certified prior guardianship appointment order and supporting service/compliance records.
+- line 45 (score=1, keywords=['guardianship']): - Action: Add certified prior guardianship appointment order and supporting service/compliance records.
+- line 41 (score=1, keywords=['guardianship']): - Action: Add certified prior guardianship appointment order and supporting service/compliance records.
+- line 35 (score=1, keywords=['solomon']): - [unresolved] r7_solomon_forbidden_refile_precluded_issue (hypothesis)
 
 ## evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_CAMTdTS--c3UaVm-vvcK9K7LtKmW8DTxGGF-coAMLxM-t_bug-mail.gmail.com_20260402_Re-2-bedroom-60-application/message.json
 - Relevance: low
@@ -4353,9 +5001,9 @@ Low relevance: 1108
 - Hit count: 5
 - Dates found: []
 - Top snippets:
-- line 39 (score=1, keywords=['solomon']): 13. [11A_attachment_a1_solomon_requests_final.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/11A_attachment_a1_solomon_requests_final.md)
-- line 38 (score=1, keywords=['solomon']): 12. [11_subpoena_duces_tecum_to_solomon_barber_final.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/11_subpoena_duces_tecum_to_solomon_barber_final.md)
-- line 30 (score=1, keywords=['solomon']): 4. [03_motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_final.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/03_motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_final.md)
+- line 42 (score=1, keywords=['solomon']): 13. [11A_attachment_a1_solomon_requests_final.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/11A_attachment_a1_solomon_requests_final.md)
+- line 41 (score=1, keywords=['solomon']): 12. [11_subpoena_duces_tecum_to_solomon_barber_final.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/11_subpoena_duces_tecum_to_solomon_barber_final.md)
+- line 33 (score=1, keywords=['solomon']): 4. [03_motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_final.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/03_motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_final.md)
 - line 9 (score=1, keywords=['solomon']): 3. [motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md](/home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md)
 - line 3 (score=1, keywords=['26pr00641']): Case target: `26PR00641` (confirm from certified docket before filing)
 
@@ -4382,6 +5030,42 @@ Low relevance: 1108
 - line 19 (score=1, keywords=['benjamin barber']): 1. why Benjamin Barber was removed from the household effective January 1, 2026;
 - line 13 (score=1, keywords=['benjamin barber']): This is a targeted request for records concerning the January 1, 2026 removal of Benjamin Barber from the household associated with Jane Kay Cortez and the unit at 10043 SE 32nd Ave, Milwaukie, Oregon 97222.
 - line 11 (score=1, keywords=['jane cortez']): Re: Request for records concerning January 1, 2026 household-composition change for Jane Cortez household
+
+## Collateral Estoppel/knowledge_graph/generated/deontic_end_to_end_grounding_gap_report_2026-04-07.json
+- Relevance: low
+- Total keyword score: 5
+- Hit count: 5
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 100 (score=1, keywords=['solomon']): "fact_id": "f_client_solomon_failed_appearance",
+- line 89 (score=1, keywords=['solomon']): "fact_id": "f_client_solomon_barred_refile",
+- line 80 (score=1, keywords=['solomon']): "rule_id": "r7_solomon_forbidden_refile_precluded_issue",
+- line 73 (score=1, keywords=['solomon']): "fact_id": "f_client_solomon_failed_appearance",
+- line 69 (score=1, keywords=['solomon']): "rule_id": "r5_solomon_obligated_appear_and_answer",
+
+## Collateral Estoppel/knowledge_graph/generated/deontic_end_to_end_grounding_gap_report_2026-04-07.md
+- Relevance: low
+- Total keyword score: 5
+- Hit count: 5
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 31 (score=1, keywords=['solomon']): - antecedent f_client_solomon_failed_appearance status=alleged value=true
+- line 29 (score=1, keywords=['solomon']): - antecedent f_client_solomon_barred_refile status=alleged value=true
+- line 27 (score=1, keywords=['solomon']): - r7_solomon_forbidden_refile_precluded_issue (hypothesis)
+- line 26 (score=1, keywords=['solomon']): - antecedent f_client_solomon_failed_appearance status=alleged value=true
+- line 25 (score=1, keywords=['solomon']): - r5_solomon_obligated_appear_and_answer (hypothesis)
+
+## Collateral Estoppel/knowledge_graph/generated/deontic_next_proof_targets_2026-04-07.md
+- Relevance: low
+- Total keyword score: 5
+- Hit count: 5
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 19 (score=1, keywords=['solomon']): - Sample blocked rules: r7_solomon_forbidden_refile_precluded_issue (status=alleged, value=true)
+- line 18 (score=1, keywords=['solomon']): - f_client_solomon_barred_refile: blocks 1 strict rules
+- line 17 (score=1, keywords=['solomon']): - Sample blocked rules: r7_solomon_forbidden_refile_precluded_issue (status=theory, value=true)
+- line 11 (score=1, keywords=['solomon']): - Sample blocked rules: r5_solomon_obligated_appear_and_answer (status=alleged, value=true), r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved (status=alleged, value=true)
+- line 10 (score=1, keywords=['solomon']): - f_client_solomon_failed_appearance: blocks 2 strict rules
 
 ## evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_0dxzwrLxRMmmzDoBas0ShA-geopod-ismtpd-77_20260403_2021-RED-SKY-ALLIANCE-REDSHORT-REPORTING-Confirmation/message.json
 - Relevance: low
@@ -5125,6 +5809,17 @@ Low relevance: 1108
 - line 13 (score=1, keywords=['benjamin barber']): Movant, Benjamin Barber, respectfully requests appointment and appearance authorization for a Guardian ad Litem ("GAL") for Jane Kay Cortez.
 - line 5 (score=1, keywords=['26pr00641']): Case No. 26PR00641
 
+## Collateral Estoppel/drafts/final_filing_set/42_issue_preclusion_certified_packet_checklist_r7_2026-04-07.md
+- Relevance: low
+- Total keyword score: 4
+- Hit count: 4
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 48 (score=1, keywords=['solomon']): - `r7_solomon_forbidden_refile_precluded_issue` no longer listed as unresolved.
+- line 28 (score=1, keywords=['solomon']): - `f_client_solomon_barred_refile`
+- line 7 (score=1, keywords=['solomon']): - Convert `f_collateral_estoppel_candidate` (`theory`) and `f_client_solomon_barred_refile` (`alleged`) into verified strict-mode predicates.
+- line 4 (score=1, keywords=['solomon']): - `r7_solomon_forbidden_refile_precluded_issue`
+
 ## Collateral Estoppel/evidence_notes/exhibit_r_readiness_status.md
 - Relevance: low
 - Total keyword score: 4
@@ -5136,16 +5831,49 @@ Low relevance: 1108
 - line 24 (score=1, keywords=['benjamin barber']): - Benjamin Barber as movant / signer
 - line 23 (score=1, keywords=['26pr00641']): - case number `26PR00641` marked for confirmation
 
+## Collateral Estoppel/knowledge_graph/evidence_fact_override_prefill_memo_2026-04-07.md
+- Relevance: low
+- Total keyword score: 4
+- Hit count: 4
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 28 (score=1, keywords=['guardianship']): - Source anchor: `knowledge_graph/guardianship_case_graph.md`
+- line 23 (score=1, keywords=['guardianship']): - Source anchor: `knowledge_graph/guardianship_case_graph.md`
+- line 14 (score=1, keywords=['solomon']): - `f_client_solomon_barred_refile`
+- line 10 (score=1, keywords=['solomon']): - `f_client_solomon_failed_appearance`
+
 ## Collateral Estoppel/knowledge_graph/generated/deontic_logic_gap_audit_2026-04-07.json
 - Relevance: low
 - Total keyword score: 4
 - Hit count: 4
 - Dates found: ['2026-04-07']
 - Top snippets:
-- line 26 (score=1, keywords=['solomon']): "r7_solomon_forbidden_refile_precluded_issue"
-- line 25 (score=1, keywords=['solomon']): "r5_solomon_obligated_appear_and_answer",
+- line 27 (score=1, keywords=['solomon']): "r7_solomon_forbidden_refile_precluded_issue"
+- line 26 (score=1, keywords=['solomon']): "r5_solomon_obligated_appear_and_answer",
 - line 10 (score=1, keywords=['solomon']): "r7_solomon_forbidden_refile_precluded_issue",
 - line 9 (score=1, keywords=['solomon']): "r5_solomon_obligated_appear_and_answer",
+
+## Collateral Estoppel/knowledge_graph/generated/issue_preclusion_daily_action_brief_2026-04-07.md
+- Relevance: low
+- Total keyword score: 4
+- Hit count: 4
+- Dates found: ['2026-04-07', '2026-04-10', '2026-04-14']
+- Top snippets:
+- line 20 (score=1, keywords=['26pr00641']): - 26PR00641 followup_2 on 2026-04-14 (in 7 day(s))
+- line 17 (score=1, keywords=['25po11318']): - 25PO11318 followup_2 on 2026-04-14 (in 7 day(s))
+- line 16 (score=1, keywords=['26pr00641']): - 26PR00641 followup_1 on 2026-04-10 (in 3 day(s))
+- line 13 (score=1, keywords=['25po11318']): - 25PO11318 followup_1 on 2026-04-10 (in 3 day(s))
+
+## Collateral Estoppel/knowledge_graph/graph_system_index.md
+- Relevance: low
+- Total keyword score: 4
+- Hit count: 4
+- Dates found: []
+- Top snippets:
+- line 85 (score=1, keywords=['guardianship']): 1. [guardianship_case_graph.md](/home/barberb/HACC/Collateral%20Estoppel/knowledge_graph/guardianship_case_graph.md)
+- line 56 (score=1, keywords=['guardianship']): - the theorem candidates behind the guardianship track
+- line 13 (score=1, keywords=['guardianship']): - [guardianship_case_graph.md](/home/barberb/HACC/Collateral%20Estoppel/knowledge_graph/guardianship_case_graph.md)
+- line 12 (score=1, keywords=['guardianship']): - [guardianship_case_graph.json](/home/barberb/HACC/Collateral%20Estoppel/knowledge_graph/guardianship_case_graph.json)
 
 ## Collateral Estoppel/research/deontic_bridge_memo.md
 - Relevance: low
@@ -6725,7 +7453,7 @@ Low relevance: 1108
 - Hit count: 3
 - Dates found: []
 - Top snippets:
-- line 49 (score=1, keywords=['benjamin barber']): Benjamin Barber, Pro Se
+- line 51 (score=1, keywords=['benjamin barber']): Benjamin Barber, Pro Se
 - line 13 (score=1, keywords=['benjamin barber']): Movant, Benjamin Barber, moves to dismiss all or part of the current claim set to the extent issues were previously litigated and decided in prior proceedings and are therefore precluded.
 - line 5 (score=1, keywords=['26pr00641']): Case No. 26PR00641
 
@@ -6738,6 +7466,26 @@ Low relevance: 1108
 - line 45 (score=1, keywords=['benjamin barber']): Benjamin Barber, Pro Se
 - line 14 (score=1, keywords=['benjamin barber']): Movant Benjamin Barber moves for an order compelling full subpoena compliance by responding custodian/person ______________________ and for appropriate sanctions for continued noncompliance.
 - line 5 (score=1, keywords=['26pr00641']): Case No. 26PR00641
+
+## Collateral Estoppel/drafts/final_filing_set/52_prior_appointment_certified_packet_checklist_r1_r2_r3_2026-04-07.md
+- Relevance: low
+- Total keyword score: 3
+- Hit count: 3
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 20 (score=1, keywords=['26pr00641']): 1. Case number and party identity match (`26PR00641` unless linked case relation is documented).
+- line 15 (score=1, keywords=['benjamin barber']): 3. Certified or authenticated records supporting housing-contract interference conduct tied to Benjamin Barber.
+- line 13 (score=1, keywords=['benjamin barber']): 1. Certified appointment or authority order naming Benjamin Barber (if such order exists).
+
+## Collateral Estoppel/drafts/final_filing_set/63_issue_preclusion_clerk_contact_verification_queue_2026-04-07.md
+- Relevance: low
+- Total keyword score: 3
+- Hit count: 3
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 35 (score=1, keywords=['26pr00641']): --case-number 26PR00641 \
+- line 12 (score=1, keywords=['25po11318']): 2. `25PO11318` - contact needed
+- line 11 (score=1, keywords=['26pr00641']): 1. `26PR00641` - contact needed
 
 ## Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
 - Relevance: low
@@ -6758,6 +7506,106 @@ Low relevance: 1108
 - line 119 (score=1, keywords=['solomon']): - The system has a useful rule saying Solomon-HACC interference should presently be treated as inference, not direct proof.
 - line 80 (score=1, keywords=['guardianship']): - `knowledge_graph/guardianship_case_graph.md:50`
 - line 23 (score=1, keywords=['solomon']): - The generated outputs therefore still present Benjamin permissions, obligations, and prohibitions as active even though those predicates remain unverified and partly conflict with the current Solomon-centered and source-record-centered posture.
+
+## Collateral Estoppel/evidence_notes/element_audit_layer_note_2026-04-07.md
+- Relevance: low
+- Total keyword score: 3
+- Hit count: 3
+- Dates found: []
+- Top snippets:
+- line 37 (score=1, keywords=['jane cortez']): 1. notice issued to Jane Cortez;
+- line 28 (score=1, keywords=['solomon']): 2. notice or equivalent appearance-based notice to Solomon; and
+- line 27 (score=1, keywords=['restraining order']): 1. a valid restraining order in effect;
+
+## Collateral Estoppel/knowledge_graph/generated/certified_intake_override_suggestions_2026-04-07.json
+- Relevance: low
+- Total keyword score: 3
+- Hit count: 3
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 22 (score=1, keywords=['26pr00641']): "file_name": "appointment__26PR00641__unknown__appointment_order_benjamin_barber.pdf"
+- line 17 (score=1, keywords=['26pr00641']): "file_name": "prior_order__26PR00641__unknown__prior_final_order.pdf"
+- line 12 (score=1, keywords=['26pr00641']): "file_name": "hearing__26PR00641__unknown__nonappearance_minutes.pdf"
+
+## Collateral Estoppel/knowledge_graph/generated/certified_intake_override_suggestions_2026-04-07.md
+- Relevance: low
+- Total keyword score: 3
+- Hit count: 3
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 15 (score=1, keywords=['26pr00641']): - row 4: not_marked_certified (appointment__26PR00641__unknown__appointment_order_benjamin_barber.pdf)
+- line 14 (score=1, keywords=['26pr00641']): - row 3: not_marked_certified (prior_order__26PR00641__unknown__prior_final_order.pdf)
+- line 13 (score=1, keywords=['26pr00641']): - row 2: not_marked_certified (hearing__26PR00641__unknown__nonappearance_minutes.pdf)
+
+## Collateral Estoppel/knowledge_graph/generated/certified_intake_tracker_validation_2026-04-07.md
+- Relevance: low
+- Total keyword score: 3
+- Hit count: 3
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 21 (score=1, keywords=['26pr00641']): - row 4 (appointment__26PR00641__unknown__appointment_order_benjamin_barber.pdf):
+- line 18 (score=1, keywords=['26pr00641']): - row 3 (prior_order__26PR00641__unknown__prior_final_order.pdf):
+- line 15 (score=1, keywords=['26pr00641']): - row 2 (hearing__26PR00641__unknown__nonappearance_minutes.pdf):
+
+## Collateral Estoppel/knowledge_graph/generated/certified_promotion_gap_memo_2026-04-07.md
+- Relevance: low
+- Total keyword score: 3
+- Hit count: 3
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 26 (score=1, keywords=['solomon']): - `f_client_solomon_barred_refile`
+- line 24 (score=1, keywords=['solomon']): - Needed: certified hearing register/minute order proving Solomon nonappearance.
+- line 23 (score=1, keywords=['solomon']): - `f_client_solomon_failed_appearance`
+
+## Collateral Estoppel/knowledge_graph/generated/deontic_readiness_dashboard_2026-04-07.md
+- Relevance: low
+- Total keyword score: 3
+- Hit count: 3
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 28 (score=1, keywords=['solomon']): - r7_solomon_forbidden_refile_precluded_issue
+- line 27 (score=1, keywords=['solomon']): - r5_solomon_obligated_appear_and_answer
+- line 20 (score=1, keywords=['solomon']): - r7_solomon_forbidden_refile_precluded_issue [unresolved]: Add certified prior final order/judgment, identity-of-issue comparison, and full/fair opportunity record.
+
+## Collateral Estoppel/knowledge_graph/generated/first_packet_activation_commands_2026-04-07.md
+- Relevance: low
+- Total keyword score: 3
+- Hit count: 3
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 22 (score=1, keywords=['26pr00641']): --case-number "26PR00641" \\
+- line 14 (score=1, keywords=['26pr00641']): --case-number "26PR00641"
+- line 5 (score=1, keywords=['26pr00641']): Case number: 26PR00641
+
+## Collateral Estoppel/knowledge_graph/generated/packet_activation_commands_issue_preclusion_row3_2026-04-07.md
+- Relevance: low
+- Total keyword score: 3
+- Hit count: 3
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 22 (score=1, keywords=['26pr00641']): --case-number "26PR00641" \\
+- line 14 (score=1, keywords=['26pr00641']): --case-number "26PR00641"
+- line 5 (score=1, keywords=['26pr00641']): Case number: 26PR00641
+
+## Collateral Estoppel/knowledge_graph/generated/packet_activation_commands_nonappearance_row2_2026-04-07.md
+- Relevance: low
+- Total keyword score: 3
+- Hit count: 3
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 22 (score=1, keywords=['26pr00641']): --case-number "26PR00641" \\
+- line 14 (score=1, keywords=['26pr00641']): --case-number "26PR00641"
+- line 5 (score=1, keywords=['26pr00641']): Case number: 26PR00641
+
+## Collateral Estoppel/knowledge_graph/generated/packet_activation_commands_prior_appointment_row4_2026-04-07.md
+- Relevance: low
+- Total keyword score: 3
+- Hit count: 3
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 22 (score=1, keywords=['26pr00641']): --case-number "26PR00641" \\
+- line 14 (score=1, keywords=['26pr00641']): --case-number "26PR00641"
+- line 5 (score=1, keywords=['26pr00641']): Case number: 26PR00641
 
 ## evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_00000000000030e001064e9b31d9-google.com_20260404_New-missed-call-from-Julio./message.json
 - Relevance: low
@@ -7207,6 +8055,15 @@ Low relevance: 1108
 - line 64 (score=1, keywords=['benjamin barber']): Benjamin Barber, Pro Se
 - line 5 (score=1, keywords=['26pr00641']): Case No. 26PR00641
 
+## Collateral Estoppel/drafts/final_filing_set/67_issue_preclusion_followup_day_command_sheet_2026-04-07.md
+- Relevance: low
+- Total keyword score: 2
+- Hit count: 2
+- Dates found: ['2026-04-07', '2026-04-10']
+- Top snippets:
+- line 30 (score=1, keywords=['26pr00641']): --case-number 26PR00641 \
+- line 22 (score=1, keywords=['26pr00641']): --case-number 26PR00641 \
+
 ## Collateral Estoppel/drafts/proposed_order_granting_leave_for_exhibit_r_subpoena.md
 - Relevance: low
 - Total keyword score: 2
@@ -7243,6 +8100,15 @@ Low relevance: 1108
 - line 36 (score=1, keywords=['benjamin barber']): - Benjamin Barber email
 - line 35 (score=1, keywords=['benjamin barber']): - Benjamin Barber phone number
 
+## Collateral Estoppel/evidence_notes/formal_case_state_dashboard_2026-04-07.md
+- Relevance: low
+- Total keyword score: 2
+- Hit count: 2
+- Dates found: []
+- Top snippets:
+- line 74 (score=1, keywords=['solomon']): - named Solomon-to-HACC notice chain not directly proved from preserved mail
+- line 68 (score=1, keywords=['solomon']): ### C. Direct Solomon-to-HACC interference attribution branch
+
 ## Collateral Estoppel/evidence_notes/hacc_delay_and_lease_removal_damages_memo.md
 - Relevance: low
 - Total keyword score: 2
@@ -7261,14 +8127,149 @@ Low relevance: 1108
 - line 23 (score=1, keywords=['solomon']): - `Solomon`
 - line 5 (score=1, keywords=['restraining order']): 1. Finish and review OCR for [sam barber restraining order.pdf](/home/barberb/HACC/evidence/history/sam%20barber%20restraining%20order.pdf).
 
+## Collateral Estoppel/evidence_notes/orcp17_manifest_completion_protocol_2026-04-07.md
+- Relevance: low
+- Total keyword score: 2
+- Hit count: 2
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 40 (score=1, keywords=['guardianship']): 1. a guardianship filing that may become legally unsupported if certified prior-proceeding materials and completed issue-preclusion mapping show impermissible relitigation
+- line 24 (score=1, keywords=['jane cortez']): 1. the petition-side statement that no guardian had previously been appointed for Jane Cortez
+
+## Collateral Estoppel/knowledge_graph/exhibit_r_workflow_subgraph.md
+- Relevance: low
+- Total keyword score: 2
+- Hit count: 2
+- Dates found: []
+- Top snippets:
+- line 65 (score=1, keywords=['solomon']): 2. a client-supported theory that the actual Solomon order was emailed to HACC; and
+- line 26 (score=1, keywords=['solomon']): - a separate client-supported candidate still exists that Benjamin emailed the actual Solomon protective order to HACC, but the preserved order-transmission email itself has not yet been located, so this does not currently change the service-state branch
+
+## Collateral Estoppel/knowledge_graph/fact_override_promotion_runbook_2026-04-07.md
+- Relevance: low
+- Total keyword score: 2
+- Hit count: 2
+- Dates found: []
+- Top snippets:
+- line 25 (score=1, keywords=['solomon']): - `f_client_solomon_barred_refile`
+- line 19 (score=1, keywords=['solomon']): - `f_client_solomon_failed_appearance`
+
+## Collateral Estoppel/knowledge_graph/generated/certification_sequence_recommendation_2026-04-07.md
+- Relevance: low
+- Total keyword score: 2
+- Hit count: 2
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 15 (score=1, keywords=['solomon']): - Promote: `f_collateral_estoppel_candidate`, `f_client_solomon_barred_refile`
+- line 10 (score=1, keywords=['solomon']): - Promote: `f_client_solomon_failed_appearance`
+
 ## Collateral Estoppel/knowledge_graph/generated/deontic_logic_gap_audit_2026-04-07.md
 - Relevance: low
 - Total keyword score: 2
 - Hit count: 2
 - Dates found: ['2026-04-07']
 - Top snippets:
-- line 26 (score=1, keywords=['solomon']): - Unresolved rule: `r7_solomon_forbidden_refile_precluded_issue`.
-- line 13 (score=1, keywords=['solomon']): - Closure evidence needed: source-grounded timeline assigning each alleged act to the correct actor (Solomon vs Benjamin) with citation-level proof.
+- line 19 (score=1, keywords=['solomon']): - Unresolved rule: `r7_solomon_forbidden_refile_precluded_issue`.
+- line 12 (score=1, keywords=['solomon']): - Closure evidence needed: source-grounded timeline assigning each alleged act to the correct actor (Solomon vs Benjamin).
+
+## Collateral Estoppel/knowledge_graph/generated/issue_preclusion_contact_completion_dashboard_2026-04-07.json
+- Relevance: low
+- Total keyword score: 2
+- Hit count: 2
+- Dates found: ['2026-04-07', '2026-04-21']
+- Top snippets:
+- line 16 (score=1, keywords=['25po11318']): "case_number": "25PO11318",
+- line 8 (score=1, keywords=['26pr00641']): "case_number": "26PR00641",
+
+## Collateral Estoppel/knowledge_graph/generated/issue_preclusion_contact_completion_dashboard_2026-04-07.md
+- Relevance: low
+- Total keyword score: 2
+- Hit count: 2
+- Dates found: ['2026-04-07', '2026-04-21']
+- Top snippets:
+- line 15 (score=1, keywords=['25po11318']): ## 25PO11318
+- line 8 (score=1, keywords=['26pr00641']): ## 26PR00641
+
+## Collateral Estoppel/knowledge_graph/generated/issue_preclusion_followup_calendar_2026-04-07.json
+- Relevance: low
+- Total keyword score: 2
+- Hit count: 2
+- Dates found: ['2026-04-07', '2026-04-10', '2026-04-14', '2026-04-21', '2026-04-23']
+- Top snippets:
+- line 19 (score=1, keywords=['25po11318']): "case_number": "25PO11318",
+- line 6 (score=1, keywords=['26pr00641']): "case_number": "26PR00641",
+
+## Collateral Estoppel/knowledge_graph/generated/issue_preclusion_followup_send_queue_2026-04-10.json
+- Relevance: low
+- Total keyword score: 2
+- Hit count: 2
+- Dates found: ['2026-04-07', '2026-04-10', '2026-04-21']
+- Top snippets:
+- line 15 (score=1, keywords=['25po11318']): "case_number": "25PO11318",
+- line 7 (score=1, keywords=['26pr00641']): "case_number": "26PR00641",
+
+## Collateral Estoppel/knowledge_graph/generated/issue_preclusion_request_next_actions_2026-04-07.json
+- Relevance: low
+- Total keyword score: 2
+- Hit count: 2
+- Dates found: ['2026-04-07', '2026-04-21']
+- Top snippets:
+- line 63 (score=1, keywords=['26pr00641']): "case_number": "26PR00641",
+- line 6 (score=1, keywords=['25po11318']): "case_number": "25PO11318",
+
+## Collateral Estoppel/knowledge_graph/generated/issue_preclusion_request_next_actions_2026-04-07.md
+- Relevance: low
+- Total keyword score: 2
+- Hit count: 2
+- Dates found: ['2026-04-07', '2026-04-21']
+- Top snippets:
+- line 47 (score=1, keywords=['26pr00641']): ## 26PR00641 [normal]
+- line 5 (score=1, keywords=['25po11318']): ## 25PO11318 [normal]
+
+## Collateral Estoppel/knowledge_graph/generated/issue_preclusion_request_status_dashboard_2026-04-07.json
+- Relevance: low
+- Total keyword score: 2
+- Hit count: 2
+- Dates found: ['2026-04-07', '2026-04-21']
+- Top snippets:
+- line 43 (score=1, keywords=['25po11318']): "case_number": "25PO11318",
+- line 19 (score=1, keywords=['26pr00641']): "case_number": "26PR00641",
+
+## Collateral Estoppel/knowledge_graph/generated/issue_preclusion_request_status_dashboard_2026-04-07.md
+- Relevance: low
+- Total keyword score: 2
+- Hit count: 2
+- Dates found: ['2026-04-07', '2026-04-21']
+- Top snippets:
+- line 30 (score=1, keywords=['25po11318']): ### 25PO11318
+- line 17 (score=1, keywords=['26pr00641']): ### 26PR00641
+
+## Collateral Estoppel/knowledge_graph/graph_navigation_dashboard.json
+- Relevance: low
+- Total keyword score: 2
+- Hit count: 2
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 10 (score=1, keywords=['guardianship']): "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/guardianship_case_graph.json"
+- line 9 (score=1, keywords=['guardianship']): "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/guardianship_case_graph.md",
+
+## Collateral Estoppel/knowledge_graph/graph_navigation_dashboard.md
+- Relevance: low
+- Total keyword score: 2
+- Hit count: 2
+- Dates found: []
+- Top snippets:
+- line 12 (score=1, keywords=['guardianship']): 2. [guardianship_case_graph.json](/home/barberb/HACC/Collateral%20Estoppel/knowledge_graph/guardianship_case_graph.json)
+- line 11 (score=1, keywords=['guardianship']): 1. [guardianship_case_graph.md](/home/barberb/HACC/Collateral%20Estoppel/knowledge_graph/guardianship_case_graph.md)
+
+## Collateral Estoppel/knowledge_graph/graph_system_index.json
+- Relevance: low
+- Total keyword score: 2
+- Hit count: 2
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 10 (score=1, keywords=['guardianship']): "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/guardianship_case_graph.md"
+- line 9 (score=1, keywords=['guardianship']): "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/guardianship_case_graph.json",
 
 ## evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_00000000000030e001064e9b31d9-google.com_20260404_New-missed-call-from-Julio./message.eml
 - Relevance: low
@@ -8479,6 +9480,38 @@ Low relevance: 1108
 - Top snippets:
 - line 3 (score=1, keywords=['26pr00641']): Case: 26PR00641
 
+## Collateral Estoppel/drafts/final_filing_set/49_first_packet_activation_runbook_2026-04-07.md
+- Relevance: low
+- Total keyword score: 1
+- Hit count: 1
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 9 (score=1, keywords=['solomon']): - Nonappearance packet for `f_client_solomon_failed_appearance`
+
+## Collateral Estoppel/drafts/final_filing_set/50_orcp17_improper_purpose_worksheet_2026-04-07.md
+- Relevance: low
+- Total keyword score: 1
+- Hit count: 1
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 14 (score=1, keywords=['solomon']): 4. [solomon_repository_evidence_memo.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_repository_evidence_memo.md)
+
+## Collateral Estoppel/drafts/final_filing_set/58_issue_preclusion_request_tracker_update_command_sheet_2026-04-07.md
+- Relevance: low
+- Total keyword score: 1
+- Hit count: 1
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 32 (score=1, keywords=['solomon']): print('r7_state',next((x['rule_id'] for x in s['active_rules'] if x['rule_id']=='r7_solomon_forbidden_refile_precluded_issue'),'not_active'))
+
+## Collateral Estoppel/drafts/final_filing_set/62_issue_preclusion_batch_update_and_followup_command_sheet_2026-04-07.md
+- Relevance: low
+- Total keyword score: 1
+- Hit count: 1
+- Dates found: ['2026-04-07', '2026-04-21']
+- Top snippets:
+- line 36 (score=1, keywords=['26pr00641']): --case-number 26PR00641 \
+
 ## Collateral Estoppel/evidence_notes/motion_record_completion_checklist.md
 - Relevance: low
 - Total keyword score: 1
@@ -8487,6 +9520,30 @@ Low relevance: 1108
 - Top snippets:
 - line 9 (score=1, keywords=['solomon']): - Why it matters: removes the last major metadata gap from the Solomon order record.
 
+## Collateral Estoppel/evidence_notes/orcp17_branch_promotion_checklist_2026-04-07.md
+- Relevance: low
+- Total keyword score: 1
+- Hit count: 1
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 25 (score=1, keywords=['jane cortez']): 2. identity and timing match to Jane Cortez and the March 31, 2026 petition
+
+## Collateral Estoppel/evidence_notes/orcp17_improper_purpose_intake_note_2026-04-07.md
+- Relevance: low
+- Total keyword score: 1
+- Hit count: 1
+- Dates found: ['2026-04-07']
+- Top snippets:
+- line 23 (score=1, keywords=['solomon']): 4. [solomon_repository_evidence_memo.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_repository_evidence_memo.md)
+
+## Collateral Estoppel/evidence_notes/orcp17_mapping_triage_note_2026-04-07.md
+- Relevance: low
+- Total keyword score: 1
+- Hit count: 1
+- Dates found: []
+- Top snippets:
+- line 11 (score=1, keywords=['jane cortez']): - the petition contains a specific factual statement that no guardian had previously been appointed for Jane Cortez;
+
 ## Collateral Estoppel/evidence_notes/subpoena_target_memo_hacc_lease_authority_record.md
 - Relevance: low
 - Total keyword score: 1
@@ -8494,6 +9551,14 @@ Low relevance: 1108
 - Dates found: ['2026-04-07']
 - Top snippets:
 - line 5 (score=1, keywords=['benjamin barber']): This memo records the current working conclusion that the repository does not contain the source-authority record needed to identify who caused Benjamin Barber's lease removal or what authority HACC believed it was acting on.
+
+## Collateral Estoppel/evidence_notes/temporal_layer_upgrade_note_2026-04-07.md
+- Relevance: low
+- Total keyword score: 1
+- Hit count: 1
+- Dates found: []
+- Top snippets:
+- line 32 (score=1, keywords=['solomon']): 1. Solomon's March 10, 2026 service/effectiveness statements occurred after the November 20, 2025 order became effective;
 
 ## evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_2037351125.569431674.1775196752610-email.apple.com_20260403_Your-iCloud-storage-is-full./message.eml
 - Relevance: low

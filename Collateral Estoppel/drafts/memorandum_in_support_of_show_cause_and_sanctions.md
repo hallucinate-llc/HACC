@@ -10,6 +10,8 @@ The current posture should now be understood in four layers:
 3. proof-state limits, including inference-only and source-record gaps; and
 4. filing requests that should track only what the first three layers can presently support.
 
+The current live branch-status summary is tracked in [formal_case_state_dashboard.md](/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/formal_case_state_dashboard.md). That generated dashboard should control over older handwritten status summaries if they diverge.
+
 ## I. Current filing posture
 
 The current record is strong enough to support a request that the Court require explanation and preserve the status quo against further collateral interference. The current record is not yet equally strong on every final contempt or sanctions predicate. This memorandum therefore supports two related but distinct requests:
@@ -58,6 +60,8 @@ The present record is strongest on notice, self-help posture, and downstream pre
 
 The principal sanctions authority currently grounded in the workspace is `ORCP 17 C(2)-(4)`. That supports a filing-focused sanctions theory if the Court later finds improper purpose, inadequate legal support, or factual assertions lacking evidentiary basis. It does not eliminate the need to prove those predicates in this case.
 
+The generated dashboard presently classifies the `ORCP 17` merits branch as proof-gated and the Exhibit R compelled-production branch as filing-ready for subpoena posture. That is consistent with the narrower present request: preserve the sanctions path, but actively pursue the HACC production path now.
+
 ## V. Prejudice and practical harm
 
 The prejudice issue is already substantial even before final money calculations. The present record supports:
@@ -91,3 +95,5 @@ The most important missing items remain:
 Those items are already tracked in the shared exhibit map at [motion_exhibit_index.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/motion_exhibit_index.md) as placeholder Exhibits P, Q, and R.
 
 As to `Exhibit R`, the current working conclusion is that the local repository contains only a partial substitute and that the actor-identification / authority-chain record will likely require subpoena, records request, or other compelled production from HACC or another custodian.
+
+The generated dashboard also presently classifies the issue-preclusion merits branch as proof-gated pending certified prior-proceeding materials and mapping completion. That generated classification matches the current limiting language in this memorandum.

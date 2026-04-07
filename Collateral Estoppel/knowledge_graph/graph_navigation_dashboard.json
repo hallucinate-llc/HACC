@@ -1,0 +1,50 @@
+{
+  "generatedAt": "2026-04-07",
+  "purpose": "Quick navigation dashboard for the graph and deontic system",
+  "branches": [
+    {
+      "branchId": "core_case_facts",
+      "label": "Core case facts",
+      "files": [
+        "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/guardianship_case_graph.md",
+        "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/guardianship_case_graph.json"
+      ],
+      "currentState": "main graph available"
+    },
+    {
+      "branchId": "orcp17_sanctions",
+      "label": "ORCP 17 sanctions",
+      "files": [
+        "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/orcp17_workflow_subgraph.md",
+        "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/orcp17_readiness_snapshot.md",
+        "/home/barberb/HACC/Collateral Estoppel/evidence_notes/orcp17_branch_promotion_checklist_2026-04-07.md"
+      ],
+      "currentState": "challenged filing identified; substantive predicates proof-gated; next priority unsupported factual assertion"
+    },
+    {
+      "branchId": "exhibit_r_production",
+      "label": "HACC Exhibit R production",
+      "files": [
+        "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/exhibit_r_workflow_subgraph.md",
+        "/home/barberb/HACC/Collateral Estoppel/drafts/exhibit_r_production_packet_index.md",
+        "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/29_active_service_log_2026-04-07.md"
+      ],
+      "currentState": "nonparty path active; HACC ready to serve; service not yet logged"
+    },
+    {
+      "branchId": "issue_preclusion",
+      "label": "Issue preclusion",
+      "files": [
+        "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/issue_preclusion_workflow_subgraph.md",
+        "/home/barberb/HACC/Collateral Estoppel/evidence_notes/certified_records/README.md",
+        "/home/barberb/HACC/Collateral Estoppel/evidence_notes/certified_records/issue_preclusion_mapping.json"
+      ],
+      "currentState": "doctrine grounded; record staging open; mapping proof-gated"
+    }
+  ],
+  "liveOutputs": [
+    "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/formal_case_state_dashboard.md",
+    "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/deontic_reasoning_report.md",
+    "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/motion_support_map.md"
+  ]
+}

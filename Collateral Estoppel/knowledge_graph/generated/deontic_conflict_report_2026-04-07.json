@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-04-07",
+  "modes": {
+    "strict": {
+      "active_rule_count": 31,
+      "hard_conflict_FP": [],
+      "hard_conflict_FO": [],
+      "tension_OP": [],
+      "conflict_counts": {
+        "hard_conflict_FP": 0,
+        "hard_conflict_FO": 0,
+        "tension_OP": 0
+      }
+    },
+    "inclusive": {
+      "active_rule_count": 32,
+      "hard_conflict_FP": [],
+      "hard_conflict_FO": [],
+      "tension_OP": [],
+      "conflict_counts": {
+        "hard_conflict_FP": 0,
+        "hard_conflict_FO": 0,
+        "tension_OP": 0
+      }
+    }
+  }
+}

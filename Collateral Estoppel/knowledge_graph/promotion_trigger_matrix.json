@@ -1,0 +1,83 @@
+{
+  "generatedAt": "2026-04-07",
+  "purpose": "Compact trigger-to-update matrix for branch promotions",
+  "rows": [
+    {
+      "branch": "orcp17_sanctions",
+      "triggerEvent": "staged contradictory prior order",
+      "editFirst": [
+        "/home/barberb/HACC/Collateral Estoppel/evidence_notes/certified_records/orcp17_filing_mapping.json",
+        "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/48_orcp17_unsupported_factual_assertion_worksheet_2026-04-07.md"
+      ],
+      "rerun": "formal_generators",
+      "expectedMovement": "orcp17 factual-assertion predicate may promote if contradiction is established"
+    },
+    {
+      "branch": "orcp17_sanctions",
+      "triggerEvent": "completed issue-preclusion record and mapping",
+      "editFirst": [
+        "/home/barberb/HACC/Collateral Estoppel/evidence_notes/certified_records/orcp17_filing_mapping.json",
+        "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/49_orcp17_unsupported_legal_position_worksheet_2026-04-07.md"
+      ],
+      "rerun": "formal_generators",
+      "expectedMovement": "orcp17 legal-position predicate may promote if bridge package is complete"
+    },
+    {
+      "branch": "orcp17_sanctions",
+      "triggerEvent": "stronger filing-specific motive record",
+      "editFirst": [
+        "/home/barberb/HACC/Collateral Estoppel/evidence_notes/certified_records/orcp17_filing_mapping.json",
+        "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/50_orcp17_improper_purpose_worksheet_2026-04-07.md"
+      ],
+      "rerun": "formal_generators",
+      "expectedMovement": "orcp17 improper-purpose predicate may promote if motive record is sufficiently filing-specific"
+    },
+    {
+      "branch": "exhibit_r_workflow",
+      "triggerEvent": "HACC packet served",
+      "editFirst": [
+        "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/28_active_service_log_2026-04-07.csv"
+      ],
+      "rerun": "formal_generators",
+      "expectedMovement": "Exhibit R service-stage rows should move beyond pre-service-only"
+    },
+    {
+      "branch": "exhibit_r_workflow",
+      "triggerEvent": "deficiency notice or motion to compel",
+      "editFirst": [
+        "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/28_active_service_log_2026-04-07.csv",
+        "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/32_deadline_update_log_2026-04-07.md"
+      ],
+      "rerun": "formal_generators",
+      "expectedMovement": "Exhibit R deficiency/compel stage should promote from missing"
+    },
+    {
+      "branch": "issue_preclusion",
+      "triggerEvent": "prior-order and docket/register staged",
+      "editFirst": [
+        "/home/barberb/HACC/Collateral Estoppel/evidence_notes/certified_records",
+        "/home/barberb/HACC/Collateral Estoppel/evidence_notes/certified_records/issue_preclusion_mapping.json"
+      ],
+      "rerun": "formal_generators",
+      "expectedMovement": "issue-preclusion record-presence gate should improve"
+    },
+    {
+      "branch": "issue_preclusion",
+      "triggerEvent": "hearing/appearance materials staged and mapping completed",
+      "editFirst": [
+        "/home/barberb/HACC/Collateral Estoppel/evidence_notes/certified_records/issue_preclusion_mapping.json"
+      ],
+      "rerun": "formal_generators",
+      "expectedMovement": "issue-preclusion mapping predicates may promote from proof-gated to verified"
+    },
+    {
+      "branch": "fact_overrides",
+      "triggerEvent": "certified proof confirms or disproves a fact",
+      "editFirst": [
+        "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/evidence_fact_overrides_2026-04-07.csv"
+      ],
+      "rerun": "formal_generators_plus_override_reports",
+      "expectedMovement": "deontic report should reflect applied overrides and any blocker changes"
+    }
+  ]
+}

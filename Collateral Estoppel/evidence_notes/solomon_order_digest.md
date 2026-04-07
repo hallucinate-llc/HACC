@@ -9,6 +9,7 @@ This digest pulls the strongest propositions currently supported by the staged O
 - The packet includes guardian ad litem appointment material and an order on motion to waive or modify notice.
 - The waiver motion is marked `GRANTED`.
 - The guardian-ad-litem motion materials in the packet are dated and entered on or around `2025-11-19`.
+- The OCR and visual verification support that `Benjamin Jay Barber` appears on the GAL appointment material as the named guardian ad litem / guardian petitioner for `Jane Kay Cortez`.
 
 ### Page 5
 
@@ -48,6 +49,7 @@ This digest pulls the strongest propositions currently supported by the staged O
 - A court issued an abuse-prevention restraining order naming Solomon Samuel Barber as respondent.
 - The order was not merely proposed; the packet contains grant language.
 - The order covered both personal-contact restrictions and property-control restrictions.
+- Within that same packet, `Benjamin Jay Barber` appears as the guardian ad litem / guardian petitioner for `Jane Kay Cortez`, which makes the later direction to follow petitioner's guardian or conservator materially more specific in this record.
 - The packet suggests a filing / entry sequence on `2025-11-19`, followed by the restraining order grant on `2025-11-20`.
 - Solomon's later March 10, 2026 statements about service and effectiveness can now be compared against order language that the order was already in effect and against scan text stating no further service was necessary because he appeared in person.
 

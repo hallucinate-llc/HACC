@@ -24,19 +24,22 @@ II. GROUNDS
 5. The record reflects material factual conflicts affecting case integrity, including petition-stage statements and competing claims regarding prior authority, service/notice, and order compliance.
 6. The matter also includes allegations of housing-process interference, some of which remain proof-gated pending certified and authenticated records.
 7. Appointment of a neutral GAL is necessary to separate proven facts from allegations and to support best-interest adjudication.
+8. The April 3-4, 2026 counsel email chain reflects service-labeled transmission to Alex Bluestone in this same Jane Cortez guardianship controversy and counsel's acknowledgment of representation in that guardianship matter while disputing acceptance of service, supporting same-matter notice context while preserving service-validity questions for Court determination.
 
-III. COMPUTED SUPPORT (STRICT MODE; APRIL 7, 2026)
+III. LEGAL AUTHORITY
 
-8. The strict-mode model reflects an active boundary that certain interference content should be treated as inference unless direct proof is produced (r6c_solomon_interference_not_proved_by_named_hacc_notice_gap).
-9. This supports immediate neutral review by a GAL while proof is developed through admissible exhibits.
+9. ORCP 27 authorizes appointment of a guardian ad litem for a party with qualifying incapacity/disability circumstances when supported by motion and evidentiary showing.
+10. In protective proceedings, ORS chapter 125 operates with Oregon civil procedure/evidence rules unless otherwise provided, and the Court may structure notice, objection, and hearing management to protect the protected person's interests.
+11. This Court has discretion to appoint a suitable GAL and to structure reporting and status deadlines to assist fact development and protect the interests of the protected person.
 
 IV. EXHIBIT REFERENCES (GLOBAL NUMBERING)
 
-10. This motion relies on Exhibits 4, 5, 6, and 8 from the global exhibit legend filed with this packet.
+12. This motion presently relies on Exhibits 4, 5, and 6 from the global exhibit legend filed with this packet.
+13. Movant requests leave to supplement with certified docket/order materials (including Exhibit 8) as soon as they are received.
 
 V. RESERVATION
 
-11. Movant reserves amendment rights after receipt of certified docket and complete order history.
+14. Movant reserves amendment rights after receipt of certified docket and complete order history.
 
 DATED: ____________, 2026
 

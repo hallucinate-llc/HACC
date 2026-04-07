@@ -1,0 +1,225 @@
+{
+  "metadata": {
+    "generatedAt": "2026-04-07",
+    "purpose": "ORCP 17 sanctions workflow subgraph tying manifest state, intake gates, and generated readiness outputs together",
+    "status": "workflow_graph_with_proof_gates"
+  },
+  "nodes": [
+    {
+      "id": "issue:orcp17_sanctions_merits",
+      "kind": "issue",
+      "name": "ORCP 17 sanctions merits branch",
+      "verificationStatus": "proof_gated"
+    },
+    {
+      "id": "doc:orcp17_manifest",
+      "kind": "document",
+      "name": "ORCP 17 filing mapping manifest",
+      "path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/certified_records/orcp17_filing_mapping.json",
+      "verificationStatus": "live_manifest"
+    },
+    {
+      "id": "doc:orcp17_manifest_guide",
+      "kind": "document",
+      "name": "ORCP 17 filing mapping guide",
+      "path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/certified_records/orcp17_filing_mapping_guide.md",
+      "verificationStatus": "workflow_support"
+    },
+    {
+      "id": "doc:orcp17_manifest_completion_protocol",
+      "kind": "document",
+      "name": "ORCP 17 manifest completion protocol",
+      "path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/orcp17_manifest_completion_protocol_2026-04-07.md",
+      "verificationStatus": "workflow_support"
+    },
+    {
+      "id": "doc:orcp17_branch_promotion_checklist",
+      "kind": "document",
+      "name": "ORCP 17 branch promotion checklist",
+      "path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/orcp17_branch_promotion_checklist_2026-04-07.md",
+      "verificationStatus": "workflow_support"
+    },
+    {
+      "id": "doc:orcp17_readiness_snapshot",
+      "kind": "document",
+      "name": "ORCP 17 readiness snapshot",
+      "path": "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/orcp17_readiness_snapshot.md",
+      "verificationStatus": "generated_live_status"
+    },
+    {
+      "id": "doc:orcp17_priority_protocol",
+      "kind": "document",
+      "name": "ORCP 17 mapping priority protocol",
+      "path": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/51_orcp17_mapping_priority_protocol_2026-04-07.md",
+      "verificationStatus": "workflow_support"
+    },
+    {
+      "id": "pred:challenged_filing_identified",
+      "kind": "predicate",
+      "name": "challenged_filing_identified",
+      "verificationStatus": "verified"
+    },
+    {
+      "id": "pred:unsupported_factual_assertion_mapped",
+      "kind": "predicate",
+      "name": "unsupported_factual_assertion_mapped",
+      "verificationStatus": "proof_gated"
+    },
+    {
+      "id": "pred:unsupported_legal_position_mapped",
+      "kind": "predicate",
+      "name": "unsupported_legal_position_mapped",
+      "verificationStatus": "proof_gated"
+    },
+    {
+      "id": "pred:improper_purpose_mapped",
+      "kind": "predicate",
+      "name": "improper_purpose_mapped",
+      "verificationStatus": "proof_gated"
+    },
+    {
+      "id": "doc:orcp17_factual_assertion_gate",
+      "kind": "document",
+      "name": "Prior-order contradiction intake gate",
+      "path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/orcp17_prior_order_contradiction_intake_note_2026-04-07.md",
+      "verificationStatus": "workflow_support"
+    },
+    {
+      "id": "doc:orcp17_legal_position_gate",
+      "kind": "document",
+      "name": "Issue-preclusion bridge intake gate",
+      "path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/orcp17_issue_preclusion_bridge_intake_note_2026-04-07.md",
+      "verificationStatus": "workflow_support"
+    },
+    {
+      "id": "doc:orcp17_improper_purpose_gate",
+      "kind": "document",
+      "name": "Improper-purpose intake gate",
+      "path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/orcp17_improper_purpose_intake_note_2026-04-07.md",
+      "verificationStatus": "workflow_support"
+    },
+    {
+      "id": "proof:prior_order_contradiction_package",
+      "kind": "proof_target",
+      "name": "Prior-order contradiction package for unsupported factual assertion",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "proof:issue_preclusion_bridge_package",
+      "kind": "proof_target",
+      "name": "Issue-preclusion bridge package for unsupported legal position",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "proof:filing_specific_motive_package",
+      "kind": "proof_target",
+      "name": "Filing-specific motive package for improper purpose",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "doc:issue_preclusion_manifest",
+      "kind": "document",
+      "name": "Issue-preclusion mapping manifest",
+      "path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/certified_records/issue_preclusion_mapping.json",
+      "verificationStatus": "live_manifest"
+    },
+    {
+      "id": "finding:orcp17_branch_workflow_fully_staged",
+      "kind": "finding",
+      "headline": "The ORCP 17 branch now has a live manifest, generated snapshot, branch checklist, and three proof-gated intake gates for factual assertion, legal position, and improper purpose.",
+      "status": "workflow_structured"
+    }
+  ],
+  "edges": [
+    {
+      "from": "issue:orcp17_sanctions_merits",
+      "to": "doc:orcp17_manifest",
+      "type": "tracked_by"
+    },
+    {
+      "from": "issue:orcp17_sanctions_merits",
+      "to": "doc:orcp17_readiness_snapshot",
+      "type": "monitored_by"
+    },
+    {
+      "from": "issue:orcp17_sanctions_merits",
+      "to": "doc:orcp17_branch_promotion_checklist",
+      "type": "controlled_by"
+    },
+    {
+      "from": "doc:orcp17_manifest",
+      "to": "pred:challenged_filing_identified",
+      "type": "contains_predicate_state_for"
+    },
+    {
+      "from": "doc:orcp17_manifest",
+      "to": "pred:unsupported_factual_assertion_mapped",
+      "type": "contains_predicate_state_for"
+    },
+    {
+      "from": "doc:orcp17_manifest",
+      "to": "pred:unsupported_legal_position_mapped",
+      "type": "contains_predicate_state_for"
+    },
+    {
+      "from": "doc:orcp17_manifest",
+      "to": "pred:improper_purpose_mapped",
+      "type": "contains_predicate_state_for"
+    },
+    {
+      "from": "pred:unsupported_factual_assertion_mapped",
+      "to": "doc:orcp17_factual_assertion_gate",
+      "type": "promotion_gated_by"
+    },
+    {
+      "from": "pred:unsupported_factual_assertion_mapped",
+      "to": "proof:prior_order_contradiction_package",
+      "type": "requires"
+    },
+    {
+      "from": "pred:unsupported_legal_position_mapped",
+      "to": "doc:orcp17_legal_position_gate",
+      "type": "promotion_gated_by"
+    },
+    {
+      "from": "pred:unsupported_legal_position_mapped",
+      "to": "proof:issue_preclusion_bridge_package",
+      "type": "requires"
+    },
+    {
+      "from": "proof:issue_preclusion_bridge_package",
+      "to": "doc:issue_preclusion_manifest",
+      "type": "partly_defined_by"
+    },
+    {
+      "from": "pred:improper_purpose_mapped",
+      "to": "doc:orcp17_improper_purpose_gate",
+      "type": "promotion_gated_by"
+    },
+    {
+      "from": "pred:improper_purpose_mapped",
+      "to": "proof:filing_specific_motive_package",
+      "type": "requires"
+    },
+    {
+      "from": "doc:orcp17_branch_promotion_checklist",
+      "to": "doc:orcp17_priority_protocol",
+      "type": "implements"
+    },
+    {
+      "from": "doc:orcp17_branch_promotion_checklist",
+      "to": "doc:orcp17_manifest_completion_protocol",
+      "type": "implements"
+    },
+    {
+      "from": "doc:orcp17_manifest_completion_protocol",
+      "to": "doc:orcp17_manifest_guide",
+      "type": "supplements"
+    },
+    {
+      "from": "finding:orcp17_branch_workflow_fully_staged",
+      "to": "issue:orcp17_sanctions_merits",
+      "type": "describes"
+    }
+  ]
+}

@@ -116,6 +116,16 @@ Use in this workspace:
 - supports the doctrinal frame for the collateral-estoppel branch
 - does not eliminate the proof gap concerning the actual prior order / judgment / proceeding record in this matter
 
+### 9. EPPDAPA restraining-order relief structure
+
+- `ORS 124.020`
+- Working proposition:
+  the EPPDAPA restraining-order framework allows the court to enter abuse-prevention relief terms in an order, including conduct restrictions and related protective directives reflected in the signed order record.
+
+Use in this workspace:
+- grounds the formal interpretation of the signed `11-20-2025` restraining-order terms in the scanned record.
+- supports modeling that the order can include respondent obligations tied to petitioner protection and property directives.
+
 ## Formal-logic translation notes
 
 The safest current formalization is:
@@ -125,6 +135,7 @@ The safest current formalization is:
 - `AuthorityAvailable(orcp_17_certification_and_improper_purpose)`
 - `AuthorityAvailable(orcp_46_discovery_motion_expenses_and_orders)`
 - `AuthorityAvailable(orcp_55_subpoena_obedience_warning)`
+- `AuthorityAvailable(ors_124_020_eppdapa_restraining_order_relief)`
 
 These authority objects should support procedural permissions and remedy pathways, not merits findings by themselves.
 

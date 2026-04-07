@@ -1,0 +1,871 @@
+{
+  "generated_at": "2026-04-07",
+  "issue_preclusion_mapping_present": true,
+  "mapping_status": {
+    "identical_issue_mapped": false,
+    "finality_mapped": false,
+    "party_privity_mapped": false,
+    "full_fair_opportunity_mapped": false
+  },
+  "source_mix": {
+    "repository_index_hits": 190,
+    "event_feed_hits": 22,
+    "path_scan_hits": 150
+  },
+  "candidate_counts": {
+    "identical_issue": 15,
+    "finality": 15,
+    "party_privity": 15,
+    "full_fair_opportunity": 15
+  },
+  "candidates_by_element": {
+    "identical_issue": [
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/missing_exhibit_search_status_2026-04-07.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/missing_exhibit_search_status_2026-04-07.md",
+        "element_scores": {
+          "identical_issue": 5,
+          "finality": 3,
+          "party_privity": 3,
+          "full_fair_opportunity": 0
+        },
+        "best_element": "identical_issue",
+        "best_score": 5,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/repeated_usurpation_pattern_memo.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/repeated_usurpation_pattern_memo.md",
+        "element_scores": {
+          "identical_issue": 5,
+          "finality": 3,
+          "party_privity": 4,
+          "full_fair_opportunity": 3
+        },
+        "best_element": "identical_issue",
+        "best_score": 5,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/petition_guardianship_packet_stage1.md",
+        "relative_path": "Collateral Estoppel/drafts/petition_guardianship_packet_stage1.md",
+        "element_scores": {
+          "identical_issue": 5,
+          "finality": 3,
+          "party_privity": 4,
+          "full_fair_opportunity": 2
+        },
+        "best_element": "identical_issue",
+        "best_score": 5,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/petition_guardianship_court_ready_shell.md",
+        "relative_path": "Collateral Estoppel/drafts/petition_guardianship_court_ready_shell.md",
+        "element_scores": {
+          "identical_issue": 5,
+          "finality": 5,
+          "party_privity": 3,
+          "full_fair_opportunity": 4
+        },
+        "best_element": "identical_issue",
+        "best_score": 5,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/petition_guardianship_working_memo.md",
+        "relative_path": "Collateral Estoppel/drafts/petition_guardianship_working_memo.md",
+        "element_scores": {
+          "identical_issue": 5,
+          "finality": 6,
+          "party_privity": 4,
+          "full_fair_opportunity": 2
+        },
+        "best_element": "finality",
+        "best_score": 6,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/34_strict_mode_evidentiary_addendum_bundle_2026-04-07.md",
+        "relative_path": "Collateral Estoppel/drafts/final_filing_set/34_strict_mode_evidentiary_addendum_bundle_2026-04-07.md",
+        "element_scores": {
+          "identical_issue": 5,
+          "finality": 3,
+          "party_privity": 2,
+          "full_fair_opportunity": 5
+        },
+        "best_element": "identical_issue",
+        "best_score": 5,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/guardianship_timeline.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/guardianship_timeline.md",
+        "element_scores": {
+          "identical_issue": 4,
+          "finality": 0,
+          "party_privity": 3,
+          "full_fair_opportunity": 1
+        },
+        "best_element": "identical_issue",
+        "best_score": 4,
+        "element_score": 4
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/source_register.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/source_register.md",
+        "element_scores": {
+          "identical_issue": 4,
+          "finality": 3,
+          "party_privity": 3,
+          "full_fair_opportunity": 2
+        },
+        "best_element": "identical_issue",
+        "best_score": 4,
+        "element_score": 4
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/orcp17_prior_order_contradiction_intake_note_2026-04-07.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/orcp17_prior_order_contradiction_intake_note_2026-04-07.md",
+        "element_scores": {
+          "identical_issue": 4,
+          "finality": 2,
+          "party_privity": 2,
+          "full_fair_opportunity": 0
+        },
+        "best_element": "identical_issue",
+        "best_score": 4,
+        "element_score": 4
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt",
+        "relative_path": "Collateral Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt",
+        "element_scores": {
+          "identical_issue": 4,
+          "finality": 0,
+          "party_privity": 2,
+          "full_fair_opportunity": 2
+        },
+        "best_element": "identical_issue",
+        "best_score": 4,
+        "element_score": 4
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/orcp17_manifest_completion_protocol_2026-04-07.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/orcp17_manifest_completion_protocol_2026-04-07.md",
+        "element_scores": {
+          "identical_issue": 4,
+          "finality": 2,
+          "party_privity": 1,
+          "full_fair_opportunity": 0
+        },
+        "best_element": "identical_issue",
+        "best_score": 4,
+        "element_score": 4
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/guardianship_exhibit_index.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/guardianship_exhibit_index.md",
+        "element_scores": {
+          "identical_issue": 4,
+          "finality": 2,
+          "party_privity": 3,
+          "full_fair_opportunity": 2
+        },
+        "best_element": "identical_issue",
+        "best_score": 4,
+        "element_score": 4
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/motion_exhibit_index.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/motion_exhibit_index.md",
+        "element_scores": {
+          "identical_issue": 4,
+          "finality": 5,
+          "party_privity": 1,
+          "full_fair_opportunity": 4
+        },
+        "best_element": "finality",
+        "best_score": 5,
+        "element_score": 4
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/orcp17_unsupported_legal_position_candidate_note_2026-04-07.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/orcp17_unsupported_legal_position_candidate_note_2026-04-07.md",
+        "element_scores": {
+          "identical_issue": 4,
+          "finality": 0,
+          "party_privity": 2,
+          "full_fair_opportunity": 0
+        },
+        "best_element": "identical_issue",
+        "best_score": 4,
+        "element_score": 4
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/certified_records/orcp17_filing_mapping.json",
+        "relative_path": "Collateral Estoppel/evidence_notes/certified_records/orcp17_filing_mapping.json",
+        "element_scores": {
+          "identical_issue": 4,
+          "finality": 1,
+          "party_privity": 2,
+          "full_fair_opportunity": 0
+        },
+        "best_element": "identical_issue",
+        "best_score": 4,
+        "element_score": 4
+      }
+    ],
+    "finality": [
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/sam_barber_restraining_order_ocr.txt",
+        "relative_path": "Collateral Estoppel/evidence_notes/sam_barber_restraining_order_ocr.txt",
+        "element_scores": {
+          "identical_issue": 2,
+          "finality": 6,
+          "party_privity": 2,
+          "full_fair_opportunity": 4
+        },
+        "best_element": "finality",
+        "best_score": 6,
+        "element_score": 6
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/solomon_order_completeness_checklist.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/solomon_order_completeness_checklist.md",
+        "element_scores": {
+          "identical_issue": 2,
+          "finality": 6,
+          "party_privity": 1,
+          "full_fair_opportunity": 5
+        },
+        "best_element": "finality",
+        "best_score": 6,
+        "element_score": 6
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md",
+        "relative_path": "Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md",
+        "element_scores": {
+          "identical_issue": 4,
+          "finality": 6,
+          "party_privity": 3,
+          "full_fair_opportunity": 5
+        },
+        "best_element": "finality",
+        "best_score": 6,
+        "element_score": 6
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/petition_guardianship_working_memo.md",
+        "relative_path": "Collateral Estoppel/drafts/petition_guardianship_working_memo.md",
+        "element_scores": {
+          "identical_issue": 5,
+          "finality": 6,
+          "party_privity": 4,
+          "full_fair_opportunity": 2
+        },
+        "best_element": "finality",
+        "best_score": 6,
+        "element_score": 6
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/00_exhibit_legend_global.md",
+        "relative_path": "Collateral Estoppel/drafts/final_filing_set/00_exhibit_legend_global.md",
+        "element_scores": {
+          "identical_issue": 2,
+          "finality": 6,
+          "party_privity": 1,
+          "full_fair_opportunity": 4
+        },
+        "best_element": "finality",
+        "best_score": 6,
+        "element_score": 6
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/43_certified_records_clerk_request_checklist_2026-04-07.md",
+        "relative_path": "Collateral Estoppel/drafts/final_filing_set/43_certified_records_clerk_request_checklist_2026-04-07.md",
+        "element_scores": {
+          "identical_issue": 4,
+          "finality": 6,
+          "party_privity": 2,
+          "full_fair_opportunity": 5
+        },
+        "best_element": "finality",
+        "best_score": 6,
+        "element_score": 6
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/auto_promotion_hooks_note_2026-04-07.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/auto_promotion_hooks_note_2026-04-07.md",
+        "element_scores": {
+          "identical_issue": 1,
+          "finality": 5,
+          "party_privity": 0,
+          "full_fair_opportunity": 3
+        },
+        "best_element": "finality",
+        "best_score": 5,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/solomon_restraining_order_review.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/solomon_restraining_order_review.md",
+        "element_scores": {
+          "identical_issue": 2,
+          "finality": 5,
+          "party_privity": 3,
+          "full_fair_opportunity": 4
+        },
+        "best_element": "finality",
+        "best_score": 5,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/motion_exhibit_index.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/motion_exhibit_index.md",
+        "element_scores": {
+          "identical_issue": 4,
+          "finality": 5,
+          "party_privity": 1,
+          "full_fair_opportunity": 4
+        },
+        "best_element": "finality",
+        "best_score": 5,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/memorandum_in_support_of_show_cause_and_sanctions.md",
+        "relative_path": "Collateral Estoppel/drafts/memorandum_in_support_of_show_cause_and_sanctions.md",
+        "element_scores": {
+          "identical_issue": 3,
+          "finality": 5,
+          "party_privity": 4,
+          "full_fair_opportunity": 5
+        },
+        "best_element": "finality",
+        "best_score": 5,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/petition_guardianship_court_ready_shell.md",
+        "relative_path": "Collateral Estoppel/drafts/petition_guardianship_court_ready_shell.md",
+        "element_scores": {
+          "identical_issue": 5,
+          "finality": 5,
+          "party_privity": 3,
+          "full_fair_opportunity": 4
+        },
+        "best_element": "identical_issue",
+        "best_score": 5,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/08_proposed_order_dismiss_collateral_estoppel_final.md",
+        "relative_path": "Collateral Estoppel/drafts/final_filing_set/08_proposed_order_dismiss_collateral_estoppel_final.md",
+        "element_scores": {
+          "identical_issue": 1,
+          "finality": 5,
+          "party_privity": 0,
+          "full_fair_opportunity": 2
+        },
+        "best_element": "finality",
+        "best_score": 5,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/42_issue_preclusion_certified_packet_checklist_r7_2026-04-07.md",
+        "relative_path": "Collateral Estoppel/drafts/final_filing_set/42_issue_preclusion_certified_packet_checklist_r7_2026-04-07.md",
+        "element_scores": {
+          "identical_issue": 4,
+          "finality": 5,
+          "party_privity": 3,
+          "full_fair_opportunity": 2
+        },
+        "best_element": "finality",
+        "best_score": 5,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/formal_case_state_dashboard_2026-04-07.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/formal_case_state_dashboard_2026-04-07.md",
+        "element_scores": {
+          "identical_issue": 3,
+          "finality": 4,
+          "party_privity": 2,
+          "full_fair_opportunity": 5
+        },
+        "best_element": "full_fair_opportunity",
+        "best_score": 5,
+        "element_score": 4
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/motion_exhibit_crosswalk.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/motion_exhibit_crosswalk.md",
+        "element_scores": {
+          "identical_issue": 2,
+          "finality": 4,
+          "party_privity": 1,
+          "full_fair_opportunity": 4
+        },
+        "best_element": "finality",
+        "best_score": 4,
+        "element_score": 4
+      }
+    ],
+    "party_privity": [
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/solomon_repository_evidence_index.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/solomon_repository_evidence_index.md",
+        "element_scores": {
+          "identical_issue": 2,
+          "finality": 2,
+          "party_privity": 5,
+          "full_fair_opportunity": 1
+        },
+        "best_element": "party_privity",
+        "best_score": 5,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/motion_for_leave_or_to_compel_exhibit_r_production.md",
+        "relative_path": "Collateral Estoppel/drafts/motion_for_leave_or_to_compel_exhibit_r_production.md",
+        "element_scores": {
+          "identical_issue": 3,
+          "finality": 2,
+          "party_privity": 5,
+          "full_fair_opportunity": 0
+        },
+        "best_element": "party_privity",
+        "best_score": 5,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/11B_attachment_a2_definitions_and_instructions_final.md",
+        "relative_path": "Collateral Estoppel/drafts/final_filing_set/11B_attachment_a2_definitions_and_instructions_final.md",
+        "element_scores": {
+          "identical_issue": 3,
+          "finality": 2,
+          "party_privity": 5,
+          "full_fair_opportunity": 2
+        },
+        "best_element": "party_privity",
+        "best_score": 5,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/protective_order_and_hacc_notice_timeline.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/protective_order_and_hacc_notice_timeline.md",
+        "element_scores": {
+          "identical_issue": 2,
+          "finality": 2,
+          "party_privity": 4,
+          "full_fair_opportunity": 4
+        },
+        "best_element": "party_privity",
+        "best_score": 4,
+        "element_score": 4
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/repeated_usurpation_pattern_memo.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/repeated_usurpation_pattern_memo.md",
+        "element_scores": {
+          "identical_issue": 5,
+          "finality": 3,
+          "party_privity": 4,
+          "full_fair_opportunity": 3
+        },
+        "best_element": "identical_issue",
+        "best_score": 5,
+        "element_score": 4
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/solomon_repository_evidence_index.json",
+        "relative_path": "Collateral Estoppel/evidence_notes/solomon_repository_evidence_index.json",
+        "element_scores": {
+          "identical_issue": 2,
+          "finality": 2,
+          "party_privity": 4,
+          "full_fair_opportunity": 1
+        },
+        "best_element": "party_privity",
+        "best_score": 4,
+        "element_score": 4
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/element_audit_layer_note_2026-04-07.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/element_audit_layer_note_2026-04-07.md",
+        "element_scores": {
+          "identical_issue": 1,
+          "finality": 3,
+          "party_privity": 4,
+          "full_fair_opportunity": 5
+        },
+        "best_element": "full_fair_opportunity",
+        "best_score": 5,
+        "element_score": 4
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/petition_guardianship_packet_stage1.md",
+        "relative_path": "Collateral Estoppel/drafts/petition_guardianship_packet_stage1.md",
+        "element_scores": {
+          "identical_issue": 5,
+          "finality": 3,
+          "party_privity": 4,
+          "full_fair_opportunity": 2
+        },
+        "best_element": "identical_issue",
+        "best_score": 5,
+        "element_score": 4
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/memorandum_in_support_of_show_cause_and_sanctions.md",
+        "relative_path": "Collateral Estoppel/drafts/memorandum_in_support_of_show_cause_and_sanctions.md",
+        "element_scores": {
+          "identical_issue": 3,
+          "finality": 5,
+          "party_privity": 4,
+          "full_fair_opportunity": 5
+        },
+        "best_element": "finality",
+        "best_score": 5,
+        "element_score": 4
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/hacc_records_request_outline_re_exhibit_r.md",
+        "relative_path": "Collateral Estoppel/drafts/hacc_records_request_outline_re_exhibit_r.md",
+        "element_scores": {
+          "identical_issue": 2,
+          "finality": 0,
+          "party_privity": 4,
+          "full_fair_opportunity": 0
+        },
+        "best_element": "party_privity",
+        "best_score": 4,
+        "element_score": 4
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/hacc_subpoena_target_list_re_exhibit_r.md",
+        "relative_path": "Collateral Estoppel/drafts/hacc_subpoena_target_list_re_exhibit_r.md",
+        "element_scores": {
+          "identical_issue": 2,
+          "finality": 1,
+          "party_privity": 4,
+          "full_fair_opportunity": 0
+        },
+        "best_element": "party_privity",
+        "best_score": 4,
+        "element_score": 4
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/petition_guardianship_working_memo.md",
+        "relative_path": "Collateral Estoppel/drafts/petition_guardianship_working_memo.md",
+        "element_scores": {
+          "identical_issue": 5,
+          "finality": 6,
+          "party_privity": 4,
+          "full_fair_opportunity": 2
+        },
+        "best_element": "finality",
+        "best_score": 6,
+        "element_score": 4
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/guardianship_timeline.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/guardianship_timeline.md",
+        "element_scores": {
+          "identical_issue": 4,
+          "finality": 0,
+          "party_privity": 3,
+          "full_fair_opportunity": 1
+        },
+        "best_element": "identical_issue",
+        "best_score": 4,
+        "element_score": 3
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/source_register.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/source_register.md",
+        "element_scores": {
+          "identical_issue": 4,
+          "finality": 3,
+          "party_privity": 3,
+          "full_fair_opportunity": 2
+        },
+        "best_element": "identical_issue",
+        "best_score": 4,
+        "element_score": 3
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/skee_declaration_and_lease_removal_inference_memo.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/skee_declaration_and_lease_removal_inference_memo.md",
+        "element_scores": {
+          "identical_issue": 2,
+          "finality": 2,
+          "party_privity": 3,
+          "full_fair_opportunity": 3
+        },
+        "best_element": "party_privity",
+        "best_score": 3,
+        "element_score": 3
+      }
+    ],
+    "full_fair_opportunity": [
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/06_oregon_authority_table_final.md",
+        "relative_path": "Collateral Estoppel/drafts/final_filing_set/06_oregon_authority_table_final.md",
+        "element_scores": {
+          "identical_issue": 3,
+          "finality": 4,
+          "party_privity": 2,
+          "full_fair_opportunity": 6
+        },
+        "best_element": "full_fair_opportunity",
+        "best_score": 6,
+        "element_score": 6
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/formal_case_state_dashboard_2026-04-07.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/formal_case_state_dashboard_2026-04-07.md",
+        "element_scores": {
+          "identical_issue": 3,
+          "finality": 4,
+          "party_privity": 2,
+          "full_fair_opportunity": 5
+        },
+        "best_element": "full_fair_opportunity",
+        "best_score": 5,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/element_audit_layer_note_2026-04-07.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/element_audit_layer_note_2026-04-07.md",
+        "element_scores": {
+          "identical_issue": 1,
+          "finality": 3,
+          "party_privity": 4,
+          "full_fair_opportunity": 5
+        },
+        "best_element": "full_fair_opportunity",
+        "best_score": 5,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/solomon_order_completeness_checklist.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/solomon_order_completeness_checklist.md",
+        "element_scores": {
+          "identical_issue": 2,
+          "finality": 6,
+          "party_privity": 1,
+          "full_fair_opportunity": 5
+        },
+        "best_element": "finality",
+        "best_score": 6,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/memorandum_in_support_of_show_cause_and_sanctions.md",
+        "relative_path": "Collateral Estoppel/drafts/memorandum_in_support_of_show_cause_and_sanctions.md",
+        "element_scores": {
+          "identical_issue": 3,
+          "finality": 5,
+          "party_privity": 4,
+          "full_fair_opportunity": 5
+        },
+        "best_element": "finality",
+        "best_score": 5,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_contempt_and_collateral_interference.md",
+        "relative_path": "Collateral Estoppel/drafts/motion_to_show_cause_re_contempt_and_collateral_interference.md",
+        "element_scores": {
+          "identical_issue": 3,
+          "finality": 3,
+          "party_privity": 3,
+          "full_fair_opportunity": 5
+        },
+        "best_element": "full_fair_opportunity",
+        "best_score": 5,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md",
+        "relative_path": "Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md",
+        "element_scores": {
+          "identical_issue": 4,
+          "finality": 6,
+          "party_privity": 3,
+          "full_fair_opportunity": 5
+        },
+        "best_element": "finality",
+        "best_score": 6,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md",
+        "relative_path": "Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md",
+        "element_scores": {
+          "identical_issue": 3,
+          "finality": 2,
+          "party_privity": 1,
+          "full_fair_opportunity": 5
+        },
+        "best_element": "full_fair_opportunity",
+        "best_score": 5,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/34_strict_mode_evidentiary_addendum_bundle_2026-04-07.md",
+        "relative_path": "Collateral Estoppel/drafts/final_filing_set/34_strict_mode_evidentiary_addendum_bundle_2026-04-07.md",
+        "element_scores": {
+          "identical_issue": 5,
+          "finality": 3,
+          "party_privity": 2,
+          "full_fair_opportunity": 5
+        },
+        "best_element": "identical_issue",
+        "best_score": 5,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/43_certified_records_clerk_request_checklist_2026-04-07.md",
+        "relative_path": "Collateral Estoppel/drafts/final_filing_set/43_certified_records_clerk_request_checklist_2026-04-07.md",
+        "element_scores": {
+          "identical_issue": 4,
+          "finality": 6,
+          "party_privity": 2,
+          "full_fair_opportunity": 5
+        },
+        "best_element": "finality",
+        "best_score": 6,
+        "element_score": 5
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/motion_exhibit_crosswalk.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/motion_exhibit_crosswalk.md",
+        "element_scores": {
+          "identical_issue": 2,
+          "finality": 4,
+          "party_privity": 1,
+          "full_fair_opportunity": 4
+        },
+        "best_element": "finality",
+        "best_score": 4,
+        "element_score": 4
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/protective_order_and_hacc_notice_timeline.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/protective_order_and_hacc_notice_timeline.md",
+        "element_scores": {
+          "identical_issue": 2,
+          "finality": 2,
+          "party_privity": 4,
+          "full_fair_opportunity": 4
+        },
+        "best_element": "party_privity",
+        "best_score": 4,
+        "element_score": 4
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/next_targets_for_record_completion.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/next_targets_for_record_completion.md",
+        "element_scores": {
+          "identical_issue": 1,
+          "finality": 4,
+          "party_privity": 1,
+          "full_fair_opportunity": 4
+        },
+        "best_element": "finality",
+        "best_score": 4,
+        "element_score": 4
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/solomon_order_digest.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/solomon_order_digest.md",
+        "element_scores": {
+          "identical_issue": 2,
+          "finality": 4,
+          "party_privity": 1,
+          "full_fair_opportunity": 4
+        },
+        "best_element": "finality",
+        "best_score": 4,
+        "element_score": 4
+      },
+      {
+        "source_type": "path_scan_hit",
+        "absolute_path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/allegation_proof_matrix.md",
+        "relative_path": "Collateral Estoppel/evidence_notes/allegation_proof_matrix.md",
+        "element_scores": {
+          "identical_issue": 3,
+          "finality": 2,
+          "party_privity": 3,
+          "full_fair_opportunity": 4
+        },
+        "best_element": "full_fair_opportunity",
+        "best_score": 4,
+        "element_score": 4
+      }
+    ]
+  }
+}

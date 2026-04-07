@@ -44,9 +44,24 @@ This index is the shared exhibit map for the current Solomon contempt and sancti
 - `Exhibit O`: [solomon_repository_evidence_memo.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_repository_evidence_memo.md)
   - Purpose: consolidated Solomon evidence memo linking the order record, March 10 statements, and later HACC-facing notices.
 
+## Additional housing-interference exhibits
+
+- `Exhibit S`: [solomon_motion_for_guardianship_ocr.txt](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt)
+  - Purpose: OCR of Solomon's guardianship petition containing housing-specific allegations about Jane Cortez, Benjamin Barber, occupancy, OHA documentation, voucher status, and the household address.
+- `Exhibit T`: [solomon_housing_interference_show_cause_memo_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_housing_interference_show_cause_memo_2026-04-07.md)
+  - Purpose: source-separated memo for the second show-cause branch focused on post-order housing interference and possible evasion of the original restraining-order framework.
+- `Exhibit U`: [jc_household_chain_household_composition_findings_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/jc_household_chain_household_composition_findings_2026-04-07.md)
+  - Purpose: raw-source memo preserving the December 2, 2025 early HACC notice point and the January 12, 2026 `JC Household` progression from Julio-as-household-member, to Julio-and-Jane-as-only-approved-occupants, to Benjamin-out-effective-January-1 based on `internal review` and `court documentation currently on file`.
+- `Exhibit V`: [message.eml](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0014-Re-Allegations-of-Fraud---JC-Household-CAMTdTS_8pxVnRAMoaQ0n2oi1yBNnLNAiFSu4MFsTet-jJWJogQ-mail.gmail.com/message.eml)
+  - Purpose: preserved January 12, 2026 HACC email containing the `Currently, Julio and Jane are the only household members and approved occupants of the unit` statement and the later `effective January 1, 2026` / `internal review` / `court documentation currently on file` statement.
+- `Exhibit W`: [message.eml](/home/barberb/HACC/workspace/manual-imap-download-2026-03-31/20260202-164227_Re-Allegations-of-Fraud---JC-Household/message.eml)
+  - Purpose: preserved January 12, 2026 HACC email containing the earlier statement that `Julio is a member of the Household and will need to complete paperwork as well` unless court documentation were submitted.
+- `Exhibit X`: [Julio Eviction notice.jpeg](/home/barberb/HACC/evidence/paper%20documents/Julio%20Eviction%20notice.jpeg)
+  - Purpose: February 13, 2026 HACC 30-day termination notice to Julio Regal Florez-Cortez, supporting the later shift in HACC's treatment of Julio's tenancy.
+
 ## Supplemental authority exhibits
 
-- `Authority Exhibit 1`: [06_oregon_authority_table_placeholders.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/06_oregon_authority_table_placeholders.md)
+- `Authority Exhibit 1`: [06_oregon_authority_table_final.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/06_oregon_authority_table_final.md)
   - Purpose: working Oregon authority table covering issue preclusion, contempt, sanctions, probate procedure, service, and subpoena enforcement.
 - `Authority Exhibit 2`: [oregon_authority_grounding_memo_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/research/oregon_authority_grounding_memo_2026-04-07.md)
   - Purpose: source memo explaining how the current deontic and filing layers are grounded in Oregon statutes, rules, and appellate authority.

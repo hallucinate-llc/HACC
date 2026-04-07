@@ -1,0 +1,168 @@
+{
+  "generated_at": "2026-04-07",
+  "summary": {
+    "strict_counts": {
+      "active": 42,
+      "unresolved": 6,
+      "inactive": 4
+    },
+    "inclusive_counts": {
+      "active": 43,
+      "unresolved": 5,
+      "inactive": 4
+    },
+    "rules_total": 52,
+    "authority_available_facts": 19,
+    "authority_refs_in_rules": 22
+  },
+  "authority_linkage": {
+    "missing_authority_fact_links": [
+      {
+        "rule_id": "r23c_case_permitted_rely_on_court_notice_modification_order_if_documented",
+        "authority_ref": "auth:orcp_27"
+      },
+      {
+        "rule_id": "r23c_case_permitted_rely_on_court_notice_modification_order_if_documented",
+        "authority_ref": "auth:utcr_5_100"
+      }
+    ],
+    "rules_without_authority_refs": [],
+    "non_hypothesis_rules_without_authority_refs": [],
+    "unused_authority_facts": []
+  },
+  "strict_unresolved_analysis": [
+    {
+      "rule_id": "r1_guardian_permission_if_prior_appointment",
+      "track": "hypothesis",
+      "non_verified_antecedents": [
+        {
+          "fact_id": "f_client_prior_appointment",
+          "status": "alleged",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "rule_id": "r2_noninterference_prohibition_for_benjamin",
+      "track": "hypothesis",
+      "non_verified_antecedents": [
+        {
+          "fact_id": "f_client_prior_appointment",
+          "status": "alleged",
+          "value": "true"
+        },
+        {
+          "fact_id": "f_client_benjamin_housing_interference",
+          "status": "alleged",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "rule_id": "r3_benjamin_obligation_comply_or_seek_relief",
+      "track": "hypothesis",
+      "non_verified_antecedents": [
+        {
+          "fact_id": "f_client_prior_appointment",
+          "status": "alleged",
+          "value": "true"
+        },
+        {
+          "fact_id": "f_client_benjamin_order_disregard",
+          "status": "alleged",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "rule_id": "r5_solomon_obligated_appear_and_answer",
+      "track": "hypothesis",
+      "non_verified_antecedents": [
+        {
+          "fact_id": "f_client_solomon_failed_appearance",
+          "status": "alleged",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "rule_id": "r7_solomon_forbidden_refile_precluded_issue",
+      "track": "hypothesis",
+      "non_verified_antecedents": [
+        {
+          "fact_id": "f_collateral_estoppel_candidate",
+          "status": "theory",
+          "value": "true"
+        },
+        {
+          "fact_id": "f_client_solomon_barred_refile",
+          "status": "alleged",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "rule_id": "r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+      "track": "filing",
+      "non_verified_antecedents": [
+        {
+          "fact_id": "f_client_solomon_failed_appearance",
+          "status": "alleged",
+          "value": "true"
+        }
+      ]
+    }
+  ],
+  "strict_inactive_analysis": [
+    {
+      "rule_id": "r17_responding_custodian_obligated_execute_or_query_protocol_upon_service",
+      "track": "workflow",
+      "false_antecedents": [
+        {
+          "fact_id": "f_subpoena_service_completed_any",
+          "status": "verified",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "rule_id": "r18_benjamin_permitted_issue_deficiency_notice_after_incomplete_subpoena_response",
+      "track": "workflow",
+      "false_antecedents": [
+        {
+          "fact_id": "f_subpoena_response_incomplete_any",
+          "status": "verified",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "rule_id": "r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage",
+      "track": "workflow",
+      "false_antecedents": [
+        {
+          "fact_id": "f_deficiency_notice_sent_any",
+          "status": "verified",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "rule_id": "r22_case_obligated_finalize_authority_citations_before_filing",
+      "track": "filing",
+      "false_antecedents": [
+        {
+          "fact_id": "f_authority_table_placeholders_unresolved",
+          "status": "verified",
+          "value": "false"
+        }
+      ]
+    }
+  ],
+  "strict_active_client_assertion_or_nonverified_dependencies": [],
+  "recommended_closure_actions": [
+    "Convert strict unresolved allegation/theory antecedents to verified with certified docket/order/service records.",
+    "Activate workflow rules r17-r19 by entering confirmed service/deficiency events in the active service log.",
+    "Keep strict-active set free of client_assertion/theory antecedents before filing-grade reliance."
+  ]
+}

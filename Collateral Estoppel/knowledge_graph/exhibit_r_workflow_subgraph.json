@@ -1,0 +1,386 @@
+{
+  "metadata": {
+    "generatedAt": "2026-04-07",
+    "purpose": "Exhibit R nonparty production workflow subgraph for HACC authority-chain records",
+    "status": "workflow_graph_with_service_and_compel_states"
+  },
+  "nodes": [
+    {
+      "id": "issue:exhibit_r_production",
+      "kind": "issue",
+      "name": "Exhibit R production workflow",
+      "verificationStatus": "filing_ready_for_subpoena"
+    },
+    {
+      "id": "org:hacc",
+      "kind": "party",
+      "name": "Housing Authority of Clackamas County",
+      "role": "nonparty_custodian",
+      "verificationStatus": "repo_context_supported"
+    },
+    {
+      "id": "proof:lease_change_request_source_record",
+      "kind": "proof_target",
+      "name": "Record identifying who requested or caused Benjamin's lease removal",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "proof:claimed_authority_or_poa_record",
+      "kind": "proof_target",
+      "name": "Any authority record HACC relied on for lease removal",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "doc:exhibit_r_packet_index",
+      "kind": "document",
+      "name": "Exhibit R production packet index",
+      "path": "/home/barberb/HACC/Collateral Estoppel/drafts/exhibit_r_production_packet_index.md",
+      "verificationStatus": "workflow_support"
+    },
+    {
+      "id": "doc:exhibit_r_path_note",
+      "kind": "document",
+      "name": "Exhibit R production path note",
+      "path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/exhibit_r_production_path_note.md",
+      "verificationStatus": "workflow_support"
+    },
+    {
+      "id": "doc:exhibit_r_subpoena_schedule",
+      "kind": "document",
+      "name": "HACC Exhibit R subpoena schedule",
+      "path": "/home/barberb/HACC/Collateral Estoppel/drafts/subpoena_schedule_hacc_re_exhibit_r.md",
+      "verificationStatus": "prefilled_nonparty_packet"
+    },
+    {
+      "id": "doc:exhibit_r_motion_for_leave",
+      "kind": "document",
+      "name": "Motion for leave for Exhibit R production",
+      "path": "/home/barberb/HACC/Collateral Estoppel/drafts/motion_for_leave_or_to_compel_exhibit_r_production.md",
+      "verificationStatus": "prefilled_nonparty_packet"
+    },
+    {
+      "id": "doc:exhibit_r_supporting_declaration",
+      "kind": "document",
+      "name": "Declaration in support of Exhibit R production",
+      "path": "/home/barberb/HACC/Collateral Estoppel/drafts/declaration_of_benjamin_barber_in_support_of_exhibit_r_production.md",
+      "verificationStatus": "prefilled_nonparty_packet"
+    },
+    {
+      "id": "doc:exhibit_r_proposed_order",
+      "kind": "document",
+      "name": "Proposed order granting leave for Exhibit R subpoena",
+      "path": "/home/barberb/HACC/Collateral Estoppel/drafts/proposed_order_granting_leave_for_exhibit_r_subpoena.md",
+      "verificationStatus": "prefilled_nonparty_packet"
+    },
+    {
+      "id": "doc:exhibit_r_certificate_of_service",
+      "kind": "document",
+      "name": "Certificate of service for Exhibit R packet",
+      "path": "/home/barberb/HACC/Collateral Estoppel/drafts/certificate_of_service_exhibit_r_packet.md",
+      "verificationStatus": "prefilled_nonparty_packet"
+    },
+    {
+      "id": "doc:exhibit_r_readiness_status",
+      "kind": "document",
+      "name": "Exhibit R readiness status note",
+      "path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/exhibit_r_readiness_status.md",
+      "verificationStatus": "workflow_support"
+    },
+    {
+      "id": "doc:active_service_log_csv",
+      "kind": "document",
+      "name": "Active service log CSV",
+      "path": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/28_active_service_log_2026-04-07.csv",
+      "verificationStatus": "live_workflow_log"
+    },
+    {
+      "id": "doc:active_service_log_md",
+      "kind": "document",
+      "name": "Active service log summary",
+      "path": "/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/29_active_service_log_2026-04-07.md",
+      "verificationStatus": "live_workflow_log"
+    },
+    {
+      "id": "state:hacc_packet_ready_to_serve",
+      "kind": "workflow_state",
+      "name": "HACC packet ready to serve",
+      "verificationStatus": "verified_from_service_log"
+    },
+    {
+      "id": "state:hacc_packet_served",
+      "kind": "workflow_state",
+      "name": "HACC packet served",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "state:hacc_awaiting_production",
+      "kind": "workflow_state",
+      "name": "HACC awaiting production",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "state:hacc_deficiency_notice_stage",
+      "kind": "workflow_state",
+      "name": "HACC deficiency notice stage",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "state:hacc_motion_to_compel_stage",
+      "kind": "workflow_state",
+      "name": "HACC motion-to-compel stage",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "doc:public_records_parallel_path",
+      "kind": "document",
+      "name": "Public records request for HACC Exhibit R",
+      "path": "/home/barberb/HACC/Collateral Estoppel/drafts/public_records_request_hacc_exhibit_r.md",
+      "verificationStatus": "parallel_optional_path"
+    },
+    {
+      "id": "evt:hacc_written_notice_of_restraining_order_concerns",
+      "kind": "event",
+      "date": "2026-03-17",
+      "summary": "Benjamin directly raised restraining-order-related concerns to HACC in preserved March 17, 2026 emails.",
+      "verificationStatus": "preserved_email_supported"
+    },
+    {
+      "id": "evt:hacc_feb2_statement_restraining_order_documents_would_be_sent",
+      "kind": "event",
+      "date": "2026-02-02",
+      "summary": "Benjamin told HACC in a preserved February 2, 2026 email that he was going to send the restraining-order documents and porting documents to HACC's office by priority mail.",
+      "verificationStatus": "preserved_email_supported"
+    },
+    {
+      "id": "evt:mailbox_photo_of_priority_mail_to_hacc",
+      "kind": "event",
+      "date": "2026-02-02",
+      "summary": "A preserved HEIC image shows a USPS Priority Mail envelope at a mailbox with a visible label consistent with HACC's Oregon City mailing address.",
+      "verificationStatus": "image_supported_contents_partially_visible"
+    },
+    {
+      "id": "evt:usps_tracking_delivery_to_oregon_city_po_box",
+      "kind": "event",
+      "date": "2026-01-27",
+      "summary": "A preserved USPS tracking screenshot shows delivery to a PO Box in Oregon City, Oregon 97045, consistent with HACC's mailing address.",
+      "verificationStatus": "screenshot_supported"
+    },
+    {
+      "id": "doc:hacc_written_notice_memo_2026_04_07",
+      "kind": "document",
+      "name": "HACC written notice of restraining-order concerns memo",
+      "path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/hacc_written_notice_of_restraining_order_concerns_memo_2026-04-07.md",
+      "verificationStatus": "analysis_note"
+    },
+    {
+      "id": "doc:hacc_feb2_notice_memo_2026_04_07",
+      "kind": "document",
+      "name": "HACC February 2 restraining-order-documents notice memo",
+      "path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/hacc_feb_2_restraining_order_documents_notice_memo_2026-04-07.md",
+      "verificationStatus": "analysis_note"
+    },
+    {
+      "id": "doc:hacc_mail_photo_and_tracking_candidate_memo_2026_04_07",
+      "kind": "document",
+      "name": "HACC mail photo and tracking candidate memo",
+      "path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/hacc_mail_photo_and_tracking_candidate_memo_2026-04-07.md",
+      "verificationStatus": "analysis_note"
+    },
+    {
+      "id": "finding:exhibit_r_workflow_staged_nonparty_path",
+      "kind": "finding",
+      "headline": "The HACC Exhibit R branch is staged on a nonparty subpoena path, with the packet prefilled and the service log showing HACC as ready to serve but not yet served.",
+      "status": "workflow_structured"
+    },
+    {
+      "id": "finding:hacc_written_notice_exists_but_is_not_service",
+      "kind": "finding",
+      "headline": "Preserved March 17, 2026 emails support written HACC notice of restraining-order concerns, but that notice is still distinct from the later nonparty Exhibit R service event.",
+      "status": "preserved_email_supported"
+    },
+    {
+      "id": "finding:hacc_feb2_notice_of_planned_document_transmission_exists_but_is_not_service",
+      "kind": "finding",
+      "headline": "The preserved February 2, 2026 HACC email supports that Benjamin said he was going to send restraining-order documents to HACC's office, but that preserved email still does not prove later Exhibit R service and does not confirm that the preserved attached images are the Solomon order itself.",
+      "status": "preserved_email_supported_but_attachment_identity_unconfirmed"
+    },
+    {
+      "id": "finding:hacc_mailing_trail_exists_but_is_not_exhibit_r_service",
+      "kind": "finding",
+      "headline": "The repository now supports a concrete HACC mailing trail through a mailbox photo of a Priority Mail envelope addressed to HACC and USPS delivery tracking, but that mailing trail is still distinct from later Exhibit R service and does not fully identify the mailed contents from the image alone.",
+      "status": "mailing_trail_supported_contents_partially_unresolved"
+    }
+  ],
+  "edges": [
+    {
+      "from": "issue:exhibit_r_production",
+      "to": "org:hacc",
+      "type": "targets_nonparty_custodian"
+    },
+    {
+      "from": "issue:exhibit_r_production",
+      "to": "proof:lease_change_request_source_record",
+      "type": "seeks"
+    },
+    {
+      "from": "issue:exhibit_r_production",
+      "to": "proof:claimed_authority_or_poa_record",
+      "type": "seeks"
+    },
+    {
+      "from": "issue:exhibit_r_production",
+      "to": "doc:exhibit_r_packet_index",
+      "type": "organized_by"
+    },
+    {
+      "from": "issue:exhibit_r_production",
+      "to": "doc:exhibit_r_path_note",
+      "type": "directed_by"
+    },
+    {
+      "from": "doc:exhibit_r_packet_index",
+      "to": "doc:exhibit_r_subpoena_schedule",
+      "type": "includes"
+    },
+    {
+      "from": "doc:exhibit_r_packet_index",
+      "to": "doc:exhibit_r_motion_for_leave",
+      "type": "includes"
+    },
+    {
+      "from": "doc:exhibit_r_packet_index",
+      "to": "doc:exhibit_r_supporting_declaration",
+      "type": "includes"
+    },
+    {
+      "from": "doc:exhibit_r_packet_index",
+      "to": "doc:exhibit_r_proposed_order",
+      "type": "includes"
+    },
+    {
+      "from": "doc:exhibit_r_packet_index",
+      "to": "doc:exhibit_r_certificate_of_service",
+      "type": "includes"
+    },
+    {
+      "from": "issue:exhibit_r_production",
+      "to": "doc:active_service_log_csv",
+      "type": "workflow_logged_in"
+    },
+    {
+      "from": "issue:exhibit_r_production",
+      "to": "doc:active_service_log_md",
+      "type": "workflow_summarized_in"
+    },
+    {
+      "from": "doc:active_service_log_csv",
+      "to": "state:hacc_packet_ready_to_serve",
+      "type": "currently_supports"
+    },
+    {
+      "from": "state:hacc_packet_ready_to_serve",
+      "to": "state:hacc_packet_served",
+      "type": "may_promote_to"
+    },
+    {
+      "from": "state:hacc_packet_served",
+      "to": "state:hacc_awaiting_production",
+      "type": "may_promote_to"
+    },
+    {
+      "from": "state:hacc_awaiting_production",
+      "to": "state:hacc_deficiency_notice_stage",
+      "type": "may_promote_to"
+    },
+    {
+      "from": "state:hacc_deficiency_notice_stage",
+      "to": "state:hacc_motion_to_compel_stage",
+      "type": "may_promote_to"
+    },
+    {
+      "from": "issue:exhibit_r_production",
+      "to": "doc:public_records_parallel_path",
+      "type": "may_run_in_parallel_with"
+    },
+    {
+      "from": "org:hacc",
+      "to": "evt:hacc_written_notice_of_restraining_order_concerns",
+      "type": "received_notice_in"
+    },
+    {
+      "from": "org:hacc",
+      "to": "evt:hacc_feb2_statement_restraining_order_documents_would_be_sent",
+      "type": "received_notice_in"
+    },
+    {
+      "from": "org:hacc",
+      "to": "evt:mailbox_photo_of_priority_mail_to_hacc",
+      "type": "apparent_addressee_in"
+    },
+    {
+      "from": "org:hacc",
+      "to": "evt:usps_tracking_delivery_to_oregon_city_po_box",
+      "type": "apparent_destination_in"
+    },
+    {
+      "from": "doc:hacc_written_notice_memo_2026_04_07",
+      "to": "evt:hacc_written_notice_of_restraining_order_concerns",
+      "type": "analyzes"
+    },
+    {
+      "from": "doc:hacc_feb2_notice_memo_2026_04_07",
+      "to": "evt:hacc_feb2_statement_restraining_order_documents_would_be_sent",
+      "type": "analyzes"
+    },
+    {
+      "from": "doc:hacc_mail_photo_and_tracking_candidate_memo_2026_04_07",
+      "to": "evt:mailbox_photo_of_priority_mail_to_hacc",
+      "type": "analyzes"
+    },
+    {
+      "from": "doc:hacc_mail_photo_and_tracking_candidate_memo_2026_04_07",
+      "to": "evt:usps_tracking_delivery_to_oregon_city_po_box",
+      "type": "analyzes"
+    },
+    {
+      "from": "finding:hacc_written_notice_exists_but_is_not_service",
+      "to": "evt:hacc_written_notice_of_restraining_order_concerns",
+      "type": "supported_by"
+    },
+    {
+      "from": "finding:hacc_feb2_notice_of_planned_document_transmission_exists_but_is_not_service",
+      "to": "evt:hacc_feb2_statement_restraining_order_documents_would_be_sent",
+      "type": "supported_by"
+    },
+    {
+      "from": "finding:hacc_mailing_trail_exists_but_is_not_exhibit_r_service",
+      "to": "evt:mailbox_photo_of_priority_mail_to_hacc",
+      "type": "supported_by"
+    },
+    {
+      "from": "finding:hacc_mailing_trail_exists_but_is_not_exhibit_r_service",
+      "to": "evt:usps_tracking_delivery_to_oregon_city_po_box",
+      "type": "supported_by"
+    },
+    {
+      "from": "finding:hacc_written_notice_exists_but_is_not_service",
+      "to": "issue:exhibit_r_production",
+      "type": "clarifies"
+    },
+    {
+      "from": "finding:hacc_feb2_notice_of_planned_document_transmission_exists_but_is_not_service",
+      "to": "issue:exhibit_r_production",
+      "type": "clarifies"
+    },
+    {
+      "from": "finding:hacc_mailing_trail_exists_but_is_not_exhibit_r_service",
+      "to": "issue:exhibit_r_production",
+      "type": "clarifies"
+    },
+    {
+      "from": "finding:exhibit_r_workflow_staged_nonparty_path",
+      "to": "issue:exhibit_r_production",
+      "type": "describes"
+    }
+  ]
+}

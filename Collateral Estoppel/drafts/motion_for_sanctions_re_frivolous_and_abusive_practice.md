@@ -66,67 +66,71 @@ Movant requests sanctions and related corrective relief to the extent the Court 
    b. the exact person-to-HACC communication chain;
    c. the exact legal rule under which every sanctions component should ultimately issue.
 16. The issue-preclusion doctrine is now authority-grounded, but the actual prior separate proceeding record is still the key missing fact layer. For that reason, preclusion-based sanctions requests must remain conditional.
-17. The repeated-pattern theory is that Solomon sought practical control by means other than orderly court relief, and that this created unnecessary burden, delay, and instability even if the final proof picture is not yet complete.
+17. The generated branch-status summary at [formal_case_state_dashboard.md](/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/formal_case_state_dashboard.md) currently classifies the `ORCP 17` merits branch as proof-gated, the issue-preclusion merits branch as proof-gated, and the HACC Exhibit R production branch as filing-ready for subpoena posture.
+18. The repeated-pattern theory is that Solomon sought practical control by means other than orderly court relief, and that this created unnecessary burden, delay, and instability even if the final proof picture is not yet complete.
 
 ### V. Best current sanctionable-conduct formulation
 
-18. The safest current formulation is:
+19. The safest current formulation is:
    `On information and belief, Solomon Barber pursued a course of conduct that combined proof-gated preclusion problems, post-notice self-help conduct, and collateral interference with housing or authority matters involving Jane Cortez, thereby imposing unnecessary burden, delay, and instability.`
-19. That formulation should be used instead of any broader statement that all sanction predicates have already been fully established.
-20. The same caution should be applied to issue preclusion:
+20. That formulation should be used instead of any broader statement that all sanction predicates have already been fully established.
+21. The same caution should be applied to issue preclusion:
    `The doctrine is available under Oregon law, but its application to this matter remains proof-gated pending the certified prior separate proceeding record.`
 
 ### VI. Prejudice and harm
 
-21. The record presently supports prejudice in the form of:
+22. The record presently supports prejudice in the form of:
    a. delay and instability in the housing / voucher / relocation path;
    b. confusion about household composition and authority;
    c. forced response to collateral interference theories and document flows;
    d. litigation burden and delay caused by having to sort out whether control was being sought through proper court channels or through outside pressure.
-22. The current damages summary also supports that the Waterleaf / voucher / relocation delay extended at least from January 12, 2026 until late March 2026, and that the lease-side removal of Benjamin caused concrete housing-process harm by altering household composition during the same sequence.
-23. Additional monetary prejudice, if sought, should be supported by declarations, billing, or a damages worksheet.
+23. The current damages summary also supports that the Waterleaf / voucher / relocation delay extended at least from January 12, 2026 until late March 2026, and that the lease-side removal of Benjamin caused concrete housing-process harm by altering household composition during the same sequence.
+24. Additional monetary prejudice, if sought, should be supported by declarations, billing, or a damages worksheet.
 
 ### VII. Evidentiary predicates before final sanctions ruling
 
-24. Certified docket and prior-order materials: see the shared placeholder exhibits in [motion_exhibit_index.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/motion_exhibit_index.md), especially proposed Exhibits P and Q, to be added when certified records are obtained.
-25. Signed operative order and digest:
+25. Certified docket and prior-order materials: see the shared placeholder exhibits in [motion_exhibit_index.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/motion_exhibit_index.md), especially proposed Exhibits P and Q, to be added when certified records are obtained.
+26. Generated live-status summary:
+   a. [formal_case_state_dashboard.md](/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/formal_case_state_dashboard.md)
+   b. [deontic_reasoning_report.md](/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/deontic_reasoning_report.md)
+27. Signed operative order and digest:
    a. [sam barber restraining order.pdf](/home/barberb/HACC/evidence/history/sam%20barber%20restraining%20order.pdf)
    b. [solomon_order_digest.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_order_digest.md)
-26. Notice / service / appearance materials:
+28. Notice / service / appearance materials:
    a. [uid_660669_Mon--17-Nov-2025-20-38-24--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660669_Mon--17-Nov-2025-20-38-24--0000_New-text-message-from-solomon--503--381-6911.eml)
    b. [uid_660690_Mon--17-Nov-2025-20-56-22--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660690_Mon--17-Nov-2025-20-56-22--0000_New-text-message-from-solomon--503--381-6911.eml)
    c. [transcript.txt](/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14164-Me-to-solomon-gv-3f38fb3f900d4de1/transcript.txt)
-27. Solomon-side statements showing self-help or bad-faith posture:
+29. Solomon-side statements showing self-help or bad-faith posture:
    a. [uid_743129_Tue--10-Mar-2026-17-39-27--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743129_Tue--10-Mar-2026-17-39-27--0000_New-text-message-from-solomon--503--381-6911.eml)
    b. [uid_743131_Tue--10-Mar-2026-17-45-54--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743131_Tue--10-Mar-2026-17-45-54--0000_New-text-message-from-solomon--503--381-6911.eml)
    c. [uid_743136_Tue--10-Mar-2026-17-51-15--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743136_Tue--10-Mar-2026-17-51-15--0000_New-text-message-from-solomon--503--381-6911.eml)
-28. Declaration or documentary proof of collateral interference and resulting housing-process harm:
+30. Declaration or documentary proof of collateral interference and resulting housing-process harm:
    a. [declaration_of_benjamin_barber_in_support_of_preliminary_injunction.md](/home/barberb/HACC/workspace/declaration_of_benjamin_barber_in_support_of_preliminary_injunction.md)
    b. [declaration_of_jane_cortez_march_23_2026_inspection_court_ready.md](/home/barberb/HACC/workspace/declaration_of_jane_cortez_march_23_2026_inspection_court_ready.md)
    c. [2026-03-17_additional-info_bwilliams_3.eml](/home/barberb/HACC/workspace/imap-confirmed-messages/2026-03-17_additional-info_bwilliams_3.eml)
    d. [repeated_usurpation_pattern_memo.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/repeated_usurpation_pattern_memo.md)
-29. Harm and delay support:
+31. Harm and delay support:
    a. [hacc_delay_and_lease_removal_damages_memo.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/hacc_delay_and_lease_removal_damages_memo.md)
    b. [damages-evidence-memo.md](/home/barberb/HACC/workspace/damages-evidence-memo.md)
-30. Authority-grounding materials:
-   a. [06_oregon_authority_table_placeholders.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/06_oregon_authority_table_placeholders.md)
+32. Authority-grounding materials:
+   a. [06_oregon_authority_table_final.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/06_oregon_authority_table_final.md)
    b. [oregon_authority_grounding_memo_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/research/oregon_authority_grounding_memo_2026-04-07.md)
-31. Any fee, cost, or burden evidence supporting monetary sanctions: to be added by declaration, billing summary, or damages worksheet if monetary sanctions are pursued beyond nonmonetary corrective relief.
+33. Any fee, cost, or burden evidence supporting monetary sanctions: to be added by declaration, billing summary, or damages worksheet if monetary sanctions are pursued beyond nonmonetary corrective relief.
 
 ### VIII. Requested hearing structure
 
-32. Set an evidentiary or threshold sanctions hearing as the Court deems appropriate.
-33. Require pre-hearing production or filing of certified records, operative orders, and any available HACC source records concerning lease-removal and collateral-contact issues.
-34. Permit targeted testimony on improper purpose, preclusion, collateral interference, and prejudice.
-35. If the Court finds the prior separate proceeding record incomplete, limit any preclusion-based sanctions ruling to threshold management and reserve final sanctions adjudication until the source record is complete.
+34. Set an evidentiary or threshold sanctions hearing as the Court deems appropriate.
+35. Require pre-hearing production or filing of certified records, operative orders, and any available HACC source records concerning lease-removal and collateral-contact issues.
+36. Permit targeted testimony on improper purpose, preclusion, collateral interference, and prejudice.
+37. If the Court finds the prior separate proceeding record incomplete, limit any preclusion-based sanctions ruling to threshold management and reserve final sanctions adjudication until the source record is complete.
 
 ### IX. Reservation
 
-36. Movant reserves amendment rights after receipt of certified records and any third-party or HACC records identifying the source, scope, and authority basis of the challenged collateral conduct.
+38. Movant reserves amendment rights after receipt of certified records and any third-party or HACC records identifying the source, scope, and authority basis of the challenged collateral conduct.
 
 ### X. Provisional exhibit map for next draft
 
-37. The current best exhibit sequence for the next court-ready pass is:
+39. The current best exhibit sequence for the next court-ready pass is:
    a. the shared motion exhibit index at [motion_exhibit_index.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/motion_exhibit_index.md);
    b. Exhibits A through O from that index as presently available;
    c. Exhibits P through R if later obtained through certified records or third-party production.

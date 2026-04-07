@@ -76,6 +76,27 @@
       "verificationStatus": "asserted_by_client_pending_documentary_proof"
     },
     {
+      "id": "evt:verified_eppdapa_gal_appointment_benjamin_for_jane",
+      "kind": "event",
+      "date": "2025-11-20",
+      "summary": "The scanned EPPDAPA order packet shows a signed GAL appointment line naming Benjamin Jay Barber as GAL for Jane Kay Cortez.",
+      "verificationStatus": "visually_verified_from_scanned_order"
+    },
+    {
+      "id": "evt:verified_eppdapa_names_solomon_respondent",
+      "kind": "event",
+      "date": "2025-11-20",
+      "summary": "The scanned EPPDAPA order identifies Solomon Samuel Barber as respondent.",
+      "verificationStatus": "visually_verified_from_scanned_order"
+    },
+    {
+      "id": "evt:verified_eppdapa_no_further_service_because_appeared",
+      "kind": "event",
+      "date": "2025-11-20",
+      "summary": "The scanned EPPDAPA order states no further service was necessary because respondent appeared in person before the court.",
+      "verificationStatus": "visually_verified_from_scanned_order"
+    },
+    {
       "id": "evt:client_asserts_benjamin_avoided_service",
       "kind": "event",
       "date": null,
@@ -118,6 +139,104 @@
       "verificationStatus": "repo_context_supported"
     },
     {
+      "id": "evt:hacc_written_notice_of_restraining_order_concerns",
+      "kind": "event",
+      "date": "2026-03-17",
+      "summary": "Benjamin emailed HACC personnel asking whether they were still in communication with parties who had restraining orders against them in the courts, giving HACC direct written notice of restraining-order-related concerns in the housing-administration context.",
+      "verificationStatus": "preserved_email_supported"
+    },
+    {
+      "id": "evt:hacc_feb2_statement_restraining_order_documents_would_be_sent",
+      "kind": "event",
+      "date": "2026-02-02",
+      "summary": "Benjamin told Ashley Ferron at HACC in a preserved February 2, 2026 email that he was going to send the restraining-order documents and porting documents to HACC's office by priority mail.",
+      "verificationStatus": "preserved_email_supported"
+    },
+    {
+      "id": "evt:mailbox_photo_of_priority_mail_to_hacc",
+      "kind": "event",
+      "date": "2026-02-02",
+      "summary": "A preserved HEIC image shows a USPS Priority Mail envelope at a mailbox with a visible label consistent with HACC's Oregon City mailing address.",
+      "verificationStatus": "image_supported_contents_partially_visible"
+    },
+    {
+      "id": "evt:usps_tracking_delivery_to_oregon_city_po_box",
+      "kind": "event",
+      "date": "2026-01-27",
+      "summary": "A preserved USPS tracking screenshot shows delivery to a PO Box in Oregon City, Oregon 97045, consistent with HACC's mailing address.",
+      "verificationStatus": "screenshot_supported"
+    },
+    {
+      "id": "evt:service_chain_references_second_benjamin_vs_solomon_matter",
+      "kind": "event",
+      "date": "2026-04-03",
+      "summary": "A preserved April 3-4, 2026 service chain to Solomon's probate counsel expressly referenced both `Jane Kay Cortez vs Solomon Samuel Barber` and `Benjamin Jay Barber vs Solomon Samuel Barber`, linked `sam barber restraining order.pdf`, included a preserved image that OCRs as a same-day FedEx receipt to Alexander M. Bluestone in Salem, Oregon, and included follow-up content asserting that guardianship had already been granted in a case involving the same exact parties.",
+      "verificationStatus": "preserved_email_supported"
+    },
+    {
+      "id": "evt:solomon_sms_archive_shows_notice_and_service_effect_dispute",
+      "kind": "event",
+      "date": "2025-11-17",
+      "summary": "The preserved Solomon SMS archive shows order-awareness in November 2025 and a March 10, 2026 position that the order was not in effect until service, but does not presently show the later April 3 attorney-service wording.",
+      "verificationStatus": "preserved_sms_supported_for_notice_but_not_for_april_service_language"
+    },
+    {
+      "id": "doc:hacc_written_notice_memo_2026_04_07",
+      "kind": "document",
+      "name": "HACC written notice of restraining-order concerns memo",
+      "path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/hacc_written_notice_of_restraining_order_concerns_memo_2026-04-07.md",
+      "verificationStatus": "analysis_note"
+    },
+    {
+      "id": "doc:hacc_feb2_notice_memo_2026_04_07",
+      "kind": "document",
+      "name": "HACC February 2 restraining-order-documents notice memo",
+      "path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/hacc_feb_2_restraining_order_documents_notice_memo_2026-04-07.md",
+      "verificationStatus": "analysis_note"
+    },
+    {
+      "id": "doc:hacc_mail_photo_and_tracking_candidate_memo_2026_04_07",
+      "kind": "document",
+      "name": "HACC mail photo and tracking candidate memo",
+      "path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/hacc_mail_photo_and_tracking_candidate_memo_2026-04-07.md",
+      "verificationStatus": "analysis_note"
+    },
+    {
+      "id": "doc:remaining_evidentiary_gaps_memo_2026_04_07",
+      "kind": "document",
+      "name": "Remaining evidentiary gaps memo",
+      "path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/remaining_evidentiary_gaps_memo_2026-04-07.md",
+      "verificationStatus": "analysis_note"
+    },
+    {
+      "id": "doc:second_solomon_matter_service_chain_memo_2026_04_07",
+      "kind": "document",
+      "name": "Second Solomon matter service chain memo",
+      "path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/second_solomon_matter_service_chain_memo_2026-04-07.md",
+      "verificationStatus": "analysis_note"
+    },
+    {
+      "id": "doc:solomon_sms_notice_vs_service_distinction_memo_2026_04_07",
+      "kind": "document",
+      "name": "Solomon SMS notice vs service distinction memo",
+      "path": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/solomon_sms_notice_vs_service_distinction_memo_2026-04-07.md",
+      "verificationStatus": "analysis_note"
+    },
+    {
+      "id": "doc:hacc_damages_worksheet_2026_04_07",
+      "kind": "document",
+      "name": "HACC damages worksheet",
+      "path": "/home/barberb/HACC/Collateral Estoppel/drafts/hacc_damages_worksheet_2026-04-07.md",
+      "verificationStatus": "staged_fillable_tool"
+    },
+    {
+      "id": "doc:declaration_benjamin_re_hacc_damages_and_costs",
+      "kind": "document",
+      "name": "Declaration of Benjamin Barber re HACC damages and costs",
+      "path": "/home/barberb/HACC/Collateral Estoppel/drafts/declaration_of_benjamin_barber_re_hacc_damages_and_costs.md",
+      "verificationStatus": "staged_draft"
+    },
+    {
       "id": "proof:prior_appointment_order",
       "kind": "proof_target",
       "name": "Prior appointment order involving Jane Cortez and Benjamin Barber",
@@ -151,6 +270,36 @@
       "id": "proof:claimed_authority_or_poa_record",
       "kind": "proof_target",
       "name": "Any power of attorney, representative authority, or HACC note showing claimed authority over Jane's housing decisions",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "proof:second_benjamin_vs_solomon_matter_packet",
+      "kind": "proof_target",
+      "name": "Underlying court packet, case number, and operative filings for the separately referenced `Benjamin Jay Barber vs Solomon Samuel Barber` matter",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "proof:mail_packet_contents_identification",
+      "kind": "proof_target",
+      "name": "Record or declaration identifying the contents of the mailed packet shown in the HACC mailing-trail photos",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "proof:solomon_order_docket_metadata",
+      "kind": "proof_target",
+      "name": "Certified docket, case number, caption, and entry metadata for the Solomon restraining-order matter",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "proof:image_authentication_record",
+      "kind": "proof_target",
+      "name": "Declaration or metadata authenticating the HACC mailing-trail images and packet-photo sequence",
+      "verificationStatus": "missing"
+    },
+    {
+      "id": "proof:damages_quantification_record",
+      "kind": "proof_target",
+      "name": "Declarations, receipts, and worksheets quantifying postage, delay, relocation, and related harms",
       "verificationStatus": "missing"
     },
     {
@@ -245,6 +394,30 @@
       "kind": "finding",
       "headline": "A January 12, 2026 HACC email directly states that Benjamin's removal effective January 1, 2026 followed internal review and court documentation on file, which strengthens the source-authority trail without yet naming the actor behind that documentation.",
       "status": "repo_context_supported"
+    },
+    {
+      "id": "finding:hacc_had_written_notice_of_restraining_order_concerns_by_march_17_2026",
+      "kind": "finding",
+      "headline": "Preserved March 17, 2026 emails show that HACC had direct written notice of restraining-order-related concerns, even though the repo still does not directly prove that the actual Solomon order PDF was emailed to HACC.",
+      "status": "preserved_email_supported_with_attachment_gap"
+    },
+    {
+      "id": "finding:hacc_had_feb2_notice_of_planned_restraining_order_document_transmission",
+      "kind": "finding",
+      "headline": "Preserved February 2, 2026 HACC email shows that Benjamin told HACC he was going to send restraining-order documents to HACC's office, although the preserved attached images have not been confirmed as the Solomon order itself.",
+      "status": "preserved_email_supported_but_attachment_identity_unconfirmed"
+    },
+    {
+      "id": "finding:repo_supports_hacc_mailing_trail_but_contents_not_fully_identified",
+      "kind": "finding",
+      "headline": "The repository now supports a concrete mailing trail to HACC through packet photos, a mailbox photo of a Priority Mail envelope addressed to HACC, and USPS delivery tracking, although the exact mailed contents are not yet fully identified from the images alone.",
+      "status": "mailing_trail_supported_contents_partially_unresolved"
+    },
+    {
+      "id": "finding:damages_branch_staged_but_amounts_still_open",
+      "kind": "finding",
+      "headline": "The damages branch is now structured through a worksheet and declaration draft, but concrete dollar amounts still need to be filled from receipts, recollection, and supporting records.",
+      "status": "staged_amounts_pending"
     }
   ],
   "edges": [
@@ -329,6 +502,41 @@
       "type": "affected_person"
     },
     {
+      "from": "org:hacc",
+      "to": "evt:hacc_written_notice_of_restraining_order_concerns",
+      "type": "received_notice_in"
+    },
+    {
+      "from": "org:hacc",
+      "to": "evt:hacc_feb2_statement_restraining_order_documents_would_be_sent",
+      "type": "received_notice_in"
+    },
+    {
+      "from": "org:hacc",
+      "to": "evt:mailbox_photo_of_priority_mail_to_hacc",
+      "type": "apparent_addressee_in"
+    },
+    {
+      "from": "org:hacc",
+      "to": "evt:usps_tracking_delivery_to_oregon_city_po_box",
+      "type": "apparent_destination_in"
+    },
+    {
+      "from": "person:benjamin_barber",
+      "to": "evt:hacc_written_notice_of_restraining_order_concerns",
+      "type": "participated_in"
+    },
+    {
+      "from": "person:benjamin_barber",
+      "to": "evt:hacc_feb2_statement_restraining_order_documents_would_be_sent",
+      "type": "participated_in"
+    },
+    {
+      "from": "person:benjamin_barber",
+      "to": "evt:mailbox_photo_of_priority_mail_to_hacc",
+      "type": "appears_to_have_prepared_or_deposited"
+    },
+    {
       "from": "evt:skee_reported_outside_document_flows_caused_lease_removal",
       "to": "evt:inference_solomon_or_stepfather_outside_influence_on_lease_change",
       "type": "supports_bounded_inference"
@@ -367,6 +575,46 @@
       "from": "evt:hacc_internal_review_and_court_document_basis_for_removal",
       "to": "finding:hacc_directly_stated_internal_review_and_court_document_basis_for_removal",
       "type": "supports"
+    },
+    {
+      "from": "evt:hacc_written_notice_of_restraining_order_concerns",
+      "to": "finding:hacc_had_written_notice_of_restraining_order_concerns_by_march_17_2026",
+      "type": "supports"
+    },
+    {
+      "from": "evt:hacc_feb2_statement_restraining_order_documents_would_be_sent",
+      "to": "finding:hacc_had_feb2_notice_of_planned_restraining_order_document_transmission",
+      "type": "supports"
+    },
+    {
+      "from": "evt:mailbox_photo_of_priority_mail_to_hacc",
+      "to": "finding:repo_supports_hacc_mailing_trail_but_contents_not_fully_identified",
+      "type": "supports"
+    },
+    {
+      "from": "evt:usps_tracking_delivery_to_oregon_city_po_box",
+      "to": "finding:repo_supports_hacc_mailing_trail_but_contents_not_fully_identified",
+      "type": "supports"
+    },
+    {
+      "from": "doc:hacc_written_notice_memo_2026_04_07",
+      "to": "evt:hacc_written_notice_of_restraining_order_concerns",
+      "type": "analyzes"
+    },
+    {
+      "from": "doc:hacc_feb2_notice_memo_2026_04_07",
+      "to": "evt:hacc_feb2_statement_restraining_order_documents_would_be_sent",
+      "type": "analyzes"
+    },
+    {
+      "from": "doc:hacc_mail_photo_and_tracking_candidate_memo_2026_04_07",
+      "to": "evt:mailbox_photo_of_priority_mail_to_hacc",
+      "type": "analyzes"
+    },
+    {
+      "from": "doc:hacc_mail_photo_and_tracking_candidate_memo_2026_04_07",
+      "to": "evt:usps_tracking_delivery_to_oregon_city_po_box",
+      "type": "analyzes"
     },
     {
       "from": "evt:client_asserts_benjamin_interfered_housing_contract",
@@ -482,6 +730,66 @@
       "from": "finding:client_assertions_staged_with_proof_gates",
       "to": "proof:housing_contract_and_interference_record",
       "type": "prioritizes"
+    },
+    {
+      "from": "finding:repo_supports_hacc_mailing_trail_but_contents_not_fully_identified",
+      "to": "proof:mail_packet_contents_identification",
+      "type": "prioritizes"
+    },
+    {
+      "from": "finding:repo_supports_hacc_mailing_trail_but_contents_not_fully_identified",
+      "to": "proof:image_authentication_record",
+      "type": "prioritizes"
+    },
+    {
+      "from": "finding:hacc_had_written_notice_of_restraining_order_concerns_by_march_17_2026",
+      "to": "org:hacc",
+      "type": "concerns"
+    },
+    {
+      "from": "finding:hacc_had_feb2_notice_of_planned_restraining_order_document_transmission",
+      "to": "org:hacc",
+      "type": "concerns"
+    },
+    {
+      "from": "finding:repo_supports_hacc_mailing_trail_but_contents_not_fully_identified",
+      "to": "org:hacc",
+      "type": "concerns"
+    },
+    {
+      "from": "doc:remaining_evidentiary_gaps_memo_2026_04_07",
+      "to": "proof:mail_packet_contents_identification",
+      "type": "prioritizes"
+    },
+    {
+      "from": "doc:remaining_evidentiary_gaps_memo_2026_04_07",
+      "to": "proof:solomon_order_docket_metadata",
+      "type": "prioritizes"
+    },
+    {
+      "from": "doc:remaining_evidentiary_gaps_memo_2026_04_07",
+      "to": "proof:image_authentication_record",
+      "type": "prioritizes"
+    },
+    {
+      "from": "doc:remaining_evidentiary_gaps_memo_2026_04_07",
+      "to": "proof:damages_quantification_record",
+      "type": "prioritizes"
+    },
+    {
+      "from": "doc:hacc_damages_worksheet_2026_04_07",
+      "to": "proof:damages_quantification_record",
+      "type": "supports_completion_of"
+    },
+    {
+      "from": "doc:declaration_benjamin_re_hacc_damages_and_costs",
+      "to": "proof:damages_quantification_record",
+      "type": "supports_completion_of"
+    },
+    {
+      "from": "finding:damages_branch_staged_but_amounts_still_open",
+      "to": "proof:damages_quantification_record",
+      "type": "describes_status_of"
     }
   ]
 }

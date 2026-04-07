@@ -37,7 +37,7 @@ Primary staged files for this round:
 - `drafts/final_filing_set/03_motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_final.md`
 - `drafts/final_filing_set/04_declaration_of_benjamin_barber_in_support_of_motions_final.md`
 - `drafts/final_filing_set/05_certificate_of_service_final.md`
-- `drafts/final_filing_set/06_oregon_authority_table_placeholders.md`
+- `drafts/final_filing_set/06_oregon_authority_table_final.md`
 - `drafts/final_filing_set/07_proposed_order_appoint_gal_final.md`
 - `drafts/final_filing_set/08_proposed_order_dismiss_collateral_estoppel_final.md`
 - `drafts/final_filing_set/09_proposed_order_show_cause_final.md`

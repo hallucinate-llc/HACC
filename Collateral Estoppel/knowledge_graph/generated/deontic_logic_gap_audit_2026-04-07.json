@@ -13,7 +13,8 @@
     "inactive_rule_ids": [
       "r17_responding_custodian_obligated_execute_or_query_protocol_upon_service",
       "r18_benjamin_permitted_issue_deficiency_notice_after_incomplete_subpoena_response",
-      "r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage"
+      "r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage",
+      "r22_case_obligated_finalize_authority_citations_before_filing"
     ]
   },
   "inclusive": {
@@ -28,11 +29,14 @@
     "inactive_rule_ids": [
       "r17_responding_custodian_obligated_execute_or_query_protocol_upon_service",
       "r18_benjamin_permitted_issue_deficiency_notice_after_incomplete_subpoena_response",
-      "r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage"
+      "r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage",
+      "r22_case_obligated_finalize_authority_citations_before_filing"
     ]
   },
   "notes": [
     "unresolved means antecedents true but proof-status gated under mode policy",
-    "inactive means one or more antecedent facts currently false"
+    "inactive means one or more antecedent facts currently false",
+    "ORS 125.120 is consumed by r33; non-hypothesis authority-ref gap is closed.",
+    "Active-rule deontic conflict check reports no modality contradictions."
   ]
 }

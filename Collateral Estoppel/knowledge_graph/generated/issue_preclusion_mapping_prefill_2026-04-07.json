@@ -1,0 +1,66 @@
+{
+  "generated_at": "2026-04-07",
+  "source_candidates_file": "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/issue_preclusion_evidence_candidates_2026-04-07.json",
+  "target_mapping_file": "/home/barberb/HACC/Collateral Estoppel/evidence_notes/certified_records/issue_preclusion_mapping.json",
+  "safety_rule": "Prefill does not set any *_mapped boolean to true.",
+  "element_prefill": {
+    "identical_issue": {
+      "candidate_count": 15,
+      "top_sources": [
+        "Collateral Estoppel/evidence_notes/missing_exhibit_search_status_2026-04-07.md",
+        "Collateral Estoppel/evidence_notes/repeated_usurpation_pattern_memo.md",
+        "Collateral Estoppel/drafts/petition_guardianship_packet_stage1.md",
+        "Collateral Estoppel/drafts/petition_guardianship_court_ready_shell.md"
+      ],
+      "proposed_note": "Candidate sources indicate potential overlap of the guardianship authority issue across filings. Candidate references: Collateral Estoppel/evidence_notes/missing_exhibit_search_status_2026-04-07.md; Collateral Estoppel/evidence_notes/repeated_usurpation_pattern_memo.md; Collateral Estoppel/drafts/petition_guardianship_packet_stage1.md; Collateral Estoppel/drafts/petition_guardianship_court_ready_shell.md",
+      "proposed_boolean": false
+    },
+    "finality": {
+      "candidate_count": 15,
+      "top_sources": [
+        "Collateral Estoppel/evidence_notes/sam_barber_restraining_order_ocr.txt",
+        "Collateral Estoppel/evidence_notes/solomon_order_completeness_checklist.md",
+        "Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md",
+        "Collateral Estoppel/drafts/petition_guardianship_working_memo.md"
+      ],
+      "proposed_note": "Current index did not yield reliable finality artifacts; certified final order and register are still required. Candidate references: Collateral Estoppel/evidence_notes/sam_barber_restraining_order_ocr.txt; Collateral Estoppel/evidence_notes/solomon_order_completeness_checklist.md; Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md; Collateral Estoppel/drafts/petition_guardianship_working_memo.md",
+      "proposed_boolean": false
+    },
+    "party_privity": {
+      "candidate_count": 15,
+      "top_sources": [
+        "Collateral Estoppel/evidence_notes/solomon_repository_evidence_index.md",
+        "Collateral Estoppel/drafts/motion_for_leave_or_to_compel_exhibit_r_production.md",
+        "Collateral Estoppel/drafts/final_filing_set/11B_attachment_a2_definitions_and_instructions_final.md",
+        "Collateral Estoppel/evidence_notes/protective_order_and_hacc_notice_timeline.md"
+      ],
+      "proposed_note": "Candidate sources indicate party-name overlap, but party/privity mapping remains uncertified. Candidate references: Collateral Estoppel/evidence_notes/solomon_repository_evidence_index.md; Collateral Estoppel/drafts/motion_for_leave_or_to_compel_exhibit_r_production.md; Collateral Estoppel/drafts/final_filing_set/11B_attachment_a2_definitions_and_instructions_final.md; Collateral Estoppel/evidence_notes/protective_order_and_hacc_notice_timeline.md",
+      "proposed_boolean": false
+    },
+    "full_fair_opportunity": {
+      "candidate_count": 15,
+      "top_sources": [
+        "Collateral Estoppel/drafts/final_filing_set/06_oregon_authority_table_final.md",
+        "Collateral Estoppel/evidence_notes/formal_case_state_dashboard_2026-04-07.md",
+        "Collateral Estoppel/evidence_notes/element_audit_layer_note_2026-04-07.md",
+        "Collateral Estoppel/evidence_notes/solomon_order_completeness_checklist.md"
+      ],
+      "proposed_note": "Current index did not yield reliable hearing/opportunity artifacts; certified appearance/hearing records are still required. Candidate references: Collateral Estoppel/drafts/final_filing_set/06_oregon_authority_table_final.md; Collateral Estoppel/evidence_notes/formal_case_state_dashboard_2026-04-07.md; Collateral Estoppel/evidence_notes/element_audit_layer_note_2026-04-07.md; Collateral Estoppel/evidence_notes/solomon_order_completeness_checklist.md",
+      "proposed_boolean": false
+    }
+  },
+  "proposed_mapping_snapshot": {
+    "prior_proceeding_caption": "",
+    "prior_proceeding_case_number": "",
+    "identical_issue_mapped": false,
+    "identical_issue_note": "Candidate sources indicate potential overlap of the guardianship authority issue across filings. Candidate references: Collateral Estoppel/evidence_notes/missing_exhibit_search_status_2026-04-07.md; Collateral Estoppel/evidence_notes/repeated_usurpation_pattern_memo.md; Collateral Estoppel/drafts/petition_guardianship_packet_stage1.md; Collateral Estoppel/drafts/petition_guardianship_court_ready_shell.md",
+    "finality_mapped": false,
+    "finality_note": "Current index did not yield reliable finality artifacts; certified final order and register are still required. Candidate references: Collateral Estoppel/evidence_notes/sam_barber_restraining_order_ocr.txt; Collateral Estoppel/evidence_notes/solomon_order_completeness_checklist.md; Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md; Collateral Estoppel/drafts/petition_guardianship_working_memo.md",
+    "party_privity_mapped": false,
+    "party_privity_note": "Candidate sources indicate party-name overlap, but party/privity mapping remains uncertified. Candidate references: Collateral Estoppel/evidence_notes/solomon_repository_evidence_index.md; Collateral Estoppel/drafts/motion_for_leave_or_to_compel_exhibit_r_production.md; Collateral Estoppel/drafts/final_filing_set/11B_attachment_a2_definitions_and_instructions_final.md; Collateral Estoppel/evidence_notes/protective_order_and_hacc_notice_timeline.md",
+    "full_fair_opportunity_mapped": false,
+    "full_fair_opportunity_note": "Current index did not yield reliable hearing/opportunity artifacts; certified appearance/hearing records are still required. Candidate references: Collateral Estoppel/drafts/final_filing_set/06_oregon_authority_table_final.md; Collateral Estoppel/evidence_notes/formal_case_state_dashboard_2026-04-07.md; Collateral Estoppel/evidence_notes/element_audit_layer_note_2026-04-07.md; Collateral Estoppel/evidence_notes/solomon_order_completeness_checklist.md",
+    "mapping_completed_by": "",
+    "mapping_completed_on": ""
+  }
+}

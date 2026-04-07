@@ -32,11 +32,16 @@ def build_paragraph(entry: Dict[str, object]) -> str:
             f"kind={ant.get('evidence_kind')})"
         )
     evid_blob = "; ".join(evid_parts) if evid_parts else "no antecedent evidence listed"
+    temporal = entry.get("temporal_profile", {})
+    temporal_blob = (
+        f"Temporal window {temporal.get('earliest_date')} to {temporal.get('latest_date')}; "
+        f"tags={temporal.get('temporal_tags')}"
+    )
 
     return (
         f"Based on {evid_blob}, the rule {entry.get('rule_id')} yields "
         f"{c.get('modality')}({c.get('actor')}, {c.get('action')}, {c.get('target')}) "
-        f"with activation estimate {entry.get('activation_date_estimate')}. "
+        f"with activation estimate {entry.get('activation_date_estimate')}. {temporal_blob}. "
         f"Movant requests relief consistent with this rule-grounded posture."
     )
 
@@ -57,6 +62,7 @@ def build_bank(data: Dict[str, object]) -> Dict[str, object]:
                     {
                         "rule_id": entry.get("rule_id"),
                         "activation_date_estimate": entry.get("activation_date_estimate"),
+                        "temporal_profile": entry.get("temporal_profile", {}),
                         "paragraph": para,
                     }
                 )
@@ -118,6 +124,7 @@ def write_per_motion_files(bank: Dict[str, object]) -> None:
                 lines.append(f"## Paragraph {idx}")
                 lines.append(f"Rule: {p.get('rule_id')}")
                 lines.append(f"Activation: {p.get('activation_date_estimate')}")
+                lines.append(f"Temporal profile: {p.get('temporal_profile')}")
                 lines.append("")
                 lines.append(p.get("paragraph", ""))
                 lines.append("")

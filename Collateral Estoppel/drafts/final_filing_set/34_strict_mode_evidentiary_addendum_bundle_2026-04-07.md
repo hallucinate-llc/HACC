@@ -19,7 +19,7 @@ I. MOTION TARGET
 II. STRICT-MODE ACTIVE RULES TO ASSERT AS PRESENTLY PROVED
 - r20_case_permitted_treat_enforcement_path_as_pending_pre_service (P): treat_subpoena_enforcement_motion_path_as_pending_until_service -> case:26PR00641 (activation 2026-04-07)
 - r21_case_obligated_resolve_actor_assignment_conflict (O): resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record -> issue:interference_actor_assignment (activation 2026-04-07)
-- r22_case_obligated_finalize_authority_citations_before_filing (O): finalize_governing_authority_citations_before_final_filing -> doc:06_oregon_authority_table_placeholders.md (activation 2026-04-07)
+- r22_case_obligated_finalize_authority_citations_before_filing (O): finalize_governing_authority_citations_before_final_filing -> doc:06_oregon_authority_table_final.md (activation 2026-04-07)
 - r23_case_permitted_initiate_remedial_contempt_path (P): initiate_remedial_contempt_or_show_cause_path -> person:solomon (activation 2026-04-07)
 - r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved (P): seek_compensatory_or_compliance_oriented_remedial_sanctions_if_contempt_is_proved -> issue:prejudice_and_noninterference_relief (activation 2026-04-07)
 - r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown (P): seek_orcp_17_sanctions_if_filing_is_shown_improper_or_factually_or_legally_unsupported -> issue:sanctions_track (activation 2026-04-07)
@@ -63,7 +63,7 @@ I. MOTION TARGET
 II. STRICT-MODE ACTIVE RULES TO ASSERT AS PRESENTLY PROVED
 - r20_case_permitted_treat_enforcement_path_as_pending_pre_service (P): treat_subpoena_enforcement_motion_path_as_pending_until_service -> case:26PR00641 (activation 2026-04-07)
 - r21_case_obligated_resolve_actor_assignment_conflict (O): resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record -> issue:interference_actor_assignment (activation 2026-04-07)
-- r22_case_obligated_finalize_authority_citations_before_filing (O): finalize_governing_authority_citations_before_final_filing -> doc:06_oregon_authority_table_placeholders.md (activation 2026-04-07)
+- r22_case_obligated_finalize_authority_citations_before_filing (O): finalize_governing_authority_citations_before_final_filing -> doc:06_oregon_authority_table_final.md (activation 2026-04-07)
 - r23_case_permitted_initiate_remedial_contempt_path (P): initiate_remedial_contempt_or_show_cause_path -> person:solomon (activation 2026-04-07)
 - r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved (P): seek_compensatory_or_compliance_oriented_remedial_sanctions_if_contempt_is_proved -> issue:prejudice_and_noninterference_relief (activation 2026-04-07)
 - r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown (P): seek_orcp_17_sanctions_if_filing_is_shown_improper_or_factually_or_legally_unsupported -> issue:sanctions_track (activation 2026-04-07)

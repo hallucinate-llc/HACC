@@ -51,3 +51,7 @@ This note identifies the repository sources used to prefill contact/service fiel
 Verification reminder before filing:
 - Confirm all addresses/emails/phone numbers are current and approved for use.
 - Confirm service method complies with Oregon rules and any case-specific orders.
+
+Generated status aid:
+- [formal_case_state_dashboard.md](/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/formal_case_state_dashboard.md)
+- Use this dashboard as the live packet-status reference for which branches are filing-ready, proof-gated, and workflow-open.

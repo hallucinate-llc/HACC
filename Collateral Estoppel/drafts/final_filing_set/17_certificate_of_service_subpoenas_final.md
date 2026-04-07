@@ -17,29 +17,41 @@ Subpoena recipients served:
 1. Solomon Barber (individual subpoena packet)
    Service address: 4305 NE 125th Ave, Vancouver, WA 98682
    Service phone (if used): (503) 381-6911
-   Service method: ______________________
+   Date served: ______________________
+   Service method actually used: ______________________
+   Proof reference (return/receipt/affidavit/tracking): ______________________
 
 2. HACC / Clackamas County Custodian of Records (subpoena packet)
    Service address: 13930 Gain St, Oregon City, OR 97045
-   Service method: ______________________
+   Date served: ______________________
+   Service method actually used: ______________________
+   Proof reference (return/receipt/affidavit/tracking): ______________________
 
 3. ODHS / APS Custodian of Records (subpoena packet)
    Service address: 500 Summer St NE, Salem, OR 97301 (ODHS central office; unit/attn to confirm)
-   Service method: ______________________
+   Date served: ______________________
+   Service method actually used: ______________________
+   Proof reference (return/receipt/affidavit/tracking): ______________________
 
 4. Jason Hopkins (individual subpoena packet)
    Service address: c/o Tillamook County Sheriff's Office, 5995 Long Prairie Rd, Tillamook, OR 97141; and/or c/o Tillamook County Emergency Communications District, PO Box 911, Tillamook, OR 97141
-   Service method: ______________________
+   Date served: ______________________
+   Service method actually used: ______________________
+   Proof reference (return/receipt/affidavit/tracking): ______________________
 
 5. Tillamook County Sheriff's Office Custodian of Records (subpoena packet)
    Service address: 5995 Long Prairie Rd, Tillamook, OR 97141
-   Service method: ______________________
+   Date served: ______________________
+   Service method actually used: ______________________
+   Proof reference (return/receipt/affidavit/tracking): ______________________
 
 6. Tillamook County Emergency Communications District Custodian of Records (subpoena packet)
    Service address: 2311 3rd St, Tillamook, OR 97141 (mailing: PO Box 911, Tillamook, OR 97141)
-   Service method: ______________________
+   Date served: ______________________
+   Service method actually used: ______________________
+   Proof reference (return/receipt/affidavit/tracking): ______________________
 
-Service was completed by the following method(s), as applicable:
+Service-method key (select only the method actually used for each recipient entry above):
 
 1. Personal service.
 2. First-class U.S. Mail.

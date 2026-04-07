@@ -17,6 +17,7 @@ The Court, having reviewed the Motion for Appointment and Appearance of Guardian
 3. The GAL is authorized to appear, investigate, and provide recommendations regarding case posture and best-interest concerns.
 4. The GAL shall file a written report by: ______________________.
 5. A status hearing is set for: ______________________.
+6. The Court notes the April 3-4, 2026 counsel email chain as same-matter notice context only; any dispute regarding formal service validity is reserved for Court determination on the applicable service record.
 
 IT IS SO ORDERED.
 

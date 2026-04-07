@@ -11,34 +11,43 @@ Scope audited:
    - Signal: `r21_case_obligated_resolve_actor_assignment_conflict` is active.
    - Closure evidence needed: source-grounded timeline assigning each alleged act to the correct actor (Solomon vs Benjamin).
 
-2. High - Authority table placeholder finalization still remains open.
-   - Signal: `r22_case_obligated_finalize_authority_citations_before_filing` is active.
-   - Closure evidence needed: finalized ORS/ORCP/case-citation table replacing placeholder tokens.
-
-3. High - Subpoena enforcement chain is staged but currently inactive pending service events.
+2. High - Subpoena enforcement chain remains inactive pending real service lifecycle events.
    - Inactive rules: `r17`, `r18`, `r19`.
-   - Activation path: update `28_active_service_log_2026-04-07.csv` status/date fields (service, deficiency notice, cure, compel) and regenerate.
+   - Activation path: update `28_active_service_log_2026-04-07.csv` with confirmed service/deficiency dates and regenerate.
 
-4. Medium - Collateral-estoppel prohibition remains unresolved in both strict and inclusive modes.
+3. Medium - Collateral-estoppel prohibition remains proof-gated.
    - Unresolved rule: `r7_solomon_forbidden_refile_precluded_issue`.
-   - Closure evidence needed: certified prior final judgment/order, identity-of-issue proof, and full/fair opportunity record.
+   - Closure evidence needed: certified prior final judgment/order, identity-of-issue proof, full/fair opportunity record.
 
-5. Medium - Hypothesis-track rules remain unresolved in inclusive mode by design policy.
+4. Medium - Hypothesis-track rules remain unresolved in inclusive mode by design policy.
    - Inclusive unresolved: `r1`, `r2`, `r3`, `r5`, `r7`.
    - Additional strict-only unresolved: `r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved`.
+
+5. Medium - Remaining authority-ref gaps are limited to hypothesis-track rules only.
+   - See `deontic_end_to_end_grounding_gap_report_2026-04-07.md`.
+   - Non-hypothesis rules missing explicit `authority_refs`: none (closed in this pass).
+
+
+6. Low - No active O/P/F modality contradictions are currently present.
+   - Source: `deontic_conflict_report_2026-04-07.md`.
+   - strict: F/P=0, F/O=0, O/P=0; inclusive: F/P=0, F/O=0, O/P=0.
 
 ## Current mode snapshot
 
 From `deontic_reasoning_report.json` generated 2026-04-07:
-- strict: active=30, unresolved=6, inactive=3
-- inclusive: active=31, unresolved=5, inactive=3
+- strict: active=30, unresolved=6, inactive=4
+- inclusive: active=31, unresolved=5, inactive=4
 
-## Rule-set classification fix completed in this pass
+## Completed in this pass
 
-- Non-active rules are split into:
-  - `unresolved_rules` (antecedents true, but mode proof-status gating not met), and
-  - `inactive_rules` (one or more antecedents false).
+- Added `r33_case_permitted_request_special_advocate_or_gal_under_chapter_125` grounded to `auth:ors_125_120`.
+- Eliminated unused-authority gap for ORS 125.120.
+- Added formal end-to-end grounding diagnostics:
+  - `deontic_end_to_end_grounding_gap_report_2026-04-07.md`
+  - `deontic_end_to_end_grounding_gap_report_2026-04-07.json`
 
-## New output
+## Recommended next closure steps
 
-- `proof_intake_map_2026-04-07.{md,json}` now maps each unresolved/inactive rule to antecedent-level closure actions.
+1. Enter first confirmed service event to activate `r17`.
+2. Add certified nonappearance record to close `r24` and support show-cause path.
+3. Add certified prior-final-order and issue-identity proof to close `r7`.

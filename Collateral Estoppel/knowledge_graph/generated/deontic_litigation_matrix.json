@@ -2,7 +2,7 @@
   "generated_at": "2026-04-07",
   "modes": {
     "strict": {
-      "active_rule_count": 29,
+      "active_rule_count": 42,
       "unresolved_rule_count": 6,
       "inactive_rule_count": 4,
       "parties": [
@@ -13,13 +13,55 @@
               "action": "preserve_statutory_notice_and_objection_window_for_protective_petition",
               "target": "person:jane_cortez",
               "rule_id": "r29_case_obligated_preserve_notice_and_objection_window",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-03-31",
+                "latest_date": "2026-04-07",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window",
+                  "objection_window_or_later"
+                ],
+                "interval_refs": [
+                  "ti_probate_notice_objection_window"
+                ]
+              }
             },
             {
               "action": "schedule_and_process_hearing_on_guardianship_objection",
               "target": "person:jane_cortez",
               "rule_id": "r30_case_obligated_schedule_hearing_on_presented_objection",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-05",
+                "latest_date": "2026-04-07",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window",
+                  "objection_window_or_later"
+                ],
+                "interval_refs": [
+                  "ti_probate_notice_objection_window"
+                ]
+              }
+            },
+            {
+              "action": "check_and_document_clackamas_probate_slr_requirements_for_current_motion_packet",
+              "target": "court:clackamas_probate",
+              "rule_id": "r34_case_obligated_check_clackamas_probate_slr_requirements_before_filing",
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-03-31",
+                "latest_date": "2026-04-07",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": []
+              }
             }
           ],
           "permissions": [
@@ -27,19 +69,62 @@
               "action": "apply_orcp_and_oec_subject_to_specific_chapter_125_overrides",
               "target": "proceeding:protective_proceeding",
               "rule_id": "r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-03-31",
+                "latest_date": "2026-04-07",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_probate_notice_objection_window"
+                ]
+              }
             },
             {
               "action": "assert_respondent_right_to_appear_in_person_or_by_counsel",
               "target": "person:jane_cortez",
               "rule_id": "r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-03-31",
+                "latest_date": "2026-04-07",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window",
+                  "objection_window_or_later"
+                ],
+                "interval_refs": [
+                  "ti_probate_notice_objection_window"
+                ]
+              }
+            },
+            {
+              "action": "request_special_advocate_or_guardian_ad_litem_to_protect_person_interests",
+              "target": "person:jane_cortez",
+              "rule_id": "r33_case_permitted_request_special_advocate_or_gal_under_chapter_125",
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-03-31",
+                "latest_date": "2026-04-07",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_probate_notice_objection_window"
+                ]
+              }
             }
           ],
           "prohibitions": [],
           "counts": {
-            "O": 2,
-            "P": 2,
+            "O": 3,
+            "P": 3,
             "F": 0
           }
         },
@@ -50,13 +135,93 @@
               "action": "treat_prior_appointment_theory_as_hypothesis_until_source_order_found",
               "target": "issue:prior_appointment_for_jane_cortez",
               "rule_id": "r6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             },
             {
               "action": "resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record",
               "target": "issue:interference_actor_assignment",
               "rule_id": "r21_case_obligated_resolve_actor_assignment_conflict",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
+            },
+            {
+              "action": "treat_issue_preclusion_theory_as_provisional_until_certified_prior_order_and_docket_are_staged",
+              "target": "issue:guardianship_authority",
+              "rule_id": "r35_case_obligated_treat_issue_preclusion_as_provisional_until_certified_prior_record_staged",
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
+            },
+            {
+              "action": "complete_identical_issue_finality_privity_and_full_fair_mapping_before_merits_reliance",
+              "target": "issue:guardianship_authority",
+              "rule_id": "r36_case_obligated_complete_issue_preclusion_element_mapping_before_merits_reliance",
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": []
+              }
+            },
+            {
+              "action": "add_targeted_certified_record_citations_for_finality_and_full_fair_elements",
+              "target": "issue:guardianship_authority",
+              "rule_id": "r37_case_obligated_add_targeted_record_citations_for_finality_and_full_fair_elements",
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": []
+              }
+            },
+            {
+              "action": "qualify_issue_preclusion_language_as_contingent_and_not_fully_proved",
+              "target": "doc:petition_guardianship_working_memo",
+              "rule_id": "r38_case_obligated_qualify_overclaim_language_until_elements_are_proved",
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             }
           ],
           "permissions": [
@@ -64,55 +229,222 @@
               "action": "treat_solomon_hacc_interference_as_inference_not_direct_proof",
               "target": "person:solomon",
               "rule_id": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [
+                  "post_hacc_lease_change"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             },
             {
               "action": "seek_compelled_production_of_hacc_actor_document_authority_chain",
               "target": "issue:lease_change_actor_identification",
               "rule_id": "r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [
+                  "post_hacc_lease_change"
+                ],
+                "interval_refs": [
+                  "ti_exhibit_r_compelled_production_track"
+                ]
+              }
             },
             {
               "action": "treat_subpoena_enforcement_motion_path_as_pending_until_service",
               "target": "case:26PR00641",
               "rule_id": "r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period",
+                  "ti_exhibit_r_compelled_production_track"
+                ]
+              }
             },
             {
               "action": "initiate_remedial_contempt_or_show_cause_path",
               "target": "person:solomon",
               "rule_id": "r23_case_permitted_initiate_remedial_contempt_path",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2025-11-20",
+                "latest_date": "2026-04-07",
+                "date_count": 3,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window",
+                  "post_notice",
+                  "post_order_effective",
+                  "within_estimated_order_lifespan"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
+            },
+            {
+              "action": "seek_court_direction_on_service_channel_and_document_attempts",
+              "target": "person:solomon",
+              "rule_id": "r23b_case_permitted_seek_court_direction_on_service_channel_if_evasion_pattern",
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2025-11-17",
+                "latest_date": "2026-04-07",
+                "date_count": 6,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
+            },
+            {
+              "action": "rely_on_documented_court_order_modifying_notice_requirements_for_related_service_pathways",
+              "target": "issue:service_and_notice",
+              "rule_id": "r23c_case_permitted_rely_on_court_notice_modification_order_if_documented",
+              "activation_date_estimate": "2025-11-20",
+              "temporal_profile": {
+                "earliest_date": "2025-11-20",
+                "latest_date": "2025-11-20",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
+            },
+            {
+              "action": "characterize_counsel_contact_as_same_matter_notice_channel_while_preserving_service_validity_dispute",
+              "target": "issue:collateral_estoppel_same_matter_notice",
+              "rule_id": "r23d_case_permitted_characterize_counsel_contact_as_same_matter_notice_channel_for_collateral_estoppel_briefing",
+              "activation_date_estimate": "2026-04-04",
+              "temporal_profile": {
+                "earliest_date": "2026-04-03",
+                "latest_date": "2026-04-04",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period",
+                  "ti_probate_notice_objection_window"
+                ]
+              }
             },
             {
               "action": "seek_compensatory_or_compliance_oriented_remedial_sanctions_if_contempt_is_proved",
               "target": "issue:prejudice_and_noninterference_relief",
               "rule_id": "r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-01-01",
+                "latest_date": "2026-04-07",
+                "date_count": 3,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window",
+                  "post_hacc_lease_change"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             },
             {
               "action": "seek_orcp_17_sanctions_if_filing_is_shown_improper_or_factually_or_legally_unsupported",
               "target": "issue:sanctions_track",
               "rule_id": "r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [
+                  "post_hacc_lease_change"
+                ],
+                "interval_refs": []
+              }
             },
             {
               "action": "seek_subpoena_enforcement_and_related_expenses_after_nonparty_noncompliance",
               "target": "org:hacc",
               "rule_id": "r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [
+                  "post_hacc_lease_change"
+                ],
+                "interval_refs": [
+                  "ti_exhibit_r_compelled_production_track"
+                ]
+              }
             },
             {
               "action": "use_orcp9_service_and_orcp10_deadline_computation_for_later_filed_motion_packets",
               "target": "issue:service_and_deadlines",
               "rule_id": "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-03-31",
+                "latest_date": "2026-04-07",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period",
+                  "ti_probate_notice_objection_window"
+                ]
+              }
+            },
+            {
+              "action": "seek_targeted_nonparty_production_for_hearing_and_appearance_materials_supporting_issue_preclusion_elements",
+              "target": "issue:guardianship_authority",
+              "rule_id": "r39_case_permitted_seek_targeted_nonparty_production_for_missing_issue_preclusion_elements",
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": [
+                  "ti_exhibit_r_compelled_production_track"
+                ]
+              }
             }
           ],
           "prohibitions": [],
           "counts": {
-            "O": 2,
-            "P": 8,
+            "O": 6,
+            "P": 12,
             "F": 0
           }
         },
@@ -123,19 +455,53 @@
               "action": "identify_actor_document_and_authority_chain_for_lease_change",
               "target": "household:jane_cortez_household",
               "rule_id": "r6_hacc_obligated_document_authority_chain_for_lease_change",
-              "activation_date_estimate": "2026-01-12"
+              "activation_date_estimate": "2026-01-12",
+              "temporal_profile": {
+                "earliest_date": "2026-01-01",
+                "latest_date": "2026-01-12",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window",
+                  "post_hacc_lease_change"
+                ],
+                "interval_refs": [
+                  "ti_hacc_lease_change_sequence"
+                ]
+              }
             },
             {
               "action": "document_basis_for_household_composition_or_lease_adjustment",
               "target": "household:jane_cortez_household",
               "rule_id": "r6b_hacc_obligated_document_lease_basis",
-              "activation_date_estimate": "2026-01-12"
+              "activation_date_estimate": "2026-01-12",
+              "temporal_profile": {
+                "earliest_date": "2026-01-01",
+                "latest_date": "2026-01-12",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window",
+                  "post_hacc_lease_change"
+                ],
+                "interval_refs": [
+                  "ti_hacc_lease_change_sequence"
+                ]
+              }
             },
             {
               "action": "avoid_third_party_housing_contact_with_restrained_person_and_document_response",
               "target": "person:jane_cortez",
               "rule_id": "r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
-              "activation_date_estimate": "2026-03-26"
+              "activation_date_estimate": "2026-03-26",
+              "temporal_profile": {
+                "earliest_date": "2026-03-26",
+                "latest_date": "2026-03-26",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": []
+              }
             }
           ],
           "permissions": [],
@@ -153,21 +519,59 @@
               "action": "maintain_service_and_deadline_tracking",
               "target": "case:26PR00641",
               "rule_id": "r16_benjamin_obligated_track_service_and_deadlines",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             }
           ],
           "permissions": [
             {
+              "action": "act_as_gal_within_signed_eppdapa_order_scope",
+              "target": "person:jane_cortez",
+              "rule_id": "r40_benjamin_permitted_act_as_gal_under_signed_eppdapa_order",
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2025-11-20",
+                "latest_date": "2026-04-07",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
+            },
+            {
               "action": "serve_staged_subpoena_packets",
               "target": "case:26PR00641",
               "rule_id": "r15_benjamin_permitted_serve_subpoena_packets",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": [
+                  "ti_exhibit_r_compelled_production_track"
+                ]
+              }
             }
           ],
           "prohibitions": [],
           "counts": {
             "O": 1,
-            "P": 1,
+            "P": 2,
             "F": 0
           }
         },
@@ -175,79 +579,245 @@
           "party": "person:solomon",
           "obligations": [
             {
+              "action": "follow_petitioner_guardian_or_conservator_instructions",
+              "target": "person:jane_cortez",
+              "rule_id": "r41_solomon_obligated_follow_petitioner_guardian_or_conservator_instructions",
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2025-11-20",
+                "latest_date": "2026-04-07",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
+            },
+            {
               "action": "seek_hearing_or_comply_with_existing_order",
               "target": "order:eppdapa_restraining_order",
               "rule_id": "r5b_solomon_obligated_seek_hearing_or_comply",
-              "activation_date_estimate": "2026-03-10"
+              "activation_date_estimate": "2026-03-10",
+              "temporal_profile": {
+                "earliest_date": "2025-11-20",
+                "latest_date": "2026-03-10",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window",
+                  "post_notice",
+                  "post_order_effective",
+                  "within_estimated_order_lifespan"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             },
             {
               "action": "seek_clarification_or_relief_through_court",
               "target": "order:eppdapa_restraining_order",
               "rule_id": "r8_solomon_notice_ack_triggers_court_relief_path",
-              "activation_date_estimate": "2025-11-20"
+              "activation_date_estimate": "2025-11-20",
+              "temporal_profile": {
+                "earliest_date": "2025-11-17",
+                "latest_date": "2025-11-20",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             },
             {
               "action": "recognize_existing_order_status",
               "target": "order:eppdapa_restraining_order",
               "rule_id": "r11_solomon_already_have_order_statement_supports_notice",
-              "activation_date_estimate": "2025-11-20"
+              "activation_date_estimate": "2025-11-20",
+              "temporal_profile": {
+                "earliest_date": "2025-11-17",
+                "latest_date": "2025-11-20",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             },
             {
               "action": "file_motion_to_modify_or_vacate_before_noncompliance",
               "target": "order:eppdapa_restraining_order",
               "rule_id": "r13_solomon_judge_overturn_statement_triggers_motion_path",
-              "activation_date_estimate": "2026-03-10"
+              "activation_date_estimate": "2026-03-10",
+              "temporal_profile": {
+                "earliest_date": "2025-11-20",
+                "latest_date": "2026-03-10",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             }
           ],
           "permissions": [],
           "prohibitions": [
             {
+              "action": "disobey_guardian_instruction_term_after_appearance",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r42_solomon_forbidden_disobey_guardian_instruction_term_after_appearance",
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2025-11-20",
+                "latest_date": "2026-04-07",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
+            },
+            {
               "action": "abuse_contact_or_control_property",
               "target": "person:jane_cortez",
               "rule_id": "r4_solomon_forbidden_abuse_contact_property_control",
-              "activation_date_estimate": "2025-11-20"
+              "activation_date_estimate": "2025-11-20",
+              "temporal_profile": {
+                "earliest_date": "2025-11-17",
+                "latest_date": "2025-11-20",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window",
+                  "post_notice",
+                  "within_estimated_order_lifespan"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             },
             {
               "action": "enter_or_remain_at_petitioner_residence",
               "target": "location:10043_se_32nd_ave",
               "rule_id": "r4b_solomon_forbidden_enter_residence",
-              "activation_date_estimate": "2025-11-20"
+              "activation_date_estimate": "2025-11-20",
+              "temporal_profile": {
+                "earliest_date": "2025-11-17",
+                "latest_date": "2025-11-20",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window",
+                  "post_notice",
+                  "within_estimated_order_lifespan"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             },
             {
               "action": "adopt_self_help_noncooperation_posture",
               "target": "order:eppdapa_restraining_order",
               "rule_id": "r5c_solomon_forbidden_self_help_noncooperation",
-              "activation_date_estimate": "2026-03-10"
+              "activation_date_estimate": "2026-03-10",
+              "temporal_profile": {
+                "earliest_date": "2025-11-20",
+                "latest_date": "2026-03-10",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window",
+                  "post_notice",
+                  "post_order_effective",
+                  "within_estimated_order_lifespan"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             },
             {
               "action": "condition_compliance_on_additional_service",
               "target": "order:eppdapa_restraining_order",
               "rule_id": "r9_solomon_wait_for_service_conflicts_with_no_further_service",
-              "activation_date_estimate": "2026-03-10"
+              "activation_date_estimate": "2026-03-10",
+              "temporal_profile": {
+                "earliest_date": "2025-11-20",
+                "latest_date": "2026-03-10",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             },
             {
               "action": "intentional_noncooperation_with_effective_order",
               "target": "order:eppdapa_restraining_order",
               "rule_id": "r10_solomon_noncooperation_statement_conflicts_with_effective_order",
-              "activation_date_estimate": "2026-03-10"
+              "activation_date_estimate": "2026-03-10",
+              "temporal_profile": {
+                "earliest_date": "2025-11-20",
+                "latest_date": "2026-03-10",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             },
             {
               "action": "assert_order_ineffective_without_court_relief",
               "target": "order:eppdapa_restraining_order",
               "rule_id": "r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order",
-              "activation_date_estimate": "2026-03-10"
+              "activation_date_estimate": "2026-03-10",
+              "temporal_profile": {
+                "earliest_date": "2025-11-20",
+                "latest_date": "2026-03-10",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             }
           ],
           "counts": {
-            "O": 4,
+            "O": 5,
             "P": 0,
-            "F": 6
+            "F": 7
           }
         }
       ]
     },
     "inclusive": {
-      "active_rule_count": 30,
+      "active_rule_count": 43,
       "unresolved_rule_count": 5,
       "inactive_rule_count": 4,
       "parties": [
@@ -258,13 +828,55 @@
               "action": "preserve_statutory_notice_and_objection_window_for_protective_petition",
               "target": "person:jane_cortez",
               "rule_id": "r29_case_obligated_preserve_notice_and_objection_window",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-03-31",
+                "latest_date": "2026-04-07",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window",
+                  "objection_window_or_later"
+                ],
+                "interval_refs": [
+                  "ti_probate_notice_objection_window"
+                ]
+              }
             },
             {
               "action": "schedule_and_process_hearing_on_guardianship_objection",
               "target": "person:jane_cortez",
               "rule_id": "r30_case_obligated_schedule_hearing_on_presented_objection",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-05",
+                "latest_date": "2026-04-07",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window",
+                  "objection_window_or_later"
+                ],
+                "interval_refs": [
+                  "ti_probate_notice_objection_window"
+                ]
+              }
+            },
+            {
+              "action": "check_and_document_clackamas_probate_slr_requirements_for_current_motion_packet",
+              "target": "court:clackamas_probate",
+              "rule_id": "r34_case_obligated_check_clackamas_probate_slr_requirements_before_filing",
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-03-31",
+                "latest_date": "2026-04-07",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": []
+              }
             }
           ],
           "permissions": [
@@ -272,19 +884,62 @@
               "action": "apply_orcp_and_oec_subject_to_specific_chapter_125_overrides",
               "target": "proceeding:protective_proceeding",
               "rule_id": "r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-03-31",
+                "latest_date": "2026-04-07",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_probate_notice_objection_window"
+                ]
+              }
             },
             {
               "action": "assert_respondent_right_to_appear_in_person_or_by_counsel",
               "target": "person:jane_cortez",
               "rule_id": "r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-03-31",
+                "latest_date": "2026-04-07",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window",
+                  "objection_window_or_later"
+                ],
+                "interval_refs": [
+                  "ti_probate_notice_objection_window"
+                ]
+              }
+            },
+            {
+              "action": "request_special_advocate_or_guardian_ad_litem_to_protect_person_interests",
+              "target": "person:jane_cortez",
+              "rule_id": "r33_case_permitted_request_special_advocate_or_gal_under_chapter_125",
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-03-31",
+                "latest_date": "2026-04-07",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_probate_notice_objection_window"
+                ]
+              }
             }
           ],
           "prohibitions": [],
           "counts": {
-            "O": 2,
-            "P": 2,
+            "O": 3,
+            "P": 3,
             "F": 0
           }
         },
@@ -295,13 +950,93 @@
               "action": "treat_prior_appointment_theory_as_hypothesis_until_source_order_found",
               "target": "issue:prior_appointment_for_jane_cortez",
               "rule_id": "r6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             },
             {
               "action": "resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record",
               "target": "issue:interference_actor_assignment",
               "rule_id": "r21_case_obligated_resolve_actor_assignment_conflict",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
+            },
+            {
+              "action": "treat_issue_preclusion_theory_as_provisional_until_certified_prior_order_and_docket_are_staged",
+              "target": "issue:guardianship_authority",
+              "rule_id": "r35_case_obligated_treat_issue_preclusion_as_provisional_until_certified_prior_record_staged",
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
+            },
+            {
+              "action": "complete_identical_issue_finality_privity_and_full_fair_mapping_before_merits_reliance",
+              "target": "issue:guardianship_authority",
+              "rule_id": "r36_case_obligated_complete_issue_preclusion_element_mapping_before_merits_reliance",
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": []
+              }
+            },
+            {
+              "action": "add_targeted_certified_record_citations_for_finality_and_full_fair_elements",
+              "target": "issue:guardianship_authority",
+              "rule_id": "r37_case_obligated_add_targeted_record_citations_for_finality_and_full_fair_elements",
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": []
+              }
+            },
+            {
+              "action": "qualify_issue_preclusion_language_as_contingent_and_not_fully_proved",
+              "target": "doc:petition_guardianship_working_memo",
+              "rule_id": "r38_case_obligated_qualify_overclaim_language_until_elements_are_proved",
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             }
           ],
           "permissions": [
@@ -309,61 +1044,241 @@
               "action": "treat_solomon_hacc_interference_as_inference_not_direct_proof",
               "target": "person:solomon",
               "rule_id": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [
+                  "post_hacc_lease_change"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             },
             {
               "action": "seek_compelled_production_of_hacc_actor_document_authority_chain",
               "target": "issue:lease_change_actor_identification",
               "rule_id": "r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [
+                  "post_hacc_lease_change"
+                ],
+                "interval_refs": [
+                  "ti_exhibit_r_compelled_production_track"
+                ]
+              }
             },
             {
               "action": "treat_subpoena_enforcement_motion_path_as_pending_until_service",
               "target": "case:26PR00641",
               "rule_id": "r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period",
+                  "ti_exhibit_r_compelled_production_track"
+                ]
+              }
             },
             {
               "action": "initiate_remedial_contempt_or_show_cause_path",
               "target": "person:solomon",
               "rule_id": "r23_case_permitted_initiate_remedial_contempt_path",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2025-11-20",
+                "latest_date": "2026-04-07",
+                "date_count": 3,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window",
+                  "post_notice",
+                  "post_order_effective",
+                  "within_estimated_order_lifespan"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
+            },
+            {
+              "action": "seek_court_direction_on_service_channel_and_document_attempts",
+              "target": "person:solomon",
+              "rule_id": "r23b_case_permitted_seek_court_direction_on_service_channel_if_evasion_pattern",
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2025-11-17",
+                "latest_date": "2026-04-07",
+                "date_count": 6,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
+            },
+            {
+              "action": "rely_on_documented_court_order_modifying_notice_requirements_for_related_service_pathways",
+              "target": "issue:service_and_notice",
+              "rule_id": "r23c_case_permitted_rely_on_court_notice_modification_order_if_documented",
+              "activation_date_estimate": "2025-11-20",
+              "temporal_profile": {
+                "earliest_date": "2025-11-20",
+                "latest_date": "2025-11-20",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
+            },
+            {
+              "action": "characterize_counsel_contact_as_same_matter_notice_channel_while_preserving_service_validity_dispute",
+              "target": "issue:collateral_estoppel_same_matter_notice",
+              "rule_id": "r23d_case_permitted_characterize_counsel_contact_as_same_matter_notice_channel_for_collateral_estoppel_briefing",
+              "activation_date_estimate": "2026-04-04",
+              "temporal_profile": {
+                "earliest_date": "2026-04-03",
+                "latest_date": "2026-04-04",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period",
+                  "ti_probate_notice_objection_window"
+                ]
+              }
             },
             {
               "action": "seek_order_or_warrant_to_compel_appearance_if_order_to_appear_is_served_and_ignored",
               "target": "person:solomon",
               "rule_id": "r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-03-10",
+                "latest_date": "2026-04-07",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period",
+                  "ti_exhibit_r_compelled_production_track"
+                ]
+              }
             },
             {
               "action": "seek_compensatory_or_compliance_oriented_remedial_sanctions_if_contempt_is_proved",
               "target": "issue:prejudice_and_noninterference_relief",
               "rule_id": "r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-01-01",
+                "latest_date": "2026-04-07",
+                "date_count": 3,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window",
+                  "post_hacc_lease_change"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             },
             {
               "action": "seek_orcp_17_sanctions_if_filing_is_shown_improper_or_factually_or_legally_unsupported",
               "target": "issue:sanctions_track",
               "rule_id": "r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [
+                  "post_hacc_lease_change"
+                ],
+                "interval_refs": []
+              }
             },
             {
               "action": "seek_subpoena_enforcement_and_related_expenses_after_nonparty_noncompliance",
               "target": "org:hacc",
               "rule_id": "r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [
+                  "post_hacc_lease_change"
+                ],
+                "interval_refs": [
+                  "ti_exhibit_r_compelled_production_track"
+                ]
+              }
             },
             {
               "action": "use_orcp9_service_and_orcp10_deadline_computation_for_later_filed_motion_packets",
               "target": "issue:service_and_deadlines",
               "rule_id": "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-03-31",
+                "latest_date": "2026-04-07",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period",
+                  "ti_probate_notice_objection_window"
+                ]
+              }
+            },
+            {
+              "action": "seek_targeted_nonparty_production_for_hearing_and_appearance_materials_supporting_issue_preclusion_elements",
+              "target": "issue:guardianship_authority",
+              "rule_id": "r39_case_permitted_seek_targeted_nonparty_production_for_missing_issue_preclusion_elements",
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": [
+                  "ti_exhibit_r_compelled_production_track"
+                ]
+              }
             }
           ],
           "prohibitions": [],
           "counts": {
-            "O": 2,
-            "P": 9,
+            "O": 6,
+            "P": 13,
             "F": 0
           }
         },
@@ -374,19 +1289,53 @@
               "action": "identify_actor_document_and_authority_chain_for_lease_change",
               "target": "household:jane_cortez_household",
               "rule_id": "r6_hacc_obligated_document_authority_chain_for_lease_change",
-              "activation_date_estimate": "2026-01-12"
+              "activation_date_estimate": "2026-01-12",
+              "temporal_profile": {
+                "earliest_date": "2026-01-01",
+                "latest_date": "2026-01-12",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window",
+                  "post_hacc_lease_change"
+                ],
+                "interval_refs": [
+                  "ti_hacc_lease_change_sequence"
+                ]
+              }
             },
             {
               "action": "document_basis_for_household_composition_or_lease_adjustment",
               "target": "household:jane_cortez_household",
               "rule_id": "r6b_hacc_obligated_document_lease_basis",
-              "activation_date_estimate": "2026-01-12"
+              "activation_date_estimate": "2026-01-12",
+              "temporal_profile": {
+                "earliest_date": "2026-01-01",
+                "latest_date": "2026-01-12",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window",
+                  "post_hacc_lease_change"
+                ],
+                "interval_refs": [
+                  "ti_hacc_lease_change_sequence"
+                ]
+              }
             },
             {
               "action": "avoid_third_party_housing_contact_with_restrained_person_and_document_response",
               "target": "person:jane_cortez",
               "rule_id": "r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
-              "activation_date_estimate": "2026-03-26"
+              "activation_date_estimate": "2026-03-26",
+              "temporal_profile": {
+                "earliest_date": "2026-03-26",
+                "latest_date": "2026-03-26",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": []
+              }
             }
           ],
           "permissions": [],
@@ -404,21 +1353,59 @@
               "action": "maintain_service_and_deadline_tracking",
               "target": "case:26PR00641",
               "rule_id": "r16_benjamin_obligated_track_service_and_deadlines",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             }
           ],
           "permissions": [
             {
+              "action": "act_as_gal_within_signed_eppdapa_order_scope",
+              "target": "person:jane_cortez",
+              "rule_id": "r40_benjamin_permitted_act_as_gal_under_signed_eppdapa_order",
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2025-11-20",
+                "latest_date": "2026-04-07",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
+            },
+            {
               "action": "serve_staged_subpoena_packets",
               "target": "case:26PR00641",
               "rule_id": "r15_benjamin_permitted_serve_subpoena_packets",
-              "activation_date_estimate": "2026-04-07"
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2026-04-07",
+                "latest_date": "2026-04-07",
+                "date_count": 1,
+                "spans_multiple_dates": false,
+                "temporal_tags": [],
+                "interval_refs": [
+                  "ti_exhibit_r_compelled_production_track"
+                ]
+              }
             }
           ],
           "prohibitions": [],
           "counts": {
             "O": 1,
-            "P": 1,
+            "P": 2,
             "F": 0
           }
         },
@@ -426,73 +1413,239 @@
           "party": "person:solomon",
           "obligations": [
             {
+              "action": "follow_petitioner_guardian_or_conservator_instructions",
+              "target": "person:jane_cortez",
+              "rule_id": "r41_solomon_obligated_follow_petitioner_guardian_or_conservator_instructions",
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2025-11-20",
+                "latest_date": "2026-04-07",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
+            },
+            {
               "action": "seek_hearing_or_comply_with_existing_order",
               "target": "order:eppdapa_restraining_order",
               "rule_id": "r5b_solomon_obligated_seek_hearing_or_comply",
-              "activation_date_estimate": "2026-03-10"
+              "activation_date_estimate": "2026-03-10",
+              "temporal_profile": {
+                "earliest_date": "2025-11-20",
+                "latest_date": "2026-03-10",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window",
+                  "post_notice",
+                  "post_order_effective",
+                  "within_estimated_order_lifespan"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             },
             {
               "action": "seek_clarification_or_relief_through_court",
               "target": "order:eppdapa_restraining_order",
               "rule_id": "r8_solomon_notice_ack_triggers_court_relief_path",
-              "activation_date_estimate": "2025-11-20"
+              "activation_date_estimate": "2025-11-20",
+              "temporal_profile": {
+                "earliest_date": "2025-11-17",
+                "latest_date": "2025-11-20",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             },
             {
               "action": "recognize_existing_order_status",
               "target": "order:eppdapa_restraining_order",
               "rule_id": "r11_solomon_already_have_order_statement_supports_notice",
-              "activation_date_estimate": "2025-11-20"
+              "activation_date_estimate": "2025-11-20",
+              "temporal_profile": {
+                "earliest_date": "2025-11-17",
+                "latest_date": "2025-11-20",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             },
             {
               "action": "file_motion_to_modify_or_vacate_before_noncompliance",
               "target": "order:eppdapa_restraining_order",
               "rule_id": "r13_solomon_judge_overturn_statement_triggers_motion_path",
-              "activation_date_estimate": "2026-03-10"
+              "activation_date_estimate": "2026-03-10",
+              "temporal_profile": {
+                "earliest_date": "2025-11-20",
+                "latest_date": "2026-03-10",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             }
           ],
           "permissions": [],
           "prohibitions": [
             {
+              "action": "disobey_guardian_instruction_term_after_appearance",
+              "target": "order:eppdapa_restraining_order",
+              "rule_id": "r42_solomon_forbidden_disobey_guardian_instruction_term_after_appearance",
+              "activation_date_estimate": "2026-04-07",
+              "temporal_profile": {
+                "earliest_date": "2025-11-20",
+                "latest_date": "2026-04-07",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
+            },
+            {
               "action": "abuse_contact_or_control_property",
               "target": "person:jane_cortez",
               "rule_id": "r4_solomon_forbidden_abuse_contact_property_control",
-              "activation_date_estimate": "2025-11-20"
+              "activation_date_estimate": "2025-11-20",
+              "temporal_profile": {
+                "earliest_date": "2025-11-17",
+                "latest_date": "2025-11-20",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window",
+                  "post_notice",
+                  "within_estimated_order_lifespan"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             },
             {
               "action": "enter_or_remain_at_petitioner_residence",
               "target": "location:10043_se_32nd_ave",
               "rule_id": "r4b_solomon_forbidden_enter_residence",
-              "activation_date_estimate": "2025-11-20"
+              "activation_date_estimate": "2025-11-20",
+              "temporal_profile": {
+                "earliest_date": "2025-11-17",
+                "latest_date": "2025-11-20",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window",
+                  "post_notice",
+                  "within_estimated_order_lifespan"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             },
             {
               "action": "adopt_self_help_noncooperation_posture",
               "target": "order:eppdapa_restraining_order",
               "rule_id": "r5c_solomon_forbidden_self_help_noncooperation",
-              "activation_date_estimate": "2026-03-10"
+              "activation_date_estimate": "2026-03-10",
+              "temporal_profile": {
+                "earliest_date": "2025-11-20",
+                "latest_date": "2026-03-10",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window",
+                  "post_notice",
+                  "post_order_effective",
+                  "within_estimated_order_lifespan"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             },
             {
               "action": "condition_compliance_on_additional_service",
               "target": "order:eppdapa_restraining_order",
               "rule_id": "r9_solomon_wait_for_service_conflicts_with_no_further_service",
-              "activation_date_estimate": "2026-03-10"
+              "activation_date_estimate": "2026-03-10",
+              "temporal_profile": {
+                "earliest_date": "2025-11-20",
+                "latest_date": "2026-03-10",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             },
             {
               "action": "intentional_noncooperation_with_effective_order",
               "target": "order:eppdapa_restraining_order",
               "rule_id": "r10_solomon_noncooperation_statement_conflicts_with_effective_order",
-              "activation_date_estimate": "2026-03-10"
+              "activation_date_estimate": "2026-03-10",
+              "temporal_profile": {
+                "earliest_date": "2025-11-20",
+                "latest_date": "2026-03-10",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             },
             {
               "action": "assert_order_ineffective_without_court_relief",
               "target": "order:eppdapa_restraining_order",
               "rule_id": "r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order",
-              "activation_date_estimate": "2026-03-10"
+              "activation_date_estimate": "2026-03-10",
+              "temporal_profile": {
+                "earliest_date": "2025-11-20",
+                "latest_date": "2026-03-10",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
+                "interval_refs": [
+                  "ti_restraining_order_effective_period"
+                ]
+              }
             }
           ],
           "counts": {
-            "O": 4,
+            "O": 5,
             "P": 0,
-            "F": 6
+            "F": 7
           }
         }
       ]

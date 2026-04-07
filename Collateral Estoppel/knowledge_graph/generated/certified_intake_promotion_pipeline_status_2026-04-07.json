@@ -1,0 +1,57 @@
+{
+  "generated_at": "2026-04-07",
+  "apply_requested": false,
+  "success": true,
+  "steps": [
+    {
+      "label": "validate_tracker",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "label": "generate_suggestions",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "label": "recompute_formal_artifacts",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "label": "recompute_proof_map",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "label": "recompute_grounding_gap",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    {
+      "label": "recompute_readiness_dashboard",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "suggestion_count": 0,
+  "suggestion_warning_count": 3,
+  "override_summary": {
+    "rows_read": 7,
+    "applied_count": 7,
+    "applied_status_or_value_changes": 0,
+    "applied_source_changes": 7,
+    "skipped_count": 0
+  },
+  "strict_counts": {
+    "active": 31,
+    "unresolved": 6,
+    "inactive": 4
+  }
+}
