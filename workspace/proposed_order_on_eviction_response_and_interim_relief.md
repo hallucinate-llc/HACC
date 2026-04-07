@@ -1,7 +1,7 @@
 # [Proposed] Order On Defendants' Response To Eviction Motion And Cross-Motion For Interim Relief
 
-IN THE CIRCUIT COURT OF THE STATE OF OREGON
-FOR THE COUNTY OF CLACKAMAS
+IN THE CLACKAMAS COUNTY JUSTICE COURT
+STATE OF OREGON
 
 HOUSING AUTHORITY OF CLACKAMAS COUNTY,
 Plaintiff,
@@ -11,7 +11,7 @@ v.
 BENJAMIN JAY BARBER and JANE KAY CORTEZ,
 Defendants.
 
-Case No. __________________
+Case No. 26FE0586
 
 The Court, having considered Plaintiff's eviction motion, Defendants' response, Defendants' cross-motion for interim relief, the supporting memorandum, declarations, and the record, hereby orders:
 
@@ -27,4 +27,4 @@ IT IS SO ORDERED.
 Dated: _____________
 
 ________________________________
-Circuit Court Judge
+Justice Court Judge

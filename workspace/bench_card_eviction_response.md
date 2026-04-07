@@ -2,14 +2,14 @@
 
 ## Core Theme
 
-HACC should not get possession while both housing paths it directed the household to use were still unfinished:
+HACC should not get possession while the source-linked housing paths it directed the household to use were still unfinished:
 
 - the Hillside Park redevelopment replacement-housing application path was not processed;
 - the alternate port-out path to Multnomah County stretched across four calendar months and still was not complete.
 
 ## Best 30-Second Opening
 
-Your Honor, this is not a simple holdover. HACC triggered redevelopment-related relocation duties, told us to use a replacement-housing application path tied to Hillside Park, and also told us in the alternative to port the voucher to another county. The first path was not processed, and the second path remained incomplete across four calendar months. HACC should not get possession while the very paths it directed us to use were still unfinished.
+Your Honor, this is not a simple holdover. Section 18 imposed relocation duties on HACC, HACC then told us to use a replacement-housing path tied to Hillside Park, and HACC later put three relocation options in writing with an April 30 deadline. But the first path was not processed, and the alternate port-out path remained incomplete across four calendar months. HACC should not get possession while the very paths it directed us to use were still unfinished.
 
 ## Best Exhibits
 
@@ -34,6 +34,13 @@ HACC says Quantum had the packet and did not forward it.
 Point:
 - the application path was not processed.
 
+### Exhibit M
+
+HACC's March 26, 2026 options email.
+
+Point:
+- HACC still treated relocation as three unresolved paths with an April 30 deadline.
+
 ### Exhibit W
 
 Waterleaf application screenshot.
@@ -48,13 +55,6 @@ Waterleaf / porting thread.
 Point:
 - HACC knew of the port path by January 12 and acknowledged it by January 26.
 
-### Exhibit M
-
-March orientation / voucher thread.
-
-Point:
-- late March still waiting on voucher issuance and accommodation issues.
-
 ## Five-Step Story
 
 1. HACC triggered relocation duties.
@@ -65,7 +65,7 @@ Point:
 
 ## Best Legal Point
 
-This case should not be treated as a household-caused failure to move where the record shows the housing paths HACC itself identified remained unfinished.
+This case should not be treated as a household-caused failure to move where the record shows HACC was obligated to complete relocation paths it triggered, defendants were permitted to rely on those paths, and the paths remained unfinished.
 
 ## Narrow Ask
 

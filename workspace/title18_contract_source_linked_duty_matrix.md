@@ -1,5 +1,7 @@
 # Title 18 And Contract Source-Linked Duty Matrix
 
+Case No. 26FE0586
+
 This matrix is limited to duties supported by the source texts actually reviewed:
 
 - `42 U.S.C. § 1437p`
@@ -131,6 +133,21 @@ Why this is directly source-linked:
   - moving forward with Blossom; or
   - using a Tenant Protection Voucher.
 
+## 10.A. Undertaken Three-Option Completion Duty
+
+Duty:
+Once HACC later put three relocation options in writing and required that all of them be completed by April 30, 2026, HACC had an undertaken duty to administer those paths consistently with that deadline and was not free to rely on its own noncompletion as an eviction predicate.
+
+Source:
+- [message.json](/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404-narrow/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/message.json)
+
+Why this is directly source-linked:
+- In that March 26, 2026 email, HACC summarized:
+  - `Option 1 - Porting to Multnomah County`
+  - `Option 2 - Searching Independently in Clackamas County Using a Tenant Protection Voucher (TPV)`
+  - `Option 3 - Assigned PBV unit at Parkside Heights Building B`
+- The same email says `all options require a move by April 30` and warns that eviction documentation will be filed if the move is not completed by that date.
+
 ## 11. Undertaken Intake-Routing Duty
 
 Duty:
@@ -197,8 +214,10 @@ The best-supported deontic formulation from the presently reviewed sources is:
 - `O(HACC, perform Section 18 relocation steps required by law)`
 - `O(HACC, administer the PBV/RAD replacement-housing path it adopted in its own plan)`
 - `O(HACC, administer the Blossom-or-TPV choice it directed the household to make)`
+- `O(HACC, administer the three written relocation options it set out on March 26, 2026)`
 - `O(HACC, provide hearing opportunity before eviction in the RAD/PBV setting)`
 - `O(HACC/Quantum process chain, preserve and forward the intake packet through the documented route)`
+- `P(Defendants, rely on the offered relocation paths while HACC processes them)`
 - `not completed(relocation and undertaken processing duties) -> F(HACC, treat household as ordinary eviction default)`
 
-That last step is not being asserted as a free-floating moral judgment. It is the combined consequence of the federal relocation sources plus HACC's own documented replacement-housing process.
+That last step is presented as the combined consequence of the federal relocation sources plus HACC's own documented replacement-housing process.

@@ -1,7 +1,7 @@
 # Defendants' Motion For Order To Show Cause Re Quantum Residential's Nonprocessing Of The Barber-Cortez Applications
 
-IN THE CIRCUIT COURT OF THE STATE OF OREGON
-FOR THE COUNTY OF CLACKAMAS
+IN THE CLACKAMAS COUNTY JUSTICE COURT
+STATE OF OREGON
 
 HOUSING AUTHORITY OF CLACKAMAS COUNTY,
 Plaintiff,
@@ -11,7 +11,7 @@ v.
 BENJAMIN JAY BARBER and JANE KAY CORTEZ,
 Defendants.
 
-Case No. __________________
+Case No. 26FE0586
 
 DEFENDANTS' MOTION FOR ORDER TO SHOW CAUSE RE QUANTUM RESIDENTIAL'S NONPROCESSING OF THE BARBER-CORTEZ APPLICATIONS
 
@@ -27,6 +27,8 @@ This request is narrow and record-based.
 4. Benjamin Barber contemporaneously complained in writing that Blossom had refused to process the application, had refused to house a service animal, and had engaged in discrimination.
 5. The same intake and processing failure is already central to defendants' eviction response, interim-relief request, and motion to join Quantum.
 6. HACC's own public and Administrative Plan materials show that this was part of a PBV/RAD replacement-housing path tied to Hillside redevelopment, not a disconnected private application.
+
+More specifically, the record shows a duty-bearing relocation and replacement-housing path, a packet-routing failure inside that path, and an unresolved question about what Quantum did with the application materials after receipt. See 42 U.S.C. § 1437p(d); 24 C.F.R. § 970.21; Ex. G (binder pp. 23-26); Ex. T (binder pp. 63-93); Ex. V (binder pp. 94-122). That is why a targeted show-cause response is warranted.
 
 ## Requested Show-Cause Topics
 

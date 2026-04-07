@@ -2,7 +2,7 @@
 
 ## If The Court Says: `Why isn't this just a failure to move?`
 
-Because the record shows HACC itself directed the household into two separate relocation paths, and neither one was complete when HACC moved toward eviction.
+Because the record shows HACC itself directed the household into source-linked relocation paths, HACC's March 26, 2026 email still treated those paths as unresolved options requiring completion by April 30, and neither path was complete when HACC moved toward eviction.
 
 ## If The Court Says: `What exactly was not processed?`
 
@@ -14,7 +14,7 @@ The redevelopment replacement-housing path that HACC tied to the Hillside Park d
 
 ## If The Court Says: `What is the best document for that?`
 
-Exhibit G for the January 8 notice, and Exhibit V for HACC's later acknowledgment that Quantum had the packet but did not transmit it.
+Exhibit G for the January 8 notice, Exhibit V for HACC's later acknowledgment that Quantum had the packet but did not transmit it, and Exhibit M for HACC's March 26, 2026 email laying out three unresolved options with an April 30 deadline.
 
 ## If The Court Says: `What about the port to Multnomah County?`
 
@@ -26,11 +26,11 @@ Not as an exact percentage from the current record, but a substantial amount, an
 
 ## If The Court Says: `Do you have a law that says they had to finish it by a certain date?`
 
-The stronger point is not a fixed short numeric deadline. The stronger point is that Section 18 required HACC to complete the relocation process lawfully before treating displacement as finished, 42 U.S.C. § 1437p(d); 24 C.F.R. § 970.21, and VAWA required HACC to actually administer the emergency transfer path it was using, 24 C.F.R. § 5.2009. So HACC should not obtain possession while those paths were still incomplete.
+The stronger point is not a fixed short numeric deadline imposed by statute alone. The stronger point is that Section 18 required HACC to complete the relocation process lawfully before treating displacement as finished, 42 U.S.C. § 1437p(d); 24 C.F.R. § 970.21, and HACC's own March 26, 2026 email then imposed an April 30 completion deadline on the three relocation paths it was still offering. So HACC should not obtain possession while those same paths were still incomplete.
 
 ## If The Court Says: `Are you saying they were actually barred from filing eviction?`
 
-Yes, on the current record and at the time they moved toward possession. The strongest deontic framing is that once Section 18 relocation duties were triggered, and once HACC directed the household into specific replacement-housing and portability paths, HACC was obligated to complete those relocation steps before treating displacement as complete and was therefore barred from filing eviction while those duties remained materially unfinished. The contract and implied-contract findings reinforce the same point because HACC also undertook a household-specific relocation process and then sued for possession before carrying it through.
+Yes, on the current record and at the time they moved toward possession. The strongest deontic framing is that once Section 18 relocation duties were triggered, and once HACC directed the household into specific replacement-housing and portability paths, HACC was obligated to complete those relocation steps before treating displacement as complete. Defendants were permitted to rely on those offered paths while HACC processed them. That means HACC was barred from filing eviction while those duties remained materially unfinished.
 
 ## If The Court Says: `Why does Quantum matter in this eviction case?`
 
