@@ -3,6 +3,13 @@
 
 This memorandum is a support draft for the companion motions in this folder. It is written conservatively and assumes that the record will continue to be supplemented with certified court records and any HACC source materials.
 
+The current posture should now be understood in four layers:
+
+1. doctrine that is grounded in Oregon authority;
+2. verified facts drawn from the current repository;
+3. proof-state limits, including inference-only and source-record gaps; and
+4. filing requests that should track only what the first three layers can presently support.
+
 ## I. Current filing posture
 
 The current record is strong enough to support a request that the Court require explanation and preserve the status quo against further collateral interference. The current record is not yet equally strong on every final contempt or sanctions predicate. This memorandum therefore supports two related but distinct requests:
@@ -31,6 +38,13 @@ At the present stage, the central question is not whether every final contempt e
 
 That threshold showing supports a show-cause process because it raises a concrete question whether the challenged conduct was an attempt to bypass court-created boundaries through collateral channels rather than through lawful modification, hearing, or compliance.
 
+That request is now better grounded in Oregon authority. The current authority layer supports:
+
+1. `ORS 33.055` for an aggrieved-party remedial-contempt initiation path;
+2. `ORS 33.075` for compelled appearance if an order to appear is later served and ignored;
+3. `ORS 33.105` for remedial sanctions if contempt elements are ultimately established; and
+4. `ORS 125.075` and `125.080` for the objection and hearing structure on the protective-proceeding side.
+
 ## IV. Why sanctions remain a proof-gated but serious remedy
 
 The sanctions request should remain conditional, but it is not speculative. The current record supports a serious inquiry into whether the challenged conduct reflects:
@@ -41,6 +55,8 @@ The sanctions request should remain conditional, but it is not speculative. The 
 4. prejudice in the form of housing instability, administrative burden, and delay.
 
 The present record is strongest on notice, self-help posture, and downstream prejudice. It is weaker on the exact prior-authority order and the exact Solomon-to-HACC communication chain. For that reason, the better present request is a sanctions framework that allows the Court to impose only the relief supported after additional record completion.
+
+The principal sanctions authority currently grounded in the workspace is `ORCP 17 C(2)-(4)`. That supports a filing-focused sanctions theory if the Court later finds improper purpose, inadequate legal support, or factual assertions lacking evidentiary basis. It does not eliminate the need to prove those predicates in this case.
 
 ## V. Prejudice and practical harm
 
@@ -59,6 +75,10 @@ The filings should continue using the following restrained formulation:
 `On information and belief, Solomon Barber pursued a course of conduct that combined post-notice self-help theories, possible collateral interference with housing or authority matters involving Jane Cortez, and unnecessary burden or delay.`
 
 That formulation fits the current record better than any broader statement that the repository already conclusively proves every contempt or sanctions predicate.
+
+The same limiting approach should apply to collateral estoppel. The doctrine is now authority-grounded through Oregon appellate cases, but the actual prior separate proceeding record remains incomplete. So the correct current formulation is:
+
+`The doctrine is available, but its application in this matter remains proof-gated pending the certified prior proceeding record.`
 
 ## VII. Record-completion items
 

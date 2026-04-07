@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-04-07",
+  "strict": {
+    "active_rule_count": 30,
+    "unresolved_rule_ids": [
+      "r1_guardian_permission_if_prior_appointment",
+      "r2_noninterference_prohibition_for_benjamin",
+      "r3_benjamin_obligation_comply_or_seek_relief",
+      "r5_solomon_obligated_appear_and_answer",
+      "r7_solomon_forbidden_refile_precluded_issue",
+      "r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved"
+    ],
+    "inactive_rule_ids": [
+      "r17_responding_custodian_obligated_execute_or_query_protocol_upon_service",
+      "r18_benjamin_permitted_issue_deficiency_notice_after_incomplete_subpoena_response",
+      "r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage"
+    ]
+  },
+  "inclusive": {
+    "active_rule_count": 31,
+    "unresolved_rule_ids": [
+      "r1_guardian_permission_if_prior_appointment",
+      "r2_noninterference_prohibition_for_benjamin",
+      "r3_benjamin_obligation_comply_or_seek_relief",
+      "r5_solomon_obligated_appear_and_answer",
+      "r7_solomon_forbidden_refile_precluded_issue"
+    ],
+    "inactive_rule_ids": [
+      "r17_responding_custodian_obligated_execute_or_query_protocol_upon_service",
+      "r18_benjamin_permitted_issue_deficiency_notice_after_incomplete_subpoena_response",
+      "r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage"
+    ]
+  },
+  "notes": [
+    "unresolved means antecedents true but proof-status gated under mode policy",
+    "inactive means one or more antecedent facts currently false"
+  ]
+}

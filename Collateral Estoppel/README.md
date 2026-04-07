@@ -63,6 +63,14 @@ Primary staged files for this round:
 - `drafts/final_filing_set/22_subpoena_deficiency_notice_template_final.md`
 - `drafts/final_filing_set/23_declaration_re_subpoena_noncompliance_final.md`
 - `drafts/final_filing_set/24_motion_to_compel_subpoena_compliance_and_sanctions_final.md`
+- `drafts/final_filing_set/25_ready_to_serve_recipient_manifests_final.md`
+- `drafts/final_filing_set/26_subpoena_service_return_tracker_template.csv`
+- `drafts/final_filing_set/27_subpoena_service_return_tracker_guide_final.md`
+- `drafts/final_filing_set/28_active_service_log_2026-04-07.csv`
+- `drafts/final_filing_set/29_active_service_log_2026-04-07.md`
+- `drafts/final_filing_set/30_service_deadline_calculator_guide_final.md`
+- `drafts/final_filing_set/31_service_deadline_calculator_template.csv`
+- `drafts/final_filing_set/32_deadline_update_log_2026-04-07.md`
 - `knowledge_graph/guardianship_case_graph.json`
 - `knowledge_graph/guardianship_case_graph.md`
 - `knowledge_graph/deontic_theorem_workbook.md`

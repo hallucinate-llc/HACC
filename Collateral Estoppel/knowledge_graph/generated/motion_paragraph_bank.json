@@ -25,9 +25,14 @@
             "paragraph": "Based on f_restraining_order_granted (verified, dates=['2025-11-20'], source=sam_barber_restraining_order_ocr.txt, confidence=None(None), kind=None); f_restraining_order_in_effect (verified, dates=['2025-11-20'], source=sam_barber_restraining_order_ocr.txt, confidence=None(None), kind=None); f_solomon_noncooperation_statement (verified, dates=['2026-03-10'], source=transcript.txt, confidence=None(None), kind=None), the rule r5c_solomon_forbidden_self_help_noncooperation yields F(person:solomon, adopt_self_help_noncooperation_posture, order:eppdapa_restraining_order) with activation estimate 2026-03-10. Movant requests relief consistent with this rule-grounded posture."
           },
           {
+            "rule_id": "r6_hacc_obligated_document_authority_chain_for_lease_change",
+            "activation_date_estimate": "2026-01-12",
+            "paragraph": "Based on f_hacc_removed_benjamin_effective_2026_01_01 (verified, dates=['2026-01-01', '2026-01-12'], source=message.eml, confidence=None(None), kind=None); f_hacc_internal_review_claimed (verified, dates=['2026-01-12'], source=message.eml, confidence=None(None), kind=None); f_hacc_court_documentation_basis_claimed (verified, dates=['2026-01-12'], source=message.eml, confidence=None(None), kind=None), the rule r6_hacc_obligated_document_authority_chain_for_lease_change yields O(org:hacc, identify_actor_document_and_authority_chain_for_lease_change, household:jane_cortez_household) with activation estimate 2026-01-12. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
             "rule_id": "r6b_hacc_obligated_document_lease_basis",
-            "activation_date_estimate": "2026-01-01",
-            "paragraph": "Based on f_hacc_lease_adjustment_effective_2026_01_01 (verified, dates=['2026-01-01'], source=HACC vawa violation.pdf, confidence=None(None), kind=None), the rule r6b_hacc_obligated_document_lease_basis yields O(org:hacc, document_basis_for_household_composition_or_lease_adjustment, household:jane_cortez_household) with activation estimate 2026-01-01. Movant requests relief consistent with this rule-grounded posture."
+            "activation_date_estimate": "2026-01-12",
+            "paragraph": "Based on f_hacc_lease_adjustment_effective_2026_01_01 (verified, dates=['2026-01-01'], source=HACC vawa violation.pdf, confidence=None(None), kind=None); f_hacc_removed_benjamin_effective_2026_01_01 (verified, dates=['2026-01-01', '2026-01-12'], source=message.eml, confidence=None(None), kind=None), the rule r6b_hacc_obligated_document_lease_basis yields O(org:hacc, document_basis_for_household_composition_or_lease_adjustment, household:jane_cortez_household) with activation estimate 2026-01-12. Movant requests relief consistent with this rule-grounded posture."
           },
           {
             "rule_id": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
@@ -68,6 +73,41 @@
             "rule_id": "r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
             "activation_date_estimate": "2026-03-26",
             "paragraph": "Based on f_feed_ev_hacc_notice_brother_calls_after_granted_order (verified, dates=['2026-03-26'], source=message.json, confidence=medium(0.7), kind=json_export_extract); f_feed_ev_hacc_notice_third_party_contact_with_restrained_person (verified, dates=['2026-03-26'], source=message.json, confidence=medium(0.7), kind=json_export_extract), the rule r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling yields O(org:hacc, avoid_third_party_housing_contact_with_restrained_person_and_document_response, person:jane_cortez) with activation estimate 2026-03-26. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r15_benjamin_permitted_serve_subpoena_packets",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_subpoena_workflow_components_staged (verified, dates=['2026-04-07'], source=final_filing_set, confidence=None(None), kind=None); f_subpoena_recipients_ready_to_serve (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r15_benjamin_permitted_serve_subpoena_packets yields P(person:benjamin_barber, serve_staged_subpoena_packets, case:26PR00641) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r16_benjamin_obligated_track_service_and_deadlines",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_active_service_log_initialized (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None); f_subpoena_workflow_components_staged (verified, dates=['2026-04-07'], source=final_filing_set, confidence=None(None), kind=None), the rule r16_benjamin_obligated_track_service_and_deadlines yields O(person:benjamin_barber, maintain_service_and_deadline_tracking, case:26PR00641) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_subpoena_pre_service_phase_only (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r20_case_permitted_treat_enforcement_path_as_pending_pre_service yields P(case:guardianship_collateral_estoppel, treat_subpoena_enforcement_motion_path_as_pending_until_service, case:26PR00641) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r21_case_obligated_resolve_actor_assignment_conflict",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_actor_assignment_conflict_benjamin_vs_solomon_interference (verified, dates=['2026-04-07'], source=generate_formal_reasoning_artifacts.py, confidence=None(None), kind=None), the rule r21_case_obligated_resolve_actor_assignment_conflict yields O(case:guardianship_collateral_estoppel, resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record, issue:interference_actor_assignment) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r23_case_permitted_initiate_remedial_contempt_path",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_ors_33_055_remedial_contempt_procedure (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_restraining_order_in_effect (verified, dates=['2025-11-20'], source=sam_barber_restraining_order_ocr.txt, confidence=None(None), kind=None); f_solomon_service_position_statement (verified, dates=['2026-03-10'], source=transcript.txt, confidence=None(None), kind=None), the rule r23_case_permitted_initiate_remedial_contempt_path yields P(case:guardianship_collateral_estoppel, initiate_remedial_contempt_or_show_cause_path, person:solomon) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_ors_125_080_hearing_and_counsel (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_notice_to_respondent (verified, dates=['2026-03-31'], source=solomon_motion_for_guardianship_ocr.txt, confidence=None(None), kind=None), the rule r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel yields P(case:26PR00641, assert_respondent_right_to_appear_in_person_or_by_counsel, person:jane_cortez) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_orcp_9_service_of_later_filed_papers (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_orcp_10_time_computation (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_petition_exists (verified, dates=['2026-03-31'], source=solomon_motion_for_guardianship_ocr.txt, confidence=None(None), kind=None), the rule r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines yields P(case:guardianship_collateral_estoppel, use_orcp9_service_and_orcp10_deadline_computation_for_later_filed_motion_packets, issue:service_and_deadlines) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
           }
         ],
         "/home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md": [
@@ -75,6 +115,56 @@
             "rule_id": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
             "activation_date_estimate": "2026-04-07",
             "paragraph": "Based on f_hacc_named_notice_to_solomon_order_not_found (verified, dates=['2026-04-07'], source=protective_order_and_hacc_notice_timeline.md, confidence=None(None), kind=None), the rule r6c_solomon_interference_not_proved_by_named_hacc_notice_gap yields P(case:guardianship_collateral_estoppel, treat_solomon_hacc_interference_as_inference_not_direct_proof, person:solomon) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_prior_appointment_source_order_not_found (verified, dates=['2026-04-07'], source=deontic_logic_gap_review_2026-04-07.md, confidence=None(None), kind=None), the rule r6d_case_obligated_treat_prior_appointment_as_hypothesis_only yields O(case:guardianship_collateral_estoppel, treat_prior_appointment_theory_as_hypothesis_until_source_order_found, issue:prior_appointment_for_jane_cortez) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_hacc_actor_identification_record_not_found_locally (verified, dates=['2026-04-07'], source=missing_exhibit_search_status_2026-04-07.md, confidence=None(None), kind=None); f_hacc_exhibit_r_requires_compelled_production (verified, dates=['2026-04-07'], source=subpoena_target_memo_hacc_lease_authority_record.md, confidence=None(None), kind=None), the rule r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain yields P(case:guardianship_collateral_estoppel, seek_compelled_production_of_hacc_actor_document_authority_chain, issue:lease_change_actor_identification) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_subpoena_pre_service_phase_only (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r20_case_permitted_treat_enforcement_path_as_pending_pre_service yields P(case:guardianship_collateral_estoppel, treat_subpoena_enforcement_motion_path_as_pending_until_service, case:26PR00641) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r21_case_obligated_resolve_actor_assignment_conflict",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_actor_assignment_conflict_benjamin_vs_solomon_interference (verified, dates=['2026-04-07'], source=generate_formal_reasoning_artifacts.py, confidence=None(None), kind=None), the rule r21_case_obligated_resolve_actor_assignment_conflict yields O(case:guardianship_collateral_estoppel, resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record, issue:interference_actor_assignment) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r22_case_obligated_finalize_authority_citations_before_filing",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_table_placeholders_unresolved (verified, dates=['2026-04-07'], source=06_oregon_authority_table_placeholders.md, confidence=None(None), kind=None), the rule r22_case_obligated_finalize_authority_citations_before_filing yields O(case:guardianship_collateral_estoppel, finalize_governing_authority_citations_before_final_filing, doc:06_oregon_authority_table_placeholders.md) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r23_case_permitted_initiate_remedial_contempt_path",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_ors_33_055_remedial_contempt_procedure (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_restraining_order_in_effect (verified, dates=['2025-11-20'], source=sam_barber_restraining_order_ocr.txt, confidence=None(None), kind=None); f_solomon_service_position_statement (verified, dates=['2026-03-10'], source=transcript.txt, confidence=None(None), kind=None), the rule r23_case_permitted_initiate_remedial_contempt_path yields P(case:guardianship_collateral_estoppel, initiate_remedial_contempt_or_show_cause_path, person:solomon) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_ors_33_105_remedial_sanctions (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_hacc_removed_benjamin_effective_2026_01_01 (verified, dates=['2026-01-01', '2026-01-12'], source=message.eml, confidence=None(None), kind=None), the rule r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved yields P(case:guardianship_collateral_estoppel, seek_compensatory_or_compliance_oriented_remedial_sanctions_if_contempt_is_proved, issue:prejudice_and_noninterference_relief) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_orcp_17_improper_purpose_and_support (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_hacc_named_notice_to_solomon_order_not_found (verified, dates=['2026-04-07'], source=protective_order_and_hacc_notice_timeline.md, confidence=None(None), kind=None), the rule r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown yields P(case:guardianship_collateral_estoppel, seek_orcp_17_sanctions_if_filing_is_shown_improper_or_factually_or_legally_unsupported, issue:sanctions_track) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_orcp_55_subpoena_obedience (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_orcp_46_discovery_sanctions (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_hacc_exhibit_r_requires_compelled_production (verified, dates=['2026-04-07'], source=subpoena_target_memo_hacc_lease_authority_record.md, confidence=None(None), kind=None), the rule r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46 yields P(case:guardianship_collateral_estoppel, seek_subpoena_enforcement_and_related_expenses_after_nonparty_noncompliance, org:hacc) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_orcp_9_service_of_later_filed_papers (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_orcp_10_time_computation (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_petition_exists (verified, dates=['2026-03-31'], source=solomon_motion_for_guardianship_ocr.txt, confidence=None(None), kind=None), the rule r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines yields P(case:guardianship_collateral_estoppel, use_orcp9_service_and_orcp10_deadline_computation_for_later_filed_motion_packets, issue:service_and_deadlines) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
           }
         ],
         "/home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md": [
@@ -82,45 +172,83 @@
             "rule_id": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
             "activation_date_estimate": "2026-04-07",
             "paragraph": "Based on f_hacc_named_notice_to_solomon_order_not_found (verified, dates=['2026-04-07'], source=protective_order_and_hacc_notice_timeline.md, confidence=None(None), kind=None), the rule r6c_solomon_interference_not_proved_by_named_hacc_notice_gap yields P(case:guardianship_collateral_estoppel, treat_solomon_hacc_interference_as_inference_not_direct_proof, person:solomon) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_prior_appointment_source_order_not_found (verified, dates=['2026-04-07'], source=deontic_logic_gap_review_2026-04-07.md, confidence=None(None), kind=None), the rule r6d_case_obligated_treat_prior_appointment_as_hypothesis_only yields O(case:guardianship_collateral_estoppel, treat_prior_appointment_theory_as_hypothesis_until_source_order_found, issue:prior_appointment_for_jane_cortez) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_hacc_actor_identification_record_not_found_locally (verified, dates=['2026-04-07'], source=missing_exhibit_search_status_2026-04-07.md, confidence=None(None), kind=None); f_hacc_exhibit_r_requires_compelled_production (verified, dates=['2026-04-07'], source=subpoena_target_memo_hacc_lease_authority_record.md, confidence=None(None), kind=None), the rule r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain yields P(case:guardianship_collateral_estoppel, seek_compelled_production_of_hacc_actor_document_authority_chain, issue:lease_change_actor_identification) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_subpoena_pre_service_phase_only (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r20_case_permitted_treat_enforcement_path_as_pending_pre_service yields P(case:guardianship_collateral_estoppel, treat_subpoena_enforcement_motion_path_as_pending_until_service, case:26PR00641) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r21_case_obligated_resolve_actor_assignment_conflict",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_actor_assignment_conflict_benjamin_vs_solomon_interference (verified, dates=['2026-04-07'], source=generate_formal_reasoning_artifacts.py, confidence=None(None), kind=None), the rule r21_case_obligated_resolve_actor_assignment_conflict yields O(case:guardianship_collateral_estoppel, resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record, issue:interference_actor_assignment) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r22_case_obligated_finalize_authority_citations_before_filing",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_table_placeholders_unresolved (verified, dates=['2026-04-07'], source=06_oregon_authority_table_placeholders.md, confidence=None(None), kind=None), the rule r22_case_obligated_finalize_authority_citations_before_filing yields O(case:guardianship_collateral_estoppel, finalize_governing_authority_citations_before_final_filing, doc:06_oregon_authority_table_placeholders.md) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r23_case_permitted_initiate_remedial_contempt_path",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_ors_33_055_remedial_contempt_procedure (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_restraining_order_in_effect (verified, dates=['2025-11-20'], source=sam_barber_restraining_order_ocr.txt, confidence=None(None), kind=None); f_solomon_service_position_statement (verified, dates=['2026-03-10'], source=transcript.txt, confidence=None(None), kind=None), the rule r23_case_permitted_initiate_remedial_contempt_path yields P(case:guardianship_collateral_estoppel, initiate_remedial_contempt_or_show_cause_path, person:solomon) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_ors_33_105_remedial_sanctions (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_hacc_removed_benjamin_effective_2026_01_01 (verified, dates=['2026-01-01', '2026-01-12'], source=message.eml, confidence=None(None), kind=None), the rule r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved yields P(case:guardianship_collateral_estoppel, seek_compensatory_or_compliance_oriented_remedial_sanctions_if_contempt_is_proved, issue:prejudice_and_noninterference_relief) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_orcp_17_improper_purpose_and_support (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_hacc_named_notice_to_solomon_order_not_found (verified, dates=['2026-04-07'], source=protective_order_and_hacc_notice_timeline.md, confidence=None(None), kind=None), the rule r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown yields P(case:guardianship_collateral_estoppel, seek_orcp_17_sanctions_if_filing_is_shown_improper_or_factually_or_legally_unsupported, issue:sanctions_track) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_orcp_55_subpoena_obedience (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_orcp_46_discovery_sanctions (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_hacc_exhibit_r_requires_compelled_production (verified, dates=['2026-04-07'], source=subpoena_target_memo_hacc_lease_authority_record.md, confidence=None(None), kind=None), the rule r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46 yields P(case:guardianship_collateral_estoppel, seek_subpoena_enforcement_and_related_expenses_after_nonparty_noncompliance, org:hacc) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_ors_125_050_protective_orcp_oec (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_petition_exists (verified, dates=['2026-03-31'], source=solomon_motion_for_guardianship_ocr.txt, confidence=None(None), kind=None), the rule r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding yields P(case:26PR00641, apply_orcp_and_oec_subject_to_specific_chapter_125_overrides, proceeding:protective_proceeding) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r29_case_obligated_preserve_notice_and_objection_window",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_ors_125_060_notice_recipients (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_ors_125_065_notice_manner_and_timing (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_notice_to_respondent (verified, dates=['2026-03-31'], source=solomon_motion_for_guardianship_ocr.txt, confidence=None(None), kind=None), the rule r29_case_obligated_preserve_notice_and_objection_window yields O(case:26PR00641, preserve_statutory_notice_and_objection_window_for_protective_petition, person:jane_cortez) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r30_case_obligated_schedule_hearing_on_presented_objection",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_ors_125_075_objections (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_ors_125_080_hearing_and_counsel (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_respondent_objection_form_present (verified, dates=['2026-04-05'], source=guardianship_timeline.md, confidence=None(None), kind=None), the rule r30_case_obligated_schedule_hearing_on_presented_objection yields O(case:26PR00641, schedule_and_process_hearing_on_guardianship_objection, person:jane_cortez) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_ors_125_080_hearing_and_counsel (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_notice_to_respondent (verified, dates=['2026-03-31'], source=solomon_motion_for_guardianship_ocr.txt, confidence=None(None), kind=None), the rule r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel yields P(case:26PR00641, assert_respondent_right_to_appear_in_person_or_by_counsel, person:jane_cortez) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_orcp_9_service_of_later_filed_papers (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_orcp_10_time_computation (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_petition_exists (verified, dates=['2026-03-31'], source=solomon_motion_for_guardianship_ocr.txt, confidence=None(None), kind=None), the rule r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines yields P(case:guardianship_collateral_estoppel, use_orcp9_service_and_orcp10_deadline_computation_for_later_filed_motion_packets, issue:service_and_deadlines) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
           }
         ]
       }
     },
     "inclusive": {
       "motions": {
-        "/home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md": [
-          {
-            "rule_id": "r1_guardian_permission_if_prior_appointment",
-            "activation_date_estimate": null,
-            "paragraph": "Based on f_client_prior_appointment (alleged, dates=[], source=client_assertion, confidence=None(None), kind=None), the rule r1_guardian_permission_if_prior_appointment yields P(person:benjamin_barber, act_within_valid_guardian_scope, person:jane_cortez) with activation estimate None. Movant requests relief consistent with this rule-grounded posture."
-          },
-          {
-            "rule_id": "r2_noninterference_prohibition_for_benjamin",
-            "activation_date_estimate": null,
-            "paragraph": "Based on f_client_prior_appointment (alleged, dates=[], source=client_assertion, confidence=None(None), kind=None); f_client_benjamin_housing_interference (alleged, dates=[], source=client_assertion, confidence=None(None), kind=None), the rule r2_noninterference_prohibition_for_benjamin yields F(person:benjamin_barber, interfere_with_guardian_or_housing_process, process:hacc_housing_contract) with activation estimate None. Movant requests relief consistent with this rule-grounded posture."
-          },
-          {
-            "rule_id": "r6_hacc_obligated_process_consistently_with_valid_authority",
-            "activation_date_estimate": null,
-            "paragraph": "Based on f_hacc_process_exists (alleged, dates=[], source=client_assertion, confidence=None(None), kind=None); f_client_prior_appointment (alleged, dates=[], source=client_assertion, confidence=None(None), kind=None), the rule r6_hacc_obligated_process_consistently_with_valid_authority yields O(org:hacc, process_housing_consistent_with_valid_guardian_authority, person:jane_cortez) with activation estimate None. Movant requests relief consistent with this rule-grounded posture."
-          },
-          {
-            "rule_id": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
-            "activation_date_estimate": "2026-04-07",
-            "paragraph": "Based on f_hacc_named_notice_to_solomon_order_not_found (verified, dates=['2026-04-07'], source=protective_order_and_hacc_notice_timeline.md, confidence=None(None), kind=None), the rule r6c_solomon_interference_not_proved_by_named_hacc_notice_gap yields P(case:guardianship_collateral_estoppel, treat_solomon_hacc_interference_as_inference_not_direct_proof, person:solomon) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
-          }
-        ],
         "/home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md": [
-          {
-            "rule_id": "r2_noninterference_prohibition_for_benjamin",
-            "activation_date_estimate": null,
-            "paragraph": "Based on f_client_prior_appointment (alleged, dates=[], source=client_assertion, confidence=None(None), kind=None); f_client_benjamin_housing_interference (alleged, dates=[], source=client_assertion, confidence=None(None), kind=None), the rule r2_noninterference_prohibition_for_benjamin yields F(person:benjamin_barber, interfere_with_guardian_or_housing_process, process:hacc_housing_contract) with activation estimate None. Movant requests relief consistent with this rule-grounded posture."
-          },
-          {
-            "rule_id": "r3_benjamin_obligation_comply_or_seek_relief",
-            "activation_date_estimate": null,
-            "paragraph": "Based on f_client_prior_appointment (alleged, dates=[], source=client_assertion, confidence=None(None), kind=None); f_client_benjamin_order_disregard (alleged, dates=[], source=client_assertion, confidence=None(None), kind=None), the rule r3_benjamin_obligation_comply_or_seek_relief yields O(person:benjamin_barber, comply_with_order_or_seek_relief, order:prior_guardianship_order) with activation estimate None. Movant requests relief consistent with this rule-grounded posture."
-          },
           {
             "rule_id": "r4_solomon_forbidden_abuse_contact_property_control",
             "activation_date_estimate": "2025-11-20",
@@ -130,11 +258,6 @@
             "rule_id": "r4b_solomon_forbidden_enter_residence",
             "activation_date_estimate": "2025-11-20",
             "paragraph": "Based on f_solomon_actual_notice_on_2025_11_17 (verified, dates=['2025-11-17'], source=uid_660669_Mon--17-Nov-2025-20-38-24--0000_New-text-message-from-solomon--503--381-6911.eml, confidence=None(None), kind=None); f_restraining_order_granted (verified, dates=['2025-11-20'], source=sam_barber_restraining_order_ocr.txt, confidence=None(None), kind=None); f_restraining_order_residence_restrictions (verified, dates=['2025-11-20'], source=sam_barber_restraining_order_ocr.txt, confidence=None(None), kind=None), the rule r4b_solomon_forbidden_enter_residence yields F(person:solomon, enter_or_remain_at_petitioner_residence, location:10043_se_32nd_ave) with activation estimate 2025-11-20. Movant requests relief consistent with this rule-grounded posture."
-          },
-          {
-            "rule_id": "r5_solomon_obligated_appear_and_answer",
-            "activation_date_estimate": "2026-03-10",
-            "paragraph": "Based on f_restraining_order_no_further_service_needed (verified, dates=['2025-11-20'], source=sam_barber_restraining_order_ocr.txt, confidence=None(None), kind=None); f_client_solomon_failed_appearance (alleged, dates=['2026-03-10'], source=client_assertion, confidence=None(None), kind=None), the rule r5_solomon_obligated_appear_and_answer yields O(person:solomon, appear_and_answer_show_cause, proceeding:related_order_hearing) with activation estimate 2026-03-10. Movant requests relief consistent with this rule-grounded posture."
           },
           {
             "rule_id": "r5b_solomon_obligated_seek_hearing_or_comply",
@@ -147,9 +270,14 @@
             "paragraph": "Based on f_restraining_order_granted (verified, dates=['2025-11-20'], source=sam_barber_restraining_order_ocr.txt, confidence=None(None), kind=None); f_restraining_order_in_effect (verified, dates=['2025-11-20'], source=sam_barber_restraining_order_ocr.txt, confidence=None(None), kind=None); f_solomon_noncooperation_statement (verified, dates=['2026-03-10'], source=transcript.txt, confidence=None(None), kind=None), the rule r5c_solomon_forbidden_self_help_noncooperation yields F(person:solomon, adopt_self_help_noncooperation_posture, order:eppdapa_restraining_order) with activation estimate 2026-03-10. Movant requests relief consistent with this rule-grounded posture."
           },
           {
+            "rule_id": "r6_hacc_obligated_document_authority_chain_for_lease_change",
+            "activation_date_estimate": "2026-01-12",
+            "paragraph": "Based on f_hacc_removed_benjamin_effective_2026_01_01 (verified, dates=['2026-01-01', '2026-01-12'], source=message.eml, confidence=None(None), kind=None); f_hacc_internal_review_claimed (verified, dates=['2026-01-12'], source=message.eml, confidence=None(None), kind=None); f_hacc_court_documentation_basis_claimed (verified, dates=['2026-01-12'], source=message.eml, confidence=None(None), kind=None), the rule r6_hacc_obligated_document_authority_chain_for_lease_change yields O(org:hacc, identify_actor_document_and_authority_chain_for_lease_change, household:jane_cortez_household) with activation estimate 2026-01-12. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
             "rule_id": "r6b_hacc_obligated_document_lease_basis",
-            "activation_date_estimate": "2026-01-01",
-            "paragraph": "Based on f_hacc_lease_adjustment_effective_2026_01_01 (verified, dates=['2026-01-01'], source=HACC vawa violation.pdf, confidence=None(None), kind=None), the rule r6b_hacc_obligated_document_lease_basis yields O(org:hacc, document_basis_for_household_composition_or_lease_adjustment, household:jane_cortez_household) with activation estimate 2026-01-01. Movant requests relief consistent with this rule-grounded posture."
+            "activation_date_estimate": "2026-01-12",
+            "paragraph": "Based on f_hacc_lease_adjustment_effective_2026_01_01 (verified, dates=['2026-01-01'], source=HACC vawa violation.pdf, confidence=None(None), kind=None); f_hacc_removed_benjamin_effective_2026_01_01 (verified, dates=['2026-01-01', '2026-01-12'], source=message.eml, confidence=None(None), kind=None), the rule r6b_hacc_obligated_document_lease_basis yields O(org:hacc, document_basis_for_household_composition_or_lease_adjustment, household:jane_cortez_household) with activation estimate 2026-01-12. Movant requests relief consistent with this rule-grounded posture."
           },
           {
             "rule_id": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
@@ -190,6 +318,46 @@
             "rule_id": "r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
             "activation_date_estimate": "2026-03-26",
             "paragraph": "Based on f_feed_ev_hacc_notice_brother_calls_after_granted_order (verified, dates=['2026-03-26'], source=message.json, confidence=medium(0.7), kind=json_export_extract); f_feed_ev_hacc_notice_third_party_contact_with_restrained_person (verified, dates=['2026-03-26'], source=message.json, confidence=medium(0.7), kind=json_export_extract), the rule r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling yields O(org:hacc, avoid_third_party_housing_contact_with_restrained_person_and_document_response, person:jane_cortez) with activation estimate 2026-03-26. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r15_benjamin_permitted_serve_subpoena_packets",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_subpoena_workflow_components_staged (verified, dates=['2026-04-07'], source=final_filing_set, confidence=None(None), kind=None); f_subpoena_recipients_ready_to_serve (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r15_benjamin_permitted_serve_subpoena_packets yields P(person:benjamin_barber, serve_staged_subpoena_packets, case:26PR00641) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r16_benjamin_obligated_track_service_and_deadlines",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_active_service_log_initialized (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None); f_subpoena_workflow_components_staged (verified, dates=['2026-04-07'], source=final_filing_set, confidence=None(None), kind=None), the rule r16_benjamin_obligated_track_service_and_deadlines yields O(person:benjamin_barber, maintain_service_and_deadline_tracking, case:26PR00641) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_subpoena_pre_service_phase_only (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r20_case_permitted_treat_enforcement_path_as_pending_pre_service yields P(case:guardianship_collateral_estoppel, treat_subpoena_enforcement_motion_path_as_pending_until_service, case:26PR00641) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r21_case_obligated_resolve_actor_assignment_conflict",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_actor_assignment_conflict_benjamin_vs_solomon_interference (verified, dates=['2026-04-07'], source=generate_formal_reasoning_artifacts.py, confidence=None(None), kind=None), the rule r21_case_obligated_resolve_actor_assignment_conflict yields O(case:guardianship_collateral_estoppel, resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record, issue:interference_actor_assignment) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r23_case_permitted_initiate_remedial_contempt_path",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_ors_33_055_remedial_contempt_procedure (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_restraining_order_in_effect (verified, dates=['2025-11-20'], source=sam_barber_restraining_order_ocr.txt, confidence=None(None), kind=None); f_solomon_service_position_statement (verified, dates=['2026-03-10'], source=transcript.txt, confidence=None(None), kind=None), the rule r23_case_permitted_initiate_remedial_contempt_path yields P(case:guardianship_collateral_estoppel, initiate_remedial_contempt_or_show_cause_path, person:solomon) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_ors_33_075_compel_appearance (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_client_solomon_failed_appearance (alleged, dates=['2026-03-10'], source=client_assertion, confidence=None(None), kind=None), the rule r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved yields P(case:guardianship_collateral_estoppel, seek_order_or_warrant_to_compel_appearance_if_order_to_appear_is_served_and_ignored, person:solomon) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_ors_125_080_hearing_and_counsel (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_notice_to_respondent (verified, dates=['2026-03-31'], source=solomon_motion_for_guardianship_ocr.txt, confidence=None(None), kind=None), the rule r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel yields P(case:26PR00641, assert_respondent_right_to_appear_in_person_or_by_counsel, person:jane_cortez) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_orcp_9_service_of_later_filed_papers (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_orcp_10_time_computation (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_petition_exists (verified, dates=['2026-03-31'], source=solomon_motion_for_guardianship_ocr.txt, confidence=None(None), kind=None), the rule r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines yields P(case:guardianship_collateral_estoppel, use_orcp9_service_and_orcp10_deadline_computation_for_later_filed_motion_packets, issue:service_and_deadlines) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
           }
         ],
         "/home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md": [
@@ -197,6 +365,143 @@
             "rule_id": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
             "activation_date_estimate": "2026-04-07",
             "paragraph": "Based on f_hacc_named_notice_to_solomon_order_not_found (verified, dates=['2026-04-07'], source=protective_order_and_hacc_notice_timeline.md, confidence=None(None), kind=None), the rule r6c_solomon_interference_not_proved_by_named_hacc_notice_gap yields P(case:guardianship_collateral_estoppel, treat_solomon_hacc_interference_as_inference_not_direct_proof, person:solomon) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_prior_appointment_source_order_not_found (verified, dates=['2026-04-07'], source=deontic_logic_gap_review_2026-04-07.md, confidence=None(None), kind=None), the rule r6d_case_obligated_treat_prior_appointment_as_hypothesis_only yields O(case:guardianship_collateral_estoppel, treat_prior_appointment_theory_as_hypothesis_until_source_order_found, issue:prior_appointment_for_jane_cortez) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_hacc_actor_identification_record_not_found_locally (verified, dates=['2026-04-07'], source=missing_exhibit_search_status_2026-04-07.md, confidence=None(None), kind=None); f_hacc_exhibit_r_requires_compelled_production (verified, dates=['2026-04-07'], source=subpoena_target_memo_hacc_lease_authority_record.md, confidence=None(None), kind=None), the rule r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain yields P(case:guardianship_collateral_estoppel, seek_compelled_production_of_hacc_actor_document_authority_chain, issue:lease_change_actor_identification) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_subpoena_pre_service_phase_only (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r20_case_permitted_treat_enforcement_path_as_pending_pre_service yields P(case:guardianship_collateral_estoppel, treat_subpoena_enforcement_motion_path_as_pending_until_service, case:26PR00641) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r21_case_obligated_resolve_actor_assignment_conflict",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_actor_assignment_conflict_benjamin_vs_solomon_interference (verified, dates=['2026-04-07'], source=generate_formal_reasoning_artifacts.py, confidence=None(None), kind=None), the rule r21_case_obligated_resolve_actor_assignment_conflict yields O(case:guardianship_collateral_estoppel, resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record, issue:interference_actor_assignment) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r22_case_obligated_finalize_authority_citations_before_filing",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_table_placeholders_unresolved (verified, dates=['2026-04-07'], source=06_oregon_authority_table_placeholders.md, confidence=None(None), kind=None), the rule r22_case_obligated_finalize_authority_citations_before_filing yields O(case:guardianship_collateral_estoppel, finalize_governing_authority_citations_before_final_filing, doc:06_oregon_authority_table_placeholders.md) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r23_case_permitted_initiate_remedial_contempt_path",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_ors_33_055_remedial_contempt_procedure (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_restraining_order_in_effect (verified, dates=['2025-11-20'], source=sam_barber_restraining_order_ocr.txt, confidence=None(None), kind=None); f_solomon_service_position_statement (verified, dates=['2026-03-10'], source=transcript.txt, confidence=None(None), kind=None), the rule r23_case_permitted_initiate_remedial_contempt_path yields P(case:guardianship_collateral_estoppel, initiate_remedial_contempt_or_show_cause_path, person:solomon) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_ors_33_075_compel_appearance (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_client_solomon_failed_appearance (alleged, dates=['2026-03-10'], source=client_assertion, confidence=None(None), kind=None), the rule r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved yields P(case:guardianship_collateral_estoppel, seek_order_or_warrant_to_compel_appearance_if_order_to_appear_is_served_and_ignored, person:solomon) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_ors_33_105_remedial_sanctions (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_hacc_removed_benjamin_effective_2026_01_01 (verified, dates=['2026-01-01', '2026-01-12'], source=message.eml, confidence=None(None), kind=None), the rule r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved yields P(case:guardianship_collateral_estoppel, seek_compensatory_or_compliance_oriented_remedial_sanctions_if_contempt_is_proved, issue:prejudice_and_noninterference_relief) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_orcp_17_improper_purpose_and_support (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_hacc_named_notice_to_solomon_order_not_found (verified, dates=['2026-04-07'], source=protective_order_and_hacc_notice_timeline.md, confidence=None(None), kind=None), the rule r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown yields P(case:guardianship_collateral_estoppel, seek_orcp_17_sanctions_if_filing_is_shown_improper_or_factually_or_legally_unsupported, issue:sanctions_track) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_orcp_55_subpoena_obedience (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_orcp_46_discovery_sanctions (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_hacc_exhibit_r_requires_compelled_production (verified, dates=['2026-04-07'], source=subpoena_target_memo_hacc_lease_authority_record.md, confidence=None(None), kind=None), the rule r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46 yields P(case:guardianship_collateral_estoppel, seek_subpoena_enforcement_and_related_expenses_after_nonparty_noncompliance, org:hacc) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_orcp_9_service_of_later_filed_papers (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_orcp_10_time_computation (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_petition_exists (verified, dates=['2026-03-31'], source=solomon_motion_for_guardianship_ocr.txt, confidence=None(None), kind=None), the rule r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines yields P(case:guardianship_collateral_estoppel, use_orcp9_service_and_orcp10_deadline_computation_for_later_filed_motion_packets, issue:service_and_deadlines) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          }
+        ],
+        "/home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md": [
+          {
+            "rule_id": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_hacc_named_notice_to_solomon_order_not_found (verified, dates=['2026-04-07'], source=protective_order_and_hacc_notice_timeline.md, confidence=None(None), kind=None), the rule r6c_solomon_interference_not_proved_by_named_hacc_notice_gap yields P(case:guardianship_collateral_estoppel, treat_solomon_hacc_interference_as_inference_not_direct_proof, person:solomon) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_prior_appointment_source_order_not_found (verified, dates=['2026-04-07'], source=deontic_logic_gap_review_2026-04-07.md, confidence=None(None), kind=None), the rule r6d_case_obligated_treat_prior_appointment_as_hypothesis_only yields O(case:guardianship_collateral_estoppel, treat_prior_appointment_theory_as_hypothesis_until_source_order_found, issue:prior_appointment_for_jane_cortez) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_hacc_actor_identification_record_not_found_locally (verified, dates=['2026-04-07'], source=missing_exhibit_search_status_2026-04-07.md, confidence=None(None), kind=None); f_hacc_exhibit_r_requires_compelled_production (verified, dates=['2026-04-07'], source=subpoena_target_memo_hacc_lease_authority_record.md, confidence=None(None), kind=None), the rule r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain yields P(case:guardianship_collateral_estoppel, seek_compelled_production_of_hacc_actor_document_authority_chain, issue:lease_change_actor_identification) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_subpoena_pre_service_phase_only (verified, dates=['2026-04-07'], source=28_active_service_log_2026-04-07.csv, confidence=None(None), kind=None), the rule r20_case_permitted_treat_enforcement_path_as_pending_pre_service yields P(case:guardianship_collateral_estoppel, treat_subpoena_enforcement_motion_path_as_pending_until_service, case:26PR00641) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r21_case_obligated_resolve_actor_assignment_conflict",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_actor_assignment_conflict_benjamin_vs_solomon_interference (verified, dates=['2026-04-07'], source=generate_formal_reasoning_artifacts.py, confidence=None(None), kind=None), the rule r21_case_obligated_resolve_actor_assignment_conflict yields O(case:guardianship_collateral_estoppel, resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record, issue:interference_actor_assignment) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r22_case_obligated_finalize_authority_citations_before_filing",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_table_placeholders_unresolved (verified, dates=['2026-04-07'], source=06_oregon_authority_table_placeholders.md, confidence=None(None), kind=None), the rule r22_case_obligated_finalize_authority_citations_before_filing yields O(case:guardianship_collateral_estoppel, finalize_governing_authority_citations_before_final_filing, doc:06_oregon_authority_table_placeholders.md) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r23_case_permitted_initiate_remedial_contempt_path",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_ors_33_055_remedial_contempt_procedure (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_restraining_order_in_effect (verified, dates=['2025-11-20'], source=sam_barber_restraining_order_ocr.txt, confidence=None(None), kind=None); f_solomon_service_position_statement (verified, dates=['2026-03-10'], source=transcript.txt, confidence=None(None), kind=None), the rule r23_case_permitted_initiate_remedial_contempt_path yields P(case:guardianship_collateral_estoppel, initiate_remedial_contempt_or_show_cause_path, person:solomon) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_ors_33_075_compel_appearance (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_client_solomon_failed_appearance (alleged, dates=['2026-03-10'], source=client_assertion, confidence=None(None), kind=None), the rule r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved yields P(case:guardianship_collateral_estoppel, seek_order_or_warrant_to_compel_appearance_if_order_to_appear_is_served_and_ignored, person:solomon) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_ors_33_105_remedial_sanctions (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_hacc_removed_benjamin_effective_2026_01_01 (verified, dates=['2026-01-01', '2026-01-12'], source=message.eml, confidence=None(None), kind=None), the rule r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved yields P(case:guardianship_collateral_estoppel, seek_compensatory_or_compliance_oriented_remedial_sanctions_if_contempt_is_proved, issue:prejudice_and_noninterference_relief) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_orcp_17_improper_purpose_and_support (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_hacc_named_notice_to_solomon_order_not_found (verified, dates=['2026-04-07'], source=protective_order_and_hacc_notice_timeline.md, confidence=None(None), kind=None), the rule r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown yields P(case:guardianship_collateral_estoppel, seek_orcp_17_sanctions_if_filing_is_shown_improper_or_factually_or_legally_unsupported, issue:sanctions_track) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_orcp_55_subpoena_obedience (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_orcp_46_discovery_sanctions (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_hacc_exhibit_r_requires_compelled_production (verified, dates=['2026-04-07'], source=subpoena_target_memo_hacc_lease_authority_record.md, confidence=None(None), kind=None), the rule r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46 yields P(case:guardianship_collateral_estoppel, seek_subpoena_enforcement_and_related_expenses_after_nonparty_noncompliance, org:hacc) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_ors_125_050_protective_orcp_oec (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_petition_exists (verified, dates=['2026-03-31'], source=solomon_motion_for_guardianship_ocr.txt, confidence=None(None), kind=None), the rule r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding yields P(case:26PR00641, apply_orcp_and_oec_subject_to_specific_chapter_125_overrides, proceeding:protective_proceeding) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r29_case_obligated_preserve_notice_and_objection_window",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_ors_125_060_notice_recipients (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_ors_125_065_notice_manner_and_timing (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_notice_to_respondent (verified, dates=['2026-03-31'], source=solomon_motion_for_guardianship_ocr.txt, confidence=None(None), kind=None), the rule r29_case_obligated_preserve_notice_and_objection_window yields O(case:26PR00641, preserve_statutory_notice_and_objection_window_for_protective_petition, person:jane_cortez) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r30_case_obligated_schedule_hearing_on_presented_objection",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_ors_125_075_objections (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_ors_125_080_hearing_and_counsel (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_respondent_objection_form_present (verified, dates=['2026-04-05'], source=guardianship_timeline.md, confidence=None(None), kind=None), the rule r30_case_obligated_schedule_hearing_on_presented_objection yields O(case:26PR00641, schedule_and_process_hearing_on_guardianship_objection, person:jane_cortez) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_ors_125_080_hearing_and_counsel (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_notice_to_respondent (verified, dates=['2026-03-31'], source=solomon_motion_for_guardianship_ocr.txt, confidence=None(None), kind=None), the rule r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel yields P(case:26PR00641, assert_respondent_right_to_appear_in_person_or_by_counsel, person:jane_cortez) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
+          },
+          {
+            "rule_id": "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+            "activation_date_estimate": "2026-04-07",
+            "paragraph": "Based on f_authority_orcp_9_service_of_later_filed_papers (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_authority_orcp_10_time_computation (verified, dates=['2026-04-07'], source=oregon_authority_grounding_memo_2026-04-07.md, confidence=None(None), kind=None); f_petition_exists (verified, dates=['2026-03-31'], source=solomon_motion_for_guardianship_ocr.txt, confidence=None(None), kind=None), the rule r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines yields P(case:guardianship_collateral_estoppel, use_orcp9_service_and_orcp10_deadline_computation_for_later_filed_motion_packets, issue:service_and_deadlines) with activation estimate 2026-04-07. Movant requests relief consistent with this rule-grounded posture."
           }
         ]
       }

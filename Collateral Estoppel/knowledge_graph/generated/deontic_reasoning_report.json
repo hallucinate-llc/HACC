@@ -10,13 +10,17 @@
     ]
   },
   "solomon_event_feed_count": 19,
-  "solomon_repository_hit_count": 1337,
-  "solomon_repository_fact_count": 254,
+  "solomon_repository_hit_count": 1400,
+  "solomon_repository_fact_count": 292,
   "modes": {
     "strict": {
       "active_rules": [
         {
           "rule_id": "r4_solomon_forbidden_abuse_contact_property_control",
+          "track": "filing",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
           "description": "Given granted in-effect restraining order with property restrictions, Solomon is forbidden to abuse/contact/interfere/control property.",
           "activation_date_estimate": "2025-11-20",
           "antecedents": [
@@ -71,6 +75,10 @@
         },
         {
           "rule_id": "r4b_solomon_forbidden_enter_residence",
+          "track": "filing",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
           "description": "Given the granted restraining order and residence restriction, Solomon is forbidden from entering or remaining at the protected residence.",
           "activation_date_estimate": "2025-11-20",
           "antecedents": [
@@ -109,6 +117,10 @@
         },
         {
           "rule_id": "r5b_solomon_obligated_seek_hearing_or_comply",
+          "track": "filing",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
           "description": "If Solomon stated he would comply only once served despite an already in-effect order, he was obligated to seek a hearing or comply rather than self-suspend effectiveness.",
           "activation_date_estimate": "2026-03-10",
           "antecedents": [
@@ -147,6 +159,10 @@
         },
         {
           "rule_id": "r5c_solomon_forbidden_self_help_noncooperation",
+          "track": "filing",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
           "description": "If Solomon adopted an explicit noncooperation posture after the granted in-effect order, self-help noncooperation is forbidden.",
           "activation_date_estimate": "2026-03-10",
           "antecedents": [
@@ -184,9 +200,56 @@
           }
         },
         {
+          "rule_id": "r6_hacc_obligated_document_authority_chain_for_lease_change",
+          "track": "filing",
+          "authority_refs": [
+            "auth:orcp_17_c"
+          ],
+          "description": "If HACC states that a lease change followed internal review and court documentation on file, HACC is obligated in this model to identify the actor, document, and authority chain behind that change.",
+          "activation_date_estimate": "2026-01-12",
+          "antecedents": [
+            {
+              "fact_id": "f_hacc_removed_benjamin_effective_2026_01_01",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-01-01",
+                "2026-01-12"
+              ]
+            },
+            {
+              "fact_id": "f_hacc_internal_review_claimed",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-01-12"
+              ]
+            },
+            {
+              "fact_id": "f_hacc_court_documentation_basis_claimed",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-01-12"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c6_hacc_obligated_document_authority_chain_for_lease_change",
+            "modality": "O",
+            "actor": "org:hacc",
+            "action": "identify_actor_document_and_authority_chain_for_lease_change",
+            "target": "household:jane_cortez_household"
+          }
+        },
+        {
           "rule_id": "r6b_hacc_obligated_document_lease_basis",
+          "track": "filing",
+          "authority_refs": [
+            "auth:orcp_17_c"
+          ],
           "description": "If HACC implemented a January 1, 2026 lease adjustment, HACC was obligated to document the basis for that household-composition change.",
-          "activation_date_estimate": "2026-01-01",
+          "activation_date_estimate": "2026-01-12",
           "antecedents": [
             {
               "fact_id": "f_hacc_lease_adjustment_effective_2026_01_01",
@@ -194,6 +257,15 @@
               "value": "true",
               "dates": [
                 "2026-01-01"
+              ]
+            },
+            {
+              "fact_id": "f_hacc_removed_benjamin_effective_2026_01_01",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-01-01",
+                "2026-01-12"
               ]
             }
           ],
@@ -207,6 +279,8 @@
         },
         {
           "rule_id": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
+          "track": "filing",
+          "authority_refs": [],
           "description": "Because no named HACC notice message about the Solomon order has been found in preserved mail, the HACC-interference theory should presently be treated as an inference rather than direct proof.",
           "activation_date_estimate": "2026-04-07",
           "antecedents": [
@@ -228,7 +302,67 @@
           }
         },
         {
+          "rule_id": "r6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+          "track": "filing",
+          "authority_refs": [],
+          "description": "If no source order has been found for the claimed prior appointment, the prior-appointment theory must remain hypothesis-only in filing-facing outputs.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_prior_appointment_source_order_not_found",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+            "modality": "O",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "treat_prior_appointment_theory_as_hypothesis_until_source_order_found",
+            "target": "issue:prior_appointment_for_jane_cortez"
+          }
+        },
+        {
+          "rule_id": "r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+          "track": "filing",
+          "authority_refs": [],
+          "description": "If local search did not locate the HACC actor-identification record and compelled production is required, the case posture is permitted to pursue Exhibit R production.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_hacc_actor_identification_record_not_found_locally",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_hacc_exhibit_r_requires_compelled_production",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+            "modality": "P",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "seek_compelled_production_of_hacc_actor_document_authority_chain",
+            "target": "issue:lease_change_actor_identification"
+          }
+        },
+        {
           "rule_id": "r8_solomon_notice_ack_triggers_court_relief_path",
+          "track": "filing",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
           "description": "If Solomon acknowledged awareness of restraining order and the order is in effect, Solomon is obligated to seek court relief rather than self-help noncompliance.",
           "activation_date_estimate": "2025-11-20",
           "antecedents": [
@@ -259,6 +393,10 @@
         },
         {
           "rule_id": "r9_solomon_wait_for_service_conflicts_with_no_further_service",
+          "track": "filing",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
           "description": "If Solomon stated he would wait for service but the order states no further service needed due to appearance, conditioning compliance on extra service is forbidden in this model.",
           "activation_date_estimate": "2026-03-10",
           "antecedents": [
@@ -289,6 +427,10 @@
         },
         {
           "rule_id": "r10_solomon_noncooperation_statement_conflicts_with_effective_order",
+          "track": "filing",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
           "description": "If Solomon states non-incentivized cooperation while order is in effect, intentional noncooperation is forbidden in this model.",
           "activation_date_estimate": "2026-03-10",
           "antecedents": [
@@ -319,6 +461,10 @@
         },
         {
           "rule_id": "r11_solomon_already_have_order_statement_supports_notice",
+          "track": "filing",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
           "description": "If Solomon stated the other party already had the restraining order and order is in effect, Solomon is obligated to recognize existing order status.",
           "activation_date_estimate": "2025-11-20",
           "antecedents": [
@@ -349,6 +495,10 @@
         },
         {
           "rule_id": "r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order",
+          "track": "filing",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
           "description": "If Solomon states the order is not in effect while the order is in effect, asserting ineffectiveness without court relief is forbidden in this model.",
           "activation_date_estimate": "2026-03-10",
           "antecedents": [
@@ -379,6 +529,10 @@
         },
         {
           "rule_id": "r13_solomon_judge_overturn_statement_triggers_motion_path",
+          "track": "filing",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
           "description": "If Solomon states he would have the judge overturn the order while it is in effect, he is obligated to seek court modification before noncompliance.",
           "activation_date_estimate": "2026-03-10",
           "antecedents": [
@@ -409,6 +563,8 @@
         },
         {
           "rule_id": "r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
+          "track": "filing",
+          "authority_refs": [],
           "description": "If HACC is told that Jane is receiving calls about a restrained brother and third-party housing contact is occurring with a restrained person, HACC is obligated in this model to stop that contact path and document the response.",
           "activation_date_estimate": "2026-03-26",
           "antecedents": [
@@ -436,11 +592,507 @@
             "action": "avoid_third_party_housing_contact_with_restrained_person_and_document_response",
             "target": "person:jane_cortez"
           }
+        },
+        {
+          "rule_id": "r15_benjamin_permitted_serve_subpoena_packets",
+          "track": "workflow",
+          "authority_refs": [
+            "auth:orcp_55"
+          ],
+          "description": "If subpoena workflow components are staged and recipients are ready-to-serve, Benjamin is permitted to serve the staged subpoena packets.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_subpoena_workflow_components_staged",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_subpoena_recipients_ready_to_serve",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c15_benjamin_permitted_serve_subpoena_packets",
+            "modality": "P",
+            "actor": "person:benjamin_barber",
+            "action": "serve_staged_subpoena_packets",
+            "target": "case:26PR00641"
+          }
+        },
+        {
+          "rule_id": "r16_benjamin_obligated_track_service_and_deadlines",
+          "track": "workflow",
+          "authority_refs": [
+            "auth:orcp_55"
+          ],
+          "description": "If service log and workflow components exist, Benjamin is obligated in this model to maintain service/deadline tracking.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_active_service_log_initialized",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_subpoena_workflow_components_staged",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c16_benjamin_obligated_track_service_and_deadlines",
+            "modality": "O",
+            "actor": "person:benjamin_barber",
+            "action": "maintain_service_and_deadline_tracking",
+            "target": "case:26PR00641"
+          }
+        },
+        {
+          "rule_id": "r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+          "track": "workflow",
+          "authority_refs": [
+            "auth:orcp_55"
+          ],
+          "description": "If no subpoena service is yet completed, subpoena-enforcement motion path remains pending pre-service in this model.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_subpoena_pre_service_phase_only",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+            "modality": "P",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "treat_subpoena_enforcement_motion_path_as_pending_until_service",
+            "target": "case:26PR00641"
+          }
+        },
+        {
+          "rule_id": "r21_case_obligated_resolve_actor_assignment_conflict",
+          "track": "filing",
+          "authority_refs": [],
+          "description": "If the model contains a Benjamin-vs-Solomon interference actor conflict, the case posture is obligated to resolve that assignment with source records before final legal attribution.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_actor_assignment_conflict_benjamin_vs_solomon_interference",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c21_case_obligated_resolve_actor_assignment_conflict",
+            "modality": "O",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record",
+            "target": "issue:interference_actor_assignment"
+          }
+        },
+        {
+          "rule_id": "r22_case_obligated_finalize_authority_citations_before_filing",
+          "track": "filing",
+          "authority_refs": [],
+          "description": "If authority table placeholders remain unresolved, the case posture is obligated to finalize governing citations before final filing use.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_table_placeholders_unresolved",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c22_case_obligated_finalize_authority_citations_before_filing",
+            "modality": "O",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "finalize_governing_authority_citations_before_final_filing",
+            "target": "doc:06_oregon_authority_table_placeholders.md"
+          }
+        },
+        {
+          "rule_id": "r23_case_permitted_initiate_remedial_contempt_path",
+          "track": "filing",
+          "authority_refs": [
+            "auth:ors_33_055"
+          ],
+          "description": "If remedial-contempt authority is available and the record includes an in-effect order plus Solomon's service-position statement, the case posture is permitted to pursue a remedial contempt or show-cause path.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_ors_33_055_remedial_contempt_procedure",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_in_effect",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            },
+            {
+              "fact_id": "f_solomon_service_position_statement",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-10"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c23_case_permitted_initiate_remedial_contempt_path",
+            "modality": "P",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "initiate_remedial_contempt_or_show_cause_path",
+            "target": "person:solomon"
+          }
+        },
+        {
+          "rule_id": "r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+          "track": "filing",
+          "authority_refs": [
+            "auth:ors_33_105"
+          ],
+          "description": "If remedial-sanctions authority is available and prejudice-related housing change is documented, the case posture may seek compensatory or compliance-oriented remedial sanctions if contempt elements are later proved.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_ors_33_105_remedial_sanctions",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_hacc_removed_benjamin_effective_2026_01_01",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-01-01",
+                "2026-01-12"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+            "modality": "P",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "seek_compensatory_or_compliance_oriented_remedial_sanctions_if_contempt_is_proved",
+            "target": "issue:prejudice_and_noninterference_relief"
+          }
+        },
+        {
+          "rule_id": "r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+          "track": "filing",
+          "authority_refs": [
+            "auth:orcp_17_c"
+          ],
+          "description": "If ORCP 17 authority is available, the case posture may seek filing-related sanctions if improper purpose or inadequate factual/legal support is shown; current proof-state cautions remain in force.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_orcp_17_improper_purpose_and_support",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_hacc_named_notice_to_solomon_order_not_found",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+            "modality": "P",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "seek_orcp_17_sanctions_if_filing_is_shown_improper_or_factually_or_legally_unsupported",
+            "target": "issue:sanctions_track"
+          }
+        },
+        {
+          "rule_id": "r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+          "track": "workflow",
+          "authority_refs": [
+            "auth:orcp_55",
+            "auth:orcp_46"
+          ],
+          "description": "If subpoena-obedience and discovery-sanctions authority are available and compelled production is required, the case posture may pursue subpoena enforcement and related expense-shifting when the required noncompliance predicate is met.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_orcp_55_subpoena_obedience",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_authority_orcp_46_discovery_sanctions",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_hacc_exhibit_r_requires_compelled_production",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+            "modality": "P",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "seek_subpoena_enforcement_and_related_expenses_after_nonparty_noncompliance",
+            "target": "org:hacc"
+          }
+        },
+        {
+          "rule_id": "r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+          "track": "filing",
+          "authority_refs": [
+            "auth:ors_125_050"
+          ],
+          "description": "If ORS 125.050 authority is available and the protective petition is filed, the proceeding may apply ORCP and the Oregon Evidence Code except where chapter 125 provides otherwise.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_ors_125_050_protective_orcp_oec",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_petition_exists",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-31"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+            "modality": "P",
+            "actor": "case:26PR00641",
+            "action": "apply_orcp_and_oec_subject_to_specific_chapter_125_overrides",
+            "target": "proceeding:protective_proceeding"
+          }
+        },
+        {
+          "rule_id": "r29_case_obligated_preserve_notice_and_objection_window",
+          "track": "filing",
+          "authority_refs": [
+            "auth:ors_125_060",
+            "auth:ors_125_065"
+          ],
+          "description": "If chapter 125 notice authorities are available and notice issued to the respondent, the proceeding is obligated to preserve the statutory notice and objection framework.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_ors_125_060_notice_recipients",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_authority_ors_125_065_notice_manner_and_timing",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_notice_to_respondent",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-31"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c29_case_obligated_preserve_notice_and_objection_window",
+            "modality": "O",
+            "actor": "case:26PR00641",
+            "action": "preserve_statutory_notice_and_objection_window_for_protective_petition",
+            "target": "person:jane_cortez"
+          }
+        },
+        {
+          "rule_id": "r30_case_obligated_schedule_hearing_on_presented_objection",
+          "track": "filing",
+          "authority_refs": [
+            "auth:ors_125_075",
+            "auth:ors_125_080"
+          ],
+          "description": "If objection and hearing authorities are available and the packet includes a respondent objection form, the proceeding is obligated in this model to route the matter through the objection-hearing path.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_ors_125_075_objections",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_authority_ors_125_080_hearing_and_counsel",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_respondent_objection_form_present",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-05"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c30_case_obligated_schedule_hearing_on_presented_objection",
+            "modality": "O",
+            "actor": "case:26PR00641",
+            "action": "schedule_and_process_hearing_on_guardianship_objection",
+            "target": "person:jane_cortez"
+          }
+        },
+        {
+          "rule_id": "r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+          "track": "filing",
+          "authority_refs": [
+            "auth:ors_125_080"
+          ],
+          "description": "If ORS 125.080 authority is available and notice has issued, the case posture may assert the protected person's right to appear in person or by counsel at hearing.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_ors_125_080_hearing_and_counsel",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_notice_to_respondent",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-31"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+            "modality": "P",
+            "actor": "case:26PR00641",
+            "action": "assert_respondent_right_to_appear_in_person_or_by_counsel",
+            "target": "person:jane_cortez"
+          }
+        },
+        {
+          "rule_id": "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+          "track": "workflow",
+          "authority_refs": [
+            "auth:orcp_9",
+            "auth:orcp_10",
+            "auth:ors_125_050"
+          ],
+          "description": "If ORCP 9 and ORCP 10 authority are available, the case posture may use those rules for service and deadline computation on later-filed motion packets, subject to more specific chapter 125 notice rules where applicable.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_orcp_9_service_of_later_filed_papers",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_authority_orcp_10_time_computation",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_petition_exists",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-31"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+            "modality": "P",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "use_orcp9_service_and_orcp10_deadline_computation_for_later_filed_motion_packets",
+            "target": "issue:service_and_deadlines"
+          }
         }
       ],
       "unresolved_rules": [
         {
           "rule_id": "r1_guardian_permission_if_prior_appointment",
+          "track": "hypothesis",
+          "authority_refs": [],
           "description": "If prior appointment exists, Benjamin is permitted to act within valid guardian scope for Jane.",
           "activation_date_estimate": null,
           "antecedents": [
@@ -461,6 +1113,8 @@
         },
         {
           "rule_id": "r2_noninterference_prohibition_for_benjamin",
+          "track": "hypothesis",
+          "authority_refs": [],
           "description": "If prior appointment exists and interference is alleged, Benjamin is forbidden from interference.",
           "activation_date_estimate": null,
           "antecedents": [
@@ -487,6 +1141,8 @@
         },
         {
           "rule_id": "r3_benjamin_obligation_comply_or_seek_relief",
+          "track": "hypothesis",
+          "authority_refs": [],
           "description": "If prior appointment is in force and Benjamin disregarded order, Benjamin was obligated to comply or seek relief.",
           "activation_date_estimate": null,
           "antecedents": [
@@ -513,6 +1169,10 @@
         },
         {
           "rule_id": "r5_solomon_obligated_appear_and_answer",
+          "track": "hypothesis",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
           "description": "If no further service was required because Solomon appeared, later failure to appear supports an obligation to appear and answer.",
           "activation_date_estimate": "2026-03-10",
           "antecedents": [
@@ -542,36 +1202,31 @@
           }
         },
         {
-          "rule_id": "r6_hacc_obligated_process_consistently_with_valid_authority",
-          "description": "If housing process is active and appointment exists, HACC is obligated to process consistently with valid authority.",
-          "activation_date_estimate": null,
+          "rule_id": "r7_solomon_forbidden_refile_precluded_issue",
+          "track": "hypothesis",
+          "authority_refs": [
+            "auth:oregon_issue_preclusion_cases",
+            "auth:oregon_issue_preclusion_prior_separate_proceeding_cases"
+          ],
+          "description": "If issue preclusion applies, Solomon is forbidden from relitigating the precluded issue.",
+          "activation_date_estimate": "2026-04-07",
           "antecedents": [
             {
-              "fact_id": "f_hacc_process_exists",
-              "status": "alleged",
+              "fact_id": "f_authority_issue_preclusion_elements_official_oregon_cases",
+              "status": "verified",
               "value": "true",
-              "dates": []
+              "dates": [
+                "2026-04-07"
+              ]
             },
             {
-              "fact_id": "f_client_prior_appointment",
-              "status": "alleged",
+              "fact_id": "f_authority_issue_preclusion_requires_prior_separate_proceeding",
+              "status": "verified",
               "value": "true",
-              "dates": []
-            }
-          ],
-          "conclusion": {
-            "conclusion_id": "c6_hacc_obligated_process_consistent_with_order",
-            "modality": "O",
-            "actor": "org:hacc",
-            "action": "process_housing_consistent_with_valid_guardian_authority",
-            "target": "person:jane_cortez"
-          }
-        },
-        {
-          "rule_id": "r7_solomon_forbidden_refile_precluded_issue",
-          "description": "If issue preclusion applies, Solomon is forbidden from relitigating the precluded issue.",
-          "activation_date_estimate": "2026-03-31",
-          "antecedents": [
+              "dates": [
+                "2026-04-07"
+              ]
+            },
             {
               "fact_id": "f_collateral_estoppel_candidate",
               "status": "theory",
@@ -593,6 +1248,146 @@
             "actor": "person:solomon",
             "action": "relitigate_precluded_issue",
             "target": "issue:guardianship_authority"
+          }
+        },
+        {
+          "rule_id": "r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+          "track": "filing",
+          "authority_refs": [
+            "auth:ors_33_075"
+          ],
+          "description": "If compel-appearance authority is available and the claimed nonappearance predicate is later proved, the case posture may seek compelled appearance.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_ors_33_075_compel_appearance",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_client_solomon_failed_appearance",
+              "status": "alleged",
+              "value": "true",
+              "dates": [
+                "2026-03-10"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+            "modality": "P",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "seek_order_or_warrant_to_compel_appearance_if_order_to_appear_is_served_and_ignored",
+            "target": "person:solomon"
+          }
+        }
+      ],
+      "inactive_rules": [
+        {
+          "rule_id": "r17_responding_custodian_obligated_execute_or_query_protocol_upon_service",
+          "track": "workflow",
+          "authority_refs": [
+            "auth:orcp_55"
+          ],
+          "description": "If any subpoena service is completed and OR-joined protocol is defined, responding custodians are obligated in this model to execute the protocol and produce a search execution report.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_subpoena_service_completed_any",
+              "status": "verified",
+              "value": "false",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_or_joined_search_protocol_defined",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c17_responding_custodian_obligated_execute_or_query_protocol",
+            "modality": "O",
+            "actor": "role:responding_custodian",
+            "action": "execute_or_joined_identifier_queries_and_produce_search_execution_report",
+            "target": "case:26PR00641"
+          }
+        },
+        {
+          "rule_id": "r18_benjamin_permitted_issue_deficiency_notice_after_incomplete_subpoena_response",
+          "track": "workflow",
+          "authority_refs": [
+            "auth:orcp_46",
+            "auth:orcp_55"
+          ],
+          "description": "If an incomplete subpoena response is present and workflow components are staged, Benjamin is permitted in this model to issue a deficiency notice and cure deadline.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_subpoena_response_incomplete_any",
+              "status": "verified",
+              "value": "false",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_subpoena_workflow_components_staged",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c18_benjamin_permitted_issue_deficiency_notice",
+            "modality": "P",
+            "actor": "person:benjamin_barber",
+            "action": "issue_subpoena_deficiency_notice_and_set_cure_deadline",
+            "target": "case:26PR00641"
+          }
+        },
+        {
+          "rule_id": "r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage",
+          "track": "workflow",
+          "authority_refs": [
+            "auth:orcp_46",
+            "auth:orcp_55"
+          ],
+          "description": "If deficiency notices are in play and compel templates are staged, Benjamin is permitted in this model to move to compel and seek sanctions for noncompliance.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_deficiency_notice_sent_any",
+              "status": "verified",
+              "value": "false",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_subpoena_workflow_components_staged",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c19_benjamin_permitted_move_to_compel",
+            "modality": "P",
+            "actor": "person:benjamin_barber",
+            "action": "move_to_compel_and_seek_sanctions_for_subpoena_noncompliance",
+            "target": "case:26PR00641"
           }
         }
       ],
@@ -667,10 +1462,16 @@
         "org:hacc": {
           "O": [
             {
+              "action": "identify_actor_document_and_authority_chain_for_lease_change",
+              "target": "household:jane_cortez_household",
+              "rule_id": "r6_hacc_obligated_document_authority_chain_for_lease_change",
+              "activation_date_estimate": "2026-01-12"
+            },
+            {
               "action": "document_basis_for_household_composition_or_lease_adjustment",
               "target": "household:jane_cortez_household",
               "rule_id": "r6b_hacc_obligated_document_lease_basis",
-              "activation_date_estimate": "2026-01-01"
+              "activation_date_estimate": "2026-01-12"
             },
             {
               "action": "avoid_third_party_housing_contact_with_restrained_person_and_document_response",
@@ -683,12 +1484,123 @@
           "F": []
         },
         "case:guardianship_collateral_estoppel": {
-          "O": [],
+          "O": [
+            {
+              "action": "treat_prior_appointment_theory_as_hypothesis_until_source_order_found",
+              "target": "issue:prior_appointment_for_jane_cortez",
+              "rule_id": "r6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record",
+              "target": "issue:interference_actor_assignment",
+              "rule_id": "r21_case_obligated_resolve_actor_assignment_conflict",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "finalize_governing_authority_citations_before_final_filing",
+              "target": "doc:06_oregon_authority_table_placeholders.md",
+              "rule_id": "r22_case_obligated_finalize_authority_citations_before_filing",
+              "activation_date_estimate": "2026-04-07"
+            }
+          ],
           "P": [
             {
               "action": "treat_solomon_hacc_interference_as_inference_not_direct_proof",
               "target": "person:solomon",
               "rule_id": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "seek_compelled_production_of_hacc_actor_document_authority_chain",
+              "target": "issue:lease_change_actor_identification",
+              "rule_id": "r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "treat_subpoena_enforcement_motion_path_as_pending_until_service",
+              "target": "case:26PR00641",
+              "rule_id": "r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "initiate_remedial_contempt_or_show_cause_path",
+              "target": "person:solomon",
+              "rule_id": "r23_case_permitted_initiate_remedial_contempt_path",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "seek_compensatory_or_compliance_oriented_remedial_sanctions_if_contempt_is_proved",
+              "target": "issue:prejudice_and_noninterference_relief",
+              "rule_id": "r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "seek_orcp_17_sanctions_if_filing_is_shown_improper_or_factually_or_legally_unsupported",
+              "target": "issue:sanctions_track",
+              "rule_id": "r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "seek_subpoena_enforcement_and_related_expenses_after_nonparty_noncompliance",
+              "target": "org:hacc",
+              "rule_id": "r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "use_orcp9_service_and_orcp10_deadline_computation_for_later_filed_motion_packets",
+              "target": "issue:service_and_deadlines",
+              "rule_id": "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+              "activation_date_estimate": "2026-04-07"
+            }
+          ],
+          "F": []
+        },
+        "person:benjamin_barber": {
+          "O": [
+            {
+              "action": "maintain_service_and_deadline_tracking",
+              "target": "case:26PR00641",
+              "rule_id": "r16_benjamin_obligated_track_service_and_deadlines",
+              "activation_date_estimate": "2026-04-07"
+            }
+          ],
+          "P": [
+            {
+              "action": "serve_staged_subpoena_packets",
+              "target": "case:26PR00641",
+              "rule_id": "r15_benjamin_permitted_serve_subpoena_packets",
+              "activation_date_estimate": "2026-04-07"
+            }
+          ],
+          "F": []
+        },
+        "case:26PR00641": {
+          "O": [
+            {
+              "action": "preserve_statutory_notice_and_objection_window_for_protective_petition",
+              "target": "person:jane_cortez",
+              "rule_id": "r29_case_obligated_preserve_notice_and_objection_window",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "schedule_and_process_hearing_on_guardianship_objection",
+              "target": "person:jane_cortez",
+              "rule_id": "r30_case_obligated_schedule_hearing_on_presented_objection",
+              "activation_date_estimate": "2026-04-07"
+            }
+          ],
+          "P": [
+            {
+              "action": "apply_orcp_and_oec_subject_to_specific_chapter_125_overrides",
+              "target": "proceeding:protective_proceeding",
+              "rule_id": "r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "assert_respondent_right_to_appear_in_person_or_by_counsel",
+              "target": "person:jane_cortez",
+              "rule_id": "r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
               "activation_date_estimate": "2026-04-07"
             }
           ],
@@ -699,79 +1611,11 @@
     "inclusive": {
       "active_rules": [
         {
-          "rule_id": "r1_guardian_permission_if_prior_appointment",
-          "description": "If prior appointment exists, Benjamin is permitted to act within valid guardian scope for Jane.",
-          "activation_date_estimate": null,
-          "antecedents": [
-            {
-              "fact_id": "f_client_prior_appointment",
-              "status": "alleged",
-              "value": "true",
-              "dates": []
-            }
-          ],
-          "conclusion": {
-            "conclusion_id": "c1_benjamin_permitted_guardian_scope",
-            "modality": "P",
-            "actor": "person:benjamin_barber",
-            "action": "act_within_valid_guardian_scope",
-            "target": "person:jane_cortez"
-          }
-        },
-        {
-          "rule_id": "r2_noninterference_prohibition_for_benjamin",
-          "description": "If prior appointment exists and interference is alleged, Benjamin is forbidden from interference.",
-          "activation_date_estimate": null,
-          "antecedents": [
-            {
-              "fact_id": "f_client_prior_appointment",
-              "status": "alleged",
-              "value": "true",
-              "dates": []
-            },
-            {
-              "fact_id": "f_client_benjamin_housing_interference",
-              "status": "alleged",
-              "value": "true",
-              "dates": []
-            }
-          ],
-          "conclusion": {
-            "conclusion_id": "c2_benjamin_forbidden_interference",
-            "modality": "F",
-            "actor": "person:benjamin_barber",
-            "action": "interfere_with_guardian_or_housing_process",
-            "target": "process:hacc_housing_contract"
-          }
-        },
-        {
-          "rule_id": "r3_benjamin_obligation_comply_or_seek_relief",
-          "description": "If prior appointment is in force and Benjamin disregarded order, Benjamin was obligated to comply or seek relief.",
-          "activation_date_estimate": null,
-          "antecedents": [
-            {
-              "fact_id": "f_client_prior_appointment",
-              "status": "alleged",
-              "value": "true",
-              "dates": []
-            },
-            {
-              "fact_id": "f_client_benjamin_order_disregard",
-              "status": "alleged",
-              "value": "true",
-              "dates": []
-            }
-          ],
-          "conclusion": {
-            "conclusion_id": "c3_benjamin_obligated_comply_or_seek_relief",
-            "modality": "O",
-            "actor": "person:benjamin_barber",
-            "action": "comply_with_order_or_seek_relief",
-            "target": "order:prior_guardianship_order"
-          }
-        },
-        {
           "rule_id": "r4_solomon_forbidden_abuse_contact_property_control",
+          "track": "filing",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
           "description": "Given granted in-effect restraining order with property restrictions, Solomon is forbidden to abuse/contact/interfere/control property.",
           "activation_date_estimate": "2025-11-20",
           "antecedents": [
@@ -826,6 +1670,10 @@
         },
         {
           "rule_id": "r4b_solomon_forbidden_enter_residence",
+          "track": "filing",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
           "description": "Given the granted restraining order and residence restriction, Solomon is forbidden from entering or remaining at the protected residence.",
           "activation_date_estimate": "2025-11-20",
           "antecedents": [
@@ -863,37 +1711,11 @@
           }
         },
         {
-          "rule_id": "r5_solomon_obligated_appear_and_answer",
-          "description": "If no further service was required because Solomon appeared, later failure to appear supports an obligation to appear and answer.",
-          "activation_date_estimate": "2026-03-10",
-          "antecedents": [
-            {
-              "fact_id": "f_restraining_order_no_further_service_needed",
-              "status": "verified",
-              "value": "true",
-              "dates": [
-                "2025-11-20"
-              ]
-            },
-            {
-              "fact_id": "f_client_solomon_failed_appearance",
-              "status": "alleged",
-              "value": "true",
-              "dates": [
-                "2026-03-10"
-              ]
-            }
-          ],
-          "conclusion": {
-            "conclusion_id": "c5_solomon_obligated_appear_and_answer",
-            "modality": "O",
-            "actor": "person:solomon",
-            "action": "appear_and_answer_show_cause",
-            "target": "proceeding:related_order_hearing"
-          }
-        },
-        {
           "rule_id": "r5b_solomon_obligated_seek_hearing_or_comply",
+          "track": "filing",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
           "description": "If Solomon stated he would comply only once served despite an already in-effect order, he was obligated to seek a hearing or comply rather than self-suspend effectiveness.",
           "activation_date_estimate": "2026-03-10",
           "antecedents": [
@@ -932,6 +1754,10 @@
         },
         {
           "rule_id": "r5c_solomon_forbidden_self_help_noncooperation",
+          "track": "filing",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
           "description": "If Solomon adopted an explicit noncooperation posture after the granted in-effect order, self-help noncooperation is forbidden.",
           "activation_date_estimate": "2026-03-10",
           "antecedents": [
@@ -969,35 +1795,56 @@
           }
         },
         {
-          "rule_id": "r6_hacc_obligated_process_consistently_with_valid_authority",
-          "description": "If housing process is active and appointment exists, HACC is obligated to process consistently with valid authority.",
-          "activation_date_estimate": null,
+          "rule_id": "r6_hacc_obligated_document_authority_chain_for_lease_change",
+          "track": "filing",
+          "authority_refs": [
+            "auth:orcp_17_c"
+          ],
+          "description": "If HACC states that a lease change followed internal review and court documentation on file, HACC is obligated in this model to identify the actor, document, and authority chain behind that change.",
+          "activation_date_estimate": "2026-01-12",
           "antecedents": [
             {
-              "fact_id": "f_hacc_process_exists",
-              "status": "alleged",
+              "fact_id": "f_hacc_removed_benjamin_effective_2026_01_01",
+              "status": "verified",
               "value": "true",
-              "dates": []
+              "dates": [
+                "2026-01-01",
+                "2026-01-12"
+              ]
             },
             {
-              "fact_id": "f_client_prior_appointment",
-              "status": "alleged",
+              "fact_id": "f_hacc_internal_review_claimed",
+              "status": "verified",
               "value": "true",
-              "dates": []
+              "dates": [
+                "2026-01-12"
+              ]
+            },
+            {
+              "fact_id": "f_hacc_court_documentation_basis_claimed",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-01-12"
+              ]
             }
           ],
           "conclusion": {
-            "conclusion_id": "c6_hacc_obligated_process_consistent_with_order",
+            "conclusion_id": "c6_hacc_obligated_document_authority_chain_for_lease_change",
             "modality": "O",
             "actor": "org:hacc",
-            "action": "process_housing_consistent_with_valid_guardian_authority",
-            "target": "person:jane_cortez"
+            "action": "identify_actor_document_and_authority_chain_for_lease_change",
+            "target": "household:jane_cortez_household"
           }
         },
         {
           "rule_id": "r6b_hacc_obligated_document_lease_basis",
+          "track": "filing",
+          "authority_refs": [
+            "auth:orcp_17_c"
+          ],
           "description": "If HACC implemented a January 1, 2026 lease adjustment, HACC was obligated to document the basis for that household-composition change.",
-          "activation_date_estimate": "2026-01-01",
+          "activation_date_estimate": "2026-01-12",
           "antecedents": [
             {
               "fact_id": "f_hacc_lease_adjustment_effective_2026_01_01",
@@ -1005,6 +1852,15 @@
               "value": "true",
               "dates": [
                 "2026-01-01"
+              ]
+            },
+            {
+              "fact_id": "f_hacc_removed_benjamin_effective_2026_01_01",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-01-01",
+                "2026-01-12"
               ]
             }
           ],
@@ -1018,6 +1874,8 @@
         },
         {
           "rule_id": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
+          "track": "filing",
+          "authority_refs": [],
           "description": "Because no named HACC notice message about the Solomon order has been found in preserved mail, the HACC-interference theory should presently be treated as an inference rather than direct proof.",
           "activation_date_estimate": "2026-04-07",
           "antecedents": [
@@ -1039,7 +1897,67 @@
           }
         },
         {
+          "rule_id": "r6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+          "track": "filing",
+          "authority_refs": [],
+          "description": "If no source order has been found for the claimed prior appointment, the prior-appointment theory must remain hypothesis-only in filing-facing outputs.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_prior_appointment_source_order_not_found",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+            "modality": "O",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "treat_prior_appointment_theory_as_hypothesis_until_source_order_found",
+            "target": "issue:prior_appointment_for_jane_cortez"
+          }
+        },
+        {
+          "rule_id": "r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+          "track": "filing",
+          "authority_refs": [],
+          "description": "If local search did not locate the HACC actor-identification record and compelled production is required, the case posture is permitted to pursue Exhibit R production.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_hacc_actor_identification_record_not_found_locally",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_hacc_exhibit_r_requires_compelled_production",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+            "modality": "P",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "seek_compelled_production_of_hacc_actor_document_authority_chain",
+            "target": "issue:lease_change_actor_identification"
+          }
+        },
+        {
           "rule_id": "r8_solomon_notice_ack_triggers_court_relief_path",
+          "track": "filing",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
           "description": "If Solomon acknowledged awareness of restraining order and the order is in effect, Solomon is obligated to seek court relief rather than self-help noncompliance.",
           "activation_date_estimate": "2025-11-20",
           "antecedents": [
@@ -1070,6 +1988,10 @@
         },
         {
           "rule_id": "r9_solomon_wait_for_service_conflicts_with_no_further_service",
+          "track": "filing",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
           "description": "If Solomon stated he would wait for service but the order states no further service needed due to appearance, conditioning compliance on extra service is forbidden in this model.",
           "activation_date_estimate": "2026-03-10",
           "antecedents": [
@@ -1100,6 +2022,10 @@
         },
         {
           "rule_id": "r10_solomon_noncooperation_statement_conflicts_with_effective_order",
+          "track": "filing",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
           "description": "If Solomon states non-incentivized cooperation while order is in effect, intentional noncooperation is forbidden in this model.",
           "activation_date_estimate": "2026-03-10",
           "antecedents": [
@@ -1130,6 +2056,10 @@
         },
         {
           "rule_id": "r11_solomon_already_have_order_statement_supports_notice",
+          "track": "filing",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
           "description": "If Solomon stated the other party already had the restraining order and order is in effect, Solomon is obligated to recognize existing order status.",
           "activation_date_estimate": "2025-11-20",
           "antecedents": [
@@ -1160,6 +2090,10 @@
         },
         {
           "rule_id": "r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order",
+          "track": "filing",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
           "description": "If Solomon states the order is not in effect while the order is in effect, asserting ineffectiveness without court relief is forbidden in this model.",
           "activation_date_estimate": "2026-03-10",
           "antecedents": [
@@ -1190,6 +2124,10 @@
         },
         {
           "rule_id": "r13_solomon_judge_overturn_statement_triggers_motion_path",
+          "track": "filing",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
           "description": "If Solomon states he would have the judge overturn the order while it is in effect, he is obligated to seek court modification before noncompliance.",
           "activation_date_estimate": "2026-03-10",
           "antecedents": [
@@ -1220,6 +2158,8 @@
         },
         {
           "rule_id": "r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
+          "track": "filing",
+          "authority_refs": [],
           "description": "If HACC is told that Jane is receiving calls about a restrained brother and third-party housing contact is occurring with a restrained person, HACC is obligated in this model to stop that contact path and document the response.",
           "activation_date_estimate": "2026-03-26",
           "antecedents": [
@@ -1247,14 +2187,675 @@
             "action": "avoid_third_party_housing_contact_with_restrained_person_and_document_response",
             "target": "person:jane_cortez"
           }
+        },
+        {
+          "rule_id": "r15_benjamin_permitted_serve_subpoena_packets",
+          "track": "workflow",
+          "authority_refs": [
+            "auth:orcp_55"
+          ],
+          "description": "If subpoena workflow components are staged and recipients are ready-to-serve, Benjamin is permitted to serve the staged subpoena packets.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_subpoena_workflow_components_staged",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_subpoena_recipients_ready_to_serve",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c15_benjamin_permitted_serve_subpoena_packets",
+            "modality": "P",
+            "actor": "person:benjamin_barber",
+            "action": "serve_staged_subpoena_packets",
+            "target": "case:26PR00641"
+          }
+        },
+        {
+          "rule_id": "r16_benjamin_obligated_track_service_and_deadlines",
+          "track": "workflow",
+          "authority_refs": [
+            "auth:orcp_55"
+          ],
+          "description": "If service log and workflow components exist, Benjamin is obligated in this model to maintain service/deadline tracking.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_active_service_log_initialized",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_subpoena_workflow_components_staged",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c16_benjamin_obligated_track_service_and_deadlines",
+            "modality": "O",
+            "actor": "person:benjamin_barber",
+            "action": "maintain_service_and_deadline_tracking",
+            "target": "case:26PR00641"
+          }
+        },
+        {
+          "rule_id": "r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+          "track": "workflow",
+          "authority_refs": [
+            "auth:orcp_55"
+          ],
+          "description": "If no subpoena service is yet completed, subpoena-enforcement motion path remains pending pre-service in this model.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_subpoena_pre_service_phase_only",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+            "modality": "P",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "treat_subpoena_enforcement_motion_path_as_pending_until_service",
+            "target": "case:26PR00641"
+          }
+        },
+        {
+          "rule_id": "r21_case_obligated_resolve_actor_assignment_conflict",
+          "track": "filing",
+          "authority_refs": [],
+          "description": "If the model contains a Benjamin-vs-Solomon interference actor conflict, the case posture is obligated to resolve that assignment with source records before final legal attribution.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_actor_assignment_conflict_benjamin_vs_solomon_interference",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c21_case_obligated_resolve_actor_assignment_conflict",
+            "modality": "O",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record",
+            "target": "issue:interference_actor_assignment"
+          }
+        },
+        {
+          "rule_id": "r22_case_obligated_finalize_authority_citations_before_filing",
+          "track": "filing",
+          "authority_refs": [],
+          "description": "If authority table placeholders remain unresolved, the case posture is obligated to finalize governing citations before final filing use.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_table_placeholders_unresolved",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c22_case_obligated_finalize_authority_citations_before_filing",
+            "modality": "O",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "finalize_governing_authority_citations_before_final_filing",
+            "target": "doc:06_oregon_authority_table_placeholders.md"
+          }
+        },
+        {
+          "rule_id": "r23_case_permitted_initiate_remedial_contempt_path",
+          "track": "filing",
+          "authority_refs": [
+            "auth:ors_33_055"
+          ],
+          "description": "If remedial-contempt authority is available and the record includes an in-effect order plus Solomon's service-position statement, the case posture is permitted to pursue a remedial contempt or show-cause path.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_ors_33_055_remedial_contempt_procedure",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_restraining_order_in_effect",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            },
+            {
+              "fact_id": "f_solomon_service_position_statement",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-10"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c23_case_permitted_initiate_remedial_contempt_path",
+            "modality": "P",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "initiate_remedial_contempt_or_show_cause_path",
+            "target": "person:solomon"
+          }
+        },
+        {
+          "rule_id": "r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+          "track": "filing",
+          "authority_refs": [
+            "auth:ors_33_075"
+          ],
+          "description": "If compel-appearance authority is available and the claimed nonappearance predicate is later proved, the case posture may seek compelled appearance.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_ors_33_075_compel_appearance",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_client_solomon_failed_appearance",
+              "status": "alleged",
+              "value": "true",
+              "dates": [
+                "2026-03-10"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+            "modality": "P",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "seek_order_or_warrant_to_compel_appearance_if_order_to_appear_is_served_and_ignored",
+            "target": "person:solomon"
+          }
+        },
+        {
+          "rule_id": "r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+          "track": "filing",
+          "authority_refs": [
+            "auth:ors_33_105"
+          ],
+          "description": "If remedial-sanctions authority is available and prejudice-related housing change is documented, the case posture may seek compensatory or compliance-oriented remedial sanctions if contempt elements are later proved.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_ors_33_105_remedial_sanctions",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_hacc_removed_benjamin_effective_2026_01_01",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-01-01",
+                "2026-01-12"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+            "modality": "P",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "seek_compensatory_or_compliance_oriented_remedial_sanctions_if_contempt_is_proved",
+            "target": "issue:prejudice_and_noninterference_relief"
+          }
+        },
+        {
+          "rule_id": "r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+          "track": "filing",
+          "authority_refs": [
+            "auth:orcp_17_c"
+          ],
+          "description": "If ORCP 17 authority is available, the case posture may seek filing-related sanctions if improper purpose or inadequate factual/legal support is shown; current proof-state cautions remain in force.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_orcp_17_improper_purpose_and_support",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_hacc_named_notice_to_solomon_order_not_found",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+            "modality": "P",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "seek_orcp_17_sanctions_if_filing_is_shown_improper_or_factually_or_legally_unsupported",
+            "target": "issue:sanctions_track"
+          }
+        },
+        {
+          "rule_id": "r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+          "track": "workflow",
+          "authority_refs": [
+            "auth:orcp_55",
+            "auth:orcp_46"
+          ],
+          "description": "If subpoena-obedience and discovery-sanctions authority are available and compelled production is required, the case posture may pursue subpoena enforcement and related expense-shifting when the required noncompliance predicate is met.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_orcp_55_subpoena_obedience",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_authority_orcp_46_discovery_sanctions",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_hacc_exhibit_r_requires_compelled_production",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+            "modality": "P",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "seek_subpoena_enforcement_and_related_expenses_after_nonparty_noncompliance",
+            "target": "org:hacc"
+          }
+        },
+        {
+          "rule_id": "r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+          "track": "filing",
+          "authority_refs": [
+            "auth:ors_125_050"
+          ],
+          "description": "If ORS 125.050 authority is available and the protective petition is filed, the proceeding may apply ORCP and the Oregon Evidence Code except where chapter 125 provides otherwise.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_ors_125_050_protective_orcp_oec",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_petition_exists",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-31"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+            "modality": "P",
+            "actor": "case:26PR00641",
+            "action": "apply_orcp_and_oec_subject_to_specific_chapter_125_overrides",
+            "target": "proceeding:protective_proceeding"
+          }
+        },
+        {
+          "rule_id": "r29_case_obligated_preserve_notice_and_objection_window",
+          "track": "filing",
+          "authority_refs": [
+            "auth:ors_125_060",
+            "auth:ors_125_065"
+          ],
+          "description": "If chapter 125 notice authorities are available and notice issued to the respondent, the proceeding is obligated to preserve the statutory notice and objection framework.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_ors_125_060_notice_recipients",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_authority_ors_125_065_notice_manner_and_timing",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_notice_to_respondent",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-31"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c29_case_obligated_preserve_notice_and_objection_window",
+            "modality": "O",
+            "actor": "case:26PR00641",
+            "action": "preserve_statutory_notice_and_objection_window_for_protective_petition",
+            "target": "person:jane_cortez"
+          }
+        },
+        {
+          "rule_id": "r30_case_obligated_schedule_hearing_on_presented_objection",
+          "track": "filing",
+          "authority_refs": [
+            "auth:ors_125_075",
+            "auth:ors_125_080"
+          ],
+          "description": "If objection and hearing authorities are available and the packet includes a respondent objection form, the proceeding is obligated in this model to route the matter through the objection-hearing path.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_ors_125_075_objections",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_authority_ors_125_080_hearing_and_counsel",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_respondent_objection_form_present",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-05"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c30_case_obligated_schedule_hearing_on_presented_objection",
+            "modality": "O",
+            "actor": "case:26PR00641",
+            "action": "schedule_and_process_hearing_on_guardianship_objection",
+            "target": "person:jane_cortez"
+          }
+        },
+        {
+          "rule_id": "r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+          "track": "filing",
+          "authority_refs": [
+            "auth:ors_125_080"
+          ],
+          "description": "If ORS 125.080 authority is available and notice has issued, the case posture may assert the protected person's right to appear in person or by counsel at hearing.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_ors_125_080_hearing_and_counsel",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_notice_to_respondent",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-31"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+            "modality": "P",
+            "actor": "case:26PR00641",
+            "action": "assert_respondent_right_to_appear_in_person_or_by_counsel",
+            "target": "person:jane_cortez"
+          }
+        },
+        {
+          "rule_id": "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+          "track": "workflow",
+          "authority_refs": [
+            "auth:orcp_9",
+            "auth:orcp_10",
+            "auth:ors_125_050"
+          ],
+          "description": "If ORCP 9 and ORCP 10 authority are available, the case posture may use those rules for service and deadline computation on later-filed motion packets, subject to more specific chapter 125 notice rules where applicable.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_orcp_9_service_of_later_filed_papers",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_authority_orcp_10_time_computation",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_petition_exists",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-03-31"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+            "modality": "P",
+            "actor": "case:guardianship_collateral_estoppel",
+            "action": "use_orcp9_service_and_orcp10_deadline_computation_for_later_filed_motion_packets",
+            "target": "issue:service_and_deadlines"
+          }
         }
       ],
       "unresolved_rules": [
         {
-          "rule_id": "r7_solomon_forbidden_refile_precluded_issue",
-          "description": "If issue preclusion applies, Solomon is forbidden from relitigating the precluded issue.",
-          "activation_date_estimate": "2026-03-31",
+          "rule_id": "r1_guardian_permission_if_prior_appointment",
+          "track": "hypothesis",
+          "authority_refs": [],
+          "description": "If prior appointment exists, Benjamin is permitted to act within valid guardian scope for Jane.",
+          "activation_date_estimate": null,
           "antecedents": [
+            {
+              "fact_id": "f_client_prior_appointment",
+              "status": "alleged",
+              "value": "true",
+              "dates": []
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c1_benjamin_permitted_guardian_scope",
+            "modality": "P",
+            "actor": "person:benjamin_barber",
+            "action": "act_within_valid_guardian_scope",
+            "target": "person:jane_cortez"
+          }
+        },
+        {
+          "rule_id": "r2_noninterference_prohibition_for_benjamin",
+          "track": "hypothesis",
+          "authority_refs": [],
+          "description": "If prior appointment exists and interference is alleged, Benjamin is forbidden from interference.",
+          "activation_date_estimate": null,
+          "antecedents": [
+            {
+              "fact_id": "f_client_prior_appointment",
+              "status": "alleged",
+              "value": "true",
+              "dates": []
+            },
+            {
+              "fact_id": "f_client_benjamin_housing_interference",
+              "status": "alleged",
+              "value": "true",
+              "dates": []
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c2_benjamin_forbidden_interference",
+            "modality": "F",
+            "actor": "person:benjamin_barber",
+            "action": "interfere_with_guardian_or_housing_process",
+            "target": "process:hacc_housing_contract"
+          }
+        },
+        {
+          "rule_id": "r3_benjamin_obligation_comply_or_seek_relief",
+          "track": "hypothesis",
+          "authority_refs": [],
+          "description": "If prior appointment is in force and Benjamin disregarded order, Benjamin was obligated to comply or seek relief.",
+          "activation_date_estimate": null,
+          "antecedents": [
+            {
+              "fact_id": "f_client_prior_appointment",
+              "status": "alleged",
+              "value": "true",
+              "dates": []
+            },
+            {
+              "fact_id": "f_client_benjamin_order_disregard",
+              "status": "alleged",
+              "value": "true",
+              "dates": []
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c3_benjamin_obligated_comply_or_seek_relief",
+            "modality": "O",
+            "actor": "person:benjamin_barber",
+            "action": "comply_with_order_or_seek_relief",
+            "target": "order:prior_guardianship_order"
+          }
+        },
+        {
+          "rule_id": "r5_solomon_obligated_appear_and_answer",
+          "track": "hypothesis",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
+          "description": "If no further service was required because Solomon appeared, later failure to appear supports an obligation to appear and answer.",
+          "activation_date_estimate": "2026-03-10",
+          "antecedents": [
+            {
+              "fact_id": "f_restraining_order_no_further_service_needed",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2025-11-20"
+              ]
+            },
+            {
+              "fact_id": "f_client_solomon_failed_appearance",
+              "status": "alleged",
+              "value": "true",
+              "dates": [
+                "2026-03-10"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c5_solomon_obligated_appear_and_answer",
+            "modality": "O",
+            "actor": "person:solomon",
+            "action": "appear_and_answer_show_cause",
+            "target": "proceeding:related_order_hearing"
+          }
+        },
+        {
+          "rule_id": "r7_solomon_forbidden_refile_precluded_issue",
+          "track": "hypothesis",
+          "authority_refs": [
+            "auth:oregon_issue_preclusion_cases",
+            "auth:oregon_issue_preclusion_prior_separate_proceeding_cases"
+          ],
+          "description": "If issue preclusion applies, Solomon is forbidden from relitigating the precluded issue.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_authority_issue_preclusion_elements_official_oregon_cases",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_authority_issue_preclusion_requires_prior_separate_proceeding",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
             {
               "fact_id": "f_collateral_estoppel_candidate",
               "status": "theory",
@@ -1279,41 +2880,115 @@
           }
         }
       ],
-      "party_deontic_state": {
-        "person:benjamin_barber": {
-          "O": [
+      "inactive_rules": [
+        {
+          "rule_id": "r17_responding_custodian_obligated_execute_or_query_protocol_upon_service",
+          "track": "workflow",
+          "authority_refs": [
+            "auth:orcp_55"
+          ],
+          "description": "If any subpoena service is completed and OR-joined protocol is defined, responding custodians are obligated in this model to execute the protocol and produce a search execution report.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
             {
-              "action": "comply_with_order_or_seek_relief",
-              "target": "order:prior_guardianship_order",
-              "rule_id": "r3_benjamin_obligation_comply_or_seek_relief",
-              "activation_date_estimate": null
+              "fact_id": "f_subpoena_service_completed_any",
+              "status": "verified",
+              "value": "false",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_or_joined_search_protocol_defined",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
             }
           ],
-          "P": [
-            {
-              "action": "act_within_valid_guardian_scope",
-              "target": "person:jane_cortez",
-              "rule_id": "r1_guardian_permission_if_prior_appointment",
-              "activation_date_estimate": null
-            }
-          ],
-          "F": [
-            {
-              "action": "interfere_with_guardian_or_housing_process",
-              "target": "process:hacc_housing_contract",
-              "rule_id": "r2_noninterference_prohibition_for_benjamin",
-              "activation_date_estimate": null
-            }
-          ]
+          "conclusion": {
+            "conclusion_id": "c17_responding_custodian_obligated_execute_or_query_protocol",
+            "modality": "O",
+            "actor": "role:responding_custodian",
+            "action": "execute_or_joined_identifier_queries_and_produce_search_execution_report",
+            "target": "case:26PR00641"
+          }
         },
+        {
+          "rule_id": "r18_benjamin_permitted_issue_deficiency_notice_after_incomplete_subpoena_response",
+          "track": "workflow",
+          "authority_refs": [
+            "auth:orcp_46",
+            "auth:orcp_55"
+          ],
+          "description": "If an incomplete subpoena response is present and workflow components are staged, Benjamin is permitted in this model to issue a deficiency notice and cure deadline.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_subpoena_response_incomplete_any",
+              "status": "verified",
+              "value": "false",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_subpoena_workflow_components_staged",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c18_benjamin_permitted_issue_deficiency_notice",
+            "modality": "P",
+            "actor": "person:benjamin_barber",
+            "action": "issue_subpoena_deficiency_notice_and_set_cure_deadline",
+            "target": "case:26PR00641"
+          }
+        },
+        {
+          "rule_id": "r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage",
+          "track": "workflow",
+          "authority_refs": [
+            "auth:orcp_46",
+            "auth:orcp_55"
+          ],
+          "description": "If deficiency notices are in play and compel templates are staged, Benjamin is permitted in this model to move to compel and seek sanctions for noncompliance.",
+          "activation_date_estimate": "2026-04-07",
+          "antecedents": [
+            {
+              "fact_id": "f_deficiency_notice_sent_any",
+              "status": "verified",
+              "value": "false",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_subpoena_workflow_components_staged",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c19_benjamin_permitted_move_to_compel",
+            "modality": "P",
+            "actor": "person:benjamin_barber",
+            "action": "move_to_compel_and_seek_sanctions_for_subpoena_noncompliance",
+            "target": "case:26PR00641"
+          }
+        }
+      ],
+      "party_deontic_state": {
         "person:solomon": {
           "O": [
-            {
-              "action": "appear_and_answer_show_cause",
-              "target": "proceeding:related_order_hearing",
-              "rule_id": "r5_solomon_obligated_appear_and_answer",
-              "activation_date_estimate": "2026-03-10"
-            },
             {
               "action": "seek_hearing_or_comply_with_existing_order",
               "target": "order:eppdapa_restraining_order",
@@ -1382,16 +3057,16 @@
         "org:hacc": {
           "O": [
             {
-              "action": "process_housing_consistent_with_valid_guardian_authority",
-              "target": "person:jane_cortez",
-              "rule_id": "r6_hacc_obligated_process_consistently_with_valid_authority",
-              "activation_date_estimate": null
+              "action": "identify_actor_document_and_authority_chain_for_lease_change",
+              "target": "household:jane_cortez_household",
+              "rule_id": "r6_hacc_obligated_document_authority_chain_for_lease_change",
+              "activation_date_estimate": "2026-01-12"
             },
             {
               "action": "document_basis_for_household_composition_or_lease_adjustment",
               "target": "household:jane_cortez_household",
               "rule_id": "r6b_hacc_obligated_document_lease_basis",
-              "activation_date_estimate": "2026-01-01"
+              "activation_date_estimate": "2026-01-12"
             },
             {
               "action": "avoid_third_party_housing_contact_with_restrained_person_and_document_response",
@@ -1404,12 +3079,129 @@
           "F": []
         },
         "case:guardianship_collateral_estoppel": {
-          "O": [],
+          "O": [
+            {
+              "action": "treat_prior_appointment_theory_as_hypothesis_until_source_order_found",
+              "target": "issue:prior_appointment_for_jane_cortez",
+              "rule_id": "r6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record",
+              "target": "issue:interference_actor_assignment",
+              "rule_id": "r21_case_obligated_resolve_actor_assignment_conflict",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "finalize_governing_authority_citations_before_final_filing",
+              "target": "doc:06_oregon_authority_table_placeholders.md",
+              "rule_id": "r22_case_obligated_finalize_authority_citations_before_filing",
+              "activation_date_estimate": "2026-04-07"
+            }
+          ],
           "P": [
             {
               "action": "treat_solomon_hacc_interference_as_inference_not_direct_proof",
               "target": "person:solomon",
               "rule_id": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "seek_compelled_production_of_hacc_actor_document_authority_chain",
+              "target": "issue:lease_change_actor_identification",
+              "rule_id": "r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "treat_subpoena_enforcement_motion_path_as_pending_until_service",
+              "target": "case:26PR00641",
+              "rule_id": "r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "initiate_remedial_contempt_or_show_cause_path",
+              "target": "person:solomon",
+              "rule_id": "r23_case_permitted_initiate_remedial_contempt_path",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "seek_order_or_warrant_to_compel_appearance_if_order_to_appear_is_served_and_ignored",
+              "target": "person:solomon",
+              "rule_id": "r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "seek_compensatory_or_compliance_oriented_remedial_sanctions_if_contempt_is_proved",
+              "target": "issue:prejudice_and_noninterference_relief",
+              "rule_id": "r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "seek_orcp_17_sanctions_if_filing_is_shown_improper_or_factually_or_legally_unsupported",
+              "target": "issue:sanctions_track",
+              "rule_id": "r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "seek_subpoena_enforcement_and_related_expenses_after_nonparty_noncompliance",
+              "target": "org:hacc",
+              "rule_id": "r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "use_orcp9_service_and_orcp10_deadline_computation_for_later_filed_motion_packets",
+              "target": "issue:service_and_deadlines",
+              "rule_id": "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+              "activation_date_estimate": "2026-04-07"
+            }
+          ],
+          "F": []
+        },
+        "person:benjamin_barber": {
+          "O": [
+            {
+              "action": "maintain_service_and_deadline_tracking",
+              "target": "case:26PR00641",
+              "rule_id": "r16_benjamin_obligated_track_service_and_deadlines",
+              "activation_date_estimate": "2026-04-07"
+            }
+          ],
+          "P": [
+            {
+              "action": "serve_staged_subpoena_packets",
+              "target": "case:26PR00641",
+              "rule_id": "r15_benjamin_permitted_serve_subpoena_packets",
+              "activation_date_estimate": "2026-04-07"
+            }
+          ],
+          "F": []
+        },
+        "case:26PR00641": {
+          "O": [
+            {
+              "action": "preserve_statutory_notice_and_objection_window_for_protective_petition",
+              "target": "person:jane_cortez",
+              "rule_id": "r29_case_obligated_preserve_notice_and_objection_window",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "schedule_and_process_hearing_on_guardianship_objection",
+              "target": "person:jane_cortez",
+              "rule_id": "r30_case_obligated_schedule_hearing_on_presented_objection",
+              "activation_date_estimate": "2026-04-07"
+            }
+          ],
+          "P": [
+            {
+              "action": "apply_orcp_and_oec_subject_to_specific_chapter_125_overrides",
+              "target": "proceeding:protective_proceeding",
+              "rule_id": "r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "assert_respondent_right_to_appear_in_person_or_by_counsel",
+              "target": "person:jane_cortez",
+              "rule_id": "r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
               "activation_date_estimate": "2026-04-07"
             }
           ],

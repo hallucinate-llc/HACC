@@ -44,6 +44,13 @@ This index is the shared exhibit map for the current Solomon contempt and sancti
 - `Exhibit O`: [solomon_repository_evidence_memo.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_repository_evidence_memo.md)
   - Purpose: consolidated Solomon evidence memo linking the order record, March 10 statements, and later HACC-facing notices.
 
+## Supplemental authority exhibits
+
+- `Authority Exhibit 1`: [06_oregon_authority_table_placeholders.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/06_oregon_authority_table_placeholders.md)
+  - Purpose: working Oregon authority table covering issue preclusion, contempt, sanctions, probate procedure, service, and subpoena enforcement.
+- `Authority Exhibit 2`: [oregon_authority_grounding_memo_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/research/oregon_authority_grounding_memo_2026-04-07.md)
+  - Purpose: source memo explaining how the current deontic and filing layers are grounded in Oregon statutes, rules, and appellate authority.
+
 ## Still-missing or placeholder exhibits
 
 - `Exhibit P`: certified docket or register printout for the restraining-order matter
@@ -54,3 +61,7 @@ This index is the shared exhibit map for the current Solomon contempt and sancti
   - Purpose: if located, would identify who caused Benjamin's lease removal and what authority HACC thought it was acting on.
   - Current partial substitute: [message.eml](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0014-Re-Allegations-of-Fraud---JC-Household-CAMTdTS_8pxVnRAMoaQ0n2oi1yBNnLNAiFSu4MFsTet-jJWJogQ-mail.gmail.com/message.eml) and [01_Exhibit_A_HACC_add_to_lease.pdf](/home/barberb/HACC/workspace/migrated_sources/research_results/evidence_review_20260328_175903/chronology/formal_complaint_recommended_filing_packet/included/01_Exhibit_A_HACC_add_to_lease.pdf), which show the January 1, 2026 removal and HACC's statement that the determination followed internal review and court documentation on file.
   - Current posture: treat the full `Exhibit R` record as a subpoena or compelled-production target rather than a likely local-search recovery item.
+
+## Use note
+
+- For the show-cause, dismissal, and sanctions motions, use `Exhibits A-O` as the core factual record, `Exhibits P-R` for certified or compelled-production additions, and `Authority Exhibit 1-2` as the legal-authority appendix until the packet is converted into a final global exhibit legend.

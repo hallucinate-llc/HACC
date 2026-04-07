@@ -2,24 +2,123 @@
   "generated_at": "2026-04-07",
   "modes": {
     "strict": {
-      "active_rule_count": 13,
+      "active_rule_count": 30,
       "unresolved_rule_count": 6,
+      "inactive_rule_count": 3,
       "parties": [
         {
+          "party": "case:26PR00641",
+          "obligations": [
+            {
+              "action": "preserve_statutory_notice_and_objection_window_for_protective_petition",
+              "target": "person:jane_cortez",
+              "rule_id": "r29_case_obligated_preserve_notice_and_objection_window",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "schedule_and_process_hearing_on_guardianship_objection",
+              "target": "person:jane_cortez",
+              "rule_id": "r30_case_obligated_schedule_hearing_on_presented_objection",
+              "activation_date_estimate": "2026-04-07"
+            }
+          ],
+          "permissions": [
+            {
+              "action": "apply_orcp_and_oec_subject_to_specific_chapter_125_overrides",
+              "target": "proceeding:protective_proceeding",
+              "rule_id": "r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "assert_respondent_right_to_appear_in_person_or_by_counsel",
+              "target": "person:jane_cortez",
+              "rule_id": "r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+              "activation_date_estimate": "2026-04-07"
+            }
+          ],
+          "prohibitions": [],
+          "counts": {
+            "O": 2,
+            "P": 2,
+            "F": 0
+          }
+        },
+        {
           "party": "case:guardianship_collateral_estoppel",
-          "obligations": [],
+          "obligations": [
+            {
+              "action": "treat_prior_appointment_theory_as_hypothesis_until_source_order_found",
+              "target": "issue:prior_appointment_for_jane_cortez",
+              "rule_id": "r6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record",
+              "target": "issue:interference_actor_assignment",
+              "rule_id": "r21_case_obligated_resolve_actor_assignment_conflict",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "finalize_governing_authority_citations_before_final_filing",
+              "target": "doc:06_oregon_authority_table_placeholders.md",
+              "rule_id": "r22_case_obligated_finalize_authority_citations_before_filing",
+              "activation_date_estimate": "2026-04-07"
+            }
+          ],
           "permissions": [
             {
               "action": "treat_solomon_hacc_interference_as_inference_not_direct_proof",
               "target": "person:solomon",
               "rule_id": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
               "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "seek_compelled_production_of_hacc_actor_document_authority_chain",
+              "target": "issue:lease_change_actor_identification",
+              "rule_id": "r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "treat_subpoena_enforcement_motion_path_as_pending_until_service",
+              "target": "case:26PR00641",
+              "rule_id": "r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "initiate_remedial_contempt_or_show_cause_path",
+              "target": "person:solomon",
+              "rule_id": "r23_case_permitted_initiate_remedial_contempt_path",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "seek_compensatory_or_compliance_oriented_remedial_sanctions_if_contempt_is_proved",
+              "target": "issue:prejudice_and_noninterference_relief",
+              "rule_id": "r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "seek_orcp_17_sanctions_if_filing_is_shown_improper_or_factually_or_legally_unsupported",
+              "target": "issue:sanctions_track",
+              "rule_id": "r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "seek_subpoena_enforcement_and_related_expenses_after_nonparty_noncompliance",
+              "target": "org:hacc",
+              "rule_id": "r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "use_orcp9_service_and_orcp10_deadline_computation_for_later_filed_motion_packets",
+              "target": "issue:service_and_deadlines",
+              "rule_id": "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+              "activation_date_estimate": "2026-04-07"
             }
           ],
           "prohibitions": [],
           "counts": {
-            "O": 0,
-            "P": 1,
+            "O": 3,
+            "P": 8,
             "F": 0
           }
         },
@@ -27,10 +126,16 @@
           "party": "org:hacc",
           "obligations": [
             {
+              "action": "identify_actor_document_and_authority_chain_for_lease_change",
+              "target": "household:jane_cortez_household",
+              "rule_id": "r6_hacc_obligated_document_authority_chain_for_lease_change",
+              "activation_date_estimate": "2026-01-12"
+            },
+            {
               "action": "document_basis_for_household_composition_or_lease_adjustment",
               "target": "household:jane_cortez_household",
               "rule_id": "r6b_hacc_obligated_document_lease_basis",
-              "activation_date_estimate": "2026-01-01"
+              "activation_date_estimate": "2026-01-12"
             },
             {
               "action": "avoid_third_party_housing_contact_with_restrained_person_and_document_response",
@@ -42,8 +147,33 @@
           "permissions": [],
           "prohibitions": [],
           "counts": {
-            "O": 2,
+            "O": 3,
             "P": 0,
+            "F": 0
+          }
+        },
+        {
+          "party": "person:benjamin_barber",
+          "obligations": [
+            {
+              "action": "maintain_service_and_deadline_tracking",
+              "target": "case:26PR00641",
+              "rule_id": "r16_benjamin_obligated_track_service_and_deadlines",
+              "activation_date_estimate": "2026-04-07"
+            }
+          ],
+          "permissions": [
+            {
+              "action": "serve_staged_subpoena_packets",
+              "target": "case:26PR00641",
+              "rule_id": "r15_benjamin_permitted_serve_subpoena_packets",
+              "activation_date_estimate": "2026-04-07"
+            }
+          ],
+          "prohibitions": [],
+          "counts": {
+            "O": 1,
+            "P": 1,
             "F": 0
           }
         },
@@ -123,24 +253,129 @@
       ]
     },
     "inclusive": {
-      "active_rule_count": 18,
-      "unresolved_rule_count": 1,
+      "active_rule_count": 31,
+      "unresolved_rule_count": 5,
+      "inactive_rule_count": 3,
       "parties": [
         {
+          "party": "case:26PR00641",
+          "obligations": [
+            {
+              "action": "preserve_statutory_notice_and_objection_window_for_protective_petition",
+              "target": "person:jane_cortez",
+              "rule_id": "r29_case_obligated_preserve_notice_and_objection_window",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "schedule_and_process_hearing_on_guardianship_objection",
+              "target": "person:jane_cortez",
+              "rule_id": "r30_case_obligated_schedule_hearing_on_presented_objection",
+              "activation_date_estimate": "2026-04-07"
+            }
+          ],
+          "permissions": [
+            {
+              "action": "apply_orcp_and_oec_subject_to_specific_chapter_125_overrides",
+              "target": "proceeding:protective_proceeding",
+              "rule_id": "r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "assert_respondent_right_to_appear_in_person_or_by_counsel",
+              "target": "person:jane_cortez",
+              "rule_id": "r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+              "activation_date_estimate": "2026-04-07"
+            }
+          ],
+          "prohibitions": [],
+          "counts": {
+            "O": 2,
+            "P": 2,
+            "F": 0
+          }
+        },
+        {
           "party": "case:guardianship_collateral_estoppel",
-          "obligations": [],
+          "obligations": [
+            {
+              "action": "treat_prior_appointment_theory_as_hypothesis_until_source_order_found",
+              "target": "issue:prior_appointment_for_jane_cortez",
+              "rule_id": "r6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record",
+              "target": "issue:interference_actor_assignment",
+              "rule_id": "r21_case_obligated_resolve_actor_assignment_conflict",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "finalize_governing_authority_citations_before_final_filing",
+              "target": "doc:06_oregon_authority_table_placeholders.md",
+              "rule_id": "r22_case_obligated_finalize_authority_citations_before_filing",
+              "activation_date_estimate": "2026-04-07"
+            }
+          ],
           "permissions": [
             {
               "action": "treat_solomon_hacc_interference_as_inference_not_direct_proof",
               "target": "person:solomon",
               "rule_id": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
               "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "seek_compelled_production_of_hacc_actor_document_authority_chain",
+              "target": "issue:lease_change_actor_identification",
+              "rule_id": "r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "treat_subpoena_enforcement_motion_path_as_pending_until_service",
+              "target": "case:26PR00641",
+              "rule_id": "r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "initiate_remedial_contempt_or_show_cause_path",
+              "target": "person:solomon",
+              "rule_id": "r23_case_permitted_initiate_remedial_contempt_path",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "seek_order_or_warrant_to_compel_appearance_if_order_to_appear_is_served_and_ignored",
+              "target": "person:solomon",
+              "rule_id": "r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "seek_compensatory_or_compliance_oriented_remedial_sanctions_if_contempt_is_proved",
+              "target": "issue:prejudice_and_noninterference_relief",
+              "rule_id": "r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "seek_orcp_17_sanctions_if_filing_is_shown_improper_or_factually_or_legally_unsupported",
+              "target": "issue:sanctions_track",
+              "rule_id": "r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "seek_subpoena_enforcement_and_related_expenses_after_nonparty_noncompliance",
+              "target": "org:hacc",
+              "rule_id": "r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+              "activation_date_estimate": "2026-04-07"
+            },
+            {
+              "action": "use_orcp9_service_and_orcp10_deadline_computation_for_later_filed_motion_packets",
+              "target": "issue:service_and_deadlines",
+              "rule_id": "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+              "activation_date_estimate": "2026-04-07"
             }
           ],
           "prohibitions": [],
           "counts": {
-            "O": 0,
-            "P": 1,
+            "O": 3,
+            "P": 9,
             "F": 0
           }
         },
@@ -148,16 +383,16 @@
           "party": "org:hacc",
           "obligations": [
             {
-              "action": "process_housing_consistent_with_valid_guardian_authority",
-              "target": "person:jane_cortez",
-              "rule_id": "r6_hacc_obligated_process_consistently_with_valid_authority",
-              "activation_date_estimate": null
+              "action": "identify_actor_document_and_authority_chain_for_lease_change",
+              "target": "household:jane_cortez_household",
+              "rule_id": "r6_hacc_obligated_document_authority_chain_for_lease_change",
+              "activation_date_estimate": "2026-01-12"
             },
             {
               "action": "document_basis_for_household_composition_or_lease_adjustment",
               "target": "household:jane_cortez_household",
               "rule_id": "r6b_hacc_obligated_document_lease_basis",
-              "activation_date_estimate": "2026-01-01"
+              "activation_date_estimate": "2026-01-12"
             },
             {
               "action": "avoid_third_party_housing_contact_with_restrained_person_and_document_response",
@@ -178,43 +413,30 @@
           "party": "person:benjamin_barber",
           "obligations": [
             {
-              "action": "comply_with_order_or_seek_relief",
-              "target": "order:prior_guardianship_order",
-              "rule_id": "r3_benjamin_obligation_comply_or_seek_relief",
-              "activation_date_estimate": null
+              "action": "maintain_service_and_deadline_tracking",
+              "target": "case:26PR00641",
+              "rule_id": "r16_benjamin_obligated_track_service_and_deadlines",
+              "activation_date_estimate": "2026-04-07"
             }
           ],
           "permissions": [
             {
-              "action": "act_within_valid_guardian_scope",
-              "target": "person:jane_cortez",
-              "rule_id": "r1_guardian_permission_if_prior_appointment",
-              "activation_date_estimate": null
+              "action": "serve_staged_subpoena_packets",
+              "target": "case:26PR00641",
+              "rule_id": "r15_benjamin_permitted_serve_subpoena_packets",
+              "activation_date_estimate": "2026-04-07"
             }
           ],
-          "prohibitions": [
-            {
-              "action": "interfere_with_guardian_or_housing_process",
-              "target": "process:hacc_housing_contract",
-              "rule_id": "r2_noninterference_prohibition_for_benjamin",
-              "activation_date_estimate": null
-            }
-          ],
+          "prohibitions": [],
           "counts": {
             "O": 1,
             "P": 1,
-            "F": 1
+            "F": 0
           }
         },
         {
           "party": "person:solomon",
           "obligations": [
-            {
-              "action": "appear_and_answer_show_cause",
-              "target": "proceeding:related_order_hearing",
-              "rule_id": "r5_solomon_obligated_appear_and_answer",
-              "activation_date_estimate": "2026-03-10"
-            },
             {
               "action": "seek_hearing_or_comply_with_existing_order",
               "target": "order:eppdapa_restraining_order",
@@ -280,7 +502,7 @@
             }
           ],
           "counts": {
-            "O": 5,
+            "O": 4,
             "P": 0,
             "F": 6
           }

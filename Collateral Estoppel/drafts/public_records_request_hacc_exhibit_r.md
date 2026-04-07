@@ -3,7 +3,10 @@
 Date: __________________
 
 To: Public Records Custodian  
-Housing Authority of Clackamas County / Clackamas County Housing & Community Development Division
+Housing Authority of Clackamas County / Clackamas County Housing & Community Development Division  
+P.O. Box 1510  
+13930 S. Gain St  
+Oregon City, OR 97045-0510
 
 Re: Request for records concerning January 1, 2026 household-composition change for Jane Cortez household
 
@@ -45,7 +48,8 @@ Where reasonably available, please produce responsive records in electronic form
 Sincerely,
 
 __________________________________  
-Name  
-Address  
-Phone  
-Email
+Benjamin Barber  
+10043 SE 32nd Ave  
+Milwaukie, OR 97222  
+Phone: __________________  
+Email: __________________

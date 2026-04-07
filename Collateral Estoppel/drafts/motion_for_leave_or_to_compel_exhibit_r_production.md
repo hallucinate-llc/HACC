@@ -1,31 +1,28 @@
-# MOTION FOR LEAVE OR, IN THE ALTERNATIVE, TO COMPEL
-# LIMITED EXHIBIT R PRODUCTION
+# MOTION FOR LEAVE TO ISSUE
+# LIMITED EXHIBIT R SUBPOENA TO NONPARTY HACC
 
 IN THE CIRCUIT COURT OF THE STATE OF OREGON  
-FOR THE COUNTY OF CLACKAMAS
+FOR THE COUNTY OF CLACKAMAS  
+PROBATE DEPARTMENT
 
-____________________________________,  
-Plaintiff / Petitioner,
+In the Matter of the Guardianship of:
 
-v.
+Jane Kay Cortez,
+Respondent / Protected Person.
 
-____________________________________,  
-Defendant / Respondent.
+Case No. `26PR00641` (to confirm from certified docket)
 
-Case No. __________________
-
-Movant requests an order granting leave to issue the attached limited subpoena duces tecum to HACC, or, if HACC is already a party and the Court deems party discovery the proper vehicle, an order compelling the limited Exhibit R production described below.
+Movant requests an order granting leave to issue the attached limited subpoena duces tecum to nonparty HACC for the limited Exhibit R authority-chain records described below.
 
 ## I. Requested relief
 
-1. Grant leave to issue the attached subpoena schedule to HACC for the limited Exhibit R authority-chain records.
-2. In the alternative, if HACC is already before the Court as a party and the Court prefers party discovery, compel HACC to produce the same limited categories of records.
-3. Set a short production deadline for the records most likely to identify:
+1. Grant leave to issue the attached subpoena schedule to nonparty HACC for the limited Exhibit R authority-chain records.
+2. Set a short production deadline for the records most likely to identify:
    - who caused or requested Benjamin Barber's January 1, 2026 lease removal;
    - what court document HACC relied on;
    - what authority HACC believed the communicating person had; and
    - who inside HACC reviewed, approved, or implemented that change.
-4. Award any other case-management relief the Court finds just and efficient.
+3. Award any other case-management relief the Court finds just and efficient.
 
 ## II. Why this production matters
 
@@ -67,7 +64,6 @@ That missing link matters to the housing-interference theory, the contempt / san
 Movant incorporates by reference:
 
 1. [subpoena_schedule_hacc_re_exhibit_r.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/subpoena_schedule_hacc_re_exhibit_r.md)
-2. [defendants_first_targeted_discovery_requests_re_exhibit_r.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/defendants_first_targeted_discovery_requests_re_exhibit_r.md)
 
 The key records sought are:
 
@@ -94,8 +90,9 @@ The present support for this motion includes:
 DATED: __________________
 
 __________________________________  
-Name:  
-Role:  
-Address:  
-Phone:  
-Email:
+Benjamin Barber  
+Movant, pro se  
+10043 SE 32nd Ave  
+Milwaukie, OR 97222  
+Phone: __________________  
+Email: __________________

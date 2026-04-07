@@ -7,12 +7,29 @@
       "r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order",
       "r13_solomon_judge_overturn_statement_triggers_motion_path",
       "r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
+      "r15_benjamin_permitted_serve_subpoena_packets",
+      "r16_benjamin_obligated_track_service_and_deadlines",
+      "r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+      "r21_case_obligated_resolve_actor_assignment_conflict",
+      "r22_case_obligated_finalize_authority_citations_before_filing",
+      "r23_case_permitted_initiate_remedial_contempt_path",
+      "r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+      "r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+      "r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+      "r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+      "r29_case_obligated_preserve_notice_and_objection_window",
+      "r30_case_obligated_schedule_hearing_on_presented_objection",
+      "r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+      "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
       "r4_solomon_forbidden_abuse_contact_property_control",
       "r4b_solomon_forbidden_enter_residence",
       "r5b_solomon_obligated_seek_hearing_or_comply",
       "r5c_solomon_forbidden_self_help_noncooperation",
+      "r6_hacc_obligated_document_authority_chain_for_lease_change",
       "r6b_hacc_obligated_document_lease_basis",
       "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
+      "r6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+      "r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
       "r8_solomon_notice_ack_triggers_court_relief_path",
       "r9_solomon_wait_for_service_conflicts_with_no_further_service"
     ],
@@ -22,17 +39,30 @@
       "r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order",
       "r13_solomon_judge_overturn_statement_triggers_motion_path",
       "r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
-      "r1_guardian_permission_if_prior_appointment",
-      "r2_noninterference_prohibition_for_benjamin",
-      "r3_benjamin_obligation_comply_or_seek_relief",
+      "r15_benjamin_permitted_serve_subpoena_packets",
+      "r16_benjamin_obligated_track_service_and_deadlines",
+      "r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+      "r21_case_obligated_resolve_actor_assignment_conflict",
+      "r22_case_obligated_finalize_authority_citations_before_filing",
+      "r23_case_permitted_initiate_remedial_contempt_path",
+      "r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+      "r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+      "r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+      "r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+      "r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+      "r29_case_obligated_preserve_notice_and_objection_window",
+      "r30_case_obligated_schedule_hearing_on_presented_objection",
+      "r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+      "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
       "r4_solomon_forbidden_abuse_contact_property_control",
       "r4b_solomon_forbidden_enter_residence",
-      "r5_solomon_obligated_appear_and_answer",
       "r5b_solomon_obligated_seek_hearing_or_comply",
       "r5c_solomon_forbidden_self_help_noncooperation",
-      "r6_hacc_obligated_process_consistently_with_valid_authority",
+      "r6_hacc_obligated_document_authority_chain_for_lease_change",
       "r6b_hacc_obligated_document_lease_basis",
       "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
+      "r6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+      "r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
       "r8_solomon_notice_ack_triggers_court_relief_path",
       "r9_solomon_wait_for_service_conflicts_with_no_further_service"
     ]
@@ -203,21 +233,25 @@
       "kind": "fact_dependency"
     },
     {
-      "id": "r6_hacc_obligated_process_consistently_with_valid_authority",
+      "id": "r6_hacc_obligated_document_authority_chain_for_lease_change",
       "kind": "rule",
-      "description": "If housing process is active and appointment exists, HACC is obligated to process consistently with valid authority."
+      "description": "If HACC states that a lease change followed internal review and court documentation on file, HACC is obligated in this model to identify the actor, document, and authority chain behind that change."
     },
     {
-      "id": "c6_hacc_obligated_process_consistent_with_order",
+      "id": "c6_hacc_obligated_document_authority_chain_for_lease_change",
       "kind": "conclusion",
       "modality": "O"
     },
     {
-      "id": "f_hacc_process_exists",
+      "id": "f_hacc_removed_benjamin_effective_2026_01_01",
       "kind": "fact_dependency"
     },
     {
-      "id": "f_client_prior_appointment",
+      "id": "f_hacc_internal_review_claimed",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_hacc_court_documentation_basis_claimed",
       "kind": "fact_dependency"
     },
     {
@@ -235,6 +269,10 @@
       "kind": "fact_dependency"
     },
     {
+      "id": "f_hacc_removed_benjamin_effective_2026_01_01",
+      "kind": "fact_dependency"
+    },
+    {
       "id": "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
       "kind": "rule",
       "description": "Because no named HACC notice message about the Solomon order has been found in preserved mail, the HACC-interference theory should presently be treated as an inference rather than direct proof."
@@ -249,6 +287,38 @@
       "kind": "fact_dependency"
     },
     {
+      "id": "r6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+      "kind": "rule",
+      "description": "If no source order has been found for the claimed prior appointment, the prior-appointment theory must remain hypothesis-only in filing-facing outputs."
+    },
+    {
+      "id": "c6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+      "kind": "conclusion",
+      "modality": "O"
+    },
+    {
+      "id": "f_prior_appointment_source_order_not_found",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+      "kind": "rule",
+      "description": "If local search did not locate the HACC actor-identification record and compelled production is required, the case posture is permitted to pursue Exhibit R production."
+    },
+    {
+      "id": "c6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+      "kind": "conclusion",
+      "modality": "P"
+    },
+    {
+      "id": "f_hacc_actor_identification_record_not_found_locally",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_hacc_exhibit_r_requires_compelled_production",
+      "kind": "fact_dependency"
+    },
+    {
       "id": "r7_solomon_forbidden_refile_precluded_issue",
       "kind": "rule",
       "description": "If issue preclusion applies, Solomon is forbidden from relitigating the precluded issue."
@@ -257,6 +327,14 @@
       "id": "c7_solomon_forbidden_refile_precluded_issue",
       "kind": "conclusion",
       "modality": "F"
+    },
+    {
+      "id": "f_authority_issue_preclusion_elements_official_oregon_cases",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_authority_issue_preclusion_requires_prior_separate_proceeding",
+      "kind": "fact_dependency"
     },
     {
       "id": "f_collateral_estoppel_candidate",
@@ -390,6 +468,338 @@
     },
     {
       "id": "f_feed_ev_hacc_notice_third_party_contact_with_restrained_person",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r15_benjamin_permitted_serve_subpoena_packets",
+      "kind": "rule",
+      "description": "If subpoena workflow components are staged and recipients are ready-to-serve, Benjamin is permitted to serve the staged subpoena packets."
+    },
+    {
+      "id": "c15_benjamin_permitted_serve_subpoena_packets",
+      "kind": "conclusion",
+      "modality": "P"
+    },
+    {
+      "id": "f_subpoena_workflow_components_staged",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_subpoena_recipients_ready_to_serve",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r16_benjamin_obligated_track_service_and_deadlines",
+      "kind": "rule",
+      "description": "If service log and workflow components exist, Benjamin is obligated in this model to maintain service/deadline tracking."
+    },
+    {
+      "id": "c16_benjamin_obligated_track_service_and_deadlines",
+      "kind": "conclusion",
+      "modality": "O"
+    },
+    {
+      "id": "f_active_service_log_initialized",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_subpoena_workflow_components_staged",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r17_responding_custodian_obligated_execute_or_query_protocol_upon_service",
+      "kind": "rule",
+      "description": "If any subpoena service is completed and OR-joined protocol is defined, responding custodians are obligated in this model to execute the protocol and produce a search execution report."
+    },
+    {
+      "id": "c17_responding_custodian_obligated_execute_or_query_protocol",
+      "kind": "conclusion",
+      "modality": "O"
+    },
+    {
+      "id": "f_subpoena_service_completed_any",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_or_joined_search_protocol_defined",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r18_benjamin_permitted_issue_deficiency_notice_after_incomplete_subpoena_response",
+      "kind": "rule",
+      "description": "If an incomplete subpoena response is present and workflow components are staged, Benjamin is permitted in this model to issue a deficiency notice and cure deadline."
+    },
+    {
+      "id": "c18_benjamin_permitted_issue_deficiency_notice",
+      "kind": "conclusion",
+      "modality": "P"
+    },
+    {
+      "id": "f_subpoena_response_incomplete_any",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_subpoena_workflow_components_staged",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage",
+      "kind": "rule",
+      "description": "If deficiency notices are in play and compel templates are staged, Benjamin is permitted in this model to move to compel and seek sanctions for noncompliance."
+    },
+    {
+      "id": "c19_benjamin_permitted_move_to_compel",
+      "kind": "conclusion",
+      "modality": "P"
+    },
+    {
+      "id": "f_deficiency_notice_sent_any",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_subpoena_workflow_components_staged",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+      "kind": "rule",
+      "description": "If no subpoena service is yet completed, subpoena-enforcement motion path remains pending pre-service in this model."
+    },
+    {
+      "id": "c20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+      "kind": "conclusion",
+      "modality": "P"
+    },
+    {
+      "id": "f_subpoena_pre_service_phase_only",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r21_case_obligated_resolve_actor_assignment_conflict",
+      "kind": "rule",
+      "description": "If the model contains a Benjamin-vs-Solomon interference actor conflict, the case posture is obligated to resolve that assignment with source records before final legal attribution."
+    },
+    {
+      "id": "c21_case_obligated_resolve_actor_assignment_conflict",
+      "kind": "conclusion",
+      "modality": "O"
+    },
+    {
+      "id": "f_actor_assignment_conflict_benjamin_vs_solomon_interference",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r22_case_obligated_finalize_authority_citations_before_filing",
+      "kind": "rule",
+      "description": "If authority table placeholders remain unresolved, the case posture is obligated to finalize governing citations before final filing use."
+    },
+    {
+      "id": "c22_case_obligated_finalize_authority_citations_before_filing",
+      "kind": "conclusion",
+      "modality": "O"
+    },
+    {
+      "id": "f_authority_table_placeholders_unresolved",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r23_case_permitted_initiate_remedial_contempt_path",
+      "kind": "rule",
+      "description": "If remedial-contempt authority is available and the record includes an in-effect order plus Solomon's service-position statement, the case posture is permitted to pursue a remedial contempt or show-cause path."
+    },
+    {
+      "id": "c23_case_permitted_initiate_remedial_contempt_path",
+      "kind": "conclusion",
+      "modality": "P"
+    },
+    {
+      "id": "f_authority_ors_33_055_remedial_contempt_procedure",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_restraining_order_in_effect",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_solomon_service_position_statement",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+      "kind": "rule",
+      "description": "If compel-appearance authority is available and the claimed nonappearance predicate is later proved, the case posture may seek compelled appearance."
+    },
+    {
+      "id": "c24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+      "kind": "conclusion",
+      "modality": "P"
+    },
+    {
+      "id": "f_authority_ors_33_075_compel_appearance",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_client_solomon_failed_appearance",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+      "kind": "rule",
+      "description": "If remedial-sanctions authority is available and prejudice-related housing change is documented, the case posture may seek compensatory or compliance-oriented remedial sanctions if contempt elements are later proved."
+    },
+    {
+      "id": "c25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+      "kind": "conclusion",
+      "modality": "P"
+    },
+    {
+      "id": "f_authority_ors_33_105_remedial_sanctions",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_hacc_removed_benjamin_effective_2026_01_01",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+      "kind": "rule",
+      "description": "If ORCP 17 authority is available, the case posture may seek filing-related sanctions if improper purpose or inadequate factual/legal support is shown; current proof-state cautions remain in force."
+    },
+    {
+      "id": "c26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+      "kind": "conclusion",
+      "modality": "P"
+    },
+    {
+      "id": "f_authority_orcp_17_improper_purpose_and_support",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_hacc_named_notice_to_solomon_order_not_found",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+      "kind": "rule",
+      "description": "If subpoena-obedience and discovery-sanctions authority are available and compelled production is required, the case posture may pursue subpoena enforcement and related expense-shifting when the required noncompliance predicate is met."
+    },
+    {
+      "id": "c27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+      "kind": "conclusion",
+      "modality": "P"
+    },
+    {
+      "id": "f_authority_orcp_55_subpoena_obedience",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_authority_orcp_46_discovery_sanctions",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_hacc_exhibit_r_requires_compelled_production",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+      "kind": "rule",
+      "description": "If ORS 125.050 authority is available and the protective petition is filed, the proceeding may apply ORCP and the Oregon Evidence Code except where chapter 125 provides otherwise."
+    },
+    {
+      "id": "c28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+      "kind": "conclusion",
+      "modality": "P"
+    },
+    {
+      "id": "f_authority_ors_125_050_protective_orcp_oec",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_petition_exists",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r29_case_obligated_preserve_notice_and_objection_window",
+      "kind": "rule",
+      "description": "If chapter 125 notice authorities are available and notice issued to the respondent, the proceeding is obligated to preserve the statutory notice and objection framework."
+    },
+    {
+      "id": "c29_case_obligated_preserve_notice_and_objection_window",
+      "kind": "conclusion",
+      "modality": "O"
+    },
+    {
+      "id": "f_authority_ors_125_060_notice_recipients",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_authority_ors_125_065_notice_manner_and_timing",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_notice_to_respondent",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r30_case_obligated_schedule_hearing_on_presented_objection",
+      "kind": "rule",
+      "description": "If objection and hearing authorities are available and the packet includes a respondent objection form, the proceeding is obligated in this model to route the matter through the objection-hearing path."
+    },
+    {
+      "id": "c30_case_obligated_schedule_hearing_on_presented_objection",
+      "kind": "conclusion",
+      "modality": "O"
+    },
+    {
+      "id": "f_authority_ors_125_075_objections",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_authority_ors_125_080_hearing_and_counsel",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_respondent_objection_form_present",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+      "kind": "rule",
+      "description": "If ORS 125.080 authority is available and notice has issued, the case posture may assert the protected person's right to appear in person or by counsel at hearing."
+    },
+    {
+      "id": "c31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+      "kind": "conclusion",
+      "modality": "P"
+    },
+    {
+      "id": "f_authority_ors_125_080_hearing_and_counsel",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_notice_to_respondent",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+      "kind": "rule",
+      "description": "If ORCP 9 and ORCP 10 authority are available, the case posture may use those rules for service and deadline computation on later-filed motion packets, subject to more specific chapter 125 notice rules where applicable."
+    },
+    {
+      "id": "c32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+      "kind": "conclusion",
+      "modality": "P"
+    },
+    {
+      "id": "f_authority_orcp_9_service_of_later_filed_papers",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_authority_orcp_10_time_computation",
+      "kind": "fact_dependency"
+    },
+    {
+      "id": "f_petition_exists",
       "kind": "fact_dependency"
     }
   ],
@@ -540,18 +950,23 @@
       "relation": "required_by"
     },
     {
-      "from": "r6_hacc_obligated_process_consistently_with_valid_authority",
-      "to": "c6_hacc_obligated_process_consistent_with_order",
+      "from": "r6_hacc_obligated_document_authority_chain_for_lease_change",
+      "to": "c6_hacc_obligated_document_authority_chain_for_lease_change",
       "relation": "produces"
     },
     {
-      "from": "f_hacc_process_exists",
-      "to": "r6_hacc_obligated_process_consistently_with_valid_authority",
+      "from": "f_hacc_removed_benjamin_effective_2026_01_01",
+      "to": "r6_hacc_obligated_document_authority_chain_for_lease_change",
       "relation": "required_by"
     },
     {
-      "from": "f_client_prior_appointment",
-      "to": "r6_hacc_obligated_process_consistently_with_valid_authority",
+      "from": "f_hacc_internal_review_claimed",
+      "to": "r6_hacc_obligated_document_authority_chain_for_lease_change",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_hacc_court_documentation_basis_claimed",
+      "to": "r6_hacc_obligated_document_authority_chain_for_lease_change",
       "relation": "required_by"
     },
     {
@@ -561,6 +976,11 @@
     },
     {
       "from": "f_hacc_lease_adjustment_effective_2026_01_01",
+      "to": "r6b_hacc_obligated_document_lease_basis",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_hacc_removed_benjamin_effective_2026_01_01",
       "to": "r6b_hacc_obligated_document_lease_basis",
       "relation": "required_by"
     },
@@ -575,9 +995,44 @@
       "relation": "required_by"
     },
     {
+      "from": "r6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+      "to": "c6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+      "relation": "produces"
+    },
+    {
+      "from": "f_prior_appointment_source_order_not_found",
+      "to": "r6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+      "relation": "required_by"
+    },
+    {
+      "from": "r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+      "to": "c6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+      "relation": "produces"
+    },
+    {
+      "from": "f_hacc_actor_identification_record_not_found_locally",
+      "to": "r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_hacc_exhibit_r_requires_compelled_production",
+      "to": "r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+      "relation": "required_by"
+    },
+    {
       "from": "r7_solomon_forbidden_refile_precluded_issue",
       "to": "c7_solomon_forbidden_refile_precluded_issue",
       "relation": "produces"
+    },
+    {
+      "from": "f_authority_issue_preclusion_elements_official_oregon_cases",
+      "to": "r7_solomon_forbidden_refile_precluded_issue",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_authority_issue_preclusion_requires_prior_separate_proceeding",
+      "to": "r7_solomon_forbidden_refile_precluded_issue",
+      "relation": "required_by"
     },
     {
       "from": "f_collateral_estoppel_candidate",
@@ -692,6 +1147,286 @@
     {
       "from": "f_feed_ev_hacc_notice_third_party_contact_with_restrained_person",
       "to": "r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
+      "relation": "required_by"
+    },
+    {
+      "from": "r15_benjamin_permitted_serve_subpoena_packets",
+      "to": "c15_benjamin_permitted_serve_subpoena_packets",
+      "relation": "produces"
+    },
+    {
+      "from": "f_subpoena_workflow_components_staged",
+      "to": "r15_benjamin_permitted_serve_subpoena_packets",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_subpoena_recipients_ready_to_serve",
+      "to": "r15_benjamin_permitted_serve_subpoena_packets",
+      "relation": "required_by"
+    },
+    {
+      "from": "r16_benjamin_obligated_track_service_and_deadlines",
+      "to": "c16_benjamin_obligated_track_service_and_deadlines",
+      "relation": "produces"
+    },
+    {
+      "from": "f_active_service_log_initialized",
+      "to": "r16_benjamin_obligated_track_service_and_deadlines",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_subpoena_workflow_components_staged",
+      "to": "r16_benjamin_obligated_track_service_and_deadlines",
+      "relation": "required_by"
+    },
+    {
+      "from": "r17_responding_custodian_obligated_execute_or_query_protocol_upon_service",
+      "to": "c17_responding_custodian_obligated_execute_or_query_protocol",
+      "relation": "produces"
+    },
+    {
+      "from": "f_subpoena_service_completed_any",
+      "to": "r17_responding_custodian_obligated_execute_or_query_protocol_upon_service",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_or_joined_search_protocol_defined",
+      "to": "r17_responding_custodian_obligated_execute_or_query_protocol_upon_service",
+      "relation": "required_by"
+    },
+    {
+      "from": "r18_benjamin_permitted_issue_deficiency_notice_after_incomplete_subpoena_response",
+      "to": "c18_benjamin_permitted_issue_deficiency_notice",
+      "relation": "produces"
+    },
+    {
+      "from": "f_subpoena_response_incomplete_any",
+      "to": "r18_benjamin_permitted_issue_deficiency_notice_after_incomplete_subpoena_response",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_subpoena_workflow_components_staged",
+      "to": "r18_benjamin_permitted_issue_deficiency_notice_after_incomplete_subpoena_response",
+      "relation": "required_by"
+    },
+    {
+      "from": "r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage",
+      "to": "c19_benjamin_permitted_move_to_compel",
+      "relation": "produces"
+    },
+    {
+      "from": "f_deficiency_notice_sent_any",
+      "to": "r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_subpoena_workflow_components_staged",
+      "to": "r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage",
+      "relation": "required_by"
+    },
+    {
+      "from": "r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+      "to": "c20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+      "relation": "produces"
+    },
+    {
+      "from": "f_subpoena_pre_service_phase_only",
+      "to": "r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+      "relation": "required_by"
+    },
+    {
+      "from": "r21_case_obligated_resolve_actor_assignment_conflict",
+      "to": "c21_case_obligated_resolve_actor_assignment_conflict",
+      "relation": "produces"
+    },
+    {
+      "from": "f_actor_assignment_conflict_benjamin_vs_solomon_interference",
+      "to": "r21_case_obligated_resolve_actor_assignment_conflict",
+      "relation": "required_by"
+    },
+    {
+      "from": "r22_case_obligated_finalize_authority_citations_before_filing",
+      "to": "c22_case_obligated_finalize_authority_citations_before_filing",
+      "relation": "produces"
+    },
+    {
+      "from": "f_authority_table_placeholders_unresolved",
+      "to": "r22_case_obligated_finalize_authority_citations_before_filing",
+      "relation": "required_by"
+    },
+    {
+      "from": "r23_case_permitted_initiate_remedial_contempt_path",
+      "to": "c23_case_permitted_initiate_remedial_contempt_path",
+      "relation": "produces"
+    },
+    {
+      "from": "f_authority_ors_33_055_remedial_contempt_procedure",
+      "to": "r23_case_permitted_initiate_remedial_contempt_path",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_restraining_order_in_effect",
+      "to": "r23_case_permitted_initiate_remedial_contempt_path",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_solomon_service_position_statement",
+      "to": "r23_case_permitted_initiate_remedial_contempt_path",
+      "relation": "required_by"
+    },
+    {
+      "from": "r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+      "to": "c24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+      "relation": "produces"
+    },
+    {
+      "from": "f_authority_ors_33_075_compel_appearance",
+      "to": "r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_client_solomon_failed_appearance",
+      "to": "r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+      "relation": "required_by"
+    },
+    {
+      "from": "r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+      "to": "c25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+      "relation": "produces"
+    },
+    {
+      "from": "f_authority_ors_33_105_remedial_sanctions",
+      "to": "r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_hacc_removed_benjamin_effective_2026_01_01",
+      "to": "r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+      "relation": "required_by"
+    },
+    {
+      "from": "r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+      "to": "c26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+      "relation": "produces"
+    },
+    {
+      "from": "f_authority_orcp_17_improper_purpose_and_support",
+      "to": "r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_hacc_named_notice_to_solomon_order_not_found",
+      "to": "r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+      "relation": "required_by"
+    },
+    {
+      "from": "r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+      "to": "c27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+      "relation": "produces"
+    },
+    {
+      "from": "f_authority_orcp_55_subpoena_obedience",
+      "to": "r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_authority_orcp_46_discovery_sanctions",
+      "to": "r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_hacc_exhibit_r_requires_compelled_production",
+      "to": "r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+      "relation": "required_by"
+    },
+    {
+      "from": "r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+      "to": "c28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+      "relation": "produces"
+    },
+    {
+      "from": "f_authority_ors_125_050_protective_orcp_oec",
+      "to": "r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_petition_exists",
+      "to": "r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+      "relation": "required_by"
+    },
+    {
+      "from": "r29_case_obligated_preserve_notice_and_objection_window",
+      "to": "c29_case_obligated_preserve_notice_and_objection_window",
+      "relation": "produces"
+    },
+    {
+      "from": "f_authority_ors_125_060_notice_recipients",
+      "to": "r29_case_obligated_preserve_notice_and_objection_window",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_authority_ors_125_065_notice_manner_and_timing",
+      "to": "r29_case_obligated_preserve_notice_and_objection_window",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_notice_to_respondent",
+      "to": "r29_case_obligated_preserve_notice_and_objection_window",
+      "relation": "required_by"
+    },
+    {
+      "from": "r30_case_obligated_schedule_hearing_on_presented_objection",
+      "to": "c30_case_obligated_schedule_hearing_on_presented_objection",
+      "relation": "produces"
+    },
+    {
+      "from": "f_authority_ors_125_075_objections",
+      "to": "r30_case_obligated_schedule_hearing_on_presented_objection",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_authority_ors_125_080_hearing_and_counsel",
+      "to": "r30_case_obligated_schedule_hearing_on_presented_objection",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_respondent_objection_form_present",
+      "to": "r30_case_obligated_schedule_hearing_on_presented_objection",
+      "relation": "required_by"
+    },
+    {
+      "from": "r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+      "to": "c31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+      "relation": "produces"
+    },
+    {
+      "from": "f_authority_ors_125_080_hearing_and_counsel",
+      "to": "r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_notice_to_respondent",
+      "to": "r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+      "relation": "required_by"
+    },
+    {
+      "from": "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+      "to": "c32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+      "relation": "produces"
+    },
+    {
+      "from": "f_authority_orcp_9_service_of_later_filed_papers",
+      "to": "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_authority_orcp_10_time_computation",
+      "to": "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+      "relation": "required_by"
+    },
+    {
+      "from": "f_petition_exists",
+      "to": "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
       "relation": "required_by"
     }
   ]

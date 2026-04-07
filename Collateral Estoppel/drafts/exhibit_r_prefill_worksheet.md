@@ -4,18 +4,18 @@ Use this worksheet to prefill the `Exhibit R` production papers once the target 
 
 ## 1. Case posture
 
-- Active case name: ____________________________________
-- Court: ____________________________________
-- Department: ____________________________________
-- Case number: ____________________________________
+- Active case name: `In the Matter of the Guardianship of Jane Kay Cortez`
+- Court: `Circuit Court of the State of Oregon for the County of Clackamas`
+- Department: `Probate Department`
+- Case number: `26PR00641` (confirm from certified docket)
 - Is HACC already a party? `no`
 - HACC will be treated as: `nonparty custodian`
 
 ## 2. Party names for caption
 
-- Plaintiff / Petitioner: ____________________________________
-- Defendant / Respondent: ____________________________________
-- Movant name: ____________________________________
+- Plaintiff / Petitioner: `not applicable for nonparty HACC subpoena path; use probate in-the-matter caption`
+- Defendant / Respondent: `Jane Kay Cortez, Respondent / Protected Person`
+- Movant name: `Benjamin Barber`
 - Opposing counsel name and address, if known: ____________________________________
 
 ## 3. Filing path to use
@@ -52,9 +52,9 @@ If running records request in parallel:
 - service method: ____________________________________
 - production deadline requested: ____________________________________
 - hearing date, if any: ____________________________________
-- signer name: ____________________________________
-- signer role: ____________________________________
-- signer address: ____________________________________
+- signer name: `Benjamin Barber`
+- signer role: `Movant, pro se`
+- signer address: `10043 SE 32nd Ave, Milwaukie, OR 97222`
 - signer phone: ____________________________________
 - signer email: ____________________________________
 

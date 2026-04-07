@@ -7,6 +7,7 @@ Outputs are written to knowledge_graph/generated/.
 from __future__ import annotations
 
 from dataclasses import dataclass
+import csv
 from datetime import date, datetime
 import json
 from pathlib import Path
@@ -19,6 +20,8 @@ OUT = ROOT / "generated"
 EVIDENCE = Path("/home/barberb/HACC/Collateral Estoppel/evidence_notes")
 SOLOMON_FEED = EVIDENCE / "solomon_evidence_graph_feed.json"
 SOLOMON_REPO_INDEX = EVIDENCE / "solomon_repository_evidence_index.json"
+FINAL_SET = Path("/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set")
+ACTIVE_SERVICE_LOG = FINAL_SET / "28_active_service_log_2026-04-07.csv"
 
 
 @dataclass(frozen=True)
@@ -50,6 +53,8 @@ class Rule:
     antecedents: Tuple[str, ...]
     conclusion: DeonticConclusion
     description: str
+    track: str = "filing"  # filing | hypothesis | workflow
+    authority_refs: Tuple[str, ...] = ()
 
 
 def _normalize_date(token: str) -> str | None:
@@ -134,6 +139,14 @@ def load_solomon_repository_index() -> List[Dict[str, object]]:
     return list(obj.get("hits", []))
 
 
+def load_active_service_rows() -> List[Dict[str, str]]:
+    if not ACTIVE_SERVICE_LOG.exists():
+        return []
+    with ACTIVE_SERVICE_LOG.open("r", encoding="utf-8", newline="") as fh:
+        reader = csv.DictReader(fh)
+        return [{k: (v or "").strip() for k, v in row.items()} for row in reader]
+
+
 def _pick_date(candidates: List[str], preferred: str) -> Tuple[str, ...]:
     if preferred in candidates:
         return (preferred,)
@@ -142,10 +155,21 @@ def _pick_date(candidates: List[str], preferred: str) -> Tuple[str, ...]:
     return ()
 
 
+def _extract_iso_date(value: str | None) -> str | None:
+    if not value:
+        return None
+    s = value.strip()
+    if not s:
+        return None
+    m = re.search(r"\b(\d{4}-\d{2}-\d{2})\b", s)
+    return m.group(1) if m else None
+
+
 def build_facts(
     ocr_dates: Dict[str, List[str]],
     solomon_events: List[Dict[str, object]],
     solomon_repo_hits: List[Dict[str, object]],
+    active_service_rows: List[Dict[str, str]],
 ) -> List[Fact]:
     g_dates = ocr_dates.get("solomon_motion_for_guardianship_ocr.txt", [])
     r_dates = ocr_dates.get("sam_barber_restraining_order_ocr.txt", [])
@@ -170,6 +194,15 @@ def build_facts(
             _pick_date(g_dates, "2026-04-02"),
         ),
         Fact(
+            "f_respondent_objection_form_present",
+            "RespondentObjectionFormPresent",
+            ("case:26PR00641", "person:jane_cortez"),
+            True,
+            "verified",
+            "guardianship_timeline.md",
+            ("2026-04-05",),
+        ),
+        Fact(
             "f_petition_claims_no_prior_guardian",
             "PetitionStatesNoPriorGuardian",
             ("case:26PR00641", "person:jane_cortez"),
@@ -177,6 +210,15 @@ def build_facts(
             "verified",
             "solomon_motion_for_guardianship_ocr.txt",
             _pick_date(g_dates, "2026-03-31"),
+        ),
+        Fact(
+            "f_prior_appointment_source_order_not_found",
+            "SourceOrderNotFoundInRepository",
+            ("issue:prior_appointment_for_jane_cortez",),
+            True,
+            "verified",
+            "deontic_logic_gap_review_2026-04-07.md",
+            ("2026-04-07",),
         ),
         Fact("f_client_prior_appointment", "PriorAppointmentExists", ("person:jane_cortez", "person:benjamin_barber"), True, "alleged", "client_assertion"),
         Fact("f_client_benjamin_avoided_service", "AvoidedService", ("person:benjamin_barber", "order:prior_guardianship_order"), True, "alleged", "client_assertion"),
@@ -309,6 +351,51 @@ def build_facts(
             ("2026-01-01",),
         ),
         Fact(
+            "f_hacc_removed_benjamin_effective_2026_01_01",
+            "HouseholdMemberRemovedEffective",
+            ("org:hacc", "person:benjamin_barber", "household:jane_cortez_household", "2026-01-01"),
+            True,
+            "verified",
+            "0014-Re-Allegations-of-Fraud---JC-Household/message.eml",
+            ("2026-01-01", "2026-01-12"),
+        ),
+        Fact(
+            "f_hacc_internal_review_claimed",
+            "HaccInternalReviewClaimed",
+            ("org:hacc", "household:jane_cortez_household"),
+            True,
+            "verified",
+            "0014-Re-Allegations-of-Fraud---JC-Household/message.eml",
+            ("2026-01-12",),
+        ),
+        Fact(
+            "f_hacc_court_documentation_basis_claimed",
+            "HaccCourtDocumentationBasisClaimed",
+            ("org:hacc", "household:jane_cortez_household"),
+            True,
+            "verified",
+            "0014-Re-Allegations-of-Fraud---JC-Household/message.eml",
+            ("2026-01-12",),
+        ),
+        Fact(
+            "f_hacc_actor_identification_record_not_found_locally",
+            "LocalSearchNegativeForActorIdentificationRecord",
+            ("org:hacc", "issue:lease_change_actor_identification"),
+            True,
+            "verified",
+            "missing_exhibit_search_status_2026-04-07.md",
+            ("2026-04-07",),
+        ),
+        Fact(
+            "f_hacc_exhibit_r_requires_compelled_production",
+            "CompelledProductionRequired",
+            ("issue:lease_change_actor_identification", "org:hacc"),
+            True,
+            "verified",
+            "subpoena_target_memo_hacc_lease_authority_record.md",
+            ("2026-04-07",),
+        ),
+        Fact(
             "f_january_2026_hacc_removed_benjamin_restored_restrained_party",
             "LeaseRemovalAndRestorationNarrative",
             ("org:hacc", "person:benjamin_barber", "person:restrained_party"),
@@ -362,9 +449,276 @@ def build_facts(
             "protective_order_and_hacc_notice_timeline.md",
             ("2025-11-17",),
         ),
-        Fact("f_hacc_process_exists", "HousingProcessActive", ("org:hacc", "person:jane_cortez", "process:hacc_housing_contract"), True, "alleged", "client_assertion"),
+        Fact(
+            "f_hacc_process_exists",
+            "HousingProcessActive",
+            ("org:hacc", "person:jane_cortez", "process:hacc_housing_contract"),
+            True,
+            "verified",
+            "0014-Re-Allegations-of-Fraud---JC-Household/message.eml",
+            ("2026-01-12",),
+        ),
         Fact("f_collateral_estoppel_candidate", "PotentialIssuePreclusion", ("issue:guardianship_authority",), True, "theory", "motion_to_dismiss_for_collateral_estoppel.md"),
+        Fact(
+            "f_actor_assignment_conflict_benjamin_vs_solomon_interference",
+            "ActorAssignmentConflict",
+            ("issue:interference_actor_assignment", "person:benjamin_barber", "person:solomon"),
+            True,
+            "verified",
+            "generate_formal_reasoning_artifacts.py",
+            (str(date.today()),),
+        ),
     ]
+
+    # Subpoena/deadline workflow facts from staged filing set.
+    protocol_file = FINAL_SET / "11B_attachment_a2_definitions_and_instructions_final.md"
+    cover_file = FINAL_SET / "19_subpoena_cover_instruction_sheet_final.md"
+    checklist_file = FINAL_SET / "18_subpoena_custodian_compliance_checklist_final.md"
+    search_report_template_file = FINAL_SET / "21_search_execution_report_template_final.md"
+    deficiency_file = FINAL_SET / "22_subpoena_deficiency_notice_template_final.md"
+    declaration_file = FINAL_SET / "23_declaration_re_subpoena_noncompliance_final.md"
+    compel_file = FINAL_SET / "24_motion_to_compel_subpoena_compliance_and_sanctions_final.md"
+    manifests_file = FINAL_SET / "25_ready_to_serve_recipient_manifests_final.md"
+    deadline_guide_file = FINAL_SET / "30_service_deadline_calculator_guide_final.md"
+    deadline_template_file = FINAL_SET / "31_service_deadline_calculator_template.csv"
+    authority_placeholder_file = FINAL_SET / "06_oregon_authority_table_placeholders.md"
+
+    staged_components = [
+        cover_file,
+        checklist_file,
+        search_report_template_file,
+        deficiency_file,
+        declaration_file,
+        compel_file,
+        manifests_file,
+        deadline_guide_file,
+        deadline_template_file,
+    ]
+
+    facts.append(
+        Fact(
+            "f_subpoena_workflow_components_staged",
+            "SubpoenaWorkflowComponentsStaged",
+            ("case:26PR00641",),
+            all(p.exists() for p in staged_components),
+            "verified",
+            "final_filing_set",
+            (str(date.today()),),
+        )
+    )
+
+    protocol_has_or_blocks = False
+    if protocol_file.exists():
+        txt = protocol_file.read_text(encoding="utf-8", errors="ignore")
+        low = txt.lower()
+        has_range_hint = ("paragraphs 10-27" in low) or (re.search(r"(?m)^10\.", txt) is not None and re.search(r"(?m)^27\.", txt) is not None)
+        has_or_signal = (" or " in low) or ("or-joined" in low)
+        has_report_req = "search execution report" in low
+        protocol_has_or_blocks = bool(has_range_hint and has_or_signal and has_report_req)
+    facts.append(
+        Fact(
+            "f_or_joined_search_protocol_defined",
+            "OrJoinedSearchProtocolDefined",
+            ("doc:11B_attachment_a2_definitions_and_instructions_final.md",),
+            protocol_has_or_blocks,
+            "verified",
+            str(protocol_file.name),
+            (str(date.today()),),
+        )
+    )
+
+    authority_placeholders_unresolved = True
+    if authority_placeholder_file.exists():
+        authority_text = authority_placeholder_file.read_text(encoding="utf-8", errors="ignore")
+        authority_placeholders_unresolved = "[insert" in authority_text.lower()
+
+    facts.append(
+        Fact(
+            "f_authority_table_placeholders_unresolved",
+            "AuthorityCitationsUnresolved",
+            ("doc:06_oregon_authority_table_placeholders.md",),
+            authority_placeholders_unresolved,
+            "verified",
+            authority_placeholder_file.name,
+            (str(date.today()),),
+        )
+    )
+    facts.append(
+        Fact(
+            "f_authority_ors_33_055_remedial_contempt_procedure",
+            "AuthorityAvailable",
+            ("auth:ors_33_055", "topic:remedial_contempt_procedure"),
+            True,
+            "verified",
+            "oregon_authority_grounding_memo_2026-04-07.md",
+            ("2026-04-07",),
+        )
+    )
+    facts.append(
+        Fact(
+            "f_authority_ors_33_075_compel_appearance",
+            "AuthorityAvailable",
+            ("auth:ors_33_075", "topic:compel_appearance_after_order_to_appear"),
+            True,
+            "verified",
+            "oregon_authority_grounding_memo_2026-04-07.md",
+            ("2026-04-07",),
+        )
+    )
+    facts.append(
+        Fact(
+            "f_authority_ors_33_105_remedial_sanctions",
+            "AuthorityAvailable",
+            ("auth:ors_33_105", "topic:remedial_contempt_sanctions"),
+            True,
+            "verified",
+            "oregon_authority_grounding_memo_2026-04-07.md",
+            ("2026-04-07",),
+        )
+    )
+    facts.append(
+        Fact(
+            "f_authority_orcp_17_improper_purpose_and_support",
+            "AuthorityAvailable",
+            ("auth:orcp_17_c", "topic:improper_purpose_and_fact_law_support"),
+            True,
+            "verified",
+            "oregon_authority_grounding_memo_2026-04-07.md",
+            ("2026-04-07",),
+        )
+    )
+    facts.append(
+        Fact(
+            "f_authority_orcp_46_discovery_sanctions",
+            "AuthorityAvailable",
+            ("auth:orcp_46", "topic:discovery_motion_expenses_and_just_orders"),
+            True,
+            "verified",
+            "oregon_authority_grounding_memo_2026-04-07.md",
+            ("2026-04-07",),
+        )
+    )
+    facts.append(
+        Fact(
+            "f_authority_orcp_55_subpoena_obedience",
+            "AuthorityAvailable",
+            ("auth:orcp_55", "topic:subpoena_must_be_obeyed_unless_judge_orders_otherwise"),
+            True,
+            "verified",
+            "oregon_authority_grounding_memo_2026-04-07.md",
+            ("2026-04-07",),
+        )
+    )
+    facts.append(
+        Fact(
+            "f_authority_ors_125_050_protective_orcp_oec",
+            "AuthorityAvailable",
+            ("auth:ors_125_050", "topic:orcp_and_oec_apply_in_protective_proceedings"),
+            True,
+            "verified",
+            "oregon_authority_grounding_memo_2026-04-07.md",
+            ("2026-04-07",),
+        )
+    )
+    facts.append(
+        Fact(
+            "f_authority_ors_125_060_notice_recipients",
+            "AuthorityAvailable",
+            ("auth:ors_125_060", "topic:protective_proceeding_notice_recipients"),
+            True,
+            "verified",
+            "oregon_authority_grounding_memo_2026-04-07.md",
+            ("2026-04-07",),
+        )
+    )
+    facts.append(
+        Fact(
+            "f_authority_ors_125_065_notice_manner_and_timing",
+            "AuthorityAvailable",
+            ("auth:ors_125_065", "topic:protective_proceeding_notice_manner_and_timing"),
+            True,
+            "verified",
+            "oregon_authority_grounding_memo_2026-04-07.md",
+            ("2026-04-07",),
+        )
+    )
+    facts.append(
+        Fact(
+            "f_authority_ors_125_075_objections",
+            "AuthorityAvailable",
+            ("auth:ors_125_075", "topic:protective_proceeding_objections"),
+            True,
+            "verified",
+            "oregon_authority_grounding_memo_2026-04-07.md",
+            ("2026-04-07",),
+        )
+    )
+    facts.append(
+        Fact(
+            "f_authority_ors_125_080_hearing_and_counsel",
+            "AuthorityAvailable",
+            ("auth:ors_125_080", "topic:protective_proceeding_hearing_and_counsel"),
+            True,
+            "verified",
+            "oregon_authority_grounding_memo_2026-04-07.md",
+            ("2026-04-07",),
+        )
+    )
+    facts.append(
+        Fact(
+            "f_authority_ors_125_120_protected_person_special_advocate",
+            "AuthorityAvailable",
+            ("auth:ors_125_120", "topic:protected_person_special_advocate"),
+            True,
+            "verified",
+            "oregon_authority_grounding_memo_2026-04-07.md",
+            ("2026-04-07",),
+        )
+    )
+    facts.append(
+        Fact(
+            "f_authority_orcp_9_service_of_later_filed_papers",
+            "AuthorityAvailable",
+            ("auth:orcp_9", "topic:service_of_later_filed_papers"),
+            True,
+            "verified",
+            "oregon_authority_grounding_memo_2026-04-07.md",
+            ("2026-04-07",),
+        )
+    )
+    facts.append(
+        Fact(
+            "f_authority_orcp_10_time_computation",
+            "AuthorityAvailable",
+            ("auth:orcp_10", "topic:time_computation_and_additional_service_days"),
+            True,
+            "verified",
+            "oregon_authority_grounding_memo_2026-04-07.md",
+            ("2026-04-07",),
+        )
+    )
+    facts.append(
+        Fact(
+            "f_authority_issue_preclusion_elements_official_oregon_cases",
+            "AuthorityAvailable",
+            ("auth:oregon_issue_preclusion_cases", "topic:issue_preclusion_elements_and_identical_issue"),
+            True,
+            "verified",
+            "oregon_authority_grounding_memo_2026-04-07.md",
+            ("2026-04-07",),
+        )
+    )
+    facts.append(
+        Fact(
+            "f_authority_issue_preclusion_requires_prior_separate_proceeding",
+            "AuthorityAvailable",
+            ("auth:oregon_issue_preclusion_prior_separate_proceeding_cases", "topic:prior_separate_proceeding_requirement"),
+            True,
+            "verified",
+            "oregon_authority_grounding_memo_2026-04-07.md",
+            ("2026-04-07",),
+        )
+    )
 
     for ev in solomon_events:
         event_id = str(ev.get("event_id", "")).strip()
@@ -417,6 +771,134 @@ def build_facts(
             )
         )
 
+    if active_service_rows:
+        observed_dates: List[str] = []
+        for row in active_service_rows:
+            for key in (
+                "log_date",
+                "date_served",
+                "production_due",
+                "date_production_received",
+                "deficiency_notice_sent",
+                "cure_deadline",
+                "cure_received",
+                "motion_to_compel_filed",
+            ):
+                d = _extract_iso_date(row.get(key, ""))
+                if d:
+                    observed_dates.append(d)
+        inferred_date = max(observed_dates) if observed_dates else str(date.today())
+
+        facts.append(
+            Fact(
+                "f_active_service_log_initialized",
+                "ActiveServiceLogInitialized",
+                ("case:26PR00641",),
+                True,
+                "verified",
+                ACTIVE_SERVICE_LOG.name,
+                (inferred_date,),
+            )
+        )
+
+        ready_count = 0
+        served_count = 0
+        deficiency_count = 0
+        incomplete_response_count = 0
+        compel_stage_count = 0
+        for row in active_service_rows:
+            status = row.get("status", "").lower()
+            date_served = _extract_iso_date(row.get("date_served", ""))
+            deficiency_sent = _extract_iso_date(row.get("deficiency_notice_sent", ""))
+            compel_filed = _extract_iso_date(row.get("motion_to_compel_filed", ""))
+
+            checklist_received = (row.get("checklist_received", "") or "").strip().lower()
+            search_report_received = (row.get("search_report_received", "") or "").strip().lower()
+
+            if status == "ready_to_serve":
+                ready_count += 1
+            if status in {"served", "awaiting_production", "production_received", "deficiency_notice_stage", "motion_to_compel_stage"} or date_served:
+                served_count += 1
+            if status in {"deficiency_notice_stage", "motion_to_compel_stage"} or deficiency_sent:
+                deficiency_count += 1
+            if status in {"motion_to_compel_stage"} or compel_filed:
+                compel_stage_count += 1
+
+            # Incomplete response heuristic once service occurred:
+            # awaiting production, explicit deficiency stage, or missing required return artifacts.
+            if (
+                (status in {"awaiting_production", "deficiency_notice_stage", "motion_to_compel_stage"})
+                or (date_served and (checklist_received in {"n", "no", "false", ""} or search_report_received in {"n", "no", "false", ""}))
+            ):
+                incomplete_response_count += 1
+
+        facts.append(
+            Fact(
+                "f_subpoena_recipients_ready_to_serve",
+                "SubpoenaRecipientsReadyToServe",
+                ("case:26PR00641", "count:6"),
+                ready_count >= 6,
+                "verified",
+                ACTIVE_SERVICE_LOG.name,
+                (inferred_date,),
+            )
+        )
+        facts.append(
+            Fact(
+                "f_subpoena_service_completed_any",
+                "SubpoenaServiceCompletedAny",
+                ("case:26PR00641",),
+                served_count > 0,
+                "verified",
+                ACTIVE_SERVICE_LOG.name,
+                (inferred_date,),
+            )
+        )
+        facts.append(
+            Fact(
+                "f_subpoena_pre_service_phase_only",
+                "SubpoenaPreServicePhaseOnly",
+                ("case:26PR00641",),
+                served_count == 0,
+                "verified",
+                ACTIVE_SERVICE_LOG.name,
+                (inferred_date,),
+            )
+        )
+        facts.append(
+            Fact(
+                "f_deficiency_notice_sent_any",
+                "DeficiencyNoticeSentAny",
+                ("case:26PR00641",),
+                deficiency_count > 0,
+                "verified",
+                ACTIVE_SERVICE_LOG.name,
+                (inferred_date,),
+            )
+        )
+        facts.append(
+            Fact(
+                "f_subpoena_response_incomplete_any",
+                "SubpoenaResponseIncompleteAny",
+                ("case:26PR00641",),
+                incomplete_response_count > 0,
+                "verified",
+                ACTIVE_SERVICE_LOG.name,
+                (inferred_date,),
+            )
+        )
+        facts.append(
+            Fact(
+                "f_motion_to_compel_stage_any",
+                "MotionToCompelStageAny",
+                ("case:26PR00641",),
+                compel_stage_count > 0,
+                "verified",
+                ACTIVE_SERVICE_LOG.name,
+                (inferred_date,),
+            )
+        )
+
     return facts
 
 
@@ -433,6 +915,7 @@ def build_rules() -> List[Rule]:
                 "person:jane_cortez",
             ),
             "If prior appointment exists, Benjamin is permitted to act within valid guardian scope for Jane.",
+            "hypothesis",
         ),
         Rule(
             "r2_noninterference_prohibition_for_benjamin",
@@ -445,6 +928,7 @@ def build_rules() -> List[Rule]:
                 "process:hacc_housing_contract",
             ),
             "If prior appointment exists and interference is alleged, Benjamin is forbidden from interference.",
+            "hypothesis",
         ),
         Rule(
             "r3_benjamin_obligation_comply_or_seek_relief",
@@ -457,6 +941,7 @@ def build_rules() -> List[Rule]:
                 "order:prior_guardianship_order",
             ),
             "If prior appointment is in force and Benjamin disregarded order, Benjamin was obligated to comply or seek relief.",
+            "hypothesis",
         ),
         Rule(
             "r4_solomon_forbidden_abuse_contact_property_control",
@@ -475,6 +960,8 @@ def build_rules() -> List[Rule]:
                 "person:jane_cortez",
             ),
             "Given granted in-effect restraining order with property restrictions, Solomon is forbidden to abuse/contact/interfere/control property.",
+            "filing",
+            ("order:eppdapa_restraining_order",),
         ),
         Rule(
             "r4b_solomon_forbidden_enter_residence",
@@ -491,6 +978,8 @@ def build_rules() -> List[Rule]:
                 "location:10043_se_32nd_ave",
             ),
             "Given the granted restraining order and residence restriction, Solomon is forbidden from entering or remaining at the protected residence.",
+            "filing",
+            ("order:eppdapa_restraining_order",),
         ),
         Rule(
             "r5_solomon_obligated_appear_and_answer",
@@ -503,6 +992,8 @@ def build_rules() -> List[Rule]:
                 "proceeding:related_order_hearing",
             ),
             "If no further service was required because Solomon appeared, later failure to appear supports an obligation to appear and answer.",
+            "hypothesis",
+            ("order:eppdapa_restraining_order",),
         ),
         Rule(
             "r5b_solomon_obligated_seek_hearing_or_comply",
@@ -519,6 +1010,8 @@ def build_rules() -> List[Rule]:
                 "order:eppdapa_restraining_order",
             ),
             "If Solomon stated he would comply only once served despite an already in-effect order, he was obligated to seek a hearing or comply rather than self-suspend effectiveness.",
+            "filing",
+            ("order:eppdapa_restraining_order",),
         ),
         Rule(
             "r5c_solomon_forbidden_self_help_noncooperation",
@@ -535,22 +1028,26 @@ def build_rules() -> List[Rule]:
                 "order:eppdapa_restraining_order",
             ),
             "If Solomon adopted an explicit noncooperation posture after the granted in-effect order, self-help noncooperation is forbidden.",
+            "filing",
+            ("order:eppdapa_restraining_order",),
         ),
         Rule(
-            "r6_hacc_obligated_process_consistently_with_valid_authority",
-            ("f_hacc_process_exists", "f_client_prior_appointment"),
+            "r6_hacc_obligated_document_authority_chain_for_lease_change",
+            ("f_hacc_removed_benjamin_effective_2026_01_01", "f_hacc_internal_review_claimed", "f_hacc_court_documentation_basis_claimed"),
             DeonticConclusion(
-                "c6_hacc_obligated_process_consistent_with_order",
+                "c6_hacc_obligated_document_authority_chain_for_lease_change",
                 "O",
                 "org:hacc",
-                "process_housing_consistent_with_valid_guardian_authority",
-                "person:jane_cortez",
+                "identify_actor_document_and_authority_chain_for_lease_change",
+                "household:jane_cortez_household",
             ),
-            "If housing process is active and appointment exists, HACC is obligated to process consistently with valid authority.",
+            "If HACC states that a lease change followed internal review and court documentation on file, HACC is obligated in this model to identify the actor, document, and authority chain behind that change.",
+            "filing",
+            ("auth:orcp_17_c",),
         ),
         Rule(
             "r6b_hacc_obligated_document_lease_basis",
-            ("f_hacc_lease_adjustment_effective_2026_01_01",),
+            ("f_hacc_lease_adjustment_effective_2026_01_01", "f_hacc_removed_benjamin_effective_2026_01_01"),
             DeonticConclusion(
                 "c6b_hacc_obligated_document_lease_basis",
                 "O",
@@ -559,6 +1056,8 @@ def build_rules() -> List[Rule]:
                 "household:jane_cortez_household",
             ),
             "If HACC implemented a January 1, 2026 lease adjustment, HACC was obligated to document the basis for that household-composition change.",
+            "filing",
+            ("auth:orcp_17_c",),
         ),
         Rule(
             "r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
@@ -571,10 +1070,37 @@ def build_rules() -> List[Rule]:
                 "person:solomon",
             ),
             "Because no named HACC notice message about the Solomon order has been found in preserved mail, the HACC-interference theory should presently be treated as an inference rather than direct proof.",
+            "filing",
+        ),
+        Rule(
+            "r6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+            ("f_prior_appointment_source_order_not_found",),
+            DeonticConclusion(
+                "c6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+                "O",
+                "case:guardianship_collateral_estoppel",
+                "treat_prior_appointment_theory_as_hypothesis_until_source_order_found",
+                "issue:prior_appointment_for_jane_cortez",
+            ),
+            "If no source order has been found for the claimed prior appointment, the prior-appointment theory must remain hypothesis-only in filing-facing outputs.",
+            "filing",
+        ),
+        Rule(
+            "r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+            ("f_hacc_actor_identification_record_not_found_locally", "f_hacc_exhibit_r_requires_compelled_production"),
+            DeonticConclusion(
+                "c6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+                "P",
+                "case:guardianship_collateral_estoppel",
+                "seek_compelled_production_of_hacc_actor_document_authority_chain",
+                "issue:lease_change_actor_identification",
+            ),
+            "If local search did not locate the HACC actor-identification record and compelled production is required, the case posture is permitted to pursue Exhibit R production.",
+            "filing",
         ),
         Rule(
             "r7_solomon_forbidden_refile_precluded_issue",
-            ("f_collateral_estoppel_candidate", "f_client_solomon_barred_refile"),
+            ("f_authority_issue_preclusion_elements_official_oregon_cases", "f_authority_issue_preclusion_requires_prior_separate_proceeding", "f_collateral_estoppel_candidate", "f_client_solomon_barred_refile"),
             DeonticConclusion(
                 "c7_solomon_forbidden_refile_precluded_issue",
                 "F",
@@ -583,6 +1109,8 @@ def build_rules() -> List[Rule]:
                 "issue:guardianship_authority",
             ),
             "If issue preclusion applies, Solomon is forbidden from relitigating the precluded issue.",
+            "hypothesis",
+            ("auth:oregon_issue_preclusion_cases", "auth:oregon_issue_preclusion_prior_separate_proceeding_cases"),
         ),
         Rule(
             "r8_solomon_notice_ack_triggers_court_relief_path",
@@ -595,6 +1123,8 @@ def build_rules() -> List[Rule]:
                 "order:eppdapa_restraining_order",
             ),
             "If Solomon acknowledged awareness of restraining order and the order is in effect, Solomon is obligated to seek court relief rather than self-help noncompliance.",
+            "filing",
+            ("order:eppdapa_restraining_order",),
         ),
         Rule(
             "r9_solomon_wait_for_service_conflicts_with_no_further_service",
@@ -607,6 +1137,8 @@ def build_rules() -> List[Rule]:
                 "order:eppdapa_restraining_order",
             ),
             "If Solomon stated he would wait for service but the order states no further service needed due to appearance, conditioning compliance on extra service is forbidden in this model.",
+            "filing",
+            ("order:eppdapa_restraining_order",),
         ),
         Rule(
             "r10_solomon_noncooperation_statement_conflicts_with_effective_order",
@@ -619,6 +1151,8 @@ def build_rules() -> List[Rule]:
                 "order:eppdapa_restraining_order",
             ),
             "If Solomon states non-incentivized cooperation while order is in effect, intentional noncooperation is forbidden in this model.",
+            "filing",
+            ("order:eppdapa_restraining_order",),
         ),
         Rule(
             "r11_solomon_already_have_order_statement_supports_notice",
@@ -631,6 +1165,8 @@ def build_rules() -> List[Rule]:
                 "order:eppdapa_restraining_order",
             ),
             "If Solomon stated the other party already had the restraining order and order is in effect, Solomon is obligated to recognize existing order status.",
+            "filing",
+            ("order:eppdapa_restraining_order",),
         ),
         Rule(
             "r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order",
@@ -643,6 +1179,8 @@ def build_rules() -> List[Rule]:
                 "order:eppdapa_restraining_order",
             ),
             "If Solomon states the order is not in effect while the order is in effect, asserting ineffectiveness without court relief is forbidden in this model.",
+            "filing",
+            ("order:eppdapa_restraining_order",),
         ),
         Rule(
             "r13_solomon_judge_overturn_statement_triggers_motion_path",
@@ -655,6 +1193,8 @@ def build_rules() -> List[Rule]:
                 "order:eppdapa_restraining_order",
             ),
             "If Solomon states he would have the judge overturn the order while it is in effect, he is obligated to seek court modification before noncompliance.",
+            "filing",
+            ("order:eppdapa_restraining_order",),
         ),
         Rule(
             "r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
@@ -667,6 +1207,257 @@ def build_rules() -> List[Rule]:
                 "person:jane_cortez",
             ),
             "If HACC is told that Jane is receiving calls about a restrained brother and third-party housing contact is occurring with a restrained person, HACC is obligated in this model to stop that contact path and document the response.",
+            "filing",
+        ),
+        Rule(
+            "r15_benjamin_permitted_serve_subpoena_packets",
+            ("f_subpoena_workflow_components_staged", "f_subpoena_recipients_ready_to_serve"),
+            DeonticConclusion(
+                "c15_benjamin_permitted_serve_subpoena_packets",
+                "P",
+                "person:benjamin_barber",
+                "serve_staged_subpoena_packets",
+                "case:26PR00641",
+            ),
+            "If subpoena workflow components are staged and recipients are ready-to-serve, Benjamin is permitted to serve the staged subpoena packets.",
+            "workflow",
+            ("auth:orcp_55",),
+        ),
+        Rule(
+            "r16_benjamin_obligated_track_service_and_deadlines",
+            ("f_active_service_log_initialized", "f_subpoena_workflow_components_staged"),
+            DeonticConclusion(
+                "c16_benjamin_obligated_track_service_and_deadlines",
+                "O",
+                "person:benjamin_barber",
+                "maintain_service_and_deadline_tracking",
+                "case:26PR00641",
+            ),
+            "If service log and workflow components exist, Benjamin is obligated in this model to maintain service/deadline tracking.",
+            "workflow",
+            ("auth:orcp_55",),
+        ),
+        Rule(
+            "r17_responding_custodian_obligated_execute_or_query_protocol_upon_service",
+            ("f_subpoena_service_completed_any", "f_or_joined_search_protocol_defined"),
+            DeonticConclusion(
+                "c17_responding_custodian_obligated_execute_or_query_protocol",
+                "O",
+                "role:responding_custodian",
+                "execute_or_joined_identifier_queries_and_produce_search_execution_report",
+                "case:26PR00641",
+            ),
+            "If any subpoena service is completed and OR-joined protocol is defined, responding custodians are obligated in this model to execute the protocol and produce a search execution report.",
+            "workflow",
+            ("auth:orcp_55",),
+        ),
+        Rule(
+            "r18_benjamin_permitted_issue_deficiency_notice_after_incomplete_subpoena_response",
+            ("f_subpoena_response_incomplete_any", "f_subpoena_workflow_components_staged"),
+            DeonticConclusion(
+                "c18_benjamin_permitted_issue_deficiency_notice",
+                "P",
+                "person:benjamin_barber",
+                "issue_subpoena_deficiency_notice_and_set_cure_deadline",
+                "case:26PR00641",
+            ),
+            "If an incomplete subpoena response is present and workflow components are staged, Benjamin is permitted in this model to issue a deficiency notice and cure deadline.",
+            "workflow",
+            ("auth:orcp_46", "auth:orcp_55"),
+        ),
+        Rule(
+            "r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage",
+            ("f_deficiency_notice_sent_any", "f_subpoena_workflow_components_staged"),
+            DeonticConclusion(
+                "c19_benjamin_permitted_move_to_compel",
+                "P",
+                "person:benjamin_barber",
+                "move_to_compel_and_seek_sanctions_for_subpoena_noncompliance",
+                "case:26PR00641",
+            ),
+            "If deficiency notices are in play and compel templates are staged, Benjamin is permitted in this model to move to compel and seek sanctions for noncompliance.",
+            "workflow",
+            ("auth:orcp_46", "auth:orcp_55"),
+        ),
+        Rule(
+            "r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+            ("f_subpoena_pre_service_phase_only",),
+            DeonticConclusion(
+                "c20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+                "P",
+                "case:guardianship_collateral_estoppel",
+                "treat_subpoena_enforcement_motion_path_as_pending_until_service",
+                "case:26PR00641",
+            ),
+            "If no subpoena service is yet completed, subpoena-enforcement motion path remains pending pre-service in this model.",
+            "workflow",
+            ("auth:orcp_55",),
+        ),
+        Rule(
+            "r21_case_obligated_resolve_actor_assignment_conflict",
+            ("f_actor_assignment_conflict_benjamin_vs_solomon_interference",),
+            DeonticConclusion(
+                "c21_case_obligated_resolve_actor_assignment_conflict",
+                "O",
+                "case:guardianship_collateral_estoppel",
+                "resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record",
+                "issue:interference_actor_assignment",
+            ),
+            "If the model contains a Benjamin-vs-Solomon interference actor conflict, the case posture is obligated to resolve that assignment with source records before final legal attribution.",
+            "filing",
+        ),
+        Rule(
+            "r22_case_obligated_finalize_authority_citations_before_filing",
+            ("f_authority_table_placeholders_unresolved",),
+            DeonticConclusion(
+                "c22_case_obligated_finalize_authority_citations_before_filing",
+                "O",
+                "case:guardianship_collateral_estoppel",
+                "finalize_governing_authority_citations_before_final_filing",
+                "doc:06_oregon_authority_table_placeholders.md",
+            ),
+            "If authority table placeholders remain unresolved, the case posture is obligated to finalize governing citations before final filing use.",
+            "filing",
+        ),
+        Rule(
+            "r23_case_permitted_initiate_remedial_contempt_path",
+            ("f_authority_ors_33_055_remedial_contempt_procedure", "f_restraining_order_in_effect", "f_solomon_service_position_statement"),
+            DeonticConclusion(
+                "c23_case_permitted_initiate_remedial_contempt_path",
+                "P",
+                "case:guardianship_collateral_estoppel",
+                "initiate_remedial_contempt_or_show_cause_path",
+                "person:solomon",
+            ),
+            "If remedial-contempt authority is available and the record includes an in-effect order plus Solomon's service-position statement, the case posture is permitted to pursue a remedial contempt or show-cause path.",
+            "filing",
+            ("auth:ors_33_055",),
+        ),
+        Rule(
+            "r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+            ("f_authority_ors_33_075_compel_appearance", "f_client_solomon_failed_appearance"),
+            DeonticConclusion(
+                "c24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+                "P",
+                "case:guardianship_collateral_estoppel",
+                "seek_order_or_warrant_to_compel_appearance_if_order_to_appear_is_served_and_ignored",
+                "person:solomon",
+            ),
+            "If compel-appearance authority is available and the claimed nonappearance predicate is later proved, the case posture may seek compelled appearance.",
+            "filing",
+            ("auth:ors_33_075",),
+        ),
+        Rule(
+            "r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+            ("f_authority_ors_33_105_remedial_sanctions", "f_hacc_removed_benjamin_effective_2026_01_01"),
+            DeonticConclusion(
+                "c25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+                "P",
+                "case:guardianship_collateral_estoppel",
+                "seek_compensatory_or_compliance_oriented_remedial_sanctions_if_contempt_is_proved",
+                "issue:prejudice_and_noninterference_relief",
+            ),
+            "If remedial-sanctions authority is available and prejudice-related housing change is documented, the case posture may seek compensatory or compliance-oriented remedial sanctions if contempt elements are later proved.",
+            "filing",
+            ("auth:ors_33_105",),
+        ),
+        Rule(
+            "r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+            ("f_authority_orcp_17_improper_purpose_and_support", "f_hacc_named_notice_to_solomon_order_not_found"),
+            DeonticConclusion(
+                "c26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+                "P",
+                "case:guardianship_collateral_estoppel",
+                "seek_orcp_17_sanctions_if_filing_is_shown_improper_or_factually_or_legally_unsupported",
+                "issue:sanctions_track",
+            ),
+            "If ORCP 17 authority is available, the case posture may seek filing-related sanctions if improper purpose or inadequate factual/legal support is shown; current proof-state cautions remain in force.",
+            "filing",
+            ("auth:orcp_17_c",),
+        ),
+        Rule(
+            "r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+            ("f_authority_orcp_55_subpoena_obedience", "f_authority_orcp_46_discovery_sanctions", "f_hacc_exhibit_r_requires_compelled_production"),
+            DeonticConclusion(
+                "c27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+                "P",
+                "case:guardianship_collateral_estoppel",
+                "seek_subpoena_enforcement_and_related_expenses_after_nonparty_noncompliance",
+                "org:hacc",
+            ),
+            "If subpoena-obedience and discovery-sanctions authority are available and compelled production is required, the case posture may pursue subpoena enforcement and related expense-shifting when the required noncompliance predicate is met.",
+            "workflow",
+            ("auth:orcp_55", "auth:orcp_46"),
+        ),
+        Rule(
+            "r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+            ("f_authority_ors_125_050_protective_orcp_oec", "f_petition_exists"),
+            DeonticConclusion(
+                "c28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+                "P",
+                "case:26PR00641",
+                "apply_orcp_and_oec_subject_to_specific_chapter_125_overrides",
+                "proceeding:protective_proceeding",
+            ),
+            "If ORS 125.050 authority is available and the protective petition is filed, the proceeding may apply ORCP and the Oregon Evidence Code except where chapter 125 provides otherwise.",
+            "filing",
+            ("auth:ors_125_050",),
+        ),
+        Rule(
+            "r29_case_obligated_preserve_notice_and_objection_window",
+            ("f_authority_ors_125_060_notice_recipients", "f_authority_ors_125_065_notice_manner_and_timing", "f_notice_to_respondent"),
+            DeonticConclusion(
+                "c29_case_obligated_preserve_notice_and_objection_window",
+                "O",
+                "case:26PR00641",
+                "preserve_statutory_notice_and_objection_window_for_protective_petition",
+                "person:jane_cortez",
+            ),
+            "If chapter 125 notice authorities are available and notice issued to the respondent, the proceeding is obligated to preserve the statutory notice and objection framework.",
+            "filing",
+            ("auth:ors_125_060", "auth:ors_125_065"),
+        ),
+        Rule(
+            "r30_case_obligated_schedule_hearing_on_presented_objection",
+            ("f_authority_ors_125_075_objections", "f_authority_ors_125_080_hearing_and_counsel", "f_respondent_objection_form_present"),
+            DeonticConclusion(
+                "c30_case_obligated_schedule_hearing_on_presented_objection",
+                "O",
+                "case:26PR00641",
+                "schedule_and_process_hearing_on_guardianship_objection",
+                "person:jane_cortez",
+            ),
+            "If objection and hearing authorities are available and the packet includes a respondent objection form, the proceeding is obligated in this model to route the matter through the objection-hearing path.",
+            "filing",
+            ("auth:ors_125_075", "auth:ors_125_080"),
+        ),
+        Rule(
+            "r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+            ("f_authority_ors_125_080_hearing_and_counsel", "f_notice_to_respondent"),
+            DeonticConclusion(
+                "c31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+                "P",
+                "case:26PR00641",
+                "assert_respondent_right_to_appear_in_person_or_by_counsel",
+                "person:jane_cortez",
+            ),
+            "If ORS 125.080 authority is available and notice has issued, the case posture may assert the protected person's right to appear in person or by counsel at hearing.",
+            "filing",
+            ("auth:ors_125_080",),
+        ),
+        Rule(
+            "r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+            ("f_authority_orcp_9_service_of_later_filed_papers", "f_authority_orcp_10_time_computation", "f_petition_exists"),
+            DeonticConclusion(
+                "c32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+                "P",
+                "case:guardianship_collateral_estoppel",
+                "use_orcp9_service_and_orcp10_deadline_computation_for_later_filed_motion_packets",
+                "issue:service_and_deadlines",
+            ),
+            "If ORCP 9 and ORCP 10 authority are available, the case posture may use those rules for service and deadline computation on later-filed motion packets, subject to more specific chapter 125 notice rules where applicable.",
+            "workflow",
+            ("auth:orcp_9", "auth:orcp_10", "auth:ors_125_050"),
         ),
     ]
 
@@ -699,6 +1490,8 @@ def evaluate_rule(rule: Rule, facts_by_id: Dict[str, Fact], mode: str) -> Tuple[
         return ("active" if all_verified else "unresolved"), detail, activation_date
 
     if mode == "inclusive":
+        if rule.track == "hypothesis":
+            return "unresolved", detail, activation_date
         allowed = {"verified", "alleged"}
         if all(facts_by_id[fid].status in allowed and facts_by_id[fid].value for fid in rule.antecedents):
             return "active", detail, activation_date
@@ -727,12 +1520,15 @@ def build_reasoning_report(
     for mode in ("strict", "inclusive"):
         active = []
         unresolved = []
+        inactive = []
         party_state: Dict[str, Dict[str, List[Dict[str, str]]]] = {}
 
         for rule in rules:
             state, antecedent_detail, activation_date = evaluate_rule(rule, facts_by_id, mode)
             item = {
                 "rule_id": rule.rule_id,
+                "track": rule.track,
+                "authority_refs": list(rule.authority_refs),
                 "description": rule.description,
                 "activation_date_estimate": activation_date,
                 "antecedents": antecedent_detail,
@@ -756,12 +1552,15 @@ def build_reasoning_report(
                         "activation_date_estimate": activation_date,
                     }
                 )
-            else:
+            elif state == "unresolved":
                 unresolved.append(item)
+            else:
+                inactive.append(item)
 
         report["modes"][mode] = {
             "active_rules": active,
             "unresolved_rules": unresolved,
+            "inactive_rules": inactive,
             "party_deontic_state": party_state,
         }
 
@@ -782,6 +1581,7 @@ def to_knowledge_graph(facts: List[Fact], rules: List[Rule], report: Dict[str, o
         "org:hacc": "Housing Authority of Clackamas County",
         "court:clackamas_probate": "Clackamas County Circuit Court Probate Department",
         "location:10043_se_32nd_ave": "10043 SE 32nd Ave, Milwaukie, Oregon 97222",
+        "role:responding_custodian": "Responding Records Custodian Role",
     }
     for pid, name in party_nodes.items():
         nodes.append({"id": pid, "kind": "party", "name": name})
@@ -807,7 +1607,15 @@ def to_knowledge_graph(facts: List[Fact], rules: List[Rule], report: Dict[str, o
     for rule in rules:
         rid = f"rule:{rule.rule_id}"
         cid = f"conclusion:{rule.conclusion.conclusion_id}"
-        nodes.append({"id": rid, "kind": "rule", "description": rule.description})
+        nodes.append(
+            {
+                "id": rid,
+                "kind": "rule",
+                "description": rule.description,
+                "track": rule.track,
+                "authority_refs": list(rule.authority_refs),
+            }
+        )
         nodes.append(
             {
                 "id": cid,
@@ -934,6 +1742,9 @@ def to_flogic(facts: List[Fact], rules: List[Rule]) -> str:
         ant = ", ".join([f"holds({aid})" for aid in r.antecedents])
         c = r.conclusion
         lines.append(f"deontic({c.modality}, {c.actor}, {c.action}, {c.target}) :- {ant}.")
+        lines.append(f"% track({r.rule_id}) = {r.track}")
+        if r.authority_refs:
+            lines.append(f"% authority_refs({r.rule_id}) = {list(r.authority_refs)}")
 
     lines.append("\n% Helper: strict mode")
     lines.append("holds(F) :- fact(F, _, status(verified), value(true)).")
@@ -974,6 +1785,9 @@ def to_tdfol(facts: List[Fact], rules: List[Rule]) -> str:
 
 
 def to_event_calculus(facts: List[Fact], rules: List[Rule]) -> str:
+    def pl_atom(token: str) -> str:
+        return "'" + token.replace("'", "\\'") + "'"
+
     lines = [
         "% Deontic Cognitive Event Calculus program",
         "% Fluents: notice/2, valid_order/1, interference/2, preclusion_applies/1",
@@ -996,22 +1810,37 @@ def to_event_calculus(facts: List[Fact], rules: List[Rule]) -> str:
         "% Cognitive state",
         "holdsAt(knows(solomon, valid_order(eppdapa_order)), T) :- holdsAt(notice(solomon, case_26PR00641), T).",
         "",
-        "% Deontic conclusions as fluents",
-        "holdsAt(forbidden(solomon, abuse_contact_or_control_property, jane_cortez), T) :-",
-        "    holdsAt(valid_order(eppdapa_order), T).",
+        "% Truth anchors for model facts",
+    ]
+
+    for f in facts:
+        if f.value:
+            lines.append(f"fact_true({pl_atom(f.fact_id)}).")
+
+    lines.extend([
         "",
-        "holdsAt(obligated(solomon, appear_and_answer_show_cause, related_order_hearing), T) :-",
-        "    happens(assert_refiled_barred_issue(solomon, guardianship_authority), T).",
+        "% Rule-level derivations from fact truth",
+    ])
+    for r in rules:
+        ant = ", ".join([f"fact_true({pl_atom(aid)})" for aid in r.antecedents]) if r.antecedents else "true"
+        lines.append(f"rule_holds({pl_atom(r.rule_id)}) :- {ant}.")
+
+    lines.extend([
         "",
-        "holdsAt(permitted(benjamin_barber, act_within_valid_guardian_scope, jane_cortez), T) :-",
-        "    holdsAt(prior_appointment(jane_cortez, benjamin_barber), T).",
-        "",
-        "holdsAt(forbidden(benjamin_barber, interfere_with_guardian_or_housing_process, hacc_housing_contract), T) :-",
-        "    holdsAt(prior_appointment(jane_cortez, benjamin_barber), T),",
-        "    holdsAt(interference(benjamin_barber, hacc_housing_contract), T).",
+        "% Deontic conclusions generated for all rules",
+    ])
+    for r in rules:
+        c = r.conclusion
+        lines.append(
+            "deontic_conclusion("
+            f"{pl_atom(r.rule_id)}, {pl_atom(c.modality)}, {pl_atom(c.actor)}, {pl_atom(c.action)}, {pl_atom(c.target)}) :- "
+            f"rule_holds({pl_atom(r.rule_id)})."
+        )
+
+    lines.extend([
         "",
         "% Temporal anchors inferred from OCR",
-    ]
+    ])
 
     for f in facts:
         if f.dates:
@@ -1053,6 +1882,7 @@ def to_litigation_matrix(report: Dict[str, object]) -> Dict[str, object]:
         out["modes"][mode] = {
             "active_rule_count": len(data["active_rules"]),
             "unresolved_rule_count": len(data["unresolved_rules"]),
+            "inactive_rule_count": len(data.get("inactive_rules", [])),
             "parties": parties,
         }
     return out
@@ -1070,6 +1900,7 @@ def report_markdown(report: Dict[str, object], matrix: Dict[str, object]) -> str
         m = report["modes"][mode]
         lines.append(f"- Active rules: {len(m['active_rules'])}")
         lines.append(f"- Unresolved rules: {len(m['unresolved_rules'])}")
+        lines.append(f"- Inactive rules: {len(m.get('inactive_rules', []))}")
         lines.append("- Party deontic state:")
         for party, state in sorted(m["party_deontic_state"].items()):
             lines.append(f"- {party}: O={len(state['O'])}, P={len(state['P'])}, F={len(state['F'])}")
@@ -1097,6 +1928,7 @@ def matrix_markdown(matrix: Dict[str, object]) -> str:
         lines.append(f"## Mode: {mode}")
         lines.append(f"- Active rules: {m['active_rule_count']}")
         lines.append(f"- Unresolved rules: {m['unresolved_rule_count']}")
+        lines.append(f"- Inactive rules: {m.get('inactive_rule_count', 0)}")
         for row in m["parties"]:
             lines.append(f"- Party: {row['party']}")
             lines.append(f"- Counts: O={row['counts']['O']} P={row['counts']['P']} F={row['counts']['F']}")
@@ -1122,7 +1954,8 @@ def main() -> None:
     ocr_dates = load_ocr_date_index()
     solomon_events = load_solomon_event_feed()
     solomon_repo_hits = load_solomon_repository_index()
-    facts = build_facts(ocr_dates, solomon_events, solomon_repo_hits)
+    active_service_rows = load_active_service_rows()
+    facts = build_facts(ocr_dates, solomon_events, solomon_repo_hits, active_service_rows)
     rules = build_rules()
     report = build_reasoning_report(facts, rules, ocr_dates, solomon_events, solomon_repo_hits)
     kg = to_knowledge_graph(facts, rules, report)

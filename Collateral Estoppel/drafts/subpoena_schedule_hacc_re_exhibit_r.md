@@ -1,17 +1,15 @@
 # Subpoena Schedule To HACC Re Exhibit R
 
 IN THE CIRCUIT COURT OF THE STATE OF OREGON  
-FOR THE COUNTY OF CLACKAMAS
+FOR THE COUNTY OF CLACKAMAS  
+PROBATE DEPARTMENT
 
-____________________________________,  
-Plaintiff / Petitioner,
+In the Matter of the Guardianship of:
 
-v.
+Jane Kay Cortez,
+Respondent / Protected Person.
 
-____________________________________,  
-Defendant / Respondent.
-
-Case No. __________________
+Case No. `26PR00641` (to confirm from certified docket)
 
 SCHEDULE A TO SUBPOENA DUCES TECUM  
 RE HACC EXHIBIT R AUTHORITY-CHAIN RECORDS

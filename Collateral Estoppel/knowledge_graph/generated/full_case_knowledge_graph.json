@@ -59,6 +59,11 @@
       "name": "10043 SE 32nd Ave, Milwaukie, Oregon 97222"
     },
     {
+      "id": "role:responding_custodian",
+      "kind": "party",
+      "name": "Responding Records Custodian Role"
+    },
+    {
       "id": "fact:f_petition_exists",
       "kind": "fact",
       "predicate": "PetitionFiled",
@@ -96,6 +101,24 @@
       "evidence_kind": null
     },
     {
+      "id": "fact:f_respondent_objection_form_present",
+      "kind": "fact",
+      "predicate": "RespondentObjectionFormPresent",
+      "args": [
+        "case:26PR00641",
+        "person:jane_cortez"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "guardianship_timeline.md",
+      "dates": [
+        "2026-04-05"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
       "id": "fact:f_petition_claims_no_prior_guardian",
       "kind": "fact",
       "predicate": "PetitionStatesNoPriorGuardian",
@@ -108,6 +131,23 @@
       "source": "solomon_motion_for_guardianship_ocr.txt",
       "dates": [
         "2026-03-31"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_prior_appointment_source_order_not_found",
+      "kind": "fact",
+      "predicate": "SourceOrderNotFoundInRepository",
+      "args": [
+        "issue:prior_appointment_for_jane_cortez"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "deontic_logic_gap_review_2026-04-07.md",
+      "dates": [
+        "2026-04-07"
       ],
       "confidence_level": null,
       "confidence_score": null,
@@ -434,6 +474,99 @@
       "evidence_kind": null
     },
     {
+      "id": "fact:f_hacc_removed_benjamin_effective_2026_01_01",
+      "kind": "fact",
+      "predicate": "HouseholdMemberRemovedEffective",
+      "args": [
+        "org:hacc",
+        "person:benjamin_barber",
+        "household:jane_cortez_household",
+        "2026-01-01"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "0014-Re-Allegations-of-Fraud---JC-Household/message.eml",
+      "dates": [
+        "2026-01-01",
+        "2026-01-12"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_hacc_internal_review_claimed",
+      "kind": "fact",
+      "predicate": "HaccInternalReviewClaimed",
+      "args": [
+        "org:hacc",
+        "household:jane_cortez_household"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "0014-Re-Allegations-of-Fraud---JC-Household/message.eml",
+      "dates": [
+        "2026-01-12"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_hacc_court_documentation_basis_claimed",
+      "kind": "fact",
+      "predicate": "HaccCourtDocumentationBasisClaimed",
+      "args": [
+        "org:hacc",
+        "household:jane_cortez_household"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "0014-Re-Allegations-of-Fraud---JC-Household/message.eml",
+      "dates": [
+        "2026-01-12"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_hacc_actor_identification_record_not_found_locally",
+      "kind": "fact",
+      "predicate": "LocalSearchNegativeForActorIdentificationRecord",
+      "args": [
+        "org:hacc",
+        "issue:lease_change_actor_identification"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "missing_exhibit_search_status_2026-04-07.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_hacc_exhibit_r_requires_compelled_production",
+      "kind": "fact",
+      "predicate": "CompelledProductionRequired",
+      "args": [
+        "issue:lease_change_actor_identification",
+        "org:hacc"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "subpoena_target_memo_hacc_lease_authority_record.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
       "id": "fact:f_january_2026_hacc_removed_benjamin_restored_restrained_party",
       "kind": "fact",
       "predicate": "LeaseRemovalAndRestorationNarrative",
@@ -555,9 +688,11 @@
         "process:hacc_housing_contract"
       ],
       "value": true,
-      "status": "alleged",
-      "source": "client_assertion",
-      "dates": [],
+      "status": "verified",
+      "source": "0014-Re-Allegations-of-Fraud---JC-Household/message.eml",
+      "dates": [
+        "2026-01-12"
+      ],
       "confidence_level": null,
       "confidence_score": null,
       "evidence_kind": null
@@ -573,6 +708,364 @@
       "status": "theory",
       "source": "motion_to_dismiss_for_collateral_estoppel.md",
       "dates": [],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_actor_assignment_conflict_benjamin_vs_solomon_interference",
+      "kind": "fact",
+      "predicate": "ActorAssignmentConflict",
+      "args": [
+        "issue:interference_actor_assignment",
+        "person:benjamin_barber",
+        "person:solomon"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "generate_formal_reasoning_artifacts.py",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_subpoena_workflow_components_staged",
+      "kind": "fact",
+      "predicate": "SubpoenaWorkflowComponentsStaged",
+      "args": [
+        "case:26PR00641"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "final_filing_set",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_or_joined_search_protocol_defined",
+      "kind": "fact",
+      "predicate": "OrJoinedSearchProtocolDefined",
+      "args": [
+        "doc:11B_attachment_a2_definitions_and_instructions_final.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "11B_attachment_a2_definitions_and_instructions_final.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_authority_table_placeholders_unresolved",
+      "kind": "fact",
+      "predicate": "AuthorityCitationsUnresolved",
+      "args": [
+        "doc:06_oregon_authority_table_placeholders.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "06_oregon_authority_table_placeholders.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_authority_ors_33_055_remedial_contempt_procedure",
+      "kind": "fact",
+      "predicate": "AuthorityAvailable",
+      "args": [
+        "auth:ors_33_055",
+        "topic:remedial_contempt_procedure"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "oregon_authority_grounding_memo_2026-04-07.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_authority_ors_33_075_compel_appearance",
+      "kind": "fact",
+      "predicate": "AuthorityAvailable",
+      "args": [
+        "auth:ors_33_075",
+        "topic:compel_appearance_after_order_to_appear"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "oregon_authority_grounding_memo_2026-04-07.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_authority_ors_33_105_remedial_sanctions",
+      "kind": "fact",
+      "predicate": "AuthorityAvailable",
+      "args": [
+        "auth:ors_33_105",
+        "topic:remedial_contempt_sanctions"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "oregon_authority_grounding_memo_2026-04-07.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_authority_orcp_17_improper_purpose_and_support",
+      "kind": "fact",
+      "predicate": "AuthorityAvailable",
+      "args": [
+        "auth:orcp_17_c",
+        "topic:improper_purpose_and_fact_law_support"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "oregon_authority_grounding_memo_2026-04-07.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_authority_orcp_46_discovery_sanctions",
+      "kind": "fact",
+      "predicate": "AuthorityAvailable",
+      "args": [
+        "auth:orcp_46",
+        "topic:discovery_motion_expenses_and_just_orders"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "oregon_authority_grounding_memo_2026-04-07.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_authority_orcp_55_subpoena_obedience",
+      "kind": "fact",
+      "predicate": "AuthorityAvailable",
+      "args": [
+        "auth:orcp_55",
+        "topic:subpoena_must_be_obeyed_unless_judge_orders_otherwise"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "oregon_authority_grounding_memo_2026-04-07.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_authority_ors_125_050_protective_orcp_oec",
+      "kind": "fact",
+      "predicate": "AuthorityAvailable",
+      "args": [
+        "auth:ors_125_050",
+        "topic:orcp_and_oec_apply_in_protective_proceedings"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "oregon_authority_grounding_memo_2026-04-07.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_authority_ors_125_060_notice_recipients",
+      "kind": "fact",
+      "predicate": "AuthorityAvailable",
+      "args": [
+        "auth:ors_125_060",
+        "topic:protective_proceeding_notice_recipients"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "oregon_authority_grounding_memo_2026-04-07.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_authority_ors_125_065_notice_manner_and_timing",
+      "kind": "fact",
+      "predicate": "AuthorityAvailable",
+      "args": [
+        "auth:ors_125_065",
+        "topic:protective_proceeding_notice_manner_and_timing"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "oregon_authority_grounding_memo_2026-04-07.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_authority_ors_125_075_objections",
+      "kind": "fact",
+      "predicate": "AuthorityAvailable",
+      "args": [
+        "auth:ors_125_075",
+        "topic:protective_proceeding_objections"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "oregon_authority_grounding_memo_2026-04-07.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_authority_ors_125_080_hearing_and_counsel",
+      "kind": "fact",
+      "predicate": "AuthorityAvailable",
+      "args": [
+        "auth:ors_125_080",
+        "topic:protective_proceeding_hearing_and_counsel"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "oregon_authority_grounding_memo_2026-04-07.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_authority_ors_125_120_protected_person_special_advocate",
+      "kind": "fact",
+      "predicate": "AuthorityAvailable",
+      "args": [
+        "auth:ors_125_120",
+        "topic:protected_person_special_advocate"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "oregon_authority_grounding_memo_2026-04-07.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_authority_orcp_9_service_of_later_filed_papers",
+      "kind": "fact",
+      "predicate": "AuthorityAvailable",
+      "args": [
+        "auth:orcp_9",
+        "topic:service_of_later_filed_papers"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "oregon_authority_grounding_memo_2026-04-07.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_authority_orcp_10_time_computation",
+      "kind": "fact",
+      "predicate": "AuthorityAvailable",
+      "args": [
+        "auth:orcp_10",
+        "topic:time_computation_and_additional_service_days"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "oregon_authority_grounding_memo_2026-04-07.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_authority_issue_preclusion_elements_official_oregon_cases",
+      "kind": "fact",
+      "predicate": "AuthorityAvailable",
+      "args": [
+        "auth:oregon_issue_preclusion_cases",
+        "topic:issue_preclusion_elements_and_identical_issue"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "oregon_authority_grounding_memo_2026-04-07.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_authority_issue_preclusion_requires_prior_separate_proceeding",
+      "kind": "fact",
+      "predicate": "AuthorityAvailable",
+      "args": [
+        "auth:oregon_issue_preclusion_prior_separate_proceeding_cases",
+        "topic:prior_separate_proceeding_requirement"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "oregon_authority_grounding_memo_2026-04-07.md",
+      "dates": [
+        "2026-04-07"
+      ],
       "confidence_level": null,
       "confidence_score": null,
       "evidence_kind": null
@@ -925,6 +1418,26 @@
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
         "person:solomon",
+        "source:Collateral Estoppel/evidence_notes/solomon_repository_evidence_index.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/evidence_notes/solomon_repository_evidence_index.md",
+      "dates": [
+        "01/03/2026",
+        "01/08/2026",
+        "02/20/2026"
+      ],
+      "confidence_level": "medium_high",
+      "confidence_score": 0.8,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_2",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
         "source:evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/email_import_manifest.json"
       ],
       "value": true,
@@ -940,7 +1453,27 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_2",
+      "id": "fact:f_repo_solomon_mention_3",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/knowledge_graph/generated/full_case_knowledge_graph.json"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/knowledge_graph/generated/full_case_knowledge_graph.json",
+      "dates": [
+        "01/03/2026",
+        "01/08/2026",
+        "02/20/2026"
+      ],
+      "confidence_level": "medium_high",
+      "confidence_score": 0.8,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_4",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -960,7 +1493,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_3",
+      "id": "fact:f_repo_solomon_mention_5",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -974,46 +1507,6 @@
         "2021-01-42",
         "2021-02-15",
         "2021-19-53"
-      ],
-      "confidence_level": "medium_high",
-      "confidence_score": 0.8,
-      "evidence_kind": "repository_index_extract"
-    },
-    {
-      "id": "fact:f_repo_solomon_mention_4",
-      "kind": "fact",
-      "predicate": "RepositorySourceMentionsSolomonCaseContext",
-      "args": [
-        "person:solomon",
-        "source:Collateral Estoppel/knowledge_graph/generated/full_case_knowledge_graph.json"
-      ],
-      "value": true,
-      "status": "verified",
-      "source": "Collateral Estoppel/knowledge_graph/generated/full_case_knowledge_graph.json",
-      "dates": [
-        "2025-01-39",
-        "2025-01-43",
-        "2025-01-44"
-      ],
-      "confidence_level": "medium_high",
-      "confidence_score": 0.8,
-      "evidence_kind": "repository_index_extract"
-    },
-    {
-      "id": "fact:f_repo_solomon_mention_5",
-      "kind": "fact",
-      "predicate": "RepositorySourceMentionsSolomonCaseContext",
-      "args": [
-        "person:solomon",
-        "source:evidence/email_imports/starworks5-master-case-email-import/graphrag/email_corpus_records.json"
-      ],
-      "value": true,
-      "status": "verified",
-      "source": "evidence/email_imports/starworks5-master-case-email-import/graphrag/email_corpus_records.json",
-      "dates": [
-        "02/20/2026",
-        "03/04/2026",
-        "03/20/2026"
       ],
       "confidence_level": "medium_high",
       "confidence_score": 0.8,
@@ -1045,15 +1538,15 @@
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
         "person:solomon",
-        "source:Collateral Estoppel/knowledge_graph/generated/motion_support_map.json"
+        "source:evidence/email_imports/starworks5-master-case-email-import/graphrag/email_corpus_records.json"
       ],
       "value": true,
       "status": "verified",
-      "source": "Collateral Estoppel/knowledge_graph/generated/motion_support_map.json",
+      "source": "evidence/email_imports/starworks5-master-case-email-import/graphrag/email_corpus_records.json",
       "dates": [
-        "2025-11-17",
-        "2025-11-20",
-        "2025-20-38"
+        "02/20/2026",
+        "03/04/2026",
+        "03/20/2026"
       ],
       "confidence_level": "medium_high",
       "confidence_score": 0.8,
@@ -1065,13 +1558,15 @@
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
         "person:solomon",
-        "source:Collateral Estoppel/knowledge_graph/generated/case_dependency_graph.json"
+        "source:Collateral Estoppel/knowledge_graph/generated/motion_support_map.json"
       ],
       "value": true,
       "status": "verified",
-      "source": "Collateral Estoppel/knowledge_graph/generated/case_dependency_graph.json",
+      "source": "Collateral Estoppel/knowledge_graph/generated/motion_support_map.json",
       "dates": [
-        "2026-04-07"
+        "2025-11-17",
+        "2025-11-20",
+        "2025-20-38"
       ],
       "confidence_level": "medium_high",
       "confidence_score": 0.8,
@@ -1103,12 +1598,14 @@
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
         "person:solomon",
-        "source:evidence/email_imports/starworks5-fraud-reimport-20260404/email_import_manifest.json"
+        "source:Collateral Estoppel/knowledge_graph/generated/case_dependency_graph.json"
       ],
       "value": true,
       "status": "verified",
-      "source": "evidence/email_imports/starworks5-fraud-reimport-20260404/email_import_manifest.json",
-      "dates": [],
+      "source": "Collateral Estoppel/knowledge_graph/generated/case_dependency_graph.json",
+      "dates": [
+        "2026-04-07"
+      ],
       "confidence_level": "medium_high",
       "confidence_score": 0.8,
       "evidence_kind": "repository_index_extract"
@@ -1159,6 +1656,22 @@
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
         "person:solomon",
+        "source:evidence/email_imports/starworks5-fraud-reimport-20260404/email_import_manifest.json"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "evidence/email_imports/starworks5-fraud-reimport-20260404/email_import_manifest.json",
+      "dates": [],
+      "confidence_level": "medium_high",
+      "confidence_score": 0.8,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_14",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
         "source:Collateral Estoppel/evidence_notes/solomon_evidence_graph_feed.json"
       ],
       "value": true,
@@ -1174,7 +1687,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_14",
+      "id": "fact:f_repo_solomon_mention_15",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1194,7 +1707,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_15",
+      "id": "fact:f_repo_solomon_mention_16",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1213,7 +1726,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_16",
+      "id": "fact:f_repo_solomon_mention_17",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1229,7 +1742,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_17",
+      "id": "fact:f_repo_solomon_mention_18",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1245,7 +1758,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_18",
+      "id": "fact:f_repo_solomon_mention_19",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1256,16 +1769,16 @@
       "status": "verified",
       "source": "Collateral Estoppel/knowledge_graph/guardianship_case_graph.json",
       "dates": [
+        "2026-01-12",
         "2026-03-23",
-        "2026-03-31",
-        "2026-04-02"
+        "2026-03-31"
       ],
       "confidence_level": "medium_high",
       "confidence_score": 0.8,
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_19",
+      "id": "fact:f_repo_solomon_mention_20",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1281,7 +1794,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_20",
+      "id": "fact:f_repo_solomon_mention_21",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1297,7 +1810,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_21",
+      "id": "fact:f_repo_solomon_mention_22",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1315,7 +1828,27 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_22",
+      "id": "fact:f_repo_solomon_mention_23",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/knowledge_graph/generated/deontic_litigation_matrix.json"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/knowledge_graph/generated/deontic_litigation_matrix.json",
+      "dates": [
+        "2025-11-20",
+        "2026-01-12",
+        "2026-03-10"
+      ],
+      "confidence_level": "medium_high",
+      "confidence_score": 0.8,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_24",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1331,7 +1864,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_23",
+      "id": "fact:f_repo_solomon_mention_25",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1347,7 +1880,27 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_24",
+      "id": "fact:f_repo_solomon_mention_26",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/knowledge_graph/generated/deontic_litigation_matrix.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/knowledge_graph/generated/deontic_litigation_matrix.md",
+      "dates": [
+        "2025-11-20",
+        "2026-01-12",
+        "2026-03-10"
+      ],
+      "confidence_level": "medium_high",
+      "confidence_score": 0.8,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_27",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1365,27 +1918,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_25",
-      "kind": "fact",
-      "predicate": "RepositorySourceMentionsSolomonCaseContext",
-      "args": [
-        "person:solomon",
-        "source:Collateral Estoppel/knowledge_graph/generated/deontic_litigation_matrix.json"
-      ],
-      "value": true,
-      "status": "verified",
-      "source": "Collateral Estoppel/knowledge_graph/generated/deontic_litigation_matrix.json",
-      "dates": [
-        "2025-11-20",
-        "2026-01-01",
-        "2026-03-10"
-      ],
-      "confidence_level": "medium_high",
-      "confidence_score": 0.8,
-      "evidence_kind": "repository_index_extract"
-    },
-    {
-      "id": "fact:f_repo_solomon_mention_26",
+      "id": "fact:f_repo_solomon_mention_28",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1405,27 +1938,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_27",
-      "kind": "fact",
-      "predicate": "RepositorySourceMentionsSolomonCaseContext",
-      "args": [
-        "person:solomon",
-        "source:Collateral Estoppel/knowledge_graph/generated/deontic_litigation_matrix.md"
-      ],
-      "value": true,
-      "status": "verified",
-      "source": "Collateral Estoppel/knowledge_graph/generated/deontic_litigation_matrix.md",
-      "dates": [
-        "2025-11-20",
-        "2026-01-01",
-        "2026-03-10"
-      ],
-      "confidence_level": "medium_high",
-      "confidence_score": 0.8,
-      "evidence_kind": "repository_index_extract"
-    },
-    {
-      "id": "fact:f_repo_solomon_mention_28",
+      "id": "fact:f_repo_solomon_mention_29",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1441,7 +1954,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_29",
+      "id": "fact:f_repo_solomon_mention_30",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1461,83 +1974,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_30",
-      "kind": "fact",
-      "predicate": "RepositorySourceMentionsSolomonCaseContext",
-      "args": [
-        "person:solomon",
-        "source:evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14166-Me-to-solomon-gv-0eb16863d122188b/event.json"
-      ],
-      "value": true,
-      "status": "verified",
-      "source": "evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14166-Me-to-solomon-gv-0eb16863d122188b/event.json",
-      "dates": [],
-      "confidence_level": "medium_high",
-      "confidence_score": 0.8,
-      "evidence_kind": "repository_index_extract"
-    },
-    {
       "id": "fact:f_repo_solomon_mention_31",
-      "kind": "fact",
-      "predicate": "RepositorySourceMentionsSolomonCaseContext",
-      "args": [
-        "person:solomon",
-        "source:evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/graphrag/email_corpus_records.json"
-      ],
-      "value": true,
-      "status": "verified",
-      "source": "evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/graphrag/email_corpus_records.json",
-      "dates": [
-        "03/20/2026",
-        "1/31/2028",
-        "12-1-2024"
-      ],
-      "confidence_level": "medium_high",
-      "confidence_score": 0.8,
-      "evidence_kind": "repository_index_extract"
-    },
-    {
-      "id": "fact:f_repo_solomon_mention_32",
-      "kind": "fact",
-      "predicate": "RepositorySourceMentionsSolomonCaseContext",
-      "args": [
-        "person:solomon",
-        "source:evidence/email_imports/starworks5-confirmed-case-import-cli/graphrag/email_corpus_records.json"
-      ],
-      "value": true,
-      "status": "verified",
-      "source": "evidence/email_imports/starworks5-confirmed-case-import-cli/graphrag/email_corpus_records.json",
-      "dates": [
-        "03/20/2026",
-        "1/31/2028",
-        "12-1-2024"
-      ],
-      "confidence_level": "medium_high",
-      "confidence_score": 0.8,
-      "evidence_kind": "repository_index_extract"
-    },
-    {
-      "id": "fact:f_repo_solomon_mention_33",
-      "kind": "fact",
-      "predicate": "RepositorySourceMentionsSolomonCaseContext",
-      "args": [
-        "person:solomon",
-        "source:evidence/email_imports/starworks5-confirmed-case-import/graphrag/email_corpus_records.json"
-      ],
-      "value": true,
-      "status": "verified",
-      "source": "evidence/email_imports/starworks5-confirmed-case-import/graphrag/email_corpus_records.json",
-      "dates": [
-        "03/20/2026",
-        "1/31/2028",
-        "12-1-2024"
-      ],
-      "confidence_level": "medium_high",
-      "confidence_score": 0.8,
-      "evidence_kind": "repository_index_extract"
-    },
-    {
-      "id": "fact:f_repo_solomon_mention_34",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1557,7 +1994,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_35",
+      "id": "fact:f_repo_solomon_mention_32",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1577,7 +2014,83 @@
       "evidence_kind": "repository_index_extract"
     },
     {
+      "id": "fact:f_repo_solomon_mention_33",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14166-Me-to-solomon-gv-0eb16863d122188b/event.json"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14166-Me-to-solomon-gv-0eb16863d122188b/event.json",
+      "dates": [],
+      "confidence_level": "medium_high",
+      "confidence_score": 0.8,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_34",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/graphrag/email_corpus_records.json"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "evidence/email_imports/starworks5-confirmed-case-import-cli-filtered/graphrag/email_corpus_records.json",
+      "dates": [
+        "03/20/2026",
+        "1/31/2028",
+        "12-1-2024"
+      ],
+      "confidence_level": "medium_high",
+      "confidence_score": 0.8,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_35",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:evidence/email_imports/starworks5-confirmed-case-import-cli/graphrag/email_corpus_records.json"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "evidence/email_imports/starworks5-confirmed-case-import-cli/graphrag/email_corpus_records.json",
+      "dates": [
+        "03/20/2026",
+        "1/31/2028",
+        "12-1-2024"
+      ],
+      "confidence_level": "medium_high",
+      "confidence_score": 0.8,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
       "id": "fact:f_repo_solomon_mention_36",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:evidence/email_imports/starworks5-confirmed-case-import/graphrag/email_corpus_records.json"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "evidence/email_imports/starworks5-confirmed-case-import/graphrag/email_corpus_records.json",
+      "dates": [
+        "03/20/2026",
+        "1/31/2028",
+        "12-1-2024"
+      ],
+      "confidence_level": "medium_high",
+      "confidence_score": 0.8,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_37",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1595,7 +2108,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_37",
+      "id": "fact:f_repo_solomon_mention_38",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1615,7 +2128,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_38",
+      "id": "fact:f_repo_solomon_mention_39",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1635,7 +2148,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_39",
+      "id": "fact:f_repo_solomon_mention_40",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1647,7 +2160,7 @@
       "source": "Collateral Estoppel/knowledge_graph/generated/deontic_reasoning_report.md",
       "dates": [
         "2025-11-20",
-        "2026-01-01",
+        "2026-01-12",
         "2026-03-10"
       ],
       "confidence_level": "medium_high",
@@ -1655,7 +2168,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_40",
+      "id": "fact:f_repo_solomon_mention_41",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1671,7 +2184,59 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_41",
+      "id": "fact:f_repo_solomon_mention_42",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/motion_for_sanctions_re_frivolous_and_abusive_practice.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/motion_for_sanctions_re_frivolous_and_abusive_practice.md",
+      "dates": [
+        "2025-20-38",
+        "2025-20-56",
+        "2026-04-04"
+      ],
+      "confidence_level": "medium_high",
+      "confidence_score": 0.8,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_43",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/README.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/README.md",
+      "dates": [],
+      "confidence_level": "medium_high",
+      "confidence_score": 0.8,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_44",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md",
+      "dates": [],
+      "confidence_level": "medium_high",
+      "confidence_score": 0.8,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_45",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1687,7 +2252,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_42",
+      "id": "fact:f_repo_solomon_mention_46",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1707,23 +2272,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_43",
-      "kind": "fact",
-      "predicate": "RepositorySourceMentionsSolomonCaseContext",
-      "args": [
-        "person:solomon",
-        "source:Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md"
-      ],
-      "value": true,
-      "status": "verified",
-      "source": "Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md",
-      "dates": [],
-      "confidence_level": "medium_high",
-      "confidence_score": 0.8,
-      "evidence_kind": "repository_index_extract"
-    },
-    {
-      "id": "fact:f_repo_solomon_mention_44",
+      "id": "fact:f_repo_solomon_mention_47",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1743,7 +2292,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_45",
+      "id": "fact:f_repo_solomon_mention_48",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1759,7 +2308,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_46",
+      "id": "fact:f_repo_solomon_mention_49",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1778,7 +2327,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_47",
+      "id": "fact:f_repo_solomon_mention_50",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1794,7 +2343,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_48",
+      "id": "fact:f_repo_solomon_mention_51",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1814,7 +2363,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_49",
+      "id": "fact:f_repo_solomon_mention_52",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1830,7 +2379,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_50",
+      "id": "fact:f_repo_solomon_mention_53",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1846,7 +2395,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_51",
+      "id": "fact:f_repo_solomon_mention_54",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1862,7 +2411,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_52",
+      "id": "fact:f_repo_solomon_mention_55",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1878,7 +2427,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_53",
+      "id": "fact:f_repo_solomon_mention_56",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1898,7 +2447,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_54",
+      "id": "fact:f_repo_solomon_mention_57",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1914,7 +2463,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_55",
+      "id": "fact:f_repo_solomon_mention_58",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1930,7 +2479,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_56",
+      "id": "fact:f_repo_solomon_mention_59",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1946,7 +2495,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_57",
+      "id": "fact:f_repo_solomon_mention_60",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1964,23 +2513,27 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_58",
+      "id": "fact:f_repo_solomon_mention_61",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
         "person:solomon",
-        "source:Collateral Estoppel/README.md"
+        "source:Collateral Estoppel/evidence_notes/motion_exhibit_index.md"
       ],
       "value": true,
       "status": "verified",
-      "source": "Collateral Estoppel/README.md",
-      "dates": [],
+      "source": "Collateral Estoppel/evidence_notes/motion_exhibit_index.md",
+      "dates": [
+        "2025-20-38",
+        "2025-20-56",
+        "2026-04-04"
+      ],
       "confidence_level": "medium_high",
       "confidence_score": 0.8,
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_59",
+      "id": "fact:f_repo_solomon_mention_62",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -1996,7 +2549,39 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_60",
+      "id": "fact:f_repo_solomon_mention_63",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/final_filing_set/11B_attachment_a2_definitions_and_instructions_final.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/final_filing_set/11B_attachment_a2_definitions_and_instructions_final.md",
+      "dates": [],
+      "confidence_level": "medium_high",
+      "confidence_score": 0.8,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_64",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/final_filing_set/12A_attachment_b1_hacc_county_requests_final.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/final_filing_set/12A_attachment_b1_hacc_county_requests_final.md",
+      "dates": [],
+      "confidence_level": "medium_high",
+      "confidence_score": 0.8,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_65",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2016,7 +2601,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_61",
+      "id": "fact:f_repo_solomon_mention_66",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2032,7 +2617,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_62",
+      "id": "fact:f_repo_solomon_mention_67",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2048,7 +2633,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_63",
+      "id": "fact:f_repo_solomon_mention_68",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2068,7 +2653,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_64",
+      "id": "fact:f_repo_solomon_mention_69",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2084,7 +2669,43 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_65",
+      "id": "fact:f_repo_solomon_mention_70",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/final_filing_set/03_motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_final.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/final_filing_set/03_motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_final.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_71",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/memorandum_in_support_of_show_cause_and_sanctions.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/memorandum_in_support_of_show_cause_and_sanctions.md",
+      "dates": [
+        "2025-20-38",
+        "2025-20-56",
+        "2026-04-04"
+      ],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_72",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2100,7 +2721,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_66",
+      "id": "fact:f_repo_solomon_mention_73",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2116,7 +2737,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_67",
+      "id": "fact:f_repo_solomon_mention_74",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2132,7 +2753,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_68",
+      "id": "fact:f_repo_solomon_mention_75",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2148,7 +2769,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_69",
+      "id": "fact:f_repo_solomon_mention_76",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2164,7 +2785,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_70",
+      "id": "fact:f_repo_solomon_mention_77",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2180,23 +2801,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_71",
-      "kind": "fact",
-      "predicate": "RepositorySourceMentionsSolomonCaseContext",
-      "args": [
-        "person:solomon",
-        "source:Collateral Estoppel/drafts/motion_for_sanctions_re_frivolous_and_abusive_practice.md"
-      ],
-      "value": true,
-      "status": "verified",
-      "source": "Collateral Estoppel/drafts/motion_for_sanctions_re_frivolous_and_abusive_practice.md",
-      "dates": [],
-      "confidence_level": "medium",
-      "confidence_score": 0.7,
-      "evidence_kind": "repository_index_extract"
-    },
-    {
-      "id": "fact:f_repo_solomon_mention_72",
+      "id": "fact:f_repo_solomon_mention_78",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2215,7 +2820,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_73",
+      "id": "fact:f_repo_solomon_mention_79",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2231,7 +2836,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_74",
+      "id": "fact:f_repo_solomon_mention_80",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2247,7 +2852,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_75",
+      "id": "fact:f_repo_solomon_mention_81",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2263,7 +2868,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_76",
+      "id": "fact:f_repo_solomon_mention_82",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2279,7 +2884,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_77",
+      "id": "fact:f_repo_solomon_mention_83",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2295,7 +2900,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_78",
+      "id": "fact:f_repo_solomon_mention_84",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2311,7 +2916,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_79",
+      "id": "fact:f_repo_solomon_mention_85",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2327,7 +2932,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_80",
+      "id": "fact:f_repo_solomon_mention_86",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2343,7 +2948,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_81",
+      "id": "fact:f_repo_solomon_mention_87",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2359,7 +2964,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_82",
+      "id": "fact:f_repo_solomon_mention_88",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2375,7 +2980,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_83",
+      "id": "fact:f_repo_solomon_mention_89",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2395,7 +3000,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_84",
+      "id": "fact:f_repo_solomon_mention_90",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2411,7 +3016,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_85",
+      "id": "fact:f_repo_solomon_mention_91",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2427,7 +3032,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_86",
+      "id": "fact:f_repo_solomon_mention_92",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2443,7 +3048,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_87",
+      "id": "fact:f_repo_solomon_mention_93",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2459,7 +3064,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_88",
+      "id": "fact:f_repo_solomon_mention_94",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2475,7 +3080,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_89",
+      "id": "fact:f_repo_solomon_mention_95",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2491,7 +3096,57 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_90",
+      "id": "fact:f_repo_solomon_mention_96",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/declaration_of_benjamin_barber_in_support_of_motions.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/declaration_of_benjamin_barber_in_support_of_motions.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_97",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/final_filing_set/11_subpoena_duces_tecum_to_solomon_barber_final.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/final_filing_set/11_subpoena_duces_tecum_to_solomon_barber_final.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_98",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/evidence_notes/missing_exhibit_search_status_2026-04-07.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/evidence_notes/missing_exhibit_search_status_2026-04-07.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_99",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2511,7 +3166,79 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_91",
+      "id": "fact:f_repo_solomon_mention_100",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/inclusive__motion_for_appointment_and_appearance_of_guardian_ad_litem_md.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/inclusive__motion_for_appointment_and_appearance_of_guardian_ad_litem_md.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_101",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/inclusive__motion_to_dismiss_for_collateral_estoppel_md.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/inclusive__motion_to_dismiss_for_collateral_estoppel_md.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_102",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/strict__motion_for_appointment_and_appearance_of_guardian_ad_litem_md.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/strict__motion_for_appointment_and_appearance_of_guardian_ad_litem_md.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_103",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/strict__motion_to_dismiss_for_collateral_estoppel_md.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/strict__motion_to_dismiss_for_collateral_estoppel_md.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_104",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2527,7 +3254,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_92",
+      "id": "fact:f_repo_solomon_mention_105",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2543,7 +3270,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_93",
+      "id": "fact:f_repo_solomon_mention_106",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2559,7 +3286,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_94",
+      "id": "fact:f_repo_solomon_mention_107",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2575,7 +3302,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_95",
+      "id": "fact:f_repo_solomon_mention_108",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2591,7 +3318,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_96",
+      "id": "fact:f_repo_solomon_mention_109",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2607,7 +3334,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_97",
+      "id": "fact:f_repo_solomon_mention_110",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2623,7 +3350,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_98",
+      "id": "fact:f_repo_solomon_mention_111",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2639,7 +3366,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_99",
+      "id": "fact:f_repo_solomon_mention_112",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2655,7 +3382,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_100",
+      "id": "fact:f_repo_solomon_mention_113",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2671,7 +3398,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_101",
+      "id": "fact:f_repo_solomon_mention_114",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2687,7 +3414,41 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_102",
+      "id": "fact:f_repo_solomon_mention_115",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/final_filing_set/10_prefill_sources_and_verification_note.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/final_filing_set/10_prefill_sources_and_verification_note.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_116",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/motion_for_leave_or_to_compel_exhibit_r_production.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/motion_for_leave_or_to_compel_exhibit_r_production.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_117",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2707,7 +3468,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_103",
+      "id": "fact:f_repo_solomon_mention_118",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2723,7 +3484,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_104",
+      "id": "fact:f_repo_solomon_mention_119",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2739,7 +3500,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_105",
+      "id": "fact:f_repo_solomon_mention_120",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2755,7 +3516,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_106",
+      "id": "fact:f_repo_solomon_mention_121",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2771,7 +3532,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_107",
+      "id": "fact:f_repo_solomon_mention_122",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2787,7 +3548,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_108",
+      "id": "fact:f_repo_solomon_mention_123",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2803,7 +3564,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_109",
+      "id": "fact:f_repo_solomon_mention_124",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2819,7 +3580,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_110",
+      "id": "fact:f_repo_solomon_mention_125",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2835,7 +3596,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_111",
+      "id": "fact:f_repo_solomon_mention_126",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2851,7 +3612,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_112",
+      "id": "fact:f_repo_solomon_mention_127",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2869,7 +3630,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_113",
+      "id": "fact:f_repo_solomon_mention_128",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2885,7 +3646,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_114",
+      "id": "fact:f_repo_solomon_mention_129",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2901,7 +3662,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_115",
+      "id": "fact:f_repo_solomon_mention_130",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2917,7 +3678,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_116",
+      "id": "fact:f_repo_solomon_mention_131",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2933,7 +3694,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_117",
+      "id": "fact:f_repo_solomon_mention_132",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2949,7 +3710,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_118",
+      "id": "fact:f_repo_solomon_mention_133",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2965,7 +3726,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_119",
+      "id": "fact:f_repo_solomon_mention_134",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2981,7 +3742,23 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_120",
+      "id": "fact:f_repo_solomon_mention_135",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/final_filing_set/04_declaration_of_benjamin_barber_in_support_of_motions_final.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/final_filing_set/04_declaration_of_benjamin_barber_in_support_of_motions_final.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_136",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -2997,7 +3774,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_121",
+      "id": "fact:f_repo_solomon_mention_137",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3013,7 +3790,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_122",
+      "id": "fact:f_repo_solomon_mention_138",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3029,7 +3806,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_123",
+      "id": "fact:f_repo_solomon_mention_139",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3045,7 +3822,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_124",
+      "id": "fact:f_repo_solomon_mention_140",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3061,7 +3838,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_125",
+      "id": "fact:f_repo_solomon_mention_141",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3081,7 +3858,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_126",
+      "id": "fact:f_repo_solomon_mention_142",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3101,7 +3878,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_127",
+      "id": "fact:f_repo_solomon_mention_143",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3121,7 +3898,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_128",
+      "id": "fact:f_repo_solomon_mention_144",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3141,7 +3918,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_129",
+      "id": "fact:f_repo_solomon_mention_145",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3161,7 +3938,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_130",
+      "id": "fact:f_repo_solomon_mention_146",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3181,7 +3958,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_131",
+      "id": "fact:f_repo_solomon_mention_147",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3199,7 +3976,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_132",
+      "id": "fact:f_repo_solomon_mention_148",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3217,7 +3994,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_133",
+      "id": "fact:f_repo_solomon_mention_149",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3235,7 +4012,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_134",
+      "id": "fact:f_repo_solomon_mention_150",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3253,7 +4030,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_135",
+      "id": "fact:f_repo_solomon_mention_151",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3271,7 +4048,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_136",
+      "id": "fact:f_repo_solomon_mention_152",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3289,7 +4066,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_137",
+      "id": "fact:f_repo_solomon_mention_153",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3307,7 +4084,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_138",
+      "id": "fact:f_repo_solomon_mention_154",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3325,7 +4102,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_139",
+      "id": "fact:f_repo_solomon_mention_155",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3343,7 +4120,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_140",
+      "id": "fact:f_repo_solomon_mention_156",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3361,7 +4138,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_141",
+      "id": "fact:f_repo_solomon_mention_157",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3379,7 +4156,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_142",
+      "id": "fact:f_repo_solomon_mention_158",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3397,7 +4174,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_143",
+      "id": "fact:f_repo_solomon_mention_159",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3415,7 +4192,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_144",
+      "id": "fact:f_repo_solomon_mention_160",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3433,7 +4210,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_145",
+      "id": "fact:f_repo_solomon_mention_161",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3451,7 +4228,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_146",
+      "id": "fact:f_repo_solomon_mention_162",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3469,7 +4246,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_147",
+      "id": "fact:f_repo_solomon_mention_163",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3487,7 +4264,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_148",
+      "id": "fact:f_repo_solomon_mention_164",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3505,7 +4282,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_149",
+      "id": "fact:f_repo_solomon_mention_165",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3523,7 +4300,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_150",
+      "id": "fact:f_repo_solomon_mention_166",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3541,7 +4318,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_151",
+      "id": "fact:f_repo_solomon_mention_167",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3559,7 +4336,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_152",
+      "id": "fact:f_repo_solomon_mention_168",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3577,7 +4354,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_153",
+      "id": "fact:f_repo_solomon_mention_169",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3595,7 +4372,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_154",
+      "id": "fact:f_repo_solomon_mention_170",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3613,7 +4390,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_155",
+      "id": "fact:f_repo_solomon_mention_171",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3631,7 +4408,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_156",
+      "id": "fact:f_repo_solomon_mention_172",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3647,7 +4424,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_157",
+      "id": "fact:f_repo_solomon_mention_173",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3663,7 +4440,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_158",
+      "id": "fact:f_repo_solomon_mention_174",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3681,7 +4458,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_159",
+      "id": "fact:f_repo_solomon_mention_175",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3701,7 +4478,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_160",
+      "id": "fact:f_repo_solomon_mention_176",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3721,7 +4498,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_161",
+      "id": "fact:f_repo_solomon_mention_177",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3741,7 +4518,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_162",
+      "id": "fact:f_repo_solomon_mention_178",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3761,7 +4538,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_163",
+      "id": "fact:f_repo_solomon_mention_179",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3781,7 +4558,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_164",
+      "id": "fact:f_repo_solomon_mention_180",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3801,7 +4578,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_165",
+      "id": "fact:f_repo_solomon_mention_181",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3821,7 +4598,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_166",
+      "id": "fact:f_repo_solomon_mention_182",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3841,7 +4618,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_167",
+      "id": "fact:f_repo_solomon_mention_183",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3861,7 +4638,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_168",
+      "id": "fact:f_repo_solomon_mention_184",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3881,7 +4658,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_169",
+      "id": "fact:f_repo_solomon_mention_185",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3901,7 +4678,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_170",
+      "id": "fact:f_repo_solomon_mention_186",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3921,7 +4698,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_171",
+      "id": "fact:f_repo_solomon_mention_187",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3941,7 +4718,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_172",
+      "id": "fact:f_repo_solomon_mention_188",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3961,7 +4738,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_173",
+      "id": "fact:f_repo_solomon_mention_189",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -3981,7 +4758,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_174",
+      "id": "fact:f_repo_solomon_mention_190",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4001,7 +4778,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_175",
+      "id": "fact:f_repo_solomon_mention_191",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4021,7 +4798,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_176",
+      "id": "fact:f_repo_solomon_mention_192",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4041,7 +4818,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_177",
+      "id": "fact:f_repo_solomon_mention_193",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4061,7 +4838,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_178",
+      "id": "fact:f_repo_solomon_mention_194",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4081,7 +4858,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_179",
+      "id": "fact:f_repo_solomon_mention_195",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4101,7 +4878,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_180",
+      "id": "fact:f_repo_solomon_mention_196",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4121,7 +4898,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_181",
+      "id": "fact:f_repo_solomon_mention_197",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4141,7 +4918,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_182",
+      "id": "fact:f_repo_solomon_mention_198",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4161,7 +4938,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_183",
+      "id": "fact:f_repo_solomon_mention_199",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4181,7 +4958,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_184",
+      "id": "fact:f_repo_solomon_mention_200",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4197,7 +4974,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_185",
+      "id": "fact:f_repo_solomon_mention_201",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4213,7 +4990,263 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_186",
+      "id": "fact:f_repo_solomon_mention_202",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/final_filing_set/05_certificate_of_service_final.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/final_filing_set/05_certificate_of_service_final.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_203",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/final_filing_set/09_proposed_order_show_cause_final.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/final_filing_set/09_proposed_order_show_cause_final.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_204",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/final_filing_set/12_subpoena_duces_tecum_to_hacc_clackamas_county_final.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/final_filing_set/12_subpoena_duces_tecum_to_hacc_clackamas_county_final.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_205",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/final_filing_set/13_subpoena_duces_tecum_to_odhs_aps_custodian_final.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/final_filing_set/13_subpoena_duces_tecum_to_odhs_aps_custodian_final.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_206",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/final_filing_set/14_subpoena_duces_tecum_to_jason_hopkins_final.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/final_filing_set/14_subpoena_duces_tecum_to_jason_hopkins_final.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_207",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/final_filing_set/15A_attachment_e1_tillamook_sheriff_requests_final.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/final_filing_set/15A_attachment_e1_tillamook_sheriff_requests_final.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_208",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/final_filing_set/15_subpoena_duces_tecum_to_tillamook_county_sheriff_custodian_final.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/final_filing_set/15_subpoena_duces_tecum_to_tillamook_county_sheriff_custodian_final.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_209",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/final_filing_set/16_subpoena_duces_tecum_to_tillamook_911_custodian_final.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/final_filing_set/16_subpoena_duces_tecum_to_tillamook_911_custodian_final.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_210",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/final_filing_set/25_ready_to_serve_recipient_manifests_final.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/final_filing_set/25_ready_to_serve_recipient_manifests_final.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_211",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/subpoena_schedule_hacc_re_exhibit_r.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/subpoena_schedule_hacc_re_exhibit_r.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_212",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/evidence_notes/motion_exhibit_crosswalk.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/evidence_notes/motion_exhibit_crosswalk.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_213",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/final_filing_set/11A_attachment_a1_solomon_requests_final.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/final_filing_set/11A_attachment_a1_solomon_requests_final.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_214",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/final_filing_set/14A_attachment_d1_jason_hopkins_requests_final.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/final_filing_set/14A_attachment_d1_jason_hopkins_requests_final.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_215",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/final_filing_set/16A_attachment_f1_tillamook_911_requests_final.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/final_filing_set/16A_attachment_f1_tillamook_911_requests_final.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_216",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/hacc_subpoena_target_list_re_exhibit_r.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/hacc_subpoena_target_list_re_exhibit_r.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_217",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/knowledge_graph/generated/README.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/knowledge_graph/generated/README.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_218",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4229,7 +5262,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_187",
+      "id": "fact:f_repo_solomon_mention_219",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4245,7 +5278,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_188",
+      "id": "fact:f_repo_solomon_mention_220",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4261,7 +5294,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_189",
+      "id": "fact:f_repo_solomon_mention_221",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4281,7 +5314,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_190",
+      "id": "fact:f_repo_solomon_mention_222",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4297,7 +5330,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_191",
+      "id": "fact:f_repo_solomon_mention_223",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4313,7 +5346,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_192",
+      "id": "fact:f_repo_solomon_mention_224",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4329,7 +5362,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_193",
+      "id": "fact:f_repo_solomon_mention_225",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4345,7 +5378,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_194",
+      "id": "fact:f_repo_solomon_mention_226",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4361,7 +5394,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_195",
+      "id": "fact:f_repo_solomon_mention_227",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4377,7 +5410,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_196",
+      "id": "fact:f_repo_solomon_mention_228",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4397,7 +5430,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_197",
+      "id": "fact:f_repo_solomon_mention_229",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4413,7 +5446,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_198",
+      "id": "fact:f_repo_solomon_mention_230",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4429,7 +5462,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_199",
+      "id": "fact:f_repo_solomon_mention_231",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4445,7 +5478,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_200",
+      "id": "fact:f_repo_solomon_mention_232",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4461,7 +5494,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_201",
+      "id": "fact:f_repo_solomon_mention_233",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4477,7 +5510,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_202",
+      "id": "fact:f_repo_solomon_mention_234",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4493,7 +5526,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_203",
+      "id": "fact:f_repo_solomon_mention_235",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4513,7 +5546,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_204",
+      "id": "fact:f_repo_solomon_mention_236",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4529,7 +5562,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_205",
+      "id": "fact:f_repo_solomon_mention_237",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4545,7 +5578,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_206",
+      "id": "fact:f_repo_solomon_mention_238",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4561,7 +5594,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_207",
+      "id": "fact:f_repo_solomon_mention_239",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4577,7 +5610,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_208",
+      "id": "fact:f_repo_solomon_mention_240",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4593,7 +5626,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_209",
+      "id": "fact:f_repo_solomon_mention_241",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4609,7 +5642,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_210",
+      "id": "fact:f_repo_solomon_mention_242",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4629,7 +5662,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_211",
+      "id": "fact:f_repo_solomon_mention_243",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4645,7 +5678,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_212",
+      "id": "fact:f_repo_solomon_mention_244",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4661,7 +5694,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_213",
+      "id": "fact:f_repo_solomon_mention_245",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4677,7 +5710,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_214",
+      "id": "fact:f_repo_solomon_mention_246",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4693,7 +5726,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_215",
+      "id": "fact:f_repo_solomon_mention_247",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4709,7 +5742,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_216",
+      "id": "fact:f_repo_solomon_mention_248",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4725,7 +5758,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_217",
+      "id": "fact:f_repo_solomon_mention_249",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4741,7 +5774,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_218",
+      "id": "fact:f_repo_solomon_mention_250",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4757,7 +5790,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_219",
+      "id": "fact:f_repo_solomon_mention_251",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4773,7 +5806,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_220",
+      "id": "fact:f_repo_solomon_mention_252",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4789,7 +5822,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_221",
+      "id": "fact:f_repo_solomon_mention_253",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4805,7 +5838,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_222",
+      "id": "fact:f_repo_solomon_mention_254",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4821,7 +5854,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_223",
+      "id": "fact:f_repo_solomon_mention_255",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4837,7 +5870,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_224",
+      "id": "fact:f_repo_solomon_mention_256",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4853,7 +5886,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_225",
+      "id": "fact:f_repo_solomon_mention_257",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4869,7 +5902,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_226",
+      "id": "fact:f_repo_solomon_mention_258",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4885,7 +5918,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_227",
+      "id": "fact:f_repo_solomon_mention_259",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4901,7 +5934,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_228",
+      "id": "fact:f_repo_solomon_mention_260",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4917,7 +5950,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_229",
+      "id": "fact:f_repo_solomon_mention_261",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4933,7 +5966,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_230",
+      "id": "fact:f_repo_solomon_mention_262",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4949,7 +5982,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_231",
+      "id": "fact:f_repo_solomon_mention_263",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4965,7 +5998,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_232",
+      "id": "fact:f_repo_solomon_mention_264",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4981,7 +6014,55 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_233",
+      "id": "fact:f_repo_solomon_mention_265",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/defendants_first_targeted_discovery_requests_re_exhibit_r.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/defendants_first_targeted_discovery_requests_re_exhibit_r.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_266",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/final_filing_set/00_exhibit_legend_global.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/final_filing_set/00_exhibit_legend_global.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_267",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/final_filing_set/20_subpoena_packet_assembly_matrix_final.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/final_filing_set/20_subpoena_packet_assembly_matrix_final.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_268",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -4997,7 +6078,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_234",
+      "id": "fact:f_repo_solomon_mention_269",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -5013,7 +6094,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_235",
+      "id": "fact:f_repo_solomon_mention_270",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -5029,23 +6110,57 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_236",
+      "id": "fact:f_repo_solomon_mention_271",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
         "person:solomon",
-        "source:Collateral Estoppel/knowledge_graph/generated/README.md"
+        "source:Collateral Estoppel/drafts/final_filing_set/17_certificate_of_service_subpoenas_final.md"
       ],
       "value": true,
       "status": "verified",
-      "source": "Collateral Estoppel/knowledge_graph/generated/README.md",
+      "source": "Collateral Estoppel/drafts/final_filing_set/17_certificate_of_service_subpoenas_final.md",
       "dates": [],
       "confidence_level": "medium",
       "confidence_score": 0.7,
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_237",
+      "id": "fact:f_repo_solomon_mention_272",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/final_filing_set/32_deadline_update_log_2026-04-07.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/final_filing_set/32_deadline_update_log_2026-04-07.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_273",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md",
+      "dates": [],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_274",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -5061,7 +6176,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_238",
+      "id": "fact:f_repo_solomon_mention_275",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -5077,79 +6192,23 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_239",
+      "id": "fact:f_repo_solomon_mention_276",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
         "person:solomon",
-        "source:Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/inclusive__motion_for_appointment_and_appearance_of_guardian_ad_litem_md.md"
+        "source:Collateral Estoppel/drafts/final_filing_set/13A_attachment_c1_odhs_aps_requests_final.md"
       ],
       "value": true,
       "status": "verified",
-      "source": "Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/inclusive__motion_for_appointment_and_appearance_of_guardian_ad_litem_md.md",
-      "dates": [
-        "2026-04-07"
-      ],
+      "source": "Collateral Estoppel/drafts/final_filing_set/13A_attachment_c1_odhs_aps_requests_final.md",
+      "dates": [],
       "confidence_level": "medium",
       "confidence_score": 0.7,
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_240",
-      "kind": "fact",
-      "predicate": "RepositorySourceMentionsSolomonCaseContext",
-      "args": [
-        "person:solomon",
-        "source:Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/inclusive__motion_to_dismiss_for_collateral_estoppel_md.md"
-      ],
-      "value": true,
-      "status": "verified",
-      "source": "Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/inclusive__motion_to_dismiss_for_collateral_estoppel_md.md",
-      "dates": [
-        "2026-04-07"
-      ],
-      "confidence_level": "medium",
-      "confidence_score": 0.7,
-      "evidence_kind": "repository_index_extract"
-    },
-    {
-      "id": "fact:f_repo_solomon_mention_241",
-      "kind": "fact",
-      "predicate": "RepositorySourceMentionsSolomonCaseContext",
-      "args": [
-        "person:solomon",
-        "source:Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/strict__motion_for_appointment_and_appearance_of_guardian_ad_litem_md.md"
-      ],
-      "value": true,
-      "status": "verified",
-      "source": "Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/strict__motion_for_appointment_and_appearance_of_guardian_ad_litem_md.md",
-      "dates": [
-        "2026-04-07"
-      ],
-      "confidence_level": "medium",
-      "confidence_score": 0.7,
-      "evidence_kind": "repository_index_extract"
-    },
-    {
-      "id": "fact:f_repo_solomon_mention_242",
-      "kind": "fact",
-      "predicate": "RepositorySourceMentionsSolomonCaseContext",
-      "args": [
-        "person:solomon",
-        "source:Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/strict__motion_to_dismiss_for_collateral_estoppel_md.md"
-      ],
-      "value": true,
-      "status": "verified",
-      "source": "Collateral Estoppel/knowledge_graph/generated/paragraph_bank_by_motion/strict__motion_to_dismiss_for_collateral_estoppel_md.md",
-      "dates": [
-        "2026-04-07"
-      ],
-      "confidence_level": "medium",
-      "confidence_score": 0.7,
-      "evidence_kind": "repository_index_extract"
-    },
-    {
-      "id": "fact:f_repo_solomon_mention_243",
+      "id": "fact:f_repo_solomon_mention_277",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -5165,7 +6224,79 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_244",
+      "id": "fact:f_repo_solomon_mention_278",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/drafts/final_filing_set/29_active_service_log_2026-04-07.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/drafts/final_filing_set/29_active_service_log_2026-04-07.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_279",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/knowledge_graph/generated/service_log_validation_report_2026-04-07.json"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/knowledge_graph/generated/service_log_validation_report_2026-04-07.json",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_280",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/knowledge_graph/generated/service_log_validation_report_2026-04-07.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/knowledge_graph/generated/service_log_validation_report_2026-04-07.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_281",
+      "kind": "fact",
+      "predicate": "RepositorySourceMentionsSolomonCaseContext",
+      "args": [
+        "person:solomon",
+        "source:Collateral Estoppel/research/oregon_authority_grounding_memo_2026-04-07.md"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "Collateral Estoppel/research/oregon_authority_grounding_memo_2026-04-07.md",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": "medium",
+      "confidence_score": 0.7,
+      "evidence_kind": "repository_index_extract"
+    },
+    {
+      "id": "fact:f_repo_solomon_mention_282",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -5181,7 +6312,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_245",
+      "id": "fact:f_repo_solomon_mention_283",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -5197,7 +6328,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_246",
+      "id": "fact:f_repo_solomon_mention_284",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -5213,7 +6344,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_247",
+      "id": "fact:f_repo_solomon_mention_285",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -5229,7 +6360,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_248",
+      "id": "fact:f_repo_solomon_mention_286",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -5245,7 +6376,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_249",
+      "id": "fact:f_repo_solomon_mention_287",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -5261,7 +6392,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_250",
+      "id": "fact:f_repo_solomon_mention_288",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -5277,7 +6408,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_251",
+      "id": "fact:f_repo_solomon_mention_289",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -5293,7 +6424,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_252",
+      "id": "fact:f_repo_solomon_mention_290",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -5309,7 +6440,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_253",
+      "id": "fact:f_repo_solomon_mention_291",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -5325,7 +6456,7 @@
       "evidence_kind": "repository_index_extract"
     },
     {
-      "id": "fact:f_repo_solomon_mention_254",
+      "id": "fact:f_repo_solomon_mention_292",
       "kind": "fact",
       "predicate": "RepositorySourceMentionsSolomonCaseContext",
       "args": [
@@ -5341,9 +6472,131 @@
       "evidence_kind": "repository_index_extract"
     },
     {
+      "id": "fact:f_active_service_log_initialized",
+      "kind": "fact",
+      "predicate": "ActiveServiceLogInitialized",
+      "args": [
+        "case:26PR00641"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "28_active_service_log_2026-04-07.csv",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_subpoena_recipients_ready_to_serve",
+      "kind": "fact",
+      "predicate": "SubpoenaRecipientsReadyToServe",
+      "args": [
+        "case:26PR00641",
+        "count:6"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "28_active_service_log_2026-04-07.csv",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_subpoena_service_completed_any",
+      "kind": "fact",
+      "predicate": "SubpoenaServiceCompletedAny",
+      "args": [
+        "case:26PR00641"
+      ],
+      "value": false,
+      "status": "verified",
+      "source": "28_active_service_log_2026-04-07.csv",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_subpoena_pre_service_phase_only",
+      "kind": "fact",
+      "predicate": "SubpoenaPreServicePhaseOnly",
+      "args": [
+        "case:26PR00641"
+      ],
+      "value": true,
+      "status": "verified",
+      "source": "28_active_service_log_2026-04-07.csv",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_deficiency_notice_sent_any",
+      "kind": "fact",
+      "predicate": "DeficiencyNoticeSentAny",
+      "args": [
+        "case:26PR00641"
+      ],
+      "value": false,
+      "status": "verified",
+      "source": "28_active_service_log_2026-04-07.csv",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_subpoena_response_incomplete_any",
+      "kind": "fact",
+      "predicate": "SubpoenaResponseIncompleteAny",
+      "args": [
+        "case:26PR00641"
+      ],
+      "value": false,
+      "status": "verified",
+      "source": "28_active_service_log_2026-04-07.csv",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
+      "id": "fact:f_motion_to_compel_stage_any",
+      "kind": "fact",
+      "predicate": "MotionToCompelStageAny",
+      "args": [
+        "case:26PR00641"
+      ],
+      "value": false,
+      "status": "verified",
+      "source": "28_active_service_log_2026-04-07.csv",
+      "dates": [
+        "2026-04-07"
+      ],
+      "confidence_level": null,
+      "confidence_score": null,
+      "evidence_kind": null
+    },
+    {
       "id": "rule:r1_guardian_permission_if_prior_appointment",
       "kind": "rule",
-      "description": "If prior appointment exists, Benjamin is permitted to act within valid guardian scope for Jane."
+      "description": "If prior appointment exists, Benjamin is permitted to act within valid guardian scope for Jane.",
+      "track": "hypothesis",
+      "authority_refs": []
     },
     {
       "id": "conclusion:c1_benjamin_permitted_guardian_scope",
@@ -5356,7 +6609,9 @@
     {
       "id": "rule:r2_noninterference_prohibition_for_benjamin",
       "kind": "rule",
-      "description": "If prior appointment exists and interference is alleged, Benjamin is forbidden from interference."
+      "description": "If prior appointment exists and interference is alleged, Benjamin is forbidden from interference.",
+      "track": "hypothesis",
+      "authority_refs": []
     },
     {
       "id": "conclusion:c2_benjamin_forbidden_interference",
@@ -5369,7 +6624,9 @@
     {
       "id": "rule:r3_benjamin_obligation_comply_or_seek_relief",
       "kind": "rule",
-      "description": "If prior appointment is in force and Benjamin disregarded order, Benjamin was obligated to comply or seek relief."
+      "description": "If prior appointment is in force and Benjamin disregarded order, Benjamin was obligated to comply or seek relief.",
+      "track": "hypothesis",
+      "authority_refs": []
     },
     {
       "id": "conclusion:c3_benjamin_obligated_comply_or_seek_relief",
@@ -5382,7 +6639,11 @@
     {
       "id": "rule:r4_solomon_forbidden_abuse_contact_property_control",
       "kind": "rule",
-      "description": "Given granted in-effect restraining order with property restrictions, Solomon is forbidden to abuse/contact/interfere/control property."
+      "description": "Given granted in-effect restraining order with property restrictions, Solomon is forbidden to abuse/contact/interfere/control property.",
+      "track": "filing",
+      "authority_refs": [
+        "order:eppdapa_restraining_order"
+      ]
     },
     {
       "id": "conclusion:c4_solomon_forbidden_contact_property_control",
@@ -5395,7 +6656,11 @@
     {
       "id": "rule:r4b_solomon_forbidden_enter_residence",
       "kind": "rule",
-      "description": "Given the granted restraining order and residence restriction, Solomon is forbidden from entering or remaining at the protected residence."
+      "description": "Given the granted restraining order and residence restriction, Solomon is forbidden from entering or remaining at the protected residence.",
+      "track": "filing",
+      "authority_refs": [
+        "order:eppdapa_restraining_order"
+      ]
     },
     {
       "id": "conclusion:c4b_solomon_forbidden_enter_residence",
@@ -5408,7 +6673,11 @@
     {
       "id": "rule:r5_solomon_obligated_appear_and_answer",
       "kind": "rule",
-      "description": "If no further service was required because Solomon appeared, later failure to appear supports an obligation to appear and answer."
+      "description": "If no further service was required because Solomon appeared, later failure to appear supports an obligation to appear and answer.",
+      "track": "hypothesis",
+      "authority_refs": [
+        "order:eppdapa_restraining_order"
+      ]
     },
     {
       "id": "conclusion:c5_solomon_obligated_appear_and_answer",
@@ -5421,7 +6690,11 @@
     {
       "id": "rule:r5b_solomon_obligated_seek_hearing_or_comply",
       "kind": "rule",
-      "description": "If Solomon stated he would comply only once served despite an already in-effect order, he was obligated to seek a hearing or comply rather than self-suspend effectiveness."
+      "description": "If Solomon stated he would comply only once served despite an already in-effect order, he was obligated to seek a hearing or comply rather than self-suspend effectiveness.",
+      "track": "filing",
+      "authority_refs": [
+        "order:eppdapa_restraining_order"
+      ]
     },
     {
       "id": "conclusion:c5b_solomon_obligated_seek_hearing_or_comply",
@@ -5434,7 +6707,11 @@
     {
       "id": "rule:r5c_solomon_forbidden_self_help_noncooperation",
       "kind": "rule",
-      "description": "If Solomon adopted an explicit noncooperation posture after the granted in-effect order, self-help noncooperation is forbidden."
+      "description": "If Solomon adopted an explicit noncooperation posture after the granted in-effect order, self-help noncooperation is forbidden.",
+      "track": "filing",
+      "authority_refs": [
+        "order:eppdapa_restraining_order"
+      ]
     },
     {
       "id": "conclusion:c5c_solomon_forbidden_self_help_noncooperation",
@@ -5445,22 +6722,30 @@
       "target": "order:eppdapa_restraining_order"
     },
     {
-      "id": "rule:r6_hacc_obligated_process_consistently_with_valid_authority",
+      "id": "rule:r6_hacc_obligated_document_authority_chain_for_lease_change",
       "kind": "rule",
-      "description": "If housing process is active and appointment exists, HACC is obligated to process consistently with valid authority."
+      "description": "If HACC states that a lease change followed internal review and court documentation on file, HACC is obligated in this model to identify the actor, document, and authority chain behind that change.",
+      "track": "filing",
+      "authority_refs": [
+        "auth:orcp_17_c"
+      ]
     },
     {
-      "id": "conclusion:c6_hacc_obligated_process_consistent_with_order",
+      "id": "conclusion:c6_hacc_obligated_document_authority_chain_for_lease_change",
       "kind": "deontic_conclusion",
       "modality": "O",
       "actor": "org:hacc",
-      "action": "process_housing_consistent_with_valid_guardian_authority",
-      "target": "person:jane_cortez"
+      "action": "identify_actor_document_and_authority_chain_for_lease_change",
+      "target": "household:jane_cortez_household"
     },
     {
       "id": "rule:r6b_hacc_obligated_document_lease_basis",
       "kind": "rule",
-      "description": "If HACC implemented a January 1, 2026 lease adjustment, HACC was obligated to document the basis for that household-composition change."
+      "description": "If HACC implemented a January 1, 2026 lease adjustment, HACC was obligated to document the basis for that household-composition change.",
+      "track": "filing",
+      "authority_refs": [
+        "auth:orcp_17_c"
+      ]
     },
     {
       "id": "conclusion:c6b_hacc_obligated_document_lease_basis",
@@ -5473,7 +6758,9 @@
     {
       "id": "rule:r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
       "kind": "rule",
-      "description": "Because no named HACC notice message about the Solomon order has been found in preserved mail, the HACC-interference theory should presently be treated as an inference rather than direct proof."
+      "description": "Because no named HACC notice message about the Solomon order has been found in preserved mail, the HACC-interference theory should presently be treated as an inference rather than direct proof.",
+      "track": "filing",
+      "authority_refs": []
     },
     {
       "id": "conclusion:c6c_solomon_interference_not_yet_directly_proved",
@@ -5484,9 +6771,44 @@
       "target": "person:solomon"
     },
     {
+      "id": "rule:r6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+      "kind": "rule",
+      "description": "If no source order has been found for the claimed prior appointment, the prior-appointment theory must remain hypothesis-only in filing-facing outputs.",
+      "track": "filing",
+      "authority_refs": []
+    },
+    {
+      "id": "conclusion:c6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+      "kind": "deontic_conclusion",
+      "modality": "O",
+      "actor": "case:guardianship_collateral_estoppel",
+      "action": "treat_prior_appointment_theory_as_hypothesis_until_source_order_found",
+      "target": "issue:prior_appointment_for_jane_cortez"
+    },
+    {
+      "id": "rule:r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+      "kind": "rule",
+      "description": "If local search did not locate the HACC actor-identification record and compelled production is required, the case posture is permitted to pursue Exhibit R production.",
+      "track": "filing",
+      "authority_refs": []
+    },
+    {
+      "id": "conclusion:c6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+      "kind": "deontic_conclusion",
+      "modality": "P",
+      "actor": "case:guardianship_collateral_estoppel",
+      "action": "seek_compelled_production_of_hacc_actor_document_authority_chain",
+      "target": "issue:lease_change_actor_identification"
+    },
+    {
       "id": "rule:r7_solomon_forbidden_refile_precluded_issue",
       "kind": "rule",
-      "description": "If issue preclusion applies, Solomon is forbidden from relitigating the precluded issue."
+      "description": "If issue preclusion applies, Solomon is forbidden from relitigating the precluded issue.",
+      "track": "hypothesis",
+      "authority_refs": [
+        "auth:oregon_issue_preclusion_cases",
+        "auth:oregon_issue_preclusion_prior_separate_proceeding_cases"
+      ]
     },
     {
       "id": "conclusion:c7_solomon_forbidden_refile_precluded_issue",
@@ -5499,7 +6821,11 @@
     {
       "id": "rule:r8_solomon_notice_ack_triggers_court_relief_path",
       "kind": "rule",
-      "description": "If Solomon acknowledged awareness of restraining order and the order is in effect, Solomon is obligated to seek court relief rather than self-help noncompliance."
+      "description": "If Solomon acknowledged awareness of restraining order and the order is in effect, Solomon is obligated to seek court relief rather than self-help noncompliance.",
+      "track": "filing",
+      "authority_refs": [
+        "order:eppdapa_restraining_order"
+      ]
     },
     {
       "id": "conclusion:c8_solomon_obligated_seek_relief_via_court",
@@ -5512,7 +6838,11 @@
     {
       "id": "rule:r9_solomon_wait_for_service_conflicts_with_no_further_service",
       "kind": "rule",
-      "description": "If Solomon stated he would wait for service but the order states no further service needed due to appearance, conditioning compliance on extra service is forbidden in this model."
+      "description": "If Solomon stated he would wait for service but the order states no further service needed due to appearance, conditioning compliance on extra service is forbidden in this model.",
+      "track": "filing",
+      "authority_refs": [
+        "order:eppdapa_restraining_order"
+      ]
     },
     {
       "id": "conclusion:c9_solomon_forbidden_condition_compliance_on_extra_service",
@@ -5525,7 +6855,11 @@
     {
       "id": "rule:r10_solomon_noncooperation_statement_conflicts_with_effective_order",
       "kind": "rule",
-      "description": "If Solomon states non-incentivized cooperation while order is in effect, intentional noncooperation is forbidden in this model."
+      "description": "If Solomon states non-incentivized cooperation while order is in effect, intentional noncooperation is forbidden in this model.",
+      "track": "filing",
+      "authority_refs": [
+        "order:eppdapa_restraining_order"
+      ]
     },
     {
       "id": "conclusion:c10_solomon_forbidden_intentional_noncooperation",
@@ -5538,7 +6872,11 @@
     {
       "id": "rule:r11_solomon_already_have_order_statement_supports_notice",
       "kind": "rule",
-      "description": "If Solomon stated the other party already had the restraining order and order is in effect, Solomon is obligated to recognize existing order status."
+      "description": "If Solomon stated the other party already had the restraining order and order is in effect, Solomon is obligated to recognize existing order status.",
+      "track": "filing",
+      "authority_refs": [
+        "order:eppdapa_restraining_order"
+      ]
     },
     {
       "id": "conclusion:c11_solomon_obligated_recognize_existing_order_status",
@@ -5551,7 +6889,11 @@
     {
       "id": "rule:r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order",
       "kind": "rule",
-      "description": "If Solomon states the order is not in effect while the order is in effect, asserting ineffectiveness without court relief is forbidden in this model."
+      "description": "If Solomon states the order is not in effect while the order is in effect, asserting ineffectiveness without court relief is forbidden in this model.",
+      "track": "filing",
+      "authority_refs": [
+        "order:eppdapa_restraining_order"
+      ]
     },
     {
       "id": "conclusion:c12_solomon_forbidden_assert_order_ineffective_without_relief",
@@ -5564,7 +6906,11 @@
     {
       "id": "rule:r13_solomon_judge_overturn_statement_triggers_motion_path",
       "kind": "rule",
-      "description": "If Solomon states he would have the judge overturn the order while it is in effect, he is obligated to seek court modification before noncompliance."
+      "description": "If Solomon states he would have the judge overturn the order while it is in effect, he is obligated to seek court modification before noncompliance.",
+      "track": "filing",
+      "authority_refs": [
+        "order:eppdapa_restraining_order"
+      ]
     },
     {
       "id": "conclusion:c13_solomon_obligated_file_motion_not_self_help",
@@ -5577,7 +6923,9 @@
     {
       "id": "rule:r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
       "kind": "rule",
-      "description": "If HACC is told that Jane is receiving calls about a restrained brother and third-party housing contact is occurring with a restrained person, HACC is obligated in this model to stop that contact path and document the response."
+      "description": "If HACC is told that Jane is receiving calls about a restrained brother and third-party housing contact is occurring with a restrained person, HACC is obligated in this model to stop that contact path and document the response.",
+      "track": "filing",
+      "authority_refs": []
     },
     {
       "id": "conclusion:c14_hacc_obligated_avoid_third_party_housing_contact_with_restrained_person",
@@ -5586,6 +6934,315 @@
       "actor": "org:hacc",
       "action": "avoid_third_party_housing_contact_with_restrained_person_and_document_response",
       "target": "person:jane_cortez"
+    },
+    {
+      "id": "rule:r15_benjamin_permitted_serve_subpoena_packets",
+      "kind": "rule",
+      "description": "If subpoena workflow components are staged and recipients are ready-to-serve, Benjamin is permitted to serve the staged subpoena packets.",
+      "track": "workflow",
+      "authority_refs": [
+        "auth:orcp_55"
+      ]
+    },
+    {
+      "id": "conclusion:c15_benjamin_permitted_serve_subpoena_packets",
+      "kind": "deontic_conclusion",
+      "modality": "P",
+      "actor": "person:benjamin_barber",
+      "action": "serve_staged_subpoena_packets",
+      "target": "case:26PR00641"
+    },
+    {
+      "id": "rule:r16_benjamin_obligated_track_service_and_deadlines",
+      "kind": "rule",
+      "description": "If service log and workflow components exist, Benjamin is obligated in this model to maintain service/deadline tracking.",
+      "track": "workflow",
+      "authority_refs": [
+        "auth:orcp_55"
+      ]
+    },
+    {
+      "id": "conclusion:c16_benjamin_obligated_track_service_and_deadlines",
+      "kind": "deontic_conclusion",
+      "modality": "O",
+      "actor": "person:benjamin_barber",
+      "action": "maintain_service_and_deadline_tracking",
+      "target": "case:26PR00641"
+    },
+    {
+      "id": "rule:r17_responding_custodian_obligated_execute_or_query_protocol_upon_service",
+      "kind": "rule",
+      "description": "If any subpoena service is completed and OR-joined protocol is defined, responding custodians are obligated in this model to execute the protocol and produce a search execution report.",
+      "track": "workflow",
+      "authority_refs": [
+        "auth:orcp_55"
+      ]
+    },
+    {
+      "id": "conclusion:c17_responding_custodian_obligated_execute_or_query_protocol",
+      "kind": "deontic_conclusion",
+      "modality": "O",
+      "actor": "role:responding_custodian",
+      "action": "execute_or_joined_identifier_queries_and_produce_search_execution_report",
+      "target": "case:26PR00641"
+    },
+    {
+      "id": "rule:r18_benjamin_permitted_issue_deficiency_notice_after_incomplete_subpoena_response",
+      "kind": "rule",
+      "description": "If an incomplete subpoena response is present and workflow components are staged, Benjamin is permitted in this model to issue a deficiency notice and cure deadline.",
+      "track": "workflow",
+      "authority_refs": [
+        "auth:orcp_46",
+        "auth:orcp_55"
+      ]
+    },
+    {
+      "id": "conclusion:c18_benjamin_permitted_issue_deficiency_notice",
+      "kind": "deontic_conclusion",
+      "modality": "P",
+      "actor": "person:benjamin_barber",
+      "action": "issue_subpoena_deficiency_notice_and_set_cure_deadline",
+      "target": "case:26PR00641"
+    },
+    {
+      "id": "rule:r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage",
+      "kind": "rule",
+      "description": "If deficiency notices are in play and compel templates are staged, Benjamin is permitted in this model to move to compel and seek sanctions for noncompliance.",
+      "track": "workflow",
+      "authority_refs": [
+        "auth:orcp_46",
+        "auth:orcp_55"
+      ]
+    },
+    {
+      "id": "conclusion:c19_benjamin_permitted_move_to_compel",
+      "kind": "deontic_conclusion",
+      "modality": "P",
+      "actor": "person:benjamin_barber",
+      "action": "move_to_compel_and_seek_sanctions_for_subpoena_noncompliance",
+      "target": "case:26PR00641"
+    },
+    {
+      "id": "rule:r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+      "kind": "rule",
+      "description": "If no subpoena service is yet completed, subpoena-enforcement motion path remains pending pre-service in this model.",
+      "track": "workflow",
+      "authority_refs": [
+        "auth:orcp_55"
+      ]
+    },
+    {
+      "id": "conclusion:c20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+      "kind": "deontic_conclusion",
+      "modality": "P",
+      "actor": "case:guardianship_collateral_estoppel",
+      "action": "treat_subpoena_enforcement_motion_path_as_pending_until_service",
+      "target": "case:26PR00641"
+    },
+    {
+      "id": "rule:r21_case_obligated_resolve_actor_assignment_conflict",
+      "kind": "rule",
+      "description": "If the model contains a Benjamin-vs-Solomon interference actor conflict, the case posture is obligated to resolve that assignment with source records before final legal attribution.",
+      "track": "filing",
+      "authority_refs": []
+    },
+    {
+      "id": "conclusion:c21_case_obligated_resolve_actor_assignment_conflict",
+      "kind": "deontic_conclusion",
+      "modality": "O",
+      "actor": "case:guardianship_collateral_estoppel",
+      "action": "resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record",
+      "target": "issue:interference_actor_assignment"
+    },
+    {
+      "id": "rule:r22_case_obligated_finalize_authority_citations_before_filing",
+      "kind": "rule",
+      "description": "If authority table placeholders remain unresolved, the case posture is obligated to finalize governing citations before final filing use.",
+      "track": "filing",
+      "authority_refs": []
+    },
+    {
+      "id": "conclusion:c22_case_obligated_finalize_authority_citations_before_filing",
+      "kind": "deontic_conclusion",
+      "modality": "O",
+      "actor": "case:guardianship_collateral_estoppel",
+      "action": "finalize_governing_authority_citations_before_final_filing",
+      "target": "doc:06_oregon_authority_table_placeholders.md"
+    },
+    {
+      "id": "rule:r23_case_permitted_initiate_remedial_contempt_path",
+      "kind": "rule",
+      "description": "If remedial-contempt authority is available and the record includes an in-effect order plus Solomon's service-position statement, the case posture is permitted to pursue a remedial contempt or show-cause path.",
+      "track": "filing",
+      "authority_refs": [
+        "auth:ors_33_055"
+      ]
+    },
+    {
+      "id": "conclusion:c23_case_permitted_initiate_remedial_contempt_path",
+      "kind": "deontic_conclusion",
+      "modality": "P",
+      "actor": "case:guardianship_collateral_estoppel",
+      "action": "initiate_remedial_contempt_or_show_cause_path",
+      "target": "person:solomon"
+    },
+    {
+      "id": "rule:r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+      "kind": "rule",
+      "description": "If compel-appearance authority is available and the claimed nonappearance predicate is later proved, the case posture may seek compelled appearance.",
+      "track": "filing",
+      "authority_refs": [
+        "auth:ors_33_075"
+      ]
+    },
+    {
+      "id": "conclusion:c24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+      "kind": "deontic_conclusion",
+      "modality": "P",
+      "actor": "case:guardianship_collateral_estoppel",
+      "action": "seek_order_or_warrant_to_compel_appearance_if_order_to_appear_is_served_and_ignored",
+      "target": "person:solomon"
+    },
+    {
+      "id": "rule:r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+      "kind": "rule",
+      "description": "If remedial-sanctions authority is available and prejudice-related housing change is documented, the case posture may seek compensatory or compliance-oriented remedial sanctions if contempt elements are later proved.",
+      "track": "filing",
+      "authority_refs": [
+        "auth:ors_33_105"
+      ]
+    },
+    {
+      "id": "conclusion:c25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+      "kind": "deontic_conclusion",
+      "modality": "P",
+      "actor": "case:guardianship_collateral_estoppel",
+      "action": "seek_compensatory_or_compliance_oriented_remedial_sanctions_if_contempt_is_proved",
+      "target": "issue:prejudice_and_noninterference_relief"
+    },
+    {
+      "id": "rule:r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+      "kind": "rule",
+      "description": "If ORCP 17 authority is available, the case posture may seek filing-related sanctions if improper purpose or inadequate factual/legal support is shown; current proof-state cautions remain in force.",
+      "track": "filing",
+      "authority_refs": [
+        "auth:orcp_17_c"
+      ]
+    },
+    {
+      "id": "conclusion:c26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+      "kind": "deontic_conclusion",
+      "modality": "P",
+      "actor": "case:guardianship_collateral_estoppel",
+      "action": "seek_orcp_17_sanctions_if_filing_is_shown_improper_or_factually_or_legally_unsupported",
+      "target": "issue:sanctions_track"
+    },
+    {
+      "id": "rule:r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+      "kind": "rule",
+      "description": "If subpoena-obedience and discovery-sanctions authority are available and compelled production is required, the case posture may pursue subpoena enforcement and related expense-shifting when the required noncompliance predicate is met.",
+      "track": "workflow",
+      "authority_refs": [
+        "auth:orcp_55",
+        "auth:orcp_46"
+      ]
+    },
+    {
+      "id": "conclusion:c27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+      "kind": "deontic_conclusion",
+      "modality": "P",
+      "actor": "case:guardianship_collateral_estoppel",
+      "action": "seek_subpoena_enforcement_and_related_expenses_after_nonparty_noncompliance",
+      "target": "org:hacc"
+    },
+    {
+      "id": "rule:r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+      "kind": "rule",
+      "description": "If ORS 125.050 authority is available and the protective petition is filed, the proceeding may apply ORCP and the Oregon Evidence Code except where chapter 125 provides otherwise.",
+      "track": "filing",
+      "authority_refs": [
+        "auth:ors_125_050"
+      ]
+    },
+    {
+      "id": "conclusion:c28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+      "kind": "deontic_conclusion",
+      "modality": "P",
+      "actor": "case:26PR00641",
+      "action": "apply_orcp_and_oec_subject_to_specific_chapter_125_overrides",
+      "target": "proceeding:protective_proceeding"
+    },
+    {
+      "id": "rule:r29_case_obligated_preserve_notice_and_objection_window",
+      "kind": "rule",
+      "description": "If chapter 125 notice authorities are available and notice issued to the respondent, the proceeding is obligated to preserve the statutory notice and objection framework.",
+      "track": "filing",
+      "authority_refs": [
+        "auth:ors_125_060",
+        "auth:ors_125_065"
+      ]
+    },
+    {
+      "id": "conclusion:c29_case_obligated_preserve_notice_and_objection_window",
+      "kind": "deontic_conclusion",
+      "modality": "O",
+      "actor": "case:26PR00641",
+      "action": "preserve_statutory_notice_and_objection_window_for_protective_petition",
+      "target": "person:jane_cortez"
+    },
+    {
+      "id": "rule:r30_case_obligated_schedule_hearing_on_presented_objection",
+      "kind": "rule",
+      "description": "If objection and hearing authorities are available and the packet includes a respondent objection form, the proceeding is obligated in this model to route the matter through the objection-hearing path.",
+      "track": "filing",
+      "authority_refs": [
+        "auth:ors_125_075",
+        "auth:ors_125_080"
+      ]
+    },
+    {
+      "id": "conclusion:c30_case_obligated_schedule_hearing_on_presented_objection",
+      "kind": "deontic_conclusion",
+      "modality": "O",
+      "actor": "case:26PR00641",
+      "action": "schedule_and_process_hearing_on_guardianship_objection",
+      "target": "person:jane_cortez"
+    },
+    {
+      "id": "rule:r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+      "kind": "rule",
+      "description": "If ORS 125.080 authority is available and notice has issued, the case posture may assert the protected person's right to appear in person or by counsel at hearing.",
+      "track": "filing",
+      "authority_refs": [
+        "auth:ors_125_080"
+      ]
+    },
+    {
+      "id": "conclusion:c31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+      "kind": "deontic_conclusion",
+      "modality": "P",
+      "actor": "case:26PR00641",
+      "action": "assert_respondent_right_to_appear_in_person_or_by_counsel",
+      "target": "person:jane_cortez"
+    },
+    {
+      "id": "rule:r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+      "kind": "rule",
+      "description": "If ORCP 9 and ORCP 10 authority are available, the case posture may use those rules for service and deadline computation on later-filed motion packets, subject to more specific chapter 125 notice rules where applicable.",
+      "track": "workflow",
+      "authority_refs": [
+        "auth:orcp_9",
+        "auth:orcp_10",
+        "auth:ors_125_050"
+      ]
+    },
+    {
+      "id": "conclusion:c32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+      "kind": "deontic_conclusion",
+      "modality": "P",
+      "actor": "case:guardianship_collateral_estoppel",
+      "action": "use_orcp9_service_and_orcp10_deadline_computation_for_later_filed_motion_packets",
+      "target": "issue:service_and_deadlines"
     },
     {
       "id": "case:guardianship_collateral_estoppel",
@@ -5781,27 +7438,37 @@
       "relation": "bears"
     },
     {
-      "from": "fact:f_hacc_process_exists",
-      "to": "rule:r6_hacc_obligated_process_consistently_with_valid_authority",
+      "from": "fact:f_hacc_removed_benjamin_effective_2026_01_01",
+      "to": "rule:r6_hacc_obligated_document_authority_chain_for_lease_change",
       "relation": "antecedent_of"
     },
     {
-      "from": "fact:f_client_prior_appointment",
-      "to": "rule:r6_hacc_obligated_process_consistently_with_valid_authority",
+      "from": "fact:f_hacc_internal_review_claimed",
+      "to": "rule:r6_hacc_obligated_document_authority_chain_for_lease_change",
       "relation": "antecedent_of"
     },
     {
-      "from": "rule:r6_hacc_obligated_process_consistently_with_valid_authority",
-      "to": "conclusion:c6_hacc_obligated_process_consistent_with_order",
+      "from": "fact:f_hacc_court_documentation_basis_claimed",
+      "to": "rule:r6_hacc_obligated_document_authority_chain_for_lease_change",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "rule:r6_hacc_obligated_document_authority_chain_for_lease_change",
+      "to": "conclusion:c6_hacc_obligated_document_authority_chain_for_lease_change",
       "relation": "yields"
     },
     {
       "from": "org:hacc",
-      "to": "conclusion:c6_hacc_obligated_process_consistent_with_order",
+      "to": "conclusion:c6_hacc_obligated_document_authority_chain_for_lease_change",
       "relation": "bears"
     },
     {
       "from": "fact:f_hacc_lease_adjustment_effective_2026_01_01",
+      "to": "rule:r6b_hacc_obligated_document_lease_basis",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "fact:f_hacc_removed_benjamin_effective_2026_01_01",
       "to": "rule:r6b_hacc_obligated_document_lease_basis",
       "relation": "antecedent_of"
     },
@@ -5829,6 +7496,51 @@
       "from": "case:guardianship_collateral_estoppel",
       "to": "conclusion:c6c_solomon_interference_not_yet_directly_proved",
       "relation": "bears"
+    },
+    {
+      "from": "fact:f_prior_appointment_source_order_not_found",
+      "to": "rule:r6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "rule:r6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+      "to": "conclusion:c6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+      "relation": "yields"
+    },
+    {
+      "from": "case:guardianship_collateral_estoppel",
+      "to": "conclusion:c6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+      "relation": "bears"
+    },
+    {
+      "from": "fact:f_hacc_actor_identification_record_not_found_locally",
+      "to": "rule:r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "fact:f_hacc_exhibit_r_requires_compelled_production",
+      "to": "rule:r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "rule:r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+      "to": "conclusion:c6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+      "relation": "yields"
+    },
+    {
+      "from": "case:guardianship_collateral_estoppel",
+      "to": "conclusion:c6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
+      "relation": "bears"
+    },
+    {
+      "from": "fact:f_authority_issue_preclusion_elements_official_oregon_cases",
+      "to": "rule:r7_solomon_forbidden_refile_precluded_issue",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "fact:f_authority_issue_preclusion_requires_prior_separate_proceeding",
+      "to": "rule:r7_solomon_forbidden_refile_precluded_issue",
+      "relation": "antecedent_of"
     },
     {
       "from": "fact:f_collateral_estoppel_candidate",
@@ -5991,19 +7703,389 @@
       "relation": "bears"
     },
     {
+      "from": "fact:f_subpoena_workflow_components_staged",
+      "to": "rule:r15_benjamin_permitted_serve_subpoena_packets",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "fact:f_subpoena_recipients_ready_to_serve",
+      "to": "rule:r15_benjamin_permitted_serve_subpoena_packets",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "rule:r15_benjamin_permitted_serve_subpoena_packets",
+      "to": "conclusion:c15_benjamin_permitted_serve_subpoena_packets",
+      "relation": "yields"
+    },
+    {
+      "from": "person:benjamin_barber",
+      "to": "conclusion:c15_benjamin_permitted_serve_subpoena_packets",
+      "relation": "bears"
+    },
+    {
+      "from": "fact:f_active_service_log_initialized",
+      "to": "rule:r16_benjamin_obligated_track_service_and_deadlines",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "fact:f_subpoena_workflow_components_staged",
+      "to": "rule:r16_benjamin_obligated_track_service_and_deadlines",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "rule:r16_benjamin_obligated_track_service_and_deadlines",
+      "to": "conclusion:c16_benjamin_obligated_track_service_and_deadlines",
+      "relation": "yields"
+    },
+    {
+      "from": "person:benjamin_barber",
+      "to": "conclusion:c16_benjamin_obligated_track_service_and_deadlines",
+      "relation": "bears"
+    },
+    {
+      "from": "fact:f_subpoena_service_completed_any",
+      "to": "rule:r17_responding_custodian_obligated_execute_or_query_protocol_upon_service",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "fact:f_or_joined_search_protocol_defined",
+      "to": "rule:r17_responding_custodian_obligated_execute_or_query_protocol_upon_service",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "rule:r17_responding_custodian_obligated_execute_or_query_protocol_upon_service",
+      "to": "conclusion:c17_responding_custodian_obligated_execute_or_query_protocol",
+      "relation": "yields"
+    },
+    {
+      "from": "role:responding_custodian",
+      "to": "conclusion:c17_responding_custodian_obligated_execute_or_query_protocol",
+      "relation": "bears"
+    },
+    {
+      "from": "fact:f_subpoena_response_incomplete_any",
+      "to": "rule:r18_benjamin_permitted_issue_deficiency_notice_after_incomplete_subpoena_response",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "fact:f_subpoena_workflow_components_staged",
+      "to": "rule:r18_benjamin_permitted_issue_deficiency_notice_after_incomplete_subpoena_response",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "rule:r18_benjamin_permitted_issue_deficiency_notice_after_incomplete_subpoena_response",
+      "to": "conclusion:c18_benjamin_permitted_issue_deficiency_notice",
+      "relation": "yields"
+    },
+    {
+      "from": "person:benjamin_barber",
+      "to": "conclusion:c18_benjamin_permitted_issue_deficiency_notice",
+      "relation": "bears"
+    },
+    {
+      "from": "fact:f_deficiency_notice_sent_any",
+      "to": "rule:r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "fact:f_subpoena_workflow_components_staged",
+      "to": "rule:r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "rule:r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage",
+      "to": "conclusion:c19_benjamin_permitted_move_to_compel",
+      "relation": "yields"
+    },
+    {
+      "from": "person:benjamin_barber",
+      "to": "conclusion:c19_benjamin_permitted_move_to_compel",
+      "relation": "bears"
+    },
+    {
+      "from": "fact:f_subpoena_pre_service_phase_only",
+      "to": "rule:r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "rule:r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+      "to": "conclusion:c20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+      "relation": "yields"
+    },
+    {
+      "from": "case:guardianship_collateral_estoppel",
+      "to": "conclusion:c20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+      "relation": "bears"
+    },
+    {
+      "from": "fact:f_actor_assignment_conflict_benjamin_vs_solomon_interference",
+      "to": "rule:r21_case_obligated_resolve_actor_assignment_conflict",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "rule:r21_case_obligated_resolve_actor_assignment_conflict",
+      "to": "conclusion:c21_case_obligated_resolve_actor_assignment_conflict",
+      "relation": "yields"
+    },
+    {
+      "from": "case:guardianship_collateral_estoppel",
+      "to": "conclusion:c21_case_obligated_resolve_actor_assignment_conflict",
+      "relation": "bears"
+    },
+    {
+      "from": "fact:f_authority_table_placeholders_unresolved",
+      "to": "rule:r22_case_obligated_finalize_authority_citations_before_filing",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "rule:r22_case_obligated_finalize_authority_citations_before_filing",
+      "to": "conclusion:c22_case_obligated_finalize_authority_citations_before_filing",
+      "relation": "yields"
+    },
+    {
+      "from": "case:guardianship_collateral_estoppel",
+      "to": "conclusion:c22_case_obligated_finalize_authority_citations_before_filing",
+      "relation": "bears"
+    },
+    {
+      "from": "fact:f_authority_ors_33_055_remedial_contempt_procedure",
+      "to": "rule:r23_case_permitted_initiate_remedial_contempt_path",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "fact:f_restraining_order_in_effect",
+      "to": "rule:r23_case_permitted_initiate_remedial_contempt_path",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "fact:f_solomon_service_position_statement",
+      "to": "rule:r23_case_permitted_initiate_remedial_contempt_path",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "rule:r23_case_permitted_initiate_remedial_contempt_path",
+      "to": "conclusion:c23_case_permitted_initiate_remedial_contempt_path",
+      "relation": "yields"
+    },
+    {
+      "from": "case:guardianship_collateral_estoppel",
+      "to": "conclusion:c23_case_permitted_initiate_remedial_contempt_path",
+      "relation": "bears"
+    },
+    {
+      "from": "fact:f_authority_ors_33_075_compel_appearance",
+      "to": "rule:r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "fact:f_client_solomon_failed_appearance",
+      "to": "rule:r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "rule:r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+      "to": "conclusion:c24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+      "relation": "yields"
+    },
+    {
+      "from": "case:guardianship_collateral_estoppel",
+      "to": "conclusion:c24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+      "relation": "bears"
+    },
+    {
+      "from": "fact:f_authority_ors_33_105_remedial_sanctions",
+      "to": "rule:r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "fact:f_hacc_removed_benjamin_effective_2026_01_01",
+      "to": "rule:r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "rule:r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+      "to": "conclusion:c25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+      "relation": "yields"
+    },
+    {
+      "from": "case:guardianship_collateral_estoppel",
+      "to": "conclusion:c25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+      "relation": "bears"
+    },
+    {
+      "from": "fact:f_authority_orcp_17_improper_purpose_and_support",
+      "to": "rule:r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "fact:f_hacc_named_notice_to_solomon_order_not_found",
+      "to": "rule:r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "rule:r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+      "to": "conclusion:c26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+      "relation": "yields"
+    },
+    {
+      "from": "case:guardianship_collateral_estoppel",
+      "to": "conclusion:c26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+      "relation": "bears"
+    },
+    {
+      "from": "fact:f_authority_orcp_55_subpoena_obedience",
+      "to": "rule:r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "fact:f_authority_orcp_46_discovery_sanctions",
+      "to": "rule:r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "fact:f_hacc_exhibit_r_requires_compelled_production",
+      "to": "rule:r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "rule:r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+      "to": "conclusion:c27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+      "relation": "yields"
+    },
+    {
+      "from": "case:guardianship_collateral_estoppel",
+      "to": "conclusion:c27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+      "relation": "bears"
+    },
+    {
+      "from": "fact:f_authority_ors_125_050_protective_orcp_oec",
+      "to": "rule:r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "fact:f_petition_exists",
+      "to": "rule:r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "rule:r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+      "to": "conclusion:c28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+      "relation": "yields"
+    },
+    {
+      "from": "case:26PR00641",
+      "to": "conclusion:c28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+      "relation": "bears"
+    },
+    {
+      "from": "fact:f_authority_ors_125_060_notice_recipients",
+      "to": "rule:r29_case_obligated_preserve_notice_and_objection_window",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "fact:f_authority_ors_125_065_notice_manner_and_timing",
+      "to": "rule:r29_case_obligated_preserve_notice_and_objection_window",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "fact:f_notice_to_respondent",
+      "to": "rule:r29_case_obligated_preserve_notice_and_objection_window",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "rule:r29_case_obligated_preserve_notice_and_objection_window",
+      "to": "conclusion:c29_case_obligated_preserve_notice_and_objection_window",
+      "relation": "yields"
+    },
+    {
+      "from": "case:26PR00641",
+      "to": "conclusion:c29_case_obligated_preserve_notice_and_objection_window",
+      "relation": "bears"
+    },
+    {
+      "from": "fact:f_authority_ors_125_075_objections",
+      "to": "rule:r30_case_obligated_schedule_hearing_on_presented_objection",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "fact:f_authority_ors_125_080_hearing_and_counsel",
+      "to": "rule:r30_case_obligated_schedule_hearing_on_presented_objection",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "fact:f_respondent_objection_form_present",
+      "to": "rule:r30_case_obligated_schedule_hearing_on_presented_objection",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "rule:r30_case_obligated_schedule_hearing_on_presented_objection",
+      "to": "conclusion:c30_case_obligated_schedule_hearing_on_presented_objection",
+      "relation": "yields"
+    },
+    {
+      "from": "case:26PR00641",
+      "to": "conclusion:c30_case_obligated_schedule_hearing_on_presented_objection",
+      "relation": "bears"
+    },
+    {
+      "from": "fact:f_authority_ors_125_080_hearing_and_counsel",
+      "to": "rule:r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "fact:f_notice_to_respondent",
+      "to": "rule:r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "rule:r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+      "to": "conclusion:c31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+      "relation": "yields"
+    },
+    {
+      "from": "case:26PR00641",
+      "to": "conclusion:c31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+      "relation": "bears"
+    },
+    {
+      "from": "fact:f_authority_orcp_9_service_of_later_filed_papers",
+      "to": "rule:r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "fact:f_authority_orcp_10_time_computation",
+      "to": "rule:r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "fact:f_petition_exists",
+      "to": "rule:r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+      "relation": "antecedent_of"
+    },
+    {
+      "from": "rule:r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+      "to": "conclusion:c32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+      "relation": "yields"
+    },
+    {
+      "from": "case:guardianship_collateral_estoppel",
+      "to": "conclusion:c32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
+      "relation": "bears"
+    },
+    {
       "from": "rule:r1_guardian_permission_if_prior_appointment",
       "to": "case:guardianship_collateral_estoppel",
-      "relation": "active_inclusive_alleged"
+      "relation": "inactive"
     },
     {
       "from": "rule:r2_noninterference_prohibition_for_benjamin",
       "to": "case:guardianship_collateral_estoppel",
-      "relation": "active_inclusive_alleged"
+      "relation": "inactive"
     },
     {
       "from": "rule:r3_benjamin_obligation_comply_or_seek_relief",
       "to": "case:guardianship_collateral_estoppel",
-      "relation": "active_inclusive_alleged"
+      "relation": "inactive"
     },
     {
       "from": "rule:r4_solomon_forbidden_abuse_contact_property_control",
@@ -6018,7 +8100,7 @@
     {
       "from": "rule:r5_solomon_obligated_appear_and_answer",
       "to": "case:guardianship_collateral_estoppel",
-      "relation": "active_inclusive_alleged"
+      "relation": "inactive"
     },
     {
       "from": "rule:r5b_solomon_obligated_seek_hearing_or_comply",
@@ -6031,9 +8113,9 @@
       "relation": "active_verified"
     },
     {
-      "from": "rule:r6_hacc_obligated_process_consistently_with_valid_authority",
+      "from": "rule:r6_hacc_obligated_document_authority_chain_for_lease_change",
       "to": "case:guardianship_collateral_estoppel",
-      "relation": "active_inclusive_alleged"
+      "relation": "active_verified"
     },
     {
       "from": "rule:r6b_hacc_obligated_document_lease_basis",
@@ -6042,6 +8124,16 @@
     },
     {
       "from": "rule:r6c_solomon_interference_not_proved_by_named_hacc_notice_gap",
+      "to": "case:guardianship_collateral_estoppel",
+      "relation": "active_verified"
+    },
+    {
+      "from": "rule:r6d_case_obligated_treat_prior_appointment_as_hypothesis_only",
+      "to": "case:guardianship_collateral_estoppel",
+      "relation": "active_verified"
+    },
+    {
+      "from": "rule:r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
       "to": "case:guardianship_collateral_estoppel",
       "relation": "active_verified"
     },
@@ -6082,6 +8174,96 @@
     },
     {
       "from": "rule:r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling",
+      "to": "case:guardianship_collateral_estoppel",
+      "relation": "active_verified"
+    },
+    {
+      "from": "rule:r15_benjamin_permitted_serve_subpoena_packets",
+      "to": "case:guardianship_collateral_estoppel",
+      "relation": "active_verified"
+    },
+    {
+      "from": "rule:r16_benjamin_obligated_track_service_and_deadlines",
+      "to": "case:guardianship_collateral_estoppel",
+      "relation": "active_verified"
+    },
+    {
+      "from": "rule:r17_responding_custodian_obligated_execute_or_query_protocol_upon_service",
+      "to": "case:guardianship_collateral_estoppel",
+      "relation": "inactive"
+    },
+    {
+      "from": "rule:r18_benjamin_permitted_issue_deficiency_notice_after_incomplete_subpoena_response",
+      "to": "case:guardianship_collateral_estoppel",
+      "relation": "inactive"
+    },
+    {
+      "from": "rule:r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage",
+      "to": "case:guardianship_collateral_estoppel",
+      "relation": "inactive"
+    },
+    {
+      "from": "rule:r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
+      "to": "case:guardianship_collateral_estoppel",
+      "relation": "active_verified"
+    },
+    {
+      "from": "rule:r21_case_obligated_resolve_actor_assignment_conflict",
+      "to": "case:guardianship_collateral_estoppel",
+      "relation": "active_verified"
+    },
+    {
+      "from": "rule:r22_case_obligated_finalize_authority_citations_before_filing",
+      "to": "case:guardianship_collateral_estoppel",
+      "relation": "active_verified"
+    },
+    {
+      "from": "rule:r23_case_permitted_initiate_remedial_contempt_path",
+      "to": "case:guardianship_collateral_estoppel",
+      "relation": "active_verified"
+    },
+    {
+      "from": "rule:r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+      "to": "case:guardianship_collateral_estoppel",
+      "relation": "active_inclusive_alleged"
+    },
+    {
+      "from": "rule:r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved",
+      "to": "case:guardianship_collateral_estoppel",
+      "relation": "active_verified"
+    },
+    {
+      "from": "rule:r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown",
+      "to": "case:guardianship_collateral_estoppel",
+      "relation": "active_verified"
+    },
+    {
+      "from": "rule:r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
+      "to": "case:guardianship_collateral_estoppel",
+      "relation": "active_verified"
+    },
+    {
+      "from": "rule:r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding",
+      "to": "case:guardianship_collateral_estoppel",
+      "relation": "active_verified"
+    },
+    {
+      "from": "rule:r29_case_obligated_preserve_notice_and_objection_window",
+      "to": "case:guardianship_collateral_estoppel",
+      "relation": "active_verified"
+    },
+    {
+      "from": "rule:r30_case_obligated_schedule_hearing_on_presented_objection",
+      "to": "case:guardianship_collateral_estoppel",
+      "relation": "active_verified"
+    },
+    {
+      "from": "rule:r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel",
+      "to": "case:guardianship_collateral_estoppel",
+      "relation": "active_verified"
+    },
+    {
+      "from": "rule:r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines",
       "to": "case:guardianship_collateral_estoppel",
       "relation": "active_verified"
     }

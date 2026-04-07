@@ -1,0 +1,575 @@
+{
+  "generated_at": "2026-04-07",
+  "modes": {
+    "strict": {
+      "counts": {
+        "active": 30,
+        "unresolved": 6,
+        "inactive": 3
+      },
+      "rules_needing_intake": [
+        {
+          "classification": "unresolved",
+          "rule_id": "r1_guardian_permission_if_prior_appointment",
+          "track": "hypothesis",
+          "description": "If prior appointment exists, Benjamin is permitted to act within valid guardian scope for Jane.",
+          "authority_refs": [],
+          "activation_date_estimate": null,
+          "antecedent_intake": [
+            {
+              "fact_id": "f_client_prior_appointment",
+              "predicate": "PriorAppointmentExists",
+              "current_value": true,
+              "current_status": "alleged",
+              "source": "client_assertion",
+              "dates": [],
+              "needs_action": true,
+              "closure_action": "Obtain certified guardianship appointment order/docket showing appointment identity and effective date."
+            }
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "rule_id": "r2_noninterference_prohibition_for_benjamin",
+          "track": "hypothesis",
+          "description": "If prior appointment exists and interference is alleged, Benjamin is forbidden from interference.",
+          "authority_refs": [],
+          "activation_date_estimate": null,
+          "antecedent_intake": [
+            {
+              "fact_id": "f_client_prior_appointment",
+              "predicate": "PriorAppointmentExists",
+              "current_value": true,
+              "current_status": "alleged",
+              "source": "client_assertion",
+              "dates": [],
+              "needs_action": true,
+              "closure_action": "Obtain certified guardianship appointment order/docket showing appointment identity and effective date."
+            },
+            {
+              "fact_id": "f_client_benjamin_housing_interference",
+              "predicate": "Interference",
+              "current_value": true,
+              "current_status": "alleged",
+              "source": "client_assertion",
+              "dates": [],
+              "needs_action": true,
+              "closure_action": "Convert allegation to verified with certified records, transcripts, or authenticated communications."
+            }
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "rule_id": "r3_benjamin_obligation_comply_or_seek_relief",
+          "track": "hypothesis",
+          "description": "If prior appointment is in force and Benjamin disregarded order, Benjamin was obligated to comply or seek relief.",
+          "authority_refs": [],
+          "activation_date_estimate": null,
+          "antecedent_intake": [
+            {
+              "fact_id": "f_client_prior_appointment",
+              "predicate": "PriorAppointmentExists",
+              "current_value": true,
+              "current_status": "alleged",
+              "source": "client_assertion",
+              "dates": [],
+              "needs_action": true,
+              "closure_action": "Obtain certified guardianship appointment order/docket showing appointment identity and effective date."
+            },
+            {
+              "fact_id": "f_client_benjamin_order_disregard",
+              "predicate": "DisregardedOrder",
+              "current_value": true,
+              "current_status": "alleged",
+              "source": "client_assertion",
+              "dates": [],
+              "needs_action": true,
+              "closure_action": "Convert allegation to verified with certified records, transcripts, or authenticated communications."
+            }
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "rule_id": "r5_solomon_obligated_appear_and_answer",
+          "track": "hypothesis",
+          "description": "If no further service was required because Solomon appeared, later failure to appear supports an obligation to appear and answer.",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
+          "activation_date_estimate": "2026-03-10",
+          "antecedent_intake": [
+            {
+              "fact_id": "f_restraining_order_no_further_service_needed",
+              "predicate": "NoFurtherServiceNeeded",
+              "current_value": true,
+              "current_status": "verified",
+              "source": "sam_barber_restraining_order_ocr.txt",
+              "dates": [
+                "2025-11-20"
+              ],
+              "needs_action": false,
+              "closure_action": "No immediate action required for this antecedent."
+            },
+            {
+              "fact_id": "f_client_solomon_failed_appearance",
+              "predicate": "FailedToAppear",
+              "current_value": true,
+              "current_status": "alleged",
+              "source": "client_assertion",
+              "dates": [
+                "2026-03-10"
+              ],
+              "needs_action": true,
+              "closure_action": "Collect hearing register, appearance minute entry, and proof of service/order-to-appear documentation."
+            }
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "rule_id": "r7_solomon_forbidden_refile_precluded_issue",
+          "track": "hypothesis",
+          "description": "If issue preclusion applies, Solomon is forbidden from relitigating the precluded issue.",
+          "authority_refs": [],
+          "activation_date_estimate": "2026-03-31",
+          "antecedent_intake": [
+            {
+              "fact_id": "f_collateral_estoppel_candidate",
+              "predicate": "PotentialIssuePreclusion",
+              "current_value": true,
+              "current_status": "theory",
+              "source": "motion_to_dismiss_for_collateral_estoppel.md",
+              "dates": [],
+              "needs_action": true,
+              "closure_action": "Promote theory to verified only after documentary proof is collected and reviewed for actor/date consistency."
+            },
+            {
+              "fact_id": "f_client_solomon_barred_refile",
+              "predicate": "RefiledBarredIssue",
+              "current_value": true,
+              "current_status": "alleged",
+              "source": "client_assertion",
+              "dates": [
+                "2026-03-31"
+              ],
+              "needs_action": true,
+              "closure_action": "Collect the newer filing plus certified prior final judgment/order and issue-identity comparison chart."
+            }
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "rule_id": "r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
+          "track": "filing",
+          "description": "If compel-appearance authority is available and the claimed nonappearance predicate is later proved, the case posture may seek compelled appearance.",
+          "authority_refs": [
+            "auth:ors_33_075"
+          ],
+          "activation_date_estimate": "2026-04-07",
+          "antecedent_intake": [
+            {
+              "fact_id": "f_authority_ors_33_075_compel_appearance",
+              "predicate": "AuthorityAvailable",
+              "current_value": true,
+              "current_status": "verified",
+              "source": "oregon_authority_grounding_memo_2026-04-07.md",
+              "dates": [
+                "2026-04-07"
+              ],
+              "needs_action": false,
+              "closure_action": "No immediate action required for this antecedent."
+            },
+            {
+              "fact_id": "f_client_solomon_failed_appearance",
+              "predicate": "FailedToAppear",
+              "current_value": true,
+              "current_status": "alleged",
+              "source": "client_assertion",
+              "dates": [
+                "2026-03-10"
+              ],
+              "needs_action": true,
+              "closure_action": "Collect hearing register, appearance minute entry, and proof of service/order-to-appear documentation."
+            }
+          ]
+        },
+        {
+          "classification": "inactive",
+          "rule_id": "r17_responding_custodian_obligated_execute_or_query_protocol_upon_service",
+          "track": "workflow",
+          "description": "If any subpoena service is completed and OR-joined protocol is defined, responding custodians are obligated in this model to execute the protocol and produce a search execution report.",
+          "authority_refs": [
+            "auth:orcp_55"
+          ],
+          "activation_date_estimate": "2026-04-07",
+          "antecedent_intake": [
+            {
+              "fact_id": "f_subpoena_service_completed_any",
+              "predicate": "SubpoenaServiceCompletedAny",
+              "current_value": false,
+              "current_status": "verified",
+              "source": "28_active_service_log_2026-04-07.csv",
+              "dates": [
+                "2026-04-07"
+              ],
+              "needs_action": true,
+              "closure_action": "Update active service log statuses/dates to reflect executed service or response milestones, then regenerate artifacts."
+            },
+            {
+              "fact_id": "f_or_joined_search_protocol_defined",
+              "predicate": "OrJoinedSearchProtocolDefined",
+              "current_value": false,
+              "current_status": "verified",
+              "source": "11B_attachment_a2_definitions_and_instructions_final.md",
+              "dates": [
+                "2026-04-07"
+              ],
+              "needs_action": true,
+              "closure_action": "Provide records that make this antecedent true, or revise the dependent rule if the predicate should remain false."
+            }
+          ]
+        },
+        {
+          "classification": "inactive",
+          "rule_id": "r18_benjamin_permitted_issue_deficiency_notice_after_incomplete_subpoena_response",
+          "track": "workflow",
+          "description": "If an incomplete subpoena response is present and workflow components are staged, Benjamin is permitted in this model to issue a deficiency notice and cure deadline.",
+          "authority_refs": [
+            "auth:orcp_46",
+            "auth:orcp_55"
+          ],
+          "activation_date_estimate": "2026-04-07",
+          "antecedent_intake": [
+            {
+              "fact_id": "f_subpoena_response_incomplete_any",
+              "predicate": "SubpoenaResponseIncompleteAny",
+              "current_value": false,
+              "current_status": "verified",
+              "source": "28_active_service_log_2026-04-07.csv",
+              "dates": [
+                "2026-04-07"
+              ],
+              "needs_action": true,
+              "closure_action": "Update active service log statuses/dates to reflect executed service or response milestones, then regenerate artifacts."
+            },
+            {
+              "fact_id": "f_subpoena_workflow_components_staged",
+              "predicate": "SubpoenaWorkflowComponentsStaged",
+              "current_value": true,
+              "current_status": "verified",
+              "source": "final_filing_set",
+              "dates": [
+                "2026-04-07"
+              ],
+              "needs_action": false,
+              "closure_action": "No immediate action required for this antecedent."
+            }
+          ]
+        },
+        {
+          "classification": "inactive",
+          "rule_id": "r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage",
+          "track": "workflow",
+          "description": "If deficiency notices are in play and compel templates are staged, Benjamin is permitted in this model to move to compel and seek sanctions for noncompliance.",
+          "authority_refs": [
+            "auth:orcp_46",
+            "auth:orcp_55"
+          ],
+          "activation_date_estimate": "2026-04-07",
+          "antecedent_intake": [
+            {
+              "fact_id": "f_deficiency_notice_sent_any",
+              "predicate": "DeficiencyNoticeSentAny",
+              "current_value": false,
+              "current_status": "verified",
+              "source": "28_active_service_log_2026-04-07.csv",
+              "dates": [
+                "2026-04-07"
+              ],
+              "needs_action": true,
+              "closure_action": "Provide records that make this antecedent true, or revise the dependent rule if the predicate should remain false."
+            },
+            {
+              "fact_id": "f_subpoena_workflow_components_staged",
+              "predicate": "SubpoenaWorkflowComponentsStaged",
+              "current_value": true,
+              "current_status": "verified",
+              "source": "final_filing_set",
+              "dates": [
+                "2026-04-07"
+              ],
+              "needs_action": false,
+              "closure_action": "No immediate action required for this antecedent."
+            }
+          ]
+        }
+      ]
+    },
+    "inclusive": {
+      "counts": {
+        "active": 31,
+        "unresolved": 5,
+        "inactive": 3
+      },
+      "rules_needing_intake": [
+        {
+          "classification": "unresolved",
+          "rule_id": "r1_guardian_permission_if_prior_appointment",
+          "track": "hypothesis",
+          "description": "If prior appointment exists, Benjamin is permitted to act within valid guardian scope for Jane.",
+          "authority_refs": [],
+          "activation_date_estimate": null,
+          "antecedent_intake": [
+            {
+              "fact_id": "f_client_prior_appointment",
+              "predicate": "PriorAppointmentExists",
+              "current_value": true,
+              "current_status": "alleged",
+              "source": "client_assertion",
+              "dates": [],
+              "needs_action": true,
+              "closure_action": "Obtain certified guardianship appointment order/docket showing appointment identity and effective date."
+            }
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "rule_id": "r2_noninterference_prohibition_for_benjamin",
+          "track": "hypothesis",
+          "description": "If prior appointment exists and interference is alleged, Benjamin is forbidden from interference.",
+          "authority_refs": [],
+          "activation_date_estimate": null,
+          "antecedent_intake": [
+            {
+              "fact_id": "f_client_prior_appointment",
+              "predicate": "PriorAppointmentExists",
+              "current_value": true,
+              "current_status": "alleged",
+              "source": "client_assertion",
+              "dates": [],
+              "needs_action": true,
+              "closure_action": "Obtain certified guardianship appointment order/docket showing appointment identity and effective date."
+            },
+            {
+              "fact_id": "f_client_benjamin_housing_interference",
+              "predicate": "Interference",
+              "current_value": true,
+              "current_status": "alleged",
+              "source": "client_assertion",
+              "dates": [],
+              "needs_action": true,
+              "closure_action": "Convert allegation to verified with certified records, transcripts, or authenticated communications."
+            }
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "rule_id": "r3_benjamin_obligation_comply_or_seek_relief",
+          "track": "hypothesis",
+          "description": "If prior appointment is in force and Benjamin disregarded order, Benjamin was obligated to comply or seek relief.",
+          "authority_refs": [],
+          "activation_date_estimate": null,
+          "antecedent_intake": [
+            {
+              "fact_id": "f_client_prior_appointment",
+              "predicate": "PriorAppointmentExists",
+              "current_value": true,
+              "current_status": "alleged",
+              "source": "client_assertion",
+              "dates": [],
+              "needs_action": true,
+              "closure_action": "Obtain certified guardianship appointment order/docket showing appointment identity and effective date."
+            },
+            {
+              "fact_id": "f_client_benjamin_order_disregard",
+              "predicate": "DisregardedOrder",
+              "current_value": true,
+              "current_status": "alleged",
+              "source": "client_assertion",
+              "dates": [],
+              "needs_action": true,
+              "closure_action": "Convert allegation to verified with certified records, transcripts, or authenticated communications."
+            }
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "rule_id": "r5_solomon_obligated_appear_and_answer",
+          "track": "hypothesis",
+          "description": "If no further service was required because Solomon appeared, later failure to appear supports an obligation to appear and answer.",
+          "authority_refs": [
+            "order:eppdapa_restraining_order"
+          ],
+          "activation_date_estimate": "2026-03-10",
+          "antecedent_intake": [
+            {
+              "fact_id": "f_restraining_order_no_further_service_needed",
+              "predicate": "NoFurtherServiceNeeded",
+              "current_value": true,
+              "current_status": "verified",
+              "source": "sam_barber_restraining_order_ocr.txt",
+              "dates": [
+                "2025-11-20"
+              ],
+              "needs_action": false,
+              "closure_action": "No immediate action required for this antecedent."
+            },
+            {
+              "fact_id": "f_client_solomon_failed_appearance",
+              "predicate": "FailedToAppear",
+              "current_value": true,
+              "current_status": "alleged",
+              "source": "client_assertion",
+              "dates": [
+                "2026-03-10"
+              ],
+              "needs_action": true,
+              "closure_action": "Collect hearing register, appearance minute entry, and proof of service/order-to-appear documentation."
+            }
+          ]
+        },
+        {
+          "classification": "unresolved",
+          "rule_id": "r7_solomon_forbidden_refile_precluded_issue",
+          "track": "hypothesis",
+          "description": "If issue preclusion applies, Solomon is forbidden from relitigating the precluded issue.",
+          "authority_refs": [],
+          "activation_date_estimate": "2026-03-31",
+          "antecedent_intake": [
+            {
+              "fact_id": "f_collateral_estoppel_candidate",
+              "predicate": "PotentialIssuePreclusion",
+              "current_value": true,
+              "current_status": "theory",
+              "source": "motion_to_dismiss_for_collateral_estoppel.md",
+              "dates": [],
+              "needs_action": true,
+              "closure_action": "Promote theory to verified only after documentary proof is collected and reviewed for actor/date consistency."
+            },
+            {
+              "fact_id": "f_client_solomon_barred_refile",
+              "predicate": "RefiledBarredIssue",
+              "current_value": true,
+              "current_status": "alleged",
+              "source": "client_assertion",
+              "dates": [
+                "2026-03-31"
+              ],
+              "needs_action": true,
+              "closure_action": "Collect the newer filing plus certified prior final judgment/order and issue-identity comparison chart."
+            }
+          ]
+        },
+        {
+          "classification": "inactive",
+          "rule_id": "r17_responding_custodian_obligated_execute_or_query_protocol_upon_service",
+          "track": "workflow",
+          "description": "If any subpoena service is completed and OR-joined protocol is defined, responding custodians are obligated in this model to execute the protocol and produce a search execution report.",
+          "authority_refs": [
+            "auth:orcp_55"
+          ],
+          "activation_date_estimate": "2026-04-07",
+          "antecedent_intake": [
+            {
+              "fact_id": "f_subpoena_service_completed_any",
+              "predicate": "SubpoenaServiceCompletedAny",
+              "current_value": false,
+              "current_status": "verified",
+              "source": "28_active_service_log_2026-04-07.csv",
+              "dates": [
+                "2026-04-07"
+              ],
+              "needs_action": true,
+              "closure_action": "Update active service log statuses/dates to reflect executed service or response milestones, then regenerate artifacts."
+            },
+            {
+              "fact_id": "f_or_joined_search_protocol_defined",
+              "predicate": "OrJoinedSearchProtocolDefined",
+              "current_value": false,
+              "current_status": "verified",
+              "source": "11B_attachment_a2_definitions_and_instructions_final.md",
+              "dates": [
+                "2026-04-07"
+              ],
+              "needs_action": true,
+              "closure_action": "Provide records that make this antecedent true, or revise the dependent rule if the predicate should remain false."
+            }
+          ]
+        },
+        {
+          "classification": "inactive",
+          "rule_id": "r18_benjamin_permitted_issue_deficiency_notice_after_incomplete_subpoena_response",
+          "track": "workflow",
+          "description": "If an incomplete subpoena response is present and workflow components are staged, Benjamin is permitted in this model to issue a deficiency notice and cure deadline.",
+          "authority_refs": [
+            "auth:orcp_46",
+            "auth:orcp_55"
+          ],
+          "activation_date_estimate": "2026-04-07",
+          "antecedent_intake": [
+            {
+              "fact_id": "f_subpoena_response_incomplete_any",
+              "predicate": "SubpoenaResponseIncompleteAny",
+              "current_value": false,
+              "current_status": "verified",
+              "source": "28_active_service_log_2026-04-07.csv",
+              "dates": [
+                "2026-04-07"
+              ],
+              "needs_action": true,
+              "closure_action": "Update active service log statuses/dates to reflect executed service or response milestones, then regenerate artifacts."
+            },
+            {
+              "fact_id": "f_subpoena_workflow_components_staged",
+              "predicate": "SubpoenaWorkflowComponentsStaged",
+              "current_value": true,
+              "current_status": "verified",
+              "source": "final_filing_set",
+              "dates": [
+                "2026-04-07"
+              ],
+              "needs_action": false,
+              "closure_action": "No immediate action required for this antecedent."
+            }
+          ]
+        },
+        {
+          "classification": "inactive",
+          "rule_id": "r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage",
+          "track": "workflow",
+          "description": "If deficiency notices are in play and compel templates are staged, Benjamin is permitted in this model to move to compel and seek sanctions for noncompliance.",
+          "authority_refs": [
+            "auth:orcp_46",
+            "auth:orcp_55"
+          ],
+          "activation_date_estimate": "2026-04-07",
+          "antecedent_intake": [
+            {
+              "fact_id": "f_deficiency_notice_sent_any",
+              "predicate": "DeficiencyNoticeSentAny",
+              "current_value": false,
+              "current_status": "verified",
+              "source": "28_active_service_log_2026-04-07.csv",
+              "dates": [
+                "2026-04-07"
+              ],
+              "needs_action": true,
+              "closure_action": "Provide records that make this antecedent true, or revise the dependent rule if the predicate should remain false."
+            },
+            {
+              "fact_id": "f_subpoena_workflow_components_staged",
+              "predicate": "SubpoenaWorkflowComponentsStaged",
+              "current_value": true,
+              "current_status": "verified",
+              "source": "final_filing_set",
+              "dates": [
+                "2026-04-07"
+              ],
+              "needs_action": false,
+              "closure_action": "No immediate action required for this antecedent."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

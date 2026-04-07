@@ -18,43 +18,60 @@ Movant moves to dismiss all or part of the current claim set to the extent issue
 2. In the alternative, strike or limit barred allegations and set a focused evidentiary hearing on any truly unresolved issues.
 3. Award further relief the Court deems just and proper.
 
-### II. Governing framework (to be finalized with Oregon authority)
+### II. Governing framework
 
-4. Collateral estoppel applies where an identical issue was actually litigated, essential to a final decision, and asserted against a party or one in privity after a full and fair opportunity to be heard.
-5. The Court may dismiss or limit claims that attempt to relitigate already-adjudicated issues.
+4. Oregon issue preclusion requires, at minimum, an identical issue, actual litigation and determination of that issue, a full and fair opportunity to be heard, party or privity alignment, and a prior proceeding of a type given preclusive effect.
+5. Oregon issue preclusion does not apply merely because issues are similar; the issues must be identical.
+6. Oregon issue preclusion also does not apply merely because different phases or arguments arise within the same lawsuit; the doctrine requires a prior separate proceeding.
+7. The current doctrine source set is now grounded in Oregon authority, including:
+   a. `Nelson v. Emerald People's Utility Dist., 318 Or 99, 104-06, 862 P2d 1293 (1993)`;
+   b. `Rawls v. Evans, 234 Or App 316, 321, 227 P3d 1200 (2010)`;
+   c. `Hayes Oyster Co. v. Dulcich, 199 Or App 43, 50, 54, 110 P3d 615, rev den, 339 Or 544 (2005)`; and
+   d. `Westwood Construction Co. v. Hallmark Inns, 182 Or App 624, 631-32, 637 n 10, 50 P3d 238, rev den, 335 Or 42 (2002)`.
 
-### III. Application to this matter (fact placeholders)
+### III. Application to this matter (proof-gated)
 
-6. Prior proceeding(s): `[insert case caption/number and court]`.
-7. Issue(s) previously decided: `[insert exact issue statements]`.
-8. Decision/finality proof: `[insert order/judgment date and exhibit cite]`.
-9. Party/privity alignment: `[insert alignment details]`.
-10. Full and fair opportunity: `[insert hearing/notice/appearance details]`.
-11. Current pleading overlap: `[insert comparison showing issue identity]`.
+8. Prior proceeding(s): `[insert case caption/number and court]`.
+9. Issue(s) previously decided: `[insert exact issue statements]`.
+10. Decision/finality proof: `[insert order/judgment date and exhibit cite]`.
+11. Party/privity alignment: `[insert alignment details]`.
+12. Full and fair opportunity: `[insert hearing/notice/appearance details]`.
+13. Current pleading overlap: `[insert comparison showing issue identity]`.
+14. Because the doctrine is now grounded but the source proceeding record is not yet complete, Movant asks the Court to use one of two paths:
+   a. dismiss or limit issues now to the extent the Court finds the prior separate proceeding and identical-issue record already established; or
+   b. set a focused evidentiary or record-completion path limited to preclusion elements before allowing relitigation of the same authority issue.
 
 ### IV. Current record support and proof gate
 
-12. Staged evidence materials indicate existence of prior order-related proceedings and notice language, but certified docket and complete order packet must be attached for final adjudication on preclusion.
-13. Movant requests dismissal now to the extent the Court finds issue identity and finality established, and requests leave to supplement with certified records if needed.
+15. The current record now supports the legal doctrine for issue preclusion, but not yet every fact predicate needed to apply it in this case.
+16. The strongest current missing fact remains the certified prior separate proceeding record sufficient to show:
+   a. the exact prior order or judgment;
+   b. the exact issue actually determined;
+   c. finality;
+   d. the party or privity alignment; and
+   e. the full-and-fair-opportunity component.
+17. Movant therefore requests dismissal now only to the extent those elements are already established, and otherwise requests narrowing, supplementation, or a focused threshold hearing rather than unrestricted relitigation.
 
 ### V. Computed strict-mode support and unresolved element
 
-14. The strict-mode computation as of April 7, 2026 preserves a preclusion pathway but does not treat the collateral-estoppel dismissal conclusion as fully activated without certified proof of prior final adjudication on the identical issue.
-15. The same strict-mode run does identify active order-status and notice-related rule findings that support immediate threshold management of relitigation risk while final preclusion exhibits are assembled.
-16. In parallel, the model expressly cautions that some collateral housing-interference content should remain inference-only unless direct proof is supplied (`r6c_solomon_interference_not_proved_by_named_hacc_notice_gap`), which further supports targeted issue narrowing rather than free-form relitigation.
+18. The current reasoning system treats the issue-preclusion doctrine as authority-grounded but still leaves the merits rule unresolved because the prior separate proceeding record remains incomplete.
+19. The same strict-mode run does identify active order-status, notice, and process-management rules that support immediate threshold control of relitigation risk while final preclusion exhibits are assembled.
+20. In parallel, the model expressly cautions that some collateral housing-interference content should remain inference-only unless direct proof is supplied, which further supports targeted narrowing rather than free-form relitigation.
 
 ### VI. Reservation and supplementation
 
-17. Movant reserves the right to supplement with certified docket printouts, signed orders, and transcript excerpts.
+21. Movant reserves the right to supplement with certified docket printouts, signed orders, transcript excerpts, and any source record necessary to map the issue-preclusion elements to the actual prior proceeding.
 
 ### VII. Exhibit table (working draft)
 
-18. Proposed exhibits for this motion are:
+22. Proposed exhibits for this motion are:
 1. Exhibit A: [solomon_motion_for_guardianship_ocr.txt](/home/barberb/HACC/Collateral Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt) (petition statements and date anchors including March 31, 2026 and April 2, 2026 notice line).
-2. Exhibit B: [deontic_reasoning_report.json](/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/deontic_reasoning_report.json) (strict/inclusive activation status showing preclusion path remains proof-gated pending certified records).
-3. Exhibit C: [motion_support_map.json](/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/motion_support_map.json) (source -> fact -> rule -> motion linkage).
-4. Exhibit D: Certified prior judgment/order and certified register of actions sufficient to establish finality, identical issue, and party/privity alignment (to be added).
-5. Exhibit E: Hearing/appearance record demonstrating full and fair opportunity in prior proceeding (to be added).
+2. Exhibit B: [06_oregon_authority_table_placeholders.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/06_oregon_authority_table_placeholders.md) (working Oregon authority table with issue-preclusion doctrine authorities).
+3. Exhibit C: [oregon_authority_grounding_memo_2026-04-07.md](/home/barberb/HACC/Collateral Estoppel/research/oregon_authority_grounding_memo_2026-04-07.md) (authority grounding memo for issue preclusion, contempt, sanctions, subpoena, probate, and service rules).
+4. Exhibit D: [deontic_reasoning_report.json](/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/deontic_reasoning_report.json) (strict/inclusive activation status showing issue-preclusion doctrine grounded but merits path still proof-gated).
+5. Exhibit E: [motion_support_map.json](/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/motion_support_map.json) (source -> fact -> rule -> motion linkage).
+6. Exhibit F: Certified prior judgment/order and certified register of actions sufficient to establish finality, identical issue, and party/privity alignment (to be added).
+7. Exhibit G: Hearing/appearance record demonstrating full and fair opportunity in prior proceeding (to be added).
 
 DATED: ____________
 

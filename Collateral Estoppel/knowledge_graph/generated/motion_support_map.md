@@ -3,8 +3,10 @@
 Generated: 2026-04-07
 
 ## Mode: strict
-- Rules mapped: 13
+- Rules mapped: 30
 - Rule: r4_solomon_forbidden_abuse_contact_property_control
+- Track: filing
+- Authority refs: ['order:eppdapa_restraining_order']
 - Conclusion: F(person:solomon, abuse_contact_or_control_property, person:jane_cortez)
 - Activation date estimate: 2025-11-20
 - Antecedent evidence:
@@ -17,6 +19,8 @@ Generated: 2026-04-07
 - /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
 
 - Rule: r4b_solomon_forbidden_enter_residence
+- Track: filing
+- Authority refs: ['order:eppdapa_restraining_order']
 - Conclusion: F(person:solomon, enter_or_remain_at_petitioner_residence, location:10043_se_32nd_ave)
 - Activation date estimate: 2025-11-20
 - Antecedent evidence:
@@ -27,6 +31,8 @@ Generated: 2026-04-07
 - /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
 
 - Rule: r5b_solomon_obligated_seek_hearing_or_comply
+- Track: filing
+- Authority refs: ['order:eppdapa_restraining_order']
 - Conclusion: O(person:solomon, seek_hearing_or_comply_with_existing_order, order:eppdapa_restraining_order)
 - Activation date estimate: 2026-03-10
 - Antecedent evidence:
@@ -37,6 +43,8 @@ Generated: 2026-04-07
 - /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
 
 - Rule: r5c_solomon_forbidden_self_help_noncooperation
+- Track: filing
+- Authority refs: ['order:eppdapa_restraining_order']
 - Conclusion: F(person:solomon, adopt_self_help_noncooperation_posture, order:eppdapa_restraining_order)
 - Activation date estimate: 2026-03-10
 - Antecedent evidence:
@@ -46,15 +54,32 @@ Generated: 2026-04-07
 - Recommended motions:
 - /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
 
+- Rule: r6_hacc_obligated_document_authority_chain_for_lease_change
+- Track: filing
+- Authority refs: ['auth:orcp_17_c']
+- Conclusion: O(org:hacc, identify_actor_document_and_authority_chain_for_lease_change, household:jane_cortez_household)
+- Activation date estimate: 2026-01-12
+- Antecedent evidence:
+- f_hacc_removed_benjamin_effective_2026_01_01 [verified] HouseholdMemberRemovedEffective dates=['2026-01-01', '2026-01-12'] source=0014-Re-Allegations-of-Fraud---JC-Household/message.eml confidence=None(None) kind=None
+- f_hacc_internal_review_claimed [verified] HaccInternalReviewClaimed dates=['2026-01-12'] source=0014-Re-Allegations-of-Fraud---JC-Household/message.eml confidence=None(None) kind=None
+- f_hacc_court_documentation_basis_claimed [verified] HaccCourtDocumentationBasisClaimed dates=['2026-01-12'] source=0014-Re-Allegations-of-Fraud---JC-Household/message.eml confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+
 - Rule: r6b_hacc_obligated_document_lease_basis
+- Track: filing
+- Authority refs: ['auth:orcp_17_c']
 - Conclusion: O(org:hacc, document_basis_for_household_composition_or_lease_adjustment, household:jane_cortez_household)
-- Activation date estimate: 2026-01-01
+- Activation date estimate: 2026-01-12
 - Antecedent evidence:
 - f_hacc_lease_adjustment_effective_2026_01_01 [verified] LeaseAdjustmentEffective dates=['2026-01-01'] source=HACC vawa violation.pdf confidence=None(None) kind=None
+- f_hacc_removed_benjamin_effective_2026_01_01 [verified] HouseholdMemberRemovedEffective dates=['2026-01-01', '2026-01-12'] source=0014-Re-Allegations-of-Fraud---JC-Household/message.eml confidence=None(None) kind=None
 - Recommended motions:
 - /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
 
 - Rule: r6c_solomon_interference_not_proved_by_named_hacc_notice_gap
+- Track: filing
+- Authority refs: []
 - Conclusion: P(case:guardianship_collateral_estoppel, treat_solomon_hacc_interference_as_inference_not_direct_proof, person:solomon)
 - Activation date estimate: 2026-04-07
 - Antecedent evidence:
@@ -64,7 +89,32 @@ Generated: 2026-04-07
 - /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
 - /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
 
+- Rule: r6d_case_obligated_treat_prior_appointment_as_hypothesis_only
+- Track: filing
+- Authority refs: []
+- Conclusion: O(case:guardianship_collateral_estoppel, treat_prior_appointment_theory_as_hypothesis_until_source_order_found, issue:prior_appointment_for_jane_cortez)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_prior_appointment_source_order_not_found [verified] SourceOrderNotFoundInRepository dates=['2026-04-07'] source=deontic_logic_gap_review_2026-04-07.md confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
+- Rule: r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain
+- Track: filing
+- Authority refs: []
+- Conclusion: P(case:guardianship_collateral_estoppel, seek_compelled_production_of_hacc_actor_document_authority_chain, issue:lease_change_actor_identification)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_hacc_actor_identification_record_not_found_locally [verified] LocalSearchNegativeForActorIdentificationRecord dates=['2026-04-07'] source=missing_exhibit_search_status_2026-04-07.md confidence=None(None) kind=None
+- f_hacc_exhibit_r_requires_compelled_production [verified] CompelledProductionRequired dates=['2026-04-07'] source=subpoena_target_memo_hacc_lease_authority_record.md confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
 - Rule: r8_solomon_notice_ack_triggers_court_relief_path
+- Track: filing
+- Authority refs: ['order:eppdapa_restraining_order']
 - Conclusion: O(person:solomon, seek_clarification_or_relief_through_court, order:eppdapa_restraining_order)
 - Activation date estimate: 2025-11-20
 - Antecedent evidence:
@@ -74,6 +124,8 @@ Generated: 2026-04-07
 - /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
 
 - Rule: r9_solomon_wait_for_service_conflicts_with_no_further_service
+- Track: filing
+- Authority refs: ['order:eppdapa_restraining_order']
 - Conclusion: F(person:solomon, condition_compliance_on_additional_service, order:eppdapa_restraining_order)
 - Activation date estimate: 2026-03-10
 - Antecedent evidence:
@@ -83,6 +135,8 @@ Generated: 2026-04-07
 - /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
 
 - Rule: r10_solomon_noncooperation_statement_conflicts_with_effective_order
+- Track: filing
+- Authority refs: ['order:eppdapa_restraining_order']
 - Conclusion: F(person:solomon, intentional_noncooperation_with_effective_order, order:eppdapa_restraining_order)
 - Activation date estimate: 2026-03-10
 - Antecedent evidence:
@@ -92,6 +146,8 @@ Generated: 2026-04-07
 - /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
 
 - Rule: r11_solomon_already_have_order_statement_supports_notice
+- Track: filing
+- Authority refs: ['order:eppdapa_restraining_order']
 - Conclusion: O(person:solomon, recognize_existing_order_status, order:eppdapa_restraining_order)
 - Activation date estimate: 2025-11-20
 - Antecedent evidence:
@@ -101,6 +157,8 @@ Generated: 2026-04-07
 - /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
 
 - Rule: r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order
+- Track: filing
+- Authority refs: ['order:eppdapa_restraining_order']
 - Conclusion: F(person:solomon, assert_order_ineffective_without_court_relief, order:eppdapa_restraining_order)
 - Activation date estimate: 2026-03-10
 - Antecedent evidence:
@@ -110,6 +168,8 @@ Generated: 2026-04-07
 - /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
 
 - Rule: r13_solomon_judge_overturn_statement_triggers_motion_path
+- Track: filing
+- Authority refs: ['order:eppdapa_restraining_order']
 - Conclusion: O(person:solomon, file_motion_to_modify_or_vacate_before_noncompliance, order:eppdapa_restraining_order)
 - Activation date estimate: 2026-03-10
 - Antecedent evidence:
@@ -119,6 +179,8 @@ Generated: 2026-04-07
 - /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
 
 - Rule: r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling
+- Track: filing
+- Authority refs: []
 - Conclusion: O(org:hacc, avoid_third_party_housing_contact_with_restrained_person_and_document_response, person:jane_cortez)
 - Activation date estimate: 2026-03-26
 - Antecedent evidence:
@@ -127,36 +189,180 @@ Generated: 2026-04-07
 - Recommended motions:
 - /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
 
+- Rule: r15_benjamin_permitted_serve_subpoena_packets
+- Track: workflow
+- Authority refs: ['auth:orcp_55']
+- Conclusion: P(person:benjamin_barber, serve_staged_subpoena_packets, case:26PR00641)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_subpoena_workflow_components_staged [verified] SubpoenaWorkflowComponentsStaged dates=['2026-04-07'] source=final_filing_set confidence=None(None) kind=None
+- f_subpoena_recipients_ready_to_serve [verified] SubpoenaRecipientsReadyToServe dates=['2026-04-07'] source=28_active_service_log_2026-04-07.csv confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+
+- Rule: r16_benjamin_obligated_track_service_and_deadlines
+- Track: workflow
+- Authority refs: ['auth:orcp_55']
+- Conclusion: O(person:benjamin_barber, maintain_service_and_deadline_tracking, case:26PR00641)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_active_service_log_initialized [verified] ActiveServiceLogInitialized dates=['2026-04-07'] source=28_active_service_log_2026-04-07.csv confidence=None(None) kind=None
+- f_subpoena_workflow_components_staged [verified] SubpoenaWorkflowComponentsStaged dates=['2026-04-07'] source=final_filing_set confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+
+- Rule: r20_case_permitted_treat_enforcement_path_as_pending_pre_service
+- Track: workflow
+- Authority refs: ['auth:orcp_55']
+- Conclusion: P(case:guardianship_collateral_estoppel, treat_subpoena_enforcement_motion_path_as_pending_until_service, case:26PR00641)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_subpoena_pre_service_phase_only [verified] SubpoenaPreServicePhaseOnly dates=['2026-04-07'] source=28_active_service_log_2026-04-07.csv confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
+- Rule: r21_case_obligated_resolve_actor_assignment_conflict
+- Track: filing
+- Authority refs: []
+- Conclusion: O(case:guardianship_collateral_estoppel, resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record, issue:interference_actor_assignment)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_actor_assignment_conflict_benjamin_vs_solomon_interference [verified] ActorAssignmentConflict dates=['2026-04-07'] source=generate_formal_reasoning_artifacts.py confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
+- Rule: r22_case_obligated_finalize_authority_citations_before_filing
+- Track: filing
+- Authority refs: []
+- Conclusion: O(case:guardianship_collateral_estoppel, finalize_governing_authority_citations_before_final_filing, doc:06_oregon_authority_table_placeholders.md)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_authority_table_placeholders_unresolved [verified] AuthorityCitationsUnresolved dates=['2026-04-07'] source=06_oregon_authority_table_placeholders.md confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
+- Rule: r23_case_permitted_initiate_remedial_contempt_path
+- Track: filing
+- Authority refs: ['auth:ors_33_055']
+- Conclusion: P(case:guardianship_collateral_estoppel, initiate_remedial_contempt_or_show_cause_path, person:solomon)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_authority_ors_33_055_remedial_contempt_procedure [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_restraining_order_in_effect [verified] OrderInEffect dates=['2025-11-20'] source=sam_barber_restraining_order_ocr.txt confidence=None(None) kind=None
+- f_solomon_service_position_statement [verified] ServicePositionStatement dates=['2026-03-10'] source=14166-Me-to-solomon-gv-0eb16863d122188b/transcript.txt confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
+- Rule: r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved
+- Track: filing
+- Authority refs: ['auth:ors_33_105']
+- Conclusion: P(case:guardianship_collateral_estoppel, seek_compensatory_or_compliance_oriented_remedial_sanctions_if_contempt_is_proved, issue:prejudice_and_noninterference_relief)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_authority_ors_33_105_remedial_sanctions [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_hacc_removed_benjamin_effective_2026_01_01 [verified] HouseholdMemberRemovedEffective dates=['2026-01-01', '2026-01-12'] source=0014-Re-Allegations-of-Fraud---JC-Household/message.eml confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
+- Rule: r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown
+- Track: filing
+- Authority refs: ['auth:orcp_17_c']
+- Conclusion: P(case:guardianship_collateral_estoppel, seek_orcp_17_sanctions_if_filing_is_shown_improper_or_factually_or_legally_unsupported, issue:sanctions_track)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_authority_orcp_17_improper_purpose_and_support [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_hacc_named_notice_to_solomon_order_not_found [verified] NamedHaccNoticeMessageNotFound dates=['2026-04-07'] source=protective_order_and_hacc_notice_timeline.md confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
+- Rule: r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46
+- Track: workflow
+- Authority refs: ['auth:orcp_55', 'auth:orcp_46']
+- Conclusion: P(case:guardianship_collateral_estoppel, seek_subpoena_enforcement_and_related_expenses_after_nonparty_noncompliance, org:hacc)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_authority_orcp_55_subpoena_obedience [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_authority_orcp_46_discovery_sanctions [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_hacc_exhibit_r_requires_compelled_production [verified] CompelledProductionRequired dates=['2026-04-07'] source=subpoena_target_memo_hacc_lease_authority_record.md confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
+- Rule: r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding
+- Track: filing
+- Authority refs: ['auth:ors_125_050']
+- Conclusion: P(case:26PR00641, apply_orcp_and_oec_subject_to_specific_chapter_125_overrides, proceeding:protective_proceeding)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_authority_ors_125_050_protective_orcp_oec [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_petition_exists [verified] PetitionFiled dates=['2026-03-31'] source=solomon_motion_for_guardianship_ocr.txt confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
+- Rule: r29_case_obligated_preserve_notice_and_objection_window
+- Track: filing
+- Authority refs: ['auth:ors_125_060', 'auth:ors_125_065']
+- Conclusion: O(case:26PR00641, preserve_statutory_notice_and_objection_window_for_protective_petition, person:jane_cortez)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_authority_ors_125_060_notice_recipients [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_authority_ors_125_065_notice_manner_and_timing [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_notice_to_respondent [verified] NoticeIssued dates=['2026-03-31'] source=solomon_motion_for_guardianship_ocr.txt confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
+- Rule: r30_case_obligated_schedule_hearing_on_presented_objection
+- Track: filing
+- Authority refs: ['auth:ors_125_075', 'auth:ors_125_080']
+- Conclusion: O(case:26PR00641, schedule_and_process_hearing_on_guardianship_objection, person:jane_cortez)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_authority_ors_125_075_objections [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_authority_ors_125_080_hearing_and_counsel [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_respondent_objection_form_present [verified] RespondentObjectionFormPresent dates=['2026-04-05'] source=guardianship_timeline.md confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
+- Rule: r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel
+- Track: filing
+- Authority refs: ['auth:ors_125_080']
+- Conclusion: P(case:26PR00641, assert_respondent_right_to_appear_in_person_or_by_counsel, person:jane_cortez)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_authority_ors_125_080_hearing_and_counsel [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_notice_to_respondent [verified] NoticeIssued dates=['2026-03-31'] source=solomon_motion_for_guardianship_ocr.txt confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
+- Rule: r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines
+- Track: workflow
+- Authority refs: ['auth:orcp_9', 'auth:orcp_10', 'auth:ors_125_050']
+- Conclusion: P(case:guardianship_collateral_estoppel, use_orcp9_service_and_orcp10_deadline_computation_for_later_filed_motion_packets, issue:service_and_deadlines)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_authority_orcp_9_service_of_later_filed_papers [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_authority_orcp_10_time_computation [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_petition_exists [verified] PetitionFiled dates=['2026-03-31'] source=solomon_motion_for_guardianship_ocr.txt confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
 ## Mode: inclusive
-- Rules mapped: 18
-- Rule: r1_guardian_permission_if_prior_appointment
-- Conclusion: P(person:benjamin_barber, act_within_valid_guardian_scope, person:jane_cortez)
-- Activation date estimate: None
-- Antecedent evidence:
-- f_client_prior_appointment [alleged] PriorAppointmentExists dates=[] source=client_assertion confidence=None(None) kind=None
-- Recommended motions:
-- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
-
-- Rule: r2_noninterference_prohibition_for_benjamin
-- Conclusion: F(person:benjamin_barber, interfere_with_guardian_or_housing_process, process:hacc_housing_contract)
-- Activation date estimate: None
-- Antecedent evidence:
-- f_client_prior_appointment [alleged] PriorAppointmentExists dates=[] source=client_assertion confidence=None(None) kind=None
-- f_client_benjamin_housing_interference [alleged] Interference dates=[] source=client_assertion confidence=None(None) kind=None
-- Recommended motions:
-- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
-- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
-
-- Rule: r3_benjamin_obligation_comply_or_seek_relief
-- Conclusion: O(person:benjamin_barber, comply_with_order_or_seek_relief, order:prior_guardianship_order)
-- Activation date estimate: None
-- Antecedent evidence:
-- f_client_prior_appointment [alleged] PriorAppointmentExists dates=[] source=client_assertion confidence=None(None) kind=None
-- f_client_benjamin_order_disregard [alleged] DisregardedOrder dates=[] source=client_assertion confidence=None(None) kind=None
-- Recommended motions:
-- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
-
+- Rules mapped: 31
 - Rule: r4_solomon_forbidden_abuse_contact_property_control
+- Track: filing
+- Authority refs: ['order:eppdapa_restraining_order']
 - Conclusion: F(person:solomon, abuse_contact_or_control_property, person:jane_cortez)
 - Activation date estimate: 2025-11-20
 - Antecedent evidence:
@@ -169,6 +375,8 @@ Generated: 2026-04-07
 - /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
 
 - Rule: r4b_solomon_forbidden_enter_residence
+- Track: filing
+- Authority refs: ['order:eppdapa_restraining_order']
 - Conclusion: F(person:solomon, enter_or_remain_at_petitioner_residence, location:10043_se_32nd_ave)
 - Activation date estimate: 2025-11-20
 - Antecedent evidence:
@@ -178,122 +386,344 @@ Generated: 2026-04-07
 - Recommended motions:
 - /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
 
-- Rule: r5_solomon_obligated_appear_and_answer
-- Conclusion: O(person:solomon, appear_and_answer_show_cause, proceeding:related_order_hearing)
+- Rule: r5b_solomon_obligated_seek_hearing_or_comply
+- Track: filing
+- Authority refs: ['order:eppdapa_restraining_order']
+- Conclusion: O(person:solomon, seek_hearing_or_comply_with_existing_order, order:eppdapa_restraining_order)
 - Activation date estimate: 2026-03-10
 - Antecedent evidence:
+- f_restraining_order_granted [verified] OrderGranted dates=['2025-11-20'] source=sam_barber_restraining_order_ocr.txt confidence=None(None) kind=None
+- f_restraining_order_in_effect [verified] OrderInEffect dates=['2025-11-20'] source=sam_barber_restraining_order_ocr.txt confidence=None(None) kind=None
+- f_solomon_service_position_statement [verified] ServicePositionStatement dates=['2026-03-10'] source=14166-Me-to-solomon-gv-0eb16863d122188b/transcript.txt confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+
+- Rule: r5c_solomon_forbidden_self_help_noncooperation
+- Track: filing
+- Authority refs: ['order:eppdapa_restraining_order']
+- Conclusion: F(person:solomon, adopt_self_help_noncooperation_posture, order:eppdapa_restraining_order)
+- Activation date estimate: 2026-03-10
+- Antecedent evidence:
+- f_restraining_order_granted [verified] OrderGranted dates=['2025-11-20'] source=sam_barber_restraining_order_ocr.txt confidence=None(None) kind=None
+- f_restraining_order_in_effect [verified] OrderInEffect dates=['2025-11-20'] source=sam_barber_restraining_order_ocr.txt confidence=None(None) kind=None
+- f_solomon_noncooperation_statement [verified] NoncooperationStatement dates=['2026-03-10'] source=14166-Me-to-solomon-gv-0eb16863d122188b/transcript.txt confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+
+- Rule: r6_hacc_obligated_document_authority_chain_for_lease_change
+- Track: filing
+- Authority refs: ['auth:orcp_17_c']
+- Conclusion: O(org:hacc, identify_actor_document_and_authority_chain_for_lease_change, household:jane_cortez_household)
+- Activation date estimate: 2026-01-12
+- Antecedent evidence:
+- f_hacc_removed_benjamin_effective_2026_01_01 [verified] HouseholdMemberRemovedEffective dates=['2026-01-01', '2026-01-12'] source=0014-Re-Allegations-of-Fraud---JC-Household/message.eml confidence=None(None) kind=None
+- f_hacc_internal_review_claimed [verified] HaccInternalReviewClaimed dates=['2026-01-12'] source=0014-Re-Allegations-of-Fraud---JC-Household/message.eml confidence=None(None) kind=None
+- f_hacc_court_documentation_basis_claimed [verified] HaccCourtDocumentationBasisClaimed dates=['2026-01-12'] source=0014-Re-Allegations-of-Fraud---JC-Household/message.eml confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+
+- Rule: r6b_hacc_obligated_document_lease_basis
+- Track: filing
+- Authority refs: ['auth:orcp_17_c']
+- Conclusion: O(org:hacc, document_basis_for_household_composition_or_lease_adjustment, household:jane_cortez_household)
+- Activation date estimate: 2026-01-12
+- Antecedent evidence:
+- f_hacc_lease_adjustment_effective_2026_01_01 [verified] LeaseAdjustmentEffective dates=['2026-01-01'] source=HACC vawa violation.pdf confidence=None(None) kind=None
+- f_hacc_removed_benjamin_effective_2026_01_01 [verified] HouseholdMemberRemovedEffective dates=['2026-01-01', '2026-01-12'] source=0014-Re-Allegations-of-Fraud---JC-Household/message.eml confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+
+- Rule: r6c_solomon_interference_not_proved_by_named_hacc_notice_gap
+- Track: filing
+- Authority refs: []
+- Conclusion: P(case:guardianship_collateral_estoppel, treat_solomon_hacc_interference_as_inference_not_direct_proof, person:solomon)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_hacc_named_notice_to_solomon_order_not_found [verified] NamedHaccNoticeMessageNotFound dates=['2026-04-07'] source=protective_order_and_hacc_notice_timeline.md confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
+- Rule: r6d_case_obligated_treat_prior_appointment_as_hypothesis_only
+- Track: filing
+- Authority refs: []
+- Conclusion: O(case:guardianship_collateral_estoppel, treat_prior_appointment_theory_as_hypothesis_until_source_order_found, issue:prior_appointment_for_jane_cortez)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_prior_appointment_source_order_not_found [verified] SourceOrderNotFoundInRepository dates=['2026-04-07'] source=deontic_logic_gap_review_2026-04-07.md confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
+- Rule: r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain
+- Track: filing
+- Authority refs: []
+- Conclusion: P(case:guardianship_collateral_estoppel, seek_compelled_production_of_hacc_actor_document_authority_chain, issue:lease_change_actor_identification)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_hacc_actor_identification_record_not_found_locally [verified] LocalSearchNegativeForActorIdentificationRecord dates=['2026-04-07'] source=missing_exhibit_search_status_2026-04-07.md confidence=None(None) kind=None
+- f_hacc_exhibit_r_requires_compelled_production [verified] CompelledProductionRequired dates=['2026-04-07'] source=subpoena_target_memo_hacc_lease_authority_record.md confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
+- Rule: r8_solomon_notice_ack_triggers_court_relief_path
+- Track: filing
+- Authority refs: ['order:eppdapa_restraining_order']
+- Conclusion: O(person:solomon, seek_clarification_or_relief_through_court, order:eppdapa_restraining_order)
+- Activation date estimate: 2025-11-20
+- Antecedent evidence:
+- f_feed_ev_solomon_ack_heard_restraining_order [verified] StatementHeardAboutRestrainingOrder dates=['2025-11-17'] source=/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660669_Mon--17-Nov-2025-20-38-24--0000_New-text-message-from-solomon--503--381-6911.eml confidence=high(0.9) kind=direct_message
+- f_restraining_order_in_effect [verified] OrderInEffect dates=['2025-11-20'] source=sam_barber_restraining_order_ocr.txt confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+
+- Rule: r9_solomon_wait_for_service_conflicts_with_no_further_service
+- Track: filing
+- Authority refs: ['order:eppdapa_restraining_order']
+- Conclusion: F(person:solomon, condition_compliance_on_additional_service, order:eppdapa_restraining_order)
+- Activation date estimate: 2026-03-10
+- Antecedent evidence:
+- f_feed_ev_solomon_wait_for_service_statement [verified] StatementWaitForServiceBeforeCompliance dates=['2026-03-10'] source=/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14166-Me-to-solomon-gv-0eb16863d122188b/transcript.txt confidence=medium_high(0.8) kind=transcript_extract
 - f_restraining_order_no_further_service_needed [verified] NoFurtherServiceNeeded dates=['2025-11-20'] source=sam_barber_restraining_order_ocr.txt confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+
+- Rule: r10_solomon_noncooperation_statement_conflicts_with_effective_order
+- Track: filing
+- Authority refs: ['order:eppdapa_restraining_order']
+- Conclusion: F(person:solomon, intentional_noncooperation_with_effective_order, order:eppdapa_restraining_order)
+- Activation date estimate: 2026-03-10
+- Antecedent evidence:
+- f_feed_ev_solomon_not_incentivized_statement [verified] StatementNotIncentivizedToCooperate dates=['2026-03-10'] source=/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14166-Me-to-solomon-gv-0eb16863d122188b/transcript.txt confidence=medium_high(0.8) kind=transcript_extract
+- f_restraining_order_in_effect [verified] OrderInEffect dates=['2025-11-20'] source=sam_barber_restraining_order_ocr.txt confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+
+- Rule: r11_solomon_already_have_order_statement_supports_notice
+- Track: filing
+- Authority refs: ['order:eppdapa_restraining_order']
+- Conclusion: O(person:solomon, recognize_existing_order_status, order:eppdapa_restraining_order)
+- Activation date estimate: 2025-11-20
+- Antecedent evidence:
+- f_feed_ev_solomon_ack_already_have_order [verified] StatementAlreadyHaveRestrainingOrder dates=['2025-11-17'] source=/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660690_Mon--17-Nov-2025-20-56-22--0000_New-text-message-from-solomon--503--381-6911.eml confidence=high(0.9) kind=direct_message
+- f_restraining_order_in_effect [verified] OrderInEffect dates=['2025-11-20'] source=sam_barber_restraining_order_ocr.txt confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+
+- Rule: r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order
+- Track: filing
+- Authority refs: ['order:eppdapa_restraining_order']
+- Conclusion: F(person:solomon, assert_order_ineffective_without_court_relief, order:eppdapa_restraining_order)
+- Activation date estimate: 2026-03-10
+- Antecedent evidence:
+- f_feed_ev_solomon_order_not_in_effect_statement [verified] StatementOrderNotInEffect dates=['2026-03-10'] source=/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14166-Me-to-solomon-gv-0eb16863d122188b/transcript.txt | /home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743131_Tue--10-Mar-2026-17-45-54--0000_New-text-message-from-solomon--503--381-6911.eml confidence=medium_high(0.8) kind=transcript_extract
+- f_restraining_order_in_effect [verified] OrderInEffect dates=['2025-11-20'] source=sam_barber_restraining_order_ocr.txt confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+
+- Rule: r13_solomon_judge_overturn_statement_triggers_motion_path
+- Track: filing
+- Authority refs: ['order:eppdapa_restraining_order']
+- Conclusion: O(person:solomon, file_motion_to_modify_or_vacate_before_noncompliance, order:eppdapa_restraining_order)
+- Activation date estimate: 2026-03-10
+- Antecedent evidence:
+- f_feed_ev_solomon_judge_overturn_statement [verified] StatementWillHaveJudgeOverturn dates=['2026-03-10'] source=/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14166-Me-to-solomon-gv-0eb16863d122188b/transcript.txt | /home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743129_Tue--10-Mar-2026-17-39-27--0000_New-text-message-from-solomon--503--381-6911.eml confidence=medium_high(0.8) kind=transcript_extract
+- f_restraining_order_in_effect [verified] OrderInEffect dates=['2025-11-20'] source=sam_barber_restraining_order_ocr.txt confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+
+- Rule: r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling
+- Track: filing
+- Authority refs: []
+- Conclusion: O(org:hacc, avoid_third_party_housing_contact_with_restrained_person_and_document_response, person:jane_cortez)
+- Activation date estimate: 2026-03-26
+- Antecedent evidence:
+- f_feed_ev_hacc_notice_brother_calls_after_granted_order [verified] MessageReportedBrotherCallsAfterGrantedOrder dates=['2026-03-26'] source=/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404-narrow/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/message.json confidence=medium(0.7) kind=json_export_extract
+- f_feed_ev_hacc_notice_third_party_contact_with_restrained_person [verified] MessageObjectedThirdPartyContactWithRestrainedPerson dates=['2026-03-26'] source=/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404-narrow/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/message.json confidence=medium(0.7) kind=json_export_extract
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+
+- Rule: r15_benjamin_permitted_serve_subpoena_packets
+- Track: workflow
+- Authority refs: ['auth:orcp_55']
+- Conclusion: P(person:benjamin_barber, serve_staged_subpoena_packets, case:26PR00641)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_subpoena_workflow_components_staged [verified] SubpoenaWorkflowComponentsStaged dates=['2026-04-07'] source=final_filing_set confidence=None(None) kind=None
+- f_subpoena_recipients_ready_to_serve [verified] SubpoenaRecipientsReadyToServe dates=['2026-04-07'] source=28_active_service_log_2026-04-07.csv confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+
+- Rule: r16_benjamin_obligated_track_service_and_deadlines
+- Track: workflow
+- Authority refs: ['auth:orcp_55']
+- Conclusion: O(person:benjamin_barber, maintain_service_and_deadline_tracking, case:26PR00641)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_active_service_log_initialized [verified] ActiveServiceLogInitialized dates=['2026-04-07'] source=28_active_service_log_2026-04-07.csv confidence=None(None) kind=None
+- f_subpoena_workflow_components_staged [verified] SubpoenaWorkflowComponentsStaged dates=['2026-04-07'] source=final_filing_set confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+
+- Rule: r20_case_permitted_treat_enforcement_path_as_pending_pre_service
+- Track: workflow
+- Authority refs: ['auth:orcp_55']
+- Conclusion: P(case:guardianship_collateral_estoppel, treat_subpoena_enforcement_motion_path_as_pending_until_service, case:26PR00641)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_subpoena_pre_service_phase_only [verified] SubpoenaPreServicePhaseOnly dates=['2026-04-07'] source=28_active_service_log_2026-04-07.csv confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
+- Rule: r21_case_obligated_resolve_actor_assignment_conflict
+- Track: filing
+- Authority refs: []
+- Conclusion: O(case:guardianship_collateral_estoppel, resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record, issue:interference_actor_assignment)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_actor_assignment_conflict_benjamin_vs_solomon_interference [verified] ActorAssignmentConflict dates=['2026-04-07'] source=generate_formal_reasoning_artifacts.py confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
+- Rule: r22_case_obligated_finalize_authority_citations_before_filing
+- Track: filing
+- Authority refs: []
+- Conclusion: O(case:guardianship_collateral_estoppel, finalize_governing_authority_citations_before_final_filing, doc:06_oregon_authority_table_placeholders.md)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_authority_table_placeholders_unresolved [verified] AuthorityCitationsUnresolved dates=['2026-04-07'] source=06_oregon_authority_table_placeholders.md confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
+- Rule: r23_case_permitted_initiate_remedial_contempt_path
+- Track: filing
+- Authority refs: ['auth:ors_33_055']
+- Conclusion: P(case:guardianship_collateral_estoppel, initiate_remedial_contempt_or_show_cause_path, person:solomon)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_authority_ors_33_055_remedial_contempt_procedure [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_restraining_order_in_effect [verified] OrderInEffect dates=['2025-11-20'] source=sam_barber_restraining_order_ocr.txt confidence=None(None) kind=None
+- f_solomon_service_position_statement [verified] ServicePositionStatement dates=['2026-03-10'] source=14166-Me-to-solomon-gv-0eb16863d122188b/transcript.txt confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
+- Rule: r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved
+- Track: filing
+- Authority refs: ['auth:ors_33_075']
+- Conclusion: P(case:guardianship_collateral_estoppel, seek_order_or_warrant_to_compel_appearance_if_order_to_appear_is_served_and_ignored, person:solomon)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_authority_ors_33_075_compel_appearance [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
 - f_client_solomon_failed_appearance [alleged] FailedToAppear dates=['2026-03-10'] source=client_assertion confidence=None(None) kind=None
 - Recommended motions:
 - /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
 
-- Rule: r5b_solomon_obligated_seek_hearing_or_comply
-- Conclusion: O(person:solomon, seek_hearing_or_comply_with_existing_order, order:eppdapa_restraining_order)
-- Activation date estimate: 2026-03-10
+- Rule: r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved
+- Track: filing
+- Authority refs: ['auth:ors_33_105']
+- Conclusion: P(case:guardianship_collateral_estoppel, seek_compensatory_or_compliance_oriented_remedial_sanctions_if_contempt_is_proved, issue:prejudice_and_noninterference_relief)
+- Activation date estimate: 2026-04-07
 - Antecedent evidence:
-- f_restraining_order_granted [verified] OrderGranted dates=['2025-11-20'] source=sam_barber_restraining_order_ocr.txt confidence=None(None) kind=None
-- f_restraining_order_in_effect [verified] OrderInEffect dates=['2025-11-20'] source=sam_barber_restraining_order_ocr.txt confidence=None(None) kind=None
-- f_solomon_service_position_statement [verified] ServicePositionStatement dates=['2026-03-10'] source=14166-Me-to-solomon-gv-0eb16863d122188b/transcript.txt confidence=None(None) kind=None
+- f_authority_ors_33_105_remedial_sanctions [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_hacc_removed_benjamin_effective_2026_01_01 [verified] HouseholdMemberRemovedEffective dates=['2026-01-01', '2026-01-12'] source=0014-Re-Allegations-of-Fraud---JC-Household/message.eml confidence=None(None) kind=None
 - Recommended motions:
-- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
 
-- Rule: r5c_solomon_forbidden_self_help_noncooperation
-- Conclusion: F(person:solomon, adopt_self_help_noncooperation_posture, order:eppdapa_restraining_order)
-- Activation date estimate: 2026-03-10
+- Rule: r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown
+- Track: filing
+- Authority refs: ['auth:orcp_17_c']
+- Conclusion: P(case:guardianship_collateral_estoppel, seek_orcp_17_sanctions_if_filing_is_shown_improper_or_factually_or_legally_unsupported, issue:sanctions_track)
+- Activation date estimate: 2026-04-07
 - Antecedent evidence:
-- f_restraining_order_granted [verified] OrderGranted dates=['2025-11-20'] source=sam_barber_restraining_order_ocr.txt confidence=None(None) kind=None
-- f_restraining_order_in_effect [verified] OrderInEffect dates=['2025-11-20'] source=sam_barber_restraining_order_ocr.txt confidence=None(None) kind=None
-- f_solomon_noncooperation_statement [verified] NoncooperationStatement dates=['2026-03-10'] source=14166-Me-to-solomon-gv-0eb16863d122188b/transcript.txt confidence=None(None) kind=None
+- f_authority_orcp_17_improper_purpose_and_support [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_hacc_named_notice_to_solomon_order_not_found [verified] NamedHaccNoticeMessageNotFound dates=['2026-04-07'] source=protective_order_and_hacc_notice_timeline.md confidence=None(None) kind=None
 - Recommended motions:
-- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
 
-- Rule: r6_hacc_obligated_process_consistently_with_valid_authority
-- Conclusion: O(org:hacc, process_housing_consistent_with_valid_guardian_authority, person:jane_cortez)
-- Activation date estimate: None
+- Rule: r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46
+- Track: workflow
+- Authority refs: ['auth:orcp_55', 'auth:orcp_46']
+- Conclusion: P(case:guardianship_collateral_estoppel, seek_subpoena_enforcement_and_related_expenses_after_nonparty_noncompliance, org:hacc)
+- Activation date estimate: 2026-04-07
 - Antecedent evidence:
-- f_hacc_process_exists [alleged] HousingProcessActive dates=[] source=client_assertion confidence=None(None) kind=None
-- f_client_prior_appointment [alleged] PriorAppointmentExists dates=[] source=client_assertion confidence=None(None) kind=None
+- f_authority_orcp_55_subpoena_obedience [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_authority_orcp_46_discovery_sanctions [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_hacc_exhibit_r_requires_compelled_production [verified] CompelledProductionRequired dates=['2026-04-07'] source=subpoena_target_memo_hacc_lease_authority_record.md confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
+- Rule: r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding
+- Track: filing
+- Authority refs: ['auth:ors_125_050']
+- Conclusion: P(case:26PR00641, apply_orcp_and_oec_subject_to_specific_chapter_125_overrides, proceeding:protective_proceeding)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_authority_ors_125_050_protective_orcp_oec [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_petition_exists [verified] PetitionFiled dates=['2026-03-31'] source=solomon_motion_for_guardianship_ocr.txt confidence=None(None) kind=None
 - Recommended motions:
 - /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
 
-- Rule: r6b_hacc_obligated_document_lease_basis
-- Conclusion: O(org:hacc, document_basis_for_household_composition_or_lease_adjustment, household:jane_cortez_household)
-- Activation date estimate: 2026-01-01
-- Antecedent evidence:
-- f_hacc_lease_adjustment_effective_2026_01_01 [verified] LeaseAdjustmentEffective dates=['2026-01-01'] source=HACC vawa violation.pdf confidence=None(None) kind=None
-- Recommended motions:
-- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
-
-- Rule: r6c_solomon_interference_not_proved_by_named_hacc_notice_gap
-- Conclusion: P(case:guardianship_collateral_estoppel, treat_solomon_hacc_interference_as_inference_not_direct_proof, person:solomon)
+- Rule: r29_case_obligated_preserve_notice_and_objection_window
+- Track: filing
+- Authority refs: ['auth:ors_125_060', 'auth:ors_125_065']
+- Conclusion: O(case:26PR00641, preserve_statutory_notice_and_objection_window_for_protective_petition, person:jane_cortez)
 - Activation date estimate: 2026-04-07
 - Antecedent evidence:
-- f_hacc_named_notice_to_solomon_order_not_found [verified] NamedHaccNoticeMessageNotFound dates=['2026-04-07'] source=protective_order_and_hacc_notice_timeline.md confidence=None(None) kind=None
+- f_authority_ors_125_060_notice_recipients [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_authority_ors_125_065_notice_manner_and_timing [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_notice_to_respondent [verified] NoticeIssued dates=['2026-03-31'] source=solomon_motion_for_guardianship_ocr.txt confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
+- Rule: r30_case_obligated_schedule_hearing_on_presented_objection
+- Track: filing
+- Authority refs: ['auth:ors_125_075', 'auth:ors_125_080']
+- Conclusion: O(case:26PR00641, schedule_and_process_hearing_on_guardianship_objection, person:jane_cortez)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_authority_ors_125_075_objections [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_authority_ors_125_080_hearing_and_counsel [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_respondent_objection_form_present [verified] RespondentObjectionFormPresent dates=['2026-04-05'] source=guardianship_timeline.md confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
+- Rule: r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel
+- Track: filing
+- Authority refs: ['auth:ors_125_080']
+- Conclusion: P(case:26PR00641, assert_respondent_right_to_appear_in_person_or_by_counsel, person:jane_cortez)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_authority_ors_125_080_hearing_and_counsel [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_notice_to_respondent [verified] NoticeIssued dates=['2026-03-31'] source=solomon_motion_for_guardianship_ocr.txt confidence=None(None) kind=None
+- Recommended motions:
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
+- /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
+
+- Rule: r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines
+- Track: workflow
+- Authority refs: ['auth:orcp_9', 'auth:orcp_10', 'auth:ors_125_050']
+- Conclusion: P(case:guardianship_collateral_estoppel, use_orcp9_service_and_orcp10_deadline_computation_for_later_filed_motion_packets, issue:service_and_deadlines)
+- Activation date estimate: 2026-04-07
+- Antecedent evidence:
+- f_authority_orcp_9_service_of_later_filed_papers [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_authority_orcp_10_time_computation [verified] AuthorityAvailable dates=['2026-04-07'] source=oregon_authority_grounding_memo_2026-04-07.md confidence=None(None) kind=None
+- f_petition_exists [verified] PetitionFiled dates=['2026-03-31'] source=solomon_motion_for_guardianship_ocr.txt confidence=None(None) kind=None
 - Recommended motions:
 - /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
 - /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md
 - /home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md
-
-- Rule: r8_solomon_notice_ack_triggers_court_relief_path
-- Conclusion: O(person:solomon, seek_clarification_or_relief_through_court, order:eppdapa_restraining_order)
-- Activation date estimate: 2025-11-20
-- Antecedent evidence:
-- f_feed_ev_solomon_ack_heard_restraining_order [verified] StatementHeardAboutRestrainingOrder dates=['2025-11-17'] source=/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660669_Mon--17-Nov-2025-20-38-24--0000_New-text-message-from-solomon--503--381-6911.eml confidence=high(0.9) kind=direct_message
-- f_restraining_order_in_effect [verified] OrderInEffect dates=['2025-11-20'] source=sam_barber_restraining_order_ocr.txt confidence=None(None) kind=None
-- Recommended motions:
-- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
-
-- Rule: r9_solomon_wait_for_service_conflicts_with_no_further_service
-- Conclusion: F(person:solomon, condition_compliance_on_additional_service, order:eppdapa_restraining_order)
-- Activation date estimate: 2026-03-10
-- Antecedent evidence:
-- f_feed_ev_solomon_wait_for_service_statement [verified] StatementWaitForServiceBeforeCompliance dates=['2026-03-10'] source=/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14166-Me-to-solomon-gv-0eb16863d122188b/transcript.txt confidence=medium_high(0.8) kind=transcript_extract
-- f_restraining_order_no_further_service_needed [verified] NoFurtherServiceNeeded dates=['2025-11-20'] source=sam_barber_restraining_order_ocr.txt confidence=None(None) kind=None
-- Recommended motions:
-- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
-
-- Rule: r10_solomon_noncooperation_statement_conflicts_with_effective_order
-- Conclusion: F(person:solomon, intentional_noncooperation_with_effective_order, order:eppdapa_restraining_order)
-- Activation date estimate: 2026-03-10
-- Antecedent evidence:
-- f_feed_ev_solomon_not_incentivized_statement [verified] StatementNotIncentivizedToCooperate dates=['2026-03-10'] source=/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14166-Me-to-solomon-gv-0eb16863d122188b/transcript.txt confidence=medium_high(0.8) kind=transcript_extract
-- f_restraining_order_in_effect [verified] OrderInEffect dates=['2025-11-20'] source=sam_barber_restraining_order_ocr.txt confidence=None(None) kind=None
-- Recommended motions:
-- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
-
-- Rule: r11_solomon_already_have_order_statement_supports_notice
-- Conclusion: O(person:solomon, recognize_existing_order_status, order:eppdapa_restraining_order)
-- Activation date estimate: 2025-11-20
-- Antecedent evidence:
-- f_feed_ev_solomon_ack_already_have_order [verified] StatementAlreadyHaveRestrainingOrder dates=['2025-11-17'] source=/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660690_Mon--17-Nov-2025-20-56-22--0000_New-text-message-from-solomon--503--381-6911.eml confidence=high(0.9) kind=direct_message
-- f_restraining_order_in_effect [verified] OrderInEffect dates=['2025-11-20'] source=sam_barber_restraining_order_ocr.txt confidence=None(None) kind=None
-- Recommended motions:
-- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
-
-- Rule: r12_solomon_order_not_in_effect_claim_conflicts_with_effective_order
-- Conclusion: F(person:solomon, assert_order_ineffective_without_court_relief, order:eppdapa_restraining_order)
-- Activation date estimate: 2026-03-10
-- Antecedent evidence:
-- f_feed_ev_solomon_order_not_in_effect_statement [verified] StatementOrderNotInEffect dates=['2026-03-10'] source=/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14166-Me-to-solomon-gv-0eb16863d122188b/transcript.txt | /home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743131_Tue--10-Mar-2026-17-45-54--0000_New-text-message-from-solomon--503--381-6911.eml confidence=medium_high(0.8) kind=transcript_extract
-- f_restraining_order_in_effect [verified] OrderInEffect dates=['2025-11-20'] source=sam_barber_restraining_order_ocr.txt confidence=None(None) kind=None
-- Recommended motions:
-- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
-
-- Rule: r13_solomon_judge_overturn_statement_triggers_motion_path
-- Conclusion: O(person:solomon, file_motion_to_modify_or_vacate_before_noncompliance, order:eppdapa_restraining_order)
-- Activation date estimate: 2026-03-10
-- Antecedent evidence:
-- f_feed_ev_solomon_judge_overturn_statement [verified] StatementWillHaveJudgeOverturn dates=['2026-03-10'] source=/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14166-Me-to-solomon-gv-0eb16863d122188b/transcript.txt | /home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743129_Tue--10-Mar-2026-17-39-27--0000_New-text-message-from-solomon--503--381-6911.eml confidence=medium_high(0.8) kind=transcript_extract
-- f_restraining_order_in_effect [verified] OrderInEffect dates=['2025-11-20'] source=sam_barber_restraining_order_ocr.txt confidence=None(None) kind=None
-- Recommended motions:
-- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
-
-- Rule: r14_hacc_notice_of_restrained_party_contact_triggers_noncontact_handling
-- Conclusion: O(org:hacc, avoid_third_party_housing_contact_with_restrained_person_and_document_response, person:jane_cortez)
-- Activation date estimate: 2026-03-26
-- Antecedent evidence:
-- f_feed_ev_hacc_notice_brother_calls_after_granted_order [verified] MessageReportedBrotherCallsAfterGrantedOrder dates=['2026-03-26'] source=/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404-narrow/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/message.json confidence=medium(0.7) kind=json_export_extract
-- f_feed_ev_hacc_notice_third_party_contact_with_restrained_person [verified] MessageObjectedThirdPartyContactWithRestrainedPerson dates=['2026-03-26'] source=/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404-narrow/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/message.json confidence=medium(0.7) kind=json_export_extract
-- Recommended motions:
-- /home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md
 

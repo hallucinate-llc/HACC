@@ -1,23 +1,21 @@
 # DECLARATION OF BENJAMIN BARBER IN SUPPORT OF
-# MOTION FOR LEAVE OR, IN THE ALTERNATIVE, TO COMPEL LIMITED EXHIBIT R PRODUCTION
+# MOTION FOR LEAVE TO ISSUE LIMITED EXHIBIT R SUBPOENA TO NONPARTY HACC
 
 IN THE CIRCUIT COURT OF THE STATE OF OREGON  
-FOR THE COUNTY OF CLACKAMAS
+FOR THE COUNTY OF CLACKAMAS  
+PROBATE DEPARTMENT
 
-____________________________________,  
-Plaintiff / Petitioner,
+In the Matter of the Guardianship of:
 
-v.
+Jane Kay Cortez,
+Respondent / Protected Person.
 
-____________________________________,  
-Defendant / Respondent.
-
-Case No. __________________
+Case No. `26PR00641` (to confirm from certified docket)
 
 I, Benjamin Barber, declare as follows:
 
 1. I am over 18 years of age and competent to testify to the matters stated here.
-2. I submit this declaration in support of the motion seeking leave to issue a limited subpoena to HACC, or alternatively to compel limited production from HACC, concerning the authority chain behind my removal from the household effective January 1, 2026.
+2. I submit this declaration in support of the motion seeking leave to issue a limited subpoena to nonparty HACC concerning the authority chain behind my removal from the household effective January 1, 2026.
 3. I make this declaration based on my personal knowledge and on records I have reviewed in this workspace. Where I refer to a record, I do so only for the fact that the record exists and says what it says.
 
 ## A. January 2026 lease-removal record
@@ -53,7 +51,6 @@ I, Benjamin Barber, declare as follows:
 
 17. The subpoena and discovery materials I seek to support are:
    - [subpoena_schedule_hacc_re_exhibit_r.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/subpoena_schedule_hacc_re_exhibit_r.md)
-   - [defendants_first_targeted_discovery_requests_re_exhibit_r.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/defendants_first_targeted_discovery_requests_re_exhibit_r.md)
    - [motion_for_leave_or_to_compel_exhibit_r_production.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/motion_for_leave_or_to_compel_exhibit_r_production.md)
 
 I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct to the best of my knowledge.

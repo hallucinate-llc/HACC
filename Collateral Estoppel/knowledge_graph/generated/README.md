@@ -11,7 +11,9 @@ and may ingest feed data from:
 ```bash
 python3 "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/marshal_solomon_repository_evidence.py"
 python3 "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/collect_solomon_evidence_events.py"
+python3 "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/validate_service_log_and_emit_deontic_inputs.py"
 python3 "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generate_formal_reasoning_artifacts.py"
+python3 "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generate_proof_intake_map.py"
 python3 "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generate_motion_support_map.py"
 python3 "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generate_motion_paragraph_bank.py"
 ```
@@ -28,6 +30,13 @@ python3 "/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generate_motion_
 - `deontic_reasoning_report.md`: quick human-readable summary
 - `deontic_litigation_matrix.json`: party-by-party litigation matrix from computed O/P/F
 - `deontic_litigation_matrix.md`: human-readable litigation matrix
+- `deontic_logic_gap_audit_2026-04-07.md`: prioritized reasoning-system gap audit and closure plan
+- `deontic_logic_gap_audit_2026-04-07.json`: machine-readable unresolved-rule snapshot
+- `deontic_service_status_rule_activation_map_2026-04-07.md`: CSV status-field mapping that auto-activates subpoena enforcement rules
+- `service_log_validation_report_2026-04-07.md`: QA report for service-log status/date integrity and derived activation summary
+- `service_log_validation_report_2026-04-07.json`: machine-readable validation findings and per-row derived state
+- `proof_intake_map_2026-04-07.md`: antecedent-level checklist for unresolved/inactive rule closure
+- `proof_intake_map_2026-04-07.json`: machine-readable proof-intake map for automation
 - `motion_support_map.json`: Source -> Fact -> Rule -> Motion linkage map
 - `motion_support_map.md`: human-readable motion support map
 - `motion_paragraph_bank.json`: motion-ready paragraph payload grouped by mode and target motion

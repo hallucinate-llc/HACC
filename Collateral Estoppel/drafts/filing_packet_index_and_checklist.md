@@ -7,8 +7,11 @@ Case target: `26PR00641` (confirm from certified docket before filing)
 1. [motion_for_appointment_and_appearance_of_guardian_ad_litem.md](/home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md)
 2. [motion_to_dismiss_for_collateral_estoppel.md](/home/barberb/HACC/Collateral Estoppel/drafts/motion_to_dismiss_for_collateral_estoppel.md)
 3. [motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md](/home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md)
-4. [declaration_of_benjamin_barber_in_support_of_motions.md](/home/barberb/HACC/Collateral Estoppel/drafts/declaration_of_benjamin_barber_in_support_of_motions.md)
-5. [motion_exhibit_crosswalk.md](/home/barberb/HACC/Collateral Estoppel/evidence_notes/motion_exhibit_crosswalk.md)
+4. [motion_for_sanctions_re_frivolous_and_abusive_practice.md](/home/barberb/HACC/Collateral Estoppel/drafts/motion_for_sanctions_re_frivolous_and_abusive_practice.md)
+5. [memorandum_in_support_of_show_cause_and_sanctions.md](/home/barberb/HACC/Collateral Estoppel/drafts/memorandum_in_support_of_show_cause_and_sanctions.md)
+6. [declaration_of_benjamin_barber_in_support_of_motions.md](/home/barberb/HACC/Collateral Estoppel/drafts/declaration_of_benjamin_barber_in_support_of_motions.md)
+7. [motion_exhibit_crosswalk.md](/home/barberb/HACC/Collateral Estoppel/evidence_notes/motion_exhibit_crosswalk.md)
+8. [motion_exhibit_index.md](/home/barberb/HACC/Collateral Estoppel/evidence_notes/motion_exhibit_index.md)
 
 ## Exhibit R packet
 
@@ -57,6 +60,22 @@ Recommended order:
 31. [23_declaration_re_subpoena_noncompliance_final.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/23_declaration_re_subpoena_noncompliance_final.md)
 32. [24_motion_to_compel_subpoena_compliance_and_sanctions_final.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/24_motion_to_compel_subpoena_compliance_and_sanctions_final.md)
 
+33. [25_ready_to_serve_recipient_manifests_final.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/25_ready_to_serve_recipient_manifests_final.md)
+
+34. [26_subpoena_service_return_tracker_template.csv](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/26_subpoena_service_return_tracker_template.csv)
+35. [27_subpoena_service_return_tracker_guide_final.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/27_subpoena_service_return_tracker_guide_final.md)
+
+36. [28_active_service_log_2026-04-07.csv](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/28_active_service_log_2026-04-07.csv)
+37. [29_active_service_log_2026-04-07.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/29_active_service_log_2026-04-07.md)
+
+38. [30_service_deadline_calculator_guide_final.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/30_service_deadline_calculator_guide_final.md)
+39. [31_service_deadline_calculator_template.csv](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/31_service_deadline_calculator_template.csv)
+
+40. [32_deadline_update_log_2026-04-07.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/32_deadline_update_log_2026-04-07.md)
+41. [33_service_log_rule_activation_plan_2026-04-07.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/33_service_log_rule_activation_plan_2026-04-07.md)
+42. [34_strict_mode_evidentiary_addendum_bundle_2026-04-07.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/34_strict_mode_evidentiary_addendum_bundle_2026-04-07.md)
+43. [35_confirmed_service_entry_command_sheet_2026-04-07.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/35_confirmed_service_entry_command_sheet_2026-04-07.md)
+
 ## Certification and proof checklist
 
 1. Confirm case caption, parties, and department against certified docket.
@@ -66,8 +85,10 @@ Recommended order:
 5. Ensure each declaration statement has an admissible exhibit or personal-knowledge foundation.
 6. Verify service method, service date, and certificate of service text.
 7. Final legal cite check for Oregon collateral-estoppel standard and sanctions authority.
-8. For Exhibit R production, keep HACC on the nonparty-custodian path unless posture changes later.
-9. If using the public-records path in parallel, track it separately from subpoena and discovery deadlines.
+8. Confirm that each motion uses the same proof-state framing:
+   doctrine grounded, factual application proof-gated where source records are still missing.
+9. For Exhibit R production, keep HACC on the nonparty-custodian path unless posture changes later.
+10. If using the public-records path in parallel, track it separately from subpoena and discovery deadlines.
 
 ## Graph package (optional court aid appendix)
 
