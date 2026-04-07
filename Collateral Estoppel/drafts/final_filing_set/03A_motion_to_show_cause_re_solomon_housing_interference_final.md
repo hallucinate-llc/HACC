@@ -18,7 +18,7 @@ I. REQUESTED RELIEF
 1. Issue an Order to Show Cause requiring Solomon Barber to appear on a date certain.
 2. Require Solomon Barber to explain why his post-order conduct concerning Jane Cortez's housing, household composition, voucher, relocation, or lease matters did not violate or evade the original restraining-order framework.
 3. Require Solomon Barber to explain why his later guardianship filing includes detailed housing allegations, household address information, and occupancy / voucher assertions concerning Jane Cortez and Benjamin Barber.
-4. Enter appropriate remedial orders, including noninterference directives, record-completion directives, or other corrective relief authorized by law and supported by admissible evidence.
+4. Enter appropriate threshold remedial orders, including record-completion directives and only such noninterference or corrective relief as the Court finds directly supported by admissible evidence.
 
 II. GROUNDS
 
@@ -38,7 +38,7 @@ II. GROUNDS
 
 III. PROOF POSTURE
 
-16. Movant does not ask the Court to assume that a direct HACC source record already states that Solomon asked HACC to remove Benjamin from the lease.
+18. Movant does not ask the Court to assume that a direct HACC source record already states that Solomon asked HACC to remove Benjamin from the lease.
 19. The present record instead supports a serious interference question through the combination of:
    a. the granted order and in-person-appearance language;
    b. the parallel granted Julio protective-order packets showing the same residence and household-control conflict had already been formalized in court;
@@ -52,16 +52,16 @@ III. PROOF POSTURE
 
 IV. LEGAL AUTHORITY
 
-21. ORS 33.055 authorizes remedial-contempt proceedings and order-to-appear process where violation of a court order is alleged.
-22. ORS 33.075 authorizes compelled appearance mechanisms after nonappearance on a served order to appear.
-23. ORS 33.105 authorizes remedial sanctions upon proof of contempt.
-24. To the extent later filing conduct is implicated, Movant reserves any `ORCP 17` theory only to the extent supported after further record development.
+23. ORS 33.055 authorizes remedial-contempt proceedings and order-to-appear process where violation of a court order is alleged.
+24. ORS 33.075 authorizes compelled appearance mechanisms after nonappearance on a served order to appear.
+25. ORS 33.105 authorizes remedial sanctions upon proof of contempt.
+26. To the extent later filing conduct is implicated, Movant reserves any `ORCP 17` theory only to the extent supported after further record development.
 
 V. REQUESTED HEARING STRUCTURE
 
-25. Set an expedited show-cause hearing.
+27. Set an expedited show-cause hearing.
 28. Require pre-hearing filing of the operative original order packets and any clerk-certified records the parties possess concerning the original Solomon matter, the Julio protective-order packets, and the related Ashley Ferron protective filings.
-27. Permit targeted testimony on:
+29. Permit targeted testimony on:
    a. order language and scope;
    b. Solomon's notice and later text posture;
    c. the housing-specific allegations in Solomon's guardianship petition;
@@ -70,7 +70,7 @@ V. REQUESTED HEARING STRUCTURE
    f. HACC notice of restraining-order concerns;
    g. the elimination-based lease-removal inference and any claimed-authority theory; and
    h. any later-produced HACC source materials.
-28. If the Court finds the direct HACC actor-identification record incomplete, limit the hearing to threshold show-cause review and record-completion directions rather than final contempt findings.
+30. If the Court finds the direct HACC actor-identification record incomplete, limit the hearing to threshold show-cause review and record-completion directions rather than final contempt findings.
 
 VI. EXHIBIT REFERENCES
 

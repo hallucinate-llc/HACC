@@ -8,17 +8,17 @@ In the Matter of:
 Jane Kay Cortez,
 Protected Person.
 
-## MOTION FOR SANCTIONS
-## RE: FRIVOLOUS, ABUSIVE, AND INTERFERING PRACTICE
+## MOTION TO RESERVE SANCTIONS, LIMIT CLAIMS, AND SET
+## THRESHOLD REVIEW OF FRIVOLOUS, ABUSIVE, OR INTERFERING PRACTICE
 
-Movant requests sanctions and related corrective relief to the extent the Court finds that Solomon Barber has pursued frivolous, abusive, duplicative, or interfering practice in this matter or related connected proceedings.
+Movant requests threshold review, claim-limiting relief, and reservation of sanctions to the extent the Court finds that Solomon Barber has pursued frivolous, abusive, duplicative, or interfering practice in this matter or related connected proceedings.
 
 ### I. Requested relief
 
-1. Enter sanctions as authorized by law for frivolous, abusive, or bad-faith motion practice if the Court finds the necessary predicate facts.
-2. Strike, limit, or dismiss any filing or theory the Court finds precluded, duplicative, abusive, or filed for an improper purpose.
-3. Enter only such noninterference or claim-limiting directives as the Court finds directly supported by admissible evidence and authorized by law.
-4. Award fees, costs, evidentiary limitations, claim-limiting relief, or other remedial orders to the extent legally authorized and factually supported.
+1. Set a threshold hearing or review process on whether any filing, theory, or branch of requested relief is precluded, duplicative, abusive, or unsupported.
+2. Strike or limit any filing or theory the Court finds precluded, duplicative, abusive, or filed for an improper purpose.
+3. Reserve final sanctions, monetary remedies, and broader corrective relief unless and until the Court finds the necessary predicate facts on an adequate source record.
+4. Enter only such noninterference, evidentiary, or claim-limiting directives as the Court finds directly supported by admissible evidence and authorized by law.
 
 ### II. Core theory
 
@@ -52,7 +52,7 @@ Movant requests sanctions and related corrective relief to the extent the Court 
 ### IV. Frivolous / abusive practice section (proof-gated)
 
 12. This motion is intentionally conflict-aware and proof-gated.
-13. Sanctions are requested only if the Court finds one or more of the following:
+13. Final sanctions are requested only if the Court finds one or more of the following:
    a. the filing re-raises issues already decided or clearly barred;
    b. the filing or related conduct lacks a good-faith basis in fact or law;
    c. the actor pursued the matter for an improper purpose, including harassment, control, delay, or pressure;
@@ -66,7 +66,7 @@ Movant requests sanctions and related corrective relief to the extent the Court 
    a. the exact earlier guardian ad litem or prior-authority order;
    b. the exact person-to-HACC communication chain;
    c. the exact legal rule under which every sanctions component should ultimately issue.
-16. The issue-preclusion doctrine is now authority-grounded, but the actual prior separate proceeding record is still the key missing fact layer. For that reason, preclusion-based sanctions requests must remain conditional.
+16. The issue-preclusion doctrine is now authority-grounded, but the actual prior separate proceeding record is still the key missing fact layer. For that reason, preclusion-based sanctions requests must remain conditional and are presently best framed as threshold review and claim-limiting relief.
 17. The repeated-pattern theory is that Solomon sought practical control by means other than orderly court relief, and that this created unnecessary burden, delay, and instability even if the final proof picture is not yet complete.
 
 ### V. Best current sanctionable-conduct formulation
@@ -120,10 +120,10 @@ Movant requests sanctions and related corrective relief to the extent the Court 
 
 ### VIII. Requested hearing structure
 
-33. Set an evidentiary or threshold sanctions hearing as the Court deems appropriate.
+33. Set an evidentiary or threshold review hearing as the Court deems appropriate.
 34. Require pre-hearing production or filing of certified records, operative orders, and any available HACC source records concerning lease-removal and collateral-contact issues.
 35. Permit targeted testimony on improper purpose, preclusion, collateral interference, and prejudice.
-36. If the Court finds the prior separate proceeding record incomplete, limit any preclusion-based sanctions ruling to threshold management and reserve final sanctions adjudication until the source record is complete.
+36. If the Court finds the prior separate proceeding record incomplete, limit any preclusion-based ruling to threshold management, claim limitation, or sanctions reservation and reserve final sanctions adjudication until the source record is complete.
 
 ### IX. Reservation
 

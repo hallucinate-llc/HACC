@@ -8,15 +8,15 @@ In the Matter of:
 Jane Kay Cortez,
 Protected Person.
 
-MOTION TO DISMISS OR, IN THE ALTERNATIVE,
-TO LIMIT ISSUES PENDING THRESHOLD ISSUE-PRECLUSION RECORD
+MOTION TO LIMIT ISSUES PENDING THRESHOLD ISSUE-PRECLUSION RECORD
+OR, IN THE ALTERNATIVE, TO DISMISS TO THE EXTENT PRECLUSION IS ALREADY ESTABLISHED
 
-Movant, Benjamin Barber, moves to dismiss any claim or issue already shown to be precluded by prior proceedings and, if the Court concludes the clerk-certified or otherwise final prior-proceeding record is not yet complete, to limit the case to a threshold issue-preclusion record instead of allowing unrestricted relitigation.
+Movant, Benjamin Barber, moves to limit the case to a threshold issue-preclusion record and, only to the extent preclusion is already established by the present admissible record, to dismiss any claim or issue already shown to be precluded by prior proceedings.
 
 I. REQUESTED RELIEF
 
-1. Dismiss any claim or issue the Court finds already established as precluded by the stored source materials and any additional admissible prior-proceeding record.
-2. In the alternative, strike or limit relitigation of the same authority issue unless and until the parties supply the prior-proceeding materials needed to evaluate issue preclusion, including any clerk-certified docket or order materials the Court deems necessary.
+1. Limit relitigation of the same authority issue unless and until the parties supply the prior-proceeding materials needed to evaluate issue preclusion, including any clerk-certified docket or order materials the Court deems necessary.
+2. In the alternative, dismiss any claim or issue the Court finds already established as precluded by the stored source materials and any additional admissible prior-proceeding record.
 3. Set a focused threshold schedule or hearing limited to prior proceeding identity, issue identity, finality, party/privity, and full-and-fair opportunity.
 4. Award further relief the Court deems just and proper.
 
@@ -31,7 +31,7 @@ III. CURRENT SOURCE-BACKED OVERLAP RECORD
 8. The same petition seeks authority over Jane Kay Cortez's person and housing-related circumstances and identifies APS-access and possible law-enforcement transport issues as part of the requested authority structure. Exhibit 2.
 9. The same petition also states that no guardian, trustee, health-care representative, or attorney-in-fact previously existed for Jane Kay Cortez. Exhibit 2.
 10. The record review identifies substantial overlap concerns between the present authority request and earlier authority-related proceedings, including the signed restraining-order matter in case `25PO11530`; however, final preclusion adjudication remains proof-gated pending a fuller prior-order and docket record. See Exhibits 8-10.
-11. Movant's declaration and prior record review therefore support threshold issue-preclusion control now, with final dismissal to follow only to the extent the source record ultimately establishes each element. Declaration of Benjamin Barber in Support of Motions, paragraphs 9-12.
+11. Movant's declaration and prior record review therefore support threshold issue-preclusion control now, with dismissal only to the extent the source record already establishes each element. Declaration of Benjamin Barber in Support of Motions, paragraphs 9-12.
 
 IV. PROOF GATE FOR FINAL DISMISSAL
 

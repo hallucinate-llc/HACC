@@ -8,14 +8,14 @@ In the Matter of:
 Jane Kay Cortez,
 Protected Person.
 
-MOTION FOR ORDER TO SHOW CAUSE
+RESERVE MOTION FOR ORDER TO SHOW CAUSE
 RE: RESPONDENT SOLOMON BARBER'S FAILURE TO TIMELY OPPOSE IN THE ORIGINAL MATTER AND FILING OF PRECLUDED CLAIM
 
-Movant, Benjamin Barber, requests an Order requiring Solomon Barber to appear and show cause why appropriate sanctions, claim-limiting relief, or other corrective orders should not be entered.
+Movant, Benjamin Barber, preserves this draft as a reserve show-cause motion to be used if later docket, hearing, or appearance materials strengthen the nonappearance or original-matter-opposition branch. On the current record, it is best understood as a contingent threshold-management motion rather than a primary filing.
 
 I. REQUESTED RELIEF
 
-1. Issue an Order to Show Cause requiring Solomon Barber to appear on a date certain.
+1. If later record development supports it, issue an Order to Show Cause requiring Solomon Barber to appear on a date certain.
 2. Require Solomon Barber to explain why, after appearing in person in the original restraining-order matter and receiving notice that the order was in effect, he did not timely oppose that order in the original matter through the available hearing process, and instead later took a collateral position inconsistent with the order.
 3. Require Solomon Barber to explain why filing of the present claim is not barred by collateral estoppel.
 4. Enter appropriate remedial orders, including claim limitation/dismissal and sanctions authorized by law and supported by admissible evidence.
@@ -42,10 +42,10 @@ III. LEGAL AUTHORITY
 
 IV. REQUESTED HEARING STRUCTURE
 
-17. Set an expedited show-cause hearing.
-18. Require pre-hearing filing of certified docket and operative orders.
-19. Permit targeted testimony on notice, appearance history, original-matter opposition path, preclusion elements, and any proven collateral interference sequence.
-20. Require parties to identify, before hearing, the exact order/date/event each side contends controls the original-matter opposition / noncompliance issue.
+17. If activated, set an expedited show-cause hearing.
+18. If activated, require pre-hearing filing of clerk-certified docket and operative orders.
+19. If activated, permit targeted testimony on notice, appearance history, original-matter opposition path, preclusion elements, and any proven collateral interference sequence.
+20. If activated, require parties to identify, before hearing, the exact order/date/event each side contends controls the original-matter opposition / noncompliance issue.
 
 V. EXHIBIT REFERENCES (GLOBAL NUMBERING)
 
@@ -55,7 +55,7 @@ V. EXHIBIT REFERENCES (GLOBAL NUMBERING)
 
 VI. RESERVATION
 
-24. Movant reserves amendment rights after receipt of certified docket and complete service/appearance record.
+24. Movant reserves amendment rights after receipt of clerk-certified docket and complete service/appearance record.
 
 DATED: ____________, 2026
 
