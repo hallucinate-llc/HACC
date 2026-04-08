@@ -32,36 +32,38 @@ II. GROUNDS
 12. In context, that March 17 warning was made during an active dispute over voucher issuance, relocation, lease status, and housing administration, and is best read as notice that continued communication with Solomon or other restrained parties was interfering with Benjamin Barber's tenant rights and the household's housing process.
 13. The original stored Julio order packets strengthen that context. The repository contains a granted Benjamin-v.-Julio EPPDAPA order and a granted Jane-v.-Julio EPPDAPA order, both tied to the same residence and protective framework, which shows that household-composition and housing-control disputes were already being formalized in court before the later HACC lease-removal sequence.
 14. The repository also contains a scanned `Abuse Protective Order Certificate of Service` form, but targeted OCR shows it is a blank form only. That means the source record is stronger on operative order existence than on completed service paperwork.
-15. The current record also supports a narrower elimination-based inference: Benjamin did not request his own removal from the lease, Jane did not request Benjamin's removal, Julio Regal Florez-Cortez is separately described in the workspace declarations, from Benjamin's personal knowledge, as unable to read or write in any language, which materially weakens any theory that Julio was independently generating written housing demands, packet corrections, or asserted-authority paperwork during the same period, the deeper `JC Household` chain shows that on January 12, 2026 HACC first wrote that `Julio is a member of the Household and will need to complete paperwork as well` unless court documents were submitted, then later wrote that `Currently, Julio and Jane are the only household members and approved occupants of the unit,` and then wrote again that, effective January 1, 2026, Benjamin was no longer listed as a member of the household and that the household composition had been determined to consist of Julio and Jane following `internal review` and based on `court documentation currently on file,` while the broader sequence also includes a February 13, 2026 HACC 30-Day Notice of Termination addressed directly to Julio Regal Florez-Cortez, and the Skee declarations attribute the removal, in substance, to outside document flows from Benjamin's brother and stepfather.
-16. On information and belief, Solomon is a plausible outside actor in that chain, including through possible claimed authority or de facto control, especially where Benjamin and Jane did not request Benjamin's removal and Julio was not in a position to generate written asserted-authority materials on his own, even though the repository does not yet contain a clean power-of-attorney instrument or a direct HACC note confirming the exact basis.
-17. On the current record, those combined facts create a sufficient threshold basis to require Solomon to answer whether he continued using collateral housing channels after the original order was granted.
+15. The current record supports a narrower elimination-based inference. Benjamin did not request his own removal from the lease, and Jane did not request Benjamin's removal.
+16. The `JC Household` chain reflects internal inconsistency that warrants explanation: on January 12, 2026 HACC first wrote that Julio needed paperwork unless court documents were submitted, later wrote that Julio and Jane were the only approved occupants, and also wrote that effective January 1, 2026 Benjamin was no longer listed based on `internal review` and `court documentation currently on file`.
+17. The broader sequence also includes a February 13, 2026 HACC 30-Day Notice of Termination addressed to Julio Regal Florez-Cortez, and the March 23 declarations attribute Benjamin's removal, in substance, to outside document flows from Benjamin's brother and stepfather.
+18. The current record does not yet identify a complete authority-document chain (including any power-of-attorney instrument) or a direct HACC source note identifying who submitted the controlling materials.
+19. On the present evidentiary record, these facts support threshold show-cause inquiry and targeted production rather than final factual findings on responsibility.
 
 III. PROOF POSTURE
 
-18. Movant does not ask the Court to assume that a direct HACC source record already states that Solomon asked HACC to remove Benjamin from the lease.
-19. The present record instead supports a serious interference question through the combination of:
+20. Movant does not ask the Court to assume that a direct HACC source record already states that Solomon asked HACC to remove Benjamin from the lease.
+21. The present record instead supports a serious interference question through the combination of:
    a. the granted order and in-person-appearance language;
    b. the parallel granted Julio protective-order packets showing the same residence and household-control conflict had already been formalized in court;
    c. Solomon's later noncompliance posture;
    d. the housing-specific allegations in Solomon's guardianship petition;
    e. the Skee declaration testimony; and
    f. HACC notice materials, including the March 17 tenant-rights warning that continued communication with restrained parties was interfering with the household's housing process.
-20. The current record also supports a conservative delay-allocation distinction: the clearer direct processing delay belongs to the Quantum / Blossom / HACC branch because the packet and tax-material trail was already open by December 2, 2025, HACC acknowledged on January 26, 2026 that Quantum staff had received the intake packet but had not forwarded it, and HACC did not reach a first clear voucher-issuance marker until March 19, 2026; the clearer direct interference / lease-disruption delay belongs to the Solomon branch because Benjamin was removed effective January 1, 2026, HACC confirmed that removal on January 12, 2026 based on internal review and court documentation currently on file, and the first clear restoration marker is the February 4, 2026 HACC notice again naming Benjamin as part of the tenant / notice group.
-21. The direct HACC actor-identification record remains a live production target and may require subpoena or other compelled production.
-22. The current record also does not yet prove what, if any, authority document Solomon was invoking, whether it was a purported power of attorney, or what he may have signed in Jane's name.
+22. The current record also supports a conservative delay-allocation distinction: the clearer direct processing delay belongs to the Quantum / Blossom / HACC branch (packet/tax-material trail open by December 2, 2025; January 26, 2026 acknowledgment that Quantum had not forwarded intake; first clear voucher marker March 19, 2026), while the clearer direct lease-disruption period appears in the Solomon branch (Benjamin removed effective January 1, 2026; removal confirmed January 12, 2026; restoration marker February 4, 2026).
+23. The direct HACC actor-identification record remains a live production target and may require subpoena or other compelled production.
+24. The current record does not yet prove what, if any, authority document Solomon was invoking or what he may have signed in Jane's name.
 
 IV. LEGAL AUTHORITY
 
-23. ORS 33.055 authorizes remedial-contempt proceedings and order-to-appear process where violation of a court order is alleged.
-24. ORS 33.075 authorizes compelled appearance mechanisms after nonappearance on a served order to appear.
-25. ORS 33.105 authorizes remedial sanctions upon proof of contempt.
-26. To the extent later filing conduct is implicated, Movant reserves any `ORCP 17` theory only to the extent supported after further record development.
+25. ORS 33.055 authorizes remedial-contempt proceedings and order-to-appear process where violation of a court order is alleged.
+26. ORS 33.075 authorizes compelled appearance mechanisms after nonappearance on a served order to appear.
+27. ORS 33.105 authorizes remedial sanctions upon proof of contempt.
+28. To the extent later filing conduct is implicated, Movant reserves any `ORCP 17` theory only to the extent supported after further record development.
 
 V. REQUESTED HEARING STRUCTURE
 
-27. Set an expedited show-cause hearing.
-28. Require pre-hearing filing of the operative original order packets and any clerk-certified records the parties possess concerning the original Solomon matter, the Julio protective-order packets, and the related Ashley Ferron protective filings.
-29. Permit targeted testimony on:
+29. Set an expedited show-cause hearing.
+30. Require pre-hearing filing of the operative original order packets and any clerk-certified records the parties possess concerning the original Solomon matter, the Julio protective-order packets, and the related Ashley Ferron protective filings.
+31. Permit targeted testimony on:
    a. order language and scope;
    b. Solomon's notice and later text posture;
    c. the housing-specific allegations in Solomon's guardianship petition;
@@ -70,27 +72,12 @@ V. REQUESTED HEARING STRUCTURE
    f. HACC notice of restraining-order concerns;
    g. the elimination-based lease-removal inference and any claimed-authority theory; and
    h. any later-produced HACC source materials.
-30. If the Court finds the direct HACC actor-identification record incomplete, limit the hearing to threshold show-cause review and record-completion directions rather than final contempt findings.
+32. If the Court finds the direct HACC actor-identification record incomplete, limit the hearing to threshold show-cause review and record-completion directions rather than final contempt findings.
 
 VI. EXHIBIT REFERENCES
 
-31. This motion presently relies on:
-   a. [sam barber restraining order.pdf](/home/barberb/HACC/evidence/history/sam%20barber%20restraining%20order.pdf);
-   b. [Benjamin Barber vs Julio Cortez protective order.pdf](/home/barberb/HACC/evidence/history/Benjamin%20Barber%20vs%20Julio%20Cortez%20protective%20order.pdf);
-   c. [Jane Cortez vs Julio Cortez.pdf](/home/barberb/HACC/evidence/history/Jane%20Cortez%20vs%20Julio%20Cortez.pdf);
-   d. [Abuse Protective Order Certificate of Service.pdf](/home/barberb/HACC/evidence/history/Abuse%20Protective%20Order%20Certificate%20of%20Service.pdf);
-   e. [solomon_motion_for_guardianship_ocr.txt](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt);
-   f. [declaration_of_benjamin_barber_in_support_of_preliminary_injunction.md](/home/barberb/HACC/workspace/declaration_of_benjamin_barber_in_support_of_preliminary_injunction.md);
-   g. [declaration_of_jane_cortez_march_23_2026_inspection_court_ready.md](/home/barberb/HACC/workspace/declaration_of_jane_cortez_march_23_2026_inspection_court_ready.md);
-   h. [2026-03-17_additional-info_bwilliams_3.eml](/home/barberb/HACC/workspace/imap-confirmed-messages/2026-03-17_additional-info_bwilliams_3.eml);
-   i. [jc_household_chain_household_composition_findings_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/jc_household_chain_household_composition_findings_2026-04-07.md);
-   j. [message.eml](/home/barberb/HACC/evidence/email_imports/starworks5-fraud-reimport-20260404/0014-Re-Allegations-of-Fraud---JC-Household-CAMTdTS_8pxVnRAMoaQ0n2oi1yBNnLNAiFSu4MFsTet-jJWJogQ-mail.gmail.com/message.eml);
-   k. [message.eml](/home/barberb/HACC/workspace/manual-imap-download-2026-03-31/20260202-164227_Re-Allegations-of-Fraud---JC-Household/message.eml);
-   l. [Julio Eviction notice.jpeg](/home/barberb/HACC/evidence/paper%20documents/Julio%20Eviction%20notice.jpeg);
-   m. [04_declaration_of_benjamin_barber_in_support_of_motions_final.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/04_declaration_of_benjamin_barber_in_support_of_motions_final.md);
-   n. [delay_apportionment_chart_solomon_vs_quantum_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/delay_apportionment_chart_solomon_vs_quantum_2026-04-07.md); and
-   o. [solomon_interference_and_lease_tampering_theory.md](/home/barberb/HACC/Breach%20of%20Contract/docs/solomon_interference_and_lease_tampering_theory.md).
-32. Movant requests leave to supplement with HACC source records, clerk-certified court records, and additional exhibit labeling once produced.
+33. This motion presently relies on the global exhibit set and declaration materials filed with this packet, including Exhibits 1, 2, 3, 4, 5, and 7 and the declaration in support of motions.
+34. Movant requests leave to supplement with HACC source records, clerk-certified court records, and supplemental Exhibits 8, 9, and 10 once produced.
 
 DATED: ____________, 2026
 

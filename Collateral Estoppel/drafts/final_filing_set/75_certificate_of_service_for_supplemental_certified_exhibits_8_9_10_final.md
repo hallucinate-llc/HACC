@@ -23,7 +23,6 @@ I served the supplemental filing set on the following person(s):
 
 1. Solomon Barber (Respondent/Petitioner)
    Service address: 4305 NE 125th Ave, Vancouver, WA 98682
-   Service phone: (503) 381-6911
    Date served: ____________________________________________
    Service method actually used: ____________________________________________
    Proof reference (receipt/tracking/affidavit/email log): ____________________________________________

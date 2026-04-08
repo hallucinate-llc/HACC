@@ -13,7 +13,7 @@ PENDING THRESHOLD ISSUE-PRECLUSION RECORD
 
 The Court, having reviewed the motion, declaration, and the file and record herein, FINDS and ORDERS:
 
-1. The motion is [GRANTED / DENIED / GRANTED IN PART].
+1. The motion is: ______________________.
 2. The following claims/issues are dismissed or limited as precluded: ______________________.
 3. No later than ______________________, the parties shall submit any certified records regarding the claimed prior proceeding, including any signed order/judgment, register of actions, and hearing/appearance materials relevant to issue preclusion.
 4. If a party contends no such prior-proceeding records exist, that party shall say so in a signed filing by: ______________________.

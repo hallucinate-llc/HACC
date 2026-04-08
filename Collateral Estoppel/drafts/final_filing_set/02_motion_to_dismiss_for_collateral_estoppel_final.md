@@ -42,7 +42,7 @@ V. WHY THRESHOLD CONTROL IS APPROPRIATE NOW
 
 14. Because the petition affirmatively seeks sweeping authority while also denying any prior appointment or comparable authority source, the existence or nonexistence of a prior separate proceeding should be resolved before merits litigation expands.
 15. The Court may therefore:
-   a. dismiss or limit issues now to the extent the current source materials and any additional admissible records already establish preclusion; or
+   a. limit issues now and, only to the extent the current source materials and any additional admissible records already establish preclusion, dismiss any barred issue; or
    b. require a focused preclusion record, comparison chart, or threshold hearing before permitting relitigation of the same authority issue.
 
 VI. EXHIBIT REFERENCES (GLOBAL NUMBERING)

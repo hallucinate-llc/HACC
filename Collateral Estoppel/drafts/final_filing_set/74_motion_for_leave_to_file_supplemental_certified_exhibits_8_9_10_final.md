@@ -22,7 +22,7 @@ I. REQUESTED RELIEF
 II. GROUNDS
 
 4. The current motion set expressly reserved supplementation upon receipt of certified docket/order/appearance materials.
-5. Certified records are now being obtained through clerk records requests and are expected to establish or clarify threshold issue-preclusion elements.
+5. Certified records are being obtained through clerk records requests and, once filed, will establish or clarify threshold issue-preclusion elements.
 6. Supplementation will assist the Court by providing authenticated/certified source records for finality, issue identity, notice, and full-and-fair-opportunity analysis.
 
 III. SCOPE OF SUPPLEMENTAL EXHIBITS

@@ -11,16 +11,16 @@ Protected Person.
 MOTION TO COMPEL SUBPOENA COMPLIANCE
 AND FOR APPROPRIATE SANCTIONS
 
-Movant Benjamin Barber moves for an order compelling full subpoena compliance by responding custodian/person identified below and for appropriate sanctions for continued noncompliance.
+Movant Benjamin Barber moves for an order compelling full subpoena compliance by the responding custodian/person identified below and for appropriate sanctions for continued noncompliance.
 
 This motion is based on the record in this case, the subpoena packet and service proof, the declaration re noncompliance, and any argument permitted by the Court.
 
-Responding custodian/person:
-- Name/Entity: ______________________
-- Subpoena served date: ______________________
-- Response due date: ______________________
-- Date(s) of response/nonresponse: ______________________
-- Deficiency notice date and cure deadline: ______________________
+Responding custodian/person (complete all fields before filing):
+- Name/Entity: [INSERT]
+- Subpoena served date: [INSERT]
+- Response due date: [INSERT]
+- Date(s) of response/nonresponse: [INSERT]
+- Deficiency notice date and cure deadline: [INSERT]
 
 I. RELIEF REQUESTED
 
@@ -32,8 +32,8 @@ I. RELIEF REQUESTED
 
 II. FACTUAL BASIS (SUMMARY)
 
-6. Subpoena package was served with clear definitions, attachment requests, query protocol (Attachment A-2/B-2 paragraphs 10-27), cover instruction sheet, and compliance checklist.
-7. Response was incomplete and/or noncompliant.
+6. The subpoena package was served with clear definitions, attachment requests, query protocol (Attachment A-2/B-2 paragraphs 10-27), cover instruction sheet, and compliance checklist.
+7. The response was incomplete and/or noncompliant.
 8. Deficiency notice and cure opportunity were provided.
 9. Noncompliance remains and materially affects adjudication of issues before the Court.
 
@@ -60,7 +60,7 @@ VI. CONCLUSION
 
 For these reasons, Movant respectfully requests the Court grant this motion and issue an order compelling full compliance and imposing appropriate sanctions/remedial terms.
 
-DATED: ______________________
+DATED: [INSERT]
 
 ____________________________________
 Benjamin Barber, Pro Se

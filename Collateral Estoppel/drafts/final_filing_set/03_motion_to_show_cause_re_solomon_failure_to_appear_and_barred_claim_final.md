@@ -8,14 +8,14 @@ In the Matter of:
 Jane Kay Cortez,
 Protected Person.
 
-RESERVE MOTION FOR ORDER TO SHOW CAUSE
+MOTION FOR ORDER TO SHOW CAUSE
 RE: RESPONDENT SOLOMON BARBER'S FAILURE TO TIMELY OPPOSE IN THE ORIGINAL MATTER AND FILING OF PRECLUDED CLAIM
 
-Movant, Benjamin Barber, preserves this draft as a reserve show-cause motion to be used if later docket, hearing, or appearance materials strengthen the nonappearance or original-matter-opposition branch. On the current record, it is best understood as a contingent threshold-management motion rather than a primary filing.
+Movant, Benjamin Barber, requests an Order to Show Cause requiring Solomon Barber to appear and explain why relief should not be entered based on failure to timely pursue opposition in the original matter and the filing of a later claim asserted to be precluded.
 
 I. REQUESTED RELIEF
 
-1. If later record development supports it, issue an Order to Show Cause requiring Solomon Barber to appear on a date certain.
+1. Issue an Order to Show Cause requiring Solomon Barber to appear on a date certain.
 2. Require Solomon Barber to explain why, after appearing in person in the original restraining-order matter and receiving notice that the order was in effect, he did not timely oppose that order in the original matter through the available hearing process, and instead later took a collateral position inconsistent with the order.
 3. Require Solomon Barber to explain why filing of the present claim is not barred by collateral estoppel.
 4. Enter appropriate remedial orders, including claim limitation/dismissal and sanctions authorized by law and supported by admissible evidence.
@@ -35,27 +35,27 @@ II. GROUNDS
 
 III. LEGAL AUTHORITY
 
-13. ORS 33.055 authorizes remedial-contempt proceedings and order-to-appear process when a party is alleged to have violated a court order.
-14. ORS 33.075 authorizes compelled appearance mechanisms after nonappearance on a served order to appear.
-15. ORS 33.105 authorizes remedial sanctions upon proof of contempt.
-16. To the extent ORCP 17 relief is sought, Movant will proceed only in compliance with applicable ORCP 17 procedural requirements, including any service/safe-harbor prerequisites.
+15. ORS 33.055 authorizes remedial-contempt proceedings and order-to-appear process when a party is alleged to have violated a court order.
+16. ORS 33.075 authorizes compelled appearance mechanisms after nonappearance on a served order to appear.
+17. ORS 33.105 authorizes remedial sanctions upon proof of contempt.
+18. To the extent ORCP 17 relief is sought, Movant will proceed only in compliance with applicable ORCP 17 procedural requirements, including any service/safe-harbor prerequisites.
 
 IV. REQUESTED HEARING STRUCTURE
 
-17. If activated, set an expedited show-cause hearing.
-18. If activated, require pre-hearing filing of clerk-certified docket and operative orders.
-19. If activated, permit targeted testimony on notice, appearance history, original-matter opposition path, preclusion elements, and any proven collateral interference sequence.
-20. If activated, require parties to identify, before hearing, the exact order/date/event each side contends controls the original-matter opposition / noncompliance issue.
+19. Set an expedited show-cause hearing.
+20. Require pre-hearing filing of clerk-certified docket and operative orders.
+21. Permit targeted testimony on notice, appearance history, original-matter opposition path, preclusion elements, and any proven collateral interference sequence.
+22. Require parties to identify, before hearing, the exact order/date/event each side contends controls the original-matter opposition / noncompliance issue.
 
 V. EXHIBIT REFERENCES (GLOBAL NUMBERING)
 
-21. This motion presently relies on Exhibits 1, 3, 4, 5, and 7 from the global exhibit legend filed with this packet.
-22. Movant requests leave to supplement with certified notice/appearance/preclusion records (Exhibits 8, 9, and 10) immediately upon receipt.
-23. If useful to the Court, Movant can provide an organizational appendix summarizing exhibit status; however, admissible exhibits and certified records control.
+23. This motion presently relies on Exhibits 1, 3, 4, 5, and 7 from the global exhibit legend filed with this packet.
+24. Movant requests leave to supplement with certified notice/appearance/preclusion records (Exhibits 8, 9, and 10) immediately upon receipt.
+25. If useful to the Court, Movant can provide an organizational appendix summarizing exhibit status; however, admissible exhibits and certified records control.
 
 VI. RESERVATION
 
-24. Movant reserves amendment rights after receipt of clerk-certified docket and complete service/appearance record.
+26. Movant reserves amendment rights after receipt of clerk-certified docket and complete service/appearance record.
 
 DATED: ____________, 2026
 

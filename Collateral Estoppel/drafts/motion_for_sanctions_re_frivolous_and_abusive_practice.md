@@ -28,7 +28,7 @@ Movant requests threshold review, claim-limiting relief, and reservation of sanc
    b. ignoring or minimizing operative court orders after notice;
    c. attempting to obtain practical control through collateral channels rather than through proper motion practice; and
    d. causing delay, instability, and prejudice in connected housing or authority disputes involving Jane Cortez.
-7. If proven, that pattern supports sanctions because it burdens both the protected person and the court while forcing others to litigate around collateral interference rather than the actual merits.
+7. If proven, that pattern supports threshold claim-limiting relief and, if the necessary elements are later established, sanctions because it burdens both the protected person and the court while forcing others to litigate around collateral interference rather than the actual merits.
 8. The doctrine side of this motion is now grounded, but the facts remain segmented into:
    a. verified order-status, notice, and prejudice facts;
    b. authority-grounded but still proof-gated issue-preclusion doctrine;
@@ -52,7 +52,7 @@ Movant requests threshold review, claim-limiting relief, and reservation of sanc
 ### IV. Frivolous / abusive practice section (proof-gated)
 
 12. This motion is intentionally conflict-aware and proof-gated.
-13. Final sanctions are requested only if the Court finds one or more of the following:
+13. Final sanctions are requested only if, after threshold review, the Court finds one or more of the following:
    a. the filing re-raises issues already decided or clearly barred;
    b. the filing or related conduct lacks a good-faith basis in fact or law;
    c. the actor pursued the matter for an improper purpose, including harassment, control, delay, or pressure;
@@ -89,7 +89,7 @@ Movant requests threshold review, claim-limiting relief, and reservation of sanc
 
 ### VII. Evidentiary predicates before final sanctions ruling
 
-25. Certified docket and prior-order materials: see the shared placeholder exhibits in [motion_exhibit_index.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/motion_exhibit_index.md), especially proposed Exhibits P and Q, to be added when certified records are obtained.
+25. Certified docket and prior-order materials for any final sanctions or preclusion ruling: see the shared placeholder exhibits in [motion_exhibit_index.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/motion_exhibit_index.md), especially proposed Exhibits P and Q, to be added when certified records are obtained.
 26. Signed operative order and digest:
    a. [sam barber restraining order.pdf](/home/barberb/HACC/evidence/history/sam%20barber%20restraining%20order.pdf)
    b. [solomon_order_digest.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_order_digest.md)
@@ -120,7 +120,7 @@ Movant requests threshold review, claim-limiting relief, and reservation of sanc
 
 ### VIII. Requested hearing structure
 
-33. Set an evidentiary or threshold review hearing as the Court deems appropriate.
+33. Set an evidentiary or threshold review hearing as the Court deems appropriate, with sanctions issues reserved unless the Court concludes the source record is sufficient to decide them.
 34. Require pre-hearing production or filing of certified records, operative orders, and any available HACC source records concerning lease-removal and collateral-contact issues.
 35. Permit targeted testimony on improper purpose, preclusion, collateral interference, and prejudice.
 36. If the Court finds the prior separate proceeding record incomplete, limit any preclusion-based ruling to threshold management, claim limitation, or sanctions reservation and reserve final sanctions adjudication until the source record is complete.
