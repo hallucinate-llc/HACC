@@ -16,7 +16,7 @@ Movant Benjamin Barber moves for an order compelling full subpoena compliance by
 This motion is based on the record in this case, the subpoena packet and service proof, the declaration re noncompliance, and any argument permitted by the Court.
 
 Responding custodian/person (complete all fields before filing):
-- Name/Entity: [INSERT]
+- Name/Entity: Solomon Barber (initial target; replace per recipient-specific compel filing)
 - Subpoena served date: [INSERT]
 - Response due date: [INSERT]
 - Date(s) of response/nonresponse: [INSERT]

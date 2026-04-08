@@ -87,3 +87,8 @@ Why it remains reserve-only:
 1. HACC actor-identification / authority-chain records;
 2. fuller prior-proceeding docket / order layer for issue preclusion;
 3. any real hearing-minute or nonappearance material needed to activate the reserve show-cause motion.
+
+## 6. Motion-specific proof-gap memo
+
+- [remaining_proof_gaps_by_motion_2026-04-08.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/remaining_proof_gaps_by_motion_2026-04-08.md)
+- [issue_preclusion_priority_targets_2026-04-08.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/issue_preclusion_priority_targets_2026-04-08.md)

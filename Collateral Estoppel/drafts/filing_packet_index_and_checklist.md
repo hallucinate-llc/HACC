@@ -17,6 +17,7 @@ Case target: `26PR00641` (confirm from certified docket before filing)
 Current readiness audit:
 
 - [motion_readiness_audit_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/motion_readiness_audit_2026-04-07.md)
+- [remaining_proof_gaps_by_motion_2026-04-08.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/remaining_proof_gaps_by_motion_2026-04-08.md)
 - [108_primary_filing_sequence_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/108_primary_filing_sequence_2026-04-07.md)
 
 ## Exhibit R packet
@@ -45,6 +46,10 @@ Recommended order:
 10. [09_proposed_order_show_cause_final.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/09_proposed_order_show_cause_final.md)
 11. Reserve / contingent only: [03_motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_final.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/03_motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_final.md)
 12. [10_prefill_sources_and_verification_note.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/10_prefill_sources_and_verification_note.md)
+
+Note:
+The numbered list above is the core filing sequence.
+The long `final_filing_set` material listed below is best treated as an extended repository inventory / appendix set, not as a strict numbered assembly order.
 12. [11_subpoena_duces_tecum_to_solomon_barber_final.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/11_subpoena_duces_tecum_to_solomon_barber_final.md)
 13. [11A_attachment_a1_solomon_requests_final.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/11A_attachment_a1_solomon_requests_final.md)
 14. [11B_attachment_a2_definitions_and_instructions_final.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/11B_attachment_a2_definitions_and_instructions_final.md)

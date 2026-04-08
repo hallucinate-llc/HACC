@@ -9,15 +9,12 @@ Jane Kay Cortez,
 Protected Person.
 
 CERTIFICATE OF SERVICE
-(SUPPLEMENTAL CERTIFIED EXHIBITS 8, 9, AND 10)
+(SUPPLEMENTAL DECLARATION + NOTICE RE GOOGLE VOICE/SMS SERVICE CHAIN)
 
 I certify that on April 8, 2026, I served true and correct copies of the following supplemental filing documents:
 
-1. Motion for Leave to File Supplemental Certified Exhibits (Exhibits 8, 9, and 10);
-2. Supplemental Certified Exhibit 8;
-3. Supplemental Certified Exhibit 9;
-4. Supplemental Certified Exhibit 10; and
-5. Any accompanying supplemental declaration or exhibit index update filed with this supplement.
+1. Supplemental Declaration of Benjamin Barber Re: Authentication of Google Voice Transcript and SMS Email Records (`117_supplemental_declaration_authenticating_google_voice_sms_service_chain_final.md`);
+2. Notice of Filing Supplemental Declaration Re: Google Voice / SMS Service Chain Authentication (`118_notice_of_filing_supplemental_declaration_google_voice_sms_service_chain_final.md`).
 
 I served the supplemental filing set on the following person(s):
 

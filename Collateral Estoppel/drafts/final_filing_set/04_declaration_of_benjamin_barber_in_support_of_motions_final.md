@@ -30,30 +30,31 @@ B. SHOW-CAUSE SUPPORT STATEMENTS (PROOF-GATED)
 
 8. Exhibit 1 reflects a November 20, 2025 restraining order against Solomon Samuel Barber with operative restraint/compliance terms and language stating no further service was necessary because Respondent appeared in person.
 9. Based on Exhibits 1 and 3, I understand there is record support for notice and compliance-path disputes involving Solomon Barber.
-10. A preserved March 10, 2026 text message from Solomon states: "Once I get served and it goes into effect, I will comply with whatever the order states. But it is not in effect," which I offer as a direct statement of his service/effect position.
-11. The April 3-4, 2026 counsel email chain reflects service-labeled transmission to Alex Bluestone and counsel's response that he did not accept service on behalf of Solomon while confirming representation in the guardianship matter; the preserved chain also includes a same-day FedEx receipt image and delivery-tracking identifiers consistent with physical transmittal to counsel.
-12. The stored Julio order scans strengthen my understanding that household-control and residence disputes at 10043 SE 32nd Ave were already being formalized in court before the later HACC lease-removal sequence.
-13. The stored `Abuse Protective Order Certificate of Service` scan appears to be a blank service form only, not a completed proof of service.
-14. I request the Court require appearance and explanation regarding compliance posture and any assertion that an in-effect order was unenforceable absent additional service.
-15. To my personal knowledge, Julio Regal Florez-Cortez cannot read or write in any language.
-16. I did not request my own removal from the lease, and Jane Kay Cortez did not request my removal from the lease.
-17. Because Julio could not read or write in any language, I do not believe he was independently generating written housing demands, packet corrections, or asserted-authority paperwork during the same period that HACC said outside documents were affecting household composition.
+10. In the preserved March 10, 2026 Google Voice thread, I sent order-image MMS messages at approximately 10:36:48-10:36:49 AM Pacific Time, and Solomon then responded at approximately 10:39:26 AM Pacific Time, "Oh I understand, I'm just not incentivized to cooperate."
+11. In the same thread, Solomon later stated at approximately 10:45:53 AM Pacific Time: "Once I get served and it goes into effect, I will comply with whatever the order states. But it is not in effect," which I offer as a direct statement of his service/effect position.
+12. The April 3-4, 2026 counsel email chain reflects service-labeled transmission to Alex Bluestone and counsel's response that he did not accept service on behalf of Solomon while confirming representation in the guardianship matter; the preserved chain also includes a same-day FedEx receipt image and delivery-tracking identifiers consistent with physical transmittal to counsel.
+13. The stored Julio order scans strengthen my understanding that household-control and residence disputes at 10043 SE 32nd Ave were already being formalized in court before the later HACC lease-removal sequence.
+14. The stored `Abuse Protective Order Certificate of Service` scan appears to be a blank service form only, not a completed proof of service.
+15. I request the Court require appearance and explanation regarding compliance posture and any assertion that an in-effect order was unenforceable absent additional service.
+16. To my personal knowledge, Julio Regal Florez-Cortez cannot read or write in any language.
+17. I did not request my own removal from the lease, and Jane Kay Cortez did not request my removal from the lease.
+18. Because Julio could not read or write in any language, I do not believe he was independently generating written housing demands, packet corrections, or asserted-authority paperwork during the same period that HACC said outside documents were affecting household composition.
 
 C. COLLATERAL-ESTOPPEL SUPPORT STATEMENTS (PROOF-GATED)
 
-18. The March 31, 2026 guardianship petition seeks broad authority over Jane Kay Cortez, including residence-related circumstances, APS interface, and possible law-enforcement transport, while also stating that no prior guardian, trustee, health-care representative, or attorney-in-fact previously existed.
-19. My earlier review of repository materials repeatedly raised the possibility that prior authority-related proceedings or appointments may already have addressed overlapping control issues concerning Jane Kay Cortez.
-20. I do not claim final issue preclusion has already been proven. I understand final collateral-estoppel adjudication requires proof of final decision, issue identity, party/privity, and full and fair opportunity, and that clerk-certified copies would strengthen that proof.
-21. I request dismissal only to the extent those elements are established by admissible exhibits, and otherwise request narrowing or a threshold preclusion record before unrestricted merits litigation proceeds.
+19. The March 31, 2026 guardianship petition seeks broad authority over Jane Kay Cortez, including residence-related circumstances, APS interface, and possible law-enforcement transport, while also stating that no prior guardian, trustee, health-care representative, or attorney-in-fact previously existed.
+20. My earlier review of repository materials repeatedly raised the possibility that prior authority-related proceedings or appointments may already have addressed overlapping control issues concerning Jane Kay Cortez.
+21. I do not claim final issue preclusion has already been proven. I understand final collateral-estoppel adjudication requires proof of final decision, issue identity, party/privity, and full and fair opportunity, and that clerk-certified copies would strengthen that proof.
+22. I request dismissal only to the extent those elements are established by admissible exhibits, and otherwise request narrowing or a threshold preclusion record before unrestricted merits litigation proceeds.
 
 D. GAL SUPPORT STATEMENTS
 
-22. I believe the record reflects material factual conflicts that warrant independent review for Jane Kay Cortez's interests.
-23. I request appointment of a neutral GAL to distinguish proven facts from unproven assertions.
+23. I believe the record reflects material factual conflicts that warrant independent review for Jane Kay Cortez's interests.
+24. I request appointment of a neutral GAL to distinguish proven facts from unproven assertions.
 
 E. GRAPH-ASSISTED MATERIALS
 
-24. To the extent any generated summary materials are referenced, I request that they be treated only as organizational aids and not as substitutes for court records, admissible exhibits, and testimony.
+25. To the extent any generated summary materials are referenced, I request that they be treated only as organizational aids and not as substitutes for court records, admissible exhibits, and testimony.
 
 I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct to the best of my knowledge.
 
