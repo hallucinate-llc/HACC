@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-07",
+  "generated_at": "2026-04-09",
   "modes": {
     "strict": {
-      "active_rule_count": 31,
+      "active_rule_count": 42,
       "hard_conflict_FP": [],
       "hard_conflict_FO": [],
       "tension_OP": [],
@@ -13,7 +13,7 @@
       }
     },
     "inclusive": {
-      "active_rule_count": 32,
+      "active_rule_count": 43,
       "hard_conflict_FP": [],
       "hard_conflict_FO": [],
       "tension_OP": [],

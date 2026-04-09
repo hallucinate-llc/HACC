@@ -39,6 +39,8 @@ Current readiness audit:
 - [deontic_duty_matrix_packet_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/deontic_duty_matrix_packet_2026-04-09.md)
 - [law_first_hacc_quantum_duty_memo_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/law_first_hacc_quantum_duty_memo_2026-04-09.md)
 - [proof_gap_matrix_housing_probate_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/proof_gap_matrix_housing_probate_2026-04-09.md)
+- [housing_primary_source_record_ladder_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/housing_primary_source_record_ladder_2026-04-09.md)
+- [probate_primary_source_record_ladder_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/probate_primary_source_record_ladder_2026-04-09.md)
 - [top_10_documents_to_obtain_now_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/top_10_documents_to_obtain_now_2026-04-09.md)
 - [red_flags_by_filing_checklist_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/red_flags_by_filing_checklist_2026-04-09.md)
 - [housing_duties_fact_law_encoding_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/housing_duties_fact_law_encoding_2026-04-09.md)

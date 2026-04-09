@@ -11,6 +11,15 @@ Protected Person.
 SUPPLEMENTAL DECLARATION OF BENJAMIN BARBER
 RE: ORCP 27 NOTICE-COMPLIANCE STATUS
 
+DRAFT TEMPLATE - COMPLETE ALL BLANKS BEFORE FILING
+
+PRE-FILING COMPLETION CHECKLIST
+1. Confirm all service-method/date/address blanks are completed for each recipient actually served.
+2. Attach at least one proof record for each listed recipient (`N-1`, `N-2`, or additional labeled attachments).
+3. If any ORCP 27 notice category is incomplete, state the reason and requested cure schedule in paragraph 4-5.
+4. Confirm this declaration is signed and dated before filing.
+5. Remove this checklist block or mark it as completed before filing the final executed declaration copy.
+
 I, Benjamin Barber, declare as follows:
 
 1. I am over 18 years of age and competent to testify to the matters stated herein.

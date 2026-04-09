@@ -22,38 +22,49 @@ I. REQUESTED RELIEF
 II. GROUNDS
 
 5. The record reflects material factual conflicts affecting case integrity, including petition-stage statements and competing claims regarding prior authority, service/notice, and order compliance.
-6. The matter also includes allegations of housing-process interference, some of which remain proof-gated pending certified and authenticated records.
-7. Movant's present understanding from the signed restraining-order sequence in case `25PO11530` is that Benjamin Barber was previously recognized in a guardian-ad-litem posture for Jane Kay Cortez in that protective conflict; Movant treats this continuity point as proof-gated until certified copies are lodged.
+6. The matter also includes allegations of housing-process interference, some of which remain provisional pending certified and authenticated records.
+7. Movant's present understanding from the signed restraining-order sequence in case `25PO11530` is that Benjamin Barber was previously recognized in a guardian-ad-litem posture for Jane Kay Cortez in that protective conflict; Movant treats this continuity point as provisional until certified copies are lodged.
 8. If certified records confirm prior GAL recognition/grant naming Benjamin Barber for Jane Kay Cortez, Movant requests that this Court align present representation handling to avoid inconsistent treatment of the same protected person across related proceedings.
-9. Even if prior-GAL continuity is not yet fully certified, appointment/appearance clarification is independently warranted here because the present record reflects material factual conflict, contested emergency-control allegations, and protective-case management needs affecting Jane Kay Cortez.
-10. The April 3-4, 2026 counsel email chain reflects service-labeled transmission to Alex Bluestone in this same Jane Cortez guardianship controversy and counsel's acknowledgment of representation in that guardianship matter while disputing acceptance of service, supporting same-matter notice context while preserving service-validity questions for Court determination.
-11. The requested GAL scope is narrowly tailored to unresolved protective-proceeding questions: (a) current wishes and welfare concerns of Jane Kay Cortez, (b) whether requested emergency/plenary relief is broader than necessary on the present record, and (c) what least-restrictive protective structure can be supported by admissible evidence.
-12. Movant requests appointment only for neutral investigation/reporting support and not as a merits shortcut on disputed collateral housing, eviction, or federal-claim questions.
+9. Until such certification is lodged, Movant does not ask the Court to treat prior-GAL continuity as an adjudicated fact or as a stand-alone appointment predicate in this case.
+10. Even if prior-GAL continuity is not yet fully certified, appointment/appearance clarification is independently warranted here because the present record reflects material factual conflict, contested emergency-control allegations, and protective-case management needs affecting Jane Kay Cortez.
+11. The April 3-4, 2026 counsel email chain reflects service-labeled transmission to Alex Bluestone in this same Jane Cortez guardianship controversy and counsel's acknowledgment of representation in that guardianship matter while disputing acceptance of service, supporting same-matter notice context while preserving service-validity questions for Court determination.
+12. The requested GAL scope is narrowly tailored to unresolved protective-proceeding questions: (a) current wishes and welfare concerns of Jane Kay Cortez, (b) whether requested emergency/plenary relief is broader than necessary on the present record, and (c) what least-restrictive protective structure can be supported by admissible evidence.
+13. Movant requests appointment only for neutral investigation/reporting support and not as a merits shortcut on disputed collateral housing, eviction, or federal-claim questions.
 
 III. LEGAL AUTHORITY
 
-13. ORS 125.025 and ORS 125.050 support this Court's protective-proceeding authority to structure case management and apply ORCP as appropriate to protect Jane Kay Cortez's interests.
-14. ORS 125.065, ORS 125.075, and ORS 125.080 support notice, objection, hearing, and participation management in this protective proceeding, including targeted appointment/reporting structure where needed for reliable fact development.
-15. To the extent applicable in this protective posture, ORCP 27 further supports appointment of a guardian ad litem when qualifying incapacity-related circumstances and evidentiary need are shown.
-16. This Court has discretion to appoint a suitable GAL and to structure reporting and status deadlines to assist fact development and protect the interests of the protected person.
+14. ORS 125.025 and ORS 125.050 support this Court's protective-proceeding authority to structure case management and apply ORCP as appropriate to protect Jane Kay Cortez's interests.
+15. ORS 125.065, ORS 125.075, and ORS 125.080 support notice, objection, hearing, and participation management in this protective proceeding, including targeted appointment/reporting structure where needed for reliable fact development.
+16. Independent of any ORCP pathway, this Court's Chapter 125 protective authority supports a tailored neutral-investigation structure where factual conflict and reliability concerns are shown on the current record.
+17. This motion relies primarily on Chapter 125 protective-case authority for the requested appointment/appearance structure.
+18. To the extent applicable in this protective posture, ORCP 27 is offered as an additional procedural support path when qualifying incapacity-related circumstances and evidentiary need are shown.
+19. Movant presents ORCP 27 as an additional procedural support path, not as the exclusive basis for relief; if the Court declines to apply any ORCP 27 branch in this probate posture, Movant requests the same appointment/appearance relief under Chapter 125 protective authority alone.
+20. This Court has discretion to appoint a suitable GAL and to structure reporting and status deadlines to assist fact development and protect the interests of the protected person.
 
-IV. ORCP 27 PROCEDURAL PREDICATES (TO THE EXTENT APPLICABLE)
+IV. ORCP 27 PROCEDURAL PREDICATES (SECONDARY PATHWAY; TO THE EXTENT APPLICABLE)
 
-17. ORCP 27 D predicate: this motion is supported by declarations containing facts offered to show qualifying need and factual conflict for appointment/appearance clarification in this protective proceeding.
-18. ORCP 27 E recipient path (to the extent applicable here): Movant will provide notice to Jane Kay Cortez (respondent/protected person), Solomon Samuel Barber, and other known interested persons identified by reasonable inquiry (including any known current fiduciary/agent roles).
-19. ORCP 27 F proof path (to the extent applicable here): Movant will file a notice-compliance declaration identifying who was served, when, by what method, and what proof records are attached.
-20. Movant has prepared a Supplemental Declaration Re ORCP 27 Notice-Compliance Status for completion and filing with service-specific facts and attached proof records.
-21. ORCP 27 H fallback (to the extent applicable here): if any ORCP 27 E recipient category cannot be completed on the current emergency timeline after reasonable inquiry, Movant requests targeted modification/waiver and a court-set cure schedule for supplemental notice.
-22. To the extent any objection is filed, Movant requests hearing management consistent with ORCP 27 G and Chapter 125 scheduling authority.
+21. ORCP 27 D predicate: this motion is supported by declarations containing facts offered to show qualifying need and factual conflict for appointment/appearance clarification in this protective proceeding.
+22. ORCP 27 E recipient path (to the extent applicable here): Movant will provide notice to Jane Kay Cortez (respondent/protected person), Solomon Samuel Barber, and other known interested persons identified by reasonable inquiry (including any known current fiduciary/agent roles).
+23. ORCP 27 F proof path (to the extent applicable here): Movant will file a notice-compliance declaration identifying who was served, when, by what method, and what proof records are attached.
+24. Movant has prepared a Supplemental Declaration Re ORCP 27 Notice-Compliance Status for completion and filing with service-specific facts and attached proof records.
+25. ORCP 27 H fallback (to the extent applicable here): if any ORCP 27 E recipient category cannot be completed on the current emergency timeline after reasonable inquiry, Movant requests targeted modification/waiver and a court-set cure schedule for supplemental notice.
+26. To the extent any objection is filed, Movant requests hearing management consistent with ORCP 27 G and Chapter 125 scheduling authority.
+27. In the alternative, if the Court finds any ORCP 27 branch not procedurally applicable in this probate posture, Movant requests the same appointment/appearance relief under the Court's Chapter 125 protective-case management authority.
 
 V. EXHIBIT REFERENCES (GLOBAL NUMBERING)
 
-23. This motion presently relies on Exhibit 1 (scanned signed order source), Exhibit 2 (current petition posture), and supporting declarations filed with this packet.
-24. Movant requests leave to supplement with certified docket/order materials (including Exhibits 8-10 and certified signed-order record support for `25PO11530`) as soon as they are received.
+28. This motion presently relies on Exhibit 1 (scanned signed order source), Exhibit 2 (current petition posture), and supporting declarations filed with this packet.
+29. Movant requests leave to supplement with certified docket/order materials (including Exhibits 8-10 and certified signed-order record support for `25PO11530`) as soon as they are received.
 
 VI. RESERVATION
 
-25. Movant reserves amendment rights after receipt of certified docket and complete order history.
+30. Movant reserves amendment rights after receipt of certified docket and complete order history.
+
+VII. LIMITATIONS AND REQUESTED HANDLING
+
+31. Any asserted prior-GAL continuity from related matters is offered conditionally and should not be treated as established unless certified records are lodged.
+32. The Court may grant tailored GAL appointment/appearance relief on current Chapter 125 conflict-management needs shown in this record.
+33. This motion does not request treatment of uncertified overlap context as a final preclusion finding or final authority adjudication.
 
 DATED: ____________, 2026
 

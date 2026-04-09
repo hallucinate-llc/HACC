@@ -38,12 +38,12 @@ II. TRACKER UPDATE RULES
    b. set `records_received` to `yes` only when actual documents are received and staged.
 6. Mirror high-level entries in `158_records_request_and_subpoena_tracker_rows_2026-04-09.csv`.
 
-III. DEONTIC CONTROL (PROOF GATING)
+III. HANDLING CONTROL (PROOF GATING)
 
-7. `O` Keep preclusion dismissal framing conditional until certified finality/identity packets are lodged.
-8. `O` Lodge sheriff return immediately once received before converting "reported service event" to formal proved-service statement.
-9. `F` Do not represent cross-forum issues as finally adjudicated without certified order/docket support.
-10. `P` Use currently located repository scans for timeline/context support only.
+7. Keep preclusion dismissal framing conditional until certified finality/identity packets are lodged.
+8. Lodge sheriff return immediately once received before converting "reported service event" to formal proved-service statement.
+9. Do not represent cross-forum issues as finally adjudicated without certified order/docket support.
+10. Use currently located repository scans for timeline/context support only.
 
 IV. NEXT CHECKPOINTS
 

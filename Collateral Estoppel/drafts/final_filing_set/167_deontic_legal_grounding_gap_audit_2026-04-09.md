@@ -1,4 +1,4 @@
-# Deontic + Legal Grounding Gap Audit (2026-04-09)
+# Handling + Legal Grounding Gap Audit (2026-04-09)
 
 Scope reviewed:
 - 01, 02, 03, 04, 06, 34, 86, 117, 139, 149, 151, 152, 157, 152_objection
@@ -9,7 +9,7 @@ Scope reviewed:
 - Duplicate paragraph number appears (`64.` repeated), and sequence continuity is broken around lines 90-97.
 - Fix: renumber all declaration paragraphs and lock citation references to new paragraph map.
 
-2. `34_strict_mode_evidentiary_addendum_bundle_2026-04-07.md` includes actor-misaligned deontic rules that conflict with your litigation position.
+2. `34_strict_mode_evidentiary_addendum_bundle_2026-04-07.md` includes actor-misaligned logic rules that conflict with your litigation position.
 - Rules `r2_noninterference_prohibition_for_benjamin` and `r3_benjamin_obligation_comply_or_seek_relief` frame Benjamin as prohibited/obligated actor for interference/order-disregard in a posture where Solomon is the adverse interference target.
 - Fix: split actor-specific rules with explicit predicates and avoid publishing contradictory actor assignment.
 
@@ -28,7 +28,7 @@ Scope reviewed:
 - Fix: tighten authority section to a specific, harmonized lane: ORS chapter 125 protective powers + ORCP applicability + explicit requested functional role.
 
 6. `03_motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_final.md` requests sanctions and contempt-path relief but does not map each requested sanction to exact proved elements in the pleading body.
-- Deontic posture (obligation/prohibition breach) is implied but not fully element-by-element mapped.
+- Handling posture (obligation/prohibition breach) is implied but not fully element-by-element mapped.
 - Fix: add a short element table: duty source, trigger event, breach act, evidence ID, requested remedy.
 
 7. `151_motion_for_limited_orcp29_joinder_or_separate_forum_order_re_hacc_quantum_final.md` and `152_fallback_motion...` are strong on ORCP 29B/22C framing but still rely on generalized "record identifies" assertions.
@@ -54,15 +54,15 @@ Scope reviewed:
 12. `149_notice_of_clerk_relayed_federal_advisement_status_pending_docket_confirmation_final.md` is properly caveated but still depends on clerk-relayed oral status.
 - Fix: keep notice strictly procedural and attach docket proof before relying on assignment/advisement assertions.
 
-## Deontic-logic model gaps (cross-document)
+## Handling-logic model gaps (cross-document)
 
 13. Missing explicit trigger-time fields in motions for many claimed obligations/prohibitions.
 - Current drafting often states obligations abstractly, but not always as: source order + trigger date + actor + prohibited/permitted act + breach event.
-- Fix: add one "Deontic Trigger Table" exhibit with columns:
-  `Rule_ID | Actor | Modality(O/P/F) | Source Authority | Trigger Event | Time Window | Alleged Breach/Compliance Event | Evidence ID | Status(proved/proof-gated)`.
+- Fix: add one "Handling Trigger Table" exhibit with columns:
+  `Rule_ID | Actor | Modality(Obligation/Permission/Prohibition) | Source Authority | Trigger Event | Time Window | Alleged Breach/Compliance Event | Evidence ID | Status(proved/proof-gated)`.
 
-14. Missing remedy-binding map from deontic breach to requested court action.
-- Fix: add `Breach -> Remedy` matrix, e.g., `F-breach (noncooperation with effective order) -> ORS 33.055 show cause`, `proof-gated preclusion branch -> threshold hearing only`.
+14. Missing remedy-binding map from breach to requested court action.
+- Fix: add `Breach -> Remedy` matrix, e.g., `Prohibition breach (noncooperation with effective order) -> ORS 33.055 show cause`, `proof-gated preclusion branch -> threshold hearing only`.
 
 15. Inconsistent status labels across documents (`proof-gated`, `repository`, `understanding`, `asserted`) can blur what is currently admissible.
 - Fix: normalize evidence status labels globally: `Admissible-now`, `Authentication-complete-pending-admission`, `Proof-gated`, `Context-only`.
@@ -71,5 +71,5 @@ Scope reviewed:
 
 1. Correct numbering/actor inconsistencies in `04` and `34`.
 2. Add exhibit-pin cites for each factual paragraph in `01`, `02`, `03`, `151`, and `152`.
-3. Add one-page deontic trigger-and-remedy table as a shared attachment used by all major motions.
+3. Add one-page handling trigger-and-remedy table as a shared attachment used by all major motions.
 4. Trim or reserve collateral constitutional arguments unless immediately necessary to the pending threshold ruling.

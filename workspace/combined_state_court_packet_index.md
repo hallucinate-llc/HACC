@@ -71,6 +71,8 @@ Use this index when filing the coordinated state-court packet addressing:
 47. [ultra_compact_oral_argument_sheet_2026-04-09.md](/home/barberb/HACC/workspace/ultra_compact_oral_argument_sheet_2026-04-09.md)
 48. [night_before_court_checklist_2026-04-09.md](/home/barberb/HACC/workspace/night_before_court_checklist_2026-04-09.md)
 49. [presentation_guardrails_note_2026-04-09.md](/home/barberb/HACC/workspace/presentation_guardrails_note_2026-04-09.md)
+50. [housing_primary_source_record_ladder_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/housing_primary_source_record_ladder_2026-04-09.md)
+51. [probate_primary_source_record_ladder_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/probate_primary_source_record_ladder_2026-04-09.md)
 
 ## Recommended Filing Order
 

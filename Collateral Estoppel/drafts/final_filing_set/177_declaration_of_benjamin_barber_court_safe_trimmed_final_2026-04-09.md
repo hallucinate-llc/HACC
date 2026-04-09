@@ -19,7 +19,7 @@ I, Benjamin Barber, declare as follows:
 
 1. I am over 18 years of age and competent to testify to the matters stated in this declaration.
 2. I submit this declaration in support of the three motions identified above.
-3. I make this declaration from personal knowledge of my own communications and events, and from my review of attached records. Where a point remains incomplete, I identify it as proof-gated.
+3. I make this declaration from personal knowledge of my own communications and events, and from my review of attached records. Where a point remains incomplete, I identify it as not yet fully supported by certified or filed-stamped records.
 
 A. CORE RECORD ANCHORS
 
@@ -36,29 +36,34 @@ B. SHOW-CAUSE SUPPORT (LIMITED TO PERSONAL KNOWLEDGE AND RECORDS)
 11. The April 3-4, 2026 counsel email chain reflects service-labeled transmission to counsel Alex Bluestone and counsel's response that he did not accept service on behalf of Solomon while confirming representation in the Jane Cortez guardianship matter.
 12. That same preserved chain includes a same-day FedEx receipt image and delivery-tracking identifiers consistent with physical transmittal to counsel.
 13. I request a show-cause appearance and explanation regarding compliance posture and any assertion that an in-effect order was unenforceable absent additional service.
-14. I also report that the Clackamas County Sheriff's Office served restraining-order papers on Solomon Samuel Barber on April 9, 2026; until I lodge the sheriff return/proof-of-service, I offer this as a reported event only and request leave to supplement with the formal return. I do not offer this as completed formal service proof unless and until that return is lodged.
+14. I also report that the Clackamas County Sheriff's Office served restraining-order papers on Solomon Samuel Barber on April 9, 2026; until I lodge the sheriff return/proof-of-service, I offer this as a reported event only and request leave to supplement with the formal return. I do not offer this as completed formal service proof unless and until that return is lodged, and I do not request any enforcement finding based solely on this reported event.
+15. For any contempt determination branch, I request clause-specific analysis comparing each alleged conflicting statement or act to the exact quoted order term offered as violated.
 
-C. THRESHOLD PRECLUSION / SCOPE SUPPORT (PROOF-GATED WHERE NOT YET CERTIFIED)
+C. THRESHOLD PRECLUSION / SCOPE SUPPORT (PROVISIONAL WHERE NOT YET CERTIFIED)
 
-15. The March 31, 2026 petition seeks broad authority over Jane Kay Cortez, including residence-related circumstances, APS interface, and possible law-enforcement transport.
-16. Based on my review of current materials, the same housing and control events described in this probate matter also appear in related housing/eviction/federal filings.
-17. As of this declaration, I treat cross-forum and prior-proceeding points as proof-gated unless supported by admissible certified or filed-stamped records.
-18. I submit these facts so the Court can evaluate threshold scope and sequencing questions on unresolved overlap issues.
-19. Any dispositive preclusion request is made only in the companion motion and only to the extent supported by admissible certified records.
-20. Repository materials identify a Justice Court eviction-response track (26FE0586) and a District of Oregon complaint track with overlapping housing-process allegations involving HACC and Quantum.
-21. I request leave to supplement with certified dockets, orders, and filed-stamped records as they are obtained.
+16. The March 31, 2026 petition seeks broad authority over Jane Kay Cortez, including residence-related circumstances, APS interface, and possible law-enforcement transport.
+17. Based on my review of current materials, the same housing and control events described in this probate matter also appear in related housing/eviction/federal filings.
+18. As of this declaration, I treat cross-forum and prior-proceeding points as limited to threshold context unless supported by admissible certified or filed-stamped records.
+19. I submit these facts so the Court can evaluate threshold scope and sequencing questions on unresolved overlap issues.
+20. Any dispositive preclusion request is made only in the companion motion and only to the extent supported by admissible certified records.
+21. Repository materials identify a Justice Court eviction-response track (26FE0586) and a District of Oregon complaint track with overlapping housing-process allegations involving HACC and Quantum.
+22. I request leave to supplement with certified dockets, orders, and filed-stamped records as they are obtained.
 
 D. GAL SUPPORT
 
-22. The current record contains material factual conflicts about authority history, service/compliance posture, and overlap of protective and housing-control allegations.
-23. In my view, appointment or appearance clarification of a GAL is warranted to protect Jane Kay Cortez's interests and to assist reliable fact development.
-24. To the extent prior GAL history in related matters is asserted, I understand that point remains proof-gated unless and until certified records are lodged.
+23. The current record contains material factual conflicts about authority history, service/compliance posture, and overlap of protective and housing-control allegations.
+24. In my view, appointment or appearance clarification of a GAL is warranted to protect Jane Kay Cortez's interests and to assist reliable fact development.
+25. To the extent prior GAL history in related matters is asserted, I understand that point remains conditional unless and until certified records are lodged.
 
-E. LIMITATION
+E. FILING DISCIPLINE
 
-25. This declaration is offered as a court-safe, element-focused factual statement and is not intended to replace admissible exhibits, certified records, or testimony.
+26. My filing posture is to keep dispositive requests tied to admissible certified proof, request threshold scope-control relief while rows remain incomplete, and avoid presenting uncertified overlap context as final adjudicated fact.
 
-I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct to the best of my knowledge.
+F. LIMITATION
+
+27. This declaration is offered as a court-safe, element-focused factual statement and is not intended to replace admissible exhibits, certified records, or testimony.
+
+I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct.
 
 DATED: ____________, 2026
 

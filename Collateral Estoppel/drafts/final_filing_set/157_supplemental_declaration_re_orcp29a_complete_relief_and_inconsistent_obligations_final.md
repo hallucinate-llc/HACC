@@ -48,10 +48,11 @@ E. RECORD AND PROOF LIMITATIONS
 
 17. I understand that final issue-preclusion findings and any final cross-forum status findings require admissible docket/order proof.
 18. I reserve the right to supplement with certified or filed-stamped records as they are obtained.
-19. I use the status labels `Admissible-now`, `Proof-gated`, and `Context-only` when describing record posture, and I do not ask the Court to treat `Proof-gated` points as finally adjudicated facts.
+19. Where record support is incomplete, I identify those points as provisional and not finally adjudicated, and I do not ask the Court to treat provisional points as established facts.
 20. Any internal pin-cite or temporal-trigger tables are offered, if at all, only as organizational aids.
+21. My filing posture is to keep dispositive requests tied to admissible proof, request scope-control and shaped-relief sequencing on the current record, and avoid presenting uncertified overlap context as final merits adjudication.
 
-I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct to the best of my knowledge.
+I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct.
 
 DATED: ____________, 2026
 

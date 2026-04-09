@@ -16,6 +16,7 @@ AND THRESHOLD ISSUE-PRECLUSION REVIEW
 
 Movant requests a threshold issue-preclusion review before broader merits litigation proceeds. The supplemental certified exhibits are intended to supply the Court with certified source records for that threshold review.
 As of this memorandum version, dispositive preclusion remains row-gated by the certified-element mapping sheet (`188`), and no row should be treated as dispositive unless all required element cells are supported by admissible records.
+As of the current `188` snapshot, no asserted row is yet fully supported by admissible certified records for dispositive preclusion, so the principal hearing ask is threshold narrowing and sequencing rather than immediate dismissal.
 
 ## 2) Exhibit map (current corrected posture)
 
@@ -54,7 +55,7 @@ As of this memorandum version, dispositive preclusion remains row-gated by the c
    c. one finality source cite;
    d. one party/privity cite; and
    e. one full/fair-opportunity cite.
-3. If any row cell is incomplete, that row remains `Proof-gated` and supports threshold narrowing only, not dismissal.
+3. If any row cell is incomplete, that row remains provisional pending admissible certified support and supports threshold narrowing only, not dismissal.
 
 ## 4) Requested procedural path
 
@@ -63,7 +64,14 @@ As of this memorandum version, dispositive preclusion remains row-gated by the c
 3. Dismiss or limit relitigation only to the extent the required preclusion elements are established by admissible certified proof.
 4. Reserve merits expansion unless and until threshold preclusion review is completed on an adequate certified record.
 5. If certified packets remain incomplete at hearing, defer dispositive dismissal, set a targeted supplementation deadline, and proceed only with non-dispositive issue narrowing and scope control.
-6. If the Court reaches any preclusion ruling, limit it to the specific fully-supported row(s) only, with all other rows expressly reserved as `Proof-gated`.
+6. If the Court reaches any preclusion ruling, limit it to the specific fully-supported row(s) only, with all other rows expressly reserved as provisional pending admissible certified support.
+7. If no row is fully supported at hearing, deny or defer dispositive dismissal without prejudice and enter only record-first, scope-control relief.
+
+## 4A) Handling guardrail
+
+1. Keep dispositive asks row-specific and evidence-gated.
+2. Grant threshold narrowing/scope control on overlap risk while rows remain incomplete.
+3. Do not treat overlap context, oral clerk relay, or uncertified status notes as completed finality proof.
 
 ## 5) Authorities already cited in the motion set
 

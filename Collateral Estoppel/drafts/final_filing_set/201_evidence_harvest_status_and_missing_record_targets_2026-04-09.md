@@ -42,11 +42,11 @@ III. PACKET STATUS SNAPSHOT (TRACKER-CONSISTENT)
 11. CF-1 (`REQ-26FE0586-001`): status remains draft/requested workflow, no records received.
 12. CF-2 (`REQ-FED-HAQC-001`): status remains draft/requested workflow, no records received.
 
-IV. DEONTIC CONTROL
+IV. HANDLING CONTROL
 
-13. `O` Continue threshold-only/dispositive-conditional posture until certified closure packets are lodged.
-14. `F` Do not present reported sheriff service event as completed formal proof before return filing.
-15. `P` Use located source artifacts for context, chronology, and notice-path support while preserving proof gates.
+13. Continue threshold-only/dispositive-conditional posture until certified closure packets are lodged.
+14. Do not present reported sheriff service event as completed formal proof before return filing.
+15. Use located source artifacts for context, chronology, and notice-path support while preserving proof gates.
 
 V. IMMEDIATE NEXT TARGETS
 

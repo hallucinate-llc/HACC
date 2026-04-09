@@ -9,11 +9,11 @@ Jane Kay Cortez,
 Protected Person.
 
 MOTION/DECLARATION/MEMORANDUM DEFICIENCY REVIEW FINDINGS
-(Severity-Ranked; Law/Fact/Deontic Grounding Pass)
+(Severity-Ranked; Law/Fact/Handling Grounding Pass)
 
 Review scope:
 1. `01`, `02`, `03`, `151`, `152`, `154`, `155`, `157`.
-2. Focus: legal sufficiency, proof posture, and deontic consistency (`O` obligation, `P` permission, `F` prohibition).
+2. Focus: legal sufficiency, proof posture, and handling consistency (obligation, permission, prohibition).
 
 I. CRITICAL FINDINGS
 
@@ -42,17 +42,17 @@ III. MEDIUM FINDINGS (OPEN)
 1. `03` show-cause branch still relies on conditional nonappearance theory pending certified minutes.
    a. Location: `03` line 34 (conditional language present).
    b. Risk: opposing side may attack this branch as speculative until certified hearing minutes are filed.
-   c. Deontic status: `O` file certified appearance/minute record before asking for dispositive nonappearance inference; `F` do not present as established fact before certification.
+   c. Handling status: file certified appearance/minute record before asking for dispositive nonappearance inference; do not present as established fact before certification.
 
 2. `01` prior-GAL continuity argument remains proof-gated.
    a. Location: `01` lines 26-28.
    b. Risk: continuity argument weakens if no certified prior GAL grant/minute entry is lodged.
-   c. Deontic status: `O` lodge certified prior order/minutes for `25PO11530` before treating prior-GAL continuity as established.
+   c. Handling status: lodge certified prior order/minutes for `25PO11530` before treating prior-GAL continuity as established.
 
 3. Cross-forum federal status in `02` remains partly provisional by design.
    a. Location: `02` lines 44-49.
    b. Risk: admissibility/weight challenge if provisional status is overstated at hearing.
-   c. Deontic status: `F` no dispositive weight from clerk-relayed oral status alone; `P` use as context for scope management.
+   c. Handling status: no dispositive weight from clerk-relayed oral status alone; use as context for scope management.
 
 IV. LOW FINDINGS
 
@@ -72,9 +72,9 @@ V. REMEDIATION STATUS SUMMARY
 
 VI. FILING SAFETY RULES FOR ORAL ARGUMENT
 
-1. `O` When citing preclusion, immediately state whether the element is `Admissible-now` or `Proof-gated`.
-2. `O` Keep sanctions discussion in `03` framed as remedial-only unless separate punitive pathway is properly noticed.
-3. `F` Do not ask the probate court to decide full Section 18/eviction/federal merits absent proper parties and forum posture.
+1. Obligation: when citing preclusion, immediately state whether the element is `Admissible-now` or `Proof-gated`.
+2. Obligation: keep sanctions discussion in `03` framed as remedial-only unless separate punitive pathway is properly noticed.
+3. Prohibition: do not ask the probate court to decide full Section 18/eviction/federal merits absent proper parties and forum posture.
 
 VII. REMEDIATION ARTIFACTS CREATED AFTER THIS REVIEW
 

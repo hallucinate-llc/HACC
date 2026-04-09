@@ -18,6 +18,7 @@ Use objective:
 Opening framing (30 seconds):
 1. "I request threshold narrowing and scope control now, and dismissal only to the extent certified element proof is complete."
 2. "If an element is still proof-gated, I am not asking for a final preclusion finding on that element today."
+3. "As of today's `188` sheet, no row is yet dispositive-ready, so I am asking for narrowing/sequencing first."
 
 Element-by-element script (use `188` row IDs):
 1. Separate prior proceeding:
@@ -43,6 +44,8 @@ Row-closure discipline (10 seconds):
 Show-cause service/compliance branch (short):
 1. "The April 9, 2026 sheriff-service event is currently reported and will be lodged formally upon receipt of the return."
 2. "Until that return is filed, I offer it for sequence context, not as substitute service proof."
+3. "For any contempt finding, I will map each alleged conflicting act to the exact quoted order term and exhibit cite before requesting sanctions."
+4. "I am seeking remedial sequencing only here, not punitive contempt in this filing posture."
 
 Closing ask:
 1. "Grant threshold narrowing and maintain proof-gating discipline."

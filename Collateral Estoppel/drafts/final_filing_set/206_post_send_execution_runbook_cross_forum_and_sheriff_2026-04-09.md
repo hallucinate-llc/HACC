@@ -44,11 +44,11 @@ STEP ORDER
    a. Sheriff request follow-up: next business day if no response.
    b. Justice/Federal follow-up: 2 business days if no response.
 
-DEONTIC DISCIPLINE
+HANDLING DISCIPLINE
 
-7. `O` Keep dispositive relief branches proof-gated by certified records.
-8. `O` Convert reported service event to proved service only after official return is lodged.
-9. `F` Avoid unconditional language on preclusion/finality without certified docket support.
+7. Keep dispositive relief branches proof-gated by certified records.
+8. Convert reported service event to proved service only after official return is lodged.
+9. Avoid unconditional language on preclusion/finality without certified docket support.
 
 DATED: April 9, 2026
 

@@ -20,9 +20,11 @@ The Court, having reviewed the Motion for Order to Show Cause and the file and r
    c. any asserted legal basis for noncompliance.
 3. The parties shall file certified docket/order materials relevant to notice, appearance, and order-effect issues by: ______________________.
 4. This order sets an appearance-and-explanation pathway first; any remedial sanction determination is reserved unless and until contempt predicates are proven on admissible evidence.
-5. Failure to comply with this Order may result in further orders authorized by law, including additional appearance-enforcement steps where statutory predicates are met.
+5. Failure to comply with this Order may result in further orders authorized by law, including ORS 33.075 appearance-enforcement steps if a served order to appear is not obeyed, and only after proof of service of this Order is filed.
 6. The Court notes that counsel-contact emails in the same Jane Cortez guardianship controversy may be considered as notice context only; formal service-validity issues remain reserved for determination on the service record.
 7. Nothing in this order adjudicates collateral housing, eviction, or federal civil-rights merits.
+8. Before any contempt finding or remedial sanction order, Movant shall file (or identify in the current motion record) a clause-specific proof map identifying each alleged conflicting act and the exact quoted order term offered as violated, with exhibit and date/time citations.
+9. This order does not impose punitive contempt sanctions in the current filing posture.
 
 IT IS SO ORDERED.
 

@@ -52,11 +52,11 @@ REQUEST LOG BLOCKS
    h. ETA quoted: ____________________
    i. Follow-up due date: ____________________
 
-DEONTIC CONTROL CHECK
+HANDLING CONTROL CHECK
 
-4. `O` Keep all dispositive preclusion asks conditional until certified packets are received and mapped (`188`).
-5. `O` Keep sheriff-service references as "reported service event" until official return is lodged.
-6. `F` Do not state final adjudication in cross-forum matters without certified docket/order support.
+4. Keep all dispositive preclusion asks conditional until certified packets are received and mapped (`188`).
+5. Keep sheriff-service references as "reported service event" until official return is lodged.
+6. Do not state final adjudication in cross-forum matters without certified docket/order support.
 
 DATED: April 9, 2026
 

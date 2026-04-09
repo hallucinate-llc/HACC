@@ -15,14 +15,16 @@ This matter came before the Court on Movant's Fallback Motion to Exclude or Stri
 
 THE COURT FINDS AND ORDERS:
 
-1. [ ] The motion is GRANTED in part.
-2. [ ] The Court will not adjudicate collateral Section 18 relocation-duty merits, eviction-liability merits, or federal housing civil-rights merits against nonparty entities in this protective proceeding, except to the minimum extent necessary for a discrete guardianship determination.
-3. [ ] This limitation is without prejudice to parties pursuing those collateral housing merits in the properly postured eviction and federal forums.
-4. [ ] Pleadings or arguments seeking broad housing-merits determinations in this probate case are struck, deferred, or disregarded to that extent.
-5. [ ] This matter is limited to guardianship-specific findings and relief under ORS chapter 125.
-6. [ ] The Court reserves any threshold issue-preclusion determinations pending admissible record support.
-7. [ ] Any overlap references to other proceedings are treated as scope-control context only unless the required preclusion elements are proven by admissible certified records.
-8. [ ] Nothing in this order bars properly postured claims in the relevant eviction or federal forum.
+1. The motion is GRANTED in part.
+2. The Court will not adjudicate collateral Section 18 relocation-duty merits, eviction-liability merits, or federal housing civil-rights merits against nonparty entities in this protective proceeding, except to the minimum extent necessary for a discrete guardianship determination.
+3. This limitation is without prejudice to parties pursuing those collateral housing merits in the properly postured eviction and federal forums.
+4. Pleadings or arguments seeking broad housing-merits determinations in this probate case are struck, deferred, or disregarded to that extent.
+5. This matter is limited to guardianship-specific findings and relief under ORS chapter 125.
+6. The Court reserves any threshold issue-preclusion determinations pending admissible record support.
+7. Any overlap references to other proceedings are treated as scope-control context only unless the required preclusion elements are proven by admissible certified records.
+8. Nothing in this order bars properly postured claims in the relevant eviction or federal forum.
+9. No dispositive preclusion ruling is entered in this order unless specifically identified `188` row(s) are found fully supported by admissible records.
+10. If no such row is identified, this order grants only scope-control and does not dismiss claims on preclusion grounds.
 
 IT IS SO ORDERED.
 

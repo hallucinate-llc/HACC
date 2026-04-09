@@ -47,9 +47,9 @@ V. RESERVATION
 
 19. Movant reserves the right to supplement with certified dockets/orders and any admissible records relevant to threshold preclusion/scope findings.
 
-VI. SHARED DEONTIC ATTACHMENT
+VI. SHARED HANDLING ATTACHMENT
 
-20. Movant incorporates the shared `Deontic Trigger and Remedy Matrix` (`168`), `Deontic Temporal Trigger Table` (`172`), and `Element-to-Evidence and Deontic Readiness Matrix` (`179`) as organizational aids for duty/prohibition proof posture, element status, time windows, and remedy mapping; admissible exhibits and certified records control.
+20. Movant incorporates the shared trigger/remedy matrix (`168`), temporal trigger table (`172`), and element-to-evidence readiness matrix (`179`) as organizational aids for proof posture, element status, time windows, and remedy mapping; admissible exhibits and certified records control.
 
 DATED: ____________, 2026
 
