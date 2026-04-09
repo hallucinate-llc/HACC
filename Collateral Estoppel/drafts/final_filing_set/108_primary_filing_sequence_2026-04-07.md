@@ -81,10 +81,11 @@ This note states the current recommended use order for the main motion set.
    g. [deontic_duty_matrix_packet_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/deontic_duty_matrix_packet_2026-04-09.md)
    h. [law_first_hacc_quantum_duty_memo_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/law_first_hacc_quantum_duty_memo_2026-04-09.md)
    i. [housing_duties_fact_law_encoding_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/housing_duties_fact_law_encoding_2026-04-09.md)
-   j. [missing_project_agreements_retrieval_note_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/missing_project_agreements_retrieval_note_2026-04-09.md)
-   k. [hillside_public_sources_download_manifest_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/hillside_public_sources_download_manifest_2026-04-09.md)
-   l. [hillside_procurement_trail_note_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/hillside_procurement_trail_note_2026-04-09.md)
-   m. [hacc_hillside_project_records_request_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/hacc_hillside_project_records_request_2026-04-09.md)
+   j. [housing_duty_appendix_table_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/housing_duty_appendix_table_2026-04-09.md)
+   k. [missing_project_agreements_retrieval_note_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/missing_project_agreements_retrieval_note_2026-04-09.md)
+   l. [hillside_public_sources_download_manifest_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/hillside_public_sources_download_manifest_2026-04-09.md)
+   m. [hillside_procurement_trail_note_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/hillside_procurement_trail_note_2026-04-09.md)
+   n. [hacc_hillside_project_records_request_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/hacc_hillside_project_records_request_2026-04-09.md)
 
 10. If filing the direct petition-objection branch, pair it with:
    a. [153_proposed_order_on_objection_to_guardianship_petition_and_emergency_relief_final.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/153_proposed_order_on_objection_to_guardianship_petition_and_emergency_relief_final.md)

@@ -9,16 +9,16 @@ Jane Kay Cortez,
 Protected Person.
 
 MOTION FOR ORDER TO SHOW CAUSE
-RE: RESPONDENT SOLOMON BARBER'S FAILURE TO TIMELY OPPOSE IN THE ORIGINAL MATTER AND FILING OF PRECLUDED CLAIM
+RE: RESPONDENT SOLOMON BARBER'S FAILURE TO TIMELY OPPOSE IN THE ORIGINAL MATTER
 
-Movant, Benjamin Barber, requests an Order to Show Cause requiring Solomon Barber to appear and explain why relief should not be entered based on failure to timely pursue opposition in the original matter and the filing of a later claim asserted to be precluded.
+Movant, Benjamin Barber, requests an Order to Show Cause requiring Solomon Barber to appear and explain why relief should not be entered based on failure to timely pursue opposition in the original matter.
 
 I. REQUESTED RELIEF
 
 1. Issue an Order to Show Cause requiring Solomon Barber to appear on a date certain.
 2. Require Solomon Barber to explain why, after appearing in person in the original restraining-order matter and receiving notice that the order was in effect, he did not timely oppose that order in the original matter through the available hearing process, and instead later took a collateral position inconsistent with the order.
-3. Require Solomon Barber to explain why filing of the present claim is not barred by collateral estoppel.
-4. Enter appropriate remedial orders, including claim limitation/dismissal and remedial sanctions authorized by law and supported by admissible evidence.
+3. Require Solomon Barber to explain his compliance posture after notice of an in-effect order and available hearing path.
+4. Enter appropriate remedial orders and remedial sanctions authorized by law and supported by admissible evidence.
 
 II. GROUNDS
 
@@ -50,7 +50,6 @@ IV. DUTY / TRIGGER / BREACH / REMEDY MAP
    a. The duty to comply or seek court relief was triggered when the order was entered and remained in effect.
 23. Alleged breach events:
    a. March 10, 2026 statements in the preserved thread are offered as evidence of noncooperation/effect-dispute posture after notice.
-   b. Any later collateral refiling contrary to established preclusion elements is separately proof-gated pending certified records.
 24. Requested remedy path:
    a. Show-cause appearance and compliance explanation under ORS 33.055.
    b. If contempt elements are proven, remedial sanctions under ORS 33.105.
@@ -60,7 +59,7 @@ V. REQUESTED HEARING STRUCTURE
 
 25. Set an expedited show-cause hearing.
 26. Require pre-hearing filing of clerk-certified docket and operative orders.
-27. Permit targeted testimony on notice, appearance history, original-matter opposition path, preclusion elements, and any proven collateral interference sequence.
+27. Permit targeted testimony on notice, appearance history, original-matter opposition path, and any proven collateral interference sequence.
 28. Require parties to identify, before hearing, the exact order/date/event each side contends controls the original-matter opposition / noncompliance issue.
 
 VI. EXHIBIT REFERENCES (GLOBAL NUMBERING)

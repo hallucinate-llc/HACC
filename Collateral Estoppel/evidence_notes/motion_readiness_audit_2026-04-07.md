@@ -139,6 +139,7 @@ Why it remains reserve-only:
 - [deontic_duty_matrix_packet_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/deontic_duty_matrix_packet_2026-04-09.md)
 - [law_first_hacc_quantum_duty_memo_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/law_first_hacc_quantum_duty_memo_2026-04-09.md)
 - [housing_duties_fact_law_encoding_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/housing_duties_fact_law_encoding_2026-04-09.md)
+- [housing_duty_appendix_table_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/housing_duty_appendix_table_2026-04-09.md)
 - [missing_project_agreements_retrieval_note_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/missing_project_agreements_retrieval_note_2026-04-09.md)
 - [hillside_public_sources_download_manifest_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/hillside_public_sources_download_manifest_2026-04-09.md)
 - [hillside_procurement_trail_note_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/hillside_procurement_trail_note_2026-04-09.md)
