@@ -77,3 +77,4 @@ If a response is incomplete or noncompliant, prepare and use:
 1. `22_subpoena_deficiency_notice_template_final.md`
 2. `23_declaration_re_subpoena_noncompliance_final.md`
 3. `24_motion_to_compel_subpoena_compliance_and_sanctions_final.md`
+4. `24A_proposed_order_on_motion_to_compel_subpoena_compliance_and_sanctions_final.md`

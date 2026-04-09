@@ -14,7 +14,7 @@ Movant, Benjamin Barber, respectfully requests appointment and appearance author
 
 I. REQUESTED RELIEF
 
-1. Appoint a GAL for Jane Kay Cortez for purposes of this proceeding.
+1. Appoint a GAL for Jane Kay Cortez for purposes of this proceeding; if the Court finds suitability established on this record, appoint Benjamin Barber, and if not, appoint a neutral GAL selected by the Court.
 2. Authorize the GAL to appear, investigate, and make recommendations regarding case posture, capacity-related concerns, and alignment of requested relief with Jane Kay Cortez's interests.
 3. Authorize the GAL to review filings, interview relevant parties, and submit a written report by a court-set deadline.
 4. Set a status hearing after GAL report submission.
@@ -37,8 +37,8 @@ III. LEGAL AUTHORITY
 15. ORS 125.065, ORS 125.075, and ORS 125.080 support notice, objection, hearing, and participation management in this protective proceeding, including targeted appointment/reporting structure where needed for reliable fact development.
 16. Independent of any ORCP pathway, this Court's Chapter 125 protective authority supports a tailored neutral-investigation structure where factual conflict and reliability concerns are shown on the current record.
 17. This motion relies primarily on Chapter 125 protective-case authority for the requested appointment/appearance structure.
-18. To the extent applicable in this protective posture, ORCP 27 is offered as an additional procedural support path when qualifying incapacity-related circumstances and evidentiary need are shown.
-19. Movant presents ORCP 27 as an additional procedural support path, not as the exclusive basis for relief; if the Court declines to apply any ORCP 27 branch in this probate posture, Movant requests the same appointment/appearance relief under Chapter 125 protective authority alone.
+18. To the extent applicable in this protective posture, ORCP 27 is offered only as a secondary procedural support path when qualifying incapacity-related circumstances and evidentiary need are shown.
+19. Movant does not condition requested relief on ORCP 27 applicability; if the Court declines any ORCP 27 branch in this probate posture, Movant requests the same appointment/appearance relief under Chapter 125 protective authority alone.
 20. This Court has discretion to appoint a suitable GAL and to structure reporting and status deadlines to assist fact development and protect the interests of the protected person.
 
 IV. ORCP 27 PROCEDURAL PREDICATES (SECONDARY PATHWAY; TO THE EXTENT APPLICABLE)

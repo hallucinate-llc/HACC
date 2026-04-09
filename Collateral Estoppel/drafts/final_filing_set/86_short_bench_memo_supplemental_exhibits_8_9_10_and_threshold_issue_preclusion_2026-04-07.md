@@ -12,13 +12,13 @@ SHORT BENCH MEMORANDUM
 RE: SUPPLEMENTAL CERTIFIED EXHIBITS 8, 9, AND 10
 AND THRESHOLD ISSUE-PRECLUSION REVIEW
 
-## 1) What this supplement is intended to do
+1. WHAT THIS SUPPLEMENT IS INTENDED TO DO
 
 Movant requests a threshold issue-preclusion review before broader merits litigation proceeds. The supplemental certified exhibits are intended to supply the Court with certified source records for that threshold review.
-As of this memorandum version, dispositive preclusion remains row-gated by the certified-element mapping sheet (`188`), and no row should be treated as dispositive unless all required element cells are supported by admissible records.
+As of this memorandum version, dispositive preclusion remains row-specific under the certified-element mapping sheet (`188`), and no row should be treated as dispositive unless all required element cells are supported by admissible records.
 As of the current `188` snapshot, no asserted row is yet fully supported by admissible certified records for dispositive preclusion, so the principal hearing ask is threshold narrowing and sequencing rather than immediate dismissal.
 
-## 2) Exhibit map (current corrected posture)
+2. EXHIBIT MAP (CURRENT CORRECTED POSTURE)
 
 1. Exhibit 8:
    Certified docket/register for case `26PR00641`, including the no-signed-order posture if reflected by the certified register.
@@ -29,7 +29,7 @@ As of the current `188` snapshot, no asserted row is yet fully supported by admi
 3. Exhibit 10:
    Certified hearing/appearance/notice record relevant to full-and-fair-opportunity analysis.
 
-## 3) Threshold questions for the Court
+3. THRESHOLD QUESTIONS FOR THE COURT
 
 1. Prior separate proceeding identity:
    Whether `25PO11530` and associated certified records establish the required prior proceeding context.
@@ -46,7 +46,7 @@ As of the current `188` snapshot, no asserted row is yet fully supported by admi
 5. Full and fair opportunity:
    Whether certified hearing/notice records show a full and fair opportunity to be heard.
 
-## 3A) Row-Gated Use Rule (`188`)
+3A. ROW-SPECIFIC USE RULE (`188`)
 
 1. Use one asserted issue per row (`PI-01` through `PI-05`).
 2. For each row, require:
@@ -57,7 +57,7 @@ As of the current `188` snapshot, no asserted row is yet fully supported by admi
    e. one full/fair-opportunity cite.
 3. If any row cell is incomplete, that row remains provisional pending admissible certified support and supports threshold narrowing only, not dismissal.
 
-## 4) Requested procedural path
+4. REQUESTED PROCEDURAL PATH
 
 1. To the extent supplemental certified exhibits are lodged, accept/lodge those records for threshold review.
 2. Resolve threshold issue-preclusion elements first, to the extent certified element materials are in the record.
@@ -67,13 +67,13 @@ As of the current `188` snapshot, no asserted row is yet fully supported by admi
 6. If the Court reaches any preclusion ruling, limit it to the specific fully-supported row(s) only, with all other rows expressly reserved as provisional pending admissible certified support.
 7. If no row is fully supported at hearing, deny or defer dispositive dismissal without prejudice and enter only record-first, scope-control relief.
 
-## 4A) Handling guardrail
+4A. HANDLING GUARDRAIL
 
-1. Keep dispositive asks row-specific and evidence-gated.
+1. Keep dispositive asks row-specific and tied to admissible certified support.
 2. Grant threshold narrowing/scope control on overlap risk while rows remain incomplete.
 3. Do not treat overlap context, oral clerk relay, or uncertified status notes as completed finality proof.
 
-## 5) Authorities already cited in the motion set
+5. AUTHORITIES ALREADY CITED IN THE MOTION SET
 
 - `Nelson v. Emerald People's Utility Dist., 318 Or 99 (1993)`
 - `Rawls v. Evans, 234 Or App 316 (2010)`

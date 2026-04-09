@@ -27,7 +27,10 @@ The Court, having reviewed the objection, declarations, and the file and record 
    d. whether collateral Section 18 / housing-merits issues should be excluded or sharply limited in this probate matter.
 7. No later than ______________________, any party seeking continued coercive or emergency relief shall file the predicate signed order(s), docket/register entries, and any notice materials relied upon for that request.
 8. No attorney-fee request under `ORS 125.095` shall be approved unless and until the Court has considered the applicable `ORS 125.098` factors on an adequate record.
-9. Further hearing, if required, is set for: ______________________.
+9. No dispositive preclusion-based claim limitation may be entered unless the affected party had notice and an opportunity to address the specific issue row(s) and cited record support relied on.
+10. Nothing in this order adjudicates collateral housing, eviction, or federal civil-rights merits except as strictly necessary for guardianship-specific determinations.
+11. Further hearing, if required, is set for: ______________________.
+12. Any duty in this order keyed to a blank date or blank deadline field is triggered only after that field is completed in the signed order.
 
 IT IS SO ORDERED.
 

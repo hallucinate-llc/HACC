@@ -16,9 +16,9 @@ I, Benjamin Barber, declare as follows:
 1. I am over 18 years of age and competent to testify to the matters stated herein.
 2. I submit this supplemental declaration as a foundation declaration for cross-forum docket/order records that may later be filed as Supplemental Exhibits CF-1 through CF-4.
 3. To the extent CF-1 through CF-4 are later retrieved and lodged, those records will be obtained from court records custodians, court public-access systems, or official court-issued docket/order retrieval channels.
-4. Retrieval-channel, date/time, and identifier fields for CF-1 through CF-4 are tracked in the accompanying `Cross-Forum Exhibit Retrieval Metadata Sheet` (`169`), which I offer as chain-of-custody support and current retrieval-status tracker.
+4. Retrieval-channel, date/time, and identifier fields for CF-1 through CF-4 are tracked in the accompanying Cross-Forum Exhibit Retrieval Metadata Sheet, which I offer as chain-of-custody support and current retrieval-status tracker.
 
-A. JUSTICE COURT RECORDS (`26FE0586`)
+A. JUSTICE COURT RECORDS (26FE0586)
 
 5. If and when Supplemental Exhibit CF-1 is lodged, it will be offered as a true and correct copy of docket/register materials for Clackamas County Justice Court case `26FE0586`.
 6. If and when Supplemental Exhibit CF-2 is lodged, it will be offered as a true and correct copy of entered-order and/or filed-stamped record set materials for that same case, to the extent provided by the records channel.

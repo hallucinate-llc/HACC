@@ -11,7 +11,8 @@ Protected Person.
 MOTION FOR ORDER TO SHOW CAUSE
 RE: SOLOMON BARBER'S POST-ORDER HOUSING INTERFERENCE AND POSSIBLE VIOLATION OR EVASION OF THE ORIGINAL RESTRAINING ORDER
 
-Movant, Benjamin Barber, requests an Order requiring Solomon Barber to appear and show cause why the Court should not find that he violated, evaded, or improperly worked around the original restraining-order framework by continuing to interfere in housing matters involving Jane Kay Cortez, Benjamin Barber, and the Housing Authority of Clackamas County (`HACC`).
+Movant, Benjamin Barber, requests an Order requiring Solomon Barber to appear and show cause why the Court should not find that he violated, evaded, or improperly worked around the original restraining-order framework by continuing to interfere in housing matters involving Jane Kay Cortez, Benjamin Barber, and the Housing Authority of Clackamas County (HACC).
+This filing is offered as an alternative show-cause theory and should not be treated as a concurrent duplicate of the primary show-cause motion unless the Court requests consolidated handling.
 
 I. REQUESTED RELIEF
 
@@ -30,8 +31,8 @@ II. GROUNDS
 10. The March 23, 2026 declarations of Benjamin Barber and Jane Cortez each support that Charley Skee explained in substance that Benjamin had been taken off the lease because Benjamin's brother and stepfather had been emailing documents to HACC, and that the situation continued until staff sorted through those materials.
 11. The `JC Household` chain also supports an earlier county-notice point on December 2, 2025, when Benjamin emailed Ashley Ferron and copied Charley Skee, HACC Public Housing Management, and HACC Relocation in the same dispute stream, and by March 17, 2026 HACC had again received direct written notice from Benjamin asking whether HACC was still in communication with parties who had restraining orders against them in the courts.
 12. In context, that March 17 warning was made during an active dispute over voucher issuance, relocation, lease status, and housing administration, and is best read as notice that continued communication with Solomon or other restrained parties was interfering with Benjamin Barber's tenant rights and the household's housing process.
-13. The original stored Julio order packets strengthen that context. The repository contains a granted Benjamin-v.-Julio EPPDAPA order and a granted Jane-v.-Julio EPPDAPA order, both tied to the same residence and protective framework, which shows that household-composition and housing-control disputes were already being formalized in court before the later HACC lease-removal sequence.
-14. The repository also contains a scanned `Abuse Protective Order Certificate of Service` form, but targeted OCR shows it is a blank form only. That means the source record is stronger on operative order existence than on completed service paperwork.
+13. The original stored Julio order packets strengthen that context. The case records include a granted Benjamin-v.-Julio EPPDAPA order and a granted Jane-v.-Julio EPPDAPA order, both tied to the same residence and protective framework, which shows that household-composition and housing-control disputes were already being formalized in court before the later HACC lease-removal sequence.
+14. The case records also include a scanned `Abuse Protective Order Certificate of Service` form, but targeted OCR shows it is a blank form only. That means the source record is stronger on operative order existence than on completed service paperwork.
 15. The current record supports a narrower elimination-based inference. Benjamin did not request his own removal from the lease, and Jane did not request Benjamin's removal.
 16. The `JC Household` chain reflects internal inconsistency that warrants explanation: on January 12, 2026 HACC first wrote that Julio needed paperwork unless court documents were submitted, later wrote that Julio and Jane were the only approved occupants, and also wrote that effective January 1, 2026 Benjamin was no longer listed based on `internal review` and `court documentation currently on file`.
 17. The broader sequence also includes a February 13, 2026 HACC 30-Day Notice of Termination addressed to Julio Regal Florez-Cortez, and the March 23 declarations attribute Benjamin's removal, in substance, to outside document flows from Benjamin's brother and stepfather.
@@ -59,7 +60,7 @@ IV. LEGAL AUTHORITY
 26. ORS 33.055 authorizes remedial-contempt proceedings and order-to-appear process where violation of a court order is alleged.
 27. ORS 33.075 authorizes compelled appearance mechanisms after nonappearance on a served order to appear.
 28. ORS 33.105 authorizes remedial sanctions upon proof of contempt.
-29. To the extent later filing conduct is implicated, Movant reserves any `ORCP 17` theory only to the extent supported after further record development.
+29. This motion does not request ORCP 17 sanctions in this filing branch; any filing-misconduct sanctions theory, if later pursued, should proceed by separate noticed briefing with identified legal vehicle and evidentiary predicates.
 
 V. REQUESTED HEARING STRUCTURE
 

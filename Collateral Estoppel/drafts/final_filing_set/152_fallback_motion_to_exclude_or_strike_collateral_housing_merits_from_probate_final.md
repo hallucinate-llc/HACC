@@ -33,7 +33,7 @@ III. BASIS
 10. The overlap materials identify a Justice Court eviction track (`26FE0586`) and a federal District of Oregon complaint track involving overlapping housing facts and duties. See (`139`, `149`, `169`).
 11. Those tracks involve alleged Section 18 relocation duties (`42 U.S.C. § 1437p(d)`; `24 C.F.R. § 970.21`) and related housing administration conduct by HACC and Quantum. See (`04`, `151`, `157`).
 12. Probate is not the proper forum for full merits determination of those non-probate housing-liability disputes, especially with absent entities and ongoing parallel litigation.
-13. Status labels used in this motion follow `168`: `Admissible-now`, `Proof-gated`, and `Context-only`; cross-forum finality findings remain `Proof-gated` unless confirmed by certified or filed-stamped records. Pin-cite mapping for key overlap assertions is provided in `170`, and claim-level status tagging for this motion is summarized in `174`.
+13. On the current record, cross-forum finality assertions remain provisional unless confirmed by certified or filed-stamped records. Any supporting pin-cite and claim-status worksheets are offered only as organizational support; admissible exhibits and certified records control.
 
 IV. ARGUMENT
 
@@ -49,7 +49,7 @@ V. RESERVATION
 
 VI. SHARED HANDLING ATTACHMENT
 
-20. Movant incorporates the shared trigger/remedy matrix (`168`), temporal trigger table (`172`), and element-to-evidence readiness matrix (`179`) as organizational aids for proof posture, element status, time windows, and remedy mapping; admissible exhibits and certified records control.
+20. Movant incorporates the shared trigger/remedy, temporal-trigger, and element-to-evidence worksheets only as organizational aids for proof posture, time windows, and remedy mapping; admissible exhibits and certified records control.
 
 DATED: ____________, 2026
 

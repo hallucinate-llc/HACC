@@ -14,6 +14,8 @@ The Court, having reviewed the Motion for Appointment and Appearance of Guardian
 
 1. The motion is GRANTED in limited form for neutral fact-development support in this probate proceeding.
 2. A Guardian ad Litem is appointed for Jane Kay Cortez solely for this proceeding, subject to the scope limits in this order.
+2A. The GAL appointed under paragraph 2 is: ______________________.
+2B. The appointee in paragraph 2A shall file a notice of acceptance within: ______________________ days after service of this signed order.
 3. The GAL is authorized to appear, investigate, and provide recommendations regarding case posture and best-interest concerns, but shall not adjudicate collateral housing, eviction, or federal merits issues.
 4. The GAL shall file a written report by: ______________________.
 5. A status hearing is set for: ______________________.
@@ -21,6 +23,8 @@ The Court, having reviewed the Motion for Appointment and Appearance of Guardian
 7. Any asserted prior-GAL continuity from related proceedings is treated as context unless and until certified records are lodged.
 8. Nothing in this order adjudicates collateral housing/eviction/federal-merits issues.
 9. Nothing in this order treats uncertified overlap context as a final preclusion finding.
+10. No report deadline in paragraph 4 is enforceable unless and until paragraph 2A is completed and an acceptance filing is made under paragraph 2B (or acceptance is otherwise entered on the record).
+11. Any duty in this order keyed to a blank date, deadline, or appointee field is triggered only after that field is completed in the signed order.
 
 IT IS SO ORDERED.
 

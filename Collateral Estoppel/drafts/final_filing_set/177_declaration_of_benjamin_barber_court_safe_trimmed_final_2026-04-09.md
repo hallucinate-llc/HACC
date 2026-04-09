@@ -46,7 +46,7 @@ C. THRESHOLD PRECLUSION / SCOPE SUPPORT (PROVISIONAL WHERE NOT YET CERTIFIED)
 18. As of this declaration, I treat cross-forum and prior-proceeding points as limited to threshold context unless supported by admissible certified or filed-stamped records.
 19. I submit these facts so the Court can evaluate threshold scope and sequencing questions on unresolved overlap issues.
 20. Any dispositive preclusion request is made only in the companion motion and only to the extent supported by admissible certified records.
-21. Repository materials identify a Justice Court eviction-response track (26FE0586) and a District of Oregon complaint track with overlapping housing-process allegations involving HACC and Quantum.
+21. The current filed and lodged materials identify a Justice Court eviction-response track (26FE0586) and a District of Oregon complaint track with overlapping housing-process allegations involving HACC and Quantum.
 22. I request leave to supplement with certified dockets, orders, and filed-stamped records as they are obtained.
 
 D. GAL SUPPORT

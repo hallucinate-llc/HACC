@@ -24,6 +24,7 @@ Responding custodian/person:
 - Response due date: ______________________
 - Date(s) of response/nonresponse: ______________________
 - Deficiency notice date and cure deadline: ______________________
+FILING GATE: This prefill template is not filing-ready until all blank fields are completed and matched to attached service proof, response/nonresponse proof, deficiency notice, and declaration facts.
 
 I. RELIEF REQUESTED
 
@@ -62,6 +63,7 @@ V. EXHIBIT REFERENCES (GLOBAL NUMBERING)
 VI. CONCLUSION
 
 For these reasons, Movant respectfully requests the Court grant this motion and issue an order compelling full compliance and imposing appropriate sanctions/remedial terms.
+If any required factual field remains unfilled at submission time, Movant requests that this prefill template not be treated as an operative filing and will instead submit a completed recipient-specific version.
 
 DATED: ______________________
 

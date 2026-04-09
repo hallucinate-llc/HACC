@@ -73,6 +73,9 @@ Use this index when filing the coordinated state-court packet addressing:
 49. [presentation_guardrails_note_2026-04-09.md](/home/barberb/HACC/workspace/presentation_guardrails_note_2026-04-09.md)
 50. [housing_primary_source_record_ladder_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/housing_primary_source_record_ladder_2026-04-09.md)
 51. [probate_primary_source_record_ladder_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/probate_primary_source_record_ladder_2026-04-09.md)
+52. [comprehensive_repository_search_results_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/comprehensive_repository_search_results_2026-04-09.md)
+53. [repository_exhibit_pull_checklist_2026-04-09.md](/home/barberb/HACC/workspace/repository_exhibit_pull_checklist_2026-04-09.md)
+54. [repository_binder_build_order_2026-04-09.md](/home/barberb/HACC/workspace/repository_binder_build_order_2026-04-09.md)
 
 ## Recommended Filing Order
 

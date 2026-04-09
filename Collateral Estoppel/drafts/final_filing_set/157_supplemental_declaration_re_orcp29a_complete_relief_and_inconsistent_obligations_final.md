@@ -17,7 +17,7 @@ I, Benjamin Barber, declare as follows:
 2. I submit this supplemental declaration in support of:
    a. Motion to Limit Probate Issues and Require Section 18 / Eviction Merits to Be Litigated in the Proper Forum, or, only if necessary, for Limited ORCP 29 Joinder; and
    b. Objection/Fallback filing seeking exclusion or strike of collateral housing merits from probate.
-3. I make this declaration from personal knowledge of communications and events in this matter and from my review of repository records staged in this case.
+3. I make this declaration from personal knowledge of communications and events in this matter and from my review of records filed or prepared for filing in this case.
 
 A. COMPLETE-RELIEF FACTOR (ORCP 29A)
 
@@ -43,6 +43,7 @@ D. ORCP 29B FALLBACK FACTORS (IF JOINDER IS NOT FEASIBLE)
 14. The filed overlap-status materials identify separate eviction and federal tracks for the collateral housing-merits issues.
 15. The current protective-proceeding record identifies guardianship-specific questions that can be addressed without deciding full housing-merits liability.
 16. Based on those two record points, I request shaped relief that keeps this matter focused on guardianship findings and reserves collateral housing merits to those separately postured proceedings.
+16A. If the Court requests further ORCP 29 feasibility foundation, I can file a short supplemental declaration identifying service-channel verification steps, service-attempt chronology, and custodian/agent identity confirmation for HACC and Quantum from the case service-tracker materials.
 
 E. RECORD AND PROOF LIMITATIONS
 

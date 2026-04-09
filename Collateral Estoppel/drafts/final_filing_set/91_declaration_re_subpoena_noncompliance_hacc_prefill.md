@@ -38,6 +38,9 @@ I, Benjamin Barber, declare as follows:
     ______________________________________________
 11. The missing materials are material to guardianship, collateral-estoppel, show-cause, and/or sanctions issues pending before the Court.
 
+12. This declaration is a prefill template and is not filing-ready until all blanks are completed with recipient-specific facts and supporting records.
+13. I do not ask the Court to treat any unfilled prefill field as evidence.
+
 I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct.
 
 DATED: ______________________

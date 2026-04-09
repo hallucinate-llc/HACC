@@ -1,4 +1,4 @@
-# Solomon Compel Packet Conversion Sheet (88/89)
+# Solomon Compel Packet Conversion Sheet (88/89/88A/216A)
 
 Case: `26PR00641`
 Recipient: Solomon Barber
@@ -7,7 +7,7 @@ Packet ID: `11/11A/11B/18/19/21`
 ## Current status
 
 - Active logs currently show `ready_to_serve` and do not yet contain service/noncompliance dates.
-- Therefore files `88` and `89` remain prefill drafts.
+- Therefore files `88`, `89`, `88A`, and `216A` remain prefill drafts.
 
 ## Fill targets before filing
 
@@ -36,6 +36,27 @@ Fill these fields:
 9. Remaining unresolved deficiencies
 10. Signature date line
 
+### File 88A
+`88A_proposed_order_on_motion_to_compel_subpoena_compliance_and_sanctions_solomon_prefill.md`
+
+Fill these fields:
+1. Ruling line (paragraph 1)
+2. Production deadline
+3. Checklist/Search Report deadline
+4. Privilege-log deadline (if needed)
+5. Writ-predicate supplemental response deadline
+6. Hearing date line (if needed)
+
+### File 216A
+`216A_certificate_of_service_solomon_sanctions_packet_88_89_88A_2026-04-09.md`
+
+Fill these fields:
+1. Service date/method/proof for Solomon
+2. Service date/method/proof for counsel
+3. Any additional recipient service details
+4. Served-document checklist and support-set identifiers
+5. Signature date line
+
 ## Source-of-truth locations for each field
 
 1. Service dates/method/person served:
@@ -54,4 +75,4 @@ Fill these fields:
 
 ## Filing gate
 
-Do not file file `88` or `89` until all above fields are completed from service records and supporting documents are attached.
+Do not file `88`, `89`, `88A`, or `216A` until all above fields are completed from service records and supporting documents are attached.

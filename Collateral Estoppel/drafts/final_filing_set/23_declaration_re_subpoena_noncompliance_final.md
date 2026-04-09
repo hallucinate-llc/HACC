@@ -37,6 +37,11 @@ I, Benjamin Barber, declare as follows:
     ______________________________________________
     ______________________________________________
 11. The missing materials are material to guardianship, collateral-estoppel, show-cause, and/or sanctions issues pending before the Court.
+12. If the responding person is Solomon Barber, the unresolved production also includes (or should include) communications, notes, and records material to writ-of-assistance predicate facts, notice/service chronology, and handling of raised service/preclusion objections in this same matter.
+13. If applicable to Solomon Barber, I further state that notice of deficiencies and cure demand was also directed to those writ-predicate and service/preclusion-objection record categories.
+14. Where any Solomon-specific writ/filer-conduct sanctions branch is pursued, I offer this declaration to support record-completion and factual predicate development; I understand any non-subpoena sanctions theory should be addressed through separately noticed briefing identifying legal vehicle and evidentiary predicates.
+15. This declaration is a template form and is not filing-ready until all blanks are completed with recipient-specific facts and supporting records.
+16. I do not ask the Court to treat any unfilled template field as evidence.
 
 I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct.
 

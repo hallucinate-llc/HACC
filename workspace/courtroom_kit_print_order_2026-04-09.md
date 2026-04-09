@@ -73,3 +73,5 @@ If you need just one thin folder:
 
 - [courtroom_kit_checklist_2026-04-09.md](/home/barberb/HACC/workspace/courtroom_kit_checklist_2026-04-09.md)
 - [combined_state_court_packet_index.md](/home/barberb/HACC/workspace/combined_state_court_packet_index.md)
+- [repository_exhibit_pull_checklist_2026-04-09.md](/home/barberb/HACC/workspace/repository_exhibit_pull_checklist_2026-04-09.md)
+- [repository_binder_build_order_2026-04-09.md](/home/barberb/HACC/workspace/repository_binder_build_order_2026-04-09.md)

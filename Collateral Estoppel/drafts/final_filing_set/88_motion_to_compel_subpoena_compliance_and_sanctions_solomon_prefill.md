@@ -24,13 +24,16 @@ Responding custodian/person:
 - Response due date: ______________________
 - Date(s) of response/nonresponse: ______________________
 - Deficiency notice date and cure deadline: ______________________
+FILING GATE: This prefill template is not filing-ready until all blank fields are completed and matched to attached service proof, response/nonresponse proof, deficiency notice, and declaration facts.
 
 I. RELIEF REQUESTED
 
 1. Order full supplemental production responsive to subpoena categories by a date certain.
 2. Order production of completed Subpoena Custodian Compliance Checklist and Search Execution Report.
 3. Order production of withheld materials with adequate privilege log or production of unredacted records as appropriate.
-4. Award any sanctions or remedial relief the Court deems proper for failure to comply with subpoena obligations.
+4. Award subpoena-related remedial relief the Court deems proper for failure to comply with subpoena obligations, including compliance deadlines and any expense relief authorized by applicable rules/statutes.
+4A. Set a supplemental show-cause branch requiring Solomon Barber to explain writ-of-assistance predicate conduct, notice/service omissions to Benjamin Barber, and continuation of filing posture after raised service/preclusion objections in this matter.
+4B. Any non-subpoena sanctions branch arising from paragraph 4A should proceed only by separate, specifically noticed briefing order identifying legal vehicle, factual predicates, and evidentiary record.
 5. Grant such other and further relief as is just and equitable.
 
 II. FACTUAL BASIS (SUMMARY)
@@ -39,17 +42,23 @@ II. FACTUAL BASIS (SUMMARY)
 7. Response was incomplete and/or noncompliant.
 8. Deficiency notice and cure opportunity were provided.
 9. Noncompliance remains and materially affects adjudication of issues before the Court.
+9A. Movant further alleges subpoena nonproduction has prevented full testing of writ-of-assistance predicate facts, notice/service chronology, and communications concerning known restraining-order overlap and preclusion objections.
+9B. Movant alleges continued conduct despite raised threshold objections and seeks targeted production plus explanation before any coercive or sanctions determination.
 
 III. LEGAL BASIS
 
 10. ORCP 55 governs subpoena production obligations and permits court intervention for noncompliance with subpoenaed document production.
 11. To the extent production noncompliance is litigated through motion practice, ORCP 46 authorizes orders compelling compliance and expense/sanction remedies where appropriate.
 12. The Court also retains remedial authority to enforce compliance with lawfully issued process and to prevent prejudice from continued nonproduction.
+12A. For any writ-related filing-misconduct branch beyond subpoena noncompliance, Movant requests separate, specifically noticed briefing identifying the legal vehicle, factual predicates, and evidentiary record.
+12B. Until that separate branch is noticed and heard, this motion seeks subpoena-compliance relief and threshold record-completion directives only.
 
 IV. GOOD-FAITH CURE EFFORTS
 
 13. Movant provided written notice identifying deficiencies and a cure deadline.
 14. Responding party/custodian failed to cure fully by deadline.
+14A. Movant also provided notice of service/preclusion objections in this same matter and contends those objections were not cured before continued writ-related filing posture.
+14B. Ripeness gate: this motion is not ripe for filing unless subpoena service is complete, a response deadline has passed (or response was received), a deficiency notice was sent, and the cure window has expired or failed.
 
 V. EXHIBIT REFERENCES (GLOBAL NUMBERING)
 
@@ -62,6 +71,8 @@ V. EXHIBIT REFERENCES (GLOBAL NUMBERING)
 VI. CONCLUSION
 
 For these reasons, Movant respectfully requests the Court grant this motion and issue an order compelling full compliance and imposing appropriate sanctions/remedial terms.
+If any required factual field remains unfilled at submission time, Movant requests that this prefill template not be treated as an operative filing and will instead submit a completed recipient-specific version.
+If the service/nonresponse/deficiency sequence has not yet matured, Movant will hold this prefill and not request compel or sanctions relief until ripeness predicates are met.
 
 DATED: ______________________
 

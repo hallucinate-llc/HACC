@@ -34,8 +34,8 @@ II. FACTUAL RESPONSE POSTURE
 7. Solomon Samuel Barber's petition presents an emergency narrative that attributes Jane Kay Cortez's circumstances primarily to Benjamin Barber.
    The same narrative materially understates the roles of Housing Authority of Clackamas County, Quantum Residential, disputed outside document flows, and already-existing protective-order conflict.
 8. The petition also seeks extremely broad control, including plenary authority, possible institutional or residential placement, and attorney fees from Jane Kay Cortez's funds.
-9. On the present repository-backed record, those requests should not be granted without close scrutiny because multiple material allegations are disputed, overstated, incomplete, or depend on records not yet cleanly produced.
-10. Source-anchor note for this objection posture: this filing relies on the petition/writ record in this case, restraining-order sequence materials, and supporting declarations filed with this packet. The primary-source sequence for that branch is summarized in [probate_primary_source_record_ladder_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/probate_primary_source_record_ladder_2026-04-09.md). Unresolved points are treated as provisional pending additional admissible support and not offered as finally adjudicated facts. To the extent additional trust, authority, predicate-order, or notice records remain in petitioners' or the court's control and have not yet been produced, that nonproduction supports caution and narrowing rather than broader coercive or plenary relief.
+9. On the present filed and lodged record, those requests should not be granted without close scrutiny because multiple material allegations are disputed, overstated, incomplete, or depend on records not yet cleanly produced.
+10. Source-anchor note for this objection posture: this filing relies on the petition/writ record in this case, restraining-order sequence materials, and supporting declarations filed with this packet. The primary-source sequence for that branch is summarized in the filed source-ladder support note for this packet. Unresolved points are treated as provisional pending additional admissible support and not offered as finally adjudicated facts. To the extent additional trust, authority, predicate-order, or notice records remain in petitioners' or the court's control and have not yet been produced, that nonproduction supports caution and narrowing rather than broader coercive or plenary relief.
 
 III. SPECIFIC OBJECTIONS
 
@@ -88,7 +88,7 @@ C. NARRATIVE CREDIBILITY ISSUES
 IV. COLLATERAL HOUSING / RELOCATION ISSUES SHOULD NOT DRIVE PROBATE MERITS
 
 46. The present probate matter should not be converted into an improvised merits forum for Section 18 relocation-duty disputes, HACC / Quantum liability, eviction causation, or other collateral housing issues except to the extent strictly necessary to understand a genuine guardianship question. Under the Court's Chapter 125 protective-function role, those collateral matters should be narrowed and fenced off rather than allowed to overtake the guardianship inquiry.
-47. Repository materials already identify overlap with the Justice Court eviction-response track and the District of Oregon complaint track involving HACC and Quantum.
+47. The current filed and lodged materials already identify overlap with the Justice Court eviction-response track and the District of Oregon complaint track involving HACC and Quantum.
 48. If the Court concludes some limited housing-related fact is relevant, that does not justify using this probate petition to decide the broader merits of relocation compliance, voucher processing, or housing liability.
 49. Those issues should remain narrowed, provisional pending admissible support, or reserved to the proper forum.
 
@@ -100,7 +100,9 @@ V. REQUESTED THRESHOLD HEARING FRAME
 53. whether the petition's request for plenary authority and facility-placement authority is overbroad on the present record;
 54. whether attorney fees from Jane Kay Cortez's funds should be denied; and
 55. whether disputed collateral housing issues should be fenced off from probate merits except as narrowly necessary.
+55A. Before any coercive or plenary ruling is requested at that hearing, Objector will file (or identify in the current record) a one-page claim-to-proof chart mapping each requested ruling branch to at least one legal authority cite and one admissible record cite.
 56. If, after threshold review on admissible records, the Court concludes that the petition is limited in whole or material part under applicable issue-preclusion standards (including, as applicable, Nelson and Rawls element requirements and Hayes/Westwood separate-proceeding discipline), Objector requests claim-limiting relief on that preclusion branch. Separately, if the Court concludes that factual or procedural defects warrant narrowing regardless of completed preclusion, Objector requests threshold narrowing on that defects branch. Any sanctions request should be reserved to a separate, specifically noticed motion identifying the exact legal vehicle and evidentiary predicates.
+56A. No dispositive preclusion-based claim limitation should be entered unless the affected party had notice and an opportunity to address the specific issue row(s) and cited record support relied on.
 
 VI. RESERVATION
 

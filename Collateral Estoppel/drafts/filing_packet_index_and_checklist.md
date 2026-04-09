@@ -41,6 +41,8 @@ Current readiness audit:
 - [proof_gap_matrix_housing_probate_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/proof_gap_matrix_housing_probate_2026-04-09.md)
 - [housing_primary_source_record_ladder_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/housing_primary_source_record_ladder_2026-04-09.md)
 - [probate_primary_source_record_ladder_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/probate_primary_source_record_ladder_2026-04-09.md)
+- [repository_marshal_of_missing_records_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/repository_marshal_of_missing_records_2026-04-09.md)
+- [comprehensive_repository_search_results_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/comprehensive_repository_search_results_2026-04-09.md)
 - [top_10_documents_to_obtain_now_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/top_10_documents_to_obtain_now_2026-04-09.md)
 - [red_flags_by_filing_checklist_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/red_flags_by_filing_checklist_2026-04-09.md)
 - [housing_duties_fact_law_encoding_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/housing_duties_fact_law_encoding_2026-04-09.md)
@@ -63,6 +65,8 @@ Current readiness audit:
 - [outgoing_records_packets_assembly_checklist_2026-04-09.md](/home/barberb/HACC/workspace/outgoing_records_packets_assembly_checklist_2026-04-09.md)
 - [quantum_service_address_note_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/quantum_service_address_note_2026-04-09.md)
 - [quantum_registered_agent_confirmation_checklist_2026-04-09.md](/home/barberb/HACC/workspace/quantum_registered_agent_confirmation_checklist_2026-04-09.md)
+- [repository_exhibit_pull_checklist_2026-04-09.md](/home/barberb/HACC/workspace/repository_exhibit_pull_checklist_2026-04-09.md)
+- [repository_binder_build_order_2026-04-09.md](/home/barberb/HACC/workspace/repository_binder_build_order_2026-04-09.md)
 - [petition_overbreadth_memo_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/petition_overbreadth_memo_2026-04-09.md)
 
 ## Exhibit R packet

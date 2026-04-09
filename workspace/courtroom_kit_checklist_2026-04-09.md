@@ -91,3 +91,6 @@ If you have to reduce to one small stack:
 - [same_day_filing_checklist_2026-04-09.md](/home/barberb/HACC/workspace/same_day_filing_checklist_2026-04-09.md)
 - [night_before_court_checklist_2026-04-09.md](/home/barberb/HACC/workspace/night_before_court_checklist_2026-04-09.md)
 - [presentation_guardrails_note_2026-04-09.md](/home/barberb/HACC/workspace/presentation_guardrails_note_2026-04-09.md)
+- [repository_exhibit_pull_checklist_2026-04-09.md](/home/barberb/HACC/workspace/repository_exhibit_pull_checklist_2026-04-09.md)
+- [repository_binder_build_order_2026-04-09.md](/home/barberb/HACC/workspace/repository_binder_build_order_2026-04-09.md)
+- [comprehensive_repository_search_results_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/comprehensive_repository_search_results_2026-04-09.md)

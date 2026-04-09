@@ -25,6 +25,8 @@ THE COURT FINDS AND ORDERS:
 8. Nothing in this order bars properly postured claims in the relevant eviction or federal forum.
 9. No dispositive preclusion ruling is entered in this order unless specifically identified `188` row(s) are found fully supported by admissible records.
 10. If no such row is identified, this order grants only scope-control and does not dismiss claims on preclusion grounds.
+11. No `188` row may be treated as precluded under this order unless the affected party had notice and an opportunity to address that specific row and its cited record support.
+12. Any duty in this order keyed to a blank date or blank deadline field is triggered only after that field is completed in the signed order.
 
 IT IS SO ORDERED.
 
