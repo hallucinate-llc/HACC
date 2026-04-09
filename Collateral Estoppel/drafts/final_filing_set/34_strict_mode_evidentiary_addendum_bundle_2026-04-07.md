@@ -22,7 +22,7 @@ II. STRICT-MODE ACTIVE RULES TO ASSERT AS PRESENTLY PROVED
 - r22_case_obligated_finalize_authority_citations_before_filing (O): finalize_governing_authority_citations_before_final_filing -> doc:06_oregon_authority_table_final.md (activation 2026-04-07)
 - r23_case_permitted_initiate_remedial_contempt_path (P): initiate_remedial_contempt_or_show_cause_path -> person:solomon (activation 2026-04-07)
 - r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved (P): seek_compensatory_or_compliance_oriented_remedial_sanctions_if_contempt_is_proved -> issue:prejudice_and_noninterference_relief (activation 2026-04-07)
-- r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown (P): seek_orcp_17_sanctions_if_filing_is_shown_improper_or_factually_or_legally_unsupported -> issue:sanctions_track (activation 2026-04-07)
+- r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown (P): retained as separate reserved branch only; not invoked in the current show-cause filing posture.
 - r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46 (P): seek_subpoena_enforcement_and_related_expenses_after_nonparty_noncompliance -> org:hacc (activation 2026-04-07)
 - r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding (P): apply_orcp_and_oec_subject_to_specific_chapter_125_overrides -> proceeding:protective_proceeding (activation 2026-04-07)
 - r29_case_obligated_preserve_notice_and_objection_window (O): preserve_statutory_notice_and_objection_window_for_protective_petition -> person:jane_cortez (activation 2026-04-07)
@@ -66,7 +66,7 @@ II. STRICT-MODE ACTIVE RULES TO ASSERT AS PRESENTLY PROVED
 - r22_case_obligated_finalize_authority_citations_before_filing (O): finalize_governing_authority_citations_before_final_filing -> doc:06_oregon_authority_table_final.md (activation 2026-04-07)
 - r23_case_permitted_initiate_remedial_contempt_path (P): initiate_remedial_contempt_or_show_cause_path -> person:solomon (activation 2026-04-07)
 - r25_case_permitted_seek_remedial_contempt_sanctions_if_elements_proved (P): seek_compensatory_or_compliance_oriented_remedial_sanctions_if_contempt_is_proved -> issue:prejudice_and_noninterference_relief (activation 2026-04-07)
-- r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown (P): seek_orcp_17_sanctions_if_filing_is_shown_improper_or_factually_or_legally_unsupported -> issue:sanctions_track (activation 2026-04-07)
+- r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown (P): retained as separate reserved branch only; not invoked in the current show-cause filing posture.
 - r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46 (P): seek_subpoena_enforcement_and_related_expenses_after_nonparty_noncompliance -> org:hacc (activation 2026-04-07)
 - r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines (P): use_orcp9_service_and_orcp10_deadline_computation_for_later_filed_motion_packets -> issue:service_and_deadlines (activation 2026-04-07)
 - r6c_solomon_interference_not_proved_by_named_hacc_notice_gap (P): treat_solomon_hacc_interference_as_inference_not_direct_proof -> person:solomon (activation 2026-04-07)

@@ -1,6 +1,6 @@
 # Formal Case State Dashboard
 
-Generated: 2026-04-07
+Generated: 2026-04-09
 
 ## Filing-Ready Now
 - remedial_contempt_show_cause: Remedial contempt / show-cause timing branch

@@ -33,9 +33,9 @@ fact_true('f_issue_preclusion_finality_element_missing').
 fact_true('f_issue_preclusion_full_fair_element_missing').
 fact_true('f_overclaim_issue_preclusion_statement_detected').
 fact_true('f_client_prior_appointment').
-fact_true('f_client_benjamin_avoided_service').
-fact_true('f_client_benjamin_order_disregard').
-fact_true('f_client_benjamin_housing_interference').
+fact_true('f_client_solomon_avoided_service').
+fact_true('f_client_solomon_order_disregard').
+fact_true('f_client_solomon_housing_interference').
 fact_true('f_solomon_actual_notice_on_2025_11_17').
 fact_true('f_solomon_order_filed_on_2025_11_19').
 fact_true('f_client_solomon_failed_appearance').
@@ -464,8 +464,8 @@ fact_true('f_subpoena_pre_service_phase_only').
 
 % Rule-level derivations from fact truth
 rule_holds('r1_guardian_permission_if_prior_appointment') :- fact_true('f_authority_ors_125_050_protective_orcp_oec'), fact_true('f_client_prior_appointment').
-rule_holds('r2_noninterference_prohibition_for_benjamin') :- fact_true('f_authority_ors_125_050_protective_orcp_oec'), fact_true('f_client_prior_appointment'), fact_true('f_client_benjamin_housing_interference').
-rule_holds('r3_benjamin_obligation_comply_or_seek_relief') :- fact_true('f_authority_ors_125_050_protective_orcp_oec'), fact_true('f_client_prior_appointment'), fact_true('f_client_benjamin_order_disregard').
+rule_holds('r2_target_noninterference_prohibition_if_prior_appointment') :- fact_true('f_authority_ors_125_050_protective_orcp_oec'), fact_true('f_client_prior_appointment'), fact_true('f_client_solomon_housing_interference').
+rule_holds('r3_target_obligation_comply_or_seek_relief_if_prior_appointment') :- fact_true('f_authority_ors_125_050_protective_orcp_oec'), fact_true('f_client_prior_appointment'), fact_true('f_client_solomon_order_disregard').
 rule_holds('r40_benjamin_permitted_act_as_gal_under_signed_eppdapa_order') :- fact_true('f_authority_ors_124_020_eppdapa_restraining_relief'), fact_true('f_restraining_order_gal_appoints_benjamin_for_jane'), fact_true('f_restraining_order_in_effect').
 rule_holds('r41_solomon_obligated_follow_petitioner_guardian_or_conservator_instructions') :- fact_true('f_authority_ors_124_020_eppdapa_restraining_relief'), fact_true('f_restraining_order_solomon_named_respondent'), fact_true('f_restraining_order_requires_follow_guardian_or_conservator_instructions'), fact_true('f_restraining_order_in_effect').
 rule_holds('r42_solomon_forbidden_disobey_guardian_instruction_term_after_appearance') :- fact_true('f_authority_ors_124_020_eppdapa_restraining_relief'), fact_true('f_restraining_order_solomon_named_respondent'), fact_true('f_restraining_order_requires_follow_guardian_or_conservator_instructions'), fact_true('f_restraining_order_no_further_service_needed').
@@ -518,8 +518,8 @@ rule_holds('r39_case_permitted_seek_targeted_nonparty_production_for_missing_iss
 
 % Deontic conclusions generated for all rules
 deontic_conclusion('r1_guardian_permission_if_prior_appointment', 'P', 'person:benjamin_barber', 'act_within_valid_guardian_scope', 'person:jane_cortez') :- rule_holds('r1_guardian_permission_if_prior_appointment').
-deontic_conclusion('r2_noninterference_prohibition_for_benjamin', 'F', 'person:benjamin_barber', 'interfere_with_guardian_or_housing_process', 'process:hacc_housing_contract') :- rule_holds('r2_noninterference_prohibition_for_benjamin').
-deontic_conclusion('r3_benjamin_obligation_comply_or_seek_relief', 'O', 'person:benjamin_barber', 'comply_with_order_or_seek_relief', 'order:prior_guardianship_order') :- rule_holds('r3_benjamin_obligation_comply_or_seek_relief').
+deontic_conclusion('r2_target_noninterference_prohibition_if_prior_appointment', 'F', 'person:solomon', 'interfere_with_guardian_or_housing_process', 'process:hacc_housing_contract') :- rule_holds('r2_target_noninterference_prohibition_if_prior_appointment').
+deontic_conclusion('r3_target_obligation_comply_or_seek_relief_if_prior_appointment', 'O', 'person:solomon', 'comply_with_order_or_seek_relief', 'order:prior_guardianship_order') :- rule_holds('r3_target_obligation_comply_or_seek_relief_if_prior_appointment').
 deontic_conclusion('r40_benjamin_permitted_act_as_gal_under_signed_eppdapa_order', 'P', 'person:benjamin_barber', 'act_as_gal_within_signed_eppdapa_order_scope', 'person:jane_cortez') :- rule_holds('r40_benjamin_permitted_act_as_gal_under_signed_eppdapa_order').
 deontic_conclusion('r41_solomon_obligated_follow_petitioner_guardian_or_conservator_instructions', 'O', 'person:solomon', 'follow_petitioner_guardian_or_conservator_instructions', 'person:jane_cortez') :- rule_holds('r41_solomon_obligated_follow_petitioner_guardian_or_conservator_instructions').
 deontic_conclusion('r42_solomon_forbidden_disobey_guardian_instruction_term_after_appearance', 'F', 'person:solomon', 'disobey_guardian_instruction_term_after_appearance', 'order:eppdapa_restraining_order') :- rule_holds('r42_solomon_forbidden_disobey_guardian_instruction_term_after_appearance').
@@ -576,23 +576,23 @@ happens(fact_event(f_notice_to_respondent), 2026-03-31).
 happens(fact_event(f_respondent_objection_form_present), 2026-04-05).
 happens(fact_event(f_petition_claims_no_prior_guardian), 2026-03-31).
 happens(fact_event(f_prior_appointment_source_order_not_found), 2026-04-07).
-happens(fact_event(f_certified_prior_order_material_present), 2026-04-07).
-happens(fact_event(f_certified_prior_docket_material_present), 2026-04-07).
-happens(fact_event(f_certified_prior_docket_material_missing), 2026-04-07).
-happens(fact_event(f_certified_prior_hearing_material_present), 2026-04-07).
-happens(fact_event(f_certified_prior_order_material_missing), 2026-04-07).
-happens(fact_event(f_certified_prior_hearing_material_missing), 2026-04-07).
-happens(fact_event(f_issue_preclusion_mapping_completed), 2026-04-07).
-happens(fact_event(f_issue_preclusion_mapping_incomplete), 2026-04-07).
-happens(fact_event(f_issue_preclusion_finality_element_mapped), 2026-04-07).
-happens(fact_event(f_issue_preclusion_full_fair_element_mapped), 2026-04-07).
-happens(fact_event(f_issue_preclusion_finality_element_missing), 2026-04-07).
-happens(fact_event(f_issue_preclusion_full_fair_element_missing), 2026-04-07).
-happens(fact_event(f_overclaim_issue_preclusion_statement_detected), 2026-04-07).
+happens(fact_event(f_certified_prior_order_material_present), 2026-04-09).
+happens(fact_event(f_certified_prior_docket_material_present), 2026-04-09).
+happens(fact_event(f_certified_prior_docket_material_missing), 2026-04-09).
+happens(fact_event(f_certified_prior_hearing_material_present), 2026-04-09).
+happens(fact_event(f_certified_prior_order_material_missing), 2026-04-09).
+happens(fact_event(f_certified_prior_hearing_material_missing), 2026-04-09).
+happens(fact_event(f_issue_preclusion_mapping_completed), 2026-04-09).
+happens(fact_event(f_issue_preclusion_mapping_incomplete), 2026-04-09).
+happens(fact_event(f_issue_preclusion_finality_element_mapped), 2026-04-09).
+happens(fact_event(f_issue_preclusion_full_fair_element_mapped), 2026-04-09).
+happens(fact_event(f_issue_preclusion_finality_element_missing), 2026-04-09).
+happens(fact_event(f_issue_preclusion_full_fair_element_missing), 2026-04-09).
+happens(fact_event(f_overclaim_issue_preclusion_statement_detected), 2026-04-09).
 happens(fact_event(f_client_prior_appointment), 2026-04-07).
-happens(fact_event(f_client_benjamin_avoided_service), 2026-04-07).
-happens(fact_event(f_client_benjamin_order_disregard), 2026-04-07).
-happens(fact_event(f_client_benjamin_housing_interference), 2026-04-07).
+happens(fact_event(f_client_solomon_avoided_service), 2026-04-07).
+happens(fact_event(f_client_solomon_order_disregard), 2026-04-07).
+happens(fact_event(f_client_solomon_housing_interference), 2026-04-07).
 happens(fact_event(f_solomon_actual_notice_on_2025_11_17), 2025-11-17).
 happens(fact_event(f_solomon_order_filed_on_2025_11_19), 2025-11-19).
 happens(fact_event(f_client_solomon_failed_appearance), 2026-03-10).
@@ -640,10 +640,10 @@ happens(fact_event(f_ashley_ferron_case_26P000433_denied), 2026-01-26).
 happens(fact_event(f_julio_order_case_25PO11318_exists), 2025-11-17).
 happens(fact_event(f_hacc_process_exists), 2026-01-12).
 happens(fact_event(f_collateral_estoppel_candidate), 2026-04-07).
-happens(fact_event(f_actor_assignment_conflict_benjamin_vs_solomon_interference), 2026-04-07).
-happens(fact_event(f_subpoena_workflow_components_staged), 2026-04-07).
-happens(fact_event(f_or_joined_search_protocol_defined), 2026-04-07).
-happens(fact_event(f_authority_table_placeholders_unresolved), 2026-04-07).
+happens(fact_event(f_actor_assignment_conflict_benjamin_vs_solomon_interference), 2026-04-09).
+happens(fact_event(f_subpoena_workflow_components_staged), 2026-04-09).
+happens(fact_event(f_or_joined_search_protocol_defined), 2026-04-09).
+happens(fact_event(f_authority_table_placeholders_unresolved), 2026-04-09).
 happens(fact_event(f_authority_ors_33_055_remedial_contempt_procedure), 2026-04-07).
 happens(fact_event(f_authority_ors_33_075_compel_appearance), 2026-04-07).
 happens(fact_event(f_authority_ors_33_105_remedial_sanctions), 2026-04-07).
@@ -1036,23 +1036,23 @@ happens(fact_event(f_motion_to_compel_stage_any), 2026-04-07).
 % f_respondent_objection_form_present: status=verified, source=guardianship_timeline.md, dates=['2026-04-05']
 % f_petition_claims_no_prior_guardian: status=verified, source=solomon_motion_for_guardianship_ocr.txt, dates=['2026-03-31']
 % f_prior_appointment_source_order_not_found: status=verified, source=deontic_logic_gap_review_2026-04-07.md, dates=['2026-04-07']
-% f_certified_prior_order_material_present: status=verified, source=certified_records, dates=['2026-04-07']
-% f_certified_prior_docket_material_present: status=verified, source=certified_records, dates=['2026-04-07']
-% f_certified_prior_docket_material_missing: status=verified, source=certified_records, dates=['2026-04-07']
-% f_certified_prior_hearing_material_present: status=verified, source=certified_records, dates=['2026-04-07']
-% f_certified_prior_order_material_missing: status=verified, source=certified_records, dates=['2026-04-07']
-% f_certified_prior_hearing_material_missing: status=verified, source=certified_records, dates=['2026-04-07']
-% f_issue_preclusion_mapping_completed: status=verified, source=issue_preclusion_mapping.json, dates=['2026-04-07']
-% f_issue_preclusion_mapping_incomplete: status=verified, source=issue_preclusion_mapping.json, dates=['2026-04-07']
-% f_issue_preclusion_finality_element_mapped: status=verified, source=issue_preclusion_mapping.json, dates=['2026-04-07']
-% f_issue_preclusion_full_fair_element_mapped: status=verified, source=issue_preclusion_mapping.json, dates=['2026-04-07']
-% f_issue_preclusion_finality_element_missing: status=verified, source=issue_preclusion_mapping.json, dates=['2026-04-07']
-% f_issue_preclusion_full_fair_element_missing: status=verified, source=issue_preclusion_mapping.json, dates=['2026-04-07']
-% f_overclaim_issue_preclusion_statement_detected: status=verified, source=repeated_usurpation_pattern_memo.md | petition_guardianship_working_memo.md, dates=['2026-04-07']
+% f_certified_prior_order_material_present: status=verified, source=certified_records, dates=['2026-04-09']
+% f_certified_prior_docket_material_present: status=verified, source=certified_records, dates=['2026-04-09']
+% f_certified_prior_docket_material_missing: status=verified, source=certified_records, dates=['2026-04-09']
+% f_certified_prior_hearing_material_present: status=verified, source=certified_records, dates=['2026-04-09']
+% f_certified_prior_order_material_missing: status=verified, source=certified_records, dates=['2026-04-09']
+% f_certified_prior_hearing_material_missing: status=verified, source=certified_records, dates=['2026-04-09']
+% f_issue_preclusion_mapping_completed: status=verified, source=issue_preclusion_mapping.json, dates=['2026-04-09']
+% f_issue_preclusion_mapping_incomplete: status=verified, source=issue_preclusion_mapping.json, dates=['2026-04-09']
+% f_issue_preclusion_finality_element_mapped: status=verified, source=issue_preclusion_mapping.json, dates=['2026-04-09']
+% f_issue_preclusion_full_fair_element_mapped: status=verified, source=issue_preclusion_mapping.json, dates=['2026-04-09']
+% f_issue_preclusion_finality_element_missing: status=verified, source=issue_preclusion_mapping.json, dates=['2026-04-09']
+% f_issue_preclusion_full_fair_element_missing: status=verified, source=issue_preclusion_mapping.json, dates=['2026-04-09']
+% f_overclaim_issue_preclusion_statement_detected: status=verified, source=repeated_usurpation_pattern_memo.md | petition_guardianship_working_memo.md, dates=['2026-04-09']
 % f_client_prior_appointment: status=alleged, source=/home/barberb/HACC/Collateral Estoppel/knowledge_graph/guardianship_case_graph.md, dates=['2026-04-07']
-% f_client_benjamin_avoided_service: status=alleged, source=/home/barberb/HACC/Collateral Estoppel/knowledge_graph/guardianship_case_graph.md, dates=['2026-04-07']
-% f_client_benjamin_order_disregard: status=alleged, source=/home/barberb/HACC/Collateral Estoppel/knowledge_graph/guardianship_case_graph.md, dates=['2026-04-07']
-% f_client_benjamin_housing_interference: status=alleged, source=/home/barberb/HACC/Collateral Estoppel/evidence_notes/motion_exhibit_index.md, dates=['2026-04-07']
+% f_client_solomon_avoided_service: status=alleged, source=/home/barberb/HACC/Collateral Estoppel/knowledge_graph/guardianship_case_graph.md, dates=['2026-04-07']
+% f_client_solomon_order_disregard: status=alleged, source=/home/barberb/HACC/Collateral Estoppel/knowledge_graph/guardianship_case_graph.md, dates=['2026-04-07']
+% f_client_solomon_housing_interference: status=alleged, source=/home/barberb/HACC/Collateral Estoppel/evidence_notes/motion_exhibit_index.md, dates=['2026-04-07']
 % f_solomon_actual_notice_on_2025_11_17: status=verified, source=uid_660669_Mon--17-Nov-2025-20-38-24--0000_New-text-message-from-solomon--503--381-6911.eml, dates=['2025-11-17']
 % f_solomon_order_filed_on_2025_11_19: status=verified, source=14161-Me-to-solomon-gv-b2df7cbf8706d9fe/transcript.txt, dates=['2025-11-19']
 % f_client_solomon_failed_appearance: status=alleged, source=/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/41_certified_nonappearance_packet_checklist_r24_2026-04-07.md, dates=['2026-03-10', '2026-04-07']
@@ -1093,10 +1093,10 @@ happens(fact_event(f_motion_to_compel_stage_any), 2026-04-07).
 % f_julio_order_case_25PO11318_exists: status=verified, source=protective_order_and_hacc_notice_timeline.md, dates=['2025-11-17']
 % f_hacc_process_exists: status=verified, source=0014-Re-Allegations-of-Fraud---JC-Household/message.eml, dates=['2026-01-12']
 % f_collateral_estoppel_candidate: status=theory, source=/home/barberb/HACC/Collateral Estoppel/evidence_notes/certified_records/issue_preclusion_mapping_guide.md, dates=['2026-04-07']
-% f_actor_assignment_conflict_benjamin_vs_solomon_interference: status=verified, source=generate_formal_reasoning_artifacts.py, dates=['2026-04-07']
-% f_subpoena_workflow_components_staged: status=verified, source=final_filing_set, dates=['2026-04-07']
-% f_or_joined_search_protocol_defined: status=verified, source=11B_attachment_a2_definitions_and_instructions_final.md, dates=['2026-04-07']
-% f_authority_table_placeholders_unresolved: status=verified, source=06_oregon_authority_table_final.md, dates=['2026-04-07']
+% f_actor_assignment_conflict_benjamin_vs_solomon_interference: status=verified, source=generate_formal_reasoning_artifacts.py, dates=['2026-04-09']
+% f_subpoena_workflow_components_staged: status=verified, source=final_filing_set, dates=['2026-04-09']
+% f_or_joined_search_protocol_defined: status=verified, source=11B_attachment_a2_definitions_and_instructions_final.md, dates=['2026-04-09']
+% f_authority_table_placeholders_unresolved: status=verified, source=06_oregon_authority_table_final.md, dates=['2026-04-09']
 % f_authority_ors_33_055_remedial_contempt_procedure: status=verified, source=oregon_authority_grounding_memo_2026-04-07.md, dates=['2026-04-07']
 % f_authority_ors_33_075_compel_appearance: status=verified, source=oregon_authority_grounding_memo_2026-04-07.md, dates=['2026-04-07']
 % f_authority_ors_33_105_remedial_sanctions: status=verified, source=oregon_authority_grounding_memo_2026-04-07.md, dates=['2026-04-07']
@@ -1486,8 +1486,8 @@ happens(fact_event(f_motion_to_compel_stage_any), 2026-04-07).
 
 % Rule mapping comments
 % r1_guardian_permission_if_prior_appointment: If prior appointment exists, Benjamin is permitted to act within valid guardian scope for Jane.
-% r2_noninterference_prohibition_for_benjamin: If prior appointment exists and interference is alleged, Benjamin is forbidden from interference.
-% r3_benjamin_obligation_comply_or_seek_relief: If prior appointment is in force and Benjamin disregarded order, Benjamin was obligated to comply or seek relief.
+% r2_target_noninterference_prohibition_if_prior_appointment: If prior appointment exists and interference is alleged, the alleged interfering actor is forbidden from interference.
+% r3_target_obligation_comply_or_seek_relief_if_prior_appointment: If prior appointment is in force and an alleged actor disregarded the order, that actor was obligated to comply or seek relief.
 % r40_benjamin_permitted_act_as_gal_under_signed_eppdapa_order: If ORS 124.020 authority is available and the signed EPPDAPA order appoints Benjamin as GAL for Jane, Benjamin is permitted to act within that order scope.
 % r41_solomon_obligated_follow_petitioner_guardian_or_conservator_instructions: If ORS 124.020 authority is available and the signed EPPDAPA order requires it, Solomon is obligated to follow petitioner guardian or conservator instructions while the order is in effect.
 % r42_solomon_forbidden_disobey_guardian_instruction_term_after_appearance: If Solomon is the named respondent and no further service was required because he appeared, disobeying the signed guardian-instruction term is forbidden in this model.

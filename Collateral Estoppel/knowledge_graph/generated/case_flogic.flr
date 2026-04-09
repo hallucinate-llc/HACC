@@ -13,23 +13,23 @@ fact(f_notice_to_respondent, NoticeIssued(case:26PR00641, person:jane_cortez, 20
 fact(f_respondent_objection_form_present, RespondentObjectionFormPresent(case:26PR00641, person:jane_cortez), status(verified), value(true), dates(['2026-04-05'])).
 fact(f_petition_claims_no_prior_guardian, PetitionStatesNoPriorGuardian(case:26PR00641, person:jane_cortez), status(verified), value(true), dates(['2026-03-31'])).
 fact(f_prior_appointment_source_order_not_found, SourceOrderNotFoundInRepository(issue:prior_appointment_for_jane_cortez), status(verified), value(true), dates(['2026-04-07'])).
-fact(f_certified_prior_order_material_present, CertifiedPriorOrderMaterialPresent(issue:prior_separate_proceeding_record), status(verified), value(false), dates(['2026-04-07'])).
-fact(f_certified_prior_docket_material_present, CertifiedPriorDocketMaterialPresent(issue:prior_separate_proceeding_record), status(verified), value(false), dates(['2026-04-07'])).
-fact(f_certified_prior_docket_material_missing, CertifiedPriorDocketMaterialMissing(issue:prior_separate_proceeding_record), status(verified), value(true), dates(['2026-04-07'])).
-fact(f_certified_prior_hearing_material_present, CertifiedPriorHearingMaterialPresent(issue:prior_separate_proceeding_record), status(verified), value(false), dates(['2026-04-07'])).
-fact(f_certified_prior_order_material_missing, CertifiedPriorOrderMaterialMissing(issue:prior_separate_proceeding_record), status(verified), value(true), dates(['2026-04-07'])).
-fact(f_certified_prior_hearing_material_missing, CertifiedPriorHearingMaterialMissing(issue:prior_separate_proceeding_record), status(verified), value(true), dates(['2026-04-07'])).
-fact(f_issue_preclusion_mapping_completed, IssuePreclusionMappingCompleted(issue:guardianship_authority), status(verified), value(false), dates(['2026-04-07'])).
-fact(f_issue_preclusion_mapping_incomplete, IssuePreclusionMappingIncomplete(issue:guardianship_authority), status(verified), value(true), dates(['2026-04-07'])).
-fact(f_issue_preclusion_finality_element_mapped, IssuePreclusionFinalityElementMapped(issue:guardianship_authority), status(verified), value(false), dates(['2026-04-07'])).
-fact(f_issue_preclusion_full_fair_element_mapped, IssuePreclusionFullFairElementMapped(issue:guardianship_authority), status(verified), value(false), dates(['2026-04-07'])).
-fact(f_issue_preclusion_finality_element_missing, IssuePreclusionFinalityElementMissing(issue:guardianship_authority), status(verified), value(true), dates(['2026-04-07'])).
-fact(f_issue_preclusion_full_fair_element_missing, IssuePreclusionFullFairElementMissing(issue:guardianship_authority), status(verified), value(true), dates(['2026-04-07'])).
-fact(f_overclaim_issue_preclusion_statement_detected, OverclaimIssuePreclusionStatementDetected(repo:collateral_estoppel_workspace), status(verified), value(true), dates(['2026-04-07'])).
+fact(f_certified_prior_order_material_present, CertifiedPriorOrderMaterialPresent(issue:prior_separate_proceeding_record), status(verified), value(false), dates(['2026-04-09'])).
+fact(f_certified_prior_docket_material_present, CertifiedPriorDocketMaterialPresent(issue:prior_separate_proceeding_record), status(verified), value(false), dates(['2026-04-09'])).
+fact(f_certified_prior_docket_material_missing, CertifiedPriorDocketMaterialMissing(issue:prior_separate_proceeding_record), status(verified), value(true), dates(['2026-04-09'])).
+fact(f_certified_prior_hearing_material_present, CertifiedPriorHearingMaterialPresent(issue:prior_separate_proceeding_record), status(verified), value(false), dates(['2026-04-09'])).
+fact(f_certified_prior_order_material_missing, CertifiedPriorOrderMaterialMissing(issue:prior_separate_proceeding_record), status(verified), value(true), dates(['2026-04-09'])).
+fact(f_certified_prior_hearing_material_missing, CertifiedPriorHearingMaterialMissing(issue:prior_separate_proceeding_record), status(verified), value(true), dates(['2026-04-09'])).
+fact(f_issue_preclusion_mapping_completed, IssuePreclusionMappingCompleted(issue:guardianship_authority), status(verified), value(false), dates(['2026-04-09'])).
+fact(f_issue_preclusion_mapping_incomplete, IssuePreclusionMappingIncomplete(issue:guardianship_authority), status(verified), value(true), dates(['2026-04-09'])).
+fact(f_issue_preclusion_finality_element_mapped, IssuePreclusionFinalityElementMapped(issue:guardianship_authority), status(verified), value(false), dates(['2026-04-09'])).
+fact(f_issue_preclusion_full_fair_element_mapped, IssuePreclusionFullFairElementMapped(issue:guardianship_authority), status(verified), value(false), dates(['2026-04-09'])).
+fact(f_issue_preclusion_finality_element_missing, IssuePreclusionFinalityElementMissing(issue:guardianship_authority), status(verified), value(true), dates(['2026-04-09'])).
+fact(f_issue_preclusion_full_fair_element_missing, IssuePreclusionFullFairElementMissing(issue:guardianship_authority), status(verified), value(true), dates(['2026-04-09'])).
+fact(f_overclaim_issue_preclusion_statement_detected, OverclaimIssuePreclusionStatementDetected(repo:collateral_estoppel_workspace), status(verified), value(true), dates(['2026-04-09'])).
 fact(f_client_prior_appointment, PriorAppointmentExists(person:jane_cortez, person:benjamin_barber), status(alleged), value(true), dates(['2026-04-07'])).
-fact(f_client_benjamin_avoided_service, AvoidedService(person:benjamin_barber, order:prior_guardianship_order), status(alleged), value(true), dates(['2026-04-07'])).
-fact(f_client_benjamin_order_disregard, DisregardedOrder(person:benjamin_barber, order:prior_guardianship_order), status(alleged), value(true), dates(['2026-04-07'])).
-fact(f_client_benjamin_housing_interference, Interference(person:benjamin_barber, process:hacc_housing_contract), status(alleged), value(true), dates(['2026-04-07'])).
+fact(f_client_solomon_avoided_service, AvoidedService(person:solomon, order:prior_guardianship_order), status(alleged), value(true), dates(['2026-04-07'])).
+fact(f_client_solomon_order_disregard, DisregardedOrder(person:solomon, order:prior_guardianship_order), status(alleged), value(true), dates(['2026-04-07'])).
+fact(f_client_solomon_housing_interference, Interference(person:solomon, process:hacc_housing_contract), status(alleged), value(true), dates(['2026-04-07'])).
 fact(f_solomon_actual_notice_on_2025_11_17, ActualNotice(person:solomon, order:eppdapa_restraining_order), status(verified), value(true), dates(['2025-11-17'])).
 fact(f_solomon_order_filed_on_2025_11_19, OrderFiled(order:eppdapa_restraining_order, person:jane_cortez, person:solomon), status(verified), value(true), dates(['2025-11-19'])).
 fact(f_client_solomon_failed_appearance, FailedToAppear(person:solomon, proceeding:related_order_hearing), status(alleged), value(true), dates(['2026-03-10', '2026-04-07'])).
@@ -70,10 +70,10 @@ fact(f_ashley_ferron_case_26P000433_denied, ProtectivePetitionDenied(case:26P000
 fact(f_julio_order_case_25PO11318_exists, RestrainingOrderExists(case:25PO11318, person:julio_cortez), status(verified), value(true), dates(['2025-11-17'])).
 fact(f_hacc_process_exists, HousingProcessActive(org:hacc, person:jane_cortez, process:hacc_housing_contract), status(verified), value(true), dates(['2026-01-12'])).
 fact(f_collateral_estoppel_candidate, PotentialIssuePreclusion(issue:guardianship_authority), status(theory), value(true), dates(['2026-04-07'])).
-fact(f_actor_assignment_conflict_benjamin_vs_solomon_interference, ActorAssignmentConflict(issue:interference_actor_assignment, person:benjamin_barber, person:solomon), status(verified), value(true), dates(['2026-04-07'])).
-fact(f_subpoena_workflow_components_staged, SubpoenaWorkflowComponentsStaged(case:26PR00641), status(verified), value(true), dates(['2026-04-07'])).
-fact(f_or_joined_search_protocol_defined, OrJoinedSearchProtocolDefined(doc:11B_attachment_a2_definitions_and_instructions_final.md), status(verified), value(true), dates(['2026-04-07'])).
-fact(f_authority_table_placeholders_unresolved, AuthorityCitationsUnresolved(doc:06_oregon_authority_table_final.md), status(verified), value(false), dates(['2026-04-07'])).
+fact(f_actor_assignment_conflict_benjamin_vs_solomon_interference, ActorAssignmentConflict(issue:interference_actor_assignment, person:benjamin_barber, person:solomon), status(verified), value(true), dates(['2026-04-09'])).
+fact(f_subpoena_workflow_components_staged, SubpoenaWorkflowComponentsStaged(case:26PR00641), status(verified), value(true), dates(['2026-04-09'])).
+fact(f_or_joined_search_protocol_defined, OrJoinedSearchProtocolDefined(doc:11B_attachment_a2_definitions_and_instructions_final.md), status(verified), value(true), dates(['2026-04-09'])).
+fact(f_authority_table_placeholders_unresolved, AuthorityCitationsUnresolved(doc:06_oregon_authority_table_final.md), status(verified), value(false), dates(['2026-04-09'])).
 fact(f_authority_ors_33_055_remedial_contempt_procedure, AuthorityAvailable(auth:ors_33_055, topic:remedial_contempt_procedure), status(verified), value(true), dates(['2026-04-07'])).
 fact(f_authority_ors_33_075_compel_appearance, AuthorityAvailable(auth:ors_33_075, topic:compel_appearance_after_order_to_appear), status(verified), value(true), dates(['2026-04-07'])).
 fact(f_authority_ors_33_105_remedial_sanctions, AuthorityAvailable(auth:ors_33_105, topic:remedial_contempt_sanctions), status(verified), value(true), dates(['2026-04-07'])).
@@ -465,12 +465,12 @@ fact(f_motion_to_compel_stage_any, MotionToCompelStageAny(case:26PR00641), statu
 deontic(P, person:benjamin_barber, act_within_valid_guardian_scope, person:jane_cortez) :- holds(f_authority_ors_125_050_protective_orcp_oec), holds(f_client_prior_appointment).
 % track(r1_guardian_permission_if_prior_appointment) = hypothesis
 % authority_refs(r1_guardian_permission_if_prior_appointment) = ['auth:ors_125_050']
-deontic(F, person:benjamin_barber, interfere_with_guardian_or_housing_process, process:hacc_housing_contract) :- holds(f_authority_ors_125_050_protective_orcp_oec), holds(f_client_prior_appointment), holds(f_client_benjamin_housing_interference).
-% track(r2_noninterference_prohibition_for_benjamin) = hypothesis
-% authority_refs(r2_noninterference_prohibition_for_benjamin) = ['auth:ors_125_050']
-deontic(O, person:benjamin_barber, comply_with_order_or_seek_relief, order:prior_guardianship_order) :- holds(f_authority_ors_125_050_protective_orcp_oec), holds(f_client_prior_appointment), holds(f_client_benjamin_order_disregard).
-% track(r3_benjamin_obligation_comply_or_seek_relief) = hypothesis
-% authority_refs(r3_benjamin_obligation_comply_or_seek_relief) = ['auth:ors_125_050']
+deontic(F, person:solomon, interfere_with_guardian_or_housing_process, process:hacc_housing_contract) :- holds(f_authority_ors_125_050_protective_orcp_oec), holds(f_client_prior_appointment), holds(f_client_solomon_housing_interference).
+% track(r2_target_noninterference_prohibition_if_prior_appointment) = hypothesis
+% authority_refs(r2_target_noninterference_prohibition_if_prior_appointment) = ['auth:ors_125_050']
+deontic(O, person:solomon, comply_with_order_or_seek_relief, order:prior_guardianship_order) :- holds(f_authority_ors_125_050_protective_orcp_oec), holds(f_client_prior_appointment), holds(f_client_solomon_order_disregard).
+% track(r3_target_obligation_comply_or_seek_relief_if_prior_appointment) = hypothesis
+% authority_refs(r3_target_obligation_comply_or_seek_relief_if_prior_appointment) = ['auth:ors_125_050']
 deontic(P, person:benjamin_barber, act_as_gal_within_signed_eppdapa_order_scope, person:jane_cortez) :- holds(f_authority_ors_124_020_eppdapa_restraining_relief), holds(f_restraining_order_gal_appoints_benjamin_for_jane), holds(f_restraining_order_in_effect).
 % track(r40_benjamin_permitted_act_as_gal_under_signed_eppdapa_order) = filing
 % authority_refs(r40_benjamin_permitted_act_as_gal_under_signed_eppdapa_order) = ['auth:ors_124_020', 'order:eppdapa_restraining_order']

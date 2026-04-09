@@ -63,6 +63,12 @@ Use this index when filing the coordinated state-court packet addressing:
 39. [housing_duty_crib_sheet_2026-04-09.md](/home/barberb/HACC/workspace/housing_duty_crib_sheet_2026-04-09.md)
 40. [courtroom_kit_checklist_2026-04-09.md](/home/barberb/HACC/workspace/courtroom_kit_checklist_2026-04-09.md)
 41. [courtroom_kit_print_order_2026-04-09.md](/home/barberb/HACC/workspace/courtroom_kit_print_order_2026-04-09.md)
+42. [129_housing_duty_appendix_exhibit_plan_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/129_housing_duty_appendix_exhibit_plan_2026-04-09.md)
+43. [130_housing_duty_appendix_print_order_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/130_housing_duty_appendix_print_order_2026-04-09.md)
+44. [same_day_filing_checklist_2026-04-09.md](/home/barberb/HACC/workspace/same_day_filing_checklist_2026-04-09.md)
+45. [hearing_emphasis_priority_sheet_2026-04-09.md](/home/barberb/HACC/workspace/hearing_emphasis_priority_sheet_2026-04-09.md)
+46. [judge_pushback_answers_sheet_2026-04-09.md](/home/barberb/HACC/workspace/judge_pushback_answers_sheet_2026-04-09.md)
+47. [ultra_compact_oral_argument_sheet_2026-04-09.md](/home/barberb/HACC/workspace/ultra_compact_oral_argument_sheet_2026-04-09.md)
 
 ## Recommended Filing Order
 

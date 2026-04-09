@@ -12,7 +12,6 @@ ROOT = Path('/home/barberb/HACC/Collateral Estoppel/knowledge_graph')
 GEN = ROOT / 'generated'
 
 REPORT = GEN / 'deontic_reasoning_report.json'
-PROOF = GEN / 'proof_intake_map_2026-04-07.json'
 OUT_JSON = GEN / f'deontic_gap_closure_matrix_{date.today().isoformat()}.json'
 OUT_MD = GEN / f'deontic_gap_closure_matrix_{date.today().isoformat()}.md'
 
@@ -21,8 +20,8 @@ FACT_PACKET_MAP = {
     'f_collateral_estoppel_candidate': 'packet_issue_preclusion_r7',
     'f_client_solomon_barred_refile': 'packet_issue_preclusion_r7',
     'f_client_prior_appointment': 'packet_prior_appointment_r1_r2_r3',
-    'f_client_benjamin_housing_interference': 'packet_prior_appointment_r1_r2_r3',
-    'f_client_benjamin_order_disregard': 'packet_prior_appointment_r1_r2_r3',
+    'f_client_solomon_housing_interference': 'packet_prior_appointment_r1_r2_r3',
+    'f_client_solomon_order_disregard': 'packet_prior_appointment_r1_r2_r3',
     'f_subpoena_service_completed_any': 'service_log_progression_r17_r18_r19',
     'f_subpoena_response_incomplete_any': 'service_log_progression_r17_r18_r19',
     'f_deficiency_notice_sent_any': 'service_log_progression_r17_r18_r19',
@@ -34,6 +33,13 @@ def load_json(path: Path) -> Dict[str, object]:
     if not path.exists():
         return {}
     return json.loads(path.read_text(encoding='utf-8'))
+
+
+def latest_proof_map() -> Dict[str, object]:
+    candidates = sorted(GEN.glob('proof_intake_map_*.json'))
+    if candidates:
+        return load_json(candidates[-1])
+    return load_json(GEN / 'proof_intake_map_2026-04-07.json')
 
 
 def blocker_from_antecedent(a: Dict[str, object]) -> bool:
@@ -239,7 +245,7 @@ def to_markdown(matrix: Dict[str, object]) -> str:
 
 def main() -> None:
     report = load_json(REPORT)
-    proof = load_json(PROOF)
+    proof = latest_proof_map()
 
     if not report:
         raise SystemExit(f'Missing report input: {REPORT}')

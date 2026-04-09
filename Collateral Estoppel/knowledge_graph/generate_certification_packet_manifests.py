@@ -62,8 +62,8 @@ def main() -> None:
             'label': 'Certified Prior-Appointment Cluster Packet',
             'target_fact_ids': [
                 'f_client_prior_appointment',
-                'f_client_benjamin_housing_interference',
-                'f_client_benjamin_order_disregard',
+                'f_client_solomon_housing_interference',
+                'f_client_solomon_order_disregard',
             ],
             'required_record_types': [
                 'certified appointment/authority order naming Benjamin Barber (if it exists)',
@@ -79,8 +79,8 @@ def main() -> None:
             ],
             'expected_rule_unlocks': [
                 'r1_guardian_permission_if_prior_appointment',
-                'r2_noninterference_prohibition_for_benjamin',
-                'r3_benjamin_obligation_comply_or_seek_relief',
+                'r2_target_noninterference_prohibition_if_prior_appointment',
+                'r3_target_obligation_comply_or_seek_relief_if_prior_appointment',
             ],
         },
     }

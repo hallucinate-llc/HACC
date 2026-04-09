@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-04-07",
+  "generated_at": "2026-04-09",
   "scoreboard": {
     "strict": {
-      "active": 39,
+      "active": 42,
       "unresolved": 6,
       "inactive": 4
     },
     "inclusive": {
-      "active": 40,
+      "active": 43,
       "unresolved": 5,
       "inactive": 4
     },
@@ -49,7 +49,7 @@
       "authority_refs": [
         "auth:orcp_55"
       ],
-      "activation_date_estimate": "2026-04-07",
+      "activation_date_estimate": "2026-04-09",
       "plan": {
         "priority": "high",
         "closure_type": "service_event",
@@ -70,7 +70,7 @@
           "status": "verified",
           "value": "true",
           "dates": [
-            "2026-04-07"
+            "2026-04-09"
           ]
         }
       ]
@@ -84,7 +84,7 @@
         "auth:orcp_46",
         "auth:orcp_55"
       ],
-      "activation_date_estimate": "2026-04-07",
+      "activation_date_estimate": "2026-04-09",
       "plan": {
         "priority": "high",
         "closure_type": "response_timing_or_deficiency",
@@ -105,7 +105,7 @@
           "status": "verified",
           "value": "true",
           "dates": [
-            "2026-04-07"
+            "2026-04-09"
           ]
         }
       ]
@@ -119,7 +119,7 @@
         "auth:orcp_46",
         "auth:orcp_55"
       ],
-      "activation_date_estimate": "2026-04-07",
+      "activation_date_estimate": "2026-04-09",
       "plan": {
         "priority": "high",
         "closure_type": "deficiency_notice_event",
@@ -140,7 +140,7 @@
           "status": "verified",
           "value": "true",
           "dates": [
-            "2026-04-07"
+            "2026-04-09"
           ]
         }
       ]
@@ -271,7 +271,7 @@
     {
       "mode": "strict",
       "classification": "unresolved",
-      "rule_id": "r2_noninterference_prohibition_for_benjamin",
+      "rule_id": "r2_target_noninterference_prohibition_if_prior_appointment",
       "track": "hypothesis",
       "authority_refs": [
         "auth:ors_125_050"
@@ -301,19 +301,17 @@
           ]
         },
         {
-          "fact_id": "f_client_benjamin_housing_interference",
+          "fact_id": "f_client_solomon_housing_interference",
           "status": "alleged",
           "value": "true",
-          "dates": [
-            "2026-04-07"
-          ]
+          "dates": []
         }
       ]
     },
     {
       "mode": "strict",
       "classification": "unresolved",
-      "rule_id": "r3_benjamin_obligation_comply_or_seek_relief",
+      "rule_id": "r3_target_obligation_comply_or_seek_relief_if_prior_appointment",
       "track": "hypothesis",
       "authority_refs": [
         "auth:ors_125_050"
@@ -343,12 +341,10 @@
           ]
         },
         {
-          "fact_id": "f_client_benjamin_order_disregard",
+          "fact_id": "f_client_solomon_order_disregard",
           "status": "alleged",
           "value": "true",
-          "dates": [
-            "2026-04-07"
-          ]
+          "dates": []
         }
       ]
     },
@@ -390,8 +386,8 @@
   ],
   "strict_unresolved_rule_ids": [
     "r1_guardian_permission_if_prior_appointment",
-    "r2_noninterference_prohibition_for_benjamin",
-    "r3_benjamin_obligation_comply_or_seek_relief",
+    "r2_target_noninterference_prohibition_if_prior_appointment",
+    "r3_target_obligation_comply_or_seek_relief_if_prior_appointment",
     "r5_solomon_obligated_appear_and_answer",
     "r7_solomon_forbidden_refile_precluded_issue",
     "r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved"

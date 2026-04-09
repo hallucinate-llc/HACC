@@ -64,6 +64,7 @@ II. SHOW-CAUSE / NONAPPEARANCE SUPPORT PACKETS
    g. Deontic:
       1) `P` use for notice/context even if formal service validity remains disputed;
       2) `F` treat as complete substitute for procedural service ruling.
+   h. Event update (2026-04-09): Movant reports Clackamas County Sheriff's Office served the restraining order on Solomon Samuel Barber on 2026-04-09; retain as `Proof-gated` until sheriff return/proof of service is filed or certified and lodged.
 
 III. CROSS-FORUM STATUS PACKETS
 
@@ -127,6 +128,19 @@ VI. FOLLOW-UP CALENDAR (PREFILLED AS OF 2026-04-09)
    b. status snapshot: `draft`, `response_received=no`, `records_received=no`
    c. next action target: send/finalize request + PACER pull and mark status `submitted`
    d. follow-up target after send: 2 business days from send date
+
+15. Sheriff-service proof closure step (new):
+   a. Retrieve official sheriff return/proof-of-service document for 2026-04-09 service event.
+   b. File/lodge as supplemental exhibit with date, method, server identity, and served party details.
+   c. Until lodged, keep all references to this service event as reported and `Proof-gated`.
+   d. Drafted filings/templates prepared 2026-04-09:
+      1) `185_notice_of_filing_sheriff_return_and_service_proof_2026-04-09.md`;
+      2) `186_certificate_of_service_for_notice_of_filing_sheriff_return_2026-04-09.md`;
+      3) `187_ready_to_send_request_clackamas_sheriff_return_of_service_2026-04-09.md`.
+
+16. Preclusion element closure worksheet step:
+   a. Use `188_preclusion_element_certified_mapping_sheet_2026-04-09.md` to line-map each asserted precluded issue.
+   b. Keep any row `Proof-gated` unless issue identity, finality, party/privity, and full/fair opportunity fields are completed from certified or otherwise admissible records.
 
 DATED: ____________, 2026
 

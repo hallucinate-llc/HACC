@@ -1,0 +1,324 @@
+# Unresolved Fact Evidence Scan
+
+Generated: 2026-04-09
+
+- Unresolved non-verified/false fact count: 6
+- Max hits per fact: 25
+
+## f_client_prior_appointment
+- Candidate hits: 25
+- drafts/petition_guardianship_working_memo.md:65 (score=5)
+- snippet: - any prior guardianship appointment order
+- evidence_notes/solomon_repository_evidence_index.md:350 (score=5)
+- snippet: - line 120 (score=2, keywords=['solomon', 'guardianship']): - `The current record already fully proves that Solomon used collateral estoppel to defeat prior guardianship authority and also personally carried out prohibited collateral housin
+- drafts/petition_guardianship_court_ready_shell.md:20 (score=4)
+- snippet: 3. Related allegations in this workspace concern prior appointment status, service/notice, enforceability, and housing-process interference.
+- drafts/petition_guardianship_packet_stage1.md:10 (score=4)
+- snippet: - The filing packet also contains language stating no prior guardian had been appointed.
+- knowledge_graph/guardianship_case_graph.json:242 (score=4)
+- snippet: "name": "Prior appointment order involving Jane Cortez and Benjamin Barber",
+- drafts/final_filing_set/43_certified_records_clerk_request_checklist_2026-04-07.md:41 (score=3)
+- snippet: ## Certified document set C: prior appointment/authority record
+- evidence_notes/allegation_proof_matrix.md:3 (score=3)
+- snippet: ## A1: Prior appointment already existed involving Jane Cortez and Benjamin Barber
+- evidence_notes/missing_exhibit_search_status_2026-04-07.md:28 (score=3)
+- snippet: - Not yet located in the repository as a signed prior appointment order involving Jane Cortez and Benjamin Barber.
+- knowledge_graph/deontic_theorem_workbook.md:11 (score=3)
+- snippet: - `O1` = asserted prior appointment order
+- drafts/final_filing_set/45_certified_records_intake_tracker_template_2026-04-07.csv:4 (score=2)
+- snippet: 2026-04-07,appointment__26PR00641__unknown__appointment_order_benjamin_barber.pdf,/home/barberb/HACC/Collateral Estoppel/evidence_notes/certified_records/appointment__26PR00641__unknown__appointment_order_benjamin_barber.pdf,appointment,26P
+- drafts/final_filing_set/48_orcp17_unsupported_factual_assertion_worksheet_2026-04-07.md:16 (score=2)
+- snippet: 1. certified or otherwise reliable prior appointment order
+- drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md:25 (score=2)
+- snippet: - a filing statement that no prior guardian had been appointed; and
+- evidence_notes/certified_records/orcp17_filing_mapping.json:11 (score=2)
+- snippet: "unsupported_factual_assertion_note": "Current candidate theory only: the petition-side statement that no guardian had previously been appointed for Jane Cortez may become a contradicted factual assertion if a certified prior appointment or
+- evidence_notes/source_register.md:27 (score=2)
+- snippet: - prior guardianship orders
+- knowledge_graph/evidence_fact_overrides_2026-04-07.csv:5 (score=2)
+- snippet: f_client_prior_appointment,,,/home/barberb/HACC/Collateral Estoppel/knowledge_graph/guardianship_case_graph.md,2026-04-07,Client-asserted prior appointment anchor; promote only when certified appointment order naming Benjamin is staged.
+- knowledge_graph/guardianship_case_graph.md:19 (score=2)
+- snippet: 4. The petition itself states that no prior guardian had been appointed.
+- drafts/certified_records_request_probate_writ_packet_2026-04-09.md:21 (score=1)
+- snippet: - when any temporary appointment order was entered;
+- drafts/declaration_of_benjamin_barber_in_support_of_motions.md:36 (score=1)
+- snippet: 10. The March 31, 2026 guardianship petition seeks broad authority over Jane Kay Cortez, including residence-related circumstances, APS interface, and possible law-enforcement transport, while also stating that no prior guardian, trustee, h
+- drafts/final_filing_set/04_declaration_of_benjamin_barber_in_support_of_motions_final.md:79 (score=1)
+- snippet: 53. The March 31, 2026 guardianship petition seeks broad authority over Jane Kay Cortez, including residence-related circumstances, APS interface, and possible law-enforcement transport, while also stating that no prior guardian, trustee, h
+- drafts/final_filing_set/179_element_to_evidence_and_deontic_readiness_matrix_2026-04-09.md:35 (score=1)
+- snippet: 2) `F` do not present prior appointment as adjudicated fact without certified predicate record.
+- drafts/final_filing_set/34_strict_mode_evidentiary_addendum_bundle_2026-04-07.md:37 (score=1)
+- snippet: - r1_guardian_permission_if_prior_appointment: If prior appointment exists, Benjamin is permitted to act within valid guardian scope for Jane.
+- drafts/final_filing_set/52_prior_appointment_certified_packet_checklist_r1_r2_r3_2026-04-07.md:1 (score=1)
+- snippet: # Prior Appointment Certified Packet Checklist (r1/r2/r3) - 2026-04-07
+- drafts/motion_to_dismiss_for_collateral_estoppel.md:56 (score=1)
+- snippet: 18. Because the petition affirmatively seeks sweeping authority while also denying any prior appointment or comparable authority source, the existence or nonexistence of a prior separate proceeding should be resolved before merits litigatio
+- drafts/probate_writ_certified_records_email_body_2026-04-09.md:17 (score=1)
+- snippet: 4) the register of actions / docket entries sufficient to show when the writ-related filings were filed, when any temporary appointment order was entered, when the writ was issued, when any hearing was set or held, and when any proof of ser
+- drafts/probate_writ_predicate_and_notice_records_request_2026-04-09.md:30 (score=1)
+- snippet: - when any temporary appointment order was entered;
+
+## f_client_solomon_barred_refile
+- Candidate hits: 25
+- evidence_notes/solomon_repository_evidence_index.md:1 (score=5)
+- snippet: # Solomon Repository Evidence Index
+- drafts/final_filing_set/05_certificate_of_service_final.md:16 (score=4)
+- snippet: 2. Motion to Dismiss Under Collateral Estoppel (Issue Preclusion).
+- drafts/final_filing_set/42_issue_preclusion_certified_packet_checklist_r7_2026-04-07.md:1 (score=4)
+- snippet: # Issue Preclusion Certified Packet Checklist (r7) - 2026-04-07
+- drafts/final_filing_set/43_certified_records_clerk_request_checklist_2026-04-07.md:20 (score=4)
+- snippet: ## Certified document set A: prior-proceeding record (issue preclusion)
+- drafts/declaration_of_benjamin_barber_in_support_of_motions.md:13 (score=3)
+- snippet: ## (2) MOTION TO DISMISS FOR COLLATERAL ESTOPPEL, AND
+- drafts/final_filing_set/04_declaration_of_benjamin_barber_in_support_of_motions_final.md:13 (score=3)
+- snippet: (2) MOTION TO DISMISS FOR COLLATERAL ESTOPPEL, AND
+- drafts/final_filing_set/11B_attachment_a2_definitions_and_instructions_final.md:14 (score=3)
+- snippet: 11. Minimum OR-joined identifier set (expand as needed): "Jane Kay Cortez" OR "Jane Cortez" OR "Jane K Cortez" OR "Julio Cortez" OR "Julio R. Florez-Cortez" OR "Benjamin Barber" OR "Ben Barber" OR "Solomon Barber" OR "Solomon Samuel Barber"
+- drafts/final_filing_set/34_strict_mode_evidentiary_addendum_bundle_2026-04-07.md:21 (score=3)
+- snippet: - r21_case_obligated_resolve_actor_assignment_conflict (O): resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record -> issue:interference_actor_assignment (activation 2026-04-07)
+- drafts/final_filing_set/45_certified_records_intake_tracker_template_2026-04-07.csv:2 (score=3)
+- snippet: 2026-04-07,hearing__26PR00641__unknown__nonappearance_minutes.pdf,/home/barberb/HACC/Collateral Estoppel/evidence_notes/certified_records/hearing__26PR00641__unknown__nonappearance_minutes.pdf,hearing,26PR00641,no,no,f_client_solomon_failed
+- drafts/final_filing_set/58_issue_preclusion_request_tracker_update_command_sheet_2026-04-07.md:4 (score=3)
+- snippet: - [57_issue_preclusion_case_request_tracker_2026-04-07.csv](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/57_issue_preclusion_case_request_tracker_2026-04-07.csv)
+- drafts/motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim.md:12 (score=3)
+- snippet: ## RE: RESPONDENT SOLOMON BARBER'S POST-ORDER SELF-HELP POSITION, ORIGINAL-MATTER OPPOSITION PATH, AND PRECLUSION GATEKEEPING
+- drafts/petition_guardianship_working_memo.md:13 (score=3)
+- snippet: - Solomon is applying for guardianship.
+- evidence_notes/formal_case_state_dashboard_2026-04-07.md:48 (score=3)
+- snippet: - candidate barred-refile theory only proof-gated
+- evidence_notes/motion_exhibit_crosswalk.md:7 (score=3)
+- snippet: 1. Exhibit A: [deontic_reasoning_report.json](/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/deontic_reasoning_report.json)
+- evidence_notes/search_results_hacc_service_and_prior_order_candidates_2026-04-07.md:14 (score=3)
+- snippet: 3. there are service-related emails about Solomon / probate counsel, but those are not the same thing as HACC service;
+- knowledge_graph/evidence_fact_overrides_2026-04-07.csv:2 (score=3)
+- snippet: f_client_solomon_failed_appearance,,,/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/41_certified_nonappearance_packet_checklist_r24_2026-04-07.md,2026-04-07,Source anchor staged; do not promote to verified until certified he
+- knowledge_graph/fact_override_promotion_runbook_2026-04-07.md:7 (score=3)
+- snippet: - `/home/barberb/HACC/Collateral Estoppel/knowledge_graph/evidence_fact_overrides_2026-04-07.csv`
+- knowledge_graph/guardianship_case_graph.json:4 (score=3)
+- snippet: "purpose": "Initial guardianship and collateral-estoppel working graph for the Collateral Estoppel folder",
+- README.md:1 (score=2)
+- snippet: # Collateral Estoppel Workspace
+- drafts/filing_packet_index_and_checklist.md:7 (score=2)
+- snippet: 1. [motion_for_appointment_and_appearance_of_guardian_ad_litem.md](/home/barberb/HACC/Collateral Estoppel/drafts/motion_for_appointment_and_appearance_of_guardian_ad_litem.md)
+- drafts/final_filing_set/00_exhibit_legend_global.md:7 (score=2)
+- snippet: 1. **Exhibit 1**: [sam_barber_restraining_order_ocr.txt](/home/barberb/HACC/Collateral Estoppel/evidence_notes/sam_barber_restraining_order_ocr.txt)
+- drafts/final_filing_set/06_oregon_authority_table_final.md:29 (score=2)
+- snippet: ## 2) Motion to Dismiss (Collateral Estoppel)
+- drafts/final_filing_set/09_proposed_order_show_cause_final.md:12 (score=2)
+- snippet: RE: RESPONDENT SOLOMON BARBER
+- drafts/final_filing_set/108_r5_r24_service_evasion_and_notice_evidence_matrix_2026-04-07.md:9 (score=2)
+- snippet: - `r5_solomon_obligated_appear_and_answer` (conditional on proved service/enforceability/appearance history)
+- drafts/final_filing_set/109_service_artifact_inventory_and_field_fill_map_2026-04-07.md:7 (score=2)
+- snippet: ## A. Counsel-service chain (Solomon-related)
+
+## f_client_solomon_failed_appearance
+- Candidate hits: 25
+- drafts/final_filing_set/03A_motion_to_show_cause_re_solomon_housing_interference_final.md:11 (score=4)
+- snippet: MOTION FOR ORDER TO SHOW CAUSE
+- drafts/final_filing_set/03_motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_final.md:11 (score=4)
+- snippet: MOTION FOR ORDER TO SHOW CAUSE
+- evidence_notes/solomon_repository_evidence_index.md:1 (score=4)
+- snippet: # Solomon Repository Evidence Index
+- drafts/final_filing_set/05_certificate_of_service_final.md:17 (score=3)
+- snippet: 3. Motion for Order to Show Cause re: Respondent Solomon Barber's Failure to Appear and Filing of Precluded Claim.
+- drafts/final_filing_set/06_oregon_authority_table_final.md:44 (score=3)
+- snippet: ## 3) Motion for Order to Show Cause / Sanctions Track
+- drafts/final_filing_set/09_proposed_order_show_cause_final.md:11 (score=3)
+- snippet: [PROPOSED] ORDER TO SHOW CAUSE
+- drafts/final_filing_set/108_r5_r24_service_evasion_and_notice_evidence_matrix_2026-04-07.md:5 (score=3)
+- snippet: Purpose: tie concrete record items to the r5/r24 branch predicates (appearance/compliance and compelled-appearance-after-nonappearance pathways), while preserving proof-gated status until certified court records are complete.
+- drafts/final_filing_set/179_element_to_evidence_and_deontic_readiness_matrix_2026-04-09.md:59 (score=3)
+- snippet: III. MOTION 03 (SHOW CAUSE / REMEDIAL SANCTIONS TRACK)
+- drafts/final_filing_set/34_strict_mode_evidentiary_addendum_bundle_2026-04-07.md:21 (score=3)
+- snippet: - r21_case_obligated_resolve_actor_assignment_conflict (O): resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record -> issue:interference_actor_assignment (activation 2026-04-07)
+- drafts/final_filing_set/41_certified_nonappearance_packet_checklist_r24_2026-04-07.md:1 (score=3)
+- snippet: # Certified Nonappearance Packet Checklist (r24) - 2026-04-07
+- drafts/final_filing_set/74_motion_for_leave_to_file_supplemental_certified_exhibits_8_9_10_final.md:39 (score=3)
+- snippet: c. Motion for Order to Show Cause re: Respondent Solomon Barber's Failure to Appear and Filing of Precluded Claim; and
+- drafts/memorandum_in_support_of_show_cause_and_sanctions.md:2 (score=3)
+- snippet: # OF MOTION TO SHOW CAUSE AND MOTION FOR SANCTIONS
+- evidence_notes/remaining_proof_gaps_by_motion_2026-04-08.md:5 (score=3)
+- snippet: ## 1. Lead show-cause motion: Solomon housing interference
+- research/r5_r24_service_evasion_legal_research_2026-04-07.md:12 (score=3)
+- snippet: - the court may issue an order to appear.
+- drafts/declaration_of_benjamin_barber_in_support_of_motions.md:14 (score=2)
+- snippet: ## (3) MOTION FOR ORDER TO SHOW CAUSE
+- drafts/filing_packet_index_and_checklist.md:9 (score=2)
+- snippet: 3. [motion_to_show_cause_re_solomon_housing_interference_and_original_order_violation.md](/home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_housing_interference_and_original_order_violation.md)
+- drafts/final_filing_set/04_declaration_of_benjamin_barber_in_support_of_motions_final.md:14 (score=2)
+- snippet: (3) MOTION FOR ORDER TO SHOW CAUSE
+- drafts/final_filing_set/106_motion_deficiency_audit_2026-04-07.md:9 (score=2)
+- snippet: - `03_motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_final.md`
+- drafts/final_filing_set/108_primary_filing_sequence_2026-04-07.md:16 (score=2)
+- snippet: [03A_motion_to_show_cause_re_solomon_housing_interference_final.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/03A_motion_to_show_cause_re_solomon_housing_interference_final.md)
+- drafts/final_filing_set/109_service_artifact_inventory_and_field_fill_map_2026-04-07.md:7 (score=2)
+- snippet: ## A. Counsel-service chain (Solomon-related)
+- drafts/final_filing_set/113_motion_packet_readiness_matrix_2026-04-08.md:10 (score=2)
+- snippet: - `03_motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_final.md`
+- drafts/final_filing_set/11B_attachment_a2_definitions_and_instructions_final.md:14 (score=2)
+- snippet: 11. Minimum OR-joined identifier set (expand as needed): "Jane Kay Cortez" OR "Jane Cortez" OR "Jane K Cortez" OR "Julio Cortez" OR "Julio R. Florez-Cortez" OR "Benjamin Barber" OR "Ben Barber" OR "Solomon Barber" OR "Solomon Samuel Barber"
+- drafts/final_filing_set/167_deontic_legal_grounding_gap_audit_2026-04-09.md:13 (score=2)
+- snippet: - Rules `r2_noninterference_prohibition_for_benjamin` and `r3_benjamin_obligation_comply_or_seek_relief` frame Benjamin as prohibited/obligated actor for interference/order-disregard in a posture where Solomon is the adverse interference ta
+- drafts/final_filing_set/168_deontic_trigger_and_remedy_matrix_shared_attachment_2026-04-09.md:20 (score=2)
+- snippet: | In-effect order compliance branch | Solomon Barber | O / F | Exhibit 1 (EPPDAPA order text and notice pages); ORS 33.055, ORS 33.105 | Order entered and in effect; no-further-service language after appearance | Statements allegedly condit
+- drafts/final_filing_set/177_declaration_of_benjamin_barber_court_safe_trimmed_final_2026-04-09.md:16 (score=2)
+- snippet: (3) MOTION FOR ORDER TO SHOW CAUSE
+
+## f_client_solomon_housing_interference
+- Candidate hits: 25
+- evidence_notes/solomon_repository_evidence_index.md:1 (score=6)
+- snippet: # Solomon Repository Evidence Index
+- drafts/final_filing_set/03A_motion_to_show_cause_re_solomon_housing_interference_final.md:12 (score=5)
+- snippet: RE: SOLOMON BARBER'S POST-ORDER HOUSING INTERFERENCE AND POSSIBLE VIOLATION OR EVASION OF THE ORIGINAL RESTRAINING ORDER
+- drafts/final_filing_set/04_declaration_of_benjamin_barber_in_support_of_motions_final.md:21 (score=5)
+- snippet: 4. Where I refer below to `Exhibit A-*` or `Exhibit B-*` labels, I am referring to the exhibit labels assigned in [128_supplemental_background_appendix_exhibit_letter_schedule_2026-04-08.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/f
+- drafts/final_filing_set/11B_attachment_a2_definitions_and_instructions_final.md:14 (score=5)
+- snippet: 11. Minimum OR-joined identifier set (expand as needed): "Jane Kay Cortez" OR "Jane Cortez" OR "Jane K Cortez" OR "Julio Cortez" OR "Julio R. Florez-Cortez" OR "Benjamin Barber" OR "Ben Barber" OR "Solomon Barber" OR "Solomon Samuel Barber"
+- drafts/hacc_damages_worksheet_2026-04-07.md:1 (score=5)
+- snippet: # HACC Damages Worksheet - 2026-04-07
+- drafts/memorandum_in_support_of_show_cause_and_sanctions.md:4 (score=5)
+- snippet: This memorandum is a support draft for the companion motions in this folder. It is written conservatively and assumes that the record will continue to be supplemented with certified court records and any HACC source materials.
+- drafts/motion_for_leave_or_to_compel_exhibit_r_production.md:2 (score=5)
+- snippet: # LIMITED EXHIBIT R SUBPOENA TO NONPARTY HACC
+- drafts/motion_for_sanctions_re_frivolous_and_abusive_practice.md:12 (score=5)
+- snippet: ## THRESHOLD REVIEW OF FRIVOLOUS, ABUSIVE, OR INTERFERING PRACTICE
+- drafts/motion_to_show_cause_re_solomon_housing_interference_and_original_order_violation.md:12 (score=5)
+- snippet: ## RE: SOLOMON BARBER'S POST-ORDER HOUSING INTERFERENCE AND POSSIBLE VIOLATION OR EVASION OF THE ORIGINAL RESTRAINING ORDER
+- drafts/petition_guardianship_working_memo.md:13 (score=5)
+- snippet: - Solomon is applying for guardianship.
+- evidence_notes/allegation_proof_matrix.md:29 (score=5)
+- snippet: ## A4: Benjamin Barber interfered with housing contract/process
+- evidence_notes/delay_apportionment_timeline_solomon_vs_quantum_2026-04-07.md:1 (score=5)
+- snippet: # Delay Apportionment Timeline: Solomon Vs. Quantum / HACC - 2026-04-07
+- evidence_notes/hacc_actor_chain_priority_targets_2026-04-08.md:1 (score=5)
+- snippet: # HACC Actor-Chain Priority Targets - 2026-04-08
+- evidence_notes/jc_household_chain_household_composition_findings_2026-04-07.md:4 (score=5)
+- snippet: - preserve the strongest raw `JC Household` email-chain statements bearing on Benjamin Barber's removal, Julio's status, and HACC's stated authority basis; and
+- evidence_notes/protective_order_and_hacc_notice_timeline.md:1 (score=5)
+- snippet: # Protective Order And HACC Notice Timeline
+- evidence_notes/solomon_housing_interference_show_cause_memo_2026-04-07.md:1 (score=5)
+- snippet: # Solomon Housing Interference Show-Cause Memo - 2026-04-07
+- knowledge_graph/guardianship_case_graph.json:9 (score=5)
+- snippet: "id": "person:solomon",
+- drafts/damages_apportionment_worksheet_solomon_vs_quantum_2026-04-07.md:1 (score=4)
+- snippet: # Damages Apportionment Worksheet: Solomon Vs. Quantum / HACC - 2026-04-07
+- drafts/declaration_of_benjamin_barber_re_hacc_damages_and_costs.md:1 (score=4)
+- snippet: # Declaration of Benjamin Barber Re HACC Damages And Costs
+- drafts/delay_apportionment_chart_solomon_vs_quantum_2026-04-07.md:1 (score=4)
+- snippet: # Delay Apportionment Chart: Solomon Vs. Quantum / HACC - 2026-04-07
+- drafts/final_filing_set/12A_attachment_b1_hacc_county_requests_final.md:2 (score=4)
+- snippet: REQUESTS TO HACC / CLACKAMAS COUNTY CUSTODIAN OF RECORDS
+- drafts/final_filing_set/152_objection_to_first_amended_guardianship_petition_and_emergency_relief_final.md:25 (score=4)
+- snippet: 5. Require that disputed Section 18 relocation-duty, eviction-merits, HACC/Quantum processing, and related housing-liability issues remain limited to the proper eviction or other appropriate forum, except to the extent strictly necessary to
+- drafts/final_filing_set/34_strict_mode_evidentiary_addendum_bundle_2026-04-07.md:21 (score=4)
+- snippet: - r21_case_obligated_resolve_actor_assignment_conflict (O): resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record -> issue:interference_actor_assignment (activation 2026-04-07)
+- drafts/hacc_records_request_outline_re_exhibit_r.md:1 (score=4)
+- snippet: # HACC Records Request Outline Re Exhibit R
+- drafts/motion_to_show_cause_re_contempt_and_collateral_interference.md:12 (score=4)
+- snippet: ## RE: WHY SOLOMON BARBER SHOULD NOT BE HELD IN CONTEMPT
+
+## f_client_solomon_order_disregard
+- Candidate hits: 25
+- evidence_notes/solomon_repository_evidence_index.md:1 (score=5)
+- snippet: # Solomon Repository Evidence Index
+- drafts/final_filing_set/34_strict_mode_evidentiary_addendum_bundle_2026-04-07.md:20 (score=4)
+- snippet: - r20_case_permitted_treat_enforcement_path_as_pending_pre_service (P): treat_subpoena_enforcement_motion_path_as_pending_until_service -> case:26PR00641 (activation 2026-04-07)
+- drafts/final_filing_set/43_certified_records_clerk_request_checklist_2026-04-07.md:29 (score=4)
+- snippet: - `f_client_solomon_barred_refile`
+- drafts/petition_guardianship_court_ready_shell.md:18 (score=4)
+- snippet: 1. Petitioner Solomon Barber filed a first amended guardianship petition dated March 31, 2026, in case `26PR00641`.
+- drafts/petition_guardianship_working_memo.md:13 (score=4)
+- snippet: - Solomon is applying for guardianship.
+- evidence_notes/allegation_proof_matrix.md:13 (score=4)
+- snippet: ## A2: Benjamin Barber avoided service
+- knowledge_graph/evidence_fact_override_prefill_memo_2026-04-07.md:10 (score=4)
+- snippet: - `f_client_solomon_failed_appearance`
+- knowledge_graph/evidence_fact_overrides_2026-04-07.csv:2 (score=4)
+- snippet: f_client_solomon_failed_appearance,,,/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/41_certified_nonappearance_packet_checklist_r24_2026-04-07.md,2026-04-07,Source anchor staged; do not promote to verified until certified he
+- knowledge_graph/guardianship_case_graph.json:9 (score=4)
+- snippet: "id": "person:solomon",
+- README.md:3 (score=3)
+- snippet: This folder is the staging area for guardianship-related drafting and structured case analysis connected to Jane Cortez, Solomon, Benjamin Barber, and HACC.
+- drafts/filing_packet_index_and_checklist.md:9 (score=3)
+- snippet: 3. [motion_to_show_cause_re_solomon_housing_interference_and_original_order_violation.md](/home/barberb/HACC/Collateral Estoppel/drafts/motion_to_show_cause_re_solomon_housing_interference_and_original_order_violation.md)
+- drafts/final_filing_set/03A_motion_to_show_cause_re_solomon_housing_interference_final.md:12 (score=3)
+- snippet: RE: SOLOMON BARBER'S POST-ORDER HOUSING INTERFERENCE AND POSSIBLE VIOLATION OR EVASION OF THE ORIGINAL RESTRAINING ORDER
+- drafts/final_filing_set/03_motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_final.md:12 (score=3)
+- snippet: RE: RESPONDENT SOLOMON BARBER'S COMPLIANCE WITH OPERATIVE ORDER TERMS
+- drafts/final_filing_set/100_solomon_compel_packet_conversion_sheet_2026-04-07.md:1 (score=3)
+- snippet: # Solomon Compel Packet Conversion Sheet (88/89)
+- drafts/final_filing_set/106_motion_deficiency_audit_2026-04-07.md:9 (score=3)
+- snippet: - `03_motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_final.md`
+- drafts/final_filing_set/109_service_artifact_inventory_and_field_fill_map_2026-04-07.md:1 (score=3)
+- snippet: # Service Artifact Inventory And Field-Fill Map (2026-04-07)
+- drafts/final_filing_set/20_subpoena_packet_assembly_matrix_final.md:5 (score=3)
+- snippet: Use this matrix to assemble each subpoena service packet consistently.
+- drafts/final_filing_set/24_motion_to_compel_subpoena_compliance_and_sanctions_final.md:14 (score=3)
+- snippet: Movant Benjamin Barber moves for an order compelling full subpoena compliance by the responding custodian/person identified below and for appropriate sanctions for continued noncompliance.
+- drafts/final_filing_set/25_ready_to_serve_recipient_manifests_final.md:5 (score=3)
+- snippet: Use this sheet as the final print/assemble checklist for each service packet.
+- drafts/final_filing_set/44_certified_records_filename_convention_2026-04-07.md:22 (score=3)
+- snippet: - `service__26PR00641__20260409__proof_of_service.pdf`
+- drafts/final_filing_set/52_prior_appointment_certified_packet_checklist_r1_r2_r3_2026-04-07.md:15 (score=3)
+- snippet: 3. Certified or authenticated records supporting housing-contract interference conduct tied to Solomon Barber (as alleged target actor in this branch).
+- drafts/final_filing_set/88_motion_to_compel_subpoena_compliance_and_sanctions_solomon_prefill.md:13 (score=3)
+- snippet: (SOLOMON BARBER - PREFILL)
+- drafts/final_filing_set/89_declaration_re_subpoena_noncompliance_solomon_prefill.md:12 (score=3)
+- snippet: RE: SUBPOENA NONCOMPLIANCE AND CURE EFFORTS
+- drafts/memorandum_in_support_of_show_cause_and_sanctions.md:19 (score=3)
+- snippet: 1. a show-cause inquiry focused on notice, enforceability, and possible collateral noncompliance; and
+- drafts/motion_for_sanctions_re_frivolous_and_abusive_practice.md:14 (score=3)
+- snippet: Movant requests threshold review, claim-limiting relief, and reservation of sanctions to the extent the Court finds that Solomon Barber has pursued frivolous, abusive, duplicative, or interfering practice in this matter or related connected
+
+## f_collateral_estoppel_candidate
+- Candidate hits: 25
+- drafts/final_filing_set/02_motion_to_dismiss_for_collateral_estoppel_final.md:18 (score=6)
+- snippet: 1. Limit relitigation of overlapping authority, housing-control, service/compliance, and Section 18 relocation-duty issues unless and until the parties supply the prior-proceeding materials needed to evaluate issue preclusion, including cle
+- drafts/motion_to_dismiss_for_collateral_estoppel.md:19 (score=6)
+- snippet: 2. In the alternative, strike or limit relitigation of the same authority issue unless and until the parties supply the prior-proceeding materials needed to evaluate issue preclusion, including any clerk-certified docket or order materials 
+- drafts/final_filing_set/04_declaration_of_benjamin_barber_in_support_of_motions_final.md:13 (score=5)
+- snippet: (2) MOTION TO DISMISS FOR COLLATERAL ESTOPPEL, AND
+- drafts/final_filing_set/06_oregon_authority_table_final.md:29 (score=5)
+- snippet: ## 2) Motion to Dismiss (Collateral Estoppel)
+- drafts/final_filing_set/179_element_to_evidence_and_deontic_readiness_matrix_2026-04-09.md:42 (score=5)
+- snippet: 1) prior separate proceeding;
+- drafts/final_filing_set/87_one_page_issue_preclusion_element_checklist_for_hearing_2026-04-07.md:8 (score=5)
+- snippet: ## Element 1: Identical Issue
+- drafts/declaration_of_benjamin_barber_in_support_of_motions.md:13 (score=4)
+- snippet: ## (2) MOTION TO DISMISS FOR COLLATERAL ESTOPPEL, AND
+- drafts/final_filing_set/132_issue_preclusion_cross_forum_evidence_status_report_2026-04-08.md:34 (score=4)
+- snippet: To support true issue preclusion (not just overlap-based narrowing), the record still needs:
+- drafts/final_filing_set/168_deontic_trigger_and_remedy_matrix_shared_attachment_2026-04-09.md:22 (score=4)
+- snippet: | Collateral-estoppel branch | Solomon Barber (party against whom preclusion asserted) | F (if elements met) | Nelson/Rawls/Hayes/Westwood; Exhibits 8-10 (as supplemented) | Prior separate proceeding, identical issue, finality, party/privit
+- drafts/final_filing_set/177_declaration_of_benjamin_barber_court_safe_trimmed_final_2026-04-09.md:45 (score=4)
+- snippet: 17. I do not claim final issue preclusion has already been proven on the present record.
+- drafts/final_filing_set/191_one_page_hearing_script_preclusion_and_proof_gating_2026-04-09.md:26 (score=4)
+- snippet: 2. Identical issue:
+- drafts/final_filing_set/42_issue_preclusion_certified_packet_checklist_r7_2026-04-07.md:1 (score=4)
+- snippet: # Issue Preclusion Certified Packet Checklist (r7) - 2026-04-07
+- drafts/final_filing_set/55_issue_preclusion_certified_retrieval_queue_2026-04-07.md:4 (score=4)
+- snippet: - Convert row-3 issue-preclusion branch from theory/alleged state to certified element support, focusing on `finality` and `full_fair_opportunity`.
+- drafts/final_filing_set/86_short_bench_memo_supplemental_exhibits_8_9_10_and_threshold_issue_preclusion_2026-04-07.md:32 (score=4)
+- snippet: 1. Prior separate proceeding identity:
+- evidence_notes/doctrine_audit_extension_note_2026-04-07.md:3 (score=4)
+- snippet: The formal reasoning system now extends beyond timing and workflow audits into doctrine-element audits for both `ORCP 17` sanctions and issue preclusion.
+- evidence_notes/element_audit_layer_note_2026-04-07.md:55 (score=4)
+- snippet: 2. issue-preclusion element audits for identical issue, prior separate proceeding, finality, party/privity, and full-and-fair opportunity; and
+- evidence_notes/issue_preclusion_priority_targets_2026-04-08.md:11 (score=4)
+- snippet: 3. the need to resolve prior-proceeding identity, issue identity, finality, party/privity, and full-and-fair opportunity before broader merits litigation expands.
+- evidence_notes/motion_exhibit_crosswalk.md:7 (score=4)
+- snippet: 1. Exhibit A: [deontic_reasoning_report.json](/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/deontic_reasoning_report.json)
+- evidence_notes/orcp17_issue_preclusion_bridge_intake_note_2026-04-07.md:28 (score=4)
+- snippet: 1. Is there a certified or otherwise reliable prior separate proceeding record?
+- evidence_notes/original_scans_vs_certified_copies_note_2026-04-07.md:3 (score=4)
+- snippet: This note clarifies a recurring proof distinction in the `Collateral Estoppel` workspace.
+- evidence_notes/remaining_proof_gaps_by_motion_2026-04-08.md:41 (score=4)
+- snippet: 2. fuller docket / register layer showing finality and procedural posture;
+- evidence_notes/solomon_repository_evidence_index.md:10 (score=4)
+- snippet: ## Collateral Estoppel/evidence_notes/solomon_repository_evidence_index.md
+- drafts/final_filing_set/180_certified_record_acquisition_and_gap_closure_tracker_2026-04-09.md:22 (score=3)
+- snippet: 1. Packet PR-1: prior separate proceeding docket/register packet (`25PO11530`).
+- drafts/final_filing_set/184_residual_gap_closure_and_evidence_targets_2026-04-09.md:45 (score=3)
+- snippet: b. Current status: overlap = `Admissible-now`; finality/identity = `Proof-gated`.
+- drafts/final_filing_set/53_issue_preclusion_mapping_prefill_review_packet_2026-04-07.md:11 (score=3)
+- snippet: - Collateral Estoppel/evidence_notes/missing_exhibit_search_status_2026-04-07.md

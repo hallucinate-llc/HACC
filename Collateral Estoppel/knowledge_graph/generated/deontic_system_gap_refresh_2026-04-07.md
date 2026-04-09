@@ -1,6 +1,6 @@
 # Deontic System Gap Refresh
 
-Generated: 2026-04-07
+Generated: 2026-04-09
 
 ## Counts
 - Strict: active=42 unresolved=6 inactive=4
@@ -15,12 +15,12 @@ Generated: 2026-04-07
 - Strict unresolved rules still blocked by allegation/theory predicates or unverified facts:
 - r1_guardian_permission_if_prior_appointment (hypothesis)
 - antecedent f_client_prior_appointment status=alleged value=true
-- r2_noninterference_prohibition_for_benjamin (hypothesis)
+- r2_target_noninterference_prohibition_if_prior_appointment (hypothesis)
 - antecedent f_client_prior_appointment status=alleged value=true
-- antecedent f_client_benjamin_housing_interference status=alleged value=true
-- r3_benjamin_obligation_comply_or_seek_relief (hypothesis)
+- antecedent f_client_solomon_housing_interference status=alleged value=true
+- r3_target_obligation_comply_or_seek_relief_if_prior_appointment (hypothesis)
 - antecedent f_client_prior_appointment status=alleged value=true
-- antecedent f_client_benjamin_order_disregard status=alleged value=true
+- antecedent f_client_solomon_order_disregard status=alleged value=true
 - r5_solomon_obligated_appear_and_answer (hypothesis)
 - antecedent f_client_solomon_failed_appearance status=alleged value=true
 - r7_solomon_forbidden_refile_precluded_issue (hypothesis)

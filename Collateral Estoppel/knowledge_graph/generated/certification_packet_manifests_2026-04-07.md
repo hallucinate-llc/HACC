@@ -1,6 +1,6 @@
 # Certification Packet Manifests
 
-Generated: 2026-04-07
+Generated: 2026-04-09
 Strict unresolved rules: 6
 
 ## packet_nonappearance_r24 - Certified Nonappearance Packet
@@ -33,9 +33,9 @@ Strict unresolved rules: 6
 - other_certified__26PR00641__YYYYMMDD__issue_identity_chart.pdf
 
 ## packet_prior_appointment_r1_r2_r3 - Certified Prior-Appointment Cluster Packet
-- Target facts: f_client_prior_appointment, f_client_benjamin_housing_interference, f_client_benjamin_order_disregard
-- Currently blocking rules: r1_guardian_permission_if_prior_appointment, r2_noninterference_prohibition_for_benjamin, r3_benjamin_obligation_comply_or_seek_relief
-- Expected rule unlocks: r1_guardian_permission_if_prior_appointment, r2_noninterference_prohibition_for_benjamin, r3_benjamin_obligation_comply_or_seek_relief
+- Target facts: f_client_prior_appointment, f_client_solomon_housing_interference, f_client_solomon_order_disregard
+- Currently blocking rules: r1_guardian_permission_if_prior_appointment, r2_target_noninterference_prohibition_if_prior_appointment, r3_target_obligation_comply_or_seek_relief_if_prior_appointment
+- Expected rule unlocks: r1_guardian_permission_if_prior_appointment, r2_target_noninterference_prohibition_if_prior_appointment, r3_target_obligation_comply_or_seek_relief_if_prior_appointment
 - Required record types:
 - certified appointment/authority order naming Benjamin Barber (if it exists)
 - certified docket entry showing appointment effective date/status

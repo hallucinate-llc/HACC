@@ -36,7 +36,7 @@ B. SHOW-CAUSE SUPPORT (LIMITED TO PERSONAL KNOWLEDGE AND RECORDS)
 11. The April 3-4, 2026 counsel email chain reflects service-labeled transmission to counsel Alex Bluestone and counsel's response that he did not accept service on behalf of Solomon while confirming representation in the Jane Cortez guardianship matter.
 12. That same preserved chain includes a same-day FedEx receipt image and delivery-tracking identifiers consistent with physical transmittal to counsel.
 13. I request a show-cause appearance and explanation regarding compliance posture and any assertion that an in-effect order was unenforceable absent additional service.
-14. If certified docket or hearing-minute records later establish additional nonappearance facts in the original restraining-order matter, I request leave to supplement this declaration.
+14. I also report that the Clackamas County Sheriff's Office served restraining-order papers on Solomon Samuel Barber on April 9, 2026; until I lodge the sheriff return/proof-of-service, I offer this as a reported event and request leave to supplement with the formal return.
 
 C. THRESHOLD PRECLUSION / SCOPE SUPPORT (PROOF-GATED WHERE NOT YET CERTIFIED)
 

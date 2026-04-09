@@ -1,6 +1,6 @@
 # Deontic Litigation Matrix
 
-Generated: 2026-04-07
+Generated: 2026-04-09
 
 ## Mode: strict
 - Active rules: 42
@@ -15,17 +15,17 @@ Generated: 2026-04-07
 - Permissions:
 - apply_orcp_and_oec_subject_to_specific_chapter_125_overrides -> proceeding:protective_proceeding (r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding, at 2026-04-07)
 - assert_respondent_right_to_appear_in_person_or_by_counsel -> person:jane_cortez (r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel, at 2026-04-07)
-- request_special_advocate_or_guardian_ad_litem_to_protect_person_interests -> person:jane_cortez (r33_case_permitted_request_special_advocate_or_gal_under_chapter_125, at 2026-04-07)
+- request_special_advocate_or_guardian_ad_litem_to_protect_person_interests -> person:jane_cortez (r33_case_permitted_request_special_advocate_or_gal_under_chapter_125, at 2026-04-09)
 
 - Party: case:guardianship_collateral_estoppel
 - Counts: O=6 P=12 F=0
 - Obligations:
 - treat_prior_appointment_theory_as_hypothesis_until_source_order_found -> issue:prior_appointment_for_jane_cortez (r6d_case_obligated_treat_prior_appointment_as_hypothesis_only, at 2026-04-07)
-- resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record -> issue:interference_actor_assignment (r21_case_obligated_resolve_actor_assignment_conflict, at 2026-04-07)
-- treat_issue_preclusion_theory_as_provisional_until_certified_prior_order_and_docket_are_staged -> issue:guardianship_authority (r35_case_obligated_treat_issue_preclusion_as_provisional_until_certified_prior_record_staged, at 2026-04-07)
-- complete_identical_issue_finality_privity_and_full_fair_mapping_before_merits_reliance -> issue:guardianship_authority (r36_case_obligated_complete_issue_preclusion_element_mapping_before_merits_reliance, at 2026-04-07)
-- add_targeted_certified_record_citations_for_finality_and_full_fair_elements -> issue:guardianship_authority (r37_case_obligated_add_targeted_record_citations_for_finality_and_full_fair_elements, at 2026-04-07)
-- qualify_issue_preclusion_language_as_contingent_and_not_fully_proved -> doc:petition_guardianship_working_memo (r38_case_obligated_qualify_overclaim_language_until_elements_are_proved, at 2026-04-07)
+- resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record -> issue:interference_actor_assignment (r21_case_obligated_resolve_actor_assignment_conflict, at 2026-04-09)
+- treat_issue_preclusion_theory_as_provisional_until_certified_prior_order_and_docket_are_staged -> issue:guardianship_authority (r35_case_obligated_treat_issue_preclusion_as_provisional_until_certified_prior_record_staged, at 2026-04-09)
+- complete_identical_issue_finality_privity_and_full_fair_mapping_before_merits_reliance -> issue:guardianship_authority (r36_case_obligated_complete_issue_preclusion_element_mapping_before_merits_reliance, at 2026-04-09)
+- add_targeted_certified_record_citations_for_finality_and_full_fair_elements -> issue:guardianship_authority (r37_case_obligated_add_targeted_record_citations_for_finality_and_full_fair_elements, at 2026-04-09)
+- qualify_issue_preclusion_language_as_contingent_and_not_fully_proved -> doc:petition_guardianship_working_memo (r38_case_obligated_qualify_overclaim_language_until_elements_are_proved, at 2026-04-09)
 - Permissions:
 - treat_solomon_hacc_interference_as_inference_not_direct_proof -> person:solomon (r6c_solomon_interference_not_proved_by_named_hacc_notice_gap, at 2026-04-07)
 - seek_compelled_production_of_hacc_actor_document_authority_chain -> issue:lease_change_actor_identification (r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain, at 2026-04-07)
@@ -38,7 +38,7 @@ Generated: 2026-04-07
 - seek_orcp_17_sanctions_if_filing_is_shown_improper_or_factually_or_legally_unsupported -> issue:sanctions_track (r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown, at 2026-04-07)
 - seek_subpoena_enforcement_and_related_expenses_after_nonparty_noncompliance -> org:hacc (r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46, at 2026-04-07)
 - use_orcp9_service_and_orcp10_deadline_computation_for_later_filed_motion_packets -> issue:service_and_deadlines (r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines, at 2026-04-07)
-- seek_targeted_nonparty_production_for_hearing_and_appearance_materials_supporting_issue_preclusion_elements -> issue:guardianship_authority (r39_case_permitted_seek_targeted_nonparty_production_for_missing_issue_preclusion_elements, at 2026-04-07)
+- seek_targeted_nonparty_production_for_hearing_and_appearance_materials_supporting_issue_preclusion_elements -> issue:guardianship_authority (r39_case_permitted_seek_targeted_nonparty_production_for_missing_issue_preclusion_elements, at 2026-04-09)
 
 - Party: org:hacc
 - Counts: O=3 P=0 F=0
@@ -50,10 +50,10 @@ Generated: 2026-04-07
 - Party: person:benjamin_barber
 - Counts: O=1 P=2 F=0
 - Obligations:
-- maintain_service_and_deadline_tracking -> case:26PR00641 (r16_benjamin_obligated_track_service_and_deadlines, at 2026-04-07)
+- maintain_service_and_deadline_tracking -> case:26PR00641 (r16_benjamin_obligated_track_service_and_deadlines, at 2026-04-09)
 - Permissions:
 - act_as_gal_within_signed_eppdapa_order_scope -> person:jane_cortez (r40_benjamin_permitted_act_as_gal_under_signed_eppdapa_order, at 2026-04-07)
-- serve_staged_subpoena_packets -> case:26PR00641 (r15_benjamin_permitted_serve_subpoena_packets, at 2026-04-07)
+- serve_staged_subpoena_packets -> case:26PR00641 (r15_benjamin_permitted_serve_subpoena_packets, at 2026-04-09)
 
 - Party: person:solomon
 - Counts: O=5 P=0 F=7
@@ -85,17 +85,17 @@ Generated: 2026-04-07
 - Permissions:
 - apply_orcp_and_oec_subject_to_specific_chapter_125_overrides -> proceeding:protective_proceeding (r28_case_permitted_apply_orcp_and_oec_in_protective_proceeding, at 2026-04-07)
 - assert_respondent_right_to_appear_in_person_or_by_counsel -> person:jane_cortez (r31_case_permitted_assert_protective_person_right_to_appear_or_have_counsel, at 2026-04-07)
-- request_special_advocate_or_guardian_ad_litem_to_protect_person_interests -> person:jane_cortez (r33_case_permitted_request_special_advocate_or_gal_under_chapter_125, at 2026-04-07)
+- request_special_advocate_or_guardian_ad_litem_to_protect_person_interests -> person:jane_cortez (r33_case_permitted_request_special_advocate_or_gal_under_chapter_125, at 2026-04-09)
 
 - Party: case:guardianship_collateral_estoppel
 - Counts: O=6 P=13 F=0
 - Obligations:
 - treat_prior_appointment_theory_as_hypothesis_until_source_order_found -> issue:prior_appointment_for_jane_cortez (r6d_case_obligated_treat_prior_appointment_as_hypothesis_only, at 2026-04-07)
-- resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record -> issue:interference_actor_assignment (r21_case_obligated_resolve_actor_assignment_conflict, at 2026-04-07)
-- treat_issue_preclusion_theory_as_provisional_until_certified_prior_order_and_docket_are_staged -> issue:guardianship_authority (r35_case_obligated_treat_issue_preclusion_as_provisional_until_certified_prior_record_staged, at 2026-04-07)
-- complete_identical_issue_finality_privity_and_full_fair_mapping_before_merits_reliance -> issue:guardianship_authority (r36_case_obligated_complete_issue_preclusion_element_mapping_before_merits_reliance, at 2026-04-07)
-- add_targeted_certified_record_citations_for_finality_and_full_fair_elements -> issue:guardianship_authority (r37_case_obligated_add_targeted_record_citations_for_finality_and_full_fair_elements, at 2026-04-07)
-- qualify_issue_preclusion_language_as_contingent_and_not_fully_proved -> doc:petition_guardianship_working_memo (r38_case_obligated_qualify_overclaim_language_until_elements_are_proved, at 2026-04-07)
+- resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record -> issue:interference_actor_assignment (r21_case_obligated_resolve_actor_assignment_conflict, at 2026-04-09)
+- treat_issue_preclusion_theory_as_provisional_until_certified_prior_order_and_docket_are_staged -> issue:guardianship_authority (r35_case_obligated_treat_issue_preclusion_as_provisional_until_certified_prior_record_staged, at 2026-04-09)
+- complete_identical_issue_finality_privity_and_full_fair_mapping_before_merits_reliance -> issue:guardianship_authority (r36_case_obligated_complete_issue_preclusion_element_mapping_before_merits_reliance, at 2026-04-09)
+- add_targeted_certified_record_citations_for_finality_and_full_fair_elements -> issue:guardianship_authority (r37_case_obligated_add_targeted_record_citations_for_finality_and_full_fair_elements, at 2026-04-09)
+- qualify_issue_preclusion_language_as_contingent_and_not_fully_proved -> doc:petition_guardianship_working_memo (r38_case_obligated_qualify_overclaim_language_until_elements_are_proved, at 2026-04-09)
 - Permissions:
 - treat_solomon_hacc_interference_as_inference_not_direct_proof -> person:solomon (r6c_solomon_interference_not_proved_by_named_hacc_notice_gap, at 2026-04-07)
 - seek_compelled_production_of_hacc_actor_document_authority_chain -> issue:lease_change_actor_identification (r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain, at 2026-04-07)
@@ -109,7 +109,7 @@ Generated: 2026-04-07
 - seek_orcp_17_sanctions_if_filing_is_shown_improper_or_factually_or_legally_unsupported -> issue:sanctions_track (r26_case_permitted_seek_orcp17_sanctions_if_improper_purpose_or_no_support_is_shown, at 2026-04-07)
 - seek_subpoena_enforcement_and_related_expenses_after_nonparty_noncompliance -> org:hacc (r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46, at 2026-04-07)
 - use_orcp9_service_and_orcp10_deadline_computation_for_later_filed_motion_packets -> issue:service_and_deadlines (r32_case_permitted_use_orcp9_and_orcp10_for_motion_packet_service_and_deadlines, at 2026-04-07)
-- seek_targeted_nonparty_production_for_hearing_and_appearance_materials_supporting_issue_preclusion_elements -> issue:guardianship_authority (r39_case_permitted_seek_targeted_nonparty_production_for_missing_issue_preclusion_elements, at 2026-04-07)
+- seek_targeted_nonparty_production_for_hearing_and_appearance_materials_supporting_issue_preclusion_elements -> issue:guardianship_authority (r39_case_permitted_seek_targeted_nonparty_production_for_missing_issue_preclusion_elements, at 2026-04-09)
 
 - Party: org:hacc
 - Counts: O=3 P=0 F=0
@@ -121,10 +121,10 @@ Generated: 2026-04-07
 - Party: person:benjamin_barber
 - Counts: O=1 P=2 F=0
 - Obligations:
-- maintain_service_and_deadline_tracking -> case:26PR00641 (r16_benjamin_obligated_track_service_and_deadlines, at 2026-04-07)
+- maintain_service_and_deadline_tracking -> case:26PR00641 (r16_benjamin_obligated_track_service_and_deadlines, at 2026-04-09)
 - Permissions:
 - act_as_gal_within_signed_eppdapa_order_scope -> person:jane_cortez (r40_benjamin_permitted_act_as_gal_under_signed_eppdapa_order, at 2026-04-07)
-- serve_staged_subpoena_packets -> case:26PR00641 (r15_benjamin_permitted_serve_subpoena_packets, at 2026-04-07)
+- serve_staged_subpoena_packets -> case:26PR00641 (r15_benjamin_permitted_serve_subpoena_packets, at 2026-04-09)
 
 - Party: person:solomon
 - Counts: O=5 P=0 F=7

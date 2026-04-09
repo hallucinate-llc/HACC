@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-04-07",
+    "generated_at": "2026-04-09",
     "purpose": "Full case knowledge graph for guardianship + collateral estoppel reasoning",
     "modalities": [
       "O",
@@ -164,7 +164,7 @@
       "status": "verified",
       "source": "certified_records",
       "dates": [
-        "2026-04-07"
+        "2026-04-09"
       ],
       "confidence_level": null,
       "confidence_score": null,
@@ -181,7 +181,7 @@
       "status": "verified",
       "source": "certified_records",
       "dates": [
-        "2026-04-07"
+        "2026-04-09"
       ],
       "confidence_level": null,
       "confidence_score": null,
@@ -198,7 +198,7 @@
       "status": "verified",
       "source": "certified_records",
       "dates": [
-        "2026-04-07"
+        "2026-04-09"
       ],
       "confidence_level": null,
       "confidence_score": null,
@@ -215,7 +215,7 @@
       "status": "verified",
       "source": "certified_records",
       "dates": [
-        "2026-04-07"
+        "2026-04-09"
       ],
       "confidence_level": null,
       "confidence_score": null,
@@ -232,7 +232,7 @@
       "status": "verified",
       "source": "certified_records",
       "dates": [
-        "2026-04-07"
+        "2026-04-09"
       ],
       "confidence_level": null,
       "confidence_score": null,
@@ -249,7 +249,7 @@
       "status": "verified",
       "source": "certified_records",
       "dates": [
-        "2026-04-07"
+        "2026-04-09"
       ],
       "confidence_level": null,
       "confidence_score": null,
@@ -266,7 +266,7 @@
       "status": "verified",
       "source": "issue_preclusion_mapping.json",
       "dates": [
-        "2026-04-07"
+        "2026-04-09"
       ],
       "confidence_level": null,
       "confidence_score": null,
@@ -283,7 +283,7 @@
       "status": "verified",
       "source": "issue_preclusion_mapping.json",
       "dates": [
-        "2026-04-07"
+        "2026-04-09"
       ],
       "confidence_level": null,
       "confidence_score": null,
@@ -300,7 +300,7 @@
       "status": "verified",
       "source": "issue_preclusion_mapping.json",
       "dates": [
-        "2026-04-07"
+        "2026-04-09"
       ],
       "confidence_level": null,
       "confidence_score": null,
@@ -317,7 +317,7 @@
       "status": "verified",
       "source": "issue_preclusion_mapping.json",
       "dates": [
-        "2026-04-07"
+        "2026-04-09"
       ],
       "confidence_level": null,
       "confidence_score": null,
@@ -334,7 +334,7 @@
       "status": "verified",
       "source": "issue_preclusion_mapping.json",
       "dates": [
-        "2026-04-07"
+        "2026-04-09"
       ],
       "confidence_level": null,
       "confidence_score": null,
@@ -351,7 +351,7 @@
       "status": "verified",
       "source": "issue_preclusion_mapping.json",
       "dates": [
-        "2026-04-07"
+        "2026-04-09"
       ],
       "confidence_level": null,
       "confidence_score": null,
@@ -368,7 +368,7 @@
       "status": "verified",
       "source": "repeated_usurpation_pattern_memo.md | petition_guardianship_working_memo.md",
       "dates": [
-        "2026-04-07"
+        "2026-04-09"
       ],
       "confidence_level": null,
       "confidence_score": null,
@@ -393,11 +393,11 @@
       "evidence_kind": null
     },
     {
-      "id": "fact:f_client_benjamin_avoided_service",
+      "id": "fact:f_client_solomon_avoided_service",
       "kind": "fact",
       "predicate": "AvoidedService",
       "args": [
-        "person:benjamin_barber",
+        "person:solomon",
         "order:prior_guardianship_order"
       ],
       "value": true,
@@ -411,11 +411,11 @@
       "evidence_kind": null
     },
     {
-      "id": "fact:f_client_benjamin_order_disregard",
+      "id": "fact:f_client_solomon_order_disregard",
       "kind": "fact",
       "predicate": "DisregardedOrder",
       "args": [
-        "person:benjamin_barber",
+        "person:solomon",
         "order:prior_guardianship_order"
       ],
       "value": true,
@@ -429,11 +429,11 @@
       "evidence_kind": null
     },
     {
-      "id": "fact:f_client_benjamin_housing_interference",
+      "id": "fact:f_client_solomon_housing_interference",
       "kind": "fact",
       "predicate": "Interference",
       "args": [
-        "person:benjamin_barber",
+        "person:solomon",
         "process:hacc_housing_contract"
       ],
       "value": true,
@@ -1201,7 +1201,7 @@
       "status": "verified",
       "source": "generate_formal_reasoning_artifacts.py",
       "dates": [
-        "2026-04-07"
+        "2026-04-09"
       ],
       "confidence_level": null,
       "confidence_score": null,
@@ -1218,7 +1218,7 @@
       "status": "verified",
       "source": "final_filing_set",
       "dates": [
-        "2026-04-07"
+        "2026-04-09"
       ],
       "confidence_level": null,
       "confidence_score": null,
@@ -1235,7 +1235,7 @@
       "status": "verified",
       "source": "11B_attachment_a2_definitions_and_instructions_final.md",
       "dates": [
-        "2026-04-07"
+        "2026-04-09"
       ],
       "confidence_level": null,
       "confidence_score": null,
@@ -1252,7 +1252,7 @@
       "status": "verified",
       "source": "06_oregon_authority_table_final.md",
       "dates": [
-        "2026-04-07"
+        "2026-04-09"
       ],
       "confidence_level": null,
       "confidence_score": null,
@@ -8065,7 +8065,7 @@
       "id": "interval:ti_exhibit_r_compelled_production_track",
       "kind": "temporal_interval",
       "label": "Exhibit R compelled-production track",
-      "start_date": "2026-04-07",
+      "start_date": "2026-04-09",
       "end_date": null,
       "status": "open",
       "source": "subpoena_target_memo_hacc_lease_authority_record.md",
@@ -8092,36 +8092,36 @@
       "target": "person:jane_cortez"
     },
     {
-      "id": "rule:r2_noninterference_prohibition_for_benjamin",
+      "id": "rule:r2_target_noninterference_prohibition_if_prior_appointment",
       "kind": "rule",
-      "description": "If prior appointment exists and interference is alleged, Benjamin is forbidden from interference.",
+      "description": "If prior appointment exists and interference is alleged, the alleged interfering actor is forbidden from interference.",
       "track": "hypothesis",
       "authority_refs": [
         "auth:ors_125_050"
       ]
     },
     {
-      "id": "conclusion:c2_benjamin_forbidden_interference",
+      "id": "conclusion:c2_target_forbidden_interference",
       "kind": "deontic_conclusion",
       "modality": "F",
-      "actor": "person:benjamin_barber",
+      "actor": "person:solomon",
       "action": "interfere_with_guardian_or_housing_process",
       "target": "process:hacc_housing_contract"
     },
     {
-      "id": "rule:r3_benjamin_obligation_comply_or_seek_relief",
+      "id": "rule:r3_target_obligation_comply_or_seek_relief_if_prior_appointment",
       "kind": "rule",
-      "description": "If prior appointment is in force and Benjamin disregarded order, Benjamin was obligated to comply or seek relief.",
+      "description": "If prior appointment is in force and an alleged actor disregarded the order, that actor was obligated to comply or seek relief.",
       "track": "hypothesis",
       "authority_refs": [
         "auth:ors_125_050"
       ]
     },
     {
-      "id": "conclusion:c3_benjamin_obligated_comply_or_seek_relief",
+      "id": "conclusion:c3_target_obligated_comply_or_seek_relief",
       "kind": "deontic_conclusion",
       "modality": "O",
-      "actor": "person:benjamin_barber",
+      "actor": "person:solomon",
       "action": "comply_with_order_or_seek_relief",
       "target": "order:prior_guardianship_order"
     },
@@ -8980,7 +8980,7 @@
       "id": "case:guardianship_collateral_estoppel",
       "kind": "case",
       "name": "Guardianship/Collateral Estoppel Working Case",
-      "as_of": "2026-04-07"
+      "as_of": "2026-04-09"
     }
   ],
   "edges": [
@@ -9006,52 +9006,52 @@
     },
     {
       "from": "fact:f_authority_ors_125_050_protective_orcp_oec",
-      "to": "rule:r2_noninterference_prohibition_for_benjamin",
+      "to": "rule:r2_target_noninterference_prohibition_if_prior_appointment",
       "relation": "antecedent_of"
     },
     {
       "from": "fact:f_client_prior_appointment",
-      "to": "rule:r2_noninterference_prohibition_for_benjamin",
+      "to": "rule:r2_target_noninterference_prohibition_if_prior_appointment",
       "relation": "antecedent_of"
     },
     {
-      "from": "fact:f_client_benjamin_housing_interference",
-      "to": "rule:r2_noninterference_prohibition_for_benjamin",
+      "from": "fact:f_client_solomon_housing_interference",
+      "to": "rule:r2_target_noninterference_prohibition_if_prior_appointment",
       "relation": "antecedent_of"
     },
     {
-      "from": "rule:r2_noninterference_prohibition_for_benjamin",
-      "to": "conclusion:c2_benjamin_forbidden_interference",
+      "from": "rule:r2_target_noninterference_prohibition_if_prior_appointment",
+      "to": "conclusion:c2_target_forbidden_interference",
       "relation": "yields"
     },
     {
-      "from": "person:benjamin_barber",
-      "to": "conclusion:c2_benjamin_forbidden_interference",
+      "from": "person:solomon",
+      "to": "conclusion:c2_target_forbidden_interference",
       "relation": "bears"
     },
     {
       "from": "fact:f_authority_ors_125_050_protective_orcp_oec",
-      "to": "rule:r3_benjamin_obligation_comply_or_seek_relief",
+      "to": "rule:r3_target_obligation_comply_or_seek_relief_if_prior_appointment",
       "relation": "antecedent_of"
     },
     {
       "from": "fact:f_client_prior_appointment",
-      "to": "rule:r3_benjamin_obligation_comply_or_seek_relief",
+      "to": "rule:r3_target_obligation_comply_or_seek_relief_if_prior_appointment",
       "relation": "antecedent_of"
     },
     {
-      "from": "fact:f_client_benjamin_order_disregard",
-      "to": "rule:r3_benjamin_obligation_comply_or_seek_relief",
+      "from": "fact:f_client_solomon_order_disregard",
+      "to": "rule:r3_target_obligation_comply_or_seek_relief_if_prior_appointment",
       "relation": "antecedent_of"
     },
     {
-      "from": "rule:r3_benjamin_obligation_comply_or_seek_relief",
-      "to": "conclusion:c3_benjamin_obligated_comply_or_seek_relief",
+      "from": "rule:r3_target_obligation_comply_or_seek_relief_if_prior_appointment",
+      "to": "conclusion:c3_target_obligated_comply_or_seek_relief",
       "relation": "yields"
     },
     {
-      "from": "person:benjamin_barber",
-      "to": "conclusion:c3_benjamin_obligated_comply_or_seek_relief",
+      "from": "person:solomon",
+      "to": "conclusion:c3_target_obligated_comply_or_seek_relief",
       "relation": "bears"
     },
     {
@@ -9410,11 +9410,6 @@
       "relation": "antecedent_of"
     },
     {
-      "from": "interval:ti_exhibit_r_compelled_production_track",
-      "to": "rule:r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
-      "relation": "temporal_context_for"
-    },
-    {
       "from": "rule:r6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
       "to": "conclusion:c6e_case_permitted_seek_compelled_production_for_hacc_actor_chain",
       "relation": "yields"
@@ -9745,11 +9740,6 @@
       "relation": "temporal_context_for"
     },
     {
-      "from": "interval:ti_exhibit_r_compelled_production_track",
-      "to": "rule:r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
-      "relation": "temporal_context_for"
-    },
-    {
       "from": "rule:r20_case_permitted_treat_enforcement_path_as_pending_pre_service",
       "to": "conclusion:c20_case_permitted_treat_enforcement_path_as_pending_pre_service",
       "relation": "yields"
@@ -9935,11 +9925,6 @@
       "relation": "temporal_context_for"
     },
     {
-      "from": "interval:ti_exhibit_r_compelled_production_track",
-      "to": "rule:r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
-      "relation": "temporal_context_for"
-    },
-    {
       "from": "rule:r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
       "to": "conclusion:c24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved",
       "relation": "yields"
@@ -10008,11 +9993,6 @@
       "from": "fact:f_hacc_exhibit_r_requires_compelled_production",
       "to": "rule:r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
       "relation": "antecedent_of"
-    },
-    {
-      "from": "interval:ti_exhibit_r_compelled_production_track",
-      "to": "rule:r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
-      "relation": "temporal_context_for"
     },
     {
       "from": "rule:r27_case_permitted_seek_subpoena_enforcement_under_orcp55_and_orcp46",
@@ -10385,12 +10365,12 @@
       "relation": "inactive"
     },
     {
-      "from": "rule:r2_noninterference_prohibition_for_benjamin",
+      "from": "rule:r2_target_noninterference_prohibition_if_prior_appointment",
       "to": "case:guardianship_collateral_estoppel",
       "relation": "inactive"
     },
     {
-      "from": "rule:r3_benjamin_obligation_comply_or_seek_relief",
+      "from": "rule:r3_target_obligation_comply_or_seek_relief_if_prior_appointment",
       "to": "case:guardianship_collateral_estoppel",
       "relation": "inactive"
     },

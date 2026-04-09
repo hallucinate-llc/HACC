@@ -1,6 +1,6 @@
 # ORCP 17 Readiness Snapshot
 
-Generated: 2026-04-07
+Generated: 2026-04-09
 
 - Branch: orcp17_sanctions_merits
 - Label: ORCP 17 sanctions readiness snapshot

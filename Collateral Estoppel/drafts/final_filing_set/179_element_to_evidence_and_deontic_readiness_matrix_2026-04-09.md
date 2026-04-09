@@ -59,19 +59,19 @@ II. MOTION 02 (THRESHOLD PRECLUSION RECORD / ALTERNATIVE DISMISSAL)
 III. MOTION 03 (SHOW CAUSE / REMEDIAL SANCTIONS TRACK)
 
 3. Relief branch: order to show cause for compliance/nonappearance and barred-claim posture.
-   a. Law: ORS 33.055, ORS 33.075, ORS 33.105; ORCP 17 only if procedural prerequisites are satisfied.
+   a. Law: ORS 33.055, ORS 33.075, ORS 33.105.
    b. Elements:
       1) operative order and notice context;
       2) alleged noncompliance or conflicting compliance posture;
-      3) remedial relief tied to proven violation;
-      4) for ORCP 17 branch, procedural safe-harbor/prerequisite compliance.
+      3) remedial relief tied to proven violation of specific order terms.
    c. Current support: `03` sections II-IV; `177` paragraphs 8-14; Exhibit 1 and preserved communication chain.
    d. Status:
       1) show-cause hearing request: `Admissible-now`;
       2) strongest nonappearance/violation findings: partially `Proof-gated` pending certified appearance/minute records.
    e. Next evidence needed:
       1) certified appearance/minute records from original restraining-order matter;
-      2) any filed response/hearing disposition proving failure to appear after available hearing path.
+      2) any filed response/hearing disposition proving failure to appear after available hearing path;
+      3) official sheriff return/proof-of-service for the reported April 9, 2026 service event (staged via `185`/`186` workflow and request template `187`).
    f. Deontic:
       1) `O` keep sanctions branch remedial unless separately noticed;
       2) `F` avoid punitive framing in this filing posture.

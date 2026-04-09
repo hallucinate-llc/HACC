@@ -23,11 +23,11 @@ FACT_PATTERNS: Dict[str, List[str]] = {
         r'prior appointment', r'appointed guardian', r'guardian appointed', r'letters of guardianship',
         r'guardianship order', r'prior guardian', r'appointment order'
     ],
-    'f_client_benjamin_housing_interference': [
-        r'benjamin', r'interfer', r'housing contract', r'lease', r'household composition', r'hacc'
+    'f_client_solomon_housing_interference': [
+        r'solomon', r'interfer', r'housing contract', r'lease', r'household composition', r'hacc'
     ],
-    'f_client_benjamin_order_disregard': [
-        r'benjamin', r'disregard', r'order (?:wasn.t|not) enforceable', r'avoid(?:ed)? service',
+    'f_client_solomon_order_disregard': [
+        r'solomon', r'disregard', r'order (?:wasn.t|not) enforceable', r'avoid(?:ed)? service',
         r'service', r'noncompliance'
     ],
     'f_client_solomon_failed_appearance': [

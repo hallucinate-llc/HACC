@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-07",
+  "generated_at": "2026-04-09",
   "modes": {
     "strict": {
       "active_rule_count": 42,
@@ -106,11 +106,11 @@
               "action": "request_special_advocate_or_guardian_ad_litem_to_protect_person_interests",
               "target": "person:jane_cortez",
               "rule_id": "r33_case_permitted_request_special_advocate_or_gal_under_chapter_125",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-03-31",
-                "latest_date": "2026-04-07",
-                "date_count": 2,
+                "latest_date": "2026-04-09",
+                "date_count": 3,
                 "spans_multiple_dates": true,
                 "temporal_tags": [
                   "multi_date_window"
@@ -151,10 +151,10 @@
               "action": "resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record",
               "target": "issue:interference_actor_assignment",
               "rule_id": "r21_case_obligated_resolve_actor_assignment_conflict",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
-                "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
+                "earliest_date": "2026-04-09",
+                "latest_date": "2026-04-09",
                 "date_count": 1,
                 "spans_multiple_dates": false,
                 "temporal_tags": [],
@@ -167,13 +167,15 @@
               "action": "treat_issue_preclusion_theory_as_provisional_until_certified_prior_order_and_docket_are_staged",
               "target": "issue:guardianship_authority",
               "rule_id": "r35_case_obligated_treat_issue_preclusion_as_provisional_until_certified_prior_record_staged",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": [
                   "ti_restraining_order_effective_period"
                 ]
@@ -183,13 +185,15 @@
               "action": "complete_identical_issue_finality_privity_and_full_fair_mapping_before_merits_reliance",
               "target": "issue:guardianship_authority",
               "rule_id": "r36_case_obligated_complete_issue_preclusion_element_mapping_before_merits_reliance",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": []
               }
             },
@@ -197,13 +201,15 @@
               "action": "add_targeted_certified_record_citations_for_finality_and_full_fair_elements",
               "target": "issue:guardianship_authority",
               "rule_id": "r37_case_obligated_add_targeted_record_citations_for_finality_and_full_fair_elements",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": []
               }
             },
@@ -211,10 +217,10 @@
               "action": "qualify_issue_preclusion_language_as_contingent_and_not_fully_proved",
               "target": "doc:petition_guardianship_working_memo",
               "rule_id": "r38_case_obligated_qualify_overclaim_language_until_elements_are_proved",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
-                "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
+                "earliest_date": "2026-04-09",
+                "latest_date": "2026-04-09",
                 "date_count": 1,
                 "spans_multiple_dates": false,
                 "temporal_tags": [],
@@ -256,9 +262,7 @@
                 "temporal_tags": [
                   "post_hacc_lease_change"
                 ],
-                "interval_refs": [
-                  "ti_exhibit_r_compelled_production_track"
-                ]
+                "interval_refs": []
               }
             },
             {
@@ -273,8 +277,7 @@
                 "spans_multiple_dates": false,
                 "temporal_tags": [],
                 "interval_refs": [
-                  "ti_restraining_order_effective_period",
-                  "ti_exhibit_r_compelled_production_track"
+                  "ti_restraining_order_effective_period"
                 ]
               }
             },
@@ -400,9 +403,7 @@
                 "temporal_tags": [
                   "post_hacc_lease_change"
                 ],
-                "interval_refs": [
-                  "ti_exhibit_r_compelled_production_track"
-                ]
+                "interval_refs": []
               }
             },
             {
@@ -428,13 +429,15 @@
               "action": "seek_targeted_nonparty_production_for_hearing_and_appearance_materials_supporting_issue_preclusion_elements",
               "target": "issue:guardianship_authority",
               "rule_id": "r39_case_permitted_seek_targeted_nonparty_production_for_missing_issue_preclusion_elements",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": [
                   "ti_exhibit_r_compelled_production_track"
                 ]
@@ -519,13 +522,15 @@
               "action": "maintain_service_and_deadline_tracking",
               "target": "case:26PR00641",
               "rule_id": "r16_benjamin_obligated_track_service_and_deadlines",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": [
                   "ti_restraining_order_effective_period"
                 ]
@@ -555,13 +560,15 @@
               "action": "serve_staged_subpoena_packets",
               "target": "case:26PR00641",
               "rule_id": "r15_benjamin_permitted_serve_subpoena_packets",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": [
                   "ti_exhibit_r_compelled_production_track"
                 ]
@@ -921,11 +928,11 @@
               "action": "request_special_advocate_or_guardian_ad_litem_to_protect_person_interests",
               "target": "person:jane_cortez",
               "rule_id": "r33_case_permitted_request_special_advocate_or_gal_under_chapter_125",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-03-31",
-                "latest_date": "2026-04-07",
-                "date_count": 2,
+                "latest_date": "2026-04-09",
+                "date_count": 3,
                 "spans_multiple_dates": true,
                 "temporal_tags": [
                   "multi_date_window"
@@ -966,10 +973,10 @@
               "action": "resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record",
               "target": "issue:interference_actor_assignment",
               "rule_id": "r21_case_obligated_resolve_actor_assignment_conflict",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
-                "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
+                "earliest_date": "2026-04-09",
+                "latest_date": "2026-04-09",
                 "date_count": 1,
                 "spans_multiple_dates": false,
                 "temporal_tags": [],
@@ -982,13 +989,15 @@
               "action": "treat_issue_preclusion_theory_as_provisional_until_certified_prior_order_and_docket_are_staged",
               "target": "issue:guardianship_authority",
               "rule_id": "r35_case_obligated_treat_issue_preclusion_as_provisional_until_certified_prior_record_staged",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": [
                   "ti_restraining_order_effective_period"
                 ]
@@ -998,13 +1007,15 @@
               "action": "complete_identical_issue_finality_privity_and_full_fair_mapping_before_merits_reliance",
               "target": "issue:guardianship_authority",
               "rule_id": "r36_case_obligated_complete_issue_preclusion_element_mapping_before_merits_reliance",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": []
               }
             },
@@ -1012,13 +1023,15 @@
               "action": "add_targeted_certified_record_citations_for_finality_and_full_fair_elements",
               "target": "issue:guardianship_authority",
               "rule_id": "r37_case_obligated_add_targeted_record_citations_for_finality_and_full_fair_elements",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": []
               }
             },
@@ -1026,10 +1039,10 @@
               "action": "qualify_issue_preclusion_language_as_contingent_and_not_fully_proved",
               "target": "doc:petition_guardianship_working_memo",
               "rule_id": "r38_case_obligated_qualify_overclaim_language_until_elements_are_proved",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
-                "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
+                "earliest_date": "2026-04-09",
+                "latest_date": "2026-04-09",
                 "date_count": 1,
                 "spans_multiple_dates": false,
                 "temporal_tags": [],
@@ -1071,9 +1084,7 @@
                 "temporal_tags": [
                   "post_hacc_lease_change"
                 ],
-                "interval_refs": [
-                  "ti_exhibit_r_compelled_production_track"
-                ]
+                "interval_refs": []
               }
             },
             {
@@ -1088,8 +1099,7 @@
                 "spans_multiple_dates": false,
                 "temporal_tags": [],
                 "interval_refs": [
-                  "ti_restraining_order_effective_period",
-                  "ti_exhibit_r_compelled_production_track"
+                  "ti_restraining_order_effective_period"
                 ]
               }
             },
@@ -1181,8 +1191,7 @@
                   "multi_date_window"
                 ],
                 "interval_refs": [
-                  "ti_restraining_order_effective_period",
-                  "ti_exhibit_r_compelled_production_track"
+                  "ti_restraining_order_effective_period"
                 ]
               }
             },
@@ -1234,9 +1243,7 @@
                 "temporal_tags": [
                   "post_hacc_lease_change"
                 ],
-                "interval_refs": [
-                  "ti_exhibit_r_compelled_production_track"
-                ]
+                "interval_refs": []
               }
             },
             {
@@ -1262,13 +1269,15 @@
               "action": "seek_targeted_nonparty_production_for_hearing_and_appearance_materials_supporting_issue_preclusion_elements",
               "target": "issue:guardianship_authority",
               "rule_id": "r39_case_permitted_seek_targeted_nonparty_production_for_missing_issue_preclusion_elements",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": [
                   "ti_exhibit_r_compelled_production_track"
                 ]
@@ -1353,13 +1362,15 @@
               "action": "maintain_service_and_deadline_tracking",
               "target": "case:26PR00641",
               "rule_id": "r16_benjamin_obligated_track_service_and_deadlines",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": [
                   "ti_restraining_order_effective_period"
                 ]
@@ -1389,13 +1400,15 @@
               "action": "serve_staged_subpoena_packets",
               "target": "case:26PR00641",
               "rule_id": "r15_benjamin_permitted_serve_subpoena_packets",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": [
                   "ti_exhibit_r_compelled_production_track"
                 ]

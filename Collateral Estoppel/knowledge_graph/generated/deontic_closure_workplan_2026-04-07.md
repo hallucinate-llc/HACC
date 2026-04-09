@@ -1,7 +1,7 @@
 # Deontic Closure Workplan - 2026-04-07
 
 ## Summary
-- Strict active: 39
+- Strict active: 42
 - Strict unresolved: 6
 - Strict inactive: 4
 - Closure items: 10
@@ -41,11 +41,11 @@
 - Action: Add certified prior guardianship appointment order and supporting service/compliance records.
 - Expected effect: r1-r3 move from unresolved to active in strict mode (if all antecedents verified).
 - Authority refs: auth:ors_125_050
-- [unresolved] r2_noninterference_prohibition_for_benjamin (hypothesis)
+- [unresolved] r2_target_noninterference_prohibition_if_prior_appointment (hypothesis)
 - Action: Add certified prior guardianship appointment order and supporting service/compliance records.
 - Expected effect: r1-r3 move from unresolved to active in strict mode (if all antecedents verified).
 - Authority refs: auth:ors_125_050
-- [unresolved] r3_benjamin_obligation_comply_or_seek_relief (hypothesis)
+- [unresolved] r3_target_obligation_comply_or_seek_relief_if_prior_appointment (hypothesis)
 - Action: Add certified prior guardianship appointment order and supporting service/compliance records.
 - Expected effect: r1-r3 move from unresolved to active in strict mode (if all antecedents verified).
 - Authority refs: auth:ors_125_050

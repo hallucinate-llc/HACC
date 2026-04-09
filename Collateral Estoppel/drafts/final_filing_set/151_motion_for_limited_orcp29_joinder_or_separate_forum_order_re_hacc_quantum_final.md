@@ -24,7 +24,7 @@ I. RELIEF REQUESTED
 
 II. AUTHORITY
 
-4. ORS 125.050 applies ORCP in protective proceedings unless chapter 125 provides otherwise.
+4. ORS 125.050 applies ORCP in protective proceedings unless chapter 125 provides otherwise, and all ORCP-based requests in this motion are made only to the extent procedurally applicable in this probate posture.
 5. ORS 125.025 gives the Court continuing authority to protect the respondent/protected person and manage scope of proceedings.
 6. ORCP 29A permits joinder of persons needed for just adjudication when complete relief cannot otherwise be accorded or inconsistent obligations risk exists.
 7. ORCP 29B requires the Court, when joinder is not feasible, to evaluate prejudice, the ability to shape relief to reduce prejudice, adequacy of judgment in the person's absence, and whether an adequate remedy exists if the action is dismissed for nonjoinder.
@@ -33,7 +33,7 @@ II. AUTHORITY
 
 III. FACTUAL/PROCEDURAL BASIS
 
-10. The overlap materials identify an active Justice Court eviction-response track (`26FE0586`) framing Section 18 relocation-duty violations, including `42 U.S.C. § 1437p(d)` and `24 C.F.R. § 970.21`, against HACC and Quantum. See supporting declarations and overlap filings (`04`, `139`, `147`, `149`).
+10. The overlap materials identify an active Justice Court eviction-response track (`26FE0586`) framing Section 18 relocation-duty violations, including `42 U.S.C. § 1437p(d)` and `24 C.F.R. § 970.21`, against HACC and Quantum. See supporting declarations and overlap-status filings (`04`, `139`, `149`, `169`).
 11. The same overlap materials identify a District of Oregon complaint track against HACC and Quantum concerning overlapping relocation, accommodation, hearing-access, and housing-interference facts. See (`04`, `139`, `149`, `169`).
 12. Pending probate petitions and motions raise overlap risk if the same housing-merits issues are retried here. See (`152`, `157`, `168`).
 13. HACC and Quantum are not presently named parties in this probate matter, and the current protective-proceeding record does not require full merits adjudication of their federal housing duties in order to decide guardianship-related questions concerning Jane Kay Cortez.

@@ -17,8 +17,8 @@ REPORT = OUT / 'deontic_reasoning_report.json'
 
 TARGET_RULES = [
     'r1_guardian_permission_if_prior_appointment',
-    'r2_noninterference_prohibition_for_benjamin',
-    'r3_benjamin_obligation_comply_or_seek_relief',
+    'r2_target_noninterference_prohibition_if_prior_appointment',
+    'r3_target_obligation_comply_or_seek_relief_if_prior_appointment',
     'r5_solomon_obligated_appear_and_answer',
     'r7_solomon_forbidden_refile_precluded_issue',
     'r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved',
@@ -106,8 +106,8 @@ def main() -> None:
             'scenario_id': 'promote_prior_appointment_cluster',
             'promotions': [
                 ('f_client_prior_appointment', 'verified', 'true', 'Simulated certified prior appointment order.'),
-                ('f_client_benjamin_housing_interference', 'verified', 'true', 'Simulated certified interference chain.'),
-                ('f_client_benjamin_order_disregard', 'verified', 'true', 'Simulated certified disregard findings.'),
+                ('f_client_solomon_housing_interference', 'verified', 'true', 'Simulated certified interference chain.'),
+                ('f_client_solomon_order_disregard', 'verified', 'true', 'Simulated certified disregard findings.'),
             ],
         },
         {
@@ -117,8 +117,8 @@ def main() -> None:
                 ('f_collateral_estoppel_candidate', 'verified', 'true', 'Simulated certified issue-preclusion mapping.'),
                 ('f_client_solomon_barred_refile', 'verified', 'true', 'Simulated certified barred-refile record.'),
                 ('f_client_prior_appointment', 'verified', 'true', 'Simulated certified prior appointment order.'),
-                ('f_client_benjamin_housing_interference', 'verified', 'true', 'Simulated certified interference chain.'),
-                ('f_client_benjamin_order_disregard', 'verified', 'true', 'Simulated certified disregard findings.'),
+                ('f_client_solomon_housing_interference', 'verified', 'true', 'Simulated certified interference chain.'),
+                ('f_client_solomon_order_disregard', 'verified', 'true', 'Simulated certified disregard findings.'),
             ],
         },
     ]

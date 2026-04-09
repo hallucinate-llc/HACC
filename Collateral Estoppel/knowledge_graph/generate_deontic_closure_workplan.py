@@ -51,7 +51,7 @@ def classify_rule(rule_id: str) -> Dict[str, str]:
             'action': 'Add certified prior final order/judgment, identity-of-issue comparison, and full/fair opportunity record.',
             'expected_effect': 'r7 moves from unresolved to active in strict mode.',
         }
-    if rule_id in {'r1_guardian_permission_if_prior_appointment', 'r2_noninterference_prohibition_for_benjamin', 'r3_benjamin_obligation_comply_or_seek_relief'}:
+    if rule_id in {'r1_guardian_permission_if_prior_appointment', 'r2_target_noninterference_prohibition_if_prior_appointment', 'r3_target_obligation_comply_or_seek_relief_if_prior_appointment'}:
         return {
             'priority': 'medium',
             'closure_type': 'prior_appointment_proof',

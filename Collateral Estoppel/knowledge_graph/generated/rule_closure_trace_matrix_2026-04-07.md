@@ -1,6 +1,6 @@
 # Rule Closure Trace Matrix - 2026-04-07
 
-Strict counts: active=39 unresolved=6 inactive=4
+Strict counts: active=42 unresolved=6 inactive=4
 
 ## [unresolved] r1_guardian_permission_if_prior_appointment (hypothesis)
 - Authority refs: auth:ors_125_050
@@ -12,28 +12,28 @@ Strict counts: active=39 unresolved=6 inactive=4
 - f_client_prior_appointment :: PriorAppointmentExists :: status=alleged value=true source=/home/barberb/HACC/Collateral Estoppel/knowledge_graph/guardianship_case_graph.md
 - Action: Certified guardianship appointment order and docket extract.
 
-## [unresolved] r2_noninterference_prohibition_for_benjamin (hypothesis)
+## [unresolved] r2_target_noninterference_prohibition_if_prior_appointment (hypothesis)
 - Authority refs: auth:ors_125_050
-- Description: If prior appointment exists and interference is alleged, Benjamin is forbidden from interference.
+- Description: If prior appointment exists and interference is alleged, the alleged interfering actor is forbidden from interference.
 - Activation estimate: 2026-04-07
 - Antecedent trace:
 - f_authority_ors_125_050_protective_orcp_oec :: AuthorityAvailable :: status=verified value=true source=oregon_authority_grounding_memo_2026-04-07.md
 - Action: Validate and supplement source evidence (oregon_authority_grounding_memo_2026-04-07.md) as needed.
 - f_client_prior_appointment :: PriorAppointmentExists :: status=alleged value=true source=/home/barberb/HACC/Collateral Estoppel/knowledge_graph/guardianship_case_graph.md
 - Action: Certified guardianship appointment order and docket extract.
-- f_client_benjamin_housing_interference :: Interference :: status=alleged value=true source=/home/barberb/HACC/Collateral Estoppel/evidence_notes/motion_exhibit_index.md
+- f_client_solomon_housing_interference :: Interference :: status=alleged value=true source=/home/barberb/HACC/Collateral Estoppel/evidence_notes/motion_exhibit_index.md
 - Action: Authenticated communications, certified court records, and timeline corroboration.
 
-## [unresolved] r3_benjamin_obligation_comply_or_seek_relief (hypothesis)
+## [unresolved] r3_target_obligation_comply_or_seek_relief_if_prior_appointment (hypothesis)
 - Authority refs: auth:ors_125_050
-- Description: If prior appointment is in force and Benjamin disregarded order, Benjamin was obligated to comply or seek relief.
+- Description: If prior appointment is in force and an alleged actor disregarded the order, that actor was obligated to comply or seek relief.
 - Activation estimate: 2026-04-07
 - Antecedent trace:
 - f_authority_ors_125_050_protective_orcp_oec :: AuthorityAvailable :: status=verified value=true source=oregon_authority_grounding_memo_2026-04-07.md
 - Action: Validate and supplement source evidence (oregon_authority_grounding_memo_2026-04-07.md) as needed.
 - f_client_prior_appointment :: PriorAppointmentExists :: status=alleged value=true source=/home/barberb/HACC/Collateral Estoppel/knowledge_graph/guardianship_case_graph.md
 - Action: Certified guardianship appointment order and docket extract.
-- f_client_benjamin_order_disregard :: DisregardedOrder :: status=alleged value=true source=/home/barberb/HACC/Collateral Estoppel/knowledge_graph/guardianship_case_graph.md
+- f_client_solomon_order_disregard :: DisregardedOrder :: status=alleged value=true source=/home/barberb/HACC/Collateral Estoppel/knowledge_graph/guardianship_case_graph.md
 - Action: Authenticated communications, certified court records, and timeline corroboration.
 
 ## [unresolved] r5_solomon_obligated_appear_and_answer (hypothesis)
@@ -73,7 +73,7 @@ Strict counts: active=39 unresolved=6 inactive=4
 ## [inactive] r17_responding_custodian_obligated_execute_or_query_protocol_upon_service (workflow)
 - Authority refs: auth:orcp_55
 - Description: If any subpoena service is completed and OR-joined protocol is defined, responding custodians are obligated in this model to execute the protocol and produce a search execution report.
-- Activation estimate: 2026-04-07
+- Activation estimate: 2026-04-09
 - Antecedent trace:
 - f_subpoena_service_completed_any :: SubpoenaServiceCompletedAny :: status=verified value=false source=28_active_service_log_2026-04-07.csv
 - Action: Confirmed service return entry in active service log (date/method/person served).
@@ -83,7 +83,7 @@ Strict counts: active=39 unresolved=6 inactive=4
 ## [inactive] r18_benjamin_permitted_issue_deficiency_notice_after_incomplete_subpoena_response (workflow)
 - Authority refs: auth:orcp_46, auth:orcp_55
 - Description: If an incomplete subpoena response is present and workflow components are staged, Benjamin is permitted in this model to issue a deficiency notice and cure deadline.
-- Activation estimate: 2026-04-07
+- Activation estimate: 2026-04-09
 - Antecedent trace:
 - f_subpoena_response_incomplete_any :: SubpoenaResponseIncompleteAny :: status=verified value=false source=28_active_service_log_2026-04-07.csv
 - Action: Overdue production record, or production-received record with missing required artifacts, or deficiency stage entry.
@@ -93,7 +93,7 @@ Strict counts: active=39 unresolved=6 inactive=4
 ## [inactive] r19_benjamin_permitted_move_to_compel_after_deficiency_notice_stage (workflow)
 - Authority refs: auth:orcp_46, auth:orcp_55
 - Description: If deficiency notices are in play and compel templates are staged, Benjamin is permitted in this model to move to compel and seek sanctions for noncompliance.
-- Activation estimate: 2026-04-07
+- Activation estimate: 2026-04-09
 - Antecedent trace:
 - f_deficiency_notice_sent_any :: DeficiencyNoticeSentAny :: status=verified value=false source=28_active_service_log_2026-04-07.csv
 - Action: Deficiency notice date/status entry in active service log.
@@ -103,7 +103,7 @@ Strict counts: active=39 unresolved=6 inactive=4
 ## [inactive] r22_case_obligated_finalize_authority_citations_before_filing (filing)
 - Authority refs: auth:orcp_17_c
 - Description: If authority table placeholders remain unresolved, the case posture is obligated to finalize governing citations before final filing use.
-- Activation estimate: 2026-04-07
+- Activation estimate: 2026-04-09
 - Antecedent trace:
 - f_authority_table_placeholders_unresolved :: AuthorityCitationsUnresolved :: status=verified value=false source=06_oregon_authority_table_final.md
 - Action: No additional evidence needed if false by design; keep source table finalized.

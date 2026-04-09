@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-04-07",
+  "generated_at": "2026-04-09",
   "strict_counts": {
-    "active": 39,
+    "active": 42,
     "unresolved": 6,
     "inactive": 4
   },
@@ -42,12 +42,12 @@
     },
     {
       "classification": "unresolved",
-      "rule_id": "r2_noninterference_prohibition_for_benjamin",
+      "rule_id": "r2_target_noninterference_prohibition_if_prior_appointment",
       "track": "hypothesis",
       "authority_refs": [
         "auth:ors_125_050"
       ],
-      "description": "If prior appointment exists and interference is alleged, Benjamin is forbidden from interference.",
+      "description": "If prior appointment exists and interference is alleged, the alleged interfering actor is forbidden from interference.",
       "activation_date_estimate": "2026-04-07",
       "antecedent_trace": [
         {
@@ -73,7 +73,7 @@
           "suggested_evidence_or_action": "Certified guardianship appointment order and docket extract."
         },
         {
-          "fact_id": "f_client_benjamin_housing_interference",
+          "fact_id": "f_client_solomon_housing_interference",
           "predicate": "Interference",
           "status": "alleged",
           "value": "true",
@@ -87,12 +87,12 @@
     },
     {
       "classification": "unresolved",
-      "rule_id": "r3_benjamin_obligation_comply_or_seek_relief",
+      "rule_id": "r3_target_obligation_comply_or_seek_relief_if_prior_appointment",
       "track": "hypothesis",
       "authority_refs": [
         "auth:ors_125_050"
       ],
-      "description": "If prior appointment is in force and Benjamin disregarded order, Benjamin was obligated to comply or seek relief.",
+      "description": "If prior appointment is in force and an alleged actor disregarded the order, that actor was obligated to comply or seek relief.",
       "activation_date_estimate": "2026-04-07",
       "antecedent_trace": [
         {
@@ -118,7 +118,7 @@
           "suggested_evidence_or_action": "Certified guardianship appointment order and docket extract."
         },
         {
-          "fact_id": "f_client_benjamin_order_disregard",
+          "fact_id": "f_client_solomon_order_disregard",
           "predicate": "DisregardedOrder",
           "status": "alleged",
           "value": "true",
@@ -266,7 +266,7 @@
         "auth:orcp_55"
       ],
       "description": "If any subpoena service is completed and OR-joined protocol is defined, responding custodians are obligated in this model to execute the protocol and produce a search execution report.",
-      "activation_date_estimate": "2026-04-07",
+      "activation_date_estimate": "2026-04-09",
       "antecedent_trace": [
         {
           "fact_id": "f_subpoena_service_completed_any",
@@ -286,7 +286,7 @@
           "value": "true",
           "source": "11B_attachment_a2_definitions_and_instructions_final.md",
           "dates": [
-            "2026-04-07"
+            "2026-04-09"
           ],
           "suggested_evidence_or_action": "Validate and supplement source evidence (11B_attachment_a2_definitions_and_instructions_final.md) as needed."
         }
@@ -301,7 +301,7 @@
         "auth:orcp_55"
       ],
       "description": "If an incomplete subpoena response is present and workflow components are staged, Benjamin is permitted in this model to issue a deficiency notice and cure deadline.",
-      "activation_date_estimate": "2026-04-07",
+      "activation_date_estimate": "2026-04-09",
       "antecedent_trace": [
         {
           "fact_id": "f_subpoena_response_incomplete_any",
@@ -321,7 +321,7 @@
           "value": "true",
           "source": "final_filing_set",
           "dates": [
-            "2026-04-07"
+            "2026-04-09"
           ],
           "suggested_evidence_or_action": "Validate and supplement source evidence (final_filing_set) as needed."
         }
@@ -336,7 +336,7 @@
         "auth:orcp_55"
       ],
       "description": "If deficiency notices are in play and compel templates are staged, Benjamin is permitted in this model to move to compel and seek sanctions for noncompliance.",
-      "activation_date_estimate": "2026-04-07",
+      "activation_date_estimate": "2026-04-09",
       "antecedent_trace": [
         {
           "fact_id": "f_deficiency_notice_sent_any",
@@ -356,7 +356,7 @@
           "value": "true",
           "source": "final_filing_set",
           "dates": [
-            "2026-04-07"
+            "2026-04-09"
           ],
           "suggested_evidence_or_action": "Validate and supplement source evidence (final_filing_set) as needed."
         }
@@ -370,7 +370,7 @@
         "auth:orcp_17_c"
       ],
       "description": "If authority table placeholders remain unresolved, the case posture is obligated to finalize governing citations before final filing use.",
-      "activation_date_estimate": "2026-04-07",
+      "activation_date_estimate": "2026-04-09",
       "antecedent_trace": [
         {
           "fact_id": "f_authority_table_placeholders_unresolved",
@@ -379,7 +379,7 @@
           "value": "false",
           "source": "06_oregon_authority_table_final.md",
           "dates": [
-            "2026-04-07"
+            "2026-04-09"
           ],
           "suggested_evidence_or_action": "No additional evidence needed if false by design; keep source table finalized."
         }

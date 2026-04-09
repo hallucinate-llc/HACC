@@ -11,16 +11,19 @@ Use this as the fast carry list for the two main hearing tracks now in the packe
 3. [housing_duty_crib_sheet_2026-04-09.md](/home/barberb/HACC/workspace/housing_duty_crib_sheet_2026-04-09.md)
 4. [bench_card_eviction_response.md](/home/barberb/HACC/workspace/bench_card_eviction_response.md)
 5. [hearing_script_2_minute_version.md](/home/barberb/HACC/workspace/hearing_script_2_minute_version.md)
+6. [hearing_emphasis_priority_sheet_2026-04-09.md](/home/barberb/HACC/workspace/hearing_emphasis_priority_sheet_2026-04-09.md)
+7. [judge_pushback_answers_sheet_2026-04-09.md](/home/barberb/HACC/workspace/judge_pushback_answers_sheet_2026-04-09.md)
+8. [ultra_compact_oral_argument_sheet_2026-04-09.md](/home/barberb/HACC/workspace/ultra_compact_oral_argument_sheet_2026-04-09.md)
 
 ### Core Exhibits
 
-6. [Exhibit B](/home/barberb/HACC/workspace/temporary-cli-session-migration/prior-research-results/full-evidence-review-run/chronology/formal_complaint_recommended_filing_packet/included/02_Exhibit_B_HACC_phase2_2024.pdf)
-7. [Exhibit G](/home/barberb/HACC/workspace/temporary-cli-session-migration/prior-research-results/full-evidence-review-run/chronology/formal_complaint_recommended_filing_packet/included/07_Exhibit_G_HACC_Jan_2026_blossom.pdf)
-8. [Exhibit V](/home/barberb/HACC/workspace/manual-imap-download-2026-03-31/20260202-164227_Re-Allegations-of-Fraud---JC-Household/message.eml)
-9. [Exhibit M](/home/barberb/HACC/workspace/temporary-cli-session-migration/prior-research-results/full-evidence-review-run/chronology/formal_complaint_recommended_filing_packet/candidate_email_exhibits/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import)
-10. [Exhibit W](/home/barberb/HACC/evidence/history/waterleaf_application.png)
-11. [Exhibit X](/home/barberb/HACC/workspace/manual-imap-download-2026-03-31/20260202-164227_Re-Allegations-of-Fraud---JC-Household/message.eml)
-12. [Exhibit AA](/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404-narrow/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/message.json)
+9. [Exhibit B](/home/barberb/HACC/workspace/temporary-cli-session-migration/prior-research-results/full-evidence-review-run/chronology/formal_complaint_recommended_filing_packet/included/02_Exhibit_B_HACC_phase2_2024.pdf)
+10. [Exhibit G](/home/barberb/HACC/workspace/temporary-cli-session-migration/prior-research-results/full-evidence-review-run/chronology/formal_complaint_recommended_filing_packet/included/07_Exhibit_G_HACC_Jan_2026_blossom.pdf)
+11. [Exhibit V](/home/barberb/HACC/workspace/manual-imap-download-2026-03-31/20260202-164227_Re-Allegations-of-Fraud---JC-Household/message.eml)
+12. [Exhibit M](/home/barberb/HACC/workspace/temporary-cli-session-migration/prior-research-results/full-evidence-review-run/chronology/formal_complaint_recommended_filing_packet/candidate_email_exhibits/13_Exhibit_M_Email_Thread_Export_starworks5_ktilton_orientation_import)
+13. [Exhibit W](/home/barberb/HACC/evidence/history/waterleaf_application.png)
+14. [Exhibit X](/home/barberb/HACC/workspace/manual-imap-download-2026-03-31/20260202-164227_Re-Allegations-of-Fraud---JC-Household/message.eml)
+15. [Exhibit AA](/home/barberb/HACC/evidence/email_imports/starworks5-hcv-reimport-20260404-narrow/0017-RE-HCV-Orientation-a0136cad0c5f44b984403575346f8d34-clackamas.us/message.json)
 
 ### Hold In Reserve
 
@@ -85,3 +88,4 @@ If you have to reduce to one small stack:
 
 - [combined_state_court_packet_index.md](/home/barberb/HACC/workspace/combined_state_court_packet_index.md)
 - [filing_packet_index_and_checklist.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/filing_packet_index_and_checklist.md)
+- [same_day_filing_checklist_2026-04-09.md](/home/barberb/HACC/workspace/same_day_filing_checklist_2026-04-09.md)

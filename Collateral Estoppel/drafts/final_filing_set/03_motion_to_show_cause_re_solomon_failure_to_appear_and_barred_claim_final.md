@@ -9,14 +9,14 @@ Jane Kay Cortez,
 Protected Person.
 
 MOTION FOR ORDER TO SHOW CAUSE
-RE: RESPONDENT SOLOMON BARBER'S FAILURE TO TIMELY OPPOSE IN THE ORIGINAL MATTER
+RE: RESPONDENT SOLOMON BARBER'S COMPLIANCE WITH OPERATIVE ORDER TERMS
 
-Movant, Benjamin Barber, requests an Order to Show Cause requiring Solomon Barber to appear and explain why relief should not be entered based on failure to timely pursue opposition in the original matter.
+Movant, Benjamin Barber, requests an Order to Show Cause requiring Solomon Barber to appear and explain why relief should not be entered based on alleged noncompliance with operative order terms and related compliance-path disputes.
 
 I. REQUESTED RELIEF
 
 1. Issue an Order to Show Cause requiring Solomon Barber to appear on a date certain.
-2. Require Solomon Barber to explain why, after appearing in person in the original restraining-order matter and receiving notice that the order was in effect, he did not timely oppose that order in the original matter through the available hearing process, and instead later took a collateral position inconsistent with the order.
+2. Require Solomon Barber to explain his compliance with the operative restraint terms reflected in Exhibit 1 after in-person appearance and notice that the order was in effect, including any asserted basis for noncompliance.
 3. Require Solomon Barber to explain his compliance posture after notice of an in-effect order and available hearing path.
 4. Enter appropriate remedial orders and remedial sanctions authorized by law and supported by admissible evidence.
 
@@ -26,12 +26,12 @@ II. GROUNDS
 6. Exhibit 1 reflects that on November 20, 2025, the Court entered an Elderly Persons and Persons with Disabilities Abuse Prevention Act restraining order against Solomon Samuel Barber and included operative restraint and compliance terms.
 7. Exhibit 1 further reflects order language that no further service was necessary because Respondent appeared in person, creating a concrete enforceability anchor for subsequent compliance analysis.
 8. Exhibit 1 also reflects attached notice pages stating that the order was in effect and explaining the 30-day hearing process for opposing the order in the original matter.
-9. Movant alleges Solomon Barber later took positions inconsistent with compliance obligations reflected in the in-effect order and the available opposition process, including service-evasion posture and a later collateral refiling posture reflected in the staged record.
-10. Threshold show-cause review is necessary to preserve proceeding integrity and prevent relitigation of precluded issues.
+9. Movant alleges Solomon Barber later took positions inconsistent with compliance obligations reflected in the in-effect order and the available opposition process, including service-evasion posture reflected in the staged record.
+10. Threshold show-cause review is necessary to preserve proceeding integrity and ensure compliance-path issues are addressed in the proper remedial posture.
 11. The preserved March 10, 2026 Google Voice thread reflects order-image MMS transmissions from Movant at approximately 10:36:48-10:36:49 AM Pacific Time, followed by Solomon's statement at approximately 10:39:26 AM Pacific Time, "Oh I understand, I'm just not incentivized to cooperate," and then his additional statement at approximately 10:45:53 AM Pacific Time, "Once I get served and it goes into effect, I will comply with whatever the order states. But it is not in effect." This sequence is relevant because it can be compared directly against the order packet's in-effect and in-person-appearance language.
 12. The April 3-4, 2026 counsel email chain shows service-labeled transmission to Alex Bluestone and counsel's response that he did not accept service on behalf of his client while confirming representation in the Jane Cortez guardianship matter; the preserved chain also includes a same-day FedEx receipt image and delivery-tracking identifiers consistent with physical transmittal to counsel. This supports same-matter notice/knowledge while preserving formal service-validity issues for Court determination.
 13. The newly retrieved April 8, 2026 continuation of that same thread further shows counsel raising a service/proof objection concerning Movant's guardian-ad-litem effort and stating that he would contact the court to request an expedited hearing to address the issues raised. This is relevant to same-matter notice and procedural posture, but is not presently offered as proof that the court actually set or held such a hearing.
-14. If certified docket or hearing-minute materials later show that Solomon requested a hearing in the original restraining-order matter and failed to attend, Movant requests leave to rely on that additional nonappearance proof as part of the same show-cause branch.
+14. Movant also reports that the Clackamas County Sheriff's Office served the restraining-order papers on Solomon Samuel Barber on April 9, 2026; Movant requests leave to lodge the sheriff return/proof-of-service document immediately upon receipt, and until that filing treats this service event as reported context rather than substitute formal proof.
 15. The supporting declaration and attached records identify the operative order text, case linkage, and service/effect-position events asserted as the predicate for show-cause relief.
 
 III. LEGAL AUTHORITY
@@ -39,8 +39,8 @@ III. LEGAL AUTHORITY
 16. ORS 33.055 authorizes remedial-contempt proceedings and order-to-appear process when a party is alleged to have violated a court order.
 17. ORS 33.075 authorizes compelled appearance mechanisms after nonappearance on a served order to appear.
 18. ORS 33.105 authorizes remedial sanctions upon proof of contempt.
-19. To the extent ORCP 17 relief is sought, Movant will proceed only in compliance with applicable ORCP 17 procedural requirements, including any service/safe-harbor prerequisites, as tracked in `173`.
-20. This motion does not seek punitive contempt in this filing; any sanction branch requested here is limited to remedial, evidence-based relief tied to proven violation of a court order.
+19. This motion does not seek ORCP 17 sanctions in this filing.
+20. This motion does not seek punitive contempt in this filing; any sanction branch requested here is limited to remedial, evidence-based relief tied to proven violation of a specific court-order term shown in the admissible record.
 
 IV. DUTY / TRIGGER / BREACH / REMEDY MAP
 
@@ -53,7 +53,7 @@ IV. DUTY / TRIGGER / BREACH / REMEDY MAP
 24. Requested remedy path:
    a. Show-cause appearance and compliance explanation under ORS 33.055.
    b. If contempt elements are proven, remedial sanctions under ORS 33.105.
-   c. Any ORCP 17 sanctions branch only if procedural prerequisites are satisfied on the record.
+   c. No ORCP 17 sanctions are requested in this filing branch.
 
 V. REQUESTED HEARING STRUCTURE
 
@@ -67,7 +67,7 @@ VI. EXHIBIT REFERENCES (GLOBAL NUMBERING)
 29. This motion presently relies on Exhibits 1, 3, 4, 5, 7, and AB from the global exhibit legend filed with this packet.
 30. Movant requests leave to supplement with certified notice/appearance/preclusion records (Exhibits 8, 9, and 10) immediately upon receipt.
 31. If useful to the Court, Movant can provide an organizational appendix summarizing exhibit status; however, admissible exhibits and certified records control.
-32. As organizational aids only, Movant may provide `173` (ORCP 17 prerequisites chronology) and `179` (Element-to-Evidence and Deontic Readiness Matrix); admissible exhibits and certified records control.
+32. As an organizational aid only, Movant may provide `179` (Element-to-Evidence and Deontic Readiness Matrix); admissible exhibits and certified records control.
 
 VII. RESERVATION
 

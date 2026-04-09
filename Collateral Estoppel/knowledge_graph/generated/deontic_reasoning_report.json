@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-07",
+  "generated_at": "2026-04-09",
   "ocr_date_index": {
     "solomon_motion_for_guardianship_ocr.txt": [
       "2026-03-31"
@@ -81,7 +81,7 @@
       },
       {
         "row": 5,
-        "fact_id": "f_client_benjamin_avoided_service",
+        "fact_id": "f_client_solomon_avoided_service",
         "from_status": "alleged",
         "to_status": "alleged",
         "from_value": true,
@@ -95,7 +95,7 @@
       },
       {
         "row": 6,
-        "fact_id": "f_client_benjamin_order_disregard",
+        "fact_id": "f_client_solomon_order_disregard",
         "from_status": "alleged",
         "to_status": "alleged",
         "from_value": true,
@@ -109,7 +109,7 @@
       },
       {
         "row": 7,
-        "fact_id": "f_client_benjamin_housing_interference",
+        "fact_id": "f_client_solomon_housing_interference",
         "from_status": "alleged",
         "to_status": "alleged",
         "from_value": true,
@@ -164,7 +164,7 @@
     {
       "interval_id": "ti_exhibit_r_compelled_production_track",
       "label": "Exhibit R compelled-production track",
-      "start_date": "2026-04-07",
+      "start_date": "2026-04-09",
       "end_date": null,
       "status": "open",
       "source": "subpoena_target_memo_hacc_lease_authority_record.md",
@@ -1094,9 +1094,7 @@
             "temporal_tags": [
               "post_hacc_lease_change"
             ],
-            "interval_refs": [
-              "ti_exhibit_r_compelled_production_track"
-            ]
+            "interval_refs": []
           },
           "antecedents": [
             {
@@ -1450,13 +1448,15 @@
             "auth:orcp_55"
           ],
           "description": "If subpoena workflow components are staged and recipients are ready-to-serve, Benjamin is permitted to serve the staged subpoena packets.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
             "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
-            "date_count": 1,
-            "spans_multiple_dates": false,
-            "temporal_tags": [],
+            "latest_date": "2026-04-09",
+            "date_count": 2,
+            "spans_multiple_dates": true,
+            "temporal_tags": [
+              "multi_date_window"
+            ],
             "interval_refs": [
               "ti_exhibit_r_compelled_production_track"
             ]
@@ -1467,7 +1467,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             },
             {
@@ -1494,13 +1494,15 @@
             "auth:orcp_55"
           ],
           "description": "If service log and workflow components exist, Benjamin is obligated in this model to maintain service/deadline tracking.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
             "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
-            "date_count": 1,
-            "spans_multiple_dates": false,
-            "temporal_tags": [],
+            "latest_date": "2026-04-09",
+            "date_count": 2,
+            "spans_multiple_dates": true,
+            "temporal_tags": [
+              "multi_date_window"
+            ],
             "interval_refs": [
               "ti_restraining_order_effective_period"
             ]
@@ -1519,7 +1521,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -1546,8 +1548,7 @@
             "spans_multiple_dates": false,
             "temporal_tags": [],
             "interval_refs": [
-              "ti_restraining_order_effective_period",
-              "ti_exhibit_r_compelled_production_track"
+              "ti_restraining_order_effective_period"
             ]
           },
           "antecedents": [
@@ -1575,10 +1576,10 @@
             "auth:orcp_17_c"
           ],
           "description": "If the model contains a Benjamin-vs-Solomon interference actor conflict, the case posture is obligated to resolve that assignment with source records before final legal attribution.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
-            "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
+            "earliest_date": "2026-04-09",
+            "latest_date": "2026-04-09",
             "date_count": 1,
             "spans_multiple_dates": false,
             "temporal_tags": [],
@@ -1592,7 +1593,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -1938,9 +1939,7 @@
             "temporal_tags": [
               "post_hacc_lease_change"
             ],
-            "interval_refs": [
-              "ti_exhibit_r_compelled_production_track"
-            ]
+            "interval_refs": []
           },
           "antecedents": [
             {
@@ -2245,11 +2244,11 @@
             "auth:ors_125_120"
           ],
           "description": "If ORS 125.120 authority is available and the petition includes unresolved actor-assignment conflict affecting protective-person interests, the case posture may request a special advocate or GAL under chapter 125.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
             "earliest_date": "2026-03-31",
-            "latest_date": "2026-04-07",
-            "date_count": 2,
+            "latest_date": "2026-04-09",
+            "date_count": 3,
             "spans_multiple_dates": true,
             "temporal_tags": [
               "multi_date_window"
@@ -2280,7 +2279,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -2352,13 +2351,15 @@
             "auth:oregon_issue_preclusion_prior_separate_proceeding_cases"
           ],
           "description": "If prior-proceeding record requirements are recognized and certified prior-order/docket materials are still missing, issue-preclusion merits claims stay provisional pending certified record staging.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
             "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
-            "date_count": 1,
-            "spans_multiple_dates": false,
-            "temporal_tags": [],
+            "latest_date": "2026-04-09",
+            "date_count": 2,
+            "spans_multiple_dates": true,
+            "temporal_tags": [
+              "multi_date_window"
+            ],
             "interval_refs": [
               "ti_restraining_order_effective_period"
             ]
@@ -2393,7 +2394,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             },
             {
@@ -2401,7 +2402,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -2420,13 +2421,15 @@
             "auth:oregon_issue_preclusion_cases"
           ],
           "description": "If element authorities are present but the issue-preclusion mapping is incomplete, the case posture is obligated to complete element-by-element mapping before merits-level reliance.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
             "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
-            "date_count": 1,
-            "spans_multiple_dates": false,
-            "temporal_tags": [],
+            "latest_date": "2026-04-09",
+            "date_count": 2,
+            "spans_multiple_dates": true,
+            "temporal_tags": [
+              "multi_date_window"
+            ],
             "interval_refs": []
           },
           "antecedents": [
@@ -2459,7 +2462,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -2478,13 +2481,15 @@
             "auth:oregon_issue_preclusion_cases"
           ],
           "description": "If finality and full-fair element mappings are still missing, the model obligates targeted certified record citation development for those specific elements.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
             "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
-            "date_count": 1,
-            "spans_multiple_dates": false,
-            "temporal_tags": [],
+            "latest_date": "2026-04-09",
+            "date_count": 2,
+            "spans_multiple_dates": true,
+            "temporal_tags": [
+              "multi_date_window"
+            ],
             "interval_refs": []
           },
           "antecedents": [
@@ -2501,7 +2506,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             },
             {
@@ -2509,7 +2514,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -2529,10 +2534,10 @@
             "auth:oregon_issue_preclusion_cases"
           ],
           "description": "If overclaim language appears while mapping and certified prior-order support are incomplete, filing language must be qualified as contingent rather than fully proved.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
-            "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
+            "earliest_date": "2026-04-09",
+            "latest_date": "2026-04-09",
             "date_count": 1,
             "spans_multiple_dates": false,
             "temporal_tags": [],
@@ -2546,7 +2551,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             },
             {
@@ -2554,7 +2559,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             },
             {
@@ -2562,7 +2567,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -2581,13 +2586,15 @@
             "auth:orcp_55"
           ],
           "description": "If issue-preclusion mapping remains incomplete and certified hearing material is missing, the case posture may pursue targeted nonparty production for missing element support.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
             "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
-            "date_count": 1,
-            "spans_multiple_dates": false,
-            "temporal_tags": [],
+            "latest_date": "2026-04-09",
+            "date_count": 2,
+            "spans_multiple_dates": true,
+            "temporal_tags": [
+              "multi_date_window"
+            ],
             "interval_refs": [
               "ti_exhibit_r_compelled_production_track"
             ]
@@ -2606,7 +2613,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             },
             {
@@ -2614,7 +2621,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -2671,62 +2678,12 @@
           }
         },
         {
-          "rule_id": "r2_noninterference_prohibition_for_benjamin",
+          "rule_id": "r2_target_noninterference_prohibition_if_prior_appointment",
           "track": "hypothesis",
           "authority_refs": [
             "auth:ors_125_050"
           ],
-          "description": "If prior appointment exists and interference is alleged, Benjamin is forbidden from interference.",
-          "activation_date_estimate": "2026-04-07",
-          "temporal_profile": {
-            "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
-            "date_count": 1,
-            "spans_multiple_dates": false,
-            "temporal_tags": [],
-            "interval_refs": []
-          },
-          "antecedents": [
-            {
-              "fact_id": "f_authority_ors_125_050_protective_orcp_oec",
-              "status": "verified",
-              "value": "true",
-              "dates": [
-                "2026-04-07"
-              ]
-            },
-            {
-              "fact_id": "f_client_prior_appointment",
-              "status": "alleged",
-              "value": "true",
-              "dates": [
-                "2026-04-07"
-              ]
-            },
-            {
-              "fact_id": "f_client_benjamin_housing_interference",
-              "status": "alleged",
-              "value": "true",
-              "dates": [
-                "2026-04-07"
-              ]
-            }
-          ],
-          "conclusion": {
-            "conclusion_id": "c2_benjamin_forbidden_interference",
-            "modality": "F",
-            "actor": "person:benjamin_barber",
-            "action": "interfere_with_guardian_or_housing_process",
-            "target": "process:hacc_housing_contract"
-          }
-        },
-        {
-          "rule_id": "r3_benjamin_obligation_comply_or_seek_relief",
-          "track": "hypothesis",
-          "authority_refs": [
-            "auth:ors_125_050"
-          ],
-          "description": "If prior appointment is in force and Benjamin disregarded order, Benjamin was obligated to comply or seek relief.",
+          "description": "If prior appointment exists and interference is alleged, the alleged interfering actor is forbidden from interference.",
           "activation_date_estimate": "2026-04-07",
           "temporal_profile": {
             "earliest_date": "2026-04-07",
@@ -2756,7 +2713,7 @@
               ]
             },
             {
-              "fact_id": "f_client_benjamin_order_disregard",
+              "fact_id": "f_client_solomon_housing_interference",
               "status": "alleged",
               "value": "true",
               "dates": [
@@ -2765,9 +2722,61 @@
             }
           ],
           "conclusion": {
-            "conclusion_id": "c3_benjamin_obligated_comply_or_seek_relief",
+            "conclusion_id": "c2_target_forbidden_interference",
+            "modality": "F",
+            "actor": "person:solomon",
+            "action": "interfere_with_guardian_or_housing_process",
+            "target": "process:hacc_housing_contract"
+          }
+        },
+        {
+          "rule_id": "r3_target_obligation_comply_or_seek_relief_if_prior_appointment",
+          "track": "hypothesis",
+          "authority_refs": [
+            "auth:ors_125_050"
+          ],
+          "description": "If prior appointment is in force and an alleged actor disregarded the order, that actor was obligated to comply or seek relief.",
+          "activation_date_estimate": "2026-04-07",
+          "temporal_profile": {
+            "earliest_date": "2026-04-07",
+            "latest_date": "2026-04-07",
+            "date_count": 1,
+            "spans_multiple_dates": false,
+            "temporal_tags": [],
+            "interval_refs": [
+              "ti_restraining_order_effective_period"
+            ]
+          },
+          "antecedents": [
+            {
+              "fact_id": "f_authority_ors_125_050_protective_orcp_oec",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_client_prior_appointment",
+              "status": "alleged",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_client_solomon_order_disregard",
+              "status": "alleged",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c3_target_obligated_comply_or_seek_relief",
             "modality": "O",
-            "actor": "person:benjamin_barber",
+            "actor": "person:solomon",
             "action": "comply_with_order_or_seek_relief",
             "target": "order:prior_guardianship_order"
           }
@@ -2900,8 +2909,7 @@
               "multi_date_window"
             ],
             "interval_refs": [
-              "ti_restraining_order_effective_period",
-              "ti_exhibit_r_compelled_production_track"
+              "ti_restraining_order_effective_period"
             ]
           },
           "antecedents": [
@@ -2940,13 +2948,15 @@
             "auth:orcp_55"
           ],
           "description": "If any subpoena service is completed and OR-joined protocol is defined, responding custodians are obligated in this model to execute the protocol and produce a search execution report.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
             "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
-            "date_count": 1,
-            "spans_multiple_dates": false,
-            "temporal_tags": [],
+            "latest_date": "2026-04-09",
+            "date_count": 2,
+            "spans_multiple_dates": true,
+            "temporal_tags": [
+              "multi_date_window"
+            ],
             "interval_refs": [
               "ti_restraining_order_effective_period",
               "ti_exhibit_r_compelled_production_track"
@@ -2966,7 +2976,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -2986,13 +2996,15 @@
             "auth:orcp_55"
           ],
           "description": "If an incomplete subpoena response is present and workflow components are staged, Benjamin is permitted in this model to issue a deficiency notice and cure deadline.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
             "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
-            "date_count": 1,
-            "spans_multiple_dates": false,
-            "temporal_tags": [],
+            "latest_date": "2026-04-09",
+            "date_count": 2,
+            "spans_multiple_dates": true,
+            "temporal_tags": [
+              "multi_date_window"
+            ],
             "interval_refs": [
               "ti_exhibit_r_compelled_production_track"
             ]
@@ -3011,7 +3023,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -3031,13 +3043,15 @@
             "auth:orcp_55"
           ],
           "description": "If deficiency notices are in play and compel templates are staged, Benjamin is permitted in this model to move to compel and seek sanctions for noncompliance.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
             "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
-            "date_count": 1,
-            "spans_multiple_dates": false,
-            "temporal_tags": [],
+            "latest_date": "2026-04-09",
+            "date_count": 2,
+            "spans_multiple_dates": true,
+            "temporal_tags": [
+              "multi_date_window"
+            ],
             "interval_refs": [
               "ti_exhibit_r_compelled_production_track"
             ]
@@ -3056,7 +3070,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -3075,10 +3089,10 @@
             "auth:orcp_17_c"
           ],
           "description": "If authority table placeholders remain unresolved, the case posture is obligated to finalize governing citations before final filing use.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
-            "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
+            "earliest_date": "2026-04-09",
+            "latest_date": "2026-04-09",
             "date_count": 1,
             "spans_multiple_dates": false,
             "temporal_tags": [],
@@ -3090,7 +3104,7 @@
               "status": "verified",
               "value": "false",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -3110,13 +3124,15 @@
               "action": "maintain_service_and_deadline_tracking",
               "target": "case:26PR00641",
               "rule_id": "r16_benjamin_obligated_track_service_and_deadlines",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": [
                   "ti_restraining_order_effective_period"
                 ]
@@ -3146,13 +3162,15 @@
               "action": "serve_staged_subpoena_packets",
               "target": "case:26PR00641",
               "rule_id": "r15_benjamin_permitted_serve_subpoena_packets",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": [
                   "ti_exhibit_r_compelled_production_track"
                 ]
@@ -3474,10 +3492,10 @@
               "action": "resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record",
               "target": "issue:interference_actor_assignment",
               "rule_id": "r21_case_obligated_resolve_actor_assignment_conflict",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
-                "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
+                "earliest_date": "2026-04-09",
+                "latest_date": "2026-04-09",
                 "date_count": 1,
                 "spans_multiple_dates": false,
                 "temporal_tags": [],
@@ -3490,13 +3508,15 @@
               "action": "treat_issue_preclusion_theory_as_provisional_until_certified_prior_order_and_docket_are_staged",
               "target": "issue:guardianship_authority",
               "rule_id": "r35_case_obligated_treat_issue_preclusion_as_provisional_until_certified_prior_record_staged",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": [
                   "ti_restraining_order_effective_period"
                 ]
@@ -3506,13 +3526,15 @@
               "action": "complete_identical_issue_finality_privity_and_full_fair_mapping_before_merits_reliance",
               "target": "issue:guardianship_authority",
               "rule_id": "r36_case_obligated_complete_issue_preclusion_element_mapping_before_merits_reliance",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": []
               }
             },
@@ -3520,13 +3542,15 @@
               "action": "add_targeted_certified_record_citations_for_finality_and_full_fair_elements",
               "target": "issue:guardianship_authority",
               "rule_id": "r37_case_obligated_add_targeted_record_citations_for_finality_and_full_fair_elements",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": []
               }
             },
@@ -3534,10 +3558,10 @@
               "action": "qualify_issue_preclusion_language_as_contingent_and_not_fully_proved",
               "target": "doc:petition_guardianship_working_memo",
               "rule_id": "r38_case_obligated_qualify_overclaim_language_until_elements_are_proved",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
-                "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
+                "earliest_date": "2026-04-09",
+                "latest_date": "2026-04-09",
                 "date_count": 1,
                 "spans_multiple_dates": false,
                 "temporal_tags": [],
@@ -3579,9 +3603,7 @@
                 "temporal_tags": [
                   "post_hacc_lease_change"
                 ],
-                "interval_refs": [
-                  "ti_exhibit_r_compelled_production_track"
-                ]
+                "interval_refs": []
               }
             },
             {
@@ -3596,8 +3618,7 @@
                 "spans_multiple_dates": false,
                 "temporal_tags": [],
                 "interval_refs": [
-                  "ti_restraining_order_effective_period",
-                  "ti_exhibit_r_compelled_production_track"
+                  "ti_restraining_order_effective_period"
                 ]
               }
             },
@@ -3723,9 +3744,7 @@
                 "temporal_tags": [
                   "post_hacc_lease_change"
                 ],
-                "interval_refs": [
-                  "ti_exhibit_r_compelled_production_track"
-                ]
+                "interval_refs": []
               }
             },
             {
@@ -3751,13 +3770,15 @@
               "action": "seek_targeted_nonparty_production_for_hearing_and_appearance_materials_supporting_issue_preclusion_elements",
               "target": "issue:guardianship_authority",
               "rule_id": "r39_case_permitted_seek_targeted_nonparty_production_for_missing_issue_preclusion_elements",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": [
                   "ti_exhibit_r_compelled_production_track"
                 ]
@@ -3865,11 +3886,11 @@
               "action": "request_special_advocate_or_guardian_ad_litem_to_protect_person_interests",
               "target": "person:jane_cortez",
               "rule_id": "r33_case_permitted_request_special_advocate_or_gal_under_chapter_125",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-03-31",
-                "latest_date": "2026-04-07",
-                "date_count": 2,
+                "latest_date": "2026-04-09",
+                "date_count": 3,
                 "spans_multiple_dates": true,
                 "temporal_tags": [
                   "multi_date_window"
@@ -4504,9 +4525,7 @@
             "temporal_tags": [
               "post_hacc_lease_change"
             ],
-            "interval_refs": [
-              "ti_exhibit_r_compelled_production_track"
-            ]
+            "interval_refs": []
           },
           "antecedents": [
             {
@@ -4860,13 +4879,15 @@
             "auth:orcp_55"
           ],
           "description": "If subpoena workflow components are staged and recipients are ready-to-serve, Benjamin is permitted to serve the staged subpoena packets.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
             "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
-            "date_count": 1,
-            "spans_multiple_dates": false,
-            "temporal_tags": [],
+            "latest_date": "2026-04-09",
+            "date_count": 2,
+            "spans_multiple_dates": true,
+            "temporal_tags": [
+              "multi_date_window"
+            ],
             "interval_refs": [
               "ti_exhibit_r_compelled_production_track"
             ]
@@ -4877,7 +4898,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             },
             {
@@ -4904,13 +4925,15 @@
             "auth:orcp_55"
           ],
           "description": "If service log and workflow components exist, Benjamin is obligated in this model to maintain service/deadline tracking.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
             "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
-            "date_count": 1,
-            "spans_multiple_dates": false,
-            "temporal_tags": [],
+            "latest_date": "2026-04-09",
+            "date_count": 2,
+            "spans_multiple_dates": true,
+            "temporal_tags": [
+              "multi_date_window"
+            ],
             "interval_refs": [
               "ti_restraining_order_effective_period"
             ]
@@ -4929,7 +4952,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -4956,8 +4979,7 @@
             "spans_multiple_dates": false,
             "temporal_tags": [],
             "interval_refs": [
-              "ti_restraining_order_effective_period",
-              "ti_exhibit_r_compelled_production_track"
+              "ti_restraining_order_effective_period"
             ]
           },
           "antecedents": [
@@ -4985,10 +5007,10 @@
             "auth:orcp_17_c"
           ],
           "description": "If the model contains a Benjamin-vs-Solomon interference actor conflict, the case posture is obligated to resolve that assignment with source records before final legal attribution.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
-            "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
+            "earliest_date": "2026-04-09",
+            "latest_date": "2026-04-09",
             "date_count": 1,
             "spans_multiple_dates": false,
             "temporal_tags": [],
@@ -5002,7 +5024,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -5256,8 +5278,7 @@
               "multi_date_window"
             ],
             "interval_refs": [
-              "ti_restraining_order_effective_period",
-              "ti_exhibit_r_compelled_production_track"
+              "ti_restraining_order_effective_period"
             ]
           },
           "antecedents": [
@@ -5396,9 +5417,7 @@
             "temporal_tags": [
               "post_hacc_lease_change"
             ],
-            "interval_refs": [
-              "ti_exhibit_r_compelled_production_track"
-            ]
+            "interval_refs": []
           },
           "antecedents": [
             {
@@ -5703,11 +5722,11 @@
             "auth:ors_125_120"
           ],
           "description": "If ORS 125.120 authority is available and the petition includes unresolved actor-assignment conflict affecting protective-person interests, the case posture may request a special advocate or GAL under chapter 125.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
             "earliest_date": "2026-03-31",
-            "latest_date": "2026-04-07",
-            "date_count": 2,
+            "latest_date": "2026-04-09",
+            "date_count": 3,
             "spans_multiple_dates": true,
             "temporal_tags": [
               "multi_date_window"
@@ -5738,7 +5757,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -5810,13 +5829,15 @@
             "auth:oregon_issue_preclusion_prior_separate_proceeding_cases"
           ],
           "description": "If prior-proceeding record requirements are recognized and certified prior-order/docket materials are still missing, issue-preclusion merits claims stay provisional pending certified record staging.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
             "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
-            "date_count": 1,
-            "spans_multiple_dates": false,
-            "temporal_tags": [],
+            "latest_date": "2026-04-09",
+            "date_count": 2,
+            "spans_multiple_dates": true,
+            "temporal_tags": [
+              "multi_date_window"
+            ],
             "interval_refs": [
               "ti_restraining_order_effective_period"
             ]
@@ -5851,7 +5872,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             },
             {
@@ -5859,7 +5880,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -5878,13 +5899,15 @@
             "auth:oregon_issue_preclusion_cases"
           ],
           "description": "If element authorities are present but the issue-preclusion mapping is incomplete, the case posture is obligated to complete element-by-element mapping before merits-level reliance.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
             "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
-            "date_count": 1,
-            "spans_multiple_dates": false,
-            "temporal_tags": [],
+            "latest_date": "2026-04-09",
+            "date_count": 2,
+            "spans_multiple_dates": true,
+            "temporal_tags": [
+              "multi_date_window"
+            ],
             "interval_refs": []
           },
           "antecedents": [
@@ -5917,7 +5940,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -5936,13 +5959,15 @@
             "auth:oregon_issue_preclusion_cases"
           ],
           "description": "If finality and full-fair element mappings are still missing, the model obligates targeted certified record citation development for those specific elements.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
             "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
-            "date_count": 1,
-            "spans_multiple_dates": false,
-            "temporal_tags": [],
+            "latest_date": "2026-04-09",
+            "date_count": 2,
+            "spans_multiple_dates": true,
+            "temporal_tags": [
+              "multi_date_window"
+            ],
             "interval_refs": []
           },
           "antecedents": [
@@ -5959,7 +5984,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             },
             {
@@ -5967,7 +5992,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -5987,10 +6012,10 @@
             "auth:oregon_issue_preclusion_cases"
           ],
           "description": "If overclaim language appears while mapping and certified prior-order support are incomplete, filing language must be qualified as contingent rather than fully proved.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
-            "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
+            "earliest_date": "2026-04-09",
+            "latest_date": "2026-04-09",
             "date_count": 1,
             "spans_multiple_dates": false,
             "temporal_tags": [],
@@ -6004,7 +6029,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             },
             {
@@ -6012,7 +6037,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             },
             {
@@ -6020,7 +6045,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -6039,13 +6064,15 @@
             "auth:orcp_55"
           ],
           "description": "If issue-preclusion mapping remains incomplete and certified hearing material is missing, the case posture may pursue targeted nonparty production for missing element support.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
             "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
-            "date_count": 1,
-            "spans_multiple_dates": false,
-            "temporal_tags": [],
+            "latest_date": "2026-04-09",
+            "date_count": 2,
+            "spans_multiple_dates": true,
+            "temporal_tags": [
+              "multi_date_window"
+            ],
             "interval_refs": [
               "ti_exhibit_r_compelled_production_track"
             ]
@@ -6064,7 +6091,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             },
             {
@@ -6072,7 +6099,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -6129,62 +6156,12 @@
           }
         },
         {
-          "rule_id": "r2_noninterference_prohibition_for_benjamin",
+          "rule_id": "r2_target_noninterference_prohibition_if_prior_appointment",
           "track": "hypothesis",
           "authority_refs": [
             "auth:ors_125_050"
           ],
-          "description": "If prior appointment exists and interference is alleged, Benjamin is forbidden from interference.",
-          "activation_date_estimate": "2026-04-07",
-          "temporal_profile": {
-            "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
-            "date_count": 1,
-            "spans_multiple_dates": false,
-            "temporal_tags": [],
-            "interval_refs": []
-          },
-          "antecedents": [
-            {
-              "fact_id": "f_authority_ors_125_050_protective_orcp_oec",
-              "status": "verified",
-              "value": "true",
-              "dates": [
-                "2026-04-07"
-              ]
-            },
-            {
-              "fact_id": "f_client_prior_appointment",
-              "status": "alleged",
-              "value": "true",
-              "dates": [
-                "2026-04-07"
-              ]
-            },
-            {
-              "fact_id": "f_client_benjamin_housing_interference",
-              "status": "alleged",
-              "value": "true",
-              "dates": [
-                "2026-04-07"
-              ]
-            }
-          ],
-          "conclusion": {
-            "conclusion_id": "c2_benjamin_forbidden_interference",
-            "modality": "F",
-            "actor": "person:benjamin_barber",
-            "action": "interfere_with_guardian_or_housing_process",
-            "target": "process:hacc_housing_contract"
-          }
-        },
-        {
-          "rule_id": "r3_benjamin_obligation_comply_or_seek_relief",
-          "track": "hypothesis",
-          "authority_refs": [
-            "auth:ors_125_050"
-          ],
-          "description": "If prior appointment is in force and Benjamin disregarded order, Benjamin was obligated to comply or seek relief.",
+          "description": "If prior appointment exists and interference is alleged, the alleged interfering actor is forbidden from interference.",
           "activation_date_estimate": "2026-04-07",
           "temporal_profile": {
             "earliest_date": "2026-04-07",
@@ -6214,7 +6191,7 @@
               ]
             },
             {
-              "fact_id": "f_client_benjamin_order_disregard",
+              "fact_id": "f_client_solomon_housing_interference",
               "status": "alleged",
               "value": "true",
               "dates": [
@@ -6223,9 +6200,61 @@
             }
           ],
           "conclusion": {
-            "conclusion_id": "c3_benjamin_obligated_comply_or_seek_relief",
+            "conclusion_id": "c2_target_forbidden_interference",
+            "modality": "F",
+            "actor": "person:solomon",
+            "action": "interfere_with_guardian_or_housing_process",
+            "target": "process:hacc_housing_contract"
+          }
+        },
+        {
+          "rule_id": "r3_target_obligation_comply_or_seek_relief_if_prior_appointment",
+          "track": "hypothesis",
+          "authority_refs": [
+            "auth:ors_125_050"
+          ],
+          "description": "If prior appointment is in force and an alleged actor disregarded the order, that actor was obligated to comply or seek relief.",
+          "activation_date_estimate": "2026-04-07",
+          "temporal_profile": {
+            "earliest_date": "2026-04-07",
+            "latest_date": "2026-04-07",
+            "date_count": 1,
+            "spans_multiple_dates": false,
+            "temporal_tags": [],
+            "interval_refs": [
+              "ti_restraining_order_effective_period"
+            ]
+          },
+          "antecedents": [
+            {
+              "fact_id": "f_authority_ors_125_050_protective_orcp_oec",
+              "status": "verified",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_client_prior_appointment",
+              "status": "alleged",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            },
+            {
+              "fact_id": "f_client_solomon_order_disregard",
+              "status": "alleged",
+              "value": "true",
+              "dates": [
+                "2026-04-07"
+              ]
+            }
+          ],
+          "conclusion": {
+            "conclusion_id": "c3_target_obligated_comply_or_seek_relief",
             "modality": "O",
-            "actor": "person:benjamin_barber",
+            "actor": "person:solomon",
             "action": "comply_with_order_or_seek_relief",
             "target": "order:prior_guardianship_order"
           }
@@ -6350,13 +6379,15 @@
             "auth:orcp_55"
           ],
           "description": "If any subpoena service is completed and OR-joined protocol is defined, responding custodians are obligated in this model to execute the protocol and produce a search execution report.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
             "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
-            "date_count": 1,
-            "spans_multiple_dates": false,
-            "temporal_tags": [],
+            "latest_date": "2026-04-09",
+            "date_count": 2,
+            "spans_multiple_dates": true,
+            "temporal_tags": [
+              "multi_date_window"
+            ],
             "interval_refs": [
               "ti_restraining_order_effective_period",
               "ti_exhibit_r_compelled_production_track"
@@ -6376,7 +6407,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -6396,13 +6427,15 @@
             "auth:orcp_55"
           ],
           "description": "If an incomplete subpoena response is present and workflow components are staged, Benjamin is permitted in this model to issue a deficiency notice and cure deadline.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
             "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
-            "date_count": 1,
-            "spans_multiple_dates": false,
-            "temporal_tags": [],
+            "latest_date": "2026-04-09",
+            "date_count": 2,
+            "spans_multiple_dates": true,
+            "temporal_tags": [
+              "multi_date_window"
+            ],
             "interval_refs": [
               "ti_exhibit_r_compelled_production_track"
             ]
@@ -6421,7 +6454,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -6441,13 +6474,15 @@
             "auth:orcp_55"
           ],
           "description": "If deficiency notices are in play and compel templates are staged, Benjamin is permitted in this model to move to compel and seek sanctions for noncompliance.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
             "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
-            "date_count": 1,
-            "spans_multiple_dates": false,
-            "temporal_tags": [],
+            "latest_date": "2026-04-09",
+            "date_count": 2,
+            "spans_multiple_dates": true,
+            "temporal_tags": [
+              "multi_date_window"
+            ],
             "interval_refs": [
               "ti_exhibit_r_compelled_production_track"
             ]
@@ -6466,7 +6501,7 @@
               "status": "verified",
               "value": "true",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -6485,10 +6520,10 @@
             "auth:orcp_17_c"
           ],
           "description": "If authority table placeholders remain unresolved, the case posture is obligated to finalize governing citations before final filing use.",
-          "activation_date_estimate": "2026-04-07",
+          "activation_date_estimate": "2026-04-09",
           "temporal_profile": {
-            "earliest_date": "2026-04-07",
-            "latest_date": "2026-04-07",
+            "earliest_date": "2026-04-09",
+            "latest_date": "2026-04-09",
             "date_count": 1,
             "spans_multiple_dates": false,
             "temporal_tags": [],
@@ -6500,7 +6535,7 @@
               "status": "verified",
               "value": "false",
               "dates": [
-                "2026-04-07"
+                "2026-04-09"
               ]
             }
           ],
@@ -6520,13 +6555,15 @@
               "action": "maintain_service_and_deadline_tracking",
               "target": "case:26PR00641",
               "rule_id": "r16_benjamin_obligated_track_service_and_deadlines",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": [
                   "ti_restraining_order_effective_period"
                 ]
@@ -6556,13 +6593,15 @@
               "action": "serve_staged_subpoena_packets",
               "target": "case:26PR00641",
               "rule_id": "r15_benjamin_permitted_serve_subpoena_packets",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": [
                   "ti_exhibit_r_compelled_production_track"
                 ]
@@ -6884,10 +6923,10 @@
               "action": "resolve_benjamin_vs_solomon_interference_actor_assignment_with_source_record",
               "target": "issue:interference_actor_assignment",
               "rule_id": "r21_case_obligated_resolve_actor_assignment_conflict",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
-                "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
+                "earliest_date": "2026-04-09",
+                "latest_date": "2026-04-09",
                 "date_count": 1,
                 "spans_multiple_dates": false,
                 "temporal_tags": [],
@@ -6900,13 +6939,15 @@
               "action": "treat_issue_preclusion_theory_as_provisional_until_certified_prior_order_and_docket_are_staged",
               "target": "issue:guardianship_authority",
               "rule_id": "r35_case_obligated_treat_issue_preclusion_as_provisional_until_certified_prior_record_staged",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": [
                   "ti_restraining_order_effective_period"
                 ]
@@ -6916,13 +6957,15 @@
               "action": "complete_identical_issue_finality_privity_and_full_fair_mapping_before_merits_reliance",
               "target": "issue:guardianship_authority",
               "rule_id": "r36_case_obligated_complete_issue_preclusion_element_mapping_before_merits_reliance",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": []
               }
             },
@@ -6930,13 +6973,15 @@
               "action": "add_targeted_certified_record_citations_for_finality_and_full_fair_elements",
               "target": "issue:guardianship_authority",
               "rule_id": "r37_case_obligated_add_targeted_record_citations_for_finality_and_full_fair_elements",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": []
               }
             },
@@ -6944,10 +6989,10 @@
               "action": "qualify_issue_preclusion_language_as_contingent_and_not_fully_proved",
               "target": "doc:petition_guardianship_working_memo",
               "rule_id": "r38_case_obligated_qualify_overclaim_language_until_elements_are_proved",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
-                "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
+                "earliest_date": "2026-04-09",
+                "latest_date": "2026-04-09",
                 "date_count": 1,
                 "spans_multiple_dates": false,
                 "temporal_tags": [],
@@ -6989,9 +7034,7 @@
                 "temporal_tags": [
                   "post_hacc_lease_change"
                 ],
-                "interval_refs": [
-                  "ti_exhibit_r_compelled_production_track"
-                ]
+                "interval_refs": []
               }
             },
             {
@@ -7006,8 +7049,7 @@
                 "spans_multiple_dates": false,
                 "temporal_tags": [],
                 "interval_refs": [
-                  "ti_restraining_order_effective_period",
-                  "ti_exhibit_r_compelled_production_track"
+                  "ti_restraining_order_effective_period"
                 ]
               }
             },
@@ -7099,8 +7141,7 @@
                   "multi_date_window"
                 ],
                 "interval_refs": [
-                  "ti_restraining_order_effective_period",
-                  "ti_exhibit_r_compelled_production_track"
+                  "ti_restraining_order_effective_period"
                 ]
               }
             },
@@ -7152,9 +7193,7 @@
                 "temporal_tags": [
                   "post_hacc_lease_change"
                 ],
-                "interval_refs": [
-                  "ti_exhibit_r_compelled_production_track"
-                ]
+                "interval_refs": []
               }
             },
             {
@@ -7180,13 +7219,15 @@
               "action": "seek_targeted_nonparty_production_for_hearing_and_appearance_materials_supporting_issue_preclusion_elements",
               "target": "issue:guardianship_authority",
               "rule_id": "r39_case_permitted_seek_targeted_nonparty_production_for_missing_issue_preclusion_elements",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-04-07",
-                "latest_date": "2026-04-07",
-                "date_count": 1,
-                "spans_multiple_dates": false,
-                "temporal_tags": [],
+                "latest_date": "2026-04-09",
+                "date_count": 2,
+                "spans_multiple_dates": true,
+                "temporal_tags": [
+                  "multi_date_window"
+                ],
                 "interval_refs": [
                   "ti_exhibit_r_compelled_production_track"
                 ]
@@ -7294,11 +7335,11 @@
               "action": "request_special_advocate_or_guardian_ad_litem_to_protect_person_interests",
               "target": "person:jane_cortez",
               "rule_id": "r33_case_permitted_request_special_advocate_or_gal_under_chapter_125",
-              "activation_date_estimate": "2026-04-07",
+              "activation_date_estimate": "2026-04-09",
               "temporal_profile": {
                 "earliest_date": "2026-03-31",
-                "latest_date": "2026-04-07",
-                "date_count": 2,
+                "latest_date": "2026-04-09",
+                "date_count": 3,
                 "spans_multiple_dates": true,
                 "temporal_tags": [
                   "multi_date_window"

@@ -26,7 +26,7 @@ def suggested_evidence(fact_id: str, status: str, value: str, source: str) -> st
         return 'Certified prior final order/judgment + identity-of-issue chart + later filing copy.'
     if fact_id in {'f_client_prior_appointment'}:
         return 'Certified guardianship appointment order and docket extract.'
-    if fact_id in {'f_client_benjamin_housing_interference', 'f_client_benjamin_order_disregard'}:
+    if fact_id in {'f_client_solomon_housing_interference', 'f_client_solomon_order_disregard'}:
         return 'Authenticated communications, certified court records, and timeline corroboration.'
     if fact_id in {'f_subpoena_service_completed_any'}:
         return 'Confirmed service return entry in active service log (date/method/person served).'

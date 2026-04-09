@@ -23,12 +23,12 @@ The prefill updates source/date anchors only. It does not automatically upgrade 
   - Source anchor: `knowledge_graph/guardianship_case_graph.md`
   - Gate to verified: certified appointment order naming Benjamin.
 
-- `f_client_benjamin_avoided_service`
-- `f_client_benjamin_order_disregard`
+- `f_client_solomon_avoided_service`
+- `f_client_solomon_order_disregard`
   - Source anchor: `knowledge_graph/guardianship_case_graph.md`
   - Gate to verified: certified service/appearance/noncompliance records.
 
-- `f_client_benjamin_housing_interference`
+- `f_client_solomon_housing_interference`
   - Source anchor: `evidence_notes/motion_exhibit_index.md` (Exhibits I-M branch)
   - Gate to verified: documentary chain identifying actor-to-HACC communication and causal tie to lease/contract impact.
 

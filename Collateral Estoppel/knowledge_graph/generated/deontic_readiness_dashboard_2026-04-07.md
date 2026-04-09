@@ -1,8 +1,8 @@
 # Deontic Readiness Dashboard - 2026-04-07
 
 ## Scoreboard
-- Strict: active=39 unresolved=6 inactive=4
-- Inclusive: active=40 unresolved=5 inactive=4
+- Strict: active=42 unresolved=6 inactive=4
+- Inclusive: active=43 unresolved=5 inactive=4
 - Non-hypothesis authority-ref gaps: 0
 - Strict modality conflicts: F/P=0 F/O=0 O/P=0
 - Inclusive modality conflicts: F/P=0 F/O=0 O/P=0
@@ -22,8 +22,8 @@
 ## Remaining Strict Blockers
 - Unresolved:
 - r1_guardian_permission_if_prior_appointment
-- r2_noninterference_prohibition_for_benjamin
-- r3_benjamin_obligation_comply_or_seek_relief
+- r2_target_noninterference_prohibition_if_prior_appointment
+- r3_target_obligation_comply_or_seek_relief_if_prior_appointment
 - r5_solomon_obligated_appear_and_answer
 - r7_solomon_forbidden_refile_precluded_issue
 - r24_case_permitted_seek_compelled_appearance_after_nonappearance_if_proved

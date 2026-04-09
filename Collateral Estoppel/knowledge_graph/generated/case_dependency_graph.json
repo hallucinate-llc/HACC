@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-04-07",
+    "generated_at": "2026-04-09",
     "strict_active_rules": [
       "r10_solomon_noncooperation_statement_conflicts_with_effective_order",
       "r11_solomon_already_have_order_statement_supports_notice",
@@ -111,12 +111,12 @@
       "kind": "fact_dependency"
     },
     {
-      "id": "r2_noninterference_prohibition_for_benjamin",
+      "id": "r2_target_noninterference_prohibition_if_prior_appointment",
       "kind": "rule",
-      "description": "If prior appointment exists and interference is alleged, Benjamin is forbidden from interference."
+      "description": "If prior appointment exists and interference is alleged, the alleged interfering actor is forbidden from interference."
     },
     {
-      "id": "c2_benjamin_forbidden_interference",
+      "id": "c2_target_forbidden_interference",
       "kind": "conclusion",
       "modality": "F"
     },
@@ -129,16 +129,16 @@
       "kind": "fact_dependency"
     },
     {
-      "id": "f_client_benjamin_housing_interference",
+      "id": "f_client_solomon_housing_interference",
       "kind": "fact_dependency"
     },
     {
-      "id": "r3_benjamin_obligation_comply_or_seek_relief",
+      "id": "r3_target_obligation_comply_or_seek_relief_if_prior_appointment",
       "kind": "rule",
-      "description": "If prior appointment is in force and Benjamin disregarded order, Benjamin was obligated to comply or seek relief."
+      "description": "If prior appointment is in force and an alleged actor disregarded the order, that actor was obligated to comply or seek relief."
     },
     {
-      "id": "c3_benjamin_obligated_comply_or_seek_relief",
+      "id": "c3_target_obligated_comply_or_seek_relief",
       "kind": "conclusion",
       "modality": "O"
     },
@@ -151,7 +151,7 @@
       "kind": "fact_dependency"
     },
     {
-      "id": "f_client_benjamin_order_disregard",
+      "id": "f_client_solomon_order_disregard",
       "kind": "fact_dependency"
     },
     {
@@ -1162,43 +1162,43 @@
       "relation": "required_by"
     },
     {
-      "from": "r2_noninterference_prohibition_for_benjamin",
-      "to": "c2_benjamin_forbidden_interference",
+      "from": "r2_target_noninterference_prohibition_if_prior_appointment",
+      "to": "c2_target_forbidden_interference",
       "relation": "produces"
     },
     {
       "from": "f_authority_ors_125_050_protective_orcp_oec",
-      "to": "r2_noninterference_prohibition_for_benjamin",
+      "to": "r2_target_noninterference_prohibition_if_prior_appointment",
       "relation": "required_by"
     },
     {
       "from": "f_client_prior_appointment",
-      "to": "r2_noninterference_prohibition_for_benjamin",
+      "to": "r2_target_noninterference_prohibition_if_prior_appointment",
       "relation": "required_by"
     },
     {
-      "from": "f_client_benjamin_housing_interference",
-      "to": "r2_noninterference_prohibition_for_benjamin",
+      "from": "f_client_solomon_housing_interference",
+      "to": "r2_target_noninterference_prohibition_if_prior_appointment",
       "relation": "required_by"
     },
     {
-      "from": "r3_benjamin_obligation_comply_or_seek_relief",
-      "to": "c3_benjamin_obligated_comply_or_seek_relief",
+      "from": "r3_target_obligation_comply_or_seek_relief_if_prior_appointment",
+      "to": "c3_target_obligated_comply_or_seek_relief",
       "relation": "produces"
     },
     {
       "from": "f_authority_ors_125_050_protective_orcp_oec",
-      "to": "r3_benjamin_obligation_comply_or_seek_relief",
+      "to": "r3_target_obligation_comply_or_seek_relief_if_prior_appointment",
       "relation": "required_by"
     },
     {
       "from": "f_client_prior_appointment",
-      "to": "r3_benjamin_obligation_comply_or_seek_relief",
+      "to": "r3_target_obligation_comply_or_seek_relief_if_prior_appointment",
       "relation": "required_by"
     },
     {
-      "from": "f_client_benjamin_order_disregard",
-      "to": "r3_benjamin_obligation_comply_or_seek_relief",
+      "from": "f_client_solomon_order_disregard",
+      "to": "r3_target_obligation_comply_or_seek_relief_if_prior_appointment",
       "relation": "required_by"
     },
     {
