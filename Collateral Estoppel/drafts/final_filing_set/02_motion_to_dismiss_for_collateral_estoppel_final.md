@@ -11,14 +11,14 @@ Protected Person.
 MOTION TO LIMIT ISSUES PENDING THRESHOLD ISSUE-PRECLUSION RECORD
 OR, IN THE ALTERNATIVE, TO DISMISS TO THE EXTENT PRECLUSION IS ALREADY ESTABLISHED
 
-Movant, Benjamin Barber, moves to limit the case to a threshold issue-preclusion record and, only to the extent preclusion is already established by admissible prior-proceeding proof, to dismiss any claim or issue already shown to be precluded.
+Movant, Benjamin Barber, moves to limit the case to a threshold issue-preclusion record and, only to the extent preclusion is shown by admissible prior-proceeding proof, to dismiss any claim or issue shown to be precluded.
 
 I. REQUESTED RELIEF
 
 1. Limit relitigation of overlapping authority, housing-control, service/compliance, and Section 18 relocation-duty issues unless and until the parties supply the prior-proceeding materials needed to evaluate issue preclusion, including clerk-certified docket and order materials the Court deems necessary.
-2. In the alternative, dismiss any claim or issue the Court finds already established as precluded by admissible prior-proceeding records.
+2. In the alternative, dismiss any claim or issue the Court finds shown to be precluded by admissible prior-proceeding records.
 3. Set a focused threshold schedule or hearing limited to prior proceeding identity, issue identity, finality, party/privity, and full-and-fair opportunity.
-4. Exclude from this probate matter any attempted merits relitigation of eviction, Section 18 relocation-duty, housing-processing, accommodation, hearing-access, or related federal civil-rights issues already being litigated or pursued in the eviction and federal complaint tracks, except to the extent such issues are strictly necessary to resolve guardianship-specific questions and only without treating mere overlap itself as completed preclusion.
+4. Decline to use this probate matter as a merits forum for eviction, Section 18 relocation-duty, housing-processing, accommodation, hearing-access, or related federal civil-rights issues already being litigated or pursued in the eviction and federal complaint tracks, except to the extent such issues are strictly necessary to resolve guardianship-specific questions and only without treating mere overlap itself as completed preclusion.
 5. Award further relief the Court deems just and proper.
 
 II. GOVERNING LAW
@@ -58,15 +58,22 @@ VI. PROOF GATE FOR FINAL DISMISSAL
 26. Movant therefore requests threshold control now, with dismissal only to the extent those elements are proven by admissible certified records.
 27. If the Court finds any preclusion element not yet proven on certified records, Movant requests non-dispositive relief only: issue narrowing, sequencing, and a supplementation schedule rather than merits adjudication of collateral overlap issues.
 
-VII. EXHIBIT REFERENCES (GLOBAL NUMBERING)
+VII. PARTY-STRUCTURE SAFEGUARD IF COLLATERAL MERITS ARE PRESSED
 
-28. This motion relies primarily on Exhibit 2, the accompanying declaration, and Exhibits 8-10 as the threshold preclusion record set (current-case docket posture, prior signed-order record, and hearing/notice record).
-29. This motion additionally references overlap materials for `26FE0586` and the federal HACC/Quantum track as context for threshold scope control only, and not as substitute proof for dispositive preclusion elements.
-30. Any internal element-to-evidence readiness matrix is offered, if at all, only as an organizational aid; admissible exhibits and certified records control.
+28. To the extent any party seeks to adjudicate Section 18 relocation-duty, eviction-merits, or housing-liability issues inside this probate case, the Court should require proper party structure under ORCP 29 before allowing those merits to proceed.
+29. If joinder of HACC and Quantum is not feasible, ORCP 29B factors support shaped relief rather than collateral merits adjudication in their absence: prejudice risk, ability to reduce prejudice by limiting issues, adequacy of a narrowed judgment, and adequacy of alternative remedies in the eviction/federal tracks.
+30. ORCP 22C third-party practice is derivative-liability focused and is generally not satisfied by allegations that absent entities are primary actors in a separate housing dispute; absent a clean liability-over theory, this probate case should remain narrowed to guardianship issues.
+31. These party-structure safeguards are requested to prevent inconsistent obligations and forum drift, not to expand this probate case into a full housing-liability adjudication.
 
-VIII. RESERVATION
+VIII. EXHIBIT REFERENCES (GLOBAL NUMBERING)
 
-31. Movant reserves the right to supplement with clerk-certified docket printouts, signed orders, transcripts, and proceeding-status records for the Justice Court and federal tracks.
+32. This motion relies primarily on Exhibit 2, the accompanying declaration, and Exhibits 8-10 as the threshold preclusion record set (current-case docket posture, prior signed-order record, and hearing/notice record).
+33. This motion additionally references overlap materials for `26FE0586` and the federal HACC/Quantum track as context for threshold scope control only, and not as substitute proof for dispositive preclusion elements.
+34. Any internal element-to-evidence readiness matrix is offered, if at all, only as an organizational aid; admissible exhibits and certified records control.
+
+IX. RESERVATION
+
+35. Movant reserves the right to supplement with clerk-certified docket printouts, signed orders, transcripts, and proceeding-status records for the Justice Court and federal tracks.
 
 DATED: ____________, 2026
 

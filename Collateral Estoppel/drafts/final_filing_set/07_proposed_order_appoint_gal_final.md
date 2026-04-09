@@ -18,6 +18,8 @@ The Court, having reviewed the Motion for Appointment and Appearance of Guardian
 4. The GAL shall file a written report by: ______________________.
 5. A status hearing is set for: ______________________.
 6. The Court notes the April 3-4, 2026 counsel email chain as same-matter notice context only; any dispute regarding formal service validity is reserved for Court determination on the applicable service record.
+7. Any asserted prior-GAL continuity from related proceedings is treated as context unless and until certified records are lodged.
+8. Nothing in this order adjudicates collateral housing/eviction/federal-merits issues.
 
 IT IS SO ORDERED.
 

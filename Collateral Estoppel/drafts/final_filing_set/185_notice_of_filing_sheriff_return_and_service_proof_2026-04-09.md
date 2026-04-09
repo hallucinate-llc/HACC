@@ -26,9 +26,9 @@ II. PURPOSE OF SUPPLEMENT
 III. REQUEST
 
 5. Movant requests that the Court consider this supplemental service-return material together with:
-   a. Motion for Order to Show Cause re Respondent Solomon Barber's Failure to Timely Oppose in the Original Matter (`03`);
-   b. Declaration of Benjamin Barber (Court-Safe Trimmed) (`177`);
-   c. Supplemental Declaration re Sheriff Service Event (`182`).
+   a. Motion for Order to Show Cause re Respondent Solomon Barber's Compliance with Operative Order Terms;
+   b. Declaration of Benjamin Barber (Court-Safe Trimmed Version); and
+   c. Supplemental Declaration Re Sheriff Service Event.
 6. Movant requests leave to supplement further if the serving agency later provides corrected or additional return pages.
 
 DATED: ____________, 2026

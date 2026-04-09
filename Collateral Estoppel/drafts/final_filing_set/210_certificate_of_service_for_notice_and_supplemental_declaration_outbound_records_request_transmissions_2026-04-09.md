@@ -14,9 +14,9 @@ CERTIFICATE OF SERVICE
 I certify that on [DATE OF ACTUAL SERVICE], I served true copies of the following documents:
 
 1. Notice of Filing Supplemental Declaration Re: Outbound Records-Request Transmission Authentication
-   (`208_notice_of_filing_supplemental_declaration_outbound_records_request_transmissions_2026-04-09.md`);
+   (filed in this matter);
 2. Supplemental Declaration of Benjamin Barber Re: Authentication of Outbound Records-Request Transmissions
-   (`209_supplemental_declaration_authenticating_outbound_records_request_transmissions_2026-04-09.md`).
+   (filed in this matter).
 
 Service was completed on the following recipients:
 

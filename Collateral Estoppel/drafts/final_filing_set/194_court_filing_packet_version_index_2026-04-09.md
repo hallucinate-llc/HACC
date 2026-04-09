@@ -129,6 +129,62 @@ L. OPTIONAL COURT-SAFE SCRUB UPDATE
 2. Exhibit legend grounding correction included:
    a. `00_exhibit_legend_global.md` (Exhibit 1 scan mapping + Exhibit 1A text aid).
 
+M. CONSOLIDATED COURT-READY CLEAN PACKET (POST-SCRUB)
+
+1. Manifest:
+   `212_court_ready_clean_packet_manifest_2026-04-09.md`
+2. Consolidated packet:
+   `print_build_2026-04-08/Court_Ready_Clean_Packet_212_2026-04-09.pdf`
+3. This packet is the current consolidated clean bundle for filing/hearing use after grounding and internal-reference scrub passes.
+
+N. POST-CONSOLIDATION TARGETED FIXES
+
+1. Updated after final review:
+   a. `01_motion_for_appointment_and_appearance_of_guardian_ad_litem_final.md`
+   b. `03_motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_final.md`
+   c. `152_objection_to_first_amended_guardianship_petition_and_emergency_relief_final.md`
+2. New ORCP 27 notice-compliance declaration file:
+   a. `213_supplemental_declaration_re_orcp27_notice_compliance_2026-04-09.md`
+3. Re-rendered PDFs for the above are staged in `print_build_2026-04-08/`.
+
+O. FILE-TODAY SUBSET (PLACEHOLDER-SAFE)
+
+1. Manifest:
+   `214_file_today_subset_manifest_2026-04-09.md`
+2. Consolidated subset packet:
+   `print_build_2026-04-08/Court_Ready_File_Today_Subset_214_2026-04-09_rev3.pdf`
+3. This subset intentionally excludes placeholder documents pending factual completion (including ORCP 27 notice-compliance declaration and outbound-records-request certificate templates).
+
+P. POST-SUBSET FOURTH-PASS LEGAL HARDENING
+
+1. Additional core-motion updates completed:
+   a. `01_motion_for_appointment_and_appearance_of_guardian_ad_litem_final.md` (prior-GAL continuity phrasing tightened; still proof-gated pending certified record).
+   b. `02_motion_to_dismiss_for_collateral_estoppel_final.md` (added explicit ORCP 29B fallback-factor and ORCP 22C derivative-liability safeguard section).
+   c. `03_motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_final.md` (sequencing clarified: appearance/explanation first, remedial relief only if proven).
+   d. `152_objection_to_first_amended_guardianship_petition_and_emergency_relief_final.md` (added prior-GAL continuity caution and renumbered references).
+2. New deontic closure worksheet added:
+   a. `215_end_to_end_deontic_gap_fill_matrix_2026-04-09.md`
+   b. PDF staged at `print_build_2026-04-08/215_end_to_end_deontic_gap_fill_matrix_2026-04-09.pdf`.
+3. Re-rendered PDFs for `01`, `02`, `03`, and `152` are staged in `print_build_2026-04-08/` under matching filenames.
+
+Q. FIFTH-PASS ORCP 29B + PRECLUSION TRACKER IMPROVEMENTS
+
+1. Additional updates completed:
+   a. `151_motion_for_limited_orcp29_joinder_or_separate_forum_order_re_hacc_quantum_final.md` (ORCP 29B factor application expanded from list format to factor-by-factor analysis).
+   b. `157_supplemental_declaration_re_orcp29a_complete_relief_and_inconsistent_obligations_final.md` (added ORCP 29B fallback-factor declaration block).
+   c. `188_preclusion_element_certified_mapping_sheet_2026-04-09.md` (converted from blank template rows to populated proof-gated issue tracker rows).
+2. Re-rendered PDFs for `151`, `157`, and `188` are staged in `print_build_2026-04-08/`.
+
+R. SIXTH-PASS PROPOSED-ORDER CONSISTENCY IMPROVEMENTS
+
+1. Proposed orders updated for consistency with proof-gating and sequencing posture:
+   a. `07_proposed_order_appoint_gal_final.md` (added prior-GAL continuity caution and collateral-merits nonadjudication line).
+   b. `08_proposed_order_dismiss_collateral_estoppel_final.md` (added explicit non-dispositive fallback when certified elements are incomplete).
+   c. `09_proposed_order_show_cause_final.md` (reframed to compliance-path order, remedial-only-if-proven sequencing).
+   d. `154_proposed_order_re_limited_orcp29_joinder_or_separate_forum_final.md` (added preclusion-proof gate and ORCP 22C derivative-liability guardrail).
+   e. `155_proposed_order_re_fallback_exclusion_or_strike_of_collateral_housing_merits_final.md` (added overlap-context and forum-preservation clarifiers).
+2. Re-rendered PDFs for `07`, `08`, `09`, `154`, and `155` are staged in `print_build_2026-04-08/`.
+
 DATED: April 9, 2026
 
 Prepared by:

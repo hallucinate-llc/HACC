@@ -14,7 +14,7 @@ CERTIFICATE OF SERVICE
 I certify that on April 9, 2026, I served true and correct copies of the following document:
 
 1. Notice of Filing Supplemental Sheriff Return / Proof of Service
-   (`185_notice_of_filing_sheriff_return_and_service_proof_2026-04-09.md`).
+   (filed in this matter).
 
 I served the document on the following person(s):
 

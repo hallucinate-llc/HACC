@@ -13,11 +13,11 @@ RE: APRIL 9, 2026 TRANSMISSION-RECORD AUTHENTICATION
 
 PLEASE TAKE NOTICE that Movant, Benjamin Barber, files the following supplemental declaration in support of the pending service-status and compliance filings:
 
-1. Supplemental Declaration of Benjamin Barber Re: Authentication of April 9, 2026 Transmission Records (`196_supplemental_declaration_authenticating_april_9_2026_transmission_records.md`).
+1. Supplemental Declaration of Benjamin Barber Re: Authentication of April 9, 2026 Transmission Records.
 
-This supplemental declaration is filed to authenticate filing-date transmission records for April 9, 2026 referenced in the filed-clean certificate variants (`192`, `193`) and related packet materials.
+This supplemental declaration is filed to authenticate filing-date transmission records for April 9, 2026 referenced in the filed-clean certificate variants and related packet materials.
 
-Movant requests that this supplemental declaration be read together with `189`, `192`, `193`, `194`, and `195`.
+Movant requests that this supplemental declaration be read together with the contemporaneous supplemental status notices, filed-clean service certificates, packet version index, and transmittal materials in this filing set.
 
 DATED: April 9, 2026
 

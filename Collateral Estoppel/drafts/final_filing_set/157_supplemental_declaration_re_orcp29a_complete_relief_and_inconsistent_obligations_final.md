@@ -37,12 +37,19 @@ C. LIMITED JOINDER AS FALLBACK ONLY
 11. Only if the Court determines that some housing-merits component cannot be excluded, I request limited ORCP 29A joinder of HACC and Quantum for overlap-control and party-structure purposes.
 12. If the Court does not allow even limited joinder, I request that those collateral housing-merits questions be expressly reserved to the proper forum and not decided in this probate proceeding.
 
-D. RECORD AND PROOF LIMITATIONS
+D. ORCP 29B FALLBACK FACTORS (IF JOINDER IS NOT FEASIBLE)
 
-13. I understand that final issue-preclusion findings and any final cross-forum status findings require admissible docket/order proof.
-14. I reserve the right to supplement with certified or filed-stamped records as they are obtained.
-15. I use the status labels `Admissible-now`, `Proof-gated`, and `Context-only` when describing record posture, and I do not ask the Court to treat `Proof-gated` points as finally adjudicated facts.
-16. Any internal pin-cite or temporal-trigger tables are offered, if at all, only as organizational aids.
+13. If joinder is found not feasible, deciding collateral housing merits in the absence of HACC and Quantum would create prejudice risk to absent entities and to existing parties because overlapping factual and duty findings could diverge across forums.
+14. In my understanding, that prejudice can be materially reduced by shaping relief: keep this probate matter focused on guardianship-specific findings and reserve collateral housing merits to the eviction/federal tracks.
+15. In my understanding, a probate judgment that excludes collateral housing-merits adjudication is still adequate to decide protective-proceeding questions under ORS chapter 125.
+16. In my understanding, adequate alternate remedies remain available for collateral housing-merits disputes in separately postured proceedings.
+
+E. RECORD AND PROOF LIMITATIONS
+
+17. I understand that final issue-preclusion findings and any final cross-forum status findings require admissible docket/order proof.
+18. I reserve the right to supplement with certified or filed-stamped records as they are obtained.
+19. I use the status labels `Admissible-now`, `Proof-gated`, and `Context-only` when describing record posture, and I do not ask the Court to treat `Proof-gated` points as finally adjudicated facts.
+20. Any internal pin-cite or temporal-trigger tables are offered, if at all, only as organizational aids.
 
 I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct to the best of my knowledge.
 

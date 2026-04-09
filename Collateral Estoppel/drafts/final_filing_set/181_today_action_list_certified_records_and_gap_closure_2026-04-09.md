@@ -130,6 +130,26 @@ Date: 2026-04-09
    b. Updated docs include: `02`, `03`, `151`, `152`, and `157`.
    c. Re-rendered updated PDFs, and rendered `00_exhibit_legend_global.pdf` for clean filing/working reference.
 
+23. Completed consolidated court-ready clean packet build:
+   a. Added manifest: `212_court_ready_clean_packet_manifest_2026-04-09.md`.
+   b. Built consolidated PDF:
+      `print_build_2026-04-08/Court_Ready_Clean_Packet_212_2026-04-09.pdf`.
+   c. Packet includes scrubbed core motions/declarations plus current notices/certificates and transmission-authentication set.
+
+24. Implemented latest post-review weakness fixes:
+   a. Removed undefined exhibit reference by replacing `Exhibit AB` with `Exhibit 1A` in `03`.
+   b. Tightened citation accuracy/grounding language in `152` to avoid unsupported paragraph-number references.
+   c. Added `213_supplemental_declaration_re_orcp27_notice_compliance_2026-04-09.md` for ORCP 27 notice-compliance factual filing.
+   d. Updated `01` to reference the ORCP 27 notice-compliance declaration path explicitly.
+
+25. Implemented evidentiary-hardening and filing-safety pass:
+   a. `01` now relies on signed-order/petition posture + supporting declarations rather than internal generated artifacts.
+   b. `03` reliance line narrowed to signed-order set + supporting declarations/communications.
+   c. `210` received court-safe wording cleanup (no filename-style references).
+   d. Added file-safe subset manifest `214_file_today_subset_manifest_2026-04-09.md`.
+   e. Built filing-safe subset packet excluding placeholder documents:
+      `print_build_2026-04-08/Court_Ready_File_Today_Subset_214_2026-04-09.pdf`.
+
 DATED: ____________, 2026
 
 Prepared by:

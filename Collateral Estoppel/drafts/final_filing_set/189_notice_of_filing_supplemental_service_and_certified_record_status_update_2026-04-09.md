@@ -16,12 +16,12 @@ Movant Benjamin Barber files this notice to provide a consolidated update on (1)
 I. DOCUMENTS FILED WITH THIS NOTICE
 
 1. Supplemental service-return filing shell:
-   a. `185_notice_of_filing_sheriff_return_and_service_proof_2026-04-09.md`;
-   b. `186_certificate_of_service_for_notice_of_filing_sheriff_return_2026-04-09.md`.
+   a. Notice of Filing Supplemental Sheriff Return / Proof of Service;
+   b. Certificate of Service for that notice.
 2. Current certified-record and proof-gap status trackers:
-   a. `180_certified_record_acquisition_and_gap_closure_tracker_2026-04-09.md`;
-   b. `181_today_action_list_certified_records_and_gap_closure_2026-04-09.md`;
-   c. `188_preclusion_element_certified_mapping_sheet_2026-04-09.md`.
+   a. Certified Record Acquisition and Gap Closure Tracker;
+   b. Today Action List (Certified Records and Proof-Gap Closure);
+   c. Preclusion Element Certified-Mapping Sheet.
 
 II. STATUS SUMMARY
 

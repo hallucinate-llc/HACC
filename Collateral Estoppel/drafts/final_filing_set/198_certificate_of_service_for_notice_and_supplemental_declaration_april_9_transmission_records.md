@@ -14,9 +14,9 @@ CERTIFICATE OF SERVICE
 I certify that on April 9, 2026, I served true copies of the following documents:
 
 1. Notice of Filing Supplemental Declaration Re: April 9, 2026 Transmission-Record Authentication
-   (`197_notice_of_filing_supplemental_declaration_april_9_transmission_records.md`);
+   (filed in this matter);
 2. Supplemental Declaration of Benjamin Barber Re: Authentication of April 9, 2026 Transmission Records
-   (`196_supplemental_declaration_authenticating_april_9_2026_transmission_records.md`).
+   (filed in this matter).
 
 Service was completed on the following recipients:
 

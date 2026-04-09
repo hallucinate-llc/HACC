@@ -57,7 +57,11 @@ B. ORCP 29B FALLBACK FACTORS IF JOINDER IS NOT FEASIBLE
    b. whether any prejudice can be reduced by limiting this case to guardianship findings and reserving collateral merits;
    c. adequacy of a probate judgment that excludes collateral housing-merits determinations; and
    d. availability of adequate remedy in the eviction/federal forums for those collateral merits.
-22. Application of those factors favors proceeding with this protective case in narrowed form, not expanded merits adjudication.
+22. Application of those factors favors proceeding with this protective case in narrowed form, not expanded merits adjudication:
+   a. prejudice is highest if absent entities are functionally adjudicated without party status;
+   b. prejudice can be reduced by shaping relief to guardianship-only determinations;
+   c. a guardianship-only judgment remains adequate for Chapter 125 purposes; and
+   d. collateral housing merits have alternate forums already identified in the record.
 
 C. ORCP 22C DERIVATIVE-LIABILITY LIMIT
 

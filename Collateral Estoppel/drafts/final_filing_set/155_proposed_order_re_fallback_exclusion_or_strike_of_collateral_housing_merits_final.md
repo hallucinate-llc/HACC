@@ -21,6 +21,8 @@ THE COURT FINDS AND ORDERS:
 4. [ ] Pleadings or arguments seeking broad housing-merits determinations in this probate case are struck, deferred, or disregarded to that extent.
 5. [ ] This matter is limited to guardianship-specific findings and relief under ORS chapter 125.
 6. [ ] The Court reserves any threshold issue-preclusion determinations pending admissible record support.
+7. [ ] Any overlap references to other proceedings are treated as scope-control context only unless the required preclusion elements are proven by admissible certified records.
+8. [ ] Nothing in this order bars properly postured claims in the relevant eviction or federal forum.
 
 IT IS SO ORDERED.
 

@@ -26,6 +26,8 @@ THE COURT FINDS AND ORDERS:
 9. [ ] Any proposed joined entity may file a response limited to ORCP 29A/29B feasibility and scope within: ______________________.
 10. [ ] The parties shall file any briefing limited to scope/party-structure issues by: ______________________.
 11. [ ] The Court reserves all merits determinations not expressly ordered above.
+12. [ ] Any preclusion or finality determination remains limited to the extent supported by admissible certified records.
+13. [ ] Unless a derivative liability-over theory is specifically pleaded and supported, ORCP 22C third-party practice remains unavailable in this probate posture.
 
 IT IS SO ORDERED.
 
