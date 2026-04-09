@@ -50,6 +50,7 @@ Movant requests a threshold issue-preclusion review before broader merits litiga
 2. Resolve threshold issue-preclusion elements first, to the extent certified element materials are in the record.
 3. Dismiss or limit relitigation only to the extent the required preclusion elements are established by admissible certified proof.
 4. Reserve merits expansion unless and until threshold preclusion review is completed on an adequate certified record.
+5. If certified packets remain incomplete at hearing, defer dispositive dismissal, set a targeted supplementation deadline, and proceed only with non-dispositive issue narrowing and scope control.
 
 ## 5) Authorities already cited in the motion set
 

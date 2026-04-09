@@ -102,6 +102,34 @@ Date: 2026-04-09
    c. `210_certificate_of_service_for_notice_and_supplemental_declaration_outbound_records_request_transmissions_2026-04-09.md`.
    d. Consolidated PDF: `print_build_2026-04-08/After_Send_Supplement_Packet_208_210_2026-04-09.pdf`.
 
+18. Completed renewed law/fact + deontic weakness audit across core motions/declarations/memos:
+   a. `211_motion_set_weakness_review_deontic_grounding_2026-04-09.md`.
+   b. PDF: `print_build_2026-04-08/211_motion_set_weakness_review_deontic_grounding_2026-04-09.pdf`.
+
+19. Completed priority high-severity closure patch pass from `211`:
+   a. `01` patched to add ORCP 27 procedural predicate subsection (D/E/F/H path framing).
+   b. `03` patched to strengthen clause-level source-term mapping for show-cause posture.
+   c. `02` patched to add explicit non-dispositive fallback relief when any preclusion element remains unproven.
+   d. `210` patched with date-accuracy placeholders and explicit no-placeholder-filing gate.
+
+20. Completed second closure pass on remaining medium-risk issues:
+   a. `151` patched with ORCP 29 feasibility-posture facts and supplementation fallback note.
+   b. `152` patched to add source-anchor framing and explicit proof-gated handling language in key contested sections.
+   c. `177` patched to keep declaration lane factual/record-status focused and shift dispositive legal framing to companion motions.
+   d. `86` patched with explicit incomplete-certified-packet hearing fallback (defer dismissal + set supplementation schedule + narrow issues).
+
+21. Completed third grounding pass (implementation of latest deficiency findings):
+   a. `00_exhibit_legend_global.md` corrected Exhibit 1 mapping to the scanned signed restraining-order PDF; added Exhibit 1A OCR companion text aid.
+   b. `03` upgraded from placeholder cite language to quote-level operative-term grounding for in-effect and no-further-service terms.
+   c. `01` strengthened ORCP 27 notice mechanics with named recipient categories and compliance-declaration path.
+   d. `151` feasibility paragraph now includes concrete known service-address channels from existing subpoena workflow.
+   e. `152` received additional paragraph-level source anchors/pin references in contested sections.
+
+22. Completed court-safe scrub pass (internal-reference cleanup):
+   a. Removed remaining internal draft-number cross-references from core filings and replaced with title-based or exhibit/declaration descriptors.
+   b. Updated docs include: `02`, `03`, `151`, `152`, and `157`.
+   c. Re-rendered updated PDFs, and rendered `00_exhibit_legend_global.pdf` for clean filing/working reference.
+
 DATED: ____________, 2026
 
 Prepared by:

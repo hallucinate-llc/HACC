@@ -15,8 +15,8 @@ I, Benjamin Barber, declare as follows:
 
 1. I am over 18 years of age and competent to testify to the matters stated herein.
 2. I submit this supplemental declaration in support of:
-   a. Motion to Limit Probate Issues and Require Section 18 / Eviction Merits to Be Litigated in the Proper Forum, or, only if necessary, for Limited ORCP 29 Joinder (`151`);
-   b. Fallback Motion to Exclude or Strike Collateral Housing Merits from Probate (`152`).
+   a. Motion to Limit Probate Issues and Require Section 18 / Eviction Merits to Be Litigated in the Proper Forum, or, only if necessary, for Limited ORCP 29 Joinder; and
+   b. Objection/Fallback filing seeking exclusion or strike of collateral housing merits from probate.
 3. I make this declaration from personal knowledge of communications and events in this matter and from my review of repository records staged in this case.
 
 A. COMPLETE-RELIEF FACTOR (ORCP 29A)
@@ -41,8 +41,8 @@ D. RECORD AND PROOF LIMITATIONS
 
 13. I understand that final issue-preclusion findings and any final cross-forum status findings require admissible docket/order proof.
 14. I reserve the right to supplement with certified or filed-stamped records as they are obtained.
-15. I use the packet status labels from `168` (`Admissible-now`, `Proof-gated`, `Context-only`) when describing record posture, and I do not ask the Court to treat `Proof-gated` points as finally adjudicated facts.
-16. I understand that `170` provides pin-cite mapping for key overlap assertions and that `172` provides temporal trigger windows for duty/prohibition analysis; I offer both as organizational aids only.
+15. I use the status labels `Admissible-now`, `Proof-gated`, and `Context-only` when describing record posture, and I do not ask the Court to treat `Proof-gated` points as finally adjudicated facts.
+16. Any internal pin-cite or temporal-trigger tables are offered, if at all, only as organizational aids.
 
 I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct to the best of my knowledge.
 

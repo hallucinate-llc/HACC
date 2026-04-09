@@ -33,53 +33,55 @@ II. AUTHORITY
 
 III. FACTUAL/PROCEDURAL BASIS
 
-10. The overlap materials identify an active Justice Court eviction-response track (`26FE0586`) framing Section 18 relocation-duty violations, including `42 U.S.C. § 1437p(d)` and `24 C.F.R. § 970.21`, against HACC and Quantum. See supporting declarations and overlap-status filings (`04`, `139`, `149`, `169`).
-11. The same overlap materials identify a District of Oregon complaint track against HACC and Quantum concerning overlapping relocation, accommodation, hearing-access, and housing-interference facts. See (`04`, `139`, `149`, `169`).
-12. Pending probate petitions and motions raise overlap risk if the same housing-merits issues are retried here. See (`152`, `157`, `168`).
+10. The overlap materials identify an active Justice Court eviction-response track (`26FE0586`) framing Section 18 relocation-duty violations, including `42 U.S.C. § 1437p(d)` and `24 C.F.R. § 970.21`, against HACC and Quantum. See supporting declarations and overlap-status filings.
+11. The same overlap materials identify a District of Oregon complaint track against HACC and Quantum concerning overlapping relocation, accommodation, hearing-access, and housing-interference facts. See supporting declarations and overlap-status filings.
+12. Pending probate petitions and motions raise overlap risk if the same housing-merits issues are retried here. See the objection and ORCP 29 supplemental declaration filed with this packet.
 13. HACC and Quantum are not presently named parties in this probate matter, and the current protective-proceeding record does not require full merits adjudication of their federal housing duties in order to decide guardianship-related questions concerning Jane Kay Cortez.
 14. If this Court does not exclude those housing-merits issues, however, absent-party problems and inconsistent-obligation risks become substantially more acute.
-15. Status labels used in this motion follow `168`: `Admissible-now`, `Proof-gated`, and `Context-only`. Cross-forum finality and identity elements remain `Proof-gated` unless supported by certified or filed-stamped records. Pin-cite mapping for key assertions is provided in `170`, and claim-level status tagging for this motion is summarized in `174`.
+15. Status labels used in this motion are: `Admissible-now`, `Proof-gated`, and `Context-only`. Cross-forum finality and identity elements remain `Proof-gated` unless supported by certified or filed-stamped records.
+16. Feasibility posture: based on current repository materials, HACC and Quantum have identifiable service channels already used in the companion records/subpoena workflow, including HACC custodian service addressing at 13930 Gain St, Oregon City, OR 97045 and Quantum service addressing at 601 E 16th St, Vancouver, WA 98663 (subject to final service verification at issuance), so joinder is not asserted to be impossible as a practical matter; the primary request remains exclusion of collateral housing merits from this probate lane.
+17. If the Court requests additional feasibility detail before ruling under ORCP 29A/29B, Movant requests leave to file a short supplemental declaration limited to service channel confirmation, prejudice mechanics, and timeline impact.
 
 IV. ARGUMENT
 
 A. ORCP 29A JOINDER STANDARD IF COLLATERAL MERITS ARE NOT EXCLUDED
 
-16. The probate court can decide whether a guardian or other protective relief is appropriate without converting this case into a trial of Section 18 relocation compliance, eviction causation, or housing-program liability.
-17. If the Court permits housing-merits adjudication in this case while HACC and Quantum remain absent, existing parties face risk of fragmented adjudication and inconsistent obligations.
-18. In that limited circumstance, ORCP 29A is the narrower fallback mechanism to test whether complete relief and consistent obligations are possible.
+18. The probate court can decide whether a guardian or other protective relief is appropriate without converting this case into a trial of Section 18 relocation compliance, eviction causation, or housing-program liability.
+19. If the Court permits housing-merits adjudication in this case while HACC and Quantum remain absent, existing parties face risk of fragmented adjudication and inconsistent obligations.
+20. In that limited circumstance, ORCP 29A is the narrower fallback mechanism to test whether complete relief and consistent obligations are possible.
 
 B. ORCP 29B FALLBACK FACTORS IF JOINDER IS NOT FEASIBLE
 
-19. If joinder is not feasible, the Court should evaluate ORCP 29B factors and proceed with shaped relief that avoids prejudice:
+21. If joinder is not feasible, the Court should evaluate ORCP 29B factors and proceed with shaped relief that avoids prejudice:
    a. prejudice to absent entities and existing parties if collateral housing merits are decided in their absence;
    b. whether any prejudice can be reduced by limiting this case to guardianship findings and reserving collateral merits;
    c. adequacy of a probate judgment that excludes collateral housing-merits determinations; and
    d. availability of adequate remedy in the eviction/federal forums for those collateral merits.
-20. Application of those factors favors proceeding with this protective case in narrowed form, not expanded merits adjudication.
+22. Application of those factors favors proceeding with this protective case in narrowed form, not expanded merits adjudication.
 
 C. ORCP 22C DERIVATIVE-LIABILITY LIMIT
 
-21. ORCP 22C is not the best procedural vehicle here because third-party practice requires liability-over pleading (nonparty may be liable for all or part of petitioner's claim against defending party), while the present allegations treat HACC and Quantum as primary actors in separate housing disputes rather than derivative indemnitors for the guardianship petition claim.
-22. Unless a clean derivative-liability theory is pleaded, collateral housing claims should remain outside ORCP 22C practice in this probate case.
+23. ORCP 22C is not the best procedural vehicle here because third-party practice requires liability-over pleading (nonparty may be liable for all or part of petitioner's claim against defending party), while the present allegations treat HACC and Quantum as primary actors in separate housing disputes rather than derivative indemnitors for the guardianship petition claim.
+24. Unless a clean derivative-liability theory is pleaded, collateral housing claims should remain outside ORCP 22C practice in this probate case.
 
 D. REQUESTED SCOPE RESULT
 
-23. If protective-proceeding scope or ORCP posture makes joinder impractical here, the correct remedy is not to litigate those merits anyway; it is to confine this case to guardianship issues and require housing-liability litigation in the proper case.
-24. This approach preserves guardianship-function integrity while protecting against collateral relitigation and inconsistent outcomes.
-25. The same scope-limiting principle is especially important where collateral coercive-control allegations are disputed, because those disputes can rapidly expand beyond the probate lane and overwhelm threshold guardianship adjudication. For this motion's ORCP 29/22 purposes, the Court should require a clean record and keep collateral merits in the proper forum rather than trying those merits here.
+25. If protective-proceeding scope or ORCP posture makes joinder impractical here, the correct remedy is not to litigate those merits anyway; it is to confine this case to guardianship issues and require housing-liability litigation in the proper case.
+26. This approach preserves guardianship-function integrity while protecting against collateral relitigation and inconsistent outcomes.
+27. The same scope-limiting principle is especially important where collateral coercive-control allegations are disputed, because those disputes can rapidly expand beyond the probate lane and overwhelm threshold guardianship adjudication. For this motion's ORCP 29/22 purposes, the Court should require a clean record and keep collateral merits in the proper forum rather than trying those merits here.
 
 V. PROPOSED SCOPE LIMITS IF JOINDER IS ALLOWED
 
-26. Any joinder should be limited to overlap-control and party-structure determinations, and should not convert this proceeding into a full housing-tort or federal housing-liability trial.
-27. Any merits findings beyond that limited purpose should be deferred to the properly postured eviction/federal matters.
+28. Any joinder should be limited to overlap-control and party-structure determinations, and should not convert this proceeding into a full housing-tort or federal housing-liability trial.
+29. Any merits findings beyond that limited purpose should be deferred to the properly postured eviction/federal matters.
 
 VI. RESERVATION
 
-28. Movant reserves supplementation with docket materials, orders, and additional admissible records for forum-status and issue-preclusion analysis.
+30. Movant reserves supplementation with docket materials, orders, and additional admissible records for forum-status and issue-preclusion analysis.
 
-VII. SHARED DEONTIC ATTACHMENT
+VII. DEONTIC CLARIFIER
 
-29. Movant incorporates the shared `Deontic Trigger and Remedy Matrix` (`168`), `Deontic Temporal Trigger Table` (`172`), and `Element-to-Evidence and Deontic Readiness Matrix` (`179`) as organizational aids mapping duty/prohibition triggers, element status, time windows, and requested remedy path; admissible exhibits and certified records control if any conflict appears.
+31. Any internal deontic trigger/remedy tables are offered, if at all, only as organizational aids; admissible exhibits and certified records control if any conflict appears.
 
 DATED: ____________, 2026
 

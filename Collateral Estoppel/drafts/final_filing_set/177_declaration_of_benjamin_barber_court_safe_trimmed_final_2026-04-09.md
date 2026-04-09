@@ -42,9 +42,9 @@ C. THRESHOLD PRECLUSION / SCOPE SUPPORT (PROOF-GATED WHERE NOT YET CERTIFIED)
 
 15. The March 31, 2026 petition seeks broad authority over Jane Kay Cortez, including residence-related circumstances, APS interface, and possible law-enforcement transport.
 16. Based on my review of current materials, there is overlap risk between issues raised in this probate matter and issues being pursued in related housing/eviction/federal tracks.
-17. I do not claim final issue preclusion has already been proven on the present record.
-18. I understand final preclusion findings require admissible proof of prior separate proceeding, issue identity, finality, party/privity, and full-and-fair opportunity.
-19. I request dismissal only to the extent those elements are proven by admissible certified records, and otherwise request threshold narrowing and proof-gating.
+17. As of this declaration, I treat cross-forum and prior-proceeding points as proof-gated unless supported by admissible certified or filed-stamped records.
+18. My request in this declaration is limited to threshold narrowing and record-sequencing on unresolved overlap issues.
+19. Any dispositive preclusion request is made only in the companion motion and only to the extent supported by admissible certified records.
 20. Repository materials identify a Justice Court eviction-response track (26FE0586) and a District of Oregon complaint track with overlapping housing-process allegations involving HACC and Quantum.
 21. I request leave to supplement with certified dockets, orders, and filed-stamped records as they are obtained.
 

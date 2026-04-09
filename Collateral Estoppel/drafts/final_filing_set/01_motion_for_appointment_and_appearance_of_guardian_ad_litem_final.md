@@ -37,14 +37,22 @@ III. LEGAL AUTHORITY
 15. To the extent applicable in this protective posture, ORCP 27 further supports appointment of a guardian ad litem when qualifying incapacity-related circumstances and evidentiary need are shown.
 16. This Court has discretion to appoint a suitable GAL and to structure reporting and status deadlines to assist fact development and protect the interests of the protected person.
 
-IV. EXHIBIT REFERENCES (GLOBAL NUMBERING)
+IV. ORCP 27 PROCEDURAL PREDICATES (TO THE EXTENT APPLICABLE)
 
-17. This motion presently relies on Exhibit 1 (scanned signed order source), and Exhibits 4, 5, and 6 from the global exhibit legend filed with this packet.
-18. Movant requests leave to supplement with certified docket/order materials (including Exhibits 8-10 and certified signed-order record support for `25PO11530`) as soon as they are received.
+17. This motion is supported by declarations containing facts offered to show qualifying need and factual conflict for appointment/appearance clarification.
+18. Movant requests that ORCP 27 notice procedures be applied or modified as the Court deems just and proper under the circumstances of this protective proceeding.
+19. To the extent ORCP 27 E/F notice recipients and timelines apply in this posture, Movant will provide notice to Jane Kay Cortez (respondent/protected person), Solomon Samuel Barber, and other known interested persons identified by reasonable inquiry (including any known current fiduciary/agent roles), and will file a notice-compliance declaration identifying who was served, when, and by what method.
+20. If any ORCP 27 E recipient category cannot be completed on the current emergency timeline after reasonable inquiry, Movant requests targeted modification/waiver under ORCP 27 H and asks the Court to set a cure schedule for supplemental notice.
+21. To the extent any objection is filed, Movant requests hearing management consistent with ORCP 27 G and Chapter 125 scheduling authority.
 
-V. RESERVATION
+V. EXHIBIT REFERENCES (GLOBAL NUMBERING)
 
-19. Movant reserves amendment rights after receipt of certified docket and complete order history.
+22. This motion presently relies on Exhibit 1 (scanned signed order source), and Exhibits 4, 5, and 6 from the global exhibit legend filed with this packet.
+23. Movant requests leave to supplement with certified docket/order materials (including Exhibits 8-10 and certified signed-order record support for `25PO11530`) as soon as they are received.
+
+VI. RESERVATION
+
+24. Movant reserves amendment rights after receipt of certified docket and complete order history.
 
 DATED: ____________, 2026
 

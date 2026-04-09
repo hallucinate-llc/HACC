@@ -43,7 +43,7 @@ Movant requests threshold review, claim-limiting relief, and reservation of sanc
 
 ### III. Governing authority posture
 
-10. The principal corrective-authority pathways currently grounded in the workspace are:
+10. The principal corrective-authority pathways currently grounded in the workspace are distinct and should remain distinct:
    a. `ORCP 17 C(2)-(4)` for improper-purpose, unsupported-legal-position, and unsupported-factual-assertion sanctions theory;
    b. `ORS 33.055`, `33.075`, and `33.105` for a remedial contempt and remedial-sanctions path if contempt elements are later proved;
    c. `ORCP 46` and `ORCP 55` for later subpoena and production enforcement if nonparty noncompliance occurs; and
@@ -70,17 +70,17 @@ Movant requests threshold review, claim-limiting relief, and reservation of sanc
    b. the exact person-to-HACC communication chain;
    c. the exact legal rule under which every sanctions component should ultimately issue.
 16. The issue-preclusion doctrine is now authority-grounded, but the actual prior separate proceeding record is still the key missing fact layer. For that reason, preclusion-based sanctions requests must remain conditional and are presently best framed as threshold review and claim-limiting relief.
-17. The repeated-pattern theory is that Solomon sought practical control by means other than orderly court relief, and that this created unnecessary burden, delay, and instability even if the final proof picture is not yet complete.
-18. The present record also supports a narrower attorney-side concern: counsel signed and submitted a writ of assistance authorizing forced entry and transport of Jane Cortez while invoking a no-service readiness certification, even though the presently staged record still does not cleanly show the underlying signed temporary-guardian order and notice predicate on which that extraordinary writ depended. That point is presently framed as a threshold sanctions-reservation / reasonable-inquiry issue, not as a fully established final sanctions predicate.
-19. The same threshold concern now extends beyond the writ itself to the filing and maintenance of the current guardianship petition to the extent that petition is found to be materially inaccurate, procedurally defective, or overbroad in ways a reasonable attorney should have recognized before seeking waiver-of-notice relief, plenary authority, writ-based transport, placement authority, and fee shifting from Jane Kay Cortez's funds. Any separate collateral-estoppel-based corrective theory remains dependent on the certified prior-proceeding record.
+17. The repeated-pattern theory as to Solomon is that he sought practical control by means other than orderly court relief, and that this created unnecessary burden, delay, and instability even if the final proof picture is not yet complete.
+18. The present record supports a separate and narrower attorney-side concern: counsel signed and submitted a writ of assistance authorizing forced entry and transport of Jane Cortez while invoking a no-service readiness certification, even though the presently staged record still does not cleanly show the underlying signed temporary-guardian order and notice predicate on which that extraordinary writ depended. That point is presently framed as a threshold sanctions-reservation / reasonable-inquiry issue, not as a fully established final sanctions predicate.
+19. The present record also supports a still separate threshold concern about the filing and maintenance of the current guardianship petition to the extent that petition is found to be materially inaccurate, procedurally defective, or overbroad in ways a reasonable attorney should have recognized before seeking waiver-of-notice relief, plenary authority, writ-based transport, placement authority, and fee shifting from Jane Kay Cortez's funds. Any separate collateral-estoppel-based corrective theory remains dependent on the certified prior-proceeding record.
 
 ### V. Best current sanctionable-conduct formulation
 
-20. The safest current formulation is:
+20. As to Solomon, the safest current formulation is:
    `On information and belief, Solomon Barber pursued a course of conduct that combined proof-gated preclusion problems, post-notice self-help conduct, and collateral interference with housing or authority matters involving Jane Cortez, thereby imposing unnecessary burden, delay, and instability.`
-21. As to counsel, the safest current formulation is:
+21. As to counsel and filing conduct, the safest current formulation is:
    `On the present record, counsel signed and submitted extraordinary coercive process in a manner that raises a substantial question whether the necessary predicate order, notice basis, and readiness certification had been adequately verified before filing.`
-22. A further safe current formulation is:
+22. As to claim-limiting relief, a further safe current formulation is:
    `If the Court concludes that the petition is barred in whole or material part, or that it contains serious factual and procedural defects that competent threshold review should have caught, the Court should consider whether counsel's continued pursuit of that petition warrants claim-limiting relief, sanctions reservation, or other corrective action.`
 23. Those formulations should be used instead of any broader statement that all sanction predicates have already been fully established or that malpractice has already been proven.
 24. The same caution should be applied to issue preclusion:

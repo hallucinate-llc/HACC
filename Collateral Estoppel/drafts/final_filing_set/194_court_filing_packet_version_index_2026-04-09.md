@@ -83,6 +83,52 @@ G. OPTIONAL AFTER-SEND SUPPLEMENT FILING SET
 3. Consolidated after-send supplement packet path:
    `print_build_2026-04-08/After_Send_Supplement_Packet_208_210_2026-04-09.pdf`
 
+H. OPTIONAL WEAKNESS-AUDIT MEMO (INTERNAL / WORKING)
+
+1. Updated law/fact + deontic audit memo:
+   `211_motion_set_weakness_review_deontic_grounding_2026-04-09.md`
+2. PDF path:
+   `print_build_2026-04-08/211_motion_set_weakness_review_deontic_grounding_2026-04-09.pdf`
+
+I. OPTIONAL POST-AUDIT PATCHED CORE DOCS
+
+1. Updated post-audit versions:
+   a. `01_motion_for_appointment_and_appearance_of_guardian_ad_litem_final.md`
+   b. `02_motion_to_dismiss_for_collateral_estoppel_final.md`
+   c. `03_motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_final.md`
+   d. `210_certificate_of_service_for_notice_and_supplemental_declaration_outbound_records_request_transmissions_2026-04-09.md`
+2. Re-rendered PDFs are staged in `print_build_2026-04-08/` under matching filenames.
+
+J. OPTIONAL POST-AUDIT SECOND-PASS PATCHED DOCS
+
+1. Additional updated docs from second closure pass:
+   a. `151_motion_for_limited_orcp29_joinder_or_separate_forum_order_re_hacc_quantum_final.md`
+   b. `152_objection_to_first_amended_guardianship_petition_and_emergency_relief_final.md`
+   c. `177_declaration_of_benjamin_barber_court_safe_trimmed_final_2026-04-09.md`
+   d. `86_short_bench_memo_supplemental_exhibits_8_9_10_and_threshold_issue_preclusion_2026-04-07.md`
+2. Re-rendered PDFs are staged in `print_build_2026-04-08/` under matching filenames.
+
+K. OPTIONAL POST-AUDIT THIRD-PASS GROUNDING UPDATES
+
+1. Additional grounding updates:
+   a. `00_exhibit_legend_global.md` (Exhibit 1 scan mapping + Exhibit 1A OCR companion text aid).
+   b. `01_motion_for_appointment_and_appearance_of_guardian_ad_litem_final.md`
+   c. `03_motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_final.md`
+   d. `151_motion_for_limited_orcp29_joinder_or_separate_forum_order_re_hacc_quantum_final.md`
+   e. `152_objection_to_first_amended_guardianship_petition_and_emergency_relief_final.md`
+2. Re-rendered PDFs for `01`, `03`, `151`, and `152` are staged in `print_build_2026-04-08/`.
+
+L. OPTIONAL COURT-SAFE SCRUB UPDATE
+
+1. Internal-reference cleanup completed in:
+   a. `02_motion_to_dismiss_for_collateral_estoppel_final.md`
+   b. `03_motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_final.md`
+   c. `151_motion_for_limited_orcp29_joinder_or_separate_forum_order_re_hacc_quantum_final.md`
+   d. `152_objection_to_first_amended_guardianship_petition_and_emergency_relief_final.md`
+   e. `157_supplemental_declaration_re_orcp29a_complete_relief_and_inconsistent_obligations_final.md`
+2. Exhibit legend grounding correction included:
+   a. `00_exhibit_legend_global.md` (Exhibit 1 scan mapping + Exhibit 1A text aid).
+
 DATED: April 9, 2026
 
 Prepared by:

@@ -4,7 +4,8 @@ Case No.: `26PR00641` (confirm against certified docket at filing)
 
 ## Shared numbering for all motions and declaration
 
-1. **Exhibit 1**: [sam_barber_restraining_order_ocr.txt](/home/barberb/HACC/Collateral Estoppel/evidence_notes/sam_barber_restraining_order_ocr.txt)
+1. **Exhibit 1**: [sam barber restraining order.pdf](/home/barberb/HACC/evidence/history/sam%20barber%20restraining%20order.pdf)
+1A. **Exhibit 1A (companion text aid)**: [sam_barber_restraining_order_rotated_ocr_2026-04-09.txt](/home/barberb/HACC/Collateral Estoppel/evidence_notes/sam_barber_restraining_order_rotated_ocr_2026-04-09.txt)
 2. **Exhibit 2**: [solomon_motion_for_guardianship_ocr.txt](/home/barberb/HACC/Collateral Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt)
 3. **Exhibit 3**: [solomon_evidence_graph_feed.json](/home/barberb/HACC/Collateral Estoppel/evidence_notes/solomon_evidence_graph_feed.json)
 4. **Exhibit 4**: [deontic_reasoning_report.json](/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/deontic_reasoning_report.json)

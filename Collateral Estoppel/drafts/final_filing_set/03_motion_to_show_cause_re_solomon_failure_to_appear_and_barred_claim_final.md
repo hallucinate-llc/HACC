@@ -18,7 +18,7 @@ I. REQUESTED RELIEF
 1. Issue an Order to Show Cause requiring Solomon Barber to appear on a date certain.
 2. Require Solomon Barber to explain his compliance with the operative restraint terms reflected in Exhibit 1 after in-person appearance and notice that the order was in effect, including any asserted basis for noncompliance.
 3. Require Solomon Barber to explain his compliance posture after notice of an in-effect order and available hearing path.
-4. Enter appropriate remedial orders and remedial sanctions authorized by law and supported by admissible evidence.
+4. Enter only those remedial orders supported by proven violation of identified order terms, including (as warranted by the evidence) compliance-clarification directives, deadline-based cure directives, and compensatory remedial relief authorized by statute.
 
 II. GROUNDS
 
@@ -45,14 +45,16 @@ III. LEGAL AUTHORITY
 IV. DUTY / TRIGGER / BREACH / REMEDY MAP
 
 21. Source duty/prohibition:
-   a. Exhibit 1 reflects an in-effect restraining order and no-further-service-needed language after in-person appearance.
+   a. Exhibit 1/1A reflects in-effect language, including: "The order is now in effect." and "The Restraining Order you have received is in effect and remains in effect until the court changes or terminates it."
+   b. Exhibit 1/1A also reflects: "No further service is necessary because Respondent appeared in person before the court."
 22. Trigger event:
    a. The duty to comply or seek court relief was triggered when the order was entered and remained in effect.
 23. Alleged breach events (clause-level map):
-   a. Source term: Exhibit 1 in-effect language and no-further-service-needed language after in-person appearance.
-   b. Claimed conflicting act 1: March 10, 2026 statement, "Oh I understand, I'm just not incentivized to cooperate."
-   c. Claimed conflicting act 2: March 10, 2026 statement, "Once I get served and it goes into effect, I will comply... But it is not in effect."
-   d. Claimed legal significance: the quoted statements are offered as evidence of a conditional-compliance posture inconsistent with the in-effect/no-further-service language reflected in Exhibit 1.
+   a. Source term 1 (in-effect): the quoted in-effect language identified in paragraph 21(a).
+   b. Source term 2 (service/appearance): the quoted no-further-service language identified in paragraph 21(b).
+   c. Claimed conflicting act 1: March 10, 2026 statement, "Oh I understand, I'm just not incentivized to cooperate."
+   d. Claimed conflicting act 2: March 10, 2026 statement, "Once I get served and it goes into effect, I will comply... But it is not in effect."
+   e. Claimed legal significance: the quoted statements are offered as evidence of a conditional-compliance posture inconsistent with the in-effect/no-further-service terms reflected in Exhibit 1.
 24. Requested remedy path:
    a. Show-cause appearance and compliance explanation under ORS 33.055.
    b. If contempt elements are proven, remedial sanctions under ORS 33.105.
@@ -71,7 +73,7 @@ VI. EXHIBIT REFERENCES (GLOBAL NUMBERING)
 29. This motion presently relies on Exhibits 1, 3, 4, 5, 7, and AB from the global exhibit legend filed with this packet.
 30. Movant requests leave to supplement with certified notice/appearance/preclusion records (Exhibits 8, 9, and 10) immediately upon receipt.
 31. If useful to the Court, Movant can provide an organizational appendix summarizing exhibit status; however, admissible exhibits and certified records control.
-32. As an organizational aid only, Movant may provide `179` (Element-to-Evidence and Deontic Readiness Matrix); admissible exhibits and certified records control.
+32. Any internal element-to-evidence readiness matrix is offered, if at all, only as an organizational aid; admissible exhibits and certified records control.
 
 VII. RESERVATION
 
