@@ -30,10 +30,11 @@ II. AUTHORITY
 
 III. BASIS
 
-10. The overlap materials identify a Justice Court eviction track (`26FE0586`) and a federal District of Oregon complaint track involving overlapping housing facts and duties. See (`139`, `149`, `169`).
-11. Those tracks involve alleged Section 18 relocation duties (`42 U.S.C. § 1437p(d)`; `24 C.F.R. § 970.21`) and related housing administration conduct by HACC and Quantum. See (`04`, `151`, `157`).
+10. The overlap materials identify a Justice Court eviction track (26FE0586) and a federal District of Oregon complaint track involving overlapping housing facts and duties. See Supplemental Declaration Authenticating Cross-Forum Docket/Order Records, Notice of Supplemental Status: Clerk-Relayed Federal Advisement (Pending Docket Confirmation), and the Cross-Forum Exhibit Retrieval Metadata Sheet.
+11. Those tracks involve alleged Section 18 relocation duties (42 U.S.C. section 1437p(d); 24 C.F.R. section 970.21) and related housing administration conduct by HACC and Quantum. See Declaration of Benjamin Barber (Court-Safe Trimmed), paragraphs 21-22, Motion to Limit Probate Issues and Require Section 18 / Eviction Merits to Be Litigated in the Proper Forum, and Supplemental Declaration Re ORCP 29A Complete-Relief and Inconsistent-Obligation Factors.
 12. Probate is not the proper forum for full merits determination of those non-probate housing-liability disputes, especially with absent entities and ongoing parallel litigation.
-13. On the current record, cross-forum finality assertions remain provisional unless confirmed by certified or filed-stamped records. Any supporting pin-cite and claim-status worksheets are offered only as organizational support; admissible exhibits and certified records control.
+13. On the current record, cross-forum finality assertions remain provisional unless confirmed by certified or filed-stamped records. Any supporting summary charts are offered only as organizational support; admissible exhibits and certified records control.
+13A. For consistency with the shared deontic mapping attachments, this fallback scope-control branch is tracked as Rule ID `R-JN-01`; any dispositive preclusion branch remains Rule ID `R-PI-01` in the separate threshold preclusion motion.
 
 IV. ARGUMENT
 
@@ -42,14 +43,16 @@ IV. ARGUMENT
 16. A probate judgment limited to guardianship questions remains adequate and administrable, while housing-merits adequacy is preserved in those separate forums.
 17. The narrower and safer remedy is to confine this case to guardianship issues while preserving parties' ability to pursue housing merits in the proper actions.
 18. If any overlap issue is necessary for a discrete probate determination, the Court should decide only the minimum required question and reserve broader merits for the separate tracks.
+18A. This fallback motion does not request any dispositive issue-preclusion dismissal ruling; any dispositive preclusion request remains in the separate threshold preclusion motion and only to the extent supported by admissible certified records.
+18B. Relief requested in this motion is limited to Rule ID `R-JN-01` shaped-relief handling and does not request completion of Rule ID `R-PI-01`.
 
 V. RESERVATION
 
 19. Movant reserves the right to supplement with certified dockets/orders and any admissible records relevant to threshold preclusion/scope findings.
 
-VI. SHARED HANDLING ATTACHMENT
+VI. SUPPLEMENTAL SUMMARY ATTACHMENT
 
-20. Movant incorporates the shared trigger/remedy, temporal-trigger, and element-to-evidence worksheets only as organizational aids for proof posture, time windows, and remedy mapping; admissible exhibits and certified records control.
+20. Movant incorporates any demonstrative chart only as an organizational aid for proof posture and remedy mapping; admissible exhibits and certified records control.
 
 DATED: ____________, 2026
 

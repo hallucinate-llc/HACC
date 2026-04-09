@@ -4,6 +4,21 @@ Case: `26PR00641`
 
 Use this schedule when citing the merged supplemental background appendix in declarations, motions, or supporting memoranda.
 
+Assembly rule:
+
+1. place a tab cover page before each appendix exhibit;
+2. place an exhibit cover page before each appendix exhibit; and
+3. identify on the exhibit cover page:
+   - the filing(s) that rely on the exhibit; and
+   - the proposition the exhibit is offered to support.
+
+Use:
+
+- [exhibit_tab_cover_page_template_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_tab_cover_page_template_2026-04-09.md)
+- [exhibit_cover_page_template_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_cover_page_template_2026-04-09.md)
+- [exhibit_cover_page_master_tracker_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_cover_page_master_tracker_2026-04-09.md)
+- [exhibit_cover_page_completion_tracker_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_cover_page_completion_tracker_2026-04-09.md)
+
 ## Section A. Work / research background
 
 `Exhibit A-1`

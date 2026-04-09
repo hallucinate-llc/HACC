@@ -43,10 +43,10 @@ III. CURRENT SOURCE-BACKED OVERLAP RECORD
 
 IV. ADDITIONAL PROCEEDING OVERLAP (CONTEXT FOR THRESHOLD SCOPE CONTROL)
 
-14. As described in the accompanying declaration and overlap-status filings, the current record identifies two overlap tracks:
+14. As described in the Short-Form Declaration of Benjamin Barber (Threshold Relief), the supplemental declarations, and overlap-status filings, the current record identifies two overlap tracks:
    (a) Clackamas County Justice Court eviction-response case 26FE0586; and
    (b) a District of Oregon complaint track involving HACC and Quantum with overlapping housing-process allegations.
-   See Declaration of Benjamin Barber (Court-Safe Trimmed), paragraphs 21-22; Supplemental Declaration Authenticating Cross-Forum Docket/Order Records, paragraphs 5-8; and the Cross-Forum Exhibit Retrieval Metadata Sheet.
+   See Short-Form Declaration of Benjamin Barber (Threshold Relief), paragraph 13; Declaration of Benjamin Barber (Court-Safe Trimmed), paragraphs 21-22; Supplemental Declaration Authenticating Cross-Forum Docket/Order Records, paragraphs 5-8; and the Cross-Forum Exhibit Retrieval Metadata Sheet.
 15. These overlap points are offered only as context for threshold scope control and issue-screening, not as independent dispositive grounds for dismissal in this motion.
 16. The overlap materials are not offered as completed preclusion findings and do not replace certified proof of the Oregon preclusion elements.
 17. The scanned federal complaint coversheet/complaint packet reflects a received stamp beginning "RECVD 31 MAR '26 12:57..." (trailing characters faint), but the current scan does not clearly show a filled civil action number. See Federal Coversheet Stamp Read Note (2026-04-08).
@@ -56,12 +56,18 @@ IV. ADDITIONAL PROCEEDING OVERLAP (CONTEXT FOR THRESHOLD SCOPE CONTROL)
 21. If final adjudication has not yet occurred, this Court should still narrow this probate matter to guardianship-specific issues and avoid becoming a parallel merits forum for pending landlord-tenant or federal civil-rights claims, without treating mere overlap itself as completed preclusion.
 22. Any separate constitutional argument branch is reserved for supplemental memorandum only if and when that issue is directly presented for adjudication in this case.
 
+IV-A. RULE-ID BRANCH MAPPING
+
+22A. For consistency with the shared deontic mapping attachments, this motion's dispositive preclusion branch is identified as Rule ID `R-PI-01` (Collateral-estoppel branch).
+22B. Under Rule ID `R-PI-01`, no dispositive dismissal is requested unless the certified row-by-row element map is complete for the specific issue row at issue.
+22C. Any non-dispositive overlap/scope handling requested in this motion is presented as threshold sequencing only and not as completion of Rule ID `R-PI-01`.
+
 V. COMPANION PARTY-STRUCTURE BRANCH
 
 23. Party-structure consequences for any housing-merits relitigation are addressed in companion scope-control filings and are included here only to explain why threshold narrowing is requested.
 24. This probate proceeding should not be used to bypass proper party structure or to reframe eviction/housing merits against absent entities.
 
-VI. PROOF GATE FOR FINAL DISMISSAL
+VI. PROOF GATE FOR FINAL DISMISSAL (RULE ID `R-PI-01`)
 
 25. Final dismissal still requires proof of the prior separate proceeding, the exact issue decided, finality, party/privity alignment, and a full and fair opportunity to be heard.
 26. Movant therefore requests threshold control now, with dismissal only to the extent those elements are proven by admissible certified records on a row-specific basis under a filed certified-element map.
@@ -81,7 +87,7 @@ VII. PARTY-STRUCTURE SAFEGUARD IF COLLATERAL MERITS ARE PRESSED
 
 VIII. EXHIBIT REFERENCES (GLOBAL NUMBERING)
 
-36. This motion relies primarily on Exhibit 2, the accompanying declaration, and Exhibits 8-10 as the threshold preclusion record set (current-case docket posture, prior signed-order record, and hearing/notice record).
+36. This motion relies primarily on Exhibit 2, the Short-Form Declaration of Benjamin Barber (Threshold Relief), and Exhibits 8-10 as the threshold preclusion record set (current-case docket posture, prior signed-order record, and hearing/notice record).
 37. This motion additionally references overlap materials for 26FE0586 and the federal HACC/Quantum track as context for threshold scope control only, and not as substitute proof for dispositive preclusion elements.
 38. Any internal element-to-evidence readiness matrix is offered, if at all, only as an organizational aid; admissible exhibits and certified records control.
 

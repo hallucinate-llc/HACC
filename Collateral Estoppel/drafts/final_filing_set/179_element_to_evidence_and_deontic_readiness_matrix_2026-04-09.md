@@ -33,6 +33,7 @@ I. MOTION 01 (GAL APPOINTMENT / APPEARANCE)
    f. Handling:
       1) keep prior-GAL assertions conditional unless certified;
       2) do not present prior appointment as adjudicated fact without certified predicate record.
+      3) if suitability of Benjamin Barber is contested, request neutral-GAL fallback without delaying threshold protective scheduling.
 
 II. MOTION 02 (THRESHOLD PRECLUSION RECORD / ALTERNATIVE DISMISSAL)
 
@@ -55,6 +56,7 @@ II. MOTION 02 (THRESHOLD PRECLUSION RECORD / ALTERNATIVE DISMISSAL)
    f. Handling:
       1) maintain distinction between overlap and completed preclusion;
       2) do not ask for dispositive preclusion finding on provisional clerk-relayed status.
+      3) keep each asserted preclusion row tied to Rule ID `R-PI-01` and certified source support before hearing.
 
 III. MOTION 03 (SHOW CAUSE / REMEDIAL SANCTIONS TRACK)
 
@@ -75,6 +77,7 @@ III. MOTION 03 (SHOW CAUSE / REMEDIAL SANCTIONS TRACK)
    f. Handling:
       1) keep sanctions branch remedial unless separately noticed;
       2) avoid punitive framing in this filing posture.
+      3) do not request final service-sufficiency findings on photo-only support without the formal return (`R-SVC-01`).
 
 IV. MOTIONS 151 / 152 (ORCP 29A / 29B / 22C SCOPE CONTROL)
 
@@ -91,14 +94,16 @@ IV. MOTIONS 151 / 152 (ORCP 29A / 29B / 22C SCOPE CONTROL)
    f. Handling:
       1) preserve due-process sequence for any limited joinder (service + opportunity to respond);
       2) do not convert probate into full Section 18/eviction/federal merits forum absent proper parties and posture.
+      3) before any final feasibility finding, lodge filed service-attempt proof identifying date/method/recipient/result for each channel (`R-JN-01`).
 
 V. GLOBAL WEAKNESS CLOSURE PRIORITY
 
-5. Priority 1 (highest): certified prior-proceeding packets for preclusion element proof.
-6. Priority 2: certified hearing-minute evidence for show-cause nonappearance/compliance branch.
-7. Priority 3: federal docket-stamped assignment/status records replacing provisional oral status.
-8. Priority 4: keep declarations element-focused in filed packet; retain expanded narratives as internal strategy support only.
-9. Snapshot gate: per current `188`, no dispositive estoppel row is yet `Admissible-now`; maintain threshold/scope-control posture.
+5. Priority 1 (highest): certified prior-proceeding packets for preclusion element proof (`R-PI-01`).
+6. Priority 2: official sheriff return for final service-sufficiency branch completion (`R-SVC-01`).
+7. Priority 3: certified hearing-minute evidence for show-cause nonappearance/compliance branch (`R-SC-01`, `R-SC-02`).
+8. Priority 4: federal docket-stamped assignment/status records replacing provisional oral status.
+9. Priority 5: keep declarations element-focused in filed packet; retain expanded narratives as context support only.
+10. Snapshot gate: per current `188`, no dispositive estoppel row is yet `Admissible-now`; maintain threshold/scope-control posture.
 
 VI. HEARING USE SCRIPT (SHORT)
 

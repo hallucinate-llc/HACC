@@ -9,19 +9,21 @@ Jane Kay Cortez,
 Protected Person.
 
 NOTICE OF FILING SUPPLEMENTAL SHERIFF RETURN / PROOF OF SERVICE
-(REPORTED SERVICE EVENT OF APRIL 9, 2026)
+(APRIL 9, 2026 IN-PERSON SERVICE EVENT)
 
-Movant Benjamin Barber files this notice to lodge supplemental service records related to the reported April 9, 2026 sheriff-service event referenced in pending filings.
+Movant Benjamin Barber files this notice to lodge supplemental service records related to the April 9, 2026 sheriff-service event referenced in pending filings.
 
 I. RECORDS FILED WITH THIS NOTICE
 
-1. Supplemental Exhibit SR-1: Clackamas County Sheriff's Office return/proof-of-service document for service on Solomon Samuel Barber (if produced and attached).
-2. Supplemental Exhibit SR-2: Any associated service metadata provided by the serving agency (date/time/method/server identity) (if produced and attached).
+1. Supplemental Exhibit SR-1: Smartphone photo file "Solomon Service.HEIC" captured by Benjamin Barber depicting in-person sheriff service event on Solomon Samuel Barber on April 9, 2026 (if attached; SHA-256: 94df0830aa27930abe7236441e5060914f7202755788ae58638ebe1b40d99f36).
+2. Supplemental Exhibit SR-2: Clackamas County Sheriff's Office return/proof-of-service document for service on Solomon Samuel Barber (if produced and attached).
+3. Supplemental Exhibit SR-3: Any associated service metadata provided by the serving agency (date/time/method/server identity) (if produced and attached).
 
 II. PURPOSE OF SUPPLEMENT
 
-3. This filing is submitted to convert the April 9, 2026 service event from reported context into formal record support to the extent shown by lodged service-return documents.
+3. This filing is submitted to supplement the April 9, 2026 service event with personal-observation/photo evidence and formal service-return support to the extent shown by lodged service documents.
 4. This filing is offered for service-sequence and compliance-context support in pending motion practice; it does not alter the Court's authority to determine legal sufficiency of service under applicable rules.
+4A. Movant does not request a final legal-sufficiency finding based solely on SR-1 if SR-2 is not yet lodged.
 
 III. REQUEST
 

@@ -25,7 +25,7 @@ I. DOCUMENTS FILED WITH THIS NOTICE
 
 II. STATUS SUMMARY
 
-3. April 9, 2026 sheriff service event remains reported and proof-gated pending lodging of the official sheriff return/proof-of-service document.
+3. April 9, 2026 sheriff service event is supported by movant's personal observation and smartphone photo evidence, and remains formally proof-gated for service-sufficiency purposes pending lodging of the official sheriff return/proof-of-service document.
 4. Cross-forum and prior-proceeding preclusion elements remain conditional to the extent certified records are not yet lodged.
 5. Movant continues to request threshold narrowing and scope control where dispositive preclusion proof is incomplete.
 

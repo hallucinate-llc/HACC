@@ -76,6 +76,13 @@ Use this index when filing the coordinated state-court packet addressing:
 52. [comprehensive_repository_search_results_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/comprehensive_repository_search_results_2026-04-09.md)
 53. [repository_exhibit_pull_checklist_2026-04-09.md](/home/barberb/HACC/workspace/repository_exhibit_pull_checklist_2026-04-09.md)
 54. [repository_binder_build_order_2026-04-09.md](/home/barberb/HACC/workspace/repository_binder_build_order_2026-04-09.md)
+55. [exhibit_tab_cover_page_template_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_tab_cover_page_template_2026-04-09.md)
+56. [exhibit_cover_page_template_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_cover_page_template_2026-04-09.md)
+57. [exhibit_cover_page_master_tracker_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_cover_page_master_tracker_2026-04-09.md)
+58. [exhibit_cover_page_assembly_note_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_cover_page_assembly_note_2026-04-09.md)
+59. [exhibit_cover_page_completion_tracker_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_cover_page_completion_tracker_2026-04-09.md)
+60. [evidence_binder_merged_print_order_2026-04-09.md](/home/barberb/HACC/workspace/evidence_binder_merged_print_order_2026-04-09.md)
+61. [evidence_binder_exhibit_and_cover_sheet_index_2026-04-09.md](/home/barberb/HACC/workspace/evidence_binder_exhibit_and_cover_sheet_index_2026-04-09.md)
 
 ## Recommended Filing Order
 

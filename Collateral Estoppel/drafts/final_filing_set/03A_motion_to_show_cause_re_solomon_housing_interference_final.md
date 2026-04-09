@@ -20,6 +20,7 @@ I. REQUESTED RELIEF
 2. Require Solomon Barber to explain why his post-order conduct concerning Jane Cortez's housing, household composition, voucher, relocation, or lease matters did not violate or evade the original restraining-order framework.
 3. Require Solomon Barber to explain why his later guardianship filing includes detailed housing allegations, household address information, and occupancy / voucher assertions concerning Jane Cortez and Benjamin Barber.
 4. Enter appropriate threshold remedial orders, including record-completion directives and only such noninterference or corrective relief as the Court finds directly supported by admissible evidence.
+4A. For efficient handling, Movant requests that this alternative track be held in reserve unless the Court directs consolidated treatment with the primary show-cause motion.
 
 II. GROUNDS
 
@@ -29,16 +30,18 @@ II. GROUNDS
 8. The later Solomon text record supports a self-help service / enforceability posture inconsistent with straightforward compliance: after order-image MMS transmissions in the March 10, 2026 thread, Solomon stated, "Oh I understand, I'm just not incentivized to cooperate," and then, "Once I get served and it goes into effect, I will comply ... But it is not in effect."
 9. The present guardianship petition filed by Solomon includes detailed allegations about Jane's subsidized housing, occupancy, voucher status, household address, and Benjamin Barber's housing role.
 10. The March 23, 2026 declarations of Benjamin Barber and Jane Cortez each support that Charley Skee explained in substance that Benjamin had been taken off the lease because Benjamin's brother and stepfather had been emailing documents to HACC, and that the situation continued until staff sorted through those materials.
-11. The `JC Household` chain also supports an earlier county-notice point on December 2, 2025, when Benjamin emailed Ashley Ferron and copied Charley Skee, HACC Public Housing Management, and HACC Relocation in the same dispute stream, and by March 17, 2026 HACC had again received direct written notice from Benjamin asking whether HACC was still in communication with parties who had restraining orders against them in the courts.
+11. The "JC Household" chain also supports an earlier county-notice point on December 2, 2025, when Benjamin emailed Ashley Ferron and copied Charley Skee, HACC Public Housing Management, and HACC Relocation in the same dispute stream, and by March 17, 2026 HACC had again received direct written notice from Benjamin asking whether HACC was still in communication with parties who had restraining orders against them in the courts.
 12. In context, that March 17 warning was made during an active dispute over voucher issuance, relocation, lease status, and housing administration, and is best read as notice that continued communication with Solomon or other restrained parties was interfering with Benjamin Barber's tenant rights and the household's housing process.
 13. The original stored Julio order packets strengthen that context. The case records include a granted Benjamin-v.-Julio EPPDAPA order and a granted Jane-v.-Julio EPPDAPA order, both tied to the same residence and protective framework, which shows that household-composition and housing-control disputes were already being formalized in court before the later HACC lease-removal sequence.
-14. The case records also include a scanned `Abuse Protective Order Certificate of Service` form, but targeted OCR shows it is a blank form only. That means the source record is stronger on operative order existence than on completed service paperwork.
+14. The case records also include a scanned "Abuse Protective Order Certificate of Service" form, but targeted OCR shows it is a blank form only. That means the source record is stronger on operative order existence than on completed service paperwork.
 15. The current record supports a narrower elimination-based inference. Benjamin did not request his own removal from the lease, and Jane did not request Benjamin's removal.
-16. The `JC Household` chain reflects internal inconsistency that warrants explanation: on January 12, 2026 HACC first wrote that Julio needed paperwork unless court documents were submitted, later wrote that Julio and Jane were the only approved occupants, and also wrote that effective January 1, 2026 Benjamin was no longer listed based on `internal review` and `court documentation currently on file`.
+16. The "JC Household" chain reflects internal inconsistency that warrants explanation: on January 12, 2026 HACC first wrote that Julio needed paperwork unless court documents were submitted, later wrote that Julio and Jane were the only approved occupants, and also wrote that effective January 1, 2026 Benjamin was no longer listed based on "internal review" and "court documentation currently on file."
 17. The broader sequence also includes a February 13, 2026 HACC 30-Day Notice of Termination addressed to Julio Regal Florez-Cortez, and the March 23 declarations attribute Benjamin's removal, in substance, to outside document flows from Benjamin's brother and stepfather.
 18. Jane Cortez's separate April 8, 2026 declaration adds first-person support that officers came to pick her up and take her to the doctor, that she understood Solomon was trying to take her away without her approval and without even allowing her to take her purse, ID, or money, and that the household had remained stuck because housing had not cooperated in processing a two-bedroom move path.
 19. The current record does not yet identify a complete authority-document chain (including any power-of-attorney instrument) or a direct HACC source note identifying who submitted the controlling materials.
 20. On the present evidentiary record, these facts support threshold show-cause inquiry and targeted production rather than final factual findings on responsibility.
+20A. Before any contempt finding is requested on this branch, Movant will provide a clause-specific proof map identifying the exact quoted order term(s) relied on and the exact allegedly conflicting act(s), with date/time/source citations.
+20B. On this branch, Movant does not request any final attribution finding that Solomon caused a specific HACC lease/voucher action unless and until direct actor-source records are produced or admitted.
 
 III. PROOF POSTURE
 
@@ -54,6 +57,14 @@ III. PROOF POSTURE
 23. The current record also supports a conservative delay-allocation distinction: the clearer direct processing delay belongs to the Quantum / Blossom / HACC branch (packet/tax-material trail open by December 2, 2025; January 26, 2026 acknowledgment that Quantum had not forwarded intake; first clear voucher marker March 19, 2026), while the clearer direct lease-disruption period appears in the Solomon branch (Benjamin removed effective January 1, 2026; removal confirmed January 12, 2026; restoration marker February 4, 2026).
 24. The direct HACC actor-identification record remains a live production target and may require subpoena or other compelled production.
 25. The current record does not yet prove what, if any, authority document Solomon was invoking or what he may have signed in Jane's name.
+25A. Source duty/prohibition anchors (Exhibit 1): the order packet reflects in-effect/no-further-service language, including "The order is now in effect," "The Restraining Order you have received is in effect and remains in effect until the court changes or terminates it," and "No further service is necessary because Respondent appeared in person before the court," together with operative restraint/interference language.
+25B. Trigger posture: once the order was in effect and respondent appeared in person in that matter, compliance and noninterference duties were active unless modified by the issuing court.
+25C. Alleged conflicting acts offered for threshold show-cause review:
+   a. post-order conditional-compliance text posture quoted in paragraph 8;
+   b. housing-control assertions in later guardianship filings quoted in paragraph 9;
+   c. asserted household/lease-disruption sequence reflected in paragraphs 10-18 and 23.
+25D. Requested remedy sequence on this branch is threshold-only unless and until clause-specific contempt predicates are proven on admissible evidence.
+25E. If direct actor-source records are not available by hearing, Movant requests record-completion directives and noninterference sequencing only, without final contempt attribution findings on housing-causation allegations.
 
 IV. LEGAL AUTHORITY
 
@@ -71,16 +82,19 @@ V. REQUESTED HEARING STRUCTURE
    b. Solomon's notice and later text posture;
    c. the housing-specific allegations in Solomon's guardianship petition;
    d. the March 23 Skee-hearing declarations;
-   e. the January 12, 2026 `JC Household` chain, including the inconsistent HACC household-status record, the `internal review` / `court documentation currently on file` statement, and the February 13, 2026 Julio termination notice;
+   e. the January 12, 2026 "JC Household" chain, including the inconsistent HACC household-status record, the "internal review" / "court documentation currently on file" statement, and the February 13, 2026 Julio termination notice;
    f. HACC notice of restraining-order concerns;
    g. Jane Cortez's April 8, 2026 first-person account of the forced pickup / transport event and housing noncooperation;
    h. the elimination-based lease-removal inference and any claimed-authority theory; and
    i. any later-produced HACC source materials.
 33. If the Court finds the direct HACC actor-identification record incomplete, limit the hearing to threshold show-cause review and record-completion directions rather than final contempt findings.
+33A. Before any contempt finding or remedial sanction order on this branch, require a filed and served clause-specific proof map identifying each allegedly conflicting act and the exact quoted order term offered as violated.
+33B. No contempt finding or remedial sanction order on this branch should be entered unless the responding party had notice and an opportunity to address the clause-specific proof map and cited records.
+33C. No final attribution finding that Solomon caused a specific HACC lease/voucher/household-status action should be entered on this branch without direct actor-source proof in the admissible record.
 
 VI. EXHIBIT REFERENCES
 
-34. This motion presently relies on the global exhibit set and declaration materials filed with this packet, including Exhibits 1, 2, 3, 4, 5, 7, and AC and the declaration in support of motions.
+34. This motion presently relies on the global exhibit set and declaration materials filed with this packet, including Exhibits 1, 2, 3, 4, 5, and 7, with the Short-Form Declaration of Benjamin Barber (Threshold Relief) as the primary threshold declaration and supplemental declarations for added chronology/detail.
 35. Movant requests leave to supplement with HACC source records, clerk-certified court records, and supplemental Exhibits 8, 9, and 10 once produced.
 
 DATED: ____________, 2026

@@ -8,24 +8,35 @@ In the Matter of:
 Jane Kay Cortez,
 Protected Person.
 
-[PROPOSED] ORDER ON MOTION TO DISMISS OR LIMIT ISSUES
-PENDING THRESHOLD ISSUE-PRECLUSION RECORD
+[PROPOSED] ORDER ON MOTION TO LIMIT ISSUES PENDING THRESHOLD
+ISSUE-PRECLUSION RECORD OR, IN THE ALTERNATIVE, TO DISMISS TO THE
+EXTENT PRECLUSION IS ESTABLISHED
 
-The Court, having reviewed the motion, declaration, and the file and record herein, FINDS and ORDERS:
+The Court, having reviewed the motion, declarations, exhibits, and file, and being fully advised, FINDS and ORDERS:
 
-1. The motion is: ______________________.
-2. The following `188` row ID(s), if any, are found fully supported by admissible records and are dismissed/limited as precluded: ______________________.
-3. Any `188` row not expressly listed in paragraph 2 remains provisional pending admissible certified support and is not resolved dispositively in this order.
-4. If no `188` row is listed in paragraph 2, any dispositive preclusion-dismissal request is denied without prejudice to renewal after admissible certified supplementation, and relief is limited to threshold narrowing, sequencing, and supplementation.
-5. No later than ______________________, the parties shall submit any certified records regarding the claimed prior proceeding, including any signed order/judgment, register of actions, and hearing/appearance materials relevant to issue preclusion.
-6. If a party contends no such prior-proceeding records exist, that party shall say so in a signed filing by: ______________________.
-7. Further hearing, if required, is set for: ______________________.
-8. If the Court finds one or more preclusion elements not yet established by admissible certified records, relief is limited at this stage to threshold issue narrowing, sequencing, and supplementation schedule rather than dispositive dismissal.
-9. Parallel or overlapping proceedings are treated as scope-control context only unless and until the full Oregon issue-preclusion elements are proven on admissible records.
-10. Nothing in this order adjudicates collateral housing, eviction, or federal civil-rights merits except as strictly necessary for guardianship-specific determinations.
-11. Before any dispositive preclusion ruling is entered, the moving party must file (or identify in the current record) a row-by-row element map identifying one source cite for each required preclusion element and indicating whether each row is fully supported by admissible certified records.
-12. No `188` row may be treated as precluded unless the affected party had notice and an opportunity to address that specific row and its cited record support.
-13. Any duty in this order keyed to a blank date or blank deadline field is triggered only after that field is completed in the signed order.
+I. FINDINGS
+
+1. The Court has reviewed the threshold issue-preclusion branch and the alternative dismissal branch.
+1A. For consistency with the shared deontic mapping attachments, the dispositive preclusion branch addressed in this order corresponds to Rule ID `R-PI-01`.
+2. At this stage, any dispositive preclusion ruling must be supported by admissible records establishing the required Oregon issue-preclusion elements for each specific issue proposed for preclusion, including issue identity, actual litigation/essentiality, finality, party/privity alignment, and full-and-fair opportunity.
+3. Mere overlap with other proceedings, standing alone, is not sufficient for dispositive preclusion.
+4. No issue may be treated as precluded unless the affected party had notice and an opportunity to be heard.
+
+II. ORDERS
+
+5. The motion is: ________________________________.
+6. The Court enters threshold narrowing and sequencing as follows: ________________________________.
+7. If the Court finds one or more specific issue rows fully supported by admissible records on the required preclusion elements, only those identified issue rows are dismissed/limited as precluded: ________________________________.
+8. Any issue row not expressly identified in paragraph 7 is not dismissed on preclusion grounds in this order.
+9. If no issue row is fully supported at the time of ruling, the dispositive preclusion-dismissal branch is denied without prejudice, and relief is limited to threshold narrowing, sequencing, and supplementation.
+10. No later than ______________________, the parties must file or identify admissible records relevant to threshold preclusion adjudication, including, as applicable, signed orders or judgments, register-of-actions records, and hearing or appearance materials.
+11. If a party contends no additional prior-proceeding records exist, that party must file a signed statement by ______________________.
+12. Before any later dispositive preclusion ruling is requested, the moving party must file (or identify in the current record) a row-by-row element map identifying at least one source citation for each required preclusion element for each issue row.
+12A. Any requested dispositive ruling under Rule ID `R-PI-01` must identify the specific issue row(s) and the certified source support for each required preclusion element.
+13. No issue row may be treated as precluded unless the affected party had notice and an opportunity to address that specific row and the cited record support.
+14. Nothing in this order adjudicates collateral housing, eviction, relocation-duty, or federal civil-rights merits except to the limited extent strictly necessary for guardianship-specific determinations.
+15. Any duty keyed to a blank date or deadline field in this order is triggered only after that field is completed in the signed order.
+16. Further hearing, if required, is set for: ______________________.
 
 IT IS SO ORDERED.
 

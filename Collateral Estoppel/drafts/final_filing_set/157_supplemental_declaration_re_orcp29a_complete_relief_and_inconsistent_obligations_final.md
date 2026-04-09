@@ -18,6 +18,7 @@ I, Benjamin Barber, declare as follows:
    a. Motion to Limit Probate Issues and Require Section 18 / Eviction Merits to Be Litigated in the Proper Forum, or, only if necessary, for Limited ORCP 29 Joinder; and
    b. Objection/Fallback filing seeking exclusion or strike of collateral housing merits from probate.
 3. I make this declaration from personal knowledge of communications and events in this matter and from my review of records filed or prepared for filing in this case.
+3A. Where I state "based on my review of the record" below, I am referring to the filed and lodged declarations, overlap-status filings, and companion motions identified in this packet, and I offer those points for threshold scope/party-structure analysis rather than as stand-alone final merits proof.
 
 A. COMPLETE-RELIEF FACTOR (ORCP 29A)
 
@@ -27,7 +28,7 @@ A. COMPLETE-RELIEF FACTOR (ORCP 29A)
 
 B. INCONSISTENT-OBLIGATION RISK (ORCP 29A)
 
-7. Based on my review of the record, overlapping housing issues are already being litigated or pursued in separate tracks, including Justice Court case `26FE0586` and the District of Oregon complaint track involving HACC and Quantum.
+7. Based on my review of the record, overlapping housing issues are already being litigated or pursued in separate tracks, including Justice Court case 26FE0586 and the District of Oregon complaint track involving HACC and Quantum.
 8. If this probate case were to adjudicate those same housing merits while HACC and Quantum are absent, there is a substantial risk of fragmented rulings and inconsistent obligations across forums.
 9. Allowing merits findings here on the same housing-processing chain could prejudice absent entities' ability to protect their interests and could leave existing parties exposed to conflicting directives.
 
@@ -36,6 +37,7 @@ C. LIMITED JOINDER AS FALLBACK ONLY
 10. My primary request remains scope limitation and exclusion of collateral housing merits from probate.
 11. Only if the Court determines that some housing-merits component cannot be excluded, I request limited ORCP 29A joinder of HACC and Quantum for overlap-control and party-structure purposes.
 12. If the Court does not allow even limited joinder, I request that those collateral housing-merits questions be expressly reserved to the proper forum and not decided in this probate proceeding.
+12A. For consistency with the shared deontic mapping attachments, the fallback nonfeasibility/scope branch in this declaration corresponds to Rule ID `R-JN-01`, and the ORCP 22C derivative-liability limit corresponds to Rule ID `R-JN-02`.
 
 D. ORCP 29B FALLBACK FACTORS (IF JOINDER IS NOT FEASIBLE)
 
@@ -44,6 +46,7 @@ D. ORCP 29B FALLBACK FACTORS (IF JOINDER IS NOT FEASIBLE)
 15. The current protective-proceeding record identifies guardianship-specific questions that can be addressed without deciding full housing-merits liability.
 16. Based on those two record points, I request shaped relief that keeps this matter focused on guardianship findings and reserves collateral housing merits to those separately postured proceedings.
 16A. If the Court requests further ORCP 29 feasibility foundation, I can file a short supplemental declaration identifying service-channel verification steps, service-attempt chronology, and custodian/agent identity confirmation for HACC and Quantum from the case service-tracker materials.
+16B. I do not request any final feasibility finding under Rule ID `R-JN-01` based on address references alone without filed service-attempt proof identifying date, method, recipient identity/title, and result.
 
 E. RECORD AND PROOF LIMITATIONS
 
@@ -52,6 +55,7 @@ E. RECORD AND PROOF LIMITATIONS
 19. Where record support is incomplete, I identify those points as provisional and not finally adjudicated, and I do not ask the Court to treat provisional points as established facts.
 20. Any internal pin-cite or temporal-trigger tables are offered, if at all, only as organizational aids.
 21. My filing posture is to keep dispositive requests tied to admissible proof, request scope-control and shaped-relief sequencing on the current record, and avoid presenting uncertified overlap context as final merits adjudication.
+21A. I also do not request any dispositive preclusion completion under Rule ID `R-PI-01` through this declaration; dispositive preclusion remains limited to the separate threshold preclusion motion and only to the extent supported by certified row-level records.
 
 I declare under penalty of perjury under the laws of the State of Oregon that the foregoing is true and correct.
 

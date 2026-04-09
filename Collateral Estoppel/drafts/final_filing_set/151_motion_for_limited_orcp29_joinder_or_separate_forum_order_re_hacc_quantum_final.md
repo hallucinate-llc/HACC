@@ -30,7 +30,7 @@ II. AUTHORITY
 7. ORCP 29B requires the Court, when joinder is not feasible, to evaluate prejudice, the ability to shape relief to reduce prejudice, adequacy of judgment in the person's absence, and whether an adequate remedy exists if the action is dismissed for nonjoinder.
 8. ORCP 22C governs third-party practice but is derivative-liability focused, requiring a plausible pleading that the nonparty is or may be liable to the defending party for all or part of the petitioner's claim; it is not the best fit where absent entities are alleged primary housing actors rather than liability-over parties.
 9. ORS 125.065, 125.075, and 125.080 govern notice, objections, and hearings on motions in protective proceedings.
-10. If the Court determines any ORCP branch is procedurally inapplicable in this probate posture, Movant requests the same practical scope-control result under the Court's Chapter 125 authority to confine this case to guardianship-specific adjudication.
+10. If the Court determines any ORCP path is procedurally inapplicable in this probate posture, Movant requests the same practical scope result under the Court's Chapter 125 authority to confine this case to guardianship-specific adjudication.
 
 III. FACTUAL/PROCEDURAL BASIS
 
@@ -40,11 +40,18 @@ III. FACTUAL/PROCEDURAL BASIS
 14. HACC and Quantum are not presently named parties in this probate matter, and the current protective-proceeding record does not require full merits adjudication of their federal housing duties in order to decide guardianship-related questions concerning Jane Kay Cortez. See Supplemental Declaration Re ORCP 29A Complete-Relief and Inconsistent-Obligation Factors, paragraphs 4-6, and Objection to First Amended Petition for Appointment of Guardian, paragraphs 46-49.
 15. If this Court does not exclude those housing-merits issues, however, absent-party problems and inconsistent-obligation risks become substantially more acute. See Supplemental Declaration Re ORCP 29A Complete-Relief and Inconsistent-Obligation Factors, paragraphs 7-9.
 16. In this motion, points supported by admissible records are presented as filing-ready; unresolved cross-forum finality and issue-identity points are presented as provisional unless supported by certified or filed-stamped records.
-17. Feasibility posture: based on the current case record, HACC and Quantum appear to have identifiable service channels already used in companion records/subpoena materials, including HACC custodian service addressing at 13930 Gain St, Oregon City, OR 97045 and Quantum service addressing at 601 E 16th St, Vancouver, WA 98663 (each subject to final verification at issuance). See companion subpoena/service packet files for those entities and related service-tracker materials in this packet.
+17. Feasibility posture: based on the current case record, HACC and Quantum appear to have identifiable service channels reflected in companion subpoena/service materials, including HACC custodian service addressing at 13930 Gain St, Oregon City, OR 97045 and Quantum service addressing at 601 E 16th St, Vancouver, WA 98663 (each subject to final verification at issuance).
 18. Because feasibility is fact-sensitive, Movant does not ask the Court to treat address references alone as conclusive proof of completed ORCP service.
 19. If the Court requests added foundation before an ORCP 29 ruling, Movant requests leave to file a short supplemental declaration limited to: service-channel verification steps used, custodian/agent identity confirmation, service-attempt chronology, resulting prejudice mechanics if parties remain absent, and timeline impact on the guardianship calendar.
-20. Unless and until that supplemental foundation is lodged, Movant requests shaped scope-control relief first and does not ask the Court to treat feasibility assertions as completed service findings.
-21. Movant further requests that the Court make no final feasibility finding under ORCP 29A/29B based solely on address references or internal tracking notes without filed service-attempt and agent/custodian-proof support.
+20. Unless and until that supplemental foundation is lodged, Movant requests shaped scope relief first and does not ask the Court to treat feasibility assertions as completed service findings.
+21. Movant further requests that the Court make no final feasibility finding under ORCP 29A/29B based solely on address references without filed service-attempt and agent/custodian-proof support.
+21A. Before any final ORCP 29A/29B feasibility finding, Movant requests that the record include at least one filed proof item identifying date, method, recipient identity/title, and result for each attempted service channel.
+
+III-A. RULE-ID BRANCH MAPPING
+
+21B. For consistency with the shared deontic mapping attachments, the ORCP 29B fallback branch in this motion is Rule ID `R-JN-01`.
+21C. The ORCP 22C derivative-liability limit branch in this motion is Rule ID `R-JN-02`.
+21D. Any final feasibility finding requested under Rule ID `R-JN-01` is conditioned on the filed service-attempt proof identified in paragraph 21A.
 
 IV. ARGUMENT
 
@@ -52,7 +59,7 @@ A. ORCP 29A JOINDER STANDARD IF COLLATERAL MERITS ARE NOT EXCLUDED
 
 22. The probate court can decide whether a guardian or other protective relief is appropriate without converting this case into a trial of Section 18 relocation compliance, eviction causation, or housing-program liability.
 23. If the Court permits housing-merits adjudication in this case while HACC and Quantum remain absent, existing parties face risk of fragmented adjudication and inconsistent obligations.
-24. In that limited circumstance, ORCP 29A is the narrower fallback mechanism to test whether complete relief and consistent obligations are possible.
+24. In that limited circumstance, ORCP 29A is the narrower mechanism to test whether complete relief and consistent obligations are possible.
 
 B. ORCP 29B FALLBACK FACTORS IF JOINDER IS NOT FEASIBLE
 
@@ -73,18 +80,18 @@ B. ORCP 29B FALLBACK FACTORS IF JOINDER IS NOT FEASIBLE
    c. a guardianship-only judgment remains adequate for Chapter 125 purposes; and
    d. collateral housing merits have alternate forums already identified in the record.
    Those conclusions are based on the current overlap and feasibility record cited above and are offered as threshold scope findings rather than completed merits adjudications.
-   Before any hearing on this ORCP 29B branch, Movant will file (or identify in the current record) a one-page ORCP 29B factor chart mapping each factor to at least one legal authority cite and one admissible record cite.
+   Before any hearing on this ORCP 29B issue, Movant will file (or identify in the current record) a one-page ORCP 29B factor chart mapping each factor to at least one legal authority cite and one admissible record cite.
 
 C. ORCP 22C DERIVATIVE-LIABILITY LIMIT
 
 27. ORCP 22C is not the best procedural vehicle here because third-party practice requires liability-over pleading (nonparty may be liable for all or part of petitioner's claim against defending party), while the present allegations treat HACC and Quantum as primary actors in separate housing disputes rather than derivative indemnitors for the guardianship petition claim.
-28. Unless a clean derivative-liability theory is pleaded, collateral housing claims should remain outside ORCP 22C practice in this probate case.
+28. Unless a clean derivative-liability theory is pleaded, collateral housing claims should remain outside ORCP 22C practice in this probate case under Rule ID `R-JN-02`.
 
 D. REQUESTED SCOPE RESULT
 
 29. If protective-proceeding scope or ORCP posture makes joinder impractical here, the correct remedy is not to litigate those merits anyway; it is to confine this case to guardianship issues and require housing-liability litigation in the proper case.
 30. This approach preserves guardianship-function integrity while protecting against collateral relitigation and inconsistent outcomes.
-31. The same scope-limiting principle is especially important where collateral coercive-control allegations are disputed, because those disputes can rapidly expand beyond the probate lane and overwhelm threshold guardianship adjudication. For this motion's ORCP 29/22 purposes, the Court should require a clean record and keep collateral merits in the proper forum rather than trying those merits here.
+31. The same scope-limiting principle is especially important where collateral coercive-control allegations are disputed, because those disputes can rapidly expand beyond the probate proceeding and overwhelm threshold guardianship adjudication. For this motion's ORCP 29/22 purposes, the Court should require a clean record and keep collateral merits in the proper forum rather than trying those merits here.
 32. Movant requests written findings identifying which ORCP 29B factor(s) the Court relied on (or, if ORCP is found inapplicable, which Chapter 125 scope-management basis is relied on) so the relief sequence is clear on the record.
 
 V. PROPOSED SCOPE LIMITS IF JOINDER IS ALLOWED
@@ -98,10 +105,10 @@ VI. RESERVATION
 
 VII. LIMITATIONS AND REQUESTED HANDLING
 
-36. Any joinder branch should preserve due-process sequence, including service, response opportunity, and a scope-limited hearing before any merits effect.
-37. On the current record, Movant requests shaped scope-control relief to prevent collateral-merits forum drift.
+36. Any joinder order should preserve due-process sequence, including service, response opportunity, and a scope-limited hearing before any merits effect.
+37. On the current record, Movant requests shaped scope relief to prevent collateral-merits forum drift.
 38. Uncertified overlap context, address references, and provisional cross-forum status notes are not offered as completed final-merits proof.
-39. Any internal trigger/remedy tables are offered, if at all, only as organizational aids; admissible exhibits and certified records control if any conflict appears.
+39. Any demonstrative chart or summary aid is offered only as an organizational aid; admissible exhibits and certified records control if any conflict appears.
 
 DATED: ____________, 2026
 

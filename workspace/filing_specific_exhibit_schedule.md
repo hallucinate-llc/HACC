@@ -15,6 +15,18 @@ Case No. 26FE0586
 
 This schedule is intended to keep the evidence set tightly marshaled while using one common exhibit volume. The filing set should rely on the single master binder and cite the binder pages listed below.
 
+Before any exhibit is placed into the binder, insert:
+
+1. a tab cover page; and
+2. an exhibit cover page
+
+using:
+
+- [exhibit_tab_cover_page_template_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_tab_cover_page_template_2026-04-09.md)
+- [exhibit_cover_page_template_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_cover_page_template_2026-04-09.md)
+- [exhibit_cover_page_master_tracker_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_cover_page_master_tracker_2026-04-09.md)
+- [exhibit_cover_page_completion_tracker_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_cover_page_completion_tracker_2026-04-09.md)
+
 ## Master Binder
 
 Use:

@@ -2,6 +2,21 @@
 
 Use this to build a staged binder or print-folder from repository-side records before mixing in any external-only requests.
 
+Before any exhibit goes into a binder, insert:
+
+1. a tab cover page; and
+2. an exhibit cover page
+
+using:
+
+- [exhibit_tab_cover_page_template_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_tab_cover_page_template_2026-04-09.md)
+- [exhibit_cover_page_template_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_cover_page_template_2026-04-09.md)
+- [exhibit_cover_page_master_tracker_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_cover_page_master_tracker_2026-04-09.md)
+- [exhibit_cover_page_assembly_note_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_cover_page_assembly_note_2026-04-09.md)
+- [exhibit_cover_page_completion_tracker_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_cover_page_completion_tracker_2026-04-09.md)
+- [evidence_binder_merged_print_order_2026-04-09.md](/home/barberb/HACC/workspace/evidence_binder_merged_print_order_2026-04-09.md)
+- [evidence_binder_exhibit_and_cover_sheet_index_2026-04-09.md](/home/barberb/HACC/workspace/evidence_binder_exhibit_and_cover_sheet_index_2026-04-09.md)
+
 ## 1. Housing Core Stack
 
 Build this first.

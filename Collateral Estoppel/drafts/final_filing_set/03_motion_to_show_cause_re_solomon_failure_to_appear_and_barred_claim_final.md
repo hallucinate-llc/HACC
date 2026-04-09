@@ -25,6 +25,7 @@ I. REQUESTED RELIEF
 4. Enter only those remedial orders supported by proven violation of identified order terms, including (as warranted by the evidence) compliance-clarification directives, deadline-based cure directives, and compensatory remedial relief authorized by statute.
 5. Require a clause-specific proof map before any contempt finding: the movant must identify the exact order term (quoted text + exhibit cite) and the exact allegedly conflicting act (date/time/source cite).
 6. At this filing stage, movant seeks show-cause sequencing based on the currently mapped terms in paragraph 28(a)-(b) and does not request final contempt findings on any unmapped term.
+6A. For efficient handling, Movant requests that this motion be treated as the primary show-cause track and that the companion alternative show-cause motion be held in reserve unless the Court directs consolidated treatment.
 
 II. GROUNDS
 
@@ -37,18 +38,19 @@ II. GROUNDS
 13. The preserved March 10, 2026 Google Voice thread reflects order-image MMS transmissions from Movant at approximately 10:36:48-10:36:49 AM Pacific Time.
     It is followed by Solomon's statement at approximately 10:39:26 AM Pacific Time, "Oh I understand, I'm just not incentivized to cooperate," and then his additional statement at approximately 10:45:53 AM Pacific Time, "Once I get served and it goes into effect, I will comply with whatever the order states. But it is not in effect."
     This sequence is relevant because it can be compared directly against the order packet's in-effect and in-person-appearance language.
-14. The April 3-4, 2026 counsel email chain shows service-labeled transmission to Alex Bluestone and counsel's response that he did not accept service on behalf of his client while confirming representation in the Jane Cortez guardianship matter; the preserved chain also includes a same-day FedEx receipt image and delivery-tracking identifiers consistent with physical transmittal to counsel. This supports same-matter notice/knowledge while preserving formal service-validity issues for Court determination. See Exhibit 7 communication sequence and Declaration of Benjamin Barber (Court-Safe Trimmed), paragraphs 11-12.
-15. The newly retrieved April 8, 2026 continuation of that same thread further shows counsel raising a service/proof objection concerning Movant's guardian-ad-litem effort and stating that he would contact the court to request an expedited hearing to address the issues raised. This is relevant to same-matter notice and procedural posture, but is not presently offered as proof that the court actually set or held such a hearing. See Exhibit 7 communication sequence and Declaration of Benjamin Barber (Court-Safe Trimmed), paragraph 11.
+14. The April 3-4, 2026 counsel email chain shows service-labeled transmission to Alex Bluestone and counsel's response that he did not accept service on behalf of his client while confirming representation in the Jane Cortez guardianship matter; the preserved chain also includes a same-day FedEx receipt image and delivery-tracking identifiers consistent with physical transmittal to counsel. This supports same-matter notice/knowledge while preserving formal service-validity issues for Court determination. See Supplemental Declaration Re: Authentication of Google Voice Transcript and SMS Email Records and Declaration of Benjamin Barber (Court-Safe Trimmed), paragraphs 11-12.
+15. The newly retrieved April 8, 2026 continuation of that same thread further shows counsel raising a service/proof objection concerning Movant's guardian-ad-litem effort and stating that he would contact the court to request an expedited hearing to address the issues raised. This is relevant to same-matter notice and procedural posture, but is not presently offered as proof that the court actually set or held such a hearing. See Supplemental Declaration Re: Authentication of Google Voice Transcript and SMS Email Records and Declaration of Benjamin Barber (Court-Safe Trimmed), paragraph 11.
 15A. The current record also includes writ-of-assistance process in this probate matter that Movant contends was used to attempt involuntary pickup/transport of Jane Kay Cortez before a fully clean predicate notice/order record was established for that branch.
 15B. Movant further contends that, despite prior notice to Solomon's counsel of threshold preclusion and service-defect issues in this same matter, filings and writ-seeking conduct continued without curing those threshold defects.
 15C. Movant asks the Court to require Solomon Barber to explain: (a) the exact legal and factual predicate he relied on for writ-of-assistance process; (b) what service/notice steps were taken on Benjamin Barber for that writ branch; (c) why any known restraining-order overlap and prior notice of collateral-estoppel objections did not result in narrower, noncoercive filing posture first; and (d) why the resulting filing posture should not be treated as willful blindness to restraining-order and service-sequencing concerns.
-16. Movant also reports that the Clackamas County Sheriff's Office served the restraining-order papers on Solomon Samuel Barber on April 9, 2026.
-    Movant requests leave to lodge the sheriff return/proof-of-service document immediately upon receipt and, until that filing, treats this service event as reported context rather than substitute formal proof.
-    Movant does not request a formal service finding on this reported event unless and until the official return is lodged.
-    Movant will file any sheriff return/proof document promptly after receipt and before requesting any service-dependent enforcement finding tied to that reported event.
+16. Movant also states from personal knowledge that on April 9, 2026, a Clackamas County sheriff deputy served restraining-order papers on Solomon Samuel Barber in person, and Movant captured a smartphone photo of that event (file: "Solomon Service.HEIC").
+    Movant has prepared supplemental service-return notice/declaration filings for lodging of both the photo exhibit and any official return/proof document.
+    Until an official return is lodged and accepted, Movant offers the personal-observation/photo evidence as supplemental service proof context and does not request a formal service finding based solely on that point.
+    Movant will file any sheriff return/proof document promptly after receipt before requesting any service-dependent enforcement finding tied to that event.
 17. This motion therefore seeks an order-to-appear and explanation pathway first, with any sanction remedy limited to what is later proven by admissible order-text, notice, and compliance evidence.
-18. The requested show-cause sequencing does not depend on the reported April 9, 2026 sheriff-service event; that reported event is offered as supplemental context only unless and until the official return is lodged.
-19. The supporting declaration and attached records identify the operative order text, case linkage, and service/effect-position events asserted as the predicate for show-cause relief.
+18. The requested show-cause sequencing does not depend on the April 9, 2026 sheriff-service event; that personal-observation/photo evidence is offered as supplemental context only unless and until the official return is lodged.
+19. The Short-Form Declaration of Benjamin Barber (Threshold Relief), together with supporting supplemental declarations and attached records, identifies the operative order text, case linkage, and service/effect-position events asserted as the predicate for show-cause relief.
+19A. For consistency with shared deontic attachments, this motion's primary compliance branch is Rule ID `R-SC-01`; the no-further-service/appearance anchor branch is Rule ID `R-SC-02`; and the sheriff-service formal-return gate branch is Rule ID `R-SVC-01`.
 
 III. LEGAL AUTHORITY
 
@@ -60,7 +62,7 @@ III. LEGAL AUTHORITY
 25. This motion also does not request a dispositive collateral-estoppel dismissal ruling; any preclusion-dispositive branch remains in the separately filed threshold preclusion motion and only to the extent supported by admissible records.
 25A. If the Court finds legally deficient writ-related filing conduct after notice/opportunity to be heard, Movant requests that any filing-misconduct sanction path be set by separate briefing order identifying the specific legal vehicle and evidentiary predicates.
 
-IV. DUTY / TRIGGER / BREACH / REMEDY MAP
+IV. DUTY / TRIGGER / BREACH / REMEDY MAP (RULE IDS `R-SC-01`, `R-SC-02`, `R-SVC-01`)
 
 26. Source duty/prohibition:
    a. Exhibit 1/1A reflects in-effect language, including: "The order is now in effect." and "The Restraining Order you have received is in effect and remains in effect until the court changes or terminates it."
@@ -80,6 +82,10 @@ IV. DUTY / TRIGGER / BREACH / REMEDY MAP
    b. If contempt elements are proven, remedial sanctions under ORS 33.105.
    c. If and only if a served order to appear is later not obeyed, Movant may seek ORS 33.075 compelled-appearance mechanisms by separate request or hearing branch.
    d. No ORCP 17 sanctions are requested in this filing branch.
+30A. Rule-ID gate summary:
+   a. `R-SC-01`: clause-specific proof map + notice/opportunity to respond before any contempt finding;
+   b. `R-SC-02`: if notice/appearance anchor is contested, resolve on certified service/appearance record;
+   c. `R-SVC-01`: no final service-sufficiency finding requested on photo-only support without official sheriff return.
 
 V. REQUESTED HEARING STRUCTURE
 
@@ -95,7 +101,7 @@ V. REQUESTED HEARING STRUCTURE
 
 VI. EXHIBIT REFERENCES (GLOBAL NUMBERING)
 
-37. This motion presently relies on Exhibits 1, 1A, and 7, together with supporting declarations and authenticated communication records filed with this packet.
+37. This motion presently relies on Exhibits 1 and 1A, together with the Short-Form Declaration of Benjamin Barber (Threshold Relief), supplemental declarations authenticating communication records, and related supporting declarations filed with this packet.
 38. Movant requests leave to supplement with certified notice/appearance/preclusion records (Exhibits 8, 9, and 10) immediately upon receipt.
 39. If useful to the Court, Movant can provide an organizational appendix summarizing exhibit status; however, admissible exhibits and certified records control.
 40. Any internal element-to-evidence readiness matrix is offered, if at all, only as an organizational aid; admissible exhibits and certified records control.

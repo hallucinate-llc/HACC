@@ -4,6 +4,21 @@ Case: `26PR00641` and related housing / eviction matters
 
 Use this plan when attaching the housing-duty appendix materials as a compact formal appendix or motion-support exhibit set.
 
+Assembly rule:
+
+1. place a tab cover page before each `Exhibit C-*` item;
+2. place an exhibit cover page before each `Exhibit C-*` item; and
+3. identify on the exhibit cover page:
+   - the motion(s), declaration(s), or memorandum(a) that rely on the appendix exhibit; and
+   - the proposition the exhibit is offered to support.
+
+Use:
+
+- [exhibit_tab_cover_page_template_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_tab_cover_page_template_2026-04-09.md)
+- [exhibit_cover_page_template_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_cover_page_template_2026-04-09.md)
+- [exhibit_cover_page_master_tracker_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_cover_page_master_tracker_2026-04-09.md)
+- [exhibit_cover_page_completion_tracker_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_cover_page_completion_tracker_2026-04-09.md)
+
 ## Section C. Housing duty appendix
 
 `Exhibit C-1`

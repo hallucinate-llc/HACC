@@ -18,23 +18,13 @@ I, Benjamin Barber, declare as follows:
 
 A. RECORDS IDENTIFIED
 
-3. The Google Voice thread transcript located at:
-`/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14166-Me-to-solomon-gv-0eb16863d122188b/transcript.txt`
-is a true and correct copy of a communication thread between my account and Solomon's number ending in 6911.
+3. The Google Voice thread transcript produced from my account export for the March 10, 2026 communication thread is a true and correct copy of a communication thread between my account and Solomon's number ending in 6911.
 
-4. The inbound SMS email record located at:
-`/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743129_Tue--10-Mar-2026-17-39-27--0000_New-text-message-from-solomon--503--381-6911.eml`
-is a true and correct copy of a message I received from Solomon through Google Voice email notification.
+4. The inbound SMS email record for the March 10, 2026 10:39:26 AM Pacific message is a true and correct copy of a message I received from Solomon through Google Voice email notification.
 
-5. The inbound SMS email record located at:
-`/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743131_Tue--10-Mar-2026-17-45-54--0000_New-text-message-from-solomon--503--381-6911.eml`
-is a true and correct copy of a message I received from Solomon through Google Voice email notification.
+5. The inbound SMS email record for the March 10, 2026 10:45:53 AM Pacific message is a true and correct copy of a message I received from Solomon through Google Voice email notification.
 
-6. Additional order-awareness records located at:
-`/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660669_Mon--17-Nov-2025-20-38-24--0000_New-text-message-from-solomon--503--381-6911.eml`
-and
-`/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660690_Mon--17-Nov-2025-20-56-22--0000_New-text-message-from-solomon--503--381-6911.eml`
-are true and correct copies of messages I received from the same source.
+6. Additional order-awareness records for November 17, 2025 are true and correct copies of messages I received from the same source.
 
 B. FOUNDATION FACTS
 

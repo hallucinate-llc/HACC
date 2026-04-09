@@ -15,16 +15,16 @@ AND THRESHOLD ISSUE-PRECLUSION REVIEW
 1. WHAT THIS SUPPLEMENT IS INTENDED TO DO
 
 Movant requests a threshold issue-preclusion review before broader merits litigation proceeds. The supplemental certified exhibits are intended to supply the Court with certified source records for that threshold review.
-As of this memorandum version, dispositive preclusion remains row-specific under the certified-element mapping sheet (`188`), and no row should be treated as dispositive unless all required element cells are supported by admissible records.
-As of the current `188` snapshot, no asserted row is yet fully supported by admissible certified records for dispositive preclusion, so the principal hearing ask is threshold narrowing and sequencing rather than immediate dismissal.
+As of this memorandum version, dispositive preclusion remains row-specific under the certified-element mapping sheet, and no row should be treated as dispositive unless all required element cells are supported by admissible records.
+As of the current mapping-sheet snapshot, no asserted row is yet fully supported by admissible certified records for dispositive preclusion, so the principal hearing ask is threshold narrowing and sequencing rather than immediate dismissal.
 
 2. EXHIBIT MAP (CURRENT CORRECTED POSTURE)
 
 1. Exhibit 8:
-   Certified docket/register for case `26PR00641`, including the no-signed-order posture if reflected by the certified register.
+   Certified docket/register for case 26PR00641, including the no-signed-order posture if reflected by the certified register.
 
 2. Exhibit 9:
-   Certified signed restraining-order/final-order record from case `25PO11530` (Sam Barber restraining-order matter).
+   Certified signed restraining-order/final-order record from case 25PO11530 (Sam Barber restraining-order matter).
 
 3. Exhibit 10:
    Certified hearing/appearance/notice record relevant to full-and-fair-opportunity analysis.
@@ -32,7 +32,7 @@ As of the current `188` snapshot, no asserted row is yet fully supported by admi
 3. THRESHOLD QUESTIONS FOR THE COURT
 
 1. Prior separate proceeding identity:
-   Whether `25PO11530` and associated certified records establish the required prior proceeding context.
+   Whether 25PO11530 and associated certified records establish the required prior proceeding context.
 
 2. Issue identity:
    Whether the authority/control issues in the current guardianship dispute overlap with the issue decided in the prior signed-order matter.
@@ -46,9 +46,9 @@ As of the current `188` snapshot, no asserted row is yet fully supported by admi
 5. Full and fair opportunity:
    Whether certified hearing/notice records show a full and fair opportunity to be heard.
 
-3A. ROW-SPECIFIC USE RULE (`188`)
+3A. ROW-SPECIFIC USE RULE (CERTIFIED-ELEMENT MAP)
 
-1. Use one asserted issue per row (`PI-01` through `PI-05`).
+1. Use one asserted issue per row.
 2. For each row, require:
    a. one current-issue cite;
    b. one prior-record cite;
@@ -75,10 +75,10 @@ As of the current `188` snapshot, no asserted row is yet fully supported by admi
 
 5. AUTHORITIES ALREADY CITED IN THE MOTION SET
 
-- `Nelson v. Emerald People's Utility Dist., 318 Or 99 (1993)`
-- `Rawls v. Evans, 234 Or App 316 (2010)`
-- `Hayes Oyster Co. v. Dulcich, 199 Or App 43 (2005)`
-- `Westwood Construction Co. v. Hallmark Inns, 182 Or App 624 (2002)`
+- Nelson v. Emerald People's Utility Dist., 318 Or 99 (1993)
+- Rawls v. Evans, 234 Or App 316 (2010)
+- Hayes Oyster Co. v. Dulcich, 199 Or App 43 (2005)
+- Westwood Construction Co. v. Hallmark Inns, 182 Or App 624 (2002)
 
 DATED: ____________, 2026
 

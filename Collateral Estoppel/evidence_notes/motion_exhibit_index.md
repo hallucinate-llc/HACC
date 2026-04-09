@@ -2,6 +2,21 @@
 
 This index is the shared exhibit map for the current Solomon contempt and sanctions drafts in this folder.
 
+Assembly rule:
+
+1. place a tab cover page before each exhibit;
+2. place an exhibit cover page before each exhibit; and
+3. use the exhibit cover page to identify:
+   - each motion, declaration, or memorandum that relies on the exhibit; and
+   - the proposition the exhibit is offered to support.
+
+Use:
+
+- [exhibit_tab_cover_page_template_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_tab_cover_page_template_2026-04-09.md)
+- [exhibit_cover_page_template_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_cover_page_template_2026-04-09.md)
+- [exhibit_cover_page_master_tracker_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_cover_page_master_tracker_2026-04-09.md)
+- [exhibit_cover_page_completion_tracker_2026-04-09.md](/home/barberb/HACC/workspace/exhibit_cover_page_completion_tracker_2026-04-09.md)
+
 ## Core order and notice exhibits
 
 - `Exhibit A`: [sam barber restraining order.pdf](/home/barberb/HACC/evidence/history/sam%20barber%20restraining%20order.pdf)
@@ -80,6 +95,13 @@ This index is the shared exhibit map for the current Solomon contempt and sancti
 
 - `Exhibit AC`: [jane_cortez_declaration_april_8_2026_ocr.txt](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/jane_cortez_declaration_april_8_2026_ocr.txt)
   - Purpose: staged OCR of Jane Cortez's April 8, 2026 declaration giving first-person support for the forced pickup / hospital-transport incident, the claim that Solomon was trying to take her away without her approval, and her account that housing had kept the household stuck by not cooperating on the two-bedroom move process.
+
+## Supplemental sheriff-service support
+
+- `Supplemental Exhibit SR-1`: [Solomon Service.HEIC](/home/barberb/HACC/evidence/paper%20documents/Solomon%20Service.HEIC)
+  - Purpose: smartphone photo captured by Benjamin Barber depicting April 9, 2026 in-person sheriff service event on Solomon Samuel Barber.
+- `Supplemental Exhibit SR-1 Hash`: [Solomon Service.HEIC.sha256.txt](/home/barberb/HACC/evidence/paper%20documents/Solomon%20Service.HEIC.sha256.txt)
+  - Purpose: chain-of-identification hash record for SR-1 (`SHA-256: 94df0830aa27930abe7236441e5060914f7202755788ae58638ebe1b40d99f36`).
 
 ## Supplemental authority exhibits
 
