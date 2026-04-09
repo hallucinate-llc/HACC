@@ -31,7 +31,7 @@ II. GROUNDS
 11. The preserved March 10, 2026 Google Voice thread reflects order-image MMS transmissions from Movant at approximately 10:36:48-10:36:49 AM Pacific Time, followed by Solomon's statement at approximately 10:39:26 AM Pacific Time, "Oh I understand, I'm just not incentivized to cooperate," and then his additional statement at approximately 10:45:53 AM Pacific Time, "Once I get served and it goes into effect, I will comply with whatever the order states. But it is not in effect." This sequence is relevant because it can be compared directly against the order packet's in-effect and in-person-appearance language.
 12. The April 3-4, 2026 counsel email chain shows service-labeled transmission to Alex Bluestone and counsel's response that he did not accept service on behalf of his client while confirming representation in the Jane Cortez guardianship matter; the preserved chain also includes a same-day FedEx receipt image and delivery-tracking identifiers consistent with physical transmittal to counsel. This supports same-matter notice/knowledge while preserving formal service-validity issues for Court determination.
 13. The newly retrieved April 8, 2026 continuation of that same thread further shows counsel raising a service/proof objection concerning Movant's guardian-ad-litem effort and stating that he would contact the court to request an expedited hearing to address the issues raised. This is relevant to same-matter notice and procedural posture, but is not presently offered as proof that the court actually set or held such a hearing.
-14. Movant also reports that the Clackamas County Sheriff's Office served the restraining-order papers on Solomon Samuel Barber on April 9, 2026; Movant requests leave to lodge the sheriff return/proof-of-service document immediately upon receipt, and until that filing treats this service event as reported context rather than substitute formal proof.
+14. Movant also reports that the Clackamas County Sheriff's Office served the restraining-order papers on Solomon Samuel Barber on April 9, 2026; Movant requests leave to lodge the sheriff return/proof-of-service document immediately upon receipt, and until that filing treats this service event as reported context rather than substitute formal proof. Movant does not request a formal service finding on this reported event unless and until the official return is lodged.
 15. This motion therefore seeks an order-to-appear and explanation pathway first, with any sanction remedy limited to what is later proven by admissible order-text, notice, and compliance evidence.
 16. The supporting declaration and attached records identify the operative order text, case linkage, and service/effect-position events asserted as the predicate for show-cause relief.
 
@@ -51,8 +51,8 @@ IV. DUTY / TRIGGER / BREACH / REMEDY MAP
 23. Trigger event:
    a. The duty to comply or seek court relief was triggered when the order was entered and remained in effect.
 24. Alleged breach events (clause-level map):
-   a. Source term 1 (in-effect): the quoted in-effect language identified in paragraph 21(a).
-   b. Source term 2 (service/appearance): the quoted no-further-service language identified in paragraph 21(b).
+   a. Source term 1 (in-effect): the quoted in-effect language identified in paragraph 22(a).
+   b. Source term 2 (service/appearance): the quoted no-further-service language identified in paragraph 22(b).
    c. Claimed conflicting act 1: March 10, 2026 statement, "Oh I understand, I'm just not incentivized to cooperate."
    d. Claimed conflicting act 2: March 10, 2026 statement, "Once I get served and it goes into effect, I will comply... But it is not in effect."
    e. Claimed legal significance: the quoted statements are offered as evidence of a conditional-compliance posture inconsistent with the in-effect/no-further-service terms reflected in Exhibit 1.

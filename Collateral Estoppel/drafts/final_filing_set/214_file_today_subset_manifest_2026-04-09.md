@@ -16,7 +16,7 @@ Purpose:
 2. Reduce risk of accidental filing of incomplete certificates/declarations.
 
 Subset packet file (current refreshed build):
-`print_build_2026-04-08/Court_Ready_File_Today_Subset_214_2026-04-09_rev3.pdf`
+`print_build_2026-04-08/Court_Ready_File_Today_Subset_214_2026-04-09_rev7.pdf`
 
 Included:
 1. Filing Transmittal Note.
@@ -45,6 +45,13 @@ Deontic controls:
 1. `O` File only completed certificates/declarations with actual service facts and dates.
 2. `F` Do not file placeholder documents with bracketed fields.
 3. `O` Keep proof-gated issues conditional pending certified/official record closure.
+
+Related hearing hand-up packet (proposed orders):
+1. Current aligned bundle:
+   `print_build_2026-04-08/Proposed_Orders_Aligned_Set_07_09_154_155_2026-04-09_rev2.pdf`
+2. Use as judge-ready order set companion to this subset when requested at hearing.
+3. Optional combined hand-up (this subset + proposed orders):
+   `print_build_2026-04-08/Hearing_Handup_Packet_SubsetPlusOrders_2026-04-09.pdf`
 
 DATED: April 9, 2026
 

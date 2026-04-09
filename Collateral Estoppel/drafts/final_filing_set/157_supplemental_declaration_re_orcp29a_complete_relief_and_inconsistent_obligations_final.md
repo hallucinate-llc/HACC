@@ -40,9 +40,9 @@ C. LIMITED JOINDER AS FALLBACK ONLY
 D. ORCP 29B FALLBACK FACTORS (IF JOINDER IS NOT FEASIBLE)
 
 13. If joinder is found not feasible, deciding collateral housing merits in the absence of HACC and Quantum would create prejudice risk to absent entities and to existing parties because overlapping factual and duty findings could diverge across forums.
-14. In my understanding, that prejudice can be materially reduced by shaping relief: keep this probate matter focused on guardianship-specific findings and reserve collateral housing merits to the eviction/federal tracks.
-15. In my understanding, a probate judgment that excludes collateral housing-merits adjudication is still adequate to decide protective-proceeding questions under ORS chapter 125.
-16. In my understanding, adequate alternate remedies remain available for collateral housing-merits disputes in separately postured proceedings.
+14. The filed overlap-status materials identify separate eviction and federal tracks for the collateral housing-merits issues.
+15. The current protective-proceeding record identifies guardianship-specific questions that can be addressed without deciding full housing-merits liability.
+16. Based on those two record points, I request shaped relief that keeps this matter focused on guardianship findings and reserves collateral housing merits to those separately postured proceedings.
 
 E. RECORD AND PROOF LIMITATIONS
 

@@ -36,6 +36,10 @@ Element-by-element script (use `188` row IDs):
    a. Cite notice/hearing opportunity records.
    b. If certified minutes not lodged: "Proof-gated for dispositive use."
 
+Row-closure discipline (10 seconds):
+1. "I ask dismissal only on rows where every required `188` element cell is supported by admissible records."
+2. "Any row with missing certified support remains non-dispositive and is offered only for threshold narrowing."
+
 Show-cause service/compliance branch (short):
 1. "The April 9, 2026 sheriff-service event is currently reported and will be lodged formally upon receipt of the return."
 2. "Until that return is filed, I offer it for sequence context, not as substitute service proof."
@@ -43,7 +47,7 @@ Show-cause service/compliance branch (short):
 Closing ask:
 1. "Grant threshold narrowing and maintain proof-gating discipline."
 2. "Allow prompt supplementation when sheriff return and certified records are received."
-3. "Reserve any dispositive preclusion ruling unless and until `188` rows are fully supported by admissible records."
+3. "Reserve any dispositive preclusion ruling unless and until specific `188` rows are fully supported by admissible records."
 
 DATED: ____________, 2026
 

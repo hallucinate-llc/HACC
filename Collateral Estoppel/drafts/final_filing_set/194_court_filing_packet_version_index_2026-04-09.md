@@ -152,7 +152,7 @@ O. FILE-TODAY SUBSET (PLACEHOLDER-SAFE)
 1. Manifest:
    `214_file_today_subset_manifest_2026-04-09.md`
 2. Consolidated subset packet:
-   `print_build_2026-04-08/Court_Ready_File_Today_Subset_214_2026-04-09_rev3.pdf`
+   `print_build_2026-04-08/Court_Ready_File_Today_Subset_214_2026-04-09_rev7.pdf`
 3. This subset intentionally excludes placeholder documents pending factual completion (including ORCP 27 notice-compliance declaration and outbound-records-request certificate templates).
 
 P. POST-SUBSET FOURTH-PASS LEGAL HARDENING
@@ -184,6 +184,90 @@ R. SIXTH-PASS PROPOSED-ORDER CONSISTENCY IMPROVEMENTS
    d. `154_proposed_order_re_limited_orcp29_joinder_or_separate_forum_final.md` (added preclusion-proof gate and ORCP 22C derivative-liability guardrail).
    e. `155_proposed_order_re_fallback_exclusion_or_strike_of_collateral_housing_merits_final.md` (added overlap-context and forum-preservation clarifiers).
 2. Re-rendered PDFs for `07`, `08`, `09`, `154`, and `155` are staged in `print_build_2026-04-08/`.
+
+S. SEVENTH-PASS DEFICIENCY-CLOSURE IMPROVEMENTS
+
+1. Additional motion/declaration corrections completed:
+   a. `03_motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_final.md` (fixed internal paragraph-reference mismatch in the duty/trigger/breach map).
+   b. `02_motion_to_dismiss_for_collateral_estoppel_final.md` (narrowed alternative dismissal ask to specifically identified issue-elements; clarified non-dispositive fallback lane).
+   c. `01_motion_for_appointment_and_appearance_of_guardian_ad_litem_final.md` (tightened ORCP 27 D/E/F/H predicate sequence with explicit notice/proof path).
+   d. `151_motion_for_limited_orcp29_joinder_or_separate_forum_order_re_hacc_quantum_final.md` (service-feasibility sentence now cites companion subpoena/service packet source lane).
+   e. `152_objection_to_first_amended_guardianship_petition_and_emergency_relief_final.md` (added missing anchor cite for same-day protective-order context).
+   f. `177_declaration_of_benjamin_barber_court_safe_trimmed_final_2026-04-09.md` (trimmed legal-conclusion phrasing toward fact-forward wording).
+   g. `188_preclusion_element_certified_mapping_sheet_2026-04-09.md` (removed show-cause contamination and kept rows strictly issue-preclusion-oriented).
+2. Re-rendered PDFs for `01`, `02`, `03`, `151`, `152`, `177`, and `188` are staged in `print_build_2026-04-08/`.
+
+T. EIGHTH-PASS HEARING-AID PROOF-GATING HARDENING
+
+1. Hearing-use documents updated:
+   a. `86_short_bench_memo_supplemental_exhibits_8_9_10_and_threshold_issue_preclusion_2026-04-07.md` (added explicit row-gated `188` use rule and row-specific dismissal limit).
+   b. `191_one_page_hearing_script_preclusion_and_proof_gating_2026-04-09.md` (added row-closure discipline language tied to complete `188` cells).
+2. Re-rendered PDFs for `86` and `191` are staged in `print_build_2026-04-08/`.
+
+U. NINTH-PASS PROPOSED-ORDER ROW-GATING HARDENING
+
+1. Proposed-order updates:
+   a. `08_proposed_order_dismiss_collateral_estoppel_final.md` now requires row-ID-specific dispositive identification tied to fully supported `188` rows and preserves non-listed rows as `Proof-gated`.
+   b. `154_proposed_order_re_limited_orcp29_joinder_or_separate_forum_final.md` now ties any preclusion/finality determination to specifically identified fully-supported `188` rows where applicable.
+2. Re-rendered PDFs for `08` and `154` are staged in `print_build_2026-04-08/`.
+
+V. CURRENT JUDGE-READY PROPOSED-ORDERS BUNDLE
+
+1. Use this consolidated proposed-orders set for hearing/order hand-up:
+   `print_build_2026-04-08/Proposed_Orders_Aligned_Set_07_09_154_155_2026-04-09_rev2.pdf`
+2. Included order files in that bundle:
+   a. `07_proposed_order_appoint_gal_final.pdf`
+   b. `08_proposed_order_dismiss_collateral_estoppel_final.pdf`
+   c. `09_proposed_order_show_cause_final.pdf`
+   d. `154_proposed_order_re_limited_orcp29_joinder_or_separate_forum_final.pdf`
+   e. `155_proposed_order_re_fallback_exclusion_or_strike_of_collateral_housing_merits_final.pdf`
+3. Row-gating discipline:
+   a. Dispositive preclusion language in `08` is tied to specifically identified fully-supported `188` row IDs.
+   b. Any non-listed row remains `Proof-gated`.
+4. Optional combined hearing hand-up packet (subset + proposed orders):
+   `print_build_2026-04-08/Hearing_Handup_Packet_SubsetPlusOrders_2026-04-09.pdf`
+
+W. TENTH-PASS RESIDUAL-WEAKNESS CLOSURE TUNING
+
+1. Additional wording/grounding refinements completed:
+   a. `02_motion_to_dismiss_for_collateral_estoppel_final.md` opening sentence now mirrors row-specific issue-element dismissal framing.
+   b. `152_objection_to_first_amended_guardianship_petition_and_emergency_relief_final.md` replaced generic "Preserved text record" label with exhibit/declaration-anchored citation lane.
+   c. `157_supplemental_declaration_re_orcp29a_complete_relief_and_inconsistent_obligations_final.md` reduced "in my understanding" legal-style phrasing in ORCP 29B factor paragraphs.
+   d. `03_motion_to_show_cause_re_solomon_failure_to_appear_and_barred_claim_final.md` and `177_declaration_of_benjamin_barber_court_safe_trimmed_final_2026-04-09.md` now expressly state that reported sheriff service is not offered as formal proof until return lodging.
+2. Re-rendered PDFs for `02`, `03`, `152`, `157`, and `177` are staged in `print_build_2026-04-08/`.
+
+X. ELEVENTH-PASS PACKET REFRESH
+
+1. Refreshed consolidated subset packet after tenth-pass edits:
+   `print_build_2026-04-08/Court_Ready_File_Today_Subset_214_2026-04-09_rev5.pdf`
+2. Manifest `214` updated to point to `rev5`.
+
+Y. TWELFTH-PASS EVIDENTIARY-TONE TUNING (OBJECTION MOTION)
+
+1. `152_objection_to_first_amended_guardianship_petition_and_emergency_relief_final.md` updated to convert selected categorical assertions into "Objector contends..." framing in contested sections.
+2. Purpose: reduce argumentative-overstatement objection risk while preserving cited factual grounds.
+3. Re-rendered `152` PDF staged in `print_build_2026-04-08/`.
+
+Z. THIRTEENTH-PASS PACKET REFRESH
+
+1. Refreshed consolidated subset packet after twelfth-pass edits:
+   `print_build_2026-04-08/Court_Ready_File_Today_Subset_214_2026-04-09_rev6.pdf`
+2. Manifest `214` updated to point to `rev6`.
+
+AA. FOURTEENTH-PASS RESIDUAL DEFENSIBILITY TUNING
+
+1. Additional targeted refinements:
+   a. `02` tightened to tie potential preclusion findings to fully-supported `188` rows.
+   b. `157` ORCP 29B section further shifted from evaluative phrasing to fact-record framing.
+   c. `152` received additional "Objector contends..." conversion in contested paragraphs.
+   d. `188` now explicitly states that no row is currently dispositive-ready.
+2. Re-rendered PDFs for `02`, `152`, `157`, and `188` are staged in `print_build_2026-04-08/`.
+
+AB. FIFTEENTH-PASS PACKET REFRESH
+
+1. Refreshed consolidated subset packet after fourteenth-pass edits:
+   `print_build_2026-04-08/Court_Ready_File_Today_Subset_214_2026-04-09_rev7.pdf`
+2. Manifest `214` updated to point to `rev7`.
 
 DATED: April 9, 2026
 

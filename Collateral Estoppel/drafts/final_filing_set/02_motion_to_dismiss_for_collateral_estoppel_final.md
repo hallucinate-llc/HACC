@@ -11,14 +11,14 @@ Protected Person.
 MOTION TO LIMIT ISSUES PENDING THRESHOLD ISSUE-PRECLUSION RECORD
 OR, IN THE ALTERNATIVE, TO DISMISS TO THE EXTENT PRECLUSION IS ALREADY ESTABLISHED
 
-Movant, Benjamin Barber, moves to limit the case to a threshold issue-preclusion record and, only to the extent preclusion is shown by admissible prior-proceeding proof, to dismiss any claim or issue shown to be precluded.
+Movant, Benjamin Barber, moves to limit the case to a threshold issue-preclusion record and, only to the extent preclusion is shown by admissible prior-proceeding proof, to dismiss specifically identified claim-elements or issue-elements shown to be precluded.
 
 I. REQUESTED RELIEF
 
 1. Limit relitigation of overlapping authority, housing-control, service/compliance, and Section 18 relocation-duty issues unless and until the parties supply the prior-proceeding materials needed to evaluate issue preclusion, including clerk-certified docket and order materials the Court deems necessary.
-2. In the alternative, dismiss any claim or issue the Court finds shown to be precluded by admissible prior-proceeding records.
-3. Set a focused threshold schedule or hearing limited to prior proceeding identity, issue identity, finality, party/privity, and full-and-fair opportunity.
-4. Decline to use this probate matter as a merits forum for eviction, Section 18 relocation-duty, housing-processing, accommodation, hearing-access, or related federal civil-rights issues already being litigated or pursued in the eviction and federal complaint tracks, except to the extent such issues are strictly necessary to resolve guardianship-specific questions and only without treating mere overlap itself as completed preclusion.
+2. In the alternative, dismiss only those specifically identified claim-elements or issue-elements that the Court finds shown to be precluded by admissible prior-proceeding records.
+3. Set a focused threshold schedule or hearing limited to prior proceeding identity, issue identity, finality, party/privity, and full-and-fair opportunity, with one row per asserted issue as tracked in the certified-element mapping sheet.
+4. As a non-dispositive fallback, decline to use this probate matter as a merits forum for eviction, Section 18 relocation-duty, housing-processing, accommodation, hearing-access, or related federal civil-rights issues already being litigated or pursued in the eviction and federal complaint tracks, except to the extent such issues are strictly necessary to resolve guardianship-specific questions and only without treating mere overlap itself as completed preclusion.
 5. Award further relief the Court deems just and proper.
 
 II. GOVERNING LAW
@@ -43,7 +43,7 @@ IV. ADDITIONAL PROCEEDING OVERLAP (CONTEXT FOR THRESHOLD SCOPE CONTROL)
 17. The scanned federal complaint coversheet/complaint packet reflects a received stamp beginning `RECVD 31 MAR '26 12:57...` (trailing characters faint), but the current scan does not clearly show a filled civil action number.
 18. Movant files a separate notice that any clerk-relayed advisement/assignment status is offered as provisional overlap context only pending docket confirmation, and not as a substitute for admissible docket proof.
 19. To the extent the present guardianship petition is used to relitigate those same housing-merits issues, threshold issue-screening and forum-narrowing are warranted to reduce inconsistent adjudication risk, even if the present record is not yet sufficient for completed issue preclusion.
-20. If either the Justice Court matter or federal matter has reached a final adjudication on an identical issue, that issue may be precluded here only to the extent the Oregon preclusion elements are established by admissible records.
+20. If either the Justice Court matter or federal matter has reached a final adjudication on an identical issue, that issue may be precluded here only to the extent the Oregon preclusion elements are established on a fully supported `188` row by admissible records.
 21. If final adjudication has not yet occurred, this Court should still narrow this probate matter to guardianship-specific issues and avoid becoming a parallel merits forum for pending landlord-tenant or federal civil-rights claims, without treating mere overlap itself as completed preclusion.
 22. Any separate constitutional argument branch is reserved for supplemental memorandum only if and when that issue is directly presented for adjudication in this case.
 

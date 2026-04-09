@@ -148,7 +148,7 @@ Date: 2026-04-09
    c. `210` received court-safe wording cleanup (no filename-style references).
    d. Added file-safe subset manifest `214_file_today_subset_manifest_2026-04-09.md`.
    e. Built filing-safe subset packet excluding placeholder documents:
-      `print_build_2026-04-08/Court_Ready_File_Today_Subset_214_2026-04-09.pdf`.
+      `print_build_2026-04-08/Court_Ready_File_Today_Subset_214_2026-04-09_rev4.pdf`.
 
 DATED: ____________, 2026
 

@@ -15,6 +15,7 @@ AND THRESHOLD ISSUE-PRECLUSION REVIEW
 ## 1) What this supplement is intended to do
 
 Movant requests a threshold issue-preclusion review before broader merits litigation proceeds. The supplemental certified exhibits are intended to supply the Court with certified source records for that threshold review.
+As of this memorandum version, dispositive preclusion remains row-gated by the certified-element mapping sheet (`188`), and no row should be treated as dispositive unless all required element cells are supported by admissible records.
 
 ## 2) Exhibit map (current corrected posture)
 
@@ -44,6 +45,17 @@ Movant requests a threshold issue-preclusion review before broader merits litiga
 5. Full and fair opportunity:
    Whether certified hearing/notice records show a full and fair opportunity to be heard.
 
+## 3A) Row-Gated Use Rule (`188`)
+
+1. Use one asserted issue per row (`PI-01` through `PI-05`).
+2. For each row, require:
+   a. one current-issue cite;
+   b. one prior-record cite;
+   c. one finality source cite;
+   d. one party/privity cite; and
+   e. one full/fair-opportunity cite.
+3. If any row cell is incomplete, that row remains `Proof-gated` and supports threshold narrowing only, not dismissal.
+
 ## 4) Requested procedural path
 
 1. To the extent supplemental certified exhibits are lodged, accept/lodge those records for threshold review.
@@ -51,6 +63,7 @@ Movant requests a threshold issue-preclusion review before broader merits litiga
 3. Dismiss or limit relitigation only to the extent the required preclusion elements are established by admissible certified proof.
 4. Reserve merits expansion unless and until threshold preclusion review is completed on an adequate certified record.
 5. If certified packets remain incomplete at hearing, defer dispositive dismissal, set a targeted supplementation deadline, and proceed only with non-dispositive issue narrowing and scope control.
+6. If the Court reaches any preclusion ruling, limit it to the specific fully-supported row(s) only, with all other rows expressly reserved as `Proof-gated`.
 
 ## 5) Authorities already cited in the motion set
 

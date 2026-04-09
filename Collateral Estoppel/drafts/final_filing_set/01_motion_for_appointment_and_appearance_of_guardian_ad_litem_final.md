@@ -39,11 +39,11 @@ III. LEGAL AUTHORITY
 
 IV. ORCP 27 PROCEDURAL PREDICATES (TO THE EXTENT APPLICABLE)
 
-17. This motion is supported by declarations containing facts offered to show qualifying need and factual conflict for appointment/appearance clarification.
-18. Movant requests that ORCP 27 notice procedures be applied or modified as the Court deems just and proper under the circumstances of this protective proceeding.
-19. To the extent ORCP 27 E/F notice recipients and timelines apply in this posture, Movant will provide notice to Jane Kay Cortez (respondent/protected person), Solomon Samuel Barber, and other known interested persons identified by reasonable inquiry (including any known current fiduciary/agent roles), and will file a notice-compliance declaration identifying who was served, when, and by what method.
+17. ORCP 27 D predicate: this motion is supported by declarations containing facts offered to show qualifying need and factual conflict for appointment/appearance clarification in this protective proceeding.
+18. ORCP 27 E recipient path (to the extent applicable here): Movant will provide notice to Jane Kay Cortez (respondent/protected person), Solomon Samuel Barber, and other known interested persons identified by reasonable inquiry (including any known current fiduciary/agent roles).
+19. ORCP 27 F proof path (to the extent applicable here): Movant will file a notice-compliance declaration identifying who was served, when, by what method, and what proof records are attached.
 20. Movant has prepared a Supplemental Declaration Re ORCP 27 Notice-Compliance Status for completion and filing with service-specific facts and attached proof records.
-21. If any ORCP 27 E recipient category cannot be completed on the current emergency timeline after reasonable inquiry, Movant requests targeted modification/waiver under ORCP 27 H and asks the Court to set a cure schedule for supplemental notice.
+21. ORCP 27 H fallback (to the extent applicable here): if any ORCP 27 E recipient category cannot be completed on the current emergency timeline after reasonable inquiry, Movant requests targeted modification/waiver and a court-set cure schedule for supplemental notice.
 22. To the extent any objection is filed, Movant requests hearing management consistent with ORCP 27 G and Chapter 125 scheduling authority.
 
 V. EXHIBIT REFERENCES (GLOBAL NUMBERING)

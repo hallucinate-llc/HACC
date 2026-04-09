@@ -36,14 +36,14 @@ B. SHOW-CAUSE SUPPORT (LIMITED TO PERSONAL KNOWLEDGE AND RECORDS)
 11. The April 3-4, 2026 counsel email chain reflects service-labeled transmission to counsel Alex Bluestone and counsel's response that he did not accept service on behalf of Solomon while confirming representation in the Jane Cortez guardianship matter.
 12. That same preserved chain includes a same-day FedEx receipt image and delivery-tracking identifiers consistent with physical transmittal to counsel.
 13. I request a show-cause appearance and explanation regarding compliance posture and any assertion that an in-effect order was unenforceable absent additional service.
-14. I also report that the Clackamas County Sheriff's Office served restraining-order papers on Solomon Samuel Barber on April 9, 2026; until I lodge the sheriff return/proof-of-service, I offer this as a reported event and request leave to supplement with the formal return.
+14. I also report that the Clackamas County Sheriff's Office served restraining-order papers on Solomon Samuel Barber on April 9, 2026; until I lodge the sheriff return/proof-of-service, I offer this as a reported event only and request leave to supplement with the formal return. I do not offer this as completed formal service proof unless and until that return is lodged.
 
 C. THRESHOLD PRECLUSION / SCOPE SUPPORT (PROOF-GATED WHERE NOT YET CERTIFIED)
 
 15. The March 31, 2026 petition seeks broad authority over Jane Kay Cortez, including residence-related circumstances, APS interface, and possible law-enforcement transport.
-16. Based on my review of current materials, there is overlap risk between issues raised in this probate matter and issues being pursued in related housing/eviction/federal tracks.
+16. Based on my review of current materials, the same housing and control events described in this probate matter also appear in related housing/eviction/federal filings.
 17. As of this declaration, I treat cross-forum and prior-proceeding points as proof-gated unless supported by admissible certified or filed-stamped records.
-18. My request in this declaration is limited to threshold narrowing and record-sequencing on unresolved overlap issues.
+18. I submit these facts so the Court can evaluate threshold scope and sequencing questions on unresolved overlap issues.
 19. Any dispositive preclusion request is made only in the companion motion and only to the extent supported by admissible certified records.
 20. Repository materials identify a Justice Court eviction-response track (26FE0586) and a District of Oregon complaint track with overlapping housing-process allegations involving HACC and Quantum.
 21. I request leave to supplement with certified dockets, orders, and filed-stamped records as they are obtained.
