@@ -28,6 +28,8 @@ Included documents (in order):
 7. Cross-Forum Exhibit Retrieval Metadata Sheet (`169`).
 8. Pin-Cite Appendix for `151`/`152`/`157` (`170`).
 9. Deontic Temporal Trigger Table (`172`).
+10. ORCP 17 Safe-Harbor and Procedural-Prerequisites Chronology (`173`).
+11. Claim-Level Status Map for `151`/`152` (`174`).
 
 DATED: ____________, 2026
 

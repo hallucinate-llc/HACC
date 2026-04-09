@@ -45,3 +45,7 @@ The narrowest order would be:
 3. deny fees from Jane's funds;
 4. set any further hearing only on genuine guardianship questions, with a clean notice and predicate record.
 5. reserve any sanctions decision unless and until the Court decides whether the petition was materially barred or seriously defective.
+
+## Crib Sheet
+
+- [probate_objection_crib_sheet_2026-04-09.md](/home/barberb/HACC/workspace/probate_objection_crib_sheet_2026-04-09.md)

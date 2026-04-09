@@ -9,6 +9,11 @@ This memo is designed for filing use. It states the strongest current duty struc
 
 It is intended to keep the packet grounded in source-backed duty language before turning to later emails, promises, or breach inferences.
 
+Companion encoded mapping:
+
+- [housing_duties_fact_law_encoding_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/housing_duties_fact_law_encoding_2026-04-09.md)
+- [housing_duties_fact_law_encoding_2026-04-09.json](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/housing_duties_fact_law_encoding_2026-04-09.json)
+
 ## I. Core framing
 
 The strongest current source-backed position is not that every disputed housing wrong arose from an informal promise by email. The stronger position is that:

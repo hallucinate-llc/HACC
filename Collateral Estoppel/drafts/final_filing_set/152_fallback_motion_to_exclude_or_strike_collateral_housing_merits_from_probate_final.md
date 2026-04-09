@@ -49,7 +49,7 @@ V. RESERVATION
 
 VI. SHARED DEONTIC ATTACHMENT
 
-20. Movant incorporates the shared `Deontic Trigger and Remedy Matrix` (`168`) and `Deontic Temporal Trigger Table` (`172`) as organizational aids for duty/prohibition proof posture, time windows, and remedy mapping; admissible exhibits and certified records control.
+20. Movant incorporates the shared `Deontic Trigger and Remedy Matrix` (`168`), `Deontic Temporal Trigger Table` (`172`), and `Element-to-Evidence and Deontic Readiness Matrix` (`179`) as organizational aids for duty/prohibition proof posture, element status, time windows, and remedy mapping; admissible exhibits and certified records control.
 
 DATED: ____________, 2026
 

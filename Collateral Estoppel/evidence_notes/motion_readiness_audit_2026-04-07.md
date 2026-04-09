@@ -138,6 +138,8 @@ Why it remains reserve-only:
 - [jane_cortez_position_and_harm_summary_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/jane_cortez_position_and_harm_summary_2026-04-09.md)
 - [deontic_duty_matrix_packet_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/deontic_duty_matrix_packet_2026-04-09.md)
 - [law_first_hacc_quantum_duty_memo_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/law_first_hacc_quantum_duty_memo_2026-04-09.md)
+- [housing_duties_fact_law_encoding_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/housing_duties_fact_law_encoding_2026-04-09.md)
 - [missing_project_agreements_retrieval_note_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/missing_project_agreements_retrieval_note_2026-04-09.md)
 - [hillside_public_sources_download_manifest_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/hillside_public_sources_download_manifest_2026-04-09.md)
 - [hillside_procurement_trail_note_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/hillside_procurement_trail_note_2026-04-09.md)
+- [hacc_hillside_project_records_request_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/hacc_hillside_project_records_request_2026-04-09.md)

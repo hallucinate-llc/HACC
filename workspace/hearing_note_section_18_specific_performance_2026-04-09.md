@@ -12,13 +12,20 @@ That means:
 4. necessary counseling;
 5. no completion of displacement until residents were actually relocated.
 
+Encoded duty reference:
+
+- `O(HACC, perform the triggered relocation steps)`
+- `F(HACC, treat displacement as complete before actual relocation)`
+- [housing_duties_fact_law_encoding_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/housing_duties_fact_law_encoding_2026-04-09.md)
+- [housing_duty_crib_sheet_2026-04-09.md](/home/barberb/HACC/workspace/housing_duty_crib_sheet_2026-04-09.md)
+
 ## Best 20-Second Version
 
 Your Honor, Section 18 required HACC to do more than start a relocation conversation. HACC had to carry the household through to actual comparable replacement housing, with the needed relocation support, and could not treat displacement as complete first. On this record, that never happened because no actual lease or contract was materialized for signature on either the Clackamas-side path or the Multnomah-side port-out path.
 
 ## Why Quantum Matters
 
-Quantum matters because HACC's own records place Quantum inside the intake and lease-up chain for the Blossom / Hillside Manor / Parkside Heights route. So even if Section 18 runs directly to HACC as the housing authority, Quantum can still be ordered not to obstruct or fail the processing path HACC chose to use.
+Quantum matters because HACC's own records place Quantum inside the intake and lease-up chain for the Blossom / Hillside Manor / Parkside Heights route. So even if Section 18 runs directly to HACC as the housing authority, Quantum can still be ordered not to obstruct or fail the processing path HACC chose to use. The narrower encoded form is: `if Quantum received or controlled the intake path, Quantum had project-side duties not to lose, block, or discriminatorily mishandle it.`
 
 ## Narrow Ask
 

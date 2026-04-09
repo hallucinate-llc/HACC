@@ -2,6 +2,11 @@
 
 This note tracks the main duty, permission, prohibition, and remedy theories presently used across the probate, eviction, and housing filings. It is intended as an internal grounding aid so the packet does not ask for relief broader than the current law-and-fact record supports.
 
+Companion encoding layer:
+
+- [housing_duties_fact_law_encoding_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/housing_duties_fact_law_encoding_2026-04-09.md)
+- [housing_duties_fact_law_encoding_2026-04-09.json](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/housing_duties_fact_law_encoding_2026-04-09.json)
+
 ## 1. Housing Authority of Clackamas County: Section 18 relocation duties
 
 - Actor: Housing Authority of Clackamas County (`HACC`)

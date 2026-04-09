@@ -1,0 +1,201 @@
+{
+  "generated_on": "2026-04-09",
+  "purpose": "Encode HACC and Quantum duties in a law-first, fact-linked form for motion mapping.",
+  "legend": {
+    "O": "obligation",
+    "F": "prohibition",
+    "P": "permission"
+  },
+  "entries": [
+    {
+      "id": "hacc_section18_displacement",
+      "actor": "HACC",
+      "legal_sources": ["42 U.S.C. § 1437p", "24 C.F.R. § 970.21"],
+      "factual_anchors": [
+        "Hillside Manor redevelopment / RAD / repositioning materials",
+        "HACC Hillside public page",
+        "HACC Blossom / relocation materials"
+      ],
+      "deontic": [
+        "O(HACC, provide displacement notice)",
+        "O(HACC, provide comparable housing or comparable replacement-housing path)",
+        "O(HACC, provide actual and reasonable relocation assistance)",
+        "O(HACC, provide counseling as part of relocation)",
+        "F(HACC, treat displacement as complete before actual relocation)"
+      ],
+      "issue_theory": "HACC kept the household in an unresolved relocation process while pressing toward possession / default.",
+      "narrow_relief": [
+        "interim relief preserving status quo",
+        "denial or abatement of possession as premature",
+        "written relocation status and completion steps"
+      ],
+      "main_motion_use": ["eviction response", "injunction papers"]
+    },
+    {
+      "id": "hacc_pbv_rad_administration",
+      "actor": "HACC",
+      "legal_sources": ["HACC Administrative Plan", "HACC Blossom page"],
+      "factual_anchors": [
+        "Administrative Plan naming Hillside Manor and Quantum",
+        "Blossom page saying applications are processed through HACC's PBV waitlist",
+        "priority groups for Hillside relocation households"
+      ],
+      "deontic": [
+        "O(HACC, administer separate waiting-list / PBV structure for Hillside RAD project)",
+        "O(HACC, administer Hillside relocation households within the replacement-housing priority structure it adopted)",
+        "F(HACC, treat project-side replacement housing as wholly unstructured private discretion)"
+      ],
+      "issue_theory": "HACC described the path as PBV-administered and priority-based, but the household was later treated as if it had no administrable track.",
+      "narrow_relief": [
+        "written status of PBV / replacement-housing track",
+        "order preventing HACC from disclaiming responsibility for the track it adopted"
+      ],
+      "main_motion_use": ["injunction papers", "eviction response"]
+    },
+    {
+      "id": "hacc_undertaken_option_administration",
+      "actor": "HACC",
+      "legal_sources": ["January 8, 2026 Blossom / TPV notice", "March 26, 2026 options email"],
+      "factual_anchors": [
+        "HACC told the household to choose Blossom or TPV",
+        "later HACC gave three written options and required move by April 30"
+      ],
+      "deontic": [
+        "O(HACC, administer the relocation options it directed the household to use)",
+        "F(HACC, convert its own unresolved option administration into household default)",
+        "P(household, pursue the HACC-directed relocation tracks while they remain active)"
+      ],
+      "issue_theory": "HACC kept changing and extending structured options while later treating noncompletion as if it were solely tenant-caused.",
+      "narrow_relief": [
+        "written status order",
+        "injunction against treating the unresolved track as abandonment",
+        "specific-performance style relief keyed to administration, not guaranteed outcome"
+      ],
+      "main_motion_use": ["eviction response", "injunction papers"]
+    },
+    {
+      "id": "hacc_hearing_review",
+      "actor": "HACC",
+      "legal_sources": ["42 U.S.C. § 1437d(k)", "24 C.F.R. § 982.555"],
+      "factual_anchors": [
+        "lease-composition reversals",
+        "voucher / transfer / assistance-related changes",
+        "HACC internal-review and adverse-action communications"
+      ],
+      "deontic": [
+        "O(HACC, provide lawful notice and hearing process for covered adverse actions)",
+        "F(HACC, rely on unexplained covered adverse actions without the required notice / review structure)"
+      ],
+      "issue_theory": "HACC changed housing status and channels in ways that appear to have hearing and notice consequences.",
+      "narrow_relief": [
+        "require HACC to identify hearing path",
+        "require status clarification before relying on the adverse action"
+      ],
+      "main_motion_use": ["eviction response", "injunction papers"]
+    },
+    {
+      "id": "hacc_vawa_transfer_confidentiality",
+      "actor": "HACC",
+      "legal_sources": ["24 C.F.R. § 5.2007(c)", "24 C.F.R. § 5.2009", "34 U.S.C. § 12491(b)(3)(C)(i)"],
+      "factual_anchors": [
+        "attempted port to Multnomah County",
+        "protection-order setting",
+        "Home Forward / Brighthaven / Waterleaf path"
+      ],
+      "deontic": [
+        "O(HACC, maintain and use an emergency-transfer framework lawfully)",
+        "O(HACC, protect confidentiality in the transfer context)",
+        "F(HACC, disregard protection-order-linked safety context when administering access / transfer decisions)"
+      ],
+      "issue_theory": "The transfer path was opened in principle but not coherently administered to completion.",
+      "narrow_relief": [
+        "require lawful non-drift administration",
+        "require confidentiality and status clarity"
+      ],
+      "main_motion_use": ["injunction papers", "declaration support"]
+    },
+    {
+      "id": "fha_accommodation_interference",
+      "actor": "HACC and Quantum",
+      "legal_sources": [
+        "42 U.S.C. § 3604(f)(2)",
+        "42 U.S.C. § 3604(f)(3)(B)",
+        "24 C.F.R. § 100.204",
+        "42 U.S.C. § 3617",
+        "24 C.F.R. § 100.400"
+      ],
+      "factual_anchors": [
+        "disability / live-in aide / service-animal / accessibility setting",
+        "complaints about nonprocessing and interference",
+        "relocation / application handling failures"
+      ],
+      "deontic": [
+        "O(HACC and Quantum, avoid discrimination in housing services and terms)",
+        "O(HACC and Quantum, provide reasonable accommodation where required)",
+        "F(HACC and Quantum, interfere with or retaliate against protected housing-rights activity)"
+      ],
+      "issue_theory": "Application and relocation handling may have been burdened by discriminatory or interfering treatment.",
+      "narrow_relief": [
+        "no-interference order",
+        "preserve and process accommodation and application paths",
+        "status-quo relief"
+      ],
+      "main_motion_use": ["injunction papers", "civil-rights briefing"]
+    },
+    {
+      "id": "quantum_intake_forwarding_role",
+      "actor": "Quantum",
+      "legal_sources": ["HACC Administrative Plan", "HACC packet non-forwarding acknowledgment"],
+      "factual_anchors": [
+        "Hillside Manor leasing office intake path",
+        "non-forwarding admission",
+        "Parkside Heights / Blossom / Hillside overlap theory"
+      ],
+      "deontic": [
+        "O(Quantum, if it received the relocation/application packet, preserve and properly route it)",
+        "F(Quantum, lose, block, or discriminatorily mishandle the intake path it controlled)",
+        "O(Quantum, if acting as project-side property manager in the PBV/RAD chain, administer intake consistently with that role)"
+      ],
+      "issue_theory": "Quantum appears to have been inside the intake chain and the record supports a packet-routing failure.",
+      "narrow_relief": [
+        "preserve documents",
+        "identify intake handling",
+        "process or reprocess application path nondiscriminatorily"
+      ],
+      "main_motion_use": ["injunction papers", "joinder / nonprocessing theories"]
+    },
+    {
+      "id": "project_hearing_before_eviction",
+      "actor": "project-side owner / manager",
+      "legal_sources": ["HACC Administrative Plan informal hearing before eviction language"],
+      "factual_anchors": ["Hillside Manor as a RAD/PBV project", "Quantum as named property manager"],
+      "deontic": ["O(project-side owner/manager, provide opportunity for informal hearing before eviction in the RAD/PBV setting)"],
+      "issue_theory": "The project-side eviction path should not be treated as ordinary private-market eviction without the hearing structure HACC's own plan describes.",
+      "narrow_relief": [
+        "insist on hearing-path identification",
+        "challenge possession proceeding as incomplete / premature in the project setting"
+      ],
+      "main_motion_use": ["eviction response"]
+    },
+    {
+      "id": "contract_record_limit",
+      "actor": "packet-wide",
+      "legal_sources": ["Administrative Plan references", "public procurement listings", "absence of executed texts"],
+      "factual_anchors": [
+        "HAP / RAD HAP / management role referenced but not fully produced",
+        "public procurement entries survive",
+        "direct public document endpoints return 404"
+      ],
+      "deontic": [
+        "P(packet, rely on statute, regulation, plan, and public materials now)",
+        "F(packet, overstate missing executed agreements as if already in evidence)"
+      ],
+      "issue_theory": "HACC duties are already strongly grounded; Quantum's role is grounded more narrowly until executed contracts are produced.",
+      "narrow_relief": [
+        "use law-first and plan-first theories now",
+        "reserve stronger contract-duty arguments for later production"
+      ],
+      "main_motion_use": ["all housing motions"]
+    }
+  ]
+}

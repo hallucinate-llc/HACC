@@ -94,3 +94,7 @@ Probate should not drift into an improvised emergency-control forum for disputed
 `If there are fee issues tied to HACC or Quantum, where do they belong?`
 
 - In the separate properly framed federal civil-rights or housing case, not as a probate-side charge against Jane's funds here.
+
+## Crib Sheet
+
+- [probate_objection_crib_sheet_2026-04-09.md](/home/barberb/HACC/workspace/probate_objection_crib_sheet_2026-04-09.md)

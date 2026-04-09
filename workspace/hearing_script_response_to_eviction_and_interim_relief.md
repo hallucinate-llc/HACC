@@ -8,7 +8,7 @@ This script is designed for use with:
 
 ## Short Opening
 
-Your Honor, this is not an ordinary holdover where the household simply refused to move. HACC triggered redevelopment-related relocation duties, including comparable housing, relocation support, counseling, and actual completion of the move before displacement could be treated as finished. HACC then told us to use a replacement-housing application path tied to the Hillside Park redevelopment, and also told us in the alternative to port the voucher to another county. Neither path was actually completed before HACC moved toward eviction.
+Your Honor, this is not an ordinary holdover where the household simply refused to move. HACC triggered redevelopment-related relocation duties, including comparable housing, relocation support, counseling, and actual completion of the move before displacement could be treated as finished. HACC then told us to use a replacement-housing application path tied to the Hillside Park redevelopment, and also told us in the alternative to port the voucher to another county. Neither path was actually completed before HACC moved toward eviction. The cleanest framing is preserved in the encoded duty note: `O(HACC, perform the triggered relocation steps)` and `F(HACC, treat displacement as complete before actual relocation)`. See [housing_duties_fact_law_encoding_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/housing_duties_fact_law_encoding_2026-04-09.md).
 
 ## Core Theme
 
@@ -82,7 +82,7 @@ The Court can view the case in seven steps:
 If the Court asks for the legal point, the answer is:
 
 - HACC cannot fairly obtain possession while redevelopment-related relocation is still incomplete;
-- under Section 18 and the relocation-process commitments HACC itself undertook, HACC was not just expected but barred from filing eviction while the triggered comparable-housing, counseling, relocation-support, and actual move-completion steps remained materially unfinished;
+- under Section 18 and the relocation-process commitments HACC itself undertook, HACC should not obtain possession while the triggered comparable-housing, counseling, relocation-support, and actual move-completion steps remained materially unfinished;
 - HACC's own Administrative Plan says Hillside Manor is a RAD PBV project, Quantum is the property manager, HACC manages the project waiting-list structure, and the owner must provide an opportunity for an informal hearing before eviction;
 - HACC's own Blossom lease-up page says applications for Blossom and Community Apartments will be processed through HACC's PBV waitlist and that relocation households are priority groups;
 - the Court should not treat the household's situation as simple noncompliance where the record shows the replacement-housing path itself was not processed;
@@ -94,7 +94,8 @@ If the Court asks for the legal point, the answer is:
 If the Court asks why Quantum matters, the answer is:
 
 - because HACC itself wrote that the packet had been submitted to Quantum staff at the Hillside Manor leasing office but had not been forwarded to HACC;
-- so Quantum is part of the same housing-processing chain, not a separate unrelated actor.
+- so Quantum is part of the same housing-processing chain, not a separate unrelated actor;
+- and the narrower point is that if Quantum controlled that intake path, Quantum had project-side duties not to lose, block, or mishandle it.
 
 ## Narrow Ask
 
@@ -107,4 +108,4 @@ The narrowest safe ask is:
 
 ## Best One-Sentence Close
 
-HACC should not be allowed to evict the household while the Hillside Park replacement-housing application path it directed us to use was left unprocessed and the alternate out-of-county porting path it identified remained incomplete across four calendar months, because under Section 18 and HACC's own undertaken relocation process, eviction was barred while those duties were still unfinished.
+HACC should not be allowed to evict the household while the Hillside Park replacement-housing application path it directed us to use was left unprocessed and the alternate out-of-county porting path it identified remained incomplete across four calendar months, because under Section 18 and HACC's own undertaken relocation process, possession is premature while those duties remain unfinished.

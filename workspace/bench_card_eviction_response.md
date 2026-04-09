@@ -66,7 +66,7 @@ Point:
 
 ## Best Legal Point
 
-This case should not be treated as a household-caused failure to move where the record shows HACC was obligated to complete relocation paths it triggered, defendants were permitted to rely on those paths, and the paths remained unfinished.
+This case should not be treated as a household-caused failure to move where the record shows HACC had to carry forward the relocation paths it triggered before treating displacement as complete, and those paths remained unfinished.
 
 ## Narrow Ask
 
@@ -88,3 +88,8 @@ This case should not be treated as a household-caused failure to move where the 
 `Are you asking for a specific apartment?`
 
 - No. Only preservation of the housing path and no possession while relocation remains incomplete.
+
+## Encoding Anchor
+
+- [housing_duties_fact_law_encoding_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/housing_duties_fact_law_encoding_2026-04-09.md)
+- [housing_duty_crib_sheet_2026-04-09.md](/home/barberb/HACC/workspace/housing_duty_crib_sheet_2026-04-09.md)

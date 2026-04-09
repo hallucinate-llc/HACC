@@ -60,6 +60,9 @@ Use this index when filing the coordinated state-court packet addressing:
 36. [hearing_script_2_minute_version.md](/home/barberb/HACC/workspace/hearing_script_2_minute_version.md)
 37. [judge_question_answer_sheet_eviction_response.md](/home/barberb/HACC/workspace/judge_question_answer_sheet_eviction_response.md)
 38. [hearing_script_motion_to_show_cause_quantum_application_nonprocessing.md](/home/barberb/HACC/workspace/hearing_script_motion_to_show_cause_quantum_application_nonprocessing.md)
+39. [housing_duty_crib_sheet_2026-04-09.md](/home/barberb/HACC/workspace/housing_duty_crib_sheet_2026-04-09.md)
+40. [courtroom_kit_checklist_2026-04-09.md](/home/barberb/HACC/workspace/courtroom_kit_checklist_2026-04-09.md)
+41. [courtroom_kit_print_order_2026-04-09.md](/home/barberb/HACC/workspace/courtroom_kit_print_order_2026-04-09.md)
 
 ## Recommended Filing Order
 
