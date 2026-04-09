@@ -69,6 +69,8 @@ Use this index when filing the coordinated state-court packet addressing:
 45. [hearing_emphasis_priority_sheet_2026-04-09.md](/home/barberb/HACC/workspace/hearing_emphasis_priority_sheet_2026-04-09.md)
 46. [judge_pushback_answers_sheet_2026-04-09.md](/home/barberb/HACC/workspace/judge_pushback_answers_sheet_2026-04-09.md)
 47. [ultra_compact_oral_argument_sheet_2026-04-09.md](/home/barberb/HACC/workspace/ultra_compact_oral_argument_sheet_2026-04-09.md)
+48. [night_before_court_checklist_2026-04-09.md](/home/barberb/HACC/workspace/night_before_court_checklist_2026-04-09.md)
+49. [presentation_guardrails_note_2026-04-09.md](/home/barberb/HACC/workspace/presentation_guardrails_note_2026-04-09.md)
 
 ## Recommended Filing Order
 

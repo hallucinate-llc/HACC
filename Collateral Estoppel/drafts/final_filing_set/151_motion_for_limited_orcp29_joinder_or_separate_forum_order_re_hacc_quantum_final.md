@@ -66,7 +66,7 @@ D. REQUESTED SCOPE RESULT
 
 23. If protective-proceeding scope or ORCP posture makes joinder impractical here, the correct remedy is not to litigate those merits anyway; it is to confine this case to guardianship issues and require housing-liability litigation in the proper case.
 24. This approach preserves guardianship-function integrity while protecting against collateral relitigation and inconsistent outcomes.
-25. The same scope-limiting principle is especially important here because the record now includes a probate-side writ of assistance directing forced entry and transport of Jane Cortez in coordination with Solomon Barber, while the underlying predicate order and notice basis remain disputed in the present record. If coercive housing/control or removal conduct must be examined at all, the Court should insist on a clean predicate order and record rather than allowing the probate matter to drift into an improvised merits forum for disputed collateral conduct.
+25. The same scope-limiting principle is especially important where collateral coercive-control allegations are disputed, because those disputes can rapidly expand beyond the probate lane and overwhelm threshold guardianship adjudication. For this motion's ORCP 29/22 purposes, the Court should require a clean record and keep collateral merits in the proper forum rather than trying those merits here.
 
 V. PROPOSED SCOPE LIMITS IF JOINDER IS ALLOWED
 

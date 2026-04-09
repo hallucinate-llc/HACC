@@ -75,7 +75,7 @@ This sheet is designed to keep the live argument disciplined by separating:
 
 ### Housing
 
-`HACC triggered relocation duties, directed this household into specific administered paths, admitted a packet-routing failure, kept the paths unresolved, and should not get possession as if this were ordinary tenant default.`
+`HACC triggered relocation duties, directed this household into specific administered paths, admitted a packet-routing failure, kept the paths unresolved, and should not get possession as if this were an ordinary tenant default.`
 
 ### Probate
 

@@ -1,3 +1,4 @@
 request_id,request_date,forum,target_case,target_recipient_email,status,fee_quote,eta,response_received,records_received,notes
-REQ-26FE0586-001,2026-04-08,Clackamas Justice Court,26FE0586,cla.records.management@ojd.state.or.us,draft,,,no,no,Use file 135 template.
-REQ-FED-HAQC-001,2026-04-08,US District Court District of Oregon,HACC+Quantum track,ecfhelp@ord.uscourts.gov,draft,,,no,no,Use file 136 template and PACER pull.
+REQ-26FE0586-001,2026-04-08,Clackamas Justice Court,26FE0586,cla.records.management@ojd.state.or.us,ready_to_send,,,no,no,Use file 135 (initial) and 203 (follow-up) templates.
+REQ-FED-HAQC-001,2026-04-08,US District Court District of Oregon,HACC+Quantum track,ecfhelp@ord.uscourts.gov,ready_to_send,,,no,no,Use file 136 (initial) and 203 (follow-up) templates; parallel PACER pull.
+REQ-SHERIFF-RETURN-001,2026-04-09,Clackamas County Sheriff Civil/Records,Service return (26PR00641 context),[confirm current civil/records channel],ready_to_send,,,no,no,Use file 187 (initial) and 203 (follow-up) templates.

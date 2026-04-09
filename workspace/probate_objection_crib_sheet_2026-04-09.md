@@ -40,7 +40,7 @@ This petition should not be used to obtain emergency or plenary control over Jan
 - Gerald Miller estate / will / trust packet exists.
 - Solomon's own text shows he was already asserting a trust-related role.
 - Earlier restraining-order exhibits appear to show Jane describing papers she signed with Sam / Solomon that she did not understand, including one she thought related to her dad's will.
-- That is a reason to demand actual papers, not grant broad financial control.
+- That is a reason to demand actual papers before granting broad financial control.
 
 ## Writ Point
 

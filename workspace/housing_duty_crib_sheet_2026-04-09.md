@@ -87,7 +87,7 @@ The cleanest encoded rule is:
 
 ## Best Legal Point
 
-This is not a simple tenant-caused failure to move. HACC triggered relocation duties, directed the household into specific replacement-housing paths, and those paths remained unfinished. HACC should not obtain possession while those duties remain materially incomplete.
+This is not a simple tenant-caused failure to move. HACC triggered relocation duties, directed the household into specific replacement-housing paths, and those paths remained unfinished. On this record, possession should be denied or withheld as premature while those duties remain materially incomplete.
 
 ## Best Narrow Ask
 

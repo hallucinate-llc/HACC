@@ -37,7 +37,7 @@ II. GROUNDS
 III. LEGAL AUTHORITY
 
 16. ORS 33.055 authorizes remedial-contempt proceedings and order-to-appear process when a party is alleged to have violated a court order.
-17. ORS 33.075 authorizes compelled appearance mechanisms after nonappearance on a served order to appear.
+17. ORS 33.075 authorizes compelled appearance mechanisms only if a court-issued order to appear is served and then not obeyed; Movant cites this statute as a sequencing branch for later use only if that predicate is established.
 18. ORS 33.105 authorizes remedial sanctions upon proof of contempt.
 19. This motion does not seek ORCP 17 sanctions in this filing.
 20. This motion does not seek punitive contempt in this filing; any sanction branch requested here is limited to remedial, evidence-based relief tied to proven violation of a specific court-order term shown in the admissible record.
@@ -48,12 +48,16 @@ IV. DUTY / TRIGGER / BREACH / REMEDY MAP
    a. Exhibit 1 reflects an in-effect restraining order and no-further-service-needed language after in-person appearance.
 22. Trigger event:
    a. The duty to comply or seek court relief was triggered when the order was entered and remained in effect.
-23. Alleged breach events:
-   a. March 10, 2026 statements in the preserved thread are offered as evidence of noncooperation/effect-dispute posture after notice.
+23. Alleged breach events (clause-level map):
+   a. Source term: Exhibit 1 in-effect language and no-further-service-needed language after in-person appearance.
+   b. Claimed conflicting act 1: March 10, 2026 statement, "Oh I understand, I'm just not incentivized to cooperate."
+   c. Claimed conflicting act 2: March 10, 2026 statement, "Once I get served and it goes into effect, I will comply... But it is not in effect."
+   d. Claimed legal significance: the quoted statements are offered as evidence of a conditional-compliance posture inconsistent with the in-effect/no-further-service language reflected in Exhibit 1.
 24. Requested remedy path:
    a. Show-cause appearance and compliance explanation under ORS 33.055.
    b. If contempt elements are proven, remedial sanctions under ORS 33.105.
-   c. No ORCP 17 sanctions are requested in this filing branch.
+   c. If and only if a served order to appear is later not obeyed, Movant may seek ORS 33.075 compelled-appearance mechanisms by separate request or hearing branch.
+   d. No ORCP 17 sanctions are requested in this filing branch.
 
 V. REQUESTED HEARING STRUCTURE
 

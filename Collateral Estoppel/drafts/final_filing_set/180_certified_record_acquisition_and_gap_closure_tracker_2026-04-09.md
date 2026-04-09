@@ -142,6 +142,12 @@ VI. FOLLOW-UP CALENDAR (PREFILLED AS OF 2026-04-09)
    a. Use `188_preclusion_element_certified_mapping_sheet_2026-04-09.md` to line-map each asserted precluded issue.
    b. Keep any row `Proof-gated` unless issue identity, finality, party/privity, and full/fair opportunity fields are completed from certified or otherwise admissible records.
 
+17. Evidence-harvest run update (2026-04-09):
+   a. Local search confirms source artifacts are present for context (including `sam barber restraining order.pdf`, `Abuse Protective Order Certificate of Service.pdf`, `Restraining Order Alex Bluestone Service.png`, and `writ of assistance solomon barber.pdf`).
+   b. Local search did not locate a filed sheriff return/proof-of-service document for the reported 2026-04-09 service event.
+   c. Local search did not locate certified packet files for `25PO11530` preclusion elements, `26FE0586` certified docket/order set, or federal docket-stamped assignment/status packet.
+   d. Working memo path: `201_evidence_harvest_status_and_missing_record_targets_2026-04-09.md`.
+
 DATED: ____________, 2026
 
 Prepared by:

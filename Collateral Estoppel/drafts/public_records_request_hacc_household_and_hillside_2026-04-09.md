@@ -1,6 +1,6 @@
 # Public Records Request To HACC Re Hillside Project And Household Relocation File
 
-Date: __________________
+Date: April 9, 2026
 
 To: Public Records Custodian  
 Housing Authority of Clackamas County / Clackamas County Housing & Community Development Division  

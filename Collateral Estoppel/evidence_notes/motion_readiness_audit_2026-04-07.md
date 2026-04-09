@@ -140,6 +140,7 @@ Why it remains reserve-only:
 - [law_first_hacc_quantum_duty_memo_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/law_first_hacc_quantum_duty_memo_2026-04-09.md)
 - [proof_gap_matrix_housing_probate_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/proof_gap_matrix_housing_probate_2026-04-09.md)
 - [top_10_documents_to_obtain_now_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/top_10_documents_to_obtain_now_2026-04-09.md)
+- [red_flags_by_filing_checklist_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/red_flags_by_filing_checklist_2026-04-09.md)
 - [housing_duties_fact_law_encoding_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/housing_duties_fact_law_encoding_2026-04-09.md)
 - [housing_duty_appendix_table_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/housing_duty_appendix_table_2026-04-09.md)
 - [129_housing_duty_appendix_exhibit_plan_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/129_housing_duty_appendix_exhibit_plan_2026-04-09.md)

@@ -32,6 +32,10 @@ Confirm a legally safer service address for `Quantum Residential` / `Quantum Res
    - [157_certificate_of_service_quantum_subpoena_final.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/157_certificate_of_service_quantum_subpoena_final.md)
 5. Save screenshots or PDFs of the registry page into evidence before service.
 
+Helpful official support lead if the public search flow is unclear:
+
+- Washington Secretary of State Corporations / CCFS support: `360-725-0377`
+
 ## If registry confirmation is unavailable immediately
 
 - Use the public-office lead only for contact and narrowing.

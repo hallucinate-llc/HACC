@@ -89,3 +89,5 @@ If you have to reduce to one small stack:
 - [combined_state_court_packet_index.md](/home/barberb/HACC/workspace/combined_state_court_packet_index.md)
 - [filing_packet_index_and_checklist.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/filing_packet_index_and_checklist.md)
 - [same_day_filing_checklist_2026-04-09.md](/home/barberb/HACC/workspace/same_day_filing_checklist_2026-04-09.md)
+- [night_before_court_checklist_2026-04-09.md](/home/barberb/HACC/workspace/night_before_court_checklist_2026-04-09.md)
+- [presentation_guardrails_note_2026-04-09.md](/home/barberb/HACC/workspace/presentation_guardrails_note_2026-04-09.md)

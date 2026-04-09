@@ -35,39 +35,37 @@ III. CURRENT SOURCE-BACKED OVERLAP RECORD
 12. The same petition also states that no guardian, trustee, health-care representative, or attorney-in-fact previously existed for Jane Kay Cortez. Exhibit 2.
 13. The record review identifies substantial overlap concerns between the present authority request and earlier authority-related proceedings, including the signed restraining-order matter in case `25PO11530`; however, final preclusion adjudication remains proof-gated pending a fuller prior-order and docket record. See Exhibits 8-10.
 
-IV. ADDITIONAL PROCEEDING OVERLAP: EVICTION AND FEDERAL TRACKS
+IV. ADDITIONAL PROCEEDING OVERLAP (CONTEXT FOR THRESHOLD SCOPE CONTROL)
 
-14. As described in the accompanying declaration and overlap-status filings, the current record identifies a Clackamas County Justice Court eviction-response track, case `26FE0586`, including response/cross-motion filings that frame Section 18 displacement, relocation, voucher, and housing-duty violations against Housing Authority of Clackamas County under `42 U.S.C. § 1437p(d)` and `24 C.F.R. § 970.21`, together with joinder/show-cause filings directed to Quantum Residential Property Management, L.P.
-15. As described in the same materials, the record also identifies a federal civil-rights complaint track naming Housing Authority of Clackamas County and Quantum Residential in the U.S. District Court for the District of Oregon, with overlapping allegations concerning relocation handling, Blossom nonprocessing, accommodation process, hearing access, retaliation, and related housing interference.
-16. The overlap materials additionally reflect related protective-order and housing-interference context that reinforces the need for threshold issue screening and forum control; those contextual points are not offered as completed preclusion findings.
+14. As described in the accompanying declaration and overlap-status filings, the current record identifies a Clackamas County Justice Court eviction-response track, case `26FE0586`, and a District of Oregon complaint track involving HACC and Quantum with overlapping housing-process allegations.
+15. These overlap points are offered only as context for threshold scope control and issue-screening, not as independent dispositive grounds for dismissal in this motion.
+16. The overlap materials are not offered as completed preclusion findings and do not replace certified proof of the Oregon preclusion elements.
 17. The scanned federal complaint coversheet/complaint packet reflects a received stamp beginning `RECVD 31 MAR '26 12:57...` (trailing characters faint), but the current scan does not clearly show a filled civil action number.
 18. Movant files a separate notice that any clerk-relayed advisement/assignment status is offered as provisional overlap context only pending docket confirmation, and not as a substitute for admissible docket proof.
-19. To the extent the present guardianship petition is used to relitigate those same eviction, Section 18 relocation-duty, housing-processing, and related housing-merits issues, threshold issue-screening and forum-narrowing are warranted to reduce inconsistent adjudication risk.
+19. To the extent the present guardianship petition is used to relitigate those same housing-merits issues, threshold issue-screening and forum-narrowing are warranted to reduce inconsistent adjudication risk.
 20. If either the Justice Court matter or federal matter has reached a final adjudication on an identical issue, that issue may be precluded here only to the extent the Oregon preclusion elements are established by admissible records.
 21. If final adjudication has not yet occurred, this Court should still narrow this probate matter to guardianship-specific issues and avoid becoming a parallel merits forum for pending landlord-tenant or federal civil-rights claims, without treating mere overlap itself as completed preclusion.
 22. Any separate constitutional argument branch is reserved for supplemental memorandum only if and when that issue is directly presented for adjudication in this case.
 
-V. THIRD-PARTY PARTY-STRUCTURE CONSEQUENCE FOR EVICTION RELITIGATION
+V. COMPANION PARTY-STRUCTURE BRANCH (ADDRESSED IN `151`/`152`)
 
-23. To the extent eviction merits are relitigated in the Justice Court track, overlap filings assert that complete relief requires participation by Housing Authority of Clackamas County and Quantum Residential because those entities are alleged primary actors in the intake, relocation, and Section 18 duty chain.
-24. Those joinder materials identify ORCP 29A and ORCP 22C as procedural paths for party-structure issues in the proper forum.
-25. Accordingly, if eviction-centered issues are retried, party-structure questions concerning Housing Authority of Clackamas County and Quantum Residential should be addressed in the proper forum rather than adjudicated indirectly here while they remain absent.
-26. This probate proceeding should not be used to bypass that party-structure requirement or to reframe eviction merits against absent entities.
+23. Party-structure consequences for any housing-merits relitigation are addressed in companion scope motions (`151`/`152`) and are included here only to explain why threshold narrowing is requested.
+24. This probate proceeding should not be used to bypass proper party structure or to reframe eviction/housing merits against absent entities.
 
 VI. PROOF GATE FOR FINAL DISMISSAL
 
-27. Final dismissal still requires proof of the prior separate proceeding, the exact issue decided, finality, party/privity alignment, and a full and fair opportunity to be heard.
-28. Movant therefore requests threshold control now, with dismissal only to the extent those elements are proven by admissible certified records.
+25. Final dismissal still requires proof of the prior separate proceeding, the exact issue decided, finality, party/privity alignment, and a full and fair opportunity to be heard.
+26. Movant therefore requests threshold control now, with dismissal only to the extent those elements are proven by admissible certified records.
 
 VII. EXHIBIT REFERENCES (GLOBAL NUMBERING)
 
-29. This motion relies primarily on Exhibit 2, the accompanying declaration, and Exhibits 8-10 as the threshold preclusion record set (current-case docket posture, prior signed-order record, and hearing/notice record).
-30. This motion additionally references overlap materials for the `26FE0586` eviction packet (including Section 18 duty theory materials), the federal HACC/Quantum complaint track (including scanned coversheet material and provisional status notice pending docket confirmation), and related overlap context as indicators of potential issue identity and forum overlap; Movant requests leave to lodge certified dockets/orders and any additional authenticated copies needed for formal preclusion findings.
-31. As an organizational aid only, Movant also references `179` (Element-to-Evidence and Deontic Readiness Matrix) for element-level proof-status mapping; admissible exhibits and certified records control.
+27. This motion relies primarily on Exhibit 2, the accompanying declaration, and Exhibits 8-10 as the threshold preclusion record set (current-case docket posture, prior signed-order record, and hearing/notice record).
+28. This motion additionally references overlap materials for `26FE0586` and the federal HACC/Quantum track as context for threshold scope control only, and not as substitute proof for dispositive preclusion elements.
+29. As an organizational aid only, Movant also references `179` (Element-to-Evidence and Deontic Readiness Matrix) for element-level proof-status mapping; admissible exhibits and certified records control.
 
 VIII. RESERVATION
 
-32. Movant reserves the right to supplement with clerk-certified docket printouts, signed orders, transcripts, and proceeding-status records for the Justice Court and federal tracks.
+30. Movant reserves the right to supplement with clerk-certified docket printouts, signed orders, transcripts, and proceeding-status records for the Justice Court and federal tracks.
 
 DATED: ____________, 2026
 

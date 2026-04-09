@@ -85,7 +85,7 @@ V. REQUESTED THRESHOLD HEARING FRAME
 45. whether the petition's request for plenary authority and facility-placement authority is overbroad on the present record;
 46. whether attorney fees from Jane Kay Cortez's funds should be denied; and
 47. whether disputed collateral housing issues should be fenced off from probate merits except as narrowly necessary.
-48. If the Court concludes that the petition was barred in whole or material part, or that its factual and procedural defects were serious enough that reasonable threshold review should have prevented or narrowed it, Objector further requests that the Court reserve or consider appropriate sanctions-related or claim-limiting relief directed to the filing or maintenance of that petition.
+48. If the Court concludes that the petition was barred in whole or material part, or that its factual and procedural defects were serious enough that reasonable threshold review should have prevented or narrowed it, Objector requests claim-limiting relief in this objection posture and requests that any sanctions request be reserved to a separate, specifically noticed motion identifying the exact legal vehicle and evidentiary predicates.
 
 VI. RESERVATION
 

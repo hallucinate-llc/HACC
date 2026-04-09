@@ -27,22 +27,24 @@ II. GROUNDS
 8. If certified records confirm a prior GAL grant naming Benjamin Barber, Movant requests that this Court align present representation handling to avoid inconsistent treatment of the same protected person across related proceedings.
 9. Even if prior-GAL confirmation is not yet established, appointment/appearance clarification is independently warranted here because the present record reflects material factual conflict, contested emergency-control allegations, and protective-case management needs affecting Jane Kay Cortez.
 10. The April 3-4, 2026 counsel email chain reflects service-labeled transmission to Alex Bluestone in this same Jane Cortez guardianship controversy and counsel's acknowledgment of representation in that guardianship matter while disputing acceptance of service, supporting same-matter notice context while preserving service-validity questions for Court determination.
+11. The requested GAL scope is narrowly tailored to unresolved protective-proceeding questions: (a) current wishes and welfare concerns of Jane Kay Cortez, (b) whether requested emergency/plenary relief is broader than necessary on the present record, and (c) what least-restrictive protective structure can be supported by admissible evidence.
+12. Movant requests appointment only for neutral investigation/reporting support and not as a merits shortcut on disputed collateral housing, eviction, or federal-claim questions.
 
 III. LEGAL AUTHORITY
 
-11. ORS 125.025 and ORS 125.050 support this Court's protective-proceeding authority to structure case management and apply ORCP as appropriate to protect Jane Kay Cortez's interests.
-12. ORS 125.065, ORS 125.075, and ORS 125.080 support notice, objection, hearing, and participation management in this protective proceeding, including targeted appointment/reporting structure where needed for reliable fact development.
-13. To the extent applicable in this protective posture, ORCP 27 further supports appointment of a guardian ad litem when qualifying incapacity-related circumstances and evidentiary need are shown.
-14. This Court has discretion to appoint a suitable GAL and to structure reporting and status deadlines to assist fact development and protect the interests of the protected person.
+13. ORS 125.025 and ORS 125.050 support this Court's protective-proceeding authority to structure case management and apply ORCP as appropriate to protect Jane Kay Cortez's interests.
+14. ORS 125.065, ORS 125.075, and ORS 125.080 support notice, objection, hearing, and participation management in this protective proceeding, including targeted appointment/reporting structure where needed for reliable fact development.
+15. To the extent applicable in this protective posture, ORCP 27 further supports appointment of a guardian ad litem when qualifying incapacity-related circumstances and evidentiary need are shown.
+16. This Court has discretion to appoint a suitable GAL and to structure reporting and status deadlines to assist fact development and protect the interests of the protected person.
 
 IV. EXHIBIT REFERENCES (GLOBAL NUMBERING)
 
-15. This motion presently relies on Exhibit 1 (scanned signed order source), and Exhibits 4, 5, and 6 from the global exhibit legend filed with this packet.
-16. Movant requests leave to supplement with certified docket/order materials (including Exhibits 8-10 and certified signed-order record support for `25PO11530`) as soon as they are received.
+17. This motion presently relies on Exhibit 1 (scanned signed order source), and Exhibits 4, 5, and 6 from the global exhibit legend filed with this packet.
+18. Movant requests leave to supplement with certified docket/order materials (including Exhibits 8-10 and certified signed-order record support for `25PO11530`) as soon as they are received.
 
 V. RESERVATION
 
-17. Movant reserves amendment rights after receipt of certified docket and complete order history.
+19. Movant reserves amendment rights after receipt of certified docket and complete order history.
 
 DATED: ____________, 2026
 

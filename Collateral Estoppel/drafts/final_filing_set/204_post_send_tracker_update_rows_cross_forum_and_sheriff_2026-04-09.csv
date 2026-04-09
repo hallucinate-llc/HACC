@@ -1,0 +1,4 @@
+request_id,request_date,forum,target_case,target_recipient_email,status,fee_quote,eta,response_received,records_received,notes
+REQ-26FE0586-001,2026-04-08,Clackamas Justice Court,26FE0586,cla.records.management@ojd.state.or.us,submitted,,,no,no,Initial request sent [FILL_TIMESTAMP]; follow-up due [FILL_DATE_PLUS_2_BUSINESS_DAYS].
+REQ-FED-HAQC-001,2026-04-08,US District Court District of Oregon,HACC+Quantum track,ecfhelp@ord.uscourts.gov,submitted,,,no,no,Initial request sent [FILL_TIMESTAMP]; PACER/public docket pull run [yes/no]; follow-up due [FILL_DATE_PLUS_2_BUSINESS_DAYS].
+REQ-SHERIFF-RETURN-001,2026-04-09,Clackamas County Sheriff Civil/Records,[service return request], [FILL_CONFIRMED_CHANNEL],submitted,,,no,no,Initial request sent [FILL_TIMESTAMP]; first follow-up due [FILL_DATE_PLUS_1_BUSINESS_DAY].

@@ -15,6 +15,8 @@ Official registry path identified:
    - official search portal referenced at `https://ccfs.sos.wa.gov`
    - public navigation guidance page:
      - `https://www.sos.wa.gov/corporations-charities-filing-system-tools-resources`
+   - public support contact page indicates CCFS / Corporations Team support is available at:
+     - `360-725-0377`
 
 Use note:
 

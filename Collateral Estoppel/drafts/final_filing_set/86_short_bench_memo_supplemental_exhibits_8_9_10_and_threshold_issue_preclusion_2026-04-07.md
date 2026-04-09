@@ -46,10 +46,10 @@ Movant requests a threshold issue-preclusion review before broader merits litiga
 
 ## 4) Requested procedural path
 
-1. Accept/lodge supplemental certified exhibits.
-2. Resolve threshold issue-preclusion elements first.
-3. Dismiss or limit relitigation to the extent elements are established.
-4. Reserve merits expansion unless and until threshold preclusion review is completed.
+1. To the extent supplemental certified exhibits are lodged, accept/lodge those records for threshold review.
+2. Resolve threshold issue-preclusion elements first, to the extent certified element materials are in the record.
+3. Dismiss or limit relitigation only to the extent the required preclusion elements are established by admissible certified proof.
+4. Reserve merits expansion unless and until threshold preclusion review is completed on an adequate certified record.
 
 ## 5) Authorities already cited in the motion set
 
