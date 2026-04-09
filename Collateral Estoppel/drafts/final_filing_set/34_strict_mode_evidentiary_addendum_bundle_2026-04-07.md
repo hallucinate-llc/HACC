@@ -36,12 +36,12 @@ II. STRICT-MODE ACTIVE RULES TO ASSERT AS PRESENTLY PROVED
 III. PROOF-GATED RULES TO BRACKET (DO NOT TREAT AS ADJUDICATED)
 - r1_guardian_permission_if_prior_appointment: If prior appointment exists, Benjamin is permitted to act within valid guardian scope for Jane.
 - Missing verification: f_client_prior_appointment (status=alleged, value=true)
-- r2_noninterference_prohibition_for_benjamin: If prior appointment exists and interference is alleged, Benjamin is forbidden from interference.
+- r2_target_noninterference_prohibition_if_prior_appointment: If prior appointment exists and interference is alleged, the alleged interfering actor is forbidden from interference.
 - Missing verification: f_client_prior_appointment (status=alleged, value=true)
-- Missing verification: f_client_benjamin_housing_interference (status=alleged, value=true)
-- r3_benjamin_obligation_comply_or_seek_relief: If prior appointment is in force and Benjamin disregarded order, Benjamin was obligated to comply or seek relief.
+- Missing verification: f_client_target_housing_interference (status=alleged, value=true)
+- r3_target_obligation_comply_or_seek_relief_if_prior_appointment: If prior appointment is in force and an alleged actor disregarded the order, that actor was obligated to comply or seek relief.
 - Missing verification: f_client_prior_appointment (status=alleged, value=true)
-- Missing verification: f_client_benjamin_order_disregard (status=alleged, value=true)
+- Missing verification: f_client_target_order_disregard (status=alleged, value=true)
 - r7_solomon_forbidden_refile_precluded_issue: If issue preclusion applies, Solomon is forbidden from relitigating the precluded issue.
 - Missing verification: f_collateral_estoppel_candidate (status=theory, value=true)
 - Missing verification: f_client_solomon_barred_refile (status=alleged, value=true)
@@ -76,12 +76,12 @@ II. STRICT-MODE ACTIVE RULES TO ASSERT AS PRESENTLY PROVED
 III. PROOF-GATED RULES TO BRACKET (DO NOT TREAT AS ADJUDICATED)
 - r1_guardian_permission_if_prior_appointment: If prior appointment exists, Benjamin is permitted to act within valid guardian scope for Jane.
 - Missing verification: f_client_prior_appointment (status=alleged, value=true)
-- r2_noninterference_prohibition_for_benjamin: If prior appointment exists and interference is alleged, Benjamin is forbidden from interference.
+- r2_target_noninterference_prohibition_if_prior_appointment: If prior appointment exists and interference is alleged, the alleged interfering actor is forbidden from interference.
 - Missing verification: f_client_prior_appointment (status=alleged, value=true)
-- Missing verification: f_client_benjamin_housing_interference (status=alleged, value=true)
-- r3_benjamin_obligation_comply_or_seek_relief: If prior appointment is in force and Benjamin disregarded order, Benjamin was obligated to comply or seek relief.
+- Missing verification: f_client_target_housing_interference (status=alleged, value=true)
+- r3_target_obligation_comply_or_seek_relief_if_prior_appointment: If prior appointment is in force and an alleged actor disregarded the order, that actor was obligated to comply or seek relief.
 - Missing verification: f_client_prior_appointment (status=alleged, value=true)
-- Missing verification: f_client_benjamin_order_disregard (status=alleged, value=true)
+- Missing verification: f_client_target_order_disregard (status=alleged, value=true)
 - r7_solomon_forbidden_refile_precluded_issue: If issue preclusion applies, Solomon is forbidden from relitigating the precluded issue.
 - Missing verification: f_collateral_estoppel_candidate (status=theory, value=true)
 - Missing verification: f_client_solomon_barred_refile (status=alleged, value=true)

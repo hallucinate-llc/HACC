@@ -85,3 +85,8 @@ If staged, these records would most directly strengthen:
 ## Shortest practical next step
 
 Stage the best existing prior signed order packet and any matching docket / register material in the certified-records intake folder, then complete the element notes in [issue_preclusion_mapping.json](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/certified_records/issue_preclusion_mapping.json).
+
+Best current candidate packet note:
+
+- [prior_proceeding_candidate_packet_note_2026-04-08.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/prior_proceeding_candidate_packet_note_2026-04-08.md)
+- [initial_prior_proceeding_source_set_note_2026-04-08.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/certified_records/initial_prior_proceeding_source_set_note_2026-04-08.md)

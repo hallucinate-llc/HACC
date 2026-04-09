@@ -39,32 +39,33 @@ Movant moves to dismiss any claim or issue already shown to be precluded by prio
 12. The earlier Solomon restraining-order packet itself supports that `Benjamin Jay Barber` appeared there in the guardian ad litem / guardian petitioner role for Jane Kay Cortez. See [solomon_order_digest.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_order_digest.md), [solomon_restraining_order_review.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_restraining_order_review.md), and [restraining_order_visual_verification_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/restraining_order_visual_verification_2026-04-07.md).
 13. Prior fact-finding also preserved a broader theory that an earlier authority-related proceeding or appointment may already have addressed the same practical control issue. See [petition_guardianship_working_memo.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/petition_guardianship_working_memo.md) and [repeated_usurpation_pattern_memo.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/repeated_usurpation_pattern_memo.md).
 14. The current record therefore supports a real overlap concern and a need for threshold control, even though the stronger finality and metadata layer that would ordinarily come from clerk-certified prior-proceeding records is not yet complete.
+15. Repository materials also reflect a parallel-forum overlap concern: a Clackamas County Justice Court eviction-response track in case `26FE0586`, a federal civil-rights complaint track naming Housing Authority of Clackamas County and Quantum Residential, denied Ashley Ferron protective-proceeding filings, and contemporaneous summary materials indicating the pro tem judge treated those housing-administration complaints as outside the proper protective-order lane. The exact on-record wording of the Ashley hearings should be authenticated through the prepared Clackamas FTR audio-request path before any quoted hearing statement is proffered.
 
 ### IV. What remains missing for final dismissal
 
-15. Final dismissal still requires a prior separate proceeding record sufficient to show:
+16. Final dismissal still requires a prior separate proceeding record sufficient to show:
    a. the exact prior order or judgment;
    b. the exact issue actually determined;
    c. finality;
    d. the party or privity alignment; and
    e. the full-and-fair-opportunity component.
-16. The current repository review does contain original stored source scans of related protective-order proceedings, but it does not yet contain the broader prior-order and docket layer needed to cleanly establish finality and a separate preclusive proceeding. See [source_register.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/source_register.md), [allegation_proof_matrix.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/allegation_proof_matrix.md), and [original_scans_vs_certified_copies_note_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/original_scans_vs_certified_copies_note_2026-04-07.md).
+17. The current repository review does contain original stored source scans of related protective-order proceedings, but it does not yet contain the broader prior-order and docket layer needed to cleanly establish finality and a separate preclusive proceeding. See [source_register.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/source_register.md), [allegation_proof_matrix.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/allegation_proof_matrix.md), and [original_scans_vs_certified_copies_note_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/original_scans_vs_certified_copies_note_2026-04-07.md).
 
 ### V. Why threshold control is appropriate now
 
-17. Because the petition affirmatively seeks sweeping authority while also denying any prior appointment or comparable authority source, the existence or nonexistence of a prior separate proceeding should be resolved before merits litigation expands.
-18. The Court can therefore take one of two narrower, record-matched paths:
+18. Because the petition affirmatively seeks sweeping authority while also denying any prior appointment or comparable authority source, the existence or nonexistence of a prior separate proceeding should be resolved before merits litigation expands.
+19. The Court can therefore take one of two narrower, record-matched paths:
    a. dismiss or limit issues now to the extent the Court finds the prior separate proceeding and identical-issue record already established from admissible materials; or
    b. require a focused preclusion record, comparison chart, or threshold hearing before permitting relitigation of the same authority issue.
-19. That narrower approach matches the present proof posture better than unrestricted merits litigation and better than a dismissal request untethered to source records.
+20. That narrower approach matches the present proof posture better than unrestricted merits litigation and better than a dismissal request untethered to source records.
 
 ### VI. Reservation and supplementation
 
-20. Movant reserves the right to supplement with clerk-certified docket printouts, signed orders, transcript excerpts, and any source record necessary to map the issue-preclusion elements to the actual prior proceeding.
+21. Movant reserves the right to supplement with clerk-certified docket printouts, signed orders, transcript excerpts, and any source record necessary to map the issue-preclusion elements to the actual prior proceeding.
 
 ### VII. Working source list
 
-21. Current source anchors for this motion are:
+22. Current source anchors for this motion are:
 1. [solomon_motion_for_guardianship_ocr.txt](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_motion_for_guardianship_ocr.txt)
 2. [guardianship_timeline.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/guardianship_timeline.md)
 3. [source_register.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/source_register.md)
@@ -75,8 +76,10 @@ Movant moves to dismiss any claim or issue already shown to be precluded by prio
 8. [solomon_restraining_order_review.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_restraining_order_review.md)
 9. [restraining_order_visual_verification_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/restraining_order_visual_verification_2026-04-07.md)
 10. [original_scans_vs_certified_copies_note_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/original_scans_vs_certified_copies_note_2026-04-07.md)
-11. clerk-certified prior judgment/order and register of actions sufficient to establish finality, identical issue, and party/privity alignment (to be added)
-12. clerk-certified hearing/appearance record demonstrating full and fair opportunity in prior proceeding (to be added)
+11. [ashley_ferron_hearing_audio_proffer_note_2026-04-08.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/ashley_ferron_hearing_audio_proffer_note_2026-04-08.md)
+12. [clackamas_ftr_request_worksheet_2026-04-08.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/clackamas_ftr_request_worksheet_2026-04-08.md)
+13. clerk-certified prior judgment/order and register of actions sufficient to establish finality, identical issue, and party/privity alignment (to be added)
+14. clerk-certified hearing/appearance record demonstrating full and fair opportunity in prior proceeding (to be added)
 
 DATED: ____________
 

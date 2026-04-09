@@ -8,7 +8,7 @@ This script is designed for use with:
 
 ## Short Opening
 
-Your Honor, this is not an ordinary holdover where the household simply refused to move. HACC triggered redevelopment-related relocation duties, told us to use a replacement-housing application path tied to the Hillside Park redevelopment, and also told us in the alternative to port the voucher to another county. Neither path was actually completed before HACC moved toward eviction.
+Your Honor, this is not an ordinary holdover where the household simply refused to move. HACC triggered redevelopment-related relocation duties, including comparable housing, relocation support, counseling, and actual completion of the move before displacement could be treated as finished. HACC then told us to use a replacement-housing application path tied to the Hillside Park redevelopment, and also told us in the alternative to port the voucher to another county. Neither path was actually completed before HACC moved toward eviction.
 
 ## Core Theme
 
@@ -20,7 +20,7 @@ The shortest correct theme is:
 - The second path dragged across four calendar months and still was not complete.
 - Much of that delay was caused by HACC's own actions, including not starting the TPV process earlier, the broken packet-routing chain, repeated document demands, and the March 19 voucher reversal.
 - At the same time, HACC was still mishandling VAWA-related safety issues, restrained-party issues involving Solomon, household-status issues involving Julio, disability / live-in-aide issues, and there is evidence of race-discriminatory obstruction in the same housing path.
-- HACC should not get possession while both of the paths it identified remained unfinished.
+- HACC should not get possession while both of the paths it identified remained unfinished and no actual lease or contract had been materialized for signature.
 - And the reason that matters legally is not just fairness. HACC's own plan and notices show it had nondiscretionary relocation and hearing duties plus an undertaken replacement-housing process it had to carry through before seeking eviction.
 
 ## Best Exhibit Sequence
@@ -82,7 +82,7 @@ The Court can view the case in seven steps:
 If the Court asks for the legal point, the answer is:
 
 - HACC cannot fairly obtain possession while redevelopment-related relocation is still incomplete;
-- under Section 18 and the relocation-process commitments HACC itself undertook, HACC was not just expected but barred from filing eviction while the triggered relocation steps remained materially unfinished;
+- under Section 18 and the relocation-process commitments HACC itself undertook, HACC was not just expected but barred from filing eviction while the triggered comparable-housing, counseling, relocation-support, and actual move-completion steps remained materially unfinished;
 - HACC's own Administrative Plan says Hillside Manor is a RAD PBV project, Quantum is the property manager, HACC manages the project waiting-list structure, and the owner must provide an opportunity for an informal hearing before eviction;
 - HACC's own Blossom lease-up page says applications for Blossom and Community Apartments will be processed through HACC's PBV waitlist and that relocation households are priority groups;
 - the Court should not treat the household's situation as simple noncompliance where the record shows the replacement-housing path itself was not processed;

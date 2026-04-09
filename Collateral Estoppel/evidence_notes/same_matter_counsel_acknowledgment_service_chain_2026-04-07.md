@@ -21,12 +21,26 @@
   - `/home/barberb/HACC/evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_CO1PR10MB44826703707F0BD1A5D81F64AC5FA-CO1PR10MB4482.namprd10.prod.outlook.com_20260404_Re-SERVICE-Jane-Kay-Cortez-vs-Solomon-Samuel-Barber-Benjamin-Jay-Barber-vs-Solom/message.eml`
   - `/home/barberb/HACC/evidence/email_imports/solomon-live-fetch-2026/starworks5/gmail-import/0000000-0000999/msg_CO1PR10MB44826703707F0BD1A5D81F64AC5FA-CO1PR10MB4482.namprd10.prod.outlook.com_20260404_Re-SERVICE-Jane-Kay-Cortez-vs-Solomon-Samuel-Barber-Benjamin-Jay-Barber-vs-Solom/message.json`
 
+3. Newly retrieved April 8, 2026 follow-up:
+- Date: `Wed, 8 Apr 2026 19:39:16 +0000`
+- From: `Alex Bluestone <alex@salemprobate.com>`
+- Same subject line continued.
+- Statement: `It is not my understanding that you ever personally served or filed proof of service concerning your attempt to be appointed guardian ad litem for Ms. Cortez.`
+- Statement: `I will be contacting the court today to request an expedited hearing to address all these issues.`
+- Statement: `Please advise if you are able to join that call, as I would prefer to avoid ex parte communications with the Court.`
+- Sources:
+  - `/home/barberb/HACC/evidence/email_imports/manual-imap-download-2026-04-08/289035_Re--SERVICE-Jane-Kay-Cortez-vs-Solomon-Samuel-Barber--Benjamin-Jay---Barber-vs-Solomon-Samuel-Barber/message.eml`
+  - `/home/barberb/HACC/evidence/email_imports/manual-imap-download-2026-04-08/289035_Re--SERVICE-Jane-Kay-Cortez-vs-Solomon-Samuel-Barber--Benjamin-Jay---Barber-vs-Solomon-Samuel-Barber/message.json`
+
 ## Conservative legal framing
 - Verified: outreach/service materials were sent to counsel in the same named guardianship dispute.
 - Verified: the preserved sent email includes a same-day FedEx receipt image consistent with physical transmission to counsel.
 - Verified: counsel expressly acknowledged representation in that guardianship matter.
 - Verified: counsel disputed acceptance of service.
+- Verified: on April 8, 2026, counsel continued the same thread, raised a service/proof objection concerning the guardian-ad-litem effort, and stated an intent to contact the court to request an expedited hearing.
 
 Use in briefing:
 - Supports same-matter knowledge/notice-channel framing for collateral-estoppel and candor context.
+- Supports proof-gated framing that counsel was actively treating the April 3-4 service chain as part of the same live controversy on April 8.
 - Does not by itself resolve legal validity of service; treat validity as court-resolved issue.
+- Does not by itself prove that the court actually set or held an expedited hearing; treat the April 8 hearing point as counsel's stated intent unless court records later confirm more.

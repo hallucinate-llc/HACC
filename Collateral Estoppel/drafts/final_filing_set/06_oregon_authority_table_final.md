@@ -70,7 +70,7 @@ This table is the authority register for the current packet. It is grounded to o
 3. Additional time after certain service methods:
    `ORCP 10 B`
    Working use: except for summons, three days are added when a party must act within a prescribed period after service by mail, e-mail, facsimile, or electronic service.
-3. Subpoena obedience / warning language:
+4. Subpoena obedience / warning language:
    `ORCP 55 A(1)(a)(vi)(A)-(B)`
    Working use: subpoenas must state that they must be obeyed unless a judge orders otherwise and that disobedience is punishable by a fine or jail time.
 5. Clackamas supplementary probate rules:

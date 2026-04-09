@@ -1,4 +1,4 @@
-# Title 18 And Contract Deontic Logic Memo Re Why HACC Was Barred From Filing Eviction
+# Section 18 And Contract Deontic Logic Memo Re Why HACC Was Barred From Filing Eviction
 
 ## Bottom Line
 
@@ -13,12 +13,12 @@ In deontic terms:
 
 That prohibition is supported two different ways at once:
 
-1. `public-law / Title 18 side`
+1. `public-law / Section 18 side`
 2. `private-law / contract and implied-contract side`
 
 Those two layers reinforce each other.
 
-## I. Title 18 Deontic Structure
+## I. Section 18 Deontic Structure
 
 The existing Section 18 analysis already states the core prohibition in source-linked form.
 

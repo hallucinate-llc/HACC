@@ -1,4 +1,4 @@
-# Title 18 Source Review: Statute, Regulation, and Contracts on File
+# Section 18 Source Review: Statute, Regulation, and Contracts on File
 
 This review separates:
 
@@ -6,7 +6,7 @@ This review separates:
 2. what HACC and Quantum-related documents in the local record show about the replacement-housing and PBV/RAD process; and
 3. what is still missing from the file.
 
-For clarity, the "Title 18" issue in this case is the federal demolition/disposition and relocation framework rooted in Section 18 of the United States Housing Act, codified at `42 U.S.C. § 1437p`, together with HUD's implementing regulations and the PBV/RAD documents HACC relied on.
+For clarity, the Section 18 issue in this case is the federal demolition/disposition and relocation framework rooted in Section 18 of the United States Housing Act, codified at `42 U.S.C. § 1437p`, together with HUD's implementing regulations and the PBV/RAD documents HACC relied on.
 
 ## 1. Federal Source Text Actually Reviewed
 

@@ -2,6 +2,15 @@
 
 Place future certified prior-proceeding materials here so the formal logic layer can detect them automatically.
 
+## Important note
+
+This folder is for staged clerk-issued or later-added prior-proceeding materials.
+It does not mean the workspace lacks prior source materials now.
+
+Current initial prior-proceeding source set:
+
+1. [initial_prior_proceeding_source_set_note_2026-04-08.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/certified_records/initial_prior_proceeding_source_set_note_2026-04-08.md)
+
 ## Suggested filename markers
 
 1. prior order / judgment:

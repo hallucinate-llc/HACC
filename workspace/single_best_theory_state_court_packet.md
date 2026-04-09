@@ -19,11 +19,13 @@ The governing source-linked logic is:
 On the present record, the strongest factual chain is:
 
 - HACC had direct relocation duties under federal law;
+- those duties included comparable housing, relocation expenses, necessary counseling, and no completion of displacement until actual relocation;
 - HACC also undertook a specific local replacement-housing process through its own plan, notices, and routing instructions;
 - HACC later promised in writing on March 26, 2026 that there were three relocation paths and that all of them required a move by April 30, 2026;
 - the Blossom / Hillside Manor path was not processed through to a clear result;
 - the alternate Waterleaf / Multnomah port-out path remained incomplete across four calendar months;
-- a substantial amount, and likely most, of the documented delay from January 8, 2026 through late March 2026 was caused by HACC's own administration;
+- even after the March 19 voucher marker, the later March 29 Parkside Heights application and March 30 Parkside reply still pointed only to end-of-April occupancy within the same April 30 move-out framework;
+- a substantial amount, and likely most, of the documented delay from January 8, 2026 through early April 2026 was caused by HACC's own administration;
 - therefore HACC was barred from filing eviction while the relocation and undertaken processing duties remained materially incomplete.
 
 ## The Short Deontic Form
@@ -53,6 +55,7 @@ Federal law:
 
 - `42 U.S.C. § 1437p`
 - `24 C.F.R. § 970.21`
+- [section_18_specific_performance_duties_memo_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/section_18_specific_performance_duties_memo_2026-04-09.md)
 
 Local documents:
 

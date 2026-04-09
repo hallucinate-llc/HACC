@@ -37,17 +37,18 @@ Movant requests threshold review, claim-limiting relief, and reservation of sanc
    a. a restraining order granted against Solomon Samuel Barber on or about November 20, 2025, with order language stating that it was in effect and that no further service was necessary because respondent appeared in person before the court;
    b. parallel Julio protective-order packets showing that household-control and residence issues involving the same address and protective framework were already being formalized in court before the later lease-removal sequence;
    c. Solomon's later March 10, 2026 statements that he was not incentivized to cooperate, that the order was not in effect until service on his terms, and that he would have the judge overturn it;
-   d. declaration testimony that HACC staff later explained Benjamin's lease removal in substance by reference to outside document flows from Benjamin's brother and stepfather; and
-   e. March 2026 written notice to HACC that restrained-party communications and third-party housing contact were still occurring.
+   d. declaration testimony that HACC staff later explained Benjamin's lease removal in substance by reference to outside document flows from Benjamin's brother and stepfather;
+   e. Jane Cortez's April 8, 2026 first-person declaration describing the forced pickup / hospital-transport episode and her understanding that Solomon was trying to take her away without approval; and
+   f. March 2026 written notice to HACC that restrained-party communications and third-party housing contact were still occurring.
 
 ### III. Governing authority posture
 
-10. The principal sanctions authorities currently grounded in the workspace are:
+10. The principal corrective-authority pathways currently grounded in the workspace are:
    a. `ORCP 17 C(2)-(4)` for improper-purpose, unsupported-legal-position, and unsupported-factual-assertion sanctions theory;
    b. `ORS 33.055`, `33.075`, and `33.105` for a remedial contempt and remedial-sanctions path if contempt elements are later proved;
    c. `ORCP 46` and `ORCP 55` for later subpoena and production enforcement if nonparty noncompliance occurs; and
    d. Oregon issue-preclusion authorities including `Nelson`, `Rawls`, `Hayes Oyster`, and `Westwood` for the doctrine side of any preclusion-based sanctions theory.
-11. That authority grounding does not by itself establish sanctionable conduct in this case. It means only that the legal pathways are now identified and mapped to the correct proof gates.
+11. That authority grounding does not by itself establish sanctionable conduct in this case. It means only that the available pathways should be kept distinct and mapped to the correct proof gates: ORCP 17 for filing conduct, contempt statutes for order disobedience, and preclusion doctrine for claim-limiting relief rather than freestanding sanctions absent the required predicate record.
 
 ### IV. Frivolous / abusive practice section (proof-gated)
 
@@ -61,77 +62,91 @@ Movant requests threshold review, claim-limiting relief, and reservation of sanc
    a. Solomon's notice of the restraining-order framework;
    b. Solomon's later self-help statements about service and enforceability;
    c. the March 23 declarations describing outside document flows affecting lease handling; and
-   d. later HACC-facing warnings that restrained-party communications were still occurring.
+   d. later HACC-facing warnings that restrained-party communications were still occurring;
+   e. the probate-side writ of assistance directing forcible entry and transport of Jane Cortez, together with counsel's signed certificate of readiness; and
+   f. Jane Cortez's own April 8, 2026 declaration that officers came to pick her up, that she was not even allowed to take her purse and ID, and that housing had kept the household stuck by not cooperating on the two-bedroom move process.
 15. The present repository is weaker, and still inferential, on:
    a. the exact earlier guardian ad litem or prior-authority order;
    b. the exact person-to-HACC communication chain;
    c. the exact legal rule under which every sanctions component should ultimately issue.
 16. The issue-preclusion doctrine is now authority-grounded, but the actual prior separate proceeding record is still the key missing fact layer. For that reason, preclusion-based sanctions requests must remain conditional and are presently best framed as threshold review and claim-limiting relief.
 17. The repeated-pattern theory is that Solomon sought practical control by means other than orderly court relief, and that this created unnecessary burden, delay, and instability even if the final proof picture is not yet complete.
+18. The present record also supports a narrower attorney-side concern: counsel signed and submitted a writ of assistance authorizing forced entry and transport of Jane Cortez while invoking a no-service readiness certification, even though the presently staged record still does not cleanly show the underlying signed temporary-guardian order and notice predicate on which that extraordinary writ depended. That point is presently framed as a threshold sanctions-reservation / reasonable-inquiry issue, not as a fully established final sanctions predicate.
+19. The same threshold concern now extends beyond the writ itself to the filing and maintenance of the current guardianship petition to the extent that petition is found to be materially inaccurate, procedurally defective, or overbroad in ways a reasonable attorney should have recognized before seeking waiver-of-notice relief, plenary authority, writ-based transport, placement authority, and fee shifting from Jane Kay Cortez's funds. Any separate collateral-estoppel-based corrective theory remains dependent on the certified prior-proceeding record.
 
 ### V. Best current sanctionable-conduct formulation
 
-19. The safest current formulation is:
+20. The safest current formulation is:
    `On information and belief, Solomon Barber pursued a course of conduct that combined proof-gated preclusion problems, post-notice self-help conduct, and collateral interference with housing or authority matters involving Jane Cortez, thereby imposing unnecessary burden, delay, and instability.`
-20. That formulation should be used instead of any broader statement that all sanction predicates have already been fully established.
-21. The same caution should be applied to issue preclusion:
+21. As to counsel, the safest current formulation is:
+   `On the present record, counsel signed and submitted extraordinary coercive process in a manner that raises a substantial question whether the necessary predicate order, notice basis, and readiness certification had been adequately verified before filing.`
+22. A further safe current formulation is:
+   `If the Court concludes that the petition is barred in whole or material part, or that it contains serious factual and procedural defects that competent threshold review should have caught, the Court should consider whether counsel's continued pursuit of that petition warrants claim-limiting relief, sanctions reservation, or other corrective action.`
+23. Those formulations should be used instead of any broader statement that all sanction predicates have already been fully established or that malpractice has already been proven.
+24. The same caution should be applied to issue preclusion:
    `The doctrine is available under Oregon law, but its application to this matter remains proof-gated pending the certified prior separate proceeding record.`
 
 ### VI. Prejudice and harm
 
-22. The record presently supports prejudice in the form of:
+24. The record presently supports prejudice in the form of:
    a. delay and instability in the housing / voucher / relocation path;
    b. confusion about household composition and authority;
    c. forced response to collateral interference theories and document flows;
-   d. litigation burden and delay caused by having to sort out whether control was being sought through proper court channels or through outside pressure.
-23. The current damages summary also supports that the Waterleaf / voucher / relocation delay extended at least from January 12, 2026 until late March 2026, and that the lease-side removal of Benjamin caused concrete housing-process harm by altering household composition during the same sequence.
-24. Additional monetary prejudice, if sought, should be supported by declarations, billing, or a damages worksheet.
+   d. litigation burden and delay caused by having to sort out whether control was being sought through proper court channels or through outside pressure; and
+   e. first-person reported distress and coercive transport harm to Jane Cortez during the attempted hospital-removal event.
+25. The current damages summary also supports that the Waterleaf / voucher / relocation delay extended at least from January 12, 2026 until late March 2026, and that the lease-side removal of Benjamin caused concrete housing-process harm by altering household composition during the same sequence.
+26. Additional monetary prejudice, if sought, should be supported by declarations, billing, or a damages worksheet.
 
 ### VII. Evidentiary predicates before final sanctions ruling
 
-25. Certified docket and prior-order materials for any final sanctions or preclusion ruling: see the shared placeholder exhibits in [motion_exhibit_index.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/motion_exhibit_index.md), especially proposed Exhibits P and Q, to be added when certified records are obtained.
-26. Signed operative order and digest:
+27. Certified docket and prior-order materials for any final sanctions or preclusion ruling: see the shared placeholder exhibits in [motion_exhibit_index.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/motion_exhibit_index.md), especially proposed Exhibits P and Q, to be added when certified records are obtained.
+28. Signed operative order and digest:
    a. [sam barber restraining order.pdf](/home/barberb/HACC/evidence/history/sam%20barber%20restraining%20order.pdf)
    b. [solomon_order_digest.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_order_digest.md)
-27. Related household-control order packets and service-form context:
+29. Related household-control order packets and service-form context:
    a. [Benjamin Barber vs Julio Cortez protective order.pdf](/home/barberb/HACC/evidence/history/Benjamin%20Barber%20vs%20Julio%20Cortez%20protective%20order.pdf)
    b. [Jane Cortez vs Julio Cortez.pdf](/home/barberb/HACC/evidence/history/Jane%20Cortez%20vs%20Julio%20Cortez.pdf)
    c. [Abuse Protective Order Certificate of Service.pdf](/home/barberb/HACC/evidence/history/Abuse%20Protective%20Order%20Certificate%20of%20Service.pdf)
-28. Notice / service / appearance materials:
+30. Notice / service / appearance materials:
    a. [uid_660669_Mon--17-Nov-2025-20-38-24--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660669_Mon--17-Nov-2025-20-38-24--0000_New-text-message-from-solomon--503--381-6911.eml)
    b. [uid_660690_Mon--17-Nov-2025-20-56-22--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_660690_Mon--17-Nov-2025-20-56-22--0000_New-text-message-from-solomon--503--381-6911.eml)
    c. [transcript.txt](/home/barberb/HACC/evidence/email_imports/starworks5-google-voice-takeout-20260404-fixed-materialized/14164-Me-to-solomon-gv-3f38fb3f900d4de1/transcript.txt)
-29. Solomon-side statements showing self-help or bad-faith posture:
+31. Solomon-side statements showing self-help or bad-faith posture:
    a. [uid_743129_Tue--10-Mar-2026-17-39-27--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743129_Tue--10-Mar-2026-17-39-27--0000_New-text-message-from-solomon--503--381-6911.eml)
    b. [uid_743131_Tue--10-Mar-2026-17-45-54--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743131_Tue--10-Mar-2026-17-45-54--0000_New-text-message-from-solomon--503--381-6911.eml)
    c. [uid_743136_Tue--10-Mar-2026-17-51-15--0000_New-text-message-from-solomon--503--381-6911.eml](/home/barberb/HACC/workspace/solomon-sms-eml-2026-04-04/uid_743136_Tue--10-Mar-2026-17-51-15--0000_New-text-message-from-solomon--503--381-6911.eml)
-30. Declaration or documentary proof of collateral interference and resulting housing-process harm:
+32. Writ-of-assistance and attorney-side reasonable-inquiry support:
+   a. [writ of assistance solomon barber.pdf](/home/barberb/HACC/evidence/paper%20documents/writ%20of%20assistance%20solomon%20barber.pdf)
+   b. [attorney_sanctions_viability_re_writ_2026-04-08.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/attorney_sanctions_viability_re_writ_2026-04-08.md)
+   c. [solomon_contempt_viability_memo_2026-04-08.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_contempt_viability_memo_2026-04-08.md)
+33. Declaration or documentary proof of collateral interference and resulting housing-process harm:
    a. [declaration_of_benjamin_barber_in_support_of_preliminary_injunction.md](/home/barberb/HACC/workspace/declaration_of_benjamin_barber_in_support_of_preliminary_injunction.md)
    b. [declaration_of_jane_cortez_march_23_2026_inspection_court_ready.md](/home/barberb/HACC/workspace/declaration_of_jane_cortez_march_23_2026_inspection_court_ready.md)
-   c. [2026-03-17_additional-info_bwilliams_3.eml](/home/barberb/HACC/workspace/imap-confirmed-messages/2026-03-17_additional-info_bwilliams_3.eml)
-   d. [repeated_usurpation_pattern_memo.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/repeated_usurpation_pattern_memo.md)
-31. Harm and delay support:
+   c. [jane_cortez_declaration_april_8_2026_ocr.txt](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/jane_cortez_declaration_april_8_2026_ocr.txt)
+   d. [2026-03-17_additional-info_bwilliams_3.eml](/home/barberb/HACC/workspace/imap-confirmed-messages/2026-03-17_additional-info_bwilliams_3.eml)
+   e. [repeated_usurpation_pattern_memo.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/repeated_usurpation_pattern_memo.md)
+34. Harm and delay support:
    a. [hacc_delay_and_lease_removal_damages_memo.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/hacc_delay_and_lease_removal_damages_memo.md)
    b. [damages-evidence-memo.md](/home/barberb/HACC/workspace/damages-evidence-memo.md)
-32. Authority-grounding materials:
+35. Authority-grounding materials:
    a. [06_oregon_authority_table_final.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/06_oregon_authority_table_final.md)
    b. [oregon_authority_grounding_memo_2026-04-07.md](/home/barberb/HACC/Collateral%20Estoppel/research/oregon_authority_grounding_memo_2026-04-07.md)
-33. Any fee, cost, or burden evidence supporting monetary sanctions: to be added by declaration, billing summary, or damages worksheet if monetary sanctions are pursued beyond nonmonetary corrective relief.
+36. Any fee, cost, or burden evidence supporting monetary sanctions: to be added by declaration, billing summary, or damages worksheet if monetary sanctions are pursued beyond nonmonetary corrective relief.
 
 ### VIII. Requested hearing structure
 
-33. Set an evidentiary or threshold review hearing as the Court deems appropriate, with sanctions issues reserved unless the Court concludes the source record is sufficient to decide them.
-34. Require pre-hearing production or filing of certified records, operative orders, and any available HACC source records concerning lease-removal and collateral-contact issues.
-35. Permit targeted testimony on improper purpose, preclusion, collateral interference, and prejudice.
-36. If the Court finds the prior separate proceeding record incomplete, limit any preclusion-based ruling to threshold management, claim limitation, or sanctions reservation and reserve final sanctions adjudication until the source record is complete.
+37. Set an evidentiary or threshold review hearing as the Court deems appropriate, with sanctions issues reserved unless the Court concludes the source record is sufficient to decide them.
+38. Require pre-hearing production or filing of certified records, operative orders, and any available HACC source records concerning lease-removal and collateral-contact issues.
+39. Permit targeted testimony on improper purpose, preclusion, collateral interference, prejudice, and the predicate basis for the writ of assistance.
+40. If the Court finds the prior separate proceeding record incomplete, limit any preclusion-based ruling to threshold management, claim limitation, or sanctions reservation and reserve final sanctions adjudication until the source record is complete.
 
 ### IX. Reservation
 
-37. Movant reserves amendment rights after receipt of certified records and any third-party or HACC records identifying the source, scope, and authority basis of the challenged collateral conduct.
+41. Movant reserves amendment rights after receipt of certified records and any third-party or HACC records identifying the source, scope, and authority basis of the challenged collateral conduct.
 
 ### X. Provisional exhibit map for next draft
 
-38. The current best exhibit sequence for the next court-ready pass is:
+42. The current best exhibit sequence for the next court-ready pass is:
    a. the shared motion exhibit index at [motion_exhibit_index.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/motion_exhibit_index.md);
    b. Exhibits A through O from that index as presently available;
    c. Exhibits P through R if later obtained through certified records or third-party production.

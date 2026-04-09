@@ -13,7 +13,8 @@ The current record supports two overlapping delay branches:
 1. **Quantum / Blossom / HACC intake and document-processing delay**
    - begins no later than **December 2, 2025**, when Benjamin said he had completed the packet and had business-minutes / amendment / IRS-tax materials ready;
    - is explicitly acknowledged by HACC on **January 26, 2026**, when Ashley Ferron said the intake packet had been submitted to Quantum staff but not forwarded to HACC; and
-   - remains live through at least **March 19, 2026**, when HACC finally wrote that a one-bedroom voucher would be issued that day.
+   - remains live through at least **March 19, 2026**, when HACC finally wrote that a one-bedroom voucher would be issued that day; and
+   - still had not produced a completed move by **April 8, 2026**, after the intervening March 29 Parkside Heights application and March 30 Parkside acknowledgment tying two-bedroom occupancy to the end of April.
 
 2. **Solomon-side interference / household-control delay**
    - begins, on the current record, no later than **November 20, 2025**, when the Solomon restraining order was granted and restrained him from interference while also identifying Benjamin in the guardian ad litem / guardian petitioner role;
@@ -79,6 +80,8 @@ Sources:
   - after HACC acknowledged the packet failure, voucher issuance still did not clearly occur for more than seven weeks
 - **December 2, 2025 -> March 19, 2026** = **107 days**
   - total currently source-backed packet/document-to-voucher delay window
+- **March 19, 2026 -> April 8, 2026** = **20 days**
+  - additional currently supported post-voucher delay window before a completed move
 
 ## 2. Solomon-side interference branch
 
@@ -152,7 +155,8 @@ On the present record:
 
 - the clearer direct **processing delay** belongs to the `Quantum / HACC` branch;
 - the clearer direct **interference / tenant-rights disruption** belongs to the `Solomon` branch; and
-- the current documentary overlap supports treating January-March 2026 as a mixed-causation period until the HACC actor-identification / authority-chain record is produced.
+- the current documentary overlap supports treating January-March 2026 as a mixed-causation period until the HACC actor-identification / authority-chain record is produced; and
+- the current post-March-19 Parkside / end-of-April record supports that the HACC / Quantum relocation branch was still unresolved into April 2026.
 
 ## 5. Main remaining gap
 

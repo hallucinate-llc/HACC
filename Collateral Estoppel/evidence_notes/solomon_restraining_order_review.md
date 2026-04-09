@@ -33,6 +33,10 @@ The strongest current local record supports that at least one restraining / prot
 - Page 7 marks the petition `GRANTED` and states the order remains in effect for `one (1) year from the date of the judge's signature` unless renewed, dismissed, modified, or replaced.
 - Pages 10-11 state the restraining order `is now in effect`, explain contempt consequences for violation, and describe the 30-day hearing-request period.
 - Related packet pages show November 19, 2025 filing / entry markers, and the restraining-order signature line is best read as `11-20-2025`.
+6. A later orientation / rotation audit confirmed that the main original packet PDF is still the controlling readable source and that the `IMG_2167.jpeg` image attached to later service emails is a FedEx / service image rather than a missing upside-down restraining-order page:
+- [solomon_restraining_order_rotation_audit_note_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_restraining_order_rotation_audit_note_2026-04-09.md)
+7. Manual visual review of the embedded screenshot-exhibit pages in the same packet produced caption-ready descriptions for the will / trust sequence, including the page where Solomon discusses Jane's father's will, Jane's disability trust, and filing for guardian ad litem:
+- [solomon_restraining_order_exhibit_caption_note_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/solomon_restraining_order_exhibit_caption_note_2026-04-09.md)
 
 ## Important caution
 

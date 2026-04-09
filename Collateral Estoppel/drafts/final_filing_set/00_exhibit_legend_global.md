@@ -23,6 +23,11 @@ Generated live-status appendix:
 
 Use the generated dashboard as a branch-status aid for internal packet management and proof-gate tracking. Do not treat it as a substitute for admissible exhibits unless separately authenticated and offered.
 
+Proffer-control notes for overlap materials:
+- [ashley_ferron_hearing_audio_proffer_note_2026-04-08.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/ashley_ferron_hearing_audio_proffer_note_2026-04-08.md)
+- [federal_complaint_track_proffer_note_2026-04-08.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/federal_complaint_track_proffer_note_2026-04-08.md)
+- Use these notes to keep Ashley-hearing summaries and federal-track status statements within the present authentication limits until hearing audio, filed docket sheets, or assignment records are added.
+
 Related proposed orders:
 - [07_proposed_order_appoint_gal_final.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/07_proposed_order_appoint_gal_final.md)
 - [08_proposed_order_dismiss_collateral_estoppel_final.md](/home/barberb/HACC/Collateral Estoppel/drafts/final_filing_set/08_proposed_order_dismiss_collateral_estoppel_final.md)

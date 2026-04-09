@@ -44,7 +44,8 @@ These are the best grounded headline points:
 - HACC's own records say the intake packet was submitted to Quantum staff at Hillside Manor but did not reach HACC.
 - HACC's March 26, 2026 housing-options email promised three relocation paths and said all options required a move by April 30, 2026, while also threatening eviction if the move was not completed.
 - The Waterleaf / Multnomah path remained incomplete across four calendar months.
-- On the present record, a substantial amount, and likely most, of the documented delay from January 8, 2026 through late March 2026 was caused by HACC's own administration.
+- The later March 29-30 Parkside Heights application exchange still pointed only to end-of-April occupancy within that same April 30 move-out framework.
+- On the present record, a substantial amount, and likely most, of the documented delay from January 8, 2026 through early April 2026 was caused by HACC's own administration.
 - On the present record, HACC was barred from filing eviction while relocation and undertaken replacement-housing duties remained materially incomplete.
 
 ## 3. Best Exhibits To Actually Put In Front Of The Court
@@ -89,7 +90,7 @@ If the judge asks, `Why isn't this just a normal eviction?`
 
 Best answer:
 
-`Because HACC's own documents show this household was still inside a redevelopment-related replacement-housing process that HACC directed them to use, HACC later promised in writing on March 26, 2026 that there were three relocation paths and that all of them required a move by April 30, the Blossom intake chain broke at the Quantum side according to HACC's own records, the alternate Waterleaf port-out path was still incomplete months later, and under Section 18 plus HACC's own undertaken process, HACC was forbidden to treat that unfinished relocation as an ordinary eviction default.`
+`Because HACC's own documents show this household was still inside a redevelopment-related replacement-housing process that HACC directed them to use, HACC later promised in writing on March 26, 2026 that there were three relocation paths and that all of them required a move by April 30, the Blossom intake chain broke at the Quantum side according to HACC's own records, the alternate Waterleaf port-out path was still incomplete months later, the later Parkside Heights exchange still pointed only to end-of-April occupancy within that same framework, and under Section 18 plus HACC's own undertaken process, HACC was forbidden to treat that unfinished relocation as an ordinary eviction default.`
 
 ## 7. Strongest Short Answer If The Judge Pushes On Proof
 

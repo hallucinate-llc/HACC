@@ -240,5 +240,5 @@ The packet is in a strong position if we stay within the following boundaries:
 - use primary law for the federal duties;
 - use HACC's own Administrative Plan, public page, notices, and emails for the local process;
 - describe the Quantum theory as a process-chain theory;
-- describe the anti-eviction theory as a source-linked Title 18 plus undertaken-process bar;
+- describe the anti-eviction theory as a source-linked Section 18 plus undertaken-process bar;
 - and describe the graph/prover as formal support for the legal consequence of the verified record, not as a substitute for the record itself.

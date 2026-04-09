@@ -19,7 +19,7 @@ Defendants submit this coordinated packet in response to Plaintiff's eviction mo
 
 The packet is organized to address four connected issues arising from the same housing and relocation record:
 
-1. Plaintiff's request for possession should be denied, or at minimum stayed or abated, because Section 18 and HACC's own written relocation process imposed duties HACC had not yet completed, while HACC's March 26, 2026 email still showed three unresolved relocation options that all required completion by April 30, 2026.
+1. Plaintiff's request for possession should be denied, or at minimum stayed or abated, because Section 18 and HACC's own written relocation process imposed duties HACC had not yet completed, while HACC's March 26, 2026 email still showed three unresolved relocation options that all required completion by April 30, 2026, and the later March 29-30 Parkside Heights exchange still pointed only to end-of-April occupancy within that same move-out framework.
 2. Narrow interim relief is needed to preserve the housing path and prevent the dispute from becoming moot through loss of housing before adjudication.
 3. Quantum Residential Property Management, L.P. should be joined because HACC's own records place Quantum inside the disputed intake-and-relocation chain.
 4. Upon joinder or other appearance, Quantum should be required to show cause why the Barber-Cortez Blossom / Hillside Manor application materials were not processed, transmitted, or brought to a clear written result.

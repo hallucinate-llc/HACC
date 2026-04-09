@@ -59,6 +59,28 @@ This index is the shared exhibit map for the current Solomon contempt and sancti
 - `Exhibit X`: [Julio Eviction notice.jpeg](/home/barberb/HACC/evidence/paper%20documents/Julio%20Eviction%20notice.jpeg)
   - Purpose: February 13, 2026 HACC 30-day termination notice to Julio Regal Florez-Cortez, supporting the later shift in HACC's treatment of Julio's tenancy.
 
+## Hearing-audio proffer support
+
+- `Exhibit Y`: [ashley_ferron_hearing_audio_proffer_note_2026-04-08.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/ashley_ferron_hearing_audio_proffer_note_2026-04-08.md)
+  - Purpose: use-note controlling how any Ashley Ferron hearing statement is proffered before audio is obtained, and preserving the distinction between current summary support and later authenticated hearing-record support.
+- `Exhibit Z`: [clackamas_ftr_request_worksheet_2026-04-08.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/clackamas_ftr_request_worksheet_2026-04-08.md)
+  - Purpose: staged hearing-audio request worksheet for the Ashley, Solomon, and Julio matters, supporting the request to supplement with authenticated hearing recordings.
+
+## Federal-track proffer support
+
+- `Exhibit AA`: [federal_complaint_track_proffer_note_2026-04-08.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/federal_complaint_track_proffer_note_2026-04-08.md)
+  - Purpose: use-note controlling how the federal complaint packet, visible received stamp, and any clerk-relayed assignment/advisement information are proffered before filed docket materials are obtained.
+
+## Supplemental counsel-thread support
+
+- `Exhibit AB`: [april_8_2026_bluestone_followup_thread_memo.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/april_8_2026_bluestone_followup_thread_memo.md)
+  - Purpose: stages the newly retrieved April 8, 2026 follow-up exchange with Alex Bluestone, including counsel's stated service objection, stated intent to contact the court for an expedited hearing, and Benjamin's same-day requests for underlying filings and hearing access.
+
+## Supplemental Jane declaration support
+
+- `Exhibit AC`: [jane_cortez_declaration_april_8_2026_ocr.txt](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/jane_cortez_declaration_april_8_2026_ocr.txt)
+  - Purpose: staged OCR of Jane Cortez's April 8, 2026 declaration giving first-person support for the forced pickup / hospital-transport incident, the claim that Solomon was trying to take her away without her approval, and her account that housing had kept the household stuck by not cooperating on the two-bedroom move process.
+
 ## Supplemental authority exhibits
 
 - `Authority Exhibit 1`: [06_oregon_authority_table_final.md](/home/barberb/HACC/Collateral%20Estoppel/drafts/final_filing_set/06_oregon_authority_table_final.md)

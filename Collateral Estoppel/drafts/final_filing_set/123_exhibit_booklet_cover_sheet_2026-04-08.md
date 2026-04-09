@@ -26,18 +26,19 @@ Included components:
 Booklet assembly order:
 
 1. Cover Sheet (this page)
-2. Exhibit Proof + Reliance Summary Matrix
-3. Exhibit Tab Sheets
-4. Exhibit 1 content
-5. Exhibit 2 content
-6. Exhibit 3 content
-7. Exhibit 4 content
-8. Exhibit 5 content
-9. Exhibit 6 content
-10. Exhibit 7 content
-11. Exhibit 8 content (if available)
-12. Exhibit 9 content (if available)
-13. Exhibit 10 content (if available)
+2. Global Exhibit Legend
+3. Exhibit Proof + Reliance Summary Matrix
+4. Exhibit Tab Sheets
+5. Exhibit 1 content
+6. Exhibit 2 content
+7. Exhibit 3 content
+8. Exhibit 4 content
+9. Exhibit 5 content
+10. Exhibit 6 content
+11. Exhibit 7 content
+12. Exhibit 8 content (if available)
+13. Exhibit 9 content (if available)
+14. Exhibit 10 content (if available)
 
 Certification note:
 

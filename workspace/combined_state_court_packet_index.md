@@ -53,10 +53,13 @@ Use this index when filing the coordinated state-court packet addressing:
 29. [source_linked_duty_matrix_eviction_response.md](/home/barberb/HACC/workspace/source_linked_duty_matrix_eviction_response.md)
 30. [preliminary_injunction_declaration_exhibit_cross_reference.md](/home/barberb/HACC/workspace/preliminary_injunction_declaration_exhibit_cross_reference.md)
 31. [show_cause_quantum_application_nonprocessing_exhibit_cross_reference.md](/home/barberb/HACC/workspace/show_cause_quantum_application_nonprocessing_exhibit_cross_reference.md)
-32. [hearing_script_response_to_eviction_and_interim_relief.md](/home/barberb/HACC/workspace/hearing_script_response_to_eviction_and_interim_relief.md)
-33. [hearing_script_2_minute_version.md](/home/barberb/HACC/workspace/hearing_script_2_minute_version.md)
-34. [judge_question_answer_sheet_eviction_response.md](/home/barberb/HACC/workspace/judge_question_answer_sheet_eviction_response.md)
-35. [hearing_script_motion_to_show_cause_quantum_application_nonprocessing.md](/home/barberb/HACC/workspace/hearing_script_motion_to_show_cause_quantum_application_nonprocessing.md)
+32. [section_18_specific_performance_duties_memo_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/section_18_specific_performance_duties_memo_2026-04-09.md)
+33. [hearing_note_section_18_specific_performance_2026-04-09.md](/home/barberb/HACC/workspace/hearing_note_section_18_specific_performance_2026-04-09.md)
+34. [master_bridge_theory_probate_and_eviction_2026-04-09.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/master_bridge_theory_probate_and_eviction_2026-04-09.md)
+35. [hearing_script_response_to_eviction_and_interim_relief.md](/home/barberb/HACC/workspace/hearing_script_response_to_eviction_and_interim_relief.md)
+36. [hearing_script_2_minute_version.md](/home/barberb/HACC/workspace/hearing_script_2_minute_version.md)
+37. [judge_question_answer_sheet_eviction_response.md](/home/barberb/HACC/workspace/judge_question_answer_sheet_eviction_response.md)
+38. [hearing_script_motion_to_show_cause_quantum_application_nonprocessing.md](/home/barberb/HACC/workspace/hearing_script_motion_to_show_cause_quantum_application_nonprocessing.md)
 
 ## Recommended Filing Order
 
@@ -87,5 +90,6 @@ The strongest through-line for the whole packet is:
 - Section 18 and HACC's own written relocation process imposed duties HACC had to complete before possession;
 - HACC routed the household into the Blossom / Hillside Manor intake chain and later acknowledged in writing that the packet had been left with Quantum staff and had not reached HACC;
 - HACC's March 26, 2026 email still described three unresolved relocation options, all requiring completion by April 30, 2026;
+- the later March 29-30 Parkside Heights application exchange still pointed only to end-of-April occupancy within that same April 30 framework;
 - the alternative Waterleaf / Multnomah route remained incomplete across four calendar months; and
 - the resulting source-linked consequence is that the Court should preserve the housing path, bring Quantum into the case, and require an explanation of the application nonprocessing before possession is granted.

@@ -9,6 +9,7 @@ Use this chart as a one-page summary of the current delay record.
 | Quantum / HACC packet and document delay | 2025-12-02 | 2026-01-26 | 55 | Packet and tax materials already assembled; HACC later says Quantum had packet but did not forward it | Quantum / HACC |
 | Quantum / HACC post-acknowledgment processing delay | 2026-01-26 | 2026-03-19 | 52 | HACC acknowledges packet-routing failure, but voucher still not clearly issued until March 19 | HACC processing delay, with Quantum-origin packet failure in background |
 | Quantum / HACC total packet-to-voucher delay | 2025-12-02 | 2026-03-19 | 107 | Earliest packet/tax trail to first clear voucher issuance marker | Mostly Quantum / HACC processing branch |
+| Quantum / HACC post-voucher unresolved move delay | 2026-03-19 | 2026-04-08 | 20 | Voucher marker passed; Parkside application submitted March 29; Parkside acknowledged March 30 and tied 2-bedroom occupancy to end of April | HACC / Quantum unresolved relocation branch |
 | Solomon lease-removal / tenant-rights disruption | 2026-01-01 | 2026-02-04 | 34 | Benjamin removed effective January 1; back on lease by February 4 | Solomon interference theory, proof-gated as to exact HACC actor chain |
 | Solomon explicit HACC-removal confirmation to restoration | 2026-01-12 | 2026-02-04 | 23 | HACC confirms Benjamin out based on internal review and court docs; later notice includes Benjamin again | Solomon-side influence theory, strongest direct harm window |
 | Solomon broader housing-influence window | 2026-01-01 | 2026-03-31 | 89 | Lease-removal effects remain live and later appear in Solomon's guardianship petition | Broader interference window, not yet fully quantifiable |
@@ -17,6 +18,7 @@ Use this chart as a one-page summary of the current delay record.
 ## Short form
 
 - `Quantum / HACC`: clearest direct `processing delay`
+- `Quantum / HACC`: also strongest for the still-unresolved post-voucher move path into April 2026
 - `Solomon`: clearest direct `interference / lease-disruption delay`
 - `January 12 to March 19, 2026`: clearest `mixed-causation overlap`
 

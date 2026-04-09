@@ -55,3 +55,8 @@ Verification reminder before filing:
 Generated status aid:
 - [formal_case_state_dashboard.md](/home/barberb/HACC/Collateral Estoppel/knowledge_graph/generated/formal_case_state_dashboard.md)
 - Use this dashboard as the live packet-status reference for which branches are filing-ready, proof-gated, and workflow-open.
+
+Additional proffer-control notes for overlap materials:
+- [ashley_ferron_hearing_audio_proffer_note_2026-04-08.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/ashley_ferron_hearing_audio_proffer_note_2026-04-08.md)
+- [federal_complaint_track_proffer_note_2026-04-08.md](/home/barberb/HACC/Collateral%20Estoppel/evidence_notes/federal_complaint_track_proffer_note_2026-04-08.md)
+- Use these notes when citing Ashley-hearing summary materials or the District of Oregon complaint packet before authenticated court-record supplementation is obtained.
